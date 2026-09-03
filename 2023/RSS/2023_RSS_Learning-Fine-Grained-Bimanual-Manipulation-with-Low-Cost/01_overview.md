@@ -1,7 +1,7 @@
 # Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2304.13705.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2304.13705.
 > PDF retrieval source: https://arxiv.org/pdf/2304.13705. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2304.13705
 - Code/Project: https://tonyzhaozh.github.io/aloha/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -86,3 +86,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, low-cost hardware is inevitably less precise than high-end platforms, making the sensing and planning challenge more pronounced.를 문제로 두고, The key contribution of this paper is a low-cost system for learning fine manipulation, comprising a teleoperation system and a novel imitation learning algorithm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, low-cost hardware is inevitably less precise than high-end platforms, making the sensing and planning challenge more pronounced. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** The key contribution of this paper is a low-cost system for learning fine manipulation, comprising a teleoperation system and a novel imitation learning algorithm. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Cube Transfer (sim) Bimanual Insertion (sim) Slide Ziploc (real) Slot Battery (real) Touched Lifted Transfer Grasp Contact Insert Grasp Pinch Open Grasp Place Insert BC-ConvMLP 34 / 3 17 / ... (p. 8, V. EXPERIMENTS).
+- **Explicit failure boundary:** Due to the small clearance between the cube and the left gripper (around 1cm), small errors could result in collisions and task failure. (p. 6, V. EXPERIMENTS).

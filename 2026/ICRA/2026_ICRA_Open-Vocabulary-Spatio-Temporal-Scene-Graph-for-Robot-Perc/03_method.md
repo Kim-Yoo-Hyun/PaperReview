@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2509.23107. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2509.23107. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | The planner outputs a sequence of high-level actions π = (a1, . . . , aM) with grounded arguments (e.g., centroids and ... | p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | User commands are used to query node features, filtering relevant nodes to form an ST-OVSG subgraph, which is then serialized into JSON ... | p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) |
@@ -50,7 +50,7 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** However, when multiple candidate pairs overlap or are ambiguous, resolve them by minimizing a simple geometric cost.
 - **p. 4 / III. METHODOLOGY - extractive body cue:** The cost is cspa j,k,n = wiou (1 -IoU(uj,k,n, zj,k,n)) + warea
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
-- **Equation/algorithm anchors:** p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
+- **Equation/algorithm anchors:** p. 4 (III. METHODOLOGY).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -80,12 +80,12 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | These graphs are linked across frames using the Hungarian algorithm [8] [9], producing a 4D scene graph with spatial and temporal edges ... | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | Spatio-Temporal Scene Representation Given a time-ordered set of posed RGB-D frames D = {(Irgb n , Id n, ∆tn, τn)}N n=1 where ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | Spatio-Temporal Scene Representation Given a time-ordered set of posed RGB-D frames D = {(Irgb n , Id n, ∆tn, τn)}N n=1 where ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -125,8 +125,17 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), objective p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), temporal p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 5 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
+- **Evidence anchors reviewed:** method p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), objective p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), temporal p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 5 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The planner outputs a sequence of high-level actions π = (a1, . . . , aM) with grounded arguments (e.g., centroids and sizes), which are parsed into skill parameters for ... (p. 4, III. METHODOLOGY).
+- **Objective/update evidence:** The cost is cspa j,k,n = wiou (1 -IoU(uj,k,n, zj,k,n)) + warea (p. 4, III. METHODOLOGY).
+- **Temporal/runtime evidence:** These graphs are linked across frames using the Hungarian algorithm [8] [9], producing a 4D scene graph with spatial and temporal edges and latency tags. (p. 3, III. METHODOLOGY).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

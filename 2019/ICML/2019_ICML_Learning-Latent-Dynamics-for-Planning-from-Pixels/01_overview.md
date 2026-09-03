@@ -1,8 +1,10 @@
 # Learning Latent Dynamics for Planning from Pixels
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1811.04551.
-> PDF retrieval source: https://arxiv.org/pdf/1811.04551. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1811.04551.
+> PDF retrieval source: https://arxiv.org/pdf/1811.04551. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1811.04551
 - Code/Project: https://planetrl.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Key difficulties include model inaccuracies, accumulating errors of multi-step predictions, failure to capture multiple possible futures, and overconfident predictions outside of the training distribution.를 문제로 두고, In this paper, we propose the Deep Planning Network (PlaNet), a model-based agent that learns the environment dynamics from pixels and chooses actions through online planning in a compact latent space.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent State Space Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** PlaNet solves continuous control tasks from pixels that are more difficult than those previously solved by planning with learned models. (p. 1, 1. Introduction).
+- **Actual contribution:** Key contributions of this work are summarized as follows: • Planning in latent spaces We solve a variety of tasks from the DeepMind control suite, shown in Figure 1, by ... (p. 1, 1. Introduction).
+- **Evaluation boundary:** Figure 12: Planning performance on the cheetah running task with the true simulator using different planner settings. Performance ranges from 132 (blue) to 837 (yellow). Evaluating more action sequences, optimizing ... (p. 20, Figure/Table caption).
+- **Explicit failure boundary:** Key difficulties include model inaccuracies, accumulating errors of multi-step predictions, failure to capture multiple possible futures, and overconfident predictions outside of the training distribution. (p. 1, 1. Introduction).

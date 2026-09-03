@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our method on three benchmark datasets: R2R [3], R4R [32], and REVERIE [56].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
-- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive PDF cue:** Qualitative results on R2R [3] val unseen split.
-- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive PDF cue:** Visualization of 3D Gaussian Maps on R2R [3] val unseen split.
-- **p. 8 / 4.3. Diagnostic Experiment - extractive PDF cue:** Ablation studies of MAP strategy on val unseen split of R2R [3] and REVERIE [56].
-- **p. 8 / 4.3. Diagnostic Experiment - extractive PDF cue:** To evaluate each component, we conduct diagnostic studies on val unseen splits of both R2R [3] and REVERIE [56].
-- **p. 5 / 3.5. Implementation Details - extractive PDF cue:** Optimal iterations are determined based on peak performance on val unseen splits.
-- **p. 5 / 3.5. Implementation Details - extractive PDF cue:** In addition, during navigation, constructing the 3D Gaussian Map at each time step takes approximately 0.07 seconds, ensuring compatibility with real-time robotic execution (see more ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our method on three benchmark datasets: R2R [3], R4R [32], and REVERIE [56].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
+- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** Qualitative results on R2R [3] val unseen split.
+- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** Visualization of 3D Gaussian Maps on R2R [3] val unseen split.
+- **p. 8 / 4.3. Diagnostic Experiment - extractive body cue:** Ablation studies of MAP strategy on val unseen split of R2R [3] and REVERIE [56].
+- **p. 8 / 4.3. Diagnostic Experiment - extractive body cue:** To evaluate each component, we conduct diagnostic studies on val unseen splits of both R2R [3] and REVERIE [56].
+- **p. 5 / 3.5. Implementation Details - extractive body cue:** Optimal iterations are determined based on peak performance on val unseen splits.
+- **p. 5 / 3.5. Implementation Details - extractive body cue:** In addition, during navigation, constructing the 3D Gaussian Map at each time step takes approximately 0.07 seconds, ensuring compatibility with real-time robotic execution (see more ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Comparison to State-of-the-Arts | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our agent achieves consistent improvements across all splits, which outperforms BEVBert [1] by 2% in both SR and SPL on the val unseen split. | p. 6 (4.2. Comparison to State-of-the-Arts) |
 | 4.2. Comparison to State-of-the-Arts | EMPIRICAL / SOURCE-REPORTED EVALUATION | Specifically, compared to HAMT [12], our approach achieves improvements of 2% in SR, CLS, and nDTW, with 3% gain in SDTW. | p. 6 (4.2. Comparison to State-of-the-Arts) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our method on three benchmark datasets: R2R [3], R4R [32], and REVERIE [56].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
-- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive PDF cue:** Qualitative results on R2R [3] val unseen split.
-- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive PDF cue:** Visualization of 3D Gaussian Maps on R2R [3] val unseen split.
-- **p. 8 / 4.3. Diagnostic Experiment - extractive PDF cue:** Ablation studies of MAP strategy on val unseen split of R2R [3] and REVERIE [56].
-- **p. 8 / 4.3. Diagnostic Experiment - extractive PDF cue:** To evaluate each component, we conduct diagnostic studies on val unseen splits of both R2R [3] and REVERIE [56].
-- **p. 5 / 3.5. Implementation Details - extractive PDF cue:** Optimal iterations are determined based on peak performance on val unseen splits.
-- **p. 5 / 3.5. Implementation Details - extractive PDF cue:** In addition, during navigation, constructing the 3D Gaussian Map at each time step takes approximately 0.07 seconds, ensuring compatibility with real-time robotic execution (see more ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our method on three benchmark datasets: R2R [3], R4R [32], and REVERIE [56].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
+- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** Qualitative results on R2R [3] val unseen split.
+- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** Visualization of 3D Gaussian Maps on R2R [3] val unseen split.
+- **p. 8 / 4.3. Diagnostic Experiment - extractive body cue:** Ablation studies of MAP strategy on val unseen split of R2R [3] and REVERIE [56].
+- **p. 8 / 4.3. Diagnostic Experiment - extractive body cue:** To evaluate each component, we conduct diagnostic studies on val unseen splits of both R2R [3] and REVERIE [56].
+- **p. 5 / 3.5. Implementation Details - extractive body cue:** Optimal iterations are determined based on peak performance on val unseen splits.
+- **p. 5 / 3.5. Implementation Details - extractive body cue:** In addition, during navigation, constructing the 3D Gaussian Map at each time step takes approximately 0.07 seconds, ensuring compatibility with real-time robotic execution (see more ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Dense Features vs 3D Gaussians. Recent VLN meth- ods [1, 47, 49, 78] rely on dense sampling to construct scene maps, which often ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of our method. At each node, our agent leverages egocentric RGB-D observations to generate pseudo-lidar point clouds, which are then used to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. 3D Gaussian Map Optimization. Gaussian parameters (position µ, scale s, rotation r, opacity α, color c, and semantic σ) are optimized through the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results on REVERIE [56]. ‘-': unavailable statistics. See §4.2 for more details. R2R val unseen test unseen Models TL↓ NE↓SR↑SPL↑ TL↓
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results on R2R [3] (§4.2).
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative results on R4R [32] (§4.2). Success-weighted Dynamic Time Warping (SDTW) for bal- ancing accuracy with SR. On REVERIE, Remote Ground- ing Success ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on R2R [3] val unseen split. (a) Our agent successfully navigates through multiple rooms and recognizes key landmarks, such as the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization of 3D Gaussian Maps on R2R [3] val unseen split. Benefiting from the geometric priors and open-set semantics of the 3D Gaussian ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dense Features vs 3D Gaussians. Recent VLN meth- ods [1, 47, 49, 78] rely on dense sampling to construct scene maps, which often ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our method. At each node, our agent leverages egocentric RGB-D observations to generate pseudo-lidar point clouds, which are then used to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. 3D Gaussian Map Optimization. Gaussian parameters (position µ, scale s, rotation r, opacity α, color c, and semantic σ) are optimized through the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results on REVERIE [56]. ‘-': unavailable statistics. See §4.2 for more details. R2R val unseen test unseen Models TL↓ NE↓SR↑SPL↑ TL↓
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results on R2R [3] (§4.2).
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Quantitative results on R4R [32] (§4.2). Success-weighted Dynamic Time Warping (SDTW) for bal- ancing accuracy with SR. On REVERIE, Remote Ground- ing Success ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on R2R [3] val unseen split. (a) Our agent successfully navigates through multiple rooms and recognizes key landmarks, such as the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of 3D Gaussian Maps on R2R [3] val unseen split. Benefiting from the geometric priors and open-set semantics of the 3D Gaussian ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on three benchmark datasets: R2R [3], R4R [32], and REVERIE [56]. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Comparison to State-of-the-Arts) |
@@ -121,10 +121,10 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 | Primary metric/result | Specifically, compared to HAMT [12], our approach achieves improvements of 2% in SR, CLS, and nDTW, with 3% gain in SDTW. | numeric claim only at cited anchor | p. 6 (4.2. Comparison to State-of-the-Arts) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 3.5. Implementation Details - extractive PDF cue:** Offline pretraining is conducted on a single NVIDIA RTX 4090 GPU for 15 iterations (see more details in Appendix).
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
-- **p. 3 / 3. Method - extractive PDF cue:** The action space At comprises Nt neighboring nodes Vt = {Vt,n}Nt n=1, other observed nodes V∗ t (through backtrack [13, 69]), and a [STOP] option.
-- **p. 5 / 3.5. Implementation Details - extractive PDF cue:** Offline pretraining is conducted on a single NVIDIA RTX 4090 GPU for 15 iterations (see more details in Appendix).
+- **p. 5 / 3.5. Implementation Details - extractive body cue:** Offline pretraining is conducted on a single NVIDIA RTX 4090 GPU for 15 iterations (see more details in Appendix).
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
+- **p. 3 / 3. Method - extractive body cue:** The action space At comprises Nt neighboring nodes Vt = {Vt,n}Nt n=1, other observed nodes V∗ t (through backtrack [13, 69]), and a [STOP] option.
+- **p. 5 / 3.5. Implementation Details - extractive body cue:** Offline pretraining is conducted on a single NVIDIA RTX 4090 GPU for 15 iterations (see more details in Appendix).
 
 ## Generalization and Failure Cases
 
@@ -156,11 +156,11 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive PDF cue:** (b) Our agent precisely identifies and localizes the "bathroom" and "rug", while BEVBert [1] stops in the wrong place since critical landmarks cannot be identified, ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Dense Features vs 3D Gaussians. Recent VLN meth- ods [1, 47, 49, 78] rely on dense sampling to construct scene maps, which often ...
-- **p. 6 / 4.2. Comparison to State-of-the-Arts - extractive PDF cue:** These results further demonstrate the robustness of our method in main9257
+- **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** (b) Our agent precisely identifies and localizes the "bathroom" and "rug", while BEVBert [1] stops in the wrong place since critical landmarks cannot be identified, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dense Features vs 3D Gaussians. Recent VLN meth- ods [1, 47, 49, 78] rely on dense sampling to construct scene maps, which often ...
+- **p. 6 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** These results further demonstrate the robustness of our method in main9257
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Comparison to State-of-the-Arts), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 8 (4.3. Diagnostic Experiment), metrics p. 6 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), baselines p. 6 (4.2. Comparison to State-of-the-Arts), p. 6 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 8 (4.3. Diagnostic Experiment), p. 5 (3.5. Implementation Details), results p. 6 (4.2. Comparison to State-of-the-Arts), p. 6 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 7 (4.2. Comparison to State-of-the-Arts), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Comparison to State-of-the-Arts), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 8 (4.3. Diagnostic Experiment), metrics p. 6 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), baselines p. 6 (4.2. Comparison to State-of-the-Arts), p. 6 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 8 (4.3. Diagnostic Experiment), p. 5 (3.5. Implementation Details), results p. 6 (4.2. Comparison to State-of-the-Arts), p. 6 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 7 (4.2. Comparison to State-of-the-Arts), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

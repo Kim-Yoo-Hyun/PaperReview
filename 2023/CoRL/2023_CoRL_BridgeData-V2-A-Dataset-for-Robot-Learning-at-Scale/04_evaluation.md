@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2308.12952; PDF retrieval source: https://arxiv.org/pdf/2308.12952. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2308.12952; PDF retrieval source: https://arxiv.org/pdf/2308.12952. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 3 / Dataset - extractive PDF cue:** Assembling a large real-world dataset is time-consuming and expensive, so there has also been significant work on developing simulated environments and datasets for robotic manipulation ...
-- **p. 3 / Dataset - extractive PDF cue:** A real-world dataset provides a research testbed that is truer to downstream robotics applications.
-- **p. 4 / Dataset - extractive PDF cue:** Annotators were asked to describe the task being performed by the robot in each trajectory, with particular emphasis on the final location of any moved ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** However, the language-conditioned methods particularly struggled on tasks involving unseen objects since these object names are not grounded in the dataset.
-- **p. 7 / 5 Experiments - extractive PDF cue:** The tasks and environments in this evaluation matched tasks seen in the training data; however, there were differences in robot setup, camera placement, lighting conditions, ...
-- **p. 15 / B.4 Contrastive RL - extractive PDF cue:** Task BridgeData V1 + PTR BridgeData V2 Put marker in bowl† 0.05 0.65 Put mushroom in pot‡ 0.10 0.70 Average 0.08 0.70 † Unseen objects, ...
-- **p. 4 / Dataset - extractive PDF cue:** 3 BridgeData V2 Our goal is to design a dataset that facilitates research in large-scale robot learning.
-- **p. 8 / 5 Experiments - extractive PDF cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
+- **p. 3 / Dataset - extractive body cue:** Assembling a large real-world dataset is time-consuming and expensive, so there has also been significant work on developing simulated environments and datasets for robotic manipulation ...
+- **p. 3 / Dataset - extractive body cue:** A real-world dataset provides a research testbed that is truer to downstream robotics applications.
+- **p. 4 / Dataset - extractive body cue:** Annotators were asked to describe the task being performed by the robot in each trajectory, with particular emphasis on the final location of any moved ...
+- **p. 7 / 5 Experiments - extractive body cue:** However, the language-conditioned methods particularly struggled on tasks involving unseen objects since these object names are not grounded in the dataset.
+- **p. 7 / 5 Experiments - extractive body cue:** The tasks and environments in this evaluation matched tasks seen in the training data; however, there were differences in robot setup, camera placement, lighting conditions, ...
+- **p. 15 / B.4 Contrastive RL - extractive body cue:** Task BridgeData V1 + PTR BridgeData V2 Put marker in bowl† 0.05 0.65 Put mushroom in pot‡ 0.10 0.70 Average 0.08 0.70 † Unseen objects, ...
+- **p. 4 / Dataset - extractive body cue:** 3 BridgeData V2 Our goal is to design a dataset that facilitates research in large-scale robot learning.
+- **p. 8 / 5 Experiments - extractive body cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | BENCHMARK / DATASET | ResNet-18 ResNet-34 ResNet-50 Image Encoder 0.0 0.2 0.4 0.6 0.8 1.0 Average Success Rate 0.25 0.50 0.75 1.00 Proportion of Dataset 0.0 0.2 0.4 ... | p. 8 (5 Experiments) |
 | 5 Experiments | BENCHMARK / DATASET | Note that these evaluations were performed zero-shot, without any new data collected in Lab 2, and we expect fine-tuning on a small amount of ... | p. 7 (5 Experiments) |
@@ -40,24 +40,24 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 3 / Dataset - extractive PDF cue:** Assembling a large real-world dataset is time-consuming and expensive, so there has also been significant work on developing simulated environments and datasets for robotic manipulation ...
-- **p. 3 / Dataset - extractive PDF cue:** A real-world dataset provides a research testbed that is truer to downstream robotics applications.
-- **p. 4 / Dataset - extractive PDF cue:** Annotators were asked to describe the task being performed by the robot in each trajectory, with particular emphasis on the final location of any moved ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** However, the language-conditioned methods particularly struggled on tasks involving unseen objects since these object names are not grounded in the dataset.
-- **p. 7 / 5 Experiments - extractive PDF cue:** The tasks and environments in this evaluation matched tasks seen in the training data; however, there were differences in robot setup, camera placement, lighting conditions, ...
-- **p. 15 / B.4 Contrastive RL - extractive PDF cue:** Task BridgeData V1 + PTR BridgeData V2 Put marker in bowl† 0.05 0.65 Put mushroom in pot‡ 0.10 0.70 Average 0.08 0.70 † Unseen objects, ...
-- **p. 4 / Dataset - extractive PDF cue:** 3 BridgeData V2 Our goal is to design a dataset that facilitates research in large-scale robot learning.
-- **p. 8 / 5 Experiments - extractive PDF cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
+- **p. 3 / Dataset - extractive body cue:** Assembling a large real-world dataset is time-consuming and expensive, so there has also been significant work on developing simulated environments and datasets for robotic manipulation ...
+- **p. 3 / Dataset - extractive body cue:** A real-world dataset provides a research testbed that is truer to downstream robotics applications.
+- **p. 4 / Dataset - extractive body cue:** Annotators were asked to describe the task being performed by the robot in each trajectory, with particular emphasis on the final location of any moved ...
+- **p. 7 / 5 Experiments - extractive body cue:** However, the language-conditioned methods particularly struggled on tasks involving unseen objects since these object names are not grounded in the dataset.
+- **p. 7 / 5 Experiments - extractive body cue:** The tasks and environments in this evaluation matched tasks seen in the training data; however, there were differences in robot setup, camera placement, lighting conditions, ...
+- **p. 15 / B.4 Contrastive RL - extractive body cue:** Task BridgeData V1 + PTR BridgeData V2 Put marker in bowl† 0.05 0.65 Put mushroom in pot‡ 0.10 0.70 Average 0.08 0.70 † Unseen objects, ...
+- **p. 4 / Dataset - extractive body cue:** 3 BridgeData V2 Our goal is to design a dataset that facilitates research in large-scale robot learning.
+- **p. 8 / 5 Experiments - extractive body cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 5. We provide a breakdown of which portions of the dataset include which sensors in Figure 6. B Learning Method Implementation Details Below we ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 5. We provide a breakdown of which portions of the dataset include which sensors in Figure 6. B Learning Method Implementation Details Below we ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Assembling a large real-world dataset is time-consuming and expensive, so there has also been significant work on developing simulated environments and datasets for robotic ... | embodiment, simulator version and control stack | p. 3 (Dataset), p. 3 (Dataset) |
 | Task/environment | A real-world dataset provides a research testbed that is truer to downstream robotics applications. | reset, timeout, object/scene variation | p. 3 (Dataset), p. 4 (Dataset) |
@@ -113,12 +113,12 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8
 | Primary metric/result | Note that these evaluations were performed zero-shot, without any new data collected in Lab 2, and we expect fine-tuning on a small amount of ... | numeric claim only at cited anchor | p. 7 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / Dataset - extractive PDF cue:** 3.1 System setup Randomized Cameras Fixed Camera With Depth WidowX 250 Robot Arm Figure 2 (System setup) A picture of our robot setup showing the ...
-- **p. 4 / Dataset - extractive PDF cue:** The images are saved at a 640x480 resolution and the control frequency is 5 Hz.
-- **p. 4 / Dataset - extractive PDF cue:** Every 50 trajectories, the collector randomizes the poses of the cameras, switches out the objects in the scene, and randomizes the position of the workspace ...
-- **p. 5 / Dataset - extractive PDF cue:** BridgeData V2 features 24 environments, including kitchens, sinks, and tabletops, as well as more than 100 objects.
-- **p. 5 / Dataset - extractive PDF cue:** In total, BridgeData V2 contains 50,365 expert demonstrations and 9,731 trajectories from a scripted policy.
-- **p. 6 / 5 Experiments - extractive PDF cue:** To obtain success rates for each method, we collected 10 trials for each task, varying the positions of objects and distractors between trials.
+- **p. 4 / Dataset - extractive body cue:** 3.1 System setup Randomized Cameras Fixed Camera With Depth WidowX 250 Robot Arm Figure 2 (System setup) A picture of our robot setup showing the ...
+- **p. 4 / Dataset - extractive body cue:** The images are saved at a 640x480 resolution and the control frequency is 5 Hz.
+- **p. 4 / Dataset - extractive body cue:** Every 50 trajectories, the collector randomizes the poses of the cameras, switches out the objects in the scene, and randomizes the position of the workspace ...
+- **p. 5 / Dataset - extractive body cue:** BridgeData V2 features 24 environments, including kitchens, sinks, and tabletops, as well as more than 100 objects.
+- **p. 5 / Dataset - extractive body cue:** In total, BridgeData V2 contains 50,365 expert demonstrations and 9,731 trajectories from a scripted policy.
+- **p. 6 / 5 Experiments - extractive body cue:** To obtain success rates for each method, we collected 10 trials for each task, varying the positions of objects and distractors between trials.
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5 Experiments - extractive PDF cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
-- **p. 4 / Dataset - extractive PDF cue:** While this policy fails frequently, we can run it autonomously to collect a large amount of pick-and-place data for a wide range of objects more ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** Additionally, the "put eggplant in pot" is a very challenging task in both labs since the eggplant easily slips out of the gripper.
-- **p. 3 / Dataset - extractive PDF cue:** Training on a combination of the largest datasets released so far is an exciting and promising direction for future work.
-- **p. 3 / Dataset - extractive PDF cue:** However, it is difficult to replicate the complexity of the real world (e.g., objects, environments, lighting, and physics) in a simulator well enough to thoroughly ...
-- **p. 4 / Dataset - extractive PDF cue:** Methods that benefit from suboptimal data, such as offline RL, can leverage this autonomous data to learn more robust behaviors.
+- **p. 8 / 5 Experiments - extractive body cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
+- **p. 4 / Dataset - extractive body cue:** While this policy fails frequently, we can run it autonomously to collect a large amount of pick-and-place data for a wide range of objects more ...
+- **p. 7 / 5 Experiments - extractive body cue:** Additionally, the "put eggplant in pot" is a very challenging task in both labs since the eggplant easily slips out of the gripper.
+- **p. 3 / Dataset - extractive body cue:** Training on a combination of the largest datasets released so far is an exciting and promising direction for future work.
+- **p. 3 / Dataset - extractive body cue:** However, it is difficult to replicate the complexity of the real world (e.g., objects, environments, lighting, and physics) in a simulator well enough to thoroughly ...
+- **p. 4 / Dataset - extractive body cue:** Methods that benefit from suboptimal data, such as offline RL, can leverage this autonomous data to learn more robust behaviors.
 
-- **PDF anchors reviewed:** datasets p. 3 (Dataset), p. 3 (Dataset), p. 4 (Dataset), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 15 (B.4 Contrastive RL), metrics p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), baselines p. 7 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 5 (Dataset), p. 6 (Dataset), results p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 3 (Dataset), p. 4 (Dataset), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 15 (B.4 Contrastive RL), metrics p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), baselines p. 7 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 5 (Dataset), p. 6 (Dataset), results p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

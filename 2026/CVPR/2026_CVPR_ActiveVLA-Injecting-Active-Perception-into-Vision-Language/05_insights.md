@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 framework that equips robots with active perception capabilities, enabling adaptive viewpoint selection and zoomin mechanisms for precise, fine-grained manipulation. • A Novel ActiveVLA Framework: ActiveVLA designs a novel coarse-to-fin ...를 This closed-loop, coarse-to-fine perception-action pipeline allows ActiveVLA to dynamically adapt its sensory inputs and maintain high effectiveness across complex, multi-step, and long-horizon manipulation tasks.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 1. Comparison between previous VLA methods and ActiveVLA. Traditional VLA systems often fail in tasks like "bring the apples on the table" because their fixed cameras miss critical details or become ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142 (p. 2, 1. Introduction).
+- **Paper-specific mechanism:** The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142 (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Results in Table 2 show that ActiveVLA achieves a new state of the art on COLOSSEUM, with an average success rate of 65.9% and an average rank of 1.07, outperforming ... (p. 7, 4.1. Experimental Results); the relevant task/metric cue is As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of 92.4%, 66.3%, and 45.1%, surpassing 8147 (p. 7, 4.1. Experimental Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains robust even under occlusions (e.g., Place Cups, 65.6%). (p. 6, 4.1. Experimental Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Real-world experiments are conducted on a KINOVA GEN2 robot with a RealSense D455 camera in an eye-to-hand setup, covering occlusion-rich manipulation tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: We compare ActiveVLA with state-of-the-art baselines..
-4. Report the body metric and its denominator/aggregation: Component Performance A-VS A-3Z RLBench COLOSSEUM GemBench 87.6/0.26 63.6/0.33 48.9/0.21 " 89.4/0.45 64.5/0.51 49.4/0.48 " " 91.8/0.53 65.9/0.62 51.3/0.59 1 2 3 4 5 6 Number of View 80.0 82.0 84.0 86.0 ....
-5. Re-run the body-reported ablation/failure condition: Results are reported as mean success rates without confidence intervals..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142 (p. 2, 1. Introduction); preserve the objective/update rule: After obtaining the actively selected and zoom-in views, we feed them into the VLM to generate attention heatmaps. (p. 5, 3.3. 3D Action Prediction).
+2. Use the paper-reported task/data/environment cue: Real-world experiments are conducted on a KINOVA GEN2 robot with a RealSense D455 camera in an eye-to-hand setup, covering occlusion-rich manipulation tasks. (p. 6, 4. Experiments).
+3. Compare against the reported or matched baseline: We compare ActiveVLA with state-of-the-art baselines. (p. 6, 4. Experiments).
+4. Report the body metric with its denominator and aggregation: As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of 92.4%, 66.3%, and 45.1%, surpassing 8147 (p. 7, 4.1. Experimental Results).
+5. Re-run the reported ablation or stress/failure condition: Results are reported as mean success rates without confidence intervals. (p. 7, 4.1. Experimental Results); if none is reported, design one around: It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains robust even under occlusions (e.g., Place Cups, 65.6%). (p. 6, 4.1. Experimental Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3.3. 3D Action Prediction), p. 5 (3.3. 3D Action Prediction), p. 6 (3.3. 3D Action Prediction); the primary result is directionally consistent at p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), and measure the boundary at p. 6 (4.1. Experimental Results), p. 6 (4. Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, summarized, Active mechanism이 We compare ActiveVLA with state-of-the-art baselines. 대비 Component Performance A-VS A-3Z RLBench COLOSSEUM GemBench 87.6/0.26 63.6/0.33 48.9/0.21 " 89.4/0.45 64.5/0.51 49.4/0.48 " " 91.8/0.53 65.9/0.62 ...을 개선하고, Figure 1. Comparison between previous VLA methods and ActiveVLA. Traditional VLA systems often fail in tasks ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142), does the paper-specific mechanism (The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142) retain the reported evaluation outcome (As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of ...) when tested against the paper's strongest explicit boundary (It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142 (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Results in Table 2 show that ActiveVLA achieves a new state of the art on COLOSSEUM, with an average success rate of 65.9% and an average rank of 1.07, outperforming ... (p. 7, 4.1. Experimental Results).
+- **Strongest explicit boundary:** It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains robust even under occlusions (e.g., Place Cups, 65.6%). (p. 6, 4.1. Experimental Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

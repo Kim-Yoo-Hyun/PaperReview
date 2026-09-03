@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** In this section, we evaluate VarSplat against existing baselines on both synthetic and real-world datasets.
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** VarSplat achieves competitive results on both synthetic and real-world datasets.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** For fair comparison on ScanNet with common baselines [15, 45, 48], we report results on six scenes.
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** Rendering performance on 3 datasets.
-- **p. 8 / 4.3. Ablation studies - extractive PDF cue:** Uncertainty ablation on ScanNet (scene0181).
-- **p. 8 / 4.3. Ablation studies - extractive PDF cue:** Visualization of challenging conditions (scene0169 ScanNet).
-- **p. 6 / 4.2. Quantitative Evaluation - extractive PDF cue:** VarSplat achieves the highest accuracy with robustness on large motion camera.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We compute L1 on rendered depth and the F1 score against ground truth mesh vertices as in [51, 52].
+- **p. 6 / 4. Experiments - extractive body cue:** In this section, we evaluate VarSplat against existing baselines on both synthetic and real-world datasets.
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves competitive results on both synthetic and real-world datasets.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For fair comparison on ScanNet with common baselines [15, 45, 48], we report results on six scenes.
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** Rendering performance on 3 datasets.
+- **p. 8 / 4.3. Ablation studies - extractive body cue:** Uncertainty ablation on ScanNet (scene0181).
+- **p. 8 / 4.3. Ablation studies - extractive body cue:** Visualization of challenging conditions (scene0169 ScanNet).
+- **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves the highest accuracy with robustness on large motion camera.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We compute L1 on rendered depth and the F1 score against ground truth mesh vertices as in [51, 52].
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Quantitative Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | VarSplat achieves the highest accuracy with robustness on large motion camera. | p. 6 (4.2. Quantitative Evaluation) |
 | 4.2. Quantitative Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | On ScanNet, VarSplat consistently achieves best performance against both neural implicit and 3DGS baselines. | p. 6 (4.2. Quantitative Evaluation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** In this section, we evaluate VarSplat against existing baselines on both synthetic and real-world datasets.
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** VarSplat achieves competitive results on both synthetic and real-world datasets.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** For fair comparison on ScanNet with common baselines [15, 45, 48], we report results on six scenes.
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** Rendering performance on 3 datasets.
-- **p. 8 / 4.3. Ablation studies - extractive PDF cue:** Uncertainty ablation on ScanNet (scene0181).
-- **p. 8 / 4.3. Ablation studies - extractive PDF cue:** Visualization of challenging conditions (scene0169 ScanNet).
+- **p. 6 / 4. Experiments - extractive body cue:** In this section, we evaluate VarSplat against existing baselines on both synthetic and real-world datasets.
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves competitive results on both synthetic and real-world datasets.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For fair comparison on ScanNet with common baselines [15, 45, 48], we report results on six scenes.
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** Rendering performance on 3 datasets.
+- **p. 8 / 4.3. Ablation studies - extractive body cue:** Uncertainty ablation on ScanNet (scene0181).
+- **p. 8 / 4.3. Ablation studies - extractive body cue:** Visualization of challenging conditions (scene0169 ScanNet).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is optimized ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. VarSplat architecture. During mapping, each 3D Gaussian jointly learns position, appearance, and variance σ2. The per-splat variances are composited into per-pixel uncertainty V ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Tracking Performance on Replica [33] (ATE RMSE ↓ [cm]). UC indicates uncertainty. The results are highlighted as best , second and third . ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Tracking Performance on ScanNet++ (ATE RMSE ↓ [cm]). VarSplat achieves the highest accuracy with robustness on large motion camera.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Tracking Performance on TUM-RGBD (ATE RMSE ↓ [cm]). UC indicates uncertainty. VarSplat outperforms both 3DGS and NeRF baselines. *Photo-SLAM [11] use ORB-SLAM3 fea- ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Tracking Performance on ScanNet. UC indicates uncer- tainty. VarSplat achieves the best overall, showing robustness to noisy indoor scenes.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Reconstruction Performance on Replica. VarSplat achieve third-best result after Loopy-SLAM and LoopSplat, show- ing that variance regularization preserves mesh quality.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 6. Rendering performance on 3 datasets. VarSplat achieves competitive results on both synthetic and real-world datasets. Gray indicates evaluation on submaps rather than global ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is optimized ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. VarSplat architecture. During mapping, each 3D Gaussian jointly learns position, appearance, and variance σ2. The per-splat variances are composited into per-pixel uncertainty V ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Tracking Performance on Replica [33] (ATE RMSE ↓ [cm]). UC indicates uncertainty. The results are highlighted as best , second and third . ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Tracking Performance on ScanNet++ (ATE RMSE ↓ [cm]). VarSplat achieves the highest accuracy with robustness on large motion camera.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Tracking Performance on TUM-RGBD (ATE RMSE ↓ [cm]). UC indicates uncertainty. VarSplat outperforms both 3DGS and NeRF baselines. *Photo-SLAM [11] use ORB-SLAM3 fea- ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Tracking Performance on ScanNet. UC indicates uncer- tainty. VarSplat achieves the best overall, showing robustness to noisy indoor scenes.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Reconstruction Performance on Replica. VarSplat achieve third-best result after Loopy-SLAM and LoopSplat, show- ing that variance regularization preserves mesh quality.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 6. Rendering performance on 3 datasets. VarSplat achieves competitive results on both synthetic and real-world datasets. Gray indicates evaluation on submaps rather than global ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this section, we evaluate VarSplat against existing baselines on both synthetic and real-world datasets. | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 7 (4.2. Quantitative Evaluation) |
 | Task/environment | VarSplat achieves competitive results on both synthetic and real-world datasets. | reset, timeout, object/scene variation | p. 7 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup) |
@@ -121,10 +121,10 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 | Primary metric/result | On ScanNet, VarSplat consistently achieves best performance against both neural implicit and 3DGS baselines. | numeric claim only at cited anchor | p. 6 (4.2. Quantitative Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.2. Quantitative Evaluation - extractive PDF cue:** Neural Implicit Fields NICE-SLAM [52] ✗ 0.97 1.31 1.07 0.88 1.00 1.06 1.10 1.13 1.06 ESLAM [14] ✗ 0.71 0.70 0.52 0.57 0.55 0.58 0.72 ...
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** Neural Implicit Fields Co-SLAM [38] ✗ 7.1 11.1 9.4 5.9 11.8 7.1 8.7 NICE-SLAM [52] ✗ 12.0 14.0 7.9 10.9 13.4 6.2 10.7 ESLAM [14] ...
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** Dataset Replica [33] TUM [35] ScanNet [4] Method PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ...
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** Method Mapping Mapping Tracking Tracking ATE /fr(s) /iter(ms) /fr(s) /iter(ms) RMSE NICE-SLAM [52] 5.8 90.6 8.1 20.8 0.97 Point-SLAM [28] 28.7 93.1 7.1 29.0 0.61 ...
+- **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** Neural Implicit Fields NICE-SLAM [52] ✗ 0.97 1.31 1.07 0.88 1.00 1.06 1.10 1.13 1.06 ESLAM [14] ✗ 0.71 0.70 0.52 0.57 0.55 0.58 0.72 ...
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** Neural Implicit Fields Co-SLAM [38] ✗ 7.1 11.1 9.4 5.9 11.8 7.1 8.7 NICE-SLAM [52] ✗ 12.0 14.0 7.9 10.9 13.4 6.2 10.7 ESLAM [14] ...
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** Dataset Replica [33] TUM [35] ScanNet [4] Method PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ...
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** Method Mapping Mapping Tracking Tracking ATE /fr(s) /iter(ms) /fr(s) /iter(ms) RMSE NICE-SLAM [52] 5.8 90.6 8.1 20.8 0.97 Point-SLAM [28] 28.7 93.1 7.1 29.0 0.61 ...
 
 ## Generalization and Failure Cases
 
@@ -162,14 +162,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitations and future works are provided in Supplementary Material.
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** These results also show that using the per-pixel uncertainty map to regularize the photometric loss does not degrade mesh reconstruction quality.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Across four datasets, this integration achieves robust and competitive-to-superior performance.
-- **p. 6 / 4.2. Quantitative Evaluation - extractive PDF cue:** On ScanNet++, VarSplat improves ATE RMSE by about 18% over the second best method and ensures robustness in long sequences where others like SplaTAM fail ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is optimized ...
-- **p. 6 / 4.2. Quantitative Evaluation - extractive PDF cue:** VarSplat achieves the highest accuracy with robustness on large motion camera.
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future works are provided in Supplementary Material.
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** These results also show that using the per-pixel uncertainty map to regularize the photometric loss does not degrade mesh reconstruction quality.
+- **p. 8 / 5. Conclusion - extractive body cue:** Across four datasets, this integration achieves robust and competitive-to-superior performance.
+- **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** On ScanNet++, VarSplat improves ATE RMSE by about 18% over the second best method and ensures robustness in long sequences where others like SplaTAM fail ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is optimized ...
+- **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves the highest accuracy with robustness on large motion camera.
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), metrics p. 6 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation studies), p. 7 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), results p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. Quantitative Evaluation), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), metrics p. 6 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation studies), p. 7 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), results p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. Quantitative Evaluation), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

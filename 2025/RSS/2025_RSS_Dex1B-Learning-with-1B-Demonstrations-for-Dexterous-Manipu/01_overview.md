@@ -1,8 +1,10 @@
 # Dex1B: Learning with 1B Demonstrations for Dexterous Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p106.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,7 +35,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 - **p. 2 / 1. INrRopucTION - extractive body cue:** ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques ...
 - **p. 2 / 7 S65 69K- Graplt - extractive body cue:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks.
-- **p. 1 / Front matter - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
 - **p. 1 / Abstract - extractive body cue:** In this paper, we introduce DexIB, a largeseale, diverse, and high-quality demonstration dataset produced with generative models.
 - **p. 3 / 7 S65 69K- Graplt - extractive body cue:** We presents the differences of several representative manipulation datasets in Tab.
 - **p. 4 / 0 4 © _ sminge - extractive body cue:** Although we use optimization in this stage, the overall data generation, combined with generative models, remains signif icantly more efficient than pure optimization.
@@ -53,7 +55,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 - **p. 2 / 1. INrRopucTION - extractive body cue:** ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques ...
 - **p. 2 / 7 S65 69K- Graplt - extractive body cue:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks.
-- **p. 1 / Front matter - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
 - **p. 1 / Abstract - extractive body cue:** In this paper, we introduce DexIB, a largeseale, diverse, and high-quality demonstration dataset produced with generative models.
 - **p. 3 / 7 S65 69K- Graplt - extractive body cue:** We presents the differences of several representative manipulation datasets in Tab.
 - **p. 8 / B. Dataset Analysis - extractive body cue:** Although LD slightly increases the penetration value, it significantly contributes to an improved success rate and Qi score, highlighting its importance in achieving reliable grasps.
@@ -82,3 +84,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based techniques lack ...를 문제로 두고, ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques with generative models, leveraging the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 2 (7 S65 69K- Graplt), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 2 (1. INrRopucTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based ... (p. 2, 1. INrRopucTION).
+- **Actual contribution:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks. (p. 2, 7 S65 69K- Graplt).
+- **Evaluation boundary:** We adhere to the metrics established in the benchmark to ensure fair comparisons with baseline methods, which are divided into two categories: ‘quality (Success Rate, Qy-score, Penetration) and diversity (H ... (p. 6, A. Grasping Synthesis Evaluation).
+- **Explicit failure boundary:** While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based ... (p. 2, 1. INrRopucTION).

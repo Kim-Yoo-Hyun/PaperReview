@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Static Cam 𝒔𝒔𝒃𝒃 𝒕𝒕 Gripper Cam 𝒔𝒔𝒈𝒈𝒕𝒕 … … Multimodal Transformer Encoder … Noise 𝝈𝝈 𝛥𝛥𝑇𝑇 𝛥𝛥𝑅𝑅 𝑠𝑠𝑔𝑔 𝑠𝑠𝑝𝑝 Detection 𝒅𝒅𝒕𝒕 … Action 𝒂𝒂𝒕𝒕 masking move to the top side of the ...를 3.2.2 Model Achitecture Long-VLA policy πθ(at / st, dt, g) predicts the action at conditioned on the current observation st, the detection input dt associated with st, and the latent goal g, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 12: Failure case of π0. Base Policy LongVLA Press blue button Grab the corn Put in the sink Press yellow button Fail to press the button에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Based on these observations, we propose an input-level adaptation strategy that dynamically adjusts visual inputs according to the current task phase. (p. 4, 3 Method).
+- **Paper-specific mechanism:** To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 7: Comparison with SOTA method on real-world scenarios. (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the ... (p. 7, Figure/Table caption); the relevant task/metric cue is As shown in Figure 5, while the success rate of the base policy drops to zero after the seventh task, our approach is still able to achieve a success rate ... (p. 6, 4 Experiment). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions. (p. 9, Limitation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In real-world robotic experiments, our method consistently outperforms the state-of-the-art algorithm π0 across the generalization task..
-3. Compare against the body-reported baseline or a matched simpler baseline: In real-world robotic experiments, our method consistently outperforms the state-of-the-art algorithm π0 across the generalization task..
-4. Report the body metric and its denominator/aggregation: As shown in Figure 5, while the success rate of the base policy drops to zero after the seventh task, our approach is still able to achieve a success rate of nearly ....
-5. Re-run the body-reported ablation/failure condition: Figure 2: Overview of Long-VLA. (a) Task decomposition with aligned visual observations and language annotations. (b) Phase-aware masking enables the model to selectively attend to relevant tokens during attention computation without mo ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Based on these observations, we propose an input-level adaptation strategy that dynamically adjusts visual inputs according to the current task phase. (p. 4, 3 Method); preserve the objective/update rule: As a result, the total training loss is formulated as: L = LDiff + αLGoal. (p. 4, 3 Method).
+2. Use the paper-reported task/data/environment cue: In simulation and real-world environments, we select MDT [52] as our base policy. (p. 5, 4 Experiment).
+3. Compare against the reported or matched baseline: In real-world robotic experiments, our method consistently outperforms the state-of-the-art algorithm π0 across the generalization task. (p. 7, 4 Experiment).
+4. Report the body metric with its denominator and aggregation: As shown in Figure 5, while the success rate of the base policy drops to zero after the seventh task, our approach is still able to achieve a success rate ... (p. 6, 4 Experiment).
+5. Re-run the reported ablation or stress/failure condition: Real (Sorting) Real (Cleaning) Sim (D-D) ✗ ✗ ✓ 2.3 1.4 4.11 ✓ ✗ ✓ 3.6 (1.3 ↑) 1.7 (0.3 ↑) 4.42 (0.31 ↑) ✓ ✓ ✗ 4.1 (1.8 ↑) ... (p. 8, 4 Experiment); if none is reported, design one around: While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions. (p. 9, Limitation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3 Method), p. 5 (3 Method), p. 3 (3 Method); the primary result is directionally consistent at p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 7 (4 Experiment), p. 6 (4 Experiment), and measure the boundary at p. 9 (Limitation), p. 9 (Limitation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Long-VLA, first, end-to-end mechanism이 In real-world robotic experiments, our method consistently outperforms the state-of-the-art algorithm π0 across the generalization task. 대비 As shown in Figure 5, while the success rate of the base policy drops to zero after the ...을 개선하고, Figure 12: Failure case of π0. Base Policy LongVLA Press blue button Grab the corn Put ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Based on these observations, we propose an input-level adaptation strategy that dynamically adjusts visual inputs according to the current task phase.), does the paper-specific mechanism (To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation.) retain the reported evaluation outcome (As shown in Figure 5, while the success rate of the base policy drops to zero after the ...) when tested against the paper's strongest explicit boundary (While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (As shown in Figure 5, while the success rate of the base policy drops to zero after the ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 7: Comparison with SOTA method on real-world scenarios. (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions. (p. 9, Limitation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

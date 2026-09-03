@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2110.06922; PDF retrieval source: https://arxiv.org/pdf/2110.06922. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2110.06922; PDF retrieval source: https://arxiv.org/pdf/2110.06922. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Method Body Digest
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** To the best of our knowledge, this is the first attempt to cast multi-camera detection as 3D set-to-set prediction. • We introduce a module that ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely on a module ...
-- **p. 1 / Abstract - extractive PDF cue:** Our architecture extracts 2D features from multiple camera images and then uses a sparse set of 3D object queries to index into these 2D features, ...
-- **p. 1 / Abstract - extractive PDF cue:** Finally, our model makes a bounding box prediction per object query, using a set-to-set loss to measure the discrepancy between the ground-truth and the prediction.
-- **p. 1 / 1 Introduction - extractive PDF cue:** 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
-- **p. 2 / 1 Introduction - extractive PDF cue:** After a series of self-attention layers, we read off bounding box parameters from every layer and use a set-to-set loss inspired by DETR [10] to ...
-- **p. 1 / Abstract - extractive PDF cue:** In contrast to existing works, which estimate 3D bounding boxes directly from monocular images or use depth prediction networks to generate input for 3D object ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** As an alternative to these 2D-based methods, some methods incorporate more 3D computations into our object detection pipeline by applying a 3D reconstruction method like ...
+- **p. 2 / 1 Introduction - extractive body cue:** To the best of our knowledge, this is the first attempt to cast multi-camera detection as 3D set-to-set prediction. • We introduce a module that ...
+- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely on a module ...
+- **p. 1 / Abstract - extractive body cue:** Our architecture extracts 2D features from multiple camera images and then uses a sparse set of 3D object queries to index into these 2D features, ...
+- **p. 1 / Abstract - extractive body cue:** Finally, our model makes a bounding box prediction per object query, using a set-to-set loss to measure the discrepancy between the ground-truth and the prediction.
+- **p. 1 / 1 Introduction - extractive body cue:** 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
+- **p. 2 / 1 Introduction - extractive body cue:** After a series of self-attention layers, we read off bounding box parameters from every layer and use a set-to-set loss inspired by DETR [10] to ...
+- **p. 1 / Abstract - extractive body cue:** In contrast to existing works, which estimate 3D bounding boxes directly from monocular images or use depth prediction networks to generate input for 3D object ...
+- **p. 1 / 1 Introduction - extractive body cue:** As an alternative to these 2D-based methods, some methods incorporate more 3D computations into our object detection pipeline by applying a 3D reconstruction method like ...
 
 ## Design Rationale
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** We summarize our key contributions as follows: • We present a streamlined 3D object detection model from RGB images.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Moreover, our method does not require any post-processing, such as non-maximum suppression (NMS), improving efficiency and reducing reliance on hand-designed methods for cleaning its output.
-- **p. 1 / 1 Introduction - extractive PDF cue:** This strategy, however, is subject to compounding errors [7]: poorly-estimated depth values have a strongly negative effect on the performance of 3D object detection, which ...
+- **p. 2 / 1 Introduction - extractive body cue:** We summarize our key contributions as follows: • We present a streamlined 3D object detection model from RGB images.
+- **p. 2 / 1 Introduction - extractive body cue:** Moreover, our method does not require any post-processing, such as non-maximum suppression (NMS), improving efficiency and reducing reliance on hand-designed methods for cleaning its output.
+- **p. 1 / Abstract - extractive body cue:** We introduce a framework for multi-camera 3D object detection.
 
 ## Source Evidence Cues
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** To the best of our knowledge, this is the first attempt to cast multi-camera detection as 3D set-to-set prediction. • We introduce a module that ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely on a module ...
-- **p. 1 / Abstract - extractive PDF cue:** Our architecture extracts 2D features from multiple camera images and then uses a sparse set of 3D object queries to index into these 2D features, ...
-- **p. 1 / Abstract - extractive PDF cue:** Finally, our model makes a bounding box prediction per object query, using a set-to-set loss to measure the discrepancy between the ground-truth and the prediction.
+- **p. 2 / 1 Introduction - extractive body cue:** To the best of our knowledge, this is the first attempt to cast multi-camera detection as 3D set-to-set prediction. • We introduce a module that ...
+- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely on a module ...
+- **p. 1 / Abstract - extractive body cue:** Our architecture extracts 2D features from multiple camera images and then uses a sparse set of 3D object queries to index into these 2D features, ...
+- **p. 1 / Abstract - extractive body cue:** Finally, our model makes a bounding box prediction per object query, using a set-to-set loss to measure the discrepancy between the ground-truth and the prediction.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To the best of our knowledge, this is the first attempt to cast multi-camera detection as 3D set-to-set prediction. • We introduce ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely ... | p. 2 (1 Introduction), p. 1 (Abstract) |
@@ -45,9 +45,9 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Objective / Update Rule
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
-- **p. 1 / Abstract - extractive PDF cue:** Finally, our model makes a bounding box prediction per object query, using a set-to-set loss to measure the discrepancy between the ground-truth and the prediction.
-- **p. 2 / 1 Introduction - extractive PDF cue:** After a series of self-attention layers, we read off bounding box parameters from every layer and use a set-to-set loss inspired by DETR [10] to ...
+- **p. 1 / 1 Introduction - extractive body cue:** 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
+- **p. 1 / Abstract - extractive body cue:** Finally, our model makes a bounding box prediction per object query, using a set-to-set loss to measure the discrepancy between the ground-truth and the prediction.
+- **p. 2 / 1 Introduction - extractive body cue:** After a series of self-attention layers, we read off bounding box parameters from every layer and use a set-to-set loss inspired by DETR [10] to ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 2 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,10 +63,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Observation–State–Action Interface
 
-- **p. 1 / Abstract - extractive PDF cue:** In contrast to existing works, which estimate 3D bounding boxes directly from monocular images or use depth prediction networks to generate input for 3D object ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely on a module ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** As an alternative to these 2D-based methods, some methods incorporate more 3D computations into our object detection pipeline by applying a 3D reconstruction method like ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our architecture does not perform point cloud reconstruction or explicit depth prediction from images, making it robust to errors in depth estimation.
+- **p. 1 / Abstract - extractive body cue:** In contrast to existing works, which estimate 3D bounding boxes directly from monocular images or use depth prediction networks to generate input for 3D object ...
+- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose a more graceful transition between 2D observations and 3D predictions for autonomous driving, which does not rely on a module ...
+- **p. 1 / 1 Introduction - extractive body cue:** As an alternative to these 2D-based methods, some methods incorporate more 3D computations into our object detection pipeline by applying a 3D reconstruction method like ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our architecture does not perform point cloud reconstruction or explicit depth prediction from images, making it robust to errors in depth estimation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -81,8 +81,8 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Training vs Inference
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** The model is trained for 12 epochs in total on 8 RTX 3090 GPUs and the per-GPU batch size is 1.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
+- **p. 5 / 4 Experiments - extractive body cue:** The model is trained for 12 epochs in total on 8 RTX 3090 GPUs and the per-GPU batch size is 1.
+- **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -102,13 +102,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Failure and Ablation Link
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and a ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works in ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** To perform multi-view object detection, these methods have to process each image independently, and use both per-image and global NMS to remove redundant boxes in ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** Conceptually, this pipeline is a variant of pseudo-LiDAR [42].
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.5 Ablation & Analysis We provide a visualization of object query refinement in Figure 2.
-- **p. 9 / 5 Conclusion - extractive PDF cue:** Some failure cases include the far ahead car in CAM FRONT, that was not detected.
-- **p. 6 / 4 Experiments - extractive PDF cue:** To further demonstrate the advantages of fused inference, we calculate the metrics for boxes falling into the camera overlaps.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and a ...
+- **p. 5 / 4 Experiments - extractive body cue:** We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works in ...
+- **p. 6 / 4 Experiments - extractive body cue:** To perform multi-view object detection, these methods have to process each image independently, and use both per-image and global NMS to remove redundant boxes in ...
+- **p. 7 / 4 Experiments - extractive body cue:** Conceptually, this pipeline is a variant of pseudo-LiDAR [42].
+- **p. 7 / 4 Experiments - extractive body cue:** 4.5 Ablation & Analysis We provide a visualization of object query refinement in Figure 2.
+- **p. 9 / 5 Conclusion - extractive body cue:** Some failure cases include the far ahead car in CAM FRONT, that was not detected.
+- **p. 6 / 4 Experiments - extractive body cue:** To further demonstrate the advantages of fused inference, we calculate the metrics for boxes falling into the camera overlaps.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -122,7 +122,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), objective p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 5 (4 Experiments), p. 5 (4 Experiments), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), objective p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 5 (4 Experiments), p. 5 (4 Experiments), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

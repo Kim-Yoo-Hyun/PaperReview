@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=4SsNofUQf1; PDF retrieval source: https://openreview.net/pdf/4789cd82aac069c8a7cd1f2ccef5c8c864a271d7.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=4SsNofUQf1; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168191. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 
 ## Method Body Digest
 
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), (3) where ˜hi ...
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Furthermore, we adjust the tokens with adapters enhanced by shape feature f. ˆhi, ˆpi = Attn.([˜hi, pi]), (4) hi+1 = ˆhi + Adapter( ˆhi + ...
-- **p. 3 / 3.1. Point Prompt - extractive PDF cue:** This module also generates instance-specific informative shape features f ∈RD, where D is the embedding dimension of transformers, formulated as: ˜x, f = Point-Shift-Prompter(x).
-- **p. 5 / 3.2. Point Shift Prompter - extractive PDF cue:** Firstly, an upsampling strategy is employed to propagate features from center points to neighbor points.
-- **p. 5 / 3.2. Point Shift Prompter - extractive PDF cue:** Then we further process the features with another pointnet: ˜d n j = Pointnet(Propagate(˜dj)), (10) where ˜d n j ∈RCj×Kj×Dj is features of neighbor points ...
-- **p. 3 / 3. The Proposed Method - extractive PDF cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
-- **p. 4 / 3.2. Point Shift Prompter - extractive PDF cue:** Specifically, to acquire global shape information of point clouds without much computational cost, we utilize a hierarchical downsampling strategy.
-- **p. 3 / 3.1. Point Prompt - extractive PDF cue:** Given a raw input point cloud x ∈RS×3 with S points, firstly we hybrid Point Prompt P ∈RP ×3 into its 3D space, denoted as ...
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), (3) where ˜hi ...
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Furthermore, we adjust the tokens with adapters enhanced by shape feature f. ˆhi, ˆpi = Attn.([˜hi, pi]), (4) hi+1 = ˆhi + Adapter( ˆhi + ...
+- **p. 3 / 3.1. Point Prompt - extractive body cue:** This module also generates instance-specific informative shape features f ∈RD, where D is the embedding dimension of transformers, formulated as: ˜x, f = Point-Shift-Prompter(x).
+- **p. 5 / 3.2. Point Shift Prompter - extractive body cue:** Firstly, an upsampling strategy is employed to propagate features from center points to neighbor points.
+- **p. 5 / 3.2. Point Shift Prompter - extractive body cue:** Then we further process the features with another pointnet: ˜d n j = Pointnet(Propagate(˜dj)), (10) where ˜d n j ∈RCj×Kj×Dj is features of neighbor points ...
+- **p. 3 / 3. The Proposed Method - extractive body cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
+- **p. 4 / 3.2. Point Shift Prompter - extractive body cue:** Specifically, to acquire global shape information of point clouds without much computational cost, we utilize a hierarchical downsampling strategy.
+- **p. 3 / 3.1. Point Prompt - extractive body cue:** Given a raw input point cloud x ∈RS×3 with S points, firstly we hybrid Point Prompt P ∈RP ×3 into its 3D space, denoted as ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, the key contributions of this work are: (1) We propose GAPrompt, a novel geometry-aware prompt learning method tailored for pre-trained 3D vision models.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To this end, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt), specifically designed for parameter-efficient fine-tuning of 3D models.
-- **p. 1 / 1. Introduction - extractive PDF cue:** This advancement has propelled the development of various 3D vision applications, including 3D reconstruction (Xu et al., 2022; Lu et al., 2024) and autonomous driving ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, the key contributions of this work are: (1) We propose GAPrompt, a novel geometry-aware prompt learning method tailored for pre-trained 3D vision models.
+- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt), specifically designed for parameter-efficient fine-tuning of 3D models.
+- **p. 1 / 1. Introduction - extractive body cue:** This advancement has propelled the development of various 3D vision applications, including 3D reconstruction (Xu et al., 2022; Lu et al., 2024) and autonomous driving ...
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), (3) where ˜hi ...
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Furthermore, we adjust the tokens with adapters enhanced by shape feature f. ˆhi, ˆpi = Attn.([˜hi, pi]), (4) hi+1 = ˆhi + Adapter( ˆhi + ...
-- **p. 3 / 3.1. Point Prompt - extractive PDF cue:** This module also generates instance-specific informative shape features f ∈RD, where D is the embedding dimension of transformers, formulated as: ˜x, f = Point-Shift-Prompter(x).
-- **p. 5 / 3.2. Point Shift Prompter - extractive PDF cue:** Firstly, an upsampling strategy is employed to propagate features from center points to neighbor points.
-- **p. 5 / 3.2. Point Shift Prompter - extractive PDF cue:** Then we further process the features with another pointnet: ˜d n j = Pointnet(Propagate(˜dj)), (10) where ˜d n j ∈RCj×Kj×Dj is features of neighbor points ...
-- **p. 3 / 3. The Proposed Method - extractive PDF cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), (3) where ˜hi ...
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Furthermore, we adjust the tokens with adapters enhanced by shape feature f. ˆhi, ˆpi = Attn.([˜hi, pi]), (4) hi+1 = ˆhi + Adapter( ˆhi + ...
+- **p. 3 / 3.1. Point Prompt - extractive body cue:** This module also generates instance-specific informative shape features f ∈RD, where D is the embedding dimension of transformers, formulated as: ˜x, f = Point-Shift-Prompter(x).
+- **p. 5 / 3.2. Point Shift Prompter - extractive body cue:** Firstly, an upsampling strategy is employed to propagate features from center points to neighbor points.
+- **p. 5 / 3.2. Point Shift Prompter - extractive body cue:** Then we further process the features with another pointnet: ˜d n j = Pointnet(Propagate(˜dj)), (10) where ˜d n j ∈RCj×Kj×Dj is features of neighbor points ...
+- **p. 3 / 3. The Proposed Method - extractive body cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
 - **Detected method headings:** 2.1. Pre-trained 3D Vision Model (p. 2); 3. The Proposed Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), ... | p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Furthermore, we adjust the tokens with adapters enhanced by shape feature f. ˆhi, ˆpi = Attn.([˜hi, pi]), (4) hi+1 = ˆhi + ... | p. 4 (3.1. Point Prompt), p. 3 (3.1. Point Prompt) |
@@ -47,8 +47,8 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.2. Point Shift Prompter - extractive PDF cue:** Specifically, to acquire global shape information of point clouds without much computational cost, we utilize a hierarchical downsampling strategy.
-- **p. 3 / 3. The Proposed Method - extractive PDF cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
+- **p. 4 / 3.2. Point Shift Prompter - extractive body cue:** Specifically, to acquire global shape information of point clouds without much computational cost, we utilize a hierarchical downsampling strategy.
+- **p. 3 / 3. The Proposed Method - extractive body cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3. The Proposed Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), (3) where ˜hi ...
-- **p. 3 / 3.1. Point Prompt - extractive PDF cue:** Given a raw input point cloud x ∈RS×3 with S points, firstly we hybrid Point Prompt P ∈RP ×3 into its 3D space, denoted as ...
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Then the hybrid point cloud [x; P] becomes prompted input point cloud [˜x; P] ∈R(S+P )×3.
-- **p. 5 / 3.2. Point Shift Prompter - extractive PDF cue:** (8) After k levels of downsampling, we obtain center point features ˜dk ∈RCk×Dk where Ck × Dk = D and concatenate them as shape feature ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** This module extracts global shape information from the original point cloud and shifts the points accordingly, thereby enriching the geometric features at the input level.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our approach begins with the introduction of a Point Prompt, which explicitly incorporates point cloud data as input, allowing the model to better capture subtle ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** The advent of scanning sensor devices has significantly facilitated the acquisition of 3D point cloud data, an inherently irregular and unstructured geometric representation.
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Then we feed these tokens into our Prompt Propagation mechanism, injecting prompt tokens into the feature extraction process: ˜hi = Prompt-Propagation([hi; pi]), (3) where ˜hi ...
+- **p. 3 / 3.1. Point Prompt - extractive body cue:** Given a raw input point cloud x ∈RS×3 with S points, firstly we hybrid Point Prompt P ∈RP ×3 into its 3D space, denoted as ...
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Then the hybrid point cloud [x; P] becomes prompted input point cloud [˜x; P] ∈R(S+P )×3.
+- **p. 5 / 3.2. Point Shift Prompter - extractive body cue:** (8) After k levels of downsampling, we obtain center point features ˜dk ∈RCk×Dk where Ck × Dk = D and concatenate them as shape feature ...
+- **p. 2 / 1. Introduction - extractive body cue:** This module extracts global shape information from the original point cloud and shifts the points accordingly, thereby enriching the geometric features at the input level.
+- **p. 2 / 1. Introduction - extractive body cue:** Our approach begins with the introduction of a Point Prompt, which explicitly incorporates point cloud data as input, allowing the model to better capture subtle ...
+- **p. 1 / 1. Introduction - extractive body cue:** The advent of scanning sensor devices has significantly facilitated the acquisition of 3D point cloud data, an inherently irregular and unstructured geometric representation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,8 +85,8 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 
 ## Training vs Inference
 
-- **p. 3 / 3. The Proposed Method - extractive PDF cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
-- **p. 4 / 3.1. Point Prompt - extractive PDF cue:** Following the original architecture of the pre-trained model, the prompted point cloud is encoded into Lt point tokens h1 by the token embedding module.
+- **p. 3 / 3. The Proposed Method - extractive body cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
+- **p. 4 / 3.1. Point Prompt - extractive body cue:** Following the original architecture of the pre-trained model, the prompted point cloud is encoded into Lt point tokens h1 by the token embedding module.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -106,13 +106,13 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We conduct ablation studies on the most challenging PB T50 RS variant based on Point-FEMAE to investigate the rationalization and effectiveness of our GAPrompt.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Ablation study of Prompt Propagation mechanism and prompt enhancing factor βp. Effect of Point Shift Prompter Components. As shown in Table 4, we ...
-- **p. 7 / 4.2. Quantitative Analysis - extractive PDF cue:** The effect of components in our GAPrompt.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Classification on three variants of the ScanObjectNN and the ModelNet40, including the number of trainable parameters (Param) and overall accuracy (Acc). We report ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our GAPrompt compares to full fine-tuning and existing PEFT methods. We compare the classification accuracy on the hardest variant of ScanObjectNN (Uy et ...
-- **p. 5 / 3.4. Analysis and Discussion - extractive PDF cue:** The attention mechanism with prompt integration can be formally expressed as follows: oi = Attn.(WQhi, WKhi, WV hi), (17) ˆoi = Attn.(WQhi, WK[pi, hi], WV ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** As demonstrated in Table 1, we conducted experiments on three variants of ScanObjectNN, each with increasing complexity.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We conduct ablation studies on the most challenging PB T50 RS variant based on Point-FEMAE to investigate the rationalization and effectiveness of our GAPrompt.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Ablation study of Prompt Propagation mechanism and prompt enhancing factor βp. Effect of Point Shift Prompter Components. As shown in Table 4, we ...
+- **p. 7 / 4.2. Quantitative Analysis - extractive body cue:** The effect of components in our GAPrompt.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Classification on three variants of the ScanObjectNN and the ModelNet40, including the number of trainable parameters (Param) and overall accuracy (Acc). We report ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our GAPrompt compares to full fine-tuning and existing PEFT methods. We compare the classification accuracy on the hardest variant of ScanObjectNN (Uy et ...
+- **p. 5 / 3.4. Analysis and Discussion - extractive body cue:** The attention mechanism with prompt integration can be formally expressed as follows: oi = Attn.(WQhi, WKhi, WV hi), (17) ˆoi = Attn.(WQhi, WK[pi, hi], WV ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** As demonstrated in Table 1, we conducted experiments on three variants of ScanObjectNN, each with increasing complexity.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,7 +126,7 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p. 3 (3.1. Point Prompt), p. 5 (3.2. Point Shift Prompter), p. 5 (3.2. Point Shift Prompter), p. 3 (3. The Proposed Method), objective p. 4 (3.2. Point Shift Prompter), p. 3 (3. The Proposed Method), temporal p. 4 (3.2. Point Shift Prompter), p. 4 (3.2. Point Shift Prompter), p. 5 (3.3. Prompt Propagation), p. 5 (3.3. Prompt Propagation).
+- **Evidence anchors reviewed:** method p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p. 3 (3.1. Point Prompt), p. 5 (3.2. Point Shift Prompter), p. 5 (3.2. Point Shift Prompter), p. 3 (3. The Proposed Method), objective p. 4 (3.2. Point Shift Prompter), p. 3 (3. The Proposed Method), temporal p. 4 (3.2. Point Shift Prompter), p. 4 (3.2. Point Shift Prompter), p. 5 (3.3. Prompt Propagation), p. 5 (3.3. Prompt Propagation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

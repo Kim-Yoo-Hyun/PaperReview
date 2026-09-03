@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 
 ## Method Body Digest
 
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** We use DINOv2 [17] as the feature extraction backbone.
-- **p. 4 / 3.2. Overview - extractive PDF cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
-- **p. 4 / 3.2. Overview - extractive PDF cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
-- **p. 3 / 3.2. Overview - extractive PDF cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
-- **p. 3 / 3.2. Overview - extractive PDF cue:** However, while such artifacts are human-discernible, some of them can be challenging for deep neural networks to identify.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** The Gaussian parameters are optimized by minimizing the photometric reconstruction loss between the rendered image and its reference image: L = (1 -λD-SSIM) L1 + ...
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** For handling transients, a common practice is to estimate a per-pixel binary mask M and suppress transient regions during loss computation: Lmasked = (1-λD-SSIM) M⊙L1+λD-SSIM ...
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** We use DINOv2 [17] as the feature extraction backbone.
+- **p. 4 / 3.2. Overview - extractive body cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
+- **p. 4 / 3.2. Overview - extractive body cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
+- **p. 3 / 3.2. Overview - extractive body cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
+- **p. 3 / 3.2. Overview - extractive body cue:** However, while such artifacts are human-discernible, some of them can be challenging for deep neural networks to identify.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** The Gaussian parameters are optimized by minimizing the photometric reconstruction loss between the rendered image and its reference image: L = (1 -λD-SSIM) L1 + ...
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** For handling transients, a common practice is to estimate a per-pixel binary mask M and suppress transient regions during loss computation: Lmasked = (1-λD-SSIM) M⊙L1+λD-SSIM ...
 
 ## Design Rationale
 
-- **p. 3 / 3.2. Overview - extractive PDF cue:** Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are as follows:
-- **p. 2 / 1. Introduction - extractive PDF cue:** We address this problem by introducing a novel Failureto-Prior paradigm.
+- **p. 3 / 3.2. Overview - extractive body cue:** Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows:
+- **p. 2 / 1. Introduction - extractive body cue:** We address this problem by introducing a novel Failureto-Prior paradigm.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** We use DINOv2 [17] as the feature extraction backbone.
-- **p. 4 / 3.2. Overview - extractive PDF cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
-- **p. 4 / 3.2. Overview - extractive PDF cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
-- **p. 3 / 3.2. Overview - extractive PDF cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
-- **p. 3 / 3.2. Overview - extractive PDF cue:** However, while such artifacts are human-discernible, some of them can be challenging for deep neural networks to identify.
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** We use DINOv2 [17] as the feature extraction backbone.
+- **p. 4 / 3.2. Overview - extractive body cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
+- **p. 4 / 3.2. Overview - extractive body cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
+- **p. 3 / 3.2. Overview - extractive body cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
+- **p. 3 / 3.2. Overview - extractive body cue:** However, while such artifacts are human-discernible, some of them can be challenging for deep neural networks to identify.
 - **Detected method headings:** 2.3. Pretrained Models (p. 3); 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We use DINOv2 [17] as the feature extraction backbone. | p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images ... | p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 
 ## Objective / Update Rule
 
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** The Gaussian parameters are optimized by minimizing the photometric reconstruction loss between the rendered image and its reference image: L = (1 -λD-SSIM) L1 + ...
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** For handling transients, a common practice is to estimate a per-pixel binary mask M and suppress transient regions during loss computation: Lmasked = (1-λD-SSIM) M⊙L1+λD-SSIM ...
-- **p. 4 / 3.2. Overview - extractive PDF cue:** (6) The resulting mask Mt is then applied in the masked reconstruction loss of Eq.
-- **p. 4 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** The primary objective of this step is to translate these firstpass failures into reliable object-level priors for the second reconstruction stage, rather than directly outputting ...
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** (15) The final MLP objective is LMLP = λrobustLrobust + λpriorLprior + Lreg.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** These loss functions are combined as: Lrobust = exp  -max(0, Tdensify -t) βrobustness  (Lcos + Lres) .
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** The Gaussian parameters are optimized by minimizing the photometric reconstruction loss between the rendered image and its reference image: L = (1 -λD-SSIM) L1 + ...
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** For handling transients, a common practice is to estimate a per-pixel binary mask M and suppress transient regions during loss computation: Lmasked = (1-λD-SSIM) M⊙L1+λD-SSIM ...
+- **p. 4 / 3.2. Overview - extractive body cue:** (6) The resulting mask Mt is then applied in the masked reconstruction loss of Eq.
+- **p. 4 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** The primary objective of this step is to translate these firstpass failures into reliable object-level priors for the second reconstruction stage, rather than directly outputting ...
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (15) The final MLP objective is LMLP = λrobustLrobust + λpriorLprior + Lreg.
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** These loss functions are combined as: Lrobust = exp  -max(0, Tdensify -t) βrobustness  (Lcos + Lres) .
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Overview - extractive PDF cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** We therefore introduce a lightweight per-pixel MLP that predicts a transient probability map online during the second reconstruction: Mi = MLPmask(fi, di), (10) where fi ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** This coupling creates a fundamental circular dependency: accurate transient detection requires a wellreconstructed static scene to expose mismatches, yet clean reconstruction itself depends on reliable ...
-- **p. 4 / 3.2. Overview - extractive PDF cue:** DualSplat performs two-stage 3D Gaussian Splatting to suppress transient distractions.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** We use DINOv2 [17] as the feature extraction backbone.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Its success, however, relies on a basic assumption: all training views should depict a static scene under mutually consistent observations.
-- **p. 1 / 1. Introduction - extractive PDF cue:** When this assumption is violated, 3DGS mistakenly absorbs these view-inconsistent observations into the scene representation by spawning spurious Gaussians, leading to ghosting artifacts and degraded ...
+- **p. 4 / 3.2. Overview - extractive body cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** We therefore introduce a lightweight per-pixel MLP that predicts a transient probability map online during the second reconstruction: Mi = MLPmask(fi, di), (10) where fi ...
+- **p. 2 / 1. Introduction - extractive body cue:** This coupling creates a fundamental circular dependency: accurate transient detection requires a wellreconstructed static scene to expose mismatches, yet clean reconstruction itself depends on reliable ...
+- **p. 4 / 3.2. Overview - extractive body cue:** DualSplat performs two-stage 3D Gaussian Splatting to suppress transient distractions.
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** We use DINOv2 [17] as the feature extraction backbone.
+- **p. 1 / 1. Introduction - extractive body cue:** Its success, however, relies on a basic assumption: all training views should depict a static scene under mutually consistent observations.
+- **p. 1 / 1. Introduction - extractive body cue:** When this assumption is violated, 3DGS mistakenly absorbs these view-inconsistent observations into the scene representation by spawning spurious Gaussians, leading to ghosting artifacts and degraded ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,12 +89,12 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 
 ## Training vs Inference
 
-- **p. 4 / 3.2. Overview - extractive PDF cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
-- **p. 4 / 3.2. Overview - extractive PDF cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
-- **p. 3 / 3.2. Overview - extractive PDF cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
-- **p. 6 / 4.1. Setups - extractive PDF cue:** We inherit RobustSplat's progressive MLP training schedule and other hyperparameters in Stage II unless otherwise stated.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
+- **p. 4 / 3.2. Overview - extractive body cue:** FiT3D ❄ FiT3D ❄ Training images Render images Cosine Similarity Threshold Filtering Pseudo-Masks Similarity images MLP stop grad Input Process Training images Render images Grad ...
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
+- **p. 4 / 3.2. Overview - extractive body cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
+- **p. 3 / 3.2. Overview - extractive body cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
+- **p. 6 / 4.1. Setups - extractive body cue:** We inherit RobustSplat's progressive MLP training schedule and other hyperparameters in Stage II unless otherwise stated.
+- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 
 ## Failure and Ablation Link
 
-- **p. 6 / 4.1. Setups - extractive PDF cue:** We additionally include a 3DGS [8] variant that directly applies the pseudo-masks without any additional refinement.
-- **p. 5 / 4.1. Setups - extractive PDF cue:** 4.3 presents ablation studies to validate the contribution of each core component in handling occlusions and improving overall reconstruction quality.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We further decompose DualSplat into three main components and perform controlled ablations: (i) Delayed Densification (DD) for 3DGS; (ii) pseudo-mask application (PM), which directly applies ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** All ablations are retrained from the same initialization and schedule to ensure fair comparison.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization results using different pretrained mod- els as feature extractors. FiT3D, when used as the feature extrac- tor, produces the most distinct feature ...
-- **p. 2 / 1. We propose a Failure-to-Prior paradigm for transient - extractive PDF cue:** robust 3DGS that breaks the circular dependency between transient detection and scene reconstruction by converting first-pass reconstruction failures into explicit priors.
-- **p. 4 / 3.4. Reconstruction Failures to Object-Level Priors - extractive PDF cue:** The primary objective of this step is to translate these firstpass failures into reliable object-level priors for the second reconstruction stage, rather than directly outputting ...
+- **p. 6 / 4.1. Setups - extractive body cue:** We additionally include a 3DGS [8] variant that directly applies the pseudo-masks without any additional refinement.
+- **p. 5 / 4.1. Setups - extractive body cue:** 4.3 presents ablation studies to validate the contribution of each core component in handling occlusions and improving overall reconstruction quality.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We further decompose DualSplat into three main components and perform controlled ablations: (i) Delayed Densification (DD) for 3DGS; (ii) pseudo-mask application (PM), which directly applies ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** All ablations are retrained from the same initialization and schedule to ensure fair comparison.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization results using different pretrained mod- els as feature extractors. FiT3D, when used as the feature extrac- tor, produces the most distinct feature ...
+- **p. 2 / 1. We propose a Failure-to-Prior paradigm for transient - extractive body cue:** robust 3DGS that breaks the circular dependency between transient detection and scene reconstruction by converting first-pass reconstruction failures into explicit priors.
+- **p. 4 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** The primary objective of this step is to translate these firstpass failures into reliable object-level priors for the second reconstruction stage, rather than directly outputting ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 3 (3.2. Overview), p. 3 (3.2. Overview), objective p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), temporal p. 2 (3. We develop a prior-guided second-stage reconstruction), p. 3 (3.2. Overview), p. 3 (3.2. Overview), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
+- **Evidence anchors reviewed:** method p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 3 (3.2. Overview), p. 3 (3.2. Overview), objective p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), temporal p. 2 (3. We develop a prior-guided second-stage reconstruction), p. 3 (3.2. Overview), p. 3 (3.2. Overview), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 First, instead of using the absolute robot joint poses, we transform them into relative actions by rebaselining the inputs with the pose at the beginning of each latent frame (i.e., every 4 ...를 Naively training on passive videos overlooks the causality between video observations and actions, leading to inferior knowledge transfer for action-conditioned world simulation.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their real counterparts, indicating a limitation in accurately generating nuanced failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its kind that shows zero-shot generalization to unseen objects and novel ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** First, instead of using the absolute robot joint poses, we transform them into relative actions by rebaselining the inputs with the pose at the beginning of each latent frame (i.e., ... (p. 5, 3.3.1. Model Architecture).
+- **Paper-specific mechanism:** By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its kind that shows zero-shot generalization to unseen objects ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization than the baseline after distillation. Lastly, we ablate the choice of teacher model in ... (p. 13, Figure/Table caption); the relevant task/metric cue is The success rate is determined by the number of fruits successfully picked up from the table and placed into the bag, with 5 fruits designated as 100% success. (p. 13, 4.7. Downstream Applications). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their real counterparts, indicating a limitation in accurately generating nuanced failures. (p. 15, 5. Conclusion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Our curated data mixture excels in both scale and diversity, encompassing 15× longer duration, 96× more skills, and 2,000× more scenes than the previously largest dataset for world model training. †Estimated by ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization than the baseline after distillation. Lastly, we ablate the choice of teacher model in Tab. 7, ....
-4. Report the body metric and its denominator/aggregation: The final success rate is averaged across all 20 scenes for both real-world and DreamDojo..
-5. Re-run the body-reported ablation/failure condition: When evaluating the models without distillation, we generate 100 future videos over three rounds by autoregressively resetting the condition frame with the last prediction to make the discrepancies between different variants more ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: First, instead of using the absolute robot joint poses, we transform them into relative actions by rebaselining the inputs with the pose at the beginning of each latent frame (i.e., ... (p. 5, 3.3.1. Model Architecture); preserve the objective/update rule: Therefore, our final training objective becomes: ℒfinal(𝜃) = ℒflow(𝜃) + 𝜆ℒtemporal(𝜃), (5) where 𝜆> 0 is a trade-off coefficient to balance the optimization. (p. 7, 3.3.2. Pretraining from Human Videos).
+2. Use the paper-reported task/data/environment cue: We rigorously construct six evaluation benchmarks that reflect the diverse scenarios and actions present in human datasets, while being out-of-distribution for the robot training datasets. (p. 9, 4. Experiments).
+3. Compare against the reported or matched baseline: Specifically, we aim to answer the following questions: (1) Compared to actionless pretraining, can latent actions enable more effective transfer from human videos? (p. 8, 4. Experiments).
+4. Report the body metric with its denominator and aggregation: The success rate is determined by the number of fruits successfully picked up from the table and placed into the bag, with 5 fruits designated as 100% success. (p. 13, 4.7. Downstream Applications).
+5. Re-run the reported ablation or stress/failure condition: When evaluating the models without distillation, we generate 100 future videos over three rounds by autoregressively resetting the condition frame with the last prediction to make the discrepancies between different ... (p. 10, 0.219 Method); if none is reported, design one around: Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their real counterparts, indicating a limitation in accurately generating nuanced failures. (p. 15, 5. Conclusion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretraining from Human Videos), p. 5 (3.3.1. Model Architecture); the primary result is directionally consistent at p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), p. 12 (4.5. Ablations of Our Design Choices); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), p. 9 (4. Experiments), and measure the boundary at p. 15 (5. Conclusion), p. 4 (3.2. DreamDojo-HV Dataset).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 scaling, human, videos mechanism이 Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization ... 대비 The final success rate is averaged across all 20 scenes for both real-world and DreamDojo.을 개선하고, Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (First, instead of using the absolute robot joint poses, we transform them into relative actions by rebaselining the inputs with the pose ...), does the paper-specific mechanism (By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its ...) retain the reported evaluation outcome (The success rate is determined by the number of fruits successfully picked up from the table and placed ...) when tested against the paper's strongest explicit boundary (Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their real counterparts, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The success rate is determined by the number of fruits successfully picked up from the table and placed ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (33 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its kind that shows zero-shot generalization to unseen objects ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization than the baseline after distillation. Lastly, we ablate the choice of teacher model in ... (p. 13, Figure/Table caption).
+- **Strongest explicit boundary:** Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their real counterparts, indicating a limitation in accurately generating nuanced failures. (p. 15, 5. Conclusion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

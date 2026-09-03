@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -14,7 +14,7 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 - **p. 6 / 5.1. Baselines - extractive body cue:** Because there is no prior method that works out of the box with our multimodal prompting setup, we make our best effort to select a ...
 - **p. 2 / 1. Introduction - extractive body cue:** The model architecture follows the encoderdecoder transformer design proven to be effective and scalable in NLP (Raffel et al., 2020).
 - **p. 4 / 6. Visual reasoning - extractive body cue:** The controller is a causal transformer decoder consisting of alternating self and cross attention layers that predicts motor commands conditioned on prompts and interaction history.
-- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1 arXiv:2210.03094v2 [cs.RO] 28 May 2023
+- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1.
 - **p. 5 / 4. Novel task generalization. New tasks with novel - extractive body cue:** 3), the robot controller (decoder) is conditioned on the prompt sequence P by a series of cross-attention layers between P and the trajectory history sequence ...
 - **p. 1 / Abstract - extractive body cue:** We design a transformer-based robot agent, VIMA, that processes these prompts and outputs motor actions autoregressively.
 - **p. 5 / 4. Novel task generalization. New tasks with novel - extractive body cue:** We follow behavioral cloning to train our models by minimizing the negative log-likelihood of predicted actions.
@@ -31,14 +31,14 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 - **p. 6 / 5.1. Baselines - extractive body cue:** Because there is no prior method that works out of the box with our multimodal prompting setup, we make our best effort to select a ...
 - **p. 2 / 1. Introduction - extractive body cue:** The model architecture follows the encoderdecoder transformer design proven to be effective and scalable in NLP (Raffel et al., 2020).
 - **p. 4 / 6. Visual reasoning - extractive body cue:** The controller is a causal transformer decoder consisting of alternating self and cross attention layers that predicts motor commands conditioned on prompts and interaction history.
-- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1 arXiv:2210.03094v2 [cs.RO] 28 May 2023
+- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1.
 - **p. 5 / 4. Novel task generalization. New tasks with novel - extractive body cue:** 3), the robot controller (decoder) is conditioned on the prompt sequence P by a series of cross-attention layers between P and the trajectory history sequence ...
 - **p. 1 / Abstract - extractive body cue:** We design a transformer-based robot agent, VIMA, that processes these prompts and outputs motor actions autoregressively.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | To learn an effective multi-task robot policy, we propose VIMA, a robot agent with a multi-task encoderdecoder architecture and object-centric design (Fig. | p. 4 (4. Novel task generalization. New tasks with novel), p. 6 (5.1. Baselines) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Because there is no prior method that works out of the box with our multimodal prompting setup, we make our best effort ... | p. 6 (5.1. Baselines), p. 2 (1. Introduction) |
@@ -50,7 +50,7 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 
 - **p. 5 / 4. Novel task generalization. New tasks with novel - extractive body cue:** We follow behavioral cloning to train our models by minimizing the negative log-likelihood of predicted actions.
 - **p. 1 / 1. Introduction - extractive body cue:** Finally, to ensure safe deployment, we can further specify visual constraints like "do not enter <image> room".
-- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1 arXiv:2210.03094v2 [cs.RO] 28 May 2023
+- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1.
 - **p. 3 / 5. Visual constraint satisfaction. The robot must ma - extractive body cue:** nipulate the objects carefully and avoid violating the (safety) constraints;
 - **p. 4 / 6. Visual reasoning - extractive body cue:** Each task in VIMA-BENCH has a binary success criterion and does not provide partial reward.
 - **p. 2 / 1. Introduction - extractive body cue:** The transformer decoder is conditioned on the prompt via cross-attention layers that alternate with the usual causal self-attention.
@@ -86,11 +86,11 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | VIMA encodes an input sequence of interleaving textual and visual prompt tokens with a pre-trained language model (Tsimpoukelli et al., 2021) and ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | We note that this can only be achieved with both cross-attention and object token sequence representations - altering any component will significantly ... | Hz/fps, inference time and control rate |
 | Memory | image-language-proprioception history, transformer context 또는 persistent memory. | Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes ... | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1 arXiv:2210.03094v2 [cs.RO] 28 May 2023
+- **p. 1 / 1. Introduction - extractive body cue:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training 1.
 - **p. 2 / 1. Introduction - extractive body cue:** We open-source the simulation environment, training dataset, algorithm code, and pre-trained model checkpoints to ensure reproducibility and facilitate future work from the community.
 - **p. 4 / 6. Visual reasoning - extractive body cue:** We encode the multimodal prompts with a pre-trained T5 model, and condition the robot controller on the prompt through cross-attention layers.
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4. Novel task generalization. New tasks with novel), p. 6 (5.1. Baselines), p. 2 (1. Introduction), p. 4 (6. Visual reasoning), p. 1 (1. Introduction), p. 5 (4. Novel task generalization. New tasks with novel), objective p. 5 (4. Novel task generalization. New tasks with novel), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma), p. 4 (6. Visual reasoning), p. 2 (1. Introduction), temporal p. 2 (1. Introduction), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (4. Novel task generalization. New tasks with novel), p. 5 (4. Novel task generalization. New tasks with novel), p. 5 (4. Novel task generalization. New tasks with novel).
+- **Evidence anchors reviewed:** method p. 4 (4. Novel task generalization. New tasks with novel), p. 6 (5.1. Baselines), p. 2 (1. Introduction), p. 4 (6. Visual reasoning), p. 1 (1. Introduction), p. 5 (4. Novel task generalization. New tasks with novel), objective p. 5 (4. Novel task generalization. New tasks with novel), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma), p. 4 (6. Visual reasoning), p. 2 (1. Introduction), temporal p. 2 (1. Introduction), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (4. Novel task generalization. New tasks with novel), p. 5 (4. Novel task generalization. New tasks with novel), p. 5 (4. Novel task generalization. New tasks with novel).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Previously, different robot manipulation tasks required distinct policy architectures, objective functions, data pipelines, and training. (p. 1, 1. Introduction).
+- **Objective/update evidence:** Finally, to ensure safe deployment, we can further specify visual constraints like "do not enter <image> room". (p. 1, 1. Introduction).
+- **Temporal/runtime evidence:** We note that this can only be achieved with both cross-attention and object token sequence representations - altering any component will significantly degrade the performance, especially in the low model ... (p. 6, 5.2. Evaluation Results).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

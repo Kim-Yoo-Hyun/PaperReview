@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** For evaluation, We adopt the most widely used Google Scanned Objects (GSO) dataset [13].
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [27, 70], our model is trained on the Objaverse-LVIS dataset [11] that contains 46K diverse 3D objects in 1156 categories.
-- **p. 6 / 4.2. Novel View Synthesis - extractive PDF cue:** Qualitative comparisons of novel view synthesis between GS-RGBN and other methods on the GSO dataset.
-- **p. 6 / 4.2. Novel View Synthesis - extractive PDF cue:** Quantitative comparison on the GSO dataset, in terms of PSNR, SSIM, LPIPS, Chamfer Distance (CD) ×10-3 and runtime efficiency.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
-- **p. 7 / 4.5. Ablation study - extractive PDF cue:** It means that all additional loss functions significantly enhance the overall quality of the reconstructed 3D object.
-- **p. 8 / 4.5. Ablation study - extractive PDF cue:** Our full model achieves the best 3D object reconstruction with consistent details.
-- **p. 7 / 4.5. Ablation study - extractive PDF cue:** The model performance decreases when the LPIPS, depth, and regularization loss terms are successively removed, as demonstrated in Table 2.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** For evaluation, We adopt the most widely used Google Scanned Objects (GSO) dataset [13].
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [27, 70], our model is trained on the Objaverse-LVIS dataset [11] that contains 46K diverse 3D objects in 1156 categories.
+- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** Qualitative comparisons of novel view synthesis between GS-RGBN and other methods on the GSO dataset.
+- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** Quantitative comparison on the GSO dataset, in terms of PSNR, SSIM, LPIPS, Chamfer Distance (CD) ×10-3 and runtime efficiency.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
+- **p. 7 / 4.5. Ablation study - extractive body cue:** It means that all additional loss functions significantly enhance the overall quality of the reconstructed 3D object.
+- **p. 8 / 4.5. Ablation study - extractive body cue:** Our full model achieves the best 3D object reconstruction with consistent details.
+- **p. 7 / 4.5. Ablation study - extractive body cue:** The model performance decreases when the LPIPS, depth, and regularization loss terms are successively removed, as demonstrated in Table 2.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Novel View Synthesis | SYSTEM / EVALUATION SCOPE UNRESOLVED | Our method significantly outperforms all recent methods by a large margin 21562 | p. 5 (4.2. Novel View Synthesis) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 6. Ablation study of different training models. Our full model achieves the best 3D object reconstruction with consistent details. Gaussian-based methods due to ... | p. 8 (Figure/Table caption) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** For evaluation, We adopt the most widely used Google Scanned Objects (GSO) dataset [13].
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [27, 70], our model is trained on the Objaverse-LVIS dataset [11] that contains 46K diverse 3D objects in 1156 categories.
-- **p. 6 / 4.2. Novel View Synthesis - extractive PDF cue:** Qualitative comparisons of novel view synthesis between GS-RGBN and other methods on the GSO dataset.
-- **p. 6 / 4.2. Novel View Synthesis - extractive PDF cue:** Quantitative comparison on the GSO dataset, in terms of PSNR, SSIM, LPIPS, Chamfer Distance (CD) ×10-3 and runtime efficiency.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
-- **p. 7 / 4.5. Ablation study - extractive PDF cue:** It means that all additional loss functions significantly enhance the overall quality of the reconstructed 3D object.
-- **p. 8 / 4.5. Ablation study - extractive PDF cue:** Our full model achieves the best 3D object reconstruction with consistent details.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** For evaluation, We adopt the most widely used Google Scanned Objects (GSO) dataset [13].
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [27, 70], our model is trained on the Objaverse-LVIS dataset [11] that contains 46K diverse 3D objects in 1156 categories.
+- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** Qualitative comparisons of novel view synthesis between GS-RGBN and other methods on the GSO dataset.
+- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** Quantitative comparison on the GSO dataset, in terms of PSNR, SSIM, LPIPS, Chamfer Distance (CD) ×10-3 and runtime efficiency.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
+- **p. 7 / 4.5. Ablation study - extractive body cue:** It means that all additional loss functions significantly enhance the overall quality of the reconstructed 3D object.
+- **p. 8 / 4.5. Ablation study - extractive body cue:** Our full model achieves the best 3D object reconstruction with consistent details.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GS-RGBN is an RGBN-volume Gaussian reconstruction model that generates high-quality 2D Gaussians (middle) using a single image (left). The textured meshes can be ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overview of our paradigm. Given a single image of a 3D object, we first input it into an off-the-shelf multi-view diffusion model ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The illustration of the structure of the cross-volume fu- sion (CVF) module. 4 and 5). Therefore, we propose a hybrid Voxel-Gaussian model that ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparisons of novel view synthesis between GS-RGBN and other methods on the GSO dataset. It can be observed that the 3D objects ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on the GSO dataset, in terms of PSNR, SSIM, LPIPS, Chamfer Distance (CD) ×10-3 and runtime efficiency. Notably, Time(g) and Time(r) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparisons of single view reconstruction between GS-RGBN and other methods on the GSO dataset. Design PSNR↑ SSIM↑ LPIPS↓ Image-Gaussian 18.82 0.831
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Ablation study of different training models. Our full model achieves the best 3D object reconstruction with consistent details. Gaussian-based methods due to varying ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GS-RGBN is an RGBN-volume Gaussian reconstruction model that generates high-quality 2D Gaussians (middle) using a single image (left). The textured meshes can be ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overview of our paradigm. Given a single image of a 3D object, we first input it into an off-the-shelf multi-view diffusion model ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The illustration of the structure of the cross-volume fu- sion (CVF) module. 4 and 5). Therefore, we propose a hybrid Voxel-Gaussian model that ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparisons of novel view synthesis between GS-RGBN and other methods on the GSO dataset. It can be observed that the 3D objects ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on the GSO dataset, in terms of PSNR, SSIM, LPIPS, Chamfer Distance (CD) ×10-3 and runtime efficiency. Notably, Time(g) and Time(r) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparisons of single view reconstruction between GS-RGBN and other methods on the GSO dataset. Design PSNR↑ SSIM↑ LPIPS↓ Image-Gaussian 18.82 0.831
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Ablation study of different training models. Our full model achieves the best 3D object reconstruction with consistent details. Gaussian-based methods due to varying ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For evaluation, We adopt the most widely used Google Scanned Objects (GSO) dataset [13]. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings) |
 | Task/environment | Following [27, 70], our model is trained on the Objaverse-LVIS dataset [11] that contains 46K diverse 3D objects in 1156 categories. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Settings), p. 6 (4.2. Novel View Synthesis) |
@@ -120,8 +120,8 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 | Primary metric/result | Figure 6. Ablation study of different training models. Our full model achieves the best 3D object reconstruction with consistent details. Gaussian-based methods due to ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** The optimization is performed using AdamW [33], with an initial learning rate of 1 × 10-5 and subsequently following a cosine annealing schedule with a ...
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Similar to previous methods [27, 54, 61, 67, 70], we randomly choose approximately 200 objects to render two single images (i.e., Front and side of ...
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** The optimization is performed using AdamW [33], with an initial learning rate of 1 × 10-5 and subsequently following a cosine annealing schedule with a ...
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Similar to previous methods [27, 54, 61, 67, 70], we randomly choose approximately 200 objects to render two single images (i.e., Front and side of ...
 
 ## Generalization and Failure Cases
 
@@ -157,13 +157,13 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion and Limitations - extractive PDF cue:** Besides, voxels cannot be directly used for representing large-scale scenes.
-- **p. 7 / 4.5. Ablation study - extractive PDF cue:** Especially, the depth and regularization loss functions, which cannot be achieved by 3D 21564
-- **p. 8 / 5. Conclusion and Limitations - extractive PDF cue:** The performance degradation occurs when the MVD models generate images with a higher level of view inconsistency.
-- **p. 6 / 4.2. Novel View Synthesis - extractive PDF cue:** These inconsistencies once again underscore the importance of effectively integrating RGB and normal images for the recovery of both geometric and semantic details.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** Besides, voxels cannot be directly used for representing large-scale scenes.
+- **p. 7 / 4.5. Ablation study - extractive body cue:** Especially, the depth and regularization loss functions, which cannot be achieved by 3D 21564
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** The performance degradation occurs when the MVD models generate images with a higher level of view inconsistency.
+- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** These inconsistencies once again underscore the importance of effectively integrating RGB and normal images for the recovery of both geometric and semantic details.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.3. Single View Reconstruction), p. 7 (4.5. Ablation study), metrics p. 7 (4.5. Ablation study), p. 6 (4.2. Novel View Synthesis), p. 7 (4.4. Runtime Efficiency), p. 8 (4.5. Ablation study), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), baselines p. 5 (4.2. Novel View Synthesis), p. 5 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.4. Runtime Efficiency), p. 7 (4.4. Runtime Efficiency), results p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/Table caption), p. 7 (4.4. Runtime Efficiency), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.5. Ablation study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.3. Single View Reconstruction), p. 7 (4.5. Ablation study), metrics p. 7 (4.5. Ablation study), p. 6 (4.2. Novel View Synthesis), p. 7 (4.4. Runtime Efficiency), p. 8 (4.5. Ablation study), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), baselines p. 5 (4.2. Novel View Synthesis), p. 5 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.4. Runtime Efficiency), p. 7 (4.4. Runtime Efficiency), results p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/Table caption), p. 7 (4.4. Runtime Efficiency), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.5. Ablation study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

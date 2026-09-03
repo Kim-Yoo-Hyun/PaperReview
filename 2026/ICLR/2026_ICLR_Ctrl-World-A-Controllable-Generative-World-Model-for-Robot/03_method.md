@@ -2,21 +2,21 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011332; PDF retrieval source: https://arxiv.org/pdf/2510.10125. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011332; PDF retrieval source: https://arxiv.org/pdf/2510.10125. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)): Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t , . . . , In t ] ...
+PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION)): Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t , . . . , In t ] ...
 
 ## Method Body Digest
 
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t , . . ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2026 Spatial Transformer Temporal Transformer (𝑩×𝑷, 𝑻, 𝑪) (𝑩×𝑻, 𝑷, 𝑪) Timeline Spatial Tokens History Poses + Action ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 1: for i = 0 to M do 2: τ = [oi 0] 3: for j = 0 to N do 4: Current observation: ot ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Some works leverage video prediction models to synthesize robotic trajectories with fake action labels, and these synthetic trajectories can then be used for policy learning ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** To enable multi-step interaction with the policy in imagination space, W must generate future multi-view observations: ot+1, ..., ot+H ∼W(·/ot, At) (2) Then the final ...
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** Then this action-conditioned world model is fine-tuned with diffusion loss (Ho et al., 2020; Karras et al., 2022).
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** Given an initial observation o0 and instruction l, a policy π together with the world model W can generate a synthetic trajectory τ.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** A complementary line of research integrates future-prediction objectives into generalist policies via co-training (Zhao et al., 2025; Li et al., 2025a; Zhu et al., 2025; ...
 
 ## Design Rationale
@@ -29,20 +29,20 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1
 
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t , . . ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2026 Spatial Transformer Temporal Transformer (𝑩×𝑷, 𝑻, 𝑪) (𝑩×𝑻, 𝑷, 𝑪) Timeline Spatial Tokens History Poses + Action ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 1: for i = 0 to M do 2: τ = [oi 0] 3: for j = 0 to N do 4: Current observation: ot ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Some works leverage video prediction models to synthesize robotic trajectories with fake action labels, and these synthetic trajectories can then be used for policy learning ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** To enable multi-step interaction with the policy in imagination space, W must generate future multi-view observations: ot+1, ..., ot+H ∼W(·/ot, At) (2) Then the final ...
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** Then this action-conditioned world model is fine-tuned with diffusion loss (Ho et al., 2020; Karras et al., 2022).
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** Given an initial observation o0 and instruction l, a policy π together with the world model W can generate a synthetic trajectory τ.
 - **Detected method headings:** A MORE DETAILS FOR WORLD MODEL LEARNING (p. 16); B MORE DETAILS FOR POLICY EVALUATION (p. 16); C MORE DETAILS FOR POLICY IMPROVEMENT (p. 18)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t ... | p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
-| Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination ... | p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION) |
-| Monitoring / re-entry | 실행 결과를 다시 risk decision에 반영한다 | executed action과 next observation | threshold, update, replan, abort 또는 return-to-task를 수행 | continue/correct/abort state | Published as a conference paper at ICLR 2026 Spatial Transformer Temporal Transformer (𝑩×𝑷, 𝑻, 𝑪) (𝑩×𝑻, 𝑷, 𝑪) Timeline Spatial Tokens History ... | p. 4 (1 INTRODUCTION), p. 5 (1 INTRODUCTION) |
+| Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination ... | p. 2 (1 INTRODUCTION), p. 5 (1 INTRODUCTION) |
+| Monitoring / re-entry | 실행 결과를 다시 risk decision에 반영한다 | executed action과 next observation | threshold, update, replan, abort 또는 return-to-task를 수행 | continue/correct/abort state | 1: for i = 0 to M do 2: τ = [oi 0] 3: for j = 0 to N do 4: ... | p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -83,18 +83,18 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | During rollouts, the world model receives 15-step action chunks (corresponding to 1 s) and autoregressively predicts the next frames for 10 steps, ... | episode/sequence/action-chunk boundary |
-| Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | Published as a conference paper at ICLR 2026 Cam 1 Generalist Policy Cam 2 Cam 3 … World Model Pred 1 Pred ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | Published as a conference paper at ICLR 2026 Cam 1 Generalist Policy Cam 2 Cam 3 … World Model Pred 1 Pred ... | window and reset |
+| Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | We aim to answer the following questions: (1) Can Ctrl-World generate long-horizon rollouts that are both spatially and temporally consistent, while maintaining ... | Hz/fps, inference time and control rate |
+| Memory | risk score, recent trajectory/history와 recovery state. | Our model maintains long-horizon consistency with a pose-conditioned memory retrieval mechanism and achieves precise action control through framelevel action conditioning. | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | During rollouts, the world model receives 15-step action chunks (corresponding to 1 s) and autoregressively predicts the next frames for 10 steps, ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2026 Spatial Transformer Temporal Transformer (𝑩×𝑷, 𝑻, 𝑪) (𝑩×𝑻, 𝑷, 𝑪) Timeline Spatial Tokens History Poses + Action ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 1: for i = 0 to M do 2: τ = [oi 0] 3: for j = 0 to N do 4: Current observation: ot ...
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** Then this action-conditioned world model is fine-tuned with diffusion loss (Ho et al., 2020; Karras et al., 2022).
 - **p. 5 / 5 EXPERIMENTS - extractive body cue:** We train the model on 2×8 H100 GPUs, with a total batch size of 64.
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** During rollouts, the world model receives 15-step action chunks (corresponding to 1 s) and autoregressively predicts the next frames for 10 steps, producing 10 s-long ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Finally, we fine-tune the policy on the curated synthetic dataset for 2k steps, improving base model's capability in unfamiliar instructions and objects.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,11 +114,11 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1
 
 ## Failure and Ablation Link
 
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2026 Z axis -6 cm Z axis -6 cm Close Gripper Z axis +6 cm X axis -3 ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Controllability of Ctrl-World and ablations. Different action sequences can produce distinct rollouts in Ctrl-World with centimeter-level precision. Removing memory leads to blurry predictions ...
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** Evaluated Camera Method Computation-based Model-based PSNR ↑ SSIM ↑ LPIPS ↓ FID ↓ FVD ↓ Third-view Camera Ctrl-World 23.56 0.828 0.091 25.00 97.4 Ctrl-World w/o ...
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Ablations on memory components and frame-level conditions are in Table 2, which confirm the importance of each component.
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Ablations on key components in Ctrl-World. Removing memory mechanisms, frame-level action conditioning or multi-view joint predictions all lead to a performance drop. 2025) ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We hypothesize that this controllability arises from two main factors: first, the dense action space coverage in the DROID dataset; and second, our use of ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** We now evaluate whether Ctrl-World can be used to generate synthetic post-training data for improving VLA models without real-world data.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Ctrl-World is designed for policy-in-the-loop rollouts with generalist robot policies. It generates joint multi-view predictions (including wrist views), enforces fine-grained action control via ...
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 6 (5 EXPERIMENTS), p. 2 (1 INTRODUCTION), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 4 (1 INTRODUCTION), p. 1 (ABSTRACT).
+- **Evidence anchors reviewed:** method p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 6 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t , . . . , In t ] ... (p. 3, 1 INTRODUCTION).
+- **Objective/update evidence:** Both of these processes are slow, costly, and difficult to scale. (p. 1, ABSTRACT).
+- **Temporal/runtime evidence:** Given a randomly sampled initial frame, the model receives a 15-step action chunk (spanning over 1 second) in each interaction and generates for 10 rounds auto-regressively. (p. 6, 5 EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

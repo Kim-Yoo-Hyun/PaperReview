@@ -2,43 +2,43 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.01928; PDF retrieval source: https://arxiv.org/pdf/2307.01928. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.01928; PDF retrieval source: https://arxiv.org/pdf/2307.01928. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction)): Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input to a language-conditioned policy [1] ...
+PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 1 (Body text (section not recovered))): Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input to a language-conditioned policy [1] ...
 
 ## Method Body Digest
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, given a user ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Our policy π is composed of four parts (Fig.
-- **p. 5 / 1 Introduction - extractive PDF cue:** Suppose that each data point consists of a sequence of augmented context x = (˜x0,˜x1,...,˜xT-1) and true labels y = (y0,y1,...,yT-1), where T is the ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Accurately modeling and accounting for uncertainty is a longstanding challenge towards robots that operate reliably in unstructured and novel environments.
-- **p. 1 / Abstract - extractive PDF cue:** In this work, we present KNOWNO, which is a framework for measuring and aligning the uncertainty of LLM-based planners such that they know when they ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** This eliminates plans that the LLM considers unlikely and reduces the problem of next-step prediction down to a single next-token prediction - aligning with LLM ...
+- **p. 2 / 1 Introduction - extractive body cue:** Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input ...
+- **p. 3 / 1 Introduction - extractive body cue:** The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, given a user ...
+- **p. 2 / 1 Introduction - extractive body cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
+- **p. 3 / 1 Introduction - extractive body cue:** Our policy π is composed of four parts (Fig.
+- **p. 5 / 1 Introduction - extractive body cue:** Suppose that each data point consists of a sequence of augmented context x = (˜x0,˜x1,...,˜xT-1) and true labels y = (y0,y1,...,yT-1), where T is the ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners Allen Z.
+- **p. 1 / 1 Introduction - extractive body cue:** Accurately modeling and accounting for uncertainty is a longstanding challenge towards robots that operate reliably in unstructured and novel environments.
+- **p. 3 / 1 Introduction - extractive body cue:** This eliminates plans that the LLM considers unlikely and reduces the problem of next-step prediction down to a single next-token prediction - aligning with LLM ...
 
 ## Design Rationale
 
-- **p. 5 / 1 Introduction - extractive PDF cue:** Here, we present a novel extension of CP to multi-step settings that tackles this challenge.
-- **p. 2 / 1 Introduction - extractive PDF cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** We introduce CP below, and then present the different practical settings we consider (possibly involving multiple planning steps and/or multiple correct plans per step).
+- **p. 5 / 1 Introduction - extractive body cue:** Here, we present a novel extension of CP to multi-step settings that tackles this challenge.
+- **p. 2 / 1 Introduction - extractive body cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
+- **p. 4 / 1 Introduction - extractive body cue:** We introduce CP below, and then present the different practical settings we consider (possibly involving multiple planning steps and/or multiple correct plans per step).
 
 ## Source Evidence Cues
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, given a user ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Our policy π is composed of four parts (Fig.
-- **p. 5 / 1 Introduction - extractive PDF cue:** Suppose that each data point consists of a sequence of augmented context x = (˜x0,˜x1,...,˜xT-1) and true labels y = (y0,y1,...,yT-1), where T is the ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Accurately modeling and accounting for uncertainty is a longstanding challenge towards robots that operate reliably in unstructured and novel environments.
-- **p. 1 / Abstract - extractive PDF cue:** In this work, we present KNOWNO, which is a framework for measuring and aligning the uncertainty of LLM-based planners such that they know when they ...
+- **p. 2 / 1 Introduction - extractive body cue:** Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input ...
+- **p. 3 / 1 Introduction - extractive body cue:** The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, given a user ...
+- **p. 2 / 1 Introduction - extractive body cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
+- **p. 3 / 1 Introduction - extractive body cue:** Our policy π is composed of four parts (Fig.
+- **p. 5 / 1 Introduction - extractive body cue:** Suppose that each data point consists of a sequence of augmented context x = (˜x0,˜x1,...,˜xT-1) and true labels y = (y0,y1,...,yT-1), where T is the ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners Allen Z.
+- **p. 1 / 1 Introduction - extractive body cue:** Accurately modeling and accounting for uncertainty is a longstanding challenge towards robots that operate reliably in unstructured and novel environments.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text ... | p. 2 (1 Introduction), p. 3 (1 Introduction) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, ... | p. 3 (1 Introduction), p. 2 (1 Introduction) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Objective / Update Rule
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** This eliminates plans that the LLM considers unlikely and reduces the problem of next-step prediction down to a single next-token prediction - aligning with LLM ...
-- **p. 1 / Abstract - extractive PDF cue:** KNOWNO builds on the theory of conformal prediction to provide statistical guarantees on task completion while minimizing human help in complex multi-step planning settings.
-- **p. 2 / 1 Introduction - extractive PDF cue:** CP also minimizes the average size of prediction sets, thus addressing the goal of minimal help.
-- **p. 2 / 1 Introduction - extractive PDF cue:** We formalize these challenges via two desiderata: (i) calibrated confidence: the robot should seek sufficient help to ensure a statistically guaranteed level of task success ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Our goal in this work is to address uncertainty alignment: achieve a desired level of task success while minimizing human help.
-- **p. 4 / 1 Introduction - extractive PDF cue:** new scenarios ξ∼D, and (ii) minimal help: the policy minimizes the number /C(·)/ of options presented to the human on average across scenarios ξ∼D.
+- **p. 3 / 1 Introduction - extractive body cue:** This eliminates plans that the LLM considers unlikely and reduces the problem of next-step prediction down to a single next-token prediction - aligning with LLM ...
+- **p. 1 / Abstract - extractive body cue:** KNOWNO builds on the theory of conformal prediction to provide statistical guarantees on task completion while minimizing human help in complex multi-step planning settings.
+- **p. 2 / 1 Introduction - extractive body cue:** CP also minimizes the average size of prediction sets, thus addressing the goal of minimal help.
+- **p. 2 / 1 Introduction - extractive body cue:** We formalize these challenges via two desiderata: (i) calibrated confidence: the robot should seek sufficient help to ensure a statistically guaranteed level of task success ...
+- **p. 3 / 1 Introduction - extractive body cue:** Our goal in this work is to address uncertainty alignment: achieve a desired level of task success while minimizing human help.
+- **p. 4 / 1 Introduction - extractive body cue:** new scenarios ξ∼D, and (ii) minimal help: the policy minimizes the number /C(·)/ of options presented to the human on average across scenarios ξ∼D.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 3 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, given a user ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** We formalize this by considering a joint distribution D over scenarios ξ:=(e,ℓ,g), where e is an environment (POMDP), ℓis a (potentially ambiguous) language instruction, and ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Moreover, natural language instructions in realworld environments often contain a high degree of ambiguity inherently or unintentionally from humans, and confidently following an incorrectly constructed ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** We make the following contributions: (1) Given a language instruction, we utilize a pre-trained LLM with uncalibrated confidence to generate a set of possible actions ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** We collect N i.i.d. scenarios from the distribution D, and the corresponding contexts summarizing the robot observation and instruction (Section 2).
-- **p. 1 / 1 Introduction - extractive PDF cue:** Such false confidence in incorrect outputs poses a significant challenge to LLM-based planning in robotics.
+- **p. 3 / 1 Introduction - extractive body cue:** The environment e can be formulated as a partially observable Markov decision process (POMDP): at any given state st at time t, given a user ...
+- **p. 2 / 1 Introduction - extractive body cue:** Language model planners can generate step-by-step robot plans, where each step y is composed of variable-length sequences of symbols (σ1,σ2,...,σk), e.g., text tokens as input ...
+- **p. 3 / 1 Introduction - extractive body cue:** We formalize this by considering a joint distribution D over scenarios ξ:=(e,ℓ,g), where e is an environment (POMDP), ℓis a (potentially ambiguous) language instruction, and ...
+- **p. 1 / 1 Introduction - extractive body cue:** Moreover, natural language instructions in realworld environments often contain a high degree of ambiguity inherently or unintentionally from humans, and confidently following an incorrectly constructed ...
+- **p. 2 / 1 Introduction - extractive body cue:** We make the following contributions: (1) Given a language instruction, we utilize a pre-trained LLM with uncalibrated confidence to generate a set of possible actions ...
+- **p. 4 / 1 Introduction - extractive body cue:** We collect N i.i.d. scenarios from the distribution D, and the corresponding contexts summarizing the robot observation and instruction (Section 2).
+- **p. 1 / 1 Introduction - extractive body cue:** Such false confidence in incorrect outputs poses a significant challenge to LLM-based planning in robotics.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,7 +90,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Training vs Inference
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** Second, it requires 20× inference time compared to other methods.
+- **p. 7 / 4 Experiments - extractive body cue:** Second, it requires 20× inference time compared to other methods.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Failure and Ablation Link
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** Lastly, we consider No Help where the option with the highest score is always executed without any human intervention.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We also run KNOWNO with two other LLMs (without hardware evaluation).
-- **p. 9 / 6 Discussion - extractive PDF cue:** Limitations and future work: The primary limitation of our work is that the task completion guarantee assumes environments (objects) are fully grounded in the text ...
-- **p. 9 / 6 Discussion - extractive PDF cue:** Another limitation is that, for the task guarantee to hold, the human needs to faithfully provide help when the robot needs it.
-- **p. 7 / 4 Experiments - extractive PDF cue:** First, we investigate whether KNOWNO and the baselines achieve a given target task success rate consistently in the three settings - we set the failure ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** Note that the ϵ level is not used in Prompt Set or Binary, and so the user cannot explicitly control the task success rate.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Simple Set and Ensemble Set cannot achieve coverage consistently.
+- **p. 6 / 4 Experiments - extractive body cue:** Lastly, we consider No Help where the option with the highest score is always executed without any human intervention.
+- **p. 8 / 4 Experiments - extractive body cue:** We also run KNOWNO with two other LLMs (without hardware evaluation).
+- **p. 9 / 6 Discussion - extractive body cue:** Limitations and future work: The primary limitation of our work is that the task completion guarantee assumes environments (objects) are fully grounded in the text ...
+- **p. 9 / 6 Discussion - extractive body cue:** Another limitation is that, for the task guarantee to hold, the human needs to faithfully provide help when the robot needs it.
+- **p. 7 / 4 Experiments - extractive body cue:** First, we investigate whether KNOWNO and the baselines achieve a given target task success rate consistently in the three settings - we set the failure ...
+- **p. 6 / 4 Experiments - extractive body cue:** Note that the ϵ level is not used in Prompt Set or Binary, and so the user cannot explicitly control the task success rate.
+- **p. 7 / 4 Experiments - extractive body cue:** Simple Set and Ensemble Set cannot achieve coverage consistently.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction), objective p. 3 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), temporal p. 5 (1 Introduction), p. 5 (1 Introduction), p. 9 (5 Related Work), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 6 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 1 (Body text (section not recovered)), objective p. 3 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), temporal p. 5 (1 Introduction), p. 5 (1 Introduction), p. 9 (5 Related Work), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 6 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

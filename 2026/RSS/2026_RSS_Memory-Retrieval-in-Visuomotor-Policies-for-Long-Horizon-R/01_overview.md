@@ -1,8 +1,10 @@
 # Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/program/papers/10/.
-> PDF retrieval source: https://roboticsconference.org/program/papers/10/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/program/papers/10/.
+> PDF retrieval source: https://roboticsconference.org/program/papers/10/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://roboticsconference.org/program/papers/10/
 - Code/Project: https://roboticsconference.org/program/papers/10/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, directly applying attention-based memory retrieval to long-horizon robotic imitation learning via offline data exposes two fundamental challenges.를 문제로 두고, To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. HALO), p. 4 (III. HALO) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, directly applying attention-based memory retrieval to long-horizon robotic imitation learning via offline data exposes two fundamental challenges. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS).
+- **Explicit failure boundary:** These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift and cascading failures over long horizons. (p. 3, III. HALO).

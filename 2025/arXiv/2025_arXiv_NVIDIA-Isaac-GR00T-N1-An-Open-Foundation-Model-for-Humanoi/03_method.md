@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots; PDF retrieval source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots; PDF retrieval source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | GR00T N1: An Open Foundation Model for Generalist Humanoid Robots Robot State Eagle-2 VLM Cross-Attention Self-Attention Cross-Attention Self-Attention State Encoder Action Decoder ... | p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | Since the generated videos do not have action labels, we use either latent or inverse dynamics models (IDM) labeled actions (Baker et ... | p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | It takes a single frame of observations as input and produces 16 action steps in one inference pass. | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | Given a ground-truth action chunk 𝐴𝑡, a flow-matching timestep 𝜏∈[0, 1] and sampled noise 𝜖∼𝒩(0, I), the noised action chunk 𝐴𝜏 𝑡is ... | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation), p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 3 (2. GR00T N1 Foundation Model), objective p. 8 (2.3. Training Details), p. 5 (2.1. Model Architecture), p. 5 (2.2. Training Data Generation), p. 7 (2.2. Training Data Generation), temporal p. 14 (4.3. Experiment Setup), p. 5 (2.1. Model Architecture), p. 13 (4.2. Real-World Benchmarks), p. 14 (4.3. Experiment Setup), p. 17 (4.5. Qualitative Results), p. 17 (4.6. Limitations).
+- **Evidence anchors reviewed:** method p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation), p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 3 (2. GR00T N1 Foundation Model), objective p. 8 (2.3. Training Details), p. 5 (2.1. Model Architecture), p. 5 (2.2. Training Data Generation), p. 7 (2.2. Training Data Generation), temporal p. 14 (4.3. Experiment Setup), p. 5 (2.1. Model Architecture), p. 13 (4.2. Real-World Benchmarks), p. 14 (4.3. Experiment Setup), p. 17 (4.5. Qualitative Results), p. 17 (4.6. Limitations).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.875). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** After training, we take the encoder and use it as an inverse dynamics model; given an 𝑥𝑡and 𝑥𝑡+𝐻pair, we extract the continuous pre-quantized embedding and use this as the latent ... (p. 5, 2.2. Training Data Generation).
+- **Objective/update evidence:** Pre-training During the pre-training phase, GR00T N1 is trained via flow-matching loss (Equation 1) on a diverse collection of embodiments and data sources, encompassing various real and synthetic robot datasets ... (p. 8, 2.3. Training Details).
+- **Temporal/runtime evidence:** It takes a single frame of observations as input and produces 16 action steps in one inference pass. (p. 14, 4.3. Experiment Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

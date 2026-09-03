@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://doi.org/10.1109/34.121791; PDF retrieval source: https://doi.org/10.1109/34.121791. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://doi.org/10.1109/34.121791; PDF retrieval source: https://doi.org/10.1109/34.121791. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | reasonable quality curve data but has difficulty with very noisy curves because the method uses arclenath sampling of the curves to obtain ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | [36] also describe a method for the registration of multiple overlapping range images without distinctive feature extraction. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| Observation / input | [36] also describe a method for the registration of multiple overlapping range images without distinctive feature extraction. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | describe, registration, multiple, overlapping, range, images, without, distinctive, feature, extraction | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | issue, initial, registration, states, addressed, next, Finally, experimental | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | image/point input I/P and pose; body terms: describe, registration, multiple, overlapping, range, images, without, distinctive, feature, extraction | p. 2 (1) Point sets), p. 1 (1) Point sets), p. 1 (1) Point sets) |
 | Decision / output variable | geometry/map/query r; body terms: SVD, eross-, covariance, matrix, point, distributions, does, however | p. 4 (B. Point to Implicit Entity Distance), p. 2 (1) Point sets), p. 2 (1) Point sets) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to 
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 8 (B. Convergence Theorem) |
 | Success / guarantee | spatial accuracy and downstream robot utility | p. 6 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 16 (A BN) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to 
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 4 (B. Point to Implicit Entity Distance), p. 2 (1) Point sets), p. 2 (1) Point sets)): The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 ...
+PDF body contribution framing (p. 4 (B. Point to Implicit Entity Distance), p. 2 (1) Point sets), p. 2 (1) Point sets)): The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 ...
 
 - **p. 2 / 1) Point sets - extractive body cue:** A recent conference proceedings [47] contains new contributions on this subject.
 - **p. 2 / 1) Point sets - extractive body cue:** ‘Schwartz and Sharir [50] developed a solution to the freeform space curve matching problem without feature extraction in late 1985.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 4 (B. Point to Implicit Entity Distance), p. 2 (1) 
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1) Point sets), p. 1 (1) Point sets), p. 1 (1) Point sets), p. 2 (1) Point sets). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1) Point sets), p. 1 (1) Point sets), p. 1 (1) Point sets), p. 2 (1) Point sets). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 1 (1. Istmopuction), interface p. 2 (1) Point sets), p. 1 (1) Point sets), p. 1 (1) Point sets), p. 2 (1) Point sets), objective p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 3 (A. Point to Parametric Entity Distance), p. 3 (A. Point to Parametric Entity Distance), p. 4 (A. Point to Parametric Entity Distance), p. 6 (B. Convergence Theorem).
+- **Evidence anchors reviewed:** problem p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 1 (1. Istmopuction), interface p. 2 (1) Point sets), p. 1 (1) Point sets), p. 1 (1) Point sets), p. 2 (1) Point sets), objective p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 3 (A. Point to Parametric Entity Distance), p. 3 (A. Point to Parametric Entity Distance), p. 4 (A. Point to Parametric Entity Distance), p. 6 (B. Convergence Theorem).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** This is a problem with almost all of the shape ‘matching algorithms in the literature For any given fixed initial set of rotations, the global shape matching capability can be ... (p. 16, A BN).
+- **Formulation-changing contribution:** A recent conference proceedings [47] contains new contributions on this subject. (p. 2, 1) Point sets).
+- **Assumption/failure evidence:** allowable occlusion percentages, e-., 10% oles, We do not advocate our proposed method if feature extraction techniques will successfully solve the problem. ‘The generalization to matching deformable models with high ... (p. 16, A BN).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

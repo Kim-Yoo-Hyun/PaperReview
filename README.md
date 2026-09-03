@@ -37,6 +37,7 @@ Registry의 수집·정리 범위는 다음과 같다.
 | machine-readable identity/provenance | [work/sources/papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), [registry_meta.json](./work/sources/registry_meta.json) |
 | 검색·필터용 registry view | [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv), [REGISTRY_STATS.md](./research/REGISTRY_STATS.md) |
 | evaluation·code/resource view | [resources.json](./work/sources/resources.json) |
+| note artifact audit | [audit report](./work/sources/note_artifact_audit_2026-09-02.json), [audit script](./work/scripts/audit_note_artifacts.py) |
 | 우선순위·읽기 순서·CORE/NEXT | [research/READING_PLAN.md](./research/READING_PLAN.md) |
 | 전체 tier assignment | [research/READING_TIERS.csv](./research/READING_TIERS.csv) |
 | 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
@@ -55,6 +56,12 @@ Registry의 수집·정리 범위는 다음과 같다.
 | REFERENCE / ARCHIVE | **397 / 242편** |
 | intensive reading set | **311편** |
 | paper당 표준 Markdown note | **4,750개** |
+| `01_overview`–`04_evaluation` PDF-body review | **950 / 950편** |
+| `05_insights` PDF-body review | **950 / 950편** |
+| PDF-body extraction audit | **949 high / 1 medium** |
+| `05_insights` extraction audit | **634 high / 0 failed** |
+| curation rationale | **950 recorded / 0 pending** |
+| legacy note artifact audit | **4,750 scanned / 0 high-confidence findings** |
 | local PDF cache | 0개 |
 | canonical category | 23개 |
 | 대상 연도 | 1960–2026 |
@@ -63,6 +70,8 @@ Registry의 수집·정리 범위는 다음과 같다.
 | 2026 논문 | 181편 |
 
 `CORE/NEXT`는 논문 수를 맞추기 위한 quota가 아니다. 연구의 prerequisite와 현재 연구축에 따라 중요도가 바뀔 수 있다. PDF 보유 여부는 tier, 우선순위, 연구 relevance의 기준이 아니다.
+
+전체 950편의 `01_overview.md`–`04_evaluation.md`는 2026-09-03 기준 검증된 full-text source에서 갱신했고, 이어서 기존 Abstract/Curation-only 634편의 `05_insights.md`도 PDF 본문 기반으로 보강했다. 추가로 CORE/NEXT 311편은 2026-09-03 semantic QA에서 contribution·method·evaluation·failure·research question을 본문 anchor와 대조했으며, 309편은 PDF text/OCR로 교차검토하고 GR00T N1.5/N1.6은 PDF 부재 source-boundary로 유지했다. 01–04 중 64편은 스캔·인코딩 문제로 OCR fallback을 사용했고, GR00T N1.5/N1.6은 저자 제공 publication PDF를 확인하지 못해 공식 NVIDIA technical page를 작업용 PDF snapshot으로 렌더링한 예외다. 해당 provenance boundary와 각 pass의 범위는 [전체 full-text audit manifest](./work/sources/fulltext_all_review_manifest_2026-09-02.json), [insights full-text audit manifest](./work/sources/fulltext_insights_review_manifest_2026-09-03.json), [CORE/NEXT semantic QA report](./work/sources/core_next_semantic_qa_2026-09-03.json)에 기록되어 있다. `05_insights.md`는 모두 `FULL_TEXT_CHECKED`이며, 별도 artifact audit에서 명백한 metadata/extraction 잔여물도 제거했다.
 
 ## 어떤 종류의 논문이 있는가
 
@@ -124,9 +133,9 @@ Registry의 수집·정리 범위는 다음과 같다.
 - `04_evaluation.md`: evaluation type/scope, experimental matrix, dataset/benchmark role, embodiment/environment, metric/success definition, baseline fairness, ablation/sensitivity, claim–evidence map, generalization/failure, statistics/efficiency/reproducibility; 반복 metadata는 `01_overview.md`를 참조
 - `05_insights.md`: paper-supported conclusion과 researcher interpretation, 선행/후속 연결, 최소 재현과 반증 가능한 질문; metadata는 `01_overview.md`를 참조
 
-새 논문은 [work/sources/papers.json](./work/sources/papers.json)을 canonical manifest로 등록한다. 각 record는 `paper_id`를 내부 안정 ID로 사용하고, 가능한 경우 DOI/arXiv/OpenReview identifier와 `relations`에 version/same-work 또는 명시적인 계보 관계를 기록한다. 출판 정보(`publication`), source URL(`sources`), artifact availability(`artifacts`), canonical `primary_track`, curation rationale·role·facet와 provenance를 note의 분석 내용과 분리해 저장한다. `provenance.content_evidence`는 paper-level 검토 근거이고, `provenance.note_evidence`는 5개 note별 근거다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
+새 논문은 [work/sources/papers.json](./work/sources/papers.json)을 canonical manifest로 등록한다. 각 record는 `paper_id`를 내부 안정 ID로 사용하고, 가능한 경우 DOI/arXiv/OpenReview identifier와 `relations`에 version/same-work 또는 명시적인 계보·dependency 관계를 기록한다. relation은 `from` paper → `paper_id` target 방향의 directed edge이며, curated edge에는 type, confidence, basis, official source, evidence scope, review date를 남긴다. 이는 exhaustive citation graph가 아니므로 `inferred` 관계는 family-level 해석임을 명시한다. 출판 정보(`publication`), source URL(`sources`), artifact availability(`artifacts`), canonical `primary_track`, curation rationale·role·facet와 provenance를 note의 분석 내용과 분리해 저장한다. `provenance.content_evidence`는 paper-level 검토 근거이고, `provenance.note_evidence`는 5개 note별 근거다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
 
-검색을 위한 [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv)와 [resources.json](./work/sources/resources.json)은 manifest·tier·tracker에서 생성되는 보조 view다. resource view에는 benchmark/dataset, metric, code/project를 함께 두되, 기존 benchmark/metric 연결은 모두 `cue_only`로 유지한다. 따라서 dataset의 실제 role/split, metric의 공식 정의, code의 재현 가능성은 각 paper note와 원문에서 다시 확인한다. 별도의 catalog를 계속 늘리지 않고, 기존 cue catalog는 생성 입력으로만 유지한다.
+검색을 위한 [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv)와 [resources.json](./work/sources/resources.json)은 manifest·tier·tracker에서 생성되는 보조 view다. resource view에는 benchmark/dataset, metric, code/project를 함께 두되, 기존 benchmark/metric 연결은 모두 `cue_only`로 유지한다. 따라서 dataset의 실제 role/split, metric의 공식 정의, code의 재현 가능성은 각 paper note와 원문에서 다시 확인한다. `provenance.review`는 paper-level source이고, targeted `05_insights` pass는 `provenance.note_review["05_insights.md"]`에 별도로 기록한다. 별도의 catalog를 계속 늘리지 않고, 기존 cue catalog는 생성 입력으로만 유지한다.
 
 ## 논문 추가와 provenance 규칙
 

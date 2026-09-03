@@ -1,35 +1,85 @@
 # ChatVLA-2: Vision-Language-Action Model with Open-World Reasoning
 
-- Year/Venue: 2025 / NeurIPS Poster
-- Category: VLA and Generalist Robot Policies
-- Tags: VLA, Vision-Language Model, Reinforcement Learning
-- Paper link: ./2025/NeurIPS/2025_NeurIPS_ChatVLA-2-Vision-Language-Action-Model-with-Open-World-Rea/paper.pdf
-- Code/Project: not identified from OpenReview
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=1lyKflUOhp.
+> PDF retrieval source: https://arxiv.org/pdf/2505.21906.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- Intuitively, pre-training a VLA model consists of a powerful, pre-trained VLMs, such as PaliGemma or Qwen-VL , should equip the robot with not only stronger vision-language feature embeddings ...
-- As a result, the VLA model may fail to accomplish tasks that seem trivial to humans, simply because these tasks were absent from the training dataset.
-- We argue that a generalizable VLA model should retain and expand upon the VLM’s core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from ...
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2025 / NeurIPS
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: VLA and generalist robot policies
+- Tier: REFERENCE
+- Tags: VLA, Vision-Language Model, Reinforcement Learning
+- Official paper: https://openreview.net/forum?id=1lyKflUOhp
+- Full-text retrieval: https://arxiv.org/pdf/2505.21906.pdf
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Such a gap leads to a natural question: How can we build VLA models that both keep their VLM prior intact and actively leverage it to achieve superior generalization in robotic control?를 문제로 두고, To achieve this, we propose a novel VLA model architecture employing a dynamic mixture-ofexperts within the VLM backbone.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / Abstract - extractive body cue:** Vision-language-action (VLA) models have emerged as the next generation of models in robotics.
+- **p. 1 / Abstract - extractive body cue:** However, despite leveraging powerful pre-trained Vision-Language Models (VLMs), existing end-to-end VLA systems often lose key capabilities during fine-tuning as the model adapts to specific robotic ...
+- **p. 1 / Abstract - extractive body cue:** We argue that a generalizable VLA model should retain and expand upon the VLM's core competencies: 1) Open-world embodied reasoning - the VLA should inherit ...
+- **p. 1 / Abstract - extractive body cue:** In this work, we introduce ChatVLA-2, a novel mixture-ofexpert VLA model coupled with a specialized two-stage training pipeline designed
+- **p. 2 / 1 Introduction - extractive body cue:** Such a gap leads to a natural question: How can we build VLA models that both keep their VLM prior intact and actively leverage it ...
+- **p. 2 / 1 Introduction - extractive body cue:** However, the isolated nature of these feature spaces currently limits the 2
 
 ## Core Idea
-- In contrast, our approach deals with diverse, novel reasoning types not encountered in the training data.
-- We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 3 / 1 Introduction - extractive body cue:** To achieve this, we propose a novel VLA model architecture employing a dynamic mixture-ofexperts within the VLM backbone.
+- **p. 3 / 1 Introduction - extractive body cue:** Additionally, we introduce a straightforward reasoning-enhancement module designed to align the action expert's output more closely with the model's internal reasoning process.
+- **p. 5 / 3 Methodology - extractive body cue:** We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
+- **p. 6 / 3 Methodology - extractive body cue:** To address this, we propose a dual-stage training strategy designed to enhance the smoothness of robotic control and increase the success rate of task completion.
+- **p. 2 / 1 Introduction - extractive body cue:** In this study, we introduce ChatVLA-2, a significant advancement toward achieving a truly generalizable robotic foundation model.
+- **p. 6 / 3 Methodology - extractive body cue:** Consequently, the robot's actions are guided not just by the initial language instructions and image observations but also significantly by the reasoning outputs generated by ...
+- **p. 5 / 3 Methodology - extractive body cue:** 3.3 Training Strategy Our previous section introduced the neural architecture of ChatVLA-2, which primarily focuses on enabling the VLA model to more effectively extract common ...
+- **p. 6 / 3 Methodology - extractive body cue:** The model undergoes training for 50k steps, beginning with an initial learning rate of 2e-5 and a warm-up phase for the first 3k steps.
 
-## Main Claims
-- We argue that a generalizable VLA model should retain and expand upon the VLM’s core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from ...
-- We do not evaluate using simulation benchmarks, as the VLA capabilities demonstrated by our approach exceed what current simulation benchmarks can assess.
-- These experiments examine the model’s proficiency in mathematical reasoning, spatial reasoning, optical character recognition (OCR), and object recognition and localization, most within an open-world context involving scenarios that ...
+## Observation, State, and Output Interface
 
-## Limitation
-- Developing models capable of reasoning and general understanding within open-world scenarios remains a frontier research topic that has yet to be thoroughly explored.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | Consequently, the robot's actions are guided not just by the initial language instructions and image observations but also significantly by the reasoning outputs generated by the upper layers of the model. | image/video, language instruction, proprioception과 history | p. 6 (3 Methodology), p. 6 (3 Methodology) |
+| State/latent | Consequently, robot, actions, guided, just, initial, language, instructions, image, observations, significantly, reasoning | language-grounded task state와 action-policy context | p. 6 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology) |
+| Output/action | In the second stage, we freeze the entire VLM and train only the action expert, thereby preserving open-world reasoning while enhancing instruction-following abilities in VLA. argue that this alone is insufficient for ... | continuous action, pose 또는 action chunk | p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology) |
+| Objective/outcome | The total training cost is 340 GPU hours. | instruction following, task success, generalization과 latency | p. 15 (B.1 Training details), p. 4 (3 Methodology), p. 15 (B.1 Training details) |
 
-## Contribution
-- We argue that a generalizable VLA model should retain and expand upon the VLM’s core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from ...
-- However, despite leveraging powerful pre-trained Vision-Language Models (VLMs), existing end-to-end VLA systems often lose key capabilities during fine-tuning as the model adapts to specific robotic tasks.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- Vision-language-action (VLA) models have emerged as the next generation of models in robotics.
+- **p. 3 / 1 Introduction - extractive body cue:** To achieve this, we propose a novel VLA model architecture employing a dynamic mixture-ofexperts within the VLM backbone.
+- **p. 3 / 1 Introduction - extractive body cue:** Additionally, we introduce a straightforward reasoning-enhancement module designed to align the action expert's output more closely with the model's internal reasoning process.
+- **p. 5 / 3 Methodology - extractive body cue:** We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
+- **p. 6 / 3 Methodology - extractive body cue:** To address this, we propose a dual-stage training strategy designed to enhance the smoothness of robotic control and increase the success rate of task completion.
+- **p. 2 / 1 Introduction - extractive body cue:** In this study, we introduce ChatVLA-2, a significant advancement toward achieving a truly generalizable robotic foundation model.
+- **p. 8 / 4 Experiments - extractive body cue:** In contrast, our method achieved an average success rate of 81.4%, representing a 3.52-times improvement over DexVLA.
+- **p. 8 / 4 Experiments - extractive body cue:** In contrast, ChatVLA-2 achieves meaningful performance: 3.58 in OCR accuracy, 1.73 in mathematical reasoning accuracy, and 82.7% manipulation success rate.
+- **p. 9 / 4 Experiments - extractive body cue:** We evaluate average object recognition score, spatial affordance score and task success rate at both setups.
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (4 Experiments), p. 8 (4 Experiments) |
+| Embodiment/environment | Additionally, we gathered 5k samples from real-world environments, covering both tabletop setups and broader scenes. | hardware/simulator version and reset protocol | p. 15 (B.2 Data details), p. 15 (B.2 Data details) |
+| Dataset/benchmark | We do not evaluate using simulation benchmarks, as the VLA capabilities demonstrated by our approach exceed what current simulation benchmarks can assess. | role, split, size and leakage | p. 15 (B.2 Data details), p. 15 (B.2 Data details), p. 7 (4 Experiments), p. 7 (4 Experiments) |
+| Metric | In contrast, ChatVLA-2 achieves meaningful performance: 3.58 in OCR accuracy, 1.73 in mathematical reasoning accuracy, and 82.7% manipulation success rate. | definition, denominator, direction and uncertainty | p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments) |
+| Baseline/ablation | We compare our method against several state-of-the-art models, including Octo [70], Diffusion Policy [32], OpenVLA [10], GR00T N1 [66], DexVLA [2], ChatVLA [7], and π0 [1]. | fair input/data/compute/action matching | p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 9 / 4 Experiments - extractive body cue:** Upon investigating the cause of the failure, we discovered that for unseen mathematical equations, both dense models fail completely.
+- **p. 8 / 4 Experiments - extractive body cue:** Even ChatVLA, despite its multimodal understanding capability, fails these tasks when the robot control expert is activated.
+- **p. 8 / 4 Experiments - extractive body cue:** Similarly, in manipulation tasks, ChatVLA-2 does not significantly outperform models like π0 and DexVLA, which already exhibit near-perfect performance.
+- **p. 9 / 4 Experiments - extractive body cue:** Furthermore, we find that increasing the number of parameters to 7B does not alleviate these conflicts.
+
+## Why Read It
+
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Such a gap leads to a natural question: How can we build VLA models that both keep their VLM prior intact and actively leverage it to achieve superior generalization in robotic control?를 문제로 두고, To achieve this, we propose a novel VLA model architecture employing a dynamic mixture-ofexperts within the VLM backbone.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Methodology), p. 6 (3 Methodology) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

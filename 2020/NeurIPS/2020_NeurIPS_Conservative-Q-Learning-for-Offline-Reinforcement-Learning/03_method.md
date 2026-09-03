@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html; PDF retrieval source: https://arxiv.org/pdf/2006.04779. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html; PDF retrieval source: https://arxiv.org/pdf/2006.04779. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Fixed-data support | 온라인 탐색 없이 transition/action 분포를 정의한다 | offline trajectories와 metadata | dataset support, behavior distribution과 task return을 정리 | training batch/support | 3.3 Safe Policy Improvement Guarantees In Section 3.1 we proposed novel objectives for Q-function training such that the expected value of a ... | p. 5 (2 Preliminaries), p. 6 (2 Preliminaries) |
 | Value / uncertainty update | dataset 밖 action의 과대추정을 억제한다 | batch transition과 value parameters | conservative, implicit, uncertainty 또는 behavior-regularized update를 수행 | Q/V/uncertainty estimate | (6) The expression of ζ in Theorem 3.6 consists of two terms: the first term captures the decrease in policy performance in ... | p. 6 (2 Preliminaries), p. 2 (2 Preliminaries) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 
 |---|---|---|---|
 | Horizon | offline trajectory/discounted return horizon; deployment horizon과 분리한다. | 0 20 40 60 80 100 Training Iterations 20 15 10 5 0 5 10 15 Return Pong QR-DQN REM CQL 0 ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training은 batch update, inference는 environment control tick; exact values 확인 필요. | Interaction with the real world can be costly and dangerous, and the quantities of data that can be gathered online are substantially ... | Hz/fps, inference time and control rate |
-| Memory | fixed dataset, value/policy parameters와 optional context/history. | not recovered | window and reset |
-| Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | fixed dataset, value/policy parameters와 optional context/history. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 6 (2 Preliminaries), objective p. 6 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (1 Introduction), p. 3 (2 Preliminaries), temporal p. 9 (5 Related Work), p. 1 (1 Introduction), p. 2 (2 Preliminaries), p. 2 (1 Introduction), p. 3 (2 Preliminaries), p. 3 (2 Preliminaries).
+- **Evidence anchors reviewed:** method p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 6 (2 Preliminaries), objective p. 6 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (1 Introduction), p. 3 (2 Preliminaries), temporal p. 9 (5 Related Work), p. 1 (1 Introduction), p. 2 (2 Preliminaries), p. 2 (1 Introduction), p. 3 (2 Preliminaries), p. 3 (2 Preliminaries).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** S, A represent state and action spaces, T(s′/s, a) and r(s, a) represent the dynamics and reward function, and γ ∈(0, 1) represents the discount factor. πβ(a/s) represents the behavior ... (p. 2, 2 Preliminaries).
+- **Objective/update evidence:** In Theorem 3.5, we first show that CQL (Equation 2) optimizes a well-defined penalized RL empirical objective. (p. 5, 2 Preliminaries).
+- **Temporal/runtime evidence:** Since D typically does not contain all possible transitions (s, a, s′), the policy evaluation step actually uses an empirical Bellman operator that only backs up a single sample. (p. 2, 2 Preliminaries).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

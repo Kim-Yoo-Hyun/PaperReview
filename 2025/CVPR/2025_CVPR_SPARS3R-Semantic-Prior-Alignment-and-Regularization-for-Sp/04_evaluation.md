@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Quantitative and Visual Evaluation - extractive PDF cue:** Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes.
-- **p. 5 / 4. Experiments - extractive PDF cue:** MVImgNet [60] is an object-centric dataset that consists of 7 scenes.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For this dataset, we follow the test set outlined in MipNeRF360 [2] and uniformly sample 12 images from the original training set to construct a ...
-- **p. 6 / 4.2. Ablation Studies - extractive PDF cue:** For scenes that do not have significant depth discrepancies, Global Fusion Alignment works well.
-- **p. 6 / 4.2. Ablation Studies - extractive PDF cue:** Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the normalized poses.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. SPARS3R combines a prior dense point cloud χ and a sparse SfM point cloud sX. The prior χ often has inferior depth accuracy ...
-- **p. 6 / 4.2. Ablation Studies - extractive PDF cue:** While it brings down the errors in some cases, such training pose optimization strategy does not work as well in more challenging datasets like Mip-NeRF ...
-- **p. 5 / 4.1. Sparse NVS Evaluation - extractive PDF cue:** Beyond accurate camera pose alignment, test pose optimization can also be applied between rendered and ground-truth images to minimize the pose error; however, such process ...
+- **p. 7 / 4.3. Quantitative and Visual Evaluation - extractive body cue:** Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes.
+- **p. 5 / 4. Experiments - extractive body cue:** MVImgNet [60] is an object-centric dataset that consists of 7 scenes.
+- **p. 5 / 4. Experiments - extractive body cue:** For this dataset, we follow the test set outlined in MipNeRF360 [2] and uniformly sample 12 images from the original training set to construct a ...
+- **p. 6 / 4.2. Ablation Studies - extractive body cue:** For scenes that do not have significant depth discrepancies, Global Fusion Alignment works well.
+- **p. 6 / 4.2. Ablation Studies - extractive body cue:** Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the normalized poses.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. SPARS3R combines a prior dense point cloud χ and a sparse SfM point cloud sX. The prior χ often has inferior depth accuracy ...
+- **p. 6 / 4.2. Ablation Studies - extractive body cue:** While it brings down the errors in some cases, such training pose optimization strategy does not work as well in more challenging datasets like Mip-NeRF ...
+- **p. 5 / 4.1. Sparse NVS Evaluation - extractive body cue:** Beyond accurate camera pose alignment, test pose optimization can also be applied between rendered and ground-truth images to minimize the pose error; however, such process ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Sparse NVS Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, these two improvements enhance camera alignment accuracy in both rotation and translation. | p. 5 (4.1. Sparse NVS Evaluation) |
 | 4.2. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | InstantSplat [14] uses DUSt3R's [52] dense point cloud and pose estimation and attempts to improve accuracy through a training pose optimization approach similar to ... | p. 6 (4.2. Ablation Studies) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Quantitative and Visual Evaluation - extractive PDF cue:** Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes.
-- **p. 5 / 4. Experiments - extractive PDF cue:** MVImgNet [60] is an object-centric dataset that consists of 7 scenes.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For this dataset, we follow the test set outlined in MipNeRF360 [2] and uniformly sample 12 images from the original training set to construct a ...
-- **p. 6 / 4.2. Ablation Studies - extractive PDF cue:** For scenes that do not have significant depth discrepancies, Global Fusion Alignment works well.
-- **p. 6 / 4.2. Ablation Studies - extractive PDF cue:** Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the normalized poses.
+- **p. 7 / 4.3. Quantitative and Visual Evaluation - extractive body cue:** Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes.
+- **p. 5 / 4. Experiments - extractive body cue:** MVImgNet [60] is an object-centric dataset that consists of 7 scenes.
+- **p. 5 / 4. Experiments - extractive body cue:** For this dataset, we follow the test set outlined in MipNeRF360 [2] and uniformly sample 12 images from the original training set to construct a ...
+- **p. 6 / 4.2. Ablation Studies - extractive body cue:** For scenes that do not have significant depth discrepancies, Global Fusion Alignment works well.
+- **p. 6 / 4.2. Ablation Studies - extractive body cue:** Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the normalized poses.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. A visualization of SPARS3R in comparison to cur- rent SoTA. Without additional prior, sparse NVS leads to incor- rect geometry by Instant-NGP [36]. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. SPARS3R combines a prior dense point cloud χ and a sparse SfM point cloud sX. The prior χ often has inferior depth accuracy ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Improvements over Procrustes Alignment baseline in av- erage rotation error ER and translation error ET . Incorporating rotation points further minimizes the overall ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation on key components of SPARS3R. The results are shown using PSNR, SSIM, LPIPS and DSIM based on the Mip- NeRF 360 [2]. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Visual comparison of SPARS3R with and without SOA. While the dense bonsai in the foreground is aligned with the sparse point cloud, depth ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes. All methods are run on the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Quantitative comparison of 3 and 6 views on Tanks & Temples and MVImgNet datasets. implicit and explicit scene representations. Specifically, 3DGS leverages SfM ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A visualization of SPARS3R in comparison to cur- rent SoTA. Without additional prior, sparse NVS leads to incor- rect geometry by Instant-NGP [36]. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. SPARS3R combines a prior dense point cloud χ and a sparse SfM point cloud sX. The prior χ often has inferior depth accuracy ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Improvements over Procrustes Alignment baseline in av- erage rotation error ER and translation error ET . Incorporating rotation points further minimizes the overall ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation on key components of SPARS3R. The results are shown using PSNR, SSIM, LPIPS and DSIM based on the Mip- NeRF 360 [2]. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Visual comparison of SPARS3R with and without SOA. While the dense bonsai in the foreground is aligned with the sparse point cloud, depth ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes. All methods are run on the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Quantitative comparison of 3 and 6 views on Tanks & Temples and MVImgNet datasets. implicit and explicit scene representations. Specifically, 3DGS leverages SfM ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes. | embodiment, simulator version and control stack | p. 7 (4.3. Quantitative and Visual Evaluation), p. 5 (4. Experiments) |
 | Task/environment | MVImgNet [60] is an object-centric dataset that consists of 7 scenes. | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 5 (4. Experiments) |
@@ -115,11 +115,11 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 | Primary metric/result | InstantSplat [14] uses DUSt3R's [52] dense point cloud and pose estimation and attempts to improve accuracy through a training pose optimization approach similar to ... | numeric claim only at cited anchor | p. 6 (4.2. Ablation Studies) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experiments - extractive PDF cue:** Tanks and Temples [27] contains 8 scenes captured in video format.
-- **p. 5 / 4. Experiments - extractive PDF cue:** MVImgNet [60] is an object-centric dataset that consists of 7 scenes.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Mip-NeRF 360 [2] comprises of 9 scenes with 360° views and greater pose variation between the scenes, including diverse heights and distances.
-- **p. 6 / 4.1. Sparse NVS Evaluation - extractive PDF cue:** For fair implementation and comparison, we employ test pose optimization for all baselines and SPARS3R for 500 steps to maximally remove the effect of shifted ...
-- **p. 7 / 4.3. Quantitative and Visual Evaluation - extractive PDF cue:** Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes.
+- **p. 5 / 4. Experiments - extractive body cue:** Tanks and Temples [27] contains 8 scenes captured in video format.
+- **p. 5 / 4. Experiments - extractive body cue:** MVImgNet [60] is an object-centric dataset that consists of 7 scenes.
+- **p. 5 / 4. Experiments - extractive body cue:** Mip-NeRF 360 [2] comprises of 9 scenes with 360° views and greater pose variation between the scenes, including diverse heights and distances.
+- **p. 6 / 4.1. Sparse NVS Evaluation - extractive body cue:** For fair implementation and comparison, we employ test pose optimization for all baselines and SPARS3R for 500 steps to maximally remove the effect of shifted ...
+- **p. 7 / 4.3. Quantitative and Visual Evaluation - extractive body cue:** Quantitative comparison of different NVS methods on 12 views on three popular benchmark datasets, totaling 24 scenes.
 
 ## Generalization and Failure Cases
 
@@ -152,14 +152,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.4. Limitations - extractive PDF cue:** While SPARS3R significantly improves upon previous SoTA, there are also several limitations worth noting.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** We also introduce several improvements in the evaluation process to better represent the practical limitations in sparse-view registration and reconstruction.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Since sparse-view registration can be unstable due to limited pairs, we perform multiple SfMs and pick the outcome that maximizes successful triangulation per image.
-- **p. 6 / 4.2. Ablation Studies - extractive PDF cue:** While it brings down the errors in some cases, such training pose optimization strategy does not work as well in more challenging datasets like Mip-NeRF ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Quantitative comparison of 3 and 6 views on Tanks & Temples and MVImgNet datasets. implicit and explicit scene representations. Specifically, 3DGS leverages SfM ...
-- **p. 5 / 4.1. Sparse NVS Evaluation - extractive PDF cue:** Notably, it provides a robust assessment of rendering image quality under moderate pose shift, which frequently occurs in the realistic sparse-view 26814
+- **p. 8 / 4.4. Limitations - extractive body cue:** While SPARS3R significantly improves upon previous SoTA, there are also several limitations worth noting.
+- **p. 8 / 5. Conclusion - extractive body cue:** We also introduce several improvements in the evaluation process to better represent the practical limitations in sparse-view registration and reconstruction.
+- **p. 5 / 4. Experiments - extractive body cue:** Since sparse-view registration can be unstable due to limited pairs, we perform multiple SfMs and pick the outcome that maximizes successful triangulation per image.
+- **p. 6 / 4.2. Ablation Studies - extractive body cue:** While it brings down the errors in some cases, such training pose optimization strategy does not work as well in more challenging datasets like Mip-NeRF ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Quantitative comparison of 3 and 6 views on Tanks & Temples and MVImgNet datasets. implicit and explicit scene representations. Specifically, 3DGS leverages SfM ...
+- **p. 5 / 4.1. Sparse NVS Evaluation - extractive body cue:** Notably, it provides a robust assessment of rendering image quality under moderate pose shift, which frequently occurs in the realistic sparse-view 26814
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Quantitative and Visual Evaluation), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Ablation Studies), p. 6 (4.2. Ablation Studies), metrics p. 6 (4.2. Ablation Studies), p. 3 (Figure/Table caption), p. 6 (4.2. Ablation Studies), p. 5 (4.1. Sparse NVS Evaluation), p. 5 (4.1. Sparse NVS Evaluation), p. 8 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 6 (4.1. Sparse NVS Evaluation), p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.1. Sparse NVS Evaluation), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Quantitative and Visual Evaluation), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Ablation Studies), p. 6 (4.2. Ablation Studies), metrics p. 6 (4.2. Ablation Studies), p. 3 (Figure/Table caption), p. 6 (4.2. Ablation Studies), p. 5 (4.1. Sparse NVS Evaluation), p. 5 (4.1. Sparse NVS Evaluation), p. 8 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 6 (4.1. Sparse NVS Evaluation), p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.1. Sparse NVS Evaluation), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

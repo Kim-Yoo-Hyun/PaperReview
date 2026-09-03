@@ -1,8 +1,10 @@
 # Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v305/fan25a.html.
-> PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v305/fan25a.html.
+> PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, most existing VLA frameworks are tailored for short-horizon tasks, leaving the challenge of long-horizon task execution largely unresolved.를 문제로 두고, To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p. 5 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, most existing VLA frameworks are tailored for short-horizon tasks, leaving the challenge of long-horizon task execution largely unresolved. (p. 2, 1 Introduction).
+- **Actual contribution:** To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Figure 7: Comparison with SOTA method on real-world scenarios. (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions. (p. 9, Limitation).

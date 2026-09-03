@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 It takes visual inputs ot = {it, pt}, where it is the image and pt is the point cloud, while language l, keypoints kt, and robot state rt are provided as structured ...를 3.1 Task Formulation and Model Architecture Given a dataset D = {τ1, . . . , τN} of N expert demonstrations, each demonstration τ is paired with a task description l and ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or if GPT-4 ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** It takes visual inputs ot = {it, pt}, where it is the image and pt is the point cloud, while language l, keypoints kt, and robot state rt are provided ... (p. 3, 3 Method).
+- **Paper-specific mechanism:** Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Additionally, we perform an extra experiment where we first fine-tune the pretrained VLM on the OXE dataset [74], which only takes 2D images as input, and then continue finetuning on ... (p. 7, 4 Experiment); the relevant task/metric cue is 1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate. (p. 6, 4 Experiment). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or ... (p. 8, 4 Experiment).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Since we establish associations between the robot and its environment through structured text input, our model learns to focus on task-relevant objects while disregarding irrelevant background disturbances..
-3. Compare against the body-reported baseline or a matched simpler baseline: 2, in the dual-arm setting, our method outperforms all baselines by a significant margin..
-4. Report the body metric and its denominator/aggregation: 1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate..
-5. Re-run the body-reported ablation/failure condition: Both Ours and Ours-s achieve the same average success rate of 0.66 on single-arm tasks, demonstrating that our model can effectively handle different embodiments within a unified training pipeline, without requiring architectural ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: It takes visual inputs ot = {it, pt}, where it is the image and pt is the point cloud, while language l, keypoints kt, and robot state rt are provided ... (p. 3, 3 Method); preserve the objective/update rule: The objective of policy model π is to learn action generation in SE(3) space: π : (ot, l, kt, rt) →ˆat+1. (p. 3, 3 Method).
+2. Use the paper-reported task/data/environment cue: Since we establish associations between the robot and its environment through structured text input, our model learns to focus on task-relevant objects while disregarding irrelevant background disturbances. (p. 8, 4 Experiment).
+3. Compare against the reported or matched baseline: 2, in the dual-arm setting, our method outperforms all baselines by a significant margin. (p. 6, 4 Experiment).
+4. Report the body metric with its denominator and aggregation: 1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate. (p. 6, 4 Experiment).
+5. Re-run the reported ablation or stress/failure condition: This stems from their reliance on single-view 2D images without explicit 3D geometric understanding, which is essential for precise action prediction. (p. 6, 4 Experiment); if none is reported, design one around: This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or ... (p. 8, 4 Experiment).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3 Method), p. 4 (3 Method), p. 3 (3 Method); the primary result is directionally consistent at p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (4 Experiment); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 7 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment), and measure the boundary at p. 8 (4 Experiment), p. 16 (7 Appendix).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, follows, DS-VLA mechanism이 2, in the dual-arm setting, our method outperforms all baselines by a significant margin. 대비 1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate.을 개선하고, This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (It takes visual inputs ot = {it, pt}, where it is the image and pt is the point cloud, while language l, ...), does the paper-specific mechanism (Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction.) retain the reported evaluation outcome (1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate.) when tested against the paper's strongest explicit boundary (This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Additionally, we perform an extra experiment where we first fine-tune the pretrained VLM on the OXE dataset [74], which only takes 2D images as input, and then continue finetuning on ... (p. 7, 4 Experiment).
+- **Strongest explicit boundary:** This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or ... (p. 8, 4 Experiment).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Problem formulation The task is defined as follows: given a visual observation of an articulated object in the form of an RGB-D image at the initial and current state o0,ot ∈RW×H×4, the ...를 The key idea for performing the goal-conditioned task is to swap out the initial observation with the goal state observation as the input to the policy.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2d) takes both embedding vector ψ(ot) and action a as input, and outputs a scalar as the distance prediction ˜rdist(adir t ). (p. 3, III. APPROACH).
+- **Paper-specific mechanism:** In this paper, we introduce the Universal Manipulation Policy Network (UMPNet) - a single policy network that discovers possible manipulation policies for an articulated object from visual observations (i.e., RGB-D ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive to error propagation, where one sub-optimal action would affect all following steps ... (p. 5, IV. EVALUATION); the relevant task/metric cue is When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive to error propagation, where one sub-optimal action would affect all following steps ... (p. 5, IV. EVALUATION). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction). (p. 7, IV. EVALUATION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Being able to effectively explore the possible states of an object without a specific goal is a critical first step for many robot learning algorithms since it is often used to collect ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Compared to [ AoTOnly ], we can observe that by explicitly predicting the distance value for each action candidate, [ UMPNet ] can better differentiate.
-4. Report the body metric and its denominator/aggregation: (2) success rate, where a successful case is defined as the normalized distance to the goal state is smaller than 0.1..
-5. Re-run the body-reported ablation/failure condition: Being able to effectively explore the possible states of an object without a specific goal is a critical first step for many robot learning algorithms since it is often used to collect ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2d) takes both embedding vector ψ(ot) and action a as input, and outputs a scalar as the distance prediction ˜rdist(adir t ). (p. 3, III. APPROACH); preserve the objective/update rule: The network is trained with Binary Cross-Entropy loss. (p. 3, III. APPROACH).
+2. Use the paper-reported task/data/environment cue: Our simulation environment uses objects from PartNetMobility [29] and physics engine from Pybullet [30]. (p. 4, IV. EVALUATION).
+3. Compare against the reported or matched baseline: Compared to [ AoTOnly ], we can observe that by explicitly predicting the distance value for each action candidate, [ UMPNet ] can better differentiate (p. 5, IV. EVALUATION).
+4. Report the body metric with its denominator and aggregation: When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive to error propagation, where one sub-optimal action would affect all following steps ... (p. 5, IV. EVALUATION).
+5. Re-run the reported ablation or stress/failure condition: Being able to effectively explore the possible states of an object without a specific goal is a critical first step for many robot learning algorithms since it is often used ... (p. 5, IV. EVALUATION); if none is reported, design one around: Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction). (p. 7, IV. EVALUATION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH); the primary result is directionally consistent at p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), and measure the boundary at p. 7 (IV. EVALUATION), p. 5 (IV. EVALUATION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, present, unified mechanism이 Compared to [ AoTOnly ], we can observe that by explicitly predicting the distance value for ... 대비 (2) success rate, where a successful case is defined as the normalized distance to the goal state is ...을 개선하고, Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2d) takes both embedding vector ψ(ot) and action a as input, and outputs a scalar as the distance prediction ˜rdist(adir t ).), does the paper-specific mechanism (In this paper, we introduce the Universal Manipulation Policy Network (UMPNet) - a single policy network that discovers possible manipulation policies for ...) retain the reported evaluation outcome (When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive ...) when tested against the paper's strongest explicit boundary (Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we introduce the Universal Manipulation Policy Network (UMPNet) - a single policy network that discovers possible manipulation policies for an articulated object from visual observations (i.e., RGB-D ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive to error propagation, where one sub-optimal action would affect all following steps ... (p. 5, IV. EVALUATION).
+- **Strongest explicit boundary:** Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction). (p. 7, IV. EVALUATION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

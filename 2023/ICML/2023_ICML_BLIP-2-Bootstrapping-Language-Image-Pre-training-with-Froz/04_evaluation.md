@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.12597; PDF retrieval source: https://arxiv.org/pdf/2301.12597. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.12597; PDF retrieval source: https://arxiv.org/pdf/2301.12597. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** On the OK-VQA (Marino et al., 2019) dataset, BLIP-2 comes secondary to Flamingo80B.
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** BLIP-2 achieves state-of-the-art result on the VQAv2 (Goyal et al., 2017) and GQA (Hudson & Manning, 2019) datasets.
-- **p. 7 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models Models #Trainable Params NoCaps Zero-shot (validation set) COCO Fine-tuned in-domain near-domain out-domain overall ...
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** We make a promising observation from Table 2: a stronger image encoder or a stronger LLM both lead to better performance.
-- **p. 6 / 4. Experiment - extractive PDF cue:** Compared to previous state-of-the-art models, BLIP-2 achieves improved performance while requiring substantially fewer number of trainable parameters during vision-language pre-training.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison with state-of-the-art image captioning methods on NoCaps and COCO Caption. All methods optimize the cross- entropy loss during finetuning. C: CIDEr, S: ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 6. The image-grounded text generation (ITG) loss improves image-text retrieval performance by enforcing the queries to extract language-relevant visual features.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. (Left) Model architecture of Q-Former and BLIP-2's first-stage vision-language representation learning objectives. We jointly optimize three objectives which enforce the queries (a set ...
+- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** On the OK-VQA (Marino et al., 2019) dataset, BLIP-2 comes secondary to Flamingo80B.
+- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2 achieves state-of-the-art result on the VQAv2 (Goyal et al., 2017) and GQA (Hudson & Manning, 2019) datasets.
+- **p. 7 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models Models #Trainable Params NoCaps Zero-shot (validation set) COCO Fine-tuned in-domain near-domain out-domain overall ...
+- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** We make a promising observation from Table 2: a stronger image encoder or a stronger LLM both lead to better performance.
+- **p. 6 / 4. Experiment - extractive body cue:** Compared to previous state-of-the-art models, BLIP-2 achieves improved performance while requiring substantially fewer number of trainable parameters during vision-language pre-training.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison with state-of-the-art image captioning methods on NoCaps and COCO Caption. All methods optimize the cross- entropy loss during finetuning. C: CIDEr, S: ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. The image-grounded text generation (ITG) loss improves image-text retrieval performance by enforcing the queries to extract language-relevant visual features.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. (Left) Model architecture of Q-Former and BLIP-2's first-stage vision-language representation learning objectives. We jointly optimize three objectives which enforce the queries (a set ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4. Experiment | EMPIRICAL / SOURCE-REPORTED EVALUATION | Compared to previous state-of-the-art models, BLIP-2 achieves improved performance while requiring substantially fewer number of trainable parameters during vision-language pre-training. | p. 6 (4. Experiment) |
 | 4.1. Instructed Zero-shot Image-to-Text Generation | EMPIRICAL / SOURCE-REPORTED EVALUATION | (2) Within the same LLM family, larger models outperform smaller ones. | p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** On the OK-VQA (Marino et al., 2019) dataset, BLIP-2 comes secondary to Flamingo80B.
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** BLIP-2 achieves state-of-the-art result on the VQAv2 (Goyal et al., 2017) and GQA (Hudson & Manning, 2019) datasets.
-- **p. 7 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models Models #Trainable Params NoCaps Zero-shot (validation set) COCO Fine-tuned in-domain near-domain out-domain overall ...
+- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** On the OK-VQA (Marino et al., 2019) dataset, BLIP-2 comes secondary to Flamingo80B.
+- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2 achieves state-of-the-art result on the VQAv2 (Goyal et al., 2017) and GQA (Hudson & Manning, 2019) datasets.
+- **p. 7 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models Models #Trainable Params NoCaps Zero-shot (validation set) COCO Fine-tuned in-domain near-domain out-domain overall ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of BLIP-2's framework. We pre-train a lightweight Querying Transformer following a two-stage strat- egy to bridge the modality gap. The first stage ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. (Left) Model architecture of Q-Former and BLIP-2's first-stage vision-language representation learning objectives. We jointly optimize three objectives which enforce the queries (a set ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. BLIP-2's second-stage vision-to-language generative pre-training, which bootstraps from frozen large language models (LLMs). (Top) Bootstrapping a decoder-based LLM (e.g. OPT). (Bottom) Bootstrapping an ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Selected examples of instructed zero-shot image-to-text generation using a BLIP-2 model w/ ViT-g and FlanT5XXL, where it shows a wide range of capabilities ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Overview of BLIP-2 results on various zero-shot vision-language tasks. Compared with previous state-of-the-art models. BLIP-2 achieves the highest zero-shot performance while requiring the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison with state-of-the-art methods on zero-shot visual question answering.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison with state-of-the-art image captioning methods on NoCaps and COCO Caption. All methods optimize the cross- entropy loss during finetuning. C: CIDEr, S: ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to significantly ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BLIP-2's framework. We pre-train a lightweight Querying Transformer following a two-stage strat- egy to bridge the modality gap. The first stage ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. (Left) Model architecture of Q-Former and BLIP-2's first-stage vision-language representation learning objectives. We jointly optimize three objectives which enforce the queries (a set ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. BLIP-2's second-stage vision-to-language generative pre-training, which bootstraps from frozen large language models (LLMs). (Top) Bootstrapping a decoder-based LLM (e.g. OPT). (Bottom) Bootstrapping an ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Selected examples of instructed zero-shot image-to-text generation using a BLIP-2 model w/ ViT-g and FlanT5XXL, where it shows a wide range of capabilities ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Overview of BLIP-2 results on various zero-shot vision-language tasks. Compared with previous state-of-the-art models. BLIP-2 achieves the highest zero-shot performance while requiring the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Comparison with state-of-the-art methods on zero-shot visual question answering.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison with state-of-the-art image captioning methods on NoCaps and COCO Caption. All methods optimize the cross- entropy loss during finetuning. C: CIDEr, S: ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to significantly ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | On the OK-VQA (Marino et al., 2019) dataset, BLIP-2 comes secondary to Flamingo80B. | embodiment, simulator version and control stack | p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation) |
 | Task/environment | BLIP-2 achieves state-of-the-art result on the VQAv2 (Goyal et al., 2017) and GQA (Hudson & Manning, 2019) datasets. | reset, timeout, object/scene variation | p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (4.1. Instructed Zero-shot Image-to-Text Generation) |
@@ -113,8 +113,8 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 | Primary metric/result | (2) Within the same LLM family, larger models outperform smaller ones. | numeric claim only at cited anchor | p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive PDF cue:** It outperforms Flamingo80B by 8.7% on VQAv2, despite having 54x fewer trainable parameters.
-- **p. 4 / 3.4. Model Pre-training - extractive PDF cue:** We use images of size 224×224, augmented with random resized cropping and horizontal flipping.
+- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** It outperforms Flamingo80B by 8.7% on VQAv2, despite having 54x fewer trainable parameters.
+- **p. 4 / 3.4. Model Pre-training - extractive body cue:** We use images of size 224×224, augmented with random resized cropping and horizontal flipping.
 
 ## Generalization and Failure Cases
 
@@ -149,11 +149,11 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Limitation - extractive PDF cue:** The LLMs cannot learn from it the correlation among multiple image-text pairs in a single sequence.
-- **p. 8 / 5. Limitation - extractive PDF cue:** We aim to create a similar dataset in future work.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to significantly ...
+- **p. 8 / 5. Limitation - extractive body cue:** The LLMs cannot learn from it the correlation among multiple image-text pairs in a single sequence.
+- **p. 8 / 5. Limitation - extractive body cue:** We aim to create a similar dataset in future work.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to significantly ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (4.1. Instructed Zero-shot Image-to-Text Generation), metrics p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4. Experiment), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (4.1. Instructed Zero-shot Image-to-Text Generation), metrics p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4. Experiment), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

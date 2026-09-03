@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Text-to-3D Generation), p. 7 (4.2. Te
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Point to Gaussian Generation - extractive PDF cue:** To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974
-- **p. 7 / 4.2. Text-to-3D Generation - extractive PDF cue:** For quantitative evaluation, we conduct comprehensive experiments on the T3Bench benchmark [11], which provides a diverse collection of text prompts covering various object categories and ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** Quantitative comparison on the Objaverse dataset.
-- **p. 6 / 4.1. Text-Guided Visual Synthesis - extractive PDF cue:** We benchmark GaussianGrow against state-of-the-art text-guided 3D appearance generation methods, including Texture [38], Text2Tex [5], Paint3D [57], SyncMVD [25] and GAP [61].
-- **p. 8 / 4.3. Point to Gaussian Generation - extractive PDF cue:** We benchmark GaussianGrow against two leading methods: DreamGaussian [44] and TriplaneGaussian [68].
-- **p. 8 / 4.3. Point to Gaussian Generation - extractive PDF cue:** Visual comparison with DreamGaussian and TriplaneGaussian on the task of Point-to-Gaussian.
-- **p. 6 / 4.1. Text-Guided Visual Synthesis - extractive PDF cue:** For quantitative evaluation, we employ three complementary metrics: Fr´echet Inception Distance (FID) [19] and Kernel Inception Distance (KID ×10-3) [3] to assess image quality, while ...
-- **p. 7 / 4.2. Text-to-3D Generation - extractive PDF cue:** We measure performance using three complementary metrics: CLIP similarity for semantic alignment, CLIP R-Precision for textimage correspondence, and ImageReward [36, 51] for perceptual quality assessment.
+- **p. 7 / 4.3. Point to Gaussian Generation - extractive body cue:** To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974
+- **p. 7 / 4.2. Text-to-3D Generation - extractive body cue:** For quantitative evaluation, we conduct comprehensive experiments on the T3Bench benchmark [11], which provides a diverse collection of text prompts covering various object categories and ...
+- **p. 6 / 4. Experiments - extractive body cue:** Quantitative comparison on the Objaverse dataset.
+- **p. 6 / 4.1. Text-Guided Visual Synthesis - extractive body cue:** We benchmark GaussianGrow against state-of-the-art text-guided 3D appearance generation methods, including Texture [38], Text2Tex [5], Paint3D [57], SyncMVD [25] and GAP [61].
+- **p. 8 / 4.3. Point to Gaussian Generation - extractive body cue:** We benchmark GaussianGrow against two leading methods: DreamGaussian [44] and TriplaneGaussian [68].
+- **p. 8 / 4.3. Point to Gaussian Generation - extractive body cue:** Visual comparison with DreamGaussian and TriplaneGaussian on the task of Point-to-Gaussian.
+- **p. 6 / 4.1. Text-Guided Visual Synthesis - extractive body cue:** For quantitative evaluation, we employ three complementary metrics: Fr´echet Inception Distance (FID) [19] and Kernel Inception Distance (KID ×10-3) [3] to assess image quality, while ...
+- **p. 7 / 4.2. Text-to-3D Generation - extractive body cue:** We measure performance using three complementary metrics: CLIP similarity for semantic alignment, CLIP R-Precision for textimage correspondence, and ImageReward [36, 51] for perceptual quality assessment.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Text-to-3D Generation), p. 7 (4.2. Te
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Text-to-3D Generation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, applying the geometry of LGM to GaussianGrow also achieves significantly better performance by replacing the appearance of LGM with GaussianGrow. | p. 7 (4.2. Text-to-3D Generation) |
 | 4.2. Text-to-3D Generation | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results demonstrate that GaussianGrow significantly outperforms previous methods in terms of appearance generation, and a stronger geometric setting leads to better generation quality. | p. 7 (4.2. Text-to-3D Generation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.2. Text-to-3D Generation), p. 7 (4.2. Te
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Point to Gaussian Generation - extractive PDF cue:** To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974
-- **p. 7 / 4.2. Text-to-3D Generation - extractive PDF cue:** For quantitative evaluation, we conduct comprehensive experiments on the T3Bench benchmark [11], which provides a diverse collection of text prompts covering various object categories and ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** Quantitative comparison on the Objaverse dataset.
-- **p. 6 / 4.1. Text-Guided Visual Synthesis - extractive PDF cue:** We benchmark GaussianGrow against state-of-the-art text-guided 3D appearance generation methods, including Texture [38], Text2Tex [5], Paint3D [57], SyncMVD [25] and GAP [61].
-- **p. 8 / 4.3. Point to Gaussian Generation - extractive PDF cue:** We benchmark GaussianGrow against two leading methods: DreamGaussian [44] and TriplaneGaussian [68].
-- **p. 8 / 4.3. Point to Gaussian Generation - extractive PDF cue:** Visual comparison with DreamGaussian and TriplaneGaussian on the task of Point-to-Gaussian.
+- **p. 7 / 4.3. Point to Gaussian Generation - extractive body cue:** To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974
+- **p. 7 / 4.2. Text-to-3D Generation - extractive body cue:** For quantitative evaluation, we conduct comprehensive experiments on the T3Bench benchmark [11], which provides a diverse collection of text prompts covering various object categories and ...
+- **p. 6 / 4. Experiments - extractive body cue:** Quantitative comparison on the Objaverse dataset.
+- **p. 6 / 4.1. Text-Guided Visual Synthesis - extractive body cue:** We benchmark GaussianGrow against state-of-the-art text-guided 3D appearance generation methods, including Texture [38], Text2Tex [5], Paint3D [57], SyncMVD [25] and GAP [61].
+- **p. 8 / 4.3. Point to Gaussian Generation - extractive body cue:** We benchmark GaussianGrow against two leading methods: DreamGaussian [44] and TriplaneGaussian [68].
+- **p. 8 / 4.3. Point to Gaussian Generation - extractive body cue:** Visual comparison with DreamGaussian and TriplaneGaussian on the task of Point-to-Gaussian.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Left: Diverse shapes generated by GaussianGrow. Right: The Gaussian generation pipeline of GaussianGrow. Reference point clouds can be obtained through large-scale retrieval or ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of GaussianGrow. Stage 1. We leverage depth-aware ControlNet for primary view generation, with a geometry- aware diffusion model for multi-view synthesis. Additional ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. We obtain the additional camera poses by optimizing them to observe largest overlap regions. Gaussian Optimization. Our optimization strategy follows a two-phase approach ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. The effect of Gaussian inpainting. Before Overlap Processing After Overlap Processing
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. The effectiveness of processing overlap regions. certain regions may remain unseen or inadequately cap- tured. Due to the diverse geometric structures of different ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Visual comparison on the Objaverse dataset shows that GaussianGrow uses point clouds instead of meshes. the depth map Di rendered from vi, the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. Spatial Inpainting. Due to noises and uneven density in the raw point cloud data, some points may remain difficult to observe after image ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on the Objaverse dataset.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Left: Diverse shapes generated by GaussianGrow. Right: The Gaussian generation pipeline of GaussianGrow. Reference point clouds can be obtained through large-scale retrieval or ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of GaussianGrow. Stage 1. We leverage depth-aware ControlNet for primary view generation, with a geometry- aware diffusion model for multi-view synthesis. Additional ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. We obtain the additional camera poses by optimizing them to observe largest overlap regions. Gaussian Optimization. Our optimization strategy follows a two-phase approach ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. The effect of Gaussian inpainting. Before Overlap Processing After Overlap Processing
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. The effectiveness of processing overlap regions. certain regions may remain unseen or inadequately cap- tured. Due to the diverse geometric structures of different ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Visual comparison on the Objaverse dataset shows that GaussianGrow uses point clouds instead of meshes. the depth map Di rendered from vi, the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. Spatial Inpainting. Due to noises and uneven density in the raw point cloud data, some points may remain difficult to observe after image ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on the Objaverse dataset.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974 | embodiment, simulator version and control stack | p. 7 (4.3. Point to Gaussian Generation), p. 7 (4.2. Text-to-3D Generation) |
 | Task/environment | For quantitative evaluation, we conduct comprehensive experiments on the T3Bench benchmark [11], which provides a diverse collection of text prompts covering various object categories ... | reset, timeout, object/scene variation | p. 7 (4.2. Text-to-3D Generation), p. 6 (4. Experiments) |
@@ -154,12 +154,12 @@ PDF body evaluation/result cue (p. 7 (4.2. Text-to-3D Generation), p. 7 (4.2. Te
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. Spatial Inpainting. Due to noises and uneven density in the raw point cloud data, some points may remain difficult to observe after image ...
-- **p. 7 / 4.3. Point to Gaussian Generation - extractive PDF cue:** To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974
-- **p. 8 / 4.3. Point to Gaussian Generation - extractive PDF cue:** These scans present challenging characteristics including noise and varying point densities.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** 4, using only the six cardinal views leads to clear degradation across all metrics, while adding four views focused on key overlap regions yields the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. Spatial Inpainting. Due to noises and uneven density in the raw point cloud data, some points may remain difficult to observe after image ...
+- **p. 7 / 4.3. Point to Gaussian Generation - extractive body cue:** To demonstrate robustness with real-world data, we also utilized the DeepFashion3D dataset 18974
+- **p. 8 / 4.3. Point to Gaussian Generation - extractive body cue:** These scans present challenging characteristics including noise and varying point densities.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** 4, using only the six cardinal views leads to clear degradation across all metrics, while adding four views focused on key overlap regions yields the ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Point to Gaussian Generation), p. 7 (4.2. Text-to-3D Generation), p. 6 (4. Experiments), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.3. Point to Gaussian Generation), p. 8 (4.3. Point to Gaussian Generation), metrics p. 6 (4.1. Text-Guided Visual Synthesis), p. 7 (4.2. Text-to-3D Generation), p. 7 (4.1. Text-Guided Visual Synthesis), p. 8 (4.4. Ablation Study), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.4. Ablation Study), baselines p. 7 (4.2. Text-to-3D Generation), p. 7 (4.1. Text-Guided Visual Synthesis), p. 8 (4.3. Point to Gaussian Generation), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.3. Point to Gaussian Generation), p. 6 (4. Experiments), results p. 7 (4.2. Text-to-3D Generation), p. 7 (4.2. Text-to-3D Generation), p. 6 (4. Experiments), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Point to Gaussian Generation), p. 7 (4.2. Text-to-3D Generation), p. 6 (4. Experiments), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.3. Point to Gaussian Generation), p. 8 (4.3. Point to Gaussian Generation), metrics p. 6 (4.1. Text-Guided Visual Synthesis), p. 7 (4.2. Text-to-3D Generation), p. 7 (4.1. Text-Guided Visual Synthesis), p. 8 (4.4. Ablation Study), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.4. Ablation Study), baselines p. 7 (4.2. Text-to-3D Generation), p. 7 (4.1. Text-Guided Visual Synthesis), p. 8 (4.3. Point to Gaussian Generation), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.3. Point to Gaussian Generation), p. 6 (4. Experiments), results p. 7 (4.2. Text-to-3D Generation), p. 7 (4.2. Text-to-3D Generation), p. 6 (4. Experiments), p. 6 (4.1. Text-Guided Visual Synthesis), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

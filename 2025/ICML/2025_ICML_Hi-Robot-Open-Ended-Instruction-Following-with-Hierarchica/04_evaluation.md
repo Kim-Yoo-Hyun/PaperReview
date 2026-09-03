@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=lNVHg9npif; PDF retrieval source: https://openreview.net/pdf/641fc522a201fc660b34e1224cbf7afa6ace2eee.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=lNVHg9npif; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/165445. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** Task progress quantifies how closely the robot matches the intended goal and is computed by the proportion of objects that are successfully placed in their ...
-- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** chopstick HI ROBOT pick up one slice of cheddar cheese put Oreo into the basket respond: Done!
-- **p. 5 / 5. Experiments - extractive PDF cue:** In our experimental evaluation, we study a range of problems that combine challenging physical interactions with complex user interaction, including multi-stage instructions, live user feedback ...
-- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** Each evaluation consists of 20 trials per task per method.
-- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** This score measures how well the high-level policy's predicted instruction aligns with human intent, requiring multi-modal understanding of the current environment and prompt.
-- **p. 8 / 5.3. Core Results - extractive PDF cue:** (4) Expert human guidance reveals the low-level policy's strengths but underscores the need for high-level reasoning.
-- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** The Instruction Accuracy for a trial is then computed as the proportion of correct predictions out of the total number of predictions.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 7: Ablation on synthetic data. Synthetic data is essential for handling open-ended instructions, as the model trained with- out it struggle with user-driven deviations, ...
+- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** Task progress quantifies how closely the robot matches the intended goal and is computed by the proportion of objects that are successfully placed in their ...
+- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** chopstick HI ROBOT pick up one slice of cheddar cheese put Oreo into the basket respond: Done!
+- **p. 5 / 5. Experiments - extractive body cue:** In our experimental evaluation, we study a range of problems that combine challenging physical interactions with complex user interaction, including multi-stage instructions, live user feedback ...
+- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** Each evaluation consists of 20 trials per task per method.
+- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** This score measures how well the high-level policy's predicted instruction aligns with human intent, requiring multi-modal understanding of the current environment and prompt.
+- **p. 8 / 5.3. Core Results - extractive body cue:** (4) Expert human guidance reveals the low-level policy's strengths but underscores the need for high-level reasoning.
+- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** The Instruction Accuracy for a trial is then computed as the proportion of correct predictions out of the total number of predictions.
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Ablation on synthetic data. Synthetic data is essential for handling open-ended instructions, as the model trained with- out it struggle with user-driven deviations, ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 5: Comparisons to Prior Methods. Hi Robot outperforms GPT-4o and flat VLA on Table Bussing, Sandwich Making, and Grocery Shopping. Hi Robot averages ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 8: Hierarchical policy vs. flat policy. The hierarchical approach outperforms the flat variant trained on the same data, as it effectively integrates user ... | p. 9 (Figure/Table caption) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** Task progress quantifies how closely the robot matches the intended goal and is computed by the proportion of objects that are successfully placed in their ...
-- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** chopstick HI ROBOT pick up one slice of cheddar cheese put Oreo into the basket respond: Done!
-- **p. 5 / 5. Experiments - extractive PDF cue:** In our experimental evaluation, we study a range of problems that combine challenging physical interactions with complex user interaction, including multi-stage instructions, live user feedback ...
-- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** Each evaluation consists of 20 trials per task per method.
-- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** This score measures how well the high-level policy's predicted instruction aligns with human intent, requiring multi-modal understanding of the current environment and prompt.
+- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** Task progress quantifies how closely the robot matches the intended goal and is computed by the proportion of objects that are successfully placed in their ...
+- **p. 8 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** chopstick HI ROBOT pick up one slice of cheddar cheese put Oreo into the basket respond: Done!
+- **p. 5 / 5. Experiments - extractive body cue:** In our experimental evaluation, we study a range of problems that combine challenging physical interactions with complex user interaction, including multi-stage instructions, live user feedback ...
+- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** Each evaluation consists of 20 trials per task per method.
+- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** This score measures how well the high-level policy's predicted instruction aligns with human intent, requiring multi-modal understanding of the current environment and prompt.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Open-ended instruction following. Hi Robot enables robots to follow multi-stage instructions, adapt to real-time corrections and constraints, complete unseen long-horizon tasks, and respond ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of hierarchical VLA. The policy consists of a high-level and a low-level policy. The high-level policy pro- cesses open-ended instructions and images ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Data collection and generation for training the high- level policy. We first collect teleoperated robot demonstrations and segment them into short skills (e.g., ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Task domains used in our evaluation. Across three domains, we evaluate complex instructions, intermediate feedback, and user interruptions. For example, in Table Bussing, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Comparisons to Prior Methods. Hi Robot outperforms GPT-4o and flat VLA on Table Bussing, Sandwich Making, and Grocery Shopping. Hi Robot averages over ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Qualitative Command Comparisons. GPT-4o often (a) misidentifies objects, (b) skips subtasks, or (c) ignores user intent. Hi Robot consistently produces commands aligned with ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 7: Ablation on synthetic data. Synthetic data is essential for handling open-ended instructions, as the model trained with- out it struggle with user-driven deviations, ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 8: Hierarchical policy vs. flat policy. The hierarchical approach outperforms the flat variant trained on the same data, as it effectively integrates user feedback ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Open-ended instruction following. Hi Robot enables robots to follow multi-stage instructions, adapt to real-time corrections and constraints, complete unseen long-horizon tasks, and respond ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of hierarchical VLA. The policy consists of a high-level and a low-level policy. The high-level policy pro- cesses open-ended instructions and images ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Data collection and generation for training the high- level policy. We first collect teleoperated robot demonstrations and segment them into short skills (e.g., ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Task domains used in our evaluation. Across three domains, we evaluate complex instructions, intermediate feedback, and user interruptions. For example, in Table Bussing, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Comparisons to Prior Methods. Hi Robot outperforms GPT-4o and flat VLA on Table Bussing, Sandwich Making, and Grocery Shopping. Hi Robot averages over ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Qualitative Command Comparisons. GPT-4o often (a) misidentifies objects, (b) skips subtasks, or (c) ignores user intent. Hi Robot consistently produces commands aligned with ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Ablation on synthetic data. Synthetic data is essential for handling open-ended instructions, as the model trained with- out it struggle with user-driven deviations, ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 8: Hierarchical policy vs. flat policy. The hierarchical approach outperforms the flat variant trained on the same data, as it effectively integrates user feedback ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Task progress quantifies how closely the robot matches the intended goal and is computed by the proportion of objects that are successfully placed in ... | embodiment, simulator version and control stack | p. 8 (5.2. Metrics and Evaluation Protocol), p. 8 (5.2. Metrics and Evaluation Protocol) |
 | Task/environment | chopstick HI ROBOT pick up one slice of cheddar cheese put Oreo into the basket respond: Done! | reset, timeout, object/scene variation | p. 8 (5.2. Metrics and Evaluation Protocol), p. 5 (5. Experiments) |
@@ -118,7 +118,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 | Primary metric/result | Figure 8: Hierarchical policy vs. flat policy. The hierarchical approach outperforms the flat variant trained on the same data, as it effectively integrates user ... | numeric claim only at cited anchor | p. 9 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive PDF cue:** Each evaluation consists of 20 trials per task per method.
+- **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** Each evaluation consists of 20 trials per task per method.
 
 ## Generalization and Failure Cases
 
@@ -152,12 +152,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 6. Discussion and Future Work - extractive PDF cue:** Our system also has a number of limitations that could be studied in future work.
-- **p. 8 / 5.3. Core Results - extractive PDF cue:** With human high-level instructions, the lowlevel policy executes nearly flawlessly, showing that failures stem more from reasoning than actuation.
-- **p. 9 / 6. Discussion and Future Work - extractive PDF cue:** Coupling these two layers more directly, e.g. by allowing the high-level policy to be more aware of how successfully the low-level policy completes each command, ...
-- **p. 8 / 5.3. Core Results - extractive PDF cue:** GPT-4o, however, often fails to maintain a coherent internal state, leading to commands like picking up new objects when the gripper is still occupied or ...
+- **p. 9 / 6. Discussion and Future Work - extractive body cue:** Our system also has a number of limitations that could be studied in future work.
+- **p. 8 / 5.3. Core Results - extractive body cue:** With human high-level instructions, the lowlevel policy executes nearly flawlessly, showing that failures stem more from reasoning than actuation.
+- **p. 9 / 6. Discussion and Future Work - extractive body cue:** Coupling these two layers more directly, e.g. by allowing the high-level policy to be more aware of how successfully the low-level policy completes each command, ...
+- **p. 8 / 5.3. Core Results - extractive body cue:** GPT-4o, however, often fails to maintain a coherent internal state, leading to commands like picking up new objects when the gripper is still occupied or ...
 
-- **PDF anchors reviewed:** datasets p. 8 (5.2. Metrics and Evaluation Protocol), p. 8 (5.2. Metrics and Evaluation Protocol), p. 5 (5. Experiments), p. 7 (5.2. Metrics and Evaluation Protocol), p. 7 (5.2. Metrics and Evaluation Protocol), metrics p. 7 (5.2. Metrics and Evaluation Protocol), p. 8 (5.3. Core Results), p. 8 (5.2. Metrics and Evaluation Protocol), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 8 (5.3. Core Results), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (5.2. Metrics and Evaluation Protocol), p. 8 (5.3. Core Results), p. 8 (5.3. Core Results), p. 9 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (5.2. Metrics and Evaluation Protocol), p. 8 (5.2. Metrics and Evaluation Protocol), p. 5 (5. Experiments), p. 7 (5.2. Metrics and Evaluation Protocol), p. 7 (5.2. Metrics and Evaluation Protocol), metrics p. 7 (5.2. Metrics and Evaluation Protocol), p. 8 (5.3. Core Results), p. 8 (5.2. Metrics and Evaluation Protocol), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 8 (5.3. Core Results), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (5.2. Metrics and Evaluation Protocol), p. 8 (5.3. Core Results), p. 8 (5.3. Core Results), p. 9 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

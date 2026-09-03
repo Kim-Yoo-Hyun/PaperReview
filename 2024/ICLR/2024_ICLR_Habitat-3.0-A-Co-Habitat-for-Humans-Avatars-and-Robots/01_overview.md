@@ -1,8 +1,8 @@
 # Habitat 3.0: A Co-Habitat for Humans, Avatars, and Robots
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html.
-> PDF retrieval source: https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html.
+> PDF retrieval source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: REFERENCE
 - Tags: Robotics, simulation, human-robot interaction, social navigation, humanoid, mobile manipulation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html
-- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html
 - Code/Project: https://aihabitat.org/habitat3
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 

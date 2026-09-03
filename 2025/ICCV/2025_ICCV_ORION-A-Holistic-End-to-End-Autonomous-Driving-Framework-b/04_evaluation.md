@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** Additionally, we compare our method with other baselines on nuScenes [7] open-loop evaluation (details in Appendix).
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** We train and evaluate ORION on the Bench2drive dataset [24], a closed-loop evaluation protocol under CARLA V2 [12] for E2E autonomous driving.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** The slight degradation on DS may be caused by the trade-off between DS and SR in the CARLA benchmark protocol [74].
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Furthermore, the results also validate the high quality and validity of the Chat-B2D dataset produced by our auto-pipeline.
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** The brown, red, and green refer to the action decision, the objects that influence driving decisions, and the prediction trajectory, respectively.
-- **p. 6 / 4.4. Qualitative Results - extractive PDF cue:** It shows both the driving action reasoning and trajectory prediction outputted by our model, as well as the corresponding ego-vehicle states.
-- **p. 6 / 4.4. Qualitative Results - extractive PDF cue:** We observe that ORION can capture the correct causal relationship in the scenario and make correct driving decisions, then predict the planning trajectory following the ...
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** Note that VAE-based trajectory generTable 2.
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** Additionally, we compare our method with other baselines on nuScenes [7] open-loop evaluation (details in Appendix).
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** We train and evaluate ORION on the Bench2drive dataset [24], a closed-loop evaluation protocol under CARLA V2 [12] for E2E autonomous driving.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** The slight degradation on DS may be caused by the trade-off between DS and SR in the CARLA benchmark protocol [74].
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** Furthermore, the results also validate the high quality and validity of the Chat-B2D dataset produced by our auto-pipeline.
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** The brown, red, and green refer to the action decision, the objects that influence driving decisions, and the prediction trajectory, respectively.
+- **p. 6 / 4.4. Qualitative Results - extractive body cue:** It shows both the driving action reasoning and trajectory prediction outputted by our model, as well as the corresponding ego-vehicle states.
+- **p. 6 / 4.4. Qualitative Results - extractive body cue:** We observe that ORION can capture the correct causal relationship in the scenario and make correct driving decisions, then predict the planning trajectory following the ...
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** Note that VAE-based trajectory generTable 2.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.5. Ablation Study | EMPIRICAL / SOURCE-REPORTED EVALUATION | By leveraging explicit traffic state supervision (ID-2), ORION achieves 74.65 DS and 49.31% SR, which already outperforms DriveAdapter [22] and DriveTRansformer [25] by a ... | p. 7 (4.5. Ablation Study) |
 | 25.00 71.11 78.33 30.00 69.15 54.72(+16.12) | EMPIRICAL / SOURCE-REPORTED EVALUATION | ORION achieves +16.12% and +12.64% performance improvements compared with DriveTransformer [25] and DriveAdapter [22] in the average ability, respectively. | p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** Additionally, we compare our method with other baselines on nuScenes [7] open-loop evaluation (details in Appendix).
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** We train and evaluate ORION on the Bench2drive dataset [24], a closed-loop evaluation protocol under CARLA V2 [12] for E2E autonomous driving.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** The slight degradation on DS may be caused by the trade-off between DS and SR in the CARLA benchmark protocol [74].
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Furthermore, the results also validate the high quality and validity of the Chat-B2D dataset produced by our auto-pipeline.
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** The brown, red, and green refer to the action decision, the objects that influence driving decisions, and the prediction trajectory, respectively.
-- **p. 6 / 4.4. Qualitative Results - extractive PDF cue:** It shows both the driving action reasoning and trajectory prediction outputted by our model, as well as the corresponding ego-vehicle states.
-- **p. 6 / 4.4. Qualitative Results - extractive PDF cue:** We observe that ORION can capture the correct causal relationship in the scenario and make correct driving decisions, then predict the planning trajectory following the ...
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** Note that VAE-based trajectory generTable 2.
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** Additionally, we compare our method with other baselines on nuScenes [7] open-loop evaluation (details in Appendix).
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** We train and evaluate ORION on the Bench2drive dataset [24], a closed-loop evaluation protocol under CARLA V2 [12] for E2E autonomous driving.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** The slight degradation on DS may be caused by the trade-off between DS and SR in the CARLA benchmark protocol [74].
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** Furthermore, the results also validate the high quality and validity of the Chat-B2D dataset produced by our auto-pipeline.
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** The brown, red, and green refer to the action decision, the objects that influence driving decisions, and the prediction trajectory, respectively.
+- **p. 6 / 4.4. Qualitative Results - extractive body cue:** It shows both the driving action reasoning and trajectory prediction outputted by our model, as well as the corresponding ego-vehicle states.
+- **p. 6 / 4.4. Qualitative Results - extractive body cue:** We observe that ORION can capture the correct causal relationship in the scenario and make correct driving decisions, then predict the planning trajectory following the ...
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** Note that VAE-based trajectory generTable 2.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The comparison of different E2E paradigms. Our ORION framework establishes the differentiable connection be- tween reasoning and action space via the generative planner. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The pipeline of our ORION, a holistic E2E framework aligning vision-reasoning-action space. It consists of three key compo- nents: a QT-Former to extract ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. The detailed architecture of QT-Former. It accepts di- verse queries and image features as inputs to detect traffic ele- ments, predict motion, and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Closed-loop, Open-loop and Multi-Ability Results of E2E-AD Methods in Bench2Drive under base set. C/L refers to cam- era/LiDAR. Avg.L2 is averaged over the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. It shows both the driving action reasoning and tra- jectory prediction outputted by our model, as well as the corresponding ego-vehicle states. We ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results of ORION on the Bench2Drive closed-loop evaluation set. The brown, red, and green refer to the action decision, the objects that ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Advantages of the vision-language instructed action gen- eration. DS and SR denote Driving Score and Success Rate sepa- rately. VAD [26] is a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation on diverse generative planner. DS and SR denote Driving Score and Success Rate separately. Generative Planner Closed-loop Open-loop Ability DS↑
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The comparison of different E2E paradigms. Our ORION framework establishes the differentiable connection be- tween reasoning and action space via the generative planner. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The pipeline of our ORION, a holistic E2E framework aligning vision-reasoning-action space. It consists of three key compo- nents: a QT-Former to extract ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. The detailed architecture of QT-Former. It accepts di- verse queries and image features as inputs to detect traffic ele- ments, predict motion, and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Closed-loop, Open-loop and Multi-Ability Results of E2E-AD Methods in Bench2Drive under base set. C/L refers to cam- era/LiDAR. Avg.L2 is averaged over the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. It shows both the driving action reasoning and tra- jectory prediction outputted by our model, as well as the corresponding ego-vehicle states. We ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results of ORION on the Bench2Drive closed-loop evaluation set. The brown, red, and green refer to the action decision, the objects that ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Advantages of the vision-language instructed action gen- eration. DS and SR denote Driving Score and Success Rate sepa- rately. VAD [26] is a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation on diverse generative planner. DS and SR denote Driving Score and Success Rate separately. Generative Planner Closed-loop Open-loop Ability DS↑
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Additionally, we compare our method with other baselines on nuScenes [7] open-loop evaluation (details in Appendix). | embodiment, simulator version and control stack | p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics) |
 | Task/environment | We train and evaluate ORION on the Bench2drive dataset [24], a closed-loop evaluation protocol under CARLA V2 [12] for E2E autonomous driving. | reset, timeout, object/scene variation | p. 5 (4.1. Dataset and Evaluation Metrics), p. 8 (4.5. Ablation Study) |
@@ -122,9 +122,9 @@ PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78
 | Primary metric/result | ORION achieves +16.12% and +12.64% performance improvements compared with DriveTransformer [25] and DriveAdapter [22] in the average ability, respectively. | numeric claim only at cited anchor | p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** Each clip captures approximately 150 meters of continuous driving within a specific traffic scene.
-- **p. 6 / 4.3. Main Results - extractive PDF cue:** Avg.L2 is averaged over the predictions in 2 seconds under 2Hz, similar to UniAD. * denote expert feature distillation.
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** T=0.00s, V=5.02m/s T=0.25s, V=4.19m/s T=1.00s, V=0.05m/s T=2.00s, V=2.67m/s T=3.00s, V=5.04m/s T=0.00s, V=0.00m/s T=4.50s, V=4.92m/s T=6.50s, V=4.85m/s T=7.50s, V=0.26m/s T=9.50s, V=5.12m/s You should keep and lanefollow. ...
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** Each clip captures approximately 150 meters of continuous driving within a specific traffic scene.
+- **p. 6 / 4.3. Main Results - extractive body cue:** Avg.L2 is averaged over the predictions in 2 seconds under 2Hz, similar to UniAD. * denote expert feature distillation.
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** T=0.00s, V=5.02m/s T=0.25s, V=4.19m/s T=1.00s, V=0.05m/s T=2.00s, V=2.67m/s T=3.00s, V=5.04m/s T=0.00s, V=0.00m/s T=4.50s, V=4.92m/s T=6.50s, V=4.85m/s T=7.50s, V=0.26m/s T=9.50s, V=5.12m/s You should keep and lanefollow. ...
 
 ## Generalization and Failure Cases
 
@@ -161,13 +161,13 @@ PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** For open-loop evaluation, we use the L2 distance error and the collision rate.
-- **p. 6 / 25.00 71.11 78.33 30.00 69.15 54.72(+16.12) - extractive PDF cue:** On the other hand, our model falls behind DriveAdapter in Merging and Give Way, which shows that ORION is not good at making lane-changing decisions.
-- **p. 6 / 4.5. Ablation Study - extractive PDF cue:** The plain text paradigm performs the worst (42.23 DS, 13.14% SR, and 15.39% mean ability), indicating the limitations of plain text output in closed-loop driving ...
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** The model cannot obtain both reasoning and planning capabilities with single-task training.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Then, we combine the motion prediction module in the QT-Former's perception head, which gains a slight improvement of +0.4% SR and further reduces the collision ...
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** For open-loop evaluation, we use the L2 distance error and the collision rate.
+- **p. 6 / 25.00 71.11 78.33 30.00 69.15 54.72(+16.12) - extractive body cue:** On the other hand, our model falls behind DriveAdapter in Merging and Give Way, which shows that ORION is not good at making lane-changing decisions.
+- **p. 6 / 4.5. Ablation Study - extractive body cue:** The plain text paradigm performs the worst (42.23 DS, 13.14% SR, and 15.39% mean ability), indicating the limitations of plain text output in closed-loop driving ...
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** The model cannot obtain both reasoning and planning capabilities with single-task training.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** Then, we combine the motion prediction module in the QT-Former's perception head, which gains a slight improvement of +0.4% SR and further reduces the collision ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 7 (4.5. Ablation Study), p. 6 (4.4. Qualitative Results), metrics p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.3. Main Results), p. 7 (4.5. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 7 (4.5. Ablation Study), baselines p. 7 (4.5. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 7 (4.5. Ablation Study), results p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 8 (4.5. Ablation Study), p. 7 (Figure/Table caption), p. 5 (4.1. Dataset and Evaluation Metrics).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 7 (4.5. Ablation Study), p. 6 (4.4. Qualitative Results), metrics p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.3. Main Results), p. 7 (4.5. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 7 (4.5. Ablation Study), baselines p. 7 (4.5. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 7 (4.5. Ablation Study), results p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 8 (4.5. Ablation Study), p. 7 (Figure/Table caption), p. 5 (4.1. Dataset and Evaluation Metrics).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

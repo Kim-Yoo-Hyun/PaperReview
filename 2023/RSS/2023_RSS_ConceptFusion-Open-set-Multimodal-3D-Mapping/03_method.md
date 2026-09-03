@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.07241; PDF retrieval source: https://arxiv.org/pdf/2302.07241. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.07241; PDF retrieval source: https://arxiv.org/pdf/2302.07241. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | We then present our algorithm to compute pixel-aligned features zero-shot from off-the-shelf foundation models (such as CLIP [6], AudioCLIP [8], and variants). | p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | To mitigate this, we introduce a novel mechanism to construct pixel-aligned features that combine global (image-level) context encapsulated in models like CLIP, ... | p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Our odometry and mapping approaches run at frame-rate (15 Hz). | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | On outdoor datasets (SemanticKITTI [68], self-captured autonomous driving sequences), we incrementally register pointclouds into a global frame using the LegoLOAM [70] technique ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | Our odometry and mapping approaches run at frame-rate (15 Hz). | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -129,8 +129,17 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 5 (IV. THE ConceptFusion APPROACH), p. 5 (IV. THE ConceptFusion APPROACH), objective p. 5 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), temporal p. 6 (IV. THE ConceptFusion APPROACH), p. 12 (VII. CONCLUSION), p. 12 (VII. CONCLUSION), p. 1 (Front matter), p. 3 (IV. THE ConceptFusion APPROACH), p. 3 (II. RELATED WORK).
+- **Evidence anchors reviewed:** method p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 5 (IV. THE ConceptFusion APPROACH), p. 5 (IV. THE ConceptFusion APPROACH), objective p. 5 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), temporal p. 6 (IV. THE ConceptFusion APPROACH), p. 12 (VII. CONCLUSION), p. 12 (VII. CONCLUSION), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (IV. THE ConceptFusion APPROACH), p. 3 (II. RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** IV-B, we compute the semantic context embedding fP u,v,t ∈fP Xt for each pixel in the input image Xt. (p. 4, IV. THE ConceptFusion APPROACH).
+- **Objective/update evidence:** Real-time inference: To optimize the performance and efficiency of the foundation models employed (SAM [57], DINO [7], and CLIP [6]), we use standard quantization and tracing methods. (p. 6, IV. THE ConceptFusion APPROACH).
+- **Temporal/runtime evidence:** Our odometry and mapping approaches run at frame-rate (15 Hz). (p. 6, IV. THE ConceptFusion APPROACH).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

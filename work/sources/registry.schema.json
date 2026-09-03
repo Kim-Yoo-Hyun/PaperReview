@@ -165,7 +165,13 @@
             "properties": {
               "type": {"enum": ["version_of", "same_work_as", "extends", "replicates", "baseline_for", "uses_dataset", "evaluates_on", "builds_on", "supersedes"]},
               "paper_id": {"type": "string", "pattern": "^pr-[0-9]{4,}$"},
-              "confidence": {"enum": ["manual", "verified", "inferred"]}
+              "confidence": {"enum": ["manual", "verified", "inferred"]},
+              "status": {"enum": ["curated", "imported", "unverified"]},
+              "basis": {"type": "string", "minLength": 1},
+              "source": {"type": "string", "minLength": 1},
+              "evidence_scope": {"enum": ["paper_body", "official_abstract", "official_project", "title_lineage", "registry_identity", "citation_reference", "official_source"]},
+              "reviewed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+              "managed_by": {"type": "string", "minLength": 1}
             },
             "additionalProperties": true
           }

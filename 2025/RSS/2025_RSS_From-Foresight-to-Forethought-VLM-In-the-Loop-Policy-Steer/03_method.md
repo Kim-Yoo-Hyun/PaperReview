@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Our system queries the VLM twice to first generate behavior narrations and then select the best action plan, The overall inference time ... | p. 9 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | This method uses the encoder £4 on ground-truth future observations 10 get privileged (posterior) future latent states Zeer as input for the ... | p. 6 (A. From Action Rollouts to Behavior Narration), p. 8 (B. Policy Steering for Open-World Alignment) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | For each step trajectory snippet {(0},a3}£27 from the dataset, the encoder £4 processes the initial observation o} at timestep f, and the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | We also introduce a third task that features longer horizon and more complex interactions Fork-to-Bow! | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | For each method, we conduct 20 trials with | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -132,8 +132,17 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 8 (B. Policy Steering for Open-World Alignment), p. 8 (B. Policy Steering for Open-World Alignment), p. 7 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), objective p. 8 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 9 (B. Policy Steering for Open-World Alignment), temporal p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (1. InTRopucTION), p. 3 (1. InTRopucTION).
+- **Evidence anchors reviewed:** method p. 9 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 8 (B. Policy Steering for Open-World Alignment), p. 8 (B. Policy Steering for Open-World Alignment), p. 7 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), objective p. 8 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 9 (B. Policy Steering for Open-World Alignment), temporal p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (1. InTRopucTION), p. 3 (1. InTRopucTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To predict challenging action outcomes (eg. interaction dynamics of a manipulator and a deformable bag), we use state-of-the-art world models [25, 50] to predict lower-dimensional latent state representations from highdimensional ... (p. 2, 1. InTRopucTION).
+- **Objective/update evidence:** We use GPT-4o [29] to process the predicted visual observations and generate behavior narrations in a zero-shot manner. (p. 6, A. From Action Rollouts to Behavior Narration).
+- **Temporal/runtime evidence:** We also introduce a third task that features longer horizon and more complex interactions Fork-to-Bow! (p. 5, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

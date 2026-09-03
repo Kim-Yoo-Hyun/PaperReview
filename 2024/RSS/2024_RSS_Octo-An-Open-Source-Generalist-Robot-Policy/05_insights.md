@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 It also supports natural language instructions, goal images, observation histories, and multi-modal, chunked action prediction via diffusion decoding [17].를 The core of our model is a transformer architecture that maps arbitrary input tokens (created from observations and tasks) to output tokens (then decoded into actions), which can be trained on a ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While the Octo model achieves high success on novel objects, zero-shot performance slightly degrades in a new scene, and high degradation for novel behaviors like flipping or precise insertion.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** It also supports natural language instructions, goal images, observation histories, and multi-modal, chunked action prediction via diffusion decoding [17]. (p. 3, III. THE OCTO MODEL).
+- **Paper-specific mechanism:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task ... (p. 8, Figure/Table caption); the relevant task/metric cue is While all methods acted reasonably across tasks in the pretraining environments, we found that on average Octo had a 29% higher success rate than RT-1-X (35M parameters). (p. 7, 1) Can Octo control multiple robot embodiments and solve). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate Octo's capabilities to control robots in environments from the pretraining data out-of-the-box and to efficiently finetune to new tasks and environments with small target domain datasets..
-3. Compare against the body-reported baseline or a matched simpler baseline: On average across the six evaluation setups (detailed in Appendix F), Octo outperforms the next best baseline by 52%..
-4. Report the body metric and its denominator/aggregation: Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task per robot. ....
-5. Re-run the body-reported ablation/failure condition: Fig. 2: Model architecture. Left: Octo tokenizes task descriptions (green) and input observations (blue) using a pretrained language model and a lightweight CNN, respectively. Top: The transformer backbone processes the sequence of ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: It also supports natural language instructions, goal images, observation histories, and multi-modal, chunked action prediction via diffusion decoding [17]. (p. 3, III. THE OCTO MODEL); preserve the objective/update rule: We use the AdamW optimizer [51] with an inverse square root decay learning rate schedule [97], with weight decay of 0.1 and gradient clipping of 1.0. (p. 5, III. THE OCTO MODEL).
+2. Use the paper-reported task/data/environment cue: We evaluate Octo's capabilities to control robots in environments from the pretraining data out-of-the-box and to efficiently finetune to new tasks and environments with small target domain datasets. (p. 6, 1) Can Octo control multiple robot embodiments and solve).
+3. Compare against the reported or matched baseline: On average across the six evaluation setups (detailed in Appendix F), Octo outperforms the next best baseline by 52%. (p. 7, 1) Can Octo control multiple robot embodiments and solve).
+4. Report the body metric with its denominator and aggregation: While all methods acted reasonably across tasks in the pretraining environments, we found that on average Octo had a 29% higher success rate than RT-1-X (35M parameters). (p. 7, 1) Can Octo control multiple robot embodiments and solve).
+5. Re-run the reported ablation or stress/failure condition: Fig. 2: Model architecture. Left: Octo tokenizes task descriptions (green) and input observations (blue) using a pretrained language model and a lightweight CNN, respectively. Top: The transformer backbone processes the ... (p. 3, Figure/Table caption); if none is reported, design one around: Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), and measure the boundary at p. 2 (I. INTRODUCTION), p. 4 (III. THE OCTO MODEL).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 principle, collected, Lead mechanism이 On average across the six evaluation setups (detailed in Appendix F), Octo outperforms the next best ... 대비 Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX ...을 개선하고, While the Octo model achieves high success on novel objects, zero-shot performance slightly degrades in a ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (It also supports natural language instructions, goal images, observation histories, and multi-modal, chunked action prediction via diffusion decoding [17].), does the paper-specific mechanism (In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.) retain the reported evaluation outcome (While all methods acted reasonably across tasks in the pretraining environments, we found that on average Octo had ...) when tested against the paper's strongest explicit boundary (Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (While all methods acted reasonably across tasks in the pretraining environments, we found that on average Octo had ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

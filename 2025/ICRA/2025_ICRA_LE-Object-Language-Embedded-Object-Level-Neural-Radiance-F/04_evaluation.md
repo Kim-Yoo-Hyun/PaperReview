@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2406.08009v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2406.08009v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (Figure/Ta
 
 ## Evaluation Body Digest
 
-- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** Datasets and Metrics: The experiments are conducted on four scenes in Replica [32], each featuring a diverse array of objects.
-- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** Datasets and Metrics: We select two commonly used indoor datasets: eight scenes from Replica [32] and six scenes from ScanNet [33].
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at ...
-- **p. 3 / III. OPENOBJ - extractive PDF cue:** Object Segmentation and Understanding Vision, as the primary sense for both humans and robots to perceive the world, provides rich color and texture information essential ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** recognize scenes only at the object level and fail to provide a more granular understanding of internal structures.
-- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** Due to the lack of detailed 2D annotations in ScanNet, we opt to conduct 3D segmentation validation exclusively on the ScanNet dataset.
-- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** The user can issue a find object command to the robot, and the 7
-- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** In this section, we aim to use experiments to validate OpenObj, through the following specific questions: 1) Without fine-tuning any model, can OpenObj achieve 2D ...
+- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** Datasets and Metrics: The experiments are conducted on four scenes in Replica [32], each featuring a diverse array of objects.
+- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** Datasets and Metrics: We select two commonly used indoor datasets: eight scenes from Replica [32] and six scenes from ScanNet [33].
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at ...
+- **p. 3 / III. OPENOBJ - extractive body cue:** Object Segmentation and Understanding Vision, as the primary sense for both humans and robots to perceive the world, provides rich color and texture information essential ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** recognize scenes only at the object level and fail to provide a more granular understanding of internal structures.
+- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** Due to the lack of detailed 2D annotations in ScanNet, we opt to conduct 3D segmentation validation exclusively on the ScanNet dataset.
+- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** The user can issue a find object command to the robot, and the 7
+- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive body cue:** In this section, we aim to use experiments to validate OpenObj, through the following specific questions: 1) Without fine-tuning any model, can OpenObj achieve 2D ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (Figure/Ta
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTAL RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | In this section, we aim to use experiments to validate OpenObj, through the following specific questions: 1) Without fine-tuning any model, can OpenObj achieve ... | p. 5 (IV. EXPERIMENTAL RESULTS) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 5: 2D & 3D zero-shot segmentation results. OpenObj's object-level NeRF and comprehensive understanding enable it to achieve clear boundaries and accurate semantics. | p. 6 (Figure/Table caption) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (Figure/Ta
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** Datasets and Metrics: The experiments are conducted on four scenes in Replica [32], each featuring a diverse array of objects.
-- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** Datasets and Metrics: We select two commonly used indoor datasets: eight scenes from Replica [32] and six scenes from ScanNet [33].
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at ...
-- **p. 3 / III. OPENOBJ - extractive PDF cue:** Object Segmentation and Understanding Vision, as the primary sense for both humans and robots to perceive the world, provides rich color and texture information essential ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** recognize scenes only at the object level and fail to provide a more granular understanding of internal structures.
-- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** Due to the lack of detailed 2D annotations in ScanNet, we opt to conduct 3D segmentation validation exclusively on the ScanNet dataset.
-- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** The user can issue a find object command to the robot, and the 7
-- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** In this section, we aim to use experiments to validate OpenObj, through the following specific questions: 1) Without fine-tuning any model, can OpenObj achieve 2D ...
+- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** Datasets and Metrics: The experiments are conducted on four scenes in Replica [32], each featuring a diverse array of objects.
+- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** Datasets and Metrics: We select two commonly used indoor datasets: eight scenes from Replica [32] and six scenes from ScanNet [33].
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at ...
+- **p. 3 / III. OPENOBJ - extractive body cue:** Object Segmentation and Understanding Vision, as the primary sense for both humans and robots to perceive the world, provides rich color and texture information essential ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** recognize scenes only at the object level and fail to provide a more granular understanding of internal structures.
+- **p. 6 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** Due to the lack of detailed 2D annotations in ScanNet, we opt to conduct 3D segmentation validation exclusively on the ScanNet dataset.
+- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** The user can issue a find object command to the robot, and the 7
+- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive body cue:** In this section, we aim to use experiments to validate OpenObj, through the following specific questions: 1) Without fine-tuning any model, can OpenObj achieve 2D ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: We introduce OpenObj, a framework of open-vocabulary object-level neural radiance fields with fine-grained understanding. OpenObj facilitates various downstream tasks, including open-vocabulary object retrieval, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: The framework of OpenObj consists of four main modules: Object Segmentation and Understanding, Mask Clustering, Part-level Fine-Grained Feature Extraction, and Hierarchical Graph Representation ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Two-stage mask clustering. In the coarse clustering phase, a graph is constructed for all masks, and the Louvain algorithm is applied to achieve ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Part-level fine-grained feature extraction process: The mask mpart t,j extracted by SAM is dense and may be nested. The dense masks are visually ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5: 2D & 3D zero-shot segmentation results. OpenObj's object-level NeRF and comprehensive understanding enable it to achieve clear boundaries and accurate semantics.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6: A selection of results from open-vocabulary retrieval. OpenObj correctly and clearly highlights the most relevant instance in each query. more comprehensive and robust ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7: OpenObj's multi-granularity scene understanding sup- ports multi-granularity downstream tasks, including object-oriented global movement and part-oriented local manipulation. a marked advantage in handling patterns, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce OpenObj, a framework of open-vocabulary object-level neural radiance fields with fine-grained understanding. OpenObj facilitates various downstream tasks, including open-vocabulary object retrieval, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The framework of OpenObj consists of four main modules: Object Segmentation and Understanding, Mask Clustering, Part-level Fine-Grained Feature Extraction, and Hierarchical Graph Representation ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Two-stage mask clustering. In the coarse clustering phase, a graph is constructed for all masks, and the Louvain algorithm is applied to achieve ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Part-level fine-grained feature extraction process: The mask mpart t,j extracted by SAM is dense and may be nested. The dense masks are visually ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: 2D & 3D zero-shot segmentation results. OpenObj's object-level NeRF and comprehensive understanding enable it to achieve clear boundaries and accurate semantics.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: A selection of results from open-vocabulary retrieval. OpenObj correctly and clearly highlights the most relevant instance in each query. more comprehensive and robust ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: OpenObj's multi-granularity scene understanding sup- ports multi-granularity downstream tasks, including object-oriented global movement and part-oriented local manipulation. a marked advantage in handling patterns, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Datasets and Metrics: The experiments are conducted on four scenes in Replica [32], each featuring a diverse array of objects. | embodiment, simulator version and control stack | p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 6 (2) Are OpenObj's open-vocabulary object-level and part) |
 | Task/environment | Datasets and Metrics: We select two commonly used indoor datasets: eight scenes from Replica [32] and six scenes from ScanNet [33]. | reset, timeout, object/scene variation | p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION) |
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (Figure/Ta
 
 ## Limitations and Verification Questions
 
-- **p. 5 / III. OPENOBJ - extractive PDF cue:** This approach helps to mitigate the effects of outliers caused by poor observation viewpoints or model failures.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: We introduce OpenObj, a framework of open-vocabulary object-level neural radiance fields with fine-grained understanding. OpenObj facilitates various downstream tasks, including open-vocabulary object retrieval, ...
-- **p. 3 / III. OPENOBJ - extractive PDF cue:** Additionally, we apply another method to compensate for the limitations of VLM features f clip t,i in semantic reasoning.
-- **p. 4 / III. OPENOBJ - extractive PDF cue:** Since this method does not distinguish between the sources of the masks, it can effectively correlate masks across different frames and within the same frame, ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** recognize scenes only at the object level and fail to provide a more granular understanding of internal structures.
-- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive PDF cue:** OpenObj correctly and clearly highlights the most relevant instance in each query. more comprehensive and robust understanding of objects.
+- **p. 5 / III. OPENOBJ - extractive body cue:** This approach helps to mitigate the effects of outliers caused by poor observation viewpoints or model failures.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce OpenObj, a framework of open-vocabulary object-level neural radiance fields with fine-grained understanding. OpenObj facilitates various downstream tasks, including open-vocabulary object retrieval, ...
+- **p. 3 / III. OPENOBJ - extractive body cue:** Additionally, we apply another method to compensate for the limitations of VLM features f clip t,i in semantic reasoning.
+- **p. 4 / III. OPENOBJ - extractive body cue:** Since this method does not distinguish between the sources of the masks, it can effectively correlate masks across different frames and within the same frame, ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** recognize scenes only at the object level and fail to provide a more granular understanding of internal structures.
+- **p. 7 / 2) Are OpenObj's open-vocabulary object-level and part - extractive body cue:** OpenObj correctly and clearly highlights the most relevant instance in each query. more comprehensive and robust understanding of objects.
 
-- **PDF anchors reviewed:** datasets p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION), p. 3 (III. OPENOBJ), p. 2 (I. INTRODUCTION), p. 6 (2) Are OpenObj's open-vocabulary object-level and part), metrics p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 4 (III. OPENOBJ), p. 3 (Figure/Table caption), p. 4 (III. OPENOBJ), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION), baselines p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 5 (IV. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), results p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (Figure/Table caption), p. 4 (III. OPENOBJ), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** datasets p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION), p. 3 (III. OPENOBJ), p. 2 (I. INTRODUCTION), p. 6 (2) Are OpenObj's open-vocabulary object-level and part), metrics p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 4 (III. OPENOBJ), p. 3 (Figure/Table caption), p. 4 (III. OPENOBJ), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION), baselines p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 5 (IV. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), results p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (Figure/Table caption), p. 4 (III. OPENOBJ), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 7 (2) Are OpenObj's open-vocabulary object-level and part), p. 2 (I. INTRODUCTION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

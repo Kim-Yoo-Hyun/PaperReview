@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D Localization (a) Our Proposed Pipeline Execute De ...를 2 (a) where our method (1) collects multi-view RGB-D images as input to initialize 3D Gaussian field; (2) reconstructs 3D feature field via efficient feature distillation module and (3) achieves languagedguided manipulation.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 One limitation is that our reconstructed scene remains static.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed with open-vocabulary semantics and accurate geometry that ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D Localization (a) Our Proposed Pipeline ... (p. 3, III. METHODOLOGY).
+- **Paper-specific mechanism:** In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed with open-vocabulary semantics and accurate ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative ... (p. 6, IV. EXPERIMENT); the relevant task/metric cue is Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o. (p. 7, IV. EXPERIMENT). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Another limitation is that our method fails to estimate the depth and normal of transparent objects due to the lack of ground truth. (p. 8, V. LIMITATION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 2) Data Collection and Processing: We first use the robot arm equipped with a Realsense D455 to scan the desktop scene from 16 viewpoints..
-3. Compare against the body-reported baseline or a matched simpler baseline: Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative results, we ....
-4. Report the body metric and its denominator/aggregation: Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o..
-5. Re-run the body-reported ablation/failure condition: Subsequently, we show the results of geometry reconstruction and conduct ablation study to demonstrate the effectiveness of our proposed normal-guided grasp..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D Localization (a) Our Proposed Pipeline ... (p. 3, III. METHODOLOGY); preserve the objective/update rule: EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D Localization (a) Our Proposed Pipeline ... (p. 3, III. METHODOLOGY).
+2. Use the paper-reported task/data/environment cue: 2) Data Collection and Processing: We first use the robot arm equipped with a Realsense D455 to scan the desktop scene from 16 viewpoints. (p. 5, IV. EXPERIMENT).
+3. Compare against the reported or matched baseline: Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative ... (p. 6, IV. EXPERIMENT).
+4. Report the body metric with its denominator and aggregation: Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o. (p. 7, IV. EXPERIMENT).
+5. Re-run the reported ablation or stress/failure condition: Subsequently, we show the results of geometry reconstruction and conduct ablation study to demonstrate the effectiveness of our proposed normal-guided grasp. (p. 5, IV. EXPERIMENT); if none is reported, design one around: Another limitation is that our method fails to estimate the depth and normal of transparent objects due to the lack of ground truth. (p. 8, V. LIMITATION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY); the primary result is directionally consistent at p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), and measure the boundary at p. 8 (V. LIMITATION), p. 7 (V. LIMITATION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, contributions, follows mechanism이 Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes ... 대비 Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o.을 개선하고, One limitation is that our reconstructed scene remains static. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp ...), does the paper-specific mechanism (In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D ...) retain the reported evaluation outcome (Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o.) when tested against the paper's strongest explicit boundary (Another limitation is that our method fails to estimate the depth and normal of transparent objects due to ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed with open-vocabulary semantics and accurate ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative ... (p. 6, IV. EXPERIMENT).
+- **Strongest explicit boundary:** Another limitation is that our method fails to estimate the depth and normal of transparent objects due to the lack of ground truth. (p. 8, V. LIMITATION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

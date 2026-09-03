@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p065.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p065.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p065.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p065.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (B. Language-Directed Student Policy), p. 3 (B. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | The decoder then takes the sampled latent vector =: along with the latest state observation to output the action We use an ... | p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | Then, «stdent policy, leveraging a CVAE architecture, jointly models high-level linguistic insretions and low-level physical actions of the teacher policy ina unified ... | p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy) |
@@ -135,8 +135,17 @@ PDF body method statement (p. 5 (B. Language-Directed Student Policy), p. 3 (B. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy), objective p. 4 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), temporal p. 5 (B. Language-Directed Student Policy), p. 4 (B. Language-Directed Student Policy), p. 5 (IV. EXPERIMENTS), p. 3 (A. Motion-Tracking Teacher Policy), p. 1 (1. Iyrropucrion), p. 1 (Front matter).
+- **Evidence anchors reviewed:** method p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy), objective p. 4 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), temporal p. 5 (B. Language-Directed Student Policy), p. 4 (B. Language-Directed Student Policy), p. 5 (IV. EXPERIMENTS), p. 3 (A. Motion-Tracking Teacher Policy), p. 1 (1. Iyrropucrion), p. 1 (Body text (section boundary not confidently recovered)).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** ‘The teacher policy is trained using Proximal Policy Optimization (PPO) [33] to minimize the discrepancy between the robot's movements and the reference motions. ‘To encourage symmetry inthe learned policy, we ... (p. 4, A. Motion-Tracking Teacher Policy).
+- **Objective/update evidence:** ‘The teacher policy is trained using Proximal Policy Optimization (PPO) [33] to minimize the discrepancy between the robot's movements and the reference motions. ‘To encourage symmetry inthe learned policy, we ... (p. 4, A. Motion-Tracking Teacher Policy).
+- **Temporal/runtime evidence:** We input a sequence of historical observations and actions, sampled at 10 Hz over a 2-second window, yielding a 20-step trajectory of input-output pars. (p. 4, B. Language-Directed Student Policy).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

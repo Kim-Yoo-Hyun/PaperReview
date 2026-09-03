@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p003.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p003.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p003.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p003.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -83,9 +83,9 @@ PDF body method statement (p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value not recovered from the selected body cues. | The nominal MPC problem is, therefore, given as: Problem 1 (Nominal MPC). ¯τ = arg min τ ¯J(τ) := N-1 X k=0 ... | episode/sequence/action-chunk boundary |
+| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value was not selected from the PDF body. | The nominal MPC problem is, therefore, given as: Problem 1 (Nominal MPC). ¯τ = arg min τ ¯J(τ) := N-1 X k=0 ... | episode/sequence/action-chunk boundary |
 | Rate / latency | sensor/actuator control tick마다 feedback solve; numeric rate는 paper-specific. | This puts the proposed framework to the test, especially in comparison to the non-adaptive, nonlinear tube-based MPC. | Hz/fps, inference time and control rate |
-| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not recovered | window and reset |
+| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | The nominal MPC problem is, therefore, given as: Problem 1 (Nominal MPC). ¯τ = arg min τ ¯J(τ) := N-1 X k=0 ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -136,3 +136,12 @@ PDF body method statement (p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To address this shortcoming, tube-based MPC augments the nominal controller with a feedback model predictive controller that drives the state of the true system towards the nominal trajectory. (p. 3, II. MATHEMATICAL BACKGROUND).
+- **Objective/update evidence:** The learning objective is therefore defined as the following bilevel optimization over the parameters of Problem 3: Problem 4 (Learning Problem). min θ L(τ ∗(θ)), (4) where L is a ... (p. 5, III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL).
+- **Temporal/runtime evidence:** This puts the proposed framework to the test, especially in comparison to the non-adaptive, nonlinear tube-based MPC. (p. 9, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

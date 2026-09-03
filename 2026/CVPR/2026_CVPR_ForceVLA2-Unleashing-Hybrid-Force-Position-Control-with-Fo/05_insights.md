@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 A 6D force/torque sensor attached to the end-effector recorded interaction forces at 300 Hz, while the robot joint states and end-effector (EE) 6D poses were logged synchronously.를 ForceVLA2 takes multi-view images, task and force prompts, and proprioceptive states (EE pose and force) as input.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The model also consistently reduces failures caused by arm overload and unstable contact, and ablation studies show monotonically improved performance as force prompts, the CrossScale MoE, and multimodal fusion are added, with ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, enhancing contact-rich manipulation by integrating force-prompt-driven VL ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, enhancing contact-rich manipulation by integrating force-prompt-driven VL ... (p. 2, 1. Introduction).
+- **Paper-specific mechanism:** To overcome these limitations, we propose ForceVLA2, a novel framework that equips VLAs with active hybrid force-position control with force awareness to enhance contact-rich manipulation, as shown in Fig. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Entries indicate success rate (%). gray : baseline results. (p. 8, 5.2. Main Experiment Results); the relevant task/metric cue is 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. (p. 6, 5.2. Main Experiment Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive tasks such as object search, ... (p. 7, 5.2. Main Experiment Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Our experimental benchmark consists of 5 contact-rich manipulation tasks within the proposed ForceVLA2-Dataset: Press the bottle, Clean the vase, Clean the board, Retrieve the plate, and Assemble gears..
-3. Compare against the body-reported baseline or a matched simpler baseline: 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks..
-4. Report the body metric and its denominator/aggregation: 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks..
-5. Re-run the body-reported ablation/failure condition: In particular, we conduct an ablation on the CrossScale MoE module by varying its modality inputs and outputs to verify the effectiveness of our design..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, enhancing contact-rich manipulation by integrating force-prompt-driven VL ... (p. 2, 1. Introduction); preserve the objective/update rule: This mechanism enables ForceVLA2 to inherit VLM knowledge, assess subtask completion, transition across stages, and explicitly update force cues to guide force-aware manipulation. (p. 3, 3.1. Long-Horizon Force Awareness via Prompting).
+2. Use the paper-reported task/data/environment cue: Our experimental benchmark consists of 5 contact-rich manipulation tasks within the proposed ForceVLA2-Dataset: Press the bottle, Clean the vase, Clean the board, Retrieve the plate, and Assemble gears. (p. 6, 5.1. Experiment Setting).
+3. Compare against the reported or matched baseline: 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. (p. 6, 5.2. Main Experiment Results).
+4. Report the body metric with its denominator and aggregation: 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. (p. 6, 5.2. Main Experiment Results).
+5. Re-run the reported ablation or stress/failure condition: Compared with models without force inputs, ForceVLA2 and ForceVLA, which incorporate force feedback, show remarkable improvements 8916 (p. 6, 5.2. Main Experiment Results); if none is reported, design one around: ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive tasks such as object search, ... (p. 7, 5.2. Main Experiment Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding); the primary result is directionally consistent at p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 6 (5. Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 8 (5.2. Main Experiment Results), p. 8 (Figure/Table caption), p. 6 (5.2. Main Experiment Results), and measure the boundary at p. 7 (5.2. Main Experiment Results), p. 8 (6. Conclusion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, summarized, follows mechanism이 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. 대비 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks.을 개선하고, The model also consistently reduces failures caused by arm overload and unstable contact, and ablation studies ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, ...), does the paper-specific mechanism (To overcome these limitations, we propose ForceVLA2, a novel framework that equips VLAs with active hybrid force-position control with force awareness to ...) retain the reported evaluation outcome (1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks.) when tested against the paper's strongest explicit boundary (ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To overcome these limitations, we propose ForceVLA2, a novel framework that equips VLAs with active hybrid force-position control with force awareness to enhance contact-rich manipulation, as shown in Fig. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Entries indicate success rate (%). gray : baseline results. (p. 8, 5.2. Main Experiment Results).
+- **Strongest explicit boundary:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive tasks such as object search, ... (p. 7, 5.2. Main Experiment Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

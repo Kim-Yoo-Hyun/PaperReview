@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.3. Qualitative evaluations - extractive PDF cue:** IncEventGS† fails to reconstruct recognizable figurines and produces distorted scenes due to severe trajectory drift.
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** ESVO2 is evaluated only on real datasets.
-- **p. 5 / 4.2. Quantitative evaluations - extractive PDF cue:** 1 shows reconstruction quality on synthetic scenes.
-- **p. 6 / 4.3. Qualitative evaluations - extractive PDF cue:** 3 presents reconstruction results across Replica scenes.
-- **p. 7 / 4.3. Qualitative evaluations - extractive PDF cue:** Qualitative results on Replica dataset.
-- **p. 7 / 4.3. Qualitative evaluations - extractive PDF cue:** Impact of trajectory error on reconstruction quality.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Excessive edge emphasis under-represents smooth surfaces, leading to incorrect trajectory estimation.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Without edge initialization, the system experiences trajectory drift, leading to loss of details in 3D reconstruction.
+- **p. 6 / 4.3. Qualitative evaluations - extractive body cue:** IncEventGS† fails to reconstruct recognizable figurines and produces distorted scenes due to severe trajectory drift.
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** ESVO2 is evaluated only on real datasets.
+- **p. 5 / 4.2. Quantitative evaluations - extractive body cue:** 1 shows reconstruction quality on synthetic scenes.
+- **p. 6 / 4.3. Qualitative evaluations - extractive body cue:** 3 presents reconstruction results across Replica scenes.
+- **p. 7 / 4.3. Qualitative evaluations - extractive body cue:** Qualitative results on Replica dataset.
+- **p. 7 / 4.3. Qualitative evaluations - extractive body cue:** Impact of trajectory error on reconstruction quality.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Excessive edge emphasis under-represents smooth surfaces, leading to incorrect trajectory estimation.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Without edge initialization, the system experiences trajectory drift, leading to loss of details in 3D reconstruction.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 6. Effect of edge ratio on reconstruction quality. Red boxes highlight comparison regions. (a) Ground truth. (b) Without edge guidance, fine details such ... | p. 8 (Figure/Table caption) |
 | 4.2. Quantitative evaluations | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves competitive performance solely using event data. | p. 6 (4.2. Quantitative evaluations) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.3. Qualitative evaluations - extractive PDF cue:** IncEventGS† fails to reconstruct recognizable figurines and produces distorted scenes due to severe trajectory drift.
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** ESVO2 is evaluated only on real datasets.
-- **p. 5 / 4.2. Quantitative evaluations - extractive PDF cue:** 1 shows reconstruction quality on synthetic scenes.
-- **p. 6 / 4.3. Qualitative evaluations - extractive PDF cue:** 3 presents reconstruction results across Replica scenes.
-- **p. 7 / 4.3. Qualitative evaluations - extractive PDF cue:** Qualitative results on Replica dataset.
-- **p. 7 / 4.3. Qualitative evaluations - extractive PDF cue:** Impact of trajectory error on reconstruction quality.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Excessive edge emphasis under-represents smooth surfaces, leading to incorrect trajectory estimation.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Without edge initialization, the system experiences trajectory drift, leading to loss of details in 3D reconstruction.
+- **p. 6 / 4.3. Qualitative evaluations - extractive body cue:** IncEventGS† fails to reconstruct recognizable figurines and produces distorted scenes due to severe trajectory drift.
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** ESVO2 is evaluated only on real datasets.
+- **p. 5 / 4.2. Quantitative evaluations - extractive body cue:** 1 shows reconstruction quality on synthetic scenes.
+- **p. 6 / 4.3. Qualitative evaluations - extractive body cue:** 3 presents reconstruction results across Replica scenes.
+- **p. 7 / 4.3. Qualitative evaluations - extractive body cue:** Qualitative results on Replica dataset.
+- **p. 7 / 4.3. Qualitative evaluations - extractive body cue:** Impact of trajectory error on reconstruction quality.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Excessive edge emphasis under-represents smooth surfaces, leading to incorrect trajectory estimation.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Without edge initialization, the system experiences trajectory drift, leading to loss of details in 3D reconstruction.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided losses ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. NVS performance on Replica dataset. Our method achieves superior reconstruction quality solely using event data. † denotes no depth supervision and ∗denotes that ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Absolute trajectory error (ATE). RMSE (cm) across synthetic Replica and real TUM-VIE sequences. Our method achieves competitive performance solely using event data.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2. ATE with respect to the length of the sequence. unreliable gradient signals. In contrast, our edge-centric ap- proach focuses on structural boundaries where ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on edge components.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results on Replica dataset. Red boxes highlight regions of interest for comparison. Our method produces sharper boundaries and cleaner surfaces compared with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Impact of trajectory error on reconstruction quality. (a) Ground truth. (b) IncEventGS exhibits multiple failure modes: spatial misalignment causing viewpoint shifts and blurred ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on edge ratio (redge). Edge Ratio (redge) 0.0 0.1 0.3 0.5 0.7 1.0
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided losses ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. NVS performance on Replica dataset. Our method achieves superior reconstruction quality solely using event data. † denotes no depth supervision and ∗denotes that ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Absolute trajectory error (ATE). RMSE (cm) across synthetic Replica and real TUM-VIE sequences. Our method achieves competitive performance solely using event data.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2. ATE with respect to the length of the sequence. unreliable gradient signals. In contrast, our edge-centric ap- proach focuses on structural boundaries where ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on edge components.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results on Replica dataset. Red boxes highlight regions of interest for comparison. Our method produces sharper boundaries and cleaner surfaces compared with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Impact of trajectory error on reconstruction quality. (a) Ground truth. (b) IncEventGS exhibits multiple failure modes: spatial misalignment causing viewpoint shifts and blurred ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on edge ratio (redge). Edge Ratio (redge) 0.0 0.1 0.3 0.5 0.7 1.0
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | IncEventGS† fails to reconstruct recognizable figurines and produces distorted scenes due to severe trajectory drift. | embodiment, simulator version and control stack | p. 6 (4.3. Qualitative evaluations), p. 5 (4.1. Experiment settings) |
 | Task/environment | ESVO2 is evaluated only on real datasets. | reset, timeout, object/scene variation | p. 5 (4.1. Experiment settings), p. 5 (4.2. Quantitative evaluations) |
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 
 ## Limitations and Verification Questions
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Impact of trajectory error on reconstruction quality. (a) Ground truth. (b) IncEventGS exhibits multiple failure modes: spatial misalignment causing viewpoint shifts and blurred ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Adaptive edge extraction methods that respond to local event statistics could address this limitation.
-- **p. 6 / 4.2. Quantitative evaluations - extractive PDF cue:** On real-world TUM-VIE sequences, IncEventGS† suffers from catastrophic failure due to the lack of geometric constraints in random initialization, causing pose optimization to converge to ...
-- **p. 6 / 4.3. Qualitative evaluations - extractive PDF cue:** IncEventGS exhibits various failure modes in regions highlighted by red boxes, including wavelike artifacts in texture-less regions, missing fine details such as textures and patterns, ...
-- **p. 7 / 4.3. Qualitative evaluations - extractive PDF cue:** IncEventGS shows failures including wave-like artifacts, missing details, and indistinct boundaries.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided losses ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Impact of trajectory error on reconstruction quality. (a) Ground truth. (b) IncEventGS exhibits multiple failure modes: spatial misalignment causing viewpoint shifts and blurred ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Adaptive edge extraction methods that respond to local event statistics could address this limitation.
+- **p. 6 / 4.2. Quantitative evaluations - extractive body cue:** On real-world TUM-VIE sequences, IncEventGS† suffers from catastrophic failure due to the lack of geometric constraints in random initialization, causing pose optimization to converge to ...
+- **p. 6 / 4.3. Qualitative evaluations - extractive body cue:** IncEventGS exhibits various failure modes in regions highlighted by red boxes, including wavelike artifacts in texture-less regions, missing fine details such as textures and patterns, ...
+- **p. 7 / 4.3. Qualitative evaluations - extractive body cue:** IncEventGS shows failures including wave-like artifacts, missing details, and indistinct boundaries.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided losses ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.3. Qualitative evaluations), p. 5 (4.1. Experiment settings), p. 5 (4.2. Quantitative evaluations), p. 6 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), metrics p. 7 (4.4. Ablation study), p. 6 (4.3. Qualitative evaluations), p. 5 (4.2. Quantitative evaluations), p. 5 (4.1. Experiment settings), p. 6 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), baselines p. 7 (4.3. Qualitative evaluations), p. 6 (4.2. Quantitative evaluations), p. 5 (4.2. Quantitative evaluations), p. 5 (4.1. Experiment settings), p. 6 (4.3. Qualitative evaluations), p. 8 (4.4. Ablation study), results p. 8 (Figure/Table caption), p. 6 (4.2. Quantitative evaluations), p. 6 (4.2. Quantitative evaluations), p. 7 (4.4. Ablation study), p. 7 (4.3. Qualitative evaluations), p. 5 (4.2. Quantitative evaluations).
+- **Evidence anchors reviewed:** datasets p. 6 (4.3. Qualitative evaluations), p. 5 (4.1. Experiment settings), p. 5 (4.2. Quantitative evaluations), p. 6 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), metrics p. 7 (4.4. Ablation study), p. 6 (4.3. Qualitative evaluations), p. 5 (4.2. Quantitative evaluations), p. 5 (4.1. Experiment settings), p. 6 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), baselines p. 7 (4.3. Qualitative evaluations), p. 6 (4.2. Quantitative evaluations), p. 5 (4.2. Quantitative evaluations), p. 5 (4.1. Experiment settings), p. 6 (4.3. Qualitative evaluations), p. 8 (4.4. Ablation study), results p. 8 (Figure/Table caption), p. 6 (4.2. Quantitative evaluations), p. 6 (4.2. Quantitative evaluations), p. 7 (4.4. Ablation study), p. 7 (4.3. Qualitative evaluations), p. 5 (4.2. Quantitative evaluations).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

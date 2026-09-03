@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=qdXOfyGMuB; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/326105. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=qdXOfyGMuB; PDF retrieval source: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiment - extractive PDF cue:** We evaluate RoboOmni across three complementary settings: (1) long-horizon multi-task manipulation on the CALVIN benchmark, (2) Google Robot tasks in the SimplerEnv simulator, and (3) ...
-- **p. 6 / 4.2. Evaluation on SimplerEnv - extractive PDF cue:** We evaluate RoboOmni on the Google Robot tasks within SimplerEnv (Li et al., 2024), which is designed to assess real-to-sim transfer for VLAs trained on ...
-- **p. 5 / 4.1. Evaluation on Calvin - extractive PDF cue:** CALVIN (Mees et al., 2022b) is a simulation benchmark for multi-task tabletop manipulation.
-- **p. 7 / 4.3. Real Robot Experiments - extractive PDF cue:** The training dataset consists of 18k human demonstrations across 37 tasks, including both pick-and-place and non-pick-and-place manipulation.
-- **p. 7 / 4.2. Evaluation on SimplerEnv - extractive PDF cue:** Real-to-Sim performance comparison on Google Robot tasks in SimplerEnv (Visual Matching setting).
-- **p. 6 / 4.1. Evaluation on Calvin - extractive PDF cue:** Performance comparison on the CALVIN benchmark.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Comparison of success rates in the real-world setting.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** We conducted extensive ablation studies on the CALVIN benchmark to systematically evaluate the contribution of each key design choice within the RoboOmni framework.
+- **p. 5 / 4. Experiment - extractive body cue:** We evaluate RoboOmni across three complementary settings: (1) long-horizon multi-task manipulation on the CALVIN benchmark, (2) Google Robot tasks in the SimplerEnv simulator, and (3) ...
+- **p. 6 / 4.2. Evaluation on SimplerEnv - extractive body cue:** We evaluate RoboOmni on the Google Robot tasks within SimplerEnv (Li et al., 2024), which is designed to assess real-to-sim transfer for VLAs trained on ...
+- **p. 5 / 4.1. Evaluation on Calvin - extractive body cue:** CALVIN (Mees et al., 2022b) is a simulation benchmark for multi-task tabletop manipulation.
+- **p. 7 / 4.3. Real Robot Experiments - extractive body cue:** The training dataset consists of 18k human demonstrations across 37 tasks, including both pick-and-place and non-pick-and-place manipulation.
+- **p. 7 / 4.2. Evaluation on SimplerEnv - extractive body cue:** Real-to-Sim performance comparison on Google Robot tasks in SimplerEnv (Visual Matching setting).
+- **p. 6 / 4.1. Evaluation on Calvin - extractive body cue:** Performance comparison on the CALVIN benchmark.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Comparison of success rates in the real-world setting.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** We conducted extensive ablation studies on the CALVIN benchmark to systematically evaluate the contribution of each key design choice within the RoboOmni framework.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Real Robot Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | On average, RoboOmni achieves a 91% success rate, significantly surpassing π0-FAST (68%) and RoboVLMs (60%). | p. 7 (4.3. Real Robot Experiments) |
 | 4.4. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | For the FAST tokenizer, enabling MTAP improves the 5-task success rate from 80.1% to 88.1%. | p. 7 (4.4. Ablation Study) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiment - extractive PDF cue:** We evaluate RoboOmni across three complementary settings: (1) long-horizon multi-task manipulation on the CALVIN benchmark, (2) Google Robot tasks in the SimplerEnv simulator, and (3) ...
-- **p. 6 / 4.2. Evaluation on SimplerEnv - extractive PDF cue:** We evaluate RoboOmni on the Google Robot tasks within SimplerEnv (Li et al., 2024), which is designed to assess real-to-sim transfer for VLAs trained on ...
-- **p. 5 / 4.1. Evaluation on Calvin - extractive PDF cue:** CALVIN (Mees et al., 2022b) is a simulation benchmark for multi-task tabletop manipulation.
-- **p. 7 / 4.3. Real Robot Experiments - extractive PDF cue:** The training dataset consists of 18k human demonstrations across 37 tasks, including both pick-and-place and non-pick-and-place manipulation.
-- **p. 7 / 4.2. Evaluation on SimplerEnv - extractive PDF cue:** Real-to-Sim performance comparison on Google Robot tasks in SimplerEnv (Visual Matching setting).
-- **p. 6 / 4.1. Evaluation on Calvin - extractive PDF cue:** Performance comparison on the CALVIN benchmark.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Comparison of success rates in the real-world setting.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** We conducted extensive ablation studies on the CALVIN benchmark to systematically evaluate the contribution of each key design choice within the RoboOmni framework.
+- **p. 5 / 4. Experiment - extractive body cue:** We evaluate RoboOmni across three complementary settings: (1) long-horizon multi-task manipulation on the CALVIN benchmark, (2) Google Robot tasks in the SimplerEnv simulator, and (3) ...
+- **p. 6 / 4.2. Evaluation on SimplerEnv - extractive body cue:** We evaluate RoboOmni on the Google Robot tasks within SimplerEnv (Li et al., 2024), which is designed to assess real-to-sim transfer for VLAs trained on ...
+- **p. 5 / 4.1. Evaluation on Calvin - extractive body cue:** CALVIN (Mees et al., 2022b) is a simulation benchmark for multi-task tabletop manipulation.
+- **p. 7 / 4.3. Real Robot Experiments - extractive body cue:** The training dataset consists of 18k human demonstrations across 37 tasks, including both pick-and-place and non-pick-and-place manipulation.
+- **p. 7 / 4.2. Evaluation on SimplerEnv - extractive body cue:** Real-to-Sim performance comparison on Google Robot tasks in SimplerEnv (Visual Matching setting).
+- **p. 6 / 4.1. Evaluation on Calvin - extractive body cue:** Performance comparison on the CALVIN benchmark.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Comparison of success rates in the real-world setting.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** We conducted extensive ablation studies on the CALVIN benchmark to systematically evaluate the contribution of each key design choice within the RoboOmni framework.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of the RoboOmni framework and its performance. The bottom section illustrates the multi-modal interleaved data input. The top-left section details the model ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Architectural overview of RoboOmni. The model processes multi-modal interleaved input sequences comprising visual observations (V ), text instructions (T), robot states (S), and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Performance comparison on the CALVIN benchmark. The table evaluates models on two settings: in-distribution performance (Train: ABCD, Eval: D) and out-of-distribution generalization (Train: ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Real-to-Sim performance comparison on Google Robot tasks in SimplerEnv (Visual Matching setting). We report the average success rate over 3 distinct tasks. Pick ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study of MTAP and different tokenizers. Settings Top K Success Rate Task Len. Speed (ms/action) MTAP Tokenizer
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on the number of bins for action discretiza- tion. All models are trained with MTAP. The default setting used in our ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Comparison of success rates in the real-world setting. RoboOmni consistently outperforms baselines, including π0-FAST and RoboVLMs, particularly in the challenging Unseen Objects setting. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation studies on window size, model size, and training strategies. The default setting is RoboOmni(Bin) with a window size of 5 and a ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of the RoboOmni framework and its performance. The bottom section illustrates the multi-modal interleaved data input. The top-left section details the model ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Architectural overview of RoboOmni. The model processes multi-modal interleaved input sequences comprising visual observations (V ), text instructions (T), robot states (S), and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Performance comparison on the CALVIN benchmark. The table evaluates models on two settings: in-distribution performance (Train: ABCD, Eval: D) and out-of-distribution generalization (Train: ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Real-to-Sim performance comparison on Google Robot tasks in SimplerEnv (Visual Matching setting). We report the average success rate over 3 distinct tasks. Pick ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation study of MTAP and different tokenizers. Settings Top K Success Rate Task Len. Speed (ms/action) MTAP Tokenizer
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on the number of bins for action discretiza- tion. All models are trained with MTAP. The default setting used in our ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Comparison of success rates in the real-world setting. RoboOmni consistently outperforms baselines, including π0-FAST and RoboVLMs, particularly in the challenging Unseen Objects setting. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation studies on window size, model size, and training strategies. The default setting is RoboOmni(Bin) with a window size of 5 and a ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate RoboOmni across three complementary settings: (1) long-horizon multi-task manipulation on the CALVIN benchmark, (2) Google Robot tasks in the SimplerEnv simulator, and ... | embodiment, simulator version and control stack | p. 5 (4. Experiment), p. 6 (4.2. Evaluation on SimplerEnv) |
 | Task/environment | We evaluate RoboOmni on the Google Robot tasks within SimplerEnv (Li et al., 2024), which is designed to assess real-to-sim transfer for VLAs trained ... | reset, timeout, object/scene variation | p. 6 (4.2. Evaluation on SimplerEnv), p. 5 (4.1. Evaluation on Calvin) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 | Primary metric/result | For the FAST tokenizer, enabling MTAP improves the 5-task success rate from 80.1% to 88.1%. | numeric claim only at cited anchor | p. 7 (4.4. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Evaluation on Calvin - extractive PDF cue:** Following prior work, we train on the ABCD and ABC splits and evaluate solely on split D with 1,000 rollouts per model.
-- **p. 7 / 4.3. Real Robot Experiments - extractive PDF cue:** The training dataset consists of 18k human demonstrations across 37 tasks, including both pick-and-place and non-pick-and-place manipulation.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Tokenizer Bin Size Top 1 Top 3 Top 5 Task Len.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Without MTAP, the fully autoregressive Bin tokenizer is exceedingly slow (107 ms/action).
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** This not only makes the Bin tokenizer significantly more efficient but also faster than the MTAP-enabled FAST tokenizer (17.5 ms/action), presenting a compelling trade-off between ...
-- **p. 4 / 3.1. MTAP for Action Chunking - extractive PDF cue:** This design enables parallel decoding of the entire action chunk from a single shared context, aggregating the loss across predictions: L = H-1 X k=0 ...
+- **p. 5 / 4.1. Evaluation on Calvin - extractive body cue:** Following prior work, we train on the ABCD and ABC splits and evaluate solely on split D with 1,000 rollouts per model.
+- **p. 7 / 4.3. Real Robot Experiments - extractive body cue:** The training dataset consists of 18k human demonstrations across 37 tasks, including both pick-and-place and non-pick-and-place manipulation.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Tokenizer Bin Size Top 1 Top 3 Top 5 Task Len.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Without MTAP, the fully autoregressive Bin tokenizer is exceedingly slow (107 ms/action).
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** This not only makes the Bin tokenizer significantly more efficient but also faster than the MTAP-enabled FAST tokenizer (17.5 ms/action), presenting a compelling trade-off between ...
+- **p. 4 / 3.1. MTAP for Action Chunking - extractive body cue:** This design enables parallel decoding of the entire action chunk from a single shared context, aggregating the loss across predictions: L = H-1 X k=0 ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Evaluation on Calvin - extractive PDF cue:** The table evaluates models on two settings: in-distribution performance (Train: ABCD, Eval: D) and out-of-distribution generalization (Train: ABC, Eval: D).
-- **p. 6 / 4.1. Evaluation on Calvin - extractive PDF cue:** Notably, the FAST variant exhibits superior out-of-distribution generalization (ABC→D), suggesting the frequency-domain representation effectively offloads temporal modeling pressure from the backbone.
-- **p. 7 / 4.3. Real Robot Experiments - extractive PDF cue:** Robust Generalization to Novel Scenarios.
-- **p. 7 / 4.2. Evaluation on SimplerEnv - extractive PDF cue:** RoboOmni demonstrates superior robustness to visual domain shifts compared to baselines.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Finally, removing any of our core training strategies degrades performance.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** A similar trend is observed for the Bin tokenizer, where performance is highest with 128 bins (83.7%) and 256 bins (83.4%), but degrades significantly when ...
+- **p. 6 / 4.1. Evaluation on Calvin - extractive body cue:** The table evaluates models on two settings: in-distribution performance (Train: ABCD, Eval: D) and out-of-distribution generalization (Train: ABC, Eval: D).
+- **p. 6 / 4.1. Evaluation on Calvin - extractive body cue:** Notably, the FAST variant exhibits superior out-of-distribution generalization (ABC→D), suggesting the frequency-domain representation effectively offloads temporal modeling pressure from the backbone.
+- **p. 7 / 4.3. Real Robot Experiments - extractive body cue:** Robust Generalization to Novel Scenarios.
+- **p. 7 / 4.2. Evaluation on SimplerEnv - extractive body cue:** RoboOmni demonstrates superior robustness to visual domain shifts compared to baselines.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Finally, removing any of our core training strategies degrades performance.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** A similar trend is observed for the Bin tokenizer, where performance is highest with 128 bins (83.7%) and 256 bins (83.4%), but degrades significantly when ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiment), p. 6 (4.2. Evaluation on SimplerEnv), p. 5 (4.1. Evaluation on Calvin), p. 7 (4.3. Real Robot Experiments), p. 7 (4.2. Evaluation on SimplerEnv), p. 6 (4.1. Evaluation on Calvin), metrics p. 8 (4.4. Ablation Study), p. 7 (4.3. Real Robot Experiments), p. 7 (4.2. Evaluation on SimplerEnv), p. 8 (4.4. Ablation Study), p. 5 (4.1. Evaluation on Calvin), p. 6 (4.1. Evaluation on Calvin), baselines p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on SimplerEnv), p. 7 (4.2. Evaluation on SimplerEnv), p. 7 (4.3. Real Robot Experiments), p. 5 (4. Experiment), p. 6 (4.1. Evaluation on Calvin), results p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on SimplerEnv), p. 8 (4.4. Ablation Study), p. 6 (4.1. Evaluation on Calvin).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiment), p. 6 (4.2. Evaluation on SimplerEnv), p. 5 (4.1. Evaluation on Calvin), p. 7 (4.3. Real Robot Experiments), p. 7 (4.2. Evaluation on SimplerEnv), p. 6 (4.1. Evaluation on Calvin), metrics p. 8 (4.4. Ablation Study), p. 7 (4.3. Real Robot Experiments), p. 7 (4.2. Evaluation on SimplerEnv), p. 8 (4.4. Ablation Study), p. 5 (4.1. Evaluation on Calvin), p. 6 (4.1. Evaluation on Calvin), baselines p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on SimplerEnv), p. 7 (4.2. Evaluation on SimplerEnv), p. 7 (4.3. Real Robot Experiments), p. 5 (4. Experiment), p. 6 (4.1. Evaluation on Calvin), results p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on SimplerEnv), p. 8 (4.4. Ablation Study), p. 6 (4.1. Evaluation on Calvin).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

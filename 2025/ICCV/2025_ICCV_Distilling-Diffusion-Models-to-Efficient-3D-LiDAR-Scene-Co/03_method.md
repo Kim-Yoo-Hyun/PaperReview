@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 ## Method Body Digest
 
-- **p. 4 / 4. Method - extractive PDF cue:** Firstly, we introduce the distillation method tailored for 3D LiDAR scene completion diffusion models in Sec.
-- **p. 4 / 4. Method - extractive PDF cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
-- **p. 3 / 3.1. Brief introduction of diffusion models - extractive PDF cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** Thus, we introduce a structural loss to further refine the distillation process and improve the completion quality.
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** Thus, we introduce the point-wise loss to capture the relative structural information between different points in the 3D LiDAR scene.
-- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive PDF cue:** In this case, the training loss of the diffusion model is given by: LDM = Et,ϵ h
-- **p. 6 / 4.3. Optimization procedure - extractive PDF cue:** Then, Gstu is optimized with the following objective Lstu = LKL + Lstructural (18) We set λscene = 0.5 and λpoint = 0.01 defaultly.
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** To solve this issue, we introduce the scene-wise loss, which minimizes the distance between the ground truth scene G and the completed scene G0, Lscene ...
+- **p. 4 / 4. Method - extractive body cue:** Firstly, we introduce the distillation method tailored for 3D LiDAR scene completion diffusion models in Sec.
+- **p. 4 / 4. Method - extractive body cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
+- **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
+- **p. 5 / 4.2. Structural loss - extractive body cue:** Thus, we introduce a structural loss to further refine the distillation process and improve the completion quality.
+- **p. 5 / 4.2. Structural loss - extractive body cue:** Thus, we introduce the point-wise loss to capture the relative structural information between different points in the 3D LiDAR scene.
+- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** In this case, the training loss of the diffusion model is given by: LDM = Et,ϵ h
+- **p. 6 / 4.3. Optimization procedure - extractive body cue:** Then, Gstu is optimized with the following objective Lstu = LKL + Lstructural (18) We set λscene = 0.5 and λpoint = 0.01 defaultly.
+- **p. 5 / 4.2. Structural loss - extractive body cue:** To solve this issue, we introduce the scene-wise loss, which minimizes the distance between the ground truth scene G and the completed scene G0, Lscene ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In this work, we propose ScoreLiDAR, a novel distillation method tailored for 3D LiDAR scene completion diffusion models, which enables efficient and high-quality scene completion ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Finally, we introduce a Structural Loss consisting of a scene-wise term and a point-wise term constraining the key landmark points and their relative configuration.
-- **p. 4 / 4. Method - extractive PDF cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
+- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose ScoreLiDAR, a novel distillation method tailored for 3D LiDAR scene completion diffusion models, which enables efficient and high-quality scene completion ...
+- **p. 2 / 1. Introduction - extractive body cue:** Finally, we introduce a Structural Loss consisting of a scene-wise term and a point-wise term constraining the key landmark points and their relative configuration.
+- **p. 4 / 4. Method - extractive body cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
 
 ## Source Evidence Cues
 
-- **p. 4 / 4. Method - extractive PDF cue:** Firstly, we introduce the distillation method tailored for 3D LiDAR scene completion diffusion models in Sec.
-- **p. 4 / 4. Method - extractive PDF cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
-- **p. 3 / 3.1. Brief introduction of diffusion models - extractive PDF cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** Thus, we introduce a structural loss to further refine the distillation process and improve the completion quality.
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** Thus, we introduce the point-wise loss to capture the relative structural information between different points in the 3D LiDAR scene.
-- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive PDF cue:** In this case, the training loss of the diffusion model is given by: LDM = Et,ϵ h
-- **p. 6 / 4.3. Optimization procedure - extractive PDF cue:** Then, Gstu is optimized with the following objective Lstu = LKL + Lstructural (18) We set λscene = 0.5 and λpoint = 0.01 defaultly.
+- **p. 4 / 4. Method - extractive body cue:** Firstly, we introduce the distillation method tailored for 3D LiDAR scene completion diffusion models in Sec.
+- **p. 4 / 4. Method - extractive body cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
+- **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
+- **p. 5 / 4.2. Structural loss - extractive body cue:** Thus, we introduce a structural loss to further refine the distillation process and improve the completion quality.
+- **p. 5 / 4.2. Structural loss - extractive body cue:** Thus, we introduce the point-wise loss to capture the relative structural information between different points in the 3D LiDAR scene.
+- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** In this case, the training loss of the diffusion model is given by: LDM = Et,ϵ h
+- **p. 6 / 4.3. Optimization procedure - extractive body cue:** Then, Gstu is optimized with the following objective Lstu = LKL + Lstructural (18) We set λscene = 0.5 and λpoint = 0.01 defaultly.
 - **Detected method headings:** 3.1. Brief introduction of diffusion models (p. 3); 3.2. 3D LiDAR scene completion diffusion models (p. 3); 4. Method (p. 4); Model (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Firstly, we introduce the distillation method tailored for 3D LiDAR scene completion diffusion models in Sec. | p. 4 (4. Method), p. 4 (4. Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec. | p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 ## Objective / Update Rule
 
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** To solve this issue, we introduce the scene-wise loss, which minimizes the distance between the ground truth scene G and the completed scene G0, Lscene ...
-- **p. 4 / 4.1. Distillation for 3D LiDAR scene completion - extractive PDF cue:** Thus, decenting along the bidirectional gradient [ϵθ (Gt, P, t) -ϵϕ (Gt, P, t)] updates the student model's generative distribution toward the pre-trained distribution, achieving ...
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** (11) to optimize the student model may lead to loss of local details.
-- **p. 6 / 4.3. Optimization procedure - extractive PDF cue:** Then, Gstu is optimized with the following objective Lstu = LKL + Lstructural (18) We set λscene = 0.5 and λpoint = 0.01 defaultly.
-- **p. 4 / 4. Method - extractive PDF cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
-- **p. 3 / 3.1. Brief introduction of diffusion models - extractive PDF cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
+- **p. 5 / 4.2. Structural loss - extractive body cue:** To solve this issue, we introduce the scene-wise loss, which minimizes the distance between the ground truth scene G and the completed scene G0, Lscene ...
+- **p. 4 / 4.1. Distillation for 3D LiDAR scene completion - extractive body cue:** Thus, decenting along the bidirectional gradient [ϵθ (Gt, P, t) -ϵϕ (Gt, P, t)] updates the student model's generative distribution toward the pre-trained distribution, achieving ...
+- **p. 5 / 4.2. Structural loss - extractive body cue:** (11) to optimize the student model may lead to loss of local details.
+- **p. 6 / 4.3. Optimization procedure - extractive body cue:** Then, Gstu is optimized with the following objective Lstu = LKL + Lstructural (18) We set λscene = 0.5 and λpoint = 0.01 defaultly.
+- **p. 4 / 4. Method - extractive body cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
+- **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 3 (3.1. Brief introduction of diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models), p. 5 (4.2. Structural loss).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Brief introduction of diffusion models - extractive PDF cue:** Given the input x0 and the condition c (optional), the noisy data xt can be calculated by Eq.
-- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive PDF cue:** Given the input LiDAR scan P and ground truth G, a diffusion model can be trained to perform 3D LiDAR scene completion.
-- **p. 4 / 3.2. 3D LiDAR scene completion diffusion models - extractive PDF cue:** (2) The sparse scan and noisy completed scene are input to ϵθ and ϵϕ.
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** This is because the student model often generates subpar results at the early stage due to the complexity of the point cloud data.
-- **p. 5 / 4.2. Structural loss - extractive PDF cue:** This is because the point cloud in LiDAR scenes includes complex geometric information that is not explicitly captured by diffusion models.
-- **p. 6 / 4.3. Optimization procedure - extractive PDF cue:** As for Gstu, we follow the proposed method to select 1 30 of the points from the entire point cloud as key points for calculating ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Generally, our proposed ScoreLiDAR achieves better scene completion performance and speed trade-off. widely adopted sensors due to its broader detection range and higher detection precision ...
+- **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** Given the input x0 and the condition c (optional), the noisy data xt can be calculated by Eq.
+- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** Given the input LiDAR scan P and ground truth G, a diffusion model can be trained to perform 3D LiDAR scene completion.
+- **p. 4 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** (2) The sparse scan and noisy completed scene are input to ϵθ and ϵϕ.
+- **p. 5 / 4.2. Structural loss - extractive body cue:** This is because the student model often generates subpar results at the early stage due to the complexity of the point cloud data.
+- **p. 5 / 4.2. Structural loss - extractive body cue:** This is because the point cloud in LiDAR scenes includes complex geometric information that is not explicitly captured by diffusion models.
+- **p. 6 / 4.3. Optimization procedure - extractive body cue:** As for Gstu, we follow the proposed method to select 1 30 of the points from the entire point cloud as key points for calculating ...
+- **p. 2 / 1. Introduction - extractive body cue:** Generally, our proposed ScoreLiDAR achieves better scene completion performance and speed trade-off. widely adopted sensors due to its broader detection range and higher detection precision ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,10 +90,10 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 ## Training vs Inference
 
-- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive PDF cue:** In this case, the training loss of the diffusion model is given by: LDM = Et,ϵ h
-- **p. 3 / 3.1. Brief introduction of diffusion models - extractive PDF cue:** During the training, the diffusion model tries to predict the added noise at different timesteps t.
-- **p. 3 / 3.1. Brief introduction of diffusion models - extractive PDF cue:** In this process, the number of required inference steps varies depending on different sampling methods.
-- **p. 4 / 4. Method - extractive PDF cue:** Our goal is to distill a pre-trained 3D LiDAR scene completion diffusion model into a student model with significantly fewer sampling steps, enabling efficient and ...
+- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** In this case, the training loss of the diffusion model is given by: LDM = Et,ϵ h
+- **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** During the training, the diffusion model tries to predict the added noise at different timesteps t.
+- **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** In this process, the number of required inference steps varies depending on different sampling methods.
+- **p. 4 / 4. Method - extractive body cue:** Our goal is to distill a pre-trained 3D LiDAR scene completion diffusion model into a student model with significantly fewer sampling steps, enabling efficient and ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -113,13 +113,13 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 ## Failure and Ablation Link
 
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets.
-- **p. 8 / 5.3. Qualitative analysis - extractive PDF cue:** 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed ...
-- **p. 6 / 5. Experiment - extractive PDF cue:** Secondly, we present the results of ablation studies showing the effectiveness of the structural loss and the performances of ScoreLiDAR given different sampling steps (Sec.
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** In this part, we conduct the ablation study to verify the effectiveness of the structural loss in the training of the proposed ScoreLiDAR.
-- **p. 6 / 5. Experiment - extractive PDF cue:** Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec.
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the teacher ...
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
+- **p. 7 / 5.2. Ablation study - extractive body cue:** The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets.
+- **p. 8 / 5.3. Qualitative analysis - extractive body cue:** 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed ...
+- **p. 6 / 5. Experiment - extractive body cue:** Secondly, we present the results of ablation studies showing the effectiveness of the structural loss and the performances of ScoreLiDAR given different sampling steps (Sec.
+- **p. 7 / 5.2. Ablation study - extractive body cue:** In this part, we conduct the ablation study to verify the effectiveness of the structural loss in the training of the proposed ScoreLiDAR.
+- **p. 6 / 5. Experiment - extractive body cue:** Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec.
+- **p. 8 / 6. Conclusion - extractive body cue:** Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the teacher ...
+- **p. 7 / 5.2. Ablation study - extractive body cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -133,7 +133,7 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), p. 5 (4.2. Structural loss), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models), objective p. 5 (4.2. Structural loss), p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss), p. 6 (4.3. Optimization procedure), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), temporal p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 4 (4. Method), p. 5 (4.2. Structural loss), p. 6 (5. Experiment), p. 6 (5. Experiment), p. 7 (5.2. Ablation study).
+- **Evidence anchors reviewed:** method p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), p. 5 (4.2. Structural loss), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models), objective p. 5 (4.2. Structural loss), p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss), p. 6 (4.3. Optimization procedure), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), temporal p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 4 (4. Method), p. 5 (4.2. Structural loss), p. 6 (5. Experiment), p. 6 (5. Experiment), p. 7 (5.2. Ablation study).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

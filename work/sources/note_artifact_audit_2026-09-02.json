@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-09-03",
+  "scope": "five standard note files under paper folders listed in work/sources/papers.json",
+  "pdf_access": "none; note text only",
+  "policy": {
+    "auto_cleaned": [
+      "Front matter anchor relabelled as body section not recovered",
+      "acceptance/publication/source/copyright stamps removed when separable",
+      "equal-contribution author footnotes removed",
+      "publisher/funding footer, journal/source header, and page-header fragments removed when separable",
+      "unambiguous email and affiliation metadata removed",
+      "affiliation mistaken for a section label relabelled as body section not recovered"
+    ],
+    "manual_review_only": [
+      "ambiguous section labels such as a university/institute heading",
+      "OCR corruption that cannot be safely reconstructed",
+      "claims requiring the original PDF or experiment context"
+    ]
+  },
+  "before": {
+    "note_files_scanned": 4750,
+    "files_with_findings": 31,
+    "occurrences": {
+      "affiliation_section_label": 38,
+      "author_footnote": 6,
+      "publication_stamp": 1,
+      "source_header": 32
+    },
+    "files_by_issue": {
+      "affiliation_section_label": [
+        "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
+        "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
+        "2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/05_insights.md",
+        "2024/ECCV/2024_ECCV_Heterogeneous-Graph-Learning-for-Scene-Graph-Prediction-in/05_insights.md",
+        "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr/05_insights.md",
+        "2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/05_insights.md"
+      ],
+      "author_footnote": [
+        "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
+        "2024/CoRL/2024_CoRL_Learning-to-Walk-from-Three-Minutes-of-Real-World-Data-wit/05_insights.md",
+        "2026/ICLR/2026_ICLR_Vision-Language-Action-Instruction-Tuning-From-Understandi/05_insights.md"
+      ],
+      "publication_stamp": [
+        "2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/05_insights.md"
+      ],
+      "source_header": [
+        "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
+        "2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/05_insights.md",
+        "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/05_insights.md",
+        "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/05_insights.md",
+        "2023/ICRA/2023_ICRA_DreamWaQ-Learning-Robust-Quadrupedal-Locomotion-with-Impli/05_insights.md",
+        "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md",
+        "2023/RSS/2023_RSS_Demonstrating-A-Walk-in-the-Park-Learning-to-Walk-in-20-Mi/05_insights.md",
+        "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/05_insights.md",
+        "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/05_insights.md",
+        "2025/IROS/2025_IROS_SORT3D-Spatial-Object-centric-Reasoning-Toolbox-for-Zero-S/05_insights.md",
+        "2025/IROS/2025_IROS_VLM-See-Robot-Do-Human-Demo-Video-to-Robot-Action-Plan-via/05_insights.md",
+        "2025/NeurIPS/2025_NeurIPS_Segment-then-Splat-Unified-3D-Open-Vocabulary-Segmentation/05_insights.md",
+        "2026/ECCV/2026_ECCV_VLA-Knows-Its-Limits-Adaptive-Execution-Horizons-for-Robot/05_insights.md",
+        "2026/ICML/2026_ICML_LAGEA-Language-Guided-Embodied-Agents-for-Robotic-Manipula/05_insights.md",
+        "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/05_insights.md",
+        "2026/ICML/2026_ICML_WorldMirror-Universal-3D-World-Reconstruction-with-Any-Pri/05_insights.md",
+        "2026/ICRA/2026_ICRA_FD-VLA-Force-Distilled-Vision-Language-Action-Model-for-Co/05_insights.md",
+        "2026/ICRA/2026_ICRA_Goal-VLA-Image-Generative-VLMs-As-Object-Centric-World-Mod/05_insights.md",
+        "2026/ICRA/2026_ICRA_OmniRetarget-Interaction-Preserving-Data-Generation-for-Hu/05_insights.md",
+        "2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/05_insights.md",
+        "2026/IROS/2026_IROS_SAGE-Nav-Leveraging-LLM-Planning-and-Alignment-Fusion-for/05_insights.md"
+      ]
+    },
+    "findings": [
+      {
+        "path": "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
+        "issues": {
+          "affiliation_section_label": 4
+        },
+        "line_numbers": {
+          "affiliation_section_label": [
+            16,
+            18,
+            20,
+            67
+          ]
+        }
+      },
+      {
+        "path": "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            17
+          ]
+        }
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Vision-Language-Action-Instruction-Tuning-From-Understandi/05_insights.md",
+        "issues": {
+          "author_footnote": 1
+        },
+        "line_numbers": {
+          "author_footnote": [
+            15
+          ]
+        }
+      },
+      {
+        "path": "2025/NeurIPS/2025_NeurIPS_Segment-then-Splat-Unified-3D-Open-Vocabulary-Segmentation/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            25
+          ]
+        }
+      },
+      {
+        "path": "2026/ICML/2026_ICML_LAGEA-Language-Guided-Embodied-Agents-for-Robotic-Manipula/05_insights.md",
+        "issues": {
+          "source_header": 3
+        },
+        "line_numbers": {
+          "source_header": [
+            13,
+            37,
+            47
+          ]
+        }
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_FD-VLA-Force-Distilled-Vision-Language-Action-Model-for-Co/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            24
+          ]
+        }
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_Goal-VLA-Image-Generative-VLMs-As-Object-Centric-World-Mod/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            17
+          ]
+        }
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/05_insights.md",
+        "issues": {
+          "source_header": 3
+        },
+        "line_numbers": {
+          "source_header": [
+            13,
+            37,
+            47
+          ]
+        }
+      },
+      {
+        "path": "2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/05_insights.md",
+        "issues": {
+          "affiliation_section_label": 4
+        },
+        "line_numbers": {
+          "affiliation_section_label": [
+            14,
+            15,
+            20,
+            37
+          ]
+        }
+      },
+      {
+        "path": "2024/ECCV/2024_ECCV_Heterogeneous-Graph-Learning-for-Scene-Graph-Prediction-in/05_insights.md",
+        "issues": {
+          "affiliation_section_label": 5
+        },
+        "line_numbers": {
+          "affiliation_section_label": [
+            13,
+            16,
+            19,
+            20,
+            34
+          ]
+        }
+      },
+      {
+        "path": "2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/05_insights.md",
+        "issues": {
+          "affiliation_section_label": 17
+        },
+        "line_numbers": {
+          "affiliation_section_label": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            24,
+            25,
+            26,
+            27,
+            29,
+            36,
+            37,
+            38,
+            68
+          ]
+        }
+      },
+      {
+        "path": "2026/ECCV/2026_ECCV_VLA-Knows-Its-Limits-Adaptive-Execution-Horizons-for-Robot/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            25
+          ]
+        }
+      },
+      {
+        "path": "2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/05_insights.md",
+        "issues": {
+          "publication_stamp": 1
+        },
+        "line_numbers": {
+          "publication_stamp": [
+            46
+          ]
+        }
+      },
+      {
+        "path": "2025/IROS/2025_IROS_VLM-See-Robot-Do-Human-Demo-Video-to-Robot-Action-Plan-via/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            25
+          ]
+        }
+      },
+      {
+        "path": "2025/IROS/2025_IROS_SORT3D-Spatial-Object-centric-Reasoning-Toolbox-for-Zero-S/05_insights.md",
+        "issues": {
+          "source_header": 3
+        },
+        "line_numbers": {
+          "source_header": [
+            13,
+            36,
+            46
+          ]
+        }
+      },
+      {
+        "path": "2026/IROS/2026_IROS_SAGE-Nav-Leveraging-LLM-Planning-and-Alignment-Fusion-for/05_insights.md",
+        "issues": {
+          "source_header": 3
+        },
+        "line_numbers": {
+          "source_header": [
+            13,
+            37,
+            47
+          ]
+        }
+      },
+      {
+        "path": "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            43
+          ]
+        }
+      },
+      {
+        "path": "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            25
+          ]
+        }
+      },
+      {
+        "path": "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr/05_insights.md",
+        "issues": {
+          "affiliation_section_label": 3
+        },
+        "line_numbers": {
+          "affiliation_section_label": [
+            16,
+            20,
+            69
+          ]
+        }
+      },
+      {
+        "path": "2026/ICML/2026_ICML_WorldMirror-Universal-3D-World-Reconstruction-with-Any-Pri/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            26
+          ]
+        }
+      },
+      {
+        "path": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            46
+          ]
+        }
+      },
+      {
+        "path": "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            25
+          ]
+        }
+      },
+      {
+        "path": "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
+        "issues": {
+          "affiliation_section_label": 5
+        },
+        "line_numbers": {
+          "affiliation_section_label": [
+            14,
+            18,
+            35,
+            36,
+            67
+          ]
+        }
+      },
+      {
+        "path": "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            25
+          ]
+        }
+      },
+      {
+        "path": "2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            43
+          ]
+        }
+      },
+      {
+        "path": "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
+        "issues": {
+          "author_footnote": 4
+        },
+        "line_numbers": {
+          "author_footnote": [
+            13,
+            28,
+            37,
+            47
+          ]
+        }
+      },
+      {
+        "path": "2024/CoRL/2024_CoRL_Learning-to-Walk-from-Three-Minutes-of-Real-World-Data-wit/05_insights.md",
+        "issues": {
+          "author_footnote": 1
+        },
+        "line_numbers": {
+          "author_footnote": [
+            24
+          ]
+        }
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_OmniRetarget-Interaction-Preserving-Data-Generation-for-Hu/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            21
+          ]
+        }
+      },
+      {
+        "path": "2023/ICRA/2023_ICRA_DreamWaQ-Learning-Robust-Quadrupedal-Locomotion-with-Impli/05_insights.md",
+        "issues": {
+          "source_header": 3
+        },
+        "line_numbers": {
+          "source_header": [
+            13,
+            37,
+            47
+          ]
+        }
+      },
+      {
+        "path": "2023/RSS/2023_RSS_Demonstrating-A-Walk-in-the-Park-Learning-to-Walk-in-20-Mi/05_insights.md",
+        "issues": {
+          "source_header": 2
+        },
+        "line_numbers": {
+          "source_header": [
+            35,
+            45
+          ]
+        }
+      },
+      {
+        "path": "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md",
+        "issues": {
+          "source_header": 1
+        },
+        "line_numbers": {
+          "source_header": [
+            24
+          ]
+        }
+      }
+    ]
+  },
+  "applied": true,
+  "cleanup": {
+    "modified_files": [
+      "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
+      "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/05_insights.md",
+      "2025/ICLR/2025_ICLR_Articulate-Anything-Automatic-Modeling-of-Articulated-Obje/05_insights.md",
+      "2026/ICLR/2026_ICLR_Vision-Language-Action-Instruction-Tuning-From-Understandi/05_insights.md",
+      "2025/NeurIPS/2025_NeurIPS_4D-VLA-Spatiotemporal-Vision-Language-Action-Pretraining-w/05_insights.md",
+      "2025/NeurIPS/2025_NeurIPS_Segment-then-Splat-Unified-3D-Open-Vocabulary-Segmentation/05_insights.md",
+      "2025/ICML/2025_ICML_UP-VLA-A-Unified-Understanding-and-Prediction-Model-for-Em/05_insights.md",
+      "2026/ICML/2026_ICML_LAGEA-Language-Guided-Embodied-Agents-for-Robotic-Manipula/05_insights.md",
+      "2026/ICRA/2026_ICRA_FD-VLA-Force-Distilled-Vision-Language-Action-Model-for-Co/05_insights.md",
+      "2026/ICRA/2026_ICRA_Goal-VLA-Image-Generative-VLMs-As-Object-Centric-World-Mod/05_insights.md",
+      "2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/05_insights.md",
+      "2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/05_insights.md",
+      "2024/ECCV/2024_ECCV_Heterogeneous-Graph-Learning-for-Scene-Graph-Prediction-in/05_insights.md",
+      "2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/05_insights.md",
+      "2026/ECCV/2026_ECCV_VLA-Knows-Its-Limits-Adaptive-Execution-Horizons-for-Robot/05_insights.md",
+      "2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/05_insights.md",
+      "2025/IROS/2025_IROS_VLM-See-Robot-Do-Human-Demo-Video-to-Robot-Action-Plan-via/05_insights.md",
+      "2025/IROS/2025_IROS_SORT3D-Spatial-Object-centric-Reasoning-Toolbox-for-Zero-S/05_insights.md",
+      "2026/IROS/2026_IROS_SAGE-Nav-Leveraging-LLM-Planning-and-Alignment-Fusion-for/05_insights.md",
+      "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
+      "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/05_insights.md",
+      "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr/05_insights.md",
+      "2026/ICML/2026_ICML_WorldMirror-Universal-3D-World-Reconstruction-with-Any-Pri/05_insights.md",
+      "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/05_insights.md",
+      "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/05_insights.md",
+      "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
+      "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/05_insights.md",
+      "2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/05_insights.md",
+      "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
+      "2024/CoRL/2024_CoRL_Learning-to-Walk-from-Three-Minutes-of-Real-World-Data-wit/05_insights.md",
+      "2026/ICRA/2026_ICRA_OmniRetarget-Interaction-Preserving-Data-Generation-for-Hu/05_insights.md",
+      "2023/ICRA/2023_ICRA_DreamWaQ-Learning-Robust-Quadrupedal-Locomotion-with-Impli/05_insights.md",
+      "2023/RSS/2023_RSS_Demonstrating-A-Walk-in-the-Park-Learning-to-Walk-in-20-Mi/05_insights.md",
+      "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md"
+    ],
+    "modified_file_count": 34,
+    "changes": {
+      "relabel_affiliation_section": 38,
+      "remove_author_footnote": 6,
+      "remove_contaminated_publication_line": 1,
+      "remove_source_header": 32
+    }
+  },
+  "after": {
+    "note_files_scanned": 4750,
+    "files_with_findings": 0,
+    "occurrences": {},
+    "files_by_issue": {},
+    "findings": []
+  }
+}

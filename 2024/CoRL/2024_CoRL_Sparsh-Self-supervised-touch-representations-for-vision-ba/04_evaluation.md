@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.24090; PDF retrieval source: https://arxiv.org/pdf/2410.24090. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.24090; PDF retrieval source: https://arxiv.org/pdf/2410.24090. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -13,7 +13,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 - **p. 2 / 1 Introduction - extractive body cue:** Finally, we construct TacBench, a benchmark consisting of six touch-centric tasks that cover the space of relevant problems on tactile properties such as force estimation ...
 - **p. 2 / 1 Introduction - extractive body cue:** Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.
 - **p. 1 / Abstract - extractive body cue:** Such sensors have led to many recent advances in robot manipulation as they markedly complement vision, yet solutions today often rely on task and sensor ...
-- **p. 1 / Front matter - extractive body cue:** We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task and ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task and ...
 - **p. 8 / 8 Discussion - extractive body cue:** Further research is needed to understand how to effectively leverage pre-trained touch representations in behavioral cloning for robot manipulation tasks.
 - **p. 8 / 8 Discussion - extractive body cue:** On average, Sparsh achieves a 95.1% improvement compared to an end-to-end approach when all models have access to only 33% -50% of the labeled dataset ...
 - **p. 28 / Figure/Table caption - extractive body cue:** Table 11: Mean and variance of distance traversed (in cm) before failure for policies based on Sparsh and E2E. Results over 10 randomized novel starting ...
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields ... | p. 7 (Figure/Table caption) |
 | 8 Discussion | SYSTEM / EVALUATION SCOPE UNRESOLVED | On average, Sparsh achieves a 95.1% improvement compared to an end-to-end approach when all models have access to only 33% -50% of the labeled ... | p. 8 (8 Discussion) |
@@ -43,7 +43,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 - **p. 2 / 1 Introduction - extractive body cue:** Finally, we construct TacBench, a benchmark consisting of six touch-centric tasks that cover the space of relevant problems on tactile properties such as force estimation ...
 - **p. 2 / 1 Introduction - extractive body cue:** Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.
 - **p. 1 / Abstract - extractive body cue:** Such sensors have led to many recent advances in robot manipulation as they markedly complement vision, yet solutions today often rely on task and sensor ...
-- **p. 1 / Front matter - extractive body cue:** We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task and ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task and ...
 - **p. 8 / 8 Discussion - extractive body cue:** Further research is needed to understand how to effectively leverage pre-trained touch representations in behavioral cloning for robot manipulation tasks.
 - **p. 8 / 8 Discussion - extractive body cue:** On average, Sparsh achieves a 95.1% improvement compared to an end-to-end approach when all models have access to only 33% -50% of the labeled dataset ...
 
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Finally, we construct TacBench, a benchmark consisting of six touch-centric tasks that cover the space of relevant problems on tactile properties such as force ... | embodiment, simulator version and control stack | p. 2 (1 Introduction), p. 2 (1 Introduction) |
 | Task/environment | Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking. | reset, timeout, object/scene variation | p. 2 (1 Introduction), p. 1 (Abstract) |
@@ -89,7 +89,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Figure 2: (a) We curate new and existing datasets of vision-based tactile sensors to train touch representations by adapting state-of-the-art SSL vision methods to ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-| We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task ... | comparison identity and matched condition | p. 1 (Front matter) |
+| We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task ... | comparison identity and matched condition | p. 1 (Body text (section boundary not confidently recovered)) |
 | In evaluations, we find that SSL pre-training for touch representation outperforms task and sensor-specific end-to-end training by 95.1% on average over TacBench, and Sparsh ... | comparison identity and matched condition | p. 1 (Abstract) |
 | Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | On average Sparsh (DINO) outperforms Sparsh (IJEPA) by 5.6% across the benchmark. | comparison identity and matched condition | p. 8 (8 Discussion) |
@@ -141,7 +141,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 | Body reproducibility cue | Anchor |
 |---|---|
 | Specifically, we provide a recipe to adapt masking-based objectives from computer vision to the tactile domain, and train general-purpose touch encoders by curating a ... | p. 2 (1 Introduction) |
-| Performance in the plot (middle) is with task decoders using 33% labeled data (except [T6] that uses 50%). | p. 1 (Front matter) |
+| Performance in the plot (middle) is with task decoders using 33% labeled data (except [T6] that uses 50%). | p. 1 (Body text (section boundary not confidently recovered)) |
 | To tackle this we turn to self-supervised learning (SSL) that has demonstrated remarkable performance in computer vision. | p. 1 (Abstract) |
 | Taking inspiration from self-supervised learning (SSL) methods in computer vision, we extend these approaches to the tactile sensing domain and build a benchmark for ... | p. 2 (1 Introduction) |
 | Fine-tuning Sparsh encoders is another method of assessing the quality of pre-trained representations. | p. 8 (8 Discussion) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 - **p. 8 / 8 Discussion - extractive body cue:** Using as little as 10% or 1% of the labeled data for force estimation and slip detection still yields acceptable results (e.g. force error below ...
 - **p. 25 / Figure/Table caption - extractive body cue:** Table 8: Accuracy and 95% confidence interval for pose estimation task following the regression-by- classification paradigm. Relative pose between object and ring finger. Metrics computed ...
 
-- **PDF anchors reviewed:** datasets p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Front matter), p. 8 (8 Discussion), p. 8 (8 Discussion), metrics p. 28 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption), p. 26 (Figure/Table caption), p. 25 (Figure/Table caption), p. 27 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 1 (Front matter), p. 1 (Abstract), p. 7 (Figure/Table caption), p. 8 (8 Discussion), p. 8 (8 Discussion), results p. 7 (Figure/Table caption), p. 8 (8 Discussion), p. 1 (Figure/Table caption), p. 8 (8 Discussion), p. 26 (Figure/Table caption), p. 27 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 8 (8 Discussion), p. 8 (8 Discussion), metrics p. 28 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption), p. 26 (Figure/Table caption), p. 25 (Figure/Table caption), p. 27 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 7 (Figure/Table caption), p. 8 (8 Discussion), p. 8 (8 Discussion), results p. 7 (Figure/Table caption), p. 8 (8 Discussion), p. 1 (Figure/Table caption), p. 8 (8 Discussion), p. 26 (Figure/Table caption), p. 27 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields general touch representations that work across ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Figure 12: Contrast between Sparsh (VJEPA) and E2E for a test trajectory with a spherical probe sliding on the DIGIT sensor. Sparsh (VJEPA), even though trained only on 33% of ... (p. 24, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 13: Performance of Sparsh across TacBench and comparison between SSL approaches. E Sparsh ablations E.1 TacBench evaluations via fine-tuning Fine-tuning the Sparsh encoders is another method of assessing the ... (p. 29, Figure/Table caption).
+- **Failure/negative evidence:** In Figure 13, we illustrate a failure case for Sparsh (VJEPA), as its results do not align with the ground truth. (p. 24, Model).

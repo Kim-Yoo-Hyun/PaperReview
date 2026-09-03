@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Formally, want, model, data, distribution, where, corresponds, action, chunk, future | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | evaluate, model, language, commands, fine-tuning, downstream, tasks, combination | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: Formally, want, model, data, distribution, where, corresponds, action, chunk, future | p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 3 (1. INTRODUCTION) |
 | Decision / output variable | action, pose, option or chunk a; body terms: more, complex, dexterous, behaviors, tying, shoelaces, cooking, shrimp | p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 7 (A. Evaluating the base model), p. 5 (IV. THE x MODEL), p. 8 (A. Evaluating the base model) |
 | Success / guarantee | instruction-conditioned task success | p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION)): ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in ...
+PDF body contribution framing (p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION)): ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in ...
 
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
@@ -67,12 +67,21 @@ PDF contribution framing (p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), interface p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), objective p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 8 (A. Evaluating the base model).
+- **Evidence anchors reviewed:** problem p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), interface p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), objective p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 8 (A. Evaluating the base model).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges. (p. 2, 1. INTRODUCTION).
+- **Formulation-changing contribution:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
+- **Assumption/failure evidence:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

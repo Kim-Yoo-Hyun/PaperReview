@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.07896; PDF retrieval source: https://arxiv.org/pdf/2310.07896. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.07896; PDF retrieval source: https://arxiv.org/pdf/2310.07896. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 
 ## Evaluation Body Digest
 
-- **p. 4 / V. EVALUATION - extractive PDF cue:** Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments.
-- **p. 4 / V. EVALUATION - extractive PDF cue:** How does NoMaD compare to prior work for visual exploration and goal-reaching in real-world environments?
-- **p. 5 / V. EVALUATION - extractive PDF cue:** Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 90% ...
-- **p. 5 / V. EVALUATION - extractive PDF cue:** The Autoregressive baseline uses a more expressive policy class and outperforms these baselines, but struggles in complex environments.
-- **p. 6 / V. EVALUATION - extractive PDF cue:** This suggests that training for these two behaviors involves learning shared representations and affordances, and a single policy can indeed excel at both task-agnostic and ...
-- **p. 4 / V. EVALUATION - extractive PDF cue:** We report the mean success rate for each baseline, as well as the mean number of collisions per experiment.
-- **p. 6 / V. EVALUATION - extractive PDF cue:** Visual Encoder Success # Collisions Late Fusion CNN 52% 3.2 Early Fusion CNN 68% 1.5 ViT 32% 2.5 NoMaD 98% 0.2 TABLE III: The performance ...
-- **p. 6 / V. EVALUATION - extractive PDF cue:** NoMaD outperforms both the ViT- and CNN-based architectures, successfully reaching the goal while avoiding collisions.
+- **p. 4 / V. EVALUATION - extractive body cue:** Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments.
+- **p. 4 / V. EVALUATION - extractive body cue:** How does NoMaD compare to prior work for visual exploration and goal-reaching in real-world environments?
+- **p. 5 / V. EVALUATION - extractive body cue:** Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 90% ...
+- **p. 5 / V. EVALUATION - extractive body cue:** The Autoregressive baseline uses a more expressive policy class and outperforms these baselines, but struggles in complex environments.
+- **p. 6 / V. EVALUATION - extractive body cue:** This suggests that training for these two behaviors involves learning shared representations and affordances, and a single policy can indeed excel at both task-agnostic and ...
+- **p. 4 / V. EVALUATION - extractive body cue:** We report the mean success rate for each baseline, as well as the mean number of collisions per experiment.
+- **p. 6 / V. EVALUATION - extractive body cue:** Visual Encoder Success # Collisions Late Fusion CNN 52% 3.2 Early Fusion CNN 68% 1.5 ViT 32% 2.5 NoMaD 98% 0.2 TABLE III: The performance ...
+- **p. 6 / V. EVALUATION - extractive body cue:** NoMaD outperforms both the ViT- and CNN-based architectures, successfully reaching the goal while avoiding collisions.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | NoMaD consistently outperforms all baselines and results in smooth, reactive policies. | p. 5 (V. EVALUATION) |
 | V. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 ... | p. 5 (V. EVALUATION) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / V. EVALUATION - extractive PDF cue:** Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments.
-- **p. 4 / V. EVALUATION - extractive PDF cue:** How does NoMaD compare to prior work for visual exploration and goal-reaching in real-world environments?
-- **p. 5 / V. EVALUATION - extractive PDF cue:** Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 90% ...
-- **p. 5 / V. EVALUATION - extractive PDF cue:** The Autoregressive baseline uses a more expressive policy class and outperforms these baselines, but struggles in complex environments.
-- **p. 6 / V. EVALUATION - extractive PDF cue:** This suggests that training for these two behaviors involves learning shared representations and affordances, and a single policy can indeed excel at both task-agnostic and ...
+- **p. 4 / V. EVALUATION - extractive body cue:** Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments.
+- **p. 4 / V. EVALUATION - extractive body cue:** How does NoMaD compare to prior work for visual exploration and goal-reaching in real-world environments?
+- **p. 5 / V. EVALUATION - extractive body cue:** Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 90% ...
+- **p. 5 / V. EVALUATION - extractive body cue:** The Autoregressive baseline uses a more expressive policy class and outperforms these baselines, but struggles in complex environments.
+- **p. 6 / V. EVALUATION - extractive body cue:** This suggests that training for these two behaviors involves learning shared representations and affordances, and a single policy can indeed excel at both task-agnostic and ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: NoMaD is the first flexibly conditioned diffusion model of robot actions that can perform both goal-conditioned navigation and undirected exploration in previously unseen ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Model Architecture. NoMaD uses two EfficientNet encoders ψ, ϕ to generate input tokens to a Transformer decoder. We use goal masking to jointly ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualizing the task-agnostic (yellow) and goal-directed pathways for two goal images (green, blue) learned by NoMaD. NoMaD predicts a bimodal distribution of collision-free ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualizing rollouts of NoMaD deployed in challenging indoor (top) and outdoor (bottom) environments on the LoCoBot platform, showcasing successful exploration trajectories. Future action ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5: Examples of action predictions from NoMaD and baselines in undirected mode (yellow) and goal-directed mode with two different goal images (blue towards left, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: NoMaD is the first flexibly conditioned diffusion model of robot actions that can perform both goal-conditioned navigation and undirected exploration in previously unseen ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Model Architecture. NoMaD uses two EfficientNet encoders ψ, ϕ to generate input tokens to a Transformer decoder. We use goal masking to jointly ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Visualizing the task-agnostic (yellow) and goal-directed pathways for two goal images (green, blue) learned by NoMaD. NoMaD predicts a bimodal distribution of collision-free ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Visualizing rollouts of NoMaD deployed in challenging indoor (top) and outdoor (bottom) environments on the LoCoBot platform, showcasing successful exploration trajectories. Future action ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Examples of action predictions from NoMaD and baselines in undirected mode (yellow) and goal-directed mode with two different goal images (blue towards left, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments. | embodiment, simulator version and control stack | p. 4 (V. EVALUATION), p. 4 (V. EVALUATION) |
 | Task/environment | How does NoMaD compare to prior work for visual exploration and goal-reaching in real-world environments? | reset, timeout, object/scene variation | p. 4 (V. EVALUATION), p. 5 (V. EVALUATION) |
@@ -112,10 +112,10 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 | Primary metric/result | Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 ... | numeric claim only at cited anchor | p. 5 (V. EVALUATION) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / V. EVALUATION - extractive PDF cue:** All baselines are trained on a combination of GNM and SACSoN datasets for 20 epochs, and we perform minimal hyperparameter tuning to ensure stable training ...
-- **p. 4 / IV. METHOD - extractive PDF cue:** We train NoMaD on a combination of GNM and SACSoN datasets, large heterogeneous datasets collected across a diverse set of environments and robotic platforms, including ...
-- **p. 4 / IV. METHOD - extractive PDF cue:** We use the AdamW optimizer [43] with a learning rate of 10-4 and train NoMaD for 30 epochs with a batch size of 256.
-- **p. 4 / IV. METHOD - extractive PDF cue:** For the ViNT observation encoder, we use EfficientNet-B0 [39] to tokenize observations and goals into 256-dimensional embeddings, followed by a Transformer decoder with 4 layers ...
+- **p. 4 / V. EVALUATION - extractive body cue:** All baselines are trained on a combination of GNM and SACSoN datasets for 20 epochs, and we perform minimal hyperparameter tuning to ensure stable training ...
+- **p. 4 / IV. METHOD - extractive body cue:** We train NoMaD on a combination of GNM and SACSoN datasets, large heterogeneous datasets collected across a diverse set of environments and robotic platforms, including ...
+- **p. 4 / IV. METHOD - extractive body cue:** We use the AdamW optimizer [43] with a learning rate of 10-4 and train NoMaD for 30 epochs with a batch size of 256.
+- **p. 4 / IV. METHOD - extractive body cue:** For the ViNT observation encoder, we use EfficientNet-B0 [39] to tokenize observations and goals into 256-dimensional embeddings, followed by a Transformer decoder with 4 layers ...
 
 ## Generalization and Failure Cases
 
@@ -151,14 +151,23 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 
 ## Limitations and Verification Questions
 
-- **p. 6 / VI. DISCUSSION - extractive PDF cue:** While our experiments provide a proof of concept that unified policies can provide more effective navigation in new environments, our system has a number of ...
-- **p. 3 / 8 Future - extractive PDF cue:** Exploration with topological maps: While goalconditioned policies can exhibit useful affordances and collision-avoidance behavior, they may be insufficient for navigation in large environments that require ...
-- **p. 4 / V. EVALUATION - extractive PDF cue:** We report the mean success rate for each baseline, as well as the mean number of collisions per experiment.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualizing the task-agnostic (yellow) and goal-directed pathways for two goal images (green, blue) learned by NoMaD. NoMaD predicts a bimodal distribution of collision-free ...
-- **p. 5 / V. EVALUATION - extractive PDF cue:** VIB and Masked ViNT struggle in all the environments we tested and frequently end in collisions, likely due to challenges with effectively modeling multimodal action ...
-- **p. 5 / V. EVALUATION - extractive PDF cue:** For exploratory goal discovery, NoMaD outperforms the best published baseline (Subgoal Diffusion) by over 25% in terms of both efficiency and collision avoidance, and succeeds ...
+- **p. 6 / VI. DISCUSSION - extractive body cue:** While our experiments provide a proof of concept that unified policies can provide more effective navigation in new environments, our system has a number of ...
+- **p. 3 / 8 Future - extractive body cue:** Exploration with topological maps: While goalconditioned policies can exhibit useful affordances and collision-avoidance behavior, they may be insufficient for navigation in large environments that require ...
+- **p. 4 / V. EVALUATION - extractive body cue:** We report the mean success rate for each baseline, as well as the mean number of collisions per experiment.
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Visualizing the task-agnostic (yellow) and goal-directed pathways for two goal images (green, blue) learned by NoMaD. NoMaD predicts a bimodal distribution of collision-free ...
+- **p. 5 / V. EVALUATION - extractive body cue:** VIB and Masked ViNT struggle in all the environments we tested and frequently end in collisions, likely due to challenges with effectively modeling multimodal action ...
+- **p. 5 / V. EVALUATION - extractive body cue:** For exploratory goal discovery, NoMaD outperforms the best published baseline (Subgoal Diffusion) by over 25% in terms of both efficiency and collision avoidance, and succeeds ...
 
-- **PDF anchors reviewed:** datasets p. 4 (V. EVALUATION), p. 4 (V. EVALUATION), p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), metrics p. 4 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), baselines p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 4 (V. EVALUATION), p. 6 (V. EVALUATION), results p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 4 (V. EVALUATION).
+- **Evidence anchors reviewed:** datasets p. 4 (V. EVALUATION), p. 4 (V. EVALUATION), p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), metrics p. 4 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), baselines p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 4 (V. EVALUATION), p. 6 (V. EVALUATION), results p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 4 (V. EVALUATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments. (p. 4, V. EVALUATION).
+- **Metric evidence:** Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 90% Subgoal Diffusion [3] 335M 77% ... (p. 5, V. EVALUATION).
+- **Baseline/ablation evidence:** Most notably, NoMaD outperforms the state-of-the-art (Subgoal Diffusion) by 25%, while also avoiding collisions and requiring 15× fewer parameters. mThese baselines that use goal masking. images, which are used by ... (p. 5, V. EVALUATION).
+- **Failure/negative evidence:** VIB and Masked ViNT struggle in all the environments we tested and frequently end in collisions, likely due to challenges with effectively modeling multimodal action distributions. (p. 5, V. EVALUATION).

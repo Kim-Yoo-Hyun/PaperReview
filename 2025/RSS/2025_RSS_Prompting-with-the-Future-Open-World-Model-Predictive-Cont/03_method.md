@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p145.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p145.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p145.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p145.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Physical simulation: Finally, we integrate a physics simulator 'S [17] equipped with the robot's URDF U to model dynamics lunder interaction, The ... | p. 4 (A. Construction of Interactive Digital Twins), p. 3 (A. Construction of Interactive Digital Twins) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | AS shown in Figure 2, our construction pipeline consists of two key stages: (1) reconstructing scenes with accurate geometry and visual appearance, ... | p. 3 (A. Construction of Interactive Digital Twins), p. 3 (III. PROBLEM FORMULATION) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | A task is considered a failure if the robot causes imeversible results or if the maximum step budget or time limit is ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | Central o our framework is a pre-trained vision-language model (VLM). ‘The model processes an ordered sequence of interleaved text and RGB images ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | The planning policies are rolled out twice per scene to consider the randomness in VLM planning, resulting in 10 trials per task ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (A. Construction of Interactive Digital Twins), p. 3 (A. Construction of Interactive Digital Twins), p. 3 (III. PROBLEM FORMULATION), p. 4 (A. Construction of Interactive Digital Twins), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 5 (C. Motion Planning via Simulation-Informed Prompting), objective p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 4 (C. Motion Planning via Simulation-Informed Prompting), p. 3 (III. PROBLEM FORMULATION), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 4 (C. Motion Planning via Simulation-Informed Prompting), temporal p. 5 (A. Experimental setup), p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), p. 6 (B. Quantitative results), p. 1 (Abstract), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 4 (A. Construction of Interactive Digital Twins), p. 3 (A. Construction of Interactive Digital Twins), p. 3 (III. PROBLEM FORMULATION), p. 4 (A. Construction of Interactive Digital Twins), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 5 (C. Motion Planning via Simulation-Informed Prompting), objective p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 4 (C. Motion Planning via Simulation-Informed Prompting), p. 3 (III. PROBLEM FORMULATION), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 4 (C. Motion Planning via Simulation-Informed Prompting), temporal p. 5 (A. Experimental setup), p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), p. 6 (B. Quantitative results), p. 1 (Abstract), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** AS shown in Figure 2, our construction pipeline consists of two key stages: (1) reconstructing scenes with accurate geometry and visual appearance, and (2) making the scene interactable to support ... (p. 3, A. Construction of Interactive Digital Twins).
+- **Objective/update evidence:** decomposition localizes the optimization objective, improving sample efficiency and enhancing planning robustness. (p. 5, C. Motion Planning via Simulation-Informed Prompting).
+- **Temporal/runtime evidence:** A task is considered a failure if the robot causes imeversible results or if the maximum step budget or time limit is reached. ‘The task is successful iff the success ... (p. 5, A. Experimental setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

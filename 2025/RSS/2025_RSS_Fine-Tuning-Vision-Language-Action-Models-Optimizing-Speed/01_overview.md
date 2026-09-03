@@ -1,20 +1,21 @@
 # Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p017.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p017.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p017.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p017.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, OpenVLA, fine-tuning, action chunking, inference efficiency
-- Aliases: OpenVLA-OFT, OFT
 - Official paper: https://www.roboticsproceedings.org/rss21/p017.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p017.pdf
 - Code/Project: https://openvla-oft.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -86,3 +87,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Existing approaches that fine-tune VLAs using the base ‘model's autoregressive training recipe face two key limitations: slow inference speed (3-5 Hz) unsuitable for high-frequency control, and unreliable task execution on bimanual mani ...를 문제로 두고, In the next section, ‘we present a parallel generation scheme that enables efficient action chunking.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (A. VIA Fine-Tuning Design Decisions), p. 2 (1. Iyrropucrion), p. 3 (A. VIA Fine-Tuning Design Decisions), p. 4 (B. Implementing Alternative Design Components), p. 1 (1. Iyrropucrion), p. 14 (B. Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To address these challenges, we investigate three key design components for VLA fine-tuning: (p. 3, A. VIA Fine-Tuning Design Decisions).
+- **Actual contribution:** In the next section, ‘we present a parallel generation scheme that enables efficient action chunking. (p. 3, 1. Iyrropucrion).
+- **Evaluation boundary:** For methods using action chunking, we set chunk size to A' = 8 to match the Diffusion Policy baseline [5], and execute full chunks before replanning, which we find improves ... (p. 5, A. LIBERO Experimental Setup).
+- **Explicit failure boundary:** As visualized in Figure 6, it often fails to correct mistakes in the "scoop X into (p. 8, C. ALOHA Task Performance Results).

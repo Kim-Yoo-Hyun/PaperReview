@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=EyNzLH7BZK; PDF retrieval source: https://openreview.net/pdf/ba9002ffc4387084365c864f7036a73962d73b16.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=EyNzLH7BZK; PDF retrieval source: https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 
 ## Evaluation Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets.
-- **p. 1 / 1 Introduction - extractive PDF cue:** The evolution of robotic systems toward increasingly unstructured environments necessitates a fundamental paradigm shift in how we conceptualize affordance detection.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Details can be found in section 3. limitation that inhibits the deployment of autonomous agents in real-world contexts.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Meanwhile, 3D affordance detection methods typically remain limited to static, single-affordance settings, with little capacity to handle instructions requiring compositional or context-aware reasoning across multiple ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Unlike existing single-pass methods, our approach establishes a self-improving cycle that enhances precision across multiple object geometries. • We propose a novel Differential Geometric Self-Prompting ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** By injecting LLM reasoning into dense point features, our approach bridges high-level semantic understanding with low-level geometric representation. • We introduce an Implicit Neural Affordance ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** accuracy, especially in complex or ambiguous settings; (3) the disconnect between high-level language semantics and low-level geometric features, hindering precise and context-aware affordance prediction across ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** In tandem, our Spectral Convolutional Self-Prompting module analyzes and enhances affordance predictions at multiple structural scales, enabling the model to capture both broad shapes and ...
+- **p. 1 / Abstract - extractive body cue:** Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets.
+- **p. 1 / 1 Introduction - extractive body cue:** The evolution of robotic systems toward increasingly unstructured environments necessitates a fundamental paradigm shift in how we conceptualize affordance detection.
+- **p. 2 / 1 Introduction - extractive body cue:** Details can be found in section 3. limitation that inhibits the deployment of autonomous agents in real-world contexts.
+- **p. 2 / 1 Introduction - extractive body cue:** Meanwhile, 3D affordance detection methods typically remain limited to static, single-affordance settings, with little capacity to handle instructions requiring compositional or context-aware reasoning across multiple ...
+- **p. 3 / 1 Introduction - extractive body cue:** Unlike existing single-pass methods, our approach establishes a self-improving cycle that enhances precision across multiple object geometries. • We propose a novel Differential Geometric Self-Prompting ...
+- **p. 3 / 1 Introduction - extractive body cue:** By injecting LLM reasoning into dense point features, our approach bridges high-level semantic understanding with low-level geometric representation. • We introduce an Implicit Neural Affordance ...
+- **p. 3 / 1 Introduction - extractive body cue:** accuracy, especially in complex or ambiguous settings; (3) the disconnect between high-level language semantics and low-level geometric features, hindering precise and context-aware affordance prediction across ...
+- **p. 3 / 1 Introduction - extractive body cue:** In tandem, our Spectral Convolutional Self-Prompting module analyzes and enhances affordance predictions at multiple structural scales, enabling the model to capture both broad shapes and ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across ... | p. 8 (Figure/Table caption) |
 | Abstract | EMPIRICAL / REAL-ROBOT OR HARDWARE | Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets. | p. 1 (Abstract) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 1 / Abstract - extractive PDF cue:** Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets.
-- **p. 1 / 1 Introduction - extractive PDF cue:** The evolution of robotic systems toward increasingly unstructured environments necessitates a fundamental paradigm shift in how we conceptualize affordance detection.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Details can be found in section 3. limitation that inhibits the deployment of autonomous agents in real-world contexts.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Meanwhile, 3D affordance detection methods typically remain limited to static, single-affordance settings, with little capacity to handle instructions requiring compositional or context-aware reasoning across multiple ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Unlike existing single-pass methods, our approach establishes a self-improving cycle that enhances precision across multiple object geometries. • We propose a novel Differential Geometric Self-Prompting ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** By injecting LLM reasoning into dense point features, our approach bridges high-level semantic understanding with low-level geometric representation. • We introduce an Implicit Neural Affordance ...
+- **p. 1 / Abstract - extractive body cue:** Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets.
+- **p. 1 / 1 Introduction - extractive body cue:** The evolution of robotic systems toward increasingly unstructured environments necessitates a fundamental paradigm shift in how we conceptualize affordance detection.
+- **p. 2 / 1 Introduction - extractive body cue:** Details can be found in section 3. limitation that inhibits the deployment of autonomous agents in real-world contexts.
+- **p. 2 / 1 Introduction - extractive body cue:** Meanwhile, 3D affordance detection methods typically remain limited to static, single-affordance settings, with little capacity to handle instructions requiring compositional or context-aware reasoning across multiple ...
+- **p. 3 / 1 Introduction - extractive body cue:** Unlike existing single-pass methods, our approach establishes a self-improving cycle that enhances precision across multiple object geometries. • We propose a novel Differential Geometric Self-Prompting ...
+- **p. 3 / 1 Introduction - extractive body cue:** By injecting LLM reasoning into dense point features, our approach bridges high-level semantic understanding with low-level geometric representation. • We introduce an Implicit Neural Affordance ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (a) Traditional vision-based methods [3, 4] rely on trainable network fθ to predict a fixed set of affordances fθ : P 7→A; A ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of the ViSPLA framework: given a point cloud P and a language instruction L, first we extract geometric features X = fP ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Performance analysis (aIoU on "seen" setting) with varying T and K values. Following 3D-AffordanceLLM [6], we utilize Phi-3.5-mini-instruct [27] as our base LLM ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Qualitative comparison of our proposed method on the PIAD (left) and LASO (right) datasets. The best and second-best results are highlighted in red ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative visualization of ablation
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4. (3) The most substantial gains come from incorporating Iterative Differential Geometry-Based Self-Prompting (IDGSP), which provides a significant boost on LASO seen (+2.5 aIoU) ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation study of different components. The best results are in bold. Type PIAD LASO IDGSP INAFS SCSP aIoU
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Traditional vision-based methods [3, 4] rely on trainable network fθ to predict a fixed set of affordances fθ : P 7→A; A ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Overview of the ViSPLA framework: given a point cloud P and a language instruction L, first we extract geometric features X = fP ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Performance analysis (aIoU on "seen" setting) with varying T and K values. Following 3D-AffordanceLLM [6], we utilize Phi-3.5-mini-instruct [27] as our base LLM ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Qualitative comparison of our proposed method on the PIAD (left) and LASO (right) datasets. The best and second-best results are highlighted in red ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative visualization of ablation
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4. (3) The most substantial gains come from incorporating Iterative Differential Geometry-Based Self-Prompting (IDGSP), which provides a significant boost on LASO seen (+2.5 aIoU) ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Ablation study of different components. The best results are in bold. Type PIAD LASO IDGSP INAFS SCSP aIoU
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets. | embodiment, simulator version and control stack | p. 1 (Abstract), p. 1 (1 Introduction) |
 | Task/environment | The evolution of robotic systems toward increasingly unstructured environments necessitates a fundamental paradigm shift in how we conceptualize affordance detection. | reset, timeout, object/scene variation | p. 1 (1 Introduction), p. 2 (1 Introduction) |
@@ -154,14 +154,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 
 ## Limitations and Verification Questions
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Details can be found in section 3. limitation that inhibits the deployment of autonomous agents in real-world contexts.
-- **p. 2 / 1 Introduction - extractive PDF cue:** The final refined mask MT integrates both semantic guidance and geometric consistency, enabling robust and generalizable affordance segmentation across varying levels of granularity and complexity.
-- **p. 3 / 1 Introduction - extractive PDF cue:** In tandem, our Spectral Convolutional Self-Prompting module analyzes and enhances affordance predictions at multiple structural scales, enabling the model to capture both broad shapes and ...
-- **p. 6 / 2 Related Work - extractive PDF cue:** 3.5 Overall Learning Strategy To effectively address data scarcity and ensure robust affordance understanding, we adopt a multistage training strategy inspired by 3D-AffordanceLLM [6].
-- **p. 7 / 2 Related Work - extractive PDF cue:** This design enables evaluation of our model's robustness in both instruction-conditioned and shape-driven generalization scenarios.
-- **p. 8 / 2 Related Work - extractive PDF cue:** Earlier fusion-based approaches like [33-38] exhibit significantly inferior performance due to their generic multimodal architectures that fail to model the specialized nature of affordance relationships.
+- **p. 2 / 1 Introduction - extractive body cue:** Details can be found in section 3. limitation that inhibits the deployment of autonomous agents in real-world contexts.
+- **p. 2 / 1 Introduction - extractive body cue:** The final refined mask MT integrates both semantic guidance and geometric consistency, enabling robust and generalizable affordance segmentation across varying levels of granularity and complexity.
+- **p. 3 / 1 Introduction - extractive body cue:** In tandem, our Spectral Convolutional Self-Prompting module analyzes and enhances affordance predictions at multiple structural scales, enabling the model to capture both broad shapes and ...
+- **p. 6 / 2 Related Work - extractive body cue:** 3.5 Overall Learning Strategy To effectively address data scarcity and ensure robust affordance understanding, we adopt a multistage training strategy inspired by 3D-AffordanceLLM [6].
+- **p. 7 / 2 Related Work - extractive body cue:** This design enables evaluation of our model's robustness in both instruction-conditioned and shape-driven generalization scenarios.
+- **p. 8 / 2 Related Work - extractive body cue:** Earlier fusion-based approaches like [33-38] exhibit significantly inferior performance due to their generic multimodal architectures that fail to model the specialized nature of affordance relationships.
 
-- **PDF anchors reviewed:** datasets p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), metrics p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), baselines p. 1 (Abstract), p. 1 (Abstract), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 1 (Abstract), p. 9 (Figure/Table caption), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), metrics p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), baselines p. 1 (Abstract), p. 1 (Abstract), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 1 (Abstract), p. 9 (Figure/Table caption), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

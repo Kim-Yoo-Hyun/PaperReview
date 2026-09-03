@@ -1,7 +1,7 @@
 # LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2606.23686.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2606.23686.
 > PDF retrieval source: https://arxiv.org/pdf/2606.23686. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2606.23686
 - Code/Project: https://libero-safety.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -87,3 +87,12 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 ## Why Read It
 
 VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, these benchmarks suffer from two critical limitations.를 문제로 두고, In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to enable the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object Pairs) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (42 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, these benchmarks suffer from two critical limitations. (p. 2, 1 INTRODUCTION).
+- **Actual contribution:** In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to ... (p. 3, 1 INTRODUCTION).
+- **Evaluation boundary:** Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init State), viewpoint shifts (View), and scene variations (Scene), the SR remains relatively stable, fluctuating ... (p. 13, 4 Experiment).
+- **Explicit failure boundary:** This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures. (p. 39, C.3 Additional Experimental Results).

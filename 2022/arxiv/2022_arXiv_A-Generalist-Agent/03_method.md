@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.06175; PDF retrieval source: https://arxiv.org/abs/2205.06175. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.06175; PDF retrieval source: https://arxiv.org/abs/2205.06175. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 3 (1 Introduction), p. 2 (A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | The training loss for a batch B can then be written as L(θ, B) = - /B/ X b=1 L X l=1 ... | p. 4 (1 Introduction), p. 3 (1 Introduction) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | After converting data into tokens, we use the following canonical sequence ordering. • Text tokens in the same order as the raw ... | p. 3 (1 Introduction), p. 2 (Abstract) |
@@ -132,8 +132,17 @@ PDF body method statement (p. 4 (1 Introduction), p. 3 (1 Introduction), p. 2 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (1 Introduction), p. 3 (1 Introduction), p. 2 (Abstract), p. 3 (1 Introduction), p. 2 (Abstract), p. 7 (1 Introduction), objective p. 2 (Abstract), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 8 (1 Introduction), temporal p. 3 (1 Introduction), p. 7 (1 Introduction), p. 19 (6 Related Work), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 6 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 3 (1 Introduction), p. 2 (Abstract), p. 3 (1 Introduction), p. 2 (Abstract), p. 7 (1 Introduction), objective p. 2 (Abstract), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 8 (1 Introduction), temporal p. 3 (1 Introduction), p. 7 (1 Introduction), p. 19 (6 Related Work), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 6 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (42 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2.2 Embedding input tokens and setting output targets After tokenization and sequencing, we apply a parameterized embedding function f(·; θe) to each token (i.e. it is applied to both observations ... (p. 3, 1 Introduction).
+- **Objective/update evidence:** Masking is used such that the loss function is applied only to target outputs, i.e. text and various actions. (p. 2, Abstract).
+- **Temporal/runtime evidence:** After converting data into tokens, we use the following canonical sequence ordering. • Text tokens in the same order as the raw input text. • Image patch tokens in raster ... (p. 3, 1 Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

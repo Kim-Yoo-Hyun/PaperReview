@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object pose and extrinsic contacts; ii) a passive compliance model for ...를 Here, we use high-resolution and highly deformable tactile sensors (Soft Bubbles [2]) because they: i) allow for state-estimation that provides key feedback for controls that would not be available without the sensors, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The key contribution of our method is to formulate the contact trajectory optimization precisely to address these requirements while also being amenable to gradient-based optimization and capable of producing a variety of ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object pose and extrinsic contacts; ii) a passive compliance ... (p. 3, IV. METHODOLOGY).
+- **Paper-specific mechanism:** The main contributions of our work are in components (iii) and (iv) where we augment the model in (ii) with contact-aware constraints for object poses and force transmission, then formulating ... (p. 3, IV. METHODOLOGY).
+- **Evidence boundary:** the reported outcome is While the current model yields satisfactory results, exploring higher-dimensional models with improved accuracy could further enhance performance. (p. 10, V. EXPERIMENTS AND RESULTS); the relevant task/metric cue is We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy for the pose tracking error. (p. 8, V. EXPERIMENTS AND RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques. (p. 10, V. EXPERIMENTS AND RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This expansion would significantly broaden the applicability of our method to real-world manipulation tasks involving intricate object shapes and diverse robot motions..
-3. Compare against the body-reported baseline or a matched simpler baseline: To ensure a fair comparison with the baseline methods, we evaluate two different versions of each: one with 100 QP queries and another with 1000 queries..
-4. Report the body metric and its denominator/aggregation: We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy for the pose tracking error..
-5. Re-run the body-reported ablation/failure condition: We report the mean absolute error for each of the wrench and pose components..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object pose and extrinsic contacts; ii) a passive compliance ... (p. 3, IV. METHODOLOGY); preserve the objective/update rule: 4) Given the object and robot poses, the external wrench, and the contact forces compute the loss function L and backpropagate the gradients through the different blocks to update the ... (p. 5, IV. METHODOLOGY).
+2. Use the paper-reported task/data/environment cue: This expansion would significantly broaden the applicability of our method to real-world manipulation tasks involving intricate object shapes and diverse robot motions. (p. 10, V. EXPERIMENTS AND RESULTS).
+3. Compare against the reported or matched baseline: To ensure a fair comparison with the baseline methods, we evaluate two different versions of each: one with 100 QP queries and another with 1000 queries. (p. 9, V. EXPERIMENTS AND RESULTS).
+4. Report the body metric with its denominator and aggregation: We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy for the pose tracking error. (p. 8, V. EXPERIMENTS AND RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Our experiments show that the closedloop controllers achieve superior performance tracking the desired trajectories than the other tested control approaches. (p. 7, V. EXPERIMENTS AND RESULTS); if none is reported, design one around: Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques. (p. 10, V. EXPERIMENTS AND RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY); the primary result is directionally consistent at p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), match the reported outcome at p. 10 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), and measure the boundary at p. 10 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contribution, formulate, contact mechanism이 To ensure a fair comparison with the baseline methods, we evaluate two different versions of each: ... 대비 We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy ...을 개선하고, Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object ...), does the paper-specific mechanism (The main contributions of our work are in components (iii) and (iv) where we augment the model in (ii) with contact-aware constraints ...) retain the reported evaluation outcome (We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy ...) when tested against the paper's strongest explicit boundary (Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The main contributions of our work are in components (iii) and (iv) where we augment the model in (ii) with contact-aware constraints for object poses and force transmission, then formulating ... (p. 3, IV. METHODOLOGY).
+- **Paper-supported outcome:** While the current model yields satisfactory results, exploring higher-dimensional models with improved accuracy could further enhance performance. (p. 10, V. EXPERIMENTS AND RESULTS).
+- **Strongest explicit boundary:** Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques. (p. 10, V. EXPERIMENTS AND RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs.를 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and generalize broadly ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Even unsuccessful trials show sensible behavior, like approaching the handles of microwave and dish washer doors, even if ultimately failing to open them, We show success and failure videos on our ‘website.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and generalize broadly ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs. (p. 3, 1. INTRODUCTION).
+- **Paper-specific mechanism:** 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ... (p. 1, 1. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous tasks like laundry folding, and ... (p. 6, A. Experimental Setup); the relevant task/metric cue is We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous tasks like laundry folding, and ... (p. 6, A. Experimental Setup). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures to help readers get a sense of the policy's capabilities (p. 18, B. Discussion of Alternative Compression Approaches).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: fon a large dataset of IM action sequences trained the universal tokenizer on the most diverse real robot dataset we could assemble, which includes data from our real robot evaluation tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: We then compare 7 models trained with FAST tokenization to the state-of-the-art 79 flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training with FAST to large, cross-embodied datasets with 10k ....
-4. Report the body metric and its denominator/aggregation: We report success rate on individual clothing items..
-5. Re-run the body-reported ablation/failure condition: We fine-tune the VLA models for robot action prediction, without weight freezing..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs. (p. 3, 1. INTRODUCTION); preserve the objective/update rule: After the data is normalized, we apply the discrete cosine transform to each action dimension separately. ‘To compress the DCT-converted signal we can simply omit insignificant coefficients, which we implement ... (p. 4, B. The FAST Tokenization Algorithm).
+2. Use the paper-reported task/data/environment cue: We test FAST across 7 evaluation environments: 6 real-robot tasks and / simulation environment. (p. 6, A. Experimental Setup).
+3. Compare against the reported or matched baseline: We fine-tune the VLA models for robot action prediction, without weight freezing. (p. 6, A. Experimental Setup).
+4. Report the body metric with its denominator and aggregation: We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous tasks like laundry folding, and ... (p. 6, A. Experimental Setup).
+5. Re-run the reported ablation or stress/failure condition: We fine-tune the VLA models for robot action prediction, without weight freezing. (p. 6, A. Experimental Setup); if none is reported, design one around: We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures to help readers get a sense of the policy's capabilities (p. 18, B. Discussion of Alternative Compression Approaches).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 4 (B. The FAST Tokenization Algorithm); the primary result is directionally consistent at p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), match the reported outcome at p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), and measure the boundary at p. 18 (B. Discussion of Alternative Compression Approaches), p. 4 (1. INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 FAS, nple, effective mechanism이 We then compare 7 models trained with FAST tokenization to the state-of-the-art 79 flow-matching (diffusion) VLA, ... 대비 We report success rate on individual clothing items.을 개선하고, Even unsuccessful trials show sensible behavior, like approaching the handles of microwave and dish washer doors, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs.), does the paper-specific mechanism (1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive ...) retain the reported evaluation outcome (We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to ...) when tested against the paper's strongest explicit boundary (We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ... (p. 1, 1. INTRODUCTION).
+- **Paper-supported outcome:** We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous tasks like laundry folding, and ... (p. 6, A. Experimental Setup).
+- **Strongest explicit boundary:** We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures to help readers get a sense of the policy's capabilities (p. 18, B. Discussion of Alternative Compression Approaches).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

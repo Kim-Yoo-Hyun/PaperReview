@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/margolis23a.html; PDF retrieval source: https://arxiv.org/pdf/2212.03238. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/margolis23a.html; PDF retrieval source: https://arxiv.org/pdf/2212.03238. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | The observation space ot consists of joint positions and velocities qt, ˙qt (measured by joint encoders) and the gravity vector in the ... | p. 5 (3 Method), p. 6 (3 Method) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | 4 Experimental Results 4.1 Sim-to-Real Transfer and Gait Switching We deploy the controller learned in simulation in the real world and first ... | p. 6 (3 Method), p. 5 (3 Method) |
@@ -134,8 +134,17 @@ PDF body method statement (p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), temporal p. 4 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 8 (3 Method).
+- **Evidence anchors reviewed:** method p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), temporal p. 4 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 8 (3 Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference variables tt-H...t. (p. 5, 3 Method).
+- **Objective/update evidence:** This way, the agent is always rewarded for progress towards the task, more when auxiliary objectives are satisfied and less when they are not. (p. 5, 3 Method).
+- **Temporal/runtime evidence:** Taken together, the parameters θcmd can express all two-beat quadrupedal contact patterns; Figure 2 provides a visual illustration. f cmd is the stepping frequency expressed in Hz. (p. 4, 3 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

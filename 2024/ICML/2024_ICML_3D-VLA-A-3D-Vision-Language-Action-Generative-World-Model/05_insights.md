@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 3D-VLA: A 3D Vision-Language-Action Generative World Model Robot: Actions are: [action tokens] Robot Control Projector Image / Point Cloud Diffusion Model Initial State Goal State Robot: Sure!를 This generated goal state can then be fed back to our model to guide the robot control. • Our 3D-VLA can conduct a series of tasks, including goal generation (in terms of ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 FOR GOAL GENERATION To address the limitations of current diffusion models for goal generation in an embodied environment, we train RGBD to RGB-D and point-cloud to point-cloud diffusion models.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Thirdly, to better encode dynamics with our framework, we introduce the <scene> </scene> tokens to enclose the embeddings of a static scene.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We first pretrain the embodied diffusion models in terms of different modalities such as images, depths and point clouds, and then align the decoders of these diffusion models to the ... (p. 5, 4.3. Injecting Goal Generation Ability into 3D-VLA).
+- **Paper-specific mechanism:** To sum up, we have the following contributions: • We propose 3D-VLA, a new family of 3D vision-languageaction embodied foundation models that unify 3D perception, reasoning, and action with a ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 6. Evaluation of action planning on CALVIN dataset. matches the baseline performance in most tasks within the RLBench action prediction, showing its planning capability. It's worth noting that the ... (p. 8, Figure/Table caption); the relevant task/metric cue is In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance. (p. 7, 5.1. 3D Reasoning and Localization). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process. (p. 7, 5.2. Multi-modal Goal Generation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The tasks include 1) embodied QA on RoboVQA dataset (Sermanet et al., 2023); 2) task captioning on 11 Open-X datasets (Padalkar et al., 2023), where we input the initial and final scenes ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 2. Overview of our 3D-VLA pipeline. The left part shows our goal-generation capability. Our model can imagine the final state image and point cloud based on the user's input. This generated ....
-4. Report the body metric and its denominator/aggregation: In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance..
-5. Re-run the body-reported ablation/failure condition: Without 3D information, it is challenging for a robot to comprehend and execute the commands that require 3D spatial reasoning, such as "place the farthest cup into the middle drawer"..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We first pretrain the embodied diffusion models in terms of different modalities such as images, depths and point clouds, and then align the decoders of these diffusion models to the ... (p. 5, 4.3. Injecting Goal Generation Ability into 3D-VLA); preserve the objective/update rule: We minimize both the LLM and DM denoising loss. (p. 6, 4.3.2. BRIDGING LLM AND GOAL GENERATION).
+2. Use the paper-reported task/data/environment cue: We build several tasks on 3D embodied instruction tuning datasets for learning these abilities in the robotics domain. (p. 6, 5.1. 3D Reasoning and Localization).
+3. Compare against the reported or matched baseline: We implement these baselines in two ways: 1) zero-shot transfer where we test the released trained model on these new tasks; 2) held-in evaluation where we train the released model ... (p. 6, 5.1. 3D Reasoning and Localization).
+4. Report the body metric with its denominator and aggregation: In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance. (p. 7, 5.1. 3D Reasoning and Localization).
+5. Re-run the reported ablation or stress/failure condition: Localization results on held-in robotics datasets. of interaction, which require a greater level of reasoning and localization abilities. (p. 6, 5.1. 3D Reasoning and Localization); if none is reported, design one around: We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process. (p. 7, 5.2. Multi-modal Goal Generation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (4.3. Injecting Goal Generation Ability into 3D-VLA), p. 5 (4.2.2. INTERACTION TOKENS), p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reasoning and Localization), p. 3 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 5 (4.2.2. INTERACTION TOKENS), match the reported outcome at p. 8 (Figure/Table caption), p. 6 (5.1. 3D Reasoning and Localization), p. 6 (Figure/Table caption), and measure the boundary at p. 7 (5.2. Multi-modal Goal Generation), p. 7 (5.1. 3D Reasoning and Localization).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Thirdly, better, encode mechanism이 Figure 2. Overview of our 3D-VLA pipeline. The left part shows our goal-generation capability. Our model ... 대비 In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance.을 개선하고, FOR GOAL GENERATION To address the limitations of current diffusion models for goal generation in an ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We first pretrain the embodied diffusion models in terms of different modalities such as images, depths and point clouds, and then align ...), does the paper-specific mechanism (To sum up, we have the following contributions: • We propose 3D-VLA, a new family of 3D vision-languageaction embodied foundation models that ...) retain the reported evaluation outcome (In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance.) when tested against the paper's strongest explicit boundary (We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To sum up, we have the following contributions: • We propose 3D-VLA, a new family of 3D vision-languageaction embodied foundation models that unify 3D perception, reasoning, and action with a ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Table 6. Evaluation of action planning on CALVIN dataset. matches the baseline performance in most tasks within the RLBench action prediction, showing its planning capability. It's worth noting that the ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process. (p. 7, 5.2. Multi-modal Goal Generation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

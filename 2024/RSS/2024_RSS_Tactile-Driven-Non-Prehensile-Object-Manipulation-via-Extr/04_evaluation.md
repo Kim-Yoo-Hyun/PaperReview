@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS AND RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | While the current model yields satisfactory results, exploring higher-dimensional models with improved accuracy could further enhance performance. | p. 10 (V. EXPERIMENTS AND RESULTS) |
 | V. EXPERIMENTS AND RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our experiments show that the closedloop controllers achieve superior performance tracking the desired trajectories than the other tested control approaches. | p. 7 (V. EXPERIMENTS AND RESULTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This expansion would significantly broaden the applicability of our method to real-world manipulation tasks involving intricate object shapes and diverse robot motions. | embodiment, simulator version and control stack | p. 10 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS) |
 | Task/environment | By pursuing these future directions, we can unlock the full potential of our proposed framework, enabling robots with compliant membranes to perform even more ... | reset, timeout, object/scene variation | p. 10 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 - **p. 8 / V. EXPERIMENTS AND RESULTS - extractive body cue:** The desired contact mode is sticking contact between the grasped and extrinsic objects contacts, while the contact between the extrinsic object and the environment must ...
 - **p. 9 / V. EXPERIMENTS AND RESULTS - extractive body cue:** Additionally, we observed instances of slippage between the sensor and the grasped object, which violates the assumption of sticking contact between them.
 
-- **PDF anchors reviewed:** datasets p. 10 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), metrics p. 8 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), baselines p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), results p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS).
+- **Evidence anchors reviewed:** datasets p. 10 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), metrics p. 8 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), baselines p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), results p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** While the current model yields satisfactory results, exploring higher-dimensional models with improved accuracy could further enhance performance. (p. 10, V. EXPERIMENTS AND RESULTS).
+- **Metric evidence:** We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy for the pose tracking error. (p. 8, V. EXPERIMENTS AND RESULTS).
+- **Baseline/ablation evidence:** To ensure a fair comparison with the baseline methods, we evaluate two different versions of each: one with 100 QP queries and another with 1000 queries. (p. 9, V. EXPERIMENTS AND RESULTS).
+- **Failure/negative evidence:** Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques. (p. 10, V. EXPERIMENTS AND RESULTS).

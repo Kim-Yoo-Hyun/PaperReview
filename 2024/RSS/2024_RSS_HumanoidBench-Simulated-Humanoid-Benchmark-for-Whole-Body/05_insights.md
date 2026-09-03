@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 + Proprioceptive robot state (i, joint angles and velocities) and task-relevant environment observations (ie, object, poses and velocities)를 Although other sensory inputs are available from the environment, to investigate challenges in whole-body control of humanoid robots, we first focus on the state-based environment setup, where proprioceptive robot states and object ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In this subsection, we remark on notable challenges and com- ‘mon failures for some representative tasks in our benchmark, which denote the challenge in learning with high-dimensional action spaces and limited planning ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To accelerate the progress of research for humanoid robots, We present the first-of-its-kind humanoid robot benchmark, HumanoidBench, with a diverse set of locomotion and manipulation tasks.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** ACM Transactions on policy optimisation. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Paper-specific mechanism:** [3] Firas Al-Hafez, Guoping Zhao, Jan Peters, and Davide We presented HumanoidBench, a high-dimensional hu- Tateo. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Evidence boundary:** the reported outcome is The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of hands, with their additional rewards, and for each of these we provide ... (p. 1, V. B ENCHMARKING R ESULTS); the relevant task/metric cue is The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of hands, with their additional rewards, and for each of these we provide ... (p. 1, V. B ENCHMARKING R ESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Mobility Fellowship 211086, ONR MURI N00014-22-1-2773, Common Failure on door. (p. 1, V. B ENCHMARKING R ESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To identify the challenges in learning with humanoid robots, we benchmark reinforcement learning (RL) algorithms on HumanoidBench, which promises for robots to learn from.
-3. Compare against the body-reported baseline or a matched simpler baseline: In Figure 9, our hierarchical architecture significantly outperforms the flat, end-to-end baselines on the push task, achieving very high success rates ‘with DreamerV3..
-4. Report the body metric and its denominator/aggregation: We only run PPO on a subset of tasks (walk, kitchen, door, package), given its inferior performance without massive parallelization, Each of the environments is evaluated with a combination of dense rewards ....
-5. Re-run the body-reported ablation/failure condition: 7: Performance with and without dexterous hands..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: ACM Transactions on policy optimisation. (p. 1, V. B ENCHMARKING R ESULTS); preserve the objective/update rule: All the policies barely learn to stabilize using the dense reward, but struggle to learn any complex no constraints on how to obtain both low-level and high-level manipulation skills. policies. (p. 1, V. B ENCHMARKING R ESULTS).
+2. Use the paper-reported task/data/environment cue: This motivates us are limited to quasi-static, short-horizon skills, having focused to implement a comprehensive simulated humanoid benchmark on tasks like picking and placing [7, 24, 70, 64, 37], in-hand ... (p. 1, II. R ELATED W ORK).
+3. Compare against the reported or matched baseline: In Figure 9, our hierarchical MJX8 , which enables training PPO on thousands of parallel architecture significantly outperforms the flat, end-to-end environments. baselines on the push task, achieving very high ... (p. 1, V. B ENCHMARKING R ESULTS).
+4. Report the body metric with its denominator and aggregation: The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of hands, with their additional rewards, and for each of these we provide ... (p. 1, V. B ENCHMARKING R ESULTS).
+5. Re-run the reported ablation or stress/failure condition: 7: Performance with and without dexterous hands. (p. 1, V. B ENCHMARKING R ESULTS); if none is reported, design one around: Mobility Fellowship 211086, ONR MURI N00014-22-1-2773, Common Failure on door. (p. 1, V. B ENCHMARKING R ESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 9 (B. Results), p. 9 (B. Results), p. 8 (B. Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (V. B ENCHMARKING R ESULTS), p. 1 (Abstract), match the reported outcome at p. 1 (V. B ENCHMARKING R ESULTS), p. 1 (V. B ENCHMARKING R ESULTS), p. 1 (Abstract), and measure the boundary at p. 1 (V. B ENCHMARKING R ESULTS), p. 1 (V. B ENCHMARKING R ESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 accelerate, progress, research mechanism이 In Figure 9, our hierarchical architecture significantly outperforms the flat, end-to-end baselines on the push task, ... 대비 We only run PPO on a subset of tasks (walk, kitchen, door, package), given its inferior performance without ...을 개선하고, In this subsection, we remark on notable challenges and com- ‘mon failures for some representative tasks ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (ACM Transactions on policy optimisation.), does the paper-specific mechanism ([3] Firas Al-Hafez, Guoping Zhao, Jan Peters, and Davide We presented HumanoidBench, a high-dimensional hu- Tateo.) retain the reported evaluation outcome (The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of ...) when tested against the paper's strongest explicit boundary (Mobility Fellowship 211086, ONR MURI N00014-22-1-2773, Common Failure on door.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (1 pages; pdftotext fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** [3] Firas Al-Hafez, Guoping Zhao, Jan Peters, and Davide We presented HumanoidBench, a high-dimensional hu- Tateo. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Paper-supported outcome:** The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of hands, with their additional rewards, and for each of these we provide ... (p. 1, V. B ENCHMARKING R ESULTS).
+- **Strongest explicit boundary:** Mobility Fellowship 211086, ONR MURI N00014-22-1-2773, Common Failure on door. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

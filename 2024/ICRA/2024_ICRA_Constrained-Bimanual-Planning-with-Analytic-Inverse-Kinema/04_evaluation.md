@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.08770; PDF retrieval source: https://arxiv.org/pdf/2309.08770. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.08770; PDF retrieval source: https://arxiv.org/pdf/2309.08770. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,55 +10,55 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 
 ## Evaluation Body Digest
 
-- **p. 6 / IV. RESULTS - extractive PDF cue:** GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** 4: Robot configurations sampled from various IRIS regions. average path length and planning time.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** To evaluate the merits of our IK parametrization for constrained planning, we consider a task where the two arms must move an object around a ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Constrained Trajectory Optimization.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** (c) A region that represents varying grasp distances, in addition to collision-free configurations in the shelf (not shown).
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** We use the analytic IK map presented in [42].
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Paths marked with an asterisk were not collision-free.
+- **p. 6 / IV. RESULTS - extractive body cue:** GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video.
+- **p. 6 / IV. RESULTS - extractive body cue:** 4: Robot configurations sampled from various IRIS regions. average path length and planning time.
+- **p. 5 / IV. RESULTS - extractive body cue:** To evaluate the merits of our IK parametrization for constrained planning, we consider a task where the two arms must move an object around a ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Constrained Trajectory Optimization.
+- **p. 6 / IV. RESULTS - extractive body cue:** (c) A region that represents varying grasp distances, in addition to collision-free configurations in the shelf (not shown).
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
+- **p. 5 / IV. RESULTS - extractive body cue:** We use the analytic IK map presented in [42].
+- **p. 5 / IV. RESULTS - extractive body cue:** Paths marked with an asterisk were not collision-free.
 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** robot mechanism의 state와 task-space dynamics.
-- **Input boundary:** joint/task state, reference와 sensor feedback.
-- **Output/decision under evaluation:** torque, force, velocity 또는 position command.
-- **Primary target:** tracking, stability, constraint satisfaction과 contact behavior.
+- **Target system/task:** graph, configuration space 또는 task-and-motion planning domain.
+- **Input boundary:** start/goal, map, dynamics와 successor/operator description.
+- **Output/decision under evaluation:** feasible action sequence 또는 minimum-cost plan.
+- **Primary target:** path cost, goal reachability, feasibility와 computation.
 - **Detected evaluation headings:** IV. RESULTS (p. 5).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | AtlasBiRRT runtimes were only averaged over successful runs (not including timeouts). | p. 5 (IV. RESULTS) |
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video. | p. 6 (IV. RESULTS) |
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / IV. RESULTS - extractive PDF cue:** GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** 4: Robot configurations sampled from various IRIS regions. average path length and planning time.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** To evaluate the merits of our IK parametrization for constrained planning, we consider a task where the two arms must move an object around a ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Constrained Trajectory Optimization.
+- **p. 6 / IV. RESULTS - extractive body cue:** GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video.
+- **p. 6 / IV. RESULTS - extractive body cue:** 4: Robot configurations sampled from various IRIS regions. average path length and planning time.
+- **p. 5 / IV. RESULTS - extractive body cue:** To evaluate the merits of our IK parametrization for constrained planning, we consider a task where the two arms must move an object around a ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Constrained Trajectory Optimization.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: A high level description of our parametrization. The controlled arm can move freely, and analytic IK is used to position the subordinate arm ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Continuous (left) and discrete (right) self-motions of a 7DoF arm. The continuous self-motion yields an additional degree of freedom for the planner to ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: Robot configurations sampled from various IRIS regions. average path length and planning time. We set a maximum planning time of 10 minutes for ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: A high level description of our parametrization. The controlled arm can move freely, and analytic IK is used to position the subordinate arm ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Continuous (left) and discrete (right) self-motions of a 7DoF arm. The continuous self-motion yields an additional degree of freedom for the planner to ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Robot configurations sampled from various IRIS regions. average path length and planning time. We set a maximum planning time of 10 minutes for ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video. | embodiment, simulator version and control stack | p. 6 (IV. RESULTS), p. 6 (IV. RESULTS) |
 | Task/environment | 4: Robot configurations sampled from various IRIS regions. average path length and planning time. | reset, timeout, object/scene variation | p. 6 (IV. RESULTS), p. 5 (IV. RESULTS) |
-| Observation/sensor | joint/task state, reference와 sensor feedback | calibration, preprocessing, privileged input | p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
-| Output/decision | torque, force, velocity 또는 position command | action frame, controller and termination | p. 3 (III. METHODOLOGY), p. 1 (I. INTRODUCTION) |
+| Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
+| Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 3 (III. METHODOLOGY), p. 1 (I. INTRODUCTION) |
 
 ## Metrics and Success Definition
 
@@ -100,7 +100,7 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 | Primary metric/result | GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video. | numeric claim only at cited anchor | p. 6 (IV. RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** (If n = 6, then the Mi are zero-dimensional, i.e., discrete points.) Examples of the continuous and discrete self motions for a 7DoF arm are ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** (If n = 6, then the Mi are zero-dimensional, i.e., discrete points.) Examples of the continuous and discrete self motions for a 7DoF arm are ...
 
 ## Generalization and Failure Cases
 
@@ -136,13 +136,13 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 
 ## Limitations and Verification Questions
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Paths marked with an asterisk were not collision-free.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Plans from the trajectory optimization baseline also had slight collisions with obstacles.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** (c) A region that represents varying grasp distances, in addition to collision-free configurations in the shelf (not shown).
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: Robot configurations sampled from various IRIS regions. average path length and planning time. We set a maximum planning time of 10 minutes for ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Paths marked with an asterisk were not collision-free.
+- **p. 5 / IV. RESULTS - extractive body cue:** Plans from the trajectory optimization baseline also had slight collisions with obstacles.
+- **p. 6 / IV. RESULTS - extractive body cue:** (c) A region that represents varying grasp distances, in addition to collision-free configurations in the shelf (not shown).
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Robot configurations sampled from various IRIS regions. average path length and planning time. We set a maximum planning time of 10 minutes for ...
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), metrics p. 6 (IV. RESULTS), p. 1 (Figure/Table caption), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), baselines p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), results p. 5 (IV. RESULTS), p. 6 (IV. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), metrics p. 6 (IV. RESULTS), p. 1 (Figure/Table caption), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), baselines p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), results p. 5 (IV. RESULTS), p. 6 (IV. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

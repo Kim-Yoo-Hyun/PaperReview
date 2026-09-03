@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Experiments and Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Without object segmentation, R-NDFs achieve zero success rates due to the lack of locality in their method design [15, 37, 61]. | p. 6 (5. Experiments and Results) |
 | 5. Experiments and Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | In particular, we measure the pick-andplace success rate for two different object categories: mugs and bottles (see Fig. | p. 6 (5. Experiments and Results) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The mug-on-a-hanger task is similar to the one in the simulation benchmark. | embodiment, simulator version and control stack | p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results) |
 | Task/environment | Diffusion-EDFs successfully learned to solve this task from only ten human demonstrations, demonstrating their ability to perform 1) accurate 6DoF manipulation tasks with 2) ... | reset, timeout, object/scene variation | p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 - **p. 6 / 5. Experiments and Results - extractive body cue:** In particular, the baseline models completely fail with unsegmented observations.
 - **p. 7 / 5. Experiments and Results - extractive body cue:** Pick-and-place success rates in various out-of-distribution settings in simulated environment.
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 5 (4.1. Diffusion Origin Selection Mechanism), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), metrics p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 2 (Figure/Table caption), p. 7 (5. Experiments and Results), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), baselines p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 5 (4.1. Diffusion Origin Selection Mechanism), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), results p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 5 (4.1. Diffusion Origin Selection Mechanism), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), metrics p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 2 (Figure/Table caption), p. 7 (5. Experiments and Results), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), baselines p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 5 (4.1. Diffusion Origin Selection Mechanism), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), results p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results).
+- **Metric evidence:** On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results).
+- **Baseline/ablation evidence:** 1, Diffusion-EDFs consistently outperform both the SE(3)-equivariant baseline (R-NDFs [68]) and diffusion model baseline (SE(3)-DiffusionFields [75]) in almost all scenarios, despite not being provided with pre-training or segmented inputs. (p. 6, 5. Experiments and Results).
+- **Failure/negative evidence:** In this task, even a minor error of a centimeter can result in complete failure due to noisy observation and the small size of mug handles. (p. 6, 5. Experiments and Results).

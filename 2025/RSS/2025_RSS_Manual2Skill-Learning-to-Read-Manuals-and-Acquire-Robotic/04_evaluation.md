@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p150.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p150.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p150.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p150.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C. Overall Performance Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks. | p. 9 (C. Overall Performance Evaluation) |
 | C. Overall Performance Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework. | p. 8 (C. Overall Performance Evaluation) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding ... | embodiment, simulator version and control stack | p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation) |
 | Task/environment | Note that, in this experiment, wwe focus on object-centric motion planning and omit robotic ‘execution in our framework | reset, timeout, object/scene variation | p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 - **p. 16 / B. Pose Estimation Implementation - extractive body cue:** Manually inspecting each assembly plan reveals common failure modes: the VLM frequently misidentifies parts (e.g. labeling a bench seat as a "tabletop"), generates physically plausible ...
 - **p. 17 / B. Pose Estimation Implementation - extractive body cue:** We analyze the faire cases in assembly graph generation mek os The most ffequent failure modes inchude: (1) The VLM a ae]
 
-- **PDF anchors reviewed:** datasets p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 17 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation), metrics p. 16 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), baselines p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), results p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation).
+- **Evidence anchors reviewed:** datasets p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 17 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation), metrics p. 16 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), baselines p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), results p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks. (p. 9, C. Overall Performance Evaluation).
+- **Metric evidence:** Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework. (p. 8, C. Overall Performance Evaluation).
+- **Baseline/ablation evidence:** As the first to propose a comprehensive pipeline for furniture assembly, there is no direct baseline for comparison, So we design a baseline method that uses previous work [29] to ... (p. 8, C. Overall Performance Evaluation).
+- **Failure/negative evidence:** Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping ... (p. 9, C. Overall Performance Evaluation).

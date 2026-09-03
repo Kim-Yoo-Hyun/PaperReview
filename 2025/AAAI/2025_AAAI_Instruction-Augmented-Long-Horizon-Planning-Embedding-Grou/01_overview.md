@@ -1,8 +1,10 @@
 # Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33610.
-> PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33610. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33610.
+> PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33610. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / AAAI
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/33610
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Planning and control의 mobile_manipulation 문제를 이해하기 위해 읽는
 ## Why Read It
 
 Planning and control의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 Planning failures occur when the planner fails to generate the correct action sequence.를 문제로 두고, This library consists of four promptable predicates that can be addressed through prompt engineering based on the reasoning ability of state-of-the-art LLMs, such as holding and on, and six predicates determined by ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 7 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** If even one skill fails, then the entire action sequence fails. (p. 3, Problem Formulation).
+- **Actual contribution:** To address these limitations, we present the Instruction-Augmented Long-Horizon Planning (IALP) system, a novel framework that employs LLMs to generate feasible and optimal actions based on real-time sensor feedback, including ... (p. 1, Abstract).
+- **Evaluation boundary:** Figure 7: All failure cases of predicate checking in the real- world experiments across five long-horizon tasks. recorded the success cases of the LLM planner generating executable actions, as shown ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** Planning failures occur when the planner fails to generate the correct action sequence. (p. 7, Problem Formulation).

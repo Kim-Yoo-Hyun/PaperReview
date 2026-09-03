@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610421/; PDF retrieval source: https://arxiv.org/pdf/2310.15145. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610421/; PDF retrieval source: https://arxiv.org/pdf/2310.15145. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -22,8 +22,8 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 ## Design Rationale
 
 - **p. 3 / III. PRELIMINARIES - extractive body cue:** Our method assumes access to a prior dataset Dprior = ∪N j=1Dj = ∪N j=1{(sj i, aj i, s′j i )}K i=1, which consists of ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a system that enables autonomous and efficient real-world robot learning.
 - **p. 1 / Abstract - extractive body cue:** In a diverse set of five real robot manipulation tasks, we show that our method can incorporate data from an existing robot dataset collected at ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, our goal is to address these two challenges and develop a practical framework that enables robot fine-tuning with minimal time and human ...
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Fixed-data support | 온라인 탐색 없이 transition/action 분포를 정의한다 | offline trajectories와 metadata | dataset support, behavior distribution과 task return을 정리 | training batch/support | The policy then takes as inputs a concatenation of the encoded image observation ϕ(simg), task representation z, and proprioceptive information sp, processes ... | p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION) |
 | Value / uncertainty update | dataset 밖 action의 과대추정을 억제한다 | batch transition과 value parameters | conservative, implicit, uncertainty 또는 behavior-regularized update를 수행 | Q/V/uncertainty estimate | Pretraining a policy with offline reinforcement learning and then fine-tuning it with online reinforcement learning is a natural way to implement this ... | p. 1 (I. INTRODUCTION), p. 4 (IV. ROBOFUME) |
@@ -51,11 +51,11 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 - **p. 4 / IV. ROBOFUME - extractive body cue:** The VLM outputs a sparse binary reward, returning success if the ‘yes' token has a higher probability than ‘no' token.
 - **p. 3 / IV. ROBOFUME - extractive body cue:** The encoder ϕ is a 4-layer CNN, and is optimized exclusively against the critic loss.
 - **p. 3 / IV. ROBOFUME - extractive body cue:** The weight of the BC regularization term is chosen such that the scales of the RL loss and the BC loss are similar throughout the ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Then, we fine-tune the pre-trained policy online reset-free with the VLM reward model.
 - **p. 1 / Abstract - extractive body cue:** We also demonstrate in simulation experiments that our method outperforms prior works that use different RL algorithms or different approaches for predicting rewards.
-- **p. 1 / Abstract - extractive body cue:** However, reinforcement learning often requires significant human effort in the form of manual reward specification or environment resets, even if the policy is pre-trained.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Meanwhile, the agent uses the pre-trained VLM model as a surrogate reward for updating the policy.
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
-- **Equation/algorithm anchors:** p. 3 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 4 (IV. ROBOFUME), p. 4 (IV. ROBOFUME).
+- **Equation/algorithm anchors:** p. 3 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 1 (Body text (section boundary not confidently recovered)), p. 4 (IV. ROBOFUME), p. 4 (IV. ROBOFUME).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -64,7 +64,7 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 |---|---|---|---|
 | Input/observation | policy, then, takes, inputs, concatenation, encoded, image, observation, simg, task, representation, proprioceptive, information, processes | dataset state/observation, action, reward와 return-to-go | body cue; exact tensor/frame verify |
 | State/latent | policy, then, takes, inputs, concatenation, encoded, image, observation, simg, task | Q/value 또는 sequence-policy state | body cue; notation verify |
-| Action/output | assumes, access, prior, dataset, Dprior, consists, demonstrations, different, tasks, diverse | dataset-supported action sequence | body cue; unit/decoder verify |
+| Action/output | assumes, access, prior, dataset, Dprior, consists, demonstrations, different, tasks, system | dataset-supported action sequence | body cue; unit/decoder verify |
 | Objective/constraint | VLM, outputs, sparse, binary, reward, returning, success, token, higher, probability | offline value with OOD control | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 |---|---|---|---|
 | Horizon | offline trajectory/discounted return horizon; deployment horizon과 분리한다. | For all methods that require online experience, we reset the environment every 1,000 environment steps, i.e. every 25 episodes of interactions. | episode/sequence/action-chunk boundary |
 | Rate / latency | training은 batch update, inference는 environment control tick; exact values 확인 필요. | Our method significantly improves over both offline-only and BC performance after 30k steps of online interaction (2-4 hours). | Hz/fps, inference time and control rate |
-| Memory | fixed dataset, value/policy parameters와 optional context/history. | not recovered | window and reset |
+| Memory | fixed dataset, value/policy parameters와 optional context/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | For all methods that require online experience, we reset the environment every 1,000 environment steps, i.e. every 25 episodes of interactions. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -135,8 +135,17 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV. ROBOFUME), p. 4 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 3 (IV. ROBOFUME), objective p. 4 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 1 (Abstract), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 2 (II. RELATED WORK), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV. ROBOFUME), p. 4 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 3 (IV. ROBOFUME), objective p. 4 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 2 (II. RELATED WORK), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The policy then takes as inputs a concatenation of the encoded image observation ϕ(simg), task representation z, and proprioceptive information sp, processes the concatenated vector through an MLP, and produces ... (p. 3, IV. ROBOFUME).
+- **Objective/update evidence:** The encoder ϕ is a 4-layer CNN, and is optimized exclusively against the critic loss. (p. 3, IV. ROBOFUME).
+- **Temporal/runtime evidence:** For all methods that require online experience, we reset the environment every 1,000 environment steps, i.e. every 25 episodes of interactions. (p. 5, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

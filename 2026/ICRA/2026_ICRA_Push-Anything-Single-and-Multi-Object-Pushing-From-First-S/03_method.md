@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.19974; PDF retrieval source: https://arxiv.org/pdf/2510.19974. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.19974; PDF retrieval source: https://arxiv.org/pdf/2510.19974. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A
 
 ## Method Body Digest
 
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** Hybrid models capture these behaviors by switching dynamics depending on the active contact mode.
-- **p. 4 / IV. METHODS - extractive PDF cue:** While using linearized terms, this model preserves the multi-modal nature of contact dynamics through the complementarity constraint (3b).
-- **p. 4 / IV. METHODS - extractive PDF cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
-- **p. 6 / IV. METHODS - extractive PDF cue:** We note that the concurrent work [15] independently developed an approach similar to C3+, though in the context of an inverse dynamics controller.
-- **p. 5 / IV. METHODS - extractive PDF cue:** While this could theoretically be applied to all contacts, in
-- **p. 5 / IV. METHODS - extractive PDF cue:** Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup.
-- **p. 4 / IV. METHODS - extractive PDF cue:** Combining this LCS model with a standard quadratic cost function yields a Quadratic Program with Complementarity Constraints (QPCC), a well-known class of non-convex optimization problems ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** Hybrid models capture these behaviors by switching dynamics depending on the active contact mode.
+- **p. 4 / IV. METHODS - extractive body cue:** While using linearized terms, this model preserves the multi-modal nature of contact dynamics through the complementarity constraint (3b).
+- **p. 4 / IV. METHODS - extractive body cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
+- **p. 6 / IV. METHODS - extractive body cue:** We note that the concurrent work [15] independently developed an approach similar to C3+, though in the context of an inverse dynamics controller.
+- **p. 5 / IV. METHODS - extractive body cue:** While this could theoretically be applied to all contacts, in
+- **p. 5 / IV. METHODS - extractive body cue:** Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup.
+- **p. 4 / IV. METHODS - extractive body cue:** Combining this LCS model with a standard quadratic cost function yields a Quadratic Program with Complementarity Constraints (QPCC), a well-known class of non-convex optimization problems ...
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** We introduce Push Anything, a manipulation pipeline for real-time planar pushing of a wide variety of objects, including multi-object scenes.
-- **p. 3 / IV. METHODS - extractive PDF cue:** Our framework operates in two phases.
-- **p. 3 / IV. METHODS - extractive PDF cue:** We present the Push Anything framework (Fig.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We introduce Push Anything, a manipulation pipeline for real-time planar pushing of a wide variety of objects, including multi-object scenes.
+- **p. 3 / IV. METHODS - extractive body cue:** Our framework operates in two phases.
+- **p. 3 / IV. METHODS - extractive body cue:** We present the Push Anything framework (Fig.
 
 ## Source Evidence Cues
 
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** Hybrid models capture these behaviors by switching dynamics depending on the active contact mode.
-- **p. 4 / IV. METHODS - extractive PDF cue:** While using linearized terms, this model preserves the multi-modal nature of contact dynamics through the complementarity constraint (3b).
-- **p. 4 / IV. METHODS - extractive PDF cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
-- **p. 6 / IV. METHODS - extractive PDF cue:** We note that the concurrent work [15] independently developed an approach similar to C3+, though in the context of an inverse dynamics controller.
-- **p. 5 / IV. METHODS - extractive PDF cue:** While this could theoretically be applied to all contacts, in
-- **p. 5 / IV. METHODS - extractive PDF cue:** Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup.
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** Hybrid models capture these behaviors by switching dynamics depending on the active contact mode.
+- **p. 4 / IV. METHODS - extractive body cue:** While using linearized terms, this model preserves the multi-modal nature of contact dynamics through the complementarity constraint (3b).
+- **p. 4 / IV. METHODS - extractive body cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
+- **p. 6 / IV. METHODS - extractive body cue:** We note that the concurrent work [15] independently developed an approach similar to C3+, though in the context of an inverse dynamics controller.
+- **p. 5 / IV. METHODS - extractive body cue:** While this could theoretically be applied to all contacts, in
+- **p. 5 / IV. METHODS - extractive body cue:** Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup.
 - **Detected method headings:** A. Hybrid Models for Contact Dynamics (p. 3); IV. METHODS (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / error representation | motion·force 목표를 제어 error로 바꾼다 | joint/task state, reference, wrench | task frame, Jacobian, impedance, selection 또는 error coordinates를 구성 | desired task command | A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) ... | p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A. Hybrid Models for Contact Dynamics) |
 | Dynamics / constraint solve | 목표를 feasible actuator command로 바꾼다 | error, model, constraints | inverse dynamics, QP, MPC, operational mapping 또는 feedback law를 계산 | torque, force, velocity 또는 position command | Hybrid models capture these behaviors by switching dynamics depending on the active contact mode. | p. 3 (A. Hybrid Models for Contact Dynamics), p. 4 (IV. METHODS) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A
 
 ## Objective / Update Rule
 
-- **p. 4 / IV. METHODS - extractive PDF cue:** Combining this LCS model with a standard quadratic cost function yields a Quadratic Program with Complementarity Constraints (QPCC), a well-known class of non-convex optimization problems ...
-- **p. 4 / IV. METHODS - extractive PDF cue:** (6) Here, zT = [zT 0 , zT 1 , ..., zT N-1], δT = [δT 0 , δT 1 , ..., δT N-1], c(z) ...
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** This increases the number of variables and constraints, but often leads to better-conditioned problems. min x0:N,u0:N-1,λ0:N-1 N-1 X k=0 ℓ(xk, uk) + ℓf(xN) (2a) s.t. ...
-- **p. 5 / IV. METHODS - extractive PDF cue:** (10) Unlike C3, C3+ augments the set D with an additional linear equality constraint on ηk as given in (5c).
-- **p. 5 / IV. METHODS - extractive PDF cue:** The introduction of a slack variable means that the non-convex component, the complementarity constraint, becomes decoupled across contacts.
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** Different end effector positions are shown with their associated MPC costs.
+- **p. 4 / IV. METHODS - extractive body cue:** Combining this LCS model with a standard quadratic cost function yields a Quadratic Program with Complementarity Constraints (QPCC), a well-known class of non-convex optimization problems ...
+- **p. 4 / IV. METHODS - extractive body cue:** (6) Here, zT = [zT 0 , zT 1 , ..., zT N-1], δT = [δT 0 , δT 1 , ..., δT N-1], c(z) ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** This increases the number of variables and constraints, but often leads to better-conditioned problems. min x0:N,u0:N-1,λ0:N-1 N-1 X k=0 ℓ(xk, uk) + ℓf(xN) (2a) s.t. ...
+- **p. 5 / IV. METHODS - extractive body cue:** (10) Unlike C3, C3+ augments the set D with an additional linear equality constraint on ηk as given in (5c).
+- **p. 5 / IV. METHODS - extractive body cue:** The introduction of a slack variable means that the non-convex component, the complementarity constraint, becomes decoupled across contacts.
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** Different end effector positions are shown with their associated MPC costs.
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 3 (A. Hybrid Models for Contact Dynamics), p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 5 (IV. METHODS), p. 3 (A. Hybrid Models for Contact Dynamics), p. 5 (IV. METHODS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A
 
 ## Observation–State–Action Interface
 
-- **p. 4 / IV. METHODS - extractive PDF cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** This increases the number of variables and constraints, but often leads to better-conditioned problems. min x0:N,u0:N-1,λ0:N-1 N-1 X k=0 ℓ(xk, uk) + ℓf(xN) (2a) s.t. ...
-- **p. 4 / IV. METHODS - extractive PDF cue:** To do so efficiently, we approximate (1) by linearizing f and Φ with respect to x, u, and λ, where x comprises of the current ...
-- **p. 5 / IV. METHODS - extractive PDF cue:** Additionally, we terminate after the quadratic step, as empirical observations indicate this yields better performance.
-- **p. 5 / IV. METHODS - extractive PDF cue:** For each timestep, the task is to project the output from the first step onto the simple complementarity set Hk: min δk ∥δk -(zi+1 k ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Moreover, tasks involving complex multi-object interactions, such as resolving cluttered scenes, remain intractable for prior CIMPC methods as problem complexity grows exponentially with the number ...
+- **p. 4 / IV. METHODS - extractive body cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** This increases the number of variables and constraints, but often leads to better-conditioned problems. min x0:N,u0:N-1,λ0:N-1 N-1 X k=0 ℓ(xk, uk) + ℓf(xN) (2a) s.t. ...
+- **p. 4 / IV. METHODS - extractive body cue:** To do so efficiently, we approximate (1) by linearizing f and Φ with respect to x, u, and λ, where x comprises of the current ...
+- **p. 5 / IV. METHODS - extractive body cue:** Additionally, we terminate after the quadratic step, as empirical observations indicate this yields better performance.
+- **p. 5 / IV. METHODS - extractive body cue:** For each timestep, the task is to project the output from the first step onto the simple complementarity set Hk: min δk ∥δk -(zi+1 k ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Moreover, tasks involving complex multi-object interactions, such as resolving cluttered scenes, remain intractable for prior CIMPC methods as problem complexity grows exponentially with the number ...
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,11 +90,11 @@ PDF body method statement (p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A
 
 ## Training vs Inference
 
-- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive PDF cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
-- **p. 4 / IV. METHODS - extractive PDF cue:** While using linearized terms, this model preserves the multi-modal nature of contact dynamics through the complementarity constraint (3b).
-- **p. 4 / IV. METHODS - extractive PDF cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
-- **p. 3 / IV. METHODS - extractive PDF cue:** In the online phase, our controller uses robot and object state estimates to compute end effector trajectories.
-- **p. 4 / IV. METHODS - extractive PDF cue:** (6) Here, zT = [zT 0 , zT 1 , ..., zT N-1], δT = [δT 0 , δT 1 , ..., δT N-1], c(z) ...
+- **p. 3 / A. Hybrid Models for Contact Dynamics - extractive body cue:** A compact representation for contact dynamics uses complementarity constraints: xk+1 = f(xk, uk, λk), (1a) 0 ≤λk ⊥Φ(xk, uk, λk) ≥0, (1b) where xk ∈Rnx ...
+- **p. 4 / IV. METHODS - extractive body cue:** While using linearized terms, this model preserves the multi-modal nature of contact dynamics through the complementarity constraint (3b).
+- **p. 4 / IV. METHODS - extractive body cue:** The set D comprises all feasible z satisfying the coupled constraints across time: the linear dynamics (5b), the slack-variable equality (5c), and initial and state/input ...
+- **p. 3 / IV. METHODS - extractive body cue:** In the online phase, our controller uses robot and object state estimates to compute end effector trajectories.
+- **p. 4 / IV. METHODS - extractive body cue:** (6) Here, zT = [zT 0 , zT 1 , ..., zT N-1], δT = [δT 0 , δT 1 , ..., δT N-1], c(z) ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,11 +114,11 @@ PDF body method statement (p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A
 
 ## Failure and Ablation Link
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 7. Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup. As defined below and illustrated in Fig. 5, ...
-- **p. 7 / VI. LIMITATIONS AND FUTURE WORK - extractive PDF cue:** Another limitation is we model all objects with identical mass and inertia.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** All failures occurred when an object moved beyond the robot's reach.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** We predefine contact geometries, but contact point pairs and their corresponding normals are determined dynamically via collision detection at each control loop.
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 7. Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup. As defined below and illustrated in Fig. 5, ...
+- **p. 7 / VI. LIMITATIONS AND FUTURE WORK - extractive body cue:** Another limitation is we model all objects with identical mass and inertia.
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** All failures occurred when an object moved beyond the robot's reach.
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** We predefine contact geometries, but contact point pairs and their corresponding normals are determined dynamically via collision detection at each control loop.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A. Hybrid Models for Contact Dynamics), p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 6 (IV. METHODS), p. 5 (IV. METHODS), objective p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 3 (A. Hybrid Models for Contact Dynamics), p. 5 (IV. METHODS), p. 5 (IV. METHODS), p. 3 (A. Hybrid Models for Contact Dynamics), temporal p. 7 (V. HARDWARE EXPERIMENTS), p. 4 (IV. METHODS), p. 6 (V. HARDWARE EXPERIMENTS), p. 5 (IV. METHODS), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODS).
+- **Evidence anchors reviewed:** method p. 3 (A. Hybrid Models for Contact Dynamics), p. 3 (A. Hybrid Models for Contact Dynamics), p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 6 (IV. METHODS), p. 5 (IV. METHODS), objective p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 3 (A. Hybrid Models for Contact Dynamics), p. 5 (IV. METHODS), p. 5 (IV. METHODS), p. 3 (A. Hybrid Models for Contact Dynamics), temporal p. 7 (V. HARDWARE EXPERIMENTS), p. 4 (IV. METHODS), p. 6 (V. HARDWARE EXPERIMENTS), p. 5 (IV. METHODS), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

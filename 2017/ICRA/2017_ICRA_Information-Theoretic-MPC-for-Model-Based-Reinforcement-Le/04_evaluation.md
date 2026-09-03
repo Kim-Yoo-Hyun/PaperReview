@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/7989202/; PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/7989202/; PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. SIMULATED RESULTS | EMPIRICAL / SIMULATION | After one iteration, the algorithm achieves the same level of performance regardless of which network is being used. | p. 5 (V. SIMULATED RESULTS) |
 | V. SIMULATED RESULTS | EMPIRICAL / SIMULATION | The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates ... | p. 6 (V. SIMULATED RESULTS) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The bootstrapping dataset for the cart-pole comes from 5 minutes of multiple MPPI demonstrations using known dynamics but a different cost function for the ... | embodiment, simulator version and control stack | p. 5 (V. SIMULATED RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS) |
 | Task/environment | Bootstrapping Dataset To train an initial model, we collected a system identification dataset of approximately 30 minutes of humancontrolled driving at speeds varying between ... | reset, timeout, object/scene variation | p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS) |
@@ -157,7 +157,16 @@ PDF body evaluation/result cue (p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED 
 - **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Slip 10 m/s 10.34 9.93 8.05 38.68 11 m/s 9.97 9.43 8.71 34.65 12 m/s 9.88 9.47 8.63 43.72 13 m/s 9.74 9.36 8.44 48.70 ...
 - **p. 5 / V. SIMULATED RESULTS - extractive body cue:** The temperature was set as λ = 1 and the system noise to (2.5, .25, .25, .25), where the 2.5 value corresponds to the thrust ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. SIMULATED RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 5 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), metrics p. 6 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 5 (V. SIMULATED RESULTS), p. 5 (V. SIMULATED RESULTS), baselines p. 6 (VI. EXPERIMENTAL RESULTS), p. 5 (V. SIMULATED RESULTS), results p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. SIMULATED RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 5 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), metrics p. 6 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 5 (V. SIMULATED RESULTS), p. 5 (V. SIMULATED RESULTS), baselines p. 6 (VI. EXPERIMENTAL RESULTS), p. 5 (V. SIMULATED RESULTS), results p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS).
+- **Metric evidence:** The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS).
+- **Baseline/ablation evidence:** Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).
+- **Failure/negative evidence:** Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).

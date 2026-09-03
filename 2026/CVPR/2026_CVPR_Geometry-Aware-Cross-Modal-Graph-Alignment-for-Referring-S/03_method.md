@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,29 +10,29 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 
 ## Method Body Digest
 
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Instead of treating text as a purely semantic signal, we expand the input description with position-aware prompts to derive a semantic-spatial graph that captures relational ...
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** Therefore, a principled geometric abstraction is required to elevate Gaussian primitives into an object-level relational representation that supports explicit spatial reasoning.
-- **p. 3 / 3. Problem Statement and Notations - extractive PDF cue:** Language-Guided 3D Referring Segmentation.
-- **p. 3 / 3. Problem Statement and Notations - extractive PDF cue:** While this framework enables basic language-to-geometry grounding, its spatial reasoning capability remains limited, as analyzed in Sec.
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
+- **p. 2 / 1. Introduction - extractive body cue:** Instead of treating text as a purely semantic signal, we expand the input description with position-aware prompts to derive a semantic-spatial graph that captures relational ...
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** Therefore, a principled geometric abstraction is required to elevate Gaussian primitives into an object-level relational representation that supports explicit spatial reasoning.
+- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** Language-Guided 3D Referring Segmentation.
+- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** While this framework enables basic language-to-geometry grounding, its spatial reasoning capability remains limited, as analyzed in Sec.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Guided by these findings, we propose GeoCGA (see Fig.
-- **p. 3 / 3. Problem Statement and Notations - extractive PDF cue:** Spatial awareness deficiency leads to incorrect localization in ReferSplat [13], while our method correctly grounds the target despite challenging spatial cues. ri for each Gaussian ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
+- **p. 2 / 1. Introduction - extractive body cue:** Guided by these findings, we propose GeoCGA (see Fig.
+- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** Spatial awareness deficiency leads to incorrect localization in ReferSplat [13], while our method correctly grounds the target despite challenging spatial cues. ri for each Gaussian ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), ... | p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint ... | p. 5 (5.3. 3D Scene Graph Construction (3DSGC)) |
@@ -58,12 +58,12 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Instead of treating text as a purely semantic signal, we expand the input description with position-aware prompts to derive a semantic-spatial graph that captures relational ...
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** Therefore, a principled geometric abstraction is required to elevate Gaussian primitives into an object-level relational representation that supports explicit spatial reasoning.
-- **p. 3 / 3. Problem Statement and Notations - extractive PDF cue:** Language-Guided 3D Referring Segmentation.
-- **p. 3 / 3. Problem Statement and Notations - extractive PDF cue:** While this framework enables basic language-to-geometry grounding, its spatial reasoning capability remains limited, as analyzed in Sec.
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
+- **p. 2 / 1. Introduction - extractive body cue:** Instead of treating text as a purely semantic signal, we expand the input description with position-aware prompts to derive a semantic-spatial graph that captures relational ...
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** Therefore, a principled geometric abstraction is required to elevate Gaussian primitives into an object-level relational representation that supports explicit spatial reasoning.
+- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** Language-Guided 3D Referring Segmentation.
+- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** While this framework enables basic language-to-geometry grounding, its spatial reasoning capability remains limited, as analyzed in Sec.
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -78,8 +78,8 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 
 ## Training vs Inference
 
-- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive PDF cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
-- **p. 7 / 6.1. Experimental Setting - extractive PDF cue:** We train GeoCGA for 4 epochs per scene with AdamW (learning rate 1 × 10-4, weight decay 1 × 10-2).
+- **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
+- **p. 7 / 6.1. Experimental Setting - extractive body cue:** We train GeoCGA for 4 epochs per scene with AdamW (learning rate 1 × 10-4, weight decay 1 × 10-2).
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -99,13 +99,13 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 
 ## Failure and Ablation Link
 
-- **p. 7 / 6.2. Comparisons with State-of-the-Arts - extractive PDF cue:** Comparative ablation results on Ramen and Kitchen.
-- **p. 7 / 6.2. Comparisons with State-of-the-Arts - extractive PDF cue:** Ablation study on Semantic Graph and Geometry Graph.
-- **p. 8 / 6.3. Ablation Study - extractive PDF cue:** Overall, all components contribute positively, indicating that structured graph reasoning and explicit relation modeling jointly enhance the robustness of GeoCGA.
-- **p. 8 / 6.3. Ablation Study - extractive PDF cue:** The bottom row illustrates typical failure modes where spatial ambiguity or relational confusion leads to incorrect (ReferSplat [13]) or incomplete (Ours) segmentation. mentary perspectives.
-- **p. 8 / 7. Conclusion and Discussion - extractive PDF cue:** Future work may explore end-to-end differentiable object discovery to reduce reliance on pretrained representations, as well as richer geometric priors and more scalable graph matching ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Spatial reasoning deficiency leads to coarse segmenta- tion in ReferSplat [13], while our method produces precise masks. consistent segmentation under complex spatial cues. ...
-- **p. 6 / 6.1. Experimental Setting - extractive PDF cue:** Ref-LERF emphasizes fine-grained referring understanding within individual scenes that involve intricate spatial layouts and strong occlusions.
+- **p. 7 / 6.2. Comparisons with State-of-the-Arts - extractive body cue:** Comparative ablation results on Ramen and Kitchen.
+- **p. 7 / 6.2. Comparisons with State-of-the-Arts - extractive body cue:** Ablation study on Semantic Graph and Geometry Graph.
+- **p. 8 / 6.3. Ablation Study - extractive body cue:** Overall, all components contribute positively, indicating that structured graph reasoning and explicit relation modeling jointly enhance the robustness of GeoCGA.
+- **p. 8 / 6.3. Ablation Study - extractive body cue:** The bottom row illustrates typical failure modes where spatial ambiguity or relational confusion leads to incorrect (ReferSplat [13]) or incomplete (Ours) segmentation. mentary perspectives.
+- **p. 8 / 7. Conclusion and Discussion - extractive body cue:** Future work may explore end-to-end differentiable object discovery to reduce reliance on pretrained representations, as well as richer geometric priors and more scalable graph matching ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Spatial reasoning deficiency leads to coarse segmenta- tion in ReferSplat [13], while our method produces precise masks. consistent segmentation under complex spatial cues. ...
+- **p. 6 / 6.1. Experimental Setting - extractive body cue:** Ref-LERF emphasizes fine-grained referring understanding within individual scenes that involve intricate spatial layouts and strong occlusions.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -119,7 +119,7 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), objective 본문 anchor 없음, temporal p. 6 (6.1. Experimental Setting), p. 2 (1. Introduction), p. 2 (2. Related Work), p. 3 (3. Problem Statement and Notations), p. 3 (2. Related Work), p. 5 (5.2. Geometry-Aware Prompt Expansion (GAPE)).
+- **Evidence anchors reviewed:** method p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), objective 본문 anchor 없음, temporal p. 6 (6.1. Experimental Setting), p. 2 (1. Introduction), p. 2 (2. Related Work), p. 3 (3. Problem Statement and Notations), p. 3 (2. Related Work), p. 5 (5.2. Geometry-Aware Prompt Expansion (GAPE)).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

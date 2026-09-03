@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1803.10122; PDF retrieval source: https://arxiv.org/pdf/1803.10122. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1803.10122; PDF retrieval source: https://arxiv.org/pdf/1803.10122. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The RL algorithm is often bottlenecked by the credit assignment problem, which makes it hard for traditional RL algorithms to learn millions ... | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | Previous works (Hnermann, 2017; Bling, 2015; Lau, 2016) have shown that with a good set of hand-engineered information about the observation, such ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Previous works (Hnermann, 2017; Bling, 2015; Lau, 2016) have shown that with a good set of hand-engineered information about the observation, such ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Previous, works, Hnermann, Bling, Lau, have, good, hand-engineered, information, about | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | simple, single, layer, linear, model, maps, directly, action | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: Previous, works, Hnermann, Bling, Lau, have, good, hand-engineered, information, about | p. 5 (V Model Only), p. 3 (2.3. Controller (C) Model), p. 3 (2.3. Controller (C) Model) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: similar, terminology, notation, Learning, Think, Algorithmic, Information, Theory | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (V MODEL WITH HIDDEN LAYER) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 10 (5. Iterative Training Procedure), p. 4 (2.3. Controller (C) Model), p. 4 (2.3. Controller (C) Model) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 4 (3.1. World Model for Feature Extraction), p. 15 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (V MODEL WITH HIDDEN LAYER), p. 1 (1. Introduction), p. 3 (2.2. MDN-RNN (M) Model)): We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology ...
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (V MODEL WITH HIDDEN LAYER), p. 1 (1. Introduction), p. 3 (2.2. MDN-RNN (M) Model)): We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology ...
 
 - **p. 2 / 1. Introduction - extractive body cue:** In this article, we present a simplified framework that we can use to experimentally demonstrate some of the key concepts from these papers, and also ...
 - **p. 6 / V MODEL WITH HIDDEN LAYER - extractive body cue:** To our knowledge, our method is the first reported solution to solve this task.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (V Model Only), p. 3 (2.3. Controller (C) Model), p. 3 (2.3. Controller (C) Model), p. 2 (2.1. VAE (V) Model). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (V Model Only), p. 3 (2.3. Controller (C) Model), p. 3 (2.3. Controller (C) Model), p. 2 (2.1. VAE (V) Model). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 5 (V Model Only), p. 3 (2.3. Controller (C) Model), p. 3 (2.3. Controller (C) Model), p. 2 (2.1. VAE (V) Model), objective p. 4 (2.3. Controller (C) Model), p. 10 (5. Iterative Training Procedure), p. 10 (5. Iterative Training Procedure), p. 3 (2.3. Controller (C) Model).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 5 (V Model Only), p. 3 (2.3. Controller (C) Model), p. 3 (2.3. Controller (C) Model), p. 2 (2.1. VAE (V) Model), objective p. 4 (2.3. Controller (C) Model), p. 10 (5. Iterative Training Procedure), p. 10 (5. Iterative Training Procedure), p. 3 (2.3. Controller (C) Model).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** The RL algorithm is often bottlenecked by the credit assignment problem, which makes it hard for traditional RL algorithms to learn millions of weights of a large model, hence in ... (p. 2, 1. Introduction).
+- **Formulation-changing contribution:** We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology ... (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but failed to reproduce task-relevant tiles on the road in the Car Racing ... (p. 12, 7. Discussion).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

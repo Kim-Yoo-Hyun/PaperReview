@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `dataset state/observation, action, reward와 return-to-go → Q/value 또는 sequence-policy state → dataset-supported action sequence`.
-- 이 논문의 재사용 가능한 지점은 This in turn does not discourage the policy from exploring unknown and potentially valuable regions of the state-action space.를 3: Determine number of Critic targets to subset Z ∈{1, 2} 4: Initialize empty replay buffer R 5: Initialize buffer D with offline data 6: while True do 7: Receive initial observation ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 Q/value 또는 sequence-policy state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 10. Symmetric sampling improves sample efficiency and reduces variance across seeds, and does not work by simply in- creasing the reward density in a batch. 0 100 200 0 20에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: First, we propose a simple mechanism for incorporating the prior data.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 3: Determine number of Critic targets to subset Z ∈{1, 2} 4: Initialize empty replay buffer R 5: Initialize buffer D with offline data 6: while True do 7: Receive ... (p. 5, 4.4. Per-Environment Design Choices).
+- **Paper-specific mechanism:** Here we show the difficult D4RL AntMaze domain (10 seeds, 1 std. shaded), averaged over all 6 tasks. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 18. D4RL Ablations. The impact of LayerNorm is not so clear cut in Figure 18; this is to be expected as online approaches already achieve strong results in this ... (p. 15, Figure/Table caption); the relevant task/metric cue is Figure 21. Visualizations of the environments we consider. We provide further details about the key domains we evaluate on. In Figure 21 we provide visualizations of the environments. Sparse Adroit ... (p. 17, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** To this end, we show that Layer Normalization (LayerNorm) (Ba et al., 2016) can bound the extrapolation of networks but, crucially, does not explicitly constrain the policy to remain close ... (p. 4, 4. Online RL with Offline Data).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To more clearly illustrate this effect, we construct a dataset of only the expert human demonstration data from the Adroit Sparse tasks (see "Expert Adroit Sparse Tasks" in Figure 7)..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 18. D4RL Ablations. The impact of LayerNorm is not so clear cut in Figure 18; this is to be expected as online approaches already achieve strong results in this domain. Notably, ....
-4. Report the body metric and its denominator/aggregation: Figure 21. Visualizations of the environments we consider. We provide further details about the key domains we evaluate on. In Figure 21 we provide visualizations of the environments. Sparse Adroit In these ....
-5. Re-run the body-reported ablation/failure condition: Here, we address (3) and (4) by quantifying the effect of LayerNorm, and demonstrating the reliability of our proposed workflow (see Subsection 4.5)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 3: Determine number of Critic targets to subset Z ∈{1, 2} 4: Initialize empty replay buffer R 5: Initialize buffer D with offline data 6: while True do 7: Receive ... (p. 5, 4.4. Per-Environment Design Choices); preserve the objective/update rule: 3: Determine number of Critic targets to subset Z ∈{1, 2} 4: Initialize empty replay buffer R 5: Initialize buffer D with offline data 6: while True do 7: Receive ... (p. 5, 4.4. Per-Environment Design Choices).
+2. Use the paper-reported task/data/environment cue: To more clearly illustrate this effect, we construct a dataset of only the expert human demonstration data from the Adroit Sparse tasks (see "Expert Adroit Sparse Tasks" in Figure 7). (p. 7, 5.1. RLPD Analysis and Ablation Study).
+3. Compare against the reported or matched baseline: Is RLPD competitive with prior work despite using no pre-training nor having explicit constraints? (p. 5, 5. Experiments).
+4. Report the body metric with its denominator and aggregation: Figure 21. Visualizations of the environments we consider. We provide further details about the key domains we evaluate on. In Figure 21 we provide visualizations of the environments. Sparse Adroit ... (p. 17, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Here, we address (3) and (4) by quantifying the effect of LayerNorm, and demonstrating the reliability of our proposed workflow (see Subsection 4.5). (p. 7, 5.1. RLPD Analysis and Ablation Study); if none is reported, design one around: To this end, we show that Layer Normalization (LayerNorm) (Ba et al., 2016) can bound the extrapolation of networks but, crucially, does not explicitly constrain the policy to remain close ... (p. 4, 4. Online RL with Offline Data).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. Does the proposed workflow around environment), p. 3 (4. Online RL with Offline Data); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), p. 1 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 15 (Figure/Table caption), p. 7 (5.1. RLPD Analysis and Ablation Study), p. 7 (Figure/Table caption), and measure the boundary at p. 4 (4. Online RL with Offline Data), p. 8 (2 Layers).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 First, simple, mechanism mechanism이 Figure 18. D4RL Ablations. The impact of LayerNorm is not so clear cut in Figure 18; ... 대비 Figure 21. Visualizations of the environments we consider. We provide further details about the key domains we evaluate ...을 개선하고, Figure 10. Symmetric sampling improves sample efficiency and reduces variance across seeds, and does not work ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (3: Determine number of Critic targets to subset Z ∈{1, 2} 4: Initialize empty replay buffer R 5: Initialize buffer D with ...), does the paper-specific mechanism (Here we show the difficult D4RL AntMaze domain (10 seeds, 1 std. shaded), averaged over all 6 tasks.) retain the reported evaluation outcome (Figure 21. Visualizations of the environments we consider. We provide further details about the key domains we evaluate ...) when tested against the paper's strongest explicit boundary (To this end, we show that Layer Normalization (LayerNorm) (Ba et al., 2016) can bound the extrapolation of ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Figure 21. Visualizations of the environments we consider. We provide further details about the key domains we evaluate ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Here we show the difficult D4RL AntMaze domain (10 seeds, 1 std. shaded), averaged over all 6 tasks. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** Figure 18. D4RL Ablations. The impact of LayerNorm is not so clear cut in Figure 18; this is to be expected as online approaches already achieve strong results in this ... (p. 15, Figure/Table caption).
+- **Strongest explicit boundary:** To this end, we show that Layer Normalization (LayerNorm) (Ba et al., 2016) can bound the extrapolation of networks but, crucially, does not explicitly constrain the policy to remain close ... (p. 4, 4. Online RL with Offline Data).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

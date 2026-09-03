@@ -1,8 +1,10 @@
 # Robust Peg-in-Hole Assembly under Uncertainties via Compliant and Interactive Contact-Rich Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p060.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -75,3 +77,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Fig, 2: (a) The peg-in-hole problem is considered as inserting peg into its matching hole on a planar board (a randomly generated peg is adopted as the example).를 문제로 두고, (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A. Preliminaries), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** As % shrinks over steps, the expected spread of Ton) decreases and the uncertainty range of the perceived hole's state is reduced, (p. 4, B. Problem Statement).
+- **Actual contribution:** By examining the role of compliance under contact constraints, ‘we present a manipulation system that plans coli (p. 1, Abstract).
+- **Evaluation boundary:** Fig. 1: Motivation, Acknowledging that real-world uncertainties are inevitable, we exploit environmental constraints t0 shape the manipulation process toward the desired outcome rather than expecting the robot to precisely execute ... (p. 1, Figure/Table caption).
+- **Explicit failure boundary:** We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided into the following categories: 1) high contact force which breaks the condition ... (p. 12, 1 Liye).

@@ -1,8 +1,10 @@
 # Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2309.10150.
-> PDF retrieval source: https://arxiv.org/pdf/2309.10150. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2309.10150.
+> PDF retrieval source: https://arxiv.org/pdf/2309.10150. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2309.10150
 - Code/Project: https://qtransformer.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 training high-capacity models such as Transformers using RL algorithms has proven more difficult to instantiate effectively at large scale.를 문제로 두고, We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data and broader ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 4 (3 Background) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** training high-capacity models such as Transformers using RL algorithms has proven more difficult to instantiate effectively at large scale. (p. 2, 1 Introduction).
+- **Actual contribution:** We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ... (p. 8, 5 Experiments).
+- **Explicit failure boundary:** This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).

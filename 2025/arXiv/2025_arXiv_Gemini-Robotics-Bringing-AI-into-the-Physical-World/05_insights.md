@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 backbone dns Local action decoder computer Robot images & state image Figure 14 / Overview of the architecture, input and output of the Gemini Robotics model.를 While it is possible to create expert models for each of these tasks individually, fusing them in a single foundation model, such as Gemini 2.0, allows the model to perform embodied reasoning ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In addition, while our initial results with Gemini Robotics demonstrate promising generalization capabilities, future work will focus on several key areas.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we introduce the Gemini Robotics family of embodied AI models, built on top of Gemini 2.0, our most advanced multimodal foundation model.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** backbone dns Local action decoder computer Robot images & state image Figure 14 / Overview of the architecture, input and output of the Gemini Robotics model. (p. 14, 3. Robot Actions with Gemini Robotics).
+- **Paper-specific mechanism:** Furthermore, an embodied AI agent must also go beyond passively understanding the spatial and physical concepts of the real world; it must also learn to take actions that have direct ... (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark (p. 5, 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark); the relevant task/metric cue is (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories). (p. 10, 2.0 Pro Experimental). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive language attributes (e.g., "top black container", "blue clip") and fails to solve ... (p. 17, 3.3. Gemini Robotics can closely follow language instructions).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark.
-3. Compare against the body-reported baseline or a matched simpler baseline: For each image pair, the left image with the point coordinates and the right image without coordinates are given, and the model predicts which of the labeled points in the left image ....
-4. Report the body metric and its denominator/aggregation: (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories)..
-5. Re-run the body-reported ablation/failure condition: For each image pair, the left image with the point coordinates and the right image without coordinates are given, and the model predicts which of the labeled points in the left image ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: backbone dns Local action decoder computer Robot images & state image Figure 14 / Overview of the architecture, input and output of the Gemini Robotics model. (p. 14, 3. Robot Actions with Gemini Robotics); preserve the objective/update rule: The Gemini Robotics backbone is formed by a distilled version of Gemini Robotics-ER and its query-to-response latency has been optimized from seconds to under 160ms. (p. 14, 3. Robot Actions with Gemini Robotics).
+2. Use the paper-reported task/data/environment cue: Spatial Reasoning 84 Action Reasoning 72 Trajectory Reasoning 66 State Estimation 55 Task Reasoning 38 Multi-view Reasoning 37 Pointing 34 Other 14 Figure 4 / ERQA question categories. (p. 4, 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark).
+3. Compare against the reported or matched baseline: For each image pair, the left image with the point coordinates and the right image without coordinates are given, and the model predicts which of the labeled points in the ... (p. 10, 2.0 Pro Experimental).
+4. Report the body metric with its denominator and aggregation: (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories). (p. 10, 2.0 Pro Experimental).
+5. Re-run the reported ablation or stress/failure condition: For each image pair, the left image with the point coordinates and the right image without coordinates are given, and the model predicts which of the labeled points in the ... (p. 10, 2.0 Pro Experimental); if none is reported, design one around: While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive language attributes (e.g., "top black container", "blue clip") and fails to solve ... (p. 17, 3.3. Gemini Robotics can closely follow language instructions).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 14 (3. Robot Actions with Gemini Robotics), p. 13 (3. Robot Actions with Gemini Robotics), p. 14 (3. Robot Actions with Gemini Robotics); the primary result is directionally consistent at p. 10 (2.0 Pro Experimental); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 5 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), and measure the boundary at p. 17 (3.3. Gemini Robotics can closely follow language instructions), p. 19 (3.3. Gemini Robotics can closely follow language instructions).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, Gemini, Robotics mechanism이 For each image pair, the left image with the point coordinates and the right image without ... 대비 (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories).을 개선하고, In addition, while our initial results with Gemini Robotics demonstrate promising generalization capabilities, future work will ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (backbone dns Local action decoder computer Robot images & state image Figure 14 / Overview of the architecture, input and output of ...), does the paper-specific mechanism (Furthermore, an embodied AI agent must also go beyond passively understanding the spatial and physical concepts of the real world; it must ...) retain the reported evaluation outcome ((* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories).) when tested against the paper's strongest explicit boundary (While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric ((* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (64 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Furthermore, an embodied AI agent must also go beyond passively understanding the spatial and physical concepts of the real world; it must also learn to take actions that have direct ... (p. 1, 1. Introduction).
+- **Paper-supported outcome:** Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark (p. 5, 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark).
+- **Strongest explicit boundary:** While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive language attributes (e.g., "top black container", "blue clip") and fails to solve ... (p. 17, 3.3. Gemini Robotics can closely follow language instructions).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

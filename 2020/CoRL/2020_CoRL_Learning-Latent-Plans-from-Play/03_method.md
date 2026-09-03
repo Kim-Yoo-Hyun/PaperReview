@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html; PDF retrieval source: https://arxiv.org/pdf/1903.01973. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html; PDF retrieval source: https://arxiv.org/pdf/1903.01973. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | Action space Our 8-DOF agent's action space state consists of: 3 cartesian coordinates for the position of its end effector, 3 Euler ... | p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | 9 we show the layers with their sizes and depths of different sub-networks used in the model: the vision network, plan recognition ... | p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space) |
@@ -78,9 +78,9 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | We allow the agent to "replan" by inferring and sampling new latent plans every κ timesteps (matching the average planning horizon it ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | We allow the agent to "replan" by inferring and sampling new latent plans every κ timesteps (matching the average planning horizon it ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | We compute the action reconstruction cost as follows: For each timestep t in the input sequence τ, we feed in st ← ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | Shaded regions indicate 95% confidence intervals over 20 rollouts. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -126,8 +126,17 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 15 (A.3.4 Training Data), p. 15 (A.3.4 Training Data), p. 16 (A.4.3 Coverage Analysis of Interaction Space), objective p. 15 (A.3.4 Training Data), temporal p. 6 (2 Related Work), p. 6 (2 Related Work), p. 8 (4 Experiments), p. 5 (2 Related Work), p. 5 (2 Related Work), p. 11 (A.1 Theoretical Motivation).
+- **Evidence anchors reviewed:** method p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 15 (A.3.4 Training Data), p. 15 (A.3.4 Training Data), p. 16 (A.4.3 Coverage Analysis of Interaction Space), objective p. 15 (A.3.4 Training Data), temporal p. 6 (2 Related Work), p. 6 (2 Related Work), p. 8 (4 Experiments), p. 5 (2 Related Work), p. 5 (2 Related Work), p. 11 (A.1 Theoretical Motivation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Algorithm 2 Training Play-LMP 1: Input: Play data D : {(s1, a1), · · · , (sT , aT )} 2: Randomly initialize model parameters θ = {θV , θCG, ... (p. 12, A.1 Theoretical Motivation).
+- **Objective/update evidence:** An updated version of the Mujoco HAPTIX system is used to collect teleoperation demonstration data [39]. (p. 15, A.3.4 Training Data).
+- **Temporal/runtime evidence:** We can sidestep this issue by turning to stochastic gradient variational Bayes (SGVB) (Kingma and Welling [33]) framework, which optimizes a surrogate objective function: the variational lower bound of the ... (p. 11, A.1 Theoretical Motivation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

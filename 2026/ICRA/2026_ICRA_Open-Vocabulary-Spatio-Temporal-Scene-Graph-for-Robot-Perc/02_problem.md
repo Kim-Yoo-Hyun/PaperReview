@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2509.23107. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2509.23107. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Taken together, these challenges reveal a fundamental gap: latency distorts the temporal alignment between operator intent and robot execution, while static representations ... | mapped 3D environment과 mobile robot | body wording is the source claim |
-| Observation / input | The planner outputs a sequence of high-level actions π = (a1, . . . , aM) with grounded arguments (e.g., centroids and ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The planner outputs a sequence of high-level actions π = (a1, . . . , aM) with grounded arguments (e.g., centroids and ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF body |
 | State / latent | planner, outputs, sequence, high-level, actions, grounded, arguments, centroids, sizes, parsed | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
 | Output / action | Problem, Formulation, construct, temporally, indexed, semantically, enriched, representation | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
 | Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | sensor/map state and goal; body terms: planner, outputs, sequence, high-level, actions, grounded, arguments, centroids, sizes, parsed | p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) |
 | Decision / output variable | path/waypoint/velocity; body terms: main, contributions, summarized, follows, ST-OVSG, novel, spatio-temporal, openvocabulary | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODOLOGY) |
-| Objective / loss / cost | path cost, risk or goal utility; cue terms: However, when, multiple, candidate, pairs, overlap, ambiguous, resolve | p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY) |
+| Objective / loss / cost | path cost, risk or goal utility; cue terms: However, when, multiple, candidate, pairs, overlap, ambiguous, resolve | p. 4 (III. METHODOLOGY) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY) |
 | Success / guarantee | goal reach with collision-free execution | p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY)): The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal ...
+PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY)): The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal ...
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** To address this, we propose Spatio-Temporal OpenVocabulary Scene Graph (ST-OVSG), an open-vocabulary spatio-temporal scene graph designed for teleoperation.
 - **p. 3 / III. METHODOLOGY - extractive body cue:** To address this, we propose ST-OVSG that integrates object nodes, spatial relations, and temporal correspondences.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (
 
 ## Position in the Robotics Loop
 
-navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 1 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 1 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 1 (I. INTRODUCTION), objective p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
+- **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 1 (I. INTRODUCTION), objective p. 4 (III. METHODOLOGY).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, directly applying these models to teleoperation robotics still faces several challenges. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal ... (p. 2, I. INTRODUCTION).
+- **Assumption/failure evidence:** Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses. (p. 6, IV. EXPERIMENTS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

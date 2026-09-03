@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4.4. Real-world Evaluation - extractive PDF cue:** 5, the devised TTA strategy addresses discrepancies arising from real-world hardware configurations.
-- **p. 6 / 4.1. Training Details - extractive PDF cue:** We adopt SAPIEN [31] and the PartNetMobility dataset to set up an interactive environment for our task, with VulkanRenderer of high-efficiency rasterizationbased renderer.
-- **p. 8 / 4.4. Real-world Evaluation - extractive PDF cue:** We conduct experiments that involve interacting with various real-world household objects.
-- **p. 6 / 4.1. Training Details - extractive PDF cue:** We use a Franka Panda Robot with flying suction gripper as the robot actuator.
-- **p. 7 / 4.3. Ablation and Analysis - extractive PDF cue:** Object Category Identification(OCI.): Subsequently, in the second row of Table 2, we introduce the task of object category identiTrain Test AVG FT.
-- **p. 7 / 4.3. Ablation and Analysis - extractive PDF cue:** Effectiveness of tasks in the training paradigm.
-- **p. 6 / 4.1. Training Details - extractive PDF cue:** We adopt the manipulation success rate to reflect the outcome of the manipulation which is the ratio of the number of successfully manipulated samples divided ...
-- **p. 7 / 4.2. Quantitative Comparison - extractive PDF cue:** The success rate of VoxPoser is 14.0% while ours is 69.0%.
+- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** 5, the devised TTA strategy addresses discrepancies arising from real-world hardware configurations.
+- **p. 6 / 4.1. Training Details - extractive body cue:** We adopt SAPIEN [31] and the PartNetMobility dataset to set up an interactive environment for our task, with VulkanRenderer of high-efficiency rasterizationbased renderer.
+- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** We conduct experiments that involve interacting with various real-world household objects.
+- **p. 6 / 4.1. Training Details - extractive body cue:** We use a Franka Panda Robot with flying suction gripper as the robot actuator.
+- **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Object Category Identification(OCI.): Subsequently, in the second row of Table 2, we introduce the task of object category identiTrain Test AVG FT.
+- **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Effectiveness of tasks in the training paradigm.
+- **p. 6 / 4.1. Training Details - extractive body cue:** We adopt the manipulation success rate to reflect the outcome of the manipulation which is the ratio of the number of successfully manipulated samples divided ...
+- **p. 7 / 4.2. Quantitative Comparison - extractive body cue:** The success rate of VoxPoser is 14.0% while ours is 69.0%.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | It thus significantly improves the manipulation success rate by +7%. | p. 7 (4.3. Ablation and Analysis) |
 | 4.1. Training Details | EMPIRICAL / REAL-ROBOT OR HARDWARE | If successful manipulation is achieved, we record it as a successful sample. | p. 6 (4.1. Training Details) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4.4. Real-world Evaluation - extractive PDF cue:** 5, the devised TTA strategy addresses discrepancies arising from real-world hardware configurations.
-- **p. 6 / 4.1. Training Details - extractive PDF cue:** We adopt SAPIEN [31] and the PartNetMobility dataset to set up an interactive environment for our task, with VulkanRenderer of high-efficiency rasterizationbased renderer.
-- **p. 8 / 4.4. Real-world Evaluation - extractive PDF cue:** We conduct experiments that involve interacting with various real-world household objects.
-- **p. 6 / 4.1. Training Details - extractive PDF cue:** We use a Franka Panda Robot with flying suction gripper as the robot actuator.
-- **p. 7 / 4.3. Ablation and Analysis - extractive PDF cue:** Object Category Identification(OCI.): Subsequently, in the second row of Table 2, we introduce the task of object category identiTrain Test AVG FT.
-- **p. 7 / 4.3. Ablation and Analysis - extractive PDF cue:** Effectiveness of tasks in the training paradigm.
+- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** 5, the devised TTA strategy addresses discrepancies arising from real-world hardware configurations.
+- **p. 6 / 4.1. Training Details - extractive body cue:** We adopt SAPIEN [31] and the PartNetMobility dataset to set up an interactive environment for our task, with VulkanRenderer of high-efficiency rasterizationbased renderer.
+- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** We conduct experiments that involve interacting with various real-world household objects.
+- **p. 6 / 4.1. Training Details - extractive body cue:** We use a Franka Panda Robot with flying suction gripper as the robot actuator.
+- **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Object Category Identification(OCI.): Subsequently, in the second row of Table 2, we introduce the task of object category identiTrain Test AVG FT.
+- **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Effectiveness of tasks in the training paradigm.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The prediction of ManipLLM. Given the text prompt, RGB image, and depth map inputs, we obtain 3D contact point (x, y, z). Here, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Training details of ManipLLM. This paradigm contains four training tasks, enabling the model to recognize the current object (category-level), understand which regions can ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Affordance map for movable parts on objects. It indi- cates the probability of actionability on the pixel level. visualize affordance maps in Fig. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. The chain-of-thought inference process of ManipLLM. trast with leveraging a model to predict each following pose, such a heuristic policy is much more ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparisons of our method against baseline methods. used to determine end-effector pose. Our current experimental settings involve training on a wider range of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation analysis of each training task in the training paradigm and strategies in inference. fication, the first prompt in Fig. 2. It enables ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualizations of TTA process in real-world scenarios. The center of pink dot represents the predicted contact position. aims to enable the model to ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The prediction of ManipLLM. Given the text prompt, RGB image, and depth map inputs, we obtain 3D contact point (x, y, z). Here, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Training details of ManipLLM. This paradigm contains four training tasks, enabling the model to recognize the current object (category-level), understand which regions can ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Affordance map for movable parts on objects. It indi- cates the probability of actionability on the pixel level. visualize affordance maps in Fig. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. The chain-of-thought inference process of ManipLLM. trast with leveraging a model to predict each following pose, such a heuristic policy is much more ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparisons of our method against baseline methods. used to determine end-effector pose. Our current experimental settings involve training on a wider range of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation analysis of each training task in the training paradigm and strategies in inference. fication, the first prompt in Fig. 2. It enables ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Visualizations of TTA process in real-world scenarios. The center of pink dot represents the predicted contact position. aims to enable the model to ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5, the devised TTA strategy addresses discrepancies arising from real-world hardware configurations. | embodiment, simulator version and control stack | p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details) |
 | Task/environment | We adopt SAPIEN [31] and the PartNetMobility dataset to set up an interactive environment for our task, with VulkanRenderer of high-efficiency rasterizationbased renderer. | reset, timeout, object/scene variation | p. 6 (4.1. Training Details), p. 8 (4.4. Real-world Evaluation) |
@@ -117,7 +117,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 | Primary metric/result | If successful manipulation is achieved, we record it as a successful sample. | numeric claim only at cited anchor | p. 6 (4.1. Training Details) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Training Details - extractive PDF cue:** We finetuned LLaMA-Adapter [38] on a 40G A100 GPU for 10 epochs, with an epoch costs around an hour.
+- **p. 6 / 4.1. Training Details - extractive body cue:** We finetuned LLaMA-Adapter [38] on a 40G A100 GPU for 10 epochs, with an epoch costs around an hour.
 
 ## Generalization and Failure Cases
 
@@ -150,9 +150,9 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.4. Real-world Evaluation - extractive PDF cue:** Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle.
+- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details), p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details), p. 7 (4.3. Ablation and Analysis), p. 7 (4.3. Ablation and Analysis), metrics p. 6 (4.1. Training Details), p. 7 (4.2. Quantitative Comparison), p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Quantitative Comparison), p. 1 (Figure/Table caption), p. 8 (4.4. Real-world Evaluation), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Quantitative Comparison), p. 6 (4.2. Quantitative Comparison), p. 7 (4.3. Ablation and Analysis), results p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Training Details), p. 6 (4.1. Training Details), p. 7 (4.2. Quantitative Comparison), p. 8 (4.4. Real-world Evaluation), p. 8 (4.4. Real-world Evaluation).
+- **Evidence anchors reviewed:** datasets p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details), p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details), p. 7 (4.3. Ablation and Analysis), p. 7 (4.3. Ablation and Analysis), metrics p. 6 (4.1. Training Details), p. 7 (4.2. Quantitative Comparison), p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Quantitative Comparison), p. 1 (Figure/Table caption), p. 8 (4.4. Real-world Evaluation), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Quantitative Comparison), p. 6 (4.2. Quantitative Comparison), p. 7 (4.3. Ablation and Analysis), results p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Training Details), p. 6 (4.1. Training Details), p. 7 (4.2. Quantitative Comparison), p. 8 (4.4. Real-world Evaluation), p. 8 (4.4. Real-world Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

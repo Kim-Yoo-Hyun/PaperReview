@@ -1,8 +1,10 @@
 # Control Barrier Function Based Quadratic Programs for Safety Critical Systems
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1609.06408.
-> PDF retrieval source: https://arxiv.org/pdf/1609.06408. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1609.06408.
+> PDF retrieval source: https://arxiv.org/pdf/1609.06408. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / TAC
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1609.06408
 - Code/Project: https://coogan.ece.gatech.edu/papers/pdf/ames2017control.pdf
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 One of the difficulties in designing cyber-physical systems is the need to meet a large and diverse set of objectives by properly designing controllers.를 문제로 두고, Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in the relationships shown in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 10 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 11 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 1 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** One of the difficulties in designing cyber-physical systems is the need to meet a large and diverse set of objectives by properly designing controllers. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in the relationships shown in Fig. (p. 2, B. Contributions).
+- **Evaluation boundary:** Comparison of two QPs Recall that Figure 2 showed simulation results obtained by applying the QP controller in (ACC QP), where the force constraints were not taken into account. (p. 13, VI. SIMULATION RESULTS).
+- **Explicit failure boundary:** Note that, due to limits on the wheel forces, the speed converges to vd more slowly, and begins braking earlier, as evidenced by the top plot in Fig. (p. 13, VI. SIMULATION RESULTS).

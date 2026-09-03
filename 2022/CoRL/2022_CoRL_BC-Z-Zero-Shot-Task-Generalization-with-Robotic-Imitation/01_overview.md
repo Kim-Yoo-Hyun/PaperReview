@@ -1,8 +1,10 @@
 # BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2202.02005.
-> PDF retrieval source: https://arxiv.org/pdf/2202.02005. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2202.02005.
+> PDF retrieval source: https://arxiv.org/pdf/2202.02005. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2202.02005
 - Code/Project: https://sites.google.com/view/bc-z/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, zero-shot generalization to new tasks remains a challenge, particularly when considering vision-based manipulation tasks that cover a breadth of skills (e.g., wiping, pushing, pick-and-place) with diverse objects.를 문제로 두고, These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution †Work done while author was at Google ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, zero-shot generalization to new tasks remains a challenge, particularly when considering vision-based manipulation tasks that cover a breadth of skills (e.g., wiping, pushing, pick-and-place) with diverse objects.를 문제로 두고, Our main contribution is an empirical study of a large-scale interactive imitation learning system that solves a breadth of tasks, including zero-shot and few-shot generalization to tasks not seen during training.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -31,11 +33,11 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Core Idea
 
-- **p. 1 / 1 Introduction - extractive body cue:** These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution ...
 - **p. 2 / 1 Introduction - extractive body cue:** Our main contribution is an empirical study of a large-scale interactive imitation learning system that solves a breadth of tasks, including zero-shot and few-shot generalization ...
 - **p. 8 / 7 Discussion - extractive body cue:** We presented a multi-task imitation learning system that combines flexible task embeddings with large-scale training on a 100-task demonstration dataset, enabling it to generalize to ...
 - **p. 2 / 1 Introduction - extractive body cue:** We show this system produces a policy that is capable of generalizing zero-shot to new unseen tasks.
 - **p. 1 / 1 Introduction - extractive body cue:** We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks.
+- **p. 1 / Abstract - extractive body cue:** In this paper, we study the problem of enabling a vision-based robotic manipulation system to generalize to novel tasks, a long-standing challenge in robot learning.
 - **p. 1 / 1 Introduction - extractive body cue:** End-to-end learning from pixels is a flexible choice for modeling the behavior of such generalist robots, as it has minimal assumptions about the state representation ...
 - **p. 8 / 7 Discussion - extractive body cue:** Another limitation is the lower performance of the video-conditioned policy, which encourages future research on improving the generalization of video-based task representations and enhancing the ...
 - **p. 1 / 1 Introduction - extractive body cue:** First, our system incorporates shared autonomy into teleoperation to allow us to collect both raw demonstration data and human interventions to correct the robot's current ...
@@ -51,11 +53,11 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution ...
 - **p. 2 / 1 Introduction - extractive body cue:** Our main contribution is an empirical study of a large-scale interactive imitation learning system that solves a breadth of tasks, including zero-shot and few-shot generalization ...
 - **p. 8 / 7 Discussion - extractive body cue:** We presented a multi-task imitation learning system that combines flexible task embeddings with large-scale training on a 100-task demonstration dataset, enabling it to generalize to ...
 - **p. 2 / 1 Introduction - extractive body cue:** We show this system produces a policy that is capable of generalizing zero-shot to new unseen tasks.
 - **p. 1 / 1 Introduction - extractive body cue:** We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks.
+- **p. 1 / Abstract - extractive body cue:** In this paper, we study the problem of enabling a vision-based robotic manipulation system to generalize to novel tasks, a long-standing challenge in robot learning.
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. The first 4 tasks only use objects ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Mean number of interventions vs. task success rate. Each point represents a pol- icy evaluated during HG-DAgger data collection. There is a clear ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Ablation Studies. Left: Multi-task vs. single task models on the ‘place the bottle in the ceramic bowl' task. Training across tasks and with ...
@@ -83,4 +85,13 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, zero-shot generalization to new tasks remains a challenge, particularly when considering vision-based manipulation tasks that cover a breadth of skills (e.g., wiping, pushing, pick-and-place) with diverse objects.를 문제로 두고, These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution †Work done while author was at Google ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, zero-shot generalization to new tasks remains a challenge, particularly when considering vision-based manipulation tasks that cover a breadth of skills (e.g., wiping, pushing, pick-and-place) with diverse objects.를 문제로 두고, Our main contribution is an empirical study of a large-scale interactive imitation learning system that solves a breadth of tasks, including zero-shot and few-shot generalization to tasks not seen during training.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, zero-shot generalization to new tasks remains a challenge, particularly when considering vision-based manipulation tasks that cover a breadth of skills (e.g., wiping, pushing, pick-and-place) with diverse objects. (p. 1, 1 Introduction).
+- **Actual contribution:** We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each ... (p. 17, Figure/Table caption).
+- **Explicit failure boundary:** Further, any collision of the robot base and arm (not including the gripper) with the environment counted as the task failure by the operator. (p. 20, C Featurization Details).

@@ -1,8 +1,10 @@
 # V-HOP: Visuo-Haptic 6D Object Pose Tracking
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p037.pdf
 - Code/Project: https://ivl.cs.brown.edu/research/v-hop
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 (i) Domain generalization: Compared to visual-only baselines, visuo-tactile approaches struggle to generalize, hindered by insufficient data diversity and model scalability.를 문제로 두고, First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To address these challenges, we propose V-HOP (Fig. (p. 1, 1. INTRODUCTION).
+- **Actual contribution:** First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning. (p. 1, 1. INTRODUCTION).
+- **Evaluation boundary:** Our results show that \V-HOP consistently outperforms FoundationPose in both ADD and ADD-S metrics under different levels of occlusion. ‘These results underscore the importance of integrating visual and haptic information ... (p. 7, experiment).
+- **Explicit failure boundary:** 1) If the grasp attempt fails, the robot must detect the failure based on the real-time object pose and reattempt the grasp. (p. 7, B. Bimanual Handover Experiment).

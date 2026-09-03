@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semanti
 
 ## Method Body Digest
 
-- **p. 4 / 3.3. Dual-branch Pooling - extractive PDF cue:** Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions.
-- **p. 5 / 3.4.2. Semantic Encoder - extractive PDF cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
-- **p. 6 / 3.7. Loss - extractive PDF cue:** Additionally, we introduce an Auxiliary Semantic Loss Laux to optimize the refined semantic features extracted by the semantic encoder.
-- **p. 3 / 3.1. Overall Architecture - extractive PDF cue:** Then, we design the Deformable Dual-Attention (DDA) to strengthen the interaction of BEV features at different scales between modalities (Sec 3.5).
-- **p. 4 / 3.4.2. Semantic Encoder - extractive PDF cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
-- **p. 5 / 3.5. Deformable Dual-Attention - extractive PDF cue:** After cross-modal interaction, the LiDAR and Camera BEV features are each combined with their respective linear weights and then concatenated.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
-- **p. 6 / 3.7. Loss - extractive PDF cue:** The cross-entropy loss Lce and Lovasz-Softmax loss Lls are used to optimize the overall framework.
+- **p. 4 / 3.3. Dual-branch Pooling - extractive body cue:** Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions.
+- **p. 5 / 3.4.2. Semantic Encoder - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
+- **p. 6 / 3.7. Loss - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss Laux to optimize the refined semantic features extracted by the semantic encoder.
+- **p. 3 / 3.1. Overall Architecture - extractive body cue:** Then, we design the Deformable Dual-Attention (DDA) to strengthen the interaction of BEV features at different scales between modalities (Sec 3.5).
+- **p. 4 / 3.4.2. Semantic Encoder - extractive body cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
+- **p. 5 / 3.5. Deformable Dual-Attention - extractive body cue:** After cross-modal interaction, the LiDAR and Camera BEV features are each combined with their respective linear weights and then concatenated.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
+- **p. 6 / 3.7. Loss - extractive body cue:** The cross-entropy loss Lce and Lovasz-Softmax loss Lls are used to optimize the overall framework.
 
 ## Design Rationale
 
-- **p. 2 / C Vox - extractive PDF cue:** Our contributions are summarized as follows: • We propose a novel multi-modal 3D semantic occupancy prediction framework, RIOcc.
-- **p. 2 / C Vox - extractive PDF cue:** To address the aforementioned issues, we propose RIOcc, a novel multi-modal 3D semantic occupancy prediction method.
-- **p. 4 / 3.4.2. Semantic Encoder - extractive PDF cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
+- **p. 2 / C Vox - extractive body cue:** Our contributions are summarized as follows: • We propose a novel multi-modal 3D semantic occupancy prediction framework, RIOcc.
+- **p. 2 / C Vox - extractive body cue:** To address the aforementioned issues, we propose RIOcc, a novel multi-modal 3D semantic occupancy prediction method.
+- **p. 4 / 3.4.2. Semantic Encoder - extractive body cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.3. Dual-branch Pooling - extractive PDF cue:** Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions.
-- **p. 5 / 3.4.2. Semantic Encoder - extractive PDF cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
-- **p. 6 / 3.7. Loss - extractive PDF cue:** Additionally, we introduce an Auxiliary Semantic Loss Laux to optimize the refined semantic features extracted by the semantic encoder.
-- **p. 3 / 3.1. Overall Architecture - extractive PDF cue:** Then, we design the Deformable Dual-Attention (DDA) to strengthen the interaction of BEV features at different scales between modalities (Sec 3.5).
-- **p. 4 / 3.4.2. Semantic Encoder - extractive PDF cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
-- **p. 5 / 3.5. Deformable Dual-Attention - extractive PDF cue:** After cross-modal interaction, the LiDAR and Camera BEV features are each combined with their respective linear weights and then concatenated.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
+- **p. 4 / 3.3. Dual-branch Pooling - extractive body cue:** Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions.
+- **p. 5 / 3.4.2. Semantic Encoder - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
+- **p. 6 / 3.7. Loss - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss Laux to optimize the refined semantic features extracted by the semantic encoder.
+- **p. 3 / 3.1. Overall Architecture - extractive body cue:** Then, we design the Deformable Dual-Attention (DDA) to strengthen the interaction of BEV features at different scales between modalities (Sec 3.5).
+- **p. 4 / 3.4.2. Semantic Encoder - extractive body cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
+- **p. 5 / 3.5. Deformable Dual-Attention - extractive body cue:** After cross-modal interaction, the LiDAR and Camera BEV features are each combined with their respective linear weights and then concatenated.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
 - **Detected method headings:** 3. Method (p. 3); 3.1. Overall Architecture (p. 3); Method (p. 6); 4.3. Comparison with State-of-the-Art Methods (p. 7)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions. | p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semantic Encoder) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the ... | p. 5 (3.4.2. Semantic Encoder), p. 6 (3.7. Loss) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semanti
 
 ## Objective / Update Rule
 
-- **p. 6 / 3.7. Loss - extractive PDF cue:** The cross-entropy loss Lce and Lovasz-Softmax loss Lls are used to optimize the overall framework.
-- **p. 6 / 3.7. Loss - extractive PDF cue:** Additionally, we introduce an Auxiliary Semantic Loss Laux to optimize the refined semantic features extracted by the semantic encoder.
-- **p. 5 / 3.4.2. Semantic Encoder - extractive PDF cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
-- **p. 4 / 3.3. Dual-branch Pooling - extractive PDF cue:** Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions.
-- **p. 5 / 3.5. Deformable Dual-Attention - extractive PDF cue:** For the Camera stream, the input features are tokenized and undergo self-attention, generating updated Qc, Kc, and Vc, which allow for a comprehensive understanding of ...
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
+- **p. 6 / 3.7. Loss - extractive body cue:** The cross-entropy loss Lce and Lovasz-Softmax loss Lls are used to optimize the overall framework.
+- **p. 6 / 3.7. Loss - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss Laux to optimize the refined semantic features extracted by the semantic encoder.
+- **p. 5 / 3.4.2. Semantic Encoder - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
+- **p. 4 / 3.3. Dual-branch Pooling - extractive body cue:** Then, the features are passed through the Channel-wise Attention and Grid-wise Attention modules, optimizing information representation across different dimensions.
+- **p. 5 / 3.5. Deformable Dual-Attention - extractive body cue:** For the Camera stream, the input features are tokenized and undergo self-attention, generating updated Qc, Kc, and Vc, which allow for a comprehensive understanding of ...
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4.2. Semantic Encoder), p. 6 (3.7. Loss), p. 6 (3.7. Loss), p. 4 (3.3. Dual-branch Pooling), p. 4 (3.3. Dual-branch Pooling), p. 5 (3.5. Deformable Dual-Attention).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semanti
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.2. Features Extraction - extractive PDF cue:** During the feature extraction stage, we design LiDAR and camera branches to encode multi-modal input, following the BEVFusion [25] setup.
-- **p. 4 / 3.3. Dual-branch Pooling - extractive PDF cue:** The output from the Channel-wise Attention are given by: F_{cha n n el}= \sigma \le ft (M L P\left (F_{A v g}\right )+M L P\left ...
-- **p. 3 / 3.1. Overall Architecture - extractive PDF cue:** The framework takes images and LiDAR point clouds as inputs, extracting consistent BEV features for subsequent fusion (Sec 3.2).
-- **p. 6 / 3.7. Loss - extractive PDF cue:** Affinity loss Lgeo and Lsem are applied to optimize scene-wise and class-wise metrics, while Ld provides feedback for the depth-aware view transform module.
-- **p. 2 / C Vox - extractive PDF cue:** The LiDAR and camera branches respectively extract refined structural information and semantic features, with balanced computational load and performance. • The proposed Deformable Dual-Attention facilitates ...
-- **p. 4 / 3.4.2. Semantic Encoder - extractive PDF cue:** The Semantic Encoder first downsamples the input BEV features to capture global contextual information.
-- **p. 5 / 3.5. Deformable Dual-Attention - extractive PDF cue:** As shown in Figure 5, the LiDAR BEV features FLiDAR ∈ RH×W ×C and Camera BEV features FCamera ∈RH×W ×C are used as inputs.
+- **p. 3 / 3.2. Features Extraction - extractive body cue:** During the feature extraction stage, we design LiDAR and camera branches to encode multi-modal input, following the BEVFusion [25] setup.
+- **p. 4 / 3.3. Dual-branch Pooling - extractive body cue:** The output from the Channel-wise Attention are given by: F_{cha n n el}= \sigma \le ft (M L P\left (F_{A v g}\right )+M L P\left ...
+- **p. 3 / 3.1. Overall Architecture - extractive body cue:** The framework takes images and LiDAR point clouds as inputs, extracting consistent BEV features for subsequent fusion (Sec 3.2).
+- **p. 6 / 3.7. Loss - extractive body cue:** Affinity loss Lgeo and Lsem are applied to optimize scene-wise and class-wise metrics, while Ld provides feedback for the depth-aware view transform module.
+- **p. 2 / C Vox - extractive body cue:** The LiDAR and camera branches respectively extract refined structural information and semantic features, with balanced computational load and performance. • The proposed Deformable Dual-Attention facilitates ...
+- **p. 4 / 3.4.2. Semantic Encoder - extractive body cue:** The Semantic Encoder first downsamples the input BEV features to capture global contextual information.
+- **p. 5 / 3.5. Deformable Dual-Attention - extractive body cue:** As shown in Figure 5, the LiDAR BEV features FLiDAR ∈ RH×W ×C and Camera BEV features FCamera ∈RH×W ×C are used as inputs.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,9 +90,9 @@ PDF body method statement (p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semanti
 
 ## Training vs Inference
 
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** Training is conducted on four NVIDIA 3090 GPUs with a batch size of 4, for a total of 24 epochs.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** Training is conducted on four NVIDIA 3090 GPUs with a batch size of 4, for a total of 24 epochs.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** During training, we use the AdamW optimizer, set the weight decay to 0.01, and an initial learning rate of 1e-4, with a multi-step learning rate ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,10 +112,10 @@ PDF body method statement (p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semanti
 
 ## Failure and Ablation Link
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 7. Ablation study of the Dual-BEV fusion strategy. representation and improving scene understanding. Feature Alignment on Heatmaps. To demonstrate that our model effectively enhances ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 6. Ablation Study of Aggregation Region Size. # Strategy mIoU 1 Addition 46.58 2
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** For the camera branch, we use ResNet50 pretrained on ImageNet as the image backbone, and the input image size is cropped to 256×704.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 7. Ablation study of the Dual-BEV fusion strategy. representation and improving scene understanding. Feature Alignment on Heatmaps. To demonstrate that our model effectively enhances ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. Ablation Study of Aggregation Region Size. # Strategy mIoU 1 Addition 46.58 2
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** For the camera branch, we use ResNet50 pretrained on ImageNet as the image backbone, and the input image size is cropped to 256×704.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semanti
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semantic Encoder), p. 6 (3.7. Loss), p. 3 (3.1. Overall Architecture), p. 4 (3.4.2. Semantic Encoder), p. 5 (3.5. Deformable Dual-Attention), objective p. 6 (3.7. Loss), p. 6 (3.7. Loss), p. 5 (3.4.2. Semantic Encoder), p. 4 (3.3. Dual-branch Pooling), p. 5 (3.5. Deformable Dual-Attention), p. 7 (4.2. Implementation Details), temporal p. 4 (3.4.1. Wavelet Encoder), p. 3 (3.1. Overall Architecture), p. 4 (3.4.1. Wavelet Encoder), p. 5 (3.6. Occupancy Prediction Module), p. 6 (3.7. Loss), p. 6 (3.7. Loss).
+- **Evidence anchors reviewed:** method p. 4 (3.3. Dual-branch Pooling), p. 5 (3.4.2. Semantic Encoder), p. 6 (3.7. Loss), p. 3 (3.1. Overall Architecture), p. 4 (3.4.2. Semantic Encoder), p. 5 (3.5. Deformable Dual-Attention), objective p. 6 (3.7. Loss), p. 6 (3.7. Loss), p. 5 (3.4.2. Semantic Encoder), p. 4 (3.3. Dual-branch Pooling), p. 5 (3.5. Deformable Dual-Attention), p. 7 (4.2. Implementation Details), temporal p. 4 (3.4.1. Wavelet Encoder), p. 3 (3.1. Overall Architecture), p. 4 (3.4.1. Wavelet Encoder), p. 5 (3.6. Occupancy Prediction Module), p. 6 (3.7. Loss), p. 6 (3.7. Loss).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

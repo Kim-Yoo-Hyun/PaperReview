@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2310.06114. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2310.06114. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction ... | p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | We then formulate the universal simulator as an observation prediction model that predicts observations conditioned on actions and previous observations as shown ... | p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT) |
@@ -86,7 +86,7 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | At a specific interactive step t, an agent, having observed a set of history frames ht-1 ∈O, decides on some temporally extended ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction ... | Hz/fps, inference time and control rate |
 | Memory | risk score, recent trajectory/history와 recovery state. | At a specific interactive step t, an agent, having observed a set of history frames ht-1 ∈O, decides on some temporally extended ... | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), objective p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 8 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), temporal p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), objective p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 8 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), temporal p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of the world (e.g., an image frame), can take ... (p. 2, 1 INTRODUCTION).
+- **Objective/update evidence:** The learned reward function can then be used to optimize policies π(at/ht) using existing decision making algorithms such as planning and RL, as we will illustrate in Section 4.1 and ... (p. 4, 1 INTRODUCTION).
+- **Temporal/runtime evidence:** At a specific interactive step t, an agent, having observed a set of history frames ht-1 ∈O, decides on some temporally extended action at-1 ∈A, which can be resolved into ... (p. 3, 1 INTRODUCTION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

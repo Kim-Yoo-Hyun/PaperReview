@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AUCYptvAf3; PDF retrieval source: https://arxiv.org/pdf/2410.03072. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AUCYptvAf3; PDF retrieval source: https://arxiv.org/pdf/2410.03072. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 
 ## Evaluation Body Digest
 
-- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive PDF cue:** Importantly, each dataset trajectory respects the motion pattern dictated by the map within which it is embedded.
-- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive PDF cue:** There, each data point is one, single-robot, trajectory from a random collision-free start configuration to a random collision-free goal configuration.
-- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** We keep the number of robots low for clarity.
-- **p. 17 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** The top two rows show test cases with 3 robots, and the bottom two rows with 6.
-- **p. 17 / A.4 IMPLEMENTATION DETAILS - extractive PDF cue:** In our experiments, the size of each local map was 2 × 2 units, and the diameter of each disk robot was 0.1 units.
-- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** To better capture the behavior of the various trajectory generators discussed in this paper, Fig.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with and ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate (%), ...
+- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** Importantly, each dataset trajectory respects the motion pattern dictated by the map within which it is embedded.
+- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** There, each data point is one, single-robot, trajectory from a random collision-free start configuration to a random collision-free goal configuration.
+- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** We keep the number of robots low for clarity.
+- **p. 17 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** The top two rows show test cases with 3 robots, and the bottom two rows with 6.
+- **p. 17 / A.4 IMPLEMENTATION DETAILS - extractive body cue:** In our experiments, the size of each local map was 2 × 2 units, and the diameter of each disk robot was 0.1 units.
+- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** To better capture the behavior of the various trajectory generators discussed in this paper, Fig.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with and ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate (%), ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate ... | p. 15 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 
 ## Dataset / Benchmark Role
 
-- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive PDF cue:** Importantly, each dataset trajectory respects the motion pattern dictated by the map within which it is embedded.
-- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive PDF cue:** There, each data point is one, single-robot, trajectory from a random collision-free start configuration to a random collision-free goal configuration.
-- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** We keep the number of robots low for clarity.
-- **p. 17 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** The top two rows show test cases with 3 robots, and the bottom two rows with 6.
-- **p. 17 / A.4 IMPLEMENTATION DETAILS - extractive PDF cue:** In our experiments, the size of each local map was 2 × 2 units, and the diameter of each disk robot was 0.1 units.
-- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** To better capture the behavior of the various trajectory generators discussed in this paper, Fig.
+- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** Importantly, each dataset trajectory respects the motion pattern dictated by the map within which it is embedded.
+- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** There, each data point is one, single-robot, trajectory from a random collision-free start configuration to a random collision-free goal configuration.
+- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** We keep the number of robots low for clarity.
+- **p. 17 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** The top two rows show test cases with 3 robots, and the bottom two rows with 6.
+- **p. 17 / A.4 IMPLEMENTATION DETAILS - extractive body cue:** In our experiments, the size of each local map was 2 × 2 units, and the diameter of each disk robot was 0.1 units.
+- **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** To better capture the behavior of the various trajectory generators discussed in this paper, Fig.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective constraint ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2: A comparison between MMD and "composite" diffusion models that generate trajectories for all agents at once. We observed consistent performance from MMD but ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with and ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Scalability tests in high-congestion free-space MRMP. Circle (top row) asks robots to swap positions between opposite points on the perimeter. Weave (below), asks ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 5: Experimental setup and results for scaling MMD to larger environments and longer plan- ning horizons. MMD still relies on single agent data in ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate (%), ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 2: Additional results for a subset of our MMD and MAPF evaluation. Table columns are similar to Table 1. We omit acceleration information from ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 6: Visual examples of trajectories generated by MMD-xECBS, MMD-PP, MPD-Composite, and A*Data-ECBS in tests within the Empty and Highways maps. The top two rows ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective constraint ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: A comparison between MMD and "composite" diffusion models that generate trajectories for all agents at once. We observed consistent performance from MMD but ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with and ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Scalability tests in high-congestion free-space MRMP. Circle (top row) asks robots to swap positions between opposite points on the perimeter. Weave (below), asks ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Experimental setup and results for scaling MMD to larger environments and longer plan- ning horizons. MMD still relies on single agent data in ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate (%), ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 2: Additional results for a subset of our MMD and MAPF evaluation. Table columns are similar to Table 1. We omit acceleration information from ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 6: Visual examples of trajectories generated by MMD-xECBS, MMD-PP, MPD-Composite, and A*Data-ECBS in tests within the Empty and Highways maps. The top two rows ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Importantly, each dataset trajectory respects the motion pattern dictated by the map within which it is embedded. | embodiment, simulator version and control stack | p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS) |
 | Task/environment | There, each data point is one, single-robot, trajectory from a random collision-free start configuration to a random collision-free goal configuration. | reset, timeout, object/scene variation | p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS) |
@@ -79,8 +79,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 | Figure 7: Illustrations of our different maps. In the top row, we show an example trajectory that follows the data distribution prescribed by maps' ... | definition/direction/unit from same section | p. 19 (Figure/Table caption) |
 | 6 shows a series of images of generated trajectories in two problems. | definition/direction/unit from same section | p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS) |
 | 4.2) with radius 0.6 for the Highways map and 0.8 for the Empty map. | definition/direction/unit from same section | p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS) |
-| Published as a conference paper at ICLR 2025 MMD-xECBS MMD-PP MPD-Composite A*Data-ECBS Empty 3 Highways 3 Empty 6 Highways 6 Fail Figure 6: Visual ... | definition/direction/unit from same section | p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS) |
 | Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
+| To create the datasets, we endow each map with a motion pattern function that, given start and goal configurations, generates the critical motions that ... | definition/direction/unit from same section | p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 | Primary metric/result | Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate ... | numeric claim only at cited anchor | p. 15 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 17 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive PDF cue:** The top two rows show test cases with 3 robots, and the bottom two rows with 6.
-- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive PDF cue:** The trajectory connecting the start and goal is discretized uniformly to 64 points such that the time between consecutive trajectory configurations is constant.
-- **p. 5 / 3 METHOD - extractive PDF cue:** This can be utilized in MMD replanning by initially adding noise to the stored trajectory for a limited number of steps (3 in our experiments; ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** We created three models: for 3, 6, and 9 robots.
-- **p. 7 / 3 METHOD - extractive PDF cue:** The composite model achieved perfect success rates and high data adherence scores with 3 robots but struggled as the number of robots increased to 6.
-- **p. 8 / 3 METHOD - extractive PDF cue:** The left column shows our test maps, the middle column compares success rates across 10 trials per robot count, and the right column presents the ...
+- **p. 17 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** The top two rows show test cases with 3 robots, and the bottom two rows with 6.
+- **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** The trajectory connecting the start and goal is discretized uniformly to 64 points such that the time between consecutive trajectory configurations is constant.
+- **p. 5 / 3 METHOD - extractive body cue:** This can be utilized in MMD replanning by initially adding noise to the stored trajectory for a limited number of steps (3 in our experiments; ...
+- **p. 7 / 3 METHOD - extractive body cue:** We created three models: for 3, 6, and 9 robots.
+- **p. 7 / 3 METHOD - extractive body cue:** The composite model achieved perfect success rates and high data adherence scores with 3 robots but struggled as the number of robots increased to 6.
+- **p. 8 / 3 METHOD - extractive body cue:** The left column shows our test maps, the middle column compares success rates across 10 trials per robot count, and the right column presents the ...
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 6 CONCLUSION - extractive PDF cue:** Currently, MMD focuses on coordinating robots, seeking to produce collision-free data-driven trajectories.
-- **p. 10 / 6 CONCLUSION - extractive PDF cue:** In this paper, we present MMD, a multi-robot motion planner that learns to generate smooth collision-free trajectories for dozens of robots in complex environments.
-- **p. 14 / A.1 ADDITIONAL ALGORITHMIC DISCUSSION - extractive PDF cue:** Resembling their outcomes, we also observed a significant runtime improvement between prioritizing CT nodes based on their geometric quality and their collision count.
-- **p. 14 / A.1 ADDITIONAL ALGORITHMIC DISCUSSION - extractive PDF cue:** Once the batch is generated, MMD iterates over the new resulting trajectories N.τ i and marks the one with the least collisions as the representative ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Scalability tests in high-congestion free-space MRMP. Circle (top row) asks robots to swap positions between opposite points on the perimeter. Weave (below), asks ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective constraint ...
+- **p. 10 / 6 CONCLUSION - extractive body cue:** Currently, MMD focuses on coordinating robots, seeking to produce collision-free data-driven trajectories.
+- **p. 10 / 6 CONCLUSION - extractive body cue:** In this paper, we present MMD, a multi-robot motion planner that learns to generate smooth collision-free trajectories for dozens of robots in complex environments.
+- **p. 14 / A.1 ADDITIONAL ALGORITHMIC DISCUSSION - extractive body cue:** Resembling their outcomes, we also observed a significant runtime improvement between prioritizing CT nodes based on their geometric quality and their collision count.
+- **p. 14 / A.1 ADDITIONAL ALGORITHMIC DISCUSSION - extractive body cue:** Once the batch is generated, MMD iterates over the new resulting trajectories N.τ i and marks the one with the least collisions as the representative ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Scalability tests in high-congestion free-space MRMP. Circle (top row) asks robots to swap positions between opposite points on the perimeter. Weave (below), asks ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective constraint ...
 
-- **PDF anchors reviewed:** datasets p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.4 IMPLEMENTATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), metrics p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (Figure/Table caption), p. 19 (Figure/Table caption), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS), baselines p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 18 (A.4 IMPLEMENTATION DETAILS), results p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption), p. 19 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.4 IMPLEMENTATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), metrics p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (Figure/Table caption), p. 19 (Figure/Table caption), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS), baselines p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 18 (A.4 IMPLEMENTATION DETAILS), results p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption), p. 19 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

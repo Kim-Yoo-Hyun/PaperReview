@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories.
-- **p. 7 / 4.2. Quantitative Results - extractive PDF cue:** Qualitative comparisons on the ScanNet200 dataset.
-- **p. 7 / 4.2. Quantitative Results - extractive PDF cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Class-agnostic evaluation on the ScanNet200 [7]. the ScanNet200 dataset.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Full ablation study on all three datasets can be found in the supplementary materials.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We measure mean average precision (mAP) and mean average recall (mAR) at IOU thresholds of 25% and 50%.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Additionally, we measure mAP and mAR across IOU thresholds ranging from 50% to 95% with 5% increments.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories.
+- **p. 7 / 4.2. Quantitative Results - extractive body cue:** Qualitative comparisons on the ScanNet200 dataset.
+- **p. 7 / 4.2. Quantitative Results - extractive body cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Class-agnostic evaluation on the ScanNet200 [7]. the ScanNet200 dataset.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Full ablation study on all three datasets can be found in the supplementary materials.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We measure mean average precision (mAP) and mean average recall (mAR) at IOU thresholds of 25% and 50%.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Additionally, we measure mAP and mAR across IOU thresholds ranging from 50% to 95% with 5% increments.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Qualitative Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | These visual results are consistent with the recall metrics: Open3DIS and OpenYOLO3D achieve the mAR of 43.3% and 47.7%, respectively, whereas our method significantly ... | p. 7 (4.3. Qualitative Results) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. OV-3DIS results on the ScanNet200 validation set [7]. Top-1 evaluation protocol refers to assigning one predicted class per instance mask, and Top-K ... | p. 6 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories.
-- **p. 7 / 4.2. Quantitative Results - extractive PDF cue:** Qualitative comparisons on the ScanNet200 dataset.
-- **p. 7 / 4.2. Quantitative Results - extractive PDF cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Class-agnostic evaluation on the ScanNet200 [7]. the ScanNet200 dataset.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Full ablation study on all three datasets can be found in the supplementary materials.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories.
+- **p. 7 / 4.2. Quantitative Results - extractive body cue:** Qualitative comparisons on the ScanNet200 dataset.
+- **p. 7 / 4.2. Quantitative Results - extractive body cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Class-agnostic evaluation on the ScanNet200 [7]. the ScanNet200 dataset.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Full ablation study on all three datasets can be found in the supplementary materials.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Examples of open-vocabulary predictions from our method in the ScanNet200 dataset [7]. Our method effectively retrieves instances based on functional descriptions (e.g., drink ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of image-based 3D proposal generation. We first remove overlaps between 2D predictions within each frame and lift them to 3D point cloud ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Matching tracklets with a new observation. We con- duct frame-wise sIOU comparisons between a new observation and each tracked instance in tracklets. If ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Effectiveness of 3D proposal refinement. Red boxes indicate the object of interest, and segments of different colors de- note 3D superpoints. Without refinement, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization of merged and removed proposals in the ScanNet200 dataset. Overlapping and noisy proposals often emerge after instance tracking. We effectively handle these ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Failure cases of using CLIP for instance classification. CLIP fails when the shape of the object gets distorted or when other objects are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. OV-3DIS results on the ScanNet200 validation set [7]. Top-1 evaluation protocol refers to assigning one predicted class per instance mask, and Top-K evaluation ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Qualitative comparisons on the ScanNet200 dataset. Black regions indicate empty predictions (no object), while red boxes highlight objects missed by other methods but ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of open-vocabulary predictions from our method in the ScanNet200 dataset [7]. Our method effectively retrieves instances based on functional descriptions (e.g., drink ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of image-based 3D proposal generation. We first remove overlaps between 2D predictions within each frame and lift them to 3D point cloud ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Matching tracklets with a new observation. We con- duct frame-wise sIOU comparisons between a new observation and each tracked instance in tracklets. If ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Effectiveness of 3D proposal refinement. Red boxes indicate the object of interest, and segments of different colors de- note 3D superpoints. Without refinement, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of merged and removed proposals in the ScanNet200 dataset. Overlapping and noisy proposals often emerge after instance tracking. We effectively handle these ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Failure cases of using CLIP for instance classification. CLIP fails when the shape of the object gets distorted or when other objects are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. OV-3DIS results on the ScanNet200 validation set [7]. Top-1 evaluation protocol refers to assigning one predicted class per instance mask, and Top-K evaluation ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Qualitative comparisons on the ScanNet200 dataset. Black regions indicate empty predictions (no object), while red boxes highlight objects missed by other methods but ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results) |
@@ -121,11 +121,11 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 | Primary metric/result | Table 1. OV-3DIS results on the ScanNet200 validation set [7]. Top-1 evaluation protocol refers to assigning one predicted class per instance mask, and Top-K ... | numeric claim only at cited anchor | p. 6 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** It includes 1,201 scenes in the training set and 312 scenes in the validation set.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** S3DIS consists of 271 scenes from 6 different areas, with Area 5 used for our evaluation.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Method AP AP50 AP25 Tracklet-wise sIOU for Tracking 34.7 54.3 69.6 Frame-wise sIOU for Tracking 35.1 (+0.4) 56.1 (+1.8) 70.5 (+0.9) Table 5.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** ScanNet200 is a real-world dataset comprising diverse indoor environments with 200 object categories.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** It includes 1,201 scenes in the training set and 312 scenes in the validation set.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** S3DIS consists of 271 scenes from 6 different areas, with Area 5 used for our evaluation.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Replica is a synthetic dataset created from digital replicas of real-world scenes, featuring 48 object classes across 8 different scenes.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Method AP AP50 AP25 Tracklet-wise sIOU for Tracking 34.7 54.3 69.6 Frame-wise sIOU for Tracking 35.1 (+0.4) 56.1 (+1.8) 70.5 (+0.9) Table 5.
 
 ## Generalization and Failure Cases
 
@@ -160,13 +160,13 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Improving such limitations remains our future work.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Failure cases of using CLIP for instance classification. CLIP fails when the shape of the object gets distorted or when other objects are ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Also, we found that our method fails to improve performance on small objects (e.g., ScanNet++ in the supplementary) but rather remain similar to existing approaches.
-- **p. 7 / 4.2. Quantitative Results - extractive PDF cue:** However, it lags behind OpenYOLO3D [2] in terms of mAP, which does not use CLIP for instance classification.
-- **p. 7 / 4.2. Quantitative Results - extractive PDF cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
+- **p. 8 / 5. Conclusion - extractive body cue:** Improving such limitations remains our future work.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Failure cases of using CLIP for instance classification. CLIP fails when the shape of the object gets distorted or when other objects are ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Also, we found that our method fails to improve performance on small objects (e.g., ScanNet++ in the supplementary) but rather remain similar to existing approaches.
+- **p. 7 / 4.2. Quantitative Results - extractive body cue:** However, it lags behind OpenYOLO3D [2] in terms of mAP, which does not use CLIP for instance classification.
+- **p. 7 / 4.2. Quantitative Results - extractive body cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), metrics p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 5 (Figure/Table caption), p. 7 (4.4. Ablation Study), baselines p. 7 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 6 (Figure/Table caption), results p. 7 (4.3. Qualitative Results), p. 6 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), metrics p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 5 (Figure/Table caption), p. 7 (4.4. Ablation Study), baselines p. 7 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 6 (Figure/Table caption), results p. 7 (4.3. Qualitative Results), p. 6 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

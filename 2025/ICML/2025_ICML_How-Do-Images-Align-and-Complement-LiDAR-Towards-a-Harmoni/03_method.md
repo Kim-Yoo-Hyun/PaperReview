@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=F7BOaYmWl7; PDF retrieval source: https://openreview.net/pdf/ea38ded40d57a840cbde86fb7bfa9588256ea489.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=F7BOaYmWl7; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167147. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query G
 
 ## Method Body Digest
 
-- **p. 4 / 3. Methodology - extractive PDF cue:** Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction.
-- **p. 6 / 3.3. Prior-Based Query Generation - extractive PDF cue:** Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and geometric information from ...
-- **p. 4 / 3. Methodology - extractive PDF cue:** The augmented 3D voxels and images are then processed by 3D encoder E3D and 2D encoder E2D, extracting voxelwise features F3D ∈RM×D and image features ...
-- **p. 6 / 3.3. Prior-Based Query Generation - extractive PDF cue:** We then extract the query content by indexing into the corresponding voxel features Ffuse, and finally add the SPE to this content to form the ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
-- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive PDF cue:** Specifically, we align features at the voxel level by projecting all physical points within a voxel vi onto the image plane and averaging their corresponding ...
-- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive PDF cue:** Position embedding (PE) has proven effective in aligning features from different modalities (Yan et al., 2023).
-- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive PDF cue:** Even when using physical points for PE, capturing the full perceptive field of a voxel or its corresponding image region image coord. view image ✘ ...
+- **p. 4 / 3. Methodology - extractive body cue:** Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction.
+- **p. 6 / 3.3. Prior-Based Query Generation - extractive body cue:** Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and geometric information from ...
+- **p. 4 / 3. Methodology - extractive body cue:** The augmented 3D voxels and images are then processed by 3D encoder E3D and 2D encoder E2D, extracting voxelwise features F3D ∈RM×D and image features ...
+- **p. 6 / 3.3. Prior-Based Query Generation - extractive body cue:** We then extract the query content by indexing into the corresponding voxel features Ffuse, and finally add the SPE to this content to form the ...
+- **p. 3 / 3. Methodology - extractive body cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
+- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive body cue:** Specifically, we align features at the voxel level by projecting all physical points within a voxel vi onto the image plane and averaging their corresponding ...
+- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive body cue:** Position embedding (PE) has proven effective in aligning features from different modalities (Yan et al., 2023).
+- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive body cue:** Even when using physical points for PE, capturing the full perceptive field of a voxel or its corresponding image region image coord. view image ✘ ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
-- **p. 1 / 1. Introduction - extractive PDF cue:** To address the first limitation, we propose a modality1
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps ...
+- **p. 3 / 3. Methodology - extractive body cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
+- **p. 1 / 1. Introduction - extractive body cue:** To address the first limitation, we propose a modality1
 
 ## Source Evidence Cues
 
-- **p. 4 / 3. Methodology - extractive PDF cue:** Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction.
-- **p. 6 / 3.3. Prior-Based Query Generation - extractive PDF cue:** Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and geometric information from ...
-- **p. 4 / 3. Methodology - extractive PDF cue:** The augmented 3D voxels and images are then processed by 3D encoder E3D and 2D encoder E2D, extracting voxelwise features F3D ∈RM×D and image features ...
-- **p. 6 / 3.3. Prior-Based Query Generation - extractive PDF cue:** We then extract the query content by indexing into the corresponding voxel features Ffuse, and finally add the SPE to this content to form the ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
-- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive PDF cue:** Specifically, we align features at the voxel level by projecting all physical points within a voxel vi onto the image plane and averaging their corresponding ...
-- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive PDF cue:** Position embedding (PE) has proven effective in aligning features from different modalities (Yan et al., 2023).
+- **p. 4 / 3. Methodology - extractive body cue:** Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction.
+- **p. 6 / 3.3. Prior-Based Query Generation - extractive body cue:** Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and geometric information from ...
+- **p. 4 / 3. Methodology - extractive body cue:** The augmented 3D voxels and images are then processed by 3D encoder E3D and 2D encoder E2D, extracting voxelwise features F3D ∈RM×D and image features ...
+- **p. 6 / 3.3. Prior-Based Query Generation - extractive body cue:** We then extract the query content by indexing into the corresponding voxel features Ffuse, and finally add the SPE to this content to form the ...
+- **p. 3 / 3. Methodology - extractive body cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
+- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive body cue:** Specifically, we align features at the voxel level by projecting all physical points within a voxel vi onto the image plane and averaging their corresponding ...
+- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive body cue:** Position embedding (PE) has proven effective in aligning features from different modalities (Yan et al., 2023).
 - **Detected method headings:** 3. Methodology (p. 3); 4.4. Augmentation Methods Comparison (p. 8)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction. | p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and ... | p. 6 (3.3. Prior-Based Query Generation), p. 4 (3. Methodology) |
@@ -48,7 +48,7 @@ PDF body method statement (p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query G
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive PDF cue:** Even when using physical points for PE, capturing the full perceptive field of a voxel or its corresponding image region image coord. view image ✘ ...
+- **p. 5 / 3.2. Geometric-Guided Token Fusion - extractive body cue:** Even when using physical points for PE, capturing the full perceptive field of a voxel or its corresponding image region image coord. view image ✘ ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.2. Geometric-Guided Token Fusion).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query G
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 3.3. Prior-Based Query Generation - extractive PDF cue:** Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and geometric information from ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** LiDAR is an indispensable sensor for perceiving the 3D world, with its LiDAR point cloud typically serving as the sole input for 3D panoptic segmentation ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** GTF module integrates the sparse, cylinder-shaped LiDAR features with the compact, grid-shaped image features to create input tokens.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our PQG module leverages prior knowledge from LiDAR and image inputs, which provide complementary strengths for object perception, to improve query initialization.
-- **p. 4 / 3. Methodology - extractive PDF cue:** Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction.
-- **p. 3 / 3. Methodology - extractive PDF cue:** The point cloud is associated with K view images, represented as I = {Ik ∈RH×W ×3}K k=1, H and W denote the height and width ...
-- **p. 4 / 3.1. Modality-Synchronized Augmentation - extractive PDF cue:** Point clouds are projected on camera images, with colors indicating semantic labels or data sources.
+- **p. 6 / 3.3. Prior-Based Query Generation - extractive body cue:** Inspired by this observation, we propose the Prior-based Query Generation (PQG) module to explicitly leverage texture features from the image domain, and geometric information from ...
+- **p. 1 / 1. Introduction - extractive body cue:** LiDAR is an indispensable sensor for perceiving the 3D world, with its LiDAR point cloud typically serving as the sole input for 3D panoptic segmentation ...
+- **p. 2 / 1. Introduction - extractive body cue:** GTF module integrates the sparse, cylinder-shaped LiDAR features with the compact, grid-shaped image features to create input tokens.
+- **p. 2 / 1. Introduction - extractive body cue:** Our PQG module leverages prior knowledge from LiDAR and image inputs, which provide complementary strengths for object perception, to improve query initialization.
+- **p. 4 / 3. Methodology - extractive body cue:** Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction.
+- **p. 3 / 3. Methodology - extractive body cue:** The point cloud is associated with K view images, represented as I = {Ik ∈RH×W ×3}K k=1, H and W denote the height and width ...
+- **p. 4 / 3.1. Modality-Synchronized Augmentation - extractive body cue:** Point clouds are projected on camera images, with colors indicating semantic labels or data sources.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,7 +85,7 @@ PDF body method statement (p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query G
 
 ## Training vs Inference
 
-- **p. 7 / 4.1. Experimental Setting - extractive PDF cue:** The entire model is trained from scratch with a batch size of 2, using 4 NVIDIA A40 GPUs.
+- **p. 7 / 4.1. Experimental Setting - extractive body cue:** The entire model is trained from scratch with a batch size of 2, using 4 NVIDIA A40 GPUs.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query G
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** To validate the effectiveness of our proposed components, we conduct comprehensive ablation studies on the overall proposal framework in Table 5 and provide detailed analyses ...
-- **p. 7 / 4.1. Experimental Setting - extractive PDF cue:** Our method is evaluated without test-time augmentation or ensembling.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Ablation study of the proposed modules in our framework. "PIE" denotes the PieAug module.
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 8. Ablation study of the GTF module. "Sel" and "PE" denote the designs for token selection and positional embedding, respectively. We evaluate different configurations ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. The architecture overview of our Image-Assists-LiDAR (IAL) framework. We first voxelize the point cloud into cylindrical voxels. In PieAug, we synchronize augmentation by ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Motivation and implementation variants of PieAug. Each column illustrates the motivation for LiDAR-image syn- chronized augmentation. Each row displays a different pie-cut strategy. ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparison of the ablation study for GTF and PQG modules. To emphasize the differences, we mark false positive and false negative predictions, ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** To validate the effectiveness of our proposed components, we conduct comprehensive ablation studies on the overall proposal framework in Table 5 and provide detailed analyses ...
+- **p. 7 / 4.1. Experimental Setting - extractive body cue:** Our method is evaluated without test-time augmentation or ensembling.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation study of the proposed modules in our framework. "PIE" denotes the PieAug module.
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 8. Ablation study of the GTF module. "Sel" and "PE" denote the designs for token selection and positional embedding, respectively. We evaluate different configurations ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The architecture overview of our Image-Assists-LiDAR (IAL) framework. We first voxelize the point cloud into cylindrical voxels. In PieAug, we synchronize augmentation by ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Motivation and implementation variants of PieAug. Each column illustrates the motivation for LiDAR-image syn- chronized augmentation. Each row displays a different pie-cut strategy. ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparison of the ablation study for GTF and PQG modules. To emphasize the differences, we mark false positive and false negative predictions, ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query G
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation), p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation), p. 3 (3. Methodology), p. 5 (3.2. Geometric-Guided Token Fusion), objective p. 5 (3.2. Geometric-Guided Token Fusion), temporal p. 7 (4.1. Experimental Setting), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation), p. 6 (4.1. Experimental Setting), p. 8 (4.3. Ablation Studies).
+- **Evidence anchors reviewed:** method p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation), p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation), p. 3 (3. Methodology), p. 5 (3.2. Geometric-Guided Token Fusion), objective p. 5 (3.2. Geometric-Guided Token Fusion), temporal p. 7 (4.1. Experimental Setting), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation), p. 6 (4.1. Experimental Setting), p. 8 (4.3. Ablation Studies).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

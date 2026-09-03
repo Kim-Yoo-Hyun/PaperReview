@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 [28, 40], we stack 3 control steps of previous joint states and actions, and append them to the policy observations to enhance the robustness by temporal memory.를 To develop RL-based controllers for these tasks, we formulate the policy learning problem as an extended Markov Decision Process (MDP) M = ⟨S, A, T , R, γ, Gcon, Gtask⟩of state st ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Humanoid activities involving sequential contacts are crucial for complex robotic interactions and operations in the real world and are traditionally solved by model-based motion planning, which is time-consuming and often ... (p. 1, Abstract).
+- **Paper-specific mechanism:** In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals. (p. 3, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 4: Learned dancing motions in simulation and the real-world. Black bounding boxes indicate the foot contact goals and the hand task goals. Reward. There are two task-related rewards, one ... (p. 7, Figure/Table caption); the relevant task/metric cue is There are two task-related reward terms, which incentivize minimizing the distances between the hands and the box, and between the box and its destination. (p. 6, 1 Introduction). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail. (p. 8, 1 Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Left Middle Right Figure 4: Learned dancing motions in simulation and the real-world..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 6: We train the dinosaur robot to push the ball towards destinations with different end effec- tors. By altering the destinations, we make the robot generate ball trajectories forming "WoCoCo". 5 ....
-4. Report the body metric and its denominator/aggregation: Figure 4: Learned dancing motions in simulation and the real-world. Black bounding boxes indicate the foot contact goals and the hand task goals. Reward. There are two task-related rewards, one encourageing spreading ....
-5. Re-run the body-reported ablation/failure condition: In comparison, our curiosity rewards achieves effective exploration without overfitting specific behaviors..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Humanoid activities involving sequential contacts are crucial for complex robotic interactions and operations in the real world and are traditionally solved by model-based motion planning, which is time-consuming and often ... (p. 1, Abstract); preserve the objective/update rule: Provided specific contact plans, the typical solution is to employ model-based motion planning or trajectory optimization to generate whole-body references for tracking [2, 3, 4]. (p. 1, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: 3Referred to as "destination" to avoid confusion with contact/task goals. (p. 6, 1 Introduction).
+3. Compare against the reported or matched baseline: In comparison, our curiosity rewards achieves effective exploration without overfitting specific behaviors. (p. 8, 1 Introduction).
+4. Report the body metric with its denominator and aggregation: There are two task-related reward terms, which incentivize minimizing the distances between the hands and the box, and between the box and its destination. (p. 6, 1 Introduction).
+5. Re-run the reported ablation or stress/failure condition: Lower Row: We transfer the policy to the real world, testing jumps with double-foot contacts at different heights and a "hug" posture. provided current and goal positions3 of the box, ... (p. 6, 1 Introduction); if none is reported, design one around: 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail. (p. 8, 1 Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (1 Introduction), p. 6 (1 Introduction), p. 1 (1 Introduction); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 6 (1 Introduction), p. 8 (1 Introduction); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1 Introduction), p. 5 (1 Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), and measure the boundary at p. 8 (1 Introduction), p. 2 (1 Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Section, framework, WoCoCo mechanism이 Figure 6: We train the dinosaur robot to push the ball towards destinations with different end ... 대비 Figure 4: Learned dancing motions in simulation and the real-world. Black bounding boxes indicate the foot contact goals ...을 개선하고, 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Humanoid activities involving sequential contacts are crucial for complex robotic interactions and operations in the real world and are traditionally solved by ...), does the paper-specific mechanism (In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions ...) retain the reported evaluation outcome (There are two task-related reward terms, which incentivize minimizing the distances between the hands and the box, and ...) when tested against the paper's strongest explicit boundary (6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (There are two task-related reward terms, which incentivize minimizing the distances between the hands and the box, and ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals. (p. 3, 1 Introduction).
+- **Paper-supported outcome:** Figure 4: Learned dancing motions in simulation and the real-world. Black bounding boxes indicate the foot contact goals and the hand task goals. Reward. There are two task-related rewards, one ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail. (p. 8, 1 Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

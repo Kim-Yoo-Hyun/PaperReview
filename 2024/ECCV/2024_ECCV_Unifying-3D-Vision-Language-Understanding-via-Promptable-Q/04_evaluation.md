@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6043_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6043_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** To further demonstrate the capability of PQ3D, we also transfer it to an embodied agent for object navigation using the ObjNav task from CortexBench [42] ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** 1 shows a summary of the datasets used for the multitask training of PQ3D.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Notably, we combine eight datasets for training, including about 662K training samples for various tasks.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Dataset Task Prompt Heads Size ScanNet200 [52] instance segmentation category mask,grounding 240K ScanRefer [6] visual grounding sentence grounding 37K Nr3D [2] visual grounding sentence grounding ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Importantly, the performance of PQ3D trained on multiple tasks and datasets exceeds that of PQ3D trained on a single task and dataset, showcasing the effectiveness ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** Zhu et al. of-distribution dataset Replica [55].
-- **p. 10 / 4 Experiments - extractive PDF cue:** These findings imply a notable capability of PQ3D for effective transfer to different datasets.
-- **p. 11 / 4 Experiments - extractive PDF cue:** The notation "PQ3D (sg.)" indicates a model trained on a single dataset rather than through unified joint training.
+- **p. 9 / 4 Experiments - extractive body cue:** To further demonstrate the capability of PQ3D, we also transfer it to an embodied agent for object navigation using the ObjNav task from CortexBench [42] ...
+- **p. 8 / 4 Experiments - extractive body cue:** 1 shows a summary of the datasets used for the multitask training of PQ3D.
+- **p. 8 / 4 Experiments - extractive body cue:** Notably, we combine eight datasets for training, including about 662K training samples for various tasks.
+- **p. 9 / 4 Experiments - extractive body cue:** Dataset Task Prompt Heads Size ScanNet200 [52] instance segmentation category mask,grounding 240K ScanRefer [6] visual grounding sentence grounding 37K Nr3D [2] visual grounding sentence grounding ...
+- **p. 11 / 4 Experiments - extractive body cue:** Importantly, the performance of PQ3D trained on multiple tasks and datasets exceeds that of PQ3D trained on a single task and dataset, showcasing the effectiveness ...
+- **p. 10 / 4 Experiments - extractive body cue:** Zhu et al. of-distribution dataset Replica [55].
+- **p. 10 / 4 Experiments - extractive body cue:** These findings imply a notable capability of PQ3D for effective transfer to different datasets.
+- **p. 11 / 4 Experiments - extractive body cue:** The notation "PQ3D (sg.)" indicates a model trained on a single dataset rather than through unified joint training.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Furthermore, on the Multi3DRefer benchmark, our model outperforms others in the ST (single target) and MT (multiple targets) categories and achieves the highest average ... | p. 10 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | The proposed PQ3D provides global 3D features to the navigation agent that can improve the baseline VC-1 by a significant margin, achieving a 22.9% ... | p. 11 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** To further demonstrate the capability of PQ3D, we also transfer it to an embodied agent for object navigation using the ObjNav task from CortexBench [42] ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** 1 shows a summary of the datasets used for the multitask training of PQ3D.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Notably, we combine eight datasets for training, including about 662K training samples for various tasks.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Dataset Task Prompt Heads Size ScanNet200 [52] instance segmentation category mask,grounding 240K ScanRefer [6] visual grounding sentence grounding 37K Nr3D [2] visual grounding sentence grounding ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Importantly, the performance of PQ3D trained on multiple tasks and datasets exceeds that of PQ3D trained on a single task and dataset, showcasing the effectiveness ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** Zhu et al. of-distribution dataset Replica [55].
-- **p. 10 / 4 Experiments - extractive PDF cue:** These findings imply a notable capability of PQ3D for effective transfer to different datasets.
-- **p. 11 / 4 Experiments - extractive PDF cue:** The notation "PQ3D (sg.)" indicates a model trained on a single dataset rather than through unified joint training.
+- **p. 9 / 4 Experiments - extractive body cue:** To further demonstrate the capability of PQ3D, we also transfer it to an embodied agent for object navigation using the ObjNav task from CortexBench [42] ...
+- **p. 8 / 4 Experiments - extractive body cue:** 1 shows a summary of the datasets used for the multitask training of PQ3D.
+- **p. 8 / 4 Experiments - extractive body cue:** Notably, we combine eight datasets for training, including about 662K training samples for various tasks.
+- **p. 9 / 4 Experiments - extractive body cue:** Dataset Task Prompt Heads Size ScanNet200 [52] instance segmentation category mask,grounding 240K ScanRefer [6] visual grounding sentence grounding 37K Nr3D [2] visual grounding sentence grounding ...
+- **p. 11 / 4 Experiments - extractive body cue:** Importantly, the performance of PQ3D trained on multiple tasks and datasets exceeds that of PQ3D trained on a single task and dataset, showcasing the effectiveness ...
+- **p. 10 / 4 Experiments - extractive body cue:** Zhu et al. of-distribution dataset Replica [55].
+- **p. 10 / 4 Experiments - extractive body cue:** These findings imply a notable capability of PQ3D for effective transfer to different datasets.
+- **p. 11 / 4 Experiments - extractive body cue:** The notation "PQ3D (sg.)" indicates a model trained on a single dataset rather than through unified joint training.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: PQ3D is a unified model for 3D vision-language understanding, capable of taking various prompts (object categories, referring sentences, images, locations) to perform a ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: Comparison between PQ3D and other models. (a) When comparing PQ3D to other state-of-the-art (SOTA) methods, PQ3D demonstrates superior performance on most tasks. (b) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: The model architecture of PQ3D, which consists of Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning modules. In prompt encoding, task ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Datasets for unified training. The size of ScanNet200 is #scenes (1202)× #categories (200).
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Instance Segmentation results on the ScanNet200 validation set and zero-shot performance on Replica. The Average Precision (AP) is averaged over an overlapping range, ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Grounding accuracy (%) on 3D visual grounding benchmarks. The results of ScanRefer and Multi3DRefer are reported under IoU@0.5. The results of Nr3D and ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 4: Answer accuracy on ScanQA. Each entry denotes "test w/ object" and "test w/o object". EM@1 refers to the top 1 exact match accuracy, ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 5: Answer accuracy on SQA3D under question types.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: PQ3D is a unified model for 3D vision-language understanding, capable of taking various prompts (object categories, referring sentences, images, locations) to perform a ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Comparison between PQ3D and other models. (a) When comparing PQ3D to other state-of-the-art (SOTA) methods, PQ3D demonstrates superior performance on most tasks. (b) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: The model architecture of PQ3D, which consists of Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning modules. In prompt encoding, task ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Datasets for unified training. The size of ScanNet200 is #scenes (1202)× #categories (200).
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Instance Segmentation results on the ScanNet200 validation set and zero-shot performance on Replica. The Average Precision (AP) is averaged over an overlapping range, ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Grounding accuracy (%) on 3D visual grounding benchmarks. The results of ScanRefer and Multi3DRefer are reported under IoU@0.5. The results of Nr3D and ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 4: Answer accuracy on ScanQA. Each entry denotes "test w/ object" and "test w/o object". EM@1 refers to the top 1 exact match accuracy, ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 5: Answer accuracy on SQA3D under question types.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To further demonstrate the capability of PQ3D, we also transfer it to an embodied agent for object navigation using the ObjNav task from CortexBench ... | embodiment, simulator version and control stack | p. 9 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | 1 shows a summary of the datasets used for the multitask training of PQ3D. | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 8 (4 Experiments) |
@@ -122,9 +122,9 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | Primary metric/result | The proposed PQ3D provides global 3D features to the navigation agent that can improve the baseline VC-1 by a significant margin, achieving a 22.9% ... | numeric claim only at cited anchor | p. 11 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4 Experiments - extractive PDF cue:** In the first stage, we train the model with instance segmentation alone on ScanNet200 for 800 epochs.
-- **p. 5 / 3 Method - extractive PDF cue:** 3.1 Task Prompt Encoding In various 3D-VL tasks, a task prompt can be of diverse formats, including object categories, referring sentences, questions, 3D bounding boxes, ...
-- **p. 7 / 3 Method - extractive PDF cue:** For each segment, we sample 1,024 points, normalize their coordinates into a unit sphere and then feed them into a pre-trained PointNet++ backbone [46, 47] ...
+- **p. 9 / 4 Experiments - extractive body cue:** In the first stage, we train the model with instance segmentation alone on ScanNet200 for 800 epochs.
+- **p. 5 / 3 Method - extractive body cue:** 3.1 Task Prompt Encoding In various 3D-VL tasks, a task prompt can be of diverse formats, including object categories, referring sentences, questions, 3D bounding boxes, ...
+- **p. 7 / 3 Method - extractive body cue:** For each segment, we sample 1,024 points, normalize their coordinates into a unit sphere and then feed them into a pre-trained PointNet++ backbone [46, 47] ...
 
 ## Generalization and Failure Cases
 
@@ -161,13 +161,13 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** However, our model trained only on the Multi3DRefer dataset "PQ3D (sg.)" exhibits better performance in the ZT and MT metric, but falls short of the ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** As our model utilizes the CLIP text encoder, it may face limitations in understanding long sentences.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Different from 3D-VisTA, our model does not use a classification head for QA, which causes a performance drop in EM metric.
-- **p. 14 / 4. Adjust the temperature or settings of the heater - extractive PDF cue:** 5 Conclusions and Future Works In conclusion, our proposed PQ3D addresses the challenges in 3D vision-language learning (3D-VL) by offering a unified approach that integrates ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** However, our model's performance with tail classes is relatively less robust due to biases in the CLIP text encoder, which is analyzed in the appendix.
+- **p. 10 / 4 Experiments - extractive body cue:** However, our model trained only on the Multi3DRefer dataset "PQ3D (sg.)" exhibits better performance in the ZT and MT metric, but falls short of the ...
+- **p. 11 / 4 Experiments - extractive body cue:** As our model utilizes the CLIP text encoder, it may face limitations in understanding long sentences.
+- **p. 10 / 4 Experiments - extractive body cue:** Different from 3D-VisTA, our model does not use a classification head for QA, which causes a performance drop in EM metric.
+- **p. 14 / 4. Adjust the temperature or settings of the heater - extractive body cue:** 5 Conclusions and Future Works In conclusion, our proposed PQ3D addresses the challenges in 3D vision-language learning (3D-VL) by offering a unified approach that integrates ...
+- **p. 9 / 4 Experiments - extractive body cue:** However, our model's performance with tail classes is relatively less robust due to biases in the CLIP text encoder, which is analyzed in the appendix.
 
-- **PDF anchors reviewed:** datasets p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), metrics p. 11 (4 Experiments), p. 11 (Figure/Table caption), p. 12 (4 Experiments), p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 4 (Figure/Table caption), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), metrics p. 11 (4 Experiments), p. 11 (Figure/Table caption), p. 12 (4 Experiments), p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 4 (Figure/Table caption), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -1,8 +1,10 @@
 # SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/dair/publication/sonic2026/.
-> PDF retrieval source: https://research.nvidia.com/labs/dair/publication/sonic2026/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/dair/publication/sonic2026/.
+> PDF retrieval source: https://research.nvidia.com/labs/dair/publication/sonic2026/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / Science Robotics
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://research.nvidia.com/labs/dair/publication/sonic2026/
 - Code/Project: https://research.nvidia.com/labs/dair/publication/sonic2026/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 These foundation models have shown a consistent pattern: scale unlocks emergent capabilities, generalization, and robustness that smaller models cannot achieve [7-9].를 문제로 두고, We propose Supersizing mOtion tracking for Natural humanoId Control (SONIC), a framework that enables natural humanoid control across a wide range of applications (Movie S1).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (39 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Each new capability demands redesigned rewards and objectives, making scaling up difficult. (p. 1, 1. Introduction).
+- **Actual contribution:** In addition, we show how such a motion tracker can be applied to meaningful downstream tasks, and introduce two key contributions. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical test applied). (A) FSQ outperforms VQ-VAE ... (p. 19, Figure/Table caption).
+- **Explicit failure boundary:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).

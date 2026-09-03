@@ -1,8 +1,10 @@
 # NVIDIA Isaac GR00T N1: An Open Foundation Model for Humanoid Robots
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; title-token overlap first two pages=0.875); canonical paper source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots.
-> PDF retrieval source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=0.875); canonical paper source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots.
+> PDF retrieval source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / arXiv
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots
 - Code/Project: https://developer.nvidia.com/isaac/gr00t
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; title-token overlap first two pages=0.875)
+- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=0.875)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ VLA and generalist robot policies의 humanoid 문제를 이해하기 위해 읽�
 ## Why Read It
 
 VLA and generalist robot policies의 humanoid 문제를 이해하기 위해 읽는다. 본문은 They demonstrate the effectiveness of training generalist models on web-scale data to enable strong generalization and fast adaptation to downstream tasks.를 문제로 두고, We introduce GR00T N1, an open foundation model for generalist humanoid robots.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.875). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To mitigate the "data island" problem mentioned earlier, we structure the VLA training corpora as a data pyramid, illustrated in Fig. (p. 2, 1. Introduction).
+- **Actual contribution:** We introduce GR00T N1, an open foundation model for generalist humanoid robots. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Figure 9: Average Success Rate (%) across 24 Tasks in simulation and 8 tasks in the real world. In the RoboCasa simulation, we show all post-training results using 30, 100, ... (p. 16, Figure/Table caption).
+- **Explicit failure boundary:** (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp. (p. 24, 6. Conclusions).

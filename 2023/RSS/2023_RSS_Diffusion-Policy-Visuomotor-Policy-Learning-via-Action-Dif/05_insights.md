@@ -25,7 +25,7 @@
 - **p. 1 / 1 Introduction - extractive body cue:** Prior work attempts to address this challenge by exploring different action representations (Fig 1 a) - using mixtures of Gaussians Mandlekar et al.
 - **p. 4 / 1 Introduction - extractive body cue:** The difficulty of transformer training Liu et al.
 - **p. 5 / 1 Introduction - extractive body cue:** Similarly, BCRNN and BET would have difficulty specifying the number of modes that exist in the action distribution (needed for GMM or k-means steps).
-- **p. 1 / 1 Introduction - extractive body cue:** (2011), which includes multimodal action distributions, a well-known challenge for policy learning. arXiv:2303.04137v5 [cs.RO] 14 Mar 2024
+- **p. 1 / 1 Introduction - extractive body cue:** (2011), which includes multimodal action distributions, a well-known challenge for policy learning.
 - **p. 9 / 5 Evaluation - extractive body cue:** We observed that poor performance during the transition between stages is the most common failure case for the baseline method due to high multimodality during ...
 - **p. 10 / Figure/Table caption - extractive body cue:** Figure 7. Realworld Push-T Comparisons. Columns 1-4 show action trajectories based on key events. The last column shows averaged images of the end state. A: ...
 - **Boundary to test:** We observed that poor performance during the transition between stages is the most common failure case for the baseline method due to high multimodality during those sections and an ambiguous decision boundary.
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Diffusion Policy 3 b) CNN-based c) Transformer-based Conv1D Conv1D Conv1D Conv1D Conv1D Input: Image Observation Sequence Output: Action Sequence … Cross Attention Cross Attention ×K Obs Emb Action Emb Action Emb A ...를 At time step t, the policy takes the latest To steps of observation data Ot as input and outputs Ta steps of actions At. b) In the CNN-based Diffusion Policy, FiLM (Feature-wise ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We observed that poor performance during the transition between stages is the most common failure case for the baseline method due to high multimodality during those sections and an ambiguous decision boundary.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: • Closed-loop ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** At time step t, the policy takes the latest To steps of observation data Ot as input and outputs Ta steps of actions At. b) In the CNN-based Diffusion Policy, ... (p. 3, 1 Introduction).
+- **Paper-specific mechanism:** To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 1. Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average of last 10 checkpoints), with each ... (p. 7, Figure/Table caption); the relevant task/metric cue is 0.84 average IoU, compared with the 0% and 20% success rate of best-performing IBC and LSTM-GMM variants. (p. 9, 5 Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The primary failure modes for these were missed grasps for initial folding (the sleeves and the color), and the policy being unable to stop adjusting the shirt at the end. (p. 12, A C).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The benchmark consists of 5 tasks with a proficient human (PH) teleoperated demonstration dataset for each and mixed proficient/non-proficient human (MH) demonstration datasets for 4 of the tasks (9 variants in total)..
-3. Compare against the body-reported baseline or a matched simpler baseline: We found Diffusion Policy to consistently outperform the prior state-of-the-art on all of the tested benchmarks, with an average success-rate improvement of 46.9%..
-4. Report the body metric and its denominator/aggregation: We threshold success rate by the minimum achieved IoU metric from the human demonstration dataset..
-5. Re-run the body-reported ablation/failure condition: There are two variants: one with RGB image observations and another with 9 2D keypoints obtained from the groundtruth pose of the T block, both with proprioception for endeffector location..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: At time step t, the policy takes the latest To steps of observation data Ot as input and outputs Ta steps of actions At. b) In the CNN-based Diffusion Policy, ... (p. 3, 1 Introduction); preserve the objective/update rule: Scaling the min and max of each action dimension independently to [-1,1] works well for most tasks. (p. 16, A.1 Normalization).
+2. Use the paper-reported task/data/environment cue: This evaluation suite includes both simulated and real environments, single and multiple task benchmarks, fully actuated and under-actuated systems, and rigid and fluid objects. (p. 6, 5 Evaluation).
+3. Compare against the reported or matched baseline: We found Diffusion Policy to consistently outperform the prior state-of-the-art on all of the tested benchmarks, with an average success-rate improvement of 46.9%. (p. 6, 5 Evaluation).
+4. Report the body metric with its denominator and aggregation: 0.84 average IoU, compared with the 0% and 20% success rate of best-performing IBC and LSTM-GMM variants. (p. 9, 5 Evaluation).
+5. Re-run the reported ablation or stress/failure condition: For each variant, we report results for both stateand image-based observations. (p. 6, 5 Evaluation); if none is reported, design one around: The primary failure modes for these were missed grasps for initial folding (the sleeves and the color), and the policy being unable to stop adjusting the shirt at the end. (p. 12, A C).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparameters); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 6 (5 Evaluation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 4 (1 Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 6 (5 Evaluation), p. 8 (5 Evaluation), and measure the boundary at p. 12 (A C), p. 12 (A C).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 successfully, employ, diffusion mechanism이 We found Diffusion Policy to consistently outperform the prior state-of-the-art on all of the tested benchmarks, ... 대비 We threshold success rate by the minimum achieved IoU metric from the human demonstration dataset.을 개선하고, We observed that poor performance during the transition between stages is the most common failure case ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (At time step t, the policy takes the latest To steps of observation data Ot as input and outputs Ta steps of ...), does the paper-specific mechanism (To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy ...) retain the reported evaluation outcome (0.84 average IoU, compared with the 0% and 20% success rate of best-performing IBC and LSTM-GMM variants.) when tested against the paper's strongest explicit boundary (The primary failure modes for these were missed grasps for initial folding (the sleeves and the color), and ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (0.84 average IoU, compared with the 0% and 20% success rate of best-performing IBC and LSTM-GMM variants.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 1. Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average of last 10 checkpoints), with each ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** The primary failure modes for these were missed grasps for initial folding (the sleeves and the color), and the policy being unable to stop adjusting the shirt at the end. (p. 12, A C).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

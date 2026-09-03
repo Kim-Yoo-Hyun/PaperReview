@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10007263; PDF retrieval source: https://arxiv.org/pdf/2511.09515. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10007263; PDF retrieval source: https://arxiv.org/pdf/2511.09515. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We conduct extensive experiments to evaluate the effectiveness of WMPO, focusing on the following questions: (1) can WMPO outperform online and offline RL in ... | p. 6 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results show that the base policy, DPO, and WMPO achieve success rates of 53%, 60%, and 70%, respectively, demonstrating the effectiveness of WMPO ... | p. 10 (4 Experiments) |
@@ -53,11 +53,11 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct extensive experiments to evaluate the effectiveness of WMPO, focusing on the following questions: (1) can WMPO outperform online and offline RL in ... | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | Real World Trajectory Imagined Trajectory Figure 7 Real-world experiments on the fine-grained manipulation task "Insert the square into the stick" where the clearance between ... | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 9 (4 Experiments) |
@@ -142,10 +142,10 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 | More implementation details are provided in Appendix B. | p. 8 (4 Experiments) |
 | Coffee StackThree ThreePieceAssembly Square 94 96 98 100 102 104 Relative Length (%) Base Policy DPO GRPO WMPO Figure 5 Relative average trajectory length ... | p. 9 (4 Experiments) |
 | All models are evaluated under identical experimental conditions, and we report the average success rate over 30 trials. | p. 10 (4 Experiments) |
+| WMPO: World Model-based Policy Optimization for Vision-Language-Action Models Fangqi Zhu1,2, Zhengyang Yan1, Zicong Hong1, Quanxin Shou1, Xiao Ma2,∗, Song Guo1,∗ 1Hong Kong University of ... | p. 1 (Body text (section boundary not confidently recovered)) |
 | To address this, WMPO generates complete trials through clip-level autoregressive video generation, enabling more reliable outcome-based reward assignment. | p. 2 (1 Introduction) |
 | When applying the imagined trajectory to VLA optimization, we decode the images back into pixel space to better leverage the pretrained knowledge, rather than ... | p. 5 (1. Imagined Trajectory Generation) |
 | To mitigate this issue, we introduce a noisy-frame conditioning technique: during training, conditional frames Ii-m:i are perturbed with diffusion noise at 50/1000 steps rather ... | p. 5 (1. Imagined Trajectory Generation) |
-| At inference, the model applies a sliding window with stride s over τ to compute the success probability of each clip. | p. 6 (1. Imagined Trajectory Generation) |
 
 | Audit field | Current status |
 |---|---|
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 - **p. 7 / 4 Experiments - extractive body cue:** Collision Self-correction Continue moving down WMPO Base Policy … … Figure 3 Behavior analysis of the Square task (inserting the square into the stick) shows ...
 - **p. 9 / 4 Experiments - extractive body cue:** DPO attains modest improvements in the in-distribution setting compared to the base policy, but its performance degrades significantly under background and texture changes, suggesting reliance ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), metrics p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 6 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), metrics p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 6 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 0 128 256 Rollout Budget 45 50 55 60 65 Success Rate (%) Base Policy DPO WMPO Figure 6 Lifelong learning results of WMPO and baselines. (p. 9, 4 Experiments).
+- **Metric evidence:** Performance is reported as the task success rate (%). (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** Results show that WMPO consistently outperforms both GRPO and DPO baselines under different budgets. (p. 7, 4 Experiments).
+- **Failure/negative evidence:** In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory. (p. 15, C Real World Cases).

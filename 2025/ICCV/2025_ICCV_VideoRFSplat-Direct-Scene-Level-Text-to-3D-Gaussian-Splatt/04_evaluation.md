@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23].
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** We utilize four real-world datasets for training: RealEstate10K [93], MVImgNet [84], DL3DV10K [41], and ACID [43].
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates images ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess image ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on asynchronous sampling. We also report CLIP scores on multi-view images to assess text alignment of not lifted images to 3DGS. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Results on camera conditioned generation. VideoRFS- plat can perform camera-conditioned generation. models under identical conditions for 60K iterations with Mochi [69] and then ...
-- **p. 5 / 5. Experimental Results - extractive PDF cue:** Here, we demonstrate the effectiveness of VideoRFSplat for text-to-3DGS generation.
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** Despite not using SDS++ [35], VideoRFSplat generates detailed, visually consistent scenes, producing appropriate scene-specific camera poses.
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23].
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** We utilize four real-world datasets for training: RealEstate10K [93], MVImgNet [84], DL3DV10K [41], and ACID [43].
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates images ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess image ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on asynchronous sampling. We also report CLIP scores on multi-view images to assess text alignment of not lifted images to 3DGS. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Results on camera conditioned generation. VideoRFS- plat can perform camera-conditioned generation. models under identical conditions for 60K iterations with Mochi [69] and then ...
+- **p. 5 / 5. Experimental Results - extractive body cue:** Here, we demonstrate the effectiveness of VideoRFSplat for text-to-3DGS generation.
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** Despite not using SDS++ [35], VideoRFSplat generates detailed, visually consistent scenes, producing appropriate scene-specific camera poses.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates ... | p. 8 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23].
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** We utilize four real-world datasets for training: RealEstate10K [93], MVImgNet [84], DL3DV10K [41], and ACID [43].
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23].
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** We utilize four real-world datasets for training: RealEstate10K [93], MVImgNet [84], DL3DV10K [41], and ACID [43].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Generated 3D Gaussian Splattings and rendered views from diverse texts by VideoRFSplat. VideoRFSplat directly generates realistic 3D scenes from text without SDS [35, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. VideoRFSplat Overview. (a) VideoRFSplat consists of a dual-stream pose-video model and a Gaussian Splat decoder. To minimize pose-image interference, the pose model is ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Failure analysis of synchronized sampling and the effectiveness of asynchronous sampling. (Left) Early in sampling (t > 0.85), synchronous sampling induces excessive oscillations ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Asynchrnous schedule (δ = 0.2). During sampling, we denoise the pose modality faster than im- ages, as it is robust to fast denoising. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison of text-to-3DGS generation on DL3DV [41] and MVImgNet [84] validation sets as well as T3Bench [23]. Rendered scenes: First two rows ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results on T3Bench [23]. VideoRFSplat outperforms all baselines without SDS++ refinement.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess image ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on asynchronous sampling. We also report CLIP scores on multi-view images to assess text alignment of not lifted images to 3DGS. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Generated 3D Gaussian Splattings and rendered views from diverse texts by VideoRFSplat. VideoRFSplat directly generates realistic 3D scenes from text without SDS [35, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. VideoRFSplat Overview. (a) VideoRFSplat consists of a dual-stream pose-video model and a Gaussian Splat decoder. To minimize pose-image interference, the pose model is ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Failure analysis of synchronized sampling and the effectiveness of asynchronous sampling. (Left) Early in sampling (t > 0.85), synchronous sampling induces excessive oscillations ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Asynchrnous schedule (δ = 0.2). During sampling, we denoise the pose modality faster than im- ages, as it is robust to fast denoising. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison of text-to-3DGS generation on DL3DV [41] and MVImgNet [84] validation sets as well as T3Bench [23]. Rendered scenes: First two rows ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results on T3Bench [23]. VideoRFSplat outperforms all baselines without SDS++ refinement.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess image ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on asynchronous sampling. We also report CLIP scores on multi-view images to assess text alignment of not lifted images to 3DGS. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23]. | embodiment, simulator version and control stack | p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups) |
 | Task/environment | We utilize four real-world datasets for training: RealEstate10K [93], MVImgNet [84], DL3DV10K [41], and ACID [43]. | reset, timeout, object/scene variation | p. 6 (5.1. Experimental Setups) |
@@ -116,8 +116,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Primary metric/result | Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** We resize all frames to 320×512 during training, setting K = 8, as in SplatFlow [20] and Director3D [35].
-- **p. 7 / Method - extractive PDF cue:** 4) 35.3 5.64 33.3 32.8 δ = 0.1, w/o modified CFG 34.0 4.43 33.8 33.2 δ = 0.2, w/o modified CFG 34.1 4.39 34.0 33.2 ...
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** We resize all frames to 320×512 during training, setting K = 8, as in SplatFlow [20] and Director3D [35].
+- **p. 7 / Method - extractive body cue:** 4) 35.3 5.64 33.3 32.8 δ = 0.1, w/o modified CFG 34.0 4.43 33.8 33.2 δ = 0.2, w/o modified CFG 34.1 4.39 34.0 33.2 ...
 
 ## Generalization and Failure Cases
 
@@ -151,11 +151,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Failure analysis of synchronized sampling and the effectiveness of asynchronous sampling. (Left) Early in sampling (t > 0.85), synchronous sampling induces excessive oscillations ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7. Architecture Comparison. For each example, Left: chan- nel concat architecture (SplatFlow). Right: our architecture. framed key objects. We hypothesize that uncertainty in early ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Asynchrnous schedule (δ = 0.2). During sampling, we denoise the pose modality faster than im- ages, as it is robust to fast denoising. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Failure analysis of synchronized sampling and the effectiveness of asynchronous sampling. (Left) Early in sampling (t > 0.85), synchronous sampling induces excessive oscillations ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Architecture Comparison. For each example, Left: chan- nel concat architecture (SplatFlow). Right: our architecture. framed key objects. We hypothesize that uncertainty in early ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Asynchrnous schedule (δ = 0.2). During sampling, we denoise the pose modality faster than im- ages, as it is robust to fast denoising. ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups), metrics p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 6 (5.1. Experimental Setups), baselines p. 7 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups), metrics p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 6 (5.1. Experimental Setups), baselines p. 7 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

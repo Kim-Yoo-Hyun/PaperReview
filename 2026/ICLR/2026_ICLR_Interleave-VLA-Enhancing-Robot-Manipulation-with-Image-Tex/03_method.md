@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ULTWUuGhC3; PDF retrieval source: https://openreview.net/pdf/ef985dc6079e883f0130a114f04e69fdf820e23f.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ULTWUuGhC3; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/245105. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Method Body Digest
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models.
-- **p. 1 / ABSTRACT - extractive PDF cue:** Building on this insight, we introduce Interleave-VLA, a robot learning paradigm extending interleaved image-text instructions from digital world to directly generating continuous action sequences in ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** It offers a natural, flexible, and model-agnostic paradigm that extends state-of-the-art vision-language-action (VLA) models with minimal modifications while achieving strong zero-shot generalization.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Inspired by this progress, the robotic community is actively developing robotic foundation models (Brohan et al., 2023; Kim et al., 2024; O'Neill et al., 2024; ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To develop a general and practical robot policy capable of acting on interleaved image-text instructions in the real world, a straightforward solution is to build ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models.
+- **p. 1 / ABSTRACT - extractive body cue:** Building on this insight, we introduce Interleave-VLA, a robot learning paradigm extending interleaved image-text instructions from digital world to directly generating continuous action sequences in ...
+- **p. 1 / ABSTRACT - extractive body cue:** It offers a natural, flexible, and model-agnostic paradigm that extends state-of-the-art vision-language-action (VLA) models with minimal modifications while achieving strong zero-shot generalization.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Inspired by this progress, the robotic community is actively developing robotic foundation models (Brohan et al., 2023; Kim et al., 2024; O'Neill et al., 2024; ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To develop a general and practical robot policy capable of acting on interleaved image-text instructions in the real world, a straightforward solution is to build ...
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** The interleaved format enables robust zeroshot generalization to novel objects and user-provided sketches unseen during training.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** The interleaved format enables robust zeroshot generalization to novel objects and user-provided sketches unseen during training.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
 
 ## Source Evidence Cues
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models.
-- **p. 1 / ABSTRACT - extractive PDF cue:** Building on this insight, we introduce Interleave-VLA, a robot learning paradigm extending interleaved image-text instructions from digital world to directly generating continuous action sequences in ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** It offers a natural, flexible, and model-agnostic paradigm that extends state-of-the-art vision-language-action (VLA) models with minimal modifications while achieving strong zero-shot generalization.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models.
+- **p. 1 / ABSTRACT - extractive body cue:** Building on this insight, we introduce Interleave-VLA, a robot learning paradigm extending interleaved image-text instructions from digital world to directly generating continuous action sequences in ...
+- **p. 1 / ABSTRACT - extractive body cue:** It offers a natural, flexible, and model-agnostic paradigm that extends state-of-the-art vision-language-action (VLA) models with minimal modifications while achieving strong zero-shot generalization.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
 - **Detected method headings:** A THE USE OF LARGE LANGUAGE MODELS (LLMS) (p. 17)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into ... | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models. | p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT) |
@@ -47,8 +47,8 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Objective / Update Rule
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Inspired by this progress, the robotic community is actively developing robotic foundation models (Brohan et al., 2023; Kim et al., 2024; O'Neill et al., 2024; ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Inspired by this progress, the robotic community is actively developing robotic foundation models (Brohan et al., 2023; Kim et al., 2024; O'Neill et al., 2024; ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 2 (1 INTRODUCTION).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,12 +64,12 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To develop a general and practical robot policy capable of acting on interleaved image-text instructions in the real world, a straightforward solution is to build ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** It offers a natural, flexible, and model-agnostic paradigm that extends state-of-the-art vision-language-action (VLA) models with minimal modifications while achieving strong zero-shot generalization.
-- **p. 1 / ABSTRACT - extractive PDF cue:** Building on this insight, we introduce Interleave-VLA, a robot learning paradigm extending interleaved image-text instructions from digital world to directly generating continuous action sequences in ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** We then propose a new paradigm called Interleave-VLA, designed for generating continuous actions from interleaved inputs.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To develop a general and practical robot policy capable of acting on interleaved image-text instructions in the real world, a straightforward solution is to build ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** (c) It enables flexible, zero-shot instruction following with cropped images, web photos, and hand-drawn sketches for practical and intuitive human-robot interaction.
+- **p. 1 / ABSTRACT - extractive body cue:** It offers a natural, flexible, and model-agnostic paradigm that extends state-of-the-art vision-language-action (VLA) models with minimal modifications while achieving strong zero-shot generalization.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We then propose a new paradigm called Interleave-VLA, designed for generating continuous actions from interleaved inputs.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,10 +84,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Training vs Inference
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this limitation, we first build a high-quality interleaved image-text datasets, crucial for training multimodal models.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We summarize our key takeaways below: • Generalization failures in VLAs often stem from attentional hallucinations, which we summarized as attentional bias, diffused attention, and ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -107,13 +107,13 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Pretraining on the Interleaved X-Embodiment dataset significantly boosts performance through effective crossembodiment transfer, reducing the need for laborious data collection.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Across all four generalization levels, our general Interleave-VLA paradigm, when directly extended to OpenVLA, achieves the best performance without relying on any task-specific designs.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Building on its versatile inference interface, Interleave-VLA further showcases an emergent capability to interpret instructions in a completely zero-shot manner, directly handling unseen input modalities ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 4: Interleave-VLA unlocks powerful zero-shot generalization to diverse instruction modalities, including hand-drawn sketches, user-cropped images, and ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** To isolate the contribution of the visual goal signal, we perform an ablation in the SimplerEnvBridge setting (Table 2).
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Comparing Interleave-VLA with representative VLA methods. Unlike prior systems that depend on fixed backbones, source external Internet or simulation data, and accept only ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** It also outperforms π0.5 which enjoys additional pretraining with additonal object grounding and detection VQA data.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Pretraining on the Interleaved X-Embodiment dataset significantly boosts performance through effective crossembodiment transfer, reducing the need for laborious data collection.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Across all four generalization levels, our general Interleave-VLA paradigm, when directly extended to OpenVLA, achieves the best performance without relying on any task-specific designs.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Building on its versatile inference interface, Interleave-VLA further showcases an emergent capability to interpret instructions in a completely zero-shot manner, directly handling unseen input modalities ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** To isolate the contribution of the visual goal signal, we perform an ablation in the SimplerEnvBridge setting (Table 2).
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Comparing Interleave-VLA with representative VLA methods. Unlike prior systems that depend on fixed backbones, source external Internet or simulation data, and accept only ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Interleave-VLA unlocks powerful zero-shot generalization to diverse instruction modali- ties, including hand-drawn sketches, user-cropped images, and Internet photos, without ever seeing them in ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** It also outperforms π0.5 which enjoys additional pretraining with additonal object grounding and detection VQA data.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -127,7 +127,7 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 1 (ABSTRACT), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 2 (1 INTRODUCTION), p. 4 (2 RELATED WORK), p. 6 (2 RELATED WORK), p. 10 (5 CONCLUSION), p. 1 (ABSTRACT), p. 2 (ABSTRACT).
+- **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 1 (ABSTRACT), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 2 (1 INTRODUCTION), p. 4 (2 RELATED WORK), p. 6 (2 RELATED WORK), p. 10 (5 CONCLUSION), p. 1 (ABSTRACT), p. 3 (2 RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.14132; PDF retrieval source: https://arxiv.org/pdf/2312.14132. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.14132; PDF retrieval source: https://arxiv.org/pdf/2312.14132. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): The network l
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The network learns strong geometric and shape priors, which are reminiscent of those commonly leveraged in MVS, like shape from texture, shading ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | To that aim, we train a network F that takes as input 2 RGB images I1, I2 ∈RW ×H×3 and outputs 2 ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| Observation / input | To that aim, we train a network F that takes as input 2 RGB images I1, I2 ∈RW ×H×3 and outputs 2 ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | train, network, takes, input, RGB, images, outputs, corresponding, pointmaps, associated | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | Fourth, demonstrate, promising, performance, range, vision, tasks, particular | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | image/point input I/P and pose; body terms: train, network, takes, input, RGB, images, outputs, corresponding, pointmaps, associated | p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 2 (1. Introduction) |
 | Decision / output variable | geometry/map/query r; body terms: Before, delving, details, introduce, below, essential, concept, pointmaps | p. 3 (3. Method), p. 2 (1. Introduction), p. 2 (1. Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): The network l
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (3. Method), p. 4 (3.2. Training Objective), p. 6 (3.4. Global Alignment) |
 | Success / guarantee | spatial accuracy and downstream robot utility | p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), p. 8 (4.5. 3D Reconstruction) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): The network l
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (3. Method), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Downstream Applications), p. 5 (3.4. Global Alignment)): Before delving into the details of our method, we introduce below the essential concept of pointmaps.
+PDF body contribution framing (p. 3 (3. Method), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Downstream Applications), p. 5 (3.4. Global Alignment)): Before delving into the details of our method, we introduce below the essential concept of pointmaps.
 
 - **p. 2 / 1. Introduction - extractive body cue:** Second, we introduce the pointmap representation for MVS applications, that enables the network to predict the 3D shape in a canonical frame, while preserving the ...
 - **p. 2 / 1. Introduction - extractive body cue:** In this paper, we present DUSt3R, a radically novel approach for Dense Unconstrained Stereo 3D Reconstruction from un-calibrated and un-posed cameras.
@@ -64,12 +64,21 @@ PDF contribution framing (p. 3 (3. Method), p. 2 (1. Introduction), p. 2 (1. Int
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 2 (1. Introduction), p. 4 (3.1. Overview). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 2 (1. Introduction), p. 4 (3.1. Overview). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 2 (1. Introduction), p. 4 (3.1. Overview), objective p. 5 (3.2. Training Objective), p. 4 (3. Method), p. 4 (3.2. Training Objective), p. 5 (3.2. Training Objective), p. 6 (3.4. Global Alignment), p. 6 (3.4. Global Alignment).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 2 (1. Introduction), p. 4 (3.1. Overview), objective p. 5 (3.2. Training Objective), p. 4 (3. Method), p. 4 (3.2. Training Objective), p. 5 (3.2. Training Objective), p. 6 (3.4. Global Alignment), p. 6 (3.4. Global Alignment).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** The network learns strong geometric and shape priors, which are reminiscent of those commonly leveraged in MVS, like shape from texture, shading or contours [111]. (p. 2, 1. Introduction).
+- **Formulation-changing contribution:** In this paper, we present DUSt3R, a radically novel approach for Dense Unconstrained Stereo 3D Reconstruction from un-calibrated and un-posed cameras. (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** Procrustes alignment is, unfortunately, sensitive to noise and outliers. (p. 5, 3.3. Downstream Applications).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

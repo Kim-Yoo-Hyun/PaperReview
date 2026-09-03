@@ -1,8 +1,10 @@
 # FlowBot3D: Learning 3D Articulation Flow to Manipulate Articulated Objects
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2205.04382.
-> PDF retrieval source: https://arxiv.org/pdf/2205.04382. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2205.04382.
+> PDF retrieval source: https://arxiv.org/pdf/2205.04382. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2205.04382
 - Code/Project: https://flowbot3d.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Due to the large number of categories of such objects and intra-class variations of the objects' structure and kinematics, it is difficult to train efficient perception and manipulation systems that can generalize ...를 문제로 두고, Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Due to the large number of categories of such objects and intra-class variations of the objects' structure and kinematics, it is difficult to train efficient perception and manipulation systems that can generalize ...를 문제로 두고, In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and leverages this prediction to produce actions that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -31,8 +33,8 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Core Idea
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose to separate this problem into one of "affordance learning" and "motion planning." If a robot can predict the potential ...
 - **p. 2 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** We first present the theoretical grounding behind the intuition of our method, and we slowly relax assumptions and approximations to create a system that articulates ...
 - **p. 4 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial ...
 - **p. 4 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** We know that the ideal attachment point is the location on a part where the flow has the highest magnitude in order to achieve the ...
@@ -51,8 +53,8 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose to separate this problem into one of "affordance learning" and "motion planning." If a robot can predict the potential ...
 - **p. 2 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** We first present the theoretical grounding behind the intuition of our method, and we slowly relax assumptions and approximations to create a system that articulates ...
 - **p. 4 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial ...
 - **p. 4 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** We know that the ideal attachment point is the location on a part where the flow has the highest magnitude in order to achieve the ...
@@ -81,4 +83,13 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Due to the large number of categories of such objects and intra-class variations of the objects' structure and kinematics, it is difficult to train efficient perception and manipulation systems that can generalize ...를 문제로 두고, Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Due to the large number of categories of such objects and intra-class variations of the objects' structure and kinematics, it is difficult to train efficient perception and manipulation systems that can generalize ...를 문제로 두고, In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and leverages this prediction to produce actions that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Due to the large number of categories of such objects and intra-class variations of the objects' structure and kinematics, it is difficult to train efficient perception and manipulation systems that ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and leverages this prediction to produce ... (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in which we attempt to articulate a ... (p. 7, IV. RESULTS).
+- **Explicit failure boundary:** However, the remaining failure modes raise questions we would like to explore in future work. (p. 9, V. CONCLUSION).

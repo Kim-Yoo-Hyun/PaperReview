@@ -1,8 +1,10 @@
 # WMPO: World Model-based Policy Optimization for Vision-Language-Action Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://iclr.cc/virtual/2026/poster/10007263.
-> PDF retrieval source: https://arxiv.org/pdf/2511.09515. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://iclr.cc/virtual/2026/poster/10007263.
+> PDF retrieval source: https://arxiv.org/pdf/2511.09515. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2511.09515
 - Code/Project: https://wm-po.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -37,8 +39,8 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 4 / 1. Imagined Trajectory Generation - extractive body cue:** The overall training procedure consists of three components: (1) Imagined Trajectory Generation, where policy model πθold and world model pϕ interact alternately to generate a ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** To mitigate this issue, we introduce a noisy-frame conditioning technique: during training, conditional frames Ii-m:i are perturbed with diffusion noise at 50/1000 steps rather than ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** Thus, each imagined trajectory in the world model is represented as a labeled pair (τ, y), which is then used for policy optimization.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** WMPO: World Model-based Policy Optimization for Vision-Language-Action Models Fangqi Zhu1,2, Zhengyang Yan1, Zicong Hong1, Quanxin Shou1, Xiao Ma2,∗, Song Guo1,∗ 1Hong Kong University of Science ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** 3.3 Reward Model A key requirement for scalable policy optimization in the world model is automatically judging whether an imagined trajectory indicates task success.
-- **p. 6 / 1. Imagined Trajectory Generation - extractive body cue:** We adopt Group Relative Policy Optimization (GRPO) as the policy optimization algorithm, since it provides stable and scalable training in settings with sparse rewards.
 
 ## Observation, State, and Output Interface
 
@@ -84,3 +86,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Nevertheless, integrating these models with existing VLAs remains a challenge.를 문제로 두고, To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Nevertheless, integrating these models with existing VLAs remains a challenge. (p. 2, 1 Introduction).
+- **Actual contribution:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig. (p. 2, 1 Introduction).
+- **Evaluation boundary:** 0 128 256 Rollout Budget 45 50 55 60 65 Success Rate (%) Base Policy DPO WMPO Figure 6 Lifelong learning results of WMPO and baselines. (p. 9, 4 Experiments).
+- **Explicit failure boundary:** In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory. (p. 15, C Real World Cases).

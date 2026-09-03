@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C. Learning from Previous Successful Exploration | EMPIRICAL / SIMULATION | We observe that SAFEMIMIC achieves a minimum of 40% final suc- ‘cess rate over the seven tasks, significantly outperforming all baselines. | p. 7 (C. Learning from Previous Successful Exploration) |
 | C. Learning from Previous Successful Exploration | EMPIRICAL / SIMULATION | The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt ... | p. 7 (C. Learning from Previous Successful Exploration) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning (1L) baselines ... | embodiment, simulator version and control stack | p. 6 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration) |
 | Task/environment | We also tested one human demonstrator across three environments on the shelving task to ensure SAFEMIMIC is robust to different objects and room layouts ... | reset, timeout, object/scene variation | p. 8 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 - **p. 7 / C. Learning from Previous Successful Exploration - extractive body cue:** Q2) How effectively does SAFEMIMIC reduce safetycritical failures?
 - **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** This task requires differentiating the human's semantic goal, and avoiding collisions and adapting grasps for successful placement.
 
-- **PDF anchors reviewed:** datasets p. 6 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 5 (B. Safe and Autonomous Real-World Adaptation), metrics p. 6 (Figure/Table caption), p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 5 (C. Learning from Previous Successful Exploration), p. 5 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), baselines p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), results p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (C. Learning from Previous Successful Exploration).
+- **Evidence anchors reviewed:** datasets p. 6 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 5 (B. Safe and Autonomous Real-World Adaptation), metrics p. 6 (Figure/Table caption), p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 5 (C. Learning from Previous Successful Exploration), p. 5 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), baselines p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), results p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (C. Learning from Previous Successful Exploration).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration).
+- **Metric evidence:** The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration).
+- **Baseline/ablation evidence:** This baseline is SAFEMIMIC without the use of SQFs. (p. 6, C. Learning from Previous Successful Exploration).
+- **Failure/negative evidence:** Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).

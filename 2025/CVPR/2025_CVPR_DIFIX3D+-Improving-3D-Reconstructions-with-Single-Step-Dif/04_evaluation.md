@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** We train DIFIX on a random selection of 80% of scenes (112 out of a total of 140) from the DL3DV [23] benchmark dataset.
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** We evaluate DIFIX3D+ with Nerfacto [58] and 3DGS [20] backbones on the 28 held out scenes from the DL3DV [23] benchmark and the 12 captures ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** We further evaluate the generality of our solution by enhancing automotive scenes (Sec.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We first evaluate DIFIX3D+ on in-the-wild scenes against several baselines and show its ability to enhance both NeRF and 3DGS-based pipelines (Sec.
-- **p. 8 / 5.3. Diagnostics - extractive PDF cue:** 4 averaged over the Nerfbusters [70] dataset.
-- **p. 8 / 5.2. Automotive Scene Enhancement - extractive PDF cue:** Ablation study of DIFIX3D+ on Nerfbusters dataset.
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** We calculate PSNR, SSIM [67], LPIPS [19] as well as FID score [15] on novel views.
-- **p. 8 / 5.2. Automotive Scene Enhancement - extractive PDF cue:** Qualitative ablation of real-time post-render processing: DIFIX3D+ uses an additional neural enhancer step that effectively removes residual artifacts, resulting in higher PSNR and lower LPIPS ...
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** We train DIFIX on a random selection of 80% of scenes (112 out of a total of 140) from the DL3DV [23] benchmark dataset.
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** We evaluate DIFIX3D+ with Nerfacto [58] and 3DGS [20] backbones on the 28 held out scenes from the DL3DV [23] benchmark and the 12 captures ...
+- **p. 6 / 5. Experiments - extractive body cue:** We further evaluate the generality of our solution by enhancing automotive scenes (Sec.
+- **p. 6 / 5. Experiments - extractive body cue:** We first evaluate DIFIX3D+ on in-the-wild scenes against several baselines and show its ability to enhance both NeRF and 3DGS-based pipelines (Sec.
+- **p. 8 / 5.3. Diagnostics - extractive body cue:** 4 averaged over the Nerfbusters [70] dataset.
+- **p. 8 / 5.2. Automotive Scene Enhancement - extractive body cue:** Ablation study of DIFIX3D+ on Nerfbusters dataset.
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** We calculate PSNR, SSIM [67], LPIPS [19] as well as FID score [15] on novel views.
+- **p. 8 / 5.2. Automotive Scene Enhancement - extractive body cue:** Qualitative ablation of real-time post-render processing: DIFIX3D+ uses an additional neural enhancer step that effectively removes residual artifacts, resulting in higher PSNR and lower LPIPS ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.3. Diagnostics | SYSTEM / EVALUATION SCOPE UNRESOLVED | We note that simply decreasing the noise level from 1000 to 200 noticeably improves LPIPS and FID significantly, validating our findings in Fig. | p. 8 (5.3. Diagnostics) |
 | 5.3. Diagnostics | SYSTEM / EVALUATION SCOPE UNRESOLVED | Distilling diffusion outputs via 3D updates improves quality significantly but our incremental update strategy is essential, as evidenced by the degradation in LPIPS and ... | p. 8 (5.3. Diagnostics) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** We train DIFIX on a random selection of 80% of scenes (112 out of a total of 140) from the DL3DV [23] benchmark dataset.
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** We evaluate DIFIX3D+ with Nerfacto [58] and 3DGS [20] backbones on the 28 held out scenes from the DL3DV [23] benchmark and the 12 captures ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** We further evaluate the generality of our solution by enhancing automotive scenes (Sec.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We first evaluate DIFIX3D+ on in-the-wild scenes against several baselines and show its ability to enhance both NeRF and 3DGS-based pipelines (Sec.
-- **p. 8 / 5.3. Diagnostics - extractive PDF cue:** 4 averaged over the Nerfbusters [70] dataset.
-- **p. 8 / 5.2. Automotive Scene Enhancement - extractive PDF cue:** Ablation study of DIFIX3D+ on Nerfbusters dataset.
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** We train DIFIX on a random selection of 80% of scenes (112 out of a total of 140) from the DL3DV [23] benchmark dataset.
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** We evaluate DIFIX3D+ with Nerfacto [58] and 3DGS [20] backbones on the 28 held out scenes from the DL3DV [23] benchmark and the 12 captures ...
+- **p. 6 / 5. Experiments - extractive body cue:** We further evaluate the generality of our solution by enhancing automotive scenes (Sec.
+- **p. 6 / 5. Experiments - extractive body cue:** We first evaluate DIFIX3D+ on in-the-wild scenes against several baselines and show its ability to enhance both NeRF and 3DGS-based pipelines (Sec.
+- **p. 8 / 5.3. Diagnostics - extractive body cue:** 4 averaged over the Nerfbusters [70] dataset.
+- **p. 8 / 5.2. Automotive Scene Enhancement - extractive body cue:** Ablation study of DIFIX3D+ on Nerfbusters dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We demonstrate DIFIX3D+ on both in-the-wild scenes (top) and driving scenes (bottom). Recent Novel-View Synthesis methods struggle in sparse-input settings or when rendering ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. DIFIX3D+ pipeline. The overall pipeline of the DIFIX3D+ model involves the following stages: Step 1: Given a pretrained 3D representation, we render novel ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. DIFIX architecture. DIFIX takes a noisy rendered image and a reference views as input (left), and outputs an enhanced version of the input ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Noise level. To validate our hypothesis that the distribution of images with NeRF/3DGS artifacts is similar to the distribution of noisy images used ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Data curation. We curate a paired dataset featuring common artifacts in novel-view synthesis. For DL3DV scenes [23], we employ sparse reconstruction and model ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. In-the-wild artifact removal. We show comparisons on held-out scenes from the DL3DV dataset [23] (top, above the dashed line) and the Nerfbusters [70] ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison on Nerfbusters and DL3DV datasets. The best result is highlighted in bold, and the second-best is underlined.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative results on the RDS dataset. DIFIX for RDS was trained on 40 scenes and 100,000 paired data samples.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We demonstrate DIFIX3D+ on both in-the-wild scenes (top) and driving scenes (bottom). Recent Novel-View Synthesis methods struggle in sparse-input settings or when rendering ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. DIFIX3D+ pipeline. The overall pipeline of the DIFIX3D+ model involves the following stages: Step 1: Given a pretrained 3D representation, we render novel ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. DIFIX architecture. DIFIX takes a noisy rendered image and a reference views as input (left), and outputs an enhanced version of the input ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Noise level. To validate our hypothesis that the distribution of images with NeRF/3DGS artifacts is similar to the distribution of noisy images used ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Data curation. We curate a paired dataset featuring common artifacts in novel-view synthesis. For DL3DV scenes [23], we employ sparse reconstruction and model ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. In-the-wild artifact removal. We show comparisons on held-out scenes from the DL3DV dataset [23] (top, above the dashed line) and the Nerfbusters [70] ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison on Nerfbusters and DL3DV datasets. The best result is highlighted in bold, and the second-best is underlined.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative results on the RDS dataset. DIFIX for RDS was trained on 40 scenes and 100,000 paired data samples.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We train DIFIX on a random selection of 80% of scenes (112 out of a total of 140) from the DL3DV [23] benchmark dataset. | embodiment, simulator version and control stack | p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal) |
 | Task/environment | We evaluate DIFIX3D+ with Nerfacto [58] and 3DGS [20] backbones on the 28 held out scenes from the DL3DV [23] benchmark and the 12 ... | reset, timeout, object/scene variation | p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (5. Experiments) |
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 | Primary metric/result | Distilling diffusion outputs via 3D updates improves quality significantly but our incremental update strategy is essential, as evidenced by the degradation in LPIPS and ... | numeric claim only at cited anchor | p. 8 (5.3. Diagnostics) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** DIFIX for RDS was trained on 40 scenes and 100,000 paired data samples.
-- **p. 7 / 5.2. Automotive Scene Enhancement - extractive PDF cue:** The automotive capture rig contains three cameras with 40 degree overlaps between each camera.
-- **p. 7 / 5.2. Automotive Scene Enhancement - extractive PDF cue:** We train DIFIX with 40 scenes and generate 100,000 image pairs using the augmentation strategies listed in Tab.
-- **p. 7 / 5.2. Automotive Scene Enhancement - extractive PDF cue:** We evaluate DIFIX3D+ with a Nerfacto backbone on 20 scenes (none of which are used during 26030
-- **p. 5 / 4. Boosting 3D Reconstruction with DM priors - extractive PDF cue:** In nearly linear trajectories, such as those found in autonomous driving datasets, we first train a NeRF on the original path, and then render views ...
-- **p. 6 / 4. Boosting 3D Reconstruction with DM priors - extractive PDF cue:** Since DIFIX is a single-step model, the additional rendering time is only 76 ms on a NVIDIA A100 GPU, over 10× faster than standard diffusion ...
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** DIFIX for RDS was trained on 40 scenes and 100,000 paired data samples.
+- **p. 7 / 5.2. Automotive Scene Enhancement - extractive body cue:** The automotive capture rig contains three cameras with 40 degree overlaps between each camera.
+- **p. 7 / 5.2. Automotive Scene Enhancement - extractive body cue:** We train DIFIX with 40 scenes and generate 100,000 image pairs using the augmentation strategies listed in Tab.
+- **p. 7 / 5.2. Automotive Scene Enhancement - extractive body cue:** We evaluate DIFIX3D+ with a Nerfacto backbone on 20 scenes (none of which are used during 26030
+- **p. 5 / 4. Boosting 3D Reconstruction with DM priors - extractive body cue:** In nearly linear trajectories, such as those found in autonomous driving datasets, we first train a NeRF on the original path, and then render views ...
+- **p. 6 / 4. Boosting 3D Reconstruction with DM priors - extractive body cue:** Since DIFIX is a single-step model, the additional rendering time is only 76 ms on a NVIDIA A100 GPU, over 10× faster than standard diffusion ...
 
 ## Generalization and Failure Cases
 
@@ -161,12 +161,12 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive PDF cue:** Our method outperforms all comparison methods by a signifi1Nerfbusters [70] uses a visibility map extracted from a NeRF model trained on a combination of training ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Noise level. To validate our hypothesis that the distribution of images with NeRF/3DGS artifacts is similar to the distribution of noisy images used ...
-- **p. 8 / 5.3. Diagnostics - extractive PDF cue:** We note that simply decreasing the noise level from 1000 to 200 noticeably improves LPIPS and FID significantly, validating our findings in Fig.
-- **p. 8 / 5.3. Diagnostics - extractive PDF cue:** The primary reason is that high noise level causes the model to generate more hallucinated pixels that contradict the ground truth, resulting in poorer generalization ...
+- **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** Our method outperforms all comparison methods by a signifi1Nerfbusters [70] uses a visibility map extracted from a NeRF model trained on a combination of training ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Noise level. To validate our hypothesis that the distribution of images with NeRF/3DGS artifacts is similar to the distribution of noisy images used ...
+- **p. 8 / 5.3. Diagnostics - extractive body cue:** We note that simply decreasing the noise level from 1000 to 200 noticeably improves LPIPS and FID significantly, validating our findings in Fig.
+- **p. 8 / 5.3. Diagnostics - extractive body cue:** The primary reason is that high noise level causes the model to generate more hallucinated pixels that contradict the ground truth, resulting in poorer generalization ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 8 (5.3. Diagnostics), p. 8 (5.2. Automotive Scene Enhancement), metrics p. 7 (5.1. In-the-Wild Artifact Removal), p. 8 (5.2. Automotive Scene Enhancement), p. 8 (5.3. Diagnostics), p. 7 (5.1. In-the-Wild Artifact Removal), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 8 (5.2. Automotive Scene Enhancement), p. 7 (5.1. In-the-Wild Artifact Removal), p. 8 (5.2. Automotive Scene Enhancement), p. 6 (5. Experiments), p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (Figure/Table caption), results p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal).
+- **Evidence anchors reviewed:** datasets p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 8 (5.3. Diagnostics), p. 8 (5.2. Automotive Scene Enhancement), metrics p. 7 (5.1. In-the-Wild Artifact Removal), p. 8 (5.2. Automotive Scene Enhancement), p. 8 (5.3. Diagnostics), p. 7 (5.1. In-the-Wild Artifact Removal), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 8 (5.2. Automotive Scene Enhancement), p. 7 (5.1. In-the-Wild Artifact Removal), p. 8 (5.2. Automotive Scene Enhancement), p. 6 (5. Experiments), p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (Figure/Table caption), results p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

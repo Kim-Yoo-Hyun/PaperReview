@@ -1,8 +1,10 @@
 # Learning Interactive Real-World Simulators
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html.
-> PDF retrieval source: https://arxiv.org/pdf/2310.06114. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html.
+> PDF retrieval source: https://arxiv.org/pdf/2310.06114. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2310.06114
 - Code/Project: https://universal-simulator.github.io/
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 We illustrate that the observation prediction model can be rolled out autoregressively to obtain consistent and long-horizon videos. • We illustrate how the simulator can enable both high-level language policies, low-level control ...를 문제로 두고, In this work, we propose to combine a wealth of data in a conditional video generation framework to instantiate a universal simulator (UniSim)1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Since different datasets are curated by different industrial or research communities for different purposes, divergence in information is natural and hard to overcome, posing difficulties to a real-world simulator that ... (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction by combining diverse datasets rich in along different ... (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot data in UniSim achieves the best ... (p. 22, Figure/Table caption).
+- **Explicit failure boundary:** The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).

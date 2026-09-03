@@ -10,7 +10,7 @@
 
 ### What was actually new
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Unfortunately, neither ∗Indicates equal contribution is sufficient, as teleoperation requires high setup costs for hardware and expert operators, while human videos exhibit a large embodiment ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Unfortunately, neither ∗Indicates.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Furthermore, when trained with diverse human demonstrations, the final policy exhibits zero-shot generalization to novel environments and objects, achieving a remarkable 70% success rate in ...
 - **p. 3 / III. METHOD - extractive body cue:** It is designed with the following goals in mind: • Portable.
@@ -20,7 +20,7 @@
 
 ### Strongest assumption and failure boundary
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Unfortunately, neither ∗Indicates equal contribution is sufficient, as teleoperation requires high setup costs for hardware and expert operators, while human videos exhibit a large embodiment ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Unfortunately, neither ∗Indicates.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** As a result, despite achieving impressive visual diversity across hundreds of environments, the collected actions are constrained to simple grasping [41] or quasi-static pick-andplace [50, ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** This issue is especially salient for fast and dynamic actions. • Insufficient policy representation: Prior works often use simple policy representations (e.g., MLPs) with action ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Furthermore, when trained with diverse human demonstrations, the final policy exhibits zero-shot generalization to novel environments and objects, achieving a remarkable 70% success rate in ...
@@ -33,7 +33,7 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | Unfortunately, neither ∗Indicates equal contribution is sufficient, as teleoperation requires high setup costs for hardware and expert operators, while human videos exhibit a large embodiment gap to robots. | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
+| Mechanism/contribution | Unfortunately, neither ∗Indicates.
 | Reported outcome | This baseline only achieves 11/20 = 55% success rate. | p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS) |
 | Failure/limitation | While UMI demonstrates policy efficacy across a wide range of tasks and scenarios, a few limitations remain. | p. 11 (VIII. LIMITATIONS AND FUTURE WORKS), p. 7 (V. CAPABILITY EXPERIMENTS) |
 
@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 When combined with the GoPro's built-in IMU sensor, we can enable robust tracking under fast motion. • Second, we explore the right policy interface (i.e., observation and action representations) that could make ...를 Concretely, we employ inference-time latency matching to handle different sensor observation and execution latency, use relative trajectory as action representation to remove the need for precise global action, and finally, apply Diffus ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While UMI demonstrates policy efficacy across a wide range of tasks and scenarios, a few limitations remain.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Unfortunately, neither ∗Indicates equal contribution is sufficient, as teleoperation requires high setup costs for hardware and expert operators, while human videos exhibit a large embodiment gap to robots.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** When combined with the GoPro's built-in IMU sensor, we can enable robust tracking under fast motion. • Second, we explore the right policy interface (i.e., observation and action representations) that ... (p. 2, I. INTRODUCTION).
+- **Paper-specific mechanism:** 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only changing the training data for ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 8: Narrow-domain Evaluation Results. (a) Initial states for all evaluation episodes overlayed together. For each task, all methods start with the same set of initial states, matched manually with ... (p. 8, Figure/Table caption); the relevant task/metric cue is This baseline only achieves 11/20 = 55% success rate. (p. 7, V. CAPABILITY EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we had mounted the FR2 robot at ... (p. 7, V. CAPABILITY EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To access capability and generalization, we evaluate UMI on 4 real-world robotic tasks across both narrow domain and in-the-wild environments, shown in Fig..
-3. Compare against the body-reported baseline or a matched simpler baseline: (b) Typical failure mode of the baseline/ablation policy..
-4. Report the body metric and its denominator/aggregation: (c) Success rate over 20 evaluation episodes, best performance for each column are bolded..
-5. Re-run the body-reported ablation/failure condition: Effect of side mirrors [HD3]: To our surprise, directly providing mirror images decreases the performance from 18/20 = 90% (no mirror) to 17/20 = 85%..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: When combined with the GoPro's built-in IMU sensor, we can enable robust tracking under fast motion. • Second, we explore the right policy interface (i.e., observation and action representations) that ... (p. 2, I. INTRODUCTION); preserve the objective/update rule: The following sections describe how we enable the above goals through our hardware and policy interface design. (p. 3, III. METHOD).
+2. Use the paper-reported task/data/environment cue: To access capability and generalization, we evaluate UMI on 4 real-world robotic tasks across both narrow domain and in-the-wild environments, shown in Fig. (p. 6, IV. EVALUATIONS).
+3. Compare against the reported or matched baseline: (b) Typical failure mode of the baseline/ablation policy. (p. 8, V. CAPABILITY EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: This baseline only achieves 11/20 = 55% success rate. (p. 7, V. CAPABILITY EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: The next paragraphs will discuss our ablation studies around our key design decisions. (p. 7, V. CAPABILITY EXPERIMENTS); if none is reported, design one around: This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we had mounted the FR2 robot at ... (p. 7, V. CAPABILITY EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHOD), p. 3 (III. METHOD); the primary result is directionally consistent at p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 7 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), and measure the boundary at p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Unfortunately, neither, Indicates mechanism이 (b) Typical failure mode of the baseline/ablation policy. 대비 (c) Success rate over 20 evaluation episodes, best performance for each column are bolded.을 개선하고, While UMI demonstrates policy efficacy across a wide range of tasks and scenarios, a few limitations ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (When combined with the GoPro's built-in IMU sensor, we can enable robust tracking under fast motion. • Second, we explore the right ...), does the paper-specific mechanism (2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon ...) retain the reported evaluation outcome (This baseline only achieves 11/20 = 55% success rate.) when tested against the paper's strongest explicit boundary (This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (This baseline only achieves 11/20 = 55% success rate.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only changing the training data for ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 8: Narrow-domain Evaluation Results. (a) Initial states for all evaluation episodes overlayed together. For each task, all methods start with the same set of initial states, matched manually with ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we had mounted the FR2 robot at ... (p. 7, V. CAPABILITY EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

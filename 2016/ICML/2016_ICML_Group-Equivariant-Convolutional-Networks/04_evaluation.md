@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1602.07576; PDF retrieval source: https://arxiv.org/pdf/1602.07576. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1602.07576; PDF retrieval source: https://arxiv.org/pdf/1602.07576. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MN
 
 ## Evaluation Body Digest
 
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** The dataset is split into a training, validation and test sets of size 10000, 2000 and 50000, respectively.
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** The dataset is split into 40k training, 10k validation and 10k testing splits.
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** Test set error rates and number of parameters are reported.
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** Error rates on rotated MNIST (with standard deviation under variation of the random seed).
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** The P4CNN almost halves the error rate of the previous state of the art (2.28% vs 3.98% error).
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** When trained with moderate data augmentation, this network achieves an error rate of 5.27% using planar convolutions, and 4.19% with p4m convolutions.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. A p4m feature map and its rotation by r. This rich transformation structure arises from the group op- eration of p4 or p4m, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1. A p4 feature map and its rotation by r. When we apply the 90 degree rotation r to a function on p4, each ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** The dataset is split into a training, validation and test sets of size 10000, 2000 and 50000, respectively.
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** The dataset is split into 40k training, 10k validation and 10k testing splits.
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** Test set error rates and number of parameters are reported.
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** Error rates on rotated MNIST (with standard deviation under variation of the random seed).
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** The P4CNN almost halves the error rate of the previous state of the art (2.28% vs 3.98% error).
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** When trained with moderate data augmentation, this network achieves an error rate of 5.27% using planar convolutions, and 4.19% with p4m convolutions.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. A p4m feature map and its rotation by r. This rich transformation structure arises from the group op- eration of p4 or p4m, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. A p4 feature map and its rotation by r. When we apply the 90 degree rotation r to a function on p4, each ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 8.1. Rotated MNIST | SYSTEM / EVALUATION SCOPE UNRESOLVED | This network (P4CNNRotationPooling) outperforms the baseline and the previous state of the art, but performs significantly worse than the P4CNN which does not pool ... | p. 7 (8.1. Rotated MNIST) |
 | 8.1. Rotated MNIST | SYSTEM / EVALUATION SCOPE UNRESOLVED | To the best of our knowledge, the p4m-CNN outperforms all published results on plain CIFAR10 (Wan et al., 2013; Goodfellow et al., 2013; Lin ... | p. 8 (8.1. Rotated MNIST) |
@@ -39,22 +39,22 @@ PDF body evaluation/result cue (p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MN
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** The dataset is split into a training, validation and test sets of size 10000, 2000 and 50000, respectively.
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** The dataset is split into 40k training, 10k validation and 10k testing splits.
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** Test set error rates and number of parameters are reported.
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** The dataset is split into a training, validation and test sets of size 10000, 2000 and 50000, respectively.
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** The dataset is split into 40k training, 10k validation and 10k testing splits.
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** Test set error rates and number of parameters are reported.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1. A p4 feature map and its rotation by r. When we apply the 90 degree rotation r to a function on p4, each ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. A p4m feature map and its rotation by r. This rich transformation structure arises from the group op- eration of p4 or p4m, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Error rates on rotated MNIST (with standard deviation under variation of the random seed). 8.2. CIFAR-10 The CIFAR-10 dataset consists of 60k images ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison of conventional (i.e. Z2), p4 and p4m CNNs on CIFAR10 and augmented CIFAR10+. Test set error rates and number of parameters are ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. A p4 feature map and its rotation by r. When we apply the 90 degree rotation r to a function on p4, each ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. A p4m feature map and its rotation by r. This rich transformation structure arises from the group op- eration of p4 or p4m, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Error rates on rotated MNIST (with standard deviation under variation of the random seed). 8.2. CIFAR-10 The CIFAR-10 dataset consists of 60k images ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Comparison of conventional (i.e. Z2), p4 and p4m CNNs on CIFAR10 and augmented CIFAR10+. Test set error rates and number of parameters are ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset is split into a training, validation and test sets of size 10000, 2000 and 50000, respectively. | embodiment, simulator version and control stack | p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST) |
 | Task/environment | The dataset is split into 40k training, 10k validation and 10k testing splits. | reset, timeout, object/scene variation | p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST) |
@@ -108,12 +108,12 @@ PDF body evaluation/result cue (p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MN
 | Primary metric/result | To the best of our knowledge, the p4m-CNN outperforms all published results on plain CIFAR10 (Wan et al., 2013; Goodfellow et al., 2013; Lin ... | numeric claim only at cited anchor | p. 8 (8.1. Rotated MNIST) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 7.2. Planar convolution - extractive PDF cue:** This sum can be folded into the sum over feature channels performed by the planar convolution routine by reshaping F + from Kl × Sl ...
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** We performed model selection using the validation set, yielding a CNN architecture (Z2CNN) with 7 layers of 3 × 3 convolutions (4 × 4 in ...
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** (2007) 10.38 ± 0.27 Sohn & Lee (2012) 4.2 Schmidt & Roth (2012) 3.98 Z2CNN 5.03 ± 0.0020 P4CNNRotationPooling 3.21 ± 0.0012 P4CNN 2.28 ± ...
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** Our second baseline is a residual network (He et al., 2016), which consists of an initial convolution layer, followed by three stages of 2n convolution ...
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** We use n = 7, ki = 32, 64, 128 yielding a wide 44-layer network called ResNet44.
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** The learning rate was divided by 10 at epoch 50, 100 and 150, and training was continued for 300 epochs.
+- **p. 7 / 7.2. Planar convolution - extractive body cue:** This sum can be folded into the sum over feature channels performed by the planar convolution routine by reshaping F + from Kl × Sl ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** We performed model selection using the validation set, yielding a CNN architecture (Z2CNN) with 7 layers of 3 × 3 convolutions (4 × 4 in ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** (2007) 10.38 ± 0.27 Sohn & Lee (2012) 4.2 Schmidt & Roth (2012) 3.98 Z2CNN 5.03 ± 0.0020 P4CNNRotationPooling 3.21 ± 0.0012 P4CNN 2.28 ± ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** Our second baseline is a residual network (He et al., 2016), which consists of an initial convolution layer, followed by three stages of 2n convolution ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** We use n = 7, ki = 32, 64, 128 yielding a wide 44-layer network called ResNet44.
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** The learning rate was divided by 10 at epoch 50, 100 and 150, and training was continued for 300 epochs.
 
 ## Generalization and Failure Cases
 
@@ -147,12 +147,12 @@ PDF body evaluation/result cue (p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MN
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 9. Discussion & Future work - extractive PDF cue:** One limitation of the method as presented here is that it only works for discrete groups.
-- **p. 8 / 9. Discussion & Future work - extractive PDF cue:** In future work, we want to implement G-CNNs that work on hexagonal lattices which have an increased number of symmetries relative to square grids, as ...
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** (2007) (when trained on 12k and evaluated on 50k), but does not match the previous state of the art, which uses prior knowledge about rotations ...
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** This network (P4CNNRotationPooling) outperforms the baseline and the previous state of the art, but performs significantly worse than the P4CNN which does not pool over ...
+- **p. 8 / 9. Discussion & Future work - extractive body cue:** One limitation of the method as presented here is that it only works for discrete groups.
+- **p. 8 / 9. Discussion & Future work - extractive body cue:** In future work, we want to implement G-CNNs that work on hexagonal lattices which have an increased number of symmetries relative to square grids, as ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** (2007) (when trained on 12k and evaluated on 50k), but does not match the previous state of the art, which uses prior knowledge about rotations ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** This network (P4CNNRotationPooling) outperforms the baseline and the previous state of the art, but performs significantly worse than the P4CNN which does not pool over ...
 
-- **PDF anchors reviewed:** datasets p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), metrics p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), results p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST).
+- **Evidence anchors reviewed:** datasets p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), metrics p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), results p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C. Results on the Reinforcement Learning Benchmark | BENCHMARK / DATASET | 10 demonstrate a consistent improvement in model performance as the number of generated data increases, highlighting both the effectiveness and scalability of the trajectory ... | p. 11 (C. Results on the Reinforcement Learning Benchmark) |
 | B. Results on the Imitation Learning Benchmark | BENCHMARK / DATASET | The reported success rates are computed as the averages over three random seeds. | p. 10 (B. Results on the Imitation Learning Benchmark) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this session, we demonstrate how synthetic data from the ROBOVERSE: simulation can augment real-world datasets to train more capable robotics world models. | embodiment, simulator version and control stack | p. 11 (dataset), p. 7 (IV. ROBOVERSE DATASET) |
 | Task/environment | We offer an API to generate large-scale robot trajectory datasets from a limited number of source demonstrations. | reset, timeout, object/scene variation | p. 7 (IV. ROBOVERSE DATASET), p. 9 (C. Reinforcement Learning Benchmark) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: ROBOVERSE comprises a scalable simulation platform, a large-scale synthetic dataset, and unified benchmarks. The simulation platform supports seamless integration of new tasks and ...
 - **p. 3 / B. Large-Scale Roboties Dataset - extractive body cue:** RoBOVERSE provides a unified solution for large-scale, high-quality, and diverse synthetic data, It enables agents to train on a large set of environments and simulators ...
 
-- **PDF anchors reviewed:** datasets p. 11 (dataset), p. 7 (IV. ROBOVERSE DATASET), p. 9 (C. Reinforcement Learning Benchmark), p. 5 (IV. ROBOVERSE DATASET), p. 3 (B. Large-Scale Roboties Dataset), p. 3 (B. Large-Scale Roboties Dataset), metrics p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 12 (dataset), p. 3 (C. Benchmarking in Robotics), p. 4 (Dataset), baselines p. 9 (B. Results on the Imitation Learning Benchmark), p. 10 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 3 (C. Benchmarking in Robotics), p. 8 (A. Benchmark Overview), results p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 12 (dataset), p. 6 (IV. ROBOVERSE DATASET).
+- **Evidence anchors reviewed:** datasets p. 11 (dataset), p. 7 (IV. ROBOVERSE DATASET), p. 9 (C. Reinforcement Learning Benchmark), p. 5 (IV. ROBOVERSE DATASET), p. 3 (B. Large-Scale Roboties Dataset), p. 3 (B. Large-Scale Roboties Dataset), metrics p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 12 (dataset), p. 3 (C. Benchmarking in Robotics), p. 4 (Dataset), baselines p. 9 (B. Results on the Imitation Learning Benchmark), p. 10 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 3 (C. Benchmarking in Robotics), p. 8 (A. Benchmark Overview), results p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 12 (dataset), p. 6 (IV. ROBOVERSE DATASET).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** ‘TABLE Il: Baseline Results on ROBOVERSE Imitation Learning Benchmark. (p. 10, B. Results on the Imitation Learning Benchmark).
+- **Metric evidence:** Compared to super vised learning tasks, it is relatively difficult to evaluate the performance of a robotics model. (p. 3, C. Benchmarking in Robotics).
+- **Baseline/ablation evidence:** 1) Baseline and Task Selection: ‘To genuinely reflect the data quality of the ROBOVERSE dataset and provide a standard benchmark for all kinds of imitation learning policy models, (p. 9, B. Results on the Imitation Learning Benchmark).
+- **Failure/negative evidence:** Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).

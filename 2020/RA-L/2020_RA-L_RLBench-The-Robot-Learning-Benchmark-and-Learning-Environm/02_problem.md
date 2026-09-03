@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1909.12271; PDF retrieval source: https://arxiv.org/pdf/1909.12271. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1909.12271; PDF retrieval source: https://arxiv.org/pdf/1909.12271. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): The benchmark
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The benchmark includes 100 completely unique, hand-designed tasks ranging in difficulty (shown in Figure 1), which share a common Franka Emika Panda ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | Robot manipulation systems broadly fall somewhere on a spectrum ranging from traditional, modular methods, that include object recognition, state estimation, and planning, ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Robot manipulation systems broadly fall somewhere on a spectrum ranging from traditional, modular methods, that include object recognition, state estimation, and planning, ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Robot, manipulation, systems, broadly, fall, somewhere, spectrum, ranging, traditional, modular | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | sample, visual, observations, given, over-the-shoulder, stereo, eye-in-hand, monocular | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | standardized episode e and interface; body terms: Robot, manipulation, systems, broadly, fall, somewhere, spectrum, ranging, traditional, modular | p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES) |
 | Decision / output variable | method trajectory/action; body terms: present, RLBench, ambitious, large-scale, benchmark, learning, environment, designed | p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (IV. RLBENCH) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): The benchmark
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (IV. RLBENCH), p. 1 (Abstract), p. 5 (IV. RLBENCH) |
 | Success / guarantee | comparable score and protocol validity | p. 5 (Figure/Table caption), p. 5 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): The benchmark
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (IV. RLBENCH), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES)): To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ...
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (IV. RLBENCH), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES)): To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ...
 
 - **p. 1 / Abstract - extractive body cue:** With the benchmark's breadth of tasks and demonstrations, we propose the first large-scale fewshot challenge in robotics.
 - **p. 4 / IV. RLBENCH - extractive body cue:** Each task consists of one or more variations, and from each variation, an infinite number of episodes can be drawn.
@@ -64,12 +64,21 @@ PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (IV. RLB
 
 ## Position in the Robotics Loop
 
-benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH). The downstream handoff is claimed only when the body describes it.
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), objective p. 4 (IV. RLBENCH).
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), objective p. 4 (IV. RLBENCH).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, there is currently no standard in place for comparing manipulation methods in these respective areas. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ... (p. 1, I. INTRODUCTION).
+- **Assumption/failure evidence:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

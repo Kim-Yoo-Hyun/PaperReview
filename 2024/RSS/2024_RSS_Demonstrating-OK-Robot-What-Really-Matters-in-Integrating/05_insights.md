@@ -14,7 +14,7 @@
 - **p. 3 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** The system we introduce is a combination of three primary subsystems combined on a Hello Robot: Stretch.
 - **p. 3 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** This manual scan simply consists of taking a video of the home using the Record3D app on the iPhone, which results in a sequence of ...
 - **p. 4 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** If -→p is the grasp point and -→a is the approach vector given by the grasping model, our robot gripper follows the following trajectory: ⟨-→p ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Hence, making progress on this problem requires a careful and nuanced framework that both integrates * Denotes equal contribution and † denotes equal advising.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Hence, making progress on this problem requires a careful and nuanced framework that both integrates * Denotes.
 - **p. 3 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** Open-home, open-vocabulary object navigation The first component of our method is an open-home, openvocabulary object navigation model that we use to map a home and ...
 - **p. 3 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** Navigating to objects in the real world: Once our navigation model gives us a 3D location coordinate in the real world, we use that as ...
 - **Contribution anchor:** p. 2 (I. INTRODUCTION), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 2 (I. INTRODUCTION), p. 3 (II. TECHNICAL COMPONENTS AND METHOD)
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 Overall, through our experiments, we make the following observations: • Pre-trained VLMs are highly effective for openvocabulary navigation: Current open-vocabulary visionlanguage models such as CLIP [9] or OWL-ViT [8] offer strong perf ...를 Since we do not implement error detection or correction, our state machine model is a simple linear chain of steps leading from navigating to object, to grasping, to navigating to goal, and ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D image.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Once collected, the RGB-D images, along with the camera pose and positions, are exported to our library for map-building. (p. 3, II. TECHNICAL COMPONENTS AND METHOD).
+- **Paper-specific mechanism:** We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Results of home experiments Over the 10 home environment, OK-Robot achieved a 58.5% success rates in completing full pick-and-drops. (p. 6, III. EXPERIMENTS); the relevant task/metric cue is Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and the error rates decrease from 25% to 16% and finally 13%. (p. 7, III. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D image. (p. 7, III. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The three leading causes of failures are failing to retrieve the right object to navigate to from the semantic memory (9.3%), getting a difficult pose from the manipulation module (8.0%), and robot ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 5: Ablation experiment using different semantic memory and grasping modules, with the bars showing average performance and the error bars showing standard deviation over the environments. vocabulary navigation and grasping modules. ....
-4. Report the body metric and its denominator/aggregation: Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and the error rates decrease from 25% to 16% and finally 13%..
-5. Re-run the body-reported ablation/failure condition: Ablations over system components Apart from the navigation and manipulation strategies used in OK-Robot, we also evaluated a number of alternative open.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Once collected, the RGB-D images, along with the camera pose and positions, are exported to our library for map-building. (p. 3, II. TECHNICAL COMPONENTS AND METHOD); preserve the objective/update rule: Thus, our navigation method has to balance the following objectives: 1) The robot needs to be close enough to the object to manipulate it, 2) The robot needs some space ... (p. 3, II. TECHNICAL COMPONENTS AND METHOD).
+2. Use the paper-reported task/data/environment cue: In Appendix Figure 12, we show the robot performing pick-and-drop in these two environments. (p. 6, III. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Both were larger compared to the average NY homes, requiring more robot motion to navigate to different goals. (p. 6, III. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and the error rates decrease from 25% to 16% and finally 13%. (p. 7, III. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Ablations over system components Apart from the navigation and manipulation strategies used in OK-Robot, we also evaluated a number of alternative open (p. 6, III. EXPERIMENTS); if none is reported, design one around: Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D image. (p. 7, III. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD); the primary result is directionally consistent at p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 7 (III. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 7 (Figure/Table caption), and measure the boundary at p. 7 (III. EXPERIMENTS), p. 2 (I. INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, OK-Robot, Open mechanism이 Fig. 5: Ablation experiment using different semantic memory and grasping modules, with the bars showing average ... 대비 Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and ...을 개선하고, Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Once collected, the RGB-D images, along with the camera pose and positions, are exported to our library for map-building.), does the paper-specific mechanism (We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop.) retain the reported evaluation outcome (Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and ...) when tested against the paper's strongest explicit boundary (Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (27 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Results of home experiments Over the 10 home environment, OK-Robot achieved a 58.5% success rates in completing full pick-and-drops. (p. 6, III. EXPERIMENTS).
+- **Strongest explicit boundary:** Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D image. (p. 7, III. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

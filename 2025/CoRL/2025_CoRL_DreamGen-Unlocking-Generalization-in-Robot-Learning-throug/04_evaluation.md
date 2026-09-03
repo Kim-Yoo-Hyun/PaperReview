@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/; PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/; PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Lastly, we show that solely training on neural trajectories with IDM actions enables us to reach a non-trivial performance (20.6% average success rate across ... | p. 5 (3 Experiments) |
 | 3 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Figure 5, neural trajectories consistently improve performance for different visuomotor policies (Diffusion Policy, π0, and GR00T N1) across all robot embodiments ... | p. 6 (3 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4 DreamGen Bench: A Video Generation Benchmark for Robotics Motivated by recent work benchmarking the capabilities of video generative models as world models [25, ... | embodiment, simulator version and control stack | p. 7 (3 Experiments), p. 5 (3 Experiments) |
 | Task/environment | For real-world experiments, we evaluate on 9 real-world tasks across three embodiments: the GR1 humanoid robot, the Franka arm robot, and the low-cost SO-100 ... | reset, timeout, object/scene variation | p. 5 (3 Experiments), p. 8 (3 Experiments) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 - **p. 4 / Figure/Table caption - extractive body cue:** Table 3. One benefit of latent actions is that it does not require actually having ground-truth actions for the target robot embodiment when training latent ...
 - **p. 7 / 3 Experiments - extractive body cue:** Lastly, the baseline model trained only on pick-and-place in a single environment shows 0% Success Rate, since it does not have the ability to generalize ...
 
-- **PDF anchors reviewed:** datasets p. 7 (3 Experiments), p. 5 (3 Experiments), p. 8 (3 Experiments), p. 8 (3 Experiments), p. 6 (3 Experiments), p. 5 (3 Experiments), metrics p. 5 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (3 Experiments), baselines p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (3 Experiments), results p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (Figure/Table caption), p. 8 (3 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (3 Experiments), p. 5 (3 Experiments), p. 8 (3 Experiments), p. 8 (3 Experiments), p. 6 (3 Experiments), p. 5 (3 Experiments), metrics p. 5 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (3 Experiments), baselines p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (3 Experiments), results p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (Figure/Table caption), p. 8 (3 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 5: Real-world Robot Evaluation Results. The red rectangular box shows the range of object randomization during training and evaluation. Low Data denotes training 10% of available training data (only ... (p. 6, Figure/Table caption).
+- **Metric evidence:** Lastly, we show that solely training on neural trajectories with IDM actions enables us to reach a non-trivial performance (20.6% average success rate across 24 tasks), further highlighting the quality ... (p. 5, 3 Experiments).
+- **Baseline/ablation evidence:** This hints towards a potential for a new paradigm in robot learning, as synthetic data generation through neural trajectories is significantly more scalable compared to the traditional method of manual ... (p. 5, 3 Experiments).
+- **Failure/negative evidence:** 7 Limitation Our approach is complementary to existing methods that learn from videos, although we do not directly benchmark against them. (p. 9, 6 Conclusion).

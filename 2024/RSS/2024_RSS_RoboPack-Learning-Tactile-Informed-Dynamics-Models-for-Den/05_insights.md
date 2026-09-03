@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 To formulate this problem, we define the observation space as O, the state space as S, and the action space as A.를 Secondly, the state estimator g infers object states s from any prior interactions, which includes a single visual frame ovis 0 , the subsequent tactile observations otact 0:t , and the corresponding ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The test objects are more complex than the training set visually, geometrically, and physically, to showcase the generalizability of our model. yet the same visual appearance; (ii) the robot has little visual ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To tackle these challenges, in this work, we propose to 1) learn dynamics directly from real physical interaction data using powerful deep function approximators, 2) equip our robotic system with a compliant ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2) Tactile Perception: As shown in the top right of Figure 2, our tactile perception module takes global force-torque and local force vectors as input and outputs embeddings for the ... (p. 4, III. METHOD).
+- **Paper-specific mechanism:** We find that our method can successfully leverage histories of visuo-tactile information to improve prediction, with models trained on just 30 minutes of real-world interaction data per task on average. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is 2.65 ± 0.18 4.11 ± 0.17 4.57 ± 0.16 Dense RoboPack 0.070 ± 0.005 1.12 ± 0.036 2.01 ± 0.050 Packing RoboPack (no tactile) 0.088 ± 0.006 1.18 ± 0.043 ... (p. 8, V. EXPERIMENTS); the relevant task/metric cue is We use a cost function that (i) penalizes the objects in the box from being pushed out of the boundary, (ii) encourages the robot to make space for placing the ... (p. 7, IV. EXPERIMENTAL SETUP). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Due to heavy occlusions during task execution, the robot does not have access to meaningful visual feedback during robot execution other than the initial frame, but again tactile signals are ... (p. 6, IV. EXPERIMENTAL SETUP).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Benchmarking Real-World Planning Performance Next, we evaluate the performance of our approach in solving real-world robotic planning tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 6: Qualitative results on dynamics prediction. Pre- dictions made by our model compared to baseline methods in the Non-prehensile Box Pushing task. Red dots indicate the rod and blue dots represent ....
-4. Report the body metric and its denominator/aggregation: We report the minimum error to goal across 10 plan executions per trial, trial success rates, and number of execution steps to solve the task..
-5. Re-run the body-reported ablation/failure condition: RoboPack (no tactile): To study the effects of using tactile sensing in state estimation and dynamics prediction, we evaluate this ablation of our method, which zeroes out tactile input to the model. ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2) Tactile Perception: As shown in the top right of Figure 2, our tactile perception module takes global force-torque and local force vectors as input and outputs embeddings for the ... (p. 4, III. METHOD); preserve the objective/update rule: We optimize a translation and rotation transformation for each object with this objective. (p. 4, III. METHOD).
+2. Use the paper-reported task/data/environment cue: Benchmarking Real-World Planning Performance Next, we evaluate the performance of our approach in solving real-world robotic planning tasks. (p. 9, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Our method closely approximates the ground truth and outperforms all the baseline methods. (p. 8, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We use a cost function that (i) penalizes the objects in the box from being pushed out of the boundary, (ii) encourages the robot to make space for placing the ... (p. 7, IV. EXPERIMENTAL SETUP).
+5. Re-run the reported ablation or stress/failure condition: RoboPack (no tactile): To study the effects of using tactile sensing in state estimation and dynamics prediction, we evaluate this ablation of our method, which zeroes out tactile input to ... (p. 7, V. EXPERIMENTS); if none is reported, design one around: Due to heavy occlusions during task execution, the robot does not have access to meaningful visual feedback during robot execution other than the initial frame, but again tactile signals are ... (p. 6, IV. EXPERIMENTAL SETUP).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), and measure the boundary at p. 6 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 tackle, challenges, learn mechanism이 Fig. 6: Qualitative results on dynamics prediction. Pre- dictions made by our model compared to baseline ... 대비 We report the minimum error to goal across 10 plan executions per trial, trial success rates, and number ...을 개선하고, The test objects are more complex than the training set visually, geometrically, and physically, to showcase ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2) Tactile Perception: As shown in the top right of Figure 2, our tactile perception module takes global force-torque and local force ...), does the paper-specific mechanism (We find that our method can successfully leverage histories of visuo-tactile information to improve prediction, with models trained on just 30 minutes ...) retain the reported evaluation outcome (We use a cost function that (i) penalizes the objects in the box from being pushed out of ...) when tested against the paper's strongest explicit boundary (Due to heavy occlusions during task execution, the robot does not have access to meaningful visual feedback during ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We use a cost function that (i) penalizes the objects in the box from being pushed out of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We find that our method can successfully leverage histories of visuo-tactile information to improve prediction, with models trained on just 30 minutes of real-world interaction data per task on average. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** 2.65 ± 0.18 4.11 ± 0.17 4.57 ± 0.16 Dense RoboPack 0.070 ± 0.005 1.12 ± 0.036 2.01 ± 0.050 Packing RoboPack (no tactile) 0.088 ± 0.006 1.18 ± 0.043 ... (p. 8, V. EXPERIMENTS).
+- **Strongest explicit boundary:** Due to heavy occlusions during task execution, the robot does not have access to meaningful visual feedback during robot execution other than the initial frame, but again tactile signals are ... (p. 6, IV. EXPERIMENTAL SETUP).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

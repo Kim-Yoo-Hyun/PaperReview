@@ -1,8 +1,10 @@
 # MT-Opt: Continuous Multi-Task Robotic Reinforcement Learning at Scale
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2104.08212.
-> PDF retrieval source: https://arxiv.org/abs/2104.08212. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2104.08212.
+> PDF retrieval source: https://arxiv.org/abs/2104.08212. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / arXiv
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/abs/2104.08212
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -27,15 +29,15 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 - **p. 1 / Abstract - extractive body cue:** In this framework new tasks can be continuously instantiated from previously learned tasks improving overall performance and capabilities of the system.
 - **p. 1 / Abstract - extractive body cue:** To instantiate this system, we develop a scalable and intuitive framework for specifying new tasks through user-provided examples of desired outcomes, devise a multi-robot collective ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, to realize these benefits for a real-world robotic learning system, we need to overcome a number of major challenges [64, 32, 11, 86], which ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In addition, by collecting experience simultaneously using controllers for a variety of tasks with different difficulty, arXiv:2104.08212v2 [cs.RO] 27 Apr 2021
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In addition, by collecting experience simultaneously using controllers for a variety of tasks with different difficulty.
 
 ## Core Idea
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** D) Sample of behaviorally and visually distinct tasks such as covering, chasing, alignment, which we show our method can adapt to.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We present our multi-task system as well as examples of some of the tasks that it is capable of performing in Fig.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Can we instead amortize the cost of learning this repertoire over multiple skills, where the effort needed to learn whole repertoire is reduced, easier skills ...
 - **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** First, we discuss two base choices for the impersonation function fI, then we introduce a more principled solution.
+- **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** While this basic multi-task Q-learning system can in principle acquire diverse tasks, with each task learning from the data corresponding to that task, this approach ...
 - **p. 5 / V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS - extractive body cue:** In fact, we use supervised learning to train a similar neural network architecture model (excluding the inputs responsible for action representation) as for the MT-Opt ...
 - **p. 3 / III. SYSTEM OVERVIEW - extractive body cue:** First, we use a single, multi-task deep neural network to learn a policy for all the tasks simultaneously, which enables parameter sharing between tasks.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** First, multi-task reinforcement learning is known to be exceedingly difficult from the optimization standpoint, and the hypothesized benefits of multi-task learning have proven hard to ...
@@ -54,8 +56,8 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** D) Sample of behaviorally and visually distinct tasks such as covering, chasing, alignment, which we show our method can adapt to.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We present our multi-task system as well as examples of some of the tasks that it is capable of performing in Fig.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Can we instead amortize the cost of learning this repertoire over multiple skills, where the effort needed to learn whole repertoire is reduced, easier skills ...
 - **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** First, we discuss two base choices for the impersonation function fI, then we introduce a more principled solution.
+- **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** While this basic multi-task Q-learning system can in principle acquire diverse tasks, with each task learning from the data corresponding to that task, this approach ...
 - **p. 7 / VII. EXPERIMENTS - extractive body cue:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement.
 - **p. 7 / VII. EXPERIMENTS - extractive body cue:** The 12-task policy outperforms the 2task policy even on the two tasks that the 2-task policy is trained on, suggesting that training multiple tasks not ...
 - **p. 8 / VII. EXPERIMENTS - extractive body cue:** MT-Opt, which uses impersonated successes and failures, achieves 39% success for the same task, a ≈10× improvement.
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 However, to realize these benefits for a real-world robotic learning system, we need to overcome a number of major challenges [64, 32, 11, 86], which have so far made it difficult to ...를 문제로 두고, We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and their rewards. ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 3 (III. SYSTEM OVERVIEW) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, to realize these benefits for a real-world robotic learning system, we need to overcome a number of major challenges [64, 32, 11, 86], which have so far made it ... (p. 2, I. INTRODUCTION).
+- **Actual contribution:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS).
+- **Explicit failure boundary:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks. (p. 8, VII. EXPERIMENTS).

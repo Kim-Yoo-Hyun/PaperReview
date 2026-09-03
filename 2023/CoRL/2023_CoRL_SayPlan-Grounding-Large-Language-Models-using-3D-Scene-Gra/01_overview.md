@@ -1,8 +1,10 @@
 # SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v229/rana23a.html.
-> PDF retrieval source: https://arxiv.org/pdf/2307.06135. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v229/rana23a.html.
+> PDF retrieval source: https://arxiv.org/pdf/2307.06135. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2307.06135
 - Code/Project: https://sayplan.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 ## Why Read It
 
 VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 We evaluate our framework across a range of 90 tasks organised into four levels of difficulty.를 문제로 두고, Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only the top ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (50 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The challenge lies in scaling these models. (p. 1, 1 Introduction).
+- **Actual contribution:** Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** We summarise the results for the semantic search evaluation in Table (p. 6, 5 Results).
+- **Explicit failure boundary:** An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented with questions such as "Find me an office that does not have ... (p. 7, 1. SayPlan (GPT-3.5) consistently).

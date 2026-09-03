@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 ## Method Body Digest
 
-- **p. 3 / 3. Method - extractive PDF cue:** We then revisit the Gaussian splatting formulation and rendering process, which provides a differentiable 3D representation suitable for semantic transfer (Sec.
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** 3D features are rendered to 2D pixels u as F(u) = P i fgiαgi Q j<i(1 -αgj), then gated to F s(u) = S(s) ⊙F(u).
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** Supervision uses correspondences from scale-sorted masks, with the loss: Lcorr(s, u1, u2) = (1 -2 · Corrm(s, u1, u2)) · max(Corrf(s, u1, u2), 0), (4) ...
-- **p. 5 / 3.4. Semantic Information Distillation - extractive PDF cue:** The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm.
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** Scale-Conditioned 3D Gaussian Affinity Features.
-- **p. 5 / 3.4. Semantic Information Distillation - extractive PDF cue:** (5) The contrastive loss is the same as that in Eq.
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
+- **p. 3 / 3. Method - extractive body cue:** We then revisit the Gaussian splatting formulation and rendering process, which provides a differentiable 3D representation suitable for semantic transfer (Sec.
+- **p. 4 / 3.2. Preliminary - extractive body cue:** 3D features are rendered to 2D pixels u as F(u) = P i fgiαgi Q j<i(1 -αgj), then gated to F s(u) = S(s) ⊙F(u).
+- **p. 4 / 3.2. Preliminary - extractive body cue:** Supervision uses correspondences from scale-sorted masks, with the loss: Lcorr(s, u1, u2) = (1 -2 · Corrm(s, u1, u2)) · max(Corrf(s, u1, u2), 0), (4) ...
+- **p. 5 / 3.4. Semantic Information Distillation - extractive body cue:** The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm.
+- **p. 3 / 3.2. Preliminary - extractive body cue:** Scale-Conditioned 3D Gaussian Affinity Features.
+- **p. 5 / 3.4. Semantic Information Distillation - extractive body cue:** (5) The contrastive loss is the same as that in Eq.
+- **p. 3 / 3.2. Preliminary - extractive body cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
+- **p. 3 / 3.2. Preliminary - extractive body cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are as follows: • We leverage Gaussian Splatting as a unified intermediate representation for unsupervised point cloud segmentation, effectively bridging the ...
-- **p. 4 / 3.3. Points to 3D Gaussians Reconstruction - extractive PDF cue:** In addition, we introduce a Multi-View Consistency Check inspired by SuGaR [9].
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We leverage Gaussian Splatting as a unified intermediate representation for unsupervised point cloud segmentation, effectively bridging the ...
+- **p. 4 / 3.3. Points to 3D Gaussians Reconstruction - extractive body cue:** In addition, we introduce a Multi-View Consistency Check inspired by SuGaR [9].
+- **p. 3 / 3.2. Preliminary - extractive body cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
 
 ## Source Evidence Cues
 
-- **p. 3 / 3. Method - extractive PDF cue:** We then revisit the Gaussian splatting formulation and rendering process, which provides a differentiable 3D representation suitable for semantic transfer (Sec.
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** 3D features are rendered to 2D pixels u as F(u) = P i fgiαgi Q j<i(1 -αgj), then gated to F s(u) = S(s) ⊙F(u).
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** Supervision uses correspondences from scale-sorted masks, with the loss: Lcorr(s, u1, u2) = (1 -2 · Corrm(s, u1, u2)) · max(Corrf(s, u1, u2), 0), (4) ...
-- **p. 5 / 3.4. Semantic Information Distillation - extractive PDF cue:** The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm.
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** Scale-Conditioned 3D Gaussian Affinity Features.
-- **p. 5 / 3.4. Semantic Information Distillation - extractive PDF cue:** (5) The contrastive loss is the same as that in Eq.
+- **p. 3 / 3. Method - extractive body cue:** We then revisit the Gaussian splatting formulation and rendering process, which provides a differentiable 3D representation suitable for semantic transfer (Sec.
+- **p. 4 / 3.2. Preliminary - extractive body cue:** 3D features are rendered to 2D pixels u as F(u) = P i fgiαgi Q j<i(1 -αgj), then gated to F s(u) = S(s) ⊙F(u).
+- **p. 4 / 3.2. Preliminary - extractive body cue:** Supervision uses correspondences from scale-sorted masks, with the loss: Lcorr(s, u1, u2) = (1 -2 · Corrm(s, u1, u2)) · max(Corrf(s, u1, u2), 0), (4) ...
+- **p. 5 / 3.4. Semantic Information Distillation - extractive body cue:** The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm.
+- **p. 3 / 3.2. Preliminary - extractive body cue:** Scale-Conditioned 3D Gaussian Affinity Features.
+- **p. 5 / 3.4. Semantic Information Distillation - extractive body cue:** (5) The contrastive loss is the same as that in Eq.
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We then revisit the Gaussian splatting formulation and rendering process, which provides a differentiable 3D representation suitable for semantic transfer (Sec. | p. 3 (3. Method), p. 4 (3.2. Preliminary) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | 3D features are rendered to 2D pixels u as F(u) = P i fgiαgi Q j<i(1 -αgj), then gated to F s(u) ... | p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.4. Semantic Information Distillation - extractive PDF cue:** The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm.
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** Supervision uses correspondences from scale-sorted masks, with the loss: Lcorr(s, u1, u2) = (1 -2 · Corrm(s, u1, u2)) · max(Corrf(s, u1, u2), 0), (4) ...
-- **p. 5 / 3.4. Semantic Information Distillation - extractive PDF cue:** (5) The contrastive loss is the same as that in Eq.
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** These features are optimized through scale-aware contrastive learning.
+- **p. 5 / 3.4. Semantic Information Distillation - extractive body cue:** The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm.
+- **p. 3 / 3.2. Preliminary - extractive body cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
+- **p. 4 / 3.2. Preliminary - extractive body cue:** Supervision uses correspondences from scale-sorted masks, with the loss: Lcorr(s, u1, u2) = (1 -2 · Corrm(s, u1, u2)) · max(Corrf(s, u1, u2), 0), (4) ...
+- **p. 5 / 3.4. Semantic Information Distillation - extractive body cue:** (5) The contrastive loss is the same as that in Eq.
+- **p. 3 / 3.2. Preliminary - extractive body cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
+- **p. 4 / 3.2. Preliminary - extractive body cue:** These features are optimized through scale-aware contrastive learning.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Preliminary), p. 3 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 5 (3.4. Semantic Information Distillation).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** The input sparse point cloud is first reconstructed into a dense 3D Gaussian space using multi-view observations.
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** SAM Input RGB Points Multi-view Images 3DGS Center Points of Gaussians Pseudo Points Labels Projection 3D Gaussian Primitives Masks Render Back propagation 3D Gaussian with ...
-- **p. 4 / 3.2. Preliminary - extractive PDF cue:** Building upon this foundation, SAGA [5] operationalizes scale conditioning for 3D-GS, primarily for promptguided 3D segmentation tasks where user inputs guide mask generation.
-- **p. 6 / 3.5. Gaussian-to-Point Cloud Alignment - extractive PDF cue:** Input PC-HC PointDC GrowSP Ours GT ceiling floor wall column window door table chair sofa bookcase board clutter LogoSP Figure 3.
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are as follows: • We leverage Gaussian Splatting as a unified intermediate representation for unsupervised point cloud segmentation, effectively bridging the ...
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and depth ...
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
+- **p. 2 / 1. Introduction - extractive body cue:** The input sparse point cloud is first reconstructed into a dense 3D Gaussian space using multi-view observations.
+- **p. 4 / 3.2. Preliminary - extractive body cue:** SAM Input RGB Points Multi-view Images 3DGS Center Points of Gaussians Pseudo Points Labels Projection 3D Gaussian Primitives Masks Render Back propagation 3D Gaussian with ...
+- **p. 4 / 3.2. Preliminary - extractive body cue:** Building upon this foundation, SAGA [5] operationalizes scale conditioning for 3D-GS, primarily for promptguided 3D segmentation tasks where user inputs guide mask generation.
+- **p. 6 / 3.5. Gaussian-to-Point Cloud Alignment - extractive body cue:** Input PC-HC PointDC GrowSP Ours GT ceiling floor wall column window door table chair sofa bookcase board clutter LogoSP Figure 3.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We leverage Gaussian Splatting as a unified intermediate representation for unsupervised point cloud segmentation, effectively bridging the ...
+- **p. 3 / 3.2. Preliminary - extractive body cue:** It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and depth ...
+- **p. 3 / 3.2. Preliminary - extractive body cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,7 +89,7 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 ## Training vs Inference
 
-- **p. 3 / 3.2. Preliminary - extractive PDF cue:** It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and depth ...
+- **p. 3 / 3.2. Preliminary - extractive body cue:** It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and depth ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.3. Ablation Experiment - extractive PDF cue:** To showcase the effectiveness of each module, we conduct four groups of experiments on the S3DIS[2] Area 5 dataset: (1) the baseline projection approach proposed ...
-- **p. 6 / 4.1. Experiment Details - extractive PDF cue:** Label Matching and Metric: As our approach operates in an unsupervised manner, without prior knowledge of the ground truth labels, the resulting clusters may exhibit ...
-- **p. 7 / 4.3. Ablation Experiment - extractive PDF cue:** Ablation experiments of PointGS on the S3DIS Area5.
-- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive PDF cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
-- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive PDF cue:** A smaller Scale Gate value will amplify the channels in the features corresponding to fine-grained segmentation (such as object components).
-- **p. 6 / 4.1. Experiment Details - extractive PDF cue:** This alignment enables a robust measurement of semantic consistency between the inferred partitions and the reference annotations, while mitigating the impact of label permutations in ...
-- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive PDF cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
+- **p. 7 / 4.3. Ablation Experiment - extractive body cue:** To showcase the effectiveness of each module, we conduct four groups of experiments on the S3DIS[2] Area 5 dataset: (1) the baseline projection approach proposed ...
+- **p. 6 / 4.1. Experiment Details - extractive body cue:** Label Matching and Metric: As our approach operates in an unsupervised manner, without prior knowledge of the ground truth labels, the resulting clusters may exhibit ...
+- **p. 7 / 4.3. Ablation Experiment - extractive body cue:** Ablation experiments of PointGS on the S3DIS Area5.
+- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
+- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** A smaller Scale Gate value will amplify the channels in the features corresponding to fine-grained segmentation (such as object components).
+- **p. 6 / 4.1. Experiment Details - extractive body cue:** This alignment enables a robust measurement of semantic consistency between the inferred partitions and the reference annotations, while mitigating the impact of label permutations in ...
+- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), objective p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary), temporal p. 3 (3. Method), p. 4 (3.3. Points to 3D Gaussians Reconstruction), p. 4 (3.2. Preliminary), p. 5 (3.5. Gaussian-to-Point Cloud Alignment), p. 5 (3.4. Semantic Information Distillation), p. 6 (4.1. Experiment Details).
+- **Evidence anchors reviewed:** method p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), objective p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary), temporal p. 3 (3. Method), p. 4 (3.3. Points to 3D Gaussians Reconstruction), p. 4 (3.2. Preliminary), p. 5 (3.5. Gaussian-to-Point Cloud Alignment), p. 5 (3.4. Semantic Information Distillation), p. 6 (4.1. Experiment Details).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

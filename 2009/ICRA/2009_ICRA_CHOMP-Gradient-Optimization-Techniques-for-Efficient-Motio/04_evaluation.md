@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | III. EXPERIMENTS ON A ROBOTIC ARM | EMPIRICAL / SOURCE-REPORTED EVALUATION | Surprisingly, when CHOMP successfully finds a collision free trajectory, straight-line 4We found that adding a small amount (.001) to the diagonal of A improved ... | p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
 | III. EXPERIMENTS ON A ROBOTIC ARM | EMPIRICAL / SOURCE-REPORTED EVALUATION | On average, excluding those problems that CHOMP could not solve, the log-objective value achieved when starting from a straight-line trajectory was approximately .5 units ... | p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We chose 15 different configurations in a given scene representing various tasks such as picking up an object 3The last degree of freedom simply ... | embodiment, simulator version and control stack | p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM) |
 | Task/environment | Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how the robot should best remove itself ... | reset, timeout, object/scene variation | p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 - **p. 6 / III. EXPERIMENTS ON A ROBOTIC ARM - extractive body cue:** CHOMP successfully found collision-free trajectories for 99 of the 105 problem.4 We additionally compared the performance of CHOMP when initialized to a straight-line trajectory through ...
 - **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** The prior is defined as penalizing the distance below some known obstacle-free height when the swing leg is in collision with the terrain.
 
-- **PDF anchors reviewed:** datasets p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), metrics p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), baselines p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 1 (Figure/Table caption), results p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT).
+- **Evidence anchors reviewed:** datasets p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), metrics p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), baselines p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 1 (Figure/Table caption), results p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** This section presents experimental results for our implementation of CHOMP on Barrett Technology's WAM arm shown in figure 1. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM).
+- **Metric evidence:** Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how the robot should best remove itself from collision. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM).
+- **Baseline/ablation evidence:** However, we made little effort to make our code efficient; we stress that our algorithm is performing essentially the same amount of work as the smoother of a two stage ... (p. 6, III. EXPERIMENTS ON A ROBOTIC ARM).
+- **Failure/negative evidence:** However, as we discuss in section V, while the algorithm solves a substantially larger breadth of planning problems than traditional trajectory optimization algorithms, it still falls prey to local minima ... (p. 3, II. THE CHOMP ALGORITHM).

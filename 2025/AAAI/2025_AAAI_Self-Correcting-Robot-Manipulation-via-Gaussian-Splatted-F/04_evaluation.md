@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/34866; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/34866. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/34866; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/34866. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 2. By incorporating the proposed self-correction scheme | EMPIRICAL / SIMULATION | Comprehensive experiments across ten tasks with 166 variations demonstrate that our method significantly outperforms stateof-the-art techniques, achieving a 12.0% higher success rate. | p. 7 (2. By incorporating the proposed self-correction scheme) |
 | 2. By incorporating the proposed self-correction scheme | EMPIRICAL / SIMULATION | As presented in table 2, our method achieves the highest success rate in 5 out of 6 tasks and the average success rate across ... | p. 6 (2. By incorporating the proposed self-correction scheme) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 2023), we collected 20 episodes of demonstrations for each of 10 challenging language-conditioned manipulation tasks in the dataset collected PerAct (Shridhar, Manuelli, and Fox ... | embodiment, simulator version and control stack | p. 5 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme) |
 | Task/environment | To differentiate the testing focus across various tasks on PerAct dataset, we compute the average success rate for the following categories: • The ‘Planning' ... | reset, timeout, object/scene variation | p. 6 (2. By incorporating the proposed self-correction scheme), p. 4 (2. By incorporating the proposed self-correction scheme) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 - **p. 3 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** Additionally, Lu et al.'s method is not capable of self-correction, while our proposed method includes failure detection and self-correction, which can be incorporated with other ...
 - **p. 4 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** Once the observation is not consistent with the predicted scene, it can be viewed as a failure.
 
-- **PDF anchors reviewed:** datasets p. 5 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 4 (2. By incorporating the proposed self-correction scheme), p. 5 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), metrics p. 6 (Figure/Table caption), p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 7 (Figure/Table caption), p. 5 (2. By incorporating the proposed self-correction scheme), p. 1 (Figure/Table caption), baselines p. 7 (2. By incorporating the proposed self-correction scheme), p. 7 (Figure/Table caption), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), results p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 4 (2. By incorporating the proposed self-correction scheme), p. 5 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), metrics p. 6 (Figure/Table caption), p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 7 (Figure/Table caption), p. 5 (2. By incorporating the proposed self-correction scheme), p. 1 (Figure/Table caption), baselines p. 7 (2. By incorporating the proposed self-correction scheme), p. 7 (Figure/Table caption), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), results p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Success rates on Peract's dataset. Bold indicates the best results while Underline denotes the second-ranked per- formance. The ‘Average' metric represents the mean success rate across all 10 ... (p. 6, Figure/Table caption).
+- **Metric evidence:** Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ranked performance. The ‘Average' metric represents the mean success rate across all ... (p. 6, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 3: Ablation study. The comparison between the models without and with self-correction on PerAct's dataset. (p. 7, Figure/Table caption).
+- **Failure/negative evidence:** Due to potential occlusions, environmental disturbances, and control inaccuracies, failures are inevitable. (p. 1, Abstract).

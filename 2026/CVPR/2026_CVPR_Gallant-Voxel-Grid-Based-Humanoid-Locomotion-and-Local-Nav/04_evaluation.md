@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ben_Gallant_Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3-D_Constrained_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ben_Gallant_Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3-D_Constrained_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ben_Gallant_Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3-D_Constrained_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ben_Gallant_Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3-D_Constrained_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.2.1. Metrics - extractive PDF cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
-- **p. 8 / 4.4. Further Analyses - extractive PDF cue:** A clear correlation emerges: terrains with higher success in simulation also perform well on hardware, validating the use of large-scale simulated evaluation as a reliable ...
-- **p. 7 / 4.2.3. Result - extractive PDF cue:** (a) The humanoid crouches to traverse under a low ceiling; (b) Voxel grid from LiDAR simulation that includes dynamic objects captures the robot's own links; ...
-- **p. 5 / 4.1. Experimental Configuration - extractive PDF cue:** We conduct both simulation training and real-world deployment on the 29-DoF Unitree G1 humanoid.
-- **p. 6 / 4.2.3. Result - extractive PDF cue:** Humanoid robot traverses diverse 3D constrained terrains in both simulation and the real world.
-- **p. 8 / 4.3.2. Ablation - extractive PDF cue:** Unlike in simulation, where HeightMap occasionally excels on Pile or Stairs, its real-world performance is hindered by noisy elevation reconstruction.
-- **p. 6 / 4.2.3. Result - extractive PDF cue:** 5 (a), when the robot ducks under the ceiling, the voxel grids with dynamics (Fig.
-- **p. 7 / 4.3.1. Deployment - extractive PDF cue:** Despite the diverse and complex constraints, the robot consistently traverses these terrains with high success rates (see Fig.
+- **p. 5 / 4.2.1. Metrics - extractive body cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
+- **p. 8 / 4.4. Further Analyses - extractive body cue:** A clear correlation emerges: terrains with higher success in simulation also perform well on hardware, validating the use of large-scale simulated evaluation as a reliable ...
+- **p. 7 / 4.2.3. Result - extractive body cue:** (a) The humanoid crouches to traverse under a low ceiling; (b) Voxel grid from LiDAR simulation that includes dynamic objects captures the robot's own links; ...
+- **p. 5 / 4.1. Experimental Configuration - extractive body cue:** We conduct both simulation training and real-world deployment on the 29-DoF Unitree G1 humanoid.
+- **p. 6 / 4.2.3. Result - extractive body cue:** Humanoid robot traverses diverse 3D constrained terrains in both simulation and the real world.
+- **p. 8 / 4.3.2. Ablation - extractive body cue:** Unlike in simulation, where HeightMap occasionally excels on Pile or Stairs, its real-world performance is hindered by noisy elevation reconstruction.
+- **p. 6 / 4.2.3. Result - extractive body cue:** 5 (a), when the robot ducks under the ceiling, the voxel grids with dynamics (Fig.
+- **p. 7 / 4.3.1. Deployment - extractive body cue:** Despite the diverse and complex constraints, the robot consistently traverses these terrains with high success rates (see Fig.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2.3. Result | EMPIRICAL / REAL-ROBOT OR HARDWARE | With all other settings fixed, Gallant achieves much higher success rates than the variant that ignores dynamic objects (w/o-Self-Scan) across all tasks. | p. 6 (4.2.3. Result) |
 | 4.2.3. Result | EMPIRICAL / REAL-ROBOT OR HARDWARE | This Gallant configuration achieves higher success rates than Only-Voxel-Grid (critic without height map) across all tasks, validating the proposed design. | p. 7 (4.2.3. Result) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.2.1. Metrics - extractive PDF cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
-- **p. 8 / 4.4. Further Analyses - extractive PDF cue:** A clear correlation emerges: terrains with higher success in simulation also perform well on hardware, validating the use of large-scale simulated evaluation as a reliable ...
-- **p. 7 / 4.2.3. Result - extractive PDF cue:** (a) The humanoid crouches to traverse under a low ceiling; (b) Voxel grid from LiDAR simulation that includes dynamic objects captures the robot's own links; ...
-- **p. 5 / 4.1. Experimental Configuration - extractive PDF cue:** We conduct both simulation training and real-world deployment on the 29-DoF Unitree G1 humanoid.
-- **p. 6 / 4.2.3. Result - extractive PDF cue:** Humanoid robot traverses diverse 3D constrained terrains in both simulation and the real world.
-- **p. 8 / 4.3.2. Ablation - extractive PDF cue:** Unlike in simulation, where HeightMap occasionally excels on Pile or Stairs, its real-world performance is hindered by noisy elevation reconstruction.
-- **p. 6 / 4.2.3. Result - extractive PDF cue:** 5 (a), when the robot ducks under the ceiling, the voxel grids with dynamics (Fig.
-- **p. 7 / 4.3.1. Deployment - extractive PDF cue:** Despite the diverse and complex constraints, the robot consistently traverses these terrains with high success rates (see Fig.
+- **p. 5 / 4.2.1. Metrics - extractive body cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
+- **p. 8 / 4.4. Further Analyses - extractive body cue:** A clear correlation emerges: terrains with higher success in simulation also perform well on hardware, validating the use of large-scale simulated evaluation as a reliable ...
+- **p. 7 / 4.2.3. Result - extractive body cue:** (a) The humanoid crouches to traverse under a low ceiling; (b) Voxel grid from LiDAR simulation that includes dynamic objects captures the robot's own links; ...
+- **p. 5 / 4.1. Experimental Configuration - extractive body cue:** We conduct both simulation training and real-world deployment on the 29-DoF Unitree G1 humanoid.
+- **p. 6 / 4.2.3. Result - extractive body cue:** Humanoid robot traverses diverse 3D constrained terrains in both simulation and the real world.
+- **p. 8 / 4.3.2. Ablation - extractive body cue:** Unlike in simulation, where HeightMap occasionally excels on Pile or Stairs, its real-world performance is hindered by noisy elevation reconstruction.
+- **p. 6 / 4.2.3. Result - extractive body cue:** 5 (a), when the robot ducks under the ceiling, the voxel grids with dynamics (Fig.
+- **p. 7 / 4.3.1. Deployment - extractive body cue:** Despite the diverse and complex constraints, the robot consistently traverses these terrains with high success rates (see Fig.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview. Gallant enables a single policy with voxel grids to traverse diverse 3D constrained terrains in real: (a) ascend and descend stairs, (b) ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison between gallant and previous methods. FoV in Solid Angles are computed by parameter of the used sensors.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method Overview. (a) Curriculum-based training over 8 representative terrains enhances generalization, and realistic voxel path alignment achieved via efficient LiDAR simulation with domain-randomized ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Parameters for generating curriculum training terrains. Terrain Type τ Term pmin τ pmax τ Ceiling
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Terrain types used to train robots in simulation(pmax τ ) We adopt a curriculum-based training strategy where ter- rain difficulty increases progressively. Each ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Simulation ablation results. We present a success rate comparison between Gallant and baselines on the eight representative terrains. The means and standard variation ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Humanoid robot traverses diverse 3D constrained terrains in both simulation and the real world. (a)Traversal across the eight simulated training terrain types. (b)Ducking ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization of simulation ablation analyses. (a) The humanoid crouches to traverse under a low ceiling; (b) Voxel grid from LiDAR simulation that includes ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. Gallant enables a single policy with voxel grids to traverse diverse 3D constrained terrains in real: (a) ascend and descend stairs, (b) ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparison between gallant and previous methods. FoV in Solid Angles are computed by parameter of the used sensors.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method Overview. (a) Curriculum-based training over 8 representative terrains enhances generalization, and realistic voxel path alignment achieved via efficient LiDAR simulation with domain-randomized ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Parameters for generating curriculum training terrains. Terrain Type τ Term pmin τ pmax τ Ceiling
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Terrain types used to train robots in simulation(pmax τ ) We adopt a curriculum-based training strategy where ter- rain difficulty increases progressively. Each ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Simulation ablation results. We present a success rate comparison between Gallant and baselines on the eight representative terrains. The means and standard variation ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Humanoid robot traverses diverse 3D constrained terrains in both simulation and the real world. (a)Traversal across the eight simulated training terrain types. (b)Ducking ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of simulation ablation analyses. (a) The humanoid crouches to traverse under a low ceiling; (b) Voxel grid from LiDAR simulation that includes ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within ... | embodiment, simulator version and control stack | p. 5 (4.2.1. Metrics), p. 8 (4.4. Further Analyses) |
 | Task/environment | A clear correlation emerges: terrains with higher success in simulation also perform well on hardware, validating the use of large-scale simulated evaluation as a ... | reset, timeout, object/scene variation | p. 8 (4.4. Further Analyses), p. 7 (4.2.3. Result) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 | Primary metric/result | This Gallant configuration achieves higher success rates than Only-Voxel-Grid (critic without height map) across all tasks, validating the proposed design. | numeric claim only at cited anchor | p. 7 (4.2.3. Result) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Configuration - extractive PDF cue:** Policy training is distributed across eight NVIDIA RTX 4090 GPUs (45GB memory each).
-- **p. 5 / 4.2.1. Metrics - extractive PDF cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
-- **p. 7 / 4.3.1. Deployment - extractive PDF cue:** The control loop runs at 50Hz, consistent with simulation.
-- **p. 7 / 4.3.1. Deployment - extractive PDF cue:** To ensure reliable voxel input, raw point clouds from dual LiDARs are processed onboard using OctoMap [16], generating a binary occupancy grid at 10Hz.
-- **p. 8 / 4.3.2. Ablation - extractive PDF cue:** Plane Ceiling Door Platform Pile Upstair Downstair 0.0 2.5 5.0 7.5 10.0 12.5 15.0 15.0 0.0 1.0 11.0 10.0 13.0 12.0 15.0 15.0 12.0 4.0 ...
-- **p. 8 / 4.3.2. Ablation - extractive PDF cue:** Real-world traversal success times over 15 trials.
+- **p. 5 / 4.1. Experimental Configuration - extractive body cue:** Policy training is distributed across eight NVIDIA RTX 4090 GPUs (45GB memory each).
+- **p. 5 / 4.2.1. Metrics - extractive body cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
+- **p. 7 / 4.3.1. Deployment - extractive body cue:** The control loop runs at 50Hz, consistent with simulation.
+- **p. 7 / 4.3.1. Deployment - extractive body cue:** To ensure reliable voxel input, raw point clouds from dual LiDARs are processed onboard using OctoMap [16], generating a binary occupancy grid at 10Hz.
+- **p. 8 / 4.3.2. Ablation - extractive body cue:** Plane Ceiling Door Platform Pile Upstair Downstair 0.0 2.5 5.0 7.5 10.0 12.5 15.0 15.0 0.0 1.0 11.0 10.0 13.0 12.0 15.0 15.0 12.0 4.0 ...
+- **p. 8 / 4.3.2. Ablation - extractive body cue:** Real-world traversal success times over 15 trials.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.2.1. Metrics - extractive PDF cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
-- **p. 7 / 4.2.3. Result - extractive PDF cue:** 1, using only a height map as the perceptual representation for policy cannot represent multilayer structure; consequently, Only-Height-Map fails on terrains such as Ceiling.
-- **p. 8 / 4.4. Further Analyses - extractive PDF cue:** On other terrains-especially Platforms and Stairs, previously considered unstable due to collision risk [21]-Gallant achieves high success by proactively adjusting foot trajectories.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** In real-world tests, a single LiDAR policy covers the ground obstacles handled by elevation-map controllers while also tackling lateral and overhead structures, and on ground-only ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method Overview. (a) Curriculum-based training over 8 representative terrains enhances generalization, and realistic voxel path alignment achieved via efficient LiDAR simulation with domain-randomized ...
-- **p. 6 / 4.2.3. Result - extractive PDF cue:** 5 (b)) correctly include the robot's legs, which occupy voxels and induce occlusion "holes" along LiDAR rays to the distant floor.
+- **p. 5 / 4.2.1. Metrics - extractive body cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
+- **p. 7 / 4.2.3. Result - extractive body cue:** 1, using only a height map as the perceptual representation for policy cannot represent multilayer structure; consequently, Only-Height-Map fails on terrains such as Ceiling.
+- **p. 8 / 4.4. Further Analyses - extractive body cue:** On other terrains-especially Platforms and Stairs, previously considered unstable due to collision risk [21]-Gallant achieves high success by proactively adjusting foot trajectories.
+- **p. 8 / 5. Conclusion - extractive body cue:** In real-world tests, a single LiDAR policy covers the ground obstacles handled by elevation-map controllers while also tackling lateral and overhead structures, and on ground-only ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method Overview. (a) Curriculum-based training over 8 representative terrains enhances generalization, and realistic voxel path alignment achieved via efficient LiDAR simulation with domain-randomized ...
+- **p. 6 / 4.2.3. Result - extractive body cue:** 5 (b)) correctly include the robot's legs, which occupy voxels and induce occlusion "holes" along LiDAR rays to the distant floor.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.2.1. Metrics), p. 8 (4.4. Further Analyses), p. 7 (4.2.3. Result), p. 5 (4.1. Experimental Configuration), p. 6 (4.2.3. Result), p. 8 (4.3.2. Ablation), metrics p. 5 (4.2.1. Metrics), p. 7 (4.3.2. Ablation), p. 7 (4.2.3. Result), p. 8 (4.4. Further Analyses), p. 5 (4.2.3. Result), p. 6 (4.2.3. Result), baselines p. 8 (4.3.2. Ablation), p. 5 (4.1. Experimental Configuration), p. 6 (4.2.3. Result), p. 5 (4.2.2. Baselines), p. 8 (4.3.2. Ablation), p. 6 (4.2.3. Result), results p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8 (4.4. Further Analyses), p. 5 (4.2.1. Metrics), p. 7 (4.3.2. Ablation), p. 8 (4.4. Further Analyses).
+- **Evidence anchors reviewed:** datasets p. 5 (4.2.1. Metrics), p. 8 (4.4. Further Analyses), p. 7 (4.2.3. Result), p. 5 (4.1. Experimental Configuration), p. 6 (4.2.3. Result), p. 8 (4.3.2. Ablation), metrics p. 5 (4.2.1. Metrics), p. 7 (4.3.2. Ablation), p. 7 (4.2.3. Result), p. 8 (4.4. Further Analyses), p. 5 (4.2.3. Result), p. 6 (4.2.3. Result), baselines p. 8 (4.3.2. Ablation), p. 5 (4.1. Experimental Configuration), p. 6 (4.2.3. Result), p. 5 (4.2.2. Baselines), p. 8 (4.3.2. Ablation), p. 6 (4.2.3. Result), results p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8 (4.4. Further Analyses), p. 5 (4.2.1. Metrics), p. 7 (4.3.2. Ablation), p. 8 (4.4. Further Analyses).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

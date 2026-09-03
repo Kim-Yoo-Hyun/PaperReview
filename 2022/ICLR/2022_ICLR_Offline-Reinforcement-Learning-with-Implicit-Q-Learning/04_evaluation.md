@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=68n2s9ZJWF8; PDF retrieval source: https://arxiv.org/pdf/2110.06169. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=68n2s9ZJWF8; PDF retrieval source: https://arxiv.org/pdf/2110.06169. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 2: Online finetuning results showing the initial perfor- mance after offline RL, and performance after 1M steps of on- line RL. In all ... | p. 9 (Figure/Table caption) |
 | 3 PRELIMINARIES | SYSTEM / EVALUATION SCOPE UNRESOLVED | On the Ant Maze domains, IQL significantly outperforms both prior methods after online finetuning. | p. 9 (3 PRELIMINARIES) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We will then compare IQL with state-of-theart single-step and multi-step algorithms on the D4RL (Fu et al., 2020) benchmark tasks, studying the degree to ... | embodiment, simulator version and control stack | p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES) |
 | Task/environment | The MuJoCo tasks in D4RL consist of the Gym locomotion tasks, the Ant Maze tasks, and the Adroit and Kitchen robotic manipulation environments. | reset, timeout, object/scene variation | p. 7 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 - **p. 7 / 3 PRELIMINARIES - extractive body cue:** Since IQL (d) performs iterative dynamic programming, it correctly propagates the signal, and the values are no longer dominated by noise.
 - **p. 7 / 3 PRELIMINARIES - extractive body cue:** When the static dataset is heavily corrupted by suboptimal actions, one-step policy evaluation results in a value function that degrades to zero far from the ...
 
-- **PDF anchors reviewed:** datasets p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), metrics p. 5 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 8 (Figure/Table caption), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), baselines p. 8 (Figure/Table caption), p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), results p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARIES), p. 8 (Figure/Table caption), p. 5 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES).
+- **Evidence anchors reviewed:** datasets p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), metrics p. 5 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 8 (Figure/Table caption), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), baselines p. 8 (Figure/Table caption), p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), results p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARIES), p. 8 (Figure/Table caption), p. 5 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 2: Evaluation of our algorithm on a toy umaze environment (a). When the static dataset is heavily corrupted by suboptimal actions, one-step policy evaluation results in a value function ... (p. 7, Figure/Table caption).
+- **Metric evidence:** The agent receives a reward of 10 for entering the goal state and zero reward for all other transitions. (p. 7, 3 PRELIMINARIES).
+- **Baseline/ablation evidence:** Figure 3: Estimating a larger expectile τ is crucial for antmaze tasks that require dynamical program- ming ('stitching'). Comparisons and baselines. We compare to methods that are representative of both ... (p. 8, Figure/Table caption).
+- **Failure/negative evidence:** Our reproduced results offline are worse than the reported results, particularly on medium and large antmaze environments. (p. 13, C FINETUNING EXPERIMENTAL DETAILS).

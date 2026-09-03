@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2605.27886; PDF retrieval source: https://arxiv.org/pdf/2605.27886. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2605.27886; PDF retrieval source: https://arxiv.org/pdf/2605.27886. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Although these fingertip forces can be decomposed to recover the full 6D interaction wrench on the object, we find it more effective ... | p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Its features then interact with visual features via cross-attention in the transformer, enabling joint reasoning over contact history and scene geometry. | p. 4 (3.4. Tabero-VTLA), p. 6 (3.6. Metrics Beyond Success Rate) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | A lightweight Temporal Convolutional Network (TCN) encodes this spatiotemporal sequence into tokens for integration into the transformer backbone. | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 6 (3.6. Metrics Beyond Success Rate), p. 5 (3.5. Decoupled Force-Position Hybrid Controller), p. 5 (3.5. Decoupled Force-Position Hybrid Controller), p. 6 (3.6. Metrics Beyond Success Rate), objective p. 3 (3.1. Cross-Platform Data Reutilization), p. 4 (3.4. Tabero-VTLA), p. 5 (3.4. Tabero-VTLA), p. 5 (3.4. Tabero-VTLA), temporal p. 4 (3.2. Cross-Modal Data Acquisition), p. 4 (3.4. Tabero-VTLA), p. 3 (3.2. Cross-Modal Data Acquisition), p. 3 (3.2. Cross-Modal Data Acquisition), p. 5 (3.5. Decoupled Force-Position Hybrid Controller), p. 5 (3.5. Decoupled Force-Position Hybrid Controller).
+- **Evidence anchors reviewed:** method p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 6 (3.6. Metrics Beyond Success Rate), p. 5 (3.5. Decoupled Force-Position Hybrid Controller), p. 5 (3.5. Decoupled Force-Position Hybrid Controller), p. 6 (3.6. Metrics Beyond Success Rate), objective p. 3 (3.1. Cross-Platform Data Reutilization), p. 4 (3.4. Tabero-VTLA), p. 5 (3.4. Tabero-VTLA), p. 5 (3.4. Tabero-VTLA), temporal p. 4 (3.2. Cross-Modal Data Acquisition), p. 4 (3.4. Tabero-VTLA), p. 3 (3.2. Cross-Modal Data Acquisition), p. 3 (3.2. Cross-Modal Data Acquisition), p. 5 (3.5. Decoupled Force-Position Hybrid Controller), p. 5 (3.5. Decoupled Force-Position Hybrid Controller).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Although these fingertip forces can be decomposed to recover the full 6D interaction wrench on the object, we find it more effective to directly feed the concatenated 6D vector into ... (p. 4, 3.4. Tabero-VTLA).
+- **Objective/update evidence:** Below, we detail the tactile tokenizer and loss function, and also compare alternative tactile injection strategies inspired by prior work. (p. 4, 3.4. Tabero-VTLA).
+- **Temporal/runtime evidence:** All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are sampled synchronously at 20 Hz to produce temporally ... (p. 4, 3.2. Cross-Modal Data Acquisition).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

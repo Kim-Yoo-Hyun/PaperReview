@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1910.02527; PDF retrieval source: https://arxiv.org/pdf/1910.02527. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1910.02527; PDF retrieval source: https://arxiv.org/pdf/1910.02527. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation of Automated Pipeline), p.
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Dataset Statistics - extractive PDF cue:** The semantic categories used come from the COCO dataset [33] for objects, MINC [8] for materials, and DTD [12] for textures.
-- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** We use the best offthe-shelf Mask R-CNN model trained on the COCO dataset.
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** To this end, we perform another set of experiments using BlitzNet [15], a network with faster inference but worse reported performance on the COCO dataset ...
-- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** We compare the performance of two detectors with 7.4 AP difference in the COCO dataset.
-- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** There are 3 standard evaluation setups for 2D scene graphs [35]: (a) Scene Graph Detection: Input is an image and output is bounding boxes, object ...
-- **p. 7 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** We use this output for experiments on 2D scene graph prediction.
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** This suggests that the robustification mechanisms can provide similar value in increasing the performance of standard detectors and correct errors, regardless of initial predictions.
-- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** We report f1-score and intersection-over-union as a per-pixel 8
+- **p. 6 / 5.1. Dataset Statistics - extractive body cue:** The semantic categories used come from the COCO dataset [33] for objects, MINC [8] for materials, and DTD [12] for textures.
+- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** We use the best offthe-shelf Mask R-CNN model trained on the COCO dataset.
+- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** To this end, we perform another set of experiments using BlitzNet [15], a network with faster inference but worse reported performance on the COCO dataset ...
+- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive body cue:** We compare the performance of two detectors with 7.4 AP difference in the COCO dataset.
+- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive body cue:** There are 3 standard evaluation setups for 2D scene graphs [35]: (a) Scene Graph Detection: Input is an image and output is bounding boxes, object ...
+- **p. 7 / 5.3. 2D Scene Graph Prediction - extractive body cue:** We use this output for experiments on 2D scene graph prediction.
+- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** This suggests that the robustification mechanisms can provide similar value in increasing the performance of standard detectors and correct errors, regardless of initial predictions.
+- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive body cue:** We report f1-score and intersection-over-union as a per-pixel 8
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation of Automated Pipeline), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Evaluation of Automated Pipeline | EMPIRICAL / SOURCE-REPORTED EVALUATION | Similar improvements can be seen in the case of 3D (Figure 7). | p. 7 (5.2. Evaluation of Automated Pipeline) |
 | 5.2. Evaluation of Automated Pipeline | EMPIRICAL / SOURCE-REPORTED EVALUATION | The panorama results are obtained after applying both robustification mechanisms. | p. 6 (5.2. Evaluation of Automated Pipeline) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation of Automated Pipeline), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Dataset Statistics - extractive PDF cue:** The semantic categories used come from the COCO dataset [33] for objects, MINC [8] for materials, and DTD [12] for textures.
-- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** We use the best offthe-shelf Mask R-CNN model trained on the COCO dataset.
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** To this end, we perform another set of experiments using BlitzNet [15], a network with faster inference but worse reported performance on the COCO dataset ...
-- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** We compare the performance of two detectors with 7.4 AP difference in the COCO dataset.
-- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** There are 3 standard evaluation setups for 2D scene graphs [35]: (a) Scene Graph Detection: Input is an image and output is bounding boxes, object ...
-- **p. 7 / 5.3. 2D Scene Graph Prediction - extractive PDF cue:** We use this output for experiments on 2D scene graph prediction.
+- **p. 6 / 5.1. Dataset Statistics - extractive body cue:** The semantic categories used come from the COCO dataset [33] for objects, MINC [8] for materials, and DTD [12] for textures.
+- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** We use the best offthe-shelf Mask R-CNN model trained on the COCO dataset.
+- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** To this end, we perform another set of experiments using BlitzNet [15], a network with faster inference but worse reported performance on the COCO dataset ...
+- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive body cue:** We compare the performance of two detectors with 7.4 AP difference in the COCO dataset.
+- **p. 8 / 5.3. 2D Scene Graph Prediction - extractive body cue:** There are 3 standard evaluation setups for 2D scene graphs [35]: (a) Scene Graph Detection: Input is an image and output is bounding boxes, object ...
+- **p. 7 / 5.3. 2D Scene Graph Prediction - extractive body cue:** We use this output for experiments on 2D scene graph prediction.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera. Elements are nodes in the graph and have ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Constructing the 3D Scene Graph. (a) Input to the method is a 3D mesh model with registered panoramic images. (b) Each panorama is ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Framing: Examples of sampled rectilinear images using the framing robustification mechanism are shown in the dashed colored boxes. Detections (b) on individual frames ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1. 3D Scene Graph Attributes and Relationships. For a detailed description see supplementary material [5]. Elements Attributes Relationships Object (O) Action Affordance, Class, Floor ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. It utilizes two heuristics: (a) placing the object at the center of the image and (b) having the image prop- erly zoomed-in around ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Multi-view consistency: Semantic labels from different panoramas are combined on the final mesh via multi-view consis- tency. Even though the individual projections carry ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Semantic statistics for bed: (a) Number of object instances in buildings. (b) Distribution of its surface coverage. (c) Nearest object instance in 3D ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Evaluation of the automated pipeline on 2D panoramas and 3D mesh. We compute Average Precision (AP) and Average Recall (AR) for both modalities ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera. Elements are nodes in the graph and have ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Constructing the 3D Scene Graph. (a) Input to the method is a 3D mesh model with registered panoramic images. (b) Each panorama is ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Framing: Examples of sampled rectilinear images using the framing robustification mechanism are shown in the dashed colored boxes. Detections (b) on individual frames ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1. 3D Scene Graph Attributes and Relationships. For a detailed description see supplementary material [5]. Elements Attributes Relationships Object (O) Action Affordance, Class, Floor ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. It utilizes two heuristics: (a) placing the object at the center of the image and (b) having the image prop- erly zoomed-in around ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Multi-view consistency: Semantic labels from different panoramas are combined on the final mesh via multi-view consis- tency. Even though the individual projections carry ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Semantic statistics for bed: (a) Number of object instances in buildings. (b) Distribution of its surface coverage. (c) Nearest object instance in 3D ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Evaluation of the automated pipeline on 2D panoramas and 3D mesh. We compute Average Precision (AP) and Average Recall (AR) for both modalities ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The semantic categories used come from the COCO dataset [33] for objects, MINC [8] for materials, and DTD [12] for textures. | embodiment, simulator version and control stack | p. 6 (5.1. Dataset Statistics), p. 6 (5.2. Evaluation of Automated Pipeline) |
 | Task/environment | We use the best offthe-shelf Mask R-CNN model trained on the COCO dataset. | reset, timeout, object/scene variation | p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline) |
@@ -120,8 +120,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation of Automated Pipeline), p.
 | Primary metric/result | The panorama results are obtained after applying both robustification mechanisms. | numeric claim only at cited anchor | p. 6 (5.2. Evaluation of Automated Pipeline) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** Note that the hours reported for the fully manual 3D annotation [7] are computed for 12 object classes (versus 62 in ours) and for an ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera.
+- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** Note that the hours reported for the fully manual 3D annotation [7] are computed for 12 object classes (versus 62 in ours) and for an ...
+- **p. 1 / 1. Introduction - extractive body cue:** 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation of Automated Pipeline), p.
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Semantic statistics for bed: (a) Number of object instances in buildings. (b) Distribution of its surface coverage. (c) Nearest object instance in 3D ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera. Elements are nodes in the graph and have ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Framing: Examples of sampled rectilinear images using the framing robustification mechanism are shown in the dashed colored boxes. Detections (b) on individual frames ...
-- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** The panorama results are obtained after applying both robustification mechanisms.
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** We want to further understand the behavior of the two robustification mechanisms when using a less accurate detector.
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive PDF cue:** This suggests that the robustification mechanisms can provide similar value in increasing the performance of standard detectors and correct errors, regardless of initial predictions.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Semantic statistics for bed: (a) Number of object instances in buildings. (b) Distribution of its surface coverage. (c) Nearest object instance in 3D ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera. Elements are nodes in the graph and have ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Framing: Examples of sampled rectilinear images using the framing robustification mechanism are shown in the dashed colored boxes. Detections (b) on individual frames ...
+- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** The panorama results are obtained after applying both robustification mechanisms.
+- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** We want to further understand the behavior of the two robustification mechanisms when using a less accurate detector.
+- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** This suggests that the robustification mechanisms can provide similar value in increasing the performance of standard detectors and correct errors, regardless of initial predictions.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Dataset Statistics), p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline), p. 8 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction), p. 7 (5.3. 2D Scene Graph Prediction), metrics p. 7 (5.2. Evaluation of Automated Pipeline), p. 8 (5.3. 2D Scene Graph Prediction), p. 7 (5.2. Evaluation of Automated Pipeline), p. 9 (Figure/Table caption), p. 6 (5.2. Evaluation of Automated Pipeline), p. 4 (Figure/Table caption), baselines p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline), p. 8 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction), results p. 7 (5.2. Evaluation of Automated Pipeline), p. 6 (5.2. Evaluation of Automated Pipeline), p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Dataset Statistics), p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline), p. 8 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction), p. 7 (5.3. 2D Scene Graph Prediction), metrics p. 7 (5.2. Evaluation of Automated Pipeline), p. 8 (5.3. 2D Scene Graph Prediction), p. 7 (5.2. Evaluation of Automated Pipeline), p. 9 (Figure/Table caption), p. 6 (5.2. Evaluation of Automated Pipeline), p. 4 (Figure/Table caption), baselines p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline), p. 7 (5.2. Evaluation of Automated Pipeline), p. 8 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction), results p. 7 (5.2. Evaluation of Automated Pipeline), p. 6 (5.2. Evaluation of Automated Pipeline), p. 6 (5.2. Evaluation of Automated Pipeline), p. 7 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction), p. 8 (5.3. 2D Scene Graph Prediction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

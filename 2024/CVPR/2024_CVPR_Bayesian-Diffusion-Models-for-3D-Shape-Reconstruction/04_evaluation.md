@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.2. Qualitative Results - extractive PDF cue:** Qualitative comparisons on the real-world Pix3D dataset.
-- **p. 5 / 4. Experiment - extractive PDF cue:** For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224.
-- **p. 5 / 4. Experiment - extractive PDF cue:** Pix3D comprises diverse real-world image-shape pairs with meticulously annotated 2D-3D alignments.
-- **p. 6 / 4. Experiment - extractive PDF cue:** Qualitative comparisons on the synthetic ShapeNet-R2N2 dataset.
-- **p. 6 / 4.1. Quantitative Results - extractive PDF cue:** Following CCD-3DR, we also evaluate on the Pix3D dataset in Tab.
-- **p. 7 / 4.2. Qualitative Results - extractive PDF cue:** 6, it can be seen clearly that our method surpasses baselines with respect to the reconstruction quality on the Pix3D dataset.
-- **p. 8 / 4.6. Human Evaluation - extractive PDF cue:** We randomly selected 20 comparison groups from the Chair, Airplane, and Car classes in the ShapeNet dataset, totaling 60 groups.
-- **p. 6 / 4.1. Quantitative Results - extractive PDF cue:** In this metric, a reconstructed point is deemed accurately predicted if its nearest distance to the points in the ground truth point cloud is within ...
+- **p. 7 / 4.2. Qualitative Results - extractive body cue:** Qualitative comparisons on the real-world Pix3D dataset.
+- **p. 5 / 4. Experiment - extractive body cue:** For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224.
+- **p. 5 / 4. Experiment - extractive body cue:** Pix3D comprises diverse real-world image-shape pairs with meticulously annotated 2D-3D alignments.
+- **p. 6 / 4. Experiment - extractive body cue:** Qualitative comparisons on the synthetic ShapeNet-R2N2 dataset.
+- **p. 6 / 4.1. Quantitative Results - extractive body cue:** Following CCD-3DR, we also evaluate on the Pix3D dataset in Tab.
+- **p. 7 / 4.2. Qualitative Results - extractive body cue:** 6, it can be seen clearly that our method surpasses baselines with respect to the reconstruction quality on the Pix3D dataset.
+- **p. 8 / 4.6. Human Evaluation - extractive body cue:** We randomly selected 20 comparison groups from the Chair, Airplane, and Car classes in the ShapeNet dataset, totaling 60 groups.
+- **p. 6 / 4.1. Quantitative Results - extractive body cue:** In this metric, a reconstructed point is deemed accurately predicted if its nearest distance to the points in the ground truth point cloud is within ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Quantitative Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | It can be seen that our method effectively improves the performance and achieves state-ofthe-art. | p. 6 (4.1. Quantitative Results) |
 | 4.1. Quantitative Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results indicate improvement in both CD and F1 across all three categories. | p. 6 (4.1. Quantitative Results) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.2. Qualitative Results - extractive PDF cue:** Qualitative comparisons on the real-world Pix3D dataset.
-- **p. 5 / 4. Experiment - extractive PDF cue:** For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224.
-- **p. 5 / 4. Experiment - extractive PDF cue:** Pix3D comprises diverse real-world image-shape pairs with meticulously annotated 2D-3D alignments.
-- **p. 6 / 4. Experiment - extractive PDF cue:** Qualitative comparisons on the synthetic ShapeNet-R2N2 dataset.
-- **p. 6 / 4.1. Quantitative Results - extractive PDF cue:** Following CCD-3DR, we also evaluate on the Pix3D dataset in Tab.
-- **p. 7 / 4.2. Qualitative Results - extractive PDF cue:** 6, it can be seen clearly that our method surpasses baselines with respect to the reconstruction quality on the Pix3D dataset.
-- **p. 8 / 4.6. Human Evaluation - extractive PDF cue:** We randomly selected 20 comparison groups from the Chair, Airplane, and Car classes in the ShapeNet dataset, totaling 60 groups.
+- **p. 7 / 4.2. Qualitative Results - extractive body cue:** Qualitative comparisons on the real-world Pix3D dataset.
+- **p. 5 / 4. Experiment - extractive body cue:** For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224.
+- **p. 5 / 4. Experiment - extractive body cue:** Pix3D comprises diverse real-world image-shape pairs with meticulously annotated 2D-3D alignments.
+- **p. 6 / 4. Experiment - extractive body cue:** Qualitative comparisons on the synthetic ShapeNet-R2N2 dataset.
+- **p. 6 / 4.1. Quantitative Results - extractive body cue:** Following CCD-3DR, we also evaluate on the Pix3D dataset in Tab.
+- **p. 7 / 4.2. Qualitative Results - extractive body cue:** 6, it can be seen clearly that our method surpasses baselines with respect to the reconstruction quality on the Pix3D dataset.
+- **p. 8 / 4.6. Human Evaluation - extractive body cue:** We randomly selected 20 comparison groups from the Chair, Airplane, and Car classes in the ShapeNet dataset, totaling 60 groups.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Baseline vs Bayesian Diffusion Models. Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the generative process in our Bayesian Diffusion Model. In each Bayesian denoising dtep, the prior diffusion model fuses with the reconstruction ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Initially, a concise overview of denoising diffu- sion models, particularly focusing on point cloud diffusion models, is presented. This is followed by an ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustration for the Bayesian Diffusion Models compared with the standard Bayesian formulation. We present the standard Bayesian formulation and the one using stochastic ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of our proposed fusion methods: BDM-M and BDM-B. The left part is the BDM-M, while the right side shows the BDM-B. 3.4.1 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparisons on the synthetic ShapeNet-R2N2 dataset. We use PC2 [51] and CCD-3DR [15] as baselines of 3D shape reconstruction. Rows 1-3 show ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparisons on the real-world Pix3D dataset. We examine three distinct categories, each represented in a separate row. Columns 3,4 and 8,9 feature ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Performance on Chair, Airplane and Car of ShapeNet-R2N2. We evaluate our BDM, comparing with two baselines: PC2 and CCD-3DR. These experiments span three ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Baseline vs Bayesian Diffusion Models. Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the generative process in our Bayesian Diffusion Model. In each Bayesian denoising dtep, the prior diffusion model fuses with the reconstruction ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Initially, a concise overview of denoising diffu- sion models, particularly focusing on point cloud diffusion models, is presented. This is followed by an ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Illustration for the Bayesian Diffusion Models compared with the standard Bayesian formulation. We present the standard Bayesian formulation and the one using stochastic ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of our proposed fusion methods: BDM-M and BDM-B. The left part is the BDM-M, while the right side shows the BDM-B. 3.4.1 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparisons on the synthetic ShapeNet-R2N2 dataset. We use PC2 [51] and CCD-3DR [15] as baselines of 3D shape reconstruction. Rows 1-3 show ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparisons on the real-world Pix3D dataset. We examine three distinct categories, each represented in a separate row. Columns 3,4 and 8,9 feature ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Performance on Chair, Airplane and Car of ShapeNet-R2N2. We evaluate our BDM, comparing with two baselines: PC2 and CCD-3DR. These experiments span three ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Qualitative comparisons on the real-world Pix3D dataset. | embodiment, simulator version and control stack | p. 7 (4.2. Qualitative Results), p. 5 (4. Experiment) |
 | Task/environment | For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224. | reset, timeout, object/scene variation | p. 5 (4. Experiment), p. 5 (4. Experiment) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 | Primary metric/result | The results indicate improvement in both CD and F1 across all three categories. | numeric claim only at cited anchor | p. 6 (4.1. Quantitative Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experiment - extractive PDF cue:** For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224.
-- **p. 5 / 4. Experiment - extractive PDF cue:** This integration occurs every 32 steps, both in the early stage and in the late stage of denoising.
-- **p. 5 / 4. Experiment - extractive PDF cue:** The fusion process initiated by this integration extends throughout 16 steps, ensuring a balanced and effective incorporation of Bayesian principles throughout the denoising procedure.
-- **p. 7 / 4.3. Efficiency and Fairness Analysis - extractive PDF cue:** PC2/CCD-3DR BDM-B BDM-M #Parameters (M) 47.41 73.78 74.82 Runtime (s) 46.89 48.84 49.24 GPU memory (GB) 1.73 1.93 2.01 Table 3.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Notably, the prior integration duration of 16 steps demonstrates the most substantial improvement.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** This is a remarkable improvement over the baseline (0 step).
+- **p. 5 / 4. Experiment - extractive body cue:** For both the ShapeNet-R2N2 and Pix3D datasets, we sample 4,096 points per 3D object and set the rendering resolution to 224×224.
+- **p. 5 / 4. Experiment - extractive body cue:** This integration occurs every 32 steps, both in the early stage and in the late stage of denoising.
+- **p. 5 / 4. Experiment - extractive body cue:** The fusion process initiated by this integration extends throughout 16 steps, ensuring a balanced and effective incorporation of Bayesian principles throughout the denoising procedure.
+- **p. 7 / 4.3. Efficiency and Fairness Analysis - extractive body cue:** PC2/CCD-3DR BDM-B BDM-M #Parameters (M) 47.41 73.78 74.82 Runtime (s) 46.89 48.84 49.24 GPU memory (GB) 1.73 1.93 2.01 Table 3.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Notably, the prior integration duration of 16 steps demonstrates the most substantial improvement.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** This is a remarkable improvement over the baseline (0 step).
 
 ## Generalization and Failure Cases
 
@@ -158,10 +158,10 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion and Limitations - extractive PDF cue:** BDM overcomes the limitations in the traditional MCMC-based Bayesian inference that requires having the explicit distributions in performing stochastic gradient Langevin dynamics by tightly coupling ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** contrasts with the middle stage integration, which even degrades the performance of the baseline on F1.
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** BDM overcomes the limitations in the traditional MCMC-based Bayesian inference that requires having the explicit distributions in performing stochastic gradient Langevin dynamics by tightly coupling ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** contrasts with the middle stage integration, which even degrades the performance of the baseline on F1.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.2. Qualitative Results), p. 5 (4. Experiment), p. 5 (4. Experiment), p. 6 (4. Experiment), p. 6 (4.1. Quantitative Results), p. 7 (4.2. Qualitative Results), metrics p. 6 (4.1. Quantitative Results), p. 6 (4.1. Quantitative Results), p. 8 (4.6. Human Evaluation), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 5 (4. Experiment), baselines p. 5 (4. Experiment), p. 6 (4. Experiment), p. 6 (4. Experiment), p. 7 (4.2. Qualitative Results), p. 7 (4.2. Qualitative Results), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Quantitative Results), p. 6 (4.1. Quantitative Results), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 8 (4.6. Human Evaluation), p. 7 (4.2. Qualitative Results).
+- **Evidence anchors reviewed:** datasets p. 7 (4.2. Qualitative Results), p. 5 (4. Experiment), p. 5 (4. Experiment), p. 6 (4. Experiment), p. 6 (4.1. Quantitative Results), p. 7 (4.2. Qualitative Results), metrics p. 6 (4.1. Quantitative Results), p. 6 (4.1. Quantitative Results), p. 8 (4.6. Human Evaluation), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 5 (4. Experiment), baselines p. 5 (4. Experiment), p. 6 (4. Experiment), p. 6 (4. Experiment), p. 7 (4.2. Qualitative Results), p. 7 (4.2. Qualitative Results), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Quantitative Results), p. 6 (4.1. Quantitative Results), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 8 (4.6. Human Evaluation), p. 7 (4.2. Qualitative Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

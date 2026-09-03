@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 The policy is trained to predict the actions along each trajectory from the observations ot, rather than the full state xt.를 Since the input to µπ(ot) and Σπ(ot) is not the state xt, but only an observation ot, we can train the policy to directly use raw observations.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In many cases, this limitation is minor, and the only "instrumentation" required at training is to position the objects in the scene at consistent positions.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our methods consists of two main components, which are illustrated in Figure 3.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The system is defined by states xt, actions ut, and observations ot. (p. 5, 3.1 Definitions and Problem Formulation).
+- **Paper-specific mechanism:** In our method, the full state of the system is observable at training time, but not at test time. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is The results in Table 3 indicate that using the softmax and expectation operators improves pose estimation accuracy substantially. (p. 21, 6.3 Spatial Softmax CNN Architecture Evaluation); the relevant task/metric cue is To evaluate their robustness to errors in the specified target position, we conducted experiments on the lego block and ring tasks where the target object (the lower block and the ... (p. 20, 6.2 Learning Linear-Gaussian Controllers on a PR2 Robot). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The graph shows the average distance travelled on rollouts that did not fall, and shows that only our method was able to learn walking policies that succeeded consistently. (p. 19, 6.1 Simulated Comparisons to Prior Policy Search Methods).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Does our trajectory optimization algorithm work on a real robotic platform with unknown dynamics, for a range of different tasks?.
-3. Compare against the body-reported baseline or a matched simpler baseline: On 3D insertion, it outperformed the iLQG baseline, which used a known model..
-4. Report the body metric and its denominator/aggregation: We also did not extensively optimize the parameters of this network, such as filter size and number of channels, and investigating these design decisions further would be valuable to investigate in future ....
-5. Re-run the body-reported ablation/failure condition: Our method used 5 rollouts with the Gaussian mixture model prior, and 20 without..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The system is defined by states xt, actions ut, and observations ot. (p. 5, 3.1 Definitions and Problem Formulation); preserve the objective/update rule: This constrained optimization is performed in the "inner loop" of the optimization described in the previous section, and the KL-divergence constraint DKL(p(τ)∥ˆp(τ)) ≤ϵ imposes a step size on the trajectory ... (p. 11, 4.2 Trajectory Optimization under Unknown Dynamics).
+2. Use the paper-reported task/data/environment cue: Does our trajectory optimization algorithm work on a real robotic platform with unknown dynamics, for a range of different tasks? (p. 16, 6. Experimental Evaluation).
+3. Compare against the reported or matched baseline: On 3D insertion, it outperformed the iLQG baseline, which used a known model. (p. 18, 6.1 Simulated Comparisons to Prior Policy Search Methods).
+4. Report the body metric with its denominator and aggregation: To evaluate their robustness to errors in the specified target position, we conducted experiments on the lego block and ring tasks where the target object (the lower block and the ... (p. 20, 6.2 Learning Linear-Gaussian Controllers on a PR2 Robot).
+5. Re-run the reported ablation or stress/failure condition: Our method used 5 rollouts with the Gaussian mixture model prior, and 20 without. (p. 17, 6.1 Simulated Comparisons to Prior Policy Search Methods); if none is reported, design one around: The graph shows the average distance travelled on rollouts that did not fall, and shows that only our method was able to learn walking policies that succeeded consistently. (p. 19, 6.1 Simulated Comparisons to Prior Policy Search Methods).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2 Approach Summary), p. 6 (3.2 Approach Summary); the primary result is directionally consistent at p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 19 (6.1 Simulated Comparisons to Prior Policy Search Methods); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 5 (3.2 Approach Summary), match the reported outcome at p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 21 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), and measure the boundary at p. 19 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 23 (6.4 Deep Visuomotor Policy Evaluation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 methods, consists, main mechanism이 On 3D insertion, it outperformed the iLQG baseline, which used a known model. 대비 We also did not extensively optimize the parameters of this network, such as filter size and number of ...을 개선하고, In many cases, this limitation is minor, and the only "instrumentation" required at training is to ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The system is defined by states xt, actions ut, and observations ot.), does the paper-specific mechanism (In our method, the full state of the system is observable at training time, but not at test time.) retain the reported evaluation outcome (To evaluate their robustness to errors in the specified target position, we conducted experiments on the lego block ...) when tested against the paper's strongest explicit boundary (The graph shows the average distance travelled on rollouts that did not fall, and shows that only our ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (To evaluate their robustness to errors in the specified target position, we conducted experiments on the lego block ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In our method, the full state of the system is observable at training time, but not at test time. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** The results in Table 3 indicate that using the softmax and expectation operators improves pose estimation accuracy substantially. (p. 21, 6.3 Spatial Softmax CNN Architecture Evaluation).
+- **Strongest explicit boundary:** The graph shows the average distance travelled on rollouts that did not fall, and shows that only our method was able to learn walking policies that succeeded consistently. (p. 19, 6.1 Simulated Comparisons to Prior Policy Search Methods).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

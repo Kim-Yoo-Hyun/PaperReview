@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html; PDF retrieval source: https://arxiv.org/pdf/2006.04779. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html; PDF retrieval source: https://arxiv.org/pdf/2006.04779. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 seeds. On the harder mazes, CQL ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 6: Average return obtained by CQL(H) and CQL(H) without the dataset average Q-value maximization term. The latter formulation corresponds to Equation 1, which ... | p. 31 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | CQL outperforms prior methods by as much as 2-5x on many benchmark tasks, and is the only method that can outperform simple behavioral cloning ... | embodiment, simulator version and control stack | p. 2 (1 Introduction), p. 1 (Abstract) |
 | Task/environment | Effectively leveraging large, previously collected datasets in reinforcement learning (RL) is a key challenge for large-scale real-world applications. | reset, timeout, object/scene variation | p. 1 (Abstract), p. 1 (1 Introduction) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 - **p. 2 / 2 Preliminaries - extractive body cue:** Since D typically does not contain all possible transitions (s, a, s′), the policy evaluation step actually uses an empirical Bellman operator that only backs ...
 - **p. 3 / 2 Preliminaries - extractive body cue:** Since standard Q-function training does not query the Q-function value at unobserved states, but queries the Q-function at unseen actions, we restrict µ to match ...
 
-- **PDF anchors reviewed:** datasets p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), metrics p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 30 (Figure/Table caption), p. 1 (Abstract), baselines p. 30 (Figure/Table caption), p. 31 (Figure/Table caption), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 31 (Figure/Table caption), p. 5 (2 Preliminaries), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), metrics p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 30 (Figure/Table caption), p. 1 (Abstract), baselines p. 30 (Figure/Table caption), p. 31 (Figure/Table caption), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 31 (Figure/Table caption), p. 5 (2 Preliminaries), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 6: Average return obtained by CQL(H) and CQL(H) without the dataset average Q-value maximization term. The latter formulation corresponds to Equation 1, which is void of the dataset Q-value ... (p. 31, Figure/Table caption).
+- **Metric evidence:** Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 seeds. On the harder mazes, CQL is the only method that attains ... (p. 8, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 5: Average return obtained by CQL(H), and CQL(ρ) on three D4RL MuJoCo environments. Observe that on these environments, CQL(H) generally outperforms CQL(ρ). Next, we evaluate the answer to question ... (p. 30, Figure/Table caption).
+- **Failure/negative evidence:** Of course, policy constraints should prevent the policy from choosing OOD actions, however, as we will show that in certain cases, policy constraint methods might also fail to prevent the ... (p. 15, B Discussion of Gap-Expanding Behavior of CQL Backups).

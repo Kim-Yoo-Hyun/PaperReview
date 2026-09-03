@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/6/; PDF retrieval source: https://roboticsconference.org/program/papers/6/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/6/; PDF retrieval source: https://roboticsconference.org/program/papers/6/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 8: Lid Closing Task. With randomized grasps, the policy uses touch to perform search, alignment, and closing between the lid and the bottle. ... | p. 7 (Figure/Table caption) |
 | IV. EXPERIMENTS AND RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. | p. 5 (IV. EXPERIMENTS AND RESULTS) |
@@ -57,7 +57,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS AND RESULTS), p. 5 (IV. EXPERIMENTS AND RESULTS) |
 | Task/environment | For each task, we collect 140-160 human demonstrations, where 100 demonstrations (≈30 minutes) are from the same object seen by the robot ("seen-by-both" object), ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS AND RESULTS), p. 4 (IV. EXPERIMENTS AND RESULTS) |
@@ -152,7 +152,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 - **p. 5 / IV. EXPERIMENTS AND RESULTS - extractive body cue:** We record fingertip poses only, as the Manus glove does not provide wrist pose information.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: Lid Closing Task. With randomized grasps, the policy uses touch to perform search, alignment, and closing between the lid and the bottle. We ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS AND RESULTS), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 4 (IV. EXPERIMENTS AND RESULTS), p. 4 (IV. EXPERIMENTS AND RESULTS), metrics p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 4 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMENTS AND RESULTS).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS AND RESULTS), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 4 (IV. EXPERIMENTS AND RESULTS), p. 4 (IV. EXPERIMENTS AND RESULTS), metrics p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 4 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMENTS AND RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation. (p. 5, IV. EXPERIMENTS AND RESULTS).
+- **Metric evidence:** Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. (p. 5, IV. EXPERIMENTS AND RESULTS).
+- **Baseline/ablation evidence:** Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. (p. 5, IV. EXPERIMENTS AND RESULTS).
+- **Failure/negative evidence:** Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy cannot recover, often leading to complete unscrewing of the light bulb. (p. 7, 8. The pivoting and insertion).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.12153; PDF retrieval source: https://arxiv.org/pdf/2303.12153. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.12153; PDF retrieval source: https://arxiv.org/pdf/2303.12153. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 
 ## Evaluation Body Digest
 
-- **p. 9 / 5.4 Task suite - extractive PDF cue:** For example, Task 1 in Figure 4 requires the robot to pick and place three objects for a total of six skills.
-- **p. 9 / 5.4 Task suite - extractive PDF cue:** However, the scene description obtained through predicate classifiers Lχ (described in Section 4.1) and the instruction i do not indicate whether it is necessary to ...
-- **p. 8 / 5.1 Baselines - extractive PDF cue:** Execution terminates when the score of the stop "skill" is larger than the other skills. innermono-gs: We implement the Object + Scene variant of Inner ...
-- **p. 8 / 5 Experiments - extractive PDF cue:** We conduct experiments to test four hypotheses: H1 Geometric feasibility planning is a necessary ingredient when using LLMs and robot skills to solve manipulation tasks ...
-- **p. 11 / 6.2 Search-based reasoning is - extractive PDF cue:** For example, Task 1 (Figure 4) asks the robot to put three boxes onto the rack; shooting allows the robot to test multiple different skill ...
-- **p. 10 / 5.5 Evaluation and metrics - extractive PDF cue:** Success rates are averaged over ten random seeds per task, where each seed corresponds to a different geometric instantiation of the task (Section 5.4).
-- **p. 10 / 5.5 Evaluation and metrics - extractive PDF cue:** We do not perform task-level replanning, which would involve querying the LLM at timestep t + 1 for a new sequence of skills ψt+1:H. saycan-gs ...
-- **p. 11 / 6.1 Feasibility planning is required - extractive PDF cue:** Bottom: For the non-PAP tasks, shooting outperforms greedy-search.
+- **p. 9 / 5.4 Task suite - extractive body cue:** For example, Task 1 in Figure 4 requires the robot to pick and place three objects for a total of six skills.
+- **p. 9 / 5.4 Task suite - extractive body cue:** However, the scene description obtained through predicate classifiers Lχ (described in Section 4.1) and the instruction i do not indicate whether it is necessary to ...
+- **p. 8 / 5.1 Baselines - extractive body cue:** Execution terminates when the score of the stop "skill" is larger than the other skills. innermono-gs: We implement the Object + Scene variant of Inner ...
+- **p. 8 / 5 Experiments - extractive body cue:** We conduct experiments to test four hypotheses: H1 Geometric feasibility planning is a necessary ingredient when using LLMs and robot skills to solve manipulation tasks ...
+- **p. 11 / 6.2 Search-based reasoning is - extractive body cue:** For example, Task 1 (Figure 4) asks the robot to put three boxes onto the rack; shooting allows the robot to test multiple different skill ...
+- **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** Success rates are averaged over ten random seeds per task, where each seed corresponds to a different geometric instantiation of the task (Section 5.4).
+- **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** We do not perform task-level replanning, which would involve querying the LLM at timestep t + 1 for a new sequence of skills ψt+1:H. saycan-gs ...
+- **p. 11 / 6.1 Feasibility planning is required - extractive body cue:** Bottom: For the non-PAP tasks, shooting outperforms greedy-search.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.2 Search-based reasoning is | EMPIRICAL / SOURCE-REPORTED EVALUATION | In the first two tasks (LH, Figure 5), we find that shooting achieves slightly higher success rates than greedy-search, while both methods achieve 100% ... | p. 11 (6.2 Search-based reasoning is) |
 | 6.2 Search-based reasoning is | EMPIRICAL / SOURCE-REPORTED EVALUATION | In terms of success, greedysearch solves 40%-60% of the PAP tasks, while shooting achieves a 10% success rate on Task 4 (LG + PAP) ... | p. 11 (6.2 Search-based reasoning is) |
@@ -40,24 +40,24 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 5.4 Task suite - extractive PDF cue:** For example, Task 1 in Figure 4 requires the robot to pick and place three objects for a total of six skills.
-- **p. 9 / 5.4 Task suite - extractive PDF cue:** However, the scene description obtained through predicate classifiers Lχ (described in Section 4.1) and the instruction i do not indicate whether it is necessary to ...
-- **p. 8 / 5.1 Baselines - extractive PDF cue:** Execution terminates when the score of the stop "skill" is larger than the other skills. innermono-gs: We implement the Object + Scene variant of Inner ...
-- **p. 8 / 5 Experiments - extractive PDF cue:** We conduct experiments to test four hypotheses: H1 Geometric feasibility planning is a necessary ingredient when using LLMs and robot skills to solve manipulation tasks ...
-- **p. 11 / 6.2 Search-based reasoning is - extractive PDF cue:** For example, Task 1 (Figure 4) asks the robot to put three boxes onto the rack; shooting allows the robot to test multiple different skill ...
-- **p. 10 / 5.5 Evaluation and metrics - extractive PDF cue:** Success rates are averaged over ten random seeds per task, where each seed corresponds to a different geometric instantiation of the task (Section 5.4).
-- **p. 10 / 5.5 Evaluation and metrics - extractive PDF cue:** We do not perform task-level replanning, which would involve querying the LLM at timestep t + 1 for a new sequence of skills ψt+1:H. saycan-gs ...
-- **p. 11 / 6.1 Feasibility planning is required - extractive PDF cue:** Bottom: For the non-PAP tasks, shooting outperforms greedy-search.
+- **p. 9 / 5.4 Task suite - extractive body cue:** For example, Task 1 in Figure 4 requires the robot to pick and place three objects for a total of six skills.
+- **p. 9 / 5.4 Task suite - extractive body cue:** However, the scene description obtained through predicate classifiers Lχ (described in Section 4.1) and the instruction i do not indicate whether it is necessary to ...
+- **p. 8 / 5.1 Baselines - extractive body cue:** Execution terminates when the score of the stop "skill" is larger than the other skills. innermono-gs: We implement the Object + Scene variant of Inner ...
+- **p. 8 / 5 Experiments - extractive body cue:** We conduct experiments to test four hypotheses: H1 Geometric feasibility planning is a necessary ingredient when using LLMs and robot skills to solve manipulation tasks ...
+- **p. 11 / 6.2 Search-based reasoning is - extractive body cue:** For example, Task 1 (Figure 4) asks the robot to put three boxes onto the rack; shooting allows the robot to test multiple different skill ...
+- **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** Success rates are averaged over ten random seeds per task, where each seed corresponds to a different geometric instantiation of the task (Section 5.4).
+- **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** We do not perform task-level replanning, which would involve querying the LLM at timestep t + 1 for a new sequence of skills ψt+1:H. saycan-gs ...
+- **p. 11 / 6.1 Feasibility planning is required - extractive body cue:** Bottom: For the non-PAP tasks, shooting outperforms greedy-search.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Second, they do not explicitly predict a multi-step plan, which prevents verification of desired properties or outcomes prior to execu- tion. Examples of ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Second, they do not explicitly predict a multi-step plan, which prevents verification of desired properties or outcomes prior to execu- tion. Examples of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For example, Task 1 in Figure 4 requires the robot to pick and place three objects for a total of six skills. | embodiment, simulator version and control stack | p. 9 (5.4 Task suite), p. 9 (5.4 Task suite) |
 | Task/environment | However, the scene description obtained through predicate classifiers Lχ (described in Section 4.1) and the instruction i do not indicate whether it is necessary ... | reset, timeout, object/scene variation | p. 9 (5.4 Task suite), p. 8 (5.1 Baselines) |
@@ -116,7 +116,7 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 | Primary metric/result | In terms of success, greedysearch solves 40%-60% of the PAP tasks, while shooting achieves a 10% success rate on Task 4 (LG + PAP) ... | numeric claim only at cited anchor | p. 11 (6.2 Search-based reasoning is) |
 
 - Numeric sentences retained from the body:
-- **p. 12 / 6.2 Search-based reasoning is - extractive PDF cue:** Hybrid planning breakdown Task 4 Task 5 Task 6 % shooting only 14% 0% 0% % greedy-search only 0% 0% 0% % Combination 86% 100% ...
+- **p. 12 / 6.2 Search-based reasoning is - extractive body cue:** Hybrid planning breakdown Task 4 Task 5 Task 6 % shooting only 14% 0% 0% % greedy-search only 0% 0% 0% % Combination 86% 100% ...
 
 ## Generalization and Failure Cases
 
@@ -154,14 +154,14 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 
 ## Limitations and Verification Questions
 
-- **p. 11 / 6.1 Feasibility planning is required - extractive PDF cue:** Text2Motion relies on greedy-search as a fallback if shooting fails, and thus can also contend with PAP tasks.
-- **p. 9 / 5.5 Evaluation and metrics - extractive PDF cue:** Two failure cases are tracked: i) planning failure: the method does not produce a sequence of skills ψ1:H whose optimized parameters a∗ 1:H (Eq.
-- **p. 9 / 5.5 Evaluation and metrics - extractive PDF cue:** 4) results in a state that satisfies F G sat within a maximum plan length of dmax; ii) execution failure: the execution of a plan ...
-- **p. 11 / 6.2 Search-based reasoning is - extractive PDF cue:** This is expected because shooting does not exhibit planning failures on these tasks (Figure 6) and Text2Motion starts by invoking shooting, which results in their ...
-- **p. 12 / 7 Limitations and Future Work - extractive PDF cue:** While we mitigate such failures by combining greedy-search and shooting in the hybrid Text2Motion algorithm, leveraging calibration techniques to increase the reliability LLM likelihoods [64, ...
-- **p. 10 / 5.5 Evaluation and metrics - extractive PDF cue:** To further delineate the performance of Text2Motion from shooting and greedy-search, we also report the percentages of planning and execution failures.
+- **p. 11 / 6.1 Feasibility planning is required - extractive body cue:** Text2Motion relies on greedy-search as a fallback if shooting fails, and thus can also contend with PAP tasks.
+- **p. 9 / 5.5 Evaluation and metrics - extractive body cue:** Two failure cases are tracked: i) planning failure: the method does not produce a sequence of skills ψ1:H whose optimized parameters a∗ 1:H (Eq.
+- **p. 9 / 5.5 Evaluation and metrics - extractive body cue:** 4) results in a state that satisfies F G sat within a maximum plan length of dmax; ii) execution failure: the execution of a plan ...
+- **p. 11 / 6.2 Search-based reasoning is - extractive body cue:** This is expected because shooting does not exhibit planning failures on these tasks (Figure 6) and Text2Motion starts by invoking shooting, which results in their ...
+- **p. 12 / 7 Limitations and Future Work - extractive body cue:** While we mitigate such failures by combining greedy-search and shooting in the hybrid Text2Motion algorithm, leveraging calibration techniques to increase the reliability LLM likelihoods [64, ...
+- **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** To further delineate the performance of Text2Motion from shooting and greedy-search, we also report the percentages of planning and execution failures.
 
-- **PDF anchors reviewed:** datasets p. 9 (5.4 Task suite), p. 9 (5.4 Task suite), p. 8 (5.1 Baselines), p. 8 (5 Experiments), p. 11 (6.2 Search-based reasoning is), p. 10 (5.5 Evaluation and metrics), metrics p. 10 (5.5 Evaluation and metrics), p. 10 (6.1 Feasibility planning is required), p. 11 (6.2 Search-based reasoning is), p. 11 (6.2 Search-based reasoning is), p. 12 (6.4 Plan termination is made), p. 12 (6.4 Plan termination is made), baselines p. 10 (6.1 Feasibility planning is required), p. 10 (6.1 Feasibility planning is required), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 11 (6.1 Feasibility planning is required), p. 12 (6.4 Plan termination is made), results p. 11 (6.2 Search-based reasoning is), p. 11 (6.2 Search-based reasoning is), p. 10 (6.1 Feasibility planning is required), p. 12 (6.4 Plan termination is made), p. 12 (6.4 Plan termination is made), p. 10 (6.1 Feasibility planning is required).
+- **Evidence anchors reviewed:** datasets p. 9 (5.4 Task suite), p. 9 (5.4 Task suite), p. 8 (5.1 Baselines), p. 8 (5 Experiments), p. 11 (6.2 Search-based reasoning is), p. 10 (5.5 Evaluation and metrics), metrics p. 10 (5.5 Evaluation and metrics), p. 10 (6.1 Feasibility planning is required), p. 11 (6.2 Search-based reasoning is), p. 11 (6.2 Search-based reasoning is), p. 12 (6.4 Plan termination is made), p. 12 (6.4 Plan termination is made), baselines p. 10 (6.1 Feasibility planning is required), p. 10 (6.1 Feasibility planning is required), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 11 (6.1 Feasibility planning is required), p. 12 (6.4 Plan termination is made), results p. 11 (6.2 Search-based reasoning is), p. 11 (6.2 Search-based reasoning is), p. 10 (6.1 Feasibility planning is required), p. 12 (6.4 Plan termination is made), p. 12 (6.4 Plan termination is made), p. 10 (6.1 Feasibility planning is required).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/2025/program/papers/15/; PDF retrieval source: https://arxiv.org/pdf/2504.02792. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/2025/program/papers/15/; PDF retrieval source: https://arxiv.org/pdf/2504.02792. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (IV. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 6. Average success rates across all real robot tasks and in-distribution and out-of-distribution settings. UWM exhibits strong performance and can further improve by ... | p. 7 (Figure/Table caption) |
 | IV. EXPERIMENTS | BENCHMARK / DATASET | We find that given the same time limit as the trajectory length, the inverse dynamics model achieves a higher success rate than the policy. | p. 9 (IV. EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (IV. EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The LIBERO-100 benchmark consists of 90 training environments across multiple scenes and 10 evaluation environments, each with accompanying expert demonstrations. | embodiment, simulator version and control stack | p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
 | Task/environment | The DROID dataset is a diverse dataset consisting of robot trajectories collected across various institutions and operators, covering a large variety of tasks, camera ... | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (IV. EXPERIMEN
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 10. Training models from scratch vs finetuning pretrained models. UWM scales more effectively with pretraining than DP. promising, they are still heavily reliant on ...
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** This set of experiments tests the models' robustness to distribution shifts.
 
-- **PDF anchors reviewed:** datasets p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 9 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), baselines p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), results p. 7 (Figure/Table caption), p. 9 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 9 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), baselines p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), results p. 7 (Figure/Table caption), p. 9 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Real Robot Experiments 1) Setup: To evaluate UWM and baselines as pretraining methods, we leverage the DROID dataset [25] as a source of pretraining data. (p. 6, IV. EXPERIMENTS).
+- **Metric evidence:** We find that UWM achieves the highest success rates across all five tasks among the methods, surpassing the best baseline by as much as 20%. (p. 7, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** Despite a slight performance drop compared to the ID setting, we find UWM to outperform the baselines, showcasing strong robustness under distribution shifts. (p. 8, IV. EXPERIMENTS).
+- **Failure/negative evidence:** Firstly, the proposed model does not yet learn from large scale human videos, bridging the embodiment gap. (p. 10, VII. LIMITATIONS).

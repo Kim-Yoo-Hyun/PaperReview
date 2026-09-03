@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** For 3RScan scenes, we use data from the RioRefer dataset [36] for object grounding, and the 3RQA dataset [26] for question answering.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For ScanNet scenes, we utilize data from five 3D vision-language benchmarks: visual grounding tasks (ScanRefer [5], Multi3DRefer [60]), scene description (Scan2Cap [9]), and 3D visual ...
-- **p. 6 / 4.1. Experimental Results - extractive PDF cue:** 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], as ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** The Multi3DRefer [60] dataset contains queries that may refer to multiple objects.
-- **p. 7 / 4.2. Ablation Studies - extractive PDF cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
-- **p. 7 / 4.2. Ablation Studies - extractive PDF cue:** We compare two pre-training datasets for 3DGraphLLM using LLAMA3-8B-Instruct.
-- **p. 8 / 4.2. Ablation Studies - extractive PDF cue:** 6 shows that the object-centric graph representation using triplets improves the performance of the visual grounding task.
-- **p. 8 / 4.2. Ablation Studies - extractive PDF cue:** We include additional experimental results from ablation studies on scene captioning and visual question answering tasks in the Supplementary Materials.
+- **p. 5 / 4. Experiments - extractive body cue:** For 3RScan scenes, we use data from the RioRefer dataset [36] for object grounding, and the 3RQA dataset [26] for question answering.
+- **p. 5 / 4. Experiments - extractive body cue:** For ScanNet scenes, we utilize data from five 3D vision-language benchmarks: visual grounding tasks (ScanRefer [5], Multi3DRefer [60]), scene description (Scan2Cap [9]), and 3D visual ...
+- **p. 6 / 4.1. Experimental Results - extractive body cue:** 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], as ...
+- **p. 6 / 4. Experiments - extractive body cue:** The Multi3DRefer [60] dataset contains queries that may refer to multiple objects.
+- **p. 7 / 4.2. Ablation Studies - extractive body cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
+- **p. 7 / 4.2. Ablation Studies - extractive body cue:** We compare two pre-training datasets for 3DGraphLLM using LLAMA3-8B-Instruct.
+- **p. 8 / 4.2. Ablation Studies - extractive body cue:** 6 shows that the object-centric graph representation using triplets improves the performance of the visual grounding task.
+- **p. 8 / 4.2. Ablation Studies - extractive body cue:** We include additional experimental results from ablation studies on scene captioning and visual question answering tasks in the Supplementary Materials.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | 4, incorporating a scene graph representation significantly improves the performance of the LLMs across all three 3D Vision-Language tasks: visual grounding, scene description, and ... | p. 7 (4.2. Ablation Studies) |
 | 4.1. Experimental Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], ... | p. 6 (4.1. Experimental Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** For 3RScan scenes, we use data from the RioRefer dataset [36] for object grounding, and the 3RQA dataset [26] for question answering.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For ScanNet scenes, we utilize data from five 3D vision-language benchmarks: visual grounding tasks (ScanRefer [5], Multi3DRefer [60]), scene description (Scan2Cap [9]), and 3D visual ...
-- **p. 6 / 4.1. Experimental Results - extractive PDF cue:** 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], as ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** The Multi3DRefer [60] dataset contains queries that may refer to multiple objects.
-- **p. 7 / 4.2. Ablation Studies - extractive PDF cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
-- **p. 7 / 4.2. Ablation Studies - extractive PDF cue:** We compare two pre-training datasets for 3DGraphLLM using LLAMA3-8B-Instruct.
-- **p. 8 / 4.2. Ablation Studies - extractive PDF cue:** 6 shows that the object-centric graph representation using triplets improves the performance of the visual grounding task.
-- **p. 8 / 4.2. Ablation Studies - extractive PDF cue:** We include additional experimental results from ablation studies on scene captioning and visual question answering tasks in the Supplementary Materials.
+- **p. 5 / 4. Experiments - extractive body cue:** For 3RScan scenes, we use data from the RioRefer dataset [36] for object grounding, and the 3RQA dataset [26] for question answering.
+- **p. 5 / 4. Experiments - extractive body cue:** For ScanNet scenes, we utilize data from five 3D vision-language benchmarks: visual grounding tasks (ScanRefer [5], Multi3DRefer [60]), scene description (Scan2Cap [9]), and 3D visual ...
+- **p. 6 / 4.1. Experimental Results - extractive body cue:** 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], as ...
+- **p. 6 / 4. Experiments - extractive body cue:** The Multi3DRefer [60] dataset contains queries that may refer to multiple objects.
+- **p. 7 / 4.2. Ablation Studies - extractive body cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
+- **p. 7 / 4.2. Ablation Studies - extractive body cue:** We compare two pre-training datasets for 3DGraphLLM using LLAMA3-8B-Instruct.
+- **p. 8 / 4.2. Ablation Studies - extractive body cue:** 6 shows that the object-centric graph representation using triplets improves the performance of the visual grounding task.
+- **p. 8 / 4.2. Ablation Studies - extractive body cue:** We include additional experimental results from ablation studies on scene captioning and visual question answering tasks in the Supplementary Materials.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The proposed 3DGraphLLM approach leverages 3D semantic scene graph learnable representation supplied as input to an LLM to perform various 3D vision-language tasks. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall architecture of our approach. We introduce trainable layers to map the extracted graph node and edge features into the token embedding ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Example of prompt for the language model containing scene graph. bors. The relationships between objects are encoded using features extracted from point clouds ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Performance comparison of 3DGraphLLM with state-of-the-art approaches for 3D vision-language tasks. "Expert models" use specialized heads to deal with different 3D vision-language tasks. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Input tokens and inference speed comparison (Mask3D instance segmentation). Evaluation metrics. For the visual grounding task on the ScanRefer [5]dataset, we use the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative examples of 3DGraphLLM performance on object grounding, dense captioning, and question answering tasks. We provide a visualization of the RGB point cloud ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on semantic edges role and training pipeline. C denotes the CIDEr metric. HDM [43], showing the importance of semantic relations for ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation study on semantic edges role depending on quality of instance segmentation. Instance Relations Number ScanRefer Multi3DRef Methods
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The proposed 3DGraphLLM approach leverages 3D semantic scene graph learnable representation supplied as input to an LLM to perform various 3D vision-language tasks. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The overall architecture of our approach. We introduce trainable layers to map the extracted graph node and edge features into the token embedding ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Example of prompt for the language model containing scene graph. bors. The relationships between objects are encoded using features extracted from point clouds ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Performance comparison of 3DGraphLLM with state-of-the-art approaches for 3D vision-language tasks. "Expert models" use specialized heads to deal with different 3D vision-language tasks. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Input tokens and inference speed comparison (Mask3D instance segmentation). Evaluation metrics. For the visual grounding task on the ScanRefer [5]dataset, we use the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative examples of 3DGraphLLM performance on object grounding, dense captioning, and question answering tasks. We provide a visualization of the RGB point cloud ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on semantic edges role and training pipeline. C denotes the CIDEr metric. HDM [43], showing the importance of semantic relations for ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation study on semantic edges role depending on quality of instance segmentation. Instance Relations Number ScanRefer Multi3DRef Methods
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For 3RScan scenes, we use data from the RioRefer dataset [36] for object grounding, and the 3RQA dataset [26] for question answering. | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 5 (4. Experiments) |
 | Task/environment | For ScanNet scenes, we utilize data from five 3D vision-language benchmarks: visual grounding tasks (ScanRefer [5], Multi3DRefer [60]), scene description (Scan2Cap [9]), and 3D ... | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 6 (4.1. Experimental Results) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 | Primary metric/result | 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], ... | numeric claim only at cited anchor | p. 6 (4.1. Experimental Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4. Experiments - extractive PDF cue:** We use a batch size of 8 and train 3DGraphLLM for 3 epochs with an initial learning rate of 5 · 10-6, following a cosine ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** Training is performed on a server equipped with 4 NVIDIA A100 GPUs, and the entire training process takes approximately 24 hours.
-- **p. 3 / 3.1. Model Architecture - extractive PDF cue:** Here, mi is the number of points in the i-th object proposal of instance segmentation of scene point cloud, and 6 dimensions of each point ...
-- **p. 4 / 3.1. Model Architecture - extractive PDF cue:** In our experiments, we assume a maximum of 200 objects per scene.
+- **p. 6 / 4. Experiments - extractive body cue:** We use a batch size of 8 and train 3DGraphLLM for 3 epochs with an initial learning rate of 5 · 10-6, following a cosine ...
+- **p. 6 / 4. Experiments - extractive body cue:** Training is performed on a server equipped with 4 NVIDIA A100 GPUs, and the entire training process takes approximately 24 hours.
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** Here, mi is the number of points in the i-th object proposal of instance segmentation of scene point cloud, and 6 dimensions of each point ...
+- **p. 4 / 3.1. Model Architecture - extractive body cue:** In our experiments, we assume a maximum of 200 objects per scene.
 
 ## Generalization and Failure Cases
 
@@ -162,12 +162,12 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** A limitation of the method is a significant increase in resource consumption with an increase in the edge number for each graph node.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Our approach falls into the category of "LLM-based models" that consider different tasks as different user queries to a generative model.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Another important aspect for further work is the creation of methods for generating semantic relations between objects that are robust to imperfections in the instance ...
-- **p. 7 / 4.2. Ablation Studies - extractive PDF cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
+- **p. 8 / 5. Conclusion - extractive body cue:** A limitation of the method is a significant increase in resource consumption with an increase in the edge number for each graph node.
+- **p. 6 / 4. Experiments - extractive body cue:** Our approach falls into the category of "LLM-based models" that consider different tasks as different user queries to a generative model.
+- **p. 8 / 5. Conclusion - extractive body cue:** Another important aspect for further work is the creation of methods for generating semantic relations between objects that are robust to imperfections in the instance ...
+- **p. 7 / 4.2. Ablation Studies - extractive body cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Experimental Results), p. 6 (4. Experiments), p. 7 (4.2. Ablation Studies), p. 7 (4.2. Ablation Studies), metrics p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 5 (4. Experiments), p. 7 (4.1. Experimental Results), baselines p. 6 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Studies), results p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 8 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 7 (4.2. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Experimental Results), p. 6 (4. Experiments), p. 7 (4.2. Ablation Studies), p. 7 (4.2. Ablation Studies), metrics p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 5 (4. Experiments), p. 7 (4.1. Experimental Results), baselines p. 6 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Studies), results p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 8 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 7 (4.2. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

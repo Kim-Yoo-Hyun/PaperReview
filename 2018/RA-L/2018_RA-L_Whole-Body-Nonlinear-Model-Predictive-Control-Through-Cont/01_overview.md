@@ -1,8 +1,10 @@
 # Whole-Body Nonlinear Model Predictive Control Through Contacts for Quadrupeds
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1712.02889.
-> PDF retrieval source: https://arxiv.org/pdf/1712.02889. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1712.02889.
+> PDF retrieval source: https://arxiv.org/pdf/1712.02889. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / RA-L
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1712.02889
 - Code/Project: https://github.com/ethz-adrl/towr
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Also, especially interesting tasks such as periodic gaits could not be transferred to hardware due to model mismatches and lack of robustness of the plans.를 문제로 두고, In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In this field, centroidal dynamics approaches [5]-[9] become increasingly popular as they capture the core dynamics of the problem. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Note that running only a single solver iteration before updating the state measurement results in better overall performance than running multiple iterations and letting the solver converge. (p. 5, VI. RESULTS).
+- **Explicit failure boundary:** Even placing planks under single feet does not deteriorate performance. (p. 5, VI. RESULTS).

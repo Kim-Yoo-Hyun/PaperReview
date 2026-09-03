@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 18 (IX. SIM2REA
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 11: Planning performance for the tasks in Fig. 10. Results include running RRT with the enhancements proposed in Sec. VII using the three ... | p. 17 (Figure/Table caption) |
 | IX. SIM2REAL TRANSFER & HARDWARE RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | On trajectory segments with good sim2real performance, this only results in harmless oscillations of qu real around qu sim. | p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 18 (IX. SIM2REA
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 2) Missed Contacts: Due to the non-smooth nature of contact dynamics, small discrepancies in object trajectory caused by the phase gap can lead to ... | embodiment, simulator version and control stack | p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS) |
 | Task/environment | 4) Hardware Setup: To verify results on actual hardware, we create a variant of the PlanarHand environment, where the object is replaced by a ... | reset, timeout, object/scene variation | p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS) |
@@ -154,7 +154,16 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 18 (IX. SIM2REA
 - **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** The collision geometries, robot controller stiffness and coefficients of friction are kept consistent between the CQDC dynamics and Drake.
 - **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** However, the necessary damping to uphold the quasidynamic assumption does not always exist on 3D systems.
 
-- **PDF anchors reviewed:** datasets p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), metrics p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 11 (Figure/Table caption), p. 1 (Figure/Table caption), p. 15 (VIII. PLANNING RESULTS & DISCUSSION), baselines p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 13 (Figure/Table caption), p. 15 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 15 (Figure/Table caption), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 11 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), metrics p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 11 (Figure/Table caption), p. 1 (Figure/Table caption), p. 15 (VIII. PLANNING RESULTS & DISCUSSION), baselines p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 13 (Figure/Table caption), p. 15 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 15 (Figure/Table caption), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 11 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** On trajectory segments with good sim2real performance, this only results in harmless oscillations of qu real around qu sim. (p. 18, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- **Metric evidence:** 2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) between the two trajectories qu sim(·) and qu real(·) as ∆(qu sim, ... (p. 17, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- **Baseline/ablation evidence:** Rolling out u(·) on the real dynamics gives qreal : [0, T] →Rnu+na, which is compared against qsim(·) to evaluate the sim2real performance. (p. 17, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- **Failure/negative evidence:** The consequence of these failed grasps is that plates are dropped on the table in AllegroHandPlate, and door handles are missed in AllegroHandDoor. (p. 19, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).

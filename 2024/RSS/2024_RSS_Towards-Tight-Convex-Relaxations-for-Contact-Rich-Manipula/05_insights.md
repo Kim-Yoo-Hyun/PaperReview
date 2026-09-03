@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 We represent a trajectory segment within each mode for the slider-pusher system by N discrete knot points for the state and N -1 knot points for the input: x0, x1, . . ...를 The point xv ∈Xv now corresponds to a trajectory of length N of states and inputs for the sliderpusher system in mode Ci.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Future work will explore the ability of these reduction methods to accelerate the planning.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We assume isotropic Coulomb friction, i.e., that the coefficient of friction is constant, and the friction force at every contact point must have a constant magnitude and oppose the direction ... (p. 3, III. PROBLEM STATEMENT).
+- **Paper-specific mechanism:** Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to the baseline. (p. 9, VIII. EXPERIMENTS); the relevant task/metric cue is For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible solution for all the generated problem instances. (p. 9, VIII. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider geometry and a mere 12% for the T-shaped slider. (p. 10, VIII. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Execution on real hardware Finally, we demonstrate the feasibility of the obtained motion plans on a Kuka LBR iiwa 7 R800 7-DOF robotic arm, with a T-shaped slider object..
-3. Compare against the body-reported baseline or a matched simpler baseline: Comparison with contact-implicit trajectory optimization To compare our method with a state-of-the-art baseline for contact-rich planning, we select a direct, contact-implicit trajectory optimization method similar to those proposed in ....
-4. Report the body metric and its denominator/aggregation: As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to the baseline..
-5. Re-run the body-reported ablation/failure condition: This highlights a key advantage of our approach: by reasoning on a global level, our method (empirically) always finds a solution, without relying on an initial guess..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We assume isotropic Coulomb friction, i.e., that the coefficient of friction is constant, and the friction force at every contact point must have a constant magnitude and oppose the direction ... (p. 3, III. PROBLEM STATEMENT); preserve the objective/update rule: In principle, this does not include all the tightening constraints (4d) and yields a potentially weaker convex relaxation, but in practice, we find that the loss in tightness is negligible ... (p. 7, VII. MOTION PLANNING FOR PLANAR PUSHING).
+2. Use the paper-reported task/data/environment cue: Execution on real hardware Finally, we demonstrate the feasibility of the obtained motion plans on a Kuka LBR iiwa 7 R800 7-DOF robotic arm, with a T-shaped slider object. (p. 10, VIII. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Comparison with contact-implicit trajectory optimization To compare our method with a state-of-the-art baseline for contact-rich planning, we select a direct, contact-implicit trajectory optimization method similar to those proposed in ... (p. 9, VIII. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible solution for all the generated problem instances. (p. 9, VIII. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: This highlights a key advantage of our approach: by reasoning on a global level, our method (empirically) always finds a solution, without relying on an initial guess. (p. 10, VIII. EXPERIMENTS); if none is reported, design one around: In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider geometry and a mere 12% for the T-shaped slider. (p. 10, VIII. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 (IV. HIGH-LEVEL APPROACH), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING); the primary result is directionally consistent at p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), and measure the boundary at p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 approximates, bilinearities, tight mechanism이 Comparison with contact-implicit trajectory optimization To compare our method with a state-of-the-art baseline for contact-rich planning, ... 대비 As our method is capable of global reasoning and does not rely on an initial guess, it has ...을 개선하고, Future work will explore the ability of these reduction methods to accelerate the planning. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We assume isotropic Coulomb friction, i.e., that the coefficient of friction is constant, and the friction force at every contact point must ...), does the paper-specific mechanism (Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.) retain the reported evaluation outcome (For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able ...) when tested against the paper's strongest explicit boundary (In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to the baseline. (p. 9, VIII. EXPERIMENTS).
+- **Strongest explicit boundary:** In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider geometry and a mere 12% for the T-shaped slider. (p. 10, VIII. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

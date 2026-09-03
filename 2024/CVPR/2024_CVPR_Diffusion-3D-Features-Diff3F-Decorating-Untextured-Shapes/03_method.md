@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Se
 
 ## Method Body Digest
 
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** We employ a feature fusion strategy proposed by [65], where we first normalize the features and then concatenate them as, \ma t hc al {F}^ ...
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
-- **p. 3 / 3. Method - extractive PDF cue:** Given the scarcity of 3D geometry data from which to learn these meaningful descriptors, we leverage foundational vision models trained on very large datasets to ...
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
-- **p. 3 / 3.1. Semantic Diffusion Features - extractive PDF cue:** Given a shape S with vertices V ∈R3, we want to project it to the image space to distill per-point semantic 3D features from images.
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** We also normalize these image features as in Equation 6.
-- **p. 4 / 3.1. Semantic Diffusion Features - extractive PDF cue:** We guide the texturing by providing constraints G to ControlNet [66].
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** FFUSE j is also unit-normalized as in Equation 6.
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** We employ a feature fusion strategy proposed by [65], where we first normalize the features and then concatenate them as, \ma t hc al {F}^ ...
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
+- **p. 3 / 3. Method - extractive body cue:** Given the scarcity of 3D geometry data from which to learn these meaningful descriptors, we leverage foundational vision models trained on very large datasets to ...
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
+- **p. 3 / 3.1. Semantic Diffusion Features - extractive body cue:** Given a shape S with vertices V ∈R3, we want to project it to the image space to distill per-point semantic 3D features from images.
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** We also normalize these image features as in Equation 6.
+- **p. 4 / 3.1. Semantic Diffusion Features - extractive body cue:** We guide the texturing by providing constraints G to ControlNet [66].
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** FFUSE j is also unit-normalized as in Equation 6.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** We propose a simple and robust solution.
-- **p. 2 / 1. Introduction - extractive PDF cue:** We present DIFFUSION 3D FEATURES (DIFF3F), a simple and practical framework for extracting semantic features that eliminates the need for additional training or optimization.
-- **p. 6 / 3.4. Computing Correspondence - extractive PDF cue:** We report correspondence accuracy within 1% error tolerance, with our method against competing works.
+- **p. 2 / 1. Introduction - extractive body cue:** We propose a simple and robust solution.
+- **p. 2 / 1. Introduction - extractive body cue:** We present DIFFUSION 3D FEATURES (DIFF3F), a simple and practical framework for extracting semantic features that eliminates the need for additional training or optimization.
+- **p. 6 / 3.4. Computing Correspondence - extractive body cue:** We report correspondence accuracy within 1% error tolerance, with our method against competing works.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** We employ a feature fusion strategy proposed by [65], where we first normalize the features and then concatenate them as, \ma t hc al {F}^ ...
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
-- **p. 3 / 3. Method - extractive PDF cue:** Given the scarcity of 3D geometry data from which to learn these meaningful descriptors, we leverage foundational vision models trained on very large datasets to ...
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
-- **p. 3 / 3.1. Semantic Diffusion Features - extractive PDF cue:** Given a shape S with vertices V ∈R3, we want to project it to the image space to distill per-point semantic 3D features from images.
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** We also normalize these image features as in Equation 6.
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** We employ a feature fusion strategy proposed by [65], where we first normalize the features and then concatenate them as, \ma t hc al {F}^ ...
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
+- **p. 3 / 3. Method - extractive body cue:** Given the scarcity of 3D geometry data from which to learn these meaningful descriptors, we leverage foundational vision models trained on very large datasets to ...
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
+- **p. 3 / 3.1. Semantic Diffusion Features - extractive body cue:** Given a shape S with vertices V ∈R3, we want to project it to the image space to distill per-point semantic 3D features from images.
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** We also normalize these image features as in Equation 6.
 - **Detected method headings:** 3. Method (p. 3); 4.3. Baseline Methods (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | We employ a feature fusion strategy proposed by [65], where we first normalize the features and then concatenate them as, \ma t ... | p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps. | p. 4 (3.2. Semantics through Painting), p. 3 (3. Method) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Se
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.1. Semantic Diffusion Features - extractive PDF cue:** We guide the texturing by providing constraints G to ControlNet [66].
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** FFUSE j is also unit-normalized as in Equation 6.
-- **p. 5 / 3.2. Semantics through Painting - extractive PDF cue:** We also normalize these image features as in Equation 6.
-- **p. 6 / 3.4. Computing Correspondence - extractive PDF cue:** To enable this, we pass our computed descriptors to a vanilla Functional Map [41] implementation, which returns a continuous surface-to-surface map that can then be ...
+- **p. 4 / 3.1. Semantic Diffusion Features - extractive body cue:** We guide the texturing by providing constraints G to ControlNet [66].
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** FFUSE j is also unit-normalized as in Equation 6.
+- **p. 5 / 3.2. Semantics through Painting - extractive body cue:** We also normalize these image features as in Equation 6.
+- **p. 6 / 3.4. Computing Correspondence - extractive body cue:** To enable this, we pass our computed descriptors to a vanilla Functional Map [41] implementation, which returns a continuous surface-to-surface map that can then be ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.1. Semantic Diffusion Features), p. 4 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Se
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We define G as a set of geometric maps that can be applied as conditional image constraints, \ label {e q:co l oreq} G := ...
-- **p. 4 / 3.1. Semantic Diffusion Features - extractive PDF cue:** As an emergent behaviour, pre-trained foundational vision models have been found to assign distinctive semantic features [54] to pixels in the input image, to be ...
-- **p. 5 / 3.3. Distilling 2D Features to 3D - extractive PDF cue:** We leverage known camera parameters to unproject features from the image space back to the points on the 3D input, i.e., \prot e c t ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** The ability to extract reliable features from input meshes or point clouds paves the way for establishing shape correspondence, extracting low-dimensional shape spaces, and learning ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 3D-CODED [20] DPC [30] SE-ORNet [14] FM+WKS [41] Ours No 3D training data? ✗ ✗ ✗ ✓ ✓ Unsupervised? ✗ ✓ ✓ ✓ ✓ Class ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** DIFF3F renders input shapes from a sampling of camera views to produce respective depth/normal maps.
-- **p. 6 / 3.4. Computing Correspondence - extractive PDF cue:** The Laplace Beltrami Operator (LBO) computation for Functional Maps is unstable on TOSCA since the inputs contain non-manifold meshes.
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We define G as a set of geometric maps that can be applied as conditional image constraints, \ label {e q:co l oreq} G := ...
+- **p. 4 / 3.1. Semantic Diffusion Features - extractive body cue:** As an emergent behaviour, pre-trained foundational vision models have been found to assign distinctive semantic features [54] to pixels in the input image, to be ...
+- **p. 5 / 3.3. Distilling 2D Features to 3D - extractive body cue:** We leverage known camera parameters to unproject features from the image space back to the points on the 3D input, i.e., \prot e c t ...
+- **p. 1 / 1. Introduction - extractive body cue:** The ability to extract reliable features from input meshes or point clouds paves the way for establishing shape correspondence, extracting low-dimensional shape spaces, and learning ...
+- **p. 2 / 1. Introduction - extractive body cue:** 3D-CODED [20] DPC [30] SE-ORNet [14] FM+WKS [41] Ours No 3D training data? ✗ ✗ ✗ ✓ ✓ Unsupervised? ✗ ✓ ✓ ✓ ✓ Class ...
+- **p. 2 / 1. Introduction - extractive body cue:** DIFF3F renders input shapes from a sampling of camera views to produce respective depth/normal maps.
+- **p. 6 / 3.4. Computing Correspondence - extractive body cue:** The Laplace Beltrami Operator (LBO) computation for Functional Maps is unstable on TOSCA since the inputs contain non-manifold meshes.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,11 +88,11 @@ PDF body method statement (p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Se
 
 ## Training vs Inference
 
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
-- **p. 3 / 3. Method - extractive PDF cue:** Given the scarcity of 3D geometry data from which to learn these meaningful descriptors, we leverage foundational vision models trained on very large datasets to ...
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
-- **p. 6 / 4.3. Baseline Methods - extractive PDF cue:** Note that we do not have access to pretrained 3D-CODED models for animal models.
-- **p. 4 / 3.2. Semantics through Painting - extractive PDF cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
+- **p. 3 / 3. Method - extractive body cue:** Given the scarcity of 3D geometry data from which to learn these meaningful descriptors, we leverage foundational vision models trained on very large datasets to ...
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We, therefore, condition our painting module f with geometric constraints that describe the latent 3D object.
+- **p. 6 / 4.3. Baseline Methods - extractive body cue:** Note that we do not have access to pretrained 3D-CODED models for animal models.
+- **p. 4 / 3.2. Semantics through Painting - extractive body cue:** We use DDIM [51] to accelerate the sampling process for Stable Diffusion [47] and use 30 inference steps.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Se
 
 ## Failure and Ablation Link
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Correspondence in-the-wild. We introduce DIFF3F, a novel feature distiller that harnesses the expressive power of in- painting diffusion features and distills them to ...
-- **p. 8 / 4.6. Ablations - extractive PDF cue:** Ablation SHREC'19 SHREC'20 acc ↑ err ↓ acc ↑ err ↓ w/o ControlNet (untextured) 17.20 2.04 65.48 0.69 TEXTure[46]+DINO 17.20 2.04 65.48 0.69 w/o Fusion ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation. We ablate different components of our method and compare accuracy at 1% tolerance on SHREC'19 and SHREC'20, against our full method (last ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method overview. DIFF3F is a feature distiller to map semantic diffusion features to 3D surface points. We render the given shape without textures ...
-- **p. 6 / 4.3. Baseline Methods - extractive PDF cue:** Note that we do not have access to pretrained 3D-CODED models for animal models.
-- **p. 6 / 4.1. Datasets and Benchmarks - extractive PDF cue:** Train Method TOSCA SHREC'19 SHREC'20 acc ↑ err ↓ acc ↑ err ↓ acc ↑ err ↓ SURREAL DPC [30] 29.30 5.25 17.40 6.26 31.08 ...
-- **p. 7 / 4.6. Ablations - extractive PDF cue:** We ablate different components of our method and report their performance.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Correspondence in-the-wild. We introduce DIFF3F, a novel feature distiller that harnesses the expressive power of in- painting diffusion features and distills them to ...
+- **p. 8 / 4.6. Ablations - extractive body cue:** Ablation SHREC'19 SHREC'20 acc ↑ err ↓ acc ↑ err ↓ w/o ControlNet (untextured) 17.20 2.04 65.48 0.69 TEXTure[46]+DINO 17.20 2.04 65.48 0.69 w/o Fusion ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation. We ablate different components of our method and compare accuracy at 1% tolerance on SHREC'19 and SHREC'20, against our full method (last ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method overview. DIFF3F is a feature distiller to map semantic diffusion features to 3D surface points. We render the given shape without textures ...
+- **p. 6 / 4.3. Baseline Methods - extractive body cue:** Note that we do not have access to pretrained 3D-CODED models for animal models.
+- **p. 6 / 4.1. Datasets and Benchmarks - extractive body cue:** Train Method TOSCA SHREC'19 SHREC'20 acc ↑ err ↓ acc ↑ err ↓ acc ↑ err ↓ SURREAL DPC [30] 29.30 5.25 17.40 6.26 31.08 ...
+- **p. 7 / 4.6. Ablations - extractive body cue:** We ablate different components of our method and report their performance.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Se
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 3 (3. Method), p. 4 (3.2. Semantics through Painting), p. 3 (3.1. Semantic Diffusion Features), p. 5 (3.2. Semantics through Painting), objective p. 4 (3.1. Semantic Diffusion Features), p. 4 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 6 (3.4. Computing Correspondence), temporal p. 4 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 2 (1. Introduction), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 3 (3. Method), p. 4 (3.2. Semantics through Painting), p. 3 (3.1. Semantic Diffusion Features), p. 5 (3.2. Semantics through Painting), objective p. 4 (3.1. Semantic Diffusion Features), p. 4 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 6 (3.4. Computing Correspondence), temporal p. 4 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 2 (1. Introduction), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

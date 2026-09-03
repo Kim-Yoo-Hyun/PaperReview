@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Comparison to State-of-the-Art Methods | SYSTEM / EVALUATION SCOPE UNRESOLVED | Compared with DREAMWALKER [39] in Table 1, which adopts a similar idea of lookahead exploration, our HNR model achieves performance improvement of about 10% ... | p. 6 (4.2. Comparison to State-of-the-Art Methods) |
 | 4.2. Comparison to State-of-the-Art Methods | SYSTEM / EVALUATION SCOPE UNRESOLVED | Meanwhile, as illustrated in Table 2, the proposed method also achieves the improvement of 2% in the majority of metrics on the RxR-CE dataset. | p. 6 (4.2. Comparison to State-of-the-Art Methods) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% ... | embodiment, simulator version and control stack | p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study) |
 | Task/environment | Comparison among different candidate location representation methods on the val unseen split of the R2R-CE dataset. | reset, timeout, object/scene variation | p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Hierarchical encoding and multi-level semantic alignment help HNR integrate surrounding contexts and predict features of empty regions caused by visual occlusions.
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** As shown in Table 3, without the training objective Lregion of region-level semantic alignment (row 6) in Section 3.2.3, the performance of the HNR model ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 6 (4.1. Datasets and Evaluation Metrics), p. 7 (4.3. Ablation Study), metrics p. 6 (4.1. Datasets and Evaluation Metrics), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (23.1 Hz (42.3 ms)), results p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 6 (4.1. Datasets and Evaluation Metrics), p. 7 (4.3. Ablation Study), metrics p. 6 (4.1. Datasets and Evaluation Metrics), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (23.1 Hz (42.3 ms)), results p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods).
+- **Metric evidence:** There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation Error (NE), Success Rate (SR), SR given the Oracle stop policy (OSR), ... (p. 6, 4.1. Datasets and Evaluation Metrics).
+- **Baseline/ablation evidence:** As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods).
+- **Failure/negative evidence:** Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to ... (p. 8, 4.3. Ablation Study).

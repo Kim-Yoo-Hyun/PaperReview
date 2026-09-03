@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (62 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.03342; PDF retrieval source: https://arxiv.org/pdf/2510.03342. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (62 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.03342; PDF retrieval source: https://arxiv.org/pdf/2510.03342. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This allows the model to convert visual observations into language-based thoughts, simplify complex instructions, detect task success or failure, propose recovery behaviors, ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | This allows the model to convert visual observations into language-based thoughts, simplify complex instructions, detect task success or failure, propose recovery behaviors, ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | This allows the model to convert visual observations into language-based thoughts, simplify complex instructions, detect task success or failure, propose recovery behaviors, ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | allows, model, convert, visual, observations, language-based, thoughts, simplify, complex, instructions | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
 | Output / action | full, agentic, system, consists, orchestrator, action, model, implemented | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
 | Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | whole-body pose/contact/reference state; body terms: allows, model, convert, visual, observations, language-based, thoughts, simplify, complex, instructions | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture) |
 | Decision / output variable | joint/whole-body action; body terms: multi-embodiment, pre-training, allows, control, multiple, robots, including, ALOHA | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 14 (4.2. Frontier capabilities for Embodied Reasoning), p. 5 (3. Gemini Robotics 1.5 is a general multi-embodiment Vision-Language-Action), p. 9 (3.3. Thinking Helps Acting) |
 | Success / guarantee | motion/task success and recovery | p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 4 (2.2. Robot Data), p. 1 (1. Introduction)): This multi-embodiment pre-training allows GR 1.5 to control multiple robots, including the ALOHA, Bi-arm Franka, and Apollo humanoid robots, without any robot-specific post-training, and it also enables zero-shot skill transfer ...
+PDF body contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 4 (2.2. Robot Data), p. 1 (1. Introduction)): This multi-embodiment pre-training allows GR 1.5 to control multiple robots, including the ALOHA, Bi-arm Franka, and Apollo humanoid robots, without any robot-specific post-training, and it also enables zero-shot skill transfer ...
 
 - **p. 2 / 1. Introduction - extractive body cue:** ER thinking traces Gemini Robotics 1.5 Gemini Robotics-ER 1.5 Actions Text Figure 1 / The Gemini Robotics 1.5 family of models consists of Gemini Robotics ...
 - **p. 3 / 2.1. Model & Architecture - extractive body cue:** The full agentic system consists of an orchestrator and an action model that are implemented by the VLM and the VLA, respectively: • Orchestrator: The ...
@@ -65,12 +65,21 @@ PDF contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture). The downstream handoff is claimed only when the body describes it.
+humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), objective p. 10 (3.3. Thinking Helps Acting), p. 13 (4.1. Generality), p. 14 (4.2. Frontier capabilities for Embodied Reasoning).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), objective p. 10 (3.3. Thinking Helps Acting), p. 13 (4.1. Generality), p. 14 (4.2. Frontier capabilities for Embodied Reasoning).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (62 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** We combine these two models into an agentic system that enables robots to solve complex problems by orchestrating user dialogue, high-level reasoning and planning, agentic tool use and low-level action. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** Secondly, GR 1.5 is a Thinking VLA 1See Contributions and Acknowledgments section for full author list. (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** An action failure is when the VLA does not successfully complete the sub-task. (p. 19, 4.3. Thinking).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

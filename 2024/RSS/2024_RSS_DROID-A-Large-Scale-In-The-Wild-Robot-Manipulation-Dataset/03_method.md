@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.12945; PDF retrieval source: https://arxiv.org/pdf/2403.12945. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.12945; PDF retrieval source: https://arxiv.org/pdf/2403.12945. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -13,7 +13,7 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 - **p. 6 / IV. DROID DATASET ANALYSIS - extractive body cue:** We use the point of first gripper closing in every episode as a proxy for interactions in the dataset and visualize the 3D location of ...
 - **p. 4 / III. DROID DATA COLLECTION SETUP - extractive body cue:** We use the Polymetis controller [33] and record actions both in robot joint space and in end-effector space at a control frequency of 15Hz.
 - **p. 4 / III. DROID DATA COLLECTION SETUP - extractive body cue:** For each trajectory, we record the output of all RGB cameras, relevant low level state information from the robot, equivalent robot control commands from various ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a diverse robot manipulation dataset with arXiv:2403.12945v2 [cs.RO] 22 Apr 2025
+- **p. 1 / Abstract - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a diverse robot manipulation dataset with ...
 - **p. 1 / 13 Institutions - extractive body cue:** 1: We introduce DROID (Distributed Robot Interaction Dataset), an "in-the-wild" robot manipulation dataset with 76k trajectories or 350 hours of interaction data, collected across 564 ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, creating such datasets is challenging: in contrast to vision or language data, training manipulation policies typically requires robot manipulation data with recorded observations and ...
 - **p. 3 / III. DROID DATA COLLECTION SETUP - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), an open-source robot manipulation dataset that provides for very high diversity and variability of scenes, ...
@@ -30,7 +30,7 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 - **p. 6 / IV. DROID DATASET ANALYSIS - extractive body cue:** We use the point of first gripper closing in every episode as a proxy for interactions in the dataset and visualize the 3D location of ...
 - **p. 4 / III. DROID DATA COLLECTION SETUP - extractive body cue:** We use the Polymetis controller [33] and record actions both in robot joint space and in end-effector space at a control frequency of 15Hz.
 - **p. 4 / III. DROID DATA COLLECTION SETUP - extractive body cue:** For each trajectory, we record the output of all RGB cameras, relevant low level state information from the robot, equivalent robot control commands from various ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a diverse robot manipulation dataset with arXiv:2403.12945v2 [cs.RO] 22 Apr 2025
+- **p. 1 / Abstract - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a diverse robot manipulation dataset with ...
 - **p. 1 / 13 Institutions - extractive body cue:** 1: We introduce DROID (Distributed Robot Interaction Dataset), an "in-the-wild" robot manipulation dataset with 76k trajectories or 350 hours of interaction data, collected across 564 ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, creating such datasets is challenging: in contrast to vision or language data, training manipulation policies typically requires robot manipulation data with recorded observations and ...
 - **p. 3 / III. DROID DATA COLLECTION SETUP - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), an open-source robot manipulation dataset that provides for very high diversity and variability of scenes, ...
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | We use the point of first gripper closing in every episode as a proxy for interactions in the dataset and visualize the ... | p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID DATA COLLECTION SETUP) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | We use the Polymetis controller [33] and record actions both in robot joint space and in end-effector space at a control frequency ... | p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP) |
@@ -82,8 +82,8 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | In line with prior work [7], we train the diffusion policy to generate 16-step action sequences, and during rollouts, step 8 actions ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | The waffle maker position is randomized between episodes. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
-| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP), p. 1 (Abstract), p. 1 (13 Institutions), p. 2 (I. INTRODUCTION), objective p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP), p. 3 (III. DROID DATA COLLECTION SETUP), temporal p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 5 (IV. DROID DATASET ANALYSIS), p. 1 (13 Institutions).
+- **Evidence anchors reviewed:** method p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP), p. 1 (Abstract), p. 1 (13 Institutions), p. 2 (I. INTRODUCTION), objective p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP), p. 3 (III. DROID DATA COLLECTION SETUP), temporal p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 5 (IV. DROID DATASET ANALYSIS), p. 1 (13 Institutions).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For each trajectory, we record the output of all RGB cameras, relevant low level state information from the robot, equivalent robot control commands from various popular action spaces, a data ... (p. 4, III. DROID DATA COLLECTION SETUP).
+- **Objective/update evidence:** 2), a hardware platform for data collection that is shared between all institutions, allowing us to quickly set up new data collection units and roll out updates across the whole ... (p. 3, III. DROID DATA COLLECTION SETUP).
+- **Temporal/runtime evidence:** In line with prior work [7], we train the diffusion policy to generate 16-step action sequences, and during rollouts, step 8 actions open loop before re-running policy inference. (p. 7, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

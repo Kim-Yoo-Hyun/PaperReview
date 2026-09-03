@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 End-to-end Vision-Language-Action (VLA) models have demonstrated promising progress in mapping visual context directly to control output.를 In these systems, a large visionlanguage backbone engages in a slower, more deliberative form of "thinking", spending additional compute to verbalize the observation and justify the planned actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 A rollout-filter-label counterfactual pipeline allows CF-VLA to mine its own failure cases and improve over multiple training rounds.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this paper, we ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** End-to-end Vision-Language-Action (VLA) models have demonstrated promising progress in mapping visual context directly to control output. (p. 3, 3. Method).
+- **Paper-specific mechanism:** Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 1. Evaluation results. CF-VLA improves trajectory accuracy (ADE, FDE), behavioral safety (Corner Distance, Collision, Off-road), and reasoning quality (IOU). ↓lower is better, ↑higher is better. (p. 6, Figure/Table caption); the relevant task/metric cue is We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors over 6 predicted modes (lower is better), and Corner Distance as the ... (p. 5, 4.1. Experimental Setup). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects that an action it executed failed and then switches to an alternative ... (p. 2, 1. Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The counterfactual reasoning dataset DCF comes from the training set of Dmeta..
-3. Compare against the body-reported baseline or a matched simpler baseline: With route information, meta-act (w/ route) provides an even stronger baseline..
-4. Report the body metric and its denominator/aggregation: We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors over 6 predicted modes (lower is better), and Corner Distance as the average deviation ....
-5. Re-run the body-reported ablation/failure condition: Within each setting (with / without route), CF-VLA variants consistently achieve the lowest or near-lowest collision and off-road rates, indicating that counterfactual self-reflection translates into smoother, more stable, and more rule ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: End-to-end Vision-Language-Action (VLA) models have demonstrated promising progress in mapping visual context directly to control output. (p. 3, 3. Method); preserve the objective/update rule: The model is optimized with cross-entropy loss over assistant-generated tokens only; tokens from system or user prompts are masked. (p. 5, 3.4. Implementation Details).
+2. Use the paper-reported task/data/environment cue: The entire data corpus forms the trajectory-only dataset Dtraj, which contains raw sensor data paired with ego-vehicle future trajectories. (p. 5, 4.1. Experimental Setup).
+3. Compare against the reported or matched baseline: With route information, meta-act (w/ route) provides an even stronger baseline. (p. 6, 4.2. Main Experiments).
+4. Report the body metric with its denominator and aggregation: We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors over 6 predicted modes (lower is better), and Corner Distance as the ... (p. 5, 4.1. Experimental Setup).
+5. Re-run the reported ablation or stress/failure condition: Within each setting (with / without route), CF-VLA variants consistently achieve the lowest or near-lowest collision and off-road rates, indicating that counterfactual self-reflection translates into smoother, more stable, and more ... (p. 6, 4.2. Main Experiments); if none is reported, design one around: Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects that an action it executed failed and then switches to an alternative ... (p. 2, 1. Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), p. 5 (3.4. Implementation Details); the primary result is directionally consistent at p. 1 (Figure/Table caption), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), match the reported outcome at p. 6 (Figure/Table caption), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments), and measure the boundary at p. 2 (1. Introduction), p. 8 (5. Conclusion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Second, standard, training mechanism이 With route information, meta-act (w/ route) provides an even stronger baseline. 대비 We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors ...을 개선하고, A rollout-filter-label counterfactual pipeline allows CF-VLA to mine its own failure cases and improve over multiple ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (End-to-end Vision-Language-Action (VLA) models have demonstrated promising progress in mapping visual context directly to control output.), does the paper-specific mechanism (Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, ...) retain the reported evaluation outcome (We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors ...) when tested against the paper's strongest explicit boundary (Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Table 1. Evaluation results. CF-VLA improves trajectory accuracy (ADE, FDE), behavioral safety (Corner Distance, Collision, Off-road), and reasoning quality (IOU). ↓lower is better, ↑higher is better. (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects that an action it executed failed and then switches to an alternative ... (p. 2, 1. Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/wu23c.html; PDF retrieval source: https://arxiv.org/pdf/2206.14176. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/wu23c.html; PDF retrieval source: https://arxiv.org/pdf/2206.14176. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We find that DrQv2, a model-free algorithm specifically designed to continuous control from pixels, achieves similar performance. | p. 7 (3 Experiments) |
 | 3 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Dreamer learns a policy that enables the XArm to achieve an average pick rate of 3.1 objects per minute in 10 hours of time, ... | p. 7 (3 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 3.2 UR5 Multi-Object Visual Pick and Place Common in warehouse and logistics environments, pick and place tasks require a robot manipulator to transport items ... | embodiment, simulator version and control stack | p. 6 (3 Experiments), p. 7 (3 Experiments) |
 | Task/environment | As the goal is fixed, after 100 environment steps, we end the episode and randomize the robot's position through a sequence of high power ... | reset, timeout, object/scene variation | p. 7 (3 Experiments), p. 7 (3 Experiments) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 - **p. 5 / 3 Experiments - extractive body cue:** The filled circles indicate times where the robot fell on its back, requiring the learning of a robust strategy for getting back up.
 - **p. 6 / 3 Experiments - extractive body cue:** We hypothesize that Rainbow DQN and PPO fail because they require larger amounts of experience, which is not feasible for us to collect in the ...
 
-- **PDF anchors reviewed:** datasets p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 4 (3 Experiments), p. 4 (3 Experiments), p. 5 (3 Experiments), metrics p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 1 (Figure/Table caption), p. 5 (3 Experiments), baselines p. 5 (3 Experiments), p. 1 (Figure/Table caption), p. 4 (3 Experiments), p. 5 (3 Experiments), p. 4 (3 Experiments), p. 6 (3 Experiments), results p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 4 (3 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 4 (3 Experiments), p. 4 (3 Experiments), p. 5 (3 Experiments), metrics p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 1 (Figure/Table caption), p. 5 (3 Experiments), baselines p. 5 (3 Experiments), p. 1 (Figure/Table caption), p. 4 (3 Experiments), p. 5 (3 Experiments), p. 4 (3 Experiments), p. 6 (3 Experiments), results p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 4 (3 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We evaluate Dreamer on 4 robots, each with a different task, and compare its performance to appropriate algorithmic and human baselines. (p. 4, 3 Experiments).
+- **Metric evidence:** The robot is provided with a dense reward equal to the negative L2 distance. (p. 7, 3 Experiments).
+- **Baseline/ablation evidence:** The state-of-the-art baseline in this category is DrQv2 (Yarats et al., 2021), which uses image augmentation to increase sample-efficiency. (p. 5, 3 Experiments).
+- **Failure/negative evidence:** On the other hand, learning inside of simulators fails to capture the complexity of the real world, is prone to simulator inaccuracies, and the resulting behaviors do not adapt to ... (p. 1, Body text (section boundary not confidently recovered)).

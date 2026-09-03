@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 2, the policy πθ takes as input the image observations I = {Ih, Ir, Il} from the head camera, right wrist camera, and left wrist camera, respectively; the language instruction L; the ...를 With the tactile gate to determine when to incorporate tactile feedback, the action expert's architecture must be able to handle inputs under both states of the tactile gate, whether or not tactile ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, occasionally leading to failure cases where the gripper slips during unscrewing.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the learning of newly introduced tactile representations.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2, the policy πθ takes as input the image observations I = {Ih, Ir, Il} from the head camera, right wrist camera, and left wrist camera, respectively; the language instruction ... (p. 3, 3.1. Framework of AT-VLA).
+- **Paper-specific mechanism:** Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the learning of newly introduced tactile representations. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is As shown in Table 1, our model outperforms all baseline methods. (p. 6, 4.2. Contact-rich Task Evaluation); the relevant task/metric cue is We report the success rate of each subtask, reflecting the progress. (p. 6, 4.2. Contact-rich Task Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, occasionally leading to failure cases where the gripper slips during unscrewing. (p. 6, 4.2. Contact-rich Task Evaluation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 2) In contrast, VTLA and RDP, which do not have pretrained models on large-scale datasets, are trained only on the subset of our downstream tasks corresponding to the contact-rich manipulation phases..
-3. Compare against the body-reported baseline or a matched simpler baseline: Compared with state-of-the-art VLA models GO-1 and π0.5, which are trained without tactile feedback, our model demonstrates comparable performance during the pre-contact manipulation phase, indicating that it effectively preserves the p ....
-4. Report the body metric and its denominator/aggregation: We report the success rate of each subtask, reflecting the progress..
-5. Re-run the body-reported ablation/failure condition: Table 3. Ablation study. Each variant selectively removes or changes components to assess their contributions. Components Tactile Format Tasks Tactile Gate Adaptive Cross Attention.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2, the policy πθ takes as input the image observations I = {Ih, Ir, Il} from the head camera, right wrist camera, and left wrist camera, respectively; the language instruction ... (p. 3, 3.1. Framework of AT-VLA); preserve the objective/update rule: All objectives are trained simultaneously, under the overall supervision L = La + λ1 ∗Lg + λ2 ∗Lr, λ1 and λ2 are all both to 0.01 to balance different losses' ... (p. 5, 3.4. Training Objectives and Inference Pipeline).
+2. Use the paper-reported task/data/environment cue: 2) In contrast, VTLA and RDP, which do not have pretrained models on large-scale datasets, are trained only on the subset of our downstream tasks corresponding to the contact-rich manipulation ... (p. 6, 4.2. Contact-rich Task Evaluation).
+3. Compare against the reported or matched baseline: Compared with state-of-the-art VLA models GO-1 and π0.5, which are trained without tactile feedback, our model demonstrates comparable performance during the pre-contact manipulation phase, indicating that it effectively preserves the ... (p. 6, 4.2. Contact-rich Task Evaluation).
+4. Report the body metric with its denominator and aggregation: We report the success rate of each subtask, reflecting the progress. (p. 6, 4.2. Contact-rich Task Evaluation).
+5. Re-run the reported ablation or stress/failure condition: Modality-agnostic evaluation.The AT-VLA variants with (w/.) and without (w/o.) tactile input share identical model weights, differing only in whether tactile information is provided during inference. (p. 6, 4.3. Modality-agnostic Evaluation); if none is reported, design one around: In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, occasionally leading to failure cases where the gripper slips during unscrewing. (p. 6, 4.2. Contact-rich Task Evaluation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Framework of AT-VLA), p. 4 (3.1. Framework of AT-VLA); the primary result is directionally consistent at p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 4 (3.2. Adaptive Tactile Injection), match the reported outcome at p. 6 (4.2. Contact-rich Task Evaluation), p. 7 (Figure/Table caption), p. 6 (4.2. Contact-rich Task Evaluation), and measure the boundary at p. 6 (4.2. Contact-rich Task Evaluation), p. 7 (4.4.1. Contribution of Each Component).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contributions, follows mechanism이 Compared with state-of-the-art VLA models GO-1 and π0.5, which are trained without tactile feedback, our model ... 대비 We report the success rate of each subtask, reflecting the progress.을 개선하고, In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2, the policy πθ takes as input the image observations I = {Ih, Ir, Il} from the head camera, right wrist camera, ...), does the paper-specific mechanism (Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the ...) retain the reported evaluation outcome (We report the success rate of each subtask, reflecting the progress.) when tested against the paper's strongest explicit boundary (In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We report the success rate of each subtask, reflecting the progress.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the learning of newly introduced tactile representations. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** As shown in Table 1, our model outperforms all baseline methods. (p. 6, 4.2. Contact-rich Task Evaluation).
+- **Strongest explicit boundary:** In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, occasionally leading to failure cases where the gripper slips during unscrewing. (p. 6, 4.2. Contact-rich Task Evaluation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

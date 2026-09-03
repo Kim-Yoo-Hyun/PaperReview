@@ -1,7 +1,7 @@
 # ViNT: A Foundation Model for Visual Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2306.14846.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2306.14846.
 > PDF retrieval source: https://arxiv.org/pdf/2306.14846. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2306.14846
 - Code/Project: https://general-navigation-models.github.io/vint/index.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -86,3 +86,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 navigation 문제�
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 navigation 문제를 이해하기 위해 읽는다. 본문은 Although this paradigm has been successful in many domains, it is difficult to apply in robotics due to the sheer diversity of environments, platforms, and applications.를 문제로 두고, We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Diffusion), p. 21 (B.4 Fine-tuning ViNT) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Although this paradigm has been successful in many domains, it is difficult to apply in robotics due to the sheer diversity of environments, platforms, and applications. (p. 1, 1 Introduction).
+- **Actual contribution:** We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based heuristic from start (orange) to goal (green). The future action samples ˆa ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, which can present a challenge for power-constrained platforms such as quadcopters. (p. 11, 7 Discussion).

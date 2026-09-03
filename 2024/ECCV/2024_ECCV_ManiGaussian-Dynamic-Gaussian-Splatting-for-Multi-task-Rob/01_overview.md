@@ -1,8 +1,10 @@
 # ManiGaussian: Dynamic Gaussian Splatting for Multi-task Robotic Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php.
-> PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php.
+> PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address the challenges, previous arts have made great progress in general manipulation policy learning, which can be divided into two categories including perceptive methods and generative methods.를 문제로 두고, Our contributions can be summarized as follows: - We propose a dynamic Gaussian Splatting framework to learn the scenelevel spatiotemporal dynamics in general robotic manipulation tasks, so that the robotic agent can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, the perceptive methods heavily rely on multi-view or gripper-mounted cameras to cover the whole workbench to deal with the occlusion problem within unstructured environments, which restricts their deployment. (p. 2, 1 Introduction).
+- **Actual contribution:** Our contributions can be summarized as follows: - We propose a dynamic Gaussian Splatting framework to learn the scenelevel spatiotemporal dynamics in general robotic manipulation tasks, so that the robotic ... (p. 3, 1 Introduction).
+- **Evaluation boundary:** By adding the Gaussian regressor to predict the Gaussian parameters, the performance improves by 15.6% compared with the baseline. (p. 12, 4 Experiments).
+- **Explicit failure boundary:** However, it ignores the scene-level spatiotemporal dynamics that demonstrate the interaction among objects, and the predicted actions still fail to achieve human goals because of the incorrect interaction. (p. 11, 4 Experiments).

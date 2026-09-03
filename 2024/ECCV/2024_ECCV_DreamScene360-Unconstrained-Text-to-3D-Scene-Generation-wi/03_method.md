@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/996_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/996_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Method Body Digest
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** Since then, several works have emerged enabling sparse view [66,76] and compressed [10, 27, 38, 40, 42] 3D Gaussian representations, as well as representation of ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** In this work, we propose a method for text to 360◦3D scene generation, by using panorama images as an intermediate representation.
-- **p. 5 / 1 Introduction - extractive PDF cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
-- **p. 6 / 1 Introduction - extractive PDF cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** These methods attempt to bridge the gap between 2D and 3D generation by initializing with an explicit 3D representation, and then progressively expanding the learned ...
-- **p. 6 / 1 Introduction - extractive PDF cue:** Rather than beginning with a sparse point cloud (3DGS), we initialize with a dense point cloud utilizing pixel-wise depth information from the panoramic image of ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Generative Adversarial Networks [15] were the original state of the art for image generation.
-- **p. 2 / 360 Panorama - extractive PDF cue:** In order to address invisible issues inherent in single-view inputs, we impose semantic and geometric constraints on both synthesized and input camera views as regularizations.
+- **p. 4 / 1 Introduction - extractive body cue:** Since then, several works have emerged enabling sparse view [66,76] and compressed [10, 27, 38, 40, 42] 3D Gaussian representations, as well as representation of ...
+- **p. 4 / 1 Introduction - extractive body cue:** In this work, we propose a method for text to 360◦3D scene generation, by using panorama images as an intermediate representation.
+- **p. 5 / 1 Introduction - extractive body cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
+- **p. 6 / 1 Introduction - extractive body cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
+- **p. 2 / 1 Introduction - extractive body cue:** These methods attempt to bridge the gap between 2D and 3D generation by initializing with an explicit 3D representation, and then progressively expanding the learned ...
+- **p. 6 / 1 Introduction - extractive body cue:** Rather than beginning with a sparse point cloud (3DGS), we initialize with a dense point cloud utilizing pixel-wise depth information from the panoramic image of ...
+- **p. 3 / 1 Introduction - extractive body cue:** Generative Adversarial Networks [15] were the original state of the art for image generation.
+- **p. 2 / 360 Panorama - extractive body cue:** In order to address invisible issues inherent in single-view inputs, we impose semantic and geometric constraints on both synthesized and input camera views as regularizations.
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** Collectively, our framework, DreamScene360, enables the creation of immersive and realistic 3D environments from a simple user command, offering a novel solution to the pressing ...
-- **p. 9 / 1 Introduction - extractive PDF cue:** To mitigate this, we introduce a geometric regularization strategy designed to penalize discontinuities between pixels that exhibit inaccurate depth relationships.
-- **p. 3 / 1 Introduction - extractive PDF cue:** DreamScene360 3 To address the above challenges in creating a holistic 360◦text-to-3D scene generation pipeline, we introduce DreamScene360.
+- **p. 3 / 1 Introduction - extractive body cue:** Collectively, our framework, DreamScene360, enables the creation of immersive and realistic 3D environments from a simple user command, offering a novel solution to the pressing ...
+- **p. 9 / 1 Introduction - extractive body cue:** To mitigate this, we introduce a geometric regularization strategy designed to penalize discontinuities between pixels that exhibit inaccurate depth relationships.
+- **p. 3 / 1 Introduction - extractive body cue:** DreamScene360 3 To address the above challenges in creating a holistic 360◦text-to-3D scene generation pipeline, we introduce DreamScene360.
 
 ## Source Evidence Cues
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** Since then, several works have emerged enabling sparse view [66,76] and compressed [10, 27, 38, 40, 42] 3D Gaussian representations, as well as representation of ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** In this work, we propose a method for text to 360◦3D scene generation, by using panorama images as an intermediate representation.
-- **p. 5 / 1 Introduction - extractive PDF cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
-- **p. 6 / 1 Introduction - extractive PDF cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** These methods attempt to bridge the gap between 2D and 3D generation by initializing with an explicit 3D representation, and then progressively expanding the learned ...
-- **p. 6 / 1 Introduction - extractive PDF cue:** Rather than beginning with a sparse point cloud (3DGS), we initialize with a dense point cloud utilizing pixel-wise depth information from the panoramic image of ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Generative Adversarial Networks [15] were the original state of the art for image generation.
+- **p. 4 / 1 Introduction - extractive body cue:** Since then, several works have emerged enabling sparse view [66,76] and compressed [10, 27, 38, 40, 42] 3D Gaussian representations, as well as representation of ...
+- **p. 4 / 1 Introduction - extractive body cue:** In this work, we propose a method for text to 360◦3D scene generation, by using panorama images as an intermediate representation.
+- **p. 5 / 1 Introduction - extractive body cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
+- **p. 6 / 1 Introduction - extractive body cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
+- **p. 2 / 1 Introduction - extractive body cue:** These methods attempt to bridge the gap between 2D and 3D generation by initializing with an explicit 3D representation, and then progressively expanding the learned ...
+- **p. 6 / 1 Introduction - extractive body cue:** Rather than beginning with a sparse point cloud (3DGS), we initialize with a dense point cloud utilizing pixel-wise depth information from the panoramic image of ...
+- **p. 3 / 1 Introduction - extractive body cue:** Generative Adversarial Networks [15] were the original state of the art for image generation.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Since then, several works have emerged enabling sparse view [66,76] and compressed [10, 27, 38, 40, 42] 3D Gaussian representations, as well ... | p. 4 (1 Introduction), p. 4 (1 Introduction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | In this work, we propose a method for text to 360◦3D scene generation, by using panorama images as an intermediate representation. | p. 4 (1 Introduction), p. 5 (1 Introduction) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Objective / Update Rule
 
-- **p. 2 / 360 Panorama - extractive PDF cue:** In order to address invisible issues inherent in single-view inputs, we impose semantic and geometric constraints on both synthesized and input camera views as regularizations.
-- **p. 5 / 1 Introduction - extractive PDF cue:** No Optimized 3D Gaussians Geometric Field Backward Losses Given Cameras [CLS] Semantic Loss Geometric Loss Render DPT , Virtual Cameras [CLS] , Fig.
-- **p. 7 / 1 Introduction - extractive PDF cue:** _{\ a lpha , \ beta , \Theta } \bigg \{ // \alpha \cdot \boldsymbol {D}^{\text {Mono}} + \boldsymbol {\beta } - \operatorname {MLPs}(\boldsymbol {v}; ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The gaps, stemming from single-view observations, can be filled by deforming the Gaussians to the unseen regions by creating a set of pseudo-views with a ...
-- **p. 5 / 1 Introduction - extractive PDF cue:** For each patch Pi(It), we ensure the distance against their denoised version Φ(Pi(It)) is minimized.
-- **p. 2 / 1 Introduction - extractive PDF cue:** However, the progressive optimization frameworks leveraged by these methods struggle to inpaint substantial missing areas, especially when targeting 360◦scenes under unconstrained conditions, resulting in notably ...
+- **p. 2 / 360 Panorama - extractive body cue:** In order to address invisible issues inherent in single-view inputs, we impose semantic and geometric constraints on both synthesized and input camera views as regularizations.
+- **p. 5 / 1 Introduction - extractive body cue:** No Optimized 3D Gaussians Geometric Field Backward Losses Given Cameras [CLS] Semantic Loss Geometric Loss Render DPT , Virtual Cameras [CLS] , Fig.
+- **p. 7 / 1 Introduction - extractive body cue:** _{\ a lpha , \ beta , \Theta } \bigg \{ // \alpha \cdot \boldsymbol {D}^{\text {Mono}} + \boldsymbol {\beta } - \operatorname {MLPs}(\boldsymbol {v}; ...
+- **p. 3 / 1 Introduction - extractive body cue:** The gaps, stemming from single-view observations, can be filled by deforming the Gaussians to the unseen regions by creating a set of pseudo-views with a ...
+- **p. 5 / 1 Introduction - extractive body cue:** For each patch Pi(It), we ensure the distance against their denoised version Φ(Pi(It)) is minimized.
+- **p. 2 / 1 Introduction - extractive body cue:** However, the progressive optimization frameworks leveraged by these methods struggle to inpaint substantial missing areas, especially when targeting 360◦scenes under unconstrained conditions, resulting in notably ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (360 Panorama), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 5 (1 Introduction), p. 7 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Observation–State–Action Interface
 
-- **p. 7 / 1 Introduction - extractive PDF cue:** The parameters of MLPs Θ are initialized with an input dimension of three and an output dimension of one.
-- **p. 3 / 1 Introduction - extractive PDF cue:** Additional control of generation has also been shown to be possible, through auxiliary inputs such as layout [74], pose [73] and depth maps [5].
-- **p. 3 / 1 Introduction - extractive PDF cue:** While the generated panorama images overcome the view consistency issue across different viewpoints, they still lack depth information and any layout priors in unconstrained settings, ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** Our work requires a text prompt input; however, unlike prior work, we propose using panoramic images as an intermediate input for globally consistent scenes.
-- **p. 5 / 1 Introduction - extractive PDF cue:** DreamScene360 5 "Yosemite National Park with a waterfall" Input Text Diffusion Model Draft Image Self-refinement (round += 1) Multi-round Draft Images Yes Best Candidate Text2Panorama ...
-- **p. 6 / 1 Introduction - extractive PDF cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
-- **p. 7 / 1 Introduction - extractive PDF cue:** This absence of parallax - critical for depth perception through binocular disparity - along with the lack of multiple observational cues typically provided by a ...
+- **p. 7 / 1 Introduction - extractive body cue:** The parameters of MLPs Θ are initialized with an input dimension of three and an output dimension of one.
+- **p. 3 / 1 Introduction - extractive body cue:** Additional control of generation has also been shown to be possible, through auxiliary inputs such as layout [74], pose [73] and depth maps [5].
+- **p. 3 / 1 Introduction - extractive body cue:** While the generated panorama images overcome the view consistency issue across different viewpoints, they still lack depth information and any layout priors in unconstrained settings, ...
+- **p. 4 / 1 Introduction - extractive body cue:** Our work requires a text prompt input; however, unlike prior work, we propose using panoramic images as an intermediate input for globally consistent scenes.
+- **p. 5 / 1 Introduction - extractive body cue:** DreamScene360 5 "Yosemite National Park with a waterfall" Input Text Diffusion Model Draft Image Self-refinement (round += 1) Multi-round Draft Images Yes Best Candidate Text2Panorama ...
+- **p. 6 / 1 Introduction - extractive body cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
+- **p. 7 / 1 Introduction - extractive body cue:** This absence of parallax - critical for depth perception through binocular disparity - along with the lack of multiple observational cues typically provided by a ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,7 +90,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Training vs Inference
 
-- **p. 5 / 1 Introduction - extractive PDF cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
+- **p. 5 / 1 Introduction - extractive body cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Failure and Ablation Link
 
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 6: Ablation of Optimization Loss. We demonstrate the impact of Semantic and Geometric losses on the synthesized virtual cameras. (a) Utilizing photometric loss on ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** In conclusion, our results demonstrate global semantic, stylized, and geometric consistency, offering complete 360◦coverage without any blind spots.
-- **p. 13 / 4 Experiments - extractive PDF cue:** 4.3 Ablation Study Self-refinement Process We further evaluate the importance of the selfrefinement process.
-- **p. 14 / 4 Experiments - extractive PDF cue:** 7: Ablation Study on 3D Initialization.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 5: Ablation of Self-Refinement. We demonstrate that the self-refinement pro- cess greatly enhances the image quality by improving the text prompt. As shown in ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
-- **p. 12 / 4 Experiments - extractive PDF cue:** In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout.
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 6: Ablation of Optimization Loss. We demonstrate the impact of Semantic and Geometric losses on the synthesized virtual cameras. (a) Utilizing photometric loss on ...
+- **p. 12 / 4 Experiments - extractive body cue:** In conclusion, our results demonstrate global semantic, stylized, and geometric consistency, offering complete 360◦coverage without any blind spots.
+- **p. 13 / 4 Experiments - extractive body cue:** 4.3 Ablation Study Self-refinement Process We further evaluate the importance of the selfrefinement process.
+- **p. 14 / 4 Experiments - extractive body cue:** 7: Ablation Study on 3D Initialization.
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 5: Ablation of Self-Refinement. We demonstrate that the self-refinement pro- cess greatly enhances the image quality by improving the text prompt. As shown in ...
+- **p. 11 / 4 Experiments - extractive body cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
+- **p. 12 / 4 Experiments - extractive body cue:** In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), objective p. 2 (360 Panorama), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), temporal p. 2 (1 Introduction), p. 11 (4 Experiments), p. 2 (360 Panorama), p. 3 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), objective p. 2 (360 Panorama), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), temporal p. 2 (1 Introduction), p. 11 (4 Experiments), p. 2 (360 Panorama), p. 3 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

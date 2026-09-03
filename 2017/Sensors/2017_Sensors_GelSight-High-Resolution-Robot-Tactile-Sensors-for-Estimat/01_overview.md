@@ -1,8 +1,10 @@
 # GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/.
-> PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/.
+> PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / Sensors
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing.를 문제로 두고, In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect the contact and contact force, or force ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), p. 9 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing. (p. 2, 1. Introduction).
+- **Actual contribution:** Tactile sensing is an important mode for both human and robots to perceive the environment. (p. 1, 1. Introduction).
+- **Evaluation boundary:** The coefficient of determination (R2) and root mean square error (RMSE) for the results of three different objects are also listed in the figure. (p. 17, 5.2. Evaluation of Force Measurement).
+- **Explicit failure boundary:** Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).

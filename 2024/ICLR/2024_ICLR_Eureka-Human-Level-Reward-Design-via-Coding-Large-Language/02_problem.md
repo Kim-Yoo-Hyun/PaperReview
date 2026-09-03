@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IEduRUO55F; PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IEduRUO55F; PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUC
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | 2 PROBLEM SETTING AND DEFINITIONS The goal of reward design is to return a shaped reward function for a ground-truth reward function ... | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | Given that any reward function is a function over the environment's state and action variables, the only requirement in the source code ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Given that any reward function is a function over the environment's state and action variables, the only requirement in the source code ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Given, reward, function, over, environment, state, action, variables, only, requirement | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
 | Output / action | reward, reflection, automated, feedback, summarizes, policy, training, dynamics | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
 | Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | trajectory D with task/embodiment metadata; body terms: Given, reward, function, over, environment, state, action, variables, only, requirement | p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD) |
 | Decision / output variable | normalized sample or downstream action; body terms: introduce, Evolution-driven, Universal, REward, Kit, Agent, EUREKA, novel | p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 3 (3 METHOD) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUC
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD) |
 | Success / guarantee | cross-domain transfer and task performance | p. 29 (Figure/Table caption), p. 22 (Figure/Table caption), p. 29 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUC
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 5 (3 METHOD), p. 2 (1 INTRODUCTION)): We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1.
+PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 5 (3 METHOD), p. 2 (1 INTRODUCTION)): We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1.
 
 - **p. 3 / 3 METHOD - extractive body cue:** EUREKA consists of three algorithmic components: 1) environment as context that enables zero-shot generation of executable rewards, 2) evolutionary search that iteratively proposes and refines ...
 - **p. 3 / 3 METHOD - extractive body cue:** We propose directly feeding the raw environment source code (without the reward code, if exists) as context.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 3 (3 METHOD
 
 ## Position in the Robotics Loop
 
-robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (1 INTRODUCTION), objective p. 4 (3 METHOD).
+- **Evidence anchors reviewed:** problem p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (1 INTRODUCTION), objective p. 4 (3 METHOD).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** 2 PROBLEM SETTING AND DEFINITIONS The goal of reward design is to return a shaped reward function for a ground-truth reward function that may be difficult to optimize directly (e.g., ... (p. 3, 1 INTRODUCTION).
+- **Formulation-changing contribution:** We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1. (p. 2, 1 INTRODUCTION).
+- **Assumption/failure evidence:** This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

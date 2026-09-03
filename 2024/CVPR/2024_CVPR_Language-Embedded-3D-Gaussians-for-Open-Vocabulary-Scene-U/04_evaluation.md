@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Basic Setups - extractive PDF cue:** For a simultaneous evaluation of visual and semantic embedding quality, we select six scenes (excluding Stump) from the Mip-NeRF360 dataset [3] and manually annotate segmentation ...
-- **p. 6 / 5.2. Comparisons - extractive PDF cue:** Moreover, due to predetermined query categories during training, 3DOVS [26] shows poor performance in scenes with complex objects.
-- **p. 7 / 5.3. Open-vocabulary Query - extractive PDF cue:** We use a diverse range of vocabulary categories to identify objects in scenes, such as visual attribute terms like "green", and subjective adjectives like "cute".
-- **p. 7 / 5.2. Comparisons - extractive PDF cue:** In contrast, our use of the quantization scheme facilitates the incorporation of detailed semantics into complex 3D scenes with numerous 3D Gaussians, and concurrently achieves ...
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** Furthermore, integrating DINO features significantly improves the definition of object query boundaries.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** The load balancing loss, introduced during the quantization phase, results in a more utilized discrete feature space, facilitating the distinguish of objects with similar semantics, ...
-- **p. 6 / 5.1. Basic Setups - extractive PDF cue:** For the accuracy of language embedding, we measure the mean intersection over union (mIoU), mean pixel accuracy (mPA), mean precision (mP), and mean average precision ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view synthesis ...
+- **p. 6 / 5.1. Basic Setups - extractive body cue:** For a simultaneous evaluation of visual and semantic embedding quality, we select six scenes (excluding Stump) from the Mip-NeRF360 dataset [3] and manually annotate segmentation ...
+- **p. 6 / 5.2. Comparisons - extractive body cue:** Moreover, due to predetermined query categories during training, 3DOVS [26] shows poor performance in scenes with complex objects.
+- **p. 7 / 5.3. Open-vocabulary Query - extractive body cue:** We use a diverse range of vocabulary categories to identify objects in scenes, such as visual attribute terms like "green", and subjective adjectives like "cute".
+- **p. 7 / 5.2. Comparisons - extractive body cue:** In contrast, our use of the quantization scheme facilitates the incorporation of detailed semantics into complex 3D scenes with numerous 3D Gaussians, and concurrently achieves ...
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** Furthermore, integrating DINO features significantly improves the definition of object query boundaries.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** The load balancing loss, introduced during the quantization phase, results in a more utilized discrete feature space, facilitating the distinguish of objects with similar semantics, ...
+- **p. 6 / 5.1. Basic Setups - extractive body cue:** For the accuracy of language embedding, we measure the mean intersection over union (mIoU), mean pixel accuracy (mPA), mean precision (mP), and mean average precision ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view synthesis ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view ... | p. 1 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Basic Setups - extractive PDF cue:** For a simultaneous evaluation of visual and semantic embedding quality, we select six scenes (excluding Stump) from the Mip-NeRF360 dataset [3] and manually annotate segmentation ...
-- **p. 6 / 5.2. Comparisons - extractive PDF cue:** Moreover, due to predetermined query categories during training, 3DOVS [26] shows poor performance in scenes with complex objects.
-- **p. 7 / 5.3. Open-vocabulary Query - extractive PDF cue:** We use a diverse range of vocabulary categories to identify objects in scenes, such as visual attribute terms like "green", and subjective adjectives like "cute".
-- **p. 7 / 5.2. Comparisons - extractive PDF cue:** In contrast, our use of the quantization scheme facilitates the incorporation of detailed semantics into complex 3D scenes with numerous 3D Gaussians, and concurrently achieves ...
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** Furthermore, integrating DINO features significantly improves the definition of object query boundaries.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** The load balancing loss, introduced during the quantization phase, results in a more utilized discrete feature space, facilitating the distinguish of objects with similar semantics, ...
+- **p. 6 / 5.1. Basic Setups - extractive body cue:** For a simultaneous evaluation of visual and semantic embedding quality, we select six scenes (excluding Stump) from the Mip-NeRF360 dataset [3] and manually annotate segmentation ...
+- **p. 6 / 5.2. Comparisons - extractive body cue:** Moreover, due to predetermined query categories during training, 3DOVS [26] shows poor performance in scenes with complex objects.
+- **p. 7 / 5.3. Open-vocabulary Query - extractive body cue:** We use a diverse range of vocabulary categories to identify objects in scenes, such as visual attribute terms like "green", and subjective adjectives like "cute".
+- **p. 7 / 5.2. Comparisons - extractive body cue:** In contrast, our use of the quantization scheme facilitates the incorporation of detailed semantics into complex 3D scenes with numerous 3D Gaussians, and concurrently achieves ...
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** Furthermore, integrating DINO features significantly improves the definition of object query boundaries.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** The load balancing loss, introduced during the quantization phase, results in a more utilized discrete feature space, facilitating the distinguish of objects with similar semantics, ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view synthesis ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The training process for Language-embedded 3D Gaussians starts with initializing scenes following 3D Gaussian Splatting [20] and randomly initializing semantic features and setting ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison of our method with DFF [22], LeRF [21], 3DOVS [26]. mPA↑ mP↑ mIoU↑ mAP↑ Quantization w/o DINO 0.927
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results of ablation experiments. optimizes the scene's geometry and appearance with the same RGB loss following 3D Gaussian Splatting and en- ables ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Comparison of novel view synthesis and query relevance visualization. Left to right: Ground truth novel view synthesis, novel view images with relevance visualization ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6. The results show that embedding uncertainty with- out spatial smoothing of semantic features leads to subop- timal optimization. Conversely, using MLP solely for ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Visual quality comparison of novel view synthesis re- sults. Our method is able to recover more detailed geometry and appearance compared to other ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly improves ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view synthesis ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The training process for Language-embedded 3D Gaussians starts with initializing scenes following 3D Gaussian Splatting [20] and randomly initializing semantic features and setting ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of our method with DFF [22], LeRF [21], 3DOVS [26]. mPA↑ mP↑ mIoU↑ mAP↑ Quantization w/o DINO 0.927
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results of ablation experiments. optimizes the scene's geometry and appearance with the same RGB loss following 3D Gaussian Splatting and en- ables ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Comparison of novel view synthesis and query relevance visualization. Left to right: Ground truth novel view synthesis, novel view images with relevance visualization ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. The results show that embedding uncertainty with- out spatial smoothing of semantic features leads to subop- timal optimization. Conversely, using MLP solely for ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Visual quality comparison of novel view synthesis re- sults. Our method is able to recover more detailed geometry and appearance compared to other ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly improves ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For a simultaneous evaluation of visual and semantic embedding quality, we select six scenes (excluding Stump) from the Mip-NeRF360 dataset [3] and manually annotate ... | embodiment, simulator version and control stack | p. 6 (5.1. Basic Setups), p. 6 (5.2. Comparisons) |
 | Task/environment | Moreover, due to predetermined query categories during training, 3DOVS [26] shows poor performance in scenes with complex objects. | reset, timeout, object/scene variation | p. 6 (5.2. Comparisons), p. 7 (5.3. Open-vocabulary Query) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table 
 | Primary metric/result | Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / Method - extractive PDF cue:** After the phase of extracting dense semantic features, which takes about 30 minutes, our model can be trained on one RTX3090 GPU for about 1 ...
+- **p. 6 / Method - extractive body cue:** After the phase of extracting dense semantic features, which takes about 30 minutes, our model can be trained on one RTX3090 GPU for about 1 ...
 
 ## Generalization and Failure Cases
 
@@ -153,12 +153,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** These limitations might be overcome with more advanced visual-language models and native per-pixel semantic features.
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Although DINO features improve object boundary detection, they fall short in pinpointing fine-grained object geometries at high resolutions when using CLIP-derived semantics.
-- **p. 6 / 5.2. Comparisons - extractive PDF cue:** Specifically, DFF [22] fails to identify "asphalt ground" in scene "bicycle" and "flower" in scene "garden".
-- **p. 6 / 5.2. Comparisons - extractive PDF cue:** This may be caused by its use of LSeg [24], which is unstable to compute correct features in complex scenes.
+- **p. 8 / 6. Conclusion - extractive body cue:** These limitations might be overcome with more advanced visual-language models and native per-pixel semantic features.
+- **p. 8 / 6. Conclusion - extractive body cue:** Although DINO features improve object boundary detection, they fall short in pinpointing fine-grained object geometries at high resolutions when using CLIP-derived semantics.
+- **p. 6 / 5.2. Comparisons - extractive body cue:** Specifically, DFF [22] fails to identify "asphalt ground" in scene "bicycle" and "flower" in scene "garden".
+- **p. 6 / 5.2. Comparisons - extractive body cue:** This may be caused by its use of LSeg [24], which is unstable to compute correct features in complex scenes.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Basic Setups), p. 6 (5.2. Comparisons), p. 7 (5.3. Open-vocabulary Query), p. 7 (5.2. Comparisons), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), metrics p. 6 (5.1. Basic Setups), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 7 (5.4. Ablation Study), baselines p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), p. 6 (5.2. Comparisons), p. 7 (5.4. Ablation Study), results p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 4 (Figure/Table caption), p. 6 (5.2. Comparisons).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Basic Setups), p. 6 (5.2. Comparisons), p. 7 (5.3. Open-vocabulary Query), p. 7 (5.2. Comparisons), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), metrics p. 6 (5.1. Basic Setups), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 7 (5.4. Ablation Study), baselines p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), p. 6 (5.2. Comparisons), p. 7 (5.4. Ablation Study), results p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 4 (Figure/Table caption), p. 6 (5.2. Comparisons).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

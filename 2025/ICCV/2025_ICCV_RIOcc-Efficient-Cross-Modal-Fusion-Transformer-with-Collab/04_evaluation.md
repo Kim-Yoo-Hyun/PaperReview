@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 3 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Dataset and Metrics - extractive PDF cue:** Both datasets inherit the data format of nuScenes, containing 700 training scenes and 150 validation scenes, with annotations for 17 categories.
-- **p. 6 / 4.1. Dataset and Metrics - extractive PDF cue:** Similar to previous works [29, 31, 47, 52], we conducted extensive experiments based on the nuScenes dataset.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** For the LiDAR branch, we voxelize 10 LiDAR sweeps and employ a voxel encoder for the nuScenes dataset.
-- **p. 7 / 4.1. Dataset and Metrics - extractive PDF cue:** RIOcc Images LiDAR GT M-CONet 可视化：OCC3D-nuScenes F F_L F_R
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. The additional qualitative comparisons results between RIOcc and M-CONet. The red box highlights the effectiveness in dealing with distant and occluded targets. discretization ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points through ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Overview of Deformable Dual-Attention (DDA), which reduces the disparity between LiDAR and Camera BEV fea- tures and enhances scene understanding. features and utilizes ...
+- **p. 6 / 4.1. Dataset and Metrics - extractive body cue:** Both datasets inherit the data format of nuScenes, containing 700 training scenes and 150 validation scenes, with annotations for 17 categories.
+- **p. 6 / 4.1. Dataset and Metrics - extractive body cue:** Similar to previous works [29, 31, 47, 52], we conducted extensive experiments based on the nuScenes dataset.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** For the LiDAR branch, we voxelize 10 LiDAR sweeps and employ a voxel encoder for the nuScenes dataset.
+- **p. 7 / 4.1. Dataset and Metrics - extractive body cue:** RIOcc Images LiDAR GT M-CONet 可视化：OCC3D-nuScenes F F_L F_R
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. The additional qualitative comparisons results between RIOcc and M-CONet. The red box highlights the effectiveness in dealing with distant and occluded targets. discretization ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points through ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Overview of Deformable Dual-Attention (DDA), which reduces the disparity between LiDAR and Camera BEV fea- tures and enhances scene understanding. features and utilizes ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 3 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 1. Comparison between OpenOccupancy and the pro- posed RIOcc. Instead of processing voxel features like OpenOc- cupancy, we choose BEV features to achieve ... | p. 1 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points ... | p. 3 (Figure/Table caption) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 3 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Dataset and Metrics - extractive PDF cue:** Both datasets inherit the data format of nuScenes, containing 700 training scenes and 150 validation scenes, with annotations for 17 categories.
-- **p. 6 / 4.1. Dataset and Metrics - extractive PDF cue:** Similar to previous works [29, 31, 47, 52], we conducted extensive experiments based on the nuScenes dataset.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** For the LiDAR branch, we voxelize 10 LiDAR sweeps and employ a voxel encoder for the nuScenes dataset.
-- **p. 7 / 4.1. Dataset and Metrics - extractive PDF cue:** RIOcc Images LiDAR GT M-CONet 可视化：OCC3D-nuScenes F F_L F_R
+- **p. 6 / 4.1. Dataset and Metrics - extractive body cue:** Both datasets inherit the data format of nuScenes, containing 700 training scenes and 150 validation scenes, with annotations for 17 categories.
+- **p. 6 / 4.1. Dataset and Metrics - extractive body cue:** Similar to previous works [29, 31, 47, 52], we conducted extensive experiments based on the nuScenes dataset.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** For the LiDAR branch, we voxelize 10 LiDAR sweeps and employ a voxel encoder for the nuScenes dataset.
+- **p. 7 / 4.1. Dataset and Metrics - extractive body cue:** RIOcc Images LiDAR GT M-CONet 可视化：OCC3D-nuScenes F F_L F_R
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison between OpenOccupancy and the pro- posed RIOcc. Instead of processing voxel features like OpenOc- cupancy, we choose BEV features to achieve higher ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points through ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The schema of Dual-branch Pooling (DBP). LiDAR feature representation is improved by adaptively highlighting im- portant semantic channels and significant geometric regions. hance ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Overview of Deformable Dual-Attention (DDA), which reduces the disparity between LiDAR and Camera BEV fea- tures and enhances scene understanding. features and utilizes ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. 3D Occupancy prediction performance on the Occ3D-nuScenes dataset. * means the performance using the camera mask during training. C, L, and R represent ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. 3D Occupancy prediction performance on nuScenes-Occupancy validation set. C represents camera and L represents LiDAR.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. The additional qualitative comparisons results between RIOcc and M-CONet. The red box highlights the effectiveness in dealing with distant and occluded targets. discretization ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between OpenOccupancy and the pro- posed RIOcc. Instead of processing voxel features like OpenOc- cupancy, we choose BEV features to achieve higher ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points through ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The schema of Dual-branch Pooling (DBP). LiDAR feature representation is improved by adaptively highlighting im- portant semantic channels and significant geometric regions. hance ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Overview of Deformable Dual-Attention (DDA), which reduces the disparity between LiDAR and Camera BEV fea- tures and enhances scene understanding. features and utilizes ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. 3D Occupancy prediction performance on the Occ3D-nuScenes dataset. * means the performance using the camera mask during training. C, L, and R represent ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. 3D Occupancy prediction performance on nuScenes-Occupancy validation set. C represents camera and L represents LiDAR.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. The additional qualitative comparisons results between RIOcc and M-CONet. The red box highlights the effectiveness in dealing with distant and occluded targets. discretization ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Both datasets inherit the data format of nuScenes, containing 700 training scenes and 150 validation scenes, with annotations for 17 categories. | embodiment, simulator version and control stack | p. 6 (4.1. Dataset and Metrics), p. 6 (4.1. Dataset and Metrics) |
 | Task/environment | Similar to previous works [29, 31, 47, 52], we conducted extensive experiments based on the nuScenes dataset. | reset, timeout, object/scene variation | p. 6 (4.1. Dataset and Metrics), p. 7 (4.2. Implementation Details) |
@@ -115,12 +115,12 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 3 (Figure/Table 
 | Primary metric/result | Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points ... | numeric claim only at cited anchor | p. 3 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Dataset and Metrics - extractive PDF cue:** The evaluation range for OpenOccupancy is [-51.2 m, 51.2 m] in the X and Y directions, and [-3 m, 5 m] in the Z direction, ...
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** For the camera branch, we use ResNet50 pretrained on ImageNet as the image backbone, and the input image size is cropped to 256×704.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** Training is conducted on four NVIDIA 3090 GPUs with a batch size of 4, for a total of 24 epochs.
-- **p. 4 / 3.3. Dual-branch Pooling - extractive PDF cue:** The features outputted from the Grid-wise Attention can be represented as: F_{ g rid}=\si gma ( R eLU{ ( f ^{7 \times 7}(F_{A v g}^{\prime ...
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** For the camera branch, we use ResNet50 pretrained on ImageNet as the image backbone, and the input image size is cropped to 256×704.
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** Training is conducted on four NVIDIA 3090 GPUs with a batch size of 4, for a total of 24 epochs.
+- **p. 6 / 4.1. Dataset and Metrics - extractive body cue:** The evaluation range for OpenOccupancy is [-51.2 m, 51.2 m] in the X and Y directions, and [-3 m, 5 m] in the Z direction, ...
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** For the camera branch, we use ResNet50 pretrained on ImageNet as the image backbone, and the input image size is cropped to 256×704.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** Training is conducted on four NVIDIA 3090 GPUs with a batch size of 4, for a total of 24 epochs.
+- **p. 4 / 3.3. Dual-branch Pooling - extractive body cue:** The features outputted from the Grid-wise Attention can be represented as: F_{ g rid}=\si gma ( R eLU{ ( f ^{7 \times 7}(F_{A v g}^{\prime ...
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** For the camera branch, we use ResNet50 pretrained on ImageNet as the image backbone, and the input image size is cropped to 256×704.
+- **p. 7 / 4.2. Implementation Details - extractive body cue:** Training is conducted on four NVIDIA 3090 GPUs with a batch size of 4, for a total of 24 epochs.
 
 ## Generalization and Failure Cases
 
@@ -153,9 +153,9 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 3 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to obtain richer structure and details. noise impact, ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Dataset and Metrics), p. 6 (4.1. Dataset and Metrics), p. 7 (4.2. Implementation Details), p. 7 (4.1. Dataset and Metrics), metrics p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (4.2. Implementation Details), baselines p. 6 (4.1. Dataset and Metrics), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Dataset and Metrics), p. 6 (4.1. Dataset and Metrics), p. 7 (4.2. Implementation Details), p. 7 (4.1. Dataset and Metrics), metrics p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (4.2. Implementation Details), baselines p. 6 (4.1. Dataset and Metrics), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

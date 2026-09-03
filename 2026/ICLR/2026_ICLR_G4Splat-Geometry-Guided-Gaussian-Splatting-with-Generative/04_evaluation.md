@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kdPmsMVhZf; PDF retrieval source: https://openreview.net/pdf/b60a6180eda7d6c25e55daf8272250755abe4e62.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kdPmsMVhZf; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247273. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 SETTINGS Datasets We evaluate our method on both synthetic and real-world datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** As the Mip-NeRF 360 dataset lacks ground-truth meshes, we evaluate only the rendering performance for those scenes; for the remaining three datasets, we report the ...
-- **p. 9 / 4.2 RESULTS - extractive PDF cue:** In addition to achieving superior results on indoor scenes, as shown in the quantitative and qualitative results on the Mip-NeRF 360 dataset (Tables 2 and ...
-- **p. 26 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** We present results for all 5 outdoor scenes in the dataset.
-- **p. 9 / 4.2 RESULTS - extractive PDF cue:** 4 and A7), our method also outperforms the baselines on outdoor, non-Manhattan, and less structured scenes.
-- **p. 10 / 4.2 RESULTS - extractive PDF cue:** Experiments on the Mip-NeRF 360 dataset validate these advantages.
-- **p. 10 / 4.2 RESULTS - extractive PDF cue:** Furthermore, our method maintains robust performance in non-planar or less structured scenes because it is a strict enhancement of the base model.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 4.1 SETTINGS Datasets We evaluate our method on both synthetic and real-world datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As the Mip-NeRF 360 dataset lacks ground-truth meshes, we evaluate only the rendering performance for those scenes; for the remaining three datasets, we report the ...
+- **p. 9 / 4.2 RESULTS - extractive body cue:** In addition to achieving superior results on indoor scenes, as shown in the quantitative and qualitative results on the Mip-NeRF 360 dataset (Tables 2 and ...
+- **p. 26 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** We present results for all 5 outdoor scenes in the dataset.
+- **p. 9 / 4.2 RESULTS - extractive body cue:** 4 and A7), our method also outperforms the baselines on outdoor, non-Manhattan, and less structured scenes.
+- **p. 10 / 4.2 RESULTS - extractive body cue:** Experiments on the Mip-NeRF 360 dataset validate these advantages.
+- **p. 10 / 4.2 RESULTS - extractive body cue:** Furthermore, our method maintains robust performance in non-planar or less structured scenes because it is a strict enhancement of the base model.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method significantly outperforms all baselines across both reconstruction and rendering metrics. | p. 8 (4 EXPERIMENTS) |
 | 4.2 RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Adding plane-aware geometry modeling (PM), either alone or in combination with generative prior (GP), significantly improves geometry reconstruction. | p. 10 (4.2 RESULTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 SETTINGS Datasets We evaluate our method on both synthetic and real-world datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** As the Mip-NeRF 360 dataset lacks ground-truth meshes, we evaluate only the rendering performance for those scenes; for the remaining three datasets, we report the ...
-- **p. 9 / 4.2 RESULTS - extractive PDF cue:** In addition to achieving superior results on indoor scenes, as shown in the quantitative and qualitative results on the Mip-NeRF 360 dataset (Tables 2 and ...
-- **p. 26 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** We present results for all 5 outdoor scenes in the dataset.
-- **p. 9 / 4.2 RESULTS - extractive PDF cue:** 4 and A7), our method also outperforms the baselines on outdoor, non-Manhattan, and less structured scenes.
-- **p. 10 / 4.2 RESULTS - extractive PDF cue:** Experiments on the Mip-NeRF 360 dataset validate these advantages.
-- **p. 10 / 4.2 RESULTS - extractive PDF cue:** Furthermore, our method maintains robust performance in non-planar or less structured scenes because it is a strict enhancement of the base model.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 4.1 SETTINGS Datasets We evaluate our method on both synthetic and real-world datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As the Mip-NeRF 360 dataset lacks ground-truth meshes, we evaluate only the rendering performance for those scenes; for the remaining three datasets, we report the ...
+- **p. 9 / 4.2 RESULTS - extractive body cue:** In addition to achieving superior results on indoor scenes, as shown in the quantitative and qualitative results on the Mip-NeRF 360 dataset (Tables 2 and ...
+- **p. 26 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** We present results for all 5 outdoor scenes in the dataset.
+- **p. 9 / 4.2 RESULTS - extractive body cue:** 4 and A7), our method also outperforms the baselines on outdoor, non-Manhattan, and less structured scenes.
+- **p. 10 / 4.2 RESULTS - extractive body cue:** Experiments on the Mip-NeRF 360 dataset validate these advantages.
+- **p. 10 / 4.2 RESULTS - extractive body cue:** Furthermore, our method maintains robust performance in non-planar or less structured scenes because it is a strict enhancement of the base model.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: We propose G4SPLAT, which integrates accurate geometry guidance with generative prior to enhance 3D scene reconstruction. Our method significantly improves geometry and appearance ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of G4SPLAT. For each training loop (Section 3.4), we first extract global 3D planes from all training views and compute plane-aware depth ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Visualization of intermediate results. Our method addresses key issues in prior ap- proaches: (a) MAtCha produces noticeable errors in non-overlapping regions (highlighted by ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparison. Our approach achieves better appearance and geometry recon- struction with fewer Gaussian floaters in both observed and unobserved regions. The second ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison from 5 input views. Our method significantly outperforms all baselines across both reconstruction and rendering metrics. Top-3 results are highlighted as ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Any-view scene reconstruction. Our method demonstrates strong generalization across diverse scenarios, including indoor and outdoor scenes, unposed scenes and even single-view scenes. 4.2
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative comparison from 9 input views on Mip-NeRF 360.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation study. GP PM PP Reconstruction Rendering CD↓ F-Score↑ NC↑ PSNR↑
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose G4SPLAT, which integrates accurate geometry guidance with generative prior to enhance 3D scene reconstruction. Our method significantly improves geometry and appearance ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of G4SPLAT. For each training loop (Section 3.4), we first extract global 3D planes from all training views and compute plane-aware depth ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Visualization of intermediate results. Our method addresses key issues in prior ap- proaches: (a) MAtCha produces noticeable errors in non-overlapping regions (highlighted by ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison. Our approach achieves better appearance and geometry recon- struction with fewer Gaussian floaters in both observed and unobserved regions. The second ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison from 5 input views. Our method significantly outperforms all baselines across both reconstruction and rendering metrics. Top-3 results are highlighted as ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Any-view scene reconstruction. Our method demonstrates strong generalization across diverse scenarios, including indoor and outdoor scenes, unposed scenes and even single-view scenes. 4.2
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Quantitative comparison from 9 input views on Mip-NeRF 360.
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 3: Ablation study. GP PM PP Reconstruction Rendering CD↓ F-Score↑ NC↑ PSNR↑
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from ... | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
 | Task/environment | 4.1 SETTINGS Datasets We evaluate our method on both synthetic and real-world datasets. | reset, timeout, object/scene variation | p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
@@ -110,8 +110,8 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 |---|---|---|
 | In addition, we implement a variant of 2DGS augmented with the See3D (Ma et al., 2025). | component/input/data sensitivity | p. 8 (4 EXPERIMENTS) |
 | 4.3 ABLATION STUDIES We conduct ablation experiments on Replica dataset to evaluate the contributions of the generative prior (GP), plane-aware geometry modeling (PM), and ... | component/input/data sensitivity | p. 9 (4.2 RESULTS) |
-| Published as a conference paper at ICLR 2026 Table 3: Ablation study. | component/input/data sensitivity | p. 10 (4.2 RESULTS) |
 | Our accelerated variant, Ours (DS), which downsamples the initial Gaussians, substantially reduces runtime while still outperforming all baselines. | component/input/data sensitivity | p. 10 (4.2 RESULTS) |
+| Table 3: Ablation study. GP PM PP Reconstruction Rendering CD↓ F-Score↑ NC↑ PSNR↑ | component/input/data sensitivity | p. 10 (Figure/Table caption) |
 | In addition, we evaluate a variant with a downsampled number of Gaussians, which further accelerates training while maintaining competitive performance, as reported in the ... | component/input/data sensitivity | p. 24 (C.7 IMPLEMENTATION DETAILS) |
 | Figure 4: Qualitative comparison. Our approach achieves better appearance and geometry recon- struction with fewer Gaussian floaters in both observed and unobserved regions. The ... | component/input/data sensitivity | p. 7 (Figure/Table caption) |
 
@@ -123,11 +123,11 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 | Primary metric/result | Adding plane-aware geometry modeling (PM), either alone or in combination with generative prior (GP), significantly improves geometry reconstruction. | numeric claim only at cited anchor | p. 10 (4.2 RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
-- **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** We implement our model in PyTorch (Paszke et al., 2019) and conduct all experiments on a single NVIDIA A100 GPU, except for the dense-view reconstruction ...
-- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
-- **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** We implement our model in PyTorch (Paszke et al., 2019) and conduct all experiments on a single NVIDIA A100 GPU, except for the dense-view reconstruction ...
-- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
+- **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** We implement our model in PyTorch (Paszke et al., 2019) and conduct all experiments on a single NVIDIA A100 GPU, except for the dense-view reconstruction ...
+- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
+- **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** We implement our model in PyTorch (Paszke et al., 2019) and conduct all experiments on a single NVIDIA A100 GPU, except for the dense-view reconstruction ...
+- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
 
 ## Generalization and Failure Cases
 
@@ -135,10 +135,10 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 |---|---|---|
 | body limitation/failure cue | Additionally, we present more experimental results in Appendix A, failure cases and discuss the method's limitations in Appendix D. | p. 7 (4 EXPERIMENTS) |
 | body limitation/failure cue | D FAILURE CASES AND LIMITATIONS In this section, we present and analyze representative failure cases. | p. 24 (C.7 IMPLEMENTATION DETAILS) |
-| body limitation/failure cue | Published as a conference paper at ICLR 2026 Input View Novel View Rendering Novel View Geometry (a) (b) Input View Novel View Rendering Novel ... | p. 25 (C.7 IMPLEMENTATION DETAILS) |
 | body limitation/failure cue | In contrast, other methods that leverage generative prior exhibit notable limitations. | p. 9 (4.2 RESULTS) |
 | body limitation/failure cue | For example, Difix3D+ attains relatively good quality in observed regions but fails to handle unobserved areas. | p. 9 (4.2 RESULTS) |
 | body limitation/failure cue | This indicates that directly introducing generative prior fails to perform as expected and leads to shape-appearance ambiguities. | p. 10 (4.2 RESULTS) |
+| body limitation/failure cue | This stems from our design that applies tailored supervision on regions according to their geometric characteristics: for planar regions, reconstruction is improved by leveraging ... | p. 10 (4.2 RESULTS) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -165,14 +165,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Additionally, we present more experimental results in Appendix A, failure cases and discuss the method's limitations in Appendix D.
-- **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** D FAILURE CASES AND LIMITATIONS In this section, we present and analyze representative failure cases.
-- **p. 25 / C.7 IMPLEMENTATION DETAILS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Input View Novel View Rendering Novel View Geometry (a) (b) Input View Novel View Rendering Novel View ...
-- **p. 9 / 4.2 RESULTS - extractive PDF cue:** In contrast, other methods that leverage generative prior exhibit notable limitations.
-- **p. 9 / 4.2 RESULTS - extractive PDF cue:** For example, Difix3D+ attains relatively good quality in observed regions but fails to handle unobserved areas.
-- **p. 10 / 4.2 RESULTS - extractive PDF cue:** This indicates that directly introducing generative prior fails to perform as expected and leads to shape-appearance ambiguities.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Additionally, we present more experimental results in Appendix A, failure cases and discuss the method's limitations in Appendix D.
+- **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** D FAILURE CASES AND LIMITATIONS In this section, we present and analyze representative failure cases.
+- **p. 9 / 4.2 RESULTS - extractive body cue:** In contrast, other methods that leverage generative prior exhibit notable limitations.
+- **p. 9 / 4.2 RESULTS - extractive body cue:** For example, Difix3D+ attains relatively good quality in observed regions but fails to handle unobserved areas.
+- **p. 10 / 4.2 RESULTS - extractive body cue:** This indicates that directly introducing generative prior fails to perform as expected and leads to shape-appearance ambiguities.
+- **p. 10 / 4.2 RESULTS - extractive body cue:** This stems from our design that applies tailored supervision on regions according to their geometric characteristics: for planar regions, reconstruction is improved by leveraging accurate ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 26 (C.7 IMPLEMENTATION DETAILS), p. 9 (4.2 RESULTS), metrics p. 27 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 5 (Figure/Table caption), baselines p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (4.2 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 26 (C.7 IMPLEMENTATION DETAILS), p. 9 (4.2 RESULTS), metrics p. 27 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 5 (Figure/Table caption), baselines p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (4.2 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

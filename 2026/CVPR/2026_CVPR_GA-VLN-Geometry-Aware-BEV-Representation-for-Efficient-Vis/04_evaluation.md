@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our approach on standard continuous-environment VLN-CE [15] benchmarks: R2R-CE [3], RxR-CE [16], and NavRAG-CE [38] val unseen split in the Habitat simulator [25].
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE [16] ...
-- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive PDF cue:** Comparison with state-of-the-art VLN methods on R2R-CE, RxR-CE, and NavRAG-CE val unseen benchmarks. "System" groups methods into modular planners, 3D end-to-end agents, and Image-based MLLM ...
-- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive PDF cue:** All the ablation and analysis experiments in this section and the following sections are conducted on the R2R-CE val unseen split.
-- **p. 8 / 4.5. Real-World Robot Experiments - extractive PDF cue:** Detailed hardware setups and additional examples are provided in the Supplementary Material.
-- **p. 8 / 4.5. Real-World Robot Experiments - extractive PDF cue:** To validate the zero-shot generalizability of GA-VLN, we deploy it on a physical Hello Robot Stretch 3 in a realworld room.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** The token numbers represent the average number of visual tokens required per navigation step, computed over 121 sampled navigation trajectories across 61 training scenes.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Crucially, the consistent relative improvements observed both with the SRDF dataset (Table 2) and without it (Table 3) confirm that GA-VLN provides a robust spatial ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our approach on standard continuous-environment VLN-CE [15] benchmarks: R2R-CE [3], RxR-CE [16], and NavRAG-CE [38] val unseen split in the Habitat simulator [25].
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE [16] ...
+- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive body cue:** Comparison with state-of-the-art VLN methods on R2R-CE, RxR-CE, and NavRAG-CE val unseen benchmarks. "System" groups methods into modular planners, 3D end-to-end agents, and Image-based MLLM ...
+- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive body cue:** All the ablation and analysis experiments in this section and the following sections are conducted on the R2R-CE val unseen split.
+- **p. 8 / 4.5. Real-World Robot Experiments - extractive body cue:** Detailed hardware setups and additional examples are provided in the Supplementary Material.
+- **p. 8 / 4.5. Real-World Robot Experiments - extractive body cue:** To validate the zero-shot generalizability of GA-VLN, we deploy it on a physical Hello Robot Stretch 3 in a realworld room.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** The token numbers represent the average number of visual tokens required per navigation step, computed over 121 sampled navigation trajectories across 61 training scenes.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Crucially, the consistent relative improvements observed both with the SRDF dataset (Table 2) and without it (Table 3) confirm that GA-VLN provides a robust spatial ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | Navigation performance is measured using four standard metrics: Navigation Error (NE), Success Rate (SR), Oracle Success Rate (OSR), and Success weighted by Path Length ... | p. 5 (4.1. Experimental Setup) |
 | 4.2. Comparison with State-of-the-Art Methods | EMPIRICAL / REAL-ROBOT OR HARDWARE | Across most metrics on these benchmarks, our GA-VLN achieves the best overall performance, consistently surpassing previous Image-based MLLM frameworks [10, 39, 41, 42] and ... | p. 5 (4.2. Comparison with State-of-the-Art Methods) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our approach on standard continuous-environment VLN-CE [15] benchmarks: R2R-CE [3], RxR-CE [16], and NavRAG-CE [38] val unseen split in the Habitat simulator [25].
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE [16] ...
-- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive PDF cue:** Comparison with state-of-the-art VLN methods on R2R-CE, RxR-CE, and NavRAG-CE val unseen benchmarks. "System" groups methods into modular planners, 3D end-to-end agents, and Image-based MLLM ...
-- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive PDF cue:** All the ablation and analysis experiments in this section and the following sections are conducted on the R2R-CE val unseen split.
-- **p. 8 / 4.5. Real-World Robot Experiments - extractive PDF cue:** Detailed hardware setups and additional examples are provided in the Supplementary Material.
-- **p. 8 / 4.5. Real-World Robot Experiments - extractive PDF cue:** To validate the zero-shot generalizability of GA-VLN, we deploy it on a physical Hello Robot Stretch 3 in a realworld room.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** The token numbers represent the average number of visual tokens required per navigation step, computed over 121 sampled navigation trajectories across 61 training scenes.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Crucially, the consistent relative improvements observed both with the SRDF dataset (Table 2) and without it (Table 3) confirm that GA-VLN provides a robust spatial ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our approach on standard continuous-environment VLN-CE [15] benchmarks: R2R-CE [3], RxR-CE [16], and NavRAG-CE [38] val unseen split in the Habitat simulator [25].
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE [16] ...
+- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive body cue:** Comparison with state-of-the-art VLN methods on R2R-CE, RxR-CE, and NavRAG-CE val unseen benchmarks. "System" groups methods into modular planners, 3D end-to-end agents, and Image-based MLLM ...
+- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive body cue:** All the ablation and analysis experiments in this section and the following sections are conducted on the R2R-CE val unseen split.
+- **p. 8 / 4.5. Real-World Robot Experiments - extractive body cue:** Detailed hardware setups and additional examples are provided in the Supplementary Material.
+- **p. 8 / 4.5. Real-World Robot Experiments - extractive body cue:** To validate the zero-shot generalizability of GA-VLN, we deploy it on a physical Hello Robot Stretch 3 in a realworld room.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** The token numbers represent the average number of visual tokens required per navigation step, computed over 121 sampled navigation trajectories across 61 training scenes.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Crucially, the consistent relative improvements observed both with the SRDF dataset (Table 2) and without it (Table 3) confirm that GA-VLN provides a robust spatial ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of different representations for VLN. (A) Dense image-based representations contain heavy token redun- dancy and lack explicit spatial structure. (B) Our Geometry-Aware ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed Geometry-Aware Vision-Language Navigation (GA-VLN) framework. Given RGB-D current and historical front views, our method constructs a Geometry-Aware BEV (GA-BEV) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison with state-of-the-art VLN methods on R2R-CE, RxR-CE, and NavRAG-CE val unseen benchmarks. "System" groups methods into modular planners, 3D end-to-end agents, and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study of Geometry-Aware BEV representation and efficiency comparison per inference step.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Analysis of token efficiency and spatial resolution trade-offs of GA-BEV. The experiments compare different visual representations (rows 1-3), BEV grid size (rows 4-5), ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. An example of the GA-VLN real-world result.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Robustness to Sensor Noise on R2R-CE val unseen. Noise N(0, σ2) NE↓ OSR↑ SR↑ SPL↑ w/o Noise
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of different representations for VLN. (A) Dense image-based representations contain heavy token redun- dancy and lack explicit spatial structure. (B) Our Geometry-Aware ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed Geometry-Aware Vision-Language Navigation (GA-VLN) framework. Given RGB-D current and historical front views, our method constructs a Geometry-Aware BEV (GA-BEV) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison with state-of-the-art VLN methods on R2R-CE, RxR-CE, and NavRAG-CE val unseen benchmarks. "System" groups methods into modular planners, 3D end-to-end agents, and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation study of Geometry-Aware BEV representation and efficiency comparison per inference step.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Analysis of token efficiency and spatial resolution trade-offs of GA-BEV. The experiments compare different visual representations (rows 1-3), BEV grid size (rows 4-5), ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. An example of the GA-VLN real-world result.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Robustness to Sensor Noise on R2R-CE val unseen. Noise N(0, σ2) NE↓ OSR↑ SR↑ SPL↑ w/o Noise
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our approach on standard continuous-environment VLN-CE [15] benchmarks: R2R-CE [3], RxR-CE [16], and NavRAG-CE [38] val unseen split in the Habitat simulator ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup) |
 | Task/environment | Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE ... | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Comparison with State-of-the-Art Methods) |
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 | Primary metric/result | Across most metrics on these benchmarks, our GA-VLN achieves the best overall performance, consistently surpassing previous Image-based MLLM frameworks [10, 39, 41, 42] and ... | numeric claim only at cited anchor | p. 5 (4.2. Comparison with State-of-the-Art Methods) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE [16] ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For BEV representation settings, grid cell size ∆is 0.25 meters, BEV range is [-10 meters, 10 meters].
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** All reported results are obtained using models pretrained for 2 epochs.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Incorporating 3D-geometric priors via VGGT (Row #3) further pushes the SR to 53.56% with a manageable 514 tokens.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Incorporating 3D-geometric priors via VGGT (Row #3) further pushes the SR to 53.56% with a manageable 514 tokens.
-- **p. 8 / 4.6. Robustness to Noise - extractive PDF cue:** 4 evaluates GA-VLN under noise levels modeled after real-world error profiles of Stretch 3 robot.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Our model is trained on a combination of navigation datasets collected in MP3D [5] and HM3D [23] environments, including: R2R-CE [3] (10,819 trajectories), RxR-CE [16] ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For BEV representation settings, grid cell size ∆is 0.25 meters, BEV range is [-10 meters, 10 meters].
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** All reported results are obtained using models pretrained for 2 epochs.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Incorporating 3D-geometric priors via VGGT (Row #3) further pushes the SR to 53.56% with a manageable 514 tokens.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Incorporating 3D-geometric priors via VGGT (Row #3) further pushes the SR to 53.56% with a manageable 514 tokens.
+- **p. 8 / 4.6. Robustness to Noise - extractive body cue:** 4 evaluates GA-VLN under noise levels modeled after real-world error profiles of Stretch 3 robot.
 
 ## Generalization and Failure Cases
 
@@ -164,13 +164,13 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** An overly fine grid (row #4) fails to effectively compress redundant features, while an overly coarse grid (row #5) leads to the loss of important ...
-- **p. 8 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Robustness to Sensor Noise on R2R-CE val unseen.
-- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive PDF cue:** Their combination strengthens spatial reasoning, enhances data efficiency, and yields a more robust navigation representation.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Crucially, these consistent relative improvements across different data scales confirm that GAVLN provides a robust spatial inductive bias independent of data volume.
-- **p. 8 / 4.4. Design Analysis of GA-BEV - extractive PDF cue:** Noise N(0, σ2) NE↓ OSR↑ SR↑ SPL↑ w/o Noise - 4.80 67.59 60.96 55.19 Depth σ = 0.05m 4.82 65.63 59.11 54.25 Pose σ = ...
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** An overly fine grid (row #4) fails to effectively compress redundant features, while an overly coarse grid (row #5) leads to the loss of important ...
+- **p. 8 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Robustness to Sensor Noise on R2R-CE val unseen.
+- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive body cue:** Their combination strengthens spatial reasoning, enhances data efficiency, and yields a more robust navigation representation.
+- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Crucially, these consistent relative improvements across different data scales confirm that GAVLN provides a robust spatial inductive bias independent of data volume.
+- **p. 8 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Noise N(0, σ2) NE↓ OSR↑ SR↑ SPL↑ w/o Noise - 4.80 67.59 60.96 55.19 Depth σ = 0.05m 4.82 65.63 59.11 54.25 Pose σ = ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 8 (4.5. Real-World Robot Experiments), p. 8 (4.5. Real-World Robot Experiments), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 7 (4.4. Design Analysis of GA-BEV), p. 8 (Figure/Table caption), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 8 (4.4. Design Analysis of GA-BEV), baselines p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 5 (4.1. Experimental Setup), p. 5 (4.2. Comparison with State-of-the-Art Methods), p. 7 (4.4. Design Analysis of GA-BEV), p. 8 (4.5. Real-World Robot Experiments), results p. 5 (4.1. Experimental Setup), p. 5 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 7 (4.4. Design Analysis of GA-BEV), p. 7 (4.4. Design Analysis of GA-BEV).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 8 (4.5. Real-World Robot Experiments), p. 8 (4.5. Real-World Robot Experiments), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 7 (4.4. Design Analysis of GA-BEV), p. 8 (Figure/Table caption), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 8 (4.4. Design Analysis of GA-BEV), baselines p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 5 (4.1. Experimental Setup), p. 5 (4.2. Comparison with State-of-the-Art Methods), p. 7 (4.4. Design Analysis of GA-BEV), p. 8 (4.5. Real-World Robot Experiments), results p. 5 (4.1. Experimental Setup), p. 5 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 7 (4.4. Design Analysis of GA-BEV), p. 7 (4.4. Design Analysis of GA-BEV).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

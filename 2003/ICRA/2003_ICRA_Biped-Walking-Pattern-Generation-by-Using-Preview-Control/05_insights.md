@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 The preview control is made of three terms, the integral action on the tracking error, the state feedback and the preview action using the future reference.를 (7) 2.2 ZMP equations and cart-table model To control the ZMP, it should be the outputs of the system while it appears as the inputs of the 3D-LIPM in the last section.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 0 2 4 6 8 0 0.5 1 x [m] ZMP multibody ZMP cart-table CoM 0 2 4 6 8 -0.1 -0.05 0 0.05 0.1 y [m] time [s] ZMP multibody ZMP ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted pendulum based approaches.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The preview control is made of three terms, the integral action on the tracking error, the state feedback and the preview action using the future reference. (p. 4, 1 Introduction).
+- **Paper-specific mechanism:** In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted pendulum based approaches. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as an inverse problem When we represent ... (p. 3, 1 Introduction); the relevant task/metric cue is With the given reference of ZMP pref(k), the performance index is specified as J = ∞  i=k {Qee(i)2+∆xT (i)Qx∆x(i)+R∆u2(i)}, (14) where e(i) ≡p(i)-pref(i) is servo error, Qe, R > ... (p. 4, 1 Introduction). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In this case, the resulted ZMP (bold line) does not 1623 (p. 4, 1 Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as an inverse problem When we represent a robot ....
-3. Compare against the body-reported baseline or a matched simpler baseline: baseline not recovered.
-4. Report the body metric and its denominator/aggregation: We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with good accuracy..
-5. Re-run the body-reported ablation/failure condition: 0 2 4 6 8 0 0.5 1 x [m] ZMP multibody ZMP cart-table CoM 0 2 4 6 8 -0.1 -0.05 0 0.05 0.1 y [m] time [s] ZMP multibody ZMP ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The preview control is made of three terms, the integral action on the tracking error, the state feedback and the preview action using the future reference. (p. 4, 1 Introduction); preserve the objective/update rule: (10) We can verify that this yields the same equation to Eq. (p. 2, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: 2 Dynamic Models of Biped Robot 2.1 3D Linear Inverted Pendulum Mode and Zero-moment point When we apply a constraint control to an inverted pendulum such that the mass should ... (p. 2, 1 Introduction).
+3. Compare against the reported or matched baseline: We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with good accuracy. (p. 4, 1 Introduction).
+4. Report the body metric with its denominator and aggregation: With the given reference of ZMP pref(k), the performance index is specified as J = ∞  i=k {Qee(i)2+∆xT (i)Qx∆x(i)+R∆u2(i)}, (14) where e(i) ≡p(i)-pref(i) is servo error, Qe, R > ... (p. 4, 1 Introduction).
+5. Re-run the reported ablation or stress/failure condition: We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with good accuracy. (p. 4, 1 Introduction); if none is reported, design one around: In this case, the resulted ZMP (bold line) does not 1623 (p. 4, 1 Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (1 Introduction); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 4 (1 Introduction), p. 4 (1 Introduction); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 3 (1 Introduction), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), and measure the boundary at p. 4 (1 Introduction), p. 4 (1 Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, novel, walking mechanism이 a matched simpler baseline 대비 We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) ...을 개선하고, 0 2 4 6 8 0 0.5 1 x [m] ZMP multibody ZMP cart-table CoM 0 ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The preview control is made of three terms, the integral action on the tracking error, the state feedback and the preview action ...), does the paper-specific mechanism (In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based ...) retain the reported evaluation outcome (With the given reference of ZMP pref(k), the performance index is specified as J = ∞  i=k ...) when tested against the paper's strongest explicit boundary (In this case, the resulted ZMP (bold line) does not 1623)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (With the given reference of ZMP pref(k), the performance index is specified as J = ∞  i=k ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted pendulum based approaches. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as an inverse problem When we represent ... (p. 3, 1 Introduction).
+- **Strongest explicit boundary:** In this case, the resulted ZMP (bold line) does not 1623 (p. 4, 1 Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

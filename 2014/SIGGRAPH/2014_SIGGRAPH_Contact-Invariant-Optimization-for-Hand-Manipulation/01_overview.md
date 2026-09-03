@@ -1,8 +1,10 @@
 # Contact-Invariant Optimization for Hand Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://homes.cs.washington.edu/~zoran/behavior-discovery.html.
-> PDF retrieval source: https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://homes.cs.washington.edu/~zoran/behavior-discovery.html.
+> PDF retrieval source: https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2014 / SIGGRAPH
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 In complex behaviors and in complex environments, however, it is difficult to know in advance what these contact sets should be and how they should change from one phase to the next.를 문제로 두고, At the core of our framework is the contact-invariant optimization (CIO) method we introduce here.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In complex behaviors and in complex environments, however, it is difficult to know in advance what these contact sets should be and how they should change from one phase to ... (p. 2, 1 Introduction).
+- **Actual contribution:** In this paper we present a step towards a more general yet fully automated framework for behavior synthesis, capable of produc (p. 1, 1 Introduction).
+- **Evaluation boundary:** Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object. (p. 6, 5 Results).
+- **Explicit failure boundary:** Another simplification we make is to penalize any relative velocity at contacting end effectors (see (2)), which results in trajectories that do not have any noticeable slipping. (p. 6, 5 Results).

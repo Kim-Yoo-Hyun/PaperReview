@@ -1,53 +1,75 @@
 # Insights — Dense Multimodal Alignment for Open-Vocabulary 3D Scene Understanding
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6612_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** In this work, we propose a Dense Multimodal Alignment (DMA) framework to densely co-embed different modalities into a common space for maximizing their synergistic benefits.
-- **Problem cue:** However, the annotation of large-scale 3D data is very costly , impeding the training of generalizable models for open-vocabulary scene understanding.
-- **Claim/result cue:** Our DMA(OpenSeg) using only 3D model for prediction outperforms OpenScene(OpenSeg)-2D3D by 5.4% mIoU at a significantly lower latency, wherein the mIoU (F) and mIoU (B) are improved by ...
+- **p. 2 / 1 Introduction - extractive body cue:** In order to leverage the synergistic benefits of multiple modalities for dense prediction tasks, we propose a dense multimodal alignment (DMA) strategy to co-embed 3D ...
+- **p. 4 / 3 Method - extractive body cue:** 1, we propose a dense multimodal alignment (DMA) framework for open-vocabulary 3D scene understanding, where we construct dense correspondences across 2D image pixels, 3D points ...
+- **p. 9 / 3 Method - extractive body cue:** By densely aligning these modalities in a shared space, our method can maximize the synergistic benefits among them and achieve outstanding segmentation performance without compromising ...
+- **p. 1 / 1 Introduction - extractive body cue:** Though many existing methods [9,10,20,29-31,41,46,58] have achieved significant advancements in recognizing closed-set categories for specific tasks, they fail to identify novel categories and other types ...
+- **p. 5 / 3 Method - extractive body cue:** Firstly, we use the image tagging foundation model such as RAM [23] to extract all possible categories from an image, and utilize category names and ...
+- **p. 7 / 3 Method - extractive body cue:** On one hand, we use the frozen CLIP visual encoder to ensure the intactness of image-text alignment, obtaining CLIP features f2D clip.
+- **p. 8 / 3 Method - extractive body cue:** Firstly, we extract 3D features for the point cloud by utilizing a 3D network, denoted as ε3D.
+- **Contribution anchor:** p. 2 (1 Introduction), p. 4 (3 Method), p. 9 (3 Method), p. 1 (1 Introduction), p. 5 (3 Method), p. 7 (3 Method)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1 Introduction - extractive body cue:** To build dense associations across different modalities, the primary bottleneck is how to obtain rich and reliable text descriptions without relying on manual labeling.
+- **p. 1 / 1 Introduction - extractive body cue:** Though many existing methods [9,10,20,29-31,41,46,58] have achieved significant advancements in recognizing closed-set categories for specific tasks, they fail to identify novel categories and other types ...
+- **p. 2 / 1 Introduction - extractive body cue:** On the other hand, by fine-tuning its mask head, we incorporate 3D structural priors into 2D features, better adapting the model to 3D dense tasks.
+- **p. 3 / 1 Introduction - extractive body cue:** Dense Multimodal Alignment 3 way, we can effectively unleash the potential of existing foundation VLMs and maximize the complementary effects of multiple modalities.
+- **p. 3 / 1 Introduction - extractive body cue:** (3) Finally, to improve the segmentation ability without compromising the open-vocabulary ability, we integrate 3D priors into 2D features by fine-tuning the 2D mask head ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and then (2) reduce the tag noise with GPT. Finally, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Segmentation results using 2D and 3D models. 2D model has advantages in segmenting background objects (in blue boxes), while 3D model is more ...
+- **Boundary to test:** Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and then (2) reduce the tag noise with GPT. Finally, scene-level tags are generated by (3) multi-view ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In order to leverage the synergistic benefits of multiple modalities for dense prediction tasks, we propose a dense multimodal alignment (DMA) strategy to co-embed 3D points, image pixels, and text strings into ... | p. 2 (1 Introduction), p. 4 (3 Method) |
+| Reported outcome | Our DMA(OpenSeg) using only 3D model for prediction outperforms OpenScene(OpenSeg)-2D3D by 5.4% mIoU at a significantly lower latency, wherein the mIoU (F) and mIoU (B) are improved by 8.8% and 0.5%, respectively. | p. 10 (4 Experiments), p. 14 (Figure/Table caption) |
+| Failure/limitation | Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and then (2) reduce the tag noise with GPT. Finally, scene-level tags are generated by (3) multi-view ... | p. 5 (Figure/Table caption), p. 6 (Figure/Table caption) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `3D Vision, semantic` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - 2D vision-language feature를 3D object/point/field/map에 정렬해 open-vocabulary querying과 semantic grounding에 사용할 수 있다.
-  - 핵심은 language prior를 3D metric structure와 맞추면서 view inconsistency와 hallucination을 줄이는 것이다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 Given the input list, we instruct GPT to examine the words one by one and perform reasoning according to the chain of thought, outputting a boolean list indicating whether a word is ...를 Owing to the exposure to a diverse range of linguistic patterns and contextual nuances, the MLLMs can generate comprehensive and in-depth descriptions based on input images.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and then (2) reduce the tag noise with GPT. Finally, scene-level tags are generated by (3) multi-view ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In order to leverage the synergistic benefits of multiple modalities for dense prediction tasks, we propose a dense multimodal alignment (DMA) strategy to co-embed 3D points, image pixels, and text strings into ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `3D Vision, semantic`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Our DMA(OpenSeg) using only 3D model for prediction outperforms OpenScene(OpenSeg)-2D3D by 5.4% mIoU at a significantly lower latency, wherein the mIoU (F) and mIoU (B) are improved by ...
-  - open-vocabulary recognition이나 grounding을 보인 뒤에도 3D consistency, ambiguous reference resolution, robot-action relevance는 남는다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D Vision, semantic`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and then (2) reduce the tag noise with GPT. Finally, scene-level tags are generated by (3) multi-view ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ScanNet, ScanNet200, Matterport3D, nuScenes / accuracy, mIoU, mAP
-  - 내 연구 확장 benchmark 후보: ScanNet, ScanRefer, ReferIt3D, SQA3D
-  - 내 연구 확장 metric 후보: mIoU, Acc@0.25, Acc@0.5, Recall@K
-  - 검증 초점: open-vocabulary segmentation/localization, 3D consistency, task-relevant grounding을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: As for nuScenes dataset, we use 8 GPUs for training and set the batch size as 16..
+3. Compare against the body-reported baseline or a matched simpler baseline: We conduct comparisons with state-of-the-art methods on each of these datasets..
+4. Report the body metric and its denominator/aggregation: The mean Intersection-of-Union (mIoU), mean Accuracy (mACC), Precision, and Recall are employed as the evaluation metrics..
+5. Re-run the body-reported ablation/failure condition: This can be attributed to that OpenScene heavily relies on 2D model for supervision without aligning with text prompts, which limits its open-vocabulary ability..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (3 Method), p. 7 (3 Method), p. 8 (3 Method); the primary result is directionally consistent at p. 10 (4 Experiments), p. 14 (Figure/Table caption), p. 10 (4 Experiments); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D VLM feature를 3D로 lift할 때 multi-view consistency와 fine-grained object boundary를 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 order, leverage, synergistic mechanism이 We conduct comparisons with state-of-the-art methods on each of these datasets. 대비 The mean Intersection-of-Union (mIoU), mean Accuracy (mACC), Precision, and Recall are employed as the evaluation metrics.을 개선하고, Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

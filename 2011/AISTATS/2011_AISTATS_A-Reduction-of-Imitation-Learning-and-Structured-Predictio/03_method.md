@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ... | p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | We propose a new meta-algorithm for imitation learning which learns a stationary deterministic policy guaranteed to perform well under its induced distribution ... | p. 2 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES) |
@@ -83,10 +83,10 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | One approach (Ross and Bagnell, 2010) learns a non-stationary policy by training a different policy for each time step in sequence, starting ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | One approach (Ross and Bagnell, 2010) learns a non-stationary policy by training a different policy for each time step in sequence, starting ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | For any policy π, we let dt π denote the distribution of states at time t if the learner executed policy π ... | Hz/fps, inference time and control rate |
 | Memory | current observation, temporal history 또는 recurrent/sequence context. | For SMILe we choose parameter α = 0.1 (Sm0.1) as in Ross and Bag5For the input features x: each image is discretized ... | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 5 (2 PRELIMINARIES), objective p. 2 (2 PRELIMINARIES), p. 2 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), temporal p. 1 (1 INTRODUCTION), p. 2 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 5 (2 PRELIMINARIES), objective p. 2 (2 PRELIMINARIES), p. 2 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), temporal p. 1 (1 INTRODUCTION), p. 2 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ℓ(s, ·) is convex in π for all ... (p. 2, 2 PRELIMINARIES).
+- **Objective/update evidence:** The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ℓ(s, ·) is convex in π for all ... (p. 2, 2 PRELIMINARIES).
+- **Temporal/runtime evidence:** To demonstrate the efficacy and scalability of DAGGER, we apply it to two challenging imitation learning problems and a sequence labeling task (handwriting recognition). (p. 6, 5 EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

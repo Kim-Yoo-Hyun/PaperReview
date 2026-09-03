@@ -1,29 +1,87 @@
 # UniGS: Unified Language-Image-3D Pretraining with Gaussian Splatting
 
-- Year/Venue: 2025 / ICLR Poster
-- Category: Language-Grounded 3D Scene Representations
-- Tags: 3D Vision, Gaussian Splatting
-- Paper link: ./2025/ICLR/2025_ICLR_UniGS-Unified-Language-Image-3D-Pretraining-with-Gaussian/paper.pdf
-- Code/Project: not identified from OpenReview
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=6U2KI1dpfl.
+> PDF retrieval source: https://chatpaper.com/api/v1/articles/download/113642. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2025 / ICLR
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: Robotics-enabling 3D perception
+- Tier: ARCHIVE
+- Tags: 3D Vision, Gaussian Splatting
+- Official paper: https://openreview.net/forum?id=6U2KI1dpfl
+- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/113642
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While point clouds serve as a natural step towards 3D representations, there are inherent limitations when using them to represent 3D objects.를 문제로 두고, Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for learning a more general and stronger multi-modal ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / ABSTRACT - extractive body cue:** Recent advancements in multi-modal 3D pre-training methods have shown promising efficacy in learning joint representations of text, images, and point clouds.
+- **p. 1 / ABSTRACT - extractive body cue:** However, adopting point clouds as 3D representation fails to fully capture the intricacies of the 3D world and exhibits a noticeable gap between the discrete ...
+- **p. 1 / ABSTRACT - extractive body cue:** To tackle this issue, we propose UniGS, integrating 3D Gaussian Splatting (3DGS) into multi-modal pre-training to enhance the 3D representation.
+- **p. 1 / ABSTRACT - extractive body cue:** We first rely on the 3DGS representation to model the 3D world as a collection of 3D Gaussians with color and opacity, incorporating all the ...
+- **p. 1 / ABSTRACT - extractive body cue:** Then, to achieve Language-Image-3D pertaining, UniGS starts with a pre-trained vision-language model to establish a shared visual and textual space through extensive real-world image-text pairs.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** While point clouds serve as a natural step towards 3D representations, there are inherent limitations when using them to represent 3D objects.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Moreover, there exists a noticeable gap between the discrete points and the dense 2D pixels of images, which further hinders the learning of joint multi-modal ...
 
 ## Core Idea
-- Avg.: the mean average Top1 accuracy across all categories. * denotes training from scratch.
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for ...
+- **p. 3 / 3 METHODOLOGY - extractive body cue:** In this section, we introduce our proposed UniGS in detail.
+- **p. 3 / 3 METHODOLOGY - extractive body cue:** The proposed cross-modal contrastive learning framework for multi-modal alignment is then presented in Section 3.2 before we introduce the details of the Gaussian-Aware Guidance in ...
+- **p. 4 / 3 METHODOLOGY - extractive body cue:** Finally, we present how we ensemble 3DGS datasets from existing datasets in Section 3.5.
+- **p. 6 / 3 METHODOLOGY - extractive body cue:** Instead, with recent advances in large-scare multi-view datasets (Yu et al., 2023), our method adopts 3DGS representations and designs a ViT-based Encoder to encode the ...
+- **p. 4 / 3 METHODOLOGY - extractive body cue:** The contrastive loss between the text and 3D modality is then utilized to align the text and 3DGS feature representations.
+- **p. 5 / 3 METHODOLOGY - extractive body cue:** (6) Finally, we concatenate the features of f ′ fun and f ′ adv, respectively generated by the fundamental encoder and the advanced encoder, and ...
+- **p. 4 / 3 METHODOLOGY - extractive body cue:** To facilitate the transferability of the learned representations and enable zero-shot/open-word recognition, the text and image encoders of the CLIP model which defines the common ...
 
-## Main Claims
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for learning a more general and stronger multi-modal ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY) |
+| State/latent | contributions, summarized, follows, UniGS, novel, unified, text-image-3D, pre-training, framework, leverages, DGS, representation | geometry, map, object/relationship state | p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY) |
+| Output/action | In particular, we take inspiration from the contrastive loss in (Radford et al., 2021; Zeng et al., 2023) and propose Language-3DGS and Image-3DGS Alignment losses to bridge the domain gap among the ... | point map, pose, scene graph, affordance 또는 query result | p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY) |
+| Objective/outcome | The contrastive loss between the text and 3D modality is then utilized to align the text and 3DGS feature representations. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY) |
 
-## Contribution
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for ...
+- **p. 3 / 3 METHODOLOGY - extractive body cue:** In this section, we introduce our proposed UniGS in detail.
+- **p. 3 / 3 METHODOLOGY - extractive body cue:** The proposed cross-modal contrastive learning framework for multi-modal alignment is then presented in Section 3.2 before we introduce the details of the Gaussian-Aware Guidance in ...
+- **p. 4 / 3 METHODOLOGY - extractive body cue:** Finally, we present how we ensemble 3DGS datasets from existing datasets in Section 3.5.
+- **p. 6 / 3 METHODOLOGY - extractive body cue:** Instead, with recent advances in large-scare multi-view datasets (Yu et al., 2023), our method adopts 3DGS representations and designs a ViT-based Encoder to encode the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 5: Zero-shot classification with point clouds on ABO. Avg. denotes mean average classifica- tion accuracy. Results illustrate that properly converting point clouds into 3DGS ...
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** As shown in Table 1, UniGS outperforms the current state-of-the-art approaches across all datasets and improves the Top 1 retrieval accuracy of CLIP2 and Uni3D ...
+- **p. 10 / 4 EXPERIMENT - extractive body cue:** On the contrary, training directly from scratch can better learn the feature information of 3DGS, revealing that incorrect model design can hinder subsequent learning due ...
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT) |
+| Embodiment/environment | As for the scene recognition task on the SUN RGBD dataset, UniGS follows the basic evaluation pattern to directly train 50 epochs on the training set and finally be evaluated on the ... | hardware/simulator version and reset protocol | p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 9 (4 EXPERIMENT) |
+| Dataset/benchmark | All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU. | role, split, size and leakage | p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 9 (4 EXPERIMENT), p. 14 (B.1 DETAILS OF ENSEMBLE DATASETS), p. 9 (4 EXPERIMENT) |
+| Metric | Table 5: Zero-shot classification with point clouds on ABO. Avg. denotes mean average classifica- tion accuracy. Results illustrate that properly converting point clouds into 3DGS format can improve performance. As shown in ... | definition, denominator, direction and uncertainty | p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT) |
+| Baseline/ablation | As shown in Table 1, UniGS outperforms the current state-of-the-art approaches across all datasets and improves the Top 1 retrieval accuracy of CLIP2 and Uni3D on the Objaverse dataset by over 7 | fair input/data/compute/action matching | p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 10 / 5 CONCLUSION - extractive body cue:** Limitations: Despite the robust and effective performance of UniGS for 3D representation learning and downstream applications, its current version lacks performance validation of out-door scenarios ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** Moreover, at least one image with a camera pose is required for the optimization of 3DGS, and how to further consider a camera-pose-free approach (e.g., ...
+- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive body cue:** Note that the saving interval should not be a multiplier of the opacity reset interval, otherwise the retained results may become unstable.
+- **p. 6 / 4 EXPERIMENT - extractive body cue:** Note that 3DGS does not necessarily exist on the surface of objects, so there is a certain difference between point clouds and the 3D location ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Moreover, the success of UniGS in SUN RGBD shows the robustness of 3DGS representation to the number of multi-view images.
+
+## Why Read It
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While point clouds serve as a natural step towards 3D representations, there are inherent limitations when using them to represent 3D objects.를 문제로 두고, Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for learning a more general and stronger multi-modal ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

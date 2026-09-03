@@ -1,20 +1,21 @@
 # DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2108.10869.
-> PDF retrieval source: https://arxiv.org/pdf/2108.10869. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2108.10869.
+> PDF retrieval source: https://arxiv.org/pdf/2108.10869. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
 - Tier: CORE
 - Tags: SLAM, RGB-D, geometry
-- Aliases: DROID-SLAM
 - Official paper: https://arxiv.org/abs/2108.10869
 - Full-text retrieval: https://arxiv.org/pdf/2108.10869
 - Code/Project: https://github.com/princeton-vl/DROID-SLAM
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +85,12 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 ## Why Read It
 
 Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Despite significant progress, current SLAM systems lack the robustness demanded for many real-world applications.를 문제로 두고, In this work we introduce DROID-SLAM, a new SLAM system based on deep learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 7 (3 Approach), p. 4 (3 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Despite significant progress, current SLAM systems lack the robustness demanded for many real-world applications. (p. 1, 1 Introduction).
+- **Actual contribution:** In this work we introduce DROID-SLAM, a new SLAM system based on deep learning. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Table 2: Results on the TartanAir test set, compared with the top 3 submission to the ECCV 2020 SLAM competition. The score is computed using normalized relative pose error for ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** We find that the SLAM system is unstable and prone to failure if the DBA is not used during training. (p. 13, 8 Keyframes).

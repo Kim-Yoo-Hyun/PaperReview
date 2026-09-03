@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 In a POMDP framework, the optimal policy at timestep t should be conditioned not only on the current observation xt but also on a belief state bt-1, which captures all relevant historical ...를 (1) Recent representative VLA models, such as OpenVLAOFT [20] and its variant [23], map the output hidden states into an executable action chunk At = [at 0, at 1, ..., at Lc-1] ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a robust and spatially consistent focus by effectively ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Therefore, the forward pass at timestep t, incorporating the AVA module and statebased initialization, is formulated as: At = Q(Mparallel(zt I, V(xt, rt-1), zt S, rt-1)), (6) where V is ... (p. 4, 3.2. AVA-VLA Framework).
+- **Paper-specific mechanism:** Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 3. Comparison on the Mobile ALOHA real-world experiments. Evaluation across four manipulation tasks, including (a) Pick and Place, (b) Sequenced Instruction Understanding, (c) Flexible Object Folding, (d) Dexterous Action. ... (p. 7, Figure/Table caption); the relevant task/metric cue is It allows users to assess model performance across various challenges systemati13457 (p. 5, 4.1. Experimental Setup). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a robust and spatially consistent focus ... (p. 8, 4.4. Analysis).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We conduct experiments on three challenging settings: the LIBERO [28] and CALVIN [31] benchmarks for evaluation in simulation environments, and a real-world tablemounted Mobile ALOHA robot with four test tasks, to validate ....
-3. Compare against the body-reported baseline or a matched simpler baseline: The results show that the proposed AVA-VLA framework comprehensively outperforms baseline methods across all tasks..
-4. Report the body metric and its denominator/aggregation: We use widely adopted performance evaluation metrics "Success Rate (SR)" (the same 13458.
-5. Re-run the body-reported ablation/failure condition: Additionally, we conduct a comprehensive ablation study and analysis to validate the effectiveness of our approach..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Therefore, the forward pass at timestep t, incorporating the AVA module and statebased initialization, is formulated as: At = Q(Mparallel(zt I, V(xt, rt-1), zt S, rt-1)), (6) where V is ... (p. 4, 3.2. AVA-VLA Framework); preserve the objective/update rule: However, given the substantial memory constraint and computational cost of modern VLA backbones, performing the full backpropagation through time is computationally prohibitive [34]. (p. 5, 3.4. Training and Inference Procedure).
+2. Use the paper-reported task/data/environment cue: We conduct experiments on three challenging settings: the LIBERO [28] and CALVIN [31] benchmarks for evaluation in simulation environments, and a real-world tablemounted Mobile ALOHA robot with four test tasks, ... (p. 5, 4.1. Experimental Setup).
+3. Compare against the reported or matched baseline: The results show that the proposed AVA-VLA framework comprehensively outperforms baseline methods across all tasks. (p. 7, 4.2. Evaluation Results).
+4. Report the body metric with its denominator and aggregation: It allows users to assess model performance across various challenges systemati13457 (p. 5, 4.1. Experimental Setup).
+5. Re-run the reported ablation or stress/failure condition: Additionally, we conduct a comprehensive ablation study and analysis to validate the effectiveness of our approach. (p. 5, 4. Experiments); if none is reported, design one around: Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a robust and spatially consistent focus ... (p. 8, 4.4. Analysis).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminaries), p. 3 (3.2. AVA-VLA Framework); the primary result is directionally consistent at p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 5 (4.1. Experimental Setup), and measure the boundary at p. 8 (4.4. Analysis), p. 5 (4.1. Experimental Setup).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, threefold, novel mechanism이 The results show that the proposed AVA-VLA framework comprehensively outperforms baseline methods across all tasks. 대비 We use widely adopted performance evaluation metrics "Success Rate (SR)" (the same 13458을 개선하고, Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Therefore, the forward pass at timestep t, incorporating the AVA module and statebased initialization, is formulated as: At = Q(Mparallel(zt I, V(xt, ...), does the paper-specific mechanism (Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased ...) retain the reported evaluation outcome (It allows users to assess model performance across various challenges systemati13457) when tested against the paper's strongest explicit boundary (Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (It allows users to assess model performance across various challenges systemati13457) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 3. Comparison on the Mobile ALOHA real-world experiments. Evaluation across four manipulation tasks, including (a) Pick and Place, (b) Sequenced Instruction Understanding, (c) Flexible Object Folding, (d) Dexterous Action. ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a robust and spatially consistent focus ... (p. 8, 4.4. Analysis).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

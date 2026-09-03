@@ -1,29 +1,89 @@
 # Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning
 
-- Year/Venue: 2026 / ICLR Poster
-- Category: World Models, Safety, and Recovery
-- Tags: Robotics, world model, visuomotor control, video model
-- Paper link: [paper.pdf](./paper.pdf)
-- Code/Project: https://research.nvidia.com/labs/dir/cosmos-policy/
-- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://iclr.cc/virtual/2026/poster/10006732.
+> PDF retrieval source: https://arxiv.org/pdf/2601.16163. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2026 / ICLR
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: World models, safety, uncertainty, and recovery
+- Tier: REFERENCE
+- Tags: Robotics, world model, visuomotor control, video model
+- Official paper: https://iclr.cc/virtual/2026/poster/10006732
+- Full-text retrieval: https://arxiv.org/pdf/2601.16163
+- Code/Project: https://research.nvidia.com/labs/dir/cosmos-policy/
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et al., 2025)) through a single stage of ...를 문제로 두고, We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value predictions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / ABSTRACT - extractive body cue:** Recent video generation models demonstrate remarkable ability to capture complex physical interactions and scene evolution over time.
+- **p. 1 / ABSTRACT - extractive body cue:** To leverage their spatiotemporal priors, robotics works have adapted video models for policy learning but introduce complexity by requiring multiple stages of post-training and new ...
+- **p. 1 / ABSTRACT - extractive body cue:** In this work, we introduce Cosmos Policy, a simple approach for adapting a large pretrained video model (CosmosPredict2) into an effective robot policy through a ...
+- **p. 1 / ABSTRACT - extractive body cue:** Cosmos Policy learns to directly generate robot actions encoded as latent frames within the video model's latent diffusion process, harnessing the model's pretrained priors and ...
+- **p. 1 / ABSTRACT - extractive body cue:** Additionally, Cosmos Policy generates future state images and values (expected cumulative rewards), which are similarly encoded as latent frames, enabling test-time planning of action trajectories ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et ...
+- **p. 6 / 3 PRELIMINARIES - extractive body cue:** We aggregate these via "majority mean": we determine whether the majority predict success or failure (via a fixed threshold) and then average values within the ...
 
 ## Core Idea
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** This search process produces trajectories that are more likely to succeed at the task Our main contribution is the Cosmos Policy approach for fine-tuning pretrained ...
+- **p. 4 / 3 PRELIMINARIES - extractive body cue:** Rather than designing new model components or making architectural modifications as done in prior works, we propose to encode additional modalities as new latent frames ...
+- **p. 5 / 3 PRELIMINARIES - extractive body cue:** To encode the new modalities as latent frames, we fill each H′ ×W ′ ×C′ latent volume with normalized and duplicated copies of the robot ...
+- **p. 6 / 3 PRELIMINARIES - extractive body cue:** Once we have the fine-tuned checkpoint for refined world modeling and policy learning, we propose dual deployment: the original Cosmos Policy checkpoint serves as the ...
+- **p. 17 / A.2.2 LIBERO TRAINING DETAILS - extractive body cue:** (Note that these are single-step training losses given varying σ (noise levels) as input, rather than losses on generations from the multi-step diffusion sampling used ...
+- **p. 21 / A.4.2 COSMOS POLICY INFERENCE LATENCY - extractive body cue:** Cosmos Policy first generates N candidate action chunks with 10 denoising steps each, then generates an ensemble of 3 future state predictions per action proposal ...
+- **p. 16 / A.2.1 COSMOS POLICY NOISE DISTRIBUTION - extractive body cue:** This higher lower bound empirically improves prediction accuracy at inference time for actions, future states, and values, as measured by lower L1 loss on training ...
 
-## Main Claims
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | It does not support robot proprioception as input, robot actions or state values as output, nor multiple camera views-all of which are desired or required for manipulation policies. | observation, uncertainty/risk estimate와 task command | p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES) |
+| State/latent | does, support, robot, proprioception, input, actions, state, values, output, multiple, camera, views-all | safe set, recovery state 또는 constraint margin | p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS) |
+| Output/action | 4 COSMOS POLICY: ADAPTING VIDEO MODEL FOR CONTROL & PLANNING In this section, we discuss how to adapt Cosmos-Predict2 into a unified model that predicts actions, future states, and values. | shielded, recovery 또는 safe action | p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 5 (3 PRELIMINARIES) |
+| Objective/outcome | After 40K gradient steps, the policy's action L1 training loss is 0.012, future proprio L1 training loss is 0.007, future wrist image latent L1 training loss is 0.068, future third-person image latent ... | task return과 violation/failure probability | p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 17 (A.2.4 ALOHA TRAINING DETAILS), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION) |
 
-## Contribution
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** This search process produces trajectories that are more likely to succeed at the task Our main contribution is the Cosmos Policy approach for fine-tuning pretrained ...
+- **p. 4 / 3 PRELIMINARIES - extractive body cue:** Rather than designing new model components or making architectural modifications as done in prior works, we propose to encode additional modalities as new latent frames ...
+- **p. 5 / 3 PRELIMINARIES - extractive body cue:** To encode the new modalities as latent frames, we fill each H′ ×W ′ ×C′ latent volume with normalized and duplicated copies of the robot ...
+- **p. 6 / 3 PRELIMINARIES - extractive body cue:** Once we have the fine-tuned checkpoint for refined world modeling and policy learning, we propose dual deployment: the original Cosmos Policy checkpoint serves as the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: LIBERO simulation benchmark results. Success rates (SR) across four LIBERO benchmark task suites (Liu et al., 2024). Cosmos Policy success rates are averaged ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Our method achieves a state-of-the-art average success rate of 67.1% while requiring significantly fewer training demonstrations (50 versus >300). # Training Demos per Task Average ...
+- **p. 19 / A.3.2 REAL-WORLD ALOHA ROBOT EVALUATION DETAILS - extractive body cue:** Cosmos Policy achieves highest aggregate success rates, though π0.5 shows slightly better performance specifically in OOD test scenarios.
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS) |
+| Embodiment/environment | The LIBERO benchmark (Liu et al., 2024) consists of a variety of environments and tasks featuring a single Franka Emika Panda robot arm. | hardware/simulator version and reset protocol | p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
+| Dataset/benchmark | Our method achieves a state-of-the-art average success rate of 67.1% while requiring significantly fewer training demonstrations (50 versus >300). # Training Demos per Task Average SR (%) GR00T-N1 (Bjorck et al., 2025) ... | role, split, size and leakage | p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
+| Metric | We use score instead of success rate since a binary metric does not capture fine-grained details. • "put X on plate": 50 points for touching the correct target object. | definition, denominator, direction and uncertainty | p. 18 (A.3.2 REAL-WORLD ALOHA ROBOT EVALUATION DETAILS), p. 9 (5 EXPERIMENTS), p. 19 (Figure/Table caption) |
+| Baseline/ablation | Our method achieves highest performance overall, even outperforming fine-tuned state-of-the-art vision-language-action (VLA) models. | fair input/data/compute/action matching | p. 8 (5 EXPERIMENTS), p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** The additional episodes are important for this task since training an accurate world model for it is particularly challenging due to low camera observability from ...
+- **p. 18 / A.3.2 REAL-WORLD ALOHA ROBOT EVALUATION DETAILS - extractive body cue:** For OOD trials, we replace the pink ziploc bag with an unseen blue ziploc bag that is filled to about 75 percent full (more than ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Common failure modes of π0.5 and OpenVLA-OFT+ on two challenging ALOHA robot tasks. Left: π0.5 struggles to execute a high-precision grasp and loses ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6: World model predictions: base Cosmos Policy vs. fine-tuned checkpoint. Top: The base Cosmos Policy's world model may fail to predict errors such as ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: The latent diffusion sequence of Cosmos Policy. We illustrate latent frame injection-the primary mechanism for adapting the pretrained Cosmos-Predict2 into a policy that ...
+- **p. 15 / A.1 LATENT INJECTION IMPLEMENTATION DETAILS - extractive body cue:** Note that extracting non-image modalities like these does not require any VAE decoding since these elements were directly injected into the latent space during training.
+- **p. 18 / A.3.2 REAL-WORLD ALOHA ROBOT EVALUATION DETAILS - extractive body cue:** We use score instead of success rate since a binary metric does not capture fine-grained details. • "put X on plate": 50 points for touching ...
+
+## Why Read It
+
+World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et al., 2025)) through a single stage of ...를 문제로 두고, We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value predictions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 6 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

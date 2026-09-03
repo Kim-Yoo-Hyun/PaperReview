@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiment - extractive PDF cue:** We evaluate our method on novel view synthesis (NVS) and camera pose estimation across sparse and long-sequence real-world datasets.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** Notably, fine details such as furniture boundaries are better preserved than in competing methods, demonstrating the effectiveness of our method across unseen scenes.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [23], we train and evaluate on RE10K under both 4-view and 8-view reference settings, and further perform cross-dataset generalization tests on ScanNet.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right).
-- **p. 8 / 4.2. Experimental Results - extractive PDF cue:** Scene-level visualizations and multiple novel viewpoints renderings.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** For camera pose estimation, we report Absolute Translation Error (ATE), Relative Translation Error (RPE-t), and Relative Rotation Error (RPE-r).
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** We evaluate NVS performance using PSNR, SSIM [39], and LPIPS [48].
+- **p. 5 / 4. Experiment - extractive body cue:** We evaluate our method on novel view synthesis (NVS) and camera pose estimation across sparse and long-sequence real-world datasets.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** Notably, fine details such as furniture boundaries are better preserved than in competing methods, demonstrating the effectiveness of our method across unseen scenes.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [23], we train and evaluate on RE10K under both 4-view and 8-view reference settings, and further perform cross-dataset generalization tests on ScanNet.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right).
+- **p. 8 / 4.2. Experimental Results - extractive body cue:** Scene-level visualizations and multiple novel viewpoints renderings.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** For camera pose estimation, we report Absolute Translation Error (ATE), Relative Translation Error (RPE-t), and Relative Rotation Error (RPE-r).
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** We evaluate NVS performance using PSNR, SSIM [39], and LPIPS [48].
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, as the number of input images increases, our model achieves a higher SSIM of 0.061 over FreeSplat, while also showing improved novel view ... | p. 6 (4.2. Experimental Results) |
 | 4.2. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Here, AnySplat refers to zero-shot results trained on other datasets, while AnySplat∗ denotes the results we achieved after fine-tuning on the corresponding dataset. | p. 5 (4.2. Experimental Results) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiment - extractive PDF cue:** We evaluate our method on novel view synthesis (NVS) and camera pose estimation across sparse and long-sequence real-world datasets.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** Notably, fine details such as furniture boundaries are better preserved than in competing methods, demonstrating the effectiveness of our method across unseen scenes.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [23], we train and evaluate on RE10K under both 4-view and 8-view reference settings, and further perform cross-dataset generalization tests on ScanNet.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right).
-- **p. 8 / 4.2. Experimental Results - extractive PDF cue:** Scene-level visualizations and multiple novel viewpoints renderings.
+- **p. 5 / 4. Experiment - extractive body cue:** We evaluate our method on novel view synthesis (NVS) and camera pose estimation across sparse and long-sequence real-world datasets.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** Notably, fine details such as furniture boundaries are better preserved than in competing methods, demonstrating the effectiveness of our method across unseen scenes.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [23], we train and evaluate on RE10K under both 4-view and 8-view reference settings, and further perform cross-dataset generalization tests on ScanNet.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right).
+- **p. 8 / 4.2. Experimental Results - extractive body cue:** Scene-level visualizations and multiple novel viewpoints renderings.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of TokenSplat. TokenSplat performs feed-forward 3D Gaussian reconstruction and camera pose estimation from unposed images. A shared ViT encoder extracts image tokens, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right). The best and second-best values are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results of NVS on ScanNet under varying numbers of views. The best and second-best values are highlighted.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 2. Qualitative comparison on RE10K and ScanNet under varying numbers of reference views.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Cross-dataset generalization from RE10K to ScanNet.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative results of pose prediction on RE10K with diverse views (left) and cross-dataset generalization to ScanNet (right).
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Quantitative results of pose prediction on ScanNet with diverse views. The best and second-best values are highlighted.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Scene-level visualizations and multiple novel viewpoints renderings.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of TokenSplat. TokenSplat performs feed-forward 3D Gaussian reconstruction and camera pose estimation from unposed images. A shared ViT encoder extracts image tokens, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right). The best and second-best values are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results of NVS on ScanNet under varying numbers of views. The best and second-best values are highlighted.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 2. Qualitative comparison on RE10K and ScanNet under varying numbers of reference views.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Cross-dataset generalization from RE10K to ScanNet.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative results of pose prediction on RE10K with diverse views (left) and cross-dataset generalization to ScanNet (right).
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Quantitative results of pose prediction on ScanNet with diverse views. The best and second-best values are highlighted.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Scene-level visualizations and multiple novel viewpoints renderings.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on novel view synthesis (NVS) and camera pose estimation across sparse and long-sequence real-world datasets. | embodiment, simulator version and control stack | p. 5 (4. Experiment), p. 6 (4.2. Experimental Results) |
 | Task/environment | Notably, fine details such as furniture boundaries are better preserved than in competing methods, demonstrating the effectiveness of our method across unseen scenes. | reset, timeout, object/scene variation | p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings) |
@@ -152,13 +152,13 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** It yields consistent accuracy improvements and robust zero-shot generalization across diverse datasets.
-- **p. 5 / 4.2. Experimental Results - extractive PDF cue:** Despite the difference in view counts, TokenSplat maintains stable reconstruction quality, while competing methods, including AnySplat, which fuses pixel-aligned Gaussians by predicting fusion confidence, and ...
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** FreeSplat generates numerous scattered Gaussians, while NoPoSplat and SPFSplat show poor scalability and fail to generalize to unseen distant viewpoints.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
-- **p. 8 / 4.3. Ablation Analysis - extractive PDF cue:** Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with SSIM ...
+- **p. 8 / 5. Conclusion - extractive body cue:** It yields consistent accuracy improvements and robust zero-shot generalization across diverse datasets.
+- **p. 5 / 4.2. Experimental Results - extractive body cue:** Despite the difference in view counts, TokenSplat maintains stable reconstruction quality, while competing methods, including AnySplat, which fuses pixel-aligned Gaussians by predicting fusion confidence, and ...
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** FreeSplat generates numerous scattered Gaussians, while NoPoSplat and SPFSplat show poor scalability and fail to generalize to unseen distant viewpoints.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
+- **p. 8 / 4.3. Ablation Analysis - extractive body cue:** Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with SSIM ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiment), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 8 (4.2. Experimental Results), metrics p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 3 (Figure/Table caption), baselines p. 5 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 7 (4.2. Experimental Results), results p. 6 (4.2. Experimental Results), p. 5 (4.2. Experimental Results), p. 5 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 7 (4.2. Experimental Results).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiment), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 8 (4.2. Experimental Results), metrics p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 3 (Figure/Table caption), baselines p. 5 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 7 (4.2. Experimental Results), results p. 6 (4.2. Experimental Results), p. 5 (4.2. Experimental Results), p. 5 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 7 (4.2. Experimental Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

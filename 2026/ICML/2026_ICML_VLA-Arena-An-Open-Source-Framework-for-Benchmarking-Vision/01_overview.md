@@ -1,19 +1,21 @@
 # VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://vla-arena.github.io/.
-> PDF retrieval source: https://arxiv.org/pdf/2512.22539. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://vla-arena.github.io/.
+> PDF retrieval source: https://arxiv.org/pdf/2512.22539. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, Benchmark, safety, distractor, extrapolation, long-horizon, manipulation
+- Tags: Robotics, VLA, Benchmark, safety, distractor, extrapolation, long-horizon
 - Official paper: https://vla-arena.github.io/
 - Full-text retrieval: https://arxiv.org/pdf/2512.22539
 - Code/Project: https://vla-arena.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -21,9 +23,9 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 
 ## Problem and Motivation
 
-- **p. 1 / Abstract - extractive body cue:** While Vision-Language-Action models (VLAs) are rapidly advancing toward generalist robot poli1Institute for Artificial Intelligence, Peking University.
+- **p. 1 / Abstract - extractive body cue:** While Vision-Language-Action models (VLAs) are rapidly advancing toward generalist robot poli1Institute for Artificial Intelligence.
 - **p. 1 / Abstract - extractive body cue:** 3Beijing Academy of Artificial Intelligence.
-- **p. 1 / Abstract - extractive body cue:** 5State Key Laboratory of General Artificial Intelligence, Peking University. ∗Equal contribution.
+- **p. 1 / Abstract - extractive body cue:** 5State Key Laboratory of General Artificial Intelligence.
 - **p. 1 / Abstract - extractive body cue:** To address this, we introduce VLA-Arena, a comprehensive benchmark.
 - **p. 1 / Abstract - extractive body cue:** It features a novel structured task design framework to quantify difficulty across three orthogonal axes: (1) Task Structure, (2) Language Command, and (3) Visual Observation.
 - **p. 2 / 1. Introduction - extractive body cue:** This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task.
@@ -35,7 +37,7 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 - **p. 2 / 1. Introduction - extractive body cue:** To address this challenge, we propose VLA-Arena, a comprehensive and accessible benchmark for evaluating VLA models.
 - **p. 3 / 2. Structured Task Design - extractive body cue:** To quantitatively measure the capability frontiers of VLA models, we propose a structured task design, as compared in Table 1.
 - **p. 3 / 2. Structured Task Design - extractive body cue:** Based on this classification, we propose the cumulative cost (CC) metric for a trajectory τ of length L: CC(τ) = L-1 X t=0 cinst(st, at) ...
-- **p. 1 / Abstract - extractive body cue:** 5State Key Laboratory of General Artificial Intelligence, Peking University. ∗Equal contribution.
+- **p. 1 / Abstract - extractive body cue:** This allows us to systematically design tasks with fine-grained difficulty levels, enabling a precise measurement of model capability frontiers.
 - **p. 3 / 1. Introduction - extractive body cue:** Conducting an extensive study on VLA-Arena with leading models from the two dominant architectural paradigms: autoregressive and continuous action generation, our analysis surfaces three key ...
 - **p. 6 / 3. Task Suites in VLA-Arena - extractive body cue:** VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models 0.0 0.25 0.5 0.75 1.0 Success Rate StatePreservation L0 OpenVLA OpenVLA-OFT Pi0 UniVLA L1 L2 L0 L1 ...
 - **p. 2 / 1. Introduction - extractive body cue:** By stressing models with these structured perturbations, we expose latent fragilities and determine whether models rely on robust grounding or fragile memorization of training patterns.
@@ -55,7 +57,7 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 - **p. 2 / 1. Introduction - extractive body cue:** To address this challenge, we propose VLA-Arena, a comprehensive and accessible benchmark for evaluating VLA models.
 - **p. 3 / 2. Structured Task Design - extractive body cue:** To quantitatively measure the capability frontiers of VLA models, we propose a structured task design, as compared in Table 1.
 - **p. 3 / 2. Structured Task Design - extractive body cue:** Based on this classification, we propose the cumulative cost (CC) metric for a trajectory τ of length L: CC(τ) = L-1 X t=0 cinst(st, at) ...
-- **p. 1 / Abstract - extractive body cue:** 5State Key Laboratory of General Artificial Intelligence, Peking University. ∗Equal contribution.
+- **p. 1 / Abstract - extractive body cue:** This allows us to systematically design tasks with fine-grained difficulty levels, enabling a precise measurement of model capability frontiers.
 - **p. 7 / 4.2. Analysis of Performance and Failure Modes - extractive body cue:** Second, without explicit safety constraints, models prioritize task completion, often incurring high CC to achieve success.
 - **p. 7 / 4.1. Experimental Setup - extractive body cue:** To provide a comprehensive assessment, we employ success rate (SR) and cumulative cost (CC) as metrics.
 - **p. 8 / 4.3. Diagnosing Semantic and Visual Grounding - extractive body cue:** VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models VLA-Arena (Ours) LIBERO Benchmark 0.0 0.2 0.4 0.6 0.8 1.0 Success Rate -52% -28% -64% -28% w/ ...
@@ -85,3 +87,12 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 ## Why Read It
 
 VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task.를 문제로 두고, We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena), p. 2 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, existing benchmarks suffer from several limitations. (p. 2, 1. Introduction).
+- **Actual contribution:** We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Table 1. Comprehensive Comparison with Existing Robotics Benchmarks. Benchmarks are grouped by their underlying Physics Engine. Resources: Data (Fine-grained, filtered datasets), Frmwk (Open framework supporting custom uploads). Structu ... (p. 3, Figure/Table caption).
+- **Explicit failure boundary:** While VLAs have progressed rapidly, their capability boundaries, limitations, and failure modes remain poorly understood. (p. 2, 1. Introduction).

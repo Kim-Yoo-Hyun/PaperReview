@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introdu
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models ... | p. 1 (Abstract), p. 5 (2 Background) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Model IS FID NLL Test (Train) Conditional EBM [11] 8.30 37.9 JEM [17] 8.76 38.4 BigGAN [3] 9.22 14.73 StyleGAN2 + ADA ... | p. 5 (2 Background), p. 2 (1 Introduction) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introdu
 |---|---|---|---|
 | Horizon | noise/time schedule 또는 action sample horizon; exact denoising steps 확인 필요. | A notable property of the forward process is that it admits sampling xt at an arbitrary timestep t in closed form: using ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 iterative sampling/inference rate가 분리된다. | When applied to x0 ∼q(x0), Algorithms 3 and 4 transmit xT , . . . , x0 in sequence using a total ... | Hz/fps, inference time and control rate |
-| Memory | current noisy sample, condition과 time/noise embedding. | not recovered | window and reset |
+| Memory | current noisy sample, condition과 time/noise embedding. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | number of denoising/ODE steps와 network evaluation이 latency를 결정한다. | 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introdu
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (2 Background), objective p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (2 Background), p. 4 (2 Background), p. 4 (2 Background), temporal p. 2 (2 Background), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 4 (2 Background).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (2 Background), objective p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (2 Background), p. 4 (2 Background), p. 4 (2 Background), temporal p. 2 (2 Background), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 4 (2 Background).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and ... (p. 1, Abstract).
+- **Objective/update evidence:** Efficient training is therefore possible by optimizing random terms of L with stochastic gradient descent. (p. 3, 2 Background).
+- **Temporal/runtime evidence:** When applied to x0 ∼q(x0), Algorithms 3 and 4 transmit xT , . . . , x0 in sequence using a total expected codelength equal to Eq. (p. 6, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

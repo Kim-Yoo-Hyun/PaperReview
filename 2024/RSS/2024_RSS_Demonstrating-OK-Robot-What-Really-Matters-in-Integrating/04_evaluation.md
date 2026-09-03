@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p091.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p091.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p091.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p091.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | III. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results of home experiments Over the 10 home environment, OK-Robot achieved a 58.5% success rates in completing full pick-and-drops. | p. 6 (III. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 1: OK-Robot is an Open Knowledge robotic system, which integrates a variety of learned models trained on publicly available data, to pick and ... | p. 1 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The three leading causes of failures are failing to retrieve the right object to navigate to from the semantic memory (9.3%), getting a difficult ... | embodiment, simulator version and control stack | p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS) |
 | Task/environment | Robot hardware limitations: While our robot of choice, a Hello Robot: Stretch, is able to pick-and-drop a variety of objects, certain hardware limitations also ... | reset, timeout, object/scene variation | p. 8 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 - **p. 7 / III. EXPERIMENTS - extractive body cue:** However, at a closer look, we notice a long tail of failure causes presented in Figure 4.
 - **p. 8 / IV. RELATED WORKS - extractive body cue:** 8: Samples of failures of our manipulation module.
 
-- **PDF anchors reviewed:** datasets p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), metrics p. 7 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (III. EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), results p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), metrics p. 7 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (III. EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), results p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (27 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Results of home experiments Over the 10 home environment, OK-Robot achieved a 58.5% success rates in completing full pick-and-drops. (p. 6, III. EXPERIMENTS).
+- **Metric evidence:** Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and the error rates decrease from 25% to 16% and finally 13%. (p. 7, III. EXPERIMENTS).
+- **Baseline/ablation evidence:** Both were larger compared to the average NY homes, requiring more robot motion to navigate to different goals. (p. 6, III. EXPERIMENTS).
+- **Failure/negative evidence:** Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D image. (p. 7, III. EXPERIMENTS).

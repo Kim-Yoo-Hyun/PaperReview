@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.10075; PDF retrieval source: https://arxiv.org/pdf/2505.10075. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.10075; PDF retrieval source: https://arxiv.org/pdf/2505.10075. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 14 (A. Implementation Details), p. 13 (A. Implemen
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | We provide a simple version of FlowDreamer that only relies on current observations and actions, just aiming to demonstrate the effectiveness of ... | p. 14 (A. Implementation Details), p. 13 (A. Implementation Details) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | We use AdamW optimizer for training, and we use a mixed precision with FP16 and FP32 supported by Pytorch-Lightning. | p. 13 (A. Implementation Details), p. 13 (A. Implementation Details) |
@@ -135,8 +135,17 @@ PDF body method statement (p. 14 (A. Implementation Details), p. 13 (A. Implemen
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 14 (A. Implementation Details), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), objective p. 6 (4.2. Visual Planning), p. 7 (4.2. Visual Planning), p. 8 (4.2. Visual Planning), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), temporal p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), p. 14 (A. Implementation Details), p. 3 (2.2. Dynamics Modeling), p. 3 (2.2. Dynamics Modeling).
+- **Evidence anchors reviewed:** method p. 14 (A. Implementation Details), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), objective p. 6 (4.2. Visual Planning), p. 7 (4.2. Visual Planning), p. 8 (4.2. Visual Planning), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), temporal p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), p. 14 (A. Implementation Details), p. 3 (2.2. Dynamics Modeling), p. 3 (2.2. Dynamics Modeling).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In robotics, a visual world model [24] needs to perform the following steps: 1) dynamics prediction: predict the future motion given the current sensory observations (about robot and environment states) ... (p. 1, 1. Introduction).
+- **Objective/update evidence:** For Robosuite push tasks, a cost below 0.05 is considered a success. (p. 7, 4.2. Visual Planning).
+- **Temporal/runtime evidence:** A "sample" refers to a frame pair at timestep t and t + 1 with a robot action at. (p. 13, A. Implementation Details).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

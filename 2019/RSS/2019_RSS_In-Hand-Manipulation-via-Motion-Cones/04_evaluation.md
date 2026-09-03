@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1810.00219; PDF retrieval source: https://arxiv.org/pdf/1810.00219. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1810.00219; PDF retrieval source: https://arxiv.org/pdf/1810.00219. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS | EMPIRICAL / SIMULATION | Similar to [3], our planner finds a strategy to achieve the regrasp using only one pusher. | p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
 | VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS | EMPIRICAL / SIMULATION | We compare the performance in terms of planning time and the quality of the solutions. | p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 9: Simulation and experimental run for a pushing strategy to regrasp the aluminum object with low friction pushers. | embodiment, simulator version and control stack | p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
 | Task/environment | The initial pose of an object in the gripper is treated as [X, Z, θY ] = [0, 0, 0]. | reset, timeout, object/scene variation | p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
@@ -143,7 +143,16 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 - **p. 7 / VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS - extractive body cue:** These include sampling with rejection by a feasibility check for stable pushing [3], and a complementarity formulation (MNCP) that allows both sticking and slipping at ...
 - **p. 8 / VIII. DISCUSSION - extractive body cue:** We believe that the extension and application of motion cones to more general settings provides new opportunities for fast and robust manipulation through contact.
 
-- **PDF anchors reviewed:** datasets p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), metrics p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), results p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).
+- **Evidence anchors reviewed:** datasets p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), metrics p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), results p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We compare the performance in terms of planning time and the quality of the solutions. (p. 7, VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).
+- **Metric evidence:** We compare the performance in terms of planning time and the quality of the solutions. (p. 7, VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).
+- **Baseline/ablation evidence:** While there are no comparable available algorithms that can solve the type of regrasps we are interested in, we provide comparisons with our own implementations of the same high-level planner ... (p. 7, VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).
+- **Failure/negative evidence:** These include sampling with rejection by a feasibility check for stable pushing [3], and a complementarity formulation (MNCP) that allows both sticking and slipping at the pusher contact [2]. (p. 7, VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).

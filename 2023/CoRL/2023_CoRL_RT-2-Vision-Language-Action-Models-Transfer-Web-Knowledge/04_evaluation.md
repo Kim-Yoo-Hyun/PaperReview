@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.15818; PDF retrieval source: https://arxiv.org/pdf/2307.15818. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.15818; PDF retrieval source: https://arxiv.org/pdf/2307.15818. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We observe that our VLA models significantly outperform the baselines across all categories, with our best RT-2-PaLI-X model achieving more than 3x average success ... | p. 9 (4. Experiments) |
 | 4. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The performance on seen tasks is similar between the RT-2 models and RT-1, with other baselines attaining a lower success rate. | p. 8 (4. Experiments) |
@@ -53,11 +53,11 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Each robot demonstration trajectory is annotated with a natural language instruction that describes the task performed, consisting of a verb describing the skill (e.g., ... | embodiment, simulator version and control stack | p. 7 (4. Experiments), p. 8 (4. Experiments) |
 | Task/environment | RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control Figure 3 shows example generalization evaluations, which are split into unseen categories (objects, backgrounds and ... | reset, timeout, object/scene variation | p. 8 (4. Experiments), p. 9 (4. Experiments) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 - **p. 8 / 4. Experiments - extractive body cue:** We also show qualitative real-world out-of-distribution behaviors behaviors in Figure 5, demonstrating novel pushing tasks and targeting objects not before seen in this environment.
 - **p. 9 / 4. Experiments - extractive body cue:** RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control Figure 5 / Real-world out-of-distribution behaviors in the Language Table environment.
 
-- **PDF anchors reviewed:** datasets p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 8 (4. Experiments), p. 7 (4. Experiments), p. 11 (4. Experiments), metrics p. 8 (4. Experiments), p. 9 (4. Experiments), p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), baselines p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 8 (4. Experiments), p. 10 (4. Experiments), p. 7 (4. Experiments), results p. 9 (4. Experiments), p. 8 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 10 (4. Experiments), p. 10 (4. Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 8 (4. Experiments), p. 7 (4. Experiments), p. 11 (4. Experiments), metrics p. 8 (4. Experiments), p. 9 (4. Experiments), p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), baselines p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 8 (4. Experiments), p. 10 (4. Experiments), p. 7 (4. Experiments), results p. 9 (4. Experiments), p. 8 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 10 (4. Experiments), p. 10 (4. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (a) Performance comparison on various emergent skill evaluations (Figure 8) between RT-2 and two baselines. (p. 10, 4. Experiments).
+- **Metric evidence:** To evaluate in-distribution performance as well as generalization capabilities, we compare the RT-2-PaLI-X and RT-2-PaLM-E models to the four baselines listed in the previous sections. (p. 7, 4. Experiments).
+- **Baseline/ablation evidence:** We compare our method to multiple state-of-the-art baselines that challenge different aspects of our method. (p. 7, 4. Experiments).
+- **Failure/negative evidence:** Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach. (p. 11, 5. Limitations).

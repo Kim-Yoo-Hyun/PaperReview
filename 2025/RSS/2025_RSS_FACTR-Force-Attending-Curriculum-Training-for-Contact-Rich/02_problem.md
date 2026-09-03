@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p079.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p079.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p079.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p079.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 5 (A. Problem Statement and Base Model)): 4: FACTR allows o
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization | contact-rich manipulation scene | body wording is the source claim |
-| Observation / input | We consider a policy o(- / -) that produces a chunk of future actions of length k d..++1 (joint positions) given visual ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | We consider a policy o(- / -) that produces a chunk of future actions of length k d..++1 (joint positions) given visual ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | consider, policy, produces, chunk, future, actions, length, joint, positions, given | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
 | Output / action | Visual, observations, force, readings, converted, tokens, encoder, then | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
 | Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | visual/tactile/proprioceptive contact history; body terms: consider, policy, produces, chunk, future, actions, length, joint, positions, given | p. 4 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model) |
 | Decision / output variable | contact-aware action/force; body terms: decoder, introduce, action, tokens, FACTR, allows, policy, beter | p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model) |
-| Objective / loss / cost | contact prediction/control error; cue terms: not recovered | no optimization/equation sentence selected |
+| Objective / loss / cost | contact prediction/control error; cue terms: not stated or recoverable in the selected PDF body | no optimization/equation sentence selected |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | slip/contact success and safe interaction | p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 5 (A. Problem Statement and Base Model)): 4: FACTR allows o
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model)): For the decoder, we introduce & action tokens, A ¢ R**¢.
+PDF body contribution framing (p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model)): For the decoder, we introduce & action tokens, A ¢ R**¢.
 
 - **p. 5 / A. Problem Statement and Base Model - extractive body cue:** 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization
 
@@ -63,12 +63,21 @@ PDF contribution framing (p. 5 (A. Problem Statement and Base Model), p. 5 (A. P
 
 ## Position in the Robotics Loop
 
-tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model). The downstream handoff is claimed only when the body describes it.
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 5 (A. Problem Statement and Base Model), interface p. 4 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 5 (A. Problem Statement and Base Model), interface p. 4 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization (p. 5, A. Problem Statement and Base Model).
+- **Formulation-changing contribution:** For the decoder, we introduce & action tokens, A ¢ R**¢. (p. 5, A. Problem Statement and Base Model).
+- **Assumption/failure evidence:** While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift or balance the novel boxes. (p. 8, C. Policy Evaluation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

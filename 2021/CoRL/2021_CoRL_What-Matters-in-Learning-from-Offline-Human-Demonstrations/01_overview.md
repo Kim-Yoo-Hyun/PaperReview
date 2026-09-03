@@ -1,20 +1,21 @@
 # What Matters in Learning from Offline Human Demonstrations for Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html.
-> PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html.
+> PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, offline learning, robot dataset, Benchmark, robomimic
-- Aliases: RoboMimic
 - Official paper: https://proceedings.mlr.press/v164/mandlekar22a.html
 - Full-text retrieval: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf
 - Code/Project: https://robomimic.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +85,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult.를 문제로 두고, We present success rates averaged over 3 seeds for each method across the low-dim Machine-Generated (MG), Proficient-Human (PH), and Multi-Human (MH) datasets.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (Dataset) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult. (p. 2, 1 Introduction).
+- **Actual contribution:** Differences from classic supervised learning, such as a mismatch between training and evaluation objectives (task success rate), can make selecting a final policy challenging [21, 22], especially in real-world settings ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 2: Results on Suboptimal Human Data. We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations ... (p. 4, Figure/Table caption).
+- **Explicit failure boundary:** We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", "Adequate", and "Worse" human operators, ... (p. 4, Dataset).

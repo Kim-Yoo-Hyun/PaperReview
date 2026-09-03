@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v87/florence18a.html; PDF retrieval source: https://proceedings.mlr.press/v87/florence18a.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v87/florence18a.html; PDF retrieval source: https://proceedings.mlr.press/v87/florence18a.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 M
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | 3.1 Preliminary: Self-Supervised Pixelwise Contrastive Loss We use self-supervised pixelwise contrastive loss, as developed in [7, 8]. | p. 2 (3 Methodology), p. 5 (3 Methodology) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | In this work, we use only static-scene reconstructions, so pixel matches between images can be easily found by raycasting and reprojecting against ... | p. 5 (3 Methodology), p. 3 (3 Methodology) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 2 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 M
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Projecting this geometry into each camera frame yields object masks for each image. | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | We employ a Schunk two-finger gripper and plan grasps directly on the object point cloud (Appendix C). | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
-| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 2 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 M
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 Methodology), objective p. 3 (3 Methodology), p. 2 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), temporal p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (5 Results).
+- **Evidence anchors reviewed:** method p. 2 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 Methodology), objective p. 3 (3 Methodology), p. 2 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), temporal p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (5 Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Since we are trying to learn descriptors of objects that take up only a fraction of a full image, we observe significant improvements if the representational power of the models ... (p. 3, 3 Methodology).
+- **Objective/update evidence:** 3.1 Preliminary: Self-Supervised Pixelwise Contrastive Loss We use self-supervised pixelwise contrastive loss, as developed in [7, 8]. (p. 2, 3 Methodology).
+- **Temporal/runtime evidence:** Projecting this geometry into each camera frame yields object masks for each image. (p. 4, 3 Methodology).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

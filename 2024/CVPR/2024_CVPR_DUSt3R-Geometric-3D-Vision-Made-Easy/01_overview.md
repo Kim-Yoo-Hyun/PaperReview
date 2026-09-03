@@ -1,8 +1,10 @@
 # DUSt3R: Geometric 3D Vision Made Easy
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2312.14132.
-> PDF retrieval source: https://arxiv.org/pdf/2312.14132. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2312.14132.
+> PDF retrieval source: https://arxiv.org/pdf/2312.14132. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2312.14132
 - Code/Project: https://github.com/naver/dust3r
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 ## Why Read It
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The network learns strong geometric and shape priors, which are reminiscent of those commonly leveraged in MVS, like shape from texture, shading or contours [111].를 문제로 두고, Before delving into the details of our method, we introduce below the essential concept of pointmaps.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 5 (3.2. Training Objective) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The network learns strong geometric and shape priors, which are reminiscent of those commonly leveraged in MVS, like shape from texture, shading or contours [111]. (p. 2, 1. Introduction).
+- **Actual contribution:** In this paper, we present DUSt3R, a radically novel approach for Dense Unconstrained Stereo 3D Reconstruction from un-calibrated and un-posed cameras. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Our method obtains comparable accuracy compared to existing approaches, being feature-matching ones [101, 103] or end-to-end learningbased methods [11, 55, 102, 125, 152], even managing to outperform strong baselines like ... (p. 7, 4.1. Visual Localization).
+- **Explicit failure boundary:** Procrustes alignment is, unfortunately, sensitive to noise and outliers. (p. 5, 3.3. Downstream Applications).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ULXYZCms41; PDF retrieval source: https://openreview.net/pdf/dea370a01f4626162b2a827d9926302e6c125e13.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ULXYZCms41; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247965. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 
 ## Method Body Digest
 
-- **p. 20 / C.4 METRICS - extractive PDF cue:** Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 256 261 0.51 ...
-- **p. 18 / C.4 METRICS - extractive PDF cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
-- **p. 18 / C.2 TRAINING - extractive PDF cue:** The geometric alignment loss is combined with the standard diffusion training objective.
-- **p. 21 / C.4 METRICS - extractive PDF cue:** The feature extraction time of the VGGT model increases with the number of input views.
-- **p. 21 / C.4 METRICS - extractive PDF cue:** Method Aesthetic Quality↑ Imaging Quality↑ Motion Smoothness↑ Wan2.1 0.58 0.56 0.98 Wan2.1 + GF 0.59 0.59 0.99 We also provide a feature extraction time of ...
-- **p. 19 / C.4 METRICS - extractive PDF cue:** A camera trajectory of 256 frames is then constructed by rotating the initial camera pose around the Y-axis.
-- **p. 19 / C.4 METRICS - extractive PDF cue:** For each of 100 randomly sampled RealEstate10K video clips, we extract the first frame and initial camera pose.
-- **p. 20 / C.4 METRICS - extractive PDF cue:** Additionally, during inference, our method incurs no additional computational cost compared to other methods that use explicit or implicit memory.
+- **p. 20 / C.4 METRICS - extractive body cue:** Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 256 261 0.51 ...
+- **p. 18 / C.4 METRICS - extractive body cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
+- **p. 18 / C.2 TRAINING - extractive body cue:** The geometric alignment loss is combined with the standard diffusion training objective.
+- **p. 21 / C.4 METRICS - extractive body cue:** The feature extraction time of the VGGT model increases with the number of input views.
+- **p. 21 / C.4 METRICS - extractive body cue:** Method Aesthetic Quality↑ Imaging Quality↑ Motion Smoothness↑ Wan2.1 0.58 0.56 0.98 Wan2.1 + GF 0.59 0.59 0.99 We also provide a feature extraction time of ...
+- **p. 19 / C.4 METRICS - extractive body cue:** A camera trajectory of 256 frames is then constructed by rotating the initial camera pose around the Y-axis.
+- **p. 19 / C.4 METRICS - extractive body cue:** For each of 100 randomly sampled RealEstate10K video clips, we extract the first frame and initial camera pose.
+- **p. 20 / C.4 METRICS - extractive body cue:** Additionally, during inference, our method incurs no additional computational cost compared to other methods that use explicit or implicit memory.
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Experimental results demonstrate that our method delivers substantial gains in geometric consistency and visual quality over the baseline methods.
-- **p. 4 / 3 PRELIMINARIES - extractive PDF cue:** 4.2, we introduce two regularization objectives designed to facilitate representation alignment between the diffusion model and geometric foundation model.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Experimental results demonstrate that our method delivers substantial gains in geometric consistency and visual quality over the baseline methods.
+- **p. 4 / 3 PRELIMINARIES - extractive body cue:** 4.2, we introduce two regularization objectives designed to facilitate representation alignment between the diffusion model and geometric foundation model.
 
 ## Source Evidence Cues
 
-- **p. 20 / C.4 METRICS - extractive PDF cue:** Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 256 261 0.51 ...
-- **p. 18 / C.4 METRICS - extractive PDF cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
-- **p. 18 / C.2 TRAINING - extractive PDF cue:** The geometric alignment loss is combined with the standard diffusion training objective.
-- **p. 21 / C.4 METRICS - extractive PDF cue:** The feature extraction time of the VGGT model increases with the number of input views.
-- **p. 21 / C.4 METRICS - extractive PDF cue:** Method Aesthetic Quality↑ Imaging Quality↑ Motion Smoothness↑ Wan2.1 0.58 0.56 0.98 Wan2.1 + GF 0.59 0.59 0.99 We also provide a feature extraction time of ...
-- **p. 19 / C.4 METRICS - extractive PDF cue:** A camera trajectory of 256 frames is then constructed by rotating the initial camera pose around the Y-axis.
-- **p. 19 / C.4 METRICS - extractive PDF cue:** For each of 100 randomly sampled RealEstate10K video clips, we extract the first frame and initial camera pose.
+- **p. 20 / C.4 METRICS - extractive body cue:** Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 256 261 0.51 ...
+- **p. 18 / C.4 METRICS - extractive body cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
+- **p. 18 / C.2 TRAINING - extractive body cue:** The geometric alignment loss is combined with the standard diffusion training objective.
+- **p. 21 / C.4 METRICS - extractive body cue:** The feature extraction time of the VGGT model increases with the number of input views.
+- **p. 21 / C.4 METRICS - extractive body cue:** Method Aesthetic Quality↑ Imaging Quality↑ Motion Smoothness↑ Wan2.1 0.58 0.56 0.98 Wan2.1 + GF 0.59 0.59 0.99 We also provide a feature extraction time of ...
+- **p. 19 / C.4 METRICS - extractive body cue:** A camera trajectory of 256 frames is then constructed by rotating the initial camera pose around the Y-axis.
+- **p. 19 / C.4 METRICS - extractive body cue:** For each of 100 randomly sampled RealEstate10K video clips, we extract the first frame and initial camera pose.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 ... | p. 20 (C.4 METRICS), p. 18 (C.4 METRICS) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable ... | p. 18 (C.4 METRICS), p. 18 (C.2 TRAINING) |
@@ -48,11 +48,11 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 
 ## Objective / Update Rule
 
-- **p. 18 / C.2 TRAINING - extractive PDF cue:** The geometric alignment loss is combined with the standard diffusion training objective.
-- **p. 18 / C.4 METRICS - extractive PDF cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
-- **p. 20 / C.4 METRICS - extractive PDF cue:** Additionally, during inference, our method incurs no additional computational cost compared to other methods that use explicit or implicit memory.
-- **p. 24 / C.4 METRICS - extractive PDF cue:** Qualitative Ablation on Alignment loss.
-- **p. 19 / C.4 METRICS - extractive PDF cue:** We optimize the DPT head for 2500 steps using a learning rate of 1×10-4 and a batch size of 4.
+- **p. 18 / C.2 TRAINING - extractive body cue:** The geometric alignment loss is combined with the standard diffusion training objective.
+- **p. 18 / C.4 METRICS - extractive body cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
+- **p. 20 / C.4 METRICS - extractive body cue:** Additionally, during inference, our method incurs no additional computational cost compared to other methods that use explicit or implicit memory.
+- **p. 24 / C.4 METRICS - extractive body cue:** Qualitative Ablation on Alignment loss.
+- **p. 19 / C.4 METRICS - extractive body cue:** We optimize the DPT head for 2500 steps using a learning rate of 1×10-4 and a batch size of 4.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 18 (C.2 TRAINING), p. 18 (C.4 METRICS), p. 24 (C.4 METRICS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** We evaluate the effectiveness of GF on two widely adopted benchmarks: camera-view-conditioned video generation on RealEstate10K (Zhou et al., 2018) and action-conditioned video generation in ...
-- **p. 21 / C.4 METRICS - extractive PDF cue:** The feature extraction time of the VGGT model increases with the number of input views.
-- **p. 21 / C.4 METRICS - extractive PDF cue:** The result shows that the extraction time increases from 0.1s to 0.8s when the input increases from 1 to 12.
-- **p. 4 / 3 PRELIMINARIES - extractive PDF cue:** The target velocity field is defined as the difference between the noise and the clean input.
-- **p. 4 / 3 PRELIMINARIES - extractive PDF cue:** 3.2 VISUAL GEOMETRY GROUNDED TRANSFORMER Visual Geometry Grounded Transformer (VGGT) (Wang et al., 2025b) is a feed-forward model that directly outputs 3D attributes of a ...
-- **p. 5 / 3 PRELIMINARIES - extractive PDF cue:** Angular Alignment enforces directional correspondence between the hidden states of the diffusion model, denoted by h, and specified target features, denoted by y.
-- **p. 5 / 3 PRELIMINARIES - extractive PDF cue:** In practice, the target features y ∈RL×N×P ×D, where L denotes the number of layers, N denotes the number of input images, P denotes the ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We evaluate the effectiveness of GF on two widely adopted benchmarks: camera-view-conditioned video generation on RealEstate10K (Zhou et al., 2018) and action-conditioned video generation in ...
+- **p. 21 / C.4 METRICS - extractive body cue:** The feature extraction time of the VGGT model increases with the number of input views.
+- **p. 21 / C.4 METRICS - extractive body cue:** The result shows that the extraction time increases from 0.1s to 0.8s when the input increases from 1 to 12.
+- **p. 4 / 3 PRELIMINARIES - extractive body cue:** The target velocity field is defined as the difference between the noise and the clean input.
+- **p. 4 / 3 PRELIMINARIES - extractive body cue:** 3.2 VISUAL GEOMETRY GROUNDED TRANSFORMER Visual Geometry Grounded Transformer (VGGT) (Wang et al., 2025b) is a feed-forward model that directly outputs 3D attributes of a ...
+- **p. 5 / 3 PRELIMINARIES - extractive body cue:** Angular Alignment enforces directional correspondence between the hidden states of the diffusion model, denoted by h, and specified target features, denoted by y.
+- **p. 5 / 3 PRELIMINARIES - extractive body cue:** In practice, the target features y ∈RL×N×P ×D, where L denotes the number of layers, N denotes the number of input images, P denotes the ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,12 +89,12 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 
 ## Training vs Inference
 
-- **p. 20 / C.4 METRICS - extractive PDF cue:** Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 256 261 0.51 ...
-- **p. 18 / C.4 METRICS - extractive PDF cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
-- **p. 18 / C.2 TRAINING - extractive PDF cue:** The geometric alignment loss is combined with the standard diffusion training objective.
-- **p. 6 / 5 EXPERIMENTS - extractive PDF cue:** For action-conditioned video generation, we apply GF to Next-Frame Diffusion (Cheng et al., 2025), training on 32-frame 384×224 videos for 2,000 steps with a learning ...
-- **p. 18 / C.2 TRAINING - extractive PDF cue:** Training proceeds for 2 epochs using a learning rate of 8 × 10-6 and a global batch size of 40.
-- **p. 20 / C.4 METRICS - extractive PDF cue:** For fine-tuning, our method requires only a few thousand steps and completes within hours, yielding substantial efficiency gains over full pre-training.
+- **p. 20 / C.4 METRICS - extractive body cue:** Method Frames FVD↓ LPIPS↓ SSIM↑ PSNR↑ RPE↓ RVE↓ DFoT (Song et al., 2025) 256 364 0.55 0.36 11.40 0.3575 297 Geometry Forcing-4 256 261 0.51 ...
+- **p. 18 / C.4 METRICS - extractive body cue:** Specifically, DROID-SLAM first extracts corresponding features across frames and then refines camera poses (Gt) and per-pixel depth estimates (dt) through its differentiable Dense Bundle Adjustment ...
+- **p. 18 / C.2 TRAINING - extractive body cue:** The geometric alignment loss is combined with the standard diffusion training objective.
+- **p. 6 / 5 EXPERIMENTS - extractive body cue:** For action-conditioned video generation, we apply GF to Next-Frame Diffusion (Cheng et al., 2025), training on 32-frame 384×224 videos for 2,000 steps with a learning ...
+- **p. 18 / C.2 TRAINING - extractive body cue:** Training proceeds for 2 epochs using a learning rate of 8 × 10-6 and a global batch size of 40.
+- **p. 20 / C.4 METRICS - extractive body cue:** For fine-tuning, our method requires only a few thousand steps and completes within hours, yielding substantial efficiency gains over full pre-training.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 
 ## Failure and Ablation Link
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation study on target represen- tation. We compare the effect of aligning the diffusion model with different target representa- tions: DINOv2 (semantic), VGGT ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 3: Ablation study on alignment depth. We present FVD-256 and FVD-16 re- sults for different alignment layers of the dif- fusion model, which suggest ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** 5.3 ABLATION STUDIES We provide a series of ablation studies to validate the design of GF.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 2: Ablation study on target representation.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Figure 3: Ablation study on alignment depth.
-- **p. 24 / C.4 METRICS - extractive PDF cue:** To further assess the impact of the proposed scale alignment loss, we conduct qualitative comparisons between models trained with and without this component (Fig.
-- **p. 19 / C.4 METRICS - extractive PDF cue:** D SUPPLEMENTARY EXPERIMENTS D.1 ABLATION ON TEACHER MODEL Geometry Forcing does not depend on a specific 3D foundation model but still requires the 3D foundation ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Ablation study on target represen- tation. We compare the effect of aligning the diffusion model with different target representa- tions: DINOv2 (semantic), VGGT ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 3: Ablation study on alignment depth. We present FVD-256 and FVD-16 re- sults for different alignment layers of the dif- fusion model, which suggest ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5.3 ABLATION STUDIES We provide a series of ablation studies to validate the design of GF.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Target Representation FVD-256 Baseline 364 DINOv2 Only 297 VGGT Only 243 VGGT + DINOv2 237 Table 3: Ablation study on alignment loss.
+- **p. 24 / C.4 METRICS - extractive body cue:** To further assess the impact of the proposed scale alignment loss, we conduct qualitative comparisons between models trained with and without this component (Fig.
+- **p. 19 / C.4 METRICS - extractive body cue:** D SUPPLEMENTARY EXPERIMENTS D.1 ABLATION ON TEACHER MODEL Geometry Forcing does not depend on a specific 3D foundation model but still requires the 3D foundation ...
+- **p. 19 / Figure/Table caption - extractive body cue:** Table 7: Ablation study on teacher model. Our method (Geometry Forcing) is compatitable with different teacher models including VGGT and Pi3. Bold values denote the ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 TRAINING), p. 21 (C.4 METRICS), p. 21 (C.4 METRICS), p. 19 (C.4 METRICS), objective p. 18 (C.2 TRAINING), p. 18 (C.4 METRICS), p. 20 (C.4 METRICS), p. 24 (C.4 METRICS), p. 19 (C.4 METRICS), temporal p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 22 (C.4 METRICS), p. 4 (3 PRELIMINARIES), p. 7 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 TRAINING), p. 21 (C.4 METRICS), p. 21 (C.4 METRICS), p. 19 (C.4 METRICS), objective p. 18 (C.2 TRAINING), p. 18 (C.4 METRICS), p. 20 (C.4 METRICS), p. 24 (C.4 METRICS), p. 19 (C.4 METRICS), temporal p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 22 (C.4 METRICS), p. 4 (3 PRELIMINARIES), p. 7 (5 EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

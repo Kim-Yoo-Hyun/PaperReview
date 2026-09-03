@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5. Experiment - extractive PDF cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
-- **p. 6 / 5. Experiment - extractive PDF cue:** Our experiments are based on the nuScenes dataset [3], which provides extensive data to develop and evaluate essential 3D perception algorithms.
-- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** The environment evolves continuously over short time spans, implying exploitable scene consistency priors.
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Occupancy 2D-to-3D Lifting Task Head Scene-Adaptive Network Temporal Geometry Fusion ۵௧ ۶௚௧ିଵ ۶௩௧ିଵ ܄௧ Voxel-Level Temporal Fusion Images: Time t Fused Volume Feature Temporal Motion ...
-- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Inspired by testtime adaptation [6, 39, 40], we introduce additional sceneadaptive network parameters St (Sec.
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Ideally, this should handle dynamic object motion and camera pose estimation errors.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of 3D semantic occupancy prediction performance on the Occ3D dataset, evaluated with mIoUD, mIoU, and IoU metrics. Relative improvements are highlighted with ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Motivation behind the proposed temporal fusion. (a): VisionOcc pipeline. (b): Proposed temporal cues, showing historical motion and geometric data enhancing current viewpoints, with ...
+- **p. 6 / 5. Experiment - extractive body cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
+- **p. 6 / 5. Experiment - extractive body cue:** Our experiments are based on the nuScenes dataset [3], which provides extensive data to develop and evaluate essential 3D perception algorithms.
+- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** The environment evolves continuously over short time spans, implying exploitable scene consistency priors.
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Occupancy 2D-to-3D Lifting Task Head Scene-Adaptive Network Temporal Geometry Fusion ۵௧ ۶௚௧ିଵ ۶௩௧ିଵ ܄௧ Voxel-Level Temporal Fusion Images: Time t Fused Volume Feature Temporal Motion ...
+- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Inspired by testtime adaptation [6, 39, 40], we introduce additional sceneadaptive network parameters St (Sec.
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Ideally, this should handle dynamic object motion and camera pose estimation errors.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison of 3D semantic occupancy prediction performance on the Occ3D dataset, evaluated with mIoUD, mIoU, and IoU metrics. Relative improvements are highlighted with ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Motivation behind the proposed temporal fusion. (a): VisionOcc pipeline. (b): Proposed temporal cues, showing historical motion and geometric data enhancing current viewpoints, with ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 4. Ablations on different temporal cues. B, G, V, S, and M represent baseline, temporal geometry fusion, voxel-level fusion, scene-level fusion, and temporal ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 4. Comparison of our GDFusion and SOLOFusion w.r.t. memory consumption. SOLOFusion boosts performance with longer sequences but increases inference memory, while GDFu- sion ... | p. 6 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5. Experiment - extractive PDF cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
-- **p. 6 / 5. Experiment - extractive PDF cue:** Our experiments are based on the nuScenes dataset [3], which provides extensive data to develop and evaluate essential 3D perception algorithms.
-- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** The environment evolves continuously over short time spans, implying exploitable scene consistency priors.
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Occupancy 2D-to-3D Lifting Task Head Scene-Adaptive Network Temporal Geometry Fusion ۵௧ ۶௚௧ିଵ ۶௩௧ିଵ ܄௧ Voxel-Level Temporal Fusion Images: Time t Fused Volume Feature Temporal Motion ...
-- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Inspired by testtime adaptation [6, 39, 40], we introduce additional sceneadaptive network parameters St (Sec.
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Ideally, this should handle dynamic object motion and camera pose estimation errors.
+- **p. 6 / 5. Experiment - extractive body cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
+- **p. 6 / 5. Experiment - extractive body cue:** Our experiments are based on the nuScenes dataset [3], which provides extensive data to develop and evaluate essential 3D perception algorithms.
+- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** The environment evolves continuously over short time spans, implying exploitable scene consistency priors.
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Occupancy 2D-to-3D Lifting Task Head Scene-Adaptive Network Temporal Geometry Fusion ۵௧ ۶௚௧ିଵ ۶௩௧ିଵ ܄௧ Voxel-Level Temporal Fusion Images: Time t Fused Volume Feature Temporal Motion ...
+- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Inspired by testtime adaptation [6, 39, 40], we introduce additional sceneadaptive network parameters St (Sec.
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Ideally, this should handle dynamic object motion and camera pose estimation errors.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Motivation behind the proposed temporal fusion. (a): VisionOcc pipeline. (b): Proposed temporal cues, showing historical motion and geometric data enhancing current viewpoints, with ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Multi-level temporal fusion in the VisionOcc pipeline. Volume features Vt, geometry Gt, motion Mt, and scene-adaptive parameters St are enhanced through RNN-style temporal ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Update dynamics of gradient descent-based temporal fusion pipeline. f t denotes the (geometry, motion, voxel-level, scene-level) feature of the current frame. Ht-1 and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Comparison of our GDFusion and SOLOFusion w.r.t. memory consumption. SOLOFusion boosts performance with longer sequences but increases inference memory, while GDFu- sion achieves ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2. Since Gt is predicted as discrete probabilities along the camera's line of sight, we seek to preserve its normal- ized probabilistic distribution. To ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of 3D semantic occupancy prediction performance on the Occ3D dataset, evaluated with mIoUD, mIoU, and IoU metrics. Relative improvements are highlighted with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Scaling-up experiment of 3D semantic occupancy pre- diction on the Occ3D dataset. The top three rows feature an input size of 900 × ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablations on improving RNN-based voxel-level fusion. epochs using CBGS [34] with a learning rate of 2 × 10-4 and a global batch size ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Motivation behind the proposed temporal fusion. (a): VisionOcc pipeline. (b): Proposed temporal cues, showing historical motion and geometric data enhancing current viewpoints, with ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Multi-level temporal fusion in the VisionOcc pipeline. Volume features Vt, geometry Gt, motion Mt, and scene-adaptive parameters St are enhanced through RNN-style temporal ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Update dynamics of gradient descent-based temporal fusion pipeline. f t denotes the (geometry, motion, voxel-level, scene-level) feature of the current frame. Ht-1 and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Comparison of our GDFusion and SOLOFusion w.r.t. memory consumption. SOLOFusion boosts performance with longer sequences but increases inference memory, while GDFu- sion achieves ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2. Since Gt is predicted as discrete probabilities along the camera's line of sight, we seek to preserve its normal- ized probabilistic distribution. To ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison of 3D semantic occupancy prediction performance on the Occ3D dataset, evaluated with mIoUD, mIoU, and IoU metrics. Relative improvements are highlighted with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Scaling-up experiment of 3D semantic occupancy pre- diction on the Occ3D dataset. The top three rows feature an input size of 900 × ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablations on improving RNN-based voxel-level fusion. epochs using CBGS [34] with a learning rate of 2 × 10-4 and a global batch size ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This dataset comprises 1,000 scenes in total, with 700 designated for 1510 | embodiment, simulator version and control stack | p. 6 (5. Experiment), p. 6 (5. Experiment) |
 | Task/environment | Our experiments are based on the nuScenes dataset [3], which provides extensive data to develop and evaluate essential 3D perception algorithms. | reset, timeout, object/scene variation | p. 6 (5. Experiment), p. 3 (3.2. Temporal Cue Analysis and Formulation) |
@@ -116,11 +116,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | Primary metric/result | Figure 4. Comparison of our GDFusion and SOLOFusion w.r.t. memory consumption. SOLOFusion boosts performance with longer sequences but increases inference memory, while GDFu- sion ... | numeric claim only at cited anchor | p. 6 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
-- **p. 6 / 5. Experiment - extractive PDF cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
-- **p. 7 / Method - extractive PDF cue:** It includes 18 semantic categories: 17 object classes plus an empty class for unoccupied regions.
-- **p. 8 / 5.4. Wall-Clock Time - extractive PDF cue:** Each temporal fusion component consumes less than 6% of the total inference time (146.6ms), demonstrating the efficiency of GDFusion.
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
+- **p. 6 / 5. Experiment - extractive body cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
+- **p. 7 / Method - extractive body cue:** It includes 18 semantic categories: 17 object classes plus an empty class for unoccupied regions.
+- **p. 8 / 5.4. Wall-Clock Time - extractive body cue:** Each temporal fusion component consumes less than 6% of the total inference time (146.6ms), demonstrating the efficiency of GDFusion.
 
 ## Generalization and Failure Cases
 
@@ -152,9 +152,9 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive PDF cue:** Thus, we propose temporal geometry fusion to yield a more robust geometric prior, detailed in Sec.
+- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Thus, we propose temporal geometry fusion to yield a more robust geometric prior, detailed in Sec.
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiment), p. 6 (5. Experiment), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 6 (Figure/Table caption), p. 3 (3.2. Temporal Cue Analysis and Formulation), baselines p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiment), p. 6 (5. Experiment), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 6 (Figure/Table caption), p. 3 (3.2. Temporal Cue Analysis and Formulation), baselines p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

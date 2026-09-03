@@ -21,7 +21,7 @@
 
 ### Strongest assumption and failure boundary
 
-- **p. 1 / 1 Introduction - extractive body cue:** Because of their intricate design, they are difficult to control and plan *Supported by the Italian Ministry for University and Scientific Research.
+- **p. 1 / 1 Introduction - extractive body cue:** Because of their intricate design, they are difficult to control and plan.
 - **p. 1 / 1 Introduction - extractive body cue:** The geometrical aspects of grasping will be emphasized while the problem of controlling compliance between the object and the jaws is not considered.
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: Three-jaw Gripper grasping a Polygonal Ob- ject In the case of a three fingered gripper there is an additional test in order to ...
 - **p. 3 / 4.1 Representing Anger forces - extractive body cue:** Given n contacts, we have the following definition: As we pointed out earlier, specifying g does not determine the actual wrench acting on the object ...
@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 The reaction torque rj is given by ~j x f , where Tj is the vector pointing from the center of mass of the object to the point contact where the force ...를 Of course, there can still be some directions where the reaction wrench can be greater, but we want to be assured we get a lower bound over all directions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 2: Three-jaw Gripper grasping a Polygonal Ob- ject In the case of a three fingered gripper there is an additional test in order to avoid collision among the fingers. It is ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In section four, we introduce and discuss the quality criteria we are proposing.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The reaction torque rj is given by ~j x f , where Tj is the vector pointing from the center of mass of the object to the point contact where ... (p. 4, 4.3 Minimizing the maximum Anger force).
+- **Paper-specific mechanism:** In section four, we introduce and discuss the quality criteria we are proposing. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 1: Graphic Evaluation of the Quality Criteria 5 An Example of Using the Quality Criteria In the next subsections, we will present an algo- rithm that can evaluate the ... (p. 5, Figure/Table caption); the relevant task/metric cue is Then, Q is just the distance of the nearest point to the origin, from the origin itself. (p. 3, 4.1 Representing Anger forces). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In a force closure grasp, finger locations do not change to counter external forces. (p. 1, 2 Working hypotheses).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Avoiding large forces minimizes the deformation of both the object and the jaws..
-3. Compare against the body-reported baseline or a matched simpler baseline: Some grasp configurations can be better than others in the sense that they can balance every external force, without applying too large finger forces..
-4. Report the body metric and its denominator/aggregation: Without loss of generality, we choose llwll so that 11g11 = 1..
-5. Re-run the body-reported ablation/failure condition: Some grasp configurations can be better than others in the sense that they can balance every external force, without applying too large finger forces..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The reaction torque rj is given by ~j x f , where Tj is the vector pointing from the center of mass of the object to the point contact where ... (p. 4, 4.3 Minimizing the maximum Anger force); preserve the objective/update rule: Without loss of generality, we choose llwll so that 11g11 = 1. (p. 3, 4.1 Representing Anger forces).
+2. Use the paper-reported task/data/environment cue: Avoiding large forces minimizes the deformation of both the object and the jaws. (p. 2, 4 The Quality of Grasp).
+3. Compare against the reported or matched baseline: Some grasp configurations can be better than others in the sense that they can balance every external force, without applying too large finger forces. (p. 2, 4 The Quality of Grasp).
+4. Report the body metric with its denominator and aggregation: Then, Q is just the distance of the nearest point to the origin, from the origin itself. (p. 3, 4.1 Representing Anger forces).
+5. Re-run the reported ablation or stress/failure condition: Some grasp configurations can be better than others in the sense that they can balance every external force, without applying too large finger forces. (p. 2, 4 The Quality of Grasp); if none is reported, design one around: In a force closure grasp, finger locations do not change to counter external forces. (p. 1, 2 Working hypotheses).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (4.1 Representing Anger forces), p. 1 (2 Working hypotheses), p. 2 (2 Working hypotheses); the primary result is directionally consistent at p. 3 (4.1 Representing Anger forces); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 3 (4.1 Representing Anger forces), and measure the boundary at p. 1 (2 Working hypotheses), p. 3 (4.1 Representing Anger forces).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 section, four, introduce mechanism이 Some grasp configurations can be better than others in the sense that they can balance every ... 대비 Without loss of generality, we choose llwll so that 11g11 = 1.을 개선하고, Figure 2: Three-jaw Gripper grasping a Polygonal Ob- ject In the case of a three fingered ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The reaction torque rj is given by ~j x f , where Tj is the vector pointing from the center of mass ...), does the paper-specific mechanism (In section four, we introduce and discuss the quality criteria we are proposing.) retain the reported evaluation outcome (Then, Q is just the distance of the nearest point to the origin, from the origin itself.) when tested against the paper's strongest explicit boundary (In a force closure grasp, finger locations do not change to counter external forces.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Then, Q is just the distance of the nearest point to the origin, from the origin itself.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (6 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In section four, we introduce and discuss the quality criteria we are proposing. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Figure 1: Graphic Evaluation of the Quality Criteria 5 An Example of Using the Quality Criteria In the next subsections, we will present an algo- rithm that can evaluate the ... (p. 5, Figure/Table caption).
+- **Strongest explicit boundary:** In a force closure grasp, finger locations do not change to counter external forces. (p. 1, 2 Working hypotheses).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

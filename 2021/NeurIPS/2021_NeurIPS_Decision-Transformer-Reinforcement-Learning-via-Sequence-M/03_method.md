@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.01345; PDF retrieval source: https://arxiv.org/pdf/2106.01345. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.01345; PDF retrieval source: https://arxiv.org/pdf/2106.01345. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | In this section, we present Decision Transformer, which models trajectories autoregressively with minimal modification to the transformer architecture, as summarized in Figure ... | p. 4 (3 Method), p. 4 (3 Method) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | The key desiderata in our choice of trajectory representation are that it should enable transformers to learn meaningful patterns and we should ... | p. 4 (3 Method), p. 6 (3 Method) |
@@ -83,9 +83,9 @@ PDF body method statement (p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p.
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | We feed the last K timesteps into Decision Transformer, for a total of 3K tokens (one for each modality: return-to-go, state, or ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | We feed the last K timesteps into Decision Transformer, for a total of 3K tokens (one for each modality: return-to-go, state, or ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | Additionally, an embedding for each timestep is learned and added to each token - note this is different than the standard positional ... | Hz/fps, inference time and control rate |
-| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not recovered | window and reset |
+| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | [13], representing 500 thousand of the 50 million transitions observed by an online DQN agent [20] during training; we report the mean ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), objective p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), temporal p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 8 (5 Discussion), p. 10 (Dataset).
+- **Evidence anchors reviewed:** method p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), objective p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), temporal p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 8 (5 Discussion), p. 10 (Dataset).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The key desiderata in our choice of trajectory representation are that it should enable transformers to learn meaningful patterns and we should be able to conditionally generate actions at test ... (p. 4, 3 Method).
+- **Objective/update evidence:** As a result, instead of feeding the rewards directly, we feed the model with the returns-to-go bRt = PT t′=t rt′. (p. 4, 3 Method).
+- **Temporal/runtime evidence:** We feed the last K timesteps into Decision Transformer, for a total of 3K tokens (one for each modality: return-to-go, state, or action). (p. 5, 3 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

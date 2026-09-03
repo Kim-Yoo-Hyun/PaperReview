@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2410.19341v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2410.19341v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway scenes.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** These datasets contain numerous dynamic objects, such as cars and pedestrians, as well as changes in illumination and viewpoint.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** A query image is considered accurately localized when at least one of the top N database images returned by the proposed method is within d ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. System Overview. The pre-trained text encoder of LSeg is used to generate text embeddings from a pre-defined label set. The visual encoder of ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Context Graph. Each circle represents the centroid of a cluster and serves as a node in the context graph. The graph visualizes the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. Correspondence Matching. The results of correspondence matching are visualized as follows: (a) matching results based on ORB features and (b) matching results based ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** IVB, the quantitative results in Sec.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway scenes.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** These datasets contain numerous dynamic objects, such as cars and pedestrians, as well as changes in illumination and viewpoint.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** A query image is considered accurately localized when at least one of the top N database images returned by the proposed method is within d ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. System Overview. The pre-trained text encoder of LSeg is used to generate text embeddings from a pre-defined label set. The visual encoder of ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Context Graph. Each circle represents the centroid of a cluster and serves as a node in the context graph. The graph visualizes the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. Correspondence Matching. The results of correspondence matching are visualized as follows: (a) matching results based on ORB features and (b) matching results based ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** IVB, the quantitative results in Sec.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 5. Correspondence Matching. The results of correspondence matching are visualized as follows: (a) matching results based on ORB features and (b) matching results ... | p. 6 (Figure/Table caption) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | IVB, the quantitative results in Sec. | p. 5 (IV. EXPERIMENTS) |
@@ -39,22 +39,22 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway scenes.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** These datasets contain numerous dynamic objects, such as cars and pedestrians, as well as changes in illumination and viewpoint.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway scenes.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** These datasets contain numerous dynamic objects, such as cars and pedestrians, as well as changes in illumination and viewpoint.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. The language-driven semantic segmentation is based on a pre- defined label set. The segmentation results on the KITTI dataset were obtained by correlating ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. System Overview. The pre-trained text encoder of LSeg is used to generate text embeddings from a pre-defined label set. The visual encoder of ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Context Graph. Each circle represents the centroid of a cluster and serves as a node in the context graph. The graph visualizes the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4. Feature Extraction. (a) In the case of using ORB features, keypoints are extracted even from pixels corresponding to dynamic objects such as cars. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. Correspondence Matching. The results of correspondence matching are visualized as follows: (a) matching results based on ORB features and (b) matching results based ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. The language-driven semantic segmentation is based on a pre- defined label set. The segmentation results on the KITTI dataset were obtained by correlating ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. System Overview. The pre-trained text encoder of LSeg is used to generate text embeddings from a pre-defined label set. The visual encoder of ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Context Graph. Each circle represents the centroid of a cluster and serves as a node in the context graph. The graph visualizes the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4. Feature Extraction. (a) In the case of using ORB features, keypoints are extracted even from pixels corresponding to dynamic objects such as cars. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. Correspondence Matching. The results of correspondence matching are visualized as follows: (a) matching results based on ORB features and (b) matching results based ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway ... | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | These datasets contain numerous dynamic objects, such as cars and pedestrians, as well as changes in illumination and viewpoint. | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS) |
@@ -101,9 +101,9 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 | Primary metric/result | IVB, the quantitative results in Sec. | numeric claim only at cited anchor | p. 5 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We trained a k-nearest neighbors (kNN) model using the coordinates of the database data and calculated distances to query images to find the nearest neighbors ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** A query image is considered accurately localized when at least one of the top N database images returned by the proposed method is within d ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** In this paper, we calculated recall for N = 1, 5, 10, 20.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We trained a k-nearest neighbors (kNN) model using the coordinates of the database data and calculated distances to query images to find the nearest neighbors ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** A query image is considered accurately localized when at least one of the top N database images returned by the proposed method is within d ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** In this paper, we calculated recall for N = 1, 5, 10, 20.
 
 ## Generalization and Failure Cases
 
@@ -136,11 +136,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Limitations and Verification Questions
 
-- **p. 4 / III. METHODS - extractive PDF cue:** Using the segmentation results, we can filter out dynamic objects that could potentially degrade VPR performance by predefining such categories.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
-- **p. 5 / III. METHODS - extractive PDF cue:** 4 illustrates the difference between the prior approach and ours, where our approach filters out dynamic objects, such as cars, that can degrade the performance ...
+- **p. 4 / III. METHODS - extractive body cue:** Using the segmentation results, we can filter out dynamic objects that could potentially degrade VPR performance by predefining such categories.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
+- **p. 5 / III. METHODS - extractive body cue:** 4 illustrates the difference between the prior approach and ours, where our approach filters out dynamic objects, such as cars, that can degrade the performance ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Given a source policy action aS t+1 = πS(sS t , oS t ), we would like to transform it into a target policy action aT t+1 = πT (sT t , ...를 We consider the setting where there is a policy πS trained on a dataset of the source robot D = {(sS 1 , oS 1 , aS 1 , ..., sS Hi, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Less robust source policies leave little room for error, while more robust ones tend to retry even if the target robot fails to grasp the object the first time.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To summarize, our key contributions are:
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Mirage applies to both first-person and third-person camera views and policies that take in both states and images as inputs or only images as inputs. (p. 1, Abstract).
+- **Paper-specific mechanism:** To summarize, our key contributions are: (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Study Results Table I shows that when the target robots have the same gripper as the source robot, most unseen target robots achieve very high task success rates. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS); the relevant task/metric cue is that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a state-of-the-art generalist model. (p. 2, 3) Physical experiments with Franka and UR5 demonstrating). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Less robust source policies leave little room for error, while more robust ones tend to retry even if the target robot fails to grasp the object the first time. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For simulation experiments, we take into account potential occlusions between the robot and objects by comparing the pixel-wise depth values between the camera observation of the scene and the rendered robot..
-3. Compare against the body-reported baseline or a matched simpler baseline: that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a state-of-the-art generalist model..
-4. Report the body metric and its denominator/aggregation: For all tasks, we train the source state-based policy on the Franka robot and evaluate the success rates on different target robots using the test-time execution strategy mentioned above..
-5. Re-run the body-reported ablation/failure condition: Bridging the Visual Gap To replace the robots, we leverage the knowledge of the robot URDFs and camera poses to perform cross-painting at test time..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Mirage applies to both first-person and third-person camera views and policies that take in both states and images as inputs or only images as inputs. (p. 1, Abstract); preserve the objective/update rule: Focusing on common robot arms with similar workspaces and 2-jaw grippers, we investigate the feasibility of zero-shot transfer. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: To motivate the study, imagine there is a source robot ("oracle") teaching a target robot to perform a task side by side in a duplicate environment. (p. 4, IV. STATE-BASED TRANSFER EXPERIMENTS).
+3. Compare against the reported or matched baseline: that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a state-of-the-art generalist model. (p. 2, 3) Physical experiments with Franka and UR5 demonstrating).
+4. Report the body metric with its denominator and aggregation: that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a state-of-the-art generalist model. (p. 2, 3) Physical experiments with Franka and UR5 demonstrating).
+5. Re-run the reported ablation or stress/failure condition: Bridging the Visual Gap To replace the robots, we leverage the knowledge of the robot URDFs and camera poses to perform cross-painting at test time. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS); if none is reported, design one around: Less robust source policies leave little room for error, while more robust ones tend to retry even if the target robot fails to grasp the object the first time. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (4) We assume that the background and lighting conditions), p. 4 (4) We assume that the background and lighting conditions), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 9 (Figure/Table caption), p. 2 (3) Physical experiments with Franka and UR5 demonstrating); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 2 (3) Physical experiments with Franka and UR5 demonstrating), and measure the boundary at p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 6 (IV. STATE-BASED TRANSFER EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summarize, contributions, address mechanism이 that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance ... 대비 For all tasks, we train the source state-based policy on the Franka robot and evaluate the success rates ...을 개선하고, Less robust source policies leave little room for error, while more robust ones tend to retry ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Mirage applies to both first-person and third-person camera views and policies that take in both states and images as inputs or only ...), does the paper-specific mechanism (To summarize, our key contributions are:) retain the reported evaluation outcome (that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from ...) when tested against the paper's strongest explicit boundary (Less robust source policies leave little room for error, while more robust ones tend to retry even if ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To summarize, our key contributions are: (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Study Results Table I shows that when the target robots have the same gripper as the source robot, most unseen target robots achieve very high task success rates. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
+- **Strongest explicit boundary:** Less robust source policies leave little room for error, while more robust ones tend to retry even if the target robot fails to grasp the object the first time. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

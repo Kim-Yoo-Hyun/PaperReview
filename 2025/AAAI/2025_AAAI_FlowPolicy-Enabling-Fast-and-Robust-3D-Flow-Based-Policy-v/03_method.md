@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33617; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33617. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33617; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33617. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual ... | p. 2 (Abstract), p. 3 (Abstract) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | Therefore, we propose FlowPolicy, a conditional consistency flow matching model, which guarantees the generation of high-quality actions while also accomplishing one-step inference ... | p. 3 (Abstract), p. 1 (Abstract) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | Additionally, our model employs an observation horizon of two steps, signifying that it leverages the point clouds from the two most recent ... | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | Define at to be the interpolated trajectory between the source and destination trajectories at the transmission time step t. | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | We evaluate 37 tasks from Adroit and Metaworld across 3 random seeds and report inference time per step (ms) with standard deviation. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -135,8 +135,17 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), objective p. 5 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), temporal p. 5 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
+- **Evidence anchors reviewed:** method p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), objective p. 5 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), temporal p. 5 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Specifically, FlowPolicy conditions on the observed 3D point cloud, where consistency flow matching directly defines straight-line flows from different time states to the same action space, while simultaneously constraining their ... (p. 1, Abstract).
+- **Objective/update evidence:** We evaluate 37 tasks from Adroit and Metaworld across 3 random seeds and report the success rate (%) with standard deviation. ‘∗' indicates that the NFE of Adaflow is not ... (p. 5, Abstract).
+- **Temporal/runtime evidence:** Additionally, our model employs an observation horizon of two steps, signifying that it leverages the point clouds from the two most recent time frames as conditional inputs for policy generation. (p. 5, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

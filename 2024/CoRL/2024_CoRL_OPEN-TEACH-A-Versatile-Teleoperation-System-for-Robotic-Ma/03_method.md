@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/iyer25a.html; PDF retrieval source: https://arxiv.org/pdf/2403.07870. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/iyer25a.html; PDF retrieval source: https://arxiv.org/pdf/2403.07870. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (I
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we present OPEN TEACH, an open-source framework for robot teleoperation that supports a variety of robots, including bimanual and multi-finger manipulation, all ...
-- **p. 4 / IV. OPEN TEACH - extractive body cue:** In this section, we provide details about the VR-based teleoperation setup and the system design that enables data collection using this framework.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present OPEN TEACH, a unified robot teleoperation framework that supports multiple arms and hands, allows mobile manipulation, is calibration-free, and works across both ...
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (I
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | For both of these methods, the first phase involves obtaining a non-parametric base-policy πb : Z →A with encoded representations z ∈Z ... | p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (III. BACKGROUND ON IMITATION LEARNING) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | Behavior Cloning Given a dataset of expert rollouts for a desired task in the form of observation and action pairs D == ... | p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (I
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | The framework has been designed for simple integration with any robot setup, allowing robot teleoperation with real-time streaming (up to 90Hz) and ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | In this work, we introduce OPEN TEACH, an open-source unified framework designed to facilitate low-latency, highfrequency robot teleoperation. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | The framework has been designed for simple integration with any robot setup, allowing robot teleoperation with real-time streaming (up to 90Hz) and ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -129,8 +129,17 @@ PDF body method statement (p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (I
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH), p. 5 (IV. OPEN TEACH), p. 2 (Abstract), p. 6 (4) How intuitive is the system for new users?), objective p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 2 (I. INTRODUCTION), p. 2 (Abstract), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH), p. 6 (4) How intuitive is the system for new users?), temporal p. 5 (IV. OPEN TEACH), p. 8 (VI. LIMITATIONS AND DISCUSSION), p. 1 (Front matter), p. 1 (Front matter), p. 2 (I. INTRODUCTION), p. 3 (III. BACKGROUND ON IMITATION LEARNING).
+- **Evidence anchors reviewed:** method p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH), p. 5 (IV. OPEN TEACH), p. 2 (Abstract), p. 6 (4) How intuitive is the system for new users?), objective p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 2 (I. INTRODUCTION), p. 2 (Abstract), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH), p. 6 (4) How intuitive is the system for new users?), temporal p. 5 (IV. OPEN TEACH), p. 8 (VI. LIMITATIONS AND DISCUSSION), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), p. 3 (III. BACKGROUND ON IMITATION LEARNING).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For both of these methods, the first phase involves obtaining a non-parametric base-policy πb : Z →A with encoded representations z ∈Z and actions a ∈A. (p. 3, III. BACKGROUND ON IMITATION LEARNING).
+- **Objective/update evidence:** The aforementioned devices are cost-effective and easy to set up. (p. 2, I. INTRODUCTION).
+- **Temporal/runtime evidence:** The framework has been designed for simple integration with any robot setup, allowing robot teleoperation with real-time streaming (up to 90Hz) and low-latency visual feedback. (p. 5, IV. OPEN TEACH).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

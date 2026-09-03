@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM STATEMENT), p. 1 (I
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | These failures are due to the nonlinear, discontinuous, and multimodal nature of contact interactions. | contact-rich manipulation scene | body wording is the source claim |
-| Observation / input | Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | composed, core, components, stateestimation, pipeline, feedback, tactile, sensor, estimate, object | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
 | Output / action | because, robots, future, will, likely, extensively, tactile, sensors | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
 | Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | visual/tactile/proprioceptive contact history; body terms: composed, core, components, stateestimation, pipeline, feedback, tactile, sensor, estimate, object | p. 3 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
 | Decision / output variable | contact-aware action/force; body terms: contribution, formulate, contact, trajectory, optimization, precisely, address, requirements | p. 5 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM STATEMENT), p. 1 (I
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY) |
 | Success / guarantee | slip/contact success and safe interaction | p. 8 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM STATEMENT), p. 1 (I
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 5 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY)): The key contribution of our method is to formulate the contact trajectory optimization precisely to address these requirements while also being amenable to gradient-based optimization and capable of producing a ...
+PDF body contribution framing (p. 5 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY)): The key contribution of our method is to formulate the contact trajectory optimization precisely to address these requirements while also being amenable to gradient-based optimization and capable of producing a ...
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** An integral part of our method is the use of tactile sensors.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our method is able to produce a variety of "manipulation skills" and is amenable to gradient-based optimization by exploiting differentiability within contact modes (e.g., specifications ...
@@ -68,12 +68,21 @@ PDF contribution framing (p. 5 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (
 
 ## Position in the Robotics Loop
 
-tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODOLOGY). The downstream handoff is claimed only when the body describes it.
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODOLOGY). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM STATEMENT), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 3 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODOLOGY), objective p. 5 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 6 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY).
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM STATEMENT), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 3 (IV. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. METHODOLOGY), objective p. 5 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 6 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** In this paper, we consider the class of problems in which the robot is tasked with using an object grasped with tactile sensors to: i) transmit desired forces to the ... (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** The main contributions of our work are in components (iii) and (iv) where we augment the model in (ii) with contact-aware constraints for object poses and force transmission, then formulating ... (p. 3, IV. METHODOLOGY).
+- **Assumption/failure evidence:** Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques. (p. 10, V. EXPERIMENTS AND RESULTS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

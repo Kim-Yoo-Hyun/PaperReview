@@ -37,10 +37,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 And subsequently it updates the policy such that better actions in that state will have better probabilities to be chosen.를 We develop two off-policy algorithms and demonstrate that they are competitive with the state-of-the-art in deep reinforcement learning.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy (optimized) agent=MPO agent=MPO (parametric) agent=PPO 0 1 ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes. (p. 1, 1 INTRODUCTION).
+- **Paper-specific mechanism:** In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes. (p. 1, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ature on three domains from the control suite. We plot the median performance over ... (p. 8, Figure/Table caption); the relevant task/metric cue is The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system. (p. 8, 5 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The case for the Walker-2D parkour domain (where we compare against a PPO baseline) is even more striking: where standard PPO requires approximately 1M trajectories to find a good policy ... (p. 9, 5 EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -52,19 +53,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For example, the classical cart-pole and acrobot dynamical systems, 2D and Humanoid walking as well as simple low-dimensional planar reaching and manipulation tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ature on three domains from the control suite. We plot the median performance over 10 experiments ....
-4. Report the body metric and its denominator/aggregation: The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system..
-5. Re-run the body-reported ablation/failure condition: Finally using only a single sample to estimate the integral (and hence the likelihood ratio gradient) results in an actor-critic variant with Retrace that is the least performant off-policy algorithm in our ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes. (p. 1, 1 INTRODUCTION); preserve the objective/update rule: In contrast to typical off-policy value-gradient algorithms, the new algorithm does not require gradient of the Q-function to update the policy. (p. 2, 1 INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: For example, the classical cart-pole and acrobot dynamical systems, 2D and Humanoid walking as well as simple low-dimensional planar reaching and manipulation tasks. (p. 7, 5 EXPERIMENTS).
+3. Compare against the reported or matched baseline: We note that in order to ensure a fair comparison all algorithms ran with exactly the same network configuration, used a single learner (no distributed computation), used the same optimizer ... (p. 8, 5 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system. (p. 8, 5 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Finally using only a single sample to estimate the integral (and hence the likelihood ratio gradient) results in an actor-critic variant with Retrace that is the least performant off-policy algorithm ... (p. 8, 5 EXPERIMENTS); if none is reported, design one around: The case for the Walker-2D parkour domain (where we compare against a PPO baseline) is even more striking: where standard PPO requires approximately 1M trajectories to find a good policy ... (p. 9, 5 EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION); the primary result is directionally consistent at p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 11 (Figure/Table caption), and measure the boundary at p. 9 (5 EXPERIMENTS), p. 18 (A.2 REGULARIZED JOINT POLICY GRADIENT).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 novel, off-policy, algorithm mechanism이 Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ... 대비 The reward in the Acrobot task is the distance of the robots end-effector to an upright position of ...을 개선하고, 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.), does the paper-specific mechanism (In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.) retain the reported evaluation outcome (The reward in the Acrobot task is the distance of the robots end-effector to an upright position of ...) when tested against the paper's strongest explicit boundary (The case for the Walker-2D parkour domain (where we compare against a PPO baseline) is even more striking: ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The reward in the Acrobot task is the distance of the robots end-effector to an upright position of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes. (p. 1, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ature on three domains from the control suite. We plot the median performance over ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** The case for the Walker-2D parkour domain (where we compare against a PPO baseline) is even more striking: where standard PPO requires approximately 1M trajectories to find a good policy ... (p. 9, 5 EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

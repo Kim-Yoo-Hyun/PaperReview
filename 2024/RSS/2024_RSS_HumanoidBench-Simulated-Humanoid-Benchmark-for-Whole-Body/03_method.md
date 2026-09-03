@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p061.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p061.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | In this paper, we present extensive benchmarking results of the state-of-the-art reinforcement leaning (RL) algorithms, which do not require extensive domain knowledge, ... | p. 1 (I. INTRODUCTION), p. 1 (Abstract) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | To aecelerate algorithmic research in humanoid robots, we present a high-dimensional, simulated robot learning henchmark, HumanoidBench, featuring a humanoid robot equipped with ... | p. 1 (Abstract), p. 2 (I. INTRODUCTION) |
@@ -85,12 +85,12 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | mns represent the standard deviation, Returns are computed by summing the rewards at all timesteps of an episode. | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | still challenging and has been delayed mainly due to such robots' costly and unsafe real-world experimental setups, | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | For both position and torque control, the action space is 6-dimensional including the two hands, and controlled at 50 Hz. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective p. 6 (IV. HuMANOIDBENcH), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 5 (IV. HuMANOIDBENcH), temporal p. 6 (IV. HuMANOIDBENcH), p. 1 (I. INTRODUCTION), p. 1 (Front matter), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective p. 6 (IV. HuMANOIDBENcH), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 5 (IV. HuMANOIDBENcH), temporal p. 6 (IV. HuMANOIDBENcH), p. 1 (I. INTRODUCTION), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (1 pages; pdftotext fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Then, we use the pretrained action spaces and limited planning horizon of the state-of-thereaching policies (frozen) as low-level policies and only train art RL algorithms. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Objective/update evidence:** All the policies barely learn to stabilize using the dense reward, but struggle to learn any complex no constraints on how to obtain both low-level and high-level manipulation skills. policies. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Temporal/runtime evidence:** Returns are computed by summing the rewards at all timesteps of an episode. (p. 1, II. R ELATED W ORK).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 Phase 1: In simulation, a privileged RL teacher policy ωteacher receives full-state proprioception and exteroception of the task information and outputs WBC commands.를 At time step t, the teacher ωteacher(at/opriv t ) outputs a high-level command for the low-level WBC policy given privileged observation.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Note that VIRAL framework does not have designs overfitting to specific WBC policy, and can be extended to other humanoid WBC controllers [44, 78].에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Proprioception consists of oprop-priv t = [vt, ωt, gt, at→1, qt, ˙qt, f finger t ] where vt, ωt are base linear and angular velocities, gt is base projected gravity, at→1 is ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Humanoid robots are often framed as the natural embodiment of general-purpose physical intelligence: machines that could ultimately take on a large fraction of physical work for society. (p. 1, 1. Introduction).
+- **Paper-specific mechanism:** Our goal is not to propose yet another novel RL or sim-to-real algorithm, but to provide a technical recipe on the full stack required to make RGBbased humanoid loco-manipulation work ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 8. Real-world generalization of VIRAL RGB-based policy under variations in tray and object position, robot start pose, table height and type, tablecloth color, lighting, and object category. Videos are ... (p. 6, Figure/Table caption); the relevant task/metric cue is As shown in Figure 7, the expert attains a 100% success rate with a 21.4 s cycle time, slightly higher than the 20.2 s cycle time of VIRAL. (p. 6, 3.1. Robustness). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We find that compute scale is critical: scaling simulation to tens of GPUs (up to 64) makes both teacher and student training reliable, while low-compute regimes often fail. (p. 1, Abstract).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We assess real-world generalization by systematically varying the environment along multiple factors, including tray start position, robot start pose, table height, lighting, table cloth, table type and color, and object category (Figur ....
-3. Compare against the body-reported baseline or a matched simpler baseline: These results show that although expert-level success remains challenging, VIRAL achieves near-expert success performance while being faster than the expert, and it substantially outperforms non-experts in both reliability and efficienc ....
-4. Report the body metric and its denominator/aggregation: Figure 14. Scaling compute for teacher training. Rewards (left) and success rates (right) for 1-16 GPUs. More GPUs yield faster convergence and better asymptotic performance..
-5. Re-run the body-reported ablation/failure condition: Figure 9. Ablations of teacher policy training. Training rewards (left) and success rates (right) for the full method (RSI + delta ac- tion), without demonstration resets, and without delta action space, showing ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Humanoid robots are often framed as the natural embodiment of general-purpose physical intelligence: machines that could ultimately take on a large fraction of physical work for society. (p. 1, 1. Introduction); preserve the objective/update rule: Therefore, we define four key rewards: 1. (p. 3, 2.1. Key Elements of Teacher Training).
+2. Use the paper-reported task/data/environment cue: We assess real-world generalization by systematically varying the environment along multiple factors, including tray start position, robot start pose, table height, lighting, table cloth, table type and color, and object ... (p. 6, 3.2. Generalization).
+3. Compare against the reported or matched baseline: Across these variations, VIRAL consistently completes the task without additional tuning, indicating strong robustness. (p. 6, 3.2. Generalization).
+4. Report the body metric with its denominator and aggregation: As shown in Figure 7, the expert attains a 100% success rate with a 21.4 s cycle time, slightly higher than the 20.2 s cycle time of VIRAL. (p. 6, 3.1. Robustness).
+5. Re-run the reported ablation or stress/failure condition: Figure 9. Ablations of teacher policy training. Training rewards (left) and success rates (right) for the full method (RSI + delta ac- tion), without demonstration resets, and without delta action ... (p. 6, Figure/Table caption); if none is reported, design one around: We find that compute scale is critical: scaling simulation to tens of GPUs (up to 64) makes both teacher and student training reliable, while low-compute regimes often fail. (p. 1, Abstract).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training); the primary result is directionally consistent at p. 6 (3.1. Robustness), p. 6 (Figure/Table caption), p. 5 (3. Real-World Results of VIRAL); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 1 (Abstract), match the reported outcome at p. 6 (Figure/Table caption), p. 6 (3.2. Generalization), p. 6 (3.1. Robustness), and measure the boundary at p. 1 (Abstract), p. 2 (1. Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Proprioception, consists, oprop-priv mechanism이 These results show that although expert-level success remains challenging, VIRAL achieves near-expert success performance while being ... 대비 Figure 14. Scaling compute for teacher training. Rewards (left) and success rates (right) for 1-16 GPUs. More GPUs ...을 개선하고, Note that VIRAL framework does not have designs overfitting to specific WBC policy, and can be ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Humanoid robots are often framed as the natural embodiment of general-purpose physical intelligence: machines that could ultimately take on a large fraction ...), does the paper-specific mechanism (Our goal is not to propose yet another novel RL or sim-to-real algorithm, but to provide a technical recipe on the full ...) retain the reported evaluation outcome (As shown in Figure 7, the expert attains a 100% success rate with a 21.4 s cycle time, ...) when tested against the paper's strongest explicit boundary (We find that compute scale is critical: scaling simulation to tens of GPUs (up to 64) makes both ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (As shown in Figure 7, the expert attains a 100% success rate with a 21.4 s cycle time, ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our goal is not to propose yet another novel RL or sim-to-real algorithm, but to provide a technical recipe on the full stack required to make RGBbased humanoid loco-manipulation work ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 8. Real-world generalization of VIRAL RGB-based policy under variations in tray and object position, robot start pose, table height and type, tablecloth color, lighting, and object category. Videos are ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** We find that compute scale is critical: scaling simulation to tens of GPUs (up to 64) makes both teacher and student training reliable, while low-compute regimes often fail. (p. 1, Abstract).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

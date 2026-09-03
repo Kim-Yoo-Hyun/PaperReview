@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p149.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p149.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p149.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p149.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | 2) Network architecture: In all tasks, we use a SIM(3)- equivariant PointNet++ (96, 95] with 4 layers and hidden dimensionality 128 as ... | p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | For the noise prediction network, we inherits hyperparameters from the ‘original Diffusion Policy [15], Specifically, to optimize for inference speed in all ... | p. 17 (A. Implementation Details of Our BiDP), p. 4 (B. Hand Motion Extraction and Injection) |
@@ -78,9 +78,9 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | For a more detailed comparison, we report the average length (following CLAVIN [59]) in each substep for a sequenced long-horizon task, where ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | For a more detailed comparison, we report the average length (following CLAVIN [59]) in each substep for a sequenced long-horizon task, where ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | For the number of the action steps, which is also the length of the predicted horizon, we simplify it and set the ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | 4) Metries: We train all methods for 500 or 1,000 epochs and only save the last checkpoint for testing. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -129,8 +129,17 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), p. 4 (B. Hand Motion Extraction and Injection), p. 4 (B. Hand Motion Extraction and Injection), p. 5 (B. Hand Motion Extraction and Injection), p. 5 (B. Hand Motion Extraction and Injection), objective p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), temporal p. 8 (A. Experiment Setups), p. 17 (A. Implementation Details of Our BiDP), p. 7 (A. Experiment Setups), p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups), p. 17 (A. Implementation Details of Our BiDP).
+- **Evidence anchors reviewed:** method p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), p. 4 (B. Hand Motion Extraction and Injection), p. 4 (B. Hand Motion Extraction and Injection), p. 5 (B. Hand Motion Extraction and Injection), p. 5 (B. Hand Motion Extraction and Injection), objective p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), temporal p. 8 (A. Experiment Setups), p. 17 (A. Implementation Details of Our BiDP), p. 7 (A. Experiment Setups), p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups), p. 17 (A. Implementation Details of Our BiDP).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The learning objective can be simply ‘concluded as maximum likelihood observation-conditioned, imitation objective to learn the policy =: (p. 4, A. Problem Formulation).
+- **Objective/update evidence:** The learning objective can be simply ‘concluded as maximum likelihood observation-conditioned, imitation objective to learn the policy =: (p. 4, A. Problem Formulation).
+- **Temporal/runtime evidence:** For a more detailed comparison, we report the average length (following CLAVIN [59]) in each substep for a sequenced long-horizon task, where the last substep indicates the final suecess rate. (p. 8, A. Experiment Setups).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

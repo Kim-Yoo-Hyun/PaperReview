@@ -1,8 +1,10 @@
 # IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2305.17110.
-> PDF retrieval source: https://arxiv.org/pdf/2305.17110. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2305.17110.
+> PDF retrieval source: https://arxiv.org/pdf/2305.17110. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2305.17110
 - Code/Project: https://research.nvidia.com/labs/srl/projects/industreal/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Given modeling limitations and finite compute, simulation will always differ from reality; this reality gap has been notoriously large for robotics.를 문제로 두고, Our secondary contributions are the following: • Hardware: We present IndustRealKit, which contains CAD models for all parts designed for our setup, as well as a list of all purchased parts.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (III. PROBLEM DESCRIPTION), p. 3 (III. PROBLEM DESCRIPTION), p. 3 (IV. POLICY LEARNING IN SIMULATION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Robotic assembly is a longstanding challenge [70, 26]. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Specifically, our primary contributions are the following: • Algorithms: For simulation, we propose three methods to allow RL agents to solve contact-rich tasks in a simulator: a simulation-aware policy update ... (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Asset Pick Insert Pick-Place-Insert Success Success Engage Success Engage Round peg 8 mm 19/20 7/10 7/10 7/10 7/10 Round peg 12 mm 19/20 7/10 9/10 7/10 7/10 Round peg 16 ... (p. 9, VI. REAL-WORLD EXPERIMENTS).
+- **Explicit failure boundary:** Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce gripper (e.g., Robotiq) would fully resolve this issue. (p. 8, VI. REAL-WORLD EXPERIMENTS).

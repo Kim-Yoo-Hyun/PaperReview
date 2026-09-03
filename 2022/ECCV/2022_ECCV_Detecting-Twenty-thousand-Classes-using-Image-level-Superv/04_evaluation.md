@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.02605; PDF retrieval source: https://arxiv.org/pdf/2201.02605. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.02605; PDF retrieval source: https://arxiv.org/pdf/2201.02605. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 Experiments - extractive PDF cue:** We evaluate Detic on the large-vocabulary object detection dataset LVIS [18].
-- **p. 7 / 5 Experiments - extractive PDF cue:** The LVIS [18] dataset has object detection and instance segmentation labels for 1203 classes with 100K images.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Approach Overview. We mix train on detection data and image-labeled data. When using detection data, our model uses the standard detection losses to ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Open-vocabulary COCO [2]. We compare Detic using the same training data and architecture from OVR-CNN [72]. We report box mAP at IoU threshold ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** We use Federated Loss [76] and repeat factor sampling [18].
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualization of the assigned boxes during training. We show all boxes with score > 0.5 in blue and the assigned (selected) box in ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 5: Qualitative results of our 21k-class detector. We show random samples from images containing novel classes in OpenImages (top) and Objects365 (bottom) validation sets. ...
+- **p. 7 / 5 Experiments - extractive body cue:** We evaluate Detic on the large-vocabulary object detection dataset LVIS [18].
+- **p. 7 / 5 Experiments - extractive body cue:** The LVIS [18] dataset has object detection and instance segmentation labels for 1203 classes with 100K images.
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Approach Overview. We mix train on detection data and image-labeled data. When using detection data, our model uses the standard detection losses to ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Open-vocabulary COCO [2]. We compare Detic using the same training data and architecture from OVR-CNN [72]. We report box mAP at IoU threshold ...
+- **p. 7 / 5 Experiments - extractive body cue:** We use Federated Loss [76] and repeat factor sampling [18].
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4: Visualization of the assigned boxes during training. We show all boxes with score > 0.5 in blue and the assigned (selected) box in ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 5: Qualitative results of our 21k-class detector. We show random samples from images containing novel classes in OpenImages (top) and Objects365 (bottom) validation sets. ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 5: Detic with different classifiers. We vary the classifier used with Detic and observe that it works well with different choices. While CLIP ... | p. 13 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 15: Detic applied to Deformable-DETR [79]. We report Box mAP on full LVIS. Our method improves Deformable-DETR. outperforms MosaicOS [73] in mAP and ... | p. 26 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 Experiments - extractive PDF cue:** We evaluate Detic on the large-vocabulary object detection dataset LVIS [18].
-- **p. 7 / 5 Experiments - extractive PDF cue:** The LVIS [18] dataset has object detection and instance segmentation labels for 1203 classes with 100K images.
+- **p. 7 / 5 Experiments - extractive body cue:** We evaluate Detic on the large-vocabulary object detection dataset LVIS [18].
+- **p. 7 / 5 Experiments - extractive body cue:** The LVIS [18] dataset has object detection and instance segmentation labels for 1203 classes with 100K images.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Top: Typical detection results from a strong open-vocabulary LVIS detector. The detector misses objects of "common" classes. Bottom: Number of images in LVIS, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Approach Overview. We mix train on detection data and image-labeled data. When using detection data, our model uses the standard detection losses to ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Prediction-based vs non-prediction-based methods. We show overall and novel-class mAP on open-vocabulary LVIS [17] (with 866 base classes and 337 novel classes) with ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualization of the assigned boxes during training. We show all boxes with score > 0.5 in blue and the assigned (selected) box in ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Open-vocabulary LVIS compared to ViLD [17]. We train our model using their training settings and architecture (MaskRCNN-ResNet50, training from scratch). We report mask ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Open-vocabulary COCO [2]. We compare Detic using the same training data and architecture from OVR-CNN [72]. We report box mAP at IoU threshold ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Detecting 21K classes across datasets. We use Detic to train a detector and evaluate it on multiple datasets without retraining. We report the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Top: Typical detection results from a strong open-vocabulary LVIS detector. The detector misses objects of "common" classes. Bottom: Number of images in LVIS, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Approach Overview. We mix train on detection data and image-labeled data. When using detection data, our model uses the standard detection losses to ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Prediction-based vs non-prediction-based methods. We show overall and novel-class mAP on open-vocabulary LVIS [17] (with 866 base classes and 337 novel classes) with ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4: Visualization of the assigned boxes during training. We show all boxes with score > 0.5 in blue and the assigned (selected) box in ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Open-vocabulary LVIS compared to ViLD [17]. We train our model using their training settings and architecture (MaskRCNN-ResNet50, training from scratch). We report mask ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Open-vocabulary COCO [2]. We compare Detic using the same training data and architecture from OVR-CNN [72]. We report box mAP at IoU threshold ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Detecting 21K classes across datasets. We use Detic to train a detector and evaluate it on multiple datasets without retraining. We report the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate Detic on the large-vocabulary object detection dataset LVIS [18]. | embodiment, simulator version and control stack | p. 7 (5 Experiments), p. 7 (5 Experiments) |
 | Task/environment | The LVIS [18] dataset has object detection and instance segmentation labels for 1203 classes with 100K images. | reset, timeout, object/scene variation | p. 7 (5 Experiments) |
@@ -117,12 +117,12 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 | Primary metric/result | Table 15: Detic applied to Deformable-DETR [79]. We report Box mAP on full LVIS. Our method improves Deformable-DETR. outperforms MosaicOS [73] in mAP and ... | numeric claim only at cited anchor | p. 26 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 Experiments - extractive PDF cue:** We use large scale jittering [15] with input resolution 640×640 and train for a 4× (∼48 LVIS epochs) schedule.
-- **p. 2 / X. Zhou et al - extractive PDF cue:** With imagelevel supervision from ImageNet-21K [10], our model trained without novel class detection annotations improves the baseline by 8.3 point and matches the performance of ...
-- **p. 3 / X. Zhou et al - extractive PDF cue:** We show that this loss is both simpler and performs better than prior work. outperforms the previous state-of-the-art OVR-CNN [72] by 5 point with the ...
-- **p. 5 / 3 Preliminaries - extractive PDF cue:** In our experiments, the proposal network and the bounding box regressors are not the current performance bottleneck, as modern detectors use an over-sufficient number of ...
-- **p. 8 / X. Zhou et al - extractive PDF cue:** In our implementation, we use 320×320 for ImageNet and CC and ablate this in Appendix D.
-- **p. 8 / X. Zhou et al - extractive PDF cue:** Training our ResNet50 model takes ∼22 hours on 8 V100 GPUs.
+- **p. 7 / 5 Experiments - extractive body cue:** We use large scale jittering [15] with input resolution 640×640 and train for a 4× (∼48 LVIS epochs) schedule.
+- **p. 2 / X. Zhou et al - extractive body cue:** With imagelevel supervision from ImageNet-21K [10], our model trained without novel class detection annotations improves the baseline by 8.3 point and matches the performance of ...
+- **p. 3 / X. Zhou et al - extractive body cue:** We show that this loss is both simpler and performs better than prior work. outperforms the previous state-of-the-art OVR-CNN [72] by 5 point with the ...
+- **p. 5 / 3 Preliminaries - extractive body cue:** In our experiments, the proposal network and the bounding box regressors are not the current performance bottleneck, as modern detectors use an over-sufficient number of ...
+- **p. 8 / X. Zhou et al - extractive body cue:** In our implementation, we use 320×320 for ImageNet and CC and ablate this in Appendix D.
+- **p. 8 / X. Zhou et al - extractive body cue:** Training our ResNet50 model takes ∼22 hours on 8 V100 GPUs.
 
 ## Generalization and Failure Cases
 
@@ -159,13 +159,13 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 
 ## Limitations and Verification Questions
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
-- **p. 13 / X. Zhou et al - extractive PDF cue:** By default, a trained classifier cannot recognize novel classes.
-- **p. 14 / X. Zhou et al - extractive PDF cue:** 6 Limitations and Conclusions We present Detic which is a simple way to use image supervision in largevocabulary object detection.
-- **p. 14 / X. Zhou et al - extractive PDF cue:** We leave incorporating such information for future work.
-- **p. 12 / X. Zhou et al - extractive PDF cue:** Compared to the Box-Supervised baseline (trained on LVIS-all), Detic leverages image-level supervision to train robust detectors.
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
+- **p. 13 / X. Zhou et al - extractive body cue:** By default, a trained classifier cannot recognize novel classes.
+- **p. 14 / X. Zhou et al - extractive body cue:** 6 Limitations and Conclusions We present Detic which is a simple way to use image supervision in largevocabulary object detection.
+- **p. 14 / X. Zhou et al - extractive body cue:** We leave incorporating such information for future work.
+- **p. 12 / X. Zhou et al - extractive body cue:** Compared to the Box-Supervised baseline (trained on LVIS-all), Detic leverages image-level supervision to train robust detectors.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 11 (Figure/Table caption), p. 7 (5 Experiments), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption), p. 12 (Figure/Table caption), p. 26 (Figure/Table caption), results p. 13 (Figure/Table caption), p. 26 (Figure/Table caption), p. 7 (5 Experiments), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 11 (Figure/Table caption), p. 7 (5 Experiments), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption), p. 12 (Figure/Table caption), p. 26 (Figure/Table caption), results p. 13 (Figure/Table caption), p. 26 (Figure/Table caption), p. 7 (5 Experiments), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

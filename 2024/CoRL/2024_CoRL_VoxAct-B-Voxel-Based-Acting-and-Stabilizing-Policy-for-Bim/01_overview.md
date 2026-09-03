@@ -1,8 +1,10 @@
 # VoxAct-B: Voxel-Based Acting and Stabilizing Policy for Bimanual Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v270/liu25i.html.
-> PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/liu25i/liu25i.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v270/liu25i.html.
+> PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/liu25i/liu25i.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v270/main/assets/liu25i/liu25i.pdf
 - Code/Project: https://voxact-b.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, they are generally sample inefficient, and using primitives can hinder generalization to different tasks as they are not easily adaptable to other types of tasks.를 문제로 두고, To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Additional Implementation Details), p. 17 (C Additional Implementation Details for the Baselines) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, they are generally sample inefficient, and using primitives can hinder generalization to different tasks as they are not easily adaptable to other types of tasks. (p. 1, 1 Introduction).
+- **Actual contribution:** To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Figure 4: Example successful rollouts (one per row) of VoxAct-B on a real-world bimanual setup with UR5s. Ablation experiments. Table 2 reports results on Open Drawer in simulation, based on ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace. (p. 8, 6 Results).

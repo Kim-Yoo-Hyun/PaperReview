@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.14132; PDF retrieval source: https://arxiv.org/pdf/2312.14132. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.14132; PDF retrieval source: https://arxiv.org/pdf/2312.14132. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Multi-view Depth | EMPIRICAL / REAL-ROBOT OR HARDWARE | We observe in Table 3 that DUSt3R achieves stateof-the-art accuracy on ETH-3D and outperforms most recent state-of-the-art methods overall, even those using groundtruth camera ... | p. 8 (4.4. Multi-view Depth) |
 | 4.2. Multi-view Pose Estimation | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 2, DUSt3R with global alignment achieves the best overall performance on the two datasets and significantly surpasses the state-of-the-art PoseDiffusion ... | p. 7 (4.2. Multi-view Pose Estimation) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These datasets feature diverse scenes types: indoor, outdoor, synthetic, real-world, object-centric, etc. | embodiment, simulator version and control stack | p. 6 (4. Experiments with DUSt3R), p. 8 (4.4. Multi-view Depth) |
 | Task/environment | This showcases the applicability of our method on a large variety of domains, either indoors, outdoors, small scale or large scale scenes, while not ... | reset, timeout, object/scene variation | p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 - **p. 8 / 4.5. 3D Reconstruction - extractive body cue:** Our method does not reach the accuracy levels of the best methods.
 - **p. 9 / 15.6 51.5 17.4 (374.2) - extractive body cue:** (1.7) 21.1 65.6 108.4 31.0 0.82 MVS2D ScanNet [160] ✓ × ✓ × 73.4 0.0 (4.5) (54.1) 30.7 14.4 5.0 57.9 56.4 11.1 34.0 27.5 ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments with DUSt3R), p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R), p. 7 (4.1. Visual Localization), p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), metrics p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), p. 8 (4.5. 3D Reconstruction), p. 9 (15.6 51.5 17.4 (374.2)), p. 7 (4.1. Visual Localization), p. 9 (15.6 51.5 17.4 (374.2)), baselines p. 7 (4.1. Visual Localization), p. 7 (4.3. Monocular Depth), p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R), p. 9 (15.6 51.5 17.4 (374.2)), p. 6 (4. Experiments with DUSt3R), results p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-view Pose Estimation), p. 7 (4.1. Visual Localization), p. 9 (4.6. Ablations), p. 6 (4. Experiments with DUSt3R), p. 6 (4. Experiments with DUSt3R).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments with DUSt3R), p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R), p. 7 (4.1. Visual Localization), p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), metrics p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), p. 8 (4.5. 3D Reconstruction), p. 9 (15.6 51.5 17.4 (374.2)), p. 7 (4.1. Visual Localization), p. 9 (15.6 51.5 17.4 (374.2)), baselines p. 7 (4.1. Visual Localization), p. 7 (4.3. Monocular Depth), p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R), p. 9 (15.6 51.5 17.4 (374.2)), p. 6 (4. Experiments with DUSt3R), results p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-view Pose Estimation), p. 7 (4.1. Visual Localization), p. 9 (4.6. Ablations), p. 6 (4. Experiments with DUSt3R), p. 6 (4. Experiments with DUSt3R).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Our method obtains comparable accuracy compared to existing approaches, being feature-matching ones [101, 103] or end-to-end learningbased methods [11, 55, 102, 125, 152], even managing to outperform strong baselines like ... (p. 7, 4.1. Visual Localization).
+- **Metric evidence:** Cross-View completion (CroCo) is a recently proposed pretraining paradigm inspired by MAE [46] that has been shown to excel on various downstream 3D vision tasks, and is thus particularly suited ... (p. 6, 4. Experiments with DUSt3R).
+- **Baseline/ablation evidence:** It outperforms the self-supervised baselines [6, 37, 121] and performs on-par with state-of-the-art supervised baselines [91, 174]. (p. 7, 4.3. Monocular Depth).
+- **Failure/negative evidence:** Procrustes alignment is, unfortunately, sensitive to noise and outliers. (p. 5, 3.3. Downstream Applications).

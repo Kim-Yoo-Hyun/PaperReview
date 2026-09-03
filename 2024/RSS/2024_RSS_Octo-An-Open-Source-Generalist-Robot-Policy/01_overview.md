@@ -1,20 +1,21 @@
 # Octo: An Open-Source Generalist Robot Policy
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2405.12213.
-> PDF retrieval source: https://arxiv.org/pdf/2405.12213. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2405.12213.
+> PDF retrieval source: https://arxiv.org/pdf/2405.12213. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Robotics, generalist policy, Imitation Learning
-- Aliases: Octo
 - Official paper: https://arxiv.org/abs/2405.12213
 - Full-text retrieval: https://arxiv.org/pdf/2405.12213
 - Code/Project: https://octo-models.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +83,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets.를 문제로 두고, In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).

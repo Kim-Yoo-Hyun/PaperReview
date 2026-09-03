@@ -1,8 +1,10 @@
 # MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v229/mandlekar23a.html.
-> PDF retrieval source: https://arxiv.org/pdf/2310.17596. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v229/mandlekar23a.html.
+> PDF retrieval source: https://arxiv.org/pdf/2310.17596. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2310.17596
 - Code/Project: https://mimicgen.github.io/
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 For example, [3] showed that a dataset of over 20,000 trajectories enables generalization to tasks with modest changes in objects and goals.를 문제로 두고, We make the following contributions: • We introduce MimicGen, a system for generating large diverse datasets from a small number of human demonstrations by adapting the human demonstrations to novel settings. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (4 Method), p. 4 (4 Method), p. 5 (4 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** For example, [3] showed that a dataset of over 20,000 trajectories enables generalization to tasks with modest changes in objects and goals. (p. 1, 1 Introduction).
+- **Actual contribution:** We make the following contributions: • We introduce MimicGen, a system for generating large diverse datasets from a small number of human demonstrations by adapting the human demonstrations to novel ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Figure 4: (left) Agent Performance on Source and Generated Datasets. Success rates (3 seeds) of image- based agents trained with BC on the 10 source demos and each 1000 demo ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** Why might a data generation attempt result in a failure? (p. 17, 2. What are some limitations of MimicGen?).

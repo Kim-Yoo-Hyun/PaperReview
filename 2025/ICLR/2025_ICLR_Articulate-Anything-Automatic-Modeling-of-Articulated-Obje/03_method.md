@@ -1,49 +1,49 @@
-# Method - Articulate-Anything:  Automatic Modeling of Articulated Objects via a Vision-Language Foundation Model
+# Method - Articulate-Anything: Automatic Modeling of Articulated Objects via a Vision-Language Foundation Model
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=s3FTX4Ay55; PDF retrieval source: https://openreview.net/pdf/5b5bc03250bf501d6bd2746b36645f34e2c1b720.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=s3FTX4Ay55; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114017. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION)): We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and gripper positions.
+PDF body method statement (p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION)): We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and gripper positions.
 
 ## Method Body Digest
 
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
-- **p. 23 / A.7 MESH RECONSTRUCTION - extractive PDF cue:** Chamfer distance is included (lower is better) for different models for in-the-wild results.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Beyond robotics, the flexibility of ARTICULATE-ANYTHING's inputs married with its high-quality outputs puts automatic generation of rich, high-quality, and diverse virtual environments within reach with ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
-- **p. 23 / A.7 MESH RECONSTRUCTION - extractive PDF cue:** Ground-truth RGBD images were used by Real2Code.
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
+- **p. 23 / A.7 MESH RECONSTRUCTION - extractive body cue:** Chamfer distance is included (lower is better) for different models for in-the-wild results.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Beyond robotics, the flexibility of ARTICULATE-ANYTHING's inputs married with its high-quality outputs puts automatic generation of rich, high-quality, and diverse virtual environments within reach with ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
+- **p. 23 / A.7 MESH RECONSTRUCTION - extractive body cue:** Ground-truth RGBD images were used by Real2Code.
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address this challenge, we present ARTICULATE-ANYTHING, a novel approach in automatic articulation that harnesses the power of leading foundation vision-language models (VLMs) to articulate ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this challenge, we present ARTICULATE-ANYTHING, a novel approach in automatic articulation that harnesses the power of leading foundation vision-language models (VLMs) to articulate ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
 
 ## Source Evidence Cues
 
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
-- **p. 23 / A.7 MESH RECONSTRUCTION - extractive PDF cue:** Chamfer distance is included (lower is better) for different models for in-the-wild results.
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
+- **p. 23 / A.7 MESH RECONSTRUCTION - extractive body cue:** Chamfer distance is included (lower is better) for different models for in-the-wild results.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy ... | p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBOTIC TRAINING DETAILS) |
-| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies. | p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION) |
+| Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy ... | p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBOTIC TRAINING DETAILS) |
+| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies. | p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION) |
 | Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | Chamfer distance is included (lower is better) for different models for in-the-wild results. | p. 23 (A.7 MESH RECONSTRUCTION) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
-- **Equation/algorithm anchors:** p. 15 (A.3 ROBOTIC TRAINING DETAILS).
+- **Equation/algorithm anchors:** p. 16 (A.3 ROBOTIC TRAINING DETAILS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -57,11 +57,11 @@ PDF body method statement (p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBO
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Beyond robotics, the flexibility of ARTICULATE-ANYTHING's inputs married with its high-quality outputs puts automatic generation of rich, high-quality, and diverse virtual environments within reach with ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
-- **p. 23 / A.7 MESH RECONSTRUCTION - extractive PDF cue:** Ground-truth RGBD images were used by Real2Code.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Beyond robotics, the flexibility of ARTICULATE-ANYTHING's inputs married with its high-quality outputs puts automatic generation of rich, high-quality, and diverse virtual environments within reach with ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
+- **p. 23 / A.7 MESH RECONSTRUCTION - extractive body cue:** Ground-truth RGBD images were used by Real2Code.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -76,8 +76,8 @@ PDF body method statement (p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBO
 
 ## Training vs Inference
 
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
-- **p. 15 / A.3 ROBOTIC TRAINING DETAILS - extractive PDF cue:** We train policies over 3 random seeds per task for 2 million environment steps using PPO in Stable-Baselines3 library Raffin et al.
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
+- **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train policies over 3 random seeds per task for 2 million environment steps using PPO in Stable-Baselines3 library Raffin et al.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -92,18 +92,18 @@ PDF body method statement (p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBO
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
 | Multimodal task encoding | Articulate real-world videos 1 RL training in simulation 2 Transfer to real 3 Figure 13: Robotic Application: ARTICULATE-ANYTHING can automatically generate assets ... | p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
-| Action / skill decoding | Published as a conference paper at ICLR 2025 All classes (ID + OOD) Seen classes (ID) Unseen classes (OOD) 0 20 40 ... | p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption) |
+| Action / skill decoding | Figure 7: In-the-wild Reconstruction. We demonstrate ARTICULATE-ANYTHING's performance input modalities compared to prior works URDFormer and Real2Code. Green and red borders denote ... | p. 8 (Figure/Table caption), p. 6 (5 EXPERIMENTS) |
 | Receding execution / feedback | Figure 10: In-context learning. ARTICULATE-ANYTHING improves with the number of prompting examples, demonstrating in-context learning. The zero-shot performance (0 example) is included. ... | p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS) |
 
 ## Failure and Ablation Link
 
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 10: In-context learning. ARTICULATE-ANYTHING improves with the number of prompting examples, demonstrating in-context learning. The zero-shot performance (0 example) is included. We conduct this ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Joint prediction without videos is similarly difficult (e.g., see Fig.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** We also provide an ablation where our method is given the same impoverished input modality as the baselines in Appendix A.5.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 6 AN APPLICATION IN ROBOTICS A 3D model without articulation can only afford trivial interaction such as pick and place.
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Figure 17: Real2code manually curated inputs and intermediate outputs. We used about 3 to 7 input images per object from different views to obtain good ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 16: Our instruction prompt for real2code reproduction. Neither training code nor model checkpoint were available from the original work's Github. We manually curate the ...
-- **p. 20 / Figure/Table caption - extractive PDF cue:** Figure 19: Comparable Inputs. We compare ARTICULATE-ANYTHING with two baselines, Real2Code and UDRFormer using the same input modalities. The ablation is done on the cor- ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 10: In-context learning. ARTICULATE-ANYTHING improves with the number of prompting examples, demonstrating in-context learning. The zero-shot performance (0 example) is included. We conduct this ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Joint prediction without videos is similarly difficult (e.g., see Fig.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We also provide an ablation where our method is given the same impoverished input modality as the baselines in Appendix A.5.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 6 AN APPLICATION IN ROBOTICS A 3D model without articulation can only afford trivial interaction such as pick and place.
+- **p. 18 / Figure/Table caption - extractive body cue:** Figure 17: Real2code manually curated inputs and intermediate outputs. We used about 3 to 7 input images per object from different views to obtain good ...
+- **p. 20 / Figure/Table caption - extractive body cue:** Figure 19: Comparable Inputs. We compare ARTICULATE-ANYTHING with two baselines, Real2Code and UDRFormer using the same input modalities. The ablation is done on the cor- ...
+- **p. 6 / 5 EXPERIMENTS - extractive body cue:** Both methods were trained or fine-tuned on five object categories in the PartNet-Mobility dataset.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -117,7 +117,7 @@ PDF body method statement (p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 15 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION), objective p. 15 (A.3 ROBOTIC TRAINING DETAILS), temporal p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK).
+- **Evidence anchors reviewed:** method p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION), objective p. 16 (A.3 ROBOTIC TRAINING DETAILS), temporal p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK), p. 4 (2 RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1512.03012; PDF retrieval source: https://arxiv.org/pdf/1512.03012. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1512.03012; PDF retrieval source: https://arxiv.org/pdf/1512.03012. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 5 (4. Annotation
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.1. ShapeNetCore - extractive PDF cue:** The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore.
-- **p. 6 / 4.1. Category Annotation - extractive PDF cue:** Through inspection, we identify and group 3D models into the following categories: single 3D models, 3D scenes, billboards, and big ground plane. • Single 3D ...
-- **p. 6 / 4.1. Category Annotation - extractive PDF cue:** We manually verify these detections and mark scenes for future analysis. • Billboards: planes with a painted texture.
-- **p. 7 / 5.1. ShapeNetCore - extractive PDF cue:** ShapeNetCore is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations.
-- **p. 5 / 4. Annotation Acquisition and Validation - extractive PDF cue:** Our goal is to provide all annotations with high accuracy.
-- **p. 6 / 4.1. Category Annotation - extractive PDF cue:** After we retrieve these models we use the popularity score of each model on the repository to sort models and ask human workers to verify ...
-- **p. 5 / 4. Annotation Acquisition and Validation - extractive PDF cue:** In cases where full verification is not yet available, we aim to estimate a confidence metric for each annotation, as well as record its provenance.
-- **p. 6 / 4.2. Hierarchical Rigid Alignment - extractive PDF cue:** With this strategy, we efficiently obtain consistent orientations.
+- **p. 7 / 5.1. ShapeNetCore - extractive body cue:** The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore.
+- **p. 6 / 4.1. Category Annotation - extractive body cue:** Through inspection, we identify and group 3D models into the following categories: single 3D models, 3D scenes, billboards, and big ground plane. • Single 3D ...
+- **p. 6 / 4.1. Category Annotation - extractive body cue:** We manually verify these detections and mark scenes for future analysis. • Billboards: planes with a painted texture.
+- **p. 7 / 5.1. ShapeNetCore - extractive body cue:** ShapeNetCore is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations.
+- **p. 5 / 4. Annotation Acquisition and Validation - extractive body cue:** Our goal is to provide all annotations with high accuracy.
+- **p. 6 / 4.1. Category Annotation - extractive body cue:** After we retrieve these models we use the popularity score of each model on the repository to sort models and ask human workers to verify ...
+- **p. 5 / 4. Annotation Acquisition and Validation - extractive body cue:** In cases where full verification is not yet available, we aim to estimate a confidence metric for each annotation, as well as record its provenance.
+- **p. 6 / 4.2. Hierarchical Rigid Alignment - extractive body cue:** With this strategy, we efficiently obtain consistent orientations.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 5 (4. Annotation
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Table 3. Total number of models for the top 100 ShapeNetSem categories (out of 270 categories). Each category is also linked to the corresponding ... | p. 9 (Figure/Table caption) |
 | 4. Annotation Acquisition and Validation | BENCHMARK / DATASET | Our goal is to provide all annotations with high accuracy. | p. 5 (4. Annotation Acquisition and Validation) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 5 (4. Annotation
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.1. ShapeNetCore - extractive PDF cue:** The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore.
-- **p. 6 / 4.1. Category Annotation - extractive PDF cue:** Through inspection, we identify and group 3D models into the following categories: single 3D models, 3D scenes, billboards, and big ground plane. • Single 3D ...
-- **p. 6 / 4.1. Category Annotation - extractive PDF cue:** We manually verify these detections and mark scenes for future analysis. • Billboards: planes with a painted texture.
-- **p. 7 / 5.1. ShapeNetCore - extractive PDF cue:** ShapeNetCore is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations.
+- **p. 7 / 5.1. ShapeNetCore - extractive body cue:** The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore.
+- **p. 6 / 4.1. Category Annotation - extractive body cue:** Through inspection, we identify and group 3D models into the following categories: single 3D models, 3D scenes, billboards, and big ground plane. • Single 3D ...
+- **p. 6 / 4.1. Category Annotation - extractive body cue:** We manually verify these detections and mark scenes for future analysis. • Billboards: planes with a painted texture.
+- **p. 7 / 5.1. ShapeNetCore - extractive body cue:** ShapeNetCore is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. Source datasets from SHREC 2014: Princeton Shape Benchmark (PSB) [27], SHREC 2012 generic Shape Benchmark (SHREC12GTB) [16], Toyohashi Shape Benchmark (TSB) [29], Konstanz ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Screenshot of the online ShapeNet taxonomy view, or- ganizing contained 3D models under WordNet synsets. shapes from a broad set of object and ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2. ShapeNet annotations illustrated for an example chair model. Left: links to the WordNet taxonomy provide definitions of objects, is-a and has-a relations, and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Examples of aligned models in the chair, laptop, bench, and airplane synsets. the concept of an upright orientation still applies throughout most levels ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Plots of the distribution of ShapeNet models over WordNet synsets at multiple levels of the taxonomy (only the top few children synsets are ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Statistics of ShapeNetCore synsets. ID corresponds to WordNet synset offset, which is aligned with ImageNet. 8
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3. Total number of models for the top 100 ShapeNetSem categories (out of 270 categories). Each category is also linked to the corresponding WordNet ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Source datasets from SHREC 2014: Princeton Shape Benchmark (PSB) [27], SHREC 2012 generic Shape Benchmark (SHREC12GTB) [16], Toyohashi Shape Benchmark (TSB) [29], Konstanz ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Screenshot of the online ShapeNet taxonomy view, or- ganizing contained 3D models under WordNet synsets. shapes from a broad set of object and ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2. ShapeNet annotations illustrated for an example chair model. Left: links to the WordNet taxonomy provide definitions of objects, is-a and has-a relations, and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Examples of aligned models in the chair, laptop, bench, and airplane synsets. the concept of an upright orientation still applies throughout most levels ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Plots of the distribution of ShapeNet models over WordNet synsets at multiple levels of the taxonomy (only the top few children synsets are ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Statistics of ShapeNetCore synsets. ID corresponds to WordNet synset offset, which is aligned with ImageNet. 8
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3. Total number of models for the top 100 ShapeNetSem categories (out of 270 categories). Each category is also linked to the corresponding WordNet ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore. | embodiment, simulator version and control stack | p. 7 (5.1. ShapeNetCore), p. 6 (4.1. Category Annotation) |
 | Task/environment | Through inspection, we identify and group 3D models into the following categories: single 3D models, 3D scenes, billboards, and big ground plane. • Single ... | reset, timeout, object/scene variation | p. 6 (4.1. Category Annotation), p. 6 (4.1. Category Annotation) |
@@ -107,7 +107,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 5 (4. Annotation
 | Primary metric/result | Our goal is to provide all annotations with high accuracy. | numeric claim only at cited anchor | p. 5 (4. Annotation Acquisition and Validation) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.1. ShapeNetCore - extractive PDF cue:** The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore.
+- **p. 7 / 5.1. ShapeNetCore - extractive body cue:** The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore.
 
 ## Generalization and Failure Cases
 
@@ -139,7 +139,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 5 (4. Annotation
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 7 (5.1. ShapeNetCore), p. 6 (4.1. Category Annotation), p. 6 (4.1. Category Annotation), p. 7 (5.1. ShapeNetCore), metrics p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.1. Category Annotation), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 7 (4.4. Symmetry Estimation), p. 7 (4.5. Physical Property Estimation), baselines p. 7 (4.5. Physical Property Estimation), results p. 9 (Figure/Table caption), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 6 (4.1. Category Annotation), p. 7 (4.3. Parts and Keypoints).
+- **Evidence anchors reviewed:** datasets p. 7 (5.1. ShapeNetCore), p. 6 (4.1. Category Annotation), p. 6 (4.1. Category Annotation), p. 7 (5.1. ShapeNetCore), metrics p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.1. Category Annotation), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 7 (4.4. Symmetry Estimation), p. 7 (4.5. Physical Property Estimation), baselines p. 7 (4.5. Physical Property Estimation), results p. 9 (Figure/Table caption), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 6 (4.1. Category Annotation), p. 7 (4.3. Parts and Keypoints).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

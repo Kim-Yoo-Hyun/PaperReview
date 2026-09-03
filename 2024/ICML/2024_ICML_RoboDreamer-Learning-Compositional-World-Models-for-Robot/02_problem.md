@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html; PDF retrieval source: https://arxiv.org/pdf/2404.12377. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html; PDF retrieval source: https://arxiv.org/pdf/2404.12377. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This is crucially important in robotics, where there is a lack of systematic data covering all possible actions in an environment and ... | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | The policy takes as input two adjacent image observations xt and xt+1 in the synthesized video τ and outputs an action a ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The policy takes as input two adjacent image observations xt and xt+1 in the synthesized video τ and outputs an action a ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | policy, takes, input, adjacent, image, observations, synthesized, video, outputs, action | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | contributions, three-fold, introduce, RoboDreamer, compositional, world, model, capable | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: policy, takes, input, adjacent, image, observations, synthesized, video, outputs, action | p. 3 (2.2. Executing Videos Plans), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 2 (1. Introduction) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: contributions, three-fold, introduce, RoboDreamer, compositional, world, model, capable | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction) |
-| Objective / loss / cost | task utility subject to safety constraint; cue terms: not recovered | no optimization/equation sentence selected |
+| Objective / loss / cost | task utility subject to safety constraint; cue terms: not stated or recoverable in the selected PDF body | no optimization/equation sentence selected |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,10 +49,10 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 1 (1. Introduction)): Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of natural language. • We illustrate ...
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 1 (1. Introduction)): Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of natural language. • We illustrate ...
 
 - **p. 2 / 1. Introduction - extractive body cue:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language.
-- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1 arXiv:2404.12377v1 [cs.RO] 18 Apr 2024
+- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1.
 - **p. 3 / 2.1. Planning with Text-Conditioned Video Generation - extractive body cue:** This enables us to convert planning directly into a text-to-video generation problem.
 - **p. 1 / 1. Introduction - extractive body cue:** Such models have recently been applied in robotics, demonstrating significant potential in the development of policies, dynamic models, and planners (Du et al., 2023b; Ajay ...
 
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (2.2. Executing Videos Plans), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 2 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (2.2. Executing Videos Plans), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 2 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (2.1. Planning with Text-Conditioned Video Generation), interface p. 3 (2.2. Executing Videos Plans), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 2 (1. Introduction), p. 2 (1. Introduction), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (2.1. Planning with Text-Conditioned Video Generation), interface p. 3 (2.2. Executing Videos Plans), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 2 (1. Introduction), p. 2 (1. Introduction), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Furthermore, these challenges become even more pronounced in scenarios where language instructions deviate from those encountered during training time, especially in reinforcement learning datasets where the data are scarce and ... (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language. (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** The scores are 0, 1, where 0 means the robotic planning in the generated videos is unreasonable or fails to solve tasks and 1 means the robotic planning is executable ... (p. 6, 4.1. Evaluation on Video Generation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

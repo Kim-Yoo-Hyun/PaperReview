@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 Behavior Cloning Given a dataset of expert rollouts for a desired task in the form of observation and action pairs D == {(o, a)} ⊂O × A, behavior cloning (BC) aims to ...를 For both of these methods, the first phase involves obtaining a non-parametric base-policy πb : Z →A with encoded representations z ∈Z and actions a ∈A.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in both simula ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Human-to-Robot Retargeting Hardware Network Server Hand Pose Detection Pose Detection Wrist Pose Detection Camera Stream Visual Feedback Oculus Passthrough Fig. (p. 4, III. BACKGROUND ON IMITATION LEARNING).
+- **Paper-specific mechanism:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Robot Setup Task Number of Demos Success Rate Franka-Allegro Open Box 3 9/10 Grasp Sponge 6 7/10 Pick Up Tea Sachet 4 7/10 Grasp Object and Twist 6 8/10 Allegro ... (p. 8, 4) How intuitive is the system for new users?); the relevant task/metric cue is Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies. (p. 6, 4) How intuitive is the system for new users?). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset. (p. 8, VI. LIMITATIONS AND DISCUSSION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The primary idea behind OPEN TEACH is that given any robotic setup, a user can purchase an affordable off-the-shelf VR headset (in this case, Quest 3) and plug the headset and robot ....
-3. Compare against the body-reported baseline or a matched simpler baseline: On these tasks, OPEN TEACH demonstrates a higher success rate along with significantly reduced median time to complete tasks compared to the other baselines..
-4. Report the body metric and its denominator/aggregation: In Table IV, we present a comparative analysis of success rates and median completion times for new users across Holo-Dex, AnyTeleop, and OPEN TEACH for the tasks of cube flipping and pinch ....
-5. Re-run the body-reported ablation/failure condition: Each setup is a combination of a variant of a robot arm with either an Allegro Hand or a 2-fingered gripper..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Human-to-Robot Retargeting Hardware Network Server Hand Pose Detection Pose Detection Wrist Pose Detection Camera Stream Visual Feedback Oculus Passthrough Fig. (p. 4, III. BACKGROUND ON IMITATION LEARNING); preserve the objective/update rule: The aforementioned devices are cost-effective and easy to set up. (p. 2, I. INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: Our experiments and tasks are designed to answer the following questions: 1) How versatile is OPEN TEACH across a range of robotics setups? (p. 6, V. EXPERIMENTAL EVALUATION).
+3. Compare against the reported or matched baseline: On these tasks, OPEN TEACH demonstrates a higher success rate along with significantly reduced median time to complete tasks compared to the other baselines. (p. 8, 4) How intuitive is the system for new users?).
+4. Report the body metric with its denominator and aggregation: Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies. (p. 6, 4) How intuitive is the system for new users?).
+5. Re-run the reported ablation or stress/failure condition: Each setup is a combination of a variant of a robot arm with either an Allegro Hand or a 2-fingered gripper. (p. 6, 4) How intuitive is the system for new users?); if none is reported, design one around: However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset. (p. 8, VI. LIMITATIONS AND DISCUSSION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH); the primary result is directionally consistent at p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 8 (4) How intuitive is the system for new users?), p. 6 (V. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), and measure the boundary at p. 8 (VI. LIMITATIONS AND DISCUSSION), p. 8 (4) How intuitive is the system for new users?).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, summarized, follows mechanism이 On these tasks, OPEN TEACH demonstrates a higher success rate along with significantly reduced median time ... 대비 In Table IV, we present a comparative analysis of success rates and median completion times for new users ...을 개선하고, However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Human-to-Robot Retargeting Hardware Network Server Hand Pose Detection Pose Detection Wrist Pose Detection Camera Stream Visual Feedback Oculus Passthrough Fig.), does the paper-specific mechanism (The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable ...) retain the reported evaluation outcome (Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies.) when tested against the paper's strongest explicit boundary (However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Robot Setup Task Number of Demos Success Rate Franka-Allegro Open Box 3 9/10 Grasp Sponge 6 7/10 Pick Up Tea Sachet 4 7/10 Grasp Object and Twist 6 8/10 Allegro ... (p. 8, 4) How intuitive is the system for new users?).
+- **Strongest explicit boundary:** However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset. (p. 8, VI. LIMITATIONS AND DISCUSSION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

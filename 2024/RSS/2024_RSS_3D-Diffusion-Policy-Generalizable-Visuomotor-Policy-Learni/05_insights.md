@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 (a) End-to-End Training Policy Expert Demonstrations (b) Evaluation Action Observation Decision: Diffusion Policy Single-view Point Cloud Crop FPS Linear Perception: Compact 3D Representations from Point Clouds Compact 3D Repr.를 Given a small set of expert demonstrations that contain complex robot skill trajectories, we want to learn a visuomotor policy π : O 7→A that maps the visual observations o ∈O to ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 3: Generalization in 3D space with few data. We use MetaWorld Reach as an example task, given only 5 demonstra- tions (visualized by •). We evaluate 1000 times to cover the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** (a) End-to-End Training Policy Expert Demonstrations (b) Evaluation Action Observation Decision: Diffusion Policy Single-view Point Cloud Crop FPS Linear Perception: Compact 3D Representations from Point Clouds Compact 3D Repr. (p. 4, III. METHOD).
+- **Paper-specific mechanism:** To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception. (p. 3, III. METHOD).
+- **Evidence boundary:** the reported outcome is Fig. 2: Overview of 3D Diffusion Policy (DP3). Above: In the training phase, DP3 simultaneously trains its perception module and decision-making process in an end-to-end manner using expert demonstrations. During ... (p. 4, Figure/Table caption); the relevant task/metric cue is We observe that DP3 achieves a success rate exceeding 90% in TABLE III: Task suite of DP3, including Adroit [49], BiDexHands [8], DexArt [5], DexDeform [31], DexMV [47], HORA [44], ... (p. 5, IV. SIMULATION EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** DP3 learns the generalizable skill in 3D space; Diffusion Policy and IBC [11] only succeed in partial space; BC-RNN [35] fails to learn such a simple skill with limited data. (p. 4, III. METHOD).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Simulation Benchmark (72 Tasks) Domain Robo Object Simulator ActD #Task #Demo Adroit Shadow Rigid/Art MuJoCo 28 3 10 Bi-DexHands Shadow Rigid/Art IsaacGym 52 6 10 DexArt Allegro Art Sapien 22 4 100 ....
-3. Compare against the body-reported baseline or a matched simpler baseline: To this end, our main baseline is the image-based diffusion policy [10], simply referred to as Diffusion Policy..
-4. Report the body metric and its denominator/aggregation: The success rates for experts are given in Appendix C..
-5. Re-run the body-reported ablation/failure condition: Fig. 3: Generalization in 3D space with few data. We use MetaWorld Reach as an example task, given only 5 demonstra- tions (visualized by •). We evaluate 1000 times to cover the ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: (a) End-to-End Training Policy Expert Demonstrations (b) Evaluation Action Observation Decision: Diffusion Policy Single-view Point Cloud Crop FPS Linear Perception: Compact 3D Representations from Point Clouds Compact 3D Repr. (p. 4, III. METHOD); preserve the objective/update rule: As depicted in Figure 1, DP3 achieves an inference speed marginally surpassing Diffusion Policy. (p. 5, 2) Learning efficiency. While we train all the algorithms).
+2. Use the paper-reported task/data/environment cue: Simulation Benchmark (72 Tasks) Domain Robo Object Simulator ActD #Task #Demo Adroit Shadow Rigid/Art MuJoCo 28 3 10 Bi-DexHands Shadow Rigid/Art IsaacGym 52 6 10 DexArt Allegro Art Sapien 22 ... (p. 5, IV. SIMULATION EXPERIMENTS).
+3. Compare against the reported or matched baseline: Additionally, we incorporate comparisons with IBC [11], BCRNN [35], and their 3D variations. (p. 5, IV. SIMULATION EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We observe that DP3 achieves a success rate exceeding 90% in TABLE III: Task suite of DP3, including Adroit [49], BiDexHands [8], DexArt [5], DexDeform [31], DexMV [47], HORA [44], ... (p. 5, IV. SIMULATION EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: This discrepancy underscores two key aspects: (a) the importance of real robot experiments and (b) the necessity of large-scale diverse simulation tasks for more sci (p. 4, IV. SIMULATION EXPERIMENTS); if none is reported, design one around: DP3 learns the generalizable skill in 3D space; Diffusion Policy and IBC [11] only succeed in partial space; BC-RNN [35] fails to learn such a simple skill with limited data. (p. 4, III. METHOD).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 4 (Figure/Table caption), p. 5 (IV. SIMULATION EXPERIMENTS), p. 5 (IV. SIMULATION EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (III. METHOD), p. 1 (I. INTRODUCTION), match the reported outcome at p. 4 (Figure/Table caption), p. 5 (IV. SIMULATION EXPERIMENTS), p. 4 (IV. SIMULATION EXPERIMENTS), and measure the boundary at p. 4 (III. METHOD), p. 1 (I. INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, Diffusion, Policy mechanism이 To this end, our main baseline is the image-based diffusion policy [10], simply referred to as ... 대비 The success rates for experts are given in Appendix C.을 개선하고, Fig. 3: Generalization in 3D space with few data. We use MetaWorld Reach as an example ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface ((a) End-to-End Training Policy Expert Demonstrations (b) Evaluation Action Observation Decision: Diffusion Policy Single-view Point Cloud Crop FPS Linear Perception: Compact 3D ...), does the paper-specific mechanism (To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception.) retain the reported evaluation outcome (We observe that DP3 achieves a success rate exceeding 90% in TABLE III: Task suite of DP3, including ...) when tested against the paper's strongest explicit boundary (DP3 learns the generalizable skill in 3D space; Diffusion Policy and IBC [11] only succeed in partial space; ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We observe that DP3 achieves a success rate exceeding 90% in TABLE III: Task suite of DP3, including ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception. (p. 3, III. METHOD).
+- **Paper-supported outcome:** Fig. 2: Overview of 3D Diffusion Policy (DP3). Above: In the training phase, DP3 simultaneously trains its perception module and decision-making process in an end-to-end manner using expert demonstrations. During ... (p. 4, Figure/Table caption).
+- **Strongest explicit boundary:** DP3 learns the generalizable skill in 3D space; Diffusion Policy and IBC [11] only succeed in partial space; BC-RNN [35] fails to learn such a simple skill with limited data. (p. 4, III. METHOD).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

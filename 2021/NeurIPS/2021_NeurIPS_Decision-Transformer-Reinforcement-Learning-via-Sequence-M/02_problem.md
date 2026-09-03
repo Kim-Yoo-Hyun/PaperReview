@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.01345; PDF retrieval source: https://arxiv.org/pdf/2106.01345. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.01345; PDF retrieval source: https://arxiv.org/pdf/2106.01345. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (1 Introduction), p. 3 (1 Introduction)): To get an intui
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | To get an intuition for our proposal, consider the task of finding the shortest path on a directed graph, which can be ... | robot/environment의 sequential decision process | body wording is the source claim |
-| Observation / input | By training an autoregressive model on sequences of states, actions, and returns, we reduce policy sampling to autoregressive generative modeling. | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | By training an autoregressive model on sequences of states, actions, and returns, we reduce policy sampling to autoregressive generative modeling. | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | training, autoregressive, model, sequences, states, actions, returns, reduce, policy, sampling | policy/value state와 action-selection variable | notation and tensor shape require body check |
 | Output / action | MDP, tuple, consists, states, actions, transition, dynamics, reward | action policy와 induced trajectory | exact unit/frame/decoder require body check |
 | Target outcome | task return, success and safe execution | expected return, task success, stability와 sample efficiency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: training, autoregressive, model, sequences, states, actions, returns, reduce, policy, sampling | p. 3 (1 Introduction), p. 4 (2 Preliminaries), p. 4 (2 Preliminaries) |
 | Decision / output variable | a_t sampled or selected by πθ; body terms: Training, dataset, consists, random, walk, trajectories, per-node, returns-to-go | p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (3 Method) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (1 Introduction), p. 3 (1 Introduction)): To get an intui
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method) |
 | Success / guarantee | task return, success and safe execution | p. 10 (Figure/Table caption), p. 10 (Dataset), p. 21 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 3 (1 Introduction), p. 3 (1 Introduction)): To get an intui
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method), p. 6 (3 Method)): Training dataset consists of random walk trajectories and their per-node returns-to-go (middle).
+PDF body contribution framing (p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method), p. 6 (3 Method)): Training dataset consists of random walk trajectories and their per-node returns-to-go (middle).
 
 - **p. 4 / 1 Introduction - extractive body cue:** Motivated by this observation, we propose Decision Transformer, where we use the GPT architecture to autoregressively model trajectories (shown in Figure 1).
 - **p. 4 / 3 Method - extractive body cue:** In this section, we present Decision Transformer, which models trajectories autoregressively with minimal modification to the transformer architecture, as summarized in Figure 1 and Algorithm ...
@@ -66,12 +66,21 @@ PDF contribution framing (p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (3 
 
 ## Position in the Robotics Loop
 
-rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1 Introduction), p. 4 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (3 Method). The downstream handoff is claimed only when the body describes it.
+rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1 Introduction), p. 4 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (3 Method). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (1 Introduction), p. 3 (1 Introduction), interface p. 3 (1 Introduction), p. 4 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (3 Method), objective p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
+- **Evidence anchors reviewed:** problem p. 3 (1 Introduction), p. 3 (1 Introduction), interface p. 3 (1 Introduction), p. 4 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (3 Method), objective p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** To get an intuition for our proposal, consider the task of finding the shortest path on a directed graph, which can be posed as an RL problem. (p. 3, 1 Introduction).
+- **Formulation-changing contribution:** Training dataset consists of random walk trajectories and their per-node returns-to-go (middle). (p. 3, 1 Introduction).
+- **Assumption/failure evidence:** 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

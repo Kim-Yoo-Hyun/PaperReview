@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2101.02692; PDF retrieval source: https://arxiv.org/pdf/2101.02692. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2101.02692; PDF retrieval source: https://arxiv.org/pdf/2101.02692. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Metrics and Baselines | EMPIRICAL / REAL-ROBOT OR HARDWARE | We observe that 3D-ours achieves the best performance. validates that our network learns geometric features more than local normals and curvatures. | p. 7 (5.2. Metrics and Baselines) |
 | 5.2. Metrics and Baselines | EMPIRICAL / REAL-ROBOT OR HARDWARE | An ablated version Ours w/o OS further proves the improvement provided by the proposed online adaptive data sampling (OS) strategy. | p. 7 (5.2. Metrics and Baselines) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Equipped with a large-scale PartNetMobility dataset, SAPIEN [49] provides a physics-rich simulation environment that supports robot actuators interacting with 2,346 3D CAD models from ... | embodiment, simulator version and control stack | p. 5 (5.1. Framework and Settings), p. 5 (5.1. Framework and Settings) |
 | Task/environment | We conduct our experiments using 15 selected object categories in the PartNet-Mobility dataset, after removing the objects that are either too small (e.g. pens, ... | reset, timeout, object/scene variation | p. 5 (5.1. Framework and Settings), p. 8 (5.4. Real-world Data) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Network Architecture. Our network takes an 2D image or a 3D partial scan as input and extract per-pixel feature fp using (a) Unet ...
 - **p. 6 / 5.2. Metrics and Baselines - extractive body cue:** With random interactions, there are many more failed interaction trials than the successful ones.
 
-- **PDF anchors reviewed:** datasets p. 5 (5.1. Framework and Settings), p. 5 (5.1. Framework and Settings), p. 8 (5.4. Real-world Data), p. 6 (5.1. Framework and Settings), p. 6 (5.2. Metrics and Baselines), p. 8 (5.4. Real-world Data), metrics p. 1 (Figure/Table caption), p. 6 (5.2. Metrics and Baselines), p. 8 (5.3. Results and Analysis), p. 6 (5.2. Metrics and Baselines), p. 7 (5.3. Results and Analysis), p. 7 (5.3. Results and Analysis), baselines p. 6 (5.2. Metrics and Baselines), p. 6 (5.2. Metrics and Baselines), p. 5 (5.1. Framework and Settings), p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 8 (5.3. Results and Analysis), results p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 1 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.2. Metrics and Baselines).
+- **Evidence anchors reviewed:** datasets p. 5 (5.1. Framework and Settings), p. 5 (5.1. Framework and Settings), p. 8 (5.4. Real-world Data), p. 6 (5.1. Framework and Settings), p. 6 (5.2. Metrics and Baselines), p. 8 (5.4. Real-world Data), metrics p. 1 (Figure/Table caption), p. 6 (5.2. Metrics and Baselines), p. 8 (5.3. Results and Analysis), p. 6 (5.2. Metrics and Baselines), p. 7 (5.3. Results and Analysis), p. 7 (5.3. Results and Analysis), baselines p. 6 (5.2. Metrics and Baselines), p. 6 (5.2. Metrics and Baselines), p. 5 (5.1. Framework and Settings), p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 8 (5.3. Results and Analysis), results p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 1 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.2. Metrics and Baselines).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4. We visualize the per-pixel action scoring predictions over the articulated parts given certain gripper orientations for interaction. In each set of results, the left two shapes shown in ... (p. 7, Figure/Table caption).
+- **Metric evidence:** We set up an interactive simulation environment in SAPIEN [49] and benchmark performance of the proposed method both qualititively and quantitatively. (p. 5, 5. Experiments).
+- **Baseline/ablation evidence:** We define the final measure as below. ssr = # successful proposals # total proposals (8) Baselines and Ablation Study. (p. 6, 5.2. Metrics and Baselines).
+- **Failure/negative evidence:** With random interactions, there are many more failed interaction trials than the successful ones. (p. 6, 5.2. Metrics and Baselines).

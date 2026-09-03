@@ -23,7 +23,7 @@
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** However, when deploying RL agents in the real world, unconstrained exploration can result in highly suboptimal behaviors which can damage the robot, break surroundings objects, ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** While these approaches are appealing for their generality and simplicity, there are two key aspects which make them difficult to use in practice.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Most prior work in safe RL integrates constraint satisfaction into the task objective to arXiv:2010.15920v2 [cs.LG] 17 May 2021
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Most prior work in safe RL integrates constraint satisfaction into the task objective to ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We evaluate Recovery RL on an imagebased obstacle avoidance task on a physical robot and find that it trades off constraint violations and task successes ...
 - **p. 3 / III. PROBLEM STATEMENT - extractive body cue:** Setting εrisk = 0 as well results in a robust optimal control problem.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free and model-based recovery policies, while for the object extraction ...
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 We present an algorithm to optimize equation (III.1) by utilizing a pair of policies, a task policy πtask, which is trained to maximize Rπ over πtask ∈Π and a recovery policy πrec, ...를 If the task policy πtask proposes an action aπtask at state s such that (s,aπtask)̸ ∈T π safe, then a recovery action sampled from πrec is executed instead of aπtask.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free and model-based recovery policies, while for the object extraction environments, Recovery RL with a model-based recovery ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Thus, endowing RL agents with the ability to satisfy constraints during learning not only enables robots to interact safely, but also allows them to more efficiently learn in the real world.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Safe exploration poses a tradeoff: learning new skills through environmental interaction requires exploring a wide range of possible behaviors, but learning safely forces the agent to restrict exploration to constraint ... (p. 1, I. INTRODUCTION).
+- **Paper-specific mechanism:** Thus, endowing RL agents with the ability to satisfy constraints during learning not only enables robots to interact safely, but also allows them to more efficiently learn in the real ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 9: Simulation Experiments Cumulative Violations: We plot the cumulative constraint violations for each algorithm in each simulation domain, with results averaged over 10 runs for all algorithms. We observe ... (p. 12, Figure/Table caption); the relevant task/metric cue is We do not report reward per episode, as episodes terminate on task completion or constraint violation. (p. 5, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that Recovery RL performs well even ... (p. 7, V. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Domains: We evaluate Recovery RL on a set of 6 simulation domains (Figure 3) and an image-based obstacle avoidance task on a physical robot (Figure 6)..
-3. Compare against the body-reported baseline or a matched simpler baseline: Results suggest that Recovery RL with both model-free and modelbased recovery mechanisms significantly outperform prior algorithms across all 3 2D pointmass navigation environments.
-4. Report the body metric and its denominator/aggregation: We find that Recovery RL violates constraints less often than comparisons while maintaining a similar task success rate and more efficiently optimizing the task reward..
-5. Re-run the body-reported ablation/failure condition: Ablations: We ablate different components of Recovery RL and study the sensitivity of Recovery RL to the number of transitions in Doffline for the Object Extraction domain in Figure 7..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Safe exploration poses a tradeoff: learning new skills through environmental interaction requires exploring a wide range of possible behaviors, but learning safely forces the agent to restrict exploration to constraint ... (p. 1, I. INTRODUCTION); preserve the objective/update rule: We propose Recovery RL, an algorithm which navigates this tradeoff by (1) leveraging offline data to learn about constraint violating zones before policy learning and (2) separating the goals of ... (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: Domains: We evaluate Recovery RL on a set of 6 simulation domains (Figure 3) and an image-based obstacle avoidance task on a physical robot (Figure 6). (p. 5, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Recovery RL and all comparisons which have a safety critic are given the same offline dataset Doffline. (p. 5, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We do not report reward per episode, as episodes terminate on task completion or constraint violation. (p. 5, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Ablations: We ablate different components of Recovery RL and study the sensitivity of Recovery RL to the number of transitions in Doffline for the Object Extraction domain in Figure 7. (p. 7, V. EXPERIMENTS); if none is reported, design one around: We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that Recovery RL performs well even ... (p. 7, V. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 6 (V. EXPERIMENTS), and measure the boundary at p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Thus, endowing, agents mechanism이 Results suggest that Recovery RL with both model-free and modelbased recovery mechanisms significantly outperform prior algorithms ... 대비 We find that Recovery RL violates constraints less often than comparisons while maintaining a similar task success rate ...을 개선하고, In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Safe exploration poses a tradeoff: learning new skills through environmental interaction requires exploring a wide range of possible behaviors, but learning safely ...), does the paper-specific mechanism (Thus, endowing RL agents with the ability to satisfy constraints during learning not only enables robots to interact safely, but also allows ...) retain the reported evaluation outcome (We do not report reward per episode, as episodes terminate on task completion or constraint violation.) when tested against the paper's strongest explicit boundary (We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We do not report reward per episode, as episodes terminate on task completion or constraint violation.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Thus, endowing RL agents with the ability to satisfy constraints during learning not only enables robots to interact safely, but also allows them to more efficiently learn in the real ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Figure 9: Simulation Experiments Cumulative Violations: We plot the cumulative constraint violations for each algorithm in each simulation domain, with results averaged over 10 runs for all algorithms. We observe ... (p. 12, Figure/Table caption).
+- **Strongest explicit boundary:** We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that Recovery RL performs well even ... (p. 7, V. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

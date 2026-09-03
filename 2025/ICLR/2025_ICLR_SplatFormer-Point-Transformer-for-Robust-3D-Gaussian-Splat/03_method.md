@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9NfHbWKqMF; PDF retrieval source: https://openreview.net/pdf/b05fcaaffbc6f81e70f605c033bb30f44fe43513.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9NfHbWKqMF; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111734. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 
 ## Method Body Digest
 
-- **p. 15 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, scales, and spherical ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
-- **p. 15 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The point transformer encoder begins with an MLP embedding layer, followed by five down-pooling and four up-pooling stages, ultimately producing features with a dimensionality of ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** It takes 2 days to generate each training dataset.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The primary computational bottleneck still lies in the training stage.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Published as a conference paper at ICLR 2025 training, we cap the number of input Gaussians to SplatFormer at 100k.
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** To reduce computational costs, we terminate the optimization early at 10k steps, where evaluation performance levels off.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** It outputs residuals that are added to the input Gaussian attributes.
+- **p. 15 / B IMPLEMENTATION DETAILS - extractive body cue:** The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, scales, and spherical ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
+- **p. 15 / B IMPLEMENTATION DETAILS - extractive body cue:** The point transformer encoder begins with an MLP embedding layer, followed by five down-pooling and four up-pooling stages, ultimately producing features with a dimensionality of ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** The primary computational bottleneck still lies in the training stage.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Further improving the efficiency of point transformer for large-scale unbounded scenes remains an important direction for future work.
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** To reduce computational costs, we terminate the optimization early at 10k steps, where evaluation performance levels off.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** It outputs residuals that are added to the input Gaussian attributes.
 
 ## Design Rationale
 
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** In summary, we make the following contributions: • We introduce OOD-NVS, a new experimental protocol specifically designed to evaluate the performance of NVS methods when ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To meet these needs, we propose SplatFormer, a novel learning-based feed-forward 3D transformer designed to operate on Gaussian splats.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Existing NVS methods, including MipNeRF360 (Barron et al., 2022), and those designed for sparse inputs like LaRa (Chen et al., 2024a), face challenges in this ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, we make the following contributions: • We introduce OOD-NVS, a new experimental protocol specifically designed to evaluate the performance of NVS methods when ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To meet these needs, we propose SplatFormer, a novel learning-based feed-forward 3D transformer designed to operate on Gaussian splats.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Existing NVS methods, including MipNeRF360 (Barron et al., 2022), and those designed for sparse inputs like LaRa (Chen et al., 2024a), face challenges in this ...
 
 ## Source Evidence Cues
 
-- **p. 15 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, scales, and spherical ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
-- **p. 15 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The point transformer encoder begins with an MLP embedding layer, followed by five down-pooling and four up-pooling stages, ultimately producing features with a dimensionality of ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** It takes 2 days to generate each training dataset.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The primary computational bottleneck still lies in the training stage.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Published as a conference paper at ICLR 2025 training, we cap the number of input Gaussians to SplatFormer at 100k.
+- **p. 15 / B IMPLEMENTATION DETAILS - extractive body cue:** The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, scales, and spherical ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
+- **p. 15 / B IMPLEMENTATION DETAILS - extractive body cue:** The point transformer encoder begins with an MLP embedding layer, followed by five down-pooling and four up-pooling stages, ultimately producing features with a dimensionality of ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** The primary computational bottleneck still lies in the training stage.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Further improving the efficiency of point transformer for large-scale unbounded scenes remains an important direction for future work.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, ... | p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, ... | p. 16 (B IMPLEMENTATION DETAILS), p. 15 (B IMPLEMENTATION DETAILS) |
@@ -47,8 +47,8 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 
 ## Objective / Update Rule
 
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** To reduce computational costs, we terminate the optimization early at 10k steps, where evaluation performance levels off.
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** To reduce computational costs, we terminate the optimization early at 10k steps, where evaluation performance levels off.
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 16 (B IMPLEMENTATION DETAILS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** It outputs residuals that are added to the input Gaussian attributes.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** While this initial 3D representation effectively integrates multi-view information from the captured images, we observe that the shapes, appearances, and spatial structure of the Gaussian ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Additionally, some feed-forward models predict 3D primitives from a few input views (Chen et al., 2024a;b; Yu et al., 2021), yet they handle no more ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** For each scene, we render 4 target images at each iteration, with 70% OOD views and 30% input views, for photometric supervision.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Traditionally, this problem has been approached using a standard novel view interpolation protocol, where test views are sampled at fixed intervals along the trajectory of ...
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** However, AR and VR applications require not only smooth transitions between input views but also the ability to explore novel regions of interest from viewing ...
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** This often results in elongated Gaussian splats that cover only the thin areas projected on the input views, leading to sparse surface coverage.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** It outputs residuals that are added to the input Gaussian attributes.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** While this initial 3D representation effectively integrates multi-view information from the captured images, we observe that the shapes, appearances, and spatial structure of the Gaussian ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Additionally, some feed-forward models predict 3D primitives from a few input views (Chen et al., 2024a;b; Yu et al., 2021), yet they handle no more ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For each scene, we render 4 target images at each iteration, with 70% OOD views and 30% input views, for photometric supervision.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Traditionally, this problem has been approached using a standard novel view interpolation protocol, where test views are sampled at fixed intervals along the trajectory of ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** However, AR and VR applications require not only smooth transitions between input views but also the ability to explore novel regions of interest from viewing ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** This often results in elongated Gaussian splats that cover only the thin areas projected on the input views, leading to sparse surface coverage.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,12 +85,11 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 
 ## Training vs Inference
 
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** It takes 2 days to generate each training dataset.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** The primary computational bottleneck still lies in the training stage.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Published as a conference paper at ICLR 2025 training, we cap the number of input Gaussians to SplatFormer at 100k.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** The primary computational bottleneck still lies in the training stage.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +109,13 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 
 ## Failure and Ablation Link
 
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Next, we examine regularized 3DGS variants without external priors, including 2DGS (Huang et al., 2024a) and SplatFields (Mihajlovic et al., 2024).
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** These improvements are reflected in the SSIM and LPIPS metrics, though we observed rather minimal improvements in PSNR, which we attribute to the pixelwise PSNR's ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 4, we train a variant that directly predicts the full 3DGS attributes (direct component).
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Next, we present the results on OOD-NVS, crossdataset generalization, and ablation studies.
-- **p. 10 / 6 CONCLUSION - extractive PDF cue:** In this work, we introduced a new out-of-distribution (OOD) novel view synthesis test scenario and demonstrated that most neural rendering methods, including those using regularization ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Our method has several limitations that provide directions for future work.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Next, we examine regularized 3DGS variants without external priors, including 2DGS (Huang et al., 2024a) and SplatFields (Mihajlovic et al., 2024).
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** These improvements are reflected in the SSIM and LPIPS metrics, though we observed rather minimal improvements in PSNR, which we attribute to the pixelwise PSNR's ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 4, we train a variant that directly predicts the full 3DGS attributes (direct component).
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Next, we present the results on OOD-NVS, crossdataset generalization, and ablation studies.
+- **p. 10 / 6 CONCLUSION - extractive body cue:** In this work, we introduced a new out-of-distribution (OOD) novel view synthesis test scenario and demonstrated that most neural rendering methods, including those using regularization ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Our method has several limitations that provide directions for future work.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +129,7 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS), objective p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), temporal p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS).
+- **Evidence anchors reviewed:** method p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS), objective p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), temporal p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

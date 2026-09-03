@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,29 +10,29 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 
 ## Method Body Digest
 
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** Formally, given an image x, we sample a noise image xt at time t, and obtain the diffusion features f = F(xt; Θ), xt = ...
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** Following [46, 56] we employ a single forward step for feature extraction.
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** However, unlike these works, we only input images without textual captions, given that in realworld scenarios, textual input is typically not provided for object detection.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Detecting objects in 3D from a single image presents a significant challenge in computer vision, involving not only object recognition and localization but also depth ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Recently, large selfsupervised models have emerged as compelling learners for image representation [10, 16, 17].
-- **p. 2 / 1. Introduction - extractive PDF cue:** We enhance these models with 3D awareness through a view synthesis task, employing epipolar geometry to warp features from source images to target views.
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** Formally, given an image x, we sample a noise image xt at time t, and obtain the diffusion features f = F(xt; Θ), xt = ...
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** Following [46, 56] we employ a single forward step for feature extraction.
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** However, unlike these works, we only input images without textual captions, given that in realworld scenarios, textual input is typically not provided for object detection.
+- **p. 1 / 1. Introduction - extractive body cue:** Detecting objects in 3D from a single image presents a significant challenge in computer vision, involving not only object recognition and localization but also depth ...
+- **p. 2 / 1. Introduction - extractive body cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
+- **p. 1 / 1. Introduction - extractive body cue:** Recently, large selfsupervised models have emerged as compelling learners for image representation [10, 16, 17].
+- **p. 2 / 1. Introduction - extractive body cue:** We enhance these models with 3D awareness through a view synthesis task, employing epipolar geometry to warp features from source images to target views.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our primary contributions are as follows: (1) We introduce a scalable technique for enhancing pretrained 2D diffusion models with 3D awareness through a novel geometric ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Efforts in novel view synthesis using diffusion models have shown promise [7, 58].
+- **p. 2 / 1. Introduction - extractive body cue:** Our primary contributions are as follows: (1) We introduce a scalable technique for enhancing pretrained 2D diffusion models with 3D awareness through a novel geometric ...
+- **p. 2 / 1. Introduction - extractive body cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
+- **p. 1 / 1. Introduction - extractive body cue:** Efforts in novel view synthesis using diffusion models have shown promise [7, 58].
 
 ## Source Evidence Cues
 
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** Formally, given an image x, we sample a noise image xt at time t, and obtain the diffusion features f = F(xt; Θ), xt = ...
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** Following [46, 56] we employ a single forward step for feature extraction.
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** Formally, given an image x, we sample a noise image xt at time t, and obtain the diffusion features f = F(xt; Θ), xt = ...
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** Following [46, 56] we employ a single forward step for feature extraction.
 - **Detected method headings:** 3.1. Diffusion Model as a Feature Extractor (p. 3); 2.28 AP3D-N improvement over previous methods trained (p. 7)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Formally, given an image x, we sample a noise image xt at time t, and obtain the diffusion features f = F(xt; ... | p. 3 (3.1. Diffusion Model as a Feature Extractor), p. 3 (3.1. Diffusion Model as a Feature Extractor) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Following [46, 56] we employ a single forward step for feature extraction. | p. 3 (3.1. Diffusion Model as a Feature Extractor) |
@@ -58,12 +58,12 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** However, unlike these works, we only input images without textual captions, given that in realworld scenarios, textual input is typically not provided for object detection.
-- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive PDF cue:** Following [46, 56] we employ a single forward step for feature extraction.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Detecting objects in 3D from a single image presents a significant challenge in computer vision, involving not only object recognition and localization but also depth ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Recently, large selfsupervised models have emerged as compelling learners for image representation [10, 16, 17].
-- **p. 2 / 1. Introduction - extractive PDF cue:** We enhance these models with 3D awareness through a view synthesis task, employing epipolar geometry to warp features from source images to target views.
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** However, unlike these works, we only input images without textual captions, given that in realworld scenarios, textual input is typically not provided for object detection.
+- **p. 3 / 3.1. Diffusion Model as a Feature Extractor - extractive body cue:** Following [46, 56] we employ a single forward step for feature extraction.
+- **p. 1 / 1. Introduction - extractive body cue:** Detecting objects in 3D from a single image presents a significant challenge in computer vision, involving not only object recognition and localization but also depth ...
+- **p. 2 / 1. Introduction - extractive body cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
+- **p. 1 / 1. Introduction - extractive body cue:** Recently, large selfsupervised models have emerged as compelling learners for image representation [10, 16, 17].
+- **p. 2 / 1. Introduction - extractive body cue:** We enhance these models with 3D awareness through a view synthesis task, employing epipolar geometry to warp features from source images to target views.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -78,7 +78,7 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 
 ## Training vs Inference
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** Datasets and implementation details For all our experiments, we train the geometric ControlNet on the official ARKitscene datasets [3], which provide around 450K posed low-resolution ...
+- **p. 5 / 4. Experiments - extractive body cue:** Datasets and implementation details For all our experiments, we train the geometric ControlNet on the official ARKitscene datasets [3], which provide around 450K posed low-resolution ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -98,13 +98,13 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 
 ## Failure and Ablation Link
 
-- **p. 6 / 4.2. Cross-dataset Generalization - extractive PDF cue:** Without any training of the geometric ControlNet on the OmniSUNRGBD, 3DiffTection (w/o Semantic-ControlNet) with only tuned a 3D head surpasses the fully fine-tuned CubeRCNN-DLA by ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We then validate its capacity for generalization to new datasets, both with and without tuning of the detection head (Section 4.2).
-- **p. 6 / 4.2. Cross-dataset Generalization - extractive PDF cue:** These results indicate that even without training the geometric ControlNet in the target domain, the semantic ControlNet adeptly adapts features for perception tasks.
-- **p. 7 / 4.2. Cross-dataset Generalization - extractive PDF cue:** Without ground truth 2D bounding boxes, 3DiffTection is also able to outperform DIFT-SD and CubeRCNN by 5.90% and 5.83%, respectively.
-- **p. 7 / 4.2. Cross-dataset Generalization - extractive PDF cue:** To further demonstrate the transferrability of 3DiffTection, we train the models for 3D detection on Omni3DARkitscenes and directly test it on Omni3D-SUNRGBD datset without any ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Note that in the following experiments, the pretrained geometric ControlNet is kept frozen.
-- **p. 8 / 4.4. Analysis and Ablation - extractive PDF cue:** The vanilla Stable Diffusion features achieve a 28.86% AP3D, exceeding CubeRCNN-VIT-B (MAE pretrained) by 3.63% and ResNet-50 DreamTeacher by 4.5% in AP30.
+- **p. 6 / 4.2. Cross-dataset Generalization - extractive body cue:** Without any training of the geometric ControlNet on the OmniSUNRGBD, 3DiffTection (w/o Semantic-ControlNet) with only tuned a 3D head surpasses the fully fine-tuned CubeRCNN-DLA by ...
+- **p. 5 / 4. Experiments - extractive body cue:** We then validate its capacity for generalization to new datasets, both with and without tuning of the detection head (Section 4.2).
+- **p. 6 / 4.2. Cross-dataset Generalization - extractive body cue:** These results indicate that even without training the geometric ControlNet in the target domain, the semantic ControlNet adeptly adapts features for perception tasks.
+- **p. 7 / 4.2. Cross-dataset Generalization - extractive body cue:** Without ground truth 2D bounding boxes, 3DiffTection is also able to outperform DIFT-SD and CubeRCNN by 5.90% and 5.83%, respectively.
+- **p. 7 / 4.2. Cross-dataset Generalization - extractive body cue:** To further demonstrate the transferrability of 3DiffTection, we train the models for 3D detection on Omni3DARkitscenes and directly test it on Omni3D-SUNRGBD datset without any ...
+- **p. 5 / 4. Experiments - extractive body cue:** Note that in the following experiments, the pretrained geometric ControlNet is kept frozen.
+- **p. 8 / 4.4. Analysis and Ablation - extractive body cue:** The vanilla Stable Diffusion features achieve a 28.86% AP3D, exceeding CubeRCNN-VIT-B (MAE pretrained) by 3.63% and ResNet-50 DreamTeacher by 4.5% in AP30.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -118,7 +118,7 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Diffusion Model as a Feature Extractor), p. 3 (3.1. Diffusion Model as a Feature Extractor), objective 본문 anchor 없음, temporal p. 5 (4. Experiments), p. 6 (4. Experiments), p. 8 (5. Conclusion and Limitations), p. 2 (1. Introduction), p. 2 (2. Related works), p. 3 (3) Amplifying 3D box predictions).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Diffusion Model as a Feature Extractor), p. 3 (3.1. Diffusion Model as a Feature Extractor), objective 본문 anchor 없음, temporal p. 5 (4. Experiments), p. 6 (4. Experiments), p. 8 (5. Conclusion and Limitations), p. 2 (1. Introduction), p. 2 (2. Related works), p. 3 (3) Amplifying 3D box predictions).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

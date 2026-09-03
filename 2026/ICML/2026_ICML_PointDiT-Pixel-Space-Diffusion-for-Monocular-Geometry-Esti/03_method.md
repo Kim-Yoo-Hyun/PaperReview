@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=hQWwTWGAyu; PDF retrieval source: https://openreview.net/pdf/859969c4505c940b506d06cb01ee1bce1e5d07d0.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=hQWwTWGAyu; PDF retrieval source: https://openreview.net/pdf/859969c4505c940b506d06cb01ee1bce1e5d07d0.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 
 ## Method Body Digest
 
-- **p. 5 / 3.3. Training - extractive PDF cue:** This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the flow trajectory from ...
-- **p. 3 / 3. Approach - extractive PDF cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
-- **p. 5 / 3.2. Architecture - extractive PDF cue:** The sequence is then processed by a stack of Transformer blocks (Dosovitskiy, 2020; Li & He, 2026), each comprising multi-head self-attention and an MLP.
-- **p. 4 / 3.2. Architecture - extractive PDF cue:** This yields a composite image representation Tc ∈RN×4D, where D is the perlayer feature dimension.
-- **p. 4 / 3.2. Architecture - extractive PDF cue:** Crucially, unlike previous flow matching models that typically predict the velocity, our network is trained to predict the clean point map.
-- **p. 6 / 3.4. Inference - extractive PDF cue:** We further observe that our model can serve as a deterministic estimator at inference time, by initializing from all zeros instead of random noise (Table ...
-- **p. 3 / 3.1. Point Map Generation with Flow Matching - extractive PDF cue:** We adopt the flow matching formulation to model point map generation from a single image.
-- **p. 5 / 3.3. Training - extractive PDF cue:** The final optimization objective is the weighted sum: L = Lfm + λLrel, (7) where λ = 0.1 is the loss weight.
+- **p. 5 / 3.3. Training - extractive body cue:** This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the flow trajectory from ...
+- **p. 3 / 3. Approach - extractive body cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
+- **p. 5 / 3.2. Architecture - extractive body cue:** The sequence is then processed by a stack of Transformer blocks (Dosovitskiy, 2020; Li & He, 2026), each comprising multi-head self-attention and an MLP.
+- **p. 4 / 3.2. Architecture - extractive body cue:** This yields a composite image representation Tc ∈RN×4D, where D is the perlayer feature dimension.
+- **p. 4 / 3.2. Architecture - extractive body cue:** Crucially, unlike previous flow matching models that typically predict the velocity, our network is trained to predict the clean point map.
+- **p. 6 / 3.4. Inference - extractive body cue:** We further observe that our model can serve as a deterministic estimator at inference time, by initializing from all zeros instead of random noise (Table ...
+- **p. 3 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** We adopt the flow matching formulation to model point map generation from a single image.
+- **p. 5 / 3.3. Training - extractive body cue:** The final optimization objective is the weighted sum: L = Lfm + λLrel, (7) where λ = 0.1 is the loss weight.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Inspired by JiT (Li & He, 2026), we introduce a minimalist pixel-space diffusion framework that trains directly on the raw point map space.
-- **p. 3 / 3. Approach - extractive PDF cue:** Our method learns to transport a simple Gaussian noise distribution to the data distribution of point maps, conditioned on the input image.
-- **p. 3 / 3. Approach - extractive PDF cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
+- **p. 2 / 1. Introduction - extractive body cue:** Inspired by JiT (Li & He, 2026), we introduce a minimalist pixel-space diffusion framework that trains directly on the raw point map space.
+- **p. 3 / 3. Approach - extractive body cue:** Our method learns to transport a simple Gaussian noise distribution to the data distribution of point maps, conditioned on the input image.
+- **p. 3 / 3. Approach - extractive body cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.3. Training - extractive PDF cue:** This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the flow trajectory from ...
-- **p. 3 / 3. Approach - extractive PDF cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
-- **p. 5 / 3.2. Architecture - extractive PDF cue:** The sequence is then processed by a stack of Transformer blocks (Dosovitskiy, 2020; Li & He, 2026), each comprising multi-head self-attention and an MLP.
-- **p. 4 / 3.2. Architecture - extractive PDF cue:** This yields a composite image representation Tc ∈RN×4D, where D is the perlayer feature dimension.
-- **p. 4 / 3.2. Architecture - extractive PDF cue:** Crucially, unlike previous flow matching models that typically predict the velocity, our network is trained to predict the clean point map.
-- **p. 6 / 3.4. Inference - extractive PDF cue:** We further observe that our model can serve as a deterministic estimator at inference time, by initializing from all zeros instead of random noise (Table ...
-- **p. 3 / 3.1. Point Map Generation with Flow Matching - extractive PDF cue:** We adopt the flow matching formulation to model point map generation from a single image.
+- **p. 5 / 3.3. Training - extractive body cue:** This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the flow trajectory from ...
+- **p. 3 / 3. Approach - extractive body cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
+- **p. 5 / 3.2. Architecture - extractive body cue:** The sequence is then processed by a stack of Transformer blocks (Dosovitskiy, 2020; Li & He, 2026), each comprising multi-head self-attention and an MLP.
+- **p. 4 / 3.2. Architecture - extractive body cue:** This yields a composite image representation Tc ∈RN×4D, where D is the perlayer feature dimension.
+- **p. 4 / 3.2. Architecture - extractive body cue:** Crucially, unlike previous flow matching models that typically predict the velocity, our network is trained to predict the clean point map.
+- **p. 6 / 3.4. Inference - extractive body cue:** We further observe that our model can serve as a deterministic estimator at inference time, by initializing from all zeros instead of random noise (Table ...
+- **p. 3 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** We adopt the flow matching formulation to model point map generation from a single image.
 - **Detected method headings:** 3. Approach (p. 3); 3.2. Architecture (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the ... | p. 5 (3.3. Training), p. 3 (3. Approach) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, ... | p. 3 (3. Approach), p. 5 (3.2. Architecture) |
@@ -48,11 +48,11 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.3. Training - extractive PDF cue:** The final optimization objective is the weighted sum: L = Lfm + λLrel, (7) where λ = 0.1 is the loss weight.
-- **p. 5 / 3.3. Training - extractive PDF cue:** Although our network Fθ is parameterized to predict the clean point map ˆx, we optimize it in velocity space (v-loss), following JiT (Li & He, ...
-- **p. 3 / 3.1. Point Map Generation with Flow Matching - extractive PDF cue:** Flow matching learns an Ordinary Differential Equation (ODE) that continuously transforms a prior noise distribution p0 into the data distribution p1.
-- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive PDF cue:** Specifically, we learn a conditional vector field vθ(zt, t/c) that predicts the target velocity defined in Equation (2).
-- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive PDF cue:** Since this radius is only a synthetic proxy for the true depth, we down-weight sky pixels in the training loss rather than masking them out ...
+- **p. 5 / 3.3. Training - extractive body cue:** The final optimization objective is the weighted sum: L = Lfm + λLrel, (7) where λ = 0.1 is the loss weight.
+- **p. 5 / 3.3. Training - extractive body cue:** Although our network Fθ is parameterized to predict the clean point map ˆx, we optimize it in velocity space (v-loss), following JiT (Li & He, ...
+- **p. 3 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** Flow matching learns an Ordinary Differential Equation (ODE) that continuously transforms a prior noise distribution p0 into the data distribution p1.
+- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** Specifically, we learn a conditional vector field vθ(zt, t/c) that predicts the target velocity defined in Equation (2).
+- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** Since this radius is only a synthetic proxy for the true depth, we down-weight sky pixels in the training loss rather than masking them out ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3.3. Training), p. 3 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 5 (3.3. Training).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3. Approach - extractive PDF cue:** Formally, given an input image c ∈RH×W ×3, our goal is to estimate the corresponding point map x ∈ RH×W ×3, in which each pixel ...
-- **p. 4 / 3.2. Architecture - extractive PDF cue:** The network takes the noisy point map zt, the current time step t, and the conditioning image c as input.
-- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive PDF cue:** We extend this framework to model the conditional distribution p(x/c), where c is the input RGB image and x is the target dense point map.
-- **p. 5 / 3.4. Inference - extractive PDF cue:** We attribute this to the per-pixel alignment between the predicted point map and the conditioning image: each output location is 5
-- **p. 1 / 1. Introduction - extractive PDF cue:** DINOv3 Linear Embed … … Linear Predict Transformer Block ×L Noisy Point Map Input Image Clean Point Map Unpatchify Patchify … Point Tokens DINOv3 Tokens ...
-- **p. 3 / 3. Approach - extractive PDF cue:** Our method learns to transport a simple Gaussian noise distribution to the data distribution of point maps, conditioned on the input image.
-- **p. 5 / 3.4. Inference - extractive PDF cue:** At each step t, we predict the clean data ˆx, derive the velocity ˆvt, and update the state: zt+∆t ←zt + ∆t · ˆvt.
+- **p. 3 / 3. Approach - extractive body cue:** Formally, given an input image c ∈RH×W ×3, our goal is to estimate the corresponding point map x ∈ RH×W ×3, in which each pixel ...
+- **p. 4 / 3.2. Architecture - extractive body cue:** The network takes the noisy point map zt, the current time step t, and the conditioning image c as input.
+- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** We extend this framework to model the conditional distribution p(x/c), where c is the input RGB image and x is the target dense point map.
+- **p. 5 / 3.4. Inference - extractive body cue:** We attribute this to the per-pixel alignment between the predicted point map and the conditioning image: each output location is 5
+- **p. 1 / 1. Introduction - extractive body cue:** DINOv3 Linear Embed … … Linear Predict Transformer Block ×L Noisy Point Map Input Image Clean Point Map Unpatchify Patchify … Point Tokens DINOv3 Tokens ...
+- **p. 3 / 3. Approach - extractive body cue:** Our method learns to transport a simple Gaussian noise distribution to the data distribution of point maps, conditioned on the input image.
+- **p. 5 / 3.4. Inference - extractive body cue:** At each step t, we predict the clean data ˆx, derive the velocity ˆvt, and update the state: zt+∆t ←zt + ∆t · ˆvt.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,12 +89,12 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 
 ## Training vs Inference
 
-- **p. 5 / 3.3. Training - extractive PDF cue:** This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the flow trajectory from ...
-- **p. 4 / 3.2. Architecture - extractive PDF cue:** Crucially, unlike previous flow matching models that typically predict the velocity, our network is trained to predict the clean point map.
-- **p. 6 / 3.4. Inference - extractive PDF cue:** We further observe that our model can serve as a deterministic estimator at inference time, by initializing from all zeros instead of random noise (Table ...
-- **p. 8 / 4.4. Evaluation Results - extractive PDF cue:** Supporting a variable number of inference steps with one network underscores the flexibility of our approach.
-- **p. 8 / 4.4. Evaluation Results - extractive PDF cue:** Thanks to its flow matching formulation, PointDiT can also benefit from additional inference steps using the same model.
-- **p. 10 / 4.5. Ablation and Analysis - extractive PDF cue:** To save compute, the 512 × 512 models in this part are fine-tuned on a 6dataset subset (Hypersim, VKITTI2, UrbanSyn, Synscapes, TartanAir, and OmniWorldGame; 1.48M ...
+- **p. 5 / 3.3. Training - extractive body cue:** This creates a train-test discrepancy, since inference always starts at t = 0, and the model may then struggle to initiate the flow trajectory from ...
+- **p. 4 / 3.2. Architecture - extractive body cue:** Crucially, unlike previous flow matching models that typically predict the velocity, our network is trained to predict the clean point map.
+- **p. 6 / 3.4. Inference - extractive body cue:** We further observe that our model can serve as a deterministic estimator at inference time, by initializing from all zeros instead of random noise (Table ...
+- **p. 8 / 4.4. Evaluation Results - extractive body cue:** Supporting a variable number of inference steps with one network underscores the flexibility of our approach.
+- **p. 8 / 4.4. Evaluation Results - extractive body cue:** Thanks to its flow matching formulation, PointDiT can also benefit from additional inference steps using the same model.
+- **p. 10 / 4.5. Ablation and Analysis - extractive body cue:** To save compute, the 512 × 512 models in this part are fine-tuned on a 6dataset subset (Hypersim, VKITTI2, UrbanSyn, Synscapes, TartanAir, and OmniWorldGame; 1.48M ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 
 ## Failure and Ablation Link
 
-- **p. 10 / 4.5. Ablation and Analysis - extractive PDF cue:** The ablation results discussed so far use only the flow matching loss (Equation (5)), which is already highly effective at recovering high-quality geometry.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** All variants are pre-trained at 256 × 256 for 30 epochs (including a 5-epoch warmup) and then fine-tuned at 512×512, scaling the number of GPUs ...
-- **p. 7 / 4.3. Evaluation Setup and Metrics - extractive PDF cue:** Our model predicts affine-invariant point maps, from which affine-invariant depth maps are obtained by extracting the z-component of each point.
-- **p. 9 / 4.5. Ablation and Analysis - extractive PDF cue:** Even without any pretrained image backbone (i.e., with plain linear embeddings), our model already achieves decent results.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** We use the same patch size of 16 for all variants.
-- **p. 7 / 4.4. Evaluation Results - extractive PDF cue:** PointDiTL attains comparable boundary quality at lower cost, and our smallest variant, PointDiT-B, stays competitive with fewer parameters.
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 6. Training cost. Number of epochs, H100 GPUs, and wall-clock time for the pre-training (256 × 256) and fine-tuning (512 × 512) stages of ...
+- **p. 10 / 4.5. Ablation and Analysis - extractive body cue:** The ablation results discussed so far use only the flow matching loss (Equation (5)), which is already highly effective at recovering high-quality geometry.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** All variants are pre-trained at 256 × 256 for 30 epochs (including a 5-epoch warmup) and then fine-tuned at 512×512, scaling the number of GPUs ...
+- **p. 7 / 4.3. Evaluation Setup and Metrics - extractive body cue:** Our model predicts affine-invariant point maps, from which affine-invariant depth maps are obtained by extracting the z-component of each point.
+- **p. 9 / 4.5. Ablation and Analysis - extractive body cue:** Even without any pretrained image backbone (i.e., with plain linear embeddings), our model already achieves decent results.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** We use the same patch size of 16 for all variants.
+- **p. 7 / 4.4. Evaluation Results - extractive body cue:** PointDiTL attains comparable boundary quality at lower cost, and our smallest variant, PointDiT-B, stays competitive with fewer parameters.
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 6. Training cost. Number of epochs, H100 GPUs, and wall-clock time for the pre-training (256 × 256) and fine-tuning (512 × 512) stages of ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. Architecture), p. 4 (3.2. Architecture), p. 4 (3.2. Architecture), p. 6 (3.4. Inference), objective p. 5 (3.3. Training), p. 5 (3.3. Training), p. 3 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), temporal p. 8 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 4 (3.2. Architecture), p. 4 (3.1. Point Map Generation with Flow Matching), p. 5 (3.3. Training).
+- **Evidence anchors reviewed:** method p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. Architecture), p. 4 (3.2. Architecture), p. 4 (3.2. Architecture), p. 6 (3.4. Inference), objective p. 5 (3.3. Training), p. 5 (3.3. Training), p. 3 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), temporal p. 8 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 4 (3.2. Architecture), p. 4 (3.1. Point Map Generation with Flow Matching), p. 5 (3.3. Training).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

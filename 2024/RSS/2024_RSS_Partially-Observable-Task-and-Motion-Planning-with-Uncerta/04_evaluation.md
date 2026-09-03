@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p118.html; PDF retrieval source: https://arxiv.org/pdf/2403.10454.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p118.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p118.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -143,3 +143,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We applied TAMPURA to five simulated and two realworld robotics problems, illustrated in Figure 2 and Figure 1, (p. 7, VI. SIMULATED EXPERIMENTS & ANALYSIS).
+- **Metric evidence:** See the supplementary material for videos of successful completions under various initializations of these tasks. (p. 9, VII. REAL-WORLD IMPLEMENTATION).
+- **Baseline/ablation evidence:** The robot's task is to move these cubes into the bowl without colliding with a human's hand moving around in the workspace. (p. 9, VII. REAL-WORLD IMPLEMENTATION).
+- **Failure/negative evidence:** 20:⃗ s ←[D[x] : x ∈zip(⃗Ψpre,⃗c,⃗Ψeff)] 21: ▷Compute f, num "failures" where c in Ψpre did not cause Ψeff. (p. 6, V. LEARNING THE SPARSE ABSTRACT MDP).

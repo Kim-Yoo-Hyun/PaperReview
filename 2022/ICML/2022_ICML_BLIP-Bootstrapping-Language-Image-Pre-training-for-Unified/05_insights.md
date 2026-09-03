@@ -1,53 +1,72 @@
 # Insights — BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.12086; PDF retrieval source: https://arxiv.org/pdf/2201.12086. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
-- **Problem cue:** However, existing methods have two major limitations: (1) Model perspective: most methods either adopt an encoder-based model (Radford et al., 2021; Li et al., 2021a), or an encoder-decoder ...
-- **Claim/result cue:** We achieve state-of-the-art results on a wide range of vision-language tasks, such as image-text retrieval (+2.7% in average recall@1), image captioning (+2.8% in CIDEr), and VQA (+1.6% in ...
+- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
+- **p. 2 / 1. Introduction - extractive body cue:** We propose multimodal mixture of encoder-decoder, a unified vision-language model which can operate in one of the three functionalities: (1) Unimodal encoder is trained with ...
+- **p. 3 / 3. Method - extractive body cue:** We propose BLIP, a unified VLP framework to learn from noisy image-text pairs.
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
+- **p. 4 / 3.3. CapFilt - extractive body cue:** We propose Captioning and Filtering (CapFilt), a new method to improve the quality of the text corpus.
+- **p. 3 / 3. Method - extractive body cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
+- **Contribution anchor:** p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt), p. 3 (3. Method)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** However, existing methods have two major limitations: (1) Model perspective: most methods either adopt an encoder-based model (Radford et al., 2021; Li et al., 2021a), ...
+- **p. 1 / 1. Introduction - extractive body cue:** BLIP is a new VLP framework which enables a wider range of downstream tasks than existing methods.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 6. Zero-shot image-text retrieval results on Flickr30K. layers except for SA leads to better performance compared to not sharing, while also reducing the model ...
+- **Boundary to test:** Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, using the bootstrapped dataset. Table 13 hows ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation. | p. 1 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack of temporal mod- eling, our models achieve state-of-the-art ... | p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt) |
+| Failure/limitation | Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, using the bootstrapped dataset. Table 13 hows ... | p. 9 (Figure/Table caption), p. 6 (Figure/Table caption) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `Vision-Language Model, alignment, Generation` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Diffusion/generative prior를 sparse observation completion, 3D scene/object generation, action trajectory proposal에 사용할 수 있다.
-  - 생성 모델의 prior는 부족한 geometry나 demonstration을 보완하지만, physical feasibility와 metric correctness를 별도 제약으로 확인해야 한다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `논문이 명시한 observation과 task input → task state 또는 decision variable → paper-specific output/action`.
+- 이 논문의 재사용 가능한 지점은 We also find that more diverse captions yield larger gains. • BLIP achieves state-of-the-art performance on a wide range of vision-language tasks, including image-text 를 We also achieve state-ofthe-art zero-shot performance when directly transferring our models to two video-language tasks: text-to-video retrieval and videoQA.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 task state 또는 decision variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, using the bootstrapped dataset. Table 13 hows ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Foundations: Vision and Language Models`; tags: `Vision-Language Model, alignment, Generation`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: We achieve state-of-the-art results on a wide range of vision-language tasks, such as image-text retrieval (+2.7% in average recall@1), image captioning (+2.8% in CIDEr), and VQA (+1.6% in ...
-  - visual/shape generation 품질 이후에도 geometry correctness, controllability, physical plausibility, robot execution 가능성은 남는다.
+- **Registry position:** `REFERENCE` in `Foundations: Vision and Language Models`; tags: `Vision-Language Model, alignment, Generation`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, using the bootstrapped dataset. Table 13 hows ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ImageNet, COCO / BLEU, accuracy
-  - 내 연구 확장 benchmark 후보: ShapeNet, Objaverse, ScanNet, RLBench
-  - 내 연구 확장 metric 후보: Chamfer, F-score, CLIP score, success rate
-  - 검증 초점: generation fidelity, geometric validity, physical feasibility, downstream task utility를 함께 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: In Table 1, we compare models pre-trained on different datasets to demonstrate the efficacy of CapFilt on downstream tasks, including image-text retrieval and image captioning with finetuned and zero-shot settings..
+3. Compare against the body-reported baseline or a matched simpler baseline: Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack of temporal mod- eling, our models achieve state-of-the-art ....
+4. Report the body metric and its denominator/aggregation: Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack of temporal mod- eling, our models achieve state-of-the-art ....
+5. Re-run the body-reported ablation/failure condition: Table 3. Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training. In Figure 4, we show some example captions and their corresponding images, which qualitatively demonstrate the ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 4 (4.2. Effect of CapFilt); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D/3D diffusion prior가 실제 3D reconstruction이나 planning에서 metric error를 줄이는가, 아니면 plausible hallucination을 늘리는가?
+고정된 observation/action/data/compute budget에서 BLIP, Bootstrapping, LanguageImage mechanism이 Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on ... 대비 Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. ...을 개선하고, Table 13. Continue training the pre-trained model offers less gain compared to training a new model ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

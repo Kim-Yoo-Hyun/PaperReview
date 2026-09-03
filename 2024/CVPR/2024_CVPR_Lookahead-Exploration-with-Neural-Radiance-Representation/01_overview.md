@@ -1,8 +1,10 @@
 # Lookahead Exploration with Neural Radiance Representation for Continuous Vision-Language Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html.
-> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html.
+> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 ## Why Read It
 
 Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 First, our model directly predicts robust multi-level semantic features for future candidate locations, avoiding the difficulty of pixel-level image reconstruction in unseen environments as used in existing methods like RNR-Map [24, 35] ...를 문제로 두고, In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • Utilizing predi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This phenomenon raises a challenge to accurately represent future environments with visual occlusions, leading to incorrect action decisions. (p. 1, 1. Introduction).
+- **Actual contribution:** In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • ... (p. 2, 1. Introduction).
+- **Evaluation boundary:** As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods).
+- **Explicit failure boundary:** Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to ... (p. 8, 4.3. Ablation Study).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4.4. Evaluation in the Real World - extractive PDF cue:** We collect 15 demonstrations per task and train PDFactor-B with the collected dataset for 10k steps with the same hyperparameters as the simulation data.
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** Our experiments are conducted on a popular simulation benchmark RLBench [31] which is built upon the CoppelaSim simulator.
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** We train and evaluate PDFactor with the same dataset as PerAct, with 100 demonstrations for training and 25 unseen demonstrations for testing.
-- **p. 8 / 4.4. Evaluation in the Real World - extractive PDF cue:** Multi-task performance on 6 real world tasks. show that PDFactor learns manipulation tasks effectively with noisy and limited real-world demonstrations.
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. (a) Learning efficiency. We show the learning curves of PDFactor and RVT-2. PDFactor demonstrates faster convergence with a higher performance than previous state-of-the-art ...
-- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive PDF cue:** Our method achieves the best performance with an average success rate of 87.3% among all 18 tasks, an absolute improvement of 5.9% over RVT-2, the ...
+- **p. 8 / 4.4. Evaluation in the Real World - extractive body cue:** We collect 15 demonstrations per task and train PDFactor-B with the collected dataset for 10k steps with the same hyperparameters as the simulation data.
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** Our experiments are conducted on a popular simulation benchmark RLBench [31] which is built upon the CoppelaSim simulator.
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** We train and evaluate PDFactor with the same dataset as PerAct, with 100 demonstrations for training and 25 unseen demonstrations for testing.
+- **p. 8 / 4.4. Evaluation in the Real World - extractive body cue:** Multi-task performance on 6 real world tasks. show that PDFactor learns manipulation tasks effectively with noisy and limited real-world demonstrations.
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. (a) Learning efficiency. We show the learning curves of PDFactor and RVT-2. PDFactor demonstrates faster convergence with a higher performance than previous state-of-the-art ...
+- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive body cue:** Our method achieves the best performance with an average success rate of 87.3% among all 18 tasks, an absolute improvement of 5.9% over RVT-2, the ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Comparison with State-of-the-Art Methods | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves the best performance with an average success rate of 87.3% among all 18 tasks, an absolute improvement of 5.9% over RVT-2, ... | p. 6 (4.2. Comparison with State-of-the-Art Methods) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5. (a) Learning efficiency. We show the learning curves of PDFactor and RVT-2. PDFactor demonstrates faster convergence with a higher performance than previous ... | p. 8 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4.4. Evaluation in the Real World - extractive PDF cue:** We collect 15 demonstrations per task and train PDFactor-B with the collected dataset for 10k steps with the same hyperparameters as the simulation data.
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** Our experiments are conducted on a popular simulation benchmark RLBench [31] which is built upon the CoppelaSim simulator.
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** We train and evaluate PDFactor with the same dataset as PerAct, with 100 demonstrations for training and 25 unseen demonstrations for testing.
-- **p. 8 / 4.4. Evaluation in the Real World - extractive PDF cue:** Multi-task performance on 6 real world tasks. show that PDFactor learns manipulation tasks effectively with noisy and limited real-world demonstrations.
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
+- **p. 8 / 4.4. Evaluation in the Real World - extractive body cue:** We collect 15 demonstrations per task and train PDFactor-B with the collected dataset for 10k steps with the same hyperparameters as the simulation data.
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** Our experiments are conducted on a popular simulation benchmark RLBench [31] which is built upon the CoppelaSim simulator.
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** We train and evaluate PDFactor with the same dataset as PerAct, with 100 demonstrations for training and 25 unseen demonstrations for testing.
+- **p. 8 / 4.4. Evaluation in the Real World - extractive body cue:** Multi-task performance on 6 real world tasks. show that PDFactor learns manipulation tasks effectively with noisy and limited real-world demonstrations.
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Policy Representations. (a) Explicit policy predicts a specific action distribution along the 3D space. (b) Implicit pol- icy, e.g., energy-based and diffusion-based models, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. PDFactor Overview. The 3D point cloud reconstructed from the multi-view RGB-D images is first featurized and projected to three orthogonal views, which are ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Details of PDFactor models. serves as conditioning to regress dimension-wise scale and shift parameters \alpha , \gamma and \beta which are used to ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. A subset of the evaluated 18 tasks in RLBench simulation and 6 tasks in the real world. where \ d elta \sim \mathcal ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Multi-task Performance on RLBench. We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation on denoising MLP depth. Inference speed is measured in FPS. 10 25 50 100 Demonstrations 0.4
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Scaling with demonstrations. We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding. By replacing 2D standard ViT ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4. The data indicates that success rate improves as model size increases, demonstrating the scalability of the proposed method. Besides, as the number of ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Policy Representations. (a) Explicit policy predicts a specific action distribution along the 3D space. (b) Implicit pol- icy, e.g., energy-based and diffusion-based models, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. PDFactor Overview. The 3D point cloud reconstructed from the multi-view RGB-D images is first featurized and projected to three orthogonal views, which are ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Details of PDFactor models. serves as conditioning to regress dimension-wise scale and shift parameters \alpha , \gamma and \beta which are used to ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. A subset of the evaluated 18 tasks in RLBench simulation and 6 tasks in the real world. where \ d elta \sim \mathcal ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Multi-task Performance on RLBench. We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation on denoising MLP depth. Inference speed is measured in FPS. 10 25 50 100 Demonstrations 0.4
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Scaling with demonstrations. We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding. By replacing 2D standard ViT ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. The data indicates that success rate improves as model size increases, demonstrating the scalability of the proposed method. Besides, as the number of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We collect 15 demonstrations per task and train PDFactor-B with the collected dataset for 10k steps with the same hyperparameters as the simulation data. | embodiment, simulator version and control stack | p. 8 (4.4. Evaluation in the Real World), p. 6 (4.1. Experiment Setup) |
 | Task/environment | Our experiments are conducted on a popular simulation benchmark RLBench [31] which is built upon the CoppelaSim simulator. | reset, timeout, object/scene variation | p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup) |
@@ -119,12 +119,12 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 | Primary metric/result | Figure 5. (a) Learning efficiency. We show the learning curves of PDFactor and RVT-2. PDFactor demonstrates faster convergence with a higher performance than previous ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive PDF cue:** Our method achieves the best performance with an average success rate of 87.3% among all 18 tasks, an absolute improvement of 5.9% over RVT-2, the ...
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
-- **p. 8 / 4.4. Evaluation in the Real World - extractive PDF cue:** We study the performance of PDFactor in learning manipulation tasks from real-world demonstrations across 6 tasks (i.e., put fruit, push buttons, stack cups, stack blocks, ...
-- **p. 8 / 4.4. Evaluation in the Real World - extractive PDF cue:** Each task is evaluated across 10 episodes.
-- **p. 6 / 3. We aim to model their joint dis - extractive PDF cue:** A subset of the evaluated 18 tasks in RLBench simulation and 6 tasks in the real world. where \ d elta \sim \mathcal {N}(\mathbf {0},\mathbf ...
+- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive body cue:** Our method achieves the best performance with an average success rate of 87.3% among all 18 tasks, an absolute improvement of 5.9% over RVT-2, the ...
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
+- **p. 8 / 4.4. Evaluation in the Real World - extractive body cue:** We study the performance of PDFactor in learning manipulation tasks from real-world demonstrations across 6 tasks (i.e., put fruit, push buttons, stack cups, stack blocks, ...
+- **p. 8 / 4.4. Evaluation in the Real World - extractive body cue:** Each task is evaluated across 10 episodes.
+- **p. 6 / 3. We aim to model their joint dis - extractive body cue:** A subset of the evaluated 18 tasks in RLBench simulation and 6 tasks in the real world. where \ d elta \sim \mathcal {N}(\mathbf {0},\mathbf ...
 
 ## Generalization and Failure Cases
 
@@ -162,14 +162,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future works could explore recent techniques on reducing diffusive sampling steps while maintaining optimal accuracy.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Policy Representations. (a) Explicit policy predicts a specific action distribution along the 3D space. (b) Implicit pol- icy, e.g., energy-based and diffusion-based models, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. PDFactor Overview. The 3D point cloud reconstructed from the multi-view RGB-D images is first featurized and projected to three orthogonal views, which are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. A subset of the evaluated 18 tasks in RLBench simulation and 6 tasks in the real world. where \ d elta \sim \mathcal ...
-- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** We observe that the average success rate drops by 9%, indicating the importance of feature projection to avoid visual occlusions.
-- **p. 8 / 4.3. Ablation Study & Model Analysis - extractive PDF cue:** Variants Planning Tools Long Rotation Motion Multimodal Precision Occlusion Avg.
+- **p. 8 / 5. Conclusion - extractive body cue:** Future works could explore recent techniques on reducing diffusive sampling steps while maintaining optimal accuracy.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Policy Representations. (a) Explicit policy predicts a specific action distribution along the 3D space. (b) Implicit pol- icy, e.g., energy-based and diffusion-based models, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. PDFactor Overview. The 3D point cloud reconstructed from the multi-view RGB-D images is first featurized and projected to three orthogonal views, which are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. A subset of the evaluated 18 tasks in RLBench simulation and 6 tasks in the real world. where \ d elta \sim \mathcal ...
+- **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We observe that the average success rate drops by 9%, indicating the importance of feature projection to avoid visual occlusions.
+- **p. 8 / 4.3. Ablation Study & Model Analysis - extractive body cue:** Variants Planning Tools Long Rotation Motion Multimodal Precision Occlusion Avg.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.4. Evaluation in the Real World), p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 8 (4.4. Evaluation in the Real World), p. 7 (4.3. Ablation Study & Model Analysis), p. 7 (4.3. Ablation Study & Model Analysis), metrics p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Study & Model Analysis), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), baselines p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), p. 7 (Figure/Table caption), results p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 8 (Figure/Table caption), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Ablation Study & Model Analysis), p. 7 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis).
+- **Evidence anchors reviewed:** datasets p. 8 (4.4. Evaluation in the Real World), p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 8 (4.4. Evaluation in the Real World), p. 7 (4.3. Ablation Study & Model Analysis), p. 7 (4.3. Ablation Study & Model Analysis), metrics p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Study & Model Analysis), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), baselines p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), p. 7 (Figure/Table caption), results p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 8 (Figure/Table caption), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Ablation Study & Model Analysis), p. 7 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

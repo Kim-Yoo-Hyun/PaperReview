@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (4 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://lavalle.pl/rrtpubs.html; PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://lavalle.pl/rrtpubs.html; PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | The key advantages of RRTs are: 1) the expansion of an RRT is heavily biased. toward unexplored portions of the state space; ... | p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | We introduce the concept of a Rapidly-exploring Random Tree (RRT) as a randomized data structure that is designed for a broad class ... | p. 1 (Abstract), p. 2 (2. Rapidly-Exploring Random Trees) |
@@ -70,7 +70,7 @@ PDF body method statement (p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p
 - **p. 2 / 9 Return T - extractive body cue:** Step 5 selects an input, w, that m rizes the distance from year tO rand» and ensures that the state remains in Xj,,..
 - **p. 2 / 2. Rapidly-Exploring Random Trees - extractive body cue:** A state transition equation of the form # = f(2,u) is defined to express the nonholonomic constraints, The vector u is selected from a set, ...
 - **p. 1 / Abstract - extractive body cue:** An RRT is iteratively expanded by applying control inputs that drive the system slightly toward randomly-selected points, 18 opposed to requiring point-to-point convergence, as in ...
-- **p. 1 / 1 Introduction - extractive body cue:** Using state-space representations, this class of problems includes kinodynamic planning [3], which is an extremely general and important area in robotics, virtual prototyping, and many ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** LaValle.
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** Consider, for example, a naive random tree that is constructed incrementally by selecting a vertex at random, an input at random, and then applying the ...
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based planner; ...
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
@@ -82,8 +82,8 @@ PDF body method statement (p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | For planning of holonomic systems or steerable nonholonomic systems (see [6] and references therein), the local planning step might be efficient; however, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | The probabilistic roadmap technique might require the connections of thousands of configurations or states to find a soluti and if each connection ... | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
-| Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -125,8 +125,17 @@ PDF body method statement (p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), objective p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), temporal p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (9 Return T), p. 2 (9 Return T), p. 3 (3. Nice Properties of RRTs).
+- **Evidence anchors reviewed:** method p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), objective p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), temporal p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (9 Return T), p. 2 (9 Return T), p. 3 (3. Nice Properties of RRTs).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (4 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The key advantages of RRTs are: 1) the expansion of an RRT is heavily biased. toward unexplored portions of the state space; 2) the dis tribution of vertices in an ... (p. 2, 3. Nice Properties of RRTs).
+- **Objective/update evidence:** A state transition equation of the form # = f(2,u) is defined to express the nonholonomic constraints, The vector u is selected from a set, U, of inputs. (p. 2, 2. Rapidly-Exploring Random Trees).
+- **Temporal/runtime evidence:** For planning of holonomic systems or steerable nonholonomic systems (see [6] and references therein), the local planning step might be efficient; however, in general, the connection problem can be as ... (p. 1, 1 Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

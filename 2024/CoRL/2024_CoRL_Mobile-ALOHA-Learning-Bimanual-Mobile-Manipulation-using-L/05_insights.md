@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 This observation is also consistent across different class of state-of-the-art imitation learning methods, including ACT [104] and Diffusion Policy [18].를 We also record the joint positions of all 4 robot arms to be used as policy observations and actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal manipulation tasks, it is largely unclear whether the ... (p. 2, 1. Introduction).
+- **Paper-specific mechanism:** The main contribution of this paper is a system for learning complex mobile bimanual manipulation tasks. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. It is particularly important for ... (p. 7, Figure/Table caption); the relevant task/metric cue is Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively. (p. 8, 6.1. Co-training Improves Performance). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or from rich contacts such as ... (p. 8, 6.1. Co-training Improves Performance).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We then evaluate each policy in the real-world, with randomization of robot and objects configurations as described in Figure 3..
-3. Compare against the body-reported baseline or a matched simpler baseline: Co-train outperforms pre-train on the Wipe Wine task..
-4. Report the body metric and its denominator/aggregation: Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. It is particularly important for sub-tasks like ....
-5. Re-run the body-reported ablation/failure condition: We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal manipulation tasks, it is largely unclear whether the ... (p. 2, 1. Introduction); preserve the objective/update rule: The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, ... (p. 5, 3. Mobile ALOHA Hardware).
+2. Use the paper-reported task/data/environment cue: For example in the case of Lift Glass and Wipe sub-task, the #Attempts equals the number of success from the previous subtask Grasp Towel, as the robot could fail and ... (p. 8, 6.1. Co-training Improves Performance).
+3. Compare against the reported or matched baseline: We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training. (p. 8, 6.1. Co-training Improves Performance).
+4. Report the body metric with its denominator and aggregation: Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively. (p. 8, 6.1. Co-training Improves Performance).
+5. Re-run the reported ablation or stress/failure condition: We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training. (p. 8, 6.1. Co-training Improves Performance); if none is reported, design one around: In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or from rich contacts such as ... (p. 8, 6.1. Co-training Improves Performance).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware); the primary result is directionally consistent at p. 8 (6.1. Co-training Improves Performance), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), and measure the boundary at p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 hardware, front, present mechanism이 Co-train outperforms pre-train on the Wipe Wine task. 대비 Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently ...을 개선하고, Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal ...), does the paper-specific mechanism (The main contribution of this paper is a system for learning complex mobile bimanual manipulation tasks.) retain the reported evaluation outcome (Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, ...) when tested against the paper's strongest explicit boundary (In all of these cases, compounding errors appear to be the main source of failure, either from the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The main contribution of this paper is a system for learning complex mobile bimanual manipulation tasks. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. It is particularly important for ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or from rich contacts such as ... (p. 8, 6.1. Co-training Improves Performance).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

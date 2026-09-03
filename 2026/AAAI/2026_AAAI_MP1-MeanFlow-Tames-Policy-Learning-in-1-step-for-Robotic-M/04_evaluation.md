@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/38919; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/38919. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/38919; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/38919. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1: Performance of different methods on 37 Tasks. We evaluate the performance of our method on 3 Adroit and 34 Meta- World tasks ... | p. 5 (Figure/Table caption) |
 | Abstract | EMPIRICAL / REAL-ROBOT OR HARDWARE | On the 21 "Easy" tasks in Meta-World, the proposed approach achieves a success rate of 88.2%, representing a 3.4% improvement over the FlowPolicy. | p. 6 (Abstract) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Conditioning on 3D point-cloud features, it learns effectively from a handful of demonstrations, yet delivers one-step sampling with SOTA success rates and millisecond-level inference ... | embodiment, simulator version and control stack | p. 2 (Abstract), p. 7 (Abstract) |
 | Task/environment | 5 reports the performance of different methods in real-world robotic experiments, measured by success rate (%) and average task completion time (s). | reset, timeout, object/scene variation | p. 7 (Abstract), p. 7 (Abstract) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 - **p. 7 / Abstract - extractive body cue:** Conclusion In this paper, we address the limitations of existing Diffusion-based and Flow-based approaches by introducing MeanFlow into robot learning.
 - **p. 3 / Abstract - extractive body cue:** Unlike Diffusion-based methods, our approach does not require multi-step denoising; distinct from existing Flowbased approaches, the MP1 does not rely on ODE solvers, consistency constraints, ...
 
-- **PDF anchors reviewed:** datasets p. 2 (Abstract), p. 7 (Abstract), p. 7 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), metrics p. 6 (Figure/Table caption), p. 7 (Abstract), p. 7 (Abstract), p. 5 (Abstract), p. 6 (Abstract), p. 2 (Abstract), baselines p. 2 (Abstract), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Abstract), p. 5 (Abstract), p. 6 (Abstract), results p. 5 (Figure/Table caption), p. 6 (Abstract), p. 6 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 7 (Abstract).
+- **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 7 (Abstract), p. 7 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), metrics p. 6 (Figure/Table caption), p. 7 (Abstract), p. 7 (Abstract), p. 5 (Abstract), p. 6 (Abstract), p. 2 (Abstract), baselines p. 2 (Abstract), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Abstract), p. 5 (Abstract), p. 6 (Abstract), results p. 5 (Figure/Table caption), p. 6 (Abstract), p. 6 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 7 (Abstract).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 6: Real-world setup. Real-world Experimental Results In Fig. 3, we present the performance of MP1 and Flowpol- icy on the hammer task in the simulation environment, as well as ... (p. 7, Figure/Table caption).
+- **Metric evidence:** 5 reports the performance of different methods in real-world robotic experiments, measured by success rate (%) and average task completion time (s). (p. 7, Abstract).
+- **Baseline/ablation evidence:** MP1 is capable of one-step inference and, compared to state-of-the-art (SOTA) methods, improves the average success rate by 7.3% (Tab. (p. 2, Abstract).
+- **Failure/negative evidence:** However, a purely regression-based objective fails to impose explicit regularization on the policy's internal feature space (Wang and He 2025). (p. 2, Abstract).

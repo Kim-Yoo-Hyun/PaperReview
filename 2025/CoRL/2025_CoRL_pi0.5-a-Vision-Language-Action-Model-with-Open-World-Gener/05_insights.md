@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Our system uses a combination of cotraining and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions.를 Instruction Low-Level Action Expert Subtask Commands Multimodal Web Data Detection In-the-wild Mobile Robot In-the-wild Static Robot In-Lab Static Robot Shirt in basket Item in drawer Q: Detect and label로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Web data (WD) does not make a significant difference, but we will see in Figures 9, 16 that it impacts object generalization and high-level performance.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our central contribution is a system for training a highly generalizable VLA, π0.5, together with a proof of concept that generalization can emerge from this model when it is trained on appropriately ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our system uses a combination of cotraining and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions. (p. 1, Abstract).
+- **Paper-specific mechanism:** Given general tasks (close the cabinets, put the items in the drawer, wipe the spill, and put the dishes in the sink), the model predicts subtasks (e.g., pick up the ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 18: Per-task performance breakdown for high-level inference methods. We evaluate the full π0.5 model and various high-level inference baselines across four representative household tasks. For Items in Drawer and ... (p. 24, Figure/Table caption); the relevant task/metric cue is Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four representative household tasks: Items in Drawer, Dishes in Sink, Laundry Basket, and ... (p. 23, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Some evaluations include cancelled episodes due to robot failures, time limitations or other causes, which are removed. (p. 20, 3 DoF holonomic base).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We describe π0.5, a new model based on π0 that uses co-training on heterogeneous tasks to enable broad generalization. π0.5 uses data from multiple robots, highlevel semantic prediction, web data, and other ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 6: Evaluating performance with different numbers of locations. Performance over the four test tasks - "dishes in sink", "items in drawer", "laundry basket", "make bed" - improves with more training environments. ....
-4. Report the body metric and its denominator/aggregation: Figure 7: Evaluating language following with dif- ferent numbers of training locations. We evalu- ate language following rate and success rate for pick- ing up user-indicated items and placing them into drawers ....
-5. Re-run the body-reported ablation/failure condition: Figure 18: Per-task performance breakdown for high-level inference methods. We evaluate the full π0.5 model and various high-level inference baselines across four representative household tasks. For Items in Drawer and Dishes in ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our system uses a combination of cotraining and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions. (p. 1, Abstract); preserve the objective/update rule: While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in the wild. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: We describe π0.5, a new model based on π0 that uses co-training on heterogeneous tasks to enable broad generalization. π0.5 uses data from multiple robots, highlevel semantic prediction, web data, ... (p. 1, Abstract).
+3. Compare against the reported or matched baseline: Figure 6: Evaluating performance with different numbers of locations. Performance over the four test tasks - "dishes in sink", "items in drawer", "laundry basket", "make bed" - improves with more ... (p. 7, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four representative household tasks: Items in Drawer, Dishes in Sink, Laundry Basket, and ... (p. 23, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Figure 18: Per-task performance breakdown for high-level inference methods. We evaluate the full π0.5 model and various high-level inference baselines across four representative household tasks. For Items in Drawer and ... (p. 24, Figure/Table caption); if none is reported, design one around: Some evaluations include cancelled episodes due to robot failures, time limitations or other causes, which are removed. (p. 20, 3 DoF holonomic base).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 20 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 24 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 20 (3 DoF holonomic base), p. 22 (3 DoF holonomic base).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 central, contribution, system mechanism이 Figure 6: Evaluating performance with different numbers of locations. Performance over the four test tasks - ... 대비 Figure 7: Evaluating language following with dif- ferent numbers of training locations. We evalu- ate language following rate ...을 개선하고, Web data (WD) does not make a significant difference, but we will see in Figures 9, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our system uses a combination of cotraining and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, ...), does the paper-specific mechanism (Given general tasks (close the cabinets, put the items in the drawer, wipe the spill, and put the dishes in the sink), ...) retain the reported evaluation outcome (Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four ...) when tested against the paper's strongest explicit boundary (Some evaluations include cancelled episodes due to robot failures, time limitations or other causes, which are removed.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Given general tasks (close the cabinets, put the items in the drawer, wipe the spill, and put the dishes in the sink), the model predicts subtasks (e.g., pick up the ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 18: Per-task performance breakdown for high-level inference methods. We evaluate the full π0.5 model and various high-level inference baselines across four representative household tasks. For Items in Drawer and ... (p. 24, Figure/Table caption).
+- **Strongest explicit boundary:** Some evaluations include cancelled episodes due to robot failures, time limitations or other causes, which are removed. (p. 20, 3 DoF holonomic base).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

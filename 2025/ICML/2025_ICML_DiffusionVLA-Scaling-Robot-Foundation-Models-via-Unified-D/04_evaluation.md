@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=VdwdU81Uzy; PDF retrieval source: https://openreview.net/pdf/d9ad5d722d8a8e6e1a4f5748391ef1c439c2c706.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=VdwdU81Uzy; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/166841. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive PDF cue:** (c) Seen Tableware (d) Unseen Tableware (a) Bimanual Robot Setup (b) Setup for Table Bussing (e) Seen Trash (f) Unseen Trash Figure 9: (a) Environmental ...
-- **p. 7 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive PDF cue:** This section evaluates instance generalization for DiVLA, focusing specifically on the bin-picking task-a standard benchmark for assessing robot model performance.
-- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive PDF cue:** It highlights the potential for applications in dynamic, unstructured environments where robots encounter unfamiliar objects and must perform tasks with minimal human intervention.
-- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** The task is considered successful only if the robot successfully grasps the object and places it in the correct sector.
-- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** We evaluate the capability of DiVLA in an industrial setting, where a robot is tasked with sorting items into designated sectors within a large box ...
-- **p. 7 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** Scaling Robot Foundation Models via Unified Diffusion and Autoregression Furthermore, both seen and unseen objects are mixed in these scenarios.
-- **p. 5 / 4. Experiments - extractive PDF cue:** In Section 4.3, we evaluate DiVLA in the challenging factory sorting task, showcasing its remarkable performance and illustrating how reasoning enables the model to analyze ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** In Section 4.5, we showcase DiVLA's impressive generalization abilities in a zero-shot bin-picking task involving over 102 unseen objects.
+- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive body cue:** (c) Seen Tableware (d) Unseen Tableware (a) Bimanual Robot Setup (b) Setup for Table Bussing (e) Seen Trash (f) Unseen Trash Figure 9: (a) Environmental ...
+- **p. 7 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive body cue:** This section evaluates instance generalization for DiVLA, focusing specifically on the bin-picking task-a standard benchmark for assessing robot model performance.
+- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive body cue:** It highlights the potential for applications in dynamic, unstructured environments where robots encounter unfamiliar objects and must perform tasks with minimal human intervention.
+- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** The task is considered successful only if the robot successfully grasps the object and places it in the correct sector.
+- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** We evaluate the capability of DiVLA in an industrial setting, where a robot is tasked with sorting items into designated sectors within a large box ...
+- **p. 7 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** Scaling Robot Foundation Models via Unified Diffusion and Autoregression Furthermore, both seen and unseen objects are mixed in these scenarios.
+- **p. 5 / 4. Experiments - extractive body cue:** In Section 4.3, we evaluate DiVLA in the challenging factory sorting task, showcasing its remarkable performance and illustrating how reasoning enables the model to analyze ...
+- **p. 5 / 4. Experiments - extractive body cue:** In Section 4.5, we showcase DiVLA's impressive generalization abilities in a zero-shot bin-picking task involving over 102 unseen objects.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3: Experimental Results for Factory Sorting. We compared our DiVLA with Diffusion Policy, Octo, TinyVLA, and OpenVLA. DiVLA achieves the highest average success ... | p. 5 (Figure/Table caption) |
 | 4.6. Adapt to Real-World Bimanual Robot | EMPIRICAL / REAL-ROBOT OR HARDWARE | In contrast, the Diffusion Policy and OpenVLA achieve 45.8% and 0% success rates. | p. 8 (4.6. Adapt to Real-World Bimanual Robot) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive PDF cue:** (c) Seen Tableware (d) Unseen Tableware (a) Bimanual Robot Setup (b) Setup for Table Bussing (e) Seen Trash (f) Unseen Trash Figure 9: (a) Environmental ...
-- **p. 7 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive PDF cue:** This section evaluates instance generalization for DiVLA, focusing specifically on the bin-picking task-a standard benchmark for assessing robot model performance.
-- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive PDF cue:** It highlights the potential for applications in dynamic, unstructured environments where robots encounter unfamiliar objects and must perform tasks with minimal human intervention.
-- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** The task is considered successful only if the robot successfully grasps the object and places it in the correct sector.
-- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** We evaluate the capability of DiVLA in an industrial setting, where a robot is tasked with sorting items into designated sectors within a large box ...
-- **p. 7 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** Scaling Robot Foundation Models via Unified Diffusion and Autoregression Furthermore, both seen and unseen objects are mixed in these scenarios.
-- **p. 5 / 4. Experiments - extractive PDF cue:** In Section 4.3, we evaluate DiVLA in the challenging factory sorting task, showcasing its remarkable performance and illustrating how reasoning enables the model to analyze ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** In Section 4.5, we showcase DiVLA's impressive generalization abilities in a zero-shot bin-picking task involving over 102 unseen objects.
+- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive body cue:** (c) Seen Tableware (d) Unseen Tableware (a) Bimanual Robot Setup (b) Setup for Table Bussing (e) Seen Trash (f) Unseen Trash Figure 9: (a) Environmental ...
+- **p. 7 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive body cue:** This section evaluates instance generalization for DiVLA, focusing specifically on the bin-picking task-a standard benchmark for assessing robot model performance.
+- **p. 8 / 4.5. Zero-Shot Bin Picking of Unseen Objects - extractive body cue:** It highlights the potential for applications in dynamic, unstructured environments where robots encounter unfamiliar objects and must perform tasks with minimal human intervention.
+- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** The task is considered successful only if the robot successfully grasps the object and places it in the correct sector.
+- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** We evaluate the capability of DiVLA in an industrial setting, where a robot is tasked with sorting items into designated sectors within a large box ...
+- **p. 7 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** Scaling Robot Foundation Models via Unified Diffusion and Autoregression Furthermore, both seen and unseen objects are mixed in these scenarios.
+- **p. 5 / 4. Experiments - extractive body cue:** In Section 4.3, we evaluate DiVLA in the challenging factory sorting task, showcasing its remarkable performance and illustrating how reasoning enables the model to analyze ...
+- **p. 5 / 4. Experiments - extractive body cue:** In Section 4.5, we showcase DiVLA's impressive generalization abilities in a zero-shot bin-picking task involving over 102 unseen objects.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Our proposed DiffusionVLA model unifies autoregressive and diffusion modeling to enable self-reasoning and robot policy learning. This approach generalizes effectively to visual changes, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Environmental Setup for the Franka Robot and Experimental Configuration for Factory Sorting. Left: For factor sorting tasks, (a) The target sorting box is ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Experimental Results for Multi-Task Learning on Real Robot. We report the count of pre-trained trajectories. We also report the average success rate for ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Experimental Results for Factory Sorting. We compared our DiVLA with Diffusion Policy, Octo, TinyVLA, and OpenVLA. DiVLA achieves the highest average success rate, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Zero-shot Bin Picking on 102 Unseen Objects. Our method outperforms the state-of-the-art robot foundation models by a large margin.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Examples of visual variations, including randomly placed distractors, different backgrounds, and distracting lighting. Di- VLA is robust to visual changes in different scenarios.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6: What internal processes guide a model's actions? We illustrate this using an example of DiVLA's reasoning, inferred from shifts in its behavior based ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7: Some of the unseen objects used for evaluation in the zero-shot bin-picking tasks. illustrated in Figure 6, the model might initially identify a ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our proposed DiffusionVLA model unifies autoregressive and diffusion modeling to enable self-reasoning and robot policy learning. This approach generalizes effectively to visual changes, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Environmental Setup for the Franka Robot and Experimental Configuration for Factory Sorting. Left: For factor sorting tasks, (a) The target sorting box is ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Experimental Results for Multi-Task Learning on Real Robot. We report the count of pre-trained trajectories. We also report the average success rate for ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Experimental Results for Factory Sorting. We compared our DiVLA with Diffusion Policy, Octo, TinyVLA, and OpenVLA. DiVLA achieves the highest average success rate, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Zero-shot Bin Picking on 102 Unseen Objects. Our method outperforms the state-of-the-art robot foundation models by a large margin.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Examples of visual variations, including randomly placed distractors, different backgrounds, and distracting lighting. Di- VLA is robust to visual changes in different scenarios.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: What internal processes guide a model's actions? We illustrate this using an example of DiVLA's reasoning, inferred from shifts in its behavior based ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7: Some of the unseen objects used for evaluation in the zero-shot bin-picking tasks. illustrated in Figure 6, the model might initially identify a ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | (c) Seen Tableware (d) Unseen Tableware (a) Bimanual Robot Setup (b) Setup for Table Bussing (e) Seen Trash (f) Unseen Trash Figure 9: (a) ... | embodiment, simulator version and control stack | p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 7 (4.5. Zero-Shot Bin Picking of Unseen Objects) |
 | Task/environment | This section evaluates instance generalization for DiVLA, focusing specifically on the bin-picking task-a standard benchmark for assessing robot model performance. | reset, timeout, object/scene variation | p. 7 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects) |
@@ -122,11 +122,11 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 | Primary metric/result | In contrast, the Diffusion Policy and OpenVLA achieve 45.8% and 0% success rates. | numeric claim only at cited anchor | p. 8 (4.6. Adapt to Real-World Bimanual Robot) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Our dataset includes 500 trajectories for the factory sorting task and 580 trajectories for multi-task learning.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** For the table bussing task, we gathered 400 trajectories, where objects are randomly placed on the table, often overlapping with each other.
-- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive PDF cue:** A total of 500 trajectories are collected as training data.
-- **p. 8 / 4.6. Adapt to Real-World Bimanual Robot - extractive PDF cue:** Scenarios Diffusion Policy OpenVLA DiVLA-2B Seen 45.8 0 72.9 Mixed 31.2 0 70.8 objects.
-- **p. 4 / 3.1. Architecture - extractive PDF cue:** Pre-trained In-Distribution Visual Generalization Model \ Tasks Trajectory Task 1 Task 2 Task 3 Task 4 Task 5 Avg.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Our dataset includes 500 trajectories for the factory sorting task and 580 trajectories for multi-task learning.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For the table bussing task, we gathered 400 trajectories, where objects are randomly placed on the table, often overlapping with each other.
+- **p. 6 / 4.3. End-to-End Sorting on Real Robot - extractive body cue:** A total of 500 trajectories are collected as training data.
+- **p. 8 / 4.6. Adapt to Real-World Bimanual Robot - extractive body cue:** Scenarios Diffusion Policy OpenVLA DiVLA-2B Seen 45.8 0 72.9 Mixed 31.2 0 70.8 objects.
+- **p. 4 / 3.1. Architecture - extractive body cue:** Pre-trained In-Distribution Visual Generalization Model \ Tasks Trajectory Task 1 Task 2 Task 3 Task 4 Task 5 Avg.
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.4. Behavior Analysis of Robot Foundation Model - extractive PDF cue:** Failure case analysis via self-generated reasoning.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Additionally, we show that DiVLA has robust generalization capabilities, adapting effectively to new instructions, tasks, and environments.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Experimental Results for Multi-Task Learning on Real Robot. We report the count of pre-trained trajectories. We also report the average success rate for ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** In Section 4.2, we compare DiVLA against other state-of-the-art models within a standard multi-task setting, assessing its performance in both in-distribution and out-of-distribution scenarios.
-- **p. 6 / 4. Experiments - extractive PDF cue:** DiVLA is robust to visual changes in different scenarios.
-- **p. 6 / 4.2. Real-World Multi-Task Learning - extractive PDF cue:** We further evaluate our method in a multi-task setting with visual changes to assess its robustness and adaptability in diverse, dynamic environments.
+- **p. 7 / 4.4. Behavior Analysis of Robot Foundation Model - extractive body cue:** Failure case analysis via self-generated reasoning.
+- **p. 8 / 5. Conclusion - extractive body cue:** Additionally, we show that DiVLA has robust generalization capabilities, adapting effectively to new instructions, tasks, and environments.
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Experimental Results for Multi-Task Learning on Real Robot. We report the count of pre-trained trajectories. We also report the average success rate for ...
+- **p. 5 / 4. Experiments - extractive body cue:** In Section 4.2, we compare DiVLA against other state-of-the-art models within a standard multi-task setting, assessing its performance in both in-distribution and out-of-distribution scenarios.
+- **p. 6 / 4. Experiments - extractive body cue:** DiVLA is robust to visual changes in different scenarios.
+- **p. 6 / 4.2. Real-World Multi-Task Learning - extractive body cue:** We further evaluate our method in a multi-task setting with visual changes to assess its robustness and adaptability in diverse, dynamic environments.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 7 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 6 (4.3. End-to-End Sorting on Real Robot), p. 6 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot), metrics p. 6 (4.2. Real-World Multi-Task Learning), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 4 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 5 (Figure/Table caption), p. 5 (4. Experiments), p. 7 (4.4. Behavior Analysis of Robot Foundation Model), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), results p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 6 (4.2. Real-World Multi-Task Learning), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot).
+- **Evidence anchors reviewed:** datasets p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 7 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 6 (4.3. End-to-End Sorting on Real Robot), p. 6 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot), metrics p. 6 (4.2. Real-World Multi-Task Learning), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 4 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 5 (Figure/Table caption), p. 5 (4. Experiments), p. 7 (4.4. Behavior Analysis of Robot Foundation Model), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), results p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 6 (4.2. Real-World Multi-Task Learning), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

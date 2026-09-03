@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 ‘To enable the robot to interpret and act on natural language commands, we design a CVAE-based student policy that encodes textual instructions and physical actions into a unified latent space, using only ...를 We input a sequence of historical observations and actions, sampled at 10 Hz over a 2-second window, yielding a 20-step trajectory of input-output pars.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks (top row) and pushes (bottom, row), the abot ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We input a sequence of historical observations and actions, sampled at 10 Hz over a 2-second window, yielding a 20-step trajectory of input-output pars. (p. 4, B. Language-Directed Student Policy).
+- **Paper-specific mechanism:** Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data (p. 2, 1. Iyrropucrion).
+- **Evidence boundary:** the reported outcome is We conduct extensive experiments to evaluate our framework for language-directed humanoid whole-body control with 4 Unitree GI humanoid robot. (p. 5, IV. EXPERIMENTS); the relevant task/metric cue is We begin with an overview and demonstrate diverse motions enabled by our approach. (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP policy struggles to generalize from. (p. 7, C. Generalization to Unseen Texts).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We conduct extensive experiments to evaluate our framework for language-directed humanoid whole-body control with 4 Unitree GI humanoid robot..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 9. Latent Space Interpolation: CLIP+CVAE ys. CLIP. Alone ‘Comparison of motion quality when iterpolting between forward and side- ‘ways walking. The CLIPSCVAE model (let) produces smooth and coherent iagonal walking, while ....
-4. Report the body metric and its denominator/aggregation: We begin with an overview and demonstrate diverse motions enabled by our approach..
-5. Re-run the body-reported ablation/failure condition: Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks (top row) and pushes (bottom, row), the abot ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We input a sequence of historical observations and actions, sampled at 10 Hz over a 2-second window, yielding a 20-step trajectory of input-output pars. (p. 4, B. Language-Directed Student Policy); preserve the objective/update rule: ‘The teacher policy is trained using Proximal Policy Optimization (PPO) [33] to minimize the discrepancy between the robot's movements and the reference motions. ‘To encourage symmetry inthe learned policy, we ... (p. 4, A. Motion-Tracking Teacher Policy).
+2. Use the paper-reported task/data/environment cue: Finally, we showcase a complex LLM-guided compositional task, illustrating the full capabilities of LangWBC. (p. 5, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: We then analyze the learned latent space and its contribution to the policy's generalization to unseen commands, highlight key features such as smooth transitions and latent interpolation, and follow up ... (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We begin with an overview and demonstrate diverse motions enabled by our approach. (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: We then analyze the learned latent space and its contribution to the policy's generalization to unseen commands, highlight key features such as smooth transitions and latent interpolation, and follow up ... (p. 5, IV. EXPERIMENTS); if none is reported, design one around: CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP policy struggles to generalize from. (p. 7, C. Generalization to Unseen Texts).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy); the primary result is directionally consistent at p. 9 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), match the reported outcome at p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), and measure the boundary at p. 7 (C. Generalization to Unseen Texts), p. 1 (1. Iyrropucrion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Furthermore, framework, enables mechanism이 Fig. 9. Latent Space Interpolation: CLIP+CVAE ys. CLIP. Alone ‘Comparison of motion quality when iterpolting between ... 대비 We begin with an overview and demonstrate diverse motions enabled by our approach.을 개선하고, Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We input a sequence of historical observations and actions, sampled at 10 Hz over a 2-second window, yielding a 20-step trajectory of ...), does the paper-specific mechanism (Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data) retain the reported evaluation outcome (We begin with an overview and demonstrate diverse motions enabled by our approach.) when tested against the paper's strongest explicit boundary (CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We begin with an overview and demonstrate diverse motions enabled by our approach.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data (p. 2, 1. Iyrropucrion).
+- **Paper-supported outcome:** We conduct extensive experiments to evaluate our framework for language-directed humanoid whole-body control with 4 Unitree GI humanoid robot. (p. 5, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP policy struggles to generalize from. (p. 7, C. Generalization to Unseen Texts).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

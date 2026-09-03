@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/9635867; PDF retrieval source: https://arxiv.org/pdf/2108.13035. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/9635867; PDF retrieval source: https://arxiv.org/pdf/2108.13035. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,27 +10,27 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 
 ## Method Body Digest
 
-- **p. 2 / III. METHODS - extractive PDF cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
-- **p. 2 / III. METHODS - extractive PDF cue:** SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Moreover, the physical interactions supported by the current learning-based simulators are simplified.
+- **p. 2 / III. METHODS - extractive body cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
+- **p. 2 / III. METHODS - extractive body cue:** SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Moreover, the physical interactions supported by the current learning-based simulators are simplified.
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Further, the designed SurRoL with carefully modeled assets can successfully deal with more realistic physical interactions.
-- **p. 2 / III. METHODS - extractive PDF cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Further, the designed SurRoL with carefully modeled assets can successfully deal with more realistic physical interactions.
+- **p. 2 / III. METHODS - extractive body cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
 
 ## Source Evidence Cues
 
-- **p. 2 / III. METHODS - extractive PDF cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
-- **p. 2 / III. METHODS - extractive PDF cue:** SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the ...
+- **p. 2 / III. METHODS - extractive body cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
+- **p. 2 / III. METHODS - extractive body cue:** SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the ...
 - **Detected method headings:** III. METHODS (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | Finally, ten surgical learning-based tasks are built for algorithm development and evaluation. | p. 2 (III. METHODS), p. 2 (III. METHODS) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and ... | p. 2 (III. METHODS) |
@@ -56,10 +56,10 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 
 ## Observation–State–Action Interface
 
-- **p. 2 / III. METHODS - extractive PDF cue:** SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Moreover, the physical interactions supported by the current learning-based simulators are simplified.
+- **p. 2 / III. METHODS - extractive body cue:** SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Moreover, the physical interactions supported by the current learning-based simulators are simplified.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -74,8 +74,8 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 
 ## Training vs Inference
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Most of the training and testing experiments are performed on a desktop with Ubuntu 18.04, Inter 3.6GHz CPU with 32GB RAM, and an Nvidia TITAN ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** After combining HER and demonstration (HER+DEMO) with Q-filtered behavior cloning [35], the agents manage to solve many challenging tasks with physicsrich simulation within 50 epochs ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Most of the training and testing experiments are performed on a desktop with Ubuntu 18.04, Inter 3.6GHz CPU with 32GB RAM, and an Nvidia TITAN ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** After combining HER and demonstration (HER+DEMO) with Q-filtered behavior cloning [35], the agents manage to solve many challenging tasks with physicsrich simulation within 50 epochs ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -95,13 +95,13 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 
 ## Failure and Ablation Link
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We also observe that in StaticTrack, the learned policy can smoothly center the target object without the jittering effect, which is non-trivial for the visual ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** For ECM goalbased tasks without instrument-object physical interaction, the agent can successfully capture the complicated actionobservation relationship using HER, even for MisOrient and StaticTrack, which ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Epoch 30 40 50 10 20 0.0 0.2 0.4 0.6 0.8 1.0 Success Rate BiPegTransfer with Variants (1) Approach (2) Pick (3) Lift (4) Handover ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** We further analyze the most challenging long-range BiPegTransfer failed even with imitation learning by constructing several variants with different levels of simplification.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** By visually inspecting the training progress, we find that the agents can quickly learn to approach the object such as the needle and attempt to ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Meanwhile, the needle picking point is restricted to the jaw tip to avoid unsafe jaw collisions with the holding surface.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Besides, we find some failure cases resulting from dynamics discrepancies between the simulation and the real world, also observed in [14].
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We also observe that in StaticTrack, the learned policy can smoothly center the target object without the jittering effect, which is non-trivial for the visual ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** For ECM goalbased tasks without instrument-object physical interaction, the agent can successfully capture the complicated actionobservation relationship using HER, even for MisOrient and StaticTrack, which ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Epoch 30 40 50 10 20 0.0 0.2 0.4 0.6 0.8 1.0 Success Rate BiPegTransfer with Variants (1) Approach (2) Pick (3) Lift (4) Handover ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** We further analyze the most challenging long-range BiPegTransfer failed even with imitation learning by constructing several variants with different levels of simplification.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** By visually inspecting the training progress, we find that the agents can quickly learn to approach the object such as the needle and attempt to ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Meanwhile, the needle picking point is restricted to the jaw tip to avoid unsafe jaw collisions with the holding surface.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Besides, we find some failure cases resulting from dynamics discrepancies between the simulation and the real world, also observed in [14].
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -115,7 +115,7 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (III. METHODS), p. 2 (III. METHODS), objective 본문 anchor 없음, temporal p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 3 (A. SurRoL RL Library), p. 6 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 2 (III. METHODS), p. 2 (III. METHODS), objective 본문 anchor 없음, temporal p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 3 (A. SurRoL RL Library), p. 6 (IV. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

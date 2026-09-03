@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://roboticsconference.org/2026/program/papers/103/; PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://roboticsconference.org/2026/program/papers/103/; PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (B. Simulated Experiments), p. 8 (B. Simula
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Simulated Experiments | EMPIRICAL / SIMULATION | 4) Evaluation Protocol: We evaluate the performance of 1 teleoperation system by measuring the success rate a human user can achieve when using it ... | p. 8 (B. Simulated Experiments) |
 | B. Simulated Experiments | EMPIRICAL / SIMULATION | This explains why the user can achieve a much higher success rate in these dexterous tasks. | p. 8 (B. Simulated Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (B. Simulated Experiments), p. 8 (B. Simula
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ‘We have demonstrated that our system can provide effective assistance through simulated validation. ‘Then, we further design several tasks for benchmarking in the real ... | embodiment, simulator version and control stack | p. 7 (B. Simulated Experiments), p. 5 (B. Large-Scale Behavior Dataset Generation) |
 | Task/environment | 5: Our large-scale, multi-task pretraining dataset covers diverse grasp to grasp transitions (arrows). | reset, timeout, object/scene variation | p. 5 (B. Large-Scale Behavior Dataset Generation), p. 5 (B. Large-Scale Behavior Dataset Generation) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 8 (B. Simulated Experiments), p. 8 (B. Simula
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce DexterityGen (DexGen) as a foundation controller that achieves unprecedented dexterous manipulation behavior with teleoperation. DexGen is a generative model that can ...
 - **p. 5 / B. Large-Scale Behavior Dataset Generation - extractive body cue:** To enhance the robustness of our policy, we randomly adjust the wrist to different poses throughout the process, in addition to employing. commonly used domain ...
 
-- **PDF anchors reviewed:** datasets p. 7 (B. Simulated Experiments), p. 5 (B. Large-Scale Behavior Dataset Generation), p. 5 (B. Large-Scale Behavior Dataset Generation), p. 8 (B. Simulated Experiments), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS), p. 7 (B. Simulated Experiments), p. 4 (Figure/Table caption), baselines p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (B. Simulated Experiments), results p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (B. Simulated Experiments), p. 5 (B. Large-Scale Behavior Dataset Generation), p. 5 (B. Large-Scale Behavior Dataset Generation), p. 8 (B. Simulated Experiments), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS), p. 7 (B. Simulated Experiments), p. 4 (Figure/Table caption), baselines p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (B. Simulated Experiments), results p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** figure, DexGen can successfully improve the performance of these polici (p. 7, IV. EXPERIMENTS).
+- **Metric evidence:** In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance the robustness and success rate of extremely suboptimal policies. (p. 6, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** Compared to the baseline, our system can successfully help the user to solve many tasks in various challenging setups. (p. 8, B. Simulated Experiments).
+- **Failure/negative evidence:** We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments).

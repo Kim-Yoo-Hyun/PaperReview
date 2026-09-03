@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,33 +10,33 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 ## Method Body Digest
 
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
-- **p. 5 / 3.5. Optimization - extractive PDF cue:** To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] with our modifications.
-- **p. 5 / 3.5. Optimization - extractive PDF cue:** The photometric loss consists of the L1 loss and structural similarity loss LD-SSIM between the rendered image ˆCt and ground truth image Ct.
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Compared with the quaternion representation used in 3D-GS, the 6D rotation representation can benefit our method in estimating the deformation of each Gaussian from canonical ...
-- **p. 3 / 3. Method - extractive PDF cue:** Finally, we present our losses and density control modifications in Sec.
-- **p. 5 / 3.4. Rasterization - extractive PDF cue:** Gaussian Canonical Field Deformation Field RGB Gradient 𝑓𝑡 -1(Δ𝑥𝑡, Δ𝑟𝑡, Δ𝑠𝑡) (𝑥𝑡,𝑐, 𝑟𝑡,𝑠𝑡, o) 𝑓𝑡(Δ𝑥𝑡, Δ𝑟𝑡,Δ𝑠𝑡) Deformation Transformation Inverse Deformation Transformation Loss Density Control Figure ...
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Taking V as input, we perform sparse 3D U-Net to aggregate local features (dubbed as Fv ∈RM×C) of the point clouds.
-- **p. 3 / 3. Method - extractive PDF cue:** Given a set of images or monocular video of a dynamic scene with frames with corresponding time labels and known camera intrinsic and extrinsic parameters, ...
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
+- **p. 5 / 3.5. Optimization - extractive body cue:** To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] with our modifications.
+- **p. 5 / 3.5. Optimization - extractive body cue:** The photometric loss consists of the L1 loss and structural similarity loss LD-SSIM between the rendered image ˆCt and ground truth image Ct.
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Compared with the quaternion representation used in 3D-GS, the 6D rotation representation can benefit our method in estimating the deformation of each Gaussian from canonical ...
+- **p. 3 / 3. Method - extractive body cue:** Finally, we present our losses and density control modifications in Sec.
+- **p. 5 / 3.4. Rasterization - extractive body cue:** Gaussian Canonical Field Deformation Field RGB Gradient 𝑓𝑡 -1(Δ𝑥𝑡, Δ𝑟𝑡, Δ𝑠𝑡) (𝑥𝑡,𝑐, 𝑟𝑡,𝑠𝑡, o) 𝑓𝑡(Δ𝑥𝑡, Δ𝑟𝑡,Δ𝑠𝑡) Deformation Transformation Inverse Deformation Transformation Loss Density Control Figure ...
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Taking V as input, we perform sparse 3D U-Net to aggregate local features (dubbed as Fv ∈RM×C) of the point clouds.
+- **p. 3 / 3. Method - extractive body cue:** Given a set of images or monocular video of a dynamic scene with frames with corresponding time labels and known camera intrinsic and extrinsic parameters, ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. ...
-- **p. 3 / 3. Method - extractive PDF cue:** Our method mainly consists of two core components: the Gaussian canonical field is used to learn the reconstruction of static scenes, while the deformation field ...
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
+- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. ...
+- **p. 3 / 3. Method - extractive body cue:** Our method mainly consists of two core components: the Gaussian canonical field is used to learn the reconstruction of static scenes, while the deformation field ...
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
-- **p. 5 / 3.5. Optimization - extractive PDF cue:** To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] with our modifications.
-- **p. 5 / 3.5. Optimization - extractive PDF cue:** The photometric loss consists of the L1 loss and structural similarity loss LD-SSIM between the rendered image ˆCt and ground truth image Ct.
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Compared with the quaternion representation used in 3D-GS, the 6D rotation representation can benefit our method in estimating the deformation of each Gaussian from canonical ...
-- **p. 3 / 3. Method - extractive PDF cue:** Finally, we present our losses and density control modifications in Sec.
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
+- **p. 5 / 3.5. Optimization - extractive body cue:** To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] with our modifications.
+- **p. 5 / 3.5. Optimization - extractive body cue:** The photometric loss consists of the L1 loss and structural similarity loss LD-SSIM between the rendered image ˆCt and ground truth image Ct.
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Compared with the quaternion representation used in 3D-GS, the 6D rotation representation can benefit our method in estimating the deformation of each Gaussian from canonical ...
+- **p. 3 / 3. Method - extractive body cue:** Finally, we present our losses and density control modifications in Sec.
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field. | p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Optimization) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] ... | p. 5 (3.5. Optimization), p. 5 (3.5. Optimization) |
@@ -46,9 +46,9 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.4. Rasterization - extractive PDF cue:** Gaussian Canonical Field Deformation Field RGB Gradient 𝑓𝑡 -1(Δ𝑥𝑡, Δ𝑟𝑡, Δ𝑠𝑡) (𝑥𝑡,𝑐, 𝑟𝑡,𝑠𝑡, o) 𝑓𝑡(Δ𝑥𝑡, Δ𝑟𝑡,Δ𝑠𝑡) Deformation Transformation Inverse Deformation Transformation Loss Density Control Figure ...
-- **p. 5 / 3.5. Optimization - extractive PDF cue:** To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] with our modifications.
-- **p. 3 / 3. Method - extractive PDF cue:** Finally, we present our losses and density control modifications in Sec.
+- **p. 5 / 3.4. Rasterization - extractive body cue:** Gaussian Canonical Field Deformation Field RGB Gradient 𝑓𝑡 -1(Δ𝑥𝑡, Δ𝑟𝑡, Δ𝑠𝑡) (𝑥𝑡,𝑐, 𝑟𝑡,𝑠𝑡, o) 𝑓𝑡(Δ𝑥𝑡, Δ𝑟𝑡,Δ𝑠𝑡) Deformation Transformation Inverse Deformation Transformation Loss Density Control Figure ...
+- **p. 5 / 3.5. Optimization - extractive body cue:** To optimize the model, we use the photometric loss, and a motion loss, and also adapt the density control from 3DGS [21] with our modifications.
+- **p. 3 / 3. Method - extractive body cue:** Finally, we present our losses and density control modifications in Sec.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Rasterization), p. 3 (3. Method), p. 5 (3.5. Optimization).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** Taking V as input, we perform sparse 3D U-Net to aggregate local features (dubbed as Fv ∈RM×C) of the point clouds.
-- **p. 3 / 3. Method - extractive PDF cue:** Given a set of images or monocular video of a dynamic scene with frames with corresponding time labels and known camera intrinsic and extrinsic parameters, ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Due to the inherent motion/shape ambiguity in monocular dynamic 3D representation, dynamic scene modeling and synthesis are more challenging, especially for monocular video with limited ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Dynamic View Synthesis (DVS) aims at rendering novel photorealistic views at arbitrary viewpoints and any input time step given a monocular video of a dynamic ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. ...
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive PDF cue:** The identity branch uses a multi-layer perception (MLP) to map the 3D coordinate of the point cloud into the embedding space (dubbed as Fp ∈RN×C) ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We introduce the continuous 6D rotation [68] to ensure that the network learns a continuous function in the parameter space, which accurately represents the rotational ...
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Taking V as input, we perform sparse 3D U-Net to aggregate local features (dubbed as Fv ∈RM×C) of the point clouds.
+- **p. 3 / 3. Method - extractive body cue:** Given a set of images or monocular video of a dynamic scene with frames with corresponding time labels and known camera intrinsic and extrinsic parameters, ...
+- **p. 1 / 1. Introduction - extractive body cue:** Due to the inherent motion/shape ambiguity in monocular dynamic 3D representation, dynamic scene modeling and synthesis are more challenging, especially for monocular video with limited ...
+- **p. 1 / 1. Introduction - extractive body cue:** Dynamic View Synthesis (DVS) aims at rendering novel photorealistic views at arbitrary viewpoints and any input time step given a monocular video of a dynamic ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. ...
+- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** The identity branch uses a multi-layer perception (MLP) to map the 3D coordinate of the point cloud into the embedding space (dubbed as Fp ∈RN×C) ...
+- **p. 2 / 1. Introduction - extractive body cue:** We introduce the continuous 6D rotation [68] to ensure that the network learns a continuous function in the parameter space, which accurately represents the rotational ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,7 +85,7 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 ## Training vs Inference
 
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** The computational costs are: training time around 2h (avg. on D-NeRF dataset), render FPS 12 (fixed viewpoint), model size (34MB points cloud + 14MB network).
+- **p. 7 / 4.3. Quantitative Results - extractive body cue:** The computational costs are: training time around 2h (avg. on D-NeRF dataset), render FPS 12 (fixed viewpoint), model size (34MB points cloud + 14MB network).
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** We conduct ablation studies on the synthetic dataset (800× 800) to verify the effectiveness of our proposed components.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** To study the effect of 6D representation of the rotation parameters of the 3D Gaussian, we conduct an experiment that replaces the 6D vector with ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The pipeline of our proposed 3D geometry-aware deformable Gaussian splitting. In the Gaussian canonical field, we reconstruct a static scene in canonical space ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Given a set of images or monocular video of a dy- namic scene with frames with corresponding time labels and known camera intrinsic ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** We addressed the limitations of existing approaches from two perspectives: 1) we introduced 3D sparse convolution to extract local structural information effectively and efficiently for ...
-- **p. 7 / 4.4. Visualization Results - extractive PDF cue:** Since 3D-DS cannot model dynamic scenes, the quality of the point cloud is poor.
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** Since it inherently cannot model the deformation of the dynamic scene, 3D-GS performs poorly in dynamic view synthesis.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** We conduct ablation studies on the synthetic dataset (800× 800) to verify the effectiveness of our proposed components.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** To study the effect of 6D representation of the rotation parameters of the 3D Gaussian, we conduct an experiment that replaces the 6D vector with ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The pipeline of our proposed 3D geometry-aware deformable Gaussian splitting. In the Gaussian canonical field, we reconstruct a static scene in canonical space ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Given a set of images or monocular video of a dy- namic scene with frames with corresponding time labels and known camera intrinsic ...
+- **p. 8 / 5. Conclusion - extractive body cue:** We addressed the limitations of existing approaches from two perspectives: 1) we introduced 3D sparse convolution to extract local structural information effectively and efficiently for ...
+- **p. 7 / 4.4. Visualization Results - extractive body cue:** Since 3D-DS cannot model dynamic scenes, the quality of the point cloud is poor.
+- **p. 7 / 4.3. Quantitative Results - extractive body cue:** Since it inherently cannot model the deformation of the dynamic scene, 3D-GS performs poorly in dynamic view synthesis.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Optimization), p. 5 (3.5. Optimization), p. 4 (3.2. Gaussian Canonical Field), p. 3 (3. Method), objective p. 5 (3.4. Rasterization), p. 5 (3.5. Optimization), p. 3 (3. Method), temporal p. 3 (3. Method), p. 1 (1. Introduction), p. 3 (3. Method), p. 7 (4.3. Quantitative Results), p. 2 (2.2. Dynamic View Synthesis), p. 2 (2.1. Novel View Synthesis).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Optimization), p. 5 (3.5. Optimization), p. 4 (3.2. Gaussian Canonical Field), p. 3 (3. Method), objective p. 5 (3.4. Rasterization), p. 5 (3.5. Optimization), p. 3 (3. Method), temporal p. 3 (3. Method), p. 1 (1. Introduction), p. 3 (3. Method), p. 7 (4.3. Quantitative Results), p. 2 (2.2. Dynamic View Synthesis), p. 2 (2.1. Novel View Synthesis).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

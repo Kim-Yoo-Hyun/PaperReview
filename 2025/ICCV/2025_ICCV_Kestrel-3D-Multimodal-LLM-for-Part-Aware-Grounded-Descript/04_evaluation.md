@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (5. Experiments), p. 5 (Figure/Table captio
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the point ...
-- **p. 5 / 5. Experiments - extractive PDF cue:** 5.1, part-aware point grounded description evaluates the ability of Kestrel for comprehensive 3D object interpretation in terms of both language understanding and segmentation grounding.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. 3D Composition-Aware Language Comprehension (3D-CALC). Part, material, and composition understanding eval- uated based on accuracy on 3DCoMPaT-GrIn. ing. We pretrain Kestrel on PointLLM's ...
-- **p. 5 / 5. Experiments - extractive PDF cue:** We conduct ablation experiments on our training strategy and Kestrel to explore the effects of design choices, as detailed in Sec.
-- **p. 5 / 5. Experiments - extractive PDF cue:** 5.2 investigates the performance of Kestrel in single-part grounding from both direct segmentation (3DCoMPaT-GrIn and PartNetMobility [63]) and reasoning segmentation perspectives (3DCoMPaT-GrIn and RPSeg3D [26]).
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Out-of-Domain Generalization. Kestrel demonstrates robustness when there is a domain shift from 3DCoMPaT-GrIn to Objaverse, as well as the input distribution offsets from ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Part-Aware Point Grounded Description. Given an input point cloud, the model is tasked with predicting a grounded description - text that provides a ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Kestrel: A Part-Aware Point Grounding MLLM. The Kestrel model incorporates a point encoder and an LLM to construct a 3D MLLM, designed to ...
+- **p. 5 / 5. Experiments - extractive body cue:** 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the point ...
+- **p. 5 / 5. Experiments - extractive body cue:** 5.1, part-aware point grounded description evaluates the ability of Kestrel for comprehensive 3D object interpretation in terms of both language understanding and segmentation grounding.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. 3D Composition-Aware Language Comprehension (3D-CALC). Part, material, and composition understanding eval- uated based on accuracy on 3DCoMPaT-GrIn. ing. We pretrain Kestrel on PointLLM's ...
+- **p. 5 / 5. Experiments - extractive body cue:** We conduct ablation experiments on our training strategy and Kestrel to explore the effects of design choices, as detailed in Sec.
+- **p. 5 / 5. Experiments - extractive body cue:** 5.2 investigates the performance of Kestrel in single-part grounding from both direct segmentation (3DCoMPaT-GrIn and PartNetMobility [63]) and reasoning segmentation perspectives (3DCoMPaT-GrIn and RPSeg3D [26]).
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Out-of-Domain Generalization. Kestrel demonstrates robustness when there is a domain shift from 3DCoMPaT-GrIn to Objaverse, as well as the input distribution offsets from ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Part-Aware Point Grounded Description. Given an input point cloud, the model is tasked with predicting a grounded description - text that provides a ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Kestrel: A Part-Aware Point Grounding MLLM. The Kestrel model incorporates a point encoder and an LLM to construct a 3D MLLM, designed to ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (5. Experiments), p. 5 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 5.2 investigates the performance of Kestrel in single-part grounding from both direct segmentation (3DCoMPaT-GrIn and PartNetMobility [63]) and reasoning segmentation perspectives (3DCoMPaT-GrIn and RPSeg3D ... | p. 5 (5. Experiments) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Qualitative results of Kestrel on Part-Aware Point Grounded Description, Reasoning and Direct Segmentation. The results show that Kestrel is capable of detailed ... | p. 5 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 5 (5. Experiments), p. 5 (Figure/Table captio
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the point ...
-- **p. 5 / 5. Experiments - extractive PDF cue:** 5.1, part-aware point grounded description evaluates the ability of Kestrel for comprehensive 3D object interpretation in terms of both language understanding and segmentation grounding.
+- **p. 5 / 5. Experiments - extractive body cue:** 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the point ...
+- **p. 5 / 5. Experiments - extractive body cue:** 5.1, part-aware point grounded description evaluates the ability of Kestrel for comprehensive 3D object interpretation in terms of both language understanding and segmentation grounding.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Part-Aware Point Grounded Description. Given an input point cloud, the model is tasked with predicting a grounded description - text that provides a ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Kestrel: A Part-Aware Point Grounding MLLM. The Kestrel model incorporates a point encoder and an LLM to construct a 3D MLLM, designed to ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results of Kestrel on Part-Aware Point Grounded Description, Reasoning and Direct Segmentation. The results show that Kestrel is capable of detailed 3D ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Part-Aware Point Grounded Description Results. Comparison of models on language understanding and multi-part grounding. Results marked with ! indicate metrics for the model ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. 3D Composition-Aware Language Comprehension (3D-CALC). Part, material, and composition understanding eval- uated based on accuracy on 3DCoMPaT-GrIn. ing. We pretrain Kestrel on PointLLM's ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Single-Part Grounding Results. Evaluates model per- formance on implicit grounding and grounded reasoning tasks.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Perfomance on RPSeg3D further validate Kestrel's effectiveness, we report its perfor- mance on PartNet-Mobility [63]. The results in Appendix C demonstrate that Kestrel ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Out-of-Domain Generalization. Kestrel demonstrates robustness when there is a domain shift from 3DCoMPaT-GrIn to Objaverse, as well as the input distribution offsets from ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Part-Aware Point Grounded Description. Given an input point cloud, the model is tasked with predicting a grounded description - text that provides a ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Kestrel: A Part-Aware Point Grounding MLLM. The Kestrel model incorporates a point encoder and an LLM to construct a 3D MLLM, designed to ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results of Kestrel on Part-Aware Point Grounded Description, Reasoning and Direct Segmentation. The results show that Kestrel is capable of detailed 3D ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Part-Aware Point Grounded Description Results. Comparison of models on language understanding and multi-part grounding. Results marked with ! indicate metrics for the model ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. 3D Composition-Aware Language Comprehension (3D-CALC). Part, material, and composition understanding eval- uated based on accuracy on 3DCoMPaT-GrIn. ing. We pretrain Kestrel on PointLLM's ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Single-Part Grounding Results. Evaluates model per- formance on implicit grounding and grounded reasoning tasks.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Perfomance on RPSeg3D further validate Kestrel's effectiveness, we report its perfor- mance on PartNet-Mobility [63]. The results in Appendix C demonstrate that Kestrel ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Out-of-Domain Generalization. Kestrel demonstrates robustness when there is a domain shift from 3DCoMPaT-GrIn to Objaverse, as well as the input distribution offsets from ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the ... | embodiment, simulator version and control stack | p. 5 (5. Experiments), p. 5 (5. Experiments) |
 | Task/environment | 5.1, part-aware point grounded description evaluates the ability of Kestrel for comprehensive 3D object interpretation in terms of both language understanding and segmentation grounding. | reset, timeout, object/scene variation | p. 5 (5. Experiments) |
@@ -112,8 +112,8 @@ PDF body evaluation/result cue (p. 5 (5. Experiments), p. 5 (Figure/Table captio
 | Primary metric/result | Figure 3. Qualitative results of Kestrel on Part-Aware Point Grounded Description, Reasoning and Direct Segmentation. The results show that Kestrel is capable of detailed ... | numeric claim only at cited anchor | p. 5 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / Model - extractive PDF cue:** The training is done on 4 A100 GPUs for 5 epochs for all experiments with a batch size of 16.
-- **p. 6 / 5.1. Part-Aware Point Grounded Description - extractive PDF cue:** We fine-tune Kestrel on the proposed 3DCoMPaT-GrIn for 5 epochs, using approximately 111K point cloud grounded description pairs.
+- **p. 6 / Model - extractive body cue:** The training is done on 4 A100 GPUs for 5 epochs for all experiments with a batch size of 16.
+- **p. 6 / 5.1. Part-Aware Point Grounded Description - extractive body cue:** We fine-tune Kestrel on the proposed 3DCoMPaT-GrIn for 5 epochs, using approximately 111K point cloud grounded description pairs.
 
 ## Generalization and Failure Cases
 
@@ -148,12 +148,12 @@ PDF body evaluation/result cue (p. 5 (5. Experiments), p. 5 (Figure/Table captio
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Part-Aware Point Grounded Description Results. Comparison of models on language understanding and multi-part grounding. Results marked with ! indicate metrics for the model ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Our work establishes a robust benchmark for part-aware 3D vision-language understanding, paving the way for future research in finegrained 3D object interaction and grounding.
-- **p. 5 / 5. Experiments - extractive PDF cue:** 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the point ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Real-Word Demos. Kestrel shows a certain degree of robustness to noisy and incomplete real-world inputs. # Refinement Levels Grounded Desc. Direct Segmentation Reasoning ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Part-Aware Point Grounded Description Results. Comparison of models on language understanding and multi-part grounding. Results marked with ! indicate metrics for the model ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Our work establishes a robust benchmark for part-aware 3D vision-language understanding, paving the way for future research in finegrained 3D object interaction and grounding.
+- **p. 5 / 5. Experiments - extractive body cue:** 5.4, we showcase the robustness and potential applications of Kestrel when the point cloud distribution deviates from the training data, including scenarios where the point ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Real-Word Demos. Kestrel shows a certain degree of robustness to noisy and incomplete real-world inputs. # Refinement Levels Grounded Desc. Direct Segmentation Reasoning ...
 
-- **PDF anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5. Experiments), metrics p. 6 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (5. Experiments), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (5. Experiments), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5. Experiments), metrics p. 6 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (5. Experiments), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (5. Experiments), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

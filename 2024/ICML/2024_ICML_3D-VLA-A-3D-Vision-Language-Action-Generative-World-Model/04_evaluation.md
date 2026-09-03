@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://icml.cc/virtual/2024/poster/34575; PDF retrieval source: https://arxiv.org/pdf/2403.09631.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://icml.cc/virtual/2024/poster/34575; PDF retrieval source: https://icml.cc/virtual/2024/poster/34575. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -166,3 +166,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 6. Evaluation of action planning on CALVIN dataset. matches the baseline performance in most tasks within the RLBench action prediction, showing its planning capability. It's worth noting that the ... (p. 8, Figure/Table caption).
+- **Metric evidence:** In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance. (p. 7, 5.1. 3D Reasoning and Localization).
+- **Baseline/ablation evidence:** We implement these baselines in two ways: 1) zero-shot transfer where we test the released trained model on these new tasks; 2) held-in evaluation where we train the released model ... (p. 6, 5.1. 3D Reasoning and Localization).
+- **Failure/negative evidence:** We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process. (p. 7, 5.2. Multi-modal Goal Generation).

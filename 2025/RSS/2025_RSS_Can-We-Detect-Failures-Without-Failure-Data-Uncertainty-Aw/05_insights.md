@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 In the first stage, we extract scalar signals from policy inputs and/or outputs (e-g., robot states, visual features, generated future actions) that are discriminative between successes and failures during policy inference.를 Let g(Ar / Or) denote the generator, where O, represents the environment observation (e.g. image features and robot states) at time f, and g is a stochastic predictor of a sequence of ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 3: Robot hardware experiment scenarios. (Top row) FoldRedTowel with Disturbance: In (b), the human pulls the towel from the position in (a) towards the bottom during a policy rollout. We note ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Aside from being performant, our method enables faster inference than prior work [1], which requires sampling, ‘multiple robot actions during inference.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Let g(Ar / Or) denote the generator, where O, represents the environment observation (e.g. image features and robot states) at time f, and g is a stochastic predictor of a ... (p. 3, III. PROBLEM FORMULATION).
+- **Paper-specific mechanism:** A key novelty of our method is the ability to learn failure detection signals without access 10 failure data. (p. 1, 1. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using FM and DP. We consider two different ways to compute the CP band: "setting-lependent" ... (p. 7, Figure/Table caption); the relevant task/metric cue is {ask as both FM and DP policies achieve 100% soces, 5 for Can, which hes the shortest ask completion time. (p. 5, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as possible. (p. 6, V. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: significantly fewer rollouts in the robot hardware tasks (i.e., 50 rollouts) compared to the simulation tasks (i.e., 2000 rollouts).
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using FM and DP. We consider two different ways to compute the CP band: "setting-lependent" using successful ....
-4. Report the body metric and its denominator/aggregation: Fig. 4: Quantitative failure detection results for simulation tasks on FM policy (best, second) third); results with TPR and TNR are in Fig. 11 ‘and results on DP are in Fig. 12. ....
-5. Re-run the body-reported ablation/failure condition: We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as possible..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Let g(Ar / Or) denote the generator, where O, represents the environment observation (e.g. image features and robot states) at time f, and g is a stochastic predictor of a ... (p. 3, III. PROBLEM FORMULATION); preserve the objective/update rule: The first A' <H actions Ave, sje are executed, after which the robot re-plans by generating a new sequence of HY actions attime t+-11'. (p. 3, III. PROBLEM FORMULATION).
+2. Use the paper-reported task/data/environment cue: significantly fewer rollouts in the robot hardware tasks (i.e., 50 rollouts) compared to the simulation tasks (i.e., 2000 rollouts) (p. 7, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: In comparison, the baselines STAC and PCA-kmeans reach top-1 performance in 3/16 and 0/16 cases, respectively. (p. 6, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: {ask as both FM and DP policies achieve 100% soces, 5 for Can, which hes the shortest ask completion time. (p. 5, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: {ask as both FM and DP policies achieve 100% soces, 5 for Can, which hes the shortest ask completion time. (p. 5, V. EXPERIMENTS); if none is reported, design one around: We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as possible. (p. 6, V. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), match the reported outcome at p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), and measure the boundary at p. 6 (V. EXPERIMENTS), p. 9 (C. Do failure detections align with human intuition?).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Aside, being, performant mechanism이 Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using ... 대비 Fig. 4: Quantitative failure detection results for simulation tasks on FM policy (best, second) third); results with TPR ...을 개선하고, Fig. 3: Robot hardware experiment scenarios. (Top row) FoldRedTowel with Disturbance: In (b), the human pulls ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Let g(Ar / Or) denote the generator, where O, represents the environment observation (e.g. image features and robot states) at time f, ...), does the paper-specific mechanism (A key novelty of our method is the ability to learn failure detection signals without access 10 failure data.) retain the reported evaluation outcome ({ask as both FM and DP policies achieve 100% soces, 5 for Can, which hes the shortest ask ...) when tested against the paper's strongest explicit boundary (We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric ({ask as both FM and DP policies achieve 100% soces, 5 for Can, which hes the shortest ask ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** A key novelty of our method is the ability to learn failure detection signals without access 10 failure data. (p. 1, 1. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using FM and DP. We consider two different ways to compute the CP band: "setting-lependent" ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as possible. (p. 6, V. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

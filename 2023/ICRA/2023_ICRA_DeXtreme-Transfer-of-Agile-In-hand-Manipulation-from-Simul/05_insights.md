@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Input Dimensionality Actor Critic Object position with noise 3D ✓ ✓ Object orientation with noise 4D (quaternion) ✓ ✓ Target position 3D ✓ ✓ Target orientation 4D (quaternion) ✓ ✓ Relative target ...를 We use Proximal Policy Optimisation (PPO) [9] to learn a parametric stochastic policy πθ (actor), mapping from observations o ∈O to actions a ∈A.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 4: Parameter range adjustments, pi_lo and pi_hi, with ADR based on the performance of policy at the boundaries Qi_lo and Qi_hi with respect to the thresholds tl and th. If the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: 2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The slow turnaround time involved in repairing the hardware motivated us to do it ourselves regularly during the experiments, but it was only a temporary solution. • Since we do ... (p. 17, Method).
+- **Paper-specific mechanism:** 2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand. (p. 3, 2 Method).
+- **Evidence boundary:** the reported outcome is Table 7: The results of running different models on the real robot. We run 10 trials per policy [1] to benchmark the average consecutive successes. Individual rows within each experiment ... (p. 14, Figure/Table caption); the relevant task/metric cue is This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in the real world. (p. 15, 3 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, we did not observe this as a significant limitation for our experiments, and our policies nevertheless achieved rollouts with high consecutive successes in the real world. (p. 10, 2 Method).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We believe such inter-day variations are important to benchmark in robotics [20] and have endeavoured to highlight this specifically in this challenging task..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 11: Our hardware setup compared against the one used in OpenAI et al. [1] and OpenAI et al. [8]. Note that the experiment pertaining to the block reorientation in [8] was ....
-4. Report the body metric and its denominator/aggregation: This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in the real world..
-5. Re-run the body-reported ablation/failure condition: Our ablation studies in Section 3.2 do test the strength of the pose estimator for manipulation in the real world..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The slow turnaround time involved in repairing the hardware motivated us to do it ourselves regularly during the experiments, but it was only a temporary solution. • Since we do ... (p. 17, Method); preserve the objective/update rule: 2.3 Policy Learning with RL RL Formulation: The task of manipulating the cube to the desired orientation is modelled as a sequential decision making problem where the agent interacts with ... (p. 4, 2 Method).
+2. Use the paper-reported task/data/environment cue: We believe such inter-day variations are important to benchmark in robotics [20] and have endeavoured to highlight this specifically in this challenging task. (p. 14, 3 Results).
+3. Compare against the reported or matched baseline: Our ablation studies in Section 3.2 do test the strength of the pose estimator for manipulation in the real world. (p. 13, Experiment).
+4. Report the body metric with its denominator and aggregation: This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in the real world. (p. 15, 3 Results).
+5. Re-run the reported ablation or stress/failure condition: Our ablation studies in Section 3.2 do test the strength of the pose estimator for manipulation in the real world. (p. 13, Experiment); if none is reported, design one around: However, we did not observe this as a significant limitation for our experiments, and our policies nevertheless achieved rollouts with high consecutive successes in the real world. (p. 10, 2 Method).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method); the primary result is directionally consistent at p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (2 Method), p. 3 (1 Introduction), match the reported outcome at p. 14 (Figure/Table caption), p. 15 (3 Results), p. 13 (Experiment), and measure the boundary at p. 10 (2 Method), p. 8 (2 Method).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Task, performing, object mechanism이 Table 11: Our hardware setup compared against the one used in OpenAI et al. [1] and ... 대비 This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in ...을 개선하고, Figure 4: Parameter range adjustments, pi_lo and pi_hi, with ADR based on the performance of policy ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The slow turnaround time involved in repairing the hardware motivated us to do it ourselves regularly during the experiments, but it was ...), does the paper-specific mechanism (2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand.) retain the reported evaluation outcome (This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in ...) when tested against the paper's strongest explicit boundary (However, we did not observe this as a significant limitation for our experiments, and our policies nevertheless achieved ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** 2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand. (p. 3, 2 Method).
+- **Paper-supported outcome:** Table 7: The results of running different models on the real robot. We run 10 trials per policy [1] to benchmark the average consecutive successes. Individual rows within each experiment ... (p. 14, Figure/Table caption).
+- **Strongest explicit boundary:** However, we did not observe this as a significant limitation for our experiments, and our policies nevertheless achieved rollouts with high consecutive successes in the real world. (p. 10, 2 Method).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -1,8 +1,10 @@
 # Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html.
-> PDF retrieval source: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html.
+> PDF retrieval source: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1996 / IEEE T-RA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -44,9 +46,9 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | During the query phase, paths are to be found between arbitrary input start and goal configurations, using the roadmap constructed in the learning phase. | start/goal, map, dynamics와 successor/operator description | p. 6 (B. The Query Phase), p. 1 (Front matter) |
-| State/latent | During, query, phase, paths, found, between, arbitrary, input, start, goal, configurations, roadmap | path, trajectory, symbolic state 또는 task-motion decision | p. 6 (B. The Query Phase), p. 1 (Front matter), p. 1 (Abstract) |
-| Output/action | 6 IEEE TRANSACTIONS ON ROBOTICS AND AUTOMATION, VOL. | feasible action sequence 또는 minimum-cost plan | p. 1 (Front matter), p. 1 (Abstract), p. 2 (1. IntRopuction) |
+| Observation/input | During the query phase, paths are to be found between arbitrary input start and goal configurations, using the roadmap constructed in the learning phase. | start/goal, map, dynamics와 successor/operator description | p. 6 (B. The Query Phase), p. 1 (Body text (section boundary not confidently recovered)) |
+| State/latent | During, query, phase, paths, found, between, arbitrary, input, start, goal, configurations, roadmap | path, trajectory, symbolic state 또는 task-motion decision | p. 6 (B. The Query Phase), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract) |
+| Output/action | 6 IEEE TRANSACTIONS ON ROBOTICS AND AUTOMATION, VOL. | feasible action sequence 또는 minimum-cost plan | p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 2 (1. IntRopuction) |
 | Objective/outcome | The objective of the former is to obtain a reasonably connected ‘graph, with enough vertices to provide a rather uniform covering of free C-space and to make sure that most "difficult" regions ... | path cost, goal reachability, feasibility와 computation | p. 4 (A. The Learning Phase), p. 5 (6) N.- a set of candidate neighbors), p. 5 (6) N.- a set of candidate neighbors) |
 
 ## Main Claims and Actual Contribution
@@ -83,3 +85,12 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 However, while building the roadmap, our method heuristically identifies "difficult" regions in free C-space and generates additional configurations in those regions to increase network connectivity.를 문제로 두고, Our method emphasizes efficiency and is primarily developed for robots with many dofs which move in static ‘environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (I. RELATION 70 Previous Work), p. 1 (1. IntRopuction), p. 2 (I. RELATION 70 Previous Work), p. 2 (I. RELATION 70 Previous Work), p. 1 (1. IntRopuction), p. 7 (B. The Query Phase) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** ‘We have demonstrated the power of our method by applying it to a number of difficult motion planning problems involving ‘variety of robots. (p. 1, 1. IntRopuction).
+- **Actual contribution:** ‘We have demonstrated the power of our method by applying it to a number of difficult motion planning problems involving ‘variety of robots. (p. 1, 1. IntRopuction).
+- **Evaluation boundary:** 12 reports some experimental results obtained over many independently ‘constructed roadmaps, for different learning times. (p. 13, VI. RESULTS WITH GENERAL IMPLEMENTATION).
+- **Explicit failure boundary:** We have observed that in cases when the above motion does not manage to connect configurations a and 6, it nevertheless brings the robot to a configuration b' very close ... (p. 8, IV. APPLICATION 10 PLANAR ARTICULATED ROBOTS).

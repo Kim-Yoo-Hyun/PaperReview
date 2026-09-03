@@ -1,8 +1,10 @@
 # Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html.
-> PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html.
+> PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf
 - Code/Project: https://f3rm.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,7 +35,7 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 - **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language ...
 - **p. 1 / Abstract - extractive body cue:** Using features distilled from a vision-language model, CLIP, we present a way to designate novel objects for manipulation via free-text natural language, and demonstrate its ...
-- **p. 1 / 1 Introduction - extractive body cue:** We also source features *Equal contribution.
+- **p. 1 / 1 Introduction - extractive body cue:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation.
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** During learning, each demonstration D consists of the tuple ⟨{I}, T∗⟩, where {I}N i=1 are N RGB camera views of the scene and T∗is a ...
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** We present few-shot learning experiments on grasping and placing tasks, where our robot is able to handle open-set generalization to objects that differ significantly in ...
 - **p. 4 / 6 DOF Gripper Pose - extractive body cue:** (c) We concatenate feature vectors at these query points, then average over n (we use n = 2) demonstrations.
@@ -44,16 +46,16 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The robot then references demonstrations and language instructions to grasp objects specified by a user (Figure 1, right). | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (1 Introduction), p. 3 (3. Language-Guided Manipulation) |
-| State/latent | robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user, Figure, right | geometry, map, object/relationship state | p. 1 (1 Introduction), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation) |
-| Output/action | First, how to produce the feature field of a scene automatically at a reasonable speed; second, how to represent and infer 6-DOF grasping and placing poses; and finally, how to incorporate language ... | point map, pose, scene graph, affordance 또는 query result | p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose) |
+| Observation/input | The robot then references demonstrations and language instructions to grasp objects specified by a user (Figure 1, right). | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)) |
+| State/latent | robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user, Figure, right | geometry, map, object/relationship state | p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation) |
+| Output/action | Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation William Shen∗1, Ge Yang∗1,2, Alan Yu1, Jansen Wong1, Leslie Pack Kaelbling1, Phillip Isola1 1MIT CSAIL, 2Institute for Artificial Intelligence and Fundamental Interac ... | point map, pose, scene graph, affordance 또는 query result | p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation) |
 | Objective/outcome | We optimize f by minimizing the quadratic loss Lfeat = P r∈R | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose) |
 
 ## Main Claims and Actual Contribution
 
 - **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language ...
 - **p. 1 / Abstract - extractive body cue:** Using features distilled from a vision-language model, CLIP, we present a way to designate novel objects for manipulation via free-text natural language, and demonstrate its ...
-- **p. 1 / 1 Introduction - extractive body cue:** We also source features *Equal contribution.
+- **p. 1 / 1 Introduction - extractive body cue:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation.
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** During learning, each demonstration D consists of the tuple ⟨{I}, T∗⟩, where {I}N i=1 are N RGB camera views of the scene and T∗is a ...
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** We present few-shot learning experiments on grasping and placing tasks, where our robot is able to handle open-set generalization to objects that differ significantly in ...
 - **p. 7 / 4 Results - extractive body cue:** Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can leverage ...
@@ -83,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 What form of scene representation would facilitate open-set generalization for robotic manipulation systems?를 문제로 두고, 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields for open-e ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Many robotic tasks, however, require a detailed understanding of 3D geometry, which is often lacking in 2D image features. (p. 1, Abstract).
+- **Actual contribution:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation. (p. 1, 1 Introduction).
+- **Evaluation boundary:** We present the success rates in Table 1 and examples of robot executions in Figure 5. (p. 6, 4 Results).
+- **Explicit failure boundary:** The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).

@@ -1,8 +1,10 @@
 # RoboVerse: A Unified Platform, Benchmark and Dataset for Scalable and Generalizable Robot Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p022.pdf
 - Code/Project: https://roboverseorg.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols.를 문제로 두고, Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 1 (Abstract), p. 3 (C. Benchmarking in Robotics), p. 5 (IV. ROBOVERSE DATASET) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols. (p. 2, 1. IyrRopucTION).
+- **Actual contribution:** Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization. (p. 1, Abstract).
+- **Evaluation boundary:** ‘TABLE Il: Baseline Results on ROBOVERSE Imitation Learning Benchmark. (p. 10, B. Results on the Imitation Learning Benchmark).
+- **Explicit failure boundary:** Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).

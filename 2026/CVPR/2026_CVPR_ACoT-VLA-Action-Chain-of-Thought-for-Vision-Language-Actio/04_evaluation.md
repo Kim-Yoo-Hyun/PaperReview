@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train our ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For the real-world setting, all demonstrations used for model training are collected on our own robotic platform.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** We evaluate our approach on LIBERO benchmark, which targets four distinct robot capabilities: spatial awareness (Spatial), object manipulation (Object), goal completion (Goal), and long-horizon reasoning ...
-- **p. 7 / 4.2. Simulation Experiments - extractive PDF cue:** Built on ManiSkill3 [45], VLABench is designed to benchmark both VLAs and VLMs on diverse robotic tasks.
-- **p. 8 / 4.4. Real-World Deployment - extractive PDF cue:** To further validate the effectiveness of our framework, we conduct extensive real-world experiments on the AgiBot G1 robot.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** In this section, we conduct the simulation evaluations across three benchmarks, i.e., LIBERO [32], LIBERO-Plus [15], and VLABench [58], to comprehensively evaluate our approach's performance ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
-- **p. 8 / 4.4. Real-World Deployment - extractive PDF cue:** Additionally, to examine the cross-embodiment adaptability, we also perform the "Open-set Pick" task on the AgileX robotic platform.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train our ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For the real-world setting, all demonstrations used for model training are collected on our own robotic platform.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** We evaluate our approach on LIBERO benchmark, which targets four distinct robot capabilities: spatial awareness (Spatial), object manipulation (Object), goal completion (Goal), and long-horizon reasoning ...
+- **p. 7 / 4.2. Simulation Experiments - extractive body cue:** Built on ManiSkill3 [45], VLABench is designed to benchmark both VLAs and VLMs on diverse robotic tasks.
+- **p. 8 / 4.4. Real-World Deployment - extractive body cue:** To further validate the effectiveness of our framework, we conduct extensive real-world experiments on the AgiBot G1 robot.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** In this section, we conduct the simulation evaluations across three benchmarks, i.e., LIBERO [32], LIBERO-Plus [15], and VLABench [58], to comprehensively evaluate our approach's performance ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
+- **p. 8 / 4.4. Real-World Deployment - extractive body cue:** Additionally, to examine the cross-embodiment adaptability, we also perform the "Open-set Pick" task on the AgileX robotic platform.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Real-World Deployment | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3, our approach achieves consistently higher average success rates than both π0.5 and π0, i.e., 66.7% against 61.0% and 33.8%. | p. 8 (4.4. Real-World Deployment) |
 | 4.2. Simulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to previous stateof-the-art method π0.5, our approach achieves a 1.6% absolute improvement in average. | p. 6 (4.2. Simulation Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train our ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For the real-world setting, all demonstrations used for model training are collected on our own robotic platform.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** We evaluate our approach on LIBERO benchmark, which targets four distinct robot capabilities: spatial awareness (Spatial), object manipulation (Object), goal completion (Goal), and long-horizon reasoning ...
-- **p. 7 / 4.2. Simulation Experiments - extractive PDF cue:** Built on ManiSkill3 [45], VLABench is designed to benchmark both VLAs and VLMs on diverse robotic tasks.
-- **p. 8 / 4.4. Real-World Deployment - extractive PDF cue:** To further validate the effectiveness of our framework, we conduct extensive real-world experiments on the AgiBot G1 robot.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** In this section, we conduct the simulation evaluations across three benchmarks, i.e., LIBERO [32], LIBERO-Plus [15], and VLABench [58], to comprehensively evaluate our approach's performance ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
-- **p. 8 / 4.4. Real-World Deployment - extractive PDF cue:** Additionally, to examine the cross-embodiment adaptability, we also perform the "Open-set Pick" task on the AgileX robotic platform.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train our ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For the real-world setting, all demonstrations used for model training are collected on our own robotic platform.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** We evaluate our approach on LIBERO benchmark, which targets four distinct robot capabilities: spatial awareness (Spatial), object manipulation (Object), goal completion (Goal), and long-horizon reasoning ...
+- **p. 7 / 4.2. Simulation Experiments - extractive body cue:** Built on ManiSkill3 [45], VLABench is designed to benchmark both VLAs and VLMs on diverse robotic tasks.
+- **p. 8 / 4.4. Real-World Deployment - extractive body cue:** To further validate the effectiveness of our framework, we conduct extensive real-world experiments on the AgiBot G1 robot.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** In this section, we conduct the simulation evaluations across three benchmarks, i.e., LIBERO [32], LIBERO-Plus [15], and VLABench [58], to comprehensively evaluate our approach's performance ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
+- **p. 8 / 4.4. Real-World Deployment - extractive body cue:** Additionally, to examine the cross-embodiment adaptability, we also perform the "Open-set Pick" task on the AgileX robotic platform.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Chain-of-Thought in different spaces. (a) Language CoT paradigm predicts sub-tasks as intermediate reasoning. (b) Visual CoT paradigm synthesizes a goal image to provide ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Architectural Overview of ACoT-VLA. The framework consists of three main components operating on features from a shared VLM backbone. (a) The Explicit Action ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison on the LIBERO benchmark. Our proposed approach is trained on the LIBERO dataset. † represents that the LLM backbone is frozen during ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison on the LIBERO-Plus benchmark. Methods under Zero-Shot Transfer are trained on LIBERO dataset and directly evaluated on LIBERO-Plus. Supervised Fine-Tuning denotes models ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison on the VLABench benchmark. IS and PS represent Intention score and Progress score, respectively. All models are trained for 60K steps. † ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Module ablations. The performance is gradually im- proved with the continuous addition of proposed methods. are directly evaluated on LIBERO-Plus to assess general- ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Reference action parameter ablation. We observe that dif- ferent reference-action configurations within EAR generally lead to performance improvements. Methods Spatial Object Goal Long
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 6. Comparison of KV-cache interaction strategies in IAR. shown in Table 4, Table 5, and Table 6. Note that we adopt π0.5 as the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Chain-of-Thought in different spaces. (a) Language CoT paradigm predicts sub-tasks as intermediate reasoning. (b) Visual CoT paradigm synthesizes a goal image to provide ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Architectural Overview of ACoT-VLA. The framework consists of three main components operating on features from a shared VLM backbone. (a) The Explicit Action ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Comparison on the LIBERO benchmark. Our proposed approach is trained on the LIBERO dataset. † represents that the LLM backbone is frozen during ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Comparison on the LIBERO-Plus benchmark. Methods under Zero-Shot Transfer are trained on LIBERO dataset and directly evaluated on LIBERO-Plus. Supervised Fine-Tuning denotes models ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison on the VLABench benchmark. IS and PS represent Intention score and Progress score, respectively. All models are trained for 60K steps. † ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Module ablations. The performance is gradually im- proved with the continuous addition of proposed methods. are directly evaluated on LIBERO-Plus to assess general- ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Reference action parameter ablation. We observe that dif- ferent reference-action configurations within EAR generally lead to performance improvements. Methods Spatial Object Goal Long
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 6. Comparison of KV-cache interaction strategies in IAR. shown in Table 4, Table 5, and Table 6. Note that we adopt π0.5 as the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup) |
 | Task/environment | For the real-world setting, all demonstrations used for model training are collected on our own robotic platform. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Simulation Experiments) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 | Primary metric/result | Compared to previous stateof-the-art method π0.5, our approach achieves a 1.6% absolute improvement in average. | numeric claim only at cited anchor | p. 6 (4.2. Simulation Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Specifically, we adopt SigLIP [55] as the visual encoder, while the LLM backbone is instantiated as Gemma 2B architecture [3] with N = 18 layers ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Regarding the EAR, we employ a compact Transformer-based design composed of N = 18 layers.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** Each task suite consists of 10 tasks and provides 50 human-teleoperated demonstrations per task for policy training.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** For each task, the policy is evaluated over 50 trials, amounting to 2, 000 total rollouts.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Specifically, we adopt SigLIP [55] as the visual encoder, while the LLM backbone is instantiated as Gemma 2B architecture [3] with N = 18 layers ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Regarding the EAR, we employ a compact Transformer-based design composed of N = 18 layers.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** Each task suite consists of 10 tasks and provides 50 human-teleoperated demonstrations per task for policy training.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** For each task, the policy is evaluated over 50 trials, amounting to 2, 000 total rollouts.
 
 ## Generalization and Failure Cases
 
@@ -162,12 +162,12 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** Concretely, LIBERO-Plus introduces 7 perturbation dimensions, i.e., camera-viewpoints (Camera), robot-initialstates (Robot), language-variations (Language), lightingconditions (Light), background-textures (Background), sensor-noise (Noi ...
-- **p. 7 / 4.2. Simulation Experiments - extractive PDF cue:** Specifically, under the Zero-Shot regime, our approach demonstrates pronounced robustness against distribution shifts such as robot initial-state perturbations (+3.2%) and language variations (+4.2%), where existing ...
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** Through leveraging actions as intermediate reasoning, the model feeds the action head with structured action guidance, which significantly enhances the robustness in long-horizon manipulation tasks.
-- **p. 7 / 4.2. Simulation Experiments - extractive PDF cue:** These results highlight the effectiveness of our action-space reasoning in improving generalization and robust policy learning.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** Concretely, LIBERO-Plus introduces 7 perturbation dimensions, i.e., camera-viewpoints (Camera), robot-initialstates (Robot), language-variations (Language), lightingconditions (Light), background-textures (Background), sensor-noise (Noi ...
+- **p. 7 / 4.2. Simulation Experiments - extractive body cue:** Specifically, under the Zero-Shot regime, our approach demonstrates pronounced robustness against distribution shifts such as robot initial-state perturbations (+3.2%) and language variations (+4.2%), where existing ...
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** Through leveraging actions as intermediate reasoning, the model feeds the action head with structured action guidance, which significantly enhances the robustness in long-horizon manipulation tasks.
+- **p. 7 / 4.2. Simulation Experiments - extractive body cue:** These results highlight the effectiveness of our action-space reasoning in improving generalization and robust policy learning.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Simulation Experiments), metrics p. 7 (4.2. Simulation Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-World Deployment), p. 5 (Figure/Table caption), p. 6 (4.2. Simulation Experiments), p. 8 (4.3. Ablation Study), baselines p. 7 (Figure/Table caption), p. 8 (4.3. Ablation Study), p. 6 (4.2. Simulation Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), results p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 8 (4.3. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Simulation Experiments), metrics p. 7 (4.2. Simulation Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-World Deployment), p. 5 (Figure/Table caption), p. 6 (4.2. Simulation Experiments), p. 8 (4.3. Ablation Study), baselines p. 7 (Figure/Table caption), p. 8 (4.3. Ablation Study), p. 6 (4.2. Simulation Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), results p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 8 (4.3. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

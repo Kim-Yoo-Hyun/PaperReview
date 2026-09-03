@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Graph Alignment and Overlap Che
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** For alignment and registration tasks, we follow the data prepossessing method in [34] and generate 15,277 training samples and 1,882 validation samples from the 3RScan ...
-- **p. 7 / 4.3. Aligning 3D Scenes with Changes - extractive PDF cue:** 3RScan dataset provides multiple rescans of one scene with changes such as moved, removed, and deformed objects.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Registration Strategy We build up an experiment to evaluate the registration performance on the same validation split used in 4.2 using the ground truth scene ...
-- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive PDF cue:** We provide a more practical evaluation by augmenting random transformation between two scene fragments, different from the T = I4 benchmark in [34].
-- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive PDF cue:** We select 143 scenes for testing point cloud mosaicking and the results are listed in Table 5.
-- **p. 8 / 4.3. Aligning 3D Scenes with Changes - extractive PDF cue:** Following SGAligner [34], we investigate the alignment in the following scenarios: (i) aligning a sub-scene on the original scan that contains no changes; (ii) aligning ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate our method for scene graph alignment and overlap-checking (Sec.
-- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive PDF cue:** We use the same metrics as in [34] to evaluate the results: accuracy and completeness of the resulting reconstruction (the-lower-the-better), precision, recall, and F1-score of ...
+- **p. 6 / 4. Experiments - extractive body cue:** For alignment and registration tasks, we follow the data prepossessing method in [34] and generate 15,277 training samples and 1,882 validation samples from the 3RScan ...
+- **p. 7 / 4.3. Aligning 3D Scenes with Changes - extractive body cue:** 3RScan dataset provides multiple rescans of one scene with changes such as moved, removed, and deformed objects.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Registration Strategy We build up an experiment to evaluate the registration performance on the same validation split used in 4.2 using the ground truth scene ...
+- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive body cue:** We provide a more practical evaluation by augmenting random transformation between two scene fragments, different from the T = I4 benchmark in [34].
+- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive body cue:** We select 143 scenes for testing point cloud mosaicking and the results are listed in Table 5.
+- **p. 8 / 4.3. Aligning 3D Scenes with Changes - extractive body cue:** Following SGAligner [34], we investigate the alignment in the following scenarios: (i) aligning a sub-scene on the original scan that contains no changes; (ii) aligning ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method for scene graph alignment and overlap-checking (Sec.
+- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive body cue:** We use the same metrics as in [34] to evaluate the results: accuracy and completeness of the resulting reconstruction (the-lower-the-better), precision, recall, and F1-score of ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Graph Alignment and Overlap Che
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Scene Graph Alignment and Overlap Checking | SYSTEM / EVALUATION SCOPE UNRESOLVED | As shown in Table 1, adding the proposed P2SG Fusion to the baseline significantly improves the node alignment accuracy and is already higher than ... | p. 6 (4.1. Scene Graph Alignment and Overlap Checking) |
 | 4.2. Point Cloud Registration and Mosaicking | SYSTEM / EVALUATION SCOPE UNRESOLVED | It explains the accuracy improvement from the B+P variant to the B+P+K variant of our method. | p. 7 (4.2. Point Cloud Registration and Mosaicking) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Graph Alignment and Overlap Che
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** For alignment and registration tasks, we follow the data prepossessing method in [34] and generate 15,277 training samples and 1,882 validation samples from the 3RScan ...
-- **p. 7 / 4.3. Aligning 3D Scenes with Changes - extractive PDF cue:** 3RScan dataset provides multiple rescans of one scene with changes such as moved, removed, and deformed objects.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Registration Strategy We build up an experiment to evaluate the registration performance on the same validation split used in 4.2 using the ground truth scene ...
-- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive PDF cue:** We provide a more practical evaluation by augmenting random transformation between two scene fragments, different from the T = I4 benchmark in [34].
-- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive PDF cue:** We select 143 scenes for testing point cloud mosaicking and the results are listed in Table 5.
-- **p. 8 / 4.3. Aligning 3D Scenes with Changes - extractive PDF cue:** Following SGAligner [34], we investigate the alignment in the following scenarios: (i) aligning a sub-scene on the original scan that contains no changes; (ii) aligning ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate our method for scene graph alignment and overlap-checking (Sec.
+- **p. 6 / 4. Experiments - extractive body cue:** For alignment and registration tasks, we follow the data prepossessing method in [34] and generate 15,277 training samples and 1,882 validation samples from the 3RScan ...
+- **p. 7 / 4.3. Aligning 3D Scenes with Changes - extractive body cue:** 3RScan dataset provides multiple rescans of one scene with changes such as moved, removed, and deformed objects.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Registration Strategy We build up an experiment to evaluate the registration performance on the same validation split used in 4.2 using the ground truth scene ...
+- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive body cue:** We provide a more practical evaluation by augmenting random transformation between two scene fragments, different from the T = I4 benchmark in [34].
+- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive body cue:** We select 143 scenes for testing point cloud mosaicking and the results are listed in Table 5.
+- **p. 8 / 4.3. Aligning 3D Scenes with Changes - extractive body cue:** Following SGAligner [34], we investigate the alignment in the following scenarios: (i) aligning a sub-scene on the original scan that contains no changes; (ii) aligning ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method for scene graph alignment and overlap-checking (Sec.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. SG-PGM: partial graph matching for 3D scene graph alignment. Semantic and geometric features are fused for object-wise matching between fragments (a), and downstream ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The network overview of the proposed system. (a) shows the feature extraction and our proposed Point to Scene Graph Feature Fusion of one ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Scene graph encoder with GATv2 layers and learnable skip connections. In the alignment and registration stage (shown in Figure 2b), fused embedding of ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. P2SG fusion module projects point-wise geometric features to node-wise geometric embedding and combines it with the semantic scene graph feature. As is illustrated ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Long-range cross-object geometric feature is gathered in registration method [31] with transformer. Points in red circles are difficult to match without taking nearby ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluation on node matching. We evaluate the scene graph node alignment of our method's different variants and compare it with SGAligner. All metrics ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Evaluation on node matching with transformation T̸ = I4. Results are distributed per overlap range. We provide a more practical evaluation by augmenting ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Overlap check for point cloud registration. T = I4 between fragments. All metrics are the-higher-the-better.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SG-PGM: partial graph matching for 3D scene graph alignment. Semantic and geometric features are fused for object-wise matching between fragments (a), and downstream ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The network overview of the proposed system. (a) shows the feature extraction and our proposed Point to Scene Graph Feature Fusion of one ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Scene graph encoder with GATv2 layers and learnable skip connections. In the alignment and registration stage (shown in Figure 2b), fused embedding of ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. P2SG fusion module projects point-wise geometric features to node-wise geometric embedding and combines it with the semantic scene graph feature. As is illustrated ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Long-range cross-object geometric feature is gathered in registration method [31] with transformer. Points in red circles are difficult to match without taking nearby ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Evaluation on node matching. We evaluate the scene graph node alignment of our method's different variants and compare it with SGAligner. All metrics ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Evaluation on node matching with transformation T̸ = I4. Results are distributed per overlap range. We provide a more practical evaluation by augmenting ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Overlap check for point cloud registration. T = I4 between fragments. All metrics are the-higher-the-better.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For alignment and registration tasks, we follow the data prepossessing method in [34] and generate 15,277 training samples and 1,882 validation samples from the ... | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 7 (4.3. Aligning 3D Scenes with Changes) |
 | Task/environment | 3RScan dataset provides multiple rescans of one scene with changes such as moved, removed, and deformed objects. | reset, timeout, object/scene variation | p. 7 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.4. Ablation Study) |
@@ -122,7 +122,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Graph Alignment and Overlap Che
 | Primary metric/result | It explains the accuracy improvement from the B+P variant to the B+P+K variant of our method. | numeric claim only at cited anchor | p. 7 (4.2. Point Cloud Registration and Mosaicking) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive PDF cue:** We select 143 scenes for testing point cloud mosaicking and the results are listed in Table 5.
+- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive body cue:** We select 143 scenes for testing point cloud mosaicking and the results are listed in Table 5.
 
 ## Generalization and Failure Cases
 
@@ -159,13 +159,13 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Graph Alignment and Overlap Che
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Moreover, our scene graph alignment method remains decoupled from registration and robust to scene dynamics and noises.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** For future work, we would like to explore the approach for using semantic priors from scene graph alignment to design efficient sparse transformers for geometric ...
-- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive PDF cue:** We trained SGAligner with random T and Gaussian noise as augmentation (SGA*).
-- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive PDF cue:** This demonstrates that fusing graphs and geometric features with our method is robust against rotation.
-- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive PDF cue:** As shown in Table 3, our method outperforms SGAligner in 4 out of 5 metrics even without a robust estimator (Ours+R).
+- **p. 8 / 5. Conclusion - extractive body cue:** Moreover, our scene graph alignment method remains decoupled from registration and robust to scene dynamics and noises.
+- **p. 8 / 5. Conclusion - extractive body cue:** For future work, we would like to explore the approach for using semantic priors from scene graph alignment to design efficient sparse transformers for geometric ...
+- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive body cue:** We trained SGAligner with random T and Gaussian noise as augmentation (SGA*).
+- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive body cue:** This demonstrates that fusing graphs and geometric features with our method is robust against rotation.
+- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive body cue:** As shown in Table 3, our method outperforms SGAligner in 4 out of 5 metrics even without a robust estimator (Ours+R).
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.4. Ablation Study), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 8 (4.3. Aligning 3D Scenes with Changes), metrics p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 8 (4.4. Ablation Study), p. 8 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 8 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 8 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.3. Aligning 3D Scenes with Changes).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.4. Ablation Study), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 8 (4.3. Aligning 3D Scenes with Changes), metrics p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 8 (4.4. Ablation Study), p. 8 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 8 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 6 (4.1. Scene Graph Alignment and Overlap Checking), p. 7 (4.2. Point Cloud Registration and Mosaicking), p. 8 (4.3. Aligning 3D Scenes with Changes), p. 8 (4.3. Aligning 3D Scenes with Changes).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

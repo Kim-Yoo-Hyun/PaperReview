@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=c3BVcHcSiR; PDF retrieval source: https://openreview.net/pdf/7c6c1101cef920f79b251ef422b6399d7e8f4ae1.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=c3BVcHcSiR; PDF retrieval source: https://openreview.net/pdf/7c6c1101cef920f79b251ef422b6399d7e8f4ae1.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Extended Evaluation Across Robot Plat
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
-- **p. 8 / 4.6. Real-Robot Evaluation - extractive PDF cue:** We first collect 150 demonstrations in RoboTwin simulation for domain alignment (80k steps), then fine-tune on 150 real-robot demonstrations (200k steps), with an action chunk ...
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × 50 episodes).
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** OOD scenes include objects with different scale, materials, and appearance (e.g., larger bowl, metallic stove).
-- **p. 8 / 4.6. Real-Robot Evaluation - extractive PDF cue:** Real-robot task setups on AgileX Cobot Magic.
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Action head without robot pretraining.
-- **p. 7 / 4.3. Extended Evaluation Across Robot Platforms - extractive PDF cue:** We report the results of all models pretrained with OXE dataset (O'Neill et al., 2024) and then fine-tuned with BridgeData V2 (Walke et al., 2023).
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
+- **p. 8 / 4.6. Real-Robot Evaluation - extractive body cue:** We first collect 150 demonstrations in RoboTwin simulation for domain alignment (80k steps), then fine-tune on 150 real-robot demonstrations (200k steps), with an action chunk ...
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × 50 episodes).
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** OOD scenes include objects with different scale, materials, and appearance (e.g., larger bowl, metallic stove).
+- **p. 8 / 4.6. Real-Robot Evaluation - extractive body cue:** Real-robot task setups on AgileX Cobot Magic.
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Action head without robot pretraining.
+- **p. 7 / 4.3. Extended Evaluation Across Robot Platforms - extractive body cue:** We report the results of all models pretrained with OXE dataset (O'Neill et al., 2024) and then fine-tuned with BridgeData V2 (Walke et al., 2023).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Extended Evaluation Across Robot Plat
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Extended Evaluation Across Robot Platforms | EMPIRICAL / REAL-ROBOT OR HARDWARE | 5 shows Discrete Diffusion VLA achieves SOTA performance with 54.2% overall, outperforming all continuous diffusion/flowmatching policies (π0: 40.1%, +14.1%; GR00T-N1: 49.5%, +4.7%) and discrete ... | p. 6 (4.3. Extended Evaluation Across Robot Platforms) |
 | 4.4. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | Discrete diffusion achieves the best average performance across all LIBERO suites, outperforming AR, FAST, parallel decoding, and continuous diffusion, confirming that the advantage is ... | p. 7 (4.4. Ablation Study) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.3. Extended Evaluation Across Robot Plat
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
-- **p. 8 / 4.6. Real-Robot Evaluation - extractive PDF cue:** We first collect 150 demonstrations in RoboTwin simulation for domain alignment (80k steps), then fine-tune on 150 real-robot demonstrations (200k steps), with an action chunk ...
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × 50 episodes).
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** OOD scenes include objects with different scale, materials, and appearance (e.g., larger bowl, metallic stove).
-- **p. 8 / 4.6. Real-Robot Evaluation - extractive PDF cue:** Real-robot task setups on AgileX Cobot Magic.
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Action head without robot pretraining.
-- **p. 7 / 4.3. Extended Evaluation Across Robot Platforms - extractive PDF cue:** We report the results of all models pretrained with OXE dataset (O'Neill et al., 2024) and then fine-tuned with BridgeData V2 (Walke et al., 2023).
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
+- **p. 8 / 4.6. Real-Robot Evaluation - extractive body cue:** We first collect 150 demonstrations in RoboTwin simulation for domain alignment (80k steps), then fine-tune on 150 real-robot demonstrations (200k steps), with an action chunk ...
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × 50 episodes).
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** OOD scenes include objects with different scale, materials, and appearance (e.g., larger bowl, metallic stove).
+- **p. 8 / 4.6. Real-Robot Evaluation - extractive body cue:** Real-robot task setups on AgileX Cobot Magic.
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Action head without robot pretraining.
+- **p. 7 / 4.3. Extended Evaluation Across Robot Platforms - extractive body cue:** We report the results of all models pretrained with OXE dataset (O'Neill et al., 2024) and then fine-tuned with BridgeData V2 (Walke et al., 2023).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Paradigm comparison. Continuous diffusion over ac- tion chunks (left) versus discrete token decoders: AR (sequential), BERT-style (parallel), and our discrete diffusion with re-masking.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Discrete Diffusion VLA architecture. We extend the VLM backbone that encodes multi-view RGB images (SigLIP+DINOv2 ViTs) and linguistic instruction to decode ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. LIBERO task performance results (%). Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Vision Augmentation Sample of LIBERO-OOD Goal Task. OOD scenes include objects with different scale, materials, and appearance (e.g., larger bowl, metallic stove).
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Out-of-distribution performance on LIBERO-Goal
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Out-of-distribution performance on LIBERO-Spatial
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. SimplerEnv evaluation across different policies on Google Robot tasks. We report the results of all models pretrained with OXE dataset (O'Neill et al., ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. SimplerEnv evaluation across different policies on WidowX Robot tasks. We report the results of all models pretrained with OXE dataset (O'Neill et al., ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Paradigm comparison. Continuous diffusion over ac- tion chunks (left) versus discrete token decoders: AR (sequential), BERT-style (parallel), and our discrete diffusion with re-masking.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Discrete Diffusion VLA architecture. We extend the VLM backbone that encodes multi-view RGB images (SigLIP+DINOv2 ViTs) and linguistic instruction to decode ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. LIBERO task performance results (%). Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Vision Augmentation Sample of LIBERO-OOD Goal Task. OOD scenes include objects with different scale, materials, and appearance (e.g., larger bowl, metallic stove).
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Out-of-distribution performance on LIBERO-Goal
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Out-of-distribution performance on LIBERO-Spatial
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. SimplerEnv evaluation across different policies on Google Robot tasks. We report the results of all models pretrained with OXE dataset (O'Neill et al., ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. SimplerEnv evaluation across different policies on WidowX Robot tasks. We report the results of all models pretrained with OXE dataset (O'Neill et al., ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, ... | embodiment, simulator version and control stack | p. 5 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.6. Real-Robot Evaluation) |
 | Task/environment | We first collect 150 demonstrations in RoboTwin simulation for domain alignment (80k steps), then fine-tune on 150 real-robot demonstrations (200k steps), with an action ... | reset, timeout, object/scene variation | p. 8 (4.6. Real-Robot Evaluation), p. 6 (4.1. Simulation Benchmarks and Baselines) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (4.3. Extended Evaluation Across Robot Plat
 | Primary metric/result | Discrete diffusion achieves the best average performance across all LIBERO suites, outperforming AR, FAST, parallel decoding, and continuous diffusion, confirming that the advantage is ... | numeric claim only at cited anchor | p. 7 (4.4. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × 50 episodes).
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** Against methods trained from scratch, Discrete Diffusion VLA surpasses Diffusion Policy and MDT by +24.0 and +20.3 points respectively.
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** All results are averaged over 500 rollouts per suite.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Method Latency (ms) Speed (Hz) NFE OpenVLA (AR) 136.2 7.34 56 OpenVLA w/o KVcache (AR) 209.5 4.77 56 OpenVLA-OFT (Parallel Decoding) 31.1 32.14 1 OpenVLA-OFT ...
-- **p. 8 / 4.5. Inference Efficiency - extractive PDF cue:** Discrete Diffusion VLA achieves 68.8 ms per chunk (14.53 Hz), 2× faster than AR (136.2 ms), and comparable to continuous diffusion when using same denoising ...
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Each column is a LIBERO task suite; values are averaged over 500 rollouts per suite (10 tasks × 50 episodes).
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Against methods trained from scratch, Discrete Diffusion VLA surpasses Diffusion Policy and MDT by +24.0 and +20.3 points respectively.
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** All results are averaged over 500 rollouts per suite.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Method Latency (ms) Speed (Hz) NFE OpenVLA (AR) 136.2 7.34 56 OpenVLA w/o KVcache (AR) 209.5 4.77 56 OpenVLA-OFT (Parallel Decoding) 31.1 32.14 1 OpenVLA-OFT ...
+- **p. 8 / 4.5. Inference Efficiency - extractive body cue:** Discrete Diffusion VLA achieves 68.8 ms per chunk (14.53 Hz), 2× faster than AR (136.2 ms), and comparable to continuous diffusion when using same denoising ...
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Extended Evaluation Across Robot Plat
 
 ## Limitations and Verification Questions
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Discrete Diffusion VLA architecture. We extend the VLM backbone that encodes multi-view RGB images (SigLIP+DINOv2 ViTs) and linguistic instruction to decode ...
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** Beyond standard in-distribution (ID) evaluation, we assess out-of-distribution (OOD) generalization under two perturbation axes following LIBERO-PRO (Zhou et al., 2025): Language Augmentation, which paraphrases task ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Out-of-distribution performance on LIBERO-Goal
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** Vision degradation is similarly reduced at 20.4%, against 22.6%, 29.0%, and 23.2% respectively.
-- **p. 8 / 4.7. Visualization of Adaptive Decoding Order - extractive PDF cue:** Among these, training frequency serves as the most accessible and informative proxy, as tokens appearing more frequently tend to be learned more robustly.
-- **p. 8 / 4.5. Inference Efficiency - extractive PDF cue:** Discrete Diffusion VLA denoises the entire chunk in T steps, where each step is a single forward pass predicting posteriors for all currently masked tokens.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Discrete Diffusion VLA architecture. We extend the VLM backbone that encodes multi-view RGB images (SigLIP+DINOv2 ViTs) and linguistic instruction to decode ...
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Beyond standard in-distribution (ID) evaluation, we assess out-of-distribution (OOD) generalization under two perturbation axes following LIBERO-PRO (Zhou et al., 2025): Language Augmentation, which paraphrases task ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Out-of-distribution performance on LIBERO-Goal
+- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Vision degradation is similarly reduced at 20.4%, against 22.6%, 29.0%, and 23.2% respectively.
+- **p. 8 / 4.7. Visualization of Adaptive Decoding Order - extractive body cue:** Among these, training frequency serves as the most accessible and informative proxy, as tokens appearing more frequently tend to be learned more robustly.
+- **p. 8 / 4.5. Inference Efficiency - extractive body cue:** Discrete Diffusion VLA denoises the entire chunk in T steps, where each step is a single forward pass predicting posteriors for all currently masked tokens.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.6. Real-Robot Evaluation), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.6. Real-Robot Evaluation), p. 5 (4.1. Simulation Benchmarks and Baselines), metrics p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.4. Ablation Study), p. 5 (4.1. Simulation Benchmarks and Baselines), p. 6 (4.1. Simulation Benchmarks and Baselines), baselines p. 6 (4.3. Extended Evaluation Across Robot Platforms), p. 5 (4.1. Simulation Benchmarks and Baselines), p. 6 (4.3. Extended Evaluation Across Robot Platforms), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 14 (Figure/Table caption), results p. 6 (4.3. Extended Evaluation Across Robot Platforms), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.6. Real-Robot Evaluation), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.6. Real-Robot Evaluation), p. 5 (4.1. Simulation Benchmarks and Baselines), metrics p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.4. Ablation Study), p. 5 (4.1. Simulation Benchmarks and Baselines), p. 6 (4.1. Simulation Benchmarks and Baselines), baselines p. 6 (4.3. Extended Evaluation Across Robot Platforms), p. 5 (4.1. Simulation Benchmarks and Baselines), p. 6 (4.3. Extended Evaluation Across Robot Platforms), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 14 (Figure/Table caption), results p. 6 (4.3. Extended Evaluation Across Robot Platforms), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

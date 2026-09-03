@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 The open-set multimodal 3D mapping problem: Given a sequence of image (and depth) observations of an environment를 IV-B, we compute the semantic context embedding fP u,v,t ∈fP Xt for each pixel in the input image Xt.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context to accomplish the task.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To mitigate this, we introduce a novel mechanism to construct pixel-aligned features that combine global (image-level) context encapsulated in models like CLIP, with local (region-level) information.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** IV-B, we compute the semantic context embedding fP u,v,t ∈fP Xt for each pixel in the input image Xt. (p. 4, IV. THE ConceptFusion APPROACH).
+- **Paper-specific mechanism:** Our key contributions are the following: • An approach to open-set multimodal 3D mapping that constructs map representations queryable by text, image, audio, and click queries in a zero-shot manner. ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is The results are presented in Table VII, and compared against a baseline approach that uses only the pointcloud obtained by backprojecting a single RGB-D image (2.5D). (p. 10, VI. OUTLOOK); the relevant task/metric cue is Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A AudioCLIP [8] 22.22% N/A ConceptFusion 66.67% 0.301 TABLE IV: Audio-query based detection ... (p. 6, IV. THE ConceptFusion APPROACH). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context to accomplish the task. (p. 9, 4) What previously infeasible downstream use-cases can).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This real-world dataset comprises 3D scans of 78 commonly found household and office objects on a tabletop surface (see Fig..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 7: Text queries over ScanNet [61]: ConceptFusion is able to handle long-form text queries and accurately localize objects referenced by the query. In the first two scenarios, OpenSeg [18] is distracted ....
-4. Report the body metric and its denominator/aggregation: Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A AudioCLIP [8] 22.22% N/A ConceptFusion 66.67% 0.301 TABLE IV: Audio-query based detection and classificat ....
-5. Re-run the body-reported ablation/failure condition: The "Remove uniqueness term..." variant fuses features computed from individual masks with those computed over the entire image, but does not account for mask uniqueness (i.e., we skip equation 4)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: IV-B, we compute the semantic context embedding fP u,v,t ∈fP Xt for each pixel in the input image Xt. (p. 4, IV. THE ConceptFusion APPROACH); preserve the objective/update rule: Real-time inference: To optimize the performance and efficiency of the foundation models employed (SAM [57], DINO [7], and CLIP [6]), we use standard quantization and tracing methods. (p. 6, IV. THE ConceptFusion APPROACH).
+2. Use the paper-reported task/data/environment cue: Zero-shot tabletop rearrangement: To evaluate the applicability of ConceptFusion to real-world robotic interaction, we conduct experiments on a zero-shot tabletop rearrangement task with a UR5e manipulator and an Intel Realsense ... (p. 8, 4) What previously infeasible downstream use-cases can).
+3. Compare against the reported or matched baseline: MaskCLIP is the closest zero-shot baseline; we outperform it by a large margin. (p. 8, 4) What previously infeasible downstream use-cases can).
+4. Report the body metric with its denominator and aggregation: Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A AudioCLIP [8] 22.22% N/A ConceptFusion 66.67% 0.301 TABLE IV: Audio-query based detection ... (p. 6, IV. THE ConceptFusion APPROACH).
+5. Re-run the reported ablation or stress/failure condition: The "Remove uniqueness term..." variant fuses features computed from individual masks with those computed over the entire image, but does not account for mask uniqueness (i.e., we skip equation 4). (p. 10, 4) What previously infeasible downstream use-cases can); if none is reported, design one around: The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context to accomplish the task. (p. 9, 4) What previously infeasible downstream use-cases can).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH); the primary result is directionally consistent at p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 4 (IV. THE ConceptFusion APPROACH), match the reported outcome at p. 10 (VI. OUTLOOK), p. 6 (IV. THE ConceptFusion APPROACH), p. 8 (4) What previously infeasible downstream use-cases can), and measure the boundary at p. 9 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 mitigate, introduce, novel mechanism이 Fig. 7: Text queries over ScanNet [61]: ConceptFusion is able to handle long-form text queries and ... 대비 Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A ...을 개선하고, The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (IV-B, we compute the semantic context embedding fP u,v,t ∈fP Xt for each pixel in the input image Xt.), does the paper-specific mechanism (Our key contributions are the following: • An approach to open-set multimodal 3D mapping that constructs map representations queryable by text, image, ...) retain the reported evaluation outcome (Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A ...) when tested against the paper's strongest explicit boundary (The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our key contributions are the following: • An approach to open-set multimodal 3D mapping that constructs map representations queryable by text, image, audio, and click queries in a zero-shot manner. ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** The results are presented in Table VII, and compared against a baseline approach that uses only the pointcloud obtained by backprojecting a single RGB-D image (2.5D). (p. 10, VI. OUTLOOK).
+- **Strongest explicit boundary:** The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context to accomplish the task. (p. 9, 4) What previously infeasible downstream use-cases can).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -23,7 +23,6 @@
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Faced with such challenges, many existing works have sought to explicitly consider contact modes by either enumerating or sampling them.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** (iii) We combine contact mode smoothing with sampling-based motion planning, filling in a gap in the spectrum of existing methods and achieving efficient global planning ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This invalidity of the local model presents significant challenges for both *These authors contributed equally to this work.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our final contribution is to fill in this gap by combining smoothing-based contact mode abstraction and the global search capabilities of RRT.
 - **p. 17 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** These experiments further shed light on the efficacy and the limitations of our proposed method.
 - **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** The collision geometries, robot controller stiffness and coefficients of friction are kept consistent between the CQDC dynamics and Drake.
@@ -42,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 We overload the notation on the variables for convention, and say the system has state x ∈Rn, input u ∈Rm, and map f : Rn × Rm →Rn, x+ = f(x, u).를 Moreover, the derivatives of the dynamics with respect to the current state and control action can be readily computed using sensitivity analysis for convex conic programs [29] (Sec.III-C).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 These experiments further shed light on the efficacy and the limitations of our proposed method.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our first contribution is to establish the theoretical equivalence of the two smoothing schemes for simple systems under our framework (Sec.II,IV-C).
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity and acceleration, and focusing on ... (p. 6, III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE).
+- **Paper-specific mechanism:** (ii) We present a convex, differentiable formulation of quasi-dynamic contact dynamics and its analytic smoothing, which we show to be highly effective for contact-rich manipulation planning. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is On trajectory segments with good sim2real performance, this only results in harmless oscillations of qu real around qu sim. (p. 18, IX. SIM2REAL TRANSFER & HARDWARE RESULTS); the relevant task/metric cue is 2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) between the two trajectories qu sim(·) and qu real(·) as ∆(qu sim, ... (p. 17, IX. SIM2REAL TRANSFER & HARDWARE RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The consequence of these failed grasps is that plates are dropped on the table in AllegroHandPlate, and door handles are missed in AllegroHandDoor. (p. 19, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 2) Missed Contacts: Due to the non-smooth nature of contact dynamics, small discrepancies in object trajectory caused by the phase gap can lead to the robot completely missing.
-3. Compare against the body-reported baseline or a matched simpler baseline: Rolling out u(·) on the real dynamics gives qreal : [0, T] →Rnu+na, which is compared against qsim(·) to evaluate the sim2real performance..
-4. Report the body metric and its denominator/aggregation: 2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) between the two trajectories qu sim(·) and qu real(·) as ∆(qu sim, qu real) ....
-5. Re-run the body-reported ablation/failure condition: Fig. 11: Planning performance for the tasks in Fig. 10. Results include running RRT with the enhancements proposed in Sec. VII using the three smoothing schemes from Sec. II-C, as well as ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity and acceleration, and focusing on ... (p. 6, III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE); preserve the objective/update rule: Letting F(J, µ) denote the objective function, the gradients are ∂F/∂µ = Ew[f(¯x + w)] -µ∗, (10a) ∂F/∂J = Ew[ww⊺]J∗-Ew[f(¯x + w)w⊺]. (p. 4, II. LOCAL THEORY OF SMOOTHING).
+2. Use the paper-reported task/data/environment cue: 2) Missed Contacts: Due to the non-smooth nature of contact dynamics, small discrepancies in object trajectory caused by the phase gap can lead to the robot completely missing (p. 18, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+3. Compare against the reported or matched baseline: Rolling out u(·) on the real dynamics gives qreal : [0, T] →Rnu+na, which is compared against qsim(·) to evaluate the sim2real performance. (p. 17, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+4. Report the body metric with its denominator and aggregation: 2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) between the two trajectories qu sim(·) and qu real(·) as ∆(qu sim, ... (p. 17, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+5. Re-run the reported ablation or stress/failure condition: 4) Hardware Setup: To verify results on actual hardware, we create a variant of the PlanarHand environment, where the object is replaced by a bucket, and 2 Kuka iiwa arms ... (p. 18, IX. SIM2REAL TRANSFER & HARDWARE RESULTS); if none is reported, design one around: The consequence of these failed grasps is that plates are dropped on the table in AllegroHandPlate, and door handles are missed in AllegroHandDoor. (p. 19, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE); the primary result is directionally consistent at p. 17 (Figure/Table caption), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 15 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 17 (Figure/Table caption), p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), and measure the boundary at p. 19 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 8 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 first, contribution, establish mechanism이 Rolling out u(·) on the real dynamics gives qreal : [0, T] →Rnu+na, which is compared ... 대비 2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) ...을 개선하고, These experiments further shed light on the efficacy and the limitations of our proposed method. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms ...), does the paper-specific mechanism ((ii) We present a convex, differentiable formulation of quasi-dynamic contact dynamics and its analytic smoothing, which we show to be highly effective ...) retain the reported evaluation outcome (2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) ...) when tested against the paper's strongest explicit boundary (The consequence of these failed grasps is that plates are dropped on the table in AllegroHandPlate, and door ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (2) Evaluation Metrics: To evaluate the performance of sim2real transfer, we first define the mean error ∆(·, ·) ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** (ii) We present a convex, differentiable formulation of quasi-dynamic contact dynamics and its analytic smoothing, which we show to be highly effective for contact-rich manipulation planning. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** On trajectory segments with good sim2real performance, this only results in harmless oscillations of qu real around qu sim. (p. 18, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- **Strongest explicit boundary:** The consequence of these failed grasps is that plates are dropped on the table in AllegroHandPlate, and door handles are missed in AllegroHandDoor. (p. 19, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

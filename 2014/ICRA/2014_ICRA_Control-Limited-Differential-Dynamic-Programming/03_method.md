@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2014.6907001; PDF retrieval source: https://roboti.us/lab/papers/TassaICRA14.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2014.6907001; PDF retrieval source: https://roboti.us/lab/papers/TassaICRA14.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / error representation | motion·force 목표를 제어 error로 바꾼다 | joint/task state, reference, wrench | task frame, Jacobian, impedance, selection 또는 error coordinates를 구성 | desired task command | Trajectory optimization is the process of finding a statecontrol sequence which locally minimizes a given cost function. | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
 | Dynamics / constraint solve | 목표를 feasible actuator command로 바꾼다 | error, model, constraints | inverse dynamics, QP, MPC, operational mapping 또는 feedback law를 계산 | torque, force, velocity 또는 position command | Because the dynamics are folded into the optimization, state-control trajectories are always strictly feasible and "dynamic constraints" are unnecessary. | p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING) |
@@ -82,10 +82,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value not recovered from the selected body cues. | The Dynamic Programming Principle then reduces the minimization over a sequence of controls Ui, to a sequence of minimizations over a single ... | episode/sequence/action-chunk boundary |
+| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value was not selected from the PDF body. | The Dynamic Programming Principle then reduces the minimization over a sequence of controls Ui, to a sequence of minimizations over a single ... | episode/sequence/action-chunk boundary |
 | Rate / latency | sensor/actuator control tick마다 feedback solve; numeric rate는 paper-specific. | The regularization parameter and the descent step length α are adapted online following a LevenbergMarquardt heuristic. | Hz/fps, inference time and control rate |
-| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not recovered | window and reset |
-| Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -112,7 +112,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 
 ## Failure and Ablation Link
 
-- ablation/failure cue 없음
+- ablation/failure PDF body cue not selected; no claim inferred
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,8 +126,17 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 3 (C. Line Search), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), objective p. 1 (I. INTRODUCTION), p. 4 (III. CONTROL LIMITS), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 4 (III. CONTROL LIMITS), temporal p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (C. Line Search), p. 4 (III. CONTROL LIMITS), p. 6 (IV. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 3 (C. Line Search), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), objective p. 1 (I. INTRODUCTION), p. 4 (III. CONTROL LIMITS), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 4 (III. CONTROL LIMITS), temporal p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (C. Line Search), p. 4 (III. CONTROL LIMITS), p. 6 (IV. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Trajectory optimization is the process of finding a statecontrol sequence which locally minimizes a given cost function. (p. 1, I. INTRODUCTION).
+- **Objective/update evidence:** Trajectory optimization is the process of finding a statecontrol sequence which locally minimizes a given cost function. (p. 1, I. INTRODUCTION).
+- **Temporal/runtime evidence:** The Dynamic Programming Principle then reduces the minimization over a sequence of controls Ui, to a sequence of minimizations over a single control, proceeding backwards in time: V (x) = ... (p. 2, II. DIFFERENTIAL DYNAMIC PROGRAMMING).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

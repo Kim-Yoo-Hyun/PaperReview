@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.01603; PDF retrieval source: https://arxiv.org/pdf/1912.01603. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.01603; PDF retrieval source: https://arxiv.org/pdf/1912.01603. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUC
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | We approach this limitation by predicting both actions and state values. | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | When the sensory inputs are high-dimensional images, latent dynamics models can abstract observations to predict forward in compact state spaces (Watter et ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | When the sensory inputs are high-dimensional images, latent dynamics models can abstract observations to predict forward in compact state spaces (Watter et ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | When, sensory, inputs, high-dimensional, images, latent, dynamics, models, abstract, observations | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | dataset, past, experience, agent, learns, encode, observations, actions | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: When, sensory, inputs, high-dimensional, images, latent, dynamics, models, abstract, observations | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: present, Dreamer, agent, learns, long-horizon, behaviors, images, purely | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUC
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 18 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (6 EXPERIMENTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUC
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)): We present Dreamer, an agent that learns long-horizon behaviors from images purely by latent imagination.
+PDF body contribution framing (p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)): We present Dreamer, an agent that learns long-horizon behaviors from images purely by latent imagination.
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Latent dynamics Dreamer uses a latent dynamics model that consists of three components.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Compared to predictions in image space, latent states have a small memory footprint that enables imagining thousands of trajectories in parallel.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (B Sequence length). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (B Sequence length). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), interface p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (B Sequence length), objective p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5 (B Sequence length), p. 1 (1 INTRODUCTION), p. 1 (Abstract), p. 2 (1 INTRODUCTION).
+- **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), interface p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (B Sequence length), objective p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5 (B Sequence length), p. 1 (1 INTRODUCTION), p. 1 (Abstract), p. 2 (1 INTRODUCTION).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+- **Formulation-changing contribution:** The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted if they use a finite imagination horizon. (p. 2, 1 INTRODUCTION).
+- **Assumption/failure evidence:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

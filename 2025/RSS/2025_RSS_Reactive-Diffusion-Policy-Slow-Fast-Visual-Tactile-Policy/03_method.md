@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p052.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p052.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p052.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p052.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | 1 policy learning, a slow Latent Diffusion Policy (LDP) is trained to predict the latent action chuck according to the observation in ... | p. 5 (B. Slow-Fast Policy Learning), p. 7 (architecture) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | We calculate the latency caused by policy inference and action execution, and discard the first few action steps predicted by the model ... | p. 7 (architecture), p. 7 (architecture) |
@@ -70,7 +70,7 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 ## Observation–State–Action Interface
 
 - **p. 3 / B. Robot Data Collection System - extractive body cue:** ForceMimiec [1] adds a force sensor on a handheld device [11] to get force feedback, but suffers from the inaccuracy of pose estimation, and thus ...
-- **p. 1 / Front matter - extractive body cue:** action trajectories with a slow policy network and achieve closed-loop control based on high-frequency tactile / force feedback
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** action trajectories with a slow policy network and achieve closed-loop control based on high-frequency tactile / force feedback
 - **p. 6 / B. Slow-Fast Policy Learning - extractive body cue:** an action chunk A € R™*? in the policy leaming Dpotiey: the encoder downsamples it to a latent one Z = &(A) CR We choose ...
 - **p. 2 / I. Ivrropucrion - extractive body cue:** state during the execution of action chunks, which makes the policy unable to respond instantly to environment changes in ccontact-rich tasks.
 - **p. 2 / I. Ivrropucrion - extractive body cue:** Real-world experiments. have shown that our Reactive Diffusion Policy algorithm can model complex actions while maintaining very fast reactive behavior, achieving a significant performance improvement ...
@@ -85,7 +85,7 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | Previous works [10, 71] have demonstrated that predicting action sequences or action chunks [36] effectively preserves temporal action consistency and handles non-Markovian ... | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | Why can't ‘we simply use small chunk size o temporal ensemble to increase closed-loop control frequency? | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | 5) Implementation Details: ‘The Diffusion Policy and our slow policy (LDP) predict open-loop 12 FPS action sequences for each action chunk. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (B. Slow-Fast Policy Learning), p. 7 (architecture), p. 7 (architecture), p. 6 (B. Slow-Fast Policy Learning), p. 5 (B. Slow-Fast Policy Learning), p. 6 (B. Slow-Fast Policy Learning), objective p. 6 (B. Slow-Fast Policy Learning), p. 5 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction), p. 5 (A. 3D Deformation Field Extraction), p. 6 (B. Slow-Fast Policy Learning), temporal p. 5 (B. Slow-Fast Policy Learning), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 5 (B. Slow-Fast Policy Learning), p. 1 (I. Ivrropucrion).
+- **Evidence anchors reviewed:** method p. 5 (B. Slow-Fast Policy Learning), p. 7 (architecture), p. 7 (architecture), p. 6 (B. Slow-Fast Policy Learning), p. 5 (B. Slow-Fast Policy Learning), p. 6 (B. Slow-Fast Policy Learning), objective p. 6 (B. Slow-Fast Policy Learning), p. 5 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction), p. 5 (A. 3D Deformation Field Extraction), p. 6 (B. Slow-Fast Policy Learning), temporal p. 5 (B. Slow-Fast Policy Learning), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 5 (B. Slow-Fast Policy Learning), p. 1 (I. Ivrropucrion).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 1 policy learning, a slow Latent Diffusion Policy (LDP) is trained to predict the latent action chuck according to the observation in a way similar to Diffusion Policy [10 During ... (p. 5, B. Slow-Fast Policy Learning).
+- **Objective/update evidence:** During training, given the observation (including image, tactlity and propri- ‘oception), the gradient field is leamed by ep and the DDPM training objective can be rewritten as (p. 6, B. Slow-Fast Policy Learning).
+- **Temporal/runtime evidence:** policy (AT) takes tactile / force observations at 24 FPS and update new action predictions at 24 FPS, Note that we use 24 FPS because we are constrained by the ... (p. 9, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.03378; PDF retrieval source: https://arxiv.org/pdf/2303.03378. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.03378; PDF retrieval source: https://arxiv.org/pdf/2303.03378. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Table 1: Comparison of different input representations on TAMP environment (in terms of success rates), where data from TAMP constitutes only 1% (i.e., 320 ... | p. 8 (Figure/Table caption) |
 | 6.5. Performance on General Visual-Language Tasks | EMPIRICAL / SIMULATION | PaLM-E-562B model achieves the highest reported number on OK-VQA, including outperforming models finetuned specifically on OK-VQA. | p. 9 (6.5. Performance on General Visual-Language Tasks) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 7, c) and to tasks involving objects that were unseen in either the original robot dataset or the finetuning datasets, e.g. a toy turtle ... | embodiment, simulator version and control stack | p. 7 (6.3. Language-Table Environment), p. 6 (6. Experiments) |
 | Task/environment | Here we show that a single model, trained on a mixture of many datasets, across diverse tasks, and across robot embodiments, can simultaneously achieve ... | reset, timeout, object/scene variation | p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| In this paper we propose embodied language models, which arXiv:2303.03378v1 [cs.LG] 6 Mar 2023 | Table 1: Comparison of different input representations on TAMP environment (in terms of success rates), where data from TAMP constitutes only 1% (i.e., 320 ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (7. Summary of Experiments & Discussion), p. 7 (6.3. Language-Table Environment) |
+| In this paper we propose embodied language models, which | Table 1: Comparison of different input representations on TAMP environment (in terms of success rates), where data from TAMP constitutes only 1% (i.e., 320 ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (7. Summary of Experiments & Discussion), p. 7 (6.3. Language-Table Environment) |
 | Primary metric/result | PaLM-E-562B model achieves the highest reported number on OK-VQA, including outperforming models finetuned specifically on OK-VQA. | numeric claim only at cited anchor | p. 9 (6.5. Performance on General Visual-Language Tasks) |
 
 - Numeric sentences retained from the body:
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Mobile manipulation environment: failure detection and affordance prediction (F1 score). VQAv2 OK-VQA COCO
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Task prompts for Tab. 2. Baselines Failure det. Affordance PaLI (Zero-shot) (Chen et al., 2022) 0.73 0.62 CLIP-FT (Xiao et al., 2022)
 
-- **PDF anchors reviewed:** datasets p. 7 (6.3. Language-Table Environment), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 6 (6. Experiments), p. 9 (7. Summary of Experiments & Discussion), p. 8 (6.4. Mobile Manipulation Environment), metrics p. 6 (6.2. TAMP Environment), p. 7 (6.3. Language-Table Environment), p. 8 (6.4. Mobile Manipulation Environment), p. 16 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 18 (Figure/Table caption), baselines p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 9 (Figure/Table caption), p. 16 (Figure/Table caption), p. 8 (6.4. Mobile Manipulation Environment), results p. 8 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (7. Summary of Experiments & Discussion), p. 7 (6.3. Language-Table Environment).
+- **Evidence anchors reviewed:** datasets p. 7 (6.3. Language-Table Environment), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 6 (6. Experiments), p. 9 (7. Summary of Experiments & Discussion), p. 8 (6.4. Mobile Manipulation Environment), metrics p. 6 (6.2. TAMP Environment), p. 7 (6.3. Language-Table Environment), p. 8 (6.4. Mobile Manipulation Environment), p. 16 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 18 (Figure/Table caption), baselines p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 9 (Figure/Table caption), p. 16 (Figure/Table caption), p. 8 (6.4. Mobile Manipulation Environment), results p. 8 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (7. Summary of Experiments & Discussion), p. 7 (6.3. Language-Table Environment).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Comparison of different input representations on TAMP environment (in terms of success rates), where data from TAMP constitutes only 1% (i.e., 320 samples for p1, p2 each) of ... (p. 8, Figure/Table caption).
+- **Metric evidence:** 7 (appendix) shows planning success rates and VQA performance for the TAMP environment. (p. 6, 6.2. TAMP Environment).
+- **Baseline/ablation evidence:** As baselines, we consider the state-of-the art visual language model PaLI (Chen et al., 2022), which has not been trained on embodiment robot data, as well as the SayCan algorithm ... (p. 6, 6. Experiments).
+- **Failure/negative evidence:** For the mobile manipulation and Language-Table environments, PaLM-E is integrated into the control loop to execute the plans in the real world, and has to adjust the plan in presence ... (p. 6, 6. Experiments).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results)
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** DTU [7] is a large MVS dataset, where some scenes feature unfavorable light conditions for surface reconstruction, such as overexposure, underexposure, and metallic reflections.
-- **p. 7 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7].
-- **p. 8 / 4.2. Results - extractive PDF cue:** Ablations of loss weights (Models A-F), iterations of mutual-boosted optimization (Models G-J), bidrectional BP and auto-stop warm-up strategy (Models K-L) on OmniObject3D dataset.
-- **p. 6 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** RefNeRF Real Captured Scenes [21] consists of three in-thewild scenes with strong reflections.
-- **p. 7 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** Since GT mesh is unavailable for real-world data, only visual comparisons are provided.
-- **p. 8 / 4.2. Results - extractive PDF cue:** Instance-level Normal Consistency results of SR on DTU dataset.
-- **p. 6 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** We utilize SSIM and PSNR to evaluate the rendering quality, while reconstruction accuracy is validated by 10K sampled points with Normal Consistency (NC) and Chamfer ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** MGSR visually outperforms all baselines, resulting in the best NC, with smooth surfaces and accurate color modeling.
+- **p. 6 / 4.1. Datasets and evaluation metrics - extractive body cue:** DTU [7] is a large MVS dataset, where some scenes feature unfavorable light conditions for surface reconstruction, such as overexposure, underexposure, and metallic reflections.
+- **p. 7 / 4.1. Datasets and evaluation metrics - extractive body cue:** Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7].
+- **p. 8 / 4.2. Results - extractive body cue:** Ablations of loss weights (Models A-F), iterations of mutual-boosted optimization (Models G-J), bidrectional BP and auto-stop warm-up strategy (Models K-L) on OmniObject3D dataset.
+- **p. 6 / 4.1. Datasets and evaluation metrics - extractive body cue:** RefNeRF Real Captured Scenes [21] consists of three in-thewild scenes with strong reflections.
+- **p. 7 / 4.1. Datasets and evaluation metrics - extractive body cue:** Since GT mesh is unavailable for real-world data, only visual comparisons are provided.
+- **p. 8 / 4.2. Results - extractive body cue:** Instance-level Normal Consistency results of SR on DTU dataset.
+- **p. 6 / 4.1. Datasets and evaluation metrics - extractive body cue:** We utilize SSIM and PSNR to evaluate the rendering quality, while reconstruction accuracy is validated by 10K sampled points with Normal Consistency (NC) and Chamfer ...
+- **p. 7 / 4.2. Results - extractive body cue:** MGSR visually outperforms all baselines, resulting in the best NC, with smooth surfaces and accurate color modeling.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view ... | p. 2 (Figure/Table caption) |
 | 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | MGSR, supported by an auto-stop warm-up strategy, outperforms GOF and achieves a comparable speed with 2DGS. | p. 8 (4.2. Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results)
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** DTU [7] is a large MVS dataset, where some scenes feature unfavorable light conditions for surface reconstruction, such as overexposure, underexposure, and metallic reflections.
-- **p. 7 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7].
-- **p. 8 / 4.2. Results - extractive PDF cue:** Ablations of loss weights (Models A-F), iterations of mutual-boosted optimization (Models G-J), bidrectional BP and auto-stop warm-up strategy (Models K-L) on OmniObject3D dataset.
-- **p. 6 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** RefNeRF Real Captured Scenes [21] consists of three in-thewild scenes with strong reflections.
-- **p. 7 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** Since GT mesh is unavailable for real-world data, only visual comparisons are provided.
-- **p. 8 / 4.2. Results - extractive PDF cue:** Instance-level Normal Consistency results of SR on DTU dataset.
+- **p. 6 / 4.1. Datasets and evaluation metrics - extractive body cue:** DTU [7] is a large MVS dataset, where some scenes feature unfavorable light conditions for surface reconstruction, such as overexposure, underexposure, and metallic reflections.
+- **p. 7 / 4.1. Datasets and evaluation metrics - extractive body cue:** Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7].
+- **p. 8 / 4.2. Results - extractive body cue:** Ablations of loss weights (Models A-F), iterations of mutual-boosted optimization (Models G-J), bidrectional BP and auto-stop warm-up strategy (Models K-L) on OmniObject3D dataset.
+- **p. 6 / 4.1. Datasets and evaluation metrics - extractive body cue:** RefNeRF Real Captured Scenes [21] consists of three in-thewild scenes with strong reflections.
+- **p. 7 / 4.1. Datasets and evaluation metrics - extractive body cue:** Since GT mesh is unavailable for real-world data, only visual comparisons are provided.
+- **p. 8 / 4.2. Results - extractive body cue:** Instance-level Normal Consistency results of SR on DTU dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view images ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. MGSR is a 2D/3D mutual-boosted framework with two branches: 2DGS branch (upper) for SR and 3DGS branch (bottom) for NVS. Each branch is ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Geometry enhancement in 3DGS branch for realistic rendering through our mutual-boosted optimization. information for the 3DGS branch for better illumination de- composition. Specifically, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Visual comparisons on the OmniObject3D dataset [22]. Input images NeuS2 2D-GS GOF MGSR (Ours) Coffee MuscleCar
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Visual comparisons on the Shiny Blender dataset [21]. other hand, a depth loss between 2DGS and 3DGS branches is introduced to improve the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. NVS results on Shiny Blender and OmniObject3D. The instance-level metrics are listed in Appendix. Methods Shiny Blender OmniObject3D SSIM↑ PSNR↑ SSIM↑
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Visual comparisons on DTU dataset [7]. Truck Sedan Input images MGSR (Ours) GOF 2D-GS
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7].
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view images ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. MGSR is a 2D/3D mutual-boosted framework with two branches: 2DGS branch (upper) for SR and 3DGS branch (bottom) for NVS. Each branch is ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Geometry enhancement in 3DGS branch for realistic rendering through our mutual-boosted optimization. information for the 3DGS branch for better illumination de- composition. Specifically, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Visual comparisons on the OmniObject3D dataset [22]. Input images NeuS2 2D-GS GOF MGSR (Ours) Coffee MuscleCar
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Visual comparisons on the Shiny Blender dataset [21]. other hand, a depth loss between 2DGS and 3DGS branches is introduced to improve the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. NVS results on Shiny Blender and OmniObject3D. The instance-level metrics are listed in Appendix. Methods Shiny Blender OmniObject3D SSIM↑ PSNR↑ SSIM↑
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Visual comparisons on DTU dataset [7]. Truck Sedan Input images MGSR (Ours) GOF 2D-GS
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7].
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | DTU [7] is a large MVS dataset, where some scenes feature unfavorable light conditions for surface reconstruction, such as overexposure, underexposure, and metallic reflections. | embodiment, simulator version and control stack | p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics) |
 | Task/environment | Visual comparisons on Ref-NeRF Real Captured Scenes dataset (Sedan) [21] and TnT dataset (Truck) [7]. | reset, timeout, object/scene variation | p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results)
 | Primary metric/result | MGSR, supported by an auto-stop warm-up strategy, outperforms GOF and achieves a comparable speed with 2DGS. | numeric claim only at cited anchor | p. 8 (4.2. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.2. Results - extractive PDF cue:** Three objects from the Shiny Blender with reflections and 30 objects from OmniObject3D with highlights are conducted on all methods for comparison.
+- **p. 7 / 4.2. Results - extractive body cue:** Three objects from the Shiny Blender with reflections and 30 objects from OmniObject3D with highlights are conducted on all methods for comparison.
 
 ## Generalization and Failure Cases
 
@@ -152,12 +152,12 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results)
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.2. Results - extractive PDF cue:** To address this issue, NC is introduced as an evaluation metric for reconstruction, overcoming the limitations of CDs, which fail to capture surface holes or ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** A possible way for addressing this issue is to incorporate exposure compensation for input images, which we will investigate as a future work.
-- **p. 6 / 4.1. Datasets and evaluation metrics - extractive PDF cue:** Due to the limitation of CD, we mainly focus on NC metric, which aligns better 27300
-- **p. 7 / 4.2. Results - extractive PDF cue:** Previous GS-based methods fail to effectively reconstruct glass or mirror surfaces, resulting in damaged and inaccurate surfaces.
+- **p. 7 / 4.2. Results - extractive body cue:** To address this issue, NC is introduced as an evaluation metric for reconstruction, overcoming the limitations of CDs, which fail to capture surface holes or ...
+- **p. 8 / 6. Conclusion - extractive body cue:** A possible way for addressing this issue is to incorporate exposure compensation for input images, which we will investigate as a future work.
+- **p. 6 / 4.1. Datasets and evaluation metrics - extractive body cue:** Due to the limitation of CD, we mainly focus on NC metric, which aligns better 27300
+- **p. 7 / 4.2. Results - extractive body cue:** Previous GS-based methods fail to effectively reconstruct glass or mirror surfaces, resulting in damaged and inaccurate surfaces.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), metrics p. 6 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 2 (Figure/Table caption), baselines p. 7 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 2 (Figure/Table caption), results p. 2 (Figure/Table caption), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 6 (Figure/Table caption), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), metrics p. 6 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 2 (Figure/Table caption), baselines p. 7 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 2 (Figure/Table caption), results p. 2 (Figure/Table caption), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 6 (Figure/Table caption), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

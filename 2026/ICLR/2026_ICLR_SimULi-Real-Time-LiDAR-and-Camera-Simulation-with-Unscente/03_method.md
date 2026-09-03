@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=osxP6FafPZ; PDF retrieval source: https://openreview.net/pdf/ef221d27302d56bbadab6a1b5f71203b078ccc4f.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=osxP6FafPZ; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247739. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Method Body Digest
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality over the other ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss.
-- **p. 6 / 3 METHOD - extractive PDF cue:** As cross-sensor data is not fully consistent, this forces the representation to prioritize camera instead of LiDAR quality (left) or the inverse (middle), as shown ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
-- **p. 4 / 3 METHOD - extractive PDF cue:** We describe our representation in Sec.
-- **p. 4 / 3 METHOD - extractive PDF cue:** 3.1 REPRESENTATION Particle Representation.
-- **p. 5 / 3 METHOD - extractive PDF cue:** We obtain the final color prediction c via an affine transformation from a learned bilateral grid A (Wang et al., 2024) that handles lighting variations ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** We minimize a reconstruction loss, an anchoring loss that encourages camera Gaussians in Gc to lie near the LiDAR-supervised scene geometry distilled into Gl, and ...
+- **p. 7 / 3 METHOD - extractive body cue:** As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality over the other ...
+- **p. 6 / 3 METHOD - extractive body cue:** Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss.
+- **p. 6 / 3 METHOD - extractive body cue:** As cross-sensor data is not fully consistent, this forces the representation to prioritize camera instead of LiDAR quality (left) or the inverse (middle), as shown ...
+- **p. 7 / 3 METHOD - extractive body cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
+- **p. 4 / 3 METHOD - extractive body cue:** We describe our representation in Sec.
+- **p. 4 / 3 METHOD - extractive body cue:** 3.1 REPRESENTATION Particle Representation.
+- **p. 5 / 3 METHOD - extractive body cue:** We obtain the final color prediction c via an affine transformation from a learned bilateral grid A (Wang et al., 2024) that handles lighting variations ...
+- **p. 6 / 3 METHOD - extractive body cue:** We minimize a reconstruction loss, an anchoring loss that encourages camera Gaussians in Gc to lie near the LiDAR-supervised scene geometry distilled into Gl, and ...
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In this work, we propose a high-fidelity and efficient reconstruction pipeline that enables joint camera and LiDAR simulation for AV scenarios.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We make the following contributions: (1) we extend 3DGUT with LiDAR support and introduce an automated tiling scheme from which we derive optimal tiling parameters ...
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Published as a conference paper at ICLR 2026 Contributions.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this work, we propose a high-fidelity and efficient reconstruction pipeline that enables joint camera and LiDAR simulation for AV scenarios.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We make the following contributions: (1) we extend 3DGUT with LiDAR support and introduce an automated tiling scheme from which we derive optimal tiling parameters ...
+- **p. 5 / 3 METHOD - extractive body cue:** Particle Contributions and Response.
 
 ## Source Evidence Cues
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality over the other ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss.
-- **p. 6 / 3 METHOD - extractive PDF cue:** As cross-sensor data is not fully consistent, this forces the representation to prioritize camera instead of LiDAR quality (left) or the inverse (middle), as shown ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
-- **p. 4 / 3 METHOD - extractive PDF cue:** We describe our representation in Sec.
-- **p. 4 / 3 METHOD - extractive PDF cue:** 3.1 REPRESENTATION Particle Representation.
-- **p. 5 / 3 METHOD - extractive PDF cue:** We obtain the final color prediction c via an affine transformation from a learned bilateral grid A (Wang et al., 2024) that handles lighting variations ...
+- **p. 7 / 3 METHOD - extractive body cue:** As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality over the other ...
+- **p. 6 / 3 METHOD - extractive body cue:** Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss.
+- **p. 6 / 3 METHOD - extractive body cue:** As cross-sensor data is not fully consistent, this forces the representation to prioritize camera instead of LiDAR quality (left) or the inverse (middle), as shown ...
+- **p. 7 / 3 METHOD - extractive body cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
+- **p. 4 / 3 METHOD - extractive body cue:** We describe our representation in Sec.
+- **p. 4 / 3 METHOD - extractive body cue:** 3.1 REPRESENTATION Particle Representation.
+- **p. 5 / 3 METHOD - extractive body cue:** We obtain the final color prediction c via an affine transformation from a learned bilateral grid A (Wang et al., 2024) that handles lighting variations ...
 - **Detected method headings:** 3 METHOD (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality ... | p. 7 (3 METHOD), p. 6 (3 METHOD) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss. | p. 6 (3 METHOD), p. 6 (3 METHOD) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Objective / Update Rule
 
-- **p. 6 / 3 METHOD - extractive PDF cue:** We minimize a reconstruction loss, an anchoring loss that encourages camera Gaussians in Gc to lie near the LiDAR-supervised scene geometry distilled into Gl, and ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** We minimize Lrecon via L1 photometric loss Lphoto, SSIM loss LSSIM, L1 distance loss Ldist, L1 intensity loss Lint, and binary cross-entropy ray drop loss ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
-- **p. 5 / 3 METHOD - extractive PDF cue:** We measure the particle response function of each Gaussian in 3D via the distance εmax := argmaxωϱi(o + εd) that maximizes ϱi along the ray ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** Camera losses only require rendering and backpropagating through particles in Gc (and LiDAR losses through Gl).
-- **p. 5 / 3 METHOD - extractive PDF cue:** We decode beam intensity φ ↑R from the first channel of ς and derive a ray drop probability ↼↑R by applying the softmax function on ...
+- **p. 6 / 3 METHOD - extractive body cue:** We minimize a reconstruction loss, an anchoring loss that encourages camera Gaussians in Gc to lie near the LiDAR-supervised scene geometry distilled into Gl, and ...
+- **p. 6 / 3 METHOD - extractive body cue:** We minimize Lrecon via L1 photometric loss Lphoto, SSIM loss LSSIM, L1 distance loss Ldist, L1 intensity loss Lint, and binary cross-entropy ray drop loss ...
+- **p. 7 / 3 METHOD - extractive body cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
+- **p. 5 / 3 METHOD - extractive body cue:** We measure the particle response function of each Gaussian in 3D via the distance εmax := argmaxωϱi(o + εd) that maximizes ϱi along the ray ...
+- **p. 7 / 3 METHOD - extractive body cue:** Camera losses only require rendering and backpropagating through particles in Gc (and LiDAR losses through Gl).
+- **p. 5 / 3 METHOD - extractive body cue:** We decode beam intensity φ ↑R from the first channel of ς and derive a ray drop probability ↼↑R by applying the softmax function on ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 3 METHOD - extractive PDF cue:** 3.4 OPTIMIZATION We jointly optimize the camera particles Gc, LiDAR particles Gl, bilateral grids A, and the environment map by sampling a random input image ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** With the rise of end-to-end policy models, accurate sensor simulation has become a critical component in the development and evaluation of autonomous vehicle (AV) systems.
-- **p. 6 / 3 METHOD - extractive PDF cue:** We derive an automated strategy that takes elevation angles as input and computes an equalized elevation tiling and azimuth tile count such that each elevation ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** Projecting LiDAR as a sparse depth map causes inaccuracies that degrade 3DGUT's rendering of the pole (above), which we avoid by rendering LiDAR directly.
-- **p. 7 / 3 METHOD - extractive PDF cue:** As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality over the other ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As they are optimized to match real-world observations, they also exhibit a smaller domain gap compared to traditional artist-generated simulators.
-- **p. 4 / 3 METHOD - extractive PDF cue:** Each object is associated with a 3D bounding box and a sequence of SE(3) poses adjusted with learnable offsets.
+- **p. 6 / 3 METHOD - extractive body cue:** 3.4 OPTIMIZATION We jointly optimize the camera particles Gc, LiDAR particles Gl, bilateral grids A, and the environment map by sampling a random input image ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** With the rise of end-to-end policy models, accurate sensor simulation has become a critical component in the development and evaluation of autonomous vehicle (AV) systems.
+- **p. 6 / 3 METHOD - extractive body cue:** We derive an automated strategy that takes elevation angles as input and computes an equalized elevation tiling and azimuth tile count such that each elevation ...
+- **p. 7 / 3 METHOD - extractive body cue:** Projecting LiDAR as a sparse depth map causes inaccuracies that degrade 3DGUT's rendering of the pole (above), which we avoid by rendering LiDAR directly.
+- **p. 7 / 3 METHOD - extractive body cue:** As crosssensor data contains inconsistencies that are impossible to eliminate, this forces the representation to prioritize the reconstruction quality of one modality over the other ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** As they are optimized to match real-world observations, they also exhibit a smaller domain gap compared to traditional artist-generated simulators.
+- **p. 4 / 3 METHOD - extractive body cue:** Each object is associated with a 3D bounding box and a sequence of SE(3) poses adjusted with learnable offsets.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,9 +90,9 @@ PDF body method statement (p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Training vs Inference
 
-- **p. 6 / 3 METHOD - extractive PDF cue:** Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss.
-- **p. 7 / 3 METHOD - extractive PDF cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
-- **p. 6 / 3 METHOD - extractive PDF cue:** We finally compute the azimuth tile count and the maximum point count per tile constraint M.
+- **p. 6 / 3 METHOD - extractive body cue:** Prior work encodes camera and LiDAR into the same representation constrained with a LiDAR-supervised depth loss.
+- **p. 7 / 3 METHOD - extractive body cue:** We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
+- **p. 6 / 3 METHOD - extractive body cue:** We finally compute the azimuth tile count and the maximum point count per tile constraint M.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Failure and Ablation Link
 
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We evaluate image quality through PSNR, SSIM (Wang et al., 2004), and the AlexNet variant of LPIPS (Zhang et al., 2018).
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** Compared to SplatAD (Hess et al., 2025), the method closest to ours, we improve PSNR by 0.4-1.7 dB without relying on CNNs for view dependence, ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Ablations. NVS metrics averaged across PandaSet.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We validate the efficacy of our components in Sec.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Static NVS. Projecting LiDAR as a sparse depth map causes inaccuracies that degrade 3DGUT's rendering of the pole (above), which we avoid by ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Dynamic Scenes. FPS numbers are averaged across Waymo Dynamic and PandaSet. Approaches that use CNNs for upsampling (Yang et al., 2023b; Tonderski et ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** The choice M = 32, Nε = 16 gives the best LiDAR rendering speed (note that does not affect quality).
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We evaluate image quality through PSNR, SSIM (Wang et al., 2004), and the AlexNet variant of LPIPS (Zhang et al., 2018).
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Compared to SplatAD (Hess et al., 2025), the method closest to ours, we improve PSNR by 0.4-1.7 dB without relying on CNNs for view dependence, ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Ablations. NVS metrics averaged across PandaSet.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We validate the efficacy of our components in Sec.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Static NVS. Projecting LiDAR as a sparse depth map causes inaccuracies that degrade 3DGUT's rendering of the pole (above), which we avoid by ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Dynamic Scenes. FPS numbers are averaged across Waymo Dynamic and PandaSet. Approaches that use CNNs for upsampling (Yang et al., 2023b; Tonderski et ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The choice M = 32, Nε = 16 gives the best LiDAR rendering speed (note that does not affect quality).
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), temporal p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
+- **Evidence anchors reviewed:** method p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), temporal p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

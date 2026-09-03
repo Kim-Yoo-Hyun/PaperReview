@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.13470; PDF retrieval source: https://arxiv.org/pdf/1912.13470. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.13470; PDF retrieval source: https://arxiv.org/pdf/1912.13470. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Firstly, the grasp pose has different representations including rectangle [23] and 6D pose [24] representation and are evaluated with different metrics [11, ... | p. 1 (1. Introduction), p. 1 (1. Introduction) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Thanks to our automatic annotation process, we built the first large-scale in-the-wild grasp pose dataset that can serve as a base for ... | p. 1 (1. Introduction), p. 3 (3.2. Data Collection) |
@@ -82,8 +82,8 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | In this work, we adopt an online evaluation algorithm to evaluate the grasp accuracy. | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | Summary of real world success rate of grasping given different grasp score. grasp poses to the camera frame using objects' 6D poses, ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
-| Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -127,8 +127,17 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.2. Data Collection), p. 4 (2 Cams), p. 2 (1. Introduction), p. 2 (3. GraspNet Dataset), objective p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (2 Cams), temporal p. 4 (3.4. Evaluation), p. 5 (4.1. Ground-Truth Evaluation), p. 1 (1. Introduction), p. 2 (3.1. Overview), p. 2 (1. Introduction), p. 3 (3.3. Data Annotation).
+- **Evidence anchors reviewed:** method p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.2. Data Collection), p. 4 (2 Cams), p. 2 (1. Introduction), p. 2 (3. GraspNet Dataset), objective p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (2 Cams), temporal p. 4 (3.4. Evaluation), p. 5 (4.1. Ground-Truth Evaluation), p. 1 (1. Introduction), p. 2 (3.1. Overview), p. 2 (1. Introduction), p. 3 (3.3. Data Annotation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.75). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The key of grasping is to detect the grasp pose given visual inputs (image or point cloud) and has drawn many attentions in computer vision community [8, 21]. (p. 1, 1. Introduction).
+- **Objective/update evidence:** The difference in evaluation metrics makes it difficult to compare these methods directly in an unified manner, while evaluating with real robots would dramatically increase the evaluation cost. (p. 1, 1. Introduction).
+- **Temporal/runtime evidence:** Summary of real world success rate of grasping given different grasp score. grasp poses to the camera frame using objects' 6D poses, we paste ArUco code on the objects and ... (p. 5, 4.1. Ground-Truth Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

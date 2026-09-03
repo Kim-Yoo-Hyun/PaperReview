@@ -1,8 +1,10 @@
 # Demonstrating REASSEMBLE: A Multimodal Dataset for Contact-rich Robotic Assembly and Disassembly
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p059.pdf
 - Code/Project: https://tuwien-asl.github.io/REASSEMBLE_page/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하기 위해 읽는다. 본문은 ‘To bridge the gap between these pressing challenges, we introduce REASSEMBLE, a comprehensive dataset tailored to long-horizon and contact-rich manipulation tasks.를 문제로 두고, To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, such datasets primarily focus on human activity and often lack relevance to robotic manipulation tasks. (p. 3, 2) A dataset with multi-task labels to support algorithm).
+- **Actual contribution:** To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation (p. 1, Abstract).
+- **Evaluation boundary:** Preliminary results demonstrate improved performance through the integration of visual, auditory, force-torque (wrench), gripper, and pose information. ‘These findings are promising, and we plan 10 conduct a more comprehensive analysis ... (p. 11, V. BENCHMARKS).
+- **Explicit failure boundary:** ‘The number of failed demonstrations per action can serve as ‘4 metric for task difficulty, as operators are more likely to fail ‘when the motion is complex. (p. 7, B. Action difficulty and failure modes).

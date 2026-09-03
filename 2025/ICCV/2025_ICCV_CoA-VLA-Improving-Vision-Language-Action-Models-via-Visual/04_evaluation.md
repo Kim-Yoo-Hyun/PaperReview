@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.2. Evaluation on Simulation - extractive PDF cue:** LIBERO is a robot learning benchmark comprising over 130 language-conditioned manipulation tasks.
-- **p. 7 / 5. Experiments - extractive PDF cue:** 2) What is the performance of CoAVLA in simulation benchmarks?
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** CoAVLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct objects are already placed, and it is instructed ...
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** In the second task, we introduced a series of obstacles on a table, rearranging them in different configurations to assess the robot's adaptability in maneuvering ...
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** We report the success rate and standard error for four task suites.
-- **p. 7 / 5.2. Evaluation on Simulation - extractive PDF cue:** Our findings indicate that CoA-VLA consistently achieves superior performance across all evaluated settings, securing the highest success rate among the methods tested.
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** This experiment underscores the crucial role of spatial affordance in enhancing the model's ability to recognize and utilize available space, ultimately improving task completion accuracy ...
-- **p. 7 / 5.1. Evaluation on Real Robot - extractive PDF cue:** In the in-distribution setup, our method surpasses all SOTA robot foundation models in terms of average success rate.
+- **p. 7 / 5.2. Evaluation on Simulation - extractive body cue:** LIBERO is a robot learning benchmark comprising over 130 language-conditioned manipulation tasks.
+- **p. 7 / 5. Experiments - extractive body cue:** 2) What is the performance of CoAVLA in simulation benchmarks?
+- **p. 8 / 5.3. More Experiments - extractive body cue:** CoAVLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct objects are already placed, and it is instructed ...
+- **p. 8 / 5.3. More Experiments - extractive body cue:** In the second task, we introduced a series of obstacles on a table, rearranging them in different configurations to assess the robot's adaptability in maneuvering ...
+- **p. 8 / 5.3. More Experiments - extractive body cue:** We report the success rate and standard error for four task suites.
+- **p. 7 / 5.2. Evaluation on Simulation - extractive body cue:** Our findings indicate that CoA-VLA consistently achieves superior performance across all evaluated settings, securing the highest success rate among the methods tested.
+- **p. 8 / 5.3. More Experiments - extractive body cue:** This experiment underscores the crucial role of spatial affordance in enhancing the model's ability to recognize and utilize available space, ultimately improving task completion accuracy ...
+- **p. 7 / 5.1. Evaluation on Real Robot - extractive body cue:** In the in-distribution setup, our method surpasses all SOTA robot foundation models in terms of average success rate.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Evaluation on Simulation | EMPIRICAL / SIMULATION | Specifically, CoA-VLA achieves an overall success rate of 79.8%, outperforming OpenVLA, the previous best-performing method, by a margin of 3.3%. | p. 7 (5.2. Evaluation on Simulation) |
 | 5.2. Evaluation on Simulation | EMPIRICAL / SIMULATION | Our findings indicate that CoA-VLA consistently achieves superior performance across all evaluated settings, securing the highest success rate among the methods tested. | p. 7 (5.2. Evaluation on Simulation) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.2. Evaluation on Simulation - extractive PDF cue:** LIBERO is a robot learning benchmark comprising over 130 language-conditioned manipulation tasks.
-- **p. 7 / 5. Experiments - extractive PDF cue:** 2) What is the performance of CoAVLA in simulation benchmarks?
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** CoAVLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct objects are already placed, and it is instructed ...
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** In the second task, we introduced a series of obstacles on a table, rearranging them in different configurations to assess the robot's adaptability in maneuvering ...
+- **p. 7 / 5.2. Evaluation on Simulation - extractive body cue:** LIBERO is a robot learning benchmark comprising over 130 language-conditioned manipulation tasks.
+- **p. 7 / 5. Experiments - extractive body cue:** 2) What is the performance of CoAVLA in simulation benchmarks?
+- **p. 8 / 5.3. More Experiments - extractive body cue:** CoAVLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct objects are already placed, and it is instructed ...
+- **p. 8 / 5.3. More Experiments - extractive body cue:** In the second task, we introduced a series of obstacles on a table, rearranging them in different configurations to assess the robot's adaptability in maneuvering ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. This figure illustrates the overall framework of our CoA-VLA model, which empowers vision-language-action models with chain-of-thought reasoning capabilities for generalizable visuomotor policy learning. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. An example of the chain-of-affordance for the PourTea task. The first row presents the text affordance and the second row shows the visual ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Robot setup and examples for real-world manipulation tasks. We evaluate seven real-world tasks on Franka robot arm equipped with two external Zed cameras ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Experimental results for multi-task learning. Our method achieved the best performance in both the in-distribution test setup and under visual changes. Seven Tasks ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Experimental results for LIBERO benchmark. We report the success rate and standard error for four task suites. LIBERO-Spatial LIBERO-Object LIBERO-Goal LIBERO-Long Average Method ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Spatial affordance for CoA-VLA. CoA-VLA can identify free space for object placement.. Method \ Obstacle Avoidance OpenVLA DiffusionVLA CoA-VLA
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Movement generalization for CoA-VLA. CoA- VLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct ob- ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. This figure illustrates the overall framework of our CoA-VLA model, which empowers vision-language-action models with chain-of-thought reasoning capabilities for generalizable visuomotor policy learning. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. An example of the chain-of-affordance for the PourTea task. The first row presents the text affordance and the second row shows the visual ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Robot setup and examples for real-world manipulation tasks. We evaluate seven real-world tasks on Franka robot arm equipped with two external Zed cameras ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Experimental results for multi-task learning. Our method achieved the best performance in both the in-distribution test setup and under visual changes. Seven Tasks ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Experimental results for LIBERO benchmark. We report the success rate and standard error for four task suites. LIBERO-Spatial LIBERO-Object LIBERO-Goal LIBERO-Long Average Method ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Spatial affordance for CoA-VLA. CoA-VLA can identify free space for object placement.. Method \ Obstacle Avoidance OpenVLA DiffusionVLA CoA-VLA
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Movement generalization for CoA-VLA. CoA- VLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct ob- ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | LIBERO is a robot learning benchmark comprising over 130 language-conditioned manipulation tasks. | embodiment, simulator version and control stack | p. 7 (5.2. Evaluation on Simulation), p. 7 (5. Experiments) |
 | Task/environment | 2) What is the performance of CoAVLA in simulation benchmarks? | reset, timeout, object/scene variation | p. 7 (5. Experiments), p. 8 (5.3. More Experiments) |
@@ -110,8 +110,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 | Primary metric/result | Our findings indicate that CoA-VLA consistently achieves superior performance across all evaluated settings, securing the highest success rate among the methods tested. | numeric claim only at cited anchor | p. 7 (5.2. Evaluation on Simulation) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.1. Evaluation on Real Robot - extractive PDF cue:** The model is then post-trained on 692 trajectories across seven tasks.
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** LIBERO-Spatial LIBERO-Object LIBERO-Goal LIBERO-Long Average Method / Task Success Rate (↗) Success Rate (↗) Success Rate (↗) Success Rate (↗) Success Rate (↗) Diffusion Policy ...
+- **p. 7 / 5.1. Evaluation on Real Robot - extractive body cue:** The model is then post-trained on 692 trajectories across seven tasks.
+- **p. 8 / 5.3. More Experiments - extractive body cue:** LIBERO-Spatial LIBERO-Object LIBERO-Goal LIBERO-Long Average Method / Task Success Rate (↗) Success Rate (↗) Success Rate (↗) Success Rate (↗) Success Rate (↗) Diffusion Policy ...
 
 ## Generalization and Failure Cases
 
@@ -141,10 +141,10 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** Our approach successfully completed all three scenarios, demonstrating robust collision avoidance and spatial adaptability.
-- **p. 8 / 5.3. More Experiments - extractive PDF cue:** Collision avoidance is essential for safe and effective physical interactions, as improper maneuvers can lead to significant damage or even catastrophic outcomes.
+- **p. 8 / 5.3. More Experiments - extractive body cue:** Our approach successfully completed all three scenarios, demonstrating robust collision avoidance and spatial adaptability.
+- **p. 8 / 5.3. More Experiments - extractive body cue:** Collision avoidance is essential for safe and effective physical interactions, as improper maneuvers can lead to significant damage or even catastrophic outcomes.
 
-- **PDF anchors reviewed:** datasets p. 7 (5.2. Evaluation on Simulation), p. 7 (5. Experiments), p. 8 (5.3. More Experiments), p. 8 (5.3. More Experiments), metrics p. 8 (5.3. More Experiments), p. 7 (5.2. Evaluation on Simulation), p. 8 (5.3. More Experiments), p. 7 (5.1. Evaluation on Real Robot), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 7 (5.1. Evaluation on Real Robot), p. 7 (5. Experiments), p. 8 (5.3. More Experiments), results p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2. Evaluation on Simulation), p. 6 (Figure/Table caption), p. 8 (5.3. More Experiments), p. 8 (5.3. More Experiments), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5.2. Evaluation on Simulation), p. 7 (5. Experiments), p. 8 (5.3. More Experiments), p. 8 (5.3. More Experiments), metrics p. 8 (5.3. More Experiments), p. 7 (5.2. Evaluation on Simulation), p. 8 (5.3. More Experiments), p. 7 (5.1. Evaluation on Real Robot), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 7 (5.1. Evaluation on Real Robot), p. 7 (5. Experiments), p. 8 (5.3. More Experiments), results p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2. Evaluation on Simulation), p. 6 (Figure/Table caption), p. 8 (5.3. More Experiments), p. 8 (5.3. More Experiments), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

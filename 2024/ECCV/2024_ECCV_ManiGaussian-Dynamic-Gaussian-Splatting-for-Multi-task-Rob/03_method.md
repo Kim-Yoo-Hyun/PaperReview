@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | More specifically, the Gaussian world model contains a representation network qϕ that learns high-level visual features with rich semantics for the input ... | p. 8 (3 Approach), p. 6 (3 Approach) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | 3.3 Dynamic Gaussian Splatting for Robotic Manipulation In order to capture the scene-level dynamics for general manipulation tasks, we propose a dynamic ... | p. 6 (3 Approach), p. 10 (3 Approach) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Ours Observation Ground-truth Ours Ground-truth GNFactor PSNR=21.32 PSNR=24.59 (a) Front view (c) Novel view at future time step (b) Novel view at ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | For dynamic Gaussian Splatting, we leverage a Gaussian regressor to infer the Gaussian distribution of geometric and semantic features in the scene ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | An episode is considered successful if the agent completes the goal specified in natural language within a maximum of 25 steps. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approach), p. 8 (3 Approach), p. 5 (3 Approach), p. 9 (3 Approach), objective p. 9 (3 Approach), p. 8 (3 Approach), p. 9 (3 Approach), p. 6 (3 Approach), p. 8 (3 Approach), p. 5 (3 Approach), temporal p. 14 (4 Experiments), p. 6 (3 Approach), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approach), p. 8 (3 Approach), p. 5 (3 Approach), p. 9 (3 Approach), objective p. 9 (3 Approach), p. 8 (3 Approach), p. 9 (3 Approach), p. 6 (3 Approach), p. 8 (3 Approach), p. 5 (3 Approach), temporal p. 14 (4 Experiments), p. 6 (3 Approach), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** More specifically, the Gaussian world model contains a representation network qϕ that learns high-level visual features with rich semantics for the input observation, a Gaussian regressor gϕ that predicts the ... (p. 8, 3 Approach).
+- **Objective/update evidence:** 3.4 Learning Objectives Current Scene Consistency Loss. (p. 8, 3 Approach).
+- **Temporal/runtime evidence:** An episode is considered successful if the agent completes the goal specified in natural language within a maximum of 25 steps. (p. 10, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.12098; PDF retrieval source: https://arxiv.org/pdf/2109.12098. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.12098; PDF retrieval source: https://arxiv.org/pdf/2109.12098. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 22 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Language-Conditioned Test Results. Task success scores (mean %) from 100 evaluation instances vs. # of training demonstrations (1, 10, 100, or 1000). ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 6. Demo-Conditioned Tasks. Validation task success scores (mean %) from 100 evaluation instances vs. # of demonstration episodes (1, 10, 100, or 1000) ... | p. 22 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 22 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For packing objects, we use 56 tabletop objects from the Google Scanned Objects dataset [61] and split them into 37 seen and 19 unseen ... | embodiment, simulator version and control stack | p. 6 (4 Results), p. 8 (4 Results) |
 | Task/environment | In summary, unbiased datasets containing both a good coverage of expected skills and invariances, and a decent number of training demonstrations, are crucial for ... | reset, timeout, object/scene variation | p. 8 (4 Results), p. 6 (4 Results) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 22 (Figure/Table
 - **p. 7 / 4 Results - extractive body cue:** It also validates a trait of data-driven approaches where training on lots of diverse data leads to more robust and generalizable representations [1, 63].
 - **p. 8 / 4 Results - extractive body cue:** We estimate that for more robust real-world performance at least 50 to 100 training demonstrations are necessary, as evident in Figure 3.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Results), p. 8 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 7 (4 Results), p. 7 (4 Results), metrics p. 8 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), baselines p. 6 (4 Results), p. 6 (4 Results), p. 21 (Figure/Table caption), p. 7 (4 Results), p. 7 (4 Results), p. 21 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 22 (Figure/Table caption), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 6 (4 Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 8 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 7 (4 Results), p. 7 (4 Results), metrics p. 8 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), baselines p. 6 (4 Results), p. 6 (4 Results), p. 21 (Figure/Table caption), p. 7 (4 Results), p. 7 (4 Results), p. 21 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 22 (Figure/Table caption), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 6 (4 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Language-Conditioned Test Results. Task success scores (mean %) from 100 evaluation instances vs. # of training demonstrations (1, 10, 100, or 1000). The challenges pertaining to each task ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Task success scores (mean %) from 100 evaluation instances vs. # of training demonstrations (1, 10, 100, or 1000). (p. 7, 4 Results).
+- **Baseline/ablation evidence:** In addition to these baselines, we present various ablations and alternative one-stream and twostream models in Appendix F. (p. 6, 4 Results).
+- **Failure/negative evidence:** While language-grounding for manipulation has been explored in the past [7, 8, 9, 10], these pipelines are limited by object-centric representations that cannot handle granular or deformable objects and often ... (p. 1, 1 Introduction).

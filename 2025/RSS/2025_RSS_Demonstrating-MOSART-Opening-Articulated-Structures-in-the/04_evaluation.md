@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p033.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p033.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p033.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p033.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 3 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments. | p. 7 (IV. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 2: MOSART Design. The perception module outputs 3D articulation parameters in the robot frame using RGB-D images. The robot then navigates to the ... | p. 3 (Figure/Table caption) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 3 (Figure/Table capti
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In each test, the robot is placed approximately 1.5m from the target object with the camera oriented so as to have the target ‘object ... | embodiment, simulator version and control stack | p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
 | Task/environment | We work with the Stretch RE2 robot. | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
@@ -146,7 +146,16 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 3 (Figure/Table capti
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We then study the generalization of our pipeline to other articulation types and diverse handles (Section IV-E), before wwe analyze the failure modes of our ...
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Section IV-F° provides a extensive discussion of the failure modes
 
-- **PDF anchors reviewed:** datasets p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 10 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), results p. 7 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 10 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), results p. 7 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We first present ‘our end-to-end system test results, evaluating MOSART on 31 novel drawers and cupboards across 10 buildings (Section IV-A), To see how a modular system compares to an ... (p. 6, IV. EXPERIMENTS).
+- **Metric evidence:** Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments. (p. 7, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** This includes evaluating the quality of our MaskRCNN-based perception module (as well as a Detic-based perception model) on real world images, comparing APM to two recent articulation parameter prediction systems ... (p. 6, IV. EXPERIMENTS).
+- **Failure/negative evidence:** Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles. (p. 10, Discussion).

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's proprioceptive state ...를 To implement reinforcement learning algorithms for robotic tasks, we must carefully select appropriate state observation spaces and action spaces .로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We also see some limitations of our approach.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To assess the effectiveness of our system, we compare it against several state-of-the-art RL methods and conduct ablation studies to understand the contribution of each component.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's ... (p. 4, 3.1. Preliminaries and Problem Statement).
+- **Paper-specific mechanism:** In summary, our contributions demonstrate that with the appropriate system-level design choices, RL can effectively solve a wide range of dexterous and complex vision-based manipulation tasks in the real world. (p. 3, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 1: Experiment results. (a) HIL-SERL against imitation learning baselines. (b) HIL-SERL against various other baselines. In this subsection, we present the experimental results for all the tasks mentioned above. ... (p. 13, Figure/Table caption); the relevant task/metric cue is One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks. (p. 18, 5.1. Reliability of the Learned Policies). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from wrist and/or side cameras as inputs, and predicts whether the current state ... (p. 9, 4.1. Overview of Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Each task also uses either a scripted robot motion or manually human reset to randomize the initial state of the task..
-3. Compare against the body-reported baseline or a matched simpler baseline: In the remainder of this section, we will first describe each task in detail, and present relevant results as well as comparisons to other state-of-the-art methods..
-4. Report the body metric and its denominator/aggregation: Figure 3: This diagram illustrates the process for training HIL-SERL. First, we tele-operate the robot to collect positive and negative samples and train a binary reward classifier. We then collect a small ....
-5. Re-run the body-reported ablation/failure condition: Our method is also ablated with two versions: one initialized from scratch without demonstrations or corrections, and another initialized from demonstrations but without corrections..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's ... (p. 4, 3.1. Preliminaries and Problem Statement); preserve the objective/update rule: Additionally, we may collect extra data to address any false negative and false positive issues with the reward classifier. (p. 8, 3.5. Training Process).
+2. Use the paper-reported task/data/environment cue: Each task also uses either a scripted robot motion or manually human reset to randomize the initial state of the task. (p. 9, 4.1. Overview of Experiments).
+3. Compare against the reported or matched baseline: In the remainder of this section, we will first describe each task in detail, and present relevant results as well as comparisons to other state-of-the-art methods. (p. 9, 4.1. Overview of Experiments).
+4. Report the body metric with its denominator and aggregation: One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks. (p. 18, 5.1. Reliability of the Learned Policies).
+5. Re-run the reported ablation or stress/failure condition: Our method is also ablated with two versions: one initialized from scratch without demonstrations or corrections, and another initialized from demonstrations but without corrections. (p. 13, 4.3. Experimental Results); if none is reported, design one around: For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from wrist and/or side cameras as inputs, and predicts whether the current state ... (p. 9, 4.1. Overview of Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), p. 8 (3.5. Training Process); the primary result is directionally consistent at p. 15 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), p. 17 (5. Result Analysis); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 13 (Figure/Table caption), p. 15 (4.3. Experimental Results), p. 9 (4.1. Overview of Experiments), and measure the boundary at p. 9 (4.1. Overview of Experiments), p. 18 (5.1. Reliability of the Learned Policies).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 assess, effectiveness, system mechanism이 In the remainder of this section, we will first describe each task in detail, and present ... 대비 Figure 3: This diagram illustrates the process for training HIL-SERL. First, we tele-operate the robot to collect positive ...을 개선하고, We also see some limitations of our approach. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation ...), does the paper-specific mechanism (In summary, our contributions demonstrate that with the appropriate system-level design choices, RL can effectively solve a wide range of dexterous and ...) retain the reported evaluation outcome (One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks.) when tested against the paper's strongest explicit boundary (For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (54 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our contributions demonstrate that with the appropriate system-level design choices, RL can effectively solve a wide range of dexterous and complex vision-based manipulation tasks in the real world. (p. 3, 1. Introduction).
+- **Paper-supported outcome:** Table 1: Experiment results. (a) HIL-SERL against imitation learning baselines. (b) HIL-SERL against various other baselines. In this subsection, we present the experimental results for all the tasks mentioned above. ... (p. 13, Figure/Table caption).
+- **Strongest explicit boundary:** For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from wrist and/or side cameras as inputs, and predicts whether the current state ... (p. 9, 4.1. Overview of Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

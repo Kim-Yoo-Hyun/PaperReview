@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Like many other supervised learning methods, BC policies are often represented by explicit continuous feed-forward models (e.g., deep networks) of the form ˆa=Fθ(o) that map directly from input observations o to output ...를 On robotic policy learning tasks we show that implicit behavioral cloning policies with energy-based models (EBM) often outperform common explicit (Mean Square Error, or Mixture Density) behavioral cloning policies, including on tasks ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In terms of limitations, a primary comparison with explicit models is that they typically require more compute, both in training and inference (see Appendix for comparisons).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Like many other supervised learning methods, BC policies are often represented by explicit continuous feed-forward models (e.g., deep networks) of the form ˆa=Fθ(o) that map directly from input observations o ... (p. 1, 1 Introduction).
+- **Paper-specific mechanism:** In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption); the relevant task/metric cue is Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task. (p. 5, 1 Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task)..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] and [27] ....
-4. Report the body metric and its denominator/aggregation: Table 6. Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). Across all four tasks, we observe significantly ....
-5. Re-run the body-reported ablation/failure condition: We evaluate implicit (EBM) and explicit (MSE and MDN [30, 31]) policies on both variants, trained from a dataset of 2,000 demonstrations using a scripted policy that readjusts its pushing direction if ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Like many other supervised learning methods, BC policies are often represented by explicit continuous feed-forward models (e.g., deep networks) of the form ˆa=Fθ(o) that map directly from input observations o ... (p. 1, 1 Introduction); preserve the objective/update rule: We use either a) a derivative-free (sampling-based) optimization procedure, b) an auto-regressive variant of the derivative-free optimizer which performs coordinate descent, or c) gradient-based Langevin sampling [11, 12] with gradient ... (p. 2, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). (p. 6, 1 Introduction).
+3. Compare against the reported or matched baseline: Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Implicit models are able to approximate discontinuities sharply without introducing intermediate artifacts (Fig. (p. 2, 1 Introduction); if none is reported, design one around: The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task. (p. 5, 1 Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction); the primary result is directionally consistent at p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 20 (Figure/Table caption), and measure the boundary at p. 5 (1 Introduction), p. 16 (B.4 Comparison of EBM Variants).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 reformulate, implicit, models mechanism이 Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average ... 대비 Table 6. Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds ...을 개선하고, In terms of limitations, a primary comparison with explicit models is that they typically require more ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Like many other supervised learning methods, BC policies are often represented by explicit continuous feed-forward models (e.g., deep networks) of the form ...), does the paper-specific mechanism (In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function ...) retain the reported evaluation outcome (Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 ...) when tested against the paper's strongest explicit boundary (The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+- **Strongest explicit boundary:** The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task. (p. 5, 1 Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,27 +10,27 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 
 ## PDF Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** This paper presents a novel inertial localization framework named Egocentric Action-aware Inertial Localization (EAIL), which leverages egocentric action cues from headmounted IMU signals to localize ...
-- **p. 1 / Abstract - extractive PDF cue:** Human inertial localization is challenging due to IMU sensor noise that causes trajectory drift over time.
-- **p. 1 / Abstract - extractive PDF cue:** The diversity of human actions further complicates IMU signal processing by introducing various motion patterns.
-- **p. 1 / Abstract - extractive PDF cue:** Nevertheless, we observe that some actions captured by the head-mounted IMU correlate with spatial environmental structures (e.g., bending down to look inside an oven, washing ...
-- **p. 1 / Abstract - extractive PDF cue:** The proposed EAIL framework learns such correlations via hierarchical multi-modal alignment with vision-language guidance.
-- **p. 1 / 1. Introduction - extractive PDF cue:** The other challenge lies in the complexity of human actions.
-- **p. 2 / 1. Introduction - extractive PDF cue:** motion signals can complicate IMU signal processing and make inertial localization further difficult.
+- **p. 1 / Abstract - extractive body cue:** This paper presents a novel inertial localization framework named Egocentric Action-aware Inertial Localization (EAIL), which leverages egocentric action cues from headmounted IMU signals to localize ...
+- **p. 1 / Abstract - extractive body cue:** Human inertial localization is challenging due to IMU sensor noise that causes trajectory drift over time.
+- **p. 1 / Abstract - extractive body cue:** The diversity of human actions further complicates IMU signal processing by introducing various motion patterns.
+- **p. 1 / Abstract - extractive body cue:** Nevertheless, we observe that some actions captured by the head-mounted IMU correlate with spatial environmental structures (e.g., bending down to look inside an oven, washing ...
+- **p. 1 / Abstract - extractive body cue:** The proposed EAIL framework learns such correlations via hierarchical multi-modal alignment with vision-language guidance.
+- **p. 1 / 1. Introduction - extractive body cue:** The other challenge lies in the complexity of human actions.
+- **p. 2 / 1. Introduction - extractive body cue:** motion signals can complicate IMU signal processing and make inertial localization further difficult.
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The other challenge lies in the complexity of human actions. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| Observation / input | In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | summary, main, contributions, follows, introduce, EAIL, novel, inertial, localization, framework | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | EAIL, Action, Recognition, Washing, dishes, Stir-frying, Stove, Localization | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | image/point input I/P and pose; body terms: summary, main, contributions, follows, introduce, EAIL, novel, inertial, localization, framework | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction) |
 | Decision / output variable | geometry/map/query r; body terms: summary, main, contributions, follows, introduce, EAIL, novel, inertial | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction) |
@@ -38,22 +38,22 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition) |
 | Success / guarantee | spatial accuracy and downstream robot utility | p. 6 (5.2. Inertial Localization Results), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** motion signals can complicate IMU signal processing and make inertial localization further difficult.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Nevertheless, we argue that human actions can rather act as a salient locational cue to mitigate the trajectory drift challenge if properly taken into account.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Conventional step detection methods [3, 64] struggle to generalize to the noise of irregular movements, while recent data-driven approaches [22, 37, 54, 66], which predict ...
-- **p. 3 / 3. Problem Setting - extractive PDF cue:** Note that this problem setup is different from existing inertial navigation (e.g., [22]) and inertial localization [24].
+- **p. 2 / 1. Introduction - extractive body cue:** motion signals can complicate IMU signal processing and make inertial localization further difficult.
+- **p. 2 / 1. Introduction - extractive body cue:** Nevertheless, we argue that human actions can rather act as a salient locational cue to mitigate the trajectory drift challenge if properly taken into account.
+- **p. 1 / 1. Introduction - extractive body cue:** Conventional step detection methods [3, 64] struggle to generalize to the noise of irregular movements, while recent data-driven approaches [22, 37, 54, 66], which predict ...
+- **p. 3 / 3. Problem Setting - extractive body cue:** Note that this problem setup is different from existing inertial navigation (e.g., [22]) and inertial localization [24].
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting)): In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU signals to localize target individuals ...
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting)): In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU signals to localize target individuals ...
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In this work, we present a novel framework named Egocentric Action-aware Inertial Localization (EAIL; see also Fig.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Compared to vision-based localization methods [28, 39], inertial localization enables user tracking in an energy-efficient and privacy-preserving manner.
-- **p. 3 / 3. Problem Setting - extractive PDF cue:** In contrast, our approach incorporates the 3D point cloud P, enabling localization without requiring environment-specific training.
+- **p. 2 / 1. Introduction - extractive body cue:** In this work, we present a novel framework named Egocentric Action-aware Inertial Localization (EAIL; see also Fig.
+- **p. 1 / 1. Introduction - extractive body cue:** Compared to vision-based localization methods [28, 39], inertial localization enables user tracking in an energy-efficient and privacy-preserving manner.
+- **p. 3 / 3. Problem Setting - extractive body cue:** In contrast, our approach incorporates the 3D point cloud P, enabling localization without requiring environment-specific training.
 
 ## Assumptions and Failure Boundary
 
@@ -68,11 +68,11 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting), interface p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), objective p. 5 (4.2.2. Location-aware action recognition).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting), interface p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), objective p. 5 (4.2.2. Location-aware action recognition).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

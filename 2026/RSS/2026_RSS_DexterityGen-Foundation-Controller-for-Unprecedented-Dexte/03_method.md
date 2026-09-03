@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://roboticsconference.org/2026/program/papers/103/; PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://roboticsconference.org/2026/program/papers/103/; PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | The inverse dynamics model is a simple residual multilayer perceptron that outputs a normal distribution to model the actions conditioned on the ... | p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | The first module is a diffusion model that characterizes the distribution of robot finger keypoint motions given current observations. | p. 5 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | + Funetional Grasping Regrasping is a necessary step in tool manipulation. | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | The user is asked to perform a power grasp on the tool handle placed either horizontally (nor- ‘mal) or vertically in the ... | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | Generating this dataset (by rolling out trained RL. policies) requires 300 GPU hours. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 4 (III. THE DEXGEN CONTROLLER), p. 4 (III. THE DEXGEN CONTROLLER), objective p. 4 (III. THE DEXGEN CONTROLLER), p. 6 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), temporal p. 7 (B. Simulated Experiments), p. 7 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 4 (A. Preliminaries), p. 5 (A. Preliminaries).
+- **Evidence anchors reviewed:** method p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 4 (III. THE DEXGEN CONTROLLER), p. 4 (III. THE DEXGEN CONTROLLER), objective p. 4 (III. THE DEXGEN CONTROLLER), p. 6 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), temporal p. 7 (B. Simulated Experiments), p. 7 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 4 (A. Preliminaries), p. 5 (A. Preliminaries).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The inverse dynamics model is a simple residual multilayer perceptron that outputs a normal distribution to model the actions conditioned on the current robot state and motion ‘command. (p. 6, C. DexGen Model Architecture).
+- **Objective/update evidence:** During inference, we can sample actions from this distribution and further aligned with extemal motion ‘commands using gradient guidance. (p. 4, III. THE DEXGEN CONTROLLER).
+- **Temporal/runtime evidence:** + Funetional Grasping Regrasping is a necessary step in tool manipulation. (p. 7, B. Simulated Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

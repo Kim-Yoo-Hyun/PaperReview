@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/gupta20a.html; PDF retrieval source: https://arxiv.org/pdf/1910.11956. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/gupta20a.html; PDF retrieval source: https://arxiv.org/pdf/1910.11956. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Prelimi
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, HRL methods have traditionally struggled due to various practical challenges such as exploration [5], skill segmentation [6] and reward definition [7]. | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | 7: end while 8: Distill fine-tuned policies into a single multi-goal policy Algorithm 2 Relay data relabeling for RIL low level Require: ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF |
+| Observation / input | 7: end while 8: Distill fine-tuned policies into a single multi-goal policy Algorithm 2 Relay data relabeling for RIL low level Require: ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
 | State / latent | while, Distill, fine-tuned, policies, single, multi-goal, policy, Algorithm, Relay, data | behavior policy와 temporal action context | notation and tensor shape require body check |
 | Output / action | However, actions, high, level, subgoal, states, provided, low-level | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | observation history o_{t−H:t}; body terms: while, Distill, fine-tuned, policies, single, multi-goal, policy, Algorithm, Relay, data | p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries) |
 | Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: Lastly, most, importantly, since, ensures, every, low-level, trajectory | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Prelimi
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 1 (1 Introduction) |
 | Success / guarantee | closed-loop task success and robustness | p. 7 (3 Preliminaries), p. 7 (3 Preliminaries), p. 8 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Prelimi
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 1 (Abstract), p. 1 (Abstract)): Lastly, and most importantly, since our method ensures that every low-level trajectory is goal-conditioned (allowing for a simple reward specification) and of the same, limited length, it is very amenable ...
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 1 (Abstract), p. 1 (Abstract)): Lastly, and most importantly, since our method ensures that every low-level trajectory is goal-conditioned (allowing for a simple reward specification) and of the same, limited length, it is very amenable ...
 
 - **p. 2 / 1 Introduction - extractive body cue:** Second, our method does not require any explicit form of skill segmentation or subgoal definition, which otherwise would need to be learned or explicitly provided.
 - **p. 3 / 3 Preliminaries - extractive body cue:** Our approach consists of two phases: relay imitation learning (RIL), followed by relay reinforcement fine-tuning (RRF) described in Sec.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 
 
 ## Position in the Robotics Loop
 
-il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries). The downstream handoff is claimed only when the body describes it.
+il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), interface p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), objective p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries).
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), interface p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), objective p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, HRL methods have traditionally struggled due to various practical challenges such as exploration [5], skill segmentation [6] and reward definition [7]. (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** Second, our method does not require any explicit form of skill segmentation or subgoal definition, which otherwise would need to be learned or explicitly provided. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** While these trajectories did not necessarily reach the goals that were originally commanded, and therefore cannot be considered optimal for those goals, they do end up reaching the actual states ... (p. 6, 3 Preliminaries).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

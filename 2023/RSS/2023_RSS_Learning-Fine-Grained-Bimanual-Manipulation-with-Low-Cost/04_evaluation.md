@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.13705; PDF retrieval source: https://arxiv.org/pdf/2304.13705. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.13705; PDF retrieval source: https://arxiv.org/pdf/2304.13705. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table capti
 
 ## Evaluation Body Digest
 
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** Data Collection For all 6 real-world tasks, we collect demonstrations using ALOHA teleoperation.
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** To teleoperate in simulation, we use the "leader robots" of ALOHA to control the simulated robot, with the operator looking at the real-time renderings of ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** For ease of reproducibility, we build two simulated fine manipulation tasks in MuJoCo [63], in addition to 6 real-world tasks with ALOHA.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** For each of the 6 real-world tasks, we illustrate the initializations and the subtasks.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** The left arm then opens its gripper to release the tape (Subtask#4 Hang). #1 #2 #3 init. #1 #2 #3 init. #1 #2 #3 init. ...
-- **p. 9 / V. EXPERIMENTS - extractive PDF cue:** For real-world tasks, we run one seed and evaluate with 25 trials.
-- **p. 9 / V. EXPERIMENTS - extractive PDF cue:** We report the success rate of the 3 remaining real-world tasks in Table II.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** Data Collection For all 6 real-world tasks, we collect demonstrations using ALOHA teleoperation.
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** To teleoperate in simulation, we use the "leader robots" of ALOHA to control the simulated robot, with the operator looking at the real-time renderings of ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** For ease of reproducibility, we build two simulated fine manipulation tasks in MuJoCo [63], in addition to 6 real-world tasks with ALOHA.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** For each of the 6 real-world tasks, we illustrate the initializations and the subtasks.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** The left arm then opens its gripper to release the tape (Subtask#4 Hang). #1 #2 #3 init. #1 #2 #3 init. #1 #2 #3 init. ...
+- **p. 9 / V. EXPERIMENTS - extractive body cue:** For real-world tasks, we run one seed and evaluate with 25 trials.
+- **p. 9 / V. EXPERIMENTS - extractive body cue:** We report the success rate of the 3 remaining real-world tasks in Table II.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | ACT achieves the highest success rate compared to all prior methods, outperforming the second best algorithm by a large margin on each task. | p. 9 (V. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 8: (a) We augment two baselines with action chunking, with different values of chunk size k on the x-axis, and success rate on ... | p. 10 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table capti
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** Data Collection For all 6 real-world tasks, we collect demonstrations using ALOHA teleoperation.
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** To teleoperate in simulation, we use the "leader robots" of ALOHA to control the simulated robot, with the operator looking at the real-time renderings of ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** For ease of reproducibility, we build two simulated fine manipulation tasks in MuJoCo [63], in addition to 6 real-world tasks with ALOHA.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** For each of the 6 real-world tasks, we illustrate the initializations and the subtasks.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** The left arm then opens its gripper to release the tape (Subtask#4 Hang). #1 #2 #3 init. #1 #2 #3 init. #1 #2 #3 init. ...
-- **p. 9 / V. EXPERIMENTS - extractive PDF cue:** For real-world tasks, we run one seed and evaluate with 25 trials.
-- **p. 9 / V. EXPERIMENTS - extractive PDF cue:** We report the success rate of the 3 remaining real-world tasks in Table II.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** Data Collection For all 6 real-world tasks, we collect demonstrations using ALOHA teleoperation.
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** To teleoperate in simulation, we use the "leader robots" of ALOHA to control the simulated robot, with the operator looking at the real-time renderings of ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** For ease of reproducibility, we build two simulated fine manipulation tasks in MuJoCo [63], in addition to 6 real-world tasks with ALOHA.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** For each of the 6 real-world tasks, we illustrate the initializations and the subtasks.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** The left arm then opens its gripper to release the tape (Subtask#4 Hang). #1 #2 #3 init. #1 #2 #3 init. #1 #2 #3 init. ...
+- **p. 9 / V. EXPERIMENTS - extractive body cue:** For real-world tasks, we run one seed and evaluate with 25 trials.
+- **p. 9 / V. EXPERIMENTS - extractive body cue:** We report the success rate of the 3 remaining real-world tasks in Table II.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: ALOHA : A Low-cost Open-source Hardware System for Bimanual Teleoperation. The whole system costs <$20k with off-the-shelf robots and 3D printed components. Left: ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Left: Camera viewpoints of the front, top, and two wrist cameras, together with an illustration of the bimanual workspace of ALOHA. Middle: Detailed ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Architecture of Action Chunking with Transformers (ACT). We train ACT as a Conditional VAE (CVAE), which has an encoder and a decoder. Left: ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 5: We employ both Action Chunking and Temporal Ensembling when applying actions, instead of interleaving observing and executing. rable to a single research arm ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6: Real-World Task Definitions. For each of the 6 real-world tasks, we illustrate the initializations and the subtasks.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 7: Simulated Task Definitions. For each of the 2 simulated tasks, we illustrate the initializations and the subtasks. Cube Transfer (sim) Bimanual Insertion (sim) ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 8: (a) We augment two baselines with action chunking, with different values of chunk size k on the x-axis, and success rate on the ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Fig. 9: Teleoperation task examples with ALOHA. We include videos on the project website. incoming observations (images and joints) are fed into the model in ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: ALOHA : A Low-cost Open-source Hardware System for Bimanual Teleoperation. The whole system costs <$20k with off-the-shelf robots and 3D printed components. Left: ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Left: Camera viewpoints of the front, top, and two wrist cameras, together with an illustration of the bimanual workspace of ALOHA. Middle: Detailed ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Architecture of Action Chunking with Transformers (ACT). We train ACT as a Conditional VAE (CVAE), which has an encoder and a decoder. Left: ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 5: We employ both Action Chunking and Temporal Ensembling when applying actions, instead of interleaving observing and executing. rable to a single research arm ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Real-World Task Definitions. For each of the 6 real-world tasks, we illustrate the initializations and the subtasks.
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Simulated Task Definitions. For each of the 2 simulated tasks, we illustrate the initializations and the subtasks. Cube Transfer (sim) Bimanual Insertion (sim) ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 8: (a) We augment two baselines with action chunking, with different values of chunk size k on the x-axis, and success rate on the ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 9: Teleoperation task examples with ALOHA. We include videos on the project website. incoming observations (images and joints) are fed into the model in ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly ... | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS) |
 | Task/environment | Data Collection For all 6 real-world tasks, we collect demonstrations using ALOHA teleoperation. | reset, timeout, object/scene variation | p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS) |
@@ -119,12 +119,12 @@ PDF body evaluation/result cue (p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table capti
 | Primary metric/result | Fig. 8: (a) We augment two baselines with action chunking, with different values of chunk size k on the x-axis, and success rate on ... | numeric claim only at cited anchor | p. 10 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Tasks All 8 tasks require fine-grained, bimanual manipulation, and are illustrated in Figure 6.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** For the two simulated tasks, we report [training with scripted data / training with human data], with 3 seeds and 50 policy evaluations each.
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** For the real-world tasks, we report training with human data, with 1 seed and 25 evaluations.
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** Each episode takes 8-14 seconds for the human operator to perform depending on the complexity of the task, which translates to 400-700 time steps given ...
-- **p. 9 / V. EXPERIMENTS - extractive PDF cue:** For simulated tasks, we average performance across 3 random seeds with 50 trials each.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Tasks All 8 tasks require fine-grained, bimanual manipulation, and are illustrated in Figure 6.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** For the two simulated tasks, we report [training with scripted data / training with human data], with 3 seeds and 50 policy evaluations each.
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** For the real-world tasks, we report training with human data, with 1 seed and 25 evaluations.
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** Each episode takes 8-14 seconds for the human operator to perform depending on the complexity of the task, which translates to 400-700 time steps given ...
+- **p. 9 / V. EXPERIMENTS - extractive body cue:** For simulated tasks, we average performance across 3 random seeds with 50 trials each.
 
 ## Generalization and Failure Cases
 
@@ -162,14 +162,23 @@ PDF body evaluation/result cue (p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table capti
 
 ## Limitations and Verification Questions
 
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Due to the small clearance between the cube and the left gripper (around 1cm), small errors could result in collisions and task failure.
-- **p. 9 / V. EXPERIMENTS - extractive PDF cue:** The failure modes we observe are 1) at stage 2, the right arm closes its gripper too early and fails to grasp the tail of ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Because of the cup's small size, the grippers cannot grasp the body of the cup by just approaching it from the side.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** The left arm then lays the tape segment flat on the surface of the box while the right gripper pushes down on the tape to ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Fig. 10: Image observation examples for 5 real-world tasks. The 4 columns are [top camera, front camera, left wrist camera, right wrist camera] respectively. We ...
-- **p. 9 / VI. ABLATIONS - extractive PDF cue:** In contrast, VINN retrieves ground-truth actions from the dataset and does not suffer from this issue.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Due to the small clearance between the cube and the left gripper (around 1cm), small errors could result in collisions and task failure.
+- **p. 9 / V. EXPERIMENTS - extractive body cue:** The failure modes we observe are 1) at stage 2, the right arm closes its gripper too early and fails to grasp the tail of ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Because of the cup's small size, the grippers cannot grasp the body of the cup by just approaching it from the side.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** The left arm then lays the tape segment flat on the surface of the box while the right gripper pushes down on the tape to ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Fig. 10: Image observation examples for 5 real-world tasks. The 4 columns are [top camera, front camera, left wrist camera, right wrist camera] respectively. We ...
+- **p. 9 / VI. ABLATIONS - extractive body cue:** In contrast, VINN retrieves ground-truth actions from the dataset and does not suffer from this issue.
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table caption), p. 6 (V. EXPERIMENTS), baselines p. 9 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), results p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table caption), p. 9 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table caption), p. 6 (V. EXPERIMENTS), baselines p. 9 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), results p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table caption), p. 9 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Cube Transfer (sim) Bimanual Insertion (sim) Slide Ziploc (real) Slot Battery (real) Touched Lifted Transfer Grasp Contact Insert Grasp Pinch Open Grasp Place Insert BC-ConvMLP 34 / 3 17 / ... (p. 8, V. EXPERIMENTS).
+- **Metric evidence:** Open Cup (real) Thread Velcro (real) Prep Tape (real) Put On Shoe (real) Tip Over Grasp Open Lid Lift Grasp Insert Grasp Cut Handover Hang Lift Insert Support Secure BeT ... (p. 8, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** ACT achieves the highest success rate compared to all prior methods, outperforming the second best algorithm by a large margin on each task. (p. 9, V. EXPERIMENTS).
+- **Failure/negative evidence:** Due to the small clearance between the cube and the left gripper (around 1cm), small errors could result in collisions and task failure. (p. 6, V. EXPERIMENTS).

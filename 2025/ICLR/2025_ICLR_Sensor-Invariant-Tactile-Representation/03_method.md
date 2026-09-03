@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=RnJY9WcpA3; PDF retrieval source: https://arxiv.org/pdf/2502.19638. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=RnJY9WcpA3; PDF retrieval source: https://arxiv.org/pdf/2502.19638. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE
 
 ## Method Body Digest
 
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map and pass it ...
-- **p. 15 / A.1.2 ARCHITECTURE - extractive PDF cue:** Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the network separately.
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
-- **p. 15 / A.1.2 ARCHITECTURE - extractive PDF cue:** We also find that unfreezing the ViT pre-trained weights during training improves performance. • T3: We unpatchify the output tokens to a feature map and ...
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** This evaluation is conducted on the dataset visualized in Figure 6, further highlighting how these two loss terms synergize to improve representation learning.
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** As shown in Table 5, either loss term independently serves as an effective supervision signal.
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** We conduct an ablation study to evaluate the contributions of the normal map loss and SCL loss to SITR's performance.
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** We supervise with MSE loss λnormal against the ground truth normal map. • Class Token Decoder: The class token is passed through a linear projection ...
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map and pass it ...
+- **p. 15 / A.1.2 ARCHITECTURE - extractive body cue:** Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the network separately.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
+- **p. 15 / A.1.2 ARCHITECTURE - extractive body cue:** We also find that unfreezing the ViT pre-trained weights during training improves performance. • T3: We unpatchify the output tokens to a feature map and ...
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** This evaluation is conducted on the dataset visualized in Figure 6, further highlighting how these two loss terms synergize to improve representation learning.
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** As shown in Table 5, either loss term independently serves as an effective supervision signal.
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** We conduct an ablation study to evaluate the contributions of the normal map loss and SCL loss to SITR's performance.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** We supervise with MSE loss λnormal against the ground truth normal map. • Class Token Decoder: The class token is passed through a linear projection ...
 
 ## Design Rationale
 
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** In this section, we introduce our framework for training Sensor-Invariant Tactile Representation (SITR).
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** We introduce a novel framework for generating sensor-invariant feature representations from highresolution tactile readings, enabling zero-shot transfer to unseen sensors across multiple downstream tasks.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our framework introduces a novel combination of geometry-preserving supervision, supervised contrastive learning, and sensor-specific calibration images.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** In this section, we introduce our framework for training Sensor-Invariant Tactile Representation (SITR).
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce a novel framework for generating sensor-invariant feature representations from highresolution tactile readings, enabling zero-shot transfer to unseen sensors across multiple downstream tasks.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our framework introduces a novel combination of geometry-preserving supervision, supervised contrastive learning, and sensor-specific calibration images.
 
 ## Source Evidence Cues
 
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map and pass it ...
-- **p. 15 / A.1.2 ARCHITECTURE - extractive PDF cue:** Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the network separately.
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
-- **p. 15 / A.1.2 ARCHITECTURE - extractive PDF cue:** We also find that unfreezing the ViT pre-trained weights during training improves performance. • T3: We unpatchify the output tokens to a feature map and ...
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** This evaluation is conducted on the dataset visualized in Figure 6, further highlighting how these two loss terms synergize to improve representation learning.
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** As shown in Table 5, either loss term independently serves as an effective supervision signal.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map and pass it ...
+- **p. 15 / A.1.2 ARCHITECTURE - extractive body cue:** Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the network separately.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
+- **p. 15 / A.1.2 ARCHITECTURE - extractive body cue:** We also find that unfreezing the ViT pre-trained weights during training improves performance. • T3: We unpatchify the output tokens to a feature map and ...
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** This evaluation is conducted on the dataset visualized in Figure 6, further highlighting how these two loss terms synergize to improve representation learning.
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** As shown in Table 5, either loss term independently serves as an effective supervision signal.
 - **Detected method headings:** A.1.2 ARCHITECTURE (p. 14)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map ... | p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the ... | p. 15 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE
 
 ## Objective / Update Rule
 
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map and pass it ...
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** As shown in Table 5, either loss term independently serves as an effective supervision signal.
-- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive PDF cue:** We conduct an ablation study to evaluate the contributions of the normal map loss and SCL loss to SITR's performance.
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** We supervise with MSE loss λnormal against the ground truth normal map. • Class Token Decoder: The class token is passed through a linear projection ...
-- **p. 15 / A.1.2 ARCHITECTURE - extractive PDF cue:** Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the network separately.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** Classification Decoders We use Cross Entropy Loss for this task. • SITR: We unpatchify the output tokens xi to a feature map and pass it ...
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** As shown in Table 5, either loss term independently serves as an effective supervision signal.
+- **p. 24 / A.6.1 CONTRIBUTION OF LOSS TERMS - extractive body cue:** We conduct an ablation study to evaluate the contributions of the normal map loss and SCL loss to SITR's performance.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** We supervise with MSE loss λnormal against the ground truth normal map. • Class Token Decoder: The class token is passed through a linear projection ...
+- **p. 15 / A.1.2 ARCHITECTURE - extractive body cue:** Pose Estimation Decoders We use MSE loss for this task. • SITR: We pass 2 tactile images x1 and x2 into the network separately.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 14 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 1 INTRODUCTION - extractive PDF cue:** We subtract the sensor background from all the input images to get the pixel-wise color change as described in Section 3.1.
-- **p. 4 / 1 INTRODUCTION - extractive PDF cue:** 3.2 NETWORK ARCHITECTURE Input: We use the tactile image and a set of calibration images for the sensor as inputs for the network.
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** We reshape and unpatchify the output to create a feature image map.
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
-- **p. 6 / 1 INTRODUCTION - extractive PDF cue:** For the classification task, we select 16 objects and press them against the sensor in various poses and depths, recording 1K tactile images for each ...
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Differences in the optical design or manufacturing process can result in significant discrepancies in sensor output.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We highlight in grey the concatenation of the output class token and patch tokens as our Sensor-Invariant Tactile Representation (SITR) for downstream tasks.
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** We subtract the sensor background from all the input images to get the pixel-wise color change as described in Section 3.1.
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** 3.2 NETWORK ARCHITECTURE Input: We use the tactile image and a set of calibration images for the sensor as inputs for the network.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** We reshape and unpatchify the output to create a feature image map.
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
+- **p. 6 / 1 INTRODUCTION - extractive body cue:** For the classification task, we select 16 objects and press them against the sensor in various poses and depths, recording 1K tactile images for each ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Differences in the optical design or manufacturing process can result in significant discrepancies in sensor output.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We highlight in grey the concatenation of the output class token and patch tokens as our Sensor-Invariant Tactile Representation (SITR) for downstream tasks.
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,12 +88,12 @@ PDF body method statement (p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE
 
 ## Training vs Inference
 
-- **p. 14 / A.1.2 ARCHITECTURE - extractive PDF cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
-- **p. 15 / A.1.2 ARCHITECTURE - extractive PDF cue:** We also find that unfreezing the ViT pre-trained weights during training improves performance. • T3: We unpatchify the output tokens to a feature map and ...
-- **p. 14 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** This section outlines the detailed implementation steps, including pre-processing, architecture, training settings, and decoder choices for all models.
-- **p. 6 / 5 EXPERIMENTS - extractive PDF cue:** For each downstream task, we freeze the SITR encoder and only train the downstream task-specific decoder on a single sensor.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** We freeze our SITR encoder and train the downstream classifier using crossentropy loss.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We separately feed 2 tactile images of the same object into the frozen SITR encoder, concatenate their features, and train a decoder to learn the ...
+- **p. 14 / A.1.2 ARCHITECTURE - extractive body cue:** SITR Training Decoders: During the pre-training phase for SITR, we use two decoders: • Normal Map Reconstruction Decoder: We apply a simple linear projection to ...
+- **p. 15 / A.1.2 ARCHITECTURE - extractive body cue:** We also find that unfreezing the ViT pre-trained weights during training improves performance. • T3: We unpatchify the output tokens to a feature map and ...
+- **p. 14 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** This section outlines the detailed implementation steps, including pre-processing, architecture, training settings, and decoder choices for all models.
+- **p. 6 / 5 EXPERIMENTS - extractive body cue:** For each downstream task, we freeze the SITR encoder and only train the downstream task-specific decoder on a single sensor.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We freeze our SITR encoder and train the downstream classifier using crossentropy loss.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We separately feed 2 tactile images of the same object into the frozen SITR encoder, concatenate their features, and train a decoder to learn the ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -113,13 +113,13 @@ PDF body method statement (p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE
 
 ## Failure and Ablation Link
 
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 6.2 CONTRASTIVE LOSS AND TEMPERATURE We conduct an ablation study to assess the effect of SCL and varying contrastive temperatures τ on SITR's performance.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 6 ABLATIONS 6.1 NUMBER AND TYPE OF CALIBRATION IMAGES Figure 7: Ablation study on the number and type of calibration images used in SITR, showing ...
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study showing the impact of different loss terms on classification accuracy trans- ferability. A.6.2 CHOICE OF SUPERVISION SIGNAL There are alternative supervisions ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Though, these reconstructions are naturally constrained by the resolution and sensitivity limitations of the sensors.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Baseline: We compare our SITR with ViTs that are either trained from scratch or fine-tuned from ImageNet weights to show the effectiveness of our method.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** This indicates that SITR successfully aligns the tactile signals from different sensors, highlighting its capacity to eliminate sensor-variant features.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Figure 8: Ablation study examining the impact of SCL and varying contrastive temperature τ on SITR's performance.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 6.2 CONTRASTIVE LOSS AND TEMPERATURE We conduct an ablation study to assess the effect of SCL and varying contrastive temperatures τ on SITR's performance.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 6 ABLATIONS 6.1 NUMBER AND TYPE OF CALIBRATION IMAGES Figure 7: Ablation study on the number and type of calibration images used in SITR, showing ...
+- **p. 24 / Figure/Table caption - extractive body cue:** Table 5: Ablation study showing the impact of different loss terms on classification accuracy trans- ferability. A.6.2 CHOICE OF SUPERVISION SIGNAL There are alternative supervisions ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Though, these reconstructions are naturally constrained by the resolution and sensitivity limitations of the sensors.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Baseline: We compare our SITR with ViTs that are either trained from scratch or fine-tuned from ImageNet weights to show the effectiveness of our method.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** This indicates that SITR successfully aligns the tactile signals from different sensors, highlighting its capacity to eliminate sensor-variant features.
+- **p. 24 / Figure/Table caption - extractive body cue:** Table 6: Comparison of MAE, VQGAN, and SITR performance on intra-sensor and inter-sensor classification tasks (%) and inter-sensor pose estimation (mm) A.6.3 EFFECT OF SIMULATION ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -133,7 +133,7 @@ PDF body method statement (p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), objective p. 14 (A.1.2 ARCHITECTURE), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), temporal p. 14 (A.1 IMPLEMENTATION DETAILS), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), objective p. 14 (A.1.2 ARCHITECTURE), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), temporal p. 14 (A.1 IMPLEMENTATION DETAILS), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

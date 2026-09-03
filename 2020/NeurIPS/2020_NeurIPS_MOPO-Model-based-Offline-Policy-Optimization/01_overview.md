@@ -1,8 +1,10 @@
 # MOPO: Model-based Offline Policy Optimization
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2005.13239.
-> PDF retrieval source: https://arxiv.org/pdf/2005.13239. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2005.13239.
+> PDF retrieval source: https://arxiv.org/pdf/2005.13239. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2005.13239
 - Code/Project: https://github.com/tianheyu927/mopo
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...를 문제로 두고, Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal contribution. † equal advising.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...를 문제로 두고, The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of the model's ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -31,11 +33,11 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Core Idea
 
-- **p. 1 / 1 Introduction - extractive body cue:** Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal contribution. ...
 - **p. 2 / 1 Introduction - extractive body cue:** The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is ...
 - **p. 1 / Abstract - extractive body cue:** Instead, we propose to modify the existing model-based RL methods by applying them with rewards artificially penalized by the uncertainty of the dynamics.
 - **p. 5 / 3 Preliminaries - extractive body cue:** We will analyze our framework under the assumption that we have access to an oracle uncertainty quantification module that provides an upper bound on the ...
 - **p. 2 / 1 Introduction - extractive body cue:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains.
+- **p. 1 / Abstract - extractive body cue:** However, standard model-based RL methods, designed for the online setting, do not provide an explicit mechanism to avoid the offline setting's distributional shift issue.
 - **p. 4 / 3 Preliminaries - extractive body cue:** 4 MOPO: Model-Based Offline Policy Optimization Unlike model-free methods, our goal is to design an offline model-based reinforcement learning algorithm that can take actions that ...
 - **p. 4 / 3 Preliminaries - extractive body cue:** Then we maximize the conservative estimation of the return by an off-the-shelf reinforcement learning algorithm, which gives MOPO, a generic model-based off-policy algorithm (Section 4.2).
 - **p. 7 / 3 Preliminaries - extractive body cue:** Following MBPO, we model the dynamics using a neural network that outputs a Gaussian distribution over the next state and reward3: bTθ,φ(st+1, r/st, at) = ...
@@ -51,11 +53,11 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal contribution. ...
 - **p. 2 / 1 Introduction - extractive body cue:** The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is ...
 - **p. 1 / Abstract - extractive body cue:** Instead, we propose to modify the existing model-based RL methods by applying them with rewards artificially penalized by the uncertainty of the dynamics.
 - **p. 5 / 3 Preliminaries - extractive body cue:** We will analyze our framework under the assumption that we have access to an oracle uncertainty quantification module that provides an upper bound on the ...
 - **p. 2 / 1 Introduction - extractive body cue:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains.
+- **p. 1 / Abstract - extractive body cue:** However, standard model-based RL methods, designed for the online setting, do not provide an explicit mechanism to avoid the offline setting's distributional shift issue.
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while the ...
 - **p. 18 / Figure/Table caption - extractive body cue:** Table 2. We observe that different reward penalties can all lead to substantial improvement of the performance and reward penalty based on learned variance is ...
 - **p. 8 / 5 Experiments - extractive body cue:** In Table 2, we show that MOPO significantly outperforms the state-of-the-art model-free approaches.
@@ -84,4 +86,13 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...를 문제로 두고, Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal contribution. † equal advising.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 7 (3 Preliminaries), p. 4 (3 Preliminaries) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...를 문제로 두고, The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of the model's ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 7 (3 Preliminaries), p. 4 (3 Preliminaries) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In particular, because offline model-based algorithms cannot improve the dynamics model using additional experience, we expect that such algorithms require careful use of the model in regions outside of the ... (p. 2, 1 Introduction).
+- **Actual contribution:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 1: Results for D4RL datasets. Each number is the normalized score proposed in [18] of the policy at the last iteration of training, averaged over 6 random seeds, ± ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** These failures are generally caused by large extrapolation error when the Q-function is evaluated on out-of-distribution actions [19, 36], which can lead to unstable learning and divergence. (p. 1, 1 Introduction).

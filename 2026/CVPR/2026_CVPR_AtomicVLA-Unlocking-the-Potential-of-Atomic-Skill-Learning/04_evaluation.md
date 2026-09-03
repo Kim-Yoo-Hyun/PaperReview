@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | 5, AtomicVLA achieves a success rate of 95.2%, outperforming the MoE baseline by 6.6% and the timestep-conditioned MoDE variant by 5.7%. | p. 8 (4.4. Ablation Study) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4. Error Recovery Capability Demonstration. When encountering a skill execution failure, AtomicVLA automatically assesses the progress and re-executes the current skill. suites, outperforming ... | p. 6 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use 5 skill experts for both the LIBERO benchmark suite and real-world robot experiments. | embodiment, simulator version and control stack | p. 6 (4.1. Experiments Setup), p. 6 (4.1. Experiments Setup) |
 | Task/environment | We conduct real-world experiments using a Franka robotic arm, which includes three long-horizon tasks and five different types of short tasks. | reset, timeout, object/scene variation | p. 6 (4.1. Experiments Setup), p. 7 (4.3. Results on Real-world Robot) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 - **p. 7 / 4.3. Results on Real-world Robot - extractive body cue:** AtomicVLA* reliably completes the experimental configurations that π0.5 fails to accomplish, and this advantage becomes more evident in tasks involving door-closing operations.
 - **p. 8 / 5. Conclusion - extractive body cue:** Notably, it effectively mitigates skill interference arising from joint training and alleviates knowledge forgetting and performance degradation during continual skill acquisition, highlighting its significant potential ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experiments Setup), p. 6 (4.1. Experiments Setup), p. 7 (4.3. Results on Real-world Robot), p. 5 (4.1. Experiments Setup), p. 5 (4.1. Experiments Setup), p. 7 (4.2. Results on Simulation), metrics p. 6 (Figure/Table caption), p. 6 (4.2. Results on Simulation), p. 7 (4.3. Results on Real-world Robot), p. 8 (4.4. Ablation Study), p. 7 (4.2. Results on Simulation), p. 8 (4.3. Results on Real-world Robot), baselines p. 6 (4.2. Results on Simulation), p. 7 (4.3. Results on Real-world Robot), p. 7 (4.2. Results on Simulation), p. 8 (4.4. Ablation Study), p. 8 (4.3. Results on Real-world Robot), p. 6 (4.1. Experiments Setup), results p. 8 (4.4. Ablation Study), p. 6 (Figure/Table caption), p. 6 (4.2. Results on Simulation), p. 7 (4.2. Results on Simulation), p. 8 (4.3. Results on Real-world Robot), p. 7 (4.3. Results on Real-world Robot).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiments Setup), p. 6 (4.1. Experiments Setup), p. 7 (4.3. Results on Real-world Robot), p. 5 (4.1. Experiments Setup), p. 5 (4.1. Experiments Setup), p. 7 (4.2. Results on Simulation), metrics p. 6 (Figure/Table caption), p. 6 (4.2. Results on Simulation), p. 7 (4.3. Results on Real-world Robot), p. 8 (4.4. Ablation Study), p. 7 (4.2. Results on Simulation), p. 8 (4.3. Results on Real-world Robot), baselines p. 6 (4.2. Results on Simulation), p. 7 (4.3. Results on Real-world Robot), p. 7 (4.2. Results on Simulation), p. 8 (4.4. Ablation Study), p. 8 (4.3. Results on Real-world Robot), p. 6 (4.1. Experiments Setup), results p. 8 (4.4. Ablation Study), p. 6 (Figure/Table caption), p. 6 (4.2. Results on Simulation), p. 7 (4.2. Results on Simulation), p. 8 (4.3. Results on Real-world Robot), p. 7 (4.3. Results on Real-world Robot).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4. Error Recovery Capability Demonstration. When encountering a skill execution failure, AtomicVLA automatically assesses the progress and re-executes the current skill. suites, outperforming the strong baseline by 2.4%. Notably, ... (p. 6, Figure/Table caption).
+- **Metric evidence:** 4, the average success rate of π0.5 decreases by approximately 15%, with the stack task exhibiting the most severe interference, showing a 20% decrease. (p. 7, 4.3. Results on Real-world Robot).
+- **Baseline/ablation evidence:** When encountering a skill execution failure, AtomicVLA automatically assesses the progress and re-executes the current skill. suites, outperforming the strong baseline by 2.4%. (p. 6, 4.2. Results on Simulation).
+- **Failure/negative evidence:** Importantly, when an execution failure occurs, for example, the butter is grasped but subsequently dropped as illustrated in Fig. (p. 6, 4.2. Results on Simulation).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p092.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p092.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p092.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p092.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -77,10 +77,10 @@ PDF body method statement (p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHO
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | For each video, we randomly sample a time step ¯t and then randomly sample points on this frame and generate their tracks ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | For each video, we randomly sample a time step ¯t and then randomly sample points on this frame and generate their tracks ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | Formally, given a sequence of images from a video o1, ..., oT , any one of the time steps ¯t ∈[1, T], ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -134,3 +134,12 @@ PDF body method statement (p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHO
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To model the tracks, we propose a track transformer and illustrate the architecture in Figure 2 (a). a) Self-supervised Track Annotation.: Initially, we generate point trajectories from action-free videos for ... (p. 3, IV. METHOD).
+- **Objective/update evidence:** Our track-guided policy is trained with MSE loss. (p. 5, IV. METHOD).
+- **Temporal/runtime evidence:** For each video, we randomly sample a time step ¯t and then randomly sample points on this frame and generate their tracks by running the tracker. (p. 3, IV. METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

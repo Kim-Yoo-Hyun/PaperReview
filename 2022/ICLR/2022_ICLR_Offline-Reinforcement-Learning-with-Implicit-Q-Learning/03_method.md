@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=68n2s9ZJWF8; PDF retrieval source: https://arxiv.org/pdf/2110.06169. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=68n2s9ZJWF8; PDF retrieval source: https://arxiv.org/pdf/2110.06169. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Fixed-data support | 온라인 탐색 없이 transition/action 분포를 정의한다 | offline trajectories와 metadata | dataset support, behavior distribution과 task return을 정리 | training batch/support | The main insight in our work is that, instead of evaluating unseen actions from the latest policy, we can approximate the policy ... | p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES) |
 | Value / uncertainty update | dataset 밖 action의 과대추정을 억제한다 | batch transition과 value parameters | conservative, implicit, uncertainty 또는 behavior-regularized update를 수행 | Q/V/uncertainty estimate | Off-policy RL methods based on approximate dynamic programming typically utilize a state-action value function (Q-function), referred to as Q(s, a), which corresponds ... | p. 3 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 |---|---|---|---|
 | Horizon | offline trajectory/discounted return horizon; deployment horizon과 분리한다. | 0.00 0.25 0.50 0.75 1.00 Gradient Steps (×106) 0 50 100 Episode Return antmaze-medium-play-v0 0.00 0.25 0.50 0.75 1.00 Gradient Steps (×106) ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training은 batch update, inference는 environment control tick; exact values 확인 필요. | To evaluate the finetuning capability of various RL algorithms, we first run offline RL on each dataset, then run 1M steps of ... | Hz/fps, inference time and control rate |
-| Memory | fixed dataset, value/policy parameters와 optional context/history. | not recovered | window and reset |
+| Memory | fixed dataset, value/policy parameters와 optional context/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | 0.00 0.25 0.50 0.75 1.00 Gradient Steps (×106) 0 50 100 Episode Return antmaze-medium-play-v0 0.00 0.25 0.50 0.75 1.00 Gradient Steps (×106) ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -132,8 +132,17 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 7 (3 PRELIMINARIES), objective p. 3 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), temporal p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (2 RELATED WORK).
+- **Evidence anchors reviewed:** method p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 7 (3 PRELIMINARIES), objective p. 3 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), temporal p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (2 RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The main insight in our work is that, instead of evaluating unseen actions from the latest policy, we can approximate the policy improvement step implicitly by treating the state value ... (p. 1, ABSTRACT).
+- **Objective/update evidence:** Note that we can optimize this objective with stochastic gradient descent. (p. 4, 3 PRELIMINARIES).
+- **Temporal/runtime evidence:** For both steps, we use a version of clipped double Q-learning (Fujimoto et al., 2018), taking a minimum of two Q-functions for V -function and policy updates. (p. 6, 3 PRELIMINARIES).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -1,8 +1,10 @@
 # Learning Transferable Visual Models From Natural Language Supervision
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2103.00020.
-> PDF retrieval source: https://arxiv.org/pdf/2103.00020. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2103.00020.
+> PDF retrieval source: https://arxiv.org/pdf/2103.00020. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2103.00020
 - Code/Project: https://github.com/openai/CLIP
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽는다. 본문은 Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs.를 문제로 두고, Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard & Ruder, 2018; Radford et al., 2018; ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽는다. 본문은 Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs.를 문제로 두고, Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but also connects that representation to language which ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -31,11 +33,11 @@ VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽�
 
 ## Core Idea
 
-- **p. 1 / 1. Introduction and Motivating Work - extractive body cue:** Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** At the core of our approach is the idea of learning perception from supervision contained in natural language.
 - **p. 4 / 2.3. Selecting an Efficient Pre-Training Method - extractive body cue:** In Figure 2 we show that a 63 million parameter transformer language model, which already uses twice the compute of its ResNet-50 image encoder, learns ...
 - **p. 1 / 1. Introduction and Motivating Work - extractive body cue:** The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has enabled taskagnostic architectures ...
+- **p. 6 / 3.1.1. MOTIVATION - extractive body cue:** However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods rather ...
 - **p. 5 / 2.4. Choosing and Scaling a Model - extractive body cue:** Learning Transferable Visual Models From Natural Language Supervision 5 # image_encoder - ResNet or Vision Transformer # text_encoder - CBOW or Text Transformer # I[n, ...
 - **p. 4 / 2.4. Choosing and Scaling a Model - extractive body cue:** For the first, we use ResNet-50 (He et al., 2016a) as the base architecture for the image encoder due to its widespread adoption and proven ...
 - **p. 4 / 2.3. Selecting an Efficient Pre-Training Method - extractive body cue:** To our knowledge this batch construction technique and objective was first introduced in the area of deep metric learning as the multi-class N-pair loss Sohn ...
@@ -51,11 +53,11 @@ VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction and Motivating Work - extractive body cue:** Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** At the core of our approach is the idea of learning perception from supervision contained in natural language.
 - **p. 4 / 2.3. Selecting an Efficient Pre-Training Method - extractive body cue:** In Figure 2 we show that a 63 million parameter transformer language model, which already uses twice the compute of its ResNet-50 image encoder, learns ...
 - **p. 1 / 1. Introduction and Motivating Work - extractive body cue:** The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has enabled taskagnostic architectures ...
+- **p. 6 / 3.1.1. MOTIVATION - extractive body cue:** However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods rather ...
 - **p. 8 / 3.1.4. PROMPT ENGINEERING AND ENSEMBLING - extractive body cue:** Learning Transferable Visual Models From Natural Language Supervision 8 Similar to the "prompt engineering" discussion around GPT3 (Brown et al., 2020; Gao et al., 2020), ...
 - **p. 6 / 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS - extractive body cue:** The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite ...
 - **p. 13 / 3.3. Robustness to Natural Distribution Shift - extractive body cue:** They propose this distinction because in part because they find that while several techniques have been demonstrated to improve performance on synthetic distribution shifts, they ...
@@ -84,4 +86,13 @@ VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽는다. 본문은 Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs.를 문제로 두고, Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard & Ruder, 2018; Radford et al., 2018; ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION), p. 6 (3.1.1. MOTIVATION), p. 5 (2.4. Choosing and Scaling a Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+VLA and generalist robot policies의 upstream 문제를 이해하기 위해 읽는다. 본문은 Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs.를 문제로 두고, Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but also connects that representation to language which ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION), p. 6 (3.1.1. MOTIVATION), p. 5 (2.4. Choosing and Scaling a Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs. (p. 2, 1. Introduction and Motivating Work).
+- **Actual contribution:** At the core of our approach is the idea of learning perception from supervision contained in natural language. (p. 3, 2.1. Natural Language Supervision).
+- **Evaluation boundary:** The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS).
+- **Explicit failure boundary:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. (p. 11, 3.2. Representation Learning).

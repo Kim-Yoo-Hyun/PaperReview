@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WnSl42M9Z4; PDF retrieval source: https://arxiv.org/pdf/2406.10454. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WnSl42M9Z4; PDF retrieval source: https://arxiv.org/pdf/2406.10454. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (9. Experiments on Imitation), p. 9 (Figur
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 9. Experiments on Imitation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our HIT achieves higher success rates than other baselines across all tasks. | p. 10 (9. Experiments on Imitation) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5: Comparisons on Imitation. We show success rates of Humanoid Imitation Transformer (Ours), HIT with monocular input, ACT and open-loop trajectory replay across ... | p. 9 (Figure/Table caption) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 10 (9. Experiments on Imitation), p. 9 (Figur
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Shown in Table 5, we compare our imitation learning method Humanoid Imitation Transformer with three baseline methods: HIT policies with monocular inputs (Monocular), ACT ... | embodiment, simulator version and control stack | p. 10 (9. Experiments on Imitation), p. 10 (8.1. Comparisons with Other Teleoperation) |
 | Task/environment | While ALOHA enables precise control of robot joint angles, its fixed hardware setup makes it harder to adapt to people with different heights and ... | reset, timeout, object/scene variation | p. 10 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation) |
@@ -160,7 +160,16 @@ PDF body evaluation/result cue (p. 10 (9. Experiments on Imitation), p. 9 (Figur
 - **p. 10 / 9. Experiments on Imitation - extractive body cue:** Throughout the development of our system, we encountered several limitations.
 - **p. 10 / 9. Experiments on Imitation - extractive body cue:** It fails the Wear a Shoe and Walk task completely, where depth perception is crucial.
 
-- **PDF anchors reviewed:** datasets p. 10 (9. Experiments on Imitation), p. 10 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), metrics p. 10 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), p. 9 (8. Experiments on Shadowing), p. 10 (9. Experiments on Imitation), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 9 (8. Experiments on Shadowing), p. 9 (8.1. Comparisons with Other Teleoperation), p. 10 (9. Experiments on Imitation), p. 10 (9. Experiments on Imitation), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 10 (9. Experiments on Imitation), p. 9 (Figure/Table caption), p. 9 (8.1. Comparisons with Other Teleoperation), p. 10 (9. Experiments on Imitation).
+- **Evidence anchors reviewed:** datasets p. 10 (9. Experiments on Imitation), p. 10 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), metrics p. 10 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), p. 9 (8. Experiments on Shadowing), p. 10 (9. Experiments on Imitation), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 9 (8. Experiments on Shadowing), p. 9 (8.1. Comparisons with Other Teleoperation), p. 10 (9. Experiments on Imitation), p. 10 (9. Experiments on Imitation), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 10 (9. Experiments on Imitation), p. 9 (Figure/Table caption), p. 9 (8.1. Comparisons with Other Teleoperation), p. 10 (9. Experiments on Imitation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Shown in Table 5, we compare our imitation learning method Humanoid Imitation Transformer with three baseline methods: HIT policies with monocular inputs (Monocular), ACT [104], and Open-loop trajectory replay, across ... (p. 10, 9. Experiments on Imitation).
+- **Metric evidence:** In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is the only method that can be used for whole-body teleoperation, solving the ... (p. 10, 8.1. Comparisons with Other Teleoperation).
+- **Baseline/ablation evidence:** Overall HIT (Ours) outperforms others. (p. 9, 8. Experiments on Shadowing).
+- **Failure/negative evidence:** It fails the Wear a Shoe and Walk task completely, where depth perception is crucial. (p. 10, 9. Experiments on Imitation).

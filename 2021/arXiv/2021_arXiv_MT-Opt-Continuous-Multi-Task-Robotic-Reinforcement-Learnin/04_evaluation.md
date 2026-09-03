@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2104.08212; PDF retrieval source: https://arxiv.org/abs/2104.08212. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2104.08212; PDF retrieval source: https://arxiv.org/abs/2104.08212. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VII. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. | p. 7 (VII. EXPERIMENTS) |
 | VII. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The 12-task policy outperforms the 2task policy even on the two tasks that the 2-task policy is trained on, suggesting that training multiple tasks ... | p. 7 (VII. EXPERIMENTS) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The goal of our real-world experiments is to answer the following questions: (1) How does MT-Opt perform, quantitatively and qualitatively, on a large set ... | embodiment, simulator version and control stack | p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS) |
 | Task/environment | Experimental Setup MT-Opt provides a general robotic skill learning framework that we use to learn multiple tasks, including semantic picking (i.e., picking an object ... | reset, timeout, object/scene variation | p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 - **p. 14 / Figure/Table caption - extractive body cue:** Fig. 11: System overview: Task episodes from disk are continuously loaded by LogReplay job into task replay buffers. LogReplay process assigns binary reward signal to ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Fig. 14: Counts of labelled SD training data by task and outcome. This data was generated either from human video demonstration, or by labelling terminal ...
 
-- **PDF anchors reviewed:** datasets p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), metrics p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 17 (Figure/Table caption), p. 5 (Figure/Table caption), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), metrics p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 17 (Figure/Table caption), p. 5 (Figure/Table caption), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS).
+- **Metric evidence:** (3) Does data sharing improve performance of the system? (p. 6, VII. EXPERIMENTS).
+- **Baseline/ablation evidence:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS).
+- **Failure/negative evidence:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks. (p. 8, VII. EXPERIMENTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=CkmLys7ipp; PDF retrieval source: https://openreview.net/pdf/ace387ee7e9dada09fa110400dbde09112d691f9.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=CkmLys7ipp; PDF retrieval source: https://arxiv.org/pdf/2506.09417.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [50] which bootstraps the nuScenes [6] and Waymo-Open [45] dataset.1 nuScenes consists of ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.2 Evaluation Results In this section, we report evaluation results on the Occ3D benchmark [50] and compare with latest state-of-the-art methods. nuScenes Our results on ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Our extensive experiments on the Occ3D-nuScenes and Occ3D-Waymo benchmark demonstrates ODG sets new state-of-the-art results while maintaining highly competitive efficiency.
-- **p. 6 / 4 Experiments - extractive PDF cue:** On nuScenes, we resize input images to the resolution of 256 × 704.
-- **p. 8 / 4 Experiments - extractive PDF cue:** For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Waymo We further evaluate our ODG on the Occ3D-Waymo dataset and the results are presented in Tab.
-- **p. 7 / 4 Experiments - extractive PDF cue:** It is worth noting that given our specific design to attend to the dynamic agents in the scene, we show significant improvement when examining the ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** To make ODG attend to moving objects, we expand the standard 3D Gaussian properties of dynamic queries with 3D bounding box attributes, which effectively guides ...
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [48] which bootstraps the nuScenes [6] and Waymo-Open [43] dataset.∗nuScenes consists of 1,000 ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.2 Evaluation Results In this section, we report evaluation results on the Occ3D benchmark [48] and compare with latest state-of-the-art methods. nuScenes Our results on ...
+- **p. 9 / 4 Experiments - extractive body cue:** Our extensive experiments on the Occ3D-nuScenes and Occ3D-Waymo benchmark demonstrates ODG sets new state-of-the-art results while maintaining highly competitive efficiency.
+- **p. 6 / 4 Experiments - extractive body cue:** On nuScenes, we resize input images to the resolution of 256 × 704.
+- **p. 8 / 4 Experiments - extractive body cue:** For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs.
+- **p. 8 / 4 Experiments - extractive body cue:** Waymo We further evaluate our ODG on the Occ3D-Waymo dataset and the results are presented in Tab.
+- **p. 7 / 4 Experiments - extractive body cue:** It is worth noting that given our specific design to attend to the dynamic agents in the scene, we show significant improvement when examining the ...
+- **p. 9 / 4 Experiments - extractive body cue:** To make ODG attend to moving objects, we expand the standard 3D Gaussian properties of dynamic queries with 3D bounding box attributes, which effectively guides ...
 
 ## Evaluation Type and Scope
 
@@ -26,11 +26,11 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 4 Experiments (p. 6); C. Evaluation of Prediction from Each Layer (p. 15); 4. Experimental result reproducibility (p. 17); 7. Experiment statistical significance (p. 18); 8. Experiments compute resources (p. 19).
+- **Detected evaluation headings:** 4 Experiments (p. 6).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | ODG achieves consistent improvement across all dynamic categories. | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Specifically, ODG-T (8f) achieves an mIoU of 35.54 with a RayIoU of 39.2, outperforming OPUS-T (8f) who has an mIoU of 33.2 (-2.34) and ... | p. 7 (4 Experiments) |
@@ -40,34 +40,34 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [50] which bootstraps the nuScenes [6] and Waymo-Open [45] dataset.1 nuScenes consists of ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.2 Evaluation Results In this section, we report evaluation results on the Occ3D benchmark [50] and compare with latest state-of-the-art methods. nuScenes Our results on ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Our extensive experiments on the Occ3D-nuScenes and Occ3D-Waymo benchmark demonstrates ODG sets new state-of-the-art results while maintaining highly competitive efficiency.
-- **p. 6 / 4 Experiments - extractive PDF cue:** On nuScenes, we resize input images to the resolution of 256 × 704.
-- **p. 8 / 4 Experiments - extractive PDF cue:** For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Waymo We further evaluate our ODG on the Occ3D-Waymo dataset and the results are presented in Tab.
-- **p. 7 / 4 Experiments - extractive PDF cue:** It is worth noting that given our specific design to attend to the dynamic agents in the scene, we show significant improvement when examining the ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** To make ODG attend to moving objects, we expand the standard 3D Gaussian properties of dynamic queries with 3D bounding box attributes, which effectively guides ...
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [48] which bootstraps the nuScenes [6] and Waymo-Open [43] dataset.∗nuScenes consists of 1,000 ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.2 Evaluation Results In this section, we report evaluation results on the Occ3D benchmark [48] and compare with latest state-of-the-art methods. nuScenes Our results on ...
+- **p. 9 / 4 Experiments - extractive body cue:** Our extensive experiments on the Occ3D-nuScenes and Occ3D-Waymo benchmark demonstrates ODG sets new state-of-the-art results while maintaining highly competitive efficiency.
+- **p. 6 / 4 Experiments - extractive body cue:** On nuScenes, we resize input images to the resolution of 256 × 704.
+- **p. 8 / 4 Experiments - extractive body cue:** For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs.
+- **p. 8 / 4 Experiments - extractive body cue:** Waymo We further evaluate our ODG on the Occ3D-Waymo dataset and the results are presented in Tab.
+- **p. 7 / 4 Experiments - extractive body cue:** It is worth noting that given our specific design to attend to the dynamic agents in the scene, we show significant improvement when examining the ...
+- **p. 9 / 4 Experiments - extractive body cue:** To make ODG attend to moving objects, we expand the standard 3D Gaussian properties of dynamic queries with 3D bounding box attributes, which effectively guides ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Overview of proposed ODG, where we model the dynamic and static elements of the scene with two separate sets of Gaussian queries. Dual-query ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: 3D semantic occupancy results on Occ3D-nuScenes validation set [6, 50]. Cons. Veh stands for "Construction Vehicle" and Dri. Sur stands for "Drivable Surface". ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 2: Visualization of ODG prediction on the Occ3D-nuScenes [50, 6] validation set. The ODG can capture all the vehicles on a gloomy rainy day. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Occupancy prediction results over key dynamic object classes on Occ3D-nuScenes [50] validation set. ODG achieves consistent improvement across all dynamic categories. Bold/Underline: Best/second ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: 3D semantic occupancy results on Occ3D-Waymo validation set [45, 50]. GO stands for "General Object". Traf. Light stands for "Traffic Light" and Cons. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3: Visualization of ODG prediction on the Occ3D-Waymo [50, 45] validation set. Waymo We further evaluate our ODG on the Occ3D-Waymo dataset and the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Tab. 3. We note that Occ3D-Waymo is a much less well evaluated occupancy benchmark especially for camera-only methods, given its challenging conditions (e.g. almost no ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Impact of different components inside ODG on model performance. Motion compensation Query attention Rendering Sup mIoU RayIoU1m RayIoU2m RayIoU4m
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview of proposed ODG, where we model the dynamic and static elements of the scene with two separate sets of Gaussian queries. Dual-query ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: 3D semantic occupancy results on Occ3D-nuScenes validation set [6, 48]. Cons. Veh stands for "Construction Vehicle" and Dri. Sur stands for "Drivable Surface". ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 2: Visualization of ODG prediction on the Occ3D-nuScenes [48, 6] validation set. The ODG can capture all the vehicles on a gloomy rainy day. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Occupancy prediction results over key dynamic object classes on Occ3D-nuScenes [48] validation set. ODG achieves consistent improvement across all dynamic categories. Bold/Underline: Best/second ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: 3D semantic occupancy results on Occ3D-Waymo validation set [43, 48]. GO stands for "General Object". Traf. Light stands for "Traffic Light" and Cons. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Visualization of ODG prediction on the Occ3D-Waymo [48, 43] validation set. Waymo We further evaluate our ODG on the Occ3D-Waymo dataset and the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Tab. 3. We note that Occ3D-Waymo is a much less well evaluated occupancy benchmark especially for camera-only methods, given its challenging conditions (e.g. almost no ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Impact of different components inside ODG on model performance. Motion compensation Query attention Rendering Sup mIoU RayIoU1m RayIoU2m RayIoU4m
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [50] which bootstraps the nuScenes [6] and Waymo-Open [45] dataset.1 nuScenes consists ... | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 7 (4 Experiments) |
-| Task/environment | 4.2 Evaluation Results In this section, we report evaluation results on the Occ3D benchmark [50] and compare with latest state-of-the-art methods. nuScenes Our results ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 9 (4 Experiments) |
+| Robot/hardware/simulator | 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [48] which bootstraps the nuScenes [6] and Waymo-Open [43] dataset.∗nuScenes consists of ... | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 7 (4 Experiments) |
+| Task/environment | 4.2 Evaluation Results In this section, we report evaluation results on the Occ3D benchmark [48] and compare with latest state-of-the-art methods. nuScenes Our results ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 9 (4 Experiments) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 2 (1 Introduction), p. 3 (3 Method) |
 | Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1 Introduction), p. 3 (3 Method) |
 
@@ -79,10 +79,9 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 | For rendering loss Lr, we set λ = 0.05 for stage ℓ= 1, 6, and λ = 0.01 for the rest. | definition/direction/unit from same section | p. 6 (4 Experiments) |
 | Veh), Motorcycle, and Truck, ODG-L carries a significant lead of +4.13 for mIoU, once again demonstrating the efficacy of our proposed strategy of handling ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | This demonstrates it is essential to compensate object motion for dynamic agents. | definition/direction/unit from same section | p. 8 (4 Experiments) |
-| Our proposed ODG provides more accurate 3D occupancy prediction while maintaining inference efficiency, which is beneficial to safe, energy-efficient autonomous driving. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 | Our extensive experiments on the Occ3D-nuScenes and Occ3D-Waymo benchmark demonstrates ODG sets new state-of-the-art results while maintaining highly competitive efficiency. | definition/direction/unit from same section | p. 9 (4 Experiments) |
+| It is evident that by progressively enabling different modules in ODG, the model performs increasingly well, validating the soundness of the designs that we ... | definition/direction/unit from same section | p. 9 (4 Experiments) |
 | Figure 1: Overview of proposed ODG, where we model the dynamic and static elements of the scene with two separate sets of Gaussian queries. ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
-| Table 9: Effect of query composition on model performance. | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -123,12 +122,12 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 | Primary metric/result | Specifically, ODG-T (8f) achieves an mIoU of 35.54 with a RayIoU of 39.2, outperforming OPUS-T (8f) who has an mIoU of 33.2 (-2.34) and ... | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [50] which bootstraps the nuScenes [6] and Waymo-Open [45] dataset.1 nuScenes consists of ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** The voxel grid range is [-40m, -40m, -1m, 40m, 40m, 5.4m] along the X, Y and Z axis with a grid resolution of 200×200×16 and ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** We train all our models with an initial learning rate of 2×10-4 and decays with CosineAnnealing [39] schedule.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Unless otherwise specified, we train all our models with a global batch size of 8 for 100 epochs using NVIDIA A100 GPUs.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Specifically, ODG-T (8f) achieves an mIoU of 35.54 with a RayIoU of 39.2, outperforming OPUS-T (8f) who has an mIoU of 33.2 (-2.34) and a ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Experiment Setup Datasets: We evaluate our model on the Occ3D benchmark [48] which bootstraps the nuScenes [6] and Waymo-Open [43] dataset.∗nuScenes consists of 1,000 ...
+- **p. 6 / 4 Experiments - extractive body cue:** The voxel grid range is [-40m, -40m, -1m, 40m, 40m, 5.4m] along the X, Y and Z axis with a grid resolution of 200×200×16 and ...
+- **p. 6 / 4 Experiments - extractive body cue:** We train all our models with an initial learning rate of 2×10-4 and decays with CosineAnnealing [38] schedule.
+- **p. 6 / 4 Experiments - extractive body cue:** Unless otherwise specified, we train all our models with a global batch size of 8 for 100 epochs using NVIDIA A100 GPUs.
+- **p. 7 / 4 Experiments - extractive body cue:** Specifically, ODG-T (8f) achieves an mIoU of 35.54 with a RayIoU of 39.2, outperforming OPUS-T (8f) who has an mIoU of 33.2 (-2.34) and a ...
+- **p. 8 / 4 Experiments - extractive body cue:** For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs.
 
 ## Generalization and Failure Cases
 
@@ -143,7 +142,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 | Body reproducibility cue | Anchor |
 |---|---|
 | Unless otherwise specified, we train all our models with a global batch size of 8 for 100 epochs using NVIDIA A100 GPUs. | p. 6 (4 Experiments) |
-| Inference runtime is measured on a single idle A100 GPU with PyTorch fp32 backend. | p. 6 (4 Experiments) |
+| Inference runtime is measured on a single idle A100 GPU with PyTorch fp32 backend. ∗nuScenes is under a CC BY-NC-SA 4.0 license and Waymo ... | p. 6 (4 Experiments) |
 | Specifically, ODG-T (8f) achieves an mIoU of 35.54 with a RayIoU of 39.2, outperforming OPUS-T (8f) who has an mIoU of 33.2 (-2.34) and ... | p. 7 (4 Experiments) |
 | For all our ablation studies, we adopt ODG-T and train on the Occ3D-nuScenes for 24 epochs. | p. 8 (4 Experiments) |
 
@@ -157,9 +156,9 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** However, as promising as ODG is, it does not come without limitations.
+- **p. 9 / 4 Experiments - extractive body cue:** However, as promising as ODG is, it does not come without limitations.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

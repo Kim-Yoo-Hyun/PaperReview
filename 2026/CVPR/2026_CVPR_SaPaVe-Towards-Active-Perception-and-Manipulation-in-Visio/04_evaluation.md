@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We design a series of experiments leveraging different components of our dataset and benchmarks: (1) For the first experiment to evaluate semantic active perception (Sec.
-- **p. 8 / 4.4. Comparison with existing VLA models - extractive PDF cue:** Our model demonstrates robust generalization when performing active manipulation across unseen objects, varying lighting conditions, and diverse scenes.
-- **p. 8 / 4.6. Ablation Studies - extractive PDF cue:** We conduct a series of ablation experiments on 4 real-world tasks to evaluate the effectiveness of different components in our method.
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Performance on active manipulation in real-world settings.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** For all experiments, we report the success rate.
-- **p. 7 / 4.3. Fixed and Dynamic Cameras Evaluation - extractive PDF cue:** 2, under a fixed viewpoint, the success rates of unoccluded, occluded, and out-of-view tasks all decrease substantially-especially for the Out-of-View task, which drops by more ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We design a series of experiments leveraging different components of our dataset and benchmarks: (1) For the first experiment to evaluate semantic active perception (Sec.
+- **p. 8 / 4.4. Comparison with existing VLA models - extractive body cue:** Our model demonstrates robust generalization when performing active manipulation across unseen objects, varying lighting conditions, and diverse scenes.
+- **p. 8 / 4.6. Ablation Studies - extractive body cue:** We conduct a series of ablation experiments on 4 real-world tasks to evaluate the effectiveness of different components in our method.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Performance on active manipulation in real-world settings.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** For all experiments, we report the success rate.
+- **p. 7 / 4.3. Fixed and Dynamic Cameras Evaluation - extractive body cue:** 2, under a fixed viewpoint, the success rates of unoccluded, occluded, and out-of-view tasks all decrease substantially-especially for the Out-of-View task, which drops by more ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 3. Performance on active manipulation in real-world set- tings. We report the success rate (%) compared to the existing VLA models. Our approach ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting ... | p. 1 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We design a series of experiments leveraging different components of our dataset and benchmarks: (1) For the first experiment to evaluate semantic active perception (Sec.
-- **p. 8 / 4.4. Comparison with existing VLA models - extractive PDF cue:** Our model demonstrates robust generalization when performing active manipulation across unseen objects, varying lighting conditions, and diverse scenes.
-- **p. 8 / 4.6. Ablation Studies - extractive PDF cue:** We conduct a series of ablation experiments on 4 real-world tasks to evaluate the effectiveness of different components in our method.
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Performance on active manipulation in real-world settings.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We design a series of experiments leveraging different components of our dataset and benchmarks: (1) For the first experiment to evaluate semantic active perception (Sec.
+- **p. 8 / 4.4. Comparison with existing VLA models - extractive body cue:** Our model demonstrates robust generalization when performing active manipulation across unseen objects, varying lighting conditions, and diverse scenes.
+- **p. 8 / 4.6. Ablation Studies - extractive body cue:** We conduct a series of ablation experiments on 4 real-world tasks to evaluate the effectiveness of different components in our method.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Performance on active manipulation in real-world settings.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of SaPaVe. SaPaVe can process RGB images and task instructions and output camera movement and manipulation actions in a decoupled action space. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of ActiveViewPose-200K. It is a high-quality dataset comprising 200k image-language and camera movement pairs, enriched with highly detailed semantic annotations to enable ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Overview of ActiveManip-Bench: It is the first simulation benchmark to evaluate active manipulation beyond traditional fixed- view settings. ActiveManip-Bench features 12 richly annotated ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. The performance of semantic active perception evalua- tion. We report the success rate (%) compared to current general VLMs and specialized spatial VLMs.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Evaluation results for fixed and dynamic cameras in simulation of ActiveManip-Bench. We report the success rate (%) compare to different camera configurations with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Performance on active manipulation in real-world set- tings. We report the success rate (%) compared to the existing VLA models. Our approach achieves ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Performance on generalization ability evaluation. We report the success rate (%). Our model demonstrates robust gener- alization when performing active manipulation across unseen ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of SaPaVe. SaPaVe can process RGB images and task instructions and output camera movement and manipulation actions in a decoupled action space. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Overview of ActiveViewPose-200K. It is a high-quality dataset comprising 200k image-language and camera movement pairs, enriched with highly detailed semantic annotations to enable ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Overview of ActiveManip-Bench: It is the first simulation benchmark to evaluate active manipulation beyond traditional fixed- view settings. ActiveManip-Bench features 12 richly annotated ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. The performance of semantic active perception evalua- tion. We report the success rate (%) compared to current general VLMs and specialized spatial VLMs.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Evaluation results for fixed and dynamic cameras in simulation of ActiveManip-Bench. We report the success rate (%) compare to different camera configurations with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Performance on active manipulation in real-world set- tings. We report the success rate (%) compared to the existing VLA models. Our approach achieves ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Performance on generalization ability evaluation. We report the success rate (%). Our model demonstrates robust gener- alization when performing active manipulation across unseen ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 ... | embodiment, simulator version and control stack | p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | We design a series of experiments leveraging different components of our dataset and benchmarks: (1) For the first experiment to evaluate semantic active perception ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 8 (4.4. Comparison with existing VLA models) |
@@ -121,11 +121,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 | Primary metric/result | Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot ...
-- **p. 8 / 4.4. Comparison with existing VLA models - extractive PDF cue:** Task Name Object 1 Object 2 Light 1 Light 2 Scene 1 Scene 2 Original Occluded 85 90 90 95 90 85 90 Pick-and-Place Out-of-View ...
-- **p. 6 / 3.4. ActiveViewPose-200K and ActiveManip-Bench - extractive PDF cue:** (b) This simulation includes a total of 12 tasks and we demonstrates some tasks and scenarios.
-- **p. 6 / 3.4. ActiveViewPose-200K and ActiveManip-Bench - extractive PDF cue:** ActiveManip-Bench features 12 richly annotated tasks across 100 objects and 20 diverse scenes.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot ...
+- **p. 8 / 4.4. Comparison with existing VLA models - extractive body cue:** Task Name Object 1 Object 2 Light 1 Light 2 Scene 1 Scene 2 Original Occluded 85 90 90 95 90 85 90 Pick-and-Place Out-of-View ...
+- **p. 6 / 3.4. ActiveViewPose-200K and ActiveManip-Bench - extractive body cue:** (b) This simulation includes a total of 12 tasks and we demonstrates some tasks and scenarios.
+- **p. 6 / 3.4. ActiveViewPose-200K and ActiveManip-Bench - extractive body cue:** ActiveManip-Bench features 12 richly annotated tasks across 100 objects and 20 diverse scenes.
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.4. Comparison with existing VLA models - extractive PDF cue:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.
-- **p. 7 / 4.3. Fixed and Dynamic Cameras Evaluation - extractive PDF cue:** This result indicates that a fixed camera greatly limits the model's ability to explore the accessible space, leading to failures for active manipulation.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
-- **p. 8 / 4.5. Generalization Ability Evaluation - extractive PDF cue:** 4, our model demonstrates strong generalization to previously unseen objects, indicating robust high-level semantic understanding that enables it to interpret out-of-distribution objects and correctly follow ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** (4) How well does our model generalize to out-of-distribution (OOD) scenarios (Sec.
-- **p. 8 / 4.6. Ablation Studies - extractive PDF cue:** Universal Spatial Knowledge Injection greatly enhances the model's robustness for basic operations under active views.
+- **p. 7 / 4.4. Comparison with existing VLA models - extractive body cue:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.
+- **p. 7 / 4.3. Fixed and Dynamic Cameras Evaluation - extractive body cue:** This result indicates that a fixed camera greatly limits the model's ability to explore the accessible space, leading to failures for active manipulation.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
+- **p. 8 / 4.5. Generalization Ability Evaluation - extractive body cue:** 4, our model demonstrates strong generalization to previously unseen objects, indicating robust high-level semantic understanding that enables it to interpret out-of-distribution objects and correctly follow ...
+- **p. 6 / 4. Experiments - extractive body cue:** (4) How well does our model generalize to out-of-distribution (OOD) scenarios (Sec.
+- **p. 8 / 4.6. Ablation Studies - extractive body cue:** Universal Spatial Knowledge Injection greatly enhances the model's robustness for basic operations under active views.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Comparison with existing VLA models), p. 8 (4.6. Ablation Studies), p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), metrics p. 7 (4.1. Experimental Setup), p. 7 (4.3. Fixed and Dynamic Cameras Evaluation), p. 8 (4.6. Ablation Studies), p. 8 (4.6. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Setup), baselines p. 1 (Figure/Table caption), p. 7 (4.1. Experimental Setup), p. 6 (4. Experiments), p. 7 (4.1. Experimental Setup), p. 8 (4.6. Ablation Studies), p. 8 (4.4. Comparison with existing VLA models), results p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Semantic Active Perception Evaluation), p. 8 (4.4. Comparison with existing VLA models), p. 8 (4.6. Ablation Studies), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Comparison with existing VLA models), p. 8 (4.6. Ablation Studies), p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), metrics p. 7 (4.1. Experimental Setup), p. 7 (4.3. Fixed and Dynamic Cameras Evaluation), p. 8 (4.6. Ablation Studies), p. 8 (4.6. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Setup), baselines p. 1 (Figure/Table caption), p. 7 (4.1. Experimental Setup), p. 6 (4. Experiments), p. 7 (4.1. Experimental Setup), p. 8 (4.6. Ablation Studies), p. 8 (4.4. Comparison with existing VLA models), results p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Semantic Active Perception Evaluation), p. 8 (4.4. Comparison with existing VLA models), p. 8 (4.6. Ablation Studies), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

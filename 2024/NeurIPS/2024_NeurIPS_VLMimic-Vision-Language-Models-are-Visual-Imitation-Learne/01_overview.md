@@ -1,8 +1,8 @@
 # VLMimic: Vision Language Models are Visual Imitation Learner for Fine-grained Actions
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html.
-> PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html.
+> PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, VLM, visual imitation, human video, fine-grained action, long-horizon manipulation
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html
-- Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf
+- Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +84,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This reliance on individual skill acquisition is often considered a major bottleneck of the system due to the lack of large-scale robotic data.를 문제로 두고, Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic skills from 2를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 15 (A Implementation details), p. 15 (A Implementation details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This reliance on individual skill acquisition is often considered a major bottleneck of the system due to the lack of large-scale robotic data. (p. 2, 1 Introduction).
+- **Actual contribution:** Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic skills from 2 (p. 2, 1 Introduction).
+- **Evaluation boundary:** Experimental results, as depicted in Table 3, obviously exhibit a substantial enhancement achieved by our method over baseline methods. (p. 8, 4 Experiments).
+- **Explicit failure boundary:** Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 23, 2. Limitations).

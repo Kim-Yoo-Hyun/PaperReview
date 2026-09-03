@@ -1,8 +1,10 @@
 # Volumetric Environment Representation for Vision-Language Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html.
-> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html.
+> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 ## Why Read It
 
 Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Thus, they encounter challenges in capturing 3D geometry and semantics in complex scenes.를 문제로 두고, In this article, we propose a Volumetric Environment Representation (VER) that quantizes the physical world into structured 3D cells (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Thus, they encounter challenges in capturing 3D geometry and semantics in complex scenes. (p. 1, 1. Introduction).
+- **Actual contribution:** In this article, we propose a Volumetric Environment Representation (VER) that quantizes the physical world into structured 3D cells (Fig. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Table 3. Quantitative results on R4R [39] (more details in §4.1). (RGS), and Remote Grounding Success weighted by Path Length (RGSPL) are also employed for object grounding. For R4R, Coverage ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** From Table 5, the limited range of neighborhood is insufficient to represent the candidate viewpoint for navigation (e.g., 75.80% → 73.75% of SR on R2R). (p. 7, 4.2. Diagnostic Experiment).

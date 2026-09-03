@@ -1,8 +1,8 @@
 # Any-point Trajectory Modeling for Policy Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p092.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p092.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p092.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p092.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, human video, video pretraining, trajectory prediction, Imitation Learning, language-conditioned
 - Official paper: https://www.roboticsproceedings.org/rss20/p092.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p092.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p092.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -86,3 +86,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, the lack of action labels makes utilization of video data in policy learning difficult.를 문제로 두고, We summarize our main contributions below: 1) We propose an Any-point Trajectory Model, a simple and novel framework that bridges video pre-training to policy learning, leveraging the structured representation of particle trajectories.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, the lack of action labels makes utilization of video data in policy learning difficult. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** We summarize our main contributions below: 1) We propose an Any-point Trajectory Model, a simple and novel framework that bridges video pre-training to policy learning, leveraging the structured representation of ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 5: Real robot experiments on a dining table setup consisting of five tasks. The left figure shows our real-world setup and the tasks. The top right figure shows an ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** Another limitation of our method is that the video dataset we use in this paper only contains small domain gaps. (p. 10, VI. LIMITATIONS).

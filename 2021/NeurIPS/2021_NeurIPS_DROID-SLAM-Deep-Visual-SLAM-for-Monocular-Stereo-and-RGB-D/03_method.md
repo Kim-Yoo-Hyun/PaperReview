@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2108.10869; PDF retrieval source: https://arxiv.org/pdf/2108.10869. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2108.10869; PDF retrieval source: https://arxiv.org/pdf/2108.10869. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approac
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | At inference time, we use a custom CUDA kernel which takes advantage of the block-sparse structure of the problem, then perform sparse ... | p. 7 (3 Approach), p. 4 (3 Approach) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Like RAFT[49], we use two separate networks: a feature network and a context network. | p. 4 (3 Approach), p. 4 (3 Approach) |
@@ -134,8 +134,17 @@ PDF body method statement (p. 7 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approac
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approach), p. 5 (3 Approach), p. 5 (3 Approach), p. 6 (3 Approach), objective p. 5 (3 Approach), p. 7 (3 Approach), p. 3 (3 Approach), p. 6 (3 Approach), p. 6 (3 Approach), p. 3 (3 Approach), temporal p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (3 Approach), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 7 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approach), p. 5 (3 Approach), p. 5 (3 Approach), p. 6 (3 Approach), objective p. 5 (3 Approach), p. 7 (3 Approach), p. 3 (3 Approach), p. 6 (3 Approach), p. 6 (3 Approach), p. 3 (3 Approach), temporal p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (3 Approach), p. 8 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We take a video as input with two objectives: estimate the trajectory of the camera and build a 3D map of the environment. (p. 3, 3 Approach).
+- **Objective/update evidence:** In the case of RGB-D, we still treat depth as a variable, since sensor depth can be noisy and have missing observations, and simply add a term to the optimization ... (p. 7, 3 Approach).
+- **Temporal/runtime evidence:** On EuRoC, we average 20fps (camera hz) by downsampling to 320 × 512 resolution and skipping every other frame. (p. 9, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

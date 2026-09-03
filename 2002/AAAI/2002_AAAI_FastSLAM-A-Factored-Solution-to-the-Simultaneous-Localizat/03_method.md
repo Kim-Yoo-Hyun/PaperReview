@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.cs.cmu.edu/~thrun/papers/montemerlo.fastslam-tr.html; PDF retrieval source: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.cs.cmu.edu/~thrun/papers/montemerlo.fastslam-tr.html; PDF retrieval source: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Method Body Digest
 
-- **p. 3 / Abstract - extractive PDF cue:** First, each particle st,[m] in St-1 is used to generate a probabilistic guess of the robot's pose at time t s[m] t ∼ p(st / ...
-- **p. 1 / Abstract - extractive PDF cue:** Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM.
-- **p. 1 / Abstract - extractive PDF cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
-- **p. 2 / Abstract - extractive PDF cue:** Experimental results using a physical robot and a robot simulator illustrate that the FastSLAM algorithm can handle orders of magnitude more landmarks than present day ...
-- **p. 3 / Abstract - extractive PDF cue:** We note that, with a linear Gaussian observation model, the resulting distribution p(θk / st, zt, ut, nt) is exactly a Gaussian, even if the ...
-- **p. 4 / Abstract - extractive PDF cue:** In the last line, "EKF" makes explicit the use of a linearized model as an approximation to the observation model p(zt / θ[m] nt , ...
-- **p. 2 / Abstract - extractive PDF cue:** This conditional independence is the basis of the FastSLAM algorithm described in the next section.
-- **p. 3 / Abstract - extractive PDF cue:** For nt = k, we obtain p(θk / st, zt, ut, nt) (9) Bayes ∝ p(zt / θk, st, zt-1, ut, nt) p(θk / st, ...
+- **p. 3 / Abstract - extractive body cue:** First, each particle st,[m] in St-1 is used to generate a probabilistic guess of the robot's pose at time t s[m] t ∼ p(st / ...
+- **p. 1 / Abstract - extractive body cue:** Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM.
+- **p. 1 / Abstract - extractive body cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
+- **p. 2 / Abstract - extractive body cue:** Experimental results using a physical robot and a robot simulator illustrate that the FastSLAM algorithm can handle orders of magnitude more landmarks than present day ...
+- **p. 3 / Abstract - extractive body cue:** We note that, with a linear Gaussian observation model, the resulting distribution p(θk / st, zt, ut, nt) is exactly a Gaussian, even if the ...
+- **p. 4 / Abstract - extractive body cue:** In the last line, "EKF" makes explicit the use of a linearized model as an approximation to the observation model p(zt / θ[m] nt , ...
+- **p. 2 / Abstract - extractive body cue:** This conditional independence is the basis of the FastSLAM algorithm described in the next section.
+- **p. 3 / Abstract - extractive body cue:** For nt = k, we obtain p(θk / st, zt, ut, nt) (9) Bayes ∝ p(zt / θk, st, zt-1, ut, nt) p(θk / st, ...
 
 ## Design Rationale
 
-- **p. 2 / Abstract - extractive PDF cue:** We also extend the FastSLAM algorithm to situations with unknown data association and unknown number of landmarks, showing that our approach can be extended to ...
-- **p. 4 / Abstract - extractive PDF cue:** Our approach makes it possible to execute a FastSLAM iteration in O(M log K) time.
-- **p. 1 / Abstract - extractive PDF cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
+- **p. 2 / Abstract - extractive body cue:** We also extend the FastSLAM algorithm to situations with unknown data association and unknown number of landmarks, showing that our approach can be extended to ...
+- **p. 4 / Abstract - extractive body cue:** Our approach makes it possible to execute a FastSLAM iteration in O(M log K) time.
+- **p. 1 / Abstract - extractive body cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
 
 ## Source Evidence Cues
 
-- **p. 3 / Abstract - extractive PDF cue:** First, each particle st,[m] in St-1 is used to generate a probabilistic guess of the robot's pose at time t s[m] t ∼ p(st / ...
-- **p. 1 / Abstract - extractive PDF cue:** Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM.
-- **p. 1 / Abstract - extractive PDF cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
-- **p. 2 / Abstract - extractive PDF cue:** Experimental results using a physical robot and a robot simulator illustrate that the FastSLAM algorithm can handle orders of magnitude more landmarks than present day ...
-- **p. 3 / Abstract - extractive PDF cue:** We note that, with a linear Gaussian observation model, the resulting distribution p(θk / st, zt, ut, nt) is exactly a Gaussian, even if the ...
-- **p. 4 / Abstract - extractive PDF cue:** In the last line, "EKF" makes explicit the use of a linearized model as an approximation to the observation model p(zt / θ[m] nt , ...
-- **p. 2 / Abstract - extractive PDF cue:** This conditional independence is the basis of the FastSLAM algorithm described in the next section.
+- **p. 3 / Abstract - extractive body cue:** First, each particle st,[m] in St-1 is used to generate a probabilistic guess of the robot's pose at time t s[m] t ∼ p(st / ...
+- **p. 1 / Abstract - extractive body cue:** Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM.
+- **p. 1 / Abstract - extractive body cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
+- **p. 2 / Abstract - extractive body cue:** Experimental results using a physical robot and a robot simulator illustrate that the FastSLAM algorithm can handle orders of magnitude more landmarks than present day ...
+- **p. 3 / Abstract - extractive body cue:** We note that, with a linear Gaussian observation model, the resulting distribution p(θk / st, zt, ut, nt) is exactly a Gaussian, even if the ...
+- **p. 4 / Abstract - extractive body cue:** In the last line, "EKF" makes explicit the use of a linearized model as an approximation to the observation model p(zt / θ[m] nt , ...
+- **p. 2 / Abstract - extractive body cue:** This conditional independence is the basis of the FastSLAM algorithm described in the next section.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | First, each particle st,[m] in St-1 is used to generate a probabilistic guess of the robot's pose at time t s[m] t ... | p. 3 (Abstract), p. 1 (Abstract) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM. | p. 1 (Abstract), p. 1 (Abstract) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Objective / Update Rule
 
-- **p. 3 / Abstract - extractive PDF cue:** For nt = k, we obtain p(θk / st, zt, ut, nt) (9) Bayes ∝ p(zt / θk, st, zt-1, ut, nt) p(θk / st, ...
-- **p. 2 / Abstract - extractive PDF cue:** Without loss of generality, we will think of landmarks as points in the plane, so that locations are specified by two numerical values.
-- **p. 1 / Abstract - extractive PDF cue:** Sensor updates require time quadratic in the number of landmarks K to compute.
-- **p. 1 / Abstract - extractive PDF cue:** Experimental results demonstrate the advantages and limitations of the FastSLAM algorithm on both simulated and realworld data.
-- **p. 2 / Abstract - extractive PDF cue:** Practical implementations use maximum likelihood estimators for estimating the correspondence on-the-fly, which work well if landmarks are spaced sufficiently far apart.
-- **p. 3 / Abstract - extractive PDF cue:** Calculating the Importance Weights Let us now return to the problem of calculating the importance weights w[m] t needed for particle filter resampling, as defined ...
+- **p. 3 / Abstract - extractive body cue:** For nt = k, we obtain p(θk / st, zt, ut, nt) (9) Bayes ∝ p(zt / θk, st, zt-1, ut, nt) p(θk / st, ...
+- **p. 2 / Abstract - extractive body cue:** Without loss of generality, we will think of landmarks as points in the plane, so that locations are specified by two numerical values.
+- **p. 1 / Abstract - extractive body cue:** Sensor updates require time quadratic in the number of landmarks K to compute.
+- **p. 1 / Abstract - extractive body cue:** Experimental results demonstrate the advantages and limitations of the FastSLAM algorithm on both simulated and realworld data.
+- **p. 2 / Abstract - extractive body cue:** Practical implementations use maximum likelihood estimators for estimating the correspondence on-the-fly, which work well if landmarks are spaced sufficiently far apart.
+- **p. 3 / Abstract - extractive body cue:** Calculating the Importance Weights Let us now return to the problem of calculating the importance weights w[m] t needed for particle filter resampling, as defined ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 3 (Abstract), p. 4 (Abstract).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Observation–State–Action Interface
 
-- **p. 1 / Abstract - extractive PDF cue:** Kalman filter-based algorithms, for example, require time quadratic in the number of landmarks to incorporate each sensor observation.
-- **p. 1 / Abstract - extractive PDF cue:** Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM.
-- **p. 3 / Abstract - extractive PDF cue:** We note that, with a linear Gaussian observation model, the resulting distribution p(θk / st, zt, ut, nt) is exactly a Gaussian, even if the ...
-- **p. 4 / Abstract - extractive PDF cue:** In the last line, "EKF" makes explicit the use of a linearized model as an approximation to the observation model p(zt / θ[m] nt , ...
-- **p. 2 / Abstract - extractive PDF cue:** The robot's pose at time t will be denoted st.
-- **p. 2 / Abstract - extractive PDF cue:** To map its environment, the robot can sense landmarks.
-- **p. 3 / Abstract - extractive PDF cue:** The posterior over the k-th landmark pose θk is easily obtained.
+- **p. 1 / Abstract - extractive body cue:** Kalman filter-based algorithms, for example, require time quadratic in the number of landmarks to incorporate each sensor observation.
+- **p. 1 / Abstract - extractive body cue:** Based on this observation, this paper describes an efficient SLAM algorithm called FastSLAM.
+- **p. 3 / Abstract - extractive body cue:** We note that, with a linear Gaussian observation model, the resulting distribution p(θk / st, zt, ut, nt) is exactly a Gaussian, even if the ...
+- **p. 4 / Abstract - extractive body cue:** In the last line, "EKF" makes explicit the use of a linearized model as an approximation to the observation model p(zt / θ[m] nt , ...
+- **p. 2 / Abstract - extractive body cue:** The robot's pose at time t will be denoted st.
+- **p. 2 / Abstract - extractive body cue:** To map its environment, the robot can sense landmarks.
+- **p. 3 / Abstract - extractive body cue:** The posterior over the k-th landmark pose θk is easily obtained.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Failure and Ablation Link
 
-- **p. 2 / Abstract - extractive PDF cue:** In mobile robotics, the motion model is usually a time-invariant probabilistic generalization of robot kinematics [1].
-- **p. 2 / Abstract - extractive PDF cue:** Without loss of generality, we will think of landmarks as points in the plane, so that locations are specified by two numerical values.
-- **p. 3 / Abstract - extractive PDF cue:** Each particle st,[m] is drawn (with replacement) with a probability proportional to a so-called importance factor w[m] t , which is calculated as follows [10]: ...
-- **p. 4 / Abstract - extractive PDF cue:** Data Association In many real-world problems, landmarks are not identifiable, and the total number of landmarks K cannot be obtained trivially-as was the case above.
-- **p. 5 / Abstract - extractive PDF cue:** Unfortunately, the physical testbed does not allow for systematic experiments regarding the scaling properties of the approach.
-- **p. 2 / Abstract - extractive PDF cue:** Many measurement models in the literature assume that the robot can measure range and bearing to landmarks, confounded by measurement noise.
-- **p. 5 / Abstract - extractive PDF cue:** It has been observed frequently that false data association will make the conventional EKF approach fail catastrophically [2].
+- **p. 2 / Abstract - extractive body cue:** In mobile robotics, the motion model is usually a time-invariant probabilistic generalization of robot kinematics [1].
+- **p. 2 / Abstract - extractive body cue:** Without loss of generality, we will think of landmarks as points in the plane, so that locations are specified by two numerical values.
+- **p. 3 / Abstract - extractive body cue:** Each particle st,[m] is drawn (with replacement) with a probability proportional to a so-called importance factor w[m] t , which is calculated as follows [10]: ...
+- **p. 4 / Abstract - extractive body cue:** Data Association In many real-world problems, landmarks are not identifiable, and the total number of landmarks K cannot be obtained trivially-as was the case above.
+- **p. 5 / Abstract - extractive body cue:** Unfortunately, the physical testbed does not allow for systematic experiments regarding the scaling properties of the approach.
+- **p. 2 / Abstract - extractive body cue:** Many measurement models in the literature assume that the robot can measure range and bearing to landmarks, confounded by measurement noise.
+- **p. 5 / Abstract - extractive body cue:** It has been observed frequently that false data association will make the conventional EKF approach fail catastrophically [2].
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), objective p. 3 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), temporal p. 2 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), objective p. 3 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), temporal p. 2 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

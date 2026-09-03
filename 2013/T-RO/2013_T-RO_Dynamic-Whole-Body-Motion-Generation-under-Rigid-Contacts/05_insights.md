@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 It also eases the use of sensory feedback, since the sensory space is often a good task-space candidate [14], [15].를 Using this notation, the necessary and sufficient condition to ensure the contact stability (in the sense that the contact remains in the same phase of the complementary condition, i.e. no take off) ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The simulator checks the collision, computes the acceleration from the collision set and the torque input using a linear solver and numerically integrates ¨q using a classical Runge-Kutta of the fourth order.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Using this notation, the necessary and sufficient condition to ensure the contact stability (in the sense that the contact remains in the same phase of the complementary condition, i.e. no ... (p. 7, V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS).
+- **Paper-specific mechanism:** In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion. (p. 3, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is 2) Results: The experiment is summed up by Figures 3 to 6. (p. 11, VII. EXPERIMENTS); the relevant task/metric cue is However, this solution has the drawback that the servo is on the position variables, while, as explained in the previous section, the robustness mainly relies on the accuracy of the ... (p. 10, VII. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In reaction, all the other aligned joints move to overrun the neck limitation (chest joint of course, but also hip and ankle joints). (p. 12, VII. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The result of this simulation is a joint trajectory of the robot, that complies to the multi-body dynamics..
-3. Compare against the body-reported baseline or a matched simpler baseline: All the joints are properly stopped at the limit, and can leave the neighborhood of the limit without being stuck as it may appear with some avoidance techniques..
-4. Report the body metric and its denominator/aggregation: However, this solution has the drawback that the servo is on the position variables, while, as explained in the previous section, the robustness mainly relies on the accuracy of the force variables..
-5. Re-run the body-reported ablation/failure condition: All the joints are properly stopped at the limit, and can leave the neighborhood of the limit without being stuck as it may appear with some avoidance techniques..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Using this notation, the necessary and sufficient condition to ensure the contact stability (in the sense that the contact remains in the same phase of the complementary condition, i.e. no ... (p. 7, V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS); preserve the objective/update rule: Including the contact forces within the QP Solver Condition (32) must now be introduced in the HQP proposed at the end of Section IV-B 1) A first way of modeling ... (p. 7, V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS).
+2. Use the paper-reported task/data/environment cue: The result of this simulation is a joint trajectory of the robot, that complies to the multi-body dynamics. (p. 10, VII. EXPERIMENTS).
+3. Compare against the reported or matched baseline: All the joints are properly stopped at the limit, and can leave the neighborhood of the limit without being stuck as it may appear with some avoidance techniques. (p. 12, VII. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: However, this solution has the drawback that the servo is on the position variables, while, as explained in the previous section, the robustness mainly relies on the accuracy of the ... (p. 10, VII. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: All the joints are properly stopped at the limit, and can leave the neighborhood of the limit without being stuck as it may appear with some avoidance techniques. (p. 12, VII. EXPERIMENTS); if none is reported, design one around: In reaction, all the other aligned joints move to overrun the neck limitation (chest joint of course, but also hip and ankle joints). (p. 12, VII. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS); the primary result is directionally consistent at p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 11 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), and measure the boundary at p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 generic, solution, take mechanism이 All the joints are properly stopped at the limit, and can leave the neighborhood of the ... 대비 However, this solution has the drawback that the servo is on the position variables, while, as explained in ...을 개선하고, The simulator checks the collision, computes the acceleration from the collision set and the torque input ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Using this notation, the necessary and sufficient condition to ensure the contact stability (in the sense that the contact remains in the ...), does the paper-specific mechanism (In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a ...) retain the reported evaluation outcome (However, this solution has the drawback that the servo is on the position variables, while, as explained in ...) when tested against the paper's strongest explicit boundary (In reaction, all the other aligned joints move to overrun the neck limitation (chest joint of course, but ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (However, this solution has the drawback that the servo is on the position variables, while, as explained in ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion. (p. 3, I. INTRODUCTION).
+- **Paper-supported outcome:** 2) Results: The experiment is summed up by Figures 3 to 6. (p. 11, VII. EXPERIMENTS).
+- **Strongest explicit boundary:** In reaction, all the other aligned joints move to overrun the neck limitation (chest joint of course, but also hip and ankle joints). (p. 12, VII. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

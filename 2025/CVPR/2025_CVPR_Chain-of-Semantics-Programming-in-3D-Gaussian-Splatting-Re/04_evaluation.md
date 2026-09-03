@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation study), p. 5 (4.3. Compariso
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** Sr3D comprises 83.5K template-based utterances that leverage spatial relationships among fine-grained object classes to localize a referred object in a scene, and Nr3D includes 41.5K ...
-- **p. 7 / 4.4. Ablation study - extractive PDF cue:** Programming improves object grounding by 10.11% on the Nr3D dataset and 20.42% on the Sr3D dataset, demonstrating its beneficial impact.
-- **p. 7 / 4.4. Ablation study - extractive PDF cue:** In the context of object grounding through programming, the Chain of Semantics yields beneficial improvements across both datasets, particularly on Sr3D, where the gap between ...
-- **p. 5 / 4.3. Comparison to Prior Works - extractive PDF cue:** We compare our method with previous works on the Nr3D and Sr3D datasets.
-- **p. 6 / 4.4. Ablation study - extractive PDF cue:** Performance comparison of our method and prior data efficient supervised model, with 5%, 15%, 25% train data on Nr3D dataset.
-- **p. 6 / 4.4. Ablation study - extractive PDF cue:** On the Sr3D dataset, there is a decrease of 4.0% relative to dialogue; however, it shows an increase of 1.3% when compared to programming.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Ablation study of LLM/VLM on Nr3D dataset.
-- **p. 8 / 4.5. Qualitative results - extractive PDF cue:** In Figure 5, we visualize examples of scenes reconstructed with 3DGS.
+- **p. 5 / 4.1. Datasets - extractive body cue:** Sr3D comprises 83.5K template-based utterances that leverage spatial relationships among fine-grained object classes to localize a referred object in a scene, and Nr3D includes 41.5K ...
+- **p. 7 / 4.4. Ablation study - extractive body cue:** Programming improves object grounding by 10.11% on the Nr3D dataset and 20.42% on the Sr3D dataset, demonstrating its beneficial impact.
+- **p. 7 / 4.4. Ablation study - extractive body cue:** In the context of object grounding through programming, the Chain of Semantics yields beneficial improvements across both datasets, particularly on Sr3D, where the gap between ...
+- **p. 5 / 4.3. Comparison to Prior Works - extractive body cue:** We compare our method with previous works on the Nr3D and Sr3D datasets.
+- **p. 6 / 4.4. Ablation study - extractive body cue:** Performance comparison of our method and prior data efficient supervised model, with 5%, 15%, 25% train data on Nr3D dataset.
+- **p. 6 / 4.4. Ablation study - extractive body cue:** On the Sr3D dataset, there is a decrease of 4.0% relative to dialogue; however, it shows an increase of 1.3% when compared to programming.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Ablation study of LLM/VLM on Nr3D dataset.
+- **p. 8 / 4.5. Qualitative results - extractive body cue:** In Figure 5, we visualize examples of scenes reconstructed with 3DGS.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation study), p. 5 (4.3. Compariso
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Ablation study | EMPIRICAL / SOURCE-REPORTED EVALUATION | This mechanism achieves improvements of 4.5% on Nr3D and 1.8% on Sr3D. | p. 7 (4.4. Ablation study) |
 | 4.3. Comparison to Prior Works | EMPIRICAL / SOURCE-REPORTED EVALUATION | Achieve zero-shot state-of-the-art grounding performance. | p. 5 (4.3. Comparison to Prior Works) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation study), p. 5 (4.3. Compariso
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** Sr3D comprises 83.5K template-based utterances that leverage spatial relationships among fine-grained object classes to localize a referred object in a scene, and Nr3D includes 41.5K ...
-- **p. 7 / 4.4. Ablation study - extractive PDF cue:** Programming improves object grounding by 10.11% on the Nr3D dataset and 20.42% on the Sr3D dataset, demonstrating its beneficial impact.
-- **p. 7 / 4.4. Ablation study - extractive PDF cue:** In the context of object grounding through programming, the Chain of Semantics yields beneficial improvements across both datasets, particularly on Sr3D, where the gap between ...
-- **p. 5 / 4.3. Comparison to Prior Works - extractive PDF cue:** We compare our method with previous works on the Nr3D and Sr3D datasets.
-- **p. 6 / 4.4. Ablation study - extractive PDF cue:** Performance comparison of our method and prior data efficient supervised model, with 5%, 15%, 25% train data on Nr3D dataset.
-- **p. 6 / 4.4. Ablation study - extractive PDF cue:** On the Sr3D dataset, there is a decrease of 4.0% relative to dialogue; however, it shows an increase of 1.3% when compared to programming.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Ablation study of LLM/VLM on Nr3D dataset.
-- **p. 8 / 4.5. Qualitative results - extractive PDF cue:** In Figure 5, we visualize examples of scenes reconstructed with 3DGS.
+- **p. 5 / 4.1. Datasets - extractive body cue:** Sr3D comprises 83.5K template-based utterances that leverage spatial relationships among fine-grained object classes to localize a referred object in a scene, and Nr3D includes 41.5K ...
+- **p. 7 / 4.4. Ablation study - extractive body cue:** Programming improves object grounding by 10.11% on the Nr3D dataset and 20.42% on the Sr3D dataset, demonstrating its beneficial impact.
+- **p. 7 / 4.4. Ablation study - extractive body cue:** In the context of object grounding through programming, the Chain of Semantics yields beneficial improvements across both datasets, particularly on Sr3D, where the gap between ...
+- **p. 5 / 4.3. Comparison to Prior Works - extractive body cue:** We compare our method with previous works on the Nr3D and Sr3D datasets.
+- **p. 6 / 4.4. Ablation study - extractive body cue:** Performance comparison of our method and prior data efficient supervised model, with 5%, 15%, 25% train data on Nr3D dataset.
+- **p. 6 / 4.4. Ablation study - extractive body cue:** On the Sr3D dataset, there is a decrease of 4.0% relative to dialogue; however, it shows an increase of 1.3% when compared to programming.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Ablation study of LLM/VLM on Nr3D dataset.
+- **p. 8 / 4.5. Qualitative results - extractive body cue:** In Figure 5, we visualize examples of scenes reconstructed with 3DGS.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our proposed zero-shot framework enables interaction and retrieval within a 3D Gaussian Splatting representation to ob- tain fine-grained semantics and supports multi-step spatial ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The pipeline for grounding an object is as follows: (a), parse the semantics of the utterance into a chain of semantics and a ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of Nr3D and Sr3D datasets. our framework to understand text and images and perform reasoning. This framework is generalizable and applicable to ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Comparison of our zero-shot method with data- efficiency supervised model. Compared to data-efficiency models with limited data. Moreover, some advanced supervised methods demonstrate ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Grounding performance on Nr3D. Our method surpasses existing zero-shot methods and approaches the performance of recent supervised models. †employs a grounded-aware self-check mechanism. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Grounding performance on Sr3D. Our method surpasses recent supervised models. †employs a grounded-aware self-check mechanism. Train Data
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Performance comparison of our method and prior data ef- ficient supervised model, with 0.5%, 5%, 10% train data on Sr3D
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 5. Performance comparison of our method and prior data efficient supervised model, with 5%, 15%, 25% train data on Nr3D
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our proposed zero-shot framework enables interaction and retrieval within a 3D Gaussian Splatting representation to ob- tain fine-grained semantics and supports multi-step spatial ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The pipeline for grounding an object is as follows: (a), parse the semantics of the utterance into a chain of semantics and a ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Comparison of Nr3D and Sr3D datasets. our framework to understand text and images and perform reasoning. This framework is generalizable and applicable to ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Comparison of our zero-shot method with data- efficiency supervised model. Compared to data-efficiency models with limited data. Moreover, some advanced supervised methods demonstrate ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Grounding performance on Nr3D. Our method surpasses existing zero-shot methods and approaches the performance of recent supervised models. †employs a grounded-aware self-check mechanism. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Grounding performance on Sr3D. Our method surpasses recent supervised models. †employs a grounded-aware self-check mechanism. Train Data
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Performance comparison of our method and prior data ef- ficient supervised model, with 0.5%, 5%, 10% train data on Sr3D
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 5. Performance comparison of our method and prior data efficient supervised model, with 5%, 15%, 25% train data on Nr3D
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Sr3D comprises 83.5K template-based utterances that leverage spatial relationships among fine-grained object classes to localize a referred object in a scene, and Nr3D includes ... | embodiment, simulator version and control stack | p. 5 (4.1. Datasets), p. 7 (4.4. Ablation study) |
 | Task/environment | Programming improves object grounding by 10.11% on the Nr3D dataset and 20.42% on the Sr3D dataset, demonstrating its beneficial impact. | reset, timeout, object/scene variation | p. 7 (4.4. Ablation study), p. 7 (4.4. Ablation study) |
@@ -157,11 +157,11 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation study), p. 5 (4.3. Compariso
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** We show that chain of semantics programming enhances the understanding of complex spatial relationships, and the 3D Gaussian Splatting representation provides fine-grained 2D semantics, overcoming ...
-- **p. 8 / 4.5. Qualitative results - extractive PDF cue:** The fifth image illustrates a failure case where dense object grounding becomes more prone to confusion, increasing the difficulty of grounding to the correct object.
-- **p. 7 / 4.4. Ablation study - extractive PDF cue:** Without this mechanism, when errors occur during code execution, the only option is to reattempt reasoning, failing to learn from previous mistakes.
+- **p. 8 / 5. Conclusion - extractive body cue:** We show that chain of semantics programming enhances the understanding of complex spatial relationships, and the 3D Gaussian Splatting representation provides fine-grained 2D semantics, overcoming ...
+- **p. 8 / 4.5. Qualitative results - extractive body cue:** The fifth image illustrates a failure case where dense object grounding becomes more prone to confusion, increasing the difficulty of grounding to the correct object.
+- **p. 7 / 4.4. Ablation study - extractive body cue:** Without this mechanism, when errors occur during code execution, the only option is to reattempt reasoning, failing to learn from previous mistakes.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 7 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 6 (4.4. Ablation study), p. 6 (4.4. Ablation study), metrics p. 7 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 8 (4.4. Ablation study), p. 1 (Figure/Table caption), baselines p. 5 (4.3. Comparison to Prior Works), p. 5 (4.3. Comparison to Prior Works), p. 7 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 8 (4.5. Qualitative results), results p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 5 (4.3. Comparison to Prior Works), p. 6 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 8 (4.4. Ablation study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 7 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 6 (4.4. Ablation study), p. 6 (4.4. Ablation study), metrics p. 7 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 8 (4.4. Ablation study), p. 1 (Figure/Table caption), baselines p. 5 (4.3. Comparison to Prior Works), p. 5 (4.3. Comparison to Prior Works), p. 7 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 8 (4.5. Qualitative results), results p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 5 (4.3. Comparison to Prior Works), p. 6 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 8 (4.4. Ablation study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -1,52 +1,75 @@
 # Insights — ViewSRD: 3D Visual Grounding via Structured Multi-View Decomposition
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** To tackle these challenges, we propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process.
-- **Claim/result cue:** Experiments on 3D visual grounding datasets show that ViewSRD significantly outperforms state-of-the-art methods, particularly in complex queries requiring precise spatial differentiation.
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling ...
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** This structured decomposition enables the model to extract more effective textual features for grounding. • We develop the Multi-view Textual-Scene Interaction (Multi-TSI) module to explicitly ...
+- **p. 3 / 3. ViewSRD - extractive body cue:** The overall framework of our method is illustrated in Fig.
+- **p. 4 / 3.2. Textual Aggregation - extractive body cue:** To enable the model to effectively learn from diverse sentence representations, we introduce a textual feature aggregation strategy.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** At the final Transformer layer, the output consists of both [object] tokens and [view] tokens.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** To effectively integrate sentence features from text encoders with viewpoint features extracted from CCVTs, we introduce the Multi-view Textual Module, which employs a cross-attention mechanism ...
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** To effectively capture object features across diverse scenes, we introduce a Multi-View Scene Module that extracts and refines scene representations from multiple viewpoints.
+- **Contribution anchor:** p. 2 (2. The nightstand is closest to the wall), p. 2 (2. The nightstand is closest to the wall), p. 3 (3. ViewSRD), p. 4 (3.2. Textual Aggregation), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 2. The nightstand is closest to the wall - extractive body cue:** Large language models (LLMs) often have difficulty interpreting such descriptions [17, 51], yet resolving these ambiguities is crucial for improving grounding accuracy [20].
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** Ultimately, both the inherent complexity of multi-anchor queries and the challenges introduced by perspective shifts hinder the accurate interpretation of positional relationships in 3DVG, limiting ...
+- **p. 1 / 2. The nightstand is closest to the wall - extractive body cue:** Compounding this challenge, inconsistenThis ICCV paper is the Open Access version, provided by the Computer Vision Foundation.
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** To tackle these challenges, we propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process.
+- **p. 3 / 3. ViewSRD - extractive body cue:** This multi-view setup introduces significant challenges for 3D visual grounding: (1) language-grounded spatial relations must remain consistent across view-dependent variations, and (2) object referents may ...
+- **p. 8 / 5. Conclusion - extractive body cue:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
+- **p. 8 / 5. Conclusion - extractive body cue:** While the decomposition into overlapping relations does not degrade performance, it diminishes the intended benefits of simplification.
+- **Boundary to test:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling complex multi-anchor queries and mitigating text-vi ... | p. 2 (2. The nightstand is closest to the wall), p. 2 (2. The nightstand is closest to the wall) |
+| Reported outcome | Quantitative results on Nr3D (Table 1) show that ViewSRD achieves a 5.2% accuracy gain over the best prior method, CoT3DRef, under identical settings. | p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors) |
+| Failure/limitation | A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships. | p. 8 (5. Conclusion), p. 8 (5. Conclusion) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - 2D vision-language feature를 3D object/point/field/map에 정렬해 open-vocabulary querying과 semantic grounding에 사용할 수 있다.
-  - 핵심은 language prior를 3D metric structure와 맞추면서 view inconsistency와 hallucination을 줄이는 것이다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 These decomposed representations serve as the foundation for the Multi-view Textual-Scene Interaction (Multi-TSI) module, which integrates textual and scene features across multiple viewpoints using shared, Cross-modal Consistent View T ...를 1(b), ViewSRD first applies the SRD module to decompose complex multi-anchor queries into a set of simpler single-anchor queries, isolating interactions between the target and its anchors.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling complex multi-anchor queries and mitigating text-vi ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Experiments on 3D visual grounding datasets show that ViewSRD significantly outperforms state-of-the-art methods, particularly in complex queries requiring precise spatial differentiation.
-  - open-vocabulary recognition이나 grounding을 보인 뒤에도 3D consistency, ambiguous reference resolution, robot-action relevance는 남는다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ScanNet, ScanRefer, ReferIt3D, Nr3D, Sr3D / accuracy, IoU
-  - 내 연구 확장 benchmark 후보: ScanNet, ScanRefer, ReferIt3D, SQA3D
-  - 내 연구 확장 metric 후보: mIoU, Acc@0.25, Acc@0.5, Recall@K
-  - 검증 초점: open-vocabulary segmentation/localization, 3D consistency, task-relevant grounding을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors..
+3. Compare against the body-reported baseline or a matched simpler baseline: We compare ViewSRD with recent state-of-the-art approaches to evaluate its effectiveness on 3DVG..
+4. Report the body metric and its denominator/aggregation: LLM decoupler Accuracy OpenChat [40] 69.6% DeepSeek-R1 [28] 69.9% Qwen-Plus [46] 70.5% Qwen-Turbo [46] 70.7% views, performance improves from 64.4% (1 view) to 67.7% (2 views), but plateaus at 68.4% with 8 ....
+5. Re-run the body-reported ablation/failure condition: To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1]..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 6 (3.5. Overall Loss Functions); the primary result is directionally consistent at p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D VLM feature를 3D로 lift할 때 multi-view consistency와 fine-grained object boundary를 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 summary, contributions, fourfold mechanism이 We compare ViewSRD with recent state-of-the-art approaches to evaluate its effectiveness on 3DVG. 대비 LLM decoupler Accuracy OpenChat [40] 69.6% DeepSeek-R1 [28] 69.9% Qwen-Plus [46] 70.5% Qwen-Turbo [46] 70.7% views, performance improves ...을 개선하고, A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

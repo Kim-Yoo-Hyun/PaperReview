@@ -12,11 +12,11 @@
 
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, ...
 - **p. 4 / B. Generating Motion Plans - extractive body cue:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any ...
-- **p. 1 / Front matter - extractive body cue:** g novel cabinets, drawers, and ovens
-- **p. 1 / Front matter - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
+- **p. 1 / body section boundary not confidently recovered - extractive body cue:** g novel cabinets, drawers, and ovens
+- **p. 1 / body section boundary not confidently recovered - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
 - **p. 2 / Abstract - extractive body cue:** ‘models developed in isolation struggle when faced with robot ‘centric viewpoints.
 - **p. 20 / A. Robot Utility Models - extractive body cue:** We provide additional details about Robot Utility Models (RUM) [16].
-- **Contribution anchor:** p. 2 (1. Iyrropucrion), p. 4 (B. Generating Motion Plans), p. 1 (Front matter), p. 1 (Front matter), p. 2 (Abstract), p. 20 (A. Robot Utility Models)
+- **Contribution anchor:** p. 2 (1. Iyrropucrion), p. 4 (B. Generating Motion Plans), p. 1 (body section boundary not confidently recovered), p. 1 (body section boundary not confidently recovered), p. 2 (Abstract), p. 20 (A. Robot Utility Models)
 
 ### Strongest assumption and failure boundary
 
@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 We also add additional heads to Mask RCNN; however, rather than directly predicting 3D outputs from the RGB-D input, we adopt a two-stage approach involving 2D prediction from RGB images followed by ...를 Researchers have extensively looked at different aspects: a) construction of various datasets (from simulation (40, 14, 20], real world images [76, 36, 1], and real world 3D scans [2¢ 77), b) use ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, Our approach, called MOSART for a MOdular ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We also add additional heads to Mask RCNN; however, rather than directly predicting 3D outputs from the RGB-D input, we adopt a two-stage approach involving 2D prediction from RGB images ... (p. 4, A. Predicting Articulation Parameters).
+- **Paper-specific mechanism:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any privileged information. (p. 4, B. Generating Motion Plans).
+- **Evidence boundary:** the reported outcome is We first present ‘our end-to-end system test results, evaluating MOSART on 31 novel drawers and cupboards across 10 buildings (Section IV-A), To see how a modular system compares to an ... (p. 6, IV. EXPERIMENTS); the relevant task/metric cue is Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments. (p. 7, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles. (p. 10, Discussion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In each test, the robot is placed approximately 1.5m from the target object with the camera oriented so as to have the target ‘object in view..
-3. Compare against the body-reported baseline or a matched simpler baseline: This includes evaluating the quality of our MaskRCNN-based perception module (as well as a Detic-based perception model) on real world images, comparing APM to two recent articulation parameter prediction systems [53, 76], ....
-4. Report the body metric and its denominator/aggregation: Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments..
-5. Re-run the body-reported ablation/failure condition: This includes evaluating the quality of our MaskRCNN-based perception module (as well as a Detic-based perception model) on real world images, comparing APM to two recent articulation parameter prediction systems [53, 76], ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We also add additional heads to Mask RCNN; however, rather than directly predicting 3D outputs from the RGB-D input, we adopt a two-stage approach involving 2D prediction from RGB images ... (p. 4, A. Predicting Articulation Parameters); preserve the objective/update rule: We provide additional details about Robot Utility Models (RUM) [16]. (p. 20, A. Robot Utility Models).
+2. Use the paper-reported task/data/environment cue: We work with the Stretch RE2 robot. (p. 6, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: This includes evaluating the quality of our MaskRCNN-based perception module (as well as a Detic-based perception model) on real world images, comparing APM to two recent articulation parameter prediction systems ... (p. 6, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments. (p. 7, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: This includes evaluating the quality of our MaskRCNN-based perception module (as well as a Detic-based perception model) on real world images, comparing APM to two recent articulation parameter prediction systems ... (p. 6, IV. EXPERIMENTS); if none is reported, design one around: Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles. (p. 10, Discussion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 20 (A. Robot Utility Models); the primary result is directionally consistent at p. 7 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 6 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 4 (B. Generating Motion Plans), p. 1 (Body text (section boundary not confidently recovered)), match the reported outcome at p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), and measure the boundary at p. 10 (Discussion), p. 9 (V. Limitations).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 considered, broad, ways mechanism이 This includes evaluating the quality of our MaskRCNN-based perception module (as well as a Detic-based perception ... 대비 Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world ...을 개선하고, Other failures were during execution, where the handle would slip out, and during navigation, where navigating ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We also add additional heads to Mask RCNN; however, rather than directly predicting 3D outputs from the RGB-D input, we adopt a ...), does the paper-specific mechanism (In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner ...) retain the reported evaluation outcome (Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world ...) when tested against the paper's strongest explicit boundary (Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any privileged information. (p. 4, B. Generating Motion Plans).
+- **Paper-supported outcome:** We first present ‘our end-to-end system test results, evaluating MOSART on 31 novel drawers and cupboards across 10 buildings (Section IV-A), To see how a modular system compares to an ... (p. 6, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles. (p. 10, Discussion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

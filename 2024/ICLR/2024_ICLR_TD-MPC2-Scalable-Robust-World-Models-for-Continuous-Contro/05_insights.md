@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their latent representations Latent dynamics z′ = d(z, a, e) ▷Models ...를 To do so, we zero-pad all model inputs and outputs to their largest respective dimensions, and mask out invalid action dimensions in predictions made by the policy prior p during both training ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task rewards can lead to unintended outcomes (Clark & Amodei, 2016) that may be difficult ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we present TDMPC2: a significant step towards achieving this goal.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Tasks include high-dimensional state and action spaces (up to A ∈R39), image observations, sparse rewards, multi-object manipulation, physiologically accurate musculoskeletal motor control, complex locomotion (e.g. (p. 2, 1 INTRODUCTION).
+- **Paper-specific mechanism:** In this work, we present TDMPC2: a significant step towards achieving this goal. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 16. Single-task MyoSuite results. Success rate (%) as a function of environment steps. This task domain includes high-dimensional contact-rich musculoskeletal motor control (A ∈R39) with a physiologically accurate robot ... (p. 23, Figure/Table caption); the relevant task/metric cue is To summarize agent performance with a single metric, we produce a normalized score that is an average of all individual task success rates (Meta-World) and episode returns normalized to the ... (p. 7, 4.1 RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task rewards can lead to unintended outcomes (Clark & Amodei, 2016) that may ... (p. 9, 4.1 RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: However, TD-MPC2 can be readily applied to tasks with other input 120k environment steps corresponds to 20 episodes in DMControl and 100 episodes in Meta-World..
-3. Compare against the body-reported baseline or a matched simpler baseline: TD-MPC2 outperforms baselines by a large margin on these tasks, despite using the same hyperparameters across all tasks..
-4. Report the body metric and its denominator/aggregation: To summarize agent performance with a single metric, we produce a normalized score that is an average of all individual task success rates (Meta-World) and episode returns normalized to the [0, 100] ....
-5. Re-run the body-reported ablation/failure condition: Our ablations highlight the relative importance of each design choice; red is the default formulation of TD-MPC2..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Tasks include high-dimensional state and action spaces (up to A ∈R39), image observations, sparse rewards, multi-object manipulation, physiologically accurate musculoskeletal motor control, complex locomotion (e.g. (p. 2, 1 INTRODUCTION); preserve the objective/update rule: The h, d, R, Q components are jointly optimized to minimize the objective L (θ) .= E (s,a,r,s′)0:H∼B   H X t=0 λt   ∥z′ t -sg(h(s′ t))∥2 ... (p. 4, 2 BACKGROUND).
+2. Use the paper-reported task/data/environment cue: Episode return as a function of environment steps on 10 image-based DMControl tasks. (p. 8, 4.1 RESULTS).
+3. Compare against the reported or matched baseline: TD-MPC2 outperforms baselines by a large margin on these tasks, despite using the same hyperparameters across all tasks. (p. 6, 4.1 RESULTS).
+4. Report the body metric with its denominator and aggregation: To summarize agent performance with a single metric, we produce a normalized score that is an average of all individual task success rates (Meta-World) and episode returns normalized to the ... (p. 7, 4.1 RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Our ablations highlight the relative importance of each design choice; red is the default formulation of TD-MPC2. (p. 8, 4.1 RESULTS); if none is reported, design one around: While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task rewards can lead to unintended outcomes (Clark & Amodei, 2016) that may ... (p. 9, 4.1 RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGROUND); the primary result is directionally consistent at p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 23 (Figure/Table caption), p. 6 (Figure/Table caption), p. 22 (Figure/Table caption), and measure the boundary at p. 9 (4.1 RESULTS), p. 6 (4.1 RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, TDMPC2, significant mechanism이 TD-MPC2 outperforms baselines by a large margin on these tasks, despite using the same hyperparameters across ... 대비 To summarize agent performance with a single metric, we produce a normalized score that is an average of ...을 개선하고, While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Tasks include high-dimensional state and action spaces (up to A ∈R39), image observations, sparse rewards, multi-object manipulation, physiologically accurate musculoskeletal motor control, ...), does the paper-specific mechanism (In this work, we present TDMPC2: a significant step towards achieving this goal.) retain the reported evaluation outcome (To summarize agent performance with a single metric, we produce a normalized score that is an average of ...) when tested against the paper's strongest explicit boundary (While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (To summarize agent performance with a single metric, we produce a normalized score that is an average of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we present TDMPC2: a significant step towards achieving this goal. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 16. Single-task MyoSuite results. Success rate (%) as a function of environment steps. This task domain includes high-dimensional contact-rich musculoskeletal motor control (A ∈R39) with a physiologically accurate robot ... (p. 23, Figure/Table caption).
+- **Strongest explicit boundary:** While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task rewards can lead to unintended outcomes (Clark & Amodei, 2016) that may ... (p. 9, 4.1 RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

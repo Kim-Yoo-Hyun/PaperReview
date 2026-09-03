@@ -1,53 +1,75 @@
 # Insights — Grounding Image Matching in 3D with MASt3R
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2406.09756; PDF retrieval source: https://arxiv.org/pdf/2406.09756. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We introduced a fast reciprocal matcher and a coarse to fine approach for efficient processing, allowing users to balance between accuracy and speed.
-- **Problem cue:** Yet despite matching being fundamentally a 3D problem, intrinsically linked to camera pose and scene geometry, it is typically treated as a 2D problem.
-- **Claim/result cue:** Extensive experiments show that our approach, coined MASt3R, significantly outperforms the state of the art on multiple matching tasks.
+- **p. 2 / 1. Introduction - extractive body cue:** First, we propose MASt3R, a 3D-aware matching approach building on the recently released DUSt3R framework.
+- **p. 2 / 1. Introduction - extractive body cue:** To get pixel-accurate matches, we propose a coarse-to-fine matching scheme during which matching is performed at several scales.
+- **p. 4 / 3.2. Matching prediction head and loss - extractive body cue:** For these reasons, we propose to add a second head that outputs two dense feature maps 𝐷1 and 𝐷2 ∈ℝ𝐻×𝑊×𝑑of dimensional 𝑑: 𝐷1 = Head1 ...
+- **p. 5 / 3.3. Fast reciprocal matching - extractive body cue:** Finally, the output set of correspondences consists of the concatenation of all reciprocal pairs M𝑘= Ð 𝑡M𝑡 𝑘.
+- **p. 4 / 3.1. The DUSt3R framework - extractive body cue:** Compared to the DUSt3R framework which we build upon, our contributions are highlighted in blue.
+- **p. 3 / 3. Method - extractive body cue:** We then introduce an optimized matching scheme specially devised to deal with dense feature maps in 3.3, that we use for coarse-to-fine matching in section ...
+- **p. 4 / 3.1. The DUSt3R framework - extractive body cue:** (2) Then, two intertwined decoders process these representations jointly, exchanging information via crossattention to ‘understand' the spatial relationship between viewpoints and the global 3D geometry ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Matching prediction head and loss), p. 5 (3.3. Fast reciprocal matching), p. 4 (3.1. The DUSt3R framework), p. 3 (3. Method)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** We argue that this is because, so far, practically all matching approaches have been treating matching as a 2D problem in image space.
+- **p. 2 / 1. Introduction - extractive body cue:** Yet, correspondences obtained naively from this 3D output currently outperform all other keypoint- and matching-based methods on the Map-free benchmark.
+- **p. 14 / 5. Conclusion - extractive body cue:** A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2.
+- **p. 14 / 5. Conclusion - extractive body cue:** All nodes, i.e. pixels, belong to G since we add an edge for each pixel's nearest neighbor, but note that all pixels cannot reach all ...
+- **p. 16 / 5. Conclusion - extractive body cue:** 9, it is clearly visible that the FRM provides a sampling biased towards finding reciprocal matches with large basins (bottom), since a greater number of ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative examples on the Map-free dataset. Top row: Pairs with strong viewpoint changes. Third one is a failure case. For clarity, we only ...
+- **p. 7 / 4.1. Training - extractive body cue:** If we cannot find enough correspondences, we pad with random false correspondences so that the likelihood of finding a true match remains constant.
+- **Boundary to test:** A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | First, we propose MASt3R, a 3D-aware matching approach building on the recently released DUSt3R framework. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Surprisingly, the performance significantly improves for intermediate values of subsampling. | p. 7 (4.2. Map-free localization), p. 7 (4.2. Map-free localization) |
+| Failure/limitation | A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2. | p. 14 (5. Conclusion), p. 14 (5. Conclusion) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `3D geometry, matching, calibration` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - SE(3)/rotation/translation structure를 representation이나 policy에 넣어 viewpoint, pose, sensor-frame 변화에 강한 3D reasoning을 만들 수 있다.
-  - Registration/calibration 관점은 multi-view, LiDAR-camera, robot-camera alignment 문제의 공통 기반으로 사용할 수 있다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 2, aims at jointly performing 3D scene reconstruction and matching given two input images.를 A transformer-based network predicts a local 3D reconstruction given two input images, in the form of two dense 3D point-clouds 𝑋1,1 and 𝑋2,1, denoted as pointmaps in the following.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: First, we propose MASt3R, a 3D-aware matching approach building on the recently released DUSt3R framework.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Geometry, Reconstruction, and SLAM`; tags: `3D geometry, matching, calibration`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Extensive experiments show that our approach, coined MASt3R, significantly outperforms the state of the art on multiple matching tasks.
-  - symmetry-aware representation이 특정 task에서 성능을 보인 뒤에도 large-scale scene, language grounding, real robot noise에서의 이득은 별도 검증이 필요하다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D geometry, matching, calibration`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: COCO, ScanNet, KITTI, Waymo, DTU / accuracy, mAP, Chamfer
-  - 내 연구 확장 benchmark 후보: ModelNet40, ScanNet, KITTI, nuScenes
-  - 내 연구 확장 metric 후보: rotation error, translation error, mIoU, success rate
-  - 검증 초점: pose robustness, calibration/registration accuracy, downstream perception/action 성능을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: These datasets feature diverse scene types: indoor, outdoor, synthetic, real-world, object-centric, etc..
+3. Compare against the body-reported baseline or a matched simpler baseline: MASt3R not only outperforms the DUSt3R baseline but also compete with the best methods, all without leveraging camera calibration nor poses for matching, neither having seen this camera setup before..
+4. Report the body metric and its denominator/aggregation: In table 3 we report the average accuracy, completeness and Chamfer distances error metrics as provided by the authors of the benchmarks..
+5. Re-run the body-reported ablation/failure condition: Ablations on losses and matching modes..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3. Method), p. 4 (3.2. Matching prediction head and loss), p. 4 (3.1. The DUSt3R framework); the primary result is directionally consistent at p. 7 (4.2. Map-free localization), p. 7 (4.2. Map-free localization), p. 9 (4.4. Visual localization); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-SE(3)-equivariant feature가 open-vocabulary 3D grounding이나 manipulation policy에서도 실제 sample efficiency를 높이는가?
+고정된 observation/action/data/compute budget에서 First, MASt3R, D-aware mechanism이 MASt3R not only outperforms the DUSt3R baseline but also compete with the best methods, all without ... 대비 In table 3 we report the average accuracy, completeness and Chamfer distances error metrics as provided by the ...을 개선하고, A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

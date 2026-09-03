@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p011.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p011.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p011.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | During training, SpatialVLA model is trained to take the ego3D position encoding representation Ogq and natural language task instruction Las inputs, and ... | p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | In detail, we ft a new Gaussian distribution AV (jig, Yacw) for each action variable on posttraining datasets and create discrete spatial ... | p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (B. The Pre-training and Post-training Scheme) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B.
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | SpatialVLA is, first prestrained on top of a vision-language model with 1.1 Million real-world robot episodes, to learn a generalist manipulation policy ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | This position encoding is derived in the egocentric ‘camera frame that eliminates the need for specific robot- ‘camera calibration, which is universally ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Moreover, itis worth noting that the model only needs 10 generate 3 tokens for one-step robot actions rather than 7 tokens as ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (B. The Pre-training and Post-training Scheme), p. 4 (A. The SpatialVLA Model Architecture), p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), objective p. 5 (B. The Pre-training and Post-training Scheme), p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (A. The SpatialVLA Model Architecture), p. 4 (A. The SpatialVLA Model Architecture), temporal p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (030 Position Encoding), p. 3 (A. The SpatialVLA Model Architecture), p. 4 (A. The SpatialVLA Model Architecture).
+- **Evidence anchors reviewed:** method p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (B. The Pre-training and Post-training Scheme), p. 4 (A. The SpatialVLA Model Architecture), p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), objective p. 5 (B. The Pre-training and Post-training Scheme), p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (A. The SpatialVLA Model Architecture), p. 4 (A. The SpatialVLA Model Architecture), temporal p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (030 Position Encoding), p. 3 (A. The SpatialVLA Model Architecture), p. 4 (A. The SpatialVLA Model Architecture).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** During training, SpatialVLA model is trained to take the ego3D position encoding representation Ogq and natural language task instruction Las inputs, and autoregressively generate spatial action tokens a using the ... (p. 3, A. The SpatialVLA Model Architecture).
+- **Objective/update evidence:** In detail, we ft a new Gaussian distribution AV (jig, Yacw) for each action variable on posttraining datasets and create discrete spatial action grids Gey in translation and rotation movement ... (p. 5, B. The Pre-training and Post-training Scheme).
+- **Temporal/runtime evidence:** SpatialVLA is, first prestrained on top of a vision-language model with 1.1 Million real-world robot episodes, to learn a generalist manipulation policy across multiple robot environments and tasks. (p. 1, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

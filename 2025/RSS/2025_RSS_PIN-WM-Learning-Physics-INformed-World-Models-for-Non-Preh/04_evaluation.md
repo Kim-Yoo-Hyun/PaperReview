@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p153.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p153.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p153.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p153.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Evaluations in Simulation | EMPIRICAL / REAL-ROBOT OR HARDWARE | All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, ... | p. 7 (A. Evaluations in Simulation) |
 | A. Evaluations in Simulation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Without PADC, our method still outperforms others, although with a performance decrease. | p. 8 (A. Evaluations in Simulation) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Experiment setup: n simulation, we collect a single task-agnostc trajectory thatthe target object is pushed forward along a straight line by the robot end-effector ... | embodiment, simulator version and control stack | p. 7 (A. Evaluations in Simulation), p. 8 (B. Evaluations in Real-World) |
 | Task/environment | Experiment setup: Our hardware setup consists of robot, an eye-in-hand camera, and an eye-to-hand camera, as shown in Figure 5. | reset, timeout, object/scene variation | p. 8 (B. Evaluations in Real-World), p. 6 (IV. RESULTS AND EVALUATIONS) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 - **p. 8 / A. Evaluations in Simulation - extractive body cue:** We can observe that Dreamer V2 quickly converges on the training dataset, but it does not generalize well on the test dataset.
 - **p. 7 / A. Evaluations in Simulation - extractive body cue:** ‘¢ Methods that rely purely on data. representative is the well-known Dreamer V2 [27], which is a latent-space dynamies model from data for handling high-dimensional ...
 
-- **PDF anchors reviewed:** datasets p. 7 (A. Evaluations in Simulation), p. 8 (B. Evaluations in Real-World), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS), p. 8 (B. Evaluations in Real-World), p. 14 (A. Implementation Details for Baselines), metrics p. 14 (A. Implementation Details for Baselines), p. 7 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), baselines p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS), p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), results p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS).
+- **Evidence anchors reviewed:** datasets p. 7 (A. Evaluations in Simulation), p. 8 (B. Evaluations in Real-World), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS), p. 8 (B. Evaluations in Real-World), p. 14 (A. Implementation Details for Baselines), metrics p. 14 (A. Implementation Details for Baselines), p. 7 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), baselines p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS), p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), results p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study ... (p. 7, A. Evaluations in Simulation).
+- **Metric evidence:** We evaluate the accuracy of a world model using ‘one-step error (44] which measures the distance between the final object states after applying one sampled action to the (p. 7, A. Evaluations in Simulation).
+- **Baseline/ablation evidence:** Note that all physics-based methods being compared are trained with the same task-agnostic trajectories as PIN-WM, for fair comparison. (p. 7, A. Evaluations in Simulation).
+- **Failure/negative evidence:** Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that their world models failed to effectively ‘capture the target-domain dynamics. (p. 8, A. Evaluations in Simulation).

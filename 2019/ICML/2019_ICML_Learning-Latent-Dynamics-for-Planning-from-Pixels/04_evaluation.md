@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1811.04551; PDF retrieval source: https://arxiv.org/pdf/1811.04551. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1811.04551; PDF retrieval source: https://arxiv.org/pdf/1811.04551. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Experiments | EMPIRICAL / SIMULATION | Within less than one hundredth the episodes, PlaNet outperforms A3C (Mnih et al., 2016) and achieves similar performance to the top model-free algorithm D4PG ... | p. 6 (5. Experiments) |
 | 5. Experiments | EMPIRICAL / SIMULATION | Iterative search for action sequences using CEM improves performance on all tasks. | p. 6 (5. Experiments) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The cartpole swingup task requires a long planning horizon and to memorize the cart when it is out of view, reacher has a sparse ... | embodiment, simulator version and control stack | p. 6 (5. Experiments), p. 6 (5. Experiments) |
 | Task/environment | After 500 episodes, it achieves performance similar to D4PG, trained from images for 100,000 episodes, except for the finger task. | reset, timeout, object/scene variation | p. 6 (5. Experiments) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Latent dynamics model designs. In this example, the model observes the first two time steps and predicts the third. Circles represent stochastic variables ...
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 9: Comparison of hard ReLU (Nair & Hinton, 2010) and smooth ELU (Clevert et al., 2015) activation functions. We find that smooth activations help ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), metrics p. 6 (5. Experiments), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 6 (5. Experiments), p. 6 (5. Experiments), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (5. Experiments), p. 6 (5. Experiments), p. 20 (Figure/Table caption), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), metrics p. 6 (5. Experiments), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 6 (5. Experiments), p. 6 (5. Experiments), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (5. Experiments), p. 6 (5. Experiments), p. 20 (Figure/Table caption), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 12: Planning performance on the cheetah running task with the true simulator using different planner settings. Performance ranges from 132 (blue) to 837 (yellow). Evaluating more action sequences, optimizing ... (p. 20, Figure/Table caption).
+- **Metric evidence:** Iterative search for action sequences using CEM improves performance on all tasks. (p. 6, 5. Experiments).
+- **Baseline/ablation evidence:** The stochastic component is even more important - the agent does not learn without it. (p. 6, 5. Experiments).
+- **Failure/negative evidence:** Key difficulties include model inaccuracies, accumulating errors of multi-step predictions, failure to capture multiple possible futures, and overconfident predictions outside of the training distribution. (p. 1, 1. Introduction).

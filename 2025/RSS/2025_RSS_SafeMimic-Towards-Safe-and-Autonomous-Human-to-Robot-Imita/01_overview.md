@@ -1,8 +1,10 @@
 # SafeMimic: Towards Safe and Autonomous Human-to-Robot Imitation for Mobile Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p128.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss21/p128.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ World models, safety, uncertainty, and recovery의 mobile_manipulation 문제를
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 These works address the requirement of autonomy, but generally sidestep the question of safety - ‘critical challenge when learning mobile manipulation in the real world, Further, these methods require extensive trial-anderror learning ...를 문제로 두고, environments with different human teachers, and observe experimentally that our framework enables the robot to suc cessfully acquire the desired behaviors safely and more efficiently than direct sim-to-real imitation learning approaches ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 5 (C. Learning from Previous Successful Exploration) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, these approaches assume access to a black box policy or dynamics model of the environment, both which are unknown in the ‘case of learning a new task from human ... (p. 3, I. INrRopucTION).
+- **Actual contribution:** In summary, SAFEMIMIC introduces several novel contributions: (p. 2, I. INrRopucTION).
+- **Evaluation boundary:** The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration).
+- **Explicit failure boundary:** Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).

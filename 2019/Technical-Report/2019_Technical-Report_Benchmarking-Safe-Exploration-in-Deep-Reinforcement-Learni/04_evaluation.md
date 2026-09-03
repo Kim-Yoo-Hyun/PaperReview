@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning/; PDF retrieval source: https://cdn.openai.com/safexp-short.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning/; PDF retrieval source: https://cdn.openai.com/safexp-short.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 
 ## Evaluation Body Digest
 
-- **p. 15 / 5 Experiments - extractive PDF cue:** SG6 has at least one environment for each task, robot, and level.
-- **p. 21 / 5.3 Results - extractive PDF cue:** Problem 1 can be investigated with unmodified Safety Gym benchmark environments, using the Level 1 and 2 versions of each task as (First Environment, Second ...
-- **p. 15 / 5 Experiments - extractive PDF cue:** SGCar: All six Car robot environments with constraints in Safety Gym.
-- **p. 16 / 5 Experiments - extractive PDF cue:** Experiments for Point and Car robots used batch sizes of 30, 000 environment interaction steps, and experiments for Doggo used 60, 000.
-- **p. 16 / 5.3 Results - extractive PDF cue:** [2017]. • Lagrangian methods are able to find constraint-satisfying policies that attain nontrivial returns in several of the Point environments, demonstrating that when controlling for ...
-- **p. 18 / 5.3 Results - extractive PDF cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian PointGoal1 0 5 10 15 20 25 AverageEpRet 20 40 60 80 AverageEpCost 0.02 0.04 0.06 0.08 CostRate PointGoal2 5 ...
-- **p. 19 / 5.3 Results - extractive PDF cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian CarGoal1 0 10 20 30 AverageEpRet 20 40 60 80 AverageEpCost 0.00 0.02 0.04 0.06 0.08 CostRate CarGoal2 0 5 ...
-- **p. 20 / 5.3 Results - extractive PDF cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian DoggoGoal1 0 10 20 30 40 50 AverageEpRet 0 20 40 60 80 100 120 AverageEpCost 0.02 0.04 0.06 0.08 ...
+- **p. 15 / 5 Experiments - extractive body cue:** SG6 has at least one environment for each task, robot, and level.
+- **p. 21 / 5.3 Results - extractive body cue:** Problem 1 can be investigated with unmodified Safety Gym benchmark environments, using the Level 1 and 2 versions of each task as (First Environment, Second ...
+- **p. 15 / 5 Experiments - extractive body cue:** SGCar: All six Car robot environments with constraints in Safety Gym.
+- **p. 16 / 5 Experiments - extractive body cue:** Experiments for Point and Car robots used batch sizes of 30, 000 environment interaction steps, and experiments for Doggo used 60, 000.
+- **p. 16 / 5.3 Results - extractive body cue:** [2017]. • Lagrangian methods are able to find constraint-satisfying policies that attain nontrivial returns in several of the Point environments, demonstrating that when controlling for ...
+- **p. 18 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian PointGoal1 0 5 10 15 20 25 AverageEpRet 20 40 60 80 AverageEpCost 0.02 0.04 0.06 0.08 CostRate PointGoal2 5 ...
+- **p. 19 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian CarGoal1 0 10 20 30 AverageEpRet 20 40 60 80 AverageEpCost 0.00 0.02 0.04 0.06 0.08 CostRate CarGoal2 0 5 ...
+- **p. 20 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian DoggoGoal1 0 10 20 30 40 50 AverageEpRet 0 20 40 60 80 100 120 AverageEpCost 0.02 0.04 0.06 0.08 ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.3 Results | BENCHMARK / DATASET | By success, we mean attaining improvements simultaneously along both the episodic return axis and the constraint regret axis, while still producing a constraint-satisfying policy ... | p. 21 (5.3 Results) |
 | 5 Experiments | BENCHMARK / DATASET | However, we highlight a few common rules that guide our discussion: • All agents that fail to satisfy constraints are strictly worse than all ... | p. 14 (5 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 
 ## Dataset / Benchmark Role
 
-- **p. 15 / 5 Experiments - extractive PDF cue:** SG6 has at least one environment for each task, robot, and level.
-- **p. 21 / 5.3 Results - extractive PDF cue:** Problem 1 can be investigated with unmodified Safety Gym benchmark environments, using the Level 1 and 2 versions of each task as (First Environment, Second ...
-- **p. 15 / 5 Experiments - extractive PDF cue:** SGCar: All six Car robot environments with constraints in Safety Gym.
-- **p. 16 / 5 Experiments - extractive PDF cue:** Experiments for Point and Car robots used batch sizes of 30, 000 environment interaction steps, and experiments for Doggo used 60, 000.
-- **p. 16 / 5.3 Results - extractive PDF cue:** [2017]. • Lagrangian methods are able to find constraint-satisfying policies that attain nontrivial returns in several of the Point environments, demonstrating that when controlling for ...
-- **p. 18 / 5.3 Results - extractive PDF cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian PointGoal1 0 5 10 15 20 25 AverageEpRet 20 40 60 80 AverageEpCost 0.02 0.04 0.06 0.08 CostRate PointGoal2 5 ...
-- **p. 19 / 5.3 Results - extractive PDF cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian CarGoal1 0 10 20 30 AverageEpRet 20 40 60 80 AverageEpCost 0.00 0.02 0.04 0.06 0.08 CostRate CarGoal2 0 5 ...
-- **p. 20 / 5.3 Results - extractive PDF cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian DoggoGoal1 0 10 20 30 40 50 AverageEpRet 0 20 40 60 80 100 120 AverageEpCost 0.02 0.04 0.06 0.08 ...
+- **p. 15 / 5 Experiments - extractive body cue:** SG6 has at least one environment for each task, robot, and level.
+- **p. 21 / 5.3 Results - extractive body cue:** Problem 1 can be investigated with unmodified Safety Gym benchmark environments, using the Level 1 and 2 versions of each task as (First Environment, Second ...
+- **p. 15 / 5 Experiments - extractive body cue:** SGCar: All six Car robot environments with constraints in Safety Gym.
+- **p. 16 / 5 Experiments - extractive body cue:** Experiments for Point and Car robots used batch sizes of 30, 000 environment interaction steps, and experiments for Doggo used 60, 000.
+- **p. 16 / 5.3 Results - extractive body cue:** [2017]. • Lagrangian methods are able to find constraint-satisfying policies that attain nontrivial returns in several of the Point environments, demonstrating that when controlling for ...
+- **p. 18 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian PointGoal1 0 5 10 15 20 25 AverageEpRet 20 40 60 80 AverageEpCost 0.02 0.04 0.06 0.08 CostRate PointGoal2 5 ...
+- **p. 19 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian CarGoal1 0 10 20 30 AverageEpRet 20 40 60 80 AverageEpCost 0.00 0.02 0.04 0.06 0.08 CostRate CarGoal2 0 5 ...
+- **p. 20 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian DoggoGoal1 0 10 20 30 40 50 AverageEpRet 0 20 40 60 80 100 120 AverageEpCost 0.02 0.04 0.06 0.08 ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 1: Pre-made robots in Safety Gym. These robots are used in our benchmark environments. (a) Position (b) Button (c) Push
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 2: Tasks for our environments. From left to right: Goal, Button, Push. In "Goal," the objective is to move the robot inside the green ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 3: Constraint elements used in our environments. currently-highlighted button, which is the goal button. After the agent presses the correct button, the environment will ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Figure 4: Visualizations of pseudo-lidar observation spaces. On the left, we see a lidar halo repre- senting the goal pseudo-lidar for this agent. On the ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Figure 5: Images of benchmark environments. Top row: Goal environments. Middle row: Button environments. Bottom row: Push environments. In each subfigure, the left column shows ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark environments, ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 1: Normalized metrics from the conclusion of training averaged over the SG18 slate of environments and three random seeds per environment. • Constrained Policy ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Table 2: Normalized metrics from the conclusion of training averaged over various slates of environ- ments and three random seeds per environment. 17
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 1: Pre-made robots in Safety Gym. These robots are used in our benchmark environments. (a) Position (b) Button (c) Push
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 2: Tasks for our environments. From left to right: Goal, Button, Push. In "Goal," the objective is to move the robot inside the green ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 3: Constraint elements used in our environments. currently-highlighted button, which is the goal button. After the agent presses the correct button, the environment will ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Figure 4: Visualizations of pseudo-lidar observation spaces. On the left, we see a lidar halo repre- senting the goal pseudo-lidar for this agent. On the ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 5: Images of benchmark environments. Top row: Goal environments. Middle row: Button environments. Bottom row: Push environments. In each subfigure, the left column shows ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark environments, ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 1: Normalized metrics from the conclusion of training averaged over the SG18 slate of environments and three random seeds per environment. • Constrained Policy ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Table 2: Normalized metrics from the conclusion of training averaged over various slates of environ- ments and three random seeds per environment. 17
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | SG6 has at least one environment for each task, robot, and level. | embodiment, simulator version and control stack | p. 15 (5 Experiments), p. 21 (5.3 Results) |
 | Task/environment | Problem 1 can be investigated with unmodified Safety Gym benchmark environments, using the Level 1 and 2 versions of each task as (First Environment, ... | reset, timeout, object/scene variation | p. 21 (5.3 Results), p. 15 (5 Experiments) |
@@ -121,7 +121,7 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 | Primary metric/result | However, we highlight a few common rules that guide our discussion: • All agents that fail to satisfy constraints are strictly worse than all ... | numeric claim only at cited anchor | p. 14 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 16 / 5 Experiments - extractive PDF cue:** Point and Car agents were trained for 107 steps, and Doggo agents were trained for 108 steps.
+- **p. 16 / 5 Experiments - extractive body cue:** Point and Car agents were trained for 107 steps, and Doggo agents were trained for 108 steps.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 
 ## Limitations and Verification Questions
 
-- **p. 16 / 5 Experiments - extractive PDF cue:** [2017], we omit the learned failure predictor they used for cost shaping.
-- **p. 21 / 5.3 Results - extractive PDF cue:** There are a number of avenues we consider promising for future work.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark environments, ...
-- **p. 14 / 5 Experiments - extractive PDF cue:** First and foremost, it corresponds directly to safety outcomes: a lower cost rate means that fewer unsafe things happened.
-- **p. 14 / 5 Experiments - extractive PDF cue:** E τ∼πθ XT t=0 ct  ≤d, where ct is the aggregate indicator cost function for the environment (ct = 1 for an unsafe interaction, ...
-- **p. 15 / 5 Experiments - extractive PDF cue:** 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise.
+- **p. 16 / 5 Experiments - extractive body cue:** [2017], we omit the learned failure predictor they used for cost shaping.
+- **p. 21 / 5.3 Results - extractive body cue:** There are a number of avenues we consider promising for future work.
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark environments, ...
+- **p. 14 / 5 Experiments - extractive body cue:** First and foremost, it corresponds directly to safety outcomes: a lower cost rate means that fewer unsafe things happened.
+- **p. 14 / 5 Experiments - extractive body cue:** E τ∼πθ XT t=0 ct  ≤d, where ct is the aggregate indicator cost function for the environment (ct = 1 for an unsafe interaction, ...
+- **p. 15 / 5 Experiments - extractive body cue:** 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise.
 
-- **PDF anchors reviewed:** datasets p. 15 (5 Experiments), p. 21 (5.3 Results), p. 15 (5 Experiments), p. 16 (5 Experiments), p. 16 (5.3 Results), p. 18 (5.3 Results), metrics p. 15 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), p. 15 (5 Experiments), p. 14 (5 Experiments), p. 14 (5 Experiments), baselines p. 21 (5.3 Results), p. 14 (5 Experiments), p. 21 (5.3 Results), p. 14 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), results p. 21 (5.3 Results), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 14 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 15 (5 Experiments), p. 21 (5.3 Results), p. 15 (5 Experiments), p. 16 (5 Experiments), p. 16 (5.3 Results), p. 18 (5.3 Results), metrics p. 15 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), p. 15 (5 Experiments), p. 14 (5 Experiments), p. 14 (5 Experiments), baselines p. 21 (5.3 Results), p. 14 (5 Experiments), p. 21 (5.3 Results), p. 14 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), results p. 21 (5.3 Results), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 14 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

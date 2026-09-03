@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 For each nonterminal state i, there was a corresponding observation vector xi; if the walk was in state i at time t then xt = xi.를 Thus, if the state the walk was in at time t has its 1 at the i th component of its observation vector, then the prediction Pt = 'wTxt was simply the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In speech recognition, for example, current learning methods cannot be applied until the correct classification of the word is known.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Now suppose you play a game that reaches a novel position (one that you have never seen before), that then progresses to reach the bad state, and that finally ends ... (p. 9, 3.1 A game-playing example).
+- **Paper-specific mechanism:** S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 1. ....... t~~0 ~@ A game-playing example showing the inefficiency of supervised-learning methods. Each circle represents a position or class of positions from a two- person board game. The ... (p. 9, Figure/Table caption); the relevant task/metric cue is The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance of a learning procedure on a training set, we used the root ... (p. 13, 3.2 A random-walk example). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a packet-switched telecomnnmications network one may want to pre(tict the total delay in ... (p. 25, 5.1 Predicting cumulative outcomes).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This measure was averaged over 100 training sets to produce the data shown..
-3. Compare against the body-reported baseline or a matched simpler baseline: This procedure may require as much as O(n a) computation per time step as compared to O(n) for the supervised-learning and TD methods..
-4. Report the body metric and its denominator/aggregation: The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance of a learning procedure on a training set, we used the root mean squared ....
-5. Re-run the body-reported ablation/failure condition: In this way the effect of the 1 could be propagated back to the beginning of the sequence with only a single presentation..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Now suppose you play a game that reaches a novel position (one that you have never seen before), that then progresses to reach the bad state, and that finally ends ... (p. 9, 3.1 A game-playing example); preserve the objective/update rule: The "bad" position is known from long experience to lead 90% of the time to a loss and only 10% of the time to a win. (p. 9, 3.1 A game-playing example).
+2. Use the paper-reported task/data/environment cue: In principle, hmg chains of rule invocations can be learned in this way, with strength being passed back from rule to rule, thus tile name %ueket brigade." For a chain ... (p. 30, 6.3 Holland's bucket brigade).
+3. Compare against the reported or matched baseline: This procedure may require as much as O(n a) computation per time step as compared to O(n) for the supervised-learning and TD methods. (p. 22, 4.2 Optimality and learning rate).
+4. Report the body metric with its denominator and aggregation: The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance of a learning procedure on a training set, we used the root ... (p. 13, 3.2 A random-walk example).
+5. Re-run the reported ablation or stress/failure condition: In this way the effect of the 1 could be propagated back to the beginning of the sequence with only a single presentation. (p. 15, 3.2 A random-walk example); if none is reported, design one around: In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a packet-switched telecomnnmications network one may want to pre(tict the total delay in ... (p. 25, 5.1 Predicting cumulative outcomes).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example); the primary result is directionally consistent at p. 13 (3.2 A random-walk example), p. 29 (6.1 Samuel's checker-playing program), p. 30 (6.3 Holland's bucket brigade); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 8 (3. Examples of faster learning with TD methods), match the reported outcome at p. 9 (Figure/Table caption), p. 12 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), and measure the boundary at p. 25 (5.1 Predicting cumulative outcomes), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 TTON, article, introduce mechanism이 This procedure may require as much as O(n a) computation per time step as compared to ... 대비 The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance ...을 개선하고, In speech recognition, for example, current learning methods cannot be applied until the correct classification of ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Now suppose you play a game that reaches a novel position (one that you have never seen before), that then progresses to ...), does the paper-specific mechanism (S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of ...) retain the reported evaluation outcome (The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance ...) when tested against the paper's strongest explicit boundary (In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 1. ....... t~~0 ~@ A game-playing example showing the inefficiency of supervised-learning methods. Each circle represents a position or class of positions from a two- person board game. The ... (p. 9, Figure/Table caption).
+- **Strongest explicit boundary:** In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a packet-switched telecomnnmications network one may want to pre(tict the total delay in ... (p. 25, 5.1 Predicting cumulative outcomes).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

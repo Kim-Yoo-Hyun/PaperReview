@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/xu23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.09955. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/xu23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.09955. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | [XSkill] achieves 70.2% and 60% success (Tab. | p. 7 (4 Evaluation) |
 | 4 Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1 & 2) on unseen tasks with cross-embodiment prompts in simulated and real-world environments, which outperforms all baselines. | p. 7 (4 Evaluation) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | During the inference, the robot must complete an unseen composition of subtasks after viewing a prompt video from the sphere agent demonstration. • Realworld ... | embodiment, simulator version and control stack | p. 6 (4 Evaluation), p. 6 (4 Evaluation) |
 | Task/environment | We test XSkill on both simulated and real-world environments: • Franka Kitchen: is a simulated kitchen environment [71] that includes 7 sub-tasks and is ... | reset, timeout, object/scene variation | p. 6 (4 Evaluation), p. 7 (4 Evaluation) |
@@ -146,7 +146,16 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: XSkill Discover: At each training iteration, a batch of video are sampled from the same embodiment dataset. Each video vt i is augmented ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Execution on a novel task and robustness to perturbation. (a) XSkill analyzes a human video of a novel task, identifying skills for each ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 7 (4 Evaluation), metrics p. 6 (4 Evaluation), p. 8 (Figure/Table caption), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 3 (Figure/Table caption), baselines p. 7 (4 Evaluation), p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4 Evaluation), p. 6 (4 Evaluation).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 7 (4 Evaluation), metrics p. 6 (4 Evaluation), p. 8 (Figure/Table caption), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 3 (Figure/Table caption), baselines p. 7 (4 Evaluation), p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4 Evaluation), p. 6 (4 Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** During the inference, the robot must complete an unseen composition of subtasks after viewing a prompt video from the sphere agent demonstration. • Realworld Kitchen: is a new benchmark we ... (p. 6, 4 Evaluation).
+- **Metric evidence:** The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of completion. (p. 6, 4 Evaluation).
+- **Baseline/ablation evidence:** 1 & 2) on unseen tasks with cross-embodiment prompts in simulated and real-world environments, which outperforms all baselines. (p. 7, 4 Evaluation).
+- **Failure/negative evidence:** However, directly following the skill sequence ˜z for execution often results in a fragile system that is sensitive to unexpected failures or speed mismatch. (p. 5, B P).

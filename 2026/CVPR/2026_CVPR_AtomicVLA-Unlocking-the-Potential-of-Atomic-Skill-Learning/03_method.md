@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | The left row shows the initial task state (top) and the skill-expert activation during inference (bottom). design inherently enables incremental learning in ... | p. 5 (3.4. Continual Learning with Skill Expansion), p. 4 (3.2. Unified Task Planning and Action Execution) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | As illustrated in Algorithm 1, given the current visual observations O1:n t and task instruction ℓ, the model first predicts identifier either ... | p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.1. Overview) |
@@ -82,8 +82,8 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Typically, this mode is activated only at key time steps, such as task initiation or during the transition between sub-skills. | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Conversely, when [act] is predicted, the model switches to acting mode, where it produces a lowlevel action chunk At based on the ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -129,8 +129,17 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.4. Continual Learning with Skill Expansion), p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.1. Overview), p. 5 (3.5. Task Planning Embodied Data Generation), p. 3 (3.1. Overview), p. 3 (3.1. Overview), objective p. 4 (3.3. Skill-guided Mixture of Experts Architecture), p. 4 (3.2. Unified Task Planning and Action Execution), p. 5 (3.5. Task Planning Embodied Data Generation), p. 5 (3.4. Continual Learning with Skill Expansion), temporal p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.2. Unified Task Planning and Action Execution), p. 5 (3.5. Task Planning Embodied Data Generation), p. 5 (3.5. Task Planning Embodied Data Generation), p. 6 (4.2. Results on Simulation), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** method p. 5 (3.4. Continual Learning with Skill Expansion), p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.1. Overview), p. 5 (3.5. Task Planning Embodied Data Generation), p. 3 (3.1. Overview), p. 3 (3.1. Overview), objective p. 4 (3.3. Skill-guided Mixture of Experts Architecture), p. 4 (3.2. Unified Task Planning and Action Execution), p. 5 (3.5. Task Planning Embodied Data Generation), p. 5 (3.4. Continual Learning with Skill Expansion), temporal p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.2. Unified Task Planning and Action Execution), p. 5 (3.5. Task Planning Embodied Data Generation), p. 5 (3.5. Task Planning Embodied Data Generation), p. 6 (4.2. Results on Simulation), p. 8 (4.4. Ablation Study).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In contrast, in acting mode, the policy generates a concrete action command conditioned on the robot's proprioceptive state St and the most recent planning output σ. (p. 4, 3.2. Unified Task Planning and Action Execution).
+- **Objective/update evidence:** Building upon this architecture, we develop a skill-guided library of atomic action experts (Sec. (p. 3, 3.1. Overview).
+- **Temporal/runtime evidence:** By aligning these refined labels with the full trajectory, we construct a structured reasoning chain comprising the sequence of executed atomic actions and the associated high-level plan for subsequent steps. (p. 5, 3.5. Task Planning Embodied Data Generation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

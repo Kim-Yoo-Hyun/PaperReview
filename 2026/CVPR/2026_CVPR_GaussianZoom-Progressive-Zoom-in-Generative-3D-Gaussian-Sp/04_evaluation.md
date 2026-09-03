@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5.1. Experiment Settings - extractive PDF cue:** We evaluate our method on two real-world benchmarks: Mip-NeRF360 [2] and Tanks&Temples [13].
-- **p. 6 / 5.1. Experiment Settings - extractive PDF cue:** Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× superresolution setting.
-- **p. 6 / 5.1. Experiment Settings - extractive PDF cue:** We follow their official implementations to generate SRenhanced images and train corresponding 3DGS models on the refined datasets.
-- **p. 5 / 5.1. Experiment Settings - extractive PDF cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
-- **p. 7 / 5.1. Experiment Settings - extractive PDF cue:** These results demonstrate the robustness of our framework in reconstructing semantically coherent details under large magnification, validating its ability to generalize beyond supervised resolution scales.
-- **p. 6 / 5.1. Experiment Settings - extractive PDF cue:** FID measures the distributional distance between rendered and ground-truth images in the perceptual feature space.
-- **p. 7 / 5.1. Experiment Settings - extractive PDF cue:** 2), our method achieves the best performance across all no-reference metrics, including CLIPIQA, MUSIQ, and NIQE.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Method overview. Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-of- Detail (LoD) representation to perform generative zoom-in reconstruction. Starting ...
+- **p. 5 / 5.1. Experiment Settings - extractive body cue:** We evaluate our method on two real-world benchmarks: Mip-NeRF360 [2] and Tanks&Temples [13].
+- **p. 6 / 5.1. Experiment Settings - extractive body cue:** Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× superresolution setting.
+- **p. 6 / 5.1. Experiment Settings - extractive body cue:** We follow their official implementations to generate SRenhanced images and train corresponding 3DGS models on the refined datasets.
+- **p. 5 / 5.1. Experiment Settings - extractive body cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
+- **p. 7 / 5.1. Experiment Settings - extractive body cue:** These results demonstrate the robustness of our framework in reconstructing semantically coherent details under large magnification, validating its ability to generalize beyond supervised resolution scales.
+- **p. 6 / 5.1. Experiment Settings - extractive body cue:** FID measures the distributional distance between rendered and ground-truth images in the perceptual feature space.
+- **p. 7 / 5.1. Experiment Settings - extractive body cue:** 2), our method achieves the best performance across all no-reference metrics, including CLIPIQA, MUSIQ, and NIQE.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Method overview. Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-of- Detail (LoD) representation to perform generative zoom-in reconstruction. Starting ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.1. Experiment Settings | EMPIRICAL / REAL-ROBOT OR HARDWARE | 2), our method achieves the best performance across all no-reference metrics, including CLIPIQA, MUSIQ, and NIQE. | p. 7 (5.1. Experiment Settings) |
 | 5.1. Experiment Settings | EMPIRICAL / REAL-ROBOT OR HARDWARE | The lower FID further reflects the improved stability and coherence of the reconstructed high-frequency details. | p. 7 (5.1. Experiment Settings) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5.1. Experiment Settings - extractive PDF cue:** We evaluate our method on two real-world benchmarks: Mip-NeRF360 [2] and Tanks&Temples [13].
-- **p. 6 / 5.1. Experiment Settings - extractive PDF cue:** Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× superresolution setting.
-- **p. 6 / 5.1. Experiment Settings - extractive PDF cue:** We follow their official implementations to generate SRenhanced images and train corresponding 3DGS models on the refined datasets.
-- **p. 5 / 5.1. Experiment Settings - extractive PDF cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
+- **p. 5 / 5.1. Experiment Settings - extractive body cue:** We evaluate our method on two real-world benchmarks: Mip-NeRF360 [2] and Tanks&Temples [13].
+- **p. 6 / 5.1. Experiment Settings - extractive body cue:** Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× superresolution setting.
+- **p. 6 / 5.1. Experiment Settings - extractive body cue:** We follow their official implementations to generate SRenhanced images and train corresponding 3DGS models on the refined datasets.
+- **p. 5 / 5.1. Experiment Settings - extractive body cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GaussianZoom progressively magnifies 3D scenes from low-resolution inputs, reconstructing them into multi-view consistent and detail-rich representations. The expandable continuous Level-of-Detail hierarchy organizes primitive ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Comparison between flow-based and depth-based warp- ing. The proposed depth-guided alignment achieves geometri- cally consistent correspondences across views and effectively sup- presses ghosting ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Method overview. Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-of- Detail (LoD) representation to perform generative zoom-in reconstruction. Starting ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison of 4× super-resolution results. Mip-Splatting reduces aliasing but lacks fine details; SuperGaussian, SRGS and Sequence Matters produces blurry textures; Our method ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× super- resolution setting. The best, second best and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison under extreme zoom-in across multiple focal levels and viewpoints. Competing methods exhibit blurry, textureless results as zoom increases, while our method ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison under the extreme zoom-in setting (magnification factors of 16, 32, and 64). The super-resolution involved methods including SRGS [6] and Sequence ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Fr´echet Video Distance (↓) of super-resolved images on Mip-NeRF360 and Tanks&Temples datasets. The best, second best, and third best entries are marked in ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GaussianZoom progressively magnifies 3D scenes from low-resolution inputs, reconstructing them into multi-view consistent and detail-rich representations. The expandable continuous Level-of-Detail hierarchy organizes primitive ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Comparison between flow-based and depth-based warp- ing. The proposed depth-guided alignment achieves geometri- cally consistent correspondences across views and effectively sup- presses ghosting ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Method overview. Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-of- Detail (LoD) representation to perform generative zoom-in reconstruction. Starting ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison of 4× super-resolution results. Mip-Splatting reduces aliasing but lacks fine details; SuperGaussian, SRGS and Sequence Matters produces blurry textures; Our method ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× super- resolution setting. The best, second best and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison under extreme zoom-in across multiple focal levels and viewpoints. Competing methods exhibit blurry, textureless results as zoom increases, while our method ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison under the extreme zoom-in setting (magnification factors of 16, 32, and 64). The super-resolution involved methods including SRGS [6] and Sequence ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Fr´echet Video Distance (↓) of super-resolved images on Mip-NeRF360 and Tanks&Temples datasets. The best, second best, and third best entries are marked in ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on two real-world benchmarks: Mip-NeRF360 [2] and Tanks&Temples [13]. | embodiment, simulator version and control stack | p. 5 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings) |
 | Task/environment | Quantitative comparison on the Mip-NeRF360 (1/8 →1/2) and Tanks&Temples (1/4 →1) datasets under the 4× superresolution setting. | reset, timeout, object/scene variation | p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings) |
@@ -118,8 +118,8 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 | Primary metric/result | The lower FID further reflects the improved stability and coherence of the reconstructed high-frequency details. | numeric claim only at cited anchor | p. 7 (5.1. Experiment Settings) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5.1. Experiment Settings - extractive PDF cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
-- **p. 7 / 5.1. Experiment Settings - extractive PDF cue:** All experiments are conducted on a single NVIDIA RTX 4090 GPU.
+- **p. 5 / 5.1. Experiment Settings - extractive body cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
+- **p. 7 / 5.1. Experiment Settings - extractive body cue:** All experiments are conducted on a single NVIDIA RTX 4090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -152,13 +152,13 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Future work will investigate more capable content creative zoomin approaches to enable seamless transitions from cosmicscale environments down to microscopic and molecular scenes.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Method overview. Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-of- Detail (LoD) representation to perform generative zoom-in reconstruction. Starting ...
-- **p. 7 / 5.1. Experiment Settings - extractive PDF cue:** SRGS [6], which relies on a single-image super-resolution backbone, improves per-view sharpness but fails to maintain crossview coherence, since each frame is enhanced independently without ...
-- **p. 7 / 5.1. Experiment Settings - extractive PDF cue:** The super-resolution involved methods including SRGS [6] and Sequence Matters [14] are chosen for comparsion, while SuperGaussian [24] fails to produce meaningful results under this ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 6. Without prompt guidance, the reconstructed region exhibits semantic and material inconsistencies with the low- resolution inputs, producing mismatched textures or over- simplified surfaces. ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Future work will investigate more capable content creative zoomin approaches to enable seamless transitions from cosmicscale environments down to microscopic and molecular scenes.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Method overview. Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-of- Detail (LoD) representation to perform generative zoom-in reconstruction. Starting ...
+- **p. 7 / 5.1. Experiment Settings - extractive body cue:** SRGS [6], which relies on a single-image super-resolution backbone, improves per-view sharpness but fails to maintain crossview coherence, since each frame is enhanced independently without ...
+- **p. 7 / 5.1. Experiment Settings - extractive body cue:** The super-resolution involved methods including SRGS [6] and Sequence Matters [14] are chosen for comparsion, while SuperGaussian [24] fails to produce meaningful results under this ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6. Without prompt guidance, the reconstructed region exhibits semantic and material inconsistencies with the low- resolution inputs, producing mismatched textures or over- simplified surfaces. ...
 
-- **PDF anchors reviewed:** datasets p. 5 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 5 (5.1. Experiment Settings), metrics p. 7 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 4 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 6 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 3 (Figure/Table caption), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings).
+- **Evidence anchors reviewed:** datasets p. 5 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 5 (5.1. Experiment Settings), metrics p. 7 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 4 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 6 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 3 (Figure/Table caption), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

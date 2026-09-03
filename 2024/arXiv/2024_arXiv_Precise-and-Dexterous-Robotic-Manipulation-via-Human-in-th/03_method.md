@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (54 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.21845; PDF retrieval source: https://arxiv.org/pdf/2410.21845. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (54 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.21845; PDF retrieval source: https://arxiv.org/pdf/2410.21845. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | Finally, we start the policy training process. | p. 9 (3.5. Training Process), p. 9 (3.5. Training Process) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | Such an intervention strategy will cause the overestimation of the value function, particularly in the early stages of the training process; which ... | p. 9 (3.5. Training Process), p. 8 (3.5. Training Process) |
@@ -80,7 +80,7 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | Specifically, we report the intervention rate, for which we calculate the ratio of intervened timesteps to total timesteps within an episode and ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | For an autonomous rollout trajectory from time step 𝑡0 to 𝑡𝑁, a human can intervene at any time step 𝑡𝑖 where 𝑡0 ... | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | Specifically, we report the intervention rate, for which we calculate the ratio of intervened timesteps to total timesteps within an episode and ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), objective p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), temporal p. 15 (4.3. Experimental Results), p. 7 (3.4. Human-in-the-Loop Reinforcement Learning), p. 19 (5.2. Reactive Policy and Predictive Policy), p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results).
+- **Evidence anchors reviewed:** method p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), objective p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), temporal p. 15 (4.3. Experimental Results), p. 7 (3.4. Human-in-the-Loop Reinforcement Learning), p. 19 (5.2. Reactive Policy and Predictive Policy), p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (54 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's ... (p. 4, 3.1. Preliminaries and Problem Statement).
+- **Objective/update evidence:** Additionally, we may collect extra data to address any false negative and false positive issues with the reward classifier. (p. 8, 3.5. Training Process).
+- **Temporal/runtime evidence:** Specifically, we report the intervention rate, for which we calculate the ratio of intervened timesteps to total timesteps within an episode and report a running average over 20 episodes. (p. 15, 4.3. Experimental Results).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

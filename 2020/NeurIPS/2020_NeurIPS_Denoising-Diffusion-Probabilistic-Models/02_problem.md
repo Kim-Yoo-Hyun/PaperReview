@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance ... | high-dimensional data 또는 robot action-trajectory distribution | body wording is the source claim |
-| Observation / input | On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. | conditioning observation와 noisy/intermediate sample | exact sensor/frame/preprocessing from PDF |
+| Observation / input | On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. | conditioning observation와 noisy/intermediate sample | exact sensor/frame/preprocessing from PDF body |
 | State / latent | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural | latent/noise variable와 conditional distribution | notation and tensor shape require body check |
 | Output / action | Since, available, input, model, choose, parameterization, where, function | generated sample, action chunk 또는 trajectory | exact unit/frame/decoder require body check |
 | Target outcome | sample quality, diversity and latency | distribution fit, multimodality, sample quality와 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | data x₀, noisy state x_t, condition c; body terms: unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural | p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background) |
 | Decision / output variable | sample/action x̂ or trajectory; body terms: present, more, refined, analysis, phenomenon, language, lossy, compression | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (2 Background), p. 4 (2 Background), p. 4 (2 Background) |
 | Success / guarantee | sample quality, diversity and latency | p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 3 (2 Background), p. 4 (2 Background)): We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive ...
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 3 (2 Background), p. 4 (2 Background)): We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive ...
 
 - **p. 2 / 1 Introduction - extractive body cue:** When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for ...
 - **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Ab
 
 ## Position in the Robotics Loop
 
-generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
+generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction), p. 4 (2 Background), interface p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract), objective p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background).
+- **Evidence anchors reviewed:** problem p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction), p. 4 (2 Background), interface p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract), objective p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates. (p. 3, 2 Background).
+- **Formulation-changing contribution:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive ... (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** We fixed the noise for different values of λ so xt and x′ t remain the same. (p. 8, 4 Experiments).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

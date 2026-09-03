@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 
 ## Method Body Digest
 
-- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive PDF cue:** Then we use a VQA model, such as BLIP [19] to produce a text description of the image.
-- **p. 3 / 4. Our Methodology - extractive PDF cue:** We then use the Material Property Distribution Prediction (MPDP) model to estimate the full distribution, simulating object dynamics with driving particles sampled using the Physical-Geometric ...
-- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive PDF cue:** For each scene, we first train a 3DGS model on given images and camera poses.
-- **p. 4 / 4.1. 3D Open-vocabulary Segmentation - extractive PDF cue:** We obtain the mean physical properties of the object from the proposed MLLM-P3, and based on this and the object's geometry, we then derive the ...
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** To model physical properties, we employ MLS-MPM [12] as our simulator.
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
-- **p. 8 / Method - extractive PDF cue:** This demonstrates PGAS's enhanced capability in reconstructing photorealistic 4D dynamics.
-- **p. 3 / 3.1. Material Point Method - extractive PDF cue:** Following PhysGaussian[42], we define each Gaussian kernel's time-dependent state as: x_i ( t) = \De lta ( x _i, t), \ \Si gma _i(t) = ...
+- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive body cue:** Then we use a VQA model, such as BLIP [19] to produce a text description of the image.
+- **p. 3 / 4. Our Methodology - extractive body cue:** We then use the Material Property Distribution Prediction (MPDP) model to estimate the full distribution, simulating object dynamics with driving particles sampled using the Physical-Geometric ...
+- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive body cue:** For each scene, we first train a 3DGS model on given images and camera poses.
+- **p. 4 / 4.1. 3D Open-vocabulary Segmentation - extractive body cue:** We obtain the mean physical properties of the object from the proposed MLLM-P3, and based on this and the object's geometry, we then derive the ...
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** To model physical properties, we employ MLS-MPM [12] as our simulator.
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
+- **p. 8 / Method - extractive body cue:** This demonstrates PGAS's enhanced capability in reconstructing photorealistic 4D dynamics.
+- **p. 3 / 3.1. Material Point Method - extractive body cue:** Following PhysGaussian[42], we define each Gaussian kernel's time-dependent state as: x_i ( t) = \De lta ( x _i, t), \ \Si gma _i(t) = ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** In this paper, we propose PhysSplat, a physics-based method that efficiently transforms static 3D objects into interactive ones capable of responding to new interactions, as ...
-- **p. 3 / 4. Our Methodology - extractive PDF cue:** We propose MLLM-based Physical Property Perception (MLLM-P3) to predict the mean values of these properties (Section 4.2).
+- **p. 2 / 1. Introduction - extractive body cue:** Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators ...
+- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose PhysSplat, a physics-based method that efficiently transforms static 3D objects into interactive ones capable of responding to new interactions, as ...
+- **p. 3 / 4. Our Methodology - extractive body cue:** We propose MLLM-based Physical Property Perception (MLLM-P3) to predict the mean values of these properties (Section 4.2).
 
 ## Source Evidence Cues
 
-- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive PDF cue:** Then we use a VQA model, such as BLIP [19] to produce a text description of the image.
-- **p. 3 / 4. Our Methodology - extractive PDF cue:** We then use the Material Property Distribution Prediction (MPDP) model to estimate the full distribution, simulating object dynamics with driving particles sampled using the Physical-Geometric ...
-- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive PDF cue:** For each scene, we first train a 3DGS model on given images and camera poses.
-- **p. 4 / 4.1. 3D Open-vocabulary Segmentation - extractive PDF cue:** We obtain the mean physical properties of the object from the proposed MLLM-P3, and based on this and the object's geometry, we then derive the ...
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** To model physical properties, we employ MLS-MPM [12] as our simulator.
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
-- **p. 8 / Method - extractive PDF cue:** This demonstrates PGAS's enhanced capability in reconstructing photorealistic 4D dynamics.
+- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive body cue:** Then we use a VQA model, such as BLIP [19] to produce a text description of the image.
+- **p. 3 / 4. Our Methodology - extractive body cue:** We then use the Material Property Distribution Prediction (MPDP) model to estimate the full distribution, simulating object dynamics with driving particles sampled using the Physical-Geometric ...
+- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive body cue:** For each scene, we first train a 3DGS model on given images and camera poses.
+- **p. 4 / 4.1. 3D Open-vocabulary Segmentation - extractive body cue:** We obtain the mean physical properties of the object from the proposed MLLM-P3, and based on this and the object's geometry, we then derive the ...
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** To model physical properties, we employ MLS-MPM [12] as our simulator.
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
+- **p. 8 / Method - extractive body cue:** This demonstrates PGAS's enhanced capability in reconstructing photorealistic 4D dynamics.
 - **Detected method headings:** 3.1. Material Point Method (p. 3); 4. Our Methodology (p. 3); 5.3. Comparison with SOTA Methods (p. 6); Method (p. 8)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then we use a VQA model, such as BLIP [19] to produce a text description of the image. | p. 4 (4.2. MLLM-based Physical Property Perception), p. 3 (4. Our Methodology) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We then use the Material Property Distribution Prediction (MPDP) model to estimate the full distribution, simulating object dynamics with driving particles sampled ... | p. 3 (4. Our Methodology), p. 3 (4.1. 3D Open-vocabulary Segmentation) |
@@ -48,11 +48,11 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 
 ## Objective / Update Rule
 
-- **p. 3 / 3.1. Material Point Method - extractive PDF cue:** Following PhysGaussian[42], we define each Gaussian kernel's time-dependent state as: x_i ( t) = \De lta ( x _i, t), \ \Si gma _i(t) = ...
-- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive PDF cue:** This enables the model to return a list of physical properties for the object, M = ρ, E, ν, where ρ represents the density, E ...
-- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive PDF cue:** This description, along with the image, are then passed to a Multi-modal Large Language Model (MLLM) such as GPT-4V [43], prompting it to return a ...
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** In MPM, a continuum is represented by particles distributed in a grid-based space, offering a distinct advantage over mesh-based methods.
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** The network predicts the geometry-aware probability distribution P of physical properties across particles, P = Dθ(X). where X is the position of 3D Gaussians of ...
+- **p. 3 / 3.1. Material Point Method - extractive body cue:** Following PhysGaussian[42], we define each Gaussian kernel's time-dependent state as: x_i ( t) = \De lta ( x _i, t), \ \Si gma _i(t) = ...
+- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive body cue:** This enables the model to return a list of physical properties for the object, M = ρ, E, ν, where ρ represents the density, E ...
+- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive body cue:** This description, along with the image, are then passed to a Multi-modal Large Language Model (MLLM) such as GPT-4V [43], prompting it to return a ...
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** In MPM, a continuum is represented by particles distributed in a grid-based space, offering a distinct advantage over mesh-based methods.
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** The network predicts the geometry-aware probability distribution P of physical properties across particles, P = Dθ(X). where X is the position of 3D Gaussians of ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Material Point Method), p. 5 (4.3. Physics-Based Dynamics).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive PDF cue:** Finally, the selected material name, image, and text description provide a structured input to the MLLM, grounding its outputs in a reliable context.
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** We train a network Dθ using part of the synthesized dataset, with the object's point cloud and predicted mean values (Section 4.2) as input.
-- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive PDF cue:** These models automatically segment objects in images without textual input.
-- **p. 1 / 1. Introduction - extractive PDF cue:** However, these approaches are unable to simulate interactions with 3D assets in simulation environments [32, 41], which is s critical for generating realistic object responses ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** In this paper, we propose PhysSplat, a physics-based method that efficiently transforms static 3D objects into interactive ones capable of responding to new interactions, as ...
-- **p. 3 / 3.1. Material Point Method - extractive PDF cue:** The Material Point Method (MPM)[12] is a popular simulation framework for multi-physics phenomena due to its capability to handle topology changes and frictional interactions.
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive PDF cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
+- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive body cue:** Finally, the selected material name, image, and text description provide a structured input to the MLLM, grounding its outputs in a reliable context.
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** We train a network Dθ using part of the synthesized dataset, with the object's point cloud and predicted mean values (Section 4.2) as input.
+- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive body cue:** These models automatically segment objects in images without textual input.
+- **p. 1 / 1. Introduction - extractive body cue:** However, these approaches are unable to simulate interactions with 3D assets in simulation environments [32, 41], which is s critical for generating realistic object responses ...
+- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose PhysSplat, a physics-based method that efficiently transforms static 3D objects into interactive ones capable of responding to new interactions, as ...
+- **p. 3 / 3.1. Material Point Method - extractive body cue:** The Material Point Method (MPM)[12] is a popular simulation framework for multi-physics phenomena due to its capability to handle topology changes and frictional interactions.
+- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,9 +89,9 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 
 ## Training vs Inference
 
-- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive PDF cue:** For each scene, we first train a 3DGS model on given images and camera poses.
-- **p. 6 / 5.3. Comparison with SOTA Methods - extractive PDF cue:** Since PhysDreamer [47] has not released its training code, we only compare the four evaluation scene and are unable to report its inference time.
-- **p. 8 / Method - extractive PDF cue:** Time measures the inference speed for physics-based 4D generation on an single RTX 4090 GPU.
+- **p. 3 / 4.1. 3D Open-vocabulary Segmentation - extractive body cue:** For each scene, we first train a 3DGS model on given images and camera poses.
+- **p. 6 / 5.3. Comparison with SOTA Methods - extractive body cue:** Since PhysDreamer [47] has not released its training code, we only compare the four evaluation scene and are unable to report its inference time.
+- **p. 8 / Method - extractive body cue:** Time measures the inference speed for physics-based 4D generation on an single RTX 4090 GPU.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -111,10 +111,10 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 
 ## Failure and Ablation Link
 
-- **p. 7 / 5.4. Ablation study - extractive PDF cue:** In this section, we conduct ablation experiments using PhysDreamer [47] dataset to evaluate the effectiveness of our proposed modules.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation Study on PhysDreamer [47] dataset. AS denotes the average aesthetic quality score predicted using the LAION aesthetic predictor. property distribution prediction is ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7. Ablation study. Visualization of space-time slices for ablation study on PhysDreamer [47]. Our method can generate closer content compared with the real capture. ...
-- **p. 8 / 7. Conclusion - extractive PDF cue:** Future work will explore to reconstruct occluded parts, further enhancing realism and expanding applications in interactive virtual experiences.
+- **p. 7 / 5.4. Ablation study - extractive body cue:** In this section, we conduct ablation experiments using PhysDreamer [47] dataset to evaluate the effectiveness of our proposed modules.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation Study on PhysDreamer [47] dataset. AS denotes the average aesthetic quality score predicted using the LAION aesthetic predictor. property distribution prediction is ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Ablation study. Visualization of space-time slices for ablation study on PhysDreamer [47]. Our method can generate closer content compared with the real capture. ...
+- **p. 8 / 7. Conclusion - extractive body cue:** Future work will explore to reconstruct occluded parts, further enhancing realism and expanding applications in interactive virtual experiences.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -128,7 +128,7 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4.2. MLLM-based Physical Property Perception), p. 3 (4. Our Methodology), p. 3 (4.1. 3D Open-vocabulary Segmentation), p. 4 (4.1. 3D Open-vocabulary Segmentation), p. 5 (4.3. Physics-Based Dynamics), p. 5 (4.3. Physics-Based Dynamics), objective p. 3 (3.1. Material Point Method), p. 4 (4.2. MLLM-based Physical Property Perception), p. 4 (4.2. MLLM-based Physical Property Perception), p. 5 (4.3. Physics-Based Dynamics), p. 5 (4.3. Physics-Based Dynamics), temporal p. 3 (3.1. Material Point Method), p. 6 (5.1. Implementation Details), p. 3 (3.1. Material Point Method), p. 6 (5.3. Comparison with SOTA Methods), p. 8 (Method), p. 8 (7. Conclusion).
+- **Evidence anchors reviewed:** method p. 4 (4.2. MLLM-based Physical Property Perception), p. 3 (4. Our Methodology), p. 3 (4.1. 3D Open-vocabulary Segmentation), p. 4 (4.1. 3D Open-vocabulary Segmentation), p. 5 (4.3. Physics-Based Dynamics), p. 5 (4.3. Physics-Based Dynamics), objective p. 3 (3.1. Material Point Method), p. 4 (4.2. MLLM-based Physical Property Perception), p. 4 (4.2. MLLM-based Physical Property Perception), p. 5 (4.3. Physics-Based Dynamics), p. 5 (4.3. Physics-Based Dynamics), temporal p. 3 (3.1. Material Point Method), p. 6 (5.1. Implementation Details), p. 3 (3.1. Material Point Method), p. 6 (5.3. Comparison with SOTA Methods), p. 8 (Method), p. 8 (7. Conclusion).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

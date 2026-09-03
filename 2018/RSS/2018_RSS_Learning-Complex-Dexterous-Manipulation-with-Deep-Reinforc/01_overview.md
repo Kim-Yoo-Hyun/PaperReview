@@ -1,8 +1,10 @@
 # Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://roboticsproceedings.org/rss14/p49.html.
-> PDF retrieval source: https://arxiv.org/pdf/1709.10087. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://roboticsproceedings.org/rss14/p49.html.
+> PDF retrieval source: https://arxiv.org/pdf/1709.10087. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1709.10087
 - Code/Project: https://sites.google.com/view/deeprl-dexterous-manipulation
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, these methods typically rely on accurate dynamics models and state estimates, which are often difficult to obtain for contact rich manipulation tasks, especially in the real world.를 문제로 두고, To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, these methods typically rely on accurate dynamics models and state estimates, which are often difficult to obtain for contact rich manipulation tasks, especially in the real world. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR). (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Figure 1: We demonstrate a wide range of dexterous manipulation skills such as object relocation, in-hand manipulation, tool use, and opening doors using DRL methods. By augmenting with human demonstrations, ... (p. 1, Figure/Table caption).
+- **Explicit failure boundary:** Indeed, model-free methods have been used for acquiring manipulation skills [52], [13], but so far have been limited to simpler behaviors with 2-3 finger hands or wholearm manipulators, which do ... (p. 1, I. INTRODUCTION).

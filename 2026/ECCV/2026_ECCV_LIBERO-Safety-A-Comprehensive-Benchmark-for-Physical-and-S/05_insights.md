@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 Image Input Text Instruction Multi-modal VLM Action Decoder Proprioception Action Tokens World Model Image Input Text Instruction Future State Action Image Input Text Instruction Sys.를 1 Fast, Low-Level Control High-Frequency Data Planner/ Policy Affordance-Aware Grasping Tabletop Spatial Avoidance Human-Robot Interaction Free-Space Hand-Object Avoidance OpenVLA OpenVLA-OFT VLA-JEPA UniVLA GR00T N1.5 GR00T N1.6 Explic ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to enable the ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Image Input Text Instruction Multi-modal VLM Action Decoder Proprioception Action Tokens World Model Image Input Text Instruction Future State Action Image Input Text Instruction Sys. (p. 1, 462 Hand-Object Pairs).
+- **Paper-specific mechanism:** In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to ... (p. 3, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init State), viewpoint shifts (View), and scene variations (Scene), the SR remains relatively stable, fluctuating ... (p. 13, 4 Experiment); the relevant task/metric cue is Consequently, we use the Success Rate (SR) as our primary metric, which strictly requires goal completion without any constraint violations. (p. 10, 4 Experiment). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures. (p. 39, C.3 Additional Experimental Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In our benchmark, the barrier function is defined by a distance-based safety margin: \la b el {e q:d i stance_barrier} h(z_t)= d(z_t,\mathcal {O}_t)-d_{\mathrm {safe}}, (A.4) where d(zt, Ot) denotes the minimum distance ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init State), viewpoint shifts (View), and scene variations (Scene), the SR remains relatively stable, fluctuating between 56.3% ....
-4. Report the body metric and its denominator/aggregation: Metrics are reported as mean Success Rate (SR, %), with standard deviations computed across three training seeds shown in parentheses..
-5. Re-run the body-reported ablation/failure condition: To distinguish the safety-evaluation difficulty from the effect of training on LIBERO-Safety, we additionally evaluate two representative policies under two control settings: zero-shot inference without task-specific fine-tuning, and SF ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Image Input Text Instruction Multi-modal VLM Action Decoder Proprioception Action Tokens World Model Image Input Text Instruction Future State Action Image Input Text Instruction Sys. (p. 1, 462 Hand-Object Pairs); preserve the objective/update rule: Despite the impressive manipulation capabilities of VisionLanguage-Action (VLA) models, their operational safety under strict constraints remains largely unverified. (p. 1, 462 Hand-Object Pairs).
+2. Use the paper-reported task/data/environment cue: To ensure unbiased representation learning across tasks, dataset and trajectory weight balancing are explicitly enabled. (p. 37, C.2 Training Configurations).
+3. Compare against the reported or matched baseline: Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init State), viewpoint shifts (View), and scene variations (Scene), the SR remains relatively stable, fluctuating ... (p. 13, 4 Experiment).
+4. Report the body metric with its denominator and aggregation: Consequently, we use the Success Rate (SR) as our primary metric, which strictly requires goal completion without any constraint violations. (p. 10, 4 Experiment).
+5. Re-run the reported ablation or stress/failure condition: To distinguish the safety-evaluation difficulty from the effect of training on LIBERO-Safety, we additionally evaluate two representative policies under two control settings: zero-shot inference without task-specific fine-tuning, and SF ... (p. 38, C.3 Additional Experimental Results); if none is reported, design one around: This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures. (p. 39, C.3 Additional Experimental Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object Pairs), p. 1 (462 Hand-Object Pairs); the primary result is directionally consistent at p. 11 (4 Experiment), p. 10 (4 Experiment), p. 12 (4 Experiment); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 13 (4 Experiment), p. 11 (Figure/Table caption), p. 10 (4 Experiment), and measure the boundary at p. 39 (C.3 Additional Experimental Results), p. 10 (4 Experiment).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, establish, evaluation mechanism이 Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init ... 대비 Metrics are reported as mean Success Rate (SR, %), with standard deviations computed across three training seeds shown ...을 개선하고, This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Image Input Text Instruction Multi-modal VLM Action Decoder Proprioception Action Tokens World Model Image Input Text Instruction Future State Action Image Input ...), does the paper-specific mechanism (In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce ...) retain the reported evaluation outcome (Consequently, we use the Success Rate (SR) as our primary metric, which strictly requires goal completion without any ...) when tested against the paper's strongest explicit boundary (This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Consequently, we use the Success Rate (SR) as our primary metric, which strictly requires goal completion without any ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (42 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to ... (p. 3, 1 INTRODUCTION).
+- **Paper-supported outcome:** Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init State), viewpoint shifts (View), and scene variations (Scene), the SR remains relatively stable, fluctuating ... (p. 13, 4 Experiment).
+- **Strongest explicit boundary:** This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures. (p. 39, C.3 Additional Experimental Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

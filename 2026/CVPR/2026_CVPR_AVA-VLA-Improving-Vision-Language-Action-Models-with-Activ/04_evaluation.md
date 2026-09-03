@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | Each component alone improves over OpenVLA-OFT, and their combination achieves the best overall performance. | p. 7 (4.3. Ablation Studies) |
 | 4.2. Evaluation Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results demonstrate that the proposed AVA-VLA framework achieves state-of-the-art overall performance in both singletask and multi-task settings. | p. 7 (4.2. Evaluation Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct experiments on three challenging settings: the LIBERO [28] and CALVIN [31] benchmarks for evaluation in simulation environments, and a real-world tablemounted Mobile ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4. Experiments) |
 | Task/environment | We evaluate the effectiveness of our approach through a set of experiments spanning both simulation benchmarks and real-world robot manipulation tasks. | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 - **p. 7 / 4.2. Evaluation Results - extractive body cue:** The results demonstrate that the proposed model possesses robust semantic understanding and dexterous action capabilities after training.
 - **p. 8 / 4.4. Analysis - extractive body cue:** The results reported in Table 5, demonstrate the robustness of our method: the model suffers only a negligible drop in performance after pruning.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), metrics p. 6 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis), baselines p. 7 (4.2. Evaluation Results), p. 7 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis), p. 1 (Figure/Table caption), p. 6 (4.2. Evaluation Results), results p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), metrics p. 6 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis), baselines p. 7 (4.2. Evaluation Results), p. 7 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis), p. 1 (Figure/Table caption), p. 6 (4.2. Evaluation Results), results p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 3. Comparison on the Mobile ALOHA real-world experiments. Evaluation across four manipulation tasks, including (a) Pick and Place, (b) Sequenced Instruction Understanding, (c) Flexible Object Folding, (d) Dexterous Action. ... (p. 7, Figure/Table caption).
+- **Metric evidence:** It allows users to assess model performance across various challenges systemati13457 (p. 5, 4.1. Experimental Setup).
+- **Baseline/ablation evidence:** The results show that the proposed AVA-VLA framework comprehensively outperforms baseline methods across all tasks. (p. 7, 4.2. Evaluation Results).
+- **Failure/negative evidence:** Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a robust and spatially consistent focus ... (p. 8, 4.4. Analysis).

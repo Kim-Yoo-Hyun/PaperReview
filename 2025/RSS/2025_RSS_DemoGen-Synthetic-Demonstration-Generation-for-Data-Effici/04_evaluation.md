@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p157.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p157.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p157.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p157.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Benchmarking Spatial Generalization Capability | EMPIRICAL / REAL-ROBOT OR HARDWARE | We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and ... | p. 4 (B. Benchmarking Spatial Generalization Capability) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 20: Visualization of the policy performance trained on human-collected datasets. (Upper row) The demonstrated configurations. (Bottom row) The spatial heatmaps with success rates ... | p. 18 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In the following benchmarking, we explore the relationship between the number of demonstrations and policy performance to determine how many demonstrations are sufficient for ... | embodiment, simulator version and control stack | p. 4 (B. Benchmarking Spatial Generalization Capability), p. 4 (B. Benchmarking Spatial Generalization Capability) |
 | Task/environment | 3: Quantitative benchmarking on the spatial generalization spacity. | reset, timeout, object/scene variation | p. 4 (B. Benchmarking Spatial Generalization Capability), p. 17 (A. Policy Training and Implementation Details) |
@@ -159,7 +159,16 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 - **p. 11 / B. Cluttered Scene - extractive body cue:** 16: DemoGen for disturbance resistance.
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 seconds. ...
 
-- **PDF anchors reviewed:** datasets p. 4 (B. Benchmarking Spatial Generalization Capability), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), metrics p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 11 (Figure/Table caption), baselines p. 18 (Figure/Table caption), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), results p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 17 (A. Policy Training and Implementation Details).
+- **Evidence anchors reviewed:** datasets p. 4 (B. Benchmarking Spatial Generalization Capability), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), metrics p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 11 (Figure/Table caption), baselines p. 18 (Figure/Table caption), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), results p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 17 (A. Policy Training and Implementation Details).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details).
+- **Metric evidence:** We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and object randomization ranges are adopted, The ... (p. 4, B. Benchmarking Spatial Generalization Capability).
+- **Baseline/ablation evidence:** 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details).
+- **Failure/negative evidence:** Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, we require failure-Free action execution Unlike previous works (3, 20] that rely ... (p. 6, C. TAMP-based Action Generation).

@@ -1,8 +1,10 @@
 # VLMaps: Visual-Language Maps for Robot Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2210.05714.
-> PDF retrieval source: https://arxiv.org/pdf/2210.05714. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2210.05714.
+> PDF retrieval source: https://arxiv.org/pdf/2210.05714. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2210.05714
 - Code/Project: https://vlmaps.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 ## Why Read It
 
 Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the TV and sofa" or "to the right ...를 문제로 두고, We propose VLMaps as one such representation, which can be constructed using off-the-shelf visual-language models (VLMs) and standard 3D reconstruction libraries.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the TV and sofa" or "to ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], and, in particular, excels at enabling spatial open-vocabulary ... (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 0 VLMaps (ours) 62 33 ... (p. 5, IV. EXPERIMENTS).
+- **Explicit failure boundary:** We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and 2) action noise, which can ... (p. 6, IV. EXPERIMENTS).

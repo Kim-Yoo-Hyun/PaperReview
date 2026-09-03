@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/331577. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN; PDF retrieval source: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 
 ## Method Body Digest
 
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Each Gaussian stores a lowdimensional semantic latent fi ∈Rd and a lightweight decoder maps it to the teacher feature space: hi = Dec(fi) ∈ RD.
-- **p. 4 / 4.2. Overview - extractive PDF cue:** We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM is the reweighted ...
-- **p. 4 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** Instead, we enforce manifold consistency in the loss.
-- **p. 5 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive PDF cue:** The model cannot reduce the loss by shrinking weights.
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** We apply ℓ2 normalization to teacher/rendered pixel embeddings before computing hyperspherical (geodesic) losses.
-- **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** (20) We can anneal δ during training.
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Implementation note: we keep the rasterizer unchanged; hyperspherical geometry is used only in the distillation objective.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** Each Gaussian stores a lowdimensional semantic latent fi ∈Rd and a lightweight decoder maps it to the teacher feature space: hi = Dec(fi) ∈ RD.
+- **p. 4 / 4.2. Overview - extractive body cue:** We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM is the reweighted ...
+- **p. 4 / 4.1. Problem Formulation and Notation - extractive body cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** Instead, we enforce manifold consistency in the loss.
+- **p. 5 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** The model cannot reduce the loss by shrinking weights.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** We apply ℓ2 normalization to teacher/rendered pixel embeddings before computing hyperspherical (geodesic) losses.
+- **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** (20) We can anneal δ during training.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** Implementation note: we keep the rasterizer unchanged; hyperspherical geometry is used only in the distillation objective.
 
 ## Design Rationale
 
-- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive PDF cue:** We propose Visibility-Calibrated Distillation (VCD).
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
-- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive PDF cue:** Low accumulated opacity often indicates weak or unstable contributions.
+- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** We propose Visibility-Calibrated Distillation (VCD).
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
+- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** Low accumulated opacity often indicates weak or unstable contributions.
 
 ## Source Evidence Cues
 
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Each Gaussian stores a lowdimensional semantic latent fi ∈Rd and a lightweight decoder maps it to the teacher feature space: hi = Dec(fi) ∈ RD.
-- **p. 4 / 4.2. Overview - extractive PDF cue:** We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM is the reweighted ...
-- **p. 4 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** Instead, we enforce manifold consistency in the loss.
-- **p. 5 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive PDF cue:** The model cannot reduce the loss by shrinking weights.
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** We apply ℓ2 normalization to teacher/rendered pixel embeddings before computing hyperspherical (geodesic) losses.
-- **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** (20) We can anneal δ during training.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** Each Gaussian stores a lowdimensional semantic latent fi ∈Rd and a lightweight decoder maps it to the teacher feature space: hi = Dec(fi) ∈ RD.
+- **p. 4 / 4.2. Overview - extractive body cue:** We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM is the reweighted ...
+- **p. 4 / 4.1. Problem Formulation and Notation - extractive body cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** Instead, we enforce manifold consistency in the loss.
+- **p. 5 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** The model cannot reduce the loss by shrinking weights.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** We apply ℓ2 normalization to teacher/rendered pixel embeddings before computing hyperspherical (geodesic) losses.
+- **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** (20) We can anneal δ during training.
 - **Detected method headings:** 4. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Each Gaussian stores a lowdimensional semantic latent fi ∈Rd and a lightweight decoder maps it to the teacher feature space: hi = ... | p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.2. Overview) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM ... | p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 
 ## Objective / Update Rule
 
-- **p. 4 / 4.2. Overview - extractive PDF cue:** We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM is the reweighted ...
-- **p. 4 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** We apply ℓ2 normalization to teacher/rendered pixel embeddings before computing hyperspherical (geodesic) losses.
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Implementation note: we keep the rasterizer unchanged; hyperspherical geometry is used only in the distillation objective.
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** (16) Robust pixel-wise geodesic objective.
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** This adds cost and hurts real-time rendering.
+- **p. 4 / 4.2. Overview - extractive body cue:** We optimize the model end-to-end: L = Lrgb + λsem LVFM + λcon LLIC, (4) where Lrgb is the photometric loss, LVFM is the reweighted ...
+- **p. 4 / 4.1. Problem Formulation and Notation - extractive body cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** We apply ℓ2 normalization to teacher/rendered pixel embeddings before computing hyperspherical (geodesic) losses.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** Implementation note: we keep the rasterizer unchanged; hyperspherical geometry is used only in the distillation objective.
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** (16) Robust pixel-wise geodesic objective.
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** This adds cost and hurts real-time rendering.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.3. Visibility-Calibrated Distillation (VCD)), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,12 +69,12 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 4.1. Problem Formulation and Notation - extractive PDF cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** The rasterizer also outputs the accumulated opacity Av,u and depth moments D(1) v,u, D(2) v,u (with the same compositing weights).
-- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive PDF cue:** It outputs a per-pixel weight map and reweights semantic supervision.
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive PDF cue:** We compute the expected depth ¯Dv,u = D(1) v,u Av,u+ϵ and ray variance Varv,u =  D(2) v,u Av,u+ϵ -¯D2 v,u  +, used by ...
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** VCD down-weights mixed-depth and occlusion pixels.
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
+- **p. 4 / 4.1. Problem Formulation and Notation - extractive body cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** The rasterizer also outputs the accumulated opacity Av,u and depth moments D(1) v,u, D(2) v,u (with the same compositing weights).
+- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** It outputs a per-pixel weight map and reweights semantic supervision.
+- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** We compute the expected depth ¯Dv,u = D(1) v,u Av,u+ϵ and ray variance Varv,u =  D(2) v,u Av,u+ϵ -¯D2 v,u  +, used by ...
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** VCD down-weights mixed-depth and occlusion pixels.
+- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,8 +89,8 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 
 ## Training vs Inference
 
-- **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive PDF cue:** (20) We can anneal δ during training.
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We implement all methods in PyTorch and train on a single NVIDIA GeForce RTX 4090 GPU.
+- **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** (20) We can anneal δ during training.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We implement all methods in PyTorch and train on a single NVIDIA GeForce RTX 4090 GPU.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 
 ## Failure and Ablation Link
 
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Figure 8. Sensitivity to loss weights on LERF (figurines). We sweep λVFM and λLIC and report mIoU. The best region is around our default setting. ...
-- **p. 22 / Figure/Table caption - extractive PDF cue:** Figure 7. Scene editing with the learned 3D semantic field. We show the original renderings, the localized semantic region, and the edited renderings from multiple ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** Finally, we conduct ablation studies to analyze the impact of each component.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** All variants use the same training schedule, teacher, resolution, and evaluation protocol.
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Table 10. Ablation of VCD weight components on LERF (figurines). Wop Wedge Wvar mIoU ↑ ✓ ✓ ✓
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** We ablate each component on LERF (figurines).
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
+- **p. 24 / Figure/Table caption - extractive body cue:** Figure 8. Sensitivity to loss weights on LERF (figurines). We sweep λVFM and λLIC and report mIoU. The best region is around our default setting. ...
+- **p. 22 / Figure/Table caption - extractive body cue:** Figure 7. Scene editing with the learned 3D semantic field. We show the original renderings, the localized semantic region, and the edited renderings from multiple ...
+- **p. 6 / 5. Experiments - extractive body cue:** Finally, we conduct ablation studies to analyze the impact of each component.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** All variants use the same training schedule, teacher, resolution, and evaluation protocol.
+- **p. 24 / Figure/Table caption - extractive body cue:** Table 10. Ablation of VCD weight components on LERF (figurines). Wop Wedge Wvar mIoU ↑ ✓ ✓ ✓
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** We ablate each component on LERF (figurines).
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)), p. 3 (4.1. Problem Formulation and Notation), objective p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), temporal p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 6 (4.5. Lightweight Consistency Contrast (LIC)), p. 1 (1. Introduction), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)), p. 3 (4.1. Problem Formulation and Notation), objective p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), temporal p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 6 (4.5. Lightweight Consistency Contrast (LIC)), p. 1 (1. Introduction), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=i5wlozMFsQ; PDF retrieval source: https://openreview.net/pdf/f96c92cfad0bb9a981c9646c6a5bbcfc1992f8fc.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=i5wlozMFsQ; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/245153. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,30 +10,30 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 ## Method Body Digest
 
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Each task utilizes a different combination of reward terms.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** This gap is largely attributed to two key challenges: (a) data scarcity, where limited embodied data prevents from sufficiently grounding language and vision with physical ...
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** It would tend to output only two points to form a straight line, which easily yields a high reward and prematurely terminates exploration.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Each task utilizes a different combination of reward terms.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** This gap is largely attributed to two key challenges: (a) data scarcity, where limited embodied data prevents from sufficiently grounding language and vision with physical ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** It would tend to output only two points to form a straight line, which easily yields a high reward and prematurely terminates exploration.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
 
 ## Design Rationale
 
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Simultaneously, its embodiment-agnostic nature enables knowledge transfer across diverse robot platforms, resolving the heterogeneity challenge.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Second, for the VTG task, we introduced an additional constraint on the format: the generated visual trace must consist of exactly 8 points.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Simultaneously, its embodiment-agnostic nature enables knowledge transfer across diverse robot platforms, resolving the heterogeneity challenge.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Second, for the VTG task, we introduced an additional constraint on the format: the generated visual trace must consist of exactly 8 points.
 
 ## Source Evidence Cues
 
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
 - **Detected method headings:** 3. Methodology & Reasoning (p. 26)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, ... | p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs. | p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1) |
@@ -43,8 +43,8 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 ## Objective / Update Rule
 
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Each task utilizes a different combination of reward terms.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Each task utilizes a different combination of reward terms.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -60,11 +60,10 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 ## Observation–State–Action Interface
 
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** This gap is largely attributed to two key challenges: (a) data scarcity, where limited embodied data prevents from sufficiently grounding language and vision with physical ...
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** It would tend to output only two points to form a straight line, which easily yields a high reward and prematurely terminates exploration.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Published as a conference paper at ICLR 2026 Image Encoder Embodied-R1 Move the moka pot to the right side of the drawer … <think>…</think> <answer>…</answer> ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** This gap is largely attributed to two key challenges: (a) data scarcity, where limited embodied data prevents from sufficiently grounding language and vision with physical ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** It would tend to output only two points to form a straight line, which easily yields a high reward and prematurely terminates exploration.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -79,10 +78,10 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 ## Training vs Inference
 
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For all experiments, we focus on comparing SFT models trained with the same batch size and data, which we refer to as Embodied-SFT.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For all experiments, we focus on comparing SFT models trained with the same batch size and data, which we refer to as Embodied-SFT.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -102,13 +101,13 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We also included two key ablations: Embodied-R1 w/o CS, which excludes the ViRL common-sense dataset, and Embodied-SFT, a variant trained only with SFT.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** It achieves an average rank of 2.1, significantly outperforming its variants trained without common-sense data (Embodied-R1 w/o CS, Rank 3.4) or with only SFT (Embodied-SFT, ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** These results suggest that explicit visual reasoning provides superior zero-shot generalization compared to end-to-end policy learning, particularly when facing unseen instructions and background variations without ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We compared performance against a comprehensive suite of baselines across three categories: (1) End-to-end VLAs, including standard models (Octo, OpenVLA, π0) and stronger variants (π0-fast, ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** We trained four variants on RRG benchmarks.
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** 4.4 FURTHER ANALYSIS AND ABLATIONS Embodied-R1 Exhibits Strong Generalization.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We also included two key ablations: Embodied-R1 w/o CS, which excludes the ViRL common-sense dataset, and Embodied-SFT, a variant trained only with SFT.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** It achieves an average rank of 2.1, significantly outperforming its variants trained without common-sense data (Embodied-R1 w/o CS, Rank 3.4) or with only SFT (Embodied-SFT, ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** These results suggest that explicit visual reasoning provides superior zero-shot generalization compared to end-to-end policy learning, particularly when facing unseen instructions and background variations without ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We compared performance against a comprehensive suite of baselines across three categories: (1) End-to-end VLAs, including standard models (Octo, OpenVLA, π0) and stronger variants (π0-fast, ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** We trained four variants on RRG benchmarks.
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** 4.4 FURTHER ANALYSIS AND ABLATIONS Embodied-R1 Exhibits Strong Generalization.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -122,7 +121,7 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), objective p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), temporal p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 2 (8 Real-World Tasks).
+- **Evidence anchors reviewed:** method p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), objective p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), temporal p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 2 (8 Real-World Tasks).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

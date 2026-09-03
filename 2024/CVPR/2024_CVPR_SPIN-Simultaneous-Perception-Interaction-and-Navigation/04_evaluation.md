@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Simulation results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Ours achieves ≈ 68% higher success rate than the FixCam baseline with the 18139 | p. 7 (4.3. Simulation results) |
 | 4.3. Simulation results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves ≈33% higher success rate than the NoPointNet baseline since permutation invariant scandots latent makes the optimization problem easier and also generalizes ... | p. 7 (4.3. Simulation results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our ... | embodiment, simulator version and control stack | p. 5 (4. Results and Analysis), p. 7 (4.3. Simulation results) |
 | Task/environment | The simulation benchmarks have 6 scenes, 2 of each easy, medium and hard environments. | reset, timeout, object/scene variation | p. 7 (4.3. Simulation results), p. 5 (4. Results and Analysis) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 - **p. 7 / 4.2. Real-world results - extractive body cue:** It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on the pre-built map and fails entirely.
 - **p. 8 / 4.3. Simulation results - extractive body cue:** Static Obstacles Dynamic Obstacles Scenario 1 Ours Classical Ours Classical Average Success 0.8 0.6 0.6 0.0 Average # Collisions 1.0 0.4 1.6 1.2 Scenario 2 ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Results and Analysis), p. 7 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 7 (4.2. Real-world results), p. 6 (4.1. Emergent Behavior), p. 8 (4.3. Simulation results), metrics p. 7 (4.2. Real-world results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 5 (3. Experimental Setup), p. 8 (4.3. Simulation results), p. 5 (3. Experimental Setup), baselines p. 8 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis), p. 7 (4.2. Real-world results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), results p. 7 (4.3. Simulation results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Results and Analysis), p. 7 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 7 (4.2. Real-world results), p. 6 (4.1. Emergent Behavior), p. 8 (4.3. Simulation results), metrics p. 7 (4.2. Real-world results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 5 (3. Experimental Setup), p. 8 (4.3. Simulation results), p. 5 (3. Experimental Setup), baselines p. 8 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis), p. 7 (4.2. Real-world results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), results p. 7 (4.3. Simulation results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic ... (p. 5, 4. Results and Analysis).
+- **Metric evidence:** For this, we test our system on various real-world environments as shown in Figure 1 and benchmark its performance on 2 real-world setups as described in Section 4.2. (p. 5, 4. Results and Analysis).
+- **Baseline/ablation evidence:** While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic ... (p. 5, 4. Results and Analysis).
+- **Failure/negative evidence:** It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on the pre-built map and fails entirely. (p. 7, 4.2. Real-world results).

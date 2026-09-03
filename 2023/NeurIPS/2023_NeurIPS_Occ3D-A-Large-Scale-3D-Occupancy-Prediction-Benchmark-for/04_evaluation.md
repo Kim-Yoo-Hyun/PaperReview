@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.14365; PDF retrieval source: https://arxiv.org/pdf/2304.14365. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.14365; PDF retrieval source: https://arxiv.org/pdf/2304.14365. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 8 / 6 Experiments - extractive PDF cue:** To benchmark our proposed Occ3D datasets and our CTF-Occ model, we evaluate existing 3D occupancy prediction methods on Occ3D-nuScenes and Occ3D-Waymo.
-- **p. 9 / 6 Experiments - extractive PDF cue:** The resolution of the z-axis in each stage for the Occ3D-nuScenes dataset is 8 and 16 for the two pyramid stages.
-- **p. 8 / 6 Experiments - extractive PDF cue:** Occ3D-nuScenes contains 700 training scenes and 150 validation scenes.
-- **p. 9 / 6 Experiments - extractive PDF cue:** We also evaluate three existing 3D occupancy prediction methods - MonoScene [5], TPVFormer [16], and OccFormer [53] on our proposed Occ3D datasets.
-- **p. 10 / 6 Experiments - extractive PDF cue:** 6.2 Comparing with previous methods Occ3D-nuScenes.
-- **p. 10 / 6 Experiments - extractive PDF cue:** The observations are consistent with those in the Occ3D-Waymo dataset.
-- **p. 10 / 6 Experiments - extractive PDF cue:** OHEM Loss Token Selection Strategy IoU mIoU random uncertain top-k PED CC ✓ 4.16 10.03 14.06 ✓ ✓ 5.07 12.95 16.62 ✓ ✓ 6.27 13.85 ...
-- **p. 8 / 6 Experiments - extractive PDF cue:** We adopt the metrics of Intersection-over-Union (IoU) and mean Intersection-over-Union(mIoU) to evaluate performance.
+- **p. 8 / 6 Experiments - extractive body cue:** To benchmark our proposed Occ3D datasets and our CTF-Occ model, we evaluate existing 3D occupancy prediction methods on Occ3D-nuScenes and Occ3D-Waymo.
+- **p. 9 / 6 Experiments - extractive body cue:** The resolution of the z-axis in each stage for the Occ3D-nuScenes dataset is 8 and 16 for the two pyramid stages.
+- **p. 8 / 6 Experiments - extractive body cue:** Occ3D-nuScenes contains 700 training scenes and 150 validation scenes.
+- **p. 9 / 6 Experiments - extractive body cue:** We also evaluate three existing 3D occupancy prediction methods - MonoScene [5], TPVFormer [16], and OccFormer [53] on our proposed Occ3D datasets.
+- **p. 10 / 6 Experiments - extractive body cue:** 6.2 Comparing with previous methods Occ3D-nuScenes.
+- **p. 10 / 6 Experiments - extractive body cue:** The observations are consistent with those in the Occ3D-Waymo dataset.
+- **p. 10 / 6 Experiments - extractive body cue:** OHEM Loss Token Selection Strategy IoU mIoU random uncertain top-k PED CC ✓ 4.16 10.03 14.06 ✓ ✓ 5.07 12.95 16.62 ✓ ✓ 6.27 13.85 ...
+- **p. 8 / 6 Experiments - extractive body cue:** We adopt the metrics of Intersection-over-Union (IoU) and mean Intersection-over-Union(mIoU) to evaluate performance.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 Experiments | BENCHMARK / DATASET | For token selection, uncertain selection and top-k selection are on par and they significantly outperform the random selection as expected. | p. 10 (6 Experiments) |
 | 6 Experiments | BENCHMARK / DATASET | Both techniques improve performance. | p. 10 (6 Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 6 Experiments - extractive PDF cue:** To benchmark our proposed Occ3D datasets and our CTF-Occ model, we evaluate existing 3D occupancy prediction methods on Occ3D-nuScenes and Occ3D-Waymo.
-- **p. 9 / 6 Experiments - extractive PDF cue:** The resolution of the z-axis in each stage for the Occ3D-nuScenes dataset is 8 and 16 for the two pyramid stages.
-- **p. 8 / 6 Experiments - extractive PDF cue:** Occ3D-nuScenes contains 700 training scenes and 150 validation scenes.
-- **p. 9 / 6 Experiments - extractive PDF cue:** We also evaluate three existing 3D occupancy prediction methods - MonoScene [5], TPVFormer [16], and OccFormer [53] on our proposed Occ3D datasets.
-- **p. 10 / 6 Experiments - extractive PDF cue:** 6.2 Comparing with previous methods Occ3D-nuScenes.
-- **p. 10 / 6 Experiments - extractive PDF cue:** The observations are consistent with those in the Occ3D-Waymo dataset.
+- **p. 8 / 6 Experiments - extractive body cue:** To benchmark our proposed Occ3D datasets and our CTF-Occ model, we evaluate existing 3D occupancy prediction methods on Occ3D-nuScenes and Occ3D-Waymo.
+- **p. 9 / 6 Experiments - extractive body cue:** The resolution of the z-axis in each stage for the Occ3D-nuScenes dataset is 8 and 16 for the two pyramid stages.
+- **p. 8 / 6 Experiments - extractive body cue:** Occ3D-nuScenes contains 700 training scenes and 150 validation scenes.
+- **p. 9 / 6 Experiments - extractive body cue:** We also evaluate three existing 3D occupancy prediction methods - MonoScene [5], TPVFormer [16], and OccFormer [53] on our proposed Occ3D datasets.
+- **p. 10 / 6 Experiments - extractive body cue:** 6.2 Comparing with previous methods Occ3D-nuScenes.
+- **p. 10 / 6 Experiments - extractive body cue:** The observations are consistent with those in the Occ3D-Waymo dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1: Dataset comparison. Comparing Occ3D Datasets with other occupancy prediction datasets. Surround = ✓represents surround-view image inputs. C, D, L denote camera, depth and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of the label generation pipeline. The pipeline consists of three main steps: voxel densification, occlusion reasoning, and image-guided voxel refinement.Voxel densification consists ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Initially, in voxel densification, we increase the density of the point clouds by performing multi-frame aggregation for both static and dynamic objects separately. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Visibility and refinement. (a) LiDAR visibility: a voxel is "occupied" if it reflects LiDAR (red voxels), or "free" if it is traversed through ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: 3D-2D consistency (a) 2D ROI within single-frame LiDAR scan range. (b) Semantic labels of a single image within the 2D ROI. (c) The ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative results for design choices. SFP, single frame points; MFP, aggregating points from unlabeled frames; VS, short for voxel size; Mesh, showcasing mesh ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1: Dataset comparison. Comparing Occ3D Datasets with other occupancy prediction datasets. Surround = ✓represents surround-view image inputs. C, D, L denote camera, depth and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of the label generation pipeline. The pipeline consists of three main steps: voxel densification, occlusion reasoning, and image-guided voxel refinement.Voxel densification consists ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Initially, in voxel densification, we increase the density of the point clouds by performing multi-frame aggregation for both static and dynamic objects separately. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Visibility and refinement. (a) LiDAR visibility: a voxel is "occupied" if it reflects LiDAR (red voxels), or "free" if it is traversed through ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: 3D-2D consistency (a) 2D ROI within single-frame LiDAR scan range. (b) Semantic labels of a single image within the 2D ROI. (c) The ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Quantitative results for design choices. SFP, single frame points; MFP, aggregating points from unlabeled frames; VS, short for voxel size; Mesh, showcasing mesh ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To benchmark our proposed Occ3D datasets and our CTF-Occ model, we evaluate existing 3D occupancy prediction methods on Occ3D-nuScenes and Occ3D-Waymo. | embodiment, simulator version and control stack | p. 8 (6 Experiments), p. 9 (6 Experiments) |
 | Task/environment | The resolution of the z-axis in each stage for the Occ3D-nuScenes dataset is 8 and 16 for the two pyramid stages. | reset, timeout, object/scene variation | p. 9 (6 Experiments), p. 8 (6 Experiments) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 | Primary metric/result | Both techniques improve performance. | numeric claim only at cited anchor | p. 10 (6 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 6 Experiments - extractive PDF cue:** Occ3D-Waymo contains 1,000 publicly available sequences in total, where 798 scenes are for training and 202 scenes are for validation.
+- **p. 8 / 6 Experiments - extractive body cue:** Occ3D-Waymo contains 1,000 publicly available sequences in total, where 798 scenes are for training and 202 scenes are for validation.
 
 ## Generalization and Failure Cases
 
@@ -153,13 +153,13 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of the label generation pipeline. The pipeline consists of three main steps: voxel densification, occlusion reasoning, and image-guided voxel refinement.Voxel densification consists ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Initially, in voxel densification, we increase the density of the point clouds by performing multi-frame aggregation for both static and dynamic objects separately. ...
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Figure 8: Occlusion reasoning and camera visibility. Grey voxels are unobserved in the LiDAR view and red voxels are observed in the accumulative LiDAR view ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of the label generation pipeline. The pipeline consists of three main steps: voxel densification, occlusion reasoning, and image-guided voxel refinement.Voxel densification consists ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Initially, in voxel densification, we increase the density of the point clouds by performing multi-frame aggregation for both static and dynamic objects separately. ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Figure 8: Occlusion reasoning and camera visibility. Grey voxels are unobserved in the LiDAR view and red voxels are observed in the accumulative LiDAR view ...
 
-- **PDF anchors reviewed:** datasets p. 8 (6 Experiments), p. 9 (6 Experiments), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 10 (6 Experiments), p. 10 (6 Experiments), metrics p. 10 (6 Experiments), p. 8 (6 Experiments), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (6 Experiments), p. 10 (6 Experiments), baselines p. 10 (6 Experiments), p. 10 (6 Experiments), p. 9 (6 Experiments), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 10 (6 Experiments), p. 10 (6 Experiments), p. 18 (Figure/Table caption), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 9 (6 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (6 Experiments), p. 9 (6 Experiments), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 10 (6 Experiments), p. 10 (6 Experiments), metrics p. 10 (6 Experiments), p. 8 (6 Experiments), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (6 Experiments), p. 10 (6 Experiments), baselines p. 10 (6 Experiments), p. 10 (6 Experiments), p. 9 (6 Experiments), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 10 (6 Experiments), p. 10 (6 Experiments), p. 18 (Figure/Table caption), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 9 (6 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

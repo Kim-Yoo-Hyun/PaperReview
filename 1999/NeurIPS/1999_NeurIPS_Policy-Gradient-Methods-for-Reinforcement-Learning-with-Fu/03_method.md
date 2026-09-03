@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is ... | p. 2 (Abstract), p. 1 (Abstract) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | First, it is oriented toward finding deterministic policies, whereas the optimal policy is often stochastic, selecting different actions with specific probabilities (e.g., ... | p. 1 (Abstract), p. 1 (Abstract) |
@@ -53,7 +53,7 @@ PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 - **p. 3 / Abstract - extractive body cue:** Policy Gradient Methods for RL with Function Approximation 1059 With function approximation, two ways of formulating the agent's objective are useful.
 - **p. 1 / Abstract - extractive body cue:** Our main new result is to show that the gradient can be written in a form suitable for estimation from experience aided by an approximate ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
-- **Equation/algorithm anchors:** p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 3 (Abstract).
+- **Equation/algorithm anchors:** p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (Abstract).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -81,14 +81,14 @@ PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | This can occur even if the best approximation is found at each step before changing the policy, and whether the notion of ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | This can occur even if the best approximation is found at each step before changing the policy, and whether the notion of ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | Let {Ok}~o be any step-size sequence such that limk-+oo Ok = 0 and l:k Ok = 00. | Hz/fps, inference time and control rate |
-| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not recovered | window and reset |
-| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -128,8 +128,17 @@ PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), objective p. 1 (Abstract), p. 3 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), temporal p. 1 (Abstract), p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
+- **Evidence anchors reviewed:** method p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), objective p. 1 (Abstract), p. 3 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), temporal p. 1 (Abstract), p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, and whose weights are the ... (p. 2, Abstract).
+- **Objective/update evidence:** In this paper we explore an alternative approach in which the policy is explicitly represented by its own function approximator, independent of the value function, and is updated according to ... (p. 1, Abstract).
+- **Temporal/runtime evidence:** Let {Ok}~o be any step-size sequence such that limk-+oo Ok = 0 and l:k Ok = 00. (p. 5, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

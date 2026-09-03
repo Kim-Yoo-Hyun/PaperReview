@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2504.16782v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2504.16782v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Evaluation Body Digest
 
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Therefore, once the robot starts the task, it will first look around to build the initial scene graph of the perceived environment using Graph2Nav.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around 250 ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** The robot then will set up and execute a search plan for finding the target object based on LLM's knowledge of the perceived environment.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** It includes typical objects inside urban scenes, such as cars and poles.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** The user can therefore assign a navigation task (such as finding a backpack) to the robot via voice commands.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We also manually label the object relations, based on the definition in [20], among the representative objects inside the collected datasets.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** First, we validate the accuracy of our generated 3D scene graphs for both indoor and outdoor scenes in the real world.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Therefore, once the robot starts the task, it will first look around to build the initial scene graph of the perceived environment using Graph2Nav.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around 250 ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** The robot then will set up and execute a search plan for finding the target object based on LLM's knowledge of the perceived environment.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** It includes typical objects inside urban scenes, such as cars and poles.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** The user can therefore assign a navigation task (such as finding a backpack) to the robot via voice commands.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We also manually label the object relations, based on the definition in [20], among the representative objects inside the collected datasets.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** First, we validate the accuracy of our generated 3D scene graphs for both indoor and outdoor scenes in the real world.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world. | p. 5 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Clearly, Graph2Nav greatly improves the capability in detecting correct relationships among the objects, compared to 2D-based method. | p. 5 (V. EXPERIMENTS) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Therefore, once the robot starts the task, it will first look around to build the initial scene graph of the perceived environment using Graph2Nav.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around 250 ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** The robot then will set up and execute a search plan for finding the target object based on LLM's knowledge of the perceived environment.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** It includes typical objects inside urban scenes, such as cars and poles.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** The user can therefore assign a navigation task (such as finding a backpack) to the robot via voice commands.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We also manually label the object relations, based on the definition in [20], among the representative objects inside the collected datasets.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Therefore, once the robot starts the task, it will first look around to build the initial scene graph of the perceived environment using Graph2Nav.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around 250 ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** The robot then will set up and execute a search plan for finding the target object based on LLM's knowledge of the perceived environment.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** It includes typical objects inside urban scenes, such as cars and poles.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** The user can therefore assign a navigation task (such as finding a backpack) to the robot via voice commands.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We also manually label the object relations, based on the definition in [20], among the representative objects inside the collected datasets.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: 3D scene graphs constructed using Graph2Nav for outdoor (left) and indoor (right) scenes. The graph includes a hierarchy (from top to bottom): a ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: The process flow diagram for Graph2Nav. A pose graph-based SLAM system is utilized to provide real-time pose estimations for received image and point ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Same as [1]-[6], we manually define the layers in the 3D scene graph. Our definition aims to find a general and consistent hierarchy ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Two examples of object-relations ("beside" and "on" top of) from portions of our generated 3D scene graphs (top) with their correspondent 2D images ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: An example of the impact from object-relations to the search plan (yellow trajectory in bottom-left picture and bottom- right picture) executed by our ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: 3D scene graphs constructed using Graph2Nav for outdoor (left) and indoor (right) scenes. The graph includes a hierarchy (from top to bottom): a ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: The process flow diagram for Graph2Nav. A pose graph-based SLAM system is utilized to provide real-time pose estimations for received image and point ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Same as [1]-[6], we manually define the layers in the 3D scene graph. Our definition aims to find a general and consistent hierarchy ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Two examples of object-relations ("beside" and "on" top of) from portions of our generated 3D scene graphs (top) with their correspondent 2D images ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: An example of the impact from object-relations to the search plan (yellow trajectory in bottom-left picture and bottom- right picture) executed by our ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Therefore, once the robot starts the task, it will first look around to build the initial scene graph of the perceived environment using Graph2Nav. | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS) |
 | Task/environment | Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around ... | reset, timeout, object/scene variation | p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
@@ -108,16 +108,16 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Our framework fully generates and exploits both 3D objects and ∗The first two authors have equal contribution. | Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world. | PDF body cue; verify exact table/figure and matched conditions | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
+| Our main contributions are summarized as follows: • We propose Graph2Nav, a new real-time 3D objectrelation graph generation framework that combines strengths of 2D ... | Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world. | PDF body cue; verify exact table/figure and matched conditions | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
 | Primary metric/result | Clearly, Graph2Nav greatly improves the capability in detecting correct relationships among the objects, compared to 2D-based method. | numeric claim only at cited anchor | p. 5 (V. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** The 3D LiDAR has a detection range of 40 meters and a field-of-view (FOV) of 360-by-59 degrees.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** The Realsense camera has one RGB and two infrared imaging sensors, which have a FOV of 90-by-65 degrees.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** Our system can recognize 133 object classes and 56 object relationships across both indoor and outdoor scenes.
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around 250 ...
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** There are total 67 measured objects: 32 objects in cafeteria, 38 objects in lab, 22 objects in courtyard, and 13 objects in parking lot.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** With a battery, the robot can operate continuously for up to 2 hours.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** The 3D LiDAR has a detection range of 40 meters and a field-of-view (FOV) of 360-by-59 degrees.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** The Realsense camera has one RGB and two infrared imaging sensors, which have a FOV of 90-by-65 degrees.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** Our system can recognize 133 object classes and 56 object relationships across both indoor and outdoor scenes.
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** Datasets from these environments are ranged roughly from a half kilometer to a kilometer in total trajectory length, except the second indoor environment (around 250 ...
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** There are total 67 measured objects: 32 objects in cafeteria, 38 objects in lab, 22 objects in courtyard, and 13 objects in parking lot.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** With a battery, the robot can operate continuously for up to 2 hours.
 
 ## Generalization and Failure Cases
 
@@ -148,11 +148,11 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Limitations and Verification Questions
 
-- **p. 6 / VI. CONCLUSIONS AND DISCUSSION - extractive PDF cue:** To fulfull this goal, we propose Graph2Nav, a novel real-time 3D object-relation graph generation framework that addresses current limitations to robot navigation.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** The plan can also be dynamically changed, updated, or replanned during execution, if any failure happens or any new information is received.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world.
+- **p. 6 / VI. CONCLUSIONS AND DISCUSSION - extractive body cue:** To fulfull this goal, we propose Graph2Nav, a novel real-time 3D object-relation graph generation framework that addresses current limitations to robot navigation.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** The plan can also be dynamically changed, updated, or replanned during execution, if any failure happens or any new information is received.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world.
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), baselines p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), baselines p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

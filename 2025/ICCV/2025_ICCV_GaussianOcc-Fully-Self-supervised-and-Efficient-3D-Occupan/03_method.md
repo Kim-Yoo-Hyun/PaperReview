@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 
 ## Method Body Digest
 
-- **p. 4 / 3.3. Fast rendering by Gaussian Splatting - extractive PDF cue:** Overlap mask in nuScenes [3] and DDAD [13]. though we have the vertices at that region during the splatting rendering, after the optimization, the network ...
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** For occupancy estimation, we use the same network as OccNeRF [53] to ensure a fair comparison.
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
-- **p. 7 / Method - extractive PDF cue:** Scale-aware training in [26, 43] Scale-aware training by ours RMSE Loss in [43] Loss in [26] GS loss Mask Erode Refine Abs Rel Sq Rel ...
-- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
-- **p. 7 / Method - extractive PDF cue:** GS loss means using the spatial context constraint by our proposed Gaussian splatting for projection.
+- **p. 4 / 3.3. Fast rendering by Gaussian Splatting - extractive body cue:** Overlap mask in nuScenes [3] and DDAD [13]. though we have the vertices at that region during the splatting rendering, after the optimization, the network ...
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
+- **p. 5 / 4.2. Implementation details - extractive body cue:** For occupancy estimation, we use the same network as OccNeRF [53] to ensure a fair comparison.
+- **p. 5 / 4.2. Implementation details - extractive body cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
+- **p. 7 / Method - extractive body cue:** Scale-aware training in [26, 43] Scale-aware training by ours RMSE Loss in [43] Loss in [26] GS loss Mask Erode Refine Abs Rel Sq Rel ...
+- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
+- **p. 7 / Method - extractive body cue:** GS loss means using the spatial context constraint by our proposed Gaussian splatting for projection.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our core contributions are as follows: • We introduce the first fully self-supervised method for efficient surrounding-view 3D occupancy estimation, featuring the exploration ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Instead, we propose performing Gaussian splatting directly from the 3D voxel space.
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our core contributions are as follows: • We introduce the first fully self-supervised method for efficient surrounding-view 3D occupancy estimation, featuring the exploration ...
+- **p. 2 / 1. Introduction - extractive body cue:** Instead, we propose performing Gaussian splatting directly from the 3D voxel space.
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.3. Fast rendering by Gaussian Splatting - extractive PDF cue:** Overlap mask in nuScenes [3] and DDAD [13]. though we have the vertices at that region during the splatting rendering, after the optimization, the network ...
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** For occupancy estimation, we use the same network as OccNeRF [53] to ensure a fair comparison.
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
-- **p. 7 / Method - extractive PDF cue:** Scale-aware training in [26, 43] Scale-aware training by ours RMSE Loss in [43] Loss in [26] GS loss Mask Erode Refine Abs Rel Sq Rel ...
-- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
+- **p. 4 / 3.3. Fast rendering by Gaussian Splatting - extractive body cue:** Overlap mask in nuScenes [3] and DDAD [13]. though we have the vertices at that region during the splatting rendering, after the optimization, the network ...
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
+- **p. 5 / 4.2. Implementation details - extractive body cue:** For occupancy estimation, we use the same network as OccNeRF [53] to ensure a fair comparison.
+- **p. 5 / 4.2. Implementation details - extractive body cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
+- **p. 7 / Method - extractive body cue:** Scale-aware training in [26, 43] Scale-aware training by ours RMSE Loss in [43] Loss in [26] GS loss Mask Erode Refine Abs Rel Sq Rel ...
+- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
 - **Detected method headings:** 3. Method (p. 3); Method (p. 5); Method (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Overlap mask in nuScenes [3] and DDAD [13]. though we have the vertices at that region during the splatting rendering, after the ... | p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows. | p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 5 (4.2. Implementation details) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 
 ## Objective / Update Rule
 
-- **p. 7 / Method - extractive PDF cue:** GS loss means using the spatial context constraint by our proposed Gaussian splatting for projection.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** The original Gaussian splatting is for scene-specific, fast 3D novel view synthesis, where the attributes of Gaussian points are optimized by the multi-view constraint.
-- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** that the nature of Gaussian splatting is scale-aware projection that could serve for the cross-view stereo constraint.
-- **p. 4 / 3.4. Loss function - extractive PDF cue:** Note that \protect \hat {I}_ t in the temporal-view photometric loss \protect \mathcal {L}_{temporal} is generated by projecting pixels from the source image using the ...
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** In our Gaussian splatting setting, we further upsample the final output to 512×512×32 for improved performance since we observe that a finer voxel grid leads ...
+- **p. 7 / Method - extractive body cue:** GS loss means using the spatial context constraint by our proposed Gaussian splatting for projection.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** The original Gaussian splatting is for scene-specific, fast 3D novel view synthesis, where the attributes of Gaussian points are optimized by the multi-view constraint.
+- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** that the nature of Gaussian splatting is scale-aware projection that could serve for the cross-view stereo constraint.
+- **p. 4 / 3.4. Loss function - extractive body cue:** Note that \protect \hat {I}_ t in the temporal-view photometric loss \protect \mathcal {L}_{temporal} is generated by projecting pixels from the source image using the ...
+- **p. 5 / 4.2. Implementation details - extractive body cue:** In our Gaussian splatting setting, we further upsample the final output to 512×512×32 for improved performance since we observe that a finer voxel grid leads ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (Method), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 3 (3.1. Preliminaries), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 7 (Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 
 ## Observation–State–Action Interface
 
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** In our Gaussian splatting setting, we further upsample the final output to 512×512×32 for improved performance since we observe that a finer voxel grid leads ...
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** If the depth map is accurately learned, the rendered image should resemble the original images, providing the necessary scale information for the joint training with ...
-- **p. 7 / Method - extractive PDF cue:** The comparison of the depth map and its synthesis overlap image with (1) direct bilinear interpolation cross-view synthesis [43] and (2) our cross-view Gaussian splatting ...
-- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
-- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Therefore, apart from the spatial loss, [43] proposes to facilitate the Structure-fromMotion (SFM) to extract sparse depth information for direct depth supervision to provide a ...
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Due to the presence of the other side's overlap region, the unprojected 3D scene remains complete if the depth map is predicted well.
+- **p. 5 / 4.2. Implementation details - extractive body cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
+- **p. 5 / 4.2. Implementation details - extractive body cue:** In our Gaussian splatting setting, we further upsample the final output to 512×512×32 for improved performance since we observe that a finer voxel grid leads ...
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** If the depth map is accurately learned, the rendered image should resemble the original images, providing the necessary scale information for the joint training with ...
+- **p. 7 / Method - extractive body cue:** The comparison of the depth map and its synthesis overlap image with (1) direct bilinear interpolation cross-view synthesis [43] and (2) our cross-view Gaussian splatting ...
+- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
+- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Therefore, apart from the spatial loss, [43] proposes to facilitate the Structure-fromMotion (SFM) to extract sparse depth information for direct depth supervision to provide a ...
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Due to the presence of the other side's overlap region, the unprojected 3D scene remains complete if the depth map is predicted well.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,11 +90,11 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 
 ## Training vs Inference
 
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
-- **p. 7 / Method - extractive PDF cue:** Scale-aware training in [26, 43] Scale-aware training by ours RMSE Loss in [43] Loss in [26] GS loss Mask Erode Refine Abs Rel Sq Rel ...
-- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive PDF cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
-- **p. 5 / 4.2. Implementation details - extractive PDF cue:** We train the models for 12 epochs on both the nuScenes and DDAD.
+- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
+- **p. 7 / Method - extractive body cue:** Scale-aware training in [26, 43] Scale-aware training by ours RMSE Loss in [43] Loss in [26] GS loss Mask Erode Refine Abs Rel Sq Rel ...
+- **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Inspired by the explicit sparse depth supervision in [43], we ask whether we can enforce the cross-view constraint on adjacent views more explicitly.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
+- **p. 5 / 4.2. Implementation details - extractive body cue:** We train the models for 12 epochs on both the nuScenes and DDAD.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 
 ## Failure and Ablation Link
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Problem setting of GaussianOcc. Given a surround image sequence, the spatial camera extrinsic and its correspond- ing 2D semantic annotation, GaussianOcc is able ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Comparisons for self-supervised multi-camera depth estimation on the nuScenes [3] and DDAD datasets [13]. The results are averaged over all views without median ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study for scale-aware depth estimation on the nuScenes dataset [3]. ✓* means the result from the original paper and ✓means the result ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Comparison of the render result between the volume ren- dering (VR) [53] and splatting rendering (SR, Ours) on depth es- timation task [3]. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. The comparison for the depth map in the different set- ting, corresponding to the training strategy in Table 4 and render- ing type ...
-- **p. 5 / 4.3. Main results - extractive PDF cue:** As highlighted by the red rectangle, the sky region has a short-range depth value, but this does not appear in the rendered 3D occupancy estimation ...
-- **p. 5 / 4.3. Main results - extractive PDF cue:** Note that RenderOcc [36] does not require the 3D occupancy label, but it is not a self-supervised method since it uses the ground truth depth ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Problem setting of GaussianOcc. Given a surround image sequence, the spatial camera extrinsic and its correspond- ing 2D semantic annotation, GaussianOcc is able ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Comparisons for self-supervised multi-camera depth estimation on the nuScenes [3] and DDAD datasets [13]. The results are averaged over all views without median ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation study for scale-aware depth estimation on the nuScenes dataset [3]. ✓* means the result from the original paper and ✓means the result ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Comparison of the render result between the volume ren- dering (VR) [53] and splatting rendering (SR, Ours) on depth es- timation task [3]. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. The comparison for the depth map in the different set- ting, corresponding to the training strategy in Table 4 and render- ing type ...
+- **p. 5 / 4.3. Main results - extractive body cue:** As highlighted by the red rectangle, the sky region has a short-range depth value, but this does not appear in the rendered 3D occupancy estimation ...
+- **p. 5 / 4.3. Main results - extractive body cue:** Note that RenderOcc [36] does not require the 3D occupancy label, but it is not a self-supervised method since it uses the ground truth depth ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 5 (4.2. Implementation details), p. 5 (4.2. Implementation details), p. 7 (Method), p. 3 (3.2. Scale-aware training by Gaussian Splatting), objective p. 7 (Method), p. 3 (3.1. Preliminaries), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 5 (4.2. Implementation details), temporal p. 5 (4.3. Main results), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** method p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 5 (4.2. Implementation details), p. 5 (4.2. Implementation details), p. 7 (Method), p. 3 (3.2. Scale-aware training by Gaussian Splatting), objective p. 7 (Method), p. 3 (3.1. Preliminaries), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 5 (4.2. Implementation details), temporal p. 5 (4.3. Main results), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/fan25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/fan25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Figure 4, our model achieves performance improvements in the D→D and ABCD→D of the L-CALVIN benchmark. | p. 6 (4 Experiment) |
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Figure 5, while the success rate of the base policy drops to zero after the seventh task, our approach is still ... | p. 6 (4 Experiment) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In real-world robotic experiments, our method consistently outperforms the state-of-the-art algorithm π0 across the generalization task. | embodiment, simulator version and control stack | p. 7 (4 Experiment), p. 6 (4 Experiment) |
 | Task/environment | Lift the C cube Put in the bowl Lift the O cube Put in the bowl Lift the R cube Put in the bowl ... | reset, timeout, object/scene variation | p. 6 (4 Experiment), p. 5 (4 Experiment) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 - **p. 7 / 4 Experiment - extractive body cue:** (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the substantial enhancement provided by ...
 - **p. 8 / 4 Experiment - extractive body cue:** Performance significantly improves with input-level adaptation, mainly from adding detection data during movement for better control and removing unwanted third-person visual interference during interaction for ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 Experiment), p. 6 (4 Experiment), p. 5 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), metrics p. 6 (4 Experiment), p. 13 (Figure/Table caption), p. 7 (4 Experiment), p. 1 (Figure/Table caption), p. 6 (4 Experiment), p. 7 (4 Experiment), baselines p. 7 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 1 (Figure/Table caption), results p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment).
+- **Evidence anchors reviewed:** datasets p. 7 (4 Experiment), p. 6 (4 Experiment), p. 5 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), metrics p. 6 (4 Experiment), p. 13 (Figure/Table caption), p. 7 (4 Experiment), p. 1 (Figure/Table caption), p. 6 (4 Experiment), p. 7 (4 Experiment), baselines p. 7 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 1 (Figure/Table caption), results p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 7: Comparison with SOTA method on real-world scenarios. (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the ... (p. 7, Figure/Table caption).
+- **Metric evidence:** As shown in Figure 5, while the success rate of the base policy drops to zero after the seventh task, our approach is still able to achieve a success rate ... (p. 6, 4 Experiment).
+- **Baseline/ablation evidence:** In real-world robotic experiments, our method consistently outperforms the state-of-the-art algorithm π0 across the generalization task. (p. 7, 4 Experiment).
+- **Failure/negative evidence:** While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions. (p. 9, Limitation).

@@ -1,8 +1,10 @@
 # Learning to Predict by the Methods of Temporal Differences
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1007/BF00115009.
-> PDF retrieval source: https://doi.org/10.1007/BF00115009. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1007/BF00115009.
+> PDF retrieval source: https://doi.org/10.1007/BF00115009. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1988 / Machine Learning
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://doi.org/10.1007/BF00115009
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Most pattern recognition problems, for examt)le, can be treated as prediction problems in which the classifier nmst predict the correct classifications.를 문제로 두고, S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Most pattern recognition problems, for examt)le, can be treated as prediction problems in which the classifier nmst predict the correct classifications. (p. 1, 1. Introduction).
+- **Actual contribution:** S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Figure 1. ....... t~~0 ~@ A game-playing example showing the inefficiency of supervised-learning methods. Each circle represents a position or class of positions from a two- person board game. The ... (p. 9, Figure/Table caption).
+- **Explicit failure boundary:** In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a packet-switched telecomnnmications network one may want to pre(tict the total delay in ... (p. 25, 5.1 Predicting cumulative outcomes).

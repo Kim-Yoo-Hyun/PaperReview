@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=JVkdSi7Ekg; PDF retrieval source: https://openreview.net/pdf/baa69f167306f963174767be4974c69528aa6379.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=JVkdSi7Ekg; PDF retrieval source: https://openreview.net/pdf/baa69f167306f963174767be4974c69528aa6379.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | 2, our model architecture includes an image encoder, a linear projector, a language tokenizer, and a transformerbased language model. | p. 7 (4 Method), p. 10 (4 Method) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | The PRoC3S system solves tasks specified in natural language by prompting an LLM for a Language-Model Program (LMP) that generates plans, and ... | p. 10 (4 Method), p. 7 (4 Method) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | To capture the temporal relationships within the action sequence, the input image was constructed by selecting a single frame that represents the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | The image data is structured as a matrix I, where each row corresponds to a different camera viewpoint {V0, V1, . . ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Each task was evaluated over 10 trials, with a 10 | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p. 9 (4 Method), p. 6 (4 Method), p. 10 (4 Method), objective p. 10 (4 Method), p. 9 (4 Method), p. 9 (4 Method), p. 10 (4 Method), p. 7 (4 Method), temporal p. 7 (4 Method), p. 7 (4 Method), p. 6 (4 Method), p. 8 (4 Method), p. 10 (4 Method), p. 10 (4 Method).
+- **Evidence anchors reviewed:** method p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p. 9 (4 Method), p. 6 (4 Method), p. 10 (4 Method), objective p. 10 (4 Method), p. 9 (4 Method), p. 9 (4 Method), p. 10 (4 Method), p. 7 (4 Method), temporal p. 7 (4 Method), p. 7 (4 Method), p. 6 (4 Method), p. 8 (4 Method), p. 10 (4 Method), p. 10 (4 Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2, our model architecture includes an image encoder, a linear projector, a language tokenizer, and a transformerbased language model. (p. 7, 4 Method).
+- **Objective/update evidence:** To systematically assess the reasoning capabilities of different VLMs under budget constraints, we sampled one reward function initially and allowed for iterations over two sessions of GPT API calls. (p. 10, 4 Method).
+- **Temporal/runtime evidence:** The image data is structured as a matrix I, where each row corresponds to a different camera viewpoint {V0, V1, . . . , Vn} and each column captures the ... (p. 7, 4 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

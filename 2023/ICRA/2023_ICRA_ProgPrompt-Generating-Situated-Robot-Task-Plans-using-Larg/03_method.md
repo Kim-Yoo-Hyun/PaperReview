@@ -2,54 +2,50 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10161317; PDF retrieval source: https://arxiv.org/pdf/2209.11302. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10161317; PDF retrieval source: https://arxiv.org/pdf/2209.11302. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): We use the 35 tasks in the training set, and annotate the text steps and the corresponding action sequence to get 400 data points for training and validation of this ...
+PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, which then need to be mapped ...
 
 ## Method Body Digest
 
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** We use the 35 tasks in the training set, and annotate the text steps and the corresponding action sequence to get 400 data points for ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, which ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** PROGPROMPT provides an LLM a Pythonic program header that imports available actions and their expected parameters, shows a list of environment objects, and then defines ...
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** The outputs of LANGPROMPT are generated action sequences, rather than our proposed, program-like structures.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** PROMPT for State Feedback represents example assertion checks.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
-- **p. 1 / Abstract - extractive PDF cue:** We make concrete recommendations about prompt structure and generation constraints through ablation experiments, demonstrate state of the art success rates in VirtualHome household tasks, and ...
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** In particular, DAVINCI does not match base GPT3 performance (row 2 versus row 3), possibly because its prompt length constraints limit it to 2 task ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, which ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** PROGPROMPT provides an LLM a Pythonic program header that imports available actions and their expected parameters, shows a list of environment objects, and then defines ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** PROMPT for State Feedback represents example assertion checks.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
+- **p. 1 / Abstract - extractive body cue:** We make concrete recommendations about prompt structure and generation constraints through ablation experiments, demonstrate state of the art success rates in VirtualHome household tasks, and ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** For example, if the LLM produced "reach in and pick up the jar of pickles," that string would have to neatly map to an executable ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We incorporate situated state feedback from the environment by asserting preconditions of our plan, such as being close to the fridge before attempting to open ...
 
 ## Design Rationale
 
-- **p. 1 / Abstract - extractive PDF cue:** We present a programmatic LLM prompt structure that enables plan generation functional across situated environments, robot capabilities, and tasks.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** We introduce PROGPROMPT, a prompting scheme that goes beyond conditioning LLMs in natural language.
+- **p. 1 / Abstract - extractive body cue:** We present a programmatic LLM prompt structure that enables plan generation functional across situated environments, robot capabilities, and tasks.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We introduce PROGPROMPT, a prompting scheme that goes beyond conditioning LLMs in natural language.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** We use the 35 tasks in the training set, and annotate the text steps and the corresponding action sequence to get 400 data points for ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, which ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** PROGPROMPT provides an LLM a Pythonic program header that imports available actions and their expected parameters, shows a list of environment objects, and then defines ...
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** The outputs of LANGPROMPT are generated action sequences, rather than our proposed, program-like structures.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** PROMPT for State Feedback represents example assertion checks.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
+- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, which ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** PROGPROMPT provides an LLM a Pythonic program header that imports available actions and their expected parameters, shows a list of environment objects, and then defines ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** PROMPT for State Feedback represents example assertion checks.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | We use the 35 tasks in the training set, and annotate the text steps and the corresponding action sequence to get 400 ... | p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 1 (I. INTRODUCTION) |
-| Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly ... | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
-| Execution interface | 계획을 실행 가능한 command로 변환한다 | plan과 current feedback | collision/contact/dynamics check, smoothing, replanning 또는 controller handoff를 수행 | waypoint, option, action 또는 reference | PROGPROMPT provides an LLM a Pythonic program header that imports available actions and their expected parameters, shows a list of environment objects, ... | p. 1 (I. INTRODUCTION), p. 5 (3 Pythonic task plan examples per prompt after evaluating) |
+| Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly ... | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | PROGPROMPT provides an LLM a Pythonic program header that imports available actions and their expected parameters, shows a list of environment objects, ... | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
+| Execution interface | 계획을 실행 가능한 command로 변환한다 | plan과 current feedback | collision/contact/dynamics check, smoothing, replanning 또는 controller handoff를 수행 | waypoint, option, action 또는 reference | PROMPT for State Feedback represents example assertion checks. | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **p. 1 / Abstract - extractive PDF cue:** We make concrete recommendations about prompt structure and generation constraints through ablation experiments, demonstrate state of the art success rates in VirtualHome household tasks, and ...
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** In particular, DAVINCI does not match base GPT3 performance (row 2 versus row 3), possibly because its prompt length constraints limit it to 2 task ...
+- **p. 1 / Abstract - extractive body cue:** We make concrete recommendations about prompt structure and generation constraints through ablation experiments, demonstrate state of the art success rates in VirtualHome household tasks, and ...
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
-- **Equation/algorithm anchors:** p. 1 (Abstract), p. 5 (3 Pythonic task plan examples per prompt after evaluating).
+- **Equation/algorithm anchors:** p. 1 (Abstract).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -63,12 +59,10 @@ PDF body method statement (p. 5 (3 Pythonic task plan examples per prompt after 
 
 ## Observation–State–Action Interface
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** For example, if the LLM produced "reach in and pick up the jar of pickles," that string would have to neatly map to an executable ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** We incorporate situated state feedback from the environment by asserting preconditions of our plan, such as being close to the fridge before attempting to open ...
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** The outputs of LANGPROMPT are generated action sequences, rather than our proposed, program-like structures.
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** Thus, we finetune GPT2 to learn a policy P(at/st, GPT3 step, a1:t-1) to map those generated sequences to executable actions in the simulation environment.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** PROMPT for State Feedback represents example assertion checks.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
+- **p. 1 / I. INTRODUCTION - extractive body cue:** For example, if the LLM produced "reach in and pick up the jar of pickles," that string would have to neatly map to an executable ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We incorporate situated state feedback from the environment by asserting preconditions of our plan, such as being close to the fridge before attempting to open ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** PROMPT for State Feedback represents example assertion checks.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,15 +77,14 @@ PDF body method statement (p. 5 (3 Pythonic task plan examples per prompt after 
 
 ## Training vs Inference
 
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** We use the 35 tasks in the training set, and annotate the text steps and the corresponding action sequence to get 400 data points for ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** PROGPROMPT utilizes programming language structures, leveraging the fact that LLMs are trained on vast web corpora that includes many programming tutorials and code documentation (Fig.
-- **p. 5 / 3 Pythonic task plan examples per prompt after evaluating - extractive PDF cue:** Additionally, CODEX exceeds GPT3 performance on every metric (row 1 versus row 3), likely because CODEX is explicitly trained on programming language data.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** PROGPROMPT utilizes programming language structures, leveraging the fact that LLMs are trained on vast web corpora that includes many programming tutorials and code documentation (Fig.
+- **p. 5 / V. RESULTS - extractive body cue:** Additionally, CODEX exceeds GPT3 performance on every metric (row 1 versus row 3), likely because CODEX is explicitly trained on programming language data.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
-- **Body-defined terms:** tasks, training, annotate, text, steps, corresponding, action, sequence, data, points, validation, policy, PROGPROMPT, leverages, LLMs, strengths, world, knowledge, programming, language.
+- **Body-defined terms:** PROGPROMPT, leverages, LLMs, strengths, world, knowledge, programming, language, understanding, generate, situated, task, plans, directly, executed, words, then, need, mapped, actions.
 - **Relevant PDF headings:** not reliably recovered.
 - Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
@@ -100,15 +93,18 @@ PDF body method statement (p. 5 (3 Pythonic task plan examples per prompt after 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
 | Problem / state representation | We create a dataset of 70 household tasks. | p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS) |
-| Search / trajectory decision | Fig. 3: Pythonic PROGPROMPT plan for "put salmon in the microwave." ended task plan generation (answer search); and 3) 1:1 prediction to ... | p. 3 (Figure/Table caption), p. 3 (Figure/Table caption) |
-| Execution interface | Evaluation Metrics We use three metrics to evaluate system performance: success rate (SR), goal conditions recall (GCR), and executability (Exec). | p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS) |
+| Search / trajectory decision | First, PROGPROMPT (rows 3-6) outperforms prior work [2] (row 8) by a substantial margin on all metrics using the same large language ... | p. 5 (V. RESULTS), p. 5 (V. RESULTS) |
+| Execution interface | Evaluation Metrics We use three metrics to evaluate system performance: success rate (SR), goal conditions recall (GCR), and executability (Exec). | p. 4 (IV. EXPERIMENTS), p. 5 (V. RESULTS) |
 
 ## Failure and Ablation Link
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Pythonic PROGPROMPT plan for "put salmon in the microwave." ended task plan generation (answer search); and 3) 1:1 prediction to action matching. The ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning). The Generated Plan is for microwave salmon. We highlight prompt ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** We use the system of [37] to implement the policy, and use MPPI for motion generation, SceneCollisionNet [37] to avoid collisions, and generate grasp poses ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Pythonic PROGPROMPT plan for "put salmon in the microwave." ended task plan generation (answer search); and 3) 1:1 prediction to action matching. The ...
+- **p. 5 / V. RESULTS - extractive body cue:** We explore several ablations of PROGPROMPT.
+- **p. 5 / V. RESULTS - extractive body cue:** Second, we observe that the CODEX [28] and DAVINCI models [27]-themselves GPT3 variants-show mixed success at the task.
+- **p. 6 / V. RESULTS - extractive body cue:** The run without distractors failed due to a random gripper failure.
+- **p. 6 / V. RESULTS - extractive body cue:** Across tasks, with and without distractor objects, the system almost always succeeds, failing only on the sort task.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, ...
+- **p. 5 / V. RESULTS - extractive body cue:** Qualitative Analysis and Limitations We manually inspect generated programs and their execution traces from PROGPROMPT and characterize common failure modes.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -122,7 +118,7 @@ PDF body method statement (p. 5 (3 Pythonic task plan examples per prompt after 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective p. 1 (Abstract), p. 5 (3 Pythonic task plan examples per prompt after evaluating), temporal p. 4 (IV. EXPERIMENTS), p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 5 (3 Pythonic task plan examples per prompt after evaluating), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (II. BACKGROUND AND RELATED WORK).
+- **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective p. 1 (Abstract), temporal p. 4 (IV. EXPERIMENTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (II. BACKGROUND AND RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

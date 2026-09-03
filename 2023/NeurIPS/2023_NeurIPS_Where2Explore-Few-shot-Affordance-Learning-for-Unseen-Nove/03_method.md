@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.07473; PDF retrieval source: https://arxiv.org/pdf/2309.07473. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.07473; PDF retrieval source: https://arxiv.org/pdf/2309.07473. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (4 Method), p. 6 (4 Method), p. 4 (4 Method), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | 4.4 Network Architecture and Training Strategy Our network consists of two modules - the affordance module and the similarity module. | p. 6 (4 Method), p. 6 (4 Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We use a PointNet++ segmentation network [29] encoder for extracting features from 3D partial point clouds. | p. 6 (4 Method), p. 4 (4 Method) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 6 (4 Method), p. 6 (4 Method), p. 4 (4 Method), p.
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | As shown in Figure 2, we propose the ‘Where2Explore' framework to explicitly leverage the similar semantics on local geometries shared across different ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | For example, handles are significant in pulling whereas less important in pushing, and a horizontal handle could not be grasped by a ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | The encoder will output a per-point feature of 128 dimensions. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (4 Method), p. 6 (4 Method), p. 4 (4 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (4 Method), p. 6 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p. 3 (4 Method), p. 5 (4 Method), objective p. 6 (4 Method), p. 6 (4 Method), p. 5 (4 Method), temporal p. 3 (4 Method), p. 4 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p. 6 (5 Experiments), p. 6 (5 Experiments).
+- **Evidence anchors reviewed:** method p. 6 (4 Method), p. 6 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p. 3 (4 Method), p. 5 (4 Method), objective p. 6 (4 Method), p. 6 (4 Method), p. 5 (4 Method), temporal p. 3 (4 Method), p. 4 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p. 6 (5 Experiments), p. 6 (5 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The similarity module is designed to take a partial point cloud of an object Oi ∈R3×N, a set of action directions and gripper orientations {Ri} on each point, and is ... (p. 4, 4 Method).
+- **Objective/update evidence:** Finally, both the affordance module and the similarity module will be updated by this interaction (Oi, pi, Ri, mi) and be ready for the next prediction on the object to ... (p. 5, 4 Method).
+- **Temporal/runtime evidence:** As shown in Figure 2, we propose the ‘Where2Explore' framework to explicitly leverage the similar semantics on local geometries shared across different categories for cross-category fewshot exploration. (p. 3, 4 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

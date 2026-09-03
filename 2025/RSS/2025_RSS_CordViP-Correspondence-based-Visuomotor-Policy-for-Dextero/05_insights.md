@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 In our approach, each observation o, is composed. of the object's point cloud P..), the hand's point cloud Phands and the robot's joint states, including a 6-Dof arm and 16Dof hand configuration.를 ‘The BCRNNSD is trained for 3000 epochs with horizon=10, n_obs_steps=1, n_action_steps=l, where the observations are replaced from images to point clouds.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Despite the exceptional performance demonstrated by CordViP, there are still certain limitations that could be explored in future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we propose the interaction-aware generation of 3D point clouds, enabling the reconstruction of crucial spatial information,
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In our approach, each observation o, is composed. of the object's point cloud P..), the hand's point cloud Phands and the robot's joint states, including a 6-Dof arm and 16Dof ... (p. 3, A. Problem Formulation).
+- **Paper-specific mechanism:** To eliminate these limitations, we propose CordViP, a novel framework that ‘constructs and learns correspondences by leveraging the robust 6D pose estimation of objects and robot proprioception. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is The visual results are shown in the figure 10. (p. 15, B. Implementation Details); the relevant task/metric cue is ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** As shown in ‘Table VI, the image-based diffusion policy is highly sensitive to ‘camera viewpoints and completely fails across all three camera views. (p. 9, C. Efficiency).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: ‘We conduct comprehensive real-world experiments to answer the following questions:.
-3. Compare against the body-reported baseline or a matched simpler baseline: The Diffusion Policy baseline utilizes ResNetI8 as the visual encoder and employs CNN-based backbones..
-4. Report the body metric and its denominator/aggregation: Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: We present the interaction-aware point clouds, which demonstrate robustness to different viewpoints while estab ....
-5. Re-run the body-reported ablation/failure condition: Network Architecture, For point cloud encoding, we first use PointNetl41] to process point cloud data without RGB information, outputting a set of point feature vectors at the dimension of 1024..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In our approach, each observation o, is composed. of the object's point cloud P..), the hand's point cloud Phands and the robot's joint states, including a 6-Dof arm and 16Dof ... (p. 3, A. Problem Formulation); preserve the objective/update rule: On the one hand, real-world point cloud data, typically captured using stereo cameras or low-cost RGB-D scanners, suffers from geometric and semantic loss due to factors such as light reflection, ... (p. 3, B. Interaction-aware Generation of 3D Point Clouds).
+2. Use the paper-reported task/data/environment cue: ‘We conduct comprehensive real-world experiments to answer the following questions: (p. 5, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? (p. 5, IV. EXPERIMENTS); if none is reported, design one around: As shown in ‘Table VI, the image-based diffusion policy is highly sensitive to ‘camera viewpoints and completely fails across all three camera views. (p. 9, C. Efficiency).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 14 (B. Implementation Details); the primary result is directionally consistent at p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 8 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 3 (A. Problem Formulation), match the reported outcome at p. 15 (B. Implementation Details), p. 5 (IV. EXPERIMENTS), p. 15 (B. Implementation Details), and measure the boundary at p. 9 (C. Efficiency), p. 10 (V. CONCLUSIONS AND LimiTATIONS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 interaction-aware, generation, point mechanism이 The Diffusion Policy baseline utilizes ResNetI8 as the visual encoder and employs CNN-based backbones. 대비 Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: ...을 개선하고, Despite the exceptional performance demonstrated by CordViP, there are still certain limitations that could be explored ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In our approach, each observation o, is composed. of the object's point cloud P..), the hand's point cloud Phands and the robot's ...), does the paper-specific mechanism (To eliminate these limitations, we propose CordViP, a novel framework that ‘constructs and learns correspondences by leveraging the robust 6D pose estimation ...) retain the reported evaluation outcome (‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)?) when tested against the paper's strongest explicit boundary (As shown in ‘Table VI, the image-based diffusion policy is highly sensitive to ‘camera viewpoints and completely fails ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)?) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To eliminate these limitations, we propose CordViP, a novel framework that ‘constructs and learns correspondences by leveraging the robust 6D pose estimation of objects and robot proprioception. (p. 1, Abstract).
+- **Paper-supported outcome:** The visual results are shown in the figure 10. (p. 15, B. Implementation Details).
+- **Strongest explicit boundary:** As shown in ‘Table VI, the image-based diffusion policy is highly sensitive to ‘camera viewpoints and completely fails across all three camera views. (p. 9, C. Efficiency).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

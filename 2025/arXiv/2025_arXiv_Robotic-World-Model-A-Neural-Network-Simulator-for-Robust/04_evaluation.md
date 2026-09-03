@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2501.10100; PDF retrieval source: https://arxiv.org/pdf/2501.10100. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2501.10100; PDF retrieval source: https://arxiv.org/pdf/2501.10100. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,27 +10,27 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** The experiments are designed to assess the accuracy and robustness of RWM, evaluate its architectural and training design choices, and demonstrate its effectiveness across diverse ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Current training in simulation avoids potential hardware damage, but incorporating safety constraints and robust uncertainty estimates will be critical for deploying RWM and MBPO-PPO in ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** These results underline the effectiveness of RWM and MBPO-PPO in enabling robust and scalable policy deployment for real-world robotic systems.
-- **p. 6 / 4 Experiments - extractive PDF cue:** We then compare various network architectures and the error induced across diverse robotic environments and tasks to demonstrate the generality of RWM.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Reach-UR10 Reach-Franka Lift-Cube-Franka Open-Drawer-Franka Repose-Cube-Allegro Velocity-Unitree-A1 Velocity-Unitree-Go1 Velocity-Unitree-Go2 Velocity-Anymal-B Velocity-Anymal-C Velocity-Anymal-D Velocity-Spot Velocity-Cassie Velocity-H ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** The performance gap between RWM-AR and the baselines is especially pronounced in complex and dynamic tasks, such as velocity tracking for legged robots, where accurate ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.3 Generality across Robotic Environments To assess the generality and robustness of RWM across a diverse range of robotic environments, we compare its performance with ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks.
+- **p. 6 / 4 Experiments - extractive body cue:** The experiments are designed to assess the accuracy and robustness of RWM, evaluate its architectural and training design choices, and demonstrate its effectiveness across diverse ...
+- **p. 9 / 4 Experiments - extractive body cue:** Current training in simulation avoids potential hardware damage, but incorporating safety constraints and robust uncertainty estimates will be critical for deploying RWM and MBPO-PPO in ...
+- **p. 9 / 4 Experiments - extractive body cue:** These results underline the effectiveness of RWM and MBPO-PPO in enabling robust and scalable policy deployment for real-world robotic systems.
+- **p. 6 / 4 Experiments - extractive body cue:** We then compare various network architectures and the error induced across diverse robotic environments and tasks to demonstrate the generality of RWM.
+- **p. 8 / 4 Experiments - extractive body cue:** Reach-UR10 Reach-Franka Lift-Cube-Franka Open-Drawer-Franka Repose-Cube-Allegro Velocity-Unitree-A1 Velocity-Unitree-Go1 Velocity-Unitree-Go2 Velocity-Anymal-B Velocity-Anymal-C Velocity-Anymal-D Velocity-Spot Velocity-Cassie Velocity-H ...
+- **p. 7 / 4 Experiments - extractive body cue:** The performance gap between RWM-AR and the baselines is especially pronounced in complex and dynamic tasks, such as velocity tracking for legged robots, where accurate ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.3 Generality across Robotic Environments To assess the generality and robustness of RWM across a diverse range of robotic environments, we compare its performance with ...
+- **p. 8 / 4 Experiments - extractive body cue:** These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks.
 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** uncertain robot state와 safe/unsafe operating region.
-- **Input boundary:** observation, uncertainty/risk estimate와 task command.
-- **Output/decision under evaluation:** shielded, recovery 또는 safe action.
-- **Primary target:** task return과 violation/failure probability.
+- **Target system/task:** physics simulation의 robot/environment model.
+- **Input boundary:** simulated state, geometry, contact와 control input.
+- **Output/decision under evaluation:** simulation step, trajectory 또는 environment query.
+- **Primary target:** physical plausibility, speed, reproducibility와 task utility.
 - **Detected evaluation headings:** 4 Experiments (p. 6); A.4 Additional Experiments and Discussions (p. 18).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | A.4.1 reveals that, while extending both M and N improves accuracy, practical considerations of computational cost necessitate careful tuning of these hyperparameters to achieve ... | p. 6 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks. | p. 8 (4 Experiments) |
@@ -40,34 +40,34 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** The experiments are designed to assess the accuracy and robustness of RWM, evaluate its architectural and training design choices, and demonstrate its effectiveness across diverse ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Current training in simulation avoids potential hardware damage, but incorporating safety constraints and robust uncertainty estimates will be critical for deploying RWM and MBPO-PPO in ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** These results underline the effectiveness of RWM and MBPO-PPO in enabling robust and scalable policy deployment for real-world robotic systems.
-- **p. 6 / 4 Experiments - extractive PDF cue:** We then compare various network architectures and the error induced across diverse robotic environments and tasks to demonstrate the generality of RWM.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Reach-UR10 Reach-Franka Lift-Cube-Franka Open-Drawer-Franka Repose-Cube-Allegro Velocity-Unitree-A1 Velocity-Unitree-Go1 Velocity-Unitree-Go2 Velocity-Anymal-B Velocity-Anymal-C Velocity-Anymal-D Velocity-Spot Velocity-Cassie Velocity-H ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** The performance gap between RWM-AR and the baselines is especially pronounced in complex and dynamic tasks, such as velocity tracking for legged robots, where accurate ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.3 Generality across Robotic Environments To assess the generality and robustness of RWM across a diverse range of robotic environments, we compare its performance with ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks.
+- **p. 6 / 4 Experiments - extractive body cue:** The experiments are designed to assess the accuracy and robustness of RWM, evaluate its architectural and training design choices, and demonstrate its effectiveness across diverse ...
+- **p. 9 / 4 Experiments - extractive body cue:** Current training in simulation avoids potential hardware damage, but incorporating safety constraints and robust uncertainty estimates will be critical for deploying RWM and MBPO-PPO in ...
+- **p. 9 / 4 Experiments - extractive body cue:** These results underline the effectiveness of RWM and MBPO-PPO in enabling robust and scalable policy deployment for real-world robotic systems.
+- **p. 6 / 4 Experiments - extractive body cue:** We then compare various network architectures and the error induced across diverse robotic environments and tasks to demonstrate the generality of RWM.
+- **p. 8 / 4 Experiments - extractive body cue:** Reach-UR10 Reach-Franka Lift-Cube-Franka Open-Drawer-Franka Repose-Cube-Allegro Velocity-Unitree-A1 Velocity-Unitree-Go1 Velocity-Unitree-Go2 Velocity-Anymal-B Velocity-Anymal-C Velocity-Anymal-D Velocity-Spot Velocity-Cassie Velocity-H ...
+- **p. 7 / 4 Experiments - extractive body cue:** The performance gap between RWM-AR and the baselines is especially pronounced in complex and dynamic tasks, such as velocity tracking for legged robots, where accurate ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.3 Generality across Robotic Environments To assess the generality and robustness of RWM across a diverse range of robotic environments, we compare its performance with ...
+- **p. 8 / 4 Experiments - extractive body cue:** These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Autoregressive imagination, ground-truth simulation, and real-world deployment of RWM. For each environment, the top row showcases the RWM autoregressively predicting future trajectories in ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Comparison of training paradigms for world models with an example of a history horizon H = 3. (a) Autoregressive training operates with an ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: (Left) Solid lines represent ground truth trajectories, while dashed lines denote predicted state evolution. Predictions commence at t = 32 using historical observations, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Autoregressive trajectory prediction errors across diverse robotic environments and network architectures. RWM trained with autoregressive training (RWM-AR) consistently outperforms baseline methods, including MLP, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5: Model error and policy mean reward for the ANYmal D (left) and Unitree G1 (right) velocity tracking task with MBPO-PPO. The policy is ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison with model-free method
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Autoregressive imagination, ground-truth simulation, and real-world deployment of RWM. For each environment, the top row showcases the RWM autoregressively predicting future trajectories in ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Comparison of training paradigms for world models with an example of a history horizon H = 3. (a) Autoregressive training operates with an ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: (Left) Solid lines represent ground truth trajectories, while dashed lines denote predicted state evolution. Predictions commence at t = 32 using historical observations, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Autoregressive trajectory prediction errors across diverse robotic environments and network architectures. RWM trained with autoregressive training (RWM-AR) consistently outperforms baseline methods, including MLP, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Model error and policy mean reward for the ANYmal D (left) and Unitree G1 (right) velocity tracking task with MBPO-PPO. The policy is ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Comparison with model-free method
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The experiments are designed to assess the accuracy and robustness of RWM, evaluate its architectural and training design choices, and demonstrate its effectiveness across ... | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | Current training in simulation avoids potential hardware damage, but incorporating safety constraints and robust uncertainty estimates will be critical for deploying RWM and MBPO-PPO ... | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 9 (4 Experiments) |
-| Observation/sensor | observation, uncertainty/risk estimate와 task command | calibration, preprocessing, privileged input | p. 4 (3 Approach), p. 4 (3 Approach) |
-| Output/decision | shielded, recovery 또는 safe action | action frame, controller and termination | p. 5 (3 Approach), p. 6 (3 Approach) |
+| Observation/sensor | simulated state, geometry, contact와 control input | calibration, preprocessing, privileged input | p. 4 (3 Approach), p. 4 (3 Approach) |
+| Output/decision | simulation step, trajectory 또는 environment query | action frame, controller and termination | p. 5 (3 Approach), p. 6 (3 Approach) |
 
 ## Metrics and Success Definition
 
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7
 | Primary metric/result | These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks. | numeric claim only at cited anchor | p. 8 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Experiments - extractive PDF cue:** The control frequency of the robot is at 50 Hz.
-- **p. 6 / 4 Experiments - extractive PDF cue:** The model is trained with history horizon M = 32 and forecast horizon N = 8.
-- **p. 5 / 3 Approach - extractive PDF cue:** (a) Autoregressive training operates with an example of a forecast horizon N = 2, leveraging historical data and its own predictions for long-horizon robustness.
-- **p. 5 / 3 Approach - extractive PDF cue:** (b) Teacher-forcing training can be viewed as a special case of autoregressive training with a forecast horizon N = 1, using ground truth observations for ...
-- **p. 5 / 3 Approach - extractive PDF cue:** Specifically, teacher-forcing can be viewed as a special case of autoregressive training with forecast horizon N = 1, which boosts training with higher parallelization.
-- **p. 17 / A.3 Training Parameters - extractive PDF cue:** The learning networks and algorithm are implemented in PyTorch 2.4.0 with CUDA 12.6 and trained on an NVIDIA RTX 4090 GPU.
+- **p. 6 / 4 Experiments - extractive body cue:** The control frequency of the robot is at 50 Hz.
+- **p. 6 / 4 Experiments - extractive body cue:** The model is trained with history horizon M = 32 and forecast horizon N = 8.
+- **p. 5 / 3 Approach - extractive body cue:** (a) Autoregressive training operates with an example of a forecast horizon N = 2, leveraging historical data and its own predictions for long-horizon robustness.
+- **p. 5 / 3 Approach - extractive body cue:** (b) Teacher-forcing training can be viewed as a special case of autoregressive training with a forecast horizon N = 1, using ground truth observations for ...
+- **p. 5 / 3 Approach - extractive body cue:** Specifically, teacher-forcing can be viewed as a special case of autoregressive training with forecast horizon N = 1, which boosts training with higher parallelization.
+- **p. 17 / A.3 Training Parameters - extractive body cue:** The learning networks and algorithm are implemented in PyTorch 2.4.0 with CUDA 12.6 and trained on an NVIDIA RTX 4090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** In contrast, SHAC fails to converge, producing unstable behaviors that degrade both policy and model quality.
-- **p. 9 / 4 Experiments - extractive PDF cue:** 5 Limitations The policy learned with RWM and MBPO-PPO surpasses existing MBRL methods in both robustness and generalization.
-- **p. 10 / 6 Conclusion - extractive PDF cue:** In this work, we present RWM, a robust and scalable framework for learning world models tailored to complex robotic tasks.
-- **p. 10 / 6 Conclusion - extractive PDF cue:** The results highlight RWM 's potential to enable adaptive, robust, and high-performing robotic systems, setting a foundation for broader adoption of model-based approaches in real-world ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** Grey curves represent the MLP baseline, which exhibits significantly higher error accumulation and reduced robustness to noise.
-- **p. 7 / 4 Experiments - extractive PDF cue:** To assess the robustness of RWM, we analyze its performance under Gaussian noise perturbations applied to both observations and actions.
+- **p. 9 / 4 Experiments - extractive body cue:** In contrast, SHAC fails to converge, producing unstable behaviors that degrade both policy and model quality.
+- **p. 9 / 4 Experiments - extractive body cue:** 5 Limitations The policy learned with RWM and MBPO-PPO surpasses existing MBRL methods in both robustness and generalization.
+- **p. 10 / 6 Conclusion - extractive body cue:** In this work, we present RWM, a robust and scalable framework for learning world models tailored to complex robotic tasks.
+- **p. 10 / 6 Conclusion - extractive body cue:** The results highlight RWM 's potential to enable adaptive, robust, and high-performing robotic systems, setting a foundation for broader adoption of model-based approaches in real-world ...
+- **p. 7 / 4 Experiments - extractive body cue:** Grey curves represent the MLP baseline, which exhibits significantly higher error accumulation and reduced robustness to noise.
+- **p. 7 / 4 Experiments - extractive body cue:** To assess the robustness of RWM, we analyze its performance under Gaussian noise perturbations applied to both observations and actions.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), metrics p. 8 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), baselines p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), metrics p. 8 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), baselines p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

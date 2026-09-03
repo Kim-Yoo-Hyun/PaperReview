@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=VSG65wVNuL&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=VSG65wVNuL&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5.1. Training Datasets - extractive PDF cue:** We trained GRIN using a diverse combination of indoor and outdoor datasets from both real-world and syn
-- **p. 6 / 5.1. Training Datasets - extractive PDF cue:** N/A indicate methods that cannot be evaluated zero-shot in a particular benchmark, because the benchmark dataset is used during training. thetic sources.
-- **p. 6 / 5.2. Implementation Details - extractive PDF cue:** The remaining 80k steps used all training datasets, shuffled to ensure a similar ratio of indoor and outdoor samples per batch, as well as real-world ...
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive PDF cue:** We argue that our approach of directly ingesting sparse data is more scalable, since it enables supervised pre-training on much more diverse real-world datasets without ...
-- **p. 8 / 5.4. Zero-Shot Relative Depth Estimation - extractive PDF cue:** All methods were fine-tuned on the training splits of the validation datasets.
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive PDF cue:** N/A indicates methods trained on the target dataset.
-- **p. 8 / 5.6. Ablation Study - extractive PDF cue:** Similarly, in (B) we show that removing global conditioning also significantly degrades performance, due to the lack of scene-level context for consistent local predictions.
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive PDF cue:** We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work.
+- **p. 5 / 5.1. Training Datasets - extractive body cue:** We trained GRIN using a diverse combination of indoor and outdoor datasets from both real-world and syn
+- **p. 6 / 5.1. Training Datasets - extractive body cue:** N/A indicate methods that cannot be evaluated zero-shot in a particular benchmark, because the benchmark dataset is used during training. thetic sources.
+- **p. 6 / 5.2. Implementation Details - extractive body cue:** The remaining 80k steps used all training datasets, shuffled to ensure a similar ratio of indoor and outdoor samples per batch, as well as real-world ...
+- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** We argue that our approach of directly ingesting sparse data is more scalable, since it enables supervised pre-training on much more diverse real-world datasets without ...
+- **p. 8 / 5.4. Zero-Shot Relative Depth Estimation - extractive body cue:** All methods were fine-tuned on the training splits of the validation datasets.
+- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** N/A indicates methods trained on the target dataset.
+- **p. 8 / 5.6. Ablation Study - extractive body cue:** Similarly, in (B) we show that removing global conditioning also significantly degrades performance, due to the lack of scene-level context for consistent local predictions.
+- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.3. Zero-Shot Metric Depth Estimation | EMPIRICAL / REAL-ROBOT OR HARDWARE | We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future ... | p. 7 (5.3. Zero-Shot Metric Depth Estimation) |
 | 5.4. Zero-Shot Relative Depth Estimation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results of this experiment are shown in Table 2, indicating that GRIN also outperforms the current state-of-the-art in relative depth estimation across multiple datasets, ... | p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5.1. Training Datasets - extractive PDF cue:** We trained GRIN using a diverse combination of indoor and outdoor datasets from both real-world and syn
-- **p. 6 / 5.1. Training Datasets - extractive PDF cue:** N/A indicate methods that cannot be evaluated zero-shot in a particular benchmark, because the benchmark dataset is used during training. thetic sources.
-- **p. 6 / 5.2. Implementation Details - extractive PDF cue:** The remaining 80k steps used all training datasets, shuffled to ensure a similar ratio of indoor and outdoor samples per batch, as well as real-world ...
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive PDF cue:** We argue that our approach of directly ingesting sparse data is more scalable, since it enables supervised pre-training on much more diverse real-world datasets without ...
-- **p. 8 / 5.4. Zero-Shot Relative Depth Estimation - extractive PDF cue:** All methods were fine-tuned on the training splits of the validation datasets.
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive PDF cue:** N/A indicates methods trained on the target dataset.
-- **p. 8 / 5.6. Ablation Study - extractive PDF cue:** Similarly, in (B) we show that removing global conditioning also significantly degrades performance, due to the lack of scene-level context for consistent local predictions.
+- **p. 5 / 5.1. Training Datasets - extractive body cue:** We trained GRIN using a diverse combination of indoor and outdoor datasets from both real-world and syn
+- **p. 6 / 5.1. Training Datasets - extractive body cue:** N/A indicate methods that cannot be evaluated zero-shot in a particular benchmark, because the benchmark dataset is used during training. thetic sources.
+- **p. 6 / 5.2. Implementation Details - extractive body cue:** The remaining 80k steps used all training datasets, shuffled to ensure a similar ratio of indoor and outdoor samples per batch, as well as real-world ...
+- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** We argue that our approach of directly ingesting sparse data is more scalable, since it enables supervised pre-training on much more diverse real-world datasets without ...
+- **p. 8 / 5.4. Zero-Shot Relative Depth Estimation - extractive body cue:** All methods were fine-tuned on the training splits of the validation datasets.
+- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** N/A indicates methods trained on the target dataset.
+- **p. 8 / 5.6. Ablation Study - extractive body cue:** Similarly, in (B) we show that removing global conditioning also significantly degrades performance, due to the lack of scene-level context for consistent local predictions.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GRIN sets a new state of the art in zero-shot metric monocular depth estimation, via efficient pixel-level diffusion and the proper handling of ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Recurrent Interface Networks (RIN) architecture. (a) Latent tokens Zin read from input tokens Xin, are processed via a series of self-attention layers, and ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Diagram of GRIN for monocular depth estimation. An input image I with intrinsics K is used to condition the diffusion process both locally, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. Numbers in italics indicate results obtained by evaluating specific methods on ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative zero-shot metric depth estimation results using GRIN on various indoor and outdoor datasets. The same model was used in all evaluations. For ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Zero-shot relative monocular depth estimation results (AbsRel). All methods use test-time scale alignment, and do not require intrinsics as input. N/A indicates methods ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Uncertainty estimation analysis using multiple GRIN samples. In (a), Depth and uncertainty maps are calculated taking the median and standard deviation of s ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. In-domain metric monocular depth estimation results. All methods were fine-tuned on the training splits of the validation datasets. GRIN FT NI indicates our ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GRIN sets a new state of the art in zero-shot metric monocular depth estimation, via efficient pixel-level diffusion and the proper handling of ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Recurrent Interface Networks (RIN) architecture. (a) Latent tokens Zin read from input tokens Xin, are processed via a series of self-attention layers, and ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Diagram of GRIN for monocular depth estimation. An input image I with intrinsics K is used to condition the diffusion process both locally, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. Numbers in italics indicate results obtained by evaluating specific methods on ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative zero-shot metric depth estimation results using GRIN on various indoor and outdoor datasets. The same model was used in all evaluations. For ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Zero-shot relative monocular depth estimation results (AbsRel). All methods use test-time scale alignment, and do not require intrinsics as input. N/A indicates methods ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Uncertainty estimation analysis using multiple GRIN samples. In (a), Depth and uncertainty maps are calculated taking the median and standard deviation of s ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. In-domain metric monocular depth estimation results. All methods were fine-tuned on the training splits of the validation datasets. GRIN FT NI indicates our ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We trained GRIN using a diverse combination of indoor and outdoor datasets from both real-world and syn | embodiment, simulator version and control stack | p. 5 (5.1. Training Datasets), p. 6 (5.1. Training Datasets) |
 | Task/environment | N/A indicate methods that cannot be evaluated zero-shot in a particular benchmark, because the benchmark dataset is used during training. thetic sources. | reset, timeout, object/scene variation | p. 6 (5.1. Training Datasets), p. 6 (5.2. Implementation Details) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p
 | Primary metric/result | Results of this experiment are shown in Table 2, indicating that GRIN also outperforms the current state-of-the-art in relative depth estimation across multiple datasets, ... | numeric claim only at cited anchor | p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.2. Implementation Details - extractive PDF cue:** During training, input images (and intrinsics) are first resized to fit within a 640×512 resolution, and then randomly resized between [0.5, 1.5] of this resolution, ...
-- **p. 6 / 5.2. Implementation Details - extractive PDF cue:** If the result is larger than 640×512 it is randomly cropped, otherwise it is padded, so it can be collated as part of a batch.
-- **p. 8 / 5.4. Zero-Shot Relative Depth Estimation - extractive PDF cue:** In (a), Depth and uncertainty maps are calculated taking the median and standard deviation of s = 10 samples.
+- **p. 6 / 5.2. Implementation Details - extractive body cue:** During training, input images (and intrinsics) are first resized to fit within a 640×512 resolution, and then randomly resized between [0.5, 1.5] of this resolution, ...
+- **p. 6 / 5.2. Implementation Details - extractive body cue:** If the result is larger than 640×512 it is randomly cropped, otherwise it is padded, so it can be collated as part of a batch.
+- **p. 8 / 5.4. Zero-Shot Relative Depth Estimation - extractive body cue:** In (a), Depth and uncertainty maps are calculated taking the median and standard deviation of s = 10 samples.
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 6. Conclusion - extractive PDF cue:** Interestingly, these uncertainty maps also accurately detect failure cases of our model, such as the mirror on the bottom of the second column, due to ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. Numbers in italics indicate results obtained by evaluating specific methods on ...
-- **p. 9 / 6. Conclusion - extractive PDF cue:** We then provide additional architecture details in Section C, and in Section D we discuss potential limitations of our architecture.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Recurrent Interface Networks (RIN) architecture. (a) Latent tokens Zin read from input tokens Xin, are processed via a series of self-attention layers, and ...
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive PDF cue:** We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work.
-- **p. 7 / 5.4. Zero-Shot Relative Depth Estimation - extractive PDF cue:** In this setting, camera intrinsics are not required, since the model does not need to reason over physical 3D properties of the environment, focusing instead ...
+- **p. 9 / 6. Conclusion - extractive body cue:** Interestingly, these uncertainty maps also accurately detect failure cases of our model, such as the mirror on the bottom of the second column, due to ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. Numbers in italics indicate results obtained by evaluating specific methods on ...
+- **p. 9 / 6. Conclusion - extractive body cue:** We then provide additional architecture details in Section C, and in Section D we discuss potential limitations of our architecture.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Recurrent Interface Networks (RIN) architecture. (a) Latent tokens Zin read from input tokens Xin, are processed via a series of self-attention layers, and ...
+- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work.
+- **p. 7 / 5.4. Zero-Shot Relative Depth Estimation - extractive body cue:** In this setting, camera intrinsics are not required, since the model does not need to reason over physical 3D properties of the environment, focusing instead ...
 
-- **PDF anchors reviewed:** datasets p. 5 (5.1. Training Datasets), p. 6 (5.1. Training Datasets), p. 6 (5.2. Implementation Details), p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 7 (5.3. Zero-Shot Metric Depth Estimation), metrics p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 6 (5.2. Implementation Details), p. 7 (5.2. Implementation Details), p. 3 (Figure/Table caption), baselines p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 6 (5.1. Training Datasets), p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 1 (Figure/Table caption), results p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.5. Fine-Tuning Experiments), p. 6 (5.1. Training Datasets), p. 6 (5.1. Training Datasets).
+- **Evidence anchors reviewed:** datasets p. 5 (5.1. Training Datasets), p. 6 (5.1. Training Datasets), p. 6 (5.2. Implementation Details), p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 7 (5.3. Zero-Shot Metric Depth Estimation), metrics p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 6 (5.2. Implementation Details), p. 7 (5.2. Implementation Details), p. 3 (Figure/Table caption), baselines p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 6 (5.1. Training Datasets), p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 1 (Figure/Table caption), results p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.5. Fine-Tuning Experiments), p. 6 (5.1. Training Datasets), p. 6 (5.1. Training Datasets).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -1,8 +1,10 @@
 # Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v87/florence18a.html.
-> PDF retrieval source: https://proceedings.mlr.press/v87/florence18a.html. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v87/florence18a.html.
+> PDF retrieval source: https://proceedings.mlr.press/v87/florence18a.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://proceedings.mlr.press/v87/florence18a.html
 - Code/Project: https://dense-object-nets.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 At a coarse level the task of identifying individual objects to manipulate can be solved by instance segmentation, as demonstrated in the Amazon Robotics Challenge (ARC) [4, 5] or [6].를 문제로 두고, We believe our largest contribution is that we introduce dense descriptors as a representation useful for robotic manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 2 (3 Methodology), p. 5 (3 Methodology) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Achieving specificity, the ability to accomplish specific tasks with specific objects, may require solving the data association problem. (p. 1, 1 Introduction).
+- **Actual contribution:** In this paper, we propose and demonstrate using dense visual description as a representation for robotic manipulation. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Figure 3: (a) table describing the network training procedures referenced in experiments. (standard-SO = "standard single object". standard-SO-P is detailed in Appendix D.1). (b) Plots the cdf of the L2 ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable ... (p. 7, 5 Results).

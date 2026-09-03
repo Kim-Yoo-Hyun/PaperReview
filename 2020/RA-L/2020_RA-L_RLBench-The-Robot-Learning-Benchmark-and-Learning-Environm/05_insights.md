@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 Robot manipulation systems broadly fall somewhere on a spectrum ranging from traditional, modular methods, that include object recognition, state estimation, and planning, to fully end-to-end approaches that leverage deep learning and l ...를 Formally, we define an episode trajectory τ to consist of a series of observations o and actions a: τ = [(o1, a1), . . . , (oT , aT )].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging methods, to more challenging, long-time-horizon tasks that ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation areas.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, which supply rgb, depth, and mask images. d) Extensibility: Following on from the ... (p. 3, III. BENCHMARK PROPERTIES).
+- **Paper-specific mechanism:** To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world. (p. 3, III. BENCHMARK PROPERTIES); the relevant task/metric cue is Fig. 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, which supply rgb, depth, and mask images. d) Extensibility: Following on from ... (p. 3, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: However, with the rise of deep-learning methods becoming more prominent in robotics, we believe it is important to find the potential and limits of these methods in a controlled, reproducible environment. c) ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging methods, to more challenging, long-time-horizon tasks that ....
-4. Report the body metric and its denominator/aggregation: Fig. 5: Example usage of the RLBench Environment for training a reinforcement learning agent. When using demon- strations, users can either point to a set of saved demonstra- tions (as shown here), ....
-5. Re-run the body-reported ablation/failure condition: Fig. 7: Top shows the frequency of words in the variation descriptions with function words removed, leaving only content words. Bottom shows the average length of 5 demonstrations from a sample of ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, which supply rgb, depth, and mask images. d) Extensibility: Following on from the ... (p. 3, III. BENCHMARK PROPERTIES); preserve the objective/update rule: Each variation comes with a list of textual descriptions that describes the objective. (p. 4, IV. RLBENCH).
+2. Use the paper-reported task/data/environment cue: However, with the rise of deep-learning methods becoming more prominent in robotics, we believe it is important to find the potential and limits of these methods in a controlled, reproducible ... (p. 3, III. BENCHMARK PROPERTIES).
+3. Compare against the reported or matched baseline: We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging methods, to more challenging, long-time-horizon ... (p. 3, III. BENCHMARK PROPERTIES).
+4. Report the body metric with its denominator and aggregation: Fig. 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, which supply rgb, depth, and mask images. d) Extensibility: Following on from ... (p. 3, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Fig. 7: Top shows the frequency of words in the variation descriptions with function words removed, leaving only content words. Bottom shows the average length of 5 demonstrations from a ... (p. 6, Figure/Table caption); if none is reported, design one around: Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH); the primary result is directionally consistent at p. 5 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 3 (III. BENCHMARK PROPERTIES), p. 3 (III. BENCHMARK PROPERTIES), p. 3 (III. BENCHMARK PROPERTIES), and measure the boundary at p. 5 (IV. RLBENCH), p. 1 (I. INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, RLBench, ambitious mechanism이 We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, ... 대비 Fig. 5: Example usage of the RLBench Environment for training a reinforcement learning agent. When using demon- strations, ...을 개선하고, We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, which supply rgb, depth, and ...), does the paper-specific mechanism (To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number ...) retain the reported evaluation outcome (Fig. 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, ...) when tested against the paper's strongest explicit boundary (Once a task has been created, we provide a task validation tool, that attempts to collect a number ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Fig. 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world. (p. 3, III. BENCHMARK PROPERTIES).
+- **Strongest explicit boundary:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 It takes the kinematic states Of the particles as input and predicts a spatial velocity field at fixed grid points.를 Given particle positions 7X, and velocities V_ fused from multi-view depth images as input, our model predicts dense per-particle motion by first using. a point ‘encoder to extract particle features and predict ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing objects with 3D Gaussian Splatting and int ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Given particle positions 7X, and velocities V_ fused from multi-view depth images as input, our model predicts dense per-particle motion by first using. a point ‘encoder to extract particle features ... (p. 3, B. Learning-Based Deformable Modeling).
+- **Paper-specific mechanism:** To address these limitations, we introduce a novel class of/ dynamic models called particle-grid neural dynamics. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 13: Additional Qualitative Comparisons on Dynamics Prediction. Given the initial states and actions (leftmost column), we present the prediction results of the MPM with parameter identification baseline, the GBND ... (p. 19, Figure/Table caption); the relevant task/metric cue is Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, ... (p. 1, I. INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: ‘€) Box: Two robot arms are used to open and close shipping boxes..
-3. Compare against the body-reported baseline or a matched simpler baseline: Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views..
-4. Report the body metric and its denominator/aggregation: Fig. 8: Quantitative Comparisons on Planning. For four manipulation tasks-cloth lifting, box closing, rope manipulation, and plush toy relocating -we present the error curve and the final success rate curve with respect ....
-5. Re-run the body-reported ablation/failure condition: Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Given particle positions 7X, and velocities V_ fused from multi-view depth images as input, our model predicts dense per-particle motion by first using. a point ‘encoder to extract particle features ... (p. 3, B. Learning-Based Deformable Modeling); preserve the objective/update rule: Since the ‘dynamics function fy is fully differentiable, we optimize the network parameters «and 1 using gradient descent. (p. 5, B. Model Components).
+2. Use the paper-reported task/data/environment cue: ‘€) Box: Two robot arms are used to open and close shipping boxes. (p. 6, A. Experiment Setup).
+3. Compare against the reported or matched baseline: Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: ‘+ Can the model improve the performance of 3D actionconditioned video prediction and model-based planning? (p. 5, IV. EXPERIMENTS); if none is reported, design one around: For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, ... (p. 1, I. INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling); the primary result is directionally consistent at p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 19 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), and measure the boundary at p. 1 (I. INTRODUCTION), p. 10 (V. Liimarions).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 model, updates, particle mechanism이 Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust ... 대비 Fig. 8: Quantitative Comparisons on Planning. For four manipulation tasks-cloth lifting, box closing, rope manipulation, and plush toy ...을 개선하고, Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Given particle positions 7X, and velocities V_ fused from multi-view depth images as input, our model predicts dense per-particle motion by first ...), does the paper-specific mechanism (To address these limitations, we introduce a novel class of/ dynamic models called particle-grid neural dynamics.) retain the reported evaluation outcome (Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete ...) when tested against the paper's strongest explicit boundary (For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To address these limitations, we introduce a novel class of/ dynamic models called particle-grid neural dynamics. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 13: Additional Qualitative Comparisons on Dynamics Prediction. Given the initial states and actions (leftmost column), we present the prediction results of the MPM with parameter identification baseline, the GBND ... (p. 19, Figure/Table caption).
+- **Strongest explicit boundary:** For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, ... (p. 1, I. INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -1,8 +1,10 @@
 # GaussianGrasper: 3D Language Gaussian Splatting for Open-vocabulary Robotic Grasping
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2403.09637.
-> PDF retrieval source: https://arxiv.org/pdf/2403.09637. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2403.09637.
+> PDF retrieval source: https://arxiv.org/pdf/2403.09637. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RA-L
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2403.09637
 - Code/Project: https://github.com/MrSecant/GaussianGrasper
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -77,3 +79,12 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Other methods [8], [9], [10], [11], [12], [13] that use 3D backbone to extract features and are supervised by 3D annotation or manipulation feedback can effectively make robots explicitly understand 3D scenes ...를 문제로 두고, In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed with open-vocabulary semantics and accurate geometry that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Other methods [8], [9], [10], [11], [12], [13] that use 3D backbone to extract features and are supervised by 3D annotation or manipulation feedback can effectively make robots explicitly understand ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed with open-vocabulary semantics and accurate ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative ... (p. 6, IV. EXPERIMENT).
+- **Explicit failure boundary:** Another limitation is that our method fails to estimate the depth and normal of transparent objects due to the lack of ground truth. (p. 8, V. LIMITATION).

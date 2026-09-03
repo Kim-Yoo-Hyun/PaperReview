@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/par/maskedmimic/; PDF retrieval source: https://research.nvidia.com/labs/par/maskedmimic/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/par/maskedmimic/; PDF retrieval source: https://research.nvidia.com/labs/par/maskedmimic/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -22,8 +22,8 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 ## Design Rationale
 
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** Our framework consists of two stages.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We present MaskedMimic, a versatile control model that enables physically simulated characters to generate diverse behaviors from flexible userspecified constraints.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose a framework that trains a versatile control model by leveraging the rich multi-modal information within existing motion capture datasets, such as kinematic trajectories, ...
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | The decoder D(𝑎𝑡/𝑠𝑡,𝑧𝑡) is then conditioned on a latent sampled from the encoder's distribution, and produces an action for the simulated character. | p. 7 (3. Inference), p. 4 (3 PRELIMINARIES) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | To train a versatile controller that can be directed using partial goals, we propose a simple training scheme that trains the controller ... | p. 4 (3 PRELIMINARIES), p. 8 (3. Inference) |
@@ -55,7 +55,7 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 6 / 3. Inference - extractive body cue:** 5.3 Reward Function The reward 𝑟𝑡encourages the character to track a reference motion by minimizing the difference between the state of the simulated character and ...
 - **p. 7 / 3. Inference - extractive body cue:** 6.1 Partial Goals The objective of 𝜋PC is to produce motions that conform to constraints specified by partial goals, akin to the task of motion ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
-- **Equation/algorithm anchors:** p. 7 (3. Inference), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3. Inference).
+- **Equation/algorithm anchors:** p. 7 (3. Inference), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -64,7 +64,7 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 |---|---|---|---|
 | Input/observation | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations, step, observes, current, humanoid | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
 | State/latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | framework, consists, stages, Training, masked, motion, sequences, enables, model, generalize | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Action/output | framework, consists, stages, present, MaskedMimic, versatile, control, model, enables, physically | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
 | Objective/constraint | agent, objective, learn, policy, maximizes, discounted, cumulative, reward, where, likelihood | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 5 / 3. Inference - extractive body cue:** The objective is to predict the next actions based on the current character state, surrounding terrain, and a sequence of future target poses.
 - **p. 8 / 3. Inference - extractive body cue:** To ensure the model supports high-level goals, such as textcommands and interaction with a target object, all future poses can be masked out.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** These partial descriptions can include target keyframes, target joint positions/rotations, text instructions, object interactions, or any combination thereof.
-- **p. 6 / 3. Inference - extractive body cue:** 6 • Tessler, C. et al by the success of transformers in natural language processing, we tokenize each of the inputs and design 𝜋FC as ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** MaskedMimic can be used for a wide range of applications, including generating full-body motion from partially observed joint target positions, joystick steering, object interactions, path-following, ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,8 +85,8 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | This path specifies target positions for the head (including height) at each timestep. | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | To successfully follow a given target trajectory, consisting of a sequence of waypoint positions, we first compute the target rotation at each ... | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
-| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3. Inference), p. 8 (3. Inference), p. 5 (3. Inference), p. 6 (3. Inference), objective p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 5 (3. Inference), p. 2 (1 INTRODUCTION), p. 6 (3. Inference), p. 7 (3. Inference), temporal p. 10 (7.2 Evaluation), p. 12 (8 RESULTS), p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 5 (3. Inference), p. 5 (3. Inference).
+- **Evidence anchors reviewed:** method p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3. Inference), p. 8 (3. Inference), p. 5 (3. Inference), p. 6 (3. Inference), objective p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 5 (3. Inference), p. 2 (1 INTRODUCTION), p. 6 (3. Inference), p. 7 (3. Inference), temporal p. 10 (7.2 Evaluation), p. 12 (8 RESULTS), p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 5 (3. Inference), p. 5 (3. Inference).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The decoder D(𝑎𝑡/𝑠𝑡,𝑧𝑡) is then conditioned on a latent sampled from the encoder's distribution, and produces an action for the simulated character. (p. 7, 3. Inference).
+- **Objective/update evidence:** The training objective is formulated as a motion-tracking reward and optimized using reinforcement learning [Mnih et al. (p. 5, 3. Inference).
+- **Temporal/runtime evidence:** To evaluate the effectiveness of our framework, we construct a benchmark consisting of common tasks introduced by prior systems. (p. 9, 7.2 Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

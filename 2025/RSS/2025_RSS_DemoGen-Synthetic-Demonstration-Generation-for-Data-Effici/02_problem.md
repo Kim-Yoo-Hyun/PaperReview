@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p157.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p157.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p157.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p157.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 5 (A. Problem Formulation)): The observation: or includes b
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where ... | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
 | State / latent | observation, includes, point, cloud, data, proprioceptive, feedback, robot, where, reflect | behavior policy와 temporal action context | notation and tensor shape require body check |
 | Output / action | Details, Policy, Training, Fora, fair, comparison, total, steps | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | observation history o_{t−H:t}; body terms: observation, includes, point, cloud, data, proprioceptive, feedback, robot, where, reflect | p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details) |
 | Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: action, consists, robot, hhand, commands, represented, where, target | p. 4 (A. Problem Formulation) |
@@ -38,7 +38,7 @@ PDF body framing (p. 5 (A. Problem Formulation)): The observation: or includes b
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 17 (A. Policy Training and Implementation Details), p. 6 (C. TAMP-based Action Generation), p. 17 (A. Policy Training and Implementation Details) |
 | Success / guarantee | closed-loop task success and robustness | p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,9 +46,9 @@ PDF body framing (p. 5 (A. Problem Formulation)): The observation: or includes b
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 4 (A. Problem Formulation)): The action a, consists of the robot arm and robot hhand commands, represented as a - (a""a!!™), where a7" © AP" is the target SE(3) end-effector pose inthe world frame, ...
+PDF body contribution framing (p. 4 (A. Problem Formulation)): The action a, consists of the robot arm and robot hhand commands, represented as a - (a""a!!™), where a7" © AP" is the target SE(3) end-effector pose inthe world frame, ...
 
-- additional contribution cue 없음
+- additional contribution PDF body cue not selected; no claim inferred
 
 ## Assumptions and Failure Boundary
 
@@ -63,12 +63,21 @@ PDF contribution framing (p. 4 (A. Problem Formulation)): The action a, consists
 
 ## Position in the Robotics Loop
 
-il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details). The downstream handoff is claimed only when the body describes it.
+il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 5 (A. Problem Formulation), interface p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 5 (A. Problem Formulation), interface p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where of?" and 0} reflect the current state of ... (p. 5, A. Problem Formulation).
+- **Formulation-changing contribution:** In this work, we present Demo a low-cost, fully synthetic approach for automatic demonstration generation. (p. 1, Abstract).
+- **Assumption/failure evidence:** Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, we require failure-Free action execution Unlike previous works (3, 20] that rely ... (p. 6, C. TAMP-based Action Generation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

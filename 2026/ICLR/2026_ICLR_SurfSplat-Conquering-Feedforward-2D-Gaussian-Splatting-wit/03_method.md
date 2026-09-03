@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=o1sF4XaFdY; PDF retrieval source: https://openreview.net/pdf/2b748f586856383d970839527439157443d1cc87.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=o1sF4XaFdY; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247825. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 ## Method Body Digest
 
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive PDF cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
-- **p. 5 / 3.1 PRELIMINARIES - extractive PDF cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive PDF cue:** We adopt a dual-branch encoder design to extract both monocular and multi-view features for robust 3D reasoning, following the architecture proposed by DepthSplat Xu et ...
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** Published as a conference paper at ICLR 2026 We then use the neural network to predict scale multipliers ˆσu, ˆσv, which are constrained to lie ...
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** The fused features are subsequently used to construct cost volumes Chen et al.
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
+- **p. 5 / 3.1 PRELIMINARIES - extractive body cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** We adopt a dual-branch encoder design to extract both monocular and multi-view features for robust 3D reasoning, following the architecture proposed by DepthSplat Xu et ...
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** 3.5 TRAINING LOSS Our training loss is an image-level loss computed directly between the rendered image and the ground-truth image.
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** The fused features are subsequently used to construct cost volumes Chen et al.
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Our model leverages a surface continuity prior and forced alpha blending to significantly improve reconstruction quality. • We introduce HRRC, a high-resolution rendering-based metric that ...
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** 3.6 HIGH-RESOLUTION RENDERING CONSISTENCY (HRRC) To better evaluate the geometric fidelity of reconstructed 3D scenes, we propose a novel evaluation metric: High-Resolution Rendering Consistency (HRRC).
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our model leverages a surface continuity prior and forced alpha blending to significantly improve reconstruction quality. • We introduce HRRC, a high-resolution rendering-based metric that ...
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** 3.6 HIGH-RESOLUTION RENDERING CONSISTENCY (HRRC) To better evaluate the geometric fidelity of reconstructed 3D scenes, we propose a novel evaluation metric: High-Resolution Rendering Consistency (HRRC).
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive PDF cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
-- **p. 5 / 3.1 PRELIMINARIES - extractive PDF cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive PDF cue:** We adopt a dual-branch encoder design to extract both monocular and multi-view features for robust 3D reasoning, following the architecture proposed by DepthSplat Xu et ...
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** Published as a conference paper at ICLR 2026 We then use the neural network to predict scale multipliers ˆσu, ˆσv, which are constrained to lie ...
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
+- **p. 5 / 3.1 PRELIMINARIES - extractive body cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** We adopt a dual-branch encoder design to extract both monocular and multi-view features for robust 3D reasoning, following the architecture proposed by DepthSplat Xu et ...
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** 3.5 TRAINING LOSS Our training loss is an image-level loss computed directly between the rendered image and the ground-truth image.
 - **Detected method headings:** 3 METHOD (p. 4); A.1 ENCODER ARCHITECTURE (p. 15)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- ... | p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture. | p. 4 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE) |
@@ -48,14 +48,14 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** The fused features are subsequently used to construct cost volumes Chen et al.
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** When combined with the camera intrinsics, these features can be projected into 3D space and assigned accurate Gaussian attributes, enabling end-to-end training via differentiable rasterization ...
-- **p. 5 / 3.1 PRELIMINARIES - extractive PDF cue:** Published as a conference paper at ICLR 2026 when trained solely through gradient-based supervision.
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** 3.5 TRAINING LOSS Our training loss is an image-level loss computed directly between the rendered image and the ground-truth image.
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** (9) With this design, instead of directly regressing Gaussian attributes, our method derives them from predicted 3D positions, guided by a physically grounded constraint to ...
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive PDF cue:** These warped volumes are compared to Fi via dot-product similarity to construct a cost volume Ci ∈R H s × W s ×D.
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** The fused features are subsequently used to construct cost volumes Chen et al.
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** When combined with the camera intrinsics, these features can be projected into 3D space and assigned accurate Gaussian attributes, enabling end-to-end training via differentiable rasterization ...
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** 3.5 TRAINING LOSS Our training loss is an image-level loss computed directly between the rendered image and the ground-truth image.
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** (9) With this design, instead of directly regressing Gaussian attributes, our method derives them from predicted 3D positions, guided by a physically grounded constraint to ...
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** These warped volumes are compared to Fi via dot-product similarity to construct a cost volume Ci ∈R H s × W s ×D.
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** The output has a spatial resolution of 1/14 relative to the original image and is bilinearly upsampled to match the cost volume resolution, yielding monocular ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
-- **Equation/algorithm anchors:** p. 4 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES).
+- **Equation/algorithm anchors:** p. 4 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** This behavior rapidly boosts image quality for near-input viewpoints, but under the alpha-blending rendering rule, occluded Gaussians contribute minimally to the output: C = X ...
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** Given a collection of V input images {Iv}V v=1 with corresponding camera intrinsics {kv}V v=1 and poses {Tv}V v=1, the network fθ predicts Gaussian parameters ...
-- **p. 4 / 3.1 PRELIMINARIES - extractive PDF cue:** Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches.
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** Conventional metrics-such as PSNR, SSIM, and LPIPS-are typically computed at the same resolution as the input images (e.g., 256 × 256).
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive PDF cue:** For estimating the remaining Gaussian attributes-such as scale multipliers, high-frequency SH coefficients, and opacity-we apply an additional DPT head, conditioned on a concatenation of the ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In contrast, feedforward approaches employ pretrained models to directly predict per-pixel 3D Gaussians from sparse inputs-often as few as two images-without any preprocessing.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian ...
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** This behavior rapidly boosts image quality for near-input viewpoints, but under the alpha-blending rendering rule, occluded Gaussians contribute minimally to the output: C = X ...
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** Given a collection of V input images {Iv}V v=1 with corresponding camera intrinsics {kv}V v=1 and poses {Tv}V v=1, the network fθ predicts Gaussian parameters ...
+- **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches.
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** Conventional metrics-such as PSNR, SSIM, and LPIPS-are typically computed at the same resolution as the input images (e.g., 256 × 256).
+- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** For estimating the remaining Gaussian attributes-such as scale multipliers, high-frequency SH coefficients, and opacity-we apply an additional DPT head, conditioned on a concatenation of the ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In contrast, feedforward approaches employ pretrained models to directly predict per-pixel 3D Gaussians from sparse inputs-often as few as two images-without any preprocessing.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,10 +90,10 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 ## Training vs Inference
 
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
-- **p. 6 / 3.1 PRELIMINARIES - extractive PDF cue:** Published as a conference paper at ICLR 2026 We then use the neural network to predict scale multipliers ˆσu, ˆσv, which are constrained to lie ...
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** All other layers are trained with a learning rate of 2 × 10-4.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work.
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
+- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** 3.5 TRAINING LOSS Our training loss is an image-level loss computed directly between the rendered image and the ground-truth image.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** All other layers are trained with a learning rate of 2 × 10-4.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -113,13 +113,13 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 ## Failure and Ablation Link
 
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Ablation study: Visualization of recon- structed 3D scenes. Our full model yields contin- uous and coherent surfaces, while ablated variants exhibit visible artifacts ...
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** We also train a variant with the surface continuity prior but without forced alpha blending.
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Table 6: Ablations study on hyperparameter sensitivity. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
-- **p. 10 / 4 EXPERIMENT - extractive PDF cue:** Across these experiments, the relative performance rankings remained fully consistent with those observed under HRRC evaluation, even without any bicubic upsampling.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** (2024b), but use a lower learning rate of 2 × 10-6 for the pretrained Depth Anything V2 backbone.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Illustration for model architecture. Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches. The fused features are ...
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** These limitations open opportunities for future research on joint pose elimination and compact, adaptive representations.
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Ablation study: Visualization of recon- structed 3D scenes. Our full model yields contin- uous and coherent surfaces, while ablated variants exhibit visible artifacts ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** We also train a variant with the surface continuity prior but without forced alpha blending.
+- **p. 15 / Figure/Table caption - extractive body cue:** Table 6: Ablations study on hyperparameter sensitivity. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
+- **p. 10 / 4 EXPERIMENT - extractive body cue:** Across these experiments, the relative performance rankings remained fully consistent with those observed under HRRC evaluation, even without any bicubic upsampling.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** (2024b), but use a lower learning rate of 2 × 10-6 for the pretrained Depth Anything V2 backbone.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration for model architecture. Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches. The fused features are ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** These limitations open opportunities for future research on joint pose elimination and compact, adaptive representations.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -133,7 +133,7 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), objective p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), temporal p. 5 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), objective p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), p. 15 (A.1 ENCODER ARCHITECTURE), temporal p. 5 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

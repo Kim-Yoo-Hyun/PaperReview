@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Method Body Digest
 
-- **p. 7 / 3 Method - extractive PDF cue:** Below, we first briefly review the radiance field representation and then introduce our joint optimization scheme.
-- **p. 5 / 3 Method - extractive PDF cue:** Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
-- **p. 5 / 3 Method - extractive PDF cue:** Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP [40], to construct an initial scene graph of the images, ...
-- **p. 8 / 3 Method - extractive PDF cue:** It consists of several training epochs.
-- **p. 8 / 3 Method - extractive PDF cue:** 3) loss terms, we propose an intersection-over-union (IoU) loss.
-- **p. 6 / 3 Method - extractive PDF cue:** Given a set of images, we first apply a Structure-from-Motion (SfM) algorithm to construct an initial scene graph (left), within which, each node represents a ...
-- **p. 6 / 3 Method - extractive PDF cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
-- **p. 8 / 3 Method - extractive PDF cue:** The IoU loss aims to maximize the intersection-over-union between the two MoGs that correspond to the matched keypoints.
+- **p. 7 / 3 Method - extractive body cue:** Below, we first briefly review the radiance field representation and then introduce our joint optimization scheme.
+- **p. 5 / 3 Method - extractive body cue:** Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
+- **p. 5 / 3 Method - extractive body cue:** Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP [40], to construct an initial scene graph of the images, ...
+- **p. 8 / 3 Method - extractive body cue:** It consists of several training epochs.
+- **p. 8 / 3 Method - extractive body cue:** 3) loss terms, we propose an intersection-over-union (IoU) loss.
+- **p. 6 / 3 Method - extractive body cue:** Given a set of images, we first apply a Structure-from-Motion (SfM) algorithm to construct an initial scene graph (left), within which, each node represents a ...
+- **p. 6 / 3 Method - extractive body cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
+- **p. 8 / 3 Method - extractive body cue:** The IoU loss aims to maximize the intersection-over-union between the two MoGs that correspond to the matched keypoints.
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** In this paper, we propose a novel framework that jointly optimizes the neural radiance field with a scene graph to alleviate the influence of outliers.
-- **p. 3 / 1 Introduction - extractive PDF cue:** The images are casually captured without being carefully selected, which can lead to failures of state-of-the-art SfM systems. - Accordingly, we propose a novel method ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our method works effectively and can produce high-quality 3D reconstructions. produce a sparse scene representation.
+- **p. 3 / 1 Introduction - extractive body cue:** In this paper, we propose a novel framework that jointly optimizes the neural radiance field with a scene graph to alleviate the influence of outliers.
+- **p. 3 / 1 Introduction - extractive body cue:** The images are casually captured without being carefully selected, which can lead to failures of state-of-the-art SfM systems. - Accordingly, we propose a novel method ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our method works effectively and can produce high-quality 3D reconstructions. produce a sparse scene representation.
 
 ## Source Evidence Cues
 
-- **p. 7 / 3 Method - extractive PDF cue:** Below, we first briefly review the radiance field representation and then introduce our joint optimization scheme.
-- **p. 5 / 3 Method - extractive PDF cue:** Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
-- **p. 5 / 3 Method - extractive PDF cue:** Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP [40], to construct an initial scene graph of the images, ...
-- **p. 8 / 3 Method - extractive PDF cue:** It consists of several training epochs.
-- **p. 8 / 3 Method - extractive PDF cue:** 3) loss terms, we propose an intersection-over-union (IoU) loss.
-- **p. 6 / 3 Method - extractive PDF cue:** Given a set of images, we first apply a Structure-from-Motion (SfM) algorithm to construct an initial scene graph (left), within which, each node represents a ...
-- **p. 6 / 3 Method - extractive PDF cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
+- **p. 7 / 3 Method - extractive body cue:** Below, we first briefly review the radiance field representation and then introduce our joint optimization scheme.
+- **p. 5 / 3 Method - extractive body cue:** Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
+- **p. 5 / 3 Method - extractive body cue:** Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP [40], to construct an initial scene graph of the images, ...
+- **p. 8 / 3 Method - extractive body cue:** It consists of several training epochs.
+- **p. 8 / 3 Method - extractive body cue:** 3) loss terms, we propose an intersection-over-union (IoU) loss.
+- **p. 6 / 3 Method - extractive body cue:** Given a set of images, we first apply a Structure-from-Motion (SfM) algorithm to construct an initial scene graph (left), within which, each node represents a ...
+- **p. 6 / 3 Method - extractive body cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
 - **Detected method headings:** 3 Method (p. 5)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Below, we first briefly review the radiance field representation and then introduce our joint optimization scheme. | p. 7 (3 Method), p. 5 (3 Method) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec. | p. 5 (3 Method), p. 5 (3 Method) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Objective / Update Rule
 
-- **p. 8 / 3 Method - extractive PDF cue:** The IoU loss aims to maximize the intersection-over-union between the two MoGs that correspond to the matched keypoints.
-- **p. 8 / 3 Method - extractive PDF cue:** During the training process, the goal is to minimize the difference between synthesized pixels and those in real images as an L1 photometric loss: \lab ...
-- **p. 9 / 3 Method - extractive PDF cue:** Given a pair of matched keypoints from source and reference images, in order to maximize the IoU between the two rays, both the camera pose ...
-- **p. 9 / 3 Method - extractive PDF cue:** 4: Illustration of the two-view intersection-over-union (IoU) loss in 2D that can be easily extended into 3D.
-- **p. 7 / 3 Method - extractive PDF cue:** Explicitly, the confidence scores will be updated, the camera poses will be optimized, and the graph structure will remain fixed.
-- **p. 5 / 3 Method - extractive PDF cue:** The training process is essentially a scene-specific joint optimization.
+- **p. 8 / 3 Method - extractive body cue:** The IoU loss aims to maximize the intersection-over-union between the two MoGs that correspond to the matched keypoints.
+- **p. 8 / 3 Method - extractive body cue:** During the training process, the goal is to minimize the difference between synthesized pixels and those in real images as an L1 photometric loss: \lab ...
+- **p. 9 / 3 Method - extractive body cue:** Given a pair of matched keypoints from source and reference images, in order to maximize the IoU between the two rays, both the camera pose ...
+- **p. 9 / 3 Method - extractive body cue:** 4: Illustration of the two-view intersection-over-union (IoU) loss in 2D that can be easily extended into 3D.
+- **p. 7 / 3 Method - extractive body cue:** Explicitly, the confidence scores will be updated, the camera poses will be optimized, and the graph structure will remain fixed.
+- **p. 5 / 3 Method - extractive body cue:** The training process is essentially a scene-specific joint optimization.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 9 (3 Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Observation–State–Action Interface
 
-- **p. 5 / 3 Method - extractive PDF cue:** Specifically, for each scene, the input is a set of RGB images I = {I1, I2, ..., In}, and the output is a 3D surface ...
-- **p. 7 / 3 Method - extractive PDF cue:** The network takes a 3D location and viewing direction as input and generates the corresponding density and RGB color (i.e., radiance) as output.
-- **p. 5 / 3 Method - extractive PDF cue:** Each node vi ∈V corresponds to an input image Ii ∈I, and an edge between two nodes indicates that the connected images share a co-visible ...
-- **p. 9 / 3 Method - extractive PDF cue:** When σ < 1 (pixel), we stop the Gaussian filtering and use the original images as input (finest scale).
-- **p. 9 / 3 Method - extractive PDF cue:** More specifically, the coarse-to-fine strategy is implemented by applying a Gaussian filter to the original input images at the beginning of each epoch.
-- **p. 3 / 1 Introduction - extractive PDF cue:** The images are casually captured without being carefully selected, which can lead to failures of state-of-the-art SfM systems. - Accordingly, we propose a novel method ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The proposed can reconstruct 3D surface under significant camera pose noise with an adaptive inlier-outlier confidence estimation, an IoU loss that efficiently leverages the confidence ...
+- **p. 5 / 3 Method - extractive body cue:** Specifically, for each scene, the input is a set of RGB images I = {I1, I2, ..., In}, and the output is a 3D surface ...
+- **p. 7 / 3 Method - extractive body cue:** The network takes a 3D location and viewing direction as input and generates the corresponding density and RGB color (i.e., radiance) as output.
+- **p. 5 / 3 Method - extractive body cue:** Each node vi ∈V corresponds to an input image Ii ∈I, and an edge between two nodes indicates that the connected images share a co-visible ...
+- **p. 9 / 3 Method - extractive body cue:** When σ < 1 (pixel), we stop the Gaussian filtering and use the original images as input (finest scale).
+- **p. 9 / 3 Method - extractive body cue:** More specifically, the coarse-to-fine strategy is implemented by applying a Gaussian filter to the original input images at the beginning of each epoch.
+- **p. 3 / 1 Introduction - extractive body cue:** The images are casually captured without being carefully selected, which can lead to failures of state-of-the-art SfM systems. - Accordingly, we propose a novel method ...
+- **p. 3 / 1 Introduction - extractive body cue:** The proposed can reconstruct 3D surface under significant camera pose noise with an adaptive inlier-outlier confidence estimation, an IoU loss that efficiently leverages the confidence ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,12 +90,12 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Training vs Inference
 
-- **p. 5 / 3 Method - extractive PDF cue:** Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
-- **p. 5 / 3 Method - extractive PDF cue:** Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP [40], to construct an initial scene graph of the images, ...
-- **p. 8 / 3 Method - extractive PDF cue:** It consists of several training epochs.
-- **p. 6 / 3 Method - extractive PDF cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** For each of them, we adopt the official implementation to optimize camera poses, and then apply the optimized poses to train NeuS.
-- **p. 8 / 3 Method - extractive PDF cue:** It consists of several training epochs.
+- **p. 5 / 3 Method - extractive body cue:** Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
+- **p. 5 / 3 Method - extractive body cue:** Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP [40], to construct an initial scene graph of the images, ...
+- **p. 8 / 3 Method - extractive body cue:** It consists of several training epochs.
+- **p. 6 / 3 Method - extractive body cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
+- **p. 11 / 4 Experiments - extractive body cue:** For each of them, we adopt the official implementation to optimize camera poses, and then apply the optimized poses to train NeuS.
+- **p. 8 / 3 Method - extractive body cue:** It consists of several training epochs.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -115,13 +115,13 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Failure and Ablation Link
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** Furthermore, we perform a series of ablation studies and analyses to verify the effectiveness of each proposed component (Sec.
-- **p. 13 / 7.71 3.77† - extractive PDF cue:** We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component.
-- **p. 13 / 7.71 3.77† - extractive PDF cue:** To evaluate the effectiveness of the joint optimization, we directly train our method using the original scene graph obtained from SfM without further refinement.
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 3: Quantitative results of our ablation studies. We individually remove the use of sparsification by thresholding (w/o τ), confidence estimation (w/o CS), Intersection- over-Union ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualization of matches that are falsely established as correspondences from non-overlapping regions. The results are obtained using COLMAP [40] with Super- Point [12] ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** Following hloc [37], we replace the keypoints and the matching module with SuperPoint [12] and SuperGlue [38], respectively.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
+- **p. 10 / 4 Experiments - extractive body cue:** Furthermore, we perform a series of ablation studies and analyses to verify the effectiveness of each proposed component (Sec.
+- **p. 13 / 7.71 3.77† - extractive body cue:** We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component.
+- **p. 13 / 7.71 3.77† - extractive body cue:** To evaluate the effectiveness of the joint optimization, we directly train our method using the original scene graph obtained from SfM without further refinement.
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 3: Quantitative results of our ablation studies. We individually remove the use of sparsification by thresholding (w/o τ), confidence estimation (w/o CS), Intersection- over-Union ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Visualization of matches that are falsely established as correspondences from non-overlapping regions. The results are obtained using COLMAP [40] with Super- Point [12] ...
+- **p. 10 / 4 Experiments - extractive body cue:** Following hloc [37], we replace the keypoints and the matching module with SuperPoint [12] and SuperGlue [38], respectively.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -135,7 +135,7 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 6 (3 Method), objective p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 5 (3 Method), temporal p. 6 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method).
+- **Evidence anchors reviewed:** method p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 6 (3 Method), objective p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 5 (3 Method), temporal p. 6 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

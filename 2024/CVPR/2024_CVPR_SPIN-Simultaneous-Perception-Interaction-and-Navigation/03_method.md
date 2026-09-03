@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (2. Method), p. 4 (2. Method), p. 3 (2. Method),
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | This is followed by a phase-2 supervised training where this behavior is distilled into a student network that operates with ego-centric depth ... | p. 3 (2. Method), p. 4 (2. Method) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | Since the scandots are permutation invariant, we pass them through a trainable point-net architecture P to obtain compressed latent zt = P(˜st) ... | p. 4 (2. Method), p. 3 (2. Method) |
@@ -82,10 +82,10 @@ PDF body method statement (p. 3 (2. Method), p. 4 (2. Method), p. 3 (2. Method),
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | For instance, if the camera swivels around the observations at the next timestep may look completely different. | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | We train a single model that not only outputs low-level controls for the robot body and arm but also predicts where should ... | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | not recovered | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | We train using IsaacGymEnvs [26] using 8192 environments which takes 6 hours of training for phase 1 and 10 hours of training ... | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | For instance, if the camera swivels around the observations at the next timestep may look completely different. | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | We train a single model that not only outputs low-level controls for the robot body and arm but also predicts where should ... | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | We train using IsaacGymEnvs [26] using 8192 environments which takes 6 hours of training for phase 1 and 10 hours of training ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 3 (2. Method), p. 4 (2. Method), p. 3 (2. Method),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2. Method), p. 4 (2. Method), p. 3 (2. Method), p. 4 (2. Method), p. 5 (2.2. Phase 2 - From Scandots to Depth), p. 5 (2.2. Phase 2 - From Scandots to Depth), objective p. 4 (2. Method), p. 4 (2. Method), p. 5 (2.2. Phase 2 - From Scandots to Depth), p. 3 (2. Method), p. 3 (2. Method), p. 5 (2.2. Phase 2 - From Scandots to Depth), temporal p. 4 (2. Method), p. 2 (1. Introduction), p. 2 (2. Method), p. 4 (2. Method), p. 5 (2. Method), p. 5 (3. Experimental Setup).
+- **Evidence anchors reviewed:** method p. 3 (2. Method), p. 4 (2. Method), p. 3 (2. Method), p. 4 (2. Method), p. 5 (2.2. Phase 2 - From Scandots to Depth), p. 5 (2.2. Phase 2 - From Scandots to Depth), objective p. 4 (2. Method), p. 4 (2. Method), p. 5 (2.2. Phase 2 - From Scandots to Depth), p. 3 (2. Method), p. 3 (2. Method), p. 5 (2.2. Phase 2 - From Scandots to Depth), temporal p. 4 (2. Method), p. 2 (1. Introduction), p. 2 (2. Method), p. 4 (2. Method), p. 5 (2. Method), p. 5 (3. Experimental Setup).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Since the scandots are permutation invariant, we pass them through a trainable point-net architecture P to obtain compressed latent zt = P(˜st) that we pass to the policy [\math bf ... (p. 4, 2. Method).
+- **Objective/update evidence:** We propose two methods: (1) Coupled Visuomotor Optimization (CVO) learns robot and camera actions at the same time. (p. 3, 2. Method).
+- **Temporal/runtime evidence:** Note that this entire process is very different from the classical approach, where perception, planning, and obstacle avoidance are separate processes executed separately and in sequence. (p. 2, 2. Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where of?" and 0} reflect the current state of the end-effector, ...를 A visuomotor policy + : O +> A directly maps the visual observations 0 < © to the predicted actions « cA.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Trained on the source demonstrations without obstacles, the visuomotor policy fails to account for potential collisions, e.g., it might knock over the coffee cup placed in the middle (Fig.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The action a, consists of the robot arm and robot hhand commands, represented as a - (a""a!!™), where a7" © AP" is the target SE(3) end-effector pose inthe world frame, and a®™ ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where of?" and 0} reflect the current state of ... (p. 5, A. Problem Formulation).
+- **Paper-specific mechanism:** In this work, we present Demo a low-cost, fully synthetic approach for automatic demonstration generation. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details); the relevant task/metric cue is We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and object randomization ranges are adopted, The ... (p. 4, B. Benchmarking Spatial Generalization Capability). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, we require failure-Free action execution Unlike previous works (3, 20] that rely ... (p. 6, C. TAMP-based Action Generation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In the following benchmarking, we explore the relationship between the number of demonstrations and policy performance to determine how many demonstrations are sufficient for effective training..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 22: Raw evaluation results in the Sauce-Spreading task. (Top) Examples of the processing results for metric calculation. (Bottom) Compared with the regular DemoGen, the policy trained with the ADR strategy better ....
-4. Report the body metric and its denominator/aggregation: We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and object randomization ranges are adopted, The resuls are ....
-5. Re-run the body-reported ablation/failure condition: Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 seconds. responsive enough for conducting dexterous retrying behaviors ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where of?" and 0} reflect the current state of ... (p. 5, A. Problem Formulation); preserve the objective/update rule: To stabilize the training process, we use AdamW [32] optimizer and set the learning rate to be Le with a 500 step warmup. (p. 17, A. Policy Training and Implementation Details).
+2. Use the paper-reported task/data/environment cue: 3: Quantitative benchmarking on the spatial generalization spacity. (p. 4, B. Benchmarking Spatial Generalization Capability).
+3. Compare against the reported or matched baseline: 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details).
+4. Report the body metric with its denominator and aggregation: We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and object randomization ranges are adopted, The ... (p. 4, B. Benchmarking Spatial Generalization Capability).
+5. Re-run the reported ablation or stress/failure condition: Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 seconds. responsive enough for conducting dexterous ... (p. 17, A. Policy Training and Implementation Details); if none is reported, design one around: Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, we require failure-Free action execution Unlike previous works (3, 20] that rely ... (p. 6, C. TAMP-based Action Generation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation); the primary result is directionally consistent at p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (Abstract), match the reported outcome at p. 17 (A. Policy Training and Implementation Details), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 4 (B. Benchmarking Spatial Generalization Capability), and measure the boundary at p. 6 (C. TAMP-based Action Generation), p. 12 (B. Obstacle Avoidance).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 action, consists, robot mechanism이 Fig. 22: Raw evaluation results in the Sauce-Spreading task. (Top) Examples of the processing results for ... 대비 We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for ...을 개선하고, Trained on the source demonstrations without obstacles, the visuomotor policy fails to account for potential collisions, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where ...), does the paper-specific mechanism (In this work, we present Demo a low-cost, fully synthetic approach for automatic demonstration generation.) retain the reported evaluation outcome (We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for ...) when tested against the paper's strongest explicit boundary (Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we present Demo a low-cost, fully synthetic approach for automatic demonstration generation. (p. 1, Abstract).
+- **Paper-supported outcome:** 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details).
+- **Strongest explicit boundary:** Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, we require failure-Free action execution Unlike previous works (3, 20] that rely ... (p. 6, C. TAMP-based Action Generation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

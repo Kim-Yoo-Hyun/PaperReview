@@ -1,8 +1,10 @@
 # DayDreamer: World Models for Physical Robot Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v205/wu23c.html.
-> PDF retrieval source: https://arxiv.org/pdf/2206.14176. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v205/wu23c.html.
+> PDF retrieval source: https://arxiv.org/pdf/2206.14176. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2206.14176
 - Code/Project: https://danijar.com/project/daydreamer/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Despite the promises of world models, learning accurate world models for the real world is a big open challenge.를 문제로 두고, Dreamer consists of two neural network components.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Despite the promises of world models, learning accurate world models for the real world is a big open challenge. (p. 2, 1 Introduction).
+- **Actual contribution:** The key contributions of this paper are summarized as follows: • Dreamer on Robots We apply Dreamer to 4 robots, demonstrating successful learning directly in the real world, without introducing ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** We evaluate Dreamer on 4 robots, each with a different task, and compare its performance to appropriate algorithmic and human baselines. (p. 4, 3 Experiments).
+- **Explicit failure boundary:** On the other hand, learning inside of simulators fails to capture the complexity of the real world, is prone to simulator inaccuracies, and the resulting behaviors do not adapt to ... (p. 1, Body text (section boundary not confidently recovered)).

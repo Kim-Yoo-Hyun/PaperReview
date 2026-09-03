@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p072.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p072.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p072.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p072.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | The training and testing scenarios coasist of a mixture of 1 10 4 picking optioas with 1 placing option, The success rate ... | p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (B. Analysis of Existing Imitation Learning Algorithm) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Specifically, We consider two state-of-the-art methods, Action Chunking Transformer (ACT) [6] and Diffusion Policy (DP) [1] in ‘comprehensive simulation evaluations. | p. 6 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm) |
@@ -80,8 +80,8 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | For methods conditioned on language ‘or attention, we consider a rollout successful if the task is completed in the desired manner, such ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | To address these challenges, we introduce novel robotic manipulation framework that can accomplish tasks specified by potentially ambiguous natural language. | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -129,8 +129,17 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), objective p. 7 (B. Analysis of Existing Imitation Learning Algorithm), temporal p. 6 (IV. EXPERIMENTS), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (A. Problem Statement).
+- **Evidence anchors reviewed:** method p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), objective p. 7 (B. Analysis of Existing Imitation Learning Algorithm), temporal p. 6 (IV. EXPERIMENTS), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (A. Problem Statement).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In this section, we investigate whether 3D attention is a suitable representation for visuomotor policy learning and evaluate the pipeline from 3D attention maps to low-level actions. (p. 7, B. Analysis of Existing Imitation Learning Algorithm).
+- **Objective/update evidence:** Specifically, We consider two state-of-the-art methods, Action Chunking Transformer (ACT) [6] and Diffusion Policy (DP) [1] in ‘comprehensive simulation evaluations. (p. 6, B. Analysis of Existing Imitation Learning Algorithm).
+- **Temporal/runtime evidence:** (Section IV-B) (2) Does the 3D attention map generated by VLM-generated code align with the language instruction? (p. 5, IV. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

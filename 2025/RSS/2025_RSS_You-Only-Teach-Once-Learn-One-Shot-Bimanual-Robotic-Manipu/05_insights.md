@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 For all our bimanual tasks, the observation horizon is set to 1, so we only use the initial state observation of the left arm as one of the network inputs.를 As for the action space A= {a? & R¥,a" © SO(3),a & {0,1}}. it includes the target 6-DoF pose of each robot arm and the binary openiclosed state of the gripper.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In short, these limitations highlight the need for further innovations to enhance robustness, generalization, and scalability in bimanual robot manipulation,에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** As for the action space A= {a? & R¥,a" © SO(3),a & {0,1}}. it includes the target 6-DoF pose of each robot arm and the binary openiclosed state of the ... (p. 4, A. Problem Formulation).
+- **Paper-specific mechanism:** As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}. (p. 4, B. Hand Motion Extraction and Injection).
+- **Evidence boundary:** the reported outcome is ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple substeps and less exploration of efficient ... (p. 10, B. Results Comparison); the relevant task/metric cue is ‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations), (p. 9, B. Results Comparison). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Due to space limitations, we did not continue the demonstration proliferation and policy training. (p. 11, B. Results Comparison).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We then processed these data into the form suitable for BiDP, including extracting 3D point clouds of manipulated objects and saving the corresponding multi-step end-effector keyposes Note that we also recorded the ....
-3. Compare against the body-reported baseline or a matched simpler baseline: also makes our model more robust compared to all baselines The core idea here is to rely on the still rapidly developing capabilities of vision foundation models, such as the open voccabulary ....
-4. Report the body metric and its denominator/aggregation: ‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations),.
-5. Re-run the body-reported ablation/failure condition: Il, ‘we quantitatively illustrate the effectiveness of each strategy cone by one through many ablation studies..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: As for the action space A= {a? & R¥,a" © SO(3),a & {0,1}}. it includes the target 6-DoF pose of each robot arm and the binary openiclosed state of the ... (p. 4, A. Problem Formulation); preserve the objective/update rule: The learning objective can be simply ‘concluded as maximum likelihood observation-conditioned, imitation objective to learn the policy =: (p. 4, A. Problem Formulation).
+2. Use the paper-reported task/data/environment cue: 1) Tasks: We evaluate YOTO on five real-world bimanual tasks, including pull drawer, pour water, unscrew bottle, uncover Lid and open box. (p. 7, A. Experiment Setups).
+3. Compare against the reported or matched baseline: also makes our model more robust compared to all baselines The core idea here is to rely on the still rapidly developing capabilities of vision foundation models, such as the ... (p. 11, B. Results Comparison).
+4. Report the body metric with its denominator and aggregation: ‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations), (p. 9, B. Results Comparison).
+5. Re-run the reported ablation or stress/failure condition: It is a variant of diffusion policy with a simpler point cloud encoder. (p. 8, A. Experiment Setups); if none is reported, design one around: Due to space limitations, we did not continue the demonstration proliferation and policy training. (p. 11, B. Results Comparison).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), p. 4 (B. Hand Motion Extraction and Injection); the primary result is directionally consistent at p. 10 (B. Results Comparison), p. 9 (B. Results Comparison), p. 9 (B. Results Comparison); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 4 (B. Hand Motion Extraction and Injection), p. 4 (A. Problem Formulation), match the reported outcome at p. 10 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), and measure the boundary at p. 11 (B. Results Comparison), p. 22 (C. Evaluation Results and Performance Analysis).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 altemative, project, points mechanism이 also makes our model more robust compared to all baselines The core idea here is to ... 대비 ‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations),을 개선하고, In short, these limitations highlight the need for further innovations to enhance robustness, generalization, and scalability ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (As for the action space A= {a? & R¥,a" © SO(3),a & {0,1}}. it includes the target 6-DoF pose of each robot ...), does the paper-specific mechanism (As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D ...) retain the reported evaluation outcome (‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations),) when tested against the paper's strongest explicit boundary (Due to space limitations, we did not continue the demonstration proliferation and policy training.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations),) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}. (p. 4, B. Hand Motion Extraction and Injection).
+- **Paper-supported outcome:** ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple substeps and less exploration of efficient ... (p. 10, B. Results Comparison).
+- **Strongest explicit boundary:** Due to space limitations, we did not continue the demonstration proliferation and policy training. (p. 11, B. Results Comparison).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

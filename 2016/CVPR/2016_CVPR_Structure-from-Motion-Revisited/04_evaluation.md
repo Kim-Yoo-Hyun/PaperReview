@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content_cvpr_2016/html/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content_cvpr_2016/html/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5. Experiments - extractive PDF cue:** An experiment on the Dubrovnik dataset (Fig.
-- **p. 7 / 5. Experiments - extractive PDF cue:** Triangulation statistics for Dubrovnik dataset.
-- **p. 8 / 7.82 M - extractive PDF cue:** For each dataset, we report the largest reconstructed component.
-- **p. 8 / 7.82 M - extractive PDF cue:** For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models.
-- **p. 7 / 5. Experiments - extractive PDF cue:** After each image registration, we measure the number of registered images shared between the strategies (intersection over union) and the reconstruction error as the median ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** 5) compares our method (Pyramid) to existing strategies in terms of the reconstruction error.
-- **p. 8 / 7.82 M - extractive PDF cue:** We encourage readers to view the supplementary material for additional visual comparisons of the results, demonstrating the superior robustness, completeness, and accuracy of our method.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
+- **p. 7 / 5. Experiments - extractive body cue:** An experiment on the Dubrovnik dataset (Fig.
+- **p. 7 / 5. Experiments - extractive body cue:** Triangulation statistics for Dubrovnik dataset.
+- **p. 8 / 7.82 M - extractive body cue:** For each dataset, we report the largest reconstructed component.
+- **p. 8 / 7.82 M - extractive body cue:** For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models.
+- **p. 7 / 5. Experiments - extractive body cue:** After each image registration, we measure the number of registered images shared between the strategies (intersection over union) and the reconstruction error as the median ...
+- **p. 7 / 5. Experiments - extractive body cue:** 5) compares our method (Pyramid) to existing strategies in terms of the reconstruction error.
+- **p. 8 / 7.82 M - extractive body cue:** We encourage readers to view the supplementary material for additional visual comparisons of the results, demonstrating the superior robustness, completeness, and accuracy of our method.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 7.82 M | EMPIRICAL / SOURCE-REPORTED EVALUATION | For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models. | p. 8 (7.82 M) |
 | 7.82 M | EMPIRICAL / SOURCE-REPORTED EVALUATION | In addition, we achieve the best pose accuracy for the Quad dataset: DISCO 1.16m, Bundler 1.01m, VisualSFM 0.89m, and Ours 0.85m. | p. 8 (7.82 M) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5. Experiments - extractive PDF cue:** An experiment on the Dubrovnik dataset (Fig.
-- **p. 7 / 5. Experiments - extractive PDF cue:** Triangulation statistics for Dubrovnik dataset.
-- **p. 8 / 7.82 M - extractive PDF cue:** For each dataset, we report the largest reconstructed component.
-- **p. 8 / 7.82 M - extractive PDF cue:** For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models.
+- **p. 7 / 5. Experiments - extractive body cue:** An experiment on the Dubrovnik dataset (Fig.
+- **p. 7 / 5. Experiments - extractive body cue:** Triangulation statistics for Dubrovnik dataset.
+- **p. 8 / 7.82 M - extractive body cue:** For each dataset, we report the largest reconstructed component.
+- **p. 8 / 7.82 M - extractive body cue:** For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Result of Rome with 21K registered out of 75K images.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Incremental Structure-from-Motion pipeline. Matching. Next, SfM discovers images that see the same scene part by leveraging the features Fi as an appearance description ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Next best view scores for Gaussian distributed points xj ∈[0, 1]×[0, 1] with mean µ and std. dev. σ. Score S w.r.t. uni- ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Next best view results for Quad: Shared number of reg- istered images and reconstruction error during incremental SfM. 0 0.2 0.4 0.6 0.8 ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Triangulation statistics for Dubrovnik dataset. Left: Out- lier ratio distribution of feature tracks. Right: Average number of samples required to triangulate N-view point. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Average relative runtimes using standard global BA and exhaustive, rec. triangulation (1), and grouped BA and RANSAC, rec. triangulation (2). Runtime for Initialization ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1. Reconstruction results for state-of-the-art SfM systems on large-scale unordered Internet photo collections. #Points #Elements Avg. Track Length #Samples Bundler 713,824
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Result of Rome with 21K registered out of 75K images.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Incremental Structure-from-Motion pipeline. Matching. Next, SfM discovers images that see the same scene part by leveraging the features Fi as an appearance description ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Next best view scores for Gaussian distributed points xj ∈[0, 1]×[0, 1] with mean µ and std. dev. σ. Score S w.r.t. uni- ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Next best view results for Quad: Shared number of reg- istered images and reconstruction error during incremental SfM. 0 0.2 0.4 0.6 0.8 ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Triangulation statistics for Dubrovnik dataset. Left: Out- lier ratio distribution of feature tracks. Right: Average number of samples required to triangulate N-view point. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Average relative runtimes using standard global BA and exhaustive, rec. triangulation (1), and grouped BA and RANSAC, rec. triangulation (2). Runtime for Initialization ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1. Reconstruction results for state-of-the-art SfM systems on large-scale unordered Internet photo collections. #Points #Elements Avg. Track Length #Samples Bundler 713,824
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | An experiment on the Dubrovnik dataset (Fig. | embodiment, simulator version and control stack | p. 7 (5. Experiments), p. 7 (5. Experiments) |
 | Task/environment | Triangulation statistics for Dubrovnik dataset. | reset, timeout, object/scene variation | p. 7 (5. Experiments), p. 8 (7.82 M) |
@@ -111,7 +111,7 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 | Primary metric/result | In addition, we achieve the best pose accuracy for the Quad dataset: DISCO 1.16m, Bundler 1.01m, VisualSFM 0.89m, and Ours 0.85m. | numeric claim only at cited anchor | p. 8 (7.82 M) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 7.82 M - extractive PDF cue:** The RANSAC-based approach yields just marginally inferior tracks but is much faster (10-40x).
+- **p. 8 / 7.82 M - extractive body cue:** The RANSAC-based approach yields just marginally inferior tracks but is much faster (10-40x).
 
 ## Generalization and Failure Cases
 
@@ -145,12 +145,12 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** The proposed components of the algorithm improve the state of the art in terms of completeness, robustness, accuracy, and efficiency.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** Robust and Efficient Triangulation.
-- **p. 8 / 7.82 M - extractive PDF cue:** The reconstruction quality is comparable for all choices of V > 0.3 and increasingly degrades for a smaller V .
+- **p. 8 / 6. Conclusion - extractive body cue:** The proposed components of the algorithm improve the state of the art in terms of completeness, robustness, accuracy, and efficiency.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
+- **p. 7 / 5. Experiments - extractive body cue:** Robust and Efficient Triangulation.
+- **p. 8 / 7.82 M - extractive body cue:** The reconstruction quality is comparable for all choices of V > 0.3 and increasingly degrades for a smaller V .
 
-- **PDF anchors reviewed:** datasets p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (7.82 M), p. 8 (7.82 M), metrics p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (7.82 M), p. 4 (Figure/Table caption), p. 8 (7.82 M), baselines p. 7 (5. Experiments), p. 8 (7.82 M), p. 8 (7.82 M), results p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table caption), p. 7 (5. Experiments), p. 7 (5. Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (7.82 M), p. 8 (7.82 M), metrics p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (7.82 M), p. 4 (Figure/Table caption), p. 8 (7.82 M), baselines p. 7 (5. Experiments), p. 8 (7.82 M), p. 8 (7.82 M), results p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table caption), p. 7 (5. Experiments), p. 7 (5. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

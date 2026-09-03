@@ -12,7 +12,6 @@
 
 - **p. 2 / 1. Introduction - extractive body cue:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; ...
 - **p. 1 / 1. Introduction - extractive body cue:** We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates equal contributions. mug? table? car?
 - **p. 2 / 1. Introduction - extractive body cue:** We show that our network can approximate any set function that is continuous.
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** Our input form of point clouds allows us to achieve this goal in a much simpler way compared with [9].
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** The mininetwork itself resembles the big network and is composed by basic modules of point independent feature extraction, max pooling and fully connected layers.
@@ -42,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Our PointNet is a unified architecture that directly takes point clouds as input and outputs either class labels for the entire input or per point segment/part labels for each point of the ...를 input points point features output scores max pool shared shared shared nx3 nx3 nx64 nx64 nx1024 1024 n x 1088 nx128 mlp (64,64) mlp (64,128,1024) input transform feature transform mlp (512,256,k) global ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 23. PointNet segmentation failure cases. In this figure, we summarize six types of common errors in our segmentation application. The prediction and the ground-truth segmentations are given in the first and ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such a net ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our proposed deep network outputs k scores for all the k candidate classes. (p. 2, 3. Problem Statement).
+- **Paper-specific mechanism:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. (p. 7, 5.1. Applications); the relevant task/metric cue is In Table 2, we report per-category and mean IoU(%) scores. (p. 6, 5.1. Applications). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** During training we augment the point cloud on-the-fly by randomly rotating the object along the up-axis and jitter the position of each points by a Gaussian noise with zero mean ... (p. 6, 5.1. Applications).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Even though we are working on a brand new data representation (point sets), we are able to achieve comparable or even better performance on benchmarks for several tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method..
-4. Report the body metric and its denominator/aggregation: In Table 2, we report per-category and mean IoU(%) scores..
-5. Re-run the body-reported ablation/failure condition: Figure 1. Applications of PointNet. We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering. It is a unified architecture that learns both ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our proposed deep network outputs k scores for all the k candidate classes. (p. 2, 3. Problem Statement); preserve the objective/update rule: We therefore add a regularization term to our softmax training loss. (p. 4, 4.2. PointNet Architecture).
+2. Use the paper-reported task/data/environment cue: Even though we are working on a brand new data representation (point sets), we are able to achieve comparable or even better performance on benchmarks for several tasks. (p. 5, 5.1. Applications).
+3. Compare against the reported or matched baseline: Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. (p. 7, 5.1. Applications).
+4. Report the body metric with its denominator and aggregation: In Table 2, we report per-category and mean IoU(%) scores. (p. 6, 5.1. Applications).
+5. Re-run the reported ablation or stress/failure condition: Comparison with Alternative Order-invariant Methods As mentioned in Sec 4.2, there are at least three options for consuming unordered set inputs. (p. 7, 5.2. Architecture Design Analysis); if none is reported, design one around: During training we augment the point cloud on-the-fly by randomly rotating the object along the up-axis and jitter the position of each points by a Gaussian noise with zero mean ... (p. 6, 5.1. Applications).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture); the primary result is directionally consistent at p. 7 (5.1. Applications), p. 5 (5.1. Applications), p. 6 (5.1. Applications); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 7 (5.1. Applications), p. 6 (Figure/Table caption), p. 12 (Figure/Table caption), and measure the boundary at p. 6 (5.1. Applications), p. 7 (5.1. Applications).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, follows, design mechanism이 Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. 대비 In Table 2, we report per-category and mean IoU(%) scores.을 개선하고, Figure 23. PointNet segmentation failure cases. In this figure, we summarize six types of common errors ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our proposed deep network outputs k scores for all the k candidate classes.), does the paper-specific mechanism (The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point ...) retain the reported evaluation outcome (In Table 2, we report per-category and mean IoU(%) scores.) when tested against the paper's strongest explicit boundary (During training we augment the point cloud on-the-fly by randomly rotating the object along the up-axis and jitter ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (In Table 2, we report per-category and mean IoU(%) scores.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. (p. 7, 5.1. Applications).
+- **Strongest explicit boundary:** During training we augment the point cloud on-the-fly by randomly rotating the object along the up-axis and jitter the position of each points by a Gaussian noise with zero mean ... (p. 6, 5.1. Applications).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

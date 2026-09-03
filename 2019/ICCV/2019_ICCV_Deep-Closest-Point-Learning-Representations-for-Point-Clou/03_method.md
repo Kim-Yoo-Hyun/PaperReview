@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1905.03304; PDF retrieval source: https://arxiv.org/pdf/1905.03304. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1905.03304; PDF retrieval source: https://arxiv.org/pdf/1905.03304. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,30 +10,30 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 
 ## Method Body Digest
 
-- **p. 5 / 4.5. Loss - extractive PDF cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** The third term denotes Tikhonov regularization of the DCP parameters θ, which serves to reduce the complexity of the network.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Given these two observations, most algorithms alternate between these two steps to try to obtain a better result.
-- **p. 2 / 1. Introduction - extractive PDF cue:** These algorithms are typically slower than ICP and still do not always provide acceptable output.
-- **p. 3 / 3. Problem Statement - extractive PDF cue:** We use X and Y to denote two point clouds, where X = {x1, . . . , xi, . . . , xN} ⊂R3 ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** Combined, the modules above map from a pair of point clouds X and Y to a rigid motion [RXY, tXY] that aligns them to each ...
+- **p. 5 / 4.5. Loss - extractive body cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
+- **p. 5 / 4.5. Loss - extractive body cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
+- **p. 5 / 4.5. Loss - extractive body cue:** The third term denotes Tikhonov regularization of the DCP parameters θ, which serves to reduce the complexity of the network.
+- **p. 2 / 1. Introduction - extractive body cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
+- **p. 1 / 1. Introduction - extractive body cue:** Given these two observations, most algorithms alternate between these two steps to try to obtain a better result.
+- **p. 2 / 1. Introduction - extractive body cue:** These algorithms are typically slower than ICP and still do not always provide acceptable output.
+- **p. 3 / 3. Problem Statement - extractive body cue:** We use X and Y to denote two point clouds, where X = {x1, . . . , xi, . . . , xN} ⊂R3 ...
+- **p. 5 / 4.5. Loss - extractive body cue:** Combined, the modules above map from a pair of point clouds X and Y to a rigid motion [RXY, tXY] that aligns them to each ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** However, only our method achieve satisfying alignment for objects with sharp features and large transformation. globally optimal alignment; similarly, computing matchings becomes easier given some ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
+- **p. 2 / 1. Introduction - extractive body cue:** Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple ...
+- **p. 1 / 1. Introduction - extractive body cue:** However, only our method achieve satisfying alignment for objects with sharp features and large transformation. globally optimal alignment; similarly, computing matchings becomes easier given some ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 4.5. Loss - extractive PDF cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
+- **p. 5 / 4.5. Loss - extractive body cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
+- **p. 5 / 4.5. Loss - extractive body cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must ... | p. 5 (4.5. Loss), p. 5 (4.5. Loss) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 ... | p. 5 (4.5. Loss) |
@@ -43,8 +43,8 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 
 ## Objective / Update Rule
 
-- **p. 5 / 4.5. Loss - extractive PDF cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** The third term denotes Tikhonov regularization of the DCP parameters θ, which serves to reduce the complexity of the network.
+- **p. 5 / 4.5. Loss - extractive body cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
+- **p. 5 / 4.5. Loss - extractive body cue:** The third term denotes Tikhonov regularization of the DCP parameters θ, which serves to reduce the complexity of the network.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.5. Loss).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -60,13 +60,13 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Given these two observations, most algorithms alternate between these two steps to try to obtain a better result.
-- **p. 2 / 1. Introduction - extractive PDF cue:** These algorithms are typically slower than ICP and still do not always provide acceptable output.
-- **p. 3 / 3. Problem Statement - extractive PDF cue:** We use X and Y to denote two point clouds, where X = {x1, . . . , xi, . . . , xN} ⊂R3 ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** Combined, the modules above map from a pair of point clouds X and Y to a rigid motion [RXY, tXY] that aligns them to each ...
-- **p. 4 / 3. Problem Statement - extractive PDF cue:** Our goal is to use learned embeddings to recover a better matching m(·) and use that to compute a rigid transformation, which we will detail ...
-- **p. 5 / 4.5. Loss - extractive PDF cue:** We employ a fairly straightforward strategy for training, measuring deviation of [RXY, tXY] from ground truth for synthetically-generated pairs of point clouds.
+- **p. 2 / 1. Introduction - extractive body cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
+- **p. 1 / 1. Introduction - extractive body cue:** Given these two observations, most algorithms alternate between these two steps to try to obtain a better result.
+- **p. 2 / 1. Introduction - extractive body cue:** These algorithms are typically slower than ICP and still do not always provide acceptable output.
+- **p. 3 / 3. Problem Statement - extractive body cue:** We use X and Y to denote two point clouds, where X = {x1, . . . , xi, . . . , xN} ⊂R3 ...
+- **p. 5 / 4.5. Loss - extractive body cue:** Combined, the modules above map from a pair of point clouds X and Y to a rigid motion [RXY, tXY] that aligns them to each ...
+- **p. 4 / 3. Problem Statement - extractive body cue:** Our goal is to use learned embeddings to recover a better matching m(·) and use that to compute a rigid transformation, which we will detail ...
+- **p. 5 / 4.5. Loss - extractive body cue:** We employ a fairly straightforward strategy for training, measuring deviation of [RXY, tXY] from ground truth for synthetically-generated pairs of point clouds.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -81,10 +81,10 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 
 ## Training vs Inference
 
-- **p. 5 / 4.5. Loss - extractive PDF cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
-- **p. 7 / 5.5. Efficiency - extractive PDF cue:** We profile the inference time of different methods on a desktop computer with an Intel I7-7700 CPU, an Nvidia GTX 1070 GPU, and 32G memory.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We divide the learning rate by 10 at epochs 75, 150, and 200, training for a total of 250 epochs.
-- **p. 7 / 5.4. DCP Followed By ICP - extractive PDF cue:** Inference time (in seconds) Metrics PN+DCP-v1, DGCNN+DCP-v1 PN+DCP-v2 DGCNN+DCP-v2 MSE(R) 17.008427 6.480572 49.863022 1.307329 RMSE(R) 4.124127 2.545697 7.061375 1.143385 MAE(R) 2.800184 1.505548 4.485052 0.770573 MSE(t) ...
+- **p. 5 / 4.5. Loss - extractive body cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
+- **p. 7 / 5.5. Efficiency - extractive body cue:** We profile the inference time of different methods on a desktop computer with an Intel I7-7700 CPU, an Nvidia GTX 1070 GPU, and 32G memory.
+- **p. 6 / 5. Experiments - extractive body cue:** We divide the learning rate by 10 at epochs 75, 150, and 200, training for a total of 250 epochs.
+- **p. 7 / 5.4. DCP Followed By ICP - extractive body cue:** Inference time (in seconds) Metrics PN+DCP-v1, DGCNN+DCP-v1 PN+DCP-v2 DGCNN+DCP-v2 MSE(R) 17.008427 6.480572 49.863022 1.307329 RMSE(R) 4.124127 2.545697 7.061375 1.143385 MAE(R) 2.800184 1.505548 4.485052 0.770573 MSE(t) ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -104,13 +104,13 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation study: PointNet or DGCNN? use ICP as a local algorithm by initializing ICP with a rigid transformation output from our DCP model. ...
-- **p. 5 / 5. Experiments - extractive PDF cue:** We denote our model without attention (§4.2) as DCP-v1 and the full model with 5
-- **p. 6 / 5. Experiments - extractive PDF cue:** We use LayerNorm [3] without Dropout [39].
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 7. Ablation study: Embedding dimension
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Results of DCP-v2. Top: inputs. Bottom: outputs of DCP-v2. lems as a drop-in replacement for ICP with improved behav- ior. Beyond its direct ...
-- **p. 6 / 5.4. DCP Followed By ICP - extractive PDF cue:** In large part, this failure is due to the lack of a good initial guess.
-- **p. 6 / 5.4. DCP Followed By ICP - extractive PDF cue:** Since our experiments involve point clouds whose initial poses are far from aligned, ICP fails nearly every experiment we have presented so far.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Ablation study: PointNet or DGCNN? use ICP as a local algorithm by initializing ICP with a rigid transformation output from our DCP model. ...
+- **p. 5 / 5. Experiments - extractive body cue:** We denote our model without attention (§4.2) as DCP-v1 and the full model with 5
+- **p. 6 / 5. Experiments - extractive body cue:** We use LayerNorm [3] without Dropout [39].
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 7. Ablation study: Embedding dimension
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Results of DCP-v2. Top: inputs. Bottom: outputs of DCP-v2. lems as a drop-in replacement for ICP with improved behav- ior. Beyond its direct ...
+- **p. 6 / 5.4. DCP Followed By ICP - extractive body cue:** In large part, this failure is due to the lack of a good initial guess.
+- **p. 6 / 5.4. DCP Followed By ICP - extractive body cue:** Since our experiments involve point clouds whose initial poses are far from aligned, ICP fails nearly every experiment we have presented so far.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -124,7 +124,7 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (4.5. Loss), p. 5 (4.5. Loss), objective p. 5 (4.5. Loss), p. 5 (4.5. Loss), temporal p. 7 (5.5. Efficiency), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (2. Related Work), p. 3 (2. Related Work).
+- **Evidence anchors reviewed:** method p. 5 (4.5. Loss), p. 5 (4.5. Loss), objective p. 5 (4.5. Loss), p. 5 (4.5. Loss), temporal p. 7 (5.5. Efficiency), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (2. Related Work), p. 3 (2. Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

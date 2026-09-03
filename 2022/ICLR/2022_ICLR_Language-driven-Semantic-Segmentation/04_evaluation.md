@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.03546; PDF retrieval source: https://arxiv.org/pdf/2201.03546. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.03546; PDF retrieval source: https://arxiv.org/pdf/2201.03546. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** However, due to a lack of a standardized protocol and sufficient datasets and baselines for the zero-shot setting, we compare LSeg to zero- and few-shot ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** 4.3 FSS-1000 FSS-1000 (Li et al., 2020c) is a recent benchmark dataset for few-shot segmentation.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** It contains a significant number of unseen or unannotated objects in comparison to previous datasets such as PASCAL and COCO.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Input Image LSeg Ouput others, snowman Input Image LSeg Ouput others, magpie_bird Input Image LSeg Ouput others, wooden_spoon others, pizza others, potato_chips others, minicooper Figure ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** To test this, we train LSeg on ADE20K using the standard protocol on this dataset, where the training and test labels are fixed (that is, ...
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** For datasets that provide a background or unknown class, we set the corresponding background label to "other".
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We conduct experiments on the ADE20K dataset (Zhou et al., 2019), which is a standard semantic segmentation dataset that includes a diversity of images and ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Note that we train our model on the original label sets that are provided by these datasets without any preprocessing or relabeling.
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** However, due to a lack of a standardized protocol and sufficient datasets and baselines for the zero-shot setting, we compare LSeg to zero- and few-shot ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** 4.3 FSS-1000 FSS-1000 (Li et al., 2020c) is a recent benchmark dataset for few-shot segmentation.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** It contains a significant number of unseen or unannotated objects in comparison to previous datasets such as PASCAL and COCO.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Input Image LSeg Ouput others, snowman Input Image LSeg Ouput others, magpie_bird Input Image LSeg Ouput others, wooden_spoon others, pizza others, potato_chips others, minicooper Figure ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** To test this, we train LSeg on ADE20K using the standard protocol on this dataset, where the training and test labels are fixed (that is, ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** For datasets that provide a background or unknown class, we set the corresponding background label to "other".
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We conduct experiments on the ADE20K dataset (Zhou et al., 2019), which is a standard semantic segmentation dataset that includes a diversity of images and ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Note that we train our model on the original label sets that are provided by these datasets without any preprocessing or relabeling.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | We notice that a consistent improvement can be achieved by adding a few regularization blocks. | p. 7 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | The strongest improvement is achieved by stacking two BottleneckBlocks, an addition to the architecture that incurs little overhead. | p. 7 (4 EXPERIMENTS) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** However, due to a lack of a standardized protocol and sufficient datasets and baselines for the zero-shot setting, we compare LSeg to zero- and few-shot ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** 4.3 FSS-1000 FSS-1000 (Li et al., 2020c) is a recent benchmark dataset for few-shot segmentation.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** It contains a significant number of unseen or unannotated objects in comparison to previous datasets such as PASCAL and COCO.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Input Image LSeg Ouput others, snowman Input Image LSeg Ouput others, magpie_bird Input Image LSeg Ouput others, wooden_spoon others, pizza others, potato_chips others, minicooper Figure ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** To test this, we train LSeg on ADE20K using the standard protocol on this dataset, where the training and test labels are fixed (that is, ...
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** For datasets that provide a background or unknown class, we set the corresponding background label to "other".
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We conduct experiments on the ADE20K dataset (Zhou et al., 2019), which is a standard semantic segmentation dataset that includes a diversity of images and ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Note that we train our model on the original label sets that are provided by these datasets without any preprocessing or relabeling.
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** However, due to a lack of a standardized protocol and sufficient datasets and baselines for the zero-shot setting, we compare LSeg to zero- and few-shot ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** 4.3 FSS-1000 FSS-1000 (Li et al., 2020c) is a recent benchmark dataset for few-shot segmentation.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** It contains a significant number of unseen or unannotated objects in comparison to previous datasets such as PASCAL and COCO.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Input Image LSeg Ouput others, snowman Input Image LSeg Ouput others, magpie_bird Input Image LSeg Ouput others, wooden_spoon others, pizza others, potato_chips others, minicooper Figure ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** To test this, we train LSeg on ADE20K using the standard protocol on this dataset, where the training and test labels are fixed (that is, ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** For datasets that provide a background or unknown class, we set the corresponding background label to "other".
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We conduct experiments on the ADE20K dataset (Zhou et al., 2019), which is a standard semantic segmentation dataset that includes a diversity of images and ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Note that we train our model on the original label sets that are provided by these datasets without any preprocessing or relabeling.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Example results. LSeg is able to handle unseen labels as well as label sets of arbitrary length and order. This enables flexible synthesis ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview. A text encoder embeds labels into a vector space. An image encoder extracts per-pixel embeddings from the image and correlates the feature ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Illustration of BottleneckBlock and DepthwiseBlock.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of mIoU and FB-IoU (higher is better) on PASCAL-5i.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: Comparison of mIoU and FB-IoU (higher is better) on COCO-20i. to the competitive zero-shot baseline ZS3Net (Bucher et al., 2019), which adopts the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Comparison of mIoU on FSS-1000. Table 3 compares our approach to state-of-the- art few-shot models. Notably, under the same ResNet101, LSeg could achieve ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: LSeg zero-shot semantic segmentation results on unseen categories of FSS-1000 dataset. 5 EXPLORATION AND DISCUSSION 5.1
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation study on the depth of BottleneckBlock and DepthwiseBlock before the last layer. For both Pixel Accuracy (pixAcc) and mIoU, higher is better. ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Example results. LSeg is able to handle unseen labels as well as label sets of arbitrary length and order. This enables flexible synthesis ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview. A text encoder embeds labels into a vector space. An image encoder extracts per-pixel embeddings from the image and correlates the feature ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Illustration of BottleneckBlock and DepthwiseBlock.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Comparison of mIoU and FB-IoU (higher is better) on PASCAL-5i.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Comparison of mIoU and FB-IoU (higher is better) on COCO-20i. to the competitive zero-shot baseline ZS3Net (Bucher et al., 2019), which adopts the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Comparison of mIoU on FSS-1000. Table 3 compares our approach to state-of-the- art few-shot models. Notably, under the same ResNet101, LSeg could achieve ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: LSeg zero-shot semantic segmentation results on unseen categories of FSS-1000 dataset. 5 EXPLORATION AND DISCUSSION 5.1
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4: Ablation study on the depth of BottleneckBlock and DepthwiseBlock before the last layer. For both Pixel Accuracy (pixAcc) and mIoU, higher is better. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | However, due to a lack of a standardized protocol and sufficient datasets and baselines for the zero-shot setting, we compare LSeg to zero- and ... | embodiment, simulator version and control stack | p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
 | Task/environment | 4.3 FSS-1000 FSS-1000 (Li et al., 2020c) is a recent benchmark dataset for few-shot segmentation. | reset, timeout, object/scene variation | p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
-| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 4 (C Input Label Set), p. 1 (ABSTRACT) |
+| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 4 (C Input Label Set) |
+| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 1 (ABSTRACT), p. 4 (C Input Label Set) |
 
 ## Metrics and Success Definition
 
@@ -78,9 +78,9 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Note that few-shot methods have access to more information and are thus expected to yield higher accuracy. | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
 | The mIoU calculates the average IoU over all classes, FB-IoU computes mean value of foreground and background IoUs in fold i and ignores the ... | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
 | Model Backbone Method 200 201 202 203 mean FB-IoU PPNet ResNet50 1-shot 28.1 30.8 29.5 27.7 29.0 - PMM 1-shot 29.3 34.8 27.1 27.3 ... | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2022 Model Backbone Method 50 51 52 53 mean FB-IoU OSLSM 1-shot 33.6 55.2 40.9 33.5 40.8 ... | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
 | For both Pixel Accuracy (pixAcc) and mIoU, higher is better. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | We find that LSeg performs competitively when using the RN50 × 16 text encoder and incurs only a negligible loss in performance when compared ... | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
+| Table 2: Comparison of mIoU and FB-IoU (higher is better) on COCO-20i. to the competitive zero-shot baseline ZS3Net (Bucher et al., 2019), which adopts ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | We set the base learning rate to 0.004 and train the model for 240 iterations. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | Language assistance helps boost the recognition performance on unannotated or unseen classes. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Primary metric/result | The strongest improvement is achieved by stacking two BottleneckBlocks, an addition to the architecture that incurs little overhead. | numeric claim only at cited anchor | p. 7 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** PASCAL5i is composed of 20 object classes with corresponding mask annotations and has been evenly divided into 4 folds of 5 classes each.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** It consists of 1000 object classes with pixelwise annotated segmentation masks.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** We use a base learning rate of 0.05 and train the model for 60 epochs.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We follow the same training protocol as on ADE20K and train LSeg with a ViT-L/16 backbone and a ViT-B/32 text encoder for 200 epochs with ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** PASCAL5i is composed of 20 object classes with corresponding mask annotations and has been evenly divided into 4 folds of 5 classes each.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** It consists of 1000 object classes with pixelwise annotated segmentation masks.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** We use a base learning rate of 0.05 and train the model for 60 epochs.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We follow the same training protocol as on ADE20K and train LSeg with a ViT-L/16 backbone and a ViT-B/32 text encoder for 200 epochs with ...
 
 ## Generalization and Failure Cases
 
@@ -161,11 +161,11 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We hope that these failure cases can inform future work, which could involve augmenting training with negative samples or building fine-grained language-driven semantic segmentation models ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** While LSeg in general achieves very promising results, we also observe some failure cases, as illustrated in Figure 6.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Example results. LSeg is able to handle unseen labels as well as label sets of arbitrary length and order. This enables flexible synthesis ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We hope that these failure cases can inform future work, which could involve augmenting training with negative samples or building fine-grained language-driven semantic segmentation models ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** While LSeg in general achieves very promising results, we also observe some failure cases, as illustrated in Figure 6.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Example results. LSeg is able to handle unseen labels as well as label sets of arbitrary length and order. This enables flexible synthesis ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), metrics p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), metrics p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (Figure/Table caption), baselines p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

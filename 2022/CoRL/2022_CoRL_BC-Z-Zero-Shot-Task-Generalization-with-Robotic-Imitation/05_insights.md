@@ -10,7 +10,7 @@
 
 ### What was actually new
 
-- **p. 1 / 1 Introduction - extractive body cue:** These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution ...
+- **p. 1 / 1 Introduction - extractive body cue:** These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks.
 - **p. 2 / 1 Introduction - extractive body cue:** Our main contribution is an empirical study of a large-scale interactive imitation learning system that solves a breadth of tasks, including zero-shot and few-shot generalization ...
 - **p. 8 / 7 Discussion - extractive body cue:** We presented a multi-task imitation learning system that combines flexible task embeddings with large-scale training on a 100-task demonstration dataset, enabling it to generalize to ...
 - **p. 2 / 1 Introduction - extractive body cue:** We show this system produces a policy that is capable of generalizing zero-shot to new unseen tasks.
@@ -34,7 +34,7 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution †Work done while author was at Google ... | p. 1 (1 Introduction), p. 2 (1 Introduction) |
+| Mechanism/contribution | These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks.
 | Reported outcome | Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. The first 4 tasks only use objects from the 79-task family. The remaining tasks ... | p. 7 (Figure/Table caption), p. 8 (Figure/Table caption) |
 | Failure/limitation | Figure 13: An example of adapting a sim image (left) to look real (right) using RetinaGAN [51]. environment (including the door). Further, any collision of the robot base and arm (not including ... | p. 20 (Figure/Table caption), p. 8 (7 Discussion) |
 
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Second, our system flexibly conditions the policy on different forms of task specification, including a language instruction or a video of a person performing the task.를 We collect a large-scale dataset (25,877 episodes) of 100 diverse manipulation tasks, and train a 7-DoF multi-task policy that conditions on task language strings or human video.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 13: An example of adapting a sim image (left) to look real (right) using RetinaGAN [51]. environment (including the door). Further, any collision of the robot base and arm (not including ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal Contribution †Work done while author was at Google ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Second, our system flexibly conditions the policy on different forms of task specification, including a language instruction or a video of a person performing the task. (p. 1, 1 Introduction).
+- **Paper-specific mechanism:** We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each ... (p. 17, Figure/Table caption); the relevant task/metric cue is Another limitation is the lower performance of the video-conditioned policy, which encourages future research on improving the generalization of video-based task representations and enhancing the performance of imitation learning algori ... (p. 8, 7 Discussion). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Further, any collision of the robot base and arm (not including the gripper) with the environment counted as the task failure by the operator. (p. 20, C Featurization Details).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Our evaluation covered 29 unseen vision-based manipulation tasks with a variety of objects and scenes..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each batch. The ....
-4. Report the body metric and its denominator/aggregation: Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. The first 4 tasks only use objects from the 79-task family. The remaining tasks ....
-5. Re-run the body-reported ablation/failure condition: Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each batch. The ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Second, our system flexibly conditions the policy on different forms of task specification, including a language instruction or a video of a person performing the task. (p. 1, 1 Introduction); preserve the objective/update rule: First, our system incorporates shared autonomy into teleoperation to allow us to collect both raw demonstration data and human interventions to correct the robot's current policy. (p. 1, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: However, even for tasks that are less successful, the robot often exhibits behavior suggesting that it understands at least part of the task, reaching for the right object or performing ... (p. 8, 7 Discussion).
+3. Compare against the reported or matched baseline: Table 4: Ablation Studies. Left: Multi-task vs. single task models on the ‘place the bottle in the ceramic bowl' task. Training across tasks and with adaptive state-diffs is important for ... (p. 8, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Another limitation is the lower performance of the video-conditioned policy, which encourages future research on improving the generalization of video-based task representations and enhancing the performance of imitation learning algori ... (p. 8, 7 Discussion).
+5. Re-run the reported ablation or stress/failure condition: Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each ... (p. 17, Figure/Table caption); if none is reported, design one around: Further, any collision of the robot base and arm (not including the gripper) with the environment counted as the task failure by the operator. (p. 20, C Featurization Details).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 Introduction); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 17 (Figure/Table caption), p. 20 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 20 (C Featurization Details), p. 8 (7 Discussion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 properties, have, been mechanism이 Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the ... 대비 Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. ...을 개선하고, Figure 13: An example of adapting a sim image (left) to look real (right) using RetinaGAN ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Second, our system flexibly conditions the policy on different forms of task specification, including a language instruction or a video of a ...), does the paper-specific mechanism (We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks.) retain the reported evaluation outcome (Another limitation is the lower performance of the video-conditioned policy, which encourages future research on improving the generalization ...) when tested against the paper's strongest explicit boundary (Further, any collision of the robot base and arm (not including the gripper) with the environment counted as ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Another limitation is the lower performance of the video-conditioned policy, which encourages future research on improving the generalization ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each ... (p. 17, Figure/Table caption).
+- **Strongest explicit boundary:** Further, any collision of the robot base and arm (not including the gripper) with the environment counted as the task failure by the operator. (p. 20, C Featurization Details).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

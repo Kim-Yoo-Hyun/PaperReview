@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1611.08974; PDF retrieval source: https://arxiv.org/pdf/1611.08974. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1611.08974; PDF retrieval source: https://arxiv.org/pdf/1611.08974. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5. Evaluation - extractive PDF cue:** The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set.
-- **p. 6 / 5. Evaluation - extractive PDF cue:** For the semantic scene completion task, we evaluate the IoU of each object classes on both the observed and occluded voxels.
-- **p. 7 / 5.1. Experimental results - extractive PDF cue:** We examine to what extent the supervision of object semantics benefits the scene completion task.
-- **p. 7 / 5.1. Experimental results - extractive PDF cue:** We evaluate on the rendered NYU benchmark with the same test images used by Firman at al.
-- **p. 8 / 5.1. Experimental results - extractive PDF cue:** The following rows show the evaluation on semantic scene completion task.
-- **p. 8 / 5.1. Experimental results - extractive PDF cue:** We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU.
-- **p. 6 / 5. Evaluation - extractive PDF cue:** As our evaluation metric, we use the voxel-level intersection over union (IoU) of predicted voxel method training prec. recall IoU Zheng et al.
-- **p. 8 / 5.1. Experimental results - extractive PDF cue:** We observe that removing the view dependency by using the accurate TSDF gives a 2.4% improvement in IoU.
+- **p. 6 / 5. Evaluation - extractive body cue:** The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set.
+- **p. 6 / 5. Evaluation - extractive body cue:** For the semantic scene completion task, we evaluate the IoU of each object classes on both the observed and occluded voxels.
+- **p. 7 / 5.1. Experimental results - extractive body cue:** We examine to what extent the supervision of object semantics benefits the scene completion task.
+- **p. 7 / 5.1. Experimental results - extractive body cue:** We evaluate on the rendered NYU benchmark with the same test images used by Firman at al.
+- **p. 8 / 5.1. Experimental results - extractive body cue:** The following rows show the evaluation on semantic scene completion task.
+- **p. 8 / 5.1. Experimental results - extractive body cue:** We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU.
+- **p. 6 / 5. Evaluation - extractive body cue:** As our evaluation metric, we use the voxel-level intersection over union (IoU) of predicted voxel method training prec. recall IoU Zheng et al.
+- **p. 8 / 5.1. Experimental results - extractive body cue:** We observe that removing the view dependency by using the accurate TSDF gives a 2.4% improvement in IoU.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.1. Experimental results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Increasing the receptive field gives the network a opportunity to capture richer contextual information and significantly improve the network performance from 38.0% to 44.3%. | p. 8 (5.1. Experimental results) |
 | 5.1. Experimental results | EMPIRICAL / SOURCE-REPORTED EVALUATION | We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU. | p. 8 (5.1. Experimental results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5. Evaluation - extractive PDF cue:** The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set.
-- **p. 6 / 5. Evaluation - extractive PDF cue:** For the semantic scene completion task, we evaluate the IoU of each object classes on both the observed and occluded voxels.
-- **p. 7 / 5.1. Experimental results - extractive PDF cue:** We examine to what extent the supervision of object semantics benefits the scene completion task.
-- **p. 7 / 5.1. Experimental results - extractive PDF cue:** We evaluate on the rendered NYU benchmark with the same test images used by Firman at al.
-- **p. 8 / 5.1. Experimental results - extractive PDF cue:** The following rows show the evaluation on semantic scene completion task.
-- **p. 8 / 5.1. Experimental results - extractive PDF cue:** We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU.
+- **p. 6 / 5. Evaluation - extractive body cue:** The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set.
+- **p. 6 / 5. Evaluation - extractive body cue:** For the semantic scene completion task, we evaluate the IoU of each object classes on both the observed and occluded voxels.
+- **p. 7 / 5.1. Experimental results - extractive body cue:** We examine to what extent the supervision of object semantics benefits the scene completion task.
+- **p. 7 / 5.1. Experimental results - extractive body cue:** We evaluate on the rendered NYU benchmark with the same test images used by Firman at al.
+- **p. 8 / 5.1. Experimental results - extractive body cue:** The following rows show the evaluation on semantic scene completion task.
+- **p. 8 / 5.1. Experimental results - extractive body cue:** We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Semantic scene completion. (a) Input single-view depth map (b) Visible surface from the depth map; color is for visualiza- tion only. (c) Semantic ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Given a single-view depth observation of a 3D scene the goal of our SSCNet is to predict both occupancy and object cate- gory ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. SSCNet: Semantic scene completion network. Taking a single depth map as input, the network predicts occupancy and object labels for each voxel in ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate TSDF ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Comparison of receptive fields and voxel sizes between SSCNet and prior work. (a) Object centric networks such as [34] and [20] scale objects ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Synthesizing Training Data. We collected a large-scale synthetic 3D scene dataset to train our network. For each of the 3D scenes, we select ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Semantic scene completion results on the NYU test set with kinect depth map. the binvox [21] voxelizer which accounts for both surface and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Scene completion on the rendered NYU test set as [3] labels compared to ground truth labels. For the semantic scene completion task, we ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Semantic scene completion. (a) Input single-view depth map (b) Visible surface from the depth map; color is for visualiza- tion only. (c) Semantic ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Given a single-view depth observation of a 3D scene the goal of our SSCNet is to predict both occupancy and object cate- gory ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. SSCNet: Semantic scene completion network. Taking a single depth map as input, the network predicts occupancy and object labels for each voxel in ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate TSDF ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Comparison of receptive fields and voxel sizes between SSCNet and prior work. (a) Object centric networks such as [34] and [20] scale objects ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Synthesizing Training Data. We collected a large-scale synthetic 3D scene dataset to train our network. For each of the 3D scenes, we select ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Semantic scene completion results on the NYU test set with kinect depth map. the binvox [21] voxelizer which accounts for both surface and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Scene completion on the rendered NYU test set as [3] labels compared to ground truth labels. For the semantic scene completion task, we ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set. | embodiment, simulator version and control stack | p. 6 (5. Evaluation), p. 6 (5. Evaluation) |
 | Task/environment | For the semantic scene completion task, we evaluate the IoU of each object classes on both the observed and occluded voxels. | reset, timeout, object/scene variation | p. 6 (5. Evaluation), p. 7 (5.1. Experimental results) |
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 | Primary metric/result | We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU. | numeric claim only at cited anchor | p. 8 (5.1. Experimental results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5. Evaluation - extractive PDF cue:** The annotations consist of 33 object meshes in 7 categories, other categories approximated using 3D boxes or planes.
-- **p. 6 / 5. Evaluation - extractive PDF cue:** The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set.
-- **p. 6 / 5.1. Experimental results - extractive PDF cue:** Moreover, since our method does not require the model fitting step it is much faster at 7s compared to 127s per image [4].
-- **p. 5 / 3.2. Network architecture - extractive PDF cue:** Pre-training SSCNet on the SUNCG training set takes around a week on a Tesla K40 GPU, and fine-tuning on the NYU dataset takes 30 hours.
-- **p. 5 / 4. Synthesizing training data - extractive PDF cue:** In the end, we have 49, 884 valid floors, with contain 404, 058 rooms and 5, 697, 217 object instances from 2644 unique object meshes ...
-- **p. 5 / 4.3. Volumetric ground truth generation - extractive PDF cue:** Specifically, we first voxelize each object to a 128×128×128 voxel grid.
+- **p. 6 / 5. Evaluation - extractive body cue:** The annotations consist of 33 object meshes in 7 categories, other categories approximated using 3D boxes or planes.
+- **p. 6 / 5. Evaluation - extractive body cue:** The SUNCG test set consists of 500 depth images rendered from 184 scenes that are not in the training set.
+- **p. 6 / 5.1. Experimental results - extractive body cue:** Moreover, since our method does not require the model fitting step it is much faster at 7s compared to 127s per image [4].
+- **p. 5 / 3.2. Network architecture - extractive body cue:** Pre-training SSCNet on the SUNCG training set takes around a week on a Tesla K40 GPU, and fine-tuning on the NYU dataset takes 30 hours.
+- **p. 5 / 4. Synthesizing training data - extractive body cue:** In the end, we have 49, 884 valid floors, with contain 404, 058 rooms and 5, 697, 217 object instances from 2644 unique object meshes ...
+- **p. 5 / 4.3. Volumetric ground truth generation - extractive body cue:** Specifically, we first voxelize each object to a 128×128×128 voxel grid.
 
 ## Generalization and Failure Cases
 
@@ -160,13 +160,13 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.1. Experimental results - extractive PDF cue:** While Firman et al. produces good results for many cases, their approach fails when the scene becomes complex.
-- **p. 7 / 5.1. Experimental results - extractive PDF cue:** For instance, their algorithm fails to complete half of the bed in the first row of Figure 7, and also fails to complete the chairs ...
-- **p. 6 / 5.1. Experimental results - extractive PDF cue:** In contrast, our algorithm is based on only depth and does not use additional mesh model at test time.
-- **p. 6 / 5.1. Experimental results - extractive PDF cue:** Moreover, since our method does not require the model fitting step it is much faster at 7s compared to 127s per image [4].
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate TSDF ...
+- **p. 7 / 5.1. Experimental results - extractive body cue:** While Firman et al. produces good results for many cases, their approach fails when the scene becomes complex.
+- **p. 7 / 5.1. Experimental results - extractive body cue:** For instance, their algorithm fails to complete half of the bed in the first row of Figure 7, and also fails to complete the chairs ...
+- **p. 6 / 5.1. Experimental results - extractive body cue:** In contrast, our algorithm is based on only depth and does not use additional mesh model at test time.
+- **p. 6 / 5.1. Experimental results - extractive body cue:** Moreover, since our method does not require the model fitting step it is much faster at 7s compared to 127s per image [4].
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate TSDF ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Evaluation), p. 6 (5. Evaluation), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 8 (5.1. Experimental results), metrics p. 8 (5.1. Experimental results), p. 6 (5. Evaluation), p. 6 (5. Evaluation), p. 8 (5.1. Experimental results), p. 13 (Figure/Table caption), p. 7 (5.1. Experimental results), baselines p. 4 (Figure/Table caption), p. 6 (5. Evaluation), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), results p. 8 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 12 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Evaluation), p. 6 (5. Evaluation), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 8 (5.1. Experimental results), metrics p. 8 (5.1. Experimental results), p. 6 (5. Evaluation), p. 6 (5. Evaluation), p. 8 (5.1. Experimental results), p. 13 (Figure/Table caption), p. 7 (5.1. Experimental results), baselines p. 4 (Figure/Table caption), p. 6 (5. Evaluation), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), results p. 8 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 12 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

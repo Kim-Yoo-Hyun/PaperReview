@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, most current VLA approaches primarily process 2D visual inputs, requiring massive datasets to bridge the gap between perception and action. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | framework that equips robots with active perception capabilities, enabling adaptive viewpoint selection and zoomin mechanisms for precise, fine-grained manipulation. • A Novel ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | framework that equips robots with active perception capabilities, enabling adaptive viewpoint selection and zoomin mechanisms for precise, fine-grained manipulation. • A Novel ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | framework, equips, robots, active, perception, capabilities, enabling, adaptive, viewpoint, selection | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | However, most, current, VLA, approaches, primarily, process, visual | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: framework, equips, robots, active, perception, capabilities, enabling, adaptive, viewpoint, selection | p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction) |
 | Decision / output variable | action, pose, option or chunk a; body terms: contributions, summarized, Active, Perception, Vision-Language-Action, Models, ActiveVLA, novel | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | instruction-conditioned task success | p. 8 (4.2. Ablation Study), p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3.3. 3D Action Prediction)): The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3.3. 3D Action Prediction)): The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142
 
 - **p. 2 / 1. Introduction - extractive body cue:** To address this limitation, we propose ActiveVLA, a novel vision-language-action framework that explicitly integrates active perception into robotic manipulation.
 - **p. 3 / 1. Introduction - extractive body cue:** framework that equips robots with active perception capabilities, enabling adaptive viewpoint selection and zoomin mechanisms for precise, fine-grained manipulation. • A Novel ActiveVLA Framework: ActiveVLA ...
@@ -67,12 +67,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. 3D Action Prediction). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. 3D Action Prediction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), interface p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. 3D Action Prediction), objective p. 5 (3.3. 3D Action Prediction), p. 5 (3.3. 3D Action Prediction).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), interface p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. 3D Action Prediction), objective p. 5 (3.3. 3D Action Prediction), p. 5 (3.3. 3D Action Prediction).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, most current VLA approaches primarily process 2D visual inputs, requiring massive datasets to bridge the gap between perception and action. (p. 2, 1. Introduction).
+- **Formulation-changing contribution:** The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142 (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains robust even under occlusions (e.g., Place Cups, 65.6%). (p. 6, 4.1. Experimental Results).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

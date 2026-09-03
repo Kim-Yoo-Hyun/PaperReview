@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 
 - **p. 2 / 1. INrRopucTION - extractive body cue:** ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques ...
 - **p. 2 / 7 S65 69K- Graplt - extractive body cue:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks.
-- **p. 1 / Front matter - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate ... | p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping ... | p. 2 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge) |
@@ -83,9 +83,9 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Grasping is essential in most manipulation tasks, we firstly evalute the proposed method's effectiveness in grasp synthesis using the DexGraspNet [45] benchmark, ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Grasping is essential in most manipulation tasks, we firstly evalute the proposed method's effectiveness in grasp synthesis using the DexGraspNet [45] benchmark, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | This model takes the object point cloud, current hand joint values, and poses as input to predict chunked actions for the next ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | This model takes the object point cloud, current hand joint values, and poses as input to predict chunked actions for the next ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 4 (0 4 © _ sminge), p. 5 (0 4 © _ sminge), objective p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 3 (7 S65 69K- Graplt), temporal p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 4 (0 4 © _ sminge).
+- **Evidence anchors reviewed:** method p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 4 (0 4 © _ sminge), p. 5 (0 4 © _ sminge), objective p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 3 (7 S65 69K- Graplt), temporal p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 4 (0 4 © _ sminge).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** + We propose a simple yet effective baseline method that incorporates enhanced loss functions. while supporting conditional generation, making it particularly well-suited for our iterative pipeline and policy deployment. (p. 2, 7 S65 69K- Graplt).
+- **Objective/update evidence:** Unlike previous approaches that rely solely ‘on human annotation or optimization, our method combines ‘optimization and neural networks, achieving a superior balance between cost, efficiency, and data quality (p. 2, 1. INrRopucTION).
+- **Temporal/runtime evidence:** Grasping is essential in most manipulation tasks, we firstly evalute the proposed method's effectiveness in grasp synthesis using the DexGraspNet [45] benchmark, We train DexSimple solely with the benchmark's provided ... (p. 6, A. Grasping Synthesis Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

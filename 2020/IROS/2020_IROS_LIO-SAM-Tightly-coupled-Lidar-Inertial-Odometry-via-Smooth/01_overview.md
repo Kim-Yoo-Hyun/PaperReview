@@ -1,7 +1,7 @@
 # LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2007.00258.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2007.00258.
 > PDF retrieval source: https://arxiv.org/pdf/2007.00258. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2007.00258
 - Code/Project: https://github.com/TixiaoShan/LIO-SAM
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 

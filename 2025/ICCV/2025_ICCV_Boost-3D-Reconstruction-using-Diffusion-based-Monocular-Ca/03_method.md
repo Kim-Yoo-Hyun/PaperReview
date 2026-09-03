@@ -2,78 +2,71 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 5 (3.4. Downstream 3D vision tasks), p. 5 (3.4. Downstream 3D vision tasks), p. 3 (3. Method), p. 4 (3.2. Camera Image Representation), p. 3 (3.1. Preliminaries on Diffusion Model), p. 4 (3.3. Camera Intrinsic Estimation)): Then, the latent features are sent to the UNet to predict the latent depth features ˆzd, and the final depth predictions ˆd are obtained via the decoder of the VAE.
+PDF body method statement (p. 2 (6.3. More implementation details and discussions), p. 1 (6. Implementation Details), p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction)): Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 0.023 0.080 0.010 0.071 0.014 ...
 
 ## Method Body Digest
 
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** Then, the latent features are sent to the UNet to predict the latent depth features ˆzd, and the final depth predictions ˆd are obtained via ...
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** Specifically, we first encode RGB image and our designed camera image ˆc via VAE encoder into latent space, noting that no noise is added to ...
-- **p. 3 / 3. Method - extractive PDF cue:** To efficiently and losslessly integrate camera intrinsics prediction with diffusion models [53], we introduce Camera Image (Fig.
-- **p. 4 / 3.2. Camera Image Representation - extractive PDF cue:** To enhance the camera representation, we propose a simple yet effective solution by incorporating the grayscale image g of the input x into the dense ...
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** [53] introduced latent diffusion models (LDMs), which operate the diffusion process in the latent space of a pretrained variational autoencoder (VAE) [34] with an encoder ...
-- **p. 4 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** After completing the multi-step denoising process using the U-Net, the denoised camera latent representation ˆzc is sent to the frozen VAE decoder, yielding the final ...
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** The whole diffusion model is optimized by minimizing the denoising score matching objective, defined as Ez,ϵ,t  ∥ϵ -ϵθ(zt, t)∥2 2  .
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** By minimizing this objective, the denoising network learns to accurately estimate the noise, thereby effectively reversing the diffusion process and reconstructing the original data distribution.
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 ...
+- **p. 1 / 6. Implementation Details - extractive body cue:** For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training process takes approximately ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** 10: From a single input image, we first estimate the camera intrinsics and metric depth map, transform them into a 3D point cloud using the ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Based on this setting, we treat the metric depth with different scale factor for indoor and outdoor: s = {sin, sout}, and the depth label ...
+- **p. 1 / 6.1. Camera intrinsic prediction - extractive body cue:** We train our model on a diverse range of datasets, ensuring balance by selecting one dataset per batch with equal probability and sampling from it.
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Dust3r [73] delivers less accurate intrinsic estimation because it focuses on sparseview reconstruction by generating point clouds for image pairs and performing global alignment to ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** For metric depth prediction, we do not pad the images.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To summarize, our main contributions are: • We introduce the Camera Image, a novel image-based representation specifically designed to encode camera intrinsic, optimized to use ...
-- **p. 4 / 3.2. Camera Image Representation - extractive PDF cue:** To address this challenge, we propose a novel imagebased representation, called "Camera Image", which encodes the camera intrinsic parameters into a 3-channel color image (refer ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** 1, we present two portrait This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** In contrast, our method is specifically designed to recover camera intrinsics.
+- **p. 2 / 7.5. Mesh Reconstruction - extractive body cue:** We present the reconstruction result of Pisa tower in Fig.
+- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** We present the predicted metric depth in both outdoor and indoor scenes.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** Then, the latent features are sent to the UNet to predict the latent depth features ˆzd, and the final depth predictions ˆd are obtained via ...
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** Specifically, we first encode RGB image and our designed camera image ˆc via VAE encoder into latent space, noting that no noise is added to ...
-- **p. 3 / 3. Method - extractive PDF cue:** To efficiently and losslessly integrate camera intrinsics prediction with diffusion models [53], we introduce Camera Image (Fig.
-- **p. 4 / 3.2. Camera Image Representation - extractive PDF cue:** To enhance the camera representation, we propose a simple yet effective solution by incorporating the grayscale image g of the input x into the dense ...
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** [53] introduced latent diffusion models (LDMs), which operate the diffusion process in the latent space of a pretrained variational autoencoder (VAE) [34] with an encoder ...
-- **p. 4 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** After completing the multi-step denoising process using the U-Net, the denoised camera latent representation ˆzc is sent to the frozen VAE decoder, yielding the final ...
-- **Detected method headings:** 2.2. Diffusion Models in 3D tasks (p. 3); 3. Method (p. 3); 3.1. Preliminaries on Diffusion Model (p. 3)
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 ...
+- **p. 1 / 6. Implementation Details - extractive body cue:** For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training process takes approximately ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** 10: From a single input image, we first estimate the camera intrinsics and metric depth map, transform them into a 3D point cloud using the ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Based on this setting, we treat the metric depth with different scale factor for indoor and outdoor: s = {sin, sout}, and the depth label ...
+- **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then, the latent features are sent to the UNet to predict the latent depth features ˆzd, and the final depth predictions ˆd ... | p. 5 (3.4. Downstream 3D vision tasks), p. 5 (3.4. Downstream 3D vision tasks) |
-| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Specifically, we first encode RGB image and our designed camera image ˆc via VAE encoder into latent space, noting that no noise ... | p. 5 (3.4. Downstream 3D vision tasks), p. 3 (3. Method) |
-| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | To efficiently and losslessly integrate camera intrinsics prediction with diffusion models [53], we introduce Camera Image (Fig. | p. 3 (3. Method), p. 4 (3.2. Camera Image Representation) |
+| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 ... | p. 2 (6.3. More implementation details and discussions), p. 1 (6. Implementation Details) |
+| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training ... | p. 1 (6. Implementation Details), p. 2 (6.3. More implementation details and discussions) |
+| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | 10: From a single input image, we first estimate the camera intrinsics and metric depth map, transform them into a 3D point ... | p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** The whole diffusion model is optimized by minimizing the denoising score matching objective, defined as Ez,ϵ,t  ∥ϵ -ϵθ(zt, t)∥2 2  .
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** By minimizing this objective, the denoising network learns to accurately estimate the noise, thereby effectively reversing the diffusion process and reconstructing the original data distribution.
-- **p. 4 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** The U-Net is targeted to predict the added noise, and the final loss function is expressed as: \mathcal {L} = \ma thbb {E } _ ...
-- **p. 5 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** Stable Diffusion U-Net t 𝒄𝒄 𝒙𝒙 𝒛𝒛𝒙𝒙 𝒛𝒛c Concat 𝒛𝒛𝒕𝒕 𝒄𝒄 𝒛𝒛𝒙𝒙 𝝐𝝐 ෝ𝝐𝝐 Predicted Noise 𝝐𝝐 Added Noise Training Objective
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** Given the depth labels d with its sparse mask M, the training loss is given by: \mat h cal {L}_{\t ex t {depth} } = ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 ...
+- **p. 1 / 6.1. Camera intrinsic prediction - extractive body cue:** We train our model on a diverse range of datasets, ensuring balance by selecting one dataset per batch with equal probability and sampling from it.
+- **p. 1 / 6. Implementation Details - extractive body cue:** For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training process takes approximately ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Dust3r [73] delivers less accurate intrinsic estimation because it focuses on sparseview reconstruction by generating point clouds for image pairs and performing global alignment to ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
-- **Equation/algorithm anchors:** p. 3 (3. Method), p. 3 (3.1. Preliminaries on Diffusion Model), p. 4 (3.3. Camera Intrinsic Estimation), p. 5 (3.3. Camera Intrinsic Estimation), p. 5 (3.4. Downstream 3D vision tasks).
+- **Equation/algorithm anchors:** p. 2 (6.3. More implementation details and discussions).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | input, RGB, image, incidence, Camera, reference, enhance, representation, simple, effective, solution, incorporating, grayscale, dense | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
-| State/latent | input, RGB, image, incidence, Camera, reference, enhance, representation, simple, effective | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | summarize, main, contributions, introduce, Camera, Image, novel, image-based, representation, specifically | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
-| Objective/constraint | whole, diffusion, model, optimized, minimizing, denoising, score, matching, objective, defined | geometric/semantic reconstruction or matching loss | equation anchor required |
+| Input/observation | single, input, image, first, estimate, camera, intrinsics, metric, depth, transform, them, point, cloud, pinhole | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
+| State/latent | single, input, image, first, estimate, camera, intrinsics, metric, depth, transform | geometry, map, object/relationship state | body cue; notation verify |
+| Action/output | contrast, specifically, designed, recover, camera, intrinsics, present, reconstruction, result, Pisa | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Objective/constraint | Waymo, RGBD, ScanNet, MVS, Scenes11, Average, Ours-small, Ours, Pre-trained, Latent | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Camera Image Representation - extractive PDF cue:** We show the input RGB image, the incidence map and our proposed Camera Image for reference.
-- **p. 4 / 3.2. Camera Image Representation - extractive PDF cue:** To enhance the camera representation, we propose a simple yet effective solution by incorporating the grayscale image g of the input x into the dense ...
-- **p. 3 / 3. Method - extractive PDF cue:** Given a single input image x ∈RH×W ×3, our objective is to recover its camera intrinsic matrix K.
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** For any given input image x, the corresponding latent code is generated by the VAE encoder: z = E(x).
-- **p. 5 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** The input image x and the camera image c are first encoded into latent space using a frozen VAE encoder.
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** By leveraging the proposed camera calibration method, we repurpose diffusionbased image generators for accurate metric depth estimation.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Subsequently, we train a diffusion model that takes a single image as input and generates the Camera Image, followed by a RANSAC algorithm to solve ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** 10: From a single input image, we first estimate the camera intrinsics and metric depth map, transform them into a 3D point cloud using the ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Based on this setting, we treat the metric depth with different scale factor for indoor and outdoor: s = {sin, sout}, and the depth label ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Dust3r [73] delivers less accurate intrinsic estimation because it focuses on sparseview reconstruction by generating point clouds for image pairs and performing global alignment to ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** For metric depth prediction, we do not pad the images.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -81,45 +74,45 @@ PDF body method statement (p. 5 (3.4. Downstream 3D vision tasks), p. 5 (3.4. Do
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | The forward diffusion process incrementally adds noise to these latents following zt := αtz + σtϵ, where ϵ ∼N(0, I), and αt ... | episode/sequence/action-chunk boundary |
-| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | This is achieved by predicting the noise component ϵθ(zt, t) at each diffusion step. | Hz/fps, inference time and control rate |
+| Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Additionally, we apply random horizontal flipping and random cropping to enhance dataset diversity even in one dataset. | episode/sequence/action-chunk boundary |
+| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | , R, t } \s u m _ { i} \left \Vert \sigma (R \X {1}{1}_i + t) - \X {1}{2}_i \right ... | Hz/fps, inference time and control rate |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not recovered | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- **p. 3 / 3.1. Preliminaries on Diffusion Model - extractive PDF cue:** [53] introduced latent diffusion models (LDMs), which operate the diffusion process in the latent space of a pretrained variational autoencoder (VAE) [34] with an encoder ...
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** Ablation NYU-v2 KITTI δ1 ↑ SIlog ↓ A.Rel ↓ δ1 ↑ SIlog ↓ A.Rel ↓ Full Model 85.8 8.17 13.5 89.1 13.3 11.7 w.o Real ...
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Additionally, prior methods that froze the VAE decoder during one-step training have shown to be inadequate for metric depth estimation, as demonstrated in our experiments.
-- **p. 4 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** This code is concatenated with zx, serving as the input for the pretrained U-Net.
-- **p. 5 / 3.3. Camera Intrinsic Estimation - extractive PDF cue:** Pre-trained Latent Encoder ℰ Add Noise by Timestamp 𝑡𝑡
-- **p. 5 / 3.4. Downstream 3D vision tasks - extractive PDF cue:** Note that both U-Net U and the VAE decoder D are trained to allow predictions in any range.
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 ...
+- **p. 1 / 6. Implementation Details - extractive body cue:** For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training process takes approximately ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Based on this setting, we treat the metric depth with different scale factor for indoor and outdoor: s = {sin, sout}, and the depth label ...
+- **p. 1 / 6. Implementation Details - extractive body cue:** For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training process takes approximately ...
+- **p. 1 / 6. Implementation Details - extractive body cue:** To train camera intrinsic estimation model, we employ the AdamW optimizer with a learning rate of 3e-5 and train the model for 30,000 iterations with ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** The encoded image and camera image zx and zc are concatenated and sent to pretrained U-Net.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
-- **Body-defined terms:** Then, latent, features, sent, UNet, predict, depth, final, predictions, obtained, decoder, VAE, Specifically, first, encode, RGB, image, designed, camera, encoder.
-- **Relevant PDF headings:** 2.2. Diffusion Models in 3D tasks (p. 3); 3. Method (p. 3); 3.1. Preliminaries on Diffusion Model (p. 3).
+- **Body-defined terms:** Waymo, RGBD, ScanNet, MVS, Scenes11, Average, Ours-small, Ours, Pre-trained, Latent, Encoder, Stable, Diffusion, U-Net, Single, Step, Decoder, Training, Objective, Predicted.
+- **Relevant PDF headings:** not reliably recovered.
 - Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Geometry / pose extraction | For camera intrinsic estimation, the training data is sourced from a variety of datasets, including NuScenes [7], KITTI [19], CityScapes [11], NYUv2 ... | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Camera Intrinsic Evaluation) |
-| Semantic / temporal fusion | Our work significantly outperforms strong baselines such as Metric3D [85] by a large margin, and achieves comparable performance with the SOTA work ... | p. 6 (4.3. Depth Evaluation), p. 6 (4.1. Experimental Setup) |
-| Robot query / planning handoff | Our work significantly outperforms strong baselines such as Metric3D [85] by a large margin, and achieves comparable performance with the SOTA work ... | p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D Vision Tasks) |
+| Geometry / pose extraction | Dataset Images Scene Intrinsic Training Set NuScenes [7] 28k Outdoor Calibrated KITTI [11] 18 k Outdoor Calibrated CityScapes [11] 23k Outdoor Calibrated ... | p. 1 (6.2. Metric depth prediction), p. 1 (6.2. Metric depth prediction) |
+| Semantic / temporal fusion | 10: The pose estimation is compared against pseudo | p. 1 (6.3. More implementation details and discussions), p. 1 (6.1. Camera intrinsic prediction) |
+| Robot query / planning handoff | Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods. | p. 4 (7.7. The Importance of Principal Point Evaluation), p. 5 (7.8. The Importance of camera image in metric) |
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** We evaluate the effectiveness of our proposed camera image representation and multi-resolution noise strategy through an ablation study on the GSV dataset [2], which includes ...
-- **p. 6 / 4.4. More 3D Vision Tasks - extractive PDF cue:** [73] on our self-captured images with and without our estimated intrinsics.
-- **p. 6 / 4.3. Depth Evaluation - extractive PDF cue:** Despite being designed for metric depth, our model achieves performance comparable to methods tailored for affine-invariant depth.
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** Ablation on Metric Depth Estimation.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Zero-shot qualitative affine-invariant depth results.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. The overview training framework of DM-Calib. The input image x and the camera image c are first encoded into latent space using a ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work could address ultra-wide-angle images by incorporating more diverse training data and improve inference efficiency by developing a few-step diffusion [42] model to further ...
+- **p. 5 / 7.8. The Importance of camera image in metric - extractive body cue:** Ablation study on the effectiveness of camera images for metric depth estimation. ibims Diode indoor Diode outdoor w. cam img 88.7 50.1 41.0 w.o cam ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 8. The overview of metric depth training pipeline. The encoded image and camera image zx and zc are concatenated and sent to pretrained U-Net. ...
+- **p. 3 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** To validate this, we conduct an ablation study comparing
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks.
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods.
+- **p. 5 / 7.9. Test-time ensembling - extractive body cue:** Without the aggregation, the standard deviation is sometimes not negligible, as presented in Tab.
+- **p. 6 / 7.9. Test-time ensembling - extractive body cue:** Standard Deviation of estimated intrinsics without ensembling.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -133,7 +126,7 @@ PDF body method statement (p. 5 (3.4. Downstream 3D vision tasks), p. 5 (3.4. Do
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.4. Downstream 3D vision tasks), p. 5 (3.4. Downstream 3D vision tasks), p. 3 (3. Method), p. 4 (3.2. Camera Image Representation), p. 3 (3.1. Preliminaries on Diffusion Model), p. 4 (3.3. Camera Intrinsic Estimation), objective p. 3 (3.1. Preliminaries on Diffusion Model), p. 3 (3.1. Preliminaries on Diffusion Model), p. 4 (3.3. Camera Intrinsic Estimation), p. 5 (3.3. Camera Intrinsic Estimation), p. 5 (3.4. Downstream 3D vision tasks), temporal p. 3 (3.1. Preliminaries on Diffusion Model), p. 3 (3.1. Preliminaries on Diffusion Model), p. 4 (3.3. Camera Intrinsic Estimation), p. 4 (3.2. Camera Image Representation), p. 5 (3.3. Camera Intrinsic Estimation), p. 5 (3.4. Downstream 3D vision tasks).
+- **Evidence anchors reviewed:** method p. 2 (6.3. More implementation details and discussions), p. 1 (6. Implementation Details), p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction), objective p. 2 (6.3. More implementation details and discussions), p. 1 (6.1. Camera intrinsic prediction), p. 1 (6. Implementation Details), p. 2 (6.3. More implementation details and discussions), temporal p. 1 (6.2. Metric depth prediction), p. 2 (6.3. More implementation details and discussions), p. 2 (6.3. More implementation details and discussions), p. 3 (7.7. The Importance of Principal Point Evaluation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.04104; PDF retrieval source: https://arxiv.org/pdf/2301.04104. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.04104; PDF retrieval source: https://arxiv.org/pdf/2301.04104. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve ... | p. 24 (Figure/Table caption) |
 | Abstract | SYSTEM / EVALUATION SCOPE UNRESOLVED | Notably, larger model sizes not only achieve higher scores but also require less interaction to solve a task. | p. 2 (Abstract) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Dreamer sets a new state-of-the-art on this benchmark, outperforming D4PG, DMPO, and MPO33. • Visual Control This benchmark consists of 20 continuous control tasks ... | embodiment, simulator version and control stack | p. 9 (Abstract), p. 9 (Abstract) |
 | Task/environment | Without this complexity, Dreamer outperforms the best remaining methods, including the transformer-based IRIS and TWM agents, the model-free SPR, and SimPLe45. • Proprio Control ... | reset, timeout, object/scene variation | p. 9 (Abstract), p. 1 (Abstract) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 - **p. 1 / Abstract - extractive body cue:** Robustness techniques based on normalization, balancing, and transformations enable stable learning across domains.
 - **p. 2 / Abstract - extractive body cue:** Dreamer overcomes this challenge through a range of robustness techniques based on normalization, balancing, and transformations.
 
-- **PDF anchors reviewed:** datasets p. 9 (Abstract), p. 9 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 6 (Abstract), metrics p. 37 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Abstract), p. 10 (Abstract), p. 24 (Figure/Table caption), p. 6 (Abstract), baselines p. 9 (Abstract), p. 9 (Abstract), p. 10 (Abstract), p. 24 (Figure/Table caption), p. 10 (Abstract), p. 8 (Abstract), results p. 24 (Figure/Table caption), p. 2 (Abstract), p. 2 (Abstract), p. 9 (Abstract), p. 32 (Figure/Table caption), p. 39 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (Abstract), p. 9 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 6 (Abstract), metrics p. 37 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Abstract), p. 10 (Abstract), p. 24 (Figure/Table caption), p. 6 (Abstract), baselines p. 9 (Abstract), p. 9 (Abstract), p. 10 (Abstract), p. 24 (Figure/Table caption), p. 10 (Abstract), p. 8 (Abstract), results p. 24 (Figure/Table caption), p. 2 (Abstract), p. 2 (Abstract), p. 9 (Abstract), p. 32 (Figure/Table caption), p. 39 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At ... (p. 24, Figure/Table caption).
+- **Metric evidence:** We observe that all robustness techniques contribute to performance, most notably the KL objective of the world model, followed by return normalization and symexp twohot regression for reward and value ... (p. 10, Abstract).
+- **Baseline/ablation evidence:** We note that these baselines were not designed for data-efficiency but serve as a valuable comparison point for the performance previously achievable at scale. (p. 8, Abstract).
+- **Failure/negative evidence:** This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or tasks where tuning is prohibitive. (p. 2, Abstract).

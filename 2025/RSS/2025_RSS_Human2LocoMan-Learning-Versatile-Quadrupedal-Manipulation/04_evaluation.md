@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p122.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p122.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p122.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p122.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 1 (Figure/Table
 
 ## Evaluation Body Digest
 
-- **p. 8 / IV. EXPERIMENTS - extractive PDF cue:** Both unimanual and bimanual toy collection tasks assess the robot's ability to grasp objects of varying shapes, colors, and positions.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** In this task, the robot must pick up a toy randomly positioned within a rectangular area and place it into a designated basket on the ...
-- **p. 8 / IV. EXPERIMENTS - extractive PDF cue:** This task evaluates the coordination and precision of the robot's bimanual manipulation.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed the ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** (3) How does human data collected by Human2LocoMan contribute to imitation learning performance?
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Completing this task requires the robot to coordinate its whole-body motions to efficiently and accurately reach various locations on the ground and above the basket.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: Human2LocoMan framework. Our system uses an XR headset for data collection, capturing egocentric human data and teleoperated robot data, all mapped to a ...
+- **p. 8 / IV. EXPERIMENTS - extractive body cue:** Both unimanual and bimanual toy collection tasks assess the robot's ability to grasp objects of varying shapes, colors, and positions.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** In this task, the robot must pick up a toy randomly positioned within a rectangular area and place it into a designated basket on the ...
+- **p. 8 / IV. EXPERIMENTS - extractive body cue:** This task evaluates the coordination and precision of the robot's bimanual manipulation.
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed the ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** (3) How does human data collected by Human2LocoMan contribute to imitation learning performance?
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Completing this task requires the robot to coordinate its whole-body motions to efficiently and accurately reach various locations on the ground and above the basket.
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Human2LocoMan framework. Our system uses an XR headset for data collection, capturing egocentric human data and teleoperated robot data, all mapped to a ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 1 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed ... | p. 10 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 1: Human2LocoMan provides a unified framework for collecting human demonstrations and teleoperated robot whole- body motions, along with cross-embodiment policy learning for quadrupedal ... | p. 1 (Figure/Table caption) |
@@ -39,27 +39,27 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 1 (Figure/Table
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / IV. EXPERIMENTS - extractive PDF cue:** Both unimanual and bimanual toy collection tasks assess the robot's ability to grasp objects of varying shapes, colors, and positions.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** In this task, the robot must pick up a toy randomly positioned within a rectangular area and place it into a designated basket on the ...
-- **p. 8 / IV. EXPERIMENTS - extractive PDF cue:** This task evaluates the coordination and precision of the robot's bimanual manipulation.
+- **p. 8 / IV. EXPERIMENTS - extractive body cue:** Both unimanual and bimanual toy collection tasks assess the robot's ability to grasp objects of varying shapes, colors, and positions.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** In this task, the robot must pick up a toy randomly positioned within a rectangular area and place it into a designated basket on the ...
+- **p. 8 / IV. EXPERIMENTS - extractive body cue:** This task evaluates the coordination and precision of the robot's bimanual manipulation.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Human2LocoMan provides a unified framework for collecting human demonstrations and teleoperated robot whole- body motions, along with cross-embodiment policy learning for quadrupedal manipulation. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: Human2LocoMan framework. Our system uses an XR headset for data collection, capturing egocentric human data and teleoperated robot data, all mapped to a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: Modularized Cross-embodiment Transformer (MXT) architecture. The inputs are organized as a list of modalities and encoded each by a separate tokenizer into a ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4: Rollouts of the MXT policy and the objects used across manipulation tasks in our experiments. Green arrows indicate end-effector motions, red arrows denote ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: Ablation study on unimanual and bimanual toy collection. We compare MXT, its ablation MXT-Agg, and baseline HPT on SR and TS. Here, "L" ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed the ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 7: Best validation loss of our method and HIT on all our tasks. MXT-Pretrained: MXT pretrained on human dataset (including unimanual and bimanual if ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 8: Best validation loss of our method and HPT on the unimanual Toy Collection task. MXT-Pretrained: MXT pre- trained on human dataset (including unimanual ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Human2LocoMan provides a unified framework for collecting human demonstrations and teleoperated robot whole- body motions, along with cross-embodiment policy learning for quadrupedal manipulation. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Human2LocoMan framework. Our system uses an XR headset for data collection, capturing egocentric human data and teleoperated robot data, all mapped to a ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Modularized Cross-embodiment Transformer (MXT) architecture. The inputs are organized as a list of modalities and encoded each by a separate tokenizer into a ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Rollouts of the MXT policy and the objects used across manipulation tasks in our experiments. Green arrows indicate end-effector motions, red arrows denote ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Ablation study on unimanual and bimanual toy collection. We compare MXT, its ablation MXT-Agg, and baseline HPT on SR and TS. Here, "L" ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed the ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 7: Best validation loss of our method and HIT on all our tasks. MXT-Pretrained: MXT pretrained on human dataset (including unimanual and bimanual if ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 8: Best validation loss of our method and HPT on the unimanual Toy Collection task. MXT-Pretrained: MXT pre- trained on human dataset (including unimanual ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Both unimanual and bimanual toy collection tasks assess the robot's ability to grasp objects of varying shapes, colors, and positions. | embodiment, simulator version and control stack | p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
 | Task/environment | We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation. | reset, timeout, object/scene variation | p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
@@ -114,8 +114,8 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 1 (Figure/Table
 | Primary metric/result | Fig. 1: Human2LocoMan provides a unified framework for collecting human demonstrations and teleoperated robot whole- body motions, along with cross-embodiment policy learning for quadrupedal ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** As shown in Figure 4, we use 10 objects for robot finetuning and all objects for human pretraining and real-robot evaluation.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** As shown in Figure 4, we use 10 objects for robot finetuning and all objects for human pretraining and real-robot evaluation.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** We use 10 objects for robot finetuning, while all objects are included in human pretraining and real-robot evaluation.
 
 ## Generalization and Failure Cases
 
@@ -152,13 +152,13 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 1 (Figure/Table
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 3) Data - extractive PDF cue:** MXT-Scratch: MXT trained only on the LocoMan data. "L" denotes the larger training set (80 trajectories for SO-Uni, 60 trajectories for Pour and Scoop), while ...
-- **p. 11 / 3) Data - extractive PDF cue:** Additionally, as depicted in Figure 8, MXT-Pretrained consistently achieves lower validation loss than MXT-Scratch, whereas the gap between HPT-Pretrained and HPT-Scratch is less consistent and ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** As shown in Figure 4, this task involves three pairs of shoes, with one pair being out-of-distribution (OOD).
-- **p. 9 / 3) Data - extractive PDF cue:** The policy is rolled out for 24 times with in-distribution (ID) objects and 12 times with out-of-distribution (OOD) objects.
-- **p. 11 / 3) Data - extractive PDF cue:** Efficiency, robustness, and generalizability.
+- **p. 10 / 3) Data - extractive body cue:** MXT-Scratch: MXT trained only on the LocoMan data. "L" denotes the larger training set (80 trajectories for SO-Uni, 60 trajectories for Pour and Scoop), while ...
+- **p. 11 / 3) Data - extractive body cue:** Additionally, as depicted in Figure 8, MXT-Pretrained consistently achieves lower validation loss than MXT-Scratch, whereas the gap between HPT-Pretrained and HPT-Scratch is less consistent and ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** As shown in Figure 4, this task involves three pairs of shoes, with one pair being out-of-distribution (OOD).
+- **p. 9 / 3) Data - extractive body cue:** The policy is rolled out for 24 times with in-distribution (ID) objects and 12 times with out-of-distribution (OOD) objects.
+- **p. 11 / 3) Data - extractive body cue:** Efficiency, robustness, and generalizability.
 
-- **PDF anchors reviewed:** datasets p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), metrics p. 10 (Figure/Table caption), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (IV. EXPERIMENTS), p. 10 (Figure/Table caption), results p. 10 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (IV. EXPERIMENTS), p. 10 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), metrics p. 10 (Figure/Table caption), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (IV. EXPERIMENTS), p. 10 (Figure/Table caption), results p. 10 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (IV. EXPERIMENTS), p. 10 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

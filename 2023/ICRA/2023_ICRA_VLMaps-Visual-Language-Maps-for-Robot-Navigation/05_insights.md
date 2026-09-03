@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 Zero-Shot Spatial Goal Navigation from Language In this section, we describe our approach to long-horizon (spatial) goal navigation, given a set of landmark descriptions specified by natural language instructions such as move ...를 Open-Vocabulary Label Set ( entries) VLMap Creation LSeg Visual Encoder (Frozen) Input Depth Camera Pose Global Point Cloud Input Image Each Point Top-down Projection VLMap Per-Pixel Embedding Pixel-Text Similarity Argmax Segmentation M ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and 2) action noise, which can negatively influence ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose VLMaps as one such representation, which can be constructed using off-the-shelf visual-language models (VLMs) and standard 3D reconstruction libraries.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Open-Vocabulary Label Set ( entries) VLMap Creation LSeg Visual Encoder (Frozen) Input Depth Camera Pose Global Point Cloud Input Image Each Point Top-down Projection VLMap Per-Pixel Embedding Pixel-Text Similarity Argmax ... (p. 3, III. METHOD).
+- **Paper-specific mechanism:** Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], and, in particular, excels at enabling spatial open-vocabulary ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 0 VLMaps (ours) 62 33 ... (p. 5, IV. EXPERIMENTS); the relevant task/metric cue is Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 0 VLMaps (ours) 62 33 ... (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and 2) action noise, which can ... (p. 6, IV. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We use the Habitat simulator [45] with the Matterport3D dataset [46] for the evaluation of multi-object and spatial goal navigation tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: Our method outperforms other baselines in this task..
-4. Report the body metric and its denominator/aggregation: In contrast, while achieving similar success rate compared to the drone with a ground map, the drone with a drone map manages to navigate with higher path efficiency, reflected by the increased ....
-5. Re-run the body-reported ablation/failure condition: Fig. 1: VLMaps is a spatial map representation in which pretrained visual- language model features are fused into a 3D reconstruction of the physical world. Spatially anchoring visual language features enables natural ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Open-Vocabulary Label Set ( entries) VLMap Creation LSeg Visual Encoder (Frozen) Input Depth Camera Pose Global Point Cloud Input Image Each Point Top-down Projection VLMap Per-Pixel Embedding Pixel-Text Similarity Argmax ... (p. 3, III. METHOD); preserve the objective/update rule: The LSeg visual encoder maps an image such that the embedding of each pixel lies in the CLIP feature space. (p. 2, III. METHOD).
+2. Use the paper-reported task/data/environment cue: We use the Habitat simulator [45] with the Matterport3D dataset [46] for the evaluation of multi-object and spatial goal navigation tasks. (p. 4, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Our method outperforms other baselines in this task. (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 0 VLMaps (ours) 62 33 ... (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: We compute the in-a-row success rate in the same way as in Sec. (p. 5, IV. EXPERIMENTS); if none is reported, design one around: We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and 2) action noise, which can ... (p. 6, IV. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), and measure the boundary at p. 6 (IV. EXPERIMENTS), p. 6 (V. DISCUSSION AND LIMITATIONS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 VLMaps, representation, constructed mechanism이 Our method outperforms other baselines in this task. 대비 In contrast, while achieving similar success rate compared to the drone with a ground map, the drone with ...을 개선하고, We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Open-Vocabulary Label Set ( entries) VLMap Creation LSeg Visual Encoder (Frozen) Input Depth Camera Pose Global Point Cloud Input Image Each Point ...), does the paper-specific mechanism (Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], ...) retain the reported evaluation outcome (Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 ...) when tested against the paper's strongest explicit boundary (We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], and, in particular, excels at enabling spatial open-vocabulary ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 0 VLMaps (ours) 62 33 ... (p. 5, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and 2) action noise, which can ... (p. 6, IV. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/huang23c.html; PDF retrieval source: https://arxiv.org/pdf/2207.05608. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/huang23c.html; PDF retrieval source: https://arxiv.org/pdf/2207.05608. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Low-level Policies We use a single low-level policy for the real tabletop rearrangement environment that is responsible for performing object-centric pick and ... | p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | The input to the model consists of: (1) o0, the initial image observation, (2) of, the final image observation after the policy ... | p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Intelligent and flexible embodied interaction requires robots to be able to deploy large repertoires of basic behaviors in appropriate ways, sequence these ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Similar to ours are recent task planning approaches that leverage pre-trained autoregressive LLMs to decompose abstract, high-level instructions into a sequence of ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), objective p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), temporal p. 1 (1 Introduction), p. 2 (2 Related Work), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
+- **Evidence anchors reviewed:** method p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), objective p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), temporal p. 1 (1 Introduction), p. 2 (2 Related Work), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The input to the model consists of: (1) o0, the initial image observation, (2) of, the final image observation after the policy chose to terminate its chosen skill execution, and ... (p. 17, A.2 Inner Monologue for Real-World Tabletop Rearrangement).
+- **Objective/update evidence:** To train this model, we use the symmetric contrastive loss as used in CLIP (Fig 7b). (p. 17, A.2 Inner Monologue for Real-World Tabletop Rearrangement).
+- **Temporal/runtime evidence:** Unlike the evaluated settings in [76], the demonstrations cover all objects because the focus of this work is not on generalization across object instances but on novel long-horizon behaviors. (p. 15, A.1 Inner Monologue for Simulated Tabletop Rearrangement).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2209.14988; PDF retrieval source: https://arxiv.org/pdf/2209.14988. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2209.14988; PDF retrieval source: https://arxiv.org/pdf/2209.14988. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We evaluate the ability of DreamFusion to generate coherent 3D scenes from a variety of text prompts.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We use the 153 prompts from the object-centric COCO validation subset of Dream Fields.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated geometry using CLIP L/14 on object-centric COCO.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** The R-Precision is the accuracy with which CLIP (Radford et al., 2021) retrieves the correct caption among a set of distractors given a rendering of ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** This ablation also highlights how the albedo renders can be deceiving: our base model achieves the highest score, but exhibits poor geometry (the dog has ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Comparison of 2D sampling methods from a text-to-image diffusion model with text "a photo of a tree frog wearing a sweater." For score ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 8: Pseudocode for Score Distillation Sampling with an application-specific generator that defines a differentiable mapping from parameters to images. The gradient g is computed ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Right: visualizations of the impact of each ablation for "A bulldog is wearing a black pirate hat." on albedo (top), shaded (middle), and textureless renderings ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We evaluate the ability of DreamFusion to generate coherent 3D scenes from a variety of text prompts.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We use the 153 prompts from the object-centric COCO validation subset of Dream Fields.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated geometry using CLIP L/14 on object-centric COCO.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** The R-Precision is the accuracy with which CLIP (Radford et al., 2021) retrieves the correct caption among a set of distractors given a rendering of ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** This ablation also highlights how the albedo renders can be deceiving: our base model achieves the highest score, but exhibits poor geometry (the dog has ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Comparison of 2D sampling methods from a text-to-image diffusion model with text "a photo of a tree frog wearing a sweater." For score ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Pseudocode for Score Distillation Sampling with an application-specific generator that defines a differentiable mapping from parameters to images. The gradient g is computed ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Right: visualizations of the impact of each ablation for "A bulldog is wearing a black pirate hat." on albedo (top), shaded (middle), and textureless renderings ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Geometry significantly improves with each of these choices and full renderings improve by +12.5%. | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Despite this, DreamFusion outperforms both baselines on color images, and approaches the performance of ground truth images. | p. 8 (4 EXPERIMENTS) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We evaluate the ability of DreamFusion to generate coherent 3D scenes from a variety of text prompts.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We use the 153 prompts from the object-centric COCO validation subset of Dream Fields.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated geometry using CLIP L/14 on object-centric COCO.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We evaluate the ability of DreamFusion to generate coherent 3D scenes from a variety of text prompts.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We use the 153 prompts from the object-centric COCO validation subset of Dream Fields.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated geometry using CLIP L/14 on object-centric COCO.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: DreamFusion uses a pretrained text-to-image diffusion model to generate realistic 3D models from text prompts. Rendered 3D models are presented from two views, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Comparison of 2D sampling methods from a text-to-image diffusion model with text "a photo of a tree frog wearing a sweater." For score ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a peacock on a surfboard." The scene is ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: DreamFusion can be used to create and refine 3D scenes. Here we iteratively refine an example text prompt, while rendering each generated scene ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Evaluating the coherence of DreamFusion generations with their caption using different CLIP retrieval models. We compare to the ground-truth MS-COCO images in the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative comparison with baselines. 4
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 6: An ablation study of DreamFusion. Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 7: Pseudocode for ancestral sampling from DDPM where y is the optional conditioning signal e.g. a caption. Typically, tmax = 1 and tmin = ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: DreamFusion uses a pretrained text-to-image diffusion model to generate realistic 3D models from text prompts. Rendered 3D models are presented from two views, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Comparison of 2D sampling methods from a text-to-image diffusion model with text "a photo of a tree frog wearing a sweater." For score ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a peacock on a surfboard." The scene is ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: DreamFusion can be used to create and refine 3D scenes. Here we iteratively refine an example text prompt, while rendering each generated scene ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Evaluating the coherence of DreamFusion generations with their caption using different CLIP retrieval models. We compare to the ground-truth MS-COCO images in the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative comparison with baselines. 4
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6: An ablation study of DreamFusion. Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 7: Pseudocode for ancestral sampling from DDPM where y is the optional conditioning signal e.g. a caption. Typically, tmax = 1 and tmin = ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate the ability of DreamFusion to generate coherent 3D scenes from a variety of text prompts. | embodiment, simulator version and control stack | p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
 | Task/environment | We use the 153 prompts from the object-centric COCO validation subset of Dream Fields. | reset, timeout, object/scene variation | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
@@ -118,9 +118,9 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 | Primary metric/result | Despite this, DreamFusion outperforms both baselines on color images, and approaches the performance of ground truth images. | numeric claim only at cited anchor | p. 8 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4. Optimization - extractive PDF cue:** We optimize for 15,000 iterations which takes around 1.5 hours.
-- **p. 8 / 4. Optimization - extractive PDF cue:** (2022). †Evaluated with only 1 seed per prompt.
-- **p. 17 / A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS - extractive PDF cue:** We use Distributed Shampoo (Anil et al., 2020) with β1 = 0.9, β2 = 0.9, exponent override = 2, block size = 128, graft type ...
+- **p. 7 / 4. Optimization - extractive body cue:** We optimize for 15,000 iterations which takes around 1.5 hours.
+- **p. 8 / 4. Optimization - extractive body cue:** (2022). †Evaluated with only 1 seed per prompt.
+- **p. 17 / A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS - extractive body cue:** We use Distributed Shampoo (Anil et al., 2020) with β1 = 0.9, β2 = 0.9, exponent override = 2, block size = 128, graft type ...
 
 ## Generalization and Failure Cases
 
@@ -155,11 +155,11 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 5 DISCUSSION - extractive PDF cue:** Though DreamFusion produces compelling results and outperforms prior work on this task, it still has several limitations.
-- **p. 9 / 5 DISCUSSION - extractive PDF cue:** DreamFusion does not require 3D or multi-view training data, and uses only a pre-trained 2D diffusion model (trained on only 2D images) to perform 3D ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a peacock on a surfboard." The scene is ...
+- **p. 9 / 5 DISCUSSION - extractive body cue:** Though DreamFusion produces compelling results and outperforms prior work on this task, it still has several limitations.
+- **p. 9 / 5 DISCUSSION - extractive body cue:** DreamFusion does not require 3D or multi-view training data, and uses only a pre-trained 2D diffusion model (trained on only 2D images) to perform 3D ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a peacock on a surfboard." The scene is ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 4 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 17 (A.3 EXPERIMENTAL SETUP), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 4 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 4 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 17 (A.3 EXPERIMENTAL SETUP), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 4 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

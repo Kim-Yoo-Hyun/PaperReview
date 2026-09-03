@@ -1,8 +1,10 @@
 # WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=Czs2xH9114.
-> PDF retrieval source: https://arxiv.org/pdf/2406.06005. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=Czs2xH9114.
+> PDF retrieval source: https://arxiv.org/pdf/2406.06005. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2406.06005
 - Code/Project: https://wococo-humanoid.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail.를 문제로 두고, In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 8 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, model mismatch and perturbations such as uneven terrains pose significant challenges to these controllers, for which RL can be a promising solution [13, 22]. (p. 5, 1 Introduction).
+- **Actual contribution:** In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals. (p. 3, 1 Introduction).
+- **Evaluation boundary:** Figure 4: Learned dancing motions in simulation and the real-world. Black bounding boxes indicate the foot contact goals and the hand task goals. Reward. There are two task-related rewards, one ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail. (p. 8, 1 Introduction).

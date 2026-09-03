@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1812.05784; PDF retrieval source: https://arxiv.org/pdf/1812.05784. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1812.05784; PDF retrieval source: https://arxiv.org/pdf/1812.05784. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 
 ## Method Body Digest
 
-- **p. 5 / 3.2. Loss - extractive PDF cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
-- **p. 5 / 3.2. Loss - extractive PDF cue:** We use the same loss functions introduced in SECOND [28].
-- **p. 6 / 4.3. Data Augmentation - extractive PDF cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
-- **p. 7 / Method - extractive PDF cue:** Additionally, pedestrians are easily confused with narrow vertical features of the environment such as poles or tree trunks (see Figure 4b).
-- **p. 4 / 3. Implementation Details - extractive PDF cue:** In this section we describe our network parameters and the loss function that we optimize for.
-- **p. 5 / 3.2. Loss - extractive PDF cue:** For the object classification loss, we use the focal loss [16]: Lcls = -αa (1 -pa)γ log pa, where pa is the class probability of ...
-- **p. 5 / 3.2. Loss - extractive PDF cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Traditionally, a lidar robotics pipeline interprets such point clouds as object detections through a bottomup pipeline involving background subtraction, followed by spatiotemporal clustering and classification ...
+- **p. 5 / 3.2. Loss - extractive body cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
+- **p. 5 / 3.2. Loss - extractive body cue:** We use the same loss functions introduced in SECOND [28].
+- **p. 6 / 4.3. Data Augmentation - extractive body cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
+- **p. 7 / Method - extractive body cue:** Additionally, pedestrians are easily confused with narrow vertical features of the environment such as poles or tree trunks (see Figure 4b).
+- **p. 4 / 3. Implementation Details - extractive body cue:** In this section we describe our network parameters and the loss function that we optimize for.
+- **p. 5 / 3.2. Loss - extractive body cue:** For the object classification loss, we use the focal loss [16]: Lcls = -αa (1 -pa)γ log pa, where pa is the class probability of ...
+- **p. 5 / 3.2. Loss - extractive body cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
+- **p. 1 / 1. Introduction - extractive body cue:** Traditionally, a lidar robotics pipeline interprets such point clouds as object detections through a bottomup pipeline involving background subtraction, followed by spatiotemporal clustering and classification ...
 
 ## Design Rationale
 
-- **p. 5 / 3.1. Network - extractive PDF cue:** Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).
-- **p. 5 / 3.2. Loss - extractive PDF cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
+- **p. 5 / 3.1. Network - extractive body cue:** Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).
+- **p. 5 / 3.2. Loss - extractive body cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.2. Loss - extractive PDF cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
-- **p. 5 / 3.2. Loss - extractive PDF cue:** We use the same loss functions introduced in SECOND [28].
-- **p. 6 / 4.3. Data Augmentation - extractive PDF cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
-- **p. 7 / Method - extractive PDF cue:** Additionally, pedestrians are easily confused with narrow vertical features of the environment such as poles or tree trunks (see Figure 4b).
-- **p. 4 / 3. Implementation Details - extractive PDF cue:** In this section we describe our network parameters and the loss function that we optimize for.
+- **p. 5 / 3.2. Loss - extractive body cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
+- **p. 5 / 3.2. Loss - extractive body cue:** We use the same loss functions introduced in SECOND [28].
+- **p. 6 / 4.3. Data Augmentation - extractive body cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
+- **p. 7 / Method - extractive body cue:** Additionally, pedestrians are easily confused with narrow vertical features of the environment such as poles or tree trunks (see Figure 4b).
+- **p. 4 / 3. Implementation Details - extractive body cue:** In this section we describe our network parameters and the loss function that we optimize for.
 - **Detected method headings:** Method (p. 6); Method (p. 7)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use ... | p. 5 (3.2. Loss), p. 5 (3.2. Loss) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We use the same loss functions introduced in SECOND [28]. | p. 5 (3.2. Loss), p. 6 (4.3. Data Augmentation) |
@@ -45,9 +45,9 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.2. Loss - extractive PDF cue:** For the object classification loss, we use the focal loss [16]: Lcls = -αa (1 -pa)γ log pa, where pa is the class probability of ...
-- **p. 5 / 3.2. Loss - extractive PDF cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
-- **p. 4 / 3. Implementation Details - extractive PDF cue:** In this section we describe our network parameters and the loss function that we optimize for.
+- **p. 5 / 3.2. Loss - extractive body cue:** For the object classification loss, we use the focal loss [16]: Lcls = -αa (1 -pa)γ log pa, where pa is the class probability of ...
+- **p. 5 / 3.2. Loss - extractive body cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
+- **p. 4 / 3. Implementation Details - extractive body cue:** In this section we describe our network parameters and the loss function that we optimize for.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3. Implementation Details), p. 5 (3.2. Loss), p. 5 (3.2. Loss).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,13 +63,13 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 
 ## Observation–State–Action Interface
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** Traditionally, a lidar robotics pipeline interprets such point clouds as object detections through a bottomup pipeline involving background subtraction, followed by spatiotemporal clustering and classification ...
-- **p. 7 / Method - extractive PDF cue:** While we only train on lidar point clouds, for ease of interpretation we visualize the 3D bounding box predictions from the BEV and image perspective.
-- **p. 6 / 4.3. Data Augmentation - extractive PDF cue:** Finally, we perform two sets of global augmentations that are jointly applied to the point cloud and all boxes.
-- **p. 6 / 4.3. Data Augmentation - extractive PDF cue:** Then for each sample, we randomly select 15, 0, 8 ground truth samples for cars, pedestrians, and cyclists respectively and place them into the current ...
-- **p. 5 / 3.1. Network - extractive PDF cue:** The encoder network has C = 64 output features.
-- **p. 7 / Method - extractive PDF cue:** SubCNN is the best performing image only method, while AVOD-FPN, SECOND, and PointPillars are the only 3D object detectors that predict orientation.
-- **p. 1 / 1. Introduction - extractive PDF cue:** A lidar uses a laser scanner to measure the distance to the environment, thus generating a sparse point cloud representation.
+- **p. 1 / 1. Introduction - extractive body cue:** Traditionally, a lidar robotics pipeline interprets such point clouds as object detections through a bottomup pipeline involving background subtraction, followed by spatiotemporal clustering and classification ...
+- **p. 7 / Method - extractive body cue:** While we only train on lidar point clouds, for ease of interpretation we visualize the 3D bounding box predictions from the BEV and image perspective.
+- **p. 6 / 4.3. Data Augmentation - extractive body cue:** Finally, we perform two sets of global augmentations that are jointly applied to the point cloud and all boxes.
+- **p. 6 / 4.3. Data Augmentation - extractive body cue:** Then for each sample, we randomly select 15, 0, 8 ground truth samples for cars, pedestrians, and cyclists respectively and place them into the current ...
+- **p. 5 / 3.1. Network - extractive body cue:** The encoder network has C = 64 output features.
+- **p. 7 / Method - extractive body cue:** SubCNN is the best performing image only method, while AVOD-FPN, SECOND, and PointPillars are the only 3D object detectors that predict orientation.
+- **p. 1 / 1. Introduction - extractive body cue:** A lidar uses a laser scanner to measure the distance to the environment, thus generating a sparse point cloud representation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,8 +84,8 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 
 ## Training vs Inference
 
-- **p. 6 / 4.3. Data Augmentation - extractive PDF cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
-- **p. 5 / 3.2. Loss - extractive PDF cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
+- **p. 6 / 4.3. Data Augmentation - extractive body cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
+- **p. 5 / 3.2. Loss - extractive body cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -105,9 +105,9 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 
 ## Failure and Ablation Link
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Network overview. The main components of the network are a Pillar Feature Network, Backbone, and SSD Detection Head. See Section 2 for more ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Failure cases on KITTI. Same visualize setup from Figure 3 but focusing on several common failure modes. Next, we use a simplified version ...
-- **p. 5 / 3.2. Loss - extractive PDF cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Network overview. The main components of the network are a Pillar Feature Network, Backbone, and SSD Detection Head. See Section 2 for more ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Failure cases on KITTI. Same visualize setup from Figure 3 but focusing on several common failure modes. Next, we use a simplified version ...
+- **p. 5 / 3.2. Loss - extractive body cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -121,7 +121,7 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data Augmentation), p. 7 (Method), p. 4 (3. Implementation Details), objective p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 4 (3. Implementation Details), temporal p. 5 (3.1. Network), p. 6 (Method), p. 1 (A PP), p. 1 (Abstract), p. 2 (A PP), p. 2 (A PP).
+- **Evidence anchors reviewed:** method p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data Augmentation), p. 7 (Method), p. 4 (3. Implementation Details), objective p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 4 (3. Implementation Details), temporal p. 5 (3.1. Network), p. 6 (Method), p. 1 (A PP), p. 1 (Abstract), p. 2 (A PP), p. 2 (A PP).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

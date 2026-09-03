@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p073.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p073.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p073.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p073.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -73,14 +73,14 @@ PDF body method statement (p. 4 (IV. GOAT METHOD), p. 4 (IV. GOAT METHOD), p. 3 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | For each detected object instance, we also store the image in which the object was detected as part of the object instance ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | For example, if the majority of the objects used for training the object detector originated from North America, the system's performance may ... | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | For each detected object instance, we also store the image in which the object was detected as part of the object instance ... | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | not recovered | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | For each detected object instance, we also store the image in which the object was detected as part of the object instance ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | For example, if the majority of the objects used for training the object detector originated from North America, the system's performance may ... | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | For each detected object instance, we also store the image in which the object was detected as part of the object instance ... | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -124,3 +124,12 @@ PDF body method statement (p. 4 (IV. GOAT METHOD), p. 4 (IV. GOAT METHOD), p. 3 
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** If no instance is localized, the global policy outputs an exploration goal. (p. 3, IV. GOAT METHOD).
+- **Objective/update evidence:** We take a simple approach: when new observations are received from the sensors, we overwrite the relevant cells in the semantic map based on the updated occupancy information. (p. 4, IV. GOAT METHOD).
+- **Temporal/runtime evidence:** For each detected object instance, we also store the image in which the object was detected as part of the object instance memory. c) Semantic Map Representation: The semantic map ... (p. 3, IV. GOAT METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

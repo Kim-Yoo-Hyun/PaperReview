@@ -1,8 +1,10 @@
 # Gemini Robotics: Bringing AI into the Physical World
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (64 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2503.20020.
-> PDF retrieval source: https://arxiv.org/abs/2503.20020. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (64 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2503.20020.
+> PDF retrieval source: https://arxiv.org/abs/2503.20020. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / arXiv
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/abs/2503.20020
 - Code/Project: https://deepmind.google/models/gemini-robotics/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (64 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (64 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, as a VLM, there are inherent limitations for robot control, especially for more dexterous tasks, due to the intermediate steps needed to connect the model's innate embodied reasoning capabilities to robotic ...를 문제로 두고, To this end, we introduce the Gemini Robotics family of embodied AI models, built on top of Gemini 2.0, our most advanced multimodal foundation model.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 13 (2.0 Flash), p. 3 (1. Introduction), p. 8 (3.5 Sonnet), p. 12 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 2 (1. Introduction), p. 14 (3. Robot Actions with Gemini Robotics) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (64 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, as a VLM, there are inherent limitations for robot control, especially for more dexterous tasks, due to the intermediate steps needed to connect the model's innate embodied reasoning capabilities ... (p. 13, 2.0 Flash).
+- **Actual contribution:** Furthermore, an embodied AI agent must also go beyond passively understanding the spatial and physical concepts of the real world; it must also learn to take actions that have direct ... (p. 1, 1. Introduction).
+- **Evaluation boundary:** Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark (p. 5, 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark).
+- **Explicit failure boundary:** While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive language attributes (e.g., "top black container", "blue clip") and fails to solve ... (p. 17, 3.3. Gemini Robotics can closely follow language instructions).

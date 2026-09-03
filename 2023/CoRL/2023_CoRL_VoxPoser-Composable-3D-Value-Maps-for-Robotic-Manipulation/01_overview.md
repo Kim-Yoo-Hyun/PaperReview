@@ -1,8 +1,10 @@
 # VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2307.05973.
-> PDF retrieval source: https://arxiv.org/pdf/2307.05973. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2307.05973.
+> PDF retrieval source: https://arxiv.org/pdf/2307.05973. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2307.05973
 - Code/Project: https://voxposer.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, to enable physical interactions with the environment, existing approaches typically rely on a repertoire of pre-defined motion primitives (i.e., skills) that may be invoked by an LLM or a planner, and ...를 문제로 두고, We represent τ r i as a sequence of dense end-effector waypoints to be executed by an Operational Space Controller [117], where each waypoint consists of a desired 6-DoF end-effector pose, end-effector ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Method), p. 8 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, to enable physical interactions with the environment, existing approaches typically rely on a repertoire of pre-defined motion primitives (i.e., skills) that may be invoked by an LLM or a ... (p. 2, 1 Introduction).
+- **Actual contribution:** Rather than relying on robotic data that are often of limited amount or variability, the method leverages LLMs for open-world reasoning and VLMs for generalizable visual grounding in a model-based ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 4: Full experimental results in simulation on seen tasks and unseen tasks. "SA" indicates seen attributes and "UA" indicates unseen attributes. Each entry represents success rate averaged across 20 ... (p. 22, Figure/Table caption).
+- **Explicit failure boundary:** 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, from LLMs and VLMs for ... (p. 8, 3 Method).

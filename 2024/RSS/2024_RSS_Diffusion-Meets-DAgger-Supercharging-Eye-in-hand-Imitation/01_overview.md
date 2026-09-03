@@ -1,8 +1,8 @@
 # Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p048.html.
-> PDF retrieval source: https://arxiv.org/pdf/2402.17768.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p048.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p048.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, DAgger, diffusion model, compounding error, eye-in-hand
 - Official paper: https://www.roboticsproceedings.org/rss20/p048.html
-- Full-text retrieval: https://arxiv.org/pdf/2402.17768.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p048.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -87,3 +87,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 1: Eye-in-hand Imitation learning with DMD: A common failure mode in an imitation learning setting is the problem of poor generalization due to compounding execution errors at test time as shown in ...를 문제로 두고, We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, DAgger [56] is challenging to put into practice: it requires an expert operator to supervise the robot during execution and guide it to recover from failures. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 9: Diffusion vs NeRF We visualize perturbed samples generated using DMD and NeRF with different masking strategies. The top row shows images generated for a forward movement relative to ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to the receiving cup; the blue ... (p. 9, 24 Demo).

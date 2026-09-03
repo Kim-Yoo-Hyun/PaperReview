@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10007319; PDF retrieval source: https://openreview.net/pdf?id=pZuZWRuPyi. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10007319; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/245358. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** 5.1 EXPERIMENTAL SETUP Benchmark Environments.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** These include several locomotion tasks from the DeepMind Control Suite (DMC) (Tassa et al., 2018), a set of distinct robotic manipulation tasks from MetaWorld (Yu ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 3, our method, HAUWM, achieves state-of-the-art sample efficiency and final performance on the majority of the tested benchmarks.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Furthermore, HAUWM shows strong performance in the offline RL, where learning from a fixed dataset without online interaction is required.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Performance of HAUWM and baselines on diverse downstream learning paradigms, includ- ing imitation and offline RL. All scores are normalized returns, reported as ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** First, to verify the necessity of our core contribution, we trained a variant without the Horizon-Calibrated Uncertainty loss (w/o HCU).
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5.1 EXPERIMENTAL SETUP Benchmark Environments.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** These include several locomotion tasks from the DeepMind Control Suite (DMC) (Tassa et al., 2018), a set of distinct robotic manipulation tasks from MetaWorld (Yu ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 3, our method, HAUWM, achieves state-of-the-art sample efficiency and final performance on the majority of the tested benchmarks.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Furthermore, HAUWM shows strong performance in the offline RL, where learning from a fixed dataset without online interaction is required.
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Performance of HAUWM and baselines on diverse downstream learning paradigms, includ- ing imitation and offline RL. All scores are normalized returns, reported as ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** First, to verify the necessity of our core contribution, we trained a variant without the Horizon-Calibrated Uncertainty loss (w/o HCU).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | In the imitation learning setting, HAUWM achieves stateof-the-art performance, outperforming baselines in several tasks and performing competitively in Drawer Close. | p. 9 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Performance (RQ1): Does HAUWM lead to improved sample efficiency and final performance on downstream RL tasks compared to state-of-the-art methods? | p. 7 (5 EXPERIMENTS) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** 5.1 EXPERIMENTAL SETUP Benchmark Environments.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** These include several locomotion tasks from the DeepMind Control Suite (DMC) (Tassa et al., 2018), a set of distinct robotic manipulation tasks from MetaWorld (Yu ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 3, our method, HAUWM, achieves state-of-the-art sample efficiency and final performance on the majority of the tested benchmarks.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Furthermore, HAUWM shows strong performance in the offline RL, where learning from a fixed dataset without online interaction is required.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5.1 EXPERIMENTAL SETUP Benchmark Environments.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** These include several locomotion tasks from the DeepMind Control Suite (DMC) (Tassa et al., 2018), a set of distinct robotic manipulation tasks from MetaWorld (Yu ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 3, our method, HAUWM, achieves state-of-the-art sample efficiency and final performance on the majority of the tested benchmarks.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Furthermore, HAUWM shows strong performance in the offline RL, where learning from a fixed dataset without online interaction is required.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (a) Prevailing pre-training methods erroneously compel a world model to predict a single deterministic outcome from action-free video, ignoring the multiple futures that ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Our pre-training framework (left) uses a dynamics ensemble to predict states at variable horizons, conditioned by a temporal embedding, learning a structured representation ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Performance comparison of HAUWM against state-of-the-art baselines on a suite of down- stream manipulation and locomotion tasks. Solid curves represent the mean evaluation ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Ablation results on Kmax. We conduct a series of ablation studies to dissect the contributions of HAUWM's key components and validate our design ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Imagined future rollouts from three randomly selected dynamics heads during action- free pre-training (a) and action-conditioned fine-tuning (b). The model produces diverse, high- ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Performance of HAUWM and baselines on diverse downstream learning paradigms, includ- ing imitation and offline RL. All scores are normalized returns, reported as ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 6: The observation example of each task in the environments: Meta-World (top left), DMC (bottom left), and RoboDesk (right). while open slide demands precise ...
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Table 3: Core hyperparameters for HAUWM pre-training and fine-tuning. action inputs during fine-tuning. This approach significantly improves sample efficiency in down- stream tasks by transferring ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Prevailing pre-training methods erroneously compel a world model to predict a single deterministic outcome from action-free video, ignoring the multiple futures that ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Our pre-training framework (left) uses a dynamics ensemble to predict states at variable horizons, conditioned by a temporal embedding, learning a structured representation ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Performance comparison of HAUWM against state-of-the-art baselines on a suite of down- stream manipulation and locomotion tasks. Solid curves represent the mean evaluation ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Ablation results on Kmax. We conduct a series of ablation studies to dissect the contributions of HAUWM's key components and validate our design ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Imagined future rollouts from three randomly selected dynamics heads during action- free pre-training (a) and action-conditioned fine-tuning (b). The model produces diverse, high- ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Performance of HAUWM and baselines on diverse downstream learning paradigms, includ- ing imitation and offline RL. All scores are normalized returns, reported as ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 6: The observation example of each task in the environments: Meta-World (top left), DMC (bottom left), and RoboDesk (right). while open slide demands precise ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Table 3: Core hyperparameters for HAUWM pre-training and fine-tuning. action inputs during fine-tuning. This approach significantly improves sample efficiency in down- stream tasks by transferring ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5.1 EXPERIMENTAL SETUP Benchmark Environments. | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
 | Task/environment | These include several locomotion tasks from the DeepMind Control Suite (DMC) (Tassa et al., 2018), a set of distinct robotic manipulation tasks from MetaWorld ... | reset, timeout, object/scene variation | p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
@@ -121,8 +121,8 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 | Primary metric/result | Performance (RQ1): Does HAUWM lead to improved sample efficiency and final performance on downstream RL tasks compared to state-of-the-art methods? | numeric claim only at cited anchor | p. 7 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** All observations are rendered as 64×64×3 images.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Method DMC MetaWorld RoboDesk λ = 10.0 0.67±0.13 0.77±0.05 0.61 ± 0.09 λ = 10-1 0.69±0.06 0.80±0.10 0.60 ± 0.05 λ = 10-2 0.70±0.04 0.76±0.07 ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** All observations are rendered as 64×64×3 images.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Method DMC MetaWorld RoboDesk λ = 10.0 0.67±0.13 0.77±0.05 0.61 ± 0.09 λ = 10-1 0.69±0.06 0.80±0.10 0.60 ± 0.05 λ = 10-2 0.70±0.04 0.76±0.07 ...
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4 METHODOLOGY - extractive PDF cue:** To maintain compatibility with this stream's original design, we condition it on relative temporal embeddings ∆te k=1 (as defined in Section 4.2), injecting a Gaussian ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Robustness (RQ4): Can our pre-training world model generalize to diverse downstream learning paradigms?
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We attribute this strong performance to our core contribution: by pre-training a model that explicitly represents temporal uncertainty, the agent builds a more robust and ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** This suggests that the structured uncertainty learned during pre-training provides a robust foundation for mimicking experts, where understanding plausible future states is crucial.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
+- **p. 6 / 4 METHODOLOGY - extractive body cue:** To maintain compatibility with this stream's original design, we condition it on relative temporal embeddings ∆te k=1 (as defined in Section 4.2), injecting a Gaussian ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Robustness (RQ4): Can our pre-training world model generalize to diverse downstream learning paradigms?
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We attribute this strong performance to our core contribution: by pre-training a model that explicitly represents temporal uncertainty, the agent builds a more robust and ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** This suggests that the structured uncertainty learned during pre-training provides a robust foundation for mimicking experts, where understanding plausible future states is crucial.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 10 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (Figure/Table caption), p. 7 (5 EXPERIMENTS), baselines p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 21 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 10 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (Figure/Table caption), p. 7 (5 EXPERIMENTS), baselines p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 21 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

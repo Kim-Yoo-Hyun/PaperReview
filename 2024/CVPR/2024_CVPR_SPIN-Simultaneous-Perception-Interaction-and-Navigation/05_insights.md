@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 In particular, the policy gets proprioception xt and only visible scandots ˜st = F(st, xt) as observation and has to predict both the camera and the robot actions.를 This policy is trained via RL to predict the robot actions from phase 1 policy arobot.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 4. We illustrate one scenario of the simulation benchmark here with many obstacles in a narrow passage. The agent learns to develop whole-body coordination such as the robot's arm movement in ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We find that our method outperforms classical methods and baselines which do not use active vision.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We propose two methods: (1) Coupled Visuomotor Optimization (CVO) learns robot and camera actions at the same time. (p. 3, 2. Method).
+- **Paper-specific mechanism:** We now discuss our approach in detail. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic ... (p. 5, 4. Results and Analysis); the relevant task/metric cue is For this, we test our system on various real-world environments as shown in Figure 1 and benchmark its performance on 2 real-world setups as described in Section 4.2. (p. 5, 4. Results and Analysis). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on the pre-built map and fails entirely. (p. 7, 4.2. Real-world results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic environments..
-3. Compare against the body-reported baseline or a matched simpler baseline: We report the success rate of our method compared with the baseline..
-4. Report the body metric and its denominator/aggregation: 2 we compare success rate and average number of collisions..
-5. Re-run the body-reported ablation/failure condition: This is used to test whether reactive navigation is superior to planning. • NoPointNet: Instead of passing object scandots through a permutation-invariant PointNet architecture, we concatenate them and use a MLP to ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We propose two methods: (1) Coupled Visuomotor Optimization (CVO) learns robot and camera actions at the same time. (p. 3, 2. Method); preserve the objective/update rule: We propose two methods: (1) Coupled Visuomotor Optimization (CVO) learns robot and camera actions at the same time. (p. 3, 2. Method).
+2. Use the paper-reported task/data/environment cue: While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic ... (p. 5, 4. Results and Analysis).
+3. Compare against the reported or matched baseline: While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic ... (p. 5, 4. Results and Analysis).
+4. Report the body metric with its denominator and aggregation: For this, we test our system on various real-world environments as shown in Figure 1 and benchmark its performance on 2 real-world setups as described in Section 4.2. (p. 5, 4. Results and Analysis).
+5. Re-run the reported ablation or stress/failure condition: This is used to test whether reactive navigation is superior to planning. • NoPointNet: Instead of passing object scandots through a permutation-invariant PointNet architecture, we concatenate them and use a ... (p. 5, 3. Experimental Setup); if none is reported, design one around: It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on the pre-built map and fails entirely. (p. 7, 4.2. Real-world results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (2. Method), p. 4 (2. Method), p. 3 (2. Method); the primary result is directionally consistent at p. 7 (4.3. Simulation results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis), p. 6 (4.1. Emergent Behavior), and measure the boundary at p. 7 (4.2. Real-world results), p. 5 (4. Results and Analysis).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 find, outperforms, classical mechanism이 We report the success rate of our method compared with the baseline. 대비 2 we compare success rate and average number of collisions.을 개선하고, Figure 4. We illustrate one scenario of the simulation benchmark here with many obstacles in a ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We propose two methods: (1) Coupled Visuomotor Optimization (CVO) learns robot and camera actions at the same time.), does the paper-specific mechanism (We now discuss our approach in detail.) retain the reported evaluation outcome (For this, we test our system on various real-world environments as shown in Figure 1 and benchmark its ...) when tested against the paper's strongest explicit boundary (It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (For this, we test our system on various real-world environments as shown in Figure 1 and benchmark its ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We now discuss our approach in detail. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** While simulation benchmarks are useful for fair comparison with baselines as well as reproducibility, real-world experimenting is essential for determining the efficacy of our system in truly unstructured and dynamic ... (p. 5, 4. Results and Analysis).
+- **Strongest explicit boundary:** It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on the pre-built map and fails entirely. (p. 7, 4.2. Real-world results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

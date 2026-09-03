@@ -1,8 +1,10 @@
 # Learning Latent Plans from Play
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html.
-> PDF retrieval source: https://arxiv.org/pdf/1903.01973. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html.
+> PDF retrieval source: https://arxiv.org/pdf/1903.01973. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1903.01973
 - Code/Project: https://learning-from-play.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 This presents a challenge for conventional methods-if a slight variation of a skill is needed, e.g. opening a drawer by grasping the handle from the top down rather than bottom up, an ...를 문제로 두고, In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human teleoperates the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 12 (A.2 Architecture Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This presents a challenge for conventional methods-if a slight variation of a skill is needed, e.g. opening a drawer by grasping the handle from the top down rather than bottom ... (p. 1, 1 Introduction).
+- **Actual contribution:** In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** 10 5 0 5 10 15 20 25 Improvement of Play-LMP over Play-GCBC (absolute accuracy % points) rotate left close sliding grasp upright sweep right grasp flat pull out shelf ... (p. 7, 4 Experiments).
+- **Explicit failure boundary:** The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future work. (p. 17, A.5 Limitations).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p045.html; PDF retrieval source: https://arxiv.org/pdf/2402.10329. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p045.html; PDF retrieval source: https://arxiv.org/pdf/2402.10329. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -19,9 +19,9 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Unfortunately, neither ∗Indicates equal contribution is sufficient, as teleoperation requires high setup costs for hardware and expert operators, while human videos exhibit a large embodiment ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Furthermore, when trained with diverse human demonstrations, the final policy exhibits zero-shot generalization to novel environments and objects, achieving a remarkable 70% success rate in ...
+- **p. 3 / III. METHOD - extractive body cue:** It is designed with the following goals in mind: • Portable.
 
 ## Source Evidence Cues
 
@@ -31,7 +31,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | The following sections describe how we enable the above goals through our hardware and policy interface design. | p. 3 (III. METHOD), p. 3 (III. METHOD) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | Universal Manipulation Interface (UMI) is hand-held data collection and policy learning framework that allows direct transfer from in-the-wild human demonstrations to deployable ... | p. 3 (III. METHOD) |
@@ -41,7 +41,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -52,8 +52,8 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 |---|---|---|---|
 | Input/observation | When, combined, GoPro, built-in, IMU, sensor, enable, robust, tracking, under, fast, motion, Second, explore | observation history와 expert trajectory/action | body cue; exact tensor/frame verify |
 | State/latent | When, combined, GoPro, built-in, IMU, sensor, enable, robust, tracking, under | behavior policy와 temporal action context | body cue; notation verify |
-| Action/output | Unfortunately, neither, Indicates, equal, contribution, sufficient, teleoperation, requires, high, setup | predicted action 또는 action chunk | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | imitation or action-distribution loss | equation anchor required |
+| Action/output | UMI, capable, achieving, wide, range, manipulation, tasks, involve, dynamic, bimanual | predicted action 또는 action chunk | body cue; unit/decoder verify |
+| Objective/constraint | not stated or recoverable in the selected PDF body | imitation or action-distribution loss | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -70,9 +70,9 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Capability This task pushes the boundaries of robot manipulation capability from several fronts: 1) it is an ultralong horizon task where each ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Capability This task pushes the boundaries of robot manipulation capability from several fronts: 1) it is an ultralong horizon task where each ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | Despite the videos from each gripper being relocalized separately, the relative pose between two grippers at each time step can be calculated ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | Dish Washing Task The robot needs to execute 7 steps of sequentially dependent actions (turn on faucet, grasp plate, pick up sponge, ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -119,8 +119,17 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), objective 본문 anchor 없음, temporal p. 9 (V. CAPABILITY EXPERIMENTS), p. 6 (125 Hz), p. 1 (Front matter), p. 1 (Abstract), p. 3 (III. METHOD), p. 6 (V. CAPABILITY EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), objective 본문 anchor 없음, temporal p. 9 (V. CAPABILITY EXPERIMENTS), p. 6 (125 Hz), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 3 (III. METHOD), p. 6 (V. CAPABILITY EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Concretely, we employ inference-time latency matching to handle different sensor observation and execution latency, use relative trajectory as action representation to remove the need for precise global action, and finally, ... (p. 2, I. INTRODUCTION).
+- **Objective/update evidence:** The following sections describe how we enable the above goals through our hardware and policy interface design. (p. 3, III. METHOD).
+- **Temporal/runtime evidence:** Capability This task pushes the boundaries of robot manipulation capability from several fronts: 1) it is an ultralong horizon task where each step's success depends on the previous one; 2) ... (p. 9, V. CAPABILITY EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

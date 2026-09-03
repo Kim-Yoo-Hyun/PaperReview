@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.06860; PDF retrieval source: https://arxiv.org/pdf/2106.06860. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.06860; PDF retrieval source: https://arxiv.org/pdf/2106.06860. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (3 Background), p. 4 (3 Background), p. 3 (3 Background),
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | One challenge for offline RL is the problem of extrapolation error [Fujimoto et al., 2019b], which is generalization error in the approximate ... | offline robot transition/trajectory dataset과 deployment MDP | body wording is the source claim |
-| Observation / input | While most off-policy RL algorithms are applicable in the offline setting, they tend to under-perform due to "extrapolation error": an error in ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF |
+| Observation / input | While most off-policy RL algorithms are applicable in the offline setting, they tend to under-perform due to "extrapolation error": an error in ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF body |
 | State / latent | While, most, off-policy, algorithms, applicable, offline, setting, they, tend, under-perform | Q/value 또는 sequence-policy state | notation and tensor shape require body check |
 | Output / action | turn, affects, policy, improvement, where, agents, learn, prefer | dataset-supported action sequence | exact unit/frame/decoder require body check |
 | Target outcome | offline return and deployment safety | offline policy value, OOD safety와 closed-loop success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | dataset transition (s,a,r,s′); body terms: While, most, off-policy, algorithms, applicable, offline, setting, they, tend, under-perform | p. 1 (1 Introduction), p. 3 (3 Background), p. 1 (1 Introduction) |
 | Decision / output variable | dataset-supported policy action; body terms: Consequently, offline, enables, previously, logged, data, leveraging, expert | p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Background) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (3 Background), p. 4 (3 Background), p. 3 (3 Background),
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 7 (3 Background), p. 3 (3 Background), p. 1 (1 Introduction) |
 | Success / guarantee | offline return and deployment safety | p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 18 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 3 (3 Background), p. 4 (3 Background), p. 3 (3 Background),
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Background), p. 4 (3 Background), p. 6 (3 Background)): Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.
+PDF body contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Background), p. 4 (3 Background), p. 6 (3 Background)): Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.
 
 - **p. 2 / 1 Introduction - extractive body cue:** The surprising effectiveness of our minimalist approach suggests that in the context of offline RL, simpler approaches have been left underexplored in favor of more ...
 - **p. 3 / 3 Background - extractive body cue:** We believe these challenges highlight the importance of minimalist approaches, where performance can be easily attributed to algorithmic contributions, rather than entangled with the specifics ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 
 
 ## Position in the Robotics Loop
 
-offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1 Introduction), p. 3 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 3 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (3 Background), p. 4 (3 Background), p. 3 (3 Background), p. 5 (3 Background), p. 6 (3 Background), interface p. 1 (1 Introduction), p. 3 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 4 (3 Background), p. 6 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Background).
+- **Evidence anchors reviewed:** problem p. 3 (3 Background), p. 4 (3 Background), p. 3 (3 Background), p. 5 (3 Background), p. 6 (3 Background), interface p. 1 (1 Introduction), p. 3 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 4 (3 Background), p. 6 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Background).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** One challenge for offline RL is the problem of extrapolation error [Fujimoto et al., 2019b], which is generalization error in the approximate value function, induced by selecting actions not contained ... (p. 3, 3 Background).
+- **Formulation-changing contribution:** Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent. (p. 1, 1 Introduction).
+- **Assumption/failure evidence:** We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub as we found those settings performed poorly. † denotes hyperparameters which deviate ... (p. 15, B Experimental Details).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -1,8 +1,10 @@
 # π0: A Vision-Language-Action Flow Model for General Robot Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p010.pdf
 - Code/Project: https://www.pi.website/research/pi0
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges.를 문제로 두고, ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (IV. THE x MODEL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges. (p. 2, 1. INTRODUCTION).
+- **Actual contribution:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
+- **Evaluation boundary:** Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).

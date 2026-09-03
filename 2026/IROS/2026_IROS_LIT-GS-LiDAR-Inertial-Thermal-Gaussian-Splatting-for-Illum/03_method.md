@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.20424; PDF retrieval source: https://arxiv.org/pdf/2606.20424. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.20424; PDF retrieval source: https://arxiv.org/pdf/2606.20424. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,28 +10,27 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)): LI
 
 ## Method Body Digest
 
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** 2) Thermal feature extraction and matching: For frameto-frame registration and scene-graph construction, we employ SuperPoint [15] for keypoint detection and description and SuperGlue [16] for ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** Given synchronized LiDAR, inertial, and thermal measurements, it jointly estimates camera poses, 3D structure, and Gaussian parameters by minimizing a differentiable objective that couples thermal ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** In each frame, anchors are enforced to contribute a fraction αt of the total geometric weight, while the remaining weight is distributed to non-anchor points ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** (1) To adapt the anchor/non-anchor balance to the motion state of the current frame, we compute a normalized motion score from the linear and angular ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Reliance on visible imagery poses a fundamental limitation.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** This efficiency has rapidly motivated radiance-field mapping for robotics and large-scale environments, yet most existing 3DGS-based mapping pipelines still depend heavily on RGB imagery and ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** 2) Thermal feature extraction and matching: For frameto-frame registration and scene-graph construction, we employ SuperPoint [15] for keypoint detection and description and SuperGlue [16] for ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** Given synchronized LiDAR, inertial, and thermal measurements, it jointly estimates camera poses, 3D structure, and Gaussian parameters by minimizing a differentiable objective that couples thermal ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** In each frame, anchors are enforced to contribute a fraction αt of the total geometric weight, while the remaining weight is distributed to non-anchor points ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** (1) To adapt the anchor/non-anchor balance to the motion state of the current frame, we compute a normalized motion score from the linear and angular ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Reliance on visible imagery poses a fundamental limitation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** This efficiency has rapidly motivated radiance-field mapping for robotics and large-scale environments, yet most existing 3DGS-based mapping pipelines still depend heavily on RGB imagery and ...
 
 ## Design Rationale
 
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** 1) Frame-wise anchor-aware geometric weighting.: To improve robustness under motion, we introduce frame-wise anchor-non-anchor geometric weighting.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Although LiDAR provides metric geometry, existing LiDAR-inertial-visual Gaus- * Equal contribution. † Corresponding Author.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** 1) Frame-wise anchor-aware geometric weighting.: To improve robustness under motion, we introduce frame-wise anchor-non-anchor geometric weighting.
 
 ## Source Evidence Cues
 
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** 2) Thermal feature extraction and matching: For frameto-frame registration and scene-graph construction, we employ SuperPoint [15] for keypoint detection and description and SuperGlue [16] for ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** 2) Thermal feature extraction and matching: For frameto-frame registration and scene-graph construction, we employ SuperPoint [15] for keypoint detection and description and SuperGlue [16] for ...
 - **Detected method headings:** III. METHODOLOGY (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 ... | p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | 2) Thermal feature extraction and matching: For frameto-frame registration and scene-graph construction, we employ SuperPoint [15] for keypoint detection and description and ... | p. 3 (III. METHODOLOGY) |
@@ -41,8 +40,8 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)): LI
 
 ## Objective / Update Rule
 
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** Given synchronized LiDAR, inertial, and thermal measurements, it jointly estimates camera poses, 3D structure, and Gaussian parameters by minimizing a differentiable objective that couples thermal ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** Given synchronized LiDAR, inertial, and thermal measurements, it jointly estimates camera poses, 3D structure, and Gaussian parameters by minimizing a differentiable objective that couples thermal ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -58,10 +57,10 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)): LI
 
 ## Observation–State–Action Interface
 
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** In each frame, anchors are enforced to contribute a fraction αt of the total geometric weight, while the remaining weight is distributed to non-anchor points ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** (1) To adapt the anchor/non-anchor balance to the motion state of the current frame, we compute a normalized motion score from the linear and angular ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Reliance on visible imagery poses a fundamental limitation.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** This efficiency has rapidly motivated radiance-field mapping for robotics and large-scale environments, yet most existing 3DGS-based mapping pipelines still depend heavily on RGB imagery and ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** In each frame, anchors are enforced to contribute a fraction αt of the total geometric weight, while the remaining weight is distributed to non-anchor points ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** (1) To adapt the anchor/non-anchor balance to the motion state of the current frame, we compute a normalized motion score from the linear and angular ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Reliance on visible imagery poses a fundamental limitation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** This efficiency has rapidly motivated radiance-field mapping for robotics and large-scale environments, yet most existing 3DGS-based mapping pipelines still depend heavily on RGB imagery and ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -76,7 +75,7 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)): LI
 
 ## Training vs Inference
 
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -96,13 +95,13 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)): LI
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5. Omni-view ablation experiment demonstration. From the perspectives of front, back, left, and right, the refined perspectives (a1-a4) are compared with the unrefined perspectives ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Reliance on visible imagery poses a fundamental limitation.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Under illumination changes or texture-deficient scenes, photometric cues become unstable, degrading correspondence quality and pose estimation [4].
-- **p. 2 / II. RELATED WORKS - extractive PDF cue:** In contrast, LIT-GS combines illuminationrobust thermal supervision [8, 9] with persistent LiDAR
-- **p. 2 / II. RELATED WORKS - extractive PDF cue:** Learning-based methods improve robustness by jointly learning detection and description, as exemplified by D2-Net [17].
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** 1) Frame-wise anchor-aware geometric weighting.: To improve robustness under motion, we introduce frame-wise anchor-non-anchor geometric weighting.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5. Omni-view ablation experiment demonstration. From the perspectives of front, back, left, and right, the refined perspectives (a1-a4) are compared with the unrefined perspectives ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** LIT-GS integrates three tightly coupled components: • A confidence-aware cross-modal anchoring module that uses uncertainty-tagged visual map points from an upstream FAST-LIVO2 LiDAR-inertial-visual estimator as ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Reliance on visible imagery poses a fundamental limitation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Under illumination changes or texture-deficient scenes, photometric cues become unstable, degrading correspondence quality and pose estimation [4].
+- **p. 2 / II. RELATED WORKS - extractive body cue:** In contrast, LIT-GS combines illuminationrobust thermal supervision [8, 9] with persistent LiDAR
+- **p. 2 / II. RELATED WORKS - extractive body cue:** Learning-based methods improve robustness by jointly learning detection and description, as exemplified by D2-Net [17].
+- **p. 3 / III. METHODOLOGY - extractive body cue:** 1) Frame-wise anchor-aware geometric weighting.: To improve robustness under motion, we introduce frame-wise anchor-non-anchor geometric weighting.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -116,7 +115,7 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)): LI
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), temporal p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (II. RELATED WORKS), p. 2 (II. RELATED WORKS).
+- **Evidence anchors reviewed:** method p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), temporal p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (II. RELATED WORKS), p. 2 (II. RELATED WORKS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

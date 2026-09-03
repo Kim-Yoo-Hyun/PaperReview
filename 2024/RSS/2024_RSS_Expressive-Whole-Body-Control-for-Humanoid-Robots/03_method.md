@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p107.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p107.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p107.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p107.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,26 +10,26 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 
 ## Method Body Digest
 
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space that specifies the ...
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** However, our proposed approach should generalize to similar body forms that differ in the exact number of actuated degrees of freedom. a) Command-conditioned Locomotion Control: ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our work benefits from prior research from the computer graphics community on physics-based character animation [35], and from the robotics community on using deep reinforcement ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space that specifies the ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** However, our proposed approach should generalize to similar body forms that differ in the exact number of actuated degrees of freedom. a) Command-conditioned Locomotion Control: ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our work benefits from prior research from the computer graphics community on physics-based character animation [35], and from the robotics community on using deep reinforcement ...
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
 
 ## Source Evidence Cues
 
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space that specifies the ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space that specifies the ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the ... | p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FORMULATION) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space ... | p. 3 (II. PROBLEM FORMULATION) |
@@ -39,7 +39,7 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 
 ## Objective / Update Rule
 
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (II. PROBLEM FORMULATION).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -55,10 +55,10 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 
 ## Observation–State–Action Interface
 
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space that specifies the ...
-- **p. 3 / II. PROBLEM FORMULATION - extractive PDF cue:** However, our proposed approach should generalize to similar body forms that differ in the exact number of actuated degrees of freedom. a) Command-conditioned Locomotion Control: ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our work benefits from prior research from the computer graphics community on physics-based character animation [35], and from the robotics community on using deep reinforcement ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We consider humanoid motion control as learning a goalconditioned motor policy π : G ×S 7→A, where G is the goal space that specifies the ...
+- **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** However, our proposed approach should generalize to similar body forms that differ in the exact number of actuated degrees of freedom. a) Command-conditioned Locomotion Control: ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our work benefits from prior research from the computer graphics community on physics-based character animation [35], and from the robotics community on using deep reinforcement ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -93,13 +93,13 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 
 ## Failure and Ablation Link
 
-- **p. 5 / IV. RESULTS - extractive PDF cue:** We can see that our policy can track roll, pitch and root height well without being affected by walking velocity.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Our baselines are as follows: • ExBody + AMP: This baseline uses an AMP reward to encourage the policy's transitions to be similar to those ...
-- **p. 7 / IV. RESULTS - extractive PDF cue:** ExBody + AMP NoReg tries to replace the regularization terms in Tab.
-- **p. 9 / VII. LIMITATIONS - extractive PDF cue:** Auto recovery and initialization could be explored to reduce the cost of doing experiments.
-- **p. 9 / VI. DISCUSSIONS - extractive PDF cue:** We introduce a method designed to enable a humanoid robot to track expressive upper body motions while ensuring the maintenance of robust locomotion capabilities in ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Note that although Random Sample looks better than Motion Sample, the heatmap does not consider the sample density.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** Why does not ExBody do full DoF tracking?
+- **p. 5 / IV. RESULTS - extractive body cue:** We can see that our policy can track roll, pitch and root height well without being affected by walking velocity.
+- **p. 5 / IV. RESULTS - extractive body cue:** Our baselines are as follows: • ExBody + AMP: This baseline uses an AMP reward to encourage the policy's transitions to be similar to those ...
+- **p. 7 / IV. RESULTS - extractive body cue:** ExBody + AMP NoReg tries to replace the regularization terms in Tab.
+- **p. 9 / VII. LIMITATIONS - extractive body cue:** Auto recovery and initialization could be explored to reduce the cost of doing experiments.
+- **p. 9 / VI. DISCUSSIONS - extractive body cue:** We introduce a method designed to enable a humanoid robot to track expressive upper body motions while ensuring the maintenance of robust locomotion capabilities in ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Note that although Random Sample looks better than Motion Sample, the heatmap does not consider the sample density.
+- **p. 6 / IV. RESULTS - extractive body cue:** Why does not ExBody do full DoF tracking?
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -113,7 +113,7 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FORMULATION), objective p. 3 (II. PROBLEM FORMULATION), temporal p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 8 (IV. RESULTS), p. 8 (IV. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FORMULATION), objective p. 3 (II. PROBLEM FORMULATION), temporal p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 8 (IV. RESULTS), p. 8 (IV. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

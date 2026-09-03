@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02247; PDF retrieval source: https://arxiv.org/pdf/2503.02247. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02247; PDF retrieval source: https://arxiv.org/pdf/2503.02247. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation metrics. | p. 6 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | SPL quantifies the agent's navigation efficiency by calculating the inverse ratio of the actual path length traversed to the optimal path length weighted by ... | p. 6 (IV. EXPERIMENTS) |
@@ -55,7 +55,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Datasets and Evaluation Metrics Datasets The HM3D v0.1 [38] is used in the Habitat 2022 ObjectNav challenge, providing 2000 validation episodes on 20 validation ... | embodiment, simulator version and control stack | p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
 | Task/environment | MP3D [19] contains 11 high-fidelity scenes and 2195 episodes for validation, with 21 categories of object goals. | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTS) |
@@ -140,7 +140,16 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** But textual information cannot accurately describe the spatial relationships in the scene, and it is difficult for LLM to make good spatial decisions.
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, since VLM is trained on egocentric image data, it does not take advantage of VLM's powerful egocentric reasoning ability.
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ... (p. 6, IV. EXPERIMENTS).
+- **Metric evidence:** Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation metrics. (p. 6, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ... (p. 6, IV. EXPERIMENTS).
+- **Failure/negative evidence:** 2) Goal-approaching Stage: Due to the limitations of the existing VLMs' capability, we do not rely on the VLM to estimate the stopping condition directly from the observed image. (p. 5, III. WMNAV APPROACH).

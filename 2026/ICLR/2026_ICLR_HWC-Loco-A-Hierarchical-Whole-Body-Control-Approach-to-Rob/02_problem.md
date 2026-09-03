@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011640; PDF retrieval source: https://arxiv.org/pdf/2503.00923. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011640; PDF retrieval source: https://arxiv.org/pdf/2503.00923. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, excessive regularization can greatly affect the efficiency of control policy, and unstructured randomization often fails to capture safety-critical patterns in real-world ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | For the High-level policy, the input is the same set of observations as used by the low-level policies, with the output being ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | For the High-level policy, the input is the same set of observations as used by the low-level policies, with the output being ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | High-level, policy, input, same, observations, low-level, policies, output, being, two-dimensional | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
 | Output / action | Proprioception, Unitree, R65, denotes, internal, state, robot, including | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
 | Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | whole-body pose/contact/reference state; body terms: High-level, policy, input, same, observations, low-level, policies, output, being, two-dimensional | p. 16 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details) |
 | Decision / output variable | joint/whole-body action; body terms: develop, reliable, locomotion, policy, capable, generalizing, training, deployment | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 15 (A.2 Implementation Details) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 16 (A.2 Implementation Details), p. 16 (A.2 Implementation Details), p. 17 (A.2 Implementation Details) |
 | Success / guarantee | motion/task success and recovery | p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 17 (A.2 Implementation Details)): To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified environmental dynamics.
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 17 (A.2 Implementation Details)): To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified environmental dynamics.
 
 - **p. 2 / 1 Introduction - extractive body cue:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario.
 - **p. 15 / A.2 Implementation Details - extractive body cue:** To address this, we introduce a terrain curriculum method [63].
@@ -67,12 +67,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 15 (A
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 16 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 16 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 16 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 2 (1 Introduction), objective p. 16 (A.2 Implementation Details), p. 16 (A.2 Implementation Details).
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 16 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 2 (1 Introduction), objective p. 16 (A.2 Implementation Details), p. 16 (A.2 Implementation Details).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, excessive regularization can greatly affect the efficiency of control policy, and unstructured randomization often fails to capture safety-critical patterns in real-world applications. (p. 2, 1 Introduction).
+- **Formulation-changing contribution:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

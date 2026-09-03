@@ -1,8 +1,10 @@
 # Octopi: Object Property Reasoning with Large Tactile-Language Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2405.02794.
-> PDF retrieval source: https://arxiv.org/pdf/2405.02794. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2405.02794.
+> PDF retrieval source: https://arxiv.org/pdf/2405.02794. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2405.02794
 - Code/Project: https://octopi-tactile-lvlm.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,7 +35,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** PHYSICLEAR and OCTOPI (with key contributions starred).
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Dataset Property Label Availability Property Diversity Object Diversity Material Diversity Hardness Dataset (2016) [59] Yes (only hardness) Yes Yes Medium Clothing Dataset (2018) [61] Yes ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness. arXiv:2405.02794v2 ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness.
 - **p. 1 / Abstract - extractive body cue:** In this work, we investigate combining tactile perception with language, which enables embodied systems to obtain physical properties through interaction and apply commonsense reasoning.
 - **p. 4 / III. PHYSICLEAR - TACTILE AND PHYSICAL - extractive body cue:** Our framework consists of CLIP's visual encoder, a projection module with two linear layers, and Vicuna v1.5 as the LLM.
 - **p. 4 / IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED - extractive body cue:** We leverage the capabilities of pre-trained vision models, notably the CLIP [39] visual encoder ViT-L/14, as the foundation for our tactile encoder to derive meaningful ...
@@ -53,7 +55,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** PHYSICLEAR and OCTOPI (with key contributions starred).
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Dataset Property Label Availability Property Diversity Object Diversity Material Diversity Hardness Dataset (2016) [59] Yes (only hardness) Yes Yes Medium Clothing Dataset (2018) [61] Yes ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness. arXiv:2405.02794v2 ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness.
 - **p. 1 / Abstract - extractive body cue:** In this work, we investigate combining tactile perception with language, which enables embodied systems to obtain physical properties through interaction and apply commonsense reasoning.
 - **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** For both OCTOPI7b and OCTOPI-13b, including the object property significantly improves performance, which supports our overall hypothesis that leveraging these properties is helpful for these ...
 - **p. 8 / VI. EXPERIMENTAL RESULTS - extractive body cue:** For avocado property prediction, OCTOPI-13b achieves an accuracy of 35.50%, which is significantly higher than that of the random baseline (3.70%).
@@ -79,3 +81,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 To bridge this gap, we contribute the PHYSICLEAR dataset, which comprises GelSight images on a variety of real world objects, along with object labels and part annotations.를 문제로 두고, PHYSICLEAR and OCTOPI (with key contributions starred).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To bridge this gap, we contribute the PHYSICLEAR dataset, which comprises GelSight images on a variety of real world objects, along with object labels and part annotations. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** PHYSICLEAR and OCTOPI (with key contributions starred). (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** To address the above questions, we evaluated OCTOPI using (i) accuracy on the physical understanding tasks in PHYSICLEAR's test set, (ii) accuracy on scenario reasoning tasks, (iii) task success rate ... (p. 6, VI. EXPERIMENTAL RESULTS).
+- **Explicit failure boundary:** The choice of these specific properties was also informed by the data collection methodology [27], tailored to the limitations and strengths of the GelSight sensor, including considerations for its sensitivity ... (p. 3, III. PHYSICLEAR - TACTILE AND PHYSICAL).

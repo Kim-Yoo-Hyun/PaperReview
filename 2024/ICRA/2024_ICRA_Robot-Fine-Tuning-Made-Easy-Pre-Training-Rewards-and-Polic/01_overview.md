@@ -1,8 +1,10 @@
 # Robot Fine-Tuning Made Easy: Pre-Training Rewards and Policies for Autonomous Real-World Reinforcement Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ieeexplore.ieee.org/document/10610421/.
-> PDF retrieval source: https://arxiv.org/pdf/2310.15145. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ieeexplore.ieee.org/document/10610421/.
+> PDF retrieval source: https://arxiv.org/pdf/2310.15145. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2310.15145
 - Code/Project: https://robofume.github.io
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -32,8 +34,8 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 ## Core Idea
 
 - **p. 3 / III. PRELIMINARIES - extractive body cue:** Our method assumes access to a prior dataset Dprior = ∪N j=1Dj = ∪N j=1{(sj i, aj i, s′j i )}K i=1, which consists of ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a system that enables autonomous and efficient real-world robot learning.
 - **p. 1 / Abstract - extractive body cue:** In a diverse set of five real robot manipulation tasks, we show that our method can incorporate data from an existing robot dataset collected at ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, our goal is to address these two challenges and develop a practical framework that enables robot fine-tuning with minimal time and human ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We evaluate our framework by pre-training it on the Bridge dataset [19] and testing it on a diverse set of real-world downstream tasks: cloth folding, ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We perform more quantitative experiments in a simulation setup, where we illustrate that our method outperforms imitation learning and offline RL methods that either do ...
 - **p. 3 / IV. ROBOFUME - extractive body cue:** The policy then takes as inputs a concatenation of the encoded image observation ϕ(simg), task representation z, and proprioceptive information sp, processes the concatenated vector ...
@@ -52,8 +54,8 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 ## Main Claims and Actual Contribution
 
 - **p. 3 / III. PRELIMINARIES - extractive body cue:** Our method assumes access to a prior dataset Dprior = ∪N j=1Dj = ∪N j=1{(sj i, aj i, s′j i )}K i=1, which consists of ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a system that enables autonomous and efficient real-world robot learning.
 - **p. 1 / Abstract - extractive body cue:** In a diverse set of five real robot manipulation tasks, we show that our method can incorporate data from an existing robot dataset collected at ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, our goal is to address these two challenges and develop a practical framework that enables robot fine-tuning with minimal time and human ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We evaluate our framework by pre-training it on the Bridge dataset [19] and testing it on a diverse set of real-world downstream tasks: cloth folding, ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We perform more quantitative experiments in a simulation setup, where we illustrate that our method outperforms imitation learning and offline RL methods that either do ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** After 30k steps of autonomous online interaction, our method shows relative improvement of 51% upon the pre-trained performance, and outperforms BC by 58% on an ...
@@ -82,3 +84,12 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 However, numerous challenges arise when using this recipe in practice.를 문제로 두고, Our method assumes access to a prior dataset Dprior = ∪N j=1Dj = ∪N j=1{(sj i, aj i, s′j i )}K i=1, which consists of demonstrations of N different tasks τ1, . ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 3 (III. PRELIMINARIES), p. 3 (IV. ROBOFUME) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, numerous challenges arise when using this recipe in practice. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** We evaluate our framework by pre-training it on the Bridge dataset [19] and testing it on a diverse set of real-world downstream tasks: cloth folding, cloth covering, sponge pickand-place, placing ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** After 30k steps of autonomous online interaction, our method shows relative improvement of 51% upon the pre-trained performance, and outperforms BC by 58% on an average. (p. 5, V. EXPERIMENTS).
+- **Explicit failure boundary:** All tasks use 50 forward and 50 backward demos for the target task, and fewer than 20 combined trajectories of failures. (p. 5, V. EXPERIMENTS).

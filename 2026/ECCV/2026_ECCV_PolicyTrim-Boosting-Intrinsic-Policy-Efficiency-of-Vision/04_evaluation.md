@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.22540; PDF retrieval source: https://arxiv.org/pdf/2606.22540. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.22540; PDF retrieval source: https://arxiv.org/pdf/2606.22540. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 
 ## Evaluation Body Digest
 
-- **p. 9 / 4 Experiment - extractive PDF cue:** We evaluate on three diverse benchmarks including LIBERO [25], ManiSkill [41], Meta-World [30] and further validate its sim-to-real transfer on a physical robot platform.
-- **p. 9 / 4 Experiment - extractive PDF cue:** Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. • ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR is success rate in % and Step ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Evaluation of π0.5, OpenVLA-OFT, and GR00T on the four subsets of the LIBERO benchmark. We report average success rate (SR), average physical steps ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Real-world deployment results. Standard uses a fixed target pose, while Dynamic perturbs the target during grasping. Values under Standard and Dynamic are success ...
-- **p. 26 / Figure/Table caption - extractive PDF cue:** Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training.
+- **p. 9 / 4 Experiment - extractive body cue:** We evaluate on three diverse benchmarks including LIBERO [25], ManiSkill [41], Meta-World [30] and further validate its sim-to-real transfer on a physical robot platform.
+- **p. 9 / 4 Experiment - extractive body cue:** Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. • ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
+- **p. 25 / Figure/Table caption - extractive body cue:** Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR is success rate in % and Step ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Evaluation of π0.5, OpenVLA-OFT, and GR00T on the four subsets of the LIBERO benchmark. We report average success rate (SR), average physical steps ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup.
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Real-world deployment results. Standard uses a fixed target pose, while Dynamic perturbs the target during grasping. Values under Standard and Dynamic are success ...
+- **p. 26 / Figure/Table caption - extractive body cue:** Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. ... | p. 9 (4 Experiment) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup. | p. 12 (Figure/Table caption) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 4 Experiment - extractive PDF cue:** We evaluate on three diverse benchmarks including LIBERO [25], ManiSkill [41], Meta-World [30] and further validate its sim-to-real transfer on a physical robot platform.
-- **p. 9 / 4 Experiment - extractive PDF cue:** Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. • ...
+- **p. 9 / 4 Experiment - extractive body cue:** We evaluate on three diverse benchmarks including LIBERO [25], ManiSkill [41], Meta-World [30] and further validate its sim-to-real transfer on a physical robot platform.
+- **p. 9 / 4 Experiment - extractive body cue:** Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. • ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of PolicyTrim. PolicyTrim is a two-stage RL post-training frame- work that enhances intrinsic policy efficiency of VLA models. The first stage progres- ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Evaluation of π0.5, OpenVLA-OFT, and GR00T on the four subsets of the LIBERO benchmark. We report average success rate (SR), average physical steps ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Evaluation on ManiSkill and Meta-World. We report average success rate (SR), average physical steps (Stotal), average action chunk execution length (hchunk), and end-to-end ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 3: Qualitative comparison on randomly sampled LIBERO tasks. Under identi- cal configurations, the baseline incurs redundant physical actions, whereas PolicyTrim achieves task completion in ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Real-world deployment results. Standard uses a fixed target pose, while Dynamic perturbs the target during grasping. Values under Standard and Dynamic are success ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study of different components on LIBERO-Spatial benchmarks. Reliable Chunk Step-Saving Group-Anchored SR Stotal hchunk Spd↑
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of PolicyTrim. PolicyTrim is a two-stage RL post-training frame- work that enhances intrinsic policy efficiency of VLA models. The first stage progres- ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Evaluation of π0.5, OpenVLA-OFT, and GR00T on the four subsets of the LIBERO benchmark. We report average success rate (SR), average physical steps ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Evaluation on ManiSkill and Meta-World. We report average success rate (SR), average physical steps (Stotal), average action chunk execution length (hchunk), and end-to-end ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 3: Qualitative comparison on randomly sampled LIBERO tasks. Under identi- cal configurations, the baseline incurs redundant physical actions, whereas PolicyTrim achieves task completion in ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup.
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Real-world deployment results. Standard uses a fixed target pose, while Dynamic perturbs the target during grasping. Values under Standard and Dynamic are success ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Ablation study of different components on LIBERO-Spatial benchmarks. Reliable Chunk Step-Saving Group-Anchored SR Stotal hchunk Spd↑
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate on three diverse benchmarks including LIBERO [25], ManiSkill [41], Meta-World [30] and further validate its sim-to-real transfer on a physical robot platform. | embodiment, simulator version and control stack | p. 9 (4 Experiment), p. 9 (4 Experiment) |
 | Task/environment | Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. ... | reset, timeout, object/scene variation | p. 9 (4 Experiment) |
 | Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 5 (3 Method), p. 4 (X. Wang et al) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 1 (Front matter), p. 15 (2.48 Method) |
+| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 1 (Body text (section not recovered)), p. 15 (2.48 Method) |
 
 ## Metrics and Success Definition
 
@@ -117,7 +117,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 | Primary metric/result | Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup. | numeric claim only at cited anchor | p. 12 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4 Experiment - extractive PDF cue:** We use a group size of G = 8 trajectories for each task in every iteration.
+- **p. 9 / 4 Experiment - extractive body cue:** We use a group size of G = 8 trajectories for each task in every iteration.
 
 ## Generalization and Failure Cases
 
@@ -151,13 +151,13 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 
 ## Limitations and Verification Questions
 
-- **p. 27 / Figure/Table caption - extractive PDF cue:** Fig. 7: Failure case without group-anchored stability regularization. The pol- icy approaches the bowl with insufficient clearance, causing a collision and task failure. In this ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Fig. 6: Real-world execution visualization on the FlipMug task. C.5 Robustness under Visual Perturbations We further evaluate PolicyTrim under visual distribution shifts in simulation. Specifically, ...
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR is success rate in % and Step ...
-- **p. 26 / Figure/Table caption - extractive PDF cue:** Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training.
+- **p. 27 / Figure/Table caption - extractive body cue:** Fig. 7: Failure case without group-anchored stability regularization. The pol- icy approaches the bowl with insufficient clearance, causing a collision and task failure. In this ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
+- **p. 25 / Figure/Table caption - extractive body cue:** Fig. 6: Real-world execution visualization on the FlipMug task. C.5 Robustness under Visual Perturbations We further evaluate PolicyTrim under visual distribution shifts in simulation. Specifically, ...
+- **p. 25 / Figure/Table caption - extractive body cue:** Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR is success rate in % and Step ...
+- **p. 26 / Figure/Table caption - extractive body cue:** Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training.
 
-- **PDF anchors reviewed:** datasets p. 9 (4 Experiment), p. 9 (4 Experiment), metrics p. 2 (Figure/Table caption), p. 9 (4 Experiment), p. 25 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 11 (Figure/Table caption), p. 23 (Figure/Table caption), p. 26 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 21 (B Implementation Details), results p. 9 (4 Experiment), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 25 (Figure/Table caption), p. 11 (Figure/Table caption), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (4 Experiment), p. 9 (4 Experiment), metrics p. 2 (Figure/Table caption), p. 9 (4 Experiment), p. 25 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 11 (Figure/Table caption), p. 23 (Figure/Table caption), p. 26 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 21 (B Implementation Details), results p. 9 (4 Experiment), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 25 (Figure/Table caption), p. 11 (Figure/Table caption), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

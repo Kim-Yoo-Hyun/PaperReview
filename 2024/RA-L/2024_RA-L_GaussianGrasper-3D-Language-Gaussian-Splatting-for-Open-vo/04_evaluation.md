@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.09637; PDF retrieval source: https://arxiv.org/pdf/2403.09637. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.09637; PDF retrieval source: https://arxiv.org/pdf/2403.09637. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENT | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results of segmentation and localization are shown in Table I where our method significantly outperforms other approaches. | p. 6 (IV. EXPERIMENT) |
 | IV. EXPERIMENT | EMPIRICAL / SOURCE-REPORTED EVALUATION | Leveraging the normal filter significantly increases the success rate by 7.7%, further demonstrating the effectiveness of our proposed normal-guided grasp. | p. 7 (IV. EXPERIMENT) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 2) Data Collection and Processing: We first use the robot arm equipped with a Realsense D455 to scan the desktop scene from 16 viewpoints. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT) |
 | Task/environment | We set up our system in 10 open desktop scenes with a total of 44 objects (40 are graspable) where we execute language-guided manipulation ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT) |
@@ -145,7 +145,16 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 - **p. 7 / V. LIMITATION - extractive body cue:** One limitation is that our reconstructed scene remains static.
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), baselines p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), baselines p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative ... (p. 6, IV. EXPERIMENT).
+- **Metric evidence:** Method Grasping Success Rate (%) LSeg + Depth[45] 26.7 LERF + AnyGrasp[16] 55.8 Ours w/o. (p. 7, IV. EXPERIMENT).
+- **Baseline/ablation evidence:** Our baselines are Lseg [45] and LERF [16] (All mention of LERF in our experiments includes an extra depth supervision to ensure a fair comparison with our method.) In qualitative ... (p. 6, IV. EXPERIMENT).
+- **Failure/negative evidence:** Another limitation is that our method fails to estimate the depth and normal of transparent objects due to the lack of ground truth. (p. 8, V. LIMITATION).

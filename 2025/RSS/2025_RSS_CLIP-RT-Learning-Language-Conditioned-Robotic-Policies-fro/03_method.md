@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p016.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p016.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p016.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p016.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (C. In-Domain Data Collection), p. 2 (Abstract),
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Stochastic Trajectory Augmentation (STA) aims to augment the demonstration data collected from language-based teleoperation, Before delving into the details, we fist define ... | p. 4 (C. In-Domain Data Collection), p. 2 (Abstract) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | First, we propose CLIP-RT, 4 vision-language-action (VLA) model that learns languageconditioned policies from natural language supervision. | p. 2 (Abstract), p. 2 (Abstract) |
@@ -135,8 +135,17 @@ PDF body method statement (p. 4 (C. In-Domain Data Collection), p. 2 (Abstract),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 1 (Abstract), p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), objective p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 3 (A. Preliminaries), p. 2 (A. Preliminaries), p. 7 (256 33%), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 2 (Abstract), temporal p. 9 (B. Limitations and Future Work), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 4 (C. In-Domain Data Collection), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 1 (Abstract), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 1 (Abstract), p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), objective p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 3 (A. Preliminaries), p. 2 (A. Preliminaries), p. 7 (256 33%), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 2 (Abstract), temporal p. 9 (B. Limitations and Future Work), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 4 (C. In-Domain Data Collection), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 1 (Abstract), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At ... (p. 2, A. Preliminaries).
+- **Objective/update evidence:** During deployment, humans provide language feedback to correct robotic behaviors, and policies are updated based on this feedback. (p. 2, Abstract).
+- **Temporal/runtime evidence:** Finally, the camera captures the cutent image observation and the robot executes the translated action, Consequently, we can obtain a sequence of tuples {(v4,6:,t,0:)}*., containing visual observation, We collect 10 ... (p. 4, C. In-Domain Data Collection).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (34 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2204.01691; PDF retrieval source: https://arxiv.org/pdf/2204.01691. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2204.01691; PDF retrieval source: https://arxiv.org/pdf/2204.01691. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.1 Results - extractive PDF cue:** The robot interacts with a large portion of the kitchen environment and successfully performs sequences of manipulation and navigation skills.
-- **p. 7 / 5.1 Results - extractive PDF cue:** These tasks require PaLMSayCan to plan many steps without error and for the robot to navigate and interact with a significant portion of the kitchen.
-- **p. 8 / 5.1 Results - extractive PDF cue:** This requires long-horizon reasoning over a required order, an abstract understanding of the instruction, and knowledge of both the environment and robot's capabilities.
-- **p. 11 / 5.1 Results - extractive PDF cue:** The environment is shown in Figure 8 and is a tabletop with a UR5 robot and randomly generated sets of colored blocks and bowls.
-- **p. 11 / 5.1 Results - extractive PDF cue:** Step 1. pick up the blue block and place it in the blue bowl Step 2. pick up the green block and place it in ...
-- **p. 8 / 5.1 Results - extractive PDF cue:** We have shown that PaLM-SayCan responds "I would: 1. find a sponge, 2. pick up the sponge, 3. bring it to you, 4. done" and ...
-- **p. 9 / 5.1 Results - extractive PDF cue:** Though FLAN was fine-tuned on instruction answering, the broader and improved dataset for PaLM may make up for this difference in training.
-- **p. 9 / 5.1 Results - extractive PDF cue:** This result indicates a potential future where the fields of language processing and robotics can collaboratively improve each other and scale together.
+- **p. 7 / 5.1 Results - extractive body cue:** The robot interacts with a large portion of the kitchen environment and successfully performs sequences of manipulation and navigation skills.
+- **p. 7 / 5.1 Results - extractive body cue:** These tasks require PaLMSayCan to plan many steps without error and for the robot to navigate and interact with a significant portion of the kitchen.
+- **p. 8 / 5.1 Results - extractive body cue:** This requires long-horizon reasoning over a required order, an abstract understanding of the instruction, and knowledge of both the environment and robot's capabilities.
+- **p. 11 / 5.1 Results - extractive body cue:** The environment is shown in Figure 8 and is a tabletop with a UR5 robot and randomly generated sets of colored blocks and bowls.
+- **p. 11 / 5.1 Results - extractive body cue:** Step 1. pick up the blue block and place it in the blue bowl Step 2. pick up the green block and place it in ...
+- **p. 8 / 5.1 Results - extractive body cue:** We have shown that PaLM-SayCan responds "I would: 1. find a sponge, 2. pick up the sponge, 3. bring it to you, 4. done" and ...
+- **p. 9 / 5.1 Results - extractive body cue:** Though FLAN was fine-tuned on instruction answering, the broader and improved dataset for PaLM may make up for this difference in training.
+- **p. 9 / 5.1 Results - extractive body cue:** This result indicates a potential future where the fields of language processing and robotics can collaboratively improve each other and scale together.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 2: Success rates of instructions by family. PaLM-SayCan achieves a planning success rate of 84% and execution success rate of 74% in the ... | p. 9 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3: Success rates of instructions by family. SayCan achieves a planning success rate of 84% and execution success rate of 74% with PaLM ... | p. 9 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.1 Results - extractive PDF cue:** The robot interacts with a large portion of the kitchen environment and successfully performs sequences of manipulation and navigation skills.
-- **p. 7 / 5.1 Results - extractive PDF cue:** These tasks require PaLMSayCan to plan many steps without error and for the robot to navigate and interact with a significant portion of the kitchen.
-- **p. 8 / 5.1 Results - extractive PDF cue:** This requires long-horizon reasoning over a required order, an abstract understanding of the instruction, and knowledge of both the environment and robot's capabilities.
-- **p. 11 / 5.1 Results - extractive PDF cue:** The environment is shown in Figure 8 and is a tabletop with a UR5 robot and randomly generated sets of colored blocks and bowls.
-- **p. 11 / 5.1 Results - extractive PDF cue:** Step 1. pick up the blue block and place it in the blue bowl Step 2. pick up the green block and place it in ...
-- **p. 8 / 5.1 Results - extractive PDF cue:** We have shown that PaLM-SayCan responds "I would: 1. find a sponge, 2. pick up the sponge, 3. bring it to you, 4. done" and ...
-- **p. 9 / 5.1 Results - extractive PDF cue:** Though FLAN was fine-tuned on instruction answering, the broader and improved dataset for PaLM may make up for this difference in training.
-- **p. 9 / 5.1 Results - extractive PDF cue:** This result indicates a potential future where the fields of language processing and robotics can collaboratively improve each other and scale together.
+- **p. 7 / 5.1 Results - extractive body cue:** The robot interacts with a large portion of the kitchen environment and successfully performs sequences of manipulation and navigation skills.
+- **p. 7 / 5.1 Results - extractive body cue:** These tasks require PaLMSayCan to plan many steps without error and for the robot to navigate and interact with a significant portion of the kitchen.
+- **p. 8 / 5.1 Results - extractive body cue:** This requires long-horizon reasoning over a required order, an abstract understanding of the instruction, and knowledge of both the environment and robot's capabilities.
+- **p. 11 / 5.1 Results - extractive body cue:** The environment is shown in Figure 8 and is a tabletop with a UR5 robot and randomly generated sets of colored blocks and bowls.
+- **p. 11 / 5.1 Results - extractive body cue:** Step 1. pick up the blue block and place it in the blue bowl Step 2. pick up the green block and place it in ...
+- **p. 8 / 5.1 Results - extractive body cue:** We have shown that PaLM-SayCan responds "I would: 1. find a sponge, 2. pick up the sponge, 3. bring it to you, 4. done" and ...
+- **p. 9 / 5.1 Results - extractive body cue:** Though FLAN was fine-tuned on instruction answering, the broader and improved dataset for PaLM may make up for this difference in training.
+- **p. 9 / 5.1 Results - extractive body cue:** This result indicates a potential future where the fields of language processing and robotics can collaboratively improve each other and scale together.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: LLMs have not interacted with their environment and observed the outcome of their responses, and thus are not grounded in the world. SayCan ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: A value function module (a) is queried to form a value function space of action primitives based on the current observation. Visualizing "pick" ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Given a high-level instruction, SayCan combines probabilities from a LLM (the probability that a skill is useful for the instruction) with the prob
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: The experiments were performed in an office kitchen and a mock kitchen mirroring this setup, with 5 locations and 15 objects. The robot ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: List of instruction family definitions: We evaluate the algorithm on 101 instructions. We group the instructions into different families, with each family focusing ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Timelapse of rollouts to two long-horizon queries. The robot interacts with a large portion of the kitchen environment and successfully performs sequences of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 16. We believe such real-time and clear interpretability opens avenues to more interactive operation. 7
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Visualization of PaLM-SayCan's decision making, where the top combined score chooses the correct skill. When comparing the performance of different instruction families in ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: LLMs have not interacted with their environment and observed the outcome of their responses, and thus are not grounded in the world. SayCan ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: A value function module (a) is queried to form a value function space of action primitives based on the current observation. Visualizing "pick" ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Given a high-level instruction, SayCan combines probabilities from a LLM (the probability that a skill is useful for the instruction) with the prob
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: The experiments were performed in an office kitchen and a mock kitchen mirroring this setup, with 5 locations and 15 objects. The robot ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: List of instruction family definitions: We evaluate the algorithm on 101 instructions. We group the instructions into different families, with each family focusing ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Timelapse of rollouts to two long-horizon queries. The robot interacts with a large portion of the kitchen environment and successfully performs sequences of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 16. We believe such real-time and clear interpretability opens avenues to more interactive operation. 7
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Visualization of PaLM-SayCan's decision making, where the top combined score chooses the correct skill. When comparing the performance of different instruction families in ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The robot interacts with a large portion of the kitchen environment and successfully performs sequences of manipulation and navigation skills. | embodiment, simulator version and control stack | p. 7 (5.1 Results), p. 7 (5.1 Results) |
 | Task/environment | These tasks require PaLMSayCan to plan many steps without error and for the robot to navigate and interact with a significant portion of the ... | reset, timeout, object/scene variation | p. 7 (5.1 Results), p. 8 (5.1 Results) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 | Primary metric/result | Table 3: Success rates of instructions by family. SayCan achieves a planning success rate of 84% and execution success rate of 74% with PaLM ... | numeric claim only at cited anchor | p. 9 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 5.1 Results - extractive PDF cue:** When comparing the performance of different instruction families in Table 2 (see Table 1 for an explanation of families), we see that the natural language ...
-- **p. 5 / 2 Preliminaries - extractive PDF cue:** Algorithm 1 SayCan Given: A high level instruction i, state s0, and a set of skills Π and their language descriptions ℓΠ 1: n = ...
-- **p. 6 / 2 Preliminaries - extractive PDF cue:** Inspired by common skills one might pose to a robot in a kitchen environment, we propose 551 skills that span seven skill families and 17 ...
-- **p. 6 / 2 Preliminaries - extractive PDF cue:** 5 Experimental Evaluation Figure 4: The experiments were performed in an office kitchen and a mock kitchen mirroring this setup, with 5 locations and 15 ...
-- **p. 6 / 2 Preliminaries - extractive PDF cue:** We use 15 objects commonly found in an office kitchen and 5 known locations with semantic meaning (two counters, a table, a trash can, and ...
-- **p. 6 / 2 Preliminaries - extractive PDF cue:** The robot used is a mobile manipulator from Everyday Robots 2 with a 7 degree-of-freedom arm and a two-fingered gripper.
+- **p. 8 / 5.1 Results - extractive body cue:** When comparing the performance of different instruction families in Table 2 (see Table 1 for an explanation of families), we see that the natural language ...
+- **p. 5 / 2 Preliminaries - extractive body cue:** Algorithm 1 SayCan Given: A high level instruction i, state s0, and a set of skills Π and their language descriptions ℓΠ 1: n = ...
+- **p. 6 / 2 Preliminaries - extractive body cue:** Inspired by common skills one might pose to a robot in a kitchen environment, we propose 551 skills that span seven skill families and 17 ...
+- **p. 6 / 2 Preliminaries - extractive body cue:** 5 Experimental Evaluation Figure 4: The experiments were performed in an office kitchen and a mock kitchen mirroring this setup, with 5 locations and 15 ...
+- **p. 6 / 2 Preliminaries - extractive body cue:** We use 15 objects commonly found in an office kitchen and 5 known locations with semantic meaning (two counters, a table, a trash can, and ...
+- **p. 6 / 2 Preliminaries - extractive body cue:** The robot used is a mobile manipulator from Everyday Robots 2 with a 7 degree-of-freedom arm and a two-fingered gripper.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 12 / 7 Related Work - extractive PDF cue:** Future work that extends the repertoire of skills and improves their robustness would mitigate this limitation.
-- **p. 12 / 7 Related Work - extractive PDF cue:** 8 Conclusions, Limitations and Future Work We presented SayCan, a method that enables leveraging and grounding the rich knowledge in large language models to complete ...
-- **p. 7 / 5.1 Results - extractive PDF cue:** Appendix E.6 shows additional rollouts with complex decisions, embodiment grounding, and long-horizon tasks in Figures 14-17 as well as failures in Figure 16.
-- **p. 8 / 5.1 Results - extractive PDF cue:** Overall, 65% of the errors were LLM failures and 35% were affordance failures.
-- **p. 8 / 5.1 Results - extractive PDF cue:** The embodiment tasks were planned correctly 64% of the time, generally with failures as a result of affordance function misclassification.
-- **p. 10 / 5.1 Results - extractive PDF cue:** Over 21 queries we found a planning rate of 100% and an execution rate of 33% (due to failures of the chained manipulation policy), with ...
+- **p. 12 / 7 Related Work - extractive body cue:** Future work that extends the repertoire of skills and improves their robustness would mitigate this limitation.
+- **p. 12 / 7 Related Work - extractive body cue:** 8 Conclusions, Limitations and Future Work We presented SayCan, a method that enables leveraging and grounding the rich knowledge in large language models to complete ...
+- **p. 7 / 5.1 Results - extractive body cue:** Appendix E.6 shows additional rollouts with complex decisions, embodiment grounding, and long-horizon tasks in Figures 14-17 as well as failures in Figure 16.
+- **p. 8 / 5.1 Results - extractive body cue:** Overall, 65% of the errors were LLM failures and 35% were affordance failures.
+- **p. 8 / 5.1 Results - extractive body cue:** The embodiment tasks were planned correctly 64% of the time, generally with failures as a result of affordance function misclassification.
+- **p. 10 / 5.1 Results - extractive body cue:** Over 21 queries we found a planning rate of 100% and an execution rate of 33% (due to failures of the chained manipulation policy), with ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5.1 Results), p. 7 (5.1 Results), p. 8 (5.1 Results), p. 11 (5.1 Results), p. 11 (5.1 Results), p. 8 (5.1 Results), metrics p. 9 (Figure/Table caption), p. 33 (Figure/Table caption), p. 9 (5.1 Results), p. 10 (5.1 Results), p. 7 (5.1 Results), p. 8 (5.1 Results), baselines p. 9 (5.1 Results), p. 9 (5.1 Results), p. 29 (Figure/Table caption), p. 7 (5.1 Results), p. 8 (5.1 Results), p. 10 (5.1 Results), results p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (5.1 Results), p. 10 (5.1 Results), p. 8 (5.1 Results), p. 8 (5.1 Results).
+- **Evidence anchors reviewed:** datasets p. 7 (5.1 Results), p. 7 (5.1 Results), p. 8 (5.1 Results), p. 11 (5.1 Results), p. 11 (5.1 Results), p. 8 (5.1 Results), metrics p. 9 (Figure/Table caption), p. 33 (Figure/Table caption), p. 9 (5.1 Results), p. 10 (5.1 Results), p. 7 (5.1 Results), p. 8 (5.1 Results), baselines p. 9 (5.1 Results), p. 9 (5.1 Results), p. 29 (Figure/Table caption), p. 7 (5.1 Results), p. 8 (5.1 Results), p. 10 (5.1 Results), results p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (5.1 Results), p. 10 (5.1 Results), p. 8 (5.1 Results), p. 8 (5.1 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

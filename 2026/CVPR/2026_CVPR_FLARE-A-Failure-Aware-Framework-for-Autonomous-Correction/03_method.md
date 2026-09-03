@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Following modern VLA architectures [4, 15, 18], the policy is Markovian-lacking history-and predicts an action chunk at based on the current visual ... | p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | This policy, which outputs a distribution over action sequences at ∈AK (where K is the chunk length and A is the action ... | p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference) |
@@ -126,8 +126,17 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 5 (3.4. Unified Training and Closed-Loop Inference), objective p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), temporal p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 6 (4. Experiment), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 5 (3.4. Unified Training and Closed-Loop Inference), objective p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), temporal p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 6 (4. Experiment), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Following modern VLA architectures [4, 15, 18], the policy is Markovian-lacking history-and predicts an action chunk at based on the current visual observation ot ∈O and language instruction I. (p. 3, 3.1. Problem Formulation).
+- **Objective/update evidence:** For example, the "reset cup" adapter is trained exclusively on its corresponding reset demonstrations, using the prompt Ireset = "reset the cup." This modular approach prevents the conflicting gradients that ... (p. 5, 3.4. Unified Training and Closed-Loop Inference).
+- **Temporal/runtime evidence:** This policy, which outputs a distribution over action sequences at ∈AK (where K is the chunk length and A is the action space), is written as: at ∼πθ(·/ot, I). (p. 3, 3.1. Problem Formulation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planni
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy. | p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planning) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Specifically, given an RGB image and language input, we first utilize a VLM, eg Florence-2 [34] to ground the language onto the ... | p. 8 (B. Bi-level Planning), p. 8 (B. Bi-level Planning) |
@@ -81,8 +81,8 @@ PDF body method statement (p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planni
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | At each time step, the model outputs an action vector that contains the translation and rotation of the robot end effector, along ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | Additionally, frameworks like DP (5] and DP3 [49] formulate visuomotor robot policies using Denoising Diffusion Probabilistic Models (DDPM), enabling these policies to ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
-| Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -126,8 +126,17 @@ PDF body method statement (p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planni
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), objective p. 7 (1 Actions .ow-Level Action), p. 7 (B. Bi-level Planning), temporal p. 6 (A. End-to-End Policy Learning), p. 3 (B. Vision-Language Policies for Robot Manipulation), p. 4 (A. Problem Setup), p. 5 (C. Dataset), p. 6 (C. Dataset), p. 8 (B. Bi-level Planning).
+- **Evidence anchors reviewed:** method p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), objective p. 7 (1 Actions .ow-Level Action), p. 7 (B. Bi-level Planning), temporal p. 6 (A. End-to-End Policy Learning), p. 3 (B. Vision-Language Policies for Robot Manipulation), p. 4 (A. Problem Setup), p. 5 (C. Dataset), p. 6 (C. Dataset), p. 8 (B. Bi-level Planning).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy. (p. 7, B. Bi-level Planning).
+- **Objective/update evidence:** updates the skill instruction once every n steps, while the low-level action policy updates the action at every step. (p. 7, 1 Actions .ow-Level Action).
+- **Temporal/runtime evidence:** Additionally, frameworks like DP (5] and DP3 [49] formulate visuomotor robot policies using Denoising Diffusion Probabilistic Models (DDPM), enabling these policies to capture multimodal action distributions and generate high-dimensiona ... (p. 3, B. Vision-Language Policies for Robot Manipulation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

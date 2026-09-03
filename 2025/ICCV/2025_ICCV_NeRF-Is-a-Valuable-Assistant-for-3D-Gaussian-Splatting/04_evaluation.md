@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), 
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41].
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** Joint training iterates 30k for full-view datasets and 8k for sparse-view scenes.
-- **p. 6 / 5.2. Comparison - extractive PDF cue:** Qualitative comparison on real-world datasets.
-- **p. 6 / 5.2. Comparison - extractive PDF cue:** Additionally, the collaborative optimization between NeRF and GS branches, facilitated by this shared information, creates mutual constraints and regularization effects, mitigating overfitting, which is crucial ...
-- **p. 7 / 5.2. Comparison - extractive PDF cue:** Qualitative comparison under 12 input views on the Blender dataset.
-- **p. 7 / 5.2. Comparison - extractive PDF cue:** Impact of feature share and joint optimization on sparse view scenes.
-- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive PDF cue:** Ablation of different components in NeRF-GS on Tank&Temples and DeepBlending datasets.
-- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive PDF cue:** For example, on the DeepBlending dataset, vanilla 3DGS uses 2,461,023 Gaussians, while ours uses only 1,926,336.
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41].
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** Joint training iterates 30k for full-view datasets and 8k for sparse-view scenes.
+- **p. 6 / 5.2. Comparison - extractive body cue:** Qualitative comparison on real-world datasets.
+- **p. 6 / 5.2. Comparison - extractive body cue:** Additionally, the collaborative optimization between NeRF and GS branches, facilitated by this shared information, creates mutual constraints and regularization effects, mitigating overfitting, which is crucial ...
+- **p. 7 / 5.2. Comparison - extractive body cue:** Qualitative comparison under 12 input views on the Blender dataset.
+- **p. 7 / 5.2. Comparison - extractive body cue:** Impact of feature share and joint optimization on sparse view scenes.
+- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** Ablation of different components in NeRF-GS on Tank&Temples and DeepBlending datasets.
+- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** For example, on the DeepBlending dataset, vanilla 3DGS uses 2,461,023 Gaussians, while ours uses only 1,926,336.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, compared to other methods that incorporate NeRF-like concepts, such as VDGS and Hash-GS, NeRF-GS achieves even more substantial improvements. | p. 5 (5.2. Comparison) |
 | 5.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Comparative results are shown in Table 1, where our approach significantly outperforms the vanilla 3DGS model and other state-of-the-art methods across PSNR, SSIM, and ... | p. 5 (5.2. Comparison) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41].
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** Joint training iterates 30k for full-view datasets and 8k for sparse-view scenes.
-- **p. 6 / 5.2. Comparison - extractive PDF cue:** Qualitative comparison on real-world datasets.
-- **p. 6 / 5.2. Comparison - extractive PDF cue:** Additionally, the collaborative optimization between NeRF and GS branches, facilitated by this shared information, creates mutual constraints and regularization effects, mitigating overfitting, which is crucial ...
-- **p. 7 / 5.2. Comparison - extractive PDF cue:** Qualitative comparison under 12 input views on the Blender dataset.
-- **p. 7 / 5.2. Comparison - extractive PDF cue:** Impact of feature share and joint optimization on sparse view scenes.
-- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive PDF cue:** Ablation of different components in NeRF-GS on Tank&Temples and DeepBlending datasets.
-- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive PDF cue:** For example, on the DeepBlending dataset, vanilla 3DGS uses 2,461,023 Gaussians, while ours uses only 1,926,336.
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41].
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** Joint training iterates 30k for full-view datasets and 8k for sparse-view scenes.
+- **p. 6 / 5.2. Comparison - extractive body cue:** Qualitative comparison on real-world datasets.
+- **p. 6 / 5.2. Comparison - extractive body cue:** Additionally, the collaborative optimization between NeRF and GS branches, facilitated by this shared information, creates mutual constraints and regularization effects, mitigating overfitting, which is crucial ...
+- **p. 7 / 5.2. Comparison - extractive body cue:** Qualitative comparison under 12 input views on the Blender dataset.
+- **p. 7 / 5.2. Comparison - extractive body cue:** Impact of feature share and joint optimization on sparse view scenes.
+- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** Ablation of different components in NeRF-GS on Tank&Temples and DeepBlending datasets.
+- **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** For example, on the DeepBlending dataset, vanilla 3DGS uses 2,461,023 Gaussians, while ours uses only 1,926,336.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. NeRF-GS establishes a bridge of communication be- tween NeRF and 3DGS, leveraging information sharing, modeling of distinct characteristics, and joint optimization to enable ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of NeRF-GS. (a) We first pretrain a Hash-based NeRF network to acquire continuous spatial encoding capabilities and implicit scene representation. (b) Utilizing ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on real-world datasets. Colors denote the 1st , 2nd , and 3rd best-performing model.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison on real-world datasets. The numbers indicate the PSNR. Our method demonstrates a significant advantage over 3DGS and its variants, achieving a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison under 12 input views on the Blender dataset. The numbers indicate the PSNR.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison of using different numbers of input views on Blender dataset. Our NeRF-GS maintains high performance when the scene input views are ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Impact of feature share and joint optimization on sparse view scenes. These two key designs enable mutual regular- ization constraints between NeRF and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison of model efficiency with 3DGS. We report the FPS, model size (MB), training time (minutes) and PSNR. The 3DGSL denotes longer iterative ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. NeRF-GS establishes a bridge of communication be- tween NeRF and 3DGS, leveraging information sharing, modeling of distinct characteristics, and joint optimization to enable ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of NeRF-GS. (a) We first pretrain a Hash-based NeRF network to acquire continuous spatial encoding capabilities and implicit scene representation. (b) Utilizing ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on real-world datasets. Colors denote the 1st , 2nd , and 3rd best-performing model.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison on real-world datasets. The numbers indicate the PSNR. Our method demonstrates a significant advantage over 3DGS and its variants, achieving a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison under 12 input views on the Blender dataset. The numbers indicate the PSNR.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison of using different numbers of input views on Blender dataset. Our NeRF-GS maintains high performance when the scene input views are ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Impact of feature share and joint optimization on sparse view scenes. These two key designs enable mutual regular- ization constraints between NeRF and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison of model efficiency with 3DGS. We report the FPS, model size (MB), training time (minutes) and PSNR. The 3DGSL denotes longer iterative ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41]. | embodiment, simulator version and control stack | p. 5 (5.1. Implementation Details), p. 5 (5.1. Implementation Details) |
 | Task/environment | Joint training iterates 30k for full-view datasets and 8k for sparse-view scenes. | reset, timeout, object/scene variation | p. 5 (5.1. Implementation Details), p. 6 (5.2. Comparison) |
@@ -123,9 +123,9 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), 
 | Primary metric/result | Comparative results are shown in Table 1, where our approach significantly outperforms the vanilla 3DGS model and other state-of-the-art methods across PSNR, SSIM, and ... | numeric claim only at cited anchor | p. 5 (5.2. Comparison) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** During the NeRF branch pre-training, each batch contains 8,192 rays and is trained for 10 epochs.
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** For real-world datasets, we initialize using 1,000,000 points sampled at an 8:2 ratio from edge rays and random rays, while Blender datasets are initialized with ...
-- **p. 5 / 5.1. Implementation Details - extractive PDF cue:** We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41].
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** During the NeRF branch pre-training, each batch contains 8,192 rays and is trained for 10 epochs.
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** For real-world datasets, we initialize using 1,000,000 points sampled at an 8:2 ratio from edge rays and random rays, while Blender datasets are initialized with ...
+- **p. 5 / 5.1. Implementation Details - extractive body cue:** We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41].
 
 ## Generalization and Failure Cases
 
@@ -159,12 +159,12 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 7. Conclusion - extractive PDF cue:** These strategies effectively address several limitations of 3DGS, including initialization dependency, limited spatial awareness, insufficient Gaussian sphere correlation, and overfitting in sparse-view scenes.
-- **p. 6 / 5.2. Comparison - extractive PDF cue:** Our method demonstrates a significant advantage over 3DGS and its variants, achieving a more faithful representation of scene details. validating NeRF-GS as a robust framework ...
-- **p. 7 / 5.3. Qualitative Analysis of NeRF-GS - extractive PDF cue:** When associations between two branches are directly removed, such as feature sharing, loss constraints during joint training, etc., the NeRF-GS shows large visual quality degradation.
-- **p. 8 / 5.4. Ablation Studies - extractive PDF cue:** Removing mutual constraints between branch outputs leads to performance degradation.
+- **p. 8 / 7. Conclusion - extractive body cue:** These strategies effectively address several limitations of 3DGS, including initialization dependency, limited spatial awareness, insufficient Gaussian sphere correlation, and overfitting in sparse-view scenes.
+- **p. 6 / 5.2. Comparison - extractive body cue:** Our method demonstrates a significant advantage over 3DGS and its variants, achieving a more faithful representation of scene details. validating NeRF-GS as a robust framework ...
+- **p. 7 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** When associations between two branches are directly removed, such as feature sharing, loss constraints during joint training, etc., the NeRF-GS shows large visual quality degradation.
+- **p. 8 / 5.4. Ablation Studies - extractive body cue:** Removing mutual constraints between branch outputs leads to performance degradation.
 
-- **PDF anchors reviewed:** datasets p. 5 (5.1. Implementation Details), p. 5 (5.1. Implementation Details), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison), p. 7 (5.2. Comparison), p. 7 (5.2. Comparison), metrics p. 7 (5.3. Qualitative Analysis of NeRF-GS), p. 8 (5.4. Ablation Studies), p. 5 (5.1. Implementation Details), p. 5 (5.2. Comparison), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison), baselines p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 6 (5.2. Comparison), p. 7 (5.2. Comparison), results p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 5 (5.1. Implementation Details), p. 5 (5.1. Implementation Details), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison), p. 7 (5.2. Comparison), p. 7 (5.2. Comparison), metrics p. 7 (5.3. Qualitative Analysis of NeRF-GS), p. 8 (5.4. Ablation Studies), p. 5 (5.1. Implementation Details), p. 5 (5.2. Comparison), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison), baselines p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 6 (5.2. Comparison), p. 7 (5.2. Comparison), results p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

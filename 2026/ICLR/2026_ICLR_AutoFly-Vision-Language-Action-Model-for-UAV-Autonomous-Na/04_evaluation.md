@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=88RKxlFUNY; PDF retrieval source: https://openreview.net/pdf/1a99a8c26a0bf879894a517257af43defc03d88a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=88RKxlFUNY; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247860. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPE
 
 ## Evaluation Body Digest
 
-- **p. 16 / A.2.2 DATASET SPLIT - extractive PDF cue:** Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets.
-- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive PDF cue:** Simulation data is collected using 12 custom 70m × 70m scenes constructed in AirSim (Shah et al., 2018), while real-world data is acquired through manual ...
-- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive PDF cue:** Data Collection Framework: We employ a dual-source approach for dataset construction, combining simulation and real-world data acquisition.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Scene Sim : Real SR CR PER indoor 0K : 1K 10 40 61.1 indoor 5K : 1K 25 65 71.3 indoor 10K : 1K ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We adopt success rate (SR) as the primary evaluation metric following standard robotics benchmarks.
-- **p. 16 / A.2.2 DATASET SPLIT - extractive PDF cue:** Evaluation uses 4 testing scenes (2 from training environments plus 2 completely unseen scenes) with 60 targets (50 previously seen, 10 unseen).
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** All evaluations follow the dataset split protocol detailed in Section 3.3 and threshold specifications summarized in Appendix A.2.1.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Results show progressive performance gains with increased simulation data, confirming that substantial simulation exposure enhances real-world deployment even with limited real-world fine-tuning.
+- **p. 16 / A.2.2 DATASET SPLIT - extractive body cue:** Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets.
+- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive body cue:** Simulation data is collected using 12 custom 70m × 70m scenes constructed in AirSim (Shah et al., 2018), while real-world data is acquired through manual ...
+- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive body cue:** Data Collection Framework: We employ a dual-source approach for dataset construction, combining simulation and real-world data acquisition.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Scene Sim : Real SR CR PER indoor 0K : 1K 10 40 61.1 indoor 5K : 1K 25 65 71.3 indoor 10K : 1K ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We adopt success rate (SR) as the primary evaluation metric following standard robotics benchmarks.
+- **p. 16 / A.2.2 DATASET SPLIT - extractive body cue:** Evaluation uses 4 testing scenes (2 from training environments plus 2 completely unseen scenes) with 60 targets (50 previously seen, 10 unseen).
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** All evaluations follow the dataset split protocol detailed in Section 3.3 and threshold specifications summarized in Appendix A.2.1.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Results show progressive performance gains with increased simulation data, confirming that substantial simulation exposure enhances real-world deployment even with limited real-world fine-tuning.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPE
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A.3.2 ABLATION EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results demonstrate clear performance differences: SigLIP achieves the highest success rate among single encoders (46.6%), outperforming CLIP (43.1%) by 3.5% and DINO (45.2%) by ... | p. 19 (A.3.2 ABLATION EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results in Table 4 demonstrate that the method with the pseudo-depth encoder (47.9%, 21.9%) in success rate and collision rate significantly outperforms the ... | p. 9 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPE
 
 ## Dataset / Benchmark Role
 
-- **p. 16 / A.2.2 DATASET SPLIT - extractive PDF cue:** Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets.
-- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive PDF cue:** Simulation data is collected using 12 custom 70m × 70m scenes constructed in AirSim (Shah et al., 2018), while real-world data is acquired through manual ...
-- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive PDF cue:** Data Collection Framework: We employ a dual-source approach for dataset construction, combining simulation and real-world data acquisition.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Scene Sim : Real SR CR PER indoor 0K : 1K 10 40 61.1 indoor 5K : 1K 25 65 71.3 indoor 10K : 1K ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We adopt success rate (SR) as the primary evaluation metric following standard robotics benchmarks.
-- **p. 16 / A.2.2 DATASET SPLIT - extractive PDF cue:** Evaluation uses 4 testing scenes (2 from training environments plus 2 completely unseen scenes) with 60 targets (50 previously seen, 10 unseen).
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** All evaluations follow the dataset split protocol detailed in Section 3.3 and threshold specifications summarized in Appendix A.2.1.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Results show progressive performance gains with increased simulation data, confirming that substantial simulation exposure enhances real-world deployment even with limited real-world fine-tuning.
+- **p. 16 / A.2.2 DATASET SPLIT - extractive body cue:** Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets.
+- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive body cue:** Simulation data is collected using 12 custom 70m × 70m scenes constructed in AirSim (Shah et al., 2018), while real-world data is acquired through manual ...
+- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive body cue:** Data Collection Framework: We employ a dual-source approach for dataset construction, combining simulation and real-world data acquisition.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Scene Sim : Real SR CR PER indoor 0K : 1K 10 40 61.1 indoor 5K : 1K 25 65 71.3 indoor 10K : 1K ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We adopt success rate (SR) as the primary evaluation metric following standard robotics benchmarks.
+- **p. 16 / A.2.2 DATASET SPLIT - extractive body cue:** Evaluation uses 4 testing scenes (2 from training environments plus 2 completely unseen scenes) with 60 targets (50 previously seen, 10 unseen).
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** All evaluations follow the dataset split protocol detailed in Section 3.3 and threshold specifications summarized in Appendix A.2.1.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Results show progressive performance gains with increased simulation data, confirming that substantial simulation exposure enhances real-world deployment even with limited real-world fine-tuning.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Analysis of previous methods and our AutoFly. Left: Previous methods (Lee et al., 2024; Liu et al., 2023b) rely on dedicated, step-by-step instructions ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Framework of AutoFly. AutoFly takes RGB observations and linguistic instructions as inputs and directly outputs high-level actions. These actions, combined with initial actions ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of autonomous navigation dataset statistical analysis.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of VLN datasets. Datasets for ground robots are shown above the dividing line; aerial-robot datasets are shown below. Ntraj: total number of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Comparison of three paradigms for integrating depth information during fine-tuning: (a) Siamese MLP projector, (b) Non-Siamese MLP projector, (c) Direct depth integration. instructions ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5: Visualization of AutoFly in the real indoor environment. The experimental arena is a structured indoor environment designed for autonomous navigation and mapping tasks. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Visualization of AutoFly in the real outdoor environment. The experimental arena is a unstructured outdoor environment with trees. We have achieved a 55% ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Overall performance metrics for quadrotor (all values in %). Here, we report three metrics: Success Rate (SR↑), Collision Rate (CR↓), and Path Efficiency ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Analysis of previous methods and our AutoFly. Left: Previous methods (Lee et al., 2024; Liu et al., 2023b) rely on dedicated, step-by-step instructions ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Framework of AutoFly. AutoFly takes RGB observations and linguistic instructions as inputs and directly outputs high-level actions. These actions, combined with initial actions ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Overview of autonomous navigation dataset statistical analysis.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Comparison of VLN datasets. Datasets for ground robots are shown above the dividing line; aerial-robot datasets are shown below. Ntraj: total number of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Comparison of three paradigms for integrating depth information during fine-tuning: (a) Siamese MLP projector, (b) Non-Siamese MLP projector, (c) Direct depth integration. instructions ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Visualization of AutoFly in the real indoor environment. The experimental arena is a structured indoor environment designed for autonomous navigation and mapping tasks. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Visualization of AutoFly in the real outdoor environment. The experimental arena is a unstructured outdoor environment with trees. We have achieved a 55% ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Overall performance metrics for quadrotor (all values in %). Here, we report three metrics: Success Rate (SR↑), Collision Rate (CR↓), and Path Efficiency ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets. | embodiment, simulator version and control stack | p. 16 (A.2.2 DATASET SPLIT), p. 15 (A.2.1 DATASET CONSTRUCTION) |
 | Task/environment | Simulation data is collected using 12 custom 70m × 70m scenes constructed in AirSim (Shah et al., 2018), while real-world data is acquired through ... | reset, timeout, object/scene variation | p. 15 (A.2.1 DATASET CONSTRUCTION), p. 15 (A.2.1 DATASET CONSTRUCTION) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPE
 | Primary metric/result | The results in Table 4 demonstrate that the method with the pseudo-depth encoder (47.9%, 21.9%) in success rate and collision rate significantly outperforms the ... | numeric claim only at cited anchor | p. 9 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We evaluated the system on 10 object instances, conducting 20 independent trials per target in each setting.
-- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive PDF cue:** Success Metrics: A navigation episode is considered successful when the robot achieves: (1) proximity within 5 meters of the target, and (2) target orientation with ...
-- **p. 16 / A.2.2 DATASET SPLIT - extractive PDF cue:** Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets.
-- **p. 16 / A.2.2 DATASET SPLIT - extractive PDF cue:** This setup creates 4 evaluation conditions, with 30 trials per condition, yielding 7,200 evaluation episodes in total.
-- **p. 20 / A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES - extractive PDF cue:** We collect an additional 1,000 episodes (∼350K vision-language-action pairs) to evaluate the effect of increased training data. • Data Augmentation.
-- **p. 4 / 3 METHOD - extractive PDF cue:** 3.1 TASK FORMULATION We formulate autonomous navigation as learning a control policy π that takes the current RGB observation ot ∈O, language instruction L, and ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We evaluated the system on 10 object instances, conducting 20 independent trials per target in each setting.
+- **p. 15 / A.2.1 DATASET CONSTRUCTION - extractive body cue:** Success Metrics: A navigation episode is considered successful when the robot achieves: (1) proximity within 5 meters of the target, and (2) target orientation with ...
+- **p. 16 / A.2.2 DATASET SPLIT - extractive body cue:** Our training set comprises 10 scenes with 50 object instances, totaling over 13K episodes and 2.5M image-language-action triplets.
+- **p. 16 / A.2.2 DATASET SPLIT - extractive body cue:** This setup creates 4 evaluation conditions, with 30 trials per condition, yielding 7,200 evaluation episodes in total.
+- **p. 20 / A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES - extractive body cue:** We collect an additional 1,000 episodes (∼350K vision-language-action pairs) to evaluate the effect of increased training data. • Data Augmentation.
+- **p. 4 / 3 METHOD - extractive body cue:** 3.1 TASK FORMULATION We formulate autonomous navigation as learning a control policy π that takes the current RGB observation ot ∈O, language instruction L, and ...
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPE
 
 ## Limitations and Verification Questions
 
-- **p. 20 / A.3.3 EVALUATION ON CHALLENGING SCENARIOS - extractive PDF cue:** Dense Cylinders Scene Dense Forest Scene Dynamic Obstacle Scenarios Method SR CR PER SR CR PER SR CR PER w/ 57.2 21.1 78.3 53.6 23.7 ...
-- **p. 24 / A.7 LIMITATIONS AND FUTURE WORK - extractive PDF cue:** To address these limitations, we plan to enhance AutoFly's sensing capabilities through LiDAR integration, which will provide comprehensive 360◦environmental perception and improve robustness in complex ...
-- **p. 24 / A.7 LIMITATIONS AND FUTURE WORK - extractive PDF cue:** Future work will integrate Reinforcement Learning to enable active interaction with dynamic environments, allowing the system to learn more robust reactive behaviors through trial-and-error exploration.
-- **p. 20 / A.3.3 EVALUATION ON CHALLENGING SCENARIOS - extractive PDF cue:** The baseline model's collision rate reaches 37.7%, frequently failing to maintain safe distances from moving obstacles or predict their trajectories.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Analysis of previous methods and our AutoFly. Left: Previous methods (Lee et al., 2024; Liu et al., 2023b) rely on dedicated, step-by-step instructions ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** SR = /S//N, CR = /C//N, PER = /E///S/, (4) where S = {i : di ≤dτ, θi ≤θτ} denotes the set of successful trials, ...
+- **p. 20 / A.3.3 EVALUATION ON CHALLENGING SCENARIOS - extractive body cue:** Dense Cylinders Scene Dense Forest Scene Dynamic Obstacle Scenarios Method SR CR PER SR CR PER SR CR PER w/ 57.2 21.1 78.3 53.6 23.7 ...
+- **p. 24 / A.7 LIMITATIONS AND FUTURE WORK - extractive body cue:** To address these limitations, we plan to enhance AutoFly's sensing capabilities through LiDAR integration, which will provide comprehensive 360◦environmental perception and improve robustness in complex ...
+- **p. 24 / A.7 LIMITATIONS AND FUTURE WORK - extractive body cue:** Future work will integrate Reinforcement Learning to enable active interaction with dynamic environments, allowing the system to learn more robust reactive behaviors through trial-and-error exploration.
+- **p. 20 / A.3.3 EVALUATION ON CHALLENGING SCENARIOS - extractive body cue:** The baseline model's collision rate reaches 37.7%, frequently failing to maintain safe distances from moving obstacles or predict their trajectories.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Analysis of previous methods and our AutoFly. Left: Previous methods (Lee et al., 2024; Liu et al., 2023b) rely on dedicated, step-by-step instructions ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** SR = /S//N, CR = /C//N, PER = /E///S/, (4) where S = {i : di ≤dτ, θi ≤θτ} denotes the set of successful trials, ...
 
-- **PDF anchors reviewed:** datasets p. 16 (A.2.2 DATASET SPLIT), p. 15 (A.2.1 DATASET CONSTRUCTION), p. 15 (A.2.1 DATASET CONSTRUCTION), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 16 (A.2.2 DATASET SPLIT), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 19 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), baselines p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 7 (Figure/Table caption), results p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES).
+- **Evidence anchors reviewed:** datasets p. 16 (A.2.2 DATASET SPLIT), p. 15 (A.2.1 DATASET CONSTRUCTION), p. 15 (A.2.1 DATASET CONSTRUCTION), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 16 (A.2.2 DATASET SPLIT), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 19 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), baselines p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 7 (Figure/Table caption), results p. 19 (A.3.2 ABLATION EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

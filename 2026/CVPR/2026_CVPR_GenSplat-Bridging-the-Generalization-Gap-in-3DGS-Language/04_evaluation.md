@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Evaluation Datasets and Metrics - extractive PDF cue:** Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** We draw five key conclusions from Table 4: ①Progressive pretraining is foundational: as demonstrated in (I), (II) and (III), hierarchical concept learning from semantic- to ...
-- **p. 6 / 4.3. Comparison with State-of-the-Art Models - extractive PDF cue:** We report comparison results on the ScanRefer [5] (featuring single referred object) and Multi3DRefer [76] (featuring varying numbers of referred objects) datasets, as shown in ...
-- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive PDF cue:** We further compare our method against Grounded-SAM and per-scene optimization-based methods on five scenes selected by ReferSplat [22] from ScanRefer.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** We showcase referring segmentation results on both scenes (a) and (b), and additionally present a question answering example on scene (b). ⑤Geometry-aware fusion facilitates synergistic ...
-- **p. 6 / 4.2. Evaluation Datasets and Metrics - extractive PDF cue:** For the question answering task, we follow [18, 26] to evaluate the generated responses on ScanQA [2] using CIDEr (C), BLEU-4 (B-4), METEOR (M), and ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** We use AdamW optimizer with a learning rate initialized as 2 × 10-4 and updated using the cosine annealing schedule.
+- **p. 6 / 4.2. Evaluation Datasets and Metrics - extractive body cue:** Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** We draw five key conclusions from Table 4: ①Progressive pretraining is foundational: as demonstrated in (I), (II) and (III), hierarchical concept learning from semantic- to ...
+- **p. 6 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** We report comparison results on the ScanRefer [5] (featuring single referred object) and Multi3DRefer [76] (featuring varying numbers of referred objects) datasets, as shown in ...
+- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** We further compare our method against Grounded-SAM and per-scene optimization-based methods on five scenes selected by ReferSplat [22] from ScanRefer.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** We showcase referring segmentation results on both scenes (a) and (b), and additionally present a question answering example on scene (b). ⑤Geometry-aware fusion facilitates synergistic ...
+- **p. 6 / 4.2. Evaluation Datasets and Metrics - extractive body cue:** For the question answering task, we follow [18, 26] to evaluate the generated responses on ScanQA [2] using CIDEr (C), BLEU-4 (B-4), METEOR (M), and ...
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** We use AdamW optimizer with a learning rate initialized as 2 × 10-4 and updated using the cosine annealing schedule.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Comparison with State-of-the-Art Models | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our GenSplat achieves consistently better results over the expert model SplatTalk [61] (e.g., a +26.8% CIDEr (C) improvement on ScanQA [2]), as well as ... | p. 7 (4.3. Comparison with State-of-the-Art Models) |
 | 4.3. Comparison with State-of-the-Art Models | EMPIRICAL / SOURCE-REPORTED EVALUATION | Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities. | p. 7 (4.3. Comparison with State-of-the-Art Models) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Evaluation Datasets and Metrics - extractive PDF cue:** Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset.
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** We draw five key conclusions from Table 4: ①Progressive pretraining is foundational: as demonstrated in (I), (II) and (III), hierarchical concept learning from semantic- to ...
-- **p. 6 / 4.3. Comparison with State-of-the-Art Models - extractive PDF cue:** We report comparison results on the ScanRefer [5] (featuring single referred object) and Multi3DRefer [76] (featuring varying numbers of referred objects) datasets, as shown in ...
-- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive PDF cue:** We further compare our method against Grounded-SAM and per-scene optimization-based methods on five scenes selected by ReferSplat [22] from ScanRefer.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** We showcase referring segmentation results on both scenes (a) and (b), and additionally present a question answering example on scene (b). ⑤Geometry-aware fusion facilitates synergistic ...
+- **p. 6 / 4.2. Evaluation Datasets and Metrics - extractive body cue:** Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** We draw five key conclusions from Table 4: ①Progressive pretraining is foundational: as demonstrated in (I), (II) and (III), hierarchical concept learning from semantic- to ...
+- **p. 6 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** We report comparison results on the ScanRefer [5] (featuring single referred object) and Multi3DRefer [76] (featuring varying numbers of referred objects) datasets, as shown in ...
+- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** We further compare our method against Grounded-SAM and per-scene optimization-based methods on five scenes selected by ReferSplat [22] from ScanRefer.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** We showcase referring segmentation results on both scenes (a) and (b), and additionally present a question answering example on scene (b). ⑤Geometry-aware fusion facilitates synergistic ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose GenSplat, the first approach to achieve generalizable language-guided understanding in 3DGS. By hierarchically grounding multi-level linguistic concepts in 3D Gaussian representations, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the GenSplat framework. Given a set of multi-view RGB images {Ii}N i=1 and a text query Q (e.g., for Referring Segmentation ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. We propose Geometry-Aware Frame Selector (GAFS) to identify the most informative views for MLLM reasoning. GAFS bridges the critical gap between MLLM's native ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of 3D referring segmentation on ScanRe- fer [5] and Multi3DRefer [76] validation sets. "2D MLLMs" denote methods that apply a 2D MLLM ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset. Best results are bolded. Methods Grounded-SAM ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison of 3D question answering on ScanQA [2] and SQA3D [50]. Best results are bolded. Methods Modality ScanQA (val) SQA3D (test) C↑ B-4↑
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Key ablation studies on different design components. Methods ScanRefer Multi3DRefer ScanQA SQA3D mIoU↑ mIoU↑ C↑
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets. We showcase referring segmentation results on both scenes (a) and (b), and additionally ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. We propose GenSplat, the first approach to achieve generalizable language-guided understanding in 3DGS. By hierarchically grounding multi-level linguistic concepts in 3D Gaussian representations, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the GenSplat framework. Given a set of multi-view RGB images {Ii}N i=1 and a text query Q (e.g., for Referring Segmentation ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. We propose Geometry-Aware Frame Selector (GAFS) to identify the most informative views for MLLM reasoning. GAFS bridges the critical gap between MLLM's native ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison of 3D referring segmentation on ScanRe- fer [5] and Multi3DRefer [76] validation sets. "2D MLLMs" denote methods that apply a 2D MLLM ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset. Best results are bolded. Methods Grounded-SAM ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison of 3D question answering on ScanQA [2] and SQA3D [50]. Best results are bolded. Methods Modality ScanQA (val) SQA3D (test) C↑ B-4↑
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Key ablation studies on different design components. Methods ScanRefer Multi3DRefer ScanQA SQA3D mIoU↑ mIoU↑ C↑
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets. We showcase referring segmentation results on both scenes (a) and (b), and additionally ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset. | embodiment, simulator version and control stack | p. 6 (4.2. Evaluation Datasets and Metrics), p. 7 (4.4. Ablation Study) |
 | Task/environment | We draw five key conclusions from Table 4: ①Progressive pretraining is foundational: as demonstrated in (I), (II) and (III), hierarchical concept learning from semantic- ... | reset, timeout, object/scene variation | p. 7 (4.4. Ablation Study), p. 6 (4.3. Comparison with State-of-the-Art Models) |
@@ -113,7 +113,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 | Primary metric/result | Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities. | numeric claim only at cited anchor | p. 7 (4.3. Comparison with State-of-the-Art Models) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Gaussian Encoder is first trained on ScanNet train set [12] for 100 epochs and then trained with the Instance Decoder on ScanNet200 [59] for 512 ...
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Gaussian Encoder is first trained on ScanNet train set [12] for 100 epochs and then trained with the Instance Decoder on ScanNet200 [59] for 512 ...
 
 ## Generalization and Failure Cases
 
@@ -151,14 +151,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** An example failure case of our method.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Extensive experiments across diverse tasks, such as 3D referring segmentation, visual question answering, and open-vocabulary understanding, have demonstrated its robust generalization and reasoning abilities.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Since SQA3D [50] does not provide frame-level annotations, we apply GPT-5 [52] for annotation.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Note that our method does not require test-time per-scene optimization beyond 3DGS reconstruction.
-- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive PDF cue:** In contrast, 2D-based methods such as Grounded-SAM and per-scene optimization approaches fail under these challenging scenarios.
-- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive PDF cue:** Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities.
+- **p. 8 / 5. Conclusion - extractive body cue:** An example failure case of our method.
+- **p. 8 / 5. Conclusion - extractive body cue:** Extensive experiments across diverse tasks, such as 3D referring segmentation, visual question answering, and open-vocabulary understanding, have demonstrated its robust generalization and reasoning abilities.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Since SQA3D [50] does not provide frame-level annotations, we apply GPT-5 [52] for annotation.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Note that our method does not require test-time per-scene optimization beyond 3DGS reconstruction.
+- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** In contrast, 2D-based methods such as Grounded-SAM and per-scene optimization approaches fail under these challenging scenarios.
+- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Evaluation Datasets and Metrics), p. 7 (4.4. Ablation Study), p. 6 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Evaluation Datasets and Metrics), p. 6 (4.1. Implementation Details), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.4. Ablation Study), p. 2 (Figure/Table caption), baselines p. 7 (4.4. Ablation Study), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 8 (4.4. Ablation Study), p. 6 (4.2. Evaluation Datasets and Metrics), p. 6 (4.3. Comparison with State-of-the-Art Models), results p. 7 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 2 (Figure/Table caption), p. 6 (4.3. Comparison with State-of-the-Art Models), p. 6 (4.2. Evaluation Datasets and Metrics), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Evaluation Datasets and Metrics), p. 7 (4.4. Ablation Study), p. 6 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Evaluation Datasets and Metrics), p. 6 (4.1. Implementation Details), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.4. Ablation Study), p. 2 (Figure/Table caption), baselines p. 7 (4.4. Ablation Study), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 8 (4.4. Ablation Study), p. 6 (4.2. Evaluation Datasets and Metrics), p. 6 (4.3. Comparison with State-of-the-Art Models), results p. 7 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 2 (Figure/Table caption), p. 6 (4.3. Comparison with State-of-the-Art Models), p. 6 (4.2. Evaluation Datasets and Metrics), p. 8 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

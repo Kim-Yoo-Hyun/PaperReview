@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p019.html; PDF retrieval source: https://arxiv.org/pdf/2502.05450. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p019.html; PDF retrieval source: https://arxiv.org/pdf/2502.05450. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): However, exte
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, extending these insights to VLA models presents unique challenges because, unlike LLMs, VLA models necessitate direct physical interaction in real-world robotic ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | To address these issues, we formulate each robotic task as a Markov Decision Process (MDP), where the goal of RL is to ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | To address these issues, we formulate each robotic task as a Markov Decision Process (MDP), where the goal of RL is to ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | address, issues, formulate, robotic, task, Markov, Decision, Process, MDP, where | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | coupling, VLA, policy, learned, Q-function, RFT, allows, model | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: address, issues, formulate, robotic, task, Markov, Decision, Process, MDP, where | p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), p. 2 (III. PROBLEM SETUP AND PRELIMINARIES) |
 | Decision / output variable | action, pose, option or chunk a; body terms: Motivated, insights, CPQL, unified, training, objective, integrates, supervised | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (IV. METHOD) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): However, exte
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 2 (IV. METHOD) |
 | Success / guarantee | instruction-conditioned task success | p. 8 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): However, exte
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD)): Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage and further fine-tunes the VLA model via consistency ...
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD)): Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage and further fine-tunes the VLA model via consistency ...
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To leverage the benefits of RL-based techniques for efficiently fine-tuning VLA models with online interaction data, we propose a reinforced fine-tuning (RFT) approach consisting of ...
 - **p. 2 / IV. METHOD - extractive body cue:** The proposed pipline ConRFT consists of two stages: offline fine-tuning followed by online fine-tuning to optimize robotic policies, as shown in Fig.
@@ -66,12 +66,21 @@ PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), objective p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD).
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), p. 2 (III. PROBLEM SETUP AND PRELIMINARIES), p. 4 (IV. METHOD), objective p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, extending these insights to VLA models presents unique challenges because, unlike LLMs, VLA models necessitate direct physical interaction in real-world robotic tasks. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage and further fine-tunes the VLA model via consistency ... (p. 1, I. INTRODUCTION).
+- **Assumption/failure evidence:** Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several limitations remain. (p. 8, VI. LIMITATIONS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

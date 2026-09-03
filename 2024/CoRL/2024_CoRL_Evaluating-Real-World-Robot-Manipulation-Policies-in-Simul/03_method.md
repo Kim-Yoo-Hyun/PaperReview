@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=LZh48DTg71; PDF retrieval source: https://arxiv.org/pdf/2405.05941.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=LZh48DTg71; PDF retrieval source: https://openreview.net/pdf?id=LZh48DTg71. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -75,8 +75,8 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | For the WidowX environments, given the consistent black color of the arm and gripper across videos, we skip this step. | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | Additionally, for Google Robot simulated evaluations, we average results over four versions of robot arm and gripper colors to account for changes ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
-| Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -126,3 +126,12 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Simulated Manipulation Policy Evaluation for Real Robot Setups SIMPLER Pick Coke Can Move Near Open/Close Drawer Put Object in Drawer Google Robot Put Carrot on Plate Stack Cubes Put Eggplant ... (p. 2, I. INTRODUCTION).
+- **Objective/update evidence:** These advances are underpinned by large-scale datasets [11, 66] and expressive models [1, 6, 29]. (p. 1, I. INTRODUCTION).
+- **Temporal/runtime evidence:** For the WidowX environments, given the consistent black color of the arm and gripper across videos, we skip this step. (p. 7, 2) Can simulated evaluations not only capture the perfor).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

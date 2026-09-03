@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.06347; PDF retrieval source: https://arxiv.org/pdf/1707.06347. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.06347; PDF retrieval source: https://arxiv.org/pdf/1707.06347. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, ... | p. 1 (Abstract), p. 1 (1 Introduction) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | This paper seeks to improve the current state of affairs by introducing an algorithm that attains the data efficiency and reliable performance ... | p. 1 (1 Introduction), p. 2 (1 Introduction) |
@@ -83,14 +83,14 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | We do one million timesteps of training on each one. | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | We do one million timesteps of training on each one. | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | 0 50M Timestep 0 1000 2000 3000 4000 RoboschoolHumanoid-v0 0 100M Timestep 0 500 1000 1500 2000 2500 RoboschoolHumanoidFlagrun-v0 0 100M Timestep ... | Hz/fps, inference time and control rate |
-| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not recovered | window and reset |
+| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | We scored each run of the algorithm by computing the average total reward of the last 100 episodes. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -126,8 +126,17 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 5 (1 1 + ϵ), objective p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 1 (Abstract), temporal p. 6 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 5 (1 1 + ϵ), p. 2 (1 Introduction), p. 6 (6 Experiments).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 5 (1 1 + ϵ), objective p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 1 (Abstract), temporal p. 6 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 5 (1 1 + ϵ), p. 2 (1 Introduction), p. 6 (6 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a "surrogate" objective function using stochastic ... (p. 1, Abstract).
+- **Objective/update evidence:** Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates. (p. 1, Abstract).
+- **Temporal/runtime evidence:** We do one million timesteps of training on each one. (p. 6, 6 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992696; PDF retrieval source: https://doi.org/10.1007/BF00992696. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992696; PDF retrieval source: https://doi.org/10.1007/BF00992696. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 8. Algorithm performance and other issues | EMPIRICAL / SIMULATION | In those situations when it is known that unsatisfactory performance is being achieved it is reasonable to broaden this scale in order to take ... | p. 17 (8. Algorithm performance and other issues) |
 | 8. Algorithm performance and other issues | EMPIRICAL / SIMULATION | In these studies, REINFORCE with reinforcement comparison was found to outperform all other algorithms investigated. | p. 15 (8. Algorithm performance and other issues) |
@@ -53,11 +53,11 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | A more general formulation of such an episodic learning task is also possible, where reinforcement is delivered to the network at each time step ... | embodiment, simulator version and control stack | p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues) |
 | Task/environment | In the case of the recurrent networks, the objective was to learn a trajectory and episodic REINFORCE was used. | reset, timeout, object/scene variation | p. 15 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 - **p. 22 / 1 Og i - extractive body cue:** OWij gi OWij Although this fails to be defined when gi = 0, it will still be the case that Awij is welldefined for any ...
 - **p. 22 / 1 Og i - extractive body cue:** Then E{Awij I W, x i} = Z E{Awijl W, x i, Yi = ~} Pr{yi = ~ I W, x i} ~Y~ --- ~i ...
 
-- **PDF anchors reviewed:** datasets p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), metrics p. 10 (6. REINFORCE with multiparameter distributions), p. 17 (8. Algorithm performance and other issues), p. 10 (6. REINFORCE with multiparameter distributions), p. 14 (7.2. Backpropagating through random number generators), p. 16 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), baselines p. 15 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 16 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), results p. 17 (8. Algorithm performance and other issues), p. 15 (8. Algorithm performance and other issues), p. 18 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 11 (7. Compatibility with backpropagation).
+- **Evidence anchors reviewed:** datasets p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), metrics p. 10 (6. REINFORCE with multiparameter distributions), p. 17 (8. Algorithm performance and other issues), p. 10 (6. REINFORCE with multiparameter distributions), p. 14 (7.2. Backpropagating through random number generators), p. 16 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), baselines p. 15 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 16 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), results p. 17 (8. Algorithm performance and other issues), p. 15 (8. Algorithm performance and other issues), p. 18 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 11 (7. Compatibility with backpropagation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Dayan's simulation results seem to suggest that use of such a reinforcement baseline offers 21 (p. 17, 8. Algorithm performance and other issues).
+- **Metric evidence:** In this case the appropriate performance measure is E {~=1 r(t) ] W}. (p. 9, 5. Episodic REINFORCE algorithms).
+- **Baseline/ablation evidence:** In these studies, REINFORCE with reinforcement comparison was found to outperform all other algorithms investigated. (p. 15, 8. Algorithm performance and other issues).
+- **Failure/negative evidence:** 8.L Convergence properties A major limitation of the analysis performed here is that it does not immediately lead to prediction of the asymptotic properties of REINFORCE algorithms. (p. 15, 8. Algorithm performance and other issues).

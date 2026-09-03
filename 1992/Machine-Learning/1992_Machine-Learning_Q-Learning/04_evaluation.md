@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992698; PDF retrieval source: https://doi.org/10.1007/BF00992698. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992698; PDF retrieval source: https://doi.org/10.1007/BF00992698. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (3.2. The theorem), p. 7 (3.2. The theorem)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3.2. The theorem | SYSTEM / EVALUATION SCOPE UNRESOLVED | Given e > O, choose s such that .ys__ < 1-3` T By B.3, with probability 1, it is possible to choose l sufficiently ... | p. 6 (3.2. The theorem) |
 | 3.2. The theorem | SYSTEM / EVALUATION SCOPE UNRESOLVED | (~-LEARNING 285 2e 2e i,,,~ , ,ir#)taj _ ,~ Irxyl < 3s(s + 1)(R' and 16~'(n)(a) - (Rx(a)[ < 3s(s + 1)' where the ... | p. 7 (3.2. The theorem) |
@@ -50,16 +50,16 @@ PDF body evaluation/result cue (p. 6 (3.2. The theorem), p. 7 (3.2. The theorem)
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | First, all the cards for episodes later than n are eliminated, leaving just a finite deck. | embodiment, simulator version and control stack | p. 4 (3. The convergence proof), p. 5 (3.1. Lemmas) |
 | Task/environment | The proof proceeds by backwards induction, following the AFIP down through the stack of past episodes. | reset, timeout, object/scene variation | p. 5 (3.1. Lemmas), p. 6 (3.1. Lemmas) |
 | Observation/sensor | state 또는 observation, action, reward와 transition history | calibration, preprocessing, privileged input | p. 2 (2. The task for ~-learning), p. 2 (2. The task for ~-learning) |
-| Output/decision | action policy와 induced trajectory | action frame, controller and termination | p. 3 (2. The task for ~-learning), p. 1 (1. Introduction) |
+| Output/decision | action policy와 induced trajectory | action frame, controller and termination | p. 3 (2. The task for ~-learning), p. 1 (Body text (section boundary not confidently recovered)) |
 
 ## Metrics and Success Definition
 
@@ -144,7 +144,16 @@ PDF body evaluation/result cue (p. 6 (3.2. The theorem), p. 7 (3.2. The theorem)
 - **p. 8 / 4. Discussions and conclusions - extractive body cue:** Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required.
 - **p. 8 / 4. Discussions and conclusions - extractive body cue:** The theorem above only proves the convergence of a restricted version of Watkins' (1989) comprehensive Q-learning algorithm, since it does not permit updates based on ...
 
-- **PDF anchors reviewed:** datasets p. 4 (3. The convergence proof), p. 5 (3.1. Lemmas), p. 6 (3.1. Lemmas), p. 4 (3. The convergence proof), p. 5 (3. The convergence proof), metrics p. 4 (2. The task for ~-learning), p. 4 (3. The convergence proof), p. 5 (3.1. Lemmas), p. 6 (3.1. Lemmas), p. 6 (3.1. Lemmas), p. 7 (3.2. The theorem), baselines p. 6 (3.2. The theorem), results p. 6 (3.2. The theorem), p. 7 (3.2. The theorem), p. 7 (3.2. The theorem), p. 6 (3.2. The theorem), p. 7 (3.2. The theorem), p. 7 (3.2. The theorem).
+- **Evidence anchors reviewed:** datasets p. 4 (3. The convergence proof), p. 5 (3.1. Lemmas), p. 6 (3.1. Lemmas), p. 4 (3. The convergence proof), p. 5 (3. The convergence proof), metrics p. 4 (2. The task for ~-learning), p. 4 (3. The convergence proof), p. 5 (3.1. Lemmas), p. 6 (3.1. Lemmas), p. 6 (3.1. Lemmas), p. 7 (3.2. The theorem), baselines p. 6 (3.2. The theorem), results p. 6 (3.2. The theorem), p. 7 (3.2. The theorem), p. 7 (3.2. The theorem), p. 6 (3.2. The theorem), p. 7 (3.2. The theorem), p. 7 (3.2. The theorem).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Imagine each episode (xt, at, Yt, rt, °~t) written on a card. (p. 4, 3. The convergence proof).
+- **Metric evidence:** The above completely specifies how state transitions and rewards are determined in the AFIP. (p. 4, 3. The convergence proof).
+- **Baseline/ablation evidence:** Assume, without loss of generality, that O~0(x, a) < 61/(1 - 3') and that 61 __. (p. 6, 3.2. The theorem).
+- **Failure/negative evidence:** Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required. (p. 8, 4. Discussions and conclusions).

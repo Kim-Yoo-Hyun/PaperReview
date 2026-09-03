@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kxVjQhkAWz; PDF retrieval source: https://openreview.net/pdf/f8af5ab61a9d33b6aaa32fa274fb76ff5e2fd0dd.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kxVjQhkAWz; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247872. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 
 ## Evaluation Body Digest
 
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 NORMAL AND MATCHING PREDICTION We evaluate our Dens3R on several surface normal prediction datasets that include both indoor and outdoor scenes.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 4.2 POINTMAP AND DEPTH PREDICTION For monocular depth prediction and pointmap prediction, we evaluate our model on several datasets containing both indoor and outdoor scenes.
-- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** The dataset includes indoor scenes, outdoor scenes, and object-level data.
-- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** We also showcase the training objectives we apply during training, the number of image pairs and the corresponding dataset ratio. dataset to attain the optimal ...
-- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** To train the visual foundation model, we collect and reorganize a large-scale training dataset containing various data types.
-- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** We summarize and present this dataset information in Tab.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** It can be seen that our method yields higher accuracy and surpasses previous methods across nearly all datasets, demonstrating our superior performance across various evaluation ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparison of normal prediction. Dens3R generates more accurate and de- tailed normal maps than previous methods for both object-centric and unbounded scenes,. ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4.1 NORMAL AND MATCHING PREDICTION We evaluate our Dens3R on several surface normal prediction datasets that include both indoor and outdoor scenes.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4.2 POINTMAP AND DEPTH PREDICTION For monocular depth prediction and pointmap prediction, we evaluate our model on several datasets containing both indoor and outdoor scenes.
+- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** The dataset includes indoor scenes, outdoor scenes, and object-level data.
+- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** We also showcase the training objectives we apply during training, the number of image pairs and the corresponding dataset ratio. dataset to attain the optimal ...
+- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** To train the visual foundation model, we collect and reorganize a large-scale training dataset containing various data types.
+- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** We summarize and present this dataset information in Tab.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** It can be seen that our method yields higher accuracy and surpasses previous methods across nearly all datasets, demonstrating our superior performance across various evaluation ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of normal prediction. Dens3R generates more accurate and de- tailed normal maps than previous methods for both object-centric and unbounded scenes,. ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 4: Qualitative comparison of normal prediction. Dens3R generates more accurate and de- tailed normal maps than previous methods for both object-centric and unbounded ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. ... | p. 24 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 NORMAL AND MATCHING PREDICTION We evaluate our Dens3R on several surface normal prediction datasets that include both indoor and outdoor scenes.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 4.2 POINTMAP AND DEPTH PREDICTION For monocular depth prediction and pointmap prediction, we evaluate our model on several datasets containing both indoor and outdoor scenes.
-- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** The dataset includes indoor scenes, outdoor scenes, and object-level data.
-- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** We also showcase the training objectives we apply during training, the number of image pairs and the corresponding dataset ratio. dataset to attain the optimal ...
-- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** To train the visual foundation model, we collect and reorganize a large-scale training dataset containing various data types.
-- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** We summarize and present this dataset information in Tab.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4.1 NORMAL AND MATCHING PREDICTION We evaluate our Dens3R on several surface normal prediction datasets that include both indoor and outdoor scenes.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4.2 POINTMAP AND DEPTH PREDICTION For monocular depth prediction and pointmap prediction, we evaluate our model on several datasets containing both indoor and outdoor scenes.
+- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** The dataset includes indoor scenes, outdoor scenes, and object-level data.
+- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** We also showcase the training objectives we apply during training, the number of image pairs and the corresponding dataset ratio. dataset to attain the optimal ...
+- **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** To train the visual foundation model, we collect and reorganize a large-scale training dataset containing various data types.
+- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** We summarize and present this dataset information in Tab.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Dens3R is a feed-forward visual foundation model that takes unposed images as input and outputs high-quality 3D pointmap with unified geometric dense prediction. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of Dens3R. We propose Dens3R, a dense visual transformer backbone featuring a shared encoder-decoder architecture and multiple task-specific heads for geometric prediction. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Normal comparison. We demonstrate that the normal derived directly from the scale- invariant pointmap and MoGe both are not accurate enough. tasks-particularly surface ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparison of normal prediction. Dens3R generates more accurate and de- tailed normal maps than previous methods for both object-centric and unbounded scenes,. ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison of normal prediction. We report the mean and median angular errors with each cell colored to indicate the best and the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Benchmark on image matching on ZEB dataset. We report the AUC values with each cell colored to indicate the best and the second ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative comparison of depth maps and pointmaps. We compare our method with previous DUSt3R-based methods and demonstrate high-quality depth prediction results. Dens3R also ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Table 3: Normal quantitative metrics for ablation. We demonstrate that both the intrinsic-invariant training and coarse-to-fine strategy contributes to accurate normal predictions.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Dens3R is a feed-forward visual foundation model that takes unposed images as input and outputs high-quality 3D pointmap with unified geometric dense prediction. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of Dens3R. We propose Dens3R, a dense visual transformer backbone featuring a shared encoder-decoder architecture and multiple task-specific heads for geometric prediction. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Normal comparison. We demonstrate that the normal derived directly from the scale- invariant pointmap and MoGe both are not accurate enough. tasks-particularly surface ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of normal prediction. Dens3R generates more accurate and de- tailed normal maps than previous methods for both object-centric and unbounded scenes,. ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison of normal prediction. We report the mean and median angular errors with each cell colored to indicate the best and the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Benchmark on image matching on ZEB dataset. We report the AUC values with each cell colored to indicate the best and the second ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative comparison of depth maps and pointmaps. We compare our method with previous DUSt3R-based methods and demonstrate high-quality depth prediction results. Dens3R also ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Table 3: Normal quantitative metrics for ablation. We demonstrate that both the intrinsic-invariant training and coarse-to-fine strategy contributes to accurate normal predictions.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.1 NORMAL AND MATCHING PREDICTION We evaluate our Dens3R on several surface normal prediction datasets that include both indoor and outdoor scenes. | embodiment, simulator version and control stack | p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
 | Task/environment | 4.2 POINTMAP AND DEPTH PREDICTION For monocular depth prediction and pointmap prediction, we evaluate our model on several datasets containing both indoor and outdoor ... | reset, timeout, object/scene variation | p. 9 (4 EXPERIMENTS), p. 19 (A.3 IMPLEMENTATION DETAILS) |
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 
 ## Limitations and Verification Questions
 
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. inputs ...
-- **p. 28 / A.8 LIMITATION - extractive PDF cue:** We compare our depth prediction results with VGGT and Dens3R demonstrates more robust and accurate predictions.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Dens3R is a feed-forward visual foundation model that takes unposed images as input and outputs high-quality 3D pointmap with unified geometric dense prediction. ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** As for pointmap prediction, MoGe and VGGT often fail to recover depth for reflective surfaces and tend to produce flattened pointmaps in background regions.
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 6: High-quality geometric predictions for high-resolution (2K) inputs. Please zoom in to better observe the fine-grained details. Position-Interpolated Rotary Positional Encoding. Dens3R can support ...
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared encoder-decoder ...
+- **p. 24 / Figure/Table caption - extractive body cue:** Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. inputs ...
+- **p. 28 / A.8 LIMITATION - extractive body cue:** We compare our depth prediction results with VGGT and Dens3R demonstrates more robust and accurate predictions.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Dens3R is a feed-forward visual foundation model that takes unposed images as input and outputs high-quality 3D pointmap with unified geometric dense prediction. ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** As for pointmap prediction, MoGe and VGGT often fail to recover depth for reflective surfaces and tend to produce flattened pointmaps in background regions.
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 6: High-quality geometric predictions for high-resolution (2K) inputs. Please zoom in to better observe the fine-grained details. Position-Interpolated Rotary Positional Encoding. Dens3R can support ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared encoder-decoder ...
 
-- **PDF anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3 IMPLEMENTATION DETAILS), p. 20 (A.3 IMPLEMENTATION DETAILS), p. 19 (A.3 IMPLEMENTATION DETAILS), p. 20 (A.3 IMPLEMENTATION DETAILS), metrics p. 9 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 24 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 23 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 24 (Figure/Table caption), p. 10 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 19 (Figure/Table caption), p. 29 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3 IMPLEMENTATION DETAILS), p. 20 (A.3 IMPLEMENTATION DETAILS), p. 19 (A.3 IMPLEMENTATION DETAILS), p. 20 (A.3 IMPLEMENTATION DETAILS), metrics p. 9 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 24 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 23 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 24 (Figure/Table caption), p. 10 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 19 (Figure/Table caption), p. 29 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

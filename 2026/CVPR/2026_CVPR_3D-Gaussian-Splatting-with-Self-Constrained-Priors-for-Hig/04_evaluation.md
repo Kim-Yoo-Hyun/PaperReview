@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.2. Results and Evaluation), p. 6 (4.2. R
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experiment Setup - extractive PDF cue:** We evaluate our method on four datasets with synthetic and real scanned scenes, including: NeRF-Synthetic [41], DTU [24], Tanks and Temples (TNT) [28], and Mip-NeRF ...
-- **p. 6 / 4.2. Results and Evaluation - extractive PDF cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
-- **p. 5 / 4.2. Results and Evaluation - extractive PDF cue:** 2, our method achieves the best results across scenes.
-- **p. 6 / 4.2. Results and Evaluation - extractive PDF cue:** Visual comparison of reconstruction on DTU dataset.
-- **p. 7 / 4.2. Results and Evaluation - extractive PDF cue:** We further evaluate our method on the Mip-NeRF 360 dataset to validate the performance in novel view synthesis.
-- **p. 7 / 4.2. Results and Evaluation - extractive PDF cue:** 9, GOF[60] and GS-Pull [64] achieve high completeness on surfaces but struggle to recover local details in indoor scenes.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of our method. Given 3D Gaussians g, we employ a distance field specified by a fused TSDF grid as our prior f ...
-- **p. 6 / 4.2. Results and Evaluation - extractive PDF cue:** The error map indicates the distance to the ground truth surface.
+- **p. 5 / 4.1. Experiment Setup - extractive body cue:** We evaluate our method on four datasets with synthetic and real scanned scenes, including: NeRF-Synthetic [41], DTU [24], Tanks and Temples (TNT) [28], and Mip-NeRF ...
+- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
+- **p. 5 / 4.2. Results and Evaluation - extractive body cue:** 2, our method achieves the best results across scenes.
+- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** Visual comparison of reconstruction on DTU dataset.
+- **p. 7 / 4.2. Results and Evaluation - extractive body cue:** We further evaluate our method on the Mip-NeRF 360 dataset to validate the performance in novel view synthesis.
+- **p. 7 / 4.2. Results and Evaluation - extractive body cue:** 9, GOF[60] and GS-Pull [64] achieve high completeness on surfaces but struggle to recover local details in indoor scenes.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of our method. Given 3D Gaussians g, we employ a distance field specified by a fused TSDF grid as our prior f ...
+- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** The error map indicates the distance to the ground truth surface.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Results and Evaluation), p. 6 (4.2. R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Results and Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | 2, our method achieves the best results across scenes. | p. 5 (4.2. Results and Evaluation) |
 | 4.2. Results and Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | 3 shows that our method achieves the best reconstruction performance among all baselines. | p. 6 (4.2. Results and Evaluation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 5 (4.2. Results and Evaluation), p. 6 (4.2. R
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experiment Setup - extractive PDF cue:** We evaluate our method on four datasets with synthetic and real scanned scenes, including: NeRF-Synthetic [41], DTU [24], Tanks and Temples (TNT) [28], and Mip-NeRF ...
-- **p. 6 / 4.2. Results and Evaluation - extractive PDF cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
-- **p. 5 / 4.2. Results and Evaluation - extractive PDF cue:** 2, our method achieves the best results across scenes.
-- **p. 6 / 4.2. Results and Evaluation - extractive PDF cue:** Visual comparison of reconstruction on DTU dataset.
-- **p. 7 / 4.2. Results and Evaluation - extractive PDF cue:** We further evaluate our method on the Mip-NeRF 360 dataset to validate the performance in novel view synthesis.
-- **p. 7 / 4.2. Results and Evaluation - extractive PDF cue:** 9, GOF[60] and GS-Pull [64] achieve high completeness on surfaces but struggle to recover local details in indoor scenes.
+- **p. 5 / 4.1. Experiment Setup - extractive body cue:** We evaluate our method on four datasets with synthetic and real scanned scenes, including: NeRF-Synthetic [41], DTU [24], Tanks and Temples (TNT) [28], and Mip-NeRF ...
+- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
+- **p. 5 / 4.2. Results and Evaluation - extractive body cue:** 2, our method achieves the best results across scenes.
+- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** Visual comparison of reconstruction on DTU dataset.
+- **p. 7 / 4.2. Results and Evaluation - extractive body cue:** We further evaluate our method on the Mip-NeRF 360 dataset to validate the performance in novel view synthesis.
+- **p. 7 / 4.2. Results and Evaluation - extractive body cue:** 9, GOF[60] and GS-Pull [64] achieve high completeness on surfaces but struggle to recover local details in indoor scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of our method. Given 3D Gaussians g, we employ a distance field specified by a fused TSDF grid as our prior f ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Illustration of band- width and the range of opacity control. camera coordinate sys- tem specified by
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Visualization of periodical update on our prior.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of Gaussian centers with each constraint. The error map indicates the distance to the ground truth surface. the depth fusion operation F, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Visual comparison of reconstruction on NeRF-Synthetic dataset.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparisons in terms of CDL1 (×100) and PSNR on the NeRF-Synthetic dataset. Class
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Error map comparison of rendering on NeRF-Synthetic. our method extracts stable implicit priors from depth maps for more stable geometry inference. The comparisons ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparisons in terms of CD on the DTU dataset. Class Methods 24 37 40 55 63
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of our method. Given 3D Gaussians g, we employ a distance field specified by a fused TSDF grid as our prior f ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Illustration of band- width and the range of opacity control. camera coordinate sys- tem specified by
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Visualization of periodical update on our prior.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of Gaussian centers with each constraint. The error map indicates the distance to the ground truth surface. the depth fusion operation F, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Visual comparison of reconstruction on NeRF-Synthetic dataset.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons in terms of CDL1 (×100) and PSNR on the NeRF-Synthetic dataset. Class
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Error map comparison of rendering on NeRF-Synthetic. our method extracts stable implicit priors from depth maps for more stable geometry inference. The comparisons ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparisons in terms of CD on the DTU dataset. Class Methods 24 37 40 55 63
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on four datasets with synthetic and real scanned scenes, including: NeRF-Synthetic [41], DTU [24], Tanks and Temples (TNT) [28], and ... | embodiment, simulator version and control stack | p. 5 (4.1. Experiment Setup), p. 6 (4.2. Results and Evaluation) |
 | Task/environment | We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset. | reset, timeout, object/scene variation | p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation) |
@@ -117,8 +117,8 @@ PDF body evaluation/result cue (p. 5 (4.2. Results and Evaluation), p. 6 (4.2. R
 | Primary metric/result | 3 shows that our method achieves the best reconstruction performance among all baselines. | numeric claim only at cited anchor | p. 6 (4.2. Results and Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.2. Constraints with a Self-Constrained Prior - extractive PDF cue:** For each Gaussian gj, we first interpolate the signed distance sj at the center µj, and calculate its gradient ∇f t(µj) using finite difference in ...
-- **p. 4 / 3.3. Loss Functions - extractive PDF cue:** Based on that, to learn a consistent surface from multiview depth maps, we also leverage LDepth to make the perray depth distribution thinner and more ...
+- **p. 4 / 3.2. Constraints with a Self-Constrained Prior - extractive body cue:** For each Gaussian gj, we first interpolate the signed distance sj at the center µj, and calculate its gradient ∇f t(µj) using finite difference in ...
+- **p. 4 / 3.3. Loss Functions - extractive body cue:** Based on that, to learn a consistent surface from multiview depth maps, we also leverage LDepth to make the perray depth distribution thinner and more ...
 
 ## Generalization and Failure Cases
 
@@ -147,12 +147,12 @@ PDF body evaluation/result cue (p. 5 (4.2. Results and Evaluation), p. 6 (4.2. R
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.2. Results and Evaluation - extractive PDF cue:** Compared with implicit methods, our method does not need to learn SDF or priors, which balances both accuracy and efficiency.
-- **p. 6 / 4.2. Results and Evaluation - extractive PDF cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
-- **p. 7 / 4.2. Results and Evaluation - extractive PDF cue:** Visual comparison of reconstruction on Mip-NerF 360 dataset, the color indicates the normal direction. rate surface alignment, while GS-Pull loses local details and exhibits normal ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 12. Effect of Gaussian Removal and Projection. ity arrangement term LSCP , we remove it (denoted as w/o LSCP ) and optimize the Gaussian ...
+- **p. 5 / 4.2. Results and Evaluation - extractive body cue:** Compared with implicit methods, our method does not need to learn SDF or priors, which balances both accuracy and efficiency.
+- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
+- **p. 7 / 4.2. Results and Evaluation - extractive body cue:** Visual comparison of reconstruction on Mip-NerF 360 dataset, the color indicates the normal direction. rate surface alignment, while GS-Pull loses local details and exhibits normal ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 12. Effect of Gaussian Removal and Projection. ity arrangement term LSCP , we remove it (denoted as w/o LSCP ) and optimize the Gaussian ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experiment Setup), p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), metrics p. 2 (Figure/Table caption), p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 5 (4.1. Experiment Setup), p. 6 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), baselines p. 5 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Results and Evaluation), results p. 5 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experiment Setup), p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), metrics p. 2 (Figure/Table caption), p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 5 (4.1. Experiment Setup), p. 6 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), baselines p. 5 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Results and Evaluation), results p. 5 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 6 (4.2. Results and Evaluation), p. 5 (4.2. Results and Evaluation), p. 7 (4.2. Results and Evaluation), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

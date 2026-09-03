@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p107.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p107.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p107.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p107.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. RESULTS - extractive PDF cue:** In this section we aim to answer the following questions through extensive experiments both in sim and the real world: • How well does ExBody ...
-- **p. 6 / IV. RESULTS - extractive PDF cue:** In our work, we show the advantage of learning robust Whole-Body control for humanoid robots from large motion datasets.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** II. • No RSI: Initialize the environment with default DoF positions and root states instead of sampling from the motion dataset. • Full body tracking: ...
-- **p. 7 / IV. RESULTS - extractive PDF cue:** However we can still see that it works better on a small O.O.D dataset than a large training set.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** Due to the limited torque, DoFs of the real robot, we design ExBody to only mimic the arm motions ge ∼Ge while the wholebody's objective ...
-- **p. 7 / IV. RESULTS - extractive PDF cue:** 7: We sample 20-second simulation rollouts with 4096 environments and take the mean episode length as our metric.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** We choose the uptown funk motion from O.O.D. dataset form II From Fig.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** The top row shows the robot motions and original dance video snapshots.
+- **p. 5 / IV. RESULTS - extractive body cue:** In this section we aim to answer the following questions through extensive experiments both in sim and the real world: • How well does ExBody ...
+- **p. 6 / IV. RESULTS - extractive body cue:** In our work, we show the advantage of learning robust Whole-Body control for humanoid robots from large motion datasets.
+- **p. 5 / IV. RESULTS - extractive body cue:** II. • No RSI: Initialize the environment with default DoF positions and root states instead of sampling from the motion dataset. • Full body tracking: ...
+- **p. 7 / IV. RESULTS - extractive body cue:** However we can still see that it works better on a small O.O.D dataset than a large training set.
+- **p. 6 / IV. RESULTS - extractive body cue:** Due to the limited torque, DoFs of the real robot, we design ExBody to only mimic the arm motions ge ∼Ge while the wholebody's objective ...
+- **p. 7 / IV. RESULTS - extractive body cue:** 7: We sample 20-second simulation rollouts with 4096 environments and take the mean episode length as our metric.
+- **p. 8 / IV. RESULTS - extractive body cue:** We choose the uptown funk motion from O.O.D. dataset form II From Fig.
+- **p. 8 / IV. RESULTS - extractive body cue:** The top row shows the robot motions and original dance video snapshots.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | V, our method achieves the best linear velocity tracking performance (MELV). | p. 6 (IV. RESULTS) |
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | However, even with a reduced sampling range, the performance is significantly worse than ours, indicating ExBody's advantage in overcoming conflicts of objectives problems. | p. 6 (IV. RESULTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. RESULTS - extractive PDF cue:** In this section we aim to answer the following questions through extensive experiments both in sim and the real world: • How well does ExBody ...
-- **p. 6 / IV. RESULTS - extractive PDF cue:** In our work, we show the advantage of learning robust Whole-Body control for humanoid robots from large motion datasets.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** II. • No RSI: Initialize the environment with default DoF positions and root states instead of sampling from the motion dataset. • Full body tracking: ...
-- **p. 7 / IV. RESULTS - extractive PDF cue:** However we can still see that it works better on a small O.O.D dataset than a large training set.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** Due to the limited torque, DoFs of the real robot, we design ExBody to only mimic the arm motions ge ∼Ge while the wholebody's objective ...
-- **p. 7 / IV. RESULTS - extractive PDF cue:** 7: We sample 20-second simulation rollouts with 4096 environments and take the mean episode length as our metric.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** We choose the uptown funk motion from O.O.D. dataset form II From Fig.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** The top row shows the robot motions and original dance video snapshots.
+- **p. 5 / IV. RESULTS - extractive body cue:** In this section we aim to answer the following questions through extensive experiments both in sim and the real world: • How well does ExBody ...
+- **p. 6 / IV. RESULTS - extractive body cue:** In our work, we show the advantage of learning robust Whole-Body control for humanoid robots from large motion datasets.
+- **p. 5 / IV. RESULTS - extractive body cue:** II. • No RSI: Initialize the environment with default DoF positions and root states instead of sampling from the motion dataset. • Full body tracking: ...
+- **p. 7 / IV. RESULTS - extractive body cue:** However we can still see that it works better on a small O.O.D dataset than a large training set.
+- **p. 6 / IV. RESULTS - extractive body cue:** Due to the limited torque, DoFs of the real robot, we design ExBody to only mimic the arm motions ge ∼Ge while the wholebody's objective ...
+- **p. 7 / IV. RESULTS - extractive body cue:** 7: We sample 20-second simulation rollouts with 4096 environments and take the mean episode length as our metric.
+- **p. 8 / IV. RESULTS - extractive body cue:** We choose the uptown funk motion from O.O.D. dataset form II From Fig.
+- **p. 8 / IV. RESULTS - extractive body cue:** The top row shows the robot motions and original dance video snapshots.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Our Robot demonstrates diverse and expressive whole-body movements in different scenarios. Top Row: The robot is dancing, hugging and doing high-five with a ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of our framework. Our framework is able to train on data from various sources such as static human motion datasets, generative models, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Left: During training, we extract a large repertoire of retargeted motion clips and train our ExBody policy. Right: During deployment, we can replay ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: We sample 10,000 points of hand positions relative to the robot. Left: retargeted motion dataset. Right: learned ExBody policy rollouts. The upper body ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5: Tracking error heatmaps for root movement goal Gm. Top row: goals sampled from MoCap motion dataset. Middle row: op row with the sampled ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Random Sampling gm results in a behavior that the policy immediately kneels after initialization, trying to be as stable as possible while ignoring ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7: We sample 20-second simulation rollouts with 4096 environments and take the mean episode length as our metric. The termination condition for an episode ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 8: H1 robot doing a High Five in the real world. Top Row: ExBody only (Ours) walks with more bent knees and has more ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our Robot demonstrates diverse and expressive whole-body movements in different scenarios. Top Row: The robot is dancing, hugging and doing high-five with a ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of our framework. Our framework is able to train on data from various sources such as static human motion datasets, generative models, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Left: During training, we extract a large repertoire of retargeted motion clips and train our ExBody policy. Right: During deployment, we can replay ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: We sample 10,000 points of hand positions relative to the robot. Left: retargeted motion dataset. Right: learned ExBody policy rollouts. The upper body ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Tracking error heatmaps for root movement goal Gm. Top row: goals sampled from MoCap motion dataset. Middle row: op row with the sampled ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Random Sampling gm results in a behavior that the policy immediately kneels after initialization, trying to be as stable as possible while ignoring ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: We sample 20-second simulation rollouts with 4096 environments and take the mean episode length as our metric. The termination condition for an episode ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: H1 robot doing a High Five in the real world. Top Row: ExBody only (Ours) walks with more bent knees and has more ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this section we aim to answer the following questions through extensive experiments both in sim and the real world: • How well does ... | embodiment, simulator version and control stack | p. 5 (IV. RESULTS), p. 6 (IV. RESULTS) |
 | Task/environment | In our work, we show the advantage of learning robust Whole-Body control for humanoid robots from large motion datasets. | reset, timeout, object/scene variation | p. 6 (IV. RESULTS), p. 5 (IV. RESULTS) |
@@ -120,11 +120,11 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 | Primary metric/result | However, even with a reduced sampling range, the performance is significantly worse than ours, indicating ExBody's advantage in overcoming conflicts of objectives problems. | numeric claim only at cited anchor | p. 6 (IV. RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. RESULTS - extractive PDF cue:** IV Baseline vx vy roll pitch base height Random Sample ±2.0 ±1.0 ±0.5 ±0.5 [0.9, 1.1] Random Sample Small ±1.5 ±1.0 ±0.2 ±0.2 [0.9, 1.1] ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** 4: We sample 10,000 points of hand positions relative to the robot.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** 10: We uniformly sample 4096 different vx ∈[0, 2] in root movement goal Gm with 15s for each vx.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** 9 with a moving window of length 4s.
-- **p. 8 / IV. RESULTS - extractive PDF cue:** The linearly fitted stepping frequency when vx = 0 is slightly above 2.0Hz, while in Fig.
+- **p. 5 / IV. RESULTS - extractive body cue:** IV Baseline vx vy roll pitch base height Random Sample ±2.0 ±1.0 ±0.5 ±0.5 [0.9, 1.1] Random Sample Small ±1.5 ±1.0 ±0.2 ±0.2 [0.9, 1.1] ...
+- **p. 5 / IV. RESULTS - extractive body cue:** 4: We sample 10,000 points of hand positions relative to the robot.
+- **p. 8 / IV. RESULTS - extractive body cue:** 10: We uniformly sample 4096 different vx ∈[0, 2] in root movement goal Gm with 15s for each vx.
+- **p. 8 / IV. RESULTS - extractive body cue:** 9 with a moving window of length 4s.
+- **p. 8 / IV. RESULTS - extractive body cue:** The linearly fitted stepping frequency when vx = 0 is slightly above 2.0Hz, while in Fig.
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 
 ## Limitations and Verification Questions
 
-- **p. 9 / VII. LIMITATIONS - extractive PDF cue:** Auto recovery and initialization could be explored to reduce the cost of doing experiments.
-- **p. 9 / VI. DISCUSSIONS - extractive PDF cue:** We introduce a method designed to enable a humanoid robot to track expressive upper body motions while ensuring the maintenance of robust locomotion capabilities in ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Note that although Random Sample looks better than Motion Sample, the heatmap does not consider the sample density.
-- **p. 6 / IV. RESULTS - extractive PDF cue:** Why does not ExBody do full DoF tracking?
-- **p. 6 / IV. RESULTS - extractive PDF cue:** Again our method does not require such manual tuning of curriculum to work.
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Fig. 13: Policy's state distribution under different sampling strategies. The green dots are the policy rollout's states. For dataset sampling, we record 20 data points ...
+- **p. 9 / VII. LIMITATIONS - extractive body cue:** Auto recovery and initialization could be explored to reduce the cost of doing experiments.
+- **p. 9 / VI. DISCUSSIONS - extractive body cue:** We introduce a method designed to enable a humanoid robot to track expressive upper body motions while ensuring the maintenance of robust locomotion capabilities in ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Note that although Random Sample looks better than Motion Sample, the heatmap does not consider the sample density.
+- **p. 6 / IV. RESULTS - extractive body cue:** Why does not ExBody do full DoF tracking?
+- **p. 6 / IV. RESULTS - extractive body cue:** Again our method does not require such manual tuning of curriculum to work.
+- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 13: Policy's state distribution under different sampling strategies. The green dots are the policy rollout's states. For dataset sampling, we record 20 data points ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), metrics p. 7 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), baselines p. 6 (IV. RESULTS), p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), results p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Figure/Table caption), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), metrics p. 7 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), baselines p. 6 (IV. RESULTS), p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), results p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Figure/Table caption), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -1,8 +1,10 @@
 # Neural Assembler: Learning to Generate Fine-Grained Robotic Assembly Instructions from Multi-View Images
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613.
-> PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613.
+> PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / AAAI
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/33613
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본�
 ## Why Read It
 
 Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본문은 These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al.를 문제로 두고, For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al. (p. 1, 1 Introduction).
+- **Actual contribution:** For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler. (p. 2, 1 Introduction).
+- **Evaluation boundary:** As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust applicability. (p. 9, 4 Experiments).
+- **Explicit failure boundary:** The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct keypoint identification, occlusion results in a less confident. (p. 9, 4 Experiments).

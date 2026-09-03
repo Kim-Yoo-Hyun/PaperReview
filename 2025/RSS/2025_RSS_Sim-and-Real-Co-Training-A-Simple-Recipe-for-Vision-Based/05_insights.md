@@ -13,7 +13,6 @@
 - **p. 3 / B. Data Composition Factors - extractive body cue:** We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important ...
 - **p. 4 / C. Automated Synthetic Data Generation - extractive body cue:** Our workflow consists of three components: (1) We start with a real-world target task in mind and some prior simulation data: (2) Given real-world tasks ...
 - **p. 8 / C. Effectiveness of Co-Training in Data-Rich Settings - extractive body cue:** In this section, we present systematic studies that help identify key elements for successful co-training.
-- **p. 1 / 1. IyrRopucTION - extractive body cue:** "Equal contribution. "Project leads
 - **p. 2 / 1. IyrRopucTION - extractive body cue:** We summarize our contributions as follows:
 - **p. 3 / A. Co-Training on Real-World and Simulation Data - extractive body cue:** In practice, we use an ‘equivalent formulation of a, which represents the probability ‘of sampling from simulation data in each training batch.
 - **p. 3 / A. Co-Training on Real-World and Simulation Data - extractive body cue:** We adopt the co-training formulation following prior work [7], where ‘we minimize the behavioral cloning action loss
@@ -42,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 In this framework, policies are trained to predict actions based fon ground truth state-action pairs provided in a demonstration dataset.를 Our study aims to provide actionable guidelines ‘on how to strategically combine these data sources to achieve superior policy learning outcomes in the real word.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Extending our approach to a broader set of manipulation tasks, such as high-precision insertion, and longer-horizon tasks, is left for future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important it is to align each factor between ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2) The same task goal-specifically, the same success check and, if applicable, the same language instructions; 3) The same object categories, though individual instances may differ in geometry or texture; (p. 6, 1) The same robot and action spa).
+- **Paper-specific mechanism:** 1: Sim-and-Real Co-Training We show how co-training policies on real-world and simulation data can attain superior per formance in the real-robot deployment, compared to training solely ‘on real-world data, We ... (p. 1, 1. IyrRopucTION).
+- **Evidence boundary:** the reported outcome is Specifically, we demonstrate how co-training with simulation data enhances the real-world policy's in-domain performance (Section V-A) and improves its generalization to novel scenarios (Section V-B). (p. 6, V. EXPERIMENTS); the relevant task/metric cue is This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%. (p. 7, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Finally, for the CLoseDoo= task, we recon 4 success if the door's joint angle is less than 5° and record a failure otherwise (p. 15, 256. We also add language conditioning to facilitate training).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The term "digital cousin" was recently introduced by Dai et al, [26] to describe simulation environments that are close to, but not perfectly aligned with, their real-world counterpart, We extend this notion ....
-3. Compare against the body-reported baseline or a matched simpler baseline: This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%..
-4. Report the body metric and its denominator/aggregation: This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%..
-5. Re-run the body-reported ablation/failure condition: ‘TABLE I: Effect of different simulation data in the co-training mix..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2) The same task goal-specifically, the same success check and, if applicable, the same language instructions; 3) The same object categories, though individual instances may differ in geometry or texture; (p. 6, 1) The same robot and action spa); preserve the objective/update rule: We adopt the co-training formulation following prior work [7], where ‘we minimize the behavioral cloning action loss (p. 3, A. Co-Training on Real-World and Simulation Data).
+2. Use the paper-reported task/data/environment cue: The term "digital cousin" was recently introduced by Dai et al, [26] to describe simulation environments that are close to, but not perfectly aligned with, their real-world counterpart, We extend ... (p. 6, C. Building Task-Aware Simulation Datasets).
+3. Compare against the reported or matched baseline: This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%. (p. 7, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%. (p. 7, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: ‘TABLE I: Effect of different simulation data in the co-training mix. (p. 7, V. EXPERIMENTS); if none is reported, design one around: Finally, for the CLoseDoo= task, we recon 4 success if the door's joint angle is less than 5° and record a failure otherwise (p. 15, 256. We also add language conditioning to facilitate training).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training); the primary result is directionally consistent at p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), match the reported outcome at p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), and measure the boundary at p. 15 (256. We also add language conditioning to facilitate training), p. 15 (256. We also add language conditioning to facilitate training).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 define, parameters, more mechanism이 This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily ... 대비 This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms ...을 개선하고, Extending our approach to a broader set of manipulation tasks, such as high-precision insertion, and longer-horizon ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2) The same task goal-specifically, the same success check and, if applicable, the same language instructions; 3) The same object categories, though ...), does the paper-specific mechanism (1: Sim-and-Real Co-Training We show how co-training policies on real-world and simulation data can attain superior per formance in the real-robot deployment, ...) retain the reported evaluation outcome (This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms ...) when tested against the paper's strongest explicit boundary (Finally, for the CLoseDoo= task, we recon 4 success if the door's joint angle is less than 5° ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** 1: Sim-and-Real Co-Training We show how co-training policies on real-world and simulation data can attain superior per formance in the real-robot deployment, compared to training solely ‘on real-world data, We ... (p. 1, 1. IyrRopucTION).
+- **Paper-supported outcome:** Specifically, we demonstrate how co-training with simulation data enhances the real-world policy's in-domain performance (Section V-A) and improves its generalization to novel scenarios (Section V-B). (p. 6, V. EXPERIMENTS).
+- **Strongest explicit boundary:** Finally, for the CLoseDoo= task, we recon 4 success if the door's joint angle is less than 5° and record a failure otherwise (p. 15, 256. We also add language conditioning to facilitate training).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

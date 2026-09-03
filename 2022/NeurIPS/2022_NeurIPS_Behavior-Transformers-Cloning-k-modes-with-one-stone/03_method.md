@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | We use a transformer decoder model, namely minGPT [11], with minor modifications, as our backbone. | p. 4 (1 Introduction), p. 3 (1 Introduction) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | To operationalize these two features in a single behavior model, we make use of transformers since (a) they are effective in utilizing ... | p. 3 (1 Introduction), p. 4 (1 Introduction) |
@@ -83,9 +83,9 @@ PDF body method statement (p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | The participants completed a sequence of four object-interaction tasks in each episode [34]. | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | The participants completed a sequence of four object-interaction tasks in each episode [34]. | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | Each task is colored differently, and frequency is shown out of a 1,000 unconditional rollouts from the models. | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | Our models contain on the order of 104-106 parameters, and even with a small batch size trains within an hour for our ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), temporal p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 8 (3 Experiments), p. 2 (1 Introduction), p. 6 (3 Experiments).
+- **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), temporal p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 8 (3 Experiments), p. 2 (1 Introduction), p. 6 (3 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2 Behavior Transformers Given a dataset of continuous observation and action pairs D ⌘{(o, a)} ⇢O ⇥A that contains behaviors we are interested in, our goal is to learn a ... (p. 3, 1 Introduction).
+- **Objective/update evidence:** While the standard cross entropy loss for binary classification can be thought of Lce(pt) = -log(pt), Focal loss adds a term (1 -pt)γ to this, to make the new loss ... (p. 4, 1 Introduction).
+- **Temporal/runtime evidence:** The participants completed a sequence of four object-interaction tasks in each episode [34]. (p. 6, 3 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -23,7 +23,7 @@
 
 - **p. 1 / 1 Introduction - extractive body cue:** While conventionally these challenges have been approached from the perspective of planning (e.g., TAMP [1]) or hierarchical learning (e.g., HRL [2]), effective high-level reasoning about ...
 - **p. 2 / 1 Introduction - extractive body cue:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in ...
-- **p. 1 / 1 Introduction - extractive body cue:** While prior work has investigated using language models as planners [20, 21] or incorporating arXiv:2207.05608v1 [cs.RO] 12 Jul 2022
+- **p. 1 / 1 Introduction - extractive body cue:** While prior work has investigated using language models as planners [20, 21] or incorporating.
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Averaged success rate across 120 evaluations on several task families in our real-world mobile manipulation environment. We consider a standard setting and adversarial ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided ...
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 As a demonstration of the versatility of LLMs and grounded closed-loop feedback, we additionally show several surprising capabilities emerging from the inner monologue formulation, including continued adaptation to new instructions, sel ...를 The policy is trained on 20000 pre-collected demonstrations, where each demonstration contains 1) language instruction of the format "pick up [x] and place it on [y]", 2) top-down view of RGB-D observation ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) control errors. False negative predictions from the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our proposed system Inner Monologue chains together these various components (perception models, robotic skills, and human feedback) in a shared language prompt, enabling it to successfully perform user instructions. (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The results of real robot experiments are ... (p. 7, Figure/Table caption); the relevant task/metric cue is Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided a "termination" oracle. Although CLIPort ... (p. 6, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in significantly improved performance in dynamical ... (p. 2, 1 Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For the object sorting task, the scene description contains a list of currently visible objects and a list of objects that the robot has successfully moved into a plate..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success rates over ....
-4. Report the body metric and its denominator/aggregation: Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success rates over ....
-5. Re-run the body-reported ablation/failure condition: Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided a "termination" oracle. Although CLIPort can receive ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our proposed system Inner Monologue chains together these various components (perception models, robotic skills, and human feedback) in a shared language prompt, enabling it to successfully perform user instructions. (p. 2, 1 Introduction); preserve the objective/update rule: To train this model, we use the symmetric contrastive loss as used in CLIP (Fig 7b). (p. 17, A.2 Inner Monologue for Real-World Tabletop Rearrangement).
+2. Use the paper-reported task/data/environment cue: Environment Feedback: Passive Scene Description For Object + Scene method, we provide task-progress scene description as a list of achieved sub-goals after each pick-and-place execution. (p. 15, A.1 Inner Monologue for Simulated Tabletop Rearrangement).
+3. Compare against the reported or matched baseline: Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success ... (p. 6, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided a "termination" oracle. Although CLIPort ... (p. 6, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided a "termination" oracle. Although CLIPort ... (p. 6, Figure/Table caption); if none is reported, design one around: Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in significantly improved performance in dynamical ... (p. 2, 1 Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), and measure the boundary at p. 2 (1 Introduction), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Inspired, human, thought mechanism이 Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and ... 대비 Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot ...을 개선하고, Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our proposed system Inner Monologue chains together these various components (perception models, robotic skills, and human feedback) in a shared language prompt, ...), does the paper-specific mechanism (Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs.) retain the reported evaluation outcome (Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort ...) when tested against the paper's strongest explicit boundary (Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The results of real robot experiments are ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in significantly improved performance in dynamical ... (p. 2, 1 Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

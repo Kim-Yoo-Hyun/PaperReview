@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Motion Imitation | SYSTEM / EVALUATION SCOPE UNRESOLVED | H36M-Test-Video* RET MCP PNN Rotation Fail-Recover Succ ↑ Eg-mpjpe ↓ Empjpe ↓ ✗ ✗ ✗ ✓ ✗ 51.2% 56.2 34.4 ✓ ✗ ✗ ✓ ... | p. 8 (4.1. Motion Imitation) |
 | 4.1. Motion Imitation | SYSTEM / EVALUATION SCOPE UNRESOLVED | Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 | p. 7 (4.1. Motion Imitation) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | PHC is trained on the training split of the AMASS [23] dataset. | embodiment, simulator version and control stack | p. 7 (4. Experiments), p. 7 (4.1. Motion Imitation) |
 | Task/environment | On the training dataset, PHC has a better success rate while achieving better or similar MPJPE, showcasing its ability to better imitate sequences from ... | reset, timeout, object/scene variation | p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose a motion imitator that can naturally recover from falls and walk to far-away reference motion, perpetually controlling simulated avatars without requiring ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Our progressive training procedure to train primitives P(1), P(2), · · · , P(K) by gradually learning harder and harder sequences. Fail recovery ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), metrics p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.2. Fail-state Recovery), p. 8 (4.1. Motion Imitation), p. 6 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 1 (Figure/Table caption), results p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.2. Fail-state Recovery).
+- **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), metrics p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.2. Fail-state Recovery), p. 8 (4.1. Motion Imitation), p. 6 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 1 (Figure/Table caption), results p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.2. Fail-state Recovery).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 (p. 7, 4.1. Motion Imitation).
+- **Metric evidence:** From Tab.4 we can see that both of our keypoint-based and rotation-based controllers can recover from fall state with high success rate (> 90%) even in the challenging scenario when ... (p. 8, 4.2. Fail-state Recovery).
+- **Baseline/ablation evidence:** Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 (p. 7, 4.1. Motion Imitation).
+- **Failure/negative evidence:** Thus, it is important to have a controller that can gracefully handle unexpected falls and noisy input, naturally recover from failstate, and resume imitation. (p. 2, 1. Introduction).

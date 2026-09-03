@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=jXvwJ51vcK; PDF retrieval source: https://openreview.net/pdf/8fd72e10cf4596642e77049c226ea9fd50cd5c23.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=jXvwJ51vcK; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111762. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** (2021), we divide the large-scale scenes into 1m × 1m blocks.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** ScanNet provides 2D RGB images of 3D scenes while S3DIS lacks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Similarly, it achieves +4.53% and +8.58% improvements on the S3DIS dataset in the 1/2-way settings, respectively.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Overall, our model secures average mIoU improvements of +3.97% and +9.25% across the 1/2-way settings on both datasets.
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** By default, We use 4 MSF blocks for the ScanNet dataset.
-- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** (2024), input features from both datasets include XYZ coordinates and RGB colors.
-- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** This allows us to directly employ pretrained weights from 2D-3D datasets for starting meta-learning on 3D-only datasets.
-- **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** Simultaneously training both heads might complicate and destabilize the optimization process due to significant heterogeneity across different modalities (Morency & Baltrušaitis, 2017; Lu et al., ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2021), we divide the large-scale scenes into 1m × 1m blocks.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** ScanNet provides 2D RGB images of 3D scenes while S3DIS lacks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Similarly, it achieves +4.53% and +8.58% improvements on the S3DIS dataset in the 1/2-way settings, respectively.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Overall, our model secures average mIoU improvements of +3.97% and +9.25% across the 1/2-way settings on both datasets.
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** By default, We use 4 MSF blocks for the ScanNet dataset.
+- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** (2024), input features from both datasets include XYZ coordinates and RGB colors.
+- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** This allows us to directly employ pretrained weights from 2D-3D datasets for starting meta-learning on 3D-only datasets.
+- **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** Simultaneously training both heads might complicate and destabilize the optimization process due to significant heterogeneity across different modalities (Morency & Baltrušaitis, 2017; Lu et al., ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS ... | p. 9 (Figure/Table caption) |
 | 4 EXPERIMENTS | EMPIRICAL / SIMULATION | Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant ... | p. 8 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** (2021), we divide the large-scale scenes into 1m × 1m blocks.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** ScanNet provides 2D RGB images of 3D scenes while S3DIS lacks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Similarly, it achieves +4.53% and +8.58% improvements on the S3DIS dataset in the 1/2-way settings, respectively.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Overall, our model secures average mIoU improvements of +3.97% and +9.25% across the 1/2-way settings on both datasets.
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** By default, We use 4 MSF blocks for the ScanNet dataset.
-- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** (2024), input features from both datasets include XYZ coordinates and RGB colors.
-- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** This allows us to directly employ pretrained weights from 2D-3D datasets for starting meta-learning on 3D-only datasets.
-- **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** Simultaneously training both heads might complicate and destabilize the optimization process due to significant heterogeneity across different modalities (Morency & Baltrušaitis, 2017; Lu et al., ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2021), we divide the large-scale scenes into 1m × 1m blocks.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** ScanNet provides 2D RGB images of 3D scenes while S3DIS lacks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Similarly, it achieves +4.53% and +8.58% improvements on the S3DIS dataset in the 1/2-way settings, respectively.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Overall, our model secures average mIoU improvements of +3.97% and +9.25% across the 1/2-way settings on both datasets.
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** By default, We use 4 MSF blocks for the ScanNet dataset.
+- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** (2024), input features from both datasets include XYZ coordinates and RGB colors.
+- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** This allows us to directly employ pretrained weights from 2D-3D datasets for starting meta-learning on 3D-only datasets.
+- **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** Simultaneously training both heads might complicate and destabilize the optimization process due to significant heterogeneity across different modalities (Morency & Baltrušaitis, 2017; Lu et al., ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison between traditional unimodal FS-PCS and our proposed multimodal FS-PCS. Previous FS-PCS methods only make use of point clouds as unimodal input. In ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overall architecture of the proposed MM-FSS. Given support and query point clouds, we first generate intermodal features Fi s/q from the IF head ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison with previous methods in mIoU (%) on the S3DIS dataset. There are four few-shot settings: 1/2-way 1/5-shot. S0/S1 refers to using ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative comparison with previous methods in mIoU (%) on the ScanNet dataset. where 1{x} is the indicator function that equals one if x ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation study. (a) Effect of fusion modules. (b) Effect of interactions between two feature heads. (c) Impact of the number of MSF layers. ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative comparison between COSeg and our proposed MM-FSS in the 1-way 1-shot setting on the S3DIS dataset. The target classes in the first ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS dataset. ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 4: Quantitative comparison with previous methods in terms of mIoU (%) on the ScanNet dataset. The last two rows represent the FS-PCS performance of ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between traditional unimodal FS-PCS and our proposed multimodal FS-PCS. Previous FS-PCS methods only make use of point clouds as unimodal input. In ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overall architecture of the proposed MM-FSS. Given support and query point clouds, we first generate intermodal features Fi s/q from the IF head ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison with previous methods in mIoU (%) on the S3DIS dataset. There are four few-shot settings: 1/2-way 1/5-shot. S0/S1 refers to using ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Quantitative comparison with previous methods in mIoU (%) on the ScanNet dataset. where 1{x} is the indicator function that equals one if x ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Ablation study. (a) Effect of fusion modules. (b) Effect of interactions between two feature heads. (c) Impact of the number of MSF layers. ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative comparison between COSeg and our proposed MM-FSS in the 1-way 1-shot setting on the S3DIS dataset. The target classes in the first ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS dataset. ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 4: Quantitative comparison with previous methods in terms of mIoU (%) on the ScanNet dataset. The last two rows represent the FS-PCS performance of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | (2021), we divide the large-scale scenes into 1m × 1m blocks. | embodiment, simulator version and control stack | p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
 | Task/environment | ScanNet provides 2D RGB images of 3D scenes while S3DIS lacks. | reset, timeout, object/scene variation | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
@@ -113,7 +113,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 | Figure 5: Visualization on the effects of weight Wq between textual and visual modalities in Eq. (7). The last column displays the heatmap of ... | component/input/data sensitivity | p. 16 (Figure/Table caption) |
 | We also evaluate a variant of the previously leading method COSeg (An et al., 2024), denoted as COSeg†, retrained using the same 2D-aligned pretrained ... | component/input/data sensitivity | p. 8 (4 EXPERIMENTS) |
 | 44.73 50.07 (b) K 1-shot 5-shot 3 43.33 45.97 4 42.83 48.04 5 44.69 48.36 (c) 3D Image Text 1-shot 5-shot ✓ 40.69 45.51 ... | component/input/data sensitivity | p. 9 (4 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2025 4.3 ABLATION STUDY In this section, unless stated otherwise, we report the mIoU results for both ... | component/input/data sensitivity | p. 10 (4 EXPERIMENTS) |
+| For datasets without 2D images, such as S3DIS (Armeni et al., 2016), we can directly use the pretrained IF head and backbone from ScanNet. | component/input/data sensitivity | p. 18 (B ADDITIONAL IMPLEMENTATION DETAILS) |
 
 ## Main Results / Claim–Evidence Map
 
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 | Primary metric/result | Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant ... | numeric claim only at cited anchor | p. 8 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** (2024), voxelizing raw input points within each block using a 0.02m grid size and uniformly sampling to maintain a maximum of 20,480 points per block.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** The initial pretraining phase spans 100 epochs, while the subsequent meta-learning phase includes 40,000 episodes, following An et al.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** (2024), the evaluation sets consist of 1,000 episodes per class in the 1-way setting and 100 episodes per class combination in the 2-way setting.
-- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** Training and inference are conducted on four RTX 3090 GPUs.
-- **p. 4 / 3 METHODOLOGY - extractive PDF cue:** Each episode corresponds to an N-way K-shot segmentation task, containing a support set S =  {Xn,k s , Yn,k s }K k=1 N n=1 ...
-- **p. 4 / 3 METHODOLOGY - extractive PDF cue:** The goal of FS-PCS is to segment the query samples {Xn q}N n=1 into N target classes and ‘background' by leveraging the knowledge of the ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2024), voxelizing raw input points within each block using a 0.02m grid size and uniformly sampling to maintain a maximum of 20,480 points per block.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** The initial pretraining phase spans 100 epochs, while the subsequent meta-learning phase includes 40,000 episodes, following An et al.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2024), the evaluation sets consist of 1,000 episodes per class in the 1-way setting and 100 episodes per class combination in the 2-way setting.
+- **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** Training and inference are conducted on four RTX 3090 GPUs.
+- **p. 4 / 3 METHODOLOGY - extractive body cue:** Each episode corresponds to an N-way K-shot segmentation task, containing a support set S =  {Xn,k s , Yn,k s }K k=1 N n=1 ...
+- **p. 4 / 3 METHODOLOGY - extractive body cue:** The goal of FS-PCS is to segment the query samples {Xn q}N n=1 into N target classes and ‘background' by leveraging the knowledge of the ...
 
 ## Generalization and Failure Cases
 
@@ -163,11 +163,11 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** Using only Gq (1:0) yields the lowest performance due to the IF head's limitations in utilizing support samples for learning novel classes.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant advancements.
-- **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive PDF cue:** In the first step, we concentrate on training the IF head to learn robust 3D features aligned with 2D modality, providing a solid foundation for ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Using only Gq (1:0) yields the lowest performance due to the IF head's limitations in utilizing support samples for learning novel classes.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant advancements.
+- **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** In the first step, we concentrate on training the IF head to learn robust 3D features aligned with 2D modality, providing a solid foundation for ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 18 (B ADDITIONAL IMPLEMENTATION DETAILS), metrics p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 18 (B ADDITIONAL IMPLEMENTATION DETAILS), metrics p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

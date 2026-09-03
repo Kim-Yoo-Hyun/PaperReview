@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p074.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p074.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p074.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p074.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (C. Decoupled Video and Action Diffusions), p. 4
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Previous video generation-based policy learning methods rely on hierarchically generating videos first and then predicting actions, leading to slow speed and accumulated ... | p. 4 (C. Decoupled Video and Action Diffusions), p. 4 (C. Decoupled Video and Action Diffusions) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Instead of training the model solely on the task of predicting future observations and actions based on historical data, we propose a ... | p. 4 (C. Decoupled Video and Action Diffusions), p. 5 (C. Decoupled Video and Action Diffusions) |
@@ -68,7 +68,7 @@ PDF body method statement (p. 4 (C. Decoupled Video and Action Diffusions), p. 4
 
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** 3) Mask Training for Flexibility: The ability to predict both videos and actions through unified representations further unlocks the potential to perform a diverse set ...
 - **p. 3 / 1. Iyrropucrion - extractive body cue:** Problem Statement: Given a sequence of image observations {Ocners---sOr} and action chunks {Ar-n,.-..Aea}e where his the history horizon, our goal is to predict the future ...
-- **p. 1 / Front matter - extractive body cue:** (b) By leveraging masked taining, UVA supports flexible input-output ‘combinations for actions and videos.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** (b) By leveraging masked taining, UVA supports flexible input-output ‘combinations for actions and videos.
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** In [24], a video diffusion model is fine-tuned ‘on robotics tasks, with the latent representations from the pre~ dicted videos serving as inputs to a ...
 - **p. 3 / 1. Iyrropucrion - extractive body cue:** We first introduce the model with complete video and action inputs and outputs (SIII-A-SII-C).
 - **p. 4 / C. Decoupled Video and Action Diffusions - extractive body cue:** Previous video generation-based policy learning methods rely on hierarchically generating videos first and then predicting actions, leading to slow speed and accumulated errors. ‘To address ...
@@ -132,8 +132,17 @@ PDF body method statement (p. 4 (C. Decoupled Video and Action Diffusions), p. 4
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (C. Decoupled Video and Action Diffusions), p. 4 (C. Decoupled Video and Action Diffusions), p. 5 (C. Decoupled Video and Action Diffusions), p. 5 (C. Decoupled Video and Action Diffusions), p. 8 (VII. UVA As A FORWARD DYNAMICS MODEL), p. 8 (VII. UVA As A FORWARD DYNAMICS MODEL), objective p. 4 (C. Decoupled Video and Action Diffusions), p. 4 (C. Decoupled Video and Action Diffusions), p. 5 (V. UVA As PoLicy), p. 5 (C. Decoupled Video and Action Diffusions), temporal p. 4 (B. Masked Autoencoder for Observation Prediction), p. 3 (1. Iyrropucrion), p. 4 (C. Decoupled Video and Action Diffusions), p. 3 (1. Iyrropucrion), p. 7 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks).
+- **Evidence anchors reviewed:** method p. 4 (C. Decoupled Video and Action Diffusions), p. 4 (C. Decoupled Video and Action Diffusions), p. 5 (C. Decoupled Video and Action Diffusions), p. 5 (C. Decoupled Video and Action Diffusions), p. 8 (VII. UVA As A FORWARD DYNAMICS MODEL), p. 8 (VII. UVA As A FORWARD DYNAMICS MODEL), objective p. 4 (C. Decoupled Video and Action Diffusions), p. 4 (C. Decoupled Video and Action Diffusions), p. 5 (V. UVA As PoLicy), p. 5 (C. Decoupled Video and Action Diffusions), temporal p. 4 (B. Masked Autoencoder for Observation Prediction), p. 3 (1. Iyrropucrion), p. 4 (C. Decoupled Video and Action Diffusions), p. 3 (1. Iyrropucrion), p. 7 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 3) Mask Training for Flexibility: The ability to predict both videos and actions through unified representations further unlocks the potential to perform a diverse set of functions using masked training, ... (p. 2, 1. Iyrropucrion).
+- **Objective/update evidence:** Masked Training with Flexible Objectives (p. 4, C. Decoupled Video and Action Diffusions).
+- **Temporal/runtime evidence:** Problem Statement: Given a sequence of image observations {Ocners---sOr} and action chunks {Ar-n,.-..Aea}e where his the history horizon, our goal is to predict the future actions {Ay,...,As.,*-1} and observations {Opcis..-,Orsne}s ... (p. 3, 1. Iyrropucrion).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

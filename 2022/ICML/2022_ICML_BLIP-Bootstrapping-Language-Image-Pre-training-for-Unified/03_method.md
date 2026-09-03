@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.12086; PDF retrieval source: https://arxiv.org/pdf/2201.12086. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.12086; PDF retrieval source: https://arxiv.org/pdf/2201.12086. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 
 
 ## Method Body Digest
 
-- **p. 3 / 3. Method - extractive PDF cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
-- **p. 3 / 3.1. Model Architecture - extractive PDF cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** The filter is an image-grounded text encoder.
-- **p. 3 / 3.2. Pre-training Objectives - extractive PDF cue:** It optimizes a cross entropy loss which trains the model to maximize the likelihood of the text in an autoregressive manner.
-- **p. 3 / 3.2. Pre-training Objectives - extractive PDF cue:** We jointly optimize three objectives during pre-training, with two understanding-based objectives and one generationbased objective.
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** It is finetuned with the LM objective to decode texts given images.
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** It is finetuned with the ITC and ITM objectives to learn whether a text matches an image.
+- **p. 3 / 3. Method - extractive body cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
+- **p. 4 / 3.3. CapFilt - extractive body cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** The filter is an image-grounded text encoder.
+- **p. 3 / 3.2. Pre-training Objectives - extractive body cue:** It optimizes a cross entropy loss which trains the model to maximize the likelihood of the text in an autoregressive manner.
+- **p. 3 / 3.2. Pre-training Objectives - extractive body cue:** We jointly optimize three objectives during pre-training, with two understanding-based objectives and one generationbased objective.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** It is finetuned with the LM objective to decode texts given images.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** It is finetuned with the ITC and ITM objectives to learn whether a text matches an image.
 
 ## Design Rationale
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
-- **p. 2 / 1. Introduction - extractive PDF cue:** We propose multimodal mixture of encoder-decoder, a unified vision-language model which can operate in one of the three functionalities: (1) Unimodal encoder is trained with ...
-- **p. 3 / 3. Method - extractive PDF cue:** We propose BLIP, a unified VLP framework to learn from noisy image-text pairs.
+- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
+- **p. 2 / 1. Introduction - extractive body cue:** We propose multimodal mixture of encoder-decoder, a unified vision-language model which can operate in one of the three functionalities: (1) Unimodal encoder is trained with ...
+- **p. 3 / 3. Method - extractive body cue:** We propose BLIP, a unified VLP framework to learn from noisy image-text pairs.
 
 ## Source Evidence Cues
 
-- **p. 3 / 3. Method - extractive PDF cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
-- **p. 3 / 3.1. Model Architecture - extractive PDF cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** The filter is an image-grounded text encoder.
+- **p. 3 / 3. Method - extractive body cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
+- **p. 4 / 3.3. CapFilt - extractive body cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** The filter is an image-grounded text encoder.
 - **Detected method headings:** 3. Method (p. 3); 3.1. Model Architecture (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Input representation | source-defined input을 learnable representation으로 바꾼다 | paper-specific image/text/sequence input | encoder, tokenization, normalization 또는 feature extraction을 수행 | latent feature/state | This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping. | p. 3 (3. Method), p. 3 (3.1. Model Architecture) |
 | Core objective / transformation | source task의 prediction·generation 목표를 최적화한다 | representation, target/condition | paper-specific model, loss, decoder 또는 generative process를 적용 | prediction/embedding/sample | In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task ... | p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 
 
 ## Objective / Update Rule
 
-- **p. 3 / 3.2. Pre-training Objectives - extractive PDF cue:** It optimizes a cross entropy loss which trains the model to maximize the likelihood of the text in an autoregressive manner.
-- **p. 3 / 3.2. Pre-training Objectives - extractive PDF cue:** We jointly optimize three objectives during pre-training, with two understanding-based objectives and one generationbased objective.
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** It is finetuned with the LM objective to decode texts given images.
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** It is finetuned with the ITC and ITM objectives to learn whether a text matches an image.
+- **p. 3 / 3.2. Pre-training Objectives - extractive body cue:** It optimizes a cross entropy loss which trains the model to maximize the likelihood of the text in an autoregressive manner.
+- **p. 3 / 3.2. Pre-training Objectives - extractive body cue:** We jointly optimize three objectives during pre-training, with two understanding-based objectives and one generationbased objective.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** It is finetuned with the LM objective to decode texts given images.
+- **p. 4 / 3.3. CapFilt - extractive body cue:** It is finetuned with the ITC and ITM objectives to learn whether a text matches an image.
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 3 (3.2. Pre-training Objectives), p. 3 (3.2. Pre-training Objectives), p. 4 (3.3. CapFilt), p. 4 (3.3. CapFilt).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 
 
 ## Observation–State–Action Interface
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** We also find that more diverse captions yield larger gains. • BLIP achieves state-of-the-art performance on a wide range of vision-language tasks, including image-text rearXiv:2201.12086v2 ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We also achieve state-ofthe-art zero-shot performance when directly transferring our models to two video-language tasks: text-to-video retrieval and videoQA.
-- **p. 2 / 1. Introduction - extractive PDF cue:** (2) Image-grounded text encoder uses additional cross-attention layers to model vision-language interactions, and is trained with a image-text matching (ITM) loss to distinguish between positive ...
-- **p. 3 / 3.1. Model Architecture - extractive PDF cue:** A task-specific [Encode] token is appended to the text, and the output embedding of [Encode] is used as the multimodal representation of the image-text pair.
-- **p. 3 / 3.1. Model Architecture - extractive PDF cue:** We employ a visual transformer (Dosovitskiy et al., 2021) as our image encoder, which divides an input image into patches and encodes them as a ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** (2) Data perspective: most state-of-the-art methods (e.g., CLIP (Radford et al., 2021), ALBEF (Li et al., 2021a), SimVLM (Wang et al., 2021)) pre-train on image-text ...
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** Specifically, the captioner is an image-grounded text decoder.
+- **p. 1 / 1. Introduction - extractive body cue:** We also find that more diverse captions yield larger gains. • BLIP achieves state-of-the-art performance on a wide range of vision-language tasks, including image-text.
+- **p. 2 / 1. Introduction - extractive body cue:** We also achieve state-ofthe-art zero-shot performance when directly transferring our models to two video-language tasks: text-to-video retrieval and videoQA.
+- **p. 2 / 1. Introduction - extractive body cue:** (2) Image-grounded text encoder uses additional cross-attention layers to model vision-language interactions, and is trained with a image-text matching (ITM) loss to distinguish between positive ...
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** A task-specific [Encode] token is appended to the text, and the output embedding of [Encode] is used as the multimodal representation of the image-text pair.
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** We employ a visual transformer (Dosovitskiy et al., 2021) as our image encoder, which divides an input image into patches and encodes them as a ...
+- **p. 1 / 1. Introduction - extractive body cue:** (2) Data perspective: most state-of-the-art methods (e.g., CLIP (Radford et al., 2021), ALBEF (Li et al., 2021a), SimVLM (Wang et al., 2021)) pre-train on image-text ...
+- **p. 4 / 3.3. CapFilt - extractive body cue:** Specifically, the captioner is an image-grounded text decoder.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,10 +85,10 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 
 
 ## Training vs Inference
 
-- **p. 3 / 3. Method - extractive PDF cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
-- **p. 3 / 3.1. Model Architecture - extractive PDF cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
-- **p. 4 / 3.3. CapFilt - extractive PDF cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
-- **p. 4 / 4.1. Pre-training Details - extractive PDF cue:** We pre-train the model for 20 epochs using a batch size of 2880 (ViT-B) / 2400 (ViT-L).
+- **p. 3 / 3. Method - extractive body cue:** This section first introduces our new model architecture MED and its pre-training objectives, and then delineates CapFilt for dataset bootstrapping.
+- **p. 3 / 3.1. Model Architecture - extractive body cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
+- **p. 4 / 3.3. CapFilt - extractive body cue:** Finally, we combine the filtered image-text pairs with the human-annotated pairs to form a new dataset, which we use to pre-train a new model.
+- **p. 4 / 4.1. Pre-training Details - extractive body cue:** We pre-train the model for 20 epochs using a batch size of 2880 (ViT-B) / 2400 (ViT-L).
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -108,13 +108,13 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 
 
 ## Failure and Ablation Link
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training. In Figure 4, we show some example captions and ...
-- **p. 4 / 4.1. Pre-training Details - extractive PDF cue:** We explore two variants of ViTs: ViT-B/16 and ViT-L/16.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluation of the effect of the captioner (C) and filter (F) for dataset bootstrapping. Downstream tasks include image-text retrieval and image captioning with ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Effect of sharing parameters between the captioner and filter. Models are pre-trained on 14M images.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Learning framework of BLIP. We introduce a captioner to produce synthetic captions for web images, and a filter to remove noisy image-text pairs. ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 3. Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training. In Figure 4, we show some example captions and ...
+- **p. 4 / 4.1. Pre-training Details - extractive body cue:** We explore two variants of ViTs: ViT-B/16 and ViT-L/16.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Evaluation of the effect of the captioner (C) and filter (F) for dataset bootstrapping. Downstream tasks include image-text retrieval and image captioning with ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Effect of sharing parameters between the captioner and filter. Models are pre-trained on 14M images.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Learning framework of BLIP. We introduce a captioner to produce synthetic captions for web images, and a filter to remove noisy image-text pairs. ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -128,7 +128,7 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt), p. 4 (3.3. CapFilt), objective p. 3 (3.2. Pre-training Objectives), p. 3 (3.2. Pre-training Objectives), p. 4 (3.3. CapFilt), p. 4 (3.3. CapFilt), temporal p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 8 (5.6. Zero-shot Transfer to Video-Language Tasks), p. 1 (1. Introduction), p. 1 (Abstract), p. 2 (2.1. Vision-language Pre-training).
+- **Evidence anchors reviewed:** method p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt), p. 4 (3.3. CapFilt), objective p. 3 (3.2. Pre-training Objectives), p. 3 (3.2. Pre-training Objectives), p. 4 (3.3. CapFilt), p. 4 (3.3. CapFilt), temporal p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 8 (5.6. Zero-shot Transfer to Video-Language Tasks), p. 1 (1. Introduction), p. 1 (Abstract), p. 2 (2.1. Vision-language Pre-training).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 However since the learner's prediction affects future input observations/states during execution of the learned policy, this violate the crucial i.i.d. assumption made by most statistical learning approaches.를 A typical approach to imitation learning is to train a classifier or regressor to predict an expert's behavior given training data of the encountered observations (input) and actions (output) performed by the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 DAgger (βi = I(i=1)) SMILe (α = 0.1) Supervised Figure 2: Average falls/lap as a function of training data. supervised approach where training always occurs under the expert's trajectories that performance does ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose a new meta-algorithm for imitation learning which learns a stationary deterministic policy guaranteed to perform well under its induced distribution of states (number of mistakes/costs that grows linearly in T ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** A typical approach to imitation learning is to train a classifier or regressor to predict an expert's behavior given training data of the encountered observations (input) and actions (output) performed ... (p. 1, 1 INTRODUCTION).
+- **Paper-specific mechanism:** We take a reduction-based approach (Beygelzimer et al., 2005) that enables reusing existing supervised learning algorithms. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently. (p. 8, 5 EXPERIMENTS); the relevant task/metric cue is We compare performance in terms of the average distance travelled by Mario per stage before dying, running out of time or completing the stage, on randomly generated stages of difficulty ... (p. 7, 5 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We measure performance in terms of the average number of falls per lap. (p. 6, 5 EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We use the dataset of Taskar et al..
-3. Compare against the body-reported baseline or a matched simpler baseline: Though even after 5 iterations, the policy we obtain almost never falls off the track and is significantly outperforming both SMILe and the baseline supervised approach..
-4. Report the body metric and its denominator/aggregation: Figure 4: Average distance/stage as a function of data. approach, performance stagnates as we collect more data from the expert demonstrations, as this does not help the particular errors the learned controller ....
-5. Re-run the body-reported ablation/failure condition: The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: A typical approach to imitation learning is to train a classifier or regressor to predict an expert's behavior given training data of the encountered observations (input) and actions (output) performed ... (p. 1, 1 INTRODUCTION); preserve the objective/update rule: The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ℓ(s, ·) is convex in π for all ... (p. 2, 2 PRELIMINARIES).
+2. Use the paper-reported task/data/environment cue: We use the dataset of Taskar et al. (p. 8, 5 EXPERIMENTS).
+3. Compare against the reported or matched baseline: Though even after 5 iterations, the policy we obtain almost never falls off the track and is significantly outperforming both SMILe and the baseline supervised approach. (p. 6, 5 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We compare performance in terms of the average distance travelled by Mario per stage before dying, running out of time or completing the stage, on randomly generated stages of difficulty ... (p. 7, 5 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently. (p. 8, 5 EXPERIMENTS); if none is reported, design one around: We measure performance in terms of the average number of falls per lap. (p. 6, 5 EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES); the primary result is directionally consistent at p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), and measure the boundary at p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 meta-algorithm, imitation, learning mechanism이 Though even after 5 iterations, the policy we obtain almost never falls off the track and ... 대비 Figure 4: Average distance/stage as a function of data. approach, performance stagnates as we collect more data from ...을 개선하고, DAgger (βi = I(i=1)) SMILe (α = 0.1) Supervised Figure 2: Average falls/lap as a function ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (A typical approach to imitation learning is to train a classifier or regressor to predict an expert's behavior given training data of ...), does the paper-specific mechanism (We take a reduction-based approach (Beygelzimer et al., 2005) that enables reusing existing supervised learning algorithms.) retain the reported evaluation outcome (We compare performance in terms of the average distance travelled by Mario per stage before dying, running out ...) when tested against the paper's strongest explicit boundary (We measure performance in terms of the average number of falls per lap.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We compare performance in terms of the average distance travelled by Mario per stage before dying, running out ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We take a reduction-based approach (Beygelzimer et al., 2005) that enables reusing existing supervised learning algorithms. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently. (p. 8, 5 EXPERIMENTS).
+- **Strongest explicit boundary:** We measure performance in terms of the average number of falls per lap. (p. 6, 5 EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

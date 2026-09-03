@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2409.12514; PDF retrieval source: https://arxiv.org/pdf/2409.12514. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2409.12514; PDF retrieval source: https://arxiv.org/pdf/2409.12514. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 
 ## Method Body Digest
 
-- **p. 2 / III. METHOD - extractive PDF cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
-- **p. 3 / III. METHOD - extractive PDF cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
-- **p. 3 / III. METHOD - extractive PDF cue:** Then, these normalized features are subsequently concatenated with the robot's proprioceptive state vector.
-- **p. 2 / III. METHOD - extractive PDF cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
-- **p. 3 / III. METHOD - extractive PDF cue:** We adopt diffusion policy as our policy head. limits gradient updates to a low-dimensional space.
-- **p. 3 / III. METHOD - extractive PDF cue:** First, the visuallanguage model (VLM) backbone encodes raw observations and language instructions into multimodal embedding vectors.
-- **p. 3 / III. METHOD - extractive PDF cue:** Learning action with diffusion policy decoder.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Then, instead of using the next token prediction technique to predict action tokens independently, we attach a diffusion-based head to the pre-trained multimodal model for ...
+- **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
+- **p. 3 / III. METHOD - extractive body cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
+- **p. 3 / III. METHOD - extractive body cue:** Then, these normalized features are subsequently concatenated with the robot's proprioceptive state vector.
+- **p. 2 / III. METHOD - extractive body cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
+- **p. 3 / III. METHOD - extractive body cue:** We adopt diffusion policy as our policy head. limits gradient updates to a low-dimensional space.
+- **p. 3 / III. METHOD - extractive body cue:** First, the visuallanguage model (VLM) backbone encodes raw observations and language instructions into multimodal embedding vectors.
+- **p. 3 / III. METHOD - extractive body cue:** Learning action with diffusion policy decoder.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Then, instead of using the next token prediction technique to predict action tokens independently, we attach a diffusion-based head to the pre-trained multimodal model for ...
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our contribution are the three folds: • We introduce a novel VLA architecture that combines lightweight vision-language models with a diffusion model, enabling fast inference, ...
-- **p. 6 / 1 Background - extractive PDF cue:** In Figure 9, we present the spatial generalization performance of our methods.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** In this work, we propose TinyVLA, a compact visionlanguage-action model designed for fast inference.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our contribution are the three folds: • We introduce a novel VLA architecture that combines lightweight vision-language models with a diffusion model, enabling fast inference, ...
+- **p. 6 / 1 Background - extractive body cue:** In Figure 9, we present the spatial generalization performance of our methods.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we propose TinyVLA, a compact visionlanguage-action model designed for fast inference.
 
 ## Source Evidence Cues
 
-- **p. 2 / III. METHOD - extractive PDF cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
-- **p. 3 / III. METHOD - extractive PDF cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
-- **p. 3 / III. METHOD - extractive PDF cue:** Then, these normalized features are subsequently concatenated with the robot's proprioceptive state vector.
-- **p. 2 / III. METHOD - extractive PDF cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
+- **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
+- **p. 3 / III. METHOD - extractive body cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
+- **p. 3 / III. METHOD - extractive body cue:** Then, these normalized features are subsequently concatenated with the robot's proprioceptive state vector.
+- **p. 2 / III. METHOD - extractive body cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
 - **Detected method headings:** III. METHOD (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the ... | p. 2 (III. METHOD), p. 3 (III. METHOD) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference ... | p. 3 (III. METHOD), p. 3 (III. METHOD) |
@@ -45,7 +45,7 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 
 ## Objective / Update Rule
 
-- **p. 3 / III. METHOD - extractive PDF cue:** We adopt diffusion policy as our policy head. limits gradient updates to a low-dimensional space.
+- **p. 3 / III. METHOD - extractive body cue:** We adopt diffusion policy as our policy head. limits gradient updates to a low-dimensional space.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -61,13 +61,13 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 
 ## Observation–State–Action Interface
 
-- **p. 2 / III. METHOD - extractive PDF cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
-- **p. 3 / III. METHOD - extractive PDF cue:** First, the visuallanguage model (VLM) backbone encodes raw observations and language instructions into multimodal embedding vectors.
-- **p. 3 / III. METHOD - extractive PDF cue:** Learning action with diffusion policy decoder.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Then, instead of using the next token prediction technique to predict action tokens independently, we attach a diffusion-based head to the pre-trained multimodal model for ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Recently, vision-language-action (VLA) models have garnered significant attention for their ability to extend pretrained vision-language models to robotics using a next-token prediction approach.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** However, these methods suffer from a critical drawback: extremely slow inference speeds, largely due to their dependence on large visionlanguage models and auto-regressive action token ...
-- **p. 7 / 1 Background - extractive PDF cue:** WEN et al.: TINYVLA: TOWARDS FAST, DATA-EFFICIENT VISION-LANGUAGE-ACTION MODELS FOR ROBOTIC MANIPULATION 7 generalization can be seen in variations in background color, object texture, or ...
+- **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
+- **p. 3 / III. METHOD - extractive body cue:** First, the visuallanguage model (VLM) backbone encodes raw observations and language instructions into multimodal embedding vectors.
+- **p. 3 / III. METHOD - extractive body cue:** Learning action with diffusion policy decoder.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Then, instead of using the next token prediction technique to predict action tokens independently, we attach a diffusion-based head to the pre-trained multimodal model for ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Recently, vision-language-action (VLA) models have garnered significant attention for their ability to extend pretrained vision-language models to robotics using a next-token prediction approach.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** However, these methods suffer from a critical drawback: extremely slow inference speeds, largely due to their dependence on large visionlanguage models and auto-regressive action token ...
+- **p. 7 / 1 Background - extractive body cue:** WEN et al.: TINYVLA: TOWARDS FAST, DATA-EFFICIENT VISION-LANGUAGE-ACTION MODELS FOR ROBOTIC MANIPULATION 7 generalization can be seen in variations in background color, object texture, or ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -82,10 +82,10 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 
 ## Training vs Inference
 
-- **p. 2 / III. METHOD - extractive PDF cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
-- **p. 3 / III. METHOD - extractive PDF cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
-- **p. 2 / III. METHOD - extractive PDF cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
-- **p. 2 / III. METHOD - extractive PDF cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
+- **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
+- **p. 3 / III. METHOD - extractive body cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
+- **p. 2 / III. METHOD - extractive body cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
+- **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 
 ## Failure and Ablation Link
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** For all the tasks we do not add additional distractors except in the remove the lid of the box task, in order to better evaluate ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Since TinyVLA uses a pre-trained multimodal model as its backbone, we observe similar embodied capabilities driven by the rich world knowledge implicitly stored in these ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Model architecture. The left image illustrates the VLM pretraining pipeline, whereas the right image demon- strates the process of training TinyVLA using robotic ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 8: Object & Appearance generalization. For object generalization, we replace the objects with previously unseen ones that have different shapes or colors. For appearance ...
-- **p. 7 / VI. CONCLUSION - extractive PDF cue:** Our approach overcomes the limitations of previous methods by
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We use a cross mark to denote the failure of the model and a checkmark to indicate successful task completion.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 10: Types of failure for TinyVLA with different sizes of pre-trained vision-language models.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** For all the tasks we do not add additional distractors except in the remove the lid of the box task, in order to better evaluate ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Since TinyVLA uses a pre-trained multimodal model as its backbone, we observe similar embodied capabilities driven by the rich world knowledge implicitly stored in these ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Model architecture. The left image illustrates the VLM pretraining pipeline, whereas the right image demon- strates the process of training TinyVLA using robotic ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 8: Object & Appearance generalization. For object generalization, we replace the objects with previously unseen ones that have different shapes or colors. For appearance ...
+- **p. 7 / VI. CONCLUSION - extractive body cue:** Our approach overcomes the limitations of previous methods by
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We use a cross mark to denote the failure of the model and a checkmark to indicate successful task completion.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 10: Types of failure for TinyVLA with different sizes of pre-trained vision-language models.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), objective p. 3 (III. METHOD), temporal p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), objective p. 3 (III. METHOD), temporal p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

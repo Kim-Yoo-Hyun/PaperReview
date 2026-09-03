@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene com
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5. Experiment - extractive PDF cue:** Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec.
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets.
-- **p. 8 / 5.3. Qualitative analysis - extractive PDF cue:** 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed ...
-- **p. 6 / 5.1. Scene completion - extractive PDF cue:** We validate ScoreLiDAR on SemanticKITTI [1] and KITTI-360 [16] datasets.
-- **p. 7 / 5.3. Qualitative analysis - extractive PDF cue:** 4 shows the completed scenes by our proposed ScoreLiDAR and LiDiff [23] on KITTI-360.
-- **p. 8 / 5.3. Qualitative analysis - extractive PDF cue:** The bar chart shows the distribution of distances between corresponding points in the completed and ground truth scenes.
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
-- **p. 7 / 5.3. Qualitative analysis - extractive PDF cue:** To further demonstrate the effectiveness of ScoreLiDAR and the structural loss, we calculate the distance between the points in the completed scene and their corresponding ...
+- **p. 6 / 5. Experiment - extractive body cue:** Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec.
+- **p. 7 / 5.2. Ablation study - extractive body cue:** The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets.
+- **p. 8 / 5.3. Qualitative analysis - extractive body cue:** 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed ...
+- **p. 6 / 5.1. Scene completion - extractive body cue:** We validate ScoreLiDAR on SemanticKITTI [1] and KITTI-360 [16] datasets.
+- **p. 7 / 5.3. Qualitative analysis - extractive body cue:** 4 shows the completed scenes by our proposed ScoreLiDAR and LiDiff [23] on KITTI-360.
+- **p. 8 / 5.3. Qualitative analysis - extractive body cue:** The bar chart shows the distribution of distances between corresponding points in the completed and ground truth scenes.
+- **p. 7 / 5.2. Ablation study - extractive body cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
+- **p. 7 / 5.3. Qualitative analysis - extractive body cue:** To further demonstrate the effectiveness of ScoreLiDAR and the structural loss, we calculate the distance between the points in the completed scene and their corresponding ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene com
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Ablation study | SYSTEM / EVALUATION SCOPE UNRESOLVED | However, after considering the structural loss, the performance of ScoreLiDAR improves significantly, which achieves better performance on all metrics. | p. 7 (5.2. Ablation study) |
 | 5.1. Scene completion | SYSTEM / EVALUATION SCOPE UNRESOLVED | ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD and 2% in JSD compared ... | p. 7 (5.1. Scene completion) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene com
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5. Experiment - extractive PDF cue:** Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec.
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets.
-- **p. 8 / 5.3. Qualitative analysis - extractive PDF cue:** 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed ...
-- **p. 6 / 5.1. Scene completion - extractive PDF cue:** We validate ScoreLiDAR on SemanticKITTI [1] and KITTI-360 [16] datasets.
-- **p. 7 / 5.3. Qualitative analysis - extractive PDF cue:** 4 shows the completed scenes by our proposed ScoreLiDAR and LiDiff [23] on KITTI-360.
-- **p. 8 / 5.3. Qualitative analysis - extractive PDF cue:** The bar chart shows the distribution of distances between corresponding points in the completed and ground truth scenes.
+- **p. 6 / 5. Experiment - extractive body cue:** Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec.
+- **p. 7 / 5.2. Ablation study - extractive body cue:** The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets.
+- **p. 8 / 5.3. Qualitative analysis - extractive body cue:** 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed ...
+- **p. 6 / 5.1. Scene completion - extractive body cue:** We validate ScoreLiDAR on SemanticKITTI [1] and KITTI-360 [16] datasets.
+- **p. 7 / 5.3. Qualitative analysis - extractive body cue:** 4 shows the completed scenes by our proposed ScoreLiDAR and LiDiff [23] on KITTI-360.
+- **p. 8 / 5.3. Qualitative analysis - extractive body cue:** The bar chart shows the distribution of distances between corresponding points in the completed and ground truth scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. A demonstration of the LiDAR scene completion examples. Given a sparse LiDAR scan in (a), the model aims to recover the ground-truth dense ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. A visualization of LiDAR scene completion perfor- mances with different models on SemanticKITTI [1] dataset. Gen- erally, our proposed ScoreLiDAR achieves better scene ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The overall structure of ScoreLiDAR. (1) The student model generates the completed scene based on the sparse scan. (2) The sparse scan and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. The completion performance on the SemanticKITTI dataset. Colors denote the 1st , 2nd , and 3rd best-performing model. The sampling time is estimated ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. The completion performance on the KITTI-360 dataset. The meaning of notations is the same as those in Tab. 1.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study of the structural loss.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study of different sampling steps on the Se- manticKITTI dataset. completion tasks (Sec. 5.1). Secondly, we present the re- sults of ablation ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on KITTI-360. ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A demonstration of the LiDAR scene completion examples. Given a sparse LiDAR scan in (a), the model aims to recover the ground-truth dense ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. A visualization of LiDAR scene completion perfor- mances with different models on SemanticKITTI [1] dataset. Gen- erally, our proposed ScoreLiDAR achieves better scene ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The overall structure of ScoreLiDAR. (1) The student model generates the completed scene based on the sparse scan. (2) The sparse scan and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. The completion performance on the SemanticKITTI dataset. Colors denote the 1st , 2nd , and 3rd best-performing model. The sampling time is estimated ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. The completion performance on the KITTI-360 dataset. The meaning of notations is the same as those in Tab. 1.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Ablation study of the structural loss.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Ablation study of different sampling steps on the Se- manticKITTI dataset. completion tasks (Sec. 5.1). Secondly, we present the re- sults of ablation ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on KITTI-360. ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec. | embodiment, simulator version and control stack | p. 6 (5. Experiment), p. 7 (5.2. Ablation study) |
 | Task/environment | The results show that the variant without structural loss exhibits lower performance in scene completion on both datasets. | reset, timeout, object/scene variation | p. 7 (5.2. Ablation study), p. 8 (5.3. Qualitative analysis) |
@@ -120,10 +120,10 @@ PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene com
 | Primary metric/result | ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD and 2% in JSD compared ... | numeric claim only at cited anchor | p. 7 (5.1. Scene completion) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5. Experiment - extractive PDF cue:** We first evaluate the performance of ScoreLiDAR in scene Model CD ↓ JSD ↓ EMD ↓ Time (s) ↓ LiDiff (50 steps) [23] 0.434 0.444 ...
-- **p. 7 / 5.1. Scene completion - extractive PDF cue:** Input Sparse Scan Ground Truth LiDiff(50 steps refined) ScoreLiDAR (8 steps refined) (a) (b) (c) (d) Figure 4.
-- **p. 7 / 5.3. Qualitative analysis - extractive PDF cue:** In contrast, the scene completed by ScoreLiDAR with only 8 steps in Fig.
-- **p. 4 / 3.2. 3D LiDAR scene completion diffusion models - extractive PDF cue:** Auxiliary diffusion model Teacher diffusion model !" ℒ#$ = #" $%, &, ' -#! $%, &, ' & & ℒ'( = # -#! $%, &, ...
+- **p. 6 / 5. Experiment - extractive body cue:** We first evaluate the performance of ScoreLiDAR in scene Model CD ↓ JSD ↓ EMD ↓ Time (s) ↓ LiDiff (50 steps) [23] 0.434 0.444 ...
+- **p. 7 / 5.1. Scene completion - extractive body cue:** Input Sparse Scan Ground Truth LiDiff(50 steps refined) ScoreLiDAR (8 steps refined) (a) (b) (c) (d) Figure 4.
+- **p. 7 / 5.3. Qualitative analysis - extractive body cue:** In contrast, the scene completed by ScoreLiDAR with only 8 steps in Fig.
+- **p. 4 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** Auxiliary diffusion model Teacher diffusion model !" ℒ#$ = #" $%, &, ' -#! $%, &, ' & & ℒ'( = # -#! $%, &, ...
 
 ## Generalization and Failure Cases
 
@@ -157,10 +157,10 @@ PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene com
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the teacher ...
-- **p. 7 / 5.2. Ablation study - extractive PDF cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
+- **p. 8 / 6. Conclusion - extractive body cue:** Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the teacher ...
+- **p. 7 / 5.2. Ablation study - extractive body cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiment), p. 7 (5.2. Ablation study), p. 8 (5.3. Qualitative analysis), p. 6 (5.1. Scene completion), p. 7 (5.3. Qualitative analysis), p. 8 (5.3. Qualitative analysis), metrics p. 7 (5.2. Ablation study), p. 7 (5.3. Qualitative analysis), p. 2 (Figure/Table caption), p. 6 (5. Experiment), p. 8 (5.3. Qualitative analysis), p. 8 (Figure/Table caption), baselines p. 6 (5.1. Scene completion), p. 7 (5.2. Ablation study), p. 6 (5.1. Scene completion), p. 7 (5.3. Qualitative analysis), p. 1 (Figure/Table caption), p. 8 (5.3. Qualitative analysis), results p. 7 (5.2. Ablation study), p. 7 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 2 (Figure/Table caption), p. 8 (5.3. Qualitative analysis).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiment), p. 7 (5.2. Ablation study), p. 8 (5.3. Qualitative analysis), p. 6 (5.1. Scene completion), p. 7 (5.3. Qualitative analysis), p. 8 (5.3. Qualitative analysis), metrics p. 7 (5.2. Ablation study), p. 7 (5.3. Qualitative analysis), p. 2 (Figure/Table caption), p. 6 (5. Experiment), p. 8 (5.3. Qualitative analysis), p. 8 (Figure/Table caption), baselines p. 6 (5.1. Scene completion), p. 7 (5.2. Ablation study), p. 6 (5.1. Scene completion), p. 7 (5.3. Qualitative analysis), p. 1 (Figure/Table caption), p. 8 (5.3. Qualitative analysis), results p. 7 (5.2. Ablation study), p. 7 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 2 (Figure/Table caption), p. 8 (5.3. Qualitative analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

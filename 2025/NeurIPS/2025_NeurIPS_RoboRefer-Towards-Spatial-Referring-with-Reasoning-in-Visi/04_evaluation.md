@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (71 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OGxalNUHbJ; PDF retrieval source: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (71 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OGxalNUHbJ; PDF retrieval source: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | By using a single target point predicted by RoboRefer, the system can generate more accurate masks and corresponding grasp poses than those from 2D ... | p. 9 (4 Experiments) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: RefSpatial-Bench results. G.P., M.M., and R.P. donate Gemini-2.5-Pro [9], Molmo- 72B [15], and RoboPoint [5]. RoboRefer-RFT excels in unseen and multi-step cases. ... | p. 8 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To evaluate more complex multi-step spatial referring, we propose RefSpatial-Bench, a challenging benchmark based on real-world cluttered scenes. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | 4.4 Simulator and Real-world Evaluation for Robotics RoboRefer can be integrated into the system as a useful tool. | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 48 (C Implementation Details and Samples of RefSpatial-Bench) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 - **p. 50 / C Implementation Details and Samples of RefSpatial-Bench - extractive body cue:** Thus, a failed match implies that the model cannot accurately refer to the object linguistically, and no reward is assigned.
 - **p. 22 / B Implementation Details and Samples of RefSpatial Dataset - extractive body cue:** B.2): This section outlines the 3D data selection process from CA1M [136], discusses its limitations and mitigation strategies, and presents methods for enriched scene graph ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), metrics p. 23 (B.1.1 Multi-Stage Image Filtering), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 23 (Figure/Table caption), p. 10 (4 Experiments), baselines p. 8 (4 Experiments), p. 10 (4 Experiments), p. 8 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 26 (Figure/Table caption), results p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 23 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), metrics p. 23 (B.1.1 Multi-Stage Image Filtering), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 23 (Figure/Table caption), p. 10 (4 Experiments), baselines p. 8 (4 Experiments), p. 10 (4 Experiments), p. 8 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 26 (Figure/Table caption), results p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 23 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (71 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: RefSpatial-Bench results. G.P., M.M., and R.P. donate Gemini-2.5-Pro [9], Molmo- 72B [15], and RoboPoint [5]. RoboRefer-RFT excels in unseen and multi-step cases. SFT stage enables strong spatial understanding. ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Manipulation or Navigation tasks with spatial referring Success Rate(%) ↑ OpenVLA RoboPoint Ours Pick the specific hamburger closest to the mug nearest 0.00 0.00 80.00 the camera and place it ... (p. 9, 4 Experiments).
+- **Baseline/ablation evidence:** 2, the 2B-RFT variant outperforms all baselines, exceeding the prior SOTA (Gemini-2.5-Pro [9]) by 17.4% (absolute) on RefSpatial-Bench. (p. 8, 4 Experiments).
+- **Failure/negative evidence:** Another major limitation of CA-1M is the lack of semantic labels for most annotated objects. (p. 34, B.2.2 Inherent Challenges and Limitations in CA-1M).

@@ -1,7 +1,7 @@
 # FurnitureBench: Reproducible Real-World Benchmark for Long-Horizon Complex Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2305.12821.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2305.12821.
 > PDF retrieval source: https://arxiv.org/pdf/2305.12821. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2305.12821
 - Code/Project: https://clvrai.github.io/furniture-bench/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -38,8 +38,8 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 - **p. 1 / Abstract - extractive body cue:** To enable more complex, long-horizon behaviors of an autonomous robot, we propose to focus on real-world furniture assembly, a complex, longhorizon robot manipulation task that ...
 - **p. 1 / Abstract - extractive body cue:** We present FurnitureBench, a reproducible real-world furniture assembly benchmark aimed at providing a low barrier for entry and being easily reproducible, so that researchers across ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Due to the limitations imposed by using a single robotic arm, we modify some furniture pieces feasible to be assembled with one hand. strations that ...
-- **p. 1 / Abstract - extractive body cue:** Furthermore, we provide FurnitureSim, a fast and realistic simulator of FurnitureBench.
-- **p. 1 / Abstract - extractive body cue:** Reinforcement learning (RL), imitation learning (IL), and task and motion planning (TAMP) have demonstrated impressive performance across various robotic manipulation tasks.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** (Right) A suite of 8 furniture models in our benchmark.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** (Left) A decorated room in the real world with furniture models our robot assembled.
 - **p. 7 / 2) The furniture parts are rearranged using our provided - extractive body cue:** 3) A policy controls the robot until it completes the task, stops motions for 5 sec, shows unsafe movements, exceeds 350 steps per skill, or ...
 
 ## Observation, State, and Output Interface
@@ -47,8 +47,8 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
 | Observation/input | Our reproducible robot system (a) and visual observations from the front-view camera (b) and wrist camera (c). of long-horizon complex robotic manipulation tasks. | standardized observation, action, task state와 evaluation split | p. 2 (I. INTRODUCTION), p. 7 (2) The furniture parts are rearranged using our provided) |
-| State/latent | reproducible, robot, system, visual, observations, front-view, camera, wrist, long-horizon, complex, robotic, manipulation | benchmark state/goal와 method decision | p. 2 (I. INTRODUCTION), p. 7 (2) The furniture parts are rearranged using our provided), p. 1 (Abstract) |
-| Output/action | 3) A policy controls the robot until it completes the task, stops motions for 5 sec, shows unsafe movements, exceeds 350 steps per skill, or exceeds 3000 steps in total. | policy/controller trajectory 또는 measured result | p. 7 (2) The furniture parts are rearranged using our provided), p. 1 (Abstract), p. 1 (Abstract) |
+| State/latent | reproducible, robot, system, visual, observations, front-view, camera, wrist, long-horizon, complex, robotic, manipulation | benchmark state/goal와 method decision | p. 2 (I. INTRODUCTION), p. 7 (2) The furniture parts are rearranged using our provided), p. 1 (Body text (section boundary not confidently recovered)) |
+| Output/action | 3) A policy controls the robot until it completes the task, stops motions for 5 sec, shows unsafe movements, exceeds 350 steps per skill, or exceeds 3000 steps in total. | policy/controller trajectory 또는 measured result | p. 7 (2) The furniture parts are rearranged using our provided), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract) |
 | Objective/outcome | success metric, robustness, generalization과 reproducibility | success metric, robustness, generalization과 reproducibility | 본문 anchor 없음 |
 
 ## Main Claims and Actual Contribution
@@ -86,4 +86,13 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Furniture assembly is a proper task suite to benchmark a difficult, long-horizon manipulation task through which many challenges in robotic manipulation must be addressed to solve.를 문제로 두고, The main contributions of this paper are as follows: • We introduce FurnitureBench, a real-world furniture assembly benchmark, which allows robotics researchers to investigate RL, IL, and TAMP algorithms on a realistic ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Furniture assembly is a proper task suite to benchmark a difficult, long-horizon manipulation task through which many challenges in robotic manipulation must be addressed to solve.를 문제로 두고, The main contributions of this paper are as follows: • We introduce FurnitureBench, a real-world furniture assembly benchmark, which allows robotics researchers to investigate RL, IL, and TAMP algorithms on a realistic ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Furniture assembly is a proper task suite to benchmark a difficult, long-horizon manipulation task through which many challenges in robotic manipulation must be addressed to solve. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** The main contributions of this paper are as follows: • We introduce FurnitureBench, a real-world furniture assembly benchmark, which allows robotics researchers to investigate RL, IL, and TAMP algorithms on ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 10: Full-assembly benchmark results. We report the number of completed phases averaged over 10 episodes and the error bars indicating the minimum and maximum completed phases. The background color ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** On the other hand, both algorithms struggle at "inserting" skill, which shows from 0% to 20% success rates. "Inserting" requires precise control to correctly align a screw and a hole, ... (p. 7, VI. BENCHMARKING RESULTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2409.12514; PDF retrieval source: https://arxiv.org/pdf/2409.12514. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2409.12514; PDF retrieval source: https://arxiv.org/pdf/2409.12514. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** More Real-World Experiments: Bimanual Robot We further conducted experiments on the Bimanual UR5 Robot, applying it to three distinct tasks: PlaceBread, StackCube, and PlaceTennisBag.
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We suspect this is because OpenVLA is pre-trained on the OpenX dataset, which consists entirely of single-arm robot data, making it ineffective when applied to ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Generalization to Unseen Instructions In this work, we investigate the generalization capabilities of TinyVLA-H, which demonstrates the best performance in both real-world scenarios and simulations.
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** 1) Simulation Benchmark: We evaluate our approach on MetaWorld.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** In the bimanual robot experiment, we set up three tasks that involved cooperation between two arms: 1) transferring bread to a plate (TransferBread), 2) unzipping ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** We report the mean and standard deviation of success rates across 3 checkpoints.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** More Real-World Experiments: Bimanual Robot We further conducted experiments on the Bimanual UR5 Robot, applying it to three distinct tasks: PlaceBread, StackCube, and PlaceTennisBag.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We suspect this is because OpenVLA is pre-trained on the OpenX dataset, which consists entirely of single-arm robot data, making it ineffective when applied to ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Generalization to Unseen Instructions In this work, we investigate the generalization capabilities of TinyVLA-H, which demonstrates the best performance in both real-world scenarios and simulations.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** 1) Simulation Benchmark: We evaluate our approach on MetaWorld.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** In the bimanual robot experiment, we set up three tasks that involved cooperation between two arms: 1) transferring bread to a plate (TransferBread), 2) unzipping ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** We report the mean and standard deviation of success rates across 3 checkpoints.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to ... | p. 3 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table III, while the Diffusion Policy excels in the PlaceTennisBag task, our TinyVLA-H model achieved an average success rate of 44.5%, ... | p. 5 (IV. EXPERIMENTS) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** More Real-World Experiments: Bimanual Robot We further conducted experiments on the Bimanual UR5 Robot, applying it to three distinct tasks: PlaceBread, StackCube, and PlaceTennisBag.
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We suspect this is because OpenVLA is pre-trained on the OpenX dataset, which consists entirely of single-arm robot data, making it ineffective when applied to ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Generalization to Unseen Instructions In this work, we investigate the generalization capabilities of TinyVLA-H, which demonstrates the best performance in both real-world scenarios and simulations.
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** 1) Simulation Benchmark: We evaluate our approach on MetaWorld.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** In the bimanual robot experiment, we set up three tasks that involved cooperation between two arms: 1) transferring bread to a plate (TransferBread), 2) unzipping ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** More Real-World Experiments: Bimanual Robot We further conducted experiments on the Bimanual UR5 Robot, applying it to three distinct tasks: PlaceBread, StackCube, and PlaceTennisBag.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We suspect this is because OpenVLA is pre-trained on the OpenX dataset, which consists entirely of single-arm robot data, making it ineffective when applied to ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Generalization to Unseen Instructions In this work, we investigate the generalization capabilities of TinyVLA-H, which demonstrates the best performance in both real-world scenarios and simulations.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** 1) Simulation Benchmark: We evaluate our approach on MetaWorld.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** In the bimanual robot experiment, we set up three tasks that involved cooperation between two arms: 1) transferring bread to a plate (TransferBread), 2) unzipping ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Model architecture. The left image illustrates the VLM pretraining pipeline, whereas the right image demon- strates the process of training TinyVLA using robotic ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Real robot settings. The real robot setup for the single- arm Franka and bimanual UR5. TABLE I: Comparing TinyVLA with Diffusion Policy in ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. The single-arm scene is perceived via two external ZED 2 stereo cameras fixed on both sides of the robot. The bimanual robot's scene ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Instruction Generalization. We conducted three dif- ferent types of instruction generalization experiments with progressively increasing difficulty. cess rate exceeds that of Diffusion Policy ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: View Generalization. We evaluated the view generalization capability of our model in a new environment, which we designed to be as consistent with ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. We test with three objects, a mug, a toy car, and a pink cube. The first level challenges TinyVLA to differentiate between an ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Background Generalization. We utilized six different backgrounds, testing three of them on Task a and the remaining three on Task b. For each ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 7: Distractor & Illumination Generalization. For dis- tractor settings, Level L1 involves the addition of objects such as books and cups, which are unrelated ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Model architecture. The left image illustrates the VLM pretraining pipeline, whereas the right image demon- strates the process of training TinyVLA using robotic ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Real robot settings. The real robot setup for the single- arm Franka and bimanual UR5. TABLE I: Comparing TinyVLA with Diffusion Policy in ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. The single-arm scene is perceived via two external ZED 2 stereo cameras fixed on both sides of the robot. The bimanual robot's scene ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Instruction Generalization. We conducted three dif- ferent types of instruction generalization experiments with progressively increasing difficulty. cess rate exceeds that of Diffusion Policy ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: View Generalization. We evaluated the view generalization capability of our model in a new environment, which we designed to be as consistent with ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. We test with three objects, a mug, a toy car, and a pink cube. The first level challenges TinyVLA to differentiate between an ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Background Generalization. We utilized six different backgrounds, testing three of them on Task a and the remaining three on Task b. For each ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: Distractor & Illumination Generalization. For dis- tractor settings, Level L1 involves the addition of objects such as books and cups, which are unrelated ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | More Real-World Experiments: Bimanual Robot We further conducted experiments on the Bimanual UR5 Robot, applying it to three distinct tasks: PlaceBread, StackCube, and PlaceTennisBag. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS) |
 | Task/environment | In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to ... | reset, timeout, object/scene variation | p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Primary metric/result | As shown in Table III, while the Diffusion Policy excels in the PlaceTennisBag task, our TinyVLA-H model achieved an average success rate of 44.5%, ... | numeric claim only at cited anchor | p. 5 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** The 50 tasks in MetaWorld [36] can be categorized into multiple levels [37], i.e., easy, medium, hard, and very hard.
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** It is evaluated with 3 seeds, and for each seed, the success rate was averaged over five different iterations.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Pre-trained Total Trainable RealWorld(5 tasks) Model \ Tasks Trajectory Params Params PlaceTennis FlipMug StackCubes CloseDrawer OpenBox Avg.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Diffusion Policy [3] N/A 111M 111M 16.7±0.6 30±0.2 3.3±0.1 73.3±0.1 53.3±0.1 35.3 Multimodal Diffusion [38] N/A 230M 230M 23.3±0.3 13.3±1.3 6.7±0.3 36.7±0.3 10.0±0 18.0 OpenVLA ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** In total, we collected 100 trajectories for each task to balance data distribution across all 5 tasks.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** We report the average success rate over 10 trials.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** The 50 tasks in MetaWorld [36] can be categorized into multiple levels [37], i.e., easy, medium, hard, and very hard.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** It is evaluated with 3 seeds, and for each seed, the success rate was averaged over five different iterations.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Pre-trained Total Trainable RealWorld(5 tasks) Model \ Tasks Trajectory Params Params PlaceTennis FlipMug StackCubes CloseDrawer OpenBox Avg.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Diffusion Policy [3] N/A 111M 111M 16.7±0.6 30±0.2 3.3±0.1 73.3±0.1 53.3±0.1 35.3 Multimodal Diffusion [38] N/A 230M 230M 23.3±0.3 13.3±1.3 6.7±0.3 36.7±0.3 10.0±0 18.0 OpenVLA ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** In total, we collected 100 trajectories for each task to balance data distribution across all 5 tasks.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** We report the average success rate over 10 trials.
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / VI. CONCLUSION - extractive PDF cue:** Our approach overcomes the limitations of previous methods by
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We use a cross mark to denote the failure of the model and a checkmark to indicate successful task completion.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 10: Types of failure for TinyVLA with different sizes of pre-trained vision-language models.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Notably, the OpenVLA fails in every trial.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Secondly, the vanilla DP does not incorporate language instructions.
-- **p. 3 / IV. EXPERIMENTS - extractive PDF cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
+- **p. 7 / VI. CONCLUSION - extractive body cue:** Our approach overcomes the limitations of previous methods by
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We use a cross mark to denote the failure of the model and a checkmark to indicate successful task completion.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 10: Types of failure for TinyVLA with different sizes of pre-trained vision-language models.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Notably, the OpenVLA fails in every trial.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Secondly, the vanilla DP does not incorporate language instructions.
+- **p. 3 / IV. EXPERIMENTS - extractive body cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 4 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), results p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 4 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), results p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

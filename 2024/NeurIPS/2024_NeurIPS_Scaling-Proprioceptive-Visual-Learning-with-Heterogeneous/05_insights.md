@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 We reinitialize the head and stem parameters with embodiment-specific input and output dimensions (such as different proprioception and action dimensions), and freeze the weights of the trunk.를 3 Heterogenoues Pre-trained Transformers (HPT) In heterogeneous robot learning with cross embodiments, the data are generated from different domains such as simulation and real robots, across sensory modalities such as RGB images, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 See Appendix §C for some failure modes.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 3 Heterogenoues Pre-trained Transformers (HPT) In heterogeneous robot learning with cross embodiments, the data are generated from different domains such as simulation and real robots, across sensory modalities such as ... (p. 4, 1 Introduction).
+- **Paper-specific mechanism:** We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in a different implementation in unseen simulation benchmarks. Left) we show that an improvement in ... (p. 22, Figure/Table caption); the relevant task/metric cue is Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to HPT-XL on tasks across 4 different simulator benchmarks. (b) We compare with ... (p. 9, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In Figure 19, we show some failure cases of the learned HPT policies in the real world. (p. 24, C Failure Cases).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For the additional 7 simulation dataset, we use the simulator benchmarks across all popular simulators Drake [81], Mujoco [89, 49], Isaac Sim [20], and PyBullet [80], as well as Sapien [52] and ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in a different implementation in unseen simulation benchmarks. Left) we show that an improvement in performance can ....
-4. Report the body metric and its denominator/aggregation: Figure 12: Transfer Learning in the Real World. We evaluate the pre-trained HPTs on four tasks / two embodiments. The average success rate with standard deviations is computed for 45 trials per ....
-5. Re-run the body-reported ablation/failure condition: Figure 3: Stem Architecture in HPT. In the HPT stem, the proprioceptive tokenizer uses an MLP to map proprioceptive information to a feature which is then attended by 16 learnable tokens. The ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 3 Heterogenoues Pre-trained Transformers (HPT) In heterogeneous robot learning with cross embodiments, the data are generated from different domains such as simulation and real robots, across sensory modalities such as ... (p. 4, 1 Introduction); preserve the objective/update rule: Since the human datasets do not contain proprioception and action information, we use hand poses and 2D positions in the image space as surrogates for the supervised learning objectives. (p. 17, A.1 Dataset Details).
+2. Use the paper-reported task/data/environment cue: For the additional 7 simulation dataset, we use the simulator benchmarks across all popular simulators Drake [81], Mujoco [89, 49], Isaac Sim [20], and PyBullet [80], as well as Sapien ... (p. 17, A.1 Dataset Details).
+3. Compare against the reported or matched baseline: Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in a different implementation in unseen simulation benchmarks. Left) we show that an improvement in ... (p. 22, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to HPT-XL on tasks across 4 different simulator benchmarks. (b) We compare with ... (p. 9, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Figure 3: Stem Architecture in HPT. In the HPT stem, the proprioceptive tokenizer uses an MLP to map proprioceptive information to a feature which is then attended by 16 learnable ... (p. 4, Figure/Table caption); if none is reported, design one around: In Figure 19, we show some failure cases of the learned HPT policies in the real world. (p. 24, C Failure Cases).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 17 (A Implementation Details), p. 17 (A.1 Dataset Details); the primary result is directionally consistent at p. 22 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 22 (Figure/Table caption), p. 9 (Figure/Table caption), p. 21 (Figure/Table caption), and measure the boundary at p. 24 (C Failure Cases), p. 22 (B.1 Additional Simulation Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, Heterogeneous, Pre-trained mechanism이 Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in ... 대비 Figure 12: Transfer Learning in the Real World. We evaluate the pre-trained HPTs on four tasks / two ...을 개선하고, See Appendix §C for some failure modes. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (3 Heterogenoues Pre-trained Transformers (HPT) In heterogeneous robot learning with cross embodiments, the data are generated from different domains such as simulation ...), does the paper-specific mechanism (We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.) retain the reported evaluation outcome (Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to ...) when tested against the paper's strongest explicit boundary (In Figure 19, we show some failure cases of the learned HPT policies in the real world.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in a different implementation in unseen simulation benchmarks. Left) we show that an improvement in ... (p. 22, Figure/Table caption).
+- **Strongest explicit boundary:** In Figure 19, we show some failure cases of the learned HPT policies in the real world. (p. 24, C Failure Cases).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

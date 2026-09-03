@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.05973; PDF retrieval source: https://arxiv.org/pdf/2307.05973. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.05973; PDF retrieval source: https://arxiv.org/pdf/2307.05973. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3 Method | EMPIRICAL / REAL-ROBOT OR HARDWARE | VoxPoser outperforms both baselines across 13 tasks from two categories on both seen and unseen tasks and maintains similar success rates. smoother trajectories but ... | p. 7 (3 Method) |
 | A.5.2 Full Results on Simulated Environments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Each entry represents success rate averaged across 20 episodes. | p. 22 (A.5.2 Full Results on Simulated Environments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.2 Generalization to Unseen Instructions and Attributes To provide rigorous quantitative evaluations on generalization, we set up a simulated block-world environment that mirrors our ... | embodiment, simulator version and control stack | p. 7 (3 Method), p. 18 (A.1 Code Release) |
 | Task/environment | We provide an open-sourced implementation of VoxPoser at github.com/huangwl18/VoxPoser based on RLBench [134], as its diversity of tasks and scenes best resembles our real-world ... | reset, timeout, object/scene variation | p. 18 (A.1 Code Release), p. 20 (A.4 Real-World Environment Setup) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 - **p. 7 / 3 Method - extractive body cue:** Due to fast replanning capabilities, it is also robust to external disturbances, such as moving targets/obstacles and pulling the drawer open after it has been ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of VOXPOSER. Given the RGB-D observation of the environment and a language in- struction, LLMs generate code, which interacts with VLMs, to ...
 
-- **PDF anchors reviewed:** datasets p. 7 (3 Method), p. 18 (A.1 Code Release), p. 20 (A.4 Real-World Environment Setup), p. 18 (A.2 Emergent Behavioral Capabilities), p. 7 (3 Method), p. 21 (A.5 Simulated Environment Setup), metrics p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 5 (Figure/Table caption), baselines p. 7 (3 Method), p. 7 (3 Method), p. 20 (A.4 Real-World Environment Setup), p. 8 (3 Method), p. 1 (Figure/Table caption), p. 20 (A.4 Real-World Environment Setup), results p. 7 (3 Method), p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method).
+- **Evidence anchors reviewed:** datasets p. 7 (3 Method), p. 18 (A.1 Code Release), p. 20 (A.4 Real-World Environment Setup), p. 18 (A.2 Emergent Behavioral Capabilities), p. 7 (3 Method), p. 21 (A.5 Simulated Environment Setup), metrics p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 5 (Figure/Table caption), baselines p. 7 (3 Method), p. 7 (3 Method), p. 20 (A.4 Real-World Environment Setup), p. 8 (3 Method), p. 1 (Figure/Table caption), p. 20 (A.4 Real-World Environment Setup), results p. 7 (3 Method), p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 4: Full experimental results in simulation on seen tasks and unseen tasks. "SA" indicates seen attributes and "UA" indicates unseen attributes. Each entry represents success rate averaged across 20 ... (p. 22, Figure/Table caption).
+- **Metric evidence:** Each entry represents success rate averaged across 20 episodes. (p. 22, A.5.2 Full Results on Simulated Environments).
+- **Baseline/ablation evidence:** VoxPoser outperforms both baselines across 13 tasks from two categories on both seen and unseen tasks and maintains similar success rates. smoother trajectories but takes more time for optimization. (p. 7, 3 Method).
+- **Failure/negative evidence:** 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, from LLMs and VLMs for ... (p. 8, 3 Method).

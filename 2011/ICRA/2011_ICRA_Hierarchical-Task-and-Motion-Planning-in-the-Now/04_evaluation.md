@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2011.5980391; PDF retrieval source: https://doi.org/10.1109/ICRA.2011.5980391. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2011.5980391; PDF retrieval source: https://doi.org/10.1109/ICRA.2011.5980391. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,27 +10,27 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 
 ## Evaluation Body Digest
 
-- **p. 2 / III. EXAMPLE - extractive PDF cue:** The first requires that a swept volume of the robot moving to object a and picking it up be free.
-- **p. 2 / III. EXAMPLE - extractive PDF cue:** The swept volume is shown in figure 3.1 as a complex brown polygon; it was computed using a fast planner that considered only translations of ...
-- **p. 3 / B C - extractive PDF cue:** Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. tree we ...
-- **p. 3 / IV. REPRESENTATION - extractive PDF cue:** The fluents used to characterize the washing example are: • In(O, R): has value True if object O is entirely contained in region R, otherwise ...
-- **p. 5 / C C - extractive PDF cue:** The pick operation results in the robot holding object O: Holding() = O: define: Ts = {T : ClearX (T, X) ∈goal ∧O̸ ∈X} exists: ...
-- **p. 5 / C C - extractive PDF cue:** In our implementation, the world state is represented by a configuration of the robot and a set of objects, each of which has attributes including ...
-- **p. 6 / C C - extractive PDF cue:** To guarantee that the robot can move to the object at that location and pick it up, we find a path from the robot's home ...
-- **p. 6 / C C - extractive PDF cue:** Note that the taboo regions are only taboos for placing objects: they must be kept free, but the robot may take paths that move through ...
+- **p. 2 / III. EXAMPLE - extractive body cue:** The first requires that a swept volume of the robot moving to object a and picking it up be free.
+- **p. 2 / III. EXAMPLE - extractive body cue:** The swept volume is shown in figure 3.1 as a complex brown polygon; it was computed using a fast planner that considered only translations of ...
+- **p. 3 / B C - extractive body cue:** Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. tree we ...
+- **p. 3 / IV. REPRESENTATION - extractive body cue:** The fluents used to characterize the washing example are: • In(O, R): has value True if object O is entirely contained in region R, otherwise ...
+- **p. 5 / C C - extractive body cue:** The pick operation results in the robot holding object O: Holding() = O: define: Ts = {T : ClearX (T, X) ∈goal ∧O̸ ∈X} exists: ...
+- **p. 5 / C C - extractive body cue:** In our implementation, the world state is represented by a configuration of the robot and a set of objects, each of which has attributes including ...
+- **p. 6 / C C - extractive body cue:** To guarantee that the robot can move to the object at that location and pick it up, we find a path from the robot's home ...
+- **p. 6 / C C - extractive body cue:** Note that the taboo regions are only taboos for placing objects: they must be kept free, but the robot may take paths that move through ...
 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** robot mechanism의 state와 task-space dynamics.
-- **Input boundary:** joint/task state, reference와 sensor feedback.
-- **Output/decision under evaluation:** torque, force, velocity 또는 position command.
-- **Primary target:** tracking, stability, constraint satisfaction과 contact behavior.
+- **Target system/task:** graph, configuration space 또는 task-and-motion planning domain.
+- **Input boundary:** start/goal, map, dynamics와 successor/operator description.
+- **Output/decision under evaluation:** feasible action sequence 또는 minimum-cost plan.
+- **Primary target:** path cost, goal reachability, feasibility와 computation.
 - **Detected evaluation headings:** VII. EMPIRICAL RESULTS (p. 8).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B C | SYSTEM / EVALUATION SCOPE UNRESOLVED | Note that executing the operator for removing c from the swept volume of a requires no further planning or execution, as the condition it ... | p. 3 (B C) |
 | C C | SYSTEM / EVALUATION SCOPE UNRESOLVED | In this case, the planner will achieve p1, ...., pn in whatever way it can, and then execute o and r will be achieved; ... | p. 6 (C C) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 
 ## Dataset / Benchmark Role
 
-- **p. 2 / III. EXAMPLE - extractive PDF cue:** The first requires that a swept volume of the robot moving to object a and picking it up be free.
-- **p. 2 / III. EXAMPLE - extractive PDF cue:** The swept volume is shown in figure 3.1 as a complex brown polygon; it was computed using a fast planner that considered only translations of ...
-- **p. 3 / B C - extractive PDF cue:** Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. tree we ...
-- **p. 3 / IV. REPRESENTATION - extractive PDF cue:** The fluents used to characterize the washing example are: • In(O, R): has value True if object O is entirely contained in region R, otherwise ...
-- **p. 5 / C C - extractive PDF cue:** The pick operation results in the robot holding object O: Holding() = O: define: Ts = {T : ClearX (T, X) ∈goal ∧O̸ ∈X} exists: ...
-- **p. 5 / C C - extractive PDF cue:** In our implementation, the world state is represented by a configuration of the robot and a set of objects, each of which has attributes including ...
-- **p. 6 / C C - extractive PDF cue:** To guarantee that the robot can move to the object at that location and pick it up, we find a path from the robot's home ...
-- **p. 6 / C C - extractive PDF cue:** Note that the taboo regions are only taboos for placing objects: they must be kept free, but the robot may take paths that move through ...
+- **p. 2 / III. EXAMPLE - extractive body cue:** The first requires that a swept volume of the robot moving to object a and picking it up be free.
+- **p. 2 / III. EXAMPLE - extractive body cue:** The swept volume is shown in figure 3.1 as a complex brown polygon; it was computed using a fast planner that considered only translations of ...
+- **p. 3 / B C - extractive body cue:** Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. tree we ...
+- **p. 3 / IV. REPRESENTATION - extractive body cue:** The fluents used to characterize the washing example are: • In(O, R): has value True if object O is entirely contained in region R, otherwise ...
+- **p. 5 / C C - extractive body cue:** The pick operation results in the robot holding object O: Holding() = O: define: Ts = {T : ClearX (T, X) ∈goal ∧O̸ ∈X} exists: ...
+- **p. 5 / C C - extractive body cue:** In our implementation, the world state is represented by a configuration of the robot and a set of objects, each of which has attributes including ...
+- **p. 6 / C C - extractive body cue:** To guarantee that the robot can move to the object at that location and pick it up, we find a path from the robot's home ...
+- **p. 6 / C C - extractive body cue:** Note that the taboo regions are only taboos for placing objects: they must be kept free, but the robot may take paths that move through ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 1. Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2. Planning and execution tree for washing and putting away an object. A B A A B B
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Suggestions for swept paths and parking locations. The region sweptb is clear in the starting state, so it never appears in the planning ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 1. Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2. Planning and execution tree for washing and putting away an object. A B A A B B
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Suggestions for swept paths and parking locations. The region sweptb is clear in the starting state, so it never appears in the planning ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The first requires that a swept volume of the robot moving to object a and picking it up be free. | embodiment, simulator version and control stack | p. 2 (III. EXAMPLE), p. 2 (III. EXAMPLE) |
 | Task/environment | The swept volume is shown in figure 3.1 as a complex brown polygon; it was computed using a fast planner that considered only translations ... | reset, timeout, object/scene variation | p. 2 (III. EXAMPLE), p. 3 (B C) |
-| Observation/sensor | joint/task state, reference와 sensor feedback | calibration, preprocessing, privileged input | p. 7 (V. ALGORITHMS), p. 7 (V. ALGORITHMS) |
-| Output/decision | torque, force, velocity 또는 position command | action frame, controller and termination | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 7 (V. ALGORITHMS), p. 7 (V. ALGORITHMS) |
+| Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
 
 ## Metrics and Success Definition
 
@@ -147,12 +147,12 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 
 ## Limitations and Verification Questions
 
-- **p. 6 / C C - extractive PDF cue:** Because these variables both have infinite domains in our setting, we cannot enumerate them.
-- **p. 6 / C C - extractive PDF cue:** If at attempt at serializing operations at an abstract level fails, then the planning problem is
-- **p. 7 / V. ALGORITHMS - extractive PDF cue:** SuggestPoses(O, R, Taboos): finds a set of poses for O where it is completely inside region R, there is no collision with taboo regions, and ...
-- **p. 7 / V. ALGORITHMS - extractive PDF cue:** SuggestParking(O, Taboos, start): find an "out of the way" location for O that does not overlap any of the regions in Taboos.
+- **p. 6 / C C - extractive body cue:** Because these variables both have infinite domains in our setting, we cannot enumerate them.
+- **p. 6 / C C - extractive body cue:** If at attempt at serializing operations at an abstract level fails, then the planning problem is
+- **p. 7 / V. ALGORITHMS - extractive body cue:** SuggestPoses(O, R, Taboos): finds a set of poses for O where it is completely inside region R, there is no collision with taboo regions, and ...
+- **p. 7 / V. ALGORITHMS - extractive body cue:** SuggestParking(O, Taboos, start): find an "out of the way" location for O that does not overlap any of the regions in Taboos.
 
-- **PDF anchors reviewed:** datasets p. 2 (III. EXAMPLE), p. 2 (III. EXAMPLE), p. 3 (B C), p. 3 (IV. REPRESENTATION), p. 5 (C C), p. 5 (C C), metrics p. 5 (C C), p. 2 (III. EXAMPLE), p. 5 (C C), p. 6 (C C), p. 6 (C C), p. 7 (V. ALGORITHMS), baselines p. 6 (C C), results p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CORRECTNESS), p. 2 (III. EXAMPLE), p. 5 (C C).
+- **Evidence anchors reviewed:** datasets p. 2 (III. EXAMPLE), p. 2 (III. EXAMPLE), p. 3 (B C), p. 3 (IV. REPRESENTATION), p. 5 (C C), p. 5 (C C), metrics p. 5 (C C), p. 2 (III. EXAMPLE), p. 5 (C C), p. 6 (C C), p. 6 (C C), p. 7 (V. ALGORITHMS), baselines p. 6 (C C), results p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CORRECTNESS), p. 2 (III. EXAMPLE), p. 5 (C C).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2305.17110; PDF retrieval source: https://arxiv.org/pdf/2305.17110. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2305.17110; PDF retrieval source: https://arxiv.org/pdf/2305.17110. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 3: Evaluation of Simulation-Aware Policy Update. Success rates are computed for episodes where the maximum interpenetration distance was less than the specified value ... | p. 4 (Figure/Table caption) |
 | VI. REAL-WORLD EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III). | p. 8 (VI. REAL-WORLD EXPERIMENTS) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The goal was for the robot to detect all the pegs and use the simulation-trained Pick policy to pick up the objects before releasing ... | embodiment, simulator version and control stack | p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS) |
 | Task/environment | Pick Experiment This experiment evaluated the ability of the real-world system to initiate contact and pick up arbitrarily-placed objects. | reset, timeout, object/scene variation | p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview. Top: Simulation-based policy learning for one of our tasks, gear assembly. Middle: Proposed algorithms to facilitate sim-based learning and real-world deployment. Bottom: ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Joint evaluation of Simulation-Based Policy Update, SDF-Based Dense Reward, and Sampling-Based Curriculum. (A) Pegs and Holes assembly Insert policy. (B) Gears and Gearshafts ...
 
-- **PDF anchors reviewed:** datasets p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VI. REAL-WORLD EXPERIMENTS), metrics p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), baselines p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), results p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VI. REAL-WORLD EXPERIMENTS), metrics p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), baselines p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), results p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Asset Pick Insert Pick-Place-Insert Success Success Engage Success Engage Round peg 8 mm 19/20 7/10 7/10 7/10 7/10 Round peg 12 mm 19/20 7/10 9/10 7/10 7/10 Round peg 16 ... (p. 9, VI. REAL-WORLD EXPERIMENTS).
+- **Metric evidence:** Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III). (p. 8, VI. REAL-WORLD EXPERIMENTS).
+- **Baseline/ablation evidence:** To our knowledge, IndustReal is the first system to demonstrate RL-based sim-to-real transfer for the end-to-end assembly task (i.e., detection, grasping, part transport, and insertion) without any policy adaptation phase ... (p. 8, VI. REAL-WORLD EXPERIMENTS).
+- **Failure/negative evidence:** Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce gripper (e.g., Robotiq) would fully resolve this issue. (p. 8, VI. REAL-WORLD EXPERIMENTS).

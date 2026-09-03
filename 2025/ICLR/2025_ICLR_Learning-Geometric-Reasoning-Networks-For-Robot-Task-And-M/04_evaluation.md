@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajxAJ8GUX4; PDF retrieval source: https://openreview.net/pdf/4c142fb0625912332eff11ad284991e6692f7016.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajxAJ8GUX4; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/112460. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Panda-3D-4: This is dataset is composed of 3D environments containing 4 movable objects, 1 to 4 structures and 0 to 4 obstacles and is annotated ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** (2020b), we generate a dataset consisting of tabletop environments with 0 structures, 4 movable objects and up to 4 obstacles, all placed on the same ...
-- **p. 9 / 6 RESULTS - extractive PDF cue:** This is due to the smaller number of training data of the PR2 dataset and the harder kinematics of the PR2 robot.
-- **p. 10 / 6 RESULTS - extractive PDF cue:** We also test GRN planner in real-world setups, on both a Panda and a PR2 robots.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Dataset Panda-3D-4 Panda-Tabletop-4 PR2-3D-4 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) F-SVM - - 0.884 0.415 (± 0.220) - ...
-- **p. 10 / 6 RESULTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 4: Evaluation of the generalizability to 3D environments with a higher number of objects compared to ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 1: Comparison with SOTA methods trained and tested on different datasets.
-- **p. 9 / 6 RESULTS - extractive PDF cue:** 6.3 GENERALIZABILITY EVALUATION Applicability to other robots.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Panda-3D-4: This is dataset is composed of 3D environments containing 4 movable objects, 1 to 4 structures and 0 to 4 obstacles and is annotated ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** (2020b), we generate a dataset consisting of tabletop environments with 0 structures, 4 movable objects and up to 4 obstacles, all placed on the same ...
+- **p. 9 / 6 RESULTS - extractive body cue:** This is due to the smaller number of training data of the PR2 dataset and the harder kinematics of the PR2 robot.
+- **p. 10 / 6 RESULTS - extractive body cue:** We also test GRN planner in real-world setups, on both a Panda and a PR2 robots.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Dataset Panda-3D-4 Panda-Tabletop-4 PR2-3D-4 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) F-SVM - - 0.884 0.415 (± 0.220) - ...
+- **p. 10 / 6 RESULTS - extractive body cue:** Results demonstrate that our approach outperforms stateof-the-art methods, generalizing better to complex environments and robots.
+- **p. 8 / 6 RESULTS - extractive body cue:** Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects.
+- **p. 9 / 6 RESULTS - extractive body cue:** 6.3 GENERALIZABILITY EVALUATION Applicability to other robots.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results show that GRN achieves a better performance than the state-of-the-art on robots with various kinematics. | p. 9 (6 RESULTS) |
 | 6 RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | This allows our model to achieve an F1 score up to 10.3% higher than other GNN-based baselines on action feasibility prediction, and up to ... | p. 8 (6 RESULTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Panda-3D-4: This is dataset is composed of 3D environments containing 4 movable objects, 1 to 4 structures and 0 to 4 obstacles and is annotated ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** (2020b), we generate a dataset consisting of tabletop environments with 0 structures, 4 movable objects and up to 4 obstacles, all placed on the same ...
-- **p. 9 / 6 RESULTS - extractive PDF cue:** This is due to the smaller number of training data of the PR2 dataset and the harder kinematics of the PR2 robot.
-- **p. 10 / 6 RESULTS - extractive PDF cue:** We also test GRN planner in real-world setups, on both a Panda and a PR2 robots.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Dataset Panda-3D-4 Panda-Tabletop-4 PR2-3D-4 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) F-SVM - - 0.884 0.415 (± 0.220) - ...
-- **p. 10 / 6 RESULTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 4: Evaluation of the generalizability to 3D environments with a higher number of objects compared to ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 1: Comparison with SOTA methods trained and tested on different datasets.
-- **p. 9 / 6 RESULTS - extractive PDF cue:** 6.3 GENERALIZABILITY EVALUATION Applicability to other robots.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Panda-3D-4: This is dataset is composed of 3D environments containing 4 movable objects, 1 to 4 structures and 0 to 4 obstacles and is annotated ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** (2020b), we generate a dataset consisting of tabletop environments with 0 structures, 4 movable objects and up to 4 obstacles, all placed on the same ...
+- **p. 9 / 6 RESULTS - extractive body cue:** This is due to the smaller number of training data of the PR2 dataset and the harder kinematics of the PR2 robot.
+- **p. 10 / 6 RESULTS - extractive body cue:** We also test GRN planner in real-world setups, on both a Panda and a PR2 robots.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Dataset Panda-3D-4 Panda-Tabletop-4 PR2-3D-4 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) F-SVM - - 0.884 0.415 (± 0.220) - ...
+- **p. 10 / 6 RESULTS - extractive body cue:** Results demonstrate that our approach outperforms stateof-the-art methods, generalizing better to complex environments and robots.
+- **p. 8 / 6 RESULTS - extractive body cue:** Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects.
+- **p. 9 / 6 RESULTS - extractive body cue:** 6.3 GENERALIZABILITY EVALUATION Applicability to other robots.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Visualization of GRN predictions on two manipulation problems, Access (Panda arm) and Clutter (PR2 Robot, predictions shown for its right arm). A single ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Complete GRN architecture. A scene graph is constructed from the input 3D environ- ment. Node features of movable objects are given to IK ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison with SOTA methods trained and tested on different datasets. For grasp types feasibility prediction, the mean (± standard deviation) of F1 scores ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Comparison of the number of parameters and inference time on a 3D environment with 4 movable objects and 15 fixed objects (4 queries).
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation Study on the Panda-3D-4 dataset. For each task related to grasp types, we report the mean (± standard deviation) across all grasp ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 4: Evaluation of the generalizability to 3D environments with a higher number of objects compared to SOTA methods, when trained on the Panda-3D-4 dataset. ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Performance of GRN planner compared to a non-informed planner on the Access and Clutter problems. Results are average over 10 runs on 10 ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 6: Decomposition of the inference time of GRN on a 3D environment with 4 mov- able objects and 15 fixed objects. Step Inference Time ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Visualization of GRN predictions on two manipulation problems, Access (Panda arm) and Clutter (PR2 Robot, predictions shown for its right arm). A single ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Complete GRN architecture. A scene graph is constructed from the input 3D environ- ment. Node features of movable objects are given to IK ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Comparison with SOTA methods trained and tested on different datasets. For grasp types feasibility prediction, the mean (± standard deviation) of F1 scores ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Comparison of the number of parameters and inference time on a 3D environment with 4 movable objects and 15 fixed objects (4 queries).
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Ablation Study on the Panda-3D-4 dataset. For each task related to grasp types, we report the mean (± standard deviation) across all grasp ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 4: Evaluation of the generalizability to 3D environments with a higher number of objects compared to SOTA methods, when trained on the Panda-3D-4 dataset. ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Performance of GRN planner compared to a non-informed planner on the Access and Clutter problems. Results are average over 10 runs on 10 ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 6: Decomposition of the inference time of GRN on a 3D environment with 4 mov- able objects and 15 fixed objects. Step Inference Time ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Panda-3D-4: This is dataset is composed of 3D environments containing 4 movable objects, 1 to 4 structures and 0 to 4 obstacles and is ... | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
 | Task/environment | (2020b), we generate a dataset consisting of tabletop environments with 0 structures, 4 movable objects and up to 4 obstacles, all placed on the ... | reset, timeout, object/scene variation | p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS) |
@@ -93,9 +93,9 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 | 6.1 COMPARISON TO PRIOR WORK Table 1 shows that our proposed model outperforms all prior works on both action feasibility and grasp types feasibility ... | comparison identity and matched condition | p. 8 (6 RESULTS) |
 | MLP: This is a simple baseline which uses a 4-layer MLP that takes as input the feature vector x of an object to predict ... | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | Our full model shows a 7.1% gain in performance compared to the one without IK feasibility and GO predictions. | comparison identity and matched condition | p. 9 (6 RESULTS) |
-| Published as a conference paper at ICLR 2025 Table 4: Evaluation of the generalizability to 3D environments with a higher number of objects compared ... | comparison identity and matched condition | p. 10 (6 RESULTS) |
 | We conduct a series of experiments in order to evaluate the performance of our proposed method compared to existing approaches, and showcase the generalization ... | comparison identity and matched condition | p. 6 (5 EXPERIMENTS) |
 | Feasibility-GAT (F-GAT): This baseline is an adapted version of the methods proposed by Silver et al. | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
+| CNN-based methods, DVH and AGFP-Net, fall short compared to our approach, with a difference in F1 score on the Panda-3D-4 of 10% (resp. | comparison identity and matched condition | p. 8 (6 RESULTS) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -110,7 +110,7 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 |---|---|---|
 | We conduct two ablations to demonstrate the effectiveness of our training strategy. | component/input/data sensitivity | p. 9 (6 RESULTS) |
 | MLP: This is a simple baseline which uses a 4-layer MLP that takes as input the feature vector x of an object to predict ... | component/input/data sensitivity | p. 7 (5 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2025 Table 3: Ablation Study on the Panda-3D-4 dataset. | component/input/data sensitivity | p. 9 (6 RESULTS) |
+| Our full model shows a 7.1% gain in performance compared to the one without IK feasibility and GO predictions. | component/input/data sensitivity | p. 9 (6 RESULTS) |
 | Feasibility-GCN (F-GCN): This baseline uses the same scene representation as F-GAT, except that GAT is replaced with a Graph Convolution Network (GCN), which does ... | component/input/data sensitivity | p. 7 (5 EXPERIMENTS) |
 | During the fine-tuning stage, the complete GRN model is trained for 100 epochs with a batch size of 2048 and a learning rate of ... | component/input/data sensitivity | p. 14 (A IMPLEMENTATION DETAILS) |
 
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 | Primary metric/result | This allows our model to achieve an F1 score up to 10.3% higher than other GNN-based baselines on action feasibility prediction, and up to ... | numeric claim only at cited anchor | p. 8 (6 RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 conduct our experiments using mainly the Franka Emika Panda, which is a 7 degrees-of-freedom (DOF) robotic arm ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Dataset Panda-3D-4 Panda-Tabletop-4 PR2-3D-4 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) F-SVM - - 0.884 0.415 (± 0.220) - ...
-- **p. 10 / 6 RESULTS - extractive PDF cue:** Test set Panda-3D-10 Panda-3D-15 Panda-3D-20 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) MLP 0.773 0.624 (± 0.028) 0.766 0.616 ...
-- **p. 14 / A IMPLEMENTATION DETAILS - extractive PDF cue:** During the pre-training stage, each module is trained for 100 epochs.
-- **p. 14 / A IMPLEMENTATION DETAILS - extractive PDF cue:** During the fine-tuning stage, the complete GRN model is trained for 100 epochs with a batch size of 2048 and a learning rate of 0.0001.
-- **p. 14 / A IMPLEMENTATION DETAILS - extractive PDF cue:** The full training process takes approximately 15 hours.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Dataset Panda-3D-4 Panda-Tabletop-4 PR2-3D-4 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) F-SVM - - 0.884 0.415 (± 0.220) - ...
+- **p. 10 / 6 RESULTS - extractive body cue:** Test set Panda-3D-10 Panda-3D-15 Panda-3D-20 Task Action (F1) Grasp (F1) Action (F1) Grasp (F1) Action (F1) Grasp (F1) MLP 0.773 0.624 (± 0.028) 0.766 0.616 ...
+- **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** During the pre-training stage, each module is trained for 100 epochs.
+- **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** During the fine-tuning stage, the complete GRN model is trained for 100 epochs with a batch size of 2048 and a learning rate of 0.0001.
+- **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** The full training process takes approximately 15 hours.
+- **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** The total inference time of GRN is 5.5 ms in average, with the most significant portion spent on scene graph construction with an average time ...
 
 ## Generalization and Failure Cases
 
@@ -165,14 +165,14 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 
 ## Limitations and Verification Questions
 
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Figure 5: Annotations statistics for the Panda-3D-4 training set. (a) Number of feasible and infeasi- ble actions (b) Number of feasible and infeasi- ble cases ...
-- **p. 8 / 6 RESULTS - extractive PDF cue:** CNN-based methods, DVH and AGFP-Net, fall short compared to our approach, with a difference in F1 score on the Panda-3D-4 of 10% (resp.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Feasibility-GCN (F-GCN): This baseline uses the same scene representation as F-GAT, except that GAT is replaced with a Graph Convolution Network (GCN), which does not ...
-- **p. 10 / 6 RESULTS - extractive PDF cue:** Future work will include graph pooling layers to evaluate motion infeasibility across the entire scene graph.
-- **p. 10 / 6 RESULTS - extractive PDF cue:** 7 DISCUSSION AND FUTURE WORK In this work, we propose a framework for action and grasp feasibility prediction in 3D environments.
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects.
+- **p. 16 / Figure/Table caption - extractive body cue:** Figure 5: Annotations statistics for the Panda-3D-4 training set. (a) Number of feasible and infeasi- ble actions (b) Number of feasible and infeasi- ble cases ...
+- **p. 8 / 6 RESULTS - extractive body cue:** CNN-based methods, DVH and AGFP-Net, fall short compared to our approach, with a difference in F1 score on the Panda-3D-4 of 10% (resp.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Feasibility-GCN (F-GCN): This baseline uses the same scene representation as F-GAT, except that GAT is replaced with a Graph Convolution Network (GCN), which does not ...
+- **p. 10 / 6 RESULTS - extractive body cue:** Future work will include graph pooling layers to evaluate motion infeasibility across the entire scene graph.
+- **p. 10 / 6 RESULTS - extractive body cue:** 7 DISCUSSION AND FUTURE WORK In this work, we propose a framework for action and grasp feasibility prediction in 3D environments.
+- **p. 8 / 6 RESULTS - extractive body cue:** Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 8 (5 EXPERIMENTS), p. 10 (6 RESULTS), metrics p. 8 (6 RESULTS), p. 8 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 10 (6 RESULTS), baselines p. 8 (6 RESULTS), p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), results p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 8 (6 RESULTS), p. 10 (6 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 8 (5 EXPERIMENTS), p. 10 (6 RESULTS), metrics p. 8 (6 RESULTS), p. 8 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 10 (6 RESULTS), baselines p. 8 (6 RESULTS), p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (6 RESULTS), results p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 8 (6 RESULTS), p. 10 (6 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

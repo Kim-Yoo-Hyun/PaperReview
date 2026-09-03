@@ -2,54 +2,56 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=eZNdkwJYbN; PDF retrieval source: https://openreview.net/pdf/cc6e0a2d054469a238a6da05b30dce8f439f11f3.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=eZNdkwJYbN; PDF retrieval source: https://arxiv.org/pdf/2506.10977. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 38].
+PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 31].
 
 ## PDF Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** 3D occupancy prediction is crucial for robust autonomous driving systems as it enables comprehensive perception of environmental structures and semantics.
-- **p. 1 / Abstract - extractive PDF cue:** Most existing methods employ dense voxel-based scene representations, ignoring the sparsity of driving scenes and resulting in inefficiency.
-- **p. 1 / Abstract - extractive PDF cue:** Recent works explore object-centric representations based on sparse Gaussians, but their ellipsoidal shape prior limits the modeling of diverse structures.
-- **p. 1 / Abstract - extractive PDF cue:** In real-world driving scenes, objects exhibit rich geometries (e.g., cuboids, cylinders, and irregular shapes), necessitating excessive ellipsoidal Gaussians densely packed for accurate modeling, which leads ...
-- **p. 1 / Abstract - extractive PDF cue:** To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 38].
-- **p. 2 / 1 Introduction - extractive PDF cue:** Real-world driving scenarios contain objects with rich structural variations, which cannot be accurately represented by a few ellipsoidal Gaussian.
+- **p. 1 / Abstract - extractive body cue:** 3D occupancy prediction is crucial for robust autonomous driving systems as it enables comprehensive perception of environmental structures and semantics.
+- **p. 1 / Abstract - extractive body cue:** Most existing methods employ dense voxel-based scene representations, ignoring the sparsity of driving scenes and resulting in inefficiency.
+- **p. 1 / Abstract - extractive body cue:** Recent works explore object-centric representations based on sparse Gaussians, but their ellipsoidal shape prior limits the modeling of diverse structures.
+- **p. 1 / Abstract - extractive body cue:** In real-world driving scenes, objects exhibit rich geometries (e.g., cuboids, cylinders, and irregular shapes), necessitating excessive ellipsoidal Gaussians densely packed for accurate modeling, which leads ...
+- **p. 1 / Abstract - extractive body cue:** To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent ...
+- **p. 2 / 1 Introduction - extractive body cue:** Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 31].
+- **p. 2 / 1 Introduction - extractive body cue:** Real-world driving scenarios contain objects with rich structural variations, which cannot be accurately represented by a few ellipsoidal Gaussian.
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 38]. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Extensive experiments on the nuScenes and KITTI-360 dataset demonstrate that our QuadricFormer achieves state-of-the-art performance with superior efficiency. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
-| State / latent | Extensive, experiments, nuScenes, KITTI-360, dataset, demonstrate, QuadricFormer, achieves, state-of-the-art, performance | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | efficient, expressive, object-centric, representation, superquadrics, scene, primitives, Building | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
+| Target problem | Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 31]. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
+| Observation / input | Furthermore, surface-based methods rely on the explicit structure from point cloud inputs, whereas visual inputs introduce structural uncertainty, making deterministic modeling unstable. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Furthermore, surface-based, methods, rely, explicit, structure, point, cloud, inputs, whereas | geometry, map, object/relationship state | notation and tensor shape require body check |
+| Output / action | Formally, given, input, images, views, model, aims, predict | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | image/point input I/P and pose; body terms: Extensive, experiments, nuScenes, KITTI-360, dataset, demonstrate, QuadricFormer, achieves, state-of-the-art, performance | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Decision / output variable | geometry/map/query r; body terms: efficient, expressive, object-centric, representation, superquadrics, scene, primitives, Building | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 16 (C Additional Implementation Details) |
-| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: not recovered | no optimization/equation sentence selected |
-| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
-| Success / guarantee | spatial accuracy and downstream robot utility | p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments) |
+| State / observation variable | image/point input I/P and pose; body terms: Furthermore, surface-based, methods, rely, explicit, structure, point, cloud, inputs, whereas | p. 5 (6 Superquadrics), p. 3 (6 Superquadrics), p. 4 (6 Superquadrics) |
+| Decision / output variable | geometry/map/query r; body terms: section, present, superquadric, representation, efficient, semantic, occupancy, prediction | p. 3 (6 Superquadrics), p. 2 (1 Introduction), p. 2 (1 Introduction) |
+| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: optimization, adopt, cross, entropy, loss, lovaszsoftmax, training, While | p. 3 (6 Superquadrics), p. 5 (6 Superquadrics), p. 6 (6 Superquadrics), p. 5 (6 Superquadrics), p. 6 (6 Superquadrics) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 3 (6 Superquadrics), p. 1 (Abstract) |
+| Success / guarantee | spatial accuracy and downstream robot utility | p. 9 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Real-world driving scenarios contain objects with rich structural variations, which cannot be accurately represented by a few ellipsoidal Gaussian.
+- **p. 2 / 1 Introduction - extractive body cue:** Real-world driving scenarios contain objects with rich structural variations, which cannot be accurately represented by a few ellipsoidal Gaussian.
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 16 (C Additional Implementation Details)): In this paper, we propose an efficient and expressive object-centric 3D representation using superquadrics [1] as scene primitives.
+PDF body contribution framing (p. 3 (6 Superquadrics), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (12800 Gaussians)): 3 Proposed Approach In this section, we present our method based on the superquadric representation for efficient 3D semantic occupancy prediction.
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Building on this representation, we introduce QuadricFormer, a superquadric-based framework for efficient 3D semantic occupancy prediction.
-- **p. 16 / C Additional Implementation Details - extractive PDF cue:** To address this, we introduce the prunning-and-splitting module: · We divide all superquadrics in Q into two groups based on the product of their scales: ...
+- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose an efficient and expressive object-centric 3D representation using superquadrics [1] as scene primitives.
+- **p. 2 / 1 Introduction - extractive body cue:** Building on this representation, we introduce QuadricFormer, a superquadric-based framework for efficient 3D semantic occupancy prediction.
+- **p. 1 / Abstract - extractive body cue:** To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent ...
+- **p. 1 / 12800 Gaussians - extractive body cue:** 20.02 mIoU 1600 Superquadrics 20.12 mIoU GaussianFormer QuadricFormer Figure 1: Considering the ellipsoidal shape prior of Gaussians, we propose leveraging expressive superquadrics to build an ...
 
 ## Assumptions and Failure Boundary
 
@@ -61,11 +63,11 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 16 (C
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1 Introduction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (6 Superquadrics), p. 3 (6 Superquadrics), p. 4 (6 Superquadrics), p. 5 (6 Superquadrics). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 2 (1 Introduction), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 5 (6 Superquadrics), p. 3 (6 Superquadrics), p. 4 (6 Superquadrics), p. 5 (6 Superquadrics), objective p. 3 (6 Superquadrics), p. 5 (6 Superquadrics), p. 6 (6 Superquadrics), p. 5 (6 Superquadrics), p. 6 (6 Superquadrics).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

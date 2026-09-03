@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.15818; PDF retrieval source: https://arxiv.org/pdf/2307.15818. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.15818; PDF retrieval source: https://arxiv.org/pdf/2307.15818. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Then, we introduce the recipe and challenges of fine-tuning large VLMs that are pre-trained on web-scale data to directly output robot actions, ... | p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. Robot-Action Fine-tuning) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | The action space consists of 6-DoF positional and rotational displacement of the robot end-effector, as well as the level of extension of ... | p. 5 (3.2. Robot-Action Fine-tuning), p. 4 (3. Vision-Language-Action Models) |
@@ -47,7 +47,7 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -59,7 +59,7 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 | Input/observation | Although, models, typically, trained, produce, natural, language, tokens, train, them, robotic, trajectories, tokenizing, actions | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
 | State/latent | Although, models, typically, trained, produce, natural, language, tokens, train, them | language-grounded task state와 action-policy context | body cue; notation verify |
 | Action/output | main, contribution, RT-2, family, models, derived, fine-tuning, large, vision-language, trained | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | policy/action modeling objective | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -79,7 +79,7 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Due to its reduced size, the resulting model can run inference at a similar rate (5 Hz) as the other baselines. | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | To reduce the variance of these experiment, we evaluate all of the methods using the A/B testing framework (Fisher, 1936), where all ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Due to its reduced size, the resulting model can run inference at a similar rate (5 Hz) as the other baselines. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. Robot-Action Fine-tuning), p. 4 (3. Vision-Language-Action Models), p. 6 (3.2. Robot-Action Fine-tuning), p. 6 (3.2. Robot-Action Fine-tuning), p. 5 (3.1. Pre-Trained Vision-Language Models), objective 본문 anchor 없음, temporal p. 8 (4. Experiments), p. 9 (4. Experiments), p. 10 (4. Experiments), p. 10 (4. Experiments), p. 6 (3.3. Real-Time Inference), p. 6 (3.3. Real-Time Inference).
+- **Evidence anchors reviewed:** method p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. Robot-Action Fine-tuning), p. 4 (3. Vision-Language-Action Models), p. 6 (3.2. Robot-Action Fine-tuning), p. 6 (3.2. Robot-Action Fine-tuning), p. 5 (3.1. Pre-Trained Vision-Language Models), objective 본문 anchor 없음, temporal p. 8 (4. Experiments), p. 9 (4. Experiments), p. 10 (4. Experiments), p. 10 (4. Experiments), p. 6 (3.3. Real-Time Inference), p. 6 (3.3. Real-Time Inference).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Taking the action representation described above, we convert our robot data to be suitable for VLM model fine-tuning, where our inputs include robot camera image and textual task description (using ... (p. 6, 3.2. Robot-Action Fine-tuning).
+- **Objective/update evidence:** First, we describe the general architecture of our models and how they can be derived from models that are commonly used for vision-language tasks. (p. 4, 3. Vision-Language-Action Models).
+- **Temporal/runtime evidence:** Due to its reduced size, the resulting model can run inference at a similar rate (5 Hz) as the other baselines. (p. 8, 4. Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

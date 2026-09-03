@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 + Realistic Simulation and Rendering: With METASIM's hybrid simulation capability, we enable the fusion of advanced physics engines and rendering systems across multiple simulators and renderers, Combined with carefully ‘curated scenes, ...를 They collectively define who performs the actions (agents), what the environment looks like (objects), ‘what the agents should do (tasks, including instructions, success ‘metrics, and rewards), how the environment is perceived and ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Moreover, simulation-based data often fails to capture complex physics and diverse task variations found in the real world (52, 22), potentially causing coverfitting to specific simulators and hampering generalization to real-world scen ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We use a mobile device to capture ‘multi-view images, reconstruct a high-quality mesh, build a URDF using VLM, and then perform actions in both ROBOVERSE and the real world. (p. 7, IV. ROBOVERSE DATASET).
+- **Paper-specific mechanism:** Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is ‘TABLE Il: Baseline Results on ROBOVERSE Imitation Learning Benchmark. (p. 10, B. Results on the Imitation Learning Benchmark); the relevant task/metric cue is Compared to super vised learning tasks, it is relatively difficult to evaluate the performance of a robotics model. (p. 3, C. Benchmarking in Robotics). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In this session, we demonstrate how synthetic data from the ROBOVERSE: simulation can augment real-world datasets to train more capable robotics world models..
-3. Compare against the body-reported baseline or a matched simpler baseline: 1) Baseline and Task Selection: ‘To genuinely reflect the data quality of the ROBOVERSE dataset and provide a standard benchmark for all kinds of imitation learning policy models,.
-4. Report the body metric and its denominator/aggregation: The reported success rates are computed as the averages over three random seeds..
-5. Re-run the body-reported ablation/failure condition: 12, we fine-tune OpenVLA [42] on the ROBOVERSE dataset and transfer the earned policy to real-world scenarios without additional finetuning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We use a mobile device to capture ‘multi-view images, reconstruct a high-quality mesh, build a URDF using VLM, and then perform actions in both ROBOVERSE and the real world. (p. 7, IV. ROBOVERSE DATASET); preserve the objective/update rule: Consequently, scaling real-world datasets, evaluating policies, and iterating development in real-world scenarios remain cost-prohibitive and difficult 10 standardize. (p. 2, 1. IyrRopucTION).
+2. Use the paper-reported task/data/environment cue: We apply the following approaches to collect tasks and demonstrations + Direct Migration from Other Simulation Environments Some benchmarks provide essential components integration into ROBOVERSE. (p. 5, IV. ROBOVERSE DATASET).
+3. Compare against the reported or matched baseline: 1) Baseline and Task Selection: ‘To genuinely reflect the data quality of the ROBOVERSE dataset and provide a standard benchmark for all kinds of imitation learning policy models, (p. 9, B. Results on the Imitation Learning Benchmark).
+4. Report the body metric with its denominator and aggregation: Compared to super vised learning tasks, it is relatively difficult to evaluate the performance of a robotics model. (p. 3, C. Benchmarking in Robotics).
+5. Re-run the reported ablation or stress/failure condition: To address these challenges, ROBOVERSE enables researchers to evaluate their policies across multiple benchmarks and simulators seamlessly, without familiarizing themselves with each one individually (p. 3, C. Benchmarking in Robotics); if none is reported, design one around: Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET); the primary result is directionally consistent at p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (Abstract), match the reported outcome at p. 10 (B. Results on the Imitation Learning Benchmark), p. 3 (C. Benchmarking in Robotics), p. 8 (A. Benchmark Overview), and measure the boundary at p. 11 (dataset), p. 3 (B. Large-Scale Roboties Dataset).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Additionally, unified, benchmarks mechanism이 1) Baseline and Task Selection: ‘To genuinely reflect the data quality of the ROBOVERSE dataset and ... 대비 The reported success rates are computed as the averages over three random seeds.을 개선하고, Moreover, simulation-based data often fails to capture complex physics and diverse task variations found in the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We use a mobile device to capture ‘multi-view images, reconstruct a high-quality mesh, build a URDF using VLM, and then perform actions ...), does the paper-specific mechanism (Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world ...) retain the reported evaluation outcome (Compared to super vised learning tasks, it is relatively difficult to evaluate the performance of a robotics model.) when tested against the paper's strongest explicit boundary (Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Compared to super vised learning tasks, it is relatively difficult to evaluate the performance of a robotics model.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization. (p. 1, Abstract).
+- **Paper-supported outcome:** ‘TABLE Il: Baseline Results on ROBOVERSE Imitation Learning Benchmark. (p. 10, B. Results on the Imitation Learning Benchmark).
+- **Strongest explicit boundary:** Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

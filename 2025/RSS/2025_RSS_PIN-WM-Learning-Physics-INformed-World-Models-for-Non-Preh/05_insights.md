@@ -13,11 +13,10 @@
 - **p. 2 / 2 Wuhan Universi - extractive body cue:** We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.
 - **p. 2 / 2 Wuhan Universi - extractive body cue:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real ...
 - **p. 3 / C. Domain Randomization - extractive body cue:** We provide an overview of our framework in Figure 2
-- **p. 1 / Front matter - extractive body cue:** *Shenzhen University "Equal contributions
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** In contrast, PIN-WM enables end-to-end identification of 3D rigid-body dynamics from visual observations using few-shot, task-agnostic interaction data, which facilitates the training of vision-based manipulation ...
 - **p. 5 / B. Physics-INformed World Model - extractive body cue:** We formulate this system identification process as a velocity-based Linear Complementarity Problem (LCP) [16, 68] which solves the equations of motion under global constraints, Here, ...
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** DINOWM [84] leverages spatial patch features pre-trained with DINOv2 to learn a world model and achieve task-agnostic behavior planning by treating goal features as prediction ...
-- **Contribution anchor:** p. 2 (2 Wuhan Universi), p. 2 (2 Wuhan Universi), p. 3 (C. Domain Randomization), p. 1 (Front matter), p. 3 (B. World Models for Policy Learning), p. 5 (B. Physics-INformed World Model)
+- **Contribution anchor:** p. 2 (2 Wuhan Universi), p. 2 (2 Wuhan Universi), p. 3 (C. Domain Randomization), p. 1 (body section boundary not confidently recovered), p. 3 (B. World Models for Policy Learning), p. 5 (B. Physics-INformed World Model)
 
 ### Strongest assumption and failure boundary
 
@@ -42,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 Adopting differentiable physics simulation, PIN-WM can be learned with few-shot and task-agnostic physical interaction trajectories. ‘observational loss induced ‘aussian Splatting without needing state estimation.를 The transformed observations = {Z(,e¢°)} 4 are then obtained in simulation with Equation 5, where x - G(X+++-1) At+s-1, 8) is the updated state when applying action ¢«-1- The physics parameter 8 ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Since neither of the two methods learns rendering parameters and their trained policies cannot work without aligned visual input, we add our rendering function Z to enhance these two methods.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We formulate this system identification process as a velocity-based Linear Complementarity Problem (LCP) [16, 68] which solves the equations of motion under global constraints, Here, we use LCP to first ... (p. 5, B. Physics-INformed World Model).
+- **Paper-specific mechanism:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real without real-world fine-tuning. (p. 2, 2 Wuhan Universi).
+- **Evidence boundary:** the reported outcome is All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study ... (p. 7, A. Evaluations in Simulation); the relevant task/metric cue is We evaluate the accuracy of a world model using ‘one-step error (44] which measures the distance between the final object states after applying one sampled action to the (p. 7, A. Evaluations in Simulation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that their world models failed to effectively ‘capture the target-domain dynamics. (p. 8, A. Evaluations in Simulation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Experiment setup: n simulation, we collect a single task-agnostc trajectory thatthe target object is pushed forward along a straight line by the robot end-effector for a predefined distance in the target domain..
-3. Compare against the body-reported baseline or a matched simpler baseline: Note that all physics-based methods being compared are trained with the same task-agnostic trajectories as PIN-WM, for fair comparison..
-4. Report the body metric and its denominator/aggregation: All RL-based policies are trained using PPO [66], with the same model architecture, reward function, hyperparameters, and stopping criterion based on the success rate..
-5. Re-run the body-reported ablation/failure condition: All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study of our ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We formulate this system identification process as a velocity-based Linear Complementarity Problem (LCP) [16, 68] which solves the equations of motion under global constraints, Here, we use LCP to first ... (p. 5, B. Physics-INformed World Model); preserve the objective/update rule: We formulate this system identification process as a velocity-based Linear Complementarity Problem (LCP) [16, 68] which solves the equations of motion under global constraints, Here, we use LCP to first ... (p. 5, B. Physics-INformed World Model).
+2. Use the paper-reported task/data/environment cue: Experiment setup: n simulation, we collect a single task-agnostc trajectory thatthe target object is pushed forward along a straight line by the robot end-effector for a predefined distance in the ... (p. 7, A. Evaluations in Simulation).
+3. Compare against the reported or matched baseline: Note that all physics-based methods being compared are trained with the same task-agnostic trajectories as PIN-WM, for fair comparison. (p. 7, A. Evaluations in Simulation).
+4. Report the body metric with its denominator and aggregation: We evaluate the accuracy of a world model using ‘one-step error (44] which measures the distance between the final object states after applying one sampled action to the (p. 7, A. Evaluations in Simulation).
+5. Re-run the reported ablation or stress/failure condition: All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study ... (p. 7, A. Evaluations in Simulation); if none is reported, design one around: Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that their world models failed to effectively ‘capture the target-domain dynamics. (p. 8, A. Evaluations in Simulation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (B. Physics-INformed World Model), p. 3 (B. World Models for Policy Learning), p. 5 (B. Physics-INformed World Model); the primary result is directionally consistent at p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (2 Wuhan Universi), p. 1 (Abstract), match the reported outcome at p. 7 (A. Evaluations in Simulation), p. 8 (B. Evaluations in Real-World), p. 6 (IV. RESULTS AND EVALUATIONS), and measure the boundary at p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, PIN-WM, Physies-INformed mechanism이 Note that all physics-based methods being compared are trained with the same task-agnostic trajectories as PIN-WM, ... 대비 All RL-based policies are trained using PPO [66], with the same model architecture, reward function, hyperparameters, and stopping ...을 개선하고, Since neither of the two methods learns rendering parameters and their trained policies cannot work without ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We formulate this system identification process as a velocity-based Linear Complementarity Problem (LCP) [16, 68] which solves the equations of motion under ...), does the paper-specific mechanism (+ We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains ...) retain the reported evaluation outcome (We evaluate the accuracy of a world model using ‘one-step error (44] which measures the distance between the ...) when tested against the paper's strongest explicit boundary (Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We evaluate the accuracy of a world model using ‘one-step error (44] which measures the distance between the ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real without real-world fine-tuning. (p. 2, 2 Wuhan Universi).
+- **Paper-supported outcome:** All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study ... (p. 7, A. Evaluations in Simulation).
+- **Strongest explicit boundary:** Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that their world models failed to effectively ‘capture the target-domain dynamics. (p. 8, A. Evaluations in Simulation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

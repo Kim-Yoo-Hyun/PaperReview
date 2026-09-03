@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.04838; PDF retrieval source: https://arxiv.org/pdf/1912.04838. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.04838; PDF retrieval source: https://arxiv.org/pdf/1912.04838. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines f
 
 ## Evaluation Body Digest
 
-- **p. 5 / 3.5. Dataset Analysis - extractive PDF cue:** The dataset has scenes selected from both suburban and urban areas, from different times of the day.
-- **p. 5 / 3.5. Dataset Analysis - extractive PDF cue:** In addition to the urban/suburban and time of day diversity, scenes in the dataset are selected from many different parts within the cities.
-- **p. 7 / 5.3. Domain Gap - extractive PDF cue:** The majority of the scenes in our dataset were recorded in three distinct cities (Table 4), namely San Francisco, Phoenix, Mountain View.
-- **p. 7 / 5.3. Domain Gap - extractive PDF cue:** We filter the training and validation datasets to only contain frames from a specific geographic subset referred to as SF (San Francisco), SUB (MTV + ...
-- **p. 8 / 5.4. Dataset Size - extractive PDF cue:** For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained the ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** The same method can be applied to other object types in the dataset.
-- **p. 8 / 5.4. Dataset Size - extractive PDF cue:** The AP/APH at LEVEL 2 difficulty on the Validation set of Vehicles and Pedestrians as the dataset size grows.
-- **p. 3 / 3.2. Coordinate Systems - extractive PDF cue:** Transform among close frames is very accurate in this dataset.
+- **p. 5 / 3.5. Dataset Analysis - extractive body cue:** The dataset has scenes selected from both suburban and urban areas, from different times of the day.
+- **p. 5 / 3.5. Dataset Analysis - extractive body cue:** In addition to the urban/suburban and time of day diversity, scenes in the dataset are selected from many different parts within the cities.
+- **p. 7 / 5.3. Domain Gap - extractive body cue:** The majority of the scenes in our dataset were recorded in three distinct cities (Table 4), namely San Francisco, Phoenix, Mountain View.
+- **p. 7 / 5.3. Domain Gap - extractive body cue:** We filter the training and validation datasets to only contain frames from a specific geographic subset referred to as SF (San Francisco), SUB (MTV + ...
+- **p. 8 / 5.4. Dataset Size - extractive body cue:** For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained the ...
+- **p. 6 / 5. Experiments - extractive body cue:** The same method can be applied to other object types in the dataset.
+- **p. 8 / 5.4. Dataset Size - extractive body cue:** The AP/APH at LEVEL 2 difficulty on the Validation set of Vehicles and Pedestrians as the dataset size grows.
+- **p. 3 / 3.2. Coordinate Systems - extractive body cue:** Transform among close frames is very accurate in this dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines f
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.4. Dataset Size | BENCHMARK / DATASET | For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained ... | p. 8 (5.4. Dataset Size) |
 | 5.2. Baselines for Multi-Object Tracking | BENCHMARK / DATASET | The resulting Tracktor model achieved a MOTA of 34.8 at LEVEL 1 and 28.3 at LEVEL 2 when tracking vehicles. | p. 7 (5.2. Baselines for Multi-Object Tracking) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines f
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 3.5. Dataset Analysis - extractive PDF cue:** The dataset has scenes selected from both suburban and urban areas, from different times of the day.
-- **p. 5 / 3.5. Dataset Analysis - extractive PDF cue:** In addition to the urban/suburban and time of day diversity, scenes in the dataset are selected from many different parts within the cities.
-- **p. 7 / 5.3. Domain Gap - extractive PDF cue:** The majority of the scenes in our dataset were recorded in three distinct cities (Table 4), namely San Francisco, Phoenix, Mountain View.
-- **p. 7 / 5.3. Domain Gap - extractive PDF cue:** We filter the training and validation datasets to only contain frames from a specific geographic subset referred to as SF (San Francisco), SUB (MTV + ...
-- **p. 8 / 5.4. Dataset Size - extractive PDF cue:** For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained the ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** The same method can be applied to other object types in the dataset.
-- **p. 8 / 5.4. Dataset Size - extractive PDF cue:** The AP/APH at LEVEL 2 difficulty on the Validation set of Vehicles and Pedestrians as the dataset size grows.
-- **p. 3 / 3.2. Coordinate Systems - extractive PDF cue:** Transform among close frames is very accurate in this dataset.
+- **p. 5 / 3.5. Dataset Analysis - extractive body cue:** The dataset has scenes selected from both suburban and urban areas, from different times of the day.
+- **p. 5 / 3.5. Dataset Analysis - extractive body cue:** In addition to the urban/suburban and time of day diversity, scenes in the dataset are selected from many different parts within the cities.
+- **p. 7 / 5.3. Domain Gap - extractive body cue:** The majority of the scenes in our dataset were recorded in three distinct cities (Table 4), namely San Francisco, Phoenix, Mountain View.
+- **p. 7 / 5.3. Domain Gap - extractive body cue:** We filter the training and validation datasets to only contain frames from a specific geographic subset referred to as SF (San Francisco), SUB (MTV + ...
+- **p. 8 / 5.4. Dataset Size - extractive body cue:** For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained the ...
+- **p. 6 / 5. Experiments - extractive body cue:** The same method can be applied to other object types in the dataset.
+- **p. 8 / 5.4. Dataset Size - extractive body cue:** The AP/APH at LEVEL 2 difficulty on the Validation set of Vehicles and Pedestrians as the dataset size grows.
+- **p. 3 / 3.2. Coordinate Systems - extractive body cue:** Transform among close frames is very accurate in this dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of some popular datasets. The Argo Dataset refers to their Tracking dataset only, not the Motion Forecasting dataset. 3D labels projected to ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 2. LiDAR Data Specifications for Front (F), Right (R), Side- Left (SL), Side-Right (SR), and Top (TOP) sensors. The vertical field of view (VFOV) ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 3. Camera Specifications for Front (F), Front-Left (FL), Front- Right (FR), Side-Left (SL), Side-Right (SR) cameras. The image sizes reflect the results of both ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Sensor layout and coordinate systems. ning mode can vary from scene to scene. All camera images are downsampled and cropped from the raw ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. LiDAR label example. Yellow = vehicle. Red = pedes- trian. Blue = sign. Pink = cyclist. axes depends on the LiDAR. The camera ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Camera LiDAR synchronization accuracy in milliseconds. The number in x-axis is in milli-seconds. The y-axis denotes the percentage of data frames.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. A range image example. It is cropped to only show the front 90◦. The first three rows are range, intensity, and elongation from ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. An example image overlaid with LiDAR point projections. PHX MTV SF Day Night Dawn Train
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparison of some popular datasets. The Argo Dataset refers to their Tracking dataset only, not the Motion Forecasting dataset. 3D labels projected to ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 2. LiDAR Data Specifications for Front (F), Right (R), Side- Left (SL), Side-Right (SR), and Top (TOP) sensors. The vertical field of view (VFOV) ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 3. Camera Specifications for Front (F), Front-Left (FL), Front- Right (FR), Side-Left (SL), Side-Right (SR) cameras. The image sizes reflect the results of both ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Sensor layout and coordinate systems. ning mode can vary from scene to scene. All camera images are downsampled and cropped from the raw ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. LiDAR label example. Yellow = vehicle. Red = pedes- trian. Blue = sign. Pink = cyclist. axes depends on the LiDAR. The camera ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Camera LiDAR synchronization accuracy in milliseconds. The number in x-axis is in milli-seconds. The y-axis denotes the percentage of data frames.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. A range image example. It is cropped to only show the front 90◦. The first three rows are range, intensity, and elongation from ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. An example image overlaid with LiDAR point projections. PHX MTV SF Day Night Dawn Train
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset has scenes selected from both suburban and urban areas, from different times of the day. | embodiment, simulator version and control stack | p. 5 (3.5. Dataset Analysis), p. 5 (3.5. Dataset Analysis) |
 | Task/environment | In addition to the urban/suburban and time of day diversity, scenes in the dataset are selected from many different parts within the cities. | reset, timeout, object/scene variation | p. 5 (3.5. Dataset Analysis), p. 7 (5.3. Domain Gap) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines f
 | Primary metric/result | The resulting Tracktor model achieved a MOTA of 34.8 at LEVEL 1 and 28.3 at LEVEL 2 when tracking vehicles. | numeric claim only at cited anchor | p. 7 (5.2. Baselines for Multi-Object Tracking) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.4. Sensor Data - extractive PDF cue:** The synchronization accuracy is computed as camera center time -frame start timecamera center offset/360◦∗0.1s (4) The camera center time is the exposure time of the ...
-- **p. 4 / 3.4. Sensor Data - extractive PDF cue:** The synchronization error is bounded in [-6ms, 7ms] with 99.7% confidence, [-6ms, 8ms] with 99.9995% confidence.
-- **p. 7 / 5.2. Baselines for Multi-Object Tracking - extractive PDF cue:** Our tracked state consists of a 10 parameter state tm t = {cx, cy, cz, w, l, h, α, vx, vy, vz} with a constant ...
-- **p. 1 / Abstract - extractive PDF cue:** Our new dataset consists of 1150 scenes that each span 20 seconds, consisting of well synchronized and calibrated high quality LiDAR and camera data captured ...
-- **p. 1 / Abstract - extractive PDF cue:** It is 15x more diverse than the largest camera+LiDAR dataset available based on our proposed geographical coverage metric.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our dataset currently consists of 1000 scenes for training and validation, and 150 scenes for testing, where each scene spans 20 s.
+- **p. 4 / 3.4. Sensor Data - extractive body cue:** The synchronization accuracy is computed as camera center time -frame start timecamera center offset/360◦∗0.1s (4) The camera center time is the exposure time of the ...
+- **p. 4 / 3.4. Sensor Data - extractive body cue:** The synchronization error is bounded in [-6ms, 7ms] with 99.7% confidence, [-6ms, 8ms] with 99.9995% confidence.
+- **p. 7 / 5.2. Baselines for Multi-Object Tracking - extractive body cue:** Our tracked state consists of a 10 parameter state tm t = {cx, cy, cz, w, l, h, α, vx, vy, vz} with a constant ...
+- **p. 1 / Abstract - extractive body cue:** Our new dataset consists of 1150 scenes that each span 20 seconds, consisting of well synchronized and calibrated high quality LiDAR and camera data captured ...
+- **p. 1 / Abstract - extractive body cue:** It is 15x more diverse than the largest camera+LiDAR dataset available based on our proposed geographical coverage metric.
+- **p. 2 / 1. Introduction - extractive body cue:** Our dataset currently consists of 1000 scenes for training and validation, and 150 scenes for testing, where each scene spans 20 s.
 
 ## Generalization and Failure Cases
 
@@ -159,10 +159,10 @@ PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines f
 
 ## Limitations and Verification Questions
 
-- **p. 4 / 3.4. Sensor Data - extractive PDF cue:** Our experiments suggest that a highly elongated low-intensity return is a strong indicator for a spurious object, while low intensity alone is not a sufficient ...
-- **p. 8 / 5.3. Domain Gap - extractive PDF cue:** This result does not hold when evaluating on SF.
+- **p. 4 / 3.4. Sensor Data - extractive body cue:** Our experiments suggest that a highly elongated low-intensity return is a strong indicator for a spurious object, while low intensity alone is not a sufficient ...
+- **p. 8 / 5.3. Domain Gap - extractive body cue:** This result does not hold when evaluating on SF.
 
-- **PDF anchors reviewed:** datasets p. 5 (3.5. Dataset Analysis), p. 5 (3.5. Dataset Analysis), p. 7 (5.3. Domain Gap), p. 7 (5.3. Domain Gap), p. 8 (5.4. Dataset Size), p. 6 (5. Experiments), metrics p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 6 (5. Experiments), p. 8 (5.3. Domain Gap), p. 4 (3.4. Sensor Data), p. 6 (Figure/Table caption), baselines p. 8 (5.3. Domain Gap), p. 6 (5. Experiments), p. 6 (5.1. Baselines for Object Detection), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.3. Domain Gap), p. 8 (5.3. Domain Gap), results p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 8 (5.3. Domain Gap), p. 3 (3.1. Sensor Specifications), p. 4 (3.4. Sensor Data).
+- **Evidence anchors reviewed:** datasets p. 5 (3.5. Dataset Analysis), p. 5 (3.5. Dataset Analysis), p. 7 (5.3. Domain Gap), p. 7 (5.3. Domain Gap), p. 8 (5.4. Dataset Size), p. 6 (5. Experiments), metrics p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 6 (5. Experiments), p. 8 (5.3. Domain Gap), p. 4 (3.4. Sensor Data), p. 6 (Figure/Table caption), baselines p. 8 (5.3. Domain Gap), p. 6 (5. Experiments), p. 6 (5.1. Baselines for Object Detection), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.3. Domain Gap), p. 8 (5.3. Domain Gap), results p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 8 (5.3. Domain Gap), p. 3 (3.1. Sensor Specifications), p. 4 (3.4. Sensor Data).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

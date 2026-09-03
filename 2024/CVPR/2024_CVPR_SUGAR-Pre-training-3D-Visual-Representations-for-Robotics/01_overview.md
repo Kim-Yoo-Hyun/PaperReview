@@ -1,8 +1,10 @@
 # SUGAR: Pre-training 3D Visual Representations for Robotics
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html.
-> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html.
+> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 
 ## Why Read It
 
 Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 Pretraining in existing work, however, is typically limited to single objects and complete point clouds, hence, ignoring This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • We pre-train ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented), p. 6 (1) OBJ ONLY which only includes ground truth segmented) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Pretraining in existing work, however, is typically limited to single objects and complete point clouds, hence, ignoring This CVPR paper is the Open Access version, provided by the Computer Vision ... (p. 1, 1. Introduction).
+- **Actual contribution:** In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • ... (p. 2, 1. Introduction).
+- **Evaluation boundary:** Table 1. Zero-shot object recognition performance on three benchmarks. The Top1 accuracy is reported if not specified otherwise. The blue colored results in brackets on the ScanObjectNN dataset are obtained ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** While these 2D representations have demonstrated promising performance, they still fall short in addressing occlusions in complex cluttered scenes [79] and accurately predicting robotic actions [7] in the 3D world. (p. 1, 1. Introduction).

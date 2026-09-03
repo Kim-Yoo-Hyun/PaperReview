@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | We use the t5-base (111M) model [74]. • Image observations and goals are passed through a shallow convolution stack, then split into ... | p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Training objective We use a conditional diffusion decoding head to predict continuous, multi-modal action distributions [34, 17]. | p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) |
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), objective p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), temporal p. 4 (III. THE OCTO MODEL), p. 3 (II. RELATED WORK), p. 5 (III. THE OCTO MODEL), p. 1 (Front matter), p. 2 (I. INTRODUCTION), p. 3 (II. RELATED WORK).
+- **Evidence anchors reviewed:** method p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), objective p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), temporal p. 4 (III. THE OCTO MODEL), p. 3 (II. RELATED WORK), p. 5 (III. THE OCTO MODEL), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), p. 3 (II. RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** When adding new tasks, observations, or loss functions downstream, we can wholly retain the pretrained weights for the transformer, only adding new positional embeddings, a new lightweight encoder, or the ... (p. 4, III. THE OCTO MODEL).
+- **Objective/update evidence:** We use the AdamW optimizer [51] with an inverse square root decay learning rate schedule [97], with weight decay of 0.1 and gradient clipping of 1.0. (p. 5, III. THE OCTO MODEL).
+- **Temporal/runtime evidence:** We train using 2 frames of observation history; in our preliminary experiments, we found significantly diminishing gains beyond the first additional frame. (p. 5, III. THE OCTO MODEL).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

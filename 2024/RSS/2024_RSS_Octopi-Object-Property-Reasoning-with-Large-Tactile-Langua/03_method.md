@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.02794; PDF retrieval source: https://arxiv.org/pdf/2405.02794. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.02794; PDF retrieval source: https://arxiv.org/pdf/2405.02794. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** PHYSICLEAR and OCTOPI (with key contributions starred).
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Dataset Property Label Availability Property Diversity Object Diversity Material Diversity Hardness Dataset (2016) [59] Yes (only hardness) Yes Yes Medium Clothing Dataset (2018) [61] Yes ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness. arXiv:2405.02794v2 ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness.
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Our framework consists of CLIP's visual encoder, a projection module with two linear layers, and Vicuna v1.5 as the LLM. | p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | We leverage the capabilities of pre-trained vision models, notably the CLIP [39] visual encoder ViT-L/14, as the foundation for our tactile encoder ... | p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 1 (Abstract) |
@@ -81,7 +81,7 @@ PDF body method statement (p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | We evaluated OCTOPI's physical understanding with the same single-step prompts used during training and on 500 question-answer pairs in total across the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | Since the tactile data is in video form, we follow prior LVLM work and represent it as a sequence of frames: X1, ... | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | Training Hyperparameters Encoder fine-tuning was performed for 30 epochs using the AdamW optimizer [35] with no weight decay, a learning rate of ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 1 (Abstract), p. 6 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 5 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 5 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), objective p. 6 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 6 (3) Can OCTOPI's understanding of the physical properties), temporal p. 7 (VI. EXPERIMENTAL RESULTS), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 6 (3) Can OCTOPI's understanding of the physical properties), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 1 (Abstract), p. 6 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 5 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 5 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), objective p. 6 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 6 (3) Can OCTOPI's understanding of the physical properties), temporal p. 7 (VI. EXPERIMENTAL RESULTS), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 6 (3) Can OCTOPI's understanding of the physical properties), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Tactile Feature Alignment We discard the fine-tuned CLIP's classification layers and use the outputs from its visual encoder as output embeddings. (p. 6, IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED).
+- **Objective/update evidence:** Training Hyperparameters Encoder fine-tuning was performed for 30 epochs using the AdamW optimizer [35] with no weight decay, a learning rate of 10-3, batch size of 32, and a cosine ... (p. 6, 3) Can OCTOPI's understanding of the physical properties).
+- **Temporal/runtime evidence:** We evaluated OCTOPI's physical understanding with the same single-step prompts used during training and on 500 question-answer pairs in total across the three tasks. (p. 7, VI. EXPERIMENTAL RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

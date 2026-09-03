@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.06860; PDF retrieval source: https://arxiv.org/pdf/2106.06860. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.06860; PDF retrieval source: https://arxiv.org/pdf/2106.06860. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3: Run time comparison of training each offline RL algorithm (does not include evaluation costs). (Left) Breakdown of the cost of the added ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 2: Average normalized score over the final 10 evaluations and 5 seeds. The highest performing scores are highlighted. CQL and Fisher-BRC are re-run ... | p. 7 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our proposed approach on the D4RL benchmark of OpenAI gym MuJoCo tasks [Todorov et al., 2012, Brockman et al., 2016, Fu et ... | embodiment, simulator version and control stack | p. 7 (6 Experiments), p. 7 (6 Experiments) |
 | Task/environment | Each evaluation consists of 10 episodes. | reset, timeout, object/scene variation | p. 7 (6 Experiments) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Run time comparison of training each offline RL algorithm (does not include evaluation costs). (Left) Breakdown of the cost of the added implementation ...
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 8: Benchmarking wall-clock training time of DT and TD3+BC over 1 million steps. Does not include evaluation costs. We remark that the DT was ...
 
-- **PDF anchors reviewed:** datasets p. 7 (6 Experiments), p. 7 (6 Experiments), metrics p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 18 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (6 Experiments), p. 14 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (6 Experiments), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (6 Experiments), p. 8 (6 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (6 Experiments), p. 7 (6 Experiments), metrics p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 18 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (6 Experiments), p. 14 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (6 Experiments), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (6 Experiments), p. 8 (6 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 9: Average normalized score using the D4RL -v2 datasets. The highest performing scores are highlighted. ± captures the standard deviation over seeds. Total (DT) sums scores over the subset ... (p. 18, Figure/Table caption).
+- **Metric evidence:** BC CQL Fisher-BRC TD3+BC 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 80 100 120 Normalized Score HalfCheetah-Random 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 ... (p. 8, 6 Experiments).
+- **Baseline/ablation evidence:** Our offline RL baselines include two state-of-the-art algorithms, CQL [Kumar et al., 2020] and Fisher-BRC [Kostrikov et al., 2021], as well as BRAC [Wu et al., 2019] and AWAC [Nair ... (p. 7, 6 Experiments).
+- **Failure/negative evidence:** We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub as we found those settings performed poorly. † denotes hyperparameters which deviate ... (p. 15, B Experimental Details).

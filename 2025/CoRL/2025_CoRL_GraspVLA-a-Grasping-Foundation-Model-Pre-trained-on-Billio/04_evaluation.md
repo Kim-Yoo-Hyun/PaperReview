@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/deng25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/deng25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 14: Impact of number of input views. Comparison of GraspVLA with different numbers of input views. The results demonstrate that while multiple views ... | p. 24 (Figure/Table caption) |
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | As illustrated in Table 1, GraspVLA achieves around 90% on all test sets and significantly outperforms all baselines, demonstrating strong zero-shot generalizability. | p. 6 (5 Experiments) |
@@ -60,12 +60,12 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We define synthetic categories as those present in our SynGrasp-1B dataset, while web categories refer to those exclusively present in Internet grounding dataset. b) ... | embodiment, simulator version and control stack | p. 6 (5 Experiments), p. 7 (5 Experiments) |
 | Task/environment | LIBERO [13] is a widely used simulation benchmark for robotic manipulation, encompassing diverse tasks and object categories. | reset, timeout, object/scene variation | p. 7 (5 Experiments), p. 6 (5 Experiments) |
 | Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 3 (1 Introduction), p. 7 (5 Hz) |
+| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 - **p. 7 / 5 Experiments - extractive body cue:** We evaluate on three LIBERO suites (Long, Goal, Object), excluding Spatial, as its focus on spatial reasoning falls outside our scope.
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 11: Examples of LIBERO Benchmark. We visualize both front and side views side by side. is considered a success. Similarly, if the target is ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 6 (5 Experiments), p. 19 (Figure/Table caption), p. 7 (5 Experiments), baselines p. 6 (5 Experiments), p. 6 (5 Experiments), p. 24 (Figure/Table caption), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), results p. 24 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 6 (5 Experiments), p. 19 (Figure/Table caption), p. 7 (5 Experiments), baselines p. 6 (5 Experiments), p. 6 (5 Experiments), p. 24 (Figure/Table caption), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), results p. 24 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 14: Impact of number of input views. Comparison of GraspVLA with different numbers of input views. The results demonstrate that while multiple views significantly improve performance, our single-view implementation ... (p. 24, Figure/Table caption).
+- **Metric evidence:** (3) How much do our design choices contribute to GraspVLA's performance? (p. 5, 5 Experiments).
+- **Baseline/ablation evidence:** Interestingly, the π0 baseline without cross-embodiment pre-training performs better than its pre-trained counterpart, suggesting 6 (p. 6, 5 Experiments).
+- **Failure/negative evidence:** Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, which reinforcement learning could potentially address. (p. 26, C Details about Data Generation).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 
 ## Method Body Digest
 
-- **p. 5 / 3.3. Neural point cloud diffusion - extractive PDF cue:** As architecture for the denoiser network, we use a Transformer [27, 31, 42].
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** We introduce a variational autodecoder by storing vectors of means µi and isotropic variances Σi instead of features fi for each point.
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** Since encoder networks are functions by design, and thus assigning each input value only one output, they do not produce many-to-one mappings between latent representation ...
-- **p. 3 / 3. Method - extractive PDF cue:** 3.3 we then present a diffusion model to denoise the neural point positions and features.
-- **p. 3 / 3. Method - extractive PDF cue:** At the center of our method is an autodecoder with a neural point representation for the latent codes, which is further described in Sec.
-- **p. 5 / 3.4. Disentangled generation - extractive PDF cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
-- **p. 4 / 3.1. Category-Level Point-NeRF Autodecoder - extractive PDF cue:** The optimization objective is to jointly find the point features F and network parameters ϕ, ψ, γ that minimize the image reconstruction error for all ...
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** { L}_ { TV}(\m ath b f {F }) = \la mbda _{TV} \sum _{i=1}^M\sum _{n\in \mathcal {V}(i)} \frac {\norm {\mathbf {f}_i -\mathbf {f}_n}_1}{\norm {\mathbf ...
+- **p. 5 / 3.3. Neural point cloud diffusion - extractive body cue:** As architecture for the denoiser network, we use a Transformer [27, 31, 42].
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** We introduce a variational autodecoder by storing vectors of means µi and isotropic variances Σi instead of features fi for each point.
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** Since encoder networks are functions by design, and thus assigning each input value only one output, they do not produce many-to-one mappings between latent representation ...
+- **p. 3 / 3. Method - extractive body cue:** 3.3 we then present a diffusion model to denoise the neural point positions and features.
+- **p. 3 / 3. Method - extractive body cue:** At the center of our method is an autodecoder with a neural point representation for the latent codes, which is further described in Sec.
+- **p. 5 / 3.4. Disentangled generation - extractive body cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
+- **p. 4 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** The optimization objective is to jointly find the point features F and network parameters ϕ, ψ, γ that minimize the image reconstruction error for all ...
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** { L}_ { TV}(\m ath b f {F }) = \la mbda _{TV} \sum _{i=1}^M\sum _{n\in \mathcal {V}(i)} \frac {\norm {\mathbf {f}_i -\mathbf {f}_n}_1}{\norm {\mathbf ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We propose the first approach for object generation that leverages a hybrid approach consisting of a neural point cloud combined with a neural renderer and ...
-- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive PDF cue:** Each object Oj consists of a neural point cloud Pj = (Pj, Fj) and K views Vj1, ..., VjK.
+- **p. 2 / 1. Introduction - extractive body cue:** In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point ...
+- **p. 2 / 1. Introduction - extractive body cue:** We propose the first approach for object generation that leverages a hybrid approach consisting of a neural point cloud combined with a neural renderer and ...
+- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** Each object Oj consists of a neural point cloud Pj = (Pj, Fj) and K views Vj1, ..., VjK.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.3. Neural point cloud diffusion - extractive PDF cue:** As architecture for the denoiser network, we use a Transformer [27, 31, 42].
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** We introduce a variational autodecoder by storing vectors of means µi and isotropic variances Σi instead of features fi for each point.
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** Since encoder networks are functions by design, and thus assigning each input value only one output, they do not produce many-to-one mappings between latent representation ...
-- **p. 3 / 3. Method - extractive PDF cue:** 3.3 we then present a diffusion model to denoise the neural point positions and features.
-- **p. 3 / 3. Method - extractive PDF cue:** At the center of our method is an autodecoder with a neural point representation for the latent codes, which is further described in Sec.
-- **p. 5 / 3.4. Disentangled generation - extractive PDF cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
+- **p. 5 / 3.3. Neural point cloud diffusion - extractive body cue:** As architecture for the denoiser network, we use a Transformer [27, 31, 42].
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** We introduce a variational autodecoder by storing vectors of means µi and isotropic variances Σi instead of features fi for each point.
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** Since encoder networks are functions by design, and thus assigning each input value only one output, they do not produce many-to-one mappings between latent representation ...
+- **p. 3 / 3. Method - extractive body cue:** 3.3 we then present a diffusion model to denoise the neural point positions and features.
+- **p. 3 / 3. Method - extractive body cue:** At the center of our method is an autodecoder with a neural point representation for the latent codes, which is further described in Sec.
+- **p. 5 / 3.4. Disentangled generation - extractive body cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | As architecture for the denoiser network, we use a Transformer [27, 31, 42]. | p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | We introduce a variational autodecoder by storing vectors of means µi and isotropic variances Σi instead of features fi for each point. | p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.2. Autodecoding for diffusion) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.1. Category-Level Point-NeRF Autodecoder - extractive PDF cue:** The optimization objective is to jointly find the point features F and network parameters ϕ, ψ, γ that minimize the image reconstruction error for all ...
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** { L}_ { TV}(\m ath b f {F }) = \la mbda _{TV} \sum _{i=1}^M\sum _{n\in \mathcal {V}(i)} \frac {\norm {\mathbf {f}_i -\mathbf {f}_n}_1}{\norm {\mathbf ...
-- **p. 5 / 3.3. Neural point cloud diffusion - extractive PDF cue:** The network is optimized by minimizing the average mean squared error on both noise vectors.
-- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive PDF cue:** Optimization is done on a dataset of N objects O1, ..., ON.
-- **p. 3 / 3. Method - extractive PDF cue:** 3.2 and provide regularization schemes that enable denoising diffusion on the feature space.
-- **p. 5 / 3.4. Disentangled generation - extractive PDF cue:** (9), but update the point positions Pt-1 from the given P0 via the forward diffusion process in Eq.
+- **p. 4 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** The optimization objective is to jointly find the point features F and network parameters ϕ, ψ, γ that minimize the image reconstruction error for all ...
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** { L}_ { TV}(\m ath b f {F }) = \la mbda _{TV} \sum _{i=1}^M\sum _{n\in \mathcal {V}(i)} \frac {\norm {\mathbf {f}_i -\mathbf {f}_n}_1}{\norm {\mathbf ...
+- **p. 5 / 3.3. Neural point cloud diffusion - extractive body cue:** The network is optimized by minimizing the average mean squared error on both noise vectors.
+- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** Optimization is done on a dataset of N objects O1, ..., ON.
+- **p. 3 / 3. Method - extractive body cue:** 3.2 and provide regularization schemes that enable denoising diffusion on the feature space.
+- **p. 5 / 3.4. Disentangled generation - extractive body cue:** (9), but update the point positions Pt-1 from the given P0 via the forward diffusion process in Eq.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.1. Category-Level Point-NeRF Autodecoder), p. 5 (3.4. Disentangled generation), p. 5 (3.4. Disentangled generation).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Autodecoding for diffusion - extractive PDF cue:** Since encoder networks are functions by design, and thus assigning each input value only one output, they do not produce many-to-one mappings between latent representation ...
-- **p. 5 / 3.3. Neural point cloud diffusion - extractive PDF cue:** Finally, the resulting output tokens corresponding to the M points are projected back to the dimensions of the input point positions and features and interpreted ...
-- **p. 5 / 3.3. Neural point cloud diffusion - extractive PDF cue:** The denoiser network Tθ((Pt, Ft), t) = (ϵP θ , ϵF θ ) takes the noised neural point cloud and timestep as input and estimates ...
-- **p. 4 / 3.3. Neural point cloud diffusion - extractive PDF cue:** As input, we assume a set of optimized representations {Pj}N j=1 from the first stage.
-- **p. 2 / 1. Introduction - extractive PDF cue:** In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We propose the first approach for object generation that leverages a hybrid approach consisting of a neural point cloud combined with a neural renderer and ...
-- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive PDF cue:** Overview of neural point cloud diffusion (NCPD).
+- **p. 4 / 3.2. Autodecoding for diffusion - extractive body cue:** Since encoder networks are functions by design, and thus assigning each input value only one output, they do not produce many-to-one mappings between latent representation ...
+- **p. 5 / 3.3. Neural point cloud diffusion - extractive body cue:** Finally, the resulting output tokens corresponding to the M points are projected back to the dimensions of the input point positions and features and interpreted ...
+- **p. 5 / 3.3. Neural point cloud diffusion - extractive body cue:** The denoiser network Tθ((Pt, Ft), t) = (ϵP θ , ϵF θ ) takes the noised neural point cloud and timestep as input and estimates ...
+- **p. 4 / 3.3. Neural point cloud diffusion - extractive body cue:** As input, we assume a set of optimized representations {Pj}N j=1 from the first stage.
+- **p. 2 / 1. Introduction - extractive body cue:** In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point ...
+- **p. 2 / 1. Introduction - extractive body cue:** We propose the first approach for object generation that leverages a hybrid approach consisting of a neural point cloud combined with a neural renderer and ...
+- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** Overview of neural point cloud diffusion (NCPD).
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,8 +89,8 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 
 ## Training vs Inference
 
-- **p. 5 / 3.4. Disentangled generation - extractive PDF cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
-- **p. 7 / 4.2. Metrics - extractive PDF cue:** conduct a quantitative analysis by reporting the per-point mean cosine similarities between optimized neural point features of 10 random training examples over 100 different seeds ...
+- **p. 5 / 3.4. Disentangled generation - extractive body cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
+- **p. 7 / 4.2. Metrics - extractive body cue:** conduct a quantitative analysis by reporting the per-point mean cosine similarities between optimized neural point features of 10 random training examples over 100 different seeds ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,9 +110,9 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 
 ## Failure and Ablation Link
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** Next, we compare against recent diffusion models without disentangling capabilities in Sec.
-- **p. 7 / 4.6. Analysis - extractive PDF cue:** As diffusion on hybrid point clouds and local radiance fields has not been done before, we conduct ablation studies and analyze various novel design choices.
-- **p. 6 / 4.1. Datasets and experimental setup - extractive PDF cue:** Further details on the denoiser architecture, diffusion model parameters, and training parameters are provided in the supplementals.
+- **p. 5 / 4. Experiments - extractive body cue:** Next, we compare against recent diffusion models without disentangling capabilities in Sec.
+- **p. 7 / 4.6. Analysis - extractive body cue:** As diffusion on hybrid point clouds and local radiance fields has not been done before, we conduct ablation studies and analyze various novel design choices.
+- **p. 6 / 4.1. Datasets and experimental setup - extractive body cue:** Further details on the denoiser architecture, diffusion model parameters, and training parameters are provided in the supplementals.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,7 +126,7 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 3 (3. Method), p. 3 (3. Method), p. 5 (3.4. Disentangled generation), objective p. 4 (3.1. Category-Level Point-NeRF Autodecoder), p. 4 (3.2. Autodecoding for diffusion), p. 5 (3.3. Neural point cloud diffusion), p. 3 (3.1. Category-Level Point-NeRF Autodecoder), p. 3 (3. Method), p. 5 (3.4. Disentangled generation), temporal p. 5 (3.3. Neural point cloud diffusion), p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.3. Neural point cloud diffusion), p. 7 (4.3. Disentangled generation).
+- **Evidence anchors reviewed:** method p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 3 (3. Method), p. 3 (3. Method), p. 5 (3.4. Disentangled generation), objective p. 4 (3.1. Category-Level Point-NeRF Autodecoder), p. 4 (3.2. Autodecoding for diffusion), p. 5 (3.3. Neural point cloud diffusion), p. 3 (3.1. Category-Level Point-NeRF Autodecoder), p. 3 (3. Method), p. 5 (3.4. Disentangled generation), temporal p. 5 (3.3. Neural point cloud diffusion), p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.3. Neural point cloud diffusion), p. 7 (4.3. Disentangled generation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=5i888dLp8N; PDF retrieval source: https://openreview.net/pdf/95685162fa940bca32702d659b96eebf84138a75.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=5i888dLp8N; PDF retrieval source: https://openreview.net/pdf/95685162fa940bca32702d659b96eebf84138a75.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Met
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Each sampled frame fi ∈˜V is processed by a unified perception pipeline consisting of: (1) a geometry prior network (VGGT (Wang et ... | p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | During manipulation, the model receives the current observation ot c, the user instruction, robot states, and a noised action sequence, where c ... | p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction) |
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Met
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 6 (3.3. Contextual Memory Retrieval), p. 6 (3.3. Contextual Memory Retrieval), p. 4 (3.1. Spatial Memory Construction), objective p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 4 (3.1. Spatial Memory Construction), p. 5 (3.2. Dynamic Memory Refinement), p. 5 (3.2. Dynamic Memory Refinement), temporal p. 5 (3.2. Dynamic Memory Refinement), p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method), p. 5 (3.2. Dynamic Memory Refinement), p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 6 (3.3. Contextual Memory Retrieval), p. 6 (3.3. Contextual Memory Retrieval), p. 4 (3.1. Spatial Memory Construction), objective p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 4 (3.1. Spatial Memory Construction), p. 5 (3.2. Dynamic Memory Refinement), p. 5 (3.2. Dynamic Memory Refinement), temporal p. 5 (3.2. Dynamic Memory Refinement), p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method), p. 5 (3.2. Dynamic Memory Refinement), p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The resulting memory-enhanced vision-language tokens, together with robot states and noised action embeddings, are processed by DiT blocks and an action decoder to predict the next action chunk. (p. 3, 3. Method).
+- **Objective/update evidence:** New observations from the head view ot h are incorporated to update M0 into ˆ Mt through Dynamic Memory Refinement, which performs similarity-aware fusion to preserve global consistency while accommodating ... (p. 3, 3. Method).
+- **Temporal/runtime evidence:** Given a scanning video sequence V = {fi}Nv i=1, we uniformly sample one frame every N frames to obtain a subset ˜V , which is used to construct the overview ... (p. 3, 3.1. Spatial Memory Construction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

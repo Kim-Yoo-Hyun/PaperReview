@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.10482; PDF retrieval source: https://arxiv.org/pdf/2112.10482. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.10482; PDF retrieval source: https://arxiv.org/pdf/2112.10482. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Qu
 
 ## Evaluation Body Digest
 
-- **p. 4 / 3.3. Dataset Statistics - extractive PDF cue:** However, as the object IDs for the test set of ScanRefer are not publicly available, we further split the validation set of ScanRefer into two-holds ...
-- **p. 3 / 3.2. Question-Answer Collection - extractive PDF cue:** First, we automatically generated question-answer pairs from the referring expressions to identify objects in 3D scenes obtained from the ScanRefer dataset [10].
-- **p. 3 / 3.3. Dataset Statistics - extractive PDF cue:** Considering that our dataset contains not only question-answer pairs but also 3D object localization annotations, we assume that this is the largest dataset to specify ...
-- **p. 4 / 3.3. Dataset Statistics - extractive PDF cue:** We presented scenes with object IDs and names to MTurk workers for the dataset collection. used in ScanRefer.
-- **p. 2 / 3. ScanQA Dataset - extractive PDF cue:** We hereby define the 3D-QA task and describe the collection of the corresponding dataset.
-- **p. 7 / 5.2. Quantitative Analysis - extractive PDF cue:** Although this suggests that accurate object identification for questions indeed boosts 3DQA results, this is an oracle setting for real-world applications.
-- **p. 7 / 5.2. Quantitative Analysis - extractive PDF cue:** The performance of 3D-QA on the ScanQA dataset and image caption metrics are presented in Table 3.
-- **p. 2 / 3.1. 3D-QA Task - extractive PDF cue:** 1, a 3D-QA task requires models to answer a question when given all the information of a 3D
+- **p. 4 / 3.3. Dataset Statistics - extractive body cue:** However, as the object IDs for the test set of ScanRefer are not publicly available, we further split the validation set of ScanRefer into two-holds ...
+- **p. 3 / 3.2. Question-Answer Collection - extractive body cue:** First, we automatically generated question-answer pairs from the referring expressions to identify objects in 3D scenes obtained from the ScanRefer dataset [10].
+- **p. 3 / 3.3. Dataset Statistics - extractive body cue:** Considering that our dataset contains not only question-answer pairs but also 3D object localization annotations, we assume that this is the largest dataset to specify ...
+- **p. 4 / 3.3. Dataset Statistics - extractive body cue:** We presented scenes with object IDs and names to MTurk workers for the dataset collection. used in ScanRefer.
+- **p. 2 / 3. ScanQA Dataset - extractive body cue:** We hereby define the 3D-QA task and describe the collection of the corresponding dataset.
+- **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** Although this suggests that accurate object identification for questions indeed boosts 3DQA results, this is an oracle setting for real-world applications.
+- **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** The performance of 3D-QA on the ScanQA dataset and image caption metrics are presented in Table 3.
+- **p. 2 / 3.1. 3D-QA Task - extractive body cue:** 1, a 3D-QA task requires models to answer a question when given all the information of a 3D
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Qu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results indicated that our ScanQA method significantly outperformed all baselines across all data splits over all evaluation metrics. | p. 7 (5.2. Quantitative Analysis) |
 | 5.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | Interestingly, VoteNet+MCAN, ScanRefer+MCAN (end-to-end), and ScanQA significantly outperformed ScanRefer+MCAN (pipeline), which detects target objects related to a question using a pretrained ScanRefer and then ... | p. 7 (5.2. Quantitative Analysis) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Qu
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 3.3. Dataset Statistics - extractive PDF cue:** However, as the object IDs for the test set of ScanRefer are not publicly available, we further split the validation set of ScanRefer into two-holds ...
-- **p. 3 / 3.2. Question-Answer Collection - extractive PDF cue:** First, we automatically generated question-answer pairs from the referring expressions to identify objects in 3D scenes obtained from the ScanRefer dataset [10].
-- **p. 3 / 3.3. Dataset Statistics - extractive PDF cue:** Considering that our dataset contains not only question-answer pairs but also 3D object localization annotations, we assume that this is the largest dataset to specify ...
-- **p. 4 / 3.3. Dataset Statistics - extractive PDF cue:** We presented scenes with object IDs and names to MTurk workers for the dataset collection. used in ScanRefer.
-- **p. 2 / 3. ScanQA Dataset - extractive PDF cue:** We hereby define the 3D-QA task and describe the collection of the corresponding dataset.
-- **p. 7 / 5.2. Quantitative Analysis - extractive PDF cue:** Although this suggests that accurate object identification for questions indeed boosts 3DQA results, this is an oracle setting for real-world applications.
-- **p. 7 / 5.2. Quantitative Analysis - extractive PDF cue:** The performance of 3D-QA on the ScanQA dataset and image caption metrics are presented in Table 3.
-- **p. 2 / 3.1. 3D-QA Task - extractive PDF cue:** 1, a 3D-QA task requires models to answer a question when given all the information of a 3D
+- **p. 4 / 3.3. Dataset Statistics - extractive body cue:** However, as the object IDs for the test set of ScanRefer are not publicly available, we further split the validation set of ScanRefer into two-holds ...
+- **p. 3 / 3.2. Question-Answer Collection - extractive body cue:** First, we automatically generated question-answer pairs from the referring expressions to identify objects in 3D scenes obtained from the ScanRefer dataset [10].
+- **p. 3 / 3.3. Dataset Statistics - extractive body cue:** Considering that our dataset contains not only question-answer pairs but also 3D object localization annotations, we assume that this is the largest dataset to specify ...
+- **p. 4 / 3.3. Dataset Statistics - extractive body cue:** We presented scenes with object IDs and names to MTurk workers for the dataset collection. used in ScanRefer.
+- **p. 2 / 3. ScanQA Dataset - extractive body cue:** We hereby define the 3D-QA task and describe the collection of the corresponding dataset.
+- **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** Although this suggests that accurate object identification for questions indeed boosts 3DQA results, this is an oracle setting for real-world applications.
+- **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** The performance of 3D-QA on the ScanQA dataset and image caption metrics are presented in Table 3.
+- **p. 2 / 3.1. 3D-QA Task - extractive body cue:** 1, a 3D-QA task requires models to answer a question when given all the information of a 3D
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce the new task of question answering for 3D modeling. Given inputs of an entire 3D modeling and a linguistic question, models ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of 3D question-answering datasets. scene. Here, models use the 3D spatial information, such as RGB-D scans or point cloud data. We also ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 2. ScanQA dataset statistics. embedded this site into the MTurk task page (Fig. 2). The filtering and editing of the seed questions were con- ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Underspecified and valid questions for an office room scene. We presented scenes with object IDs and names to MTurk workers for the dataset ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The distribution of the question types by the beginning of the question writing. Overview of network architecture. To solve the 3D-QA task, we ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. ScanQA model for answering 3D environments. Given a point cloud and RGB frame sequence that capture indoor scenes, the QA model outputs a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Performance comparison of question answering with image captioning metrics. e2e represents an end-to-end model. ANS OBJ LOC EM@1 EM@10 BLEU-1 BLEU-2
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Performance comparison of different experimental conditions of the ScanQA model.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce the new task of question answering for 3D modeling. Given inputs of an entire 3D modeling and a linguistic question, models ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Comparison of 3D question-answering datasets. scene. Here, models use the 3D spatial information, such as RGB-D scans or point cloud data. We also ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 2. ScanQA dataset statistics. embedded this site into the MTurk task page (Fig. 2). The filtering and editing of the seed questions were con- ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Underspecified and valid questions for an office room scene. We presented scenes with object IDs and names to MTurk workers for the dataset ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The distribution of the question types by the beginning of the question writing. Overview of network architecture. To solve the 3D-QA task, we ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. ScanQA model for answering 3D environments. Given a point cloud and RGB frame sequence that capture indoor scenes, the QA model outputs a ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Performance comparison of question answering with image captioning metrics. e2e represents an end-to-end model. ANS OBJ LOC EM@1 EM@10 BLEU-1 BLEU-2
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Performance comparison of different experimental conditions of the ScanQA model.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | However, as the object IDs for the test set of ScanRefer are not publicly available, we further split the validation set of ScanRefer into ... | embodiment, simulator version and control stack | p. 4 (3.3. Dataset Statistics), p. 3 (3.2. Question-Answer Collection) |
 | Task/environment | First, we automatically generated question-answer pairs from the referring expressions to identify objects in 3D scenes obtained from the ScanRefer dataset [10]. | reset, timeout, object/scene variation | p. 3 (3.2. Question-Answer Collection), p. 3 (3.3. Dataset Statistics) |
@@ -123,8 +123,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Qu
 | Primary metric/result | Interestingly, VoteNet+MCAN, ScanRefer+MCAN (end-to-end), and ScanQA significantly outperformed ScanRefer+MCAN (pipeline), which detects target objects related to a question using a pretrained ScanRefer and then ... | numeric claim only at cited anchor | p. 7 (5.2. Quantitative Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / 3.1. 3D-QA Task - extractive PDF cue:** 3D-QA Datasets Type Question Collection Answer Collection Environment Photorealistic # 3D Scenes IQUAD Interactive Template-based Template-based AI2THOR No 30 rooms EQA Navigation Template-based Template-based House3D ...
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** We trained the model for 30 epochs until it converged and decreased the learning rate by 0.2 times after 15 epochs.
+- **p. 3 / 3.1. 3D-QA Task - extractive body cue:** 3D-QA Datasets Type Question Collection Answer Collection Environment Photorealistic # 3D Scenes IQUAD Interactive Template-based Template-based AI2THOR No 30 rooms EQA Navigation Template-based Template-based House3D ...
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** We trained the model for 30 epochs until it converged and decreased the learning rate by 0.2 times after 15 epochs.
 
 ## Generalization and Failure Cases
 
@@ -157,9 +157,9 @@ PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Qu
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 5. Feature ablation results ground-truth answers. We also included sentence evalua- tion metrics frequently used for image captioning models because some of the questions ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 5. Feature ablation results ground-truth answers. We also included sentence evalua- tion metrics frequently used for image captioning models because some of the questions ...
 
-- **PDF anchors reviewed:** datasets p. 4 (3.3. Dataset Statistics), p. 3 (3.2. Question-Answer Collection), p. 3 (3.3. Dataset Statistics), p. 4 (3.3. Dataset Statistics), p. 2 (3. ScanQA Dataset), p. 7 (5.2. Quantitative Analysis), metrics p. 13 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 1 (Figure/Table caption), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 6 (Figure/Table caption), baselines p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 6 (Figure/Table caption), p. 15 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 12 (Figure/Table caption), results p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 8 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (3.3. Dataset Statistics), p. 3 (3.2. Question-Answer Collection), p. 3 (3.3. Dataset Statistics), p. 4 (3.3. Dataset Statistics), p. 2 (3. ScanQA Dataset), p. 7 (5.2. Quantitative Analysis), metrics p. 13 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 1 (Figure/Table caption), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 6 (Figure/Table caption), baselines p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 6 (Figure/Table caption), p. 15 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 12 (Figure/Table caption), results p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 8 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

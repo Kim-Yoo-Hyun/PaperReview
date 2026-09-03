@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=arfeGsDWoq; PDF retrieval source: https://openreview.net/pdf/09c38982c905d883a78e5402e6aec9db26ab7455.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=arfeGsDWoq; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247078. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 4.2 DATASETS We conduct experiments on two mostly used benchmarks: KITTI and nuScenes.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 1: Registration accuracy on the KITTI and nuScenes datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** On the nuScenes dataset, our approach also shows strong generalization, surpassing ICL by 0.24m in RTE and 0.65◦in RRE.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** While classical pose solver (Row 4) achieves reasonable results, it is less stable than learning-based formulation, with notably larger mean and variance in rotation errors ...
-- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The point clouds are voxelized with an initial voxel size of 15cm for both the KITTI dataset and nuScenes dataset.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** On the KITTI dataset, our method consistently outperforms all baselines across all evaluation metrics, including GraphI2P, which benefits from an auxiliary high-quality depth estimator.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓ RRE(◦)↓ Acc(%)↑ ✗ 0.10±0.09 1.02±1.00 99.18 0.42±0.31 1.94±6.22 94.44 8 0.11±0.09 ...
-- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The output feature map is downsampled by a factor of 8 relative to the input image, yielding a resolution of 20 × 64 for KITTI ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 4.2 DATASETS We conduct experiments on two mostly used benchmarks: KITTI and nuScenes.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** On the nuScenes dataset, our approach also shows strong generalization, surpassing ICL by 0.24m in RTE and 0.65◦in RRE.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** While classical pose solver (Row 4) achieves reasonable results, it is less stable than learning-based formulation, with notably larger mean and variance in rotation errors ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We follow the official train/test split, using 850 scenes for training and 150 scenes for testing.
+- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive body cue:** The point clouds are voxelized with an initial voxel size of 15cm for both the KITTI dataset and nuScenes dataset.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** On the KITTI dataset, our method consistently outperforms all baselines across all evaluation metrics, including GraphI2P, which benefits from an auxiliary high-quality depth estimator.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓ RRE(◦)↓ Acc(%)↑ ✗ 0.10±0.09 1.02±1.00 99.18 0.42±0.31 1.94±6.22 94.44 8 0.11±0.09 ...
+- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive body cue:** The output feature map is downsampled by a factor of 8 relative to the input image, yielding a resolution of 20 × 64 for KITTI ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | As a result, our method achieves much faster inference time, making it more efficient without compromising performance. | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Specifically, our method achieves the highest registration accuracy (Acc), while reducing RTE by 0.11m and RRE by 0.61◦compared to ICL. | p. 8 (4 EXPERIMENTS) |
@@ -40,34 +40,34 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 4.2 DATASETS We conduct experiments on two mostly used benchmarks: KITTI and nuScenes.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 1: Registration accuracy on the KITTI and nuScenes datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** On the nuScenes dataset, our approach also shows strong generalization, surpassing ICL by 0.24m in RTE and 0.65◦in RRE.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** While classical pose solver (Row 4) achieves reasonable results, it is less stable than learning-based formulation, with notably larger mean and variance in rotation errors ...
-- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The point clouds are voxelized with an initial voxel size of 15cm for both the KITTI dataset and nuScenes dataset.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** On the KITTI dataset, our method consistently outperforms all baselines across all evaluation metrics, including GraphI2P, which benefits from an auxiliary high-quality depth estimator.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓ RRE(◦)↓ Acc(%)↑ ✗ 0.10±0.09 1.02±1.00 99.18 0.42±0.31 1.94±6.22 94.44 8 0.11±0.09 ...
-- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The output feature map is downsampled by a factor of 8 relative to the input image, yielding a resolution of 20 × 64 for KITTI ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 4.2 DATASETS We conduct experiments on two mostly used benchmarks: KITTI and nuScenes.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** On the nuScenes dataset, our approach also shows strong generalization, surpassing ICL by 0.24m in RTE and 0.65◦in RRE.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** While classical pose solver (Row 4) achieves reasonable results, it is less stable than learning-based formulation, with notably larger mean and variance in rotation errors ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We follow the official train/test split, using 850 scenes for training and 150 scenes for testing.
+- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive body cue:** The point clouds are voxelized with an initial voxel size of 15cm for both the KITTI dataset and nuScenes dataset.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** On the KITTI dataset, our method consistently outperforms all baselines across all evaluation metrics, including GraphI2P, which benefits from an auxiliary high-quality depth estimator.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓ RRE(◦)↓ Acc(%)↑ ✗ 0.10±0.09 1.02±1.00 99.18 0.42±0.31 1.94±6.22 94.44 8 0.11±0.09 ...
+- **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive body cue:** The output feature map is downsampled by a factor of 8 relative to the input image, yielding a resolution of 20 × 64 for KITTI ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (a) Illustration of the iterative pose optimization process in matching-free methods such as DeepI2P. Green points indicate 3D points predicted to lie within ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of our proposed image-to-point cloud registration framework. Given a pair of image I and point cloud P, we first extract downsampled patch ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Registration accuracy on the KITTI and nuScenes datasets. Here † represents method that adopts external powerful depth estimation model (Bhat et al., 2023) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative comparison of Image-to-Point Cloud registration results on KITTI dataset. backbone network, where the output channel dimension is 512. For the 3D backbone, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Visualization of predicted and ground truth camera poses, rays, and attention maps. Left: Predicted camera poses (red) and GT poses (green), with red ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation studies on Ray-guided Pose Regression Module. FPF: Fused Patch Features Ff; PR: Patch Rays r; RR: Renference Rays r′; CPS: classical pose ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation studies on focus radius σ. Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 5: Visual comparison between classical pose solver and our proposed ray-guided pose re- gression module. Classical pose solver suffers from unstable predictions under noisy ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Illustration of the iterative pose optimization process in matching-free methods such as DeepI2P. Green points indicate 3D points predicted to lie within ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our proposed image-to-point cloud registration framework. Given a pair of image I and point cloud P, we first extract downsampled patch ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Registration accuracy on the KITTI and nuScenes datasets. Here † represents method that adopts external powerful depth estimation model (Bhat et al., 2023) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative comparison of Image-to-Point Cloud registration results on KITTI dataset. backbone network, where the output channel dimension is 512. For the 3D backbone, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Visualization of predicted and ground truth camera poses, rays, and attention maps. Left: Predicted camera poses (red) and GT poses (green), with red ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Ablation studies on Ray-guided Pose Regression Module. FPF: Fused Patch Features Ff; PR: Patch Rays r; RR: Renference Rays r′; CPS: classical pose ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Ablation studies on focus radius σ. Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Visual comparison between classical pose solver and our proposed ray-guided pose re- gression module. Classical pose solver suffers from unstable predictions under noisy ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | 4.2 DATASETS We conduct experiments on two mostly used benchmarks: KITTI and nuScenes. | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
-| Task/environment | Published as a conference paper at ICLR 2026 Table 1: Registration accuracy on the KITTI and nuScenes datasets. | reset, timeout, object/scene variation | p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
+| Robot/hardware/simulator | 4.2 DATASETS We conduct experiments on two mostly used benchmarks: KITTI and nuScenes. | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
+| Task/environment | On the nuScenes dataset, our approach also shows strong generalization, surpassing ICL by 0.24m in RTE and 0.65◦in RRE. | reset, timeout, object/scene variation | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 16 (A.6 MORE IMPLEMENTATION DETAILS), p. 5 (3 METHOD) |
 | Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 4 (3 METHOD), p. 1 (1 INTRODUCTION) |
 
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | Primary metric/result | Specifically, our method achieves the highest registration accuracy (Acc), while reducing RTE by 0.11m and RRE by 0.61◦compared to ICL. | numeric claim only at cited anchor | p. 8 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 IMPLEMENTATION DETAILS In this work, we implement the proposed model in Pytorch (Paszke et al., 2019) and adopt a single NVIDIA RTX 3090 GPU ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We train the whole network with the total loss Ltotal for 20 epochs.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** All input images are resized to a resolution of 160 × 512, and point clouds are uniformly downsampled to 40,960 points for both training and ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We follow the official train/test split, using 850 scenes for training and 150 scenes for testing.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For consistency, we downsample the image resolution to 160 × 320 and retain 40,960 points per point cloud.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** In Table 2, we provide a comparison of model size and inference time across different methods, with results obtained on the same machine using a ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** 4.1 IMPLEMENTATION DETAILS In this work, we implement the proposed model in Pytorch (Paszke et al., 2019) and adopt a single NVIDIA RTX 3090 GPU ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We train the whole network with the total loss Ltotal for 20 epochs.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** All input images are resized to a resolution of 160 × 512, and point clouds are uniformly downsampled to 40,960 points for both training and ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We follow the official train/test split, using 850 scenes for training and 150 scenes for testing.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For consistency, we downsample the image resolution to 160 × 320 and retain 40,960 points per point cloud.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** In Table 2, we provide a comparison of model size and inference time across different methods, with results obtained on the same machine using a ...
 
 ## Generalization and Failure Cases
 
@@ -165,14 +165,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 
 ## Limitations and Verification Questions
 
-- **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive PDF cue:** This failure mode, although observed only in rare extreme cases, reveals a fundamental limitation of the current framework: when the predicted overlap region is entirely ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 5: Visual comparison between classical pose solver and our proposed ray-guided pose re- gression module. Classical pose solver suffers from unstable predictions under noisy ...
-- **p. 9 / 5 CONCLUSION - extractive PDF cue:** In this paper, we present a novel ray-based framework for image-to-point cloud registration that overcomes key limitations of both matching-based and matching-free approaches.
-- **p. 15 / A.5 LIMITATIONS AND FUTURE WORK - extractive PDF cue:** While our method achieves competitive performance on challenging outdoor datasets, it still exhibits certain limitation primarily associated with the reliance on overlap prediction, which is ...
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Figure 7: Failure Cases Under Completely Incorrect Overlap Prediction. Visualization of a rare but critical failure mode where the predicted overlapping region contains no part ...
-- **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive PDF cue:** Under this condition, the cross attention mechanism is misled and lacks access to any informative cues, resulting in failed ray-level reasoning across the modalities.
+- **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive body cue:** This failure mode, although observed only in rare extreme cases, reveals a fundamental limitation of the current framework: when the predicted overlap region is entirely ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Visual comparison between classical pose solver and our proposed ray-guided pose re- gression module. Classical pose solver suffers from unstable predictions under noisy ...
+- **p. 9 / 5 CONCLUSION - extractive body cue:** In this paper, we present a novel ray-based framework for image-to-point cloud registration that overcomes key limitations of both matching-based and matching-free approaches.
+- **p. 15 / A.5 LIMITATIONS AND FUTURE WORK - extractive body cue:** While our method achieves competitive performance on challenging outdoor datasets, it still exhibits certain limitation primarily associated with the reliance on overlap prediction, which is ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Figure 7: Failure Cases Under Completely Incorrect Overlap Prediction. Visualization of a rare but critical failure mode where the predicted overlapping region contains no part ...
+- **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive body cue:** Under this condition, the cross attention mechanism is misled and lacks access to any informative cues, resulting in failed ray-level reasoning across the modalities.
 
-- **PDF anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.6 MORE IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 14 (A.1 EVALUATION METRICS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 16 (A.6 MORE IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 14 (A.1 EVALUATION METRICS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

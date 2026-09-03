@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 ## Method Body Digest
 
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** First, the projector requires at least one spatially precise feature field to perform segmentation (e.g., dense encoders).
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Finally, K-Means on the feature field yields slightly lower but comparable results.
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** While the losses Lproj and Lproto remain unchanged, a loss Lqi irr is added for each query qi following Equation 4.
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** Each of these losses is guided by a unique one-hot vector Hqi that defines the relevant prototypes for each query.
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Regarding GrowSP, although it succeeds in performing accurate segmentation, the global performances are lower, probably due to the input data modalities, as the discrete nature ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We evaluate DiSCO-3D on both real and synthetic data, demonstrating better performance than hand-designed naive baselines on the proposed OV-SD task and experimentally show that ...
+- **p. 5 / 3.5. Method extensions - extractive body cue:** First, the projector requires at least one spatially precise feature field to perform segmentation (e.g., dense encoders).
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Finally, K-Means on the feature field yields slightly lower but comparable results.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** While the losses Lproj and Lproto remain unchanged, a loss Lqi irr is added for each query qi following Equation 4.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** Each of these losses is guided by a unique one-hot vector Hqi that defines the relevant prototypes for each query.
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Regarding GrowSP, although it succeeds in performing accurate segmentation, the global performances are lower, probably due to the input data modalities, as the discrete nature ...
+- **p. 2 / 1. Introduction - extractive body cue:** We evaluate DiSCO-3D on both real and synthetic data, demonstrating better performance than hand-designed naive baselines on the proposed OV-SD task and experimentally show that ...
 
 ## Design Rationale
 
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** Although we present our method using a pre-trained LeRF as input, DiSCO-3D is compatible with a wide range of feature fields (and their combinations) as ...
-- **p. 3 / 3.1. Problem Statement and Overview - extractive PDF cue:** In the following, we present our method in three parts.
-- **p. 2 / 1. Introduction - extractive PDF cue:** We present DiSCO-3D, the first method designed to solve the 3D OV-SD problem, combining Unsupervised Semantic Segmentation with Open-Vocabulary Segmentation guidance to serve as a ...
+- **p. 5 / 3.5. Method extensions - extractive body cue:** Although we present our method using a pre-trained LeRF as input, DiSCO-3D is compatible with a wide range of feature fields (and their combinations) as ...
+- **p. 3 / 3.1. Problem Statement and Overview - extractive body cue:** In the following, we present our method in three parts.
+- **p. 2 / 1. Introduction - extractive body cue:** We present DiSCO-3D, the first method designed to solve the 3D OV-SD problem, combining Unsupervised Semantic Segmentation with Open-Vocabulary Segmentation guidance to serve as a ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** First, the projector requires at least one spatially precise feature field to perform segmentation (e.g., dense encoders).
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Finally, K-Means on the feature field yields slightly lower but comparable results.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** First, the projector requires at least one spatially precise feature field to perform segmentation (e.g., dense encoders).
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Finally, K-Means on the feature field yields slightly lower but comparable results.
 - **Detected method headings:** 3.5. Method extensions (p. 5); 4.2.1. Evaluated methods (p. 6); Method (p. 8)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | First, the projector requires at least one spatially precise feature field to perform segmentation (e.g., dense encoders). | p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs. | p. 8 (4.3.2. Unsupervised Semantic Segmentation), p. 5 (3.5. Method extensions) |
@@ -45,8 +45,8 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** While the losses Lproj and Lproto remain unchanged, a loss Lqi irr is added for each query qi following Equation 4.
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** Each of these losses is guided by a unique one-hot vector Hqi that defines the relevant prototypes for each query.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** While the losses Lproj and Lproto remain unchanged, a loss Lqi irr is added for each query qi following Equation 4.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** Each of these losses is guided by a unique one-hot vector Hqi that defines the relevant prototypes for each query.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.5. Method extensions), p. 5 (3.5. Method extensions).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -62,13 +62,13 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 ## Observation–State–Action Interface
 
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Regarding GrowSP, although it succeeds in performing accurate segmentation, the global performances are lower, probably due to the input data modalities, as the discrete nature ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We evaluate DiSCO-3D on both real and synthetic data, demonstrating better performance than hand-designed naive baselines on the proposed OV-SD task and experimentally show that ...
-- **p. 3 / 3.1. Problem Statement and Overview - extractive PDF cue:** DiSCO-3D inputs pairs of features from 3D samples into a projector network learnt to accentuate semantic disparities.
-- **p. 3 / 3.2. Preliminaries - extractive PDF cue:** Neural Radiance Fields [25] (NeRFs) are learnable neural networks (possibly coupled with multi-resolution feature hashgrids [27]) overfitted to individual scenes, which output density (σ) and ...
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** OpenSeg in subsection 4.2) to alternative inputs such as user clicks, as demonstrated in Figure 3.
-- **p. 5 / 3.5. Method extensions - extractive PDF cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** GrowSP uses features obtained from SparseConv while every other baselines uses DINO as input.
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Regarding GrowSP, although it succeeds in performing accurate segmentation, the global performances are lower, probably due to the input data modalities, as the discrete nature ...
+- **p. 2 / 1. Introduction - extractive body cue:** We evaluate DiSCO-3D on both real and synthetic data, demonstrating better performance than hand-designed naive baselines on the proposed OV-SD task and experimentally show that ...
+- **p. 3 / 3.1. Problem Statement and Overview - extractive body cue:** DiSCO-3D inputs pairs of features from 3D samples into a projector network learnt to accentuate semantic disparities.
+- **p. 3 / 3.2. Preliminaries - extractive body cue:** Neural Radiance Fields [25] (NeRFs) are learnable neural networks (possibly coupled with multi-resolution feature hashgrids [27]) overfitted to individual scenes, which output density (σ) and ...
+- **p. 5 / 3.5. Method extensions - extractive body cue:** OpenSeg in subsection 4.2) to alternative inputs such as user clicks, as demonstrated in Figure 3.
+- **p. 5 / 3.5. Method extensions - extractive body cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** GrowSP uses features obtained from SparseConv while every other baselines uses DINO as input.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,7 +83,7 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 ## Training vs Inference
 
-- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive PDF cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
+- **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -103,11 +103,11 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** Sensitivity to Number of Prototypes and influence of Lproto.
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** Finally, the last column, corresponding to our main experiment with a fixed N = 10, shows that performance is maintained without requiring prior knowledge of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. DiSCO-3D Quantitative Evaluation for OV-Seg. form of OV-SD where each query asks for a single sub- concept, and to USS, which can be ...
-- **p. 5 / 4. Experimental evaluations - extractive PDF cue:** Additional details on hyperparameters, evaluation protocols and baselines can be found in the supplementary materials, as well as ablative experiments and analysis on DiSCO's limitations.
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** The last column refers to the main experiment where the number of prototypes is fixed and does not depend on NGT .
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** Sensitivity to Number of Prototypes and influence of Lproto.
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** Finally, the last column, corresponding to our main experiment with a fixed N = 10, shows that performance is maintained without requiring prior knowledge of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. DiSCO-3D Quantitative Evaluation for OV-Seg. form of OV-SD where each query asks for a single sub- concept, and to USS, which can be ...
+- **p. 5 / 4. Experimental evaluations - extractive body cue:** Additional details on hyperparameters, evaluation protocols and baselines can be found in the supplementary materials, as well as ablative experiments and analysis on DiSCO's limitations.
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** The last column refers to the main experiment where the number of prototypes is fixed and does not depend on NGT .
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -121,7 +121,7 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation), p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation), objective p. 5 (3.5. Method extensions), p. 5 (3.5. Method extensions), temporal p. 5 (4.1. Implementation and evaluation details), p. 2 (2. Related Works).
+- **Evidence anchors reviewed:** method p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation), p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation), objective p. 5 (3.5. Method extensions), p. 5 (3.5. Method extensions), temporal p. 5 (4.1. Implementation and evaluation details), p. 2 (2. Related Works).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

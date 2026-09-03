@@ -1,30 +1,85 @@
 # LLaRA: Supercharging Robot Learning Data for Vision-Language Policy
 
-- Year/Venue: 2025 / ICLR Poster
-- Category: VLA and Generalist Robot Policies
-- Tags: Vision-Language Model, Robotics
-- Paper link: ./2025/ICLR/2025_ICLR_LLaRA-Supercharging-Robot-Learning-Data-for-Vision-Languag/paper.pdf
-- Code/Project: not identified from OpenReview
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=iVxxgZlXh6.
+> PDF retrieval source: https://chatpaper.com/api/v1/articles/download/113062. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2025 / ICLR
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: VLA and generalist robot policies
+- Tier: REFERENCE
+- Tags: Vision-Language Model, Robotics
+- Official paper: https://openreview.net/forum?id=iVxxgZlXh6
+- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/113062
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain understanding.를 문제로 두고, Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / ABSTRACT - extractive body cue:** Vision Language Models (VLMs) have recently been leveraged to generate robotic actions, forming Vision-Language-Action (VLA) models.
+- **p. 1 / ABSTRACT - extractive body cue:** However, directly adapting a pretrained VLM for robotic control remains challenging, particularly when constrained by a limited number of robot demonstrations.
+- **p. 1 / ABSTRACT - extractive body cue:** In this work, we introduce LLaRA: Large Language and Robotics Assistant, a framework that formulates robot action policy as visuo-textual conversations and enables an efficient ...
+- **p. 1 / ABSTRACT - extractive body cue:** First, we present an automated pipeline to generate conversation-style instruction tuning data for robots from existing behavior cloning datasets, aligning robotic actions with image pixel ...
+- **p. 1 / ABSTRACT - extractive body cue:** Further, we enhance this dataset in a self-supervised manner by defining six auxiliary tasks, without requiring any additional action annotations.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Motivated by the promising attributes of VLMs, we explore a process, called Visuomotor Instruction Tuning, of adapting a VLM to a robot action policy that ...
 
 ## Core Idea
-- Config Data L1 (%) L2 (%) L3 (%) VIMA VIMA-200M + Oracle 100% 80.7 81.9 77.9 capable model released by VIMA, LLaRA (Ours) D-inBC + Aux (B) + ...
-- Compared to VIMA, our best model not only achieves better performance but also requires less input and is trained on only 12% of the expert trajectories used in ...
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Formulating robot manipulation tasks into instruction-response pairs described in natural language, which enables successful instruction tuning of a VLM as a policy.
+- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query.
+- **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive body cue:** We present the performance of D-inBC (L) at Tab.
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The action space consists of two poses: for the robot equipped with a spatula, these poses indicate the start and end points of a push; ...
+- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** For the next state, we query the VLM again with a new observation and a question and only take the first action generated by the ...
+- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** We formulate the dataset in a single-image single-turn conversation setting to emulate a policy where the user queries the Vision Language Model (VLM) with the ...
+- **p. 19 / A.3 INFERENCE - extractive body cue:** D-inBC Input (current front camera view.) <task>First put <p>rainbow letter T</p> at <b>(0.500, 0.594), {0.102, 0.188}</b> into <p>wooden bowl</p> at <b>(0.457, 0.531), {0.195, 0.328}</b> then ...
 
-## Main Claims
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | We formulate the dataset in a single-image single-turn conversation setting to emulate a policy where the user queries the Vision Language Model (VLM) with the current observation, and the VLM generates a ... | image/video, language instruction, proprioception과 history | p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 2 (1 INTRODUCTION) |
+| State/latent | formulate, dataset, single-image, single-turn, conversation, setting, emulate, policy, where, user, queries, Vision | language-grounded task state와 action-policy context | p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| Output/action | Our overall framework termed LLaRA (Large Language and Robotics Assistant) generates visuomotor instruction data that can efficiently and effectively finetune a VLM into a robot action policy. | continuous action, pose 또는 action chunk | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES) |
+| Objective/outcome | This approach enhances the VLM's understanding of task context within the constraints of a single-turn conversation. | instruction following, task success, generalization과 latency | p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 18 (A.3 INFERENCE) |
 
-## Contribution
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Formulating robot manipulation tasks into instruction-response pairs described in natural language, which enables successful instruction tuning of a VLM as a policy.
+- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query.
+- **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive body cue:** We present the performance of D-inBC (L) at Tab.
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The action space consists of two poses: for the robot equipped with a spatula, these poses indicate the start and end points of a push; ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Success rates of the models trained on VIMA subsets. The log-scale x-axis shows the number of expert episodes used in the training set. ...
+- **p. 7 / 6 EXPERIMENTS - extractive body cue:** Methods based on RT-2 Style improve when more robot supervision data is available; however, they significantly underperform compared to our methods when data is limited.
+- **p. 8 / 6 EXPERIMENTS - extractive body cue:** Our best model not only achieves better performance but also requires less input and is trained on only 12% of the expert trajectories used in ...
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS) |
+| Embodiment/environment | We employ VIMA-Bench (Jiang et al., 2023), a simulated table-top robot manipulation environment to evaluate VLMs trained by our instruction tuning dataset. | hardware/simulator version and reset protocol | p. 7 (6 EXPERIMENTS), p. 6 (6 EXPERIMENTS) |
+| Dataset/benchmark | All tasks occur in an environment where a robot arm, equipped with either a spatula or a suction cup, is positioned alongside a flat table. | role, split, size and leakage | p. 7 (6 EXPERIMENTS), p. 6 (6 EXPERIMENTS), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES) |
+| Metric | For each task, we evaluate all the methods with 20 random seeds and report the average success rates of each level and the average of three levels. | definition, denominator, direction and uncertainty | p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS) |
+| Baseline/ablation | Key observations include: • inBC consistently surpasses the RT-2 Style baseline, and similarly, D-inBC outperforms D-RT-2 Style. | fair input/data/compute/action matching | p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 27 / Figure/Table caption - extractive body cue:** Table 17: Robostness evaluation results of D-inBC + Aux (B) + Oracle (VIMA-80k, 8 epochs) Prob. of Failure L1 (%) L2 (%) L3 (%) 0 ...
+- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query.
+- **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive body cue:** 8 has shown its great power in many aspects when the reference image contains a scene that has multiple objects instead of one, the inBC ...
+
+## Why Read It
+
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain understanding.를 문제로 두고, Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 19 (A.3 INFERENCE), p. 18 (A.3 INFERENCE) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

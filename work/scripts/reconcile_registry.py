@@ -45,8 +45,16 @@ REVIEW_MANIFESTS = [
     (ROOT / "work" / "sources" / "fulltext_review_manifest.json", "historical"),
     (ROOT / "work" / "sources" / "fulltext_reference_reinforcement_2026-09-02_review_manifest.json", "reference"),
     (ROOT / "work" / "sources" / "fulltext_core_next_review_manifest.json", "current"),
+    (ROOT / "work" / "sources" / "fulltext_all_review_manifest_2026-09-02.json", "all"),
 ]
-REVIEW_SCOPE_PRIORITY = {"historical": 0, "reference": 1, "current": 2}
+REVIEW_SCOPE_PRIORITY = {"historical": 0, "reference": 1, "current": 2, "all": 3}
+NOTE_REVIEW_MANIFESTS = [
+    {
+        "path": ROOT / "work" / "sources" / "fulltext_insights_review_manifest_2026-09-03.json",
+        "scope": "insights",
+        "note_name": "05_insights.md",
+    },
+]
 
 EVIDENCE_RANK = {
     "CURATION_ONLY": 0,
@@ -61,8 +69,11 @@ GENERIC_RATIONALE = (
 )
 
 # Only high-confidence, directed curation edges are seeded here.  They are
-# not a replacement for a full citation graph.  The source and basis fields
-# make the distinction explicit and allow later manual promotion/demotion.
+# not a replacement for a full citation graph.  The source, basis, evidence
+# scope, and review date make the distinction explicit and allow later manual
+# promotion/demotion.  The edge direction is always ``from`` paper -> ``to``
+# paper: a method points to its conceptual/method/data predecessor, and a
+# baseline paper points to the paper that evaluates it.
 RELATION_SEEDS = [
     {
         "from": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
@@ -70,6 +81,7 @@ RELATION_SEEDS = [
         "to": "RT-1: Robotics Transformer for Real-World Control at Scale",
         "basis": "named follow-up in the robot-policy lineage; verify against the paper references",
         "confidence": "inferred",
+        "evidence_scope": "title_lineage",
     },
     {
         "from": "Octo: An Open-Source Generalist Robot Policy",
@@ -77,6 +89,7 @@ RELATION_SEEDS = [
         "to": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
         "basis": "the Octo record identifies Open X-Embodiment as its pretraining data lineage",
         "confidence": "manual",
+        "evidence_scope": "paper_body",
     },
     {
         "from": "OpenVLA: An Open-Source Vision-Language-Action Model",
@@ -84,6 +97,7 @@ RELATION_SEEDS = [
         "to": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
         "basis": "the OpenVLA record identifies Open X-Embodiment as its robot-data source",
         "confidence": "manual",
+        "evidence_scope": "paper_body",
     },
     {
         "from": "π0.5: a Vision-Language-Action Model with Open-World Generalization",
@@ -91,6 +105,7 @@ RELATION_SEEDS = [
         "to": "π0: A Vision-Language-Action Flow Model for General Robot Control",
         "basis": "explicit model-version lineage in the paper title and official publication path",
         "confidence": "manual",
+        "evidence_scope": "title_lineage",
     },
     {
         "from": "GR00T N1.5: An Improved Open Foundation Model for Generalist Humanoid Robots",
@@ -98,6 +113,7 @@ RELATION_SEEDS = [
         "to": "NVIDIA Isaac GR00T N1: An Open Foundation Model for Humanoid Robots",
         "basis": "explicit improved-version lineage in the official NVIDIA model pages",
         "confidence": "manual",
+        "evidence_scope": "official_project",
     },
     {
         "from": "GR00T N1.6: An Improved Open Foundation Model for Generalist Humanoid Robots",
@@ -105,6 +121,7 @@ RELATION_SEEDS = [
         "to": "GR00T N1.5: An Improved Open Foundation Model for Generalist Humanoid Robots",
         "basis": "explicit improved-version lineage in the official NVIDIA model pages",
         "confidence": "manual",
+        "evidence_scope": "official_project",
     },
     {
         "from": "Demonstrating GPU Parallelized Robot Simulation and Rendering for Generalizable Embodied AI with ManiSkill3",
@@ -112,6 +129,232 @@ RELATION_SEEDS = [
         "to": "ManiSkill: Generalizable Manipulation Skill Benchmark with Large-Scale Demonstrations",
         "basis": "named ManiSkill3 evolution of the ManiSkill simulator/benchmark family",
         "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    # Existing sparse admission edges are repeated with provenance so the
+    # reconciliation pass can enrich them without overwriting their current
+    # confidence value.
+    {
+        "from": "3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations",
+        "type": "extends",
+        "to": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "basis": "the paper defines DP3 as a 3D visuomotor diffusion policy and its method/evaluation notes identify the Diffusion Policy formulation as the direct policy lineage",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Consistency Policy: Accelerated Visuomotor Policies via Consistency Distillation",
+        "type": "extends",
+        "to": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "basis": "the paper accelerates visuomotor diffusion policies through consistency distillation and uses Diffusion Policy as the direct policy reference",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning",
+        "type": "extends",
+        "to": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+        "basis": "the paper explicitly frames its method as combining diffusion policy learning with the DAgger data-aggregation formulation",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+        "type": "extends",
+        "to": "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
+        "basis": "the abstract identifies PointNet as the pioneer, states its missing local-structure limitation, and applies PointNet recursively in the proposed hierarchy",
+        "confidence": "verified",
+        "evidence_scope": "official_abstract",
+    },
+    {
+        "from": "ORB-SLAM: A Versatile and Accurate Monocular SLAM System",
+        "type": "builds_on",
+        "to": "PTAM: Parallel Tracking and Mapping for Small AR Workspaces",
+        "basis": "the introduction explicitly says that ORB-SLAM builds on the main ideas of PTAM",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+        "type": "builds_on",
+        "to": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+        "basis": "the introduction positions 3D Gaussian Splatting against the continuous NeRF radiance-field formulation; this is a representation-family dependency, not a claim of identical implementation",
+        "confidence": "inferred",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Policy Gradient Methods for Reinforcement Learning with Function Approximation",
+        "type": "builds_on",
+        "to": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+        "basis": "the paper develops the function-approximation policy-gradient form around Williams's REINFORCE method, whose earlier formulation is the registry predecessor",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Trust Region Policy Optimization",
+        "type": "builds_on",
+        "to": "Policy Gradient Methods for Reinforcement Learning with Function Approximation",
+        "basis": "the method section identifies the standard policy-gradient update as a limiting case of its trust-region objective",
+        "confidence": "inferred",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Proximal Policy Optimization Algorithms",
+        "type": "extends",
+        "to": "Trust Region Policy Optimization",
+        "basis": "the abstract states that PPO retains benefits of TRPO while being simpler, and the method section replaces the hard trust-region constraint with a clipped surrogate objective",
+        "confidence": "verified",
+        "evidence_scope": "official_abstract",
+    },
+    {
+        "from": "Constrained Policy Optimization",
+        "type": "extends",
+        "to": "Trust Region Policy Optimization",
+        "basis": "the paper calls CPO a practical approximation based on trust-region methods and adds constrained-MDP safety guarantees to that policy-search family",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "type": "builds_on",
+        "to": "Denoising Diffusion Probabilistic Models",
+        "basis": "the method represents a visuomotor policy as a conditional denoising-diffusion process, reusing the diffusion-model generation framework",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+        "type": "builds_on",
+        "to": "Flow Matching for Generative Modeling",
+        "basis": "the method supervises continuous action tokens with conditional flow matching and uses the Flow Matching formulation as its generative policy interface",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching",
+        "type": "builds_on",
+        "to": "Flow Matching for Generative Modeling",
+        "basis": "the introduction and method formulate PointFlowMatch with conditional flow matching, described as a flexible generalization of diffusion-based generation",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "FlowPolicy: Enabling Fast and Robust 3D Flow-Based Policy via Consistency Flow Matching for Robot Manipulation",
+        "type": "builds_on",
+        "to": "Flow Matching for Generative Modeling",
+        "basis": "the method explicitly uses conditional consistency flow matching and cites the flow-matching formulation for its one-step action generation",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation",
+        "type": "extends",
+        "to": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "basis": "the method trains its slow latent policy in a way similar to Diffusion Policy and adds a fast tactile-feedback branch",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation",
+        "type": "extends",
+        "to": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "basis": "the paper instantiates a hierarchical, kinematics-aware diffusion policy for robot action trajectories; the edge denotes policy-family extension rather than a claim that every module is copied",
+        "confidence": "inferred",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "ET-SEED: EFFICIENT TRAJECTORY-LEVEL SE(3) EQUIVARIANT DIFFUSION POLICY",
+        "type": "extends",
+        "to": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "basis": "the paper explicitly frames ET-SEED as a trajectory-level SE(3)-equivariant diffusion policy and evaluates the resulting policy against diffusion-policy baselines",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "SE(3)-Equivariant Diffusion Policy in Spherical Fourier Space",
+        "type": "extends",
+        "to": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "basis": "the abstract and introduction define Spherical Diffusion Policy as an SE(3)-equivariant diffusion-policy specialization addressing the base policy's 3D generalization boundary",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning",
+        "type": "extends",
+        "to": "Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning",
+        "basis": "the official NVIDIA abstract explicitly describes Isaac Lab as the natural successor to Isaac Gym",
+        "confidence": "verified",
+        "evidence_scope": "official_project",
+    },
+    {
+        "from": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+        "type": "uses_dataset",
+        "to": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+        "basis": "the pretraining-data section identifies a subset of OXE/Open X-Embodiment in the π0 training mixture",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "OpenVLA: An Open-Source Vision-Language-Action Model",
+        "type": "uses_dataset",
+        "to": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+        "basis": "the pretraining section and training-mixture table identify DROID as a component of the Open-X robot-data mixture",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "type": "baseline_for",
+        "to": "OpenVLA: An Open-Source Vision-Language-Action Model",
+        "basis": "the OpenVLA experiments include a matched Diffusion Policy comparison with aligned input/output specifications",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+        "source_url": "https://proceedings.mlr.press/v270/kim25c.html",
+    },
+    {
+        "from": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "type": "baseline_for",
+        "to": "Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching",
+        "basis": "the PointFlowMatch evaluation compares against Diffusion Policy as an image-based policy baseline under the same manipulation benchmark setting",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+        "source_url": "https://arxiv.org/abs/2409.07343",
+    },
+    {
+        "from": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "type": "baseline_for",
+        "to": "FlowPolicy: Enabling Fast and Robust 3D Flow-Based Policy via Consistency Flow Matching for Robot Manipulation",
+        "basis": "the FlowPolicy evaluation explicitly compares its 3D flow policy with the 2D Diffusion Policy baseline",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+        "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/33617",
+    },
+    {
+        "from": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "type": "baseline_for",
+        "to": "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation",
+        "basis": "the experiments compare the proposed slow-fast visual-tactile policy with vanilla Diffusion Policy under the same contact-rich tasks",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+        "source_url": "https://www.roboticsproceedings.org/rss21/p052.html",
+    },
+    {
+        "from": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "type": "baseline_for",
+        "to": "CodeDiffuser: Attention-Enhanced Diffusion Policy via VLM-Generated Code for Instruction Ambiguity",
+        "basis": "the CodeDiffuser evaluation explicitly includes Diffusion Policy among the compared imitation-learning methods",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+        "source_url": "https://www.roboticsproceedings.org/rss21/p072.html",
+    },
+    {
+        "from": "3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations",
+        "type": "baseline_for",
+        "to": "ET-SEED: EFFICIENT TRAJECTORY-LEVEL SE(3) EQUIVARIANT DIFFUSION POLICY",
+        "basis": "the ET-SEED experiments explicitly include 3D Diffusion Policy (DP3) as a direct 3D visuomotor baseline",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+        "source_url": "https://openreview.net/forum?id=OheAR2xrtb",
     },
 ]
 
@@ -166,13 +409,64 @@ def read_reviews() -> tuple[dict[str, dict], dict[str, dict], dict[str, dict]]:
         for record in payload.get("records", []):
             paper_id = record.get("paper_id")
             if paper_id:
-                # The current CORE/NEXT review takes precedence over targeted
-                # reference reinforcement, which in turn takes precedence
-                # over the old remaining-corpus snapshot where scopes overlap.
+                # The all-registry pass is the latest complete source audit.
+                # It takes precedence over the current CORE/NEXT review,
+                # targeted reference reinforcement, and old snapshots where
+                # scopes overlap.
                 if paper_id not in reviews or REVIEW_SCOPE_PRIORITY.get(scope, 0) > REVIEW_SCOPE_PRIORITY.get(scopes.get(paper_id, ""), 0):
                     reviews[paper_id] = record
                     scopes[paper_id] = scope
     return reviews, scopes, manifests
+
+
+def read_note_reviews() -> tuple[dict[str, dict[str, dict]], dict[str, dict]]:
+    """Read note-scoped review manifests without entering paper-level precedence.
+
+    A targeted pass over ``05_insights.md`` is evidence about that note, not a
+    replacement for the all-registry paper review.  Keeping this input on a
+    separate path prevents a partial note pass from changing the selected
+    paper-level review source or the current intensive-scope accounting.
+    """
+
+    note_reviews: dict[str, dict[str, dict]] = defaultdict(dict)
+    manifests: dict[str, dict] = {}
+    for spec in NOTE_REVIEW_MANIFESTS:
+        path = spec["path"]
+        if not path.exists():
+            continue
+        payload = load_json(path)
+        relative = str(path.relative_to(ROOT))
+        manifests[relative] = {"payload": payload, **spec}
+        for record in payload.get("records", []):
+            paper_id = record.get("paper_id")
+            if paper_id:
+                note_reviews[paper_id][spec["note_name"]] = {
+                    "record": record,
+                    "manifest": relative,
+                    "scope": spec["scope"],
+                    "note_name": spec["note_name"],
+                }
+    return dict(note_reviews), manifests
+
+
+def note_review_summary(entry: dict) -> dict:
+    """Keep stable note provenance fields while avoiding the whole record copy."""
+
+    record = entry.get("record") or {}
+    return {
+        "manifest": entry.get("manifest"),
+        "scope": entry.get("scope"),
+        "note_name": entry.get("note_name"),
+        "reviewed_on": record.get("reviewed_on") or record.get("review_date"),
+        "status": record.get("status"),
+        "source_kind": record.get("source_kind"),
+        "evidence_level": review_evidence(record),
+        "extraction_method": record.get("extraction_method"),
+        "extraction_quality": record.get("extraction_quality"),
+        "pages": record.get("pages"),
+        "sha256": record.get("sha256"),
+        "note_basis": record.get("note_basis"),
+    }
 
 
 def note_evidence(folder: Path) -> dict[str, str]:
@@ -368,6 +662,71 @@ def generated_admission_reason(tier: str, item: dict, track: str) -> str:
     )
 
 
+def priority_admission_reason(tier: str, item: dict, track: str) -> str:
+    """Create a paper-specific one-line rationale for active reading tiers.
+
+    This is used only by the explicit backfill flag.  It combines the stable
+    title, curation role, and existing registry focus tags; it does not infer
+    claims from PDF availability or note presence.
+    """
+
+    role = (item.get("curation") or {}).get("roles", [])
+    role_name = role[0] if role else role_for(item)
+    role_phrase = {
+        "foundation": "a reusable formulation or system primitive",
+        "method": "an algorithmic or policy mechanism",
+        "system": "an integrated robotics system and deployment interface",
+        "benchmark_or_dataset": "a benchmark, dataset, or evaluation protocol",
+    }.get(role_name, "a robotics research contribution")
+    tags = [str(value).strip() for value in item.get("tags", []) if str(value).strip()]
+    focus = ", ".join(tags[:3]) or item.get("category") or "the selected robotics problem"
+    title = item.get("title", "This paper").strip()
+    if tier == "CORE":
+        return (
+            f"{title} is a CORE prerequisite because it establishes {role_phrase} "
+            f"around {focus}, providing a reference point for {track or 'robotics'} "
+            "comparisons in the observation-to-action loop."
+        )
+    return (
+        f"{title} is a NEXT comparison paper because it extends {role_phrase} "
+        f"around {focus} in {track or 'robotics'}, exposing a specialized frontier "
+        "after the shared CORE spine."
+    )
+
+
+def retained_admission_reason(tier: str, item: dict, track: str) -> str:
+    """Create a paper-specific rationale for the non-intensive registry tiers.
+
+    This is intentionally a curation-level statement.  It uses the manifest's
+    title, role, category, and tags; it does not claim that a PDF or experiment
+    was reviewed.
+    """
+
+    role = (item.get("curation") or {}).get("roles", [])
+    role_name = role[0] if role else role_for(item)
+    role_phrase = {
+        "foundation": "a reusable formulation or system primitive",
+        "method": "an algorithmic or policy mechanism",
+        "system": "an integrated system or deployment interface",
+        "benchmark_or_dataset": "a benchmark, dataset, or evaluation protocol",
+    }.get(role_name, "a research contribution")
+    tags = [str(value).strip() for value in item.get("tags", []) if str(value).strip()]
+    focus = ", ".join(tags[:3]) or item.get("category") or "the selected literature scope"
+    title = item.get("title", "This paper").strip()
+    line = track or item.get("category") or "the robotics-first registry"
+    if tier == "REFERENCE":
+        return (
+            f"{title} is retained as REFERENCE because it provides {role_phrase} "
+            f"around {focus} for targeted comparison in {line}; it is not required "
+            "for the current intensive reading spine."
+        )
+    return (
+        f"{title} is retained as ARCHIVE because its {role_phrase} around {focus} "
+        f"preserves historical or adjacent context for {line}; it is outside the "
+        "current robotics-first intensive scope."
+    )
+
+
 def tier_reason(tier: str, track: str) -> str:
     if tier == "CORE":
         return f"Common foundation and prerequisite for the {track or 'robotics'} spine."
@@ -384,23 +743,31 @@ def relation_for_seed(seed: dict, ids_by_title: dict[str, str], papers_by_id: di
     if not source_id or not target_id:
         return None
     source = papers_by_id[source_id]
-    return source_id, {
+    relation = {
         "type": seed["type"],
         "paper_id": target_id,
         "confidence": seed["confidence"],
         "status": "curated",
         "basis": seed["basis"],
-        "source": source.get("page") or source.get("sources", {}).get("primary", {}).get("url"),
+        "source": seed.get("source_url") or source.get("page") or source.get("sources", {}).get("primary", {}).get("url"),
         "managed_by": "reconcile_registry_v1",
+        "evidence_scope": seed.get("evidence_scope", "official_source"),
+        "reviewed_on": seed.get("reviewed_on") or str(date.today()),
     }
+    return source_id, relation
 
 
-def reconcile(apply: bool) -> dict:
+def reconcile(
+    apply: bool,
+    backfill_priority_rationales: bool = False,
+    backfill_reference_archive_rationales: bool = False,
+) -> dict:
     papers = load_json(MANIFEST)
     original_manifest_hash = sha256(MANIFEST)
     tiers, tracks, sequences = read_tier_maps()
     status_rows = read_status()
     reviews, review_scopes, review_manifests = read_reviews()
+    note_reviews, note_review_manifests = read_note_reviews()
     papers_by_id = {paper["paper_id"]: paper for paper in papers}
     ids_by_title = {paper["title"]: paper["paper_id"] for paper in papers}
     current_intensive_ids = {
@@ -421,8 +788,11 @@ def reconcile(apply: bool) -> dict:
     evidence_before = Counter(paper.get("provenance", {}).get("content_evidence") for paper in papers)
     evidence_after = Counter()
     generated_rationales = 0
+    backfilled_rationales = 0
+    backfilled_retained_rationales = 0
     relation_count_before = sum(len(paper.get("relations", [])) for paper in papers)
     seeded_relations = 0
+    enriched_relations = 0
     source_index_count = 0
     no_identifier = 0
     category_values = set()
@@ -488,6 +858,32 @@ def reconcile(apply: bool) -> dict:
         else:
             curation.setdefault("rationale_basis", "manual_curation")
         paper["curation"] = curation
+        if (
+            backfill_priority_rationales
+            and tier in {"CORE", "NEXT"}
+            and curation.get("rationale_status") != "recorded"
+        ):
+            curation["admission_reason"] = priority_admission_reason(tier, paper, track or paper.get("primary_track", ""))
+            curation["rationale_status"] = "recorded"
+            curation["rationale_basis"] = "curation_backfill_2026-09-02"
+            curation["rationale_reviewed_on"] = str(date.today())
+            backfilled_rationales += 1
+            paper["curation"] = curation
+        if (
+            backfill_reference_archive_rationales
+            and tier in {"REFERENCE", "ARCHIVE"}
+            and curation.get("rationale_status") != "recorded"
+        ):
+            curation["admission_reason"] = retained_admission_reason(
+                tier,
+                paper,
+                track or paper.get("primary_track", ""),
+            )
+            curation["rationale_status"] = "recorded"
+            curation["rationale_basis"] = "curation_backfill_reference_archive_2026-09-02"
+            curation["rationale_reviewed_on"] = str(date.today())
+            backfilled_retained_rationales += 1
+            paper["curation"] = curation
 
         paper["facets"] = build_facets(paper)
         paper["facet_provenance"] = "curation taxonomy cue; exact task/evaluation role remains in paper notes."
@@ -529,27 +925,52 @@ def reconcile(apply: bool) -> dict:
             }
         else:
             provenance["review"] = {"scope": "not_reviewed", "status": "not_recorded"}
+        # Note-scoped review provenance is intentionally separate from the
+        # paper-level ``review`` source above.  A targeted insights pass may
+        # cover only a subset of papers and must not replace the complete
+        # paper-level review manifest.
+        note_review_map = dict(provenance.get("note_review") or {})
+        for note_name, entry in note_reviews.get(paper_id, {}).items():
+            note_review_map[note_name] = note_review_summary(entry)
+        if note_review_map:
+            provenance["note_review"] = note_review_map
         provenance["evidence_reconciliation"] = {
-            "method": "review_manifest_then_note_evidence_max",
+            "method": "review_manifest_then_note_evidence_max; note_review manifests attach note-level provenance without changing paper-level review precedence",
             "reconciled_on": str(date.today()),
             "tracker_status_is_independent": True,
         }
         paper["provenance"] = provenance
 
     # Preserve manually added relations and only add the explicitly managed
-    # seed edges when an identical edge is not already present.
+    # seed edges when an identical edge is not already present.  If a sparse
+    # relation was registered before the curation seed existed, fill only
+    # missing provenance fields; never replace an existing confidence value or
+    # other user-supplied field.
     for seed in RELATION_SEEDS:
         result = relation_for_seed(seed, ids_by_title, papers_by_id)
         if not result:
             continue
         source_id, relation = result
         existing = papers_by_id[source_id].setdefault("relations", [])
-        if not any(
-            row.get("type") == relation["type"] and row.get("paper_id") == relation["paper_id"]
-            for row in existing
-        ):
+        match = next(
+            (
+                row
+                for row in existing
+                if row.get("type") == relation["type"] and row.get("paper_id") == relation["paper_id"]
+            ),
+            None,
+        )
+        if match is None:
             existing.append(relation)
             seeded_relations += 1
+        else:
+            changed = False
+            for key, value in relation.items():
+                if value not in (None, "") and match.get(key) in (None, ""):
+                    match[key] = value
+                    changed = True
+            if changed:
+                enriched_relations += 1
 
     # Evidence in the intensive tracker reflects source verification, not the
     # user's reading status.  Historical review records remain valid evidence
@@ -569,6 +990,7 @@ def reconcile(apply: bool) -> dict:
     # partial_current when a later tier expansion adds papers beyond its
     # reviewed scope.
     changed_review_manifests = {}
+    changed_note_review_manifests = {}
     review_scope_gaps = {}
     for path, payload in review_manifests.items():
         document = payload["payload"]
@@ -612,18 +1034,44 @@ def reconcile(apply: bool) -> dict:
         }
         changed_review_manifests[payload["path"]] = document
 
+    # Note-review manifests receive a lightweight registry snapshot, but are
+    # never included in the paper-level scope-gap calculation above.
+    for relative, payload in note_review_manifests.items():
+        document = payload["payload"]
+        records = document.get("records", [])
+        reviewed_ids = {row.get("paper_id") for row in records if row.get("paper_id")}
+        document["registry_snapshot"] = {
+            "status": "note_level",
+            "paper_count_at_reconciliation": len(papers),
+            "input_manifest_sha256_before_reconciliation": original_manifest_hash,
+            "note_name": payload["note_name"],
+            "reviewed_paper_count": len(reviewed_ids),
+            "tier_counts_in_review": dict(Counter(row.get("tier") for row in records)),
+            "alignment_note": (
+                "Note-scoped review provenance only; this manifest does not replace the paper-level review source "
+                "and is not used for tier or intensive-scope assignment."
+            ),
+            "cache_policy": "task-scoped PDF cache is disposable and is not part of the registry source of truth",
+        }
+        changed_note_review_manifests[payload["path"]] = document
+
     result = {
         "mode": "apply" if apply else "dry-run",
         "papers": len(papers),
         "evidence_before": dict(evidence_before),
         "evidence_after": dict(evidence_after),
         "generated_rationales": generated_rationales,
+        "backfilled_priority_rationales": backfilled_rationales,
+        "backfilled_reference_archive_rationales": backfilled_retained_rationales,
         "relation_count_before": relation_count_before,
         "seeded_relations": seeded_relations,
+        "enriched_relations": enriched_relations,
         "source_index_records": source_index_count,
         "papers_without_public_identifier": no_identifier,
         "tracker_evidence_updates": tracker_updates,
         "review_manifests": [str(path.relative_to(ROOT)) for path in changed_review_manifests],
+        "note_review_manifests": [str(path.relative_to(ROOT)) for path in changed_note_review_manifests],
+        "note_review_papers": sum(len(entries) for entries in note_reviews.values()),
         "review_scope_gaps": review_scope_gaps,
         "categories": len(category_values),
     }
@@ -639,13 +1087,17 @@ def reconcile(apply: bool) -> dict:
             writer.writerows(status_rows.values())
     for path, document in changed_review_manifests.items():
         path.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for path, document in changed_note_review_manifests.items():
+        path.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     meta = load_json(META)
     meta["paper_count"] = len(papers)
     meta["generated_on"] = str(date.today())
     meta["manifest_sha256"] = sha256(MANIFEST)
     meta["last_reconciled_on"] = str(date.today())
-    meta["reconciliation_policy"] = "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; tracker status remains user-controlled."
+    meta["reconciliation_policy"] = "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled."
+    meta["relation_count"] = sum(len(paper.get("relations", [])) for paper in papers)
+    meta["relation_policy"] = "Directed curated edges in papers.json are not a full citation graph; each managed edge records type, target paper_id, confidence, basis, source, evidence_scope, and reviewed_on."
     META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     result["manifest_sha256"] = meta["manifest_sha256"]
     return result
@@ -654,8 +1106,28 @@ def reconcile(apply: bool) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="write reconciled manifest, tracker evidence, and review metadata")
+    parser.add_argument(
+        "--backfill-priority-rationales",
+        action="store_true",
+        help="record paper-specific admission rationales for pending CORE/NEXT entries",
+    )
+    parser.add_argument(
+        "--backfill-reference-archive-rationales",
+        action="store_true",
+        help="record paper-specific retention rationales for pending REFERENCE/ARCHIVE entries",
+    )
     args = parser.parse_args()
-    print(json.dumps(reconcile(args.apply), ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            reconcile(
+                args.apply,
+                args.backfill_priority_rationales,
+                args.backfill_reference_archive_rationales,
+            ),
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | While MTU3D significantly outperforms Embodied Video Agent [21] and SenseAct-NN Monolithic [37, 87], overall success rates remain lower than in GOAT-Bench and HM3D-OVON, highlighting ... | p. 6 (4.2. Quantitative Results) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 4. Sequential task navigation results on SG3D-Nav [87]. Multi-modal Lifelong Navigation. The results in Tab. 5 highlight the significant performance improvement of our ... | p. 6 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Unlike other benchmarks, SG3D emphasizes task consistency across multiple steps, making it more complex. | embodiment, simulator version and control stack | p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results) |
 | Task/environment | Notably, MTU3D achieves the highest SR in Val Unseen (40.8%), showcasing its strong generalization ability to unseen episodes. | reset, timeout, object/scene variation | p. 6 (4.2. Quantitative Results), p. 7 (4.3. Discussions) |
@@ -150,9 +150,18 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 
 ## Limitations and Verification Questions
 
-- explicit limitation/failure sentence not recovered
+- explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 8 (4.4. Qualitative results), p. 8 (4.4. Qualitative results), metrics p. 6 (4.2. Quantitative Results), p. 6 (4.1. Experimental setting), p. 7 (4.2. Quantitative Results), p. 7 (4.3. Discussions), p. 8 (4.4. Qualitative results), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), results p. 6 (4.2. Quantitative Results), p. 6 (Figure/Table caption), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 8 (4.4. Qualitative results), p. 8 (4.4. Qualitative results), metrics p. 6 (4.2. Quantitative Results), p. 6 (4.1. Experimental setting), p. 7 (4.2. Quantitative Results), p. 7 (4.3. Discussions), p. 8 (4.4. Qualitative results), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), results p. 6 (4.2. Quantitative Results), p. 6 (Figure/Table caption), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 4. Sequential task navigation results on SG3D-Nav [87]. Multi-modal Lifelong Navigation. The results in Tab. 5 highlight the significant performance improvement of our MTU3D over baseline methods in lifelong ... (p. 6, Figure/Table caption).
+- **Metric evidence:** Furthermore, GPT4o with MTU3D achieves even better performance, reaching 51.1% LLM-SR and 42.6% LLM-SPL. (p. 7, 4.2. Quantitative Results).
+- **Baseline/ablation evidence:** 3 demonstrate that our proposed MTU3D significantly outperforms all baselines in terms of SR across both Val Seen and Val Unseen settings. (p. 6, 4.2. Quantitative Results).
+- **Failure/negative evidence:** In contrast, reinforcement learning (RL)-based embodied agents can explore environments but often struggle with sample inefficiency [71], poor generalization due to limited training data [20, 57, 62] and the lack ... (p. 2, 1. Introduction).

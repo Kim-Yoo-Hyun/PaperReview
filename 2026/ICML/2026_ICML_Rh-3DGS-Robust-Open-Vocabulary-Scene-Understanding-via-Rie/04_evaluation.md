@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/331577. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN; PDF retrieval source: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Qua
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We evaluate Rh-3DGS on three benchmarks: (i) LERF (Kerr et al., 2023), multi-view scenes with maskbased open-vocabulary queries; (ii) 3D-OVS (Liu et al., 2023), a ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** We first describe the experimental setup, including datasets, baselines, and evaluation metrics.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Quantitative mIoU(%) and mBIoU(%) results on the LERF dataset.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Quantitative PSNR, SSIM and LPIPS results on the LERF dataset.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** We benchmark inference rendering (RGB + semantic) on LERF figurines at 1280 × 720 on an RTX 4090.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** Lpix provides the main gain, Lmean alone is beneficial but smaller, and the full VFM objective performs best.
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** For ScanNet, we report mIoU and mAcc (mean per-class accuracy).
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** For LERF and 3D-OVS, we report mIoU and mBIoU (IoU computed on boundary bands around contours).
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We evaluate Rh-3DGS on three benchmarks: (i) LERF (Kerr et al., 2023), multi-view scenes with maskbased open-vocabulary queries; (ii) 3D-OVS (Liu et al., 2023), a ...
+- **p. 6 / 5. Experiments - extractive body cue:** We first describe the experimental setup, including datasets, baselines, and evaluation metrics.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Quantitative mIoU(%) and mBIoU(%) results on the LERF dataset.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Quantitative PSNR, SSIM and LPIPS results on the LERF dataset.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** We benchmark inference rendering (RGB + semantic) on LERF figurines at 1280 × 720 on an RTX 4090.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** Lpix provides the main gain, Lmean alone is beneficial but smaller, and the full VFM objective performs best.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** For ScanNet, we report mIoU and mAcc (mean per-class accuracy).
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** For LERF and 3D-OVS, we report mIoU and mBIoU (IoU computed on boundary bands around contours).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Qua
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Rh-3DGS achieves the best results on both tables. | p. 6 (5.2. Quantitative Results) |
 | 5.2. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Rh-3DGS again achieves the best performance. | p. 7 (5.2. Quantitative Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Qua
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We evaluate Rh-3DGS on three benchmarks: (i) LERF (Kerr et al., 2023), multi-view scenes with maskbased open-vocabulary queries; (ii) 3D-OVS (Liu et al., 2023), a ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** We first describe the experimental setup, including datasets, baselines, and evaluation metrics.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Quantitative mIoU(%) and mBIoU(%) results on the LERF dataset.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Quantitative PSNR, SSIM and LPIPS results on the LERF dataset.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** We benchmark inference rendering (RGB + semantic) on LERF figurines at 1280 × 720 on an RTX 4090.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** Lpix provides the main gain, Lmean alone is beneficial but smaller, and the full VFM objective performs best.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We evaluate Rh-3DGS on three benchmarks: (i) LERF (Kerr et al., 2023), multi-view scenes with maskbased open-vocabulary queries; (ii) 3D-OVS (Liu et al., 2023), a ...
+- **p. 6 / 5. Experiments - extractive body cue:** We first describe the experimental setup, including datasets, baselines, and evaluation metrics.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Quantitative mIoU(%) and mBIoU(%) results on the LERF dataset.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Quantitative PSNR, SSIM and LPIPS results on the LERF dataset.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** We benchmark inference rendering (RGB + semantic) on LERF figurines at 1280 × 720 on an RTX 4090.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** Lpix provides the main gain, Lmean alone is beneficial but smaller, and the full VFM objective performs best.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Motivation on LERF (teatime, "bag of cookies"). Baseline 3DGS produces boundary bleeding and multi-view in- consistent masks under occlusion and mixed-depth rays (b-c). ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Empirical evidence of the Euclidean-hyperspherical mismatch on the baseline model. Region Pre-norm ∥s∥2 Ang. dev. All 0.957 16.16
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative mIoU(%) and mBIoU(%) results on the LERF dataset.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative PSNR, SSIM and LPIPS results on the LERF
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Quantitative mIoU(%) and mBIoU(%) results on the 3D- OVS dataset.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Quantitative mIoU(%) and mAcc(%) results on the Scan- Net dataset.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 6. Ablation on LERF (figurines). Cfg (VCD/VFM/LIC) mIoU mBIoU FPS Mem.(GB) ✗✗✗ 60.56
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Motivation on LERF (teatime, "bag of cookies"). Baseline 3DGS produces boundary bleeding and multi-view in- consistent masks under occlusion and mixed-depth rays (b-c). ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Empirical evidence of the Euclidean-hyperspherical mismatch on the baseline model. Region Pre-norm ∥s∥2 Ang. dev. All 0.957 16.16
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative mIoU(%) and mBIoU(%) results on the LERF dataset.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative PSNR, SSIM and LPIPS results on the LERF
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Quantitative mIoU(%) and mBIoU(%) results on the 3D- OVS dataset.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Quantitative mIoU(%) and mAcc(%) results on the Scan- Net dataset.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. Ablation on LERF (figurines). Cfg (VCD/VFM/LIC) mIoU mBIoU FPS Mem.(GB) ✗✗✗ 60.56
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate Rh-3DGS on three benchmarks: (i) LERF (Kerr et al., 2023), multi-view scenes with maskbased open-vocabulary queries; (ii) 3D-OVS (Liu et al., 2023), ... | embodiment, simulator version and control stack | p. 6 (5.1. Experimental Setup), p. 6 (5. Experiments) |
 | Task/environment | We first describe the experimental setup, including datasets, baselines, and evaluation metrics. | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 7 (5.2. Quantitative Results) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Qua
 | Primary metric/result | Rh-3DGS again achieves the best performance. | numeric claim only at cited anchor | p. 7 (5.2. Quantitative Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We implement all methods in PyTorch and train on a single NVIDIA GeForce RTX 4090 GPU.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** 6, the full model runs at 301.64 FPS with 3.23 GB peak memory.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** Compared to the baseline (328.59 FPS, 2.65 GB), all components add only 8.2% FPS drop and 0.58 GB memory, while improving mIoU by +21.06 and ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We implement all methods in PyTorch and train on a single NVIDIA GeForce RTX 4090 GPU.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** 6, the full model runs at 301.64 FPS with 3.23 GB peak memory.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** Compared to the baseline (328.59 FPS, 2.65 GB), all components add only 8.2% FPS drop and 0.58 GB memory, while improving mIoU by +21.06 and ...
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Qua
 
 ## Limitations and Verification Questions
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
-- **p. 9 / 6. Conclusion - extractive PDF cue:** Future work will extend to dynamic scenes, multi-teacher distillation, and more efficient implementations.
-- **p. 8 / 5.4. Ablation Study - extractive PDF cue:** 9, activating LIC from the beginning is less effective because pseudoinstances are unstable in the early stage.
-- **p. 8 / 6. Conclusion - extractive PDF cue:** We present Rh-3DGS for robust open-vocabulary 3D semantics in 3D Gaussian Splatting.
-- **p. 9 / 6. Conclusion - extractive PDF cue:** Rh-3DGS localizes semantic regions with clean boundaries under clutter and occlusion. sions and mixed-depth rays.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Rh-3DGS gest that our semantic training does not hurt radiance-field reconstruction.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
+- **p. 9 / 6. Conclusion - extractive body cue:** Future work will extend to dynamic scenes, multi-teacher distillation, and more efficient implementations.
+- **p. 8 / 5.4. Ablation Study - extractive body cue:** 9, activating LIC from the beginning is less effective because pseudoinstances are unstable in the early stage.
+- **p. 8 / 6. Conclusion - extractive body cue:** We present Rh-3DGS for robust open-vocabulary 3D semantics in 3D Gaussian Splatting.
+- **p. 9 / 6. Conclusion - extractive body cue:** Rh-3DGS localizes semantic regions with clean boundaries under clutter and occlusion. sions and mixed-depth rays.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Rh-3DGS gest that our semantic training does not hurt radiance-field reconstruction.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5. Experiments), p. 7 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), metrics p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 9 (Figure/Table caption), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), baselines p. 6 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 6 (5. Experiments), p. 7 (5.3. Qualitative Results), p. 8 (5.4. Ablation Study), p. 1 (Figure/Table caption), results p. 6 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 6 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5. Experiments), p. 7 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), metrics p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 9 (Figure/Table caption), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), baselines p. 6 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 6 (5. Experiments), p. 7 (5.3. Qualitative Results), p. 8 (5.4. Ablation Study), p. 1 (Figure/Table caption), results p. 6 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 6 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

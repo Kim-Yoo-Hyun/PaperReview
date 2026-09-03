@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/10/; PDF retrieval source: https://roboticsconference.org/program/papers/10/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/10/; PDF retrieval source: https://roboticsconference.org/program/papers/10/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Cotraining VQA and action prediction achieves 64% success, outperforming pretrain-then-finetune (44%) and no-VQA training (42%) by 20 and 22 points, respectively. | p. 8 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to hand-designed features, HALO achieves an absolute improvement of 12%. | p. 7 (IV. EXPERIMENTS) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In addition, we measure manipulation and memory failures in real-world evaluations, finding that HALO reduces them by 8% and 25% absolute over full attention ... | embodiment, simulator version and control stack | p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
 | Task/environment | Average (Spatial Info.) (Relational Info.) (Numerical Info.) (Event-time Info.) Standard Transformer 0.26 0.23 0.12 0.27 0.22 Scene Memory Transformer 0.53 0.25 0.17 0.40 0.34 ... | reset, timeout, object/scene variation | p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** Method Retrieve Object Return to Container LSTM 0.14 0.12 Mamba 0.20 0.18 TransformerXL 0.12 0.20 Window Attention 0.13 0.16 Strided Attention 0.20 0.28 Hierarchical Attention ...
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** Developing adaptive strategies that retrieve only the necessary amount of information at each step is a promising direction for future work.
 
-- **PDF anchors reviewed:** datasets p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), baselines p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), baselines p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS).
+- **Metric evidence:** A moderate value (k = 8) achieves the best performance (52% success). (p. 8, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS).
+- **Failure/negative evidence:** These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift and cascading failures over long horizons. (p. 3, III. HALO).

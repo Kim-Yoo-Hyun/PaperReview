@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=pIDl4wuZoG&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=pIDl4wuZoG&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.3. Non-isometric Shape Matching - extractive PDF cue:** Datasets We employ the recent non-isometric benchmark DT4D-M [27] as the testbed for this task.
-- **p. 7 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** The SHREC19 dataset includes 44 human shapes and is exclusively used as a test set.
-- **p. 6 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** Datasets We choose FAUST [6], SCAPE [1] and SHREC19 [29] as testbeds for the task of near-isometric shape matching, specifically the more recent remeshed version ...
-- **p. 8 / 5.5. Robustness - extractive PDF cue:** Topology changes We employ models pre-trained on FAUST and SCAPE respectively and test on the TOPKIDS dataset [23], which contains 26 shapes of kids with ...
-- **p. 8 / 5.5. Robustness - extractive PDF cue:** Generalisation from the training set SURREAL to the test set SHREC19.
-- **p. 6 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** The SCAPE dataset comprises 71 shapes of a single person in different poses.
-- **p. 7 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** Note that the mean geodesic error deteriorates in all cases, underlining the importance of smoothness of learned embeddings.
-- **p. 7 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** Ours produces the most accurate and smooth correspondences, despite highly nonisometric deformation (errors highlighted in red).
+- **p. 7 / 5.3. Non-isometric Shape Matching - extractive body cue:** Datasets We employ the recent non-isometric benchmark DT4D-M [27] as the testbed for this task.
+- **p. 7 / 5.2. Near-isometric Shape Matching - extractive body cue:** The SHREC19 dataset includes 44 human shapes and is exclusively used as a test set.
+- **p. 6 / 5.2. Near-isometric Shape Matching - extractive body cue:** Datasets We choose FAUST [6], SCAPE [1] and SHREC19 [29] as testbeds for the task of near-isometric shape matching, specifically the more recent remeshed version ...
+- **p. 8 / 5.5. Robustness - extractive body cue:** Topology changes We employ models pre-trained on FAUST and SCAPE respectively and test on the TOPKIDS dataset [23], which contains 26 shapes of kids with ...
+- **p. 8 / 5.5. Robustness - extractive body cue:** Generalisation from the training set SURREAL to the test set SHREC19.
+- **p. 6 / 5.2. Near-isometric Shape Matching - extractive body cue:** The SCAPE dataset comprises 71 shapes of a single person in different poses.
+- **p. 7 / 5.2. Near-isometric Shape Matching - extractive body cue:** Note that the mean geodesic error deteriorates in all cases, underlining the importance of smoothness of learned embeddings.
+- **p. 7 / 5.2. Near-isometric Shape Matching - extractive body cue:** Ours produces the most accurate and smooth correspondences, despite highly nonisometric deformation (errors highlighted in red).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.7. Shape Segmentation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Extensive experiments showcase that our proposed method achieves superior results in a number of non-rigid matching benchmarks and is promising in other shape analysis ... | p. 8 (5.7. Shape Segmentation) |
 | 5.3. Non-isometric Shape Matching | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method outperforms all learning based baselines. | p. 7 (5.3. Non-isometric Shape Matching) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.3. Non-isometric Shape Matching - extractive PDF cue:** Datasets We employ the recent non-isometric benchmark DT4D-M [27] as the testbed for this task.
-- **p. 7 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** The SHREC19 dataset includes 44 human shapes and is exclusively used as a test set.
-- **p. 6 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** Datasets We choose FAUST [6], SCAPE [1] and SHREC19 [29] as testbeds for the task of near-isometric shape matching, specifically the more recent remeshed version ...
-- **p. 8 / 5.5. Robustness - extractive PDF cue:** Topology changes We employ models pre-trained on FAUST and SCAPE respectively and test on the TOPKIDS dataset [23], which contains 26 shapes of kids with ...
-- **p. 8 / 5.5. Robustness - extractive PDF cue:** Generalisation from the training set SURREAL to the test set SHREC19.
-- **p. 6 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** The SCAPE dataset comprises 71 shapes of a single person in different poses.
+- **p. 7 / 5.3. Non-isometric Shape Matching - extractive body cue:** Datasets We employ the recent non-isometric benchmark DT4D-M [27] as the testbed for this task.
+- **p. 7 / 5.2. Near-isometric Shape Matching - extractive body cue:** The SHREC19 dataset includes 44 human shapes and is exclusively used as a test set.
+- **p. 6 / 5.2. Near-isometric Shape Matching - extractive body cue:** Datasets We choose FAUST [6], SCAPE [1] and SHREC19 [29] as testbeds for the task of near-isometric shape matching, specifically the more recent remeshed version ...
+- **p. 8 / 5.5. Robustness - extractive body cue:** Topology changes We employ models pre-trained on FAUST and SCAPE respectively and test on the TOPKIDS dataset [23], which contains 26 shapes of kids with ...
+- **p. 8 / 5.5. Robustness - extractive body cue:** Generalisation from the training set SURREAL to the test set SHREC19.
+- **p. 6 / 5.2. Near-isometric Shape Matching - extractive body cue:** The SCAPE dataset comprises 71 shapes of a single person in different poses.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose a novel way to learn coupled embeddings of non-rigidly deformable shapes that are geometry-aware, robust and can be directly applied to ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Examples of LBO eigenbases and our learned coupled embeddings on a pair of non-rigidly deformed shapes. Ours are consistent while LBO eigenbases suffer ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1. Summary of our notation used in the paper. is required for good performance [16, 22] (also see Sec. 5, Tab. 2), since the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Pipeline overview. Given a pair of shapes S and T rep- resented in point clouds, Our embedding extractor - ASAP Diffu- sionNet with ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results on FAUST, SCAPE, SHREC19, TOPKIDS and DT4D-M. The best results are highlighted, and the second best results are indicated in blue. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative result on DT4D-M. Ours produces the most accurate and smooth correspondences, despite highly non- isometric deformation (errors highlighted in red). The SHREC19 ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Generalisation ability. The best results in each column are highlighted. Our method outperforms all learning based base- lines. Letters S,W in parentheses stand ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Generalisation from the training set SURREAL to the test set SHREC19. Our method generalises better compared to baselines (errors highlighted in red). Additive ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose a novel way to learn coupled embeddings of non-rigidly deformable shapes that are geometry-aware, robust and can be directly applied to ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Examples of LBO eigenbases and our learned coupled embeddings on a pair of non-rigidly deformed shapes. Ours are consistent while LBO eigenbases suffer ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1. Summary of our notation used in the paper. is required for good performance [16, 22] (also see Sec. 5, Tab. 2), since the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Pipeline overview. Given a pair of shapes S and T rep- resented in point clouds, Our embedding extractor - ASAP Diffu- sionNet with ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results on FAUST, SCAPE, SHREC19, TOPKIDS and DT4D-M. The best results are highlighted, and the second best results are indicated in blue. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative result on DT4D-M. Ours produces the most accurate and smooth correspondences, despite highly non- isometric deformation (errors highlighted in red). The SHREC19 ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Generalisation ability. The best results in each column are highlighted. Our method outperforms all learning based base- lines. Letters S,W in parentheses stand ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Generalisation from the training set SURREAL to the test set SHREC19. Our method generalises better compared to baselines (errors highlighted in red). Additive ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Datasets We employ the recent non-isometric benchmark DT4D-M [27] as the testbed for this task. | embodiment, simulator version and control stack | p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching) |
 | Task/environment | The SHREC19 dataset includes 44 human shapes and is exclusively used as a test set. | reset, timeout, object/scene variation | p. 7 (5.2. Near-isometric Shape Matching), p. 6 (5.2. Near-isometric Shape Matching) |
@@ -153,14 +153,14 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 
 ## Limitations and Verification Questions
 
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 16. Qualitative results on DT4D-M. More qualitative non-isometric matching results (top) . Failure cases mainly due to challenging topological noise (bottom) .
-- **p. 8 / 5.7. Shape Segmentation - extractive PDF cue:** Limitations, Future Work and Conclusion In this paper, we proposed an unsupervised method to learn high-quality, well-generalised embeddings directly from raw point clouds.
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 13. Failure cases on FAUST. All three failure examples relate to the touching hands, where the points of two hands are locally mixed and ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Figure 7. Visualisation of a challenging pair with crossed legs. We show our full design can successfully handle this challenge while all baseline methods fails ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 10. Illustration of mean geodesic error under different spec- tral resolutions. Our method is robust for different choice of spec- tral resolution. We conduct ...
-- **p. 7 / 5.5. Robustness - extractive PDF cue:** We evaluate robustness from two perspectives: (1) random additive Gaussian noise to point clouds, (2) changes and inconsistency in shape topology.
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 16. Qualitative results on DT4D-M. More qualitative non-isometric matching results (top) . Failure cases mainly due to challenging topological noise (bottom) .
+- **p. 8 / 5.7. Shape Segmentation - extractive body cue:** Limitations, Future Work and Conclusion In this paper, we proposed an unsupervised method to learn high-quality, well-generalised embeddings directly from raw point clouds.
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 13. Failure cases on FAUST. All three failure examples relate to the touching hands, where the points of two hands are locally mixed and ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 7. Visualisation of a challenging pair with crossed legs. We show our full design can successfully handle this challenge while all baseline methods fails ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 10. Illustration of mean geodesic error under different spec- tral resolutions. Our method is robust for different choice of spec- tral resolution. We conduct ...
+- **p. 7 / 5.5. Robustness - extractive body cue:** We evaluate robustness from two perspectives: (1) random additive Gaussian noise to point clouds, (2) changes and inconsistency in shape topology.
 
-- **PDF anchors reviewed:** datasets p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching), p. 6 (5.2. Near-isometric Shape Matching), p. 8 (5.5. Robustness), p. 8 (5.5. Robustness), p. 6 (5.2. Near-isometric Shape Matching), metrics p. 7 (5.2. Near-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching), p. 8 (5.5. Robustness), p. 8 (5.6. Partial Shape Matching), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.4. Generalisation), p. 8 (5.5. Robustness), p. 16 (Figure/Table caption), p. 6 (5. Experiments), p. 8 (5.5. Robustness), results p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.4. Generalisation), p. 8 (5.5. Robustness), p. 6 (5. Experiments), p. 6 (5.1. Baselines).
+- **Evidence anchors reviewed:** datasets p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching), p. 6 (5.2. Near-isometric Shape Matching), p. 8 (5.5. Robustness), p. 8 (5.5. Robustness), p. 6 (5.2. Near-isometric Shape Matching), metrics p. 7 (5.2. Near-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching), p. 8 (5.5. Robustness), p. 8 (5.6. Partial Shape Matching), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.4. Generalisation), p. 8 (5.5. Robustness), p. 16 (Figure/Table caption), p. 6 (5. Experiments), p. 8 (5.5. Robustness), results p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.4. Generalisation), p. 8 (5.5. Robustness), p. 6 (5. Experiments), p. 6 (5.1. Baselines).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

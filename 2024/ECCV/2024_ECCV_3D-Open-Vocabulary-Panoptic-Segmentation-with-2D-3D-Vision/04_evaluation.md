@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5642_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5642_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** The nuScenes dataset [4] is a public benchmark for autonomous driving.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Both the nuScenes and SemanticKITTI datasets do not provide official base and novel class splits.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Comparisons on the nuScenes and SemanticKITTI datasets are shown in Tab.
-- **p. 10 / 4 Experiments - extractive PDF cue:** 3: Open-vocabulary panoptic segmentation results from PFC and our method on nuScenes.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Model Type Supervision PQ PQT h N PQSt N RQ RQT h N RQSt N SQ SQT h N SQSt N mIoU P3Former [47] closed-set ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base categories.
-- **p. 9 / 4 Experiments - extractive PDF cue:** During inference, if there are multiple labels for one class, we derive the class score by getting the maximum scores among these labels.
-- **p. 9 / 4 Experiments - extractive PDF cue:** \u nderbrace {\frac {\sum _{\TP } \text {IoU}} {/\TP /}}_{\text {SQ}} \times \underbrace {\frac {/\TP /}{/\TP / + \frac {1}{2} /\FP / + \frac {1}{2} ...
+- **p. 9 / 4 Experiments - extractive body cue:** The nuScenes dataset [4] is a public benchmark for autonomous driving.
+- **p. 9 / 4 Experiments - extractive body cue:** Both the nuScenes and SemanticKITTI datasets do not provide official base and novel class splits.
+- **p. 10 / 4 Experiments - extractive body cue:** Comparisons on the nuScenes and SemanticKITTI datasets are shown in Tab.
+- **p. 10 / 4 Experiments - extractive body cue:** 3: Open-vocabulary panoptic segmentation results from PFC and our method on nuScenes.
+- **p. 11 / 4 Experiments - extractive body cue:** Model Type Supervision PQ PQT h N PQSt N RQ RQT h N RQSt N SQ SQT h N SQSt N mIoU P3Former [47] closed-set ...
+- **p. 11 / 4 Experiments - extractive body cue:** We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base categories.
+- **p. 9 / 4 Experiments - extractive body cue:** During inference, if there are multiple labels for one class, we derive the class score by getting the maximum scores among these labels.
+- **p. 9 / 4 Experiments - extractive body cue:** \u nderbrace {\frac {\sum _{\TP } \text {IoU}} {/\TP /}}_{\text {SQ}} \times \underbrace {\frac {/\TP /}{/\TP / + \frac {1}{2} /\FP / + \frac {1}{2} ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method significantly outperforms | p. 10 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base ... | p. 11 (4 Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** The nuScenes dataset [4] is a public benchmark for autonomous driving.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Both the nuScenes and SemanticKITTI datasets do not provide official base and novel class splits.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Comparisons on the nuScenes and SemanticKITTI datasets are shown in Tab.
-- **p. 10 / 4 Experiments - extractive PDF cue:** 3: Open-vocabulary panoptic segmentation results from PFC and our method on nuScenes.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Model Type Supervision PQ PQT h N PQSt N RQ RQT h N RQSt N SQ SQT h N SQSt N mIoU P3Former [47] closed-set ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base categories.
+- **p. 9 / 4 Experiments - extractive body cue:** The nuScenes dataset [4] is a public benchmark for autonomous driving.
+- **p. 9 / 4 Experiments - extractive body cue:** Both the nuScenes and SemanticKITTI datasets do not provide official base and novel class splits.
+- **p. 10 / 4 Experiments - extractive body cue:** Comparisons on the nuScenes and SemanticKITTI datasets are shown in Tab.
+- **p. 10 / 4 Experiments - extractive body cue:** 3: Open-vocabulary panoptic segmentation results from PFC and our method on nuScenes.
+- **p. 11 / 4 Experiments - extractive body cue:** Model Type Supervision PQ PQT h N PQSt N RQ RQT h N RQSt N SQ SQT h N SQSt N mIoU P3Former [47] closed-set ...
+- **p. 11 / 4 Experiments - extractive body cue:** We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base categories.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of our method. Given a LiDAR point cloud and the corresponding camera images, LiDAR features are extracted with a learnable LiDAR encoder, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 2: (a) the proposed object-level distillation loss, and (b) the proposed voxel-level distillation loss. 3.3
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 3: Open-vocabulary panoptic segmentation results from PFC and our method on nuScenes. PFC predicts inaccurate category and masks for the novel pedestrian (red), bus ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative results of panoptic segmentation on nuScenes. We compare the performance of open-vocabulary and fully supervised models. All open vocabulary models share the ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 2: Performance for base classes on nuScenes. We report the performance on base classes for models in Tab. 1. A gap still exists between ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3: Quantitative results of panoptic segmentation on SemanticKITTI. We compare the performance different models. All open vocabulary models share the same randomly picked base/novel ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Impact of each component. We evaluate the impact of each component using the base/novel split in Tab. 1. We observe that each component ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 5: Performance on a different split. We compare the performance with a split with 5 novel classes (B11/N5). The novel things classes are bicycle, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our method. Given a LiDAR point cloud and the corresponding camera images, LiDAR features are extracted with a learnable LiDAR encoder, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 2: (a) the proposed object-level distillation loss, and (b) the proposed voxel-level distillation loss. 3.3
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 3: Open-vocabulary panoptic segmentation results from PFC and our method on nuScenes. PFC predicts inaccurate category and masks for the novel pedestrian (red), bus ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: Quantitative results of panoptic segmentation on nuScenes. We compare the performance of open-vocabulary and fully supervised models. All open vocabulary models share the ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 2: Performance for base classes on nuScenes. We report the performance on base classes for models in Tab. 1. A gap still exists between ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Quantitative results of panoptic segmentation on SemanticKITTI. We compare the performance different models. All open vocabulary models share the same randomly picked base/novel ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Impact of each component. We evaluate the impact of each component using the base/novel split in Tab. 1. We observe that each component ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Performance on a different split. We compare the performance with a split with 5 novel classes (B11/N5). The novel things classes are bicycle, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The nuScenes dataset [4] is a public benchmark for autonomous driving. | embodiment, simulator version and control stack | p. 9 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | Both the nuScenes and SemanticKITTI datasets do not provide official base and novel class splits. | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 10 (4 Experiments) |
@@ -119,9 +119,9 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | Primary metric/result | We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base ... | numeric claim only at cited anchor | p. 11 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4 Experiments - extractive PDF cue:** We use all key frames with panoptic labels in the training set(28130 frames) to train the model.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Following the most recent state-of-the-art model P3Former [47], we evaluate the models on the validation set(6019 frames).
-- **p. 9 / 4 Experiments - extractive PDF cue:** The models are trained for 40 epochs, and we use the checkpoint of the last epoch for evaluation.
+- **p. 9 / 4 Experiments - extractive body cue:** We use all key frames with panoptic labels in the training set(28130 frames) to train the model.
+- **p. 9 / 4 Experiments - extractive body cue:** Following the most recent state-of-the-art model P3Former [47], we evaluate the models on the validation set(6019 frames).
+- **p. 9 / 4 Experiments - extractive body cue:** The models are trained for 40 epochs, and we use the checkpoint of the last epoch for evaluation.
 
 ## Generalization and Failure Cases
 
@@ -154,9 +154,9 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 14 / 5 Conclusion - extractive PDF cue:** We experimentally verified that simply extending the 2D open-vocabulary segmentation method into 3D does not yield good performance, and demonstrated that our proposed model design ...
+- **p. 14 / 5 Conclusion - extractive body cue:** We experimentally verified that simply extending the 2D open-vocabulary segmentation method into 3D does not yield good performance, and demonstrated that our proposed model design ...
 
-- **PDF anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), baselines p. 10 (4 Experiments), p. 10 (4 Experiments), p. 13 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 12 (Figure/Table caption), results p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 12 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), baselines p. 10 (4 Experiments), p. 10 (4 Experiments), p. 13 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 12 (Figure/Table caption), results p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 12 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

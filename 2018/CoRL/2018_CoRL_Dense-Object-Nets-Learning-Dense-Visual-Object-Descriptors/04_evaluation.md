@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v87/florence18a.html; PDF retrieval source: https://proceedings.mlr.press/v87/florence18a.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v87/florence18a.html; PDF retrieval source: https://proceedings.mlr.press/v87/florence18a.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | For the most part, 3dimensional descriptor spaces were sufficient to achieve saturated (did not improve with higher-dimension) correspondence precision for single objects, yet this ... | p. 7 (5 Results) |
 | 5 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our new standard single-object training procedure (standard-SO) performs significantly better than our implementation of prior work's training procedures (Schmidt), and we isolate and measure ... | p. 6 (5 Results) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset used for (a) is of three objects, 4 scenes each. | embodiment, simulator version and control stack | p. 6 (5 Results), p. 8 (5 Results) |
 | Task/environment | For instance-specificity (iv) trained with specific and augmented with synthetic multi object scenes (3.3.iii), the robot grasps this point on the specific instance even ... | reset, timeout, object/scene variation | p. 8 (5 Results), p. 6 (5 Results) |
@@ -152,7 +152,16 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 - **p. 7 / 5 Results - extractive body cue:** The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode ...
 - **p. 8 / 6 Conclusion - extractive body cue:** In future work we are interested to explore new approaches to solving manipulation problems that exploit the dense visual information that learned dense descriptors provide, ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Results), p. 8 (5 Results), p. 6 (5 Results), p. 8 (5 Results), p. 5 (5 Results), p. 7 (5 Results), metrics p. 7 (5 Results), p. 7 (5 Results), p. 5 (5 Results), p. 6 (5 Results), p. 6 (5 Results), p. 11 (Figure/Table caption), baselines p. 7 (5 Results), p. 6 (5 Results), p. 6 (5 Results), p. 7 (5 Results), results p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Results), p. 6 (5 Results), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Results), p. 8 (5 Results), p. 6 (5 Results), p. 8 (5 Results), p. 5 (5 Results), p. 7 (5 Results), metrics p. 7 (5 Results), p. 7 (5 Results), p. 5 (5 Results), p. 6 (5 Results), p. 6 (5 Results), p. 11 (Figure/Table caption), baselines p. 7 (5 Results), p. 6 (5 Results), p. 6 (5 Results), p. 7 (5 Results), results p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Results), p. 6 (5 Results), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 3: (a) table describing the network training procedures referenced in experiments. (standard-SO = "standard single object". standard-SO-P is detailed in Appendix D.1). (b) Plots the cdf of the L2 ... (p. 6, Figure/Table caption).
+- **Metric evidence:** The variety of objects includes moderately deformable objects such as soft plush toys, shoes, mugs, and hats, and can include very low-texture objects (Figure 2). (p. 5, 5 Results).
+- **Baseline/ablation evidence:** without cross-object loss with cross-object loss (a) (b) (c) Figure 5: Comparison of training without any distinct object loss (a) vs. using cross-object loss (b). (p. 7, 5 Results).
+- **Failure/negative evidence:** The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable ... (p. 7, 5 Results).

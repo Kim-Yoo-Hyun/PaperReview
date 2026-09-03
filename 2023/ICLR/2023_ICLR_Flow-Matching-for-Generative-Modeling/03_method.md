@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2023/poster/11309; PDF retrieval source: https://openreview.net/pdf?id=PqvMRDCJT9t. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2023/poster/11309; PDF retrieval source: https://openreview.net/pdf?id=PqvMRDCJT9t. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target ... | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Then, inspired by denoising score matching, we show that a per-example training objective, termed Conditional Flow Matching (CFM), provides equivalent gradients and ... | p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 |---|---|---|---|
 | Horizon | noise/time schedule 또는 action sample horizon; exact denoising steps 확인 필요. | We next switch to fixed-step solvers and compare low (≤100) NFE samples computed with the ImageNet-32 models from Table 1. | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 iterative sampling/inference rate가 분리된다. | In this work we consider the general and deterministic framework of Continuous Normalizing Flows (CNFs; Chen et al. | Hz/fps, inference time and control rate |
-| Memory | current noisy sample, condition과 time/noise embedding. | not recovered | window and reset |
-| Compute | number of denoising/ODE steps와 network evaluation이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | current noisy sample, condition과 time/noise embedding. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | number of denoising/ODE steps와 network evaluation이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -135,8 +135,17 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 4 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), objective p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), temporal p. 9 (6 EXPERIMENTS), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 7 (5 RELATED WORK), p. 7 (5 RELATED WORK), p. 9 (7 CONCLUSION).
+- **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 4 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), objective p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), temporal p. 9 (6 EXPERIMENTS), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 7 (5 RELATED WORK), p. 7 (5 RELATED WORK), p. 9 (7 CONCLUSION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target vector field that generates a desired probability path. (p. 2, 1 INTRODUCTION).
+- **Objective/update evidence:** Our second key observation is therefore: The FM (equation 5) and CFM (equation 9) objectives have identical gradients w.r.t. θ. (p. 4, 1 INTRODUCTION).
+- **Temporal/runtime evidence:** Generated samples can be found in the Appendix, and all implementation details are in Appendix E. (p. 7, 6 EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

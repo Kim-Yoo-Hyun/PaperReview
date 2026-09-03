@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.09637; PDF retrieval source: https://arxiv.org/pdf/2403.09637. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.09637; PDF retrieval source: https://arxiv.org/pdf/2403.09637. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -30,7 +30,7 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp ... | p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | 2 (a) where our method (1) collects multi-view RGB-D images as input to initialize 3D Gaussian field; (2) reconstructs 3D feature field ... | p. 2 (III. METHODOLOGY) |
@@ -75,7 +75,7 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -111,8 +111,17 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), temporal p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 2 (II. RELATED WORK), p. 2 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), temporal p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 2 (II. RELATED WORK), p. 2 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D Localization (a) Our Proposed Pipeline ... (p. 3, III. METHODOLOGY).
+- **Objective/update evidence:** EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D Localization (a) Our Proposed Pipeline ... (p. 3, III. METHODOLOGY).
+- **Temporal/runtime evidence:** The reconstruction process only requires approximately 6GB of memory in total. (p. 5, IV. EXPERIMENT).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

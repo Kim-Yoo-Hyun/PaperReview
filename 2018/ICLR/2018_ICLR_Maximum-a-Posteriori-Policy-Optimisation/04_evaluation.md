@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=S1ANxQW0b; PDF retrieval source: https://openreview.net/forum?id=S1ANxQW0b. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=S1ANxQW0b; PDF retrieval source: https://openreview.net/forum?id=S1ANxQW0b. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -12,9 +12,9 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** For example, the classical cart-pole and acrobot dynamical systems, 2D and Humanoid walking as well as simple low-dimensional planar reaching and manipulation tasks.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system.
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2018 5.1.1 DETAILED ANALYSIS ON WALKER-2D, ACROBOT, HOPPER We start by looking at the results for the classical ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** The single learner vanilla DDPG implementation learns the lower dimensional environments quickly but suffers in terms of learning speed in environments with sparse rewards (finger, ...
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** Top: Acrobot, Ball-in-cup, Cart-pole, Cheetah, Finger, Fish, Hopper.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** This, however, required task specific tuning (c.f.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Overall, MPO is able to solve all environments using surprisingly moderate amounts of data.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** All tasks have rewards that are scaled to be between 0 and 1000.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy ...
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | This difference is so extreme that in several instances the PPO baseline converges an order of magnitude slower than the off-policy algorithms and we ... | p. 9 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | For the Humanoid running domain we can observe a similar trend to the experiments from the previous section: MPO quickly finds a stable running ... | p. 9 (5 EXPERIMENTS) |
@@ -42,9 +42,9 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** For example, the classical cart-pole and acrobot dynamical systems, 2D and Humanoid walking as well as simple low-dimensional planar reaching and manipulation tasks.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system.
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2018 5.1.1 DETAILED ANALYSIS ON WALKER-2D, ACROBOT, HOPPER We start by looking at the results for the classical ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** The single learner vanilla DDPG implementation learns the lower dimensional environments quickly but suffers in terms of learning speed in environments with sparse rewards (finger, ...
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** Top: Acrobot, Ball-in-cup, Cart-pole, Cheetah, Finger, Fish, Hopper.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** This, however, required task specific tuning (c.f.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Overall, MPO is able to solve all environments using surprisingly moderate amounts of data.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
@@ -61,10 +61,10 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For example, the classical cart-pole and acrobot dynamical systems, 2D and Humanoid walking as well as simple low-dimensional planar reaching and manipulation tasks. | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
-| Task/environment | The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system. | reset, timeout, object/scene variation | p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
+| Task/environment | The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system. | reset, timeout, object/scene variation | p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
 | Observation/sensor | state 또는 observation, action, reward와 transition history | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT) |
 | Output/decision | action policy와 induced trajectory | action frame, controller and termination | p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
 
@@ -119,7 +119,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 
 - Numeric sentences retained from the body:
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** The suite of continuous control tasks that we are evaluating against contains 18 tasks, comprising a wide range of domains including well known tasks from ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2018 5.1.1 DETAILED ANALYSIS ON WALKER-2D, ACROBOT, HOPPER We start by looking at the results for the classical ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** On average less than 1000 trajectories (or 106 samples) are needed to reach the best performance.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** In addition to the walker experiment we have also evaluated MPO on the Parkour domain using a humanoid body (with 22 degrees of freedom) which ...
 
@@ -156,7 +155,16 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ature on three domains from the control suite. We plot the median performance over ... (p. 8, Figure/Table caption).
+- **Metric evidence:** The reward in the Acrobot task is the distance of the robots end-effector to an upright position of the underactuated system. (p. 8, 5 EXPERIMENTS).
+- **Baseline/ablation evidence:** We note that in order to ensure a fair comparison all algorithms ran with exactly the same network configuration, used a single learner (no distributed computation), used the same optimizer ... (p. 8, 5 EXPERIMENTS).
+- **Failure/negative evidence:** The case for the Walker-2D parkour domain (where we compare against a PPO baseline) is even more striking: where standard PPO requires approximately 1M trajectories to find a good policy ... (p. 9, 5 EXPERIMENTS).

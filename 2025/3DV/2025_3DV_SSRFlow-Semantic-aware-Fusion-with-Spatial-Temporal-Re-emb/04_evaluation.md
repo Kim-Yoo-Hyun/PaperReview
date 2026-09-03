@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=9abfUtE6iQ&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=9abfUtE6iQ&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** (2016) and three real-world datasets including Stereo-KITTI Menze et al.
-- **p. 8 / 4 Experiments - extractive PDF cue:** The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Furthermore, SSRFlow outperforms Cheng and Ko (2023) by a significant margin, surpassing it by 33% and 40% in terms of EPE3D and Out3D on the ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Model EPE3D↓Param size (M) Run time (ms) PointPWC 0.0588 7.72M 76ms PointPWC+STR 0.0504 8.02M 81ms PointPWC+STR+GF 0.0402 9.89M 96ms Bi-PointflowNet 0.0282 7.96M 80ms Bi-PointFlow+GF 0.0227 ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and Data Preprocessing The experiments were performed on four datasets: the synthetic dataset FlyThings3D (FT3D) Mayer et al.
-- **p. 7 / 4 Experiments - extractive PDF cue:** These datasets are preprocessed in two ways Gu et al.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Specifically, SSRFlow reduces EPE3D by 41% and 22% compared to the second place Cheng and Ko (2023) under training on FT3Ds and SF-KITTI datasets, respectively.
+- **p. 7 / 4 Experiments - extractive body cue:** (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world ...
+- **p. 6 / 4 Experiments - extractive body cue:** (2016) and three real-world datasets including Stereo-KITTI Menze et al.
+- **p. 8 / 4 Experiments - extractive body cue:** The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets.
+- **p. 8 / 4 Experiments - extractive body cue:** Furthermore, SSRFlow outperforms Cheng and Ko (2023) by a significant margin, surpassing it by 33% and 40% in terms of EPE3D and Out3D on the ...
+- **p. 9 / 4 Experiments - extractive body cue:** Model EPE3D↓Param size (M) Run time (ms) PointPWC 0.0588 7.72M 76ms PointPWC+STR 0.0504 8.02M 81ms PointPWC+STR+GF 0.0402 9.89M 96ms Bi-PointflowNet 0.0282 7.96M 80ms Bi-PointFlow+GF 0.0227 ...
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Datasets and Data Preprocessing The experiments were performed on four datasets: the synthetic dataset FlyThings3D (FT3D) Mayer et al.
+- **p. 7 / 4 Experiments - extractive body cue:** These datasets are preprocessed in two ways Gu et al.
+- **p. 9 / 4 Experiments - extractive body cue:** Specifically, SSRFlow reduces EPE3D by 41% and 22% compared to the second place Cheng and Ko (2023) under training on FT3Ds and SF-KITTI datasets, respectively.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: Illustration of results on other datasets of our proposed SSRFlow method. Colors mean the same as Figure 5. More visualization results are ... | p. 8 (Figure/Table caption) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets. | p. 8 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** (2016) and three real-world datasets including Stereo-KITTI Menze et al.
-- **p. 8 / 4 Experiments - extractive PDF cue:** The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Furthermore, SSRFlow outperforms Cheng and Ko (2023) by a significant margin, surpassing it by 33% and 40% in terms of EPE3D and Out3D on the ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Model EPE3D↓Param size (M) Run time (ms) PointPWC 0.0588 7.72M 76ms PointPWC+STR 0.0504 8.02M 81ms PointPWC+STR+GF 0.0402 9.89M 96ms Bi-PointflowNet 0.0282 7.96M 80ms Bi-PointFlow+GF 0.0227 ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and Data Preprocessing The experiments were performed on four datasets: the synthetic dataset FlyThings3D (FT3D) Mayer et al.
-- **p. 7 / 4 Experiments - extractive PDF cue:** These datasets are preprocessed in two ways Gu et al.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Specifically, SSRFlow reduces EPE3D by 41% and 22% compared to the second place Cheng and Ko (2023) under training on FT3Ds and SF-KITTI datasets, respectively.
+- **p. 7 / 4 Experiments - extractive body cue:** (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world ...
+- **p. 6 / 4 Experiments - extractive body cue:** (2016) and three real-world datasets including Stereo-KITTI Menze et al.
+- **p. 8 / 4 Experiments - extractive body cue:** The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets.
+- **p. 8 / 4 Experiments - extractive body cue:** Furthermore, SSRFlow outperforms Cheng and Ko (2023) by a significant margin, surpassing it by 33% and 40% in terms of EPE3D and Out3D on the ...
+- **p. 9 / 4 Experiments - extractive body cue:** Model EPE3D↓Param size (M) Run time (ms) PointPWC 0.0588 7.72M 76ms PointPWC+STR 0.0504 8.02M 81ms PointPWC+STR+GF 0.0402 9.89M 96ms Bi-PointflowNet 0.0282 7.96M 80ms Bi-PointFlow+GF 0.0227 ...
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Datasets and Data Preprocessing The experiments were performed on four datasets: the synthetic dataset FlyThings3D (FT3D) Mayer et al.
+- **p. 7 / 4 Experiments - extractive body cue:** These datasets are preprocessed in two ways Gu et al.
+- **p. 9 / 4 Experiments - extractive body cue:** Specifically, SSRFlow reduces EPE3D by 41% and 22% compared to the second place Cheng and Ko (2023) under training on FT3Ds and SF-KITTI datasets, respectively.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Illustration of the proposed network. Firstly, semantic features are hierarchically extracted and sent to GF to achieve global embedding between the two point ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Flowchart of global flow embedding. ⊗and ⊕denote multiplication and concatenation, respectively. Specifically, within the DCA module, we employ a cross-attentive mechanism to merge ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: The details of STR module. 2.5 Spatial Temporal Re-embedding After the warping layer, the spatiotemporal relation between the consecutive frames may change. Specifically, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world LiDAR-scanned. Blue and purple denote the source and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Performance comparisons on the FT3Ds and KITTIs datasets. All models in the table are only trained on FT3Ds and no fine-tuning is applied ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. These datasets are preprocessed in two ways Gu et al. (2019); Liu et al. (2019): FT3Ds and KITTIs remove non-corresponding points between consecutive ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Runtime and performance of the methods evaluated on KITTIs.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Comparisons on the FT3Do and KITTIo datasets. All methods are trained only on FT3Do. Dataset Method EPE3D↓AS3D↑AR3D↑Out3D↓ FT3Do WM3DSFWang et al. (2022a) 0.0630 ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the proposed network. Firstly, semantic features are hierarchically extracted and sent to GF to achieve global embedding between the two point ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Flowchart of global flow embedding. ⊗and ⊕denote multiplication and concatenation, respectively. Specifically, within the DCA module, we employ a cross-attentive mechanism to merge ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: The details of STR module. 2.5 Spatial Temporal Re-embedding After the warping layer, the spatiotemporal relation between the consecutive frames may change. Specifically, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world LiDAR-scanned. Blue and purple denote the source and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance comparisons on the FT3Ds and KITTIs datasets. All models in the table are only trained on FT3Ds and no fine-tuning is applied ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. These datasets are preprocessed in two ways Gu et al. (2019); Liu et al. (2019): FT3Ds and KITTIs remove non-corresponding points between consecutive ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Runtime and performance of the methods evaluated on KITTIs.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Comparisons on the FT3Do and KITTIo datasets. All methods are trained only on FT3Do. Dataset Method EPE3D↓AS3D↑AR3D↑Out3D↓ FT3Do WM3DSFWang et al. (2022a) 0.0630 ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) ... | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 6 (4 Experiments) |
 | Task/environment | (2016) and three real-world datasets including Stereo-KITTI Menze et al. | reset, timeout, object/scene variation | p. 6 (4 Experiments), p. 8 (4 Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 | Primary metric/result | The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets. | numeric claim only at cited anchor | p. 8 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 Experiments - extractive PDF cue:** The best results for each dataset are marked in bold. * denotes the methods with an inference time exceeding 250 ms.
-- **p. 7 / 4 Experiments - extractive PDF cue:** (2020) 0.0694 76ms Bi-PointFlowCheng and Ko (2022) 0.0307 80ms WM3DSFWang et al.
-- **p. 7 / 4 Experiments - extractive PDF cue:** (2023) 0.0224 376ms MSBRNCheng and Ko (2023) 0.0118 275ms SSRFlow (Ours) 0.0059 101ms Table 3: Comparisons on the FT3Do and KITTIo datasets.
-- **p. 7 / 4 Experiments - extractive PDF cue:** The AdamW optimizer Loshchilov and Hutter (2017) with β1 = 0.9 and β2 = 0.99 is used for model tuning during the training phase, with ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** We train our model in an end-to-end manner for 900 epochs (or reached convergence) with batch size 8.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Model EPE3D↓Param size (M) Run time (ms) PointPWC 0.0588 7.72M 76ms PointPWC+STR 0.0504 8.02M 81ms PointPWC+STR+GF 0.0402 9.89M 96ms Bi-PointflowNet 0.0282 7.96M 80ms Bi-PointFlow+GF 0.0227 ...
+- **p. 7 / 4 Experiments - extractive body cue:** The best results for each dataset are marked in bold. * denotes the methods with an inference time exceeding 250 ms.
+- **p. 7 / 4 Experiments - extractive body cue:** (2020) 0.0694 76ms Bi-PointFlowCheng and Ko (2022) 0.0307 80ms WM3DSFWang et al.
+- **p. 7 / 4 Experiments - extractive body cue:** (2023) 0.0224 376ms MSBRNCheng and Ko (2023) 0.0118 275ms SSRFlow (Ours) 0.0059 101ms Table 3: Comparisons on the FT3Do and KITTIo datasets.
+- **p. 7 / 4 Experiments - extractive body cue:** The AdamW optimizer Loshchilov and Hutter (2017) with β1 = 0.9 and β2 = 0.99 is used for model tuning during the training phase, with ...
+- **p. 7 / 4 Experiments - extractive body cue:** We train our model in an end-to-end manner for 900 epochs (or reached convergence) with batch size 8.
+- **p. 9 / 4 Experiments - extractive body cue:** Model EPE3D↓Param size (M) Run time (ms) PointPWC 0.0588 7.72M 76ms PointPWC+STR 0.0504 8.02M 81ms PointPWC+STR+GF 0.0402 9.89M 96ms Bi-PointflowNet 0.0282 7.96M 80ms Bi-PointFlow+GF 0.0227 ...
 
 ## Generalization and Failure Cases
 
@@ -164,12 +164,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 2 Methodology - extractive PDF cue:** The KNN+Radius search strategy effectively mitigates the influence of noise points resulting from occlusion and sparsity in point clouds, as demonstrated in Sec B.2 of ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** The experimental results are listed in Table 3, which reveal the good performance of our model even with occlusion.
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 10: Ablation studies and analysis of adaption losses. From Figure 9 it can be observed that using only KNN introduces noise points that do ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Figure 11: (a) The occlusion occurs between the source frame and the target frame. In this scenario, red bounding boxes delineate points in the source ...
+- **p. 6 / 2 Methodology - extractive body cue:** The KNN+Radius search strategy effectively mitigates the influence of noise points resulting from occlusion and sparsity in point clouds, as demonstrated in Sec B.2 of ...
+- **p. 8 / 4 Experiments - extractive body cue:** The experimental results are listed in Table 3, which reveal the good performance of our model even with occlusion.
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 10: Ablation studies and analysis of adaption losses. From Figure 9 it can be observed that using only KNN introduces noise points that do ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Figure 11: (a) The occlusion occurs between the source frame and the target frame. In this scenario, red bounding boxes delineate points in the source ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), metrics p. 9 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), baselines p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 3 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), metrics p. 9 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), baselines p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 3 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

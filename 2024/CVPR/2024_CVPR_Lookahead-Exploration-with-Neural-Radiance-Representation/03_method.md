@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (3.2. Hierarchical Neural Radiance Representatio
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | During training, we randomly sample some region features and then minimize the loss between predicted features and actual CLIP embeddings, by maximizing ... | p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Then a MLPfeature network is used to aggregate the k-nearest features of Pn within radius R to produce a latent vector rn ... | p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 3 (3.2. Hierarchical Neural Radiance Representation) |
@@ -130,8 +130,17 @@ PDF body method statement (p. 5 (3.2. Hierarchical Neural Radiance Representatio
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 3 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), objective p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), temporal p. 3 (3.1. Navigation Setups), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 2 (2. Related Work), p. 3 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.3. Architecture of the Lookahead VLN model).
+- **Evidence anchors reviewed:** method p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 3 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), objective p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), temporal p. 3 (3.1. Navigation Setups), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 2 (2. Related Work), p. 3 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.3. Architecture of the Lookahead VLN model).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** together with a learnable view token V is inputted into the view encoder and output the encoded ˆR and ˆV. (p. 5, 3.2. Hierarchical Neural Radiance Representation).
+- **Objective/update evidence:** The model is optimized with the training loss αLrgbd + βLregion + γLview, where α, β, γ are the factors of proportionality. (p. 5, 3.2. Hierarchical Neural Radiance Representation).
+- **Temporal/runtime evidence:** The maximum number of action steps per episode is set to 15. (p. 5, 3.2. Hierarchical Neural Radiance Representation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

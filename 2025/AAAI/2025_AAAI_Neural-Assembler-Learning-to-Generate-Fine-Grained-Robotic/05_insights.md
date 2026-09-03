@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 The goal of the task is to generate a sequence of fine-grained assembly instructions, encompassing all parameters-such as component types, geometric poses of each component, and assembly order-in accordance with physical rules ...를 Taking multi-view images and a 3-D component library as input, Neural Assembler not only identifies each component from images but also determines its 3D pose at each step of assembly.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The operation is rolled back if the brick is unstable upon free fall.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Given that certain components in the 3D model might be entirely obscured from specific viewpoints, we employ multi-view images (e.g., typically 4 in this study) as input. (p. 1, 1 Introduction).
+- **Paper-specific mechanism:** For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust applicability. (p. 9, 4 Experiments); the relevant task/metric cue is For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape Acc and Texture Acc (shape accuracy and texture accuracy), Kps Mse (error ... (p. 7, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct keypoint identification, occlusion results in a less confident. (p. 9, 4 Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: (2022b) 7.3 21.8 Ours 34.2 58.5 Real-World Dataset LSTM Graves and Graves (2012) 7.3 21.8 DETR3D Wang et al..
-3. Compare against the body-reported baseline or a matched simpler baseline: Neural Assembler outperforms baseline models in all metrics considered..
-4. Report the body metric and its denominator/aggregation: For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape Acc and Texture Acc (shape accuracy and texture accuracy), Kps Mse (error of the ....
-5. Re-run the body-reported ablation/failure condition: Without scene consensus, it is difficult for the model to integrate information from multi-view images to obtain the overall information of each brick..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Given that certain components in the 3D model might be entirely obscured from specific viewpoints, we employ multi-view images (e.g., typically 4 in this study) as input. (p. 1, 1 Introduction); preserve the objective/update rule: Hyperparameters For training loss: L = α · Lcount + β · Lgraph + Lpose, (6) Lpose = Lkeypoint + Lmask + γ1Lrotation (7) + γ2Lshape + γ3Ltexture + γ4Lconfidence, ... (p. 12, A.2 Implementation Details).
+2. Use the paper-reported task/data/environment cue: The left box displays 4 images captured using a Realsense camera, while the right delineates the detected type, position, rotation angle of each brick, and the sequential assembly order of ... (p. 9, 4 Experiments).
+3. Compare against the reported or matched baseline: Neural Assembler outperforms baseline models in all metrics considered. (p. 7, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape Acc and Texture Acc (shape accuracy and texture accuracy), Kps Mse (error ... (p. 7, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Without scene consensus, it is difficult for the model to integrate information from multi-view images to obtain the overall information of each brick. (p. 7, 4 Experiments); if none is reported, design one around: The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct keypoint identification, occlusion results in a less confident. (p. 9, 4 Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details), p. 13 (A.2 Implementation Details); the primary result is directionally consistent at p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), and measure the boundary at p. 9 (4 Experiments), p. 12 (A.1 Dataset Generation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 novel, task, end-to-end mechanism이 Neural Assembler outperforms baseline models in all metrics considered. 대비 For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape ...을 개선하고, The operation is rolled back if the brick is unstable upon free fall. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Given that certain components in the 3D model might be entirely obscured from specific viewpoints, we employ multi-view images (e.g., typically 4 ...), does the paper-specific mechanism (For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.) retain the reported evaluation outcome (For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape ...) when tested against the paper's strongest explicit boundary (The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust applicability. (p. 9, 4 Experiments).
+- **Strongest explicit boundary:** The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct keypoint identification, occlusion results in a less confident. (p. 9, 4 Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

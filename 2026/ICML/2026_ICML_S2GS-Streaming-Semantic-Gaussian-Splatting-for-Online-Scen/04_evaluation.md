@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=CbWCaD8tRC; PDF retrieval source: https://openreview.net/pdf/fec4864d5571755c82ad1d076f9a8e3e4ca69cf8.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=CbWCaD8tRC; PDF retrieval source: https://openreview.net/pdf/fec4864d5571755c82ad1d076f9a8e3e4ca69cf8.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and joint reconstruction-and-understanding ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** Qualitative results on ScanNet dataset.
-- **p. 7 / 4.2. Results - extractive PDF cue:** Zero-shot cross-dataset comparison under 32-view input.
-- **p. 8 / 4.2. Results - extractive PDF cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Detailed sequence construction, the IoU definition, and training settings are provided in the appendix.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** S2GS: Streaming Semantic Gaussian Splatting for Online Scene Understanding and Reconstruction Table 2.
-- **p. 6 / 82.49 Method - extractive PDF cue:** For 3D scene understanding, we report per-frame semantic segmentation accuracy with mIoU, and cross-frame instance consistency using T-mIoU and T-SR.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** As shown in Table 7, geometry-semantic decoupling leads to a clear improvement in per-frame semantic accuracy and yields even larger gains in temporal instance consistency ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and joint reconstruction-and-understanding ...
+- **p. 7 / 4.2. Results - extractive body cue:** Qualitative results on ScanNet dataset.
+- **p. 7 / 4.2. Results - extractive body cue:** Zero-shot cross-dataset comparison under 32-view input.
+- **p. 8 / 4.2. Results - extractive body cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Detailed sequence construction, the IoU definition, and training settings are provided in the appendix.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** S2GS: Streaming Semantic Gaussian Splatting for Online Scene Understanding and Reconstruction Table 2.
+- **p. 6 / 82.49 Method - extractive body cue:** For 3D scene understanding, we report per-frame semantic segmentation accuracy with mIoU, and cross-frame instance consistency using T-mIoU and T-SR.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** As shown in Table 7, geometry-semantic decoupling leads to a clear improvement in per-frame semantic accuracy and yields even larger gains in temporal instance consistency ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Nevertheless, as the number of input views increases (8/14/32), S2GS consistently improves and achieves strong performance in both reconstruction quality and temporal semantic/instance consistency, ... | p. 6 (4.2. Results) |
 | 4.3. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results demonstrate that the distillation loss significantly improves reconstruction quality. | p. 8 (4.3. Ablation Studies) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and joint reconstruction-and-understanding ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** Qualitative results on ScanNet dataset.
-- **p. 7 / 4.2. Results - extractive PDF cue:** Zero-shot cross-dataset comparison under 32-view input.
-- **p. 8 / 4.2. Results - extractive PDF cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Detailed sequence construction, the IoU definition, and training settings are provided in the appendix.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** S2GS: Streaming Semantic Gaussian Splatting for Online Scene Understanding and Reconstruction Table 2.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and joint reconstruction-and-understanding ...
+- **p. 7 / 4.2. Results - extractive body cue:** Qualitative results on ScanNet dataset.
+- **p. 7 / 4.2. Results - extractive body cue:** Zero-shot cross-dataset comparison under 32-view input.
+- **p. 8 / 4.2. Results - extractive body cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Detailed sequence construction, the IoU definition, and training settings are provided in the appendix.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** S2GS: Streaming Semantic Gaussian Splatting for Online Scene Understanding and Reconstruction Table 2.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison of current-frame inference time and GPU memory usage between S2GS (Ours) and the recent advanced joint reconstruction and understanding method, SIU3R(Xu et ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of S2GS with prior paradigms for 3D re- construction and scene understanding. SC: strictly causal; RF: reprocessing-free; IS: instance-level semantics; SS: streaming ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of S2GS. S2GS processes an uncalibrated and unposed RGB image stream in a strictly causal manner. A causal Transformer encoder, guided by ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison under Long-sequence input views. Views
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Current-frame inference time and PGM under online streaming input. Views SIU3R Ours Time(s) ↓PGM(GB) ↓Time(s) ↓PGM(GB) ↓ 16 0.26
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results on ScanNet dataset. GT Ours SIU3R 64-views input. GT Ours 256-views input.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Late-stage novel view synthesis results under longer input streams.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of current-frame inference time and GPU memory usage between S2GS (Ours) and the recent advanced joint reconstruction and understanding method, SIU3R(Xu et ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Comparison of S2GS with prior paradigms for 3D re- construction and scene understanding. SC: strictly causal; RF: reprocessing-free; IS: instance-level semantics; SS: streaming ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of S2GS. S2GS processes an uncalibrated and unposed RGB image stream in a strictly causal manner. A causal Transformer encoder, guided by ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Comparison under Long-sequence input views. Views
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Current-frame inference time and PGM under online streaming input. Views SIU3R Ours Time(s) ↓PGM(GB) ↓Time(s) ↓PGM(GB) ↓ 16 0.26
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results on ScanNet dataset. GT Ours SIU3R 64-views input. GT Ours 256-views input.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Late-stage novel view synthesis results under longer input streams.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and joint ... | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results) |
 | Task/environment | Qualitative results on ScanNet dataset. | reset, timeout, object/scene variation | p. 7 (4.2. Results), p. 7 (4.2. Results) |
@@ -153,11 +153,11 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Results - extractive PDF cue:** As shown in Table 2, under the extremely sparse 2-view setting, S2GS does not achieve the best PSNR/SSIM.
-- **p. 6 / 4.2. Results - extractive PDF cue:** This is expected, since offline baselines can exploit non-causal cross-view aggregation over the full input set to better resolve view ambiguity and occlusions when observations ...
-- **p. 8 / 4.2. Results - extractive PDF cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
+- **p. 6 / 4.2. Results - extractive body cue:** As shown in Table 2, under the extremely sparse 2-view setting, S2GS does not achieve the best PSNR/SSIM.
+- **p. 6 / 4.2. Results - extractive body cue:** This is expected, since offline baselines can exploit non-causal cross-view aggregation over the full input set to better resolve view ambiguity and occlusions when observations ...
+- **p. 8 / 4.2. Results - extractive body cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), metrics p. 5 (4.1. Experimental Setup), p. 6 (82.49 Method), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results), baselines p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), results p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 7 (4.2. Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), metrics p. 5 (4.1. Experimental Setup), p. 6 (82.49 Method), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results), baselines p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), results p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 7 (4.2. Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

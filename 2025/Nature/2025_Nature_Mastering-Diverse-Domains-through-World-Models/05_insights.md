@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 The world model encodes sensory inputs into discrete representations zt that are predicted by a sequence model with recurrent state ht given actions at.를 To consider rewards beyond the prediction horizon T = 16, the critic learns to approximate the distribution of returns28 for each state under the current actor behavior: Actor: at ∼πθ(at / st) ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** These specialized algorithms target the unique challenges posed by different application domains, such as continuous control6, discrete actions7,8, sparse rewards9, image inputs10, spatial environments11, and board games12. (p. 2, Abstract).
+- **Paper-specific mechanism:** We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At ... (p. 24, Figure/Table caption); the relevant task/metric cue is We observe that all robustness techniques contribute to performance, most notably the KL objective of the world model, followed by return normalization and symexp twohot regression for reward and value ... (p. 10, Abstract). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or tasks where tuning is prohibitive. (p. 2, Abstract).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Dreamer sets a new state-of-the-art on this benchmark, outperforming D4PG, DMPO, and MPO33. • Visual Control This benchmark consists of 20 continuous control tasks where the agent receives only high-dimensional images as ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Dreamer establishes a new state-of-the-art on this benchmark, outperforming DrQ-v2 and CURL47, which are specialized to visual environments and leverage data augmentation..
-4. Report the body metric and its denominator/aggregation: Figure 16: BSuite scores visualized by category48. Dreamer exceeds previous methods in the categories scale and memory. The scale category measure robustness to reward scales. 37.
-5. Re-run the body-reported ablation/failure condition: 0 50 100 Env steps (%) 0 50 100 Return (%) 14 task mean Dreamer No obs symlog No retnorm (advnorm) No symexp twohot (Huber) No KL balance & free bits Without ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: These specialized algorithms target the unique challenges posed by different application domains, such as continuous control6, discrete actions7,8, sparse rewards9, image inputs10, spatial environments11, and board games12. (p. 2, Abstract); preserve the objective/update rule: Given a sequence batch of inputs x1:T, actions a1:T, rewards r1:T, and continuation flags c1:T, the world model parameters ϕ are optimized end-to-end to minimize the prediction loss Lpred, the ... (p. 4, Abstract).
+2. Use the paper-reported task/data/environment cue: Dreamer sets a new state-of-the-art on this benchmark, outperforming D4PG, DMPO, and MPO33. • Visual Control This benchmark consists of 20 continuous control tasks where the agent receives only high-dimensional ... (p. 9, Abstract).
+3. Compare against the reported or matched baseline: We note that these baselines were not designed for data-efficiency but serve as a valuable comparison point for the performance previously achievable at scale. (p. 8, Abstract).
+4. Report the body metric with its denominator and aggregation: We observe that all robustness techniques contribute to performance, most notably the KL objective of the world model, followed by return normalization and symexp twohot regression for reward and value ... (p. 10, Abstract).
+5. Re-run the reported ablation or stress/failure condition: Applied out of the box, Dreamer is the first algorithm to collect diamonds in Minecraft from scratch without human data or curricula. (p. 1, Abstract); if none is reported, design one around: This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or tasks where tuning is prohibitive. (p. 2, Abstract).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract); the primary result is directionally consistent at p. 24 (Figure/Table caption), p. 2 (Abstract), p. 2 (Abstract); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 2 (Abstract), match the reported outcome at p. 24 (Figure/Table caption), p. 39 (Figure/Table caption), p. 40 (Figure/Table caption), and measure the boundary at p. 2 (Abstract), p. 4 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, DreamerV3, general mechanism이 Dreamer establishes a new state-of-the-art on this benchmark, outperforming DrQ-v2 and CURL47, which are specialized to ... 대비 Figure 16: BSuite scores visualized by category48. Dreamer exceeds previous methods in the categories scale and memory. The ...을 개선하고, Importantly, the network can output any continuous value in the interval because the weighted average can ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (These specialized algorithms target the unique challenges posed by different application domains, such as continuous control6, discrete actions7,8, sparse rewards9, image inputs10, ...), does the paper-specific mechanism (We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.) retain the reported evaluation outcome (We observe that all robustness techniques contribute to performance, most notably the KL objective of the world model, ...) when tested against the paper's strongest explicit boundary (This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We observe that all robustness techniques contribute to performance, most notably the KL objective of the world model, ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration. (p. 1, Abstract).
+- **Paper-supported outcome:** Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At ... (p. 24, Figure/Table caption).
+- **Strongest explicit boundary:** This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or tasks where tuning is prohibitive. (p. 2, Abstract).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

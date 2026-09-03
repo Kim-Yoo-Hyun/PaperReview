@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=3eTr9dGwJv; PDF retrieval source: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=3eTr9dGwJv; PDF retrieval source: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | To address these limitations, we introduce MomaGraph-Scenes, the first dataset designed to provide a more comprehensive and task-relevant scene representation. | p. 6 (4 METHOD), p. 6 (4 METHOD) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | After the agent executes an action at and observes the new environment state st+1, the scene graph is refined as: G(t+1) T ... | p. 6 (4 METHOD), p. 5 (4 METHOD) |
@@ -85,12 +85,12 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Beyond these core capabilities, we further design tasks on Dynamic Verification and Long-horizon Task Decomposition to evaluate temporal reasoning and multi-steps planning. | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | Formally, at time step t, the task-oriented scene graph is represented as: G(t) T =  N (t) T , ET ,(t) s ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
-| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | Published as a conference paper at ICLR 2026 Table 4: DAPO Training Configuration Parameter Value Model Configuration Base Model Qwen2.5-VL-7B-Instruct Mixed Precision ... | hardware, batch and throughput |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- **p. 21 / A.4.1 BENCHMARK DESIGN - extractive body cue:** Published as a conference paper at ICLR 2026 Table 4: DAPO Training Configuration Parameter Value Model Configuration Base Model Qwen2.5-VL-7B-Instruct Mixed Precision bfloat16 Training Setup ...
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p. 5 (4 METHOD), p. 19 (A.3 TRAINING CURVE), p. 7 (4 METHOD), objective p. 5 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p. 19 (A.3 TRAINING CURVE), p. 19 (A.3 TRAINING CURVE), p. 6 (4 METHOD), temporal p. 8 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p. 11 (6 EXPERIMENTS), p. 8 (4 METHOD), p. 9 (6 EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p. 5 (4 METHOD), p. 19 (A.3 TRAINING CURVE), p. 7 (4 METHOD), objective p. 5 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p. 19 (A.3 TRAINING CURVE), p. 19 (A.3 TRAINING CURVE), p. 6 (4 METHOD), temporal p. 8 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p. 8 (4 METHOD), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Reinforcement learning offers a more principled approach by encouraging the model to explore, reason, and iteratively refine its representations through outcome-driven feedback. (p. 5, 4 METHOD).
+- **Objective/update evidence:** The overall reward converges to ∼0.93, while accuracy reward stabilizes at ∼0.9. (p. 19, A.3 TRAINING CURVE).
+- **Temporal/runtime evidence:** Our evaluation framework examines six essential reasoning capabilities in four tiers of difficulty levels: (1) Action Sequence Reasoning, (2) 7 (p. 7, 4 METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

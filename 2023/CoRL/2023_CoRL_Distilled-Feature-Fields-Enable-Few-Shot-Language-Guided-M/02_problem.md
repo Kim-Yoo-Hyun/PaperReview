@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html; PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html; PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction)): What form of sc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | What form of scene representation would facilitate open-set generalization for robotic manipulation systems? | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | The robot then references demonstrations and language instructions to grasp objects specified by a user (Figure 1, right). | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The robot then references demonstrations and language instructions to grasp objects specified by a user (Figure 1, right). | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | needed, because, CLIP, uses, small, fixed, number, input | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
+| Output / action | First, produce, feature, field, scene, automatically, reasonable, speed | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | image/point input I/P and pose; body terms: robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user | p. 1 (1 Introduction), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation) |
+| State / observation variable | image/point input I/P and pose; body terms: robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user | p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation) |
 | Decision / output variable | geometry/map/query r; body terms: Feature, Fields, Robotic, Manipulation, F3RM, present, distilling, pre-trained | p. 3 (3. Language-Guided Manipulation), p. 1 (Abstract), p. 1 (1 Introduction) |
 | Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: optimize, minimizing, quadratic, loss, Lfeat, initial, poses, following | p. 6 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 5 (6 DOF Gripper Pose) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 6 (6 DOF Gripper Pose) |
 | Success / guarantee | spatial accuracy and downstream robot utility | p. 7 (4 Results), p. 6 (4 Results), p. 7 (4 Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,10 +46,10 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction)): What form of sc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (3. Language-Guided Manipulation), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (3. Language-Guided Manipulation), p. 2 (3. Language-Guided Manipulation)): 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields ...
+PDF body contribution framing (p. 3 (3. Language-Guided Manipulation), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (3. Language-Guided Manipulation), p. 2 (3. Language-Guided Manipulation)): 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields ...
 
 - **p. 1 / Abstract - extractive body cue:** Using features distilled from a vision-language model, CLIP, we present a way to designate novel objects for manipulation via free-text natural language, and demonstrate its ...
-- **p. 1 / 1 Introduction - extractive body cue:** We also source features *Equal contribution.
+- **p. 1 / 1 Introduction - extractive body cue:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation.
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** During learning, each demonstration D consists of the tuple ⟨{I}, T∗⟩, where {I}N i=1 are N RGB camera views of the scene and T∗is a ...
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** We present few-shot learning experiments on grasping and placing tasks, where our robot is able to handle open-set generalization to objects that differ significantly in ...
 
@@ -66,12 +66,21 @@ PDF contribution framing (p. 3 (3. Language-Guided Manipulation), p. 1 (Abstract
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1 Introduction), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), interface p. 1 (1 Introduction), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), objective p. 6 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 5 (6 DOF Gripper Pose).
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), interface p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), objective p. 6 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 5 (6 DOF Gripper Pose).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Many robotic tasks, however, require a detailed understanding of 3D geometry, which is often lacking in 2D image features. (p. 1, Abstract).
+- **Formulation-changing contribution:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation. (p. 1, 1 Introduction).
+- **Assumption/failure evidence:** The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

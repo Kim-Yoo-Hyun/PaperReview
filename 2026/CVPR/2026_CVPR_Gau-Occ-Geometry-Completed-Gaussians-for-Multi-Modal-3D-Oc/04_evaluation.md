@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Datasets and Metrics - extractive PDF cue:** We evaluate Gau-Occ on three widely adopted benchmarks: SurroundOcc-nuScenes [2, 46], Occ3DnuScenes [40], and KITTI-360 [28].
-- **p. 6 / 4.2. Quantitative Results - extractive PDF cue:** Quantitative comparison on Occ3D-nuScenes validation set.
-- **p. 7 / 4.3. Qualitative Comparison - extractive PDF cue:** Qualitative results on the Occ3D-nuScenes validation set.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Ablation on the SurroundOcc-nuScenes validation set.
-- **p. 5 / 4.2. Quantitative Results - extractive PDF cue:** Results on the validation split are reported in Tab.
-- **p. 6 / 4.2. Quantitative Results - extractive PDF cue:** Multimodal baselines are scarce on this dataset.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** IoU↑ mIoU↑ 1 P DS + RS 41.5 29.6 2 PD(P) DS + RS 43.1 31.9 3 P′ RS 43.9 32.4 4 P′ DS + ...
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** This approach balances structural concentration with broad scene coverage, enabling better reconstruction of far-range and easily overlooked object, such as drivable surfaces and cars.
+- **p. 5 / 4.1. Datasets and Metrics - extractive body cue:** We evaluate Gau-Occ on three widely adopted benchmarks: SurroundOcc-nuScenes [2, 46], Occ3DnuScenes [40], and KITTI-360 [28].
+- **p. 6 / 4.2. Quantitative Results - extractive body cue:** Quantitative comparison on Occ3D-nuScenes validation set.
+- **p. 7 / 4.3. Qualitative Comparison - extractive body cue:** Qualitative results on the Occ3D-nuScenes validation set.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Ablation on the SurroundOcc-nuScenes validation set.
+- **p. 5 / 4.2. Quantitative Results - extractive body cue:** Results on the validation split are reported in Tab.
+- **p. 6 / 4.2. Quantitative Results - extractive body cue:** Multimodal baselines are scarce on this dataset.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** IoU↑ mIoU↑ 1 P DS + RS 41.5 29.6 2 PD(P) DS + RS 43.1 31.9 3 P′ RS 43.9 32.4 4 P′ DS + ...
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** This approach balances structural concentration with broad scene coverage, enabling better reconstruction of far-range and easily overlooked object, such as drivable surfaces and cars.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Across modalities, LiDARonly approaches generally outperform camera-only methods due to geometric cues, and multi-modal systems further improve performance. | p. 5 (4.2. Quantitative Results) |
 | 4.2. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Gau-Occ achieves a new state of the art with 55.1 mIoU, surpassing DAOcc by +0.8, SDGOcc by +3.4, and even outperforming radar-augmented OccFusion by ... | p. 5 (4.2. Quantitative Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Datasets and Metrics - extractive PDF cue:** We evaluate Gau-Occ on three widely adopted benchmarks: SurroundOcc-nuScenes [2, 46], Occ3DnuScenes [40], and KITTI-360 [28].
-- **p. 6 / 4.2. Quantitative Results - extractive PDF cue:** Quantitative comparison on Occ3D-nuScenes validation set.
-- **p. 7 / 4.3. Qualitative Comparison - extractive PDF cue:** Qualitative results on the Occ3D-nuScenes validation set.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Ablation on the SurroundOcc-nuScenes validation set.
-- **p. 5 / 4.2. Quantitative Results - extractive PDF cue:** Results on the validation split are reported in Tab.
-- **p. 6 / 4.2. Quantitative Results - extractive PDF cue:** Multimodal baselines are scarce on this dataset.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** IoU↑ mIoU↑ 1 P DS + RS 41.5 29.6 2 PD(P) DS + RS 43.1 31.9 3 P′ RS 43.9 32.4 4 P′ DS + ...
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** This approach balances structural concentration with broad scene coverage, enabling better reconstruction of far-range and easily overlooked object, such as drivable surfaces and cars.
+- **p. 5 / 4.1. Datasets and Metrics - extractive body cue:** We evaluate Gau-Occ on three widely adopted benchmarks: SurroundOcc-nuScenes [2, 46], Occ3DnuScenes [40], and KITTI-360 [28].
+- **p. 6 / 4.2. Quantitative Results - extractive body cue:** Quantitative comparison on Occ3D-nuScenes validation set.
+- **p. 7 / 4.3. Qualitative Comparison - extractive body cue:** Qualitative results on the Occ3D-nuScenes validation set.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Ablation on the SurroundOcc-nuScenes validation set.
+- **p. 5 / 4.2. Quantitative Results - extractive body cue:** Results on the validation split are reported in Tab.
+- **p. 6 / 4.2. Quantitative Results - extractive body cue:** Multimodal baselines are scarce on this dataset.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** IoU↑ mIoU↑ 1 P DS + RS 41.5 29.6 2 PD(P) DS + RS 43.1 31.9 3 P′ RS 43.9 32.4 4 P′ DS + ...
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** This approach balances structural concentration with broad scene coverage, enabling better reconstruction of far-range and easily overlooked object, such as drivable surfaces and cars.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of Gau-Occ. Sparse LiDAR scans are first completed by a pretrained LiDAR Completion Diffuser (LCD) to recover occluded geometry. The completed points ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Hybrid Gaussian initialization. Left: raw sparse Li- DAR input. Middle: completed point cloud P′ from LCD. Right: initialized Gaussian centers derived from P′, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Schematic of geometry-aware image token resampling and modulation. N = V × L × N off is the total number of samples. As ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on SurroundOcc-nuScenes validation set. The best results are in bold, second best are underlined.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison on Occ3D-nuScenes validation set. The best results are in bold, second best are underlined.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on the SurroundOcc-nuScenes validation set. Top: multi-view images (left), LiDAR input (center), and predicted image-view occupancy (right). Bottom: predicted 3D Gaussians, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative results on the Occ3D-nuScenes validation set. Top: predicted occupancy. Bottom: ground-truth. introducing holes in ground or object regions. These obser- vations support ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparison between Gaussianformer-2 [16], DAOcc [49] and Gau-Occ on the SurroundOcc-nuScenes validation set.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of Gau-Occ. Sparse LiDAR scans are first completed by a pretrained LiDAR Completion Diffuser (LCD) to recover occluded geometry. The completed points ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Hybrid Gaussian initialization. Left: raw sparse Li- DAR input. Middle: completed point cloud P′ from LCD. Right: initialized Gaussian centers derived from P′, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Schematic of geometry-aware image token resampling and modulation. N = V × L × N off is the total number of samples. As ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on SurroundOcc-nuScenes validation set. The best results are in bold, second best are underlined.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison on Occ3D-nuScenes validation set. The best results are in bold, second best are underlined.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on the SurroundOcc-nuScenes validation set. Top: multi-view images (left), LiDAR input (center), and predicted image-view occupancy (right). Bottom: predicted 3D Gaussians, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results on the Occ3D-nuScenes validation set. Top: predicted occupancy. Bottom: ground-truth. introducing holes in ground or object regions. These obser- vations support ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparison between Gaussianformer-2 [16], DAOcc [49] and Gau-Occ on the SurroundOcc-nuScenes validation set.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate Gau-Occ on three widely adopted benchmarks: SurroundOcc-nuScenes [2, 46], Occ3DnuScenes [40], and KITTI-360 [28]. | embodiment, simulator version and control stack | p. 5 (4.1. Datasets and Metrics), p. 6 (4.2. Quantitative Results) |
 | Task/environment | Quantitative comparison on Occ3D-nuScenes validation set. | reset, timeout, object/scene variation | p. 6 (4.2. Quantitative Results), p. 7 (4.3. Qualitative Comparison) |
@@ -123,9 +123,9 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 | Primary metric/result | Gau-Occ achieves a new state of the art with 55.1 mIoU, surpassing DAOcc by +0.8, SDGOcc by +3.4, and even outperforming radar-augmented OccFusion by ... | numeric claim only at cited anchor | p. 5 (4.2. Quantitative Results) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** We further conduct a comprehensive ablation study on the GAF module, focusing on two core components governing cross-modal fusion: (1) GGS (Geometry-Guided Sampling), which conditions ...
-- **p. 4 / 3.4. Gaussian Anchor Fusion (GAF) - extractive PDF cue:** The completed LiDAR cloud P′ is voxelized into a sparse grid of size D ×H ×W, keeping at most Tp = 10 points per voxel ...
-- **p. 5 / 3.4. Gaussian Anchor Fusion (GAF) - extractive PDF cue:** 3, instead of applying another attention block, we aggregate them via a geometry-aware VLAD-style [17] resampler using codewords {Cm}M m=1 that act as learnable semantic ...
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** We further conduct a comprehensive ablation study on the GAF module, focusing on two core components governing cross-modal fusion: (1) GGS (Geometry-Guided Sampling), which conditions ...
+- **p. 4 / 3.4. Gaussian Anchor Fusion (GAF) - extractive body cue:** The completed LiDAR cloud P′ is voxelized into a sparse grid of size D ×H ×W, keeping at most Tp = 10 points per voxel ...
+- **p. 5 / 3.4. Gaussian Anchor Fusion (GAF) - extractive body cue:** 3, instead of applying another attention block, we aggregate them via a geometry-aware VLAD-style [17] resampler using codewords {Cm}M m=1 that act as learnable semantic ...
 
 ## Generalization and Failure Cases
 
@@ -160,13 +160,13 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.2. Quantitative Results - extractive PDF cue:** Gau-Occ also achieves clear gains on safety-critical classes such as bus, car, bicycle, and motorcycle, benefiting from precise Geo-VLAD resampling and geometry-aware FiLM modulation that ...
-- **p. 6 / 4.3. Qualitative Comparison - extractive PDF cue:** On KITTI-360, under challenging singlecamera + LiDAR setting, Gau-Occ maps both large layouts and small instances accurately, demonstrating robustness to sparse viewpoints and effective use ...
-- **p. 7 / 4.3. Qualitative Comparison - extractive PDF cue:** These observations support Gau-Occ's geometry-complete representation and its robust multi-modal aggregation pipeline.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** The full GAF configuration (Row 4) achieves optimal results, validating the necessity of both geometry-guided sampling and refinement in building a robust multi-modal representation.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Replacing GGS with geometry-agnostic sampling (Row 2) degrades long-range feature association, underscoring the importance of LiDARconditioned offsets in maintaining spatial and semantic conFigure 8.
+- **p. 5 / 4.2. Quantitative Results - extractive body cue:** Gau-Occ also achieves clear gains on safety-critical classes such as bus, car, bicycle, and motorcycle, benefiting from precise Geo-VLAD resampling and geometry-aware FiLM modulation that ...
+- **p. 6 / 4.3. Qualitative Comparison - extractive body cue:** On KITTI-360, under challenging singlecamera + LiDAR setting, Gau-Occ maps both large layouts and small instances accurately, demonstrating robustness to sparse viewpoints and effective use ...
+- **p. 7 / 4.3. Qualitative Comparison - extractive body cue:** These observations support Gau-Occ's geometry-complete representation and its robust multi-modal aggregation pipeline.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** The full GAF configuration (Row 4) achieves optimal results, validating the necessity of both geometry-guided sampling and refinement in building a robust multi-modal representation.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Replacing GGS with geometry-agnostic sampling (Row 2) degrades long-range feature association, underscoring the importance of LiDARconditioned offsets in maintaining spatial and semantic conFigure 8.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Datasets and Metrics), p. 6 (4.2. Quantitative Results), p. 7 (4.3. Qualitative Comparison), p. 8 (4.4. Ablation Study), p. 5 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), metrics p. 7 (4.4. Ablation Study), p. 5 (4.1. Datasets and Metrics), p. 5 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), baselines p. 6 (4.2. Quantitative Results), p. 6 (4.3. Qualitative Comparison), p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), results p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets and Metrics), p. 6 (4.2. Quantitative Results), p. 7 (4.3. Qualitative Comparison), p. 8 (4.4. Ablation Study), p. 5 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), metrics p. 7 (4.4. Ablation Study), p. 5 (4.1. Datasets and Metrics), p. 5 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), baselines p. 6 (4.2. Quantitative Results), p. 6 (4.3. Qualitative Comparison), p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), results p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

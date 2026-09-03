@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Abstract | SYSTEM / EVALUATION SCOPE UNRESOLVED | If the above can be achieved, then 0 can usually be assured to converge to a locally optimal policy in the performance measure p. | p. 2 (Abstract) |
 | Abstract | SYSTEM / EVALUATION SCOPE UNRESOLVED | For example, Jaakkola, Singh, and Jordan (1995) proved that for the special case of function approximation arising in a tabular POMDP one could assure ... | p. 4 (Abstract) |
@@ -48,11 +48,11 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The environment's dynamics are characterized by state transition probabilities, P:SI = Pr { St+ 1 = Sf I St = s, at = a}, ... | embodiment, simulator version and control stack | p. 2 (Abstract), p. 3 (Abstract) |
 | Task/environment | Policy Gradient Methods for RL with Function Approximation 1059 With function approximation, two ways of formulating the agent's objective are useful. | reset, timeout, object/scene variation | p. 3 (Abstract), p. 3 (Abstract) |
@@ -138,7 +138,16 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract
 - **p. 3 / Abstract - extractive body cue:** In any event, the key aspect of both expressions for the gradient is that their are no terms of the form adiJII): the effect of ...
 - **p. 5 / Abstract - extractive body cue:** (This follows immediately because l:a 87r~~a) = 0, Vs E S.) The choice of v does not affect any of our theorems, but can substantially ...
 
-- **PDF anchors reviewed:** datasets p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), metrics p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), baselines p. 5 (Abstract), p. 2 (Abstract), p. 5 (Abstract), results p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
+- **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), metrics p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), baselines p. 5 (Abstract), p. 2 (Abstract), p. 5 (Abstract), results p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract).
+- **Metric evidence:** However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract).
+- **Baseline/ablation evidence:** Williams's (1988, 1992) REINFORCE algorithm also finds an unbiased estimate of the gradient, but without the assistance of a learned value function. (p. 2, Abstract).
+- **Failure/negative evidence:** The value-function approach has worked well in many applications, but has several limitations. (p. 1, Abstract).

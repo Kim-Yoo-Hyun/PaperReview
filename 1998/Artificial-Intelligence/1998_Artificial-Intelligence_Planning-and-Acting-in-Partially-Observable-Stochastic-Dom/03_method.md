@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X; PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X; PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | The resulting algorithm might be called the two-pass algorithm [9], and, its form is much like the witness algorithm because it first ... | p. 23 (4.5. Alternative Approaches), p. 19 (44 The Witness Algorithm) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | This is because maximizing over actions and then policy trees is the same as maximizing over the pooled sets of policy trees. | p. 19 (44 The Witness Algorithm), p. 7 (2.9 Computing an Optimal Policy) |
@@ -85,12 +85,12 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | As the horizon ¢ increases, the rewards received for the final few steps have decreasing influence on the situation-action mappings for earlier ... | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | A stationary policy, 7: S + A, isa situation-action mapping that specifies, for each state, an action to be taken. ‘The choice ... | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | Vi(b), we can express (Q(b) (recall that this is the value of taking action a in belief state b and continuing optimally ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 23 (4.5. Alternative Approaches), p. 19 (44 The Witness Algorithm), p. 7 (2.9 Computing an Optimal Policy), p. 23 (4.5. Alternative Approaches), p. 18 (44 The Witness Algorithm), p. 18 (44 The Witness Algorithm), objective p. 19 (44 The Witness Algorithm), p. 19 (44 The Witness Algorithm), p. 12 (3.4 Finding an Optimal Policy), p. 12 (3.4 Finding an Optimal Policy), p. 23 (4.5. Alternative Approaches), p. 24 (4.5. Alternative Approaches), temporal p. 28 (5.3 Infinite-Horizon Policies), p. 5 (2.2 Acting Optimally), p. 25 (5.2. Finite-Horizon Policies), p. 26 (5.2. Finite-Horizon Policies), p. 28 (5.3 Infinite-Horizon Policies), p. 4 (2.2 Acting Optimally).
+- **Evidence anchors reviewed:** method p. 23 (4.5. Alternative Approaches), p. 19 (44 The Witness Algorithm), p. 7 (2.9 Computing an Optimal Policy), p. 23 (4.5. Alternative Approaches), p. 18 (44 The Witness Algorithm), p. 18 (44 The Witness Algorithm), objective p. 19 (44 The Witness Algorithm), p. 19 (44 The Witness Algorithm), p. 12 (3.4 Finding an Optimal Policy), p. 12 (3.4 Finding an Optimal Policy), p. 23 (4.5. Alternative Approaches), p. 24 (4.5. Alternative Approaches), temporal p. 28 (5.3 Infinite-Horizon Policies), p. 5 (2.2 Acting Optimally), p. 25 (5.2. Finite-Horizon Policies), p. 26 (5.2. Finite-Horizon Policies), p. 28 (5.3 Infinite-Horizon Policies), p. 4 (2.2 Acting Optimally).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Tt makes use of an aundliary function, Q/(s), which is the tstep value of starting in state s, taking action a, then continuing with the optimal (t-1)= step norstationary policy. (p. 7, 2.9 Computing an Optimal Policy).
+- **Objective/update evidence:** Tn what sense is the witness algorithm superior to previous algorithms for solving Pompps, then? (p. 18, 44 The Witness Algorithm).
+- **Temporal/runtime evidence:** One such framework is finito-horizon optimality, (p. 4, 2.2 Acting Optimally).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

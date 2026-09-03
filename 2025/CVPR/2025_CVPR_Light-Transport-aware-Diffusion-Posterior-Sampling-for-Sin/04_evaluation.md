@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.6. Recovering Light Conditions), p. 7 (5
 
 ## Evaluation Body Digest
 
-- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive PDF cue:** First, we create a dataset consisting of 1,000 synthetic clouds using the JangaFX fluid simulator [21].
-- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive PDF cue:** 5 demonstrates this with a cloud from the Cloudy dataset, which is rendered with an environmental sky model Figure 5.
-- **p. 8 / 5.5. Comparative Evaluation - extractive PDF cue:** The table shows average values over 32 test cases, each constructed using clouds, materials, cameras, and environment settings sampled from 16 unseen clouds, 3 distinct ...
-- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive PDF cue:** The simulator is configured to emulate the evolution and dynamics of gaseous substances, capturing realistic buoyancy, turbulence, and diffusion essential for producing the lifelike flow ...
-- **p. 7 / 5.5. Comparative Evaluation - extractive PDF cue:** The reconstructions using DRT and SPS show that while both techniques can overfit to a single view, they struggle to constrain unseen parts of the ...
-- **p. 8 / 5.5. Comparative Evaluation - extractive PDF cue:** Bottom: Evolution of the recovered background (top) and environment (bottom).
-- **p. 8 / 5.6. Recovering Light Conditions - extractive PDF cue:** Experimental results demonstrate that our approach provides robust generalization and achieves quality and performance that significantly exceed existing methods.
-- **p. 6 / 5. Results - extractive PDF cue:** In this section, we demonstrate the effectiveness of our method for different use cases.
+- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive body cue:** First, we create a dataset consisting of 1,000 synthetic clouds using the JangaFX fluid simulator [21].
+- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive body cue:** 5 demonstrates this with a cloud from the Cloudy dataset, which is rendered with an environmental sky model Figure 5.
+- **p. 8 / 5.5. Comparative Evaluation - extractive body cue:** The table shows average values over 32 test cases, each constructed using clouds, materials, cameras, and environment settings sampled from 16 unseen clouds, 3 distinct ...
+- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive body cue:** The simulator is configured to emulate the evolution and dynamics of gaseous substances, capturing realistic buoyancy, turbulence, and diffusion essential for producing the lifelike flow ...
+- **p. 7 / 5.5. Comparative Evaluation - extractive body cue:** The reconstructions using DRT and SPS show that while both techniques can overfit to a single view, they struggle to constrain unseen parts of the ...
+- **p. 8 / 5.5. Comparative Evaluation - extractive body cue:** Bottom: Evolution of the recovered background (top) and environment (bottom).
+- **p. 8 / 5.6. Recovering Light Conditions - extractive body cue:** Experimental results demonstrate that our approach provides robust generalization and achieves quality and performance that significantly exceed existing methods.
+- **p. 6 / 5. Results - extractive body cue:** In this section, we demonstrate the effectiveness of our method for different use cases.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.6. Recovering Light Conditions), p. 7 (5
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.6. Recovering Light Conditions | EMPIRICAL / SIMULATION | Experimental results demonstrate that our approach provides robust generalization and achieves quality and performance that significantly exceed existing methods. | p. 8 (5.6. Recovering Light Conditions) |
 | 5.5. Comparative Evaluation | EMPIRICAL / SIMULATION | Since both DRT and SPS require multiple views to achieve accurate results, we tested with one and three images for the reconstructions. | p. 7 (5.5. Comparative Evaluation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (5.6. Recovering Light Conditions), p. 7 (5
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive PDF cue:** First, we create a dataset consisting of 1,000 synthetic clouds using the JangaFX fluid simulator [21].
-- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive PDF cue:** 5 demonstrates this with a cloud from the Cloudy dataset, which is rendered with an environmental sky model Figure 5.
-- **p. 8 / 5.5. Comparative Evaluation - extractive PDF cue:** The table shows average values over 32 test cases, each constructed using clouds, materials, cameras, and environment settings sampled from 16 unseen clouds, 3 distinct ...
-- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive PDF cue:** The simulator is configured to emulate the evolution and dynamics of gaseous substances, capturing realistic buoyancy, turbulence, and diffusion essential for producing the lifelike flow ...
-- **p. 7 / 5.5. Comparative Evaluation - extractive PDF cue:** The reconstructions using DRT and SPS show that while both techniques can overfit to a single view, they struggle to constrain unseen parts of the ...
-- **p. 8 / 5.5. Comparative Evaluation - extractive PDF cue:** Bottom: Evolution of the recovered background (top) and environment (bottom).
+- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive body cue:** First, we create a dataset consisting of 1,000 synthetic clouds using the JangaFX fluid simulator [21].
+- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive body cue:** 5 demonstrates this with a cloud from the Cloudy dataset, which is rendered with an environmental sky model Figure 5.
+- **p. 8 / 5.5. Comparative Evaluation - extractive body cue:** The table shows average values over 32 test cases, each constructed using clouds, materials, cameras, and environment settings sampled from 16 unseen clouds, 3 distinct ...
+- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive body cue:** The simulator is configured to emulate the evolution and dynamics of gaseous substances, capturing realistic buoyancy, turbulence, and diffusion essential for producing the lifelike flow ...
+- **p. 7 / 5.5. Comparative Evaluation - extractive body cue:** The reconstructions using DRT and SPS show that while both techniques can overfit to a single view, they struggle to constrain unseen parts of the ...
+- **p. 8 / 5.5. Comparative Evaluation - extractive body cue:** Bottom: Evolution of the recovered background (top) and environment (bottom).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Given a single view (y) of a volume (V ), we reconstruct a volume ( ˆV ) from its latent representation (θ) that ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Top images: Cloudy Dataset - Photorealistic renderings of randomly selected clouds from our dataset, illustrating natural variations and details. Bottom images: Diffusion-based cloud ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Implicit monoplanar representation. which are rendered under different lighting conditions. The density fields are numerically simulated on regular 3D grids at a resolution ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Diffusion Sampling. First column: A cloud from the Cloudy dataset. Subsequent columns show clouds generated by our diffusion model. First row shows the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Diffusion Posterior Sampling. Given an observation and a differentiable process (differentiable volume rendering in our application), the denoising process is guided step-by-step to- ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quality metrics for different latent representations. 16168
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparison. Left: Cross-sections of a cloud and its reconstructions using different latent representations are shown. Right: Convergence graphs of the reconstruction loss ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Cloud Super-Resolution. From a cloud on a 32×16×32 grid (center), the diffuser reconstructs a density distribution on a 256 × 128 × 256 ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Given a single view (y) of a volume (V ), we reconstruct a volume ( ˆV ) from its latent representation (θ) that ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Top images: Cloudy Dataset - Photorealistic renderings of randomly selected clouds from our dataset, illustrating natural variations and details. Bottom images: Diffusion-based cloud ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Implicit monoplanar representation. which are rendered under different lighting conditions. The density fields are numerically simulated on regular 3D grids at a resolution ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Diffusion Sampling. First column: A cloud from the Cloudy dataset. Subsequent columns show clouds generated by our diffusion model. First row shows the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Diffusion Posterior Sampling. Given an observation and a differentiable process (differentiable volume rendering in our application), the denoising process is guided step-by-step to- ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quality metrics for different latent representations. 16168
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparison. Left: Cross-sections of a cloud and its reconstructions using different latent representations are shown. Right: Convergence graphs of the reconstruction loss ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Cloud Super-Resolution. From a cloud on a 32×16×32 grid (center), the diffuser reconstructs a density distribution on a 256 × 128 × 256 ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | First, we create a dataset consisting of 1,000 synthetic clouds using the JangaFX fluid simulator [21]. | embodiment, simulator version and control stack | p. 4 (4.1. Cloudy - a 3D Clouds Dataset), p. 6 (5.1. Diffusion Posterior Sampling) |
 | Task/environment | 5 demonstrates this with a cloud from the Cloudy dataset, which is rendered with an environmental sky model Figure 5. | reset, timeout, object/scene variation | p. 6 (5.1. Diffusion Posterior Sampling), p. 8 (5.5. Comparative Evaluation) |
@@ -113,12 +113,12 @@ PDF body evaluation/result cue (p. 8 (5.6. Recovering Light Conditions), p. 7 (5
 | Primary metric/result | Since both DRT and SPS require multiple views to achieve accurate results, we tested with one and three images for the reconstructions. | numeric claim only at cited anchor | p. 7 (5.5. Comparative Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.2. Monoplanar Representation - extractive PDF cue:** All representations use the same number of parameters for the latent, i.e.: Monoplanar 128 × 128 × 32, Triplanar 3×128×128×11, and Grid 32×32×32×16.
-- **p. 7 / 5.2. Monoplanar Representation - extractive PDF cue:** Right: Convergence graphs of the reconstruction loss over 50,000 steps, measured at 128K uniform sampled positions.
-- **p. 7 / 5.2. Monoplanar Representation - extractive PDF cue:** While PSNR, RMSE, and MAE consider the full volume at 256×128×256 resolution, SSIM [71] considers the center slice.
-- **p. 7 / 5.4. Cloud Recovery from Transmittance Measures - extractive PDF cue:** From a cloud on a 32×16×32 grid (center), the diffuser reconstructs a density distribution on a 256 × 128 × 256 grid (right).
-- **p. 8 / 5.5. Comparative Evaluation - extractive PDF cue:** Target+ Target+ Target Test View DRT1 0.0275 30 min 11 s 0.3918 DRT3 0.0247 47 min 33 s 0.1361 SPS1 0.0132 30 min 24 s ...
-- **p. 8 / 5.5. Comparative Evaluation - extractive PDF cue:** Target Test View Background 0.0323 11 min 57 s 0.1131 Environment 0.0342 27 min 2 s 0.1740 Figure 10.
+- **p. 6 / 5.2. Monoplanar Representation - extractive body cue:** All representations use the same number of parameters for the latent, i.e.: Monoplanar 128 × 128 × 32, Triplanar 3×128×128×11, and Grid 32×32×32×16.
+- **p. 7 / 5.2. Monoplanar Representation - extractive body cue:** Right: Convergence graphs of the reconstruction loss over 50,000 steps, measured at 128K uniform sampled positions.
+- **p. 7 / 5.2. Monoplanar Representation - extractive body cue:** While PSNR, RMSE, and MAE consider the full volume at 256×128×256 resolution, SSIM [71] considers the center slice.
+- **p. 7 / 5.4. Cloud Recovery from Transmittance Measures - extractive body cue:** From a cloud on a 32×16×32 grid (center), the diffuser reconstructs a density distribution on a 256 × 128 × 256 grid (right).
+- **p. 8 / 5.5. Comparative Evaluation - extractive body cue:** Target+ Target+ Target Test View DRT1 0.0275 30 min 11 s 0.3918 DRT3 0.0247 47 min 33 s 0.1361 SPS1 0.0132 30 min 24 s ...
+- **p. 8 / 5.5. Comparative Evaluation - extractive body cue:** Target Test View Background 0.0323 11 min 57 s 0.1131 Environment 0.0342 27 min 2 s 0.1740 Figure 10.
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 8 (5.6. Recovering Light Conditions), p. 7 (5
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive PDF cue:** While an exact match with the given observation cannot be achieved - since the denoiser cannot perfectly reproduce the corresponding 3D cloud - the reconstruction ...
-- **p. 8 / 5.6. Recovering Light Conditions - extractive PDF cue:** A notable limitation is the ambiguity between what is represented by θ and ϕ.
-- **p. 8 / 5.6. Recovering Light Conditions - extractive PDF cue:** If no proper regularization for ϕ is applied, the interleaved optimization of θ and ϕ may fall into local minima.
-- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive PDF cue:** To add natural randomness and represent diverse distributions of warm columns to the clouds, we apply Perlin noise functions and varied particle emission shapes.
-- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive PDF cue:** The result shows how the denoiser is guided by the cloud's appearance, which is considered by the differentiable renderer, rather than performing unconditional denoising based ...
-- **p. 7 / 5.5. Comparative Evaluation - extractive PDF cue:** The last setting aligns with diffuse-denoise strategies, progressively adjusting the initial noise toward the observed data to improve guidance stability.
+- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive body cue:** While an exact match with the given observation cannot be achieved - since the denoiser cannot perfectly reproduce the corresponding 3D cloud - the reconstruction ...
+- **p. 8 / 5.6. Recovering Light Conditions - extractive body cue:** A notable limitation is the ambiguity between what is represented by θ and ϕ.
+- **p. 8 / 5.6. Recovering Light Conditions - extractive body cue:** If no proper regularization for ϕ is applied, the interleaved optimization of θ and ϕ may fall into local minima.
+- **p. 4 / 4.1. Cloudy - a 3D Clouds Dataset - extractive body cue:** To add natural randomness and represent diverse distributions of warm columns to the clouds, we apply Perlin noise functions and varied particle emission shapes.
+- **p. 6 / 5.1. Diffusion Posterior Sampling - extractive body cue:** The result shows how the denoiser is guided by the cloud's appearance, which is considered by the differentiable renderer, rather than performing unconditional denoising based ...
+- **p. 7 / 5.5. Comparative Evaluation - extractive body cue:** The last setting aligns with diffuse-denoise strategies, progressively adjusting the initial noise toward the observed data to improve guidance stability.
 
-- **PDF anchors reviewed:** datasets p. 4 (4.1. Cloudy - a 3D Clouds Dataset), p. 6 (5.1. Diffusion Posterior Sampling), p. 8 (5.5. Comparative Evaluation), p. 4 (4.1. Cloudy - a 3D Clouds Dataset), p. 7 (5.5. Comparative Evaluation), p. 8 (5.5. Comparative Evaluation), metrics p. 8 (5.6. Recovering Light Conditions), p. 6 (5. Results), p. 6 (5.1. Diffusion Posterior Sampling), p. 7 (5.2. Monoplanar Representation), p. 7 (5.5. Comparative Evaluation), p. 8 (5.6. Recovering Light Conditions), baselines p. 7 (5.2. Monoplanar Representation), p. 8 (5.5. Comparative Evaluation), p. 8 (5.6. Recovering Light Conditions), results p. 8 (5.6. Recovering Light Conditions), p. 7 (5.5. Comparative Evaluation), p. 6 (5.2. Monoplanar Representation), p. 6 (5.1. Diffusion Posterior Sampling), p. 7 (5.2. Monoplanar Representation), p. 8 (5.6. Recovering Light Conditions).
+- **Evidence anchors reviewed:** datasets p. 4 (4.1. Cloudy - a 3D Clouds Dataset), p. 6 (5.1. Diffusion Posterior Sampling), p. 8 (5.5. Comparative Evaluation), p. 4 (4.1. Cloudy - a 3D Clouds Dataset), p. 7 (5.5. Comparative Evaluation), p. 8 (5.5. Comparative Evaluation), metrics p. 8 (5.6. Recovering Light Conditions), p. 6 (5. Results), p. 6 (5.1. Diffusion Posterior Sampling), p. 7 (5.2. Monoplanar Representation), p. 7 (5.5. Comparative Evaluation), p. 8 (5.6. Recovering Light Conditions), baselines p. 7 (5.2. Monoplanar Representation), p. 8 (5.5. Comparative Evaluation), p. 8 (5.6. Recovering Light Conditions), results p. 8 (5.6. Recovering Light Conditions), p. 7 (5.5. Comparative Evaluation), p. 6 (5.2. Monoplanar Representation), p. 6 (5.1. Diffusion Posterior Sampling), p. 7 (5.2. Monoplanar Representation), p. 8 (5.6. Recovering Light Conditions).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

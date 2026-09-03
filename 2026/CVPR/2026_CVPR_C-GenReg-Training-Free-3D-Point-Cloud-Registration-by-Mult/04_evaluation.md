@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For outdoor evaluation, we employ the Waymo Open Dataset [24], which contains large-scale LiDAR scans, and serves as a generalization benchmark for outdoor registration tasks.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** We evaluate our method on two benchmark types: indoor datasets captured by depth sensors and outdoor dataset acquired by LiDAR.
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** To evaluate cross-dataset generalization, we benchmark all methods on the ScanNet indoor registration benchmarks (Tab.
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet Hard and ScanNet SuperGlue ...
-- **p. 2 / 4. We achieve SOTA zero-shot results across indoor RGB-D - extractive PDF cue:** benchmarks (3DMatch, ScanNet) and, for the first time, demonstrate a generative registration framework that successfully operates on real outdoor LiDAR data (Waymo).
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For each benchmark, we report both the mean and median values of these errors, as well as the registration accuracy - the percentage of registration ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Features Fusion Accuracy ↑ Error ↓ Accuracy ↑ Error ↓ 5 10
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of our probabilistic fusion.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For outdoor evaluation, we employ the Waymo Open Dataset [24], which contains large-scale LiDAR scans, and serves as a generalization benchmark for outdoor registration tasks.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** We evaluate our method on two benchmark types: indoor datasets captured by depth sensors and outdoor dataset acquired by LiDAR.
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** To evaluate cross-dataset generalization, we benchmark all methods on the ScanNet indoor registration benchmarks (Tab.
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet Hard and ScanNet SuperGlue ...
+- **p. 2 / 4. We achieve SOTA zero-shot results across indoor RGB-D - extractive body cue:** benchmarks (3DMatch, ScanNet) and, for the first time, demonstrate a generative registration framework that successfully operates on real outdoor LiDAR data (Waymo).
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For each benchmark, we report both the mean and median values of these errors, as well as the registration accuracy - the percentage of registration ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Features Fusion Accuracy ↑ Error ↓ Accuracy ↑ Error ↓ 5 10
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of our probabilistic fusion.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Method Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Although this comparison is not strictly fair, since C-GenReg relies solely on 3D point cloud inputs, it is noteworthy that C-GenReg achieves comparable results ... | p. 7 (4.2. Method Evaluation) |
 | 4.2. Method Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of our probabilistic fusion. | p. 7 (4.2. Method Evaluation) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For outdoor evaluation, we employ the Waymo Open Dataset [24], which contains large-scale LiDAR scans, and serves as a generalization benchmark for outdoor registration tasks.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** We evaluate our method on two benchmark types: indoor datasets captured by depth sensors and outdoor dataset acquired by LiDAR.
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** To evaluate cross-dataset generalization, we benchmark all methods on the ScanNet indoor registration benchmarks (Tab.
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet Hard and ScanNet SuperGlue ...
-- **p. 2 / 4. We achieve SOTA zero-shot results across indoor RGB-D - extractive PDF cue:** benchmarks (3DMatch, ScanNet) and, for the first time, demonstrate a generative registration framework that successfully operates on real outdoor LiDAR data (Waymo).
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For outdoor evaluation, we employ the Waymo Open Dataset [24], which contains large-scale LiDAR scans, and serves as a generalization benchmark for outdoor registration tasks.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** We evaluate our method on two benchmark types: indoor datasets captured by depth sensors and outdoor dataset acquired by LiDAR.
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** To evaluate cross-dataset generalization, we benchmark all methods on the ScanNet indoor registration benchmarks (Tab.
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet Hard and ScanNet SuperGlue ...
+- **p. 2 / 4. We achieve SOTA zero-shot results across indoor RGB-D - extractive body cue:** benchmarks (3DMatch, ScanNet) and, for the first time, demonstrate a generative registration framework that successfully operates on real outdoor LiDAR data (Waymo).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. C-GenReg: A training-free point cloud registration frame- work. The pipeline operates in two parallel branches: (1) Generated- RGB Branch - a World Foundation ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. C-GenReg Overview: A training-free, zero-shot point cloud registration framework with two parallel branches. (1) Generated-RGB Branch - source and target point clouds are ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. C-GenReg qualitative example on 3DMatch. Generated source and target images with a subset of matched points (color-coded correspondences), and the corresponding matches visualized ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. 3DMatch Benchmark. Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error across different methods. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. ScanNet Benchmarks. Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Waymo Outdoor Registration Benchmark. Rotation (deg) and translation (m) accuracy/error. Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation Study on the 3DMatch Benchmark. Top: impact of different Vision Foundation Models (no geometric features or fusion). Bottom: impact of geometric feature ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. C-GenReg: A training-free point cloud registration frame- work. The pipeline operates in two parallel branches: (1) Generated- RGB Branch - a World Foundation ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. C-GenReg Overview: A training-free, zero-shot point cloud registration framework with two parallel branches. (1) Generated-RGB Branch - source and target point clouds are ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. C-GenReg qualitative example on 3DMatch. Generated source and target images with a subset of matched points (color-coded correspondences), and the corresponding matches visualized ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. 3DMatch Benchmark. Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error across different methods. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. ScanNet Benchmarks. Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Waymo Outdoor Registration Benchmark. Rotation (deg) and translation (m) accuracy/error. Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation Study on the 3DMatch Benchmark. Top: impact of different Vision Foundation Models (no geometric features or fusion). Bottom: impact of geometric feature ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For outdoor evaluation, we employ the Waymo Open Dataset [24], which contains large-scale LiDAR scans, and serves as a generalization benchmark for outdoor registration ... | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings) |
 | Task/environment | We evaluate our method on two benchmark types: indoor datasets captured by depth sensors and outdoor dataset acquired by LiDAR. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation) |
@@ -119,8 +119,8 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 | Primary metric/result | Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of our probabilistic fusion. | numeric claim only at cited anchor | p. 7 (4.2. Method Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** We follow the ScanNet Hard protocol introduced in [12, 13], where source and target frames are 50 frames apart, resulting in significantly lower overlap.
-- **p. 7 / 4.2. Method Evaluation - extractive PDF cue:** We sample 1,500 registration pairs from the validation split, selecting frame pairs at least 50 frames apart and within 30m based on ground-truth ego motion.
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** We follow the ScanNet Hard protocol introduced in [12, 13], where source and target frames are 50 frames apart, resulting in significantly lower overlap.
+- **p. 7 / 4.2. Method Evaluation - extractive body cue:** We sample 1,500 registration pairs from the validation split, selecting frame pairs at least 50 frames apart and within 30m based on ground-truth ego motion.
 
 ## Generalization and Failure Cases
 
@@ -151,9 +151,9 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 
 ## Limitations and Verification Questions
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D), metrics p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation), p. 8 (4.3. Ablation Studies), p. 7 (4.2. Method Evaluation), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 6 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 8 (Figure/Table caption), results p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 6 (4.2. Method Evaluation), p. 8 (Figure/Table caption), p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D), p. 6 (4.1. Experimental Settings).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D), metrics p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation), p. 8 (4.3. Ablation Studies), p. 7 (4.2. Method Evaluation), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 6 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 8 (Figure/Table caption), results p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 6 (4.2. Method Evaluation), p. 8 (Figure/Table caption), p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D), p. 6 (4.1. Experimental Settings).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

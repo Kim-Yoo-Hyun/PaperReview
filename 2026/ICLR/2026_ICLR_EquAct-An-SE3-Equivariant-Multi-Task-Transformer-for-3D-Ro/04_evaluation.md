@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=d1wuA8oIH0; PDF retrieval source: https://openreview.net/pdf/7d1ac63392c225113c314e6263f1d18dfbff895e.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=d1wuA8oIH0; PDF retrieval source: https://openreview.net/pdf/7d1ac63392c225113c314e6263f1d18dfbff895e.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | On average, EquAct outperforms all the baselines on all 3 settings. avg. success rate ↑ open drawer slide block sweep dust. meat off grill ... | p. 8 (5 Experiments) |
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Finally, aug. →no aug. indicates using data augmentation can further improve performance, we hypothesize that data augmentation reduces numerical error in the equivariant neural ... | p. 9 (5 Experiments) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In the 10 SE(3) setting, the training set contains 10 demo per task and both the training and testing scenes have randomly SE(3) initialized ... | embodiment, simulator version and control stack | p. 8 (5 Experiments), p. 7 (5 Experiments) |
 | Task/environment | The benchmark uses a Franka Panda robot equipped with a parallel gripper. | reset, timeout, object/scene variation | p. 7 (5 Experiments), p. 9 (5 Experiments) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 - **p. 9 / 5 Experiments - extractive body cue:** In comparison, 3DDA struggles in these experiments, often skipping keyframe actions and resulting in failure.
 - **p. 9 / 5 Experiments - extractive body cue:** 6 Conclusion and limitations Conclusion.
 
-- **PDF anchors reviewed:** datasets p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), baselines p. 9 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), results p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), baselines p. 9 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), results p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 5.2 Physical experiments Table 2: Physical experiments. avg. disass. pluck pick install SR ↑ pipe flower fruit toilet roll Var × Demo 3 × 10 3 × 15 3 × ... (p. 9, 5 Experiments).
+- **Metric evidence:** Performance is measured by a binary reward, where 0% and 100% correspond to failure and successful completion of the task according to the natural language instruction, respectively. (p. 7, 5 Experiments).
+- **Baseline/ablation evidence:** SAM2ACT[8] is the current state-of-the-art baseline on 18 RLBench, which leverages pretrained image tokenizer from SAM2 [45] and projects point cloud into image planes [15]. (p. 7, 5 Experiments).
+- **Failure/negative evidence:** In comparison, 3DDA struggles in these experiments, often skipping keyframe actions and resulting in failure. (p. 9, 5 Experiments).

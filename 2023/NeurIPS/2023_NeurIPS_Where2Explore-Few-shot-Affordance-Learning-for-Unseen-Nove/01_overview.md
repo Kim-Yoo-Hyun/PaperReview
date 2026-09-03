@@ -1,8 +1,10 @@
 # Where2Explore: Few-shot Affordance Learning for Unseen Novel Categories of Articulated Objects
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2309.07473.
-> PDF retrieval source: https://arxiv.org/pdf/2309.07473. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2309.07473.
+> PDF retrieval source: https://arxiv.org/pdf/2309.07473. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2309.07473
 - Code/Project: https://sites.google.com/view/where2explore/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 ## Why Read It
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This limitation hinders the efficiency and safety of real-world applications of robots.를 문제로 두고, The results demonstrate our framework's capability to efficiently explore novel categories by exploiting geometric similarity.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 6 (4 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This limitation hinders the efficiency and safety of real-world applications of robots. (p. 1, 1 Introduction).
+- **Actual contribution:** The results demonstrate our framework's capability to efficiently explore novel categories by exploiting geometric similarity. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 3: Ablations on the exploration strategy using different interaction budget (1, 2, 5). We also conduct few-shot affordance learning on representative categories separately to match the real-world scenario. Table ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** Compared with AdaAfford, which fails to generalize to novel categories, our framework could still propose reasonable exploration strategies on novel categories leveraging local similarity. (p. 8, 5 Experiments).

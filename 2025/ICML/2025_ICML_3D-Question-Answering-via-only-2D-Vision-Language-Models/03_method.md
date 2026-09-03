@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IkhJApkJQ3; PDF retrieval source: https://openreview.net/pdf/d07d0f4b200749c99e5e05d81d646e8151df94e7.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IkhJApkJQ3; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168051. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 
 ## Method Body Digest
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the given options, and ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 2D features extracted from LVLMs are already well-aligned with language, but further alignment with 3D features requires careful model design and advanced training techniques.
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** Following (Mo & Liu, 2024), we use the BLIP's image-text retrieval model (Li et al., 2022) to select views that best match the question Q ...
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** We apply crossattention in each transformer layer between the question embedding Q and the visual embeddings {Vi}N i=1, in order to enhance the model's ability ...
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** Then, M′ and the question Q are input into the model to produce the answer A: A = LVLM(M′, Q).
-- **p. 5 / 3. Preliminaries - extractive PDF cue:** Step 1: Caption Generation Step 2: View Matching Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light ...
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** The mismatch loss is used to optimize the parameters of viewSelector.
+- **p. 2 / 1. Introduction - extractive body cue:** To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
+- **p. 6 / 3. Preliminaries - extractive body cue:** Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the given options, and ...
+- **p. 2 / 1. Introduction - extractive body cue:** 2D features extracted from LVLMs are already well-aligned with language, but further alignment with 3D features requires careful model design and advanced training techniques.
+- **p. 4 / 3. Preliminaries - extractive body cue:** Following (Mo & Liu, 2024), we use the BLIP's image-text retrieval model (Li et al., 2022) to select views that best match the question Q ...
+- **p. 6 / 3. Preliminaries - extractive body cue:** We apply crossattention in each transformer layer between the question embedding Q and the visual embeddings {Vi}N i=1, in order to enhance the model's ability ...
+- **p. 4 / 3. Preliminaries - extractive body cue:** Then, M′ and the question Q are input into the model to produce the answer A: A = LVLM(M′, Q).
+- **p. 5 / 3. Preliminaries - extractive body cue:** Step 1: Caption Generation Step 2: View Matching Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light ...
+- **p. 6 / 3. Preliminaries - extractive body cue:** The mismatch loss is used to optimize the parameters of viewSelector.
 
 ## Design Rationale
 
-- **p. 1 / Abstract - extractive PDF cue:** We propose cdViews, a novel approach to automatically selecting critical and diverse Views for 3D-QA. cdViews consists of two key components: viewSelector prioritizing critical views ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** All of these methods require computationally intensive 3D-language alignment using point cloud data for spatial reasoning. a4 is our method that leverages pre-trained LVLMs operating ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** (2) We introduce cdViews that integrates a viewSelector with a viewNMS to capture critical and diverse views.
+- **p. 1 / Abstract - extractive body cue:** We propose cdViews, a novel approach to automatically selecting critical and diverse Views for 3D-QA. cdViews consists of two key components: viewSelector prioritizing critical views ...
+- **p. 1 / 1. Introduction - extractive body cue:** All of these methods require computationally intensive 3D-language alignment using point cloud data for spatial reasoning. a4 is our method that leverages pre-trained LVLMs operating ...
+- **p. 2 / 1. Introduction - extractive body cue:** (2) We introduce cdViews that integrates a viewSelector with a viewNMS to capture critical and diverse views.
 
 ## Source Evidence Cues
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the given options, and ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 2D features extracted from LVLMs are already well-aligned with language, but further alignment with 3D features requires careful model design and advanced training techniques.
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** Following (Mo & Liu, 2024), we use the BLIP's image-text retrieval model (Li et al., 2022) to select views that best match the question Q ...
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** We apply crossattention in each transformer layer between the question embedding Q and the visual embeddings {Vi}N i=1, in order to enhance the model's ability ...
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** Then, M′ and the question Q are input into the model to produce the answer A: A = LVLM(M′, Q).
-- **p. 5 / 3. Preliminaries - extractive PDF cue:** Step 1: Caption Generation Step 2: View Matching Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light ...
+- **p. 2 / 1. Introduction - extractive body cue:** To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
+- **p. 6 / 3. Preliminaries - extractive body cue:** Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the given options, and ...
+- **p. 2 / 1. Introduction - extractive body cue:** 2D features extracted from LVLMs are already well-aligned with language, but further alignment with 3D features requires careful model design and advanced training techniques.
+- **p. 4 / 3. Preliminaries - extractive body cue:** Following (Mo & Liu, 2024), we use the BLIP's image-text retrieval model (Li et al., 2022) to select views that best match the question Q ...
+- **p. 6 / 3. Preliminaries - extractive body cue:** We apply crossattention in each transformer layer between the question embedding Q and the visual embeddings {Vi}N i=1, in order to enhance the model's ability ...
+- **p. 4 / 3. Preliminaries - extractive body cue:** Then, M′ and the question Q are input into the model to produce the answer A: A = LVLM(M′, Q).
+- **p. 5 / 3. Preliminaries - extractive body cue:** Step 1: Caption Generation Step 2: View Matching Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into ... | p. 2 (1. Introduction), p. 6 (3. Preliminaries) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the ... | p. 6 (3. Preliminaries), p. 2 (1. Introduction) |
@@ -48,11 +48,11 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 
 ## Objective / Update Rule
 
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** The mismatch loss is used to optimize the parameters of viewSelector.
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** (7) The score ˆSi is supervised with the corresponding label Si by binary cross-entropy loss: LBCE = -1 N ′ N′ X i=1  ˆSi ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** This constraint makes it crucial to carefully select the most informative views.
-- **p. 2 / 1. Introduction - extractive PDF cue:** (2) Enhance View Diversity: The aim is to improve spatial diversity and minimize redundancy for the selected views.
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** As for inference, our cdViews has two modules to run: the viewSelector identifies critical views, and the viewNMS enhances view diversity and minimizes redundancy.
+- **p. 6 / 3. Preliminaries - extractive body cue:** The mismatch loss is used to optimize the parameters of viewSelector.
+- **p. 6 / 3. Preliminaries - extractive body cue:** (7) The score ˆSi is supervised with the corresponding label Si by binary cross-entropy loss: LBCE = -1 N ′ N′ X i=1  ˆSi ...
+- **p. 2 / 1. Introduction - extractive body cue:** This constraint makes it crucial to carefully select the most informative views.
+- **p. 2 / 1. Introduction - extractive body cue:** (2) Enhance View Diversity: The aim is to improve spatial diversity and minimize redundancy for the selected views.
+- **p. 4 / 3. Preliminaries - extractive body cue:** As for inference, our cdViews has two modules to run: the viewSelector identifies critical views, and the viewNMS enhances view diversity and minimizes redundancy.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 6 (3. Preliminaries).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** It takes the question embedding Q and the visual embedding set {Vi}N i=1 as input and outputs a binary label ˆSi (0 or 1) for ...
-- **p. 3 / 3. Preliminaries - extractive PDF cue:** Since 2D LVLMs are fundamentally designed to process 2D images as input, we propose cdViews to efficiently select the most informative 2D views of 3D ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** We respectively use ① uniform sampling, ②image retrieval, and ③our cdViews, to select views as input to LLAVA-OV. significant breakthroughs in addressing 2D visual question ...
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** Then, M′ and the question Q are input into the model to produce the answer A: A = LVLM(M′, Q).
-- **p. 5 / 3. Preliminaries - extractive PDF cue:** This process aims to identify the critical views that match mostly the content of both input questions and the corresponding answers.
-- **p. 5 / 3. Preliminaries - extractive PDF cue:** Step 1: Caption Generation Step 2: View Matching Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light ...
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** Similarly, for visual inputs, each visual embedding Vi is processed through the same modules.
+- **p. 6 / 3. Preliminaries - extractive body cue:** It takes the question embedding Q and the visual embedding set {Vi}N i=1 as input and outputs a binary label ˆSi (0 or 1) for ...
+- **p. 3 / 3. Preliminaries - extractive body cue:** Since 2D LVLMs are fundamentally designed to process 2D images as input, we propose cdViews to efficiently select the most informative 2D views of 3D ...
+- **p. 1 / 1. Introduction - extractive body cue:** We respectively use ① uniform sampling, ②image retrieval, and ③our cdViews, to select views as input to LLAVA-OV. significant breakthroughs in addressing 2D visual question ...
+- **p. 4 / 3. Preliminaries - extractive body cue:** Then, M′ and the question Q are input into the model to produce the answer A: A = LVLM(M′, Q).
+- **p. 5 / 3. Preliminaries - extractive body cue:** This process aims to identify the critical views that match mostly the content of both input questions and the corresponding answers.
+- **p. 5 / 3. Preliminaries - extractive body cue:** Step 1: Caption Generation Step 2: View Matching Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light ...
+- **p. 6 / 3. Preliminaries - extractive body cue:** Similarly, for visual inputs, each visual embedding Vi is processed through the same modules.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,12 +89,12 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 
 ## Training vs Inference
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
-- **p. 6 / 3. Preliminaries - extractive PDF cue:** Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the given options, and ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 2D features extracted from LVLMs are already well-aligned with language, but further alignment with 3D features requires careful model design and advanced training techniques.
-- **p. 7 / 5. Experiments - extractive PDF cue:** Training of the viewSelector is conducted with a learning rate of 5 × 10-5 and a batch size of
-- **p. 4 / 3. Preliminaries - extractive PDF cue:** As for inference, our cdViews has two modules to run: the viewSelector identifies critical views, and the viewNMS enhances view diversity and minimizes redundancy.
-- **p. 5 / 3. Preliminaries - extractive PDF cue:** The training of viewSelector contains two steps: data annotation and model training.
+- **p. 2 / 1. Introduction - extractive body cue:** To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
+- **p. 6 / 3. Preliminaries - extractive body cue:** Views are classified as "uncertain" when the model chooses the option of "Uncertain, insufficient or unclear information" or outputs none of the given options, and ...
+- **p. 2 / 1. Introduction - extractive body cue:** 2D features extracted from LVLMs are already well-aligned with language, but further alignment with 3D features requires careful model design and advanced training techniques.
+- **p. 7 / 5. Experiments - extractive body cue:** Training of the viewSelector is conducted with a learning rate of 5 × 10-5 and a batch size of
+- **p. 4 / 3. Preliminaries - extractive body cue:** As for inference, our cdViews has two modules to run: the viewSelector identifies critical views, and the viewNMS enhances view diversity and minimizes redundancy.
+- **p. 5 / 3. Preliminaries - extractive body cue:** The training of viewSelector contains two steps: data annotation and model training.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,11 +114,11 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 
 ## Failure and Ablation Link
 
-- **p. 7 / 5. Experiments - extractive PDF cue:** ScanQA contains over 41K question-answer annotations across 800 indoor 3D scenes, which are divided into train, val, and test sets (with or without objects).
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Performance comparisons with the state-of-the-art methods on the test set of ScanQA (Azuma et al., 2022) and SQA (Ma et al., 2022). For ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: An ablation study performed on ScanQA. We show the best EM@1 scores with the corresponding (optimal) k. selected views is shown in Figure ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7: The results of EM@1 using two configurations: optimal k (blue) vs. fixed k=9 (green). X-axis is the thresh- old T of viewNMS. T ...
-- **p. 7 / 5.1. Comparisons with the State-of-the-Arts - extractive PDF cue:** The reason is that the uniform sampling method ignores the question and the image retrieval method often fails to capture critical views or introduces redundancy ...
+- **p. 7 / 5. Experiments - extractive body cue:** ScanQA contains over 41K question-answer annotations across 800 indoor 3D scenes, which are divided into train, val, and test sets (with or without objects).
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance comparisons with the state-of-the-art methods on the test set of ScanQA (Azuma et al., 2022) and SQA (Ma et al., 2022). For ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: An ablation study performed on ScanQA. We show the best EM@1 scores with the corresponding (optimal) k. selected views is shown in Figure ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7: The results of EM@1 using two configurations: optimal k (blue) vs. fixed k=9 (green). X-axis is the thresh- old T of viewNMS. T ...
+- **p. 7 / 5.1. Comparisons with the State-of-the-Arts - extractive body cue:** The reason is that the uniform sampling method ignores the question and the image retrieval method often fails to capture critical views or introduces redundancy ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2 (1. Introduction), p. 4 (3. Preliminaries), p. 6 (3. Preliminaries), p. 4 (3. Preliminaries), objective p. 6 (3. Preliminaries), p. 6 (3. Preliminaries), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Preliminaries), temporal p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Related Works), p. 3 (2. Related Works), p. 5 (3. Preliminaries), p. 5 (3. Preliminaries).
+- **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2 (1. Introduction), p. 4 (3. Preliminaries), p. 6 (3. Preliminaries), p. 4 (3. Preliminaries), objective p. 6 (3. Preliminaries), p. 6 (3. Preliminaries), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Preliminaries), temporal p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Related Works), p. 3 (2. Related Works), p. 5 (3. Preliminaries), p. 5 (3. Preliminaries).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

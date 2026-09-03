@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots; PDF retrieval source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots; PDF retrieval source: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Quantitative Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | GR00T-N1-2B, achieves a significantly higher success rate across all tasks, outperforming Diffusion Policy by 32.4% in the 10% Data setting and by 30.4% in ... | p. 15 (4.4. Quantitative Results) |
 | 4.4. Quantitative Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | GR00T-N1-2B achieves a success rate of 76.6% (11.5/15) in the first coordinated setting and 73.3% (11/15) in the second setting involving novel object manipulation. | p. 15 (4.4. Quantitative Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We generate 1000 demonstrations for each task using the DexMimicGen data generation system and evaluate the model's ability to generalize to novel object configurations. ... | embodiment, simulator version and control stack | p. 12 (4.1. Simulation Benchmarks), p. 14 (4.2. Real-World Benchmarks) |
 | Task/environment | These tasks closely mirror real-world industrial applications, making them highly relevant benchmarks for assessing dexterity in structured environments. • Multi-Agent Coordination (2 tasks, Coordination) ... | reset, timeout, object/scene variation | p. 14 (4.2. Real-World Benchmarks), p. 10 (3.2. Synthetic Datasets) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 - **p. 22 / 6. Conclusions - extractive body cue:** Videos that fail this criterion undergo re-captioning, with the videos downsampled to 16 frames at 256P resolution for this process.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: GR00T N1 Model Architecture. GR00T N1 is trained on a diverse set of embodiments ranging from single-arm robot arms to bimanual humanoid dexterous ...
 
-- **PDF anchors reviewed:** datasets p. 12 (4.1. Simulation Benchmarks), p. 14 (4.2. Real-World Benchmarks), p. 10 (3.2. Synthetic Datasets), p. 17 (4.5. Qualitative Results), p. 9 (3. Pre-Training Datasets), p. 9 (3.1. Real-World Datasets), metrics p. 14 (4.3. Experiment Setup), p. 14 (4.3. Experiment Setup), p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 16 (4.5. Qualitative Results), p. 17 (4.5. Qualitative Results), baselines p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 16 (4.5. Qualitative Results), p. 12 (4.1. Simulation Benchmarks), p. 14 (4.3. Experiment Setup), p. 14 (4.3. Experiment Setup), results p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup), p. 16 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup), p. 16 (4.4. Quantitative Results).
+- **Evidence anchors reviewed:** datasets p. 12 (4.1. Simulation Benchmarks), p. 14 (4.2. Real-World Benchmarks), p. 10 (3.2. Synthetic Datasets), p. 17 (4.5. Qualitative Results), p. 9 (3. Pre-Training Datasets), p. 9 (3.1. Real-World Datasets), metrics p. 14 (4.3. Experiment Setup), p. 14 (4.3. Experiment Setup), p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 16 (4.5. Qualitative Results), p. 17 (4.5. Qualitative Results), baselines p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 16 (4.5. Qualitative Results), p. 12 (4.1. Simulation Benchmarks), p. 14 (4.3. Experiment Setup), p. 14 (4.3. Experiment Setup), results p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup), p. 16 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup), p. 16 (4.4. Quantitative Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.875). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 9: Average Success Rate (%) across 24 Tasks in simulation and 8 tasks in the real world. In the RoboCasa simulation, we show all post-training results using 30, 100, ... (p. 16, Figure/Table caption).
+- **Metric evidence:** Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last 5 checkpoints, where checkpoints are written every 500 ... (p. 14, 4.3. Experiment Setup).
+- **Baseline/ablation evidence:** GR00T N1 outperforms both baselines, especially on the GR-1 task where it outperforms by more than 17 %. (p. 15, 4.4. Quantitative Results).
+- **Failure/negative evidence:** (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp. (p. 24, 6. Conclusions).

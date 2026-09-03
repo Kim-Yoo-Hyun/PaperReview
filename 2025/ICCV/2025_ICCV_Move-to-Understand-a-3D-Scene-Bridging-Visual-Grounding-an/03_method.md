@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 3 (Method), p. 3 (Method), p. 5 (3.4. Vision-Langu
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Our main contributions can be summarized as follows: • We present MTU3D, bridging visual grounding and exploration for efficient and versatile embodied ... | p. 3 (Method), p. 3 (Method) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | When combined with a large vision-language model, serving as its trajectory generator, our approach improves the embodied question answering for LM-SR by ... | p. 3 (Method), p. 5 (3.4. Vision-Language-Exploration Training) |
@@ -122,8 +122,17 @@ PDF body method statement (p. 3 (Method), p. 3 (Method), p. 5 (3.4. Vision-Langu
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (Method), p. 3 (Method), p. 5 (3.4. Vision-Language-Exploration Training), p. 5 (3.4. Vision-Language-Exploration Training), objective p. 5 (3.4. Vision-Language-Exploration Training), p. 3 (Method), p. 5 (3.4. Vision-Language-Exploration Training), p. 3 (Method), temporal p. 1 (Abstract), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 3 (2. Related work), p. 4 (3.1. Online Query Representation Learning), p. 4 (3.1. Online Query Representation Learning).
+- **Evidence anchors reviewed:** method p. 3 (Method), p. 3 (Method), p. 5 (3.4. Vision-Language-Exploration Training), p. 5 (3.4. Vision-Language-Exploration Training), objective p. 5 (3.4. Vision-Language-Exploration Training), p. 3 (Method), p. 5 (3.4. Vision-Language-Exploration Training), p. 3 (Method), temporal p. 1 (Abstract), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 3 (2. Related work), p. 4 (3.1. Online Query Representation Learning), p. 4 (3.1. Online Query Representation Learning).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our main contributions can be summarized as follows: • We present MTU3D, bridging visual grounding and exploration for efficient and versatile embodied navigation. • We propose a unified objective that ... (p. 3, Method).
+- **Objective/update evidence:** The unified decision scores SU t are optimized with binary cross-entropy loss, teaching the model to assign higher scores to appropriate query locations based on the current state and goal. (p. 5, 3.4. Vision-Language-Exploration Training).
+- **Temporal/runtime evidence:** We reset spatial memory in w/o mem for each sub-episode in GOAT-Bench, and the experimental results in Fig. (p. 7, 4.3. Discussions).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

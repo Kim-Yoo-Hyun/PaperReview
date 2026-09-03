@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.08219; PDF retrieval source: https://arxiv.org/pdf/1802.08219. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.08219; PDF retrieval source: https://arxiv.org/pdf/1802.08219. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 1 (Abstract), p. 9 (Figure/Table caption)): T
 
 ## Evaluation Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** We demonstrate the capabilities of tensor field networks with tasks in geometry, physics, and chemistry.
-- **p. 2 / Abstract - extractive PDF cue:** Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of rotation ...
-- **p. 2 / Abstract - extractive PDF cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Performance on missing point task Atoms Number of predictions Accuracy (%) (≤0.5 Å and atom type) Distance
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 2: 3D Tetris shapes. Blocks correspond to single points. The third and fourth shapes from the left are mirrored versions of each other. Rotation ...
-- **p. 1 / Abstract - extractive PDF cue:** This capability has contributed significantly to their widespread success.
-- **p. 2 / Abstract - extractive PDF cue:** Our network differs from a traditional convolutional neural network (CNN) in three ways: • We operate on point clouds using continuous convolutions.
-- **p. 2 / Abstract - extractive PDF cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
+- **p. 1 / Abstract - extractive body cue:** We demonstrate the capabilities of tensor field networks with tasks in geometry, physics, and chemistry.
+- **p. 2 / Abstract - extractive body cue:** Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of rotation ...
+- **p. 2 / Abstract - extractive body cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Performance on missing point task Atoms Number of predictions Accuracy (%) (≤0.5 Å and atom type) Distance
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 2: 3D Tetris shapes. Blocks correspond to single points. The third and fourth shapes from the left are mirrored versions of each other. Rotation ...
+- **p. 1 / Abstract - extractive body cue:** This capability has contributed significantly to their widespread success.
+- **p. 2 / Abstract - extractive body cue:** Our network differs from a traditional convolutional neural network (CNN) in three ways: • We operate on point clouds using continuous convolutions.
+- **p. 2 / Abstract - extractive body cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
 
 ## Evaluation Type and Scope
 
@@ -30,30 +30,30 @@ PDF body evaluation/result cue (p. 1 (Abstract), p. 9 (Figure/Table caption)): T
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Abstract | SYSTEM / EVALUATION SCOPE UNRESOLVED | This capability has contributed significantly to their widespread success. | p. 1 (Abstract) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 1: Performance on missing point task Atoms Number of predictions Accuracy (%) (≤0.5 Å and atom type) Distance | p. 9 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 
-- **p. 1 / Abstract - extractive PDF cue:** We demonstrate the capabilities of tensor field networks with tasks in geometry, physics, and chemistry.
-- **p. 2 / Abstract - extractive PDF cue:** Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of rotation ...
-- **p. 2 / Abstract - extractive PDF cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
+- **p. 1 / Abstract - extractive body cue:** We demonstrate the capabilities of tensor field networks with tasks in geometry, physics, and chemistry.
+- **p. 2 / Abstract - extractive body cue:** Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of rotation ...
+- **p. 2 / Abstract - extractive body cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 1: Example of V (l) acm representing two point masses with velocities and accelerations. Colored brackets indicate the a (point), c (channel), and m ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Network diagrams for shape classification task showing how information flows between tensors of different order. Clebsch-Gordan tensors are implied in the arrows indicating ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 2: 3D Tetris shapes. Blocks correspond to single points. The third and fourth shapes from the left are mirrored versions of each other. Rotation ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: A hypothetical example input and out- put of the missing point network. (A) A benzene molecule with hydrogen removed (B) The relative output ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Performance on missing point task Atoms Number of predictions Accuracy (%) (≤0.5 Å and atom type) Distance
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 1: Example of V (l) acm representing two point masses with velocities and accelerations. Colored brackets indicate the a (point), c (channel), and m ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Network diagrams for shape classification task showing how information flows between tensors of different order. Clebsch-Gordan tensors are implied in the arrows indicating ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 2: 3D Tetris shapes. Blocks correspond to single points. The third and fourth shapes from the left are mirrored versions of each other. Rotation ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: A hypothetical example input and out- put of the missing point network. (A) A benzene molecule with hydrogen removed (B) The relative output ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Performance on missing point task Atoms Number of predictions Accuracy (%) (≤0.5 Å and atom type) Distance
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We demonstrate the capabilities of tensor field networks with tasks in geometry, physics, and chemistry. | embodiment, simulator version and control stack | p. 1 (Abstract), p. 2 (Abstract) |
 | Task/environment | Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of ... | reset, timeout, object/scene variation | p. 2 (Abstract), p. 2 (Abstract) |
@@ -131,9 +131,9 @@ PDF body evaluation/result cue (p. 1 (Abstract), p. 9 (Figure/Table caption)): T
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 2 Related work - extractive PDF cue:** Any network that relies solely upon distances (such as SchNet [2]) or angles between points (such as ANI-1 [15]) cannot distinguish these shapes, but ours ...
+- **p. 7 / 2 Related work - extractive body cue:** Any network that relies solely upon distances (such as SchNet [2]) or angles between points (such as ANI-1 [15]) cannot distinguish these shapes, but ours ...
 
-- **PDF anchors reviewed:** datasets p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), metrics p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), baselines p. 2 (Abstract), results p. 1 (Abstract), p. 9 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), metrics p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), baselines p. 2 (Abstract), results p. 1 (Abstract), p. 9 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

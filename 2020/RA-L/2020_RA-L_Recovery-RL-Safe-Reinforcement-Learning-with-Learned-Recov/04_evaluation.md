@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.15920; PDF retrieval source: https://arxiv.org/pdf/2010.15920. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.15920; PDF retrieval source: https://arxiv.org/pdf/2010.15920. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -12,9 +12,9 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** Domains: We evaluate Recovery RL on a set of 6 simulation domains (Figure 3) and an image-based obstacle avoidance task on a physical robot (Figure ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** We do not report reward per episode, as episodes terminate on task completion or constraint violation.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** ACCEPTED FEBRUARY, 2021 Figure 3: Simulation Experiments Domains: We evaluate Recovery RL on a set of 2D navigation tasks, two contact rich manipulation environments, and ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free and model-based recovery policies, while for the object extraction ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** THANANJEYAN*, BALAKRISHNA* et al.: RECOVERY RL: SAFE REINFORCEMENT LEARNING WITH LEARNED RECOVERY ZONES 7 Figure 5: Sensitivity Experiments: We report the final number of task ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Figure 5: Sensitivity Experiments: We report the final number of task ...
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** We find that Recovery RL violates constraints less often than comparisons while maintaining a similar task success rate and more efficiently optimizing the task reward.
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 9: Simulation Experiments Cumulative Violations: We plot the cumulative constraint violations for each algorithm in each simulation domain, with results averaged over 10 runs ...
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results suggest that Recovery RL with both model-free and modelbased recovery mechanisms significantly outperform prior algorithms across all 3 2D pointmass navigation environments | p. 6 (V. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Simulation Experiments: Left: ratio of successes to constraint violations over the course of online training. In all navigation tasks, we find that ... | p. 6 (Figure/Table caption) |
@@ -42,9 +42,9 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** Domains: We evaluate Recovery RL on a set of 6 simulation domains (Figure 3) and an image-based obstacle avoidance task on a physical robot (Figure ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** We do not report reward per episode, as episodes terminate on task completion or constraint violation.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** ACCEPTED FEBRUARY, 2021 Figure 3: Simulation Experiments Domains: We evaluate Recovery RL on a set of 2D navigation tasks, two contact rich manipulation environments, and ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free and model-based recovery policies, while for the object extraction ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** THANANJEYAN*, BALAKRISHNA* et al.: RECOVERY RL: SAFE REINFORCEMENT LEARNING WITH LEARNED RECOVERY ZONES 7 Figure 5: Sensitivity Experiments: We report the final number of task ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Figure 5: Sensitivity Experiments: We report the final number of task ...
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Domains: We evaluate Recovery RL on a set of 6 simulation domains (Figure 3) and an image-based obstacle avoidance task on a physical robot ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
 | Task/environment | We do not report reward per episode, as episodes terminate on task completion or constraint violation. | reset, timeout, object/scene variation | p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
@@ -144,7 +144,7 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 | Each run for simulation experiments is replicated across 10 random seeds and we report the mean and standard error. | p. 5 (V. EXPERIMENTS) |
 | We tune all prior algorithms and report the best hyperparameter settings found on each task for the ratio-based evaluation metric. | p. 6 (V. EXPERIMENTS) |
 | We supply all algorithms with an overhead RGB image as input and run each algorithm 3 times. | p. 7 (V. EXPERIMENTS) |
-| THANANJEYAN*, BALAKRISHNA* et al.: RECOVERY RL: SAFE REINFORCEMENT LEARNING WITH LEARNED RECOVERY ZONES 7 Figure 5: Sensitivity Experiments: We report the final number of ... | p. 7 (V. EXPERIMENTS) |
+| Figure 5: Sensitivity Experiments: We report the final number of ... | p. 7 (V. EXPERIMENTS) |
 | In Section IV-C we discuss how the safety critic and recovery policy are initialized from offline data and in Section IV-D we discuss implementation ... | p. 3 (IV. RECOVERY RL) |
 
 | Audit field | Current status |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Recovery RL can safely learn policies for contact-rich tasks from high-dimensional image observations in simulation experiments and on a physical robotic system. We ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Recovery RL: For intuition, we illustrate Recovery RL on a 2D maze navigation task where a constraint violation corresponds to hitting a wall. ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), baselines p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 13 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 12 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), baselines p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 13 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 12 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 9: Simulation Experiments Cumulative Violations: We plot the cumulative constraint violations for each algorithm in each simulation domain, with results averaged over 10 runs for all algorithms. We observe ... (p. 12, Figure/Table caption).
+- **Metric evidence:** We do not report reward per episode, as episodes terminate on task completion or constraint violation. (p. 5, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** Recovery RL and all comparisons which have a safety critic are given the same offline dataset Doffline. (p. 5, V. EXPERIMENTS).
+- **Failure/negative evidence:** We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that Recovery RL performs well even ... (p. 7, V. EXPERIMENTS).

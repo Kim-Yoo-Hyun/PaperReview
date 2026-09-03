@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.06347; PDF retrieval source: https://arxiv.org/pdf/1707.06347. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.06347; PDF retrieval source: https://arxiv.org/pdf/1707.06347. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 Experiments | EMPIRICAL / SIMULATION | We see that PPO outperforms the previous methods on almost all the continuous control environments. | p. 7 (6 Experiments) |
 | 6 Experiments | EMPIRICAL / SIMULATION | 0.69 Table 1: Results from continuous control benchmark. | p. 6 (6 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Namely, we used 7 simulated robotics tasks2 implemented in OpenAI Gym [Bro+16], which use the MuJoCo [TET12] physics engine. | embodiment, simulator version and control stack | p. 6 (6 Experiments), p. 7 (6 Experiments) |
 | Task/environment | The three tasks we test on are (1) RoboschoolHumanoid: forward locomotion only, (2) RoboschoolHumanoidFlagrun: position of target is randomly varied every 200 timesteps or ... | reset, timeout, object/scene variation | p. 7 (6 Experiments), p. 8 (6 Experiments) |
@@ -155,9 +155,18 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 
 ## Limitations and Verification Questions
 
-- explicit limitation/failure sentence not recovered
+- explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
-- **PDF anchors reviewed:** datasets p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), metrics p. 6 (Figure/Table caption), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 8 (6 Experiments), p. 12 (Figure/Table caption), p. 7 (6 Experiments), baselines p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 5 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), results p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), metrics p. 6 (Figure/Table caption), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 8 (6 Experiments), p. 12 (Figure/Table caption), p. 7 (6 Experiments), baselines p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 5 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), results p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Results from continuous control benchmark. Average normalized scores (over 21 runs of the algorithm, on 7 environments) for each algorithm / hyperparameter setting . β was initialized at ... (p. 6, Figure/Table caption).
+- **Metric evidence:** We consider the following two scoring metrics: (1) average reward per episode over entire training period (which favors fast learning), and (2) average reward per episode over last 100 episodes ... (p. 8, 6 Experiments).
+- **Baseline/ablation evidence:** 6.4 Comparison to Other Algorithms on the Atari Domain We also ran PPO on the Arcade Learning Environment [Bel+15] benchmark and compared against well-tuned implementations of A2C [Mni+16] and ACER ... (p. 8, 6 Experiments).
+- **Failure/negative evidence:** Q-learning (with function approximation) fails on many simple problems1 and is poorly understood, vanilla policy gradient methods have poor data effiency and robustness; and trust region policy optimization (TRPO) is ... (p. 1, 1 Introduction).

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 4.3 POLICY HEAD The output XL t from the feature fusion decoder is trained as the representation of the vision observation and language instruction, which will be further translated into low-level control ...를 It addresses three main challenges: 1) it adapts vision-language models with static image inputs to video observations; 2) it generates robot control signals instead of text-only outputs; 3) it requires a limited ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We hypothesize that this may stem from the fact that the VLM (OpenFlamingo) has only seen image-text pairs during pre-training and cannot process consequent frames effectively.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** For instance, in the testbed of CALVIN (Mees et al., 2022b), the observations consist of simulated camera captures from two different views, and the action is a 7-DoF control of ... (p. 3, 3 BACKGROUND).
+- **Paper-specific mechanism:** To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 3: Ablation studies on the ABCD →D setting. Note that the success rate of RoboFlamingo on subsequent tasks dropped more than HULC does. This may be due to our ... (p. 8, Figure/Table caption); the relevant task/metric cue is We wonder the imitation learning performance of RoboFlamingo by training it on the given demonstration data. (p. 6, 5 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** RoboFlamingo only takes a dozen steps to locate and move to the top of the drawer, and simultaneously releases the gripper to complete the task; while HULC keeps moving above ... (p. 16, B.5 QUALITATIVE EXAMPLES).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 5.1 BENCHMARK AND BASELINES We choose CALVIN (Mees et al., 2022b), an open-source simulated benchmark to learn long-horizon language-conditioned tasks, as our testbed, and the corresponding datasets as our imitation learning demonstrati ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Our method exhibits superior performance compared to all baselines in this language generalization setting..
-4. Report the body metric and its denominator/aggregation: Among all methods, RoboFlamingo achieves the highest success rate over the latter tasks..
-5. Re-run the body-reported ablation/failure condition: Full and Lang denote if the model is trained using unpaired vision data (i.e., vision data without language pairs); Freeze-emb refers to freezing the embedding layer of the fusion decoder; Enriched denote ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: For instance, in the testbed of CALVIN (Mees et al., 2022b), the observations consist of simulated camera captures from two different views, and the action is a 7-DoF control of ... (p. 3, 3 BACKGROUND); preserve the objective/update rule: (b) MLP w hist takes the history frames into the vision encoder with position embedding, and encodes the history information through the cross-attention layers in the feature fusion decoder. (p. 8, 2) Does vision-language (VL) pre-training improve downstream robotic tasks?).
+2. Use the paper-reported task/data/environment cue: The dataset contains four splits for environments A, B, C, and D. (p. 6, 5 EXPERIMENTS).
+3. Compare against the reported or matched baseline: Our method exhibits superior performance compared to all baselines in this language generalization setting. (p. 7, 5 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We wonder the imitation learning performance of RoboFlamingo by training it on the given demonstration data. (p. 6, 5 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Full and Lang denote if the model is trained using unpaired vision data (i.e., vision data without language pairs); Freeze-emb refers to freezing the embedding layer of the fusion decoder; ... (p. 7, 5 EXPERIMENTS); if none is reported, design one around: RoboFlamingo only takes a dozen steps to locate and move to the top of the drawer, and simultaneously releases the gripper to complete the task; while HULC keeps moving above ... (p. 16, B.5 QUALITATIVE EXAMPLES).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 8 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), p. 8 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?); the primary result is directionally consistent at p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (5 EXPERIMENTS), and measure the boundary at p. 16 (B.5 QUALITATIVE EXAMPLES), p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, RoboFlamingo, novel mechanism이 Our method exhibits superior performance compared to all baselines in this language generalization setting. 대비 Among all methods, RoboFlamingo achieves the highest success rate over the latter tasks.을 개선하고, We hypothesize that this may stem from the fact that the VLM (OpenFlamingo) has only seen ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (For instance, in the testbed of CALVIN (Mees et al., 2022b), the observations consist of simulated camera captures from two different views, ...), does the paper-specific mechanism (To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies ...) retain the reported evaluation outcome (We wonder the imitation learning performance of RoboFlamingo by training it on the given demonstration data.) when tested against the paper's strongest explicit boundary (RoboFlamingo only takes a dozen steps to locate and move to the top of the drawer, and simultaneously ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We wonder the imitation learning performance of RoboFlamingo by training it on the given demonstration data.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 3: Ablation studies on the ABCD →D setting. Note that the success rate of RoboFlamingo on subsequent tasks dropped more than HULC does. This may be due to our ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** RoboFlamingo only takes a dozen steps to locate and move to the top of the drawer, and simultaneously releases the gripper to complete the task; while HULC keeps moving above ... (p. 16, B.5 QUALITATIVE EXAMPLES).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

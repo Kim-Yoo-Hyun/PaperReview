@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 This implies the classic result that the update performed by exact policy iteration, which uses the deterministic policy ˜π(s) = arg maxa Aπ(s, a), improves the policy if there is at least ...를 Here, we generate a set of trajectories via simulation of the policy and incorporate all state-action pairs (sn, an) into the objective.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The analytic estimator integrates over the action at each state sn, and does not depend on the action an that was sampled.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Instead, we introduce the following local approximation to η: Lπ(˜π) = η(π) + X s ρπ(s) X a ˜π(a/s)Aπ(s, a).
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Trust Region Policy Optimization This problem imposes a constraint that the KL divergence is bounded at every point in the state space. (p. 4, 2 Preliminaries).
+- **Paper-specific mechanism:** In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as playing Atari games directly from raw images. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption); the relevant task/metric cue is Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to be special limiting cases of an algorithm that optimizes a certain objective ... (p. 8, 9 Discussion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 8.1 Simulated Robotic Locomotion We conducted the robotic locomotion experiments using the MuJoCo simulator (Todorov et al., 2012)..
-3. Compare against the body-reported baseline or a matched simpler baseline: This self-normalized estimator removes the need to use a baseline for the Q-values (note that the gradient is unchanged by adding a constant to the Q-values)..
-4. Report the body metric and its denominator/aggregation: Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies substantially from ....
-5. Re-run the body-reported ablation/failure condition: This self-normalized estimator removes the need to use a baseline for the Q-values (note that the gradient is unchanged by adding a constant to the Q-values)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Trust Region Policy Optimization This problem imposes a constraint that the KL divergence is bounded at every point in the state space. (p. 4, 2 Preliminaries); preserve the objective/update rule: The natural policy gradient (Kakade, 2002) can be obtained as a special case of the update in Equation (12) by using a linear approximation to L and a quadratic approximation ... (p. 6, 3. Approximately solve this constrained optimization).
+2. Use the paper-reported task/data/environment cue: 2D robot models used for locomotion experiments. (p. 6, 1. What are the performance characteristics of the single).
+3. Compare against the reported or matched baseline: This self-normalized estimator removes the need to use a baseline for the Q-values (note that the gradient is unchanged by adding a constant to the Q-values). (p. 5, 2 Preliminaries).
+4. Report the body metric with its denominator and aggregation: Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: This self-normalized estimator removes the need to use a baseline for the Q-values (note that the gradient is unchanged by adding a constant to the Q-values). (p. 5, 2 Preliminaries); if none is reported, design one around: Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to be special limiting cases of an algorithm that optimizes a certain objective ... (p. 8, 9 Discussion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization); the primary result is directionally consistent at p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 1 (Abstract), match the reported outcome at p. 8 (Figure/Table caption), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 6 (3. Approximately solve this constrained optimization), and measure the boundary at p. 8 (9 Discussion), p. 2 (2 Preliminaries).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Instead, introduce, following mechanism이 This self-normalized estimator removes the need to use a baseline for the Q-values (note that the ... 대비 Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run ...을 개선하고, The analytic estimator integrates over the action at each state sn, and does not depend on ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Trust Region Policy Optimization This problem imposes a constraint that the KL divergence is bounded at every point in the state space.), does the paper-specific mechanism (In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as ...) retain the reported evaluation outcome (Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run ...) when tested against the paper's strongest explicit boundary (Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as playing Atari games directly from raw images. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to be special limiting cases of an algorithm that optimizes a certain objective ... (p. 8, 9 Discussion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

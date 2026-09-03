@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (50 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/rana23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.06135. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/rana23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.06135. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | The table shows the semantic search success rate in finding a suitable subgraph for planning. | p. 6 (5 Results) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 3: Scene Graph Token Progression Dur- ing Semantic Search. This graph illustrates the scalability of our approach to large-scale 3D scene graphs. Note ... | p. 7 (Figure/Table caption) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This static prompt is both task- and environment-agnostic and takes up ≈3900 tokens of the LLM's input. | embodiment, simulator version and control stack | p. 13 (A Implementation Details), p. 13 (A Implementation Details) |
 | Task/environment | We define the agent's role, details pertaining to the scene graph environment, the desired output structure and a set of input-output examples which together ... | reset, timeout, object/scene variation | p. 13 (A Implementation Details), p. 6 (5 Results) |
@@ -145,7 +145,16 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 - **p. 46 / Figure/Table caption - extractive body cue:** Figure 8: Evaluating the performance of SayPlan's causal planning capabilities as the scale of the environment increases. For the office environment used in this study, ...
 - **p. 32 / Figure/Table caption - extractive body cue:** Table 18: Correctness, Executability and Number of Replanning Iterations for Long-Horizon Planning Instructions. Evaluating the performance of SayPlan on each long-horizon planning instruction. Values indicated ...
 
-- **PDF anchors reviewed:** datasets p. 13 (A Implementation Details), p. 13 (A Implementation Details), p. 6 (5 Results), metrics p. 6 (5 Results), p. 7 (Figure/Table caption), p. 32 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 45 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 32 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 6 (5 Results), p. 7 (Figure/Table caption), p. 46 (Figure/Table caption), p. 6 (5 Results), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 13 (A Implementation Details), p. 13 (A Implementation Details), p. 6 (5 Results), metrics p. 6 (5 Results), p. 7 (Figure/Table caption), p. 32 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 45 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 32 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 6 (5 Results), p. 7 (Figure/Table caption), p. 46 (Figure/Table caption), p. 6 (5 Results), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (50 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We summarise the results for the semantic search evaluation in Table (p. 6, 5 Results).
+- **Metric evidence:** The table shows the semantic search success rate in finding a suitable subgraph for planning. (p. 6, 5 Results).
+- **Baseline/ablation evidence:** We summarise the results for the semantic search evaluation in Table (p. 6, 5 Results).
+- **Failure/negative evidence:** An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented with questions such as "Find me an office that does not have ... (p. 7, 1. SayPlan (GPT-3.5) consistently).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. | p. 5 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | We collected 250 real-world trajectories per task, including both successful and failed rollouts from the base policy, along with additional 100 demonstrations used in ... | p. 6 (V. EXPERIMENTS) |
@@ -54,7 +54,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We consider three real-world robot manipulation tasks that exhibit underlying multi-modal behavio hhard-to-model outcomes, and nuanced failures. | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
 | Task/environment | We collected 250 real-world trajectories per task, including both successful and failed rollouts from the base policy, along with additional 100 demonstrations used in ... | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
@@ -150,7 +150,16 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 - **p. 9 / VI. Limrrations - extractive body cue:** Our experiments across diverse manipulation tasks confirm that FOREWARN not only provides interpretable and reliable failure detection, but also significantly enhances policy success rates through ...
 - **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** In contrast, the baselines either fail to interpret action outcomes effectively, resulting in unsafe behaviors, or experience severe performance degradation in novel task specifications.
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 7 (Figure/Table caption), results p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 7 (Figure/Table caption), results p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** In this task, the robot must pick up a fork from the table and place it inside a bowl. (p. 5, V. EXPERIMENTS).
+- **Metric evidence:** V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. (p. 5, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. (p. 5, V. EXPERIMENTS).
+- **Failure/negative evidence:** However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).

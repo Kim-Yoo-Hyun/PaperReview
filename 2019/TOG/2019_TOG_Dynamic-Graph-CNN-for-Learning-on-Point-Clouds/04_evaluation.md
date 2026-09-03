@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1801.07829; PDF retrieval source: https://arxiv.org/pdf/1801.07829. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1801.07829; PDF retrieval source: https://arxiv.org/pdf/1801.07829. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 EVALUATION - extractive PDF cue:** The dataset contains 16,881 3D shapes from 16 object categories, annotated with 50 parts in total.
-- **p. 8 / 4 EVALUATION - extractive PDF cue:** We extend our EdgeConv model architectures for part segmentation task on ShapeNet part dataset [Yi et al.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** Our model achieves the best results on this dataset.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** The dataset contains 12,311 meshed CAD models from 40 categories.
-- **p. 9 / 4 EVALUATION - extractive PDF cue:** This dataset includes 3D scan point clouds for 6 indoor areas including 272 rooms in total.
-- **p. 9 / 4 EVALUATION - extractive PDF cue:** We evaluate our model on Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS) [Armeni et al.
-- **p. 10 / 4 EVALUATION - extractive PDF cue:** Mean overall IoU accuracy PointNet (baseline) [Qi et al.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** Mean Overall Class Accuracy Accuracy 3DShapeNets [Wu et al.
+- **p. 8 / 4 EVALUATION - extractive body cue:** The dataset contains 16,881 3D shapes from 16 object categories, annotated with 50 parts in total.
+- **p. 8 / 4 EVALUATION - extractive body cue:** We extend our EdgeConv model architectures for part segmentation task on ShapeNet part dataset [Yi et al.
+- **p. 7 / 4 EVALUATION - extractive body cue:** Our model achieves the best results on this dataset.
+- **p. 7 / 4 EVALUATION - extractive body cue:** The dataset contains 12,311 meshed CAD models from 40 categories.
+- **p. 9 / 4 EVALUATION - extractive body cue:** This dataset includes 3D scan point clouds for 6 indoor areas including 272 rooms in total.
+- **p. 9 / 4 EVALUATION - extractive body cue:** We evaluate our model on Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS) [Armeni et al.
+- **p. 10 / 4 EVALUATION - extractive body cue:** Mean overall IoU accuracy PointNet (baseline) [Qi et al.
+- **p. 7 / 4 EVALUATION - extractive body cue:** Mean Overall Class Accuracy Accuracy 3DShapeNets [Wu et al.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EVALUATION | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our model achieves the best results on this dataset. | p. 7 (4 EVALUATION) |
 | 4 EVALUATION | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster. | p. 7 (4 EVALUATION) |
@@ -40,34 +40,34 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 EVALUATION - extractive PDF cue:** The dataset contains 16,881 3D shapes from 16 object categories, annotated with 50 parts in total.
-- **p. 8 / 4 EVALUATION - extractive PDF cue:** We extend our EdgeConv model architectures for part segmentation task on ShapeNet part dataset [Yi et al.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** Our model achieves the best results on this dataset.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** The dataset contains 12,311 meshed CAD models from 40 categories.
-- **p. 9 / 4 EVALUATION - extractive PDF cue:** This dataset includes 3D scan point clouds for 6 indoor areas including 272 rooms in total.
-- **p. 9 / 4 EVALUATION - extractive PDF cue:** We evaluate our model on Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS) [Armeni et al.
+- **p. 8 / 4 EVALUATION - extractive body cue:** The dataset contains 16,881 3D shapes from 16 object categories, annotated with 50 parts in total.
+- **p. 8 / 4 EVALUATION - extractive body cue:** We extend our EdgeConv model architectures for part segmentation task on ShapeNet part dataset [Yi et al.
+- **p. 7 / 4 EVALUATION - extractive body cue:** Our model achieves the best results on this dataset.
+- **p. 7 / 4 EVALUATION - extractive body cue:** The dataset contains 12,311 meshed CAD models from 40 categories.
+- **p. 9 / 4 EVALUATION - extractive body cue:** This dataset includes 3D scan point clouds for 6 indoor areas including 272 rooms in total.
+- **p. 9 / 4 EVALUATION - extractive body cue:** We evaluate our model on Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS) [Armeni et al.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Point cloud segmentation using the proposed neural network. Bottom: schematic neural network architecture. Top: Structure of the feature spaces produced at different layers ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Left: Computing an edge feature, eij (top), from a point pair, xi and xj (bottom). In this example, hΘ() is instantiated using a ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Model architectures: The model architectures used for classification (top branch) and segmentation (bottom branch). The classification model takes as input n points, calculates ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison to existing methods. The per-point weight wi in [Atzmon et al. 2018] effectively is computed in the first layer and could be ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. Structure of the feature spaces produced at different stages of our shape classification neural network architecture, visualized as the distance between the red ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Classification results on ModelNet40. 4.2 Model Complexity We use the ModelNet40 [Wu et al. 2015] classification experiment to compare the complexity of our ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Complexity, forward time, and accuracy of different models more efficient. The number of points in each experiment is also 1024 in this section. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Effectiveness of different components. CENT denotes centraliza- tion, DYN denotes dynamical graph recomputation, and MPOINTS denotes experiments with 2048 points .
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Point cloud segmentation using the proposed neural network. Bottom: schematic neural network architecture. Top: Structure of the feature spaces produced at different layers ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Left: Computing an edge feature, eij (top), from a point pair, xi and xj (bottom). In this example, hΘ() is instantiated using a ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Model architectures: The model architectures used for classification (top branch) and segmentation (bottom branch). The classification model takes as input n points, calculates ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison to existing methods. The per-point weight wi in [Atzmon et al. 2018] effectively is computed in the first layer and could be ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. Structure of the feature spaces produced at different stages of our shape classification neural network architecture, visualized as the distance between the red ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Classification results on ModelNet40. 4.2 Model Complexity We use the ModelNet40 [Wu et al. 2015] classification experiment to compare the complexity of our ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Complexity, forward time, and accuracy of different models more efficient. The number of points in each experiment is also 1024 in this section. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Effectiveness of different components. CENT denotes centraliza- tion, DYN denotes dynamical graph recomputation, and MPOINTS denotes experiments with 2048 points .
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset contains 16,881 3D shapes from 16 object categories, annotated with 50 parts in total. | embodiment, simulator version and control stack | p. 8 (4 EVALUATION), p. 8 (4 EVALUATION) |
 | Task/environment | We extend our EdgeConv model architectures for part segmentation task on ShapeNet part dataset [Yi et al. | reset, timeout, object/scene variation | p. 8 (4 EVALUATION), p. 7 (4 EVALUATION) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | 본문 anchor 없음 |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (Body text (section not recovered)), p. 2 (1 INTRODUCTION) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1 INTRODUCTION), p. 1 (Body text (section not recovered)) |
 
 ## Metrics and Success Definition
 
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 | Primary metric/result | Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster. | numeric claim only at cited anchor | p. 7 (4 EVALUATION) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** For each model, 1,024 points are uniformly sampled from the mesh faces; the point cloud is rescaled to fit into the unit sphere.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** All the experiments are performed with point clouds that contain 1024 points except last row.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** We further test out model with 2048 points.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** The k used for 2048 points is 40 to maintain the same density.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** 2018] uses additional augmentation techniques like randomly sampling 1024 points out of 1200 points during both training and testing.
-- **p. 7 / 4 EVALUATION - extractive PDF cue:** 2018] - 92.3 Ours (baseline) 88.9 91.7 Ours 90.2 92.9 Ours (2048 points) 90.7 93.5 Table 2.
+- **p. 7 / 4 EVALUATION - extractive body cue:** For each model, 1,024 points are uniformly sampled from the mesh faces; the point cloud is rescaled to fit into the unit sphere.
+- **p. 7 / 4 EVALUATION - extractive body cue:** All the experiments are performed with point clouds that contain 1024 points except last row.
+- **p. 7 / 4 EVALUATION - extractive body cue:** We further test out model with 2048 points.
+- **p. 7 / 4 EVALUATION - extractive body cue:** The k used for 2048 points is 40 to maintain the same density.
+- **p. 7 / 4 EVALUATION - extractive body cue:** 2018] uses additional augmentation techniques like randomly sampling 1024 points out of 1200 points during both training and testing.
+- **p. 7 / 4 EVALUATION - extractive body cue:** 2018] - 92.3 Ours (baseline) 88.9 91.7 Ours 90.2 92.9 Ours (2048 points) 90.7 93.5 Table 2.
 
 ## Generalization and Failure Cases
 
@@ -144,6 +144,8 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 | A distributed training scheme is further implemented on two NVIDIA TITAN X GPUs to maintain the training batch size. | p. 8 (4 EVALUATION) |
 | We follow the same evaluation scheme as PointNet: The IoU of a shape is computed by averaging the IoUs of different parts occurring in ... | p. 8 (4 EVALUATION) |
 | As shown in Figure 8, we take one red point from a source point cloud and compute its distance in feature space to points ... | p. 9 (4 EVALUATION) |
+| EdgeConv acts on graphs dynamically computed in each layer of the network. | p. 1 (Body text (section not recovered)) |
+| Point clouds provide a flexible geometric representation suitable for countless applications in computer graphics; they also comprise the raw output of most 3D data ... | p. 1 (Body text (section not recovered)) |
 | We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better ... | p. 2 (1 INTRODUCTION) |
 
 | Audit field | Current status |
@@ -156,11 +158,11 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4 EVALUATION - extractive PDF cue:** This confirms our hypothesis that for certain density, with large k the Euclidean distance fails to approximate geodesic distance, destroying the geometry of each patch.
-- **p. 8 / 4 EVALUATION - extractive PDF cue:** We further evaluate the robustness of our model (trained on 1,024 points with k = 20) to point cloud density.
-- **p. 9 / 4 EVALUATION - extractive PDF cue:** Our model is robust to partial data.
+- **p. 8 / 4 EVALUATION - extractive body cue:** This confirms our hypothesis that for certain density, with large k the Euclidean distance fails to approximate geodesic distance, destroying the geometry of each patch.
+- **p. 8 / 4 EVALUATION - extractive body cue:** We further evaluate the robustness of our model (trained on 1,024 points with k = 20) to point cloud density.
+- **p. 9 / 4 EVALUATION - extractive body cue:** Our model is robust to partial data.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 9 (4 EVALUATION), p. 9 (4 EVALUATION), metrics p. 10 (4 EVALUATION), p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 9 (4 EVALUATION), baselines p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 9 (4 EVALUATION), p. 10 (4 EVALUATION), p. 6 (Figure/Table caption), results p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 10 (4 EVALUATION), p. 10 (4 EVALUATION).
+- **Evidence anchors reviewed:** datasets p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 9 (4 EVALUATION), p. 9 (4 EVALUATION), metrics p. 10 (4 EVALUATION), p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 9 (4 EVALUATION), baselines p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 9 (4 EVALUATION), p. 10 (4 EVALUATION), p. 6 (Figure/Table caption), results p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 10 (4 EVALUATION), p. 10 (4 EVALUATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

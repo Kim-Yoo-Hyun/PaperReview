@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 
 ## Method Body Digest
 
-- **p. 3 / 3.1. QT-Former - extractive PDF cue:** To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a querybased temporal module, ...
-- **p. 4 / 3.3. Generative Planner - extractive PDF cue:** As there are essential differences in the distribution between the reasoning space of VLM and the action space of trajectory, we use the VAE [29] ...
-- **p. 4 / 3.1. QT-Former - extractive PDF cue:** Then they interact with image features Fm with 3D positional encoding [38] Pm in the cross-attention (CA) module.
-- **p. 5 / 3.3. Generative Planner - extractive PDF cue:** (5) We then use the GRU decoder in GenAD [72] to decode the trajectory from the latent space z.
-- **p. 5 / 3.3. Generative Planner - extractive PDF cue:** We then use Kullback-Leibler divergence loss to enforce distribution matching, represented as: Lvae = DKL(p(z/s), p(z/t)).
-- **p. 3 / 3. Method - extractive PDF cue:** 2, ORION first encodes the image tokens with a vision encoder.
-- **p. 5 / 3.4. Training Objectives - extractive PDF cue:** The total loss of QTFormer is: Lqt = Ldet + Ltra + Lm.
-- **p. 5 / 3.4. Training Objectives - extractive PDF cue:** (8) The loss weight follows [26, 60, 72] without special design.
+- **p. 3 / 3.1. QT-Former - extractive body cue:** To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a querybased temporal module, ...
+- **p. 4 / 3.3. Generative Planner - extractive body cue:** As there are essential differences in the distribution between the reasoning space of VLM and the action space of trajectory, we use the VAE [29] ...
+- **p. 4 / 3.1. QT-Former - extractive body cue:** Then they interact with image features Fm with 3D positional encoding [38] Pm in the cross-attention (CA) module.
+- **p. 5 / 3.3. Generative Planner - extractive body cue:** (5) We then use the GRU decoder in GenAD [72] to decode the trajectory from the latent space z.
+- **p. 5 / 3.3. Generative Planner - extractive body cue:** We then use Kullback-Leibler divergence loss to enforce distribution matching, represented as: Lvae = DKL(p(z/s), p(z/t)).
+- **p. 3 / 3. Method - extractive body cue:** 2, ORION first encodes the image tokens with a vision encoder.
+- **p. 5 / 3.4. Training Objectives - extractive body cue:** The total loss of QTFormer is: Lqt = Ldet + Ltra + Lm.
+- **p. 5 / 3.4. Training Objectives - extractive body cue:** (8) The loss weight follows [26, 60, 72] without special design.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To tackle this problem, we propose a hOlistic E2E autonomous dRiving framework by vIsion-language instructed actiON generation, termed ORION.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Instead, motivated by OmniDrive [61], which extracts features through Q-Former-styled architecture, we introduce QT-Former, a query-based temporal module.
-- **p. 3 / 3.1. QT-Former - extractive PDF cue:** To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a querybased temporal module, ...
+- **p. 2 / 1. Introduction - extractive body cue:** To tackle this problem, we propose a hOlistic E2E autonomous dRiving framework by vIsion-language instructed actiON generation, termed ORION.
+- **p. 2 / 1. Introduction - extractive body cue:** Instead, motivated by OmniDrive [61], which extracts features through Q-Former-styled architecture, we introduce QT-Former, a query-based temporal module.
+- **p. 3 / 3.1. QT-Former - extractive body cue:** To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a querybased temporal module, ...
 
 ## Source Evidence Cues
 
-- **p. 3 / 3.1. QT-Former - extractive PDF cue:** To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a querybased temporal module, ...
-- **p. 4 / 3.3. Generative Planner - extractive PDF cue:** As there are essential differences in the distribution between the reasoning space of VLM and the action space of trajectory, we use the VAE [29] ...
-- **p. 4 / 3.1. QT-Former - extractive PDF cue:** Then they interact with image features Fm with 3D positional encoding [38] Pm in the cross-attention (CA) module.
-- **p. 5 / 3.3. Generative Planner - extractive PDF cue:** (5) We then use the GRU decoder in GenAD [72] to decode the trajectory from the latent space z.
-- **p. 5 / 3.3. Generative Planner - extractive PDF cue:** We then use Kullback-Leibler divergence loss to enforce distribution matching, represented as: Lvae = DKL(p(z/s), p(z/t)).
-- **p. 3 / 3. Method - extractive PDF cue:** 2, ORION first encodes the image tokens with a vision encoder.
+- **p. 3 / 3.1. QT-Former - extractive body cue:** To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a querybased temporal module, ...
+- **p. 4 / 3.3. Generative Planner - extractive body cue:** As there are essential differences in the distribution between the reasoning space of VLM and the action space of trajectory, we use the VAE [29] ...
+- **p. 4 / 3.1. QT-Former - extractive body cue:** Then they interact with image features Fm with 3D positional encoding [38] Pm in the cross-attention (CA) module.
+- **p. 5 / 3.3. Generative Planner - extractive body cue:** (5) We then use the GRU decoder in GenAD [72] to decode the trajectory from the latent space z.
+- **p. 5 / 3.3. Generative Planner - extractive body cue:** We then use Kullback-Leibler divergence loss to enforce distribution matching, represented as: Lvae = DKL(p(z/s), p(z/t)).
+- **p. 3 / 3. Method - extractive body cue:** 2, ORION first encodes the image tokens with a vision encoder.
 - **Detected method headings:** 2.2. Vision-Language Models (VLMs) (p. 2); 3. Method (p. 3); 3.2. Large Language Model (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To compress and extract multi-view image features Fm derived from the vision encoder while achieving long-term information modeling, we introduce QT-Former, a ... | p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | As there are essential differences in the distribution between the reasoning space of VLM and the action space of trajectory, we use ... | p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former) |
@@ -47,10 +47,10 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.4. Training Objectives - extractive PDF cue:** The total loss of QTFormer is: Lqt = Ldet + Ltra + Lm.
-- **p. 5 / 3.4. Training Objectives - extractive PDF cue:** (8) The loss weight follows [26, 60, 72] without special design.
-- **p. 4 / 3.3. Generative Planner - extractive PDF cue:** Specifically, we formulate the current trajectory a in action space as a conditional probability distribution p(a / s), where s is the planning token.
-- **p. 4 / 3.1. QT-Former - extractive PDF cue:** Finally, we leverage two-layer MLP to convert the updated history queries ˆQh and current scene features Qs to corresponding history tokens xh and scene tokens ...
+- **p. 5 / 3.4. Training Objectives - extractive body cue:** The total loss of QTFormer is: Lqt = Ldet + Ltra + Lm.
+- **p. 5 / 3.4. Training Objectives - extractive body cue:** (8) The loss weight follows [26, 60, 72] without special design.
+- **p. 4 / 3.3. Generative Planner - extractive body cue:** Specifically, we formulate the current trajectory a in action space as a conditional probability distribution p(a / s), where s is the planning token.
+- **p. 4 / 3.1. QT-Former - extractive body cue:** Finally, we leverage two-layer MLP to convert the updated history queries ˆQh and current scene features Qs to corresponding history tokens xh and scene tokens ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Training Objectives), p. 5 (3.4. Training Objectives), p. 4 (3.1. QT-Former), p. 4 (3.1. QT-Former).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -66,13 +66,13 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Large Language Model - extractive PDF cue:** 2, the user instruction Xq, including scene description, history information review, scene analysis, and action reasoning, is first encoded into language tokens xq ∈RL×C by ...
-- **p. 5 / 3.3. Generative Planner - extractive PDF cue:** The former only uses a single token encoded in the reasoning space from the perspective of the ego vehicle as input, aiming to bridge the ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Other methods endeavor to bridge the gap via utilizing VLM output meta-action (e.g., turn left) to assist classic E2E methods [27, 41], as shown in ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To tackle this problem, we propose a hOlistic E2E autonomous dRiving framework by vIsion-language instructed actiON generation, termed ORION.
-- **p. 4 / 3.1. QT-Former - extractive PDF cue:** After that, the perception queries are fed into the multiple auxiliary heads for object detection(e.g., objects and map), traffic state (e.g. traffic signs, traffic lights, ...
-- **p. 5 / 3.3. Generative Planner - extractive PDF cue:** Benefiting from the proposed method that bridges the gap between the reasoning and action space through distribution learning in latent space, our framework still demonstrates ...
-- **p. 3 / 3. Method - extractive PDF cue:** 3.2) subsequently combines the vision features with user instructions to generate a planning token.
+- **p. 4 / 3.2. Large Language Model - extractive body cue:** 2, the user instruction Xq, including scene description, history information review, scene analysis, and action reasoning, is first encoded into language tokens xq ∈RL×C by ...
+- **p. 5 / 3.3. Generative Planner - extractive body cue:** The former only uses a single token encoded in the reasoning space from the perspective of the ego vehicle as input, aiming to bridge the ...
+- **p. 2 / 1. Introduction - extractive body cue:** Other methods endeavor to bridge the gap via utilizing VLM output meta-action (e.g., turn left) to assist classic E2E methods [27, 41], as shown in ...
+- **p. 2 / 1. Introduction - extractive body cue:** To tackle this problem, we propose a hOlistic E2E autonomous dRiving framework by vIsion-language instructed actiON generation, termed ORION.
+- **p. 4 / 3.1. QT-Former - extractive body cue:** After that, the perception queries are fed into the multiple auxiliary heads for object detection(e.g., objects and map), traffic state (e.g. traffic signs, traffic lights, ...
+- **p. 5 / 3.3. Generative Planner - extractive body cue:** Benefiting from the proposed method that bridges the gap between the reasoning and action space through distribution learning in latent space, our framework still demonstrates ...
+- **p. 3 / 3. Method - extractive body cue:** 3.2) subsequently combines the vision features with user instructions to generate a planning token.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -107,13 +107,13 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** We then investigate the effect of employing different generative planners to bridge the reasoning-action space.
-- **p. 6 / 4.5. Ablation Study - extractive PDF cue:** To ensure the fairness of the ablations, experiments of different paradigms use the same sensor inputs, vision encoder, QT-former, and VLM as our ORION and ...
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** Ablation on diverse generative planner.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Ablation of history queries number.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Ablation on QT-Former designs in different frameworks.
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive PDF cue:** For open-loop evaluation, we use the L2 distance error and the collision rate.
-- **p. 6 / 25.00 71.11 78.33 30.00 69.15 54.72(+16.12) - extractive PDF cue:** On the other hand, our model falls behind DriveAdapter in Merging and Give Way, which shows that ORION is not good at making lane-changing decisions.
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** We then investigate the effect of employing different generative planners to bridge the reasoning-action space.
+- **p. 6 / 4.5. Ablation Study - extractive body cue:** To ensure the fairness of the ablations, experiments of different paradigms use the same sensor inputs, vision encoder, QT-former, and VLM as our ORION and ...
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** Ablation on diverse generative planner.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** Ablation of history queries number.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** Ablation on QT-Former designs in different frameworks.
+- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** For open-loop evaluation, we use the L2 distance error and the collision rate.
+- **p. 6 / 25.00 71.11 78.33 30.00 69.15 54.72(+16.12) - extractive body cue:** On the other hand, our model falls behind DriveAdapter in Merging and Give Way, which shows that ORION is not good at making lane-changing decisions.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -127,7 +127,7 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former), p. 5 (3.3. Generative Planner), p. 5 (3.3. Generative Planner), p. 3 (3. Method), objective p. 5 (3.4. Training Objectives), p. 5 (3.4. Training Objectives), p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former), temporal p. 4 (3.1. QT-Former), p. 4 (3.1. QT-Former), p. 2 (1. Introduction), p. 8 (4.5. Ablation Study), p. 3 (2.3. VLM for End-to-End Autonomous Driving), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former), p. 5 (3.3. Generative Planner), p. 5 (3.3. Generative Planner), p. 3 (3. Method), objective p. 5 (3.4. Training Objectives), p. 5 (3.4. Training Objectives), p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former), temporal p. 4 (3.1. QT-Former), p. 4 (3.1. QT-Former), p. 2 (1. Introduction), p. 8 (4.5. Ablation Study), p. 3 (2.3. VLM for End-to-End Autonomous Driving), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

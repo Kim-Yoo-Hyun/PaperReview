@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://vla-arena.github.io/; PDF retrieval source: https://arxiv.org/pdf/2512.22539. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://vla-arena.github.io/; PDF retrieval source: https://arxiv.org/pdf/2512.22539. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Conducting an extensive study on VLA-Arena with leading models from the two dominant architectural paradigms: autoregressive and continuous action generation, our analysis ... | p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models 0.0 0.25 0.5 0.75 1.0 Success Rate StatePreservation L0 OpenVLA OpenVLA-OFT Pi0 UniVLA L1 ... | p. 6 (3. Task Suites in VLA-Arena), p. 2 (1. Introduction) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | Autoregressive VLAs: OpenVLA (Kim et al., 2024) tokenizes continuous actions into discrete bins per timestep. | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | Despite mastering atomic skills on L0 tasks, models struggle when language requires adapting these skills to novel contexts (i.e., Extrapolation) or sequences ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | The results are calculated as the average over 30 evaluation episodes, with 10 episodes per seed. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -132,8 +132,17 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Structured Task Design), p. 4 (2. Structured Task Design), objective p. 5 (3. Task Suites in VLA-Arena), p. 1 (170 Tasks), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), temporal p. 6 (4.1. Experimental Setup), p. 7 (4.2. Analysis of Performance and Failure Modes), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 9 (5. Real-Robot Validation).
+- **Evidence anchors reviewed:** method p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Structured Task Design), p. 4 (2. Structured Task Design), objective p. 5 (3. Task Suites in VLA-Arena), p. 1 (170 Tasks), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), temporal p. 6 (4.1. Experimental Setup), p. 7 (4.2. Analysis of Performance and Failure Modes), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 9 (5. Real-Robot Validation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Conducting an extensive study on VLA-Arena with leading models from the two dominant architectural paradigms: autoregressive and continuous action generation, our analysis surfaces three key findings: (I) a reliance on ... (p. 3, 1. Introduction).
+- **Objective/update evidence:** This dimension evaluates the model's ability to not only complete its primary objective but to do so while adhering to safety constraints, a critical requirement for real-world deployment. (p. 5, 3. Task Suites in VLA-Arena).
+- **Temporal/runtime evidence:** Despite mastering atomic skills on L0 tasks, models struggle when language requires adapting these skills to novel contexts (i.e., Extrapolation) or sequences (i.e., Long Horizon). (p. 7, 4.2. Analysis of Performance and Failure Modes).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

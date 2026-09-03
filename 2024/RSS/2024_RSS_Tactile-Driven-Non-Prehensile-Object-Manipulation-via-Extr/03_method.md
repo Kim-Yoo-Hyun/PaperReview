@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 5 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object ... | p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | The main contributions of our work are in components (iii) and (iv) where we augment the model in (ii) with contact-aware constraints ... | p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 5 
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | For each method, we perform 5 offline trajectory optimizations with a horizon of 40 steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | [30] presents a hierarchical planning framework for planning through rigid body motions and complex contact sequences based on Monte Carlo tree search. | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | For each method, we perform 5 offline trajectory optimizations with a horizon of 40 steps. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 5 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 6 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), objective p. 6 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 6 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), temporal p. 9 (V. EXPERIMENTS AND RESULTS), p. 2 (II. RELATED WORK), p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY).
+- **Evidence anchors reviewed:** method p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 6 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), objective p. 6 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 6 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), temporal p. 9 (V. EXPERIMENTS AND RESULTS), p. 2 (II. RELATED WORK), p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object pose and extrinsic contacts; ii) a passive compliance ... (p. 3, IV. METHODOLOGY).
+- **Objective/update evidence:** 4) Given the object and robot poses, the external wrench, and the contact forces compute the loss function L and backpropagate the gradients through the different blocks to update the ... (p. 5, IV. METHODOLOGY).
+- **Temporal/runtime evidence:** For each method, we perform 5 offline trajectory optimizations with a horizon of 40 steps. (p. 9, V. EXPERIMENTS AND RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

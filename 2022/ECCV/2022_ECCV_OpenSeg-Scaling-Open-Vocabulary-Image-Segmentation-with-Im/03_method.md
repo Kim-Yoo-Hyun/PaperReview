@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.12143; PDF retrieval source: https://arxiv.org/pdf/2112.12143. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.12143; PDF retrieval source: https://arxiv.org/pdf/2112.12143. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 ## Method Body Digest
 
-- **p. 6 / 3 Method - extractive PDF cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
-- **p. 6 / 3 Method - extractive PDF cue:** We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D.
-- **p. 7 / 3 Method - extractive PDF cue:** We follow MuST [17] and first train a teacher model on a segmentation dataset with only the segmentation loss LS.
-- **p. 8 / 3 Method - extractive PDF cue:** 3.4 Inference Up to this point, we learn a vision model that predicts segmentation masks s ∈RN×H×W and corresponding features z ∈RN×D.
-- **p. 7 / 3 Method - extractive PDF cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
-- **p. 8 / 3 Method - extractive PDF cue:** Given an evaluation segmentation dataset, we encode its categories using the text encoder.
-- **p. 7 / 3 Method - extractive PDF cue:** The grounding loss aims at maximizing the normalized score of a labeled image-caption pair ⟨Ib, Cb⟩over all images and all captions in a mini-batch.
-- **p. 6 / 3 Method - extractive PDF cue:** We compute Dice coefficient [34] between predicted masks s and classagnostic labeled masks sl ∈RM×H×W and maximize the Dice coefficient of the best matched mask ...
+- **p. 6 / 3 Method - extractive body cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
+- **p. 6 / 3 Method - extractive body cue:** We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D.
+- **p. 7 / 3 Method - extractive body cue:** We follow MuST [17] and first train a teacher model on a segmentation dataset with only the segmentation loss LS.
+- **p. 8 / 3 Method - extractive body cue:** 3.4 Inference Up to this point, we learn a vision model that predicts segmentation masks s ∈RN×H×W and corresponding features z ∈RN×D.
+- **p. 7 / 3 Method - extractive body cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
+- **p. 8 / 3 Method - extractive body cue:** Given an evaluation segmentation dataset, we encode its categories using the text encoder.
+- **p. 7 / 3 Method - extractive body cue:** The grounding loss aims at maximizing the normalized score of a labeled image-caption pair ⟨Ib, Cb⟩over all images and all captions in a mini-batch.
+- **p. 6 / 3 Method - extractive body cue:** We compute Dice coefficient [34] between predicted masks s and classagnostic labeled masks sl ∈RM×H×W and maximize the Dice coefficient of the best matched mask ...
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** We call our method OpenSeg, standing for open-vocabulary image segmentation.
-- **p. 3 / 1 Introduction - extractive PDF cue:** To evaluate our method, we measure performances on holdout image segmentation datasets.
-- **p. 6 / 3 Method - extractive PDF cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
+- **p. 3 / 1 Introduction - extractive body cue:** We call our method OpenSeg, standing for open-vocabulary image segmentation.
+- **p. 3 / 1 Introduction - extractive body cue:** To evaluate our method, we measure performances on holdout image segmentation datasets.
+- **p. 6 / 3 Method - extractive body cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
 
 ## Source Evidence Cues
 
-- **p. 6 / 3 Method - extractive PDF cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
-- **p. 6 / 3 Method - extractive PDF cue:** We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D.
-- **p. 7 / 3 Method - extractive PDF cue:** We follow MuST [17] and first train a teacher model on a segmentation dataset with only the segmentation loss LS.
-- **p. 8 / 3 Method - extractive PDF cue:** 3.4 Inference Up to this point, we learn a vision model that predicts segmentation masks s ∈RN×H×W and corresponding features z ∈RN×D.
-- **p. 7 / 3 Method - extractive PDF cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
-- **p. 8 / 3 Method - extractive PDF cue:** Given an evaluation segmentation dataset, we encode its categories using the text encoder.
+- **p. 6 / 3 Method - extractive body cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
+- **p. 6 / 3 Method - extractive body cue:** We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D.
+- **p. 7 / 3 Method - extractive body cue:** We follow MuST [17] and first train a teacher model on a segmentation dataset with only the segmentation loss LS.
+- **p. 8 / 3 Method - extractive body cue:** 3.4 Inference Up to this point, we learn a vision model that predicts segmentation masks s ∈RN×H×W and corresponding features z ∈RN×D.
+- **p. 7 / 3 Method - extractive body cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
+- **p. 8 / 3 Method - extractive body cue:** Given an evaluation segmentation dataset, we encode its categories using the text encoder.
 - **Detected method headings:** 3 Method (p. 6); B Limitations of our approach (p. 18); C Architecture of the cross-attention module (p. 18)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction ... | p. 6 (3 Method), p. 6 (3 Method) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries ... | p. 6 (3 Method), p. 7 (3 Method) |
@@ -47,10 +47,10 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 ## Objective / Update Rule
 
-- **p. 7 / 3 Method - extractive PDF cue:** The grounding loss aims at maximizing the normalized score of a labeled image-caption pair ⟨Ib, Cb⟩over all images and all captions in a mini-batch.
-- **p. 6 / 3 Method - extractive PDF cue:** We compute Dice coefficient [34] between predicted masks s and classagnostic labeled masks sl ∈RM×H×W and maximize the Dice coefficient of the best matched mask ...
-- **p. 7 / 3 Method - extractive PDF cue:** We follow the grounding loss in prior works [19,58] to learn region-word alignments.
-- **p. 6 / 3 Method - extractive PDF cue:** Therefore, a subset of proposal masks are optimized to best match labeled masks.
+- **p. 7 / 3 Method - extractive body cue:** The grounding loss aims at maximizing the normalized score of a labeled image-caption pair ⟨Ib, Cb⟩over all images and all captions in a mini-batch.
+- **p. 6 / 3 Method - extractive body cue:** We compute Dice coefficient [34] between predicted masks s and classagnostic labeled masks sl ∈RM×H×W and maximize the Dice coefficient of the best matched mask ...
+- **p. 7 / 3 Method - extractive body cue:** We follow the grounding loss in prior works [19,58] to learn region-word alignments.
+- **p. 6 / 3 Method - extractive body cue:** Therefore, a subset of proposal masks are optimized to best match labeled masks.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -66,13 +66,13 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** We argue that what is missing in these state-of-the-art open-vocabulary classification models are mid-level representations from visual groupings [48], which organize an image into a ...
-- **p. 6 / 3 Method - extractive PDF cue:** We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D.
-- **p. 6 / 3 Method - extractive PDF cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** The segmentation model takes text queries as inputs and produces segmented regions accordingly.
-- **p. 7 / 3 Method - extractive PDF cue:** We generate image features Fz using the same architecture as Fs.
-- **p. 7 / 3 Method - extractive PDF cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
-- **p. 3 / 1 Introduction - extractive PDF cue:** To our knowledge, OpenSeg is the first work in image segmentation to demonstrate zero-shot transfer results across datasets using language.
+- **p. 2 / 1 Introduction - extractive body cue:** We argue that what is missing in these state-of-the-art open-vocabulary classification models are mid-level representations from visual groupings [48], which organize an image into a ...
+- **p. 6 / 3 Method - extractive body cue:** We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D.
+- **p. 6 / 3 Method - extractive body cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
+- **p. 2 / 1 Introduction - extractive body cue:** The segmentation model takes text queries as inputs and produces segmented regions accordingly.
+- **p. 7 / 3 Method - extractive body cue:** We generate image features Fz using the same architecture as Fs.
+- **p. 7 / 3 Method - extractive body cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
+- **p. 3 / 1 Introduction - extractive body cue:** To our knowledge, OpenSeg is the first work in image segmentation to demonstrate zero-shot transfer results across datasets using language.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -87,12 +87,12 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 ## Training vs Inference
 
-- **p. 7 / 3 Method - extractive PDF cue:** We follow MuST [17] and first train a teacher model on a segmentation dataset with only the segmentation loss LS.
-- **p. 8 / 3 Method - extractive PDF cue:** 3.4 Inference Up to this point, we learn a vision model that predicts segmentation masks s ∈RN×H×W and corresponding features z ∈RN×D.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Unless otherwise stated, for each core we compute the loss over the local batch of examples (See Appendix F for the comparison between sync and ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** For training these models, we use the same hyper-parameters, and only tune the learning rate (0.32 for scratch, 0.08 for NoisyStudent init. and 0.005 for ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** We may be able to reduce the gap by increasing the batch size and training with more data.
-- **p. 12 / 4 Experiments - extractive PDF cue:** For the strongest OpenSeg (last two rows), we initialize EfficientNet-b7 backbone with ALIGN pre-trained image encoder [23].
+- **p. 7 / 3 Method - extractive body cue:** We follow MuST [17] and first train a teacher model on a segmentation dataset with only the segmentation loss LS.
+- **p. 8 / 3 Method - extractive body cue:** 3.4 Inference Up to this point, we learn a vision model that predicts segmentation masks s ∈RN×H×W and corresponding features z ∈RN×D.
+- **p. 8 / 4 Experiments - extractive body cue:** Unless otherwise stated, for each core we compute the loss over the local batch of examples (See Appendix F for the comparison between sync and ...
+- **p. 13 / 4 Experiments - extractive body cue:** For training these models, we use the same hyper-parameters, and only tune the learning rate (0.32 for scratch, 0.08 for NoisyStudent init. and 0.005 for ...
+- **p. 13 / 4 Experiments - extractive body cue:** We may be able to reduce the gap by increasing the batch size and training with more data.
+- **p. 12 / 4 Experiments - extractive body cue:** For the strongest OpenSeg (last two rows), we initialize EfficientNet-b7 backbone with ALIGN pre-trained image encoder [23].
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 ## Failure and Ablation Link
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** ALIGN w/proposal baseline: The ALIGN, LSeg and LSeg+ baselines are methods that perform visual-semantic alignments without explicit visual grouping.
-- **p. 13 / 4 Experiments - extractive PDF cue:** This method performs inference without mask proposals.
-- **p. 13 / 4 Experiments - extractive PDF cue:** Narr.  8.8 12.2 28.6 48.2 72.2 4.4 Ablation Experiments Importance of backbone initialization: In order to save the computation, we initialize OpenSeg from the ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** This procedure removes conjunctions, pronouns, adverbs, verbs, etc. which reduces the noises.
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Figure 8. Predictions of OpenSeg on random examples in the A-150 dataset (Part1). For each example, top left is the input image, top right is ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** Since we initialize the backbone of OpenSeg from ALIGN's pretrained checkpoint, we use ALIGN as a baseline.
-- **p. 12 / 4 Experiments - extractive PDF cue:** We initialize ResNet101 backbone of OpenSeg and LSeg+ with ImageNet pretrained weights similar to the baselines.
+- **p. 10 / 4 Experiments - extractive body cue:** ALIGN w/proposal baseline: The ALIGN, LSeg and LSeg+ baselines are methods that perform visual-semantic alignments without explicit visual grouping.
+- **p. 13 / 4 Experiments - extractive body cue:** This method performs inference without mask proposals.
+- **p. 13 / 4 Experiments - extractive body cue:** Narr.  8.8 12.2 28.6 48.2 72.2 4.4 Ablation Experiments Importance of backbone initialization: In order to save the computation, we initialize OpenSeg from the ...
+- **p. 14 / 4 Experiments - extractive body cue:** This procedure removes conjunctions, pronouns, adverbs, verbs, etc. which reduces the noises.
+- **p. 24 / Figure/Table caption - extractive body cue:** Figure 8. Predictions of OpenSeg on random examples in the A-150 dataset (Part1). For each example, top left is the input image, top right is ...
+- **p. 10 / 4 Experiments - extractive body cue:** Since we initialize the backbone of OpenSeg from ALIGN's pretrained checkpoint, we use ALIGN as a baseline.
+- **p. 12 / 4 Experiments - extractive body cue:** We initialize ResNet101 backbone of OpenSeg and LSeg+ with ImageNet pretrained weights similar to the baselines.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 8 (3 Method), objective p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 6 (3 Method), temporal p. 8 (4 Experiments), p. 8 (4 Experiments), p. 13 (4 Experiments), p. 1 (Front matter), p. 2 (1 Introduction), p. 3 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 8 (3 Method), objective p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 6 (3 Method), temporal p. 8 (4 Experiments), p. 8 (4 Experiments), p. 13 (4 Experiments), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 3 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

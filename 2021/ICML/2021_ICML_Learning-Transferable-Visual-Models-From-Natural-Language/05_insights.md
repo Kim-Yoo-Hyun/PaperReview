@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `논문이 명시한 observation과 task input → task state 또는 decision variable → paper-specific output/action`.
-- 이 논문의 재사용 가능한 지점은 The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has enabled taskagnostic architectures to zero-shot transfer to downstream datasets removing ...를 When fine-tuned to ImageNet these pre-trained models increased accuracy by over 5% and improved the overall state of the art at the time.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 task state 또는 decision variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This process of characterization can help researchers increase the likelihood models are used beneficially by: • Identifying potentially beneficial downstream uses of models early in the research process, enabling other researchers to ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard & Ruder, 2018; Radford et al., 2018; ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** After filtering to keep only images with natural language titles and/or descriptions in English, the dataset shrunk by a factor of 6 to only 15 million photos. (p. 3, 2.2. Creating a Sufficiently Large Dataset).
+- **Paper-specific mechanism:** At the core of our approach is the idea of learning perception from supervision contained in natural language. (p. 3, 2.1. Natural Language Supervision).
+- **Evidence boundary:** the reported outcome is The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS); the relevant task/metric cue is The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. (p. 11, 3.2. Representation Learning).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The 20 datasets with at least 16 examples per class were used in this analysis. we see that zero-shot CLIP is quite weak on several specialized, complex, or abstract tasks such as ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Compared to the baseline of using contextless class names, prompt engineering and ensembling boost zero-shot classification performance by almost 5 points on average across 36 datasets..
-4. Report the body metric and its denominator/aggregation: On aYahoo, CLIP achieves a 95% reduction in the number of errors, and on SUN, CLIP more than doubles the accuracy of Visual N-Grams..
-5. Re-run the body-reported ablation/failure condition: While GPT-1 (Radford et al., 2018) focused on pretraining as a transfer learning method to improve supervised fine-tuning, it also included an ablation study demonstrating that the performance of four heuristic zero-shot ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: After filtering to keep only images with natural language titles and/or descriptions in English, the dataset shrunk by a factor of 6 to only 15 million photos. (p. 3, 2.2. Creating a Sufficiently Large Dataset); preserve the objective/update rule: We optimize a symmetric cross entropy loss over these similarity scores. (p. 4, 2.3. Selecting an Efficient Pre-Training Method).
+2. Use the paper-reported task/data/environment cue: However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods rather than measuring performance on a ... (p. 6, 3.1.1. MOTIVATION).
+3. Compare against the reported or matched baseline: While GPT-1 (Radford et al., 2018) focused on pretraining as a transfer learning method to improve supervised fine-tuning, it also included an ablation study demonstrating that the performance of four ... (p. 6, 3.1.1. MOTIVATION).
+4. Report the body metric with its denominator and aggregation: The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS).
+5. Re-run the reported ablation or stress/failure condition: While GPT-1 (Radford et al., 2018) focused on pretraining as a transfer learning method to improve supervised fine-tuning, it also included an ablation study demonstrating that the performance of four ... (p. 6, 3.1.1. MOTIVATION); if none is reported, design one around: Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. (p. 11, 3.2. Representation Learning).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. Choosing and Scaling a Model), p. 4 (2.3. Selecting an Efficient Pre-Training Method); the primary result is directionally consistent at p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), match the reported outcome at p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 16 (3.3. Robustness to Natural Distribution Shift), p. 7 (Figure/Table caption), and measure the boundary at p. 11 (3.2. Representation Learning), p. 19 (6. Limitations).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Pre-training, methods, learn mechanism이 Compared to the baseline of using contextless class names, prompt engineering and ensembling boost zero-shot classification ... 대비 On aYahoo, CLIP achieves a 95% reduction in the number of errors, and on SUN, CLIP more than ...을 개선하고, This process of characterization can help researchers increase the likelihood models are used beneficially by: • ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (After filtering to keep only images with natural language titles and/or descriptions in English, the dataset shrunk by a factor of 6 ...), does the paper-specific mechanism (At the core of our approach is the idea of learning perception from supervision contained in natural language.) retain the reported evaluation outcome (The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches ...) when tested against the paper's strongest explicit boundary (Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** At the core of our approach is the idea of learning perception from supervision contained in natural language. (p. 3, 2.1. Natural Language Supervision).
+- **Paper-supported outcome:** The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS).
+- **Strongest explicit boundary:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. (p. 11, 3.2. Representation Learning).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

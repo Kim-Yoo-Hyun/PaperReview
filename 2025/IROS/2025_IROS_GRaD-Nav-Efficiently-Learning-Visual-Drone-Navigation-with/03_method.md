@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.03984; PDF retrieval source: https://arxiv.org/pdf/2503.03984. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.03984; PDF retrieval source: https://arxiv.org/pdf/2503.03984. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 
 ## Method Body Digest
 
-- **p. 3 / III. METHOD - extractive PDF cue:** The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using our GRaD-Nav algorithm.
-- **p. 3 / III. METHOD - extractive PDF cue:** 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to imitate the drone's ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
-- **p. 3 / III. METHOD - extractive PDF cue:** Simulator Setting 1) Differentiable Quadrotor Dynamics Simulation: We implemented a parallelized, differentiable quadrotor dynamics simulator in PyTorch that computes gradients through full state transitions.
-- **p. 3 / III. METHOD - extractive PDF cue:** Meanwhile, 3DGS also provides us with a ready-made point cloud model for the same environment, which can be used to set up reward waypoints and ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** The policy transfers zero-shot to drone hardware and adapts to new navigation task instances at runtime. directly map sensor inputs to control outputs, bypassing the ...
+- **p. 3 / III. METHOD - extractive body cue:** The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using our GRaD-Nav algorithm.
+- **p. 3 / III. METHOD - extractive body cue:** 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to imitate the drone's ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
+- **p. 3 / III. METHOD - extractive body cue:** Simulator Setting 1) Differentiable Quadrotor Dynamics Simulation: We implemented a parallelized, differentiable quadrotor dynamics simulator in PyTorch that computes gradients through full state transitions.
+- **p. 3 / III. METHOD - extractive body cue:** Meanwhile, 3DGS also provides us with a ready-made point cloud model for the same environment, which can be used to set up reward waypoints and ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The policy transfers zero-shot to drone hardware and adapts to new navigation task instances at runtime. directly map sensor inputs to control outputs, bypassing the ...
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** To achieve the goal of visual-motor navigation, we propose a novel approach that leverages 3DGS in conjunction with DDRL, using SHAC-like training algorithm and a ...
-- **p. 3 / III. METHOD - extractive PDF cue:** (10) The state st = [pt, vt, qt, ωt] consists of position, velocity, orientation (quaternion), and angular velocity.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** To achieve the goal of visual-motor navigation, we propose a novel approach that leverages 3DGS in conjunction with DDRL, using SHAC-like training algorithm and a ...
+- **p. 3 / III. METHOD - extractive body cue:** (10) The state st = [pt, vt, qt, ωt] consists of position, velocity, orientation (quaternion), and angular velocity.
 
 ## Source Evidence Cues
 
-- **p. 3 / III. METHOD - extractive PDF cue:** The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using our GRaD-Nav algorithm.
-- **p. 3 / III. METHOD - extractive PDF cue:** 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to imitate the drone's ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
+- **p. 3 / III. METHOD - extractive body cue:** The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using our GRaD-Nav algorithm.
+- **p. 3 / III. METHOD - extractive body cue:** 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to imitate the drone's ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
 - **Detected method headings:** III. METHOD (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using ... | p. 3 (III. METHOD), p. 3 (III. METHOD) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to ... | p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol) |
@@ -45,9 +45,9 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 
 ## Objective / Update Rule
 
-- **p. 3 / III. METHOD - extractive PDF cue:** Simulator Setting 1) Differentiable Quadrotor Dynamics Simulation: We implemented a parallelized, differentiable quadrotor dynamics simulator in PyTorch that computes gradients through full state transitions.
-- **p. 3 / III. METHOD - extractive PDF cue:** Meanwhile, 3DGS also provides us with a ready-made point cloud model for the same environment, which can be used to set up reward waypoints and ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
+- **p. 3 / III. METHOD - extractive body cue:** Simulator Setting 1) Differentiable Quadrotor Dynamics Simulation: We implemented a parallelized, differentiable quadrotor dynamics simulator in PyTorch that computes gradients through full state transitions.
+- **p. 3 / III. METHOD - extractive body cue:** Meanwhile, 3DGS also provides us with a ready-made point cloud model for the same environment, which can be used to set up reward waypoints and ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD), p. 3 (III. METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,13 +63,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 
 ## Observation–State–Action Interface
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** The policy transfers zero-shot to drone hardware and adapts to new navigation task instances at runtime. directly map sensor inputs to control outputs, bypassing the ...
-- **p. 3 / III. METHOD - extractive PDF cue:** Our system takes body rates ωd t ∈ R3 and normalized thrust ct ∈[0, 1] as control inputs, and outputs the next state st+1 = ...
-- **p. 2 / II. BACKGROUND - extractive PDF cue:** Differentiable simulation allows for backpropagation of the gradient through states and actions within the sub-windows, providing an accurate policy gradient.
-- **p. 2 / II. BACKGROUND - extractive PDF cue:** The differentiable simulator is crucial here as it enables full utilization of the underlying dynamics connecting states and actions, optimizing the policy to achieve better ...
-- **p. 3 / III. METHOD - extractive PDF cue:** The control input ut = (ωd t , ct) includes desired body rates and normalized thrust.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** (𝑠𝑡) Critic Net 512×256×128 Policy grad. 𝑎𝑡 Training in Simulator 3D-GS Model Current obs.
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The policy transfers zero-shot to drone hardware and adapts to new navigation task instances at runtime. directly map sensor inputs to control outputs, bypassing the ...
+- **p. 3 / III. METHOD - extractive body cue:** Our system takes body rates ωd t ∈ R3 and normalized thrust ct ∈[0, 1] as control inputs, and outputs the next state st+1 = ...
+- **p. 2 / II. BACKGROUND - extractive body cue:** Differentiable simulation allows for backpropagation of the gradient through states and actions within the sub-windows, providing an accurate policy gradient.
+- **p. 2 / II. BACKGROUND - extractive body cue:** The differentiable simulator is crucial here as it enables full utilization of the underlying dynamics connecting states and actions, optimizing the policy to achieve better ...
+- **p. 3 / III. METHOD - extractive body cue:** The control input ut = (ωd t , ct) includes desired body rates and normalized thrust.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** (𝑠𝑡) Critic Net 512×256×128 Policy grad. 𝑎𝑡 Training in Simulator 3D-GS Model Current obs.
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,12 +84,12 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 
 ## Training vs Inference
 
-- **p. 3 / III. METHOD - extractive PDF cue:** The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using our GRaD-Nav algorithm.
-- **p. 3 / III. METHOD - extractive PDF cue:** 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to imitate the drone's ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive PDF cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
-- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** We train each policy with the same reward function as in Table II and the same hyperparameters setting as Table VI for 600 epochs.
+- **p. 3 / III. METHOD - extractive body cue:** The differentiable drone dynamics model is also implemented with PyTorch, which enables efficient Jacobian computation through autograd for training the policy using our GRaD-Nav algorithm.
+- **p. 3 / III. METHOD - extractive body cue:** 2) Hybrid simulation with 3DGS: We used a pre-trained 3DGS model to deliver the drone's first person perspective visual information and to imitate the drone's ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
+- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
+- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** We train each policy with the same reward function as in Table II and the same hyperparameters setting as Table VI for 600 epochs.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 
 ## Failure and Ablation Link
 
-- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** Without CENet, our method can still train a policy network that achieves high rewards compared to other ablation cases.
-- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** Ablation study of our methods To validate that each module of our method is not redundant but necessary for safe navigation, and to determine each ...
-- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** 4 demonstrates the generalizable policy's variant trajectories in different environments.
-- **p. 7 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** In real-world experiments, the drone was initialized under the same conditions for each test, and success was determined by whether it flew through the gate ...
-- **p. 7 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** 5: Comparison on drone's first person perspective image rendered with 3DGS in simulator (left) and captured with Intel Realsense D435 camera in real robot deployment ...
-- **p. 7 / V. CONCLUSIONS - extractive PDF cue:** Limitations: Our method relies on hand-crafted reward shaping (e.g., trajectory waypoints), limiting it to singletask execution like gate traversal.
-- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive PDF cue:** All of the failure cases without CENet on two trajectories "crash" due to unsuccessful obstacle avoidance.
+- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** Without CENet, our method can still train a policy network that achieves high rewards compared to other ablation cases.
+- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive body cue:** Ablation study of our methods To validate that each module of our method is not redundant but necessary for safe navigation, and to determine each ...
+- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** 4 demonstrates the generalizable policy's variant trajectories in different environments.
+- **p. 7 / IV. EXPERIMENTAL RESULTS - extractive body cue:** In real-world experiments, the drone was initialized under the same conditions for each test, and success was determined by whether it flew through the gate ...
+- **p. 7 / IV. EXPERIMENTAL RESULTS - extractive body cue:** 5: Comparison on drone's first person perspective image rendered with 3DGS in simulator (left) and captured with Intel Realsense D435 camera in real robot deployment ...
+- **p. 7 / V. CONCLUSIONS - extractive body cue:** Limitations: Our method relies on hand-crafted reward shaping (e.g., trajectory waypoints), limiting it to singletask execution like gate traversal.
+- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** All of the failure cases without CENet on two trajectories "crash" due to unsuccessful obstacle avoidance.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol), p. 5 (4) Curriculum training for generalizable navigation pol), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol), temporal p. 5 (IV. EXPERIMENTAL RESULTS), p. 3 (III. METHOD), p. 4 (1) Perception), p. 6 (IV. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (II. BACKGROUND).
+- **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol), p. 5 (4) Curriculum training for generalizable navigation pol), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol), temporal p. 5 (IV. EXPERIMENTAL RESULTS), p. 3 (III. METHOD), p. 4 (1) Perception), p. 6 (IV. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (II. BACKGROUND).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

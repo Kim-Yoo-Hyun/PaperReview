@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114; PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114; PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 11.4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | HF F Rob, HA gave the best performance in both success rate and runtime. | p. 30 (11.4 Results) |
 | 11.4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Helpful actions improved the performance of HF F Rob, HA over HF F Rob. | p. 30 (11.4 Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We will restrict the robot to four side grasps per objects except on problems 1-1 & 1-2 where we use a single top grasp. | embodiment, simulator version and control stack | p. 30 (11 Experiments), p. 30 (11 Experiments) |
 | Task/environment | 11.3 Implementation We implemented FFROB in Python using the OpenRAVE robotics framework (Diankov and Kuffner 2008) for simulation. | reset, timeout, object/scene variation | p. 30 (11 Experiments), p. 31 (11.4 Results) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 - **p. 31 / 12 Conclusion - extractive body cue:** Future work includes analytically and empirically investigating the quality of solutions returned by FFROB with respect to costs.
 - **p. 32 / 12 Conclusion - extractive body cue:** Future work involves using the planning to guide the sampling such as done by Garrett et al.
 
-- **PDF anchors reviewed:** datasets p. 30 (11 Experiments), p. 30 (11 Experiments), p. 31 (11.4 Results), p. 27 (11 Experiments), p. 27 (11 Experiments), p. 28 (11 Experiments), metrics p. 30 (11.4 Results), p. 30 (11 Experiments), p. 31 (11.4 Results), p. 27 (11 Experiments), p. 28 (11 Experiments), p. 29 (11 Experiments), baselines p. 29 (11 Experiments), p. 30 (11 Experiments), p. 31 (Figure/Table caption), p. 30 (11 Experiments), p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 30 (11.4 Results), p. 30 (11.4 Results), p. 31 (11.4 Results), p. 31 (11.4 Results), p. 32 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 30 (11 Experiments), p. 30 (11 Experiments), p. 31 (11.4 Results), p. 27 (11 Experiments), p. 27 (11 Experiments), p. 28 (11 Experiments), metrics p. 30 (11.4 Results), p. 30 (11 Experiments), p. 31 (11.4 Results), p. 27 (11 Experiments), p. 28 (11 Experiments), p. 29 (11 Experiments), baselines p. 29 (11 Experiments), p. 30 (11 Experiments), p. 31 (Figure/Table caption), p. 30 (11 Experiments), p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 30 (11.4 Results), p. 30 (11.4 Results), p. 31 (11.4 Results), p. 31 (11.4 Results), p. 32 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Experiment results over 50 trials. informative heuristic estimate. (p. 31, 11.4 Results).
+- **Metric evidence:** HF F Rob, HA gave the best performance in both success rate and runtime. (p. 30, 11.4 Results).
+- **Baseline/ablation evidence:** The following heuristics are compared in the experiments: 1. (p. 29, 11 Experiments).
+- **Failure/negative evidence:** In practice, we do not increase the sampling parameter sizes upon a sampling failure. (p. 30, 11 Experiments).

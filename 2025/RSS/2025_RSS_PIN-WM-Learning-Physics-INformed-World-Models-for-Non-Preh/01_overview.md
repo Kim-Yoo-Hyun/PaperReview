@@ -1,8 +1,10 @@
 # PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p153.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p153.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p153.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p153.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p153.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss21/p153.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -34,7 +36,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 2 / 2 Wuhan Universi - extractive body cue:** We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.
 - **p. 2 / 2 Wuhan Universi - extractive body cue:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real ...
 - **p. 3 / C. Domain Randomization - extractive body cue:** We provide an overview of our framework in Figure 2
-- **p. 1 / Front matter - extractive body cue:** *Shenzhen University "Equal contributions
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** *Shenzhen University ".
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** In contrast, PIN-WM enables end-to-end identification of 3D rigid-body dynamics from visual observations using few-shot, task-agnostic interaction data, which facilitates the training of vision-based manipulation ...
 - **p. 5 / B. Physics-INformed World Model - extractive body cue:** We formulate this system identification process as a velocity-based Linear Complementarity Problem (LCP) [16, 68] which solves the equations of motion under global constraints, Here, ...
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** DINOWM [84] leverages spatial patch features pre-trained with DINOv2 to learn a world model and achieve task-agnostic behavior planning by treating goal features as prediction ...
@@ -54,7 +56,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 2 / 2 Wuhan Universi - extractive body cue:** We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.
 - **p. 2 / 2 Wuhan Universi - extractive body cue:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real ...
 - **p. 3 / C. Domain Randomization - extractive body cue:** We provide an overview of our framework in Figure 2
-- **p. 1 / Front matter - extractive body cue:** *Shenzhen University "Equal contributions
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** *Shenzhen University ".
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** In contrast, PIN-WM enables end-to-end identification of 3D rigid-body dynamics from visual observations using few-shot, task-agnostic interaction data, which facilitates the training of vision-based manipulation ...
 - **p. 7 / A. Evaluations in Simulation - extractive body cue:** All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We ...
 - **p. 8 / A. Evaluations in Simulation - extractive body cue:** Without PADC, our method still outperforms others, although with a performance decrease.
@@ -83,3 +85,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, significant challenges arise from the difficulty of fully dictating. the motion and pose of the object being pushed.를 문제로 두고, We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Iyrropuction), p. 2 (A. Non-Prehensile Manipulation), p. 1 (1. Iyrropuction), p. 2 (2 Wuhan Universi), p. 3 (B. World Models for Policy Learning), p. 5 (B. Physics-INformed World Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, significant challenges arise from the difficulty of fully dictating. the motion and pose of the object being pushed. (p. 1, 1. Iyrropuction).
+- **Actual contribution:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real without real-world fine-tuning. (p. 2, 2 Wuhan Universi).
+- **Evaluation boundary:** All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study ... (p. 7, A. Evaluations in Simulation).
+- **Explicit failure boundary:** Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that their world models failed to effectively ‘capture the target-domain dynamics. (p. 8, A. Evaluations in Simulation).

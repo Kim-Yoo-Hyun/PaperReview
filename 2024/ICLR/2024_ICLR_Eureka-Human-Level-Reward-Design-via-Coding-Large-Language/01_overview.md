@@ -1,8 +1,10 @@
 # Eureka: Human-Level Reward Design via Coding Large Language Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=IEduRUO55F.
-> PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=IEduRUO55F.
+> PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://openreview.net/forum?id=IEduRUO55F
 - Code/Project: https://eureka-research.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -70,7 +72,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 | Embodiment/environment | In addition to coverage over robot form factors, we ensure depth in our evaluation by including all 20 tasks from the Bidexterous Manipulation (Dexterity) benchmark (Chen et al., 2022). | hardware/simulator version and reset protocol | p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS) |
 | Dataset/benchmark | These are the original shaped reward functions provided in our benchmark tasks. | role, split, size and leakage | p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
 | Metric | Figure 13: Raw success rates of all methods on the Dexterity benchmark. Reward Reflection Ablations. In Fig. 14, we provide a detailed per-task breakdown on the impact of removing reward reflection in ... | definition, denominator, direction and uncertainty | p. 29 (Figure/Table caption), p. 22 (Figure/Table caption), p. 29 (Figure/Table caption) |
-| Baseline/ablation | Figure 4: EUREKA outperforms Human and L2R across all tasks. In particular, EUREKA realizes much greater gains on high-dimensional dexterity environments. about these tasks, making them ideal testbeds for assessing EUREKA's reward ... | fair input/data/compute/action matching | p. 6 (Figure/Table caption), p. 28 (Figure/Table caption), p. 6 (4 EXPERIMENTS) |
+| Baseline/ablation | Figure 4: EUREKA outperforms Human and L2R across all tasks. In particular, EUREKA realizes much greater gains on high-dimensional dexterity environments. about these tasks, making them ideal testbeds for assessing EUREKA's reward ... | fair input/data/compute/action matching | p. 6 (Figure/Table caption), p. 28 (Figure/Table caption), p. 7 (4.3 RESULTS) |
 
 ## Explicit Limitations and Failure Boundary
 
@@ -83,3 +85,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 2 PROBLEM SETTING AND DEFINITIONS The goal of reward design is to return a shaped reward function for a ground-truth reward function that may be difficult to optimize directly (e.g., sparse rewards); ...를 문제로 두고, We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (3 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** 2 PROBLEM SETTING AND DEFINITIONS The goal of reward design is to return a shaped reward function for a ground-truth reward function that may be difficult to optimize directly (e.g., ... (p. 3, 1 INTRODUCTION).
+- **Actual contribution:** We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1. (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Figure 10: EUREKA reward functions enjoy improved sample efficiency compared to various baseline reward functions on aggregate over 20 Dexterity tasks. Additional Evaluation Metrics. In Fig. 11, we present holistic ... (p. 28, Figure/Table caption).
+- **Explicit failure boundary:** This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).

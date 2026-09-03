@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p011.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p011.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p011.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 10 Ablations on Design | EMPIRICAL / REAL-ROBOT OR HARDWARE | Spatial VLA achieves the highest average success rate, outperforming all generalist manipulation policies. | p. 7 (10 Ablations on Design) |
 | B. Adapting to New Robot Setups | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to 1026-resolution action grids (#ly.s:#4), where Maes = Muss = 512, Myip = 2, Spatial VLA with 8194resolution action grids (Mines = Mrans ... | p. 9 (B. Adapting to New Robot Setups) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We train SpatialVLA from Paligemma2 backbone [62] on a cross-robot dataset mixture with 1.1 Million real robot demonstrations {615 Gu}> covering a diverse range ... | embodiment, simulator version and control stack | p. 4 (B. The Pre-training and Post-training Scheme), p. 5 (3) How well does SpatialVLA perform in scenarios that) |
 | Task/environment | Firstly, we evaluate SpatialVLA in both SimplerEnv [35] simulation and the real-world Widow robot platform (BridgeV2 [64] [64] setups), testing its outof-the-box control capabilities ... | reset, timeout, object/scene variation | p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 5 (3) How well does SpatialVLA perform in scenarios that) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 - **p. 8 / B. Adapting to New Robot Setups - extractive body cue:** 1), including depth or point cloud, into the VLA framework to improve the model's adaptability and robustness in spatial layout variations.
 - **p. 8 / B. Adapting to New Robot Setups - extractive body cue:** Compared to existing policies, SpaIVLA shows superior spatial understanding, achieving 73% accuracy in Franka task #1, which involves spatial prompts, and significantly improving manipulation capabilities ...
 
-- **PDF anchors reviewed:** datasets p. 4 (B. The Pre-training and Post-training Scheme), p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 7 (B. Adapting to New Robot Setups), p. 4 (B. The Pre-training and Post-training Scheme), p. 9 (B. Adapting to New Robot Setups), metrics p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), p. 7 (10 Ablations on Design), p. 7 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), baselines p. 7 (10 Ablations on Design), p. 5 (B. The Pre-training and Post-training Scheme), p. 7 (B. Adapting to New Robot Setups), p. 6 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), results p. 7 (10 Ablations on Design), p. 9 (B. Adapting to New Robot Setups), p. 7 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 6 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups).
+- **Evidence anchors reviewed:** datasets p. 4 (B. The Pre-training and Post-training Scheme), p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 7 (B. Adapting to New Robot Setups), p. 4 (B. The Pre-training and Post-training Scheme), p. 9 (B. Adapting to New Robot Setups), metrics p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), p. 7 (10 Ablations on Design), p. 7 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), baselines p. 7 (10 Ablations on Design), p. 5 (B. The Pre-training and Post-training Scheme), p. 7 (B. Adapting to New Robot Setups), p. 6 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), results p. 7 (10 Ablations on Design), p. 9 (B. Adapting to New Robot Setups), p. 7 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 6 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For a more comprehensive evaluation, we conduct expernts on a real-world WidowX robot platform from the BridgeData V2 evaluation [64]. (p. 6, 10 Ablations on Design).
+- **Metric evidence:** On average, SpatialVLA achieves the highest overall visual matching and variant aggregation performance with a significant margin, Our SpatialVLA model yields 71.9% and 75.1% Visual Matching scores in zero-shot and ... (p. 6, 10 Ablations on Design).
+- **Baseline/ablation evidence:** In particular, SpatialVLA also matches or outperforms te latest SOTA model 7, Tab, I! summarizes the esults across different manipulation policies on the WidowX setup, Our model surpasses the state-of-the-art ... (p. 7, 10 Ablations on Design).
+- **Failure/negative evidence:** However, in moderately complex tasks (#3-7), ‘most policies, such as RT-1-X, Octo, and RoboVLM struggle with manipulation, frequently encountering issues like object nisidentfication and grasp failures. (p. 7, 10 Ablations on Design).

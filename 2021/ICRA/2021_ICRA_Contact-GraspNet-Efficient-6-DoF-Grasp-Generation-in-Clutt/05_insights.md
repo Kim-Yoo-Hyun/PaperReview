@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Their predictions can be directly associated to 3D points in the input point cloud and our proposed grasp representation exploits this ability.를 Network We employ the set abstraction and feature propagation layers proposed in PointNet++ [34] to build an asymmetric Ushaped network.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Gripper collisions are effectively avoided by considering them during training and by predicting grasps directly in scenes.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method is closely related to the work of Murali et al.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Their predictions can be directly associated to 3D points in the input point cloud and our proposed grasp representation exploits this ability. (p. 3, III. METHOD).
+- **Paper-specific mechanism:** Thus, our main contributions are the following: • A new end-to-end method for 6-DoF grasping of unknown objects in cluttered real world scenes where we achieve 90% grasp success rate. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines. (p. 6, IV. EXPERIMENTAL EVALUATION); the relevant task/metric cue is The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most grasps that we execute lie in the first decimal of coverage. (p. 6, IV. EXPERIMENTAL EVALUATION). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Failure Cases: We observe some failure cases for thick objects that only allow grasps almost at maximum grasp width. (p. 6, IV. EXPERIMENTAL EVALUATION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate our method in a grasping study with a Franka robot where we pick unknown objects in cluttered scenes..
-3. Compare against the body-reported baseline or a matched simpler baseline: We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines..
-4. Report the body metric and its denominator/aggregation: The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most grasps that we execute lie in the first decimal of coverage..
-5. Re-run the body-reported ablation/failure condition: Fig. 5. Loss Ablations: Without weighted binning in the grasp width loss lwidth both, success rate and coverage decrease. The ladd-s loss leads to increased success rates at high confidence contacts (Coverage ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Their predictions can be directly associated to 3D points in the input point cloud and our proposed grasp representation exploits this ability. (p. 3, III. METHOD); preserve the objective/update rule: On the grasp width bin predictions, we optimize a weighted, multi-label binary cross entropy loss lwidth. (p. 4, III. METHOD).
+2. Use the paper-reported task/data/environment cue: We evaluate our method in a grasping study with a Franka robot where we pick unknown objects in cluttered scenes. (p. 5, IV. EXPERIMENTAL EVALUATION).
+3. Compare against the reported or matched baseline: We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines. (p. 6, IV. EXPERIMENTAL EVALUATION).
+4. Report the body metric with its denominator and aggregation: The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most grasps that we execute lie in the first decimal of coverage. (p. 6, IV. EXPERIMENTAL EVALUATION).
+5. Re-run the reported ablation or stress/failure condition: Ablations Optimization Targets: In Fig. (p. 6, IV. EXPERIMENTAL EVALUATION); if none is reported, design one around: Failure Cases: We observe some failure cases for thick objects that only allow grasps almost at maximum grasp width. (p. 6, IV. EXPERIMENTAL EVALUATION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), and measure the boundary at p. 6 (IV. EXPERIMENTAL EVALUATION), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 closely, related, Murali mechanism이 We observe a significantly higher grasp success rate of our method compared to [11] and [12] ... 대비 The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most ...을 개선하고, Gripper collisions are effectively avoided by considering them during training and by predicting grasps directly in ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Their predictions can be directly associated to 3D points in the input point cloud and our proposed grasp representation exploits this ability.), does the paper-specific mechanism (Thus, our main contributions are the following: • A new end-to-end method for 6-DoF grasping of unknown objects in cluttered real world ...) retain the reported evaluation outcome (The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most ...) when tested against the paper's strongest explicit boundary (Failure Cases: We observe some failure cases for thick objects that only allow grasps almost at maximum grasp ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Thus, our main contributions are the following: • A new end-to-end method for 6-DoF grasping of unknown objects in cluttered real world scenes where we achieve 90% grasp success rate. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines. (p. 6, IV. EXPERIMENTAL EVALUATION).
+- **Strongest explicit boundary:** Failure Cases: We observe some failure cases for thick objects that only allow grasps almost at maximum grasp width. (p. 6, IV. EXPERIMENTAL EVALUATION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

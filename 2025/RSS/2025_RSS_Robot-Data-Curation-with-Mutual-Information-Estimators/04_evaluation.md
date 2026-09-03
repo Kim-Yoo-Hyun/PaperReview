@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p023.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p023.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p023.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p023.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 
 ## Evaluation Body Digest
 
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** The multi-human datasets from the RoboMimic benchmark [50] include 100 demonstrations from each of three robot operators for three tasks in increasing difficulty: "Lift" where ...
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** 1) Datasets: ‘To assess the performance of different robot demonstration curation techniques, we perform experiments ‘on a broad set of datasets spanning simulated, real singlearm, ...
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** 4 Average qulity of demonstrations remaining in datasets after filtering with diferent choices of $ onthe Lift Can, and stasis fom the Robomimichenchak wih ts ...
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** We compare to InfoNCE as CLIP is ‘commonly used to curate datasets in vision and language [6+] MINE (MI.
-- **p. 19 / C. Implementation Derails - extractive PDF cue:** Method Parameter ___RoboMimic State _Robotimic Image Franka ReboCrowd
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** Following Gandhi et al, [25], we use a measure of demonstration "compatibility" to score data.
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** We use VIP to estimate data quality by considering the total predicted reward over a demonstration.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** For all experiments we use the Adam optimizer with leaming rate 0.0001 and a bateh size of 256.
+- **p. 6 / A. Experimental Setup - extractive body cue:** The multi-human datasets from the RoboMimic benchmark [50] include 100 demonstrations from each of three robot operators for three tasks in increasing difficulty: "Lift" where ...
+- **p. 6 / A. Experimental Setup - extractive body cue:** 1) Datasets: ‘To assess the performance of different robot demonstration curation techniques, we perform experiments ‘on a broad set of datasets spanning simulated, real singlearm, ...
+- **p. 7 / A. Experimental Setup - extractive body cue:** 4 Average qulity of demonstrations remaining in datasets after filtering with diferent choices of $ onthe Lift Can, and stasis fom the Robomimichenchak wih ts ...
+- **p. 7 / A. Experimental Setup - extractive body cue:** We compare to InfoNCE as CLIP is ‘commonly used to curate datasets in vision and language [6+] MINE (MI.
+- **p. 19 / C. Implementation Derails - extractive body cue:** Method Parameter ___RoboMimic State _Robotimic Image Franka ReboCrowd
+- **p. 6 / A. Experimental Setup - extractive body cue:** Following Gandhi et al, [25], we use a measure of demonstration "compatibility" to score data.
+- **p. 6 / A. Experimental Setup - extractive body cue:** We use VIP to estimate data quality by considering the total predicted reward over a demonstration.
+- **p. 7 / A. Experimental Setup - extractive body cue:** For all experiments we use the Adam optimizer with leaming rate 0.0001 and a bateh size of 256.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Experimental Setup | EMPIRICAL / SIMULATION | Following Gandhi et al, [25], we use a measure of demonstration "compatibility" to score data. | p. 6 (A. Experimental Setup) |
 | A. Experimental Setup | EMPIRICAL / SIMULATION | We measure the performance of different data curation methods from both state, in which ground truth object information is provided, as well as third-person ... | p. 6 (A. Experimental Setup) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** The multi-human datasets from the RoboMimic benchmark [50] include 100 demonstrations from each of three robot operators for three tasks in increasing difficulty: "Lift" where ...
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** 1) Datasets: ‘To assess the performance of different robot demonstration curation techniques, we perform experiments ‘on a broad set of datasets spanning simulated, real singlearm, ...
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** 4 Average qulity of demonstrations remaining in datasets after filtering with diferent choices of $ onthe Lift Can, and stasis fom the Robomimichenchak wih ts ...
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** We compare to InfoNCE as CLIP is ‘commonly used to curate datasets in vision and language [6+] MINE (MI.
-- **p. 19 / C. Implementation Derails - extractive PDF cue:** Method Parameter ___RoboMimic State _Robotimic Image Franka ReboCrowd
+- **p. 6 / A. Experimental Setup - extractive body cue:** The multi-human datasets from the RoboMimic benchmark [50] include 100 demonstrations from each of three robot operators for three tasks in increasing difficulty: "Lift" where ...
+- **p. 6 / A. Experimental Setup - extractive body cue:** 1) Datasets: ‘To assess the performance of different robot demonstration curation techniques, we perform experiments ‘on a broad set of datasets spanning simulated, real singlearm, ...
+- **p. 7 / A. Experimental Setup - extractive body cue:** 4 Average qulity of demonstrations remaining in datasets after filtering with diferent choices of $ onthe Lift Can, and stasis fom the Robomimichenchak wih ts ...
+- **p. 7 / A. Experimental Setup - extractive body cue:** We compare to InfoNCE as CLIP is ‘commonly used to curate datasets in vision and language [6+] MINE (MI.
+- **p. 19 / C. Implementation Derails - extractive body cue:** Method Parameter ___RoboMimic State _Robotimic Image Franka ReboCrowd
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3. Visualization of the tasks represented in the datasets we use inthis work, including the Can MH, Lift MH, and Square MH datasets from ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5. Average quality of demonstrations remaining
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6. Average quality of demonstrations remaining in datasets after itering vith diferent choices of S on the Franka Datasets. Average of 3 sds
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Fig. 12. The performance of different mutual information estimators on the Franks Datasets, cut from the main text du to space
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Fig. 13. RoboMimic Policy learing performance from sate
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Fig. 14. ‘The elect of diferent values of k 0a RoboCrowd
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Fig. 16. The effect of diferent lateat dimension sizes for 5 and =, 0a RoboMimic Image. we fad that performance is relatively sobust to this ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic.
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3. Visualization of the tasks represented in the datasets we use inthis work, including the Can MH, Lift MH, and Square MH datasets from ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5. Average quality of demonstrations remaining
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. Average quality of demonstrations remaining in datasets after itering vith diferent choices of S on the Franka Datasets. Average of 3 sds
+- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 12. The performance of different mutual information estimators on the Franks Datasets, cut from the main text du to space
+- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 13. RoboMimic Policy learing performance from sate
+- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 14. ‘The elect of diferent values of k 0a RoboCrowd
+- **p. 16 / Figure/Table caption - extractive body cue:** Fig. 16. The effect of diferent lateat dimension sizes for 5 and =, 0a RoboMimic Image. we fad that performance is relatively sobust to this ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The multi-human datasets from the RoboMimic benchmark [50] include 100 demonstrations from each of three robot operators for three tasks in increasing difficulty: "Lift" ... | embodiment, simulator version and control stack | p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup) |
 | Task/environment | 1) Datasets: ‘To assess the performance of different robot demonstration curation techniques, we perform experiments ‘on a broad set of datasets spanning simulated, real ... | reset, timeout, object/scene variation | p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup) |
@@ -114,8 +114,8 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 | Primary metric/result | We measure the performance of different data curation methods from both state, in which ground truth object information is provided, as well as third-person ... | numeric claim only at cited anchor | p. 6 (A. Experimental Setup) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** Images resized to $4 x 84 for RoboMimie and 128 x 128 otherwise.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** State-based models are trained for 50,000 steps and image based models are trained for 100,000 steps using VMs provided by a Google TPU Research Cloud ...
+- **p. 7 / A. Experimental Setup - extractive body cue:** Images resized to $4 x 84 for RoboMimie and 128 x 128 otherwise.
+- **p. 7 / A. Experimental Setup - extractive body cue:** State-based models are trained for 50,000 steps and image based models are trained for 100,000 steps using VMs provided by a Google TPU Research Cloud ...
 
 ## Generalization and Failure Cases
 
@@ -149,13 +149,13 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 
 ## Limitations and Verification Questions
 
-- **p. 8 / C. Mutual Information Estimators - extractive PDF cue:** variance across seeds, while the parametric estimators were more unstable and had one or two runs that performed far worse than the others.
-- **p. 6 / A. Experimental Setup - extractive PDF cue:** Note that while this metric makes sense for active learning, it does not necessarily make sense in the offline setting, and in some ways may ...
-- **p. 8 / C. Mutual Information Estimators - extractive PDF cue:** This is particularly problematic for downstream data curation, as one often does not have ground truth labels to check the quality of the scoring function,
-- **p. 9 / C. Mutual Information Estimators - extractive PDF cue:** DemInf's performance is generally robust to this parameter, with no substantial change in performance in both HersheyKiss and Square MH.
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic.
+- **p. 8 / C. Mutual Information Estimators - extractive body cue:** variance across seeds, while the parametric estimators were more unstable and had one or two runs that performed far worse than the others.
+- **p. 6 / A. Experimental Setup - extractive body cue:** Note that while this metric makes sense for active learning, it does not necessarily make sense in the offline setting, and in some ways may ...
+- **p. 8 / C. Mutual Information Estimators - extractive body cue:** This is particularly problematic for downstream data curation, as one often does not have ground truth labels to check the quality of the scoring function,
+- **p. 9 / C. Mutual Information Estimators - extractive body cue:** DemInf's performance is generally robust to this parameter, with no substantial change in performance in both HersheyKiss and Square MH.
+- **p. 16 / Figure/Table caption - extractive body cue:** Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic.
 
-- **PDF anchors reviewed:** datasets p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 19 (C. Implementation Derails), metrics p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 15 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), results p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 15 (Figure/Table caption), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 19 (C. Implementation Derails), metrics p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 15 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), results p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 15 (Figure/Table caption), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

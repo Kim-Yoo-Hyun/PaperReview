@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2887_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2887_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets.
-- **p. 9 / 4 Experiments - extractive PDF cue:** In particular, we depict the color-coded displacements for the train scene from the Tanks&Temples dataset, where points with color closer to purple indicate small displacements ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** We measured the Gaussians' displacements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and encoded them in a colormap scale.
-- **p. 9 / 4 Experiments - extractive PDF cue:** 1, we report the average evaluation performance of the proposed and the baseline methods over the three datasets.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Dataset Mip-NeRF360 Tanks&Temples Deep Blending Methods FPS Mem (MB) FPS Mem (MB) FPS Mem (MB) 3D-GS [15] 97 693 123 411 109 676 Scaffold-GS [20] ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Comparison between the proposed and the Scaffold-GS method on the scene's structure preservation.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We evaluate the proposed SAGS model in terms of rendering quality, structure preservation, and rendering performance.
+- **p. 8 / 4 Experiments - extractive body cue:** To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples ...
+- **p. 10 / 4 Experiments - extractive body cue:** We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets.
+- **p. 9 / 4 Experiments - extractive body cue:** In particular, we depict the color-coded displacements for the train scene from the Tanks&Temples dataset, where points with color closer to purple indicate small displacements ...
+- **p. 11 / 4 Experiments - extractive body cue:** We measured the Gaussians' displacements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and encoded them in a colormap scale.
+- **p. 9 / 4 Experiments - extractive body cue:** 1, we report the average evaluation performance of the proposed and the baseline methods over the three datasets.
+- **p. 12 / 4 Experiments - extractive body cue:** Dataset Mip-NeRF360 Tanks&Temples Deep Blending Methods FPS Mem (MB) FPS Mem (MB) FPS Mem (MB) 3D-GS [15] 97 693 123 411 109 676 Scaffold-GS [20] ...
+- **p. 11 / 4 Experiments - extractive body cue:** Comparison between the proposed and the Scaffold-GS method on the scene's structure preservation.
+- **p. 8 / 4 Experiments - extractive body cue:** We evaluate the proposed SAGS model in terms of rendering quality, structure preservation, and rendering performance.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 3: Overview of the densification. Given an initial SfM [31] point cloud (left) we estimate the curvature following [25]. Curvature values are presented ... | p. 6 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 1: Structure-Aware GS (SAGS) leverages the intrinsic structure of the scene and enforces point interaction using graph neural networks outperforming the struc- ture ... | p. 2 (Figure/Table caption) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets.
-- **p. 9 / 4 Experiments - extractive PDF cue:** In particular, we depict the color-coded displacements for the train scene from the Tanks&Temples dataset, where points with color closer to purple indicate small displacements ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** We measured the Gaussians' displacements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and encoded them in a colormap scale.
-- **p. 9 / 4 Experiments - extractive PDF cue:** 1, we report the average evaluation performance of the proposed and the baseline methods over the three datasets.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Dataset Mip-NeRF360 Tanks&Temples Deep Blending Methods FPS Mem (MB) FPS Mem (MB) FPS Mem (MB) 3D-GS [15] 97 693 123 411 109 676 Scaffold-GS [20] ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Comparison between the proposed and the Scaffold-GS method on the scene's structure preservation.
+- **p. 8 / 4 Experiments - extractive body cue:** To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples ...
+- **p. 10 / 4 Experiments - extractive body cue:** We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets.
+- **p. 9 / 4 Experiments - extractive body cue:** In particular, we depict the color-coded displacements for the train scene from the Tanks&Temples dataset, where points with color closer to purple indicate small displacements ...
+- **p. 11 / 4 Experiments - extractive body cue:** We measured the Gaussians' displacements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and encoded them in a colormap scale.
+- **p. 9 / 4 Experiments - extractive body cue:** 1, we report the average evaluation performance of the proposed and the baseline methods over the three datasets.
+- **p. 12 / 4 Experiments - extractive body cue:** Dataset Mip-NeRF360 Tanks&Temples Deep Blending Methods FPS Mem (MB) FPS Mem (MB) FPS Mem (MB) 3D-GS [15] 97 693 123 411 109 676 Scaffold-GS [20] ...
+- **p. 11 / 4 Experiments - extractive body cue:** Comparison between the proposed and the Scaffold-GS method on the scene's structure preservation.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Structure-Aware GS (SAGS) leverages the intrinsic structure of the scene and enforces point interaction using graph neural networks outperforming the struc- ture agnostic ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of the proposed method. Given a point cloud obtained from COLMAP [31], we initially apply a curvature-based densification step to populate under-represented ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3. Leveraging the mid-point densification step, we can train a lightweight
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: Overview of the densification. Given an initial SfM [31] point cloud (left) we estimate the curvature following [25]. Curvature values are presented color-coded ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison between the proposed and the baseline methods on Mip-NeRF360 [2], Tanks&Temples [16] and Deep Blending [13] datasets.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 4: Qualitative comparison. We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets. We ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 5: Color Coded Gaussian Displacements. We measured the Gaussians' dis- placements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 6: Depth Structural Preservation. Comparison between the proposed and the Scaffold-GS method on the scene's structure preservation. The proposed method can accurately capture sharp ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Structure-Aware GS (SAGS) leverages the intrinsic structure of the scene and enforces point interaction using graph neural networks outperforming the struc- ture agnostic ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of the proposed method. Given a point cloud obtained from COLMAP [31], we initially apply a curvature-based densification step to populate under-represented ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3. Leveraging the mid-point densification step, we can train a lightweight
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Overview of the densification. Given an initial SfM [31] point cloud (left) we estimate the curvature following [25]. Curvature values are presented color-coded ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison between the proposed and the baseline methods on Mip-NeRF360 [2], Tanks&Temples [16] and Deep Blending [13] datasets.
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4: Qualitative comparison. We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets. We ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 5: Color Coded Gaussian Displacements. We measured the Gaussians' dis- placements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 6: Depth Structural Preservation. Comparison between the proposed and the Scaffold-GS method on the scene's structure preservation. The proposed method can accurately capture sharp ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from ... | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 10 (4 Experiments) |
 | Task/environment | We qualitatively evaluate the proposed and the baseline methods (3D-GS [15] and Scaffold-GS [20]) across six scenes from different datasets. | reset, timeout, object/scene variation | p. 10 (4 Experiments), p. 9 (4 Experiments) |
@@ -120,7 +120,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Figure/Table 
 | Primary metric/result | Fig. 1: Structure-Aware GS (SAGS) leverages the intrinsic structure of the scene and enforces point interaction using graph neural networks outperforming the struc- ture ... | numeric claim only at cited anchor | p. 2 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 Experiments - extractive PDF cue:** To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples ...
+- **p. 8 / 4 Experiments - extractive body cue:** To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples ...
 
 ## Generalization and Failure Cases
 
@@ -155,11 +155,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Furthermore, Scaffold-GS method falls short in accurately representing flat surfaces, as can be seen in the walls and the table,
-- **p. 11 / 4 Experiments - extractive PDF cue:** Both the 3D-GS and Scaffold-GS methodologies depend on a rudimentary point optimization approach, that neglects the local topology and fails to guide the Gaussians in ...
+- **p. 9 / 4 Experiments - extractive body cue:** Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their ...
+- **p. 11 / 4 Experiments - extractive body cue:** Furthermore, Scaffold-GS method falls short in accurately representing flat surfaces, as can be seen in the walls and the table,
+- **p. 11 / 4 Experiments - extractive body cue:** Both the 3D-GS and Scaffold-GS methodologies depend on a rudimentary point optimization approach, that neglects the local topology and fails to guide the Gaussians in ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 12 (4 Experiments), metrics p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 2 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), results p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 12 (4 Experiments), metrics p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 2 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), results p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 8 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

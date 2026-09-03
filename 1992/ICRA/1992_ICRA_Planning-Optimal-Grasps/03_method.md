@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ROBOT.1992.219918; PDF retrieval source: https://doi.org/10.1109/ROBOT.1992.219918. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ROBOT.1992.219918; PDF retrieval source: https://doi.org/10.1109/ROBOT.1992.219918. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (4.1 Representing Anger forces), p. 1 (2 Working
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | The first is concerned with finding the grasp configurations that maximize the wrench, given independent force limits, i.e. that minimize the worst-case ... | p. 3 (4.1 Representing Anger forces), p. 1 (2 Working hypotheses) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | In this model, fingers can exert any force pointing into the friction cone at the point of contact. | p. 1 (2 Working hypotheses), p. 2 (2 Working hypotheses) |
@@ -83,12 +83,12 @@ PDF body method statement (p. 3 (4.1 Representing Anger forces), p. 1 (2 Working
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | The solution proposed in this paper is more general, and unifies in a general framework the formalization of the optimality criteria. | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | This algorithm has to be repeated for each side of the polygon comparing at the end of each step the new minimum ... | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
-| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -126,8 +126,17 @@ PDF body method statement (p. 3 (4.1 Representing Anger forces), p. 1 (2 Working
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (4.1 Representing Anger forces), p. 1 (2 Working hypotheses), p. 2 (2 Working hypotheses), p. 4 (4.3 Minimizing the maximum Anger force), p. 4 (4.3 Minimizing the maximum Anger force), p. 2 (4 The Quality of Grasp), objective p. 3 (4.1 Representing Anger forces), p. 2 (4 The Quality of Grasp), p. 2 (4 The Quality of Grasp), p. 3 (4.1 Representing Anger forces), p. 4 (4.3 Minimizing the maximum Anger force), temporal p. 2 (3 Related work), p. 5 (5.1 Two-jaw gripper grasping a polygonal object).
+- **Evidence anchors reviewed:** method p. 3 (4.1 Representing Anger forces), p. 1 (2 Working hypotheses), p. 2 (2 Working hypotheses), p. 4 (4.3 Minimizing the maximum Anger force), p. 4 (4.3 Minimizing the maximum Anger force), p. 2 (4 The Quality of Grasp), objective p. 3 (4.1 Representing Anger forces), p. 2 (4 The Quality of Grasp), p. 2 (4 The Quality of Grasp), p. 3 (4.1 Representing Anger forces), p. 4 (4.3 Minimizing the maximum Anger force), temporal p. 2 (3 Related work), p. 5 (5.1 Two-jaw gripper grasping a polygonal object).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (6 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Hence we have an immediate representation of each point contact force exerted by the fingers. (p. 2, 2 Working hypotheses).
+- **Objective/update evidence:** Without loss of generality, we choose llwll so that 11g11 = 1. (p. 3, 4.1 Representing Anger forces).
+- **Temporal/runtime evidence:** This algorithm has to be repeated for each side of the polygon comparing at the end of each step the new minimum with the previous one and keeping track of ... (p. 5, 5.1 Two-jaw gripper grasping a polygonal object).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

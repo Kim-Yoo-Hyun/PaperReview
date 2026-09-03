@@ -2,11 +2,11 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p002.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p002.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p002.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p002.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (Evaluation/Results): evaluation statement was not recovered.
+PDF body evaluation/result cue (Evaluation/Results): evaluation statement was not stated or recoverable in the selected PDF body.
 
 ## Evaluation Body Digest
 
@@ -26,7 +26,7 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Experiment Design | EMPIRICAL / REAL-ROBOT OR HARDWARE | These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. | p. 7 (A. Experiment Design) |
 
@@ -44,10 +44,10 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. | embodiment, simulator version and control stack | p. 7 (A. Experiment Design) |
-| Task/environment | not recovered | reset, timeout, object/scene variation | 본문 anchor 없음 |
+| Task/environment | not stated or recoverable in the selected PDF body | reset, timeout, object/scene variation | 본문 anchor 없음 |
 | Observation/sensor | observation, uncertainty/risk estimate와 task command | calibration, preprocessing, privileged input | p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 2 (2) Custom-built SWaP-C hardware that simultaneously) |
 | Output/decision | shielded, recovery 또는 safe action | action frame, controller and termination | p. 4 (IV. ViSafe FRAMEWORK), p. 1 (Abstract) |
 
@@ -123,7 +123,16 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 - **p. 7 / A. Experiment Design - extractive body cue:** The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. Table I shows the various agents, collision geometries, commanded ground ...
 
-- **PDF anchors reviewed:** datasets p. 7 (A. Experiment Design), metrics p. 7 (A. Experiment Design), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 10 (Figure/Table caption), results 본문 anchor 없음.
+- **Evidence anchors reviewed:** datasets p. 7 (A. Experiment Design), metrics p. 7 (A. Experiment Design), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 10 (Figure/Table caption), results 본문 anchor 없음.
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. (p. 7, A. Experiment Design).
+- **Metric evidence:** The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries. (p. 7, A. Experiment Design).
+- **Baseline/ablation evidence:** Fig. 6. Horizontal rate of closure comparisons across diferent weather conditions in the digital twin: Higher values ind apart, showcasing diverging & safe wajectories. Across the diferent weather scenarios, ViSafeshoweases ... (p. 10, Figure/Table caption).
+- **Failure/negative evidence:** Across our wide array of simulation and real-world tests, ‘we find that our current system struggles when the intruder is below the horizon, As acknowledged in the benchmarking of ‘our ... (p. 11, B. Limitations).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/996_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/996_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 11 / 4 Experiments - extractive PDF cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Specifically, for each method, we render images with camera rotations and translations to mimic the immersive trajectory inside the 3D scenes.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Their pipeline, which inpaints each patch separately based on the same text prompt, tends to produce repetitive results especially when generating complex scenes.
-- **p. 12 / 4 Experiments - extractive PDF cue:** 3, our method can generate diverse 3D scenes in different styles with distinct contents, while preserving high-fidelity novel-view rendering ability and realistic scene geometry.
-- **p. 13 / 4 Experiments - extractive PDF cue:** DreamScene360 13 (a) ℒ!"# (b) ℒ!"# + ℒ$%& (c) ℒ!"# + ℒ'%( (d) ℒ!"# + ℒ$%& + ℒ'%( Fig.
-- **p. 13 / 4 Experiments - extractive PDF cue:** In this part, we mainly focus on the generated panorama since panorama provides a holistic view of the 3D scene and provides an upper bound ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** In the absence of geometric priors of the scene (a), the optimized 3D Gaussian rendering yields plausible results in panoramic camera views.
-- **p. 11 / 4 Experiments - extractive PDF cue:** However, the works utilizing a bounded NeRF representation using score distillation do not work very well in this case.
+- **p. 11 / 4 Experiments - extractive body cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
+- **p. 11 / 4 Experiments - extractive body cue:** Specifically, for each method, we render images with camera rotations and translations to mimic the immersive trajectory inside the 3D scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** Their pipeline, which inpaints each patch separately based on the same text prompt, tends to produce repetitive results especially when generating complex scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** 3, our method can generate diverse 3D scenes in different styles with distinct contents, while preserving high-fidelity novel-view rendering ability and realistic scene geometry.
+- **p. 13 / 4 Experiments - extractive body cue:** DreamScene360 13 (a) ℒ!"# (b) ℒ!"# + ℒ$%& (c) ℒ!"# + ℒ'%( (d) ℒ!"# + ℒ$%& + ℒ'%( Fig.
+- **p. 13 / 4 Experiments - extractive body cue:** In this part, we mainly focus on the generated panorama since panorama provides a holistic view of the 3D scene and provides an upper bound ...
+- **p. 14 / 4 Experiments - extractive body cue:** In the absence of geometric priors of the scene (a), the optimized 3D Gaussian rendering yields plausible results in panoramic camera views.
+- **p. 11 / 4 Experiments - extractive body cue:** However, the works utilizing a bounded NeRF representation using score distillation do not work very well in this case.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | These functionalities are otherwise hard to achieve in previous baselines that do not have global 2D representations, and as a result, our results provide ... | p. 13 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | However, the works utilizing a bounded NeRF representation using score distillation do not work very well in this case. | p. 11 (4 Experiments) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 11 / 4 Experiments - extractive PDF cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Specifically, for each method, we render images with camera rotations and translations to mimic the immersive trajectory inside the 3D scenes.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Their pipeline, which inpaints each patch separately based on the same text prompt, tends to produce repetitive results especially when generating complex scenes.
-- **p. 12 / 4 Experiments - extractive PDF cue:** 3, our method can generate diverse 3D scenes in different styles with distinct contents, while preserving high-fidelity novel-view rendering ability and realistic scene geometry.
-- **p. 13 / 4 Experiments - extractive PDF cue:** DreamScene360 13 (a) ℒ!"# (b) ℒ!"# + ℒ$%& (c) ℒ!"# + ℒ'%( (d) ℒ!"# + ℒ$%& + ℒ'%( Fig.
-- **p. 13 / 4 Experiments - extractive PDF cue:** In this part, we mainly focus on the generated panorama since panorama provides a holistic view of the 3D scene and provides an upper bound ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** In the absence of geometric priors of the scene (a), the optimized 3D Gaussian rendering yields plausible results in panoramic camera views.
+- **p. 11 / 4 Experiments - extractive body cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
+- **p. 11 / 4 Experiments - extractive body cue:** Specifically, for each method, we render images with camera rotations and translations to mimic the immersive trajectory inside the 3D scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** Their pipeline, which inpaints each patch separately based on the same text prompt, tends to produce repetitive results especially when generating complex scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** 3, our method can generate diverse 3D scenes in different styles with distinct contents, while preserving high-fidelity novel-view rendering ability and realistic scene geometry.
+- **p. 13 / 4 Experiments - extractive body cue:** DreamScene360 13 (a) ℒ!"# (b) ℒ!"# + ℒ$%& (c) ℒ!"# + ℒ'%( (d) ℒ!"# + ℒ$%& + ℒ'%( Fig.
+- **p. 13 / 4 Experiments - extractive body cue:** In this part, we mainly focus on the generated panorama since panorama provides a holistic view of the 3D scene and provides an upper bound ...
+- **p. 14 / 4 Experiments - extractive body cue:** In the absence of geometric priors of the scene (a), the optimized 3D Gaussian rendering yields plausible results in panoramic camera views.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: DreamScene360. We introduce a 3D scene generation pipeline that creates immersive scenes with full 360◦coverage from text prompts of any level of specificity. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overall Architecture. Beginning with a concise text prompt, we employ a diffusion model to generate a 360◦panoramic image. A self-refinement process is em- ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 3: Diverse Generation. We demonstrate that our generated 3D scenes are di- verse in style, consistent in geometry, and highly matched with the simple ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visual Comparisons. We showcase 360◦3D scene generation. In each row, from left to right, displays novel views as the camera undergoes clockwise rotation ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparisons between LucidDreamer and ours. CLIP Distance↓ Q-Align↑ NIQE↓ BRISQUE↓ Runtime LucidDreamer [7] 0.8900
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 5: Ablation of Self-Refinement. We demonstrate that the self-refinement pro- cess greatly enhances the image quality by improving the text prompt. As shown in ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 6: Ablation of Optimization Loss. We demonstrate the impact of Semantic and Geometric losses on the synthesized virtual cameras. (a) Utilizing photometric loss on ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Fig. 7: Ablation Study on 3D Initialization. We present a comparative visual- ization of various initialization methods for 3D Panoramic Gaussian Splatting. In the absence ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DreamScene360. We introduce a 3D scene generation pipeline that creates immersive scenes with full 360◦coverage from text prompts of any level of specificity. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Overall Architecture. Beginning with a concise text prompt, we employ a diffusion model to generate a 360◦panoramic image. A self-refinement process is em- ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 3: Diverse Generation. We demonstrate that our generated 3D scenes are di- verse in style, consistent in geometry, and highly matched with the simple ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4: Visual Comparisons. We showcase 360◦3D scene generation. In each row, from left to right, displays novel views as the camera undergoes clockwise rotation ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparisons between LucidDreamer and ours. CLIP Distance↓ Q-Align↑ NIQE↓ BRISQUE↓ Runtime LucidDreamer [7] 0.8900
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 5: Ablation of Self-Refinement. We demonstrate that the self-refinement pro- cess greatly enhances the image quality by improving the text prompt. As shown in ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 6: Ablation of Optimization Loss. We demonstrate the impact of Semantic and Geometric losses on the synthesized virtual cameras. (a) Utilizing photometric loss on ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Fig. 7: Ablation Study on 3D Initialization. We present a comparative visual- ization of various initialization methods for 3D Panoramic Gaussian Splatting. In the absence ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets. | embodiment, simulator version and control stack | p. 11 (4 Experiments), p. 11 (4 Experiments) |
 | Task/environment | Specifically, for each method, we render images with camera rotations and translations to mimic the immersive trajectory inside the 3D scenes. | reset, timeout, object/scene variation | p. 11 (4 Experiments), p. 12 (4 Experiments) |
@@ -122,7 +122,7 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 | Primary metric/result | However, the works utilizing a bounded NeRF representation using score distillation do not work very well in this case. | numeric claim only at cited anchor | p. 11 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 1 Introduction - extractive PDF cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
+- **p. 6 / 1 Introduction - extractive body cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
 
 ## Generalization and Failure Cases
 
@@ -152,9 +152,9 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 12 / 4 Experiments - extractive PDF cue:** In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout.
+- **p. 12 / 4 Experiments - extractive body cue:** In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout.
 
-- **PDF anchors reviewed:** datasets p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), metrics p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), baselines p. 11 (4 Experiments), p. 10 (Figure/Table caption), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), metrics p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), baselines p. 11 (4 Experiments), p. 10 (Figure/Table caption), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

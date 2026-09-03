@@ -16,7 +16,7 @@
 - **p. 4 / 2 METHOD - extractive body cue:** Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** The recent development of differentiable physics simulators for deformable objects has shown promising results for solving soft-body control problems (Hu et al., 2019b; Murthy et ...
 - **p. 3 / 2 METHOD - extractive body cue:** Given an initial state s0, a goal state sg and the transition dynamics p of a differentiable simulator, we use gradient-based trajectory optimization to solve ...
-- **p. 3 / 2 METHOD - extractive body cue:** Published as a conference paper at ICLR 2022 f(o, g) s0 sim s1 a0 ... sT sim back propagation Loss a1 policy feasibility predictor skill ...
+- **p. 3 / 2 METHOD - extractive body cue:** f(o, g) s0 sim s1 a0 ... sT sim back propagation Loss a1 policy feasibility predictor skill ...
 - **Contribution anchor:** p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (2 METHOD), p. 4 (2 METHOD), p. 1 (1 INTRODUCTION), p. 3 (2 METHOD)
 
 ### Strongest assumption and failure boundary
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward predictor, as well as a variational auto-encoder ...를 Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In Table 3, we can see that the learned skills (labeled as Behavior Cloning) approach the normalized performance of the trajectory optimization (Trajectory Opt) on single-tool use, although they cannot solve the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward predictor, as well as a ... (p. 4, 2 METHOD).
+- **Paper-specific mechanism:** To extend the use of differentiable physics models to these long-horizon tasks and enable the agent to directly consume visual observations, we propose DiffSkill: a novel framework where the agent ... (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS); the relevant task/metric cue is After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving a L2 error of less than 0.05 for the score predictor and ... (p. 6, 3 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This threshold is manually picked by observing the performance gap between successful and failed trajectories. (p. 6, 3 EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We build our simulation environments on top of PlasticineLab (Huang et al., 2021), a differentiable physics benchmark using the DiffTaichi system (Hu et al., 2019a) that could simulate plasticine-like objects based on ....
-3. Compare against the body-reported baseline or a matched simpler baseline: 3.3 BASELINES We compare with three strong baselines: Model-free Reinforcement Learning (RL) We compare with two model-free RL methods: TD3 (Fujimoto et al., 2018) and SAC (Haarnoja et al., 2018)..
-4. Report the body metric and its denominator/aggregation: After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving a L2 error of less than 0.05 for the score predictor and an accuracy ....
-5. Re-run the body-reported ablation/failure condition: Figure 3: Visualization of the generated plan and the corresponding execution. The plan generated by DiffSkill is shown in the left, where the first and the last image are the given initial ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward predictor, as well as a ... (p. 4, 2 METHOD); preserve the objective/update rule: Specifically, after each gradient update step of Adam, we project the current zi to the constraint set by setting zi = zi max(//zi//2/ √ M),1). (p. 5, 2 METHOD).
+2. Use the paper-reported task/data/environment cue: We build our simulation environments on top of PlasticineLab (Huang et al., 2021), a differentiable physics benchmark using the DiffTaichi system (Hu et al., 2019a) that could simulate plasticine-like objects ... (p. 5, 3 EXPERIMENTS).
+3. Compare against the reported or matched baseline: Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving a L2 error of less than 0.05 for the score predictor and ... (p. 6, 3 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: 3.5 ABLATION ANALYSIS We perform two ablations on DiffSkill. (p. 7, 3 EXPERIMENTS); if none is reported, design one around: This threshold is manually picked by observing the performance gap between successful and failed trajectories. (p. 6, 3 EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (2 METHOD), p. 3 (2 METHOD), p. 2 (2 METHOD); the primary result is directionally consistent at p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 8 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), and measure the boundary at p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 consists, three, components mechanism이 3.3 BASELINES We compare with three strong baselines: Model-free Reinforcement Learning (RL) We compare with two ... 대비 After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving ...을 개선하고, In Table 3, we can see that the learned skills (labeled as Behavior Cloning) approach the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a ...), does the paper-specific mechanism (To extend the use of differentiable physics models to these long-horizon tasks and enable the agent to directly consume visual observations, we ...) retain the reported evaluation outcome (After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving ...) when tested against the paper's strongest explicit boundary (This threshold is manually picked by observing the performance gap between successful and failed trajectories.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To extend the use of differentiable physics models to these long-horizon tasks and enable the agent to directly consume visual observations, we propose DiffSkill: a novel framework where the agent ... (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS).
+- **Strongest explicit boundary:** This threshold is manually picked by observing the performance gap between successful and failed trajectories. (p. 6, 3 EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

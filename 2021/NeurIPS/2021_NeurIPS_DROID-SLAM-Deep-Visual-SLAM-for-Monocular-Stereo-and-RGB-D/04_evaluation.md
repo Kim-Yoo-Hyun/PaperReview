@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2108.10869; PDF retrieval source: https://arxiv.org/pdf/2108.10869. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2108.10869; PDF retrieval source: https://arxiv.org/pdf/2108.10869. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | On most sequences, we outperform existing methods by an order-of-magnitude and achieve 8x lower average error than TartanVO [54] and 20x lower than DeepV2D ... | p. 8 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | In the monocular setting, we achieve an average ATE of 2.2cm, reducing error by 82% among methods with zero failures, and by 43% over ... | p. 8 (4 Experiments) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | TUM-RGBD [44] The RGBD dataset consists of indoor scenes captured with handheld camera. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | The EuRoC dataset consists of video captured from sensor on-board a micro aerial vehicle (MAV) and is a widely used benchmark to evaluate SLAM ... | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 9 (4 Experiments) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 - **p. 9 / 4 Experiments - extractive body cue:** While memory and resource requirements are currently the biggest limitation of our system, we believe these can be drastically reduced by culling redundant computation and ...
 - **p. 9 / 5 Conclusion - extractive body cue:** DROID-SLAM is accurate, robust, and versatile and can be used on monocular, stereo, and RGB-D video.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 8 (4 Experiments), p. 13 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 8 (4 Experiments), p. 13 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Results on the TartanAir test set, compared with the top 3 submission to the ECCV 2020 SLAM competition. The score is computed using normalized relative pose error for ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Following prior work, we evaluate the accuracy of the camera trajectory [31, 15, 42], primarily using Absolute Trajectory Error (ATE) [44]. (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** Following prior work, we evaluate the accuracy of the camera trajectory [31, 15, 42], primarily using Absolute Trajectory Error (ATE) [44]. (p. 7, 4 Experiments).
+- **Failure/negative evidence:** We find that the SLAM system is unstable and prone to failure if the DBA is not used during training. (p. 13, 8 Keyframes).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GThTiuXgDC; PDF retrieval source: https://openreview.net/pdf/1f24613d0aac799415d36944a307d85a27ba53fa.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GThTiuXgDC; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114156. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on PartNet ...
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** We divide the IRAS dataset following the split of OpenAD and evaluate the close-set and open-set of IRAS.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** Compared to existing datasets, this new dataset includes different types of affordances as well as unique affordance-object pairs, such as (twist, faucet), (lever, faucet), (press, ...
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** Thus, we constructed a new test dataset consisting of approximately 559 entries by filtering out some combinations of affordance-object that already existed in our IRAS ...
-- **p. 15 / A.3 DATA ANALYSIS - extractive PDF cue:** Building the IRAS dataset based on the 3D AffordanceNet (OpenAD) Dataset (Nguyen et al., 2023).
-- **p. 15 / A.3 DATA ANALYSIS - extractive PDF cue:** Partial-view: in real-world application scenarios, we can only expect partial view of 3D shapes, represented as partial point cloud.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Effects of Different Learning Objectives.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** In the IRAS task, the average Arr is approximately 18%.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on PartNet ...
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** We divide the IRAS dataset following the split of OpenAD and evaluate the close-set and open-set of IRAS.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** Compared to existing datasets, this new dataset includes different types of affordances as well as unique affordance-object pairs, such as (twist, faucet), (lever, faucet), (press, ...
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** Thus, we constructed a new test dataset consisting of approximately 559 entries by filtering out some combinations of affordance-object that already existed in our IRAS ...
+- **p. 15 / A.3 DATA ANALYSIS - extractive body cue:** Building the IRAS dataset based on the 3D AffordanceNet (OpenAD) Dataset (Nguyen et al., 2023).
+- **p. 15 / A.3 DATA ANALYSIS - extractive body cue:** Partial-view: in real-world application scenarios, we can only expect partial view of 3D shapes, represented as partial point cloud.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Effects of Different Learning Objectives.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** In the IRAS task, the average Arr is approximately 18%.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, 3D AffordanceLLM significantly outperforms the runner-up model (LASO) in terms of mIoU, with improvements of 8.02% and 7.19% on the full and partial ... | p. 8 (4 EXPERIMENT) |
 | 4 EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | 4 (g), our model significantly outperforms other models. | p. 10 (4 EXPERIMENT) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on PartNet ...
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** We divide the IRAS dataset following the split of OpenAD and evaluate the close-set and open-set of IRAS.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** Compared to existing datasets, this new dataset includes different types of affordances as well as unique affordance-object pairs, such as (twist, faucet), (lever, faucet), (press, ...
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** Thus, we constructed a new test dataset consisting of approximately 559 entries by filtering out some combinations of affordance-object that already existed in our IRAS ...
-- **p. 15 / A.3 DATA ANALYSIS - extractive PDF cue:** Building the IRAS dataset based on the 3D AffordanceNet (OpenAD) Dataset (Nguyen et al., 2023).
-- **p. 15 / A.3 DATA ANALYSIS - extractive PDF cue:** Partial-view: in real-world application scenarios, we can only expect partial view of 3D shapes, represented as partial point cloud.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Effects of Different Learning Objectives.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** In the IRAS task, the average Arr is approximately 18%.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on PartNet ...
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** We divide the IRAS dataset following the split of OpenAD and evaluate the close-set and open-set of IRAS.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** Compared to existing datasets, this new dataset includes different types of affordances as well as unique affordance-object pairs, such as (twist, faucet), (lever, faucet), (press, ...
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** Thus, we constructed a new test dataset consisting of approximately 559 entries by filtering out some combinations of affordance-object that already existed in our IRAS ...
+- **p. 15 / A.3 DATA ANALYSIS - extractive body cue:** Building the IRAS dataset based on the 3D AffordanceNet (OpenAD) Dataset (Nguyen et al., 2023).
+- **p. 15 / A.3 DATA ANALYSIS - extractive body cue:** Partial-view: in real-world application scenarios, we can only expect partial view of 3D shapes, represented as partial point cloud.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Effects of Different Learning Objectives.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** In the IRAS task, the average Arr is approximately 18%.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1: The comparison of the affordance detection paradigm based on our IRAS or traditional label-based segmentation tasks. (a) shows that label-based paradigm can only ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: The Pipeline of 3D-ADLLM. Given the input point cloud and query reasoning instruction, the point cloud multimodal model is trained with lora to ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Multi-stage training strategy. Illustration of transferring general segmentation knowledge to affordance detection. (a) depicts the process of extracting general segmentation knowledge, while (b) ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Main results of 3D-ADLLM on zero-short open vocabulary detection. The result is calcu- lated over all classes. The overall results of all comparative ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Zero-shot Open-vocabulary detection results on over all instances.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Zero-shot Open-vocabulary detection results on AffordPose data over all instances.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: The efforts with different point encoder fpe in 3D-ADLLM.(Full- View) fpe mIoUc Accc mAccc
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: The comparison results regarding differ- ent settings of loss.(full-view) Openset-mIoUc Closeset-mIoUc DICE & BCE 30.43 42.35 DICE
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: The comparison of the affordance detection paradigm based on our IRAS or traditional label-based segmentation tasks. (a) shows that label-based paradigm can only ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: The Pipeline of 3D-ADLLM. Given the input point cloud and query reasoning instruction, the point cloud multimodal model is trained with lora to ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Multi-stage training strategy. Illustration of transferring general segmentation knowledge to affordance detection. (a) depicts the process of extracting general segmentation knowledge, while (b) ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Main results of 3D-ADLLM on zero-short open vocabulary detection. The result is calcu- lated over all classes. The overall results of all comparative ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Zero-shot Open-vocabulary detection results on over all instances.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Zero-shot Open-vocabulary detection results on AffordPose data over all instances.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: The efforts with different point encoder fpe in 3D-ADLLM.(Full- View) fpe mIoUc Accc mAccc
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: The comparison results regarding differ- ent settings of loss.(full-view) Openset-mIoUc Closeset-mIoUc DICE & BCE 30.43 42.35 DICE
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on ... | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT) |
 | Task/environment | We divide the IRAS dataset following the split of OpenAD and evaluate the close-set and open-set of IRAS. | reset, timeout, object/scene variation | p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT) |
@@ -110,8 +110,8 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 |---|---|---|
 | 4.3 ABLATION STUDY Effects of Different Components. | component/input/data sensitivity | p. 8 (4 EXPERIMENT) |
 | To investigate the effectiveness of each component in 3DADLLM, we conduct experiments with different variants of 3D-ADLLM. | component/input/data sensitivity | p. 8 (4 EXPERIMENT) |
-| Published as a conference paper at ICLR 2025 Table 5: The comparison results regarding different settings of loss.(full-view) Openset-mIoUc Closeset-mIoUc DICE & BCE 30.43 ... | component/input/data sensitivity | p. 10 (4 EXPERIMENT) |
 | Method mIoUi mAcci mPreci mReci mAPi 50 OpenAD-PointNet++ 7.61 65.13 22.47 13.01 0.37 OpenAD-DGCNN 8.02 66.76 15.83 13.52 0.39 LASO 34.49 77.12 56.04 37.88 ... | component/input/data sensitivity | p. 9 (4 EXPERIMENT) |
+| Table 6: Results of 3D-ADLLM variants with removing different components.(full-view) | component/input/data sensitivity | p. 10 (Figure/Table caption) |
 | Once it is removed, the performance, there is a noticeable reduction in the model's performance. | component/input/data sensitivity | p. 9 (4 EXPERIMENT) |
 | Full-view: Given an object as 3D point cloud without knowing the affordances supported by the object, the full-shape affordance estimation task aims to estimate ... | component/input/data sensitivity | p. 15 (A.3 DATA ANALYSIS) |
 
@@ -123,9 +123,8 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 | Primary metric/result | 4 (g), our model significantly outperforms other models. | numeric claim only at cited anchor | p. 10 (4 EXPERIMENT) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on PartNet ...
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** Method Full-view Partial-view mIoUc Accc mAccc mIoUc Accc mAccc TZSLPC (Cheraghian et al., 2020) 3.86 - 10.37 4.14 - 8.49 3DGenZ (Michele et al., 2021) ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** Published as a conference paper at ICLR 2025 Point Encoder.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** 3.3, our training data is made up of two types of task data: (1) Referring Object Part Segmentation Dataset: we build this dataset on PartNet ...
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** Method Full-view Partial-view mIoUc Accc mAccc mIoUc Accc mAccc TZSLPC (Cheraghian et al., 2020) 3.86 - 10.37 4.14 - 8.49 3DGenZ (Michele et al., 2021) ...
 
 ## Generalization and Failure Cases
 
@@ -146,8 +145,8 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 | In particular, we compare 2 different implementations: (1) w/o PC removes the pre-trained weights fPB and fAFD, directly training our 3D-ADLLM; (2) w/o UL ... | p. 8 (4 EXPERIMENT) |
 | In addition to testing different LLM backbones, we also explored different point encoders. | p. 9 (4 EXPERIMENT) |
 | Alternatively, they leverage a text encoder like CLIP (Radford et al., 2021) to associate point-wise features with text embeddings of affordance labels using cosine ... | p. 3 (3 METHOD) |
-| PointNet + Head Predefined Label grasp pour contain (a) Label-based (b) IRAS Affordance Decoder 3D AffordanceLLM Handle of mug. | p. 4 (3 METHOD) |
 | Finally, the special token and dense point features from fPB is fed into our designed affordance decoder to generate the final affordance mask. | p. 4 (3 METHOD) |
+| Text Embedding Projector LoRA LLM Point Encoder Point Backbone Affordance Decoder ℎ௔௙௙ <AFF> Feature Point Feature Learned Affordance query Frozen Trainable Figure 2: The ... | p. 4 (3 METHOD) |
 
 | Audit field | Current status |
 |---|---|
@@ -159,10 +158,10 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** 4.2.2 OUT-OF-DISTRIBUTION RESULTS The test in out-of-distribution (ood) datasets is essential to assess the generalization capability of the model.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Notably, the most substantial performance degradation with about 6% occurs in mIoU when the PC module is removed.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** 4.2.2 OUT-OF-DISTRIBUTION RESULTS The test in out-of-distribution (ood) datasets is essential to assess the generalization capability of the model.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Notably, the most substantial performance degradation with about 6% occurs in mIoU when the PC module is removed.
 
-- **PDF anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 15 (A.3 DATA ANALYSIS), p. 15 (A.3 DATA ANALYSIS), metrics p. 8 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 15 (A.3 DATA ANALYSIS), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), baselines p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), results p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 14 (A.2 COMPARISON RESULTS ON CLOSE SET), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT).
+- **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 15 (A.3 DATA ANALYSIS), p. 15 (A.3 DATA ANALYSIS), metrics p. 8 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 15 (A.3 DATA ANALYSIS), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), baselines p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), results p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 14 (A.2 COMPARISON RESULTS ON CLOSE SET), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

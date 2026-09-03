@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 To solve this POMDP, the agent should perform a belief update about the state of the map after both manipulation and observation actions.를 The task is to ‘output the most informative sequence of actions ¢ such that the robot's predicted map or. at the last step of the budget, maximizes its mean Intersection over Union ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision field is ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In this work, we build upon existing concepts of BV planing, but enhance them by incorporating manipulation actions to interactively shape and explore the environment, allowing the robot to gather ... (p. 2, A. Next Best Viewpoint Planning).
+- **Paper-specific mechanism:** Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]. (p. 6, V. EXPERIMENTS); the relevant task/metric cue is Further evaluations, which validate the individual CNABU's performance and the use of VIG as a reward proxy, are provided in Appendices C and D. (p. 7, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision ... (p. 9, VI. LIMITATIONS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The dataset for training o,, consists of 30,000 randomly sampled scenes, while the dataset for training a, consists of 11.700 pushes..
-3. Compare against the body-reported baseline or a matched simpler baseline: We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]..
-4. Report the body metric and its denominator/aggregation: We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]..
-5. Re-run the body-reported ablation/failure condition: Next, we present a series of ablations of our method and evaluate several interactive baselines..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In this work, we build upon existing concepts of BV planing, but enhance them by incorporating manipulation actions to interactively shape and explore the environment, allowing the robot to gather ... (p. 2, A. Next Best Viewpoint Planning); preserve the objective/update rule: ‘The networks are trained using backpropagation in PyTorch [32], with grid search-optimized learning rates and ADAM ‘optimizer, as well as early stopping based on the validation loss. (p. 14, B. CNABU Implementation Details).
+2. Use the paper-reported task/data/environment cue: We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]. (p. 6, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Next, we present a series of ablations of our method and evaluate several interactive baselines. (p. 6, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Further evaluations, which validate the individual CNABU's performance and the use of VIG as a reward proxy, are provided in Appendices C and D. (p. 7, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Next, we present a series of ablations of our method and evaluate several interactive baselines. (p. 6, V. EXPERIMENTS); if none is reported, design one around: Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision ... (p. 9, VI. LIMITATIONS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 13 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details); the primary result is directionally consistent at p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 6 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (Abstract), match the reported outcome at p. 6 (V. EXPERIMENTS), p. 14 (B. CNABU Implementation Details), p. 6 (V. EXPERIMENTS), and measure the boundary at p. 9 (VI. LIMITATIONS), p. 7 (B. Simulation Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Therefore, Calibrated, Neural-Accelerated mechanism이 We perform four core experiments to evaluate our approach, First, we test in simulation to highlight ... 대비 We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's ...을 개선하고, Limitations of our method include the need for represen: tative simulation training data or ground truth ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In this work, we build upon existing concepts of BV planing, but enhance them by incorporating manipulation actions to interactively shape and ...), does the paper-specific mechanism (Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: ...) retain the reported evaluation outcome (Further evaluations, which validate the individual CNABU's performance and the use of VIG as a reward proxy, are ...) when tested against the paper's strongest explicit boundary (Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Further evaluations, which validate the individual CNABU's performance and the use of VIG as a reward proxy, are ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas. (p. 1, Abstract).
+- **Paper-supported outcome:** We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]. (p. 6, V. EXPERIMENTS).
+- **Strongest explicit boundary:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision ... (p. 9, VI. LIMITATIONS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

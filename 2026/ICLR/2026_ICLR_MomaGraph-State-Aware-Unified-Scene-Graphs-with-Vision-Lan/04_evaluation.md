@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=3eTr9dGwJv; PDF retrieval source: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=3eTr9dGwJv; PDF retrieval source: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -16,8 +16,8 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** Our real-world evaluations show that MomaGraph-R1 delivers robust scene understanding and task planning even in unseen scenarios, while remaining directly compatible with standard mobile humanoid ...
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** To validate the effectiveness of our model in real-world settings, we deploy on the RobotEra Q5, a bimanual humanoid platform with a mobile base.
 - **p. 18 / A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET - extractive body cue:** 9, the dataset spans four common household room types and captures the correspondence between action types and functional categories, reflecting the diversity and richness of ...
-- **p. 11 / 6 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2026 6.4 QUANTITATIVE REAL-ROBOT EVALUATION To provide rigorous quantitative validation of our system's robustness, we conduct a comprehensive ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** 6.1 BENCHMARK EVALUATION FOR EMBODIED TASK PLANNING We compare the performance of our MomaGraph-R1 with other models across all task tiers in MomaGraph-Bench to rigorously ...
+- **p. 9 / 6 EXPERIMENTS - extractive body cue:** 6.2 BENCHMARK EVALUATION FOR VISUAL CORRESPONDENCE As the model learns scene representations from multi-view observations, it exhibits an emergent ability of cross-view consistency , which ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on correct graphs), ... | p. 11 (6 EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5: Comparison of our RL-based training with SFT and ICL baselines. Our method achieves substantially better performance on both benchmarks. As shown in ... | p. 22 (Figure/Table caption) |
@@ -46,8 +46,8 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** Our real-world evaluations show that MomaGraph-R1 delivers robust scene understanding and task planning even in unseen scenarios, while remaining directly compatible with standard mobile humanoid ...
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** To validate the effectiveness of our model in real-world settings, we deploy on the RobotEra Q5, a bimanual humanoid platform with a mobile base.
 - **p. 18 / A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET - extractive body cue:** 9, the dataset spans four common household room types and captures the correspondence between action types and functional categories, reflecting the diversity and richness of ...
-- **p. 11 / 6 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2026 6.4 QUANTITATIVE REAL-ROBOT EVALUATION To provide rigorous quantitative validation of our system's robustness, we conduct a comprehensive ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** 6.1 BENCHMARK EVALUATION FOR EMBODIED TASK PLANNING We compare the performance of our MomaGraph-R1 with other models across all task tiers in MomaGraph-Bench to rigorously ...
+- **p. 9 / 6 EXPERIMENTS - extractive body cue:** 6.2 BENCHMARK EVALUATION FOR VISUAL CORRESPONDENCE As the model learns scene representations from multi-view observations, it exhibits an emergent ability of cross-view consistency , which ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To rigorously evaluate spatial-functional reasoning and task planning capabilities, we design a comprehensive multi-choice VQA benchmark based on the scenes and tasks in our ... | embodiment, simulator version and control stack | p. 19 (A.4.1 BENCHMARK DESIGN), p. 17 (A.1.1 REAL-WORLD DATASET SOURCE AND COLLECTION) |
 | Task/environment | To further enrich the dataset, we incorporated samples from two public benchmarks, OpenFunGraph (Zhang et al., 2025) and SceneFun3D (Delitzas et al., 2024), both ... | reset, timeout, object/scene variation | p. 17 (A.1.1 REAL-WORLD DATASET SOURCE AND COLLECTION), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET) |
@@ -79,10 +79,10 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 | Figure 13: Training reward curves during MomaGraph-R1 training. correctness of the benchmark, all generated questions and answers undergo several rounds of manual verification, during ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | These results demonstrate that MomaGraph remains robust across multiple reasoning and execution stages, achieving a 70% overall success rate on a complex multi-step task. | definition/direction/unit from same section | p. 11 (6 EXPERIMENTS) |
 | We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. | definition/direction/unit from same section | p. 9 (6 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2026 Table 4: DAPO Training Configuration Parameter Value Model Configuration Base Model Qwen2.5-VL-7B-Instruct Mixed Precision bfloat16 Training ... | definition/direction/unit from same section | p. 21 (A.4.1 BENCHMARK DESIGN) |
 | Table 6: Sensitivity analysis of reward weights (wa, wf, wl) in our DAPO training. The model's performance remains stable across different weight configurations. As ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 | Notably, MomaGraph-R1 delivers a +11.4% relative improvement over its base model (Qwen2.5-VL-7B) under w/ Graph, highlighting the effectiveness of reinforcement learning with graph-based rewards. | definition/direction/unit from same section | p. 9 (6 EXPERIMENTS) |
 | This combination underscores the strength of our model and its practicality for real-world deployment. | definition/direction/unit from same section | p. 10 (6 EXPERIMENTS) |
+| Figure 14: Validation reward curves during MomaGraph-R1 training. B ADDITIONAL ABLATION STUDIES B.1 COMPARISON WITH SFT AND ICL BASELINES To validate our choice of ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -124,7 +124,6 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 
 - Numeric sentences retained from the body:
 - **p. 11 / 6 EXPERIMENTS - extractive body cue:** As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on correct graphs), and ...
-- **p. 21 / A.4.1 BENCHMARK DESIGN - extractive body cue:** Published as a conference paper at ICLR 2026 Table 4: DAPO Training Configuration Parameter Value Model Configuration Base Model Qwen2.5-VL-7B-Instruct Mixed Precision bfloat16 Training Setup ...
 - **p. 7 / 4 METHOD - extractive body cue:** Our dataset consists of approximately 1,050 task-oriented subgraphs and 6278 multi-view RGB images, collected from a combination of manually collected real-world data, re-annotated existing datasets ...
 - **p. 8 / 4 METHOD - extractive body cue:** MomaGraph-Bench is formulated as a multi-choice VQA task which comprises 294 diverse indoor scenes with 1,446 multi-view images, featuring 352 task-oriented scene graphs spanning 1,315 ...
 - **p. 19 / A.2 TRAINING DETAILS - extractive body cue:** We train our model using 8× 80GB A100 GPUs for approximately 13 hours based on the EasyR1 (Zheng et al., 2025b) training framework.
@@ -147,14 +146,14 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| Published as a conference paper at ICLR 2026 Table 4: DAPO Training Configuration Parameter Value Model Configuration Base Model Qwen2.5-VL-7B-Instruct Mixed Precision bfloat16 Training ... | p. 21 (A.4.1 BENCHMARK DESIGN) |
 | MomaGraph-R1 processes these observations together with the task instruction to generate a task-specific subgraph, which explicitly encodes the relevant objects and their spatial-functional relationships, ... | p. 10 (6 EXPERIMENTS) |
 | Turn on the light closest to the remote so I can find it and turn on the monitor to watch." To assess system robustness, ... | p. 11 (6 EXPERIMENTS) |
 | As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on correct graphs), ... | p. 11 (6 EXPERIMENTS) |
 | The format reward quickly reaches 1.0 within the first 25 steps, showing the model rapidly learns to produce valid JSON-structured outputs. | p. 19 (A.3 TRAINING CURVE) |
 | ET s encodes the spatial relationships among these nodes, and ET f captures their functional relationships. | p. 5 (4 METHOD) |
 | We compute intersection-over-union similarity for task-relevant objects in NT , where N pred T and N gt T denote the predicted and ground truth ... | p. 5 (4 METHOD) |
-| Published as a conference paper at ICLR 2026 where wa, wf, and wl are hyperparameters controlling the relative importance of each component. | p. 6 (4 METHOD) |
+| MomaGraph-Scenes jointly encodes spatial relationships and functional relationships, covering 9 spatial relationship types and 6 functional relationship 6 | p. 6 (4 METHOD) |
+| Formally, at time step t, the task-oriented scene graph is represented as: G(t) T =  N (t) T , ET ,(t) s , ET ... | p. 6 (4 METHOD) |
 
 | Audit field | Current status |
 |---|---|
@@ -173,7 +172,16 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** In contrast, MomaGraph-R1 exhibits a much smaller degradation, preserving strong performance in Tier 3 and Tier 4.
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** Our real-world evaluations show that MomaGraph-R1 delivers robust scene understanding and task planning even in unseen scenarios, while remaining directly compatible with standard mobile humanoid ...
 
-- **PDF anchors reviewed:** datasets p. 19 (A.4.1 BENCHMARK DESIGN), p. 17 (A.1.1 REAL-WORLD DATASET SOURCE AND COLLECTION), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET), p. 10 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET), metrics p. 11 (6 EXPERIMENTS), p. 20 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 21 (A.4.1 BENCHMARK DESIGN), p. 22 (Figure/Table caption), baselines p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), results p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 19 (A.4.1 BENCHMARK DESIGN), p. 17 (A.1.1 REAL-WORLD DATASET SOURCE AND COLLECTION), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET), p. 10 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET), metrics p. 11 (6 EXPERIMENTS), p. 20 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 9 (6 EXPERIMENTS), baselines p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), results p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Performance comparison on the MomaGraph-Bench. We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. Type Models Params MomaGraph Benchmark Tier ... (p. 9, Figure/Table caption).
+- **Metric evidence:** We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. (p. 9, 6 EXPERIMENTS).
+- **Baseline/ablation evidence:** Across all models, the w/ Graph setting consistently outperforms the w/o Graph baseline, demonstrating that explicitly structuring task-oriented scene graphs provides a tangible benefit for downstream planning. (p. 9, 6 EXPERIMENTS).
+- **Failure/negative evidence:** (b) Failure analysis illustrating success/failure rates across different reasoning stages. (p. 11, 6 EXPERIMENTS).

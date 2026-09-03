@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/huang25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/huang25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | 3.4 Keypoint Proposal and ReKep Generation To enable the system to perform tasks in-the-wild given a free-form task instruction, we devise a ... | p. 5 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | We use sampling-based global optimization Dual Annealing [129] in the first iteration to quickly search the full space, which is followed by ... | p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 22 (A.6 Querying Vision-Language Model) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Coupled with point trackers, we demonstrate that ReKep constraints can be repeatedly and efficiently solved in a hierarchical optimization framework to act ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | After initialization, at each time step, we similarly obtain the pixel-wise features from DINOv2 from all cameras with their 3D world coordinates. | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Each setting has 10 trials, in which object poses are randomized. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 22 (A.6 Querying Vision-Language Model), p. 4 (3 Method), p. 5 (3 Method), p. 22 (A.6 Querying Vision-Language Model), objective p. 4 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 4 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 5 (3 Method), temporal p. 8 (4 Experiments), p. 24 (A.7 Implementation Details of Point Tracker), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (3 Method), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 5 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 22 (A.6 Querying Vision-Language Model), p. 4 (3 Method), p. 5 (3 Method), p. 22 (A.6 Querying Vision-Language Model), objective p. 4 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 4 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 5 (3 Method), temporal p. 8 (4 Experiments), p. 24 (A.7 Implementation Details of Point Tracker), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (3 Method), p. 8 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (30 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our contributions are summarized as follows: 1) We formulate manipulation tasks as a hierarchical optimization problem with Relational Keypoint Constraints; 2) We devise a pipeline to automatically specify keypoints and ... (p. 2, 1 Introduction).
+- **Objective/update evidence:** Namely, for each stage i, the optimization shall find an end-effector pose as next sub-goal, along with its timing, and a sequence of poses egi-1:gi that achieves the sub-goal, subject ... (p. 4, 3 Method).
+- **Temporal/runtime evidence:** Coupled with point trackers, we demonstrate that ReKep constraints can be repeatedly and efficiently solved in a hierarchical optimization framework to act as a closed-loop policy that runs at a ... (p. 8, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

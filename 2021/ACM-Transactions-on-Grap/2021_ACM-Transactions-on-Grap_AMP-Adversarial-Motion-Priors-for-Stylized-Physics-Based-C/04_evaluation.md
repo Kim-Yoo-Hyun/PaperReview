@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1145/3450626.3459670; PDF retrieval source: https://doi.org/10.1145/3450626.3459670. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1145/3450626.3459670; PDF retrieval source: https://doi.org/10.1145/3450626.3459670. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 8 RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Training the motion prior with a diverse dataset results in more flexible and optimal policies that are able to achieve a wider range of ... | p. 9 (8 RESULTS) |
 | 8 RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves comparable performance across the various tasks, while also producing higher fidelity motions. order to fulfill the high-level task objectives. | p. 10 (8 RESULTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Each environment is denoted by "Character: Task (Dataset)". | embodiment, simulator version and control stack | p. 8 (8 RESULTS), p. 9 (8 RESULTS) |
 | Task/environment | To determine whether the transitions between distinct gaits are a product of the motion prior or a result of the task objective, we train ... | reset, timeout, object/scene variation | p. 9 (8 RESULTS), p. 9 (8 RESULTS) |
@@ -146,6 +146,7 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 
 | Body reproducibility cue | Anchor |
 |---|---|
+| Synthesizing graceful and life-like behaviors for physically simulated characters has been a fundamental challenge in computer animation. | p. 1 (Body text (section boundary not confidently recovered)) |
 | Developing control strategies that are able to replicate the properties of naturalistic behaviors is also of interest for robotic systems, as natural motions implicitly ... | p. 1 (1 INTRODUCTION) |
 | The 3D rotation of each spherical joint is encoded using two 3D vectors corresponding to the normal and tangent in the coordinate frame. | p. 6 (4 BACKGROUND) |
 | The policy is updated using advantages computed using GAE(𝜆) [Schulman et al. | p. 7 (4 BACKGROUND) |
@@ -153,7 +154,6 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 | Detailed hyperparameter settings are available in Appendix B. | p. 8 (8 RESULTS) |
 | Code for our system will be released upon publication of this paper. | p. 8 (8 RESULTS) |
 | But when the target is further away, the character automatically transitions into a run. | p. 9 (8 RESULTS) |
-| The return is averaged across 3 models initialized with different random seeds, with 32 episodes recorded per model. | p. 9 (8 RESULTS) |
 
 | Audit field | Current status |
 |---|---|
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 - **p. 12 / 8 RESULTS - extractive body cue:** 9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that enables characters to imitate diverse behaviors from ...
 - **p. 11 / 8 RESULTS - extractive body cue:** Unlike previous motion tracking methods, our approach does not require a manually designed tracking objective or a phase-based synchronization of the reference motion and the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (8 RESULTS), p. 9 (8 RESULTS), p. 9 (8 RESULTS), p. 12 (8 RESULTS), p. 7 (8 RESULTS), p. 8 (8 RESULTS), metrics p. 11 (8 RESULTS), p. 11 (8 RESULTS), p. 18 (Figure/Table caption), p. 8 (8 RESULTS), p. 10 (8 RESULTS), p. 12 (8 RESULTS), baselines p. 12 (8 RESULTS), p. 10 (8 RESULTS), p. 7 (8 RESULTS), p. 9 (8 RESULTS), p. 9 (8 RESULTS), p. 10 (8 RESULTS), results p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RESULTS), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 18 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (8 RESULTS), p. 9 (8 RESULTS), p. 9 (8 RESULTS), p. 12 (8 RESULTS), p. 7 (8 RESULTS), p. 8 (8 RESULTS), metrics p. 11 (8 RESULTS), p. 11 (8 RESULTS), p. 18 (Figure/Table caption), p. 8 (8 RESULTS), p. 10 (8 RESULTS), p. 12 (8 RESULTS), baselines p. 12 (8 RESULTS), p. 10 (8 RESULTS), p. 7 (8 RESULTS), p. 9 (8 RESULTS), p. 9 (8 RESULTS), p. 10 (8 RESULTS), results p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RESULTS), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 18 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Training the motion prior with a diverse dataset results in more flexible and optimal policies that are able to achieve a wider range of target speeds. (p. 9, 8 RESULTS).
+- **Metric evidence:** Performance is recorded as the average normalized task return, with 0 being the minimum possible return per episode and 1 being the maximum possible return. (p. 9, 8 RESULTS).
+- **Baseline/ablation evidence:** AMP produces results of comparable quality when compared to prior tracking-based methods, without requiring a manually designed reward function or synchronization between the policy and reference motion. (p. 12, 8 RESULTS).
+- **Failure/negative evidence:** 9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that enables characters to imitate diverse behaviors from large unstructured datasets, without the ... (p. 12, 8 RESULTS).

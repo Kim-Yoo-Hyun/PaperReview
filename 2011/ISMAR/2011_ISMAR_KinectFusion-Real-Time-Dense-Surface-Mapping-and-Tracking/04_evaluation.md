@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/; PDF retrieval source: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/; PDF retrieval source: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Finally, for comparison, a new longer dataset of MN frames was processed, where a user moved the sensor over the scene without precise repetition.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its field ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 6 CONCLUSIONS The availability of commodity depth sensors such as Kinect has the potential to revolutionise the fields of robotics and human-computer interaction.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We highlight these two frames, and they are seen almost overlapping (red and black) alongside excellent trajectory and scene reconstruction quality.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The Kinect sensor was placed in a fixed location observing a tabletop scene mounted on a turntable.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For the purposes of our system, if the reconstruction volume is set to span solely the region of the rotating scene, the resulting depth image ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Rapid accumulation of errors results in the non-circular trajectory and poor reconstruction is apparent (though see later Figure 11 where frame-skipping is shown to improve ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Our video demonstrates a good variety of agile motion tracking successfully through even rapid motion.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Finally, for comparison, a new longer dataset of MN frames was processed, where a user moved the sensor over the scene without precise repetition.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its field ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 6 CONCLUSIONS The availability of commodity depth sensors such as Kinect has the potential to revolutionise the fields of robotics and human-computer interaction.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We highlight these two frames, and they are seen almost overlapping (red and black) alongside excellent trajectory and scene reconstruction quality.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The Kinect sensor was placed in a fixed location observing a tabletop scene mounted on a turntable.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For the purposes of our system, if the reconstruction volume is set to span solely the region of the rotating scene, the resulting depth image ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Rapid accumulation of errors results in the non-circular trajectory and poor reconstruction is apparent (though see later Figure 11 where frame-skipping is shown to improve ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Our video demonstrates a good variety of agile motion tracking successfully through even rapid motion.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Rapid accumulation of errors results in the non-circular trajectory and poor reconstruction is apparent (though see later Figure 11 where frame-skipping is shown to ... | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | We have conducted a number of experiments to investigate the performance of our system. | p. 7 (4 EXPERIMENTS) |
@@ -39,29 +39,29 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Finally, for comparison, a new longer dataset of MN frames was processed, where a user moved the sensor over the scene without precise repetition.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its field ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 6 CONCLUSIONS The availability of commodity depth sensors such as Kinect has the potential to revolutionise the fields of robotics and human-computer interaction.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We highlight these two frames, and they are seen almost overlapping (red and black) alongside excellent trajectory and scene reconstruction quality.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The Kinect sensor was placed in a fixed location observing a tabletop scene mounted on a turntable.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For the purposes of our system, if the reconstruction volume is set to span solely the region of the rotating scene, the resulting depth image ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Finally, for comparison, a new longer dataset of MN frames was processed, where a user moved the sensor over the scene without precise repetition.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its field ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 6 CONCLUSIONS The availability of commodity depth sensors such as Kinect has the potential to revolutionise the fields of robotics and human-computer interaction.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We highlight these two frames, and they are seen almost overlapping (red and black) alongside excellent trajectory and scene reconstruction quality.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The Kinect sensor was placed in a fixed location observing a tabletop scene mounted on a turntable.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For the purposes of our system, if the reconstruction volume is set to span solely the region of the rotating scene, the resulting depth image ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Example output from our system, generated in real-time with a handheld Kinect depth camera and no other sensing infrastructure. Normal maps (colour) and ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2: A larger scale reconstruction obtained in real-time. with such sensors are obvious, but algorithms to date have not fully leveraged the fidelity and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Overall system workflow. Surface reconstruction update: The global scene fusion pro- cess, where given the pose determined by tracking the depth data from ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4: A slice through the truncated signed distance volume showing the truncated function F > µ (white), the smooth distance field around the surface ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Reconstructed of a scene showing raycasting of the TSDF (left) without and (middle and right) with interpolation of the TSDF at the surface ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6: Demonstration of the space skipping ray casting. (Left) pixel iteration count are shown where for each pixel the ray is tra- versed in ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7: Example of point-plane outliers as person steps into par- tially reconstructed scene (left). Outliers from compatibility checks (Equation 17) using a surface measurement ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 8: Circular motion experiment to highlight the SLAM characteristics of our system as the sensor orbits a table. For each column, the top row ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Example output from our system, generated in real-time with a handheld Kinect depth camera and no other sensing infrastructure. Normal maps (colour) and ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: A larger scale reconstruction obtained in real-time. with such sensors are obvious, but algorithms to date have not fully leveraged the fidelity and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Overall system workflow. Surface reconstruction update: The global scene fusion pro- cess, where given the pose determined by tracking the depth data from ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4: A slice through the truncated signed distance volume showing the truncated function F > µ (white), the smooth distance field around the surface ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Reconstructed of a scene showing raycasting of the TSDF (left) without and (middle and right) with interpolation of the TSDF at the surface ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6: Demonstration of the space skipping ray casting. (Left) pixel iteration count are shown where for each pixel the ray is tra- versed in ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7: Example of point-plane outliers as person steps into par- tially reconstructed scene (left). Outliers from compatibility checks (Equation 17) using a surface measurement ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8: Circular motion experiment to highlight the SLAM characteristics of our system as the sensor orbits a table. For each column, the top row ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Finally, for comparison, a new longer dataset of MN frames was processed, where a user moved the sensor over the scene without precise repetition. | embodiment, simulator version and control stack | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
 | Task/environment | The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its ... | reset, timeout, object/scene variation | p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | Primary metric/result | We have conducted a number of experiments to investigate the performance of our system. | numeric claim only at cited anchor | p. 7 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The turntable was then spun through a full rotation as depth data was captured over ≈19 seconds, resulting in N = 560 frames.
-- **p. 4 / 3 METHOD - extractive PDF cue:** Rk Tg,k Rk Tg,k-1 Input Measurement Pose Estimation Update Reconstruction Surface Prediction Compute Surface Nertex and Normal Maps ICP of Predicted and Measured Surface Integrate ...
-- **p. 5 / 3.1 Preliminaries - extractive PDF cue:** However, we have found that approximation within the truncation region for 100s or more fused TSDFs from multiple viewpoints (as performed here) converges towards an ...
-- **p. 5 / 3.1 Preliminaries - extractive PDF cue:** (For a 640x480 depth stream at 30fps the equivalent of over 9 million new point measurements are made per second).
-- **p. 5 / 3.1 Preliminaries - extractive PDF cue:** Although a large number of voxels can be visited that will not project into the current image, the simplicity of the kernel means operation time ...
-- **p. 7 / 3.1 Preliminaries - extractive PDF cue:** Writing the update eTz inc as a parameter vector, x = (β,γ,α,tx,ty,tz)⊤∈R6 (19) and updating the current global frame vertex estimates for all pixels {u/Ω(u)̸ ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The turntable was then spun through a full rotation as depth data was captured over ≈19 seconds, resulting in N = 560 frames.
+- **p. 4 / 3 METHOD - extractive body cue:** Rk Tg,k Rk Tg,k-1 Input Measurement Pose Estimation Update Reconstruction Surface Prediction Compute Surface Nertex and Normal Maps ICP of Predicted and Measured Surface Integrate ...
+- **p. 5 / 3.1 Preliminaries - extractive body cue:** However, we have found that approximation within the truncation region for 100s or more fused TSDFs from multiple viewpoints (as performed here) converges towards an ...
+- **p. 5 / 3.1 Preliminaries - extractive body cue:** (For a 640x480 depth stream at 30fps the equivalent of over 9 million new point measurements are made per second).
+- **p. 5 / 3.1 Preliminaries - extractive body cue:** Although a large number of voxels can be visited that will not project into the current image, the simplicity of the kernel means operation time ...
+- **p. 7 / 3.1 Preliminaries - extractive body cue:** Writing the update eTz inc as a parameter vector, x = (β,γ,α,tx,ty,tz)⊤∈R6 (19) and updating the current global frame vertex estimates for all pixels {u/Ω(u)̸ ...
 
 ## Generalization and Failure Cases
 
@@ -161,12 +161,12 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** 4.3 Observations and Failure Modes Our system is robust to a wide range of practical conditions in terms of scene structure and camera motion.
-- **p. 7 / 3.1 Preliminaries - extractive PDF cue:** Both outcomes will lead to a reduced quality reconstruction and tracking failure.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its field ...
-- **p. 7 / 3.1 Preliminaries - extractive PDF cue:** If either test fails, the system is placed into re-localisation mode.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4.3 Observations and Failure Modes Our system is robust to a wide range of practical conditions in terms of scene structure and camera motion.
+- **p. 7 / 3.1 Preliminaries - extractive body cue:** Both outcomes will lead to a reduced quality reconstruction and tracking failure.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its field ...
+- **p. 7 / 3.1 Preliminaries - extractive body cue:** If either test fails, the system is placed into re-localisation mode.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 1 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 1 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

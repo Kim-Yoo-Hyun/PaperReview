@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | This dataset provides temporally labelled actions for long-duration videos, facilitating the training and evaluation of models for action segmentation. | p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (2) A dataset with multi-task labels to support algorithm) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | development in various robot learning fields, like hicrarchical temporal action segmentation, motion policy learning, and anomaly detection. | p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | Unlike framebased cameras that capture static images at fixed intervals, event cameras asynchronously record changes in pixel inten: sity, resulting in high ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | Many approaches tackle these challenges by decomposing ‘complex actions into simpler skills that can be sequenced to perform long-horizon tasks [12], [13]. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | The pick action was successfully executed in 8 out of 10 trials, with failures occurring due to the gear slipping from the ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 13 (B. Motion Policy Learning), objective p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (C. Interaction point diversity), p. 9 (C. Interaction point diversity), temporal p. 5 (B. Sensors), p. 2 (Abstract), p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS).
+- **Evidence anchors reviewed:** method p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 13 (B. Motion Policy Learning), objective p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (C. Interaction point diversity), p. 9 (C. Interaction point diversity), temporal p. 5 (B. Sensors), p. 2 (Abstract), p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** ‘The primary objective of this study is to introduce a novel robot manipulation dataset specifically designed for contactrich manipulation tasks, rather than t0 develop a new policy learning methodology. (p. 11, B. Motion Policy Learning).
+- **Objective/update evidence:** ‘The increasing prevalence of automation in robotic manipulation tasks highlights the necessity of effective skill assess- ‘ment, task monitoring, and summarization to enhance system performance and reliability. ‘Temporal action segment ... (p. 3, 2) A dataset with multi-task labels to support algorithm).
+- **Temporal/runtime evidence:** Many approaches tackle these challenges by decomposing ‘complex actions into simpler skills that can be sequenced to perform long-horizon tasks [12], [13]. (p. 2, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

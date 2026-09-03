@@ -1,53 +1,75 @@
 # Insights — PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AnofTirXgv; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/331054. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** Building on this insight, we propose PRISM, a tripartite framework that distills 3D Visual Foundation Model features as rich spatialsemantic priors for physics-based reasoning.
-- **Problem cue:** Existing sensor modelings typically treat depth noise as a monolithic black-box process, overlooking the distinct physical mechanisms that govern different error modalities.
-- **Claim/result cue:** Extensive benchmarks demonstrate that PRISM achieves state-of-the-art fidelity in noisy depth synthesis.
+- **p. 2 / 1. Introduction - extractive body cue:** To operationalize this insight, we propose PRISM (PhysicsReasoned Implicit Sensor Modeling), a semantic-geometric collaborative framework designed to ′refract′ monolithic sensor noise into physically motivated modalities.
+- **p. 2 / 1. Introduction - extractive body cue:** 2) Semantic-Geometric Collaboration: We propose PRISM, a unified framework that distills the rich physical common sense of 3D Visual Foundation Model to drive noise synthesis.
+- **p. 3 / 3.1. Semantic-Physics Reasoner - extractive body cue:** The architecture consists of three sequential modules.
+- **p. 3 / 3. Methodology - extractive body cue:** We present PRISM, a tripartite framework that synthesizes realistic depth by disentangling sensor noise into physically grounded modalities.
+- **p. 5 / 3.4. Hierarchical Positive-Prioritized Supervision - extractive body cue:** To address the extreme class imbalance and ensure precise boundary detection, we propose a supervision strategy comprised of three coupled mechanisms.
+- **p. 3 / 2.3. Visual Foundation Models as Semantic Priors - extractive body cue:** State-of-theart architectures like Metric3Dv2 (Hu et al., 2024) and MoGe (Wang et al., 2025b) employ ViT-based encoders to distill invariant geometric representations.
+- **p. 5 / 3) Sequential Optimization Objectives. Since PRISM is - extractive body cue:** Stage I: Noise Disentanglement Learning.In addition to the pixel-wise classification, we introduce a Dice Loss to enforce shape compactness and prevent trivial solutions.
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (3. Methodology), p. 5 (3.4. Hierarchical Positive-Prioritized Supervision), p. 3 (2.3. Visual Foundation Models as Semantic Priors)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** However, the deployment of simulation-trained policies remains fundamentally bottlenecked by the sim-to-real gap(Jia et al., 2025).
+- **p. 1 / 1. Introduction - extractive body cue:** (a) The Reality Gap: Unlike pristine simulation, real-world physical sensing exhibits a bimodal noise distribution: black voids and gray residuals.
+- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, training this framework presents a unique optimization challenge: invalidation regions are spatially sparse (often < 10% of pixels).
+- **p. 2 / 1. Introduction - extractive body cue:** Unlike conventional hard example mining discards rare signals, H-PPS combines multi-scale boundary constraints with recall-prioritized mining protocol.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation ...
+- **p. 9 / 7. Limitations - extractive body cue:** While PRISM demonstrates strong capabilities in simulateddepth enhancement, it possesses certain limitations.
+- **p. 9 / 7. Limitations - extractive body cue:** Second, the current per-frame generation pipeline does not explicitly enforce temporal consistency for highly dynamic scenes, leaving flickering noise across frames as a key open ...
+- **Boundary to test:** Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation (detection of sensor failure ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To operationalize this insight, we propose PRISM (PhysicsReasoned Implicit Sensor Modeling), a semantic-geometric collaborative framework designed to ′refract′ monolithic sensor noise into physically motivated modalities. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | By physically grounding noise synthesis, PRISM forces the policy to learn compliant behaviors robust to sensor dropouts (e.g., inferring geometry from boundaries), achieving an average success rate of 92.5% and significantly outperformi ... | p. 8 (5.3. Downstream Application Evaluation), p. 8 (Figure/Table caption) |
+| Failure/limitation | Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation (detection of sensor failure ... | p. 7 (Figure/Table caption), p. 9 (7. Limitations) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `semantic, alignment, depth, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - 2D vision-language feature를 3D object/point/field/map에 정렬해 open-vocabulary querying과 semantic grounding에 사용할 수 있다.
-  - 핵심은 language prior를 3D metric structure와 맞추면서 view inconsistency와 hallucination을 줄이는 것이다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 Simulation) Task Language (Optional) <Enhanced Triplet> Enhanced Depth Simulated RGB Simulated State Large-scale Dataset from Simulation Simulated State Simulated RGB Simulated Depth Joint Gripper + (a) Large-scale Simulated Demonstrati ...를 The BND maps the concatenated RGB-Depth input X = [I; Dsim] ∈R4×H×W to a pixel-wise sensing invalidation probability map ˆ M ∈[0, 1]H×W .로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation (detection of sensor failure ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To operationalize this insight, we propose PRISM (PhysicsReasoned Implicit Sensor Modeling), a semantic-geometric collaborative framework designed to ′refract′ monolithic sensor noise into physically motivated modalities.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `semantic, alignment, depth, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Extensive benchmarks demonstrate that PRISM achieves state-of-the-art fidelity in noisy depth synthesis.
-  - open-vocabulary recognition이나 grounding을 보인 뒤에도 3D consistency, ambiguous reference resolution, robot-action relevance는 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `semantic, alignment, depth, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation (detection of sensor failure ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy, IoU, mAP, AbsRel, RMSE
-  - 내 연구 확장 benchmark 후보: ScanNet, ScanRefer, ReferIt3D, SQA3D
-  - 내 연구 확장 metric 후보: mIoU, Acc@0.25, Acc@0.5, Recall@K
-  - 검증 초점: open-vocabulary segmentation/localization, 3D consistency, task-relevant grounding을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We establish a benchmark of 6 diverse manipulation tasks (Tab.3) across two robotic platforms to evaluate challenging physical properties..
+3. Compare against the body-reported baseline or a matched simpler baseline: Zero-shot evaluation on the NYU-Depth-v2 dataset (Tab.2) demonstrates PRISM's superior robustness under noisy domain shifts when compared to overfitting-prone baselines..
+4. Report the body metric and its denominator/aggregation: NRG Only w/o SPR w/o BND PRISM Full 0.08 0.10 0.12 0.14 Overall MAE 0.118 0.095 0.098 0.076 -36% (i) Overall MAE NRG Only w/o SPR w/o BND PRISM Full 0.4 0.6 ....
+5. Re-run the body-reported ablation/failure condition: Figure 7. Semantics Efficacy. Comparing generic vs. geometric priors. 3D VFMs show superior material awareness. Impact of Causal Architecture. We treat the diffusion-based NRG as the backbone and selectively remove components (Fig. ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Visual Foundation Models as Semantic Priors), p. 5 (3) Sequential Optimization Objectives. Since PRISM is); the primary result is directionally consistent at p. 8 (5.3. Downstream Application Evaluation), p. 8 (Figure/Table caption), p. 7 (5.2. Depth Fidelity Evaluation); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D VLM feature를 3D로 lift할 때 multi-view consistency와 fine-grained object boundary를 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 operationalize, insight, PRISM mechanism이 Zero-shot evaluation on the NYU-Depth-v2 dataset (Tab.2) demonstrates PRISM's superior robustness under noisy domain shifts when ... 대비 NRG Only w/o SPR w/o BND PRISM Full 0.08 0.10 0.12 0.14 Overall MAE 0.118 0.095 0.098 0.076 ...을 개선하고, Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=QI6HrBseVF&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=QI6HrBseVF&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 11 (6 Results), p. 13 (6 Results), p. 14 (Fig
 
 ## Evaluation Body Digest
 
-- **p. 10 / 6 Results - extractive PDF cue:** We benchmark FlowMap via the downstream task of 3D Gaussian reconstruction [29].
-- **p. 14 / 6 Results - extractive PDF cue:** Qualitatively, we find that point tracks reduce drift for longer sequences, such as object-centric 360◦scenes.
-- **p. 10 / 6 Results - extractive PDF cue:** We benchmark FlowMap against several baselines.
-- **p. 11 / 6 Results - extractive PDF cue:** We then optimize 3D Gaussian scenes for all methods except NoPE-NeRF, since it provides its own NeRF renderings.
-- **p. 11 / 6 Results - extractive PDF cue:** Because FlowMap runs on video sequences, we restrict these datasets to just the videolike sequences they provide.
-- **p. 12 / 6 Results - extractive PDF cue:** 6.3 Large-Scale Robustness Study We study FlowMap's robustness by using it to estimate camera poses for 420 CO3D scenes from 10 categories.
-- **p. 12 / 6 Results - extractive PDF cue:** We run FlowMap and DROID-SLAM on 420 CO3D scenes across 10 categories and plot mean ATEs with respect to CO3D's COLMAP-generated pose metadata.
-- **p. 13 / 6 Results - extractive PDF cue:** 9 shows qualitative results and quantitative results averaged across 33 scenes.
+- **p. 10 / 6 Results - extractive body cue:** We benchmark FlowMap via the downstream task of 3D Gaussian reconstruction [29].
+- **p. 14 / 6 Results - extractive body cue:** Qualitatively, we find that point tracks reduce drift for longer sequences, such as object-centric 360◦scenes.
+- **p. 10 / 6 Results - extractive body cue:** We benchmark FlowMap against several baselines.
+- **p. 11 / 6 Results - extractive body cue:** We then optimize 3D Gaussian scenes for all methods except NoPE-NeRF, since it provides its own NeRF renderings.
+- **p. 11 / 6 Results - extractive body cue:** Because FlowMap runs on video sequences, we restrict these datasets to just the videolike sequences they provide.
+- **p. 12 / 6 Results - extractive body cue:** 6.3 Large-Scale Robustness Study We study FlowMap's robustness by using it to estimate camera poses for 420 CO3D scenes from 10 categories.
+- **p. 12 / 6 Results - extractive body cue:** We run FlowMap and DROID-SLAM on 420 CO3D scenes across 10 categories and plot mean ATEs with respect to CO3D's COLMAP-generated pose metadata.
+- **p. 13 / 6 Results - extractive body cue:** 9 shows qualitative results and quantitative results averaged across 33 scenes.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (6 Results), p. 13 (6 Results), p. 14 (Fig
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Quantitatively, FlowMap performs slightly better than COLMAP SfM and significantly outperforms DROID-SLAM and NoPE-NeRF. | p. 11 (6 Results) |
 | 6 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | 7 Ablations and Analysis We perform ablations to answer the following questions: - Question 1: Are FlowMap's reparameterizations of depth, pose, and intrinsics necessary, ... | p. 13 (6 Results) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 11 (6 Results), p. 13 (6 Results), p. 14 (Fig
 
 ## Dataset / Benchmark Role
 
-- **p. 10 / 6 Results - extractive PDF cue:** We benchmark FlowMap via the downstream task of 3D Gaussian reconstruction [29].
-- **p. 14 / 6 Results - extractive PDF cue:** Qualitatively, we find that point tracks reduce drift for longer sequences, such as object-centric 360◦scenes.
-- **p. 10 / 6 Results - extractive PDF cue:** We benchmark FlowMap against several baselines.
-- **p. 11 / 6 Results - extractive PDF cue:** We then optimize 3D Gaussian scenes for all methods except NoPE-NeRF, since it provides its own NeRF renderings.
-- **p. 11 / 6 Results - extractive PDF cue:** Because FlowMap runs on video sequences, we restrict these datasets to just the videolike sequences they provide.
-- **p. 12 / 6 Results - extractive PDF cue:** 6.3 Large-Scale Robustness Study We study FlowMap's robustness by using it to estimate camera poses for 420 CO3D scenes from 10 categories.
-- **p. 12 / 6 Results - extractive PDF cue:** We run FlowMap and DROID-SLAM on 420 CO3D scenes across 10 categories and plot mean ATEs with respect to CO3D's COLMAP-generated pose metadata.
-- **p. 13 / 6 Results - extractive PDF cue:** 9 shows qualitative results and quantitative results averaged across 33 scenes.
+- **p. 10 / 6 Results - extractive body cue:** We benchmark FlowMap via the downstream task of 3D Gaussian reconstruction [29].
+- **p. 14 / 6 Results - extractive body cue:** Qualitatively, we find that point tracks reduce drift for longer sequences, such as object-centric 360◦scenes.
+- **p. 10 / 6 Results - extractive body cue:** We benchmark FlowMap against several baselines.
+- **p. 11 / 6 Results - extractive body cue:** We then optimize 3D Gaussian scenes for all methods except NoPE-NeRF, since it provides its own NeRF renderings.
+- **p. 11 / 6 Results - extractive body cue:** Because FlowMap runs on video sequences, we restrict these datasets to just the videolike sequences they provide.
+- **p. 12 / 6 Results - extractive body cue:** 6.3 Large-Scale Robustness Study We study FlowMap's robustness by using it to estimate camera poses for 420 CO3D scenes from 10 categories.
+- **p. 12 / 6 Results - extractive body cue:** We run FlowMap and DROID-SLAM on 420 CO3D scenes across 10 categories and plot mean ATEs with respect to CO3D's COLMAP-generated pose metadata.
+- **p. 13 / 6 Results - extractive body cue:** 9 shows qualitative results and quantitative results averaged across 33 scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: We present FlowMap, an end-to-end differentiable method that recovers poses, intrinsics, and depth maps of an input video. FlowMap is supervised only with ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: A FlowMap Forward Pass. Given RGB frames (red), optical flow (blue) and point tracks (green), FlowMap computes dense depth D, camera poses P, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: Camera-Induced Flow Loss. To use a known correspondence uij to compute a loss L, we unproject ui using the corresponding depth map Di ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4: We solve for the relative poses between consecutive frames using their depth maps, camera intrinsics, and optical flow. To do so, we first ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 5: View Synthesis Results. FlowMap's camera parameters and geometry pro- duce near-photorealistic 3D Gaussian Splatting results on par with COLMAP's. Sequence Length and Drift. ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Camera parameter and geometry intializations from FlowMap produce 3D Gaussian reconstruction results that far outperform prior gradient-based baselines and are generally on par ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 6: Qualitative Pose Estimation Comparison. FlowMap (solid red) recovers camera poses that are very close to those of COLMAP (dotted black). 6
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 7: Point Clouds Reconstructed by FlowMap. Unprojecting FlowMap depths using FlowMap's intrinsics and poses yields dense and consistent point clouds. posed video trajectories. Finally, ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: We present FlowMap, an end-to-end differentiable method that recovers poses, intrinsics, and depth maps of an input video. FlowMap is supervised only with ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: A FlowMap Forward Pass. Given RGB frames (red), optical flow (blue) and point tracks (green), FlowMap computes dense depth D, camera poses P, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Camera-Induced Flow Loss. To use a known correspondence uij to compute a loss L, we unproject ui using the corresponding depth map Di ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: We solve for the relative poses between consecutive frames using their depth maps, camera intrinsics, and optical flow. To do so, we first ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 5: View Synthesis Results. FlowMap's camera parameters and geometry pro- duce near-photorealistic 3D Gaussian Splatting results on par with COLMAP's. Sequence Length and Drift. ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Camera parameter and geometry intializations from FlowMap produce 3D Gaussian reconstruction results that far outperform prior gradient-based baselines and are generally on par ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Qualitative Pose Estimation Comparison. FlowMap (solid red) recovers camera poses that are very close to those of COLMAP (dotted black). 6
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 7: Point Clouds Reconstructed by FlowMap. Unprojecting FlowMap depths using FlowMap's intrinsics and poses yields dense and consistent point clouds. posed video trajectories. Finally, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We benchmark FlowMap via the downstream task of 3D Gaussian reconstruction [29]. | embodiment, simulator version and control stack | p. 10 (6 Results), p. 14 (6 Results) |
 | Task/environment | Qualitatively, we find that point tracks reduce drift for longer sequences, such as object-centric 360◦scenes. | reset, timeout, object/scene variation | p. 14 (6 Results), p. 10 (6 Results) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 1 (1 Introduction), p. 3 (1 Introduction) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)) |
 
 ## Metrics and Success Definition
 
@@ -122,9 +122,9 @@ PDF body evaluation/result cue (p. 11 (6 Results), p. 13 (6 Results), p. 14 (Fig
 | Primary metric/result | 7 Ablations and Analysis We perform ablations to answer the following questions: - Question 1: Are FlowMap's reparameterizations of depth, pose, and intrinsics necessary, ... | numeric claim only at cited anchor | p. 13 (6 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 12 / 6 Results - extractive PDF cue:** We note that COLMAP failed to estimate poses for 36 scenes, possibly because we ran it at a sparser frame rate to be consistent with ...
-- **p. 13 / 6 Results - extractive PDF cue:** 9 shows qualitative results and quantitative results averaged across 33 scenes.
-- **p. 14 / 6 Results - extractive PDF cue:** Randomly initialized FlowMap networks often require more than 20,000 steps to match the accuracy of a pre-trained initialization at 2,000 steps.
+- **p. 12 / 6 Results - extractive body cue:** We note that COLMAP failed to estimate poses for 36 scenes, possibly because we ran it at a sparser frame rate to be consistent with ...
+- **p. 13 / 6 Results - extractive body cue:** 9 shows qualitative results and quantitative results averaged across 33 scenes.
+- **p. 14 / 6 Results - extractive body cue:** Randomly initialized FlowMap networks often require more than 20,000 steps to match the accuracy of a pre-trained initialization at 2,000 steps.
 
 ## Generalization and Failure Cases
 
@@ -162,14 +162,14 @@ PDF body evaluation/result cue (p. 11 (6 Results), p. 13 (6 Results), p. 14 (Fig
 
 ## Limitations and Verification Questions
 
-- **p. 14 / 8 Discussion - extractive PDF cue:** FlowMap has several limitations that suggest exciting directions for future work.
-- **p. 13 / 6 Results - extractive PDF cue:** However, on about 20 percent of scenes, this approach falls into a local minimum and reconstruction fails catastrophically.
-- **p. 12 / 6 Results - extractive PDF cue:** DROID-SLAM* COLMAP Ours ATE Failure Fig.
-- **p. 12 / 6 Results - extractive PDF cue:** We note that COLMAP failed to estimate poses for 36 scenes, possibly because we ran it at a sparser frame rate to be consistent with ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Camera parameter and geometry intializations from FlowMap produce 3D Gaussian reconstruction results that far outperform prior gradient-based baselines and are generally on par ...
-- **p. 14 / 8 Discussion - extractive PDF cue:** Second, we mainly analyze FlowMap in the setting of per-scene optimization, where our results demonstrate that the gradients provided by FlowMap's formulation are robustly lead ...
+- **p. 14 / 8 Discussion - extractive body cue:** FlowMap has several limitations that suggest exciting directions for future work.
+- **p. 13 / 6 Results - extractive body cue:** However, on about 20 percent of scenes, this approach falls into a local minimum and reconstruction fails catastrophically.
+- **p. 12 / 6 Results - extractive body cue:** DROID-SLAM* COLMAP Ours ATE Failure Fig.
+- **p. 12 / 6 Results - extractive body cue:** We note that COLMAP failed to estimate poses for 36 scenes, possibly because we ran it at a sparser frame rate to be consistent with ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Camera parameter and geometry intializations from FlowMap produce 3D Gaussian reconstruction results that far outperform prior gradient-based baselines and are generally on par ...
+- **p. 14 / 8 Discussion - extractive body cue:** Second, we mainly analyze FlowMap in the setting of per-scene optimization, where our results demonstrate that the gradients provided by FlowMap's formulation are robustly lead ...
 
-- **PDF anchors reviewed:** datasets p. 10 (6 Results), p. 14 (6 Results), p. 10 (6 Results), p. 11 (6 Results), p. 11 (6 Results), p. 12 (6 Results), metrics p. 14 (Figure/Table caption), p. 12 (6 Results), p. 12 (6 Results), p. 5 (Figure/Table caption), p. 11 (6 Results), p. 13 (6 Results), baselines p. 10 (Figure/Table caption), p. 10 (6 Results), p. 11 (6 Results), p. 11 (6 Results), p. 12 (6 Results), p. 12 (6 Results), results p. 11 (6 Results), p. 13 (6 Results), p. 14 (Figure/Table caption), p. 13 (6 Results), p. 14 (6 Results), p. 10 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 10 (6 Results), p. 14 (6 Results), p. 10 (6 Results), p. 11 (6 Results), p. 11 (6 Results), p. 12 (6 Results), metrics p. 14 (Figure/Table caption), p. 12 (6 Results), p. 12 (6 Results), p. 5 (Figure/Table caption), p. 11 (6 Results), p. 13 (6 Results), baselines p. 10 (Figure/Table caption), p. 10 (6 Results), p. 11 (6 Results), p. 11 (6 Results), p. 12 (6 Results), p. 12 (6 Results), results p. 11 (6 Results), p. 13 (6 Results), p. 14 (Figure/Table caption), p. 13 (6 Results), p. 14 (6 Results), p. 10 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

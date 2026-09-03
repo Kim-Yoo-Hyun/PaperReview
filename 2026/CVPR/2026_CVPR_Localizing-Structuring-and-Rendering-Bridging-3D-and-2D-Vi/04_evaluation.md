@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4. Experiments - extractive PDF cue:** Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) We ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** Real-world: success rate, translation/rotation error, 20 trials/task.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Condition DiffRender-VLA RVT-2 [14] OpenVLA-OFT [23] Gap In-Domain 80.5 68.4 53.4 12.1/27.1 Novel Objects 74.2 (-6.3) 60.1 (-8.3) 43.7 (-9.7) 14.1/30.5 Novel Scenes 71.8 (-8.7) ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** We deploy on an AgileX PIPER with Robotic 2F-85 gripper.
-- **p. 6 / 4. Experiments - extractive PDF cue:** These tasks cover diverse challenges including multi-step planning, fine-grained spatial reasoning, and cluttered scene.
-- **p. 8 / 4.2. Real-World Deployment Results - extractive PDF cue:** Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Simulation results on RLBench. Success rates (%) with standard deviation. Best results in bold, second best underlined.
-- **p. 7 / 4.1. Simulation Results - extractive PDF cue:** Success rates (%) across 20 trials per task.
+- **p. 7 / 4. Experiments - extractive body cue:** Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) We ...
+- **p. 7 / 4. Experiments - extractive body cue:** Real-world: success rate, translation/rotation error, 20 trials/task.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Condition DiffRender-VLA RVT-2 [14] OpenVLA-OFT [23] Gap In-Domain 80.5 68.4 53.4 12.1/27.1 Novel Objects 74.2 (-6.3) 60.1 (-8.3) 43.7 (-9.7) 14.1/30.5 Novel Scenes 71.8 (-8.7) ...
+- **p. 6 / 4. Experiments - extractive body cue:** We deploy on an AgileX PIPER with Robotic 2F-85 gripper.
+- **p. 6 / 4. Experiments - extractive body cue:** These tasks cover diverse challenges including multi-step planning, fine-grained spatial reasoning, and cluttered scene.
+- **p. 8 / 4.2. Real-World Deployment Results - extractive body cue:** Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Simulation results on RLBench. Success rates (%) with standard deviation. Best results in bold, second best underlined.
+- **p. 7 / 4.1. Simulation Results - extractive body cue:** Success rates (%) across 20 trials per task.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 8. Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments. DiffRender-VLA substantially ... | p. 8 (Figure/Table caption) |
 | 4.1. Simulation Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | DiffRender-VLA significantly outperforms 2D visual prompting approaches: TraceVLA (63.9%, +16.6%) and VLA-adapter (60.6%, +19.9%). | p. 7 (4.1. Simulation Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4. Experiments - extractive PDF cue:** Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) We ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** Real-world: success rate, translation/rotation error, 20 trials/task.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Condition DiffRender-VLA RVT-2 [14] OpenVLA-OFT [23] Gap In-Domain 80.5 68.4 53.4 12.1/27.1 Novel Objects 74.2 (-6.3) 60.1 (-8.3) 43.7 (-9.7) 14.1/30.5 Novel Scenes 71.8 (-8.7) ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** We deploy on an AgileX PIPER with Robotic 2F-85 gripper.
-- **p. 6 / 4. Experiments - extractive PDF cue:** These tasks cover diverse challenges including multi-step planning, fine-grained spatial reasoning, and cluttered scene.
-- **p. 8 / 4.2. Real-World Deployment Results - extractive PDF cue:** Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments.
+- **p. 7 / 4. Experiments - extractive body cue:** Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) We ...
+- **p. 7 / 4. Experiments - extractive body cue:** Real-world: success rate, translation/rotation error, 20 trials/task.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Condition DiffRender-VLA RVT-2 [14] OpenVLA-OFT [23] Gap In-Domain 80.5 68.4 53.4 12.1/27.1 Novel Objects 74.2 (-6.3) 60.1 (-8.3) 43.7 (-9.7) 14.1/30.5 Novel Scenes 71.8 (-8.7) ...
+- **p. 6 / 4. Experiments - extractive body cue:** We deploy on an AgileX PIPER with Robotic 2F-85 gripper.
+- **p. 6 / 4. Experiments - extractive body cue:** These tasks cover diverse challenges including multi-step planning, fine-grained spatial reasoning, and cluttered scene.
+- **p. 8 / 4.2. Real-World Deployment Results - extractive body cue:** Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. 2D VLA models (left-top) leverage intuitive semantic perception from multi-view transformers but struggle with explicit 3D spatial reasoning. 3D VLA models (left-bottom) achieve ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of DiffRender-VLA. The framework bridges spatial and 2D VLA paradigms through differentiable rendering: localiz- ing anchors the next manipulation target, structuring encodes ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Visualization of differentiable point cloud rendered image. We use RLbench [19] and RH20T [10] dataset for display. Precision task: Place the stamp Occluded ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of our real-world tasks. For each task, we show several steps to understand the task process. We fuse VLA features with coarse ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Simulation results on RLBench. Success rates (%) with standard deviation. Best results in bold, second best underlined.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Simulation Tasks for Occlusion and Clutter enviroments.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Real-world results on AgileX PIPER. Success rates (%) across 20 trials per task.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. 2D VLA models (left-top) leverage intuitive semantic perception from multi-view transformers but struggle with explicit 3D spatial reasoning. 3D VLA models (left-bottom) achieve ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of DiffRender-VLA. The framework bridges spatial and 2D VLA paradigms through differentiable rendering: localiz- ing anchors the next manipulation target, structuring encodes ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Visualization of differentiable point cloud rendered image. We use RLbench [19] and RH20T [10] dataset for display. Precision task: Place the stamp Occluded ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of our real-world tasks. For each task, we show several steps to understand the task process. We fuse VLA features with coarse ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Simulation results on RLBench. Success rates (%) with standard deviation. Best results in bold, second best underlined.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Simulation Tasks for Occlusion and Clutter enviroments.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Real-world results on AgileX PIPER. Success rates (%) across 20 trials per task.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) ... | embodiment, simulator version and control stack | p. 7 (4. Experiments), p. 7 (4. Experiments) |
 | Task/environment | Real-world: success rate, translation/rotation error, 20 trials/task. | reset, timeout, object/scene variation | p. 7 (4. Experiments), p. 8 (4.3. Ablation Studies) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 | Primary metric/result | DiffRender-VLA significantly outperforms 2D visual prompting approaches: TraceVLA (63.9%, +16.6%) and VLA-adapter (60.6%, +19.9%). | numeric claim only at cited anchor | p. 7 (4.1. Simulation Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4. Experiments - extractive PDF cue:** Each task runs 20 trials across varied poses and lighting.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Architecture: Our spatial reasoning module augments the VLA backbone with a voxel-based encoder: (1) Multiview RGB-D observations are fused into point clouds and voxelized into ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) We ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** Simulation: position error <2cm, rotation error <10°, 50 trials/task.
-- **p. 7 / 4. Experiments - extractive PDF cue:** Real-world: success rate, translation/rotation error, 20 trials/task.
-- **p. 7 / 4.1. Simulation Results - extractive PDF cue:** Success rates (%) across 20 trials per task.
+- **p. 6 / 4. Experiments - extractive body cue:** Each task runs 20 trials across varied poses and lighting.
+- **p. 6 / 4. Experiments - extractive body cue:** Architecture: Our spatial reasoning module augments the VLA backbone with a voxel-based encoder: (1) Multiview RGB-D observations are fused into point clouds and voxelized into ...
+- **p. 7 / 4. Experiments - extractive body cue:** Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) We ...
+- **p. 7 / 4. Experiments - extractive body cue:** Simulation: position error <2cm, rotation error <10°, 50 trials/task.
+- **p. 7 / 4. Experiments - extractive body cue:** Real-world: success rate, translation/rotation error, 20 trials/task.
+- **p. 7 / 4.1. Simulation Results - extractive body cue:** Success rates (%) across 20 trials per task.
 
 ## Generalization and Failure Cases
 
@@ -157,12 +157,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** (3) Two-stage training: 76.2% (-4.3%)-without end-to-end gradient flow, stages cannot co-adapt.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** (1) Non-differentiable beams: 74.8% (-5.7%)-beams provide visual cues but cannot optimize placement.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Simulation Tasks for Occlusion and Clutter enviroments.
-- **p. 7 / 4.1. Simulation Results - extractive PDF cue:** Task-specific improvements highlight spatial understanding capabilities: Occlusion Tasks: Average 91.7% success (+7.6% over GWM).
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** (3) Two-stage training: 76.2% (-4.3%)-without end-to-end gradient flow, stages cannot co-adapt.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** (1) Non-differentiable beams: 74.8% (-5.7%)-beams provide visual cues but cannot optimize placement.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Simulation Tasks for Occlusion and Clutter enviroments.
+- **p. 7 / 4.1. Simulation Results - extractive body cue:** Task-specific improvements highlight spatial understanding capabilities: Occlusion Tasks: Average 91.7% success (+7.6% over GWM).
 
-- **PDF anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Ablation Studies), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.2. Real-World Deployment Results), metrics p. 7 (4. Experiments), p. 6 (Figure/Table caption), p. 7 (4.1. Simulation Results), p. 8 (4.2. Real-World Deployment Results), p. 8 (4.5. Generalization), p. 3 (Figure/Table caption), baselines p. 7 (4.1. Simulation Results), p. 7 (4.2. Real-World Deployment Results), p. 8 (4.2. Real-World Deployment Results), p. 8 (4.3. Ablation Studies), results p. 8 (Figure/Table caption), p. 7 (4.1. Simulation Results), p. 7 (4.1. Simulation Results), p. 6 (Figure/Table caption), p. 8 (4.4. Parameter & Viewpoint Analysis), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Ablation Studies), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.2. Real-World Deployment Results), metrics p. 7 (4. Experiments), p. 6 (Figure/Table caption), p. 7 (4.1. Simulation Results), p. 8 (4.2. Real-World Deployment Results), p. 8 (4.5. Generalization), p. 3 (Figure/Table caption), baselines p. 7 (4.1. Simulation Results), p. 7 (4.2. Real-World Deployment Results), p. 8 (4.2. Real-World Deployment Results), p. 8 (4.3. Ablation Studies), results p. 8 (Figure/Table caption), p. 7 (4.1. Simulation Results), p. 7 (4.1. Simulation Results), p. 6 (Figure/Table caption), p. 8 (4.4. Parameter & Viewpoint Analysis), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

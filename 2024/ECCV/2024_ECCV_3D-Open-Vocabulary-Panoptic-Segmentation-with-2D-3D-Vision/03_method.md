@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5642_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5642_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 ## Method Body Digest
 
-- **p. 5 / 3 Method - extractive PDF cue:** In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as two new loss ...
-- **p. 7 / 3 Method - extractive PDF cue:** We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their corresponding masks after ...
-- **p. 4 / 3 Method - extractive PDF cue:** Then we provide detailed descriptions of the model architecture as well as the proposed loss functions.
-- **p. 5 / 3 Method - extractive PDF cue:** However, we found that this simple extension leads to poor performance in our experiments, and in this work we propose several new features to improve ...
-- **p. 7 / 3 Method - extractive PDF cue:** Besides the two standard loss functions, we propose two simple yet effective losses to apply distillation from the CLIP model at different levels.
-- **p. 8 / 3 Method - extractive PDF cue:** For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35].
-- **p. 8 / 3 Method - extractive PDF cue:** To target these issues, we propose the voxel-level distillation loss to explicitly learn voxel-level CLIP features, which do not depend on any labels and can ...
-- **p. 7 / 3 Method - extractive PDF cue:** 3.3 Loss Function Closed-set panoptic segmentation models [47] are typically optimized with objective functions consisting of a classification loss Lcls and a mask prediction loss ...
+- **p. 5 / 3 Method - extractive body cue:** In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as two new loss ...
+- **p. 7 / 3 Method - extractive body cue:** We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their corresponding masks after ...
+- **p. 4 / 3 Method - extractive body cue:** Then we provide detailed descriptions of the model architecture as well as the proposed loss functions.
+- **p. 5 / 3 Method - extractive body cue:** However, we found that this simple extension leads to poor performance in our experiments, and in this work we propose several new features to improve ...
+- **p. 7 / 3 Method - extractive body cue:** Besides the two standard loss functions, we propose two simple yet effective losses to apply distillation from the CLIP model at different levels.
+- **p. 8 / 3 Method - extractive body cue:** For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35].
+- **p. 8 / 3 Method - extractive body cue:** To target these issues, we propose the voxel-level distillation loss to explicitly learn voxel-level CLIP features, which do not depend on any labels and can ...
+- **p. 7 / 3 Method - extractive body cue:** 3.3 Loss Function Closed-set panoptic segmentation models [47] are typically optimized with objective functions consisting of a classification loss Lcls and a mask prediction loss ...
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** Our contributions are summarized as follows: - We present the first approach for 3D open-vocabulary panoptic segmentation in autonomous driving. - We propose two novel ...
-- **p. 6 / 3 Method - extractive PDF cue:** To take advantage of the benefits of separating things queries and stuff queries, we propose to predict the base stuff classes with a fixed set ...
-- **p. 8 / 3 Method - extractive PDF cue:** Combining LO with LV enables segmenting novel things and novel stuff objects simultaneously.
+- **p. 3 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows: - We present the first approach for 3D open-vocabulary panoptic segmentation in autonomous driving. - We propose two novel ...
+- **p. 6 / 3 Method - extractive body cue:** To take advantage of the benefits of separating things queries and stuff queries, we propose to predict the base stuff classes with a fixed set ...
+- **p. 8 / 3 Method - extractive body cue:** Combining LO with LV enables segmenting novel things and novel stuff objects simultaneously.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3 Method - extractive PDF cue:** In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as two new loss ...
-- **p. 7 / 3 Method - extractive PDF cue:** We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their corresponding masks after ...
-- **p. 4 / 3 Method - extractive PDF cue:** Then we provide detailed descriptions of the model architecture as well as the proposed loss functions.
-- **p. 5 / 3 Method - extractive PDF cue:** However, we found that this simple extension leads to poor performance in our experiments, and in this work we propose several new features to improve ...
-- **p. 7 / 3 Method - extractive PDF cue:** Besides the two standard loss functions, we propose two simple yet effective losses to apply distillation from the CLIP model at different levels.
-- **p. 8 / 3 Method - extractive PDF cue:** For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35].
-- **p. 8 / 3 Method - extractive PDF cue:** To target these issues, we propose the voxel-level distillation loss to explicitly learn voxel-level CLIP features, which do not depend on any labels and can ...
+- **p. 5 / 3 Method - extractive body cue:** In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as two new loss ...
+- **p. 7 / 3 Method - extractive body cue:** We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their corresponding masks after ...
+- **p. 4 / 3 Method - extractive body cue:** Then we provide detailed descriptions of the model architecture as well as the proposed loss functions.
+- **p. 5 / 3 Method - extractive body cue:** However, we found that this simple extension leads to poor performance in our experiments, and in this work we propose several new features to improve ...
+- **p. 7 / 3 Method - extractive body cue:** Besides the two standard loss functions, we propose two simple yet effective losses to apply distillation from the CLIP model at different levels.
+- **p. 8 / 3 Method - extractive body cue:** For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35].
+- **p. 8 / 3 Method - extractive body cue:** To target these issues, we propose the voxel-level distillation loss to explicitly learn voxel-level CLIP features, which do not depend on any labels and can ...
 - **Detected method headings:** 3 Method (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as ... | p. 5 (3 Method), p. 7 (3 Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their ... | p. 7 (3 Method), p. 4 (3 Method) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 ## Objective / Update Rule
 
-- **p. 7 / 3 Method - extractive PDF cue:** 3.3 Loss Function Closed-set panoptic segmentation models [47] are typically optimized with objective functions consisting of a classification loss Lcls and a mask prediction loss ...
-- **p. 7 / 3 Method - extractive PDF cue:** We follow P3Former [47] for these two losses: the classification loss Lcls optimizes the focal loss [30] between the class predictions and the category labels, ...
-- **p. 4 / 3 Method - extractive PDF cue:** 1, and the two proposed loss functions are illustrated in Fig.
-- **p. 5 / 3 Method - extractive PDF cue:** In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as two new loss ...
-- **p. 8 / 3 Method - extractive PDF cue:** However, this loss is still susceptible to noisy or low quality mask scores, and we found that larger weights for this loss can disrupt training.
-- **p. 8 / 3 Method - extractive PDF cue:** To target these issues, we propose the voxel-level distillation loss to explicitly learn voxel-level CLIP features, which do not depend on any labels and can ...
+- **p. 7 / 3 Method - extractive body cue:** 3.3 Loss Function Closed-set panoptic segmentation models [47] are typically optimized with objective functions consisting of a classification loss Lcls and a mask prediction loss ...
+- **p. 7 / 3 Method - extractive body cue:** We follow P3Former [47] for these two losses: the classification loss Lcls optimizes the focal loss [30] between the class predictions and the category labels, ...
+- **p. 4 / 3 Method - extractive body cue:** 1, and the two proposed loss functions are illustrated in Fig.
+- **p. 5 / 3 Method - extractive body cue:** In order to improve the open vocabulary capability of our model, we propose significant changes to the P3Former architecture, as well as two new loss ...
+- **p. 8 / 3 Method - extractive body cue:** However, this loss is still susceptible to noisy or low quality mask scores, and we found that larger weights for this loss can disrupt training.
+- **p. 8 / 3 Method - extractive body cue:** To target these issues, we propose the voxel-level distillation loss to explicitly learn voxel-level CLIP features, which do not depend on any labels and can ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 ## Observation–State–Action Interface
 
-- **p. 5 / 3 Method - extractive PDF cue:** The LiDAR encoder is a model which takes an unordered set of points as input and extracts per-point features.
-- **p. 5 / 3 Method - extractive PDF cue:** 1 and mainly consists of multimodal feature fusion, a segmentation head, and input text embeddings for open-vocabulary classification.
-- **p. 6 / 3 Method - extractive PDF cue:** The segmentation head is a transformer [45] model that takes the LiDAR-Vision fused feature as input to produce panoptic segmentation results.
-- **p. 6 / 3 Method - extractive PDF cue:** Finally, the learned per-voxel LiDAR features and frozen per-voxel vision CLIP features are concatenated together to be used as input into the transformer decoder in ...
-- **p. 8 / 3 Method - extractive PDF cue:** For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35].
-- **p. 8 / 3 Method - extractive PDF cue:** 3.4 Implementation Details For the LiDAR encoder and segmentation head, we follow the implementation of the state-of-the-art closed-set 3D panoptic segmentation method P3Former [47].
-- **p. 4 / 3 Method - extractive PDF cue:** 3.1 Problem Definition In 3D panoptic segmentation, the goal is to annotate every point in a point cloud.
+- **p. 5 / 3 Method - extractive body cue:** The LiDAR encoder is a model which takes an unordered set of points as input and extracts per-point features.
+- **p. 5 / 3 Method - extractive body cue:** 1 and mainly consists of multimodal feature fusion, a segmentation head, and input text embeddings for open-vocabulary classification.
+- **p. 6 / 3 Method - extractive body cue:** The segmentation head is a transformer [45] model that takes the LiDAR-Vision fused feature as input to produce panoptic segmentation results.
+- **p. 6 / 3 Method - extractive body cue:** Finally, the learned per-voxel LiDAR features and frozen per-voxel vision CLIP features are concatenated together to be used as input into the transformer decoder in ...
+- **p. 8 / 3 Method - extractive body cue:** For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35].
+- **p. 8 / 3 Method - extractive body cue:** 3.4 Implementation Details For the LiDAR encoder and segmentation head, we follow the implementation of the state-of-the-art closed-set 3D panoptic segmentation method P3Former [47].
+- **p. 4 / 3 Method - extractive body cue:** 3.1 Problem Definition In 3D panoptic segmentation, the goal is to annotate every point in a point cloud.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,8 +90,8 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 ## Training vs Inference
 
-- **p. 7 / 3 Method - extractive PDF cue:** We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their corresponding masks after ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** The models are trained for 40 epochs, and we use the checkpoint of the last epoch for evaluation.
+- **p. 7 / 3 Method - extractive body cue:** We propose an additional training loss which forces our predicted object-level class embeddings to be similar to the CLIP embeddings within their corresponding masks after ...
+- **p. 9 / 4 Experiments - extractive body cue:** The models are trained for 40 epochs, and we use the checkpoint of the last epoch for evaluation.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -111,11 +111,11 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 ## Failure and Ablation Link
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** We use the same splits in the main comparison with prior methods, and provide the results of more variations in the ablation studies and supplementary ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** 4.1 Experimental Setting Following the state-of-the-art closed-set 3D panoptic segmentation work [27,40, 42,47,52,58], we conduct experiments and ablation studies on the nuScenes [4] and SemanticKITTI ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** In summary, this baseline provides a comparison against our proposed method without the multimodal feature fusion module, the unified segmentation head, and the distillation losses.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Impact of each component. We evaluate the impact of each component using the base/novel split in Tab. 1. We observe that each component ...
-- **p. 14 / 5 Conclusion - extractive PDF cue:** We experimentally verified that simply extending the 2D open-vocabulary segmentation method into 3D does not yield good performance, and demonstrated that our proposed model design ...
+- **p. 9 / 4 Experiments - extractive body cue:** We use the same splits in the main comparison with prior methods, and provide the results of more variations in the ablation studies and supplementary ...
+- **p. 9 / 4 Experiments - extractive body cue:** 4.1 Experimental Setting Following the state-of-the-art closed-set 3D panoptic segmentation work [27,40, 42,47,52,58], we conduct experiments and ablation studies on the nuScenes [4] and SemanticKITTI ...
+- **p. 10 / 4 Experiments - extractive body cue:** In summary, this baseline provides a comparison against our proposed method without the multimodal feature fusion module, the unified segmentation head, and the distillation losses.
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Impact of each component. We evaluate the impact of each component using the base/novel split in Tab. 1. We observe that each component ...
+- **p. 14 / 5 Conclusion - extractive body cue:** We experimentally verified that simply extending the 2D open-vocabulary segmentation method into 3D does not yield good performance, and demonstrated that our proposed model design ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 8 (3 Method), objective p. 7 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 8 (3 Method), p. 8 (3 Method), temporal p. 9 (4 Experiments), p. 9 (4 Experiments), p. 3 (2 Related Work), p. 3 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 8 (3 Method), objective p. 7 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 8 (3 Method), p. 8 (3 Method), temporal p. 9 (4 Experiments), p. 9 (4 Experiments), p. 3 (2 Related Work), p. 3 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

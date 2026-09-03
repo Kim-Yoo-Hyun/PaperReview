@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Analysis of IGL-Nav | EMPIRICAL / REAL-ROBOT OR HARDWARE | It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of ... | p. 7 (4.3. Analysis of IGL-Nav) |
 | 4.2. Comparison with State-of-the-art | EMPIRICAL / REAL-ROBOT OR HARDWARE | IGL-Nav establishes new state-of-the-art performance and outperforms previous methods by a large margin on all metrics, which validates the effectiveness of 3D gaussian representation ... | p. 6 (4.2. Comparison with State-of-the-art) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comp
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We further deploy IGL-Nav on real-world robotic platform to test its generalization ability. | embodiment, simulator version and control stack | p. 8 (4.4. Real-world Deployment), p. 6 (4.1. Experimental Setup) |
 | Task/environment | The Gibson dataset includes 72 houses for training and 14 for validation. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
@@ -151,7 +151,16 @@ PDF body evaluation/result cue (p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comp
 - **p. 8 / 5. Conclusion - extractive body cue:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image.
 - **p. 7 / 4.3. Analysis of IGL-Nav - extractive body cue:** As shown in Table 3, with predicted depth and camera intrinsics, the performance of IGLNav is still robust.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.4. Real-world Deployment), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Real-world Deployment), p. 7 (4.2. Comparison with State-of-the-art), metrics p. 7 (4.2. Comparison with State-of-the-art), p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comparison with State-of-the-art), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Analysis of IGL-Nav), p. 8 (4.3. Analysis of IGL-Nav), baselines p. 6 (4.2. Comparison with State-of-the-art), p. 7 (4.2. Comparison with State-of-the-art), p. 6 (4. Experiment), p. 7 (4.3. Analysis of IGL-Nav), p. 8 (4.4. Real-world Deployment), results p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comparison with State-of-the-art), p. 7 (4.2. Comparison with State-of-the-art), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Analysis of IGL-Nav), p. 8 (4.3. Analysis of IGL-Nav).
+- **Evidence anchors reviewed:** datasets p. 8 (4.4. Real-world Deployment), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Real-world Deployment), p. 7 (4.2. Comparison with State-of-the-art), metrics p. 7 (4.2. Comparison with State-of-the-art), p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comparison with State-of-the-art), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Analysis of IGL-Nav), p. 8 (4.3. Analysis of IGL-Nav), baselines p. 6 (4.2. Comparison with State-of-the-art), p. 7 (4.2. Comparison with State-of-the-art), p. 6 (4. Experiment), p. 7 (4.3. Analysis of IGL-Nav), p. 8 (4.4. Real-world Deployment), results p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comparison with State-of-the-art), p. 7 (4.2. Comparison with State-of-the-art), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Analysis of IGL-Nav), p. 8 (4.3. Analysis of IGL-Nav).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav).
+- **Metric evidence:** It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav).
+- **Baseline/ablation evidence:** IGL-Nav establishes new state-of-the-art performance and outperforms previous methods by a large margin on all metrics, which validates the effectiveness of 3D gaussian representation and the proposed coarse-to-fine target localization ... (p. 6, 4.2. Comparison with State-of-the-art).
+- **Failure/negative evidence:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. (p. 8, 5. Conclusion).

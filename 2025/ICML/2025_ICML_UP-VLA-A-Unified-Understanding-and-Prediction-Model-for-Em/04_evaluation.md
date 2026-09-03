@@ -1,8 +1,8 @@
-# Evaluation - UP-VLA:  A Unified Understanding and Prediction Model for Embodied Agent
+# Evaluation - UP-VLA: A Unified Understanding and Prediction Model for Embodied Agent
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=V7JPraxi5j; PDF retrieval source: https://openreview.net/pdf/a31d9729845e48950a82af3a4935b4f181940e6e.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=V7JPraxi5j; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168156. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Si
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.3. Real Robot Evaluation - extractive PDF cue:** For real-world experimental results, we train RT-1 (Brohan et al., 2022), Diffusion Policy (Chi et al., 2023) on our datasets (using the open-source code and ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** In this section, we evaluate UP-VLA in two domains including the simulation CALVIN benchmark (Mees et al., 2022) and a real-world panda manipulation environment to ...
-- **p. 6 / 5.1. Experiment Setup and baseline - extractive PDF cue:** Our real-world experiments involve multiple table-top manipulation tasks on the Franka-Emika Panda robot, including picking and placing, routing cables, pressing buttons, and opening drawers.
-- **p. 7 / 5.3. Real Robot Evaluation - extractive PDF cue:** We report the success rate of each task over 20 attempts during real-world roll-out.
-- **p. 6 / 5.2. Simulation Evaluation - extractive PDF cue:** Compared to prediction-based methods, the UP-VLA method demonstrates superior performance.
-- **p. 6 / 5.2. Simulation Evaluation - extractive PDF cue:** This demonstrates that integrating visual prediction can substantially enhance the performance of original VLA methods.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Comparison between UP-VLA, VLM-based VLA mod- els and prediction-based models. The bottom-right chart illustrates the performance across multiple tasks in both simulated and ...
-- **p. 7 / 5.3. Real Robot Evaluation - extractive PDF cue:** UP-VLA demonstrates significant improvement across all tasks.
+- **p. 7 / 5.3. Real Robot Evaluation - extractive body cue:** For real-world experimental results, we train RT-1 (Brohan et al., 2022), Diffusion Policy (Chi et al., 2023) on our datasets (using the open-source code and ...
+- **p. 6 / 5. Experiments - extractive body cue:** In this section, we evaluate UP-VLA in two domains including the simulation CALVIN benchmark (Mees et al., 2022) and a real-world panda manipulation environment to ...
+- **p. 6 / 5.1. Experiment Setup and baseline - extractive body cue:** Our real-world experiments involve multiple table-top manipulation tasks on the Franka-Emika Panda robot, including picking and placing, routing cables, pressing buttons, and opening drawers.
+- **p. 7 / 5.3. Real Robot Evaluation - extractive body cue:** We report the success rate of each task over 20 attempts during real-world roll-out.
+- **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Compared to prediction-based methods, the UP-VLA method demonstrates superior performance.
+- **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** This demonstrates that integrating visual prediction can substantially enhance the performance of original VLA methods.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Comparison between UP-VLA, VLM-based VLA mod- els and prediction-based models. The bottom-right chart illustrates the performance across multiple tasks in both simulated and ...
+- **p. 7 / 5.3. Real Robot Evaluation - extractive body cue:** UP-VLA demonstrates significant improvement across all tasks.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Si
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Simulation Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to UPVLA-RT-2, which uses only action learning and achieves a completion length of 1.44, UP-VLA with visual prediction significantly improves the length to ... | p. 6 (5.2. Simulation Evaluation) |
 | 5.2. Simulation Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to other baselines, which perform significantly worse on ABC→D than on ABCD→D, UP-VLA achieves higher completion lengths in both scenarios, indicating that our ... | p. 6 (5.2. Simulation Evaluation) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Si
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.3. Real Robot Evaluation - extractive PDF cue:** For real-world experimental results, we train RT-1 (Brohan et al., 2022), Diffusion Policy (Chi et al., 2023) on our datasets (using the open-source code and ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** In this section, we evaluate UP-VLA in two domains including the simulation CALVIN benchmark (Mees et al., 2022) and a real-world panda manipulation environment to ...
-- **p. 6 / 5.1. Experiment Setup and baseline - extractive PDF cue:** Our real-world experiments involve multiple table-top manipulation tasks on the Franka-Emika Panda robot, including picking and placing, routing cables, pressing buttons, and opening drawers.
-- **p. 7 / 5.3. Real Robot Evaluation - extractive PDF cue:** We report the success rate of each task over 20 attempts during real-world roll-out.
+- **p. 7 / 5.3. Real Robot Evaluation - extractive body cue:** For real-world experimental results, we train RT-1 (Brohan et al., 2022), Diffusion Policy (Chi et al., 2023) on our datasets (using the open-source code and ...
+- **p. 6 / 5. Experiments - extractive body cue:** In this section, we evaluate UP-VLA in two domains including the simulation CALVIN benchmark (Mees et al., 2022) and a real-world panda manipulation environment to ...
+- **p. 6 / 5.1. Experiment Setup and baseline - extractive body cue:** Our real-world experiments involve multiple table-top manipulation tasks on the Franka-Emika Panda robot, including picking and placing, routing cables, pressing buttons, and opening drawers.
+- **p. 7 / 5.3. Real Robot Evaluation - extractive body cue:** We report the success rate of each task over 20 attempts during real-world roll-out.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. UP-VLA is pre-trained with both multi-modal under- standing objective and future prediction objective to better capture both high-level semantic information and low-level spatial ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Comparison between UP-VLA, VLM-based VLA mod- els and prediction-based models. The bottom-right chart illustrates the performance across multiple tasks in both simulated and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of UP-VLA. Our model unifies visual-language understanding, future image generation, and action learning in an autoregressive manner. It takes the current visual ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of the unified prompting and attention mechanism. We use special tokens to segment input sequences and identify task types. For MMU tasks, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization of our evaluation environments. The left is Calvin (Mees et al., 2022) in which we test on both ABC→D and ABCD→D settings. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Zero-shot long-horizon evaluation on the Calvin benchmark where agent is asked to complete five chained tasks sequentially. Results marked with an asterisk (*) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Zero-shot long-horizon evaluation on the Calvin ABCD→D benchmark. Results of baselines are copied from original papers. image comprehension in the language prompts during ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. UP-VLA-RT-2 outperforms UP-VLA-phi-w/o- mmu, suggesting that multi-modal understanding aids se- mantic generalization ability. UP-VLA demonstrates better visual-semantic generalization for these tasks, proving that ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. UP-VLA is pre-trained with both multi-modal under- standing objective and future prediction objective to better capture both high-level semantic information and low-level spatial ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Comparison between UP-VLA, VLM-based VLA mod- els and prediction-based models. The bottom-right chart illustrates the performance across multiple tasks in both simulated and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Overview of UP-VLA. Our model unifies visual-language understanding, future image generation, and action learning in an autoregressive manner. It takes the current visual ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of the unified prompting and attention mechanism. We use special tokens to segment input sequences and identify task types. For MMU tasks, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of our evaluation environments. The left is Calvin (Mees et al., 2022) in which we test on both ABC→D and ABCD→D settings. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Zero-shot long-horizon evaluation on the Calvin benchmark where agent is asked to complete five chained tasks sequentially. Results marked with an asterisk (*) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Zero-shot long-horizon evaluation on the Calvin ABCD→D benchmark. Results of baselines are copied from original papers. image comprehension in the language prompts during ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. UP-VLA-RT-2 outperforms UP-VLA-phi-w/o- mmu, suggesting that multi-modal understanding aids se- mantic generalization ability. UP-VLA demonstrates better visual-semantic generalization for these tasks, proving that ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For real-world experimental results, we train RT-1 (Brohan et al., 2022), Diffusion Policy (Chi et al., 2023) on our datasets (using the open-source code ... | embodiment, simulator version and control stack | p. 7 (5.3. Real Robot Evaluation), p. 6 (5. Experiments) |
 | Task/environment | In this section, we evaluate UP-VLA in two domains including the simulation CALVIN benchmark (Mees et al., 2022) and a real-world panda manipulation environment ... | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 6 (5.1. Experiment Setup and baseline) |
@@ -149,11 +149,11 @@ PDF body evaluation/result cue (p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Si
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 5.2. Simulation Evaluation - extractive PDF cue:** Our method addresses this limitation by incorporating visual prediction into the original VLA framework.
-- **p. 6 / 5.2. Simulation Evaluation - extractive PDF cue:** Unlike UP-VLA, UP-VLA-phi-w/o-mmu does not include multi-modal understanding training, nor does it incorporate 6
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** We compare the full UP-VLA with the following methods: UP-VLA-w/o-MMU, which does not utilize the LLava tuning dataset for multi-modal understanding, UPVLA-w/o-Bridge-Pretrain, which skips visual ...
+- **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Our method addresses this limitation by incorporating visual prediction into the original VLA framework.
+- **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Unlike UP-VLA, UP-VLA-phi-w/o-mmu does not include multi-modal understanding training, nor does it incorporate 6
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** We compare the full UP-VLA with the following methods: UP-VLA-w/o-MMU, which does not utilize the LLava tuning dataset for multi-modal understanding, UPVLA-w/o-Bridge-Pretrain, which skips visual ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5.3. Real Robot Evaluation), p. 6 (5. Experiments), p. 6 (5.1. Experiment Setup and baseline), p. 7 (5.3. Real Robot Evaluation), metrics p. 7 (5.3. Real Robot Evaluation), p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Simulation Evaluation), p. 2 (Figure/Table caption), p. 7 (5.3. Real Robot Evaluation), p. 8 (Figure/Table caption), baselines p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Simulation Evaluation), p. 7 (5.3. Real Robot Evaluation), p. 7 (5.2. Simulation Evaluation), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Simulation Evaluation), p. 7 (5.2. Simulation Evaluation), p. 7 (5.3. Real Robot Evaluation), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5.3. Real Robot Evaluation), p. 6 (5. Experiments), p. 6 (5.1. Experiment Setup and baseline), p. 7 (5.3. Real Robot Evaluation), metrics p. 7 (5.3. Real Robot Evaluation), p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Simulation Evaluation), p. 2 (Figure/Table caption), p. 7 (5.3. Real Robot Evaluation), p. 8 (Figure/Table caption), baselines p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Simulation Evaluation), p. 7 (5.3. Real Robot Evaluation), p. 7 (5.2. Simulation Evaluation), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (5.2. Simulation Evaluation), p. 6 (5.2. Simulation Evaluation), p. 7 (5.2. Simulation Evaluation), p. 7 (5.3. Real Robot Evaluation), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

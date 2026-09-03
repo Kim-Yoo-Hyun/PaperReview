@@ -1,53 +1,75 @@
 # Insights — UW-GS: Distractor-Aware 3D Gaussian Splatting for Enhanced Underwater Scene Reconstruction
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** To overcome these, we introduce a novel Gaussian Splatting-based method, UW-GS, designed specifically for underwater applications.
-- **Problem cue:** However, underwater activities are often constrained by the limitations of current technologies, the scarcity of diving experts, and high operational costs.
-- **Claim/result cue:** 3D Gaussian splatting (3DGS) offers the capability to achieve real-time high quality 3D scene rendering.
+- **p. 4 / 3.3. Color Appearance Model - extractive body cue:** To address this issue, we propose a novel approach for color appearance formation.
+- **p. 1 / 1. Introduction - extractive body cue:** To address the aforementioned issues, we propose a new Gaussian Splatting (GS)-based method, UW-GS, specifically for underwater scenes.
+- **p. 2 / 1. Introduction - extractive body cue:** We also incorporated pseudo-depth maps generated from DepthAnything [47], trained with more general scenes, to enhance the robustness of our method.
+- **p. 3 / 3.1. Problem formulation - extractive body cue:** Therefore, we propose a new color appearance model and a physical-based density control module in UW-GS.
+- **p. 4 / 3.3. Color Appearance Model - extractive body cue:** The left panel of Figure 2 illustrates the workflow of our method.
+- **p. 4 / 3.1. Problem formulation - extractive body cue:** In the splatting process, the physical-based density control module addresses densification failures and the binary motion mask handle distractors. we propose a pixel-level mask, named ...
+- **p. 5 / 3.5. Binary Motion Mask - extractive body cue:** Inspired by RobustNeRF [35], we introduce a Binary Motion Mask (BMM) ω into our reconstruction loss function to eliminate the distractors as the follows: LRec ...
+- **Contribution anchor:** p. 4 (3.3. Color Appearance Model), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem formulation), p. 4 (3.3. Color Appearance Model), p. 4 (3.1. Problem formulation)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** However, underwater activities are often constrained by the limitations of current technologies, the scarcity of diving experts, and high operational costs.
+- **p. 2 / 1. Introduction - extractive body cue:** Finally, given the scarcity of underwater datasets, we collected a new dataset featuring four expansive areas of shallow underwater scenes, each presenting unique challenges compared ...
+- **p. 3 / 3.1. Problem formulation - extractive body cue:** Moreover, moving objects such as fish and floating particles pose challenges to underwater 3D reconstruction.
+- **p. 4 / 3.1. Problem formulation - extractive body cue:** In the splatting process, the physical-based density control module addresses densification failures and the binary motion mask handle distractors. we propose a pixel-level mask, named ...
+- **p. 1 / 1. Introduction - extractive body cue:** Unfortunately, the existing methods [26, 39] do not address this issue.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected.
+- **p. 7 / 5. Results and Discussion - extractive body cue:** The limited improvement compared to 3DGS can be attributed to the unstable lighting from above the water surface.
+- **Boundary to test:** The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To address this issue, we propose a novel approach for color appearance formation. | p. 4 (3.3. Color Appearance Model), p. 1 (1. Introduction) |
+| Reported outcome | For the SeaThru-NeRF dataset, our method shows the best overall performance and achieves average 2.09dB and 2.70dB PSNR improvement compared to 3DGS and Seathru-NeRF respectively, although it has the second-best SSIM in ... | p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion) |
+| Failure/limitation | The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected. | p. 8 (5. Results and Discussion), p. 7 (5. Results and Discussion) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `Gaussian Splatting, 3D reconstruction, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 The 3D Gaussians with modified color will be sent to do 2D projection and then generate pixel color in rasterization module to output the final underwater image.를 Similar to [25], we use an additional MLP f with positon encoded depth and viewing direction input to estimate medium properties: (T D i , T B i , βd i , ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To address this issue, we propose a novel approach for color appearance formation.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Neural Scene Representations`; tags: `Gaussian Splatting, 3D reconstruction, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: 3D Gaussian splatting (3DGS) offers the capability to achieve real-time high quality 3D scene rendering.
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, 3D reconstruction, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy, mAP, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: On the other hand, we will also use these three metrics in dynamic scenes after using motion mask provided from dataset to exclude moving objects..
+3. Compare against the body-reported baseline or a matched simpler baseline: We tested our method and compared with three state of the arts: Instant-NGP [33], SeaThru-NeRF [26], and original 3DGS [22]..
+4. Report the body metric and its denominator/aggregation: Figure 1. Visual comparison between 3DGS [22] and our proposed UW-GS method. Left to right: Raw videos and the results of 3DGS and UW-GS, respectively. The top row, enhanced for visualization purposes, ....
+5. Re-run the body-reported ablation/failure condition: Figure 7. Examples of rendering results from Composite and Sar- dine scenes. From left to right: raw videos, results without and with BMM, respectively. restored results based on the estimated water medium ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem formulation), p. 5 (3.5. Binary Motion Mask); the primary result is directionally consistent at p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 7 (5. Results and Discussion); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 address, issue, novel mechanism이 We tested our method and compared with three state of the arts: Instant-NGP [33], SeaThru-NeRF [26], ... 대비 Figure 1. Visual comparison between 3DGS [22] and our proposed UW-GS method. Left to right: Raw videos and ...을 개선하고, The improvement of our method is not obvious in the shallow underwater scene because the disturbance ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 5 (A. Task Mechanics and Interaction Primitives), 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | Let n represents the positive direction of Z-axis of {'} with reference to {O} at the inclined state, we use a as ... | p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | Interaction with inclined states is designed to identify and exploit its environmental contact constraints. | p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING) |
@@ -76,8 +76,8 @@ PDF body method statement (p. 5 (A. Task Mechanics and Interaction Primitives), 
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | ate b> Reset time step for execution | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | bteo © Initialize time step for perception | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
-| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -122,8 +122,17 @@ PDF body method statement (p. 5 (A. Task Mechanics and Interaction Primitives), 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING), objective p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), temporal p. 4 (B. Problem Statement), p. 4 (B. Problem Statement), p. 3 (A. Preliminaries), p. 3 (A. Preliminaries), p. 6 (B. Perception Manipulation Funnet), p. 6 (B. Perception Manipulation Funnet).
+- **Evidence anchors reviewed:** method p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING), objective p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), temporal p. 4 (B. Problem Statement), p. 4 (B. Problem Statement), p. 3 (A. Preliminaries), p. 3 (A. Preliminaries), p. 6 (B. Perception Manipulation Funnet), p. 6 (B. Perception Manipulation Funnet).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Interaction with inclined states is designed to identify and exploit its environmental contact constraints. (p. 5, A. Task Mechanics and Interaction Primitives).
+- **Objective/update evidence:** Interaction with inclined states is designed to identify and exploit its environmental contact constraints. (p. 5, A. Task Mechanics and Interaction Primitives).
+- **Temporal/runtime evidence:** 1) Geometry of the Peg and Hole: ‘The 3-dimensional (3D) geometry of the hole is described in the hole reference frame {H}, as an intrusion of a 2-D polygonal base ... (p. 3, A. Preliminaries).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

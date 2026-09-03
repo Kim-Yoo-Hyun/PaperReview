@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p052.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p052.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p052.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p052.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | + Ql: Does tactile signals improve policy performance in contact-rich tasks? | p. 7 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | We have improved the original design of MCTac [4], including increasing the size of the marker, reducing the | p. 7 (V. EXPERIMENTS) |
@@ -64,11 +64,11 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 1) Hardware: ‘The experimental platform consists of two Flexiv Rizon 4 [19] robotic arms with joint torque sensors and two Flexiv Grav [17] grippers. | embodiment, simulator version and control stack | p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
 | Task/environment | Please see the Appendix A for the hardware details of the improved MCTac sensor. + Built-in joint torque sensors in Flexiv Rizon 4 [19] ... | reset, timeout, object/scene variation | p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS) |
-| Observation/sensor | tactile image/force, vision과 proprioceptive history | calibration, preprocessing, privileged input | p. 3 (B. Robot Data Collection System), p. 1 (Front matter) |
+| Observation/sensor | tactile image/force, vision과 proprioceptive history | calibration, preprocessing, privileged input | p. 3 (B. Robot Data Collection System), p. 1 (Body text (section boundary not confidently recovered)) |
 | Output/decision | grasp/contact action, force command 또는 object motion | action frame, controller and termination | p. 6 (B. Slow-Fast Policy Learning), p. 2 (I. Ivrropucrion) |
 
 ## Metrics and Success Definition
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** It is crucial to avoid exerting excessive force that could squeeze the cup while also ensuring that the force is sufficient to prevent the cup ...
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Note that the estimated TCP force / torque Signals have relatively larger noise compared tothe force sensor mounted on the robot end effector (e.g.
 
-- **PDF anchors reviewed:** datasets p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 16 (B. Implementation Details of TactR), p. 16 (B. Implementation Details of TactR), metrics p. 9 (B. Results), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 9 (B. Results), baselines p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (B. Results), p. 9 (B. Results), p. 10 (Figure/Table caption), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 16 (B. Implementation Details of TactR), p. 16 (B. Implementation Details of TactR), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 16 (B. Implementation Details of TactR), p. 16 (B. Implementation Details of TactR), metrics p. 9 (B. Results), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 9 (B. Results), baselines p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (B. Results), p. 9 (B. Results), p. 10 (Figure/Table caption), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 16 (B. Implementation Details of TactR), p. 16 (B. Implementation Details of TactR), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** All devices are connected to a workstation with an Intel Core i9-14900K CPU and an NVIDIA RTX 4090 GPU for both data collection and evaluation 2) Baselines: We use the ... (p. 7, V. EXPERIMENTS).
+- **Metric evidence:** Although the performance of both methods is similar, low-dimensional tactile embedding demonstrates greater robustness to texture ‘changes resulting from gel damage or gel replacements during the evaluation process. (p. 9, B. Results).
+- **Baseline/ablation evidence:** All devices are connected to a workstation with an Intel Core i9-14900K CPU and an NVIDIA RTX 4090 GPU for both data collection and evaluation 2) Baselines: We use the ... (p. 7, V. EXPERIMENTS).
+- **Failure/negative evidence:** We ‘observe that DP with pure visual input frequently predicts inaccurate trajectories and results in large contact forces (e.g. failure case 2 in Fig. (p. 9, B. Results).

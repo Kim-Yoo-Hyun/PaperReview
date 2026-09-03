@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training.
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • MipNeRF360 ...
-- **p. 8 / 5.4. Ablation studies - extractive PDF cue:** Method (GSplat-MCMC) PSNR ↑ SSIM ↑ LPIPS ↓ Gsplat-MCMC 26.280 0.869 0.101 Difix3D 26.770 0.874 0.0926 Ours 26.969 0.876 0.0921 estimation on our curated dataset ...
-- **p. 7 / 5.3. Cross-domain evaluation - extractive PDF cue:** We also examine whether our HAD can generalize to a different dataset - MipNeRF360 [3].
-- **p. 8 / 5.4. Ablation studies - extractive PDF cue:** We calculate the Mean Absolute Error (MAE) of the predicted hallucination score maps on the test scenes.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 6. Different hallucination score estimators. We use Mean Absolute Error (MAE) of the predicted hallucination score maps as our evaluation metric. We demonstrate that ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** The poses for these augmented views are sampled from views excluded from the 3DGS training set, providing ground-truth images that enable computation of the ground-truth ...
-- **p. 7 / 5.2. In-domain evaluation - extractive PDF cue:** Notably, LVSM [20], despite producing blurry images, achieves better fidelity, validating our approach of leveraging LVSM's feature backbone as multi-view encoder for hallucination score prediction.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • MipNeRF360 ...
+- **p. 8 / 5.4. Ablation studies - extractive body cue:** Method (GSplat-MCMC) PSNR ↑ SSIM ↑ LPIPS ↓ Gsplat-MCMC 26.280 0.869 0.101 Difix3D 26.770 0.874 0.0926 Ours 26.969 0.876 0.0921 estimation on our curated dataset ...
+- **p. 7 / 5.3. Cross-domain evaluation - extractive body cue:** We also examine whether our HAD can generalize to a different dataset - MipNeRF360 [3].
+- **p. 8 / 5.4. Ablation studies - extractive body cue:** We calculate the Mean Absolute Error (MAE) of the predicted hallucination score maps on the test scenes.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. Different hallucination score estimators. We use Mean Absolute Error (MAE) of the predicted hallucination score maps as our evaluation metric. We demonstrate that ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** The poses for these augmented views are sampled from views excluded from the 3DGS training set, providing ground-truth images that enable computation of the ground-truth ...
+- **p. 7 / 5.2. In-domain evaluation - extractive body cue:** Notably, LVSM [20], despite producing blurry images, achieves better fidelity, validating our approach of leveraging LVSM's feature backbone as multi-view encoder for hallucination score prediction.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.4. Ablation studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | We select 3 views to achieve a trade-off between marginal improvement and computational overhead. | p. 8 (5.4. Ablation studies) |
 | 5.4. Ablation studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | We demonstrate that our hallucination score network, with the pretrained multiview encoder, achieves the best performance. | p. 8 (5.4. Ablation studies) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training.
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • MipNeRF360 ...
-- **p. 8 / 5.4. Ablation studies - extractive PDF cue:** Method (GSplat-MCMC) PSNR ↑ SSIM ↑ LPIPS ↓ Gsplat-MCMC 26.280 0.869 0.101 Difix3D 26.770 0.874 0.0926 Ours 26.969 0.876 0.0921 estimation on our curated dataset ...
-- **p. 7 / 5.3. Cross-domain evaluation - extractive PDF cue:** We also examine whether our HAD can generalize to a different dataset - MipNeRF360 [3].
-- **p. 8 / 5.4. Ablation studies - extractive PDF cue:** We calculate the Mean Absolute Error (MAE) of the predicted hallucination score maps on the test scenes.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • MipNeRF360 ...
+- **p. 8 / 5.4. Ablation studies - extractive body cue:** Method (GSplat-MCMC) PSNR ↑ SSIM ↑ LPIPS ↓ Gsplat-MCMC 26.280 0.869 0.101 Difix3D 26.770 0.874 0.0926 Ours 26.969 0.876 0.0921 estimation on our curated dataset ...
+- **p. 7 / 5.3. Cross-domain evaluation - extractive body cue:** We also examine whether our HAD can generalize to a different dataset - MipNeRF360 [3].
+- **p. 8 / 5.4. Ablation studies - extractive body cue:** We calculate the Mean Absolute Error (MAE) of the predicted hallucination score maps on the test scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. While diffusion priors [41] enhance the quality of 3D reconstruction, they introduce detrimental aliens - the hallucinated elements that do not exist in ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of framework - We train 3DGS with input images and HAD-augmented novel views. HAD combines a pretrained diffusion prior (which generates images ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison of different methods on DL3DV [25]. Best, second, and third results are highlighted in 1st , 2nd , and 3rd , ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Examples on DL3DV [25] - We show novel-view rendering obtained by ours, Gspat-mcmc [22], LVSM [20] and Difix3D [41]. Our approach achieves the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison of different methods on Mip- Nerf360 [3]. Note the results of Genfusion and FSGS are from Genfusion [43].
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Impact of different components.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Number of versions in multi-sampling strategy. Num. of versions PSNR ↑ SSIM ↑ LPIPS ↓ 1 (No M.S.) 21.779 0.749
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Fusion methods in multi-sampling strategy. We com- pare two approaches: (1) ArgMin: selecting pixels with the low- est hallucination score; (2) Weighted Average: ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. While diffusion priors [41] enhance the quality of 3D reconstruction, they introduce detrimental aliens - the hallucinated elements that do not exist in ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of framework - We train 3DGS with input images and HAD-augmented novel views. HAD combines a pretrained diffusion prior (which generates images ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of different methods on DL3DV [25]. Best, second, and third results are highlighted in 1st , 2nd , and 3rd , ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Examples on DL3DV [25] - We show novel-view rendering obtained by ours, Gspat-mcmc [22], LVSM [20] and Difix3D [41]. Our approach achieves the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison of different methods on Mip- Nerf360 [3]. Note the results of Genfusion and FSGS are from Genfusion [43].
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Impact of different components.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Number of versions in multi-sampling strategy. Num. of versions PSNR ↑ SSIM ↑ LPIPS ↓ 1 (No M.S.) 21.779 0.749
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Fusion methods in multi-sampling strategy. We com- pare two approaches: (1) ArgMin: selecting pixels with the low- est hallucination score; (2) Weighted Average: ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training. | embodiment, simulator version and control stack | p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup) |
 | Task/environment | This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • ... | reset, timeout, object/scene variation | p. 6 (5.1. Experimental Setup), p. 8 (5.4. Ablation studies) |
@@ -120,11 +120,11 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 | Primary metric/result | We demonstrate that our hallucination score network, with the pretrained multiview encoder, achieves the best performance. | numeric claim only at cited anchor | p. 8 (5.4. Ablation studies) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training.
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** To validate the performance of HAD on novel view synthesis, we follow Difix3D [41] to select other 24 scenes for testing.
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • MipNeRF360 ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** For each scene, we first train a 3DGS model using 9 input training views, then generate 100 augmented novel views via diffusion priors [41] at ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We fine-tune the network for 10k iterations with a batch size of 2 per GPU, requiring approximately 28 hours on eight NVIDIA V100 32GB GPUs.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We first curate training dataset of randomly selected 116 scenes from benchmark dataset for hallucination score network training.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** To validate the performance of HAD on novel view synthesis, we follow Difix3D [41] to select other 24 scenes for testing.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** This design ensures that no leaked information from the target subset is used for model adaptation, maintaining fair and unbiased comparisons across methods. • MipNeRF360 ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** For each scene, we first train a 3DGS model using 9 input training views, then generate 100 augmented novel views via diffusion priors [41] at ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We fine-tune the network for 10k iterations with a batch size of 2 per GPU, requiring approximately 28 hours on eight NVIDIA V100 32GB GPUs.
 
 ## Generalization and Failure Cases
 
@@ -161,13 +161,13 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion and Future Work - extractive PDF cue:** In this work, we identify and address a critical limitation in diffusion-assisted 3D reconstruction: while diffusion priors effectively alleviate data sparsity, they introduce hallucinated content ...
-- **p. 8 / 6. Conclusion and Future Work - extractive PDF cue:** An interesting direction for future work is to scale up the training of our model by removing the need for complex data requirementsfor instance, using ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of framework - We train 3DGS with input images and HAD-augmented novel views. HAD combines a pretrained diffusion prior (which generates images ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We primarily use Peak Signal-toNoise Ratio (PSNR), structural (SSIM [39]) and perceptual (LPIPS [50]) similarities as metrics to quantify the performance of novel view synthesis.
-- **p. 7 / 5.2. In-domain evaluation - extractive PDF cue:** Notably, while the post-rendering improves the photorealism metric (LPIPS), it degrades fidelity metrics (PSNR and SSIM) for both Difix3D and our method.
+- **p. 8 / 6. Conclusion and Future Work - extractive body cue:** In this work, we identify and address a critical limitation in diffusion-assisted 3D reconstruction: while diffusion priors effectively alleviate data sparsity, they introduce hallucinated content ...
+- **p. 8 / 6. Conclusion and Future Work - extractive body cue:** An interesting direction for future work is to scale up the training of our model by removing the need for complex data requirementsfor instance, using ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of framework - We train 3DGS with input images and HAD-augmented novel views. HAD combines a pretrained diffusion prior (which generates images ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We primarily use Peak Signal-toNoise Ratio (PSNR), structural (SSIM [39]) and perceptual (LPIPS [50]) similarities as metrics to quantify the performance of novel view synthesis.
+- **p. 7 / 5.2. In-domain evaluation - extractive body cue:** Notably, while the post-rendering improves the photorealism metric (LPIPS), it degrades fidelity metrics (PSNR and SSIM) for both Difix3D and our method.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 8 (5.4. Ablation studies), p. 7 (5.3. Cross-domain evaluation), p. 8 (5.4. Ablation studies), metrics p. 8 (Figure/Table caption), p. 8 (5.4. Ablation studies), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. In-domain evaluation), p. 4 (Figure/Table caption), baselines p. 6 (5.2. In-domain evaluation), p. 7 (5.3. Cross-domain evaluation), p. 6 (5.2. In-domain evaluation), p. 7 (5.3. Cross-domain evaluation), p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablation studies), results p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablation studies), p. 7 (5.3. Cross-domain evaluation), p. 7 (5.4. Ablation studies), p. 1 (Figure/Table caption), p. 6 (5.2. In-domain evaluation).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 8 (5.4. Ablation studies), p. 7 (5.3. Cross-domain evaluation), p. 8 (5.4. Ablation studies), metrics p. 8 (Figure/Table caption), p. 8 (5.4. Ablation studies), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. In-domain evaluation), p. 4 (Figure/Table caption), baselines p. 6 (5.2. In-domain evaluation), p. 7 (5.3. Cross-domain evaluation), p. 6 (5.2. In-domain evaluation), p. 7 (5.3. Cross-domain evaluation), p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablation studies), results p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablation studies), p. 7 (5.3. Cross-domain evaluation), p. 7 (5.4. Ablation studies), p. 1 (Figure/Table caption), p. 6 (5.2. In-domain evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -1,8 +1,10 @@
 # AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://deepmind.google/research/publications/48151/.
-> PDF retrieval source: https://deepmind.google/research/publications/48151/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://deepmind.google/research/publications/48151/.
+> PDF retrieval source: https://deepmind.google/research/publications/48151/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / arXiv
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://deepmind.google/research/publications/48151/
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 �
 ## Why Read It
 
 VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 읽는다. 본문은 The bottleneck for achieving these goals, however, is the need for large amounts of robotic experience in the real world - much larger than robot datasets collected in lab settings with well-defined ...를 문제로 두고, In this paper, we propose AutoRT, a system that leverages existing foundation models to scale up the deployment of operational robots in completely unseen scenarios with minimal human supervision.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT), p. 7 (3. Place the napkin onto) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The bottleneck for achieving these goals, however, is the need for large amounts of robotic experience in the real world - much larger than robot datasets collected in lab settings ... (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** We show that AutoRT scales robot deployment by allowing 1 human to supervise 3-5 mobile manipulators. (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Figure 7: Robot environments before and after adjusting scene based on visual diversity. Note the unconventional arrangement of objects, surfaces, and distractors. F MODEL IMPROVEMENT EVALUATION TASKS For picking from ... (p. 21, Figure/Table caption).
+- **Explicit failure boundary:** Failures of perception such as hallucination of objects, lack of generalization to novel environments, and motion blur can introduce and propagate failures in the system. (p. 10, 3. Place the napkin onto).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2511.09516v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2511.09516v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** To validate the real-world effectiveness of MAP-VLA, we conduct evaluations on a physical robotic platform and compare its performance with the strongest baseline, π0, across ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** For real-world experiments, MAP-VLA is deployed on a 6DoF Galaxea A1 robotic arm shown in Fig.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each task.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Overall, the comparisons confirm that MAP-VLA sets a new stateof-the-art for long-horizon task execution in both simulation and real-robot settings, with significantly higher success rates ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Effective long-horizon robot manipulation often demands fine-grained memory to maintain a coherent trajectory across multiple stages.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Comparison with Visual Variations To assess robustness under real-world visual variations, we evaluate MAP-VLA on LIBERO-Long tasks subjected to various challenging visual conditions.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** We also note that MAP-VLA's trial outcomes are more consistent, with a lower standard deviation in success rate (0.7%) across runs than π0 (2.3%).
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Metric Base VLA Universal Prompt Task Prompt Stage Prompt MAP-VLA Success Rate (SR) 76.4% 76.9% 79.3% 81.4% 83.4% Standard Deviation (Std) ± 2.3% ± 2.4% ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** To validate the real-world effectiveness of MAP-VLA, we conduct evaluations on a physical robotic platform and compare its performance with the strongest baseline, π0, across ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** For real-world experiments, MAP-VLA is deployed on a 6DoF Galaxea A1 robotic arm shown in Fig.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each task.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Overall, the comparisons confirm that MAP-VLA sets a new stateof-the-art for long-horizon task execution in both simulation and real-robot settings, with significantly higher success rates ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Effective long-horizon robot manipulation often demands fine-grained memory to maintain a coherent trajectory across multiple stages.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Comparison with Visual Variations To assess robustness under real-world visual variations, we evaluate MAP-VLA on LIBERO-Long tasks subjected to various challenging visual conditions.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** We also note that MAP-VLA's trial outcomes are more consistent, with a lower standard deviation in success rate (0.7%) across runs than π0 (2.3%).
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Metric Base VLA Universal Prompt Task Prompt Stage Prompt MAP-VLA Success Rate (SR) 76.4% 76.9% 79.3% 81.4% 83.4% Standard Deviation (Std) ± 2.3% ± 2.4% ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | On average, MAP-VLA achieves an 83.4% success rate, whereas the baseline OpenVLA and π0 achieve 54.0% and 76.4%, respectively. | p. 6 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Averaged over the three tasks, MAP-VLA's partial success and complete success rates are 68.3% and 48.3%, versus 53.3% and 23.3% for the baseline, showing ... | p. 6 (IV. EXPERIMENTS) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** To validate the real-world effectiveness of MAP-VLA, we conduct evaluations on a physical robotic platform and compare its performance with the strongest baseline, π0, across ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** For real-world experiments, MAP-VLA is deployed on a 6DoF Galaxea A1 robotic arm shown in Fig.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each task.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Overall, the comparisons confirm that MAP-VLA sets a new stateof-the-art for long-horizon task execution in both simulation and real-robot settings, with significantly higher success rates ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Effective long-horizon robot manipulation often demands fine-grained memory to maintain a coherent trajectory across multiple stages.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Comparison with Visual Variations To assess robustness under real-world visual variations, we evaluate MAP-VLA on LIBERO-Long tasks subjected to various challenging visual conditions.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** To validate the real-world effectiveness of MAP-VLA, we conduct evaluations on a physical robotic platform and compare its performance with the strongest baseline, π0, across ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** For real-world experiments, MAP-VLA is deployed on a 6DoF Galaxea A1 robotic arm shown in Fig.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each task.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Overall, the comparisons confirm that MAP-VLA sets a new stateof-the-art for long-horizon task execution in both simulation and real-robot settings, with significantly higher success rates ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Effective long-horizon robot manipulation often demands fine-grained memory to maintain a coherent trajectory across multiple stages.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Comparison with Visual Variations To assess robustness under real-world visual variations, we evaluate MAP-VLA on LIBERO-Long tasks subjected to various challenging visual conditions.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1. Simplified execution pipeline of existing VLA methods and MAP-VLA. specific memory prompts and the generalized base prompts. This whole framework, shown in Fig. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. The framework of MAP-VLA. Our method augments a frozen pre-trained VLA model with demonstration-derived memory prompts for enhanced action generation during task execution. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3. Performance comparison on all LIBERO task suites, "*" denotes results reported by OpenVLA [3]. Using the computed αt, the final memory-augmented action for ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. Visualization and comparison of Task2: place the green cube and orange into the bowl. box in the basket, (Task4) put both the alphabet ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6. Performance comparison with visual variations on LIBERO-Long. TABLE III ABLATION STUDY ON LIBERO-LONG. Metric Base VLA Universal Prompt Task Prompt
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Simplified execution pipeline of existing VLA methods and MAP-VLA. specific memory prompts and the generalized base prompts. This whole framework, shown in Fig. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. The framework of MAP-VLA. Our method augments a frozen pre-trained VLA model with demonstration-derived memory prompts for enhanced action generation during task execution. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3. Performance comparison on all LIBERO task suites, "*" denotes results reported by OpenVLA [3]. Using the computed αt, the final memory-augmented action for ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. Visualization and comparison of Task2: place the green cube and orange into the bowl. box in the basket, (Task4) put both the alphabet ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. Performance comparison with visual variations on LIBERO-Long. TABLE III ABLATION STUDY ON LIBERO-LONG. Metric Base VLA Universal Prompt Task Prompt
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To validate the real-world effectiveness of MAP-VLA, we conduct evaluations on a physical robotic platform and compare its performance with the strongest baseline, π0, ... | embodiment, simulator version and control stack | p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | For real-world experiments, MAP-VLA is deployed on a 6DoF Galaxea A1 robotic arm shown in Fig. | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
@@ -117,9 +117,9 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Primary metric/result | Averaged over the three tasks, MAP-VLA's partial success and complete success rates are 68.3% and 48.3%, versus 53.3% and 23.3% for the baseline, showing ... | numeric claim only at cited anchor | p. 6 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each task.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** 4 to perform 20 rollouts for each task.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** All real-world computations are conducted on a system with an NVIDIA RTX 4090 GPU.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Real-world environment setup. settings of OpenVLA [3], where the success rate is the average over 3 random seeds x 50 rollouts for each task.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** 4 to perform 20 rollouts for each task.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** All real-world computations are conducted on a system with an NVIDIA RTX 4090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -153,12 +153,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** However, the memoryless baseline policy π0 exhibits inconsistent and ambiguous object alignment behavior, especially during critical pick-and-place phases (as circled in the figure), often leading ...
-- **p. 5 / III. METHODOLOGY - extractive PDF cue:** By dynamically balancing the task-level generalization of the base prompt with the stage-specificity of the retrieved prompt, the model maintains robustness to retrieval inaccuracies, improves ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** This reduced variability suggests improved robustness and reliability, as a result of encoding additional contextual memory into the prompt and dynamic prompt ensembling as we ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** In contrast, our MAP-VLA framework demonstrates memory-augmented robustness in such settings.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** However, the memoryless baseline policy π0 exhibits inconsistent and ambiguous object alignment behavior, especially during critical pick-and-place phases (as circled in the figure), often leading ...
+- **p. 5 / III. METHODOLOGY - extractive body cue:** By dynamically balancing the task-level generalization of the base prompt with the stage-specificity of the retrieved prompt, the model maintains robustness to retrieval inaccuracies, improves ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** This reduced variability suggests improved robustness and reliability, as a result of encoding additional contextual memory into the prompt and dynamic prompt ensembling as we ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** In contrast, our MAP-VLA framework demonstrates memory-augmented robustness in such settings.
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

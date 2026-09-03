@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kp9B9iQDIt; PDF retrieval source: https://arxiv.org/pdf/2506.04227. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kp9B9iQDIt; PDF retrieval source: https://arxiv.org/pdf/2506.04227. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5 Experiments - extractive PDF cue:** We use an XArm7 robot arm with a parallel-jaw gripper for the test dataset collection and robot experiments.
-- **p. 8 / 5 Experiments - extractive PDF cue:** This task is considered successful if the robot can finish the tracking trajectory with spotlight focusing on the cable in the process.
-- **p. 9 / 5 Experiments - extractive PDF cue:** In this task, the robot is required to pick, rotate, and insert an item into a slot (hole).
-- **p. 9 / 5 Experiments - extractive PDF cue:** Finally, we find it important to apply object masking augmentation during training, as the object's silhouette under the robot gripper differs from that under a ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** System Setup We use a widely-used Intel D435 RGBD camera at 640 × 480 resolution for video dataset collection at 30Hz (Figure 6).
-- **p. 8 / 5 Experiments - extractive PDF cue:** Focal Len Ours (Full) 0.0 0.5 1.0 1.5 2.0 2.5 ×10 6 3D Motion Field Error ( ) Motion (train) Motion (sim-test) Depth (train) Depth ...
-- **p. 8 / 5 Experiments - extractive PDF cue:** (Right) Real world Task Success Rate (3 seeds).
-- **p. 9 / 5 Experiments - extractive PDF cue:** Main Results We show the success rate of different methods in Figure 8 Right.
+- **p. 8 / 5 Experiments - extractive body cue:** We use an XArm7 robot arm with a parallel-jaw gripper for the test dataset collection and robot experiments.
+- **p. 8 / 5 Experiments - extractive body cue:** This task is considered successful if the robot can finish the tracking trajectory with spotlight focusing on the cable in the process.
+- **p. 9 / 5 Experiments - extractive body cue:** In this task, the robot is required to pick, rotate, and insert an item into a slot (hole).
+- **p. 9 / 5 Experiments - extractive body cue:** Finally, we find it important to apply object masking augmentation during training, as the object's silhouette under the robot gripper differs from that under a ...
+- **p. 7 / 5 Experiments - extractive body cue:** System Setup We use a widely-used Intel D435 RGBD camera at 640 × 480 resolution for video dataset collection at 30Hz (Figure 6).
+- **p. 8 / 5 Experiments - extractive body cue:** Focal Len Ours (Full) 0.0 0.5 1.0 1.5 2.0 2.5 ×10 6 3D Motion Field Error ( ) Motion (train) Motion (sim-test) Depth (train) Depth ...
+- **p. 8 / 5 Experiments - extractive body cue:** (Right) Real world Task Success Rate (3 seeds).
+- **p. 9 / 5 Experiments - extractive body cue:** Main Results We show the success rate of different methods in Figure 8 Right.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 8: (Left) SE3 motion estimation performance in real world. Our method achieves lower error compared to baseline. (Middle) Intrinsics Map Ablation Studies. Both ... | p. 8 (Figure/Table caption) |
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Main Results We show the success rate of different methods in Figure 8 Right. | p. 9 (5 Experiments) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5 Experiments - extractive PDF cue:** We use an XArm7 robot arm with a parallel-jaw gripper for the test dataset collection and robot experiments.
-- **p. 8 / 5 Experiments - extractive PDF cue:** This task is considered successful if the robot can finish the tracking trajectory with spotlight focusing on the cable in the process.
-- **p. 9 / 5 Experiments - extractive PDF cue:** In this task, the robot is required to pick, rotate, and insert an item into a slot (hole).
-- **p. 9 / 5 Experiments - extractive PDF cue:** Finally, we find it important to apply object masking augmentation during training, as the object's silhouette under the robot gripper differs from that under a ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** System Setup We use a widely-used Intel D435 RGBD camera at 640 × 480 resolution for video dataset collection at 30Hz (Figure 6).
+- **p. 8 / 5 Experiments - extractive body cue:** We use an XArm7 robot arm with a parallel-jaw gripper for the test dataset collection and robot experiments.
+- **p. 8 / 5 Experiments - extractive body cue:** This task is considered successful if the robot can finish the tracking trajectory with spotlight focusing on the cable in the process.
+- **p. 9 / 5 Experiments - extractive body cue:** In this task, the robot is required to pick, rotate, and insert an item into a slot (hole).
+- **p. 9 / 5 Experiments - extractive body cue:** Finally, we find it important to apply object masking augmentation during training, as the object's silhouette under the robot gripper differs from that under a ...
+- **p. 7 / 5 Experiments - extractive body cue:** System Setup We use a widely-used Intel D435 RGBD camera at 640 × 480 resolution for video dataset collection at 30Hz (Figure 6).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: We propose a novel framework for robot learning from human demonstration videos without relying on any robot-collected data. Our approach learns to control ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of proposed learning framework. We first pretrain a 3D motion field estimator in simulation (Phase I) and use it to estimate the ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: (Left) Phase I Synthetic Data Generation. We randomly generate object and 3D motions, and use ray casting and projection to obtain 3D pixel ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4: Model Architecture. The most important design is a dense intrinsics map feature concate- nated to the input, which contains key information for reconstructing ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Guess what is there? Object tracks can be used to recover missing or wrong depth values. Discussion I: Motion and Geometry Synergy A ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6: (Left) Experimental Setup. (Right) Qualitative Results on "Pen" (Left Figure). Our method produces smoother motion field and depth compared to baseline. This is ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7: A rollout of fine-grained insertion. Our method can achieve high precision, even if we are observing the motion from 40cm away without a ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 8: (Left) SE3 motion estimation performance in real world. Our method achieves lower error compared to baseline. (Middle) Intrinsics Map Ablation Studies. Both inverse ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose a novel framework for robot learning from human demonstration videos without relying on any robot-collected data. Our approach learns to control ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Overview of proposed learning framework. We first pretrain a 3D motion field estimator in simulation (Phase I) and use it to estimate the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: (Left) Phase I Synthetic Data Generation. We randomly generate object and 3D motions, and use ray casting and projection to obtain 3D pixel ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4: Model Architecture. The most important design is a dense intrinsics map feature concate- nated to the input, which contains key information for reconstructing ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Guess what is there? Object tracks can be used to recover missing or wrong depth values. Discussion I: Motion and Geometry Synergy A ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: (Left) Experimental Setup. (Right) Qualitative Results on "Pen" (Left Figure). Our method produces smoother motion field and depth compared to baseline. This is ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7: A rollout of fine-grained insertion. Our method can achieve high precision, even if we are observing the motion from 40cm away without a ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8: (Left) SE3 motion estimation performance in real world. Our method achieves lower error compared to baseline. (Middle) Intrinsics Map Ablation Studies. Both inverse ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use an XArm7 robot arm with a parallel-jaw gripper for the test dataset collection and robot experiments. | embodiment, simulator version and control stack | p. 8 (5 Experiments), p. 8 (5 Experiments) |
 | Task/environment | This task is considered successful if the robot can finish the tracking trajectory with spotlight focusing on the cable in the process. | reset, timeout, object/scene variation | p. 8 (5 Experiments), p. 9 (5 Experiments) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 | Primary metric/result | Main Results We show the success rate of different methods in Figure 8 Right. | numeric claim only at cited anchor | p. 9 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 Experiments - extractive PDF cue:** System Setup We use a widely-used Intel D435 RGBD camera at 640 × 480 resolution for video dataset collection at 30Hz (Figure 6).
-- **p. 8 / 5 Experiments - extractive PDF cue:** Focal Len Ours (Full) 0.0 0.5 1.0 1.5 2.0 2.5 ×10 6 3D Motion Field Error ( ) Motion (train) Motion (sim-test) Depth (train) Depth ...
-- **p. 8 / 5 Experiments - extractive PDF cue:** (Right) Real world Task Success Rate (3 seeds).
-- **p. 8 / 5 Experiments - extractive PDF cue:** Surprisingly, the focal length value plays a critical role in motion prediction even for a relatively small FoV variation around 10 degrees.
-- **p. 8 / 5 Experiments - extractive PDF cue:** 5.2 Robot Learning from Videos Real world Tasks In this section, we test if our method can acquire object manipulation skills from human videos.
-- **p. 4 / 2 Preliminaries - extractive PDF cue:** The problem is that ∆xp might be noisy in practice and it can lead to huge estimation error in ∆Z due to the large slope ...
+- **p. 7 / 5 Experiments - extractive body cue:** System Setup We use a widely-used Intel D435 RGBD camera at 640 × 480 resolution for video dataset collection at 30Hz (Figure 6).
+- **p. 8 / 5 Experiments - extractive body cue:** Focal Len Ours (Full) 0.0 0.5 1.0 1.5 2.0 2.5 ×10 6 3D Motion Field Error ( ) Motion (train) Motion (sim-test) Depth (train) Depth ...
+- **p. 8 / 5 Experiments - extractive body cue:** (Right) Real world Task Success Rate (3 seeds).
+- **p. 8 / 5 Experiments - extractive body cue:** Surprisingly, the focal length value plays a critical role in motion prediction even for a relatively small FoV variation around 10 degrees.
+- **p. 8 / 5 Experiments - extractive body cue:** 5.2 Robot Learning from Videos Real world Tasks In this section, we test if our method can acquire object manipulation skills from human videos.
+- **p. 4 / 2 Preliminaries - extractive body cue:** The problem is that ∆xp might be noisy in practice and it can lead to huge estimation error in ∆Z due to the large slope ...
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5 Experiments - extractive PDF cue:** Other recent methods fail on our setup due to their limitations (Table 2). to 256 × 256.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Our method is free from many limitations of existing works.
-- **p. 9 / 5 Experiments - extractive PDF cue:** While these approaches offer certain advantages, each has notable limitations, as previously discussed.
-- **p. 8 / 5 Experiments - extractive PDF cue:** Adversarial Robustness We test robustness further through adversarial attack in real world experiments by injecting Gaussian noise of different intensities into the depth observation (which ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 3: Data Noise Simulation. We highlight several key randomization strategies. Type Setup Depth White Noise Gaussian, σ = Log-Uniform [0.01, 1]× 0.2mm Depth Correlated ...
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Figure 14: Motion Field Comparison (1.5/2.5cm-wide pen motion): Our method produces a smoother motion field than the direct method, which exhibits noticeable noise. 18
+- **p. 8 / 5 Experiments - extractive body cue:** Other recent methods fail on our setup due to their limitations (Table 2). to 256 × 256.
+- **p. 9 / 5 Experiments - extractive body cue:** Our method is free from many limitations of existing works.
+- **p. 9 / 5 Experiments - extractive body cue:** While these approaches offer certain advantages, each has notable limitations, as previously discussed.
+- **p. 8 / 5 Experiments - extractive body cue:** Adversarial Robustness We test robustness further through adversarial attack in real world experiments by injecting Gaussian noise of different intensities into the depth observation (which ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 3: Data Noise Simulation. We highlight several key randomization strategies. Type Setup Depth White Noise Gaussian, σ = Log-Uniform [0.01, 1]× 0.2mm Depth Correlated ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Figure 14: Motion Field Comparison (1.5/2.5cm-wide pen motion): Our method produces a smoother motion field than the direct method, which exhibits noticeable noise. 18
 
-- **PDF anchors reviewed:** datasets p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), metrics p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 5 (Figure/Table caption), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (Figure/Table caption), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 1 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 7 (Figure/Table caption), p. 8 (5 Experiments), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), metrics p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 5 (Figure/Table caption), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (Figure/Table caption), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 1 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 7 (Figure/Table caption), p. 8 (5 Experiments), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

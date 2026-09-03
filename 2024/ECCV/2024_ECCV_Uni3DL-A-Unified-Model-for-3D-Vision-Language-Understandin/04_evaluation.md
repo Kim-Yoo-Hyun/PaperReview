@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3330_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3330_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 
 ## Evaluation Body Digest
 
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** Following the official benchmark, we use 1,201 scenes for training, 312 for validation.
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** Our method achieves significantly better performance than TGNN method as indicated by instance-average IoU, and accuracy at the IoU thresholds of 0.25 and 0.5.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** During inference, the top 200 (for S3DIS) and top 500 (for ScanNet (v2)) instances with the highest classification scores are retained for the instance segmentation ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** 3 To ensure a fair comparison with PointLLM, we filter out 200 objects used for benchmark evaluation from our training set and report the performance ...
+- **p. 9 / 4.1 Dataset - extractive body cue:** Following the official benchmark, we use 1,201 scenes for training, 312 for validation.
+- **p. 9 / 4.1 Dataset - extractive body cue:** ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes.
+- **p. 10 / 4.1 Dataset - extractive body cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
+- **p. 10 / 4.1 Dataset - extractive body cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
+- **p. 10 / 4.1 Dataset - extractive body cue:** Our method achieves significantly better performance than TGNN method as indicated by instance-average IoU, and accuracy at the IoU thresholds of 0.25 and 0.5.
+- **p. 10 / 4.1 Dataset - extractive body cue:** During inference, the top 200 (for S3DIS) and top 500 (for ScanNet (v2)) instances with the highest classification scores are retained for the instance segmentation ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
+- **p. 9 / 4.1 Dataset - extractive body cue:** 3 To ensure a fair comparison with PointLLM, we filter out 200 objects used for benchmark evaluation from our training set and report the performance ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1 Dataset | SYSTEM / EVALUATION SCOPE UNRESOLVED | Our method achieves significantly better performance than TGNN method as indicated by instance-average IoU, and accuracy at the IoU thresholds of 0.25 and 0.5. | p. 10 (4.1 Dataset) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' ... | p. 11 (Figure/Table caption) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** Following the official benchmark, we use 1,201 scenes for training, 312 for validation.
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
+- **p. 9 / 4.1 Dataset - extractive body cue:** Following the official benchmark, we use 1,201 scenes for training, 312 for validation.
+- **p. 9 / 4.1 Dataset - extractive body cue:** ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes.
+- **p. 10 / 4.1 Dataset - extractive body cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
+- **p. 10 / 4.1 Dataset - extractive body cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: With a unified architecture, Uni3DL supports diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, grounded segmentation, captioning, text-3D cross-modal ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of various vision-language models in 3D, highlighting their ca- pabilities across diverse tasks. It specifically indicates the utilization of Multi-View (MV) images ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of the Uni3DL Model. The Uni3DL is engineered for multifaceted 3D data tasks, including classification, retrieval, captioning, semantic and instance seg- mentation, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Head compositions of different tasks. Obj-Cls denotes object classification head, Text-Gen denotes text generation head, and Matching denotes text-3D matching. where CE denotes ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 3: 3D Segmentation results on S3DIS (top) and ScanNet (bottom) datasets. Input GT Ours Refer: a brown wooden nightstand. it's between the end of ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 4: Results of grounded segmentation on the ScanRefer dataset. Grounded masks are shown in green. GT: a small white NASA space
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 5: 3D captioning results on Cap3D Objaverse dataset. 4.7 Zero-Shot 3D Object Classification We evaluate the zero-shot 3D classification performance on the ModelNet10/40 dataset ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: With a unified architecture, Uni3DL supports diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, grounded segmentation, captioning, text-3D cross-modal ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Comparison of various vision-language models in 3D, highlighting their ca- pabilities across diverse tasks. It specifically indicates the utilization of Multi-View (MV) images ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of the Uni3DL Model. The Uni3DL is engineered for multifaceted 3D data tasks, including classification, retrieval, captioning, semantic and instance seg- mentation, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Head compositions of different tasks. Obj-Cls denotes object classification head, Text-Gen denotes text generation head, and Matching denotes text-3D matching. where CE denotes ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 3: 3D Segmentation results on S3DIS (top) and ScanNet (bottom) datasets. Input GT Ours Refer: a brown wooden nightstand. it's between the end of ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 4: Results of grounded segmentation on the ScanRefer dataset. Grounded masks are shown in green. GT: a small white NASA space
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 5: 3D captioning results on Cap3D Objaverse dataset. 4.7 Zero-Shot 3D Object Classification We evaluate the zero-shot 3D classification performance on the ModelNet10/40 dataset ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following the official benchmark, we use 1,201 scenes for training, 312 for validation. | embodiment, simulator version and control stack | p. 9 (4.1 Dataset), p. 9 (4.1 Dataset) |
 | Task/environment | ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes. | reset, timeout, object/scene variation | p. 9 (4.1 Dataset), p. 10 (4.1 Dataset) |
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 | Primary metric/result | Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' ... | numeric claim only at cited anchor | p. 11 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** Following the official benchmark, we use 1,201 scenes for training, 312 for validation.
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes.
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** We use 562 scenes for training and 141 scenes for evaluation.
-- **p. 9 / 4.1 Dataset - extractive PDF cue:** 3 To ensure a fair comparison with PointLLM, we filter out 200 objects used for benchmark evaluation from our training set and report the performance ...
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
+- **p. 9 / 4.1 Dataset - extractive body cue:** Following the official benchmark, we use 1,201 scenes for training, 312 for validation.
+- **p. 9 / 4.1 Dataset - extractive body cue:** ScanRefer [7] dataset contains 51,583 referring descriptions of 11,046 objects from 800 ScanNet scenes.
+- **p. 9 / 4.1 Dataset - extractive body cue:** We use 562 scenes for training and 141 scenes for evaluation.
+- **p. 9 / 4.1 Dataset - extractive body cue:** 3 To ensure a fair comparison with PointLLM, we filter out 200 objects used for benchmark evaluation from our training set and report the performance ...
+- **p. 10 / 4.1 Dataset - extractive body cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
+- **p. 10 / 4.1 Dataset - extractive body cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
 
 ## Generalization and Failure Cases
 
@@ -152,7 +152,7 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 9 (4.1 Dataset), p. 9 (4.1 Dataset), p. 10 (4.1 Dataset), p. 10 (4.1 Dataset), metrics p. 10 (4.1 Dataset), p. 10 (4.1 Dataset), p. 11 (Figure/Table caption), p. 9 (4.1 Dataset), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 9 (4.1 Dataset), p. 10 (4.1 Dataset), p. 13 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 10 (4.1 Dataset), p. 11 (Figure/Table caption), p. 10 (4.1 Dataset), p. 12 (Figure/Table caption), p. 9 (4.1 Dataset), p. 12 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (4.1 Dataset), p. 9 (4.1 Dataset), p. 10 (4.1 Dataset), p. 10 (4.1 Dataset), metrics p. 10 (4.1 Dataset), p. 10 (4.1 Dataset), p. 11 (Figure/Table caption), p. 9 (4.1 Dataset), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 9 (4.1 Dataset), p. 10 (4.1 Dataset), p. 13 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 10 (4.1 Dataset), p. 11 (Figure/Table caption), p. 10 (4.1 Dataset), p. 12 (Figure/Table caption), p. 9 (4.1 Dataset), p. 12 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

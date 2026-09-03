@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") ... | p. 9 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number ... | p. 8 (Figure/Table caption) |
@@ -56,7 +56,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We study this question by directly evaluating 79, with comparisons to other robot foundation models. | embodiment, simulator version and control stack | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
 | Task/environment | These tasks take between 5 and 20 minutes to complete. | reset, timeout, object/scene variation | p. 7 (VI. EXPERIMENTAL EVALUATION) |
@@ -147,7 +147,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 11 / C. Learning new dexterous tasks - extractive body cue:** DISCUSSION, LIMITATIONS, AND FUTURE WORK
 - **p. 10 / C. Learning new dexterous tasks - extractive body cue:** This presents challenges due to the egg shape, slipperiness, and the need for careful placement.
 
-- **PDF anchors reviewed:** datasets p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION), metrics p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION), results p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION).
+- **Evidence anchors reviewed:** datasets p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION), metrics p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION), results p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
+- **Metric evidence:** How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION).
+- **Baseline/ablation evidence:** We study this question by directly evaluating 79, with comparisons to other robot foundation models. (p. 7, VI. EXPERIMENTAL EVALUATION).
+- **Failure/negative evidence:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).

@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 The model takes as input image observations and the corresponding point clouds, the language instruction, and proprioceptive data.를 Vision-Language-Action (VLA) models, trained on massive collections of action trajectories paired with language instructions, hold great promise for achieving general-purpose embodied intelligence (Kim et al., 2025b; Deng et al., 2025; ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single robotic arm and a limited set of ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The model takes as input image observations and the corresponding point clouds, the language instruction, and proprioceptive data. (p. 5, 5.3. Training Strategy).
+- **Paper-specific mechanism:** The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark); the relevant task/metric cue is Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single robotic arm and a limited ... (p. 8, 7. Limitations and Future Work).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This dataset includes 15 object categories that appeared in the pre-training data, while the layouts and backgrounds are randomly generated and unseen during pre-training, resulting in 95 distinct scenes..
-3. Compare against the body-reported baseline or a matched simpler baseline: ANY3DVLA outperforms the baselines on both tasks..
-4. Report the body metric and its denominator/aggregation: We evaluate the models in simulation, training until the success rate converges, and then select the best-performing checkpoint for real-world testing..
-5. Re-run the body-reported ablation/failure condition: Ablation study on the effect of 2D-3D fusion..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The model takes as input image observations and the corresponding point clouds, the language instruction, and proprioceptive data. (p. 5, 5.3. Training Strategy); preserve the objective/update rule: The full form of the loss function is provided in Appendix F.1. (p. 5, 5.3. Training Strategy).
+2. Use the paper-reported task/data/environment cue: To validate the effectiveness of pre-training in simulation, we constructed an RGBD evaluation dataset as a benchmark using the same procedure. (p. 3, 3. Dataset and Benchmark).
+3. Compare against the reported or matched baseline: ANY3DVLA outperforms the baselines on both tasks. (p. 7, 6.1.3. REAL-WORLD POST-TRAINING).
+4. Report the body metric with its denominator and aggregation: Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark).
+5. Re-run the reported ablation or stress/failure condition: Ablation study on the effect of 2D-3D fusion. (p. 8, 6.4. Ablation Study); if none is reported, design one around: Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single robotic arm and a limited ... (p. 8, 7. Limitations and Future Work).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (5.1. Overall Architecture), p. 4 (5.1. Overall Architecture), p. 5 (5.3. Training Strategy); the primary result is directionally consistent at p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 4 (3. Dataset and Benchmark), p. 8 (6.5. LIBERO and CALVIN Benchmarks), p. 6 (6.1.1. REAL-WORLD SETUP), and measure the boundary at p. 8 (7. Limitations and Future Work), p. 9 (7. Limitations and Future Work).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, summarized, follows mechanism이 ANY3DVLA outperforms the baselines on both tasks. 대비 We evaluate the models in simulation, training until the success rate converges, and then select the best-performing checkpoint ...을 개선하고, Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The model takes as input image observations and the corresponding point clouds, the language instruction, and proprioceptive data.), does the paper-specific mechanism (The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA.) retain the reported evaluation outcome (Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 ...) when tested against the paper's strongest explicit boundary (Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark).
+- **Strongest explicit boundary:** Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single robotic arm and a limited ... (p. 8, 7. Limitations and Future Work).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

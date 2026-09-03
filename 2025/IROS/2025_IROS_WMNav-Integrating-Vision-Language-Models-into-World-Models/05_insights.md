@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world model consisting of VLMs and novel modules. ...를 Choose your action from the image prompt.' Image Prompt Exploration Stage Action VLM Update Navigable Area Candidate Actions Initial Actions Exploration State Map Filter 2 1 2 3 4 5 6 7 ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 If there is no sofa, then return failure message.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world model consisting of VLMs and novel modules. ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** At each time step t, the panoramic image Ipan t is input to PredictVLM, which outputs scores Scoret for each direction in the current panoramic view: Scoret = PredictV LM(Ipan ... (p. 4, III. WMNAV APPROACH).
+- **Paper-specific mechanism:** Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world model consisting of VLMs and ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ... (p. 6, IV. EXPERIMENTS); the relevant task/metric cue is Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation metrics. (p. 6, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 2) Goal-approaching Stage: Due to the limitations of the existing VLMs' capability, we do not rely on the VLM to estimate the stopping condition directly from the observed image. (p. 5, III. WMNAV APPROACH).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Datasets and Evaluation Metrics Datasets The HM3D v0.1 [38] is used in the Habitat 2022 ObjectNav challenge, providing 2000 validation episodes on 20 validation environments with 6 goal object categories..
-3. Compare against the body-reported baseline or a matched simpler baseline: Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ✓ ✗ ....
-4. Report the body metric and its denominator/aggregation: Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation metrics..
-5. Re-run the body-reported ablation/failure condition: As shown in TABLE II: Ablation study of different modules and memory strategies on HM3D v0.2 [38]..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: At each time step t, the panoramic image Ipan t is input to PredictVLM, which outputs scores Scoret for each direction in the current panoramic view: Scoret = PredictV LM(Ipan ... (p. 4, III. WMNAV APPROACH); preserve the objective/update rule: Then M cv t (st in Figure 2) is updated by combining M nav t with the curiosity value map in the previous step M cv t-1 (st-1 in Figure ... (p. 4, III. WMNAV APPROACH).
+2. Use the paper-reported task/data/environment cue: Datasets and Evaluation Metrics Datasets The HM3D v0.1 [38] is used in the Habitat 2022 ObjectNav challenge, providing 2000 validation episodes on 20 validation environments with 6 goal object categories. (p. 6, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ... (p. 6, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation metrics. (p. 6, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: As shown in TABLE II: Ablation study of different modules and memory strategies on HM3D v0.2 [38]. (p. 6, IV. EXPERIMENTS); if none is reported, design one around: 2) Goal-approaching Stage: Due to the limitations of the existing VLMs' capability, we do not rely on the VLM to estimate the stopping condition directly from the observed image. (p. 5, III. WMNAV APPROACH).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH); the primary result is directionally consistent at p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 3 (III. WMNAV APPROACH), match the reported outcome at p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), and measure the boundary at p. 5 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, summarized, follows mechanism이 Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 ... 대비 Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation ...을 개선하고, If there is no sofa, then return failure message. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (At each time step t, the panoramic image Ipan t is input to PredictVLM, which outputs scores Scoret for each direction in ...), does the paper-specific mechanism (Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment ...) retain the reported evaluation outcome (Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation ...) when tested against the paper's strongest explicit boundary (2) Goal-approaching Stage: Due to the limitations of the existing VLMs' capability, we do not rely on the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world model consisting of VLMs and ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ... (p. 6, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** 2) Goal-approaching Stage: Due to the limitations of the existing VLMs' capability, we do not rely on the VLM to estimate the stopping condition directly from the observed image. (p. 5, III. WMNAV APPROACH).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evaluta
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For evaluation, we select a standardized subset of 100 randomly chosen models from the Google Scanned Objects (GSO) [8] dataset.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For training, we collect P = 1 × 105 highquality 3D models from Objaverse [6] dataset.
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** Quantitative comparisons on GSO dataset [8].
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** Our GSV3D achieves the best performance on the GSO dataset. herent in 2D-to-3D indirect representations.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** All experiments are conducted on the GSO dataset.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For the geometry evaluation, we extract meshes from the generated 3D representations and then sample points from these meshes to compute the Chamfer Distance (CD), ...
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** Type Method Appearance Quality Geometry Quality User Study PSNR↑ SSIM↑ LPIPS↓ FID↓ KID↓ CLIP-IQA↑ CD↓ IoU ↑ F-Score↑ App.
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** Score↑ 3D GA [15] 15.201 0.834 0.039 95.47 1.17 0.805 0.197 0.502 0.303 3.154 5.000 TGS [39] 18.874 0.872 0.032 85.25 1.28 0.812 0.272 0.415 ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For evaluation, we select a standardized subset of 100 randomly chosen models from the Google Scanned Objects (GSO) [8] dataset.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For training, we collect P = 1 × 105 highquality 3D models from Objaverse [6] dataset.
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** Quantitative comparisons on GSO dataset [8].
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** Our GSV3D achieves the best performance on the GSO dataset. herent in 2D-to-3D indirect representations.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** All experiments are conducted on the GSO dataset.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For the geometry evaluation, we extract meshes from the generated 3D representations and then sample points from these meshes to compute the Chamfer Distance (CD), ...
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** Type Method Appearance Quality Geometry Quality User Study PSNR↑ SSIM↑ LPIPS↓ FID↓ KID↓ CLIP-IQA↑ CD↓ IoU ↑ F-Score↑ App.
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** Score↑ 3D GA [15] 15.201 0.834 0.039 95.47 1.17 0.805 0.197 0.502 0.303 3.154 5.000 TGS [39] 18.874 0.872 0.032 85.25 1.28 0.812 0.272 0.415 ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evaluta
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results in Table 2 demonstrate that the setting N = 16 outperforms the other settings in terms of overall performance. | p. 8 (4.3. Ablation Studies) |
 | 4.2. Evalutaion on 3D Generation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our GSV3D achieves the best performance on the GSO dataset. herent in 2D-to-3D indirect representations. | p. 7 (4.2. Evalutaion on 3D Generation) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evaluta
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For evaluation, we select a standardized subset of 100 randomly chosen models from the Google Scanned Objects (GSO) [8] dataset.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For training, we collect P = 1 × 105 highquality 3D models from Objaverse [6] dataset.
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** Quantitative comparisons on GSO dataset [8].
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** Our GSV3D achieves the best performance on the GSO dataset. herent in 2D-to-3D indirect representations.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** All experiments are conducted on the GSO dataset.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For evaluation, we select a standardized subset of 100 randomly chosen models from the Google Scanned Objects (GSO) [8] dataset.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For training, we collect P = 1 × 105 highquality 3D models from Objaverse [6] dataset.
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** Quantitative comparisons on GSO dataset [8].
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** Our GSV3D achieves the best performance on the GSO dataset. herent in 2D-to-3D indirect representations.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** All experiments are conducted on the GSO dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GSV3D utilizes Stable Video Diffusion and Gaussian Splatting decoder to generate 3D model from a single image. Meanwhile, the Gaussian Splatting-based geometric distillation ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of GSV3D Training and Inference Pipeline. During inference, given an initialized noise latent zT , an input image R and its corresponding ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of the Gaussian Splatting Decoder pipeline. During both geometric distillation and GSV3D inference, the conditioning image R is first processed by a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Performance comparison between our GSV3D and other state-of-art methods. GA and TGS are abbreviations for GaussianAny- thing and TriplaneGaussian, respectively. For each example, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparisons on GSO dataset [8]. GA and TGS are abbreviations for GaussianAnything and TriplaneGaussian, respectively. GaussianAnything and TriplaneGaussians are 3D methods, while ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Examples of using GSV3D for text-to-image-to-3D gen- eration.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Visual comparison for the number of frames N in the multi-view latents generated by denoising UNet ϵθ. Reducing the number of frames weakens ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation studies on the losses used in geometric distil- lation, the number of frames N in the multi-view latents gener- ated by multi-view ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GSV3D utilizes Stable Video Diffusion and Gaussian Splatting decoder to generate 3D model from a single image. Meanwhile, the Gaussian Splatting-based geometric distillation ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of GSV3D Training and Inference Pipeline. During inference, given an initialized noise latent zT , an input image R and its corresponding ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Overview of the Gaussian Splatting Decoder pipeline. During both geometric distillation and GSV3D inference, the conditioning image R is first processed by a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Performance comparison between our GSV3D and other state-of-art methods. GA and TGS are abbreviations for GaussianAny- thing and TriplaneGaussian, respectively. For each example, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons on GSO dataset [8]. GA and TGS are abbreviations for GaussianAnything and TriplaneGaussian, respectively. GaussianAnything and TriplaneGaussians are 3D methods, while ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Examples of using GSV3D for text-to-image-to-3D gen- eration.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Visual comparison for the number of frames N in the multi-view latents generated by denoising UNet ϵθ. Reducing the number of frames weakens ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation studies on the losses used in geometric distil- lation, the number of frames N in the multi-view latents gener- ated by multi-view ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For evaluation, we select a standardized subset of 100 randomly chosen models from the Google Scanned Objects (GSO) [8] dataset. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings) |
 | Task/environment | For training, we collect P = 1 × 105 highquality 3D models from Objaverse [6] dataset. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation) |
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evaluta
 | Primary metric/result | Our GSV3D achieves the best performance on the GSO dataset. herent in 2D-to-3D indirect representations. | numeric claim only at cited anchor | p. 7 (4.2. Evalutaion on 3D Generation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** While the elevation angle is fixed for each individual object, it is randomly sampled between -5 and 30 degrees across different objects.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** From these 84 images, we select N = 16 images at regular intervals to serve as the training input.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For each model, we render 21 RGB images with a fixed elevation angle, which is randomly chosen between -5 and 30 degrees, and azimuth angles ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Also, we sample 4,096 points from the mesh of each object to facilitate 3D evaluation.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** This stage is trained for 80,000 steps with a batch size of 128. • Stage Two: We integrate the Gaussian Splatting Decoder into the multi-view ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** This stage is trained for 40,000 steps with a reduced batch size of 32.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** While the elevation angle is fixed for each individual object, it is randomly sampled between -5 and 30 degrees across different objects.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** From these 84 images, we select N = 16 images at regular intervals to serve as the training input.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For each model, we render 21 RGB images with a fixed elevation angle, which is randomly chosen between -5 and 30 degrees, and azimuth angles ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Also, we sample 4,096 points from the mesh of each object to facilitate 3D evaluation.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** This stage is trained for 80,000 steps with a batch size of 128. • Stage Two: We integrate the Gaussian Splatting Decoder into the multi-view ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** This stage is trained for 40,000 steps with a reduced batch size of 32.
 
 ## Generalization and Failure Cases
 
@@ -159,12 +159,12 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evaluta
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** While 2D diffusion models offer diversity but lack geometric consistency, and 3D diffusion models face data limitations, our hybrid approach bridges this gap.
-- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** This limitation stems from the restricted diversity of the training data, which hinders the model's ability to generalize well to unseen or complex scenarios.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of GSV3D Training and Inference Pipeline. During inference, given an initialized noise latent zT , an input image R and its corresponding ...
-- **p. 6 / 4.2. Evalutaion on 3D Generation - extractive PDF cue:** However, due to poor image consistency, the reconstructed results of these images suffer from blurry and ghosting artifacts, which degrade the evaluation metrics, as shown ...
+- **p. 8 / 5. Conclusion - extractive body cue:** While 2D diffusion models offer diversity but lack geometric consistency, and 3D diffusion models face data limitations, our hybrid approach bridges this gap.
+- **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** This limitation stems from the restricted diversity of the training data, which hinders the model's ability to generalize well to unseen or complex scenarios.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of GSV3D Training and Inference Pipeline. During inference, given an initialized noise latent zT , an input image R and its corresponding ...
+- **p. 6 / 4.2. Evalutaion on 3D Generation - extractive body cue:** However, due to poor image consistency, the reconstructed results of these images suffer from blurry and ghosting artifacts, which degrade the evaluation metrics, as shown ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.3. Ablation Studies), metrics p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.2. Evalutaion on 3D Generation), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Evalutaion on 3D Generation), baselines p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.2. Evalutaion on 3D Generation), results p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Evalutaion on 3D Generation).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.3. Ablation Studies), metrics p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.2. Evalutaion on 3D Generation), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Evalutaion on 3D Generation), baselines p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.2. Evalutaion on 3D Generation), results p. 8 (4.3. Ablation Studies), p. 7 (4.2. Evalutaion on 3D Generation), p. 7 (4.2. Evalutaion on 3D Generation), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Evalutaion on 3D Generation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

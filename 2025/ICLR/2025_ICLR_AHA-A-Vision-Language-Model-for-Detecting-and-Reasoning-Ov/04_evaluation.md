@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=JVkdSi7Ekg; PDF retrieval source: https://openreview.net/pdf/baa69f167306f963174767be4974c69528aa6379.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=JVkdSi7Ekg; PDF retrieval source: https://openreview.net/pdf/baa69f167306f963174767be4974c69528aa6379.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 3 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3: (Left) Scaling law with the AHA dataset. Scaling of effect of model performance with varying domain specific fine-tuning data. (Right) Downstream Robotic ... | p. 9 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1: AHA is a Vision-Language Model designed to detect and reason about failures in robotic manipulation. As an instruction-tuned VLM, it can enhance ... | p. 3 (Figure/Table caption) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 3 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Lastly, we adapted a failure benchmark from the RoboFail dataset [48], which features real-world robot failures in seven UR5 robot tasks. | embodiment, simulator version and control stack | p. 8 (4 Method), p. 8 (4 Method) |
 | Task/environment | MMBench [54] ScienceQA [55] TextVQA [56] POPE [57] VizWiz[58] LLaVA-13B (LLama-2) [24] 67.70 73.21 67.40 88.00 53.01 AHA-13B (LLama-2) 65.20 71.94 65.20 85.74 53.45 ... | reset, timeout, object/scene variation | p. 8 (4 Method), p. 7 (4 Method) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 3 (Figure/Table 
 - **p. 6 / 4 Method - extractive body cue:** If the answer is "No", the VLM is expected to generate a concise, free-form natural language explanation detailing why the task is perceived as a ...
 - **p. 7 / 4 Method - extractive body cue:** 4.2 Synthetic Data for Instruction-tuning To facilitate the instruction-tuning of AHA, we needed to systematically generate failure demonstration data.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Method), p. 8 (4 Method), p. 7 (4 Method), p. 9 (4 Method), p. 7 (4 Method), p. 9 (4 Method), metrics p. 10 (4 Method), p. 10 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (4 Method), p. 9 (4 Method), baselines p. 8 (Figure/Table caption), p. 7 (4 Method), p. 8 (4 Method), p. 9 (4 Method), p. 9 (4 Method), p. 10 (4 Method), results p. 9 (Figure/Table caption), p. 3 (Figure/Table caption), p. 10 (4 Method), p. 10 (4 Method), p. 9 (4 Method), p. 7 (4 Method).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Method), p. 8 (4 Method), p. 7 (4 Method), p. 9 (4 Method), p. 7 (4 Method), p. 9 (4 Method), metrics p. 10 (4 Method), p. 10 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (4 Method), p. 9 (4 Method), baselines p. 8 (Figure/Table caption), p. 7 (4 Method), p. 8 (4 Method), p. 9 (4 Method), p. 9 (4 Method), p. 10 (4 Method), results p. 9 (Figure/Table caption), p. 3 (Figure/Table caption), p. 10 (4 Method), p. 10 (4 Method), p. 9 (4 Method), p. 7 (4 Method).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Figure 1: AHA is a Vision-Language Model designed to detect and reason about failures in robotic manipulation. As an instruction-tuned VLM, it can enhance task performance in robotic applications that ... (p. 3, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. ... (p. 8, Figure/Table caption).
+- **Failure/negative evidence:** Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse kinematics, collisions, etc.) from the environment, and returns any sampled plan that ... (p. 10, 4 Method).

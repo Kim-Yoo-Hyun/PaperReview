@@ -1,53 +1,75 @@
 # Insights — Scalable Non-Equivariant 3D Molecule Generation via Rotational Alignment
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=l5KpQ5MmaD; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/165283. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** In this paper, we propose an approach that relaxes such equivariance constraints.
-- **Problem cue:** Different from data with grid-like structures (e.g., images and text sequences), 3D molecules pose unique challenges to generative modeling due to the Euclidean symmetry group of R3 , ...
-- **Claim/result cue:** It yields sample quality comparable to state-of-the-art equivariant diffusion models and offers improved training and sampling efficiency.
+- **p. 2 / 1. Introduction - extractive body cue:** To address this challenge, we propose to construct aligned representations in an unsupervised manner with an autoencoder.
+- **p. 2 / 1. Introduction - extractive body cue:** Scalable Non-Equivariant 3D Molecule Generation via Rotational Alignment Driven by the interest in further investigating the capacity of non-equivariant diffusion models and motivated by the ...
+- **p. 4 / 3. Method - extractive body cue:** In Section 3.1, we introduce how we learn alignment with an autoencoder.
+- **p. 4 / 3.1. Aligned Latent Space - extractive body cue:** To overcome this, we propose to learn rotations in an unsupervised manner through an autoencoder.
+- **p. 5 / 3.1. Aligned Latent Space - extractive body cue:** In (18) we parameterize the joint distribution of zx, zh as an isotropic Gaussian with a fixed variance σ2, which allows qθ,η(zx, zh/x, h) to ...
+- **p. 4 / 3.1. Aligned Latent Space - extractive body cue:** Inputs: atomic coordinates x, atom features h Learnable parameters: rotation network Rθ, encoder Eη, decoder Dψ while not converged do Rθ ←Rθ(x, h) µx, µh ...
+- **p. 3 / 2.2. Diffusion Models - extractive body cue:** We use the same noise prediction parametrization in our model, and xϕ(zt, t) in (8) is further rewritten as: xϕ(zt, t) = zt αt -σt ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Method), p. 4 (3.1. Aligned Latent Space), p. 5 (3.1. Aligned Latent Space), p. 4 (3.1. Aligned Latent Space)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** Compared with their non-equivariant counterparts, they have more complex parametrization and lack standardized implementations.
+- **p. 1 / 1. Introduction - extractive body cue:** Different from data with grid-like structures (e.g., images and text sequences), 3D molecules pose unique challenges to generative modeling due to the Euclidean symmetry group ...
+- **p. 2 / 1. Introduction - extractive body cue:** To address this challenge, we propose to construct aligned representations in an unsupervised manner with an autoencoder.
+- **p. 3 / 2.3. Equivariance - extractive body cue:** As mentioned in Section 2.1, the atomic coordinates x of a molecule can be arbitrarily translated and rotated in the three-dimensional space without affecting its ...
+- **p. 2 / 1. Introduction - extractive body cue:** As expected, our non-equivariant diffusion model exhibits better scalability and improves the sampling efficiency significantly.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** As for the diffusion model, we use the same noise schedule and number of time steps as EDM/GeoLDM.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To implement DiT as the noise prediction network, we follow the official code base6 and make necessary modifications as explained in Section 3.2.
+- **Boundary to test:** As for the diffusion model, we use the same noise schedule and number of time steps as EDM/GeoLDM.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To address this challenge, we propose to construct aligned representations in an unsupervised manner with an autoencoder. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Figure 1: Molecules generated by RADMDiT-B on QM9 (the three on the left) and GEOM-Drugs (the three on the right). non-equivariant models. RADMDiT-S outperforms EDM on molecule stability and outperforms both EDM ... | p. 7 (Figure/Table caption), p. 6 (4.1. Experimental Setup) |
+| Failure/limitation | As for the diffusion model, we use the same noise schedule and number of time steps as EDM/GeoLDM. | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `semantic, alignment, Diffusion, Generation, equivariant` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Diffusion/generative prior를 sparse observation completion, 3D scene/object generation, action trajectory proposal에 사용할 수 있다.
-  - 생성 모델의 prior는 부족한 geometry나 demonstration을 보완하지만, physical feasibility와 metric correctness를 별도 제약으로 확인해야 한다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 One EGNN layer that takes xl, hl as inputs and outputs xl+1, hl+1 is defined as: mij = ϕe(hl i, hl j, d2 ij, aij), hl+1 i = ϕh(hl i, X j̸=i ...를 Inputs: atomic coordinates x, atom features h Learnable parameters: rotation network Rθ, encoder Eη, decoder Dψ while not converged do Rθ ←Rθ(x, h) µx, µh ←Eη(Rθx, h) Subtract center of gravity from ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 As for the diffusion model, we use the same noise schedule and number of time steps as EDM/GeoLDM.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To address this challenge, we propose to construct aligned representations in an unsupervised manner with an autoencoder.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Geometry, Registration, and Equivariance`; tags: `semantic, alignment, Diffusion, Generation, equivariant`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: It yields sample quality comparable to state-of-the-art equivariant diffusion models and offers improved training and sampling efficiency.
-  - visual/shape generation 품질 이후에도 geometry correctness, controllability, physical plausibility, robot execution 가능성은 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `semantic, alignment, Diffusion, Generation, equivariant, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** As for the diffusion model, we use the same noise schedule and number of time steps as EDM/GeoLDM.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ShapeNet / 자동 추출에서 명확한 metric 단서 없음
-  - 내 연구 확장 benchmark 후보: ShapeNet, Objaverse, ScanNet, RLBench
-  - 내 연구 확장 metric 후보: Chamfer, F-score, CLIP score, success rate
-  - 검증 초점: generation fidelity, geometric validity, physical feasibility, downstream task utility를 함께 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Datasets We first evaluate our approach using the QM9 dataset (Ramakrishnan et al., 2014) which is a standard molecule generation benchmark widely used by related works..
+3. Compare against the body-reported baseline or a matched simpler baseline: As we can see from the table, diffusion models perform much better than ENF and G-SchNet, and equivariant baselines significantly outperform non-equivariant baselines..
+4. Report the body metric and its denominator/aggregation: We report the average performance and standard deviation across three runs, each sampling 10000 molecules..
+5. Re-run the body-reported ablation/failure condition: The nonequivariant baselines GraphLDM and GraphLDM-aug used the same GNN architecture as the noise prediction network, but were trained in a latent space without learned alignment..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models), p. 5 (3.1. Aligned Latent Space); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D/3D diffusion prior가 실제 3D reconstruction이나 planning에서 metric error를 줄이는가, 아니면 plausible hallucination을 늘리는가?
+고정된 observation/action/data/compute budget에서 address, challenge, construct mechanism이 As we can see from the table, diffusion models perform much better than ENF and G-SchNet, ... 대비 We report the average performance and standard deviation across three runs, each sampling 10000 molecules.을 개선하고, As for the diffusion model, we use the same noise schedule and number of time steps ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

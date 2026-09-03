@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/deng25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/deng25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, unlike vision and language modalities, action data is absent from existing Internet datasets, demanding a new paradigm for data collection. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Compared to AnyGrasp [14], the state-of-the-art in traditional grasping detection algorithms, GraspVLA supports natural language instructions and delivers a robust closed-loop grasping ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Compared to AnyGrasp [14], the state-of-the-art in traditional grasping detection algorithms, GraspVLA supports natural language instructions and delivers a robust closed-loop grasping ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Compared, AnyGrasp, state-of-the-art, traditional, grasping, detection, algorithms, GraspVLA, supports, natural | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | scale, globally, Progressive, Action, Generation, co-train, synthetic, actions | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
+| Output / action | bridge, explore, feasibility, training, Vision-Language-Action, VLA, models, entirely | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | multimodal context o,l,p/history; body terms: Compared, AnyGrasp, state-of-the-art, traditional, grasping, detection, algorithms, GraspVLA, supports, natural | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| State / observation variable | multimodal context o,l,p/history; body terms: Compared, AnyGrasp, state-of-the-art, traditional, grasping, detection, algorithms, GraspVLA, supports, natural | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)) |
 | Decision / output variable | action, pose, option or chunk a; body terms: summary, contributions, follows, introduce, novel, pretraining, paradigm, relies | p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction) |
-| Objective / loss / cost | policy/action modeling objective; cue terms: contrast, synthetic, data, offers, more, accessible, cost-effective, alternative | no optimization/equation sentence selected |
+| Objective / loss / cost | policy/action modeling objective; cue terms: Synthetic, data, offers, cost-effective, alternative, potential, remains, largely | no optimization/equation sentence selected |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) |
 | Success / guarantee | instruction-conditioned task success | p. 6 (5 Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,10 +47,11 @@ PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 8 (5 Hz)): In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ...
+PDF body contribution framing (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 8 (5 Hz)): In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ...
 
 - **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
 - **p. 2 / 1 Introduction - extractive body cue:** To efficiently learn from this dataset, we propose GraspVLA, an end-to-end network that integrates autoregressive perception tasks and flow-matching-based action generation into a unified Chainof-Thought ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Building on this, we present GraspVLA, a VLA model pretrained on large-scale synthetic action data as a foundational model for grasping tasks.
 - **p. 8 / 5 Hz - extractive body cue:** GraspVLA shows superior adaptability to novel tasks, surpassing the model without pretraining and all baselines.
 
 ## Assumptions and Failure Boundary
@@ -66,12 +67,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 7 (5 Hz). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 7 (5 Hz), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, unlike vision and language modalities, action data is absent from existing Internet datasets, demanding a new paradigm for data collection. (p. 2, 1 Introduction).
+- **Formulation-changing contribution:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ... (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, which reinforcement learning could potentially address. (p. 26, C Details about Data Generation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

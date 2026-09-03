@@ -1,8 +1,10 @@
 # G3Flow: Generative 3D Semantic Flow for Pose-aware and Generalizable Object Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html.
-> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html.
+> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Manipulation, contact, tactile, and dexterity의 generative 문제를 이해하�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 generative 문제를 이해하기 위해 읽는다. 본문은 However, these geometrycentric methods, despite their advantages, often lack the crucial semantic understanding, necessary for sophisticated manipulation tasks.를 문제로 두고, Our framework consists of (top) an initialization phase that generates comprehensive 3D representation (surface normals, wireframe, and geometry) through object-centric exploration and digital twin generation, which enables rich semanti ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, these geometrycentric methods, despite their advantages, often lack the crucial semantic understanding, necessary for sophisticated manipulation tasks. (p. 1, 1. Introduction).
+- **Actual contribution:** Our key contributions can be summarized as follows: (1) We propose a novel foundation model-driven approach for constructing semantic flow, a dynamic and complete semantic representation through the integration of ... (p. 2, 1. Introduction).
+- **Evaluation boundary:** As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields. (p. 7, 4.4. Ablation Study).
+- **Explicit failure boundary:** Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic interactions through real-time semantic flow, which addresses the limitations of existing geometry-centric ... (p. 3, 3.1. Overview).

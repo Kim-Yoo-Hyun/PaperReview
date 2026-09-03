@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Our diffusion policy is implemented as a fourlayer Transformer encoder with a latent dimension of 512 and four attention heads. | p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | Such an overparameterized input allows the network to extract more robust and expressive latent features for the diffusion policy. | p. 6 (B. PP-Tac Policy), p. 9 (B. Depth Reconstruction of VBTS) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | We split each synthesized data sequence into subsequences of length 10 for the diffusion process, and train the model for approximately 600,000 ... | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | The network takes as input a temporal sequence of five tactile frames along with a reference no-contact image. | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | Thus, the entire inference process consists of 10 steps. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -129,8 +129,17 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy), p. 9 (B. Depth Reconstruction of VBTS), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 7 (A. Implementation Details), objective p. 7 (B. Depth Reconstruction of VBTS), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 8 (B. Depth Reconstruction of VBTS), p. 8 (B. Depth Reconstruction of VBTS), temporal p. 6 (A. Implementation Details), p. 4 (A. Fingertip-shaped Tactile Sensing), p. 6 (1) A latent vector of D-dimensional features representing), p. 3 (B. Dexterous Robotic Hand with Tactile Sensing), p. 5 (A. Grasp Motion Dataset Synthesis), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy), p. 9 (B. Depth Reconstruction of VBTS), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 7 (A. Implementation Details), objective p. 7 (B. Depth Reconstruction of VBTS), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 8 (B. Depth Reconstruction of VBTS), p. 8 (B. Depth Reconstruction of VBTS), temporal p. 6 (A. Implementation Details), p. 4 (A. Fingertip-shaped Tactile Sensing), p. 6 (1) A latent vector of D-dimensional features representing), p. 3 (B. Dexterous Robotic Hand with Tactile Sensing), p. 5 (A. Grasp Motion Dataset Synthesis), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2) Diffusion Policy Training: Train a policy fon this dataset t0 infer motions from tactile feedback and proprioceptive states, ensuring generalization to real-world robotic systems, (p. 5, V. POLICY LEARNING FOR PAPER-PICKING).
+- **Objective/update evidence:** We implement this through the PPTac policy, developed in two stages: 1) Trajectory Optimization: Generate a dataset of grasping motions using trajectory ‘optimization. (p. 5, V. POLICY LEARNING FOR PAPER-PICKING).
+- **Temporal/runtime evidence:** We split each synthesized data sequence into subsequences of length 10 for the diffusion process, and train the model for approximately 600,000 iterations on a single RTX 4090, During training, ... (p. 6, A. Implementation Details).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

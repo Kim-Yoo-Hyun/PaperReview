@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (A. Generalization for Imitation Learning), p. 2 (B. Data
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This lack of robustness remains a key limitation of current systems. | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | This is achieved by adopting a relative state-action representation, where each state and action is captured as the relative difference from the ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF |
+| Observation / input | This is achieved by adopting a relative state-action representation, where each state and action is captured as the relative difference from the ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
 | State / latent | achieved, adopting, relative, state-action, representation, where, state, action, captured, difference | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
 | Output / action | Several, works, VideoDex, HOP, utilize, lange, seale, human | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
 | Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | trajectory D with task/embodiment metadata; body terms: achieved, adopting, relative, state-action, representation, where, state, action, captured, difference | p. 3 (A. Data Collection System), p. 4 (A. Data Collection System), p. 2 (B. Data Generation for Robot Manipulation) |
 | Decision / output variable | normalized sample or downstream action; body terms: present, DexWild, system, enables, effective, learning, robust, dexterous | p. 2 (1. IyrRopuction), p. 2 (1. IyrRopuction), p. 3 (C. Human Action Tracking Systems) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (A. Generalization for Imitation Learning), p. 2 (B. Data
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (B. Training Data Modalities and Preprocessing), p. 2 (C. Human Action Tracking Systems) |
 | Success / guarantee | cross-domain transfer and task performance | p. 6 (B. Evaluation Tasks), p. 5 (Figure/Table caption), p. 6 (V. ANALYSIS AND RI) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (A. Generalization for Imitation Learning), p. 2 (B. Data
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. IyrRopuction), p. 2 (1. IyrRopuction), p. 3 (C. Human Action Tracking Systems), p. 3 (A. Data Collection System), p. 4 (A. Data Collection System)): In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations.
+PDF body contribution framing (p. 2 (1. IyrRopuction), p. 2 (1. IyrRopuction), p. 3 (C. Human Action Tracking Systems), p. 3 (A. Data Collection System), p. 4 (A. Data Collection System)): In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations.
 
 - **p. 2 / 1. IyrRopuction - extractive body cue:** 1) Scalable Data Collection System: A novel humanembodiment DexWild-System that enables untrained operators fo quickly collect 9,290 demonstrations across 93 diverse environments, achieving 4.6% speedup ...
 - **p. 3 / C. Human Action Tracking Systems - extractive body cue:** We introduce DexWild-System, a user-friendly, high-fidelity platform for efficiently gathering natural human hhand demonstrations across diverse real-world settings.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1. IyrRopuction), p. 2 (1. IyrRopuction), p. 3 (
 
 ## Position in the Robotics Loop
 
-robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (A. Data Collection System), p. 4 (A. Data Collection System), p. 2 (B. Data Generation for Robot Manipulation), p. 4 (A. Data Collection System). The downstream handoff is claimed only when the body describes it.
+robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (A. Data Collection System), p. 4 (A. Data Collection System), p. 2 (B. Data Generation for Robot Manipulation), p. 4 (A. Data Collection System). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (A. Generalization for Imitation Learning), p. 2 (B. Data Generation for Robot Manipulation), p. 1 (1. IyrRopuction), p. 1 (Abstract), p. 4 (A. Data Collection System), interface p. 3 (A. Data Collection System), p. 4 (A. Data Collection System), p. 2 (B. Data Generation for Robot Manipulation), p. 4 (A. Data Collection System), objective p. 5 (B. Training Data Modalities and Preprocessing).
+- **Evidence anchors reviewed:** problem p. 2 (A. Generalization for Imitation Learning), p. 2 (B. Data Generation for Robot Manipulation), p. 1 (1. IyrRopuction), p. 1 (Abstract), p. 4 (A. Data Collection System), interface p. 3 (A. Data Collection System), p. 4 (A. Data Collection System), p. 2 (B. Data Generation for Robot Manipulation), p. 4 (A. Data Collection System), objective p. 5 (B. Training Data Modalities and Preprocessing).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** 1) Lack of haptic feedback: Operators cannot feel objects, ‘making fine manipulation difficult for certain tasks. (p. 8, 06 06 06 _).
+- **Formulation-changing contribution:** In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations. (p. 2, 1. IyrRopuction).
+- **Assumption/failure evidence:** This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

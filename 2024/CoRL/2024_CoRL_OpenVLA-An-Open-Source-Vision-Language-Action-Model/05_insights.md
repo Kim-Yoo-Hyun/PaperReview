@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 More recently, they have been used for directly learning visionlanguage-action models [VLAs; 1, 7, 17, 18] for control.를 VLAs provide a direct instantiation of using pretrained vision-and-language foundation models for robotics, directly fine-tuning visuallyconditioned language models (VLMs) such as PaLI [19, 20] to generate robot control actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The current OpenVLA model has several limitations.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Abstract: Large policies pretrained on a combination of Internet-scale visionlanguage data and diverse robot demonstrations have the potential to change how we teach robots new skills: rather than training new ... (p. 1, Body text (section boundary not confidently recovered)).
+- **Paper-specific mechanism:** To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 4: Google robot evaluation results. We evaluate generalist robot policies on in-distribution and out-of- distribution (OOD) tasks on the mobile manipulator used in RT-1 and RT-2 evaluations [2, 7]. ... (p. 6, Figure/Table caption); the relevant task/metric cue is Notably, prior works achieve strong performance only in either precise or diverse tasks, resulting in widely varying success rates. (p. 7, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct object, especially when distractors are present. (p. 6, 4 Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Qualitatively, both RT-2-X and OpenVLA exhibit markedly more robust behaviors than the other tested models, such as approaching the correct object when distractor objects are present, properly orienting the robot's end-effector to ....
-3. Compare against the body-reported baseline or a matched simpler baseline: (2) Can OpenVLA be effectively fine-tuned on a new robot setup and task, and how does it compare to state-of-the-art data-efficient imitation learning approaches?.
-4. Report the body metric and its denominator/aggregation: Table 11: Quantized inference experiment results with blocking control. We report the success rate and standard error of OpenVLA on various BridgeData V2 WidowX tasks with bfloat16 precision (the default approach), 8-bit ....
-5. Re-run the body-reported ablation/failure condition: Table 9: BridgeData V2 WidowX ablation experiment results. We evaluate various methods on a subset of 8 representative tasks to assess the importance of different components of the OpenVLA model architecture and ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Abstract: Large policies pretrained on a combination of Internet-scale visionlanguage data and diverse robot demonstrations have the potential to change how we teach robots new skills: rather than training new ... (p. 1, Body text (section boundary not confidently recovered)); preserve the objective/update rule: OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP. (p. 1, Body text (section boundary not confidently recovered)).
+2. Use the paper-reported task/data/environment cue: (2) Can OpenVLA be effectively fine-tuned on a new robot setup and task, and how does it compare to state-of-the-art data-efficient imitation learning approaches? (p. 5, 4 Experiments).
+3. Compare against the reported or matched baseline: (2) Can OpenVLA be effectively fine-tuned on a new robot setup and task, and how does it compare to state-of-the-art data-efficient imitation learning approaches? (p. 5, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: Notably, prior works achieve strong performance only in either precise or diverse tasks, resulting in widely varying success rates. (p. 7, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: See Appendix F for ablation analyses of these components. (p. 7, 4 Experiments); if none is reported, design one around: We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct object, especially when distractors are present. (p. 6, 4 Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 25 (Figure/Table caption), p. 7 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 25 (Figure/Table caption), and measure the boundary at p. 6 (4 Experiments), p. 8 (7.0 GB).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, OpenVLA, B-parameter mechanism이 (2) Can OpenVLA be effectively fine-tuned on a new robot setup and task, and how does ... 대비 Table 11: Quantized inference experiment results with blocking control. We report the success rate and standard error of ...을 개선하고, The current OpenVLA model has several limitations. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Abstract: Large policies pretrained on a combination of Internet-scale visionlanguage data and diverse robot demonstrations have the potential to change how we ...), does the paper-specific mechanism (To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation ...) retain the reported evaluation outcome (Notably, prior works achieve strong performance only in either precise or diverse tasks, resulting in widely varying success ...) when tested against the paper's strongest explicit boundary (We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Notably, prior works achieve strong performance only in either precise or diverse tasks, resulting in widely varying success ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 4: Google robot evaluation results. We evaluate generalist robot policies on in-distribution and out-of- distribution (OOD) tasks on the mobile manipulator used in RT-1 and RT-2 evaluations [2, 7]. ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct object, especially when distractors are present. (p. 6, 4 Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

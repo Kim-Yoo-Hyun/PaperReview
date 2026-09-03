@@ -1,8 +1,10 @@
 # PILCO: A Model-Based and Data-Efficient Approach to Policy Search
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.deisenroth.cc/publication/deisenroth-2011-c/.
-> PDF retrieval source: https://www.deisenroth.cc/publication/deisenroth-2011-c/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.deisenroth.cc/publication/deisenroth-2011-c/.
+> PDF retrieval source: https://www.deisenroth.cc/publication/deisenroth-2011-c/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.deisenroth.cc/publication/deisenroth-2011-c/
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Pilco reduces model bias, one of the key problems of model-based reinforcement learning, in a principled way.를 문제로 두고, In this paper, we introduce pilco, a practical, data-efficient model-based policy search method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Abstract), p. 1 (Abstract), p. 2 (2.1. Dynamics Model Learning), p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Pilco reduces model bias, one of the key problems of model-based reinforcement learning, in a principled way. (p. 1, Abstract).
+- **Actual contribution:** In this paper, we introduce pilco, a practical, data-efficient model-based policy search method. (p. 1, Abstract).
+- **Evaluation boundary:** Robotic unicycle system and simulation results. (p. 6, 3.3. Unicycle Riding).
+- **Explicit failure boundary:** Trial-and-error learning leads to some limitations in the discovered policy: Pilco is not an optimal control method; it merely finds a solution for the task. (p. 7, 4. Discussion and Conclusion).

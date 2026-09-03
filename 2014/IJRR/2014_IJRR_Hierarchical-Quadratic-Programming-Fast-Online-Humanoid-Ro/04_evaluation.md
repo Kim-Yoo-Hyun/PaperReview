@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1177/0278364914521306; PDF retrieval source: https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1177/0278364914521306; PDF retrieval source: https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.2.2 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, the numerical behavior is improved by limiting the number of iteration in the search loop. | p. 22 (6.2.2 Results) |
 | 6.2.2 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | The motion is composed of two parts: the robot first manipulates the wheel using one hand, then rotates the wheel using both hands with ... | p. 22 (6.2.2 Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The robot has to grasp a point object while looking at it and avoiding its joint limits and the collisions with the environment. | embodiment, simulator version and control stack | p. 25 (6.2.2 Results), p. 22 (6.2.2 Results) |
 | Task/environment | 11: Simulation B-1: Snapshots of the first movement: the robot uses only its left hand to manipulate the wheel. | reset, timeout, object/scene variation | p. 22 (6.2.2 Results), p. 23 (6.2.2 Results) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p.
 - **p. 16 / 3.6 Conclusion - extractive body cue:** However, we cannot yet guarantee that the solver answers in a bounded number of iterations.
 - **p. 17 / 3.6 Conclusion - extractive body cue:** The collision avoidance is enforced by the task ecoll by imposing the distance between a body of the robot and an object to be positive.
 
-- **PDF anchors reviewed:** datasets p. 25 (6.2.2 Results), p. 22 (6.2.2 Results), p. 23 (6.2.2 Results), p. 24 (6.2.2 Results), p. 25 (6.2.2 Results), p. 27 (6.2.2 Results), metrics p. 27 (6.2.2 Results), p. 26 (6.2.2 Results), p. 26 (6.2.2 Results), p. 27 (6.2.2 Results), p. 23 (6.2.2 Results), p. 28 (Figure/Table caption), baselines p. 21 (6.2.2 Results), p. 21 (6.2.2 Results), p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p. 23 (6.2.2 Results), p. 25 (6.2.2 Results), results p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p. 27 (6.2.2 Results), p. 27 (6.2.2 Results), p. 28 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 25 (6.2.2 Results), p. 22 (6.2.2 Results), p. 23 (6.2.2 Results), p. 24 (6.2.2 Results), p. 25 (6.2.2 Results), p. 27 (6.2.2 Results), metrics p. 27 (6.2.2 Results), p. 26 (6.2.2 Results), p. 26 (6.2.2 Results), p. 27 (6.2.2 Results), p. 23 (6.2.2 Results), p. 28 (Figure/Table caption), baselines p. 21 (6.2.2 Results), p. 21 (6.2.2 Results), p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p. 23 (6.2.2 Results), p. 25 (6.2.2 Results), results p. 22 (6.2.2 Results), p. 22 (6.2.2 Results), p. 27 (6.2.2 Results), p. 27 (6.2.2 Results), p. 28 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (32 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For this last experiment, only the real-time version of the HQP was run by the physical robot, the other scores being obtained offline on a similar computer. (p. 27, 6.2.2 Results).
+- **Metric evidence:** The constraints are the joint limits, the support polygon, the FOV and the distance of the left elbow and shoulder to the left obstacle. (p. 22, 6.2.2 Results).
+- **Baseline/ablation evidence:** 10: Simulation A: Number of algorithm iterations and computation time when using a cascade of QP [Kanoun et al., 2011] and using the HQP without and with warm start. (p. 21, 6.2.2 Results).
+- **Failure/negative evidence:** Contrary to the previous simulation, the joints do not systematically remain on the exact limits since the robot is moving to follow the rotation of the wheel. (p. 23, 6.2.2 Results).

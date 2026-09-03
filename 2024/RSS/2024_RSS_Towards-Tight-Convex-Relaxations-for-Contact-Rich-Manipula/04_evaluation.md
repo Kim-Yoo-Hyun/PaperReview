@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p132.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p132.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p132.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p132.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VIII. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible solution for ... | p. 9 (VIII. EXPERIMENTS) |
 | VIII. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared ... | p. 9 (VIII. EXPERIMENTS) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Execution on real hardware Finally, we demonstrate the feasibility of the obtained motion plans on a Kuka LBR iiwa 7 R800 7-DOF robotic arm, ... | embodiment, simulator version and control stack | p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS) |
 | Task/environment | For extra stability, we use a feedback controller to execute the plans on hardware, and employ a hybrid Model-Predictive Controller (MPC) commonly used for ... | reset, timeout, object/scene variation | p. 10 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS) |
@@ -156,7 +156,16 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 - **p. 10 / VIII. EXPERIMENTS - extractive body cue:** This limitation is not surprising, as the baseline is a local method that relies heavily on its initial guess.
 - **p. 9 / VIII. EXPERIMENTS - extractive body cue:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to ...
 
-- **PDF anchors reviewed:** datasets p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), metrics p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), baselines p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), results p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), metrics p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), baselines p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), results p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to the baseline. (p. 9, VIII. EXPERIMENTS).
+- **Metric evidence:** For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible solution for all the generated problem instances. (p. 9, VIII. EXPERIMENTS).
+- **Baseline/ablation evidence:** Comparison with contact-implicit trajectory optimization To compare our method with a state-of-the-art baseline for contact-rich planning, we select a direct, contact-implicit trajectory optimization method similar to those proposed in ... (p. 9, VIII. EXPERIMENTS).
+- **Failure/negative evidence:** In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider geometry and a mere 12% for the T-shaped slider. (p. 10, VIII. EXPERIMENTS).

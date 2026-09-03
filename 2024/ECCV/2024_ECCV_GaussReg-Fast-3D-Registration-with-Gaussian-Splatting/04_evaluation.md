@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 
 ## Evaluation Body Digest
 
-- **p. 10 / 4 Experiment - extractive PDF cue:** Furthermore, to validate the generalization of our method, we collected 10 real-world scenes for testing, called GSReg dataset, which includes 6 indoor and 4 outdoor ...
-- **p. 10 / 4 Experiment - extractive PDF cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
-- **p. 9 / 4 Experiment - extractive PDF cue:** ScanNet [8] is a frequently used 3D dataset for indoor scenes, consisting of 1513 training scenes and 100 test scenes.
-- **p. 9 / 4 Experiment - extractive PDF cue:** 4.1 Experiment Setup Dataset As there is currently no scene-level dataset available for our task, it is necessary for us to create a dataset in ...
-- **p. 11 / 4 Experiment - extractive PDF cue:** GaussReg 11 Table 2: Evaluation on the Objaverse dataset. ↓means lower is better.
-- **p. 11 / 4 Experiment - extractive PDF cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
-- **p. 12 / 4 Experiment - extractive PDF cue:** Visualizations of our method on the GSReg dataset are presented in the last two rows of Figure 4.
-- **p. 12 / 4 Experiment - extractive PDF cue:** Evaluation on the GSReg Dataset The ground-truth registration results of our GSReg dataset are obtained when HLoc was successful.
+- **p. 10 / 4 Experiment - extractive body cue:** Furthermore, to validate the generalization of our method, we collected 10 real-world scenes for testing, called GSReg dataset, which includes 6 indoor and 4 outdoor ...
+- **p. 10 / 4 Experiment - extractive body cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
+- **p. 9 / 4 Experiment - extractive body cue:** ScanNet [8] is a frequently used 3D dataset for indoor scenes, consisting of 1513 training scenes and 100 test scenes.
+- **p. 9 / 4 Experiment - extractive body cue:** 4.1 Experiment Setup Dataset As there is currently no scene-level dataset available for our task, it is necessary for us to create a dataset in ...
+- **p. 11 / 4 Experiment - extractive body cue:** GaussReg 11 Table 2: Evaluation on the Objaverse dataset. ↓means lower is better.
+- **p. 11 / 4 Experiment - extractive body cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
+- **p. 12 / 4 Experiment - extractive body cue:** Visualizations of our method on the GSReg dataset are presented in the last two rows of Figure 4.
+- **p. 12 / 4 Experiment - extractive body cue:** Evaluation on the GSReg Dataset The ground-truth registration results of our GSReg dataset are obtained when HLoc was successful.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, our method (ours) significantly outperforms our coarse registration (ours w./o. fine), proving the effectiveness of our fine registration. | p. 12 (4 Experiment) |
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 1, for 82 scenes in ScanNet-GSReg, HLoc only registers 75.6% of them successfully, while our method achieves a 100% success ... | p. 11 (4 Experiment) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 
 ## Dataset / Benchmark Role
 
-- **p. 10 / 4 Experiment - extractive PDF cue:** Furthermore, to validate the generalization of our method, we collected 10 real-world scenes for testing, called GSReg dataset, which includes 6 indoor and 4 outdoor ...
-- **p. 10 / 4 Experiment - extractive PDF cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
-- **p. 9 / 4 Experiment - extractive PDF cue:** ScanNet [8] is a frequently used 3D dataset for indoor scenes, consisting of 1513 training scenes and 100 test scenes.
-- **p. 9 / 4 Experiment - extractive PDF cue:** 4.1 Experiment Setup Dataset As there is currently no scene-level dataset available for our task, it is necessary for us to create a dataset in ...
-- **p. 11 / 4 Experiment - extractive PDF cue:** GaussReg 11 Table 2: Evaluation on the Objaverse dataset. ↓means lower is better.
-- **p. 11 / 4 Experiment - extractive PDF cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
-- **p. 12 / 4 Experiment - extractive PDF cue:** Visualizations of our method on the GSReg dataset are presented in the last two rows of Figure 4.
-- **p. 12 / 4 Experiment - extractive PDF cue:** Evaluation on the GSReg Dataset The ground-truth registration results of our GSReg dataset are obtained when HLoc was successful.
+- **p. 10 / 4 Experiment - extractive body cue:** Furthermore, to validate the generalization of our method, we collected 10 real-world scenes for testing, called GSReg dataset, which includes 6 indoor and 4 outdoor ...
+- **p. 10 / 4 Experiment - extractive body cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
+- **p. 9 / 4 Experiment - extractive body cue:** ScanNet [8] is a frequently used 3D dataset for indoor scenes, consisting of 1513 training scenes and 100 test scenes.
+- **p. 9 / 4 Experiment - extractive body cue:** 4.1 Experiment Setup Dataset As there is currently no scene-level dataset available for our task, it is necessary for us to create a dataset in ...
+- **p. 11 / 4 Experiment - extractive body cue:** GaussReg 11 Table 2: Evaluation on the Objaverse dataset. ↓means lower is better.
+- **p. 11 / 4 Experiment - extractive body cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
+- **p. 12 / 4 Experiment - extractive body cue:** Visualizations of our method on the GSReg dataset are presented in the last two rows of Figure 4.
+- **p. 12 / 4 Experiment - extractive body cue:** Evaluation on the GSReg Dataset The ground-truth registration results of our GSReg dataset are obtained when HLoc was successful.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: The purpose of our method is to register scenes A and B with Gaussian Splat- ting [17] models, and then combine A with ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: The architecture of GaussReg. Please refer to the text for detailed architecture. 3.1 Overview As shown in Figure 2, the proposed GaussReg mainly ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: The illustration of our overlap image selection and I3D feature extraction. of spherical harmonics. First, we select confidence points whose opacity α is ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualization of our final registration results on ScanNet-GSReg and GSReg. The first two columns are visualizations of GS point clouds to be registered. ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Evaluation on the ScanNet-GSReg dataset. ↓means lower is better, and ↑ means higher is better. We include the time of obtaining point cloud ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 2: Evaluation on the Objaverse dataset. ↓means lower is better. Methods RRE↓ATE↓ FGR [45] 61.59 13.50 REGTR [39] 113.78 43.31
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Evaluation on the GSReg dataset. ↓means lower is better. Methods RRE↓RTE↓RSE↓ Ours w/o. fine 6.904 0.074 0.051 Ours 2.989 0.065 0.047 during training. ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Figure 4. More visual results can be found in Supplementary Material. These experiments fully demonstrate the efficiency and accuracy of our method. Evaluation on the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: The purpose of our method is to register scenes A and B with Gaussian Splat- ting [17] models, and then combine A with ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: The architecture of GaussReg. Please refer to the text for detailed architecture. 3.1 Overview As shown in Figure 2, the proposed GaussReg mainly ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: The illustration of our overlap image selection and I3D feature extraction. of spherical harmonics. First, we select confidence points whose opacity α is ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 4: Visualization of our final registration results on ScanNet-GSReg and GSReg. The first two columns are visualizations of GS point clouds to be registered. ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Evaluation on the ScanNet-GSReg dataset. ↓means lower is better, and ↑ means higher is better. We include the time of obtaining point cloud ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 2: Evaluation on the Objaverse dataset. ↓means lower is better. Methods RRE↓ATE↓ FGR [45] 61.59 13.50 REGTR [39] 113.78 43.31
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Evaluation on the GSReg dataset. ↓means lower is better. Methods RRE↓RTE↓RSE↓ Ours w/o. fine 6.904 0.074 0.051 Ours 2.989 0.065 0.047 during training. ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Figure 4. More visual results can be found in Supplementary Material. These experiments fully demonstrate the efficiency and accuracy of our method. Evaluation on the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Furthermore, to validate the generalization of our method, we collected 10 real-world scenes for testing, called GSReg dataset, which includes 6 indoor and 4 ... | embodiment, simulator version and control stack | p. 10 (4 Experiment), p. 10 (4 Experiment) |
 | Task/environment | Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg ... | reset, timeout, object/scene variation | p. 10 (4 Experiment), p. 9 (4 Experiment) |
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 | Primary metric/result | As shown in Table 1, for 82 scenes in ScanNet-GSReg, HLoc only registers 75.6% of them successfully, while our method achieves a 100% success ... | numeric claim only at cited anchor | p. 11 (4 Experiment) |
 
 - Numeric sentences retained from the body:
-- **p. 10 / 4 Experiment - extractive PDF cue:** To evaluate the performance of GaussReg on objects, we also conduct tests on the Objaverse dataset [9] used in DReg-NeRF [7], whose test set contains ...
-- **p. 11 / 4 Experiment - extractive PDF cue:** In the image-guided fine registration network, we render n = 5 images per GS model as input and set the number of depth hypotheses to ...
-- **p. 11 / 4 Experiment - extractive PDF cue:** Both networks are trained separately for 40 epochs with a batch size of 1.
-- **p. 11 / 4 Experiment - extractive PDF cue:** As shown in Table 1, for 82 scenes in ScanNet-GSReg, HLoc only registers 75.6% of them successfully, while our method achieves a 100% success ratio.
-- **p. 11 / 4 Experiment - extractive PDF cue:** Notably, our method was significantly faster than HLoc (4.8s vs.
-- **p. 12 / 4 Experiment - extractive PDF cue:** Meanwhile, our fine registration is faster than HLoc (4.8s vs.
+- **p. 10 / 4 Experiment - extractive body cue:** To evaluate the performance of GaussReg on objects, we also conduct tests on the Objaverse dataset [9] used in DReg-NeRF [7], whose test set contains ...
+- **p. 11 / 4 Experiment - extractive body cue:** In the image-guided fine registration network, we render n = 5 images per GS model as input and set the number of depth hypotheses to ...
+- **p. 11 / 4 Experiment - extractive body cue:** Both networks are trained separately for 40 epochs with a batch size of 1.
+- **p. 11 / 4 Experiment - extractive body cue:** As shown in Table 1, for 82 scenes in ScanNet-GSReg, HLoc only registers 75.6% of them successfully, while our method achieves a 100% success ratio.
+- **p. 11 / 4 Experiment - extractive body cue:** Notably, our method was significantly faster than HLoc (4.8s vs.
+- **p. 12 / 4 Experiment - extractive body cue:** Meanwhile, our fine registration is faster than HLoc (4.8s vs.
 
 ## Generalization and Failure Cases
 
@@ -161,12 +161,12 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 
 ## Limitations and Verification Questions
 
-- **p. 13 / 5 Discussion - extractive PDF cue:** Limitations and Future Work We only adopt a simple strategy to fuse and filter two GS models.
-- **p. 11 / 4 Experiment - extractive PDF cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
-- **p. 13 / 5 Discussion - extractive PDF cue:** Future work can further explore to address this issue.
-- **p. 10 / 4 Experiment - extractive PDF cue:** Eventually, after excluding cases of failed initial point cloud generation or unsuccessful GS reconstruction, we obtain 1297 training samples and 82 test samples.
+- **p. 13 / 5 Discussion - extractive body cue:** Limitations and Future Work We only adopt a simple strategy to fuse and filter two GS models.
+- **p. 11 / 4 Experiment - extractive body cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
+- **p. 13 / 5 Discussion - extractive body cue:** Future work can further explore to address this issue.
+- **p. 10 / 4 Experiment - extractive body cue:** Eventually, after excluding cases of failed initial point cloud generation or unsuccessful GS reconstruction, we obtain 1297 training samples and 82 test samples.
 
-- **PDF anchors reviewed:** datasets p. 10 (4 Experiment), p. 10 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 11 (4 Experiment), p. 11 (4 Experiment), metrics p. 10 (4 Experiment), p. 10 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 12 (4 Experiment), p. 13 (4 Experiment), baselines p. 11 (4 Experiment), p. 12 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 14 (Figure/Table caption), p. 10 (4 Experiment), results p. 12 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 11 (4 Experiment), p. 13 (4 Experiment), p. 10 (4 Experiment).
+- **Evidence anchors reviewed:** datasets p. 10 (4 Experiment), p. 10 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 11 (4 Experiment), p. 11 (4 Experiment), metrics p. 10 (4 Experiment), p. 10 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 12 (4 Experiment), p. 13 (4 Experiment), baselines p. 11 (4 Experiment), p. 12 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 14 (Figure/Table caption), p. 10 (4 Experiment), results p. 12 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 11 (4 Experiment), p. 13 (4 Experiment), p. 10 (4 Experiment).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

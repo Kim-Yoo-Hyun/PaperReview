@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/6/; PDF retrieval source: https://roboticsconference.org/program/papers/6/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/6/; PDF retrieval source: https://roboticsconference.org/program/papers/6/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This strict pairing can be prohibitively difficult to maintain during contact-rich interactions involving sliding contact or dynamic object motion necessary for general ... | contact-rich manipulation scene | body wording is the source claim |
-| Observation / input | However, most existing human-to-robot (H2R) approaches omit tactile feedback entirely and instead focus on transferring more readily available observations such as egocentric ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | However, most existing human-to-robot (H2R) approaches omit tactile feedback entirely and instead focus on transferring more readily available observations such as egocentric ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | However, most, existing, human-to-robot, H2R, approaches, omit, tactile, feedback, entirely | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
 | Output / action | TactAlign, leverages, rectified, flow, noisy, pseudo-pairs, learn, latent | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
 | Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | visual/tactile/proprioceptive contact history; body terms: However, most, existing, human-to-robot, H2R, approaches, omit, tactile, feedback, entirely | p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION) |
 | Decision / output variable | contact-aware action/force; body terms: consists, stages, self-supervised, representation, learning, cross-embodiment, alignment, pseudo-pairs | p. 3 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY) |
 | Success / guarantee | slip/contact success and safe interaction | p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS AND RESULTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), p. 1 (I. INTRODUCTION)): Our method consists of two stages: self-supervised representation learning and cross-embodiment alignment via pseudo-pairs.
+PDF body contribution framing (p. 3 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), p. 1 (I. INTRODUCTION)): Our method consists of two stages: self-supervised representation learning and cross-embodiment alignment via pseudo-pairs.
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of the same task.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** TactAlign leverages rectified flow with noisy pseudo-pairs to learn a latent mapping that enables H2R policy transfer between humans and robots equipped with heterogeneous tactile ...
@@ -68,12 +68,21 @@ PDF contribution framing (p. 3 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 2 
 
 ## Position in the Robotics Loop
 
-tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY). The downstream handoff is claimed only when the body describes it.
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** This strict pairing can be prohibitively difficult to maintain during contact-rich interactions involving sliding contact or dynamic object motion necessary for general manipulation. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of the same task. (p. 2, I. INTRODUCTION).
+- **Assumption/failure evidence:** Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy cannot recover, often leading to complete unscrewing of the light bulb. (p. 7, 8. The pivoting and insertion).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

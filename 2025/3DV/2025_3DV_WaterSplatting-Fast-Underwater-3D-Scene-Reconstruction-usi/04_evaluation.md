@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=Z9yn9YgNIz&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=Z9yn9YgNIz&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** SeaThru-NeRF Dataset: SeaThru-NeRF Dataset released by [18] contains real-world scenes acquired from four different scenes in sea: IUI3 Red Sea, Curac¸ao, Japanese Gardens Red Sea, ...
-- **p. 5 / 4.1. Results - extractive PDF cue:** First, we evaluated the performance of our method using the standard benchmark dataset, the SeaThru-NeRF Dataset.
-- **p. 7 / 4.2. Ablation Study - extractive PDF cue:** These comparisons are made across validation sets for the SeaThru-NeRF dataset in Table 3.
-- **p. 6 / 4.1. Results - extractive PDF cue:** Quantitative evaluation on the SeaThru-NeRF dataset.
-- **p. 7 / 4.1. Results - extractive PDF cue:** We also achieve higher PSNR values in both scenes.
-- **p. 6 / 4.1. Results - extractive PDF cue:** Underwater scene rendering in the 'Curasao' scene.
-- **p. 5 / 4. Experiments - extractive PDF cue:** We present the alpha blending of depth as the depth map and the rendering without medium to demonstrate the ability to decouple the medium and ...
-- **p. 7 / 4.1. Results - extractive PDF cue:** Our results exhibit better restoring quality and reasonable depth map compared to SeaThru-NeRF-NS' results. to produce a reasonable depth map at greater distances, as indicated ...
+- **p. 5 / 4. Experiments - extractive body cue:** SeaThru-NeRF Dataset: SeaThru-NeRF Dataset released by [18] contains real-world scenes acquired from four different scenes in sea: IUI3 Red Sea, Curac¸ao, Japanese Gardens Red Sea, ...
+- **p. 5 / 4.1. Results - extractive body cue:** First, we evaluated the performance of our method using the standard benchmark dataset, the SeaThru-NeRF Dataset.
+- **p. 7 / 4.2. Ablation Study - extractive body cue:** These comparisons are made across validation sets for the SeaThru-NeRF dataset in Table 3.
+- **p. 6 / 4.1. Results - extractive body cue:** Quantitative evaluation on the SeaThru-NeRF dataset.
+- **p. 7 / 4.1. Results - extractive body cue:** We also achieve higher PSNR values in both scenes.
+- **p. 6 / 4.1. Results - extractive body cue:** Underwater scene rendering in the 'Curasao' scene.
+- **p. 5 / 4. Experiments - extractive body cue:** We present the alpha blending of depth as the depth map and the rendering without medium to demonstrate the ability to decouple the medium and ...
+- **p. 7 / 4.1. Results - extractive body cue:** Our results exhibit better restoring quality and reasonable depth map compared to SeaThru-NeRF-NS' results. to produce a reasonable depth map at greater distances, as indicated ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our rendering without medium and depth maps significantly outperform those from the SeaThru-NeRF, especially in scenes that are farther from the camera. | p. 7 (4.1. Results) |
 | 4.1. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves better rendering quality and preserves finer distant geometric details while reducing the amount of floaters. | p. 6 (4.1. Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** SeaThru-NeRF Dataset: SeaThru-NeRF Dataset released by [18] contains real-world scenes acquired from four different scenes in sea: IUI3 Red Sea, Curac¸ao, Japanese Gardens Red Sea, ...
-- **p. 5 / 4.1. Results - extractive PDF cue:** First, we evaluated the performance of our method using the standard benchmark dataset, the SeaThru-NeRF Dataset.
-- **p. 7 / 4.2. Ablation Study - extractive PDF cue:** These comparisons are made across validation sets for the SeaThru-NeRF dataset in Table 3.
-- **p. 6 / 4.1. Results - extractive PDF cue:** Quantitative evaluation on the SeaThru-NeRF dataset.
-- **p. 7 / 4.1. Results - extractive PDF cue:** We also achieve higher PSNR values in both scenes.
-- **p. 6 / 4.1. Results - extractive PDF cue:** Underwater scene rendering in the 'Curasao' scene.
+- **p. 5 / 4. Experiments - extractive body cue:** SeaThru-NeRF Dataset: SeaThru-NeRF Dataset released by [18] contains real-world scenes acquired from four different scenes in sea: IUI3 Red Sea, Curac¸ao, Japanese Gardens Red Sea, ...
+- **p. 5 / 4.1. Results - extractive body cue:** First, we evaluated the performance of our method using the standard benchmark dataset, the SeaThru-NeRF Dataset.
+- **p. 7 / 4.2. Ablation Study - extractive body cue:** These comparisons are made across validation sets for the SeaThru-NeRF dataset in Table 3.
+- **p. 6 / 4.1. Results - extractive body cue:** Quantitative evaluation on the SeaThru-NeRF dataset.
+- **p. 7 / 4.1. Results - extractive body cue:** We also achieve higher PSNR values in both scenes.
+- **p. 6 / 4.1. Results - extractive body cue:** Underwater scene rendering in the 'Curasao' scene.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our approach surpasses the performance of state-of-the-art NeRF-based underwater reconstruction methods [18] while offering real-time rendering speed [15].
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Splatting with Medium: We start rendering by casting a ray per pixel and collect the patch-intersected Gaussians along the ray and their color ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Underwater scene rendering in the 'Curasao' scene. From left to right: white-balanced ground-truth image, our result, SeaThru- NeRF's result, 3DGS' result, and Zip-NeRF's ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Underwater scene rendering in the 'IUI3 Red Sea' scene, 'Japanese Gardens Red Sea' scene and 'Panama' scene. We compare our method with SeaThru-NeRF ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative evaluation on the SeaThru-NeRF dataset. We show PSNR↑, SSIM↑, LPIPS↓, Avg. FPS↑, and Avg. Training Time↓. The first , second , and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Simulated scene rendering with the easy foggy scene (upper) and hard foggy scene (lower). We compare our method with SeaThru-NeRF by showing both ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Restoration Performance. (PSNR↑/SSIM↑/LPIPS↓) Dataset/Metric Foggy-Easy Foggy-Hard
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Ablation Study: loss function alignment. Our proposed LReg-DSSIM improves the reconstruction quality of distant details in dark areas, and the benefit is obvious ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our approach surpasses the performance of state-of-the-art NeRF-based underwater reconstruction methods [18] while offering real-time rendering speed [15].
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Splatting with Medium: We start rendering by casting a ray per pixel and collect the patch-intersected Gaussians along the ray and their color ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Underwater scene rendering in the 'Curasao' scene. From left to right: white-balanced ground-truth image, our result, SeaThru- NeRF's result, 3DGS' result, and Zip-NeRF's ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Underwater scene rendering in the 'IUI3 Red Sea' scene, 'Japanese Gardens Red Sea' scene and 'Panama' scene. We compare our method with SeaThru-NeRF ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative evaluation on the SeaThru-NeRF dataset. We show PSNR↑, SSIM↑, LPIPS↓, Avg. FPS↑, and Avg. Training Time↓. The first , second , and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Simulated scene rendering with the easy foggy scene (upper) and hard foggy scene (lower). We compare our method with SeaThru-NeRF by showing both ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Restoration Performance. (PSNR↑/SSIM↑/LPIPS↓) Dataset/Metric Foggy-Easy Foggy-Hard
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Ablation Study: loss function alignment. Our proposed LReg-DSSIM improves the reconstruction quality of distant details in dark areas, and the benefit is obvious ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | SeaThru-NeRF Dataset: SeaThru-NeRF Dataset released by [18] contains real-world scenes acquired from four different scenes in sea: IUI3 Red Sea, Curac¸ao, Japanese Gardens Red ... | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 5 (4.1. Results) |
 | Task/environment | First, we evaluated the performance of our method using the standard benchmark dataset, the SeaThru-NeRF Dataset. | reset, timeout, object/scene variation | p. 5 (4.1. Results), p. 7 (4.2. Ablation Study) |
@@ -121,7 +121,7 @@ PDF body evaluation/result cue (p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (
 | Primary metric/result | Our method achieves better rendering quality and preserves finer distant geometric details while reducing the amount of floaters. | numeric claim only at cited anchor | p. 6 (4.1. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experiments - extractive PDF cue:** We also calculate the FPS and total training time using the same RTX 4080 GPU to illustrate the speed difference between baselines and our method.
+- **p. 5 / 4. Experiments - extractive body cue:** We also calculate the FPS and total training time using the same RTX 4080 GPU to illustrate the speed difference between baselines and our method.
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5. Limitations - extractive PDF cue:** Although our method achieves good reconstruction quality, there are some limitations to consider.
-- **p. 7 / 5. Limitations - extractive PDF cue:** However, in the foreground, our method prunes medium-role primitives well while SeaThru-NeRF cannot prevent the geometrical field from fitting the medium, resulting in wave-like artifacts.
-- **p. 8 / 5. Limitations - extractive PDF cue:** Limitation: insufficient supervision.
-- **p. 8 / 5. Limitations - extractive PDF cue:** Limitation: simulating distant medium with Gaussians.
-- **p. 6 / 4.1. Results - extractive PDF cue:** Both traditional 3DGS and NeRF with a proposal sampler cannot handle semitransparent medium well.
-- **p. 5 / 4.1. Results - extractive PDF cue:** However, ZipNeRF training takes orders of magnitude more time than our method and does not offer real-time rendering.
+- **p. 7 / 5. Limitations - extractive body cue:** Although our method achieves good reconstruction quality, there are some limitations to consider.
+- **p. 7 / 5. Limitations - extractive body cue:** However, in the foreground, our method prunes medium-role primitives well while SeaThru-NeRF cannot prevent the geometrical field from fitting the medium, resulting in wave-like artifacts.
+- **p. 8 / 5. Limitations - extractive body cue:** Limitation: insufficient supervision.
+- **p. 8 / 5. Limitations - extractive body cue:** Limitation: simulating distant medium with Gaussians.
+- **p. 6 / 4.1. Results - extractive body cue:** Both traditional 3DGS and NeRF with a proposal sampler cannot handle semitransparent medium well.
+- **p. 5 / 4.1. Results - extractive body cue:** However, ZipNeRF training takes orders of magnitude more time than our method and does not offer real-time rendering.
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4.1. Results), p. 7 (4.2. Ablation Study), p. 6 (4.1. Results), p. 7 (4.1. Results), p. 6 (4.1. Results), metrics p. 5 (4. Experiments), p. 7 (4.1. Results), p. 5 (4.1. Results), p. 6 (4.1. Results), p. 7 (4.2. Ablation Study), p. 1 (Figure/Table caption), baselines p. 7 (4.1. Results), p. 5 (4. Experiments), p. 5 (4.1. Results), p. 7 (4.1. Results), p. 1 (Figure/Table caption), p. 6 (4.1. Results), results p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (4.1. Results), p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 5 (4.1. Results).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4.1. Results), p. 7 (4.2. Ablation Study), p. 6 (4.1. Results), p. 7 (4.1. Results), p. 6 (4.1. Results), metrics p. 5 (4. Experiments), p. 7 (4.1. Results), p. 5 (4.1. Results), p. 6 (4.1. Results), p. 7 (4.2. Ablation Study), p. 1 (Figure/Table caption), baselines p. 7 (4.1. Results), p. 5 (4. Experiments), p. 5 (4.1. Results), p. 7 (4.1. Results), p. 1 (Figure/Table caption), p. 6 (4.1. Results), results p. 7 (4.1. Results), p. 6 (4.1. Results), p. 7 (4.1. Results), p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 5 (4.1. Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

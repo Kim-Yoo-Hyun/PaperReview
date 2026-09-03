@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `conditioning observation와 noisy/intermediate sample → latent/noise variable와 conditional distribution → generated sample, action chunk 또는 trajectory`.
-- 이 논문의 재사용 가능한 지점은 Our first key observation is this: The marginal vector field (equation 8) generates the marginal probability path (equation 6).를 Our second key observation is therefore: The FM (equation 5) and CFM (equation 9) objectives have identical gradients w.r.t. θ.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 latent/noise variable와 conditional distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The OT path reduces noise roughly linearly, while diffusion paths visibly remove noise only towards the end of the path.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target vector field that generates a desired probability path.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The recent influx of amazing advances in generative modeling, e.g., for image generation Ramesh et al. (p. 1, 1 INTRODUCTION).
+- **Paper-specific mechanism:** Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target vector field that generates a desired probability path. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 7: Flow Matching, especially when using OT paths, allows us to use fewer evaluations for sampling while retaining similar numerical error (left) and sample quality (right). Results are shown ... (p. 9, Figure/Table caption); the relevant task/metric cue is Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 60 80 100 NFE 10 20 30 40 50 FID Euler Midpoint ... (p. 9, 6 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Another important observation is that, as these probability paths were previously derived as solutions of diffusion processes, they do not actually reach a true noise distribution in finite time. (p. 5, 1 INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We explore the empirical benefits of using Flow Matching on the image datasets of CIFAR10 (Krizhevsky et al., 2009) and ImageNet at resolutions 32, 64, and 128 (Chrabaszcz et al., 2017; Deng ....
-3. Compare against the body-reported baseline or a matched simpler baseline: When compared to our ablation models, we find that models trained using Flow Matching with the OT path always result in the most efficient sampler, regardless of ODE solver, as demonstrated next..
-4. Report the body metric and its denominator/aggregation: Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 60 80 100 NFE 10 20 30 40 50 FID Euler Midpoint RK4 0 ....
-5. Re-run the body-reported ablation/failure condition: The OT path reduces noise roughly linearly, while diffusion paths visibly remove noise only towards the end of the path..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The recent influx of amazing advances in generative modeling, e.g., for image generation Ramesh et al. (p. 1, 1 INTRODUCTION); preserve the objective/update rule: Our second key observation is therefore: The FM (equation 5) and CFM (equation 9) objectives have identical gradients w.r.t. θ. (p. 4, 1 INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: We explore the empirical benefits of using Flow Matching on the image datasets of CIFAR10 (Krizhevsky et al., 2009) and ImageNet at resolutions 32, 64, and 128 (Chrabaszcz et al., ... (p. 7, 6 EXPERIMENTS).
+3. Compare against the reported or matched baseline: When compared to our ablation models, we find that models trained using Flow Matching with the OT path always result in the most efficient sampler, regardless of ODE solver, as ... (p. 9, 6 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 60 80 100 NFE 10 20 30 40 50 FID Euler Midpoint ... (p. 9, 6 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: The OT path reduces noise roughly linearly, while diffusion paths visibly remove noise only towards the end of the path. (p. 8, 6 EXPERIMENTS); if none is reported, design one around: Another important observation is that, as these probability paths were previously derived as solutions of diffusion processes, they do not actually reach a true noise distribution in finite time. (p. 5, 1 INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT); the primary result is directionally consistent at p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (6 EXPERIMENTS), and measure the boundary at p. 5 (1 INTRODUCTION), p. 8 (6 EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Preprint, particular, Flow mechanism이 When compared to our ablation models, we find that models trained using Flow Matching with the ... 대비 Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 ...을 개선하고, The OT path reduces noise roughly linearly, while diffusion paths visibly remove noise only towards the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The recent influx of amazing advances in generative modeling, e.g., for image generation Ramesh et al.), does the paper-specific mechanism (Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target ...) retain the reported evaluation outcome (Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 ...) when tested against the paper's strongest explicit boundary (Another important observation is that, as these probability paths were previously derived as solutions of diffusion processes, they ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target vector field that generates a desired probability path. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 7: Flow Matching, especially when using OT paths, allows us to use fewer evaluations for sampling while retaining similar numerical error (left) and sample quality (right). Results are shown ... (p. 9, Figure/Table caption).
+- **Strongest explicit boundary:** Another important observation is that, as these probability paths were previously derived as solutions of diffusion processes, they do not actually reach a true noise distribution in finite time. (p. 5, 1 INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/black25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/black25a/black25a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/black25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/black25a/black25a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 10: Comparing π0.5 with other models. Our full model significantly outperforms both π0 and π0-FAST+Flow in the mock home test environments. We compare ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: Evaluating performance with different numbers of locations. Performance over the four test tasks - "dishes in sink", "items in drawer", "laundry basket", ... | p. 7 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We describe π0.5, a new model based on π0 that uses co-training on heterogeneous tasks to enable broad generalization. π0.5 uses data from multiple ... | embodiment, simulator version and control stack | p. 1 (Abstract), p. 2 (1 Introduction) |
 | Task/environment | We leverage this observation to design a co-training framework for VLAs that can utilize heterogeneous and diverse knowledge sources to enable broad generalization, creating ... | reset, timeout, object/scene variation | p. 2 (1 Introduction), p. 1 (Abstract) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 8 / 2 Related Work - extractive body cue:** For both experiments we see in the results that excluding either of the two cross-embodiment data sources significantly degrades performance, indicating that π0.5 benefits considerably ...
 - **p. 23 / Figure/Table caption - extractive body cue:** Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four representative household tasks: Items in Drawer, Dishes ...
 
-- **PDF anchors reviewed:** datasets p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), metrics p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption), p. 2 (1 Introduction), p. 6 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 24 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), metrics p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption), p. 2 (1 Introduction), p. 6 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 24 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 18: Per-task performance breakdown for high-level inference methods. We evaluate the full π0.5 model and various high-level inference baselines across four representative household tasks. For Items in Drawer and ... (p. 24, Figure/Table caption).
+- **Metric evidence:** Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four representative household tasks: Items in Drawer, Dishes in Sink, Laundry Basket, and ... (p. 23, Figure/Table caption).
+- **Baseline/ablation evidence:** Figure 6: Evaluating performance with different numbers of locations. Performance over the four test tasks - "dishes in sink", "items in drawer", "laundry basket", "make bed" - improves with more ... (p. 7, Figure/Table caption).
+- **Failure/negative evidence:** Some evaluations include cancelled episodes due to robot failures, time limitations or other causes, which are removed. (p. 20, 3 DoF holonomic base).

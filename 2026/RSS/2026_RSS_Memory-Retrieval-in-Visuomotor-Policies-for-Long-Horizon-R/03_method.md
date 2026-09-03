@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/10/; PDF retrieval source: https://roboticsconference.org/program/papers/10/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsconference.org/program/papers/10/; PDF retrieval source: https://roboticsconference.org/program/papers/10/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (III. HALO), p. 4 (III. HALO), p. 3 (III. HALO),
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | For VQA supervision, the policy backbone is conditioned on the encoded history Mt, the current observation embedding xt, and the question u, ... | p. 4 (III. HALO), p. 4 (III. HALO) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Motor Action Reducing Model Drift via Sparsification Text Instruction OR Task Instruction Robot Trajectory Text Query Text Answer Put all breads in ... | p. 4 (III. HALO), p. 3 (III. HALO) |
@@ -130,8 +130,17 @@ PDF body method statement (p. 4 (III. HALO), p. 4 (III. HALO), p. 3 (III. HALO),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. HALO), p. 4 (III. HALO), p. 3 (III. HALO), p. 1 (Abstract), p. 3 (III. HALO), p. 1 (I. INTRODUCTION), objective p. 2 (I. INTRODUCTION), p. 4 (III. HALO), p. 4 (III. HALO), p. 5 (III. HALO), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 7 (IV. EXPERIMENTS), p. 3 (III. HALO), p. 4 (III. HALO), p. 5 (III. HALO), p. 7 (IV. EXPERIMENTS), p. 3 (III. HALO).
+- **Evidence anchors reviewed:** method p. 4 (III. HALO), p. 4 (III. HALO), p. 3 (III. HALO), p. 1 (Abstract), p. 3 (III. HALO), p. 1 (I. INTRODUCTION), objective p. 2 (I. INTRODUCTION), p. 4 (III. HALO), p. 4 (III. HALO), p. 5 (III. HALO), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 7 (IV. EXPERIMENTS), p. 3 (III. HALO), p. 4 (III. HALO), p. 5 (III. HALO), p. 7 (IV. EXPERIMENTS), p. 3 (III. HALO).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We parameterize the visuomotor policy πθ(at / τt, l) with three main components: (i) modality-specific encoders consisting of an observation encoder gobs θ and an action encoder gact θ , ... (p. 3, III. HALO).
+- **Objective/update evidence:** Concretely, it generates task-relevant, memory-dependent question-answer pairs from demonstration trajectories and trains the policy jointly with a video questionanswering objective, transferring VLM priors to the visuomotor policy. (p. 1, Abstract).
+- **Temporal/runtime evidence:** Token Merging [40] compresses the history by merging tokens with similar embeddings that are temporally adjacent to maintain a fixed budget of memory. (p. 7, IV. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

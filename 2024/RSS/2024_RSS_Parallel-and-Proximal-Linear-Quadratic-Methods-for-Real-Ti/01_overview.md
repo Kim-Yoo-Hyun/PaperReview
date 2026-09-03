@@ -1,8 +1,8 @@
 # Parallel and Proximal Linear-Quadratic Methods for Real-Time Constrained Model-Predictive Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p002.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p002.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p002.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p002.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, MPC, optimal control, LQR, whole-body control, real-time
 - Official paper: https://www.roboticsproceedings.org/rss20/p002.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p002.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p002.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +80,12 @@ Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 While solving the LQR is often a bottleneck in recent efficient optimal control solvers [21, 36, 22], most of them rely on sequential implementation without exploiting the parallelization capabilities of modern processing ...를 문제로 두고, We present this as a secondary contribution of this paper, which we have implemented and evaluated in the experimental section.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. RICCATI EQUATIONS FOR THE PROXIMAL LQ PROBLEM), p. 8 (VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In our setting, the linear subproblem (47) does not have that same structure (such that our construction from section V cannot be iterated), however, it is still possible to leverage ... (p. 9, VII. DISCUSSION).
+- **Actual contribution:** In this paper, we introduce a parallel algorithm to enhance the efficiency of model-predictive control (MPC) solvers [49, 16]. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** The timing results of this experiment are shown in fig. (p. 10, VIII. EXPERIMENTS).
+- **Explicit failure boundary:** In our setting, the linear subproblem (47) does not have that same structure (such that our construction from section V cannot be iterated), however, it is still possible to leverage ... (p. 9, VII. DISCUSSION).

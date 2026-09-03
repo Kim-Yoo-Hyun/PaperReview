@@ -1,8 +1,10 @@
 # FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2505.10075.
-> PDF retrieval source: https://arxiv.org/pdf/2505.10075. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2505.10075.
+> PDF retrieval source: https://arxiv.org/pdf/2505.10075. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / arXiv
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2505.10075
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Existing visual world models have undergone rapid development in recent years.를 문제로 두고, We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 14 (A. Implementation Details), p. 13 (A. Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Existing visual world models have undergone rapid development in recent years. (p. 1, 1. Introduction).
+- **Actual contribution:** We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Figure 5. Qualitative results on the Robodesk and Robosuite dataset. The trajectory comes from the validation set, which is split from the original training trajectories and is not used for ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** We hypothesize that the failure lies in that the visual reward cannot always point to the correct trajectory, which is also revealed by [87]. (p. 8, 4.2. Visual Planning).

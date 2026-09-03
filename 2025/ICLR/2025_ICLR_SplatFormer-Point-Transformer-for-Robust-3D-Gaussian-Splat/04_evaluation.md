@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9NfHbWKqMF; PDF retrieval source: https://openreview.net/pdf/b05fcaaffbc6f81e70f605c033bb30f44fe43513.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9NfHbWKqMF; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111734. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 
 
 ## Evaluation Body Digest
 
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world object-centric captures.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Even on the real-world dataset, despite being trained exclusively on synthetic data, SplatFormer reduces artifacts.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We select common objects and scenes with meaningful topdown views, such as city streets and buildings, avoiding those with large cavities that are invisible from ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Next, we present the results on OOD-NVS, crossdataset generalization, and ablation studies.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** H.1 using the MVImgNet dataset (Yu et al., 2023), and outline both the potential and challenges.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Since object-centric scenes often possess concentrated spatial distribution, our current SplatFormer can be quite efficient for large-scale 3DGS during inference.
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** It takes 2 days to generate each training dataset.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world object-centric captures.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Even on the real-world dataset, despite being trained exclusively on synthetic data, SplatFormer reduces artifacts.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We select common objects and scenes with meaningful topdown views, such as city streets and buildings, avoiding those with large cavities that are invisible from ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Next, we present the results on OOD-NVS, crossdataset generalization, and ablation studies.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** H.1 using the MVImgNet dataset (Yu et al., 2023), and outline both the potential and challenges.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Since object-centric scenes often possess concentrated spatial distribution, our current SplatFormer can be quite efficient for large-scale 3DGS during inference.
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,41 +30,41 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which ... | p. 9 (5 EXPERIMENTS) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Published as a conference paper at ICLR 2025 On the GSO-OOD evaluation set, SplatFormer achieves substantial improvements in both metrics and visual quality. | p. 10 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3, while 2D denoising methods improve the original 3DGS, they significantly underperform compared to SplatFormer and fail to recover geometric details. | p. 10 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Third, applying our method to refining 2DGS may further improve the OOD-NVS results. | p. 10 (5 EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior ... | p. 2 (Figure/Table caption) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in ... | p. 9 (5 EXPERIMENTS) |
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world object-centric captures.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Even on the real-world dataset, despite being trained exclusively on synthetic data, SplatFormer reduces artifacts.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We select common objects and scenes with meaningful topdown views, such as city streets and buildings, avoiding those with large cavities that are invisible from ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Next, we present the results on OOD-NVS, crossdataset generalization, and ablation studies.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** H.1 using the MVImgNet dataset (Yu et al., 2023), and outline both the potential and challenges.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Since object-centric scenes often possess concentrated spatial distribution, our current SplatFormer can be quite efficient for large-scale 3DGS during inference.
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive PDF cue:** It takes 2 days to generate each training dataset.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world object-centric captures.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Even on the real-world dataset, despite being trained exclusively on synthetic data, SplatFormer reduces artifacts.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We select common objects and scenes with meaningful topdown views, such as city streets and buildings, avoiding those with large cavities that are invisible from ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Next, we present the results on OOD-NVS, crossdataset generalization, and ablation studies.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** H.1 using the MVImgNet dataset (Yu et al., 2023), and outline both the potential and challenges.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Since object-centric scenes often possess concentrated spatial distribution, our current SplatFormer can be quite efficient for large-scale 3DGS during inference.
+- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior in-distribution ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Method Overview. We introduce SplatFormer, a generalizable 3D point transformer network designed for feed-forward refinement of Gaussian splats, enabling robust out-of-distribution novel-view synthesis ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: OOD-NVS. Comparisons on the ShapeNet-OOD and Objaverse-OOD evaluation sets. The metric is evaluated on OOD test views with elevation ϕood ≥70◦; colors indicate ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Novel View Synthesis under Out-of-Distribution Camera Angles. The first column shows 4 out of 32 input views. Here, we compare our method with ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Cross-dataset Generalization. SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Cross-dataset Generalization Methods GSO-OOD RealWorld-OOD PSNR SSIM LPIPS PSNR SSIM LPIPS Nerfbusters 15.95 0.678 0.300 23.93 0.893 0.114 2DGS
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 3: SplatFormer vs 2D Denoising ShapeNet-OOD
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior in-distribution ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Method Overview. We introduce SplatFormer, a generalizable 3D point transformer network designed for feed-forward refinement of Gaussian splats, enabling robust out-of-distribution novel-view synthesis ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: OOD-NVS. Comparisons on the ShapeNet-OOD and Objaverse-OOD evaluation sets. The metric is evaluated on OOD test views with elevation ϕood ≥70◦; colors indicate ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Novel View Synthesis under Out-of-Distribution Camera Angles. The first column shows 4 out of 32 input views. Here, we compare our method with ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Cross-dataset Generalization. SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Cross-dataset Generalization Methods GSO-OOD RealWorld-OOD PSNR SSIM LPIPS PSNR SSIM LPIPS Nerfbusters 15.95 0.678 0.300 23.93 0.893 0.114 2DGS
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 3: SplatFormer vs 2D Denoising ShapeNet-OOD
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes. | embodiment, simulator version and control stack | p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
 | Task/environment | SplatFormer trained on Objaverse successfully mitigates artifacts in OOD views in the GSO (Downs et al., 2022) dataset and our real-world object-centric captures. | reset, timeout, object/scene variation | p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
@@ -118,15 +118,15 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
 | In summary, we make the following contributions: • We introduce OOD-NVS, a new experimental protocol specifically designed to evaluate the performance of NVS methods ... | While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which ... | PDF body cue; verify exact table/figure and matched conditions | p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
-| Primary metric/result | Published as a conference paper at ICLR 2025 On the GSO-OOD evaluation set, SplatFormer achieves substantial improvements in both metrics and visual quality. | numeric claim only at cited anchor | p. 10 (5 EXPERIMENTS) |
+| Primary metric/result | 3, while 2D denoising methods improve the original 3DGS, they significantly underperform compared to SplatFormer and fail to recover geometric details. | numeric claim only at cited anchor | p. 10 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** As visualized in Fig 1, for a centered object, we simulate an input camera capturing 360degree azimuths at low elevations.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We use Blender to render 20 objects from ShapeNet (Chang et al., 2015) and Objaverse-v1 (Deitke et al., 2023) each.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** We find that an RTX 4090 GPU can accommodate up to 4 million Gaussians.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** As visualized in Fig 1, for a centered object, we simulate an input camera capturing 360degree azimuths at low elevations.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We use Blender to render 20 objects from ShapeNet (Chang et al., 2015) and Objaverse-v1 (Deitke et al., 2023) each.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** We find that an RTX 4090 GPU can accommodate up to 4 million Gaussians.
+- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
 
 ## Generalization and Failure Cases
 
@@ -162,14 +162,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 6 CONCLUSION - extractive PDF cue:** In this work, we introduced a new out-of-distribution (OOD) novel view synthesis test scenario and demonstrated that most neural rendering methods, including those using regularization ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Our method has several limitations that provide directions for future work.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Finally, we discuss the limitations of our approach and potential directions for future research.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Method Overview. We introduce SplatFormer, a generalizable 3D point transformer network designed for feed-forward refinement of Gaussian splats, enabling robust out-of-distribution novel-view synthesis ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in the ...
+- **p. 10 / 6 CONCLUSION - extractive body cue:** In this work, we introduced a new out-of-distribution (OOD) novel view synthesis test scenario and demonstrated that most neural rendering methods, including those using regularization ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Our method has several limitations that provide directions for future work.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Finally, we discuss the limitations of our approach and potential directions for future research.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Method Overview. We introduce SplatFormer, a generalizable 3D point transformer network designed for feed-forward refinement of Gaussian splats, enabling robust out-of-distribution novel-view synthesis ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in the ...
 
-- **PDF anchors reviewed:** datasets p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 2 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 2 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

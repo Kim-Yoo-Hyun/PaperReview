@@ -1,8 +1,10 @@
 # DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/LRA.2020.2977257.
-> PDF retrieval source: https://doi.org/10.1109/LRA.2020.2977257. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/LRA.2020.2977257.
+> PDF retrieval source: https://doi.org/10.1109/LRA.2020.2977257. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / IEEE Robotics and Automation Letters
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://doi.org/10.1109/LRA.2020.2977257
 - Code/Project: https://digit.ml/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -44,7 +46,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 | Observation/input | Second, we demonstrate the sensor by learning to manipulate small objects with a multi-finger hand from raw tactile inputs. | tactile image/force, vision과 proprioceptive history | p. 1 (I. INTRODUCTION), p. 1 (Abstract) |
 | State/latent | Second, demonstrate, sensor, learning, manipulate, small, objects, multi-finger, hand, tactile, inputs, One | contact geometry, force state 또는 latent dynamics | p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION) |
 | Output/action | One of the contributing factors that limit current robotic manipulation systems is the difficulty of precisely sensing contact forces - sensing and reasoning about contact forces are crucial to accurately control interactions ... | grasp/contact action, force command 또는 object motion | p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
-| Objective/outcome | To provide the robotic community access to reliable and low-cost tactile sensors, we open-source the DIGIT design at www.digit.ml. | slip/contact success, force/pose error와 robustness | p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
+| Objective/outcome | To provide the robotic community access to reliable and low-cost tactile sensors, we open-source the DIGIT design at www.digit.ml. | slip/contact success, force/pose error와 robustness | p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION) |
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements of being ...를 문제로 두고, To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 7 (V. EXPERIMENTAL RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS).
+- **Explicit failure boundary:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).

@@ -1,8 +1,10 @@
 # LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p065.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p065.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p065.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p065.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p065.pdf
 - Code/Project: https://langwbc.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, transferring these controllers to real-world hardware faces challenges due to the sim-to-real gap.를 문제로 두고, Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (A. Learning-based Humanoid Whole-body Control), p. 1 (1. Iyrropucrion), p. 1 (Abstract), p. 4 (A. Motion-Tracking Teacher Policy), p. 2 (B. Generative Action Modeling), p. 5 (B. Language-Directed Student Policy) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** While prior works on language-directed real-world humanoid control have shown success by decoupling the problem into kinematic motion generation and whole-body tracking control [34, 10, 25], this hierarchical approach has ... (p. 1, 1. Iyrropucrion).
+- **Actual contribution:** Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data (p. 2, 1. Iyrropucrion).
+- **Evaluation boundary:** We conduct extensive experiments to evaluate our framework for language-directed humanoid whole-body control with 4 Unitree GI humanoid robot. (p. 5, IV. EXPERIMENTS).
+- **Explicit failure boundary:** CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP policy struggles to generalize from. (p. 7, C. Generalization to Unseen Texts).

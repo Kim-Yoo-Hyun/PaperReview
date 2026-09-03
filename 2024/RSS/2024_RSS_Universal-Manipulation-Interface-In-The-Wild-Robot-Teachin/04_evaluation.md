@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p045.html; PDF retrieval source: https://arxiv.org/pdf/2402.10329. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p045.html; PDF retrieval source: https://arxiv.org/pdf/2402.10329. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. CAPABILITY EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | This baseline only achieves 11/20 = 55% success rate. | p. 7 (V. CAPABILITY EXPERIMENTS) |
 | V. CAPABILITY EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we ... | p. 7 (V. CAPABILITY EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To access capability and generalization, we evaluate UMI on 4 real-world robotic tasks across both narrow domain and in-the-wild environments, shown in Fig. | embodiment, simulator version and control stack | p. 6 (IV. EVALUATIONS), p. 6 (V. CAPABILITY EXPERIMENTS) |
 | Task/environment | For capability experiments, all tasks are evaluated in the same environment as data collection but with randomized robot and object initial states. | reset, timeout, object/scene variation | p. 6 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Unfortunately, neither ∗Indicates equal contribution is sufficient, as teleoperation requires high setup costs for hardware and expert operators, while human videos exhibit a large ... | This baseline only achieves 11/20 = 55% success rate. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 9 (V. CAPABILITY EXPERIMENTS) |
+| 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by ... | This baseline only achieves 11/20 = 55% success rate. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 9 (V. CAPABILITY EXPERIMENTS) |
 | Primary metric/result | This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we ... | numeric claim only at cited anchor | p. 7 (V. CAPABILITY EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 - **p. 8 / V. CAPABILITY EXPERIMENTS - extractive body cue:** The red arrow indicates failure behavior, green arrow indicates desired behavior.
 - **p. 9 / V. CAPABILITY EXPERIMENTS - extractive body cue:** The most salient failure case is when the two arms lift the bottom hem of the shirt, where the baseline policy often misses one of ...
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. EVALUATIONS), p. 6 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), metrics p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 9 (V. CAPABILITY EXPERIMENTS), baselines p. 8 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 9 (V. CAPABILITY EXPERIMENTS), p. 10 (VI. IN-THE-WILD GENERALIZATION EXPERIMENTS), results p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 9 (V. CAPABILITY EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. EVALUATIONS), p. 6 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), metrics p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 9 (V. CAPABILITY EXPERIMENTS), baselines p. 8 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 9 (V. CAPABILITY EXPERIMENTS), p. 10 (VI. IN-THE-WILD GENERALIZATION EXPERIMENTS), results p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 9 (V. CAPABILITY EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 8: Narrow-domain Evaluation Results. (a) Initial states for all evaluation episodes overlayed together. For each task, all methods start with the same set of initial states, matched manually with ... (p. 8, Figure/Table caption).
+- **Metric evidence:** This baseline only achieves 11/20 = 55% success rate. (p. 7, V. CAPABILITY EXPERIMENTS).
+- **Baseline/ablation evidence:** (b) Typical failure mode of the baseline/ablation policy. (p. 8, V. CAPABILITY EXPERIMENTS).
+- **Failure/negative evidence:** This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we had mounted the FR2 robot at ... (p. 7, V. CAPABILITY EXPERIMENTS).

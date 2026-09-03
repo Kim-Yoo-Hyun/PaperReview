@@ -1,8 +1,10 @@
 # CLIP-RT: Learning Language-Conditioned Robotic Policies from Natural Language Supervision
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p016.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p016.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p016.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p016.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p016.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At test time, ...를 문제로 두고, Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT outperforms O ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (A. Preliminaries), p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** A key bottleneck is that collecting robotic data offen requires expertise (p. 1, Abstract).
+- **Actual contribution:** Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT ... (p. 2, Abstract).
+- **Evaluation boundary:** [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared with OpenVLA based on its lightweight ... (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark).
+- **Explicit failure boundary:** This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from the gripper, as shown in Figure 9-(d), The heuristies does not adequately ... (p. 8, 256 33%).

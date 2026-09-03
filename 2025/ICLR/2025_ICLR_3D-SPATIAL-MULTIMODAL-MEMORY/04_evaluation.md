@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=XYdstv3ySl; PDF retrieval source: https://openreview.net/pdf/49718e82c4fa24eac05ec11d26bd767cd526299a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=XYdstv3ySl; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114814. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** To support extensive quantitative and qualitative evaluation, we perform experiments using several existing scene datasets [3; 18; 10] and collected a custom robot dataset (M3-Robot) ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** For the M3-Robot dataset, we collect images using two mobile robots.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** After memorizing the scene with M3, the robot is able to locate and grasp any object with text query on decoded CLIP feature.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The robot can then locate the 3D position of the targeted object with depth information from its depth camera and perform a grasping task.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We evaluate all the images in the validation sets of the three datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Furthermore, M3 handles overlapping objects exceptionally well, as evident in the Playroom dataset, where complex arrangements are rendered with accurate structural information.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** High-level evaluation metrics, different from low-level ones, focus on evaluating downstream tasks of features.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** To systematically evaluate multi-modal memory, we use evaluation metrics ranging from low/pixel-level to high-level downstream tasks.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** To support extensive quantitative and qualitative evaluation, we perform experiments using several existing scene datasets [3; 18; 10] and collected a custom robot dataset (M3-Robot) ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** For the M3-Robot dataset, we collect images using two mobile robots.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** After memorizing the scene with M3, the robot is able to locate and grasp any object with text query on decoded CLIP feature.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The robot can then locate the 3D position of the targeted object with depth information from its depth camera and perform a grasping task.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We evaluate all the images in the validation sets of the three datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Furthermore, M3 handles overlapping objects exceptionally well, as evident in the Playroom dataset, where complex arrangements are rendered with accurate structural information.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** High-level evaluation metrics, different from low-level ones, focus on evaluating downstream tasks of features.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** To systematically evaluate multi-modal memory, we use evaluation metrics ranging from low/pixel-level to high-level downstream tasks.
 
 ## Evaluation Type and Scope
 
@@ -26,50 +26,50 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 4 EXPERIMENTS (p. 6); B M3 LMM BENCHMARK (p. 16); C QUALITATIVE RESULTS (p. 18).
+- **Detected evaluation headings:** 4 EXPERIMENTS (p. 6).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method, M3, outperforms F-Splat while reducing significantly compute than F-3DGS. | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The table clearly shows that increasing the number degree will generally improve the performance on all metrics. | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | 4.2 QUANTITATIVE RESULTS Baseline Implementation For quantitative experiments, we compare M3 with two recent distillation-based feature GS methods [26; 51]. | p. 7 (4 EXPERIMENTS) |
-| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Published as a conference paper at ICLR 2025 Figure 6: Qualitative results across datasets using M3. | p. 9 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | M3 demonstrates superior downstream task accuracy with reduced training costs and shows practical utility when deployed on a real robot. | p. 9 (4 EXPERIMENTS) |
+| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The figure showcases the consistent performance of the M3 across various datasets (Garden, Playroom, Drjohnson, Table-top). low-level spatial details and high-level semantic concepts, making ... | p. 9 (4 EXPERIMENTS) |
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** To support extensive quantitative and qualitative evaluation, we perform experiments using several existing scene datasets [3; 18; 10] and collected a custom robot dataset (M3-Robot) ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** For the M3-Robot dataset, we collect images using two mobile robots.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** After memorizing the scene with M3, the robot is able to locate and grasp any object with text query on decoded CLIP feature.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The robot can then locate the 3D position of the targeted object with depth information from its depth camera and perform a grasping task.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We evaluate all the images in the validation sets of the three datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Furthermore, M3 handles overlapping objects exceptionally well, as evident in the Playroom dataset, where complex arrangements are rendered with accurate structural information.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** High-level evaluation metrics, different from low-level ones, focus on evaluating downstream tasks of features.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** To systematically evaluate multi-modal memory, we use evaluation metrics ranging from low/pixel-level to high-level downstream tasks.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** To support extensive quantitative and qualitative evaluation, we perform experiments using several existing scene datasets [3; 18; 10] and collected a custom robot dataset (M3-Robot) ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** For the M3-Robot dataset, we collect images using two mobile robots.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** After memorizing the scene with M3, the robot is able to locate and grasp any object with text query on decoded CLIP feature.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The robot can then locate the 3D position of the targeted object with depth information from its depth camera and perform a grasping task.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We evaluate all the images in the validation sets of the three datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Furthermore, M3 handles overlapping objects exceptionally well, as evident in the Playroom dataset, where complex arrangements are rendered with accurate structural information.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** High-level evaluation metrics, different from low-level ones, focus on evaluating downstream tasks of features.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** To systematically evaluate multi-modal memory, we use evaluation metrics ranging from low/pixel-level to high-level downstream tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Our proposed MultiModal Memory integrates Gaussian splatting with foundation models to efficiently store multimodal memory in a Gaussian structure. The feature maps rendered ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: A scene (V) is composed of both structure (S) and knowledge (I). To model these, we leverage multiple foundation models to extract multi-granularity ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Given a video sequence, we utilize foundation models (F) to extract raw features (R). These features are reduced using Algorithm 1, producing principal ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4: The UMAP visu- alization of model embed- ding manifolds reveals dis- tinct shapes, reflecting dif- ferent focus. Extract Multi-Granularity Scene Knowledge. Upon preparing ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Illustration of patch-level visual embedding extraction their applications. Compress Scene Knowledge to Memory. While the scene knowledge is extracted from foundation models F ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Feature Distance in comparison with distillation methods that use similar or higher budgets across datasets and foundation models. CLIP SigLIP
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Feature/RGB metrics for all foundation models and scene. only distill a few (2-3) models. Specifically, as provided in Sec. 3.3, we employ 6 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation on the number of foundation models in M3. Degree # Params Iteration CLIP SigLIP DINOv2 SEEM
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our proposed MultiModal Memory integrates Gaussian splatting with foundation models to efficiently store multimodal memory in a Gaussian structure. The feature maps rendered ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: A scene (V) is composed of both structure (S) and knowledge (I). To model these, we leverage multiple foundation models to extract multi-granularity ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Given a video sequence, we utilize foundation models (F) to extract raw features (R). These features are reduced using Algorithm 1, producing principal ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4: The UMAP visu- alization of model embed- ding manifolds reveals dis- tinct shapes, reflecting dif- ferent focus. Extract Multi-Granularity Scene Knowledge. Upon preparing ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Illustration of patch-level visual embedding extraction their applications. Compress Scene Knowledge to Memory. While the scene knowledge is extracted from foundation models F ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Feature Distance in comparison with distillation methods that use similar or higher budgets across datasets and foundation models. CLIP SigLIP
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Feature/RGB metrics for all foundation models and scene. only distill a few (2-3) models. Specifically, as provided in Sec. 3.3, we employ 6 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Ablation on the number of foundation models in M3. Degree # Params Iteration CLIP SigLIP DINOv2 SEEM
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To support extensive quantitative and qualitative evaluation, we perform experiments using several existing scene datasets [3; 18; 10] and collected a custom robot dataset ... | embodiment, simulator version and control stack | p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
 | Task/environment | For the M3-Robot dataset, we collect images using two mobile robots. | reset, timeout, object/scene variation | p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 5 (3 METHOD), p. 4 (3 METHOD) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 4 (3 METHOD), p. 2 (1 INTRODUCTION) |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (3 METHOD), p. 4 (3 METHOD) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 
 ## Metrics and Success Definition
 
@@ -119,8 +119,8 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 | Primary metric/result | The table clearly shows that increasing the number degree will generally improve the performance on all metrics. | numeric claim only at cited anchor | p. 8 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** In compensate, we use point-based loss, where we sample 2000 points ranging from both predict and ground truth features for distance loss computation.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** While having 16 degrees for each foundation model is enough to obtain a reasonable performance.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** In compensate, we use point-based loss, where we sample 2000 points ranging from both predict and ground truth features for distance loss computation.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** While having 16 degrees for each foundation model is enough to obtain a reasonable performance.
 
 ## Generalization and Failure Cases
 
@@ -151,9 +151,9 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** SEEM and LLaMA3 features extraction failed on FSplat, which we assume was mainly due to the ground truth feature extraction procedure, where duplication was performed ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** SEEM and LLaMA3 features extraction failed on FSplat, which we assume was mainly due to the ground truth feature extraction procedure, where duplication was performed ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), baselines p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), baselines p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

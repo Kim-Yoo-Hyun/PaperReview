@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html; PDF retrieval source: https://arxiv.org/pdf/2509.15212v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html; PDF retrieval source: https://arxiv.org/pdf/2509.15212v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 Experiments - extractive PDF cue:** To train and evaluate our proposed RynnVLA-001 model, we collect a new real-world manipulation dataset using a LeRobot SO100 robotic arm (Cadene et al., 2024).
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** To evaluate generalization, each task is evaluated on multiple robotic arms, each operating in a unique physical environment.
-- **p. 7 / 5 Experiments - extractive PDF cue:** The dataset comprises expert demonstrations collected through human teleoperation.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** To enhance the richness and complexity of the data, the scenes of manipulation are set to vary from containing only target objects to more complex ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 2Given the low performance of the RynnVLA-001-Scratch model, its evaluation is limited to 5 trials per task and setting, and conducted on a single robot ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** To assess the impact of head complexity, we perform an ablation study comparing this design with a deeper five-layer MLP head on the Calvin Task ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
-- **p. 12 / 5 EXPERIMENTS - extractive PDF cue:** Under normal conditions (Figure 5(a)), the robot successfully completes the task.
+- **p. 7 / 5 Experiments - extractive body cue:** To train and evaluate our proposed RynnVLA-001 model, we collect a new real-world manipulation dataset using a LeRobot SO100 robotic arm (Cadene et al., 2024).
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** To evaluate generalization, each task is evaluated on multiple robotic arms, each operating in a unique physical environment.
+- **p. 7 / 5 Experiments - extractive body cue:** The dataset comprises expert demonstrations collected through human teleoperation.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** To enhance the richness and complexity of the data, the scenes of manipulation are set to vary from containing only target objects to more complex ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 2Given the low performance of the RynnVLA-001-Scratch model, its evaluation is limited to 5 trials per task and setting, and conducted on a single robot ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** To assess the impact of head complexity, we perform an ablation study comparing this design with a deeper five-layer MLP head on the Calvin Task ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
+- **p. 12 / 5 EXPERIMENTS - extractive body cue:** Under normal conditions (Figure 5(a)), the robot successfully completes the task.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In contrast, RynnVLA-001-Video achieves a significant performance improvement, indicating that priors learned from ego-centric videos are effective for VLA adaptation. | p. 9 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In contrast, our full RynnVLA-001 model, trained on our comprehensive dataset including distractors, achieves a 90% success rate (9/10) on this task. | p. 12 (5 EXPERIMENTS) |
@@ -40,24 +40,24 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 Experiments - extractive PDF cue:** To train and evaluate our proposed RynnVLA-001 model, we collect a new real-world manipulation dataset using a LeRobot SO100 robotic arm (Cadene et al., 2024).
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** To evaluate generalization, each task is evaluated on multiple robotic arms, each operating in a unique physical environment.
-- **p. 7 / 5 Experiments - extractive PDF cue:** The dataset comprises expert demonstrations collected through human teleoperation.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** To enhance the richness and complexity of the data, the scenes of manipulation are set to vary from containing only target objects to more complex ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 2Given the low performance of the RynnVLA-001-Scratch model, its evaluation is limited to 5 trials per task and setting, and conducted on a single robot ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** To assess the impact of head complexity, we perform an ablation study comparing this design with a deeper five-layer MLP head on the Calvin Task ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
-- **p. 12 / 5 EXPERIMENTS - extractive PDF cue:** Under normal conditions (Figure 5(a)), the robot successfully completes the task.
+- **p. 7 / 5 Experiments - extractive body cue:** To train and evaluate our proposed RynnVLA-001 model, we collect a new real-world manipulation dataset using a LeRobot SO100 robotic arm (Cadene et al., 2024).
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** To evaluate generalization, each task is evaluated on multiple robotic arms, each operating in a unique physical environment.
+- **p. 7 / 5 Experiments - extractive body cue:** The dataset comprises expert demonstrations collected through human teleoperation.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** To enhance the richness and complexity of the data, the scenes of manipulation are set to vary from containing only target objects to more complex ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 2Given the low performance of the RynnVLA-001-Scratch model, its evaluation is limited to 5 trials per task and setting, and conducted on a single robot ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** To assess the impact of head complexity, we perform an ablation study comparing this design with a deeper five-layer MLP head on the Calvin Task ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
+- **p. 12 / 5 EXPERIMENTS - extractive body cue:** Under normal conditions (Figure 5(a)), the robot successfully completes the task.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: 1) Ego-Centric Video Generative Pretraining: An ego-centric Image-to-Video (I2V) model is trained on ego-centric human manipulation videos. This stage enables the model to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: 1) Ego-Centric Video Generative Pretraining: An ego-centric Image-to-Video (I2V) model is trained on ego-centric human manipulation videos. This stage enables the model to ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To train and evaluate our proposed RynnVLA-001 model, we collect a new real-world manipulation dataset using a LeRobot SO100 robotic arm (Cadene et al., ... | embodiment, simulator version and control stack | p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS) |
 | Task/environment | To evaluate generalization, each task is evaluated on multiple robotic arms, each operating in a unique physical environment. | reset, timeout, object/scene variation | p. 8 (5 EXPERIMENTS), p. 7 (5 Experiments) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 | Primary metric/result | In contrast, our full RynnVLA-001 model, trained on our comprehensive dataset including distractors, achieves a 90% success rate (9/10) on this task. | numeric claim only at cited anchor | p. 12 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 2Given the low performance of the RynnVLA-001-Scratch model, its evaluation is limited to 5 trials per task and setting, and conducted on a single robot ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** In contrast, all other models are evaluated with 60 trials per task.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** These trials are distributed evenly across two robotic arms, with each arm conducting 10 trials for each of the three scenarios (totaling 30 trials per ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 5, a substantial performance drop is observed when the resolution decreases from our proposed 384×384 to 256×256.
-- **p. 11 / 5 EXPERIMENTS - extractive PDF cue:** Given an input image and a text prompt, an I2V model is trained to predict the next 7 frames.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 2Given the low performance of the RynnVLA-001-Scratch model, its evaluation is limited to 5 trials per task and setting, and conducted on a single robot ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** In contrast, all other models are evaluated with 60 trials per task.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** These trials are distributed evenly across two robotic arms, with each arm conducting 10 trials for each of the three scenarios (totaling 30 trials per ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 5, a substantial performance drop is observed when the resolution decreases from our proposed 384×384 to 256×256.
+- **p. 11 / 5 EXPERIMENTS - extractive body cue:** Given an input image and a text prompt, an I2V model is trained to predict the next 7 frames.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** At a lower resolution of 256 × 256, the VQGAN's reconstruction quality degrades, the VQGAN fails to generate high-fidelity reconstructions, resulting in imprecise visual tokens ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** A trial is marked as a failure under any of the following conditions: 1) The time limit is exceeded.
-- **p. 12 / 5 EXPERIMENTS - extractive PDF cue:** A total of 5 failure cases of the 10 trials consistently select a distractor object.
-- **p. 12 / 5 EXPERIMENTS - extractive PDF cue:** However, when we elevate the front camera, altering the scene's projective geometry, the model fails to insert 12
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 2) The model makes more than five consecutive failed attempts to grasp a target object.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** This degradation is attributed to the resolution mismatch with the VQGAN component, which is pretrained exclusively on 512 × 512 images.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** At a lower resolution of 256 × 256, the VQGAN's reconstruction quality degrades, the VQGAN fails to generate high-fidelity reconstructions, resulting in imprecise visual tokens ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** A trial is marked as a failure under any of the following conditions: 1) The time limit is exceeded.
+- **p. 12 / 5 EXPERIMENTS - extractive body cue:** A total of 5 failure cases of the 10 trials consistently select a distractor object.
+- **p. 12 / 5 EXPERIMENTS - extractive body cue:** However, when we elevate the front camera, altering the scene's projective geometry, the model fails to insert 12
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 2) The model makes more than five consecutive failed attempts to grasp a target object.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** This degradation is attributed to the resolution mismatch with the VQGAN component, which is pretrained exclusively on 512 × 512 images.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS), p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS), p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

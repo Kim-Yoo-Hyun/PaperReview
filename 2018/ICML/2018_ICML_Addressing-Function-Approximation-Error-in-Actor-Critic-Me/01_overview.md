@@ -1,8 +1,10 @@
 # Addressing Function Approximation Error in Actor-Critic Methods
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1802.09477.
-> PDF retrieval source: https://arxiv.org/pdf/1802.09477. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1802.09477.
+> PDF retrieval source: https://arxiv.org/pdf/1802.09477. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1802.09477
 - Code/Project: https://github.com/sfujim/TD3
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Our proposed method addresses these issues, and greatly outperforms the current state of the art.를 문제로 두고, Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Background), p. 3 (3. Background), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In reinforcement learning problems with discrete action spaces, the issue of value overestimation as a result of function approximation errors is well-studied. (p. 1, 1. Introduction).
+- **Actual contribution:** Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance. (p. 1, 1. Introduction).
+- **Evaluation boundary:** While a larger d would result in a larger benefit with respect to accumulating errors, for fair comparison, the critics are only trained once per time step, and training the ... (p. 7, 6.1. Evaluation).
+- **Explicit failure boundary:** For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).

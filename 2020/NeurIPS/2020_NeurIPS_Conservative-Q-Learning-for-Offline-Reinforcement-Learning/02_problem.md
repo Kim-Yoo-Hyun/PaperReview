@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html; PDF retrieval source: https://arxiv.org/pdf/2006.04779. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html; PDF retrieval source: https://arxiv.org/pdf/2006.04779. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (2 Prelimin
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, applying RL to real-world problems consistently poses practical challenges: in contrast to the kinds of data-driven methods that have been successful ... | offline robot transition/trajectory dataset과 deployment MDP | body wording is the source claim |
-| Observation / input | S, A represent state and action spaces, T(s′/s, a) and r(s, a) represent the dynamics and reward function, and γ ∈(0, 1) ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF |
+| Observation / input | S, A represent state and action spaces, T(s′/s, a) and r(s, a) represent the dynamics and reward function, and γ ∈(0, 1) ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF body |
 | State / latent | represent, state, action, spaces, dynamics, reward, function, represents, discount, factor | Q/value 또는 sequence-policy state | notation and tensor shape require body check |
 | Output / action | choice, penalty, minimize, expected, Qvalue, under, particular, distribution | dataset-supported action sequence | exact unit/frame/decoder require body check |
 | Target outcome | offline return and deployment safety | offline policy value, OOD safety와 closed-loop success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | dataset transition (s,a,r,s′); body terms: represent, state, action, spaces, dynamics, reward, function, represents, discount, factor | p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries) |
 | Decision / output variable | dataset-supported policy action; body terms: novel, learning, conservative, Qfunctions, simple, modification, standard, value-based | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (2 Preliminaries) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (2 Prelimin
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (2 Preliminaries), p. 2 (1 Introduction), p. 3 (2 Preliminaries) |
 | Success / guarantee | offline return and deployment safety | p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 5 (2 Preliminaries) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (2 Prelimin
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (2 Preliminaries), p. 1 (Abstract), p. 4 (2 Preliminaries)): We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (2 Preliminaries), p. 1 (Abstract), p. 4 (2 Preliminaries)): We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.
 
 - **p. 2 / 1 Introduction - extractive body cue:** The key idea behind our method is to minimize values under an appropriately chosen distribution over state-action tuples, and then further tighten this bound by ...
 - **p. 5 / 2 Preliminaries - extractive body cue:** 3.3 Safe Policy Improvement Guarantees In Section 3.1 we proposed novel objectives for Q-function training such that the expected value of a policy under the ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (2 
 
 ## Position in the Robotics Loop
 
-offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 3 (2 Preliminaries). The downstream handoff is claimed only when the body describes it.
+offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 3 (2 Preliminaries). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), interface p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 3 (2 Preliminaries), objective p. 6 (2 Preliminaries), p. 5 (2 Preliminaries), p. 3 (2 Preliminaries), p. 4 (2 Preliminaries), p. 6 (2 Preliminaries), p. 1 (Abstract).
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), interface p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 3 (2 Preliminaries), objective p. 6 (2 Preliminaries), p. 5 (2 Preliminaries), p. 3 (2 Preliminaries), p. 4 (2 Preliminaries), p. 6 (2 Preliminaries), p. 1 (Abstract).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, applying RL to real-world problems consistently poses practical challenges: in contrast to the kinds of data-driven methods that have been successful in supervised learning [24, 11], RL is classically ... (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** Of course, policy constraints should prevent the policy from choosing OOD actions, however, as we will show that in certain cases, policy constraint methods might also fail to prevent the ... (p. 15, B Discussion of Gap-Expanding Behavior of CQL Backups).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

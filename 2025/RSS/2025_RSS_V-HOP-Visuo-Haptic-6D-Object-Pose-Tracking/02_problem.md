@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | (i) Domain generalization: Compared to visual-only baselines, visuo-tactile approaches struggle to generalize, hindered by insufficient data diversity and model scalability. | contact-rich manipulation scene | body wording is the source claim |
-| Observation / input | A, Problem Definition We tackle the model-based visu tracking problem, assuming access to: + Visual observations: An RGB-D sensor observes the object ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | A, Problem Definition We tackle the model-based visu tracking problem, assuming access to: + Visual observations: An RGB-D sensor observes the object ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Problem, Definition, tackle, model-based, visu, tracking, assuming, access, Visual, observations | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
 | Output / action | Recent, state-of-the-art, object, pose, estimation, methods, FoundationPose, have | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
 | Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | visual/tactile/proprioceptive contact history; body terms: Problem, Definition, tackle, model-based, visu, tracking, assuming, access, Visual, observations | p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (1. INTRODUCTION) |
 | Decision / output variable | contact-aware action/force; body terms: First, introduce, novel, unified, haptic, representation, facilitates, cross-embodiment | p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION) |
-| Objective / loss / cost | contact prediction/control error; cue terms: not recovered | no optimization/equation sentence selected |
+| Objective / loss / cost | contact prediction/control error; cue terms: not stated or recoverable in the selected PDF body | no optimization/equation sentence selected |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | slip/contact success and safe interaction | p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY)): First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.
+PDF body contribution framing (p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY)): First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.
 
 - **p. 1 / 1. INTRODUCTION - extractive body cue:** To address these challenges, we propose V-HOP (Fig.
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** Second, we propose 4 transformer-based object pose tracker to fuse visual and haptic features.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (
 
 ## Position in the Robotics Loop
 
-tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY). The downstream handoff is claimed only when the body describes it.
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** To address these challenges, we propose V-HOP (Fig. (p. 1, 1. INTRODUCTION).
+- **Formulation-changing contribution:** First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning. (p. 1, 1. INTRODUCTION).
+- **Assumption/failure evidence:** 1) If the grasp attempt fails, the robot must detect the failure based on the real-time object pose and reattempt the grasp. (p. 7, B. Bimanual Handover Experiment).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

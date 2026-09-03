@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (56 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=DgGF2LEBPS; PDF retrieval source: https://openreview.net/pdf/b9e775a028b2a809c09d3c36562f179b9cac55a4.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (56 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=DgGF2LEBPS; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/164956. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,29 +10,29 @@ PDF body method statement (p. 3 (3. Problem Formulation), p. 3 (3. Problem Formu
 
 ## Method Body Digest
 
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the agents; Ωis the ...
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy π(at/L, ht).
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** The objective is to maximize the probability of task success: maxπ E [rτ], where τ is the terminal timestep-either when the task is successfully completed ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Tasks with various action levels Instruction: Put the books on the desk.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To facilitate the evaluation of MLLMs as embodied agents, we design a unified agent framework that integrates egocentric visual perception, few-shot in-context examples, interaction history, ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Diverse tasks with hierarchical action levels.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Based on these capabilities, researchers can now design intelligent agents that use off-the-shelf foundation models to solve complex tasks through interaction with environments (Huang et ...
+- **p. 3 / 3. Problem Formulation - extractive body cue:** Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the agents; Ωis the ...
+- **p. 3 / 3. Problem Formulation - extractive body cue:** At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy π(at/L, ht).
+- **p. 3 / 3. Problem Formulation - extractive body cue:** The objective is to maximize the probability of task success: maxπ E [rτ], where τ is the terminal timestep-either when the task is successfully completed ...
+- **p. 2 / 1. Introduction - extractive body cue:** Tasks with various action levels Instruction: Put the books on the desk.
+- **p. 2 / 1. Introduction - extractive body cue:** To facilitate the evaluation of MLLMs as embodied agents, we design a unified agent framework that integrates egocentric visual perception, few-shot in-context examples, interaction history, ...
+- **p. 1 / 1. Introduction - extractive body cue:** Diverse tasks with hierarchical action levels.
+- **p. 1 / 1. Introduction - extractive body cue:** Based on these capabilities, researchers can now design intelligent agents that use off-the-shelf foundation models to solve complex tasks through interaction with environments (Huang et ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are threefold: (1) proposing a comprehensive benchmark suite for evaluating MLLM-based embodied agents with different action levels and fine-grained capability-oriented subsets, (2) the ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** To address these questions, we introduce EMBODIEDBENCH, a comprehensive benchmark comprising 1,128 testing instances across four environments.
-- **p. 1 / 1. Introduction - extractive PDF cue:** EMBODIEDBENCH is designed with two key features that set it apart from existing benchmarks: 1.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are threefold: (1) proposing a comprehensive benchmark suite for evaluating MLLM-based embodied agents with different action levels and fine-grained capability-oriented subsets, (2) the ...
+- **p. 1 / 1. Introduction - extractive body cue:** To address these questions, we introduce EMBODIEDBENCH, a comprehensive benchmark comprising 1,128 testing instances across four environments.
+- **p. 1 / 1. Introduction - extractive body cue:** EMBODIEDBENCH is designed with two key features that set it apart from existing benchmarks: 1.
 
 ## Source Evidence Cues
 
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the agents; Ωis the ...
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy π(at/L, ht).
+- **p. 3 / 3. Problem Formulation - extractive body cue:** Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the agents; Ωis the ...
+- **p. 3 / 3. Problem Formulation - extractive body cue:** At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy π(at/L, ht).
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the ... | p. 3 (3. Problem Formulation), p. 3 (3. Problem Formulation) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy ... | p. 3 (3. Problem Formulation) |
@@ -42,7 +42,7 @@ PDF body method statement (p. 3 (3. Problem Formulation), p. 3 (3. Problem Formu
 
 ## Objective / Update Rule
 
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** The objective is to maximize the probability of task success: maxπ E [rτ], where τ is the terminal timestep-either when the task is successfully completed ...
+- **p. 3 / 3. Problem Formulation - extractive body cue:** The objective is to maximize the probability of task success: maxπ E [rτ], where τ is the terminal timestep-either when the task is successfully completed ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 3 (3. Problem Formulation).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -58,12 +58,12 @@ PDF body method statement (p. 3 (3. Problem Formulation), p. 3 (3. Problem Formu
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the agents; Ωis the ...
-- **p. 3 / 3. Problem Formulation - extractive PDF cue:** At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy π(at/L, ht).
-- **p. 2 / 1. Introduction - extractive PDF cue:** Tasks with various action levels Instruction: Put the books on the desk.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To facilitate the evaluation of MLLMs as embodied agents, we design a unified agent framework that integrates egocentric visual perception, few-shot in-context examples, interaction history, ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Diverse tasks with hierarchical action levels.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Based on these capabilities, researchers can now design intelligent agents that use off-the-shelf foundation models to solve complex tasks through interaction with environments (Huang et ...
+- **p. 3 / 3. Problem Formulation - extractive body cue:** Here, S is the complete state space unobservable to the agent; A is the space of high-level or low-level actions for the agents; Ωis the ...
+- **p. 3 / 3. Problem Formulation - extractive body cue:** At timestep t, the agent maintains a history ht = (I0, a0, ..., It-1, at-1, It) and selects actions through a policy π(at/L, ht).
+- **p. 2 / 1. Introduction - extractive body cue:** Tasks with various action levels Instruction: Put the books on the desk.
+- **p. 2 / 1. Introduction - extractive body cue:** To facilitate the evaluation of MLLMs as embodied agents, we design a unified agent framework that integrates egocentric visual perception, few-shot in-context examples, interaction history, ...
+- **p. 1 / 1. Introduction - extractive body cue:** Diverse tasks with hierarchical action levels.
+- **p. 1 / 1. Introduction - extractive body cue:** Based on these capabilities, researchers can now design intelligent agents that use off-the-shelf foundation models to solve complex tasks through interaction with environments (Huang et ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -98,13 +98,13 @@ PDF body method statement (p. 3 (3. Problem Formulation), p. 3 (3. Problem Formu
 
 ## Failure and Ablation Link
 
-- **p. 8 / 5.4. Visual-centric Ablation - extractive PDF cue:** We investigate the effect of three camera resolutions on task performance.
-- **p. 30 / Figure/Table caption - extractive PDF cue:** Figure 16. Impact of visual in-context learning on EMBODIEDBENCH. impressive gains in manipulation tasks. For instance, Claude-3.5-Sonnet achieves a 16.7% improvement in performance. These findings ...
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** More results and ablations are deferred to Appendix F.
-- **p. 6 / 5.2. Benchmark Results - extractive PDF cue:** By comparing the performance of embodied agents with and without visual information (marked as "Lang") in Tables 2 and 3, we observe a clear distinction ...
-- **p. 7 / 5.2. Benchmark Results - extractive PDF cue:** Language-centric ablations on EB-ALFRED.
-- **p. 7 / 5.3. Language-centric Ablation - extractive PDF cue:** Visual-centric ablations on EB-Manipulation. than on visual input.
-- **p. 8 / 5.4. Visual-centric Ablation - extractive PDF cue:** Additional ablation results can be found in Appendix F.
+- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** We investigate the effect of three camera resolutions on task performance.
+- **p. 30 / Figure/Table caption - extractive body cue:** Figure 16. Impact of visual in-context learning on EMBODIEDBENCH. impressive gains in manipulation tasks. For instance, Claude-3.5-Sonnet achieves a 16.7% improvement in performance. These findings ...
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** More results and ablations are deferred to Appendix F.
+- **p. 6 / 5.2. Benchmark Results - extractive body cue:** By comparing the performance of embodied agents with and without visual information (marked as "Lang") in Tables 2 and 3, we observe a clear distinction ...
+- **p. 7 / 5.2. Benchmark Results - extractive body cue:** Language-centric ablations on EB-ALFRED.
+- **p. 7 / 5.3. Language-centric Ablation - extractive body cue:** Visual-centric ablations on EB-Manipulation. than on visual input.
+- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** Additional ablation results can be found in Appendix F.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -118,7 +118,7 @@ PDF body method statement (p. 3 (3. Problem Formulation), p. 3 (3. Problem Formu
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3. Problem Formulation), p. 3 (3. Problem Formulation), objective p. 3 (3. Problem Formulation), temporal p. 8 (5.4. Visual-centric Ablation), p. 3 (3. Problem Formulation), p. 3 (3. Problem Formulation), p. 5 (4.2. Capability-oriented Data Collection), p. 2 (1. Introduction), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 3 (3. Problem Formulation), p. 3 (3. Problem Formulation), objective p. 3 (3. Problem Formulation), temporal p. 8 (5.4. Visual-centric Ablation), p. 3 (3. Problem Formulation), p. 3 (3. Problem Formulation), p. 5 (4.2. Capability-oriented Data Collection), p. 2 (1. Introduction), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

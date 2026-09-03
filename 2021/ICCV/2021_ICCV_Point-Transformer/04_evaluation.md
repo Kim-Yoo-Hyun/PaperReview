@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2012.09164; PDF retrieval source: https://arxiv.org/pdf/2012.09164. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2012.09164; PDF retrieval source: https://arxiv.org/pdf/2012.09164. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Se
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Semantic Segmentation - extractive PDF cue:** The S3DIS [1] dataset for semantic scene parsing consists of 271 rooms in six areas from three different buildings.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For 3D shape classification, we use the widely adopted ModelNet40 dataset [47].
-- **p. 5 / 4.1. Semantic Segmentation - extractive PDF cue:** For evaluation metrics, we use mean classwise intersection over union (mIoU), mean of classwise accuracy (mAcc), and overall pointwise accuracy (OA).
-- **p. 5 / 4. Experiments - extractive PDF cue:** The initial learning rate is set to 0.05 and is dropped by 10x at epochs 120 and 160.
-- **p. 5 / 4.1. Semantic Segmentation - extractive PDF cue:** Point Transformer also substantially outperforms all prior models under 6-fold cross-validation.
-- **p. 5 / 4.1. Semantic Segmentation - extractive PDF cue:** The Point Transformer outperforms all prior models according to all metrics in both evaluation modes.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Shape classification results on the ModelNet40 dataset.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Semantic segmentation results on the S3DIS dataset, evaluated on Area 5.
+- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** The S3DIS [1] dataset for semantic scene parsing consists of 271 rooms in six areas from three different buildings.
+- **p. 5 / 4. Experiments - extractive body cue:** For 3D shape classification, we use the widely adopted ModelNet40 dataset [47].
+- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** For evaluation metrics, we use mean classwise intersection over union (mIoU), mean of classwise accuracy (mAcc), and overall pointwise accuracy (OA).
+- **p. 5 / 4. Experiments - extractive body cue:** The initial learning rate is set to 0.05 and is dropped by 10x at epochs 120 and 160.
+- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** Point Transformer also substantially outperforms all prior models under 6-fold cross-validation.
+- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** The Point Transformer outperforms all prior models according to all metrics in both evaluation modes.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Shape classification results on the ModelNet40 dataset.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Semantic segmentation results on the S3DIS dataset, evaluated on Area 5.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Se
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Semantic Segmentation | SYSTEM / EVALUATION SCOPE UNRESOLVED | Point Transformer also substantially outperforms all prior models under 6-fold cross-validation. | p. 5 (4.1. Semantic Segmentation) |
 | 4.1. Semantic Segmentation | SYSTEM / EVALUATION SCOPE UNRESOLVED | The Point Transformer outperforms all prior models according to all metrics in both evaluation modes. | p. 5 (4.1. Semantic Segmentation) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Se
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Semantic Segmentation - extractive PDF cue:** The S3DIS [1] dataset for semantic scene parsing consists of 271 rooms in six areas from three different buildings.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For 3D shape classification, we use the widely adopted ModelNet40 dataset [47].
+- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** The S3DIS [1] dataset for semantic scene parsing consists of 271 rooms in six areas from three different buildings.
+- **p. 5 / 4. Experiments - extractive body cue:** For 3D shape classification, we use the widely adopted ModelNet40 dataset [47].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The Point Transformer can serve as the backbone for var- ious 3D point cloud understanding tasks such as object classifica- tion, object part ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Point transformer networks for semantic segmentation (top) and classification (bottom). linear linear point transformer input: (x, p) output: (y, p) farthest point sampl. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Detailed structure design for each module.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Semantic segmentation results on the S3DIS dataset, evaluated on Area 5.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Semantic segmentation results on the S3DIS dataset, eval- uated with 6-fold cross-validation. the ground truth. Point Transformer captures detailed se- mantic structure in ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Shape classification results on the ModelNet40 dataset.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. The retrieved shapes are very similar to the query, and when they differ, they differ along aspects that we per- ceive as less ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Object part segmentation results on the ShapeNetPart
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The Point Transformer can serve as the backbone for var- ious 3D point cloud understanding tasks such as object classifica- tion, object part ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Point transformer networks for semantic segmentation (top) and classification (bottom). linear linear point transformer input: (x, p) output: (y, p) farthest point sampl. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Detailed structure design for each module.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Semantic segmentation results on the S3DIS dataset, evaluated on Area 5.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Semantic segmentation results on the S3DIS dataset, eval- uated with 6-fold cross-validation. the ground truth. Point Transformer captures detailed se- mantic structure in ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Shape classification results on the ModelNet40 dataset.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. The retrieved shapes are very similar to the query, and when they differ, they differ along aspects that we per- ceive as less ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Object part segmentation results on the ShapeNetPart
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The S3DIS [1] dataset for semantic scene parsing consists of 271 rooms in six areas from three different buildings. | embodiment, simulator version and control stack | p. 5 (4.1. Semantic Segmentation), p. 5 (4. Experiments) |
 | Task/environment | For 3D shape classification, we use the widely adopted ModelNet40 dataset [47]. | reset, timeout, object/scene variation | p. 5 (4. Experiments) |
@@ -106,10 +106,10 @@ PDF body evaluation/result cue (p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Se
 | Primary metric/result | The Point Transformer outperforms all prior models according to all metrics in both evaluation modes. | numeric claim only at cited anchor | p. 5 (4.1. Semantic Segmentation) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experiments - extractive PDF cue:** For semantic segmentation on S3DIS, we train for 40K iterations with initial learning rate 0.5, dropped by 10x at steps 24K and 32K.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For 3D shape classification on ModelNet40 and 3D object part segmentation on ShapeNetPart, we train for 200 epochs.
-- **p. 5 / 4. Experiments - extractive PDF cue:** The initial learning rate is set to 0.05 and is dropped by 10x at epochs 120 and 160.
-- **p. 6 / 4.2. Shape Classification - extractive PDF cue:** The ModelNet40 [47] dataset contains 12,311 CAD models with 40 object categories.
+- **p. 5 / 4. Experiments - extractive body cue:** For semantic segmentation on S3DIS, we train for 40K iterations with initial learning rate 0.5, dropped by 10x at steps 24K and 32K.
+- **p. 5 / 4. Experiments - extractive body cue:** For 3D shape classification on ModelNet40 and 3D object part segmentation on ShapeNetPart, we train for 200 epochs.
+- **p. 5 / 4. Experiments - extractive body cue:** The initial learning rate is set to 0.05 and is dropped by 10x at epochs 120 and 160.
+- **p. 6 / 4.2. Shape Classification - extractive body cue:** The ModelNet40 [47] dataset contains 12,311 CAD models with 40 object categories.
 
 ## Generalization and Failure Cases
 
@@ -138,7 +138,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Se
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Semantic Segmentation), p. 5 (4. Experiments), metrics p. 5 (4.1. Semantic Segmentation), p. 5 (4. Experiments), baselines p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Semantic Segmentation), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Semantic Segmentation), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Semantic Segmentation), p. 5 (4. Experiments), metrics p. 5 (4.1. Semantic Segmentation), p. 5 (4. Experiments), baselines p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Semantic Segmentation), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 5 (4.1. Semantic Segmentation), p. 5 (4.1. Semantic Segmentation), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

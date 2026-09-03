@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p093.html; PDF retrieval source: https://arxiv.org/pdf/2402.19432.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p093.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p093.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -50,12 +50,12 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 
 - **p. 5 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** Our overall objective is the weighted combination of these two losses: L(θ, ϕ, ψ) = Ldiffusion(θ, ψ) + λLdistance(θ, ψ).
 - **p. 3 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** Note that a∗is agnostic to embodiment, meaning that optimizing an action prediction loss L(f(oi, oj), a∗), where f(oi, oj) tries to prediction a∗given its current ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Pushing the Limits of Cross-Embodiment Learning for Manipulation and Navigation Jonathan Yang∗, Catherine Glossop†, Arjun Bhorkar†, Dhruv Shah†, Quan Vuong‡, Chelsea Finn∗, Dorsa Sadigh∗, Sergey ...
 - **p. 3 / III. PRELIMINARIES - extractive body cue:** The objective of visual robotic navigation is to direct a robotic agent to move to a goal g ∈G while avoiding obstacles.
 - **p. 4 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** This allows the policy to handle different action magnitudes across datasets, which otherwise would cause instability in the action loss.
 - **p. 4 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** Under these assumptions, training our policy to predict action ai would allow us to learn from Dem,1 ∪Dem,2 ∪. . . ∪Den,1 ∪Den,2 with a ...
-- **p. 5 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** We train our policy with diffusion denoising loss Ldiffusion(θ, ψ) = //ϵk -ϵϕ(fθ(ot-k:t, og), a0 t + ϵk, k)//2 2, and a distance prediction loss ...
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
-- **Equation/algorithm anchors:** p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+- **Equation/algorithm anchors:** p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -83,10 +83,10 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | In addition, dt denotes the distance in timesteps from the current observation and goal observation. | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | The goal image is sampled uniformly at random 20 to 40 timesteps into the future from the current observation. | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | not recovered | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | For navigation, we create a topological map M by recording the robot's observations with a frequency of 4 Hz while moving the ... | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | In addition, dt denotes the distance in timesteps from the current observation and goal observation. | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | The goal image is sampled uniformly at random 20 to 40 timesteps into the future from the current observation. | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | For navigation, we create a topological map M by recording the robot's observations with a frequency of 4 Hz while moving the ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 
 ## Verification Questions
 
-- **Evidence anchors reviewed:** method p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), objective p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), temporal p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 6 (4) Toy Kitchen. A more semantically meaningful environ), p. 3 (III. PRELIMINARIES), p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+- **Evidence anchors reviewed:** method p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), objective p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), temporal p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 6 (4) Toy Kitchen. A more semantically meaningful environ), p. 3 (III. PRELIMINARIES), p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** At a high level, we want our model to process its observations using some encoder, feed its embeddings into a transformer, and then output both an action and the distance ... (p. 5, IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+- **Objective/update evidence:** Note that a∗is agnostic to embodiment, meaning that optimizing an action prediction loss L(f(oi, oj), a∗), where f(oi, oj) tries to prediction a∗given its current and goal observation, will not ... (p. 3, IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+- **Temporal/runtime evidence:** For navigation, we create a topological map M by recording the robot's observations with a frequency of 4 Hz while moving the robot base throughout the environment. (p. 6, 4) Toy Kitchen. A more semantically meaningful environ).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

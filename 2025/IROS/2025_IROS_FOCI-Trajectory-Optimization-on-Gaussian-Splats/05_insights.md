@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Since each spline segment lies within the convex hull of its control points, it is enough to constrain the norm of the velocity and acceleration control points, to guarantee constraint satisfaction along ...를 In comparisons with similar methods (Table III, Figure 7) we are able to surpass the speed of traditional methods such as RRT* on large complex scenes, while having similar time performance to ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Since each spline segment lies within the convex hull of its control points, it is enough to constrain the norm of the velocity and acceleration control points, to guarantee constraint ... (p. 4, III. METHOD).
+- **Paper-specific mechanism:** In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ... (p. 5, A. Trajectory Evaluation); the relevant task/metric cue is The algorithm gracefully handles trajectories requiring additional turns while adapting the orientation to keep a maximum distance from the wall. (p. 5, A. Trajectory Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points. (p. 7, V. LIMITATIONS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning time for ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 5: Comparison of the solver's creation and runtime running on the CPU and GPU for 50k environmental Gaus- sians and one robot Gaussian. The "serial" method is on a single CPU ....
-4. Report the body metric and its denominator/aggregation: As Figure 2b shows, the planning algorithm effectively leverages the asymmetry of ANYmal to pass through the narrow opening collision-free..
-5. Re-run the body-reported ablation/failure condition: 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Since each spline segment lies within the convex hull of its control points, it is enough to constrain the norm of the velocity and acceleration control points, to guarantee constraint ... (p. 4, III. METHOD); preserve the objective/update rule: 3) It should be differentiable to allow for gradient evaluations in optimization. (p. 3, III. METHOD).
+2. Use the paper-reported task/data/environment cue: Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ... (p. 5, A. Trajectory Evaluation).
+3. Compare against the reported or matched baseline: Fig. 5: Comparison of the solver's creation and runtime running on the CPU and GPU for 50k environmental Gaus- sians and one robot Gaussian. The "serial" method is on a ... (p. 7, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: The algorithm gracefully handles trajectories requiring additional turns while adapting the orientation to keep a maximum distance from the wall. (p. 5, A. Trajectory Evaluation).
+5. Re-run the reported ablation or stress/failure condition: PDF body did not yield a recoverable ablation/stress condition; no ablation inferred; if none is reported, design one around: 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points. (p. 7, V. LIMITATIONS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 5 (A. Trajectory Evaluation), p. 3 (III. METHOD); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), and measure the boundary at p. 7 (V. LIMITATIONS), p. 7 (V. LIMITATIONS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 algorithm, enables, robot mechanism이 Fig. 5: Comparison of the solver's creation and runtime running on the CPU and GPU for ... 대비 As Figure 2b shows, the planning algorithm effectively leverages the asymmetry of ANYmal to pass through the narrow ...을 개선하고, 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Since each spline segment lies within the convex hull of its control points, it is enough to constrain the norm of the ...), does the paper-specific mechanism (In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians.) retain the reported evaluation outcome (The algorithm gracefully handles trajectories requiring additional turns while adapting the orientation to keep a maximum distance from ...) when tested against the paper's strongest explicit boundary (8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The algorithm gracefully handles trajectories requiring additional turns while adapting the orientation to keep a maximum distance from ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ... (p. 5, A. Trajectory Evaluation).
+- **Strongest explicit boundary:** 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points. (p. 7, V. LIMITATIONS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

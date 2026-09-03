@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14341; PDF retrieval source: https://arxiv.org/pdf/2309.14341. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14341; PDF retrieval source: https://arxiv.org/pdf/2309.14341. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition, its feet clearance also helps it to achieve some performance with noisy measurements. | p. 8 (4 Results) |
 | 4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | NoClear achieves slightly higher performance but it places feet close to the obstacle edges which is unstable in the real world. | p. 8 (4 Results) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Starred is recent concurrent work [47]. baseline comparison in simulation since it is infeasible to provide human joystick commands and provide real-world comparisons instead. | embodiment, simulator version and control stack | p. 9 (4 Results), p. 7 (4 Results) |
 | Task/environment | 4.1 Experimental Setup We use the Unitree A1 robot with 12 joints. | reset, timeout, object/scene variation | p. 7 (4 Results), p. 7 (4 Results) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 - **p. 9 / 4 Results - extractive body cue:** These sudden adjustments are out-ofdistribution for the policy and it cannot adapt fast enough, causing it to fail.
 - **p. 8 / 4 Results - extractive body cue:** NoClear achieves slightly higher performance but it places feet close to the obstacle edges which is unstable in the real world.
 
-- **PDF anchors reviewed:** datasets p. 9 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Results), metrics p. 9 (4 Results), p. 9 (4 Results), p. 8 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 7 (4 Results), baselines p. 8 (4 Results), p. 9 (4 Results), p. 9 (Figure/Table caption), p. 8 (4 Results), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Results), p. 9 (4 Results), p. 7 (4 Results).
+- **Evidence anchors reviewed:** datasets p. 9 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Results), metrics p. 9 (4 Results), p. 9 (4 Results), p. 8 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 7 (4 Results), baselines p. 8 (4 Results), p. 9 (4 Results), p. 9 (Figure/Table caption), p. 8 (4 Results), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Results), p. 9 (4 Results), p. 7 (4 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 7: For each terrain, we run 5 trials and record the number of successes. We find that ours has 20-80% higher success rate on the most difficult instance of ... (p. 9, Figure/Table caption).
+- **Metric evidence:** First, we test our reward design and overall pipeline (Tab. (p. 8, 4 Results).
+- **Baseline/ablation evidence:** We find that our method outperforms the baselines in terms of both metrics. (p. 8, 4 Results).
+- **Failure/negative evidence:** It sometimes succeeds on hurdles and gaps but fails when the human has to provide sudden direction changes which are out-of-distribution. (p. 9, 4 Results).

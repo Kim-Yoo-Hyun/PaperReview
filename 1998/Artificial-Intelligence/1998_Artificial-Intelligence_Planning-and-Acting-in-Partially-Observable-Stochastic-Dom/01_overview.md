@@ -1,8 +1,10 @@
 # Planning and Acting in Partially Observable Stochastic Domains
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X.
-> PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X.
+> PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1998 / Artificial Intelligence
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.cassandra.org/arc/papers/aij98.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Problems like the one described above can be modeled as partially observable Markov decision processes (POMDPs).를 문제로 두고, This paper is intended to make two contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 23 (4.5. Alternative Approaches) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Problems like the one described above can be modeled as partially observable Markov decision processes (POMDPs). (p. 2, 1 Introduction).
+- **Actual contribution:** This paper is intended to make two contributions. (p. 3, 1 Introduction).
+- **Evaluation boundary:** The linear program in Table 3 solves exactly this problem, The variable d is the minimum amount of improvement of Pew Over any policy tree in Uy at b. (p. 21, 44.3. Checking the witness condition).
+- **Explicit failure boundary:** as the agent does not observe the goal state, it will alwajrs have some non-zero belief that it is in any of the non-goal states, since the actions have non-zero ... (p. 11, 3.2 Problem Structure).

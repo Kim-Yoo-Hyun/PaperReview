@@ -11,13 +11,13 @@
 ### What was actually new
 
 - **p. 1 / Abstract - extractive body cue:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
-- **p. 1 / Front matter - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
+- **p. 1 / body section boundary not confidently recovered - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
 - **p. 2 / Abstract - extractive body cue:** Our method sets a new benchmark for model-based contact-rich dexterous manipulation: « Highly versatile dexterity: 96.5% average success rate across all objects and environments « ...
 - **p. 5 / B. New Complementarty-Free Multi-Contact Model - extractive body cue:** To circumvent the dual complementarity in (13), we propose ‘new contact model based on Lemma 1.
 - **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** (62, 33] developed penalty-based contact models.
 - **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** First, closed-form contact constraint resolution: our model builds on optimization-based contact dynamics (6, 39}, but instead of solving the primal [6, 39] or dual programs ...
 - **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** 1) Nonconvex Complementarity Contact Models: Rigid body contact dynamics is traditionally formulated using complermentarity models [S1, 49, 52]: it enforces no interpenetration and no contact ...
-- **Contribution anchor:** p. 1 (Abstract), p. 1 (Front matter), p. 2 (Abstract), p. 5 (B. New Complementarty-Free Multi-Contact Model), p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models)
+- **Contribution anchor:** p. 1 (Abstract), p. 1 (body section boundary not confidently recovered), p. 2 (Abstract), p. 5 (B. New Complementarty-Free Multi-Contact Model), p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models)
 
 ### Strongest assumption and failure boundary
 
@@ -34,7 +34,7 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects | p. 1 (Abstract), p. 1 (Front matter) |
+| Mechanism/contribution | Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects | p. 1 (Abstract), p. 1 (body section boundary not confidently recovered) |
 | Reported outcome | (1) The proposed complementarity-free MPC consistently outperforms Implicit MPC (ie., MPC with complementarity model) across various manipulation tasks in terms of success | p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results) |
 | Failure/limitation | [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. | p. 9 (B. MPC Setting and Results), p. 15 (Figure/Table caption) |
 
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 This implementation creates « closed-loop control effect on the real system, ie., feedback from system state qf to control input 1 (qi를 In a manipulation system, the MPC policy is implemented in a receding horizon fashion, by repeatedly solving (8) at the real system state qf encountered at the policy rollout step & and ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** For simplicity, we model a manipulation system using the quasi-dynamic formulation (34, 14, 1, 41], which primarily captures the positional displacement of a contact-rich system in relation to contact interactions ... (p. 3, A. Optimization-based Quasi-Dynamic Contact Model).
+- **Paper-specific mechanism:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is For each object, we conduct 20 trials with different random inital and target poses. ‘The results are in Table IV, where we quantify the manipulation accuracy by (p. 9, B. MPC Setting and Results); the relevant task/metric cue is the manipulation accuracy is evaluated using (p. 9, B. MPC Setting and Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: ABLE Il: The model setting for all objects and tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: (1) The proposed complementarity-free MPC consistently outperforms Implicit MPC (ie., MPC with complementarity model) across various manipulation tasks in terms of success.
-4. Report the body metric and its denominator/aggregation: Fig. 12: Results of the TiiFinger in-hand manipulation for various objects. For each object on the x-axis, the upper panel shows the success rate across 20 trials based on criterion (49). The ....
-5. Re-run the body-reported ablation/failure condition: Without ground support, the three fingertips.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: For simplicity, we model a manipulation system using the quasi-dynamic formulation (34, 14, 1, 41], which primarily captures the positional displacement of a contact-rich system in relation to contact interactions ... (p. 3, A. Optimization-based Quasi-Dynamic Contact Model); preserve the objective/update rule: The time-stepping equation of the quasi-dynamic model is (p. 3, A. Optimization-based Quasi-Dynamic Contact Model).
+2. Use the paper-reported task/data/environment cue: ABLE Il: The model setting for all objects and tasks. (p. 9, B. MPC Setting and Results).
+3. Compare against the reported or matched baseline: Without ground support, the three fingertips (p. 10, B. MPC Setting and Results).
+4. Report the body metric with its denominator and aggregation: the manipulation accuracy is evaluated using (p. 9, B. MPC Setting and Results).
+5. Re-run the reported ablation or stress/failure condition: Without ground support, the three fingertips (p. 10, B. MPC Setting and Results); if none is reported, design one around: [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 5 (B. New Complementarty-Free Multi-Contact Model); the primary result is directionally consistent at p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 12 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), match the reported outcome at p. 9 (B. MPC Setting and Results), p. 12 (Figure/Table caption), p. 9 (B. MPC Setting and Results), and measure the boundary at p. 9 (B. MPC Setting and Results), p. 13 (A. TriFinger inchand Manipulation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 consistently, achieves, state-of-the mechanism이 (1) The proposed complementarity-free MPC consistently outperforms Implicit MPC (ie., MPC with complementarity model) across various ... 대비 Fig. 12: Results of the TiiFinger in-hand manipulation for various objects. For each object on the x-axis, the ...을 개선하고, [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (For simplicity, we model a manipulation system using the quasi-dynamic formulation (34, 14, 1, 41], which primarily captures the positional displacement of ...), does the paper-specific mechanism (Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects) retain the reported evaluation outcome (the manipulation accuracy is evaluated using) when tested against the paper's strongest explicit boundary ([1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (the manipulation accuracy is evaluated using) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects (p. 1, Abstract).
+- **Paper-supported outcome:** For each object, we conduct 20 trials with different random inital and target poses. ‘The results are in Table IV, where we quantify the manipulation accuracy by (p. 9, B. MPC Setting and Results).
+- **Strongest explicit boundary:** [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

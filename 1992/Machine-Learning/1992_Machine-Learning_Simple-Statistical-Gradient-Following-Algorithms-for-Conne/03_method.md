@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992696; PDF retrieval source: https://doi.org/10.1007/BF00992696. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992696; PDF retrieval source: https://doi.org/10.1007/BF00992696. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | For example, if the network consists of Bernoulli-logistic units an episodic REINFORCE algorithm would prescribe weight changes according to the rule k ... | p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Episodic REINFORCE algorithms) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | In particular, assume a net N is trained on an episode-by-episode basis, where each episode consists of k time steps, during which ... | p. 8 (5. Episodic REINFORCE algorithms), p. 8 (4. REINFORCE algorithms) |
@@ -83,10 +83,10 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | In the absence of such assumptions, the expected value of r for any given time step may be a function of time ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | In the absence of such assumptions, the expected value of r for any given time step may be a function of time ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | In particular, assume a net N is trained on an episode-by-episode basis, where each episode consists of k time steps, during which ... | Hz/fps, inference time and control rate |
 | Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | In the absence of such assumptions, the expected value of r for any given time step may be a function of time ... | window and reset |
-| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -131,8 +131,17 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Episodic REINFORCE algorithms), p. 8 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), objective p. 7 (4. REINFORCE algorithms), p. 6 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), temporal p. 5 (3. The expected reinforcement performance criterion), p. 8 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 3 (2. Reinforcement-learning connectionist networks), p. 3 (2. Reinforcement-learning connectionist networks), p. 8 (5. Episodic REINFORCE algorithms).
+- **Evidence anchors reviewed:** method p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Episodic REINFORCE algorithms), p. 8 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), objective p. 7 (4. REINFORCE algorithms), p. 6 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), temporal p. 5 (3. The expected reinforcement performance criterion), p. 8 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 3 (2. Reinforcement-learning connectionist networks), p. 3 (2. Reinforcement-learning connectionist networks), p. 8 (5. Episodic REINFORCE algorithms).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The special case of this algorithm when the reinforcement signal is limited to 0 and 1 coincides with the 2-action version of the linear reward-inaction (LR_I) stochastic learning automaton (Narendra ... (p. 7, 4. REINFORCE algorithms).
+- **Objective/update evidence:** This results relates VwE{r I W}, the gradient in weight space of the performance measure E {r ] W}, to E {AW] W}, the average update vector in weight space, ... (p. 6, 4. REINFORCE algorithms).
+- **Temporal/runtime evidence:** In the absence of such assumptions, the expected value of r for any given time step may be a function of time as well as of the history of the ... (p. 5, 3. The expected reinforcement performance criterion).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

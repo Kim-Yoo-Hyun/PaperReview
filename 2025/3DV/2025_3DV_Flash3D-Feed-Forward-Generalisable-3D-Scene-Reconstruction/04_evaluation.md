@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=05T81ScPFb&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=05T81ScPFb&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. In-domain novel view synthesis), p. 5
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing.
-- **p. 5 / 4.2. Cross-domain novel view synthesis - extractive PDF cue:** To evaluate the cross-domain generalisation ability, we directly evaluate performance on unseen outdoor (KITTI [18]) and indoor (NYU [65]) datasets.
-- **p. 7 / 4.5. Ablation study and analysis - extractive PDF cue:** Q1: Is leveraging a monocular depth predictor useful in the task of reconstructing appearance and geometry of scenes?
-- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive PDF cue:** Qualitative comparison of monocular reconstruction on all datasets.
-- **p. 6 / 4.3. In-domain novel view synthesis - extractive PDF cue:** We evaluate the quality of zero-shot reconstruction and compare performance on an in-domain dataset, RealEstate10k.
-- **p. 7 / 4.3. In-domain novel view synthesis - extractive PDF cue:** 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target.
-- **p. 8 / 4.5. Ablation study and analysis - extractive PDF cue:** The second layer (third column) represents the remaining parts of the scene (red arrows): occluded regions (wall, cabinet) and regions where depth prediction is unreliable ...
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** We evaluate Novel View Synthesis accuracy on datasets not used in training of our method.
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing.
+- **p. 5 / 4.2. Cross-domain novel view synthesis - extractive body cue:** To evaluate the cross-domain generalisation ability, we directly evaluate performance on unseen outdoor (KITTI [18]) and indoor (NYU [65]) datasets.
+- **p. 7 / 4.5. Ablation study and analysis - extractive body cue:** Q1: Is leveraging a monocular depth predictor useful in the task of reconstructing appearance and geometry of scenes?
+- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive body cue:** Qualitative comparison of monocular reconstruction on all datasets.
+- **p. 6 / 4.3. In-domain novel view synthesis - extractive body cue:** We evaluate the quality of zero-shot reconstruction and compare performance on an in-domain dataset, RealEstate10k.
+- **p. 7 / 4.3. In-domain novel view synthesis - extractive body cue:** 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target.
+- **p. 8 / 4.5. Ablation study and analysis - extractive body cue:** The second layer (third column) represents the remaining parts of the scene (red arrows): occluded regions (wall, cabinet) and regions where depth prediction is unreliable ...
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** We evaluate Novel View Synthesis accuracy on datasets not used in training of our method.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. In-domain novel view synthesis), p. 5
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. In-domain novel view synthesis | EMPIRICAL / SOURCE-REPORTED EVALUATION | 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target. | p. 7 (4.3. In-domain novel view synthesis) |
 | 4.1. Experiment settings | EMPIRICAL / SOURCE-REPORTED EVALUATION | We outperform baselines which were trained on KITTI specifically. | p. 5 (4.1. Experiment settings) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (4.3. In-domain novel view synthesis), p. 5
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing.
-- **p. 5 / 4.2. Cross-domain novel view synthesis - extractive PDF cue:** To evaluate the cross-domain generalisation ability, we directly evaluate performance on unseen outdoor (KITTI [18]) and indoor (NYU [65]) datasets.
-- **p. 7 / 4.5. Ablation study and analysis - extractive PDF cue:** Q1: Is leveraging a monocular depth predictor useful in the task of reconstructing appearance and geometry of scenes?
-- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive PDF cue:** Qualitative comparison of monocular reconstruction on all datasets.
-- **p. 6 / 4.3. In-domain novel view synthesis - extractive PDF cue:** We evaluate the quality of zero-shot reconstruction and compare performance on an in-domain dataset, RealEstate10k.
-- **p. 7 / 4.3. In-domain novel view synthesis - extractive PDF cue:** 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target.
-- **p. 8 / 4.5. Ablation study and analysis - extractive PDF cue:** The second layer (third column) represents the remaining parts of the scene (red arrows): occluded regions (wall, cabinet) and regions where depth prediction is unreliable ...
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing.
+- **p. 5 / 4.2. Cross-domain novel view synthesis - extractive body cue:** To evaluate the cross-domain generalisation ability, we directly evaluate performance on unseen outdoor (KITTI [18]) and indoor (NYU [65]) datasets.
+- **p. 7 / 4.5. Ablation study and analysis - extractive body cue:** Q1: Is leveraging a monocular depth predictor useful in the task of reconstructing appearance and geometry of scenes?
+- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive body cue:** Qualitative comparison of monocular reconstruction on all datasets.
+- **p. 6 / 4.3. In-domain novel view synthesis - extractive body cue:** We evaluate the quality of zero-shot reconstruction and compare performance on an in-domain dataset, RealEstate10k.
+- **p. 7 / 4.3. In-domain novel view synthesis - extractive body cue:** 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target.
+- **p. 8 / 4.5. Ablation study and analysis - extractive body cue:** The second layer (third column) represents the remaining parts of the scene (red arrows): occluded regions (wall, cabinet) and regions where depth prediction is unreliable ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Flash3D reconstructs the 3D (not 2.5D) scene structure and appearance from just a single image ‘in a flash', enabling accurate novel view synthesis. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Flash3D. Given a single image I as input, Flash3D first estimates the metric depth D using a frozen off-the-shelf network [49]. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Cross-Domain Novel View Synthesis. We evaluate Novel View Synthesis accuracy on datasets not used in training of our method. We outperform baselines which ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. In-domain Novel View Synthesis. Our model shows state-of-the-art in-domain performance on RealEstate10k on small, medium and large baseline ranges. 5 frames 10 frames ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison of monocular reconstruction on all datasets. Flash3D (Ours, right column) is sharper (top row, car's back) than state-of-the-art MINE [37] despite ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation Study. Results for ablating different design choices of our method. RE10k - in-domain NYU - cross-domain KITTI - cross-domain PSNR ↑ SSIM ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Comparison with Two-view Methods. We compare on the split used by pixelSplat [9] for two-view interpolation and on the split used by latentSplat ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Ablation. We show how Flash3D degrades when components are removed. Removing the depth network (4th column) results in incorrect geometry (orange wall, corner ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Flash3D reconstructs the 3D (not 2.5D) scene structure and appearance from just a single image ‘in a flash', enabling accurate novel view synthesis. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Flash3D. Given a single image I as input, Flash3D first estimates the metric depth D using a frozen off-the-shelf network [49]. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Cross-Domain Novel View Synthesis. We evaluate Novel View Synthesis accuracy on datasets not used in training of our method. We outperform baselines which ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. In-domain Novel View Synthesis. Our model shows state-of-the-art in-domain performance on RealEstate10k on small, medium and large baseline ranges. 5 frames 10 frames ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison of monocular reconstruction on all datasets. Flash3D (Ours, right column) is sharper (top row, car's back) than state-of-the-art MINE [37] despite ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation Study. Results for ablating different design choices of our method. RE10k - in-domain NYU - cross-domain KITTI - cross-domain PSNR ↑ SSIM ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Comparison with Two-view Methods. We compare on the split used by pixelSplat [9] for two-view interpolation and on the split used by latentSplat ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Ablation. We show how Flash3D degrades when components are removed. Removing the depth network (4th column) results in incorrect geometry (orange wall, corner ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing. | embodiment, simulator version and control stack | p. 5 (4.1. Experiment settings), p. 5 (4.2. Cross-domain novel view synthesis) |
 | Task/environment | To evaluate the cross-domain generalisation ability, we directly evaluate performance on unseen outdoor (KITTI [18]) and indoor (NYU [65]) datasets. | reset, timeout, object/scene variation | p. 5 (4.2. Cross-domain novel view synthesis), p. 7 (4.5. Ablation study and analysis) |
@@ -122,11 +122,11 @@ PDF body evaluation/result cue (p. 7 (4.3. In-domain novel view synthesis), p. 5
 | Primary metric/result | We outperform baselines which were trained on KITTI specifically. | numeric claim only at cited anchor | p. 5 (4.1. Experiment settings) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing.
-- **p. 5 / 4.1. Experiment settings - extractive PDF cue:** With this, Flash3D can be trained to achieve state-of-the-art quality on a single A6000 GPU in 16 hours.
-- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive PDF cue:** 5 frames 10 frames U[-30, 30] frames Model PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ...
-- **p. 7 / 4.5. Ablation study and analysis - extractive PDF cue:** 3 indicates that without the depth network, 2 layers of Gaussians per pixel performs worse than using just one layer.
-- **p. 4 / 3. Method - extractive PDF cue:** Hence, there are C = 1 + 1 + 3 + 7 + 3(L + 1)2 = 12 + 3(L + 1)2 parameters predicted for ...
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing.
+- **p. 5 / 4.1. Experiment settings - extractive body cue:** With this, Flash3D can be trained to achieve state-of-the-art quality on a single A6000 GPU in 16 hours.
+- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive body cue:** 5 frames 10 frames U[-30, 30] frames Model PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ...
+- **p. 7 / 4.5. Ablation study and analysis - extractive body cue:** 3 indicates that without the depth network, 2 layers of Gaussians per pixel performs worse than using just one layer.
+- **p. 4 / 3. Method - extractive body cue:** Hence, there are C = 1 + 1 + 3 + 7 + 3(L + 1)2 = 12 + 3(L + 1)2 parameters predicted for ...
 
 ## Generalization and Failure Cases
 
@@ -157,12 +157,12 @@ PDF body evaluation/result cue (p. 7 (4.3. In-domain novel view synthesis), p. 5
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive PDF cue:** This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row).
-- **p. 7 / 4.4. Comparison to few-view novel view synthesis - extractive PDF cue:** Here, Flash3D cannot outperform two-view approaches on the interpolation task, due to receiving less information.
-- **p. 8 / 4.5. Ablation study and analysis - extractive PDF cue:** 5 additionally reveals a limitation of our method.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Ablation. We show how Flash3D degrades when components are removed. Removing the depth network (4th column) results in incorrect geometry (orange wall, corner ...
+- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive body cue:** This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row).
+- **p. 7 / 4.4. Comparison to few-view novel view synthesis - extractive body cue:** Here, Flash3D cannot outperform two-view approaches on the interpolation task, due to receiving less information.
+- **p. 8 / 4.5. Ablation study and analysis - extractive body cue:** 5 additionally reveals a limitation of our method.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Ablation. We show how Flash3D degrades when components are removed. Removing the depth network (4th column) results in incorrect geometry (orange wall, corner ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experiment settings), p. 5 (4.2. Cross-domain novel view synthesis), p. 7 (4.5. Ablation study and analysis), p. 6 (4.2. Cross-domain novel view synthesis), p. 6 (4.3. In-domain novel view synthesis), p. 7 (4.3. In-domain novel view synthesis), metrics p. 5 (4.1. Experiment settings), p. 5 (4. Experiments), p. 6 (4.2. Cross-domain novel view synthesis), p. 6 (4.3. In-domain novel view synthesis), p. 7 (4.5. Ablation study and analysis), p. 7 (4.5. Ablation study and analysis), baselines p. 5 (4.1. Experiment settings), p. 6 (4.2. Cross-domain novel view synthesis), p. 5 (4.1. Experiment settings), p. 6 (4.2. Cross-domain novel view synthesis), p. 7 (4.4. Comparison to few-view novel view synthesis), p. 7 (4.4. Comparison to few-view novel view synthesis), results p. 7 (4.3. In-domain novel view synthesis), p. 5 (4.1. Experiment settings), p. 5 (4.1. Experiment settings), p. 7 (4.4. Comparison to few-view novel view synthesis), p. 6 (4.2. Cross-domain novel view synthesis), p. 6 (4.3. In-domain novel view synthesis).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experiment settings), p. 5 (4.2. Cross-domain novel view synthesis), p. 7 (4.5. Ablation study and analysis), p. 6 (4.2. Cross-domain novel view synthesis), p. 6 (4.3. In-domain novel view synthesis), p. 7 (4.3. In-domain novel view synthesis), metrics p. 5 (4.1. Experiment settings), p. 5 (4. Experiments), p. 6 (4.2. Cross-domain novel view synthesis), p. 6 (4.3. In-domain novel view synthesis), p. 7 (4.5. Ablation study and analysis), p. 7 (4.5. Ablation study and analysis), baselines p. 5 (4.1. Experiment settings), p. 6 (4.2. Cross-domain novel view synthesis), p. 5 (4.1. Experiment settings), p. 6 (4.2. Cross-domain novel view synthesis), p. 7 (4.4. Comparison to few-view novel view synthesis), p. 7 (4.4. Comparison to few-view novel view synthesis), results p. 7 (4.3. In-domain novel view synthesis), p. 5 (4.1. Experiment settings), p. 5 (4.1. Experiment settings), p. 7 (4.4. Comparison to few-view novel view synthesis), p. 6 (4.2. Cross-domain novel view synthesis), p. 6 (4.3. In-domain novel view synthesis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

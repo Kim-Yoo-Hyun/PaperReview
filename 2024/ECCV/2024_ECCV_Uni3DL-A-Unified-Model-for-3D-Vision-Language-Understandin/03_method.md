@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3330_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3330_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 
 ## Method Body Digest
 
-- **p. 12 / 11 Method - extractive PDF cue:** Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS
-- **p. 14 / 11 Method - extractive PDF cue:** Ours + alt. means our model with alternative training.
-- **p. 11 / 11 Method - extractive PDF cue:** 4.5 3D Captioning From Table 3, our Uni3DL model outperforms existing methods in 3D captioning on the Cap3D Objaverse dataset.
-- **p. 11 / 11 Method - extractive PDF cue:** Note that Swin3D† uses extra training data (Structure3D [74]). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter ...
-- **p. 12 / 11 Method - extractive PDF cue:** 4.8 Ablation Study Effect of Pretraining.
-- **p. 13 / 11 Method - extractive PDF cue:** We show results of the baseline method trained from scratch and our finetuned model.
-- **p. 13 / 11 Method - extractive PDF cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
-- **p. 3 / 1 Introduction - extractive PDF cue:** Its versatile architecture allows for the processing of both point clouds and text inputs, generating diverse outputs including masks, classes, and texts.
+- **p. 12 / 11 Method - extractive body cue:** Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS
+- **p. 14 / 11 Method - extractive body cue:** Ours + alt. means our model with alternative training.
+- **p. 11 / 11 Method - extractive body cue:** 4.5 3D Captioning From Table 3, our Uni3DL model outperforms existing methods in 3D captioning on the Cap3D Objaverse dataset.
+- **p. 11 / 11 Method - extractive body cue:** Note that Swin3D† uses extra training data (Structure3D [74]). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter ...
+- **p. 12 / 11 Method - extractive body cue:** 4.8 Ablation Study Effect of Pretraining.
+- **p. 13 / 11 Method - extractive body cue:** We show results of the baseline method trained from scratch and our finetuned model.
+- **p. 13 / 11 Method - extractive body cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
+- **p. 3 / 1 Introduction - extractive body cue:** Its versatile architecture allows for the processing of both point clouds and text inputs, generating diverse outputs including masks, classes, and texts.
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** Our contributions are summarized as: - We present Uni3DL, a unified model tailored for 3D vision and language comprehension.
-- **p. 3 / 1 Introduction - extractive PDF cue:** Uni3DL starts with a 3D encoder to extract point features and a text encoder to extract text features, followed by a carefully designed query transformer ...
-- **p. 11 / 11 Method - extractive PDF cue:** On the BLEU-1 [44] and ROUGE-L [36] scores, our method beats precious STOA methods by a large margin (more than 20%).
+- **p. 3 / 1 Introduction - extractive body cue:** Our contributions are summarized as: - We present Uni3DL, a unified model tailored for 3D vision and language comprehension.
+- **p. 3 / 1 Introduction - extractive body cue:** Uni3DL starts with a 3D encoder to extract point features and a text encoder to extract text features, followed by a carefully designed query transformer ...
+- **p. 11 / 11 Method - extractive body cue:** On the BLEU-1 [44] and ROUGE-L [36] scores, our method beats precious STOA methods by a large margin (more than 20%).
 
 ## Source Evidence Cues
 
-- **p. 12 / 11 Method - extractive PDF cue:** Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS
-- **p. 14 / 11 Method - extractive PDF cue:** Ours + alt. means our model with alternative training.
-- **p. 11 / 11 Method - extractive PDF cue:** 4.5 3D Captioning From Table 3, our Uni3DL model outperforms existing methods in 3D captioning on the Cap3D Objaverse dataset.
-- **p. 11 / 11 Method - extractive PDF cue:** Note that Swin3D† uses extra training data (Structure3D [74]). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter ...
-- **p. 12 / 11 Method - extractive PDF cue:** 4.8 Ablation Study Effect of Pretraining.
-- **p. 13 / 11 Method - extractive PDF cue:** We show results of the baseline method trained from scratch and our finetuned model.
-- **p. 13 / 11 Method - extractive PDF cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
+- **p. 12 / 11 Method - extractive body cue:** Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS
+- **p. 14 / 11 Method - extractive body cue:** Ours + alt. means our model with alternative training.
+- **p. 11 / 11 Method - extractive body cue:** 4.5 3D Captioning From Table 3, our Uni3DL model outperforms existing methods in 3D captioning on the Cap3D Objaverse dataset.
+- **p. 11 / 11 Method - extractive body cue:** Note that Swin3D† uses extra training data (Structure3D [74]). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter ...
+- **p. 12 / 11 Method - extractive body cue:** 4.8 Ablation Study Effect of Pretraining.
+- **p. 13 / 11 Method - extractive body cue:** We show results of the baseline method trained from scratch and our finetuned model.
+- **p. 13 / 11 Method - extractive body cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
 - **Detected method headings:** 11 Method (p. 11)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS | p. 12 (11 Method), p. 14 (11 Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Ours + alt. means our model with alternative training. | p. 14 (11 Method), p. 11 (11 Method) |
@@ -64,12 +64,12 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** Its versatile architecture allows for the processing of both point clouds and text inputs, generating diverse outputs including masks, classes, and texts.
-- **p. 2 / 1 Introduction - extractive PDF cue:** They achieve this by matching projected multiview images with text inputs.
-- **p. 12 / 11 Method - extractive PDF cue:** Input GT Ours Refer: a brown wooden nightstand. it's between the end of the bed and close to the wall.
-- **p. 12 / 11 Method - extractive PDF cue:** Input GT Ours Refer: this is a green toolbox. the green toolbox is in front of a red toolbox on the floor next to a ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** A task router with multiple highly shared functional heads is designed to selectively produce task-specific outputs for diverse 3D vision-only and vision-language tasks.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Point-LLM [63] and 3D-LLM [23] directly operate on raw point clouds and explore Large Language Models (LLMs) for 3D visual understanding tasks, including 3D object ...
+- **p. 3 / 1 Introduction - extractive body cue:** Its versatile architecture allows for the processing of both point clouds and text inputs, generating diverse outputs including masks, classes, and texts.
+- **p. 2 / 1 Introduction - extractive body cue:** They achieve this by matching projected multiview images with text inputs.
+- **p. 12 / 11 Method - extractive body cue:** Input GT Ours Refer: a brown wooden nightstand. it's between the end of the bed and close to the wall.
+- **p. 12 / 11 Method - extractive body cue:** Input GT Ours Refer: this is a green toolbox. the green toolbox is in front of a red toolbox on the floor next to a ...
+- **p. 3 / 1 Introduction - extractive body cue:** A task router with multiple highly shared functional heads is designed to selectively produce task-specific outputs for diverse 3D vision-only and vision-language tasks.
+- **p. 2 / 1 Introduction - extractive body cue:** Point-LLM [63] and 3D-LLM [23] directly operate on raw point clouds and explore Large Language Models (LLMs) for 3D visual understanding tasks, including 3D object ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,12 +84,12 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 
 ## Training vs Inference
 
-- **p. 12 / 11 Method - extractive PDF cue:** Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS
-- **p. 14 / 11 Method - extractive PDF cue:** Ours + alt. means our model with alternative training.
-- **p. 11 / 11 Method - extractive PDF cue:** Note that Swin3D† uses extra training data (Structure3D [74]). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter ...
-- **p. 12 / 11 Method - extractive PDF cue:** 4.8 Ablation Study Effect of Pretraining.
-- **p. 13 / 11 Method - extractive PDF cue:** We show results of the baseline method trained from scratch and our finetuned model.
-- **p. 13 / 11 Method - extractive PDF cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
+- **p. 12 / 11 Method - extractive body cue:** Ablation experiments are conducted by training separate models from scratch for various tasks, including ScanNet (v2) semantic segmentation, S3DIS
+- **p. 14 / 11 Method - extractive body cue:** Ours + alt. means our model with alternative training.
+- **p. 11 / 11 Method - extractive body cue:** Note that Swin3D† uses extra training data (Structure3D [74]). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter ...
+- **p. 12 / 11 Method - extractive body cue:** 4.8 Ablation Study Effect of Pretraining.
+- **p. 13 / 11 Method - extractive body cue:** We show results of the baseline method trained from scratch and our finetuned model.
+- **p. 13 / 11 Method - extractive body cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,12 +109,12 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 
 ## Failure and Ablation Link
 
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation of pertaining. Effect of different pertaining tasks. We further investigate the effect of each pertaining task, including instance/grounded segmentation, 3D captioning, and ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation of pertaining tasks and scene-object task balance. Ours + alt. means our model with alternative training. Scene-object task balance. During the pretraining ...
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** Details about the pretraining and task-specific fine-tuning setups can be found in the supplementary material.
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
-- **p. 10 / 4.1 Dataset - extractive PDF cue:** During pretraining, we employ datasets including ScanNet (v2) instance segmentation, ScanRefer, and Cap3D Objaverse.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of various vision-language models in 3D, highlighting their ca- pabilities across diverse tasks. It specifically indicates the utilization of Multi-View (MV) images ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 4: Ablation of pertaining. Effect of different pertaining tasks. We further investigate the effect of each pertaining task, including instance/grounded segmentation, 3D captioning, and ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 5: Ablation of pertaining tasks and scene-object task balance. Ours + alt. means our model with alternative training. Scene-object task balance. During the pretraining ...
+- **p. 10 / 4.1 Dataset - extractive body cue:** Details about the pretraining and task-specific fine-tuning setups can be found in the supplementary material.
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
+- **p. 10 / 4.1 Dataset - extractive body cue:** During pretraining, we employ datasets including ScanNet (v2) instance segmentation, ScanRefer, and Cap3D Objaverse.
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Comparison of various vision-language models in 3D, highlighting their ca- pabilities across diverse tasks. It specifically indicates the utilization of Multi-View (MV) images ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -128,7 +128,7 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Method), p. 11 (11 Method), p. 12 (11 Method), p. 13 (11 Method), objective 본문 anchor 없음, temporal p. 14 (11 Method), p. 2 (1 King Abdullah University of Science and Technology), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 5 (2 Related Work), p. 6 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Method), p. 11 (11 Method), p. 12 (11 Method), p. 13 (11 Method), objective 본문 anchor 없음, temporal p. 14 (11 Method), p. 2 (Body text (section not recovered)), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 5 (2 Related Work), p. 6 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

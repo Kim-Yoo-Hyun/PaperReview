@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf; PDF retrieval source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf; PDF retrieval source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | We propose to formulate the problem holistically as a 1storder logic extension of a mathematical program: a non-linear constrained program over the ... | p. 1 (Abstract), p. 1 (1 Introduction) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | First, we aim for planners that can deal with arbitrary objective functions ψ(x(T)) on the final geometric configuration x(T) and overall control ... | p. 1 (1 Introduction), p. 2 (1 Introduction) |
@@ -77,7 +77,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | Further, the paths have 20 time steps per manipulation; for 25 objects this is a (15dimensional) trajectory with 1000 time steps across ... | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | This computes explicit geometric instantiations of the action operators and optimizes the respective configurations to account also for long-term effects, e.g., optimizes ... | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | Further, the paths have 20 time steps per manipulation; for 25 objects this is a (15dimensional) trajectory with 1000 time steps across ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -118,8 +118,17 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), temporal p. 6 (5 Experiments), p. 4 (2 Related Work), p. 5 (2 Related Work), p. 2 (1 Introduction), p. 6 (5 Experiments), p. 1 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), temporal p. 6 (5 Experiments), p. 4 (2 Related Work), p. 5 (2 Related Work), p. 2 (1 Introduction), p. 6 (5 Experiments), p. 1 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We propose to formulate the problem holistically as a 1storder logic extension of a mathematical program: a non-linear constrained program over the full world trajectory where the symbolic state-action sequence ... (p. 1, Abstract).
+- **Objective/update evidence:** Further, the above problems are inherently optimization problems, not constraint satisfaction problems. (p. 1, 1 Introduction).
+- **Temporal/runtime evidence:** Concerning keyframe optimization we can see some outliers with more than 30-40 seconds-these are exactly cases of infeasible manipulations where we have to discard the action sequence. (p. 6, 5 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

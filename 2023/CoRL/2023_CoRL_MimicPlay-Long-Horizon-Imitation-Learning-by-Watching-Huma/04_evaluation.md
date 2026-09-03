@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.12422; PDF retrieval source: https://arxiv.org/pdf/2302.12422. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.12422; PDF retrieval source: https://arxiv.org/pdf/2302.12422. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 
 ## Evaluation Body Digest
 
-- **p. 15 / C Supplementary Experiment Results - extractive PDF cue:** To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask robot ...
-- **p. 15 / C Supplementary Experiment Results - extractive PDF cue:** However, in simulation, there is no way to get such dataset, which will always end up being robot teleoperation.
-- **p. 17 / C Supplementary Experiment Results - extractive PDF cue:** Each sequence of robot demonstration has a pre-defined task goal.
-- **p. 16 / C Supplementary Experiment Results - extractive PDF cue:** For instance, in the training data, the robot only learns to open the box after turning off the lamp, meanwhile in the Easy setting of ...
-- **p. 17 / C Supplementary Experiment Results - extractive PDF cue:** (b) Robot demonstration data collection.
-- **p. 7 / 5 Results - extractive PDF cue:** We hypothesize this is due to the reason that the length of the demonstration for the whiteboard task is shorter than the other tasks, which ...
-- **p. 7 / 5 Results - extractive PDF cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
-- **p. 16 / C Supplementary Experiment Results - extractive PDF cue:** (a) Distribution overlap of Ours (w/o KL) (b) Distribution overlap of Ours Figure 7: t-SNE visualization of the generated feature embeddings by taking human data ...
+- **p. 15 / C Supplementary Experiment Results - extractive body cue:** To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask robot ...
+- **p. 15 / C Supplementary Experiment Results - extractive body cue:** However, in simulation, there is no way to get such dataset, which will always end up being robot teleoperation.
+- **p. 17 / C Supplementary Experiment Results - extractive body cue:** Each sequence of robot demonstration has a pre-defined task goal.
+- **p. 16 / C Supplementary Experiment Results - extractive body cue:** For instance, in the training data, the robot only learns to open the box after turning off the lamp, meanwhile in the Easy setting of ...
+- **p. 17 / C Supplementary Experiment Results - extractive body cue:** (b) Robot demonstration data collection.
+- **p. 7 / 5 Results - extractive body cue:** We hypothesize this is due to the reason that the length of the demonstration for the whiteboard task is shorter than the other tasks, which ...
+- **p. 7 / 5 Results - extractive body cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
+- **p. 16 / C Supplementary Experiment Results - extractive body cue:** (a) Distribution overlap of Ours (w/o KL) (b) Distribution overlap of Ours Figure 7: t-SNE visualization of the generated feature embeddings by taking human data ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Results | EMPIRICAL / SIMULATION | 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours. | p. 7 (5 Results) |
 | 5 Results | EMPIRICAL / SIMULATION | A 10-minute of cheap and unlabelled human play data brings large improvements in the task success rate and sample efficiency. | p. 7 (5 Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 
 ## Dataset / Benchmark Role
 
-- **p. 15 / C Supplementary Experiment Results - extractive PDF cue:** To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask robot ...
-- **p. 15 / C Supplementary Experiment Results - extractive PDF cue:** However, in simulation, there is no way to get such dataset, which will always end up being robot teleoperation.
-- **p. 17 / C Supplementary Experiment Results - extractive PDF cue:** Each sequence of robot demonstration has a pre-defined task goal.
-- **p. 16 / C Supplementary Experiment Results - extractive PDF cue:** For instance, in the training data, the robot only learns to open the box after turning off the lamp, meanwhile in the Easy setting of ...
-- **p. 17 / C Supplementary Experiment Results - extractive PDF cue:** (b) Robot demonstration data collection.
-- **p. 7 / 5 Results - extractive PDF cue:** We hypothesize this is due to the reason that the length of the demonstration for the whiteboard task is shorter than the other tasks, which ...
-- **p. 7 / 5 Results - extractive PDF cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
-- **p. 16 / C Supplementary Experiment Results - extractive PDF cue:** (a) Distribution overlap of Ours (w/o KL) (b) Distribution overlap of Ours Figure 7: t-SNE visualization of the generated feature embeddings by taking human data ...
+- **p. 15 / C Supplementary Experiment Results - extractive body cue:** To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask robot ...
+- **p. 15 / C Supplementary Experiment Results - extractive body cue:** However, in simulation, there is no way to get such dataset, which will always end up being robot teleoperation.
+- **p. 17 / C Supplementary Experiment Results - extractive body cue:** Each sequence of robot demonstration has a pre-defined task goal.
+- **p. 16 / C Supplementary Experiment Results - extractive body cue:** For instance, in the training data, the robot only learns to open the box after turning off the lamp, meanwhile in the Easy setting of ...
+- **p. 17 / C Supplementary Experiment Results - extractive body cue:** (b) Robot demonstration data collection.
+- **p. 7 / 5 Results - extractive body cue:** We hypothesize this is due to the reason that the length of the demonstration for the whiteboard task is shorter than the other tasks, which ...
+- **p. 7 / 5 Results - extractive body cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
+- **p. 16 / C Supplementary Experiment Results - extractive body cue:** (a) Distribution overlap of Ours (w/o KL) (b) Distribution overlap of Ours Figure 7: t-SNE visualization of the generated feature embeddings by taking human data ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a hierarchical ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of MIMICPLAY. (a) Training Stage 1: using cheap human play data to train a goal-conditioned trajectory generation model to build a latent ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Evaluation Tasks. We design six environments with long-horizon tasks for a Franka Emika robot arm, with initial (left) and goal (right) states shown ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative evaluation results in the Kitchen environment. to the decreased dimensionality. In the following, we introduce how to generate the latent plan pt ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation evaluation results in the Study Desk environment (20 demos). Spatial generalization Extreme long horizon Deformable Flower Whiteboard Sandwich
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Quantitative evaluation results of multi-task learning. Baselines. We evaluate five methods: 1) GC-BC (BC-RNN) and 2) GC-BC (BC-trans), goal-conditioned BC variants of [20] ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Evaluation of multi-task policy prompted with robot/human videos in the Study Desk environment. Ours (w/o GMM) even fails to match the performance of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative visualization of the latent plans before the disturbance and re-planning. Column 1: third- person view. Column 2: visualization of the latent plan ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a hierarchical ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of MIMICPLAY. (a) Training Stage 1: using cheap human play data to train a goal-conditioned trajectory generation model to build a latent ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Evaluation Tasks. We design six environments with long-horizon tasks for a Franka Emika robot arm, with initial (left) and goal (right) states shown ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Quantitative evaluation results in the Kitchen environment. to the decreased dimensionality. In the following, we introduce how to generate the latent plan pt ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Ablation evaluation results in the Study Desk environment (20 demos). Spatial generalization Extreme long horizon Deformable Flower Whiteboard Sandwich
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Quantitative evaluation results of multi-task learning. Baselines. We evaluate five methods: 1) GC-BC (BC-RNN) and 2) GC-BC (BC-trans), goal-conditioned BC variants of [20] ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Evaluation of multi-task policy prompted with robot/human videos in the Study Desk environment. Ours (w/o GMM) even fails to match the performance of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative visualization of the latent plans before the disturbance and re-planning. Column 1: third- person view. Column 2: visualization of the latent plan ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask ... | embodiment, simulator version and control stack | p. 15 (C Supplementary Experiment Results), p. 15 (C Supplementary Experiment Results) |
 | Task/environment | However, in simulation, there is no way to get such dataset, which will always end up being robot teleoperation. | reset, timeout, object/scene variation | p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 | Primary metric/result | A 10-minute of cheap and unlabelled human play data brings large improvements in the task success rate and sample efficiency. | numeric claim only at cited anchor | p. 7 (5 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 Results - extractive PDF cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
-- **p. 8 / 5 Results - extractive PDF cue:** Since our whole system (including the vision-based latent planner, low-level guided policy, and robot control) is running at a speed of 17Hz, our model is ...
-- **p. 14 / A Implementation details - extractive PDF cue:** The entire trajectory τ is recorded at the speed of 60 frames per second and is used without cutting or labeling.
-- **p. 14 / A Implementation details - extractive PDF cue:** We train 100k iterations for the latent planner which takes a single GPU machine for 12 hours.
-- **p. 14 / A Implementation details - extractive PDF cue:** The control frequency of the robot arm is 17-20Hz and the gripper is controlled at 2Hz.
-- **p. 14 / A Implementation details - extractive PDF cue:** We train 100k iterations for the policy with a single GPU machine in 12 hours.
+- **p. 7 / 5 Results - extractive body cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
+- **p. 8 / 5 Results - extractive body cue:** Since our whole system (including the vision-based latent planner, low-level guided policy, and robot control) is running at a speed of 17Hz, our model is ...
+- **p. 14 / A Implementation details - extractive body cue:** The entire trajectory τ is recorded at the speed of 60 frames per second and is used without cutting or labeling.
+- **p. 14 / A Implementation details - extractive body cue:** We train 100k iterations for the latent planner which takes a single GPU machine for 12 hours.
+- **p. 14 / A Implementation details - extractive body cue:** The control frequency of the robot arm is 17-20Hz and the gripper is controlled at 2Hz.
+- **p. 14 / A Implementation details - extractive body cue:** We train 100k iterations for the policy with a single GPU machine in 12 hours.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,23 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5 Results - extractive PDF cue:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings.
-- **p. 8 / 5 Results - extractive PDF cue:** 6 Conclusion and Limitations Existing limitations of the MIMICPLAY include: 1) The current high-level latent plan is learned from scene-specific human play data.
-- **p. 8 / 5 Results - extractive PDF cue:** 2, we compared the model variants with 50% human play data (Ours (50% human)) and found it fails to match the performance of Ours, which ...
-- **p. 7 / 5 Results - extractive PDF cue:** This result showcases that learning a latent plan space does not need to rely fully on teleoperated robot demonstration data.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a hierarchical ...
-- **p. 16 / C Supplementary Experiment Results - extractive PDF cue:** Ours (0% human) variant still outputs a latent plan to open the box, which causes the task to fail since the box is already open.
+- **p. 7 / 5 Results - extractive body cue:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings.
+- **p. 8 / 5 Results - extractive body cue:** 6 Conclusion and Limitations Existing limitations of the MIMICPLAY include: 1) The current high-level latent plan is learned from scene-specific human play data.
+- **p. 8 / 5 Results - extractive body cue:** 2, we compared the model variants with 50% human play data (Ours (50% human)) and found it fails to match the performance of Ours, which ...
+- **p. 7 / 5 Results - extractive body cue:** This result showcases that learning a latent plan space does not need to rely fully on teleoperated robot demonstration data.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a hierarchical ...
+- **p. 16 / C Supplementary Experiment Results - extractive body cue:** Ours (0% human) variant still outputs a latent plan to open the box, which causes the task to fail since the box is already open.
 
-- **PDF anchors reviewed:** datasets p. 15 (C Supplementary Experiment Results), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 16 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 7 (5 Results), metrics p. 7 (5 Results), p. 7 (5 Results), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 15 (Figure/Table caption), p. 8 (5 Results), baselines p. 7 (5 Results), p. 14 (A Implementation details), p. 7 (5 Results), p. 8 (5 Results), p. 8 (5 Results), p. 15 (C Supplementary Experiment Results), results p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure/Table caption), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 15 (C Supplementary Experiment Results), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 16 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 7 (5 Results), metrics p. 7 (5 Results), p. 7 (5 Results), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 15 (Figure/Table caption), p. 8 (5 Results), baselines p. 7 (5 Results), p. 14 (A Implementation details), p. 7 (5 Results), p. 8 (5 Results), p. 8 (5 Results), p. 15 (C Supplementary Experiment Results), results p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure/Table caption), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Therefore, in this experiment, we use the same teleoperated robot play dataset to train both high-level planner and low-level controller, and report the results of Ours (0% human) and baselines ... (p. 15, C Supplementary Experiment Results).
+- **Metric evidence:** 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours. (p. 7, 5 Results).
+- **Baseline/ablation evidence:** 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours. (p. 7, 5 Results).
+- **Failure/negative evidence:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. (p. 7, 5 Results).

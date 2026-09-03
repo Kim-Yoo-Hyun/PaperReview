@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=a3ptUbuzbW; PDF retrieval source: https://openreview.net/pdf/602b5d6d17415fb9e6df86e7df8a1fe5990406d7.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=a3ptUbuzbW; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114864. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Therefore, we utilize the realistic dataset GauU-Scene (Xiong et al., 2024) and the synthetic dataset MatrixCity (Li et al., 2023a).
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)).
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** We require datasets with accurate ground-truth point clouds.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Results on other scenes are included in Tab.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** On the challenging MatrixCity dataset, we evaluate performance from both aerial and street views.
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** For primitives and data partitioning, as well as parallel tuning, we follow the default parameter setting of CityGaussian (Liu et al., 2024) on both aerial ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Therefore, we utilize the realistic dataset GauU-Scene (Xiong et al., 2024) and the synthetic dataset MatrixCity (Li et al., 2023a).
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)).
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We require datasets with accurate ground-truth point clouds.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Results on other scenes are included in Tab.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** On the challenging MatrixCity dataset, we evaluate performance from both aerial and street views.
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** For primitives and data partitioning, as well as parallel tuning, we follow the default parameter setting of CityGaussian (Liu et al., 2024) on both aerial ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | For MatrixCity-Aerial, our method achieves the best surface quality among all algorithms, with the F1 score being twice that of 2DGS and outperforming CityGaussian ... | p. 9 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | For GauU-Scene, our model significantly outperforms existing geometry-specialized methods in rendering quality. | p. 8 (5 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Therefore, we utilize the realistic dataset GauU-Scene (Xiong et al., 2024) and the synthetic dataset MatrixCity (Li et al., 2023a).
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)).
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** We require datasets with accurate ground-truth point clouds.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Results on other scenes are included in Tab.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** On the challenging MatrixCity dataset, we evaluate performance from both aerial and street views.
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** For primitives and data partitioning, as well as parallel tuning, we follow the default parameter setting of CityGaussian (Liu et al., 2024) on both aerial ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Therefore, we utilize the realistic dataset GauU-Scene (Xiong et al., 2024) and the synthetic dataset MatrixCity (Li et al., 2023a).
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)).
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We require datasets with accurate ground-truth point clouds.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Results on other scenes are included in Tab.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** On the challenging MatrixCity dataset, we evaluate performance from both aerial and street views.
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** For primitives and data partitioning, as well as parallel tuning, we follow the default parameter setting of CityGaussian (Liu et al., 2024) on both aerial ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Illustration of the superiority of CityGaussianV2. (a) Our method reconstructs large-scale complex scenes with accurate geometry from multi-view RGB images, restoring intricate structures ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Illustration of our optimization mechanism. We densify Gaussians exclusively according to the gradient of SSIM loss. This helps remove large and blurry Gaussians ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Illustration of the motivation and effectiveness of our Elongation Filter. We take the tuning of one block of Rubble (Turki et al., 2022) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Illustration of pipeline modification. The pipeline of CityGS (Liu et al., 2024) (dashed boxes and arrows) is compared with ours. We successfully removed ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Illustration of the evaluation process. ever, there is still no universally accepted protocol for assessing geometric accuracy in large-scale scene reconstruction. Recently, GauU-Scene ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Qualitative comparison of surface reconstruction quality. Here "Russian" and "Modern" denote the Russian Building and Modern Building scene of GauU-Scene, respectively. And "Aerial" ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 7: Qualitative comparison of rendering quality. Here "Russian" and "Modern" denote the Russian Building and Modern Building scene of GauU-Scene, respectively. "Aerial" denotes the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison with SOTA reconstruction methods. "NaN" means no results due to NaN error. "FAIL" means the method fails to extract meaningful mesh due ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the superiority of CityGaussianV2. (a) Our method reconstructs large-scale complex scenes with accurate geometry from multi-view RGB images, restoring intricate structures ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration of our optimization mechanism. We densify Gaussians exclusively according to the gradient of SSIM loss. This helps remove large and blurry Gaussians ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Illustration of the motivation and effectiveness of our Elongation Filter. We take the tuning of one block of Rubble (Turki et al., 2022) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Illustration of pipeline modification. The pipeline of CityGS (Liu et al., 2024) (dashed boxes and arrows) is compared with ours. We successfully removed ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Illustration of the evaluation process. ever, there is still no universally accepted protocol for assessing geometric accuracy in large-scale scene reconstruction. Recently, GauU-Scene ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Qualitative comparison of surface reconstruction quality. Here "Russian" and "Modern" denote the Russian Building and Modern Building scene of GauU-Scene, respectively. And "Aerial" ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Qualitative comparison of rendering quality. Here "Russian" and "Modern" denote the Russian Building and Modern Building scene of GauU-Scene, respectively. "Aerial" denotes the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Comparison with SOTA reconstruction methods. "NaN" means no results due to NaN error. "FAIL" means the method fails to extract meaningful mesh due ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Therefore, we utilize the realistic dataset GauU-Scene (Xiong et al., 2024) and the synthetic dataset MatrixCity (Li et al., 2023a). | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
 | Task/environment | The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)). | reset, timeout, object/scene variation | p. 10 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
@@ -109,11 +109,11 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
 | Figure 10: Qualitative ablation of 7K iteration results among different methods. This section provides additional qualitative comparisons. As illustrated in Fig. 8, the mesh ... | component/input/data sensitivity | p. 14 (Figure/Table caption) |
-| Published as a conference paper at ICLR 2025 Table 2: Ablation on model components. | component/input/data sensitivity | p. 10 (5 EXPERIMENTS) |
 | Table 2: Ablation on model components. The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)). Here we take 2DGS ... | component/input/data sensitivity | p. 10 (Figure/Table caption) |
 | 1 shows that even without parallel tuning, our proposed optimization strategy enables our model to achieve significantly better 8 | component/input/data sensitivity | p. 8 (5 EXPERIMENTS) |
 | Figure 2: Illustration of our optimization mechanism. We densify Gaussians exclusively according to the gradient of SSIM loss. This helps remove large and blurry ... | component/input/data sensitivity | p. 4 (Figure/Table caption) |
 | Figure 4: Illustration of pipeline modification. The pipeline of CityGS (Liu et al., 2024) (dashed boxes and arrows) is compared with ours. We successfully ... | component/input/data sensitivity | p. 6 (Figure/Table caption) |
+| Table 4: Detailed comparison among SOTA among parallel training methods. 2DGS* here means applying CityGS's training strategy to 2DGS without our proposed optimization mechanism. ... | component/input/data sensitivity | p. 16 (Figure/Table caption) |
 
 ## Main Results / Claim–Evidence Map
 
@@ -123,17 +123,17 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | Primary metric/result | For GauU-Scene, our model significantly outperforms existing geometry-specialized methods in rendering quality. | numeric claim only at cited anchor | p. 8 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Besides, these methods generally take over 10 hours for training.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Additionally, by using the result from 7,000 iterations as a pre-train, the total training time decreases from 3 hours to 2 hours, with the model ...
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Besides, these methods generally take over 10 hours for training.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Additionally, by using the result from 7,000 iterations as a pre-train, the total training time decreases from 3 hours to 2 hours, with the model ...
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
 | body limitation/failure cue | As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in ... | p. 8 (5 EXPERIMENTS) |
-| body limitation/failure cue | Published as a conference paper at ICLR 2025 Ours Ground-truth CityGS SuGaR GOF 2DGS Modern Russian Aerial Convergence Failure Residence Figure 6: Qualitative comparison ... | p. 8 (5 EXPERIMENTS) |
+| body limitation/failure cue | Due to page limitations, detailed parameters for block partition and quantization are provided in the Appendix. | p. 8 (5 EXPERIMENTS) |
 | body limitation/failure cue | Furthermore, GOF fails to complete training or extract meaningful meshes. | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | Table 1: Comparison with SOTA reconstruction methods. "NaN" means no results due to NaN error. "FAIL" means the method fails to extract meaningful mesh ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | LightGaussian's (Fan et al., 2023) pruning strategy, however, falls short in preserving rendering quality. | p. 10 (5 EXPERIMENTS) |
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Ours Ground-truth CityGS SuGaR GOF 2DGS Modern Russian Aerial Convergence Failure Residence Figure 6: Qualitative comparison of ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Furthermore, GOF fails to complete training or extract meaningful meshes.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison with SOTA reconstruction methods. "NaN" means no results due to NaN error. "FAIL" means the method fails to extract meaningful mesh due ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** LightGaussian's (Fan et al., 2023) pruning strategy, however, falls short in preserving rendering quality.
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 5: Detailed geometry metrics on GauU-Scene datasets ((Xiong et al., 2024)). * means that the method fails to finish 60,000 iterations training and therefore ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Due to page limitations, detailed parameters for block partition and quantization are provided in the Appendix.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Furthermore, GOF fails to complete training or extract meaningful meshes.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Comparison with SOTA reconstruction methods. "NaN" means no results due to NaN error. "FAIL" means the method fails to extract meaningful mesh due ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** LightGaussian's (Fan et al., 2023) pruning strategy, however, falls short in preserving rendering quality.
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 5: Detailed geometry metrics on GauU-Scene datasets ((Xiong et al., 2024)). * means that the method fails to finish 60,000 iterations training and therefore ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 1 (Figure/Table caption), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 16 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 1 (Figure/Table caption), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 16 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

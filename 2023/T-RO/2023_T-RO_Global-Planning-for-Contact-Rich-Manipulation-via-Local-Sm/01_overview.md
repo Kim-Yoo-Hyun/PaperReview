@@ -1,8 +1,10 @@
 # Global Planning for Contact-Rich Manipulation via Local Smoothing of Quasi-Dynamic Contact Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2206.10787.
-> PDF retrieval source: https://arxiv.org/pdf/2206.10787. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2206.10787.
+> PDF retrieval source: https://arxiv.org/pdf/2206.10787. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / T-RO
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2206.10787
 - Code/Project: https://github.com/pangtao22/quasistatic_simulator
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Faced with such challenges, many existing works have sought to explicitly consider contact modes by either enumerating or sampling them.를 문제로 두고, Our first contribution is to establish the theoretical equivalence of the two smoothing schemes for simple systems under our framework (Sec.II,IV-C).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This invalidity of the local model presents significant challenges for both *These ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** (ii) We present a convex, differentiable formulation of quasi-dynamic contact dynamics and its analytic smoothing, which we show to be highly effective for contact-rich manipulation planning. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** On trajectory segments with good sim2real performance, this only results in harmless oscillations of qu real around qu sim. (p. 18, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).
+- **Explicit failure boundary:** The consequence of these failed grasps is that plates are dropped on the table in AllegroHandPlate, and door handles are missed in AllegroHandDoor. (p. 19, IX. SIM2REAL TRANSFER & HARDWARE RESULTS).

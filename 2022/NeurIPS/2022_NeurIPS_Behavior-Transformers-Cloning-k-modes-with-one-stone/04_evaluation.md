@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 1: Unconditional rollouts from BeT models trained from multi-modal demonstartions on the CARLA, Block push, and Franka Kitchen environments. Due to the multi-modal ... | p. 2 (Figure/Table caption) |
 | 3 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | We see that BeT outperforms all other methods in all environments except CARLA, where it is narrowly outperformed by LWR. | p. 6 (3 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 3.1 Environments and datasets We experiment with five broad environments. | embodiment, simulator version and control stack | p. 5 (3 Experiments), p. 5 (3 Experiments) |
 | Task/environment | While full descriptions of these environments, dataset creation procedure, and overall statistics are in Appendix A, a brief description of them are as follows. | reset, timeout, object/scene variation | p. 5 (3 Experiments), p. 6 (3 Experiments) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 - **p. 9 / 4 Related Work - extractive body cue:** BeT falls under the second category, as it is a behavior cloning model.
 - **p. 8 / 3 Experiments - extractive body cue:** We see in Table 2 that in CARLA and Block push, BeT covers all the modes of the demonstration data, even in the few cases ...
 
-- **PDF anchors reviewed:** datasets p. 5 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 9 (3 Experiments), metrics p. 9 (3 Experiments), p. 8 (3 Experiments), p. 5 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), baselines p. 8 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 9 (3 Experiments), results p. 2 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 8 (3 Experiments), p. 8 (3 Experiments), p. 5 (3 Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 9 (3 Experiments), metrics p. 9 (3 Experiments), p. 8 (3 Experiments), p. 5 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), baselines p. 8 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 9 (3 Experiments), results p. 2 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 8 (3 Experiments), p. 8 (3 Experiments), p. 5 (3 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able ... (p. 8, Figure/Table caption).
+- **Metric evidence:** We now study the empirical performance of BeT on a variety of behavior learning tasks. (p. 5, 3 Experiments).
+- **Baseline/ablation evidence:** Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able ... (p. 8, Figure/Table caption).
+- **Failure/negative evidence:** Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD). (p. 6, 3 Experiments).

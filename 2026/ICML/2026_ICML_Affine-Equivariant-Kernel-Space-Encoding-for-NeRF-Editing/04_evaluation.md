@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fAj3MJghc0; PDF retrieval source: https://openreview.net/pdf/048e4b5756022f2faa8898f0f2d379b85079ab58.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fAj3MJghc0; PDF retrieval source: https://openreview.net/pdf/048e4b5756022f2faa8898f0f2d379b85079ab58.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5. Experiments - extractive PDF cue:** Additionally to synthetic data we trained our NeRF model trained on the Mip-NeRF 360 dataset (Barron et al., 2022), comprising five outdoor and four indoor ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** These experiments span both synthetic and real-world datasets and include diverse physical phenomena such as rigid body dynamics, soft body deformation, and cloth simulation.
-- **p. 6 / 5. Experiments - extractive PDF cue:** Example edits on real-world scenes.
-- **p. 7 / 5. Experiments - extractive PDF cue:** Quantitative comparisons (PSNR) on a NeRF-Synthetic dataset showing that EKS gives comparable results with other models on static scenes.
-- **p. 8 / 5. Experiments - extractive PDF cue:** Ablation study of EKS reporting PSNR for static reconstruction and edited scenes.
-- **p. 8 / 5. Experiments - extractive PDF cue:** Physics simulations with Gaussian Splatting methods.
-- **p. 6 / 5. Experiments - extractive PDF cue:** This demonstrates that our approach preserves rendering quality while enabling scene edits.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We design our experiments to demonstrate that EKS maintains the reconstruction quality of state-of-the-art (SOTA) methods while enabling complex object modifications.
+- **p. 6 / 5. Experiments - extractive body cue:** Additionally to synthetic data we trained our NeRF model trained on the Mip-NeRF 360 dataset (Barron et al., 2022), comprising five outdoor and four indoor ...
+- **p. 7 / 5. Experiments - extractive body cue:** These experiments span both synthetic and real-world datasets and include diverse physical phenomena such as rigid body dynamics, soft body deformation, and cloth simulation.
+- **p. 6 / 5. Experiments - extractive body cue:** Example edits on real-world scenes.
+- **p. 7 / 5. Experiments - extractive body cue:** Quantitative comparisons (PSNR) on a NeRF-Synthetic dataset showing that EKS gives comparable results with other models on static scenes.
+- **p. 8 / 5. Experiments - extractive body cue:** Ablation study of EKS reporting PSNR for static reconstruction and edited scenes.
+- **p. 8 / 5. Experiments - extractive body cue:** Physics simulations with Gaussian Splatting methods.
+- **p. 6 / 5. Experiments - extractive body cue:** This demonstrates that our approach preserves rendering quality while enabling scene edits.
+- **p. 6 / 5. Experiments - extractive body cue:** We design our experiments to demonstrate that EKS maintains the reconstruction quality of state-of-the-art (SOTA) methods while enabling complex object modifications.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | These baselines are selected to demonstrate that EKS not only achieves reconstruction quality comparable to or exceeding SOTA methods, while enabling editing with significantly ... | p. 6 (5. Experiments) |
 | 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | For static scene reconstruction, EKS achieves quality comparable to state-of-the-art editable methods, and in some cases provides the best results among methods that support ... | p. 6 (5. Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5. Experiments - extractive PDF cue:** Additionally to synthetic data we trained our NeRF model trained on the Mip-NeRF 360 dataset (Barron et al., 2022), comprising five outdoor and four indoor ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** These experiments span both synthetic and real-world datasets and include diverse physical phenomena such as rigid body dynamics, soft body deformation, and cloth simulation.
-- **p. 6 / 5. Experiments - extractive PDF cue:** Example edits on real-world scenes.
-- **p. 7 / 5. Experiments - extractive PDF cue:** Quantitative comparisons (PSNR) on a NeRF-Synthetic dataset showing that EKS gives comparable results with other models on static scenes.
-- **p. 8 / 5. Experiments - extractive PDF cue:** Ablation study of EKS reporting PSNR for static reconstruction and edited scenes.
-- **p. 8 / 5. Experiments - extractive PDF cue:** Physics simulations with Gaussian Splatting methods.
+- **p. 6 / 5. Experiments - extractive body cue:** Additionally to synthetic data we trained our NeRF model trained on the Mip-NeRF 360 dataset (Barron et al., 2022), comprising five outdoor and four indoor ...
+- **p. 7 / 5. Experiments - extractive body cue:** These experiments span both synthetic and real-world datasets and include diverse physical phenomena such as rigid body dynamics, soft body deformation, and cloth simulation.
+- **p. 6 / 5. Experiments - extractive body cue:** Example edits on real-world scenes.
+- **p. 7 / 5. Experiments - extractive body cue:** Quantitative comparisons (PSNR) on a NeRF-Synthetic dataset showing that EKS gives comparable results with other models on static scenes.
+- **p. 8 / 5. Experiments - extractive body cue:** Ablation study of EKS reporting PSNR for static reconstruction and edited scenes.
+- **p. 8 / 5. Experiments - extractive body cue:** Physics simulations with Gaussian Splatting methods.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. EKS overview. EKS represents positional features using spatially localized anisotropic Gaussian kernels, enabling stable and fine-grained interactive editing while maintaining the high-fidelity rendering ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Physical simulations. From left to right: (1) Rigid body simulation of falling leaves. (2) Soft body simulation of the Lego dozer being squished. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Evolution of two physical simulations. From left to right: (1) A rubber duck falling onto a pillow and deforming it. (2) A pirate ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Model overview. Top: During training, a subset of Gaussians is selected using Ray-Traced Gaussian Proximity Search (RT-GPS), which also handles pruning. The nearest ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. KNN Comparisons. Comparison of neighbourhood changes under deformation using Euclidean distance KNN (top) versus our proposed Mahalanobis distance KNN (bottom). Mov- ing points ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. The RT-GPS working principle. A light ray passing through the scene is illustrated, along with its intersections with the icosahedrons. The figure highlights ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7. Example edits on real-world scenes. From left to right: (1) Physics-based simulation, showing an object falling onto a tilted table and bouncing off. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparisons (PSNR) on a NeRF-Synthetic dataset showing that EKS gives comparable results with other models on static scenes. For edited scene reconstruction, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. EKS overview. EKS represents positional features using spatially localized anisotropic Gaussian kernels, enabling stable and fine-grained interactive editing while maintaining the high-fidelity rendering ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Physical simulations. From left to right: (1) Rigid body simulation of falling leaves. (2) Soft body simulation of the Lego dozer being squished. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Evolution of two physical simulations. From left to right: (1) A rubber duck falling onto a pillow and deforming it. (2) A pirate ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Model overview. Top: During training, a subset of Gaussians is selected using Ray-Traced Gaussian Proximity Search (RT-GPS), which also handles pruning. The nearest ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. KNN Comparisons. Comparison of neighbourhood changes under deformation using Euclidean distance KNN (top) versus our proposed Mahalanobis distance KNN (bottom). Mov- ing points ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. The RT-GPS working principle. A light ray passing through the scene is illustrated, along with its intersections with the icosahedrons. The figure highlights ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Example edits on real-world scenes. From left to right: (1) Physics-based simulation, showing an object falling onto a tilted table and bouncing off. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons (PSNR) on a NeRF-Synthetic dataset showing that EKS gives comparable results with other models on static scenes. For edited scene reconstruction, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Additionally to synthetic data we trained our NeRF model trained on the Mip-NeRF 360 dataset (Barron et al., 2022), comprising five outdoor and four ... | embodiment, simulator version and control stack | p. 6 (5. Experiments), p. 7 (5. Experiments) |
 | Task/environment | These experiments span both synthetic and real-world datasets and include diverse physical phenomena such as rigid body dynamics, soft body deformation, and cloth simulation. | reset, timeout, object/scene variation | p. 7 (5. Experiments), p. 6 (5. Experiments) |
@@ -120,7 +120,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 | Primary metric/result | For static scene reconstruction, EKS achieves quality comparable to state-of-the-art editable methods, and in some cases provides the best results among methods that support ... | numeric claim only at cited anchor | p. 6 (5. Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5. Experiments - extractive PDF cue:** 25.68 35.49 36.71 29.60 30.88 37.30 33.83 Editable GaMeS 35.73 26.15 35.57 35.67 29.89 30.78 37.58 34.83 RIP-NeRF 34.84 24.89 33.41 34.19 28.31 30.65 35.96 ...
+- **p. 7 / 5. Experiments - extractive body cue:** 25.68 35.49 36.71 29.60 30.88 37.30 33.83 Editable GaMeS 35.73 26.15 35.57 35.67 29.89 30.78 37.58 34.83 RIP-NeRF 34.84 24.89 33.41 34.19 28.31 30.65 35.96 ...
 
 ## Generalization and Failure Cases
 
@@ -152,14 +152,14 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Physical simulations. From left to right: (1) Rigid body simulation of falling leaves. (2) Soft body simulation of the Lego dozer being squished. ...
-- **p. 8 / 6. Conclusions - extractive PDF cue:** By representing latent features with anisotropic Gaussian kernels and aggregating them using Mahalanobis-distance-based neighbourhoods, our method preserves local feature structure under affine transformations, addressing a ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Evolution of two physical simulations. From left to right: (1) A rubber duck falling onto a pillow and deforming it. (2) A pirate ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. KNN Comparisons. Comparison of neighbourhood changes under deformation using Euclidean distance KNN (top) versus our proposed Mahalanobis distance KNN (bottom). Mov- ing points ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** From left to right: (1) Physics-based simulation, showing an object falling onto a tilted table and bouncing off.
-- **p. 7 / 5. Experiments - extractive PDF cue:** Whether simulating leaves falling from a plant, squashing a soft object, or draping cloth over complex geometry, our method maintains high rendering fidelity while enabling ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Physical simulations. From left to right: (1) Rigid body simulation of falling leaves. (2) Soft body simulation of the Lego dozer being squished. ...
+- **p. 8 / 6. Conclusions - extractive body cue:** By representing latent features with anisotropic Gaussian kernels and aggregating them using Mahalanobis-distance-based neighbourhoods, our method preserves local feature structure under affine transformations, addressing a ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Evolution of two physical simulations. From left to right: (1) A rubber duck falling onto a pillow and deforming it. (2) A pirate ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. KNN Comparisons. Comparison of neighbourhood changes under deformation using Euclidean distance KNN (top) versus our proposed Mahalanobis distance KNN (bottom). Mov- ing points ...
+- **p. 6 / 5. Experiments - extractive body cue:** From left to right: (1) Physics-based simulation, showing an object falling onto a tilted table and bouncing off.
+- **p. 7 / 5. Experiments - extractive body cue:** Whether simulating leaves falling from a plant, squashing a soft object, or draping cloth over complex geometry, our method maintains high rendering fidelity while enabling ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiments), p. 7 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), metrics p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), baselines p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), results p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 7 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), metrics p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), baselines p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), results p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

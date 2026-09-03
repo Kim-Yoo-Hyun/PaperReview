@@ -2,20 +2,21 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p049.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p049.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p049.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p049.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 1 (Abstract)): Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each step, RT-H conditions on the ...
+PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION)): Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each step, RT-H conditions on the ...
 
 ## Method Body Digest
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each ...
 - **p. 1 / Abstract - extractive body cue:** Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along with the high-level ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: Given a task in language like "close the pistachio jar" and an image of the scene, RT-H utilizes a Vision Language Model (VLM) to ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Then RT-H uses the observation, the task, and the inferred language motion to predict the action for that step (action query), where the language motion ...
-- **p. 1 / Abstract - extractive body cue:** Predicting these language motions as an intermediate step between high-level tasks and actions forces the policy to learn the shared structure of low-level motions across ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The advantage of language in these settings is to encode the shared structure between similar tasks (e.g., "pick coke can" vs. "pick an apple"), reducing ...
 - **p. 1 / Abstract - extractive body cue:** Recent works in robot imitation learning have proposed learning language-conditioned policies that predict actions given visual observations and the high-level task specified in language.
+- **p. 1 / Abstract - extractive body cue:** Predicting these language motions as an intermediate step between high-level tasks and actions forces the policy to learn the shared structure of low-level motions across ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** These works often share a common paradigm: given a high-level task described in language like "pick coke can", they learn policies that map observations and ...
 
 ## Design Rationale
@@ -28,17 +29,17 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each ...
 - **p. 1 / Abstract - extractive body cue:** Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along with the high-level ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: Given a task in language like "close the pistachio jar" and an image of the scene, RT-H utilizes a Vision Language Model (VLM) to ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Then RT-H uses the observation, the task, and the inferred language motion to predict the action for that step (action query), where the language motion ...
-- **p. 1 / Abstract - extractive body cue:** Predicting these language motions as an intermediate step between high-level tasks and actions forces the policy to learn the shared structure of low-level motions across ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action ... | p. 2 (I. INTRODUCTION), p. 1 (Abstract) |
-| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along ... | p. 1 (Abstract), p. 2 (I. INTRODUCTION) |
-| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | Then RT-H uses the observation, the task, and the inferred language motion to predict the action for that step (action query), where ... | p. 2 (I. INTRODUCTION), p. 1 (Abstract) |
+| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along ... | p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)) |
+| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | 1: Given a task in language like "close the pistachio jar" and an image of the scene, RT-H utilizes a Vision Language ... | p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -73,8 +74,8 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Thus to cheaply extract reliable language motions z at each time step in each episode, we develop an automated labeling scheme relying ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | However, this process doubles inference time since the two queries must be run sequentially at each time step. | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -118,8 +119,17 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 1 (Abstract), objective p. 2 (I. INTRODUCTION), temporal p. 4 (II. RELATED WORK), p. 5 (II. RELATED WORK), p. 5 (II. RELATED WORK), p. 2 (I. INTRODUCTION), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), objective p. 2 (I. INTRODUCTION), temporal p. 4 (II. RELATED WORK), p. 5 (II. RELATED WORK), p. 5 (II. RELATED WORK), p. 2 (I. INTRODUCTION), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Predicting these language motions as an intermediate step between high-level tasks and actions forces the policy to learn the shared structure of low-level motions across seemingly disparate tasks. (p. 1, Abstract).
+- **Objective/update evidence:** Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along with the high-level task, it then predicts actions, ... (p. 1, Abstract).
+- **Temporal/runtime evidence:** 3, were chosen because they require complex sequences of motions and high precision. (p. 6, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

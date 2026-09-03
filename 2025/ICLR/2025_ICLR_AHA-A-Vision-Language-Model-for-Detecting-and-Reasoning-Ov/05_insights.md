@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 To capture the temporal relationships within the action sequence, the input image was constructed by selecting a single frame that represents the robot's trajectory up to the current sub-task and concatenating it ...를 For the input formulation in VLMs for instruction fine-tuning and evaluation, we required a query prompt 6로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse kinematics, collisions, etc.) from the environment, and returns any sampled plan that does not ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 4.1 Failure Reasoning Formulation Unlike previous works [48, 28, 22] that primarily focus on detecting task success as binary classification problem, we approach failure reasoning by first predicting a binary ... (p. 6, 4 Method).
+- **Paper-specific mechanism:** We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. ... (p. 8, Figure/Table caption); the relevant task/metric cue is Figure 1: AHA is a Vision-Language Model designed to detect and reason about failures in robotic manipulation. As an instruction-tuned VLM, it can enhance task performance in robotic applications that ... (p. 3, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse kinematics, collisions, etc.) from the environment, and returns any sampled plan that ... (p. 10, 4 Method).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Lastly, we adapted a failure benchmark from the RoboFail dataset [48], which features real-world robot failures in seven UR5 robot tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. AHA-13B outperf ....
-4. Report the body metric and its denominator/aggregation: Comparing the evaluated policy success rates using different failure feedback VLMs, we observed that AHA-13B provided intuitive, human-level failure reasoning that aided in modifying and improving generated dense reward functions..
-5. Re-run the body-reported ablation/failure condition: Scaling of effect of model performance with varying domain specific fine-tuning data..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 4.1 Failure Reasoning Formulation Unlike previous works [48, 28, 22] that primarily focus on detecting task success as binary classification problem, we approach failure reasoning by first predicting a binary ... (p. 6, 4 Method); preserve the objective/update rule: To systematically assess the reasoning capabilities of different VLMs under budget constraints, we sampled one reward function initially and allowed for iterations over two sessions of GPT API calls. (p. 10, 4 Method).
+2. Use the paper-reported task/data/environment cue: Lastly, we adapted a failure benchmark from the RoboFail dataset [48], which features real-world robot failures in seven UR5 robot tasks. (p. 8, 4 Method).
+3. Compare against the reported or matched baseline: Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. ... (p. 8, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Figure 1: AHA is a Vision-Language Model designed to detect and reason about failures in robotic manipulation. As an instruction-tuned VLM, it can enhance task performance in robotic applications that ... (p. 3, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: The first dataset, AHA dataset (Test), includes 11k image-question pairs from 10 RLBench tasks, generated similarly to the fine-tuning data via FailGen (Section 3.2) but without overlapping with the tasks ... (p. 8, 4 Method); if none is reported, design one around: Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse kinematics, collisions, etc.) from the environment, and returns any sampled plan that ... (p. 10, 4 Method).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method); the primary result is directionally consistent at p. 9 (Figure/Table caption), p. 3 (Figure/Table caption), p. 10 (4 Method); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 3 (Figure/Table caption), and measure the boundary at p. 10 (4 Method), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, AHA, open-source mechanism이 Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three ... 대비 Comparing the evaluated policy success rates using different failure feedback VLMs, we observed that AHA-13B provided intuitive, human-level ...을 개선하고, Importantly, as is typical of TAMP methods, the original approach checks for a finite set of ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (4.1 Failure Reasoning Formulation Unlike previous works [48, 28, 22] that primarily focus on detecting task success as binary classification problem, we ...), does the paper-specific mechanism (We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation.) retain the reported evaluation outcome (Figure 1: AHA is a Vision-Language Model designed to detect and reason about failures in robotic manipulation. As ...) when tested against the paper's strongest explicit boundary (Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Figure 1: AHA is a Vision-Language Model designed to detect and reason about failures in robotic manipulation. As ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse kinematics, collisions, etc.) from the environment, and returns any sampled plan that ... (p. 10, 4 Method).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

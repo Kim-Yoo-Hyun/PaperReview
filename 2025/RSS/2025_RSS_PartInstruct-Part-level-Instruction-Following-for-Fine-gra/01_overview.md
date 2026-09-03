@@ -1,8 +1,10 @@
 # PartInstruct: Part-level Instruction Following for Fine-grained Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p148.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 ## Why Read It
 
 VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Kine-grained robot manipulation, such as lifting and rotating a bottle to display the label on the cap, requires robust reasoning about object parts and their relationships with intended tasks.를 문제로 두고, Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Our experimental results demonstrate that the part-level instruction following tasks in our Partinstruct benchmark remains extremely difficult for state-of-the-art end-to-end vision-language policy learning ‘methods. ‘There are several ... (p. 9, V. Discussion).
+- **Actual contribution:** In this work, we introduce Partinstruct, the first large-scale benchmark for both (p. 1, Abstract).
+- **Evaluation boundary:** Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars denote the standard errors calculated ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).

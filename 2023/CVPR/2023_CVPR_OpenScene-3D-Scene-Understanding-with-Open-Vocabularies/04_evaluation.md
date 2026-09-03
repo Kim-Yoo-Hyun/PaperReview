@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2211.15654; PDF retrieval source: https://arxiv.org/pdf/2211.15654. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2211.15654; PDF retrieval source: https://arxiv.org/pdf/2211.15654. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 
 ## Evaluation Body Digest
 
-- **p. 4 / 4. Experiments - extractive PDF cue:** To test our method in a variety of settings, we evaluate on three popular public benchmarks: ScanNet [11,46], Matterport3D [4], and nuScenes Lidarseg [3].
-- **p. 4 / 4. Experiments - extractive PDF cue:** These three datasets span a broad gamut of situations - the first two provide RGBD images and 3D meshes of indoor scenes, and the last ...
-- **p. 5 / 4.1. Comparisons - extractive PDF cue:** We compare our method with both zero-shot and fully-supervised baselines for semantic segmentation of one outdoor dataset (nuScenes) and two indoor datasets (ScanNet and Matterport).
-- **p. 5 / 4.1. Comparisons - extractive PDF cue:** In Table 2 we compare our approach with both fullysupervised and zero-shot methods on all classes of the nuScenes [3] validation set, ScanNet [11] validation ...
-- **p. 6 / 4.1. Comparisons - extractive PDF cue:** Images of 3D semantic segmentation results on public indoor and outdoor benchmarks.
-- **p. 6 / 4.1. Comparisons - extractive PDF cue:** ScanNet [11] Matterport3D [4] nuScenes [3] Input Fully supervised [10] MSeg Voting [29] Ours GT Segmentation Figure 4.
-- **p. 6 / 4.1. Comparisons - extractive PDF cue:** Comparison of semantic segmentation performance of different 3D features computed by our method. the mean accuracy for groups of 20 classes ranked by frequency.
-- **p. 6 / 4.2. Ablation Studies & Analysis - extractive PDF cue:** In most experiments, we found the accuracy and generalizability of OpenSeg features to be better than LSeg (Table 1, Table 2, and Table 4), so ...
+- **p. 4 / 4. Experiments - extractive body cue:** To test our method in a variety of settings, we evaluate on three popular public benchmarks: ScanNet [11,46], Matterport3D [4], and nuScenes Lidarseg [3].
+- **p. 4 / 4. Experiments - extractive body cue:** These three datasets span a broad gamut of situations - the first two provide RGBD images and 3D meshes of indoor scenes, and the last ...
+- **p. 5 / 4.1. Comparisons - extractive body cue:** We compare our method with both zero-shot and fully-supervised baselines for semantic segmentation of one outdoor dataset (nuScenes) and two indoor datasets (ScanNet and Matterport).
+- **p. 5 / 4.1. Comparisons - extractive body cue:** In Table 2 we compare our approach with both fullysupervised and zero-shot methods on all classes of the nuScenes [3] validation set, ScanNet [11] validation ...
+- **p. 6 / 4.1. Comparisons - extractive body cue:** Images of 3D semantic segmentation results on public indoor and outdoor benchmarks.
+- **p. 6 / 4.1. Comparisons - extractive body cue:** ScanNet [11] Matterport3D [4] nuScenes [3] Input Fully supervised [10] MSeg Voting [29] Ours GT Segmentation Figure 4.
+- **p. 6 / 4.1. Comparisons - extractive body cue:** Comparison of semantic segmentation performance of different 3D features computed by our method. the mean accuracy for groups of 20 classes ranked by frequency.
+- **p. 6 / 4.2. Ablation Studies & Analysis - extractive body cue:** In most experiments, we found the accuracy and generalizability of OpenSeg features to be better than LSeg (Table 1, Table 2, and Table 4), so ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Comparisons | EMPIRICAL / SOURCE-REPORTED EVALUATION | Again, we outperform the zero-shot baseline (MSeg Voting) on both mIoU and mAcc metrics all three datasets. | p. 5 (4.1. Comparisons) |
 | 4. Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Still, both of our variants show significantly better performance in both mIoU and mAcc. detailed scenes, and thus provides the opportunity to stress open-vocabulary ... | p. 5 (4. Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 4. Experiments - extractive PDF cue:** To test our method in a variety of settings, we evaluate on three popular public benchmarks: ScanNet [11,46], Matterport3D [4], and nuScenes Lidarseg [3].
-- **p. 4 / 4. Experiments - extractive PDF cue:** These three datasets span a broad gamut of situations - the first two provide RGBD images and 3D meshes of indoor scenes, and the last ...
-- **p. 5 / 4.1. Comparisons - extractive PDF cue:** We compare our method with both zero-shot and fully-supervised baselines for semantic segmentation of one outdoor dataset (nuScenes) and two indoor datasets (ScanNet and Matterport).
-- **p. 5 / 4.1. Comparisons - extractive PDF cue:** In Table 2 we compare our approach with both fullysupervised and zero-shot methods on all classes of the nuScenes [3] validation set, ScanNet [11] validation ...
-- **p. 6 / 4.1. Comparisons - extractive PDF cue:** Images of 3D semantic segmentation results on public indoor and outdoor benchmarks.
-- **p. 6 / 4.1. Comparisons - extractive PDF cue:** ScanNet [11] Matterport3D [4] nuScenes [3] Input Fully supervised [10] MSeg Voting [29] Ours GT Segmentation Figure 4.
+- **p. 4 / 4. Experiments - extractive body cue:** To test our method in a variety of settings, we evaluate on three popular public benchmarks: ScanNet [11,46], Matterport3D [4], and nuScenes Lidarseg [3].
+- **p. 4 / 4. Experiments - extractive body cue:** These three datasets span a broad gamut of situations - the first two provide RGBD images and 3D meshes of indoor scenes, and the last ...
+- **p. 5 / 4.1. Comparisons - extractive body cue:** We compare our method with both zero-shot and fully-supervised baselines for semantic segmentation of one outdoor dataset (nuScenes) and two indoor datasets (ScanNet and Matterport).
+- **p. 5 / 4.1. Comparisons - extractive body cue:** In Table 2 we compare our approach with both fullysupervised and zero-shot methods on all classes of the nuScenes [3] validation set, ScanNet [11] validation ...
+- **p. 6 / 4.1. Comparisons - extractive body cue:** Images of 3D semantic segmentation results on public indoor and outdoor benchmarks.
+- **p. 6 / 4.1. Comparisons - extractive body cue:** ScanNet [11] Matterport3D [4] nuScenes [3] Input Fully supervised [10] MSeg Voting [29] Ours GT Segmentation Figure 4.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Open-vocabulary 3D Scene Understanding. We propose OpenScene, a zero-shot approach to 3D scene understanding that co-embeds dense 3D point features with image pixels ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Key idea. We co-embed 3D points with text and im- age pixels in the CLIP feature space (visualized with T-SNE [52]) which has ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Method Overview. Given a 3D model (mesh or point cloud) and a set of posed images, we train a 3D network E3D to ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison on Zero-shot 3D Semantic Segmentation. We show quantitative comparison between our method and the most recent zero-shot 3D segmentation approach [39] and ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Comparisons on Indoor and Outdoor Benchmarks. We compare our method with both zero-shot and fully-supervised baselines for semantic segmentation of one outdoor dataset ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparisons. Images of 3D semantic segmentation results on public indoor and outdoor benchmarks. K = 21 K = 40 K = 80 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Impact of Increasing the Number of Object Classes. Here we show (a) mAcc on Matterport3D [4] with different num- bers of classes K, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation Study. Comparison of semantic segmentation performance of different 3D features computed by our method. the mean accuracy for groups of 20 classes ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Open-vocabulary 3D Scene Understanding. We propose OpenScene, a zero-shot approach to 3D scene understanding that co-embeds dense 3D point features with image pixels ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Key idea. We co-embed 3D points with text and im- age pixels in the CLIP feature space (visualized with T-SNE [52]) which has ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Method Overview. Given a 3D model (mesh or point cloud) and a set of posed images, we train a 3D network E3D to ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Comparison on Zero-shot 3D Semantic Segmentation. We show quantitative comparison between our method and the most recent zero-shot 3D segmentation approach [39] and ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Comparisons on Indoor and Outdoor Benchmarks. We compare our method with both zero-shot and fully-supervised baselines for semantic segmentation of one outdoor dataset ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparisons. Images of 3D semantic segmentation results on public indoor and outdoor benchmarks. K = 21 K = 40 K = 80 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Impact of Increasing the Number of Object Classes. Here we show (a) mAcc on Matterport3D [4] with different num- bers of classes K, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Ablation Study. Comparison of semantic segmentation performance of different 3D features computed by our method. the mean accuracy for groups of 20 classes ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To test our method in a variety of settings, we evaluate on three popular public benchmarks: ScanNet [11,46], Matterport3D [4], and nuScenes Lidarseg [3]. | embodiment, simulator version and control stack | p. 4 (4. Experiments), p. 4 (4. Experiments) |
 | Task/environment | These three datasets span a broad gamut of situations - the first two provide RGBD images and 3D meshes of indoor scenes, and the ... | reset, timeout, object/scene variation | p. 4 (4. Experiments), p. 5 (4.1. Comparisons) |
@@ -151,14 +151,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Limitations and Future Work - extractive PDF cue:** There are several limitations of our work and still much to do to realize the full potential of the proposed approach.
-- **p. 8 / 6. Limitations and Future Work - extractive PDF cue:** In future work, it will be interesting to design experiments to quantify the success of open vocabulary queries for tasks where ground truth is not ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Unlike [39], which requires training on 16 seen classes, our approach does not train with any 2D or 3D ground labels on any classes.
-- **p. 5 / 4.1. Comparisons - extractive PDF cue:** Our results on those classes is significantly better than [39] (7.7% vs 62.8% mIoU), even though 3DGenz [39] utilizes ground truth data for 16 seen ...
-- **p. 6 / 4.1. Comparisons - extractive PDF cue:** In contrast, we are more robust to such rare objects since we do not rely upon any 3D labeled data.
-- **p. 6 / 4.2. Ablation Studies & Analysis - extractive PDF cue:** This suggests that leveraging patterns in both 2D and 3D domains makes the ensemble features more robust and descriptive.
+- **p. 8 / 6. Limitations and Future Work - extractive body cue:** There are several limitations of our work and still much to do to realize the full potential of the proposed approach.
+- **p. 8 / 6. Limitations and Future Work - extractive body cue:** In future work, it will be interesting to design experiments to quantify the success of open vocabulary queries for tasks where ground truth is not ...
+- **p. 5 / 4. Experiments - extractive body cue:** Unlike [39], which requires training on 16 seen classes, our approach does not train with any 2D or 3D ground labels on any classes.
+- **p. 5 / 4.1. Comparisons - extractive body cue:** Our results on those classes is significantly better than [39] (7.7% vs 62.8% mIoU), even though 3DGenz [39] utilizes ground truth data for 16 seen ...
+- **p. 6 / 4.1. Comparisons - extractive body cue:** In contrast, we are more robust to such rare objects since we do not rely upon any 3D labeled data.
+- **p. 6 / 4.2. Ablation Studies & Analysis - extractive body cue:** This suggests that leveraging patterns in both 2D and 3D domains makes the ensemble features more robust and descriptive.
 
-- **PDF anchors reviewed:** datasets p. 4 (4. Experiments), p. 4 (4. Experiments), p. 5 (4.1. Comparisons), p. 5 (4.1. Comparisons), p. 6 (4.1. Comparisons), p. 6 (4.1. Comparisons), metrics p. 6 (4.1. Comparisons), p. 6 (4.2. Ablation Studies & Analysis), p. 3 (Figure/Table caption), p. 4 (4. Experiments), p. 5 (4.1. Comparisons), p. 5 (4.1. Comparisons), baselines p. 5 (4.1. Comparisons), p. 5 (4. Experiments), p. 6 (4.1. Comparisons), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 5 (4.1. Comparisons), p. 5 (4. Experiments), p. 6 (4.1. Comparisons), p. 6 (4.1. Comparisons), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (4. Experiments), p. 4 (4. Experiments), p. 5 (4.1. Comparisons), p. 5 (4.1. Comparisons), p. 6 (4.1. Comparisons), p. 6 (4.1. Comparisons), metrics p. 6 (4.1. Comparisons), p. 6 (4.2. Ablation Studies & Analysis), p. 3 (Figure/Table caption), p. 4 (4. Experiments), p. 5 (4.1. Comparisons), p. 5 (4.1. Comparisons), baselines p. 5 (4.1. Comparisons), p. 5 (4. Experiments), p. 6 (4.1. Comparisons), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 5 (4.1. Comparisons), p. 5 (4. Experiments), p. 6 (4.1. Comparisons), p. 6 (4.1. Comparisons), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

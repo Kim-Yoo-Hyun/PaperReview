@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9wYjjPydfe; PDF retrieval source: https://openreview.net/pdf/111f8ac3ef90d847bb2191b2bd71a573458c6810.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9wYjjPydfe; PDF retrieval source: https://openreview.net/pdf/111f8ac3ef90d847bb2191b2bd71a573458c6810.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories across ...
-- **p. 9 / 4.4. Ablation Study - extractive PDF cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments Depth Camera RGB Camera LiDAR Onboard Computer w/ Jetson Orin NX Laptop w/ RTX 4060 Desktop ...
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** The navigation policy is executed on a Unitree Go2 quadruped robot in real-world navigation tasks.
-- **p. 8 / 4.3. Real-world Testing - extractive PDF cue:** We evaluate TIC-VLA on a Unitree Go2 robot across four real-world navigation tasks: (1) an indoor hallway with dynamic human and static obstacles, (2) a ...
-- **p. 8 / 4.3. Real-world Testing - extractive PDF cue:** Overall, TIC-VLA transfers zero-shot to real-world robot navigation and remains robust under asynchronous high-latency VLM inference, demonstrating the practical value of explicit latency modeling.
-- **p. 9 / 4.4. Ablation Study - extractive PDF cue:** (a) Hardware configuration, including the robot platform and computation setup.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** The primary language-guided navigation baselines are listed below: (1) NaVILA (Cheng et al., 2024), a hierarchical VLA model that translates language instructions into mid-level commands; ...
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories across ...
+- **p. 9 / 4.4. Ablation Study - extractive body cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments Depth Camera RGB Camera LiDAR Onboard Computer w/ Jetson Orin NX Laptop w/ RTX 4060 Desktop ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** The navigation policy is executed on a Unitree Go2 quadruped robot in real-world navigation tasks.
+- **p. 8 / 4.3. Real-world Testing - extractive body cue:** We evaluate TIC-VLA on a Unitree Go2 robot across four real-world navigation tasks: (1) an indoor hallway with dynamic human and static obstacles, (2) a ...
+- **p. 8 / 4.3. Real-world Testing - extractive body cue:** Overall, TIC-VLA transfers zero-shot to real-world robot navigation and remains robust under asynchronous high-latency VLM inference, demonstrating the practical value of explicit latency modeling.
+- **p. 9 / 4.4. Ablation Study - extractive body cue:** (a) Hardware configuration, including the robot platform and computation setup.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** The primary language-guided navigation baselines are listed below: (1) NaVILA (Cheng et al., 2024), a hierarchical VLA model that translates language instructions into mid-level commands; ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Simulation Testing | EMPIRICAL / REAL-ROBOT OR HARDWARE | After RL fine-tuning, TICVLA achieves the highest success rate and the lowest collision rate, indicating improved closed-loop robustness in dynamic scenes. | p. 7 (4.2. Simulation Testing) |
 | 4.2. Simulation Testing | EMPIRICAL / REAL-ROBOT OR HARDWARE | The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency settings, ... | p. 8 (4.2. Simulation Testing) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories across ...
-- **p. 9 / 4.4. Ablation Study - extractive PDF cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments Depth Camera RGB Camera LiDAR Onboard Computer w/ Jetson Orin NX Laptop w/ RTX 4060 Desktop ...
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** The navigation policy is executed on a Unitree Go2 quadruped robot in real-world navigation tasks.
-- **p. 8 / 4.3. Real-world Testing - extractive PDF cue:** We evaluate TIC-VLA on a Unitree Go2 robot across four real-world navigation tasks: (1) an indoor hallway with dynamic human and static obstacles, (2) a ...
-- **p. 8 / 4.3. Real-world Testing - extractive PDF cue:** Overall, TIC-VLA transfers zero-shot to real-world robot navigation and remains robust under asynchronous high-latency VLM inference, demonstrating the practical value of explicit latency modeling.
-- **p. 9 / 4.4. Ablation Study - extractive PDF cue:** (a) Hardware configuration, including the robot platform and computation setup.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** The primary language-guided navigation baselines are listed below: (1) NaVILA (Cheng et al., 2024), a hierarchical VLA model that translates language instructions into mid-level commands; ...
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories across ...
+- **p. 9 / 4.4. Ablation Study - extractive body cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments Depth Camera RGB Camera LiDAR Onboard Computer w/ Jetson Orin NX Laptop w/ RTX 4060 Desktop ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** The navigation policy is executed on a Unitree Go2 quadruped robot in real-world navigation tasks.
+- **p. 8 / 4.3. Real-world Testing - extractive body cue:** We evaluate TIC-VLA on a Unitree Go2 robot across four real-world navigation tasks: (1) an indoor hallway with dynamic human and static obstacles, (2) a ...
+- **p. 8 / 4.3. Real-world Testing - extractive body cue:** Overall, TIC-VLA transfers zero-shot to real-world robot navigation and remains robust under asynchronous high-latency VLM inference, demonstrating the practical value of explicit latency modeling.
+- **p. 9 / 4.4. Ablation Study - extractive body cue:** (a) Hardware configuration, including the robot platform and computation setup.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** The primary language-guided navigation baselines are listed below: (1) NaVILA (Cheng et al., 2024), a hierarchical VLA model that translates language instructions into mid-level commands; ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. TIC-VLA enables real-time, language-conditioned nav- igation by decoupling slow vision-language reasoning from fast reactive control via a delayed semantic-control interface. A latency- consistent ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of TIC-VLA. The architecture adopts a decoupled dual-system design with a fast action expert and a slow reasoning VLM. A shared vision ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Details of TIC-VLA action policy structure, training, and asynchronous execution. (a) Latency-aware action policy that predicts action chunks from multimodal inputs. (b) Value ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative closed-loop results of TIC-VLA in DynaNav hospital (top) and office (bottom) environments. TIC-VLA demonstrates effective semantic reasoning while producing reactive navigation actions ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Performance of TIC-VLA and baseline methods on the DynaNav benchmark. BC, RL, and NavDP are point-goal-based.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Influence of semantic interface and latency training. Interface Latency NE (↓) SR (↑) SPL (↑) CR (↓) Waypoint
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Real-world testing results. Runtimes for dual-system methods are reported as action policy / VLM reasoning latency.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. TIC-VLA enables real-time, language-conditioned nav- igation by decoupling slow vision-language reasoning from fast reactive control via a delayed semantic-control interface. A latency- consistent ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of TIC-VLA. The architecture adopts a decoupled dual-system design with a fast action expert and a slow reasoning VLM. A shared vision ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Details of TIC-VLA action policy structure, training, and asynchronous execution. (a) Latency-aware action policy that predicts action chunks from multimodal inputs. (b) Value ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative closed-loop results of TIC-VLA in DynaNav hospital (top) and office (bottom) environments. TIC-VLA demonstrates effective semantic reasoning while producing reactive navigation actions ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Performance of TIC-VLA and baseline methods on the DynaNav benchmark. BC, RL, and NavDP are point-goal-based.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Influence of semantic interface and latency training. Interface Latency NE (↓) SR (↑) SPL (↑) CR (↓) Waypoint
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Real-world testing results. Runtimes for dual-system methods are reported as action policy / VLM reasoning latency.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories ... | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study) |
 | Task/environment | Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments Depth Camera RGB Camera LiDAR Onboard Computer w/ Jetson Orin NX Laptop w/ RTX 4060 ... | reset, timeout, object/scene variation | p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 | Primary metric/result | The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency settings, ... | numeric claim only at cited anchor | p. 8 (4.2. Simulation Testing) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories across ...
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Enter the room with the reception desk. t=41.1s Exit the room and turn right to enter the hallway.
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** TIC-VLA demonstrates effective semantic reasoning while producing reactive navigation actions in dynamic scenarios. the agent and the goal; (2) Success Rate (SR): the percentage of ...
-- **p. 7 / 4.2. Simulation Testing - extractive PDF cue:** All experiments are conducted on an NVIDIA L40S GPU, with the action policy running at 10 Hz and asynchronous VLM reasoning running at 0.5 Hz.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Disabling reasoning reduces VLM overhead and increases the forward rate from 0.5 Hz to 4 Hz, but leads to weaker goal completion and navigation progress.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We train the model using three datasets featuring dynamic human-robot interactions: (1) SCAND (Karnan et al., 2022), which contains 8.7 hours of robot-driven trajectories across ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Enter the room with the reception desk. t=41.1s Exit the room and turn right to enter the hallway.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** TIC-VLA demonstrates effective semantic reasoning while producing reactive navigation actions in dynamic scenarios. the agent and the goal; (2) Success Rate (SR): the percentage of ...
+- **p. 7 / 4.2. Simulation Testing - extractive body cue:** All experiments are conducted on an NVIDIA L40S GPU, with the action policy running at 10 Hz and asynchronous VLM reasoning running at 0.5 Hz.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Disabling reasoning reduces VLM overhead and increases the forward rate from 0.5 Hz to 4 Hz, but leads to weaker goal completion and navigation progress.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** An episode is considered a failure if manual intervention is required to prevent collisions.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Although the non-reasoning variant has a lower collision rate, this mainly reflects reduced activity and more frequent failure rather than safer navigation.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency ...
-- **p. 9 / 5. Conclusions - extractive PDF cue:** TIC-VLA has three main limitations.
-- **p. 7 / 4.2. Simulation Testing - extractive PDF cue:** After RL fine-tuning, TICVLA achieves the highest success rate and the lowest collision rate, indicating improved closed-loop robustness in dynamic scenes.
-- **p. 9 / 5. Conclusions - extractive PDF cue:** Third, extending beyond navigation to domains such as robotic manipulation remains future work.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** An episode is considered a failure if manual intervention is required to prevent collisions.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Although the non-reasoning variant has a lower collision rate, this mainly reflects reduced activity and more frequent failure rather than safer navigation.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency ...
+- **p. 9 / 5. Conclusions - extractive body cue:** TIC-VLA has three main limitations.
+- **p. 7 / 4.2. Simulation Testing - extractive body cue:** After RL fine-tuning, TICVLA achieves the highest success rate and the lowest collision rate, indicating improved closed-loop robustness in dynamic scenes.
+- **p. 9 / 5. Conclusions - extractive body cue:** Third, extending beyond navigation to domains such as robotic manipulation remains future work.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 8 (4.3. Real-world Testing), p. 8 (4.3. Real-world Testing), p. 9 (4.4. Ablation Study), metrics p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), p. 9 (4.4. Ablation Study), p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 8 (4.3. Real-world Testing), baselines p. 7 (4.2. Simulation Testing), p. 7 (4.2. Simulation Testing), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 19 (Figure/Table caption), p. 8 (4.3. Real-world Testing), results p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 8 (4.3. Real-world Testing), p. 8 (4.3. Real-world Testing), p. 9 (4.4. Ablation Study), metrics p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), p. 9 (4.4. Ablation Study), p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 8 (4.3. Real-world Testing), baselines p. 7 (4.2. Simulation Testing), p. 7 (4.2. Simulation Testing), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 19 (Figure/Table caption), p. 8 (4.3. Real-world Testing), results p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

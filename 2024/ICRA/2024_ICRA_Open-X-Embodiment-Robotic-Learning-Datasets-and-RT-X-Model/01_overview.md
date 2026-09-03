@@ -1,20 +1,21 @@
 # Open X-Embodiment: Robotic Learning Datasets and RT-X Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2310.08864.
-> PDF retrieval source: https://arxiv.org/pdf/2310.08864. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2310.08864.
+> PDF retrieval source: https://arxiv.org/pdf/2310.08864. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Robotics, Dataset, Imitation Learning
-- Aliases: Open X-Embodiment, RT-X
 - Official paper: https://arxiv.org/abs/2310.08864
 - Full-text retrieval: https://arxiv.org/pdf/2310.08864
 - Code/Project: https://robotics-transformer-x.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -26,17 +27,17 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 1 / Abstract - extractive body cue:** In domains from NLP to Computer Vision, this has led to a consolidation of pretrained models, with general pretrained backbones serving as a starting point ...
 - **p. 1 / Abstract - extractive body cue:** Can such a consolidation happen in robotics?
 - **p. 1 / Abstract - extractive body cue:** Conventionally, robotic learning methods train a separate model for every application, every robot, and even every environment.
-- **p. 1 / Abstract - extractive body cue:** Can we instead train "generalist" X-robot policy that can be adapted efficiently to new robots, tasks, arXiv:2310.08864v9 [cs.RO] 14 May 2025
+- **p. 1 / Abstract - extractive body cue:** Can we instead train "generalist" X-robot policy that can be adapted efficiently to new robots, tasks.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, these lessons are difficult to apply in robotics: any single robotic domain might be too narrow, and while computer vision and NLP can leverage ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** How can we overcome these challenges in robotics and move the field of robotic learning toward large data regime that has been so successful in ...
 
 ## Core Idea
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Addressing goal (1), our empirical contribution is to demonstrate that several recent robotic learning methods, with minimal modification, can utilize X-embodiment data and enable positive ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe.
 - **p. 3 / III. THE OPEN X-EMBODIMENT REPOSITORY - extractive body cue:** We introduce the Open X-Embodiment Repository (robotics-transformer-x.github.io) - an open-source repository which includes large-scale data along with pre-trained model checkpoints for X-embodied robot learning research.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, exhibiting better generalization ...
-- **p. 4 / 5 Hz - extractive body cue:** RT-1-X is an architecture designed for robotics, with a FiLM [116] conditioned EfficientNet [117] and a Transformer [118].
-- **p. 4 / IV. RT-X DESIGN - extractive body cue:** Although both architectures are described in detail in their original papers [8, 9], we provide a short summary of each below: RT-1 [8] is a ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The dataset represents diverse behaviors, robot embodiments and environments, and enables learning generalized robotic policies.
 - **p. 4 / IV. RT-X DESIGN - extractive body cue:** Policy architectures We consider two model architectures in our experiments: (1) RT-1 [8], an efficient Transformer-based architecture designed for robotic control, and (2) RT-2 [9] ...
 - **p. 4 / IV. RT-X DESIGN - extractive body cue:** These tokens are fed into a decoder-only Transformer, which outputs the tokenized actions.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our aim is not to innovate in terms of the particular architectures and algorithms, but rather to provide the model that we trained together with ...
@@ -53,10 +54,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Main Claims and Actual Contribution
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Addressing goal (1), our empirical contribution is to demonstrate that several recent robotic learning methods, with minimal modification, can utilize X-embodiment data and enable positive ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe.
 - **p. 3 / III. THE OPEN X-EMBODIMENT REPOSITORY - extractive body cue:** We introduce the Open X-Embodiment Repository (robotics-transformer-x.github.io) - an open-source repository which includes large-scale data along with pre-trained model checkpoints for X-embodied robot learning research.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, exhibiting better generalization ...
-- **p. 4 / 5 Hz - extractive body cue:** RT-1-X is an architecture designed for robotics, with a FiLM [116] conditioned EfficientNet [117] and a Transformer [118].
-- **p. 4 / IV. RT-X DESIGN - extractive body cue:** Although both architectures are described in detail in their original papers [8, 9], we provide a short summary of each below: RT-1 [8] is a ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The dataset represents diverse behaviors, robot embodiments and environments, and enables learning generalized robotic policies.
 - **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods contributed by different collaborating institutions, while the ...
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** However, the larger RT-2-X model outperforms both the Original Method and RT-1 suggesting that X-robot training can improve performance in the data-rich domains, but only ...
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** 4), where we would expect transfer from larger datasets to significantly improve performance, and evaluation on domains that have large-scale datasets (Table I), where we ...
@@ -82,3 +83,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, these lessons are difficult to apply in robotics: any single robotic domain might be too narrow, and while computer vision and NLP can leverage large datasets sourced from the web, comparably ...를 문제로 두고, Addressing goal (1), our empirical contribution is to demonstrate that several recent robotic learning methods, with minimal modification, can utilize X-embodiment data and enable positive transfer.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 2 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, these lessons are difficult to apply in robotics: any single robotic domain might be too narrow, and while computer vision and NLP can leverage large datasets sourced from the ... (p. 2, I. INTRODUCTION).
+- **Actual contribution:** We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, exhibiting better generalization and new capabilities. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods contributed by different collaborating institutions, while the bigger vision-language-modelbased version (RT-2-X) demonst ... (p. 6, V. EXPERIMENTAL RESULTS).
+- **Explicit failure boundary:** do not study generalization to new robots, and provide a decision criterion for when positive transfer does or does not happen. (p. 7, V. EXPERIMENTAL RESULTS).

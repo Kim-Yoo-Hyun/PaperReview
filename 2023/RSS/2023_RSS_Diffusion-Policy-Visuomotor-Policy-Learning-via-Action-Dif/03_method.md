@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.04137; PDF retrieval source: https://arxiv.org/pdf/2303.04137. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.04137; PDF retrieval source: https://arxiv.org/pdf/2303.04137. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | On simulation benchmarks, we used the iDDPM algorithm Nichol and Dhariwal (2021) with the same 100 denoising diffusion iterations for both training ... | p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparameters) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | For CNN-based Diffusion Policy, We found using FiLM conditioning to pass-in observations is better than impainting on all tasks 1 2 3 ... | p. 16 (A.4 Hyperparameters) |
@@ -73,9 +73,9 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Diffusion Policy employs receding horizon position control to predict a sequence of actions into the future. | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Diffusion Policy employs receding horizon position control to predict a sequence of actions into the future. | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | In particular, when the prediction horizon is one time step, Tp = 1, it can be seen that the optimal denoiser which ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | 5 left) and found the action horizon of 8 steps to be optimal for most tasks that we tested. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -124,8 +124,17 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparameters), objective p. 16 (A.1 Normalization), temporal p. 8 (5 Evaluation), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 7 (5 Evaluation), p. 8 (5 Evaluation).
+- **Evidence anchors reviewed:** method p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparameters), objective p. 16 (A.1 Normalization), temporal p. 8 (5 Evaluation), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 7 (5 Evaluation), p. 8 (5 Evaluation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** At time step t, the policy takes the latest To steps of observation data Ot as input and outputs Ta steps of actions At. b) In the CNN-based Diffusion Policy, ... (p. 3, 1 Introduction).
+- **Objective/update evidence:** Scaling the min and max of each action dimension independently to [-1,1] works well for most tasks. (p. 16, A.1 Normalization).
+- **Temporal/runtime evidence:** 5 left) and found the action horizon of 8 steps to be optimal for most tasks that we tested. (p. 8, 5 Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

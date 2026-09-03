@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** HyperNeRF Dataset [21] features real-world activities captured with smooth trajectories.
-- **p. 7 / 4.3. Results - extractive PDF cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
-- **p. 6 / 4.3. Results - extractive PDF cue:** Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS due to ...
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** Therefore, we focus primarily on qualitative visualizations for this dataset.
-- **p. 7 / 4.3. Results - extractive PDF cue:** Comparison dynamic modeling on Neu3D Dataset [13].
-- **p. 8 / 4.3. Results - extractive PDF cue:** Qualitative comparison with 4DGS [36] on the Neu3D [13] dataset.
-- **p. 6 / 4.3. Results - extractive PDF cue:** Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences.
-- **p. 7 / 4.3. Results - extractive PDF cue:** 2, where our methods achieve consistently better LPIPS scores.
+- **p. 5 / 4.2. Datasets - extractive body cue:** HyperNeRF Dataset [21] features real-world activities captured with smooth trajectories.
+- **p. 7 / 4.3. Results - extractive body cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
+- **p. 6 / 4.3. Results - extractive body cue:** Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS due to ...
+- **p. 5 / 4.2. Datasets - extractive body cue:** Therefore, we focus primarily on qualitative visualizations for this dataset.
+- **p. 7 / 4.3. Results - extractive body cue:** Comparison dynamic modeling on Neu3D Dataset [13].
+- **p. 8 / 4.3. Results - extractive body cue:** Qualitative comparison with 4DGS [36] on the Neu3D [13] dataset.
+- **p. 6 / 4.3. Results - extractive body cue:** Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences.
+- **p. 7 / 4.3. Results - extractive body cue:** 2, where our methods achieve consistently better LPIPS scores.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, our method consistently achieves significantly better LPIPS scores over the previous SOTA method SpotlessSplats [24]. | p. 7 (4.3. Results) |
 | 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 2, where our methods achieve consistently better LPIPS scores. | p. 7 (4.3. Results) |
@@ -39,30 +39,30 @@ PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** HyperNeRF Dataset [21] features real-world activities captured with smooth trajectories.
-- **p. 7 / 4.3. Results - extractive PDF cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
-- **p. 6 / 4.3. Results - extractive PDF cue:** Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS due to ...
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** Therefore, we focus primarily on qualitative visualizations for this dataset.
-- **p. 7 / 4.3. Results - extractive PDF cue:** Comparison dynamic modeling on Neu3D Dataset [13].
-- **p. 8 / 4.3. Results - extractive PDF cue:** Qualitative comparison with 4DGS [36] on the Neu3D [13] dataset.
-- **p. 6 / 4.3. Results - extractive PDF cue:** Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences.
+- **p. 5 / 4.2. Datasets - extractive body cue:** HyperNeRF Dataset [21] features real-world activities captured with smooth trajectories.
+- **p. 7 / 4.3. Results - extractive body cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
+- **p. 6 / 4.3. Results - extractive body cue:** Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS due to ...
+- **p. 5 / 4.2. Datasets - extractive body cue:** Therefore, we focus primarily on qualitative visualizations for this dataset.
+- **p. 7 / 4.3. Results - extractive body cue:** Comparison dynamic modeling on Neu3D Dataset [13].
+- **p. 8 / 4.3. Results - extractive body cue:** Qualitative comparison with 4DGS [36] on the Neu3D [13] dataset.
+- **p. 6 / 4.3. Results - extractive body cue:** Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. With self-supervised foreground-background gaussian splats modeling and accurate decomposition, DeGauss simultaneously enables (a): SOTA distractor-free static scene reconstruction for casual captures (no dynamic ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Our method simultaneously reconstructs the 3D scene and learns an unsupervised decomposition into decoupled static background and dynamic foreground branches, where the update ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences. Left of the dashed line: ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Occlusion handling on the NeRF-on-the-Go dataset [22]. Compared to SpotlessSplats [24], our method better preserves fine details in the training views (please consider ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison dynamic modeling on Neu3D Dataset [13]. The best , second best , and third best are highlighted. Noticeably, our method shows a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Our method robustly handles various challenges, preserv- ing clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. With self-supervised foreground-background gaussian splats modeling and accurate decomposition, DeGauss simultaneously enables (a): SOTA distractor-free static scene reconstruction for casual captures (no dynamic ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Our method simultaneously reconstructs the 3D scene and learns an unsupervised decomposition into decoupled static background and dynamic foreground branches, where the update ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences. Left of the dashed line: ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Occlusion handling on the NeRF-on-the-Go dataset [22]. Compared to SpotlessSplats [24], our method better preserves fine details in the training views (please consider ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparison dynamic modeling on Neu3D Dataset [13]. The best , second best , and third best are highlighted. Noticeably, our method shows a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Our method robustly handles various challenges, preserv- ing clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | HyperNeRF Dataset [21] features real-world activities captured with smooth trajectories. | embodiment, simulator version and control stack | p. 5 (4.2. Datasets), p. 7 (4.3. Results) |
 | Task/environment | Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene ... | reset, timeout, object/scene variation | p. 7 (4.3. Results), p. 6 (4.3. Results) |
@@ -118,9 +118,9 @@ PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (
 | Primary metric/result | 2, where our methods achieve consistently better LPIPS scores. | numeric claim only at cited anchor | p. 7 (4.3. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** We take one sequence from ADT [20], AEA [16], Hot3D [2], and Epic-Field [32] dataset, respectively, ranging from 28005000 frames, to evaluate our method against ...
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** For each sequence, every 1 out of 5 frames is held out during training.
-- **p. 5 / 4.2. Datasets - extractive PDF cue:** Neu3D Dataset [13] was captured using 15 to 20 static cameras recording relatively simple activities over 300 frames.
+- **p. 5 / 4.2. Datasets - extractive body cue:** We take one sequence from ADT [20], AEA [16], Hot3D [2], and Epic-Field [32] dataset, respectively, ranging from 28005000 frames, to evaluate our method against ...
+- **p. 5 / 4.2. Datasets - extractive body cue:** For each sequence, every 1 out of 5 frames is held out during training.
+- **p. 5 / 4.2. Datasets - extractive body cue:** Neu3D Dataset [13] was captured using 15 to 20 static cameras recording relatively simple activities over 300 frames.
 
 ## Generalization and Failure Cases
 
@@ -150,12 +150,12 @@ PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** This paper proposes DeGauss to robust decompose dynamicstatic elements in the scene with gaussian splatting.
-- **p. 7 / 4.3. Results - extractive PDF cue:** We show our method robustly handles occlusion and reconstructs fine static details compared to SpotlessSplats [24]in Fig.
-- **p. 7 / 4.3. Results - extractive PDF cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
+- **p. 8 / 6. Conclusion - extractive body cue:** This paper proposes DeGauss to robust decompose dynamicstatic elements in the scene with gaussian splatting.
+- **p. 7 / 4.3. Results - extractive body cue:** We show our method robustly handles occlusion and reconstructs fine static details compared to SpotlessSplats [24]in Fig.
+- **p. 7 / 4.3. Results - extractive body cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 8 (4.3. Results), metrics p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.2. Datasets), p. 5 (4.1. Implementation Details), p. 6 (4.3. Results), p. 6 (4.3. Results), baselines p. 6 (4.3. Results), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 5 (Figure/Table caption), results p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.3. Results), p. 6 (4.3. Results).
+- **Evidence anchors reviewed:** datasets p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 8 (4.3. Results), metrics p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.2. Datasets), p. 5 (4.1. Implementation Details), p. 6 (4.3. Results), p. 6 (4.3. Results), baselines p. 6 (4.3. Results), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 5 (Figure/Table caption), results p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.3. Results), p. 6 (4.3. Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

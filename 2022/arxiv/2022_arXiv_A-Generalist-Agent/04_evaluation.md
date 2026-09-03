@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.06175; PDF retrieval source: https://arxiv.org/abs/2205.06175. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.06175; PDF retrieval source: https://arxiv.org/abs/2205.06175. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 14 (1 Introduction), p. 14 (1 Introduction), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 1 Introduction | EMPIRICAL / REAL-ROBOT OR HARDWARE | The specialist Atari agent outperforms our generalist agent Gato, which achieved super-human performance on 23 games. | p. 14 (1 Introduction) |
 | 1 Introduction | EMPIRICAL / REAL-ROBOT OR HARDWARE | This experience is then combined, or distilled, into a single agent, which achieves 96.6% success rate averaged over all 50 tasks. | p. 14 (1 Introduction) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 14 (1 Introduction), p. 14 (1 Introduction), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | However, the Skill Mastery allows the agent to train on data involving the object shapes used for evaluation, i.e. the test set in Skill ... | embodiment, simulator version and control stack | p. 14 (1 Introduction), p. 14 (1 Introduction) |
 | Task/environment | To the best of our knowledge this agent is the first one to accomplish nearly 100% average success rate simultaneously (multi-task) for this benchmark. | reset, timeout, object/scene variation | p. 14 (1 Introduction), p. 15 (1 Introduction) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 14 (1 Introduction), p. 14 (1 Introduction), 
 - **p. 11 / Figure/Table caption - extractive body cue:** Figure 9: Few-shot performance, ablating over various pretraining settings. Orange corresponds to the base Gato pretrained on all data. Red is trained from scratch only ...
 - **p. 13 / Figure/Table caption - extractive body cue:** Figure 11: Comparing training/test task goal variations. Top: the standard "stack red on blue" task tested in the Skill Generalization benchmark. Bottom: the novel "stack ...
 
-- **PDF anchors reviewed:** datasets p. 14 (1 Introduction), p. 14 (1 Introduction), p. 15 (1 Introduction), p. 15 (1 Introduction), metrics p. 12 (Figure/Table caption), p. 14 (1 Introduction), p. 14 (1 Introduction), p. 41 (Figure/Table caption), p. 8 (Figure/Table caption), p. 42 (Figure/Table caption), baselines p. 12 (Figure/Table caption), p. 39 (Figure/Table caption), p. 10 (Figure/Table caption), p. 14 (1 Introduction), p. 14 (1 Introduction), p. 9 (Figure/Table caption), results p. 14 (1 Introduction), p. 14 (1 Introduction), p. 12 (Figure/Table caption), p. 8 (Figure/Table caption), p. 10 (Figure/Table caption), p. 41 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 14 (1 Introduction), p. 14 (1 Introduction), p. 15 (1 Introduction), p. 15 (1 Introduction), metrics p. 12 (Figure/Table caption), p. 14 (1 Introduction), p. 14 (1 Introduction), p. 41 (Figure/Table caption), p. 8 (Figure/Table caption), p. 42 (Figure/Table caption), baselines p. 12 (Figure/Table caption), p. 39 (Figure/Table caption), p. 10 (Figure/Table caption), p. 14 (1 Introduction), p. 14 (1 Introduction), p. 9 (Figure/Table caption), results p. 14 (1 Introduction), p. 14 (1 Introduction), p. 12 (Figure/Table caption), p. 8 (Figure/Table caption), p. 10 (Figure/Table caption), p. 41 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (42 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 10: Robotics fine-tuning results. Left: Comparison of real robot Skill Generalization success rate averaged across test triplets for Gato, expert, and CRR trained on 35k expert episodes (upper bound). ... (p. 12, Figure/Table caption).
+- **Metric evidence:** This experience is then combined, or distilled, into a single agent, which achieves 96.6% success rate averaged over all 50 tasks. (p. 14, 1 Introduction).
+- **Baseline/ablation evidence:** Figure 10: Robotics fine-tuning results. Left: Comparison of real robot Skill Generalization success rate averaged across test triplets for Gato, expert, and CRR trained on 35k expert episodes (upper bound). ... (p. 12, Figure/Table caption).
+- **Failure/negative evidence:** After this point (at 5000), performance degrades slightly but does not drop far below the expert's performance. (p. 12, 1 Introduction).

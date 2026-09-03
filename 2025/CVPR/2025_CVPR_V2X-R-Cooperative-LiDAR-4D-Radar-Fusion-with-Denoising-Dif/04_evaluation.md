@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive PDF cue:** Performance comparison under different real-world weather on K-Radar dataset.
-- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive PDF cue:** We further conducted experiments on the K-Radar single-agent real-world dataset.
-- **p. 6 / 5.2. Benchmark Models - extractive PDF cue:** Experimental 3D object detection results of various cooperative LiDAR-based methods on the validation and testing of our V2X-R dataset in different IoU (0.3,0.5,0.7).
-- **p. 3 / 3.4. Adverse Weather Simulation - extractive PDF cue:** To analyze the performance under adverse weather conditions on our V2X-R dataset, we applied fog [8] and snow [9] simulations to the LiDAR point clouds ...
-- **p. 3 / 3.1. Simulator Selection - extractive PDF cue:** However, since CARLA lacks vehicleto-everything (V2X) communication and cooperative driving capabilities, we used OpenCDA [53] integrated with CARLA, a cooperative simulation platform that supports multiple ...
-- **p. 6 / 5.2. Benchmark Models - extractive PDF cue:** We implement various state-of-the-art 3D object detectors on the V2X-R dataset, including different numbers of agents and different modalities.
-- **p. 7 / 5.3. Benchmark Analysis - extractive PDF cue:** We also pioneered the exploration of cooperative 4D radarbased methods on the V2X dataset.
-- **p. 4 / 3.4. Adverse Weather Simulation - extractive PDF cue:** The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection.
+- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive body cue:** Performance comparison under different real-world weather on K-Radar dataset.
+- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive body cue:** We further conducted experiments on the K-Radar single-agent real-world dataset.
+- **p. 6 / 5.2. Benchmark Models - extractive body cue:** Experimental 3D object detection results of various cooperative LiDAR-based methods on the validation and testing of our V2X-R dataset in different IoU (0.3,0.5,0.7).
+- **p. 3 / 3.4. Adverse Weather Simulation - extractive body cue:** To analyze the performance under adverse weather conditions on our V2X-R dataset, we applied fog [8] and snow [9] simulations to the LiDAR point clouds ...
+- **p. 3 / 3.1. Simulator Selection - extractive body cue:** However, since CARLA lacks vehicleto-everything (V2X) communication and cooperative driving capabilities, we used OpenCDA [53] integrated with CARLA, a cooperative simulation platform that supports multiple ...
+- **p. 6 / 5.2. Benchmark Models - extractive body cue:** We implement various state-of-the-art 3D object detectors on the V2X-R dataset, including different numbers of agents and different modalities.
+- **p. 7 / 5.3. Benchmark Analysis - extractive body cue:** We also pioneered the exploration of cooperative 4D radarbased methods on the V2X dataset.
+- **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 7. Effect of each component in MDD module, tested by AttFuse [55] on V2X-R testing with fog-simulation. SM2MM fusion strategies, to evaluate the ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D ... | p. 2 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive PDF cue:** Performance comparison under different real-world weather on K-Radar dataset.
-- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive PDF cue:** We further conducted experiments on the K-Radar single-agent real-world dataset.
-- **p. 6 / 5.2. Benchmark Models - extractive PDF cue:** Experimental 3D object detection results of various cooperative LiDAR-based methods on the validation and testing of our V2X-R dataset in different IoU (0.3,0.5,0.7).
-- **p. 3 / 3.4. Adverse Weather Simulation - extractive PDF cue:** To analyze the performance under adverse weather conditions on our V2X-R dataset, we applied fog [8] and snow [9] simulations to the LiDAR point clouds ...
-- **p. 3 / 3.1. Simulator Selection - extractive PDF cue:** However, since CARLA lacks vehicleto-everything (V2X) communication and cooperative driving capabilities, we used OpenCDA [53] integrated with CARLA, a cooperative simulation platform that supports multiple ...
-- **p. 6 / 5.2. Benchmark Models - extractive PDF cue:** We implement various state-of-the-art 3D object detectors on the V2X-R dataset, including different numbers of agents and different modalities.
-- **p. 7 / 5.3. Benchmark Analysis - extractive PDF cue:** We also pioneered the exploration of cooperative 4D radarbased methods on the V2X dataset.
-- **p. 4 / 3.4. Adverse Weather Simulation - extractive PDF cue:** The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection.
+- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive body cue:** Performance comparison under different real-world weather on K-Radar dataset.
+- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive body cue:** We further conducted experiments on the K-Radar single-agent real-world dataset.
+- **p. 6 / 5.2. Benchmark Models - extractive body cue:** Experimental 3D object detection results of various cooperative LiDAR-based methods on the validation and testing of our V2X-R dataset in different IoU (0.3,0.5,0.7).
+- **p. 3 / 3.4. Adverse Weather Simulation - extractive body cue:** To analyze the performance under adverse weather conditions on our V2X-R dataset, we applied fog [8] and snow [9] simulations to the LiDAR point clouds ...
+- **p. 3 / 3.1. Simulator Selection - extractive body cue:** However, since CARLA lacks vehicleto-everything (V2X) communication and cooperative driving capabilities, we used OpenCDA [53] integrated with CARLA, a cooperative simulation platform that supports multiple ...
+- **p. 6 / 5.2. Benchmark Models - extractive body cue:** We implement various state-of-the-art 3D object detectors on the V2X-R dataset, including different numbers of agents and different modalities.
+- **p. 7 / 5.3. Benchmark Analysis - extractive body cue:** We also pioneered the exploration of cooperative 4D radarbased methods on the V2X dataset.
+- **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The advantages of the dense 4D radar point cloud in multi-agent view. Including weather robustness, fewer spatial er- rors, Doppler information, and geometric ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D radar ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. Sensor configuration details of our V2X-R dataset. 0 0.1 0.2 0.3 0.4 0.5 15
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. 4D radar point cloud occupancy rate (a) and number of points (b) within the ground truth bounding boxes for radial distance from ego ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection. The fusion pipeline (a) is first fed with multi-modal point ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization of LiDAR point cloud under foggy (simu- lated) weather before and after multi-agent communication. After multi-agent communication, the LiDAR point cloud has ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Experimental 3D object detection results of various coop- erative LiDAR-based methods on the validation and testing of our V2X-R dataset in different IoU ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Experimental 3D object detection results of various co- operative 4D Radar-based methods on the validation and testing of our V2X-R dataset in different ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The advantages of the dense 4D radar point cloud in multi-agent view. Including weather robustness, fewer spatial er- rors, Doppler information, and geometric ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D radar ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Sensor configuration details of our V2X-R dataset. 0 0.1 0.2 0.3 0.4 0.5 15
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. 4D radar point cloud occupancy rate (a) and number of points (b) within the ground truth bounding boxes for radial distance from ego ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection. The fusion pipeline (a) is first fed with multi-modal point ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of LiDAR point cloud under foggy (simu- lated) weather before and after multi-agent communication. After multi-agent communication, the LiDAR point cloud has ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Experimental 3D object detection results of various coop- erative LiDAR-based methods on the validation and testing of our V2X-R dataset in different IoU ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Experimental 3D object detection results of various co- operative 4D Radar-based methods on the validation and testing of our V2X-R dataset in different ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Performance comparison under different real-world weather on K-Radar dataset. | embodiment, simulator version and control stack | p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis) |
 | Task/environment | We further conducted experiments on the K-Radar single-agent real-world dataset. | reset, timeout, object/scene variation | p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 | Primary metric/result | Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D ... | numeric claim only at cited anchor | p. 2 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / 3.2. Sensor configuration - extractive PDF cue:** As described in Table 1, each Connected Autonomous Vehicle (CAV) and Infrastructure is equipped with four cameras; a 64-channel LiDAR sensor featuring a detection range ...
-- **p. 3 / 3.2. Sensor configuration - extractive PDF cue:** The Sensors Details 4x Camera 4 units RGB,Positions: (2.5,0,1.0,0),(0.0,0.3,1.8,100), (0.0,-0.3,1.8,-100), (-2.0,0.0,1.5,180) 1x LiDAR 64 channels,120m range, -25◦to 2◦vertical FOV, 0.02 noise standard deviation, 20 Hz ...
-- **p. 3 / 3.2. Sensor configuration - extractive PDF cue:** 4D radar point cloud occupancy rate (a) and number of points (b) within the ground truth bounding boxes for radial distance from ego vehicles. vehicle ...
-- **p. 3 / 3.2. Sensor configuration - extractive PDF cue:** Finally, based on the above configuration, our V2XR contains a total of 12,079 scenarios with 37,727 frames of LiDAR and 4D radar point clouds, 150,908 ...
-- **p. 6 / 5.1. Experimental Details and Metrics - extractive PDF cue:** We used 8,084/829/3,166 frames for training/ validation/ testing in our V2X-R dataset, ensuring there is no overlap in the intersection of the training/validation/testing sets.
-- **p. 6 / 5.1. Experimental Details and Metrics - extractive PDF cue:** We set the broadcast range among CAVs to be 70 meters.
+- **p. 3 / 3.2. Sensor configuration - extractive body cue:** As described in Table 1, each Connected Autonomous Vehicle (CAV) and Infrastructure is equipped with four cameras; a 64-channel LiDAR sensor featuring a detection range ...
+- **p. 3 / 3.2. Sensor configuration - extractive body cue:** The Sensors Details 4x Camera 4 units RGB,Positions: (2.5,0,1.0,0),(0.0,0.3,1.8,100), (0.0,-0.3,1.8,-100), (-2.0,0.0,1.5,180) 1x LiDAR 64 channels,120m range, -25◦to 2◦vertical FOV, 0.02 noise standard deviation, 20 Hz ...
+- **p. 3 / 3.2. Sensor configuration - extractive body cue:** 4D radar point cloud occupancy rate (a) and number of points (b) within the ground truth bounding boxes for radial distance from ego vehicles. vehicle ...
+- **p. 3 / 3.2. Sensor configuration - extractive body cue:** Finally, based on the above configuration, our V2XR contains a total of 12,079 scenarios with 37,727 frames of LiDAR and 4D radar point clouds, 150,908 ...
+- **p. 6 / 5.1. Experimental Details and Metrics - extractive body cue:** We used 8,084/829/3,166 frames for training/ validation/ testing in our V2X-R dataset, ensuring there is no overlap in the intersection of the training/validation/testing sets.
+- **p. 6 / 5.1. Experimental Details and Metrics - extractive body cue:** We set the broadcast range among CAVs to be 70 meters.
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.3. Benchmark Analysis - extractive PDF cue:** This can be attributed to the significantly lower resolution of 4D radar than LiDAR, which is a limitation hindering the independent use of 4D radar ...
-- **p. 7 / 5.3. Benchmark Analysis - extractive PDF cue:** The 3D mAP performance comparison under different weather conditions on the V2X-R dataset. 'L' and '4DR' represent LiDAR and 4D radar, respectively. '-' indicates that ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The advantages of the dense 4D radar point cloud in multi-agent view. Including weather robustness, fewer spatial er- rors, Doppler information, and geometric ...
-- **p. 8 / 6. Conclusion and Discussion - extractive PDF cue:** Moreover, we propose the MDD module to tackle dense noise in collaborative conditions.
-- **p. 8 / 6. Conclusion and Discussion - extractive PDF cue:** A compelling research direction is the full utilization of multi-agent and multi-modal information for robust 3D object detection.
-- **p. 4 / 3.4. Adverse Weather Simulation - extractive PDF cue:** The input noisy LiDAR features are first subjected to a diffusion process, followed by T step denoising process with weather-robust 4D radar features as conditions ...
+- **p. 7 / 5.3. Benchmark Analysis - extractive body cue:** This can be attributed to the significantly lower resolution of 4D radar than LiDAR, which is a limitation hindering the independent use of 4D radar ...
+- **p. 7 / 5.3. Benchmark Analysis - extractive body cue:** The 3D mAP performance comparison under different weather conditions on the V2X-R dataset. 'L' and '4DR' represent LiDAR and 4D radar, respectively. '-' indicates that ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The advantages of the dense 4D radar point cloud in multi-agent view. Including weather robustness, fewer spatial er- rors, Doppler information, and geometric ...
+- **p. 8 / 6. Conclusion and Discussion - extractive body cue:** Moreover, we propose the MDD module to tackle dense noise in collaborative conditions.
+- **p. 8 / 6. Conclusion and Discussion - extractive body cue:** A compelling research direction is the full utilization of multi-agent and multi-modal information for robust 3D object detection.
+- **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** The input noisy LiDAR features are first subjected to a diffusion process, followed by T step denoising process with weather-robust 4D radar features as conditions ...
 
-- **PDF anchors reviewed:** datasets p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models), p. 3 (3.4. Adverse Weather Simulation), p. 3 (3.1. Simulator Selection), p. 6 (5.2. Benchmark Models), metrics p. 8 (Figure/Table caption), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models), p. 6 (5.2. Benchmark Models), p. 7 (5.3. Benchmark Analysis), p. 1 (Figure/Table caption), baselines p. 6 (5.2. Benchmark Models), p. 7 (5.3. Benchmark Analysis), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5.3. Benchmark Analysis), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 7 (5.3. Benchmark Analysis), p. 7 (5.3. Benchmark Analysis), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models), p. 3 (3.4. Adverse Weather Simulation), p. 3 (3.1. Simulator Selection), p. 6 (5.2. Benchmark Models), metrics p. 8 (Figure/Table caption), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models), p. 6 (5.2. Benchmark Models), p. 7 (5.3. Benchmark Analysis), p. 1 (Figure/Table caption), baselines p. 6 (5.2. Benchmark Models), p. 7 (5.3. Benchmark Analysis), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5.3. Benchmark Analysis), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 7 (5.3. Benchmark Analysis), p. 7 (5.3. Benchmark Analysis), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

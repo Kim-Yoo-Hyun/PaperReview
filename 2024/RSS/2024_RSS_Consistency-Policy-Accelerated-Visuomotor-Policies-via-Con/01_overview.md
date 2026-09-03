@@ -1,8 +1,8 @@
 # Consistency Policy: Accelerated Visuomotor Policies via Consistency Distillation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, visuomotor policy, diffusion policy, consistency distillation, low latency, real-time control
 - Official paper: https://www.roboticsproceedings.org/rss20/p071.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p071.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p071.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +85,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 1: Both Diffusion and Consistency Policy work by sampling random actions and denoising them into predictions of actions. xt denotes the current action distribution at a time t ∈[0, T], where larger ...를 문제로 두고, Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher success rates ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 4 (2) Student Model (Consistency Policy)), p. 4 (2) Student Model (Consistency Policy)), p. 3 (1) Teacher Model (EDM)), p. 5 (2) Student Model (Consistency Policy)), p. 3 (III. CONSISTENCY POLICY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, Consistency Policy still performs well on the Push-T task, suggesting that this lack of multi-modality is not hurting us on the standard evaluation tasks used by related work. (p. 9, V. LIMITATIONS).
+- **Actual contribution:** Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Policy NFE Lift Can Square ToolHang Push-T DDPM 27 1.00 .97 ± .01 .93 ± .02 .79 ± .03 .87 ± .03 DDiM 9 1.00 .82 ± .03 .85 ± ... (p. 6, IV. EXPERIMENTS).
+- **Explicit failure boundary:** Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).

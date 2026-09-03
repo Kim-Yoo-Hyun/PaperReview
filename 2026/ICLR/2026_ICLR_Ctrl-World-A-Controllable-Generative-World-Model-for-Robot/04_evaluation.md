@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011332; PDF retrieval source: https://arxiv.org/pdf/2510.10125. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011332; PDF retrieval source: https://arxiv.org/pdf/2510.10125. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Spatial Shape Towel-Dir Novel-Obj Average 0.0 0.2 0.4 0.6 0.8 1.0 Success rate 0.29 0.44 0.57 0.25 0.39 0.88 0.91 0.80 0.75 0.83 Base ... | p. 9 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | While the pretrained π0.5 policy achieves low success rates on unfamiliar objects and novel instructions, post-training aligns the model with new instructions and boosts ... | p. 9 (5 EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The DROID dataset (Khazatsky et al., 2024) contains 95,599 diverse trajectories collected from 564 scenes, providing dense coverage of the workspace. | embodiment, simulator version and control stack | p. 5 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS) |
 | Task/environment | (2) Can Ctrl-World reliably evaluate different generalist robot policies in imagination space, faithfully reproducing their real-world performance rankings? | reset, timeout, object/scene variation | p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS) |
@@ -94,8 +94,8 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6
 | 5.2 WORLD MODEL QUALITY ANALYSIS Baselines and Evaluation Matrices. | comparison identity and matched condition | p. 5 (5 EXPERIMENTS) |
 | As shown in Table 1, Ctrl-World-third-view outperforms these prior models, and multi-view joint prediction further improves generation quality. | comparison identity and matched condition | p. 6 (5 EXPERIMENTS) |
 | 0.0 0.2 0.4 0.6 0.8 1.0 Instruction Following in Real World 0.0 0.2 0.4 0.6 0.8 1.0 in World Model y = 0.87x-0.04 0.0 ... | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2026 Z axis -6 cm Z axis -6 cm Close Gripper Z axis +6 cm X axis ... | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | Similar to how prior works have seen DROID policies generalize to new setups (Pertsch et al., 2025), we find that Ctrl-World, pretrained solely on ... | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
+| We hypothesize that this controllability arises from two main factors: first, the dense action space coverage in the DROID dataset; and second, our use ... | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -108,11 +108,11 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| Published as a conference paper at ICLR 2026 Z axis -6 cm Z axis -6 cm Close Gripper Z axis +6 cm X axis ... | component/input/data sensitivity | p. 7 (5 EXPERIMENTS) |
 | Figure 4: Controllability of Ctrl-World and ablations. Different action sequences can produce distinct rollouts in Ctrl-World with centimeter-level precision. Removing memory leads to blurry ... | component/input/data sensitivity | p. 7 (Figure/Table caption) |
 | Evaluated Camera Method Computation-based Model-based PSNR ↑ SSIM ↑ LPIPS ↓ FID ↓ FVD ↓ Third-view Camera Ctrl-World 23.56 0.828 0.091 25.00 97.4 Ctrl-World ... | component/input/data sensitivity | p. 6 (5 EXPERIMENTS) |
 | Ablations on memory components and frame-level conditions are in Table 2, which confirm the importance of each component. | component/input/data sensitivity | p. 8 (5 EXPERIMENTS) |
 | Table 2: Ablations on key components in Ctrl-World. Removing memory mechanisms, frame-level action conditioning or multi-view joint predictions all lead to a performance drop. ... | component/input/data sensitivity | p. 6 (Figure/Table caption) |
+| We hypothesize that this controllability arises from two main factors: first, the dense action space coverage in the DROID dataset; and second, our use ... | component/input/data sensitivity | p. 7 (5 EXPERIMENTS) |
 | We now evaluate whether Ctrl-World can be used to generate synthetic post-training data for improving VLA models without real-world data. | component/input/data sensitivity | p. 9 (5 EXPERIMENTS) |
 
 ## Main Results / Claim–Evidence Map
@@ -134,12 +134,12 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
-| body limitation/failure cue | Published as a conference paper at ICLR 2026 These limitations may diminish as video backbones become more physically accurate and coherent over time (Ball ... | p. 10 (6 CONCLUSION) |
 | body limitation/failure cue | The inclusion of diverse actions and failure data is crucial, as it allows us to train a controllable world model that can simulate a ... | p. 5 (5 EXPERIMENTS) |
 | body limitation/failure cue | Although some failure trajectories are included in the DROID dataset, there are still many failure modes outside the data distribution. | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | Table 3: Comparison of instruction-following and success rate across methods and tasks. Breakdown for policy evaluation. We present the instruction-following and low-level execution success ... | p. 17 (Figure/Table caption) |
-| body limitation/failure cue | Published as a conference paper at ICLR 2026 precise modeling of complex physics dynamics such as collisions, objects sliding away, rotations, etc. | p. 9 (5 EXPERIMENTS) |
+| body limitation/failure cue | We also observe that generalist policies tend to keep retrying in the real world after failed attempts, which the world model sometimes does not ... | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | This includes about 76k successful and about 19k failed trajectories. | p. 5 (5 EXPERIMENTS) |
+| body limitation/failure cue | Prior models rely on single-view prediction, suffering from partial observability and hallucinations (e.g., failing to move the green towel or grasp the red bowl). | p. 6 (5 EXPERIMENTS) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -162,14 +162,23 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 6 CONCLUSION - extractive body cue:** Published as a conference paper at ICLR 2026 These limitations may diminish as video backbones become more physically accurate and coherent over time (Ball et ...
 - **p. 5 / 5 EXPERIMENTS - extractive body cue:** The inclusion of diverse actions and failure data is crucial, as it allows us to train a controllable world model that can simulate a wide ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Although some failure trajectories are included in the DROID dataset, there are still many failure modes outside the data distribution.
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 3: Comparison of instruction-following and success rate across methods and tasks. Breakdown for policy evaluation. We present the instruction-following and low-level execution success rates ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2026 precise modeling of complex physics dynamics such as collisions, objects sliding away, rotations, etc.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** We also observe that generalist policies tend to keep retrying in the real world after failed attempts, which the world model sometimes does not capture.
 - **p. 5 / 5 EXPERIMENTS - extractive body cue:** This includes about 76k successful and about 19k failed trajectories.
+- **p. 6 / 5 EXPERIMENTS - extractive body cue:** Prior models rely on single-view prediction, suffering from partial observability and hallucinations (e.g., failing to move the green towel or grasp the red bowl).
 
-- **PDF anchors reviewed:** datasets p. 5 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), metrics p. 17 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), baselines p. 6 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 17 (Figure/Table caption), p. 5 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), metrics p. 17 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), baselines p. 6 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 17 (Figure/Table caption), p. 5 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Ablations on key components in Ctrl-World. Removing memory mechanisms, frame-level action conditioning or multi-view joint predictions all lead to a performance drop. 2025) and IRASim (Zhu et al., ... (p. 6, Figure/Table caption).
+- **Metric evidence:** While the pretrained π0.5 policy achieves low success rates on unfamiliar objects and novel instructions, post-training aligns the model with new instructions and boosts the success rate from 38.7% to ... (p. 9, 5 EXPERIMENTS).
+- **Baseline/ablation evidence:** Consistent with observations from prior work (Quevedo et al., 2025; Zhu et al., 2024), we also find that these baselines struggle to capture robot-object interactions and often generate hallucinated predictions. (p. 6, 5 EXPERIMENTS).
+- **Failure/negative evidence:** We also observe that generalist policies tend to keep retrying in the real world after failed attempts, which the world model sometimes does not capture. (p. 9, 5 EXPERIMENTS).

@@ -1,8 +1,10 @@
 # RVT: Robotic View Transformer for 3D Object Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2306.14896.
-> PDF retrieval source: https://arxiv.org/pdf/2306.14896. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2306.14896.
+> PDF retrieval source: https://arxiv.org/pdf/2306.14896. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2306.14896
 - Code/Project: https://robotic-view-transformer.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 
 ## Why Read It
 
 Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 C2FARM [5] represents the scene with multi-resolution voxels and achieves strong performance on difficult RLBench tasks.를 문제로 두고, To summarize, our contributions are threefold: first, we propose RVT, a multi-view transformer for 3D object manipulation that is accurate and scalable; second, we investigate various design choices for the multi-view transformer ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 Method), p. 4 (3 Method), p. 4 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** C2FARM [5] represents the scene with multi-resolution voxels and achieves strong performance on difficult RLBench tasks. (p. 1, 1 Introduction).
+- **Actual contribution:** To summarize, our contributions are threefold: first, we propose RVT, a multi-view transformer for 3D object manipulation that is accurate and scalable; second, we investigate various design choices for the ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 2: Left: Ablations on RLBench. A larger res., adding view correspondence, adding depth channel, separating initial attention layers, orthographic projection, using rotation aug., and re- rendered views around cube ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** 5 Conclusions and Limitations We proposed RVT, a multi-view transformer model for 3D object manipulation. (p. 8, 4 Experiments).

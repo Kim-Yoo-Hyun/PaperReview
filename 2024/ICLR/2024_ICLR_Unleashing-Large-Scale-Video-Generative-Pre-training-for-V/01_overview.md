@@ -1,8 +1,8 @@
 # Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/2c37c5bcef24b9541550261dcd63261b-Abstract-Conference.html.
-> PDF retrieval source: https://arxiv.org/pdf/2312.13139.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/2c37c5bcef24b9541550261dcd63261b-Abstract-Conference.html.
+> PDF retrieval source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/2c37c5bcef24b9541550261dcd63261b-Abstract-Conference.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, VLA, video pretraining, world model, language-conditioned manipulation, generalization
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2024/hash/2c37c5bcef24b9541550261dcd63261b-Abstract-Conference.html
-- Full-text retrieval: https://arxiv.org/pdf/2312.13139.pdf
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2024/hash/2c37c5bcef24b9541550261dcd63261b-Abstract-Conference.html
 - Code/Project: https://gr1-manipulation.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -87,3 +87,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, prior research has delved into diverse pre-training methods, aiming to enhance the learning capabilities of robots (Nair et al., 2022; Radosavovic et al., 2022; Seo et al., 2023; ...를 문제로 두고, Key contributions of the paper includes: • We show that large-scale video generative pre-training is able to effectively benefit visual robot manipulation learning. • We present a flexible GPT-style transformer model, GR-1, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 METHOD), p. 5 (3 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In this paper, we adapt similar generative pre-training paradigm for tackling the challenging problem of multi-task language-conditioned visual robot manipulation. (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** Key contributions of the paper includes: • We show that large-scale video generative pre-training is able to effectively benefit visual robot manipulation learning. • We present a flexible GPT-style transformer ... (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Figure 6: Video Prediction Results. The images in green boxes are ground-truth images; the images in blue boxes are predicted images. results are shown in Fig. 9. GR-1 outperforms the ... (p. 9, Figure/Table caption).
+- **Explicit failure boundary:** Another failure mode of RT-1 is collision with the plate or the desk. (p. 8, 4 EXPERIMENT).

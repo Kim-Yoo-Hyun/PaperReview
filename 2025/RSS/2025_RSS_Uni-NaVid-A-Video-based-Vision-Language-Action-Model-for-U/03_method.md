@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p013.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p013.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p013.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p013.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Tr
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | To incorporate openworld knowledge, we follow previous Vision-and-Language Action models (100, 9]. integrating open-world video questionanswering during training, Specifically, we adopt a ... | p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Training Strategy of Uni-NaVid) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | During training, the vision encoder (EVACLIP (77) and large language model (Vicuna-7B [20)) are preloaded with default pre-trained weight. | p. 7 (B. Training Strategy of Uni-NaVid) |
@@ -122,8 +122,17 @@ PDF body method statement (p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Tr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Training Strategy of Uni-NaVid), objective p. 7 (B. Training Strategy of Uni-NaVid), temporal p. 2 (1. Ivrropuction), p. 1 (Abstract), p. 7 (VI. EXPERIMENT), p. 4 (B. Online Visual Token Merging), p. 4 (1. Ivrropuction), p. 5 (1 Xan 7p (A Xgl HY + Xedos)).
+- **Evidence anchors reviewed:** method p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Training Strategy of Uni-NaVid), objective p. 7 (B. Training Strategy of Uni-NaVid), temporal p. 2 (1. Ivrropuction), p. 1 (Abstract), p. 7 (VI. EXPERIMENT), p. 4 (B. Online Visual Token Merging), p. 4 (1. Ivrropuction), p. 5 (1 Xan 7p (A Xgl HY + Xedos)).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Uni-NaVid_ takes egocentric RGB video streams and natural language instructions as inputs, and directly generates low-level actions for navigation in continuous environments. ‘To achieve multi-task navigation While supporting efficient ... (p. 2, 1. Ivrropuction).
+- **Objective/update evidence:** Following the training strategy of VLM [SI], we optimize the trainable parameters for only 1 epoch (p. 7, B. Training Strategy of Uni-NaVid).
+- **Temporal/runtime evidence:** During navigation, the agent is required to process a substantial volume of online captured frames, which results in memory overload and computational latency, particularly in LLM-based approaches {100, 58]. (p. 2, 1. Ivrropuction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.05625; PDF retrieval source: https://arxiv.org/pdf/2203.05625. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.05625; PDF retrieval source: https://arxiv.org/pdf/2203.05625. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and Metrics We validate our method on nuScenes benchmark [3].
-- **p. 8 / 4 Experiments - extractive PDF cue:** The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively.
-- **p. 9 / 4 Experiments - extractive PDF cue:** 2 shows the performance comparison on nuScenes test set.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Position Embedding Transformation for Multi-View 3D Object Detection 9 Table 1: Comparison of recent works on the nuScenes val set.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We guess the reason is that PETR learns the 3D correlation through global attention while DETR3D [51] perceives the 3D scene within local regions.
-- **p. 11 / 4 Experiments - extractive PDF cue:** It indicates that 3D PE provides a strong position prior to perceive the 3D scene.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Original DETR ("None") directly employs a set of learnable parameters as object queries without anchor points.
-- **p. 12 / 4 Experiments - extractive PDF cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
+- **p. 8 / 4 Experiments - extractive body cue:** 4.1 Datasets and Metrics We validate our method on nuScenes benchmark [3].
+- **p. 8 / 4 Experiments - extractive body cue:** The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively.
+- **p. 9 / 4 Experiments - extractive body cue:** 2 shows the performance comparison on nuScenes test set.
+- **p. 9 / 4 Experiments - extractive body cue:** Position Embedding Transformation for Multi-View 3D Object Detection 9 Table 1: Comparison of recent works on the nuScenes val set.
+- **p. 10 / 4 Experiments - extractive body cue:** We guess the reason is that PETR learns the 3D correlation through global attention while DETR3D [51] perceives the 3D scene within local regions.
+- **p. 11 / 4 Experiments - extractive body cue:** It indicates that 3D PE provides a strong position prior to perceive the 3D scene.
+- **p. 12 / 4 Experiments - extractive body cue:** Original DETR ("None") directly employs a set of learnable parameters as object queries without anchor points.
+- **p. 12 / 4 Experiments - extractive body cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method also achieves the best performance on both NDS and mAP. | p. 9 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | It shows that PETR achieves the best performance on both NDS and mAP metrics. | p. 9 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and Metrics We validate our method on nuScenes benchmark [3].
-- **p. 8 / 4 Experiments - extractive PDF cue:** The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively.
-- **p. 9 / 4 Experiments - extractive PDF cue:** 2 shows the performance comparison on nuScenes test set.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Position Embedding Transformation for Multi-View 3D Object Detection 9 Table 1: Comparison of recent works on the nuScenes val set.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We guess the reason is that PETR learns the 3D correlation through global attention while DETR3D [51] perceives the 3D scene within local regions.
-- **p. 11 / 4 Experiments - extractive PDF cue:** It indicates that 3D PE provides a strong position prior to perceive the 3D scene.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Original DETR ("None") directly employs a set of learnable parameters as object queries without anchor points.
-- **p. 12 / 4 Experiments - extractive PDF cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
+- **p. 8 / 4 Experiments - extractive body cue:** 4.1 Datasets and Metrics We validate our method on nuScenes benchmark [3].
+- **p. 8 / 4 Experiments - extractive body cue:** The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively.
+- **p. 9 / 4 Experiments - extractive body cue:** 2 shows the performance comparison on nuScenes test set.
+- **p. 9 / 4 Experiments - extractive body cue:** Position Embedding Transformation for Multi-View 3D Object Detection 9 Table 1: Comparison of recent works on the nuScenes val set.
+- **p. 10 / 4 Experiments - extractive body cue:** We guess the reason is that PETR learns the 3D correlation through global attention while DETR3D [51] perceives the 3D scene within local regions.
+- **p. 11 / 4 Experiments - extractive body cue:** It indicates that 3D PE provides a strong position prior to perceive the 3D scene.
+- **p. 12 / 4 Experiments - extractive body cue:** Original DETR ("None") directly employs a set of learnable parameters as object queries without anchor points.
+- **p. 12 / 4 Experiments - extractive body cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Comparison of DETR, DETR3D, and our proposed PETR. (a) In DETR, the object queries interact with 2D features to perform 2D detection. (b) ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: The architecture of the proposed PETR paradigm. The multi-view images are input to the backbone network (e.g. ResNet) to extract the multi-view 2D ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: Illustration of the proposed 3D Position Encoder. The multi-view 2D im- age features are input to a 1 × 1 convolution layer for ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4: 3D position embedding similarity. The red points are selected positions in the front view. We calculated the similarity between the position embedding of ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of recent works on the nuScenes val set. The results of FCOS3D and PGD are fine-tuned and tested with test time augmentation. ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: Convergence and speed analysis on PETR. (a) The convergence compar- ison between PETR and DETR3D [51]. PETR converges slower at initial stage and ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Comparison of recent works on the nuScenes test set. ∗are trained with external data. ‡ is test time augmentation. Methods Backbone NDS↑mAP↑mATE↓mASE↓mAOE↓mAVE↓mAAE↓ FCOS3D‡ ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: The impact of 3D Position Embedding. 2D PE is the common position embedding used in DETR. MV is multi-view position embedding to distinguish ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison of DETR, DETR3D, and our proposed PETR. (a) In DETR, the object queries interact with 2D features to perform 2D detection. (b) ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: The architecture of the proposed PETR paradigm. The multi-view images are input to the backbone network (e.g. ResNet) to extract the multi-view 2D ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Illustration of the proposed 3D Position Encoder. The multi-view 2D im- age features are input to a 1 × 1 convolution layer for ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: 3D position embedding similarity. The red points are selected positions in the front view. We calculated the similarity between the position embedding of ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Comparison of recent works on the nuScenes val set. The results of FCOS3D and PGD are fine-tuned and tested with test time augmentation. ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Convergence and speed analysis on PETR. (a) The convergence compar- ison between PETR and DETR3D [51]. PETR converges slower at initial stage and ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Comparison of recent works on the nuScenes test set. ∗are trained with external data. ‡ is test time augmentation. Methods Backbone NDS↑mAP↑mATE↓mASE↓mAOE↓mAVE↓mAAE↓ FCOS3D‡ ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: The impact of 3D Position Embedding. 2D PE is the common position embedding used in DETR. MV is multi-view position embedding to distinguish ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.1 Datasets and Metrics We validate our method on nuScenes benchmark [3]. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively. | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 9 (4 Experiments) |
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | Primary metric/result | It shows that PETR achieves the best performance on both NDS and mAP metrics. | numeric claim only at cited anchor | p. 9 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 Experiments - extractive PDF cue:** The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Each scene has 20s video frames and is fully annotated with 3D bounding boxes every 0.5s.
-- **p. 8 / 4 Experiments - extractive PDF cue:** For 3D coordinates generation, we sample 64 points along the depth axis following the linear-increasing discretization (LID) in CaDDN [38].
-- **p. 8 / 4 Experiments - extractive PDF cue:** All experiments are trained for 24 epochs (2x schedule) on 8 Tesla V100 GPUs with a batch size of 8.
-- **p. 9 / 4 Experiments - extractive PDF cue:** For fair comparison with BEVDet [18], PETR with Swin-S backbone is also trained with an image size of 2112×768.
-- **p. 10 / 4 Experiments - extractive PDF cue:** PETR converges relatively slower than DETR3D [51] within the first 12 epochs and finally achieves much better detection performance.
+- **p. 8 / 4 Experiments - extractive body cue:** The dataset has 1000 scenes and is officially divided into 700/150/150 scenes for training/validation/testing, respectively.
+- **p. 8 / 4 Experiments - extractive body cue:** Each scene has 20s video frames and is fully annotated with 3D bounding boxes every 0.5s.
+- **p. 8 / 4 Experiments - extractive body cue:** For 3D coordinates generation, we sample 64 points along the depth axis following the linear-increasing discretization (LID) in CaDDN [38].
+- **p. 8 / 4 Experiments - extractive body cue:** All experiments are trained for 24 epochs (2x schedule) on 8 Tesla V100 GPUs with a batch size of 8.
+- **p. 9 / 4 Experiments - extractive body cue:** For fair comparison with BEVDet [18], PETR with Swin-S backbone is also trained with an image size of 2112×768.
+- **p. 10 / 4 Experiments - extractive body cue:** PETR converges relatively slower than DETR3D [51] within the first 12 epochs and finally achieves much better detection performance.
 
 ## Generalization and Failure Cases
 
@@ -162,11 +162,11 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 
 ## Limitations and Verification Questions
 
-- **p. 14 / 4 Experiments - extractive PDF cue:** Finally, we provide some failure cases (see Fig.
-- **p. 14 / 4 Experiments - extractive PDF cue:** We mark the failure cases by red and green circles.
-- **p. 12 / 4 Experiments - extractive PDF cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
+- **p. 14 / 4 Experiments - extractive body cue:** Finally, we provide some failure cases (see Fig.
+- **p. 14 / 4 Experiments - extractive body cue:** We mark the failure cases by red and green circles.
+- **p. 12 / 4 Experiments - extractive body cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), metrics p. 8 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 14 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), results p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), metrics p. 8 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 14 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), results p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

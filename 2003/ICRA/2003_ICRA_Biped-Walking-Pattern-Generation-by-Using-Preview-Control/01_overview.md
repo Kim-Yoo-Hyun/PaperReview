@@ -1,8 +1,10 @@
 # Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/ROBOT.2003.1241826.
-> PDF retrieval source: https://doi.org/10.1109/ROBOT.2003.1241826. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/ROBOT.2003.1241826.
+> PDF retrieval source: https://doi.org/10.1109/ROBOT.2003.1241826. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2003 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://doi.org/10.1109/ROBOT.2003.1241826
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -70,7 +72,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 | Embodiment/environment | ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as an inverse problem When we represent a robot ... | hardware/simulator version and reset protocol | p. 3 (1 Introduction), p. 2 (1 Introduction) |
 | Dataset/benchmark | 2 Dynamic Models of Biped Robot 2.1 3D Linear Inverted Pendulum Mode and Zero-moment point When we apply a constraint control to an inverted pendulum such that the mass should move along ... | role, split, size and leakage | p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction) |
 | Metric | We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with good accuracy. | definition, denominator, direction and uncertainty | p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction) |
-| Baseline/ablation | not recovered | fair input/data/compute/action matching | 본문 anchor 없음 |
+| Baseline/ablation | not stated or recoverable in the selected PDF body | fair input/data/compute/action matching | 본문 anchor 없음 |
 
 ## Explicit Limitations and Failure Boundary
 
@@ -81,3 +83,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, we must consider an xu ZMP reference Servo Controller Dynamic ZMP equation (12) p ref p x + - p ZMP CoM Figure 4: Pattern generation as ZMP tracking control 0 ...를 문제로 두고, In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted pendulum based approaches.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Most of the inverted pendulum based methods suffer with this problem while the ZMP based methods can handle such situation [15]. (p. 1, 1 Introduction).
+- **Actual contribution:** In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted pendulum based approaches. (p. 2, 1 Introduction).
+- **Evaluation boundary:** ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as an inverse problem When we represent ... (p. 3, 1 Introduction).
+- **Explicit failure boundary:** In this case, the resulted ZMP (bold line) does not 1623 (p. 4, 1 Introduction).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.02117; PDF retrieval source: https://arxiv.org/pdf/2401.02117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.02117; PDF retrieval source: https://arxiv.org/pdf/2401.02117. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -17,7 +17,7 @@ PDF body method statement (p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introductio
 - **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** We also record the joint positions of all 4 robot arms to be used as policy observations and actions.
 - **p. 1 / Abstract - extractive body cue:** Using data collected with Mobile ALOHA, we then perform supervised behavior cloning and find that co-training with existing static ALOHA datasets boosts performance on mobile ...
 - **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** We record the linear and angular velocities of the mobile base to be used as actions of the learned policy.
-- **p. 1 / Abstract - extractive body cue:** We first present Mobile ALOHA, a low-cost and whole-body teleoperation system for data collection.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The system costs $32k including onboard power and compute.
 
 ## Design Rationale
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introductio
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, ... | p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal ... | p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware) |
@@ -49,11 +49,11 @@ PDF body method statement (p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introductio
 ## Objective / Update Rule
 
 - **p. 5 / 3. Mobile ALOHA Hardware - extractive body cue:** The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The system costs $32k including onboard power and compute.
 - **p. 1 / Abstract - extractive body cue:** We first present Mobile ALOHA, a low-cost and whole-body teleoperation system for data collection.
 - **p. 2 / 1. Introduction - extractive body cue:** Bimanual mobile manipulators can be costly if purchased off-the-shelf.
 - **p. 2 / 1. Introduction - extractive body cue:** Robots like the PR2 and the TIAGo can cost more than $200k USD, making them unaffordable for typical research labs.
 - **p. 3 / 3. Mobile ALOHA Hardware - extractive body cue:** Mobile ALOHA inherits the benefits of the original ALOHA system [104], i.e. the low-cost, dex3
-- **p. 3 / 3. Mobile ALOHA Hardware - extractive body cue:** We develop Mobile ALOHA, a low-cost mobile manipulator that can perform a broad range of household tasks.
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 5 (3. Mobile ALOHA Hardware), p. 6 (5. Tasks).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -83,10 +83,10 @@ PDF body method statement (p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introductio
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | As a preliminary, all methods we will examine employ "action chunking" [104], where a policy predicts a sequence of future actions instead ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | To account for a delay of d steps of the mobile base, our robot executes the first k -d arm actions and ... | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | not recovered | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | It contains 825 episodes with tasks disjoint from the Mobile ALOHA tasks, and has different mounting positions of the two arms. | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | As a preliminary, all methods we will examine employ "action chunking" [104], where a policy predicts a sequence of future actions instead ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | To account for a delay of d steps of the mobile base, our robot executes the first k -d arm actions and ... | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | It contains 825 episodes with tasks disjoint from the Mobile ALOHA tasks, and has different mounting positions of the two arms. | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -135,8 +135,17 @@ PDF body method statement (p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introductio
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 1 (Abstract), objective p. 5 (3. Mobile ALOHA Hardware), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Mobile ALOHA Hardware), p. 3 (3. Mobile ALOHA Hardware), temporal p. 8 (6. Experiments), p. 8 (6. Experiments), p. 9 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 1 (Front matter), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 1 (Abstract), objective p. 5 (3. Mobile ALOHA Hardware), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Mobile ALOHA Hardware), temporal p. 8 (6. Experiments), p. 8 (6. Experiments), p. 9 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, ... (p. 5, 3. Mobile ALOHA Hardware).
+- **Objective/update evidence:** The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, ... (p. 5, 3. Mobile ALOHA Hardware).
+- **Temporal/runtime evidence:** As a preliminary, all methods we will examine employ "action chunking" [104], where a policy predicts a sequence of future actions instead of one action at each timestep. (p. 8, 6. Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

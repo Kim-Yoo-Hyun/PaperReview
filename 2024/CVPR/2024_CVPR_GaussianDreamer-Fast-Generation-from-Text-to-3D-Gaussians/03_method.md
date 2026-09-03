@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 ## Method Body Digest
 
-- **p. 4 / 3.3. Gaussian Initialization with 3D Diffusion - extractive PDF cue:** First, we use the 3D diffusion model F3D to generate 3D assets based on the prompts y.
-- **p. 4 / 3.2. Overall Framework - extractive PDF cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
-- **p. 3 / 3. Method - extractive PDF cue:** In this section, we first review 2D and 3D diffusion models and the 3D representation method - 3D Gaussian Splatting [25].
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** After a short optimization period using the 2D diffusion model F2D, the final generated 3D Table 1.
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** Average SJC [76] - 24.7 19.8 11.7 18.7 DreamFusion [52] 6 hours 24.4 24.6 16.1 21.7 Fantasia3D [6] 6 hours 26.4 27.0 18.5 24.0 LatentNeRF ...
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** We employ the SDS (Score Distillation Sampling) loss to optimize the 3D Gaussians.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** The formula for computing the gradient is as \nabla _ { \thet a } \ l dist (\phi , \ x = g( \t he ...
+- **p. 4 / 3.3. Gaussian Initialization with 3D Diffusion - extractive body cue:** First, we use the 3D diffusion model F3D to generate 3D assets based on the prompts y.
+- **p. 4 / 3.2. Overall Framework - extractive body cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
+- **p. 3 / 3. Method - extractive body cue:** In this section, we first review 2D and 3D diffusion models and the 3D representation method - 3D Gaussian Splatting [25].
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** After a short optimization period using the 2D diffusion model F2D, the final generated 3D Table 1.
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** Average SJC [76] - 24.7 19.8 11.7 18.7 DreamFusion [52] 6 hours 24.4 24.6 16.1 21.7 Fantasia3D [6] 6 hours 26.4 27.0 18.5 24.0 LatentNeRF ...
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** We employ the SDS (Score Distillation Sampling) loss to optimize the 3D Gaussians.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** The formula for computing the gradient is as \nabla _ { \thet a } \ l dist (\phi , \ x = g( \t he ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions can be summarized as follows. • We propose a text-to-3D method, named as GaussianDreamer which bridges the 3D and 2D diffusion models via ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We introduce two operations of noisy point growing and color perturbation to supplement the initialized Gaussians for follow-up enriching the 3D instance.
-- **p. 4 / 3.2. Overall Framework - extractive PDF cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized as follows. • We propose a text-to-3D method, named as GaussianDreamer which bridges the 3D and 2D diffusion models via ...
+- **p. 2 / 1. Introduction - extractive body cue:** We introduce two operations of noisy point growing and color perturbation to supplement the initialized Gaussians for follow-up enriching the 3D instance.
+- **p. 4 / 3.2. Overall Framework - extractive body cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.3. Gaussian Initialization with 3D Diffusion - extractive PDF cue:** First, we use the 3D diffusion model F3D to generate 3D assets based on the prompts y.
-- **p. 4 / 3.2. Overall Framework - extractive PDF cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
-- **p. 3 / 3. Method - extractive PDF cue:** In this section, we first review 2D and 3D diffusion models and the 3D representation method - 3D Gaussian Splatting [25].
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** After a short optimization period using the 2D diffusion model F2D, the final generated 3D Table 1.
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** Average SJC [76] - 24.7 19.8 11.7 18.7 DreamFusion [52] 6 hours 24.4 24.6 16.1 21.7 Fantasia3D [6] 6 hours 26.4 27.0 18.5 24.0 LatentNeRF ...
+- **p. 4 / 3.3. Gaussian Initialization with 3D Diffusion - extractive body cue:** First, we use the 3D diffusion model F3D to generate 3D assets based on the prompts y.
+- **p. 4 / 3.2. Overall Framework - extractive body cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
+- **p. 3 / 3. Method - extractive body cue:** In this section, we first review 2D and 3D diffusion models and the 3D representation method - 3D Gaussian Splatting [25].
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** After a short optimization period using the 2D diffusion model F2D, the final generated 3D Table 1.
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** Average SJC [76] - 24.7 19.8 11.7 18.7 DreamFusion [52] 6 hours 24.4 24.6 16.1 21.7 Fantasia3D [6] 6 hours 26.4 27.0 18.5 24.0 LatentNeRF ...
 - **Detected method headings:** 3. Method (p. 3); 3.4. Optimization with the 2D Diffusion Model (p. 5)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | First, we use the 3D diffusion model F3D to generate 3D assets based on the prompts y. | p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown ... | p. 4 (3.2. Overall Framework), p. 3 (3. Method) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 ## Objective / Update Rule
 
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** We employ the SDS (Score Distillation Sampling) loss to optimize the 3D Gaussians.
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** The formula for computing the gradient is as \nabla _ { \thet a } \ l dist (\phi , \ x = g( \t he ...
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** 1 to calculate the gradients for updating the Gaussian parameters θi with the 2D diffusion model F2D.
-- **p. 4 / 3.2. Overall Framework - extractive PDF cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
-- **p. 4 / 3.2. Overall Framework - extractive PDF cue:** For better quality, we utilize the 2D diffusion model F2D to further optimize the initialized 3D Gaussians θb via SDS [52] with prompts y, resulting ...
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** We employ the SDS (Score Distillation Sampling) loss to optimize the 3D Gaussians.
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** The formula for computing the gradient is as \nabla _ { \thet a } \ l dist (\phi , \ x = g( \t he ...
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** 1 to calculate the gradients for updating the Gaussian parameters θi with the 2D diffusion model F2D.
+- **p. 4 / 3.2. Overall Framework - extractive body cue:** Our overall framework consists of two parts, initialization with 3D diffusion model priors and optimization with the 2D diffusion model, as shown in Fig.
+- **p. 4 / 3.2. Overall Framework - extractive body cue:** For better quality, we utilize the 2D diffusion model F2D to further optimize the initialized 3D Gaussians θb via SDS [52] with prompts y, resulting ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 5 (3.4. Optimization with the 2D Diffusion Model).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Overall Framework - extractive PDF cue:** One set of generated point clouds is transformed from the mesh m.
-- **p. 4 / 3.3. Gaussian Initialization with 3D Diffusion - extractive PDF cue:** Surface BBox Growing Point Clouds Generated Point Clouds Figure 3.
-- **p. 5 / 3.3. Gaussian Initialization with 3D Diffusion - extractive PDF cue:** Algorithm 1 The 3D Gaussian Initialization. ptm(pm, cm): Point clouds generated from F3D. ptr(pr, cr): Growing point clouds within the BBox. pt(pf, cf): Point clouds ...
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** Taking the rendering method as g, the rendered image results in x = g(θ).
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** Unlike implicit representation methods such as NeRF [45], which renders images based on volume rendering, 3D-GS renders images through splatting [84], achieving real-time speed.
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** First, we use the method of 3D Gaussian Splatting [25] to obtain the rendered image x = g(θi).
-- **p. 1 / 1. Introduction - extractive PDF cue:** Recently, diffusion models [58] have achieved great success in creating high-quality and realistic 2D images.
+- **p. 4 / 3.2. Overall Framework - extractive body cue:** One set of generated point clouds is transformed from the mesh m.
+- **p. 4 / 3.3. Gaussian Initialization with 3D Diffusion - extractive body cue:** Surface BBox Growing Point Clouds Generated Point Clouds Figure 3.
+- **p. 5 / 3.3. Gaussian Initialization with 3D Diffusion - extractive body cue:** Algorithm 1 The 3D Gaussian Initialization. ptm(pm, cm): Point clouds generated from F3D. ptr(pr, cr): Growing point clouds within the BBox. pt(pf, cf): Point clouds ...
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** Taking the rendering method as g, the rendered image results in x = g(θ).
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** Unlike implicit representation methods such as NeRF [45], which renders images based on volume rendering, 3D-GS renders images through splatting [84], achieving real-time speed.
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** First, we use the method of 3D Gaussian Splatting [25] to obtain the rendered image x = g(θi).
+- **p. 1 / 1. Introduction - extractive body cue:** Recently, diffusion models [58] have achieved great success in creating high-quality and realistic 2D images.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,7 +89,7 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 ## Training vs Inference
 
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 ## Failure and Ablation Link
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** 4.4, we conduct a series of ablation experiments to validate the effectiveness of our method.
-- **p. 7 / 4.4. Ablation Study and Analysis - extractive PDF cue:** 9 illustrates the ablation results of noisy point growing and color perturbation.
-- **p. 7 / 4.4. Ablation Study and Analysis - extractive PDF cue:** 8, we first conduct an ablation experiment on the initialization of the 3D Gaussians to validate that initialization can improve 3D consistency.
-- **p. 8 / 4.4. Ablation Study and Analysis - extractive PDF cue:** Ablation studies of initialization with different text-to3D diffusion models: Point-E [48] and Shap-E [24]. one of two text-to-3D generation models.
-- **p. 6 / 4.3. Visualization Results - extractive PDF cue:** Moreover, the 3D Gaussians generated by our method can directly achieve real-time rendering without further transformation into mesh-like structures.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 8. Ablation studies of the initialization of the 3D Gaussians. The Shap-E [24] rendering resolution here is 256x256. GaussianDreamer (Ours) Sniper rifle, asset, scifi, ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Finally, we discuss the limitations of our method.
+- **p. 5 / 4. Experiments - extractive body cue:** 4.4, we conduct a series of ablation experiments to validate the effectiveness of our method.
+- **p. 7 / 4.4. Ablation Study and Analysis - extractive body cue:** 9 illustrates the ablation results of noisy point growing and color perturbation.
+- **p. 7 / 4.4. Ablation Study and Analysis - extractive body cue:** 8, we first conduct an ablation experiment on the initialization of the 3D Gaussians to validate that initialization can improve 3D consistency.
+- **p. 8 / 4.4. Ablation Study and Analysis - extractive body cue:** Ablation studies of initialization with different text-to3D diffusion models: Point-E [48] and Shap-E [24]. one of two text-to-3D generation models.
+- **p. 6 / 4.3. Visualization Results - extractive body cue:** Moreover, the 3D Gaussians generated by our method can directly achieve real-time rendering without further transformation into mesh-like structures.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8. Ablation studies of the initialization of the 3D Gaussians. The Shap-E [24] rendering resolution here is 256x256. GaussianDreamer (Ours) Sniper rifle, asset, scifi, ...
+- **p. 5 / 4. Experiments - extractive body cue:** Finally, we discuss the limitations of our method.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 3 (3. Method), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 5 (3.4. Optimization with the 2D Diffusion Model), objective p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 4 (3.2. Overall Framework), p. 4 (3.2. Overall Framework), temporal p. 3 (3. Method), p. 3 (3.1. Preliminaries), p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 5 (3.3. Gaussian Initialization with 3D Diffusion), p. 5 (3.3. Gaussian Initialization with 3D Diffusion).
+- **Evidence anchors reviewed:** method p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 3 (3. Method), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 5 (3.4. Optimization with the 2D Diffusion Model), objective p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 4 (3.2. Overall Framework), p. 4 (3.2. Overall Framework), temporal p. 3 (3. Method), p. 3 (3.1. Preliminaries), p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 5 (3.3. Gaussian Initialization with 3D Diffusion), p. 5 (3.3. Gaussian Initialization with 3D Diffusion).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multi
 
 ## Method Body Digest
 
-- **p. 5 / 3.3. Fusion Alignment Module - extractive PDF cue:** To address this, we introduce the Fusion Alignment Module, which explicitly associates key visual features in the scene with the textual description, ensuring a clear ...
-- **p. 4 / 3.1. Multimodal 3D Representation - extractive PDF cue:** Finally, the 2D-VLM outputs the target object's ID, which is then used to retrieve its 3D bounding box from the OLT , providing the final, ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
-- **p. 3 / 3.1. Multimodal 3D Representation - extractive PDF cue:** To tackle this problem, in this work, we propose a hybrid representation that combines "2D rendered images" and "text-based 3D spatial descriptions".
-- **p. 6 / 3.3. Fusion Alignment Module - extractive PDF cue:** (7) By aligning the visual features in the image with the spatial information in the text, the proposed Fusion Alignment Module effectively reduces ambiguity and ...
-- **p. 4 / 3.1. Multimodal 3D Representation - extractive PDF cue:** The rendered images offer a 2D perspective of the 3D scene, allowing the model to capture visual features such as color, shape, texture, and relative ...
-- **p. 5 / 3.2. Perspective Adaptation Module - extractive PDF cue:** 3 (e), filtering out irrelevant information enhances localization accuracy by reducing interpretive confusion within the model.
-- **p. 2 / 1. Introduction - extractive PDF cue:** ies [55, 60] attempt to reduce 3D-specific training requirements by reformatting 3D scenes and text descriptions for large language models (LLMs) [38, 39], but these ...
+- **p. 5 / 3.3. Fusion Alignment Module - extractive body cue:** To address this, we introduce the Fusion Alignment Module, which explicitly associates key visual features in the scene with the textual description, ensuring a clear ...
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** Finally, the 2D-VLM outputs the target object's ID, which is then used to retrieve its 3D bounding box from the OLT , providing the final, ...
+- **p. 3 / 3. Methodology - extractive body cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
+- **p. 3 / 3.1. Multimodal 3D Representation - extractive body cue:** To tackle this problem, in this work, we propose a hybrid representation that combines "2D rendered images" and "text-based 3D spatial descriptions".
+- **p. 6 / 3.3. Fusion Alignment Module - extractive body cue:** (7) By aligning the visual features in the image with the spatial information in the text, the proposed Fusion Alignment Module effectively reduces ambiguity and ...
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** The rendered images offer a 2D perspective of the 3D scene, allowing the model to capture visual features such as color, shape, texture, and relative ...
+- **p. 5 / 3.2. Perspective Adaptation Module - extractive body cue:** 3 (e), filtering out irrelevant information enhances localization accuracy by reducing interpretive confusion within the model.
+- **p. 2 / 1. Introduction - extractive body cue:** ies [55, 60] attempt to reduce 3D-specific training requirements by reformatting 3D scenes and text descriptions for large language models (LLMs) [38, 39], but these ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Considering that 2D-VLMs cannot process 3D data directly, we introduce a cross-modal alignment representation that enables 2D-VLMs to interpret 3D scenes.
-- **p. 3 / 3. Methodology - extractive PDF cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG.
+- **p. 2 / 1. Introduction - extractive body cue:** Considering that 2D-VLMs cannot process 3D data directly, we introduce a cross-modal alignment representation that enables 2D-VLMs to interpret 3D scenes.
+- **p. 3 / 3. Methodology - extractive body cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.3. Fusion Alignment Module - extractive PDF cue:** To address this, we introduce the Fusion Alignment Module, which explicitly associates key visual features in the scene with the textual description, ensuring a clear ...
-- **p. 4 / 3.1. Multimodal 3D Representation - extractive PDF cue:** Finally, the 2D-VLM outputs the target object's ID, which is then used to retrieve its 3D bounding box from the OLT , providing the final, ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
-- **p. 3 / 3.1. Multimodal 3D Representation - extractive PDF cue:** To tackle this problem, in this work, we propose a hybrid representation that combines "2D rendered images" and "text-based 3D spatial descriptions".
-- **p. 6 / 3.3. Fusion Alignment Module - extractive PDF cue:** (7) By aligning the visual features in the image with the spatial information in the text, the proposed Fusion Alignment Module effectively reduces ambiguity and ...
-- **p. 4 / 3.1. Multimodal 3D Representation - extractive PDF cue:** The rendered images offer a 2D perspective of the 3D scene, allowing the model to capture visual features such as color, shape, texture, and relative ...
-- **p. 5 / 3.2. Perspective Adaptation Module - extractive PDF cue:** 3 (e), filtering out irrelevant information enhances localization accuracy by reducing interpretive confusion within the model.
+- **p. 5 / 3.3. Fusion Alignment Module - extractive body cue:** To address this, we introduce the Fusion Alignment Module, which explicitly associates key visual features in the scene with the textual description, ensuring a clear ...
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** Finally, the 2D-VLM outputs the target object's ID, which is then used to retrieve its 3D bounding box from the OLT , providing the final, ...
+- **p. 3 / 3. Methodology - extractive body cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
+- **p. 3 / 3.1. Multimodal 3D Representation - extractive body cue:** To tackle this problem, in this work, we propose a hybrid representation that combines "2D rendered images" and "text-based 3D spatial descriptions".
+- **p. 6 / 3.3. Fusion Alignment Module - extractive body cue:** (7) By aligning the visual features in the image with the spatial information in the text, the proposed Fusion Alignment Module effectively reduces ambiguity and ...
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** The rendered images offer a 2D perspective of the 3D scene, allowing the model to capture visual features such as color, shape, texture, and relative ...
+- **p. 5 / 3.2. Perspective Adaptation Module - extractive body cue:** 3 (e), filtering out irrelevant information enhances localization accuracy by reducing interpretive confusion within the model.
 - **Detected method headings:** 3. Methodology (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To address this, we introduce the Fusion Alignment Module, which explicitly associates key visual features in the scene with the textual description, ... | p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multimodal 3D Representation) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Finally, the 2D-VLM outputs the target object's ID, which is then used to retrieve its 3D bounding box from the OLT , ... | p. 4 (3.1. Multimodal 3D Representation), p. 3 (3. Methodology) |
@@ -64,13 +64,13 @@ PDF body method statement (p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multi
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** ies [55, 60] attempt to reduce 3D-specific training requirements by reformatting 3D scenes and text descriptions for large language models (LLMs) [38, 39], but these ...
-- **p. 3 / 3.1. Multimodal 3D Representation - extractive PDF cue:** However, prior 3D scene representations - such as point clouds [14, 40], voxels [29], and implicit representations [22] - are not directly compatible with the ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** The goal is to output a directed 3D bounding box (bbox) of object o that identifies the target object's location and dimensions.
-- **p. 4 / 3.1. Multimodal 3D Representation - extractive PDF cue:** The image with prompts, along with the spatial descriptions and query, is then input into the 2D-VLM for precise localization of the target object.
-- **p. 4 / 3.1. Multimodal 3D Representation - extractive PDF cue:** Formally, the 3D scene is represented as: (I, T ) = F (S, Q, OLT ) , (3) where F takes the 3D scene S, ...
-- **p. 5 / 3.3. Fusion Alignment Module - extractive PDF cue:** Although the 2D rendered images and text-based spatial descriptions provide substantial spatial information for SeeGround, directly inputting text and images without explicit (a) Bird's Eye ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** The images are rendered using query-driven dynamic viewpoints, simulating relevant observation angles, and capturing object details and spatial context.
+- **p. 2 / 1. Introduction - extractive body cue:** ies [55, 60] attempt to reduce 3D-specific training requirements by reformatting 3D scenes and text descriptions for large language models (LLMs) [38, 39], but these ...
+- **p. 3 / 3.1. Multimodal 3D Representation - extractive body cue:** However, prior 3D scene representations - such as point clouds [14, 40], voxels [29], and implicit representations [22] - are not directly compatible with the ...
+- **p. 3 / 3. Methodology - extractive body cue:** The goal is to output a directed 3D bounding box (bbox) of object o that identifies the target object's location and dimensions.
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** The image with prompts, along with the spatial descriptions and query, is then input into the 2D-VLM for precise localization of the target object.
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** Formally, the 3D scene is represented as: (I, T ) = F (S, Q, OLT ) , (3) where F takes the 3D scene S, ...
+- **p. 5 / 3.3. Fusion Alignment Module - extractive body cue:** Although the 2D rendered images and text-based spatial descriptions provide substantial spatial information for SeeGround, directly inputting text and images without explicit (a) Bird's Eye ...
+- **p. 2 / 1. Introduction - extractive body cue:** The images are rendered using query-driven dynamic viewpoints, simulating relevant observation angles, and capturing object details and spatial context.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multi
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Ablation studies are conducted on the Nr3D validation set [1].
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Ablation study on using (a) different projection methods (ours vs.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** In contrast, LLM performance degrades without the anchor.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7. An example of the robustness of the proposed frame- work in identifying the ‘cabinet' by leveraging visual context, even when key information (‘printers' ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Bird's Eye View, though comprehensive, cannot adjust to the query and misses key spatial details like object orientation and height.
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Ablation studies are conducted on the Nr3D validation set [1].
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Ablation study on using (a) different projection methods (ours vs.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** In contrast, LLM performance degrades without the anchor.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. An example of the robustness of the proposed frame- work in identifying the ‘cabinet' by leveraging visual context, even when key information (‘printers' ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Bird's Eye View, though comprehensive, cannot adjust to the query and misses key spatial details like object orientation and height.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multi
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multimodal 3D Representation), p. 3 (3. Methodology), p. 3 (3.1. Multimodal 3D Representation), p. 6 (3.3. Fusion Alignment Module), p. 4 (3.1. Multimodal 3D Representation), objective 본문 anchor 없음, temporal p. 3 (3. Methodology), p. 3 (3. Methodology), p. 4 (3.1. Multimodal 3D Representation), p. 5 (3.2. Perspective Adaptation Module), p. 7 (4.3. Ablation Study), p. 7 (4.2. Comparative Study).
+- **Evidence anchors reviewed:** method p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multimodal 3D Representation), p. 3 (3. Methodology), p. 3 (3.1. Multimodal 3D Representation), p. 6 (3.3. Fusion Alignment Module), p. 4 (3.1. Multimodal 3D Representation), objective 본문 anchor 없음, temporal p. 3 (3. Methodology), p. 3 (3. Methodology), p. 4 (3.1. Multimodal 3D Representation), p. 5 (3.2. Perspective Adaptation Module), p. 7 (4.3. Ablation Study), p. 7 (4.2. Comparative Study).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

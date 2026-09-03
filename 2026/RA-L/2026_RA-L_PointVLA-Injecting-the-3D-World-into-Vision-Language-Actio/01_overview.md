@@ -1,8 +1,10 @@
 # PointVLA: Injecting the 3D World into Vision-Language-Action Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2503.07511.
-> PDF retrieval source: https://arxiv.org/pdf/2503.07511. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2503.07511.
+> PDF retrieval source: https://arxiv.org/pdf/2503.07511. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RA-L
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.07511
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 
 ## Why Read It
 
 Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 This represents a crucial limitation because humans perceive and interact with the world in three dimensions.를 문제로 두고, In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Injecting Point Cloud into VLA), p. 3 (3. Methodology), p. 4 (3.2. Injecting Point Cloud into VLA), p. 5 (3.3. Which Blocks to Inject Point Cloud? A Skip) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This represents a crucial limitation because humans perceive and interact with the world in three dimensions. (p. 2, 1. Introduction).
+- **Actual contribution:** In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models. (p. 2, 1. Introduction).
+- **Evaluation boundary:** We show experimental results on the bottom table. sented in Table 6, where our method outperforms all baselines in this scenario. (p. 7, 4.2. Few-Shot Multi-Tasking).
+- **Explicit failure boundary:** Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to become entangled-an observation consistent with ... (p. 7, 4.2. Few-Shot Multi-Tasking).

@@ -1,8 +1,10 @@
 # Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://jmlr.org/papers/v17/15-522.html.
-> PDF retrieval source: https://jmlr.org/papers/volume17/15-522/15-522.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://jmlr.org/papers/v17/15-522.html.
+> PDF retrieval source: https://jmlr.org/papers/volume17/15-522/15-522.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2016 / JMLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://jmlr.org/papers/volume17/15-522/15-522.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 However, designing the perception and control software for autonomous operation remains a major challenge, even for basic tasks.를 문제로 두고, Our methods consists of two main components, which are illustrated in Figure 3.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (3.2 Approach Summary), p. 3 (1. Introduction), p. 12 (4.3 Supervised Policy Optimization) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, designing the perception and control software for autonomous operation remains a major challenge, even for basic tasks. (p. 1, 1. Introduction).
+- **Actual contribution:** In our method, the full state of the system is observable at training time, but not at test time. (p. 2, 1. Introduction).
+- **Evaluation boundary:** The results in Table 3 indicate that using the softmax and expectation operators improves pose estimation accuracy substantially. (p. 21, 6.3 Spatial Softmax CNN Architecture Evaluation).
+- **Explicit failure boundary:** The graph shows the average distance travelled on rollouts that did not fall, and shows that only our method was able to learn walking policies that succeeded consistently. (p. 19, 6.1 Simulated Comparisons to Prior Policy Search Methods).

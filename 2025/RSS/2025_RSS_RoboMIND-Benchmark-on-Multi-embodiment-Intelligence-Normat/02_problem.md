@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | In contrast 0 the acquisition of vision or language data, which can often be sourced through web-based collection methods (32, 55], collecting ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | In contrast, recent works [73, 27, 28] incorporate visual observations as input to predict action poses. | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| Observation / input | In contrast, recent works [73, 27, 28] incorporate visual observations as input to predict action poses. | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | contrast, recent, works, incorporate, visual, observations, input, predict, action, poses | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | Another, prominent, VLA, models, leverages, multimodal, instruction, datasets | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | standardized episode e and interface; body terms: contrast, recent, works, incorporate, visual, observations, input, predict, action, poses | p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION) |
 | Decision / output variable | method trajectory/action; body terms: demonstrate, RoboMIND, effectively, utilized, various, single-task, imitation, learning | p. 3 (I. INTRODUCTION), p. 12 (C. Vision-Language-Action Large Models), p. 4 (I. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 11 (B. Single-task Imitation Learning Models) |
 | Success / guarantee | comparable score and protocol validity | p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (B. Qualitative Analysis) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (I. INTRODUCTION), p. 12 (C. Vision-Language-Action Large Models), p. 4 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION)): demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task ...
+PDF body contribution framing (p. 3 (I. INTRODUCTION), p. 12 (C. Vision-Language-Action Large Models), p. 4 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION)): demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task ...
 
 - **p. 12 / C. Vision-Language-Action Large Models - extractive body cue:** The first category consists of tasks similar to those performed by the single-arm Franka robot, which are intended to evaluate the model's performance across different ...
 - **p. 4 / I. INTRODUCTION - extractive body cue:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 3 (I. INTRODUCTION), p. 12 (C. Vision-Language-Acti
 
 ## Position in the Robotics Loop
 
-benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 4 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 4 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), interface p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), interface p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, the curation of large-scale datasets for training general-purpose robotic models poses significant challenges. (p. 2, I. INTRODUCTION).
+- **Formulation-changing contribution:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This platform uses a cloudnative architecture ... (p. 4, I. INTRODUCTION).
+- **Assumption/failure evidence:** Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

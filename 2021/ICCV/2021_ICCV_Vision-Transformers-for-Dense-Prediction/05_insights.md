@@ -1,53 +1,73 @@
 # Insights — Vision Transformers for Dense Prediction
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.13413; PDF retrieval source: https://arxiv.org/pdf/2103.13413. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We introduce dense vision transformers, an architecture that leverages vision transformers in place of convolutional networks as a backbone for dense prediction tasks.
-- **Problem cue:** Introduction Virtually all existing architectures for dense prediction are based on convolutional networks .
-- **Claim/result cue:** Our experiments show that this architecture yields substantial improvements on dense prediction tasks, especially when a large amount of training data is available.
+- **p. 2 / 1. Introduction - extractive body cue:** In this work, we introduce the dense prediction transformer (DPT).
+- **p. 1 / 1. Introduction - extractive body cue:** Downsampling enables a progressive increase of the receptive field, the grouping of low-level features into abstract highlevel features, and simultaneously ensures that memory and computational ...
+- **p. 3 / 3. Architecture - extractive body cue:** We propose a simple three-stage Reassemble operation to recover image-like representations from the output tokens of arbitrary layers of the transformer encoder: Reassemble ˆ D ...
+- **p. 2 / 1. Introduction - extractive body cue:** We show that these properties are especially advantageous for dense prediction tasks as they naturally lead to fine-grained and globally coherent predictions.
+- **p. 4 / 3. Architecture - extractive body cue:** We use features from the first and second ResNet block from the embedding network and stages l = {9, 12} when using ViT-Hybrid.
+- **p. 3 / 3. Architecture - extractive body cue:** We use three variants in our work: ViT-Base, which uses the patch-based embedding procedure and features 12 transformer layers; ViT-Large, which uses the same embedding ...
+- **p. 2 / 3. Architecture - extractive body cue:** Transformers transform the set of tokens using sequential blocks of multi-headed self-attention (MHSA) [39], which relate tokens to each other to transform the representation.
+- **Contribution anchor:** p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Architecture), p. 2 (1. Introduction), p. 4 (3. Architecture), p. 3 (3. Architecture)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** While these techniques can significantly improve prediction quality, the networks are still bottlenecked by their fundamental building block: the convolution.
+- **p. 1 / 1. Introduction - extractive body cue:** Virtually all existing architectures for dense prediction are based on convolutional networks [6, 31, 34, 42, 49, 50, 53].
+- **p. 2 / 1. Introduction - extractive body cue:** Downsampling the intermediate representations is necessary to keep memory consumption at levels that are feasible with existing computer architectures.
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].
+- **p. 8 / 4.3. Ablations - extractive body cue:** We observe that the performance of DPT variants indeed degrades more gracefully as inference resolution increases.
+- **Boundary to test:** We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In this work, we introduce the dense prediction transformer (DPT). | p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Reported outcome | Table 3. Evaluation on KITTI (Eigen split). Zero-shot cross-dataset transfer. Table 1 shows the re- sults of zero-shot transfer to different datasets that were not seen during training. We refer the interested ... | p. 5 (Figure/Table caption), p. 4 (4. Experiments) |
+| Failure/limitation | We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30]. | p. 5 (4.1. Monocular Depth Estimation), p. 8 (4.3. Ablations) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `3D Vision, monocular depth, Vision Transformer, geometry` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Attention 기반 token interaction을 3D object, scene, map, trajectory token 사이의 long-range relation modeling에 사용할 수 있다.
-  - Sequence modeling의 병렬화/장거리 의존성 처리를 embodied memory, planning history, multi-view observation aggregation으로 확장할 수 있다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 We propose a simple three-stage Reassemble operation to recover image-like representations from the output tokens of arbitrary layers of the transformer encoder: Reassemble ˆ D s (t) = (Resamples ◦Concatenate ◦Read)(t), where ...를 The input tokens are transformed using L transformer layers into new representations tl, where l refers to the output of the l-th transformer layer.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In this work, we introduce the dense prediction transformer (DPT).
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Geometry, Reconstruction, and SLAM`; tags: `3D Vision, monocular depth, Vision Transformer, geometry`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Our experiments show that this architecture yields substantial improvements on dense prediction tasks, especially when a large amount of training data is available.
-  - 원 논문이 sequence/language task에서 보인 구조는 metric 3D geometry, SE(3) consistency, sensor noise, robot execution constraint를 직접 다루지 않는다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D Vision, monocular depth, Vision Transformer, geometry`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ImageNet, KITTI, ETH3D / accuracy, mIoU, mAP, AbsRel, RMSE
-  - 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, R2R, CALVIN
-  - 내 연구 확장 metric 후보: accuracy, mIoU, SR, success rate
-  - 검증 초점: 3D relation reasoning, spatial memory, language-conditioned planning 성능을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We split each dataset into a training set and a small validation set of about 1,000 images total..
+3. Compare against the body-reported baseline or a matched simpler baseline: The hybrid and large backbones consistently outperform the convolutional baselines..
+4. Report the body metric and its denominator/aggregation: For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large training dataset is available..
+5. Re-run the body-reported ablation/failure condition: We first present our main results using the default configuration and show comprehensive ablations of different DPT configurations at the end of this section..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3. Architecture), p. 4 (3. Architecture), p. 3 (3. Architecture); the primary result is directionally consistent at p. 5 (Figure/Table caption), p. 4 (4. Experiments), p. 8 (4.3. Ablations); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-3D point/object/map/action token에 attention을 적용할 때 어떤 positional encoding이 metric geometry를 보존하는가?
+고정된 observation/action/data/compute budget에서 introduce, dense, prediction mechanism이 The hybrid and large backbones consistently outperform the convolutional baselines. 대비 For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a ...을 개선하고, We thus first align predictions of the initial network to each training sample using the robust ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

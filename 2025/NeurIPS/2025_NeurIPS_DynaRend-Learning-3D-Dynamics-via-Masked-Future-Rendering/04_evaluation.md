@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=r4dzaP61QH; PDF retrieval source: https://openreview.net/pdf/5035ead6fd86c6240fa01d703f42366fa4079df4.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=r4dzaP61QH; PDF retrieval source: https://arxiv.org/pdf/2510.24261. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** We conduct simulation experiments on two challenging robotic manipulation benchmarks: RLBench [21] and Colosseum [32].
-- **p. 9 / 4 Experiments - extractive PDF cue:** We evaluate our method on five real-world robotic manipulation tasks and compare it against prior state-of-the-art approach.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Colosseum [32] is a benchmark for evaluating the generalization capabilities of manipulation policies under 12 types of environmental perturbations across 20 tasks, including changes in ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** For each task, we collect 30 expert demonstrations, with spatial configurations of objects randomized across episodes.
-- **p. 7 / 4 Experiments - extractive PDF cue:** This highlights the efficiency and task-adaptiveness of DynaRend, making it practical for scalable deployment in real-world setups.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Moreover, unlike prior methods that rely on large-scale external pretraining datasets, our method is pretrained solely on task-relevant multi-view RGB-D data without additional external supervision.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We present the results on the Colosseum benchmark in Fig.
-- **p. 21 / A Implementation Details - extractive PDF cue:** In both simulation and real-world experiments, we maintain fixed camera setups and viewpoints, with the view augmentation process described above applied consistently.
+- **p. 6 / 4 Experiments - extractive body cue:** We conduct simulation experiments on two challenging robotic manipulation benchmarks: RLBench [21] and Colosseum [32].
+- **p. 9 / 4 Experiments - extractive body cue:** We evaluate our method on five real-world robotic manipulation tasks and compare it against prior state-of-the-art approach.
+- **p. 6 / 4 Experiments - extractive body cue:** Colosseum [32] is a benchmark for evaluating the generalization capabilities of manipulation policies under 12 types of environmental perturbations across 20 tasks, including changes in ...
+- **p. 9 / 4 Experiments - extractive body cue:** For each task, we collect 30 expert demonstrations, with spatial configurations of objects randomized across episodes.
+- **p. 7 / 4 Experiments - extractive body cue:** This highlights the efficiency and task-adaptiveness of DynaRend, making it practical for scalable deployment in real-world setups.
+- **p. 7 / 4 Experiments - extractive body cue:** Moreover, unlike prior methods that rely on large-scale external pretraining datasets, our method is pretrained solely on task-relevant multi-view RGB-D data without additional external supervision.
+- **p. 8 / 4 Experiments - extractive body cue:** We present the results on the Colosseum benchmark in Fig.
+- **p. 14 / A Implementation Details - extractive body cue:** In both simulation and real-world experiments, we maintain fixed camera setups and viewpoints, with the view augmentation process described above applied consistently.
 
 ## Evaluation Type and Scope
 
@@ -26,11 +26,11 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **Input boundary:** image/video, language instruction, proprioception과 history.
 - **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
 - **Primary target:** instruction following, task success, generalization과 latency.
-- **Detected evaluation headings:** 4 Experiments (p. 6); A Implementation Details (p. 21); B Simulation Experiment Details (p. 22); C Real-world Experiment Details (p. 23).
+- **Detected evaluation headings:** 4 Experiments (p. 6); A Implementation Details (p. 14); B Simulation Experiment Details (p. 15); C Real-world Experiment Details (p. 16).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, compared to the baseline RVT [13] model, DynaRend achieves an average success rate improvement of 32.3%. | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our model achieves the best trade-off between success rate and inference speed when compared to other baseline methods, demonstrating strong manipulation performance without sacrificing ... | p. 7 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** We conduct simulation experiments on two challenging robotic manipulation benchmarks: RLBench [21] and Colosseum [32].
-- **p. 9 / 4 Experiments - extractive PDF cue:** We evaluate our method on five real-world robotic manipulation tasks and compare it against prior state-of-the-art approach.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Colosseum [32] is a benchmark for evaluating the generalization capabilities of manipulation policies under 12 types of environmental perturbations across 20 tasks, including changes in ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** For each task, we collect 30 expert demonstrations, with spatial configurations of objects randomized across episodes.
-- **p. 7 / 4 Experiments - extractive PDF cue:** This highlights the efficiency and task-adaptiveness of DynaRend, making it practical for scalable deployment in real-world setups.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Moreover, unlike prior methods that rely on large-scale external pretraining datasets, our method is pretrained solely on task-relevant multi-view RGB-D data without additional external supervision.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We present the results on the Colosseum benchmark in Fig.
-- **p. 21 / A Implementation Details - extractive PDF cue:** In both simulation and real-world experiments, we maintain fixed camera setups and viewpoints, with the view augmentation process described above applied consistently.
+- **p. 6 / 4 Experiments - extractive body cue:** We conduct simulation experiments on two challenging robotic manipulation benchmarks: RLBench [21] and Colosseum [32].
+- **p. 9 / 4 Experiments - extractive body cue:** We evaluate our method on five real-world robotic manipulation tasks and compare it against prior state-of-the-art approach.
+- **p. 6 / 4 Experiments - extractive body cue:** Colosseum [32] is a benchmark for evaluating the generalization capabilities of manipulation policies under 12 types of environmental perturbations across 20 tasks, including changes in ...
+- **p. 9 / 4 Experiments - extractive body cue:** For each task, we collect 30 expert demonstrations, with spatial configurations of objects randomized across episodes.
+- **p. 7 / 4 Experiments - extractive body cue:** This highlights the efficiency and task-adaptiveness of DynaRend, making it practical for scalable deployment in real-world setups.
+- **p. 7 / 4 Experiments - extractive body cue:** Moreover, unlike prior methods that rely on large-scale external pretraining datasets, our method is pretrained solely on task-relevant multi-view RGB-D data without additional external supervision.
+- **p. 8 / 4 Experiments - extractive body cue:** We present the results on the Colosseum benchmark in Fig.
+- **p. 14 / A Implementation Details - extractive body cue:** In both simulation and real-world experiments, we maintain fixed camera setups and viewpoints, with the view augmentation process described above applied consistently.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison of representation learning paradigms for robot learning. (a) Learning predictive 2D representations [17] by forecasting future frames from the current observation to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: DynaRend framework overview. (a) We reconstruct the point cloud from multi-view RGB-D inputs, encode it with an MLP, and project it onto three ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Evaluation results on 18 RLBench tasks. Each task is evaluated with 25 rollouts under 5 different seeds. We report the average success rate ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Results on 71 RLBench tasks. We further evaluate the scalability of our ap- proach on the larger 71-task RLBench set- ting, comparing DynaRend ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Results on Colosseum. Ablation Avg. S.R.(%) ∆ DynaRend 83.2 - w/o. pretraining
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Ablations. Average success rates are reported over RLBench 18 tasks to evaluate the impact of different design choices. Results on COLOSSEUM. We present ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3: Ablation on mask ratio. Impact of mask ratio. Additionally, we perform an abla- tion study on the effect of the masking ratio applied ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Real-world setup and task examples. We evaluate on five manipulation tasks: Put Item in Drawer, Close Pot, Stack Blocks, Sort Shape, Stack Cups. ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of representation learning paradigms for robot learning. (a) Learning predictive 2D representations [17] by forecasting future frames from the current observation to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: DynaRend framework overview. (a) We reconstruct the point cloud from multi-view RGB-D inputs, encode it with an MLP, and project it onto three ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Evaluation results on 18 RLBench tasks. Each task is evaluated with 25 rollouts under 5 different seeds. We report the average success rate ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Results on 71 RLBench tasks. We further evaluate the scalability of our ap- proach on the larger 71-task RLBench set- ting, comparing DynaRend ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Results on Colosseum. Ablation Avg. S.R.(%) ∆ DynaRend 83.2 - w/o. pretraining
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Ablations. Average success rates are reported over RLBench 18 tasks to evaluate the impact of different design choices. Results on COLOSSEUM. We present ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Ablation on mask ratio. Impact of mask ratio. Additionally, we perform an abla- tion study on the effect of the masking ratio applied ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Real-world setup and task examples. We evaluate on five manipulation tasks: Put Item in Drawer, Close Pot, Stack Blocks, Sort Shape, Stack Cups. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct simulation experiments on two challenging robotic manipulation benchmarks: RLBench [21] and Colosseum [32]. | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | We evaluate our method on five real-world robotic manipulation tasks and compare it against prior state-of-the-art approach. | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 6 (4 Experiments) |
@@ -123,19 +123,19 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | Primary metric/result | Our model achieves the best trade-off between success rate and inference speed when compared to other baseline methods, demonstrating strong manipulation performance without sacrificing ... | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Experiments - extractive PDF cue:** For both settings, each task is evaluated over 25 rollout episodes, and we report the average task success rate.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Colosseum [32] is a benchmark for evaluating the generalization capabilities of manipulation policies under 12 types of environmental perturbations across 20 tasks, including changes in ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** During test time, for each task, we separately apply each of the 12 perturbation types, and rollout 25 episodes per perturbation.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Each task is evaluated with 25 rollouts under 5 different seeds.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Specifically, we perform random translations along the x, y, and z axes by up to 0.125 m, and random rotations around the z-axis by up ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** Training is conducted using 8 NVIDIA RTX 3090 GPUs.
+- **p. 6 / 4 Experiments - extractive body cue:** For both settings, each task is evaluated over 25 rollout episodes, and we report the average task success rate.
+- **p. 6 / 4 Experiments - extractive body cue:** Colosseum [32] is a benchmark for evaluating the generalization capabilities of manipulation policies under 12 types of environmental perturbations across 20 tasks, including changes in ...
+- **p. 6 / 4 Experiments - extractive body cue:** During test time, for each task, we separately apply each of the 12 perturbation types, and rollout 25 episodes per perturbation.
+- **p. 7 / 4 Experiments - extractive body cue:** Each task is evaluated with 25 rollouts under 5 different seeds.
+- **p. 7 / 4 Experiments - extractive body cue:** Specifically, we perform random translations along the x, y, and z axes by up to 0.125 m, and random rotations around the z-axis by up ...
+- **p. 7 / 4 Experiments - extractive body cue:** Training is conducted using 8 NVIDIA RTX 3090 GPUs.
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
 | body limitation/failure cue | Notably, on tasks involving distractor objects, RVT-2 struggles to distinguish between different unseen items, leading to frequent failure cases. | p. 9 (4 Experiments) |
-| body limitation/failure cue | To address this limitation, we leverage a pretrained visual-conditioned multi-view diffusion model to generate novel target views as additional supervision. | p. 21 (A Implementation Details) |
+| body limitation/failure cue | To address this limitation, we leverage a pretrained visual-conditioned multi-view diffusion model to generate novel target views as additional supervision. | p. 14 (A Implementation Details) |
 | body limitation/failure cue | We report the average success rate across each perturbation category to assess the robustness of the policy to different types of environmental changes. | p. 6 (4 Experiments) |
 | body limitation/failure cue | Removing masking entirely or applying an excessively high mask ratio both lead to degraded performance. | p. 8 (4 Experiments) |
 | body limitation/failure cue | Additionally, when compared to the RVT baseline trained from scratch, DynaRend demonstrates significantly greater robustness to various types of environmental variations. | p. 8 (4 Experiments) |
@@ -147,12 +147,12 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| Hyperparameter Value triplane resolution 16×16×16 transformer depth 8 transformer width 768 attention heads 12 MLP ratio 4.0 render head width 768 render head layers ... | p. 21 (A Implementation Details) |
+| Hyperparameter Value triplane resolution 16×16×16 transformer depth 8 transformer width 768 attention heads 12 MLP ratio 4.0 render head width 768 render head layers ... | p. 14 (A Implementation Details) |
 | In both stages, we use a batch size of 256 and set the initial learning rate to 1 × 10-4 with cosine decay schedule. | p. 7 (4 Experiments) |
 | Each task is evaluated with 25 rollouts under 5 different seeds. | p. 7 (4 Experiments) |
 | The training hyperparameters are kept consistent with the simulation experiments. | p. 9 (4 Experiments) |
 | We pretrain our model on the collected real-world dataset for 30k steps with augmented views and fine-tune it for an additional 10k steps. | p. 9 (4 Experiments) |
-| We present the hyperparameters used in DynaRend as shown in Tab. | p. 21 (A Implementation Details) |
+| We present the hyperparameters used in DynaRend as shown in Tab. | p. 14 (A Implementation Details) |
 | The resulting point cloud is then encoded through an MLP to extract per-point features. | p. 4 (3 Methodology) |
 | (c) For finetuning, two networks serve as a triplane encoder and are trained with an action decoder on demonstration data. | p. 4 (3 Methodology) |
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** Notably, on tasks involving distractor objects, RVT-2 struggles to distinguish between different unseen items, leading to frequent failure cases.
-- **p. 21 / A Implementation Details - extractive PDF cue:** To address this limitation, we leverage a pretrained visual-conditioned multi-view diffusion model to generate novel target views as additional supervision.
-- **p. 6 / 4 Experiments - extractive PDF cue:** We report the average success rate across each perturbation category to assess the robustness of the policy to different types of environmental changes.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Removing masking entirely or applying an excessively high mask ratio both lead to degraded performance.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Additionally, when compared to the RVT baseline trained from scratch, DynaRend demonstrates significantly greater robustness to various types of environmental variations.
-- **p. 9 / 4 Experiments - extractive PDF cue:** In contrast, our method maintains robust performance, benefiting from the pretrained spatially grounded and semantically coherent representations.
+- **p. 9 / 4 Experiments - extractive body cue:** Notably, on tasks involving distractor objects, RVT-2 struggles to distinguish between different unseen items, leading to frequent failure cases.
+- **p. 14 / A Implementation Details - extractive body cue:** To address this limitation, we leverage a pretrained visual-conditioned multi-view diffusion model to generate novel target views as additional supervision.
+- **p. 6 / 4 Experiments - extractive body cue:** We report the average success rate across each perturbation category to assess the robustness of the policy to different types of environmental changes.
+- **p. 8 / 4 Experiments - extractive body cue:** Removing masking entirely or applying an excessively high mask ratio both lead to degraded performance.
+- **p. 8 / 4 Experiments - extractive body cue:** Additionally, when compared to the RVT baseline trained from scratch, DynaRend demonstrates significantly greater robustness to various types of environmental variations.
+- **p. 9 / 4 Experiments - extractive body cue:** In contrast, our method maintains robust performance, benefiting from the pretrained spatially grounded and semantically coherent representations.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), p. 9 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), p. 9 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

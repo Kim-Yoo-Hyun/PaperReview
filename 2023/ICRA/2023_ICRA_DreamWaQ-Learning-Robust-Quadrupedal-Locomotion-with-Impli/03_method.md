@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.10602; PDF retrieval source: https://arxiv.org/pdf/2301.10602. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.10602; PDF retrieval source: https://arxiv.org/pdf/2301.10602. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 
 ## Method Body Digest
 
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, we propose a ...
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ot, ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Conventional model-based controllers often require a complex pipeline consisting of state estimation, trajectory optimization, gait optimization, and actuator control [1]-[3], [7]-[11].
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** CENet consists of a single encoder and a multi-head decoder architecture as shown in Fig.
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** In DreamWaQ, the policy (actor) receives temporal partial observations, oH t , as the input, while the value network (critic) receives the full state, st, ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with arXiv:2301.10602v2 ...
-- **p. 4 / II. DREAMWAQ - extractive PDF cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** However, this reward minimizes the overall power without considering each motor's power usage balance.
+- **p. 3 / II. DREAMWAQ - extractive body cue:** The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, we propose a ...
+- **p. 2 / II. DREAMWAQ - extractive body cue:** 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ot, ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Conventional model-based controllers often require a complex pipeline consisting of state estimation, trajectory optimization, gait optimization, and actuator control [1]-[3], [7]-[11].
+- **p. 3 / II. DREAMWAQ - extractive body cue:** CENet consists of a single encoder and a multi-head decoder architecture as shown in Fig.
+- **p. 2 / II. DREAMWAQ - extractive body cue:** In DreamWaQ, the policy (actor) receives temporal partial observations, oH t , as the input, while the value network (critic) receives the full state, st, ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with ...
+- **p. 4 / II. DREAMWAQ - extractive body cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
+- **p. 3 / II. DREAMWAQ - extractive body cue:** However, this reward minimizes the overall power without considering each motor's power usage balance.
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with arXiv:2301.10602v2 ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** In summary, the contributions of this work are threefold:
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** The reward function consists of task rewards for tracking the
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, the contributions of this work are threefold:
+- **p. 2 / II. DREAMWAQ - extractive body cue:** The reward function consists of task rewards for tracking the
 
 ## Source Evidence Cues
 
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, we propose a ...
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ot, ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Conventional model-based controllers often require a complex pipeline consisting of state estimation, trajectory optimization, gait optimization, and actuator control [1]-[3], [7]-[11].
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** CENet consists of a single encoder and a multi-head decoder architecture as shown in Fig.
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** In DreamWaQ, the policy (actor) receives temporal partial observations, oH t , as the input, while the value network (critic) receives the full state, st, ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with arXiv:2301.10602v2 ...
-- **p. 4 / II. DREAMWAQ - extractive PDF cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
+- **p. 3 / II. DREAMWAQ - extractive body cue:** The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, we propose a ...
+- **p. 2 / II. DREAMWAQ - extractive body cue:** 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ot, ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Conventional model-based controllers often require a complex pipeline consisting of state estimation, trajectory optimization, gait optimization, and actuator control [1]-[3], [7]-[11].
+- **p. 3 / II. DREAMWAQ - extractive body cue:** CENet consists of a single encoder and a multi-head decoder architecture as shown in Fig.
+- **p. 2 / II. DREAMWAQ - extractive body cue:** In DreamWaQ, the policy (actor) receives temporal partial observations, oH t , as the input, while the value network (critic) receives the full state, st, ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with ...
+- **p. 4 / II. DREAMWAQ - extractive body cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, ... | p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a ... | p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 
 ## Objective / Update Rule
 
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** However, this reward minimizes the overall power without considering each motor's power usage balance.
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** The complex reward function for learning a locomotion policy usually includes a motor power minimization term.
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** The environment starts with an initial state distribution, d0(s0); progresses with a state transition probability p(st+1/st, at); and each transition is rewarded with a reward ...
-- **p. 4 / II. DREAMWAQ - extractive PDF cue:** We define the bootstrapping probability for each learning iteration as follows: pboot = 1 -tanh(CV (R)), (8) where pboot ∈[0, 1] is the bootstrapping probability ...
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** The reward function consists of task rewards for tracking the
-- **p. 4 / II. DREAMWAQ - extractive PDF cue:** the standard deviation to the mean, of the episodic reward over m domain-randomized environments.
+- **p. 3 / II. DREAMWAQ - extractive body cue:** However, this reward minimizes the overall power without considering each motor's power usage balance.
+- **p. 3 / II. DREAMWAQ - extractive body cue:** The complex reward function for learning a locomotion policy usually includes a motor power minimization term.
+- **p. 2 / II. DREAMWAQ - extractive body cue:** The environment starts with an initial state distribution, d0(s0); progresses with a state transition probability p(st+1/st, at); and each transition is rewarded with a reward ...
+- **p. 4 / II. DREAMWAQ - extractive body cue:** We define the bootstrapping probability for each learning iteration as follows: pboot = 1 -tanh(CV (R)), (8) where pboot ∈[0, 1] is the bootstrapping probability ...
+- **p. 2 / II. DREAMWAQ - extractive body cue:** The reward function consists of task rewards for tracking the
+- **p. 4 / II. DREAMWAQ - extractive body cue:** the standard deviation to the mean, of the episodic reward over m domain-randomized environments.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 
 ## Observation–State–Action Interface
 
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ot, ...
-- **p. 2 / II. DREAMWAQ - extractive PDF cue:** In DreamWaQ, the policy (actor) receives temporal partial observations, oH t , as the input, while the value network (critic) receives the full state, st, ...
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** The total reward of the policy for taking an action at each state is given as: rt(st, at) = X riwi, (4) where i is ...
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** Context-Aided Estimator Network The policy trained using the method described in Section II-B requires vt and zt as input, which can be estimated from proprioception.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Estimating the surrounding terrain's properties via proprioception while learning a locomotion policy requires an iterative process [19], [20], [23].
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Recent works have shown that by combining different proprioception modalities, a quadrupedal robot can learn to estimate its surrounding terrain [19]-[23] and body state [24].
-- **p. 4 / II. DREAMWAQ - extractive PDF cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
+- **p. 2 / II. DREAMWAQ - extractive body cue:** 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ot, ...
+- **p. 2 / II. DREAMWAQ - extractive body cue:** In DreamWaQ, the policy (actor) receives temporal partial observations, oH t , as the input, while the value network (critic) receives the full state, st, ...
+- **p. 3 / II. DREAMWAQ - extractive body cue:** The total reward of the policy for taking an action at each state is given as: rt(st, at) = X riwi, (4) where i is ...
+- **p. 3 / II. DREAMWAQ - extractive body cue:** Context-Aided Estimator Network The policy trained using the method described in Section II-B requires vt and zt as input, which can be estimated from proprioception.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Estimating the surrounding terrain's properties via proprioception while learning a locomotion policy requires an iterative process [19], [20], [23].
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Recent works have shown that by combining different proprioception modalities, a quadrupedal robot can learn to estimate its surrounding terrain [19]-[23] and body state [24].
+- **p. 4 / II. DREAMWAQ - extractive body cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,9 +90,9 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 
 ## Training vs Inference
 
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, we propose a ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with arXiv:2301.10602v2 ...
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** We hypothesize that this is made possible by two factors: 1) the forward-backward dynamics learning provides more accurate estimation in all terrains, and 2) using ...
+- **p. 3 / II. DREAMWAQ - extractive body cue:** The shared encoder is trained to provide a robust body state and context estimation jointly. of only explicitly estimating the robot's state, we propose a ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with ...
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** We hypothesize that this is made possible by two factors: 1) the forward-backward dynamics learning provides more accurate estimation in all terrains, and 2) using ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 
 ## Failure and Ablation Link
 
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** 4) DreamWaQ w/o AdaBoot: The proposed method without adaptive bootstrapping.
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** 3) EstimatorNet [24]: The policy was concurrently trained with an estimator network that explicitly estimates the body state without a context estimation.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** Moreover, the proposed AdaBoot method also increases robustness without sacrificing the base performance.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** Owing to the robust and accurate CENet, the robot had no problem in its body velocity estimation and could continue its journey without any performance ...
-- **p. 6 / IV. CONCLUSION - extractive PDF cue:** DreamWaQ's limitation lies in its adaptation mechanism, where it must first hit the obstacles with its legs.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** In severe cases, inaccurate estimation can lead to catastrophic failure.
-- **p. 6 / III. EXPERIMENTS - extractive PDF cue:** (a) Foot stumble Foot slip Normal walk Normal walk Normal walk Climb upstairs Go downstairs Irregular foothold Adaptation Recovery (a) (b) Normal walk Fig.
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** 4) DreamWaQ w/o AdaBoot: The proposed method without adaptive bootstrapping.
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** 3) EstimatorNet [24]: The policy was concurrently trained with an estimator network that explicitly estimates the body state without a context estimation.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** Moreover, the proposed AdaBoot method also increases robustness without sacrificing the base performance.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** Owing to the robust and accurate CENet, the robot had no problem in its body velocity estimation and could continue its journey without any performance ...
+- **p. 6 / IV. CONCLUSION - extractive body cue:** DreamWaQ's limitation lies in its adaptation mechanism, where it must first hit the obstacles with its legs.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** In severe cases, inaccurate estimation can lead to catastrophic failure.
+- **p. 6 / III. EXPERIMENTS - extractive body cue:** (a) Foot stumble Foot slip Normal walk Normal walk Normal walk Climb upstairs Go downstairs Irregular foothold Adaptation Recovery (a) (b) Normal walk Fig.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION), p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION), objective p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 4 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 4 (II. DREAMWAQ), temporal p. 5 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION), p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION), objective p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 4 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 4 (II. DREAMWAQ), temporal p. 5 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

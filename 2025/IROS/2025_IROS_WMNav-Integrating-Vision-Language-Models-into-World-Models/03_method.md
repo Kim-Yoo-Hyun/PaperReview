@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02247; PDF retrieval source: https://arxiv.org/pdf/2503.02247. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02247; PDF retrieval source: https://arxiv.org/pdf/2503.02247. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Then, the direction in the panoramic image with the highest score is selected and sent to the navigation policy module. | p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Then M cv t (st in Figure 2) is updated by combining M nav t with the curiosity value map in the ... | p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH) |
@@ -86,7 +86,7 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | At each time step t, the agent takes an RGB-D observation Ot of the surroundings and its real-time pose Pt. | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | At each time step t, the panoramic image Ipan t is input to PredictVLM, which outputs scores Scoret for each direction in ... | Hz/fps, inference time and control rate |
 | Memory | map/scene graph, pose history와 current local goal. | To retain the predicted state of the environment, WMNav proposes the online maintained Curiosity Value Map as part of the world model ... | window and reset |
-| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), objective p. 4 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), temporal p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), objective p. 4 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), temporal p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For PlanVLM and ReasonVLM in the policy module, the cost (the previous step's subtask and the goal flag) is used to configure their prompts, thus optimizing the action output of ... (p. 3, III. WMNAV APPROACH).
+- **Objective/update evidence:** Then M cv t (st in Figure 2) is updated by combining M nav t with the curiosity value map in the previous step M cv t-1 (st-1 in Figure ... (p. 4, III. WMNAV APPROACH).
+- **Temporal/runtime evidence:** SR represents the percentage of episodes that are completed. (p. 6, IV. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

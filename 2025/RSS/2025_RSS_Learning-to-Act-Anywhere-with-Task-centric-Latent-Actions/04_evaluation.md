@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p014.html; PDF retrieval source: https://arxiv.org/pdf/2505.06111. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p014.html; PDF retrieval source: https://arxiv.org/pdf/2505.06111. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 6: Oracle success rate on R2R in VLN-CE. With only a single-frame RGB input, UniVLA demonstrates performance on par with NaVid, a navigation ... | p. 7 (Figure/Table caption) |
 | 2) Navigation Benchmark on Room2Room | EMPIRICAL / SOURCE-REPORTED EVALUATION | UniVLA significantly outperforms Seq2Seq and CMA, increasing the oracle success rate from 8.10% to 47.1%. | p. 7 (2) Navigation Benchmark on Room2Room) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These benchmarks offer a set of languageguided navigation tasks and continuous environments for executing low-level actions in reconstructed photorealistic indoor scenes. | embodiment, simulator version and control stack | p. 7 (2) Navigation Benchmark on Room2Room), p. 6 (1) Manipulation Benchmark on LIBERO) |
 | Task/environment | The LIBERO benchmark [48] comprises four task suites specifically designed to facilitate research on lifelong learning in robotic manipulation. | reset, timeout, object/scene variation | p. 6 (1) Manipulation Benchmark on LIBERO), p. 7 (2) Navigation Benchmark on Room2Room) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 - **p. 8 / 2) Navigation Benchmark on Room2Room - extractive body cue:** UniVLA demonstrates superior performance across all evaluated tasks, showcasing its exceptional ability to generalize from high-level semantic comprehension to low-level visual robustness.
 - **p. 9 / 3) Real-world Robot Deployment - extractive body cue:** It achieves a 66.7% success rate under varying lighting conditions, surpassing Diffusion Policy (20.0%), OpenVLA (13.3%), and LAPA (26.7%), demonstrating robustness to environmental change.
 
-- **PDF anchors reviewed:** datasets p. 7 (2) Navigation Benchmark on Room2Room), p. 6 (1) Manipulation Benchmark on LIBERO), p. 7 (2) Navigation Benchmark on Room2Room), p. 5 (IV. EVALUATIONS), p. 6 (1) Manipulation Benchmark on LIBERO), p. 8 (2) Navigation Benchmark on Room2Room), metrics p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption), p. 8 (2) Navigation Benchmark on Room2Room), p. 8 (2) Navigation Benchmark on Room2Room), p. 5 (IV. EVALUATIONS), baselines p. 6 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (IV. EVALUATIONS), results p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (2) Navigation Benchmark on Room2Room), p. 6 (1) Manipulation Benchmark on LIBERO), p. 7 (2) Navigation Benchmark on Room2Room), p. 5 (IV. EVALUATIONS), p. 6 (1) Manipulation Benchmark on LIBERO), p. 8 (2) Navigation Benchmark on Room2Room), metrics p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption), p. 8 (2) Navigation Benchmark on Room2Room), p. 8 (2) Navigation Benchmark on Room2Room), p. 5 (IV. EVALUATIONS), baselines p. 6 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (IV. EVALUATIONS), results p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 4: Task setup on the LIBERO benchmark. TABLE I: Results on LIBERO benchmark across four evaluation suites. Our proposed UniVLA exhibits superior performance across all benchmarked tasks compared to ... (p. 6, Figure/Table caption).
+- **Metric evidence:** Our experiments exclusively focus on supervised fine-tuning within the target task suite, evaluating the performance of various policies trained through behavioral cloning on successful task demonstrations. (p. 6, 1) Manipulation Benchmark on LIBERO).
+- **Baseline/ablation evidence:** Additionally, we conduct latent action analysis to quantify the task-centric property, and perform ablation studies to explore critical design choices. (p. 5, IV. EVALUATIONS).
+- **Failure/negative evidence:** While UniVLA advances generalist robotic policies, several limitations remain. (p. 11, VI. LIMITATIONS AND FUTURE WORK).

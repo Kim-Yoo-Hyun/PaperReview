@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.05663; PDF retrieval source: https://arxiv.org/pdf/2210.05663. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.05663; PDF retrieval source: https://arxiv.org/pdf/2210.05663. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** Our visual segmentation experiments are performed on a subset of Habitat-Matterport 3D Semantic (HM3D semantics) [35] dataset, while our robot experiments were performed on a ...
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 9: Scenes for our real-world semantic navigation experiments.
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 2) Data collection and training: We ran our robot experiment in two different scenes, one in the lab kitchen, and another in the lab library ...
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 10: Examples of the robot's semantic navigation in two different testing environments, looking at objects given different queries.
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** We consider the navigation task successful if the robot can navigate to and point the camera at an object that satisfies the query.
-- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** We fine-tune the final layers of these pretrained models on each of our limited datasets, and then evaluate them on the held-out set.
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset.
+- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** Our visual segmentation experiments are performed on a subset of Habitat-Matterport 3D Semantic (HM3D semantics) [35] dataset, while our robot experiments were performed on a ...
+- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 9: Scenes for our real-world semantic navigation experiments.
+- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 2) Data collection and training: We ran our robot experiment in two different scenes, one in the lab kitchen, and another in the lab library ...
+- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 10: Examples of the robot's semantic navigation in two different testing environments, looking at objects given different queries.
+- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** We consider the navigation task successful if the robot can navigate to and point the camera at an object that satisfies the query.
+- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** We fine-tune the final layers of these pretrained models on each of our limited datasets, and then evaluate them on the held-out set.
+- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
+- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTAL EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | In Figure 5, we see once again that CLIP-Fields outperforms the RGB-based models significantly, to the point where even with three labelled views, CLIP-Fields ... | p. 6 (V. EXPERIMENTAL EVALUATION) |
 | V. EXPERIMENTAL EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | As the base models naturally improve over time with continuous efforts in the computer vision and natural language processing fields, we expect CLIP-Fields's performance ... | p. 7 (V. EXPERIMENTAL EVALUATION) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** Our visual segmentation experiments are performed on a subset of Habitat-Matterport 3D Semantic (HM3D semantics) [35] dataset, while our robot experiments were performed on a ...
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 9: Scenes for our real-world semantic navigation experiments.
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 2) Data collection and training: We ran our robot experiment in two different scenes, one in the lab kitchen, and another in the lab library ...
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 10: Examples of the robot's semantic navigation in two different testing environments, looking at objects given different queries.
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** We consider the navigation task successful if the robot can navigate to and point the camera at an object that satisfies the query.
-- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** We fine-tune the final layers of these pretrained models on each of our limited datasets, and then evaluate them on the held-out set.
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset.
+- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** Our visual segmentation experiments are performed on a subset of Habitat-Matterport 3D Semantic (HM3D semantics) [35] dataset, while our robot experiments were performed on a ...
+- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 9: Scenes for our real-world semantic navigation experiments.
+- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 2) Data collection and training: We ran our robot experiment in two different scenes, one in the lab kitchen, and another in the lab library ...
+- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 10: Examples of the robot's semantic navigation in two different testing environments, looking at objects given different queries.
+- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** We consider the navigation task successful if the robot can navigate to and point the camera at an object that satisfies the query.
+- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** We fine-tune the final layers of these pretrained models on each of our limited datasets, and then evaluate them on the held-out set.
+- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
+- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Our approach, CLIP-Fields, integrates multiple views of a scene and can capture 3D semantics from relatively few examples. This results in a scalable ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: Dataset creation process for CLIP-Fields by processing each frame of a collected RGB-D video. Models highlighted by dashed lines are off-the-shelf pre-trained models, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Model architecture for CLIP-Fields. We use a Multi-resolution Hash Encoder [20] to learn a low level spatial representation mapping R3 →Rd, which is ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: Mean average precision in instance segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset, (top) calculated over only seen instances, and (bottom) calculated over ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset. Here, the average precision numbers are averaged over all semantic ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Mean average precision in zero-shot semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset. 0.5 0.6 0.7 0.8 0.9 1.0
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models. Different ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 8: View localization using a trained CLIP-Fields. We encode the query image on the bottom left to its CLIP representation, and visualize the locations ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our approach, CLIP-Fields, integrates multiple views of a scene and can capture 3D semantics from relatively few examples. This results in a scalable ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Dataset creation process for CLIP-Fields by processing each frame of a collected RGB-D video. Models highlighted by dashed lines are off-the-shelf pre-trained models, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Model architecture for CLIP-Fields. We use a Multi-resolution Hash Encoder [20] to learn a low level spatial representation mapping R3 →Rd, which is ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Mean average precision in instance segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset, (top) calculated over only seen instances, and (bottom) calculated over ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset. Here, the average precision numbers are averaged over all semantic ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Mean average precision in zero-shot semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset. 0.5 0.6 0.7 0.8 0.9 1.0
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models. Different ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: View localization using a trained CLIP-Fields. We encode the query image on the bottom left to its CLIP representation, and visualize the locations ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our visual segmentation experiments are performed on a subset of Habitat-Matterport 3D Semantic (HM3D semantics) [35] dataset, while our robot experiments were performed on ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION) |
 | Task/environment | 9: Scenes for our real-world semantic navigation experiments. | reset, timeout, object/scene variation | p. 7 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION) |
@@ -119,8 +119,8 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 | Primary metric/result | As the base models naturally improve over time with continuous efforts in the computer vision and natural language processing fields, we expect CLIP-Fields's performance ... | numeric claim only at cited anchor | p. 7 (V. EXPERIMENTAL EVALUATION) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / IV. APPROACH - extractive PDF cue:** In this paper we used Sentence-BERT for these language features with n = 768.
-- **p. 5 / IV. APPROACH - extractive PDF cue:** In this paper's experiments, we use the CLIP ViT-B/32 model embeddings, giving the visual features 512 dimensions.
+- **p. 4 / IV. APPROACH - extractive body cue:** In this paper we used Sentence-BERT for these language features with n = 768.
+- **p. 5 / IV. APPROACH - extractive body cue:** In this paper's experiments, we use the CLIP ViT-B/32 model embeddings, giving the visual features 512 dimensions.
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 
 ## Limitations and Verification Questions
 
-- **p. 8 / VI. CONCLUSIONS AND FUTURE WORK - extractive PDF cue:** In future work, we hope to explore models that share parameters across scenes, and can handle dynamic scenes and objects.
-- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** Detic is absent from the first two evaluations since it is a detection model and thus cannot be fine-tuned on segmentation labels.
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** However, if an object was misidentified during data preparation, CLIP-Fields fails to correctly identify it as well.
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 4) CLIP-Fields's robustness to label errors: In real-world applications, CLIP-Fields relies on labels given by large
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive PDF cue:** In this section, we examine the robustness of CLIP-Fields to such label errors.
+- **p. 8 / VI. CONCLUSIONS AND FUTURE WORK - extractive body cue:** In future work, we hope to explore models that share parameters across scenes, and can handle dynamic scenes and objects.
+- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** Detic is absent from the first two evaluations since it is a detection model and thus cannot be fine-tuned on segmentation labels.
+- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** However, if an object was misidentified during data preparation, CLIP-Fields fails to correctly identify it as well.
+- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 4) CLIP-Fields's robustness to label errors: In real-world applications, CLIP-Fields relies on labels given by large
+- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
+- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** In this section, we examine the robustness of CLIP-Fields to such label errors.
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), metrics p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 4 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), results p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), metrics p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 4 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), results p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

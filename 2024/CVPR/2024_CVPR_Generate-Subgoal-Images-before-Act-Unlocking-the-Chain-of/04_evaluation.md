@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** Benchmark & Tasks We conduct evaluation on VIMABENCH, a benchmark suite for multimodal robot learning, which is built on the Ravens robot simulator [50].
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** For more details regarding the simulation benchmark and tasks setting, please refer to Appendix A .
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
-- **p. 8 / 4.4. Further Analysis - extractive PDF cue:** This demonstrates the power of ‘a image is worth a thousand words' - the subgoal images facilitate the generalization of the foundation model to unseen ...
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH.
-- **p. 8 / 4.4. Further Analysis - extractive PDF cue:** For L3 generalization, taking an example, we complex the prompt such as ‘rearrange ... then rotate/twist/stack ...' to demand extra tasks such as rotating, twisting ...
-- **p. 7 / 4.3. Quantitative Results of Success Rate - extractive PDF cue:** Gato and Flamingo gets low success rates on longhorizon tasks without explicit subgoal generation to correct the accumulative deviation errors from the instructions.
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** The final success rate on long-horizon tasks can be a fair metric.
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** Benchmark & Tasks We conduct evaluation on VIMABENCH, a benchmark suite for multimodal robot learning, which is built on the Ravens robot simulator [50].
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** For more details regarding the simulation benchmark and tasks setting, please refer to Appendix A .
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
+- **p. 8 / 4.4. Further Analysis - extractive body cue:** This demonstrates the power of ‘a image is worth a thousand words' - the subgoal images facilitate the generalization of the foundation model to unseen ...
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH.
+- **p. 8 / 4.4. Further Analysis - extractive body cue:** For L3 generalization, taking an example, we complex the prompt such as ‘rearrange ... then rotate/twist/stack ...' to demand extra tasks such as rotating, twisting ...
+- **p. 7 / 4.3. Quantitative Results of Success Rate - extractive body cue:** Gato and Flamingo gets low success rates on longhorizon tasks without explicit subgoal generation to correct the accumulative deviation errors from the instructions.
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** The final success rate on long-horizon tasks can be a fair metric.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Quantitative Results of Success Rate | EMPIRICAL / SIMULATION | 1 demonstrate CoTDiffusion significantly outperforms other baselines in success rate. | p. 6 (4.3. Quantitative Results of Success Rate) |
 | 4.4. Further Analysis | EMPIRICAL / SIMULATION | 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH. | p. 7 (4.4. Further Analysis) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** Benchmark & Tasks We conduct evaluation on VIMABENCH, a benchmark suite for multimodal robot learning, which is built on the Ravens robot simulator [50].
-- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** For more details regarding the simulation benchmark and tasks setting, please refer to Appendix A .
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
-- **p. 8 / 4.4. Further Analysis - extractive PDF cue:** This demonstrates the power of ‘a image is worth a thousand words' - the subgoal images facilitate the generalization of the foundation model to unseen ...
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH.
-- **p. 8 / 4.4. Further Analysis - extractive PDF cue:** For L3 generalization, taking an example, we complex the prompt such as ‘rearrange ... then rotate/twist/stack ...' to demand extra tasks such as rotating, twisting ...
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** Benchmark & Tasks We conduct evaluation on VIMABENCH, a benchmark suite for multimodal robot learning, which is built on the Ravens robot simulator [50].
+- **p. 6 / 4.1. Experiment Setup - extractive body cue:** For more details regarding the simulation benchmark and tasks setting, please refer to Appendix A .
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
+- **p. 8 / 4.4. Further Analysis - extractive body cue:** This demonstrates the power of ‘a image is worth a thousand words' - the subgoal images facilitate the generalization of the foundation model to unseen ...
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH.
+- **p. 8 / 4.4. Further Analysis - extractive body cue:** For L3 generalization, taking an example, we complex the prompt such as ‘rearrange ... then rotate/twist/stack ...' to demand extra tasks such as rotating, twisting ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. A motivation example of robotics manipulation tasks in multi-modal instructions. The subgoal images are worth a thou- sand words, inspiring us to propose ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method overview: CoTDiffusion consists of a multi-modal encoder and vision encoder V , semantic alignment module S, conditional diffusion model E and foundation ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Two phase of coarse-to-fine alignment pipeline. of mask residuals patch { ˆmi}N-1 i=1 can be viewed as im- plicitly decomposing the prompt into ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of CoTDiffusion in three typical long-horizon tasks with multi-modal prompts in VIMA-BENCH.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. The evaluations of success rates on three typical long- horizon tasks with multi-modal prompts.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. The evaluations of performance drop of different methods on single-view and multi-view from VIMA-BENCH.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative comparisons of FID betweeen methods on all three tasks, including visual rearrange, reasoning and constraints.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. The normalized CLIP scores for each generation step, reflecting the step-wise accuracy of instruction following.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A motivation example of robotics manipulation tasks in multi-modal instructions. The subgoal images are worth a thou- sand words, inspiring us to propose ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method overview: CoTDiffusion consists of a multi-modal encoder and vision encoder V , semantic alignment module S, conditional diffusion model E and foundation ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Two phase of coarse-to-fine alignment pipeline. of mask residuals patch { ˆmi}N-1 i=1 can be viewed as im- plicitly decomposing the prompt into ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of CoTDiffusion in three typical long-horizon tasks with multi-modal prompts in VIMA-BENCH.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. The evaluations of success rates on three typical long- horizon tasks with multi-modal prompts.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. The evaluations of performance drop of different methods on single-view and multi-view from VIMA-BENCH.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative comparisons of FID betweeen methods on all three tasks, including visual rearrange, reasoning and constraints.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. The normalized CLIP scores for each generation step, reflecting the step-wise accuracy of instruction following.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Benchmark & Tasks We conduct evaluation on VIMABENCH, a benchmark suite for multimodal robot learning, which is built on the Ravens robot simulator [50]. | embodiment, simulator version and control stack | p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup) |
 | Task/environment | For more details regarding the simulation benchmark and tasks setting, please refer to Appendix A . | reset, timeout, object/scene variation | p. 6 (4.1. Experiment Setup), p. 7 (4.4. Further Analysis) |
@@ -120,8 +120,8 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 | Primary metric/result | 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH. | numeric claim only at cited anchor | p. 7 (4.4. Further Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.3. Quantitative Results of Success Rate - extractive PDF cue:** Methodology Rearrange Reasoning Constraints Overall Gato 6.4 ± 1.3 2.5 ± 0.4 25.2 ± 3.1 11.4 ± 1.6 Flamingo 17.5 ± 1.6 3.0 ± 0.5 ...
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** We attribute this to two potential reasons: First, accurate and grounded subgoal images generated in visual planners provide supplemental visual context, which can partly compensate ...
+- **p. 7 / 4.3. Quantitative Results of Success Rate - extractive body cue:** Methodology Rearrange Reasoning Constraints Overall Gato 6.4 ± 1.3 2.5 ± 0.4 25.2 ± 3.1 11.4 ± 1.6 Flamingo 17.5 ± 1.6 3.0 ± 0.5 ...
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** We attribute this to two potential reasons: First, accurate and grounded subgoal images generated in visual planners provide supplemental visual context, which can partly compensate ...
 
 ## Generalization and Failure Cases
 
@@ -155,11 +155,11 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Incorporating commonsense knowledge from pre-trained MLLM like GPT-4V provides an avenue for more generalizable and promising reasoning in CoTDiffusion, which leaves as our future work.
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** Additionally, ablating coarse pretraining and bi-directional generation degrades performance, validating their benefits.
-- **p. 7 / 4.4. Further Analysis - extractive PDF cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
+- **p. 8 / 5. Conclusion - extractive body cue:** Incorporating commonsense knowledge from pre-trained MLLM like GPT-4V provides an avenue for more generalizable and promising reasoning in CoTDiffusion, which leaves as our future work.
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** Additionally, ablating coarse pretraining and bi-directional generation degrades performance, validating their benefits.
+- **p. 7 / 4.4. Further Analysis - extractive body cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), metrics p. 7 (4.3. Quantitative Results of Success Rate), p. 6 (4.1. Experiment Setup), p. 6 (4.3. Quantitative Results of Success Rate), p. 7 (4.3. Quantitative Results of Success Rate), p. 8 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), baselines p. 6 (4.3. Quantitative Results of Success Rate), p. 6 (4.2. Baselines), p. 7 (4.4. Further Analysis), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), results p. 6 (4.3. Quantitative Results of Success Rate), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Quantitative Results of Success Rate), p. 8 (4.4. Further Analysis).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), metrics p. 7 (4.3. Quantitative Results of Success Rate), p. 6 (4.1. Experiment Setup), p. 6 (4.3. Quantitative Results of Success Rate), p. 7 (4.3. Quantitative Results of Success Rate), p. 8 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), baselines p. 6 (4.3. Quantitative Results of Success Rate), p. 6 (4.2. Baselines), p. 7 (4.4. Further Analysis), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), results p. 6 (4.3. Quantitative Results of Success Rate), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Quantitative Results of Success Rate), p. 8 (4.4. Further Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

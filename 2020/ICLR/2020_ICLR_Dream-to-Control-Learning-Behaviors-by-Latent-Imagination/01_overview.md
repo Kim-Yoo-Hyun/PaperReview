@@ -1,8 +1,10 @@
 # Dream to Control: Learning Behaviors by Latent Imagination
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1912.01603.
-> PDF retrieval source: https://arxiv.org/pdf/1912.01603. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1912.01603.
+> PDF retrieval source: https://arxiv.org/pdf/1912.01603. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1912.01603
 - Code/Project: https://dreamrl.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 We approach this limitation by predicting both actions and state values.를 문제로 두고, We present Dreamer, an agent that learns long-horizon behaviors from images purely by latent imagination.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (B Sequence length) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+- **Actual contribution:** The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted if they use a finite imagination horizon. (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Figure 8: Comparison of representation learning objectives to be used with Dreamer. Pixel recon- struction performs best for the majority of tasks. The contrastive objective solves about half of the ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).

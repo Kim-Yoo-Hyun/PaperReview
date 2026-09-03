@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `start/goal, map, dynamics와 successor/operator description → path, trajectory, symbolic state 또는 task-motion decision → feasible action sequence 또는 minimum-cost plan`.
-- 이 논문의 재사용 가능한 지점은 Let S and G denote the start and goal states for a planning problem.를 Trajectory optimization is fundamental in optimal control where the objective is to solve for a trajectory encoded as a sequence of states and controls that optimizes a given objective subject to constraints ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 path, trajectory, symbolic state 또는 task-motion decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 14. Failure cases when using TrajOpt. (a) shows the initial path for full-body planning. (b) is the trajectory optimization outcome, which is stuck in an infeasible condition. (c) shows the initial ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method for handling collisions yields a polyhedral approximation of the free part of configuration space, which is directly incorporated into the convex optimization problem that is solved at each optimization iteration.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 1(b)), and for planning foot placements with 28 DOF (+ 6 DOF pose) of the Atlas humanoid robot as it maintains static stability and avoids collisions (Fig. (p. 2, I. INTRODUCTION).
+- **Paper-specific mechanism:** The ability to add new constraints and costs to the optimization problem allows our approach to tackle a larger range of motion planning problems, including planning for underactuated, nonholonomic systems. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. (p. 9, V. MOTION PLANNING BENCHMARK); the relevant task/metric cue is Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. (p. 9, V. MOTION PLANNING BENCHMARK). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The upshot is that the continuous collision cost solves problems with thin obstacles where the discrete-time cost fails to get the trajectory out of collision. (p. 8, 3) Calculate the Jacobians of those points).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Left and center: two of the scenes used for the arm planning benchmark..
-3. Compare against the body-reported baseline or a matched simpler baseline: We also compared TrajOpt to a recent implementation of CHOMP [61] on the arm planning problems..
-4. Report the body metric and its denominator/aggregation: Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP..
-5. Re-run the body-reported ablation/failure condition: Fig. 13. Effect of noise level on the success rate. Re-planning after each time step greatly increases the probability of success. Collocation consistently outperforms shooting in terms of success rate for all ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 1(b)), and for planning foot placements with 28 DOF (+ 6 DOF pose) of the Atlas humanoid robot as it maintains static stability and avoids collisions (Fig. (p. 2, I. INTRODUCTION); preserve the objective/update rule: The optimization method outlined above operates in vector spaces of the form Rn. (p. 5, A. Sequential Convex Optimization over SE(3)).
+2. Use the paper-reported task/data/environment cue: Left and center: two of the scenes used for the arm planning benchmark. (p. 8, V. MOTION PLANNING BENCHMARK).
+3. Compare against the reported or matched baseline: We also compared TrajOpt to a recent implementation of CHOMP [61] on the arm planning problems. (p. 8, V. MOTION PLANNING BENCHMARK).
+4. Report the body metric with its denominator and aggregation: Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. (p. 9, V. MOTION PLANNING BENCHMARK).
+5. Re-run the reported ablation or stress/failure condition: We compared TrajOpt to open-source implementations of bi-directional RRT [23] and a variant of KPIECE [46] from OMPL/MoveIt! (p. 8, V. MOTION PLANNING BENCHMARK); if none is reported, design one around: The upshot is that the continuous collision cost solves problems with thin obstacles where the discrete-time cost fails to get the trajectory out of collision. (p. 8, 3) Calculate the Jacobians of those points).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (A. Sequential Convex Optimization over SE(3)), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 9 (V. MOTION PLANNING BENCHMARK); the primary result is directionally consistent at p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 9 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), and measure the boundary at p. 8 (3) Calculate the Jacobians of those points), p. 14 (IX. IMPORTANCE OF TRAJECTORY INITIALIZATION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 handling, collisions, yields mechanism이 We also compared TrajOpt to a recent implementation of CHOMP [61] on the arm planning problems. 대비 Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate ...을 개선하고, Fig. 14. Failure cases when using TrajOpt. (a) shows the initial path for full-body planning. (b) ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (1(b)), and for planning foot placements with 28 DOF (+ 6 DOF pose) of the Atlas humanoid robot as it maintains static ...), does the paper-specific mechanism (The ability to add new constraints and costs to the optimization problem allows our approach to tackle a larger range of motion ...) retain the reported evaluation outcome (Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate ...) when tested against the paper's strongest explicit boundary (The upshot is that the continuous collision cost solves problems with thin obstacles where the discrete-time cost fails ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The ability to add new constraints and costs to the optimization problem allows our approach to tackle a larger range of motion planning problems, including planning for underactuated, nonholonomic systems. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. (p. 9, V. MOTION PLANNING BENCHMARK).
+- **Strongest explicit boundary:** The upshot is that the continuous collision cost solves problems with thin obstacles where the discrete-time cost fails to get the trajectory out of collision. (p. 8, 3) Calculate the Jacobians of those points).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

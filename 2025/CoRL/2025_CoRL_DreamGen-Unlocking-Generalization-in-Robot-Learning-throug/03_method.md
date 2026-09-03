@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/; PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/; PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 4 (1
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | For latent actions, we use the LAPA latent action model [13], which has a transformer encoderdecoder architecture and is trained on diverse ... | p. 4 (1 Introduction), p. 2 (1 Introduction) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | (1) We fine-tune video world models on a target robot to capture the dynamics and kinematics of the specific embodiment; (2) we ... | p. 2 (1 Introduction), p. 4 (1 Introduction) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 4 (1
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | Given an initial frame and a language instruction, the model generates video rollouts depicting the intended behavior. | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | (1) We fine-tune video world models on a target robot to capture the dynamics and kinematics of the specific embodiment; (2) we ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | In cases where there are multiple viewpoints in the training dataset (RoboCasa [20] and DROID [22]), we concatenate the viewpoints into a ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 4 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), temporal p. 2 (Abstract), p. 2 (1 Introduction), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 3 (1 Introduction), p. 4 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), temporal p. 2 (Abstract), p. 2 (1 Introduction), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 3 (1 Introduction), p. 4 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For latent actions, we use the LAPA latent action model [13], which has a transformer encoderdecoder architecture and is trained on diverse robot and human videos. (p. 4, 1 Introduction).
+- **Objective/update evidence:** However, this paradigm relies heavily on collecting teleoperation data manually for every new task and environment, which remains costly and labor-intensive. (p. 2, 1 Introduction).
+- **Temporal/runtime evidence:** Surprisingly, just given the initial frame and the language instruction, we observe that the video world model can generalize in generating videos of totally unseen behaviors (examples shown in Figure ... (p. 7, 3 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

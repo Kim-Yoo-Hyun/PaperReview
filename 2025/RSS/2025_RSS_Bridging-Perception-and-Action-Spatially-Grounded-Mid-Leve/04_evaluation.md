@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p155.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p155.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p155.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p155.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -29,7 +29,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 1: Bimanual, dexterous manipulation requires task-specifie grounding, The left depicts various axes for spatial gr ‘qualitative categorizations of different mid-level representations. Different representations ... | p. 1 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 5: Self-Consistency. On the left image, the robot's achieved trajectory doesn't match it's mid-level representation, which leads to a lower weight. In the ... | p. 6 (Figure/Table caption) |
@@ -50,10 +50,10 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For RT-H, ‘we relabel robot demonstrations with the language "move the arm leftright/up/down." For each environment in simulation and the real-world, we vary the ... | embodiment, simulator version and control stack | p. 7 (C. Experiment Setup) |
-| Task/environment | not recovered | reset, timeout, object/scene variation | 본문 anchor 없음 |
+| Task/environment | not stated or recoverable in the selected PDF body | reset, timeout, object/scene variation | 본문 anchor 없음 |
 | Observation/sensor | multi-view observation, language/task label과 action trajectory | calibration, preprocessing, privileged input | p. 6 (B. Training), p. 4 (V. ARCHITECTURE) |
 | Output/decision | dataset sample 또는 learned policy action | action frame, controller and termination | p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction) |
 
@@ -133,7 +133,16 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 9 / C. Different Architectures offer Different Tradeoffs berween - extractive body cue:** Meanwhile, Table I! records the sensitivity scores for each of our mid-level experts as well as the robustness index. ‘The robustness index is computed by ...
 - **p. 9 / C. Different Architectures offer Different Tradeoffs berween - extractive body cue:** This suggests that the benefits of more targeted feature utilization outweigh the slight decrease in robustness.
 
-- **PDF anchors reviewed:** datasets p. 7 (C. Experiment Setup), metrics 본문 anchor 없음, baselines p. 7 (C. Experiment Setup), p. 7 (C. Experiment Setup), results p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (C. Experiment Setup), metrics 본문 anchor 없음, baselines p. 7 (C. Experiment Setup), p. 7 (C. Experiment Setup), results p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** In addition, we provide two ablations based on prior ‘works investigating a single representation: a keypoints-based ablation based on MOKA (25] and a language baseline based on RE-H [2]. (p. 7, C. Experiment Setup).
+- **Metric evidence:** Fig. 1: Bimanual, dexterous manipulation requires task-specifie grounding, The left depicts various axes for spatial gr ‘qualitative categorizations of different mid-level representations. Different representations lead to different lev ... (p. 1, Figure/Table caption).
+- **Baseline/ablation evidence:** In addition, we provide two ablations based on prior ‘works investigating a single representation: a keypoints-based ablation based on MOKA (25] and a language baseline based on RE-H [2]. (p. 7, C. Experiment Setup).
+- **Failure/negative evidence:** This sensitivity-robusness tradeoff' underscores the necessity of developing robot policies that balance adherence 10 mid-level representations with the ability to remain adaptable and resilient in the face of environmental variations. ... (p. 4, 1. Ivrropuction).

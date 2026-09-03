@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/LRA.2020.2977257; PDF retrieval source: https://doi.org/10.1109/LRA.2020.2977257. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/LRA.2020.2977257; PDF retrieval source: https://doi.org/10.1109/LRA.2020.2977257. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): [12], [13], [
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that ... | contact-rich manipulation scene | body wording is the source claim |
-| Observation / input | Second, we demonstrate the sensor by learning to manipulate small objects with a multi-finger hand from raw tactile inputs. | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Second, we demonstrate the sensor by learning to manipulate small objects with a multi-finger hand from raw tactile inputs. | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Second, demonstrate, sensor, learning, manipulate, small, objects, multi-finger, hand, tactile | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
-| Output / action | reason, conjunction, release, design, sensor, digit, ACCEPTED, JANUARY | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
+| Output / action | touch, sensor, interested, handling, multiple, sensors, different, fingers | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
 | Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | visual/tactile/proprioceptive contact history; body terms: Second, demonstrate, sensor, learning, manipulate, small, objects, multi-finger, hand, tactile | p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION) |
 | Decision / output variable | contact-aware action/force; body terms: better, fulfill, requirements, present, design, novel, tactile, sensor | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
 | Objective / loss / cost | contact prediction/control error; cue terms: provide, robotic, community, access, reliable, low-cost, tactile, sensors | no optimization/equation sentence selected |
-| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION) |
 | Success / guarantee | slip/contact success and safe interaction | p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): [12], [13], [
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** First, we present the design and manufacturing process of DIGIT, and analyze the properties of the resulting sensor.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** To scale up tactile-MPC, we propose new approaches for dynamics model learning and task specification that dramatically reduce the computational cost.
@@ -63,12 +63,21 @@ PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (
 
 ## Position in the Robotics Loop
 
-tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements ... (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor. (p. 1, I. INTRODUCTION).
+- **Assumption/failure evidence:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

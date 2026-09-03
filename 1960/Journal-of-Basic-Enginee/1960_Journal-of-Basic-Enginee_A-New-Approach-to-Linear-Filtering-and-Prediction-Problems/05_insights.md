@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `시간별 sensor observation과 알려진 model/control input → latent state와 uncertainty/belief → causal estimate, prediction 또는 smoothing output`.
-- 이 논문의 재사용 가능한 지점은 1 actually stands for n integrators such that the output of each is a state variable; F(t) indicates how the outputs of the integrators are fed back to the inputs of the ...를 (g) Theorem 2 states in effect that the optimal estimate under conditions (A) or (B) is a linear combination of all previous observations.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 latent state와 uncertainty/belief가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise!에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The new method developed here is applied to two well-known problems, confirming and extending earlier results.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The new formulation of the Wiener problem brings it into contact with the growing new theory of control systems based on the "state" point of view [17-24]. (p. 2, Introduction).
+- **Paper-specific mechanism:** Zadeh and Ragazzini solved the finite-memory case [2]. (p. 1, Introduction).
+- **Evidence boundary:** the reported outcome is These results may be summarized as follows: (p. 4, Introduction); the relevant task/metric cue is The estimation error is also governed by a linear dynamic system. (p. 6, Introduction). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise! (p. 9, Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Of course, the solution of Equation (32), or of its differential-equation equivalent, is a much simpler task than solution of the Wiener-Hopf equation..
-3. Compare against the body-reported baseline or a matched simpler baseline: Without being able to separate in some sense causes and effects, i.e., without the assumption of causality, one can hardly hope for useful results..
-4. Report the body metric and its denominator/aggregation: The covariance matrix of the estimation error is.
-5. Re-run the body-reported ablation/failure condition: Without being able to separate in some sense causes and effects, i.e., without the assumption of causality, one can hardly hope for useful results..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The new formulation of the Wiener problem brings it into contact with the growing new theory of control systems based on the "state" point of view [17-24]. (p. 2, Introduction); preserve the objective/update rule: Booton discussed the nonstationary Wiener-Hopf equation [4]. (p. 1, Introduction).
+2. Use the paper-reported task/data/environment cue: Of course, the solution of Equation (32), or of its differential-equation equivalent, is a much simpler task than solution of the Wiener-Hopf equation. (p. 7, Introduction).
+3. Compare against the reported or matched baseline: Without being able to separate in some sense causes and effects, i.e., without the assumption of causality, one can hardly hope for useful results. (p. 4, Introduction).
+4. Report the body metric with its denominator and aggregation: The estimation error is also governed by a linear dynamic system. (p. 6, Introduction).
+5. Re-run the reported ablation or stress/failure condition: Without being able to separate in some sense causes and effects, i.e., without the assumption of causality, one can hardly hope for useful results. (p. 4, Introduction); if none is reported, design one around: In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise! (p. 9, Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (Introduction), p. 5 (Introduction), p. 1 (Introduction); the primary result is directionally consistent at p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Introduction), p. 1 (Introduction), match the reported outcome at p. 4 (Introduction), p. 4 (Introduction), p. 4 (Introduction), and measure the boundary at p. 9 (Introduction), p. 1 (Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 developed, here, applied mechanism이 Without being able to separate in some sense causes and effects, i.e., without the assumption of ... 대비 The covariance matrix of the estimation error is을 개선하고, In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise! 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The new formulation of the Wiener problem brings it into contact with the growing new theory of control systems based on the ...), does the paper-specific mechanism (Zadeh and Ragazzini solved the finite-memory case [2].) retain the reported evaluation outcome (The estimation error is also governed by a linear dynamic system.) when tested against the paper's strongest explicit boundary (In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise!)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The estimation error is also governed by a linear dynamic system.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Zadeh and Ragazzini solved the finite-memory case [2]. (p. 1, Introduction).
+- **Paper-supported outcome:** These results may be summarized as follows: (p. 4, Introduction).
+- **Strongest explicit boundary:** In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise! (p. 9, Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

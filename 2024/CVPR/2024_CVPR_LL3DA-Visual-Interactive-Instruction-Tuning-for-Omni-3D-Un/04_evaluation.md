@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2311.18651; PDF retrieval source: https://arxiv.org/pdf/2311.18651. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2311.18651; PDF retrieval source: https://arxiv.org/pdf/2311.18651. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** In this paper, we experiment with 3D data from ScanNet [15], a 3D dataset covering 1,201 and 312 diverse and complex indoor 3D scenes for ...
-- **p. 5 / 5.2. Comparison with SoTA Specialists - extractive PDF cue:** We benchmarks stateof-the-art methods on the widely-used ScanRefer [6] and Nr3D [1] dataset in Tab.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** However, the generalist model achieves poor results on Nr3D [1], which is because we did not try to differentiate between Nr3D and ScanRefer during training ...
-- **p. 6 / 5.3. Ablation Studies - extractive PDF cue:** Our proposed LL3DA surpasses previous 3D specialists on both datasets.
-- **p. 6 / 5.3. Ablation Studies - extractive PDF cue:** For fair comparison, we list methods that are trained under the standard per-word cross-entropy loss without additional 3D scenes.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** The following three rows list the performance of the model fine-tuned on each dataset.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Describe this object in the 3D scene.
-- **p. 8 / 5.4. Qualitative Results - extractive PDF cue:** We present several visualization results on different tasks in Fig.
+- **p. 5 / 5. Experiments - extractive body cue:** In this paper, we experiment with 3D data from ScanNet [15], a 3D dataset covering 1,201 and 312 diverse and complex indoor 3D scenes for ...
+- **p. 5 / 5.2. Comparison with SoTA Specialists - extractive body cue:** We benchmarks stateof-the-art methods on the widely-used ScanRefer [6] and Nr3D [1] dataset in Tab.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** However, the generalist model achieves poor results on Nr3D [1], which is because we did not try to differentiate between Nr3D and ScanRefer during training ...
+- **p. 6 / 5.3. Ablation Studies - extractive body cue:** Our proposed LL3DA surpasses previous 3D specialists on both datasets.
+- **p. 6 / 5.3. Ablation Studies - extractive body cue:** For fair comparison, we list methods that are trained under the standard per-word cross-entropy loss without additional 3D scenes.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** The following three rows list the performance of the model fine-tuned on each dataset.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Describe this object in the 3D scene.
+- **p. 8 / 5.4. Qualitative Results - extractive body cue:** We present several visualization results on different tasks in Fig.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Comparison with SoTA Specialists | EMPIRICAL / SOURCE-REPORTED EVALUATION | Results show that our method consistently outperforms existing methods on all the evaluation sets, and surpasses the generation based method, 3D-LLM, by a large ... | p. 5 (5.2. Comparison with SoTA Specialists) |
 | 5.3. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | Results show that the additional textual instructions and visual prompts improve the task diversity and further improve the performance on 3D Question Answering. | p. 7 (5.3. Ablation Studies) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** In this paper, we experiment with 3D data from ScanNet [15], a 3D dataset covering 1,201 and 312 diverse and complex indoor 3D scenes for ...
-- **p. 5 / 5.2. Comparison with SoTA Specialists - extractive PDF cue:** We benchmarks stateof-the-art methods on the widely-used ScanRefer [6] and Nr3D [1] dataset in Tab.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** However, the generalist model achieves poor results on Nr3D [1], which is because we did not try to differentiate between Nr3D and ScanRefer during training ...
-- **p. 6 / 5.3. Ablation Studies - extractive PDF cue:** Our proposed LL3DA surpasses previous 3D specialists on both datasets.
-- **p. 6 / 5.3. Ablation Studies - extractive PDF cue:** For fair comparison, we list methods that are trained under the standard per-word cross-entropy loss without additional 3D scenes.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** The following three rows list the performance of the model fine-tuned on each dataset.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Describe this object in the 3D scene.
-- **p. 8 / 5.4. Qualitative Results - extractive PDF cue:** We present several visualization results on different tasks in Fig.
+- **p. 5 / 5. Experiments - extractive body cue:** In this paper, we experiment with 3D data from ScanNet [15], a 3D dataset covering 1,201 and 312 diverse and complex indoor 3D scenes for ...
+- **p. 5 / 5.2. Comparison with SoTA Specialists - extractive body cue:** We benchmarks stateof-the-art methods on the widely-used ScanRefer [6] and Nr3D [1] dataset in Tab.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** However, the generalist model achieves poor results on Nr3D [1], which is because we did not try to differentiate between Nr3D and ScanRefer during training ...
+- **p. 6 / 5.3. Ablation Studies - extractive body cue:** Our proposed LL3DA surpasses previous 3D specialists on both datasets.
+- **p. 6 / 5.3. Ablation Studies - extractive body cue:** For fair comparison, we list methods that are trained under the standard per-word cross-entropy loss without additional 3D scenes.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** The following three rows list the performance of the model fine-tuned on each dataset.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Describe this object in the 3D scene.
+- **p. 8 / 5.4. Qualitative Results - extractive body cue:** We present several visualization results on different tasks in Fig.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose LL3DA, a Large Language 3D Assistant that demonstrates mighty instruction-following capacities of un- derstanding, reasoning, and planning in complex 3D environments. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the Proposed Approach. (a) The overall pipeline of our proposed LL3DA first extracts interaction-aware 3D scene embeddings, which are later projected ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative Comparisons for 3D Dense Captioning on ScanRefer[6] and Nr3D[1]. For fair comparison, we list methods that are trained under the standard per-word ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative Comparisons for 3D Question Answering on ScanQA[2]. We categorize previous works into classification based ("CLS") and generation based ("GEN") methods. The results ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Different Ways of Encoding Visual Prompts. We listed two ways of encoding visual prompts, (a) adopting a unified transformer to aggregate features from ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Effectiveness of Q-Former Design on ScanRefer[6]. We design two different ways of utilizing visual prompts. The "early fusion" enables direct interaction with the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Effectiveness of Instructions as 3D Dense Captioning Auxiliary Tasks. We train the models from scratch and evaluate on ScanRefer[6]. "Aux.Loc" identifies whether we ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Evaluation as a Generalist. The first three rows list the performance of models trained from scratch as experts on each dataset. The results ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose LL3DA, a Large Language 3D Assistant that demonstrates mighty instruction-following capacities of un- derstanding, reasoning, and planning in complex 3D environments. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the Proposed Approach. (a) The overall pipeline of our proposed LL3DA first extracts interaction-aware 3D scene embeddings, which are later projected ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Comparisons for 3D Dense Captioning on ScanRefer[6] and Nr3D[1]. For fair comparison, we list methods that are trained under the standard per-word ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative Comparisons for 3D Question Answering on ScanQA[2]. We categorize previous works into classification based ("CLS") and generation based ("GEN") methods. The results ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Different Ways of Encoding Visual Prompts. We listed two ways of encoding visual prompts, (a) adopting a unified transformer to aggregate features from ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Effectiveness of Q-Former Design on ScanRefer[6]. We design two different ways of utilizing visual prompts. The "early fusion" enables direct interaction with the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Effectiveness of Instructions as 3D Dense Captioning Auxiliary Tasks. We train the models from scratch and evaluate on ScanRefer[6]. "Aux.Loc" identifies whether we ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Evaluation as a Generalist. The first three rows list the performance of models trained from scratch as experts on each dataset. The results ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this paper, we experiment with 3D data from ScanNet [15], a 3D dataset covering 1,201 and 312 diverse and complex indoor 3D scenes ... | embodiment, simulator version and control stack | p. 5 (5. Experiments), p. 5 (5.2. Comparison with SoTA Specialists) |
 | Task/environment | We benchmarks stateof-the-art methods on the widely-used ScanRefer [6] and Nr3D [1] dataset in Tab. | reset, timeout, object/scene variation | p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies) |
@@ -123,7 +123,7 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 | Primary metric/result | Results show that the additional textual instructions and visual prompts improve the task diversity and further improve the performance on 3D Question Answering. | numeric claim only at cited anchor | p. 7 (5.3. Ablation Studies) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.2. Model Design - extractive PDF cue:** The two types of the visual prompts are then projected with separate and identical Feed Forward Networks (FFN). fclick = FFNclick (pos (pclick)) fbox = ...
+- **p. 4 / 3.2. Model Design - extractive body cue:** The two types of the visual prompts are then projected with separate and identical Feed Forward Networks (FFN). fclick = FFNclick (pos (pclick)) fbox = ...
 
 ## Generalization and Failure Cases
 
@@ -156,7 +156,7 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), metrics p. 5 (5.2. Comparison with SoTA Specialists), p. 17 (Figure/Table caption), p. 5 (5.2. Comparison with SoTA Specialists), p. 17 (Figure/Table caption), p. 6 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), baselines p. 7 (5.3. Ablation Studies), p. 5 (5.2. Comparison with SoTA Specialists), p. 5 (5.2. Comparison with SoTA Specialists), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), results p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), metrics p. 5 (5.2. Comparison with SoTA Specialists), p. 17 (Figure/Table caption), p. 5 (5.2. Comparison with SoTA Specialists), p. 17 (Figure/Table caption), p. 6 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), baselines p. 7 (5.3. Ablation Studies), p. 5 (5.2. Comparison with SoTA Specialists), p. 5 (5.2. Comparison with SoTA Specialists), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), results p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

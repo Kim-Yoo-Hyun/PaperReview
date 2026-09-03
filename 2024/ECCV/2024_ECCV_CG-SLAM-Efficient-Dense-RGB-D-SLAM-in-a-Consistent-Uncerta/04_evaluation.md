@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3580_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3580_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 
 ## Evaluation Body Digest
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** We examined the generalization of our method on real-world TUM [44] and ScanNet [10] datasets, which contain 5 and 6 challenging scenes respectively.
-- **p. 10 / 4 Experiments - extractive PDF cue:** 2, despite noisy and sparse depth information in the real-world TUM-RGBD dataset [44], our method still achieves better or competitive performance in 5 selected scenarios.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our system consistently achieved the best performance in this dataset, both for 8 individual scenes and for the average.
-- **p. 11 / 4 Experiments - extractive PDF cue:** CG-SLAM 11 Table 1: Tracking Results on the Replica Dataset [43] (ATE RMSE [cm] ↓).
-- **p. 13 / 4 Experiments - extractive PDF cue:** 4: Reconstruction Performance on Replica [43] Dataset.
-- **p. 12 / 4 Experiments - extractive PDF cue:** However, as a non-MLP scene representation, the 3D Gaussian field inevitably requires much memory consumption to store different properties.
-- **p. 13 / 56.50 MB - extractive PDF cue:** Alignment and variance losses push primitives closer to object surfaces, facilitating novel view syn
-- **p. 14 / 56.50 MB - extractive PDF cue:** This plot illustrates that the uncertainty model helps improve tracking accuracy while avoiding some extreme errors.
+- **p. 10 / 4 Experiments - extractive body cue:** We examined the generalization of our method on real-world TUM [44] and ScanNet [10] datasets, which contain 5 and 6 challenging scenes respectively.
+- **p. 10 / 4 Experiments - extractive body cue:** 2, despite noisy and sparse depth information in the real-world TUM-RGBD dataset [44], our method still achieves better or competitive performance in 5 selected scenarios.
+- **p. 11 / 4 Experiments - extractive body cue:** Our system consistently achieved the best performance in this dataset, both for 8 individual scenes and for the average.
+- **p. 11 / 4 Experiments - extractive body cue:** CG-SLAM 11 Table 1: Tracking Results on the Replica Dataset [43] (ATE RMSE [cm] ↓).
+- **p. 13 / 4 Experiments - extractive body cue:** 4: Reconstruction Performance on Replica [43] Dataset.
+- **p. 12 / 4 Experiments - extractive body cue:** However, as a non-MLP scene representation, the 3D Gaussian field inevitably requires much memory consumption to store different properties.
+- **p. 13 / 56.50 MB - extractive body cue:** Alignment and variance losses push primitives closer to object surfaces, facilitating novel view syn
+- **p. 14 / 56.50 MB - extractive body cue:** This plot illustrates that the uncertainty model helps improve tracking accuracy while avoiding some extreme errors.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | In this section, we describe our experimental setup and validate that the proposed system can achieve improvement in both accuracy (Sec. | p. 9 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our system achieves better tracking accuracy and lower variance in different scenarios. "-" indicates unavailable results because the related work is not open source. | p. 11 (4 Experiments) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** We examined the generalization of our method on real-world TUM [44] and ScanNet [10] datasets, which contain 5 and 6 challenging scenes respectively.
-- **p. 10 / 4 Experiments - extractive PDF cue:** 2, despite noisy and sparse depth information in the real-world TUM-RGBD dataset [44], our method still achieves better or competitive performance in 5 selected scenarios.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our system consistently achieved the best performance in this dataset, both for 8 individual scenes and for the average.
-- **p. 11 / 4 Experiments - extractive PDF cue:** CG-SLAM 11 Table 1: Tracking Results on the Replica Dataset [43] (ATE RMSE [cm] ↓).
-- **p. 13 / 4 Experiments - extractive PDF cue:** 4: Reconstruction Performance on Replica [43] Dataset.
-- **p. 12 / 4 Experiments - extractive PDF cue:** However, as a non-MLP scene representation, the 3D Gaussian field inevitably requires much memory consumption to store different properties.
-- **p. 13 / 56.50 MB - extractive PDF cue:** Alignment and variance losses push primitives closer to object surfaces, facilitating novel view syn
+- **p. 10 / 4 Experiments - extractive body cue:** We examined the generalization of our method on real-world TUM [44] and ScanNet [10] datasets, which contain 5 and 6 challenging scenes respectively.
+- **p. 10 / 4 Experiments - extractive body cue:** 2, despite noisy and sparse depth information in the real-world TUM-RGBD dataset [44], our method still achieves better or competitive performance in 5 selected scenarios.
+- **p. 11 / 4 Experiments - extractive body cue:** Our system consistently achieved the best performance in this dataset, both for 8 individual scenes and for the average.
+- **p. 11 / 4 Experiments - extractive body cue:** CG-SLAM 11 Table 1: Tracking Results on the Replica Dataset [43] (ATE RMSE [cm] ↓).
+- **p. 13 / 4 Experiments - extractive body cue:** 4: Reconstruction Performance on Replica [43] Dataset.
+- **p. 12 / 4 Experiments - extractive body cue:** However, as a non-MLP scene representation, the 3D Gaussian field inevitably requires much memory consumption to store different properties.
+- **p. 13 / 56.50 MB - extractive body cue:** Alignment and variance losses push primitives closer to object surfaces, facilitating novel view syn
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: CG-SLAM, which adopts a well-designed 3D Gaussian field, can simultaneously achieve state-of-the-art performance in localization, reconstruction and rendering. Ben- efiting from 3D Gaussian ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: System Overview. In a 3D Gaussian field constructed from an RGB-D se- quence, we can render color, depth, opacity, and uncertainty maps through ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 3: Uncertainty of the Gaussian Primitives. Uncertainty of a Gaussian prim- itive is derived from its dominated pixels and corresponding depth biases, reflecting the ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 1: Tracking Results on the Replica Dataset [43] (ATE RMSE [cm] ↓). Our system consistently achieved the best performance in this dataset, both for ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 2: Tracking Results on the TUM-RGBD Dataset [44] (ATE RMSE [cm] ↓). Our system achieves better tracking accuracy and lower variance in different scenarios. ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Tracking Results on the ScanNet Dataset [10] (ATE RMSE [cm] ↓). Our method achieves state-of-the-art tracking results in 6 scenes and exceeds other ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Reconstruction Results on the Replica [43] Dataset. In terms of map- ping accuracy, our method can outperform all existing methods. Due to the ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 4: Reconstruction Performance on Replica [43] Dataset. We qualitatively compared the mesh reconstruction results from CG-SLAM and other baselines, where CG-SLAM can produce more ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: CG-SLAM, which adopts a well-designed 3D Gaussian field, can simultaneously achieve state-of-the-art performance in localization, reconstruction and rendering. Ben- efiting from 3D Gaussian ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: System Overview. In a 3D Gaussian field constructed from an RGB-D se- quence, we can render color, depth, opacity, and uncertainty maps through ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Uncertainty of the Gaussian Primitives. Uncertainty of a Gaussian prim- itive is derived from its dominated pixels and corresponding depth biases, reflecting the ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: Tracking Results on the Replica Dataset [43] (ATE RMSE [cm] ↓). Our system consistently achieved the best performance in this dataset, both for ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 2: Tracking Results on the TUM-RGBD Dataset [44] (ATE RMSE [cm] ↓). Our system achieves better tracking accuracy and lower variance in different scenarios. ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Tracking Results on the ScanNet Dataset [10] (ATE RMSE [cm] ↓). Our method achieves state-of-the-art tracking results in 6 scenes and exceeds other ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Reconstruction Results on the Replica [43] Dataset. In terms of map- ping accuracy, our method can outperform all existing methods. Due to the ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 4: Reconstruction Performance on Replica [43] Dataset. We qualitatively compared the mesh reconstruction results from CG-SLAM and other baselines, where CG-SLAM can produce more ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We examined the generalization of our method on real-world TUM [44] and ScanNet [10] datasets, which contain 5 and 6 challenging scenes respectively. | embodiment, simulator version and control stack | p. 10 (4 Experiments), p. 10 (4 Experiments) |
 | Task/environment | 2, despite noisy and sparse depth information in the real-world TUM-RGBD dataset [44], our method still achieves better or competitive performance in 5 selected ... | reset, timeout, object/scene variation | p. 10 (4 Experiments), p. 11 (4 Experiments) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 | Primary metric/result | Our system achieves better tracking accuracy and lower variance in different scenarios. "-" indicates unavailable results because the related work is not open source. | numeric claim only at cited anchor | p. 11 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 10 / 4 Experiments - extractive PDF cue:** We run our system on a desktop equipped with an Intel i9-14900K and an NVIDIA RTX 4090 GPU.
-- **p. 11 / 4 Experiments - extractive PDF cue:** NICE-SLAM 0.97 1.31 1.07 0.88 1.00 1.06 1.10 1.13 1.06 Co-SLAM 0.77 1.04 1.09 0.58 0.53 2.05 1.49 0.84 0.99 Point-SLAM 0.56 0.47 0.30 0.35 ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** NICE-SLAM 4.26 4.99 34.49 31.73 3.87 15.87 Co-SLAM 2.7 4.57 30.16 1.9 2.6 8.38 Point-SLAM 4.34 4.54 30.92 1.31 3.48 8.92 Vox-Fusion 3.52 6.00 19.53 ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our method achieves state-of-the-art tracking results in 6 scenes and exceeds other methods on average. "-" indicates failure results in Vox-Fusion [56].
-- **p. 11 / 4 Experiments - extractive PDF cue:** NICE-SLAM 12.00 14.00 7.90 10.90 13.40 6.20 10.70 Co-SLAM 7.18 12.29 10.9 6.62 13.43 7.13 9.37 Point-SLAM 10.24 8.29 11.86 22.16 14.77 9.54 12.19 Vox-Fusion ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** With the support of the GPU-accelerated rasterizer, our system can operate at around 8.5Hz.
+- **p. 10 / 4 Experiments - extractive body cue:** We run our system on a desktop equipped with an Intel i9-14900K and an NVIDIA RTX 4090 GPU.
+- **p. 11 / 4 Experiments - extractive body cue:** NICE-SLAM 0.97 1.31 1.07 0.88 1.00 1.06 1.10 1.13 1.06 Co-SLAM 0.77 1.04 1.09 0.58 0.53 2.05 1.49 0.84 0.99 Point-SLAM 0.56 0.47 0.30 0.35 ...
+- **p. 11 / 4 Experiments - extractive body cue:** NICE-SLAM 4.26 4.99 34.49 31.73 3.87 15.87 Co-SLAM 2.7 4.57 30.16 1.9 2.6 8.38 Point-SLAM 4.34 4.54 30.92 1.31 3.48 8.92 Vox-Fusion 3.52 6.00 19.53 ...
+- **p. 11 / 4 Experiments - extractive body cue:** Our method achieves state-of-the-art tracking results in 6 scenes and exceeds other methods on average. "-" indicates failure results in Vox-Fusion [56].
+- **p. 11 / 4 Experiments - extractive body cue:** NICE-SLAM 12.00 14.00 7.90 10.90 13.40 6.20 10.70 Co-SLAM 7.18 12.29 10.9 6.62 13.43 7.13 9.37 Point-SLAM 10.24 8.29 11.86 22.16 14.77 9.54 12.19 Vox-Fusion ...
+- **p. 12 / 4 Experiments - extractive body cue:** With the support of the GPU-accelerated rasterizer, our system can operate at around 8.5Hz.
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 14 / 5 Conclusion - extractive PDF cue:** Considerable memory usage is one limitation of the Gaussianbased system.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our method achieves state-of-the-art tracking results in 6 scenes and exceeds other methods on average. "-" indicates failure results in Vox-Fusion [56].
-- **p. 14 / 56.50 MB - extractive PDF cue:** The experimental results demonstrate the effectiveness of our anisotropy regularization term. "-" indicates a failure situation.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Due to the inherent limitation of 3D Gaussian representation, our method is slightly worse in completion.
-- **p. 12 / 4 Experiments - extractive PDF cue:** This reason results in a considerable memory footprint in the Gaussian-based SLAM system, which is a common limitation in other Gaussian-based research topics.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 3: Uncertainty of the Gaussian Primitives. Uncertainty of a Gaussian prim- itive is derived from its dominated pixels and corresponding depth biases, reflecting the ...
+- **p. 14 / 5 Conclusion - extractive body cue:** Considerable memory usage is one limitation of the Gaussianbased system.
+- **p. 11 / 4 Experiments - extractive body cue:** Our method achieves state-of-the-art tracking results in 6 scenes and exceeds other methods on average. "-" indicates failure results in Vox-Fusion [56].
+- **p. 14 / 56.50 MB - extractive body cue:** The experimental results demonstrate the effectiveness of our anisotropy regularization term. "-" indicates a failure situation.
+- **p. 12 / 4 Experiments - extractive body cue:** Due to the inherent limitation of 3D Gaussian representation, our method is slightly worse in completion.
+- **p. 12 / 4 Experiments - extractive body cue:** This reason results in a considerable memory footprint in the Gaussian-based SLAM system, which is a common limitation in other Gaussian-based research topics.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Uncertainty of the Gaussian Primitives. Uncertainty of a Gaussian prim- itive is derived from its dominated pixels and corresponding depth biases, reflecting the ...
 
-- **PDF anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), metrics p. 14 (56.50 MB), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (Figure/Table caption), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), metrics p. 14 (56.50 MB), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (Figure/Table caption), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

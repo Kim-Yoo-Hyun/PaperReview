@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.deisenroth.cc/publication/deisenroth-2011-c/; PDF retrieval source: https://www.deisenroth.cc/publication/deisenroth-2011-c/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.deisenroth.cc/publication/deisenroth-2011-c/; PDF retrieval source: https://www.deisenroth.cc/publication/deisenroth-2011-c/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analy
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | Pilco's probabilistic dynamics model is implemented as a GP, where we use tuples (xt-1, ut-1) ∈RD+F as training inputs and differences ∆t ... | p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | PILCO: A Model-Based and Data-Efficient Approach to Policy Search Algorithm 1 pilco 1: init: Sample controller parameters θ ∼N(0, I). | p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analy
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | (27) is known from time step t -1 and ∂µt/∂p(xt-1) is computed by applying the chain-rule to Eqs. | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | To obtain the state distributions p(x1), . . . , p(xT ), we cascade onestep predictions, see Eqs. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | To solve the swing-up plus balancing, pilco required only 17.5 s of interaction with the physical system. frame flywheel wheel (a) Robotic ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analy
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search), p. 3 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 3 (2.2.1. Mean Prediction), objective p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 4 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search), p. 2 (2.1. Dynamics Model Learning), p. 4 (2.2.2. Covariance Matrix of the Prediction), p. 5 (2.3. Analytic Gradients for Policy Improvement), temporal p. 4 (2.3. Analytic Gradients for Policy Improvement), p. 3 (2.2. Policy Evaluation), p. 5 (3.1. Cart-Pole Swing-up), p. 5 (3.2. Cart-Double-Pendulum Swing-up), p. 6 (3.3. Unicycle Riding), p. 6 (3.3. Unicycle Riding).
+- **Evidence anchors reviewed:** method p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search), p. 3 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 3 (2.2.1. Mean Prediction), objective p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 4 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search), p. 2 (2.1. Dynamics Model Learning), p. 4 (2.2.2. Covariance Matrix of the Prediction), p. 5 (2.3. Analytic Gradients for Policy Improvement), temporal p. 4 (2.3. Analytic Gradients for Policy Improvement), p. 3 (2.2. Policy Evaluation), p. 5 (3.1. Cart-Pole Swing-up), p. 5 (3.2. Cart-Double-Pendulum Swing-up), p. 6 (3.3. Unicycle Riding), p. 6 (3.3. Unicycle Riding).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Pilco's probabilistic dynamics model is implemented as a GP, where we use tuples (xt-1, ut-1) ∈RD+F as training inputs and differences ∆t = xt -xt-1 + ε ∈RD, ε ∼N(0, ... (p. 2, 2.1. Dynamics Model Learning).
+- **Objective/update evidence:** Analytic derivatives allow for standard gradient-based non-convex optimization methods, e.g., CG or LBFGS, which return optimized policy parameters θ∗. (p. 5, 2.3. Analytic Gradients for Policy Improvement).
+- **Temporal/runtime evidence:** To obtain the state distributions p(x1), . . . , p(xT ), we cascade onestep predictions, see Eqs. (p. 3, 2.2. Policy Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

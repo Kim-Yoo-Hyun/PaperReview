@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.11989; PDF retrieval source: https://arxiv.org/pdf/2410.11989. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.11989; PDF retrieval source: https://arxiv.org/pdf/2410.11989. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | We propose an efficient method that leverages new RGB-D observations to update the volumetric representation accordingly. | p. 4 (III. METHOD), p. 4 (III. METHOD) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | Then, we apply an advanced Open-Vocal segmentation model to segment regions in the RGB images, extract semantic feature vectors for each region, ... | p. 4 (III. METHOD), p. 5 (III. METHOD) |
@@ -83,14 +83,14 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | 2) Remove obsolete indices: This step is to identify and remove obsolete voxels from the memory map. | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | This refinement step minimizes both geometric and photometric discrepancies between the new observations and the existing map, yielding a precise transformation T ... | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | 2) Remove obsolete indices: This step is to identify and remove obsolete voxels from the memory map. | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | Overall, for each method, each level of modification was tested through 20 long-term tasks per room across 4 rooms, resulting in a ... | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | 2) Remove obsolete indices: This step is to identify and remove obsolete voxels from the memory map. | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | This refinement step minimizes both geometric and photometric discrepancies between the new observations and the existing map, yielding a precise transformation T ... | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | 2) Remove obsolete indices: This step is to identify and remove obsolete voxels from the memory map. | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | Overall, for each method, each level of modification was tested through 20 long-term tasks per room across 4 rooms, resulting in a ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 4 (III. METHOD), p. 6 (III. METHOD), p. 6 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 2 (I. INTRODUCTION), p. 2 (II. RELATED WORKS), p. 3 (III. METHOD).
+- **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 4 (III. METHOD), p. 6 (III. METHOD), p. 6 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 2 (I. INTRODUCTION), p. 2 (II. RELATED WORKS), p. 3 (III. METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Open-vocabulary 3D Object Mapping With the RGB-D sequences and camera poses, we proceed to construct an object-centric 3D representation from RGB-D observations It = {I1, I2, . . . , ... (p. 3, III. METHOD).
+- **Objective/update evidence:** From these, a 3D scene graph is generated, capturing object relationships and continuously updated when the environment changes. (p. 2, III. METHOD).
+- **Temporal/runtime evidence:** 2) Remove obsolete indices: This step is to identify and remove obsolete voxels from the memory map. (p. 4, III. METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

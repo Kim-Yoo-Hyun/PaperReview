@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Task Description - extractive PDF cue:** The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes.
-- **p. 5 / 4.1. Task Description - extractive PDF cue:** The dataset includes 160 object classes and 27 predicate classes.
-- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive PDF cue:** Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the infrequent ...
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Comparisons with state-of-the-arts on the 3DSSG dataset.
-- **p. 7 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive PDF cue:** Qualitative Results with Supervised: Figure 3 depicts four challenging scenes from diverse indoor rooms, including bedrooms, living rooms, and toilets.
-- **p. 7 / 4.4. Predicting Novel Classes - extractive PDF cue:** This approach gleans substantial knowledge from realistic open-world scenarios, culminating in transferable 3DSG representations that outperform supervised methods on the more constrained 3DSSG dataset.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** In this section, we show the ablation performance on the 3DSSG dataset in Table 5.
-- **p. 8 / 4.4. Predicting Novel Classes - extractive PDF cue:** Qualitative results are drawn from both VL-SAT [48] and our method utilizing the ScanNet dataset [8].
+- **p. 5 / 4.1. Task Description - extractive body cue:** The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes.
+- **p. 5 / 4.1. Task Description - extractive body cue:** The dataset includes 160 object classes and 27 predicate classes.
+- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the infrequent ...
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Comparisons with state-of-the-arts on the 3DSSG dataset.
+- **p. 7 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** Qualitative Results with Supervised: Figure 3 depicts four challenging scenes from diverse indoor rooms, including bedrooms, living rooms, and toilets.
+- **p. 7 / 4.4. Predicting Novel Classes - extractive body cue:** This approach gleans substantial knowledge from realistic open-world scenarios, culminating in transferable 3DSG representations that outperform supervised methods on the more constrained 3DSSG dataset.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** In this section, we show the ablation performance on the 3DSSG dataset in Table 5.
+- **p. 8 / 4.4. Predicting Novel Classes - extractive body cue:** Qualitative results are drawn from both VL-SAT [48] and our method utilizing the ScanNet dataset [8].
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Comparisons with SOTA Methods on Close-Set | EMPIRICAL / SOURCE-REPORTED EVALUATION | Despite introducing additional information, our model achieves a significant performance boost without a substantial increase in time (24 to 30). | p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
 | 4.3. Comparisons with SOTA Methods on Close-Set | EMPIRICAL / SOURCE-REPORTED EVALUATION | Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the ... | p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Task Description - extractive PDF cue:** The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes.
-- **p. 5 / 4.1. Task Description - extractive PDF cue:** The dataset includes 160 object classes and 27 predicate classes.
-- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive PDF cue:** Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the infrequent ...
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Comparisons with state-of-the-arts on the 3DSSG dataset.
-- **p. 7 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive PDF cue:** Qualitative Results with Supervised: Figure 3 depicts four challenging scenes from diverse indoor rooms, including bedrooms, living rooms, and toilets.
-- **p. 7 / 4.4. Predicting Novel Classes - extractive PDF cue:** This approach gleans substantial knowledge from realistic open-world scenarios, culminating in transferable 3DSG representations that outperform supervised methods on the more constrained 3DSSG dataset.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** In this section, we show the ablation performance on the 3DSSG dataset in Table 5.
-- **p. 8 / 4.4. Predicting Novel Classes - extractive PDF cue:** Qualitative results are drawn from both VL-SAT [48] and our method utilizing the ScanNet dataset [8].
+- **p. 5 / 4.1. Task Description - extractive body cue:** The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes.
+- **p. 5 / 4.1. Task Description - extractive body cue:** The dataset includes 160 object classes and 27 predicate classes.
+- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the infrequent ...
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Comparisons with state-of-the-arts on the 3DSSG dataset.
+- **p. 7 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** Qualitative Results with Supervised: Figure 3 depicts four challenging scenes from diverse indoor rooms, including bedrooms, living rooms, and toilets.
+- **p. 7 / 4.4. Predicting Novel Classes - extractive body cue:** This approach gleans substantial knowledge from realistic open-world scenarios, culminating in transferable 3DSG representations that outperform supervised methods on the more constrained 3DSSG dataset.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** In this section, we show the ablation performance on the 3DSSG dataset in Table 5.
+- **p. 8 / 4.4. Predicting Novel Classes - extractive body cue:** Qualitative results are drawn from both VL-SAT [48] and our method utilizing the ScanNet dataset [8].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) Difference in training: Previous 3DSGG models trained on closed-set classes by fully supervised [12, 48, 61]. Our method trains a 3DSG feature ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Architecture of the CCL-3DSGG. The CCL-3DSGG architecture begins with inputting image-text pairs and unlabeled 3D point clouds, aiming to train the 3DSG feature ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparisons with state-of-the-arts on the 3DSSG dataset. Because the 3DSGG task inputs the instance segmentation, we only compute the mean of the two ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Following the VL-SAT, the 26 predicate classes in the 3DSSG dataset are categorized into head, body, and tail parts based on the predicate ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Unsupervised experimental results of mR on the 3DSSG dataset. w/o CL means without classification losses.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative examples of the improvement in supervised 3DSGG. On the right side of each scene, the result of the VL-SAT [48] is at ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Open-vocabulary 3DSGG and Zero-shot 3DSGG of R@{50/100} on the 3DSSG dataset.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation studies on CCL-3DSGG with unsupervised. Exp Module PREDCLS Object mR@20 mR@50 mR@100 A@1 A@5 1 our full method
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) Difference in training: Previous 3DSGG models trained on closed-set classes by fully supervised [12, 48, 61]. Our method trains a 3DSG feature ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Architecture of the CCL-3DSGG. The CCL-3DSGG architecture begins with inputting image-text pairs and unlabeled 3D point clouds, aiming to train the 3DSG feature ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparisons with state-of-the-arts on the 3DSSG dataset. Because the 3DSGG task inputs the instance segmentation, we only compute the mean of the two ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Following the VL-SAT, the 26 predicate classes in the 3DSSG dataset are categorized into head, body, and tail parts based on the predicate ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Unsupervised experimental results of mR on the 3DSSG dataset. w/o CL means without classification losses.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative examples of the improvement in supervised 3DSGG. On the right side of each scene, the result of the VL-SAT [48] is at ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Open-vocabulary 3DSGG and Zero-shot 3DSGG of R@{50/100} on the 3DSSG dataset.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Ablation studies on CCL-3DSGG with unsupervised. Exp Module PREDCLS Object mR@20 mR@50 mR@100 A@1 A@5 1 our full method
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes. | embodiment, simulator version and control stack | p. 5 (4.1. Task Description), p. 5 (4.1. Task Description) |
 | Task/environment | The dataset includes 160 object classes and 27 predicate classes. | reset, timeout, object/scene variation | p. 5 (4.1. Task Description), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 | Primary metric/result | Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the ... | numeric claim only at cited anchor | p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Task Description - extractive PDF cue:** The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes.
-- **p. 5 / 4.1. Task Description - extractive PDF cue:** The dataset includes 160 object classes and 27 predicate classes.
-- **p. 5 / 4.2. Implementation Details - extractive PDF cue:** Training is conducted using the Adam optimizer [24], with a batch size of 8, over 100 epochs.
-- **p. 5 / 4.2. Implementation Details - extractive PDF cue:** The training of our full method takes approximately 48-50 hours.
+- **p. 5 / 4.1. Task Description - extractive body cue:** The training set of 3DSSG [47] contains 3582 scenes, while the testing set comprises 548 scenes.
+- **p. 5 / 4.1. Task Description - extractive body cue:** The dataset includes 160 object classes and 27 predicate classes.
+- **p. 5 / 4.2. Implementation Details - extractive body cue:** Training is conducted using the Adam optimizer [24], with a batch size of 8, over 100 epochs.
+- **p. 5 / 4.2. Implementation Details - extractive body cue:** The training of our full method takes approximately 48-50 hours.
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitations: There are several limitations of our work and still much to do to realize the full potential of the proposed approach.
-- **p. 7 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive PDF cue:** For better viewing, we only show failure cases.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** In future work, it will be interesting to design experiments to quantify the success of open vocabulary queries for 3DSGG where ground truth is not ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) Difference in training: Previous 3DSGG models trained on closed-set classes by fully supervised [12, 48, 61]. Our method trains a 3DSG feature ...
-- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive PDF cue:** These results substantiate that our model furnishes more robust 3DSG feature representations, enhancing its generalization Table 3.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Meanwhile, both unseen and seen triplets from the validation set are used to evaluate the robustness of our trained 3DSG feature extractor.
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitations: There are several limitations of our work and still much to do to realize the full potential of the proposed approach.
+- **p. 7 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** For better viewing, we only show failure cases.
+- **p. 8 / 5. Conclusion - extractive body cue:** In future work, it will be interesting to design experiments to quantify the success of open vocabulary queries for 3DSGG where ground truth is not ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) Difference in training: Previous 3DSGG models trained on closed-set classes by fully supervised [12, 48, 61]. Our method trains a 3DSG feature ...
+- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** These results substantiate that our model furnishes more robust 3DSG feature representations, enhancing its generalization Table 3.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Meanwhile, both unseen and seen triplets from the validation set are used to evaluate the robustness of our trained 3DSG feature extractor.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Task Description), p. 5 (4.1. Task Description), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 6 (4.2. Implementation Details), p. 7 (4.3. Comparisons with SOTA Methods on Close-Set), p. 7 (4.4. Predicting Novel Classes), metrics p. 7 (4.4. Predicting Novel Classes), p. 6 (Figure/Table caption), p. 7 (4.4. Predicting Novel Classes), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 5 (4.2. Implementation Details), baselines p. 6 (4.2. Implementation Details), p. 7 (4.4. Predicting Novel Classes), p. 7 (4.4. Predicting Novel Classes), p. 5 (4. Experiments), p. 5 (4.2. Implementation Details), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), results p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 8 (4.5. Ablation Study), p. 7 (4.3. Comparisons with SOTA Methods on Close-Set), p. 7 (4.4. Predicting Novel Classes), p. 5 (4. Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Task Description), p. 5 (4.1. Task Description), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 6 (4.2. Implementation Details), p. 7 (4.3. Comparisons with SOTA Methods on Close-Set), p. 7 (4.4. Predicting Novel Classes), metrics p. 7 (4.4. Predicting Novel Classes), p. 6 (Figure/Table caption), p. 7 (4.4. Predicting Novel Classes), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 5 (4.2. Implementation Details), baselines p. 6 (4.2. Implementation Details), p. 7 (4.4. Predicting Novel Classes), p. 7 (4.4. Predicting Novel Classes), p. 5 (4. Experiments), p. 5 (4.2. Implementation Details), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), results p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 8 (4.5. Ablation Study), p. 7 (4.3. Comparisons with SOTA Methods on Close-Set), p. 7 (4.4. Predicting Novel Classes), p. 5 (4. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

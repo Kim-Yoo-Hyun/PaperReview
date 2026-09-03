@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (68 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.02155; PDF retrieval source: https://arxiv.org/pdf/2203.02155. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (68 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.02155; PDF retrieval source: https://arxiv.org/pdf/2203.02155. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Method Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
-- **p. 2 / 1 Introduction - extractive PDF cue:** We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts from held-out customers ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our InstructGPT models (PPO-ptx) as well as its variant trained without pretraining mix (PPO) significantly outperform the GPT-3 baselines (GPT, GPT prompted); outputs from our ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** To test the generalization of our models, we conduct a preliminary experiment with held-out labelers, and find that they prefer InstructGPT outputs to outputs from ...
-- **p. 1 / Abstract - extractive PDF cue:** Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** InstructGPT models generate about 25% fewer toxic outputs than GPT-3 when prompted to be respectful.
-- **p. 3 / 1 Introduction - extractive PDF cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Finally, we use this RM as a reward function and fine-tune our supervised learning baseline to maximize this reward using the PPO algorithm (Schulman et ...
+- **p. 1 / Abstract - extractive body cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
+- **p. 2 / 1 Introduction - extractive body cue:** We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts from held-out customers ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our InstructGPT models (PPO-ptx) as well as its variant trained without pretraining mix (PPO) significantly outperform the GPT-3 baselines (GPT, GPT prompted); outputs from our ...
+- **p. 4 / 1 Introduction - extractive body cue:** To test the generalization of our models, we conduct a preliminary experiment with held-out labelers, and find that they prefer InstructGPT outputs to outputs from ...
+- **p. 1 / Abstract - extractive body cue:** Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model ...
+- **p. 3 / 1 Introduction - extractive body cue:** InstructGPT models generate about 25% fewer toxic outputs than GPT-3 when prompted to be respectful.
+- **p. 3 / 1 Introduction - extractive body cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
+- **p. 2 / 1 Introduction - extractive body cue:** Finally, we use this RM as a reward function and fine-tune our supervised learning baseline to maximize this reward using the PPO algorithm (Schulman et ...
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** See Section 3 for more details on our method. sizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture.
-- **p. 4 / 1 Introduction - extractive PDF cue:** The rest of this paper is structured as follows: We first detail related work in Section 2, before diving into our method and experiment details ...
-- **p. 1 / Abstract - extractive PDF cue:** In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.
+- **p. 3 / 1 Introduction - extractive body cue:** See Section 3 for more details on our method. sizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture.
+- **p. 4 / 1 Introduction - extractive body cue:** The rest of this paper is structured as follows: We first detail related work in Section 2, before diving into our method and experiment details ...
+- **p. 1 / Abstract - extractive body cue:** In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.
 
 ## Source Evidence Cues
 
-- **p. 1 / Abstract - extractive PDF cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
-- **p. 2 / 1 Introduction - extractive PDF cue:** We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts from held-out customers ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our InstructGPT models (PPO-ptx) as well as its variant trained without pretraining mix (PPO) significantly outperform the GPT-3 baselines (GPT, GPT prompted); outputs from our ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** To test the generalization of our models, we conduct a preliminary experiment with held-out labelers, and find that they prefer InstructGPT outputs to outputs from ...
-- **p. 1 / Abstract - extractive PDF cue:** Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** InstructGPT models generate about 25% fewer toxic outputs than GPT-3 when prompted to be respectful.
-- **p. 3 / 1 Introduction - extractive PDF cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
+- **p. 1 / Abstract - extractive body cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
+- **p. 2 / 1 Introduction - extractive body cue:** We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts from held-out customers ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our InstructGPT models (PPO-ptx) as well as its variant trained without pretraining mix (PPO) significantly outperform the GPT-3 baselines (GPT, GPT prompted); outputs from our ...
+- **p. 4 / 1 Introduction - extractive body cue:** To test the generalization of our models, we conduct a preliminary experiment with held-out labelers, and find that they prefer InstructGPT outputs to outputs from ...
+- **p. 1 / Abstract - extractive body cue:** Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model ...
+- **p. 3 / 1 Introduction - extractive body cue:** InstructGPT models generate about 25% fewer toxic outputs than GPT-3 when prompted to be respectful.
+- **p. 3 / 1 Introduction - extractive body cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
 - **Detected method headings:** C Additional model details (p. 40); C.3 Details of the initialization models for RLHF (p. 42); C.5 FLAN and T0 models (p. 42)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Input representation | source-defined input을 learnable representation으로 바꾼다 | paper-specific image/text/sequence input | encoder, tokenization, normalization 또는 feature extraction을 수행 | latent feature/state | We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning ... | p. 1 (Abstract), p. 2 (1 Introduction) |
 | Core objective / transformation | source task의 prediction·generation 목표를 최적화한다 | representation, target/condition | paper-specific model, loss, decoder 또는 generative process를 적용 | prediction/embedding/sample | We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Objective / Update Rule
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Finally, we use this RM as a reward function and fine-tune our supervised learning baseline to maximize this reward using the PPO algorithm (Schulman et ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** This is because the language modeling objective ∗Primary authors.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Thus, we say that the language modeling objective is misaligned.
-- **p. 3 / 1 Introduction - extractive PDF cue:** This is an example of an "alignment tax" since our alignment procedure comes at the cost of 3
-- **p. 3 / 1 Introduction - extractive PDF cue:** We can minimize performance regressions on public NLP datasets by modifying our RLHF fine-tuning procedure.
-- **p. 4 / 1 Introduction - extractive PDF cue:** We can greatly reduce the performance regressions on these datasets by mixing PPO updates with updates that increase the log likelihood of the pretraining distribution ...
+- **p. 2 / 1 Introduction - extractive body cue:** Finally, we use this RM as a reward function and fine-tune our supervised learning baseline to maximize this reward using the PPO algorithm (Schulman et ...
+- **p. 1 / 1 Introduction - extractive body cue:** This is because the language modeling objective ∗Primary authors.
+- **p. 2 / 1 Introduction - extractive body cue:** Thus, we say that the language modeling objective is misaligned.
+- **p. 3 / 1 Introduction - extractive body cue:** This is an example of an "alignment tax" since our alignment procedure comes at the cost of 3
+- **p. 3 / 1 Introduction - extractive body cue:** We can minimize performance regressions on public NLP datasets by modifying our RLHF fine-tuning procedure.
+- **p. 4 / 1 Introduction - extractive body cue:** We can greatly reduce the performance regressions on these datasets by mixing PPO updates with updates that increase the log likelihood of the pretraining distribution ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -62,20 +62,20 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | then, collect, dataset, rankings, model, outputs, further, fine-tune, supervised, reinforcement, learning, human, feedback, Specifically | 논문이 명시한 observation과 task input | body cue; exact tensor/frame verify |
-| State/latent | then, collect, dataset, rankings, model, outputs, further, fine-tune, supervised, reinforcement | task state 또는 decision variable | body cue; notation verify |
+| Input/observation | Training, language, models, follow, instructions, human, feedback, Long, Ouyang, Jeff, Jiang, Diogo, Almeida, Carroll | 논문이 명시한 observation과 task input | body cue; exact tensor/frame verify |
+| State/latent | Training, language, models, follow, instructions, human, feedback, Long, Ouyang, Jeff | task state 또는 decision variable | body cue; notation verify |
 | Action/output | See, Section, more, details, sizes, parameters, models, GPT-3, architecture, rest | paper-specific output/action | body cue; unit/decoder verify |
 | Objective/constraint | Finally, reward, function, fine-tune, supervised, learning, baseline, maximize, PPO, algorithm | paper-specific objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **p. 1 / Abstract - extractive PDF cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Specifically, we use reinforcement learning from human feedback (RLHF; Christiano et al., 2017; Stiennon et al., 2020) to fine-tune GPT-3 to follow a broad class ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
-- **p. 3 / 1 Introduction - extractive PDF cue:** On "closed-domain" tasks from our API prompt distribution, where the output should not contain information that is not present in the input (e.g. summarization and ...
-- **p. 1 / Abstract - extractive PDF cue:** For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user.
-- **p. 4 / 1 Introduction - extractive PDF cue:** These datasets consist of a variety of NLP tasks, combined with natural language instructions for each task.
-- **p. 4 / 1 Introduction - extractive PDF cue:** We qualitatively probe InstructGPT's capabilities, and find that it is able to follow instructions for summarizing code, answer questions about code, and sometimes follows instructions ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Training language models to follow instructions with human feedback Long Ouyang∗ Jeff Wu∗ Xu Jiang∗ Diogo Almeida∗ Carroll L.
+- **p. 1 / Abstract - extractive body cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
+- **p. 2 / 1 Introduction - extractive body cue:** Specifically, we use reinforcement learning from human feedback (RLHF; Christiano et al., 2017; Stiennon et al., 2020) to fine-tune GPT-3 to follow a broad class ...
+- **p. 3 / 1 Introduction - extractive body cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
+- **p. 3 / 1 Introduction - extractive body cue:** On "closed-domain" tasks from our API prompt distribution, where the output should not contain information that is not present in the input (e.g. summarization and ...
+- **p. 4 / 1 Introduction - extractive body cue:** These datasets consist of a variety of NLP tasks, combined with natural language instructions for each task.
+- **p. 4 / 1 Introduction - extractive body cue:** We qualitatively probe InstructGPT's capabilities, and find that it is able to follow instructions for summarizing code, answer questions about code, and sometimes follows instructions ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,12 +90,12 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Training vs Inference
 
-- **p. 1 / Abstract - extractive PDF cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
-- **p. 2 / 1 Introduction - extractive PDF cue:** We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts from held-out customers ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our InstructGPT models (PPO-ptx) as well as its variant trained without pretraining mix (PPO) significantly outperform the GPT-3 baselines (GPT, GPT prompted); outputs from our ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** To test the generalization of our models, we conduct a preliminary experiment with held-out labelers, and find that they prefer InstructGPT outputs to outputs from ...
-- **p. 1 / Abstract - extractive PDF cue:** Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
+- **p. 1 / Abstract - extractive body cue:** We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback.
+- **p. 2 / 1 Introduction - extractive body cue:** We mainly evaluate our models by having our labelers rate the quality of model outputs on our test set, consisting of prompts from held-out customers ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our InstructGPT models (PPO-ptx) as well as its variant trained without pretraining mix (PPO) significantly outperform the GPT-3 baselines (GPT, GPT prompted); outputs from our ...
+- **p. 4 / 1 Introduction - extractive body cue:** To test the generalization of our models, we conduct a preliminary experiment with held-out labelers, and find that they prefer InstructGPT outputs to outputs from ...
+- **p. 1 / Abstract - extractive body cue:** Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model ...
+- **p. 3 / 1 Introduction - extractive body cue:** InstructGPT models also generate more appropriate outputs according to our labelers, and more reliably follow explicit constraints in the instruction.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -115,13 +115,13 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Failure and Ablation Link
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Human evaluations of various models on our API prompt distribution, evaluated by how often outputs from each model were preferred to those from ...
-- **p. 58 / Figure/Table caption - extractive PDF cue:** Figure 38: Human evaluation metrics as a function of learning rates. E.9 Learning rate optimization for PPO models For both 1.3B and 6B models, we ...
-- **p. 14 / 4 Results - extractive PDF cue:** This advantage disappears when the respectful prompt is removed ("no prompt").
-- **p. 14 / 4 Results - extractive PDF cue:** A total of 1,729 prompts were labeled for three different 175B models, both with and without "respectful" instructions.
-- **p. 63 / Figure/Table caption - extractive PDF cue:** Figure 43: Model samples on a prompt cherry-picked to show instruction following behavior in other languages, along with random samples from the GPT-3 175B and ...
-- **p. 15 / 4 Results - extractive PDF cue:** In Figure 29 we show that adding pretraining updates to our PPO fine-tuning (PPO-ptx) mitigates these performance regressions on all datasets, and even surpasses GPT-3 ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 8: Examples of generalization in the 175B PPO-ptx model (InstructGPT 175B) compared to GPT-3 175B with no additional prefixing. Prompts are cherry-picked to illustrate ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Human evaluations of various models on our API prompt distribution, evaluated by how often outputs from each model were preferred to those from ...
+- **p. 58 / Figure/Table caption - extractive body cue:** Figure 38: Human evaluation metrics as a function of learning rates. E.9 Learning rate optimization for PPO models For both 1.3B and 6B models, we ...
+- **p. 14 / 4 Results - extractive body cue:** This advantage disappears when the respectful prompt is removed ("no prompt").
+- **p. 14 / 4 Results - extractive body cue:** A total of 1,729 prompts were labeled for three different 175B models, both with and without "respectful" instructions.
+- **p. 63 / Figure/Table caption - extractive body cue:** Figure 43: Model samples on a prompt cherry-picked to show instruction following behavior in other languages, along with random samples from the GPT-3 175B and ...
+- **p. 15 / 4 Results - extractive body cue:** In Figure 29 we show that adding pretraining updates to our PPO fine-tuning (PPO-ptx) mitigates these performance regressions on all datasets, and even surpasses GPT-3 ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Examples of generalization in the 175B PPO-ptx model (InstructGPT 175B) compared to GPT-3 175B with no additional prefixing. Prompts are cherry-picked to illustrate ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -135,7 +135,7 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), temporal p. 10 (3.6 Evaluation), p. 3 (1 Introduction), p. 6 (2 Related work), p. 6 (2 Related work), p. 9 (3.2 Dataset), p. 11 (4 Results).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), temporal p. 10 (3.6 Evaluation), p. 3 (1 Introduction), p. 6 (2 Related work), p. 6 (2 Related work), p. 9 (3.2 Dataset), p. 11 (4 Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

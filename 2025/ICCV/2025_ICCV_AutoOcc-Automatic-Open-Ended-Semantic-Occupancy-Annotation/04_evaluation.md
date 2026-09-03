@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** We use two benchmarks for evaluation: Occ3D-nuScenes, which is used to compare the performance of our method with other occupancy annotation methods for specific categories, ...
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during training.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging regions, and dynamic objects across complex scenes. demonstrates better performance, based ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** We set the resolutions of images as 900 × 1600 for Occ3D-nuScenes and 370 × 1226 for SemanticKITTI.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Semantic occupancy annotation on Occ3D-nuScenes [46]. C represents camera, and L denotes LiDAR. "cons. veh." and "drive. surf." stand for construction vehicles and ...
-- **p. 6 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Undoubtedly, this strategy leads to the loss of crucial details and misalignment between semantics and representations.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Zero-shot cross-dataset performance on SemanticKITTI [2].
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** We use two benchmarks for evaluation: Occ3D-nuScenes, which is used to compare the performance of our method with other occupancy annotation methods for specific categories, ...
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during training.
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging regions, and dynamic objects across complex scenes. demonstrates better performance, based ...
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** We set the resolutions of images as 900 × 1600 for Occ3D-nuScenes and 370 × 1226 for SemanticKITTI.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Semantic occupancy annotation on Occ3D-nuScenes [46]. C represents camera, and L denotes LiDAR. "cons. veh." and "drive. surf." stand for construction vehicles and ...
+- **p. 6 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Undoubtedly, this strategy leads to the loss of crucial details and misalignment between semantics and representations.
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Zero-shot cross-dataset performance on SemanticKITTI [2].
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Performance Evaluation and Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 2, our vision-centric method outperforms these pipelines that utilize LiDAR point clouds. | p. 6 (4.2. Performance Evaluation and Analysis) |
 | 4.2. Performance Evaluation and Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 2, using pure visual input, our method outperforms GaussianOcc [13], which utilizes vanilla GS as an intermediate representation. | p. 7 (4.2. Performance Evaluation and Analysis) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** We use two benchmarks for evaluation: Occ3D-nuScenes, which is used to compare the performance of our method with other occupancy annotation methods for specific categories, ...
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during training.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging regions, and dynamic objects across complex scenes. demonstrates better performance, based ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** We set the resolutions of images as 900 × 1600 for Occ3D-nuScenes and 370 × 1226 for SemanticKITTI.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** We use two benchmarks for evaluation: Occ3D-nuScenes, which is used to compare the performance of our method with other occupancy annotation methods for specific categories, ...
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during training.
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging regions, and dynamic objects across complex scenes. demonstrates better performance, based ...
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** We set the resolutions of images as 900 × 1600 for Occ3D-nuScenes and 370 × 1226 for SemanticKITTI.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. AutoOcc is a fully automatic, vision-centric pipeline for open-ended semantic 3D occupancy annotation. Our method achieves more efficient and effective semantic occupancy auto-labeling ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Comparisons between AutoOcc and existing semantic occupancy annotation pipelines. The definitions of closed-set, open- set, and open-ended are introduced in Section 2. Our ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Vision-Language Guided Gaussian Splatting (VL- GS) efficiently reconstructs semantic instances using a scalable strategy guided by semantic attention maps from VLMs. Addi- tionally, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Semantic occupancy annotation on Occ3D-nuScenes [46]. C represents camera, and L denotes LiDAR. "cons. veh." and "drive. surf." stand for construction vehicles and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Zero-shot cross-dataset performance on SemanticKITTI [2]. Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results of semantic occupancy annotation on Occ3D-nuScenes [46]. Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Comparisons of annotation efficiency. Open-ended stands for the annotation capability for undefined classes. Label-free means training without any human-labeled annotations. † indicates the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. AutoOcc is a fully automatic, vision-centric pipeline for open-ended semantic 3D occupancy annotation. Our method achieves more efficient and effective semantic occupancy auto-labeling ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparisons between AutoOcc and existing semantic occupancy annotation pipelines. The definitions of closed-set, open- set, and open-ended are introduced in Section 2. Our ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Vision-Language Guided Gaussian Splatting (VL- GS) efficiently reconstructs semantic instances using a scalable strategy guided by semantic attention maps from VLMs. Addi- tionally, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Semantic occupancy annotation on Occ3D-nuScenes [46]. C represents camera, and L denotes LiDAR. "cons. veh." and "drive. surf." stand for construction vehicles and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Zero-shot cross-dataset performance on SemanticKITTI [2]. Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results of semantic occupancy annotation on Occ3D-nuScenes [46]. Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Comparisons of annotation efficiency. Open-ended stands for the annotation capability for undefined classes. Label-free means training without any human-labeled annotations. † indicates the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use two benchmarks for evaluation: Occ3D-nuScenes, which is used to compare the performance of our method with other occupancy annotation methods for specific ... | embodiment, simulator version and control stack | p. 6 (4.1. Implementation Details), p. 7 (4.2. Performance Evaluation and Analysis) |
 | Task/environment | Novel class refers to entirely new, unseen semantics in nuScenes, while base class includes those seen during training. | reset, timeout, object/scene variation | p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis) |
@@ -118,8 +118,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 | Primary metric/result | As shown in Table 2, using pure visual input, our method outperforms GaussianOcc [13], which utilizes vanilla GS as an intermediate representation. | numeric claim only at cited anchor | p. 7 (4.2. Performance Evaluation and Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** During optimization, we scale the image size to 225 × 400 and double it every 300 steps until reaching the original resolution.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** The learning rate for the position parameters decays every 250 steps with a decay rate of 0.98.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** During optimization, we scale the image size to 225 × 400 and double it every 300 steps until reaching the original resolution.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** The learning rate for the position parameters decays every 250 steps with a decay rate of 0.98.
 
 ## Generalization and Failure Cases
 
@@ -150,10 +150,10 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** In extreme weather conditions (e.g., rain and nighttime), our method maintains robust performance, achieving annotation results comparable to or even surpassing manually labeled ground truth.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** While the aforementioned approaches do not require additional supervision, they struggle with efficiently modeling semantic geometry and neglect dynamic objects, leading to performance degradation.
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** In extreme weather conditions (e.g., rain and nighttime), our method maintains robust performance, achieving annotation results comparable to or even surpassing manually labeled ground truth.
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** While the aforementioned approaches do not require additional supervision, they struggle with efficiently modeling semantic geometry and neglect dynamic objects, leading to performance degradation.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Implementation Details), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 6 (4.1. Implementation Details), metrics p. 6 (Figure/Table caption), p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 6 (4.2. Performance Evaluation and Analysis), p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 2 (Figure/Table caption), p. 8 (4.3. Zero-shot and Generalization Ability), results p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (4.2. Performance Evaluation and Analysis).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Implementation Details), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 6 (4.1. Implementation Details), metrics p. 6 (Figure/Table caption), p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 6 (4.2. Performance Evaluation and Analysis), p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 2 (Figure/Table caption), p. 8 (4.3. Zero-shot and Generalization Ability), results p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (4.2. Performance Evaluation and Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

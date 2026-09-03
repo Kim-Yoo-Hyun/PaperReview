@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html; PDF retrieval source: https://arxiv.org/pdf/2401.18084. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html; PDF retrieval source: https://arxiv.org/pdf/2401.18084. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method)): W
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | We then introduce our touch encoder design and data sampling strategy that can be used for different tactile sensors at once. | p. 3 (3. Method), p. 3 (3. Method) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities. | p. 3 (3. Method), p. 5 (Method) |
@@ -75,8 +75,8 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method)): W
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | Other works adopted BYOL framework [39] or contrastive predictive coding [120] to learn representations for non vision-based tactile sensors like BioTac. | episode/sequence/action-chunk boundary |
-| Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | not recovered | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | not stated or recoverable in the selected PDF body | Hz/fps, inference time and control rate |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | We train our model with a batch size of 48 on each of the 4 NVIDIA A40 GPUs for 150 epochs. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -125,8 +125,17 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method)): W
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method), objective p. 3 (3.1. Binding touch with images), p. 3 (3. Method), temporal p. 3 (2. Related Work).
+- **Evidence anchors reviewed:** method p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method), objective p. 3 (3.1. Binding touch with images), p. 3 (3. Method), temporal p. 3 (2. Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We optimize this objective using InfoNCE loss [81] to match touches to correct images: LT →V = -1 (p. 3, 3.1. Binding touch with images).
+- **Objective/update evidence:** We optimize this objective using InfoNCE loss [81] to match touches to correct images: LT →V = -1 (p. 3, 3.1. Binding touch with images).
+- **Temporal/runtime evidence:** We then introduce our touch encoder design and data sampling strategy that can be used for different tactile sensors at once. (p. 3, 3. Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

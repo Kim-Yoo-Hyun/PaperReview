@@ -2,22 +2,22 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ZnsR3waLUo; PDF retrieval source: https://openreview.net/pdf/74577aad9a08ae8d5d8bdf6091974f7d026891a3.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ZnsR3waLUo; PDF retrieval source: https://arxiv.org/pdf/2510.11473. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments)): Although our method is slightly slower than 3DGS [21] and 2DGS [16] due to the use of multi-view alignment, it achieves significant improvements in reconstruction quality over these earlier Gaussian-based ...
+PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 18 (Figure/Table caption)): Although our method is slightly slower than 3DGS [21] and 2DGS [16] due to the use of multi-view alignment, it achieves significant improvements in reconstruction quality over these earlier Gaussian-based ...
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5 Experiments - extractive PDF cue:** Following prior works [16, 55, 4, 56], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation.
-- **p. 6 / 5 Experiments - extractive PDF cue:** For novel view synthesis, we use the Mip-NeRF 360 dataset [2], which contains large-scale indoor and outdoor scenes with complex lighting and fine-grained geometric details.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Consistent with our observations on the TNT dataset, our method recovers more accurate and complete surfaces in both foreground and background regions, whereas other methods ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** As shown in Table 1, our method achieves the lowest average Chamfer distance and ranks best across most scenes.
-- **p. 7 / 5 Experiments - extractive PDF cue:** 2DGS GOF PGSR RaDe-GS Ours GS-Pull Figure 3: Visual comparison of surface reconstruction results on the TNT dataset.
-- **p. 8 / 5 Experiments - extractive PDF cue:** We further evaluate our method on the TNT dataset [22], comparing it against both implicit and explicit surface reconstruction baselines.
-- **p. 9 / 5 Experiments - extractive PDF cue:** 5.2 Ablation Studies Table 4: Ablations on the TNT dataset.
-- **p. 8 / 5 Experiments - extractive PDF cue:** For example, GS-Pull [58] only reconstructs foreground objects and often generates overly smooth surfaces.
+- **p. 6 / 5 Experiments - extractive body cue:** Following prior works [16, 56, 4, 57], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation.
+- **p. 6 / 5 Experiments - extractive body cue:** For novel view synthesis, we use the Mip-NeRF 360 dataset [2], which contains large-scale indoor and outdoor scenes with complex lighting and fine-grained geometric details.
+- **p. 9 / 5 Experiments - extractive body cue:** Consistent with our observations on the TNT dataset, our method recovers more accurate and complete surfaces in both foreground and background regions, whereas other methods ...
+- **p. 7 / 5 Experiments - extractive body cue:** As shown in Table 1, our method achieves the lowest average Chamfer distance and ranks best across most scenes.
+- **p. 7 / 5 Experiments - extractive body cue:** 2DGS GOF PGSR RaDe-GS Ours GS-Pull Figure 3: Visual comparison of surface reconstruction results on the TNT dataset.
+- **p. 8 / 5 Experiments - extractive body cue:** We further evaluate our method on the TNT dataset [22], comparing it against both implicit and explicit surface reconstruction baselines.
+- **p. 9 / 5 Experiments - extractive body cue:** 5.2 Ablation Studies Table 4: Ablations on the TNT dataset.
+- **p. 8 / 5 Experiments - extractive body cue:** For example, GS-Pull [60] only reconstructs foreground objects and often generates overly smooth surfaces.
 
 ## Evaluation Type and Scope
 
@@ -26,11 +26,11 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 5 Experiments (p. 6).
+- **Detected evaluation headings:** 5 Experiments (p. 6); B More Evaluation Results (p. 14); B.1 Comparisons on the Deep Blending Dataset (p. 14); B.2 More Experimental Results (p. 14); C More Ablation Results (p. 15).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Although our method is slightly slower than 3DGS [21] and 2DGS [16] due to the use of multi-view alignment, it achieves significant improvements in ... | p. 8 (5 Experiments) |
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 2, our method achieves the best reconstruction performance among all competing approaches, including both implicit and explicit methods. | p. 8 (5 Experiments) |
@@ -40,33 +40,33 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5 Experiments - extractive PDF cue:** Following prior works [16, 55, 4, 56], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation.
-- **p. 6 / 5 Experiments - extractive PDF cue:** For novel view synthesis, we use the Mip-NeRF 360 dataset [2], which contains large-scale indoor and outdoor scenes with complex lighting and fine-grained geometric details.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Consistent with our observations on the TNT dataset, our method recovers more accurate and complete surfaces in both foreground and background regions, whereas other methods ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** As shown in Table 1, our method achieves the lowest average Chamfer distance and ranks best across most scenes.
-- **p. 7 / 5 Experiments - extractive PDF cue:** 2DGS GOF PGSR RaDe-GS Ours GS-Pull Figure 3: Visual comparison of surface reconstruction results on the TNT dataset.
-- **p. 8 / 5 Experiments - extractive PDF cue:** We further evaluate our method on the TNT dataset [22], comparing it against both implicit and explicit surface reconstruction baselines.
-- **p. 9 / 5 Experiments - extractive PDF cue:** 5.2 Ablation Studies Table 4: Ablations on the TNT dataset.
-- **p. 8 / 5 Experiments - extractive PDF cue:** For example, GS-Pull [58] only reconstructs foreground objects and often generates overly smooth surfaces.
+- **p. 6 / 5 Experiments - extractive body cue:** Following prior works [16, 56, 4, 57], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation.
+- **p. 6 / 5 Experiments - extractive body cue:** For novel view synthesis, we use the Mip-NeRF 360 dataset [2], which contains large-scale indoor and outdoor scenes with complex lighting and fine-grained geometric details.
+- **p. 9 / 5 Experiments - extractive body cue:** Consistent with our observations on the TNT dataset, our method recovers more accurate and complete surfaces in both foreground and background regions, whereas other methods ...
+- **p. 7 / 5 Experiments - extractive body cue:** As shown in Table 1, our method achieves the lowest average Chamfer distance and ranks best across most scenes.
+- **p. 7 / 5 Experiments - extractive body cue:** 2DGS GOF PGSR RaDe-GS Ours GS-Pull Figure 3: Visual comparison of surface reconstruction results on the TNT dataset.
+- **p. 8 / 5 Experiments - extractive body cue:** We further evaluate our method on the TNT dataset [22], comparing it against both implicit and explicit surface reconstruction baselines.
+- **p. 9 / 5 Experiments - extractive body cue:** 5.2 Ablation Studies Table 4: Ablations on the TNT dataset.
+- **p. 8 / 5 Experiments - extractive body cue:** For example, GS-Pull [60] only reconstructs foreground objects and often generates overly smooth surfaces.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Our method addresses illumination and boundary artifacts that previous methods fail to resolve. In this work, we propose a novel method for accurate ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of our method. The training includes five loss functions: LI, Lnc, Lns, Lp and Lf. The occlusion weight ω, visibility item υ ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Visual comparison of surface reconstruction results on the TNT dataset. Our method can handle shadows and large indoor flat regions. GS-Pull reconstructs only ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Visual comparison of surface reconstruction results on the Mip-NeRF 360 dataset. Our approach effectively handles the challenges posed by cluttered lighting and boundaries. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison of Chamfer distances on the DTU dataset. The best results are highlighted as 1st , 2nd and 3rd . ∗means that ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative comparison of F1-scores on the TNT dataset. The best results are highlighted as 1st , 2nd and 3rd . ∗means that the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Quantitative comparison on the Mip-NeRF 360 dataset. The best results are highlighted as 1st , 2nd and 3rd . Outdoor scenes Indoor scenes ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Ablations on the TNT dataset. Precision ↑Recall ↑F1-score ↑ Only LI 0.09 0.23 0.13 w/o edge item 0.49
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Our method addresses illumination and boundary artifacts that previous methods fail to resolve. In this work, we propose a novel method for accurate ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our method. The training includes five loss functions: LI, Lnc, Lns, Lp and Lf. The occlusion weight ω, visibility item υ ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Visual comparison of surface reconstruction results on the TNT dataset. Our method can handle shadows and large indoor flat regions. GS-Pull reconstructs only ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Visual comparison of surface reconstruction results on the Mip-NeRF 360 dataset. Our approach effectively handles the challenges posed by cluttered lighting and boundaries. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison of Chamfer distances on the DTU dataset. The best results are highlighted as 1st , 2nd and 3rd . ∗means that ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Quantitative comparison of F1-scores on the TNT dataset. The best results are highlighted as 1st , 2nd and 3rd . ∗means that the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Quantitative comparison on the Mip-NeRF 360 dataset. The best results are highlighted as 1st , 2nd and 3rd . Outdoor scenes Indoor scenes ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Ablations on the TNT dataset. Precision ↑Recall ↑F1-score ↑ Only LI 0.09 0.23 0.13 w/o edge item 0.49
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | Following prior works [16, 55, 4, 56], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation. | embodiment, simulator version and control stack | p. 6 (5 Experiments), p. 6 (5 Experiments) |
+| Robot/hardware/simulator | Following prior works [16, 56, 4, 57], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation. | embodiment, simulator version and control stack | p. 6 (5 Experiments), p. 6 (5 Experiments) |
 | Task/environment | For novel view synthesis, we use the Mip-NeRF 360 dataset [2], which contains large-scale indoor and outdoor scenes with complex lighting and fine-grained geometric ... | reset, timeout, object/scene variation | p. 6 (5 Experiments), p. 9 (5 Experiments) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (4 Method), p. 5 (4 Method) |
 | Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1 Introduction), p. 5 (4 Method) |
@@ -77,12 +77,12 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 |---|---|---|
 | Precision ↑Recall ↑F1-score ↑ Only LI 0.09 0.23 0.13 w/o edge item 0.49 0.59 0.53 w/o weight δ 0.50 0.59 0.53 w/o Lnc 0.48 ... | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | In addition to the F1-score, we also report Precision and Recall to provide a more comprehensive evaluation. | definition/direction/unit from same section | p. 9 (5 Experiments) |
-| Following established protocols [16, 55, 4, 56], we report Chamfer distance for surface reconstruction on the DTU dataset and F1-score for the TNT dataset. | definition/direction/unit from same section | p. 6 (5 Experiments) |
+| Following established protocols [16, 56, 4, 57], we report Chamfer distance for surface reconstruction on the DTU dataset and F1-score for the TNT dataset. | definition/direction/unit from same section | p. 6 (5 Experiments) |
 | Notably, while several Gaussian-based methods require less optimization time, they tend to produce results with much lower accuracy. | definition/direction/unit from same section | p. 8 (5 Experiments) |
 | Table 2: Quantitative comparison of F1-scores on the TNT dataset. The best results are highlighted as 1st , 2nd and 3rd . ∗means that ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
+| Figure 6: Comparison of our method with prior Gaussian-based approaches on novel view synthesis on the Mip-NeRF 360 dataset. Our method produces high-quality renderings ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
+| Figure 8: Visual comparison of surface reconstruction results on the DTU dataset. Our method demonstrates superior capability in handling reflective materials and recovering fine-grained ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 | Our overall pipeline, training strategy, and hyperparameter settings generally follow 3DGS [21]. | definition/direction/unit from same section | p. 6 (5 Experiments) |
-| 5.1 Performance Evaluation Comparisons on DTU. | definition/direction/unit from same section | p. 7 (5 Experiments) |
-| Then, we incorporate our image edge item and normal-based geometry alignment into the training. | definition/direction/unit from same section | p. 7 (5 Experiments) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -94,7 +94,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 | We further evaluate our method on the TNT dataset [22], comparing it against both implicit and explicit surface reconstruction baselines. | comparison identity and matched condition | p. 8 (5 Experiments) |
 | It also effectively mitigates the impact of shadows, whereas baseline methods often yield noisy meshes or fail to capture geometric details. | comparison identity and matched condition | p. 8 (5 Experiments) |
 | Our method outperforms competitors on most metrics, demonstrating superior image fitting and generalization to unseen viewpoints. | comparison identity and matched condition | p. 9 (5 Experiments) |
-| Following prior works [16, 55, 4, 56], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation. | comparison identity and matched condition | p. 6 (5 Experiments) |
+| Following prior works [16, 56, 4, 57], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation. | comparison identity and matched condition | p. 6 (5 Experiments) |
 | 5.1 Performance Evaluation Comparisons on DTU. | comparison identity and matched condition | p. 7 (5 Experiments) |
 
 | Fairness dimension | Required matched condition |
@@ -110,23 +110,25 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 |---|---|---|
 | Our ablation results in Table 4 further confirm that flattening 3D Gaussians into planar Gaussian disks is ineffective for our framework. | component/input/data sensitivity | p. 9 (5 Experiments) |
 | Precision ↑Recall ↑F1-score ↑ Only LI 0.09 0.23 0.13 w/o edge item 0.49 0.59 0.53 w/o weight δ 0.50 0.59 0.53 w/o Lnc 0.48 ... | component/input/data sensitivity | p. 9 (5 Experiments) |
+| Figure 6: Comparison of our method with prior Gaussian-based approaches on novel view synthesis on the Mip-NeRF 360 dataset. Our method produces high-quality renderings ... | component/input/data sensitivity | p. 16 (Figure/Table caption) |
 | Figure 4: Visual comparison of surface reconstruction results on the Mip-NeRF 360 dataset. Our approach effectively handles the challenges posed by cluttered lighting and ... | component/input/data sensitivity | p. 7 (Figure/Table caption) |
+| Table 8: Ablation study on different loss terms. 3DGS Only LI w/o Lnc w/o Lns w/o Lp w/o Lf Full | component/input/data sensitivity | p. 19 (Figure/Table caption) |
 | Figure 2: Overview of our method. The training includes five loss functions: LI, Lnc, Lns, Lp and Lf. The occlusion weight ω, visibility item ... | component/input/data sensitivity | p. 4 (Figure/Table caption) |
 
 ## Main Results / Claim–Evidence Map
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Our contributions are summarized as follows. • Incorporating edge information and visibility-aware multi-view alignment to enhance surface boundary delineation and improve geometric consistency. • ... | Although our method is slightly slower than 3DGS [21] and 2DGS [16] due to the use of multi-view alignment, it achieves significant improvements in ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments) |
+| Our contributions are summarized as follows. • Incorporating edge information and visibility-aware multi-view alignment to enhance surface boundary delineation and improve geometric consistency. • ... | Although our method is slightly slower than 3DGS [21] and 2DGS [16] due to the use of multi-view alignment, it achieves significant improvements in ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 18 (Figure/Table caption) |
 | Primary metric/result | As shown in Table 2, our method achieves the best reconstruction performance among all competing approaches, including both implicit and explicit methods. | numeric claim only at cited anchor | p. 8 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5 Experiments - extractive PDF cue:** Following prior works [16, 55, 4, 56], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation.
-- **p. 6 / 5 Experiments - extractive PDF cue:** We set the number of source views to N = 3, the threshold in Lns 6
-- **p. 7 / 5 Experiments - extractive PDF cue:** Our approach effectively handles the challenges posed by cluttered lighting and boundaries. to τ = 0.01, and the patch size in Lp to 7×7.
-- **p. 7 / 5 Experiments - extractive PDF cue:** We first pretrain the model using only the color loss for 7,000 steps to obtain a coarse geometric initialization, which provides a stable foundation for ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** For novel view synthesis, we continue training for an additional 10,000 steps to optimize rendering quality.
-- **p. 7 / 5 Experiments - extractive PDF cue:** All experiments are conducted on a single NVIDIA RTX 4090 GPU.
+- **p. 6 / 5 Experiments - extractive body cue:** Following prior works [16, 56, 4, 57], we use 15 scenes from the DTU dataset and 6 scenes from the TNT dataset for evaluation.
+- **p. 6 / 5 Experiments - extractive body cue:** We set the number of source views to N = 3, the threshold in Lns 6
+- **p. 7 / 5 Experiments - extractive body cue:** Our approach effectively handles the challenges posed by cluttered lighting and boundaries. to τ = 0.01, and the patch size in Lp to 7×7.
+- **p. 7 / 5 Experiments - extractive body cue:** We first pretrain the model using only the color loss for 7,000 steps to obtain a coarse geometric initialization, which provides a stable foundation for ...
+- **p. 7 / 5 Experiments - extractive body cue:** For novel view synthesis, we continue training for an additional 10,000 steps to optimize rendering quality.
+- **p. 7 / 5 Experiments - extractive body cue:** All experiments are conducted on a single NVIDIA RTX 4090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -135,9 +137,9 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 | body limitation/failure cue | Figure 1: Our method addresses illumination and boundary artifacts that previous methods fail to resolve. In this work, we propose a novel method for ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | The definitions of υrs(pr) and ω(pr) are detailed in the following. • Due to viewpoint changes, a 2D pixel pr in the reference view ... | p. 5 (4 Method) |
 | body limitation/failure cue | To address these limitations, we introduce a multi-view feature alignment loss. | p. 6 (4 Method) |
+| body limitation/failure cue | Figure 5: Visual comparison of surface reconstruction results on the Deep Blending dataset. Our method effectively handles the challenges posed by complex lighting conditions ... | p. 15 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: Overview of our method. The training includes five loss functions: LI, Lnc, Lns, Lp and Lf. The occlusion weight ω, visibility item ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | However, image-based losses are susceptible to noise, blur, and low-texture regions. | p. 6 (4 Method) |
-| body limitation/failure cue | It also effectively mitigates the impact of shadows, whereas baseline methods often yield noisy meshes or fail to capture geometric details. | p. 8 (5 Experiments) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -162,14 +164,14 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Our method addresses illumination and boundary artifacts that previous methods fail to resolve. In this work, we propose a novel method for accurate ...
-- **p. 5 / 4 Method - extractive PDF cue:** The definitions of υrs(pr) and ω(pr) are detailed in the following. • Due to viewpoint changes, a 2D pixel pr in the reference view may ...
-- **p. 6 / 4 Method - extractive PDF cue:** To address these limitations, we introduce a multi-view feature alignment loss.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of our method. The training includes five loss functions: LI, Lnc, Lns, Lp and Lf. The occlusion weight ω, visibility item υ ...
-- **p. 6 / 4 Method - extractive PDF cue:** However, image-based losses are susceptible to noise, blur, and low-texture regions.
-- **p. 8 / 5 Experiments - extractive PDF cue:** It also effectively mitigates the impact of shadows, whereas baseline methods often yield noisy meshes or fail to capture geometric details.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Our method addresses illumination and boundary artifacts that previous methods fail to resolve. In this work, we propose a novel method for accurate ...
+- **p. 5 / 4 Method - extractive body cue:** The definitions of υrs(pr) and ω(pr) are detailed in the following. • Due to viewpoint changes, a 2D pixel pr in the reference view may ...
+- **p. 6 / 4 Method - extractive body cue:** To address these limitations, we introduce a multi-view feature alignment loss.
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Visual comparison of surface reconstruction results on the Deep Blending dataset. Our method effectively handles the challenges posed by complex lighting conditions and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our method. The training includes five loss functions: LI, Lnc, Lns, Lp and Lf. The occlusion weight ω, visibility item υ ...
+- **p. 6 / 4 Method - extractive body cue:** However, image-based losses are susceptible to noise, blur, and low-texture regions.
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 9 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), p. 8 (Figure/Table caption), p. 6 (5 Experiments), baselines p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), results p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 9 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), p. 8 (Figure/Table caption), p. 16 (Figure/Table caption), baselines p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), results p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 18 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, and whose weights are the policy parameters.를 The dominant approach for the last decade has been the value-function approach, in which all function approximation effort goes into estimating a value function, with the action-selection policy represented implicitly as the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Similarly, Gordon's (1995) fitted value iteration is also convergent and value-based, but does not find a locally optimal policy.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, and whose weights are the ... (p. 2, Abstract).
+- **Paper-specific mechanism:** Williams's REINFORCE method and actor-critic methods are examples of this approach. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract); the relevant task/metric cue is However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The value-function approach has worked well in many applications, but has several limitations. (p. 1, Abstract).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The environment's dynamics are characterized by state transition probabilities, P:SI = Pr { St+ 1 = Sf I St = s, at = a}, and expected rewards 'R~ = E {rt+l 1st ....
-3. Compare against the body-reported baseline or a matched simpler baseline: The issues here are entirely analogous to those in the use of reinforcement baselines in earlier work (e.g., Williams, 1992; Dayan, 1991; Sutton, 1984)..
-4. Report the body metric and its denominator/aggregation: However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy..
-5. Re-run the body-reported ablation/failure condition: In any event, the key aspect of both expressions for the gradient is that their are no terms of the form adiJII): the effect of policy changes on the distribution of states ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, and whose weights are the ... (p. 2, Abstract); preserve the objective/update rule: In this paper we explore an alternative approach in which the policy is explicitly represented by its own function approximator, independent of the value function, and is updated according to ... (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: The environment's dynamics are characterized by state transition probabilities, P:SI = Pr { St+ 1 = Sf I St = s, at = a}, and expected rewards 'R~ = E ... (p. 2, Abstract).
+3. Compare against the reported or matched baseline: Williams's (1988, 1992) REINFORCE algorithm also finds an unbiased estimate of the gradient, but without the assistance of a learned value function. (p. 2, Abstract).
+4. Report the body metric with its denominator and aggregation: However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract).
+5. Re-run the reported ablation or stress/failure condition: Williams's (1988, 1992) REINFORCE algorithm also finds an unbiased estimate of the gradient, but without the assistance of a learned value function. (p. 2, Abstract); if none is reported, design one around: The value-function approach has worked well in many applications, but has several limitations. (p. 1, Abstract).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract); the primary result is directionally consistent at p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (Abstract), match the reported outcome at p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), and measure the boundary at p. 1 (Abstract), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Konda, Tsitsiklis, prep mechanism이 The issues here are entirely analogous to those in the use of reinforcement baselines in earlier ... 대비 However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining ...을 개선하고, Similarly, Gordon's (1995) fitted value iteration is also convergent and value-based, but does not find a ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is ...), does the paper-specific mechanism (Williams's REINFORCE method and actor-critic methods are examples of this approach.) retain the reported evaluation outcome (However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining ...) when tested against the paper's strongest explicit boundary (The value-function approach has worked well in many applications, but has several limitations.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Williams's REINFORCE method and actor-critic methods are examples of this approach. (p. 1, Abstract).
+- **Paper-supported outcome:** However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract).
+- **Strongest explicit boundary:** The value-function approach has worked well in many applications, but has several limitations. (p. 1, Abstract).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

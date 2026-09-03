@@ -1,8 +1,10 @@
 # DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=ajSmXqgS24.
-> PDF retrieval source: https://arxiv.org/pdf/2502.09614. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=ajSmXqgS24.
+> PDF retrieval source: https://arxiv.org/pdf/2502.09614. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2502.09614
 - Code/Project: https://meowuu7.github.io/DexTrack/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -23,8 +25,8 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** However, challenges remain due to noisy kinematic references, differences in morphology between human and robotic hands, complex dynamics with rich contacts, and diverse object geometry ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Achieving human-level robotic dexterous manipulation is challenging due to two main difficulties: the intricate dynamics of contact-rich manipulation, which complicates optimization (Pang & Tedrake, 2021; ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2025 We demonstrate the superiority of our method and compare it with previous methods on challenging manipulation tracking ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a data-driven way to generate homotopy paths, enabling solving challenging tracking problems.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We conduct both extensive experiments in the simulator, i.e., Isaac Gym (Makoviychuk et al., 2021), and evaluations in the real world, to demonstrate the efficacy, ...
 
 ## Core Idea
 
@@ -32,9 +34,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Based upon the previous observations, we propose DexTrack, a novel neural tracking controller for dexterous manipulation, guided by human references.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To make sure the data flywheel functions effectively, we introduce two key designs.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a data-driven way to generate homotopy paths, enabling solving challenging tracking problems.
-- **p. 3 / 3 METHOD - extractive body cue:** Dexterous manipulation "tracking" involves controlling a robotic hand to mimic a kinematic hand-object state sequence, the goal trajectory, denoted as {ˆsn}N n=0.
-- **p. 4 / 3 METHOD - extractive body cue:** Published as a conference paper at ICLR 2025 Expert Action Trajectory {𝒂!", … , 𝒂#", … } t Robot Tracking Demonstrations Kinematic
-- **p. 3 / 3 METHOD - extractive body cue:** A "tracking demonstration" pairs a kinematic reference {ˆsn} with an expert action sequence {aL n}, guiding the robot from s0 = ˆs0 to 3
+- **p. 1 / ABSTRACT - extractive body cue:** Our method achieves over a 10% improvement in success rates compared to leading baselines.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** First, we carefully integrate reinforcement and imitation learning techniques to train a neural controller, ensuring its performance improves with more demonstrations while maintaining robustness against ...
+- **p. 1 / ABSTRACT - extractive body cue:** We introduce an approach that curates large-scale successful robot tracking demonstrations, comprising pairs of human references and robot actions, to train a neural controller.
+- **p. 1 / ABSTRACT - extractive body cue:** Current reinforcement learning and trajectory optimization methods often fall short due to their dependence on task-specific rewards or precise system models.
 
 ## Observation, State, and Output Interface
 
@@ -42,8 +45,8 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 |---|---|---|---|
 | Observation/input | To achieve the challenging goal above, we draw three key observations: 1) learning is crucial for handling heterogeneous reference motion noises and transferring data prior to new scenarios, supporting robust and generalizable ... | RGB-D/point cloud, object state와 contact/task observation | p. 2 (1 INTRODUCTION), p. 3 (3 METHOD) |
 | State/latent | achieve, challenging, goal, above, draw, three, observations, learning, crucial, handling, heterogeneous, reference | object geometry, affordance, contact mode 또는 end-effector state | p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 3 (3 METHOD) |
-| Output/action | These "kinematic references" are retargeted from human manipulation trajectories, with ˆsn representing the robot hand state and object pose at timestep n. | grasp, pose, force 또는 end-effector trajectory | p. 3 (3 METHOD), p. 3 (3 METHOD), p. 2 (1 INTRODUCTION) |
-| Objective/outcome | task completion, contact success, pose/force error와 generalization | task completion, contact success, pose/force error와 generalization | 본문 anchor 없음 |
+| Output/action | These "kinematic references" are retargeted from human manipulation trajectories, with ˆsn representing the robot hand state and object pose at timestep n. | grasp, pose, force 또는 end-effector trajectory | p. 3 (3 METHOD), p. 3 (3 METHOD), p. 1 (ABSTRACT) |
+| Objective/outcome | Current reinforcement learning and trajectory optimization methods often fall short due to their dependence on task-specific rewards or precise system models. | task completion, contact success, pose/force error와 generalization | p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT) |
 
 ## Main Claims and Actual Contribution
 
@@ -51,10 +54,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Based upon the previous observations, we propose DexTrack, a novel neural tracking controller for dexterous manipulation, guided by human references.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To make sure the data flywheel functions effectively, we introduce two key designs.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a data-driven way to generate homotopy paths, enabling solving challenging tracking problems.
+- **p. 1 / ABSTRACT - extractive body cue:** Our method achieves over a 10% improvement in success rates compared to leading baselines.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** On average, our method improves the tracking success rate by over 10% compared to the best prior methods.
 - **p. 17 / B.1 DEXTEROUS MANIPULATION TRACKING CONTROL - extractive body cue:** The final model trained in this way achieves 42.13% and 60.41% success rates under two thresholds.
-- **p. 17 / B.1 DEXTEROUS MANIPULATION TRACKING CONTROL - extractive body cue:** Test set Rerr (rad, ↓) Terr (cm, ↓) Ewrist (↓) Efinger (rad, ↓) Success Rate (%, ↑) S1 0.5787 2.43 0.1481 0.4703 35.97/67.63 S2 0.6026 ...
 
 - Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
 
@@ -80,4 +83,13 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, challenges remain due to noisy kinematic references, differences in morphology between human and robotic hands, complex dynamics with rich contacts, and diverse object geometry and skills.를 문제로 두고, Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (3 METHOD), p. 4 (3 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, challenges remain due to noisy kinematic references, differences in morphology between human and robotic hands, complex dynamics with rich contacts, and diverse object geometry and skills.를 문제로 두고, Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, challenges remain due to noisy kinematic references, differences in morphology between human and robotic hands, complex dynamics with rich contacts, and diverse object geometry and skills. (p. 2, 1 INTRODUCTION).
+- **Actual contribution:** Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ... (p. 3, 1 INTRODUCTION).
+- **Evaluation boundary:** Figure 3: Robustness w.r.t. unreasonable states. Please check our website and video for animated results. We demonstrate the generalization ability and robustness of our tracking controller on unseen trajec- tories ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up from the table. (p. 20, B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME).

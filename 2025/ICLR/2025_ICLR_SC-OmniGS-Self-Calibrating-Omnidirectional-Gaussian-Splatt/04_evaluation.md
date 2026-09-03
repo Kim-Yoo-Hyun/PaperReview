@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=7idCpuEAiR; PDF retrieval source: https://openreview.net/pdf/01fcd20c921bde26c615c92937bbfdc3b4a81e87.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=7idCpuEAiR; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/113436. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** We evaluated SG-OmniGS against several SOTA models on datasets of 360-degree images, including eight real-world multi-room scenes from 360Roam dataset (Huang et al., 2022) each ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 5.3 EVALUATION ON MULTI-ROOM REAL-WORLD DATASET In real-world scenarios, we studied three situations of SC-OmniGS and reported the average metric scores across scenes in Table ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** 5.2 EVALUATION ON SINGLE-ROOM SYNTHETIC DATASET We conducted experiments on three synthetic scenes from OmniBlender (Choi et al., 2023), namely Barbershop, Classroom, and Flat.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 1: Quantitative comparisons on synthetic dataset OmniBlender.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Real-world omnidirectional images captured by 360-degree cameras inherit the distortion from each lens and result in a complex distortion pattern.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** In Figure 5, we visualize the performance trend depicting the impact of increasing noise scales on the synthetic scene Barbershop and the realworld scene Lab.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** To validate the effectiveness of our camera calibration, we conducted ablation studies on a real scene Center, with and without perturbation to training cameras.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Our camera calibration demonstrates greater robustness to translation errors with only minor degradation compared to rotation errors.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We evaluated SG-OmniGS against several SOTA models on datasets of 360-degree images, including eight real-world multi-room scenes from 360Roam dataset (Huang et al., 2022) each ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 5.3 EVALUATION ON MULTI-ROOM REAL-WORLD DATASET In real-world scenarios, we studied three situations of SC-OmniGS and reported the average metric scores across scenes in Table ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5.2 EVALUATION ON SINGLE-ROOM SYNTHETIC DATASET We conducted experiments on three synthetic scenes from OmniBlender (Choi et al., 2023), namely Barbershop, Classroom, and Flat.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Real-world omnidirectional images captured by 360-degree cameras inherit the distortion from each lens and result in a complex distortion pattern.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Our method is able to effectively optimize the scene representation, displaying a low sensitivity to initial values.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** In Figure 5, we visualize the performance trend depicting the impact of increasing noise scales on the synthetic scene Barbershop and the realworld scene Lab.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** To validate the effectiveness of our camera calibration, we conducted ablation studies on a real scene Center, with and without perturbation to training cameras.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Our camera calibration demonstrates greater robustness to translation errors with only minor degradation compared to rotation errors.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | When trained with pose perturbation, our full model, incorporating both camera model and pose optimization, consistently achieves improvement in both training and test view ... | p. 10 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Despite a slight decrease in rendering quality, the results demonstrate that our method still exhibits significant performance improvements compared to baseline methods. | p. 8 (5 EXPERIMENTS) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** We evaluated SG-OmniGS against several SOTA models on datasets of 360-degree images, including eight real-world multi-room scenes from 360Roam dataset (Huang et al., 2022) each ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 5.3 EVALUATION ON MULTI-ROOM REAL-WORLD DATASET In real-world scenarios, we studied three situations of SC-OmniGS and reported the average metric scores across scenes in Table ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** 5.2 EVALUATION ON SINGLE-ROOM SYNTHETIC DATASET We conducted experiments on three synthetic scenes from OmniBlender (Choi et al., 2023), namely Barbershop, Classroom, and Flat.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 1: Quantitative comparisons on synthetic dataset OmniBlender.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Real-world omnidirectional images captured by 360-degree cameras inherit the distortion from each lens and result in a complex distortion pattern.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** In Figure 5, we visualize the performance trend depicting the impact of increasing noise scales on the synthetic scene Barbershop and the realworld scene Lab.
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** To validate the effectiveness of our camera calibration, we conducted ablation studies on a real scene Center, with and without perturbation to training cameras.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** We evaluated SG-OmniGS against several SOTA models on datasets of 360-degree images, including eight real-world multi-room scenes from 360Roam dataset (Huang et al., 2022) each ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 5.3 EVALUATION ON MULTI-ROOM REAL-WORLD DATASET In real-world scenarios, we studied three situations of SC-OmniGS and reported the average metric scores across scenes in Table ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5.2 EVALUATION ON SINGLE-ROOM SYNTHETIC DATASET We conducted experiments on three synthetic scenes from OmniBlender (Choi et al., 2023), namely Barbershop, Classroom, and Flat.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Real-world omnidirectional images captured by 360-degree cameras inherit the distortion from each lens and result in a complex distortion pattern.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Our method is able to effectively optimize the scene representation, displaying a low sensitivity to initial values.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** In Figure 5, we visualize the performance trend depicting the impact of increasing noise scales on the synthetic scene Barbershop and the realworld scene Lab.
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** To validate the effectiveness of our camera calibration, we conducted ablation studies on a real scene Center, with and without perturbation to training cameras.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: SC-OmniGS jointly optimizes the omnidirectional camera model, poses, and 3D Gaus- sians using a differentiable omnidirectional rasterizer. It can achieve rapid radiance field ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: A schematic overview of SC-OmniGS optimization flow. 3 PRELIMINARY: 3D GAUSSIAN SPLATTING 3D Gaussian splatting (3D-GS) (Kerbl et al., 2023) represents the scene ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Differentiable omnidirectional camera model. Part 2: ∂ro 2D ∂T′ , the gradient of 2D Gaussian w.r.t. pose [q/t]. Camera pose gets involved in ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. For model initialization, we create a spherical grid S ∈RH×W ×3 and set the correspond- ing angle distortion coefficients D with the same ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparisons on synthetic dataset OmniBlender. Checked "Perturb" indicates perturbed training camera poses for training, † indicates training from scratch. 3D-GS based meth- ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparisons of 360-degree novel views among calibration methods. Our results outperform in both rendering quality and camera accuracy. † indicates training from ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative comparisons on real-world dataset 360Roam. "Point Init" indicates the way of point cloud initialization for 3D-GS based methods, checked "Perturb" indicates perturbed ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 5: Performance with different camera perturbations (PSNR↑). Zoom in for details.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: SC-OmniGS jointly optimizes the omnidirectional camera model, poses, and 3D Gaus- sians using a differentiable omnidirectional rasterizer. It can achieve rapid radiance field ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: A schematic overview of SC-OmniGS optimization flow. 3 PRELIMINARY: 3D GAUSSIAN SPLATTING 3D Gaussian splatting (3D-GS) (Kerbl et al., 2023) represents the scene ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Differentiable omnidirectional camera model. Part 2: ∂ro 2D ∂T′ , the gradient of 2D Gaussian w.r.t. pose [q/t]. Camera pose gets involved in ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. For model initialization, we create a spherical grid S ∈RH×W ×3 and set the correspond- ing angle distortion coefficients D with the same ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparisons on synthetic dataset OmniBlender. Checked "Perturb" indicates perturbed training camera poses for training, † indicates training from scratch. 3D-GS based meth- ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparisons of 360-degree novel views among calibration methods. Our results outperform in both rendering quality and camera accuracy. † indicates training from ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Quantitative comparisons on real-world dataset 360Roam. "Point Init" indicates the way of point cloud initialization for 3D-GS based methods, checked "Perturb" indicates perturbed ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Performance with different camera perturbations (PSNR↑). Zoom in for details.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluated SG-OmniGS against several SOTA models on datasets of 360-degree images, including eight real-world multi-room scenes from 360Roam dataset (Huang et al., 2022) ... | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
 | Task/environment | 5.3 EVALUATION ON MULTI-ROOM REAL-WORLD DATASET In real-world scenarios, we studied three situations of SC-OmniGS and reported the average metric scores across scenes in ... | reset, timeout, object/scene variation | p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
@@ -122,9 +122,9 @@ PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 
 | Primary metric/result | Despite a slight decrease in rendering quality, the results demonstrate that our method still exhibits significant performance improvements compared to baseline methods. | numeric claim only at cited anchor | p. 8 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** The initial learning rates for each camera quaternion q and translation t are set to 0.01, with exponential decay to 1.6e-4 and 6e-3, respectively, in ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** All methods were run on a desktop computer with an RTX 3090 GPU.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Existing methods for recovering 3D information from 360-degree images, including structure-from-motion (SfM) systems (Moulon et al., 2013; Huang & Yeung, 2022), rely on an idealized ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** The initial learning rates for each camera quaternion q and translation t are set to 0.01, with exponential decay to 1.6e-4 and 6e-3, respectively, in ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** All methods were run on a desktop computer with an RTX 3090 GPU.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Existing methods for recovering 3D information from 360-degree images, including structure-from-motion (SfM) systems (Moulon et al., 2013; Huang & Yeung, 2022), rely on an idealized ...
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** However, we cannot apply a similar modification to 3D-GS based methods.
-- **p. 10 / 6 CONCLUSION - extractive PDF cue:** With the differentiable omnidirectional camera model and Gaussian splatting procedure, our approach jointly optimizes 3D Gaussians, omnidirectional camera poses and camera model, leading to robust ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Our camera calibration demonstrates greater robustness to translation errors with only minor degradation compared to rotation errors.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** OmniBlender dataset provides noise-free camera poses and depth maps.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Additionally, since point cloud initialization is demanded by 3D-GS based methods, we conducted experiments using different initialization strategies to further verify our system's robustness and ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** To verify SC-OmniGS flexibility and robustness, we utilized an omnidirectional monocular depth estimation method, e.g.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** However, we cannot apply a similar modification to 3D-GS based methods.
+- **p. 10 / 6 CONCLUSION - extractive body cue:** With the differentiable omnidirectional camera model and Gaussian splatting procedure, our approach jointly optimizes 3D Gaussians, omnidirectional camera poses and camera model, leading to robust ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Our camera calibration demonstrates greater robustness to translation errors with only minor degradation compared to rotation errors.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** OmniBlender dataset provides noise-free camera poses and depth maps.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Additionally, since point cloud initialization is demanded by 3D-GS based methods, we conducted experiments using different initialization strategies to further verify our system's robustness and ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** To verify SC-OmniGS flexibility and robustness, we utilized an omnidirectional monocular depth estimation method, e.g.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 10 (5 EXPERIMENTS), p. 16 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), baselines p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 19 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 19 (Figure/Table caption), p. 9 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 10 (5 EXPERIMENTS), p. 16 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), baselines p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 19 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 19 (Figure/Table caption), p. 9 (5 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

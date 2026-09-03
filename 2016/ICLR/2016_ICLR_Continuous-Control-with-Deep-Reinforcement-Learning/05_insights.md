@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 A long-standing challenge of robotic control is to learn an action policy directly from raw sensory input such as video.를 An agent's behavior is defined by a policy, π, which maps states to a probability distribution over the actions π: S →P(A).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 2: Dimensionality of the MuJoCo tasks: the dimensionality of the underlying physics model dim(s), number of action dimensions dim(a) and observation dimensions dim(o). task name Brief Description blockworld1 Agent is required ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work we present a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Recently, significant progress has been made by combining advances in deep learning for sensory processing (Krizhevsky et al., 2012) with reinforcement learning, resulting in the "Deep Q Network" (DQN) algorithm ... (p. 1, 1 INTRODUCTION).
+- **Paper-specific mechanism:** In this work we present a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces. (p. 1, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the average and best observed (across 5 runs). All scores, except Torcs, are ... (p. 7, Figure/Table caption); the relevant task/metric cue is Cart Pendulum Swing-up Cartpole Swing-up Fixed Reacher Blockworld Gripper Puck Shooting Monoped Balancing Moving Gripper Cheetah Million Steps 0 1 1 0 1 1 0 0 1 1 0 0 ... (p. 6, 4 RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** On both low-dimensional and from pixels, some replicas were able to learn reasonable policies that are able to complete a circuit around the track though other replicas failed to learn ... (p. 6, 4 RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We examined DDPG's estimates empirically by comparing the values estimated by Q after training with the true returns seen on test episodes..
-3. Compare against the body-reported baseline or a matched simpler baseline: We normalized the scores using two baselines..
-4. Report the body metric and its denominator/aggregation: Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the average and best observed (across 5 runs). All scores, except Torcs, are normalized so ....
-5. Re-run the body-reported ablation/failure condition: We also report results with components of our algorithm (i.e. the target network or batch normalization) removed..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Recently, significant progress has been made by combining advances in deep learning for sensory processing (Krizhevsky et al., 2012) with reinforcement learning, resulting in the "Deep Q Network" (DQN) algorithm ... (p. 1, 1 INTRODUCTION); preserve the objective/update rule: We consider function approximators parameterized by θQ, which we optimize by minimizing the loss: L(θQ) = Est∼ρβ,at∼β,rt∼E h Q(st, at/θQ) -yt 2i (4) where yt = r(st, at) + γQ(st+1, µ(st+1)/θQ). (p. 3, 2 BACKGROUND).
+2. Use the paper-reported task/data/environment cue: In all tasks, we ran experiments using both a low-dimensional state description (such as joint angles and positions) and high-dimensional renderings of the environment. (p. 5, 4 RESULTS).
+3. Compare against the reported or matched baseline: We normalized the scores using two baselines. (p. 5, 4 RESULTS).
+4. Report the body metric with its denominator and aggregation: Cart Pendulum Swing-up Cartpole Swing-up Fixed Reacher Blockworld Gripper Puck Shooting Monoped Balancing Moving Gripper Cheetah Million Steps 0 1 1 0 1 1 0 0 1 1 0 0 ... (p. 6, 4 RESULTS).
+5. Re-run the reported ablation or stress/failure condition: We evaluated the policy periodically during training by testing it without exploration noise. (p. 5, 4 RESULTS); if none is reported, design one around: On both low-dimensional and from pixels, some replicas were able to learn reasonable policies that are able to complete a circuit around the track though other replicas failed to learn ... (p. 6, 4 RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p. 5 (4 RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p. 5 (4 RESULTS), and measure the boundary at p. 6 (4 RESULTS), p. 9 (6 CONCLUSION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, model-free, off-policy mechanism이 We normalized the scores using two baselines. 대비 Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the ...을 개선하고, Table 2: Dimensionality of the MuJoCo tasks: the dimensionality of the underlying physics model dim(s), number ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Recently, significant progress has been made by combining advances in deep learning for sensory processing (Krizhevsky et al., 2012) with reinforcement learning, ...), does the paper-specific mechanism (In this work we present a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action ...) retain the reported evaluation outcome (Cart Pendulum Swing-up Cartpole Swing-up Fixed Reacher Blockworld Gripper Puck Shooting Monoped Balancing Moving Gripper Cheetah Million Steps ...) when tested against the paper's strongest explicit boundary (On both low-dimensional and from pixels, some replicas were able to learn reasonable policies that are able to ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Cart Pendulum Swing-up Cartpole Swing-up Fixed Reacher Blockworld Gripper Puck Shooting Monoped Balancing Moving Gripper Cheetah Million Steps ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work we present a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces. (p. 1, 1 INTRODUCTION).
+- **Paper-supported outcome:** Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the average and best observed (across 5 runs). All scores, except Torcs, are ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** On both low-dimensional and from pixels, some replicas were able to learn reasonable policies that are able to complete a circuit around the track though other replicas failed to learn ... (p. 6, 4 RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

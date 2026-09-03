@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (I. INTRODUCTION)): 1: Both Diffusion and Consistency Pol
 
 PDF body contribution framing (p. 2 (I. INTRODUCTION)): Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher ...
 
-- additional contribution cue 없음
+- additional contribution PDF body cue not selected; no claim inferred
 
 ## Assumptions and Failure Boundary
 
@@ -72,3 +72,12 @@ robot_data writing domain maps to observation -> state/world model -> task and m
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, Consistency Policy still performs well on the Push-T task, suggesting that this lack of multi-modality is not hurting us on the standard evaluation tasks used by related work. (p. 9, V. LIMITATIONS).
+- **Formulation-changing contribution:** Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher ... (p. 2, I. INTRODUCTION).
+- **Assumption/failure evidence:** Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://doi.org/10.1109/34.121791; PDF retrieval source: https://doi.org/10.1109/34.121791. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://doi.org/10.1109/34.121791; PDF retrieval source: https://doi.org/10.1109/34.121791. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Point Ser Matching | SYSTEM / EVALUATION SCOPE UNRESOLVED | translations to achieve local matching. | p. 11 (A. Point Ser Matching) |
 | A BN | SYSTEM / EVALUATION SCOPE UNRESOLVED | 17, The registration algorithm locked in on the solution and gave a slightly improved rms distance in less time than the full data set | p. 14 (A BN) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Any quoted approximate times are given for execution ona single-processor computer rated at 1.6 ‘flops on the 100 x 100 double-precision Linpack benchmark, | embodiment, simulator version and control stack | p. 10 (VI. EXPERIMENTAL RESULTS), p. 14 (A BN) |
 | Task/environment | The registration process for these larger datasets took about 1 hr. | reset, timeout, object/scene variation | p. 14 (A BN), p. 6 (B. Convergence Theorem) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 - **p. 8 / B. Convergence Theorem - extractive body cue:** The only way to be sure isto find the minimum ofall the local minima.
 - **p. 8 / B. Convergence Theorem - extractive body cue:** This is an interesting accomplishment for a function where derivatives cannot be evaluated.
 
-- **PDF anchors reviewed:** datasets p. 10 (VI. EXPERIMENTAL RESULTS), p. 14 (A BN), p. 6 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), p. 9 (A. Initial States for Global Matching), metrics p. 6 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 16 (A BN), p. 10 (VI. EXPERIMENTAL RESULTS), p. 6 (B. Convergence Theorem), p. 7 (B. Convergence Theorem), baselines p. 11 (B. Curve Matching), p. 11 (A. Point Ser Matching), p. 7 (B. Convergence Theorem), p. 10 (A. Point Ser Matching), p. 15 (A BN), p. 16 (A BN), results p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 15 (A BN), p. 16 (A BN), p. 16 (A BN), p. 6 (B. Convergence Theorem).
+- **Evidence anchors reviewed:** datasets p. 10 (VI. EXPERIMENTAL RESULTS), p. 14 (A BN), p. 6 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), p. 9 (A. Initial States for Global Matching), metrics p. 6 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 16 (A BN), p. 10 (VI. EXPERIMENTAL RESULTS), p. 6 (B. Convergence Theorem), p. 7 (B. Convergence Theorem), baselines p. 11 (B. Curve Matching), p. 11 (A. Point Ser Matching), p. 7 (B. Convergence Theorem), p. 10 (A. Point Ser Matching), p. 15 (A BN), p. 16 (A BN), results p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 15 (A BN), p. 16 (A BN), p. 16 (A BN), p. 6 (B. Convergence Theorem).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** To give a quantitative example comparison, the registration values, RMS error, maximum error, angular change, and cu ‘mulative are length values were recorded during 50 iterations of both the basic ... (p. 7, B. Convergence Theorem).
+- **Metric evidence:** errors as indicated by the performance of the registration, (p. 16, A BN).
+- **Baseline/ablation evidence:** To give a quantitative example comparison, the registration values, RMS error, maximum error, angular change, and cu ‘mulative are length values were recorded during 50 iterations of both the basic ... (p. 7, B. Convergence Theorem).
+- **Failure/negative evidence:** allowable occlusion percentages, e-., 10% oles, We do not advocate our proposed method if feature extraction techniques will successfully solve the problem. ‘The generalization to matching deformable models with high ... (p. 16, A BN).

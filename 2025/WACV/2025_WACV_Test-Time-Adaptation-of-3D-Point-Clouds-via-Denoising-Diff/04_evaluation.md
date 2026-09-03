@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Datasets and Corruption Methods - extractive PDF cue:** ScanObjectNN-c: ScanObjectNN [44], a real-world point cloud dataset with 15 categories, is corrupted using the same open-source code as ModelNet40-c [40], introducing 15 corruptions into ...
-- **p. 7 / 4.3. Results - extractive PDF cue:** We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion.
-- **p. 6 / 4.1. Datasets and Corruption Methods - extractive PDF cue:** We refer to this dataset as ScanObjectNN-c.
-- **p. 7 / 4.3. Results - extractive PDF cue:** To validate this, we conduct experiments on the ModelNet40-c and ScanObjectNN-c datasets.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Classification accuracies on ScanObjectNN-c dataset.
-- **p. 6 / 4.3. Results - extractive PDF cue:** Notably, 3DD-TTA dramatically boosts the source classifier's performance on background noise, raising accuracy from 15.0% to 77.6%.
-- **p. 7 / 4.3. Results - extractive PDF cue:** The highest accuracy is in bold, while the second-best is underlined.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Based on this, we selected 100 DDIM steps to balance adaptation time and accuracy.
+- **p. 6 / 4.1. Datasets and Corruption Methods - extractive body cue:** ScanObjectNN-c: ScanObjectNN [44], a real-world point cloud dataset with 15 categories, is corrupted using the same open-source code as ModelNet40-c [40], introducing 15 corruptions into ...
+- **p. 7 / 4.3. Results - extractive body cue:** We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion.
+- **p. 6 / 4.1. Datasets and Corruption Methods - extractive body cue:** We refer to this dataset as ScanObjectNN-c.
+- **p. 7 / 4.3. Results - extractive body cue:** To validate this, we conduct experiments on the ModelNet40-c and ScanObjectNN-c datasets.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Classification accuracies on ScanObjectNN-c dataset.
+- **p. 6 / 4.3. Results - extractive body cue:** Notably, 3DD-TTA dramatically boosts the source classifier's performance on background noise, raising accuracy from 15.0% to 77.6%.
+- **p. 7 / 4.3. Results - extractive body cue:** The highest accuracy is in bold, while the second-best is underlined.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Based on this, we selected 100 DDIM steps to balance adaptation time and accuracy.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition, our 3DD-TTA outperforms other TTA frameworks on density-based corruptions such as cut-out and density increase. | p. 6 (4.3. Results) |
 | 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | The table clearly shows that the 3DD-TTA method outperforms the other methods by a significant margin in most corruption types. | p. 6 (4.3. Results) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Datasets and Corruption Methods - extractive PDF cue:** ScanObjectNN-c: ScanObjectNN [44], a real-world point cloud dataset with 15 categories, is corrupted using the same open-source code as ModelNet40-c [40], introducing 15 corruptions into ...
-- **p. 7 / 4.3. Results - extractive PDF cue:** We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion.
-- **p. 6 / 4.1. Datasets and Corruption Methods - extractive PDF cue:** We refer to this dataset as ScanObjectNN-c.
-- **p. 7 / 4.3. Results - extractive PDF cue:** To validate this, we conduct experiments on the ModelNet40-c and ScanObjectNN-c datasets.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Classification accuracies on ScanObjectNN-c dataset.
+- **p. 6 / 4.1. Datasets and Corruption Methods - extractive body cue:** ScanObjectNN-c: ScanObjectNN [44], a real-world point cloud dataset with 15 categories, is corrupted using the same open-source code as ModelNet40-c [40], introducing 15 corruptions into ...
+- **p. 7 / 4.3. Results - extractive body cue:** We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion.
+- **p. 6 / 4.1. Datasets and Corruption Methods - extractive body cue:** We refer to this dataset as ScanObjectNN-c.
+- **p. 7 / 4.3. Results - extractive body cue:** To validate this, we conduct experiments on the ModelNet40-c and ScanObjectNN-c datasets.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Classification accuracies on ScanObjectNN-c dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Reconstruction of corrupted point clouds using the pro- posed 3DD-TTA method. between training and testing samples is minimal. However, real-world scenarios often feature ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. In the TTA setting, the source model encounters corrupted 3D point clouds with an unknown distribution shift, requiring adaptation without prior knowledge of ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Given a corrupted test point cloud ˜x, we adapt it to the source domain to improve classifier pc. Using the LION model [45], ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Classification accuracies on ShapeNet-c. Point-MAE [24], as trained in [22], serves as the source classifier denoted as src. The highest accuracy is in ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative assessment of the proposed test-time adaptation across various corruptions.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Classification accuracies on ModelNet40-c. Point-MAE [24], as trained in [22], serves as the source classifier denoted as src. The highest accuracy is in ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Classification accuracies on ScanObjectNN-c dataset. Corruptions: uni gauss back impu ups rbf rbf-i den-d den-i shear rot cut
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. (left) Accuracy of the source classifier after adaptation using different numbers of denoising steps. (right) Performance of the model across different numbers of ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Reconstruction of corrupted point clouds using the pro- posed 3DD-TTA method. between training and testing samples is minimal. However, real-world scenarios often feature ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. In the TTA setting, the source model encounters corrupted 3D point clouds with an unknown distribution shift, requiring adaptation without prior knowledge of ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Given a corrupted test point cloud ˜x, we adapt it to the source domain to improve classifier pc. Using the LION model [45], ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Classification accuracies on ShapeNet-c. Point-MAE [24], as trained in [22], serves as the source classifier denoted as src. The highest accuracy is in ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative assessment of the proposed test-time adaptation across various corruptions.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Classification accuracies on ModelNet40-c. Point-MAE [24], as trained in [22], serves as the source classifier denoted as src. The highest accuracy is in ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Classification accuracies on ScanObjectNN-c dataset. Corruptions: uni gauss back impu ups rbf rbf-i den-d den-i shear rot cut
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. (left) Accuracy of the source classifier after adaptation using different numbers of denoising steps. (right) Performance of the model across different numbers of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ScanObjectNN-c: ScanObjectNN [44], a real-world point cloud dataset with 15 categories, is corrupted using the same open-source code as ModelNet40-c [40], introducing 15 corruptions ... | embodiment, simulator version and control stack | p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results) |
 | Task/environment | We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion. | reset, timeout, object/scene variation | p. 7 (4.3. Results), p. 6 (4.1. Datasets and Corruption Methods) |
@@ -117,11 +117,11 @@ PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (
 | Primary metric/result | The table clearly shows that the 3DD-TTA method outperforms the other methods by a significant margin in most corruption types. | numeric claim only at cited anchor | p. 6 (4.3. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Our analysis in Figure 5 (left) shows five steps suffice for most corruption types, but extreme outliers, like background noise, require up to 35 steps.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** The adaptation time grows linearly with the number of denoising steps, ranging from 12 ms for 1 step to 290 ms for 40 steps.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** As only 5 denoising steps (taking 40 ms) are sufficient for most corruptions, the proposed method is efficient, making it suitable for time-sensitive applications.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Adaptation time (ms) for different numbers of denoising steps in the 3DD-TTA method. # Denoising Steps: 1 5 10 20 30 40 Time Duration (ms) ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** However, severe outliers, such as background noise, may require up to 35 steps, increasing processing time for these cases.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Our analysis in Figure 5 (left) shows five steps suffice for most corruption types, but extreme outliers, like background noise, require up to 35 steps.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** The adaptation time grows linearly with the number of denoising steps, ranging from 12 ms for 1 step to 290 ms for 40 steps.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** As only 5 denoising steps (taking 40 ms) are sufficient for most corruptions, the proposed method is efficient, making it suitable for time-sensitive applications.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Adaptation time (ms) for different numbers of denoising steps in the 3DD-TTA method. # Denoising Steps: 1 5 10 20 30 40 Time Duration (ms) ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** However, severe outliers, such as background noise, may require up to 35 steps, increasing processing time for these cases.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (
 
 ## Limitations and Verification Questions
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Reconstruction of corrupted point clouds using the pro- posed 3DD-TTA method. between training and testing samples is minimal. However, real-world scenarios often feature ...
-- **p. 6 / 4.3. Results - extractive PDF cue:** However, the model faces limitations in addressing the transformation-based deformations like shear and rotation.
-- **p. 6 / 4.3. Results - extractive PDF cue:** This limitation is due to the trainingfree nature of the model, making it challenging to reverse transformations to their original shape without additional training.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Limitation: Our model performs well with just five denoising steps for most types of corruption, making it efficient and suitable for time-sensitive applications.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Incorporating the proposed updating strategy based on the gradient of the Selective Chamfer Distance (SCD) ensures the generation of highfidelity, noise-free test samples.
-- **p. 7 / 4.3. Results - extractive PDF cue:** We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Reconstruction of corrupted point clouds using the pro- posed 3DD-TTA method. between training and testing samples is minimal. However, real-world scenarios often feature ...
+- **p. 6 / 4.3. Results - extractive body cue:** However, the model faces limitations in addressing the transformation-based deformations like shear and rotation.
+- **p. 6 / 4.3. Results - extractive body cue:** This limitation is due to the trainingfree nature of the model, making it challenging to reverse transformations to their original shape without additional training.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Limitation: Our model performs well with just five denoising steps for most types of corruption, making it efficient and suitable for time-sensitive applications.
+- **p. 8 / 5. Conclusion - extractive body cue:** Incorporating the proposed updating strategy based on the gradient of the Selective Chamfer Distance (SCD) ensures the generation of highfidelity, noise-free test samples.
+- **p. 7 / 4.3. Results - extractive body cue:** We also conducted experiments on the corrupted version of the real-world ScanObjectNN dataset [44], which inherently suffers from noise, background issues, and occlusion.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results), p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results), p. 8 (4.4. Ablation Study), metrics p. 6 (4.3. Results), p. 7 (4.3. Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.3. Results), p. 7 (4.3. Results), baselines p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (4.3. Results), p. 7 (4.4. Ablation Study), p. 2 (Figure/Table caption), results p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (Figure/Table caption), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results), p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results), p. 8 (4.4. Ablation Study), metrics p. 6 (4.3. Results), p. 7 (4.3. Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.3. Results), p. 7 (4.3. Results), baselines p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (4.3. Results), p. 7 (4.4. Ablation Study), p. 2 (Figure/Table caption), results p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (Figure/Table caption), p. 8 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

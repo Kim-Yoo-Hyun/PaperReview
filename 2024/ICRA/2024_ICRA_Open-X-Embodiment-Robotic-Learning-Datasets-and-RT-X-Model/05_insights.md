@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 3: RT-1-X and RT-2-X both take images and a text instruction as input and output discretized end-effector actions.를 Both models take in a visual input and natural language instruction describing the task, and output a tokenized action.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only the embodiment-specific dataset, which indicates underfitting for that model class.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Addressing goal (1), our empirical contribution is to demonstrate that several recent robotic learning methods, with minimal modification, can utilize X-embodiment data and enable positive transfer.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 3: RT-1-X and RT-2-X both take images and a text instruction as input and output discretized end-effector actions. (p. 4, 5 Hz).
+- **Paper-specific mechanism:** We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, exhibiting better generalization and new capabilities. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods contributed by different collaborating institutions, while the bigger vision-language-modelbased version (RT-2-X) demonst ... (p. 6, V. EXPERIMENTAL RESULTS); the relevant task/metric cue is Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods contributed by different collaborating institutions, while the bigger vision-language-modelbased version (RT-2-X) demonst ... (p. 6, V. EXPERIMENTAL RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** do not study generalization to new robots, and provide a decision criterion for when positive transfer does or does not happen. (p. 7, V. EXPERIMENTAL RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Row Model Size History Length Dataset Co-Trained w/ Web Initial Checkpoint Emergent Skills Evaluation RT-2 Generalization Evaluation (1) RT-2 55B none Google Robot action Yes Web-pretrained 27.3% 62% (2) RT-2-X 55B none ....
-3. Compare against the body-reported baseline or a matched simpler baseline: In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only the embodiment-specific dataset, which indicates underfitting for that model class..
-4. Report the body metric and its denominator/aggregation: We also note that the 55B model has significantly higher success rate in the Emergent Skills compared to the 5B model (row (2) vs row (4)), demonstrating that higher model capacity enables ....
-5. Re-run the body-reported ablation/failure condition: Our next ablation involves removing the Bridge dataset from RT-2-X training: Row (3) shows the results for RT-2X that includes all data used for RT-2-X except the Bridge dataset..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 3: RT-1-X and RT-2-X both take images and a text instruction as input and output discretized end-effector actions. (p. 4, 5 Hz); preserve the objective/update rule: Training and inference details Both models use a standard categorical cross-entropy objective over their output space (discrete buckets for RT1 and all possible language tokens for RT-2). (p. 4, IV. RT-X DESIGN).
+2. Use the paper-reported task/data/environment cue: Our experiments answer three questions about the effect of X-embodiment training: (1) Can policies trained on our X-embodiment dataset effectively enable positive transfer, such that co-training on data collected on ... (p. 5, V. EXPERIMENTAL RESULTS).
+3. Compare against the reported or matched baseline: In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only the embodiment-specific dataset, which indicates underfitting for that model class. (p. 5, V. EXPERIMENTAL RESULTS).
+4. Report the body metric with its denominator and aggregation: Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods contributed by different collaborating institutions, while the bigger vision-language-modelbased version (RT-2-X) demonst ... (p. 6, V. EXPERIMENTAL RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Our experiments answer three questions about the effect of X-embodiment training: (1) Can policies trained on our X-embodiment dataset effectively enable positive transfer, such that co-training on data collected on ... (p. 5, V. EXPERIMENTAL RESULTS); if none is reported, design one around: do not study generalization to new robots, and provide a decision criterion for when positive transfer does or does not happen. (p. 7, V. EXPERIMENTAL RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY); the primary result is directionally consistent at p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), and measure the boundary at p. 7 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Addressing, goal, empirical mechanism이 In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only ... 대비 We also note that the 55B model has significantly higher success rate in the Emergent Skills compared to ...을 개선하고, In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (3: RT-1-X and RT-2-X both take images and a text instruction as input and output discretized end-effector actions.), does the paper-specific mechanism (We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, ...) retain the reported evaluation outcome (Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods ...) when tested against the paper's strongest explicit boundary (do not study generalization to new robots, and provide a decision criterion for when positive transfer does or ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, exhibiting better generalization and new capabilities. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Our results showed that the RT-1X policy has a 50% higher success rate than the original, state-of-the-art methods contributed by different collaborating institutions, while the bigger vision-language-modelbased version (RT-2-X) demonst ... (p. 6, V. EXPERIMENTAL RESULTS).
+- **Strongest explicit boundary:** do not study generalization to new robots, and provide a decision criterion for when positive transfer does or does not happen. (p. 7, V. EXPERIMENTAL RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

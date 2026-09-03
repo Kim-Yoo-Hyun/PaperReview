@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.01345; PDF retrieval source: https://arxiv.org/pdf/2106.01345. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.01345; PDF retrieval source: https://arxiv.org/pdf/2106.01345. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 12: Raw scores for the 1% DQN-replay Atari dataset. We report the mean and variance across 3 seeds. Best mean scores are highlighted ... | p. 21 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To evaluate this, we consider a delayed return version of the D4RL benchmarks where the agent does not receive any rewards along the trajectory, ... | embodiment, simulator version and control stack | p. 10 (Dataset), p. 10 (Dataset) |
 | Task/environment | Delayed (Sparse) Agnostic Original (Dense) Dataset Environment DT (Ours) CQL BC %BC DT (Ours) CQL Medium-Expert Hopper 107.3 ± 3.5 9.0 59.9 102.6 107.6 ... | reset, timeout, object/scene variation | p. 10 (Dataset), p. 11 (Dataset) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 - **p. 10 / Dataset - extractive body cue:** To evaluate this, we consider a delayed return version of the D4RL benchmarks where the agent does not receive any rewards along the trajectory, and ...
 - **p. 11 / Dataset - extractive body cue:** Since Decision Transformer does not require explicit optimization using learned functions as objectives, it avoids the need for regularization or conservatism.
 
-- **PDF anchors reviewed:** datasets p. 10 (Dataset), p. 10 (Dataset), p. 11 (Dataset), p. 11 (Dataset), metrics p. 10 (Figure/Table caption), p. 10 (Dataset), p. 21 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Dataset), p. 10 (Dataset).
+- **Evidence anchors reviewed:** datasets p. 10 (Dataset), p. 10 (Dataset), p. 11 (Dataset), p. 11 (Dataset), metrics p. 10 (Figure/Table caption), p. 10 (Dataset), p. 21 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Dataset), p. 10 (Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while TD learning struggles to perform credit assignment. 5.5 Can transformers be accurate ... (p. 10, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption).
+- **Failure/negative evidence:** 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).

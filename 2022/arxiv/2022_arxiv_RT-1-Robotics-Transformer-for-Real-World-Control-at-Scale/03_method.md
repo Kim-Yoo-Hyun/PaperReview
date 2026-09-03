@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2212.06817; PDF retrieval source: https://arxiv.org/pdf/2212.06817. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2212.06817; PDF retrieval source: https://arxiv.org/pdf/2212.06817. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, ... | p. 2 (3 Hz), p. 6 (3 PRELIMINARIES) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | The Transformer is a decoder-only sequence model with 8 self-attention layers and 19M total parameters that outputs action tokens. | p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | These evaluations consist of 15 long-horizon instructions in two real kitchens, which require executing sequences of skills consisting of ∼10 distinct steps, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | RT-1 takes a short sequence of images and a natural language instruction as input and outputs an action for the robot at ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | RT-1 performs closed-loop control and commands actions at 3 Hz until it either yields a "terminate" action or hits a pre-set time ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), objective p. 3 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), temporal p. 9 (6 EXPERIMENTS), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 14 (6 EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), objective p. 3 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), temporal p. 9 (6 EXPERIMENTS), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 14 (6 EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations ... (p. 2, 3 Hz).
+- **Objective/update evidence:** At the end of an episode, the agent will be given a binary reward r ∈{0, 1} indicating whether the robot performed the instruction i. (p. 3, 3 PRELIMINARIES).
+- **Temporal/runtime evidence:** These evaluations consist of 15 long-horizon instructions in two real kitchens, which require executing sequences of skills consisting of ∼10 distinct steps, with each step of roughly comparable scope as ... (p. 9, 6 EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

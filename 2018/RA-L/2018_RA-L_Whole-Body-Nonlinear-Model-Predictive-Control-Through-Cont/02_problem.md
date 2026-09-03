@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1712.02889; PDF retrieval source: https://arxiv.org/pdf/1712.02889. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1712.02889; PDF retrieval source: https://arxiv.org/pdf/1712.02889. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Also, especially interesting tasks such as periodic gaits could not be transferred to hardware due to model mismatches and lack of robustness ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | It designs time-varying state-feedback controllers of the form un(x) = uff n + Kn(xn -xref n ) (8) where uff n is ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | It designs time-varying state-feedback controllers of the form un(x) = uff n + Kn(xn -xref n ) (8) where uff n is ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | designs, time-varying, state-feedback, controllers, form, xref, where, feedforward, control, action | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
 | Output / action | contrast, GNMS-NMPC, algorithm, summarized, designs, state, reference, trajectory | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
 | Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | whole-body pose/contact/reference state; body terms: designs, time-varying, state-feedback, controllers, form, xref, where, feedforward, control, action | p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH) |
 | Decision / output variable | joint/whole-body action; body terms: present, whole-body, Nonlinear, Model, Predictive, Control, NMPC, Rigid | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (IV. SOFTWARE IMPLEMENTATION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION) |
 | Success / guarantee | motion/task success and recovery | p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 7 (VI. RESULTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 2 (I. INTRODUCTION), p. 3 (IV. SOFTWARE IMPLEMENTATION)): In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 2 (I. INTRODUCTION), p. 3 (IV. SOFTWARE IMPLEMENTATION)): In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Contributions In this work, we demonstrate whole-body, contact invariant nonlinear MPC for highly dynamic motions that require explicit reasoning about the full dynamics of the ...
 - **p. 4 / IV. SOFTWARE IMPLEMENTATION - extractive body cue:** Since our code mostly consists of matrix and vector manipulations and register sizes of AVX are doubled over SSE, we obtained an additional speedup of ...
@@ -68,12 +68,21 @@ PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION). The downstream handoff is claimed only when the body describes it.
+humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), objective p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION).
+- **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), objective p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** In this field, centroidal dynamics approaches [5]-[9] become increasingly popular as they capture the core dynamics of the problem. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts. (p. 1, I. INTRODUCTION).
+- **Assumption/failure evidence:** Even placing planks under single feet does not deteriorate performance. (p. 5, VI. RESULTS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

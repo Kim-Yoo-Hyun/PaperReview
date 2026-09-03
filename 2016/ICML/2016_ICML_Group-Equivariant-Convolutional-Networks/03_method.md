@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1602.07576; PDF retrieval source: https://arxiv.org/pdf/1602.07576. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1602.07576; PDF retrieval source: https://arxiv.org/pdf/1602.07576. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,29 +10,29 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 ## Method Body Digest
 
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
-- **p. 7 / 7.2. Planar convolution - extractive PDF cue:** The second part of the G-convolution algorithm is a planar convolution using the expanded filter bank F +.
-- **p. 7 / 7.1. Filter transformation - extractive PDF cue:** Group Equivariant Convolutional Networks channels at layer l, Sl-1 denotes the number of transformations in G that leave the origin invariant (e.g.
-- **p. 7 / 7.2. Planar convolution - extractive PDF cue:** The resulting array can be interpreted as a conventional filter bank with Sl-1Kl-1 planar input channels and SlKl planar output channels, which can be correlated ...
-- **p. 7 / 7.1. Filter transformation - extractive PDF cue:** To precompute the indices, we define an invertible map g(s, u, v) that takes an input index (valid for an array of shape Sl-1 × ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Deep convolutional neural networks (CNNs, convnets) have proven to be very powerful models of sensory data such as images, video, and audio.
-- **p. 1 / 1. Introduction - extractive PDF cue:** By using the same weights to analyze or model each part of the image, a convolution layer uses far fewer parameters than a fully connected ...
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
+- **p. 7 / 7.2. Planar convolution - extractive body cue:** The second part of the G-convolution algorithm is a planar convolution using the expanded filter bank F +.
+- **p. 7 / 7.1. Filter transformation - extractive body cue:** Group Equivariant Convolutional Networks channels at layer l, Sl-1 denotes the number of transformations in G that leave the origin invariant (e.g.
+- **p. 7 / 7.2. Planar convolution - extractive body cue:** The resulting array can be interpreted as a conventional filter bank with Sl-1Kl-1 planar input channels and SlKl planar output channels, which can be correlated ...
+- **p. 7 / 7.1. Filter transformation - extractive body cue:** To precompute the indices, we define an invertible map g(s, u, v) that takes an input index (valid for an array of shape Sl-1 × ...
+- **p. 1 / 1. Introduction - extractive body cue:** Deep convolutional neural networks (CNNs, convnets) have proven to be very powerful models of sensory data such as images, video, and audio.
+- **p. 1 / 1. Introduction - extractive body cue:** By using the same weights to analyze or model each part of the image, a convolution layer uses far fewer parameters than a fully connected ...
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
 
 ## Design Rationale
 
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** Here we present the details for a G-convolution implementation that can leverage recent advances in fast computation of planar convolutions (Mathieu et al., 2014; Vasilache ...
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** Here we present the details for a G-convolution implementation that can leverage recent advances in fast computation of planar convolutions (Mathieu et al., 2014; Vasilache ...
 
 ## Source Evidence Cues
 
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
-- **p. 7 / 7.2. Planar convolution - extractive PDF cue:** The second part of the G-convolution algorithm is a planar convolution using the expanded filter bank F +.
-- **p. 7 / 7.1. Filter transformation - extractive PDF cue:** Group Equivariant Convolutional Networks channels at layer l, Sl-1 denotes the number of transformations in G that leave the origin invariant (e.g.
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
+- **p. 7 / 7.2. Planar convolution - extractive body cue:** The second part of the G-convolution algorithm is a planar convolution using the expanded filter bank F +.
+- **p. 7 / 7.1. Filter transformation - extractive body cue:** Group Equivariant Convolutional Networks channels at layer l, Sl-1 denotes the number of transformations in G that leave the origin invariant (e.g.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that ... | p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar convolution) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The second part of the G-convolution algorithm is a planar convolution using the expanded filter bank F +. | p. 7 (7.2. Planar convolution), p. 7 (7.1. Filter transformation) |
@@ -42,7 +42,7 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 ## Objective / Update Rule
 
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -58,11 +58,11 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 ## Observation–State–Action Interface
 
-- **p. 7 / 7.2. Planar convolution - extractive PDF cue:** The resulting array can be interpreted as a conventional filter bank with Sl-1Kl-1 planar input channels and SlKl planar output channels, which can be correlated ...
-- **p. 7 / 7.1. Filter transformation - extractive PDF cue:** To precompute the indices, we define an invertible map g(s, u, v) that takes an input index (valid for an array of shape Sl-1 × ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Deep convolutional neural networks (CNNs, convnets) have proven to be very powerful models of sensory data such as images, video, and audio.
-- **p. 1 / 1. Introduction - extractive PDF cue:** By using the same weights to analyze or model each part of the image, a convolution layer uses far fewer parameters than a fully connected ...
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
+- **p. 7 / 7.2. Planar convolution - extractive body cue:** The resulting array can be interpreted as a conventional filter bank with Sl-1Kl-1 planar input channels and SlKl planar output channels, which can be correlated ...
+- **p. 7 / 7.1. Filter transformation - extractive body cue:** To precompute the indices, we define an invertible map g(s, u, v) that takes an input index (valid for an array of shape Sl-1 × ...
+- **p. 1 / 1. Introduction - extractive body cue:** Deep convolutional neural networks (CNNs, convnets) have proven to be very powerful models of sensory data such as images, video, and audio.
+- **p. 1 / 1. Introduction - extractive body cue:** By using the same weights to analyze or model each part of the image, a convolution layer uses far fewer parameters than a fully connected ...
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -77,7 +77,7 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 ## Training vs Inference
 
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** The learning rate was divided by 10 at epoch 50, 100 and 150, and training was continued for 300 epochs.
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** The learning rate was divided by 10 at epoch 50, 100 and 150, and training was continued for 300 epochs.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -97,13 +97,13 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 ## Failure and Ablation Link
 
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** This architecture (P4CNN) was found to perform better without dropout, so we removed it.
-- **p. 7 / 8.1. Rotated MNIST - extractive PDF cue:** The resulting feature maps consist of rotationinvariant features, and have the same transformation law as the input image.
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** Group Equivariant Convolutional Networks the baseline architectures by p4 or p4m convolutions.
-- **p. 8 / 8.1. Rotated MNIST - extractive PDF cue:** This way, the number of parameters is left approximately invariant, while the size of the internal representation is increased.
-- **p. 6 / 7. Efficient Implementation - extractive PDF cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
-- **p. 8 / 9. Discussion & Future work - extractive PDF cue:** One limitation of the method as presented here is that it only works for discrete groups.
-- **p. 8 / 9. Discussion & Future work - extractive PDF cue:** In future work, we want to implement G-CNNs that work on hexagonal lattices which have an increased number of symmetries relative to square grids, as ...
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** This architecture (P4CNN) was found to perform better without dropout, so we removed it.
+- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** The resulting feature maps consist of rotationinvariant features, and have the same transformation law as the input image.
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** Group Equivariant Convolutional Networks the baseline architectures by p4 or p4m convolutions.
+- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** This way, the number of parameters is left approximately invariant, while the size of the internal representation is increased.
+- **p. 6 / 7. Efficient Implementation - extractive body cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
+- **p. 8 / 9. Discussion & Future work - extractive body cue:** One limitation of the method as presented here is that it only works for discrete groups.
+- **p. 8 / 9. Discussion & Future work - extractive body cue:** In future work, we want to implement G-CNNs that work on hexagonal lattices which have an increased number of symmetries relative to square grids, as ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -117,7 +117,7 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar convolution), p. 7 (7.1. Filter transformation), objective p. 6 (7. Efficient Implementation), temporal p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 1 (48. Copyright 2016 by the author(s)), p. 1 (48. Copyright 2016 by the author(s)), p. 2 (3. Related Work), p. 2 (2. Structured & Equivariant Representations).
+- **Evidence anchors reviewed:** method p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar convolution), p. 7 (7.1. Filter transformation), objective p. 6 (7. Efficient Implementation), temporal p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 1 (48.
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

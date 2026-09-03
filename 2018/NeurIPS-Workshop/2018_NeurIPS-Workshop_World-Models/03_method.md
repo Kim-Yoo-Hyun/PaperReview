@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1803.10122; PDF retrieval source: https://arxiv.org/pdf/1803.10122. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1803.10122; PDF retrieval source: https://arxiv.org/pdf/1803.10122. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Recent work (Nagabandi et al., 2017) combines the model-based approach with traditional model-free RL training by first initializing the policy network with ... | p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE (V) Model) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Here, we use a simple Variational Autoencoder (Kingma & Welling, 2013; Rezende et al., 2014) as our V model to compress each ... | p. 3 (2.1. VAE (V) Model), p. 9 (4.5. Cheating the World Model) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | We can use the VAE to reconstruct each frame using zt at each time step to visualize the quality of the information ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | There are no explicit rewards in this environment, so to mimic natural selection, the cumulative reward can be defined to be the ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -135,8 +135,17 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE (V) Model), p. 9 (4.5. Cheating the World Model), p. 3 (2.2. MDN-RNN (M) Model), p. 4 (2.3. Controller (C) Model), p. 2 (2. Agent Model), objective p. 3 (2.3. Controller (C) Model), p. 9 (4.5. Cheating the World Model), p. 10 (5. Iterative Training Procedure), p. 10 (5. Iterative Training Procedure), p. 4 (2.3. Controller (C) Model), p. 4 (2.3. Controller (C) Model), temporal p. 5 (3.1. World Model for Feature Extraction), p. 7 (4.1. Learning Inside of a Dream), p. 7 (4.1. Learning Inside of a Dream), p. 13 (7. Discussion), p. 5 (3.1. World Model for Feature Extraction), p. 2 (2.1. VAE (V) Model).
+- **Evidence anchors reviewed:** method p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE (V) Model), p. 9 (4.5. Cheating the World Model), p. 3 (2.2. MDN-RNN (M) Model), p. 4 (2.3. Controller (C) Model), p. 2 (2. Agent Model), objective p. 3 (2.3. Controller (C) Model), p. 9 (4.5. Cheating the World Model), p. 10 (5. Iterative Training Procedure), p. 10 (5. Iterative Training Procedure), p. 4 (2.3. Controller (C) Model), p. 4 (2.3. Controller (C) Model), temporal p. 5 (3.1. World Model for Feature Extraction), p. 7 (4.1. Learning Inside of a Dream), p. 7 (4.1. Learning Inside of a Dream), p. 13 (7. Discussion), p. 5 (3.1. World Model for Feature Extraction), p. 2 (2.1. VAE (V) Model).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Previous works (Hnermann, 2017; Bling, 2015; Lau, 2016) have shown that with a good set of hand-engineered information about the observation, such as LIDAR information, angles, positions and velocities, one ... (p. 5, V Model Only).
+- **Objective/update evidence:** Train M to model P(xt+1, rt+1, at+1, dt+1/xt, at, ht) and train C to optimize expected rewards inside of M. (p. 10, 5. Iterative Training Procedure).
+- **Temporal/runtime evidence:** Its task is simply to compress and predict the sequence of image frames observed. (p. 5, 3.1. World Model for Feature Extraction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

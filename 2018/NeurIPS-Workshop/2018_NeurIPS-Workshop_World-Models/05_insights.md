@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 Previous works (Hnermann, 2017; Bling, 2015; Lau, 2016) have shown that with a good set of hand-engineered information about the observation, such as LIDAR information, angles, positions and velocities, one can easily ...를 M will then take the current zt and action at as an input to update its own hidden state to produce ht+1 to be used at time t + 1.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 After all, unsupervised learning cannot, by definition, know what will be useful for the task at hand.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology and experiments.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** C is a simple single layer linear model that maps zt and ht directly to action at at each time step: at = Wc [zt ht] + bc (1) In ... (p. 3, 2.3. Controller (C) Model).
+- **Paper-specific mechanism:** We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 11. Limiting our controller to see only zt, but not ht results in wobbly and unstable driving behaviours. Although the agent is still able to navigate the race track ... (p. 5, Figure/Table caption); the relevant task/metric cue is Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained to model P(zt+1 / at, zt, ht) as a mixture of Gaussians.3 ... (p. 4, 3.1. World Model for Feature Extraction). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but failed to reproduce task-relevant tiles on the road in the Car Racing ... (p. 12, 7. Discussion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To train our V model, we first collect a dataset of 10,000 random rollouts of the environment..
-3. Compare against the body-reported baseline or a matched simpler baseline: We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters..
-4. Report the body metric and its denominator/aggregation: Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained to model P(zt+1 / at, zt, ht) as a mixture of Gaussians.3 and obtain ....
-5. Re-run the body-reported ablation/failure condition: We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: C is a simple single layer linear model that maps zt and ht directly to action at at each time step: at = Wc [zt ht] + bc (1) In ... (p. 3, 2.3. Controller (C) Model); preserve the objective/update rule: Train M to model P(xt+1, rt+1, at+1, dt+1/xt, at, ht) and train C to optimize expected rewards inside of M. (p. 10, 5. Iterative Training Procedure).
+2. Use the paper-reported task/data/environment cue: To train our V model, we first collect a dataset of 10,000 random rollouts of the environment. (p. 4, 3.1. World Model for Feature Extraction).
+3. Compare against the reported or matched baseline: We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters. (p. 4, 3.1. World Model for Feature Extraction).
+4. Report the body metric with its denominator and aggregation: Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained to model P(zt+1 / at, zt, ht) as a mixture of Gaussians.3 ... (p. 4, 3.1. World Model for Feature Extraction).
+5. Re-run the reported ablation or stress/failure condition: We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters. (p. 4, 3.1. World Model for Feature Extraction); if none is reported, design one around: For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but failed to reproduce task-relevant tiles on the road in the Car Racing ... (p. 12, 7. Discussion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE (V) Model), p. 9 (4.5. Cheating the World Model); the primary result is directionally consistent at p. 5 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 4 (3. Car Racing Experiment); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 5 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 6 (Figure/Table caption), and measure the boundary at p. 12 (7. Discussion), p. 12 (7. Discussion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 similar, terminology, notation mechanism이 We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters. 대비 Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained ...을 개선하고, After all, unsupervised learning cannot, by definition, know what will be useful for the task at ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (C is a simple single layer linear model that maps zt and ht directly to action at at each time step: at ...), does the paper-specific mechanism (We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN ...) retain the reported evaluation outcome (Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained ...) when tested against the paper's strongest explicit boundary (For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 11. Limiting our controller to see only zt, but not ht results in wobbly and unstable driving behaviours. Although the agent is still able to navigate the race track ... (p. 5, Figure/Table caption).
+- **Strongest explicit boundary:** For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but failed to reproduce task-relevant tiles on the road in the Car Racing ... (p. 12, 7. Discussion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

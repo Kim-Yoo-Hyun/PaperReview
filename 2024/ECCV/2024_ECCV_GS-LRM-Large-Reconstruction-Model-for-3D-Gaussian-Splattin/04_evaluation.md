@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3212_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3212_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experimen
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** We follow the standard training/testing split for the dataset, which is also used in pixelSplat [8].
-- **p. 7 / 4 Experiments - extractive PDF cue:** We use the RealEstate10K [74] dataset to train our scenelevel model.
-- **p. 6 / 4 Experiments - extractive PDF cue:** In this section, we first describe the training and testing datasets (Sec.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We can observe that our model is better in sharpness (leftmost column), has fewer floaters (mid-right and rightmost), and is more faithful to the original ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** Our current model is limited to static scenes only, and we thus pick the generated videos from relevant
-- **p. 12 / 4 Experiments - extractive PDF cue:** 6: We show high-res novel-view renderings from our predicted GS given highres input images (4 512×512 images for objects, and 2 512×904 images for a ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** For scene-level, we adopt two input views for a fair comparison with pixelSplat [8].
-- **p. 8 / 4 Experiments - extractive PDF cue:** We normalize the camera poses for scene-level input images following common practices in previous forward-facing reconstructions as done in [9,39].
+- **p. 7 / 4 Experiments - extractive body cue:** We follow the standard training/testing split for the dataset, which is also used in pixelSplat [8].
+- **p. 7 / 4 Experiments - extractive body cue:** We use the RealEstate10K [74] dataset to train our scenelevel model.
+- **p. 6 / 4 Experiments - extractive body cue:** In this section, we first describe the training and testing datasets (Sec.
+- **p. 10 / 4 Experiments - extractive body cue:** We can observe that our model is better in sharpness (leftmost column), has fewer floaters (mid-right and rightmost), and is more faithful to the original ...
+- **p. 12 / 4 Experiments - extractive body cue:** Our current model is limited to static scenes only, and we thus pick the generated videos from relevant
+- **p. 12 / 4 Experiments - extractive body cue:** 6: We show high-res novel-view renderings from our predicted GS given highres input images (4 512×512 images for objects, and 2 512×904 images for a ...
+- **p. 8 / 4 Experiments - extractive body cue:** For scene-level, we adopt two input views for a fair comparison with pixelSplat [8].
+- **p. 8 / 4 Experiments - extractive body cue:** We normalize the camera poses for scene-level input images following common practices in previous forward-facing reconstructions as done in [9,39].
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experimen
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 5: We compare scene-level GS-LRM with the best-performing baseline pixel- Splat [8]. We can observe that our model is better in sharpness (leftmost ... | p. 10 (Figure/Table caption) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, our approach achieves the best quantitative results on the RealEstate10k | p. 10 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experimen
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** We follow the standard training/testing split for the dataset, which is also used in pixelSplat [8].
-- **p. 7 / 4 Experiments - extractive PDF cue:** We use the RealEstate10K [74] dataset to train our scenelevel model.
-- **p. 6 / 4 Experiments - extractive PDF cue:** In this section, we first describe the training and testing datasets (Sec.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We can observe that our model is better in sharpness (leftmost column), has fewer floaters (mid-right and rightmost), and is more faithful to the original ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** Our current model is limited to static scenes only, and we thus pick the generated videos from relevant
-- **p. 12 / 4 Experiments - extractive PDF cue:** 6: We show high-res novel-view renderings from our predicted GS given highres input images (4 512×512 images for objects, and 2 512×904 images for a ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** For scene-level, we adopt two input views for a fair comparison with pixelSplat [8].
-- **p. 8 / 4 Experiments - extractive PDF cue:** We normalize the camera poses for scene-level input images following common practices in previous forward-facing reconstructions as done in [9,39].
+- **p. 7 / 4 Experiments - extractive body cue:** We follow the standard training/testing split for the dataset, which is also used in pixelSplat [8].
+- **p. 7 / 4 Experiments - extractive body cue:** We use the RealEstate10K [74] dataset to train our scenelevel model.
+- **p. 6 / 4 Experiments - extractive body cue:** In this section, we first describe the training and testing datasets (Sec.
+- **p. 10 / 4 Experiments - extractive body cue:** We can observe that our model is better in sharpness (leftmost column), has fewer floaters (mid-right and rightmost), and is more faithful to the original ...
+- **p. 12 / 4 Experiments - extractive body cue:** Our current model is limited to static scenes only, and we thus pick the generated videos from relevant
+- **p. 12 / 4 Experiments - extractive body cue:** 6: We show high-res novel-view renderings from our predicted GS given highres input images (4 512×512 images for objects, and 2 512×904 images for a ...
+- **p. 8 / 4 Experiments - extractive body cue:** For scene-level, we adopt two input views for a fair comparison with pixelSplat [8].
+- **p. 8 / 4 Experiments - extractive body cue:** We normalize the camera poses for scene-level input images following common practices in previous forward-facing reconstructions as done in [9,39].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Novel-view renderings of our predicted Gaussians from object captures (top left), text-conditioned generated object images (top right), scene captures (bottom left) and text-conditioned ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2: Our simple transformer-based GS-LRM predicts 3D Gaussian parameters from sparse posed images. Images are patchified and the concatenated patch tokens are sent to ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison against baselines on object-level (left) and scene-level (right) reconstructions. We matched the baseline settings by comparing with Instant3D's Triplane-LRM [32] and LGM ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visual comparisons to Instant3D's Triplane-LRM [32]. The 4-view input images are shown in the leftmost column, and we compare novel view renderings on ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visual comparisons to LGM [59]. The LGM renderings have obvious distorted textures (top) and broken geometries (bottom) and are inferior in recovering accurate ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: We compare scene-level GS-LRM with the best-performing baseline pixel- Splat [8]. We can observe that our model is better in sharpness (leftmost column), ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 6: We show high-res novel-view renderings from our predicted GS given high- res input images (4 512×512 images for objects, and 2 512×904 images ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 7: Text-to-3D (top two rows) and image-to-3D (bottom two rows) results by chaining Instant3D's [32] text-conditioned and Zero123++'s [52] image-conditioned multi-view generators to our ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Novel-view renderings of our predicted Gaussians from object captures (top left), text-conditioned generated object images (top right), scene captures (bottom left) and text-conditioned ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Our simple transformer-based GS-LRM predicts 3D Gaussian parameters from sparse posed images. Images are patchified and the concatenated patch tokens are sent to ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Comparison against baselines on object-level (left) and scene-level (right) reconstructions. We matched the baseline settings by comparing with Instant3D's Triplane-LRM [32] and LGM ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 3: Visual comparisons to Instant3D's Triplane-LRM [32]. The 4-view input images are shown in the leftmost column, and we compare novel view renderings on ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 4: Visual comparisons to LGM [59]. The LGM renderings have obvious distorted textures (top) and broken geometries (bottom) and are inferior in recovering accurate ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: We compare scene-level GS-LRM with the best-performing baseline pixel- Splat [8]. We can observe that our model is better in sharpness (leftmost column), ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 6: We show high-res novel-view renderings from our predicted GS given high- res input images (4 512×512 images for objects, and 2 512×904 images ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 7: Text-to-3D (top two rows) and image-to-3D (bottom two rows) results by chaining Instant3D's [32] text-conditioned and Zero123++'s [52] image-conditioned multi-view generators to our ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We follow the standard training/testing split for the dataset, which is also used in pixelSplat [8]. | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | We use the RealEstate10K [74] dataset to train our scenelevel model. | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 6 (4 Experiments) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experimen
 | Primary metric/result | 1, our approach achieves the best quantitative results on the RealEstate10k | numeric claim only at cited anchor | p. 10 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 Experiments - extractive PDF cue:** GSO ABO PSNR \delimiter "3222378 SSIM \delimiter "3222378 LPIPS \delimiter "3223379 PSNR \delimiter "3222378 SSIM \delimiter "3222378 LPIPS \delimiter "3223379 Triplane-LRM [32] 26.54 0.893 0.064 ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** We evaluate our model on two 3D object datasets including the full Google Scanned Objects (GSO) [21] that contains 1009 objects and the Amazon Berkeley ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** Our transformer consists of 24 layers, and the hidden dimension of the transformer is 1024.
-- **p. 9 / 4 Experiments - extractive PDF cue:** The official LGM is trained with a special setting using 256×256 resolution input and 512×512 resolution output supervision.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Since their model only accepts 256×256 input, we compare with LGM using our low-res model, trained with 256×256 images only from our 256-res pre-training stage.
-- **p. 9 / 4 Experiments - extractive PDF cue:** We evaluate both models with 256×256 renderings for comparison.
+- **p. 7 / 4 Experiments - extractive body cue:** GSO ABO PSNR \delimiter "3222378 SSIM \delimiter "3222378 LPIPS \delimiter "3223379 PSNR \delimiter "3222378 SSIM \delimiter "3222378 LPIPS \delimiter "3223379 Triplane-LRM [32] 26.54 0.893 0.064 ...
+- **p. 7 / 4 Experiments - extractive body cue:** We evaluate our model on two 3D object datasets including the full Google Scanned Objects (GSO) [21] that contains 1009 objects and the Amazon Berkeley ...
+- **p. 7 / 4 Experiments - extractive body cue:** Our transformer consists of 24 layers, and the hidden dimension of the transformer is 1024.
+- **p. 9 / 4 Experiments - extractive body cue:** The official LGM is trained with a special setting using 256×256 resolution input and 512×512 resolution output supervision.
+- **p. 9 / 4 Experiments - extractive body cue:** Since their model only accepts 256×256 input, we compare with LGM using our low-res model, trained with 256×256 images only from our 256-res pre-training stage.
+- **p. 9 / 4 Experiments - extractive body cue:** We evaluate both models with 256×256 renderings for comparison.
 
 ## Generalization and Failure Cases
 
@@ -162,13 +162,13 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experimen
 
 ## Limitations and Verification Questions
 
-- **p. 13 / 4 Experiments - extractive PDF cue:** 4.6 Limitations Although our method shows high-quality reconstruction results from posed sparse images, there are still a few limitations to be addressed in future work.
-- **p. 14 / 5 Conclusion - extractive PDF cue:** We hope that our work can inspire more future work in the space of data-driven feed-forward 3D reconstruction.
-- **p. 8 / 4 Experiments - extractive PDF cue:** The Triplane-LRM cannot reconstruct high-frequency details (top left and top right) and thin structures (bottom left) well.
-- **p. 14 / 4 Experiments - extractive PDF cue:** Please refer to our project page for the video and interactive rendering results. the view frustum, which means that unseen regions cannot be reconstructed.
-- **p. 9 / 4 Experiments - extractive PDF cue:** We also tried to compare against another baseline SparseNeuS [36]; however, we found that it failed to produce plausible reconstructions given 4 highly sparse inputs; ...
+- **p. 13 / 4 Experiments - extractive body cue:** 4.6 Limitations Although our method shows high-quality reconstruction results from posed sparse images, there are still a few limitations to be addressed in future work.
+- **p. 14 / 5 Conclusion - extractive body cue:** We hope that our work can inspire more future work in the space of data-driven feed-forward 3D reconstruction.
+- **p. 8 / 4 Experiments - extractive body cue:** The Triplane-LRM cannot reconstruct high-frequency details (top left and top right) and thin structures (bottom left) well.
+- **p. 14 / 4 Experiments - extractive body cue:** Please refer to our project page for the video and interactive rendering results. the view frustum, which means that unseen regions cannot be reconstructed.
+- **p. 9 / 4 Experiments - extractive body cue:** We also tried to compare against another baseline SparseNeuS [36]; however, we found that it failed to produce plausible reconstructions given 4 highly sparse inputs; ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

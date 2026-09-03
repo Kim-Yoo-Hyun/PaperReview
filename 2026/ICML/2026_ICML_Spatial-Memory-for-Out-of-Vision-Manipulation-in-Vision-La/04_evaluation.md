@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=5i888dLp8N; PDF retrieval source: https://openreview.net/pdf/95685162fa940bca32702d659b96eebf84138a75.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=5i888dLp8N; PDF retrieval source: https://openreview.net/pdf/95685162fa940bca32702d659b96eebf84138a75.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Real World Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | In Figure 4, SOMA achieves the highest success rates across all five real-world out-of-vision (OOV) manipulation tasks. | p. 7 (4.3. Real World Results) |
 | 4.3. Real World Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | It demonstrates that SOMA's advantages go beyond improved success rates and manifest as qualitatively different execution behavior. | p. 7 (4.3. Real World Results) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | SimplerEnv offers a standardized real-to-sim benchmark for evaluating policy success rates across simulated environments reflecting real-world robotic systems (Zitkovich et al., 2023). | embodiment, simulator version and control stack | p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks) |
 | Task/environment | As shown in Figure 3 and 5, we construct a real-world benchmark of five out-of-vision pickand-place (PnP) tasks with increasing difficulty to evaluate SOMA ... | reset, timeout, object/scene variation | p. 6 (4.1. Benchmarks), p. 8 (4.3. Real World Results) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 - **p. 7 / 4.2. Implementation - extractive body cue:** If the target cannot be localized, SOMA initiates an active head-scanning procedure along a predefined trajectory to construct the spatial memory.
 - **p. 7 / 4.3. Real World Results - extractive body cue:** Scan-only SOMA further improves success rates by leveraging multi-view scanning to construct a more complete initial memory, but still falls short of the full model.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks), p. 8 (4.3. Real World Results), p. 7 (4.2. Implementation), p. 7 (4.3. Real World Results), p. 8 (4.3. Real World Results), metrics p. 18 (Figure/Table caption), p. 7 (4.3. Real World Results), p. 6 (4.1. Benchmarks), p. 7 (4.3. Real World Results), p. 8 (4.4. Simulation Results), p. 5 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 8 (4.4. Simulation Results), p. 7 (4.3. Real World Results), p. 6 (4.2. Implementation), p. 6 (4.1. Benchmarks), p. 7 (4.3. Real World Results), results p. 7 (4.3. Real World Results), p. 7 (4.3. Real World Results), p. 8 (4.4. Simulation Results), p. 8 (4.4. Simulation Results), p. 6 (4.1. Benchmarks), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks), p. 8 (4.3. Real World Results), p. 7 (4.2. Implementation), p. 7 (4.3. Real World Results), p. 8 (4.3. Real World Results), metrics p. 18 (Figure/Table caption), p. 7 (4.3. Real World Results), p. 6 (4.1. Benchmarks), p. 7 (4.3. Real World Results), p. 8 (4.4. Simulation Results), p. 5 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 8 (4.4. Simulation Results), p. 7 (4.3. Real World Results), p. 6 (4.2. Implementation), p. 6 (4.1. Benchmarks), p. 7 (4.3. Real World Results), results p. 7 (4.3. Real World Results), p. 7 (4.3. Real World Results), p. 8 (4.4. Simulation Results), p. 8 (4.4. Simulation Results), p. 6 (4.1. Benchmarks), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 5. Ablation study on different components of the proposed memory design. "Geo." and "Obj." denote Geometric cues and object semantics, respectively. SimplerEnv Results. Table 4 reports the performance com- ... (p. 8, Figure/Table caption).
+- **Metric evidence:** In contrast, SOMA maintains consistently higher success rates across both Pick and Place stages, with the performance gap widening as task complexity increases. (p. 7, 4.3. Real World Results).
+- **Baseline/ablation evidence:** No-Scan SOMA slightly outperforms Scan+GR00T despite using only a single-view initialization, highlighting the benefit of an explicit memory structure even without multi-view coverage. (p. 7, 4.3. Real World Results).
+- **Failure/negative evidence:** The fixed-head variant fails once either the target or the goal leaves the field of view, confirming the brittleness of view-bound policies under partial observability. (p. 7, 4.3. Real World Results).

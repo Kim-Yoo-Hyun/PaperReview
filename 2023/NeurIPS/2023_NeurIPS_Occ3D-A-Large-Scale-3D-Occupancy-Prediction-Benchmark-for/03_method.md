@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.14365; PDF retrieval source: https://arxiv.org/pdf/2304.14365. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.14365; PDF retrieval source: https://arxiv.org/pdf/2304.14365. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Method Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
-- **p. 2 / 1 Introduction - extractive PDF cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
-- **p. 1 / Abstract - extractive PDF cue:** Robotic perception requires the modeling of both 3D geometry and semantics.
-- **p. 2 / 1 Introduction - extractive PDF cue:** We formalize the 3D occupancy prediction task as follows: a model needs to jointly estimate the occupancy state and semantic label of every voxel in ...
-- **p. 1 / Abstract - extractive PDF cue:** 3D occupancy prediction, which estimates the detailed occupancy states and semantics of a scene, is an emerging task to overcome these limitations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** The occupancy state of each voxel can be categorized as free, occupied, or unobserved.
-- **p. 1 / Abstract - extractive PDF cue:** Furthermore, we provide an extensive analysis of the proposed dataset with various baseline models.
+- **p. 1 / Abstract - extractive body cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
+- **p. 2 / 1 Introduction - extractive body cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
+- **p. 2 / 1 Introduction - extractive body cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
+- **p. 1 / Abstract - extractive body cue:** Robotic perception requires the modeling of both 3D geometry and semantics.
+- **p. 2 / 1 Introduction - extractive body cue:** We formalize the 3D occupancy prediction task as follows: a model needs to jointly estimate the occupancy state and semantic label of every voxel in ...
+- **p. 1 / Abstract - extractive body cue:** 3D occupancy prediction, which estimates the detailed occupancy states and semantics of a scene, is an emerging task to overcome these limitations.
+- **p. 2 / 1 Introduction - extractive body cue:** The occupancy state of each voxel can be categorized as free, occupied, or unobserved.
+- **p. 1 / Abstract - extractive body cue:** Furthermore, we provide an extensive analysis of the proposed dataset with various baseline models.
 
 ## Design Rationale
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
-- **p. 1 / Abstract - extractive PDF cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
+- **p. 2 / 1 Introduction - extractive body cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
+- **p. 2 / 1 Introduction - extractive body cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
+- **p. 1 / Abstract - extractive body cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
 
 ## Source Evidence Cues
 
-- **p. 1 / Abstract - extractive PDF cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
-- **p. 2 / 1 Introduction - extractive PDF cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
-- **p. 1 / Abstract - extractive PDF cue:** Robotic perception requires the modeling of both 3D geometry and semantics.
+- **p. 1 / Abstract - extractive body cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
+- **p. 2 / 1 Introduction - extractive body cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
+- **p. 2 / 1 Introduction - extractive body cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
+- **p. 1 / Abstract - extractive body cue:** Robotic perception requires the modeling of both 3D geometry and semantics.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks. | p. 1 (Abstract), p. 2 (1 Introduction) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network. | p. 2 (1 Introduction), p. 2 (1 Introduction) |
@@ -61,10 +61,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** We formalize the 3D occupancy prediction task as follows: a model needs to jointly estimate the occupancy state and semantic label of every voxel in ...
-- **p. 1 / Abstract - extractive PDF cue:** 3D occupancy prediction, which estimates the detailed occupancy states and semantics of a scene, is an emerging task to overcome these limitations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** The occupancy state of each voxel can be categorized as free, occupied, or unobserved.
-- **p. 1 / Abstract - extractive PDF cue:** Furthermore, we provide an extensive analysis of the proposed dataset with various baseline models.
+- **p. 2 / 1 Introduction - extractive body cue:** We formalize the 3D occupancy prediction task as follows: a model needs to jointly estimate the occupancy state and semantic label of every voxel in ...
+- **p. 1 / Abstract - extractive body cue:** 3D occupancy prediction, which estimates the detailed occupancy states and semantics of a scene, is an emerging task to overcome these limitations.
+- **p. 2 / 1 Introduction - extractive body cue:** The occupancy state of each voxel can be categorized as free, occupied, or unobserved.
+- **p. 1 / Abstract - extractive body cue:** Furthermore, we provide an extensive analysis of the proposed dataset with various baseline models.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -99,13 +99,13 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Failure and Ablation Link
 
-- **p. 9 / 6 Experiments - extractive PDF cue:** The voxel embedding will first pass through four encoder layers without token selection.
-- **p. 10 / 6 Experiments - extractive PDF cue:** Without the OHEM loss, we only get 14.06 mIoU.
-- **p. 10 / 6 Experiments - extractive PDF cue:** 6.3 Ablation study In this section, we ablate the choices of incremental token selection and OHEM loss.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5: The architecture of CTF-Occ network. CTF-Occ consists of an image backbone, a coarse-to-fine voxel encoder, and an implicit occupancy decoder. in a scene ...
-- **p. 9 / 6 Experiments - extractive PDF cue:** We replace their original detection decoders with the occupancy decoder adopted in our CTF-Occ network and remain their BEV feature encoders.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
+- **p. 9 / 6 Experiments - extractive body cue:** The voxel embedding will first pass through four encoder layers without token selection.
+- **p. 10 / 6 Experiments - extractive body cue:** Without the OHEM loss, we only get 14.06 mIoU.
+- **p. 10 / 6 Experiments - extractive body cue:** 6.3 Ablation study In this section, we ablate the choices of incremental token selection and OHEM loss.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: The architecture of CTF-Occ network. CTF-Occ consists of an image backbone, a coarse-to-fine voxel encoder, and an implicit occupancy decoder. in a scene ...
+- **p. 9 / 6 Experiments - extractive body cue:** We replace their original detection decoders with the occupancy decoder adopted in our CTF-Occ network and remain their BEV feature encoders.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -119,7 +119,7 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), objective 본문 anchor 없음, temporal p. 8 (6 Experiments), p. 9 (6 Experiments), p. 3 (2 Related Work), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 4 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), objective 본문 anchor 없음, temporal p. 8 (6 Experiments), p. 9 (6 Experiments), p. 3 (2 Related Work), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 4 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

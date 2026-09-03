@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | We first concatenate the normalized RGB and depth images, and then extract dense monocular scene embedding E′ t with a UNet-based encoder ... | p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.2. Fine Target Localization) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Then we formulate the optimization loss as: L = 1 Q Q-1 X i=0 (/Xi g -Xi/2) (9) where Q is the ... | p. 5 (3.3.2. Fine Target Localization), p. 3 (3.1. Problem Statement) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | At time step t, the agent receives new RGB-D observations It ∈RH×W ×3 and Dt ∈RH×W ×1. | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | At each time step, we select the nearest frontier to the agent and generate binary scores Sf on the BEV map, where ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
-| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization), p. 6 (3.4. Navigation), p. 4 (3.3. Coarse-to-fine Localization), objective p. 5 (3.3.1. Coarse Target Localization), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.2. Incremental Scene Representation), p. 4 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization), temporal p. 3 (3.2. Incremental Scene Representation), p. 6 (3.4. Navigation), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Analysis of IGL-Nav).
+- **Evidence anchors reviewed:** method p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization), p. 6 (3.4. Navigation), p. 4 (3.3. Coarse-to-fine Localization), objective p. 5 (3.3.1. Coarse Target Localization), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.2. Incremental Scene Representation), p. 4 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization), temporal p. 3 (3.2. Incremental Scene Representation), p. 6 (3.4. Navigation), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Analysis of IGL-Nav).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our incremental reconstruction model is essentially a mapping fθ from observations to 3DGS parameters, including position µk, opacity αk, covariance Σk and spherical harmonics ck: fθ : (It, Dt) 7→{(µk, ... (p. 3, 3.2. Incremental Scene Representation).
+- **Objective/update evidence:** Then we formulate the optimization loss as: L = 1 Q Q-1 X i=0 (/Xi g -Xi/2) (9) where Q is the number of matching pairs. (p. 5, 3.3.2. Fine Target Localization).
+- **Temporal/runtime evidence:** Each of the six subsets contains 500 randomly sampled episodes. (p. 6, 4.1. Experimental Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Mzz4BhdIFb; PDF retrieval source: https://openreview.net/pdf/06fee7a1122ea26338330e0d4ace4117ec6c3ca6.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Mzz4BhdIFb; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/166257. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive PDF cue:** Specifically, we consider the picking and placing tasks of objects such as cups, bowls, and stuffed toys on a robotic arm UR5.
-- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive PDF cue:** For OOD generalization evaluation, we consider scenes with unseen instructions, backgrounds, distractors and manipulated objects (Fig.
-- **p. 5 / 5. Experiments - extractive PDF cue:** In this section, we explore how the proposed ReinboT model can effectively implement the RL principle of maximizing return to enhance robotic vision-language manipulation tasks.
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** This dataset contains a small amount of data with language instructions in CALVIN ABC (about 50 trajectories per task) and a large amount of autonomous ...
-- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning Table 1.
-- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D.
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** 1 shows the success rate of each language instruction in the chain and the Average Length (AL) of the completed tasks.
-- **p. 5 / 5. Experiments - extractive PDF cue:** To this end, our experiments aim to investigate the following questions: 1) Does ReinboT show better generalization ability and higher success rate when performing long-horizon ...
+- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive body cue:** Specifically, we consider the picking and placing tasks of objects such as cups, bowls, and stuffed toys on a robotic arm UR5.
+- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive body cue:** For OOD generalization evaluation, we consider scenes with unseen instructions, backgrounds, distractors and manipulated objects (Fig.
+- **p. 5 / 5. Experiments - extractive body cue:** In this section, we explore how the proposed ReinboT model can effectively implement the RL principle of maximizing return to enhance robotic vision-language manipulation tasks.
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** This dataset contains a small amount of data with language instructions in CALVIN ABC (about 50 trajectories per task) and a large amount of autonomous ...
+- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning Table 1.
+- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D.
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** 1 shows the success rate of each language instruction in the chain and the Average Length (AL) of the completed tasks.
+- **p. 5 / 5. Experiments - extractive body cue:** To this end, our experiments aim to investigate the following questions: 1) Does ReinboT show better generalization ability and higher success rate when performing long-horizon ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.3. Evaluation on Real-world Tasks | EMPIRICAL / SOURCE-REPORTED EVALUATION | (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in realistic scenarios, and significantly outperforms the baseline methods. | p. 8 (5.3. Evaluation on Real-world Tasks) |
 | 5.1. Generalization Evaluation on Mixed-quality Data | EMPIRICAL / SOURCE-REPORTED EVALUATION | For ReinboT and RWR, our dense reward improves performance better than sparse rewards. | p. 6 (5.1. Generalization Evaluation on Mixed-quality Data) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive PDF cue:** Specifically, we consider the picking and placing tasks of objects such as cups, bowls, and stuffed toys on a robotic arm UR5.
-- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive PDF cue:** For OOD generalization evaluation, we consider scenes with unseen instructions, backgrounds, distractors and manipulated objects (Fig.
-- **p. 5 / 5. Experiments - extractive PDF cue:** In this section, we explore how the proposed ReinboT model can effectively implement the RL principle of maximizing return to enhance robotic vision-language manipulation tasks.
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** This dataset contains a small amount of data with language instructions in CALVIN ABC (about 50 trajectories per task) and a large amount of autonomous ...
-- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning Table 1.
-- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D.
+- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive body cue:** Specifically, we consider the picking and placing tasks of objects such as cups, bowls, and stuffed toys on a robotic arm UR5.
+- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive body cue:** For OOD generalization evaluation, we consider scenes with unseen instructions, backgrounds, distractors and manipulated objects (Fig.
+- **p. 5 / 5. Experiments - extractive body cue:** In this section, we explore how the proposed ReinboT model can effectively implement the RL principle of maximizing return to enhance robotic vision-language manipulation tasks.
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** This dataset contains a small amount of data with language instructions in CALVIN ABC (about 50 trajectories per task) and a large amount of autonomous ...
+- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning Table 1.
+- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. The proposed ReinboT model. We leverage CLIP (Radford et al., 2021) to encode robot language instructions, utilize ViT (Dosovitskiy et al., 2020; He ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D. Algorithms No. of Instructions Chained Avg. Length (↑) 1 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation experiments are conducted to verify the necessity of the designed reward components. No. of Instructions Chained Avg. Length (↑) 1 2 3 ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 2. (a) Impact of different values of ReturnToGo LRTG loss weight λ. (b) Impact of different values of the expectile regression parameter m in ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. (a) Distribution of ground-truth ReturnToGo of CALVIN mixed-quality training data and distribution of the maximized ReturnToGo predicted by the ReinboT when interacting with ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Few-shot learning and OOD generalization evaluation scenarios for real-world tasks. Few-shot learning evaluation scenarios include cup grasping (a), bowl grasping and placing (b), ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Distribution of successful realistic trajectories.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. (a) Comparison of few-shot learning performance. (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in real- istic ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The proposed ReinboT model. We leverage CLIP (Radford et al., 2021) to encode robot language instructions, utilize ViT (Dosovitskiy et al., 2020; He ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D. Algorithms No. of Instructions Chained Avg. Length (↑) 1 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation experiments are conducted to verify the necessity of the designed reward components. No. of Instructions Chained Avg. Length (↑) 1 2 3 ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 2. (a) Impact of different values of ReturnToGo LRTG loss weight λ. (b) Impact of different values of the expectile regression parameter m in ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. (a) Distribution of ground-truth ReturnToGo of CALVIN mixed-quality training data and distribution of the maximized ReturnToGo predicted by the ReinboT when interacting with ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Few-shot learning and OOD generalization evaluation scenarios for real-world tasks. Few-shot learning evaluation scenarios include cup grasping (a), bowl grasping and placing (b), ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Distribution of successful realistic trajectories.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. (a) Comparison of few-shot learning performance. (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in real- istic ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Specifically, we consider the picking and placing tasks of objects such as cups, bowls, and stuffed toys on a robotic arm UR5. | embodiment, simulator version and control stack | p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks) |
 | Task/environment | For OOD generalization evaluation, we consider scenes with unseen instructions, backgrounds, distractors and manipulated objects (Fig. | reset, timeout, object/scene variation | p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 | Primary metric/result | For ReinboT and RWR, our dense reward improves performance better than sparse rewards. | numeric claim only at cited anchor | p. 6 (5.1. Generalization Evaluation on Mixed-quality Data) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** This dataset contains a small amount of data with language instructions in CALVIN ABC (about 50 trajectories per task) and a large amount of autonomous ...
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure ...
-- **p. 4 / 4.1. Reward Densification - extractive PDF cue:** Based on these four main factors, the general dense reward captures the nature of the long-horizon visual-language manipulation tasks is: r = 4 X i=1 ...
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** This dataset contains a small amount of data with language instructions in CALVIN ABC (about 50 trajectories per task) and a large amount of autonomous ...
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure ...
+- **p. 4 / 4.1. Reward Densification - extractive body cue:** Based on these four main factors, the general dense reward captures the nature of the long-horizon visual-language manipulation tasks is: r = 4 X i=1 ...
 
 ## Generalization and Failure Cases
 
@@ -155,10 +155,10 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure ...
-- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive PDF cue:** To promote data diversity, different degrees of Gaussian noise (0.05, 0.1, and 0.15) are added to the actions of the RoboFlamingo policy model during the ...
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure ...
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** To promote data diversity, different degrees of Gaussian noise (0.05, 0.1, and 0.15) are added to the actions of the RoboFlamingo policy model during the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), metrics p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5. Experiments), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks), p. 3 (Figure/Table caption), baselines p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 8 (5.3. Evaluation on Real-world Tasks), results p. 8 (5.3. Evaluation on Real-world Tasks), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5. Experiments), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), metrics p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5. Experiments), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks), p. 3 (Figure/Table caption), baselines p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 8 (5.3. Evaluation on Real-world Tasks), results p. 8 (5.3. Evaluation on Real-world Tasks), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5. Experiments), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

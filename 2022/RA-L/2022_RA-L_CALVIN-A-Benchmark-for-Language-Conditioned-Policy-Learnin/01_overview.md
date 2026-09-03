@@ -1,7 +1,7 @@
 # CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2112.03227.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2112.03227.
 > PDF retrieval source: https://arxiv.org/pdf/2112.03227. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2112.03227
 - Code/Project: https://calvin.cs.uni-freiburg.de/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,4 +81,13 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Models that can overcome these challenges will begin to close the gap towards scalable, general-purpose, language-driven robotics.를 문제로 두고, In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn longhorizon language-conditioned tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 1 (A LONG-STANDING goal for robotics and embodied), p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 3 (3) CALVIN Challenge), p. 4 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Models that can overcome these challenges will begin to close the gap towards scalable, general-purpose, language-driven robotics.를 문제로 두고, In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn longhorizon language-conditioned tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 1 (A LONG-STANDING goal for robotics and embodied), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 3 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The long horizon of CALVIN tasks poses a significant challenge with sub-problems including the acquisition of a diverse repertoire of general-purpose skills, object detection, referring expression and action grounding, and ... (p. 7, VI. CONCLUSION).
+- **Actual contribution:** In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn longhorizon language-conditioned tasks. (p. 1, Abstract).
+- **Evaluation boundary:** We observe that the baseline with images of the static camera achieves a success rate of 53.9% for the MTLC evaluation setting, when training and testing the 34 manipulation tasks ... (p. 6, V. EXPERIMENTAL RESULTS).
+- **Explicit failure boundary:** For the Long-Horizon MTLC evaluation we observe that the agents perform poorly on CALVIN's long-horizon tasks with high-dimensional state spaces. (p. 7, V. EXPERIMENTAL RESULTS).

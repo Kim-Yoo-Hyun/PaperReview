@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/kim25c.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/kim25c.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Figure 3: Bridge V2 WidowX evaluation task categories and results. We evaluate OpenVLA and prior state-of- the-art generalist robot policies on a comprehensive suite ... | p. 6 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SIMULATION | Table 6: Detailed Google robot evaluation results. We report full evaluation results for Google robot evaluations discussed in Section 4.1. Each generalist policy is ... | p. 25 (Figure/Table caption) |
@@ -64,12 +64,12 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Qualitatively, both RT-2-X and OpenVLA exhibit markedly more robust behaviors than the other tested models, such as approaching the correct object when distractor objects ... | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | We test OpenVLA in two setups: Franka-Tabletop, a stationary, table-mounted Franka Emika Panda 7-DoF robot arm; and Franka-DROID, the Franka setup from the DROID ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 8 (7.0 GB) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | 본문 anchor 없음 |
+| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)) |
+| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 2 (1 Introduction), p. 2 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -149,12 +149,12 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 |---|---|
 | 4-bit inference achieves higher throughput due to reduced GPU memory transfer and thus recovers performance of the original bfloat16 model, while requiring less than ... | p. 8 (7.0 GB) |
 | Importantly, LoRA matches full fine-tuning performance while fine-tuning only 1.4% of the parameters (r = 32), enabling us to fine-tune OpenVLA on a new ... | p. 8 (7.0 GB) |
+| Finally, we release model checkpoints, fine-tuning notebooks, and our PyTorch codebase with built-in support for training VLAs at scale on Open X-Embodiment datasets. | p. 2 (Body text (section boundary not confidently recovered)) |
 | What are the performance-compute trade-offs? | p. 6 (4 Experiments) |
 | Average success rates ± StdErr are computed across 170 total rollouts per approach. fine-tuning and quantization to reduce the computational requirements for training and ... | p. 6 (4 Experiments) |
 | Mean success ± StdErr computed across 99 and 30 rollouts per approach for Franka-Tabletop and Franka-DROID, respectively. | p. 7 (4 Experiments) |
 | 350k for RT-2-X; we performed more careful cleaning of the training dataset and, e.g., filter out all-zero actions in the Bridge dataset (see Appendix ... | p. 7 (4 Experiments) |
-| Yet, there are two key reasons preventing the widespread use of existing VLAs: 1) current models [1, 7, 17, 18] are closed, with limited ... | p. 2 (1 Introduction) |
-| of compute efficient fine-tuning methods leveraging low-rank adaptation [LoRA; 25] and model quantization [26] to facilitate adapting OpenVLA models on consumer-grade GPUs instead of ... | p. 3 (1 Introduction) |
+| OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP. | p. 1 (Body text (section boundary not confidently recovered)) |
 
 | Audit field | Current status |
 |---|---|
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 6 / 4 Experiments - extractive body cue:** We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct object, especially when distractors are present.
 - **p. 7 / 4 Experiments - extractive body cue:** Franka-Tabletop Franka-DROID 66.7 53.5 33.3 93.3 80.0 0.0 83.3 63.3 26.7 Narrow Single-Instruction Tasks 19.4 27.8 30.6 27.8 22.2 66.7 16.7 25.0 91.7 Diverse Multi-Instruction ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 33 (Figure/Table caption), p. 25 (Figure/Table caption), p. 35 (Figure/Table caption), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), baselines p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB), results p. 6 (Figure/Table caption), p. 25 (Figure/Table caption), p. 7 (4 Experiments), p. 29 (Figure/Table caption), p. 35 (Figure/Table caption), p. 23 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 33 (Figure/Table caption), p. 25 (Figure/Table caption), p. 35 (Figure/Table caption), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), baselines p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB), results p. 6 (Figure/Table caption), p. 25 (Figure/Table caption), p. 7 (4 Experiments), p. 29 (Figure/Table caption), p. 35 (Figure/Table caption), p. 23 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Google robot evaluation results. We evaluate generalist robot policies on in-distribution and out-of- distribution (OOD) tasks on the mobile manipulator used in RT-1 and RT-2 evaluations [2, 7]. ... (p. 6, Figure/Table caption).
+- **Metric evidence:** Notably, prior works achieve strong performance only in either precise or diverse tasks, resulting in widely varying success rates. (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** (2) Can OpenVLA be effectively fine-tuned on a new robot setup and task, and how does it compare to state-of-the-art data-efficient imitation learning approaches? (p. 5, 4 Experiments).
+- **Failure/negative evidence:** We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct object, especially when distractors are present. (p. 6, 4 Experiments).

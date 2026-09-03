@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=o1sF4XaFdY; PDF retrieval source: https://openreview.net/pdf/2b748f586856383d970839527439157443d1cc87.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=o1sF4XaFdY; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247825. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** (2014) dataset following MVSplat Chen et al.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** 4.1 MAIN RESULTS Table 1: Novel view synthesis performance on the RealEstate10k dataset.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** We report quantitative comparison on the RE10K dataset in Table 1 and on the ACID dataset in Table 2.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 3: Cross datasets performance.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** 4.2 ABLATION AND ANALYSIS Figure 5: Ablation study: Visualization of reconstructed 3D scenes.
-- **p. 10 / 4 EXPERIMENT - extractive PDF cue:** Metric pixelSplat HiSplat MVSplat TransSplat DepthSplat Ours PSNR ↑ 24.082 22.780 17.966 19.545 16.066 24.411 SSIM ↑ 0.755 0.765 0.645 0.679 0.600 0.788 LPIPS ↓ ...
-- **p. 17 / A.3 EXTENDED RESULTS AT HIGHER RESOLUTION - extractive PDF cue:** As the resolution increases, our model preserves coherent geometry and appearance, revealing finer details of the scene.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** (2014) dataset following MVSplat Chen et al.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** 4.1 MAIN RESULTS Table 1: Novel view synthesis performance on the RealEstate10k dataset.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** We report quantitative comparison on the RE10K dataset in Table 1 and on the ACID dataset in Table 2.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** 4.2 ABLATION AND ANALYSIS Figure 5: Ablation study: Visualization of reconstructed 3D scenes.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** To assess cross-dataset generalization, we train our model on RE10K and directly conduct evaluation on DTU, DL3DV, and ScanNet datasets.
+- **p. 10 / 4 EXPERIMENT - extractive body cue:** Metric pixelSplat HiSplat MVSplat TransSplat DepthSplat Ours PSNR ↑ 24.082 22.780 17.966 19.545 16.066 24.411 SSIM ↑ 0.755 0.765 0.645 0.679 0.600 0.788 LPIPS ↓ ...
+- **p. 17 / A.3 EXTENDED RESULTS AT HIGHER RESOLUTION - extractive body cue:** As the resolution increases, our model preserves coherent geometry and appearance, revealing finer details of the scene.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENT | EMPIRICAL / SOURCE-REPORTED EVALUATION | Since using more primitives generally improves performance, we focus our core comparisons on the latter group to ensure a fair comparison. | p. 8 (4 EXPERIMENT) |
 | 4 EXPERIMENT | EMPIRICAL / SOURCE-REPORTED EVALUATION | Interestingly, this variant still achieves competitive novel view synthesis (NVS) performance at the original resolution, despite producing visually noisy and discontinuous surfaces. | p. 9 (4 EXPERIMENT) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** (2014) dataset following MVSplat Chen et al.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** 4.1 MAIN RESULTS Table 1: Novel view synthesis performance on the RealEstate10k dataset.
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** We report quantitative comparison on the RE10K dataset in Table 1 and on the ACID dataset in Table 2.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 3: Cross datasets performance.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** 4.2 ABLATION AND ANALYSIS Figure 5: Ablation study: Visualization of reconstructed 3D scenes.
-- **p. 10 / 4 EXPERIMENT - extractive PDF cue:** Metric pixelSplat HiSplat MVSplat TransSplat DepthSplat Ours PSNR ↑ 24.082 22.780 17.966 19.545 16.066 24.411 SSIM ↑ 0.755 0.765 0.645 0.679 0.600 0.788 LPIPS ↓ ...
-- **p. 17 / A.3 EXTENDED RESULTS AT HIGHER RESOLUTION - extractive PDF cue:** As the resolution increases, our model preserves coherent geometry and appearance, revealing finer details of the scene.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** (2014) dataset following MVSplat Chen et al.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** 4.1 MAIN RESULTS Table 1: Novel view synthesis performance on the RealEstate10k dataset.
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** We report quantitative comparison on the RE10K dataset in Table 1 and on the ACID dataset in Table 2.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** 4.2 ABLATION AND ANALYSIS Figure 5: Ablation study: Visualization of reconstructed 3D scenes.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** To assess cross-dataset generalization, we train our model on RE10K and directly conduct evaluation on DTU, DL3DV, and ScanNet datasets.
+- **p. 10 / 4 EXPERIMENT - extractive body cue:** Metric pixelSplat HiSplat MVSplat TransSplat DepthSplat Ours PSNR ↑ 24.082 22.780 17.966 19.545 16.066 24.411 SSIM ↑ 0.755 0.765 0.645 0.679 0.600 0.788 LPIPS ↓ ...
+- **p. 17 / A.3 EXTENDED RESULTS AT HIGHER RESOLUTION - extractive body cue:** As the resolution increases, our model preserves coherent geometry and appearance, revealing finer details of the scene.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: SurfSplat is a feedforward network that predicts a 3D scene representation from sparse images input. Previous methods often produce sparse, color-biased pointclouds that ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Illustration for model architecture. Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches. The fused features are ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Illustration for Gaussian processor. We visualize how image-space neighboring pixels are transformed into Gaussians aligned on a continuous surface via the surface continuity ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Multi-resolution rendering of 3D scenes. We visualize rendered images and depth maps at three resolutions: ×1 (blue box), ×2 (green box), and ×4 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Novel view synthesis performance on the RealEstate10k dataset. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Novel view synthesis performance on the ACID dataset. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Cross datasets performance. Scannet DL3DV DTU Average
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Ablations study on various components. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: SurfSplat is a feedforward network that predicts a 3D scene representation from sparse images input. Previous methods often produce sparse, color-biased pointclouds that ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration for model architecture. Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches. The fused features are ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Illustration for Gaussian processor. We visualize how image-space neighboring pixels are transformed into Gaussians aligned on a continuous surface via the surface continuity ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Multi-resolution rendering of 3D scenes. We visualize rendered images and depth maps at three resolutions: ×1 (blue box), ×2 (green box), and ×4 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Novel view synthesis performance on the RealEstate10k dataset. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Novel view synthesis performance on the ACID dataset. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Cross datasets performance. Scannet DL3DV DTU Average
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Ablations study on various components. 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work. | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT) |
 | Task/environment | (2014) dataset following MVSplat Chen et al. | reset, timeout, object/scene variation | p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT) |
@@ -123,11 +123,11 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 
 | Primary metric/result | Interestingly, this variant still achieves competitive novel view synthesis (NVS) performance at the original resolution, despite producing visually noisy and discontinuous surfaces. | numeric claim only at cited anchor | p. 9 (4 EXPERIMENT) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 26.049 0.862 0.137 25.782 ...
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 28.284 0.842 0.146 27.687 ...
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ w/o FAB, SCP 26.925 0.880 ...
-- **p. 16 / A.3 EXTENDED RESULTS AT HIGHER RESOLUTION - extractive PDF cue:** 256×448(Standard) 512×896(HRRC) 1024×1792(HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ Ours-B 26.190 0.871 0.134 25.553 0.861 0.234 24.197 ...
-- **p. 5 / 3.1 PRELIMINARIES - extractive PDF cue:** To address this, we adopt a coarse scale estimate based on image-space distances between neighboring pixels: ¯σ2 u, ¯σ2 v = t2 1x + t2 ...
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 26.049 0.862 0.137 25.782 ...
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 28.284 0.842 0.146 27.687 ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ w/o FAB, SCP 26.925 0.880 ...
+- **p. 16 / A.3 EXTENDED RESULTS AT HIGHER RESOLUTION - extractive body cue:** 256×448(Standard) 512×896(HRRC) 1024×1792(HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ Ours-B 26.190 0.871 0.134 25.553 0.861 0.234 24.197 ...
+- **p. 5 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we adopt a coarse scale estimate based on image-space distances between neighboring pixels: ¯σ2 u, ¯σ2 v = t2 1x + t2 ...
 
 ## Generalization and Failure Cases
 
@@ -164,13 +164,13 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** These limitations open opportunities for future research on joint pose elimination and compact, adaptive representations.
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** By introducing a surface continuity prior and a forced alpha blending strategy, our method addresses key limitations of previous approaches, eliminating surface discontinuities and overcoming ...
-- **p. 8 / 4 EXPERIMENT - extractive PDF cue:** These artifacts reveal the limitations of previous feedforward 3DGS 8
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** This observation highlights a key limitation of conventional NVS metrics and underscores the value of our proposed HRRC metric, which drops significantly when surface continuity ...
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Notably, DepthSplat, despite using the same encoder backbone as our method, fails to generate coherent geometry or consistent surface details, which highlights the effectiveness of ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** These limitations open opportunities for future research on joint pose elimination and compact, adaptive representations.
+- **p. 10 / 5 CONCLUSION - extractive body cue:** By introducing a surface continuity prior and a forced alpha blending strategy, our method addresses key limitations of previous approaches, eliminating surface discontinuities and overcoming ...
+- **p. 8 / 4 EXPERIMENT - extractive body cue:** These artifacts reveal the limitations of previous feedforward 3DGS 8
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** This observation highlights a key limitation of conventional NVS metrics and underscores the value of our proposed HRRC metric, which drops significantly when surface continuity ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Notably, DepthSplat, despite using the same encoder backbone as our method, fails to generate coherent geometry or consistent surface details, which highlights the effectiveness of ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), metrics p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), baselines p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), results p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 16 (A.3 EXTENDED RESULTS AT HIGHER RESOLUTION), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT).
+- **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), metrics p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), baselines p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), results p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 16 (A.3 EXTENDED RESULTS AT HIGHER RESOLUTION), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

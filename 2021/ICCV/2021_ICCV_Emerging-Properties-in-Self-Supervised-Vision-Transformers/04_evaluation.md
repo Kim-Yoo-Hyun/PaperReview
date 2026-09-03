@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2104.14294; PDF retrieval source: https://arxiv.org/pdf/2104.14294. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2104.14294; PDF retrieval source: https://arxiv.org/pdf/2104.14294. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** 5 that even though our training objective nor our architecture are designed for dense tasks, the performance is competitive on this benchmark.
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** We pretrain the models on the ImageNet dataset [60] without labels.
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** This evaluation protocol does not require any other hyperparameter tuning, nor data augmentation and can be run with only one pass over the downstream dataset, ...
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** [37] and segment scenes with a nearestneighbor between consecutive frames; we thus do not train any model on top of the features, nor finetune any ...
-- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive PDF cue:** Pretraining with DINO on a landmark dataset performs particularly well.
-- **p. 6 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** We consider the revisited [53] Oxford and Paris image retrieval datasets [50].
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Table 14: Relation to MoCo-v2 and BYOL. We ablate the com- ponents that differ between DINO, MoCo-v2 and BYOL: the loss function (cross-entropy, CE, versus ...
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** However, both evaluations are sensitive to hyperparameters, and we observe a large variance in accuracy between runs when varying the learning rate for example.
+- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** 5 that even though our training objective nor our architecture are designed for dense tasks, the performance is competitive on this benchmark.
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** We pretrain the models on the ImageNet dataset [60] without labels.
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** This evaluation protocol does not require any other hyperparameter tuning, nor data augmentation and can be run with only one pass over the downstream dataset, ...
+- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** [37] and segment scenes with a nearestneighbor between consecutive frames; we thus do not train any model on top of the features, nor finetune any ...
+- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** Pretraining with DINO on a landmark dataset performs particularly well.
+- **p. 6 / 4.2. Properties of ViT trained with SSL - extractive body cue:** We consider the revisited [53] Oxford and Paris image retrieval datasets [50].
+- **p. 15 / Figure/Table caption - extractive body cue:** Table 14: Relation to MoCo-v2 and BYOL. We ablate the com- ponents that differ between DINO, MoCo-v2 and BYOL: the loss function (cross-entropy, CE, versus ...
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** However, both evaluations are sensitive to hyperparameters, and we observe a large variance in accuracy between runs when varying the learning rate for example.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Comparing with SSL frameworks on ImageNet | EMPIRICAL / SOURCE-REPORTED EVALUATION | While training a larger ViT with DINO improves the performance, reducing the size of the patches ("/8" variants) has a bigger impact on the ... | p. 6 (4.1. Comparing with SSL frameworks on ImageNet) |
 | 4.2. Properties of ViT trained with SSL | EMPIRICAL / SOURCE-REPORTED EVALUATION | Finally, self-supervised pretraining greatly improves results on ImageNet (+1-2%). | p. 7 (4.2. Properties of ViT trained with SSL) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** 5 that even though our training objective nor our architecture are designed for dense tasks, the performance is competitive on this benchmark.
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** We pretrain the models on the ImageNet dataset [60] without labels.
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** This evaluation protocol does not require any other hyperparameter tuning, nor data augmentation and can be run with only one pass over the downstream dataset, ...
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** [37] and segment scenes with a nearestneighbor between consecutive frames; we thus do not train any model on top of the features, nor finetune any ...
-- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive PDF cue:** Pretraining with DINO on a landmark dataset performs particularly well.
-- **p. 6 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** We consider the revisited [53] Oxford and Paris image retrieval datasets [50].
+- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** 5 that even though our training objective nor our architecture are designed for dense tasks, the performance is competitive on this benchmark.
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** We pretrain the models on the ImageNet dataset [60] without labels.
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** This evaluation protocol does not require any other hyperparameter tuning, nor data augmentation and can be run with only one pass over the downstream dataset, ...
+- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** [37] and segment scenes with a nearestneighbor between consecutive frames; we thus do not train any model on top of the features, nor finetune any ...
+- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** Pretraining with DINO on a landmark dataset performs particularly well.
+- **p. 6 / 4.2. Properties of ViT trained with SSL - extractive body cue:** We consider the revisited [53] Oxford and Paris image retrieval datasets [50].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Self-attention from a Vision Transformer with 8 × 8 patches trained with no supervision. We look at the self-attention of the [CLS] token ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2: Self-distillation with no labels. We illustrate DINO in the case of one single pair of views (x1, x2) for simplicity. The model passes ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Networks configuration. "Blocks" is the number of Transformer blocks, "dim" is channel dimension and "heads" is the number of heads in multi-head attention. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2: Linear and k-NN classification on ImageNet. We report top-1 accuracy for linear and k-NN evaluations on the validation set of ImageNet for different ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3: Image retrieval. We compare the performance in retrieval of off-the-shelf features pretrained with supervision or with DINO on ImageNet and Google Landmarks v2 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4: Copy detection. We report the mAP performance in copy detection on Copydays "strong" subset [21]. For reference, we also report the performance of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5: DAVIS 2017 Video object segmentation. We evaluate the quality of frozen features on video instance tracking. We report mean region similarity Jm and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Attention maps from multiple heads. We consider the heads from the last layer of a ViT-S/8 trained with DINO and display the self-attention ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Self-attention from a Vision Transformer with 8 × 8 patches trained with no supervision. We look at the self-attention of the [CLS] token ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Self-distillation with no labels. We illustrate DINO in the case of one single pair of views (x1, x2) for simplicity. The model passes ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Networks configuration. "Blocks" is the number of Transformer blocks, "dim" is channel dimension and "heads" is the number of heads in multi-head attention. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2: Linear and k-NN classification on ImageNet. We report top-1 accuracy for linear and k-NN evaluations on the validation set of ImageNet for different ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3: Image retrieval. We compare the performance in retrieval of off-the-shelf features pretrained with supervision or with DINO on ImageNet and Google Landmarks v2 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4: Copy detection. We report the mAP performance in copy detection on Copydays "strong" subset [21]. For reference, we also report the performance of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5: DAVIS 2017 Video object segmentation. We evaluate the quality of frozen features on video instance tracking. We report mean region similarity Jm and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Attention maps from multiple heads. We consider the heads from the last layer of a ViT-S/8 trained with DINO and display the self-attention ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5 that even though our training objective nor our architecture are designed for dense tasks, the performance is competitive on this benchmark. | embodiment, simulator version and control stack | p. 7 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols) |
 | Task/environment | We pretrain the models on the ImageNet dataset [60] without labels. | reset, timeout, object/scene variation | p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols) |
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 | Primary metric/result | Finally, self-supervised pretraining greatly improves results on ImageNet (+1-2%). | numeric claim only at cited anchor | p. 7 (4.2. Properties of ViT trained with SSL) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** In this paper we typically use N = 16 ("/16") or N = 8 ("/8").
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** We train with the adamw optimizer [44] and a batch size of 1024, distributed over 16 GPUs when using ViT-S/16.
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** The learning rate is linearly ramped up during the first 10 epochs to its base value determined with the following linear scaling rule [29]: lr ...
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** The temperature τs is set to 0.1 while we use a linear warm-up for τt from 0.04 to 0.07 during the first 30 epochs.
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** The throughput (im/s) is calculated on a NVIDIA V100 GPU with 128 samples per forward.
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** Visualizations are obtained with 480p images, resulting in sequences of 3601 tokens for ViT-S/8.
+- **p. 4 / 3.2. Implementation and evaluation protocols - extractive body cue:** In this paper we typically use N = 16 ("/16") or N = 8 ("/8").
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** We train with the adamw optimizer [44] and a batch size of 1024, distributed over 16 GPUs when using ViT-S/16.
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** The learning rate is linearly ramped up during the first 10 epochs to its base value determined with the following linear scaling rule [29]: lr ...
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** The temperature τs is set to 0.1 while we use a linear warm-up for τt from 0.04 to 0.07 during the first 30 epochs.
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** The throughput (im/s) is calculated on a NVIDIA V100 GPU with 128 samples per forward.
+- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** Visualizations are obtained with 480p images, resulting in sequences of 3601 tokens for ViT-S/8.
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 9 SwAV - extractive PDF cue:** However, the performance gain from using smaller patches comes at the expense of throughput: when using 5×5 patches, the throughput falls to 44 im/s, vs ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Figure 9: Projection head design w/ or w/o l2-norm bottleneck. linear layers is n + 1 (n from the MLP and 1 from the weight ...
-- **p. 5 / 3.2. Implementation and evaluation protocols - extractive PDF cue:** This evaluation protocol does not require any other hyperparameter tuning, nor data augmentation and can be run with only one pass over the downstream dataset, ...
-- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive PDF cue:** This property emerges only when using DINO with ViT architectures, and does not appear with other existing self-supervised methods nor with a ResNet-50.
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive PDF cue:** 4, we show that a supervised ViT does not attend well to objects in presence of clutter both qualitatively and quantitatively.
-- **p. 8 / 5.1. Importance of the Different Components - extractive PDF cue:** First, we observe that in the absence of momentum, our framework does not work (row 2) and more advanced operations, SK for example, are required ...
+- **p. 8 / 9 SwAV - extractive body cue:** However, the performance gain from using smaller patches comes at the expense of throughput: when using 5×5 patches, the throughput falls to 44 im/s, vs ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Figure 9: Projection head design w/ or w/o l2-norm bottleneck. linear layers is n + 1 (n from the MLP and 1 from the weight ...
+- **p. 5 / 3.2. Implementation and evaluation protocols - extractive body cue:** This evaluation protocol does not require any other hyperparameter tuning, nor data augmentation and can be run with only one pass over the downstream dataset, ...
+- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** This property emerges only when using DINO with ViT architectures, and does not appear with other existing self-supervised methods nor with a ResNet-50.
+- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** 4, we show that a supervised ViT does not attend well to objects in presence of clutter both qualitatively and quantitatively.
+- **p. 8 / 5.1. Importance of the Different Components - extractive body cue:** First, we observe that in the absence of momentum, our framework does not work (row 2) and more advanced operations, SK for example, are required ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols), p. 7 (4.2. Properties of ViT trained with SSL), p. 6 (4.1. Comparing with SSL frameworks on ImageNet), p. 6 (4.2. Properties of ViT trained with SSL), metrics p. 15 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 9 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 7 (4.2. Properties of ViT trained with SSL), p. 6 (4.2. Properties of ViT trained with SSL), baselines p. 6 (4.2. Properties of ViT trained with SSL), p. 6 (4.2. Properties of ViT trained with SSL), p. 14 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (4.1. Comparing with SSL frameworks on ImageNet), p. 4 (Figure/Table caption), results p. 6 (4.1. Comparing with SSL frameworks on ImageNet), p. 7 (4.2. Properties of ViT trained with SSL), p. 14 (Figure/Table caption), p. 6 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols).
+- **Evidence anchors reviewed:** datasets p. 7 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols), p. 7 (4.2. Properties of ViT trained with SSL), p. 6 (4.1. Comparing with SSL frameworks on ImageNet), p. 6 (4.2. Properties of ViT trained with SSL), metrics p. 15 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 9 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 7 (4.2. Properties of ViT trained with SSL), p. 6 (4.2. Properties of ViT trained with SSL), baselines p. 6 (4.2. Properties of ViT trained with SSL), p. 6 (4.2. Properties of ViT trained with SSL), p. 14 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (4.1. Comparing with SSL frameworks on ImageNet), p. 4 (Figure/Table caption), results p. 6 (4.1. Comparing with SSL frameworks on ImageNet), p. 7 (4.2. Properties of ViT trained with SSL), p. 14 (Figure/Table caption), p. 6 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

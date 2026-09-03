@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.02751; PDF retrieval source: https://arxiv.org/pdf/2403.02751. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.02751; PDF retrieval source: https://arxiv.org/pdf/2403.02751. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VI. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | However, Splat-Loc-SIFT achieves a lower success rate, compared to Splat-Loc-Glue, which achieves a perfect success rate. | p. 11 (VI. EXPERIMENTS) |
 | VI. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | 6) Splat-Loc Evaluations: We validate the performance of Splat-Loc in hardware experiments in the Maze scene, showing that Splat-Loc achieves relatively the same level ... | p. 13 (VI. EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Simulation Results 1) Test Environments: We benchmark Splat-Plan and SplatLoc independently on four different environments: Stonehenge, a fully-synthetic scene, and three real-world scenes Statues, ... | embodiment, simulator version and control stack | p. 10 (VI. EXPERIMENTS), p. 10 (VI. EXPERIMENTS) |
 | Task/environment | We demonstrate the effectiveness of our navigation pipeline for GSplat maps, examining its performance in real-world scenes on hardware and in simulation. | reset, timeout, object/scene variation | p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 - **p. 15 / VII. CONCLUSION - extractive body cue:** Splat-Nav consists of a guaranteed-safe planning module Splat-Plan, which allows for real-time planning (> 2 Hz) by leveraging the ellipsoidal representation inherent in GSplats for ...
 - **p. 17 / VIII. LIMITATIONS AND FUTURE WORK - extractive body cue:** Given a test point x∗and the jth ellipsoid in the collision test set G∗, we can use our collision test (Corollary 2) to derive these ...
 
-- **PDF anchors reviewed:** datasets p. 10 (VI. EXPERIMENTS), p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), metrics p. 11 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 14 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 15 (VI. EXPERIMENTS), baselines p. 11 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 15 (VI. EXPERIMENTS), p. 4 (Figure/Table caption), results p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 14 (VI. EXPERIMENTS), p. 16 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 10 (VI. EXPERIMENTS), p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), metrics p. 11 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 14 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 15 (VI. EXPERIMENTS), baselines p. 11 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 15 (VI. EXPERIMENTS), p. 4 (Figure/Table caption), results p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 14 (VI. EXPERIMENTS), p. 16 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Lastly, we examine the performance of the pose estimation algorithms in problems with a larger error in the initial estimate of the pose, with δR = 30◦and δt = 0.5 ... (p. 11, VI. EXPERIMENTS).
+- **Metric evidence:** We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation time (C.T.) per frame, and the overall success rate (S.R.). (p. 11, VI. EXPERIMENTS).
+- **Baseline/ablation evidence:** Furthermore, we perform ablations against variations of the point-cloud planner in order to expose flaws when planning against point clouds compared to the full scene geometry. (p. 11, VI. EXPERIMENTS).
+- **Failure/negative evidence:** More importantly, we see that Splat-Plan never fails to return a trajectory, highlighted by the 0 failure rate. (p. 12, VI. EXPERIMENTS).

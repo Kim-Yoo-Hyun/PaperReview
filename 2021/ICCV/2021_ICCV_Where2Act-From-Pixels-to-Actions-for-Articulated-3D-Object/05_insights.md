@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Taking as input a single RGB image or a partial 3D point cloud, we employ an encoder-decoder backbone to extract per-pixel features and design three decoding branches to predict the 'actionable information'.를 Given as input an articulated 3D object, we learn to propose the actionable information for different robotic manipulation primitives (e.g. pushing, pulling): (a) the predicted actionability scores over pixels; (b) the proposed ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 7. Failure Cases. We visualize some interesting failure cases, which demonstrate the difficulty of the task and some am- biguous cases that are hard for robot to figure out. For the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action likelihoods and proposals; • we propose an approach that can ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Taking as input a single RGB image or a partial 3D point cloud, we employ an encoder-decoder backbone to extract per-pixel features and design three decoding branches to predict the ... (p. 3, 4. Method).
+- **Paper-specific mechanism:** In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action likelihoods and proposals; • we propose an approach ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 4. We visualize the per-pixel action scoring predictions over the articulated parts given certain gripper orientations for interaction. In each set of results, the left two shapes shown in ... (p. 7, Figure/Table caption); the relevant task/metric cue is We set up an interactive simulation environment in SAPIEN [49] and benchmark performance of the proposed method both qualititively and quantitatively. (p. 5, 5. Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** With random interactions, there are many more failed interaction trials than the successful ones. (p. 6, 5.2. Metrics and Baselines).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Equipped with a large-scale PartNetMobility dataset, SAPIEN [49] provides a physics-rich simulation environment that supports robot actuators interacting with 2,346 3D CAD models from 46 object categories..
-3. Compare against the body-reported baseline or a matched simpler baseline: We propose two quantitative metrics for evaluating performance of our proposed method, compared with three baseline methods and one ablated version of our method..
-4. Report the body metric and its denominator/aggregation: Figure 1. The Proposed Where2Act Task. Given as input an ar- ticulated 3D object, we learn to propose the actionable information for different robotic manipulation primitives (e.g. pushing, pulling): (a) the predicted ....
-5. Re-run the body-reported ablation/failure condition: To validate the effectiveness of the proposed method and provide benchmarks for the proposed task, we compare to three baseline methods and one ablated version of our method: • B-Random: a random ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Taking as input a single RGB image or a partial 3D point cloud, we employ an encoder-decoder backbone to extract per-pixel features and design three decoding branches to predict the ... (p. 3, 4. Method); preserve the objective/update rule: After adjusting the relative loss scales to the same level, we obtain the final objective function L = Ls +Lr +100×La. (p. 5, 4.3. Training and Losses).
+2. Use the paper-reported task/data/environment cue: Equipped with a large-scale PartNetMobility dataset, SAPIEN [49] provides a physics-rich simulation environment that supports robot actuators interacting with 2,346 3D CAD models from 46 object categories. (p. 5, 5.1. Framework and Settings).
+3. Compare against the reported or matched baseline: We define the final measure as below. ssr = # successful proposals # total proposals (8) Baselines and Ablation Study. (p. 6, 5.2. Metrics and Baselines).
+4. Report the body metric with its denominator and aggregation: We set up an interactive simulation environment in SAPIEN [49] and benchmark performance of the proposed method both qualititively and quantitatively. (p. 5, 5. Experiments).
+5. Re-run the reported ablation or stress/failure condition: To validate the effectiveness of the proposed method and provide benchmarks for the proposed task, we compare to three baseline methods and one ablated version of our method: • B-Random: ... (p. 6, 5.2. Metrics and Baselines); if none is reported, design one around: With random interactions, there are many more failed interaction trials than the successful ones. (p. 6, 5.2. Metrics and Baselines).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modules), p. 4 (4.3. Training and Losses); the primary result is directionally consistent at p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 1 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5.1. Framework and Settings), and measure the boundary at p. 6 (5.2. Metrics and Baselines), p. 7 (5.3. Results and Analysis).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, contributions, formulate mechanism이 We propose two quantitative metrics for evaluating performance of our proposed method, compared with three baseline ... 대비 Figure 1. The Proposed Where2Act Task. Given as input an ar- ticulated 3D object, we learn to propose ...을 개선하고, Figure 7. Failure Cases. We visualize some interesting failure cases, which demonstrate the difficulty of the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Taking as input a single RGB image or a partial 3D point cloud, we employ an encoder-decoder backbone to extract per-pixel features ...), does the paper-specific mechanism (In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action ...) retain the reported evaluation outcome (We set up an interactive simulation environment in SAPIEN [49] and benchmark performance of the proposed method both ...) when tested against the paper's strongest explicit boundary (With random interactions, there are many more failed interaction trials than the successful ones.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We set up an interactive simulation environment in SAPIEN [49] and benchmark performance of the proposed method both ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action likelihoods and proposals; • we propose an approach ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 4. We visualize the per-pixel action scoring predictions over the articulated parts given certain gripper orientations for interaction. In each set of results, the left two shapes shown in ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** With random interactions, there are many more failed interaction trials than the successful ones. (p. 6, 5.2. Metrics and Baselines).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

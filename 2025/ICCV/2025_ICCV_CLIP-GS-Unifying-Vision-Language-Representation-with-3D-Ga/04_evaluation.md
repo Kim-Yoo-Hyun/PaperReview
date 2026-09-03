@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (F
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive PDF cue:** 3 to construct the ModelNet-GS dataset.
-- **p. 5 / 5.1. Multimodal Retrieval - extractive PDF cue:** CLIP-GS performs well when retrieving real-world images.
-- **p. 5 / 5.3. Few-Shot 3D Classification - extractive PDF cue:** In line with [8], we measure performance using Top1 average accuracy and standard deviation, 4674
-- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive PDF cue:** We follow the settings of [25, 63], using Top1, Top3, Top5 average accuracy (%) for evaluations.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Few-shot classification on ModelNet40. We report the 10-shot & 10-way average accuracy (%) and standard de- viation (%) results.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Few-shot classification on Objaverse-GS. We report the average accuracy (%) for 5-shot classification across 5, 10, 20, and 50 ways. * de- notes ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 9. Scaling up model size in CLIP-GS. Top1 accuracy in Objaverse-GS is used for analysis. We explore the effect of scaling up the model ...
-- **p. 6 / 5.3. Few-Shot 3D Classification - extractive PDF cue:** CLIP-GS surpasses previous state-of-the-art point cloud methods, and demonstrates significantly smaller deviations.
+- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive body cue:** 3 to construct the ModelNet-GS dataset.
+- **p. 5 / 5.1. Multimodal Retrieval - extractive body cue:** CLIP-GS performs well when retrieving real-world images.
+- **p. 5 / 5.3. Few-Shot 3D Classification - extractive body cue:** In line with [8], we measure performance using Top1 average accuracy and standard deviation, 4674
+- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive body cue:** We follow the settings of [25, 63], using Top1, Top3, Top5 average accuracy (%) for evaluations.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Few-shot classification on ModelNet40. We report the 10-shot & 10-way average accuracy (%) and standard de- viation (%) results.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Few-shot classification on Objaverse-GS. We report the average accuracy (%) for 5-shot classification across 5, 10, 20, and 50 ways. * de- notes ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 9. Scaling up model size in CLIP-GS. Top1 accuracy in Objaverse-GS is used for analysis. We explore the effect of scaling up the model ...
+- **p. 6 / 5.3. Few-Shot 3D Classification - extractive body cue:** CLIP-GS surpasses previous state-of-the-art point cloud methods, and demonstrates significantly smaller deviations.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (F
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Zero-Shot 3D Classification | EMPIRICAL / REAL-ROBOT OR HARDWARE | CLIP-GS demonstrates a comprehensive improvement over existing zero-shot 3D classification models, achieving a performance boost of + 0.8, + 0.5 on Objaverse-GS and ModelNet-GS, ... | p. 5 (5.2. Zero-Shot 3D Classification) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. (a) Comparison between point cloud reconstruction and 3D Gaussian Splatting (3DGS) reconstruction. (b) The 3DGS approach outperforms point cloud methods across multiple ... | p. 1 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (F
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive PDF cue:** 3 to construct the ModelNet-GS dataset.
-- **p. 5 / 5.1. Multimodal Retrieval - extractive PDF cue:** CLIP-GS performs well when retrieving real-world images.
+- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive body cue:** 3 to construct the ModelNet-GS dataset.
+- **p. 5 / 5.1. Multimodal Retrieval - extractive body cue:** CLIP-GS performs well when retrieving real-world images.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) Comparison between point cloud reconstruction and 3D Gaussian Splatting (3DGS) reconstruction. (b) The 3DGS approach outperforms point cloud methods across multiple 3D ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Statistics of 3DGS Triplets. 3D shapes collection. Our triplet is constructed using Ob- javerse [2] and Objaverse-XL [3], the largest-scale realis- tic 3D ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of the CLIP-GS. Within CLIP-GS, the FPS & kNN is first used to form gaussian patches. Then, we design the GS Tokenizer ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Details of GS refinement block. ploy a contrastive loss function, Ltext: Ltext = -1 2N N X i=1 (Contra(EG
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Multimodal retrieval on Objaverse-GS. For a fair comparison, all methods are trained without Objaverse-LVIS shapes. 3D repr denotes the form of 3D shapes ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Image / text →3D shape retrieval results. Top: we query the most similar or top 2 similar 3D shapes for each text. Bottom: ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Zero-shot classification on Objaverse-GS, and ModelNet-GS. "no LVIS" denotes model is trained without Objaverse-LVIS shapes.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Few-shot classification on ModelNet40. We report the 10-shot & 10-way average accuracy (%) and standard de- viation (%) results.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Comparison between point cloud reconstruction and 3D Gaussian Splatting (3DGS) reconstruction. (b) The 3DGS approach outperforms point cloud methods across multiple 3D ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Statistics of 3DGS Triplets. 3D shapes collection. Our triplet is constructed using Ob- javerse [2] and Objaverse-XL [3], the largest-scale realis- tic 3D ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Overview of the CLIP-GS. Within CLIP-GS, the FPS & kNN is first used to form gaussian patches. Then, we design the GS Tokenizer ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Details of GS refinement block. ploy a contrastive loss function, Ltext: Ltext = -1 2N N X i=1 (Contra(EG
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Multimodal retrieval on Objaverse-GS. For a fair comparison, all methods are trained without Objaverse-LVIS shapes. 3D repr denotes the form of 3D shapes ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Image / text →3D shape retrieval results. Top: we query the most similar or top 2 similar 3D shapes for each text. Bottom: ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Zero-shot classification on Objaverse-GS, and ModelNet-GS. "no LVIS" denotes model is trained without Objaverse-LVIS shapes.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Few-shot classification on ModelNet40. We report the 10-shot & 10-way average accuracy (%) and standard de- viation (%) results.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 3 to construct the ModelNet-GS dataset. | embodiment, simulator version and control stack | p. 5 (5.2. Zero-Shot 3D Classification), p. 5 (5.1. Multimodal Retrieval) |
 | Task/environment | CLIP-GS performs well when retrieving real-world images. | reset, timeout, object/scene variation | p. 5 (5.1. Multimodal Retrieval) |
@@ -117,11 +117,11 @@ PDF body evaluation/result cue (p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (F
 | Primary metric/result | Figure 1. (a) Comparison between point cloud reconstruction and 3D Gaussian Splatting (3DGS) reconstruction. (b) The 3DGS approach outperforms point cloud methods across multiple ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5.3. Few-Shot 3D Classification - extractive PDF cue:** We experiment with m = 10 and n = 10 in ModelNet-GS, and m = 5 and n ∈{5, 10, 20, 50} in Objaverse-GS.
-- **p. 5 / 5.3. Few-Shot 3D Classification - extractive PDF cue:** We do not construct 10-shot experiments on the Objaverse-GS since some classes contain fewer than 10 samples in Objaverse-GS.
-- **p. 4 / 4.2. Multi-model Alignment - extractive PDF cue:** To align the 3DGS with the text description, we em1×3 conv, s=1 BN & ReLU 1×3 conv, s=1 1×3 conv, s=2 BN & ReLU BN ...
-- **p. 7 / Method - extractive PDF cue:** DGCNN [43] 86.3 ± 6.2 DGCNN + OcCo [41] 86.4 ± 5.4 PointTransformer [61] 84.6 ± 5.5 PointTransformer + OcCo [61] 89.4 ± 5.1 Point-BERT ...
-- **p. 8 / Method - extractive PDF cue:** Iter SH PSNR SSIM storage size optimization time 20,000 3 37.1 98.2 3.6M 108.3s 20,000 0 35.1 97.9 1.0M 104.5s 5,000 3 35.9 98.0
+- **p. 5 / 5.3. Few-Shot 3D Classification - extractive body cue:** We experiment with m = 10 and n = 10 in ModelNet-GS, and m = 5 and n ∈{5, 10, 20, 50} in Objaverse-GS.
+- **p. 5 / 5.3. Few-Shot 3D Classification - extractive body cue:** We do not construct 10-shot experiments on the Objaverse-GS since some classes contain fewer than 10 samples in Objaverse-GS.
+- **p. 4 / 4.2. Multi-model Alignment - extractive body cue:** To align the 3DGS with the text description, we em1×3 conv, s=1 BN & ReLU 1×3 conv, s=1 1×3 conv, s=2 BN & ReLU BN ...
+- **p. 7 / Method - extractive body cue:** DGCNN [43] 86.3 ± 6.2 DGCNN + OcCo [41] 86.4 ± 5.4 PointTransformer [61] 84.6 ± 5.5 PointTransformer + OcCo [61] 89.4 ± 5.1 Point-BERT ...
+- **p. 8 / Method - extractive body cue:** Iter SH PSNR SSIM storage size optimization time 20,000 3 37.1 98.2 3.6M 108.3s 20,000 0 35.1 97.9 1.0M 104.5s 5,000 3 35.9 98.0
 
 ## Generalization and Failure Cases
 
@@ -153,7 +153,7 @@ PDF body evaluation/result cue (p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (F
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 5 (5.2. Zero-Shot 3D Classification), p. 5 (5.1. Multimodal Retrieval), metrics p. 5 (5.3. Few-Shot 3D Classification), p. 5 (5.2. Zero-Shot 3D Classification), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (5.3. Few-Shot 3D Classification), baselines p. 5 (5.1. Multimodal Retrieval), p. 1 (Figure/Table caption), p. 5 (5.1. Multimodal Retrieval), p. 6 (5.3. Few-Shot 3D Classification), p. 6 (5.3. Few-Shot 3D Classification), p. 7 (Figure/Table caption), results p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (Figure/Table caption), p. 5 (5.1. Multimodal Retrieval), p. 6 (5.3. Few-Shot 3D Classification), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (5.2. Zero-Shot 3D Classification), p. 5 (5.1. Multimodal Retrieval), metrics p. 5 (5.3. Few-Shot 3D Classification), p. 5 (5.2. Zero-Shot 3D Classification), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (5.3. Few-Shot 3D Classification), baselines p. 5 (5.1. Multimodal Retrieval), p. 1 (Figure/Table caption), p. 5 (5.1. Multimodal Retrieval), p. 6 (5.3. Few-Shot 3D Classification), p. 6 (5.3. Few-Shot 3D Classification), p. 7 (Figure/Table caption), results p. 5 (5.2. Zero-Shot 3D Classification), p. 1 (Figure/Table caption), p. 5 (5.1. Multimodal Retrieval), p. 6 (5.3. Few-Shot 3D Classification), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

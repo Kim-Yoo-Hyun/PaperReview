@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 
 ## Method Body Digest
 
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
-- **p. 5 / 4.2. Prior-Guided Adaptive Density Control - extractive PDF cue:** This ensures that the newly generated primitives maintain a consistent feature representation with the original region.
-- **p. 5 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering model, providing a better starting state for subsequent processing.
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Detailed architecture of the local refinement-level Bayesian model.
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** To make this optimization tractable, we maximize the Evidence Lower Bound (ELBO): L(q) = Eq[log p(X, Z, π, µ, Σ)] -Eq[log q(Z, π, µ, Σ)] ...
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** 3DGS optimizes Gaussian positions via gradient descent.
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
+- **p. 5 / 4.2. Prior-Guided Adaptive Density Control - extractive body cue:** This ensures that the newly generated primitives maintain a consistent feature representation with the original region.
+- **p. 5 / 4.1. Variational Bayesian Initialization - extractive body cue:** The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering model, providing a better starting state for subsequent processing.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Detailed architecture of the local refinement-level Bayesian model.
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** To make this optimization tractable, we maximize the Evidence Lower Bound (ELBO): L(q) = Eq[log p(X, Z, π, µ, Σ)] -Eq[log q(Z, π, µ, Σ)] ...
+- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** 3DGS optimizes Gaussian positions via gradient descent.
 
 ## Design Rationale
 
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** To stabilize this update, we introduce an Adaptive Kalman Filter that recursively fuses predicted positions with observed projections.
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
+- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** To stabilize this update, we introduce an Adaptive Kalman Filter that recursively fuses predicted positions with observed projections.
 
 ## Source Evidence Cues
 
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
-- **p. 5 / 4.2. Prior-Guided Adaptive Density Control - extractive PDF cue:** This ensures that the newly generated primitives maintain a consistent feature representation with the original region.
-- **p. 5 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering model, providing a better starting state for subsequent processing.
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Detailed architecture of the local refinement-level Bayesian model.
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
+- **p. 5 / 4.2. Prior-Guided Adaptive Density Control - extractive body cue:** This ensures that the newly generated primitives maintain a consistent feature representation with the original region.
+- **p. 5 / 4.1. Variational Bayesian Initialization - extractive body cue:** The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering model, providing a better starting state for subsequent processing.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Detailed architecture of the local refinement-level Bayesian model.
 - **Detected method headings:** 2.3. Probabilistic Approaches in Neural Rendering (p. 3); 4. Methods (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be ... | p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization. | p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 
 ## Objective / Update Rule
 
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** To make this optimization tractable, we maximize the Evidence Lower Bound (ELBO): L(q) = Eq[log p(X, Z, π, µ, Σ)] -Eq[log q(Z, π, µ, Σ)] ...
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** 3DGS optimizes Gaussian positions via gradient descent.
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** The state update equation can be written as: xi,t = Ftxi,t-1 + wt (9) where Ft is the state transition matrix, and wt represents 26128
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Primitives can be categorized into four regions in the density-gradient space.
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** The Kalman filter fuses priors with measurements, where the noise covariance is adjusted by gradient and density.
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** To make this optimization tractable, we maximize the Evidence Lower Bound (ELBO): L(q) = Eq[log p(X, Z, π, µ, Σ)] -Eq[log q(Z, π, µ, Σ)] ...
+- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** 3DGS optimizes Gaussian positions via gradient descent.
+- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** The state update equation can be written as: xi,t = Ftxi,t-1 + wt (9) where Ft is the state transition matrix, and wt represents 26128
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Primitives can be categorized into four regions in the density-gradient space.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** The Kalman filter fuses priors with measurements, where the noise covariance is adjusted by gradient and density.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.3. Kalman Filtering for Position Denoising), p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** State and Observation Equations As analyzed in Section 3, for each Gaussian primitive i in the scene, we define its state vector xi = [x, ...
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Since the amplitude of gradients in different regions reflects the complexity of the image structure, the filter can automatically adjust the observation noise covariance matrix ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** The sparsity of input views leads to insufficient image constraints, causing ambiguities where a single point may correspond to multiple plausible locations, thereby introducing noise ...
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Observing that each Gaussian primitive has attributes such as local gradient and density, we can construct an observation matrix: X =   d1 g1 ...
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** The state update equation can be written as: xi,t = Ftxi,t-1 + wt (9) where Ft is the state transition matrix, and wt represents 26128
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive PDF cue:** Each point is projected into valid image regions, checked for depth consistency, and assigned fused color and depth gradients.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
+- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** State and Observation Equations As analyzed in Section 3, for each Gaussian primitive i in the scene, we define its state vector xi = [x, ...
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Since the amplitude of gradients in different regions reflects the complexity of the image structure, the filter can automatically adjust the observation noise covariance matrix ...
+- **p. 1 / 1. Introduction - extractive body cue:** The sparsity of input views leads to insufficient image constraints, causing ambiguities where a single point may correspond to multiple plausible locations, thereby introducing noise ...
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Observing that each Gaussian primitive has attributes such as local gradient and density, we can construct an observation matrix: X =   d1 g1 ...
+- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** The state update equation can be written as: xi,t = Ftxi,t-1 + wt (9) where Ft is the state transition matrix, and wt represents 26128
+- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Each point is projected into valid image regions, checked for depth consistency, and assigned fused color and depth gradients.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 
 ## Failure and Ablation Link
 
-- **p. 8 / 5.3. Ablation Study - extractive PDF cue:** Ablation Variant VB-GMM Adaptive Density Control Position Filtering Rendering Time (s) ↓ PSNR ↑ SSIM ↑ LPIPS ↓ Full (Ours) ✓ ✓ ✓ 153.88 31.6129 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study evaluating the contribution of each module in our framework (12 views setting). We report rendering time and three perceptual metrics. Ablation ...
-- **p. 7 / 5.3. Ablation Study - extractive PDF cue:** We conduct an ablation study on the Tanks and Temples dataset to evaluate the importance of key components such as position filtering and optimization for ...
-- **p. 6 / 5.2. Experiment Results - extractive PDF cue:** In addition, by removing redundant or noisy primitives during initialization, our method significantly decreases the number of active primitives, therefore improves runtime efficiency while maintaining ...
-- **p. 7 / 5.3. Ablation Study - extractive PDF cue:** Removing it causes a severe drop in PSNR and degrades perceptual metrics, confirming that modeling the latent probabilistic distribution of primitives is essential for mitigating ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Future works will explore richer priors, extending the Bayesian formulation to color and opacity estimation.
+- **p. 8 / 5.3. Ablation Study - extractive body cue:** Ablation Variant VB-GMM Adaptive Density Control Position Filtering Rendering Time (s) ↓ PSNR ↑ SSIM ↑ LPIPS ↓ Full (Ours) ✓ ✓ ✓ 153.88 31.6129 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation study evaluating the contribution of each module in our framework (12 views setting). We report rendering time and three perceptual metrics. Ablation ...
+- **p. 7 / 5.3. Ablation Study - extractive body cue:** We conduct an ablation study on the Tanks and Temples dataset to evaluate the importance of key components such as position filtering and optimization for ...
+- **p. 6 / 5.2. Experiment Results - extractive body cue:** In addition, by removing redundant or noisy primitives during initialization, our method significantly decreases the number of active primitives, therefore improves runtime efficiency while maintaining ...
+- **p. 7 / 5.3. Ablation Study - extractive body cue:** Removing it causes a severe drop in PSNR and degrades perceptual metrics, confirming that modeling the latent probabilistic distribution of primitives is essential for mitigating ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Future works will explore richer priors, extending the Bayesian formulation to color and opacity estimation.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.2. Prior-Guided Adaptive Density Control), p. 5 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), objective p. 4 (4.1. Variational Bayesian Initialization), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), temporal p. 2 (2. Global Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 6 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 1 (Abstract), p. 1 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.2. Prior-Guided Adaptive Density Control), p. 5 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), objective p. 4 (4.1. Variational Bayesian Initialization), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), temporal p. 2 (2. Global Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 6 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 1 (Abstract), p. 1 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

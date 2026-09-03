@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=i5wlozMFsQ; PDF retrieval source: https://openreview.net/pdf/f96c92cfad0bb9a981c9646c6a5bbcfc1992f8fc.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=i5wlozMFsQ; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/245153. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** Our evaluation encompassed 11 QA benchmarks, 4 simulated tasks (SIMPLEREnv) (Li et al., 2024b), and 8 real-world robot (xArm platform) tasks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The setup used a third-person Intel RealSense L515 camera (640×480), with all objects, scenes, and tasks being OOD to test generalization.
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** Despite being trained exclusively on real-world data, Embodied-R1 demonstrates remarkable zero-shot generalization on VTG tasks across entirely unseen scenarios (Fig.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Where2Place & VABench-P -- Region Referring Grounding (RRG) Put the banana in the pot cardboard fence. you need to grasp the mug you need to ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** To validate Embodied-R1's generalization in robotic manipulation, we conducted extensive experiments evaluating its Seeing (spatial reasoning and pointing capabilities) and Doing (manipulation tasks) dimensions.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** 4, a single Embodied-R1 model masters this diverse skill set, demonstrating high accuracy even with small objects and complex spatial relationships in cluttered scenes.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 1: Performance comparison on spatial reasoning benchmarks.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** Our evaluation encompassed 11 QA benchmarks, 4 simulated tasks (SIMPLEREnv) (Li et al., 2024b), and 8 real-world robot (xArm platform) tasks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The setup used a third-person Intel RealSense L515 camera (640×480), with all objects, scenes, and tasks being OOD to test generalization.
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Despite being trained exclusively on real-world data, Embodied-R1 demonstrates remarkable zero-shot generalization on VTG tasks across entirely unseen scenarios (Fig.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Where2Place & VABench-P -- Region Referring Grounding (RRG) Put the banana in the pot cardboard fence. you need to grasp the mug you need to ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** To validate Embodied-R1's generalization in robotic manipulation, we conducted extensive experiments evaluating its Seeing (spatial reasoning and pointing capabilities) and Doing (manipulation tasks) dimensions.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4, a single Embodied-R1 model masters this diverse skill set, demonstrating high accuracy even with small objects and complex spatial relationships in cluttered scenes.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We also included two key ablations: Embodied-R1 w/o CS, which excludes the ViRL common-sense dataset, and Embodied-SFT, a variant trained only with SFT.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | 5, Embodied-R1 achieves an 87.5% zero-shot success rate, an improvement of over 60% compared to the RoboPoint and FSD baselines. | p. 9 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | We attribute this significant improvement to the baselines' poor performance on tasks requiring spatial reasoning (e.g., moving the nearest object) and their low success ... | p. 9 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** Our evaluation encompassed 11 QA benchmarks, 4 simulated tasks (SIMPLEREnv) (Li et al., 2024b), and 8 real-world robot (xArm platform) tasks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The setup used a third-person Intel RealSense L515 camera (640×480), with all objects, scenes, and tasks being OOD to test generalization.
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** Despite being trained exclusively on real-world data, Embodied-R1 demonstrates remarkable zero-shot generalization on VTG tasks across entirely unseen scenarios (Fig.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Where2Place & VABench-P -- Region Referring Grounding (RRG) Put the banana in the pot cardboard fence. you need to grasp the mug you need to ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** To validate Embodied-R1's generalization in robotic manipulation, we conducted extensive experiments evaluating its Seeing (spatial reasoning and pointing capabilities) and Doing (manipulation tasks) dimensions.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** 4, a single Embodied-R1 model masters this diverse skill set, demonstrating high accuracy even with small objects and complex spatial relationships in cluttered scenes.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 1: Performance comparison on spatial reasoning benchmarks.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** Our evaluation encompassed 11 QA benchmarks, 4 simulated tasks (SIMPLEREnv) (Li et al., 2024b), and 8 real-world robot (xArm platform) tasks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The setup used a third-person Intel RealSense L515 camera (640×480), with all objects, scenes, and tasks being OOD to test generalization.
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Despite being trained exclusively on real-world data, Embodied-R1 demonstrates remarkable zero-shot generalization on VTG tasks across entirely unseen scenarios (Fig.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Where2Place & VABench-P -- Region Referring Grounding (RRG) Put the banana in the pot cardboard fence. you need to grasp the mug you need to ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** To validate Embodied-R1's generalization in robotic manipulation, we conducted extensive experiments evaluating its Seeing (spatial reasoning and pointing capabilities) and Doing (manipulation tasks) dimensions.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4, a single Embodied-R1 model masters this diverse skill set, demonstrating high accuracy even with small objects and complex spatial relationships in cluttered scenes.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We also included two key ablations: Embodied-R1 w/o CS, which excludes the ViRL common-sense dataset, and Embodied-SFT, a variant trained only with SFT.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Overview of the Embodied-R1 framework and its zero-shot manipulation performance. Embodied-R1 performs explicit reasoning to generate "pointing" commands, enabling robust execution across a ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of four embodied pointing abilities. a VLM trained with RFT to resolve the multi-solution dilemma for embodied pointing, delivering powerful reasoning. 4 ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of training data: In stage 1, we focus on improving the model's spatial reasoning capability, while incorporating a small amount of general ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Performance comparison on spatial reasoning benchmarks. Bold indicates the highest value among open-source models, and underlined values show the second-highest scores. CVBench CRPE ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Performance on 4 Pointing benchmarks. The score is the accuracy of points falling within the target region.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Performance on VABench-V. Lower values are better for RMSE/MAE, higher is better for LLM Score.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Visualizing Embodied-R1's Performance on Various Pointing Tasks.The model can follow diverse text instructions and generalize its capabilities to novel, unseen environments. (O1) Powerful ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4: SimplerEnv Evaluation on WidowX Robot. Each task is tested 24 episodes. Most of the results for end-to-end VLAs are sourced from Chen et ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of the Embodied-R1 framework and its zero-shot manipulation performance. Embodied-R1 performs explicit reasoning to generate "pointing" commands, enabling robust execution across a ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Overview of four embodied pointing abilities. a VLM trained with RFT to resolve the multi-solution dilemma for embodied pointing, delivering powerful reasoning. 4 ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Overview of training data: In stage 1, we focus on improving the model's spatial reasoning capability, while incorporating a small amount of general ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison on spatial reasoning benchmarks. Bold indicates the highest value among open-source models, and underlined values show the second-highest scores. CVBench CRPE ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Performance on 4 Pointing benchmarks. The score is the accuracy of points falling within the target region.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Performance on VABench-V. Lower values are better for RMSE/MAE, higher is better for LLM Score.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Visualizing Embodied-R1's Performance on Various Pointing Tasks.The model can follow diverse text instructions and generalize its capabilities to novel, unseen environments. (O1) Powerful ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4: SimplerEnv Evaluation on WidowX Robot. Each task is tested 24 episodes. Most of the results for end-to-end VLAs are sourced from Chen et ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our evaluation encompassed 11 QA benchmarks, 4 simulated tasks (SIMPLEREnv) (Li et al., 2024b), and 8 real-world robot (xArm platform) tasks. | embodiment, simulator version and control stack | p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
 | Task/environment | We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks. | reset, timeout, object/scene variation | p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 | Primary metric/result | We attribute this significant improvement to the baselines' poor performance on tasks requiring spatial reasoning (e.g., moving the nearest object) and their low success ... | numeric claim only at cited anchor | p. 9 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The setup used a third-person Intel RealSense L515 camera (640×480), with all objects, scenes, and tasks being OOD to test generalization.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** The first phase was trained for 2 epochs, and the second phase for 1 epoch, with each phase taking approximately 48 hours.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** Second, for the VTG task, we introduced an additional constraint on the format: the generated visual trace must consist of exactly 8 points.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** The first phase was trained for 2 epochs, and the second phase for 1 epoch, with each phase taking approximately 48 hours.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We conducted zero-shot real-world evaluations on an xArm 6 robot across eight tabletop manipulation tasks.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The setup used a third-person Intel RealSense L515 camera (640×480), with all objects, scenes, and tasks being OOD to test generalization.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** The first phase was trained for 2 epochs, and the second phase for 1 epoch, with each phase taking approximately 48 hours.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Second, for the VTG task, we introduced an additional constraint on the format: the generated visual trace must consist of exactly 8 points.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** The first phase was trained for 2 epochs, and the second phase for 1 epoch, with each phase taking approximately 48 hours.
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 
 ## Limitations and Verification Questions
 
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive PDF cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** A detailed discussion of limitations is provided in App.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** D, we conducted an in-depth analysis of failure cases and execution time.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The score is the accuracy of points falling within the target region.
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** Empirically, Embodied-R1 achieves state-of-the-art results across multiple benchmark tests and demonstrates robust zero-shot generalization in robotic manipulation tasks, offering a promising pathway toward more capable ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Middle: Demonstration of the robustness under significant visual disturbances, such as background and lighting changes.
+- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** A detailed discussion of limitations is provided in App.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** D, we conducted an in-depth analysis of failure cases and execution time.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The score is the accuracy of points falling within the target region.
+- **p. 10 / 5 CONCLUSION - extractive body cue:** Empirically, Embodied-R1 achieves state-of-the-art results across multiple benchmark tests and demonstrates robust zero-shot generalization in robotic manipulation tasks, offering a promising pathway toward more capable ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Middle: Demonstration of the robustness under significant visual disturbances, such as background and lighting changes.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 22 (Figure/Table caption), p. 22 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), results p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 22 (Figure/Table caption), p. 22 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), results p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -1,8 +1,10 @@
 # Implicit Behavioral Cloning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v164/florence22a.html.
-> PDF retrieval source: https://arxiv.org/pdf/2109.00137. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v164/florence22a.html.
+> PDF retrieval source: https://arxiv.org/pdf/2109.00137. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2109.00137
 - Code/Project: https://implicitbc.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task.를 문제로 두고, In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This formulates imitation as a conditional energy-based modeling (EBM) problem [10] (Fig. (p. 1, 1 Introduction).
+- **Actual contribution:** In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+- **Explicit failure boundary:** The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task. (p. 5, 1 Introduction).

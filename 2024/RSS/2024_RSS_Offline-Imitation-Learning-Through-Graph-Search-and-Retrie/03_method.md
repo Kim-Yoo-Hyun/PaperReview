@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p054.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p054.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p054.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p054.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 
 ## Method Body Digest
 
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation.
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** We use 3 workspace cameras with 256 × 256 RGB observation, highlighting the challenge in perception especially for our considered precise manipulation tasks. the appendix.
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Overview For simplicity, let us first consider the problem of defining w(o, a) in a tabular case where we want the agent to reach a ...
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Obviously, for any observation o, the agent should pick an action a whose resulting next observation (more
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Here, the cost function is the number of steps taken to reach og.
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** To specify the task objective conveniently, we also add a "virtual" goal vertex g to V.
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation.
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** We use 3 workspace cameras with 256 × 256 RGB observation, highlighting the challenge in perception especially for our considered precise manipulation tasks. the appendix.
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Overview For simplicity, let us first consider the problem of defining w(o, a) in a tabular case where we want the agent to reach a ...
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Obviously, for any observation o, the agent should pick an action a whose resulting next observation (more
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Here, the cost function is the number of steps taken to reach og.
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** To specify the task objective conveniently, we also add a "virtual" goal vertex g to V.
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** We also provide various quantitative and qualitative analyses to show that our method is capable of identifying good behaviors in the dataset.
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** We introduce the implementation details in the remaining sections.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We also provide various quantitative and qualitative analyses to show that our method is capable of identifying good behaviors in the dataset.
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** We introduce the implementation details in the remaining sections.
 
 ## Source Evidence Cues
 
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation.
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** We use 3 workspace cameras with 256 × 256 RGB observation, highlighting the challenge in perception especially for our considered precise manipulation tasks. the appendix.
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Overview For simplicity, let us first consider the problem of defining w(o, a) in a tabular case where we want the agent to reach a ...
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Obviously, for any observation o, the agent should pick an action a whose resulting next observation (more
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation.
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** We use 3 workspace cameras with 256 × 256 RGB observation, highlighting the challenge in perception especially for our considered precise manipulation tasks. the appendix.
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Overview For simplicity, let us first consider the problem of defining w(o, a) in a tabular case where we want the agent to reach a ...
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Obviously, for any observation o, the agent should pick an action a whose resulting next observation (more
 - **Detected method headings:** IV. POLICY LEARNING (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Fixed-data support | 온라인 탐색 없이 transition/action 분포를 정의한다 | offline trajectories와 metadata | dataset support, behavior distribution과 task return을 정리 | training batch/support | To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation. | p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING) |
 | Value / uncertainty update | dataset 밖 action의 과대추정을 억제한다 | batch transition과 value parameters | conservative, implicit, uncertainty 또는 behavior-regularized update를 수행 | Q/V/uncertainty estimate | Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set ... | p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 
 ## Objective / Update Rule
 
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Here, the cost function is the number of steps taken to reach og.
-- **p. 3 / IV. POLICY LEARNING - extractive PDF cue:** Overview For simplicity, let us first consider the problem of defining w(o, a) in a tabular case where we want the agent to reach a ...
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** To specify the task objective conveniently, we also add a "virtual" goal vertex g to V.
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** We perform finetuning with a time-contrastive learning objective in simulated experiments and find that it improves the robustness to the selection of hyperparameters.
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Here, the cost function is the number of steps taken to reach og.
+- **p. 3 / IV. POLICY LEARNING - extractive body cue:** Overview For simplicity, let us first consider the problem of defining w(o, a) in a tabular case where we want the agent to reach a ...
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** To specify the task objective conveniently, we also add a "virtual" goal vertex g to V.
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** We perform finetuning with a time-contrastive learning objective in simulated experiments and find that it improves the robustness to the selection of hyperparameters.
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 
 ## Observation–State–Action Interface
 
-- **p. 3 / III. PRELIMINARIES - extractive PDF cue:** If we define w(o, a) = exp(A(o, a)) where A is the advantage of taking action a at observation o, this corresponds to the policy ...
-- **p. 3 / III. PRELIMINARIES - extractive PDF cue:** Each trajectory τ is a sequence of observations o0:T and corresponding actions a0:T , i.e., τ = (o0, a0, o1, a1, ..., oT , aT ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** In the experiments, we test our method in both simulation and real-world robotic manipulation tasks of various visual and physical complexities, involving high-resolution, multiview camera ...
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** For the real-world continuous control problem, each encountered observation is unique in the human demonstration dataset D, and we have the following two problems: (1) ...
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** The desired learning algorithm should be able to pick up those good segments and recover this desired policy, which is also known as trajectory stitching ...
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** With this function, we bias the action toward the better ones for each v.
+- **p. 3 / III. PRELIMINARIES - extractive body cue:** If we define w(o, a) = exp(A(o, a)) where A is the advantage of taking action a at observation o, this corresponds to the policy ...
+- **p. 3 / III. PRELIMINARIES - extractive body cue:** Each trajectory τ is a sequence of observations o0:T and corresponding actions a0:T , i.e., τ = (o0, a0, o1, a1, ..., oT , aT ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In the experiments, we test our method in both simulation and real-world robotic manipulation tasks of various visual and physical complexities, involving high-resolution, multiview camera ...
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** For the real-world continuous control problem, each encountered observation is unique in the human demonstration dataset D, and we have the following two problems: (1) ...
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** The desired learning algorithm should be able to pick up those good segments and recover this desired policy, which is also known as trajectory stitching ...
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** With this function, we bias the action toward the better ones for each v.
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,10 +89,10 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 
 ## Training vs Inference
 
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation.
-- **p. 4 / IV. POLICY LEARNING - extractive PDF cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
-- **p. 5 / IV. POLICY LEARNING - extractive PDF cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** 3) Evaluation Metric: To evaluate the performance of a trained policy, we use the following metrics. • Success rate (SR) is defined as the number ...
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** To identify similar states, we use the off-shelf pretrained vision models to compute features for similarity computation.
+- **p. 4 / IV. POLICY LEARNING - extractive body cue:** Algorithm 1: GSR 1 [Optional] Finetune pretrained fθ on D; 2 Build graph G(V, E) using procedure in Section IV-B; 3 Set w[v] = 0 ...
+- **p. 5 / IV. POLICY LEARNING - extractive body cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** 3) Evaluation Metric: To evaluate the performance of a trained policy, we use the following metrics. • Success rate (SR) is defined as the number ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 
 ## Failure and Ablation Link
 
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** Hyperparameter Analysis Having known that our method indeed strengthened desired behavior, in this section, we further study the effect of the main hyperparameters in our ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Specifically, in the simulation experiment, the last average pooling layer of ResNet-18 is replaced by a spatial softmax [15] as in previous works [30, 8].
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Identifying connectivity. Augmented edge: We add a bidirectional edge between two nodes u and v if they both lie in the tolerance range ...
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** However, in many cases, they will get stuck or go out of distribution, leading to a complete failure.
-- **p. 8 / V. EXPERIMENTS - extractive PDF cue:** Interestingly, we have the following findings: (1) All the temporal segments that lead to the failures are weakened and have low weights.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** The robot is required to push a blue cylinder toward a green cube on the table. • Spoon Scooping In this task, the robot is ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** This task highlights the challenge of robust perception against partial occlusion and fine-grained manipulation. • Tweezer Manipulation In this task, the robot needs to first ...
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** Hyperparameter Analysis Having known that our method indeed strengthened desired behavior, in this section, we further study the effect of the main hyperparameters in our ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Specifically, in the simulation experiment, the last average pooling layer of ResNet-18 is replaced by a spatial softmax [15] as in previous works [30, 8].
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Identifying connectivity. Augmented edge: We add a bidirectional edge between two nodes u and v if they both lie in the tolerance range ...
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** However, in many cases, they will get stuck or go out of distribution, leading to a complete failure.
+- **p. 8 / V. EXPERIMENTS - extractive body cue:** Interestingly, we have the following findings: (1) All the temporal segments that lead to the failures are weakened and have low weights.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** The robot is required to push a blue cylinder toward a green cube on the table. • Spoon Scooping In this task, the robot is ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** This task highlights the challenge of robust perception against partial occlusion and fine-grained manipulation. • Tweezer Manipulation In this task, the robot needs to first ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), objective p. 4 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), temporal p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 4 (IV. POLICY LEARNING).
+- **Evidence anchors reviewed:** method p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), objective p. 4 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), temporal p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 4 (IV. POLICY LEARNING).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

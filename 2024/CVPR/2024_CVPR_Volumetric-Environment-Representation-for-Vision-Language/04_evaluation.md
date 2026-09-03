@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.2. Diagnost
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3. Quantitative results on R4R [39] (more details in §4.1). (RGS), and Remote Grounding Success weighted by Path Length (RGSPL) are also employed ... | p. 7 (Figure/Table caption) |
 | 4.2. Diagnostic Experiment | EMPIRICAL / SOURCE-REPORTED EVALUATION | After using Episodic Memory, a higher score (i.e., 31.36% →33.71% on RGS) is achieved. | p. 7 (4.2. Diagnostic Experiment) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.2. Diagnost
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset is split into train, val seen, val unseen, and test unseen sets, which mainly focus on the generalization capability in unseen environments. | embodiment, simulator version and control stack | p. 6 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning) |
 | Task/environment | This suggests these 3D perception tasks are complementary to each other in capturing geometric and semantic properties of scenes, further facilitating the decision-making. | reset, timeout, object/scene variation | p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN) |
@@ -158,9 +158,18 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.2. Diagnost
 
 ## Limitations and Verification Questions
 
-- explicit limitation/failure sentence not recovered
+- explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 7 (4.2. Diagnostic Experiment), p. 8 (4.3. Analysis on 3D Representation Learning), metrics p. 6 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning), p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN), p. 7 (4.2. Diagnostic Experiment), baselines p. 6 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning), p. 8 (4.3. Analysis on 3D Representation Learning), results p. 7 (Figure/Table caption), p. 7 (4.2. Diagnostic Experiment), p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN), p. 6 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 7 (4.2. Diagnostic Experiment), p. 8 (4.3. Analysis on 3D Representation Learning), metrics p. 6 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning), p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN), p. 7 (4.2. Diagnostic Experiment), baselines p. 6 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 7 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning), p. 8 (4.3. Analysis on 3D Representation Learning), results p. 7 (Figure/Table caption), p. 7 (4.2. Diagnostic Experiment), p. 8 (4.3. Analysis on 3D Representation Learning), p. 6 (4.1. Performance on VLN), p. 6 (4.1. Performance on VLN), p. 8 (4.3. Analysis on 3D Representation Learning).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3. Quantitative results on R4R [39] (more details in §4.1). (RGS), and Remote Grounding Success weighted by Path Length (RGSPL) are also employed for object grounding. For R4R, Coverage ... (p. 7, Figure/Table caption).
+- **Metric evidence:** For R2R, Success Rate (SR), Trajectory Length (TL), Oracle Success Rate (OSR), Success rate weighted by Path Length (SPL), and Navigation Error (NE) are used. (p. 6, 4.1. Performance on VLN).
+- **Baseline/ablation evidence:** For R2R, Success Rate (SR), Trajectory Length (TL), Oracle Success Rate (OSR), Success rate weighted by Path Length (SPL), and Navigation Error (NE) are used. (p. 6, 4.1. Performance on VLN).
+- **Failure/negative evidence:** From Table 5, the limited range of neighborhood is insufficient to represent the candidate viewpoint for navigation (e.g., 75.80% → 73.75% of SR on R2R). (p. 7, 4.2. Diagnostic Experiment).

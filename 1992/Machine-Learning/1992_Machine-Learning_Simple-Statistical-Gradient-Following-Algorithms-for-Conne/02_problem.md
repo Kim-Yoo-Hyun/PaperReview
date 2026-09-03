@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992696; PDF retrieval source: https://doi.org/10.1007/BF00992696. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00992696; PDF retrieval source: https://doi.org/10.1007/BF00992696. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | While such algorithms are known to have a number of limitations, there are a number of reasons why their study can be ... | robot/environment의 sequential decision process | body wording is the source claim |
-| Observation / input | The results to be presented apply in general to any learner whose inputoutput mappings consists of a parameterized input-controlled distribution function from ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The results to be presented apply in general to any learner whose inputoutput mappings consists of a parameterized input-controlled distribution function from ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | presented, apply, general, learner, whose, inputoutput, mappings, consists, parameterized, input-controlled | policy/value state와 action-selection variable | notation and tensor shape require body check |
 | Output / action | WILLIAMS, further, assumption, make, here, learner, search, behavior | action policy와 induced trajectory | exact unit/frame/decoder require body check |
 | Target outcome | task return, success and safe execution | expected return, task success, stability와 sample efficiency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: presented, apply, general, learner, whose, inputoutput, mappings, consists, parameterized, input-controlled | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
 | Decision / output variable | a_t sampled or selected by πθ; body terms: article, present, analytical, concerning, certain, algorithms, tasks, associative | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms) |
 | Success / guarantee | task return, success and safe execution | p. 10 (6. REINFORCE with multiparameter distributions), p. 17 (8. Algorithm performance and other issues), p. 10 (6. REINFORCE with multiparameter distributions) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 1 (1. Introduction)): In this article we present analytical results concerning certain algorithms for tasks that are associative, meaning that the learner is required to perform an input-output mapping, and, with one limited ...
+PDF body contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 1 (1. Introduction)): In this article we present analytical results concerning certain algorithms for tasks that are associative, meaning that the learner is required to perform an input-output mapping, and, with one limited ...
 
 - **p. 2 / 1. Introduction - extractive body cue:** The results to be presented apply in general to any learner whose inputoutput mappings consists of a parameterized input-controlled distribution function from which outputs are ...
 - **p. 8 / 5. Episodic REINFORCE algorithms - extractive body cue:** In particular, assume a net N is trained on an episode-by-episode basis, where each episode consists of k time steps, during which the units may ...
@@ -68,12 +68,21 @@ PDF contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (
 
 ## Position in the Robotics Loop
 
-rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms). The downstream handoff is claimed only when the body describes it.
+rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms), objective p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 6 (4. REINFORCE algorithms).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 8 (5. Episodic REINFORCE algorithms), objective p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 6 (4. REINFORCE algorithms).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** The general framework of reinforcement learning encompasses a broad variety of problems ranging from various forms of function optimization at one extreme to learning control at the other. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** In this article we present analytical results concerning certain algorithms for tasks that are associative, meaning that the learner is required to perform an input-output mapping, and, with one limited ... (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** 8.L Convergence properties A major limitation of the analysis performed here is that it does not immediately lead to prediction of the asymptotic properties of REINFORCE algorithms. (p. 15, 8. Algorithm performance and other issues).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

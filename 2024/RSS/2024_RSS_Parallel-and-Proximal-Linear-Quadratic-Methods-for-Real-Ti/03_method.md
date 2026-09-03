@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p002.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p002.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p002.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p002.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -74,7 +74,7 @@ PDF body method statement (p. 8 (VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY), 
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | Horizon window is set to 0.5 s with a timestep of 10 ms for a total of N = 50 steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | The horizon is set to 0.96 s, with a 12 ms timestep, resulting in a discrete-time horizon of N = 80. | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | Horizon window is set to 0.5 s with a timestep of 10 ms for a total of N = 50 steps. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -118,3 +118,12 @@ PDF body method statement (p. 8 (VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY), 
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** OPTIMIZER We now consider a nonlinear discrete-time trajectory optimization problem with implicit system dynamics: min x,u J(x,u) = N-1 ∑ t=0 ℓt(xt,ut)+ℓN(xN) (48a) s.t. x0 = x0 (48b) φt(xt,ut,xt+1) = ... (p. 8, VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY).
+- **Objective/update evidence:** OPTIMIZER We now consider a nonlinear discrete-time trajectory optimization problem with implicit system dynamics: min x,u J(x,u) = N-1 ∑ t=0 ℓt(xt,ut)+ℓN(xN) (48a) s.t. x0 = x0 (48b) φt(xt,ut,xt+1) = ... (p. 8, VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY).
+- **Temporal/runtime evidence:** We consider three instances of the problem with different time horizons, encompassing two full steps of the robot. (p. 9, VIII. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

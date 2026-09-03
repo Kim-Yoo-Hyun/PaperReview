@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2503.21767. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2503.21767. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Following LangSplat [23], we conduct experiments on the further annotated LERF [12] dataset that contains a set of in-the-wild scenes and on the 3D-OVS [18] ...
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** 6: Qualitative results on 3D-OVS dataset for scene "lawn".
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** 7 visualizes the queried points for a scene in the Replica dataset given the query "cloth".
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Additionally, we report results on the Replica [28] dataset, which has labeled point clouds
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** I, we show the results on the LERF dataset.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** We also report mIoU accuracy (mAcc↑), a 2D metric proposed by OpenGaussian [29], where a query is considered correct if its IoU is greater than ...
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Note that all four methods encounter a common failure mode of empty query, i.e., no valid Gaussians are returned for a text query, resulting in ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Following LangSplat [23], we conduct experiments on the further annotated LERF [12] dataset that contains a set of in-the-wild scenes and on the 3D-OVS [18] ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** 6: Qualitative results on 3D-OVS dataset for scene "lawn".
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** 7 visualizes the queried points for a scene in the Replica dataset given the query "cloth".
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Additionally, we report results on the Replica [28] dataset, which has labeled point clouds
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** I, we show the results on the LERF dataset.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** We also report mIoU accuracy (mAcc↑), a 2D metric proposed by OpenGaussian [29], where a query is considered correct if its IoU is greater than ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Note that all four methods encounter a common failure mode of empty query, i.e., no valid Gaussians are returned for a text query, resulting in ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | We observe that Ours consistently outperforms LangSplat-m and, on average, is better than OpenGaussian, achieving an improvement of +4.14 in mIoU and +10.66 in ... | p. 6 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Acc, significantly outperforming baseline methods. | p. 7 (V. EXPERIMENTS) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Following LangSplat [23], we conduct experiments on the further annotated LERF [12] dataset that contains a set of in-the-wild scenes and on the 3D-OVS [18] ...
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** 6: Qualitative results on 3D-OVS dataset for scene "lawn".
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** 7 visualizes the queried points for a scene in the Replica dataset given the query "cloth".
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Additionally, we report results on the Replica [28] dataset, which has labeled point clouds
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** I, we show the results on the LERF dataset.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Following LangSplat [23], we conduct experiments on the further annotated LERF [12] dataset that contains a set of in-the-wild scenes and on the 3D-OVS [18] ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** 6: Qualitative results on 3D-OVS dataset for scene "lawn".
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** 7 visualizes the queried points for a scene in the Replica dataset given the query "cloth".
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Additionally, we report results on the Replica [28] dataset, which has labeled point clouds
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** I, we show the results on the LERF dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Visualization of the language embedding supervision. For the "red bag" circled in yellow, the ground-truth constructed by LangSplat [23] is inconsistent across frames, ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: IoU metric per query vs. cosine similarity thresholds for the standard querying method. We observe that it does not have a consistent optimal ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Overview of the proposed method. In Sec. IV-A, we present a masklet extraction algorithm (Alg. 1) that leverages Segment Anything Models to generate ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualization of the ground-truth Lt constructed by LangSplat [23]. We observed that the semantics are not consistent across viewpoints, e.g., the circled bag ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5: Qualitative results on LERF dataset of scene"ramen" and "figurines". For each scene, the first row contains rendered language embeddings, and the second row ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Qualitative results on 3D-OVS dataset for scene "lawn". The first row contains rendered language embeddings, and the second row contains 3D query results ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7: Qualitative results on Replica dataset. Yellow points are the queried points of "cloth". language Gaussians 5 times with different seeds has a small ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Visualization of the language embedding supervision. For the "red bag" circled in yellow, the ground-truth constructed by LangSplat [23] is inconsistent across frames, ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: IoU metric per query vs. cosine similarity thresholds for the standard querying method. We observe that it does not have a consistent optimal ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Overview of the proposed method. In Sec. IV-A, we present a masklet extraction algorithm (Alg. 1) that leverages Segment Anything Models to generate ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Visualization of the ground-truth Lt constructed by LangSplat [23]. We observed that the semantics are not consistent across viewpoints, e.g., the circled bag ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Qualitative results on LERF dataset of scene"ramen" and "figurines". For each scene, the first row contains rendered language embeddings, and the second row ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Qualitative results on 3D-OVS dataset for scene "lawn". The first row contains rendered language embeddings, and the second row contains 3D query results ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Qualitative results on Replica dataset. Yellow points are the queried points of "cloth". language Gaussians 5 times with different seeds has a small ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following LangSplat [23], we conduct experiments on the further annotated LERF [12] dataset that contains a set of in-the-wild scenes and on the 3D-OVS ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
 | Task/environment | Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2. | reset, timeout, object/scene variation | p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
@@ -109,14 +109,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Our contributions are as follows: • We introduce tracking for generating semantic and 3DarXiv:2503.21767v2 [cs.CV] 26 Sep 2025 | We observe that Ours consistently outperforms LangSplat-m and, on average, is better than OpenGaussian, achieving an improvement of +4.14 in mIoU and +10.66 in ... | PDF body cue; verify exact table/figure and matched conditions | p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
+| Our contributions are as follows: • We introduce tracking for generating semantic and 3D | We observe that Ours consistently outperforms LangSplat-m and, on average, is better than OpenGaussian, achieving an improvement of +4.14 in mIoU and +10.66 in ... | PDF body cue; verify exact table/figure and matched conditions | p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
 | Primary metric/result | Acc, significantly outperforming baseline methods. | numeric claim only at cited anchor | p. 7 (V. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Pretraining the standard 3D Gaussian Splatting takes 30,000 steps.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** This is followed by training the language embeddings for an additional 30,000 steps, skipping the densification stage.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2.
-- **p. 5 / IV. METHOD - extractive PDF cue:** Ground Truth (GT)-anchored 3D Querying With the text query vector q, the standard approach is to directly compares the CLIP features q of the query ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Pretraining the standard 3D Gaussian Splatting takes 30,000 steps.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** This is followed by training the language embeddings for an additional 30,000 steps, skipping the densification stage.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Acc because the dataset is relatively easy with ≤30 frames and ≤7 objects in each scene, leading to effective segmentation and tracking from SAM2.
+- **p. 5 / IV. METHOD - extractive body cue:** Ground Truth (GT)-anchored 3D Querying With the text query vector q, the standard approach is to directly compares the CLIP features q of the query ...
 
 ## Generalization and Failure Cases
 
@@ -154,14 +154,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Limitations and Verification Questions
 
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Note that all four methods encounter a common failure mode of empty query, i.e., no valid Gaussians are returned for a text query, resulting in ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Acc, a query is considered correct if the center of the queried mask's exterior bounding box falls within the bounding box of the ground-truth.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: IoU metric per query vs. cosine similarity thresholds for the standard querying method. We observe that it does not have a consistent optimal ...
-- **p. 5 / IV. METHOD - extractive PDF cue:** (11) As ¯ϕr is obtained as a weighted average of CLIP image embeddings and q comes from CLIP text embeddings, a direct comparison between them ...
-- **p. 5 / IV. METHOD - extractive PDF cue:** Therefore, any high threshold works well, which improves the queries' reliability and robustness.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** We observe that LangSplat-m and GaussianGrouping-m failed to retrieve the correct object, and OpenGaussian only retrieves part of the cloth with noisy points from other ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Note that all four methods encounter a common failure mode of empty query, i.e., no valid Gaussians are returned for a text query, resulting in ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Acc, a query is considered correct if the center of the queried mask's exterior bounding box falls within the bounding box of the ground-truth.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: IoU metric per query vs. cosine similarity thresholds for the standard querying method. We observe that it does not have a consistent optimal ...
+- **p. 5 / IV. METHOD - extractive body cue:** (11) As ¯ϕr is obtained as a weighted average of CLIP image embeddings and q comes from CLIP text embeddings, a direct comparison between them ...
+- **p. 5 / IV. METHOD - extractive body cue:** Therefore, any high threshold works well, which improves the queries' reliability and robustness.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** We observe that LangSplat-m and GaussianGrouping-m failed to retrieve the correct object, and OpenGaussian only retrieves part of the cloth with noisy points from other ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

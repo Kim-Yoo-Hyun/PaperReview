@@ -1,53 +1,74 @@
 # Insights — ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Mzz4BhdIFb; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/166257. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** Different from these studies, we aim to propose a new end-to-end reinforced VLA model based on dense rewards that capture the characteristics of manipulation tasks. • We propose ...
-- **Problem cue:** In terms of ReinboT algorithm design, we consider that accurate estimation of the value function in RL algorithms has always been a thorny problem, especially in the Transformer ...
-- **Claim/result cue:** Extensive experiments show that ReinboT achieves state-of-the-art performance on the CALVIN mixed-quality dataset and exhibits superior few-shot learning and out-of-distribution generalization capabilities in real-world tasks.
+- **p. 2 / 1. Introduction - extractive body cue:** Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic ...
+- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose Reinforced robot GPT (ReinboT), a novel end-to-end VLA model to implement the RL concept of maximizing dense returns.
+- **p. 4 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** We introduce action and image token embeddings ([ACTION] and [IMAGE]) and predict robot actions and future image states through an action decoder Pω and an ...
+- **p. 3 / 3.2. Max-Return Sequence Modeling - extractive body cue:** Moreover, based on the GPT-style transformer (Radford, 2018), we introduce three prediction token embeddings ([RTG], [ACTION] and [IMAGE]) to predict ReturnToGo, robot action, and future ...
+- **p. 3 / 4. Methodology - extractive body cue:** 4.2, we elaborate on how to build a novel end-to-end reinforced VLA model and test execution pipeline.
+- **p. 4 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** Specifically, we first input the language instruction l, image state ot-u+1:t and proprioception st-u+1:t into the backbone network πϕ, and obtain the features hRTG t:t+k-1 ...
+- **p. 5 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning The hidden features ˆghidden t:t+k-1 is concatenated with the action features haction t:t+k-1 and are further input ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), p. 3 (4. Methodology), p. 4 (4.2. End-to-end Reinforced VLA model)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** While semantic generalization has improved in VLA models through extensive robotic training data, a critical gap persists in their manipulation accuracy for downstream tasks (Brohan ...
+- **p. 1 / 1. Introduction - extractive body cue:** Although recent imitation learning methods can effectively replicate the distribution of demonstrations (Vuong et al., 2023; Brohan et al., 2023; Zhang et al., 2025), they ...
+- **p. 2 / 1. Introduction - extractive body cue:** Specifically, we utilize expectile regression (Aigner et al., 1976; Sobotka & Kneib, 2012) to make the predicted return as close as possible to the maximum ...
+- **p. 2 / 1. Introduction - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning ing the maximum return within the distribution given the current conditions, and thereby considering the likelihood of ...
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure ...
+- **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** To promote data diversity, different degrees of Gaussian noise (0.05, 0.1, and 0.15) are added to the actions of the RoboFlamingo policy model during the ...
+- **Boundary to test:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure data generated by the interaction between the ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic manipulation capabilities. • We introduce a reward ... | p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Reported outcome | (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in realistic scenarios, and significantly outperforms the baseline methods. | p. 8 (5.3. Evaluation on Real-world Tasks), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data) |
+| Failure/limitation | In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure data generated by the interaction between the ... | p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `VLA, Robotics, Reinforcement Learning` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Language-conditioned perception을 바로 action/policy token으로 연결하는 방식을 3D object state, affordance, contact-aware manipulation으로 확장할 수 있다.
-  - 2D image 중심 VLA가 놓치는 pose, metric distance, occlusion을 3D representation이나 scene memory로 보강하는 연구 질문으로 이어진다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
+- 이 논문의 재사용 가능한 지점은 Specifically, we first input the language instruction l, image state ot-u+1:t and proprioception st-u+1:t into the backbone network πϕ, and obtain the features hRTG t:t+k-1 and haction t:t+k-1 corresponding to [RTG] and ...를 GR-1 is a GPT-style model that takes language instructions l, historical image observations ot-h:t, and proprioception st-h:t as input.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure data generated by the interaction between the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic manipulation capabilities. • We introduce a reward ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `VLA and Generalist Robot Policies`; tags: `VLA, Robotics, Reinforcement Learning`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Extensive experiments show that ReinboT achieves state-of-the-art performance on the CALVIN mixed-quality dataset and exhibits superior few-shot learning and out-of-distribution generalization capabilities in real-world tasks.
-  - robot action까지 보인 경우에도 3D state grounding, closed-loop correction, force/tactile feedback, unseen embodiment generalization은 별도 검증이 필요하다.
+- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `VLA, Robotics, Reinforcement Learning`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure data generated by the interaction between the ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: CALVIN / accuracy, SSIM, success rate
-  - 내 연구 확장 benchmark 후보: CALVIN, LIBERO, RLBench, Open X-Embodiment
-  - 내 연구 확장 metric 후보: success rate, task completion, generalization gap, collision
-  - 검증 초점: language-conditioned manipulation success, unseen object/task generalization, closed-loop recovery를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Specifically, we consider the picking and placing tasks of objects such as cups, bowls, and stuffed toys on a robotic arm UR5..
+3. Compare against the body-reported baseline or a matched simpler baseline: (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in realistic scenarios, and significantly outperforms the baseline methods..
+4. Report the body metric and its denominator/aggregation: 1 shows the success rate of each language instruction in the chain and the Average Length (AL) of the completed tasks..
+5. Re-run the body-reported ablation/failure condition: Ablation experiments are conducted to verify the necessity of the designed reward components..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), p. 4 (4.2. End-to-end Reinforced VLA model); the primary result is directionally consistent at p. 8 (5.3. Evaluation on Real-world Tasks), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-3D geometry token을 VLA policy에 넣을 때 action success와 language following 중 어느 부분이 실제로 개선되는가?
+고정된 observation/action/data/compute budget에서 Overall, core, contributions mechanism이 (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in realistic ... 대비 1 shows the success rate of each language instruction in the chain and the Average Length (AL) of ...을 개선하고, In addition to the original data collected by human teleoperation without language instructions in CALVIN (more ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

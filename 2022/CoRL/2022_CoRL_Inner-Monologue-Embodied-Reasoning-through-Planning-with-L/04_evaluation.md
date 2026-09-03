@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/huang23c.html; PDF retrieval source: https://arxiv.org/pdf/2207.05608. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/huang23c.html; PDF retrieval source: https://arxiv.org/pdf/2207.05608. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, ... | p. 6 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The ... | p. 7 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For the object sorting task, the scene description contains a list of currently visible objects and a list of objects that the robot has ... | embodiment, simulator version and control stack | p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
 | Task/environment | A.3 Inner Monologue for Real-World Mobile Manipulation in a Kitchen Setting Large Language Model We use PALM [8], a 540B parameter language model trained ... | reset, timeout, object/scene variation | p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Informing LLM with embodied feedback enables many emergent capabilities, all of which are achieved without similar prompted examples. For instance, Inner Monologue can ...
 
-- **PDF anchors reviewed:** datasets p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), metrics p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 4 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
+- **Evidence anchors reviewed:** datasets p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), metrics p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 4 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The results of real robot experiments are ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided a "termination" oracle. Although CLIPort ... (p. 6, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success ... (p. 6, Figure/Table caption).
+- **Failure/negative evidence:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in significantly improved performance in dynamical ... (p. 2, 1 Introduction).

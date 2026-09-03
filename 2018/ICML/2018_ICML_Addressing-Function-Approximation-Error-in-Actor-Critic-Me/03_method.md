@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.09477; PDF retrieval source: https://arxiv.org/pdf/1802.09477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.09477; PDF retrieval source: https://arxiv.org/pdf/1802.09477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | Algorithm 1 TD3 Initialize critic networks Qθ1, Qθ2, and actor network πφ with random parameters θ1, θ2, φ Initialize target networks θ′ ... | p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | If target networks can be used to reduce the error over multiple updates, and policy updates on high-error states cause divergent behavior, ... | p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization) |
@@ -78,7 +78,7 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | After each time step, the networks are trained with a mini-batch of a 100 transitions, sampled uniformly from a replay buffer containing ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | After each time step, the networks are trained with a mini-batch of a 100 transitions, sampled uniformly from a replay buffer containing ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | Average return over the last 10 evaluations over 10 trials of 1 million time steps, comparing ablation over delayed policy updates (DP), ... | Hz/fps, inference time and control rate |
 | Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | After each time step, the networks are trained with a mini-batch of a 100 transitions, sampled uniformly from a replay buffer containing ... | window and reset |
 | Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | Average return over the last 10 evaluations over 10 trials of 1 million time steps, comparing ablation over delayed policy updates (DP), ... | hardware, batch and throughput |
@@ -126,8 +126,17 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), objective p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.2. Target Networks and Delayed Policy Updates), temporal p. 7 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 2 (2. Related Work), p. 6 (6. Experiments), p. 7 (6.1. Evaluation), p. 4 (4.1. Overestimation Bias in Actor-Critic).
+- **Evidence anchors reviewed:** method p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), objective p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.2. Target Networks and Delayed Policy Updates), temporal p. 7 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 2 (2. Related Work), p. 6 (6. Experiments), p. 7 (6.1. Evaluation), p. 4 (4.1. Overestimation Bias in Actor-Critic).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Average estimated value of a randomly selected state on Hopper-v1 without target networks, (τ = 1), and with slowupdating target networks, (τ = 0.1, 0.01), with a fixed and a ... (p. 5, 5.2. Target Networks and Delayed Policy Updates).
+- **Objective/update evidence:** To ensure the TD-error remains small, we update the (p. 5, 5.2. Target Networks and Delayed Policy Updates).
+- **Temporal/runtime evidence:** After each time step, the networks are trained with a mini-batch of a 100 transitions, sampled uniformly from a replay buffer containing the entire history of the agent. (p. 7, 6.1. Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

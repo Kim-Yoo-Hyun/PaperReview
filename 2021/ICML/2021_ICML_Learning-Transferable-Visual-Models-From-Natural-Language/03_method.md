@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,9 +21,9 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 
 ## Design Rationale
 
-- **p. 1 / 1. Introduction and Motivating Work - extractive body cue:** Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** At the core of our approach is the idea of learning perception from supervision contained in natural language.
+- **p. 4 / 2.3. Selecting an Efficient Pre-Training Method - extractive body cue:** In Figure 2 we show that a 63 million parameter transformer language model, which already uses twice the compute of its ResNet-50 image encoder, learns ...
 
 ## Source Evidence Cues
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Input representation | source-defined input을 learnable representation으로 바꾼다 | paper-specific image/text/sequence input | encoder, tokenization, normalization 또는 feature extraction을 수행 | latent feature/state | Learning Transferable Visual Models From Natural Language Supervision 5 # image_encoder - ResNet or Vision Transformer # text_encoder - CBOW or Text ... | p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. Choosing and Scaling a Model) |
 | Core objective / transformation | source task의 prediction·generation 목표를 최적화한다 | representation, target/condition | paper-specific model, loss, decoder 또는 generative process를 적용 | prediction/embedding/sample | For the first, we use ResNet-50 (He et al., 2016a) as the base architecture for the image encoder due to its widespread ... | p. 4 (2.4. Choosing and Scaling a Model), p. 4 (2.3. Selecting an Efficient Pre-Training Method) |
@@ -62,7 +62,7 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 |---|---|---|---|
 | Input/observation | development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic, architectures, zero-shot, transfer, downstream | 논문이 명시한 observation과 task input | body cue; exact tensor/frame verify |
 | State/latent | development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic | task state 또는 decision variable | body cue; notation verify |
-| Action/output | Pre-training, methods, learn, directly, text, have, revolutionized, NLP, over, last | paper-specific output/action | body cue; unit/decoder verify |
+| Action/output | Learning, natural, language, important, advantage, over, most, unsupervised, self-supervised, approaches | paper-specific output/action | body cue; unit/decoder verify |
 | Objective/constraint | knowledge, batch, construction, technique, objective, first, introduced, area, deep, metric | paper-specific objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -81,10 +81,10 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | Continuing with this interpretation, every step of CLIP pre-training can be viewed as optimizing the performance of a randomly created proxy to ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | CLIP is a significant step towards flexible and practical zero-shot computer vision classifiers. | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | Mixed-precision (Micikevicius et al., 2017) was used to accelerate training and save memory. | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | not recovered | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | Continuing with this interpretation, every step of CLIP pre-training can be viewed as optimizing the performance of a randomly created proxy to ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | CLIP is a significant step towards flexible and practical zero-shot computer vision classifiers. | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | Mixed-precision (Micikevicius et al., 2017) was used to accelerate training and save memory. | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -128,8 +128,17 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. Choosing and Scaling a Model), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.4. Choosing and Scaling a Model), p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), objective p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.5. Training), p. 3 (2.1. Natural Language Supervision), temporal p. 6 (3.1.2. USING CLIP FOR ZERO-SHOT TRANSFER), p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 15 (3.3. Robustness to Natural Distribution Shift), p. 5 (2.4. Choosing and Scaling a Model), p. 5 (2.5. Training), p. 17 (4. Comparison to Human Performance).
+- **Evidence anchors reviewed:** method p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. Choosing and Scaling a Model), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.4. Choosing and Scaling a Model), p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), objective p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.5. Training), p. 3 (2.1. Natural Language Supervision), temporal p. 6 (3.1.2. USING CLIP FOR ZERO-SHOT TRANSFER), p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 15 (3.3. Robustness to Natural Distribution Shift), p. 5 (2.4. Choosing and Scaling a Model), p. 5 (2.5. Training), p. 17 (4. Comparison to Human Performance).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To our knowledge this batch construction technique and objective was first introduced in the area of deep metric learning as the multi-class N-pair loss Sohn (2016), was popularized for contrastive ... (p. 4, 2.3. Selecting an Efficient Pre-Training Method).
+- **Objective/update evidence:** We optimize a symmetric cross entropy loss over these similarity scores. (p. 4, 2.3. Selecting an Efficient Pre-Training Method).
+- **Temporal/runtime evidence:** Continuing with this interpretation, every step of CLIP pre-training can be viewed as optimizing the performance of a randomly created proxy to a computer vision dataset which contains 1 example ... (p. 6, 3.1.2. USING CLIP FOR ZERO-SHOT TRANSFER).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

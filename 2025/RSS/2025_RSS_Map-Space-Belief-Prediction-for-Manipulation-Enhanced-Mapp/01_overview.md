@@ -1,8 +1,10 @@
 # Map Space Belief Prediction for Manipulation-Enhanced Mapping
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p039.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p039.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p039.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p039.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p039.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ World models, safety, uncertainty, and recovery의 navigation 문제를 이해�
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, their approach relies on a fixed camera, lacks a ong-term map, and rebuilds environmental knowledge from seratch with each observation.를 문제로 두고, Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (B. Mechanical Search in Shelves and Piles), p. 1 (2. The proticted elit map is visualized), p. 1 (2. The proticted elit map is visualized), p. 2 (2. The proticted elit map is visualized), p. 3 (B. Mechanical Search in Shelves and Piles), p. 13 (B. CNABU Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** MEM offers two significant new challenges beyond standard NBV problems. (p. 1, 2. The proticted elit map is visualized).
+- **Actual contribution:** Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas. (p. 1, Abstract).
+- **Evaluation boundary:** We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]. (p. 6, V. EXPERIMENTS).
+- **Explicit failure boundary:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision ... (p. 9, VI. LIMITATIONS).

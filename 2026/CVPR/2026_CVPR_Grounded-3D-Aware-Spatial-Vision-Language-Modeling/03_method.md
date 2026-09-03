@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 ## Method Body Digest
 
-- **p. 3 / 2.2. Grounding in the 2D Plane - extractive PDF cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence before the next ...
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** Our stream-based grounding can be viewed abstractly as analogous to a twostep process, i.e., first grounding entities with a VLM, and then performing region-conditioned reasoning ...
-- **p. 5 / 2.4. Data Construction and Composition - extractive PDF cue:** Our training data is composed of publicly available sources: 97K grounded CoT samples, 780K 3D detection samples from Omni3D [32] and EmbodiedScan [56], and 272K ...
-- **p. 3 / 2.1. Foundational Spatial VLM - extractive PDF cue:** Overall, the single-view formulation provides a strong spatially-structured feature space for both regionlevel interaction and text-aligned representation.
-- **p. 5 / Method - extractive PDF cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** This token is detached from the computation graph (i.e., no gradient flows through it) but serves as a strong conditional cue for subsequent token prediction.
-- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive PDF cue:** To ensure consistency across datasets, we standardize orientations by selecting the rotation variant that minimizes the angular deviation between the local PCA axes of the ...
+- **p. 3 / 2.2. Grounding in the 2D Plane - extractive body cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence before the next ...
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** Our stream-based grounding can be viewed abstractly as analogous to a twostep process, i.e., first grounding entities with a VLM, and then performing region-conditioned reasoning ...
+- **p. 5 / 2.4. Data Construction and Composition - extractive body cue:** Our training data is composed of publicly available sources: 97K grounded CoT samples, 780K 3D detection samples from Omni3D [32] and EmbodiedScan [56], and 272K ...
+- **p. 3 / 2.1. Foundational Spatial VLM - extractive body cue:** Overall, the single-view formulation provides a strong spatially-structured feature space for both regionlevel interaction and text-aligned representation.
+- **p. 5 / Method - extractive body cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** This token is detached from the computation graph (i.e., no gradient flows through it) but serves as a strong conditional cue for subsequent token prediction.
+- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** To ensure consistency across datasets, we standardize orientations by selecting the rotation variant that minimizes the angular deviation between the local PCA axes of the ...
 
 ## Design Rationale
 
-- **p. 3 / 2.2. Grounding in the 2D Plane - extractive PDF cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To address these limitations, we introduce (GR3D), a spatial VLM that integrates grounding as a core mechanism for learning spatial representations.
-- **p. 3 / 2. Method - extractive PDF cue:** Building on this foundation, we introduce explicit and implicit 2D grounding (Sec.
+- **p. 3 / 2.2. Grounding in the 2D Plane - extractive body cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+- **p. 2 / 1. Introduction - extractive body cue:** To address these limitations, we introduce (GR3D), a spatial VLM that integrates grounding as a core mechanism for learning spatial representations.
+- **p. 3 / 2. Method - extractive body cue:** Building on this foundation, we introduce explicit and implicit 2D grounding (Sec.
 
 ## Source Evidence Cues
 
-- **p. 3 / 2.2. Grounding in the 2D Plane - extractive PDF cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence before the next ...
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** Our stream-based grounding can be viewed abstractly as analogous to a twostep process, i.e., first grounding entities with a VLM, and then performing region-conditioned reasoning ...
-- **p. 5 / 2.4. Data Construction and Composition - extractive PDF cue:** Our training data is composed of publicly available sources: 97K grounded CoT samples, 780K 3D detection samples from Omni3D [32] and EmbodiedScan [56], and 272K ...
-- **p. 3 / 2.1. Foundational Spatial VLM - extractive PDF cue:** Overall, the single-view formulation provides a strong spatially-structured feature space for both regionlevel interaction and text-aligned representation.
-- **p. 5 / Method - extractive PDF cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
+- **p. 3 / 2.2. Grounding in the 2D Plane - extractive body cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence before the next ...
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** Our stream-based grounding can be viewed abstractly as analogous to a twostep process, i.e., first grounding entities with a VLM, and then performing region-conditioned reasoning ...
+- **p. 5 / 2.4. Data Construction and Composition - extractive body cue:** Our training data is composed of publicly available sources: 97K grounded CoT samples, 780K 3D detection samples from Omni3D [32] and EmbodiedScan [56], and 272K ...
+- **p. 3 / 2.1. Foundational Spatial VLM - extractive body cue:** Overall, the single-view formulation provides a strong spatially-structured feature space for both regionlevel interaction and text-aligned representation.
+- **p. 5 / Method - extractive body cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
 - **Detected method headings:** 2. Method (p. 3); Method (p. 5); Method (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model. | p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. Implicit 2D Grounding) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence ... | p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.2.2. Implicit 2D Grounding) |
@@ -47,8 +47,8 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 ## Objective / Update Rule
 
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** This token is detached from the computation graph (i.e., no gradient flows through it) but serves as a strong conditional cue for subsequent token prediction.
-- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive PDF cue:** To ensure consistency across datasets, we standardize orientations by selecting the rotation variant that minimizes the angular deviation between the local PCA axes of the ...
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** This token is detached from the computation graph (i.e., no gradient flows through it) but serves as a strong conditional cue for subsequent token prediction.
+- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** To ensure consistency across datasets, we standardize orientations by selecting the rotation variant that minimizes the angular deviation between the local PCA axes of the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (2.2.2. Implicit 2D Grounding).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive PDF cue:** Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion.
-- **p. 3 / 2.1. Foundational Spatial VLM - extractive PDF cue:** Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Without reliable spatial grounding, the link between high-level instructions and physical interaction remains brittle, limiting the scalability of VLMs toward real-world embodied perception and control.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Vision-language models (VLMs) have rapidly evolved into general-purpose perception-language systems [1-8], capable of understanding scenes, following open-ended instructions, and supporting diverse multimodal tasks.
-- **p. 3 / 2.1. Foundational Spatial VLM - extractive PDF cue:** The base NVILA encoder extracts dense visual tokens from an RGB image for single-view inputs.
-- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive PDF cue:** Each 3D bounding box is expressed in a unified, language-based format compatible with 2D HTML-style outputs, eliminating the need for task-specific heads.
-- **p. 5 / 2.4. Data Construction and Composition - extractive PDF cue:** To construct the implicit grounding corpus, we start from RefSpatial [23], which includes 2D samples from OpenImages [53], 3D video data from CA-1M [54], and ...
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion.
+- **p. 3 / 2.1. Foundational Spatial VLM - extractive body cue:** Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature ...
+- **p. 2 / 1. Introduction - extractive body cue:** Without reliable spatial grounding, the link between high-level instructions and physical interaction remains brittle, limiting the scalability of VLMs toward real-world embodied perception and control.
+- **p. 2 / 1. Introduction - extractive body cue:** Vision-language models (VLMs) have rapidly evolved into general-purpose perception-language systems [1-8], capable of understanding scenes, following open-ended instructions, and supporting diverse multimodal tasks.
+- **p. 3 / 2.1. Foundational Spatial VLM - extractive body cue:** The base NVILA encoder extracts dense visual tokens from an RGB image for single-view inputs.
+- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** Each 3D bounding box is expressed in a unified, language-based format compatible with 2D HTML-style outputs, eliminating the need for task-specific heads.
+- **p. 5 / 2.4. Data Construction and Composition - extractive body cue:** To construct the implicit grounding corpus, we start from RefSpatial [23], which includes 2D samples from OpenImages [53], 3D video data from CA-1M [54], and ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,9 +85,9 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 ## Training vs Inference
 
-- **p. 5 / 2.4. Data Construction and Composition - extractive PDF cue:** Our training data is composed of publicly available sources: 97K grounded CoT samples, 780K 3D detection samples from Omni3D [32] and EmbodiedScan [56], and 272K ...
-- **p. 5 / Method - extractive PDF cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
-- **p. 6 / 3.1. Implementation Details - extractive PDF cue:** During this stage, we freeze the visual encoder and train the remaining modules.
+- **p. 5 / 2.4. Data Construction and Composition - extractive body cue:** Our training data is composed of publicly available sources: 97K grounded CoT samples, 780K 3D detection samples from Omni3D [32] and EmbodiedScan [56], and 272K ...
+- **p. 5 / Method - extractive body cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
+- **p. 6 / 3.1. Implementation Details - extractive body cue:** During this stage, we freeze the visual encoder and train the remaining modules.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -107,13 +107,13 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 ## Failure and Ablation Link
 
-- **p. 8 / 3.5. Analysis and Ablation Study - extractive PDF cue:** Ablation study on the key components of GR3D-8B. "PT" denotes pretraining, "2D→3D" denotes 2D grounding followed by 3D prediction, and "Cam" denotes using normalized intrinsics. ...
-- **p. 7 / 3.5. Analysis and Ablation Study - extractive PDF cue:** We further analyze the effect of pointmap reconstruction as an auxiliary task for 3D detection.
-- **p. 6 / 3. Experiments - extractive PDF cue:** 3.5 provides additional analysis and ablation studies of the model's 3D detection performance.
-- **p. 6 / 3.3. Visual Question Answering - extractive PDF cue:** We evaluate two variants of our model: one after spatial pre-training and one after CoT finetuning.
-- **p. 7 / 3.5. Analysis and Ablation Study - extractive PDF cue:** Without this normalization, the model may lead to small but noticeable localization offsets in the predicted 3D boxes.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Results on the BLINK-Depth benchmark for point-level region spatial understanding. Left: comparison with VLM base- lines. Right: visualization of one sample. Our method ...
-- **p. 6 / 3.2. 3D Object Detection - extractive PDF cue:** This makes its 3D predictions unstable under changes in image size.
+- **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** Ablation study on the key components of GR3D-8B. "PT" denotes pretraining, "2D→3D" denotes 2D grounding followed by 3D prediction, and "Cam" denotes using normalized intrinsics. ...
+- **p. 7 / 3.5. Analysis and Ablation Study - extractive body cue:** We further analyze the effect of pointmap reconstruction as an auxiliary task for 3D detection.
+- **p. 6 / 3. Experiments - extractive body cue:** 3.5 provides additional analysis and ablation studies of the model's 3D detection performance.
+- **p. 6 / 3.3. Visual Question Answering - extractive body cue:** We evaluate two variants of our model: one after spatial pre-training and one after CoT finetuning.
+- **p. 7 / 3.5. Analysis and Ablation Study - extractive body cue:** Without this normalization, the model may lead to small but noticeable localization offsets in the predicted 3D boxes.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Results on the BLINK-Depth benchmark for point-level region spatial understanding. Left: comparison with VLM base- lines. Right: visualization of one sample. Our method ...
+- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** This makes its 3D predictions unstable under changes in image size.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -127,7 +127,7 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.2.2. Implicit 2D Grounding), p. 5 (2.4. Data Construction and Composition), p. 3 (2.1. Foundational Spatial VLM), p. 5 (Method), objective p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), temporal p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 3 (2.1. Foundational Spatial VLM), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study).
+- **Evidence anchors reviewed:** method p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.2.2. Implicit 2D Grounding), p. 5 (2.4. Data Construction and Composition), p. 3 (2.1. Foundational Spatial VLM), p. 5 (Method), objective p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), temporal p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 3 (2.1. Foundational Spatial VLM), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=7jXxQ9bGoU; PDF retrieval source: https://openreview.net/pdf/78d270155a0832fed3175dbc6f35687fe7e3c822.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=7jXxQ9bGoU; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/246879. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.1 DATASET - extractive PDF cue:** It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively.
-- **p. 7 / 4.1 DATASET - extractive PDF cue:** The nuScenes dataset (Caesar et al., 2020) provides annotation data for tasks such as semantic segmentation, object detection, and 3D occupancy (Occ) prediction.
-- **p. 8 / 4.1 DATASET - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 2: Comparisons with state-of-the-art 3D object detection methods on nuScenes dataset.
-- **p. 9 / 4.1 DATASET - extractive PDF cue:** Published as a conference paper at ICLR 2026 Waymo Open Dataset Result.
-- **p. 9 / 4.1 DATASET - extractive PDF cue:** We further conduct experiments on the Waymo Open Dataset (Sun et al., 2020) to evaluate the generalization capability of our approach.
-- **p. 8 / 4.1 DATASET - extractive PDF cue:** All methods construct BEV-based feature maps instead of objectcentric fusion based on proposals, which means these methods can also be naturally used for semantic tasks.
-- **p. 10 / 4.1 DATASET - extractive PDF cue:** Furthermore, UniTR exhibits significant object yaw errors (yellow marks).
-- **p. 10 / 4.1 DATASET - extractive PDF cue:** For Occ, GaussianFusion-C produces sharper object boundaries (red marks) and better class separation (yellow marks) compared to GaussianFormer.
+- **p. 7 / 4.1 DATASET - extractive body cue:** It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively.
+- **p. 7 / 4.1 DATASET - extractive body cue:** The nuScenes dataset (Caesar et al., 2020) provides annotation data for tasks such as semantic segmentation, object detection, and 3D occupancy (Occ) prediction.
+- **p. 9 / 4.1 DATASET - extractive body cue:** We further conduct experiments on the Waymo Open Dataset (Sun et al., 2020) to evaluate the generalization capability of our approach.
+- **p. 8 / 4.1 DATASET - extractive body cue:** All methods construct BEV-based feature maps instead of objectcentric fusion based on proposals, which means these methods can also be naturally used for semantic tasks.
+- **p. 9 / 4.1 DATASET - extractive body cue:** Extensive experiments demonstrate the effectiveness of our 3D Gaussian representation across multiple tasks, including both object-centric and dense semantic perception.
+- **p. 10 / 4.1 DATASET - extractive body cue:** Furthermore, UniTR exhibits significant object yaw errors (yellow marks).
+- **p. 10 / 4.1 DATASET - extractive body cue:** For Occ, GaussianFusion-C produces sharper object boundaries (red marks) and better class separation (yellow marks) compared to GaussianFormer.
+- **p. 7 / 4.1 DATASET - extractive body cue:** We utilize the official evaluation metric nuScenes Detection Score (NDS) and mean Average Precision (mAP) for 3D detection.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements. | p. 8 (4.1 DATASET) |
 | 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | More importantly, benefiting from our proposed Gaussian initialization strategy and iterative update mechanism, GaussianFusion-C achieves a 1.55 mIoU improvement and nearly 4.5! computational efficiency ... | p. 9 (4.1 DATASET) |
@@ -40,36 +40,35 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.1 DATASET - extractive PDF cue:** It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively.
-- **p. 7 / 4.1 DATASET - extractive PDF cue:** The nuScenes dataset (Caesar et al., 2020) provides annotation data for tasks such as semantic segmentation, object detection, and 3D occupancy (Occ) prediction.
-- **p. 8 / 4.1 DATASET - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 2: Comparisons with state-of-the-art 3D object detection methods on nuScenes dataset.
-- **p. 9 / 4.1 DATASET - extractive PDF cue:** Published as a conference paper at ICLR 2026 Waymo Open Dataset Result.
-- **p. 9 / 4.1 DATASET - extractive PDF cue:** We further conduct experiments on the Waymo Open Dataset (Sun et al., 2020) to evaluate the generalization capability of our approach.
-- **p. 8 / 4.1 DATASET - extractive PDF cue:** All methods construct BEV-based feature maps instead of objectcentric fusion based on proposals, which means these methods can also be naturally used for semantic tasks.
-- **p. 10 / 4.1 DATASET - extractive PDF cue:** Furthermore, UniTR exhibits significant object yaw errors (yellow marks).
-- **p. 10 / 4.1 DATASET - extractive PDF cue:** For Occ, GaussianFusion-C produces sharper object boundaries (red marks) and better class separation (yellow marks) compared to GaussianFormer.
+- **p. 7 / 4.1 DATASET - extractive body cue:** It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively.
+- **p. 7 / 4.1 DATASET - extractive body cue:** The nuScenes dataset (Caesar et al., 2020) provides annotation data for tasks such as semantic segmentation, object detection, and 3D occupancy (Occ) prediction.
+- **p. 9 / 4.1 DATASET - extractive body cue:** We further conduct experiments on the Waymo Open Dataset (Sun et al., 2020) to evaluate the generalization capability of our approach.
+- **p. 8 / 4.1 DATASET - extractive body cue:** All methods construct BEV-based feature maps instead of objectcentric fusion based on proposals, which means these methods can also be naturally used for semantic tasks.
+- **p. 9 / 4.1 DATASET - extractive body cue:** Extensive experiments demonstrate the effectiveness of our 3D Gaussian representation across multiple tasks, including both object-centric and dense semantic perception.
+- **p. 10 / 4.1 DATASET - extractive body cue:** Furthermore, UniTR exhibits significant object yaw errors (yellow marks).
+- **p. 10 / 4.1 DATASET - extractive body cue:** For Occ, GaussianFusion-C produces sharper object boundaries (red marks) and better class separation (yellow marks) compared to GaussianFormer.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Table 1: Impact of BEV size on model performance
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison of the discrete BEV repre- sentation fusion paradigm (Liu et al., 2023b) and our proposed continuous Gaussian representation fusion paradigm. B, G, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of the GaussianFusion framework. Initial Gaussians are refined by a shared encoder and fused in Gaussian space, followed by task-specific heads for ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Comparison of the vanilla deformable attention (Zhu et al., 2020) and our proposed deformable attention with Gaussian. Furthermore, we adopt deformable attention with ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Comparisons with state-of-the-art 3D object detection methods on nuScenes dataset. C denote Camera, L denote Lidar. All methods construct BEV-based feature maps instead ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Latency and performance on nuScenes val. set.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4: Comparison with temporal methods.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5: Semantic scene completion results on nuScenes (Wei et al., 2023; Caesar et al., 2020) val set. † represents trained on nuScenes. For Camera-only ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Table 1: Impact of BEV size on model performance
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of the discrete BEV repre- sentation fusion paradigm (Liu et al., 2023b) and our proposed continuous Gaussian representation fusion paradigm. B, G, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of the GaussianFusion framework. Initial Gaussians are refined by a shared encoder and fused in Gaussian space, followed by task-specific heads for ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Comparison of the vanilla deformable attention (Zhu et al., 2020) and our proposed deformable attention with Gaussian. Furthermore, we adopt deformable attention with ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Comparisons with state-of-the-art 3D object detection methods on nuScenes dataset. C denote Camera, L denote Lidar. All methods construct BEV-based feature maps instead ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Latency and performance on nuScenes val. set.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Comparison with temporal methods.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5: Semantic scene completion results on nuScenes (Wei et al., 2023; Caesar et al., 2020) val set. † represents trained on nuScenes. For Camera-only ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively. | embodiment, simulator version and control stack | p. 7 (4.1 DATASET), p. 7 (4.1 DATASET) |
-| Task/environment | The nuScenes dataset (Caesar et al., 2020) provides annotation data for tasks such as semantic segmentation, object detection, and 3D occupancy (Occ) prediction. | reset, timeout, object/scene variation | p. 7 (4.1 DATASET), p. 8 (4.1 DATASET) |
+| Task/environment | The nuScenes dataset (Caesar et al., 2020) provides annotation data for tasks such as semantic segmentation, object detection, and 3D occupancy (Occ) prediction. | reset, timeout, object/scene variation | p. 7 (4.1 DATASET), p. 9 (4.1 DATASET) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (ABSTRACT), p. 2 (20560 M) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (20560 M), p. 3 (20560 M) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (20560 M), p. 4 (6 Cameras) |
 
 ## Metrics and Success Definition
 
@@ -93,9 +92,9 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 | In addition, compared with recent SOTA fusion works, such as UniTR (Wang et al., 2023a), EA-LSS (Hu et al., 2023b), and FusionFormer-S (Hu et ... | comparison identity and matched condition | p. 7 (4.1 DATASET) |
 | Method Latency → Memory → NDS ↑ mAP ↑ BEVFusion 156 ms 5140 M 71.4 68.5 GaussianFusion 132 ms 4271 M 74.0 71.7 Additionally, ... | comparison identity and matched condition | p. 8 (4.1 DATASET) |
 | As shown in Table 2, GaussianFusion achieves SOTA results compared to previous discrete BEV representation multimodal fusion methods(Liu et al., 2023b; Ge et al., ... | comparison identity and matched condition | p. 7 (4.1 DATASET) |
-| Published as a conference paper at ICLR 2026 Table 2: Comparisons with state-of-the-art 3D object detection methods on nuScenes dataset. | comparison identity and matched condition | p. 8 (4.1 DATASET) |
 | GaussianFusion outperforms the multi-modal SOTA method OccFusion (Ming et al., 2024), which is based on multi-scale voxel fusion, by +1.11 mIoU and significantly surpasses ... | comparison identity and matched condition | p. 9 (4.1 DATASET) |
 | 4, in BEV object detection, compared to previous BEV-based SOTA methods like UniTR (Wang et al., 2023a) and BEVFusion(Liu et al., 2023b), GaussianFusion achieve ... | comparison identity and matched condition | p. 10 (4.1 DATASET) |
+| Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements. | comparison identity and matched condition | p. 8 (4.1 DATASET) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -123,11 +122,11 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 | Primary metric/result | More importantly, benefiting from our proposed Gaussian initialization strategy and iterative update mechanism, GaussianFusion-C achieves a 1.55 mIoU improvement and nearly 4.5! computational efficiency ... | numeric claim only at cited anchor | p. 9 (4.1 DATASET) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.1 DATASET - extractive PDF cue:** It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively.
-- **p. 7 / 4.1 DATASET - extractive PDF cue:** Both BEV object detection and 3D semantic occupancy prediction are trained for 20 epochs, following the same settings as BEVFusion and GaussianFormer (H et al., ...
-- **p. 8 / 4.1 DATASET - extractive PDF cue:** Method Latency → Memory → NDS ↑ mAP ↑ BEVFusion 156 ms 5140 M 71.4 68.5 GaussianFusion 132 ms 4271 M 74.0 71.7 Additionally, we ...
-- **p. 8 / 4.1 DATASET - extractive PDF cue:** Benefiting from the unified architecture, it achieves an excellent performance of 71.7 mAP while maintaining lower inference latency (132 ms) and memory consumption (4271 MB) ...
-- **p. 9 / 4.1 DATASET - extractive PDF cue:** Gaussians mIoU ↑ Latency → GaussianFormer 140,000 19.10 475 ms GaussianFusion-C 43,296 20.65 105 ms Results.
+- **p. 7 / 4.1 DATASET - extractive body cue:** It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively.
+- **p. 7 / 4.1 DATASET - extractive body cue:** Both BEV object detection and 3D semantic occupancy prediction are trained for 20 epochs, following the same settings as BEVFusion and GaussianFormer (H et al., ...
+- **p. 8 / 4.1 DATASET - extractive body cue:** Method Latency → Memory → NDS ↑ mAP ↑ BEVFusion 156 ms 5140 M 71.4 68.5 GaussianFusion 132 ms 4271 M 74.0 71.7 Additionally, we ...
+- **p. 8 / 4.1 DATASET - extractive body cue:** Benefiting from the unified architecture, it achieves an excellent performance of 71.7 mAP while maintaining lower inference latency (132 ms) and memory consumption (4271 MB) ...
+- **p. 9 / 4.1 DATASET - extractive body cue:** Gaussians mIoU ↑ Latency → GaussianFormer 140,000 19.10 475 ms GaussianFusion-C 43,296 20.65 105 ms Results.
 
 ## Generalization and Failure Cases
 
@@ -161,10 +160,10 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 4.1 DATASET - extractive PDF cue:** 4.7 LIMITATIONS Several approaches-covering both detection (Wang et al., 2023b) and Occ (Zhang et al., 2024b)-employ carefully designed temporal fusion modules to enhance performance.
-- **p. 10 / 4.1 DATASET - extractive PDF cue:** A promising direction for future work is to explore motion-aware Gaussian updates, for instance by predicting velocity-guided offsets, enabling more coherent 4D scene modeling over ...
+- **p. 10 / 4.1 DATASET - extractive body cue:** 4.7 LIMITATIONS Several approaches-covering both detection (Wang et al., 2023b) and Occ (Zhang et al., 2024b)-employ carefully designed temporal fusion modules to enhance performance.
+- **p. 10 / 4.1 DATASET - extractive body cue:** A promising direction for future work is to explore motion-aware Gaussian updates, for instance by predicting velocity-guided offsets, enabling more coherent 4D scene modeling over ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4.1 DATASET), p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 9 (4.1 DATASET), p. 8 (4.1 DATASET), metrics p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 10 (4.1 DATASET), p. 7 (4.1 DATASET), baselines p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), results p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 9 (4.1 DATASET), p. 7 (4.1 DATASET), p. 7 (4.1 DATASET).
+- **Evidence anchors reviewed:** datasets p. 7 (4.1 DATASET), p. 7 (4.1 DATASET), p. 9 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), metrics p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 10 (4.1 DATASET), p. 7 (4.1 DATASET), baselines p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 7 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 8 (4.1 DATASET), results p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 9 (4.1 DATASET), p. 7 (4.1 DATASET), p. 7 (4.1 DATASET).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

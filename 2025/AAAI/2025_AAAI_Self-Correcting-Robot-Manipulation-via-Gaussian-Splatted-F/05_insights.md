@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 2024) utilizes post-action visual inputs and textual instructions processed by a multimodal large model to evaluate whether the current state aligns with the target objectives.를 The CLIP language encoder also is used to encode the language instruction and guide the output action.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 1: Illustration of the proposed self-correcting policy. was successful. Moreover, since existing policies are typi- cally learned from successful expert trajectories, they may fall into an untrained state after failures, potentia ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for subsequent keyframes.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The CLIP language encoder also is used to encode the language instruction and guide the output action. (p. 2, 2. By incorporating the proposed self-correction scheme).
+- **Paper-specific mechanism:** In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for ... (p. 3, 2. By incorporating the proposed self-correction scheme).
+- **Evidence boundary:** the reported outcome is Table 1: Success rates on Peract's dataset. Bold indicates the best results while Underline denotes the second-ranked per- formance. The ‘Average' metric represents the mean success rate across all 10 ... (p. 6, Figure/Table caption); the relevant task/metric cue is Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ranked performance. The ‘Average' metric represents the mean success rate across all ... (p. 6, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Due to potential occlusions, environmental disturbances, and control inaccuracies, failures are inevitable. (p. 1, Abstract).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 2023), we collected 20 episodes of demonstrations for each of 10 challenging language-conditioned manipulation tasks in the dataset collected PerAct (Shridhar, Manuelli, and Fox 2023b), including 166 variations in object properties and ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Analysis and discussion Ablation study To evaluate the efficacy of the proposed self-correction scheme, we conducted a comparative analysis between the baseline framework, designated as ‘w/o selfcorrection', and the proposed self-correc ....
-4. Report the body metric and its denominator/aggregation: Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ranked performance. The ‘Average' metric represents the mean success rate across all 6 tasks. ....
-5. Re-run the body-reported ablation/failure condition: Table 3: Ablation study. The comparison between the models without and with self-correction on PerAct's dataset..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The CLIP language encoder also is used to encode the language instruction and guide the output action. (p. 2, 2. By incorporating the proposed self-correction scheme); preserve the objective/update rule: 2023) optimized a generalizable NeRF with a reconstruction loss besides behavior cloning and showed effective improvement in both simulated and real scenarios. (p. 3, 2. By incorporating the proposed self-correction scheme).
+2. Use the paper-reported task/data/environment cue: 2023), we collected 20 episodes of demonstrations for each of 10 challenging language-conditioned manipulation tasks in the dataset collected PerAct (Shridhar, Manuelli, and Fox 2023b), including 166 variations in object ... (p. 5, 2. By incorporating the proposed self-correction scheme).
+3. Compare against the reported or matched baseline: Table 3: Ablation study. The comparison between the models without and with self-correction on PerAct's dataset. (p. 7, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ranked performance. The ‘Average' metric represents the mean success rate across all ... (p. 6, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Table 3: Ablation study. The comparison between the models without and with self-correction on PerAct's dataset. (p. 7, Figure/Table caption); if none is reported, design one around: Due to potential occlusions, environmental disturbances, and control inaccuracies, failures are inevitable. (p. 1, Abstract).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme), p. 5 (2. By incorporating the proposed self-correction scheme); the primary result is directionally consistent at p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Abstract), match the reported outcome at p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (2. By incorporating the proposed self-correction scheme), and measure the boundary at p. 1 (Abstract), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 novel, ascertain, necessity mechanism이 Analysis and discussion Ablation study To evaluate the efficacy of the proposed self-correction scheme, we conducted ... 대비 Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ...을 개선하고, Figure 1: Illustration of the proposed self-correcting policy. was successful. Moreover, since existing policies are typi- ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The CLIP language encoder also is used to encode the language instruction and guide the output action.), does the paper-specific mechanism (In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future ...) retain the reported evaluation outcome (Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ...) when tested against the paper's strongest explicit boundary (Due to potential occlusions, environmental disturbances, and control inaccuracies, failures are inevitable.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 2: Success rates on HiveFormer's dataset. Bold indicates the best performance , while underline denotes the second- ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for ... (p. 3, 2. By incorporating the proposed self-correction scheme).
+- **Paper-supported outcome:** Table 1: Success rates on Peract's dataset. Bold indicates the best results while Underline denotes the second-ranked per- formance. The ‘Average' metric represents the mean success rate across all 10 ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** Due to potential occlusions, environmental disturbances, and control inaccuracies, failures are inevitable. (p. 1, Abstract).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

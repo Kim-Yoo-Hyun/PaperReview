@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 As the robot moves, it collects full pose odometry information along with RGB and depth images in order to train a 3DGS map of the environment.를 the robot's environment online using a Gaussian Splatting (3DGS) representation [5].1 To enable open-vocabulary, taskrelevant robot exploration, VISTA distills semantic features from vision-language models, e.g., CLIP [1], into the 3DGS ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We evaluate each method using the standard metrics: Peak-Signal-Noise-Ratio (PSNR), Learned Perceptuation Image Patch Similarity (LPIPS), and Structural Similarity Index Measure (SSIM).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** As the robot moves, it collects full pose odometry information along with RGB and depth images in order to train a 3DGS map of the environment. (p. 3, III. PROBLEM FORMULATION).
+- **Paper-specific mechanism:** We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is The results suggest that our method is able to outperform both baselines on both maps because we reason about both semantic and geometric information gain. (p. 6, V. RESULTS); the relevant task/metric cue is Our method has the highest success rate on this map with an 83.33% success rate over the RT-Guide baseline success rate of 66.67%, and semantic baseline success rate of 50%. (p. 6, V. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In the second map, we expect methods that do not account for geometric information gain to struggle to find the query object. (p. 6, V. RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate each method across six scenes: three benchmark scenes in Nerfstudio (Plane, Kitchen, and Poster) and three additional datasets (Flight, Clutter, and Adirondacks), shown in Fig..
-3. Compare against the body-reported baseline or a matched simpler baseline: The results suggest that our method is able to outperform both baselines on both maps because we reason about both semantic and geometric information gain..
-4. Report the body metric and its denominator/aggregation: We evaluate all methods on success rate (SR), time to reach (TTR), and success weighted by inverse path length (SPL), as done in [43] and [44]..
-5. Re-run the body-reported ablation/failure condition: We evaluate each method using the standard metrics: Peak-Signal-Noise-Ratio (PSNR), Learned Perceptuation Image Patch Similarity (LPIPS), and Structural Similarity Index Measure (SSIM)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: As the robot moves, it collects full pose odometry information along with RGB and depth images in order to train a 3DGS map of the environment. (p. 3, III. PROBLEM FORMULATION); preserve the objective/update rule: As the map updates, we assume that the motion of the robot is restricted in the z, ϕ, and θ axes. (p. 3, III. PROBLEM FORMULATION).
+2. Use the paper-reported task/data/environment cue: Lastly, we demonstrate our full pipeline in hardware on a Boston Dynamics Spot quadruped robot to show the versatility of our method to different types of hardware platforms. (p. 5, V. RESULTS).
+3. Compare against the reported or matched baseline: In our baseline comparisons, we train a radiance field using a predetermined set of training views for a fixed number of iterations (1000). (p. 5, V. RESULTS).
+4. Report the body metric with its denominator and aggregation: Our method has the highest success rate on this map with an 83.33% success rate over the RT-Guide baseline success rate of 66.67%, and semantic baseline success rate of 50%. (p. 6, V. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: We find that VISTA achieves the highest PSNR and SSIM scores and the lowest LPIPS score across all scenes. (p. 5, V. RESULTS); if none is reported, design one around: In the second map, we expect methods that do not account for geometric information gain to struggle to find the query object. (p. 6, V. RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION); the primary result is directionally consistent at p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 6 (Figure/Table caption), and measure the boundary at p. 6 (V. RESULTS), p. 7 (VI. CONCLUSION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, VISTA, algorithm mechanism이 The results suggest that our method is able to outperform both baselines on both maps because ... 대비 We evaluate all methods on success rate (SR), time to reach (TTR), and success weighted by inverse path ...을 개선하고, We evaluate each method using the standard metrics: Peak-Signal-Noise-Ratio (PSNR), Learned Perceptuation Image Patch Similarity (LPIPS), ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (As the robot moves, it collects full pose odometry information along with RGB and depth images in order to train a 3DGS ...), does the paper-specific mechanism (We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness.) retain the reported evaluation outcome (Our method has the highest success rate on this map with an 83.33% success rate over the RT-Guide ...) when tested against the paper's strongest explicit boundary (In the second map, we expect methods that do not account for geometric information gain to struggle to ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our method has the highest success rate on this map with an 83.33% success rate over the RT-Guide ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** The results suggest that our method is able to outperform both baselines on both maps because we reason about both semantic and geometric information gain. (p. 6, V. RESULTS).
+- **Strongest explicit boundary:** In the second map, we expect methods that do not account for geometric information gain to struggle to find the query object. (p. 6, V. RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

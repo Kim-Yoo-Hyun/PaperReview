@@ -1,8 +1,10 @@
 # Binding Touch to Everything: Learning Unified Multimodal Tactile Representations
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html.
-> PDF retrieval source: https://arxiv.org/pdf/2401.18084. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html.
+> PDF retrieval source: https://arxiv.org/pdf/2401.18084. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2401.18084
 - Code/Project: https://cfeng16.github.io/UniTouch/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 An emerging line of work has addressed the challenges of learning from other low-resource modalities, like sound, point clouds, and depth, by aligning examples with pretrained vision-language embeddings [35, 64, 109].를 문제로 두고, First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method), p. 7 (4.3. Cross-modal retrieval with touch) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** An emerging line of work has addressed the challenges of learning from other low-resource modalities, like sound, point clouds, and depth, by aligning examples with pretrained vision-language embeddings [35, 64, ... (p. 2, 1. Introduction).
+- **Actual contribution:** In this paper, we show that this approach can be adapted to tactile sensing. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Table 7. Prompt analysis for touch. We evaluate our prompt designs for zero-shot material classification on Touch and Go and ObjectFolder 2.0 datasets. set. Tab. 5 shows quantitative results, where ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** Failures occur when the grasped object slips by more than 3cm. (p. 6, 4.1. UniTouch representation).

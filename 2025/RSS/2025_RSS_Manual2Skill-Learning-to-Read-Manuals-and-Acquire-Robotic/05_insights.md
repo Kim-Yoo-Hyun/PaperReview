@@ -13,11 +13,11 @@
 - **p. 1 / Abstract - extractive body cue:** In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions.
 - **p. 2 / I. INrRopuction - extractive body cue:** In this paper, we propose Manual2Skill, a novel robot learn
 - **p. 2 / I. INrRopuction - extractive body cue:** + We propose Manual2Skill, a novel framework that leverages VLM to learn robotic skills from manuals, enabling 4 generalizable assembly pipeline for IKEA furniture
-- **p. 1 / Front matter - extractive body cue:** We propose Manual2 ‘enabling robots to understand and execute complex manipulation tasks in mi the input of our pipeline: the pictures of the assembly manual ...
+- **p. 1 / body section boundary not confidently recovered - extractive body cue:** We propose Manual2 ‘enabling robots to understand and execute complex manipulation tasks in mi the input of our pipeline: the pictures of the assembly manual ...
 - **p. 3 / A. VLM Guided Hierarchical Assembly Graph Generation - extractive body cue:** Every VLM prompt consists of two components:
 - **p. 14 / B. Pose Estimation Implementation - extractive body cue:** where tr(:) denotes the trace of a matrix and RT is the transpose of R. ‘Translation MSE Loss: Following [29], we use the mean
 - **p. 15 / B. Pose Estimation Implementation - extractive body cue:** We then use this feature as input for the pose regressor MLP.
-- **Contribution anchor:** p. 1 (Abstract), p. 2 (I. INrRopuction), p. 2 (I. INrRopuction), p. 1 (Front matter), p. 3 (A. VLM Guided Hierarchical Assembly Graph Generation), p. 14 (B. Pose Estimation Implementation)
+- **Contribution anchor:** p. 1 (Abstract), p. 2 (I. INrRopuction), p. 2 (I. INrRopuction), p. 1 (body section boundary not confidently recovered), p. 3 (A. VLM Guided Hierarchical Assembly Graph Generation), p. 14 (B. Pose Estimation Implementation)
 
 ### Strongest assumption and failure boundary
 
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 This triplet format enhances interpretability and ensures consistency by structuring all outputs into the same data format, We use the Image Set and Text Instructions as the input prompt for the VLM ...를 During each step of the assembly proces the mesh-along with the RGB and depth images and an object mask-is input into the FoundationPose model, which then generates the precise 6D pose and ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping poses.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** This triplet format enhances interpretability and ensures consistency by structuring all outputs into the same data format, We use the Image Set and Text Instructions as the input prompt for ... (p. 4, 2. Per-step Assembly Pose Estimation).
+- **Paper-specific mechanism:** In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks. (p. 9, C. Overall Performance Evaluation); the relevant task/metric cue is Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework. (p. 8, C. Overall Performance Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping ... (p. 9, C. Overall Performance Evaluation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping poses..
-3. Compare against the body-reported baseline or a matched simpler baseline: We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks..
-4. Report the body metric and its denominator/aggregation: As shown in Table X (Ours (w/o Segmentation)), this method significantly impair VLM performance in generating assembly graphs, leading to more than double accuracy drops in success rate..
-5. Re-run the body-reported ablation/failure condition: To evaluate the effectiveness of each component in our pipeline, we conduct an ablation study on the chair category..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: This triplet format enhances interpretability and ensures consistency by structuring all outputs into the same data format, We use the Image Set and Text Instructions as the input prompt for ... (p. 4, 2. Per-step Assembly Pose Estimation); preserve the objective/update rule: 1) Loss Functions for Pose Estimation: (p. 14, B. Pose Estimation Implementation).
+2. Use the paper-reported task/data/environment cue: We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks. (p. 9, C. Overall Performance Evaluation).
+3. Compare against the reported or matched baseline: As the first to propose a comprehensive pipeline for furniture assembly, there is no direct baseline for comparison, So we design a baseline method that uses previous work [29] to ... (p. 8, C. Overall Performance Evaluation).
+4. Report the body metric with its denominator and aggregation: Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework. (p. 8, C. Overall Performance Evaluation).
+5. Re-run the reported ablation or stress/failure condition: ‘TABLE III: Success Rate on 4 Furniture Categories(*) (p. 8, C. Overall Performance Evaluation); if none is reported, design one around: Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping ... (p. 9, C. Overall Performance Evaluation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 14 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation); the primary result is directionally consistent at p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 2 (I. INrRopuction), match the reported outcome at p. 9 (C. Overall Performance Evaluation), p. 15 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), and measure the boundary at p. 9 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, Manual2Skill, novel mechanism이 We present the results in Table IV, showing that our method outperforms the baseline and achieves ... 대비 As shown in Table X (Ours (w/o Segmentation)), this method significantly impair VLM performance in generating assembly graphs, ...을 개선하고, Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (This triplet format enhances interpretability and ensures consistency by structuring all outputs into the same data format, We use the Image Set ...), does the paper-specific mechanism (In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions.) retain the reported evaluation outcome (Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework.) when tested against the paper's strongest explicit boundary (Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions. (p. 1, Abstract).
+- **Paper-supported outcome:** We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks. (p. 9, C. Overall Performance Evaluation).
+- **Strongest explicit boundary:** Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping ... (p. 9, C. Overall Performance Evaluation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

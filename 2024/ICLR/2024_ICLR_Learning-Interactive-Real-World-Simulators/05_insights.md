@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of the world (e.g., an image frame), can take in some ...를 In addition to testing the language instructions and simulated video by converting video trajectory into robot actions executed on the real robot, we also conduct simulator based evaluation to compare the reduction ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Flexibility in diffusion models promotes simulation of highly stochastic environments that cannot be controlled by actions, so that a policy can learn to only control the controllable part (Yang et al., 2022).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we propose to combine a wealth of data in a conditional video generation framework to instantiate a universal simulator (UniSim)1.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of the world (e.g., an image frame), can take ... (p. 2, 1 INTRODUCTION).
+- **Paper-specific mechanism:** The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction by combining diverse datasets rich in along different ... (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot data in UniSim achieves the best ... (p. 22, Figure/Table caption); the relevant task/metric cue is Purely finetuning on generated data drastically improves the captioning performance from no finetuning at all on ActivityNet (15.2 to 46.23), while achieving 84% performance of finetuning on true data. (p. 8, 1. Put cup 2. Pen 3. Apple). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: [Bottom] Real-robot execution of an RL policy trained in simulation and zero-shot onto the real Language Table task..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 2: Evaluation of long-horizon actions. Re- duction in distance to goal (RDG) defined in Equa- tion 3 across 5 evaluation runs of VLM trained using simulated long-horizon data (bottom row) compared ....
-4. Report the body metric and its denominator/aggregation: Figure 8: [Top] Simulation from low-level controls. UniSim supports low-level control actions as inputs to move endpoint horizontally, vertically, and diagonally. [Bottom] Real-robot execution of an RL policy trained in simulation and ....
-5. Re-run the body-reported ablation/failure condition: We compare PaLI-X finetuned on purely generated videos to pretrained PaLI-X without finetuning and PaLI-X finetuned on original ActivityNet Captions in Table 4..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of the world (e.g., an image frame), can take ... (p. 2, 1 INTRODUCTION); preserve the objective/update rule: The learned reward function can then be used to optimize policies π(at/ht) using existing decision making algorithms such as planning and RL, as we will illustrate in Section 4.1 and ... (p. 4, 1 INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: [Bottom] Real-robot execution of an RL policy trained in simulation and zero-shot onto the real Language Table task. (p. 8, 1. Put cup 2. Pen 3. Apple).
+3. Compare against the reported or matched baseline: CIDEr scores for PaLIX finetuned only on simulated data from UniSim compared to no finetuning and finetuning on true video data from ActivityNet Captions. (p. 8, 1. Put cup 2. Pen 3. Apple).
+4. Report the body metric with its denominator and aggregation: Purely finetuning on generated data drastically improves the captioning performance from no finetuning at all on ActivityNet (15.2 to 46.23), while achieving 84% performance of finetuning on true data. (p. 8, 1. Put cup 2. Pen 3. Apple).
+5. Re-run the reported ablation or stress/failure condition: Table 1: Ablations of history conditioning using FVD, FID, and Inception score, and CLIP score on Ego4D. Conditioning on multiple frames is better than on a single frame, and recent ... (p. 5, Figure/Table caption); if none is reported, design one around: The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT); the primary result is directionally consistent at p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), match the reported outcome at p. 22 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), and measure the boundary at p. 4 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 combine, wealth, data mechanism이 Table 2: Evaluation of long-horizon actions. Re- duction in distance to goal (RDG) defined in Equa- ... 대비 Figure 8: [Top] Simulation from low-level controls. UniSim supports low-level control actions as inputs to move endpoint horizontally, ...을 개선하고, Flexibility in diffusion models promotes simulation of highly stochastic environments that cannot be controlled by actions, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of ...), does the paper-specific mechanism (The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction ...) retain the reported evaluation outcome (Purely finetuning on generated data drastically improves the captioning performance from no finetuning at all on ActivityNet (15.2 ...) when tested against the paper's strongest explicit boundary (The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Purely finetuning on generated data drastically improves the captioning performance from no finetuning at all on ActivityNet (15.2 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction by combining diverse datasets rich in along different ... (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot data in UniSim achieves the best ... (p. 22, Figure/Table caption).
+- **Strongest explicit boundary:** The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

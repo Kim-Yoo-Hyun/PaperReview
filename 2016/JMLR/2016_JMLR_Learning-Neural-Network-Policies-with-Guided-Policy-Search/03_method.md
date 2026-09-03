@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://jmlr.org/papers/v17/15-522.html; PDF retrieval source: https://jmlr.org/papers/volume17/15-522/15-522.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://jmlr.org/papers/v17/15-522.html; PDF retrieval source: https://jmlr.org/papers/volume17/15-522/15-522.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | Since training complex neural networks requires a substantial number of samples, we found it beneficial to include sampled observations from previous iterations ... | p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2 Approach Summary) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | We also initially train the guiding trajectory distributions pi(ut/xt) independently of the convolutional network until the trajectories achieve a basic level of ... | p. 7 (3.2 Approach Summary), p. 6 (3.2 Approach Summary) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | Images in the lowerright show the last time step for each system at several iterations of our method, with red lines indicating ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | Images in the lowerright show the last time step for each system at several iterations of our method, with red lines indicating ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | The neural network policies used one hidden layer and soft rectifier nonlinearities of the form a = log(1+exp(z)). | Hz/fps, inference time and control rate |
 | Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | CNNs have a long history in computer vision and deep learning (Fukushima, 1980; LeCun et al., 1989; Schmidhuber, 2015), and have recently ... | window and reset |
 | Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | Our method used 5 rollouts with the Gaussian mixture model prior, and 20 without. | hardware, batch and throughput |
@@ -135,8 +135,17 @@ PDF body method statement (p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2 Approach Summary), p. 6 (3.2 Approach Summary), p. 15 (5.2 Visuomotor Policy Training), p. 9 (4.1 Algorithm Derivation), p. 5 (3.2 Approach Summary), objective p. 5 (3.1 Definitions and Problem Formulation), p. 12 (4.3 Supervised Policy Optimization), p. 12 (4.3 Supervised Policy Optimization), p. 8 (4.1 Algorithm Derivation), p. 8 (4.1 Algorithm Derivation), p. 11 (4.2 Trajectory Optimization under Unknown Dynamics), temporal p. 17 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 16 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 17 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 18 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 19 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 3 (2. Related Work).
+- **Evidence anchors reviewed:** method p. 12 (4.3 Supervised Policy Optimization), p. 7 (3.2 Approach Summary), p. 6 (3.2 Approach Summary), p. 15 (5.2 Visuomotor Policy Training), p. 9 (4.1 Algorithm Derivation), p. 5 (3.2 Approach Summary), objective p. 5 (3.1 Definitions and Problem Formulation), p. 12 (4.3 Supervised Policy Optimization), p. 12 (4.3 Supervised Policy Optimization), p. 8 (4.1 Algorithm Derivation), p. 8 (4.1 Algorithm Derivation), p. 11 (4.2 Trajectory Optimization under Unknown Dynamics), temporal p. 17 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 16 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 17 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 18 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 19 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 3 (2. Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Since training complex neural networks requires a substantial number of samples, we found it beneficial to include sampled observations from previous iterations into the policy optimization, evaluating the action µp ... (p. 12, 4.3 Supervised Policy Optimization).
+- **Objective/update evidence:** This constrained optimization is performed in the "inner loop" of the optimization described in the previous section, and the KL-divergence constraint DKL(p(τ)∥ˆp(τ)) ≤ϵ imposes a step size on the trajectory ... (p. 11, 4.2 Trajectory Optimization under Unknown Dynamics).
+- **Temporal/runtime evidence:** Images in the lowerright show the last time step for each system at several iterations of our method, with red lines indicating end effector trajectories. (p. 17, 6.1 Simulated Comparisons to Prior Policy Search Methods).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WnSl42M9Z4; PDF retrieval source: https://arxiv.org/pdf/2406.10454. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WnSl42M9Z4; PDF retrieval source: https://arxiv.org/pdf/2406.10454. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | We leverage this dataset by first retargeting human poses to humanoid poses and then training a task-agnostic low-level policy called Humanoid Shadowing ... | p. 2 (1. Introduction), p. 7 (6. Imitation of Human Skills) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | In this work, we modify the Action Chunking Transformer [104] by removing its encoder-decoder architecture to develop a decoder-only Humanoid Imitation Transformer ... | p. 7 (6. Imitation of Human Skills), p. 5 (4. Human Body and Hand Data) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | We use PPO [74] to train our Humanoid Shadowing Transformer in simulation by maximizing discounted expected return E hPT-1 t=0 γtrt i ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | At each time step, the input to the policy is humanoid proprioception and a humanoid target pose. | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | The body pose estimation and retargeting runs at 25 fps on an NVIDIA RTX4090 GPU. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 5 (4. Human Body and Hand Data), p. 3 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 1 (Abstract), objective p. 6 (5. Shadowing of Human Motion), p. 2 (1. Introduction), p. 5 (4. Human Body and Hand Data), p. 6 (5. Shadowing of Human Motion), p. 7 (5. Shadowing of Human Motion), p. 7 (6. Imitation of Human Skills), temporal p. 6 (5. Shadowing of Human Motion), p. 5 (5. Shadowing of Human Motion), p. 10 (8.2. Robustness Evaluation), p. 10 (8.2. Robustness Evaluation), p. 4 (2. Related Work), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 5 (4. Human Body and Hand Data), p. 3 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 1 (Abstract), objective p. 6 (5. Shadowing of Human Motion), p. 2 (1. Introduction), p. 5 (4. Human Body and Hand Data), p. 6 (5. Shadowing of Human Motion), p. 7 (5. Shadowing of Human Motion), p. 7 (6. Imitation of Human Skills), temporal p. 6 (5. Shadowing of Human Motion), p. 5 (5. Shadowing of Human Motion), p. 10 (8.2. Robustness Evaluation), p. 10 (8.2. Robustness Evaluation), p. 4 (2. Related Work), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Using state-of-the-art human body and hand pose estimation algorithms [58, 81], we can estimate real-time human motion and retarget it to humanoid motion, which is passed as input to the ... (p. 2, 1. Introduction).
+- **Objective/update evidence:** Typically, learning-based low-level policies are designed to be task-specific due to time-consuming reward engineering [19, 68], enabling the humanoid hardware to demonstrate only one skill at a time, such as ... (p. 2, 1. Introduction).
+- **Temporal/runtime evidence:** More recovery steps result in jittery behavior and compromise manipulation performance. (p. 10, 8.2. Robustness Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

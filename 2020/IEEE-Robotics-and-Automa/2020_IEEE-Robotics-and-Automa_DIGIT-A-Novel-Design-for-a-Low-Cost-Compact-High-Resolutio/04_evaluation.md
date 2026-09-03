@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/LRA.2020.2977257; PDF retrieval source: https://doi.org/10.1109/LRA.2020.2977257. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/LRA.2020.2977257; PDF retrieval source: https://doi.org/10.1109/LRA.2020.2977257. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTAL RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | This result is in agreement with previous results in [17], where learned models outperform simple handtuned controllers. | p. 7 (V. EXPERIMENTAL RESULTS) |
 | V. EXPERIMENTAL RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | We hypothesize that improving the low level controller and collecting more data for improving the learned model will help in decreasing the number of ... | p. 7 (V. EXPERIMENTAL RESULTS) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To validate our modeling choices, we measure the prediction error on a standard benchmark for video prediction, the BAIR robot pushing dataset [36], in ... | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS) |
 | Task/environment | In both datasets, we use 64 × 64 images and compare prediction performance with CDNA [35] used for tactile servoing in [17] in terms ... | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS) |
@@ -144,7 +144,16 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 - **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** 3) and the robustness of the gel (Section III-D), we now evaluate the DIGIT in the complex in-hand tactile manipulation task described in Section IV.
 - **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time.
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), metrics p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), baselines p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), p. 6 (V. EXPERIMENTAL RESULTS), p. 2 (Figure/Table caption), results p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), metrics p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), baselines p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), p. 6 (V. EXPERIMENTAL RESULTS), p. 2 (Figure/Table caption), results p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS).
+- **Metric evidence:** LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS).
+- **Baseline/ablation evidence:** In comparison, CDNA would take 69 seconds for a single step, making it impractical to use for control. (p. 6, V. EXPERIMENTAL RESULTS).
+- **Failure/negative evidence:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).

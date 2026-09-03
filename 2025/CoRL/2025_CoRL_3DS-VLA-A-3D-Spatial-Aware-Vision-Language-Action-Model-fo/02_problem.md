@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/li25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/li25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | All these limitations lead us to consider: "How can we build a robust VLA model that incorporates comprehensive 3D spatial awareness?" To ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | It takes visual inputs ot = {it, pt}, where it is the image and pt is the point cloud, while language l, ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | It takes visual inputs ot = {it, pt}, where it is the image and pt is the point cloud, while language l, ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | takes, visual, inputs, where, image, point, cloud, while, language, keypoints | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | Previous, VLA, models, observations, end-effector, poses, often, overlook | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: takes, visual, inputs, where, image, point, cloud, while, language, keypoints | p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method) |
 | Decision / output variable | action, pose, option or chunk a; body terms: contributions, follows, DS-VLA, equipping, pretrained, VLMs, comprehensive, awareness | p. 2 (1 Introduction), p. 4 (3 Method), p. 2 (1 Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduc
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method) |
 | Success / guarantee | instruction-conditioned task success | p. 6 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 4 (3 Method), p. 2 (1 Introduction), p. 3 (3 Method), p. 4 (3 Method)): Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction.
+PDF body contribution framing (p. 2 (1 Introduction), p. 4 (3 Method), p. 2 (1 Introduction), p. 3 (3 Method), p. 4 (3 Method)): Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction.
 
 - **p. 4 / 3 Method - extractive body cue:** Therefore, we propose a 2D-to-3D positional alignment mechanism that allows the original 2D PEs, which are interpretable to pretrained models, to encode semantically aligned 2D ...
 - **p. 2 / 1 Introduction - extractive body cue:** 1 (left), we propose 3DS-VLA, which equips pretrained 2D vision-language models (2D VLMs) with 3D spatial awareness for robust action generation.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 4 (3 Method), p. 2 (1 Introd
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction), objective p. 3 (3 Method), p. 3 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method).
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction), objective p. 3 (3 Method), p. 3 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, since robots operate in a complex 3D world, they face challenges in perceiving 3D geometry and reasoning about spatial context solely from 2D image observations [12, 13, 14]. (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or ... (p. 8, 4 Experiment).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

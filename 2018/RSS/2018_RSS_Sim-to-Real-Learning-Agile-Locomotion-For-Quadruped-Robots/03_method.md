@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p10.html; PDF retrieval source: https://arxiv.org/pdf/1804.10332. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p10.html; PDF retrieval source: https://arxiv.org/pdf/1804.10332. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | Our problem is partially observable because certain states such as the position of the Minitaur's base and the foot contact forces are ... | p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | We represent the feedback component π with a neural network and solve the above POMDP using Proximal Policy Optimization [5]. | p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS) |
@@ -125,8 +125,17 @@ PDF body method statement (p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), objective p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), temporal p. 5 (V. NARROWING THE REALITY GAP), p. 5 (V. NARROWING THE REALITY GAP), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (V. NARROWING THE REALITY GAP), p. 4 (V. NARROWING THE REALITY GAP), p. 6 (VI. EVALUATION AND DISCUSSION).
+- **Evidence anchors reviewed:** method p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), objective p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (IV. LEARNING LOCOMOTION CONTROLLERS), temporal p. 5 (V. NARROWING THE REALITY GAP), p. 5 (V. NARROWING THE REALITY GAP), p. 3 (IV. LEARNING LOCOMOTION CONTROLLERS), p. 4 (V. NARROWING THE REALITY GAP), p. 4 (V. NARROWING THE REALITY GAP), p. 6 (VI. EVALUATION AND DISCUSSION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our problem is partially observable because certain states such as the position of the Minitaur's base and the foot contact forces are not accessible due to lack of corresponding sensors. (p. 3, IV. LEARNING LOCOMOTION CONTROLLERS).
+- **Objective/update evidence:** Reinforcement learning optimizes a policy π : O 7→A that maximizes the expected return (accumulated rewards) R. π∗= arg maxπEs0∼D[Rπ(s0)] (1) B. (p. 3, IV. LEARNING LOCOMOTION CONTROLLERS).
+- **Temporal/runtime evidence:** To model latency, we keep a history of observations and their measurement time {(ti, Oi)i=0,1,...,n-1}, where ti = i∆t and ∆t is the time step. (p. 5, V. NARROWING THE REALITY GAP).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

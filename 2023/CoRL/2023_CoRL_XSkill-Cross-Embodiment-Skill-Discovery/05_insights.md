@@ -11,7 +11,7 @@
 ### What was actually new
 
 - **p. 2 / 1 Introduction - extractive body cue:** Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first ...
-- **p. 1 / 1 Introduction - extractive body cue:** We refer to the task as "Cross-Embodiment Skill Discovery" and introduce our method 7th Conference on Robot Learning (CoRL 2023), Atlanta, USA. arXiv:2307.09955v2 [cs.RO] 28 ...
+- **p. 1 / 1 Introduction - extractive body cue:** We refer to the task as "Cross-Embodiment Skill Discovery" and introduce our method 7th Conference on Robot Learning (CoRL 2023), Atlanta, USA.
 - **p. 2 / 1 Introduction - extractive body cue:** To encourage across-embodiment alignment, we introduce a set of learnable skill prototypes through feature clustering.
 - **p. 3 / 3 Approach - extractive body cue:** The XSkill framework consists of three phases: Discover §3.1, Transfer §3.2, and Compose §3.3 that uses three different data sources.
 - **p. 1 / 1 Introduction - extractive body cue:** 3) Compose, performing novel compositions of the learned skills to accomplish new tasks.
@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 In the transfer phase, the algorithm uses the robot teleoperation dataset Dr to learn the skill-conditioned visuomotor policy P(a/s, z), where z ∈Z and s includes both robot proprioception and visual observation ...를 From this video prompt, the algorithm first identifies the order of skills used in the prompt and then composes the skills using the learned policy P(a/s, z).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 2: XSkill Discover: At each training iteration, a batch of video are sampled from the same embodiment dataset. Each video vt i is augmented into two versions and encoded using temporal ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill that consists ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In the Compose phase, the algorithm takes as input a single human prompt video τ h prompt for a new task that requires an unseen composition of skills to complete. (p. 3, 3 Approach).
+- **Paper-specific mechanism:** Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is During the inference, the robot must complete an unseen composition of subtasks after viewing a prompt video from the sphere agent demonstration. • Realworld Kitchen: is a new benchmark we ... (p. 6, 4 Evaluation); the relevant task/metric cue is The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of completion. (p. 6, 4 Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, directly following the skill sequence ˜z for execution often results in a fragile system that is sensitive to unexpected failures or speed mismatch. (p. 5, B P).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: During the inference, the robot must complete an unseen composition of subtasks after viewing a prompt video from the sphere agent demonstration. • Realworld Kitchen: is a new benchmark we introduce to ....
-3. Compare against the body-reported baseline or a matched simpler baseline: 1 & 2) on unseen tasks with cross-embodiment prompts in simulated and real-world environments, which outperforms all baselines..
-4. Report the body metric and its denominator/aggregation: The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of completion..
-5. Re-run the body-reported ablation/failure condition: The ablation study on K, time contrastive loss, and more implementation details can be found in the supplementary material..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In the Compose phase, the algorithm takes as input a single human prompt video τ h prompt for a new task that requires an unseen composition of skills to complete. (p. 3, 3 Approach); preserve the objective/update rule: Both ftemporal and fprototype are trained jointly to minimize the CorssEntropy loss between the predicted pij and target qij skill prototypes distributions: Lprototype = (p. 4, 3 Approach).
+2. Use the paper-reported task/data/environment cue: We test XSkill on both simulated and real-world environments: • Franka Kitchen: is a simulated kitchen environment [71] that includes 7 sub-tasks and is accompanied by 580 robot demonstration trajectories. (p. 6, 4 Evaluation).
+3. Compare against the reported or matched baseline: 1 & 2) on unseen tasks with cross-embodiment prompts in simulated and real-world environments, which outperforms all baselines. (p. 7, 4 Evaluation).
+4. Report the body metric with its denominator and aggregation: The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of completion. (p. 6, 4 Evaluation).
+5. Re-run the reported ablation or stress/failure condition: The ablation study on K, time contrastive loss, and more implementation details can be found in the supplementary material. (p. 6, 4 Evaluation); if none is reported, design one around: However, directly following the skill sequence ˜z for execution often results in a fragile system that is sensitive to unexpected failures or speed mismatch. (p. 5, B P).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approach); the primary result is directionally consistent at p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 5 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 7 (4 Evaluation), and measure the boundary at p. 5 (B P), p. 2 (1 Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Together, cross-embodiment, dataset mechanism이 1 & 2) on unseen tasks with cross-embodiment prompts in simulated and real-world environments, which outperforms ... 대비 The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of ...을 개선하고, Figure 2: XSkill Discover: At each training iteration, a batch of video are sampled from the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In the Compose phase, the algorithm takes as input a single human prompt video τ h prompt for a new task that ...), does the paper-specific mechanism (Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • ...) retain the reported evaluation outcome (The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of ...) when tested against the paper's strongest explicit boundary (However, directly following the skill sequence ˜z for execution often results in a fragile system that is sensitive ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The performance of XSkill and all baseline methods is evaluated based on both subtask completion and order of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** During the inference, the robot must complete an unseen composition of subtasks after viewing a prompt video from the sphere agent demonstration. • Realworld Kitchen: is a new benchmark we ... (p. 6, 4 Evaluation).
+- **Strongest explicit boundary:** However, directly following the skill sequence ˜z for execution often results in a fragile system that is sensitive to unexpected failures or speed mismatch. (p. 5, B P).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

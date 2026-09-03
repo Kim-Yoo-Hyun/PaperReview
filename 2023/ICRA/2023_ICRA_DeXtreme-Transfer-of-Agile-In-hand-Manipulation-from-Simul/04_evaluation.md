@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality; PDF retrieval source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality; PDF retrieval source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | We demonstrate performance which significantly improves upon the best vision policies 8Although [8] focused on the Rubik's cube, they also trained for block reorientation ... | p. 14 (3 Results) |
 | 3 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | We note that due to differences in physics engines and hand morphology, our simulation average consecutive successes are not directly comparable, but we achieve ... | p. 14 (3 Results) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We believe such inter-day variations are important to benchmark in robotics [20] and have endeavoured to highlight this specifically in this challenging task. | embodiment, simulator version and control stack | p. 14 (3 Results), p. 13 (Experiment) |
 | Task/environment | We benchmark the pose on a test set consisting of 50K images and provide results in Table 6. | reset, timeout, object/scene variation | p. 13 (Experiment), p. 13 (Experiment) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 - **p. 17 / Method - extractive body cue:** We suspect that this is because, despite the extreme levels of randomisation we do, there is a "null space" of possible policies which perform similarly ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: The hardware setup used in this work, unlike [1], is not housed in a cage, and our system is robust enough to perform ...
 
-- **PDF anchors reviewed:** datasets p. 14 (3 Results), p. 13 (Experiment), p. 13 (Experiment), p. 14 (3 Results), p. 15 (3 Results), p. 15 (3 Results), metrics p. 15 (3 Results), p. 13 (Figure/Table caption), p. 15 (3 Results), p. 7 (Figure/Table caption), p. 14 (3 Results), p. 14 (3 Results), baselines p. 25 (Figure/Table caption), p. 13 (Experiment), p. 15 (3 Results), p. 16 (Figure/Table caption), p. 25 (Figure/Table caption), results p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 Results), p. 15 (3 Results), p. 15 (3 Results), p. 26 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 14 (3 Results), p. 13 (Experiment), p. 13 (Experiment), p. 14 (3 Results), p. 15 (3 Results), p. 15 (3 Results), metrics p. 15 (3 Results), p. 13 (Figure/Table caption), p. 15 (3 Results), p. 7 (Figure/Table caption), p. 14 (3 Results), p. 14 (3 Results), baselines p. 25 (Figure/Table caption), p. 13 (Experiment), p. 15 (3 Results), p. 16 (Figure/Table caption), p. 25 (Figure/Table caption), results p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 Results), p. 15 (3 Results), p. 15 (3 Results), p. 26 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 7: The results of running different models on the real robot. We run 10 trials per policy [1] to benchmark the average consecutive successes. Individual rows within each experiment ... (p. 14, Figure/Table caption).
+- **Metric evidence:** This also lets us separate the drop in performance due to LSTM instability from pose estimation errors in the real world. (p. 15, 3 Results).
+- **Baseline/ablation evidence:** Our ablation studies in Section 3.2 do test the strength of the pose estimator for manipulation in the real world. (p. 13, Experiment).
+- **Failure/negative evidence:** However, we did not observe this as a significant limitation for our experiments, and our policies nevertheless achieved rollouts with high consecutive successes in the real world. (p. 10, 2 Method).

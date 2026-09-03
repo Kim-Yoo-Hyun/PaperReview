@@ -1,8 +1,10 @@
 # Towards Tight Convex Relaxations for Contact-Rich Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p132.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p132.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p132.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p132.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p132.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss20/p132.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 The optimality gap δopt can then be overestimated as δopt = Cround -Copt Copt ≤Cround -Crelax Crelax = δrelax (2) Finally, we note that the original problem description in [1], [52] has ...를 문제로 두고, Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 2 (I. INTRODUCTION), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** It generally involves both a hybrid and underactuated dynamical system, making planning and control difficult. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to the baseline. (p. 9, VIII. EXPERIMENTS).
+- **Explicit failure boundary:** In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider geometry and a mere 12% for the T-shaped slider. (p. 10, VIII. EXPERIMENTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.06173; PDF retrieval source: https://arxiv.org/abs/2203.06173. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.06173; PDF retrieval source: https://arxiv.org/abs/2203.06173. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Method Body Digest
 
-- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** Specifically, we use the proximal policy optimization (PPO) algorithm (Schulman et al., 2017).
-- **p. 3 / 2.1. Masked Visual Pre-training - extractive PDF cue:** We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021).
-- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive PDF cue:** We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training code on the ...
-- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive PDF cue:** supervised representations (up to 80% absolute success rate), and even matches the oracle performance in some cases. - 3) We find that pre-training on images ...
-- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** Crucially, it leverages a fast simulator and provides distributed training for scaling learning-based motor control from pixel observations.
-- **p. 4 / 3.6. Distributed Training - extractive PDF cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
-- **p. 5 / 3.6. Distributed Training - extractive PDF cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
-- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
+- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Specifically, we use the proximal policy optimization (PPO) algorithm (Schulman et al., 2017).
+- **p. 3 / 2.1. Masked Visual Pre-training - extractive body cue:** We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021).
+- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive body cue:** We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training code on the ...
+- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive body cue:** supervised representations (up to 80% absolute success rate), and even matches the oracle performance in some cases. - 3) We find that pre-training on images ...
+- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Crucially, it leverages a fast simulator and provides distributed training for scaling learning-based motor control from pixel observations.
+- **p. 4 / 3.6. Distributed Training - extractive body cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
+- **p. 5 / 3.6. Distributed Training - extractive body cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
+- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive body cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** We also compare our method to visual encoders trained by supervised learning on ImageNet (Deng et al., 2009), the choice of encoder in most vision ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Motor control, however, remains a notable exception. *,†Equal contribution 1University of California, Berkeley.
-- **p. 4 / 3.1. Motivation - extractive PDF cue:** To this end, we introduce a new benchmark suite for Pixel Motor Control, which we call PixMC.
+- **p. 2 / 1. Introduction - extractive body cue:** We also compare our method to visual encoders trained by supervised learning on ImageNet (Deng et al., 2009), the choice of encoder in most vision ...
+- **p. 4 / 3.1. Motivation - extractive body cue:** To this end, we introduce a new benchmark suite for Pixel Motor Control, which we call PixMC.
+- **p. 1 / 1. Introduction - extractive body cue:** We show that we are able to solve a range of motor control tasks with variations in robots, scenes, and objects.
 
 ## Source Evidence Cues
 
-- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** Specifically, we use the proximal policy optimization (PPO) algorithm (Schulman et al., 2017).
-- **p. 3 / 2.1. Masked Visual Pre-training - extractive PDF cue:** We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021).
-- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive PDF cue:** We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training code on the ...
-- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive PDF cue:** supervised representations (up to 80% absolute success rate), and even matches the oracle performance in some cases. - 3) We find that pre-training on images ...
-- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** Crucially, it leverages a fast simulator and provides distributed training for scaling learning-based motor control from pixel observations.
-- **p. 4 / 3.6. Distributed Training - extractive PDF cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
-- **p. 5 / 3.6. Distributed Training - extractive PDF cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
+- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Specifically, we use the proximal policy optimization (PPO) algorithm (Schulman et al., 2017).
+- **p. 3 / 2.1. Masked Visual Pre-training - extractive body cue:** We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021).
+- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive body cue:** We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training code on the ...
+- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive body cue:** supervised representations (up to 80% absolute success rate), and even matches the oracle performance in some cases. - 3) We find that pre-training on images ...
+- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Crucially, it leverages a fast simulator and provides distributed training for scaling learning-based motor control from pixel observations.
+- **p. 4 / 3.6. Distributed Training - extractive body cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
+- **p. 5 / 3.6. Distributed Training - extractive body cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
 - **Detected method headings:** 2) Our self-supervised approach consistently outperforms (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | Specifically, we use the proximal policy optimization (PPO) algorithm (Schulman et al., 2017). | p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021). | p. 3 (2.1. Masked Visual Pre-training), p. 2 (2) Our self-supervised approach consistently outperforms) |
@@ -48,10 +48,10 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Objective / Update Rule
 
-- **p. 3 / 2.1. Masked Visual Pre-training - extractive PDF cue:** We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021).
-- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
-- **p. 4 / 3.6. Distributed Training - extractive PDF cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
-- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** Compared to existing benchmarks, ours features a unique combination of hand-designed tasks, dense rewards, and complex robots (e.g., multi-finger hands).
+- **p. 3 / 2.1. Masked Visual Pre-training - extractive body cue:** We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021).
+- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive body cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
+- **p. 4 / 3.6. Distributed Training - extractive body cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
+- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Compared to existing benchmarks, ours features a unique combination of hand-designed tasks, dense rewards, and complex robots (e.g., multi-finger hands).
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions).
-- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** As an upper bound, we consider oracle hand-engineered states for solving a task (e.g., 3D poses and direction-to-goal vectors).
-- **p. 4 / 3.4. Observations and Actions - extractive PDF cue:** The benchmark provides proprioceptive information for the robots, as well as hand-engineered states typically including 3D poses or relevant objects, goals, and their relations.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Our network encodes the input image using a high-capacity visual encoder (Dosovitskiy et al., 2020) and combines it with proprioceptive information to obtain an embedding.
-- **p. 3 / 2.1. Masked Visual Pre-training - extractive PDF cue:** Notice that the images are representative of everyday interactions making them well suited for our needs.
-- **p. 1 / 1. Introduction - extractive PDF cue:** The required movement types vary from simple reaching to object interactions.
+- **p. 2 / 1. Introduction - extractive body cue:** First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions).
+- **p. 3 / 2.2. Learning Motor Control from Pixels - extractive body cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
+- **p. 2 / 1. Introduction - extractive body cue:** As an upper bound, we consider oracle hand-engineered states for solving a task (e.g., 3D poses and direction-to-goal vectors).
+- **p. 4 / 3.4. Observations and Actions - extractive body cue:** The benchmark provides proprioceptive information for the robots, as well as hand-engineered states typically including 3D poses or relevant objects, goals, and their relations.
+- **p. 1 / 1. Introduction - extractive body cue:** Our network encodes the input image using a high-capacity visual encoder (Dosovitskiy et al., 2020) and combines it with proprioceptive information to obtain an embedding.
+- **p. 3 / 2.1. Masked Visual Pre-training - extractive body cue:** Notice that the images are representative of everyday interactions making them well suited for our needs.
+- **p. 1 / 1. Introduction - extractive body cue:** The required movement types vary from simple reaching to object interactions.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,12 +88,12 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Training vs Inference
 
-- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive PDF cue:** We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training code on the ...
-- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive PDF cue:** supervised representations (up to 80% absolute success rate), and even matches the oracle performance in some cases. - 3) We find that pre-training on images ...
-- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive PDF cue:** Crucially, it leverages a fast simulator and provides distributed training for scaling learning-based motor control from pixel observations.
-- **p. 4 / 3.6. Distributed Training - extractive PDF cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
-- **p. 5 / 3.6. Distributed Training - extractive PDF cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
-- **p. 7 / 5.3. Ablations - extractive PDF cue:** For each model, we train 15 instances of the model with 3 learning rates and 5 seeds.
+- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive body cue:** We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training code on the ...
+- **p. 2 / 2) Our self-supervised approach consistently outperforms - extractive body cue:** supervised representations (up to 80% absolute success rate), and even matches the oracle performance in some cases. - 3) We find that pre-training on images ...
+- **p. 4 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Crucially, it leverages a fast simulator and provides distributed training for scaling learning-based motor control from pixel observations.
+- **p. 4 / 3.6. Distributed Training - extractive body cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
+- **p. 5 / 3.6. Distributed Training - extractive body cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
+- **p. 7 / 5.3. Ablations - extractive body cue:** For each model, we train 15 instances of the model with 3 learning rates and 5 seeds.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -113,13 +113,13 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Failure and Ablation Link
 
-- **p. 5 / 4. Experimental Setup - extractive PDF cue:** We pre-train supervised and self-supervised variants of the ViT model.
-- **p. 5 / 4. Experimental Setup - extractive PDF cue:** We freeze the visual encoder throughout the entire training horizon.
-- **p. 7 / 5.3. Ablations - extractive PDF cue:** We use the same visual encoder, initialize it randomly, and freeze.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Masked visual pre-training for motor control. Left: We first pre-train visual representations using self-supervision through masked image modeling (He et al., 2021) from ...
-- **p. 4 / 3.1. Motivation - extractive PDF cue:** While there exist a number of excellent benchmarks for motor control, e.g., DMC (Tassa et al., 2018), RLBench (James et al., 2020), Robosuite (Zhu et ...
-- **p. 7 / 5.3. Ablations - extractive PDF cue:** The random model fails on 6 out of 8 PixMC tasks (0 success rate).
-- **p. 7 / 5.3. Ablations - extractive PDF cue:** We observed unstable training (the loss goes to NaN), and we decreased the learning rate until training successfully completed.
+- **p. 5 / 4. Experimental Setup - extractive body cue:** We pre-train supervised and self-supervised variants of the ViT model.
+- **p. 5 / 4. Experimental Setup - extractive body cue:** We freeze the visual encoder throughout the entire training horizon.
+- **p. 7 / 5.3. Ablations - extractive body cue:** We use the same visual encoder, initialize it randomly, and freeze.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Masked visual pre-training for motor control. Left: We first pre-train visual representations using self-supervision through masked image modeling (He et al., 2021) from ...
+- **p. 4 / 3.1. Motivation - extractive body cue:** While there exist a number of excellent benchmarks for motor control, e.g., DMC (Tassa et al., 2018), RLBench (James et al., 2020), Robosuite (Zhu et ...
+- **p. 7 / 5.3. Ablations - extractive body cue:** The random model fails on 6 out of 8 PixMC tasks (0 success rate).
+- **p. 7 / 5.3. Ablations - extractive body cue:** We observed unstable training (the loss goes to NaN), and we decreased the learning rate until training successfully completed.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -133,7 +133,7 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training), p. 2 (2) Our self-supervised approach consistently outperforms), p. 2 (2) Our self-supervised approach consistently outperforms), p. 4 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), objective p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), p. 4 (2.2. Learning Motor Control from Pixels), temporal p. 4 (3.4. Observations and Actions), p. 5 (4. Experimental Setup), p. 5 (4. Experimental Setup), p. 6 (5.2. Generalization), p. 6 (5.2. Generalization), p. 7 (5.3. Ablations).
+- **Evidence anchors reviewed:** method p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training), p. 2 (2) Our self-supervised approach consistently outperforms), p. 2 (2) Our self-supervised approach consistently outperforms), p. 4 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), objective p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), p. 4 (2.2. Learning Motor Control from Pixels), temporal p. 4 (3.4. Observations and Actions), p. 5 (4. Experimental Setup), p. 5 (4. Experimental Setup), p. 6 (5.2. Generalization), p. 6 (5.2. Generalization), p. 7 (5.3. Ablations).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

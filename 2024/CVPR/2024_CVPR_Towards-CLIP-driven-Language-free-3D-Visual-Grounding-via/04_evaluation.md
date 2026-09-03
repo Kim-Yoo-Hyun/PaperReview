@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set to ...
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8].
-- **p. 6 / 4.3. Compared Methods - extractive PDF cue:** Given its ability to perform 3DVG without text-based training, akin to our proposed paradigm, OpenScene serves as a benchmark for comparison.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset.
-- **p. 7 / 4.3. Compared Methods - extractive PDF cue:** Given its independence from textual training data, LLM-Grounder is utilized as a comparative benchmark to our method.
-- **p. 7 / 4.3. Compared Methods - extractive PDF cue:** [18], to locate objects within a 3D scene.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Accuracy (Acc) under 0.25 and 0.5 IoU thresholds in "Unique", "Multiple", and "Overall" is reported respectively.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison of language-free 3DVG on Nr3D and Sr3D [1] datasets. We report accuracy (Acc) for the IoU@m (m ∈{0.25, 0.5}) metrics in ...
+- **p. 5 / 4.1. Datasets - extractive body cue:** We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set to ...
+- **p. 5 / 4.1. Datasets - extractive body cue:** This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8].
+- **p. 6 / 4.3. Compared Methods - extractive body cue:** Given its ability to perform 3DVG without text-based training, akin to our proposed paradigm, OpenScene serves as a benchmark for comparison.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset.
+- **p. 7 / 4.3. Compared Methods - extractive body cue:** Given its independence from textual training data, LLM-Grounder is utilized as a comparative benchmark to our method.
+- **p. 7 / 4.3. Compared Methods - extractive body cue:** [18], to locate objects within a 3D scene.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Accuracy (Acc) under 0.25 and 0.5 IoU thresholds in "Unique", "Multiple", and "Overall" is reported respectively.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison of language-free 3DVG on Nr3D and Sr3D [1] datasets. We report accuracy (Acc) for the IoU@m (m ∈{0.25, 0.5}) metrics in ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 1. Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset. Results of relevant fully supervised (Fully) meth- ods are also provided. Accuracy ... | p. 6 (Figure/Table caption) |
 | 4.3. Compared Methods | SYSTEM / EVALUATION SCOPE UNRESOLVED | Pseudo-Q [16] is currently a method that has achieved good performance in 2D language-free grounding. | p. 6 (4.3. Compared Methods) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set to ...
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8].
-- **p. 6 / 4.3. Compared Methods - extractive PDF cue:** Given its ability to perform 3DVG without text-based training, akin to our proposed paradigm, OpenScene serves as a benchmark for comparison.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset.
-- **p. 7 / 4.3. Compared Methods - extractive PDF cue:** Given its independence from textual training data, LLM-Grounder is utilized as a comparative benchmark to our method.
-- **p. 7 / 4.3. Compared Methods - extractive PDF cue:** [18], to locate objects within a 3D scene.
+- **p. 5 / 4.1. Datasets - extractive body cue:** We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set to ...
+- **p. 5 / 4.1. Datasets - extractive body cue:** This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8].
+- **p. 6 / 4.3. Compared Methods - extractive body cue:** Given its ability to perform 3DVG without text-based training, akin to our proposed paradigm, OpenScene serves as a benchmark for comparison.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset.
+- **p. 7 / 4.3. Compared Methods - extractive body cue:** Given its independence from textual training data, LLM-Grounder is utilized as a comparative benchmark to our method.
+- **p. 7 / 4.3. Compared Methods - extractive body cue:** [18], to locate objects within a 3D scene.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) Comparison of fully-supervised and our language- free training paradigm. (b) Based on CLIP embedding space, our language-free training method uses multi-view images ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overview of our method. During training, we first encode 3D point cloud and multi-view images with point cloud encoder and CLIP visual ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset. Results of relevant fully supervised (Fully) meth- ods are also provided. Accuracy (Acc) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison of language-free 3DVG on Nr3D and Sr3D [1] datasets. We report accuracy (Acc) for the IoU@m (m ∈{0.25, 0.5}) metrics in ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results from Pseudo-Q [16], Zero-shot-RIS [40] and our method. The GT boxes are marked in green. Boxes predicted by Pseudo-Q, Zero-shot-RIS, and ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on main components of our method. We report the "overall" results in terms of Acc@0.25 and Acc@0.5. PFG Relation Acc@0.25 Acc@0.5 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Comparison on different 3D visual grounding baseline methods. We only report the "overall" results.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation study on different numbers (k) of neighboring objects in the NRM module. Here A refers to Acc. k Unique Multiple Overall A@0.25 ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Comparison of fully-supervised and our language- free training paradigm. (b) Based on CLIP embedding space, our language-free training method uses multi-view images ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overview of our method. During training, we first encode 3D point cloud and multi-view images with point cloud encoder and CLIP visual ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset. Results of relevant fully supervised (Fully) meth- ods are also provided. Accuracy (Acc) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison of language-free 3DVG on Nr3D and Sr3D [1] datasets. We report accuracy (Acc) for the IoU@m (m ∈{0.25, 0.5}) metrics in ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results from Pseudo-Q [16], Zero-shot-RIS [40] and our method. The GT boxes are marked in green. Boxes predicted by Pseudo-Q, Zero-shot-RIS, and ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on main components of our method. We report the "overall" results in terms of Acc@0.25 and Acc@0.5. PFG Relation Acc@0.25 Acc@0.5 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Comparison on different 3D visual grounding baseline methods. We only report the "overall" results.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation study on different numbers (k) of neighboring objects in the NRM module. Here A refers to Acc. k Unique Multiple Overall A@0.25 ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set ... | embodiment, simulator version and control stack | p. 5 (4.1. Datasets), p. 5 (4.1. Datasets) |
 | Task/environment | This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8]. | reset, timeout, object/scene variation | p. 5 (4.1. Datasets), p. 6 (4.3. Compared Methods) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 | Primary metric/result | Pseudo-Q [16] is currently a method that has achieved good performance in 2D language-free grounding. | numeric claim only at cited anchor | p. 6 (4.3. Compared Methods) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8].
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** On average, each scene features approximately 13.81 objects, each accompanied by 64.48 annotations.
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set to ...
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** Specifically, Nr3D is composed of 41,503 samples obtained through ReferItGame, while Sr3D encompasses 83,572 samples created using synthetic templates.
-- **p. 5 / 4.2. Implementation Details - extractive PDF cue:** During the training stage, we initially train our baseline model on the ScanNet [8] dataset for 200 epochs, followed by a further 50 epochs to ...
-- **p. 5 / 3.3. Relation Injection - extractive PDF cue:** The relational features of the 3D proposal corresponding to the target object indicated by a 2D mask should align with the 2D mask's relational features: ...
+- **p. 5 / 4.1. Datasets - extractive body cue:** This dataset comprises 51,583 manually crafted descriptions for 11,046 objects across 800 scenes from the ScanNet [8].
+- **p. 5 / 4.1. Datasets - extractive body cue:** On average, each scene features approximately 13.81 objects, each accompanied by 64.48 annotations.
+- **p. 5 / 4.1. Datasets - extractive body cue:** We follow the ScanRefer benchmark to divide our dataset into the train/val/test set with 36,655, 9,508, and 5,410 samples respectively, and utilize val set to ...
+- **p. 5 / 4.1. Datasets - extractive body cue:** Specifically, Nr3D is composed of 41,503 samples obtained through ReferItGame, while Sr3D encompasses 83,572 samples created using synthetic templates.
+- **p. 5 / 4.2. Implementation Details - extractive body cue:** During the training stage, we initially train our baseline model on the ScanNet [8] dataset for 200 epochs, followed by a further 50 epochs to ...
+- **p. 5 / 3.3. Relation Injection - extractive body cue:** The relational features of the 3D proposal corresponding to the target object indicated by a 2D mask should align with the 2D mask's relational features: ...
 
 ## Generalization and Failure Cases
 
@@ -155,11 +155,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Extensive experiments conducted on mainstream datasets demonstrate the robustness and efficiency of our approach.
-- **p. 7 / 4.3. Compared Methods - extractive PDF cue:** It does not have a red chair near it.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on main components of our method. We report the "overall" results in terms of Acc@0.25 and Acc@0.5. PFG Relation Acc@0.25 Acc@0.5 ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Extensive experiments conducted on mainstream datasets demonstrate the robustness and efficiency of our approach.
+- **p. 7 / 4.3. Compared Methods - extractive body cue:** It does not have a red chair near it.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on main components of our method. We report the "overall" results in terms of Acc@0.25 and Acc@0.5. PFG Relation Acc@0.25 Acc@0.5 ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 5 (4.1. Datasets), p. 6 (4.3. Compared Methods), p. 6 (4.2. Implementation Details), p. 7 (4.3. Compared Methods), p. 7 (4.3. Compared Methods), metrics p. 6 (4.2. Implementation Details), p. 6 (Figure/Table caption), p. 5 (4.2. Implementation Details), p. 5 (4.2. Implementation Details), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Implementation Details), p. 5 (4.2. Implementation Details), p. 7 (4.3. Compared Methods), p. 8 (Figure/Table caption), p. 6 (4.3. Compared Methods), p. 7 (4.4. Quantitative Comparison), results p. 6 (Figure/Table caption), p. 6 (4.3. Compared Methods), p. 7 (4.3. Compared Methods), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 5 (4.1. Datasets), p. 6 (4.3. Compared Methods), p. 6 (4.2. Implementation Details), p. 7 (4.3. Compared Methods), p. 7 (4.3. Compared Methods), metrics p. 6 (4.2. Implementation Details), p. 6 (Figure/Table caption), p. 5 (4.2. Implementation Details), p. 5 (4.2. Implementation Details), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Implementation Details), p. 5 (4.2. Implementation Details), p. 7 (4.3. Compared Methods), p. 8 (Figure/Table caption), p. 6 (4.3. Compared Methods), p. 7 (4.4. Quantitative Comparison), results p. 6 (Figure/Table caption), p. 6 (4.3. Compared Methods), p. 7 (4.3. Compared Methods), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

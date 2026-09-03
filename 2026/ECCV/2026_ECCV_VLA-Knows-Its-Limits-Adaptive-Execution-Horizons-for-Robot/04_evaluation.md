@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2602.21445; PDF retrieval source: https://arxiv.org/pdf/2602.21445. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2602.21445; PDF retrieval source: https://arxiv.org/pdf/2602.21445. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** Our experiments leverage two benchmark datasets: the LIBERO dataset [20], which offers a diverse suite of single-arm manipulation tasks, and the RoboTwin dataset [7, 23], ...
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** 3 presents the results on the RoboTwin benchmark across tasks with varying difficulty.
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** We further evaluate AutoHorizon in real-world robotic manipulation scenarios.
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** Performance comparison on real-world tasks.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** It serves as a strong yet costly baseline, as it requires p rollouts per task.
-- **p. 8 / 4.2. Simulation Results - extractive PDF cue:** 8, and find that AutoHorizon consistently achieves higher success rates.
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 7. Average success rates on the LIBERO benchmark with a prediction horizon of 10 using π0.5. Fig. 7 reports results under a shorter prediction ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of the average success rates on the LIBERO benchmark using π0.5. Varying the execution horizon leads to substantial success rate fluctuations, and ...
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** Our experiments leverage two benchmark datasets: the LIBERO dataset [20], which offers a diverse suite of single-arm manipulation tasks, and the RoboTwin dataset [7, 23], ...
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** 3 presents the results on the RoboTwin benchmark across tasks with varying difficulty.
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** We further evaluate AutoHorizon in real-world robotic manipulation scenarios.
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** Performance comparison on real-world tasks.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** It serves as a strong yet costly baseline, as it requires p rollouts per task.
+- **p. 8 / 4.2. Simulation Results - extractive body cue:** 8, and find that AutoHorizon consistently achieves higher success rates.
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 7. Average success rates on the LIBERO benchmark with a prediction horizon of 10 using π0.5. Fig. 7 reports results under a shorter prediction ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the average success rates on the LIBERO benchmark using π0.5. Varying the execution horizon leads to substantial success rate fluctuations, and ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Simulation Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 8, and find that AutoHorizon consistently achieves higher success rates. | p. 8 (4.2. Simulation Results) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 7. Average success rates on the LIBERO benchmark with a prediction horizon of 10 using π0.5. Fig. 7 reports results under a shorter ... | p. 13 (Figure/Table caption) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** Our experiments leverage two benchmark datasets: the LIBERO dataset [20], which offers a diverse suite of single-arm manipulation tasks, and the RoboTwin dataset [7, 23], ...
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** 3 presents the results on the RoboTwin benchmark across tasks with varying difficulty.
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** We further evaluate AutoHorizon in real-world robotic manipulation scenarios.
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** Performance comparison on real-world tasks.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** It serves as a strong yet costly baseline, as it requires p rollouts per task.
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** Our experiments leverage two benchmark datasets: the LIBERO dataset [20], which offers a diverse suite of single-arm manipulation tasks, and the RoboTwin dataset [7, 23], ...
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** 3 presents the results on the RoboTwin benchmark across tasks with varying difficulty.
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** We further evaluate AutoHorizon in real-world robotic manipulation scenarios.
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** Performance comparison on real-world tasks.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** It serves as a strong yet costly baseline, as it requires p rollouts per task.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of the average success rates on the LIBERO benchmark using π0.5. Varying the execution horizon leads to substantial success rate fluctuations, and ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Left: (a) In conventional action chunking, the execution horizon e is heuristically chosen by humans and remains fixed across chunks. (b) In contrast, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Visualization of average attention weights in π0.5 across different stages of task execution. Intra-chunk actions consistently attend to the same vision and language ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of normalized action self-attention weights. Across different prediction horizons, the predicted ac- tions exhibit strong attention to the initial and terminal action ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Performance comparison of π0.5 on LIBERO benchmark under different prediction horizons. Best results are in bold. Setting p = 10 p = 50 ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Performance comparison using GR00T N1.5 on the LIBERO benchmark. Best results are highlighted in bold. Task Suite LIB-Spatial LIB-Object LIB-Goal LIB-10 Static
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Estimated execution horizon distributions by Auto- Horizon. The legend displays the mean values of the distributions. as the execution horizon extends, while the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Performance comparison using π0.5 on the RoboTwin tasks. Best results are highlighted in bold. Task Suite Adjust Bottle Pick Bottles Place Container Stack ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the average success rates on the LIBERO benchmark using π0.5. Varying the execution horizon leads to substantial success rate fluctuations, and ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Left: (a) In conventional action chunking, the execution horizon e is heuristically chosen by humans and remains fixed across chunks. (b) In contrast, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Visualization of average attention weights in π0.5 across different stages of task execution. Intra-chunk actions consistently attend to the same vision and language ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of normalized action self-attention weights. Across different prediction horizons, the predicted ac- tions exhibit strong attention to the initial and terminal action ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Performance comparison of π0.5 on LIBERO benchmark under different prediction horizons. Best results are in bold. Setting p = 10 p = 50 ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Performance comparison using GR00T N1.5 on the LIBERO benchmark. Best results are highlighted in bold. Task Suite LIB-Spatial LIB-Object LIB-Goal LIB-10 Static
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Estimated execution horizon distributions by Auto- Horizon. The legend displays the mean values of the distributions. as the execution horizon extends, while the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Performance comparison using π0.5 on the RoboTwin tasks. Best results are highlighted in bold. Task Suite Adjust Bottle Pick Bottles Place Container Stack ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our experiments leverage two benchmark datasets: the LIBERO dataset [20], which offers a diverse suite of single-arm manipulation tasks, and the RoboTwin dataset [7, ... | embodiment, simulator version and control stack | p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results) |
 | Task/environment | 3 presents the results on the RoboTwin benchmark across tasks with varying difficulty. | reset, timeout, object/scene variation | p. 7 (4.2. Simulation Results), p. 8 (4.3. Real-World Results) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 | Primary metric/result | Figure 7. Average success rates on the LIBERO benchmark with a prediction horizon of 10 using π0.5. Fig. 7 reports results under a shorter ... | numeric claim only at cited anchor | p. 13 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** Task Suite LIB-Spatial LIB-Object LIB-Goal LIB-10 Static Oracle e = 1 92.7 ± 0.9 94.7 ± 3.4 82.7 ± 0.9 74.7 ± 3.4 e = ...
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** Each task is executed for 100 trials.
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** The performance of Static Oracle first rises and then declines LIB-Spatial LIB-Object LIB-Goal LIB-10 10 15 20 25 30 35 Horizon Value Spatial: 13.48 Object: ...
-- **p. 8 / 4.2. Simulation Results - extractive PDF cue:** Task Suite Adjust Bottle Pick Bottles Place Container Stack Bowls Place Cup Open Laptop Press Stapler Static Oracle e = 0.2p 79.0 ± 1.4 40.7 ...
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** Experiments are conducted on a Franka Research 3 robot (7-DoF arm) [10] following the DROID experimental setup [15].
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** A total of 150 trajectories are collected for model finetuning.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** Task Suite LIB-Spatial LIB-Object LIB-Goal LIB-10 Static Oracle e = 1 92.7 ± 0.9 94.7 ± 3.4 82.7 ± 0.9 74.7 ± 3.4 e = ...
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** Each task is executed for 100 trials.
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** The performance of Static Oracle first rises and then declines LIB-Spatial LIB-Object LIB-Goal LIB-10 10 15 20 25 30 35 Horizon Value Spatial: 13.48 Object: ...
+- **p. 8 / 4.2. Simulation Results - extractive body cue:** Task Suite Adjust Bottle Pick Bottles Place Container Stack Bowls Place Cup Open Laptop Press Stapler Static Oracle e = 0.2p 79.0 ± 1.4 40.7 ...
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** Experiments are conducted on a Franka Research 3 robot (7-DoF arm) [10] following the DROID experimental setup [15].
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** A total of 150 trajectories are collected for model finetuning.
 
 ## Generalization and Failure Cases
 
@@ -161,12 +161,12 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.2. Simulation Results - extractive PDF cue:** Most estimated horizons fall within moderately low values-favoring reactivity-while occasional larger horizons facilitate faster task 7
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** For all experiments, we report both the mean and standard deviation to ensure fair comparison and robust evaluation.
-- **p. 8 / 4.3. Real-World Results - extractive PDF cue:** Object positions and orientations are randomized across trials to ensure robustness and generalization.
-- **p. 8 / 4.2. Simulation Results - extractive PDF cue:** Compared with the strong Static Oracle+ baseline, it always achieves comparable or even superior results, demonstrating robustness to hyperparameter choices.
+- **p. 7 / 4.2. Simulation Results - extractive body cue:** Most estimated horizons fall within moderately low values-favoring reactivity-while occasional larger horizons facilitate faster task 7
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** For all experiments, we report both the mean and standard deviation to ensure fair comparison and robust evaluation.
+- **p. 8 / 4.3. Real-World Results - extractive body cue:** Object positions and orientations are randomized across trials to ensure robustness and generalization.
+- **p. 8 / 4.2. Simulation Results - extractive body cue:** Compared with the strong Static Oracle+ baseline, it always achieves comparable or even superior results, demonstrating robustness to hyperparameter choices.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.3. Real-World Results), p. 8 (4.3. Real-World Results), p. 6 (4.1. Experimental Settings), metrics p. 8 (4.2. Simulation Results), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (4.3. Real-World Results), p. 7 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), baselines p. 8 (4.2. Simulation Results), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 6 (4.1. Experimental Settings), p. 8 (4.2. Simulation Results), results p. 8 (4.2. Simulation Results), p. 13 (Figure/Table caption), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.2. Simulation Results), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.3. Real-World Results), p. 8 (4.3. Real-World Results), p. 6 (4.1. Experimental Settings), metrics p. 8 (4.2. Simulation Results), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (4.3. Real-World Results), p. 7 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), baselines p. 8 (4.2. Simulation Results), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 6 (4.1. Experimental Settings), p. 8 (4.2. Simulation Results), results p. 8 (4.2. Simulation Results), p. 13 (Figure/Table caption), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.2. Simulation Results), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

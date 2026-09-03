@@ -178,8 +178,16 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
         "resource_ids",
         "admission_reason",
         "tier_reason",
+        "outgoing_relations",
+        "incoming_relation_count",
         "overview_path",
     ]
+    incoming_relations: Counter[str] = Counter()
+    for paper in papers:
+        for relation in paper.get("relations", []):
+            target_id = relation.get("paper_id")
+            if target_id:
+                incoming_relations[target_id] += 1
     rows = []
     for paper in sorted(papers, key=lambda item: (item["year"], item["title"].casefold())):
         paper_id = paper["paper_id"]
@@ -215,6 +223,19 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
                 "resource_ids": ";".join(sorted(ids_by_paper.get(paper_id, []))),
                 "admission_reason": curation.get("admission_reason") or "",
                 "tier_reason": curation.get("tier_reason") or "",
+                "outgoing_relations": json.dumps(
+                    [
+                        {
+                            "type": relation.get("type"),
+                            "paper_id": relation.get("paper_id"),
+                            "confidence": relation.get("confidence"),
+                        }
+                        for relation in paper.get("relations", [])
+                    ],
+                    ensure_ascii=False,
+                    separators=(",", ":"),
+                ),
+                "incoming_relation_count": str(incoming_relations.get(paper_id, 0)),
                 "overview_path": path_key(paper["folder"]),
             }
         )
@@ -237,7 +258,23 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     publication = Counter(row["publication_kind"] for row in rows)
     code = Counter(row["code_status"] for row in rows)
     data = Counter(row["data_status"] for row in rows)
-    relations = sum(len(paper.get("relations", [])) for paper in papers)
+    relation_rows = [
+        (paper["paper_id"], relation)
+        for paper in papers
+        for relation in paper.get("relations", [])
+    ]
+    relations = len(relation_rows)
+    relation_types = Counter(relation.get("type", "") for _, relation in relation_rows)
+    relation_confidence = Counter(relation.get("confidence", "") for _, relation in relation_rows)
+    relation_scopes = Counter(relation.get("evidence_scope", "") for _, relation in relation_rows)
+    outgoing_papers = {paper_id for paper_id, _ in relation_rows}
+    target_papers = {relation.get("paper_id") for _, relation in relation_rows if relation.get("paper_id")}
+    paper_by_id = {paper["paper_id"]: paper for paper in papers}
+
+    def relation_paper_label(paper_id: str) -> str:
+        paper = paper_by_id.get(paper_id) or {}
+        title = str(paper.get("title") or "unknown paper").replace("|", "\\|")
+        return f"`{paper_id}` {title}"
     missing_note_evidence = Counter()
     for paper in papers:
         for name, value in (paper.get("provenance", {}).get("note_evidence") or {}).items():
@@ -254,7 +291,9 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
         "",
         f"- Papers: **{len(papers)}**",
         f"- Resources in the combined view: **{len(resources.get('entries', []))}**",
-        f"- Curated relations: **{relations}**",
+        f"- Curated relation edges: **{relations}**",
+        f"- Papers with outgoing relations: **{len(outgoing_papers)}**",
+        f"- Papers participating in a relation: **{len(outgoing_papers | target_papers)}**",
         f"- Papers without DOI/arXiv/OpenReview identifier: **{sum(value == 'source_only' for value in identifiers.elements())}**",
         "",
     ]
@@ -268,9 +307,34 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     lines += table("Primary source scope", sources)
     lines += table("Code status", code)
     lines += table("Data status", data)
+    lines += table("Relation type", relation_types)
+    lines += table("Relation confidence", relation_confidence)
+    lines += table("Relation evidence scope", relation_scopes)
+    lines += [
+        "## Curated relation edges",
+        "",
+        "The manifest is the source of truth; this table is a compact human-readable edge view.",
+        "",
+        "| From paper | Relation | To paper | Confidence | Evidence scope |",
+        "|---|---|---|---|---|",
+    ]
+    for source_id, relation in sorted(
+        relation_rows,
+        key=lambda item: (
+            relation_paper_label(item[0]).casefold(),
+            str(item[1].get("type") or ""),
+            relation_paper_label(str(item[1].get("paper_id") or "")).casefold(),
+        ),
+    ):
+        lines.append(
+            f"| {relation_paper_label(source_id)} | `{relation.get('type', '')}` | "
+            f"{relation_paper_label(str(relation.get('paper_id') or ''))} | "
+            f"`{relation.get('confidence', '')}` | `{relation.get('evidence_scope', '')}` |"
+        )
+    lines += [""]
     lines += ["## Note evidence gaps", "", "| Note | Missing evidence header |", "|---|---:|"]
     lines.extend(f"| {name} | {count} |" for name, count in sorted(missing_note_evidence.items()))
-    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; the combined resource view does not promote them to verified evaluation evidence.", ""]
+    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; the combined resource view does not promote them to verified evaluation evidence.", "- Relation edges are directed curation links, not an exhaustive citation graph: a method points to a predecessor/data dependency, while a baseline points to the evaluated paper. Managed edges retain a basis, source, confidence, evidence scope, and review date.", ""]
     return "\n".join(lines)
 
 

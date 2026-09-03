@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2107.04034; PDF retrieval source: https://arxiv.org/pdf/2107.04034. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2107.04034; PDF retrieval source: https://arxiv.org/pdf/2107.04034. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | In the first phase, the base policy π takes as input the current state xt, previous action at-1 and the privileged environmental ... | p. 2 (10 Hz), p. 2 (10 Hz) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | The environment configuration vector et is first encoded into a latent feature space zt using an encoder network µ. | p. 2 (10 Hz), p. 1 (Abstract) |
@@ -95,7 +95,6 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 - **p. 5 / B. Adaptation Module - extractive body cue:** Alternately, we could have trained a base policy which directly takes the state and action history as input without decoupling them into the two modules.
 - **p. 6 / IV. EXPERIMENTAL SETUP - extractive body cue:** Learning Base Policy and Environmental Factor Encoder Network: We jointly train the base policy and the environment encoder network using PPO [48] for 15, 000 ...
 - **p. 3 / 10 Hz - extractive body cue:** That is at runtime, but at training time, life is easier.
-- **p. 2 / 10 Hz - extractive body cue:** The policy π and the environmental factor encoder µ are jointly trained via RL in simulation.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -135,8 +134,17 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 4 (III. RAPID MOTOR ADAPTATION), p. 5 (B. Adaptation Module), objective p. 4 (III. RAPID MOTOR ADAPTATION), p. 4 (III. RAPID MOTOR ADAPTATION), p. 1 (Abstract), p. 2 (10 Hz), p. 3 (10 Hz), p. 5 (B. Adaptation Module), temporal p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (B. Adaptation Module), p. 6 (IV. EXPERIMENTAL SETUP), p. 4 (III. RAPID MOTOR ADAPTATION), p. 1 (Abstract), p. 6 (IV. EXPERIMENTAL SETUP).
+- **Evidence anchors reviewed:** method p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 4 (III. RAPID MOTOR ADAPTATION), p. 5 (B. Adaptation Module), objective p. 4 (III. RAPID MOTOR ADAPTATION), p. 4 (III. RAPID MOTOR ADAPTATION), p. 1 (Abstract), p. 2 (10 Hz), p. 3 (10 Hz), p. 5 (B. Adaptation Module), temporal p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (B. Adaptation Module), p. 6 (IV. EXPERIMENTAL SETUP), p. 4 (III. RAPID MOTOR ADAPTATION), p. 1 (Abstract), p. 6 (IV. EXPERIMENTAL SETUP).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In the first phase, the base policy π takes as input the current state xt, previous action at-1 and the privileged environmental factors et which is encoded into the latent ... (p. 2, 10 Hz).
+- **Objective/update evidence:** First, the reward function is motivated from bioenergetic constraints of minimizing work and ground impact [42]. (p. 4, III. RAPID MOTOR ADAPTATION).
+- **Temporal/runtime evidence:** The control frequency of the policy is 100 Hz, and the simulation time step is 0.025s. (p. 5, IV. EXPERIMENTAL SETUP).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

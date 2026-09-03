@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 6 (4.2. Exper
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Datasets We conduct experiments using two publicly available object datasets: Google Scanned Object (GSO) [9] and OmniObject3D (OO3D) [73].
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For pose estimation experiments, we render five views per object, accumulating 1, 400 views in total with their corresponding camera poses for each dataset.
-- **p. 6 / 4.2. Experimental Result - extractive PDF cue:** In addition, iFusion clearly outperforms other noneoptimization-based methods Point-E [42] and Shape-E [21], which are trained on a large-scale private dataset.
-- **p. 6 / 4.2. Experimental Result - extractive PDF cue:** Dataset Method PSNR↑ SSIM↑ LPIPS↓ GSO [9] FORGE [19] 10.45 0.673 0.449 LEAP [20] 12.51 0.751 0.312 Zero123 [31] 15.40 0.788 0.184 iFusion 18.73 0.836 ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** 3D Reconstruction We validate the proposed components contributing to reconstruction in Table 7, using DreamGaussian as the reconstruction module on the OO3D dataset.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Sparse-view Fine-tuning Table 6 assesses the efficacy of the proposed fine-tuning stage for object-specific novel view synthesis.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Finally, fine-tuning via LoRA demonstrates an additional improvement in customizing the model for faithful reconstruction of the given object.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For 3D reconstruction, we report Chamfer Distances and volumetric IoU between ground truth shapes and reconstructed ones.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Datasets We conduct experiments using two publicly available object datasets: Google Scanned Object (GSO) [9] and OmniObject3D (OO3D) [73].
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For pose estimation experiments, we render five views per object, accumulating 1, 400 views in total with their corresponding camera poses for each dataset.
+- **p. 6 / 4.2. Experimental Result - extractive body cue:** In addition, iFusion clearly outperforms other noneoptimization-based methods Point-E [42] and Shape-E [21], which are trained on a large-scale private dataset.
+- **p. 6 / 4.2. Experimental Result - extractive body cue:** Dataset Method PSNR↑ SSIM↑ LPIPS↓ GSO [9] FORGE [19] 10.45 0.673 0.449 LEAP [20] 12.51 0.751 0.312 Zero123 [31] 15.40 0.788 0.184 iFusion 18.73 0.836 ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** 3D Reconstruction We validate the proposed components contributing to reconstruction in Table 7, using DreamGaussian as the reconstruction module on the OO3D dataset.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Sparse-view Fine-tuning Table 6 assesses the efficacy of the proposed fine-tuning stage for object-specific novel view synthesis.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Finally, fine-tuning via LoRA demonstrates an additional improvement in customizing the model for faithful reconstruction of the given object.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For 3D reconstruction, we report Chamfer Distances and volumetric IoU between ground truth shapes and reconstructed ones.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 6 (4.2. Exper
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experimental Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | Evaluation results on pose estimation. iFusion achieves significant improvements for all metrics under 2 input views. | p. 5 (4.1. Experimental Setup) |
 | 4.2. Experimental Result | EMPIRICAL / SOURCE-REPORTED EVALUATION | Moreover, iFusion significantly outperforms all methods on all metrics. | p. 6 (4.2. Experimental Result) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 6 (4.2. Exper
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Datasets We conduct experiments using two publicly available object datasets: Google Scanned Object (GSO) [9] and OmniObject3D (OO3D) [73].
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For pose estimation experiments, we render five views per object, accumulating 1, 400 views in total with their corresponding camera poses for each dataset.
-- **p. 6 / 4.2. Experimental Result - extractive PDF cue:** In addition, iFusion clearly outperforms other noneoptimization-based methods Point-E [42] and Shape-E [21], which are trained on a large-scale private dataset.
-- **p. 6 / 4.2. Experimental Result - extractive PDF cue:** Dataset Method PSNR↑ SSIM↑ LPIPS↓ GSO [9] FORGE [19] 10.45 0.673 0.449 LEAP [20] 12.51 0.751 0.312 Zero123 [31] 15.40 0.788 0.184 iFusion 18.73 0.836 ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** 3D Reconstruction We validate the proposed components contributing to reconstruction in Table 7, using DreamGaussian as the reconstruction module on the OO3D dataset.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Sparse-view Fine-tuning Table 6 assesses the efficacy of the proposed fine-tuning stage for object-specific novel view synthesis.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Finally, fine-tuning via LoRA demonstrates an additional improvement in customizing the model for faithful reconstruction of the given object.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Datasets We conduct experiments using two publicly available object datasets: Google Scanned Object (GSO) [9] and OmniObject3D (OO3D) [73].
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For pose estimation experiments, we render five views per object, accumulating 1, 400 views in total with their corresponding camera poses for each dataset.
+- **p. 6 / 4.2. Experimental Result - extractive body cue:** In addition, iFusion clearly outperforms other noneoptimization-based methods Point-E [42] and Shape-E [21], which are trained on a large-scale private dataset.
+- **p. 6 / 4.2. Experimental Result - extractive body cue:** Dataset Method PSNR↑ SSIM↑ LPIPS↓ GSO [9] FORGE [19] 10.45 0.673 0.449 LEAP [20] 12.51 0.751 0.312 Zero123 [31] 15.40 0.788 0.184 iFusion 18.73 0.836 ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** 3D Reconstruction We validate the proposed components contributing to reconstruction in Table 7, using DreamGaussian as the reconstruction module on the OO3D dataset.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Sparse-view Fine-tuning Table 6 assesses the efficacy of the proposed fine-tuning stage for object-specific novel view synthesis.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Finally, fine-tuning via LoRA demonstrates an additional improvement in customizing the model for faithful reconstruction of the given object.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Demonstration on real-world 3D reconstruction. With only two casually taken photos without camera poses, iFusion can reconstruct plausible 3D assets. The top row ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Zero123 vs. iFusion. Unlike Zero123 [31] (left), which synthesizes an object's novel view given an image and a transfor- mation T, iFusion (right) ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. iFusion framework. (a) Given as few as two pose-free images (xr, xq), we estimate the pose ˆTr→q from T0 to optimally recon- struct ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on pose estimation. We visualize the predicted poses (thin) alongside the ground truth (bold), using the same color, while the reference ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluation results on pose estimation. iFusion achieves significant improvements for all metrics under 2 input views.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative examples on novel view synthesis. iFusion takes two unposed images and Zero123 [31] only conditions on the first view. We observe that ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Novel view synthesis results. iFusion performed signifi- cantly better than the original Zero123 and 3D-based methods.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparison of surface reconstruction. It is clear that iFusion significantly enhances existing reconstruction methods including Zero123-SDS [31], DreamGaussian [64], and Magic123 [48], ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Demonstration on real-world 3D reconstruction. With only two casually taken photos without camera poses, iFusion can reconstruct plausible 3D assets. The top row ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Zero123 vs. iFusion. Unlike Zero123 [31] (left), which synthesizes an object's novel view given an image and a transfor- mation T, iFusion (right) ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. iFusion framework. (a) Given as few as two pose-free images (xr, xq), we estimate the pose ˆTr→q from T0 to optimally recon- struct ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on pose estimation. We visualize the predicted poses (thin) alongside the ground truth (bold), using the same color, while the reference ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Evaluation results on pose estimation. iFusion achieves significant improvements for all metrics under 2 input views.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative examples on novel view synthesis. iFusion takes two unposed images and Zero123 [31] only conditions on the first view. We observe that ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Novel view synthesis results. iFusion performed signifi- cantly better than the original Zero123 and 3D-based methods.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparison of surface reconstruction. It is clear that iFusion significantly enhances existing reconstruction methods including Zero123-SDS [31], DreamGaussian [64], and Magic123 [48], ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Datasets We conduct experiments using two publicly available object datasets: Google Scanned Object (GSO) [9] and OmniObject3D (OO3D) [73]. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup) |
 | Task/environment | For pose estimation experiments, we render five views per object, accumulating 1, 400 views in total with their corresponding camera poses for each dataset. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Experimental Result) |
@@ -122,8 +122,8 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 6 (4.2. Exper
 | Primary metric/result | Moreover, iFusion significantly outperforms all methods on all metrics. | numeric claim only at cited anchor | p. 6 (4.2. Experimental Result) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** The reported computation time was measured on a single Nvidia 3090 GPU.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Based on Table 4, we employed n = 4 initial poses for a better trade-off between speed and accuracy for all experiments unless otherwise specified.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** The reported computation time was measured on a single Nvidia 3090 GPU.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Based on Table 4, we employed n = 4 initial poses for a better trade-off between speed and accuracy for all experiments unless otherwise specified.
 
 ## Generalization and Failure Cases
 
@@ -154,12 +154,12 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 6 (4.2. Exper
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.2. Experimental Result - extractive PDF cue:** Notably, COLMAP [55] cannot serve as a baseline in our evaluation due to the structural limitations of Structure-from-Motion, which requires a large number of views ...
-- **p. 5 / 4.2. Experimental Result - extractive PDF cue:** We found that by leveraging the diffusion model [31], iFusion excels at handling diverse objects thanks to its strong prior knowledge learned during pre-training, whereas ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Row (c) highlights the substantial improvement from the stochastic re-sampling of multiview conditions at each timestep, providing more robust outcomes than row (b).
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 8. More qualitative results on pose estimation. The predicted poses (thin) and their corresponding ground truth (bold), are plotted in the same color, while ...
+- **p. 5 / 4.2. Experimental Result - extractive body cue:** Notably, COLMAP [55] cannot serve as a baseline in our evaluation due to the structural limitations of Structure-from-Motion, which requires a large number of views ...
+- **p. 5 / 4.2. Experimental Result - extractive body cue:** We found that by leveraging the diffusion model [31], iFusion excels at handling diverse objects thanks to its strong prior knowledge learned during pre-training, whereas ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Row (c) highlights the substantial improvement from the stochastic re-sampling of multiview conditions at each timestep, providing more robust outcomes than row (b).
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 8. More qualitative results on pose estimation. The predicted poses (thin) and their corresponding ground truth (bold), are plotted in the same color, while ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), metrics p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (Figure/Table caption), p. 8 (4.3. Ablation Study), baselines p. 8 (4.3. Ablation Study), p. 5 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 7 (4.2. Experimental Result), p. 7 (4.2. Experimental Result), results p. 5 (4.1. Experimental Setup), p. 6 (4.2. Experimental Result), p. 8 (4.3. Ablation Study), p. 5 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 7 (4.3. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), metrics p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (Figure/Table caption), p. 8 (4.3. Ablation Study), baselines p. 8 (4.3. Ablation Study), p. 5 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 7 (4.2. Experimental Result), p. 7 (4.2. Experimental Result), results p. 5 (4.1. Experimental Setup), p. 6 (4.2. Experimental Result), p. 8 (4.3. Ablation Study), p. 5 (4.2. Experimental Result), p. 6 (4.2. Experimental Result), p. 7 (4.3. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

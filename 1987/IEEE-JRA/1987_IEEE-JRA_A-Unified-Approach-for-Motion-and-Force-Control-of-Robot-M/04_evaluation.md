@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://cs.stanford.edu/group/manips/publications.html; PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://cs.stanford.edu/group/manips/publications.html; PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | I. Inrropucrion | SYSTEM / EVALUATION SCOPE UNRESOLVED | The construction of the end-effector dynamic model is achieved by expressing the relationships between its ‘operational positions, velocities, accelerations, and the virtual ‘operational forces ... | p. 3 (I. Inrropucrion) |
 | IV. Exp-Errecror Morton Controt | SYSTEM / EVALUATION SCOPE UNRESOLVED | By isolating these coefficients, end-effector dynamic decoupling and control can be achieved in a two-level control system architecture [15]. | p. 6 (IV. Exp-Errecror Morton Controt) |
@@ -56,7 +56,7 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 46 IEEE JOURNAL OF ROBOTICS AND AUTOMATION, VOL. | embodiment, simulator version and control stack | p. 4 (X 1 column matrix x of independent configuration parame), p. 5 (X 1 column matrix x of independent configuration parame) |
 | Task/environment | KHATIB: MOTION AND FORCE CONTROL OF ROBOT MANIPULATORS | reset, timeout, object/scene variation | p. 5 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion) |
@@ -148,7 +148,16 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 - **p. 7 / VI. ReDunpaNT MANIPULATORS - extractive body cue:** ‘manipulator, and the dynamic behavior of the entire redundant system cannot be represented by a dynamic model in coordinates only of the end-effector configuration.
 - **p. 5 / IV. Exp-Errecror Morton Controt - extractive body cue:** Within this framework of control and at the level ‘f the uncoupled system linear, nonlinear, robust [32], and adaptive [3] control structures can be implemented.
 
-- **PDF anchors reviewed:** datasets p. 4 (X 1 column matrix x of independent configuration parame), p. 5 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt), p. 9 (IX. Susmary ano Discussion), metrics p. 5 (IV. Exp-Errecror Morton Controt), p. 7 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions), p. 9 (VI. Sixcutar Coxmiourarions), p. 3 (I. Inrropucrion), baselines 본문 anchor 없음, results p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror Morton Controt), p. 6 (V. Constnainep Motion Operarions), p. 8 (VII. Contnot. oF REDUNDANT MANIPULATORS), p. 8 (VII. Contnot. oF REDUNDANT MANIPULATORS), p. 9 (VI. Sixcutar Coxmiourarions).
+- **Evidence anchors reviewed:** datasets p. 4 (X 1 column matrix x of independent configuration parame), p. 5 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt), p. 9 (IX. Susmary ano Discussion), metrics p. 5 (IV. Exp-Errecror Morton Controt), p. 7 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions), p. 9 (VI. Sixcutar Coxmiourarions), p. 3 (I. Inrropucrion), baselines 본문 anchor 없음, results p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror Morton Controt), p. 6 (V. Constnainep Motion Operarions), p. 8 (VII. Contnot. oF REDUNDANT MANIPULATORS), p. 8 (VII. Contnot. oF REDUNDANT MANIPULATORS), p. 9 (VI. Sixcutar Coxmiourarions).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** In operational space control systeins, however, errors, performance, dynamics, simplifications, characteriza tions, and controlled variables are directly related to manipulator tasks. (p. 5, IV. Exp-Errecror Morton Controt).
+- **Metric evidence:** In operational space control systeins, however, errors, performance, dynamics, simplifications, characteriza tions, and controlled variables are directly related to manipulator tasks. (p. 5, IV. Exp-Errecror Morton Controt).
+- **Baseline/ablation evidence:** In the reference frame (o, the system of my equations expressing the components of x as functions of joint coordinates, i.e., the geometric model, is given by (p. 3, X 1 column matrix x of independent configuration parame).
+- **Failure/negative evidence:** This performance has been obtained despite the limitations in controlling the manipulator joint torques [27]. ‘Accurate identification of the PUMA. (p. 10, IX. Susmary ano Discussion).

@@ -1,8 +1,10 @@
 # Control-Limited Differential Dynamic Programming
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/ICRA.2014.6907001.
-> PDF retrieval source: https://roboti.us/lab/papers/TassaICRA14.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/ICRA.2014.6907001.
+> PDF retrieval source: https://roboti.us/lab/papers/TassaICRA14.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2014 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://roboti.us/lab/papers/TassaICRA14.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -77,3 +79,12 @@ Manipulation, contact, tactile, and dexterity의 control 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 control 문제를 이해하기 위해 읽는다. 본문은 Ad-hoc task trajectories can be learned [9], which enlarge the convergence basin with a-priori knowledge and provide a consistent way to define complex task trajectories, but this is difficult to generalize to ...를 문제로 두고, Finally, Section IV describes the results, illustrating the usefulness of our approach.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In that context the problem is transcribed into a generic sequential quadratic programming (SQP) which easily admits both equality and inequality constraints. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Finally, Section IV describes the results, illustrating the usefulness of our approach. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS).
+- **Explicit failure boundary:** A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This term encourages parking maneuvers which do not take the car far from ... (p. 5, IV. RESULTS).

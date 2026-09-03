@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Dataset | BENCHMARK / DATASET | Unlike traditional supervised learning, where model selection can be achieved by using the model with the lowest validation loss [21], offline policy learning often ... | p. 3 (Dataset) |
 | 4 Experiments | BENCHMARK / DATASET | However, BC-RNN outperforms BC on all datasets (7%-35% improvement). | p. 6 (4 Experiments) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We collected 3 additional real-world datasets with a Franka robotic arm - Lift (Real), Can (Real), and Tool Hang (Real). | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 4 (Dataset) |
 | Task/environment | To study the effect of observation modalities, we capture a diverse set of sensor streams when collecting the dataset, including end-effector, gripper fingers, and ... | reset, timeout, object/scene variation | p. 4 (Dataset), p. 6 (4 Experiments) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 - **p. 3 / Dataset - extractive body cue:** Differences in supervisor proficiency can manifest in many ways, such as large variations in trajectory length and noise in robot movement or mistakes (e.g. missed ...
 - **p. 3 / Dataset - extractive body cue:** While recent batch RL algorithms have shown an excellent ability to learn from mixed quality machine-generated datasets [26, 27], we empirically find that they fail ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 4 (Dataset), p. 6 (4 Experiments), p. 4 (Dataset), p. 6 (4 Experiments), p. 3 (Dataset), metrics p. 5 (Figure/Table caption), p. 3 (Dataset), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 7 (4 Experiments), baselines p. 6 (4 Experiments), p. 4 (Dataset), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 4 (Dataset), results p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 7 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 4 (Dataset), p. 6 (4 Experiments), p. 4 (Dataset), p. 6 (4 Experiments), p. 3 (Dataset), metrics p. 5 (Figure/Table caption), p. 3 (Dataset), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 7 (4 Experiments), baselines p. 6 (4 Experiments), p. 4 (Dataset), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 4 (Dataset), results p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 7 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Results on Suboptimal Human Data. We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations ... (p. 4, Figure/Table caption).
+- **Metric evidence:** We first note that less complex tasks (Lift, Can) can yield proficient policies (75%-100% success rate) using a small fraction of the data (20%). (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** Interestingly, results are lower for MH datasets compared to PH datasets, even though the MH datasets contain 100 more demos (300 demos vs. (p. 5, 4 Experiments).
+- **Failure/negative evidence:** We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", "Adequate", and "Worse" human operators, ... (p. 4, Dataset).

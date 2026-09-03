@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,30 +10,30 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 
 ## Method Body Digest
 
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** We then blend these spatial features with IMU features {FM t }T t=1 through addition.
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** Finally, a multi-layer perceptron maps the fused representation to action likelihood.
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Extensive evaluations on the EgoExo4D dataset [18] validate that our framework achieves state-of-the-art performance in both inertial localization and inertial action recognition compared to [24, ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** EAIL Action Recognition: 00:00:10 Washing dishes …… 00:30:00 Stir-frying at a Stove Localization: Pre-built Point Clouds Head-mounted IMU signals Acceleration Angular Velocity 00:00:10 00:30:00 Figure ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** The corresponding sequence of actions can also be recognized as a by-product. human bodies, IMUs can capture acceleration and angular velocity to record 3D human ...
-- **p. 3 / 3. Problem Setting - extractive PDF cue:** Our primary goal is to predict the sequence of the device user's locations in the point cloud.
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** We then blend these spatial features with IMU features {FM t }T t=1 through addition.
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** Finally, a multi-layer perceptron maps the fused representation to action likelihood.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
+- **p. 2 / 1. Introduction - extractive body cue:** Extensive evaluations on the EgoExo4D dataset [18] validate that our framework achieves state-of-the-art performance in both inertial localization and inertial action recognition compared to [24, ...
+- **p. 1 / 1. Introduction - extractive body cue:** EAIL Action Recognition: 00:00:10 Washing dishes …… 00:30:00 Stir-frying at a Stove Localization: Pre-built Point Clouds Head-mounted IMU signals Acceleration Angular Velocity 00:00:10 00:30:00 Figure ...
+- **p. 1 / 1. Introduction - extractive body cue:** The corresponding sequence of actions can also be recognized as a by-product. human bodies, IMUs can capture acceleration and angular velocity to record 3D human ...
+- **p. 3 / 3. Problem Setting - extractive body cue:** Our primary goal is to predict the sequence of the device user's locations in the point cloud.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** In this work, we present a novel framework named Egocentric Action-aware Inertial Localization (EAIL; see also Fig.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Compared to vision-based localization methods [28, 39], inertial localization enables user tracking in an energy-efficient and privacy-preserving manner.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
+- **p. 2 / 1. Introduction - extractive body cue:** In this work, we present a novel framework named Egocentric Action-aware Inertial Localization (EAIL; see also Fig.
+- **p. 1 / 1. Introduction - extractive body cue:** Compared to vision-based localization methods [28, 39], inertial localization enables user tracking in an energy-efficient and privacy-preserving manner.
 
 ## Source Evidence Cues
 
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** We then blend these spatial features with IMU features {FM t }T t=1 through addition.
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** We then blend these spatial features with IMU features {FM t }T t=1 through addition.
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We then blend these spatial features with IMU features {FM t }T t=1 through addition. | p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The training is supervised by a cross-entropy loss: L_{ac t i o n } = | p. 5 (4.2.2. Location-aware action recognition) |
@@ -43,8 +43,8 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 
 ## Objective / Update Rule
 
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** Finally, a multi-layer perceptron maps the fused representation to action likelihood.
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** Finally, a multi-layer perceptron maps the fused representation to action likelihood.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2.2. Location-aware action recognition).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -60,13 +60,13 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Extensive evaluations on the EgoExo4D dataset [18] validate that our framework achieves state-of-the-art performance in both inertial localization and inertial action recognition compared to [24, ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** EAIL Action Recognition: 00:00:10 Washing dishes …… 00:30:00 Stir-frying at a Stove Localization: Pre-built Point Clouds Head-mounted IMU signals Acceleration Angular Velocity 00:00:10 00:30:00 Figure ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** The corresponding sequence of actions can also be recognized as a by-product. human bodies, IMUs can capture acceleration and angular velocity to record 3D human ...
-- **p. 3 / 3. Problem Setting - extractive PDF cue:** Our primary goal is to predict the sequence of the device user's locations in the point cloud.
-- **p. 3 / 3. Problem Setting - extractive PDF cue:** We also denote the point cloud of the environment by P.
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** In summary, our whole model in Stage 2 is supervised by Lstage2 = Ltraj + Laction.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
+- **p. 2 / 1. Introduction - extractive body cue:** Extensive evaluations on the EgoExo4D dataset [18] validate that our framework achieves state-of-the-art performance in both inertial localization and inertial action recognition compared to [24, ...
+- **p. 1 / 1. Introduction - extractive body cue:** EAIL Action Recognition: 00:00:10 Washing dishes …… 00:30:00 Stir-frying at a Stove Localization: Pre-built Point Clouds Head-mounted IMU signals Acceleration Angular Velocity 00:00:10 00:30:00 Figure ...
+- **p. 1 / 1. Introduction - extractive body cue:** The corresponding sequence of actions can also be recognized as a by-product. human bodies, IMUs can capture acceleration and angular velocity to record 3D human ...
+- **p. 3 / 3. Problem Setting - extractive body cue:** Our primary goal is to predict the sequence of the device user's locations in the point cloud.
+- **p. 3 / 3. Problem Setting - extractive body cue:** We also denote the point cloud of the environment by P.
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** In summary, our whole model in Stage 2 is supervised by Lstage2 = Ltraj + Laction.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -81,9 +81,9 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 
 ## Training vs Inference
 
-- **p. 5 / 4.2.2. Location-aware action recognition - extractive PDF cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** We trained Stage 1 for 250 epochs and Stage 2 for 100 epochs, using a batch size of 64, a learning rate of 10^{-3} , ...
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Modalities Engagement for Action-aware Alignment In Stage 1 of our framework, we focus on effectively training the IMU and the point cloud encoders to yield ...
+- **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** The training is supervised by a cross-entropy loss: L_{ac t i o n } =
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** We trained Stage 1 for 250 epochs and Stage 2 for 100 epochs, using a batch size of 64, a learning rate of 10^{-3} , ...
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Modalities Engagement for Action-aware Alignment In Stage 1 of our framework, we focus on effectively training the IMU and the point cloud encoders to yield ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -103,13 +103,13 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 
 ## Failure and Ablation Link
 
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Location-Aware Action Recognition Ablation Study. "PC" denotes point cloud features, and "LA" represents location attention.
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
-- **p. 8 / 5.4. Ablation Studies - extractive PDF cue:** More Ablation Results in Supplementary Material Further ablation results can be found in Tab.
-- **p. 6 / 5.3. Inertial Action Recognition Results - extractive PDF cue:** IMU2CLIP [41] uses a strategy similar to our Stage 1, employing a pretrained CLIP model [43, 50] to guide IMU feature extraction and fine-tuning with ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Short-Term Action-Location Alignment. In this first stage, our objective is to train a point cloud encoder and an IMU encoder using contrastive learning. ...
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
-- **p. 8 / 6. Limitations and Future Directions - extractive PDF cue:** While our method can robustly exploit head-mounted IMU signals for human localization within pre-built point clouds, it does hinge on several factors that present avenues ...
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Location-Aware Action Recognition Ablation Study. "PC" denotes point cloud features, and "LA" represents location attention.
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
+- **p. 8 / 5.4. Ablation Studies - extractive body cue:** More Ablation Results in Supplementary Material Further ablation results can be found in Tab.
+- **p. 6 / 5.3. Inertial Action Recognition Results - extractive body cue:** IMU2CLIP [41] uses a strategy similar to our Stage 1, employing a pretrained CLIP model [43, 50] to guide IMU feature extraction and fine-tuning with ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Short-Term Action-Location Alignment. In this first stage, our objective is to train a point cloud encoder and an IMU encoder using contrastive learning. ...
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
+- **p. 8 / 6. Limitations and Future Directions - extractive body cue:** While our method can robustly exploit head-mounted IMU signals for human localization within pre-built point clouds, it does hinge on several factors that present avenues ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -123,7 +123,7 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition), objective p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition), temporal p. 7 (5.4. Ablation Studies), p. 8 (5.5. Qualitative evaluations), p. 8 (5.4. Ablation Studies), p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.1. Spatiotemporal reasoning for trajectory prediction), p. 6 (5.3. Inertial Action Recognition Results).
+- **Evidence anchors reviewed:** method p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition), objective p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition), temporal p. 7 (5.4. Ablation Studies), p. 8 (5.5. Qualitative evaluations), p. 8 (5.4. Ablation Studies), p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.1. Spatiotemporal reasoning for trajectory prediction), p. 6 (5.3. Inertial Action Recognition Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 During runtime, HAMMER rejects alignments where the localized SfM fails to estimate poses for all 2W input images or alignments that have high translation (0.1m in the map frame) or rotation errors ...를 Each robot produces color images, geometric information (e.g. depth images or point clouds), and camera pose estimates in SE(3) with respect to an arbitrary local coordinate frame T i.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: A server-based architecture allows our method to be used with existing robot and edge device hardware without highpowered GPUs, while leveraging typical communication infrastructure (e.g.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Specifically, if a depth image is received, then the camera intrinsics and pose are used to project random pixels into 3D to create a sparse point cloud. (p. 4, III. METHOD).
+- **Paper-specific mechanism:** In this work, we propose HAMMER, Heterogeneous Asynchronous Multi-robot Mapping of Environmental Radiance. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS); the relevant task/metric cue is Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images. (p. 6, IV. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: However, ReplicaMultiAgent only contains scenes from simulated environments, and lacks heterogeneous robots/sensing devices and challenging real-world scene conditions (e.g. motion blur, diverse lighting)..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 5: Map quality over time for HAMMER and baselines in two scenes. HAMMER outperforms Di-NeRF*, demonstrating the necessity of accurate robot alignment. It also outperforms Individuals, highlighting the benefits of collaboration. ....
-4. Report the body metric and its denominator/aggregation: First, we compare HAMMER to state-of-the-art baselines [13], [14] by assessing their reconstruction accuracy on the ReplicaMultiAgent dataset [14], [15]..
-5. Re-run the body-reported ablation/failure condition: 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Specifically, if a depth image is received, then the camera intrinsics and pose are used to project random pixels into 3D to create a sparse point cloud. (p. 4, III. METHOD); preserve the objective/update rule: Equation (1) optimizes the scaling, rotation, and translation (s, R, t) between the two frames with a small regularization term on the rotation to address degenerate data. (p. 3, III. METHOD).
+2. Use the paper-reported task/data/environment cue: Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: HAMMER outperforms both baselines on all averaged metrics, and does so at least 25× faster than CPSLAM and 16× faster than MAGiC-SLAM. (p. 6, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS); if none is reported, design one around: 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images. (p. 6, IV. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), and measure the boundary at p. 6 (IV. EXPERIMENTS), p. 7 (V. CONCLUSION AND LIMITATIONS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 server-based, architecture, allows mechanism이 Fig. 5: Map quality over time for HAMMER and baselines in two scenes. HAMMER outperforms Di-NeRF*, ... 대비 First, we compare HAMMER to state-of-the-art baselines [13], [14] by assessing their reconstruction accuracy on the ReplicaMultiAgent dataset ...을 개선하고, 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Specifically, if a depth image is received, then the camera intrinsics and pose are used to project random pixels into 3D to ...), does the paper-specific mechanism (In this work, we propose HAMMER, Heterogeneous Asynchronous Multi-robot Mapping of Environmental Radiance.) retain the reported evaluation outcome (Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its ...) when tested against the paper's strongest explicit boundary (4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we propose HAMMER, Heterogeneous Asynchronous Multi-robot Mapping of Environmental Radiance. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images. (p. 6, IV. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

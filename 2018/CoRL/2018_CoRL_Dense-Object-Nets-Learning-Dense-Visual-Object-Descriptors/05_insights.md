@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Since we are trying to learn descriptors of objects that take up only a fraction of a full image, we observe significant improvements if the representational power of the models are focused ...를 For dense reconstruction we use TSDF fusion [27] of the depth images with camera poses provided by forward kinematics.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable consistency with ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We believe our largest contribution is that we introduce dense descriptors as a representation useful for robotic manipulation.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In this work, we use only static-scene reconstructions, so pixel matches between images can be easily found by raycasting and reprojecting against the dense 3D reconstruction model, and appropriately checking ... (p. 5, 3 Methodology).
+- **Paper-specific mechanism:** In this paper, we propose and demonstrate using dense visual description as a representation for robotic manipulation. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 3: (a) table describing the network training procedures referenced in experiments. (standard-SO = "standard single object". standard-SO-P is detailed in Appendix D.1). (b) Plots the cdf of the L2 ... (p. 6, Figure/Table caption); the relevant task/metric cue is The variety of objects includes moderately deformable objects such as soft plush toys, shoes, mugs, and hats, and can include very low-texture objects (Figure 2). (p. 5, 5 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable ... (p. 7, 5 Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The dataset used for (a) is of three objects, 4 scenes each..
-3. Compare against the body-reported baseline or a matched simpler baseline: without cross-object loss with cross-object loss (a) (b) (c) Figure 5: Comparison of training without any distinct object loss (a) vs. using cross-object loss (b)..
-4. Report the body metric and its denominator/aggregation: By applying cross-object loss (Section 3.3.i, training mode specific in Figure 3a), we can convincingly separate multiple objects such that they each occupy distinct subsets of descriptor space (Figure 5b)..
-5. Re-run the body-reported ablation/failure condition: 5.1 Single-Object Dense Descriptors We observe that with our training procedures described in Section 3.2, for a wide variety of objects we can acquire dense descriptors that are invariant to viewpoint, configuration, ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In this work, we use only static-scene reconstructions, so pixel matches between images can be easily found by raycasting and reprojecting against the dense 3D reconstruction model, and appropriately checking ... (p. 5, 3 Methodology); preserve the objective/update rule: 3.1 Preliminary: Self-Supervised Pixelwise Contrastive Loss We use self-supervised pixelwise contrastive loss, as developed in [7, 8]. (p. 2, 3 Methodology).
+2. Use the paper-reported task/data/environment cue: The dataset used for (a) is of three objects, 4 scenes each. (p. 6, 5 Results).
+3. Compare against the reported or matched baseline: without cross-object loss with cross-object loss (a) (b) (c) Figure 5: Comparison of training without any distinct object loss (a) vs. using cross-object loss (b). (p. 7, 5 Results).
+4. Report the body metric with its denominator and aggregation: The variety of objects includes moderately deformable objects such as soft plush toys, shoes, mugs, and hats, and can include very low-texture objects (Figure 2). (p. 5, 5 Results).
+5. Re-run the reported ablation or stress/failure condition: 5.1 Single-Object Dense Descriptors We observe that with our training procedures described in Section 3.2, for a wide variety of objects we can acquire dense descriptors that are invariant to ... (p. 5, 5 Results); if none is reported, design one around: The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable ... (p. 7, 5 Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 Methodology); the primary result is directionally consistent at p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 7 (5 Results), p. 7 (5 Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 believe, largest, contribution mechanism이 without cross-object loss with cross-object loss (a) (b) (c) Figure 5: Comparison of training without any ... 대비 By applying cross-object loss (Section 3.3.i, training mode specific in Figure 3a), we can convincingly separate multiple objects ...을 개선하고, The generalization extends to instances that a priori we thought would be failure modes: we expected ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In this work, we use only static-scene reconstructions, so pixel matches between images can be easily found by raycasting and reprojecting against ...), does the paper-specific mechanism (In this paper, we propose and demonstrate using dense visual description as a representation for robotic manipulation.) retain the reported evaluation outcome (The variety of objects includes moderately deformable objects such as soft plush toys, shoes, mugs, and hats, and ...) when tested against the paper's strongest explicit boundary (The generalization extends to instances that a priori we thought would be failure modes: we expected the boot ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The variety of objects includes moderately deformable objects such as soft plush toys, shoes, mugs, and hats, and ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we propose and demonstrate using dense visual description as a representation for robotic manipulation. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Figure 3: (a) table describing the network training procedures referenced in experiments. (standard-SO = "standard single object". standard-SO-P is detailed in Appendix D.1). (b) Plots the cdf of the L2 ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable ... (p. 7, 5 Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

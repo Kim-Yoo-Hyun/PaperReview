@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** We uniformly sample 3, 6, 12, and 18 spatially distributed views across each scene to form the training sets, while randomly sampling 12 remaining views ...
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** For consistency, all experiments use the downsampled resolution images provided by the datasets.
-- **p. 7 / 5.2. Experiment Results - extractive PDF cue:** Quantitative results on the LLFF dataset.
-- **p. 7 / 5.2. Experiment Results - extractive PDF cue:** Comparison of rendering time, PSNR, SSIM, and LPIPS on the MVImgNet dataset.
-- **p. 8 / 5.3. Ablation Study - extractive PDF cue:** Convergence analysis on the MVImgNet dataset (12 views).
-- **p. 8 / 5.3. Ablation Study - extractive PDF cue:** Shaded regions represent the variance across different scenes. strates notable improvements in both performance optimum and optimization dynamics.
-- **p. 7 / 5.3. Ablation Study - extractive PDF cue:** Position filtering further improves pixel-level accuracy.
-- **p. 7 / 5.2. Experiment Results - extractive PDF cue:** Notably, VGGT+BA-GS achieves the best LPIPS scores across 3 to 18 views, demonstrating that our approach effectively mitigates floater artifacts induced by noisy feed-forward priors.
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** We uniformly sample 3, 6, 12, and 18 spatially distributed views across each scene to form the training sets, while randomly sampling 12 remaining views ...
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** For consistency, all experiments use the downsampled resolution images provided by the datasets.
+- **p. 7 / 5.2. Experiment Results - extractive body cue:** Quantitative results on the LLFF dataset.
+- **p. 7 / 5.2. Experiment Results - extractive body cue:** Comparison of rendering time, PSNR, SSIM, and LPIPS on the MVImgNet dataset.
+- **p. 8 / 5.3. Ablation Study - extractive body cue:** Convergence analysis on the MVImgNet dataset (12 views).
+- **p. 8 / 5.3. Ablation Study - extractive body cue:** Shaded regions represent the variance across different scenes. strates notable improvements in both performance optimum and optimization dynamics.
+- **p. 7 / 5.3. Ablation Study - extractive body cue:** Position filtering further improves pixel-level accuracy.
+- **p. 7 / 5.2. Experiment Results - extractive body cue:** Notably, VGGT+BA-GS achieves the best LPIPS scores across 3 to 18 views, demonstrating that our approach effectively mitigates floater artifacts induced by noisy feed-forward priors.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 5. Convergence analysis on the MVImgNet dataset (12 views). BA-GS achieves a higher performance ceiling and bet- ter stability compared to the baseline. ... | p. 8 (Figure/Table caption) |
 | 5.2. Experiment Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results consistently outperform baselines in both numerical and perceptual metrics across most settings, indicating that the performance gain is attributable to the method ... | p. 6 (5.2. Experiment Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** We uniformly sample 3, 6, 12, and 18 spatially distributed views across each scene to form the training sets, while randomly sampling 12 remaining views ...
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** For consistency, all experiments use the downsampled resolution images provided by the datasets.
-- **p. 7 / 5.2. Experiment Results - extractive PDF cue:** Quantitative results on the LLFF dataset.
-- **p. 7 / 5.2. Experiment Results - extractive PDF cue:** Comparison of rendering time, PSNR, SSIM, and LPIPS on the MVImgNet dataset.
-- **p. 8 / 5.3. Ablation Study - extractive PDF cue:** Convergence analysis on the MVImgNet dataset (12 views).
-- **p. 8 / 5.3. Ablation Study - extractive PDF cue:** Shaded regions represent the variance across different scenes. strates notable improvements in both performance optimum and optimization dynamics.
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** We uniformly sample 3, 6, 12, and 18 spatially distributed views across each scene to form the training sets, while randomly sampling 12 remaining views ...
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** For consistency, all experiments use the downsampled resolution images provided by the datasets.
+- **p. 7 / 5.2. Experiment Results - extractive body cue:** Quantitative results on the LLFF dataset.
+- **p. 7 / 5.2. Experiment Results - extractive body cue:** Comparison of rendering time, PSNR, SSIM, and LPIPS on the MVImgNet dataset.
+- **p. 8 / 5.3. Ablation Study - extractive body cue:** Convergence analysis on the MVImgNet dataset (12 views).
+- **p. 8 / 5.3. Ablation Study - extractive body cue:** Shaded regions represent the variance across different scenes. strates notable improvements in both performance optimum and optimization dynamics.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the global initialization Bayesian model (VB-GMM). The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Detailed architecture of the local refinement-level Bayesian model. The Kalman filter fuses priors with measure- ments, where the noise covariance is adjusted by ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of rendering time, PSNR, SSIM, and LPIPS on the MVImgNet dataset. Our method delivers clearer details and better rendering quality, achieving lower ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison of rendering time, PSNR, SSIM, and LPIPS on the Tanks and Temples dataset. Compared to MVImgNet, the overall rendering performance on this ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative results on the LLFF dataset. While overall metrics are relatively lower due to complex forward-facing scenes, MASt3R+BA-GS maintains leadership in PSNR and ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Zoom-in comparison (18 views setting). Leftmost column: Ground Truth. Second and third columns: DropGaussian (full / cropped). Fourth and fifth columns: InstantSplat (full ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study evaluating the contribution of each module in our framework (12 views setting). We report rendering time and three perceptual metrics. Ablation ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the global initialization Bayesian model (VB-GMM). The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Detailed architecture of the local refinement-level Bayesian model. The Kalman filter fuses priors with measure- ments, where the noise covariance is adjusted by ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison of rendering time, PSNR, SSIM, and LPIPS on the MVImgNet dataset. Our method delivers clearer details and better rendering quality, achieving lower ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparison of rendering time, PSNR, SSIM, and LPIPS on the Tanks and Temples dataset. Compared to MVImgNet, the overall rendering performance on this ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative results on the LLFF dataset. While overall metrics are relatively lower due to complex forward-facing scenes, MASt3R+BA-GS maintains leadership in PSNR and ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Zoom-in comparison (18 views setting). Leftmost column: Ground Truth. Second and third columns: DropGaussian (full / cropped). Fourth and fifth columns: InstantSplat (full ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation study evaluating the contribution of each module in our framework (12 views setting). We report rendering time and three perceptual metrics. Ablation ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We uniformly sample 3, 6, 12, and 18 spatially distributed views across each scene to form the training sets, while randomly sampling 12 remaining ... | embodiment, simulator version and control stack | p. 6 (5.1. Experiment Setup), p. 6 (5.1. Experiment Setup) |
 | Task/environment | For consistency, all experiments use the downsampled resolution images provided by the datasets. | reset, timeout, object/scene variation | p. 6 (5.1. Experiment Setup), p. 7 (5.2. Experiment Results) |
@@ -120,9 +120,9 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 | Primary metric/result | The results consistently outperform baselines in both numerical and perceptual metrics across most settings, indicating that the performance gain is attributable to the method ... | numeric claim only at cited anchor | p. 6 (5.2. Experiment Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** The mapping functions for the adaptive density control (ψ) and the adaptive noise covariance (ϕ) are instantiated as ψ(x) = 1 + λ(2x -1) and ...
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** All experiments are conducted on an RTX 4080 GPU with CUDA version 11.8.
-- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive PDF cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** The mapping functions for the adaptive density control (ψ) and the adaptive noise covariance (ϕ) are instantiated as ψ(x) = 1 + λ(2x -1) and ...
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** All experiments are conducted on an RTX 4080 GPU with CUDA version 11.8.
+- **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** Noise Covriance Matrix Proposed Adaptive Kalman Filter Optimization Loop Step t-1 Step t Step t+1 Gradient Density Position Prior Propagate State Noisy Position Element-wise Multiplication ...
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Future works will explore richer priors, extending the Bayesian formulation to color and opacity estimation.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the global initialization Bayesian model (VB-GMM). The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** But the current formulation assumes Gaussian noise assumption and relies on density/gradient priors, which may not fully capture uncertainty in highly textureless or heavily occluded ...
-- **p. 7 / 5.2. Experiment Results - extractive PDF cue:** When replacing the globally-aligned MASt3R initialization with VGGT, the deterministic optimization of InstantSplat degrades severely due to its inability to handle positional noise.
-- **p. 7 / 5.3. Ablation Study - extractive PDF cue:** Removing it causes a severe drop in PSNR and degrades perceptual metrics, confirming that modeling the latent probabilistic distribution of primitives is essential for mitigating ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Future works will explore richer priors, extending the Bayesian formulation to color and opacity estimation.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the global initialization Bayesian model (VB-GMM). The initial Gaussian primitives from MASt3R are refined via a gradient- and density-guided variational clustering ...
+- **p. 8 / 6. Conclusion - extractive body cue:** But the current formulation assumes Gaussian noise assumption and relies on density/gradient priors, which may not fully capture uncertainty in highly textureless or heavily occluded ...
+- **p. 7 / 5.2. Experiment Results - extractive body cue:** When replacing the globally-aligned MASt3R initialization with VGGT, the deterministic optimization of InstantSplat degrades severely due to its inability to handle positional noise.
+- **p. 7 / 5.3. Ablation Study - extractive body cue:** Removing it causes a severe drop in PSNR and degrades perceptual metrics, confirming that modeling the latent probabilistic distribution of primitives is essential for mitigating ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experiment Setup), p. 6 (5.1. Experiment Setup), p. 7 (5.2. Experiment Results), p. 7 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), metrics p. 8 (5.3. Ablation Study), p. 7 (5.3. Ablation Study), p. 7 (5.2. Experiment Results), p. 2 (Figure/Table caption), p. 6 (5.1. Experiment Setup), p. 6 (5.2. Experiment Results), baselines p. 6 (5.2. Experiment Results), p. 6 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), p. 7 (Figure/Table caption), p. 7 (5.2. Experiment Results), results p. 8 (Figure/Table caption), p. 6 (5.2. Experiment Results), p. 6 (5.2. Experiment Results), p. 7 (5.3. Ablation Study), p. 7 (5.2. Experiment Results), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experiment Setup), p. 6 (5.1. Experiment Setup), p. 7 (5.2. Experiment Results), p. 7 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), metrics p. 8 (5.3. Ablation Study), p. 7 (5.3. Ablation Study), p. 7 (5.2. Experiment Results), p. 2 (Figure/Table caption), p. 6 (5.1. Experiment Setup), p. 6 (5.2. Experiment Results), baselines p. 6 (5.2. Experiment Results), p. 6 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), p. 7 (Figure/Table caption), p. 7 (5.2. Experiment Results), results p. 8 (Figure/Table caption), p. 6 (5.2. Experiment Results), p. 6 (5.2. Experiment Results), p. 7 (5.3. Ablation Study), p. 7 (5.2. Experiment Results), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.04955; PDF retrieval source: https://arxiv.org/pdf/2203.04955. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.04955; PDF retrieval source: https://arxiv.org/pdf/2203.04955. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5. Experiments - extractive PDF cue:** TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole Swingup ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** Results are shown in Table 1. -12 image-based tasks from the DMControl Dreamer benchmark (3M environment steps).
-- **p. 7 / 5. Experiments - extractive PDF cue:** Throughout, we benchmark performance on relatively few environment steps, e.g., 3M steps for Humanoid tasks whereas prior work typically runs for 30M steps (10×).
-- **p. 5 / 5. Experiments - extractive PDF cue:** We choose these two benchmarks for their great task diversity and availability of baseline implementations and results.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We observe especially large performance gains on tasks with complex dynamics, e.g., the Quadruped and Acrobot tasks. the top-64 trajectories each iteration.
-- **p. 8 / 5. Experiments - extractive PDF cue:** In contrast, a blind agent that does not 0.0 0.2 0.4 0.6 0.8 1.0 0.00 0.25 0.50 0.75 1.00 Success rate Meta-World (Goal-Conditioned) 0 1 ...
-- **p. 9 / 5. Experiments - extractive PDF cue:** Methods are benchmarked on a single RTX3090 GPU.
-- **p. 5 / 5. Experiments - extractive PDF cue:** We seek to answer the following questions: -How does planning with TD-MPC compare to state-ofthe-art model-based and model-free approaches? -Are TOLD models capable of multi-task ...
+- **p. 6 / 5. Experiments - extractive body cue:** TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole Swingup ...
+- **p. 7 / 5. Experiments - extractive body cue:** Results are shown in Table 1. -12 image-based tasks from the DMControl Dreamer benchmark (3M environment steps).
+- **p. 7 / 5. Experiments - extractive body cue:** Throughout, we benchmark performance on relatively few environment steps, e.g., 3M steps for Humanoid tasks whereas prior work typically runs for 30M steps (10×).
+- **p. 5 / 5. Experiments - extractive body cue:** We choose these two benchmarks for their great task diversity and availability of baseline implementations and results.
+- **p. 6 / 5. Experiments - extractive body cue:** We observe especially large performance gains on tasks with complex dynamics, e.g., the Quadruped and Acrobot tasks. the top-64 trajectories each iteration.
+- **p. 8 / 5. Experiments - extractive body cue:** In contrast, a blind agent that does not 0.0 0.2 0.4 0.6 0.8 1.0 0.00 0.25 0.50 0.75 1.00 Success rate Meta-World (Goal-Conditioned) 0 1 ...
+- **p. 9 / 5. Experiments - extractive body cue:** Methods are benchmarked on a single RTX3090 GPU.
+- **p. 5 / 5. Experiments - extractive body cue:** We seek to answer the following questions: -How does planning with TD-MPC compare to state-ofthe-art model-based and model-free approaches? -Are TOLD models capable of multi-task ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 14. Individual Meta-World tasks. Success rate of our method (TD-MPC) and SAC on diverse manipulation tasks from Meta- World (Yu et al., 2019). ... | p. 19 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 8. Meta-World MT10. As our performance metric reported in Figure 5 differs from that of the Meta-World v2 benchmark proposal (Yu et al., ... | p. 17 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5. Experiments - extractive PDF cue:** TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole Swingup ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** Results are shown in Table 1. -12 image-based tasks from the DMControl Dreamer benchmark (3M environment steps).
-- **p. 7 / 5. Experiments - extractive PDF cue:** Throughout, we benchmark performance on relatively few environment steps, e.g., 3M steps for Humanoid tasks whereas prior work typically runs for 30M steps (10×).
-- **p. 5 / 5. Experiments - extractive PDF cue:** We choose these two benchmarks for their great task diversity and availability of baseline implementations and results.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We observe especially large performance gains on tasks with complex dynamics, e.g., the Quadruped and Acrobot tasks. the top-64 trajectories each iteration.
-- **p. 8 / 5. Experiments - extractive PDF cue:** In contrast, a blind agent that does not 0.0 0.2 0.4 0.6 0.8 1.0 0.00 0.25 0.50 0.75 1.00 Success rate Meta-World (Goal-Conditioned) 0 1 ...
-- **p. 9 / 5. Experiments - extractive PDF cue:** Methods are benchmarked on a single RTX3090 GPU.
-- **p. 5 / 5. Experiments - extractive PDF cue:** We seek to answer the following questions: -How does planning with TD-MPC compare to state-ofthe-art model-based and model-free approaches? -Are TOLD models capable of multi-task ...
+- **p. 6 / 5. Experiments - extractive body cue:** TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole Swingup ...
+- **p. 7 / 5. Experiments - extractive body cue:** Results are shown in Table 1. -12 image-based tasks from the DMControl Dreamer benchmark (3M environment steps).
+- **p. 7 / 5. Experiments - extractive body cue:** Throughout, we benchmark performance on relatively few environment steps, e.g., 3M steps for Humanoid tasks whereas prior work typically runs for 30M steps (10×).
+- **p. 5 / 5. Experiments - extractive body cue:** We choose these two benchmarks for their great task diversity and availability of baseline implementations and results.
+- **p. 6 / 5. Experiments - extractive body cue:** We observe especially large performance gains on tasks with complex dynamics, e.g., the Quadruped and Acrobot tasks. the top-64 trajectories each iteration.
+- **p. 8 / 5. Experiments - extractive body cue:** In contrast, a blind agent that does not 0.0 0.2 0.4 0.6 0.8 1.0 0.00 0.25 0.50 0.75 1.00 Success rate Meta-World (Goal-Conditioned) 0 1 ...
+- **p. 9 / 5. Experiments - extractive body cue:** Methods are benchmarked on a single RTX3090 GPU.
+- **p. 5 / 5. Experiments - extractive body cue:** We seek to answer the following questions: -How does planning with TD-MPC compare to state-ofthe-art model-based and model-free approaches? -Are TOLD models capable of multi-task ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview. (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Training our TOLD model. A trajectory Γ0:H of length H is sampled from a replay buffer, and the first observation s0 is encoded ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. DMControl tasks. Return of our method (TD-MPC) and baselines on 15 state-based continuous control tasks from DMControl (Tassa et al., 2018). Mean of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Learning from pixels. Return of our method (TD-MPC) and state-of-the-art algorithms on the image-based DMControl 100k benchmark used in Srinivas et al. (2020); ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Learning from pixels. Return of our method (TD-MPC) and state-of-the-art algorithms on 12 challenging image-based DMControl tasks. We follow prior work (Hafner et ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. (top) Meta-World. Success rate on 50 goal-conditioned Meta-World tasks using individual policies, and a multi-task policy trained on 10 tasks simultaneously (Meta-World MT10). ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Variable computational budget. Return of TD-MPC on Quadruped Walk under a variable budget. We evaluate perfor- mance of fully trained agents when varying ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2. Wall-time. (top) time to solve, and (bottom) time per 500k environment steps (in hours) for the Walker Walk and Hu- manoid Stand tasks ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Training our TOLD model. A trajectory Γ0:H of length H is sampled from a replay buffer, and the first observation s0 is encoded ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. DMControl tasks. Return of our method (TD-MPC) and baselines on 15 state-based continuous control tasks from DMControl (Tassa et al., 2018). Mean of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Learning from pixels. Return of our method (TD-MPC) and state-of-the-art algorithms on the image-based DMControl 100k benchmark used in Srinivas et al. (2020); ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Learning from pixels. Return of our method (TD-MPC) and state-of-the-art algorithms on 12 challenging image-based DMControl tasks. We follow prior work (Hafner et ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. (top) Meta-World. Success rate on 50 goal-conditioned Meta-World tasks using individual policies, and a multi-task policy trained on 10 tasks simultaneously (Meta-World MT10). ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Variable computational budget. Return of TD-MPC on Quadruped Walk under a variable budget. We evaluate perfor- mance of fully trained agents when varying ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2. Wall-time. (top) time to solve, and (bottom) time per 500k environment steps (in hours) for the Walker Walk and Hu- manoid Stand tasks ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole ... | embodiment, simulator version and control stack | p. 6 (5. Experiments), p. 7 (5. Experiments) |
 | Task/environment | Results are shown in Table 1. -12 image-based tasks from the DMControl Dreamer benchmark (3M environment steps). | reset, timeout, object/scene variation | p. 7 (5. Experiments), p. 7 (5. Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 | Primary metric/result | Table 8. Meta-World MT10. As our performance metric reported in Figure 5 differs from that of the Meta-World v2 benchmark proposal (Yu et al., ... | numeric claim only at cited anchor | p. 17 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5. Experiments - extractive PDF cue:** During planning, we plan for 6 iterations (8 for Dog; 12 for Humanoid), sampling N = 512 trajectories (+5% sampled from πθ), and we compute ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole Swingup ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** In the top left, we visualize results averaged across all 15 tasks.
-- **p. 6 / 5. Experiments - extractive PDF cue:** We observe especially large performance gains on tasks with complex dynamics, e.g., the Quadruped and Acrobot tasks. the top-64 trajectories each iteration.
-- **p. 6 / 5. Experiments - extractive PDF cue:** For image-based tasks, observations are 3 stacked 84×84-dimensional RGB frames and we use ±4 pixel shift augmentation (Kostrikov et al., 2020).
-- **p. 7 / 5. Experiments - extractive PDF cue:** We consider the following 92 tasks: -6 challenging Humanoid (A ∈R21) and Dog (A ∈R38) locomotion tasks with high-dimensional state and action spaces.
+- **p. 5 / 5. Experiments - extractive body cue:** During planning, we plan for 6 iterations (8 for Dog; 12 for Humanoid), sampling N = 512 trajectories (+5% sampled from πθ), and we compute ...
+- **p. 6 / 5. Experiments - extractive body cue:** TD-Learning for MPC 0 250 500 750 1000 Episode return Average 0 100 200 300 400 Acrobot Swingup 0 250 500 750 1000 Cartpole Swingup ...
+- **p. 6 / 5. Experiments - extractive body cue:** In the top left, we visualize results averaged across all 15 tasks.
+- **p. 6 / 5. Experiments - extractive body cue:** We observe especially large performance gains on tasks with complex dynamics, e.g., the Quadruped and Acrobot tasks. the top-64 trajectories each iteration.
+- **p. 6 / 5. Experiments - extractive body cue:** For image-based tasks, observations are 3 stacked 84×84-dimensional RGB frames and we use ±4 pixel shift augmentation (Kostrikov et al., 2020).
+- **p. 7 / 5. Experiments - extractive body cue:** We consider the following 92 tasks: -6 challenging Humanoid (A ∈R21) and Dog (A ∈R38) locomotion tasks with high-dimensional state and action spaces.
 
 ## Generalization and Failure Cases
 
@@ -163,11 +163,11 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5. Experiments - extractive PDF cue:** Due to dimensionality explosion under discretization, MuZero and EfficientZero cannot feasibly solve tasks with higher-dimensional action spaces, e.g., Walker Walk and Cheetah Run (A ∈R6), ...
-- **p. 8 / 5. Experiments - extractive PDF cue:** Mean of 5 runs. have access to the egocentric camera fails.
-- **p. 8 / 5. Experiments - extractive PDF cue:** Performance of LOOP is similar to SAC, and MPC with a simulator (MPC:sim) performs well on locomotion tasks but fails in tasks with sparse rewards.
+- **p. 7 / 5. Experiments - extractive body cue:** Due to dimensionality explosion under discretization, MuZero and EfficientZero cannot feasibly solve tasks with higher-dimensional action spaces, e.g., Walker Walk and Cheetah Run (A ∈R6), ...
+- **p. 8 / 5. Experiments - extractive body cue:** Mean of 5 runs. have access to the egocentric camera fails.
+- **p. 8 / 5. Experiments - extractive body cue:** Performance of LOOP is similar to SAC, and MPC with a simulator (MPC:sim) performs well on locomotion tasks but fails in tasks with sparse rewards.
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 5 (5. Experiments), p. 6 (5. Experiments), p. 8 (5. Experiments), metrics p. 8 (5. Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 17 (Figure/Table caption), p. 15 (Figure/Table caption), p. 5 (5. Experiments), baselines p. 7 (Figure/Table caption), p. 8 (5. Experiments), p. 7 (Figure/Table caption), p. 8 (5. Experiments), p. 5 (5. Experiments), p. 6 (5. Experiments), results p. 19 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 5 (5. Experiments), p. 6 (5. Experiments), p. 8 (5. Experiments), metrics p. 8 (5. Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 17 (Figure/Table caption), p. 15 (Figure/Table caption), p. 5 (5. Experiments), baselines p. 7 (Figure/Table caption), p. 8 (5. Experiments), p. 7 (Figure/Table caption), p. 8 (5. Experiments), p. 5 (5. Experiments), p. 6 (5. Experiments), results p. 19 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

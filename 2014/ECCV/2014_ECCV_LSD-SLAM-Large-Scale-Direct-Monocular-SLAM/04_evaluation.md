@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://cvg.cit.tum.de/research/vslam/lsdslam; PDF retrieval source: https://jakobengel.github.io/pdf/engel14eccv.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://cvg.cit.tum.de/research/vslam/lsdslam; PDF retrieval source: https://jakobengel.github.io/pdf/engel14eccv.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 
 ## Evaluation Body Digest
 
-- **p. 13 / 4 Results - extractive PDF cue:** 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm).
-- **p. 12 / 4 Results - extractive PDF cue:** 4.2 Quantitative Evaluation We evaluate LSD-SLAM on the publicly available RGB-D dataset [25].
-- **p. 12 / 4 Results - extractive PDF cue:** Note that for monocular SLAM this is a very challenging benchmark, as it contains fast rotational movement, strong motion blur and rolling shutter artifacts.
-- **p. 13 / 4 Results - extractive PDF cue:** The bottom row shows different close-ups of the scene.
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Fig. 10: Convergence radius and accuracy of sim(3) direct image alignment with and without ESM minimization (indicated by light / dark) for a different num- ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 5: Direct keyframe alignment on sim(3): (a)-(c): two keyframes with asso- ciated depth and depth variance. (d)-(f): photometric residual, depth residual and Huber weights, ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Large-Scale Direct Monocular SLAM: LSD-SLAM generates a consistent global map, using direct image alignment and probabilistic, semi-dense depth maps instead of keypoints. Top: ...
-- **p. 12 / 4 Results - extractive PDF cue:** We use the very first depth map to bootstrap the system and get the correct initial scale.
+- **p. 13 / 4 Results - extractive body cue:** 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm).
+- **p. 12 / 4 Results - extractive body cue:** 4.2 Quantitative Evaluation We evaluate LSD-SLAM on the publicly available RGB-D dataset [25].
+- **p. 12 / 4 Results - extractive body cue:** Note that for monocular SLAM this is a very challenging benchmark, as it contains fast rotational movement, strong motion blur and rolling shutter artifacts.
+- **p. 13 / 4 Results - extractive body cue:** The bottom row shows different close-ups of the scene.
+- **p. 14 / Figure/Table caption - extractive body cue:** Fig. 10: Convergence radius and accuracy of sim(3) direct image alignment with and without ESM minimization (indicated by light / dark) for a different num- ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 5: Direct keyframe alignment on sim(3): (a)-(c): two keyframes with asso- ciated depth and depth variance. (d)-(f): photometric residual, depth residual and Huber weights, ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Large-Scale Direct Monocular SLAM: LSD-SLAM generates a consistent global map, using direct image alignment and probabilistic, semi-dense depth maps instead of keypoints. Top: ...
+- **p. 12 / 4 Results - extractive body cue:** We use the very first depth map to bootstrap the system and get the correct initial scale.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Results | EMPIRICAL / SIMULATION | 4.1 Qualitative Results on Large Trajectories We tested the algorithm on several long and challenging trajectories, which include many camera rotations, large scale changes ... | p. 12 (4 Results) |
 | 4 Results | EMPIRICAL / SIMULATION | 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm). | p. 13 (4 Results) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 
 ## Dataset / Benchmark Role
 
-- **p. 13 / 4 Results - extractive PDF cue:** 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm).
-- **p. 12 / 4 Results - extractive PDF cue:** 4.2 Quantitative Evaluation We evaluate LSD-SLAM on the publicly available RGB-D dataset [25].
-- **p. 12 / 4 Results - extractive PDF cue:** Note that for monocular SLAM this is a very challenging benchmark, as it contains fast rotational movement, strong motion blur and rolling shutter artifacts.
-- **p. 13 / 4 Results - extractive PDF cue:** The bottom row shows different close-ups of the scene.
+- **p. 13 / 4 Results - extractive body cue:** 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm).
+- **p. 12 / 4 Results - extractive body cue:** 4.2 Quantitative Evaluation We evaluate LSD-SLAM on the publicly available RGB-D dataset [25].
+- **p. 12 / 4 Results - extractive body cue:** Note that for monocular SLAM this is a very challenging benchmark, as it contains fast rotational movement, strong motion blur and rolling shutter artifacts.
+- **p. 13 / 4 Results - extractive body cue:** The bottom row shows different close-ups of the scene.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Large-Scale Direct Monocular SLAM: LSD-SLAM generates a consistent global map, using direct image alignment and probabilistic, semi-dense depth maps instead of keypoints. Top: ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: In addition to accurate, semi-dense 3D reconstructions, LSD-SLAM also estimates the associated uncertainty. From left to right: Accumulated pointcloud thesholded with different maximum ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: Overview over the complete LSD-SLAM algorithm. In practice, the residuals are highly correlated, such that Σξ is only a lower bound - yet ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4: Statistic normalization: (a) reference image. (b-d): tracked images and inverse variance σ-2 rp of the residual. For pure rotation, depth noise has no ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 5: Direct keyframe alignment on sim(3): (a)-(c): two keyframes with asso- ciated depth and depth variance. (d)-(f): photometric residual, depth residual and Huber weights, ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 6: Two scenes with high scale variation. Camera frustums are displayed for each keyframe with their size corresponding to the keyframe's scale. created keyframe ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 7: Loop closure for a long and challenging outdoor trajectory (after the loop closure on the left, before on the right). Also shown are ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 8: Accumulated pointcloud of a trajectory with large scale variation, includ- ing views with an average inverse depth of less than 20 cm to ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Large-Scale Direct Monocular SLAM: LSD-SLAM generates a consistent global map, using direct image alignment and probabilistic, semi-dense depth maps instead of keypoints. Top: ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: In addition to accurate, semi-dense 3D reconstructions, LSD-SLAM also estimates the associated uncertainty. From left to right: Accumulated pointcloud thesholded with different maximum ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Overview over the complete LSD-SLAM algorithm. In practice, the residuals are highly correlated, such that Σξ is only a lower bound - yet ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Statistic normalization: (a) reference image. (b-d): tracked images and inverse variance σ-2 rp of the residual. For pure rotation, depth noise has no ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 5: Direct keyframe alignment on sim(3): (a)-(c): two keyframes with asso- ciated depth and depth variance. (d)-(f): photometric residual, depth residual and Huber weights, ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Two scenes with high scale variation. Camera frustums are displayed for each keyframe with their size corresponding to the keyframe's scale. created keyframe ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 7: Loop closure for a long and challenging outdoor trajectory (after the loop closure on the left, before on the right). Also shown are ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 8: Accumulated pointcloud of a trajectory with large scale variation, includ- ing views with an average inverse depth of less than 20 cm to ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm). | embodiment, simulator version and control stack | p. 13 (4 Results), p. 12 (4 Results) |
 | Task/environment | 4.2 Quantitative Evaluation We evaluate LSD-SLAM on the publicly available RGB-D dataset [25]. | reset, timeout, object/scene variation | p. 12 (4 Results), p. 12 (4 Results) |
@@ -107,12 +107,12 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| 3.1 The Complete Method The algorithm consists of three major components: tracking, depth map estimation and map optimization as visualized in Fig. | 4.1 Qualitative Results on Large Trajectories We tested the algorithm on several long and challenging trajectories, which include many camera rotations, large scale changes ... | PDF body cue; verify exact table/figure and matched conditions | p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 Results), p. 14 (4 Results), p. 6 (Figure/Table caption) |
+| We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of ... | 4.1 Qualitative Results on Large Trajectories We tested the algorithm on several long and challenging trajectories, which include many camera rotations, large scale changes ... | PDF body cue; verify exact table/figure and matched conditions | p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 Results), p. 14 (4 Results), p. 6 (Figure/Table caption) |
 | Primary metric/result | 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm). | numeric claim only at cited anchor | p. 13 (4 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 13 / 4 Results - extractive PDF cue:** LSD-SLAM (#KF) [9] [15] [14] [7] fr2/desk 4.52 (116) 13.50 x 1.77 9.5 fr2/xyz 1.47 (38) 3.79 24.28 1.18 2.6 sim/desk 0.04 (39) 1.53 - ...
-- **p. 6 / 2 Preliminaries - extractive PDF cue:** Tracking Depth Map Estimation Map Optimization New Image (640 x 480 at 30Hz) Track on Current KF: → estimate SE(3) transformation Current KF Refine Current ...
+- **p. 13 / 4 Results - extractive body cue:** LSD-SLAM (#KF) [9] [15] [14] [7] fr2/desk 4.52 (116) 13.50 x 1.77 9.5 fr2/xyz 1.47 (38) 3.79 24.28 1.18 2.6 sim/desk 0.04 (39) 1.53 - ...
+- **p. 6 / 2 Preliminaries - extractive body cue:** Tracking Depth Map Estimation Map Optimization New Image (640 x 480 at 30Hz) Track on Current KF: → estimate SE(3) transformation Current KF Refine Current ...
 
 ## Generalization and Failure Cases
 
@@ -131,6 +131,7 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 
 | Body reproducibility cue | Anchor |
 |---|---|
+| The resulting direct monocular SLAM system runs in real-time on a CPU. | p. 1 (Body text (section not recovered)) |
 | The new estimate is then obtained by multiplication with the computed update ξ(n+1) = δξ(n) ◦ξ(n). | p. 5 (2 Preliminaries) |
 | The iteratively solved error function then becomes E(ξ) = X i wi(ξ)r2 i (ξ), (8) and the update is computed as δξ(n) = -(JT ... | p. 5 (2 Preliminaries) |
 | The left-multiplication convention used here is consistent with [23], while e.g. the default type-implementation in g2o [18] assumes rightmultiplication. | p. 6 (2 Preliminaries) |
@@ -148,14 +149,14 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 
 ## Limitations and Verification Questions
 
-- **p. 13 / 4 Results - extractive PDF cue:** For LSD-SLAM, we also show the number of keyframes created. 'x' denotes tracking failure, '-' no available data.
-- **p. 14 / 5 Conclusion - extractive PDF cue:** Major components of the proposed method are two key novelties: (1) a direct method to align two keyframes on sim(3), explicitly incorporating and detecting scale-drift ...
-- **p. 14 / 5 Conclusion - extractive PDF cue:** We experimentally showed that the approach reliably tracks and maps even challenging hand-held trajectories with a length of over 500 m, in particular including large ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: In addition to accurate, semi-dense 3D reconstructions, LSD-SLAM also estimates the associated uncertainty. From left to right: Accumulated pointcloud thesholded with different maximum ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: Overview over the complete LSD-SLAM algorithm. In practice, the residuals are highly correlated, such that Σξ is only a lower bound - yet ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4: Statistic normalization: (a) reference image. (b-d): tracked images and inverse variance σ-2 rp of the residual. For pure rotation, depth noise has no ...
+- **p. 13 / 4 Results - extractive body cue:** For LSD-SLAM, we also show the number of keyframes created. 'x' denotes tracking failure, '-' no available data.
+- **p. 14 / 5 Conclusion - extractive body cue:** Major components of the proposed method are two key novelties: (1) a direct method to align two keyframes on sim(3), explicitly incorporating and detecting scale-drift ...
+- **p. 14 / 5 Conclusion - extractive body cue:** We experimentally showed that the approach reliably tracks and maps even challenging hand-held trajectories with a length of over 500 m, in particular including large ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: In addition to accurate, semi-dense 3D reconstructions, LSD-SLAM also estimates the associated uncertainty. From left to right: Accumulated pointcloud thesholded with different maximum ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Overview over the complete LSD-SLAM algorithm. In practice, the residuals are highly correlated, such that Σξ is only a lower bound - yet ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Statistic normalization: (a) reference image. (b-d): tracked images and inverse variance σ-2 rp of the residual. For pure rotation, depth noise has no ...
 
-- **PDF anchors reviewed:** datasets p. 13 (4 Results), p. 12 (4 Results), p. 12 (4 Results), p. 13 (4 Results), metrics p. 14 (Figure/Table caption), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 12 (4 Results), p. 13 (4 Results), p. 14 (4 Results), baselines p. 3 (Figure/Table caption), p. 13 (4 Results), p. 14 (4 Results), results p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 Results), p. 14 (4 Results), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 13 (4 Results), p. 12 (4 Results), p. 12 (4 Results), p. 13 (4 Results), metrics p. 14 (Figure/Table caption), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 12 (4 Results), p. 13 (4 Results), p. 14 (4 Results), baselines p. 3 (Figure/Table caption), p. 13 (4 Results), p. 14 (4 Results), results p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 Results), p. 14 (4 Results), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p057.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p057.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p057.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p057.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Simulation Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | According to the results, we can see an improvement | p. 7 (B. Simulation Results) |
 | C. Hardware Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | We hold the grasp for 20s to show that force ‘equilibrium is achieved and the object pose remains static. ‘Then, the object is lifted ... | p. 8 (C. Hardware Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The goal is for the objects to rotate about a pivot axis on the table, To this, using the distance between the pivot point ... | embodiment, simulator version and control stack | p. 9 (C. Hardware Results), p. 6 (B. Simulation Results) |
 | Task/environment | The simulation uses the same values as the hardware for the hand joints' PD gains. | reset, timeout, object/scene variation | p. 6 (B. Simulation Results), p. 6 (B. Simulation Results) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 - **p. 6 / B. Simulation Results - extractive body cue:** Since the thumb opposes the forces applied by the index and middle finger, thus they have to increase or decrease together, thus the equilibrium cannot ...
 - **p. 8 / C. Hardware Results - extractive body cue:** It can be seen that equilibrium cannot be achieved since while the thumb and middle finger have achieved forces close to desired values within an ...
 
-- **PDF anchors reviewed:** datasets p. 9 (C. Hardware Results), p. 6 (B. Simulation Results), p. 6 (B. Simulation Results), p. 7 (C. Hardware Results), p. 9 (C. Hardware Results), p. 7 (B. Simulation Results), metrics p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 9 (C. Hardware Results), p. 9 (C. Hardware Results), p. 10 (C. Hardware Results), p. 6 (B. Simulation Results), baselines p. 6 (B. Simulation Results), p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 7 (C. Hardware Results), p. 8 (C. Hardware Results), results p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 9 (C. Hardware Results), p. 6 (B. Simulation Results), p. 7 (C. Hardware Results).
+- **Evidence anchors reviewed:** datasets p. 9 (C. Hardware Results), p. 6 (B. Simulation Results), p. 6 (B. Simulation Results), p. 7 (C. Hardware Results), p. 9 (C. Hardware Results), p. 7 (B. Simulation Results), metrics p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 9 (C. Hardware Results), p. 9 (C. Hardware Results), p. 10 (C. Hardware Results), p. 6 (B. Simulation Results), baselines p. 6 (B. Simulation Results), p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 7 (C. Hardware Results), p. 8 (C. Hardware Results), results p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 9 (C. Hardware Results), p. 6 (B. Simulation Results), p. 7 (C. Hardware Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for the success and failure cases is presented in table Ill, We can ... (p. 8, C. Hardware Results).
+- **Metric evidence:** ‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force error of the grasps when it was successful and when it failed (p. 8, C. Hardware Results).
+- **Baseline/ablation evidence:** We compared the controller when using the estimated force values against the raw measurements, with the results shown in Fig. (p. 6, B. Simulation Results).
+- **Failure/negative evidence:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).

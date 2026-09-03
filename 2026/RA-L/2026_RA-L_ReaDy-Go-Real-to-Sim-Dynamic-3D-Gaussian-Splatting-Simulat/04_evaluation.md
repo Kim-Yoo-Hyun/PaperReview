@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2602.11575; PDF retrieval source: https://arxiv.org/pdf/2602.11575. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2602.11575; PDF retrieval source: https://arxiv.org/pdf/2602.11575. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and Library.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The validation scenarios consist of 50 episodes for each environment, and we selected the checkpoint with the best validation performance, which is used for testing ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** These results highlight the importance of incorporating photorealistic dynamic obstacles into the simulation pipeline to achieve robust navigation performance in dynamic real-world environments.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** ReaDy-Go generates photorealistic, geometrically consistent dynamic scenarios with natural human motion from novel viewpoints, enabling navigation dataset generation for target deployment environments.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Visual Navigation Performance in Simulation The impact of photorealistic dynamic GS simulation datasets on visual navigation policies is examined through simulation tests comparing ReaDy-Go against ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** 2) Evaluation metrics: We evaluate navigation performance using Success Rate (SR) and Average Reaching Time (ART).
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** ReaDy-Go maintains high success rates and low average reaching times relatively well, whereas Vid2Sim exhibits a substantial performance drop.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and Library.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The validation scenarios consist of 50 episodes for each environment, and we selected the checkpoint with the best validation performance, which is used for testing ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** These results highlight the importance of incorporating photorealistic dynamic obstacles into the simulation pipeline to achieve robust navigation performance in dynamic real-world environments.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** ReaDy-Go generates photorealistic, geometrically consistent dynamic scenarios with natural human motion from novel viewpoints, enabling navigation dataset generation for target deployment environments.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Visual Navigation Performance in Simulation The impact of photorealistic dynamic GS simulation datasets on visual navigation policies is examined through simulation tests comparing ReaDy-Go against ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** 2) Evaluation metrics: We evaluate navigation performance using Success Rate (SR) and Average Reaching Time (ART).
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** ReaDy-Go maintains high success rates and low average reaching times relatively well, whereas Vid2Sim exhibits a substantial performance drop.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As in simulation, ReaDy-Go and Vid2Sim achieve comparable success rates in Static, but their performance diverges in Dynamic. | p. 7 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | ReaDy-Go achieves comparable success rates in both Static and Dynamic in the real world, consistent with its simulation results across all environments, even though ... | p. 7 (IV. EXPERIMENTS) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and Library.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The validation scenarios consist of 50 episodes for each environment, and we selected the checkpoint with the best validation performance, which is used for testing ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** These results highlight the importance of incorporating photorealistic dynamic obstacles into the simulation pipeline to achieve robust navigation performance in dynamic real-world environments.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** ReaDy-Go generates photorealistic, geometrically consistent dynamic scenarios with natural human motion from novel viewpoints, enabling navigation dataset generation for target deployment environments.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Visual Navigation Performance in Simulation The impact of photorealistic dynamic GS simulation datasets on visual navigation policies is examined through simulation tests comparing ReaDy-Go against ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and Library.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The validation scenarios consist of 50 episodes for each environment, and we selected the checkpoint with the best validation performance, which is used for testing ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** These results highlight the importance of incorporating photorealistic dynamic obstacles into the simulation pipeline to achieve robust navigation performance in dynamic real-world environments.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** ReaDy-Go generates photorealistic, geometrically consistent dynamic scenarios with natural human motion from novel viewpoints, enabling navigation dataset generation for target deployment environments.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Visual Navigation Performance in Simulation The impact of photorealistic dynamic GS simulation datasets on visual navigation policies is examined through simulation tests comparing ReaDy-Go against ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: The proposed real-to-sim dynamic environment sim- ulation pipeline for visual navigation. ReaDy-Go generates photorealistic navigation datasets for dynamic scenarios and trains environment-specific visual ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: ReaDy-Go overview. The proposed photorealistic simulation pipeline for visual navigation in dynamic environments consists of three main components: (1) a real-to-sim dynamic 3D ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualization of the robot expert planner. (a) The robot follows a collision-free path (red) from start (green) to goal (blue). (b) When a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: Qualitative novel-view synthesis results from the proposed dynamic GS simulation pipeline across diverse viewpoints and environments. ReaDy-Go generates photorealistic, geometrically consistent dynamic scenarios ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. First, the proposed human animation module generates plausible body motions for human GS avatars within static GS scenes along given 2D trajectories, without ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Failure case analysis in real-world experiments. ReaDy-Go yields fewer failures than the baselines, especially in failure modes related to dynamic obstacle avoidance, including ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6: Qualitative real-world navigation results. ReaDy-Go avoids a dynamic obstacle, while the baselines collide with it. target environments with six previously unseen humans. For ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 1. The policy achieves over a 50% success rate in both Static and Dynamic, with a higher average reaching time than in the training ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: The proposed real-to-sim dynamic environment sim- ulation pipeline for visual navigation. ReaDy-Go generates photorealistic navigation datasets for dynamic scenarios and trains environment-specific visual ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: ReaDy-Go overview. The proposed photorealistic simulation pipeline for visual navigation in dynamic environments consists of three main components: (1) a real-to-sim dynamic 3D ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Visualization of the robot expert planner. (a) The robot follows a collision-free path (red) from start (green) to goal (blue). (b) When a ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Qualitative novel-view synthesis results from the proposed dynamic GS simulation pipeline across diverse viewpoints and environments. ReaDy-Go generates photorealistic, geometrically consistent dynamic scenarios ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. First, the proposed human animation module generates plausible body motions for human GS avatars within static GS scenes along given 2D trajectories, without ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Failure case analysis in real-world experiments. ReaDy-Go yields fewer failures than the baselines, especially in failure modes related to dynamic obstacle avoidance, including ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Qualitative real-world navigation results. ReaDy-Go avoids a dynamic obstacle, while the baselines collide with it. target environments with six previously unseen humans. For ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 1. The policy achieves over a 50% success rate in both Static and Dynamic, with a higher average reaching time than in the training ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
 | Task/environment | For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and ... | reset, timeout, object/scene variation | p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
@@ -119,11 +119,11 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Primary metric/result | ReaDy-Go achieves comparable success rates in both Static and Dynamic in the real world, consistent with its simulation results across all environments, even though ... | numeric claim only at cited anchor | p. 7 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The validation scenarios consist of 50 episodes for each environment, and we selected the checkpoint with the best validation performance, which is used for testing ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The image resolution is 144×256, and the three consecutive images used by the policy are sampled at 0.5 s intervals.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** In real-world experiments, the policy requires only 18 ms per inference (55 Hz) on the onboard computer, while the camera operates at 20 Hz.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and Library.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** For each task and environment, we evaluate 100 episodes in simulation and 10 episodes in real-world experiments.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The validation scenarios consist of 50 episodes for each environment, and we selected the checkpoint with the best validation performance, which is used for testing ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The image resolution is 144×256, and the three consecutive images used by the policy are sampled at 0.5 s intervals.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** In real-world experiments, the policy requires only 18 ms per inference (55 Hz) on the onboard computer, while the camera operates at 20 Hz.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** For this experiment, the policy is trained on the combined datasets from three environments, i.e., a total of 1,200 episodes from Outside, Lobby, and Library.
 
 ## Generalization and Failure Cases
 
@@ -155,14 +155,14 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** ReaDy-Go yields fewer failures than the baselines, especially in failure modes related to dynamic obstacle avoidance, including Dynamic obstacle collision and Static collision during detour.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Second, while ReaDy-Go and Vid2Sim showed similar numbers of failures in cases unrelated to dynamic obstacle interactions, ReaDy-Go was more robust in situations involving dynamic ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualization of the robot expert planner. (a) The robot follows a collision-free path (red) from start (green) to goal (blue). (b) When a ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** The robot should reach the goal without collisions within the scenario time limit.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** These indicate that real-to-sim simulation with GS is a costeffective and scalable approach to achieve fewer collisions and faster task completion with only a video.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: The proposed real-to-sim dynamic environment sim- ulation pipeline for visual navigation. ReaDy-Go generates photorealistic navigation datasets for dynamic scenarios and trains environment-specific visual ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** ReaDy-Go yields fewer failures than the baselines, especially in failure modes related to dynamic obstacle avoidance, including Dynamic obstacle collision and Static collision during detour.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Second, while ReaDy-Go and Vid2Sim showed similar numbers of failures in cases unrelated to dynamic obstacle interactions, ReaDy-Go was more robust in situations involving dynamic ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Visualization of the robot expert planner. (a) The robot follows a collision-free path (red) from start (green) to goal (blue). (b) When a ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The robot should reach the goal without collisions within the scenario time limit.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** These indicate that real-to-sim simulation with GS is a costeffective and scalable approach to achieve fewer collisions and faster task completion with only a video.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: The proposed real-to-sim dynamic environment sim- ulation pipeline for visual navigation. ReaDy-Go generates photorealistic navigation datasets for dynamic scenarios and trains environment-specific visual ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), results p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), results p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

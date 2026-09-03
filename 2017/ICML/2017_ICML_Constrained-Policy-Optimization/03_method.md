@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v70/achiam17a.html; PDF retrieval source: https://arxiv.org/pdf/1705.10528. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v70/achiam17a.html; PDF retrieval source: https://arxiv.org/pdf/1705.10528. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Constrained Policy Optimization Algorithm 1 Constrained Policy Optimization Input: Initial policy π0 ∈Πθ tolerance α for k = 0, 1, 2, ... ... | p. 6 (6.1. Approximately Solving the CPO Update), p. 4 (5.2. Trust Region Methods) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Trust region algorithms for reinforcement learning (Schulman et al., 2015; 2016) have policy updates of the form πk+1 = arg max π∈Πθ ... | p. 4 (5.2. Trust Region Methods), p. 3 (5. Constrained Policy Optimization) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | Trust region algorithms for reinforcement learning (Schulman et al., 2015; 2016) have policy updates of the form πk+1 = arg max π∈Πθ ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | Despite the approximation, trust region steps usually give monotonic improvements (Schulman et al., 2015; Duan et al., 2016) and have shown state-of-the-art ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (6.1. Approximately Solving the CPO Update), p. 4 (5.2. Trust Region Methods), p. 3 (5. Constrained Policy Optimization), p. 5 (5.3. Trust Region Optimization for Constrained MDPs), p. 4 (5.2. Trust Region Methods), p. 5 (5.3. Trust Region Optimization for Constrained MDPs), objective p. 5 (6.1. Approximately Solving the CPO Update), p. 5 (6.1. Approximately Solving the CPO Update), p. 3 (5. Constrained Policy Optimization), p. 3 (5. Constrained Policy Optimization), p. 6 (6.3. Tightening Constraints via Cost Shaping), p. 6 (6.3. Tightening Constraints via Cost Shaping), temporal p. 4 (5.2. Trust Region Methods), p. 4 (5.2. Trust Region Methods), p. 5 (6.1. Approximately Solving the CPO Update), p. 6 (6.2. Feasibility), p. 6 (6.2. Feasibility), p. 7 (8.1. Evaluating CPO and Comparison Analysis).
+- **Evidence anchors reviewed:** method p. 6 (6.1. Approximately Solving the CPO Update), p. 4 (5.2. Trust Region Methods), p. 3 (5. Constrained Policy Optimization), p. 5 (5.3. Trust Region Optimization for Constrained MDPs), p. 4 (5.2. Trust Region Methods), p. 5 (5.3. Trust Region Optimization for Constrained MDPs), objective p. 5 (6.1. Approximately Solving the CPO Update), p. 5 (6.1. Approximately Solving the CPO Update), p. 3 (5. Constrained Policy Optimization), p. 3 (5. Constrained Policy Optimization), p. 6 (6.3. Tightening Constraints via Cost Shaping), p. 6 (6.3. Tightening Constraints via Cost Shaping), temporal p. 4 (5.2. Trust Region Methods), p. 4 (5.2. Trust Region Methods), p. 5 (6.1. Approximately Solving the CPO Update), p. 6 (6.2. Feasibility), p. 6 (6.2. Feasibility), p. 7 (8.1. Evaluating CPO and Comparison Analysis).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Constrained Policy Optimization Algorithm 1 Constrained Policy Optimization Input: Initial policy π0 ∈Πθ tolerance α for k = 0, 1, 2, ... do Sample a set of trajectories D = ... (p. 6, 6.1. Approximately Solving the CPO Update).
+- **Objective/update evidence:** When the objective is estimated by linearizing around πk as J(πk) + gT (θ -θk), g is the policy gradient, and the standard policy gradient update is obtained by choosing ... (p. 3, 5. Constrained Policy Optimization).
+- **Temporal/runtime evidence:** Trust region algorithms for reinforcement learning (Schulman et al., 2015; 2016) have policy updates of the form πk+1 = arg max π∈Πθ E s∼dπk a∼π [Aπk(s, a)] s.t. ¯DKL(π//πk) ≤δ, ... (p. 4, 5.2. Trust Region Methods).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

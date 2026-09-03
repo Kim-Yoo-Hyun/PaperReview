@@ -1,8 +1,10 @@
 # Ctrl-World: A Controllable Generative World Model for Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://iclr.cc/virtual/2026/poster/10011332.
-> PDF retrieval source: https://arxiv.org/pdf/2510.10125. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://iclr.cc/virtual/2026/poster/10011332.
+> PDF retrieval source: https://arxiv.org/pdf/2510.10125. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2510.10125
 - Code/Project: https://ctrl-world.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Moreover, existing models typically lack the fine-grained control required to capture the 1 arXiv:2510.10125v3 [cs.RO] 1 Mar 2026를 문제로 두고, In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated in Figure 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Moreover, existing models typically lack the fine-grained control required to capture the 1 를 문제로 두고, In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated in Figure 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -26,7 +28,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 1 / ABSTRACT - extractive body cue:** Both of these processes are slow, costly, and difficult to scale.
 - **p. 1 / ABSTRACT - extractive body cue:** World models offer a promising, scalable alternative by enabling policies to rollout within imagination space.
 - **p. 1 / ABSTRACT - extractive body cue:** However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot policies.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Moreover, existing models typically lack the fine-grained control required to capture the 1 arXiv:2510.10125v3 [cs.RO] 1 Mar 2026
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Moreover, existing models typically lack the fine-grained control required to capture the 1.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Equally critical is policy improvement: once weaknesses are revealed, existing methods offer few ways to strengthen policies on failure cases beyond collecting more expert data.
 
 ## Core Idea
@@ -37,8 +39,8 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** To explore a larger search space, we introduce structured perturbations to encourage diversity in rollouts.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** The core contribution of this work is a controllable world model for robot manipulation.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Specifically, robot observation ot = [I1 t , . . . , In t , qt] includes n camera views [I1 t , . . ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2026 Spatial Transformer Temporal Transformer (𝑩×𝑷, 𝑻, 𝑪) (𝑩×𝑻, 𝑷, 𝑪) Timeline Spatial Tokens History Poses + Action ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 1: for i = 0 to M do 2: τ = [oi 0] 3: for j = 0 to N do 4: Current observation: ot ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Some works leverage video prediction models to synthesize robotic trajectories with fake action labels, and these synthetic trajectories can then be used for policy learning ...
 
 ## Observation, State, and Output Interface
 
@@ -74,14 +76,23 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Explicit Limitations and Failure Boundary
 
-- **p. 10 / 6 CONCLUSION - extractive body cue:** Published as a conference paper at ICLR 2026 These limitations may diminish as video backbones become more physically accurate and coherent over time (Ball et ...
 - **p. 5 / 5 EXPERIMENTS - extractive body cue:** The inclusion of diverse actions and failure data is crucial, as it allows us to train a controllable world model that can simulate a wide ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Although some failure trajectories are included in the DROID dataset, there are still many failure modes outside the data distribution.
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 3: Comparison of instruction-following and success rate across methods and tasks. Breakdown for policy evaluation. We present the instruction-following and low-level execution success rates ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Published as a conference paper at ICLR 2026 precise modeling of complex physics dynamics such as collisions, objects sliding away, rotations, etc.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** We also observe that generalist policies tend to keep retrying in the real world after failed attempts, which the world model sometimes does not capture.
 - **p. 5 / 5 EXPERIMENTS - extractive body cue:** This includes about 76k successful and about 19k failed trajectories.
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** Prior models rely on single-view prediction, suffering from partial observability and hallucinations (e.g., failing to move the green towel or grasp the red bowl).
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Prediction highlighted in the green box are inferred from other camera views, while those in the red box are retrieved from memory. methods WPE, IRASim ...
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Moreover, existing models typically lack the fine-grained control required to capture the 1 arXiv:2510.10125v3 [cs.RO] 1 Mar 2026를 문제로 두고, In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated in Figure 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Moreover, existing models typically lack the fine-grained control required to capture the 1 를 문제로 두고, In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated in Figure 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Moreover, existing models typically lack the fine-grained control required to capture the ... (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** Building on early works (Finn & Levine, 2017; Ebert et al., 2018; Xie et al., 2019; Dasari et al., 2019; Yang et al., 2023; Wu et al., 2024) as well ... (p. 3, 1 INTRODUCTION).
+- **Evaluation boundary:** Table 2: Ablations on key components in Ctrl-World. Removing memory mechanisms, frame-level action conditioning or multi-view joint predictions all lead to a performance drop. 2025) and IRASim (Zhu et al., ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** We also observe that generalist policies tend to keep retrying in the real world after failed attempts, which the world model sometimes does not capture. (p. 9, 5 EXPERIMENTS).

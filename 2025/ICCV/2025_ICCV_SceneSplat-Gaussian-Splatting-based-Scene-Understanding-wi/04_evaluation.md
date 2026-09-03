@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (F
 
 ## Evaluation Body Digest
 
-- **p. 3 / 3. SceneSplat Dataset - extractive PDF cue:** The dataset contains about seven thousand scenes, including both real-world and synthetic environments.
-- **p. 8 / 5.3. Further Statistical Evaluation - extractive PDF cue:** We evaluate SceneSplat using different number of nearest 3DGS neighbors for zero-shot task on ScanNet++ validation split.
-- **p. 3 / 3. SceneSplat Dataset - extractive PDF cue:** We introduce SceneSplat-7K - a carefully curated dataset of 3D Gaussian Splats representing indoor scenes.
-- **p. 4 / 3.2. Data Statistic - extractive PDF cue:** SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica [46], Hypersim [43], 3RScan [49], ARKitScenes [1], and ...
-- **p. 6 / 5.1. Vision-Language Pretraining - extractive PDF cue:** When trained on ScanNet, SceneSplat achieves state-of-the-art results, leading to 5.9% and 2.2% f-mIoU increases on the ScanNet200 and Matterport3D benchmarks.
-- **p. 6 / 5.1. Vision-Language Pretraining - extractive PDF cue:** Given text queries and SceneSplat inference results for a 3DGS scene, we can effectively localize the corresponding splats in 3D (highlighted in red for queries ...
-- **p. 7 / 5.3. Further Statistical Evaluation - extractive PDF cue:** SceneSplat here is trained on the single dataset respectively.
-- **p. 7 / 5.3. Further Statistical Evaluation - extractive PDF cue:** Reported on the Matterport3D test split labeled in 21 semantic classes, the box plot shows a clear positive trend between the input 3DGS scene training ...
+- **p. 3 / 3. SceneSplat Dataset - extractive body cue:** The dataset contains about seven thousand scenes, including both real-world and synthetic environments.
+- **p. 8 / 5.3. Further Statistical Evaluation - extractive body cue:** We evaluate SceneSplat using different number of nearest 3DGS neighbors for zero-shot task on ScanNet++ validation split.
+- **p. 3 / 3. SceneSplat Dataset - extractive body cue:** We introduce SceneSplat-7K - a carefully curated dataset of 3D Gaussian Splats representing indoor scenes.
+- **p. 4 / 3.2. Data Statistic - extractive body cue:** SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica [46], Hypersim [43], 3RScan [49], ARKitScenes [1], and ...
+- **p. 6 / 5.1. Vision-Language Pretraining - extractive body cue:** When trained on ScanNet, SceneSplat achieves state-of-the-art results, leading to 5.9% and 2.2% f-mIoU increases on the ScanNet200 and Matterport3D benchmarks.
+- **p. 6 / 5.1. Vision-Language Pretraining - extractive body cue:** Given text queries and SceneSplat inference results for a 3DGS scene, we can effectively localize the corresponding splats in 3D (highlighted in red for queries ...
+- **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** SceneSplat here is trained on the single dataset respectively.
+- **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** Reported on the Matterport3D test split labeled in 21 semantic classes, the box plot shows a clear positive trend between the input 3DGS scene training ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (F
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Label-free 3DGS Pretraining | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on ScanNet++ primarily due ... | p. 6 (5.2. Label-free 3DGS Pretraining) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We ... | p. 7 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (F
 
 ## Dataset / Benchmark Role
 
-- **p. 3 / 3. SceneSplat Dataset - extractive PDF cue:** The dataset contains about seven thousand scenes, including both real-world and synthetic environments.
-- **p. 8 / 5.3. Further Statistical Evaluation - extractive PDF cue:** We evaluate SceneSplat using different number of nearest 3DGS neighbors for zero-shot task on ScanNet++ validation split.
-- **p. 3 / 3. SceneSplat Dataset - extractive PDF cue:** We introduce SceneSplat-7K - a carefully curated dataset of 3D Gaussian Splats representing indoor scenes.
-- **p. 4 / 3.2. Data Statistic - extractive PDF cue:** SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica [46], Hypersim [43], 3RScan [49], ARKitScenes [1], and ...
-- **p. 6 / 5.1. Vision-Language Pretraining - extractive PDF cue:** When trained on ScanNet, SceneSplat achieves state-of-the-art results, leading to 5.9% and 2.2% f-mIoU increases on the ScanNet200 and Matterport3D benchmarks.
-- **p. 6 / 5.1. Vision-Language Pretraining - extractive PDF cue:** Given text queries and SceneSplat inference results for a 3DGS scene, we can effectively localize the corresponding splats in 3D (highlighted in red for queries ...
-- **p. 7 / 5.3. Further Statistical Evaluation - extractive PDF cue:** SceneSplat here is trained on the single dataset respectively.
-- **p. 7 / 5.3. Further Statistical Evaluation - extractive PDF cue:** Reported on the Matterport3D test split labeled in 21 semantic classes, the box plot shows a clear positive trend between the input 3DGS scene training ...
+- **p. 3 / 3. SceneSplat Dataset - extractive body cue:** The dataset contains about seven thousand scenes, including both real-world and synthetic environments.
+- **p. 8 / 5.3. Further Statistical Evaluation - extractive body cue:** We evaluate SceneSplat using different number of nearest 3DGS neighbors for zero-shot task on ScanNet++ validation split.
+- **p. 3 / 3. SceneSplat Dataset - extractive body cue:** We introduce SceneSplat-7K - a carefully curated dataset of 3D Gaussian Splats representing indoor scenes.
+- **p. 4 / 3.2. Data Statistic - extractive body cue:** SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica [46], Hypersim [43], 3RScan [49], ARKitScenes [1], and ...
+- **p. 6 / 5.1. Vision-Language Pretraining - extractive body cue:** When trained on ScanNet, SceneSplat achieves state-of-the-art results, leading to 5.9% and 2.2% f-mIoU increases on the ScanNet200 and Matterport3D benchmarks.
+- **p. 6 / 5.1. Vision-Language Pretraining - extractive body cue:** Given text queries and SceneSplat inference results for a 3DGS scene, we can effectively localize the corresponding splats in 3D (highlighted in red for queries ...
+- **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** SceneSplat here is trained on the single dataset respectively.
+- **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** Reported on the Matterport3D test split labeled in 21 semantic classes, the box plot shows a clear positive trend between the input 3DGS scene training ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We present the 3DGS indoor dataset SceneSplat-7K which includes 7K scenes generated from ARKitScenes [1], Replica [46], ScanNet [5], ScanNet++ [57], Hypersim[43], 3RScan ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. Dataset Statistics. The proposed SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica[46], Hypersim[43], 3RScan[49], ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2. SceneSplat Overview. The SceneSplat-7K dataset enables Vision-Language Pretraining and Self-Supervised Pretrain- ing. For vision-language pretraining, we associate each 3D Gaussian primitive with semantic ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative Results of Zero-Shot 3D Semantic Seg- mentation on ScanNet++. SceneSplat demonstrates competitive zero-shot performance, note how our model correctly annotate the regions ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Text-Based 3DGS Scene Query. Given text queries and SceneSplat inference results for a 3DGS scene, we can effec- tively localize the corresponding splats ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Tab. 3. Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on Scan- Net++ ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We report ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. GaussianSSL Ablation Experiments. We adopt the pre- training on the SceneSplat-7K dataset and report fine-tuning mIoU and mAcc on indoor semantic segmentation tasks. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present the 3DGS indoor dataset SceneSplat-7K which includes 7K scenes generated from ARKitScenes [1], Replica [46], ScanNet [5], ScanNet++ [57], Hypersim[43], 3RScan ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Dataset Statistics. The proposed SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica[46], Hypersim[43], 3RScan[49], ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2. SceneSplat Overview. The SceneSplat-7K dataset enables Vision-Language Pretraining and Self-Supervised Pretrain- ing. For vision-language pretraining, we associate each 3D Gaussian primitive with semantic ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative Results of Zero-Shot 3D Semantic Seg- mentation on ScanNet++. SceneSplat demonstrates competitive zero-shot performance, note how our model correctly annotate the regions ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Text-Based 3DGS Scene Query. Given text queries and SceneSplat inference results for a 3DGS scene, we can effec- tively localize the corresponding splats ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Tab. 3. Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on Scan- Net++ ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We report ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. GaussianSSL Ablation Experiments. We adopt the pre- training on the SceneSplat-7K dataset and report fine-tuning mIoU and mAcc on indoor semantic segmentation tasks. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset contains about seven thousand scenes, including both real-world and synthetic environments. | embodiment, simulator version and control stack | p. 3 (3. SceneSplat Dataset), p. 8 (5.3. Further Statistical Evaluation) |
 | Task/environment | We evaluate SceneSplat using different number of nearest 3DGS neighbors for zero-shot task on ScanNet++ validation split. | reset, timeout, object/scene variation | p. 8 (5.3. Further Statistical Evaluation), p. 3 (3. SceneSplat Dataset) |
@@ -123,9 +123,9 @@ PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (F
 | Primary metric/result | Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We ... | numeric claim only at cited anchor | p. 7 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / 3.1. Data Processing - extractive PDF cue:** Starting with the training views, we select scenes with at least 400 frames to ensure sufficient multi-view coverage.
-- **p. 8 / 5.3. Further Statistical Evaluation - extractive PDF cue:** Reported on the Matterport3D test split with 370 scenes, Fig.
-- **p. 6 / 4.3. Self Supervised Pretraining - extractive PDF cue:** For a batch of Gaussian scenes {Gn}B n=1 (global/local views Gb g, Gb l), we extract tokenized bottleneck features z ∈RM×de, compute global representations ¯z ...
+- **p. 3 / 3.1. Data Processing - extractive body cue:** Starting with the training views, we select scenes with at least 400 frames to ensure sufficient multi-view coverage.
+- **p. 8 / 5.3. Further Statistical Evaluation - extractive body cue:** Reported on the Matterport3D test split with 370 scenes, Fig.
+- **p. 6 / 4.3. Self Supervised Pretraining - extractive body cue:** For a batch of Gaussian scenes {Gn}B n=1 (global/local views Gb g, Gb l), we extract tokenized bottleneck features z ∈RM×de, compute global representations ¯z ...
 
 ## Generalization and Failure Cases
 
@@ -159,10 +159,10 @@ PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (F
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5.3. Further Statistical Evaluation - extractive PDF cue:** Low PSNRs usually come out of blurry input images, poor Gaussian centers optimization, and insufficient scene coverage, where the 3DGS parameters cannot resolve the scene ...
-- **p. 7 / 5.3. Further Statistical Evaluation - extractive PDF cue:** Although the collected labels are not perfect, large-scale pretraining can filter noise and learn meaningful patterns.
+- **p. 8 / 5.3. Further Statistical Evaluation - extractive body cue:** Low PSNRs usually come out of blurry input images, poor Gaussian centers optimization, and insufficient scene coverage, where the 3DGS parameters cannot resolve the scene ...
+- **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** Although the collected labels are not perfect, large-scale pretraining can filter noise and learn meaningful patterns.
 
-- **PDF anchors reviewed:** datasets p. 3 (3. SceneSplat Dataset), p. 8 (5.3. Further Statistical Evaluation), p. 3 (3. SceneSplat Dataset), p. 4 (3.2. Data Statistic), p. 6 (5.1. Vision-Language Pretraining), p. 6 (5.1. Vision-Language Pretraining), metrics p. 7 (Figure/Table caption), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation), p. 6 (5.1. Vision-Language Pretraining), p. 6 (5.1. Vision-Language Pretraining), p. 7 (5.3. Further Statistical Evaluation), baselines p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5.2. Label-free 3DGS Pretraining), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation), p. 5 (Figure/Table caption), results p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (Figure/Table caption), p. 6 (5.1. Vision-Language Pretraining), p. 3 (Figure/Table caption), p. 7 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation).
+- **Evidence anchors reviewed:** datasets p. 3 (3. SceneSplat Dataset), p. 8 (5.3. Further Statistical Evaluation), p. 3 (3. SceneSplat Dataset), p. 4 (3.2. Data Statistic), p. 6 (5.1. Vision-Language Pretraining), p. 6 (5.1. Vision-Language Pretraining), metrics p. 7 (Figure/Table caption), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation), p. 6 (5.1. Vision-Language Pretraining), p. 6 (5.1. Vision-Language Pretraining), p. 7 (5.3. Further Statistical Evaluation), baselines p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5.2. Label-free 3DGS Pretraining), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation), p. 5 (Figure/Table caption), results p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (Figure/Table caption), p. 6 (5.1. Vision-Language Pretraining), p. 3 (Figure/Table caption), p. 7 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

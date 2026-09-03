@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p033.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p033.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p033.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p033.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, ...
 - **p. 4 / B. Generating Motion Plans - extractive body cue:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any ...
-- **p. 1 / Front matter - extractive body cue:** g novel cabinets, drawers, and ovens
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** g novel cabinets, drawers, and ovens
 
 ## Source Evidence Cues
 
@@ -32,7 +32,7 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | We provide additional details about Robot Utility Models (RUM) [16]. | p. 20 (A. Robot Utility Models) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | We provide additional details about Robot Utility Models (RUM) [16]. | p. 20 (A. Robot Utility Models) |
@@ -42,7 +42,7 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -54,7 +54,7 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 | Input/observation | additional, heads, Mask, RCNN, however, rather, directly, predicting, outputs, RGB-D, input, adopt, two-stage, involving | egocentric RGB-D, language/task goal, base-arm proprioception | body cue; exact tensor/frame verify |
 | State/latent | additional, heads, Mask, RCNN, however, rather, directly, predicting, outputs, RGB-D | map/object/contact state와 base-arm coordination decision | body cue; notation verify |
 | Action/output | considered, broad, ways, putting, together, system, modular, end-to-end, learning, ultimately | base motion plus arm/gripper action | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | long-horizon task utility under reachability/contact constraints | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | long-horizon task utility under reachability/contact constraints | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -72,14 +72,14 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | 2nd vs Sth action from the current timestep), and whether initializing the policy with the simulation policy helps or not. ‘The best ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | Very briefly, MOSART adapts a Mask RCNN model [28] for inferring articulation parameters, extends a trajectory optimization framework for producing whole body ... | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | not recovered | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | not recovered | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | 2nd vs Sth action from the current timestep), and whether initializing the policy with the simulation policy helps or not. ‘The best ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | Very briefly, MOSART adapts a Mask RCNN model [28] for inferring articulation parameters, extends a trajectory optimization framework for producing whole body ... | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -119,8 +119,17 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 20 (A. Robot Utility Models), objective 본문 anchor 없음, temporal p. 20 (B. Sim2Real Behavior Cloning), p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 4 (A. Predicting Articulation Parameters), p. 4 (A. Predicting Articulation Parameters).
+- **Evidence anchors reviewed:** method p. 20 (A. Robot Utility Models), objective 본문 anchor 없음, temporal p. 20 (B. Sim2Real Behavior Cloning), p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 4 (A. Predicting Articulation Parameters), p. 4 (A. Predicting Articulation Parameters).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Very briefly, MOSART adapts a Mask RCNN model [28] for inferring articulation parameters, extends a trajectory optimization framework for producing whole body motion plans [26], and utilizes proprioceptive feedback for ... (p. 2, 1. Iyrropucrion).
+- **Objective/update evidence:** We provide additional details about Robot Utility Models (RUM) [16]. (p. 20, A. Robot Utility Models).
+- **Temporal/runtime evidence:** For most successful trials, the robot opens the drawer / cupboard completely (ie. drawers by 35cm and cupboards by 90°) in a graceful manner (see videos in supplementary materials). (p. 7, IV. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

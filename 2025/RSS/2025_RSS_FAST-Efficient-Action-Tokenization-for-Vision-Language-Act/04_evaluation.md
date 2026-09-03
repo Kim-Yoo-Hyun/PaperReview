@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | We report success rate on individual clothing items. | p. 7 (A. Experimental Setup) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular ... | p. 2 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | fon a large dataset of IM action sequences trained the universal tokenizer on the most diverse real robot dataset we could assemble, which includes ... | embodiment, simulator version and control stack | p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup) |
 | Task/environment | We test FAST across 7 evaluation environments: 6 real-robot tasks and / simulation environment. | reset, timeout, object/scene variation | p. 6 (A. Experimental Setup), p. 6 (VI. EXPERIMENTS) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 - **p. 8 / B. Comparing Action Tokenizers for VLA Training - extractive body cue:** While far from perfect, the level of generality and robustness of this policy substantially exceeds that of prior DROID policies.
 - **p. 10 / C. Universal Action Tokenizer - extractive body cue:** ‘To summarize, we have demonstrated that FAST tokenization allows us to train autoregressive VLA on complex, dexterous robot tasks that prior tokenization schemes completely fail ...
 
-- **PDF anchors reviewed:** datasets p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (VI. EXPERIMENTS), p. 7 (A. Experimental Setup), metrics p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (VI. EXPERIMENTS), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), results p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup).
+- **Evidence anchors reviewed:** datasets p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (VI. EXPERIMENTS), p. 7 (A. Experimental Setup), metrics p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (VI. EXPERIMENTS), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), results p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous tasks like laundry folding, and ... (p. 6, A. Experimental Setup).
+- **Metric evidence:** We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous tasks like laundry folding, and ... (p. 6, A. Experimental Setup).
+- **Baseline/ablation evidence:** We fine-tune the VLA models for robot action prediction, without weight freezing. (p. 6, A. Experimental Setup).
+- **Failure/negative evidence:** We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures to help readers get a sense of the policy's capabilities (p. 18, B. Discussion of Alternative Compression Approaches).

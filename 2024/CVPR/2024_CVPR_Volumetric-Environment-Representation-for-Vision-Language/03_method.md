@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | The environment representation is first reshaped as F 3d′ t ∈ RDe×XY Z, and then adopt multi-layer transformers (MLT) to model the ... | p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | We introduce cross-view attention (CVA) to aggregate their features (F 2d for each view) into a unified volumetric representation F 3d with ... | p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation) |
@@ -86,11 +86,11 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Based on online collected VERs, our agent performs volume state estimation and builds episodic memory for predicting the next step. | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | At time step t, the agent looks around and obtains multi-view observations of its surrounding scene from the current location. | Hz/fps, inference time and control rate |
 | Memory | map/scene graph, pose history와 current local goal. | Based on online collected VERs, our agent performs volume state estimation and builds episodic memory for predicting the next step. | window and reset |
-| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -129,8 +129,17 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation), p. 5 (3.3. Action Prediction), p. 3 (3. Approach), objective p. 4 (3.1. Environment Encoder), p. 6 (3.5. Implementation Details), p. 6 (3.5. Implementation Details), p. 4 (3.1. Environment Encoder), p. 5 (3.3. Action Prediction), p. 5 (3.3. Action Prediction), temporal p. 1 (Abstract), p. 3 (3. Approach), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 6 (3.5. Implementation Details).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation), p. 5 (3.3. Action Prediction), p. 3 (3. Approach), objective p. 4 (3.1. Environment Encoder), p. 6 (3.5. Implementation Details), p. 6 (3.5. Implementation Details), p. 4 (3.1. Environment Encoder), p. 5 (3.3. Action Prediction), p. 5 (3.3. Action Prediction), temporal p. 1 (Abstract), p. 3 (3. Approach), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 6 (3.5. Implementation Details).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** A combination of the L1 loss and the IoU loss [67] is used as the training objective. (p. 4, 3.1. Environment Encoder).
+- **Objective/update evidence:** A combination of the L1 loss and the IoU loss [67] is used as the training objective. (p. 4, 3.1. Environment Encoder).
+- **Temporal/runtime evidence:** By combining both of them, the agent predicts the next step accurately until stops. (p. 6, 3.5. Implementation Details).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

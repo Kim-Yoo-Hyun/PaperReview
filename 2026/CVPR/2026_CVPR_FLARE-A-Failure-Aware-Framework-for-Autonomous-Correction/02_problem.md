@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulatio
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | We formalize this challenge by introducing a taxonomy of failure states. | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | Following modern VLA architectures [4, 15, 18], the policy is Markovian-lacking history-and predicts an action chunk at based on the current visual ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Following modern VLA architectures [4, 15, 18], the policy is Markovian-lacking history-and predicts an action chunk at based on the current visual ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Following, modern, VLA, architectures, policy, Markovian-lacking, history-and, predicts, action, chunk | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | identifies, required, reset, skill, directs, control, system, swap | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: Following, modern, VLA, architectures, policy, Markovian-lacking, history-and, predicts, action, chunk | p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: FLARE, Failure-Aware, Retry/Reset, framework, designed, transform, brittle, VLAs | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Methodology) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulatio
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 6 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulatio
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 3 (3. Methodology), p. 5 (3.4. Unified Training and Closed-Loop Inference)): To this end, we propose FLARE, a Failure-Aware Retry/Reset framework designed to transform brittle VLAs into resilient embodied agents (Fig.
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 3 (3. Methodology), p. 5 (3.4. Unified Training and Closed-Loop Inference)): To this end, we propose FLARE, a Failure-Aware Retry/Reset framework designed to transform brittle VLAs into resilient embodied agents (Fig.
 
 - **p. 2 / 1. Introduction - extractive body cue:** We introduce a perturbation-bridging augmentation strategy that injects random pose perturbations between task segments, followed by a bridging segments that reconnects them.
 - **p. 3 / 3. Methodology - extractive body cue:** Our method provides a distinct solution for each case, training a unified VLA system to handle both (Fig.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 1 (1. Introduction), objective p. 5 (3.4. Unified Training and Closed-Loop Inference).
+- **Evidence anchors reviewed:** problem p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 1 (1. Introduction), objective p. 5 (3.4. Unified Training and Closed-Loop Inference).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Unlike humans, VLAs lack an intrinsic ability for continuous selfcorrection. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** To this end, we propose FLARE, a Failure-Aware Retry/Reset framework designed to transform brittle VLAs into resilient embodied agents (Fig. (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** This leads to a critical failure: when a minor perturbation creates a state with a valid se t but a novel sr t, the policy incorrectly interprets this valid state ... (p. 3, 3.1. Problem Formulation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (B. Training Data Modalities and Preprocessing),
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | + Observation o,: An observation at a given timestep consists of two synchronized palm camera images Tpinky and Fenn captured at the ... | p. 4 (B. Training Data Modalities and Preprocessing), p. 5 (B. Training Data Modalities and Preprocessing) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | To effectively learn from our multimodal, diverse data, our training Pipeline leverages large-scale pre-trained visual encoders and shows strong performance across different ... | p. 5 (B. Training Data Modalities and Preprocessing), p. 3 (C. Human Action Tracking Systems) |
@@ -80,8 +80,8 @@ PDF body method statement (p. 4 (B. Training Data Modalities and Preprocessing),
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | + Observation o,: An observation at a given timestep consists of two synchronized palm camera images Tpinky and Fenn captured at the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | ‘Action ai-;n-1: An action chunk of size n that includes the current timestep. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
-| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -126,8 +126,17 @@ PDF body method statement (p. 4 (B. Training Data Modalities and Preprocessing),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (B. Training Data Modalities and Preprocessing), p. 5 (B. Training Data Modalities and Preprocessing), p. 3 (C. Human Action Tracking Systems), p. 5 (B. Training Data Modalities and Preprocessing), p. 4 (B. Training Data Modalities and Preprocessing), p. 2 (C. Human Action Tracking Systems), objective p. 5 (B. Training Data Modalities and Preprocessing), p. 2 (C. Human Action Tracking Systems), temporal p. 4 (B. Training Data Modalities and Preprocessing), p. 4 (B. Training Data Modalities and Preprocessing), p. 3 (A. Data Collection System), p. 6 (B. Evaluation Tasks), p. 6 (B. Evaluation Tasks), p. 1 (1. IyrRopuction).
+- **Evidence anchors reviewed:** method p. 4 (B. Training Data Modalities and Preprocessing), p. 5 (B. Training Data Modalities and Preprocessing), p. 3 (C. Human Action Tracking Systems), p. 5 (B. Training Data Modalities and Preprocessing), p. 4 (B. Training Data Modalities and Preprocessing), p. 2 (C. Human Action Tracking Systems), objective p. 5 (B. Training Data Modalities and Preprocessing), p. 2 (C. Human Action Tracking Systems), temporal p. 4 (B. Training Data Modalities and Preprocessing), p. 4 (B. Training Data Modalities and Preprocessing), p. 3 (A. Data Collection System), p. 6 (B. Evaluation Tasks), p. 6 (B. Evaluation Tasks), p. 1 (1. IyrRopuction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To effectively learn from our multimodal, diverse data, our training Pipeline leverages large-scale pre-trained visual encoders and shows strong performance across different policy architectures. (p. 5, B. Training Data Modalities and Preprocessing).
+- **Objective/update evidence:** ‘Through the careful design of our hardware, observation, and action interfaces, we are able to train dexterous robot policies using a simple behavior cloning (BC) objective [31, 37, 36}. (p. 5, B. Training Data Modalities and Preprocessing).
+- **Temporal/runtime evidence:** + Observation o,: An observation at a given timestep consists of two synchronized palm camera images Tpinky and Fenn captured at the current timestep, aS Well as a sequence of ... (p. 4, B. Training Data Modalities and Preprocessing).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -1,8 +1,10 @@
 # VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html.
-> PDF retrieval source: https://arxiv.org/pdf/2507.01125. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html.
+> PDF retrieval source: https://arxiv.org/pdf/2507.01125. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2507.01125
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 ## Why Read It
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Prior work in robot exploration broadly uses traditional 3D scene representations, such as occupancy grids and voxel grids.를 문제로 두고, We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), p. 6 (V. RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** We consider a robotic exploration problem in which a robot has an onboard, forward-facing RGB-D camera with reliable state estimation. (p. 3, III. PROBLEM FORMULATION).
+- **Actual contribution:** We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** The results suggest that our method is able to outperform both baselines on both maps because we reason about both semantic and geometric information gain. (p. 6, V. RESULTS).
+- **Explicit failure boundary:** In the second map, we expect methods that do not account for geometric information gain to struggle to find the query object. (p. 6, V. RESULTS).

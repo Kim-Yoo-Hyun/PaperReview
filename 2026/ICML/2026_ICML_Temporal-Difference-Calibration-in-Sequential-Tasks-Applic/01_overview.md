@@ -1,8 +1,10 @@
 # Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2604.20472.
-> PDF retrieval source: https://arxiv.org/pdf/2604.20472. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2604.20472.
+> PDF retrieval source: https://arxiv.org/pdf/2604.20472. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2604.20472
 - Code/Project: https://shellytechnion.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, neural networks are commonly used in sequential decision problems as well, for example, in reinforcement and imitation learning (Black et al., 2024; Guo et al., 2025).를 문제로 두고, Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. Problem Formulation), p. 6 (5. Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, neural networks are commonly used in sequential decision problems as well, for example, in reinforcement and imitation learning (Black et al., 2024; Guo et al., 2025). (p. 1, 1. Introduction).
+- **Actual contribution:** This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence. (p. 1, 1. Introduction).
+- **Evaluation boundary:** Table 3. Benchmark statistics: task split into seen/unseen subsets and corresponding numbers of training and evaluation rollouts. Table 3 summarize each benchmark statistics on the number of tasks and rollouts. ... (p. 17, Figure/Table caption).
+- **Explicit failure boundary:** We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones and is widely used for uncertainty quantification in LLMs (Huang et al., ... (p. 9, 6.4. TD loss improves calibration and failure detection).

@@ -1,8 +1,8 @@
 # Differentiable Robust Model Predictive Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p003.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p003.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p003.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p003.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, MPC, robust control, differentiable optimization, uncertainty, Robotarium
 - Official paper: https://www.roboticsproceedings.org/rss20/p003.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p003.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p003.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -87,3 +87,12 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 ## Why Read It
 
 Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 However, when applied to autonomous systems acting in the real-world, deterministic MPC is often unable to respond to large disturbances that occur due to environmental factors, model uncertainty, etc.를 문제로 두고, The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (II. MATHEMATICAL BACKGROUND), p. 3 (II. MATHEMATICAL BACKGROUND), p. 1 (I. INTRODUCTION), p. 3 (II. MATHEMATICAL BACKGROUND), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This allows for an implicit form of feedback since the controls are reoptimized from the current state of the system at every time step of the problem [43]. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** In summary, the main contributions of this work include: 1) the derivation of a general differentiable optimal control framework enabled through a novel application of the implicit function theorem, 2) ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 11: Robot arm numerical comparisons. As Diff-MPC [5] uses an LQ approximation to the control problem, their algorithm is able to achieve very fast timings. However, this results in ... (p. 20, Figure/Table caption).
+- **Explicit failure boundary:** For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of disturbances received, leading to a large number of failures even when controlled ... (p. 10, V. EXPERIMENTS).

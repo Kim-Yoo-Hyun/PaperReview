@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00115009; PDF retrieval source: https://doi.org/10.1007/BF00115009. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00115009; PDF retrieval source: https://doi.org/10.1007/BF00115009. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3.2 A random-walk example | SYSTEM / EVALUATION SCOPE UNRESOLVED | Averaging over training sets, we found that performance improved rapidly as A was reduced below 1 (the supervised-learning method) and was best at ,~ ... | p. 13 (3.2 A random-walk example) |
 | 6.1 Samuel's checker-playing program | SYSTEM / EVALUATION SCOPE UNRESOLVED | Nevertheless, SamueFs learning procedure was overall very successful; it played an imt)ortant role in significantly improving the play of his checkerplaying program until it ... | p. 29 (6.1 Samuel's checker-playing program) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This measure was averaged over 100 training sets to produce the data shown. | embodiment, simulator version and control stack | p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example) |
 | Task/environment | Instead, the Aw's were accumulated over sequences and only used to update the weight vector after the complete presentation of a training set. | reset, timeout, object/scene variation | p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 - **p. 27 / 5.3 Prediction by a fixed interval - extractive body cue:** Although this problem involves a sequence of predictions, TD methods cannot be directly applied because each prediction is of a different event and thus there ...
 - **p. 13 / 3.2 A random-walk example - extractive body cue:** The answer is that the Widrow-Hoff procedure only minimizes error on the training set; it does not necessarily minimize error for future experience.
 
-- **PDF anchors reviewed:** datasets p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), metrics p. 13 (3.2 A random-walk example), p. 28 (6.1 Samuel's checker-playing program), p. 12 (Figure/Table caption), p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), baselines p. 22 (4.2 Optimality and learning rate), p. 24 (4.2 Optimality and learning rate), results p. 13 (3.2 A random-walk example), p. 29 (6.1 Samuel's checker-playing program), p. 30 (6.3 Holland's bucket brigade), p. 14 (3.2 A random-walk example), p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example).
+- **Evidence anchors reviewed:** datasets p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), metrics p. 13 (3.2 A random-walk example), p. 28 (6.1 Samuel's checker-playing program), p. 12 (Figure/Table caption), p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), baselines p. 22 (4.2 Optimality and learning rate), p. 24 (4.2 Optimality and learning rate), results p. 13 (3.2 A random-walk example), p. 29 (6.1 Samuel's checker-playing program), p. 30 (6.3 Holland's bucket brigade), p. 14 (3.2 A random-walk example), p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 1. ....... t~~0 ~@ A game-playing example showing the inefficiency of supervised-learning methods. Each circle represents a position or class of positions from a two- person board game. The ... (p. 9, Figure/Table caption).
+- **Metric evidence:** The )~ = t data points represent performances of the Widrow-Hoff supervised-learning procedure. a measure of the performance of a learning procedure on a training set, we used the root ... (p. 13, 3.2 A random-walk example).
+- **Baseline/ablation evidence:** This procedure may require as much as O(n a) computation per time step as compared to O(n) for the supervised-learning and TD methods. (p. 22, 4.2 Optimality and learning rate).
+- **Failure/negative evidence:** In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a packet-switched telecomnnmications network one may want to pre(tict the total delay in ... (p. 25, 5.1 Predicting cumulative outcomes).

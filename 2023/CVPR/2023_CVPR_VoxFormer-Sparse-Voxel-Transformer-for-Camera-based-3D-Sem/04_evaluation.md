@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.12251; PDF retrieval source: https://arxiv.org/pdf/2302.12251. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.12251; PDF retrieval source: https://arxiv.org/pdf/2302.12251. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Performance), p. 6 (4.2. Performance)
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** SemanticKITTI SSC benchmark is interested in a volume of 51.2m ahead of the car, 25.6m to left and right side, and 6.4m in height.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We verify VoxFormer on SemanticKITTI [5], which provides dense semantic annotations for each LiDAR sweep from the KITTI Odometry Benchmark [71] composed of 22 outdoor ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We report the results within different ranges on the validation set, and the results within the full range on the hidden test set are in ...
-- **p. 7 / 4.2. Performance - extractive PDF cue:** VoxFormer shows a large advancement in completing small objects compared to the main baseline MonoScene such as the bicycle (0.07 →5.22), motorcycle (0.05 →2.98), bicyclist ...
-- **p. 6 / 4.2. Performance - extractive PDF cue:** VoxFormer-S outperforms MonoScene by a large margin in terms of geometric completion (36.80 →44.02, 19.62%); see Table 1.
-- **p. 7 / 4.2. Performance - extractive PDF cue:** Our superiority over others for small objects.
-- **p. 6 / 4.2. Performance - extractive PDF cue:** Meanwhile, the semantic score is also improved by 9.29% without sacrificing IoU.
-- **p. 7 / 4.2. Performance - extractive PDF cue:** For example, the IoU scores of building, parking, and terrain categories are respectively improved by 10.71%, 27.03%, and 10.35% inside the full volume because VoxFormer-S ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** SemanticKITTI SSC benchmark is interested in a volume of 51.2m ahead of the car, 25.6m to left and right side, and 6.4m in height.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We verify VoxFormer on SemanticKITTI [5], which provides dense semantic annotations for each LiDAR sweep from the KITTI Odometry Benchmark [71] composed of 22 outdoor ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We report the results within different ranges on the validation set, and the results within the full range on the hidden test set are in ...
+- **p. 7 / 4.2. Performance - extractive body cue:** VoxFormer shows a large advancement in completing small objects compared to the main baseline MonoScene such as the bicycle (0.07 →5.22), motorcycle (0.05 →2.98), bicyclist ...
+- **p. 6 / 4.2. Performance - extractive body cue:** VoxFormer-S outperforms MonoScene by a large margin in terms of geometric completion (36.80 →44.02, 19.62%); see Table 1.
+- **p. 7 / 4.2. Performance - extractive body cue:** Our superiority over others for small objects.
+- **p. 6 / 4.2. Performance - extractive body cue:** Meanwhile, the semantic score is also improved by 9.29% without sacrificing IoU.
+- **p. 7 / 4.2. Performance - extractive body cue:** For example, the IoU scores of building, parking, and terrain categories are respectively improved by 10.71%, 27.03%, and 10.35% inside the full volume because VoxFormer-S ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Performance), p. 6 (4.2. Performance)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Performance | SYSTEM / EVALUATION SCOPE UNRESOLVED | VoxFormer-T can achieve mIoU scores of 21.55 and 18.42 within 12.8 meters and 25.6 meters, which outperforms the state-of-the-art MonoScene by 75.92% and 50.74% ... | p. 7 (4.2. Performance) |
 | 4.2. Performance | SYSTEM / EVALUATION SCOPE UNRESOLVED | Meanwhile, the semantic score is also improved by 9.29% without sacrificing IoU. | p. 6 (4.2. Performance) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.2. Performance), p. 6 (4.2. Performance)
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** SemanticKITTI SSC benchmark is interested in a volume of 51.2m ahead of the car, 25.6m to left and right side, and 6.4m in height.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We verify VoxFormer on SemanticKITTI [5], which provides dense semantic annotations for each LiDAR sweep from the KITTI Odometry Benchmark [71] composed of 22 outdoor ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We report the results within different ranges on the validation set, and the results within the full range on the hidden test set are in ...
-- **p. 7 / 4.2. Performance - extractive PDF cue:** VoxFormer shows a large advancement in completing small objects compared to the main baseline MonoScene such as the bicycle (0.07 →5.22), motorcycle (0.05 →2.98), bicyclist ...
-- **p. 6 / 4.2. Performance - extractive PDF cue:** VoxFormer-S outperforms MonoScene by a large margin in terms of geometric completion (36.80 →44.02, 19.62%); see Table 1.
-- **p. 7 / 4.2. Performance - extractive PDF cue:** Our superiority over others for small objects.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** SemanticKITTI SSC benchmark is interested in a volume of 51.2m ahead of the car, 25.6m to left and right side, and 6.4m in height.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We verify VoxFormer on SemanticKITTI [5], which provides dense semantic annotations for each LiDAR sweep from the KITTI Odometry Benchmark [71] composed of 22 outdoor ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We report the results within different ranges on the validation set, and the results within the full range on the hidden test set are in ...
+- **p. 7 / 4.2. Performance - extractive body cue:** VoxFormer shows a large advancement in completing small objects compared to the main baseline MonoScene such as the bicycle (0.07 →5.22), motorcycle (0.05 →2.98), bicyclist ...
+- **p. 6 / 4.2. Performance - extractive body cue:** VoxFormer-S outperforms MonoScene by a large margin in terms of geometric completion (36.80 →44.02, 19.62%); see Table 1.
+- **p. 7 / 4.2. Performance - extractive body cue:** Our superiority over others for small objects.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) A diagram of VoxFormer for camera-based se- mantic scene completion that predicts complete 3D geometry and semantics given only 2D images. After ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall framework of VoxFormer. Given RGB images, 2D features are extracted by ResNet50 [61] and the depth is estimated by an off-the-shelf depth ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison against the state-of-the-art camera-based SSC methods. We report the performances inside three volumes, i.e., 12.8×12.8×6.4m3, 25.6×25.6×6.4m3, and 51.2×51.2×6.4m3. The first two ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results of our method and others. VoxFormer better captures the scene layout in large-scale self-driving scenarios. Meanwhile, VoxFormer shows satisfactory performances in ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison against the state-of-the-art LiDAR-based SSC methods. VoxFormer even performs on par with some LiDAR-based methods at close range. VoxFormer-S with temporal ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. For example, the IoU scores of building, park- ing, and terrain categories are respectively improved by 10.71%, 27.03%, and 10.35% inside the full ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study for image depth. With monocular depth, VoxFormer-S performs better than MonoScene in geome- try (12.8m, 25.6m, and 51.2m) and semantics (12.8m ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study for query proposal. Our depth-based query proposal performs best. t
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) A diagram of VoxFormer for camera-based se- mantic scene completion that predicts complete 3D geometry and semantics given only 2D images. After ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overall framework of VoxFormer. Given RGB images, 2D features are extracted by ResNet50 [61] and the depth is estimated by an off-the-shelf depth ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison against the state-of-the-art camera-based SSC methods. We report the performances inside three volumes, i.e., 12.8×12.8×6.4m3, 25.6×25.6×6.4m3, and 51.2×51.2×6.4m3. The first two ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results of our method and others. VoxFormer better captures the scene layout in large-scale self-driving scenarios. Meanwhile, VoxFormer shows satisfactory performances in ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison against the state-of-the-art LiDAR-based SSC methods. VoxFormer even performs on par with some LiDAR-based methods at close range. VoxFormer-S with temporal ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. For example, the IoU scores of building, park- ing, and terrain categories are respectively improved by 10.71%, 27.03%, and 10.35% inside the full ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation study for image depth. With monocular depth, VoxFormer-S performs better than MonoScene in geome- try (12.8m, 25.6m, and 51.2m) and semantics (12.8m ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation study for query proposal. Our depth-based query proposal performs best. t
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | SemanticKITTI SSC benchmark is interested in a volume of 51.2m ahead of the car, 25.6m to left and right side, and 6.4m in height. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup) |
 | Task/environment | We verify VoxFormer on SemanticKITTI [5], which provides dense semantic annotations for each LiDAR sweep from the KITTI Odometry Benchmark [71] composed of 22 ... | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
@@ -119,11 +119,11 @@ PDF body evaluation/result cue (p. 7 (4.2. Performance), p. 6 (4.2. Performance)
 | Primary metric/result | Meanwhile, the semantic score is also improved by 9.29% without sacrificing IoU. | numeric claim only at cited anchor | p. 6 (4.2. Performance) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We directly utilize the depth predictor in [70], and we train an occupancy predictor from scratch, using as input a voxelized pseudo point cloud with ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Regarding stage-2, we crop RGB images of cam2 to size 1220×370 and employ ResNet50 [61] to extract image features, then the features in the 3rd ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We report the performances inside three volumes, i.e., 12.8×12.8×6.4m3, 25.6×25.6×6.4m3, and 51.2×51.2×6.4m3.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We train stage-1 and stage-2 separately with 24 epochs, a learning rate of 2×10-4.
-- **p. 7 / 4.2. Performance - extractive PDF cue:** VoxFormer-T can achieve mIoU scores of 21.55 and 18.42 within 12.8 meters and 25.6 meters, which outperforms the state-of-the-art MonoScene by 75.92% and 50.74% respectively.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We directly utilize the depth predictor in [70], and we train an occupancy predictor from scratch, using as input a voxelized pseudo point cloud with ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Regarding stage-2, we crop RGB images of cam2 to size 1220×370 and employ ResNet50 [61] to extract image features, then the features in the 3rd ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We report the performances inside three volumes, i.e., 12.8×12.8×6.4m3, 25.6×25.6×6.4m3, and 51.2×51.2×6.4m3.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We train stage-1 and stage-2 separately with 24 epochs, a learning rate of 2×10-4.
+- **p. 7 / 4.2. Performance - extractive body cue:** VoxFormer-T can achieve mIoU scores of 21.55 and 18.42 within 12.8 meters and 25.6 meters, which outperforms the state-of-the-art MonoScene by 75.92% and 50.74% respectively.
 
 ## Generalization and Failure Cases
 
@@ -155,7 +155,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Performance), p. 6 (4.2. Performance)
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Performance), p. 6 (4.2. Performance), p. 7 (4.2. Performance), metrics p. 6 (4.2. Performance), p. 7 (4.2. Performance), p. 6 (4.2. Performance), p. 7 (4.2. Performance), p. 8 (4.2. Performance), p. 8 (Figure/Table caption), baselines p. 6 (4.1. Experimental Setup), p. 7 (4.2. Performance), p. 7 (4.2. Performance), p. 6 (4.1. Experimental Setup), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (4.2. Performance), p. 6 (4.2. Performance), p. 6 (4.2. Performance), p. 7 (4.2. Performance), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Performance), p. 6 (4.2. Performance), p. 7 (4.2. Performance), metrics p. 6 (4.2. Performance), p. 7 (4.2. Performance), p. 6 (4.2. Performance), p. 7 (4.2. Performance), p. 8 (4.2. Performance), p. 8 (Figure/Table caption), baselines p. 6 (4.1. Experimental Setup), p. 7 (4.2. Performance), p. 7 (4.2. Performance), p. 6 (4.1. Experimental Setup), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (4.2. Performance), p. 6 (4.2. Performance), p. 6 (4.2. Performance), p. 7 (4.2. Performance), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

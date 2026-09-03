@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A.
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Fig, 2: (a) The peg-in-hole problem is considered as inserting peg into its matching hole on a planar board (a randomly generated ... | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | An interaction command cy = (xe, x3) at time ¢ is defined by its starting state x, (considered steady as %¢ - ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF |
+| Observation / input | An interaction command cy = (xe, x3) at time ¢ is defined by its starting state x, (considered steady as %¢ - ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
 | State / latent | interaction, command, time, defined, starting, state, considered, steady, desired, Execution | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
 | Output / action | Interaction, inclined, states, designed, identify, exploit, environmental, contact | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
 | Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | object geometry/contact state; body terms: interaction, command, time, defined, starting, state, considered, steady, desired, Execution | p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives) |
 | Decision / output variable | grasp/pose/force/trajectory; body terms: paired, comer, hole, local, geometry, enables, downstream, iterative | p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A.
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives) |
 | Success / guarantee | completion, contact success and robustness | p. 1 (Figure/Table caption), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A.
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives)): (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.
+PDF body contribution framing (p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives)): (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.
 
 - **p. 5 / A. Task Mechanics and Interaction Primitives - extractive body cue:** Interaction with inclined states is designed to identify and exploit its environmental contact constraints.
 
@@ -63,12 +63,21 @@ PDF contribution framing (p. 5 (A. Task Mechanics and Interaction Primitives), p
 
 ## Position in the Robotics Loop
 
-manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives). The downstream handoff is claimed only when the body describes it.
+manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A. Preliminaries), interface p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), objective p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives).
+- **Evidence anchors reviewed:** problem p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A. Preliminaries), interface p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), objective p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** As % shrinks over steps, the expected spread of Ton) decreases and the uncertainty range of the perceived hole's state is reduced, (p. 4, B. Problem Statement).
+- **Formulation-changing contribution:** By examining the role of compliance under contact constraints, ‘we present a manipulation system that plans coli (p. 1, Abstract).
+- **Assumption/failure evidence:** We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided into the following categories: 1) high contact force which breaks the condition ... (p. 12, 1 Liye).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

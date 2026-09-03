@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html; PDF retrieval source: https://arxiv.org/pdf/1903.01973. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html; PDF retrieval source: https://arxiv.org/pdf/1903.01973. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 3) Does decoupling latent plan inference and plan decoding into independent problems, as is done in Play-LMP, improve performance over goal-conditioned Behavioral Cloning (Play-GCBC), ... | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 10 5 0 5 10 15 20 25 Improvement of Play-LMP over Play-GCBC (absolute accuracy % points) rotate left close sliding grasp upright sweep ... | p. 7 (4 Experiments) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To compare our play-supervised models to a conventional scenario, we collect a training set of 100 expert demonstrations per task in the environment, and ... | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | We define two sets of experiments over these datasets: pixel experiments, where we study the multitask visual manipulation problem, and state experiments, where we ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 8 (4 Experiments) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 17 / A.5 Limitations - extractive body cue:** We hope to explore this in future work.
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 14: Naturally emerging retrying behavior: example run of Play-LMP policy on "close sliding" task (sliding door left to right). The policy is aiming the ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 8 (4 Experiments), p. 17 (A.4.3 Coverage Analysis of Interaction Space), metrics p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 16 (Figure/Table caption), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 8 (4 Experiments), p. 17 (A.4.3 Coverage Analysis of Interaction Space), metrics p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 16 (Figure/Table caption), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 10 5 0 5 10 15 20 25 Improvement of Play-LMP over Play-GCBC (absolute accuracy % points) rotate left close sliding grasp upright sweep right grasp flat pull out shelf ... (p. 7, 4 Experiments).
+- **Metric evidence:** 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 18 tasks average accuracy % Play-LMP (ours) Play-GCBC (ours) BC (b) Robustness ... (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** (a) Play-LMP consistently outperforms the baselines, whether trained on groundtruth states or directly on pixels. (p. 7, 4 Experiments).
+- **Failure/negative evidence:** The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future work. (p. 17, A.5 Limitations).

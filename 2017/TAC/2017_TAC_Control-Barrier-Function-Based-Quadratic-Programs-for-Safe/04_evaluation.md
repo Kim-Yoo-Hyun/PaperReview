@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1609.06408; PDF retrieval source: https://arxiv.org/pdf/1609.06408. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1609.06408; PDF retrieval source: https://arxiv.org/pdf/1609.06408. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VI. SIMULATION RESULTS | EMPIRICAL / SIMULATION | A video of the results is available on YouTube [57]. | p. 13 (VI. SIMULATION RESULTS) |
 | VI. SIMULATION RESULTS | EMPIRICAL / SIMULATION | Simulation results for ACC Various problem formulations are compared here. | p. 13 (VI. SIMULATION RESULTS) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The parameters used for the simulation are given in Table I. | embodiment, simulator version and control stack | p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS) |
 | Task/environment | Simulation results for ACC Various problem formulations are compared here. | reset, timeout, object/scene variation | p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS) |
@@ -135,7 +135,16 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 
 - **p. 14 / VII. CONCLUSIONS - extractive body cue:** Future work will be devoted to building upon the foundations presented in this paper in the context of safety-critical control of cyber-physical systems, with a ...
 
-- **PDF anchors reviewed:** datasets p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 14 (0.1 N), metrics p. 14 (0.1 N), p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 2 (Figure/Table caption), baselines p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 14 (Figure/Table caption), results p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (0.1 N), p. 11 (Figure/Table caption), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 14 (0.1 N), metrics p. 14 (0.1 N), p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 2 (Figure/Table caption), baselines p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 14 (Figure/Table caption), results p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (0.1 N), p. 11 (Figure/Table caption), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Comparison of two QPs Recall that Figure 2 showed simulation results obtained by applying the QP controller in (ACC QP), where the force constraints were not taken into account. (p. 13, VI. SIMULATION RESULTS).
+- **Metric evidence:** Simulation results for ACC Various problem formulations are compared here. (p. 13, VI. SIMULATION RESULTS).
+- **Baseline/ablation evidence:** Simulation results for ACC Various problem formulations are compared here. (p. 13, VI. SIMULATION RESULTS).
+- **Failure/negative evidence:** Note that, due to limits on the wheel forces, the speed converges to vd more slowly, and begins braking earlier, as evidenced by the top plot in Fig. (p. 13, VI. SIMULATION RESULTS).

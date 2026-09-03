@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparative Study), p. 7 (4.2. Compar
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** We use two popular benchmark datasets to evaluate our 3DVG approach.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** ScanRefer [5] provides 51,500 natural language descriptions across 800 ScanNet scenes, each specifying a target object's spatial context.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Finally, high-quality rendering provides clearer information about object boundaries, textures, and colors, helping models more accurately identify and distinguish objects, Our current use of point ...
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** 2 shows the performance of different approaches on the Nr3D dataset, in which the ground-truth instance mask is also provided.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Static views - Center2Corner, Edge2Center, and Corner2Center - lack flexibility and struggle in complex scenes.
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment ...
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates competitive zero-shot performance, highlighting its potential for ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** This result underscores the importance of flexible and context-aware view selection strategy in 3D scene understanding.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** We use two popular benchmark datasets to evaluate our 3DVG approach.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** ScanRefer [5] provides 51,500 natural language descriptions across 800 ScanNet scenes, each specifying a target object's spatial context.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Finally, high-quality rendering provides clearer information about object boundaries, textures, and colors, helping models more accurately identify and distinguish objects, Our current use of point ...
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** 2 shows the performance of different approaches on the Nr3D dataset, in which the ground-truth instance mask is also provided.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Static views - Center2Corner, Edge2Center, and Corner2Center - lack flexibility and struggle in complex scenes.
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment ...
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates competitive zero-shot performance, highlighting its potential for ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** This result underscores the importance of flexible and context-aware view selection strategy in 3D scene understanding.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparative Study), p. 7 (4.2. Compar
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Comparative Study | SYSTEM / EVALUATION SCOPE UNRESOLVED | Our method achieves 46.1% accuracy on Nr3D, which is a 18.2% improvement over the previous zero-shot baseline, ZSVG3D [60] (39.0%). | p. 7 (4.2. Comparative Study) |
 | 4.2. Comparative Study | SYSTEM / EVALUATION SCOPE UNRESOLVED | While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates competitive zero-shot performance, highlighting its potential ... | p. 7 (4.2. Comparative Study) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparative Study), p. 7 (4.2. Compar
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** We use two popular benchmark datasets to evaluate our 3DVG approach.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** ScanRefer [5] provides 51,500 natural language descriptions across 800 ScanNet scenes, each specifying a target object's spatial context.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Finally, high-quality rendering provides clearer information about object boundaries, textures, and colors, helping models more accurately identify and distinguish objects, Our current use of point ...
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** 2 shows the performance of different approaches on the Nr3D dataset, in which the ground-truth instance mask is also provided.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Static views - Center2Corner, Edge2Center, and Corner2Center - lack flexibility and struggle in complex scenes.
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** We use two popular benchmark datasets to evaluate our 3DVG approach.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** ScanRefer [5] provides 51,500 natural language descriptions across 800 ScanNet scenes, each specifying a target object's spatial context.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Finally, high-quality rendering provides clearer information about object boundaries, textures, and colors, helping models more accurately identify and distinguish objects, Our current use of point ...
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** 2 shows the performance of different approaches on the Nr3D dataset, in which the ground-truth instance mask is also provided.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Static views - Center2Corner, Edge2Center, and Corner2Center - lack flexibility and struggle in complex scenes.
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Effectiveness of SeeGround: Different from previous SoTA, our method associates 2D visual cues - color, texture, viewpoint, spatial position, orientation, and state - ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the SeeGround framework. We first use a 2D-VLM to interpret the query, identifying both the target object (e.g., "laptop") and a ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustrative example of different perspective selection strategies. Our "Query-Aligned" method dynamically adapts the viewpoint to match the spatial context of the query, enhancing ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of scene details from different viewpoints. The Bird's Eye View (a) captures the entire scene layout but lacks object-specific detail, while the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluations of 3DVG on ScanRefer [5] validation set. Results are reported for "Unique" (scenes with a single target object) and "Multiple" (scenes with ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Performance on Nr3D [1] validation set. Queries are la- beled as "Easy" (one distractor) or "Hard" (multiple distractors), and as "View-Dependent" or "View-Independent" ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative Results. Rendered images are presented, including the incorrectly identified objects (Orange) and correctly identified objects (Green). Key visual cues are underlined.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on different components in our frame- work on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Effectiveness of SeeGround: Different from previous SoTA, our method associates 2D visual cues - color, texture, viewpoint, spatial position, orientation, and state - ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the SeeGround framework. We first use a 2D-VLM to interpret the query, identifying both the target object (e.g., "laptop") and a ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Illustrative example of different perspective selection strategies. Our "Query-Aligned" method dynamically adapts the viewpoint to match the spatial context of the query, enhancing ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of scene details from different viewpoints. The Bird's Eye View (a) captures the entire scene layout but lacks object-specific detail, while the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Evaluations of 3DVG on ScanRefer [5] validation set. Results are reported for "Unique" (scenes with a single target object) and "Multiple" (scenes with ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Performance on Nr3D [1] validation set. Queries are la- beled as "Easy" (one distractor) or "Hard" (multiple distractors), and as "View-Dependent" or "View-Independent" ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative Results. Rendered images are presented, including the incorrectly identified objects (Orange) and correctly identified objects (Green). Key visual cues are underlined.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on different components in our frame- work on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use two popular benchmark datasets to evaluate our 3DVG approach. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings) |
 | Task/environment | ScanRefer [5] provides 51,500 natural language descriptions across 800 ScanNet scenes, each specifying a target object's spatial context. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study) |
@@ -120,9 +120,9 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparative Study), p. 7 (4.2. Compar
 | Primary metric/result | While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates competitive zero-shot performance, highlighting its potential ... | numeric claim only at cited anchor | p. 7 (4.2. Comparative Study) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** The camera captures images of the room at a resolution of 1000×1000 pixels, with the top 0.3 m of the scene excluded to account for ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Overall Center2Corner 49.5 31.4 35.1 42.9 40.2 Edege2Center 51.0 32.7 36.6 44.2 41.5 Corner2Center 49.8 33.4 35.5 44.5 41.3 Bird's Eye View 53.4 33.9 36.9 ...
-- **p. 6 / 3.3. Fusion Alignment Module - extractive PDF cue:** Results are reported for "Unique" (scenes with a single target object) and "Multiple" (scenes with distractors of the same class) subsets, along with overall performance. ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** The camera captures images of the room at a resolution of 1000×1000 pixels, with the top 0.3 m of the scene excluded to account for ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Overall Center2Corner 49.5 31.4 35.1 42.9 40.2 Edege2Center 51.0 32.7 36.6 44.2 41.5 Corner2Center 49.8 33.4 35.5 44.5 41.3 Bird's Eye View 53.4 33.9 36.9 ...
+- **p. 6 / 3.3. Fusion Alignment Module - extractive body cue:** Results are reported for "Unique" (scenes with a single target object) and "Multiple" (scenes with distractors of the same class) subsets, along with overall performance. ...
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparative Study), p. 7 (4.2. Compar
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Bird's Eye View, though comprehensive, cannot adjust to the query and misses key spatial details like object orientation and height.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Current viewpoint selection strategies also fall short in handling complex scenarios like "when the window is on the left" or "upon entering from the door".
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the SeeGround framework. We first use a 2D-VLM to interpret the query, identifying both the target object (e.g., "laptop") and a ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of scene details from different viewpoints. The Bird's Eye View (a) captures the entire scene layout but lacks object-specific detail, while the ...
-- **p. 7 / 4.2. Comparative Study - extractive PDF cue:** In the Easy and Hard categories, our method reaches 54.5% and 38.3%, showing robustness across varying scene complexities.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Bird's Eye View, though comprehensive, cannot adjust to the query and misses key spatial details like object orientation and height.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Current viewpoint selection strategies also fall short in handling complex scenarios like "when the window is on the left" or "upon entering from the door".
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the SeeGround framework. We first use a 2D-VLM to interpret the query, identifying both the target object (e.g., "laptop") and a ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of scene details from different viewpoints. The Bird's Eye View (a) captures the entire scene layout but lacks object-specific detail, while the ...
+- **p. 7 / 4.2. Comparative Study - extractive body cue:** In the Easy and Hard categories, our method reaches 54.5% and 38.3%, showing robustness across varying scene complexities.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 7 (4.2. Comparative Study), p. 8 (4.3. Ablation Study), p. 7 (4.2. Comparative Study), metrics p. 7 (4.2. Comparative Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Comparative Study), p. 7 (4.2. Comparative Study), p. 7 (4.3. Ablation Study), p. 5 (Figure/Table caption), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), results p. 7 (4.2. Comparative Study), p. 7 (4.2. Comparative Study), p. 6 (4.2. Comparative Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 7 (4.2. Comparative Study), p. 8 (4.3. Ablation Study), p. 7 (4.2. Comparative Study), metrics p. 7 (4.2. Comparative Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Comparative Study), p. 7 (4.2. Comparative Study), p. 7 (4.3. Ablation Study), p. 5 (Figure/Table caption), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), results p. 7 (4.2. Comparative Study), p. 7 (4.2. Comparative Study), p. 6 (4.2. Comparative Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

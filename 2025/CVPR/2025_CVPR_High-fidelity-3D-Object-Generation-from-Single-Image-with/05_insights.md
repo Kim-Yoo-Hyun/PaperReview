@@ -1,53 +1,75 @@
 # Insights — High-fidelity 3D Object Generation from Single Image with RGBN-Volume Gaussian Reconstruction Model
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** To this end, we propose a novel hybrid Voxel-Gaussian representation, where a 3D voxel representation contains explicit 3D geometric information, eliminating the geometric ambiguity from 2D images.
-- **Problem cue:** However, the persisting challenge arises due to the inherent geometric ambiguity and limited information provided in single-view images.
-- **Claim/result cue:** Extensive experiments demonstrate the superiority of our methods over prior works in terms of high-quality reconstruction results, robust generalization, and good efficiency.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We propose a novel RGBN-volume Gaussian reconstruction model, called GS-RGBN, to generate high-quality 3D assets from single-view ...
+- **p. 2 / 1. Introduction - extractive body cue:** GS-RGBN implements two key insights: first, unlike traditional methods that employ 2D convolutions to encode image features and decode corresponding per-pixel 3D Gaussian attributes in ...
+- **p. 3 / 3. Method - extractive body cue:** Then, we propose a simple but effective feature-level crossvolume fusion module that fuses the RGB and normal volumes to reproduce a fine-grained RGBN volume, aligning ...
+- **p. 3 / 3. Method - extractive body cue:** Next, we describe how to decode the RGBN volume to generate high-quality 2D Gaussians for novel view rendering and high-quality shape reconstruction (Sec.
+- **p. 3 / 3. Method - extractive body cue:** 2, GS-RGBN takes as input a single image of a 3D object into the MVD model Wonder3D [31] to obtain two sets of multi-view RGB ...
+- **p. 4 / 3.1. Hybrid Voxel-Gaussian - extractive body cue:** RGB Volume 𝑽𝑽𝒓𝒓𝒓𝒓𝒓𝒓 Normal Volume 𝑽𝑽𝒏𝒏𝒏𝒏𝒏𝒏 Voxel Residual Blockṡ 𝑽𝑽𝒓𝒓𝒓𝒓𝒓𝒓̇ 𝑽𝑽𝒏𝒏𝒏𝒏𝒏𝒏 Group RGBN Volume 𝑽𝑽𝒓𝒓𝒓𝒓𝒓𝒓𝒓𝒓 Cross Attention Cross Attention Self Attention Q Q K V ...
+- **p. 5 / 3.4. Training Objective - extractive body cue:** We train the full paradigm via color Lc and depth Ld loss supervision, optimizing reconstruction objectives between rendered and ground-truth RGB/depth images.
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid Voxel-Gaussian)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** However, the persisting challenge arises due to the inherent geometric ambiguity and limited information provided in single-view images.
+- **p. 2 / 1. Introduction - extractive body cue:** However, the direct learning of 3D Gaussians from 2D images for high-fidelity 3D object generation remains a challenge due to the spatially unstructured nature of ...
+- **p. 2 / 1. Introduction - extractive body cue:** The pioneering work (Dreamfusion) [43] and following works [6, 12, 35, 41, 44, 52, 53] propose score distillation sampling (SDS) and some variants, which directly ...
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** Besides, voxels cannot be directly used for representing large-scale scenes.
+- **p. 7 / 4.5. Ablation study - extractive body cue:** Especially, the depth and regularization loss functions, which cannot be achieved by 3D 21564
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** The performance degradation occurs when the MVD models generate images with a higher level of view inconsistency.
+- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** These inconsistencies once again underscore the importance of effectively integrating RGB and normal images for the recovery of both geometric and semantic details.
+- **Boundary to test:** Besides, voxels cannot be directly used for representing large-scale scenes.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In summary, our contributions are as follows: • We propose a novel RGBN-volume Gaussian reconstruction model, called GS-RGBN, to generate high-quality 3D assets from single-view images in just a few seconds. • ... | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Our method significantly outperforms all recent methods by a large margin 21562 | p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/Table caption) |
+| Failure/limitation | Besides, voxels cannot be directly used for representing large-scale scenes. | p. 8 (5. Conclusion and Limitations), p. 7 (4.5. Ablation study) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `Gaussian Splatting, 3D reconstruction, Diffusion, Generation, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `conditioning observation와 noisy/intermediate sample → latent/noise variable와 conditional distribution → generated sample, action chunk 또는 trajectory`.
+- 이 논문의 재사용 가능한 지점은 2, GS-RGBN takes as input a single image of a 3D object into the MVD model Wonder3D [31] to obtain two sets of multi-view RGB and normal images, which are used to ...를 However, the direct learning of 3D Gaussians from 2D images for high-fidelity 3D object generation remains a challenge due to the spatially unstructured nature of 3DGS [63, 70] and the inherent geometric ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 latent/noise variable와 conditional distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Besides, voxels cannot be directly used for representing large-scale scenes.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: • We propose a novel RGBN-volume Gaussian reconstruction model, called GS-RGBN, to generate high-quality 3D assets from single-view images in just a few seconds. • ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Generative Modeling`; tags: `Gaussian Splatting, 3D reconstruction, Diffusion, Generation, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Extensive experiments demonstrate the superiority of our methods over prior works in terms of high-quality reconstruction results, robust generalization, and good efficiency.
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, 3D reconstruction, Diffusion, Generation, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Besides, voxels cannot be directly used for representing large-scale scenes.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: Objaverse / mAP, Chamfer, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: For evaluation, We adopt the most widely used Google Scanned Objects (GSO) dataset [13]..
+3. Compare against the body-reported baseline or a matched simpler baseline: Our method significantly outperforms all recent methods by a large margin 21562.
+4. Report the body metric and its denominator/aggregation: The model performance decreases when the LPIPS, depth, and regularization loss terms are successively removed, as demonstrated in Table 2..
+5. Re-run the body-reported ablation/failure condition: Figure 6. Ablation study of different training models. Our full model achieves the best 3D object reconstruction with consistent details. Gaussian-based methods due to varying depth values, can enhance texture quality (see ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid Voxel-Gaussian); the primary result is directionally consistent at p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/Table caption), p. 7 (4.4. Runtime Efficiency); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 summary, contributions, follows mechanism이 Our method significantly outperforms all recent methods by a large margin 21562 대비 The model performance decreases when the LPIPS, depth, and regularization loss terms are successively removed, as demonstrated in ...을 개선하고, Besides, voxels cannot be directly used for representing large-scale scenes. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

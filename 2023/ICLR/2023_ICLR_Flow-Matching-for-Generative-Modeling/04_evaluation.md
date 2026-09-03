@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2023/poster/11309; PDF retrieval source: https://openreview.net/pdf?id=PqvMRDCJT9t. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2023/poster/11309; PDF retrieval source: https://openreview.net/pdf?id=PqvMRDCJT9t. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 EXPERIMENTS | EMPIRICAL / SIMULATION | We discuss how sample generation is improved by directly parameterizing the generating vector field and using the Flow Matching objective. | p. 7 (6 EXPERIMENTS) |
 | 6 EXPERIMENTS | EMPIRICAL / SIMULATION | FM-OT achieves similar PSNR and SSIM values to (Saharia et al., 2022) while considerably improving on FID and IS, which as argued by (Saharia ... | p. 9 (6 EXPERIMENTS) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We explore the empirical benefits of using Flow Matching on the image datasets of CIFAR10 (Krizhevsky et al., 2009) and ImageNet at resolutions 32, ... | embodiment, simulator version and control stack | p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS) |
 | Task/environment | We discuss how sample generation is improved by directly parameterizing the generating vector field and using the Flow Matching objective. | reset, timeout, object/scene variation | p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** In Figure 7 (left), we compare the per-pixel MSE of low NFE solutions compared with 1000 NFE solutions (we use 256 random noise seeds), and ...
 - **p. 27 / Figure/Table caption - extractive body cue:** Figure 16: Generated samples from the same initial noise, but with varying number of function evaluations (NFE). Flow matching with OT path trained on ImageNet-128. ...
 
-- **PDF anchors reviewed:** datasets p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), metrics p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 19 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), baselines p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), results p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), metrics p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 19 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), baselines p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), results p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 7: Flow Matching, especially when using OT paths, allows us to use fewer evaluations for sampling while retaining similar numerical error (left) and sample quality (right). Results are shown ... (p. 9, Figure/Table caption).
+- **Metric evidence:** Preprint 20 40 60 80 100 NFE 10 2 10 1 Error SM-Dif FM-Dif FM-OT 0 20 40 60 80 100 NFE 10 20 30 40 50 FID Euler Midpoint ... (p. 9, 6 EXPERIMENTS).
+- **Baseline/ablation evidence:** When compared to our ablation models, we find that models trained using Flow Matching with the OT path always result in the most efficient sampler, regardless of ODE solver, as ... (p. 9, 6 EXPERIMENTS).
+- **Failure/negative evidence:** Another important observation is that, as these probability paths were previously derived as solutions of diffusion processes, they do not actually reach a true noise distribution in finite time. (p. 5, 1 INTRODUCTION).

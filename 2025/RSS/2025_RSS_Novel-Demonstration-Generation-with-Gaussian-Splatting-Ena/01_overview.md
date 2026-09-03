@@ -1,8 +1,10 @@
 # Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p146.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p146.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p146.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p146.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p146.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -35,7 +37,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS.
 - **p. 2 / 1. INrRopucTION - extractive body cue:** Thanks t0 its explicit representation of the scene, 3DGS enables interpretable editing ofthe reconstructed scene, which paves the way for generating novel manipulation configurations, Furthermore, ...
 - **p. 2 / 1. INrRopucTION - extractive body cue:** Based on that, we propose RoboSplat, a novel and efficacious approach to demonstration generation with Gaussian ‘Splatting.
-- **p. 1 / Front matter - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
 - **p. 2 / A. Generalizable Policy in Robot Manipulation - extractive body cue:** Instead of adopting generalizable policy architecture, auxiliary learning objectives ‘and powerful foundation models, our work is concentrated on generating high-quality, diverse, and realistic data to ...
 - **p. 6 / C. Policy Training - extractive body cue:** The latent of images and robot state is fed into a transformer encoder.
 - **p. 6 / C. Policy Training - extractive body cue:** We employ a modem, widely adopted transformer-based architecture [18, 51, 38, 55] to serve as the policy network, which is detailed in Appendix C.
@@ -55,7 +57,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS.
 - **p. 2 / 1. INrRopucTION - extractive body cue:** Thanks t0 its explicit representation of the scene, 3DGS enables interpretable editing ofthe reconstructed scene, which paves the way for generating novel manipulation configurations, Furthermore, ...
 - **p. 2 / 1. INrRopucTION - extractive body cue:** Based on that, we propose RoboSplat, a novel and efficacious approach to demonstration generation with Gaussian ‘Splatting.
-- **p. 1 / Front matter - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 11: Performance on cross embodiment experiments. We evaluate the learned policy directly on the URSe robot and achieve a nearly 100% success rate that ...
 - **p. 7 / A. Experimental Setup - extractive body cue:** Success rate (SR) is chosen as the evaluation metric in all experiments.
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Main results. Top left: We present the average success rate across five tasks. Our method shows promising scalability as the number of demonstration ...
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, the Sim-to-Real gap presents를 문제로 두고, Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INrRopucTION), p. 3 (C. Gaussian planting in Roboties), p. 2 (B. Data Augmentation for Policy Learning), p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 2 (A. Generalizable Policy in Robot Manipulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, importing reconstructed real-world objects to simulation is a strenuous process, and physical interactions tend to suffer from large sim-to-real gaps due to the flawed geometric reconstruc tion and lack ... (p. 3, C. Gaussian planting in Roboties).
+- **Actual contribution:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS. (p. 3, IV. METHODOLOGY).
+- **Evaluation boundary:** Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup).
+- **Explicit failure boundary:** The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3]. (p. 6, A. Experimental Setup).

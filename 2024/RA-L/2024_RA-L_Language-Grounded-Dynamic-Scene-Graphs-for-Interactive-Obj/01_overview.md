@@ -1,8 +1,10 @@
 # Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2403.08605.
-> PDF retrieval source: https://arxiv.org/pdf/2403.08605. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2403.08605.
+> PDF retrieval source: https://arxiv.org/pdf/2403.08605. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RA-L
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2403.08605
 - Code/Project: https://moma-llm.cs.uni-freiburg.de/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose grounding LLMs in dynamically built scene graphs.를 문제로 두고, Our approach incorporates a scene understanding module that, given object detections, constructs open-vocabulary scene ∗Equal contribution.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose grounding LLMs in dynamically built scene graphs.를 문제로 두고, To address these challenges, we propose grounding LLMs in dynamically built scene graphs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -31,8 +33,8 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Core Idea
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our approach incorporates a scene understanding module that, given object detections, constructs open-vocabulary scene ∗Equal contribution.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs.
+- **p. 1 / 2 Toyota Motor Europe (TME) - extractive body cue:** Furthermore, we introduce a novel evaluation paradigm for object search tasks, employing full efficiency curves to remove the dependency on arbitrary time budgets inherent in ...
 - **p. 3 / IV. MOMA-LLM - extractive body cue:** To address the challenges of interactive open-vocabulary household tasks, we propose MoMa-LLM, which intertwines high-level reasoning with scalable dynamic scene representations.
 - **p. 4 / IV. MOMA-LLM - extractive body cue:** It consists of the path on the Voronoi graph GV, and the Euclidean distances d from the Voronoi nodes no and nvp to the object ...
 - **p. 4 / IV. MOMA-LLM - extractive body cue:** It consists of the following high-level actions: navigate(room_name, object_name): Navigation to an object in a room via an A∗planner in the explored BEV-map Bt, inflated ...
@@ -51,8 +53,8 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our approach incorporates a scene understanding module that, given object detections, constructs open-vocabulary scene ∗Equal contribution.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs.
+- **p. 1 / 2 Toyota Motor Europe (TME) - extractive body cue:** Furthermore, we introduce a novel evaluation paradigm for object search tasks, employing full efficiency curves to remove the dependency on arbitrary time budgets inherent in ...
 - **p. 3 / IV. MOMA-LLM - extractive body cue:** To address the challenges of interactive open-vocabulary household tasks, we propose MoMa-LLM, which intertwines high-level reasoning with scalable dynamic scene representations.
 - **p. 4 / IV. MOMA-LLM - extractive body cue:** It consists of the path on the Voronoi graph GV, and the Euclidean distances d from the Voronoi nodes no and nvp to the object ...
 - **p. 4 / IV. MOMA-LLM - extractive body cue:** It consists of the following high-level actions: navigate(room_name, object_name): Navigation to an object in a room via an A∗planner in the explored BEV-map Bt, inflated ...
@@ -82,4 +84,13 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose grounding LLMs in dynamically built scene graphs.를 문제로 두고, Our approach incorporates a scene understanding module that, given object detections, constructs open-vocabulary scene ∗Equal contribution.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota Motor Europe (TME)), p. 3 (IV. MOMA-LLM) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose grounding LLMs in dynamically built scene graphs.를 문제로 두고, To address these challenges, we propose grounding LLMs in dynamically built scene graphs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota Motor Europe (TME)), p. 3 (IV. MOMA-LLM) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** This results in an efficiency curve, in which the best policies are located in the top left corner, enabling the comparison of success rates for arbitrary budgets. (p. 6, V. EXPERIMENTS).
+- **Explicit failure boundary:** Furthermore, the agent was able to react to the (unseen) subpolicy failures, such as re-trying to open a drawer when the gripper slipped off the handle. (p. 7, V. EXPERIMENTS).

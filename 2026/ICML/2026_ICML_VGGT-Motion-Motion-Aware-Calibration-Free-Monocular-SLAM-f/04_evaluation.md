@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GyRMbsYFiG; PDF retrieval source: https://openreview.net/pdf/dd631f65ff2ca6199a6897ee3816879152720eef.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GyRMbsYFiG; PDF retrieval source: https://openreview.net/pdf/dd631f65ff2ca6199a6897ee3816879152720eef.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Hyperparameters are fixed across benchmarks and dataset-specific thresholds are held constant for all sequences.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** To demonstrate robustness across diverse environments, we curate an evaluation suite comprising five outdoor datasets.
-- **p. 7 / 4.4. Efficiency - extractive PDF cue:** Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on the KITTI dataset.
-- **p. 7 / 4.4. Efficiency - extractive PDF cue:** Experimental results on long-sequence generalization benchmarks.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Runtime efficiency comparison on five different benchmarks.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Ablation of submap partitioning strategies on KITTI dataset.
-- **p. 19 / Figure/Table caption - extractive PDF cue:** Figure 15. Trajectory visualizations on long-range generalization benchmarks (4Seasons, Complex Urban, A2D2). Subplots show diverse segments, color denotes APE magnitude after Sim(3) alignment. Analysis Precision ...
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Construction Strategy Trigger Mechanism ATE (m) ↓ Drift (%) ↓ Temporal Slicing Temporal Length 26.98 1.58 Parallax-Triggered Cumulative Parallax 28.15 1.62 Topology-Aware Turning Encapsulation 24.56 ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Hyperparameters are fixed across benchmarks and dataset-specific thresholds are held constant for all sequences.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To demonstrate robustness across diverse environments, we curate an evaluation suite comprising five outdoor datasets.
+- **p. 7 / 4.4. Efficiency - extractive body cue:** Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on the KITTI dataset.
+- **p. 7 / 4.4. Efficiency - extractive body cue:** Experimental results on long-sequence generalization benchmarks.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Runtime efficiency comparison on five different benchmarks.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Ablation of submap partitioning strategies on KITTI dataset.
+- **p. 19 / Figure/Table caption - extractive body cue:** Figure 15. Trajectory visualizations on long-range generalization benchmarks (4Seasons, Complex Urban, A2D2). Subplots show diverse segments, color denotes APE magnitude after Sim(3) alignment. Analysis Precision ...
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Construction Strategy Trigger Mechanism ATE (m) ↓ Drift (%) ↓ Temporal Slicing Temporal Length 26.98 1.58 Parallax-Triggered Cumulative Parallax 28.15 1.62 Topology-Aware Turning Encapsulation 24.56 ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.5. Ablation Studies | SYSTEM / EVALUATION SCOPE UNRESOLVED | Topology-aware partitioning significantly outperforms heuristic baselines by preserving turning topology. | p. 8 (4.5. Ablation Studies) |
 | 4.3. Zero-Shot Generalization & Scalability | SYSTEM / EVALUATION SCOPE UNRESOLVED | We attribute this success to our targeted algorithmic designs: Submap Composition with Geometric Anchors injects loop keyframes as geometric anchors to bridge appearance gaps ... | p. 6 (4.3. Zero-Shot Generalization & Scalability) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Hyperparameters are fixed across benchmarks and dataset-specific thresholds are held constant for all sequences.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** To demonstrate robustness across diverse environments, we curate an evaluation suite comprising five outdoor datasets.
-- **p. 7 / 4.4. Efficiency - extractive PDF cue:** Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on the KITTI dataset.
-- **p. 7 / 4.4. Efficiency - extractive PDF cue:** Experimental results on long-sequence generalization benchmarks.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Runtime efficiency comparison on five different benchmarks.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Ablation of submap partitioning strategies on KITTI dataset.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Hyperparameters are fixed across benchmarks and dataset-specific thresholds are held constant for all sequences.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To demonstrate robustness across diverse environments, we curate an evaluation suite comprising five outdoor datasets.
+- **p. 7 / 4.4. Efficiency - extractive body cue:** Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on the KITTI dataset.
+- **p. 7 / 4.4. Efficiency - extractive body cue:** Experimental results on long-sequence generalization benchmarks.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Runtime efficiency comparison on five different benchmarks.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Ablation of submap partitioning strategies on KITTI dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison of the SOTA method VGGT-Long (Deng et al., 2025) and our VGGT-Motion across sequences with varying frame counts. While VGGT-Long suffers from ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The pipeline of VGGT-Motion, consisting of three stages: (a) Motion-Aware Submap Construction, (b) Anchor-Driven Direct Sim(3) Registration, and (c) Lightweight Pose Graph Optimization. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Context-balanced anchors. (i) Globally consistent recon- struction. (ii) Overlap and loop anchors for submap alignment. as the overlap anchor Iovlp ≜N(mid(W)). This selection ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on the KITTI dataset. Following VGGT-Long, we additionally report Avg.* with the sequence 01 excluded. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on Waymo Open dataset. Recent foundation-model-based methods are included. "TL" and "OOM" indicate Tracking Lost ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Experimental results on long-sequence generalization benchmarks. Absolute Trajectory Error (ATE) and Translation Drift are reported. "TL" and "OOM" denote Tracking Lost and Out-of-Memory ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on generalization benchmarks. We visualize the estimated trajectories on (a) 4Seasons, (b) Complex Urban, and (c) A2D2 datasets. Our method exhibits ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Runtime efficiency comparison on five different bench- marks. (a) Total runtime per scene (s) shown in log scale. (b) Average runtime per frame ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of the SOTA method VGGT-Long (Deng et al., 2025) and our VGGT-Motion across sequences with varying frame counts. While VGGT-Long suffers from ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The pipeline of VGGT-Motion, consisting of three stages: (a) Motion-Aware Submap Construction, (b) Anchor-Driven Direct Sim(3) Registration, and (c) Lightweight Pose Graph Optimization. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Context-balanced anchors. (i) Globally consistent recon- struction. (ii) Overlap and loop anchors for submap alignment. as the overlap anchor Iovlp ≜N(mid(W)). This selection ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on the KITTI dataset. Following VGGT-Long, we additionally report Avg.* with the sequence 01 excluded. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on Waymo Open dataset. Recent foundation-model-based methods are included. "TL" and "OOM" indicate Tracking Lost ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Experimental results on long-sequence generalization benchmarks. Absolute Trajectory Error (ATE) and Translation Drift are reported. "TL" and "OOM" denote Tracking Lost and Out-of-Memory ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on generalization benchmarks. We visualize the estimated trajectories on (a) 4Seasons, (b) Complex Urban, and (c) A2D2 datasets. Our method exhibits ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Runtime efficiency comparison on five different bench- marks. (a) Total runtime per scene (s) shown in log scale. (b) Average runtime per frame ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Hyperparameters are fixed across benchmarks and dataset-specific thresholds are held constant for all sequences. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | To demonstrate robustness across diverse environments, we curate an evaluation suite comprising five outdoor datasets. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency) |
@@ -117,7 +117,7 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| While classical pipelines like ORBSLAM series (Mur-Artal et al., 2015; Mur-Artal & Tard´os, *Equal contribution 1National Key Laboratory of Science and Technology on Multi-spectral ... | Topology-aware partitioning significantly outperforms heuristic baselines by preserving turning topology. | PDF body cue; verify exact table/figure and matched conditions | p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Shot Generalization & Scalability), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), p. 7 (4.4. Efficiency) |
+| Then, we develop an anchor-driven direct Sim(3) registration algorithm to align submaps and optimize their poses. | Topology-aware partitioning significantly outperforms heuristic baselines by preserving turning topology. | PDF body cue; verify exact table/figure and matched conditions | p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Shot Generalization & Scalability), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), p. 7 (4.4. Efficiency) |
 | Primary metric/result | We attribute this success to our targeted algorithmic designs: Submap Composition with Geometric Anchors injects loop keyframes as geometric anchors to bridge appearance gaps ... | numeric claim only at cited anchor | p. 6 (4.3. Zero-Shot Generalization & Scalability) |
 
 - Numeric sentences retained from the body:
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.3. Zero-Shot Generalization & Scalability - extractive PDF cue:** The challenges of these datasets cause baselines like MASt3R-SLAM, Fast3R, and CUT3R to frequently suffer Out-of-Memory (OOM) or Tracking-Lost (TL) failures.
-- **p. 6 / 4.2. Comparison on Standard Benchmarks - extractive PDF cue:** Foundation-model-based methods such as MASt3R-SLAM, CUT3R, and Fast3R frequently encounter Out-of-Memory (OOM) or Tracking-Lost (TL) failures, indicating limited scalability in large outdoor scenes.
-- **p. 7 / 4.4. Efficiency - extractive PDF cue:** Absolute Trajectory Error (ATE) and Translation Drift are reported. "TL" and "OOM" denote Tracking Lost and Out-of-Memory failures, respectively.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Our Topology-Aware strategy in MASP prevents this failure mode via Turning Segment Encapsulation.
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 12. Additional trajectory visualizations on TUM-Mono sequences 39, 45, 46, 47, and 48. The color scale represents the Absolute Pose Error (APE) magnitude after ...
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** Instead of providing valid geometric constraints, these redundant frames accumulate sensor noise and environmental disturbances.
+- **p. 6 / 4.3. Zero-Shot Generalization & Scalability - extractive body cue:** The challenges of these datasets cause baselines like MASt3R-SLAM, Fast3R, and CUT3R to frequently suffer Out-of-Memory (OOM) or Tracking-Lost (TL) failures.
+- **p. 6 / 4.2. Comparison on Standard Benchmarks - extractive body cue:** Foundation-model-based methods such as MASt3R-SLAM, CUT3R, and Fast3R frequently encounter Out-of-Memory (OOM) or Tracking-Lost (TL) failures, indicating limited scalability in large outdoor scenes.
+- **p. 7 / 4.4. Efficiency - extractive body cue:** Absolute Trajectory Error (ATE) and Translation Drift are reported. "TL" and "OOM" denote Tracking Lost and Out-of-Memory failures, respectively.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Our Topology-Aware strategy in MASP prevents this failure mode via Turning Segment Encapsulation.
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 12. Additional trajectory visualizations on TUM-Mono sequences 39, 45, 46, 47, and 48. The color scale represents the Absolute Pose Error (APE) magnitude after ...
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Instead of providing valid geometric constraints, these redundant frames accumulate sensor noise and environmental disturbances.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 8 (4.5. Ablation Studies), metrics p. 19 (Figure/Table caption), p. 8 (4.5. Ablation Studies), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency), baselines p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 16 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), results p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Shot Generalization & Scalability), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), p. 7 (4.4. Efficiency).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 8 (4.5. Ablation Studies), metrics p. 19 (Figure/Table caption), p. 8 (4.5. Ablation Studies), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency), baselines p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 16 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), results p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Shot Generalization & Scalability), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), p. 7 (4.4. Efficiency).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

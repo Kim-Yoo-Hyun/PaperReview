@@ -1,8 +1,10 @@
 # RT-H: Action Hierarchies Using Language
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p049.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p049.html. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p049.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p049.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / Robotics: Science and Systems
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p049.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -35,8 +37,8 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level of language motions, ...
 - **p. 1 / Abstract - extractive body cue:** Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along with the high-level ...
 - **p. 1 / Abstract - extractive body cue:** This enables a new paradigm for flexible policies that can learn from human intervention in language.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: Given a task in language like "close the pistachio jar" and an image of the scene, RT-H utilizes a Vision Language Model (VLM) to ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Then RT-H uses the observation, the task, and the inferred language motion to predict the action for that step (action query), where the language motion ...
-- **p. 1 / Abstract - extractive body cue:** Predicting these language motions as an intermediate step between high-level tasks and actions forces the policy to learn the shared structure of low-level motions across ...
 
 ## Observation, State, and Output Interface
 
@@ -82,4 +84,13 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Language is the engine of human reasoning, empowering us to break complex concepts into simpler ones, to correct our misunderstandings, and to generalize concepts in new settings.를 문제로 두고, Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each step, RT-H conditions on the observation and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Language is the engine of human reasoning, empowering us to break complex concepts into simpler ones, to correct our misunderstandings, and to generalize concepts in new settings.를 문제로 두고, Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each step, RT-H conditions on the observation and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Language is the engine of human reasoning, empowering us to break complex concepts into simpler ones, to correct our misunderstandings, and to generalize concepts in new settings. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level of language motions, leading to better language motion ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 3: Results on Diverse+Kitchen multi-task dataset, consisting of eight challenging evaluation tasks. 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). RT-H outperforms RT-2 ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** RT-2-IWR: We collect 30 episodes (failed episodes filtered out) of teleoperated corrections for the same eight tasks, using VR-based teleoperation instead of language motion corrections. (p. 9, V. EXPERIMENTS).

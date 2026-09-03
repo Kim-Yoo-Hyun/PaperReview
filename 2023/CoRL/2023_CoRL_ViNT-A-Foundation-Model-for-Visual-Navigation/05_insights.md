@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 It takes an image ot as input and produces samples from g(osi / ot), where osi are candidate subgoal images reachable from ot.를 Algorithm 1: Long-Horizon Navigation via Topological Graph 1: while goal G not reached do 2: s ←minf(Ω); 3: P ←ShortestPath(M, ot, s-) 4: for (s, s′) in P do 5: ViNT.GoToGoal(s′); 6: ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, which can present a challenge for power-constrained platforms such as quadcopters.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** [39], we implement image conditioning as simple channel-wise concatenation to the U-Net input. (p. 18, B.2 Subgoal Diffusion).
+- **Paper-specific mechanism:** We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based heuristic from start (orange) to goal (green). The future action samples ˆa ... (p. 8, Figure/Table caption); the relevant task/metric cue is Figure 3: Long-horizon navigation in unseen environments with ViNT. We use physical search with a topological graph-based planner to explore the environment. An image-to-image diffusion model proposes diverse exploration targets ... (p. 4, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, which can present a challenge for power-constrained platforms such as quadcopters. (p. 11, 7 Discussion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: [22], we further augment this dataset by allowing the rule-based agent to correct its position and re-center to the lane after a perturbation..
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 1: ViNT paired with our physical search algorithm consistently outperforms baselines for the task of undirected goal-reaching in indoor and outdoor environments (left). By effectively planning over diffusion subgoal proposals, ViN ....
-4. Report the body metric and its denominator/aggregation: Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based heuristic from start (orange) to goal (green). The future action samples ˆa obtained by ....
-5. Re-run the body-reported ablation/failure condition: Table 2: ViNT can effectively utilize goal-directed heuristics, such as 2D goal positions and satellite images, to explore novel kilometer-scale environments successfully and without interventions. 7.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: [39], we implement image conditioning as simple channel-wise concatenation to the U-Net input. (p. 18, B.2 Subgoal Diffusion); preserve the objective/update rule: [49], we use the unweighted training objective, called Lsimple in Ho et al. (p. 18, B.2 Subgoal Diffusion).
+2. Use the paper-reported task/data/environment cue: [22], we further augment this dataset by allowing the rule-based agent to correct its position and re-center to the lane after a perturbation. (p. 20, B.4 Fine-tuning ViNT).
+3. Compare against the reported or matched baseline: Table 1: ViNT paired with our physical search algorithm consistently outperforms baselines for the task of undirected goal-reaching in indoor and outdoor environments (left). By effectively planning over diffusion subgoal ... (p. 7, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Figure 3: Long-horizon navigation in unseen environments with ViNT. We use physical search with a topological graph-based planner to explore the environment. An image-to-image diffusion model proposes diverse exploration targets ... (p. 4, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: We use the Flax U-Net implementation from the diffusers library [48] with textual cross-attention removed since we do not condition on text inputs. (p. 18, B.2 Subgoal Diffusion); if none is reported, design one around: Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, which can present a challenge for power-constrained platforms such as quadcopters. (p. 11, 7 Discussion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Diffusion), p. 21 (B.4 Fine-tuning ViNT); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 11 (7 Discussion), p. 7 (7 Tokens).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 novel, exploration, algorithm mechanism이 Table 1: ViNT paired with our physical search algorithm consistently outperforms baselines for the task of ... 대비 Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based ...을 개선하고, Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface ([39], we implement image conditioning as simple channel-wise concatenation to the U-Net input.), does the paper-specific mechanism (We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that ...) retain the reported evaluation outcome (Figure 3: Long-horizon navigation in unseen environments with ViNT. We use physical search with a topological graph-based planner ...) when tested against the paper's strongest explicit boundary (Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Figure 3: Long-horizon navigation in unseen environments with ViNT. We use physical search with a topological graph-based planner ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based heuristic from start (orange) to goal (green). The future action samples ˆa ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, which can present a challenge for power-constrained platforms such as quadcopters. (p. 11, 7 Discussion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

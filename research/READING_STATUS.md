@@ -31,6 +31,8 @@
 
 상태 전환의 최소 조합은 `SKIMMED + ABSTRACT_CHECKED`, `READ + FULL_TEXT_CHECKED`, `REPRODUCED + EXPERIMENT_CHECKED`다. `SYNTHESIZED`는 `FULL_TEXT_CHECKED` 논문 사이의 비교를 요구한다.
 
+`audit_repository.py`는 위 최소 조합과 status별 분석 필드 완성도를 검사하며, 상태나 개인 분석 필드를 자동으로 변경하지 않는다.
+
 ## Tracker Fields
 
 | Field | What to record |

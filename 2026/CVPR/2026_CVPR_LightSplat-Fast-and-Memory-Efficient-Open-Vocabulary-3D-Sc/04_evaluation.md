@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figu
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** The dataset covers a wide range of object scales, distances, and scene complexities across four scenes (park, road, shop, and office), with categories containing varying ...
-- **p. 8 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Compared to other methods, our approach more effectively captures both object (e.g., door) and large-area semantics (e.g., wall), demonstrating robustness across diverse real-world scenes and ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** The second is ScanNet, a largescale RGB-D dataset containing 1,500 indoor scenes, each with reconstructed point clouds and per-point semantic labels.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Quantitative comparison for 3D Object Selection on the LERF-OVS dataset.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Methods 19 classes 15 classes 10 classes FD Time Runtime Memory mIoU mAcc mIoU mAcc mIoU mAcc (second) (byte) LangSplat 2.61 10.11 4.08 13.22 6.30 ...
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Qualitative comparison for 3D Object Selection on the DL3DV-OVS dataset.
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both indoor and outdoor environments.
-- **p. 8 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Ablation Study on LERF-OVS dataset.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** The dataset covers a wide range of object scales, distances, and scene complexities across four scenes (park, road, shop, and office), with categories containing varying ...
+- **p. 8 / 4.3. 3D Semantic Segmentation - extractive body cue:** Compared to other methods, our approach more effectively captures both object (e.g., door) and large-area semantics (e.g., wall), demonstrating robustness across diverse real-world scenes and ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** The second is ScanNet, a largescale RGB-D dataset containing 1,500 indoor scenes, each with reconstructed point clouds and per-point semantic labels.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Quantitative comparison for 3D Object Selection on the LERF-OVS dataset.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Methods 19 classes 15 classes 10 classes FD Time Runtime Memory mIoU mAcc mIoU mAcc mIoU mAcc (second) (byte) LangSplat 2.61 10.11 4.08 13.22 6.30 ...
+- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** Qualitative comparison for 3D Object Selection on the DL3DV-OVS dataset.
+- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both indoor and outdoor environments.
+- **p. 8 / 4.3. 3D Semantic Segmentation - extractive body cue:** Ablation Study on LERF-OVS dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. 3D Semantic Segmentation | EMPIRICAL / REAL-ROBOT OR HARDWARE | With context-aware 3D clustering, our method achieves detailed object boundaries while offering significantly faster performance than other methods. | p. 7 (4.3. 3D Semantic Segmentation) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), ... | p. 1 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figu
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** The dataset covers a wide range of object scales, distances, and scene complexities across four scenes (park, road, shop, and office), with categories containing varying ...
-- **p. 8 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Compared to other methods, our approach more effectively captures both object (e.g., door) and large-area semantics (e.g., wall), demonstrating robustness across diverse real-world scenes and ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** The second is ScanNet, a largescale RGB-D dataset containing 1,500 indoor scenes, each with reconstructed point clouds and per-point semantic labels.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Quantitative comparison for 3D Object Selection on the LERF-OVS dataset.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Methods 19 classes 15 classes 10 classes FD Time Runtime Memory mIoU mAcc mIoU mAcc mIoU mAcc (second) (byte) LangSplat 2.61 10.11 4.08 13.22 6.30 ...
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Qualitative comparison for 3D Object Selection on the DL3DV-OVS dataset.
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both indoor and outdoor environments.
-- **p. 8 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Ablation Study on LERF-OVS dataset.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** The dataset covers a wide range of object scales, distances, and scene complexities across four scenes (park, road, shop, and office), with categories containing varying ...
+- **p. 8 / 4.3. 3D Semantic Segmentation - extractive body cue:** Compared to other methods, our approach more effectively captures both object (e.g., door) and large-area semantics (e.g., wall), demonstrating robustness across diverse real-world scenes and ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** The second is ScanNet, a largescale RGB-D dataset containing 1,500 indoor scenes, each with reconstructed point clouds and per-point semantic labels.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Quantitative comparison for 3D Object Selection on the LERF-OVS dataset.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Methods 19 classes 15 classes 10 classes FD Time Runtime Memory mIoU mAcc mIoU mAcc mIoU mAcc (second) (byte) LangSplat 2.61 10.11 4.08 13.22 6.30 ...
+- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** Qualitative comparison for 3D Object Selection on the DL3DV-OVS dataset.
+- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both indoor and outdoor environments.
+- **p. 8 / 4.3. 3D Semantic Segmentation - extractive body cue:** Ablation Study on LERF-OVS dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), segmentation ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall framework of LightSplat. From multi-view images, we obtain SAM masks and corresponding CLIP features. We align them to the 3D scene via ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Fast inference via cluster-feature mapping. During inference, the text query is compared with a compact set of cluster features instead of all Gaussians ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison for 3D Object Selection on the LERF-OVS dataset. Red and orange highlight the best and second- best results in each column. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison for 3D Object Selection on the DL3DV-OVS dataset. Red and orange highlight the best and second- best results in each column. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative comparison for 3D Semantic Segmentation on the ScanNet dataset. Red and orange highlight the best and second-best results in each column. FD ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison for 3D Object Selection on the LERF-OVS dataset. We visualize model performance across different scenes and text queries in LERF-OVS. With ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison for 3D Object Selection on the DL3DV-OVS dataset. We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), segmentation ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall framework of LightSplat. From multi-view images, we obtain SAM masks and corresponding CLIP features. We align them to the 3D scene via ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Fast inference via cluster-feature mapping. During inference, the text query is compared with a compact set of cluster features instead of all Gaussians ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison for 3D Object Selection on the LERF-OVS dataset. Red and orange highlight the best and second- best results in each column. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison for 3D Object Selection on the DL3DV-OVS dataset. Red and orange highlight the best and second- best results in each column. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Quantitative comparison for 3D Semantic Segmentation on the ScanNet dataset. Red and orange highlight the best and second-best results in each column. FD ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison for 3D Object Selection on the LERF-OVS dataset. We visualize model performance across different scenes and text queries in LERF-OVS. With ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison for 3D Object Selection on the DL3DV-OVS dataset. We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset covers a wide range of object scales, distances, and scene complexities across four scenes (park, road, shop, and office), with categories containing ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 8 (4.3. 3D Semantic Segmentation) |
 | Task/environment | Compared to other methods, our approach more effectively captures both object (e.g., door) and large-area semantics (e.g., wall), demonstrating robustness across diverse real-world scenes ... | reset, timeout, object/scene variation | p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup) |
@@ -120,10 +120,10 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figu
 | Primary metric/result | Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For fair comparison on ScanNet, we follow the evaluation protocol of OpenGaussian and use the same 10 scenes.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Methods 19 classes 15 classes 10 classes FD Time Runtime Memory mIoU mAcc mIoU mAcc mIoU mAcc (second) (byte) LangSplat 2.61 10.11 4.08 13.22 6.30 ...
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** In addition, our approach reduces feature distillation to only 4.1 seconds and improves memory efficiency by up to 64×, while supporting fast inference at 500 ...
-- **p. 4 / 3.3. Indexed Feature Injection - extractive PDF cue:** Our approach significantly reduces memory usage by 1024 times compared to storing CLIP features directly, reducing the size from 4×512 bytes to just 2 bytes ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For fair comparison on ScanNet, we follow the evaluation protocol of OpenGaussian and use the same 10 scenes.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Methods 19 classes 15 classes 10 classes FD Time Runtime Memory mIoU mAcc mIoU mAcc mIoU mAcc (second) (byte) LangSplat 2.61 10.11 4.08 13.22 6.30 ...
+- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** In addition, our approach reduces feature distillation to only 4.1 seconds and improves memory efficiency by up to 64×, while supporting fast inference at 500 ...
+- **p. 4 / 3.3. Indexed Feature Injection - extractive body cue:** Our approach significantly reduces memory usage by 1024 times compared to storing CLIP features directly, reducing the size from 4×512 bytes to just 2 bytes ...
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figu
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Removing semantic-aware clustering decreases performance by over 50%, as the model cannot identify semantically corresponding masks across views for merging.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** Since Dr.Splat does not provide inference code, we adopt the reported inference results from its paper and measure all other results ourselves.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For robustness evaluation beyond limited indoor environments, we introduce the DL3DV-OVS dataset.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Such results highlight the flexibility and robustness of our method across diverse object scales and scene complexities.
-- **p. 6 / 4.2. 3D Object Selection - extractive PDF cue:** Our method shows robust performance on the road scene with multiple distant cars and the office scene with repeated objects such as chairs and monitors.
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive PDF cue:** Since these methods use semantics at the level of individual Gaussians, they fail to form mean19818
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Removing semantic-aware clustering decreases performance by over 50%, as the model cannot identify semantically corresponding masks across views for merging.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Since Dr.Splat does not provide inference code, we adopt the reported inference results from its paper and measure all other results ourselves.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For robustness evaluation beyond limited indoor environments, we introduce the DL3DV-OVS dataset.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Such results highlight the flexibility and robustness of our method across diverse object scales and scene complexities.
+- **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Our method shows robust performance on the road scene with multiple distant cars and the office scene with repeated objects such as chairs and monitors.
+- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** Since these methods use semantics at the level of individual Gaussians, they fail to form mean19818
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection), p. 6 (4.2. 3D Object Selection), p. 7 (4.3. 3D Semantic Segmentation), metrics p. 1 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection), baselines p. 3 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.2. 3D Object Selection), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection), p. 6 (4.2. 3D Object Selection), results p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figure/Table caption), p. 5 (4.2. 3D Object Selection), p. 5 (4.2. 3D Object Selection), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection), p. 6 (4.2. 3D Object Selection), p. 7 (4.3. 3D Semantic Segmentation), metrics p. 1 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection), baselines p. 3 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.2. 3D Object Selection), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection), p. 6 (4.2. 3D Object Selection), results p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figure/Table caption), p. 5 (4.2. 3D Object Selection), p. 5 (4.2. 3D Object Selection), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p130.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p130.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p130.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p130.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Implementation Details | EMPIRICAL / REAL-ROBOT OR HARDWARE | improvements can be achieved through more accurate system modeling and higher-precision hardware to enhance tracking accuracy. | p. 9 (B. Implementation Details) |
 | B. Implementation Details | EMPIRICAL / REAL-ROBOT OR HARDWARE | + Multi-Skill Composition: In the open and retrieve task, our ee-centric policy achieves 2 higher success rate than the joint space policy, which demonstrates ... | p. 10 (B. Implementation Details) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Some work also showed amazing results, achieving high-speed grasping, or grasping moving objects [50], but sacrificed payload capacity or precision due to specialized hardware ... | embodiment, simulator version and control stack | p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility) |
 | Task/environment | In general, although different works have shown success on different specific tasks, the specific system design and algorithm development make the same hardware and ... | reset, timeout, object/scene variation | p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 10 (B. Implementation Details) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 - **p. 8 / B. Implementation Details - extractive body cue:** 8 shows disturbances along the base x (red), = (blue) and Open (green), respectively. ‘The disturbances and model uncertainties primarily arise from arm motions, inaccurate ...
 - **p. 9 / B. Implementation Details - extractive body cue:** 7 reveals that tracking error increases at lower altitudes (around Im), likely due to unmodeled ground and wall effect disturbances.
 
-- **PDF anchors reviewed:** datasets p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 9 (B. Implementation Details), p. 11 (B. Implementation Details), metrics p. 10 (B. Implementation Details), p. 11 (B. Implementation Details), p. 10 (B. Implementation Details), p. 8 (A. Experimental Setup), p. 9 (B. Implementation Details), p. 8 (A. Experimental Setup), baselines p. 8 (B. Implementation Details), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 8 (B. Implementation Details), p. 9 (B. Implementation Details), p. 9 (B. Implementation Details), results p. 9 (B. Implementation Details), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 8 (B. Implementation Details), p. 8 (B. Implementation Details).
+- **Evidence anchors reviewed:** datasets p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 9 (B. Implementation Details), p. 11 (B. Implementation Details), metrics p. 10 (B. Implementation Details), p. 11 (B. Implementation Details), p. 10 (B. Implementation Details), p. 8 (A. Experimental Setup), p. 9 (B. Implementation Details), p. 8 (A. Experimental Setup), baselines p. 8 (B. Implementation Details), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 8 (B. Implementation Details), p. 9 (B. Implementation Details), p. 9 (B. Implementation Details), results p. 9 (B. Implementation Details), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 8 (B. Implementation Details), p. 8 (B. Implementation Details).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Root Mean Square Error (RMSE) is used as the tracking performance evaluation criterion. (p. 8, A. Experimental Setup).
+- **Metric evidence:** Researchers mostly developed a point-contact arm, such as a rigid rod, and proposed the hybrid motion-force control framework, although achieving high-precision tracking performance, struggled to handle scenarios requiring grasping: 2) ... (p. 2, 4) Rich real-world experiments demonstrated the versatility).
+- **Baseline/ablation evidence:** 1) Trajectory Tracking Task Setup: To show the effectiveness of our proposed method in end-effector trajectory tracking tasks, we perform a comparison between our control methods against two baseline approaches: (p. 7, A. Experimental Setup).
+- **Failure/negative evidence:** Although we have demonstrated the proposed framework through various real-world experiments, there are still several limitations due to time constraints and methodological limitations. (p. 11, IX. LIMITATIONS).

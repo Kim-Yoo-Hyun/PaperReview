@@ -1,23 +1,23 @@
-# Evaluation - 4D-VLA:  Spatiotemporal Vision-Language-Action Pretraining with Cross-Scene Calibration
+# Evaluation - 4D-VLA: Spatiotemporal Vision-Language-Action Pretraining with Cross-Scene Calibration
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yFjgV3cJje; PDF retrieval source: https://openreview.net/pdf/d30c75fa560b194e7ca1144a7d0d1dad6a0ee401.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yFjgV3cJje; PDF retrieval source: https://arxiv.org/pdf/2506.22242. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption)): Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data.
+PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 15 (Figure/Table caption), p. 8 (Figure/Table caption)): Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data.
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning a ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation.
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.5 Real-world evaluation To evaluate models in real-world scenarios, we conducted physical experiments using a Franka robotic arm.
-- **p. 5 / 4 Experiments - extractive PDF cue:** We first introduce the datasets and simulation environment, then describe pretraining and fine-tuning.
-- **p. 5 / 4 Experiments - extractive PDF cue:** Our model is pretrained on real-world data and fine-tuned with both simulation and real-world trajectories.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Task2: Robustness to distractors Task3: Precise placement Task4: Instruction following Figure 4: Our real-world experiment settings.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Our real-world experiment settings. These settings aim to evaluate the model's spatial generalization, robustness to distractors, precision in placement, and ability to follow ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning a ...
+- **p. 6 / 4 Experiments - extractive body cue:** LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation.
+- **p. 7 / 4 Experiments - extractive body cue:** 4.5 Real-world evaluation To evaluate models in real-world scenarios, we conducted physical experiments using a Franka robotic arm.
+- **p. 5 / 4 Experiments - extractive body cue:** We first introduce the datasets and simulation environment, then describe pretraining and fine-tuning.
+- **p. 5 / 4 Experiments - extractive body cue:** Our model is pretrained on real-world data and fine-tuned with both simulation and real-world trajectories.
+- **p. 7 / 4 Experiments - extractive body cue:** Task2: Robustness to distractors Task3: Precise placement Task4: Instruction following Figure 4: Our real-world experiment settings.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Our real-world experiment settings. These settings aim to evaluate the model's spatial generalization, robustness to distractors, precision in placement, and ability to follow ...
+- **p. 6 / 4 Experiments - extractive body cue:** Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data.
 
 ## Evaluation Type and Scope
 
@@ -30,39 +30,39 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data. | p. 6 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 2, our model achieves a 81.0% success rate in the In-View setting, demonstrating its capability to handle diverse training views effectively. | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | On average, 4D-VLA improves success rate by 12.1% than OpenVLA, demonstrating stronger stability and spatiotemporal reasoning in complex settings. | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | UniAct-0.5B [33]† 64.5 77.5 68.0 46.5 64.1 SparseVLM [34]† 79.8 67.0 72.6 39.4 64.7 FastV [35]† 83.4 84.0 74.2 51.6 73.3 VLA-Cache [36]† 83.8 ... | p. 6 (4 Experiments) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 8: Frame sampling ablations on Libero-Spatial. MBS attains the highest success (0.866) with competitive efficiency, while single-frame is fastest and most memory-light but ... | p. 22 (Figure/Table caption) |
+| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 8: Frame sampling ablations on Libero-Spatial. MBS attains the highest success (0.866) with competitive efficiency, while single-frame is fastest and most memory-light but ... | p. 15 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning a ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation.
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.5 Real-world evaluation To evaluate models in real-world scenarios, we conducted physical experiments using a Franka robotic arm.
-- **p. 5 / 4 Experiments - extractive PDF cue:** We first introduce the datasets and simulation environment, then describe pretraining and fine-tuning.
-- **p. 5 / 4 Experiments - extractive PDF cue:** Our model is pretrained on real-world data and fine-tuned with both simulation and real-world trajectories.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Task2: Robustness to distractors Task3: Precise placement Task4: Instruction following Figure 4: Our real-world experiment settings.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning a ...
+- **p. 6 / 4 Experiments - extractive body cue:** LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation.
+- **p. 7 / 4 Experiments - extractive body cue:** 4.5 Real-world evaluation To evaluate models in real-world scenarios, we conducted physical experiments using a Franka robotic arm.
+- **p. 5 / 4 Experiments - extractive body cue:** We first introduce the datasets and simulation environment, then describe pretraining and fine-tuning.
+- **p. 5 / 4 Experiments - extractive body cue:** Our model is pretrained on real-world data and fine-tuned with both simulation and real-world trajectories.
+- **p. 7 / 4 Experiments - extractive body cue:** Task2: Robustness to distractors Task3: Precise placement Task4: Instruction following Figure 4: Our real-world experiment settings.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Top: Our pretraining design philosophy highlights that prior methods often lack key cues in their input for accurate action inference. This leads to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Our 4D-VLA pipeline. Our memory bank sampling method selects informative frames from sequential RGB-D inputs. A vision encoder with 3D coordinate embeddings generates ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Our MV-Bench camera setting. We select 6 diverse viewpoints as training views and render images for all LIBERO-SPATIAL tasks. Novel inference views are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Evaluation of success rate on LIBERO. Bold indicates the best-performing model. Our model significantly outperforms other competitors, with an average success rate 12.1 ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Our real-world experiment settings. These settings aim to evaluate the model's spatial generalization, robustness to distractors, precision in placement, and ability to follow ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Evaluation of success rate on MV-Bench. ∆symbol representing the angular deviation from the nearest training viewpoint along the z-axis. As shown in Tab. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Real-world evaluation results. We incrementally improve the Base VLA by adding pretraining, coordinate encoding, and historical frames selected via memory bank sampling . ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Our multi-view real-world experiment settings. These settings aim to evaluate the model's out-of-distribution and novel-view generalization ability.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Top: Our pretraining design philosophy highlights that prior methods often lack key cues in their input for accurate action inference. This leads to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Our 4D-VLA pipeline. Our memory bank sampling method selects informative frames from sequential RGB-D inputs. A vision encoder with 3D coordinate embeddings generates ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Our MV-Bench camera setting. We select 6 diverse viewpoints as training views and render images for all LIBERO-SPATIAL tasks. Novel inference views are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Evaluation of success rate on LIBERO. Bold indicates the best-performing model. Our model significantly outperforms other competitors, with an average success rate 12.1 ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Our real-world experiment settings. These settings aim to evaluate the model's spatial generalization, robustness to distractors, precision in placement, and ability to follow ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Evaluation of success rate on MV-Bench. ∆symbol representing the angular deviation from the nearest training viewpoint along the z-axis. As shown in Tab. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Real-world evaluation results. We incrementally improve the Base VLA by adding pretraining, coordinate encoding, and historical frames selected via memory bank sampling . ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Our multi-view real-world experiment settings. These settings aim to evaluate the model's out-of-distribution and novel-view generalization ability.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning ... | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 6 (4 Experiments) |
 | Task/environment | LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation. | reset, timeout, object/scene variation | p. 6 (4 Experiments), p. 7 (4 Experiments) |
@@ -78,8 +78,8 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7
 | To evaluate each task, we randomly sample 3 different seeds to calculate the mean and standard deviation of the success rate. | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | UniAct-0.5B [33]† 64.5 77.5 68.0 46.5 64.1 SparseVLM [34]† 79.8 67.0 72.6 39.4 64.7 FastV [35]† 83.4 84.0 74.2 51.6 73.3 VLA-Cache [36]† 83.8 ... | definition/direction/unit from same section | p. 6 (4 Experiments) |
 | Figure 6: Historical image analysis. Larger points indicate lower efficiency. Encoding Position Fusion Success rate learnable relative | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
-| Table 8: Frame sampling ablations on Libero-Spatial. MBS attains the highest success (0.866) with competitive efficiency, while single-frame is fastest and most memory-light but ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
-| Figure 7: Success rates under varying coor- dinate chaos levels. Chaos generation. To simulate the diverse view- points in the pretraining dataset-where the robot's ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
+| Table 8: Frame sampling ablations on Libero-Spatial. MBS attains the highest success (0.866) with competitive efficiency, while single-frame is fastest and most memory-light but ... | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
+| Figure 7: Success rates under varying coor- dinate chaos levels. Chaos generation. To simulate the diverse view- points in the pretraining dataset-where the robot's ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 1: Top: Our pretraining design philosophy highlights that prior methods often lack key cues in their input for accurate action inference. This leads ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
@@ -93,7 +93,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7
 | Figure 1: Top: Our pretraining design philosophy highlights that prior methods often lack key cues in their input for accurate action inference. This leads ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | In addition, we evaluate on the ARM4R [32] benchmark for a direct comparison with ARM4R. | comparison identity and matched condition | p. 5 (4 Experiments) |
 | Table 5: Ablation on temporal encoding | comparison identity and matched condition | p. 10 (Figure/Table caption) |
-| Table 7: Ablations on heads and inputs (Libero-Long). Left: action head vs. FPS and success (MLP, autoregressive, diffusion). Right: effect of pretraining, 3D coordinate ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
+| Table 7: Ablations on heads and inputs (Libero-Long). Left: action head vs. FPS and success (MLP, autoregressive, diffusion). Right: effect of pretraining, 3D coordinate ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -106,8 +106,8 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| Table 7: Ablations on heads and inputs (Libero-Long). Left: action head vs. FPS and success (MLP, autoregressive, diffusion). Right: effect of pretraining, 3D coordinate ... | component/input/data sensitivity | p. 22 (Figure/Table caption) |
-| Table 8: Frame sampling ablations on Libero-Spatial. MBS attains the highest success (0.866) with competitive efficiency, while single-frame is fastest and most memory-light but ... | component/input/data sensitivity | p. 22 (Figure/Table caption) |
+| Table 7: Ablations on heads and inputs (Libero-Long). Left: action head vs. FPS and success (MLP, autoregressive, diffusion). Right: effect of pretraining, 3D coordinate ... | component/input/data sensitivity | p. 15 (Figure/Table caption) |
+| Table 8: Frame sampling ablations on Libero-Spatial. MBS attains the highest success (0.866) with competitive efficiency, while single-frame is fastest and most memory-light but ... | component/input/data sensitivity | p. 15 (Figure/Table caption) |
 | We remove frames with unchanged proprioception, specifically the stationary frames, and exclude trajectories with a total action count exceeding 600. | component/input/data sensitivity | p. 6 (4 Experiments) |
 | Unlike the pretraining phase, we used the simplest input settings to enable our model to learn the interaction effects between 3D information and historical ... | component/input/data sensitivity | p. 7 (4 Experiments) |
 | We first introduce the datasets and simulation environment, then describe pretraining and fine-tuning. | component/input/data sensitivity | p. 5 (4 Experiments) |
@@ -117,16 +117,16 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Our contributions are: (i) We propose 4D-VLA, an efficient VLA model that integrates a spatial module with vision features to generate 3D-aware spatial vision ... | Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption) |
+| Our contributions are: (i) We propose 4D-VLA, an efficient VLA model that integrates a spatial module with vision features to generate 3D-aware spatial vision ... | Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 15 (Figure/Table caption), p. 8 (Figure/Table caption) |
 | Primary metric/result | 2, our model achieves a 81.0% success rate in the In-View setting, demonstrating its capability to handle diverse training views effectively. | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Experiments - extractive PDF cue:** UniAct-0.5B [33]† 64.5 77.5 68.0 46.5 64.1 SparseVLM [34]† 79.8 67.0 72.6 39.4 64.7 FastV [35]† 83.4 84.0 74.2 51.6 73.3 VLA-Cache [36]† 83.8 85.8 ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning a ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation.
-- **p. 6 / 4 Experiments - extractive PDF cue:** LIBERO-100 includes 90 short-horizon (LIBERO-90) and 10 long-horizon (LIBERO-LONG) tasks, covering 130 subtasks, each with 50 trajectories captured from both a main and wrist-mounted camera.
-- **p. 6 / 4 Experiments - extractive PDF cue:** RGB-D frames are resized to 448×252, and each trajectory is uniformly downsampled to 100 actions.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Our model was trained for 1 epoch with a batch size of 512, requiring around 20k steps to complete.
+- **p. 6 / 4 Experiments - extractive body cue:** UniAct-0.5B [33]† 64.5 77.5 68.0 46.5 64.1 SparseVLM [34]† 79.8 67.0 72.6 39.4 64.7 FastV [35]† 83.4 84.0 74.2 51.6 73.3 VLA-Cache [36]† 83.8 85.8 ...
+- **p. 6 / 4 Experiments - extractive body cue:** 4.1 Datasets and simulation environments DROID [2] A diverse real-world robot manipulation dataset with 76,000 demonstration trajectories, or 350 hours of interaction data, spanning a ...
+- **p. 6 / 4 Experiments - extractive body cue:** LIBERO [4] The LIBERO benchmark is a simulation suite with 4 task sets designed to advance lifelong learning in robotic manipulation.
+- **p. 6 / 4 Experiments - extractive body cue:** LIBERO-100 includes 90 short-horizon (LIBERO-90) and 10 long-horizon (LIBERO-LONG) tasks, covering 130 subtasks, each with 50 trajectories captured from both a main and wrist-mounted camera.
+- **p. 6 / 4 Experiments - extractive body cue:** RGB-D frames are resized to 448×252, and each trajectory is uniformly downsampled to 100 actions.
+- **p. 6 / 4 Experiments - extractive body cue:** Our model was trained for 1 epoch with a batch size of 512, requiring around 20k steps to complete.
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 6 Conclusion - extractive PDF cue:** A limitation of our approach is its reliance on RGB-D input, which introduces hardware restriction.
-- **p. 6 / 4 Experiments - extractive PDF cue:** To avoid occlusion from the black box, test views in blocked areas are excluded.
-- **p. 7 / 4 Experiments - extractive PDF cue:** It highlights the robustness of our model in handling diverse viewpoints.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Task2: Robustness to distractors Task3: Precise placement Task4: Instruction following Figure 4: Our real-world experiment settings.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Our multi-view real-world experiment settings. These settings aim to evaluate the model's out-of-distribution and novel-view generalization ability.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Real-world multi-view evaluation. We test our model's spatial generalization across varying viewpoints and object layouts. 4D-VLA shows strong in-view and cross-view performance, highlighting ...
+- **p. 10 / 6 Conclusion - extractive body cue:** A limitation of our approach is its reliance on RGB-D input, which introduces hardware restriction.
+- **p. 6 / 4 Experiments - extractive body cue:** To avoid occlusion from the black box, test views in blocked areas are excluded.
+- **p. 7 / 4 Experiments - extractive body cue:** It highlights the robustness of our model in handling diverse viewpoints.
+- **p. 7 / 4 Experiments - extractive body cue:** Task2: Robustness to distractors Task3: Precise placement Task4: Instruction following Figure 4: Our real-world experiment settings.
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Our multi-view real-world experiment settings. These settings aim to evaluate the model's out-of-distribution and novel-view generalization ability.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Real-world multi-view evaluation. We test our model's spatial generalization across varying viewpoints and object layouts. 4D-VLA shows strong in-view and cross-view performance, highlighting ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (Figure/Table caption), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), baselines p. 6 (4 Experiments), p. 7 (4 Experiments), p. 1 (Figure/Table caption), p. 5 (4 Experiments), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (Figure/Table caption), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 10 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 6 (4 Experiments), p. 7 (4 Experiments), p. 1 (Figure/Table caption), p. 5 (4 Experiments), p. 10 (Figure/Table caption), p. 15 (Figure/Table caption), results p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 15 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

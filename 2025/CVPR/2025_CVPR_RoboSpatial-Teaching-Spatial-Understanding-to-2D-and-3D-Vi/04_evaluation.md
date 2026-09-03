@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Dataset | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results demonstrate that models trained on ROBOSPATIAL exhibit significantly improved spatial reasoning capabilities, consistently outperforming baseline methods on the evaluation benchmark ROBOSPATIAL-Val, a held-out ... | p. 2 (Dataset) |
 | 4.3. Real Robot Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Experiments show that LLaVA-NeXT fine-tuned on ROBOSPATIAL achieves the highest success rate across all models. | p. 8 (4.3. Real Robot Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We make the data and code for generating the dataset from 3D annotated scenes publicly available1. • VLMs trained on ROBOSPATIAL demonstrate superior spatial ... | embodiment, simulator version and control stack | p. 3 (Dataset), p. 2 (Dataset) |
 | Task/environment | Applying our methodology to existing indoor scene and tabletop datasets, we generate both a comprehensive training dataset and a benchmark for spatial question answering ... | reset, timeout, object/scene variation | p. 2 (Dataset), p. 2 (Dataset) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 - **p. 5 / 4.1.2. Spatial Understanding Evaluation - extractive body cue:** Questions fall into two categories: binary yes/no questions and coordinate prediction tasks.
 - **p. 4 / 3.2. Dataset Generation - extractive body cue:** Although the method does not require point clouds or meshes, it relies on camera intrinsics and extrinsics to project between 2D and 3D and to ...
 
-- **PDF anchors reviewed:** datasets p. 3 (Dataset), p. 2 (Dataset), p. 2 (Dataset), p. 5 (4.1. Setup), p. 3 (Dataset), p. 6 (4.1.4. Out-of-Domain Evaluation), metrics p. 8 (4.3. Real Robot Experiments), p. 5 (4.1.2. Spatial Understanding Evaluation), p. 8 (4.3. Real Robot Experiments), p. 4 (3.2. Dataset Generation), p. 5 (4.1. Setup), p. 6 (4.1.4. Out-of-Domain Evaluation), baselines p. 8 (4.3. Real Robot Experiments), p. 3 (Dataset), p. 2 (Dataset), p. 2 (Dataset), p. 5 (4.1. Setup), p. 8 (4.2. Results), results p. 2 (Dataset), p. 8 (4.3. Real Robot Experiments), p. 6 (4.1.3. Cross-Dataset Generalization Evaluation), p. 8 (4.2. Results), p. 6 (Figure/Table caption), p. 2 (Dataset).
+- **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 2 (Dataset), p. 2 (Dataset), p. 5 (4.1. Setup), p. 3 (Dataset), p. 6 (4.1.4. Out-of-Domain Evaluation), metrics p. 8 (4.3. Real Robot Experiments), p. 5 (4.1.2. Spatial Understanding Evaluation), p. 8 (4.3. Real Robot Experiments), p. 4 (3.2. Dataset Generation), p. 5 (4.1. Setup), p. 6 (4.1.4. Out-of-Domain Evaluation), baselines p. 8 (4.3. Real Robot Experiments), p. 3 (Dataset), p. 2 (Dataset), p. 2 (Dataset), p. 5 (4.1. Setup), p. 8 (4.2. Results), results p. 2 (Dataset), p. 8 (4.3. Real Robot Experiments), p. 6 (4.1.3. Cross-Dataset Generalization Evaluation), p. 8 (4.2. Results), p. 6 (Figure/Table caption), p. 2 (Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Results demonstrate that models trained on ROBOSPATIAL exhibit significantly improved spatial reasoning capabilities, consistently outperforming baseline methods on the evaluation benchmark ROBOSPATIAL-Val, a held-out validation subset ... (p. 2, Dataset).
+- **Metric evidence:** For yes/no questions, we report accuracy. (p. 5, 4.1.2. Spatial Understanding Evaluation).
+- **Baseline/ablation evidence:** We evaluate the following VLMs: LLaVA-NeXT [35] and RoboPoint [62], both with and without ROBOSPATIAL training; and two strong baselines, Molmo [9] and GPT-4o [42]. (p. 8, 4.3. Real Robot Experiments).
+- **Failure/negative evidence:** To mitigate failure cases arising from poor object grounding, we also include an auxiliary grounding dataset during training, which provides additional supervision for object reference resolution. (p. 5, 4.1. Setup).

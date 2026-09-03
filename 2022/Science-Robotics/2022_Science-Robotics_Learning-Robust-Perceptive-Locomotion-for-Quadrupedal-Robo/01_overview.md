@@ -1,8 +1,10 @@
 # Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2201.08117.
-> PDF retrieval source: https://arxiv.org/pdf/2201.08117. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2201.08117.
+> PDF retrieval source: https://arxiv.org/pdf/2201.08117. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / Science Robotics
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2201.08117
 - Code/Project: https://leggedrobotics.github.io/rl-perceptiveloco/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 Most existing methods that rely on onboard terrain perception are still vulnerable to these failures.를 문제로 두고, Our method consists of three stages, illustrated in Figure 6.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 8 (4. MATERIALS AND METHODS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Endowing legged robots with this ability is a grand challenge in robotics. (p. 1, 1. INTRODUCTION).
+- **Actual contribution:** Here we present a terrain-aware locomotion controller for quadrupedal robots that overcomes limitations of previous approaches and enables robust traversal of harsh natural terrain at unprecedented speeds (Movie 1). (p. 3, 1. INTRODUCTION).
+- **Evaluation boundary:** First, we compared the success rate of overcoming fixed-height steps as shown in Figure 4A. (p. 5, 2. RESULTS).
+- **Explicit failure boundary:** Large noise magnitude for each scan point to simulate complete lack of terrain information due to occlusion or mapping failure. (p. 12, 2. Perturbing the height values).

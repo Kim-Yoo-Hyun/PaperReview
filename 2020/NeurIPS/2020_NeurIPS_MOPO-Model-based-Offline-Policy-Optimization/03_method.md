@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2005.13239; PDF retrieval source: https://arxiv.org/pdf/2005.13239. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2005.13239; PDF retrieval source: https://arxiv.org/pdf/2005.13239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,9 +21,9 @@ PDF body method statement (p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 
 
 ## Design Rationale
 
-- **p. 1 / 1 Introduction - extractive body cue:** Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal contribution. ...
 - **p. 2 / 1 Introduction - extractive body cue:** The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is ...
 - **p. 1 / Abstract - extractive body cue:** Instead, we propose to modify the existing model-based RL methods by applying them with rewards artificially penalized by the uncertainty of the dynamics.
+- **p. 5 / 3 Preliminaries - extractive body cue:** We will analyze our framework under the assumption that we have access to an oracle uncertainty quantification module that provides an upper bound on the ...
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Fixed-data support | 온라인 탐색 없이 transition/action 분포를 정의한다 | offline trajectories와 metadata | dataset support, behavior distribution과 task return을 정리 | training batch/support | 4 MOPO: Model-Based Offline Policy Optimization Unlike model-free methods, our goal is to design an offline model-based reinforcement learning algorithm that can ... | p. 4 (3 Preliminaries), p. 4 (3 Preliminaries) |
 | Value / uncertainty update | dataset 밖 action의 과대추정을 억제한다 | batch transition과 value parameters | conservative, implicit, uncertainty 또는 behavior-regularized update를 수행 | Q/V/uncertainty estimate | Then we maximize the conservative estimation of the return by an off-the-shelf reinforcement learning algorithm, which gives MOPO, a generic model-based off-policy ... | p. 4 (3 Preliminaries), p. 7 (3 Preliminaries) |
@@ -64,7 +64,7 @@ PDF body method statement (p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 
 |---|---|---|---|
 | Input/observation | MOPO, Model-Based, Offline, Policy, Optimization, Unlike, model-free, methods, goal, design, reinforcement, learning, algorithm, take | dataset state/observation, action, reward와 return-to-go | body cue; exact tensor/frame verify |
 | State/latent | MOPO, Model-Based, Offline, Policy, Optimization, Unlike, model-free, methods, goal, design | Q/value 또는 sequence-policy state | body cue; notation verify |
-| Action/output | Specifically, methods, estimate, error, respect, out-of-distribution, actions, only, consider, states | dataset-supported action sequence | body cue; unit/decoder verify |
+| Action/output | primary, contribution, offline, model-based, algorithm, optimizes, policy, uncertainty-penalized, MDP, where | dataset-supported action sequence | body cue; unit/decoder verify |
 | Objective/constraint | Moreover, equation, suggests, policy, obtains, high, reward, estimated, MDP, while | offline value with OOD control | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -85,8 +85,8 @@ PDF body method statement (p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 
 |---|---|---|---|
 | Horizon | offline trajectory/discounted return horizon; deployment horizon과 분리한다. | The datasets in this benchmark have been generated as follows: random: roll out a randomly initialized policy for 1M steps. medium: partially ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training은 batch update, inference는 environment control tick; exact values 확인 필요. | Let Pπ b T ,t(s) denote the probability of being in state s at time step t if actions are sampled according ... | Hz/fps, inference time and control rate |
-| Memory | fixed dataset, value/policy parameters와 optional context/history. | not recovered | window and reset |
-| Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | fixed dataset, value/policy parameters와 optional context/history. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 (3 Preliminaries), p. 1 (Abstract), p. 2 (1 Introduction), p. 6 (3 Preliminaries), objective p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 8 (5 Experiments), p. 3 (3 Preliminaries), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 3 (3 Preliminaries), p. 1 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 7 (3 Preliminaries), p. 1 (Abstract), p. 2 (1 Introduction), p. 6 (3 Preliminaries), objective p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 8 (5 Experiments), p. 3 (3 Preliminaries), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 3 (3 Preliminaries), p. 1 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 4 MOPO: Model-Based Offline Policy Optimization Unlike model-free methods, our goal is to design an offline model-based reinforcement learning algorithm that can take actions that are not strictly within the ... (p. 4, 3 Preliminaries).
+- **Objective/update evidence:** The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of ... (p. 2, 1 Introduction).
+- **Temporal/runtime evidence:** Concretely, we train SAC for 1M steps and use the entire training replay buffer as the trajectories for the batch data. (p. 8, 5 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

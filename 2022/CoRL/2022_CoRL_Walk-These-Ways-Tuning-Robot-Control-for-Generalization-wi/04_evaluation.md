@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/margolis23a.html; PDF retrieval source: https://arxiv.org/pdf/2212.03238. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/margolis23a.html; PDF retrieval source: https://arxiv.org/pdf/2212.03238. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 7 (3 Method), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5: Removing gait constraints results in improved velocity tracking task performance on flat ground. Heat maps (right) break down the mean task reward ... | p. 11 (Figure/Table caption) |
 | 3 Method | EMPIRICAL / REAL-ROBOT OR HARDWARE | Therefore, it is possible to improve performance in an out-of-distribution terrain by modulating the parameters of the MoB policy. | p. 7 (3 Method) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 7 (3 Method), p
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In a real-world example, the robot was able to crawl under a 22 cm bar; the robot body thickness is 13 cm, leaving 9 ... | embodiment, simulator version and control stack | p. 8 (3 Method), p. 5 (3 Method) |
 | Task/environment | During training, one concern is that the robot might abandon its task or choose an early termination when the task reward is overwhelmed by ... | reset, timeout, object/scene variation | p. 5 (3 Method), p. 5 (3 Method) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 7 (3 Method), p
 - **p. 7 / 3 Method - extractive body cue:** Therefore, prior works would either attempt to climb over bushes as obstacles or fall back on a robust proprioceptive controller that is unaware of the ...
 - **p. 7 / 3 Method - extractive body cue:** The gait-free baseline cannot accomplish this; in the absence of such constraints during training, it will 7
 
-- **PDF anchors reviewed:** datasets p. 8 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), metrics p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (3 Method), p. 8 (3 Method), p. 11 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 14 (Figure/Table caption), results p. 11 (Figure/Table caption), p. 7 (3 Method), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 4 (3 Method), p. 5 (3 Method).
+- **Evidence anchors reviewed:** datasets p. 8 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), metrics p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (3 Method), p. 8 (3 Method), p. 11 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 14 (Figure/Table caption), results p. 11 (Figure/Table caption), p. 7 (3 Method), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 4 (3 Method), p. 5 (3 Method).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3: Behavior tuning enables interventional studies on the relationship between gait proper- ties and performance criteria within a single policy. Here, we illustrate how power consumption varies across speeds ... (p. 6, Figure/Table caption).
+- **Metric evidence:** For example, when implementing stance width as a behavior parameter, a naive approach would be to simply reward a constant desired distance between left and right feet. (p. 5, 3 Method).
+- **Baseline/ablation evidence:** Here, we illustrate how power consumption varies across speeds for common quadrupedal gaits and for a baseline policy without gait constraint. (p. 6, 3 Method).
+- **Failure/negative evidence:** Top row: A low-frequency gait fails to sprint on slippery terrain (Gait 2; inset) but tuning it to high frequency results in success (Gait 1). (p. 1, Body text (section boundary not confidently recovered)).

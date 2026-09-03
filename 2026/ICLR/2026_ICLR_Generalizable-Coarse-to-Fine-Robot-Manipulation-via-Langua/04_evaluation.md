@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WXFfMLyB6y; PDF retrieval source: https://openreview.net/pdf/c917563473da6d5f8455d72ba42222b9722824de.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WXFfMLyB6y; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/244660. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** It is LoRA fine-tuned (Hu et al., 2022) with the object keypoint dataset, language plans, and robot trajectories.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** A dataset containing 100 demonstrations per task along with a task description per trajectory is prepared for training.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 5.2 REAL-WORLD EXPERIMENTS Experimental Setting We keep the training settings the same as in the simulation and list key modifications here.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** A comparison between Exp ID 4 and ours can further validate the performance gain from adding the object position dataset.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 1) Base In the base version (corresponding to Exp ID 1), the coarse task planner is trained with only the robot trajectories to predict step ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Figure 3: Overview of the tasks in real-world experiments.
-- **p. 18 / A.6 REAL-WORLD EXPERIMENTS - extractive PDF cue:** We evaluate the all these eight tasks acroos different variations and record the success rate.
-- **p. 19 / A.6 REAL-WORLD EXPERIMENTS - extractive PDF cue:** We compare the results of training our method with different numbers of demonstrations.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** It is LoRA fine-tuned (Hu et al., 2022) with the object keypoint dataset, language plans, and robot trajectories.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** A dataset containing 100 demonstrations per task along with a task description per trajectory is prepared for training.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 5.2 REAL-WORLD EXPERIMENTS Experimental Setting We keep the training settings the same as in the simulation and list key modifications here.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** A comparison between Exp ID 4 and ours can further validate the performance gain from adding the object position dataset.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 1) Base In the base version (corresponding to Exp ID 1), the coarse task planner is trained with only the robot trajectories to predict step ...
+- **p. 17 / A.6 REAL-WORLD EXPERIMENTS - extractive body cue:** An overview of the tasks used in real-world experiments are shown in Figure 4.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Our method achieves a strong generalization ability to novel tasks and object variations, trained with only 10 demonstrations per task.
+- **p. 18 / A.6 REAL-WORLD EXPERIMENTS - extractive body cue:** We evaluate the all these eight tasks acroos different variations and record the success rate.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2: Ablation study of CLAP on GemBench. Here are the average success rates of 4 levels of evaluation tasks from Gembench under different ... | p. 8 (Figure/Table caption) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves an overall success rate 12% higher than prior 7 | p. 7 (5 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** It is LoRA fine-tuned (Hu et al., 2022) with the object keypoint dataset, language plans, and robot trajectories.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** A dataset containing 100 demonstrations per task along with a task description per trajectory is prepared for training.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 5.2 REAL-WORLD EXPERIMENTS Experimental Setting We keep the training settings the same as in the simulation and list key modifications here.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** A comparison between Exp ID 4 and ours can further validate the performance gain from adding the object position dataset.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 1) Base In the base version (corresponding to Exp ID 1), the coarse task planner is trained with only the robot trajectories to predict step ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Figure 3: Overview of the tasks in real-world experiments.
-- **p. 18 / A.6 REAL-WORLD EXPERIMENTS - extractive PDF cue:** We evaluate the all these eight tasks acroos different variations and record the success rate.
-- **p. 19 / A.6 REAL-WORLD EXPERIMENTS - extractive PDF cue:** We compare the results of training our method with different numbers of demonstrations.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** It is LoRA fine-tuned (Hu et al., 2022) with the object keypoint dataset, language plans, and robot trajectories.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** A dataset containing 100 demonstrations per task along with a task description per trajectory is prepared for training.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 5.2 REAL-WORLD EXPERIMENTS Experimental Setting We keep the training settings the same as in the simulation and list key modifications here.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** A comparison between Exp ID 4 and ours can further validate the performance gain from adding the object position dataset.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 1) Base In the base version (corresponding to Exp ID 1), the coarse task planner is trained with only the robot trajectories to predict step ...
+- **p. 17 / A.6 REAL-WORLD EXPERIMENTS - extractive body cue:** An overview of the tasks used in real-world experiments are shown in Figure 4.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Our method achieves a strong generalization ability to novel tasks and object variations, trained with only 10 demonstrations per task.
+- **p. 18 / A.6 REAL-WORLD EXPERIMENTS - extractive body cue:** We evaluate the all these eight tasks acroos different variations and record the success rate.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Intuition of CLAP. Our method achieves strong generalization ability by decomposing tasks into step-wise language instructions, each aligned with a 3D keypoint. reasoning, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of CLAP. We propose a novel coarse-to-fine 3D manipulation policy, compris- ing of a coarse task planner and a fine-grained action predictor. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Multi-Task Performance on GemBench. Here are the average success rates of 4 levels of evaluation tasks from Gembench. Except CLAP, we use the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation study of CLAP on GemBench. Here are the average success rates of 4 levels of evaluation tasks from Gembench under different training ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of the tasks in real-world experiments. There are four training tasks: put shape in shape sorter, put block in cup, open drawer, ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Real-world Performance. Here are the average success rate under different generalization settings for real-world experiments. 5.2 REAL-WORLD EXPERIMENTS Experimental Setting We keep the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3. Our method achieves a strong generalization ability to novel tasks and object variations, trained with only 10 demonstrations per task. CLAP achieves 54.8% ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 4: Number of samples. We record the number of samples in training set and validation set for different datasets used in the simulation experiments ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Intuition of CLAP. Our method achieves strong generalization ability by decomposing tasks into step-wise language instructions, each aligned with a 3D keypoint. reasoning, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Overview of CLAP. We propose a novel coarse-to-fine 3D manipulation policy, compris- ing of a coarse task planner and a fine-grained action predictor. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Multi-Task Performance on GemBench. Here are the average success rates of 4 levels of evaluation tasks from Gembench. Except CLAP, we use the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Ablation study of CLAP on GemBench. Here are the average success rates of 4 levels of evaluation tasks from Gembench under different training ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 3: Overview of the tasks in real-world experiments. There are four training tasks: put shape in shape sorter, put block in cup, open drawer, ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Real-world Performance. Here are the average success rate under different generalization settings for real-world experiments. 5.2 REAL-WORLD EXPERIMENTS Experimental Setting We keep the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3. Our method achieves a strong generalization ability to novel tasks and object variations, trained with only 10 demonstrations per task. CLAP achieves 54.8% ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 4: Number of samples. We record the number of samples in training set and validation set for different datasets used in the simulation experiments ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It is LoRA fine-tuned (Hu et al., 2022) with the object keypoint dataset, language plans, and robot trajectories. | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
 | Task/environment | A dataset containing 100 demonstrations per task along with a task description per trajectory is prepared for training. | reset, timeout, object/scene variation | p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 | Primary metric/result | Our method achieves an overall success rate 12% higher than prior 7 | numeric claim only at cited anchor | p. 7 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** This training set contains 16 tasks with 31 variations.
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Instead of evaluating on in-distribution tasks and variations, GemBench designs an evaluation set containing 4 levels of tasks, where different elements are varied: - Placements ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Following the evaluation setting in GemBench (Garcia et al., 2025), all trained models are evaluated with 20 episodes per task variation per seed, and 5 ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Apart from key-frame pairs of observation and action (otk, atk+1), RVT2 augments the training data by sampling observations every n frames (e.g., every 10 frames).
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** The experimental results demonstrate the strong generalization ability of our method to novel tasks and object variations, as indicated by the performance gain on Level2, ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Success ↑ L1 L2 L3 L4 HiveFormer (Guhur et al., 2023) 30.4 60.3 ± 1.5 26.1 ± 1.4 35.1 ± 1.7 0.0 ± 0.0 PolarNet ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** This training set contains 16 tasks with 31 variations.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Instead of evaluating on in-distribution tasks and variations, GemBench designs an evaluation set containing 4 levels of tasks, where different elements are varied: - Placements ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Following the evaluation setting in GemBench (Garcia et al., 2025), all trained models are evaluated with 20 episodes per task variation per seed, and 5 ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Apart from key-frame pairs of observation and action (otk, atk+1), RVT2 augments the training data by sampling observations every n frames (e.g., every 10 frames).
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** The experimental results demonstrate the strong generalization ability of our method to novel tasks and object variations, as indicated by the performance gain on Level2, ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Success ↑ L1 L2 L3 L4 HiveFormer (Guhur et al., 2023) 30.4 60.3 ± 1.5 26.1 ± 1.4 35.1 ± 1.7 0.0 ± 0.0 PolarNet ...
 
 ## Generalization and Failure Cases
 
@@ -161,10 +161,10 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 
 ## Limitations and Verification Questions
 
-- **p. 16 / A.5 ADDITIONAL ABLATION STUDY - extractive PDF cue:** Further increasing the number of robot trajectory improves on the in-domain performance (L1) while does not help in the average success rate.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** Furthermore, our design leads to substantial performance gain on the most challenging Level-4 tasks, where several baselines methods fail consistently.
+- **p. 16 / A.5 ADDITIONAL ABLATION STUDY - extractive body cue:** Further increasing the number of robot trajectory improves on the in-domain performance (L1) while does not help in the average success rate.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Furthermore, our design leads to substantial performance gain on the most challenging Level-4 tasks, where several baselines methods fail consistently.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (A.6 REAL-WORLD EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 19 (A.6 REAL-WORLD EXPERIMENTS), p. 19 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 17 (A.6 REAL-WORLD EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (A.6 REAL-WORLD EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 19 (A.6 REAL-WORLD EXPERIMENTS), p. 19 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

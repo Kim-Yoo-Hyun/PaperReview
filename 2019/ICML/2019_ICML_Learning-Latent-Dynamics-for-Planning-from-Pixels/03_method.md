@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1811.04551; PDF retrieval source: https://arxiv.org/pdf/1811.04551. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1811.04551; PDF retrieval source: https://arxiv.org/pdf/1811.04551. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent S
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | We define a discrete time step t, hidden states st, image observations ot, continuous action vectors at, and scalar rewards rt, that ... | p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent State Space Model) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Instead, we use an encoder q(s1:T / o1:T , a1:T ) = QT t=1 q(st / st-1, at-1, ot) to infer approximate ... | p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model) |
@@ -131,8 +131,17 @@ PDF body method statement (p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent S
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), p. 2 (2 Initialize model parameters θ randomly), objective p. 3 (2 Initialize model parameters θ randomly), p. 4 (3. Recurrent State Space Model), p. 2 (2 Initialize model parameters θ randomly), p. 2 (2 Initialize model parameters θ randomly), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), temporal p. 2 (2. Latent Space Planning), p. 3 (2 Initialize model parameters θ randomly), p. 6 (5. Experiments), p. 2 (2 Initialize model parameters θ randomly), p. 6 (5. Experiments), p. 3 (3. Recurrent State Space Model).
+- **Evidence anchors reviewed:** method p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), p. 2 (2 Initialize model parameters θ randomly), objective p. 3 (2 Initialize model parameters θ randomly), p. 4 (3. Recurrent State Space Model), p. 2 (2 Initialize model parameters θ randomly), p. 2 (2 Initialize model parameters θ randomly), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), temporal p. 2 (2. Latent Space Planning), p. 3 (2 Initialize model parameters θ randomly), p. 6 (5. Experiments), p. 2 (2 Initialize model parameters θ randomly), p. 6 (5. Experiments), p. 3 (3. Recurrent State Space Model).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We define a discrete time step t, hidden states st, image observations ot, continuous action vectors at, and scalar rewards rt, that follow the stochastic dynamics Transition function: st ∼p(st ... (p. 2, 2. Latent Space Planning).
+- **Objective/update evidence:** Estimating the outer expectations using a single reparameterized sample yields an efficient objective for inference and learning in non-linear latent variable models that can be optimized using gradient ascent (Kingma ... (p. 4, 3. Recurrent State Space Model).
+- **Temporal/runtime evidence:** Agent designs Figure 5 compares PlaNet, a version collecting episodes under random actions rather than by planning, and a version that at each environment step selects the best action out ... (p. 6, 5. Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2408.00714; PDF retrieval source: https://arxiv.org/pdf/2408.00714. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2408.00714; PDF retrieval source: https://arxiv.org/pdf/2408.00714. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,27 +10,27 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 
 ## PDF Body Digest
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** Segment Anything (SA) introduced a foundation model for promptable segmentation in images (Kirillov et al., 2023).
-- **p. 1 / 1 Introduction - extractive PDF cue:** However an image is only a static snapshot of the real world in which visual segments can exhibit complex motion, and with the rapid growth ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Many important applications in AR/VR, robotics, autonomous vehicles, and video editing require temporal localization beyond image-level segmentation.
-- **p. 1 / 1 Introduction - extractive PDF cue:** We believe a universal visual segmentation system should be applicable to both images and videos.
-- **p. 1 / 1 Introduction - extractive PDF cue:** Segmentation in video aims to determine the spatio-temporal extent of entities, which presents unique challenges beyond those in images.
-- **p. 1 / 1 Introduction - extractive PDF cue:** Further, efficient processing of a large number of frames is a key challenge.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Different from most existing video segmentation datasets, our data engine is not restricted to objects of specific categories, but instead targeted to provide training data ...
+- **p. 1 / 1 Introduction - extractive body cue:** Segment Anything (SA) introduced a foundation model for promptable segmentation in images (Kirillov et al., 2023).
+- **p. 1 / 1 Introduction - extractive body cue:** However an image is only a static snapshot of the real world in which visual segments can exhibit complex motion, and with the rapid growth ...
+- **p. 1 / 1 Introduction - extractive body cue:** Many important applications in AR/VR, robotics, autonomous vehicles, and video editing require temporal localization beyond image-level segmentation.
+- **p. 1 / 1 Introduction - extractive body cue:** We believe a universal visual segmentation system should be applicable to both images and videos.
+- **p. 1 / 1 Introduction - extractive body cue:** Segmentation in video aims to determine the spatio-temporal extent of entities, which presents unique challenges beyond those in images.
+- **p. 1 / 1 Introduction - extractive body cue:** Further, efficient processing of a large number of frames is a key challenge.
+- **p. 2 / 1 Introduction - extractive body cue:** Different from most existing video segmentation datasets, our data engine is not restricted to objects of specific categories, but instead targeted to provide training data ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Further, efficient processing of a large number of frames is a key challenge. | 논문이 정의한 robot/embodied environment | body wording is the source claim |
-| Observation / input | The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF body |
 | State / latent | task, takes, input, points, boxes, masks, frame, video, define, segment | task state 또는 decision variable | notation and tensor shape require body check |
 | Output / action | SAM, clicks, inputs, following, click, sampling, strategy, CiVOS | paper-specific output/action | exact unit/frame/decoder require body check |
 | Target outcome | source task metric; robot link not established | primary task objective와 closed-loop behavior | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | source-defined input o; body terms: task, takes, input, points, boxes, masks, frame, video, define, segment | p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method) |
 | Decision / output variable | prediction/embedding/sample ŷ; body terms: introduce, Segment, Anything, Model, SAM, unified, video, image | p. 1 (1 Introduction), p. 2 (1 Introduction), p. 28 (Method) |
@@ -38,21 +38,21 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | source task metric; robot link not established | p. 30 (dataset), p. 31 (dataset), p. 32 (dataset) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** Segmentation in video aims to determine the spatio-temporal extent of entities, which presents unique challenges beyond those in images.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Different from most existing video segmentation datasets, our data engine is not restricted to objects of specific categories, but instead targeted to provide training data ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** SAM 2 can produce better segmentation accuracy while using 3× fewer interactions than prior approaches.
+- **p. 1 / 1 Introduction - extractive body cue:** Segmentation in video aims to determine the spatio-temporal extent of entities, which presents unique challenges beyond those in images.
+- **p. 2 / 1 Introduction - extractive body cue:** Different from most existing video segmentation datasets, our data engine is not restricted to objects of specific categories, but instead targeted to provide training data ...
+- **p. 2 / 1 Introduction - extractive body cue:** SAM 2 can produce better segmentation accuracy while using 3× fewer interactions than prior approaches.
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 28 (Method), p. 1 (1 Introduction)): We introduce the Segment Anything Model 2 (SAM 2), a unified model for video and image segmentation (we consider an image as a single-frame video).
+PDF body contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 28 (Method), p. 1 (1 Introduction)): We introduce the Segment Anything Model 2 (SAM 2), a unified model for video and image segmentation (we consider an image as a single-frame video).
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our final Segment Anything Video (SA-V) dataset (§5.2) consists of 35.5M masks across 50.9K videos, 53× more masks than any existing video segmentation dataset.
-- **p. 28 / Method - extractive PDF cue:** 16, we show a comparison between our baseline (Cutie-base+, top row) and our model (SAM 2, bottom row) when prompted with a mask in the ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our final Segment Anything Video (SA-V) dataset (§5.2) consists of 35.5M masks across 50.9K videos, 53× more masks than any existing video segmentation dataset.
+- **p. 28 / Method - extractive body cue:** 16, we show a comparison between our baseline (Cutie-base+, top row) and our model (SAM 2, bottom row) when prompted with a mask in the ...
+- **p. 1 / 1 Introduction - extractive body cue:** SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the ...
 
 ## Assumptions and Failure Boundary
 
@@ -67,11 +67,11 @@ PDF contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 28 (M
 
 ## Position in the Robotics Loop
 
-upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method). The downstream handoff is claimed only when the body describes it.
+upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

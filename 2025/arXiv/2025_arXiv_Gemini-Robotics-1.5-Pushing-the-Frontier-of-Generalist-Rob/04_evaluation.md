@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (62 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.03342; PDF retrieval source: https://arxiv.org/pdf/2510.03342. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (62 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.03342; PDF retrieval source: https://arxiv.org/pdf/2510.03342. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -27,7 +27,7 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 2.3. Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | To improve research iteration speed, we have developed methods for evaluation without real robots in the loop. | p. 4 (2.3. Evaluation) |
 | 2.3. Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | This has allowed us to massively scale up the breadth of our evaluations to new objects, scenes, and environments, and to rapidly iterate on ... | p. 4 (2.3. Evaluation) |
@@ -41,11 +41,11 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Over 90% of the evaluation episodes during the development of Gemini Robotics 1.5 were conducted in simulation. | embodiment, simulator version and control stack | p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation) |
 | Task/environment | We use the open-source MuJoCo simulator (Todorov et al., 2012) to generate evaluation scenes for the robot embodiments in this report. | reset, timeout, object/scene variation | p. 4 (2.3. Evaluation) |
@@ -128,7 +128,16 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 
 - **p. 22 / 7. Discussion - extractive body cue:** Its performance on tasks like visual and spatial thinking, task planning, progress estimation, and success detection is critical for robust, real-world robotic applications.
 
-- **PDF anchors reviewed:** datasets p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), metrics p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), baselines p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), results p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation).
+- **Evidence anchors reviewed:** datasets p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), metrics p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), baselines p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), results p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (62 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** To improve research iteration speed, we have developed methods for evaluation without real robots in the loop. (p. 4, 2.3. Evaluation).
+- **Metric evidence:** To improve research iteration speed, we have developed methods for evaluation without real robots in the loop. (p. 4, 2.3. Evaluation).
+- **Baseline/ablation evidence:** For all comparisons reported in this report, we perform A/B/n testing on real robots. (p. 4, 2.3. Evaluation).
+- **Failure/negative evidence:** An action failure is when the VLA does not successfully complete the sub-task. (p. 19, 4.3. Thinking).

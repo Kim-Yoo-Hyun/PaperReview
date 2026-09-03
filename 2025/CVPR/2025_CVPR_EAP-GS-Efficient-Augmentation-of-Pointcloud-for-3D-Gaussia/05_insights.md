@@ -1,53 +1,73 @@
 # Insights — EAP-GS: Efficient Augmentation of Pointcloud for 3D Gaussian Splatting in Few-shot Scene Reconstruction
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** Specifically, we introduce an Attentional Pointcloud Augmentation (APA) technique, which retains two-view tracks as an option for pointcloud generation.
-- **Problem cue:** In practice, a sufficient number of images are often difficult to obtain due to various limitations.
-- **Claim/result cue:** Experimental results from various indoor and outdoor scenes demonstrate that the proposed EAP-GS achieves outstanding scene reconstruction performance and surpasses state-of-the-art methods.
+- **p. 5 / 3.2. Attentional Pointcloud Augmentation - extractive body cue:** Therefore, we propose a pointcloud generation method specifically designed for 3DGS initialization, which significantly increases the number of initial points.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • A key insight that inadequate initialization can lead to poor performance in few-shot optimization, which is ...
+- **p. 2 / 1. Introduction - extractive body cue:** To address this, we propose an easy-to-implement attentional pointcloud augmentation technique to improve the accuracy of 3DGS reconstruction.
+- **p. 4 / 3.2. Attentional Pointcloud Augmentation - extractive body cue:** The input to reconstruction stage consists of the n scene views I = {Ii ∈RH×W/i = 1, ..., n} and 16501
+- **p. 4 / 3. Method - extractive body cue:** 3.2, we present an Attentional Pointcloud Augmentation technique to effectively increase the number of initial points and harmonize the overall pointcloud density distribution of the ...
+- **p. 5 / 3.2. Attentional Pointcloud Augmentation - extractive body cue:** In this work, we implement our algorithm based on DetectorfreeSfM [11], which leverages a detector-free matcher to enhance feature extraction in texture-poor scenarios.
+- **p. 4 / 3.1. Preliminary - extractive body cue:** The optimization process involves splatting 3D Gaussian into the image domain, sorting the N 2D Gaussians on the pixel by depth, and then calculating the ...
+- **Contribution anchor:** p. 5 (3.2. Attentional Pointcloud Augmentation), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Attentional Pointcloud Augmentation), p. 4 (3. Method), p. 5 (3.2. Attentional Pointcloud Augmentation)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** In practice, a sufficient number of images are often difficult to obtain due to various limitations.
+- **p. 2 / 1. Introduction - extractive body cue:** With a lack of coherence between Gaussians , their attributes can only be optimized individually via image supervision.
+- **p. 8 / 5. Discussion - extractive body cue:** Lacking a method to limit the error may be a limitation Figure 7.
+- **p. 8 / 5. Discussion - extractive body cue:** This issue is primarily due to data incompleteness, and a potential approach to further enhance performance would be to incorporate prior knowledge or generative models ...
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Similar results are obtained for unknown camera-poses though we did not report here because of space limitation.
+- **Boundary to test:** Lacking a method to limit the error may be a limitation Figure 7.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | Therefore, we propose a pointcloud generation method specifically designed for 3DGS initialization, which significantly increases the number of initial points. | p. 5 (3.2. Attentional Pointcloud Augmentation), p. 2 (1. Introduction) |
+| Reported outcome | APA significantly improves the overall number and distribution of initial points, resulting in more accurate and reasonable scene geometry. | p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table caption) |
+| Failure/limitation | Lacking a method to limit the error may be a limitation Figure 7. | p. 8 (5. Discussion), p. 8 (5. Discussion) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 After a new image registration, bundle adjustment is performed to refine the parameters of camera pose Pi and 3D point X to minimizes the reprojection error and filter observations with large errors: ...를 The input to reconstruction stage consists of the n scene views I = {Ii ∈RH×W/i = 1, ..., n} and 16501로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Lacking a method to limit the error may be a limitation Figure 7.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: Therefore, we propose a pointcloud generation method specifically designed for 3DGS initialization, which significantly increases the number of initial points.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Neural Scene Representations`; tags: `Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Experimental results from various indoor and outdoor scenes demonstrate that the proposed EAP-GS achieves outstanding scene reconstruction performance and surpasses state-of-the-art methods.
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Lacking a method to limit the error may be a limitation Figure 7.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We evaluated our method on all scenes of the LLFF [21] and Mip-NeRF360 dataset [1]..
+3. Compare against the body-reported baseline or a matched simpler baseline: We configured COLMAP [28] with the same parameters as FSGS for the initialization of various baselines..
+4. Report the body metric and its denominator/aggregation: Best score and second-best score are in red and orange respectively..
+5. Re-run the body-reported ablation/failure condition: Table 4. Ablation study on proposed components. We evalute the effect of each component of EAP-GS on the LLFF dataset. Pointcloud Attention PSNR SSIM LPIPS Number.
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 5 (3.2. Attentional Pointcloud Augmentation); the primary result is directionally consistent at p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 7 (4.2. Experimental Results); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 Therefore, pointcloud, generation mechanism이 We configured COLMAP [28] with the same parameters as FSGS for the initialization of various baselines. 대비 Best score and second-best score are in red and orange respectively.을 개선하고, Lacking a method to limit the error may be a limitation Figure 7. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

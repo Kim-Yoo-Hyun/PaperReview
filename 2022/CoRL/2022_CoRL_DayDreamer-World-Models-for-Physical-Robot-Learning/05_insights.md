@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: encθ(st / st-1, at-1, xt) Decoder Network: decθ(st) ≈xt Dynamics ...를 A recurrent state-space model (RSSM) is trained to predict future codes given actions, without observing intermediate inputs.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitations While Dreamer shows promising results, learning on hardware over many hours creates wear on robots that may require human intervention or repair.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Dreamer consists of two neural network components.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: encθ(st / st-1, at-1, xt) Decoder Network: decθ(st) ... (p. 3, 2 Approach).
+- **Paper-specific mechanism:** The key contributions of this paper are summarized as follows: • Dreamer on Robots We apply Dreamer to 4 robots, demonstrating successful learning directly in the real world, without introducing ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is We evaluate Dreamer on 4 robots, each with a different task, and compare its performance to appropriate algorithmic and human baselines. (p. 4, 3 Experiments); the relevant task/metric cue is The robot is provided with a dense reward equal to the negative L2 distance. (p. 7, 3 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** On the other hand, learning inside of simulators fails to capture the complexity of the real world, is prone to simulator inaccuracies, and the resulting behaviors do not adapt to ... (p. 1, Body text (section boundary not confidently recovered)).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 3.2 UR5 Multi-Object Visual Pick and Place Common in warehouse and logistics environments, pick and place tasks require a robot manipulator to transport items from one bin into another..
-3. Compare against the body-reported baseline or a matched simpler baseline: The state-of-the-art baseline in this category is DrQv2 (Yarats et al., 2021), which uses image augmentation to increase sample-efficiency..
-4. Report the body metric and its denominator/aggregation: Dreamer overcomes the challenges of visual localization and sparse rewards on this task, learning a successful strategy within a few hours of autonomous operation..
-5. Re-run the body-reported ablation/failure condition: Specifically, we aim to answer the following research questions: • Does Dreamer enable robot learning directly in the real world, without simulators? • Does Dreamer succeed across various robot platforms, sensory modalities, ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: encθ(st / st-1, at-1, xt) Decoder Network: decθ(st) ... (p. 3, 2 Approach); preserve the objective/update rule: Different gradient estimators are available for computing the policy gradient for optimizing the actor, such as Reinforce (Williams, 1992) and the reparameterization trick (Kingma and Welling, 2013; Rezende et al., ... (p. 4, 2 Approach).
+2. Use the paper-reported task/data/environment cue: 3.2 UR5 Multi-Object Visual Pick and Place Common in warehouse and logistics environments, pick and place tasks require a robot manipulator to transport items from one bin into another. (p. 6, 3 Experiments).
+3. Compare against the reported or matched baseline: The state-of-the-art baseline in this category is DrQv2 (Yarats et al., 2021), which uses image augmentation to increase sample-efficiency. (p. 5, 3 Experiments).
+4. Report the body metric with its denominator and aggregation: The robot is provided with a dense reward equal to the negative L2 distance. (p. 7, 3 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Specifically, we aim to answer the following research questions: • Does Dreamer enable robot learning directly in the real world, without simulators? • Does Dreamer succeed across various robot platforms, ... (p. 4, 3 Experiments); if none is reported, design one around: On the other hand, learning inside of simulators fails to capture the complexity of the real world, is prone to simulator inaccuracies, and the resulting behaviors do not adapt to ... (p. 1, Body text (section boundary not confidently recovered)).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach); the primary result is directionally consistent at p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 4 (3 Experiments), p. 4 (3 Experiments), p. 4 (3 Experiments), and measure the boundary at p. 1 (Body text (section boundary not confidently recovered)), p. 6 (3 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Dreamer, consists, neural mechanism이 The state-of-the-art baseline in this category is DrQv2 (Yarats et al., 2021), which uses image augmentation ... 대비 Dreamer overcomes the challenges of visual localization and sparse rewards on this task, learning a successful strategy within ...을 개선하고, Limitations While Dreamer shows promising results, learning on hardware over many hours creates wear on robots ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: ...), does the paper-specific mechanism (The key contributions of this paper are summarized as follows: • Dreamer on Robots We apply Dreamer to 4 robots, demonstrating successful ...) retain the reported evaluation outcome (The robot is provided with a dense reward equal to the negative L2 distance.) when tested against the paper's strongest explicit boundary (On the other hand, learning inside of simulators fails to capture the complexity of the real world, is ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The robot is provided with a dense reward equal to the negative L2 distance.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The key contributions of this paper are summarized as follows: • Dreamer on Robots We apply Dreamer to 4 robots, demonstrating successful learning directly in the real world, without introducing ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** We evaluate Dreamer on 4 robots, each with a different task, and compare its performance to appropriate algorithmic and human baselines. (p. 4, 3 Experiments).
+- **Strongest explicit boundary:** On the other hand, learning inside of simulators fails to capture the complexity of the real world, is prone to simulator inaccuracies, and the resulting behaviors do not adapt to ... (p. 1, Body text (section boundary not confidently recovered)).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

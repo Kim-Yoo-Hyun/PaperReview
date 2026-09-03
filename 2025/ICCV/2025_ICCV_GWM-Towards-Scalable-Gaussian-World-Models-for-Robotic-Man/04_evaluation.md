@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4.5. Ablation Analysis - extractive PDF cue:** This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches.
-- **p. 8 / 4.5. Ablation Analysis - extractive PDF cue:** The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial understanding.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations per ...
-- **p. 8 / 4.5. Ablation Analysis - extractive PDF cue:** The success rate further improves from 18% to 24%.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results for future state prediction on Meta-World and FRANKA PNP. LPIPS and SSIM scores are scaled by 100. Best results are highlighted ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Model-based RL Results of GWM and ivideogpt [82] on METAWORLD. The shadow area represents 95% confidence interval (CI) across three random seeds. Each ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Real-World Experiment Setup. Left: using a Franka Emika Panda robotic arm equipped with an RGB camera, we eval- uate the performance of the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall pipeline of GWM, which primarily consists of a 3D variational encoder and a latent diffusion transformer. The 3D variational encoder embeds ...
+- **p. 8 / 4.5. Ablation Analysis - extractive body cue:** This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches.
+- **p. 8 / 4.5. Ablation Analysis - extractive body cue:** The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial understanding.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations per ...
+- **p. 8 / 4.5. Ablation Analysis - extractive body cue:** The success rate further improves from 18% to 24%.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results for future state prediction on Meta-World and FRANKA PNP. LPIPS and SSIM scores are scaled by 100. Best results are highlighted ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Model-based RL Results of GWM and ivideogpt [82] on METAWORLD. The shadow area represents 95% confidence interval (CI) across three random seeds. Each ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Real-World Experiment Setup. Left: using a Franka Emika Panda robotic arm equipped with an RGB camera, we eval- uate the performance of the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The overall pipeline of GWM, which primarily consists of a 3D variational encoder and a latent diffusion transformer. The 3D variational encoder embeds ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.5. Ablation Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | Choice of Gaussian Splatting As shown in Table 4, compared to directly building image-based world model with diffusion transformer on par with [1], introducing ... | p. 8 (4.5. Ablation Analysis) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations ... | p. 7 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4.5. Ablation Analysis - extractive PDF cue:** This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches.
-- **p. 8 / 4.5. Ablation Analysis - extractive PDF cue:** The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial understanding.
+- **p. 8 / 4.5. Ablation Analysis - extractive body cue:** This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches.
+- **p. 8 / 4.5. Ablation Analysis - extractive body cue:** The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial understanding.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall pipeline of GWM, which primarily consists of a 3D variational encoder and a latent diffusion transformer. The 3D variational encoder embeds ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results for future state prediction on Meta-World and FRANKA PNP. LPIPS and SSIM scores are scaled by 100. Best results are highlighted ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison between models on META- WORLD. GWM successfully predicts better details on the gripper movement (highlighted in blue). the future prediction quality ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative visualization on future state prediction of GWM on FRANKA-PNP and ROBOCASA. All predictions are rolled out by applying the unseen action trajectory ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations per ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Model-based RL Results of GWM and ivideogpt [82] on METAWORLD. The shadow area represents 95% confidence interval (CI) across three random seeds. Each ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Real-World Experiment Setup. Left: using a Franka Emika Panda robotic arm equipped with an RGB camera, we eval- uate the performance of the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The overall pipeline of GWM, which primarily consists of a 3D variational encoder and a latent diffusion transformer. The 3D variational encoder embeds ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results for future state prediction on Meta-World and FRANKA PNP. LPIPS and SSIM scores are scaled by 100. Best results are highlighted ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison between models on META- WORLD. GWM successfully predicts better details on the gripper movement (highlighted in blue). the future prediction quality ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative visualization on future state prediction of GWM on FRANKA-PNP and ROBOCASA. All predictions are rolled out by applying the unseen action trajectory ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations per ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Model-based RL Results of GWM and ivideogpt [82] on METAWORLD. The shadow area represents 95% confidence interval (CI) across three random seeds. Each ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Real-World Experiment Setup. Left: using a Franka Emika Panda robotic arm equipped with an RGB camera, we eval- uate the performance of the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches. | embodiment, simulator version and control stack | p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis) |
 | Task/environment | The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial ... | reset, timeout, object/scene variation | p. 8 (4.5. Ablation Analysis) |
@@ -111,11 +111,11 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 | Primary metric/result | Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations ... | numeric claim only at cited anchor | p. 7 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive PDF cue:** Results are evaluated over 50 episodes with different floor plans and styles.
-- **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive PDF cue:** Each data point is evaluated over 20 episodes. trained initialization of both methods.
-- **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive PDF cue:** For fair comparisons, all compared methods use the same context length, horizon, and are trained to a maximum of 1 × 105 steps.
-- **p. 8 / 4.3. GWM-based Reinforcement Learning - extractive PDF cue:** We report the number of successful trials out of all 20 trials in FRANKA PNP.
-- **p. 8 / 4.4. Real-world Deployment - extractive PDF cue:** 35% success rate) on 20 trials with different initial start positions and object locations (i.e. distractors).
+- **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive body cue:** Results are evaluated over 50 episodes with different floor plans and styles.
+- **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive body cue:** Each data point is evaluated over 20 episodes. trained initialization of both methods.
+- **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive body cue:** For fair comparisons, all compared methods use the same context length, horizon, and are trained to a maximum of 1 × 105 steps.
+- **p. 8 / 4.3. GWM-based Reinforcement Learning - extractive body cue:** We report the number of successful trials out of all 20 trials in FRANKA PNP.
+- **p. 8 / 4.4. Real-world Deployment - extractive body cue:** 35% success rate) on 20 trials with different initial start positions and object locations (i.e. distractors).
 
 ## Generalization and Failure Cases
 
@@ -149,10 +149,10 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust geometric ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
+- **p. 8 / 5. Conclusion - extractive body cue:** In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust geometric ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis), metrics p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption), results p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 5 (4. Experiments), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis), metrics p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption), results p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 5 (4. Experiments), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

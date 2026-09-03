@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 Simulated Manipulation Policy Evaluation for Real Robot Setups SIMPLER Pick Coke Can Move Near Open/Close Drawer Put Object in Drawer Google Robot Put Carrot on Plate Stack Cubes Put Eggplant in Basket ...를 We then propose and evaluate approaches for mitigating these differences based on offline system identification, "green-screening" simulation observations using realworld backgrounds, and object texture baking from real-world images.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 3: Illustration of Mean Maximum Rank Violation (MMRV, range [0, 1], lower is better) and Pearson correlation coefficient (Pearson r, range [-1, 1], higher is better) for assessing the correlation between ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in simulated manipulation ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We then propose and evaluate approaches for mitigating these differences based on offline system identification, "green-screening" simulation observations using realworld backgrounds, and object texture baking from real-world images. (p. 2, I. INTRODUCTION).
+- **Paper-specific mechanism:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 10: Comparison of SIMPLER-"Variant Aggregation" using SAPIEN (default) vs. Isaac Sim [49] on Google Robot "Pick Coke Can" and "Move Near" tasks. Both physics simulators lead to good correlation ... (p. 10, Figure/Table caption); the relevant task/metric cue is We observe a strong correlation between the relative performances in simulation and in the real world across most policy checkpoints 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.2 0.4 0.6 ... (p. 7, 2) Can simulated evaluations not only capture the perfor). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and other visual details. (p. 11, VII. CONCLUSION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Models that obtain low real-world performance, such as RT1 (Begin) on Google Robot tasks and RT-1-X on BridgeData V2 tasks, similarly have low performance in SIMPLER evaluations in simulation..
-3. Compare against the body-reported baseline or a matched simpler baseline: Furthermore, "Visual Matching" (VisMatch) outperforms "Variant Aggregation" (VarAgg)..
-4. Report the body metric and its denominator/aggregation: For Octo simulated evaluations, since the model involves a non-deterministic diffusion head, we average its success rates across three different random seeds to produce a lowervariance estimate of the policy's simulation performance..
-5. Re-run the body-reported ablation/failure condition: Fig. 8: Change in success rate under various distribution shifts for two RT-1 policies trained without and with data augmentation. Success rates are averaged across Google Robot "Pick Coke Can" and "Move ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We then propose and evaluate approaches for mitigating these differences based on offline system identification, "green-screening" simulation observations using realworld backgrounds, and object texture baking from real-world images. (p. 2, I. INTRODUCTION); preserve the objective/update rule: These advances are underpinned by large-scale datasets [11, 66] and expressive models [1, 6, 29]. (p. 1, I. INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: Models that obtain low real-world performance, such as RT1 (Begin) on Google Robot tasks and RT-1-X on BridgeData V2 tasks, similarly have low performance in SIMPLER evaluations in simulation. (p. 8, 2) Can simulated evaluations not only capture the perfor).
+3. Compare against the reported or matched baseline: Furthermore, "Visual Matching" (VisMatch) outperforms "Variant Aggregation" (VarAgg). (p. 8, 2) Can simulated evaluations not only capture the perfor).
+4. Report the body metric with its denominator and aggregation: We observe a strong correlation between the relative performances in simulation and in the real world across most policy checkpoints 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.2 0.4 0.6 ... (p. 7, 2) Can simulated evaluations not only capture the perfor).
+5. Re-run the reported ablation or stress/failure condition: Ablation Studies We ablate the effect of the approaches we introduced in Section IV for closing the control and visual gaps between simulation and real-world evaluations. (p. 9, 2) Can simulated evaluations not only capture the perfor); if none is reported, design one around: Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and other visual details. (p. 11, VII. CONCLUSION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 10 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 10 (Figure/Table caption), p. 10 (2) Can simulated evaluations not only capture the perfor), p. 7 (Figure/Table caption), and measure the boundary at p. 11 (VII. CONCLUSION), p. 10 (VII. CONCLUSION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, contributions, follows mechanism이 Furthermore, "Visual Matching" (VisMatch) outperforms "Variant Aggregation" (VarAgg). 대비 For Octo simulated evaluations, since the model involves a non-deterministic diffusion head, we average its success rates across ...을 개선하고, Fig. 3: Illustration of Mean Maximum Rank Violation (MMRV, range [0, 1], lower is better) and ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We then propose and evaluate approaches for mitigating these differences based on offline system identification, "green-screening" simulation observations using realworld backgrounds, and ...), does the paper-specific mechanism (In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation ...) retain the reported evaluation outcome (We observe a strong correlation between the relative performances in simulation and in the real world across most ...) when tested against the paper's strongest explicit boundary (Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We observe a strong correlation between the relative performances in simulation and in the real world across most ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 10: Comparison of SIMPLER-"Variant Aggregation" using SAPIEN (default) vs. Isaac Sim [49] on Google Robot "Pick Coke Can" and "Move Near" tasks. Both physics simulators lead to good correlation ... (p. 10, Figure/Table caption).
+- **Strongest explicit boundary:** Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and other visual details. (p. 11, VII. CONCLUSION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

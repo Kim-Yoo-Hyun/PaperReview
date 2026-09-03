@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=P4o9akekdf; PDF retrieval source: https://openreview.net/pdf/b115e0eb446ac0910842794d2c92d02decc591a0.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=P4o9akekdf; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111453. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Small Medium Large Average Method PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓ PoseRequired pixelNeRF 19.376 0.535 0.564 20.339 0.561 0.537 20.826 0.576 0.509 20.323 0.561 0.533 AttnRend 20.942 0.616 0.398 24.004 ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** RE10K primarily contains indoor real estate videos, while ACID features nature scenes captured by aerial drones.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** To further scale up our model (denoted as Ours*), we also combine RE10K with DL3DV (Ling et al., 2024), which is an outdoor dataset containing ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The proposed method can be applied to pose estimation between input views on three diverse datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Our method achieves the best results across all datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We also evaluate the zero-shot performance of the model, where we train exclusively on RealEstate10k and directly apply it to ScanNet++ (Yeshwanth et al., 2023) ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** This advantage arises primarily from our minimal geometric priors in the network structure, allowing it to adapt effectively to various types of scenes.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Ref. pixelSplat MVSplat Ours GT (a) Cross-Dataset Generalize: RE10K →DTU Ref. pixelSplat MVSplat Ours GT (b) Cross-Dataset Generalize: RE10K →ScanNet++ Figure 6: Cross-dataset generalization.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Small Medium Large Average Method PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓ PoseRequired pixelNeRF 19.376 0.535 0.564 20.339 0.561 0.537 20.826 0.576 0.509 20.323 0.561 0.533 AttnRend 20.942 0.616 0.398 24.004 ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** RE10K primarily contains indoor real estate videos, while ACID features nature scenes captured by aerial drones.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** To further scale up our model (denoted as Ours*), we also combine RE10K with DL3DV (Ling et al., 2024), which is an outdoor dataset containing ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The proposed method can be applied to pose estimation between input views on three diverse datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Our method achieves the best results across all datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We also evaluate the zero-shot performance of the model, where we train exclusively on RealEstate10k and directly apply it to ScanNet++ (Yeshwanth et al., 2023) ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** This advantage arises primarily from our minimal geometric priors in the network structure, allowing it to adapt effectively to various types of scenes.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Ref. pixelSplat MVSplat Ours GT (a) Cross-Dataset Generalize: RE10K →DTU Ref. pixelSplat MVSplat Ours GT (b) Cross-Dataset Generalize: RE10K →ScanNet++ Figure 6: Cross-dataset generalization.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | On the other hand, we achieve competitive performance over SOTA pose-required methods (Charatan et al., 2024; Chen et al., 2024), and even outperform them ... | p. 7 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | 13, the performance significantly improves with the inclusion of the additional view. | p. 10 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Small Medium Large Average Method PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓ PoseRequired pixelNeRF 19.376 0.535 0.564 20.339 0.561 0.537 20.826 0.576 0.509 20.323 0.561 0.533 AttnRend 20.942 0.616 0.398 24.004 ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** RE10K primarily contains indoor real estate videos, while ACID features nature scenes captured by aerial drones.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** To further scale up our model (denoted as Ours*), we also combine RE10K with DL3DV (Ling et al., 2024), which is an outdoor dataset containing ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The proposed method can be applied to pose estimation between input views on three diverse datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Our method achieves the best results across all datasets.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We also evaluate the zero-shot performance of the model, where we train exclusively on RealEstate10k and directly apply it to ScanNet++ (Yeshwanth et al., 2023) ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** This advantage arises primarily from our minimal geometric priors in the network structure, allowing it to adapt effectively to various types of scenes.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Ref. pixelSplat MVSplat Ours GT (a) Cross-Dataset Generalize: RE10K →DTU Ref. pixelSplat MVSplat Ours GT (b) Cross-Dataset Generalize: RE10K →ScanNet++ Figure 6: Cross-dataset generalization.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Small Medium Large Average Method PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓ PoseRequired pixelNeRF 19.376 0.535 0.564 20.339 0.561 0.537 20.826 0.576 0.509 20.323 0.561 0.533 AttnRend 20.942 0.616 0.398 24.004 ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** RE10K primarily contains indoor real estate videos, while ACID features nature scenes captured by aerial drones.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** To further scale up our model (denoted as Ours*), we also combine RE10K with DL3DV (Ling et al., 2024), which is an outdoor dataset containing ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The proposed method can be applied to pose estimation between input views on three diverse datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Our method achieves the best results across all datasets.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We also evaluate the zero-shot performance of the model, where we train exclusively on RealEstate10k and directly apply it to ScanNet++ (Yeshwanth et al., 2023) ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** This advantage arises primarily from our minimal geometric priors in the network structure, allowing it to adapt effectively to various types of scenes.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Ref. pixelSplat MVSplat Ours GT (a) Cross-Dataset Generalize: RE10K →DTU Ref. pixelSplat MVSplat Ours GT (b) Cross-Dataset Generalize: RE10K →ScanNet++ Figure 6: Cross-dataset generalization.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: NoPoSplat. Given sparse unposed images, our method reconstructs 3D Gaussians of different views in a canonical space using a feed-forward network. The resulting ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2: Comparison with pose-required sparse-view 3D Gaussian splatting pipeline. Previ- ous methods first generate Gaussians in each local camera coordinate system and then transform ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of NoPoSplat. We directly predict Gaussians in a canonical space from a feed-forward network to represent the underlying 3D scene from the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Novel view synthesis performance comparison on the RealEstate10k (Zhou et al., 2018) dataset. Our method largely outperforms previous pose-free methods on all overlap ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Novel view synthesis performance comparison on the ACID (Liu et al., 2021) dataset. Small Medium Large Average
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative comparison on RE10K (top three rows) and ACID (bottom row). Com- pared to baselines, we obtain: 1) more coherent fusion from input ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Pose estimation performance in AUC with various thresholds on RE10k, ACID, and ScanNet-1500 (Dai et al., 2017; Sarlin et al., 2020). Our method ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4: Out-of-distribution performance comparison. Our method shows superior performance when zero-shot evaluation on DTU and ScanNet++ using the model solely trained on RE10k. Training ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: NoPoSplat. Given sparse unposed images, our method reconstructs 3D Gaussians of different views in a canonical space using a feed-forward network. The resulting ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Comparison with pose-required sparse-view 3D Gaussian splatting pipeline. Previ- ous methods first generate Gaussians in each local camera coordinate system and then transform ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Overview of NoPoSplat. We directly predict Gaussians in a canonical space from a feed-forward network to represent the underlying 3D scene from the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Novel view synthesis performance comparison on the RealEstate10k (Zhou et al., 2018) dataset. Our method largely outperforms previous pose-free methods on all overlap ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Novel view synthesis performance comparison on the ACID (Liu et al., 2021) dataset. Small Medium Large Average
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison on RE10K (top three rows) and ACID (bottom row). Com- pared to baselines, we obtain: 1) more coherent fusion from input ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Pose estimation performance in AUC with various thresholds on RE10k, ACID, and ScanNet-1500 (Dai et al., 2017; Sarlin et al., 2020). Our method ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Out-of-distribution performance comparison. Our method shows superior performance when zero-shot evaluation on DTU and ScanNet++ using the model solely trained on RE10k. Training ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Small Medium Large Average Method PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓PSNR↑SSIM↑LPIPS↓ PoseRequired pixelNeRF 19.376 0.535 0.564 20.339 0.561 0.537 20.826 0.576 0.509 20.323 0.561 0.533 AttnRend 20.942 0.616 0.398 ... | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
 | Task/environment | RE10K primarily contains indoor real estate videos, while ACID features nature scenes captured by aerial drones. | reset, timeout, object/scene variation | p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 | Primary metric/result | 13, the performance significantly improves with the inclusion of the additional view. | numeric claim only at cited anchor | p. 10 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For a fair comparison with baseline models, we report all quantitative results and baseline comparisons under 256×256.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** As shown on the right, our method can predict 3D Gaussians from two 256 × 256 input images in 0.015 seconds (66 fps), which is ...
-- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive PDF cue:** For the 256 × 256 version of the model, training was conducted on 8 NVIDIA GH200 GPUs (each with >80 GB memory) for approximately 6 ...
-- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive PDF cue:** While this setup required more time (approximately 90 hours), it achieved comparable performance (PSNR on RE10K: 25.018 with A6000 vs.
-- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive PDF cue:** For the 256 × 256 version of the model, training was conducted on 8 NVIDIA GH200 GPUs (each with >80 GB memory) for approximately 6 ...
-- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive PDF cue:** While this setup required more time (approximately 90 hours), it achieved comparable performance (PSNR on RE10K: 25.018 with A6000 vs.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For a fair comparison with baseline models, we report all quantitative results and baseline comparisons under 256×256.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** As shown on the right, our method can predict 3D Gaussians from two 256 × 256 input images in 0.015 seconds (66 fps), which is ...
+- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** For the 256 × 256 version of the model, training was conducted on 8 NVIDIA GH200 GPUs (each with >80 GB memory) for approximately 6 ...
+- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** While this setup required more time (approximately 90 hours), it achieved comparable performance (PSNR on RE10K: 25.018 with A6000 vs.
+- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** For the 256 × 256 version of the model, training was conducted on 8 NVIDIA GH200 GPUs (each with >80 GB memory) for approximately 6 ...
+- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** While this setup required more time (approximately 90 hours), it achieved comparable performance (PSNR on RE10K: 25.018 with A6000 vs.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 19 / Figure/Table caption - extractive PDF cue:** Figure 11: RealEstate10k performance with different number of input views. Addtional Comparison with Splatt3R. In Tab.1 of the main paper, we compare our method with ...
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** While our method currently applies only to static scenes, extending our pipeline to dynamic scenarios presents an interesting direction for future work.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Note that DUSt3R (and MASt3R) struggle to fuse input views coherently due to their reliance on per-pixel depth loss, a limitation Splatt3R also inherits from ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2: Comparison with pose-required sparse-view 3D Gaussian splatting pipeline. Previ- ous methods first generate Gaussians in each local camera coordinate system and then transform ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Furthermore, our method does not require an explicit matching loss during training, meaning no ground truth depth is necessary.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** These issues are largely due to the noises introduced in their transform-then-fuse pipeline.
+- **p. 19 / Figure/Table caption - extractive body cue:** Figure 11: RealEstate10k performance with different number of input views. Addtional Comparison with Splatt3R. In Tab.1 of the main paper, we compare our method with ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** While our method currently applies only to static scenes, extending our pipeline to dynamic scenarios presents an interesting direction for future work.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Note that DUSt3R (and MASt3R) struggle to fuse input views coherently due to their reliance on per-pixel depth loss, a limitation Splatt3R also inherits from ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Comparison with pose-required sparse-view 3D Gaussian splatting pipeline. Previ- ous methods first generate Gaussians in each local camera coordinate system and then transform ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Furthermore, our method does not require an explicit matching loss during training, meaning no ground truth depth is necessary.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** These issues are largely due to the noises introduced in their transform-then-fuse pipeline.
 
-- **PDF anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 21 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 21 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

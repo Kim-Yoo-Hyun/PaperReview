@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2011.07215; PDF retrieval source: https://arxiv.org/pdf/2011.07215. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2011.07215; PDF retrieval source: https://arxiv.org/pdf/2011.07215. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 Experiments | BENCHMARK / DATASET | While it outperforms the rest of the baselines due to the use of the segmentation map and a better action space for exploration, the ... | p. 7 (6 Experiments) |
 | 6 Experiments | BENCHMARK / DATASET | This is especially true for StraightenRope, SpreadCloth, and FoldCloth, and the learning curves for these tasks seem to imply that even with more training ... | p. 7 (6 Experiments) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Thus, this evaluation points to a clear need for new methods development for image-based robot manipulation of deformable objects. | embodiment, simulator version and control stack | p. 7 (6 Experiments), p. 8 (6 Experiments) |
 | Task/environment | We perform a series of pick and place actions both in simulation and on the real robot. | reset, timeout, object/scene variation | p. 8 (6 Experiments), p. 8 (6 Experiments) |
@@ -156,7 +156,16 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 - **p. 7 / 6 Experiments - extractive body cue:** On the other hand, this method does not perform very well on the FoldCloth task.
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 7: Architecture of the deconvolutional neural network (VAE decoder) in PlaNet. We use a GRU [56] with 200 hidden nodes as the deterministic path ...
 
-- **PDF anchors reviewed:** datasets p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 6 (6 Experiments), metrics p. 16 (Figure/Table caption), p. 16 (Figure/Table caption), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 7 (6 Experiments), p. 15 (Figure/Table caption), results p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (6 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 6 (6 Experiments), metrics p. 16 (Figure/Table caption), p. 16 (Figure/Table caption), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 7 (6 Experiments), p. 15 (Figure/Table caption), results p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (6 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 6.2 Benchmarking results on SoftGym-Medium A summary of the final normalized performance of all baselines on the evaluation set is shown in Figure 2. (p. 7, 6 Experiments).
+- **Metric evidence:** 6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that we can more easily analyze the performance of each method (see Appendix ... (p. 6, 6 Experiments).
+- **Baseline/ablation evidence:** While it outperforms the rest of the baselines due to the use of the segmentation map and a better action space for exploration, the result shows that there still exists ... (p. 7, 6 Experiments).
+- **Failure/negative evidence:** We do not include the latent over-shooting in our experiment as it does not improve much over the one-step case. (p. 17, B.4 PlaNet).

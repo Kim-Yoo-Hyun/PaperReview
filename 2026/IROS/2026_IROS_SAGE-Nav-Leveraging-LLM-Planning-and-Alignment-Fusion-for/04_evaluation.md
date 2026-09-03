@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.25497; PDF retrieval source: https://arxiv.org/pdf/2606.25497. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.25497; PDF retrieval source: https://arxiv.org/pdf/2606.25497. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Experimental Setup 1) Datasets: We evaluate the proposed framework across two widely used embodied simulation datasets: iTHOR [45] and RoboTHOR [46]. iTHOR comprises 120 photorealistic ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Furthermore, in the structurally complex RoboTHOR environment, SAGE-Nav establishes a new state-of-the-art across all metrics, notably reaching 40.82% SR and 22.95% SPL in long-horizon tasks.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** 4: Visualization of the agent trajectories in unfamiliar scenes in the AI2-THOR environment.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Furthermore, they are prone to getting stuck in rotational loops or prematurely terminating episodes when targets are occluded.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** EFFICIENCY TRADEOFF IN ROBOTHOR Method SR↑(%) SPL↑(%) Latency↓(s) LLM Calls↓ CogNav [27] 54.6 24.3 2.20 15 SG-Nav [16] 47.5 24.0 0.85 32 SAGE-Nav (Ours) 52.4 ...
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** The full SAGE-Nav (ID 7) achieves the best SR, particularly in long-horizon tasks (L ≥5).
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** 2) Evaluation Metrics: To comprehensively assess navigation performance, we adopt three standard Object-Goal Navigation metrics [2]: Success Rate (SR), Success weighted by Path Length (SPL), ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Experimental Setup 1) Datasets: We evaluate the proposed framework across two widely used embodied simulation datasets: iTHOR [45] and RoboTHOR [46]. iTHOR comprises 120 photorealistic ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Furthermore, in the structurally complex RoboTHOR environment, SAGE-Nav establishes a new state-of-the-art across all metrics, notably reaching 40.82% SR and 22.95% SPL in long-horizon tasks.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** 4: Visualization of the agent trajectories in unfamiliar scenes in the AI2-THOR environment.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Furthermore, they are prone to getting stuck in rotational loops or prematurely terminating episodes when targets are occluded.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** EFFICIENCY TRADEOFF IN ROBOTHOR Method SR↑(%) SPL↑(%) Latency↓(s) LLM Calls↓ CogNav [27] 54.6 24.3 2.20 15 SG-Nav [16] 47.5 24.0 0.85 32 SAGE-Nav (Ours) 52.4 ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** The full SAGE-Nav (ID 7) achieves the best SR, particularly in long-horizon tasks (L ≥5).
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** 2) Evaluation Metrics: To comprehensively assess navigation performance, we adopt three standard Object-Goal Navigation metrics [2]: Success Rate (SR), Success weighted by Path Length (SPL), ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / SIMULATION | In iTHOR, SAGE-Nav achieves state-of-the-art Success Rates (SR) of 82.47% overall and 77.22% in challenging long-horizon scenarios (L ≥5), outperforming TSOG and CGI-GAIL by ... | p. 5 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / SIMULATION | Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness. | p. 6 (V. EXPERIMENTS) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Experimental Setup 1) Datasets: We evaluate the proposed framework across two widely used embodied simulation datasets: iTHOR [45] and RoboTHOR [46]. iTHOR comprises 120 photorealistic ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Furthermore, in the structurally complex RoboTHOR environment, SAGE-Nav establishes a new state-of-the-art across all metrics, notably reaching 40.82% SR and 22.95% SPL in long-horizon tasks.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** 4: Visualization of the agent trajectories in unfamiliar scenes in the AI2-THOR environment.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Furthermore, they are prone to getting stuck in rotational loops or prematurely terminating episodes when targets are occluded.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** EFFICIENCY TRADEOFF IN ROBOTHOR Method SR↑(%) SPL↑(%) Latency↓(s) LLM Calls↓ CogNav [27] 54.6 24.3 2.20 15 SG-Nav [16] 47.5 24.0 0.85 32 SAGE-Nav (Ours) 52.4 ...
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** The full SAGE-Nav (ID 7) achieves the best SR, particularly in long-horizon tasks (L ≥5).
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Experimental Setup 1) Datasets: We evaluate the proposed framework across two widely used embodied simulation datasets: iTHOR [45] and RoboTHOR [46]. iTHOR comprises 120 photorealistic ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Furthermore, in the structurally complex RoboTHOR environment, SAGE-Nav establishes a new state-of-the-art across all metrics, notably reaching 40.82% SR and 22.95% SPL in long-horizon tasks.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** 4: Visualization of the agent trajectories in unfamiliar scenes in the AI2-THOR environment.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Furthermore, they are prone to getting stuck in rotational loops or prematurely terminating episodes when targets are occluded.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** EFFICIENCY TRADEOFF IN ROBOTHOR Method SR↑(%) SPL↑(%) Latency↓(s) LLM Calls↓ CogNav [27] 54.6 24.3 2.20 15 SG-Nav [16] 47.5 24.0 0.85 32 SAGE-Nav (Ours) 52.4 ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** The full SAGE-Nav (ID 7) achieves the best SR, particularly in long-horizon tasks (L ≥5).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: HSGE Architecture. A multi-layer R-GCN encodes structural relations, a residual attention module for task align- ment and level-wise pooling produces the final structure- ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: The asynchronous A3C training architecture. Par- allel workers collect trajectories to compute losses. A shared optimizer backpropagates gradients-visually denoted by the fire symbol-to ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualization of the agent trajectories in unfamiliar scenes in the AI2-THOR environment. TABLE IV: IMPACTS OF DIFFERENT MODULES ID
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Failure case visualizations. The target object is high- lighted with a red bounding box, while the agent-detected target is marked in green across ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: HSGE Architecture. A multi-layer R-GCN encodes structural relations, a residual attention module for task align- ment and level-wise pooling produces the final structure- ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: The asynchronous A3C training architecture. Par- allel workers collect trajectories to compute losses. A shared optimizer backpropagates gradients-visually denoted by the fire symbol-to ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: Visualization of the agent trajectories in unfamiliar scenes in the AI2-THOR environment. TABLE IV: IMPACTS OF DIFFERENT MODULES ID
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Failure case visualizations. The target object is high- lighted with a red bounding box, while the agent-detected target is marked in green across ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Experimental Setup 1) Datasets: We evaluate the proposed framework across two widely used embodied simulation datasets: iTHOR [45] and RoboTHOR [46]. iTHOR comprises 120 ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
 | Task/environment | Furthermore, in the structurally complex RoboTHOR environment, SAGE-Nav establishes a new state-of-the-art across all metrics, notably reaching 40.82% SR and 22.95% SPL in long-horizon ... | reset, timeout, object/scene variation | p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
@@ -112,16 +112,16 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation arXiv:2606.25497v1 [cs.RO] 24 Jun 2026 | In iTHOR, SAGE-Nav achieves state-of-the-art Success Rates (SR) of 82.47% overall and 77.22% in challenging long-horizon scenarios (L ≥5), outperforming TSOG and CGI-GAIL by ... | PDF body cue; verify exact table/figure and matched conditions | p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
+| In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation | In iTHOR, SAGE-Nav achieves state-of-the-art Success Rates (SR) of 82.47% overall and 77.22% in challenging long-horizon scenarios (L ≥5), outperforming TSOG and CGI-GAIL by ... | PDF body cue; verify exact table/figure and matched conditions | p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
 | Primary metric/result | Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness. | numeric claim only at cited anchor | p. 6 (V. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We use the first 20 scenes of each category for training, the next 5 for validation, and the remaining 5 for testing.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We consider 22 object categories as targets, ensuring at least four objects per room type.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We report these metrics across all trajectories (ALL) and challenging long-horizon scenarios with optimal path lengths of at least 5 meters (L ≥5).
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Notably, all experiments run on a single NVIDIA RTX 3090 GPU, ensuring the high-frequency reactive control loop remains strictly decoupled from asynchronous LLM planning overhead.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** While CogNav achieves the highest SR (54.6%), its reliance on heavy visual and multimodal foundation models at each step leads to high action latency (2.20 ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** SG-Nav reduces this latency to 0.85 s but requires frequent LLM queries (32 calls per episode).
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We use the first 20 scenes of each category for training, the next 5 for validation, and the remaining 5 for testing.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We consider 22 object categories as targets, ensuring at least four objects per room type.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We report these metrics across all trajectories (ALL) and challenging long-horizon scenarios with optimal path lengths of at least 5 meters (L ≥5).
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Notably, all experiments run on a single NVIDIA RTX 3090 GPU, ensuring the high-frequency reactive control loop remains strictly decoupled from asynchronous LLM planning overhead.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** While CogNav achieves the highest SR (54.6%), its reliance on heavy visual and multimodal foundation models at each step leads to high action latency (2.20 ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** SG-Nav reduces this latency to 0.85 s but requires frequent LLM queries (32 calls per episode).
 
 ## Generalization and Failure Cases
 
@@ -157,13 +157,13 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 
 ## Limitations and Verification Questions
 
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Limitations We analyze the failure cases (Fig.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** 5), which fall into four categories: (a) Target Visibility Failure, where the agent terminates despite the target (e.g., plates on high shelves) being outside the ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** This performance comprehensively validates the robustness of our hierarchical priors and dynamic scheduling mechanism.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Replacing the LLM with heuristic rules that select waypoints based solely on graph scores highlights the critical role of commonsense priors, which rigid graph searches ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Limitations We analyze the failure cases (Fig.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** 5), which fall into four categories: (a) Target Visibility Failure, where the agent terminates despite the target (e.g., plates on high shelves) being outside the ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** This performance comprehensively validates the robustness of our hierarchical priors and dynamic scheduling mechanism.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Replacing the LLM with heuristic rules that select waypoints based solely on graph scores highlights the critical role of commonsense priors, which rigid graph searches ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), baselines p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), baselines p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

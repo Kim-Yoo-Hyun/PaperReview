@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 ... | p. 5 (4 Method), p. 4 (4 Method) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | 4.1 Visual Analysis on VLA Latent Space VLAs process multi-modal inputs and extract rich semantic information in their internal feature space. | p. 4 (4 Method), p. 4 (4 Method) |
@@ -77,7 +77,7 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | 1(c), we can see that failure rollout initially stays out of the "failure zone" when it progresses normally, and when the robot ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | At timestep t, a VLA is given an input observation ot, consisting of RGB images, natural language instruction, and current robot state, ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | For instance, pi0 has 3.3 billion parameters and an inference time of 149 ms. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -124,8 +124,17 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method), objective p. 4 (4 Method), p. 4 (4 Method), temporal p. 4 (4 Method), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 5 (3. Calibrate failure detection), p. 8 (0 SimplerEnv), p. 9 (0 SimplerEnv).
+- **Evidence anchors reviewed:** method p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method), objective p. 4 (4 Method), p. 4 (4 Method), temporal p. 4 (4 Method), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 5 (3. Calibrate failure detection), p. 8 (0 SimplerEnv), p. 9 (0 SimplerEnv).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 𝒆𝑇 MLP ǁ𝑠𝑇 𝒆1 LSTM 𝑠1 𝒆2 LSTM ... (p. 5, 4 Method).
+- **Objective/update evidence:** We study this hypothesis by visualizing the VLA features in Fig. (p. 4, 4 Method).
+- **Temporal/runtime evidence:** 1(c), we can see that failure rollout initially stays out of the "failure zone" when it progresses normally, and when the robot mistakenly drops the pot in the middle of ... (p. 4, 4 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

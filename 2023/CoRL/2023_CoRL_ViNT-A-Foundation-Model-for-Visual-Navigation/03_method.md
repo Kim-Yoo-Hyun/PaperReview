@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14846; PDF retrieval source: https://arxiv.org/pdf/2306.14846. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14846; PDF retrieval source: https://arxiv.org/pdf/2306.14846. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -85,7 +85,7 @@ PDF body method statement (p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Dif
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | ViNT takes as input current and past visual observations ot-P :t and a subgoal image os, and predicts (i) the number of ... | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | To produce training pairs for the diffusion model, we first select ot uniformly at random from the training data and then select ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | 2048 # Attention Layers nL 4 # Attention Heads nH 4 Temporal Context P 5 Prediction Horizon H 5 MLP layers (256, ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -140,3 +140,12 @@ PDF body method statement (p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Dif
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** [49], we use the unweighted training objective, called Lsimple in Ho et al. (p. 18, B.2 Subgoal Diffusion).
+- **Objective/update evidence:** [49], we use the unweighted training objective, called Lsimple in Ho et al. (p. 18, B.2 Subgoal Diffusion).
+- **Temporal/runtime evidence:** To produce training pairs for the diffusion model, we first select ot uniformly at random from the training data and then select osi to fall between 5 and 20 timesteps ... (p. 18, B.2 Subgoal Diffusion).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (
 
 ## Evaluation Body Digest
 
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** We build our SpatialVQA on images from Omni3D [11], with 3D bounding box annotations on diverse objects from both urban [12, 21] and indoor scenes ...
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** Early datasets on spatial reasoning were built on 3D scans rather than images [6, 64].
-- **p. 7 / 4.2. Results - extractive PDF cue:** In terms of 3D-informed data and training, we find that 3Dinformed instruction tuning with our proposed 3DI-Ft1M dataset yields a substantial performance boost of +10.7%.
-- **p. 7 / 4.1. Experimental setup - extractive PDF cue:** Our training setup is built upon LLaVA-v1.5 [39] and all hyperparameters remain unchanged unless explicitly stated otherwise.
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** We follow [16, 58] and develop rule-based methods to generate visual question-answer pairs from the 3D groundtruths.
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** Recent visual-language benchmarks on spatial reasoning either focused on 2D spatial relationships [14, 16], e.g., left or right in the image plane, or only on ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** We analyze the results and elaborate the findings detailed below.
-- **p. 7 / 4.2. Results - extractive PDF cue:** The human-annotated ImageNet3D provides more accurate 3D orientation of objects.
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** We build our SpatialVQA on images from Omni3D [11], with 3D bounding box annotations on diverse objects from both urban [12, 21] and indoor scenes ...
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** Early datasets on spatial reasoning were built on 3D scans rather than images [6, 64].
+- **p. 7 / 4.2. Results - extractive body cue:** In terms of 3D-informed data and training, we find that 3Dinformed instruction tuning with our proposed 3DI-Ft1M dataset yields a substantial performance boost of +10.7%.
+- **p. 7 / 4.1. Experimental setup - extractive body cue:** Our training setup is built upon LLaVA-v1.5 [39] and all hyperparameters remain unchanged unless explicitly stated otherwise.
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** We follow [16, 58] and develop rule-based methods to generate visual question-answer pairs from the 3D groundtruths.
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** Recent visual-language benchmarks on spatial reasoning either focused on 2D spatial relationships [14, 16], e.g., left or right in the image plane, or only on ...
+- **p. 7 / 4.2. Results - extractive body cue:** We analyze the results and elaborate the findings detailed below.
+- **p. 7 / 4.2. Results - extractive body cue:** The human-annotated ImageNet3D provides more accurate 3D orientation of objects.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Comparison with the state-of-the-arts including proprietary and open source models. ably, our model achieves a performance of 62.7%, outperforming the top proprietary model by ... | p. 7 (4.2. Results) |
 | 4.2. Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | In terms of architecture, integrating a mixed vision encoder can improve overall performance especially for the 3D orientation. | p. 7 (4.2. Results) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** We build our SpatialVQA on images from Omni3D [11], with 3D bounding box annotations on diverse objects from both urban [12, 21] and indoor scenes ...
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** Early datasets on spatial reasoning were built on 3D scans rather than images [6, 64].
-- **p. 7 / 4.2. Results - extractive PDF cue:** In terms of 3D-informed data and training, we find that 3Dinformed instruction tuning with our proposed 3DI-Ft1M dataset yields a substantial performance boost of +10.7%.
-- **p. 7 / 4.1. Experimental setup - extractive PDF cue:** Our training setup is built upon LLaVA-v1.5 [39] and all hyperparameters remain unchanged unless explicitly stated otherwise.
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** We build our SpatialVQA on images from Omni3D [11], with 3D bounding box annotations on diverse objects from both urban [12, 21] and indoor scenes ...
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** Early datasets on spatial reasoning were built on 3D scans rather than images [6, 64].
+- **p. 7 / 4.2. Results - extractive body cue:** In terms of 3D-informed data and training, we find that 3Dinformed instruction tuning with our proposed 3DI-Ft1M dataset yields a substantial performance boost of +10.7%.
+- **p. 7 / 4.1. Experimental setup - extractive body cue:** Our training setup is built upon LLaVA-v1.5 [39] and all hyperparameters remain unchanged unless explicitly stated otherwise.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. 3D spatial reasoning is crucial for LMMs to ground ob- jects in 3D space and infer their 3D spatial relationships, such as distance, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Examples from our SpatialVQA benchmark featuring a broad range of questions that require 3D spatial reasoning. modern LMMs, the lack of 3D awareness ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Design space for LMMs capable of spatial reason- ing. The dashed boxes and lines highlight our new design space compared to LLaVA-v1.5. This ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Comparison of data cards showcasing the curation pro- cess and data types: standard LLaVA data (left) vs. our 3D- informed data (right). For ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Design instantiation and comparison. (a) Architecture and Training of our proposed design. We investigate the 3D-awareness of mixed visual encoders, and incorporate 3D-informed ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. We modernize a standard LLaVA-v1.5 towards the de- sign of a 3D-informed LMM. The bars are the answer accuracies on the SpatialVQA benchmark, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison with the state-of-the-arts including pro- prietary and open source models. ably, our model achieves a performance of 62.7%, outper- forming the top ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Thorough exploration of the design space and roadmap progression. We systematically examine the 3D-informed design space from the aspects of data, architecture and ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. 3D spatial reasoning is crucial for LMMs to ground ob- jects in 3D space and infer their 3D spatial relationships, such as distance, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Examples from our SpatialVQA benchmark featuring a broad range of questions that require 3D spatial reasoning. modern LMMs, the lack of 3D awareness ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Design space for LMMs capable of spatial reason- ing. The dashed boxes and lines highlight our new design space compared to LLaVA-v1.5. This ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Comparison of data cards showcasing the curation pro- cess and data types: standard LLaVA data (left) vs. our 3D- informed data (right). For ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Design instantiation and comparison. (a) Architecture and Training of our proposed design. We investigate the 3D-awareness of mixed visual encoders, and incorporate 3D-informed ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. We modernize a standard LLaVA-v1.5 towards the de- sign of a 3D-informed LMM. The bars are the answer accuracies on the SpatialVQA benchmark, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison with the state-of-the-arts including pro- prietary and open source models. ably, our model achieves a performance of 62.7%, outper- forming the top ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Thorough exploration of the design space and roadmap progression. We systematically examine the 3D-informed design space from the aspects of data, architecture and ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We build our SpatialVQA on images from Omni3D [11], with 3D bounding box annotations on diverse objects from both urban [12, 21] and indoor ... | embodiment, simulator version and control stack | p. 4 (3.2.2. SpatialVQA for Evaluation), p. 4 (3.2.2. SpatialVQA for Evaluation) |
 | Task/environment | Early datasets on spatial reasoning were built on 3D scans rather than images [6, 64]. | reset, timeout, object/scene variation | p. 4 (3.2.2. SpatialVQA for Evaluation), p. 7 (4.2. Results) |
@@ -152,11 +152,11 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (
 
 ## Limitations and Verification Questions
 
-- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive PDF cue:** Our SpatialVQA distinguishes itself from all previous spatial reasoning benchmarks in the sense that all questions require different levels of 3D awareness and cannot be ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** Interestingly, although SpatialVLM [14] (implemented in SpaceLLaVA [2]) outperforms other open-source models in overall performance, it falls short in 3D orientation reasoning compared to LLaVA, ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** We will consider models with additional inputs in future work.
+- **p. 4 / 3.2.2. SpatialVQA for Evaluation - extractive body cue:** Our SpatialVQA distinguishes itself from all previous spatial reasoning benchmarks in the sense that all questions require different levels of 3D awareness and cannot be ...
+- **p. 7 / 4.2. Results - extractive body cue:** Interestingly, although SpatialVLM [14] (implemented in SpaceLLaVA [2]) outperforms other open-source models in overall performance, it falls short in 3D orientation reasoning compared to LLaVA, ...
+- **p. 7 / 4.2. Results - extractive body cue:** We will consider models with additional inputs in future work.
 
-- **PDF anchors reviewed:** datasets p. 4 (3.2.2. SpatialVQA for Evaluation), p. 4 (3.2.2. SpatialVQA for Evaluation), p. 7 (4.2. Results), p. 7 (4.1. Experimental setup), metrics p. 4 (3.2.2. SpatialVQA for Evaluation), p. 4 (3.2.2. SpatialVQA for Evaluation), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (3.2.2. SpatialVQA for Evaluation), p. 4 (3.2.2. SpatialVQA for Evaluation), p. 7 (4.2. Results), p. 7 (4.1. Experimental setup), metrics p. 4 (3.2.2. SpatialVQA for Evaluation), p. 4 (3.2.2. SpatialVQA for Evaluation), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2005.13239; PDF retrieval source: https://arxiv.org/pdf/2005.13239. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2005.13239; PDF retrieval source: https://arxiv.org/pdf/2005.13239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while ... | p. 9 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SIMULATION | Table 2. We observe that different reward penalties can all lead to substantial improvement of the performance and reward penalty based on learned variance ... | p. 18 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5.1 Evaluation on the D4RL benchmark To answer question (1), we evaluate our method on a large subset of datasets in the D4RL benchmark ... | embodiment, simulator version and control stack | p. 7 (5 Experiments), p. 8 (5 Experiments) |
 | Task/environment | The datasets in this benchmark have been generated as follows: random: roll out a randomly initialized policy for 1M steps. medium: partially train a ... | reset, timeout, object/scene variation | p. 8 (5 Experiments), p. 8 (5 Experiments) |
@@ -115,7 +115,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal ... | Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while ... | PDF body cue; verify exact table/figure and matched conditions | p. 9 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 2 (Figure/Table caption) |
+| The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function ... | Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while ... | PDF body cue; verify exact table/figure and matched conditions | p. 9 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 2 (Figure/Table caption) |
 | Primary metric/result | Table 2. We observe that different reward penalties can all lead to substantial improvement of the performance and reward penalty based on learned variance ... | numeric claim only at cited anchor | p. 18 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 - **p. 8 / 5 Experiments - extractive body cue:** Numbers for model-free methods taken from [18], which does not report standard deviation.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between vanilla model-based RL (MBPO [29]) with or without model ensembles and vanilla model-free RL (SAC [27]) on two offline RL tasks: ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), metrics p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 8 (5 Experiments), p. 18 (Figure/Table caption), p. 7 (5 Experiments), p. 9 (5 Experiments), baselines p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5 Experiments), results p. 9 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), metrics p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 8 (5 Experiments), p. 18 (Figure/Table caption), p. 7 (5 Experiments), p. 9 (5 Experiments), baselines p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5 Experiments), results p. 9 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Results for D4RL datasets. Each number is the normalized score proposed in [18] of the policy at the last iteration of training, averaged over 6 random seeds, ± ... (p. 8, Figure/Table caption).
+- **Metric evidence:** To extend the theory to an unknown reward function, we can consider the reward as being concatenated onto the state, so that the admissible error estimator bounds the error on ... (p. 7, 5 Experiments).
+- **Baseline/ablation evidence:** We compare against several baselines, including the current state-of-the-art model-free offline RL algorithms. (p. 7, 5 Experiments).
+- **Failure/negative evidence:** These failures are generally caused by large extrapolation error when the Q-function is evaluated on out-of-distribution actions [19, 36], which can lead to unstable learning and divergence. (p. 1, 1 Introduction).

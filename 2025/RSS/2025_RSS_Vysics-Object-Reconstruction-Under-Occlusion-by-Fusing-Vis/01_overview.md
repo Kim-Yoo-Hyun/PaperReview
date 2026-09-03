@@ -1,8 +1,10 @@
 # Vysics: Object Reconstruction Under Occlusion by Fusing Vision and Contact-Rich Physics
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p034.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p034.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p034.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p034.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p034.pdf
 - Code/Project: https://vysics-vision-and-physics.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 ## Why Read It
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Estimating geometry through contact-rich interactions is not a trivial problem.를 문제로 두고, Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction,를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Estimating geometry through contact-rich interactions is not a trivial problem. (p. 1, 1. INTRODUCTION).
+- **Actual contribution:** Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction, (p. 1, 1. INTRODUCTION).
+- **Evaluation boundary:** These robot interactions were teleoperated via commanded end effector poses tracked with impedance control. ‘The dataset includes the RGBD videos of the objects in interactions with object ‘mask annotations, as ... (p. 6, V. EXPERIMENTAL SETUP).
+- **Explicit failure boundary:** In the evaluation, we excluded the sessions in which BundleSDF lost track of the object and failed to yield the object trajectory. (p. 6, V. EXPERIMENTAL SETUP).

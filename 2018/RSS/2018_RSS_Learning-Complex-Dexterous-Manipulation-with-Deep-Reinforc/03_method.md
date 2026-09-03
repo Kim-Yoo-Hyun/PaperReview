@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p49.html; PDF retrieval source: https://arxiv.org/pdf/1709.10087. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p49.html; PDF retrieval source: https://arxiv.org/pdf/1709.10087. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | We first present some RL preliminaries, followed by the base RL algorithm we use for learning, and finally describe our procedure to ... | p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | First, NPG computes the vanilla policy gradient, or REINFORCE [54] gradient: g = 1 NT N X i=1 T X t=1 ∇θ ... | p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)) |
@@ -73,10 +73,10 @@ PDF body method statement (p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | timestep so that the policy can better capture relevant statistics about the data. | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | timestep so that the policy can better capture relevant statistics about the data. | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | Using expressive function approximators allow for complex, nonlinear ways to use sensory feedback, making them wellsuited to dexterous manipulation. | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -118,8 +118,17 @@ PDF body method statement (p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), objective p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), temporal p. 5 (2) In-hand Manipulation - Repositioning a pen (Figure), p. 3 (II. RELATED WORK), p. 4 (2) In-hand Manipulation - Repositioning a pen (Figure), p. 4 (2) In-hand Manipulation - Repositioning a pen (Figure), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 6 (2) While RL eventually solves the task with appropriate).
+- **Evidence anchors reviewed:** method p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), objective p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), temporal p. 5 (2) In-hand Manipulation - Repositioning a pen (Figure), p. 3 (II. RELATED WORK), p. 4 (2) In-hand Manipulation - Repositioning a pen (Figure), p. 4 (2) In-hand Manipulation - Repositioning a pen (Figure), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 6 (2) While RL eventually solves the task with appropriate).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** S ∈Rn and A ∈Rm represent the state and actions. (p. 5, IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)).
+- **Objective/update evidence:** In policy gradient methods, the parameters of the policy are directly optimized to maximize the objective, η(θ), using local search methods such as gradient ascent. (p. 5, IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)).
+- **Temporal/runtime evidence:** Effective tool use requires multiple steps involving grasp reconfiguration and careful motor co-ordination in order to impart the required forces. (p. 4, 2) In-hand Manipulation - Repositioning a pen (Figure).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

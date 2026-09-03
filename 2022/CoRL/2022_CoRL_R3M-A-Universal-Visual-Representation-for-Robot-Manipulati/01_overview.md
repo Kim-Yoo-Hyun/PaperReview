@@ -1,8 +1,10 @@
 # R3M: A Universal Visual Representation for Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v205/nair23a.html.
-> PDF retrieval source: https://proceedings.mlr.press/v205/nair23a.html. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v205/nair23a.html.
+> PDF retrieval source: https://proceedings.mlr.press/v205/nair23a.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://proceedings.mlr.press/v205/nair23a.html
 - Code/Project: https://r3m.cs.columbia.edu/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -78,3 +80,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 This lack of diversity and scale makes it difficult to learn representations that are broadly applicable.를 문제로 두고, We hypothesize that a good representation for vision-based robotic manipulation consists of three components.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This lack of diversity and scale makes it difficult to learn representations that are broadly applicable. (p. 1, 1 Introduction).
+- **Actual contribution:** We hypothesize that a good representation for vision-based robotic manipulation consists of three components. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Figure 8: Performance over different views/dataset sizes. We report the success rate of R3M and baseline across each view (left) and dataset size (right). We see that the performance improvement ... (p. 17, Figure/Table caption).
+- **Explicit failure boundary:** While we were excited by strong results on a wide set of simulated and real robotic tasks, a number of important limitations remain. (p. 8, 2. We).

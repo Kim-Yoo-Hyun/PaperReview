@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.08792; PDF retrieval source: https://arxiv.org/pdf/2410.08792. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.08792; PDF retrieval source: https://arxiv.org/pdf/2410.08792. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images or ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We are particularly interested in how well the robot can follow the demonstration videos step by step.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Real-world Experiment Setup Real-world experiments have demonstrated that SeeDo can manipulate objects in the physical world using an appropriate LMP.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** The experiment is conducted on a Universal Robots' UR10e cobot attached with a Robotiq 2F-85 gripper.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Garment Organization Task contains demonstrations of a human organizing their garments into separate boxes.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Error type percentages of all the failure cases of all the methods. Note that error types are not exclusive. The barplot of the ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Conventional evaluation metric reports success rate (SR) of each task which could only reflect the completion at the final state of operation.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images or ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We are particularly interested in how well the robot can follow the demonstration videos step by step.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Real-world Experiment Setup Real-world experiments have demonstrated that SeeDo can manipulate objects in the physical world using an appropriate LMP.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** The experiment is conducted on a Universal Robots' UR10e cobot attached with a Robotiq 2F-85 gripper.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Garment Organization Task contains demonstrations of a human organizing their garments into separate boxes.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Error type percentages of all the failure cases of all the methods. Note that error types are not exclusive. The barplot of the ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Conventional evaluation metric reports success rate (SR) of each task which could only reflect the completion at the final state of operation.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | To achieve success (TSR=1), each step in the plan must match the demo's action sequence in both content and temporal order. • FSR is ... | p. 5 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Conventional evaluation metric reports success rate (SR) of each task which could only reflect the completion at the final state of operation. | p. 5 (IV. EXPERIMENTS) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images or ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We are particularly interested in how well the robot can follow the demonstration videos step by step.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Real-world Experiment Setup Real-world experiments have demonstrated that SeeDo can manipulate objects in the physical world using an appropriate LMP.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** The experiment is conducted on a Universal Robots' UR10e cobot attached with a Robotiq 2F-85 gripper.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Garment Organization Task contains demonstrations of a human organizing their garments into separate boxes.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images or ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We are particularly interested in how well the robot can follow the demonstration videos step by step.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Real-world Experiment Setup Real-world experiments have demonstrated that SeeDo can manipulate objects in the physical world using an appropriate LMP.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** The experiment is conducted on a Universal Robots' UR10e cobot attached with a Robotiq 2F-85 gripper.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Garment Organization Task contains demonstrations of a human organizing their garments into separate boxes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: VLM See, Robot Do. We designed an agent framework centered around a large Vision Language Model to interpret long- horizon human demonstration videos ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: The SeeDo agent consists of three modules. From left to right, a) The Keyframe Selection module detects the operating hand in the video ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: We collect long-horizon human demonstration videos across three diverse categories as our benchmark and carry out both simulation and real-world experiments. Tasks from ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: Results visualization on all three tasks.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Error type percentages of all the failure cases of all the methods. Note that error types are not exclusive. The barplot of the ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 6: KDE plots of pointwise differences between the automated evaluation script and manually verified ground truth across three tasks and the overall. The vertical ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: VLM See, Robot Do. We designed an agent framework centered around a large Vision Language Model to interpret long- horizon human demonstration videos ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The SeeDo agent consists of three modules. From left to right, a) The Keyframe Selection module detects the operating hand in the video ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: We collect long-horizon human demonstration videos across three diverse categories as our benchmark and carry out both simulation and real-world experiments. Tasks from ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Results visualization on all three tasks.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Error type percentages of all the failure cases of all the methods. Note that error types are not exclusive. The barplot of the ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 6: KDE plots of pointwise differences between the automated evaluation script and manually verified ground truth across three tasks and the overall. The vertical ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images ... | embodiment, simulator version and control stack | p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | We are particularly interested in how well the robot can follow the demonstration videos step by step. | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
@@ -118,8 +118,8 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Primary metric/result | Conventional evaluation metric reports success rate (SR) of each task which could only reflect the completion at the final state of operation. | numeric claim only at cited anchor | p. 5 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Gemini 1.5 Pro natively supports video input, while for the open-source models, we follow their official implementations, uniformly sampling 16 frames per video as input.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Since SeeDo utilizes GPT-4o as its VLM, we further test three variants of GPT-4o using different frame sampling strategies while keeping the same prompts: • ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Gemini 1.5 Pro natively supports video input, while for the open-source models, we follow their official implementations, uniformly sampling 16 frames per video as input.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Since SeeDo utilizes GPT-4o as its VLM, we further test three variants of GPT-4o using different frame sampling strategies while keeping the same prompts: • ...
 
 ## Generalization and Failure Cases
 
@@ -156,13 +156,13 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** However, spatial errors remain the main source of SeeDo 's failures.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Model Success Rate Failure Reason TSR↑ FSR↑ SSR↑ Vision↓ Spatial↓ Temporal↓ SeeDo w/o V.P.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Error type percentages of all the failure cases of all the methods. Note that error types are not exclusive. The barplot of the ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images or ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, spatial errors remain the main source of SeeDo 's failures.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Model Success Rate Failure Reason TSR↑ FSR↑ SSR↑ Vision↓ Spatial↓ Temporal↓ SeeDo w/o V.P.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Error type percentages of all the failure cases of all the methods. Note that error types are not exclusive. The barplot of the ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** These tasks represent some common robotics scenarios that feature a clear temporal sequence and dynamic interactions that cannot be adequately captured with still images or ...
 
-- **PDF anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), results p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), p. 4 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), results p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), p. 4 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

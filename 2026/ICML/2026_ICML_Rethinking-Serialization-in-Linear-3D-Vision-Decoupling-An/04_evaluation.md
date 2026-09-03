@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=MSVQM8Ub2y; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/328620. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=MSVQM8Ub2y; PDF retrieval source: https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** Dataset Regime Protocol Identity/Default (%) Hilbert (%) Morton (%) S3DIS Dense scene Mode ablation 82.62 74.46 74.68 ScanObjectNN Sparse object Mode ablation 92.51 93.86 94.21 ...
-- **p. 8 / 4.3. Analysis and Ablation - extractive PDF cue:** In the current setting, the separation is clear: the two indoor scene datasets have substantially smaller normalized distances than ScanObjectNN, and their best-performing modes are ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate AnIsoNet on three benchmarks spanning different geometric regimes: (1) S3DIS (Armeni et al., 2016) Area 5: Dense indoor scenes with approximately 100K points ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Dense-scene datasets (S3DIS and ScanNetV2) use Identity Mode, whereas the sparse-object dataset ScanObjectNN uses Morton Mode.
-- **p. 6 / 4.2. Main Results - extractive PDF cue:** In contrast to the dense-scene benchmarks, this sparse-object setting benefits from retaining a lightweight spatial prior through Morton serialization when local geometric context is limited.
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** Cross-regime validation of dataset-level mode selection.
-- **p. 8 / 4.3. Analysis and Ablation - extractive PDF cue:** Dataset ˆσk Best mode S3DIS 0.0060 Identity ScanNetV2 0.0042 Identity ScanObjectNN 0.0251 Morton
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** (2) ScanNetV2 (Dai et al., 2017): Large-scale indoor dataset with 1,513 annotated 3D scans.
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** Dataset Regime Protocol Identity/Default (%) Hilbert (%) Morton (%) S3DIS Dense scene Mode ablation 82.62 74.46 74.68 ScanObjectNN Sparse object Mode ablation 92.51 93.86 94.21 ...
+- **p. 8 / 4.3. Analysis and Ablation - extractive body cue:** In the current setting, the separation is clear: the two indoor scene datasets have substantially smaller normalized distances than ScanObjectNN, and their best-performing modes are ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate AnIsoNet on three benchmarks spanning different geometric regimes: (1) S3DIS (Armeni et al., 2016) Area 5: Dense indoor scenes with approximately 100K points ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Dense-scene datasets (S3DIS and ScanNetV2) use Identity Mode, whereas the sparse-object dataset ScanObjectNN uses Morton Mode.
+- **p. 6 / 4.2. Main Results - extractive body cue:** In contrast to the dense-scene benchmarks, this sparse-object setting benefits from retaining a lightweight spatial prior through Morton serialization when local geometric context is limited.
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** Cross-regime validation of dataset-level mode selection.
+- **p. 8 / 4.3. Analysis and Ablation - extractive body cue:** Dataset ˆσk Best mode S3DIS 0.0060 Identity ScanNetV2 0.0042 Identity ScanObjectNN 0.0251 Morton
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** (2) ScanNetV2 (Dai et al., 2017): Large-scale indoor dataset with 1,513 annotated 3D scans.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Efficiency Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | Overall, the figure shows that AnIsoNet improves accuracy while remaining in a much smaller parameter regime, rather than trading scale for performance. | p. 8 (4.4. Efficiency Analysis) |
 | 4.1. Experimental Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | AnIsoNet achieves strong performance among linear-complexity methods. | p. 6 (4.1. Experimental Setup) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** Dataset Regime Protocol Identity/Default (%) Hilbert (%) Morton (%) S3DIS Dense scene Mode ablation 82.62 74.46 74.68 ScanObjectNN Sparse object Mode ablation 92.51 93.86 94.21 ...
-- **p. 8 / 4.3. Analysis and Ablation - extractive PDF cue:** In the current setting, the separation is clear: the two indoor scene datasets have substantially smaller normalized distances than ScanObjectNN, and their best-performing modes are ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate AnIsoNet on three benchmarks spanning different geometric regimes: (1) S3DIS (Armeni et al., 2016) Area 5: Dense indoor scenes with approximately 100K points ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Dense-scene datasets (S3DIS and ScanNetV2) use Identity Mode, whereas the sparse-object dataset ScanObjectNN uses Morton Mode.
-- **p. 6 / 4.2. Main Results - extractive PDF cue:** In contrast to the dense-scene benchmarks, this sparse-object setting benefits from retaining a lightweight spatial prior through Morton serialization when local geometric context is limited.
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** Cross-regime validation of dataset-level mode selection.
-- **p. 8 / 4.3. Analysis and Ablation - extractive PDF cue:** Dataset ˆσk Best mode S3DIS 0.0060 Identity ScanNetV2 0.0042 Identity ScanObjectNN 0.0251 Morton
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** (2) ScanNetV2 (Dai et al., 2017): Large-scale indoor dataset with 1,513 annotated 3D scans.
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** Dataset Regime Protocol Identity/Default (%) Hilbert (%) Morton (%) S3DIS Dense scene Mode ablation 82.62 74.46 74.68 ScanObjectNN Sparse object Mode ablation 92.51 93.86 94.21 ...
+- **p. 8 / 4.3. Analysis and Ablation - extractive body cue:** In the current setting, the separation is clear: the two indoor scene datasets have substantially smaller normalized distances than ScanObjectNN, and their best-performing modes are ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate AnIsoNet on three benchmarks spanning different geometric regimes: (1) S3DIS (Armeni et al., 2016) Area 5: Dense indoor scenes with approximately 100K points ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Dense-scene datasets (S3DIS and ScanNetV2) use Identity Mode, whereas the sparse-object dataset ScanObjectNN uses Morton Mode.
+- **p. 6 / 4.2. Main Results - extractive body cue:** In contrast to the dense-scene benchmarks, this sparse-object setting benefits from retaining a lightweight spatial prior through Morton serialization when local geometric context is limited.
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** Cross-regime validation of dataset-level mode selection.
+- **p. 8 / 4.3. Analysis and Ablation - extractive body cue:** Dataset ˆσk Best mode S3DIS 0.0060 Identity ScanNetV2 0.0042 Identity ScanObjectNN 0.0251 Morton
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** (2) ScanNetV2 (Dai et al., 2017): Large-scale indoor dataset with 1,513 annotated 3D scans.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Architectural comparison of our method with serialization-based methods. Existing SSM/mamba methods force 3D point clouds into 1D sequences (top), introducing artificial or- dering ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of our AnIsoNet framework. (a) LAGM (Local Anisotropy Geometric Modeling) shows a representative hierarchical architecture; the number of stages is dataset-specific. Each ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Semantic segmentation results on S3DIS Area 5. AnIsoNet achieves strong performance among linear-complexity methods.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Semantic segmentation results on ScanNetV2. Methods marked with † use external pre-training data. ∗Best among meth- ods without pre-training. Underline denotes second-best without ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative comparison on ScanObjectNN (PB T50 RS). AnIsoNet outperforms recent MLP and SSM baselines.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Decoupling analysis on S3DIS. ∆is measured relative to the Sphere+MLP baseline. LAGM GISA mIoU (%) ∆ Sphere MLP
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Feature-response visualization on S3DIS for the same query point. (a) Input. (b) Identity Mode produces more con- centrated feature-similarity responses on semantically consistent ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Cross-regime validation of dataset-level mode selection. Dense scenes prefer Identity Mode, while sparse objects benefit from spatial serialization.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Architectural comparison of our method with serialization-based methods. Existing SSM/mamba methods force 3D point clouds into 1D sequences (top), introducing artificial or- dering ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our AnIsoNet framework. (a) LAGM (Local Anisotropy Geometric Modeling) shows a representative hierarchical architecture; the number of stages is dataset-specific. Each ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Semantic segmentation results on S3DIS Area 5. AnIsoNet achieves strong performance among linear-complexity methods.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Semantic segmentation results on ScanNetV2. Methods marked with † use external pre-training data. ∗Best among meth- ods without pre-training. Underline denotes second-best without ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative comparison on ScanObjectNN (PB T50 RS). AnIsoNet outperforms recent MLP and SSM baselines.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Decoupling analysis on S3DIS. ∆is measured relative to the Sphere+MLP baseline. LAGM GISA mIoU (%) ∆ Sphere MLP
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Feature-response visualization on S3DIS for the same query point. (a) Input. (b) Identity Mode produces more con- centrated feature-similarity responses on semantically consistent ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Cross-regime validation of dataset-level mode selection. Dense scenes prefer Identity Mode, while sparse objects benefit from spatial serialization.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Dataset Regime Protocol Identity/Default (%) Hilbert (%) Morton (%) S3DIS Dense scene Mode ablation 82.62 74.46 74.68 ScanObjectNN Sparse object Mode ablation 92.51 93.86 ... | embodiment, simulator version and control stack | p. 7 (4.3. Analysis and Ablation), p. 8 (4.3. Analysis and Ablation) |
 | Task/environment | In the current setting, the separation is clear: the two indoor scene datasets have substantially smaller normalized distances than ScanObjectNN, and their best-performing modes ... | reset, timeout, object/scene variation | p. 8 (4.3. Analysis and Ablation), p. 5 (4.1. Experimental Setup) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 | Primary metric/result | AnIsoNet achieves strong performance among linear-complexity methods. | numeric claim only at cited anchor | p. 6 (4.1. Experimental Setup) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Method Venue Type mIoU (%) PointNet++ (Qi et al., 2017b) NeurIPS'17 MLP 53.5 Point Trans.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** All experiments are conducted on a single NVIDIA RTX 3090 GPU.
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** On dense S3DIS, Identity Mode outperforms both Morton and Hilbert by about 8 points, showing that additional geometry-driven serialization is harmful when local neighborhoods are ...
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** On sparse ScanObjectNN, Morton Mode improves over Identity by 1.70 points, indicating that an explicit spatial prior becomes beneficial when local geometry alone is insufficient.
-- **p. 8 / 4.3. Analysis and Ablation - extractive PDF cue:** Input order mIoU Original 78.47 Reverse 78.43 Lexicographic 78.69 Morton 78.39 Hilbert 78.65 Random × 5 78.49 ± 0.12 Chunk shuffle × 5 78.46 ± ...
-- **p. 8 / 4.4. Efficiency Analysis - extractive PDF cue:** 0 20 40 60 80 100 120 Parameters (M) 68 70 72 74 76 78 80 82 S3DIS Area 5 mIoU (%) PointNeXt-S NeurIPS 2022 ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Method Venue Type mIoU (%) PointNet++ (Qi et al., 2017b) NeurIPS'17 MLP 53.5 Point Trans.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** All experiments are conducted on a single NVIDIA RTX 3090 GPU.
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** On dense S3DIS, Identity Mode outperforms both Morton and Hilbert by about 8 points, showing that additional geometry-driven serialization is harmful when local neighborhoods are ...
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** On sparse ScanObjectNN, Morton Mode improves over Identity by 1.70 points, indicating that an explicit spatial prior becomes beneficial when local geometry alone is insufficient.
+- **p. 8 / 4.3. Analysis and Ablation - extractive body cue:** Input order mIoU Original 78.47 Reverse 78.43 Lexicographic 78.69 Morton 78.39 Hilbert 78.65 Random × 5 78.49 ± 0.12 Chunk shuffle × 5 78.46 ± ...
+- **p. 8 / 4.4. Efficiency Analysis - extractive body cue:** 0 20 40 60 80 100 120 Parameters (M) 68 70 72 74 76 78 80 82 S3DIS Area 5 mIoU (%) PointNeXt-S NeurIPS 2022 ...
 
 ## Generalization and Failure Cases
 
@@ -162,10 +162,10 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** A mismatched mode therefore causes noticeable degradation rather than collapse.
-- **p. 7 / 4.3. Analysis and Ablation - extractive PDF cue:** Because our claim concerns robustness rather than strict permutation invariance, we directly test the task-relevant notion of robustness by perturbing the inference-time input order on ...
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** A mismatched mode therefore causes noticeable degradation rather than collapse.
+- **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** Because our claim concerns robustness rather than strict permutation invariance, we directly test the task-relevant notion of robustness by perturbing the inference-time input order on ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Analysis and Ablation), p. 8 (4.3. Analysis and Ablation), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), metrics p. 8 (4.4. Efficiency Analysis), p. 8 (4.4. Efficiency Analysis), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 6 (4.2. Main Results), p. 8 (4.4. Efficiency Analysis), p. 7 (4.3. Analysis and Ablation), p. 8 (4.4. Efficiency Analysis), results p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 7 (4.3. Analysis and Ablation), p. 8 (4.4. Efficiency Analysis).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Analysis and Ablation), p. 8 (4.3. Analysis and Ablation), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), metrics p. 8 (4.4. Efficiency Analysis), p. 8 (4.4. Efficiency Analysis), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 6 (4.2. Main Results), p. 8 (4.4. Efficiency Analysis), p. 7 (4.3. Analysis and Ablation), p. 8 (4.4. Efficiency Analysis), results p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 7 (4.3. Analysis and Ablation), p. 8 (4.4. Efficiency Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

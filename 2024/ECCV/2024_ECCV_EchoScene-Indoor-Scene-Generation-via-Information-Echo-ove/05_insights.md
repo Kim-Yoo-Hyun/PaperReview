@@ -1,53 +1,74 @@
 # Insights — EchoScene: Indoor Scene Generation via Information Echo over Scene Graph Diffusion
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3146_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We present EchoScene, an interactive and controllable generative model that generates 3D indoor scenes on scene graphs.
-- **Problem cue:** Existing methods struggle to handle scene graphs due to varying numbers of nodes, multiple edge combinations, and manipulatorinduced node-edge operations.
-- **Claim/result cue:** This is achieved through an information echo scheme in both shape and layout branches.
+- **p. 3 / 1 Introduction - extractive body cue:** We introduce an information echo scheme inside each branch of EchoScene that allows multiple denoising processes to exchange their denoising status among each other at ...
+- **p. 3 / 1 Introduction - extractive body cue:** We present EchoScene, a scene generation method with a dual-branch diffusion model on dynamic scene graphs, to simultaneously generate layouts and shapes with more controllability.
+- **p. 5 / 4 Method - extractive body cue:** We present EchoScene, a method that accomplishes scene generation through layout and shape generation from scene graphs.
+- **p. 6 / 4 Method - extractive body cue:** After the encoding, node features evolve to VZ = {vz i / i = 1, . . . , N}, where vz i consists of ...
+- **p. 7 / 4 Method - extractive body cue:** Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch.
+- **p. 8 / 4 Method - extractive body cue:** In this form, one sending and one receiving step constitute an ‘ information echo.' Note that the Langevin dynamics here are different from the ones ...
+- **p. 10 / 4 Method - extractive body cue:** The objective of the training is to minimize the noise prediction errors: Lshape = EX,"⇠N (0,1),t ⇥ //" -"✓(Xt, ⇡(t), Us(GSt)//2 2 ⇤ , GSt ...
+- **Contribution anchor:** p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (4 Method), p. 6 (4 Method), p. 7 (4 Method), p. 8 (4 Method)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1 Introduction - extractive body cue:** Despite its significant progress so far, CSG with scene graph diffusion still suffers from two open challenges.
+- **p. 2 / 1 Introduction - extractive body cue:** Second, it is crucial yet difficult when encapsulating both fine-grained node classes and diverse edge combinations into a network to be aware of global constraints.
+- **p. 3 / 1 Introduction - extractive body cue:** More clearly, for a single denoising process, the echo route is: {current denoising input -! information exchange unit -! denoising conditioner}.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 3: One Step of Dual-Branch Information Echo. For each time step, we encourage the layout (left) and shape (right) branches to exchange information within ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 4: Ablations under three cir- cumstances. mSG means average graph constraints. observe a marginal decrease, indicating even without ⇡(t), the model still learns temporal ...
+- **Boundary to test:** Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches in one step are shown in Fig. ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | We introduce an information echo scheme inside each branch of EchoScene that allows multiple denoising processes to exchange their denoising status among each other at each time step, bringing global awareness to ... | p. 3 (1 Introduction), p. 3 (1 Introduction) |
+| Reported outcome | Fig. 4: Comparisons with other generative methods. Input scene graphs have more edges between two nodes than the ones visualized here. Red rectangles highlight the inconsistent generation. (Zoom for details) our diffusion-based ... | p. 12 (Figure/Table caption), p. 10 (5 Experiments) |
+| Failure/limitation | Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches in one step are shown in Fig. ... | p. 7 (Figure/Table caption), p. 9 (Figure/Table caption) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `Graph Reasoning, Diffusion` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Object, relation, room/scene hierarchy를 graph로 구조화해 3D perception 결과를 robot planning과 language reasoning에 넘기는 중간 표현으로 사용할 수 있다.
-  - 관계 중심 표현은 단일 object detection보다 task-relevant affordance, spatial relation, commonsense reasoning을 붙이기 쉽다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
+- 이 논문의 재사용 가능한 지점은 Since the bounding box generation needs to be compliant with the spatial constraints described in the scene graph, state observation from other nodes is needed to determine the bounding box of a ...를 First, due to varying numbers of graph nodes and manipulator-induced node-edge operations, the input scene graphs dynamically describe global scene states, thus demanding adaptability from networks to accurately represent changing states.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches in one step are shown in Fig. ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: We introduce an information echo scheme inside each branch of EchoScene that allows multiple denoising processes to exchange their denoising status among each other at each time step, bringing global awareness to ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `Graph Reasoning, Diffusion`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: This is achieved through an information echo scheme in both shape and layout branches.
-  - static scene graph 품질을 보인 뒤에도 dynamic updates, uncertainty, open-vocabulary relation grounding, robot action coupling은 별도 문제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Graph Reasoning, Diffusion`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches in one step are shown in Fig. ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy, Chamfer
-  - 내 연구 확장 benchmark 후보: ScanNet, 3RScan, Matterport3D
-  - 내 연구 확장 metric 후보: mIoU, Recall@K, relation accuracy, task success
-  - 검증 초점: relation prediction, open-vocabulary grounding, downstream planning utility를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We conduct our experiments on SG-FRONT dataset [58], which provides scene-graph annotations for the high-quality 3D-FRONT [16] with household environments..
+3. Compare against the body-reported baseline or a matched simpler baseline: Table 2: Scene graph constraints (higher is better). Top: Relationship change mode. Middle: Node addition mode. Bottom: No manipulation (i.e., generation only). The decrease in symmertical category compared with CommonScenes is likely ....
+4. Report the body metric and its denominator/aggregation: To measure the scene graph consistency, we follow the scene graph constraints [15], which measure the accuracy of a set of relations on a generated layout..
+5. Re-run the body-reported ablation/failure condition: Table 4: Ablations under three cir- cumstances. mSG means average graph constraints. observe a marginal decrease, indicating even without ⇡(t), the model still learns temporal information through every denoising step. Secondly, we ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method); the primary result is directionally consistent at p. 12 (Figure/Table caption), p. 10 (5 Experiments), p. 11 (Figure/Table caption); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-3D scene graph의 node/edge uncertainty를 planning cost나 action selection에 어떻게 반영할 수 있는가?
+고정된 observation/action/data/compute budget에서 introduce, information, echo mechanism이 Table 2: Scene graph constraints (higher is better). Top: Relationship change mode. Middle: Node addition mode. ... 대비 To measure the scene graph consistency, we follow the scene graph constraints [15], which measure the accuracy of ...을 개선하고, Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

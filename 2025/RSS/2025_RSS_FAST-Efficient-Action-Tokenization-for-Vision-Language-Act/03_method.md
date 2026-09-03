@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. T
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | We first normalize the input actions, such that the Ist and 99th quantile of values in the training dataset for each action ... | p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | xerleaving action di ‘mensions by including all low-frequency components first, and train a byte pair encoding (BPE) tokenizer [27] to losslessly ‘compress ... | p. 5 (B. The FAST Tokenization Algorithm), p. 4 (B. The FAST Tokenization Algorithm) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. T
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | naive tokenization, We apply the binning tokenization to each time step in the action chunk separately and then concatenate, Finally, while our ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | We observe that correlations between time steps are a major challenge for naive tokenization strategies when predicting sequences of | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | One current limitation of the autoregressive VLA is its inference speed: while 7» with diffusion typically predicts one second action chunks within ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. T
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 4 (B. The FAST Tokenization Algorithm), p. 9 (C. Universal Action Tokenizer), p. 5 (B. The FAST Tokenization Algorithm), p. 8 (B. Comparing Action Tokenizers for VLA Training), objective p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training), p. 8 (B. Comparing Action Tokenizers for VLA Training), temporal p. 7 (A. Experimental Setup), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (Abstract), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 4 (B. The FAST Tokenization Algorithm), p. 9 (C. Universal Action Tokenizer), p. 5 (B. The FAST Tokenization Algorithm), p. 8 (B. Comparing Action Tokenizers for VLA Training), objective p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training), p. 8 (B. Comparing Action Tokenizers for VLA Training), temporal p. 7 (A. Experimental Setup), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (Abstract), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We first normalize the input actions, such that the Ist and 99th quantile of values in the training dataset for each action dimension maps to the range [-1,...,1]- This initial ... (p. 4, B. The FAST Tokenization Algorithm).
+- **Objective/update evidence:** After the data is normalized, we apply the discrete cosine transform to each action dimension separately. ‘To compress the DCT-converted signal we can simply omit insignificant coefficients, which we implement ... (p. 4, B. The FAST Tokenization Algorithm).
+- **Temporal/runtime evidence:** naive tokenization, We apply the binning tokenization to each time step in the action chunk separately and then concatenate, Finally, while our approach provides a compressed tokenization without the need ... (p. 7, A. Experimental Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

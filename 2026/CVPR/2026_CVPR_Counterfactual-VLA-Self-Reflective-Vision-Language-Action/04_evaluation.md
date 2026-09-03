@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (4.2. Main Exp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 1. Counterfactual Vision-Language-Action (CF-VLA) Model. Top: CF-VLA conducts reasoning adaptively. The model engages in reasoning more frequently and achieves more signifi- cant task ... | p. 1 (Figure/Table caption) |
 | 4.2. Main Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | We evaluate whether counterfactual reasoning improves trajectory accuracy, safety characteristics, and reasoning quality. | p. 6 (4.2. Main Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (4.2. Main Exp
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The counterfactual reasoning dataset DCF comes from the training set of Dmeta. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup) |
 | Task/environment | The entire data corpus forms the trajectory-only dataset Dtraj, which contains raw sensor data paired with ego-vehicle future trajectories. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments) |
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (4.2. Main Exp
 - **p. 6 / 4.2. Main Experiments - extractive body cue:** Relative to traj-only, the best CF models reduce collision rate by roughly 25-30% and off-road violations by about 15-20%, while also lowering corner distance by ...
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** These complement distance-based metrics by revealing whether small deviations lead to unsafe outcomes.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 1 (Figure/Table caption), p. 5 (4.1. Experimental Setup), baselines p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 3 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 8 (4.4. Qualitative Results), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 1 (Figure/Table caption), p. 5 (4.1. Experimental Setup), baselines p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 3 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 8 (4.4. Qualitative Results), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Evaluation results. CF-VLA improves trajectory accuracy (ADE, FDE), behavioral safety (Corner Distance, Collision, Off-road), and reasoning quality (IOU). ↓lower is better, ↑higher is better. (p. 6, Figure/Table caption).
+- **Metric evidence:** We evaluate models along three dimensions: 1) Trajectory Accuracy: We report MinADE/AvgADE and MinFDE/AvgFDE as mean/endpoint displacement errors over 6 predicted modes (lower is better), and Corner Distance as the ... (p. 5, 4.1. Experimental Setup).
+- **Baseline/ablation evidence:** With route information, meta-act (w/ route) provides an even stronger baseline. (p. 6, 4.2. Main Experiments).
+- **Failure/negative evidence:** Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects that an action it executed failed and then switches to an alternative ... (p. 2, 1. Introduction).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p091.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p091.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p091.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p091.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | Open-home, open-vocabulary object navigation The first component of our method is an open-home, openvocabulary object navigation model that we use to map ... | p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | Navigating to objects in the real world: Once our navigation model gives us a 3D location coordinate in the real world, we ... | p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD) |
@@ -80,10 +80,10 @@ PDF body method statement (p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II.
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | We apply the detector on every frame, and extract each of the object bounding box, CLIPembedding, detector confidence, and pass these information ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | This VoxelMap builds the base of our object memory module. | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | We apply the detector on every frame, and extract each of the object bounding box, CLIPembedding, detector confidence, and pass these information ... | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | not recovered | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | We apply the detector on every frame, and extract each of the object bounding box, CLIPembedding, detector confidence, and pass these information ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | This VoxelMap builds the base of our object memory module. | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | We apply the detector on every frame, and extract each of the object bounding box, CLIPembedding, detector confidence, and pass these information ... | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -127,8 +127,17 @@ PDF body method statement (p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD), objective p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), temporal p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD).
+- **Evidence anchors reviewed:** method p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD), objective p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), temporal p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 3 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 4 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD), p. 5 (II. TECHNICAL COMPONENTS AND METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (27 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Then, we find the voxel where the dot product between the encoded embedding and the voxel's associated embedding is maximized. (p. 3, II. TECHNICAL COMPONENTS AND METHOD).
+- **Objective/update evidence:** Thus, our navigation method has to balance the following objectives: 1) The robot needs to be close enough to the object to manipulate it, 2) The robot needs some space ... (p. 3, II. TECHNICAL COMPONENTS AND METHOD).
+- **Temporal/runtime evidence:** We apply the detector on every frame, and extract each of the object bounding box, CLIPembedding, detector confidence, and pass these information onto the object memory module. (p. 3, II. TECHNICAL COMPONENTS AND METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

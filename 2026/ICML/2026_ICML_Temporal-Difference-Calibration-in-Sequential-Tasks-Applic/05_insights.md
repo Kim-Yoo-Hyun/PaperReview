@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 In principle, the history ht should contain all signals available at time t that are informative about future success, e.g., the current observation, past actions, and any internal state carried by the ...를 Algorithm 3 Q-Value Guided Action Search input observation xt, policy π, learned Q-function fθ, simulator W, sample size M, threshold ¯T 1: at = arg maxa′ π(a′/xt) {Greedy action} 2: if fθ(xt, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 4. Averaged success rates over additional simulation steps for action selection configurations. All experiments evalu- ate 3 unseen tasks from LIBERO-10 taken with OpenVLA, con- sisting of 50 rollouts each, avereged ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models Algorithm 2 Early Stopping input Policy π, dataset Dcal, confidence α 1: fθ ←TDQC(π, Dcal) 2: Sample Dval i.i.d. from ... (p. 7, 5.2. Application to Test-Time Guided Action Search).
+- **Paper-specific mechanism:** This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 3. Benchmark statistics: task split into seen/unseen subsets and corresponding numbers of training and evaluation rollouts. Table 3 summarize each benchmark statistics on the number of tasks and rollouts. ... (p. 17, Figure/Table caption); the relevant task/metric cue is Table 16. Performance degregation as a function of failed trajectories, evaluated on π0-FAST LIBERO-10 (unseen tasks). We vary the proportion of failed trajectories retained during training from 100% down to ... (p. 26, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones and is widely used for uncertainty quantification in LLMs (Huang et al., ... (p. 9, 6.4. TD loss improves calibration and failure detection).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Real-World Franka We consider the Franka Emika Panda Robot in Gu et al..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 5. Extended Analysis of Guided Action Search and TDQC Efficiency. The results demonstrate that RNN-TDQC provides the highest success rates, while the Threshold 0.35 variant offers a significant reduction in computational ....
-4. Report the body metric and its denominator/aggregation: Figure 11. Analysis of VLA Calibration and Success Rates. (a-f) Scatter plots showing the strong negative correlation between Brier Score at Stop Time ( ˆT) and ROC-AUC across different model-benchmark pairs. E.11. ....
-5. Re-run the body-reported ablation/failure condition: Figure 1. Sequential Brier scores across benchmarks. Sequential Brier score (lower is better) on an unseen validation set averaged over 21 random seeds (train/validation task splits). To compare calibration across rollouts with ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models Algorithm 2 Early Stopping input Policy π, dataset Dcal, confidence α 1: fθ ←TDQC(π, Dcal) 2: Sample Dval i.i.d. from ... (p. 7, 5.2. Application to Test-Time Guided Action Search); preserve the objective/update rule: Note that for sparse binary rewards Y (hT ) = R(hT ). (p. 4, 4. Problem Formulation).
+2. Use the paper-reported task/data/environment cue: An episode in LIBERO is stopped once the robot completes its task. (p. 8, 6.2. Benchmarks).
+3. Compare against the reported or matched baseline: Figure 5. Extended Analysis of Guided Action Search and TDQC Efficiency. The results demonstrate that RNN-TDQC provides the highest success rates, while the Threshold 0.35 variant offers a significant reduction ... (p. 23, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Table 16. Performance degregation as a function of failed trajectories, evaluated on π0-FAST LIBERO-10 (unseen tasks). We vary the proportion of failed trajectories retained during training from 100% down to ... (p. 26, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Figure 1. Sequential Brier scores across benchmarks. Sequential Brier score (lower is better) on an unseen validation set averaged over 21 random seeds (train/validation task splits). To compare calibration across ... (p. 2, Figure/Table caption); if none is reported, design one around: We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones and is widely used for uncertainty quantification in LLMs (Huang et al., ... (p. 9, 6.4. TD loss improves calibration and failure detection).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 7 (1. TD loss improves calibration and failure detection re); the primary result is directionally consistent at p. 23 (Figure/Table caption), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 17 (Figure/Table caption), p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), and measure the boundary at p. 9 (6.4. TD loss improves calibration and failure detection), p. 9 (6.4. TD loss improves calibration and failure detection).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Before, Algorithm, provide mechanism이 Figure 5. Extended Analysis of Guided Action Search and TDQC Efficiency. The results demonstrate that RNN-TDQC ... 대비 Figure 11. Analysis of VLA Calibration and Success Rates. (a-f) Scatter plots showing the strong negative correlation between ...을 개선하고, Figure 4. Averaged success rates over additional simulation steps for action selection configurations. All experiments evalu- ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models Algorithm 2 Early Stopping input Policy π, dataset Dcal, confidence α 1: ...), does the paper-specific mechanism (This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence.) retain the reported evaluation outcome (Table 16. Performance degregation as a function of failed trajectories, evaluated on π0-FAST LIBERO-10 (unseen tasks). We vary ...) when tested against the paper's strongest explicit boundary (We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 16. Performance degregation as a function of failed trajectories, evaluated on π0-FAST LIBERO-10 (unseen tasks). We vary ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** Table 3. Benchmark statistics: task split into seen/unseen subsets and corresponding numbers of training and evaluation rollouts. Table 3 summarize each benchmark statistics on the number of tasks and rollouts. ... (p. 17, Figure/Table caption).
+- **Strongest explicit boundary:** We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones and is widely used for uncertainty quantification in LLMs (Huang et al., ... (p. 9, 6.4. TD loss improves calibration and failure detection).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

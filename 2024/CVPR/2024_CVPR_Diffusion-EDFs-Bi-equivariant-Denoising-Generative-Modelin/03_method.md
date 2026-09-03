@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | (12), we propose the following models: sν;t(g/Os, Oe) = Z R3d3x ρν;t(x/Oe) esν;t(g, x/Os, Oe) (24) sω;t(g/Os, Oe) = Z R3d3x ρω;t(x/Oe) ... | p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi-equivariant Score Model) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | (28)) of the score field, we propose using the following model with two EDFs: es□;t(g, x/Os, Oe) = ψ□;t(x/Oe) ⊗(→1) □;t D(R-1) ... | p. 4 (3.5. Bi-equivariant Score Model), p. 5 (4.3. Score Model) |
@@ -127,8 +127,17 @@ PDF body method statement (p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi-equivariant Score Model), p. 5 (4.3. Score Model), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), objective p. 4 (3.4. Score Matching Objectives), p. 4 (3.4. Score Matching Objectives), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), temporal p. 4 (4. Implementation), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 6 (5. Experiments and Results), p. 1 (2.1. SO(3) Group Representation Theory), p. 2 (2.1. SO(3) Group Representation Theory).
+- **Evidence anchors reviewed:** method p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi-equivariant Score Model), p. 5 (4.3. Score Model), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), objective p. 4 (3.4. Score Matching Objectives), p. 4 (3.4. Score Matching Objectives), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), temporal p. 4 (4. Implementation), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 6 (5. Experiments and Results), p. 1 (2.1. SO(3) Group Representation Theory), p. 2 (2.1. SO(3) Group Representation Theory).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Due to the bi-equivariance, the trained policy can be effectively generalized to previously unseen configurations in the observation of the scene and the grasp. representations are equivalent representations of the ... (p. 2, 2.1. SO(3) Group Representation Theory).
+- **Objective/update evidence:** Still, the following mean squared error (MSE) loss can be used to train our score model st(g/Os, Oe) without requiring the integration of Eq. (p. 4, 3.4. Score Matching Objectives).
+- **Temporal/runtime evidence:** In this section, we first provide the specific implementation of the bi-equivariant diffusion frame selection mechanism, which was postponed in Sec. (p. 4, 4. Implementation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

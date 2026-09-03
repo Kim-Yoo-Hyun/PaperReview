@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Ta
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setups - extractive PDF cue:** We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73].
-- **p. 5 / 4.1. Experimental Setups - extractive PDF cue:** RealEstate10k consists of real-world video data captured in both indoor and outdoor environments.
-- **p. 5 / 4.2. Implementation Details - extractive PDF cue:** The computational efficiency is demonstrated in Tab.
-- **p. 5 / 4.1. Experimental Setups - extractive PDF cue:** In our ablation studies, we train a Splatter Image using our "Medium" U-Net and report its performance.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Our proposed framework for noisy-teacher-guided training of a 3D Gaussian Splat (3DGS) diffusion model. Using a pre-trained deterministic predictor network for 3DGS, which ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Novel View Synthesis. Our model shows superior performance on RealEstate10k on small, medium and large baseline ranges.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter Image ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results. (a) Qualitative comparison on the ShapeNet-SRN dataset. Our model produces views that are more faithful to the source image and better ...
+- **p. 5 / 4.1. Experimental Setups - extractive body cue:** We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73].
+- **p. 5 / 4.1. Experimental Setups - extractive body cue:** RealEstate10k consists of real-world video data captured in both indoor and outdoor environments.
+- **p. 5 / 4.2. Implementation Details - extractive body cue:** The computational efficiency is demonstrated in Tab.
+- **p. 5 / 4.1. Experimental Setups - extractive body cue:** In our ablation studies, we train a Splatter Image using our "Medium" U-Net and report its performance.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed framework for noisy-teacher-guided training of a 3D Gaussian Splat (3DGS) diffusion model. Using a pre-trained deterministic predictor network for 3DGS, which ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Novel View Synthesis. Our model shows superior performance on RealEstate10k on small, medium and large baseline ranges.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter Image ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results. (a) Qualitative comparison on the ShapeNet-SRN dataset. Our model produces views that are more faithful to the source image and better ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Ta
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experimental Setups | EMPIRICAL / REAL-ROBOT OR HARDWARE | While PixelNeRF has a smaller model size, our approach achieves lower GPU memory consumption on the ShapeNet-SRN dataset. | p. 5 (4.1. Experimental Setups) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing ... | p. 6 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Ta
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setups - extractive PDF cue:** We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73].
-- **p. 5 / 4.1. Experimental Setups - extractive PDF cue:** RealEstate10k consists of real-world video data captured in both indoor and outdoor environments.
+- **p. 5 / 4.1. Experimental Setups - extractive body cue:** We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73].
+- **p. 5 / 4.1. Experimental Setups - extractive body cue:** RealEstate10k consists of real-world video data captured in both indoor and outdoor environments.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (Left) Standard diffusion training is constrained to same-modality supervision. We break this barrier by decoupling the sources of noised samples and supervision. Leveraging ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Our proposed framework for noisy-teacher-guided training of a 3D Gaussian Splat (3DGS) diffusion model. Using a pre-trained deterministic predictor network for 3DGS, which ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing reconstruction ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Novel View Synthesis. Our model shows superior performance on RealEstate10k on small, medium and large baseline ranges.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Memory Footprint and Model Size. sampler with 10 inference steps. To manage the increased computational complexity during this phase, the batch size is ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter Image ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Additional-view guidance. Evaluated on a subset of the car split, our diffusion-based model better utilizes an additional view through guidance compared to 3DGS ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results. (a) Qualitative comparison on the ShapeNet-SRN dataset. Our model produces views that are more faithful to the source image and better ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (Left) Standard diffusion training is constrained to same-modality supervision. We break this barrier by decoupling the sources of noised samples and supervision. Leveraging ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed framework for noisy-teacher-guided training of a 3D Gaussian Splat (3DGS) diffusion model. Using a pre-trained deterministic predictor network for 3DGS, which ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing reconstruction ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Novel View Synthesis. Our model shows superior performance on RealEstate10k on small, medium and large baseline ranges.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Memory Footprint and Model Size. sampler with 10 inference steps. To manage the increased computational complexity during this phase, the batch size is ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter Image ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Additional-view guidance. Evaluated on a subset of the car split, our diffusion-based model better utilizes an additional view through guidance compared to 3DGS ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results. (a) Qualitative comparison on the ShapeNet-SRN dataset. Our model produces views that are more faithful to the source image and better ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73]. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups) |
 | Task/environment | RealEstate10k consists of real-world video data captured in both indoor and outdoor environments. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setups) |
@@ -111,7 +111,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Ta
 | Primary metric/result | Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing ... | numeric claim only at cited anchor | p. 6 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / Method - extractive PDF cue:** 5 frames 10 frames U[-30, 30] frames Model PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ...
+- **p. 6 / Method - extractive body cue:** 5 frames 10 frames U[-30, 30] frames Model PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ...
 
 ## Generalization and Failure Cases
 
@@ -145,12 +145,12 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Ta
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion and Limitations - extractive PDF cue:** Future work could address this limitation by adapting our framework to support alternative 3D representations, further enhancing its robustness and generalizability.
-- **p. 8 / 5. Conclusion and Limitations - extractive PDF cue:** Our framework is flexible and could extend to various 3D representations; however, the current implementation relies on pixel-aligned 3D GS, inheriting certain limitations.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (Left) Standard diffusion training is constrained to same-modality supervision. We break this barrier by decoupling the sources of noised samples and supervision. Leveraging ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Our proposed framework for noisy-teacher-guided training of a 3D Gaussian Splat (3DGS) diffusion model. Using a pre-trained deterministic predictor network for 3DGS, which ...
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** Future work could address this limitation by adapting our framework to support alternative 3D representations, further enhancing its robustness and generalizability.
+- **p. 8 / 5. Conclusion and Limitations - extractive body cue:** Our framework is flexible and could extend to various 3D representations; however, the current implementation relies on pixel-aligned 3D GS, inheriting certain limitations.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (Left) Standard diffusion training is constrained to same-modality supervision. We break this barrier by decoupling the sources of noised samples and supervision. Leveraging ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed framework for noisy-teacher-guided training of a 3D Gaussian Splat (3DGS) diffusion model. Using a pre-trained deterministic predictor network for 3DGS, which ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups), metrics p. 5 (4.2. Implementation Details), p. 5 (4.1. Experimental Setups), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups), metrics p. 5 (4.2. Implementation Details), p. 5 (4.1. Experimental Setups), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

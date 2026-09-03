@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `conditioning observation와 noisy/intermediate sample → latent/noise variable와 conditional distribution → generated sample, action chunk 또는 trajectory`.
-- 이 논문의 재사용 가능한 지점은 The inclusion of semantic flow features fs alongside real observations fr and robot state fp allows the policy to leverage both geometric precision and semantic understanding during execution.를 Second, the real point cloud observations with shape (K,3) are encoded to produce scene features fr, providing immediate geometric feedback.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 latent/noise variable와 conditional distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 3. Failure mode of single-view 3D generation. When using a single view for 3D generation, certain geometric details may be inaccurately reconstructed due to occlusion, even if the result appears plausible ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our framework consists of (top) an initialization phase that generates comprehensive 3D representation (surface normals, wireframe, and geometry) through object-centric exploration and digital twin generation, which enables rich semanti ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** A from expert data, where the observation space O is composed of real point cloud observations Or and Ovs f. (p. 3, 3.1. Overview).
+- **Paper-specific mechanism:** Our key contributions can be summarized as follows: (1) We propose a novel foundation model-driven approach for constructing semantic flow, a dynamic and complete semantic representation through the integration of ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields. (p. 7, 4.4. Ablation Study); the relevant task/metric cue is G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the best baseline. (p. 7, 34.04 Hz). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic interactions through real-time semantic flow, which addresses the limitations of existing geometry-centric ... (p. 3, 3.1. Overview).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate our approach on five distinct manipulation tasks from the RoboTwin benchmark [19], as illustrated in Figure 6..
-3. Compare against the body-reported baseline or a matched simpler baseline: G3Flow nearly doubles the success rate compared to the strongest baseline, suggesting that our semantic representations effectively encode spatial relationships and object orientations..
-4. Report the body metric and its denominator/aggregation: Performance is measured through average success rates and standard deviations across seeds..
-5. Re-run the body-reported ablation/failure condition: Baselines: We use the 3D Diffusion Policy (DP3) [40], which utilizes efficient point encoders to create compact 3D representations, and its variant with RGB color information DP3(w/ color), as well as the ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: A from expert data, where the observation space O is composed of real point cloud observations Or and Ovs f. (p. 3, 3.1. Overview); preserve the objective/update rule: We employ the DDIM scheduler for noise scheduling and optimize a noise prediction objective. (p. 5, 3.4. G3Flow-Enhanced Diffusion Policy).
+2. Use the paper-reported task/data/environment cue: For each task, we train policies using 100 expert demonstrations and evaluate across 3 random seeds with 100 test episodes per seed. (p. 6, 4.1. Experimental Setup).
+3. Compare against the reported or matched baseline: G3Flow nearly doubles the success rate compared to the strongest baseline, suggesting that our semantic representations effectively encode spatial relationships and object orientations. (p. 7, 4.2. Evaluation on Pose-aware Manipulation Tasks).
+4. Report the body metric with its denominator and aggregation: G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the best baseline. (p. 7, 34.04 Hz).
+5. Re-run the reported ablation or stress/failure condition: Baselines: We use the 3D Diffusion Policy (DP3) [40], which utilizes efficient point encoders to create compact 3D representations, and its variant with RGB color information DP3(w/ color), as well ... (p. 6, 4.1. Experimental Setup); if none is reported, design one around: Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic interactions through real-time semantic flow, which addresses the limitations of existing geometry-centric ... (p. 3, 3.1. Overview).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction); the primary result is directionally consistent at p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 4 (3.2. Initial Semantic Flow Construction), match the reported outcome at p. 7 (4.4. Ablation Study), p. 7 (34.04 Hz), p. 7 (4.2. Evaluation on Pose-aware Manipulation Tasks), and measure the boundary at p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 framework, consists, initialization mechanism이 G3Flow nearly doubles the success rate compared to the strongest baseline, suggesting that our semantic representations ... 대비 Performance is measured through average success rates and standard deviations across seeds.을 개선하고, Figure 3. Failure mode of single-view 3D generation. When using a single view for 3D generation, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (A from expert data, where the observation space O is composed of real point cloud observations Or and Ovs f.), does the paper-specific mechanism (Our key contributions can be summarized as follows: (1) We propose a novel foundation model-driven approach for constructing semantic flow, a dynamic ...) retain the reported evaluation outcome (G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the ...) when tested against the paper's strongest explicit boundary (Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our key contributions can be summarized as follows: (1) We propose a novel foundation model-driven approach for constructing semantic flow, a dynamic and complete semantic representation through the integration of ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields. (p. 7, 4.4. Ablation Study).
+- **Strongest explicit boundary:** Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic interactions through real-time semantic flow, which addresses the limitations of existing geometry-centric ... (p. 3, 3.1. Overview).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

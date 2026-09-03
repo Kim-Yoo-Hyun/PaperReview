@@ -1,34 +1,86 @@
 # SpatialSplat: Efficient Semantic 3D from Sparse Unposed Images
 
-- Year/Venue: 2025 / ICCV
-- Category: 3D Vision-Language Understanding
-- Tags: Gaussian Splatting, geometry, semantic, alignment, 3D Vision
-- Paper link: ./2025/ICCV/2025_ICCV_SpatialSplat-Efficient-Semantic-3D-from-Sparse-Unposed-Ima/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.html.
+> PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- To further incorporate semantics while avoiding the significant memory and storage costs of high-dimensional semantic features, existing methods extend this paradigm by associating each primitive with a compressed ...
-- However, these methods have two major limitations: (a) the naively compressed feature compromises expressiveness, affecting the model’s ability to capture finegrained semantics, and (b) the pixel-wise primitive prediction ...
-- Introduction Reconstructing and understanding 3D scenes from 2D images is a fundamental topic in computer vision, aiming to obtain semantic-aware 3D structure from low-cost devices, i.e., RGB cameras.
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2025 / ICCV
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: Robotics-enabling 3D perception
+- Tier: REFERENCE
+- Tags: Gaussian Splatting, geometry, semantic, alignment, 3D Vision
+- Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.html
+- Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.pdf
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Despite significant progress, these methods have two major limitations.를 문제로 두고, Additionally, we introduce a Selective Gaussian Mechanism (SGM) to eliminate redundancy in overlapping areas caused by pixelwise representations, along with a novel loss function that jointly optimizes redundancy-aware Gaussians and sce ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / Abstract - extractive body cue:** A major breakthrough in 3D reconstruction is the feedforward paradigm to generate pixel-wise 3D points or Gaussian primitives from sparse, unposed images.
+- **p. 1 / Abstract - extractive body cue:** To further incorporate semantics while avoiding the significant memory and storage costs of high-dimensional semantic features, existing methods extend this paradigm by associating each primitive ...
+- **p. 1 / Abstract - extractive body cue:** However, these methods have two major limitations: (a) the naively compressed feature compromises expressiveness, affecting the model's ability to capture finegrained semantics, and (b) the ...
+- **p. 1 / Abstract - extractive body cue:** To this end, we introduce SpatialSplat, a feedforward framework that produces redundancy-aware Gaussians and capitalizes on a dual-field semantic representation.
+- **p. 1 / Abstract - extractive body cue:** Particularly, with the insight that primitives within the same instance exhibit high semantic consistency, we decompose the semantic representation into a coarse feature field that ...
+- **p. 2 / 1. Introduction - extractive body cue:** Despite significant progress, these methods have two major limitations.
+- **p. 2 / 1. Introduction - extractive body cue:** However, these methods typically rely on perscene optimization and complex multi-step preprocessing, limiting their ability to generalize across multiple scenes within a single model.
 
 ## Core Idea
-- 3, our method is faster than LSM thanks to its streamlined architecture, requiring only 40% of the storage size and 65% of primitive number.
-- Notably, since Replica is a synthetic dataset with a different data modality from our training set, this underscores the strong generalization ability of our approach.
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / 1. Introduction - extractive body cue:** Additionally, we introduce a Selective Gaussian Mechanism (SGM) to eliminate redundancy in overlapping areas caused by pixelwise representations, along with a novel loss function that ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are threefold: • A novel feed-forward 3DGS framework that, to the best of our knowledge, is the first to simultaneously learn semantic and ...
+- **p. 3 / 3. Method - extractive body cue:** In the following sections, we provide a detailed explanation of each component of our method.
+- **p. 4 / 3.2. Selective Gaussian Mechanism - extractive body cue:** To address this, we propose a selective Gaussian mechanism that assigns each primitive an importance score to quantify its necessity for the scene representation.
+- **p. 4 / 3.3. Dual-field Architecture - extractive body cue:** To mitigate this loss without increasing storage costs, we propose a dual-field architecture that decouples semantic representation into: 1) a fine-grained instance-aware radiance field, capturing ...
+- **p. 3 / 3.1. 3D Geometry Prediction - extractive body cue:** The features from encoder are then passed to a ViT-based decoder, where cross-attention is applied to better capture spatial relationships and aggregate information across views.
+- **p. 5 / 3.3. Dual-field Architecture - extractive body cue:** We minimize the loss between the rendered feature map at a novel view and the feature map ˆF S of the ground truth image extracted ...
+- **p. 3 / 3.1. 3D Geometry Prediction - extractive body cue:** Both the encoder and decoder in our geometric prediction module are built on pure ViT structures, requiring no geometric priors as in previous methods [3, ...
 
-## Main Claims
-- We conduct extensive experiments to evaluate our method, demonstrating a remarkable 60% reduction in scene representation parameters while achieving superior performance over state-of-the-art methods.
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | The input image is patchified and flattened into image sequences, which along with the camera intrinsics processed by a linear layer, are fed into the encoder. | RGB-D, image set, point cloud, depth와 camera pose | p. 3 (3.1. 3D Geometry Prediction), p. 4 (3.1. 3D Geometry Prediction) |
+| State/latent | input, image, patchified, flattened, sequences, along, camera, intrinsics, processed, linear, layer, encoder | geometry, map, object/relationship state | p. 3 (3.1. 3D Geometry Prediction), p. 4 (3.1. 3D Geometry Prediction), p. 3 (3.1. 3D Geometry Prediction) |
+| Output/action | Experiments show that SpatialSplat effectively learns 3D priors from sparse unposed images without depth supervision, even while jointly learning multiple parameters and features. | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.1. 3D Geometry Prediction), p. 3 (3.1. 3D Geometry Prediction), p. 4 (3.3. Dual-field Architecture) |
+| Objective/outcome | Therefore, we optimize βi through photometric loss minimization. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3.2. Selective Gaussian Mechanism), p. 4 (3.3. Dual-field Architecture), p. 5 (3.3. Dual-field Architecture) |
 
-## Contribution
-- We conduct extensive experiments to evaluate our method, demonstrating a remarkable 60% reduction in scene representation parameters while achieving superior performance over state-of-the-art methods.
-- Moreover, we propose a selective Gaussian mechanism, which retains only essential Gaussians in the scene, effectively eliminating redundant primitives.
-- To this end, we introduce SpatialSplat, a feedforward framework that produces redundancy-aware Gaussians and capitalizes on a dual-field semantic representation.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- A major breakthrough in 3D reconstruction is the feedforward paradigm to generate pixel-wise 3D points or Gaussian primitives from sparse, unposed images.
+- **p. 2 / 1. Introduction - extractive body cue:** Additionally, we introduce a Selective Gaussian Mechanism (SGM) to eliminate redundancy in overlapping areas caused by pixelwise representations, along with a novel loss function that ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are threefold: • A novel feed-forward 3DGS framework that, to the best of our knowledge, is the first to simultaneously learn semantic and ...
+- **p. 3 / 3. Method - extractive body cue:** In the following sections, we provide a detailed explanation of each component of our method.
+- **p. 4 / 3.2. Selective Gaussian Mechanism - extractive body cue:** To address this, we propose a selective Gaussian mechanism that assigns each primitive an importance score to quantify its necessity for the scene representation.
+- **p. 4 / 3.3. Dual-field Architecture - extractive body cue:** To mitigate this loss without increasing storage costs, we propose a dual-field architecture that decouples semantic representation into: 1) a fine-grained instance-aware radiance field, capturing ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** In challenging cases where LSM fails, such as the table legs in the first two rows and the corners in the last two rows, our ...
+- **p. 6 / 4.2. Results and Analysis - extractive body cue:** 1, SpatialSplat significantly outperforms latest SOTA method LSM.
+- **p. 7 / 4.2. Results and Analysis - extractive body cue:** SpatialSplat achieves sharper and more precise segmentation results compared to previous methods.
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 6 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis) |
+| Embodiment/environment | We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes. | hardware/simulator version and reset protocol | p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB) |
+| Dataset/benchmark | For evaluation, we follow LSM and select 40 unseen scenes from ScanNet to assess our model's performance. | role, split, size and leakage | p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB) |
+| Metric | For OVS, we evaluate performance using class-wise intersection over union (mIoU) and average pixel accuracy (mAcc). | definition, denominator, direction and uncertainty | p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results and Analysis) |
+| Baseline/ablation | 1, SpatialSplat outperforms all compared methods, even surpassing L-Seg, which provides semantic feature supervision GT LSM LSM Ours Ours Figure 6. | fair input/data/compute/action matching | p. 7 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** In challenging cases where LSM fails, such as the table legs in the first two rows and the corners in the last two rows, our ...
+- **p. 8 / 4.3. Ablations and Analysis - extractive body cue:** The primary issue is that per-primitive semantic learning struggles to maintain accurate semantics and fails to preserve clear instance boundaries, as illustrated in Fig.
+- **p. 8 / 25.58 MB - extractive body cue:** Furthermore, as our method does not rely on dense semantic supervision, we leverage a lightweight pretrained 2D model, significantly accelerating inference speed.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Out-of-distribution (OOD) comparison on Replica dataset.
+
+## Why Read It
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Despite significant progress, these methods have two major limitations.를 문제로 두고, Additionally, we introduce a Selective Gaussian Mechanism (SGM) to eliminate redundancy in overlapping areas caused by pixelwise representations, along with a novel loss function that jointly optimizes redundancy-aware Gaussians and sce ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. Dual-field Architecture), p. 3 (3.1. 3D Geometry Prediction), p. 5 (3.3. Dual-field Architecture), p. 4 (3.2. Selective Gaussian Mechanism) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

@@ -10,7 +10,7 @@
 
 ### What was actually new
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Without such knowledge, the policies can neither operate nor be applied to novel categories.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and ...
 - **p. 2 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** We first present the theoretical grounding behind the intuition of our method, and we slowly relax assumptions and approximations to create a system that articulates ...
 - **p. 4 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial ...
@@ -33,7 +33,7 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution. | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Mechanism/contribution | Without such knowledge, the policies can neither operate nor be applied to novel categories.
 | Reported outcome | Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able to predict reasonable 3D articulation flow vectors for downstream policy. steps, terminating earlier if success has ... | p. 8 (IV. RESULTS), p. 7 (IV. RESULTS) |
 | Failure/limitation | Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able to predict reasonable 3D articulation flow vectors for downstream policy. steps, terminating earlier if success has ... | p. 8 (IV. RESULTS), p. 7 (IV. RESULTS) |
 
@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial observation ˆF0 ←fθ(O0, [M0]), Predict the initial ...를 Given the estimate of the 3D articulation flow ˆF0, we now describe a general, closed-loop policy which takes flow as input and actuates an articulated object.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able to predict reasonable 3D articulation flow vectors for downstream policy. steps, terminating earlier if success has ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial observation ˆF0 ←fθ(O0, [M0]), Predict ... (p. 4, III. METHOD - FROM THEORY TO PRACTICE).
+- **Paper-specific mechanism:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and leverages this prediction to produce ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in which we attempt to articulate a ... (p. 7, IV. RESULTS); the relevant task/metric cue is Metrics: During our trials, we compute the following metrics for each policy: • Overall Success: Was the object articulated more than 90% of its range of motion (defined per-object)? • ... (p. 8, IV. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, the remaining failure modes raise questions we would like to explore in future work. (p. 9, V. CONCLUSION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in which we attempt to articulate a variety of ....
-3. Compare against the body-reported baseline or a matched simpler baseline: The best BC baseline, DAgger Oracle + F, is only able to fully articulate objects 33% of the time..
-4. Report the body metric and its denominator/aggregation: First, our formulation of FlowBot3D has a very high success rate across all categories, including test categories, which are completely novel types of objects (but may contain similar parts and articulation structures)..
-5. Re-run the body-reported ablation/failure condition: Baseline Comparisons: We compare our proposed method with several baseline methods: • UMP-DI: We implement a variant4 of UMPNet's Direction Inference network (DistNet) [39], where instead of bootstrapping an action scoring function ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial observation ˆF0 ←fθ(O0, [M0]), Predict ... (p. 4, III. METHOD - FROM THEORY TO PRACTICE); preserve the objective/update rule: During each step of training, we select an object in the dataset, randomize the state S of the object, and compute a new supervised pair (OS, FS), which we use ... (p. 5, III. METHOD - FROM THEORY TO PRACTICE).
+2. Use the paper-reported task/data/environment cue: 5) Real-world experiments deployed on a Sawyer robot to test the generalizablity and feasibility of our system in real-world scenarios. (p. 2, 4) Simulated experiments to test the performance of our).
+3. Compare against the reported or matched baseline: Baseline Comparisons: We compare our proposed method with several baseline methods: • UMP-DI: We implement a variant4 of UMPNet's Direction Inference network (DistNet) [39], where instead of bootstrapping an action ... (p. 6, IV. RESULTS).
+4. Report the body metric with its denominator and aggregation: Metrics: During our trials, we compute the following metrics for each policy: • Overall Success: Was the object articulated more than 90% of its range of motion (defined per-object)? • ... (p. 8, IV. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Baseline Comparisons: We compare our proposed method with several baseline methods: • UMP-DI: We implement a variant4 of UMPNet's Direction Inference network (DistNet) [39], where instead of bootstrapping an action ... (p. 6, IV. RESULTS); if none is reported, design one around: However, the remaining failure modes raise questions we would like to explore in future work. (p. 9, V. CONCLUSION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE); the primary result is directionally consistent at p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 7 (IV. RESULTS), p. 2 (4) Simulated experiments to test the performance of our), p. 5 (IV. RESULTS), and measure the boundary at p. 9 (V. CONCLUSION), p. 8 (IV. RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Without, knowledge, policies mechanism이 The best BC baseline, DAgger Oracle + F, is only able to fully articulate objects 33% ... 대비 First, our formulation of FlowBot3D has a very high success rate across all categories, including test categories, which ...을 개선하고, Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction ...), does the paper-specific mechanism (In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in ...) retain the reported evaluation outcome (Metrics: During our trials, we compute the following metrics for each policy: • Overall Success: Was the object ...) when tested against the paper's strongest explicit boundary (However, the remaining failure modes raise questions we would like to explore in future work.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Metrics: During our trials, we compute the following metrics for each policy: • Overall Success: Was the object ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and leverages this prediction to produce ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in which we attempt to articulate a ... (p. 7, IV. RESULTS).
+- **Strongest explicit boundary:** However, the remaining failure modes raise questions we would like to explore in future work. (p. 9, V. CONCLUSION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

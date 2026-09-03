@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.research.ed.ac.uk/en/publications/optimization-based-locomotion-planning-estimation-and-controldesi/; PDF retrieval source: https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.research.ed.ac.uk/en/publications/optimization-based-locomotion-planning-estimation-and-controldesi/; PDF retrieval source: https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (
 
 ## Evaluation Body Digest
 
-- **p. 19 / 6 Experiments - extractive PDF cue:** We describe several experiments performed on the robot and in simulation.
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** Because the robot's BDI estimator requires information from their walking controller, we were unable to use our walking controller in these tests.
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** Orientation estimation performance is comparable between different estimators.Notethattheprecisionofthegroundtruthorientation determined using VICON measurements is on the order of 1◦, so we were unable to differentiate yaw ...
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** This drift rate generally increases when the walking dynamically or on non-flat terrain.
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** To characterize the state estimator we evaluate its performance in a variety of experiments.
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions.
-- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive PDF cue:** The robot's trailing foot eventually collided with the front of the step resulting in a fall.
-- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive PDF cue:** This scenario requires great precision, if the state estimator drifts by even a few centimeters, the robot will hit a step edge and fall.
+- **p. 19 / 6 Experiments - extractive body cue:** We describe several experiments performed on the robot and in simulation.
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** Because the robot's BDI estimator requires information from their walking controller, we were unable to use our walking controller in these tests.
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** Orientation estimation performance is comparable between different estimators.Notethattheprecisionofthegroundtruthorientation determined using VICON measurements is on the order of 1◦, so we were unable to differentiate yaw ...
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** This drift rate generally increases when the walking dynamically or on non-flat terrain.
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** To characterize the state estimator we evaluate its performance in a variety of experiments.
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions.
+- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive body cue:** The robot's trailing foot eventually collided with the front of the step resulting in a fall.
+- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive body cue:** This scenario requires great precision, if the state estimator drifts by even a few centimeters, the robot will hit a step edge and fall.
 
 ## Evaluation Type and Scope
 
@@ -30,15 +30,15 @@ PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.1 State estimation evaluation | EMPIRICAL / SIMULATION | To characterize the state estimator we evaluate its performance in a variety of experiments. | p. 19 (6.1 State estimation evaluation) |
 | 6.1 State estimation evaluation | EMPIRICAL / SIMULATION | In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions. | p. 19 (6.1 State estimation evaluation) |
 
 ## Dataset / Benchmark Role
 
-- **p. 19 / 6 Experiments - extractive PDF cue:** We describe several experiments performed on the robot and in simulation.
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** Because the robot's BDI estimator requires information from their walking controller, we were unable to use our walking controller in these tests.
+- **p. 19 / 6 Experiments - extractive body cue:** We describe several experiments performed on the robot and in simulation.
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** Because the robot's BDI estimator requires information from their walking controller, we were unable to use our walking controller in these tests.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -48,7 +48,7 @@ PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We describe several experiments performed on the robot and in simulation. | embodiment, simulator version and control stack | p. 19 (6 Experiments), p. 19 (6.1 State estimation evaluation) |
 | Task/environment | Because the robot's BDI estimator requires information from their walking controller, we were unable to use our walking controller in these tests. | reset, timeout, object/scene variation | p. 19 (6.1 State estimation evaluation) |
@@ -91,12 +91,12 @@ PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (
 | Primary metric/result | In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions. | numeric claim only at cited anchor | p. 19 (6.1 State estimation evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 3.1.3 Determining the number of footsteps - extractive PDF cue:** Auton Robot (2016) 40:429-455 435 safe terrain regions: Yr, j ⇒Arp j ≤br r = 1, . . . , R piecewise linear sin θ ...
-- **p. 7 / 3.1.3 Determining the number of footsteps - extractive PDF cue:** For a footstep plan of N = 12 steps, in which each step must be assigned to one of R = 10 safe regions, L ...
-- **p. 10 / 4.2 COM and COP stabilization - extractive PDF cue:** If we assume that the centroidal angular momentum of the robot, ˙k = 0, k = 0, and the normal moment, τ n = 0, ...
-- **p. 11 / 4.2 COM and COP stabilization - extractive PDF cue:** ∞ 0 g(xCM(t), uCM(t), t)dt subject to ˙¯xCM(t) = A¯xCM(t) + B¯uCM(t) c(t) =  I2×2 02×4  xCM(t) -rz g IuCM(t) cd(t) = cd(t ...
-- **p. 13 / 4.5 Efficient QP solver - extractive PDF cue:** SolvingtheQPforAtlasduringtypicalwalkingtakesapproximately 0.2ms (1ms including QP setup time) (Kuindersma et al.
-- **p. 13 / 4.5 Efficient QP solver - extractive PDF cue:** Including all additional controller software components, such as those that evaluate the footstep trajectories, determine whether a body is in contact, handle messages to and ...
+- **p. 7 / 3.1.3 Determining the number of footsteps - extractive body cue:** Auton Robot (2016) 40:429-455 435 safe terrain regions: Yr, j ⇒Arp j ≤br r = 1, . . . , R piecewise linear sin θ ...
+- **p. 7 / 3.1.3 Determining the number of footsteps - extractive body cue:** For a footstep plan of N = 12 steps, in which each step must be assigned to one of R = 10 safe regions, L ...
+- **p. 10 / 4.2 COM and COP stabilization - extractive body cue:** If we assume that the centroidal angular momentum of the robot, ˙k = 0, k = 0, and the normal moment, τ n = 0, ...
+- **p. 11 / 4.2 COM and COP stabilization - extractive body cue:** ∞ 0 g(xCM(t), uCM(t), t)dt subject to ˙¯xCM(t) = A¯xCM(t) + B¯uCM(t) c(t) =  I2×2 02×4  xCM(t) -rz g IuCM(t) cd(t) = cd(t ...
+- **p. 13 / 4.5 Efficient QP solver - extractive body cue:** SolvingtheQPforAtlasduringtypicalwalkingtakesapproximately 0.2ms (1ms including QP setup time) (Kuindersma et al.
+- **p. 13 / 4.5 Efficient QP solver - extractive body cue:** Including all additional controller software components, such as those that evaluate the footstep trajectories, determine whether a body is in contact, handle messages to and ...
 
 ## Generalization and Failure Cases
 
@@ -132,12 +132,12 @@ PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (
 
 ## Limitations and Verification Questions
 
-- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive PDF cue:** The robot's trailing foot eventually collided with the front of the step resulting in a fall.
-- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive PDF cue:** This scenario requires great precision, if the state estimator drifts by even a few centimeters, the robot will hit a step edge and fall.
-- **p. 22 / 6.4.1 Running - extractive PDF cue:** 13), require at least 3cm of clearance between links to avoid self-collisions, and constrain the gaze of the robot's head cameras to be no more ...
-- **p. 19 / 6.1 State estimation evaluation - extractive PDF cue:** In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions.
+- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive body cue:** The robot's trailing foot eventually collided with the front of the step resulting in a fall.
+- **p. 20 / 6.3 Closed-loop walking with LIDAR feedback - extractive body cue:** This scenario requires great precision, if the state estimator drifts by even a few centimeters, the robot will hit a step edge and fall.
+- **p. 22 / 6.4.1 Running - extractive body cue:** 13), require at least 3cm of clearance between links to avoid self-collisions, and constrain the gaze of the robot's head cameras to be no more ...
+- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions.
 
-- **PDF anchors reviewed:** datasets p. 19 (6 Experiments), p. 19 (6.1 State estimation evaluation), metrics p. 19 (6.1 State estimation evaluation), p. 19 (6.1 State estimation evaluation), baselines 본문 anchor 없음, results p. 19 (6.1 State estimation evaluation), p. 19 (6.1 State estimation evaluation).
+- **Evidence anchors reviewed:** datasets p. 19 (6 Experiments), p. 19 (6.1 State estimation evaluation), metrics p. 19 (6.1 State estimation evaluation), p. 19 (6.1 State estimation evaluation), baselines 본문 anchor 없음, results p. 19 (6.1 State estimation evaluation), p. 19 (6.1 State estimation evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

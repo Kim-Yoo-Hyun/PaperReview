@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=5wxCQDtbMo; PDF retrieval source: https://openreview.net/pdf/a1396f1d1e7975177c314f3bddd7e718fc87796e.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=5wxCQDtbMo; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111955. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 1
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** This dataset contains over 29× more graphs than QM9, with approximately 1.6× and 1.9× increases in the average number of nodes and edges per graph, ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Split Random Scaffold Task µ εHOMO εLUMO ∆ε std. log ∆ε GIN-Virtual .0882 .0692 .0632 .1036 .0592 -2.87 .2371 SchNet .0532 .0275 .0265 .0428 .0263 ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** The rMD17 dataset (Christensen & Von Lilienfeld, 2020) is a revised version of the MD17 benchmark, featuring 10 small organic molecules with 100,000 conformations per ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** As shown in Table 2, GotenNet maintains its superior performance even on this larger Molecule3D dataset, achieving the lowest errors across all tasks, including µ, ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We evaluated the models on QM9, rMD17, MD22, and Molecule3D datasets.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The proposed method is evaluated against a comprehensive set of baselines using the QM9 dataset (Ruddigkeit et al., 2012; Ramakrishnan et al., 2014).
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 4.4 RMD17 DATASET Dataset.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** This dataset contains over 29× more graphs than QM9, with approximately 1.6× and 1.9× increases in the average number of nodes and edges per graph, ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Split Random Scaffold Task µ εHOMO εLUMO ∆ε std. log ∆ε GIN-Virtual .0882 .0692 .0632 .1036 .0592 -2.87 .2371 SchNet .0532 .0275 .0265 .0428 .0263 ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The rMD17 dataset (Christensen & Von Lilienfeld, 2020) is a revised version of the MD17 benchmark, featuring 10 small organic molecules with 100,000 conformations per ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 2, GotenNet maintains its superior performance even on this larger Molecule3D dataset, achieving the lowest errors across all tasks, including µ, ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We evaluated the models on QM9, rMD17, MD22, and Molecule3D datasets.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The proposed method is evaluated against a comprehensive set of baselines using the QM9 dataset (Ruddigkeit et al., 2012; Ramakrishnan et al., 2014).
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** We follow the standard split (Christensen & Von Lilienfeld, 2020) of 950 training, 50 validation, and the remaining conformations for testing.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | GotenNetB demonstrates further improvements, achieving best performance on eleven targets and significantly improving aggregated metrics, reducing standard MAE by over 16% and log MAE ... | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | The largest variant GotenNetL achieves state-of-the-art performance across all metrics, although the relative improvement decreases compared to GotenNetB, which suggests that dataset size may ... | p. 8 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 1
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** This dataset contains over 29× more graphs than QM9, with approximately 1.6× and 1.9× increases in the average number of nodes and edges per graph, ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Split Random Scaffold Task µ εHOMO εLUMO ∆ε std. log ∆ε GIN-Virtual .0882 .0692 .0632 .1036 .0592 -2.87 .2371 SchNet .0532 .0275 .0265 .0428 .0263 ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** The rMD17 dataset (Christensen & Von Lilienfeld, 2020) is a revised version of the MD17 benchmark, featuring 10 small organic molecules with 100,000 conformations per ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** As shown in Table 2, GotenNet maintains its superior performance even on this larger Molecule3D dataset, achieving the lowest errors across all tasks, including µ, ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We evaluated the models on QM9, rMD17, MD22, and Molecule3D datasets.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** The proposed method is evaluated against a comprehensive set of baselines using the QM9 dataset (Ruddigkeit et al., 2012; Ramakrishnan et al., 2014).
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 4.4 RMD17 DATASET Dataset.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** This dataset contains over 29× more graphs than QM9, with approximately 1.6× and 1.9× increases in the average number of nodes and edges per graph, ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Split Random Scaffold Task µ εHOMO εLUMO ∆ε std. log ∆ε GIN-Virtual .0882 .0692 .0632 .1036 .0592 -2.87 .2371 SchNet .0532 .0275 .0265 .0428 .0263 ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The rMD17 dataset (Christensen & Von Lilienfeld, 2020) is a revised version of the MD17 benchmark, featuring 10 small organic molecules with 100,000 conformations per ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 2, GotenNet maintains its superior performance even on this larger Molecule3D dataset, achieving the lowest errors across all tasks, including µ, ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We evaluated the models on QM9, rMD17, MD22, and Molecule3D datasets.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The proposed method is evaluated against a comprehensive set of baselines using the QM9 dataset (Ruddigkeit et al., 2012; Ramakrishnan et al., 2014).
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** We follow the standard split (Christensen & Von Lilienfeld, 2020) of 950 training, 50 validation, and the remaining conformations for testing.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison of GotenNet and baseline models on the QM9 dataset. The x-axis shows the logarithmic MAE across all targets, while the y-axis shows ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Architecture of GotenNet. The overall framework (a) includes an embedding, an interaction module, and a decoder; (b) shows the geometry-aware tensor attention (GATA); ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Performance comparisons on QM9 dataset. † denotes using different data partitions. Task α ∆ε εHOMO εLUMO µ Cν
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Performance comparisons on Molecule3D
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3: Comparison of training latency of the models with respect to node count on the Molecule3D dataset. 4.2 MOLECULE3D DATASET Dataset. We further evaluate ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Comprehensive comparison of various molecular modeling methods on MD22 dataset. The results are reported in MAE of energy (kcal/mol) and forces (kcal/mol/Å) denoted ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 4: The table presents MAE for energy (kcal/mol) and forces (kcal/mol/Å) on the rMD17 dataset. Molecule NequIP ACE UNiTE Allegro BOTNet MACE
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study on QM9 dataset. # L Lmax SE SEA GE HTR std
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of GotenNet and baseline models on the QM9 dataset. The x-axis shows the logarithmic MAE across all targets, while the y-axis shows ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Architecture of GotenNet. The overall framework (a) includes an embedding, an interaction module, and a decoder; (b) shows the geometry-aware tensor attention (GATA); ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Performance comparisons on QM9 dataset. † denotes using different data partitions. Task α ∆ε εHOMO εLUMO µ Cν
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Performance comparisons on Molecule3D
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Comparison of training latency of the models with respect to node count on the Molecule3D dataset. 4.2 MOLECULE3D DATASET Dataset. We further evaluate ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Comprehensive comparison of various molecular modeling methods on MD22 dataset. The results are reported in MAE of energy (kcal/mol) and forces (kcal/mol/Å) denoted ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 4: The table presents MAE for energy (kcal/mol) and forces (kcal/mol/Å) on the rMD17 dataset. Molecule NequIP ACE UNiTE Allegro BOTNet MACE
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on QM9 dataset. # L Lmax SE SEA GE HTR std
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This dataset contains over 29× more graphs than QM9, with approximately 1.6× and 1.9× increases in the average number of nodes and edges per ... | embodiment, simulator version and control stack | p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
 | Task/environment | Split Random Scaffold Task µ εHOMO εLUMO ∆ε std. log ∆ε GIN-Virtual .0882 .0692 .0632 .1036 .0592 -2.87 .2371 SchNet .0532 .0275 .0265 .0428 ... | reset, timeout, object/scene variation | p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS) |
@@ -123,7 +123,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 1
 | Primary metric/result | The largest variant GotenNetL achieves state-of-the-art performance across all metrics, although the relative improvement decreases compared to GotenNetB, which suggests that dataset size may ... | numeric claim only at cited anchor | p. 8 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** The full model with 12 layers (row 8) achieves the best performance, with the lowest std MAE of 0.56 and log MAE of -6.34.
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The full model with 12 layers (row 8) achieves the best performance, with the lowest std MAE of 0.56 and log MAE of -6.34.
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 1
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** Future work could further enhance its scalability to larger molecular systems and explore applications in molecular dynamics and materials science.
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Figure 5: Mean absolute error of the molecules on rMD17 dataset for energy and forces. share the fundamental requirement of processing geometric relationships while preserving ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Architecture of GotenNet. The overall framework (a) includes an embedding, an interaction module, and a decoder; (b) shows the geometry-aware tensor attention (GATA); ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** These results highlight the robustness and versatility of GotenNet in handling diverse molecular structures, establishing it as a leading model in both energy and force ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** The results are averaged over five predefined splits to ensure robust evaluation.
+- **p. 10 / 5 CONCLUSION - extractive body cue:** Future work could further enhance its scalability to larger molecular systems and explore applications in molecular dynamics and materials science.
+- **p. 25 / Figure/Table caption - extractive body cue:** Figure 5: Mean absolute error of the molecules on rMD17 dataset for energy and forces. share the fundamental requirement of processing geometric relationships while preserving ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Architecture of GotenNet. The overall framework (a) includes an embedding, an interaction module, and a decoder; (b) shows the geometry-aware tensor attention (GATA); ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** These results highlight the robustness and versatility of GotenNet in handling diverse molecular structures, establishing it as a leading model in both energy and force ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The results are averaged over five predefined splits to ensure robust evaluation.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

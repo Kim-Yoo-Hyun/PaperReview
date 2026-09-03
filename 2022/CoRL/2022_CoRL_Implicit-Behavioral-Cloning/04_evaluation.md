@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/florence22a.html; PDF retrieval source: https://arxiv.org/pdf/2109.00137. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/florence22a.html; PDF retrieval source: https://arxiv.org/pdf/2109.00137. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ... | p. 5 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 6. Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per ... | p. 6 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). | embodiment, simulator version and control stack | p. 6 (1 Introduction), p. 7 (1 Introduction) |
 | Task/environment | Results using our hardware configuration (a, see Appendix for full description) on real-world visual manipulation tasks, including (b) multi-modal targeted block pushing, (c) precise ... | reset, timeout, object/scene variation | p. 7 (1 Introduction), p. 4 (1 Introduction) |
@@ -149,7 +149,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 |---|---|
 | Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). | p. 6 (1 Introduction) |
 | 1), and at inference time (given o) performs implicit regression by optimizing for the optimal action ˆa via sampling or gradient descent [11, 12]. | p. 1 (1 Introduction) |
-| Video and code are expected to be released soon. arXiv:2109.00137v1 [cs.RO] 1 Sep 2021 | p. 1 (1 Introduction) |
 | Explicit ReLU-MLP trained as MDN 1:512:512:10 gaussians 5k steps shown density is: Implicit ReLU-MLP trained as EBM 2:512:512:1 5k steps shown density is: normalized ... | p. 3 (1 Introduction) |
 | Surprisingly, we find that our implementations of 4 | p. 4 (1 Introduction) |
 | Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. | p. 5 (1 Introduction) |
@@ -173,7 +172,16 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 3 / 1 Introduction - extractive body cue:** Once the training data is uncorrelated (i.e. random noise) and without regularization (Fig.
 - **p. 3 / 1 Introduction - extractive body cue:** (a,d) Single discontinuity between constant values; (b,e) piecewise continuous sections with differing dy dx, (c,f) random Gaussian noise, for unregularized models.
 
-- **PDF anchors reviewed:** datasets p. 6 (1 Introduction), p. 7 (1 Introduction), p. 4 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (1 Introduction), metrics p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 1 (Abstract), baselines p. 5 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (1 Introduction), p. 4 (1 Introduction), p. 5 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (1 Introduction).
+- **Evidence anchors reviewed:** datasets p. 6 (1 Introduction), p. 7 (1 Introduction), p. 4 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (1 Introduction), metrics p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 1 (Abstract), baselines p. 5 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (1 Introduction), p. 4 (1 Introduction), p. 5 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (1 Introduction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+- **Metric evidence:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+- **Baseline/ablation evidence:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
+- **Failure/negative evidence:** The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task. (p. 5, 1 Introduction).

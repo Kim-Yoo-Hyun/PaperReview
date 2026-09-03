@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fzmittHfq3; PDF retrieval source: https://openreview.net/pdf/d6aae457099a5d9e50bba1a6bbc48d8756a15c91.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fzmittHfq3; PDF retrieval source: https://openreview.net/pdf/d6aae457099a5d9e50bba1a6bbc48d8756a15c91.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3, FALCON achieves the highest average success rate of 70.0% across all nine task suites, outperforming the advanced method SpatialVLA [31] (44.4%) by 25.6%. | p. 8 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves SOTA performance in both the ABC→D and ABCD→D settings, significantly outperforming all 7 | p. 7 (4 Experiments) |
@@ -53,11 +53,11 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | All models are initially pre-trained on a mixture of the Open X-Embodiment dataset [29] and then fine-tuned with multi-task real-robot data. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 10 (4 Experiments) |
 | Task/environment | To evaluate the modality transferability of FALCON, we conduct extensive experiments on both the CALVIN benchmark and real-world tasks to demonstrate the benefits of ... | reset, timeout, object/scene variation | p. 10 (4 Experiments), p. 9 (4 Experiments) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9
 - **p. 9 / 4 Experiments - extractive body cue:** In contrast, our method exhibits strong robustness to scale variations, avoiding these issues and achieving the highest success rates in both scenarios.
 - **p. 10 / 4 Experiments - extractive body cue:** 4, this approach results in significant performance degradation compared to the standard FALCON paradigm.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 17 (C Implementation Details), p. 7 (4 Experiments), metrics p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), baselines p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), results p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 17 (C Implementation Details), p. 7 (4 Experiments), metrics p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), baselines p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), results p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (27 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance. (p. 8, 4 Experiments).
+- **Metric evidence:** FALCON achieves an overall success rate of 62.9%, surpassing all baseline methods. (p. 8, 4 Experiments).
+- **Baseline/ablation evidence:** 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance. (p. 8, 4 Experiments).
+- **Failure/negative evidence:** For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure. (p. 9, 4 Experiments).

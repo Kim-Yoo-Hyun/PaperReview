@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02310; PDF retrieval source: https://arxiv.org/pdf/2503.02310. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02310; PDF retrieval source: https://arxiv.org/pdf/2503.02310. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Method Body Digest
 
-- **p. 3 / III. METHOD - extractive PDF cue:** Parallel Decoding for VLA Models To meet the demands of a more efficient decoding algorithm, we propose parallel decoding for VLA models integrated with action ...
-- **p. 3 / III. METHOD - extractive PDF cue:** LLaVA mainly consists of a large language model LLM and a vision encoder fencoder.
-- **p. 4 / III. METHOD - extractive PDF cue:** We first randomly initialize an action token sequence of equal length to the decoding horizon n.
-- **p. 4 / III. METHOD - extractive PDF cue:** When n is less than the total action dimensions l, it decodes n action token in one iteration and then proceeds to the next n ...
-- **p. 4 / III. METHOD - extractive PDF cue:** Considering Equation 3, the system of nonlinear equation system can be formulated as:             ...
-- **p. 4 / III. METHOD - extractive PDF cue:** To break the sequential dependencies in the conventional VLA model, we replace the above causal attention mechanism with a bidirectional attention mechanism, which reformulate the ...
-- **p. 3 / III. METHOD - extractive PDF cue:** At the current time step t, given chunk size m, the predicted actions will be extended into an action sequences A⊔= [at, at+1, at+2, ..., ...
-- **p. 3 / III. METHOD - extractive PDF cue:** It takes two images as input, a static image Istatic and a gripper image Igripper, to get a comprehensive observation.
+- **p. 3 / III. METHOD - extractive body cue:** Parallel Decoding for VLA Models To meet the demands of a more efficient decoding algorithm, we propose parallel decoding for VLA models integrated with action ...
+- **p. 3 / III. METHOD - extractive body cue:** LLaVA mainly consists of a large language model LLM and a vision encoder fencoder.
+- **p. 4 / III. METHOD - extractive body cue:** We first randomly initialize an action token sequence of equal length to the decoding horizon n.
+- **p. 4 / III. METHOD - extractive body cue:** When n is less than the total action dimensions l, it decodes n action token in one iteration and then proceeds to the next n ...
+- **p. 4 / III. METHOD - extractive body cue:** Considering Equation 3, the system of nonlinear equation system can be formulated as:             ...
+- **p. 4 / III. METHOD - extractive body cue:** To break the sequential dependencies in the conventional VLA model, we replace the above causal attention mechanism with a bidirectional attention mechanism, which reformulate the ...
+- **p. 3 / III. METHOD - extractive body cue:** At the current time step t, given chunk size m, the predicted actions will be extended into an action sequences A⊔= [at, at+1, at+2, ..., ...
+- **p. 3 / III. METHOD - extractive body cue:** It takes two images as input, a static image Istatic and a gripper image Igripper, to get a comprehensive observation.
 
 ## Design Rationale
 
-- **p. 3 / III. METHOD - extractive PDF cue:** In this section, we introduce the details of our method PD-VLA.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our primary contributions include: • We propose the first parallel decoding framework for VLA models integrated with action chunking.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Accordingly, our method enables friendly deployment, compared with existing methods, i.e., it achieves training-free acceleration without redesign and modification of models (see Table I).
+- **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce the details of our method PD-VLA.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contributions include: • We propose the first parallel decoding framework for VLA models integrated with action chunking.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Accordingly, our method enables friendly deployment, compared with existing methods, i.e., it achieves training-free acceleration without redesign and modification of models (see Table I).
 
 ## Source Evidence Cues
 
-- **p. 3 / III. METHOD - extractive PDF cue:** Parallel Decoding for VLA Models To meet the demands of a more efficient decoding algorithm, we propose parallel decoding for VLA models integrated with action ...
-- **p. 3 / III. METHOD - extractive PDF cue:** LLaVA mainly consists of a large language model LLM and a vision encoder fencoder.
-- **p. 4 / III. METHOD - extractive PDF cue:** We first randomly initialize an action token sequence of equal length to the decoding horizon n.
-- **p. 4 / III. METHOD - extractive PDF cue:** When n is less than the total action dimensions l, it decodes n action token in one iteration and then proceeds to the next n ...
+- **p. 3 / III. METHOD - extractive body cue:** Parallel Decoding for VLA Models To meet the demands of a more efficient decoding algorithm, we propose parallel decoding for VLA models integrated with action ...
+- **p. 3 / III. METHOD - extractive body cue:** LLaVA mainly consists of a large language model LLM and a vision encoder fencoder.
+- **p. 4 / III. METHOD - extractive body cue:** We first randomly initialize an action token sequence of equal length to the decoding horizon n.
+- **p. 4 / III. METHOD - extractive body cue:** When n is less than the total action dimensions l, it decodes n action token in one iteration and then proceeds to the next n ...
 - **Detected method headings:** III. METHOD (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Parallel Decoding for VLA Models To meet the demands of a more efficient decoding algorithm, we propose parallel decoding for VLA models ... | p. 3 (III. METHOD), p. 3 (III. METHOD) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | LLaVA mainly consists of a large language model LLM and a vision encoder fencoder. | p. 3 (III. METHOD), p. 4 (III. METHOD) |
@@ -45,9 +45,9 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Objective / Update Rule
 
-- **p. 4 / III. METHOD - extractive PDF cue:** Considering Equation 3, the system of nonlinear equation system can be formulated as:             ...
-- **p. 4 / III. METHOD - extractive PDF cue:** To break the sequential dependencies in the conventional VLA model, we replace the above causal attention mechanism with a bidirectional attention mechanism, which reformulate the ...
-- **p. 3 / III. METHOD - extractive PDF cue:** At the current time step t, given chunk size m, the predicted actions will be extended into an action sequences A⊔= [at, at+1, at+2, ..., ...
+- **p. 4 / III. METHOD - extractive body cue:** Considering Equation 3, the system of nonlinear equation system can be formulated as:             ...
+- **p. 4 / III. METHOD - extractive body cue:** To break the sequential dependencies in the conventional VLA model, we replace the above causal attention mechanism with a bidirectional attention mechanism, which reformulate the ...
+- **p. 3 / III. METHOD - extractive body cue:** At the current time step t, given chunk size m, the predicted actions will be extended into an action sequences A⊔= [at, at+1, at+2, ..., ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,13 +63,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Observation–State–Action Interface
 
-- **p. 3 / III. METHOD - extractive PDF cue:** It takes two images as input, a static image Istatic and a gripper image Igripper, to get a comprehensive observation.
-- **p. 3 / III. METHOD - extractive PDF cue:** Along with the input images, the text instructions and proprioceptive input are first concatenated into a unified instruction S, which is then tokenized into tokens ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** These end-to-end architectures, which are trained on large-scale robotic datasets [10], [11], integrate visual perception and language understanding to directly generate executable actions.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Recent advancements in Vision-Language Models (VLMs) [2], [3] have showcased impressive multimodal understanding capabilities, inspiring the development of Vision-Language-Action (VLA) models [4], [5], [6], [7], ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our primary contributions include: • We propose the first parallel decoding framework for VLA models integrated with action chunking.
-- **p. 4 / III. METHOD - extractive PDF cue:** (6) This enables updates of all action tokens in every single iteration.
-- **p. 4 / III. METHOD - extractive PDF cue:** We first randomly initialize an action token sequence of equal length to the decoding horizon n.
+- **p. 3 / III. METHOD - extractive body cue:** It takes two images as input, a static image Istatic and a gripper image Igripper, to get a comprehensive observation.
+- **p. 3 / III. METHOD - extractive body cue:** Along with the input images, the text instructions and proprioceptive input are first concatenated into a unified instruction S, which is then tokenized into tokens ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** These end-to-end architectures, which are trained on large-scale robotic datasets [10], [11], integrate visual perception and language understanding to directly generate executable actions.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Recent advancements in Vision-Language Models (VLMs) [2], [3] have showcased impressive multimodal understanding capabilities, inspiring the development of Vision-Language-Action (VLA) models [4], [5], [6], [7], ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contributions include: • We propose the first parallel decoding framework for VLA models integrated with action chunking.
+- **p. 4 / III. METHOD - extractive body cue:** (6) This enables updates of all action tokens in every single iteration.
+- **p. 4 / III. METHOD - extractive body cue:** We first randomly initialize an action token sequence of equal length to the decoding horizon n.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,9 +84,9 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Training vs Inference
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** However, the decoding speed is still limited, resulting in a longer single inference time.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Parallel decoding substantially increases the average decoding speed by 1.28×, thus the single inference time is reduced and satisfies the demand of high-frequency inference.
-- **p. 3 / III. METHOD - extractive PDF cue:** However, extended action sequences consume longer single inference time, which impacts the continuity and effectiveness of the actions.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, the decoding speed is still limited, resulting in a longer single inference time.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Parallel decoding substantially increases the average decoding speed by 1.28×, thus the single inference time is reduced and satisfies the demand of high-frequency inference.
+- **p. 3 / III. METHOD - extractive body cue:** However, extended action sequences consume longer single inference time, which impacts the continuity and effectiveness of the actions.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -106,13 +106,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Failure and Ablation Link
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Ablation Study Table III presents a detailed summary of the ablation studies performed on two key components of our PD-VLA.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Is the coordination among different components effective?
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** 1/5 2/5 3/5 4/5 5/5 ABCD→D MCIL [35] RGB ALL 37.3 2.7 0.2 0.0 0.0 0.40 HULC [36] RGB ALL 89.2 70.1 54.8 42.0 33.5 ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Second, the ablation study of parallel decoding reveals the inefficiency in the inference process.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** In addition, we replace PD with other acceleration methods.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Notably, our PD-VLA does not incur extra training costs.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** All tasks include distractors to validate the robustness of the model.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Ablation Study Table III presents a detailed summary of the ablation studies performed on two key components of our PD-VLA.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Is the coordination among different components effective?
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** 1/5 2/5 3/5 4/5 5/5 ABCD→D MCIL [35] RGB ALL 37.3 2.7 0.2 0.0 0.0 0.40 HULC [36] RGB ALL 89.2 70.1 54.8 42.0 33.5 ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Second, the ablation study of parallel decoding reveals the inefficiency in the inference process.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** In addition, we replace PD with other acceleration methods.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Notably, our PD-VLA does not incur extra training costs.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** All tasks include distractors to validate the robustness of the model.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,7 +126,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), objective p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), temporal p. 3 (III. METHOD), p. 3 (III. METHOD), p. 6 (IV. EXPERIMENTS), p. 1 (I. INTRODUCTION), p. 4 (III. METHOD), p. 4 (III. METHOD).
+- **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), objective p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), temporal p. 3 (III. METHOD), p. 3 (III. METHOD), p. 6 (IV. EXPERIMENTS), p. 1 (I. INTRODUCTION), p. 4 (III. METHOD), p. 4 (III. METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

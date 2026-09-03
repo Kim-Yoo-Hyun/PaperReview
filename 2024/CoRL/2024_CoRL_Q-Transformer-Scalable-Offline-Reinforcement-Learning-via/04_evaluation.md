@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.10150; PDF retrieval source: https://arxiv.org/pdf/2309.10150. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.10150; PDF retrieval source: https://arxiv.org/pdf/2309.10150. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines (Decision Transformer, IQL), exceeding the average ... | p. 7 (5 Experiments) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: Left: Ablations: changing to softmax conservatism decreases performance. Removing MC returns or conservatism completely collapse performance. Top Right: The n-step return ver- ... | p. 8 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To evaluate how well Q-Transformer can perform when learning from real-world offline datasets while effectively incorporating autonomously collected failed episodes, we evaluate Q-Transformer on ... | embodiment, simulator version and control stack | p. 6 (5 Experiments), p. 8 (5 Experiments) |
 | Task/environment | This experiment includes all of the data collected with 13 robots and comprises of the demonstrations used by RT-1 [1] and successful autonomous episodes, ... | reset, timeout, object/scene variation | p. 8 (5 Experiments), p. 6 (5 Experiments) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 - **p. 7 / 5 Experiments - extractive body cue:** Decision Transformer is trained on both demonstrations and sub-optimal data, but is not able to leverage the noisy data for policy improvement and does not ...
 - **p. 7 / 5 Experiments - extractive body cue:** The demonstrations are replayed with noise to generate more trajectories (∼92% of the data).
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (Figure/Table caption), p. 6 (5 Experiments), p. 19 (Figure/Table caption), baselines p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 19 (Figure/Table caption), results p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 18 (Figure/Table caption), p. 6 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (Figure/Table caption), p. 6 (5 Experiments), p. 19 (Figure/Table caption), baselines p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 19 (Figure/Table caption), results p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 18 (Figure/Table caption), p. 6 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ... (p. 8, 5 Experiments).
+- **Metric evidence:** Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines (Decision Transformer, IQL), exceeding the average performance of the best-performing prior method ... (p. 7, 5 Experiments).
+- **Baseline/ablation evidence:** To ensure a fair comparison between Q-Transformer and imitation learning methods, we discard all successful episodes in the autonomously collected data when we train our method, to ensure that by ... (p. 6, 5 Experiments).
+- **Failure/negative evidence:** This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 ## Method Body Digest
 
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** For color supervision, we use a weighted combination of L1 and SSIM [16], while depth loss is L1 between rendered and ground-truth depth.
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** The merged geometry is then used to initialize Gaussian centers in the global map, which are subsequently refined using the color reconstruction loss Lcolor as ...
-- **p. 3 / 3.1. Per-pixel uncertainty rendering - extractive PDF cue:** Even when the SH color correctly models the mean, view-dependent appearance, the actual color observations at a splat can vary across viewpoints.
-- **p. 3 / 3. Method - extractive PDF cue:** However, pose estimation through photometric optimization can suffer from unreliable observations in low-texture regions, reflective surfaces, and areas near depth discontinuities, which can destabilize this ...
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** Therefore, optimizing a pure photometric loss for pose refinement can lead to unstable gradients.
-- **p. 5 / 3.2. Mapping - extractive PDF cue:** Gradients from both color and depth residuals update per-splat variance, so the predicted variance reflects measurement reliability and avoids overconfidence in reflective, transparent, or glossy ...
+- **p. 4 / 3.2. Mapping - extractive body cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
+- **p. 4 / 3.2. Mapping - extractive body cue:** For color supervision, we use a weighted combination of L1 and SSIM [16], while depth loss is L1 between rendered and ground-truth depth.
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** The merged geometry is then used to initialize Gaussian centers in the global map, which are subsequently refined using the color reconstruction loss Lcolor as ...
+- **p. 3 / 3.1. Per-pixel uncertainty rendering - extractive body cue:** Even when the SH color correctly models the mean, view-dependent appearance, the actual color observations at a splat can vary across viewpoints.
+- **p. 3 / 3. Method - extractive body cue:** However, pose estimation through photometric optimization can suffer from unreliable observations in low-texture regions, reflective surfaces, and areas near depth discontinuities, which can destabilize this ...
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Therefore, optimizing a pure photometric loss for pose refinement can lead to unstable gradients.
+- **p. 5 / 3.2. Mapping - extractive body cue:** Gradients from both color and depth residuals update per-splat variance, so the predicted variance reflects measurement reliability and avoids overconfidence in reflective, transparent, or glossy ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions can be shown as follows: • We introduce VarSplat, an RGB-D 3DGS-SLAM system that learns per-splat appearance variance σ2 to render ...
-- **p. 3 / 3. Method - extractive PDF cue:** To address these issues, we introduce a novel uncertainty quantification pipeline based on per-pixel uncertainty map rendering.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions can be shown as follows: • We introduce VarSplat, an RGB-D 3DGS-SLAM system that learns per-splat appearance variance σ2 to render ...
+- **p. 3 / 3. Method - extractive body cue:** To address these issues, we introduce a novel uncertainty quantification pipeline based on per-pixel uncertainty map rendering.
+- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** For color supervision, we use a weighted combination of L1 and SSIM [16], while depth loss is L1 between rendered and ground-truth depth.
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** The merged geometry is then used to initialize Gaussian centers in the global map, which are subsequently refined using the color reconstruction loss Lcolor as ...
-- **p. 3 / 3.1. Per-pixel uncertainty rendering - extractive PDF cue:** Even when the SH color correctly models the mean, view-dependent appearance, the actual color observations at a splat can vary across viewpoints.
-- **p. 3 / 3. Method - extractive PDF cue:** However, pose estimation through photometric optimization can suffer from unreliable observations in low-texture regions, reflective surfaces, and areas near depth discontinuities, which can destabilize this ...
+- **p. 4 / 3.2. Mapping - extractive body cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
+- **p. 4 / 3.2. Mapping - extractive body cue:** For color supervision, we use a weighted combination of L1 and SSIM [16], while depth loss is L1 between rendered and ground-truth depth.
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** The merged geometry is then used to initialize Gaussian centers in the global map, which are subsequently refined using the color reconstruction loss Lcolor as ...
+- **p. 3 / 3.1. Per-pixel uncertainty rendering - extractive body cue:** Even when the SH color correctly models the mean, view-dependent appearance, the actual color observations at a splat can vary across viewpoints.
+- **p. 3 / 3. Method - extractive body cue:** However, pose estimation through photometric optimization can suffer from unreliable observations in low-texture regions, reflective surfaces, and areas near depth discontinuities, which can destabilize this ...
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar. | p. 4 (3.2. Mapping), p. 4 (3.2. Mapping) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | For color supervision, we use a weighted combination of L1 and SSIM [16], while depth loss is L1 between rendered and ground-truth ... | p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation) |
@@ -47,12 +47,12 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** Therefore, optimizing a pure photometric loss for pose refinement can lead to unstable gradients.
-- **p. 5 / 3.2. Mapping - extractive PDF cue:** Gradients from both color and depth residuals update per-splat variance, so the predicted variance reflects measurement reliability and avoids overconfidence in reflective, transparent, or glossy ...
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** Similar to [45], we also add regularization loss to control Gaussian scales: Lcolor = (1-λSSIM)∥ˆI-I∥1+λSSIM(1-SSIM(ˆI, I)) (11) Ldepth = ∥ˆD -D∥1, Lreg = ∥ˆs -s∥1 ...
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
-- **p. 3 / 3.1. Per-pixel uncertainty rendering - extractive PDF cue:** Using σ2 makes it clear that we optimize a true statistical variance rather than a free scale weight.
-- **p. 3 / 3. Method - extractive PDF cue:** Unlike previous methods relying on pretrained predictors [19, 50], VarSplat learns this variance parameter from scratch, jointly optimizing them with appearance and geometry during mapping.
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Therefore, optimizing a pure photometric loss for pose refinement can lead to unstable gradients.
+- **p. 5 / 3.2. Mapping - extractive body cue:** Gradients from both color and depth residuals update per-splat variance, so the predicted variance reflects measurement reliability and avoids overconfidence in reflective, transparent, or glossy ...
+- **p. 4 / 3.2. Mapping - extractive body cue:** Similar to [45], we also add regularization loss to control Gaussian scales: Lcolor = (1-λSSIM)∥ˆI-I∥1+λSSIM(1-SSIM(ˆI, I)) (11) Ldepth = ∥ˆD -D∥1, Lreg = ∥ˆs -s∥1 ...
+- **p. 4 / 3.2. Mapping - extractive body cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
+- **p. 3 / 3.1. Per-pixel uncertainty rendering - extractive body cue:** Using σ2 makes it clear that we optimize a true statistical variance rather than a free scale weight.
+- **p. 3 / 3. Method - extractive body cue:** Unlike previous methods relying on pretrained predictors [19, 50], VarSplat learns this variance parameter from scratch, jointly optimizing them with appearance and geometry during mapping.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation), p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 3 (3. Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -68,13 +68,13 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3. Method - extractive PDF cue:** VarSplat is an RGB-D SLAM approach that jointly estimates camera poses and incrementally updates 3D Gaussian Splatting (3DGS) map from input frames, following the general ...
-- **p. 3 / 3. Method - extractive PDF cue:** However, pose estimation through photometric optimization can suffer from unreliable observations in low-texture regions, reflective surfaces, and areas near depth discontinuities, which can destabilize this ...
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** Given the current estimate Tj and keyframe color Ij, depth Dj images, we differentiably render the corresponding view from the current submap to obtain the ...
-- **p. 4 / 3.2. Mapping - extractive PDF cue:** After sufficient observations, submap Gaussian parameters are jointly optimized to better align appearance and geometry with their associated keyframes.
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** Unlike depth maps, RGB images are more susceptible to viewpoint changes, low texture, and occlusions.
-- **p. 2 / 1. Introduction - extractive PDF cue:** The system is trained end-to-end online, jointly optimizing poses, Gaussian parameters, and σ2 as the map grows.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Uniform photometric weighting leaves pose estimation vulnerable in lowtexture regions, around depth discontinuities, and on reflective surfaces.
+- **p. 3 / 3. Method - extractive body cue:** VarSplat is an RGB-D SLAM approach that jointly estimates camera poses and incrementally updates 3D Gaussian Splatting (3DGS) map from input frames, following the general ...
+- **p. 3 / 3. Method - extractive body cue:** However, pose estimation through photometric optimization can suffer from unreliable observations in low-texture regions, reflective surfaces, and areas near depth discontinuities, which can destabilize this ...
+- **p. 4 / 3.2. Mapping - extractive body cue:** Given the current estimate Tj and keyframe color Ij, depth Dj images, we differentiably render the corresponding view from the current submap to obtain the ...
+- **p. 4 / 3.2. Mapping - extractive body cue:** After sufficient observations, submap Gaussian parameters are jointly optimized to better align appearance and geometry with their associated keyframes.
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Unlike depth maps, RGB images are more susceptible to viewpoint changes, low texture, and occlusions.
+- **p. 2 / 1. Introduction - extractive body cue:** The system is trained end-to-end online, jointly optimizing poses, Gaussian parameters, and σ2 as the map grows.
+- **p. 2 / 1. Introduction - extractive body cue:** Uniform photometric weighting leaves pose estimation vulnerable in lowtexture regions, around depth discontinuities, and on reflective surfaces.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -89,7 +89,7 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 ## Training vs Inference
 
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive PDF cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
+- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 ## Failure and Ablation Link
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Uncertainty ablation on ScanNet (scene0181). Without uncertainty, tracking jitters, loop detection has long-range drift, and registration ghosts submaps. With VarSplat enabled, the trajectory ...
-- **p. 7 / 4.2. Quantitative Evaluation - extractive PDF cue:** Effect of uncertainty on pose estimation.
-- **p. 6 / 4.2. Quantitative Evaluation - extractive PDF cue:** 90.4), indicating tighter alignment without surface inflation.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Moreover, we conduct ablation studies of the proposed uncertainty model, measuring its impact on tracking, registration, and loop detection.
-- **p. 7 / 4.3. Ablation studies - extractive PDF cue:** We conduct all ablation studies on six ScanNet scenes.
-- **p. 8 / 4.3. Ablation studies - extractive PDF cue:** Per-pixel uncertainty with vs. without depth on TUMRGBD (fr1/desk2).
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitations and future works are provided in Supplementary Material.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Uncertainty ablation on ScanNet (scene0181). Without uncertainty, tracking jitters, loop detection has long-range drift, and registration ghosts submaps. With VarSplat enabled, the trajectory ...
+- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** Effect of uncertainty on pose estimation.
+- **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** 90.4), indicating tighter alignment without surface inflation.
+- **p. 6 / 4. Experiments - extractive body cue:** Moreover, we conduct ablation studies of the proposed uncertainty model, measuring its impact on tracking, registration, and loop detection.
+- **p. 7 / 4.3. Ablation studies - extractive body cue:** We conduct all ablation studies on six ScanNet scenes.
+- **p. 8 / 4.3. Ablation studies - extractive body cue:** Per-pixel uncertainty with vs. without depth on TUMRGBD (fr1/desk2).
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future works are provided in Supplementary Material.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation), p. 5 (3.3. Downstream Pose Estimation), p. 3 (3.1. Per-pixel uncertainty rendering), p. 3 (3. Method), objective p. 5 (3.3. Downstream Pose Estimation), p. 5 (3.2. Mapping), p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 3 (3.1. Per-pixel uncertainty rendering), p. 3 (3. Method), temporal p. 7 (4.2. Quantitative Evaluation), p. 2 (1. Introduction), p. 3 (3. Method), p. 4 (3.1. Per-pixel uncertainty rendering), p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation), p. 5 (3.3. Downstream Pose Estimation), p. 3 (3.1. Per-pixel uncertainty rendering), p. 3 (3. Method), objective p. 5 (3.3. Downstream Pose Estimation), p. 5 (3.2. Mapping), p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 3 (3.1. Per-pixel uncertainty rendering), p. 3 (3. Method), temporal p. 7 (4.2. Quantitative Evaluation), p. 2 (1. Introduction), p. 3 (3. Method), p. 4 (3.1. Per-pixel uncertainty rendering), p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

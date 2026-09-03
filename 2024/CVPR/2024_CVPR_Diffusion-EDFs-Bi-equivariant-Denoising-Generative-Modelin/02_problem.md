@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (2.1. SO(3) Group Representation 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, these methods require numerous demonstrations and do not generalize well on novel task configurations that are not provided during training. | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | Due to the bi-equivariance, the trained policy can be effectively generalized to previously unseen configurations in the observation of the scene and ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Due to the bi-equivariance, the trained policy can be effectively generalized to previously unseen configurations in the observation of the scene and ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Due, bi-equivariance, trained, policy, effectively, generalized, previously, unseen, configurations, observation | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
 | Output / action | end-effector, pose, sampled, policy, denoising, learned, bi-equivariant, score | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
 | Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | object geometry/contact state; body terms: Due, bi-equivariance, trained, policy, effectively, generalized, previously, unseen, configurations, observation | p. 2 (2.1. SO(3) Group Representation Theory), p. 3 (3.1. Problem Formulation), p. 2 (2.1. SO(3) Group Representation Theory) |
 | Decision / output variable | grasp/pose/force/trajectory; body terms: enables, trained, end-to-end, only, human, demonstrations, without, requiring | p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.5. Bi-equivariant Score Model) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (2.1. SO(3) Group Representation 
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (3.4. Score Matching Objectives), p. 4 (3.4. Score Matching Objectives), p. 5 (4.2. Architecture of Equivariant Descriptor Fields) |
 | Success / guarantee | completion, contact success and robustness | p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (2.1. SO(3) Group Representation 
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi-equivariant Score Model), p. 5 (4.2. Architecture of Equivariant Descriptor Fields)): This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations.
+PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi-equivariant Score Model), p. 5 (4.2. Architecture of Equivariant Descriptor Fields)): This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations.
 
 - **p. 1 / 1. Introduction - extractive body cue:** A) and locality of robotic manipulation tasks in our method design.
 - **p. 4 / 3.5. Bi-equivariant Score Model - extractive body cue:** (12), we propose the following models: sν;t(g/Os, Oe) = Z R3d3x ρν;t(x/Oe) esν;t(g, x/Os, Oe) (24) sω;t(g/Os, Oe) = Z R3d3x ρω;t(x/Oe) esω;t(g, x/Os, Oe) ...
@@ -67,12 +67,21 @@ PDF contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (
 
 ## Position in the Robotics Loop
 
-manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (2.1. SO(3) Group Representation Theory), p. 3 (3.1. Problem Formulation), p. 2 (2.1. SO(3) Group Representation Theory), p. 5 (4. Implementation). The downstream handoff is claimed only when the body describes it.
+manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (2.1. SO(3) Group Representation Theory), p. 3 (3.1. Problem Formulation), p. 2 (2.1. SO(3) Group Representation Theory), p. 5 (4. Implementation). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (2.1. SO(3) Group Representation Theory), p. 2 (2.1. SO(3) Group Representation Theory), interface p. 2 (2.1. SO(3) Group Representation Theory), p. 3 (3.1. Problem Formulation), p. 2 (2.1. SO(3) Group Representation Theory), p. 5 (4. Implementation), objective p. 4 (3.4. Score Matching Objectives), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 4 (3.4. Score Matching Objectives).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (2.1. SO(3) Group Representation Theory), p. 2 (2.1. SO(3) Group Representation Theory), interface p. 2 (2.1. SO(3) Group Representation Theory), p. 3 (3.1. Problem Formulation), p. 2 (2.1. SO(3) Group Representation Theory), p. 5 (4. Implementation), objective p. 4 (3.4. Score Matching Objectives), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), p. 4 (3.4. Score Matching Objectives).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, these methods require numerous demonstrations and do not generalize well on novel task configurations that are not provided during training. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations. (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** In this task, even a minor error of a centimeter can result in complete failure due to noisy observation and the small size of mug handles. (p. 6, 5. Experiments and Results).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

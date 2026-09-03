@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | With our FID score of 3.17, our unconditional model achieves better sample quality than most models in the literature, including class conditional models. | p. 5 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. | p. 5 (4 Experiments) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our FID score is computed with respect to the training set, as is standard practice; when we compute it with respect to the test ... | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | (A stochastic reconstruction x0 ∼pθ(x0/xt) is also valid, but we do not consider it here because it makes distortion more difficult to evaluate.) Figure ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 7 (4 Experiments) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6
 - **p. 5 / 2 Background - extractive body cue:** (LT does not appear because the forward process variances βt are fixed.) Algorithm 1 displays the complete training procedure with this simplified objective.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: The directed graphical model considered in this work. This paper presents progress in diffusion probabilistic models [53]. A diffusion probabilistic model (which we ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), metrics p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 5 (4 Experiments), p. 7 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 13 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), metrics p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 5 (4 Experiments), p. 7 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 13 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. (p. 5, 4 Experiments).
+- **Metric evidence:** 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. (p. 5, 4 Experiments).
+- **Baseline/ablation evidence:** Prior work has shown that such reorderings introduce inductive biases that have an impact on sample quality [38], so we speculate that the Gaussian diffusion serves a similar purpose, perhaps ... (p. 8, 4 Experiments).
+- **Failure/negative evidence:** We fixed the noise for different values of λ so xt and x′ t remain the same. (p. 8, 4 Experiments).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2101.02692; PDF retrieval source: https://arxiv.org/pdf/2101.02692. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2101.02692; PDF retrieval source: https://arxiv.org/pdf/2101.02692. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To decode the per-pixel actionable information, we propose three decoding heads: (c) an actionability scoring module Da that predicts a score ap ... | p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modules) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | For the 3D experiments, we use PointNet++ segmentation network [34] and implementation [47] with 4 set abstraction layers with single-scale grouping for ... | p. 3 (4.1. Network Modules), p. 4 (4.3. Training and Losses) |
@@ -82,8 +82,8 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | (a) Our interactive simulation environment: we show the local gripper frame by the red, green and blue axes, which corresponds to the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | We propose a learning-from-interaction framework with an online data sampling strategy that allows us to train the network in simulation (SAPIEN) and ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
-| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modules), p. 4 (4.3. Training and Losses), p. 4 (4.2. Collecting Training Data), p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses), objective p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses), p. 4 (4.1. Network Modules), p. 4 (4.2. Collecting Training Data), temporal p. 4 (4.1. Network Modules), p. 1 (Abstract), p. 4 (4.2. Collecting Training Data), p. 6 (5.2. Metrics and Baselines), p. 6 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines).
+- **Evidence anchors reviewed:** method p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modules), p. 4 (4.3. Training and Losses), p. 4 (4.2. Collecting Training Data), p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses), objective p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses), p. 4 (4.1. Network Modules), p. 4 (4.2. Collecting Training Data), temporal p. 4 (4.1. Network Modules), p. 1 (Abstract), p. 4 (4.2. Collecting Training Data), p. 6 (5.2. Metrics and Baselines), p. 6 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To decode the per-pixel actionable information, we propose three decoding heads: (c) an actionability scoring module Da that predicts a score ap ∈[0,1]; (d) an action proposal module Dr that ... (p. 3, 4.1. Network Modules).
+- **Objective/update evidence:** After adjusting the relative loss scales to the same level, we obtain the final objective function L = Ls +Lr +100×La. (p. 5, 4.3. Training and Losses).
+- **Temporal/runtime evidence:** (a) Our interactive simulation environment: we show the local gripper frame by the red, green and blue axes, which corresponds to the leftward, upward and forward directions respectively; (b) Six ... (p. 4, 4.1. Network Modules).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

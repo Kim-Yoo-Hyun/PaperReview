@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Implementation Details - extractive PDF cue:** NVOS consists of eight scenes picked from the LLFF [21] dataset.
-- **p. 6 / 5.1. Implementation Details - extractive PDF cue:** Performance comparison (%) on NVOS dataset.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Qualitative result on NVOS and LERF-OVS datasets.
-- **p. 7 / 5.4. Computational Efficiency Analysis - extractive PDF cue:** However, their segmentation accuracy is limited for complex scenes.
-- **p. 8 / 5.4. Computational Efficiency Analysis - extractive PDF cue:** Ablation results in trex and orchid scenes.
-- **p. 8 / 5.4. Computational Efficiency Analysis - extractive PDF cue:** Ablation study of different components on NVOS dataset.
-- **p. 8 / 5.5. Ablation Studies - extractive PDF cue:** The results underscore the critical role of RBF interpolation in providing continuous feature representation, which effectively regulates the NeRF continuous modeling through interpolation features and ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustrate the mutated Gaussian at the boundaries by using the mask of the object. Our method leverages the contin- uous representation capacity of ...
+- **p. 6 / 5.1. Implementation Details - extractive body cue:** NVOS consists of eight scenes picked from the LLFF [21] dataset.
+- **p. 6 / 5.1. Implementation Details - extractive body cue:** Performance comparison (%) on NVOS dataset.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Qualitative result on NVOS and LERF-OVS datasets.
+- **p. 7 / 5.4. Computational Efficiency Analysis - extractive body cue:** However, their segmentation accuracy is limited for complex scenes.
+- **p. 8 / 5.4. Computational Efficiency Analysis - extractive body cue:** Ablation results in trex and orchid scenes.
+- **p. 8 / 5.4. Computational Efficiency Analysis - extractive body cue:** Ablation study of different components on NVOS dataset.
+- **p. 8 / 5.5. Ablation Studies - extractive body cue:** The results underscore the critical role of RBF interpolation in providing continuous feature representation, which effectively regulates the NeRF continuous modeling through interpolation features and ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustrate the mutated Gaussian at the boundaries by using the mask of the object. Our method leverages the contin- uous representation capacity of ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.3. Qualitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Red bounding boxes highlight key areas where our method has achieved significant improvements in boundary segmentation and spatial continuity. | p. 7 (5.3. Qualitative Results) |
 | 5.4. Computational Efficiency Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves similar computational efficiency to COB-GS and outperforms other maskbased methods in both training and inference efficiency. | p. 7 (5.4. Computational Efficiency Analysis) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Implementation Details - extractive PDF cue:** NVOS consists of eight scenes picked from the LLFF [21] dataset.
-- **p. 6 / 5.1. Implementation Details - extractive PDF cue:** Performance comparison (%) on NVOS dataset.
-- **p. 7 / 5.2. Quantitative Results - extractive PDF cue:** Qualitative result on NVOS and LERF-OVS datasets.
-- **p. 7 / 5.4. Computational Efficiency Analysis - extractive PDF cue:** However, their segmentation accuracy is limited for complex scenes.
-- **p. 8 / 5.4. Computational Efficiency Analysis - extractive PDF cue:** Ablation results in trex and orchid scenes.
-- **p. 8 / 5.4. Computational Efficiency Analysis - extractive PDF cue:** Ablation study of different components on NVOS dataset.
+- **p. 6 / 5.1. Implementation Details - extractive body cue:** NVOS consists of eight scenes picked from the LLFF [21] dataset.
+- **p. 6 / 5.1. Implementation Details - extractive body cue:** Performance comparison (%) on NVOS dataset.
+- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Qualitative result on NVOS and LERF-OVS datasets.
+- **p. 7 / 5.4. Computational Efficiency Analysis - extractive body cue:** However, their segmentation accuracy is limited for complex scenes.
+- **p. 8 / 5.4. Computational Efficiency Analysis - extractive body cue:** Ablation results in trex and orchid scenes.
+- **p. 8 / 5.4. Computational Efficiency Analysis - extractive body cue:** Ablation study of different components on NVOS dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustrate the mutated Gaussian at the boundaries by using the mask of the object. Our method leverages the contin- uous representation capacity of ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall pipeline of our NG-GS framework. It takes a trained 3DGS model as input, and identifies boundary Gaussian points with the help ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Performance comparison (%) on NVOS dataset.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Performance comparison (%) on LERF-OVS dataset.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Performance comparison (%) on ScanNet dataset.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative result on NVOS and LERF-OVS datasets. The results show that our method segments the boundaries of the object more clearly, without blurred ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Time consumption comparison in the fortress scene.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation study of different components on NVOS dataset. Components Performance Bd. Sp. RBF. MRHE. NeRF. Lalign. Lsmth. B-mIoU mAcc mIoU ✓ ✓ ✓ ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustrate the mutated Gaussian at the boundaries by using the mask of the object. Our method leverages the contin- uous representation capacity of ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overall pipeline of our NG-GS framework. It takes a trained 3DGS model as input, and identifies boundary Gaussian points with the help ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Performance comparison (%) on NVOS dataset.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Performance comparison (%) on LERF-OVS dataset.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Performance comparison (%) on ScanNet dataset.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative result on NVOS and LERF-OVS datasets. The results show that our method segments the boundaries of the object more clearly, without blurred ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Time consumption comparison in the fortress scene.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation study of different components on NVOS dataset. Components Performance Bd. Sp. RBF. MRHE. NeRF. Lalign. Lsmth. B-mIoU mAcc mIoU ✓ ✓ ✓ ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | NVOS consists of eight scenes picked from the LLFF [21] dataset. | embodiment, simulator version and control stack | p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details) |
 | Task/environment | Performance comparison (%) on NVOS dataset. | reset, timeout, object/scene variation | p. 6 (5.1. Implementation Details), p. 7 (5.2. Quantitative Results) |
@@ -118,7 +118,7 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 | Primary metric/result | Our method achieves similar computational efficiency to COB-GS and outperforms other maskbased methods in both training and inference efficiency. | numeric claim only at cited anchor | p. 7 (5.4. Computational Efficiency Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Implementation Details - extractive PDF cue:** Quantitative experiments are conducted on an NVIDIA RTX 3090 GPU with PyTorch, focusing on metrics including mIoU, mAcc, and boundary mIoU (B-mIoU).
+- **p. 6 / 5.1. Implementation Details - extractive body cue:** Quantitative experiments are conducted on an NVIDIA RTX 3090 GPU with PyTorch, focusing on metrics including mIoU, mAcc, and boundary mIoU (B-mIoU).
 
 ## Generalization and Failure Cases
 
@@ -150,10 +150,10 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Addressing current limitations, our future directions include extending the framework to dynamic scenes and real-time interactive applications, further bridging the gap between representation learning and ...
-- **p. 8 / 5.6. Hyper-parameter Analysis - extractive PDF cue:** It is shown that τ=0.6 achieves the best balance between maintaining structural integrity and controlling background noise, resulting in excellent visual coherence and detail preservation.
+- **p. 8 / 6. Conclusion - extractive body cue:** Addressing current limitations, our future directions include extending the framework to dynamic scenes and real-time interactive applications, further bridging the gap between representation learning and ...
+- **p. 8 / 5.6. Hyper-parameter Analysis - extractive body cue:** It is shown that τ=0.6 achieves the best balance between maintaining structural integrity and controlling background noise, resulting in excellent visual coherence and detail preservation.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details), p. 7 (5.2. Quantitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), metrics p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.5. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details), p. 7 (5.3. Qualitative Results), baselines p. 6 (5.1. Implementation Details), p. 6 (5.2. Quantitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.5. Ablation Studies), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), results p. 7 (5.3. Qualitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 6 (5.2. Quantitative Results), p. 8 (5.6. Hyper-parameter Analysis), p. 8 (5.6. Hyper-parameter Analysis), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details), p. 7 (5.2. Quantitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), metrics p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.5. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details), p. 7 (5.3. Qualitative Results), baselines p. 6 (5.1. Implementation Details), p. 6 (5.2. Quantitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.5. Ablation Studies), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), results p. 7 (5.3. Qualitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 6 (5.2. Quantitative Results), p. 8 (5.6. Hyper-parameter Analysis), p. 8 (5.6. Hyper-parameter Analysis), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

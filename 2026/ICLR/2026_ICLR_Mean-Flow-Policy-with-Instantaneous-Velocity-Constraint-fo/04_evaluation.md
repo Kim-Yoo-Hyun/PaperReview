@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=mIeKe74W43; PDF retrieval source: https://arxiv.org/pdf/2602.13810. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=mIeKe74W43; PDF retrieval source: https://arxiv.org/pdf/2602.13810. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** We consider a total of 9 sparse-reward robotic manipulation tasks with varying difficulties.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., 2024), ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) Robomimic-lift 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Since robotic platforms often have limited computational resources, our experiments were conducted on a CPU-only environment, AMD Ryzen Threadripper 3960X 24-Core Processor.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Furthermore, benchmark results indicate that its success rate is very low, averaging only half of our MVP's.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** As shown in Table 1, our MVP matches or exceeds state-of-the-art multi-step flow-matching baselines on eight of nine tasks.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** In stark contrast, our MVP achieves success rates of 0.71 ± 0.06 and 0.52 ± 0.11 on these tasks, respectively.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** For example, the success rate on the challenging Cube-triple-task4 significantly increases from 0.30 ± 0.21 (with no IVC) to 0.45 ± 0.15 (with a partial ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** We consider a total of 9 sparse-reward robotic manipulation tasks with varying difficulties.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., 2024), ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) Robomimic-lift 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Since robotic platforms often have limited computational resources, our experiments were conducted on a CPU-only environment, AMD Ryzen Threadripper 3960X 24-Core Processor.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Furthermore, benchmark results indicate that its success rate is very low, averaging only half of our MVP's.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 1, our MVP matches or exceeds state-of-the-art multi-step flow-matching baselines on eight of nine tasks.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** In stark contrast, our MVP achieves success rates of 0.71 ± 0.06 and 0.52 ± 0.11 on these tasks, respectively.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** For example, the success rate on the challenging Cube-triple-task4 significantly increases from 0.30 ± 0.21 (with no IVC) to 0.45 ± 0.15 (with a partial ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Specifically, MVP consistently outperforms all baselines on Robomimic-square, Cube-doubletask4, and all Cube-triple tasks, where it consistently achieves the highest success rates. | p. 7 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | For instance, on the most difficult task, Cube-triple-task4, MVP achieves a success rate of 0.52 ± 0.11, which is significantly higher than the next-best ... | p. 7 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** We consider a total of 9 sparse-reward robotic manipulation tasks with varying difficulties.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., 2024), ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) Robomimic-lift 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Since robotic platforms often have limited computational resources, our experiments were conducted on a CPU-only environment, AMD Ryzen Threadripper 3960X 24-Core Processor.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Furthermore, benchmark results indicate that its success rate is very low, averaging only half of our MVP's.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** As shown in Table 1, our MVP matches or exceeds state-of-the-art multi-step flow-matching baselines on eight of nine tasks.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** In stark contrast, our MVP achieves success rates of 0.71 ± 0.06 and 0.52 ± 0.11 on these tasks, respectively.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** For example, the success rate on the challenging Cube-triple-task4 significantly increases from 0.30 ± 0.21 (with no IVC) to 0.45 ± 0.15 (with a partial ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** We consider a total of 9 sparse-reward robotic manipulation tasks with varying difficulties.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., 2024), ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) Robomimic-lift 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Since robotic platforms often have limited computational resources, our experiments were conducted on a CPU-only environment, AMD Ryzen Threadripper 3960X 24-Core Processor.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Furthermore, benchmark results indicate that its success rate is very low, averaging only half of our MVP's.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 1, our MVP matches or exceeds state-of-the-art multi-step flow-matching baselines on eight of nine tasks.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** In stark contrast, our MVP achieves success rates of 0.71 ± 0.06 and 0.52 ± 0.11 on these tasks, respectively.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** For example, the success rate on the challenging Cube-triple-task4 significantly increases from 0.30 ± 0.21 (with no IVC) to 0.45 ± 0.15 (with a partial ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Performance-efficiency com- parison on 9 robotic manipulation tasks. A question naturally arises: Can we unify the expressive- ness of generative policies with the ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Velocity field: blue arrows de- note the mean velocity over a time in- terval, with red arrows representing the instantaneous velocity at a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Training curves on benchmarks. The solid lines correspond to mean and shaded regions correspond to 95% confidence interval over five runs. The shadow ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Success rates. Mean ± Std over 5 seeds. Bold = best, underlined = 2nd-best. Task FQL BFN QC MVP (ours) Robomimic-lift 0.96 ± ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Training curves of ablation on the IVC. (2) Comparison with one-step variants of the aforementioned baselines. We compared our MVP against one-step variants ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Training curves of comparison with one-step flow.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Comparison of online training speed Metric FQL BFN QC MVP (ours) Average 108.5 ± 7.7 iter/s
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Comparison of inference time Metric FQL BFN QC MVP (ours) Average 10.76 ± 1.02 ms
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Performance-efficiency com- parison on 9 robotic manipulation tasks. A question naturally arises: Can we unify the expressive- ness of generative policies with the ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Velocity field: blue arrows de- note the mean velocity over a time in- terval, with red arrows representing the instantaneous velocity at a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Training curves on benchmarks. The solid lines correspond to mean and shaded regions correspond to 95% confidence interval over five runs. The shadow ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Success rates. Mean ± Std over 5 seeds. Bold = best, underlined = 2nd-best. Task FQL BFN QC MVP (ours) Robomimic-lift 0.96 ± ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Training curves of ablation on the IVC. (2) Comparison with one-step variants of the aforementioned baselines. We compared our MVP against one-step variants ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Training curves of comparison with one-step flow.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Comparison of online training speed Metric FQL BFN QC MVP (ours) Average 108.5 ± 7.7 iter/s
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Comparison of inference time Metric FQL BFN QC MVP (ours) Average 10.76 ± 1.02 ms
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We consider a total of 9 sparse-reward robotic manipulation tasks with varying difficulties. | embodiment, simulator version and control stack | p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
 | Task/environment | This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., ... | reset, timeout, object/scene variation | p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
@@ -78,7 +78,7 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Overall, our MVP secures the top position with an average success rate of 0.88 ± 0.05. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | Specifically, MVP consistently outperforms all baselines on Robomimic-square, Cube-doubletask4, and all Cube-triple tasks, where it consistently achieves the highest success rates. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | Our MVP achieves highest success rate and fastest training speed. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2026 (Oral, top 1%) Table 1: Success rates. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
+| In stark contrast, our MVP achieves success rates of 0.71 ± 0.06 and 0.52 ± 0.11 on these tasks, respectively. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 | Furthermore, benchmark results indicate that its success rate is very low, averaging only half of our MVP's. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 | When considering FQL's overall low success rate and slow training speed, our MVP still maintains a significant advantage. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 | We consider a total of 9 sparse-reward robotic manipulation tasks with varying difficulties. | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
@@ -95,7 +95,7 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Specifically, MVP consistently outperforms all baselines on Robomimic-square, Cube-doubletask4, and all Cube-triple tasks, where it consistently achieves the highest success rates. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | Our full version (λ = 1.0) was compared against variants with a reduced constraint (λ = 0.5) and without the constraint (λ = 0.0). | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | To simulate a more realistic deployment scenario without hardware acceleration, we disabled JAX's Just-In-Time (JIT) compilation during all evaluations. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2026 (Oral, top 1%) 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) ... | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
+| Table 3: Comparison of inference time Metric FQL BFN QC MVP (ours) Average 10.76 ± 1.02 ms | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Primary metric/result | For instance, on the most difficult task, Cube-triple-task4, MVP achieves a success rate of 0.52 ± 0.11, which is significantly higher than the next-best ... | numeric claim only at cited anchor | p. 7 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., 2024), ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) Robomimic-lift 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** On the remaining task, MVP ranks second, with a performance of 0.92, which is just 0.02 points below the top-performing baseline's score of 0.94.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For instance, on the most difficult task, Cube-triple-task4, MVP achieves a success rate of 0.52 ± 0.11, which is significantly higher than the next-best baseline, ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Overall, our MVP secures the top position with an average success rate of 0.88 ± 0.05.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Task FQL BFN QC MVP (ours) Robomimic-lift 0.96 ± 0.03 1.00 ± 0.01 1.00 ± 0.00 1.00 ± 0.00 Robomimic-can 0.74 ± 0.11 0.82 ± ...
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** This includes 3 tasks from the Robomimic benchmark (Mandlekar et al., 2021), Lift, Can and Square, and 6 tasks from OGBench (Park et al., 2024), ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success Rate (a) Robomimic-lift 0.0 0.5 1.0 1.5 2.0 Steps (×106) 0.0 0.5 1.0 Success ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** On the remaining task, MVP ranks second, with a performance of 0.92, which is just 0.02 points below the top-performing baseline's score of 0.94.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For instance, on the most difficult task, Cube-triple-task4, MVP achieves a success rate of 0.52 ± 0.11, which is significantly higher than the next-best baseline, ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Overall, our MVP secures the top position with an average success rate of 0.88 ± 0.05.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Task FQL BFN QC MVP (ours) Robomimic-lift 0.96 ± 0.03 1.00 ± 0.01 1.00 ± 0.00 1.00 ± 0.00 Robomimic-can 0.74 ± 0.11 0.82 ± ...
 
 ## Generalization and Failure Cases
 
@@ -160,10 +160,10 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Velocity field: blue arrows de- note the mean velocity over a time in- terval, with red arrows representing the instantaneous velocity at a ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The poor performance of BFN and QC is primarily because they rely on a 10-step flow policy, which requires iterative computation to transform noise into ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Velocity field: blue arrows de- note the mean velocity over a time in- terval, with red arrows representing the instantaneous velocity at a ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The poor performance of BFN and QC is primarily because they rely on a 10-step flow policy, which requires iterative computation to transform noise into ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (Figure/Table caption), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

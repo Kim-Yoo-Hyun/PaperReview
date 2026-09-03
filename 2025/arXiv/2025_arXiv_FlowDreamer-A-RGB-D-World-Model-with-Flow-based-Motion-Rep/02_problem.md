@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.10075; PDF retrieval source: https://arxiv.org/pdf/2505.10075. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.10075; PDF retrieval source: https://arxiv.org/pdf/2505.10075. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Existing visual world models have undergone rapid development in recent years. | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | In robotics, a visual world model [24] needs to perform the following steps: 1) dynamics prediction: predict the future motion given the ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | In robotics, a visual world model [24] needs to perform the following steps: 1) dynamics prediction: predict the future motion given the ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | robotics, visual, world, model, needs, perform, following, steps, dynamics, prediction | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | world, models, without, action, output, model, predictive, control | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: robotics, visual, world, model, needs, perform, following, steps, dynamics, prediction | p. 1 (1. Introduction), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: validate, effectiveness, multiple, benchmarks, commonly, robotic, manipulation, FlowDreamer | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (4.2. Visual Planning) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 7 (Figure/Table caption), p. 8 (4.3. Additional Analysis on Flow Prediction), p. 8 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (4.2. Visual Planning), p. 7 (4.2. Visual Planning), p. 1 (1. Introduction)): We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation.
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (4.2. Visual Planning), p. 7 (4.2. Visual Planning), p. 1 (1. Introduction)): We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation.
 
 - **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose FlowDreamer, a RGB-D world model that explicitly models dynamics prediction to enhance the predictive capability of world models.
 - **p. 7 / 4.2. Visual Planning - extractive body cue:** For our method, we show the predicted RGB images and scene flows. boDesk [41] tasks.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1. Introduction), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), p. 13 (A. Implementation Details). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), p. 13 (A. Implementation Details). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 1 (1. Introduction), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), p. 13 (A. Implementation Details), objective p. 7 (4.2. Visual Planning).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 1 (1. Introduction), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), p. 13 (A. Implementation Details), objective p. 7 (4.2. Visual Planning).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Existing visual world models have undergone rapid development in recent years. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation. (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** We hypothesize that the failure lies in that the visual reward cannot always point to the correct trajectory, which is also revealed by [87]. (p. 8, 4.2. Visual Planning).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

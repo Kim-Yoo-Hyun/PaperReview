@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evalu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Evaluation Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Although models like VIMA-Gato and VIMA-Flamingo show improved performance with bigger model sizes, VIMA consistently achieves superior performance over all model sizes. | p. 6 (5.2. Evaluation Results) |
 | 5.2. Evaluation Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | We note that this can only be achieved with both cross-attention and object token sequence representations - altering any component will significantly degrade the ... | p. 6 (5.2. Evaluation Results) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evalu
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We compare VIMA against the baseline variants on four levels of generalization provided in our benchmark for different model and training dataset sizes. | embodiment, simulator version and control stack | p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results) |
 | Task/environment | Our proposed object tokens outperform all methods that learn directly from raw pixels, and Object Perceiver that downsamples the object sequence to a fixed ... | reset, timeout, object/scene variation | p. 7 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evalu
 - **p. 7 / 5.2. Evaluation Results - extractive body cue:** In contrast, the baselines can degrade as much as 20%, particularly in more difficult generalization scenarios.
 - **p. 7 / 5.2. Evaluation Results - extractive body cue:** These results suggest that VIMA has developed a more generalizable policy and robust representations than the alternative approaches.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), metrics p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (Figure/Table caption), p. 38 (Figure/Table caption), baselines p. 5 (Figure/Table caption), p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (Figure/Table caption), results p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 5 (Figure/Table caption), p. 7 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), metrics p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (Figure/Table caption), p. 38 (Figure/Table caption), baselines p. 5 (Figure/Table caption), p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (Figure/Table caption), results p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 5 (Figure/Table caption), p. 7 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Scaling model and data. Top: We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model sizes and generalization levels, VIMA ... (p. 5, Figure/Table caption).
+- **Metric evidence:** We compare model performance at 0.1%, 1%, 10% and full imitation learning dataset provided in VIMA-BENCH (Fig. (p. 6, 5.2. Evaluation Results).
+- **Baseline/ablation evidence:** VIMA: General Robot Manipulation with Multimodal Prompts Ours ViT Object Perceiver Perceiver Image Perceiver Image Patches ViT Perceiver Single Image ViT Ours (Oracle) ViT L1 L2 L3 L4 0 10 ... (p. 7, 5.2. Evaluation Results).
+- **Failure/negative evidence:** To make VIMA robust to detection inaccuracies and failures, we apply object augmentation by randomly injecting false-positive detection outputs. (p. 5, 4. Novel task generalization. New tasks with novel).

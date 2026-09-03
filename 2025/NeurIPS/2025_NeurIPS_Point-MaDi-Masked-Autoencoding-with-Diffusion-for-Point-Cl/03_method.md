@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=sYeE1obXGG; PDF retrieval source: https://openreview.net/pdf/62bf13ac3402b1f0fcc04ba494b5fba2e1214fa0.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=sYeE1obXGG; PDF retrieval source: https://papers.nips.cc/paper_files/paper/2025/file/4809dd4b628b6253d0aad0154014f7a3-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 ## Method Body Digest
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can ...
-- **p. 1 / Abstract - extractive PDF cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
-- **p. 1 / Abstract - extractive PDF cue:** In the decoder, we design a conditional patch diffusion process, guided by the encoder's latent features and predicted centers to reconstruct masked patches directly from ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations.
-- **p. 3 / 1 Introduction - extractive PDF cue:** By integrating center diffusion for global modeling and patch diffusion for local reconstruction, Point-MaDi encourages the encoder to learn robust, context-aware representations while enabling the ...
-- **p. 1 / Abstract - extractive PDF cue:** Self-supervised pre-training is essential for 3D point cloud representation learning, as annotating their irregular, topology-free structures is costly and labor-intensive.
-- **p. 2 / 1 Introduction - extractive PDF cue:** (c) Our Point-MaDi denoises noisy masked patches and reconstruct their centers. alternative, enabling the extraction of generalizable representations from unlabeled point clouds through the design ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
+- **p. 2 / 1 Introduction - extractive body cue:** Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can ...
+- **p. 1 / Abstract - extractive body cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
+- **p. 1 / Abstract - extractive body cue:** In the decoder, we design a conditional patch diffusion process, guided by the encoder's latent features and predicted centers to reconstruct masked patches directly from ...
+- **p. 2 / 1 Introduction - extractive body cue:** This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations.
+- **p. 3 / 1 Introduction - extractive body cue:** By integrating center diffusion for global modeling and patch diffusion for local reconstruction, Point-MaDi encourages the encoder to learn robust, context-aware representations while enabling the ...
+- **p. 1 / Abstract - extractive body cue:** Self-supervised pre-training is essential for 3D point cloud representation learning, as annotating their irregular, topology-free structures is costly and labor-intensive.
+- **p. 2 / 1 Introduction - extractive body cue:** (c) Our Point-MaDi denoises noisy masked patches and reconstruct their centers. alternative, enabling the extraction of generalizable representations from unlabeled point clouds through the design ...
+- **p. 3 / 1 Introduction - extractive body cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
 
 ## Design Rationale
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Considering this, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework.
-- **p. 1 / Abstract - extractive PDF cue:** Specifically, we introduce a center diffusion mechanism in the encoder, noising and predicting the coordinates of both visible and masked patch centers without ground-truth positional ...
+- **p. 2 / 1 Introduction - extractive body cue:** Considering this, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework.
+- **p. 1 / Abstract - extractive body cue:** Specifically, we introduce a center diffusion mechanism in the encoder, noising and predicting the coordinates of both visible and masked patch centers without ground-truth positional ...
 
 ## Source Evidence Cues
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can ...
-- **p. 1 / Abstract - extractive PDF cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
-- **p. 1 / Abstract - extractive PDF cue:** In the decoder, we design a conditional patch diffusion process, guided by the encoder's latent features and predicted centers to reconstruct masked patches directly from ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations.
-- **p. 3 / 1 Introduction - extractive PDF cue:** By integrating center diffusion for global modeling and patch diffusion for local reconstruction, Point-MaDi encourages the encoder to learn robust, context-aware representations while enabling the ...
+- **p. 2 / 1 Introduction - extractive body cue:** Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can ...
+- **p. 1 / Abstract - extractive body cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
+- **p. 1 / Abstract - extractive body cue:** In the decoder, we design a conditional patch diffusion process, guided by the encoder's latent features and predicted centers to reconstruct masked patches directly from ...
+- **p. 2 / 1 Introduction - extractive body cue:** This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations.
+- **p. 3 / 1 Introduction - extractive body cue:** By integrating center diffusion for global modeling and patch diffusion for local reconstruction, Point-MaDi encourages the encoder to learn robust, context-aware representations while enabling the ...
 - **Detected method headings:** B Model Efficiency Comparison (p. 22)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: ... | p. 2 (1 Introduction), p. 1 (Abstract) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task ... | p. 1 (Abstract), p. 1 (Abstract) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 ## Objective / Update Rule
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can ...
-- **p. 1 / Abstract - extractive PDF cue:** Self-supervised pre-training is essential for 3D point cloud representation learning, as annotating their irregular, topology-free structures is costly and labor-intensive.
-- **p. 2 / 1 Introduction - extractive PDF cue:** (c) Our Point-MaDi denoises noisy masked patches and reconstruct their centers. alternative, enabling the extraction of generalizable representations from unlabeled point clouds through the design ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
+- **p. 2 / 1 Introduction - extractive body cue:** Recent studies [70, 19] have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can ...
+- **p. 1 / Abstract - extractive body cue:** Self-supervised pre-training is essential for 3D point cloud representation learning, as annotating their irregular, topology-free structures is costly and labor-intensive.
+- **p. 2 / 1 Introduction - extractive body cue:** (c) Our Point-MaDi denoises noisy masked patches and reconstruct their centers. alternative, enabling the extraction of generalizable representations from unlabeled point clouds through the design ...
+- **p. 3 / 1 Introduction - extractive body cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 2 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,11 +64,11 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** (c) Our Point-MaDi denoises noisy masked patches and reconstruct their centers. alternative, enabling the extraction of generalizable representations from unlabeled point clouds through the design ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations.
-- **p. 1 / 1 Introduction - extractive PDF cue:** However, unlike 2D images arranged in regular grids, point clouds lack a consistent topology, making the annotation process both expensive and labor-intensive.
-- **p. 1 / Abstract - extractive PDF cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
+- **p. 2 / 1 Introduction - extractive body cue:** (c) Our Point-MaDi denoises noisy masked patches and reconstruct their centers. alternative, enabling the extraction of generalizable representations from unlabeled point clouds through the design ...
+- **p. 2 / 1 Introduction - extractive body cue:** This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations.
+- **p. 1 / 1 Introduction - extractive body cue:** However, unlike 2D images arranged in regular grids, point clouds lack a consistent topology, making the annotation process both expensive and labor-intensive.
+- **p. 1 / Abstract - extractive body cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
+- **p. 3 / 1 Introduction - extractive body cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,7 +83,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 ## Training vs Inference
 
-- **p. 1 / Abstract - extractive PDF cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
+- **p. 1 / Abstract - extractive body cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -103,13 +103,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 ## Failure and Ablation Link
 
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Table 11: Effect of different loss functions for Lcenter and Lpatch. The accuracies (%) are reported on three variants of ScanObjectNN.
-- **p. 26 / Figure/Table caption - extractive PDF cue:** Table 16: The effect of time embedding in the encoder. The accuracies (%) are reported on three variants of ScanObjectNN. Time Embedding OBJ-BG OBJ-ONLY PB-T50-RS ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Classification accuracy (%) on three variants of ScanObjectNN and ModelNet40. Parameters of inference models #P (M) are listed. We report ScanObjectNN results without ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** We conduct a comprehensive ablation study focusing on the components of our dual-diffusion framework in Tab.
-- **p. 9 / 4 Experiments - extractive PDF cue:** We discuss the effect of different decoder designs, exploring three configurations that vary in how attention modules are applied to visible latent tokens T v ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** Furthermore, the performance is competitive with recent cross-modal methods (e.g., ReCon [36], I2P-MAE [67]), without requiring additional modalities or complex pre-training pipelines.
-- **p. 7 / 4 Experiments - extractive PDF cue:** While diffusion-based methods like PointDif may not consistently dominate on the relatively clean and less diverse ModelNet40 dataset, our Point-MaDi still achieves 93.8% accuracy, demonstrating ...
+- **p. 24 / Figure/Table caption - extractive body cue:** Table 11: Effect of different loss functions for Lcenter and Lpatch. The accuracies (%) are reported on three variants of ScanObjectNN.
+- **p. 26 / Figure/Table caption - extractive body cue:** Table 16: The effect of time embedding in the encoder. The accuracies (%) are reported on three variants of ScanObjectNN. Time Embedding OBJ-BG OBJ-ONLY PB-T50-RS ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Classification accuracy (%) on three variants of ScanObjectNN and ModelNet40. Parameters of inference models #P (M) are listed. We report ScanObjectNN results without ...
+- **p. 9 / 4 Experiments - extractive body cue:** We conduct a comprehensive ablation study focusing on the components of our dual-diffusion framework in Tab.
+- **p. 9 / 4 Experiments - extractive body cue:** We discuss the effect of different decoder designs, exploring three configurations that vary in how attention modules are applied to visible latent tokens T v ...
+- **p. 7 / 4 Experiments - extractive body cue:** Furthermore, the performance is competitive with recent cross-modal methods (e.g., ReCon [36], I2P-MAE [67]), without requiring additional modalities or complex pre-training pipelines.
+- **p. 7 / 4 Experiments - extractive body cue:** While diffusion-based methods like PointDif may not consistently dominate on the relatively clean and less diverse ModelNet40 dataset, our Point-MaDi still achieves 93.8% accuracy, demonstrating ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -123,7 +123,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 6 (2 Related Work), p. 5 (2 Related Work), p. 6 (2 Related Work), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 6 (2 Related Work), p. 5 (2 Related Work), p. 6 (2 Related Work), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

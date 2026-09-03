@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 ## Method Body Digest
 
-- **p. 4 / 3.4. Action-Guided Prediction - extractive PDF cue:** Building upon the explicit action embedding Zex produced by EAR and implicit action-related feature Zim obtained in IAR, in this section, we introduce the Action-Guided ...
-- **p. 4 / 3.3. Implicit Action Reasoner - extractive PDF cue:** (8) Then, through aggregating these representations across layers, we obtain implicit action-related feature Zim, which serves as implicit action-space guidance gim action, complementing the explicit ...
-- **p. 3 / 3.1. Problem Formulation - extractive PDF cue:** Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the ...
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** During inference, the model switches to a fully self-conditioned mode, where πref θ autonomously generates the reference actions to guide πhead θ in action prediction.
-- **p. 3 / 3. Methodology - extractive PDF cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** The entire framework is optimized under a standard flow-matching mean-squared error (MSE) objective.
-- **p. 4 / 3.2. Explicit Action Reasoner - extractive PDF cue:** To incorporate explicit action trajectories into the thinking process of πθ to generate high-quality action predictions, we propose the Explicit Action Reasoner (EAR).
+- **p. 4 / 3.4. Action-Guided Prediction - extractive body cue:** Building upon the explicit action embedding Zex produced by EAR and implicit action-related feature Zim obtained in IAR, in this section, we introduce the Action-Guided ...
+- **p. 4 / 3.3. Implicit Action Reasoner - extractive body cue:** (8) Then, through aggregating these representations across layers, we obtain implicit action-related feature Zim, which serves as implicit action-space guidance gim action, complementing the explicit ...
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the ...
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** During inference, the model switches to a fully self-conditioned mode, where πref θ autonomously generates the reference actions to guide πhead θ in action prediction.
+- **p. 3 / 3. Methodology - extractive body cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** The entire framework is optimized under a standard flow-matching mean-squared error (MSE) objective.
+- **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** To incorporate explicit action trajectories into the thinking process of πθ to generate high-quality action predictions, we propose the Explicit Action Reasoner (EAR).
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To summarize, our main contributions are as follows: • Conceptually, we introduce Action Chain of Thought (ACoT), a new paradigm for generalist robot policies.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Subsequently, through jointly leveraging both EAR and IAR, we develop ACoT-VLA, an integrated Action Chain-of-Thought framework that enables grounded generalist robot policy learning.
-- **p. 3 / 3. Methodology - extractive PDF cue:** The core of our method lies in two distinct action reasoners introduced in Sec.
+- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our main contributions are as follows: • Conceptually, we introduce Action Chain of Thought (ACoT), a new paradigm for generalist robot policies.
+- **p. 2 / 1. Introduction - extractive body cue:** Subsequently, through jointly leveraging both EAR and IAR, we develop ACoT-VLA, an integrated Action Chain-of-Thought framework that enables grounded generalist robot policy learning.
+- **p. 3 / 3. Methodology - extractive body cue:** The core of our method lies in two distinct action reasoners introduced in Sec.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.4. Action-Guided Prediction - extractive PDF cue:** Building upon the explicit action embedding Zex produced by EAR and implicit action-related feature Zim obtained in IAR, in this section, we introduce the Action-Guided ...
-- **p. 4 / 3.3. Implicit Action Reasoner - extractive PDF cue:** (8) Then, through aggregating these representations across layers, we obtain implicit action-related feature Zim, which serves as implicit action-space guidance gim action, complementing the explicit ...
-- **p. 3 / 3.1. Problem Formulation - extractive PDF cue:** Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the ...
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** During inference, the model switches to a fully self-conditioned mode, where πref θ autonomously generates the reference actions to guide πhead θ in action prediction.
-- **p. 3 / 3. Methodology - extractive PDF cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
+- **p. 4 / 3.4. Action-Guided Prediction - extractive body cue:** Building upon the explicit action embedding Zex produced by EAR and implicit action-related feature Zim obtained in IAR, in this section, we introduce the Action-Guided ...
+- **p. 4 / 3.3. Implicit Action Reasoner - extractive body cue:** (8) Then, through aggregating these representations across layers, we obtain implicit action-related feature Zim, which serves as implicit action-space guidance gim action, complementing the explicit ...
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the ...
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** During inference, the model switches to a fully self-conditioned mode, where πref θ autonomously generates the reference actions to guide πhead θ in action prediction.
+- **p. 3 / 3. Methodology - extractive body cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
 - **Detected method headings:** 3. Methodology (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Building upon the explicit action embedding Zex produced by EAR and implicit action-related feature Zim obtained in IAR, in this section, we ... | p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Implicit Action Reasoner) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | (8) Then, through aggregating these representations across layers, we obtain implicit action-related feature Zim, which serves as implicit action-space guidance gim action, ... | p. 4 (3.3. Implicit Action Reasoner), p. 3 (3.1. Problem Formulation) |
@@ -47,9 +47,9 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** The entire framework is optimized under a standard flow-matching mean-squared error (MSE) objective.
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
-- **p. 4 / 3.2. Explicit Action Reasoner - extractive PDF cue:** To incorporate explicit action trajectories into the thinking process of πθ to generate high-quality action predictions, we propose the Explicit Action Reasoner (EAR).
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** The entire framework is optimized under a standard flow-matching mean-squared error (MSE) objective.
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
+- **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** To incorporate explicit action trajectories into the thinking process of πθ to generate high-quality action predictions, we propose the Explicit Action Reasoner (EAR).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 ## Observation–State–Action Interface
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action Policy Instruction Observation ...
-- **p. 3 / 3.1. Problem Formulation - extractive PDF cue:** Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To the best of our knowledge, this is the first work to formulate the deliberative process as a structured chain of explicit action-space intents, rather ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Recent advancements seek to improve the mapping from the input space to the action space by introducing the intermediate reasoning step by language generation, leading ...
-- **p. 4 / 3.2. Explicit Action Reasoner - extractive PDF cue:** Formally, given visual observation ot and language instruction l, a pre-trained VLM encodes them into a contextual key-value cache: (K^ {\t e x t { ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
-- **p. 4 / 3.2. Explicit Action Reasoner - extractive PDF cue:** 2 (a), generating kinematically plausible action reference as explicit action-space guidance gex action for downstream action policy.
+- **p. 1 / 1. Introduction - extractive body cue:** (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action Policy Instruction Observation ...
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the ...
+- **p. 2 / 1. Introduction - extractive body cue:** To the best of our knowledge, this is the first work to formulate the deliberative process as a structured chain of explicit action-space intents, rather ...
+- **p. 1 / 1. Introduction - extractive body cue:** Recent advancements seek to improve the mapping from the input space to the action space by introducing the intermediate reasoning step by language generation, leading ...
+- **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** Formally, given visual observation ot and language instruction l, a pre-trained VLM encodes them into a contextual key-value cache: (K^ {\t e x t { ...
+- **p. 3 / 3. Methodology - extractive body cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
+- **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** 2 (a), generating kinematically plausible action reference as explicit action-space guidance gex action for downstream action policy.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -86,10 +86,10 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 ## Training vs Inference
 
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
-- **p. 5 / 3.4. Action-Guided Prediction - extractive PDF cue:** During inference, the model switches to a fully self-conditioned mode, where πref θ autonomously generates the reference actions to guide πhead θ in action prediction.
-- **p. 6 / 4.2. Simulation Experiments - extractive PDF cue:** For each task, the policy is evaluated over 50 trials, amounting to 2, 000 total rollouts.
-- **p. 7 / 4.2. Simulation Experiments - extractive PDF cue:** All models are trained for 60K steps. † indicates that the LLM backbone is frozen during training.
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** The training losses consist of two parts, i.e., flowmatching MSE for both Explicit Action Reasoner πref θ and action head πhead θ .
+- **p. 5 / 3.4. Action-Guided Prediction - extractive body cue:** During inference, the model switches to a fully self-conditioned mode, where πref θ autonomously generates the reference actions to guide πhead θ in action prediction.
+- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** For each task, the policy is evaluated over 50 trials, amounting to 2, 000 total rollouts.
+- **p. 7 / 4.2. Simulation Experiments - extractive body cue:** All models are trained for 60K steps. † indicates that the LLM backbone is frozen during training.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Module ablations. The performance is gradually im- proved with the continuous addition of proposed methods. are directly evaluated on LIBERO-Plus to assess general- ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** To further examine the effect of explicit action references in EAR, we investigate different settings of action shift and action horizon, as summarized in Table ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** 4.2, we evaluate our approach on three simulation benchmarks, followed by comprehensive ablation studies in Sec.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train our ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** As shown in Table 6, all three variants outperform the baseline, indicating that extracting implicit action cues from VLM benefits policy learning.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Supervised Fine-Tuning denotes models trained on the LIBERO-Plus training set.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Module ablations. The performance is gradually im- proved with the continuous addition of proposed methods. are directly evaluated on LIBERO-Plus to assess general- ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** To further examine the effect of explicit action references in EAR, we investigate different settings of action shift and action horizon, as summarized in Table ...
+- **p. 5 / 4. Experiments - extractive body cue:** 4.2, we evaluate our approach on three simulation benchmarks, followed by comprehensive ablation studies in Sec.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train our ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** As shown in Table 6, all three variants outperform the baseline, indicating that extracting implicit action cues from VLM benefits policy learning.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Supervised Fine-Tuning denotes models trained on the LIBERO-Plus training set.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Implicit Action Reasoner), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 3 (3. Methodology), objective p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 4 (3.2. Explicit Action Reasoner), temporal p. 4 (3.2. Explicit Action Reasoner), p. 4 (3.2. Explicit Action Reasoner), p. 7 (4.2. Simulation Experiments), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (4.1. Experimental Setup).
+- **Evidence anchors reviewed:** method p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Implicit Action Reasoner), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 3 (3. Methodology), objective p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 4 (3.2. Explicit Action Reasoner), temporal p. 4 (3.2. Explicit Action Reasoner), p. 4 (3.2. Explicit Action Reasoner), p. 7 (4.2. Simulation Experiments), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (4.1. Experimental Setup).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

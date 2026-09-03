@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3. Approximately solve this constrained optimization | EMPIRICAL / SIMULATION | Though this difference might seem subtle, our experiments demonstrate that it significantly improves the algorithm's performance on larger problems. | p. 6 (3. Approximately solve this constrained optimization) |
 | 3. Approximately solve this constrained optimization | EMPIRICAL / SIMULATION | The rate of improvement in the policy is similar to the empirical FIM, as shown in the experiments. | p. 5 (3. Approximately solve this constrained optimization) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 8.1 Simulated Robotic Locomotion We conducted the robotic locomotion experiments using the MuJoCo simulator (Todorov et al., 2012). | embodiment, simulator version and control stack | p. 6 (3. Can TRPO be used to solve challenging large-scale), p. 6 (1. What are the performance characteristics of the single) |
 | Task/environment | 2D robot models used for locomotion experiments. | reset, timeout, object/scene variation | p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 - **p. 5 / 2 Preliminaries - extractive body cue:** We can greatly reduce the variance of the Q-value differences between rollouts by using the same random number sequence for the noise in each of ...
 - **p. 7 / 3. Can TRPO be used to solve challenging large-scale - extractive body cue:** These results provide empirical evidence that constraining the KL divergence is a more robust way to choose step sizes and make fast, consistent progress, compared ...
 
-- **PDF anchors reviewed:** datasets p. 6 (3. Can TRPO be used to solve challenging large-scale), p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 5 (2 Preliminaries), p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), metrics p. 8 (Figure/Table caption), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 16 (Figure/Table caption), baselines p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 5 (3. Approximately solve this constrained optimization), p. 8 (Figure/Table caption), results p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale).
+- **Evidence anchors reviewed:** datasets p. 6 (3. Can TRPO be used to solve challenging large-scale), p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 5 (2 Preliminaries), p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), metrics p. 8 (Figure/Table caption), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 16 (Figure/Table caption), baselines p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 5 (3. Approximately solve this constrained optimization), p. 8 (Figure/Table caption), results p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption).
+- **Baseline/ablation evidence:** This self-normalized estimator removes the need to use a baseline for the Q-values (note that the gradient is unchanged by adding a constant to the Q-values). (p. 5, 2 Preliminaries).
+- **Failure/negative evidence:** Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to be special limiting cases of an algorithm that optimizes a certain objective ... (p. 8, 9 Discussion).

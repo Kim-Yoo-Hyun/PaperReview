@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fm6Z3wfTae; PDF retrieval source: https://openreview.net/pdf/68e389cf48e82eb16b32f886139baddd9122f43d.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fm6Z3wfTae; PDF retrieval source: https://openreview.net/pdf/68e389cf48e82eb16b32f886139baddd9122f43d.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Real-world Benchmarks - extractive PDF cue:** Spanning both selection and pick-and-place tasks, this benchmark rigorously evaluates whether VAP can reliably identify and manipulate userspecified objects on physical hardware.
-- **p. 6 / 4.2. Real-world Benchmarks - extractive PDF cue:** We construct a real-world benchmark analogous to the simulation structure (Figure 2, bottom).
-- **p. 8 / 5.4. Results on Real-world Benchmark - extractive PDF cue:** We evaluate VAP on a real-world benchmark comprising four selection and four pick-and-place tasks (Figure 5).
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** Performance on the Personalized-SIMPLER benchmark with the Google Robot platform.
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** For pick and pick-and-place tasks, we additionally report Correct Movement Ratio (CMR), the fraction of episodes in which the policy moves the target personal object ...
-- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive PDF cue:** On Personalized-SIMPLER (Google Robot), VAP yields substantial gains in both correct-object interaction (CMR) and task completion (SR).
-- **p. 9 / 5.7. Comparison to Visual Prompting Alternatives - extractive PDF cue:** Within the same frozen VLA, we additionally compare against a broad set of visual prompting strategies adopted in prior robotics work, including opaque masks, bounding ...
-- **p. 9 / 5.6. Efficiency of VAP - extractive PDF cue:** This confirms that VAP enhances performance without compromising the real-time responsiveness of the robotic system.
+- **p. 6 / 4.2. Real-world Benchmarks - extractive body cue:** Spanning both selection and pick-and-place tasks, this benchmark rigorously evaluates whether VAP can reliably identify and manipulate userspecified objects on physical hardware.
+- **p. 6 / 4.2. Real-world Benchmarks - extractive body cue:** We construct a real-world benchmark analogous to the simulation structure (Figure 2, bottom).
+- **p. 8 / 5.4. Results on Real-world Benchmark - extractive body cue:** We evaluate VAP on a real-world benchmark comprising four selection and four pick-and-place tasks (Figure 5).
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** Performance on the Personalized-SIMPLER benchmark with the Google Robot platform.
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** For pick and pick-and-place tasks, we additionally report Correct Movement Ratio (CMR), the fraction of episodes in which the policy moves the target personal object ...
+- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive body cue:** On Personalized-SIMPLER (Google Robot), VAP yields substantial gains in both correct-object interaction (CMR) and task completion (SR).
+- **p. 9 / 5.7. Comparison to Visual Prompting Alternatives - extractive body cue:** Within the same frozen VLA, we additionally compare against a broad set of visual prompting strategies adopted in prior robotics work, including opaque masks, bounding ...
+- **p. 9 / 5.6. Efficiency of VAP - extractive body cue:** This confirms that VAP enhances performance without compromising the real-time responsiveness of the robotic system.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.4. Results on Real-world Benchmark | EMPIRICAL / REAL-ROBOT OR HARDWARE | VAP improves average SR from 18.8% to 58.8%, significantly outperforming soft/hard prompts which remain in the 27.5-31.2% range. | p. 8 (5.4. Results on Real-world Benchmark) |
 | 5.1. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | VAP's modular perception pipeline achieves consistently high success rates, whereas prior methods struggle to personalize. | p. 7 (5.1. Experimental Setup) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Real-world Benchmarks - extractive PDF cue:** Spanning both selection and pick-and-place tasks, this benchmark rigorously evaluates whether VAP can reliably identify and manipulate userspecified objects on physical hardware.
-- **p. 6 / 4.2. Real-world Benchmarks - extractive PDF cue:** We construct a real-world benchmark analogous to the simulation structure (Figure 2, bottom).
-- **p. 8 / 5.4. Results on Real-world Benchmark - extractive PDF cue:** We evaluate VAP on a real-world benchmark comprising four selection and four pick-and-place tasks (Figure 5).
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** Performance on the Personalized-SIMPLER benchmark with the Google Robot platform.
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** For pick and pick-and-place tasks, we additionally report Correct Movement Ratio (CMR), the fraction of episodes in which the policy moves the target personal object ...
-- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive PDF cue:** On Personalized-SIMPLER (Google Robot), VAP yields substantial gains in both correct-object interaction (CMR) and task completion (SR).
-- **p. 9 / 5.7. Comparison to Visual Prompting Alternatives - extractive PDF cue:** Within the same frozen VLA, we additionally compare against a broad set of visual prompting strategies adopted in prior robotics work, including opaque masks, bounding ...
-- **p. 9 / 5.6. Efficiency of VAP - extractive PDF cue:** This confirms that VAP enhances performance without compromising the real-time responsiveness of the robotic system.
+- **p. 6 / 4.2. Real-world Benchmarks - extractive body cue:** Spanning both selection and pick-and-place tasks, this benchmark rigorously evaluates whether VAP can reliably identify and manipulate userspecified objects on physical hardware.
+- **p. 6 / 4.2. Real-world Benchmarks - extractive body cue:** We construct a real-world benchmark analogous to the simulation structure (Figure 2, bottom).
+- **p. 8 / 5.4. Results on Real-world Benchmark - extractive body cue:** We evaluate VAP on a real-world benchmark comprising four selection and four pick-and-place tasks (Figure 5).
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** Performance on the Personalized-SIMPLER benchmark with the Google Robot platform.
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** For pick and pick-and-place tasks, we additionally report Correct Movement Ratio (CMR), the fraction of episodes in which the policy moves the target personal object ...
+- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive body cue:** On Personalized-SIMPLER (Google Robot), VAP yields substantial gains in both correct-object interaction (CMR) and task completion (SR).
+- **p. 9 / 5.7. Comparison to Visual Prompting Alternatives - extractive body cue:** Within the same frozen VLA, we additionally compare against a broad set of visual prompting strategies adopted in prior robotics work, including opaque masks, bounding ...
+- **p. 9 / 5.6. Efficiency of VAP - extractive body cue:** This confirms that VAP enhances performance without compromising the real-time responsiveness of the robotic system.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Manipulating personal objects with VLA. Existing vision-language-action (VLA) models cannot handle per- sonal objects such as <my cup>, because they can only interpret ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of Evaluation Benchmarks. We evaluate in simulation (Personalized-SIMPLER, Personalized-VLABench) and on a real SO-101 robot. In each benchmark, one object is replaced ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. VAP builds a visual memory from a few reference images, grounds the target with frozen detection and segmentation, and prompts a frozen VLA ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Overview of our personalization benchmarks. We report the robot platform, task types, number of tasks and episodes, number of personal object categories, and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2. Each benchmark requires a frozen VLA to act on a user-specific object instance given a few reference im- ages, in the presence of ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Overview of our real-world experimental setup.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Performance on the Personalized-SIMPLER benchmark with the Google Robot platform. Track 1 evaluates visual matching under unseen personal objects, and Track 2 aggregates ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Performance on the Personalized-SIMPLER benchmark using the WidowX platform across four manipulation tasks. For each task, we evaluate 10 runs of 24 episodes ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Manipulating personal objects with VLA. Existing vision-language-action (VLA) models cannot handle per- sonal objects such as <my cup>, because they can only interpret ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Evaluation Benchmarks. We evaluate in simulation (Personalized-SIMPLER, Personalized-VLABench) and on a real SO-101 robot. In each benchmark, one object is replaced ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. VAP builds a visual memory from a few reference images, grounds the target with frozen detection and segmentation, and prompts a frozen VLA ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Overview of our personalization benchmarks. We report the robot platform, task types, number of tasks and episodes, number of personal object categories, and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2. Each benchmark requires a frozen VLA to act on a user-specific object instance given a few reference im- ages, in the presence of ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Overview of our real-world experimental setup.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Performance on the Personalized-SIMPLER benchmark with the Google Robot platform. Track 1 evaluates visual matching under unseen personal objects, and Track 2 aggregates ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Performance on the Personalized-SIMPLER benchmark using the WidowX platform across four manipulation tasks. For each task, we evaluate 10 runs of 24 episodes ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Spanning both selection and pick-and-place tasks, this benchmark rigorously evaluates whether VAP can reliably identify and manipulate userspecified objects on physical hardware. | embodiment, simulator version and control stack | p. 6 (4.2. Real-world Benchmarks), p. 6 (4.2. Real-world Benchmarks) |
 | Task/environment | We construct a real-world benchmark analogous to the simulation structure (Figure 2, bottom). | reset, timeout, object/scene variation | p. 6 (4.2. Real-world Benchmarks), p. 8 (5.4. Results on Real-world Benchmark) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 | Primary metric/result | VAP's modular perception pipeline achieves consistently high success rates, whereas prior methods struggle to personalize. | numeric claim only at cited anchor | p. 7 (5.1. Experimental Setup) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Simulation Benchmarks - extractive PDF cue:** Following original evaluation protocols, we generate 1,685 Fractal episodes across visual-matching and variant-aggregation tracks (enumerating visual perturbations), and use the standard 96 episodes for Bridge ...
-- **p. 6 / 4.1. Simulation Benchmarks - extractive PDF cue:** The benchmark comprises 250 episodes (5 tasks × 50 episodes), providing personalized instructions (e.g., "select my leather bag") and multi-view observations.
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** For each task, we evaluate 10 runs of 24 episodes and report the mean.
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** For each task, we evaluate 10 runs of 50 episodes and report the mean.
-- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive PDF cue:** VAP adds minimal overhead (0.02 s) to the control loop.
-- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive PDF cue:** Phase Component Time (s) Initialization Grounding DINO 0.19 Segmentation & Embedding 0.07 Per Step SAM2 Tracking 0.02 VLA Policy Inference 0.20 surpasses the strongest baseline ...
+- **p. 6 / 4.1. Simulation Benchmarks - extractive body cue:** Following original evaluation protocols, we generate 1,685 Fractal episodes across visual-matching and variant-aggregation tracks (enumerating visual perturbations), and use the standard 96 episodes for Bridge ...
+- **p. 6 / 4.1. Simulation Benchmarks - extractive body cue:** The benchmark comprises 250 episodes (5 tasks × 50 episodes), providing personalized instructions (e.g., "select my leather bag") and multi-view observations.
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** For each task, we evaluate 10 runs of 24 episodes and report the mean.
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** For each task, we evaluate 10 runs of 50 episodes and report the mean.
+- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive body cue:** VAP adds minimal overhead (0.02 s) to the control loop.
+- **p. 8 / 5.3. Results on Simulation Benchmarks - extractive body cue:** Phase Component Time (s) Initialization Grounding DINO 0.19 Segmentation & Embedding 0.07 Per Step SAM2 Tracking 0.02 VLA Policy Inference 0.20 surpasses the strongest baseline ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 42 / Figure/Table caption - extractive PDF cue:** Figure 23. Case 3 (correct prompt): correct instance highlighted but manipulation fails. The mask prompt consistently highlights the intended personal object in all relevant views, ...
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Figure 9. Soft Prompt: relatively consistent localization yet failed execution. Across the rollout, the token-patch similarity heatmaps remain largely concentrated near the intended personal object, ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Manipulating personal objects with VLA. Existing vision-language-action (VLA) models cannot handle per- sonal objects such as <my cup>, because they can only interpret ...
-- **p. 9 / 5.5. Error Case Analysis - extractive PDF cue:** First, the sequential factorization of grounding and manipulation does not itself bound performance: reliable spatio-temporal tracking maintains target identity through several seconds of complete invisibility, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. VAP builds a visual memory from a few reference images, grounds the target with frozen detection and segmentation, and prompts a frozen VLA ...
-- **p. 8 / 5.4. Results on Real-world Benchmark - extractive PDF cue:** Failure analysis across benchmarks.
+- **p. 42 / Figure/Table caption - extractive body cue:** Figure 23. Case 3 (correct prompt): correct instance highlighted but manipulation fails. The mask prompt consistently highlights the intended personal object in all relevant views, ...
+- **p. 25 / Figure/Table caption - extractive body cue:** Figure 9. Soft Prompt: relatively consistent localization yet failed execution. Across the rollout, the token-patch similarity heatmaps remain largely concentrated near the intended personal object, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Manipulating personal objects with VLA. Existing vision-language-action (VLA) models cannot handle per- sonal objects such as <my cup>, because they can only interpret ...
+- **p. 9 / 5.5. Error Case Analysis - extractive body cue:** First, the sequential factorization of grounding and manipulation does not itself bound performance: reliable spatio-temporal tracking maintains target identity through several seconds of complete invisibility, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. VAP builds a visual memory from a few reference images, grounds the target with frozen detection and segmentation, and prompts a frozen VLA ...
+- **p. 8 / 5.4. Results on Real-world Benchmark - extractive body cue:** Failure analysis across benchmarks.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Real-world Benchmarks), p. 6 (4.2. Real-world Benchmarks), p. 8 (5.4. Results on Real-world Benchmark), p. 7 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 8 (5.3. Results on Simulation Benchmarks), metrics p. 45 (Figure/Table caption), p. 7 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 9 (5.5. Error Case Analysis), p. 9 (Figure/Table caption), p. 8 (5.2. Baselines), baselines p. 7 (5.1. Experimental Setup), p. 8 (5.3. Results on Simulation Benchmarks), p. 8 (5.2. Baselines), p. 7 (Figure/Table caption), p. 6 (5. Experiments), p. 19 (Figure/Table caption), results p. 8 (5.4. Results on Real-world Benchmark), p. 7 (5.1. Experimental Setup), p. 8 (5.2. Baselines), p. 7 (5.1. Experimental Setup), p. 9 (5.5. Error Case Analysis), p. 45 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Real-world Benchmarks), p. 6 (4.2. Real-world Benchmarks), p. 8 (5.4. Results on Real-world Benchmark), p. 7 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 8 (5.3. Results on Simulation Benchmarks), metrics p. 45 (Figure/Table caption), p. 7 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 9 (5.5. Error Case Analysis), p. 9 (Figure/Table caption), p. 8 (5.2. Baselines), baselines p. 7 (5.1. Experimental Setup), p. 8 (5.3. Results on Simulation Benchmarks), p. 8 (5.2. Baselines), p. 7 (Figure/Table caption), p. 6 (5. Experiments), p. 19 (Figure/Table caption), results p. 8 (5.4. Results on Real-world Benchmark), p. 7 (5.1. Experimental Setup), p. 8 (5.2. Baselines), p. 7 (5.1. Experimental Setup), p. 9 (5.5. Error Case Analysis), p. 45 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2102.05918; PDF retrieval source: https://arxiv.org/pdf/2102.05918. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2102.05918; PDF retrieval source: https://arxiv.org/pdf/2102.05918. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** After the sweep, the selected hyperparameters are used to train on the combined training and validation splits of 1000 images for each task.
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** Model All tasks Natural Specialized Structured Bit-L 78.72 - - - ALIGN 79.99±0.15 83.38 87.56 73.25 To evaluate on smaller fine-grained classification benchmarks, we adopt ...
-- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Specifically, for Flickr30K, we evaluate on the standard 1K test set, and finetune on the 30k training set.
-- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive PDF cue:** For this purpose, we resort to a much larger dataset than existing ones.
-- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive PDF cue:** The result is a much larger (1.8B image-text pairs) but noisier dataset.
-- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** We evaluate ALIGN on Flickr30K and MSCOCO crossmodal retrieval benchmarks, in both zero-shot and fully fine-tuned settings.
-- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset.
-- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Spearman's R Bootstrap Correlation (×100) on Crisscrossed Captions (CxC) dataset.
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** After the sweep, the selected hyperparameters are used to train on the combined training and validation splits of 1000 images for each task.
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** Model All tasks Natural Specialized Structured Bit-L 78.72 - - - ALIGN 79.99±0.15 83.38 87.56 73.25 To evaluate on smaller fine-grained classification benchmarks, we adopt ...
+- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Specifically, for Flickr30K, we evaluate on the standard 1K test set, and finetune on the 30k training set.
+- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive body cue:** For this purpose, we resort to a much larger dataset than existing ones.
+- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive body cue:** The result is a much larger (1.8B image-text pairs) but noisier dataset.
+- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** We evaluate ALIGN on Flickr30K and MSCOCO crossmodal retrieval benchmarks, in both zero-shot and fully fine-tuned settings.
+- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset.
+- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Spearman's R Bootstrap Correlation (×100) on Crisscrossed Captions (CxC) dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Zero-shot Visual Classification | SYSTEM / EVALUATION SCOPE UNRESOLVED | With frozen features, ALIGN slightly outperforms CLIP and achieves SOTA result of 85.5% top-1 accuracy. | p. 6 (5.2. Zero-shot Visual Classification) |
 | 5.2. Zero-shot Visual Classification | SYSTEM / EVALUATION SCOPE UNRESOLVED | We find that such ensembling gives 2.9% improvement on ImageNet top-1 accuracy. | p. 5 (5.2. Zero-shot Visual Classification) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** After the sweep, the selected hyperparameters are used to train on the combined training and validation splits of 1000 images for each task.
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** Model All tasks Natural Specialized Structured Bit-L 78.72 - - - ALIGN 79.99±0.15 83.38 87.56 73.25 To evaluate on smaller fine-grained classification benchmarks, we adopt ...
-- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Specifically, for Flickr30K, we evaluate on the standard 1K test set, and finetune on the 30k training set.
-- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive PDF cue:** For this purpose, we resort to a much larger dataset than existing ones.
-- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive PDF cue:** The result is a much larger (1.8B image-text pairs) but noisier dataset.
-- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** We evaluate ALIGN on Flickr30K and MSCOCO crossmodal retrieval benchmarks, in both zero-shot and fully fine-tuned settings.
-- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset.
-- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Spearman's R Bootstrap Correlation (×100) on Crisscrossed Captions (CxC) dataset.
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** After the sweep, the selected hyperparameters are used to train on the combined training and validation splits of 1000 images for each task.
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** Model All tasks Natural Specialized Structured Bit-L 78.72 - - - ALIGN 79.99±0.15 83.38 87.56 73.25 To evaluate on smaller fine-grained classification benchmarks, we adopt ...
+- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Specifically, for Flickr30K, we evaluate on the standard 1K test set, and finetune on the 30k training set.
+- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive body cue:** For this purpose, we resort to a much larger dataset than existing ones.
+- **p. 3 / 3. A Large-Scale Noisy Image-Text Dataset - extractive body cue:** The result is a much larger (1.8B image-text pairs) but noisier dataset.
+- **p. 4 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** We evaluate ALIGN on Flickr30K and MSCOCO crossmodal retrieval benchmarks, in both zero-shot and fully fine-tuned settings.
+- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset.
+- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Spearman's R Bootstrap Correlation (×100) on Crisscrossed Captions (CxC) dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. A summary of our method, ALIGN. Visual and language representations are jointly learned from noisy image alt-text data. The representations can be used ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Example image-text pairs randomly sampled from the training dataset of ALIGN. One clearly noisy text annotation is marked in italics. Image-based filtering. Following ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Image-text retrieval results on Flickr30K and MSCOCO datasets (zero-shot and fine-tuned). ALIGN is compared with Image- BERT (Qi et al., 2020), UNITER (Chen ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset. ALIGN is compared with VSE++ (Faghri et al., 2018), VSRN (Li et al., 2019), DEI2T ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 3. Spearman's R Bootstrap Correlation (×100) on Criss- crossed Captions (CxC) dataset. ALIGN is compared with VSE++ (Faghri et al., 2018), VSRN (Li et ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 4. Top-1 Accuracy of zero-shot transfer of ALIGN to image classification on ImageNet and its variants.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 5. ImageNet classification results. ALIGN is compared with WSL (Mahajan et al., 2018), CLIP (Radford et al., 2021), BiT (Kolesnikov et al., 2020), ViT ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 6. VTAB (19 tasks) comparison between ALIGN and BiT-L.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. A summary of our method, ALIGN. Visual and language representations are jointly learned from noisy image alt-text data. The representations can be used ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Example image-text pairs randomly sampled from the training dataset of ALIGN. One clearly noisy text annotation is marked in italics. Image-based filtering. Following ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Image-text retrieval results on Flickr30K and MSCOCO datasets (zero-shot and fine-tuned). ALIGN is compared with Image- BERT (Qi et al., 2020), UNITER (Chen ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset. ALIGN is compared with VSE++ (Faghri et al., 2018), VSRN (Li et al., 2019), DEI2T ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 3. Spearman's R Bootstrap Correlation (×100) on Criss- crossed Captions (CxC) dataset. ALIGN is compared with VSE++ (Faghri et al., 2018), VSRN (Li et ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 4. Top-1 Accuracy of zero-shot transfer of ALIGN to image classification on ImageNet and its variants.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 5. ImageNet classification results. ALIGN is compared with WSL (Mahajan et al., 2018), CLIP (Radford et al., 2021), BiT (Kolesnikov et al., 2020), ViT ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 6. VTAB (19 tasks) comparison between ALIGN and BiT-L.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | After the sweep, the selected hyperparameters are used to train on the combined training and validation splits of 1000 images for each task. | embodiment, simulator version and control stack | p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification) |
 | Task/environment | Model All tasks Natural Specialized Structured Bit-L 78.72 - - - ALIGN 79.99±0.15 83.38 87.56 73.25 To evaluate on smaller fine-grained classification benchmarks, we ... | reset, timeout, object/scene variation | p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 | Primary metric/result | We find that such ensembling gives 2.9% improvement on ImageNet top-1 accuracy. | numeric claim only at cited anchor | p. 5 (5.2. Zero-shot Visual Classification) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 5. Experiments and Results - extractive PDF cue:** For BERT we use wordpiece sequence of maximum 64 tokens since the input texts are no longer than 20 unigrams.
-- **p. 4 / 5. Experiments and Results - extractive PDF cue:** The learning rate is warmed up linearly to 1e-3 from zero in 10k steps, and then linearly decay to zero in 1.2M steps (∼12 epochs).
-- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive PDF cue:** Model STS SIS SITS Mean Avg avg ± std avg ± std avg ± std VSE++ 74.4±0.4 73.3±0.9 55.2±1.5 67.6 VSRN 73.0±0.4 70.1±1.0 60.4±1.3 67.8 ...
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** In both stages of training, we use a global batch size of 1024, SGD optimizer with momentum 0.9, and learning rate decayed every 30 epochs ...
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** When fine-tuning all layers with use the initial learning rate of 0.01, and use 10x smaller learning rate on the backbone network compared to the ...
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** In VTAB eval, we follow a hyper-parameter sweep as shown in the Appendix I in (Zhai et al., 2019) with 50 trials for each task.
+- **p. 4 / 5. Experiments and Results - extractive body cue:** For BERT we use wordpiece sequence of maximum 64 tokens since the input texts are no longer than 20 unigrams.
+- **p. 4 / 5. Experiments and Results - extractive body cue:** The learning rate is warmed up linearly to 1e-3 from zero in 10k steps, and then linearly decay to zero in 1.2M steps (∼12 epochs).
+- **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Model STS SIS SITS Mean Avg avg ± std avg ± std avg ± std VSE++ 74.4±0.4 73.3±0.9 55.2±1.5 67.6 VSRN 73.0±0.4 70.1±1.0 60.4±1.3 67.8 ...
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** In both stages of training, we use a global batch size of 1024, SGD optimizer with momentum 0.9, and learning rate decayed every 30 epochs ...
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** When fine-tuning all layers with use the initial learning rate of 0.01, and use 10x smaller learning rate on the backbone network compared to the ...
+- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** In VTAB eval, we follow a hyper-parameter sweep as shown in the Appendix I in (Zhai et al., 2019) with 50 trials for each task.
 
 ## Generalization and Failure Cases
 
@@ -162,10 +162,10 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 7. Analysis of Learned Embeddings - extractive PDF cue:** We show that linear relationships between + "red" + "forest" + "desert" + "orange" + "blue" + "purple" + "from distance" + "beige" + "red" ...
-- **p. 5 / 5.2. Zero-shot Visual Classification - extractive PDF cue:** Similar to CLIP, ALIGN shows great robustness on classification tasks with different image distributions.
+- **p. 8 / 7. Analysis of Learned Embeddings - extractive body cue:** We show that linear relationships between + "red" + "forest" + "desert" + "orange" + "blue" + "purple" + "from distance" + "beige" + "red" ...
+- **p. 5 / 5.2. Zero-shot Visual Classification - extractive body cue:** Similar to CLIP, ALIGN shows great robustness on classification tasks with different image distributions.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 3 (3. A Large-Scale Noisy Image-Text Dataset), p. 3 (3. A Large-Scale Noisy Image-Text Dataset), p. 4 (5.1. Image-Text Matching & Retrieval), metrics p. 5 (5.2. Zero-shot Visual Classification), p. 5 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 8 (Figure/Table caption), p. 4 (5.1. Image-Text Matching & Retrieval), baselines p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval), results p. 6 (5.2. Zero-shot Visual Classification), p. 5 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 4 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval).
+- **Evidence anchors reviewed:** datasets p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 3 (3. A Large-Scale Noisy Image-Text Dataset), p. 3 (3. A Large-Scale Noisy Image-Text Dataset), p. 4 (5.1. Image-Text Matching & Retrieval), metrics p. 5 (5.2. Zero-shot Visual Classification), p. 5 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 8 (Figure/Table caption), p. 4 (5.1. Image-Text Matching & Retrieval), baselines p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval), results p. 6 (5.2. Zero-shot Visual Classification), p. 5 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 4 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

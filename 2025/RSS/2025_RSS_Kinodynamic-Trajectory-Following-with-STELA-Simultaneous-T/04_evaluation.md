@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p008.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p008.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p008.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p008.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no ... | p. 11 (Figure/Table caption) |
 | A. Experimemal setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | The low= cost trajectories returned from the SBMP are likely, however, to be in close proximity to obstacles, which makes following them susceptible to ... | p. 12 (A. Experimemal setup) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Given the identified robot model /, (1, us). an environment ‘map that identifies obstacle regions %, and a motion planning query specifying 9 and ... | embodiment, simulator version and control stack | p. 5 (V. SIMULTANEOUS TRAIECTORY ESTIMATION), p. 9 (A. Experimemal setup) |
 | Task/environment | (Right) Observations "2 ate camera estimates of the robot's pose with the highest level of ‘observation noise (05) chosen to match the real-world setup. | reset, timeout, object/scene variation | p. 9 (A. Experimemal setup), p. 12 (A. Experimemal setup) |
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 - **p. 11 / A. Experimemal setup - extractive body cue:** 13 for both STEZA and SCATE. e OPEN-LOOP showeases the effects of noise on the system's as/ 2? dynamics, resulting in collisions as soon as ...
 - **p. 13 / Figure/Table caption - extractive body cue:** Fig. 14: The effects of state-space noise in collision on the Forest environment for the Open-loop baseline (left) and the proposed STELA (middle). The top ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. SIMULTANEOUS TRAIECTORY ESTIMATION), p. 9 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 8 (A. Experimemal setup), p. 5 (B. Trajectory Optimization as a Motion Planner), p. 6 (B. The STELA Factor Graph), metrics p. 11 (Figure/Table caption), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 12 (A. Experimemal setup), baselines p. 10 (A. Experimemal setup), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 9 (A. Experimemal setup), p. 9 (A. Experimemal setup), p. 10 (A. Experimemal setup), results p. 11 (Figure/Table caption), p. 12 (A. Experimemal setup), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 10 (A. Experimemal setup).
+- **Evidence anchors reviewed:** datasets p. 5 (V. SIMULTANEOUS TRAIECTORY ESTIMATION), p. 9 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 8 (A. Experimemal setup), p. 5 (B. Trajectory Optimization as a Motion Planner), p. 6 (B. The STELA Factor Graph), metrics p. 11 (Figure/Table caption), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 12 (A. Experimemal setup), baselines p. 10 (A. Experimemal setup), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 9 (A. Experimemal setup), p. 9 (A. Experimemal setup), p. 10 (A. Experimemal setup), results p. 11 (Figure/Table caption), p. 12 (A. Experimemal setup), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 10 (A. Experimemal setup).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption).
+- **Metric evidence:** Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption).
+- **Baseline/ablation evidence:** The baseline comparison point is open-loop execution of the desired trajectory. (p. 10, A. Experimemal setup).
+- **Failure/negative evidence:** The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System Exception, i. the accumulation of numerical errors, which does not occur for ... (p. 12, A. Experimemal setup).

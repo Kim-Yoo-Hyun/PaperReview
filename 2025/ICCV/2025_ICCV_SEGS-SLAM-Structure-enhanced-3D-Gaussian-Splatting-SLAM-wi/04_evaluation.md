@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** The top scene is office2 from the Replica datasets, and the bottom is fr3/office from TUM RGB-D datasets.
-- **p. 6 / 5.2. Results Analysis - extractive PDF cue:** The TUM RGB-D dataset presents a greater challenge compared with the Replica dataset, with highly cluttered scene structures and substantial lighting variations.
-- **p. 7 / 5.2. Results Analysis - extractive PDF cue:** The top scene is room1 from the Replica dataset, and the bottom is V201 from the EuRoC MAV dataset.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Replica is an easier dataset, in which PSNR already exceeds 37 without AfME, indicating that scene is well-reconstructed.
-- **p. 5 / 5.1. Experiment Setup - extractive PDF cue:** We use the images and poses of keyframes as the training set, while the remaining images and poses serve as the test set.
-- **p. 7 / 5.2. Results Analysis - extractive PDF cue:** Camera Type RGB-D Monocular Stereo Datasets Replica TUM R Avg.
-- **p. 8 / 5.4. Limitations - extractive PDF cue:** Currently, AFME is only capable of handling static scenes.
-- **p. 7 / 5.2. Results Analysis - extractive PDF cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** The top scene is office2 from the Replica datasets, and the bottom is fr3/office from TUM RGB-D datasets.
+- **p. 6 / 5.2. Results Analysis - extractive body cue:** The TUM RGB-D dataset presents a greater challenge compared with the Replica dataset, with highly cluttered scene structures and substantial lighting variations.
+- **p. 7 / 5.2. Results Analysis - extractive body cue:** The top scene is room1 from the Replica dataset, and the bottom is V201 from the EuRoC MAV dataset.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Replica is an easier dataset, in which PSNR already exceeds 37 without AfME, indicating that scene is well-reconstructed.
+- **p. 5 / 5.1. Experiment Setup - extractive body cue:** We use the images and poses of keyframes as the training set, while the remaining images and poses serve as the test set.
+- **p. 7 / 5.2. Results Analysis - extractive body cue:** Camera Type RGB-D Monocular Stereo Datasets Replica TUM R Avg.
+- **p. 8 / 5.4. Limitations - extractive body cue:** Currently, AFME is only capable of handling static scenes.
+- **p. 7 / 5.2. Results Analysis - extractive body cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Results Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | The best results are marked as best score , second best score and third best score . '-' denotes that the system does not ... | p. 7 (5.2. Results Analysis) |
 | 5.2. Results Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, where SEGS-SLAM significantly outperforms comparison methods, achieving the highest average rendering quality on both TUM RGB-D and Replica datasets. | p. 6 (5.2. Results Analysis) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** The top scene is office2 from the Replica datasets, and the bottom is fr3/office from TUM RGB-D datasets.
-- **p. 6 / 5.2. Results Analysis - extractive PDF cue:** The TUM RGB-D dataset presents a greater challenge compared with the Replica dataset, with highly cluttered scene structures and substantial lighting variations.
-- **p. 7 / 5.2. Results Analysis - extractive PDF cue:** The top scene is room1 from the Replica dataset, and the bottom is V201 from the EuRoC MAV dataset.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Replica is an easier dataset, in which PSNR already exceeds 37 without AfME, indicating that scene is well-reconstructed.
-- **p. 5 / 5.1. Experiment Setup - extractive PDF cue:** We use the images and poses of keyframes as the training set, while the remaining images and poses serve as the test set.
-- **p. 7 / 5.2. Results Analysis - extractive PDF cue:** Camera Type RGB-D Monocular Stereo Datasets Replica TUM R Avg.
-- **p. 8 / 5.4. Limitations - extractive PDF cue:** Currently, AFME is only capable of handling static scenes.
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** The top scene is office2 from the Replica datasets, and the bottom is fr3/office from TUM RGB-D datasets.
+- **p. 6 / 5.2. Results Analysis - extractive body cue:** The TUM RGB-D dataset presents a greater challenge compared with the Replica dataset, with highly cluttered scene structures and substantial lighting variations.
+- **p. 7 / 5.2. Results Analysis - extractive body cue:** The top scene is room1 from the Replica dataset, and the bottom is V201 from the EuRoC MAV dataset.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Replica is an easier dataset, in which PSNR already exceeds 37 without AfME, indicating that scene is well-reconstructed.
+- **p. 5 / 5.1. Experiment Setup - extractive body cue:** We use the images and poses of keyframes as the training set, while the remaining images and poses serve as the test set.
+- **p. 7 / 5.2. Results Analysis - extractive body cue:** Camera Type RGB-D Monocular Stereo Datasets Replica TUM R Avg.
+- **p. 8 / 5.4. Limitations - extractive body cue:** Currently, AFME is only capable of handling static scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our method SEGS-SLAM outperforms SOTA methods (GS-ICP SLAM [11], Photo-SLAM [14], SplaTAM [16], MonoGS [26]) in photorealistic mapping quality across monocular, stereo, and ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of our method. Our method supports monocular, stereo, and RGB-D cameras. The input image stream is processed by the localization and geometric ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Visualization of the Photo-SLAM's 3D Gaussians and of our method's anchor points using only SEPM after 30k iterations. SEPM enhances the underlying structure ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. AE [25] and the proposed AfME. The differences be- tween them are: (1) AE uses image indexes as input, whereas AfME leverages camera ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. The visualization of AfME controlling appearance. The rendering viewpoints in the top three images above are same, and only the input to AfME ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative evaluation of our method compared to SOTA methods for RGB-D camera on Replica and TUM RGB-D datasets. Best results are marked as ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. We show comparisons of ours to SOTA methods for RGB-D camera. The top scene is office2 from the Replica datasets, and the bottom ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative evaluation of our method compared to SOTA methods for Monocular (Mono) and Stereo cameras on Replica, TUM RGB-D, and EuRoC MAV datasets. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our method SEGS-SLAM outperforms SOTA methods (GS-ICP SLAM [11], Photo-SLAM [14], SplaTAM [16], MonoGS [26]) in photorealistic mapping quality across monocular, stereo, and ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our method. Our method supports monocular, stereo, and RGB-D cameras. The input image stream is processed by the localization and geometric ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Visualization of the Photo-SLAM's 3D Gaussians and of our method's anchor points using only SEPM after 30k iterations. SEPM enhances the underlying structure ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. AE [25] and the proposed AfME. The differences be- tween them are: (1) AE uses image indexes as input, whereas AfME leverages camera ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. The visualization of AfME controlling appearance. The rendering viewpoints in the top three images above are same, and only the input to AfME ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative evaluation of our method compared to SOTA methods for RGB-D camera on Replica and TUM RGB-D datasets. Best results are marked as ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. We show comparisons of ours to SOTA methods for RGB-D camera. The top scene is office2 from the Replica datasets, and the bottom ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative evaluation of our method compared to SOTA methods for Monocular (Mono) and Stereo cameras on Replica, TUM RGB-D, and EuRoC MAV datasets. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The top scene is office2 from the Replica datasets, and the bottom is fr3/office from TUM RGB-D datasets. | embodiment, simulator version and control stack | p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis) |
 | Task/environment | The TUM RGB-D dataset presents a greater challenge compared with the Replica dataset, with highly cluttered scene structures and substantial lighting variations. | reset, timeout, object/scene variation | p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis) |
@@ -120,8 +120,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 | Primary metric/result | 1, where SEGS-SLAM significantly outperforms comparison methods, achieving the highest average rendering quality on both TUM RGB-D and Replica datasets. | numeric claim only at cited anchor | p. 6 (5.2. Results Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5.1. Experiment Setup - extractive PDF cue:** The machine is equipped with an NVIDIA RTX 4090 GPU and a Ryzen 5995WX CPU.
-- **p. 8 / 5.4. Limitations - extractive PDF cue:** Additionally, while our method achieves real-time tracking and rendering at 17 and 400 FPS, respectively, it exhibits reduced rendering speed due to the increased number ...
+- **p. 5 / 5.1. Experiment Setup - extractive body cue:** The machine is equipped with an NVIDIA RTX 4090 GPU and a Ryzen 5995WX CPU.
+- **p. 8 / 5.4. Limitations - extractive body cue:** Additionally, while our method achieves real-time tracking and rendering at 17 and 400 FPS, respectively, it exhibits reduced rendering speed due to the increased number ...
 
 ## Generalization and Failure Cases
 
@@ -155,11 +155,11 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5.4. Limitations - extractive PDF cue:** One limitation of our method is that a poorly structured point cloud leads to a decline in photorealistic mapping quality.
-- **p. 6 / 5.1. Experiment Setup - extractive PDF cue:** GS-SLAM∗denotes the result of GS-SLAM is taken from [42], all others are obtained in our experiments. '-' denotes the system does not provide valid results.
-- **p. 7 / 5.2. Results Analysis - extractive PDF cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
+- **p. 8 / 5.4. Limitations - extractive body cue:** One limitation of our method is that a poorly structured point cloud leads to a decline in photorealistic mapping quality.
+- **p. 6 / 5.1. Experiment Setup - extractive body cue:** GS-SLAM∗denotes the result of GS-SLAM is taken from [42], all others are obtained in our experiments. '-' denotes the system does not provide valid results.
+- **p. 7 / 5.2. Results Analysis - extractive body cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 5 (5.1. Experiment Setup), p. 7 (5.2. Results Analysis), metrics p. 7 (5.2. Results Analysis), p. 2 (3. Extensive evaluations on various public datasets demon), p. 6 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 6 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), baselines p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 1 (Figure/Table caption), p. 5 (5.1. Experiment Setup), results p. 7 (5.2. Results Analysis), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 2 (3. Extensive evaluations on various public datasets demon), p. 8 (5.3. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 5 (5.1. Experiment Setup), p. 7 (5.2. Results Analysis), metrics p. 7 (5.2. Results Analysis), p. 2 (3. Extensive evaluations on various public datasets demon), p. 6 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 6 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), baselines p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 1 (Figure/Table caption), p. 5 (5.1. Experiment Setup), results p. 7 (5.2. Results Analysis), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 2 (3. Extensive evaluations on various public datasets demon), p. 8 (5.3. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

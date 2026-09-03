@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Main Experiment Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. | p. 6 (5.2. Main Experiment Results) |
 | 5.2. Main Experiment Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | The ACP achieves a success rate of only 16.0%, primarily due to its limited generalization capabilities. | p. 7 (5.2. Main Experiment Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our experimental benchmark consists of 5 contact-rich manipulation tasks within the proposed ForceVLA2-Dataset: Press the bottle, Clean the vase, Clean the board, Retrieve the ... | embodiment, simulator version and control stack | p. 6 (5.1. Experiment Setting), p. 5 (4. ForceVLA2-Dataset) |
 | Task/environment | Demonstrations were collected using a 7-DOF Flexiv Rizon 4s robotic arm equipped with a DH Robotics AG-95 adaptive gripper. | reset, timeout, object/scene variation | p. 5 (4. ForceVLA2-Dataset), p. 5 (4. ForceVLA2-Dataset) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 - **p. 8 / 5.2. Main Experiment Results - extractive body cue:** In contrast, other VLAs slowly chase the new EE 6D pose, leading to failure to maintain stable contact.
 - **p. 7 / 5.2. Main Experiment Results - extractive body cue:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experiment Setting), p. 5 (4. ForceVLA2-Dataset), p. 5 (4. ForceVLA2-Dataset), p. 6 (4. ForceVLA2-Dataset), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), metrics p. 6 (5.2. Main Experiment Results), p. 6 (5.1. Experiment Setting), p. 7 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), baselines p. 6 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), results p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 6 (5. Experiments), p. 8 (5.2. Main Experiment Results), p. 8 (5.3. Ablation Study), p. 7 (5.2. Main Experiment Results).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experiment Setting), p. 5 (4. ForceVLA2-Dataset), p. 5 (4. ForceVLA2-Dataset), p. 6 (4. ForceVLA2-Dataset), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), metrics p. 6 (5.2. Main Experiment Results), p. 6 (5.1. Experiment Setting), p. 7 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), baselines p. 6 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), results p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 6 (5. Experiments), p. 8 (5.2. Main Experiment Results), p. 8 (5.3. Ablation Study), p. 7 (5.2. Main Experiment Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Entries indicate success rate (%). gray : baseline results. (p. 8, 5.2. Main Experiment Results).
+- **Metric evidence:** 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. (p. 6, 5.2. Main Experiment Results).
+- **Baseline/ablation evidence:** 1, ForceVLA2 significantly outperforms all baselines, achieving a 66% average success rate across all tasks. (p. 6, 5.2. Main Experiment Results).
+- **Failure/negative evidence:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive tasks such as object search, ... (p. 7, 5.2. Main Experiment Results).

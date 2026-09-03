@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors.
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG.
-- **p. 7 / 4.3. Analysis of Anchors - extractive PDF cue:** Performance (%) of SRD module improves MVT [18], BUTD-DETR [21] and EDA [42] on ScanRefer [6] dataset.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** LLM decoupler Accuracy OpenChat [40] 69.6% DeepSeek-R1 [28] 69.9% Qwen-Plus [46] 70.5% Qwen-Turbo [46] 70.7% views, performance improves from 64.4% (1 view) to 67.7% (2 ...
-- **p. 7 / 4.3. Analysis of Anchors - extractive PDF cue:** Notably, our approach achieves higher accuracy in multianchor queries than in single-anchor ones, demonstrating that when properly processed, multi-anchor information enhances 3DVG performance rather than ...
-- **p. 7 / 4.3. Analysis of Anchors - extractive PDF cue:** The results presented in Table 2 underscore the effectiveness of our approach, particularly in multi-anchor scenarios, where our method successfully disentangles spatial relationships by explicitly ...
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors.
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG.
+- **p. 7 / 4.3. Analysis of Anchors - extractive body cue:** Performance (%) of SRD module improves MVT [18], BUTD-DETR [21] and EDA [42] on ScanRefer [6] dataset.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** LLM decoupler Accuracy OpenChat [40] 69.6% DeepSeek-R1 [28] 69.9% Qwen-Plus [46] 70.5% Qwen-Turbo [46] 70.7% views, performance improves from 64.4% (1 view) to 67.7% (2 ...
+- **p. 7 / 4.3. Analysis of Anchors - extractive body cue:** Notably, our approach achieves higher accuracy in multianchor queries than in single-anchor ones, demonstrating that when properly processed, multi-anchor information enhances 3DVG performance rather than ...
+- **p. 7 / 4.3. Analysis of Anchors - extractive body cue:** The results presented in Table 2 underscore the effectiveness of our approach, particularly in multi-anchor scenarios, where our method successfully disentangles spatial relationships by explicitly ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. 3D Visual Grounding Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Quantitative results on Nr3D (Table 1) show that ViewSRD achieves a 5.2% accuracy gain over the best prior method, CoT3DRef, under identical settings. | p. 7 (4.2. 3D Visual Grounding Results) |
 | 4.3. Analysis of Anchors | EMPIRICAL / SOURCE-REPORTED EVALUATION | Notably, our approach achieves higher accuracy in multianchor queries than in single-anchor ones, demonstrating that when properly processed, multi-anchor information enhances 3DVG performance rather ... | p. 7 (4.3. Analysis of Anchors) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors.
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG.
-- **p. 7 / 4.3. Analysis of Anchors - extractive PDF cue:** Performance (%) of SRD module improves MVT [18], BUTD-DETR [21] and EDA [42] on ScanRefer [6] dataset.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors.
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG.
+- **p. 7 / 4.3. Analysis of Anchors - extractive body cue:** Performance (%) of SRD module improves MVT [18], BUTD-DETR [21] and EDA [42] on ScanRefer [6] dataset.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) Previous 3DVG methods struggle with ambiguities from complex multi-anchor queries and perspective shifts. (b) ViewSRD addresses this by using the SRD module ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of ViewSRD. We begin by employing the Simple Relation Decoupling (SRD) module to decompose complex multi- anchor queries into multiple simpler single-anchor ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of the SRD Module pipeline. tiple simpler single-anchor queries, enhancing the text en- coder's ability to comprehend and process relational infor- mation. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization Results of the 3D Visual Grounding Results. For the presented 3D scenes, we utilize green, red, blue, and yellow boxes to represent ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Performance (%) comparison on Nr3D [1] and Sr3D [1].
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Performance (%) comparison on Nr3D [1] with new cri- terions Multi-Anc and Single-Anc.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Performance (%) of SRD module improves MVT [18], BUTD-DETR [21] and EDA [42] on ScanRefer [6] dataset.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation studies on Nr3D [1]. All components contribute to final performance(%). Component Overall Easy Hard View Dep. View Indep.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Previous 3DVG methods struggle with ambiguities from complex multi-anchor queries and perspective shifts. (b) ViewSRD addresses this by using the SRD module ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of ViewSRD. We begin by employing the Simple Relation Decoupling (SRD) module to decompose complex multi- anchor queries into multiple simpler single-anchor ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Overview of the SRD Module pipeline. tiple simpler single-anchor queries, enhancing the text en- coder's ability to comprehend and process relational infor- mation. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Visualization Results of the 3D Visual Grounding Results. For the presented 3D scenes, we utilize green, red, blue, and yellow boxes to represent ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Performance (%) comparison on Nr3D [1] and Sr3D [1].
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Performance (%) comparison on Nr3D [1] with new cri- terions Multi-Anc and Single-Anc.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Performance (%) of SRD module improves MVT [18], BUTD-DETR [21] and EDA [42] on ScanRefer [6] dataset.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation studies on Nr3D [1]. All components contribute to final performance(%). Component Overall Easy Hard View Dep. View Indep.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors. | embodiment, simulator version and control stack | p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings) |
 | Task/environment | ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG. | reset, timeout, object/scene variation | p. 6 (4.1. Experiment Settings), p. 7 (4.3. Analysis of Anchors) |
@@ -117,9 +117,9 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 | Primary metric/result | Notably, our approach achieves higher accuracy in multianchor queries than in single-anchor ones, demonstrating that when properly processed, multi-anchor information enhances 3DVG performance rather ... | numeric claim only at cited anchor | p. 7 (4.3. Analysis of Anchors) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors.
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG.
-- **p. 6 / 4.1. Experiment Settings - extractive PDF cue:** All experiments are implemented in PyTorch and run on a single RTX 4090 GPU.
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** Nr3D [1] contains 45,503 human utterances referencing 707 indoor scenes from ScanNet [10], covering 76 object categories with multiple same-class distractors.
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** ScanRefer [6] provides 51,583 free-form descriptions for 11,046 objects across 800 ScanNet scenes, incorporating spatial and attribute-level references to support 3DVG.
+- **p. 6 / 4.1. Experiment Settings - extractive body cue:** All experiments are implemented in PyTorch and run on a single RTX 4090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -151,12 +151,12 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** While the decomposition into overlapping relations does not degrade performance, it diminishes the intended benefits of simplification.
-- **p. 7 / 4.2. 3D Visual Grounding Results - extractive PDF cue:** These results confirm the robustness and generalizability of our approach across diverse scenario.
-- **p. 7 / 4.2. 3D Visual Grounding Results - extractive PDF cue:** In contrast, ViewSRD correctly grounds targets by decomposing complex queries and leveraging robust spatial relationships between targetanchor pairs.
+- **p. 8 / 5. Conclusion - extractive body cue:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
+- **p. 8 / 5. Conclusion - extractive body cue:** While the decomposition into overlapping relations does not degrade performance, it diminishes the intended benefits of simplification.
+- **p. 7 / 4.2. 3D Visual Grounding Results - extractive body cue:** These results confirm the robustness and generalizability of our approach across diverse scenario.
+- **p. 7 / 4.2. 3D Visual Grounding Results - extractive body cue:** In contrast, ViewSRD correctly grounds targets by decomposing complex queries and leveraging robust spatial relationships between targetanchor pairs.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), metrics p. 8 (4.5. Ablation Study), p. 7 (4.3. Analysis of Anchors), p. 7 (4.3. Analysis of Anchors), p. 6 (4.1. Experiment Settings), p. 8 (4.5. Ablation Study), p. 1 (Figure/Table caption), baselines p. 6 (4.2. 3D Visual Grounding Results), p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.4. SRD Enhances Other 3DVG Methods), p. 8 (4.5. Ablation Study), results p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), metrics p. 8 (4.5. Ablation Study), p. 7 (4.3. Analysis of Anchors), p. 7 (4.3. Analysis of Anchors), p. 6 (4.1. Experiment Settings), p. 8 (4.5. Ablation Study), p. 1 (Figure/Table caption), baselines p. 6 (4.2. 3D Visual Grounding Results), p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.4. SRD Enhances Other 3DVG Methods), p. 8 (4.5. Ablation Study), results p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

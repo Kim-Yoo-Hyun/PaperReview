@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1804.02717; PDF retrieval source: https://arxiv.org/pdf/1804.02717. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1804.02717; PDF retrieval source: https://arxiv.org/pdf/1804.02717. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 10 RESULTS | EMPIRICAL / SIMULATION | The performance achieved by the Atlas policies are comparable to those achieved by the humanoid. | p. 12 (10 RESULTS) |
 | 10 RESULTS | EMPIRICAL / SIMULATION | Success rate of policies trained with the imitation or task objectives disabled. | p. 11 (10 RESULTS) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 12 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (1
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Each environment is denoted by "Character: Skill - Task". | embodiment, simulator version and control stack | p. 10 (10 RESULTS), p. 10 (10 RESULTS) |
 | Task/environment | The weights for the imitation and task objectives are set to ωI = 0.7 and ωG = 0.3 for all tasks. | reset, timeout, object/scene variation | p. 10 (10 RESULTS), p. 11 (10 RESULTS) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 12 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (1
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Highly dynamic skills learned by imitating reference motion capture clips using our method, executed by physically simulated characters. Left: Humanoid character performing a ...
 - **p. 12 / 10 RESULTS - extractive body cue:** To evaluate our framework's robustness to these discrepancies, we trained policies to perform similar skills with different character models, environments, and physics.
 
-- **PDF anchors reviewed:** datasets p. 10 (10 RESULTS), p. 10 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (10 RESULTS), p. 12 (10 RESULTS), p. 12 (10 RESULTS), metrics p. 11 (10 RESULTS), p. 11 (10 RESULTS), p. 10 (10 RESULTS), p. 10 (10 RESULTS), p. 12 (10 RESULTS), p. 12 (10 RESULTS), baselines p. 11 (10 RESULTS), p. 12 (10 RESULTS), p. 10 (10 RESULTS), p. 11 (10 RESULTS), p. 12 (10 RESULTS), results p. 12 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (10 RESULTS), p. 12 (10 RESULTS), p. 10 (10 RESULTS), p. 10 (10 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 10 (10 RESULTS), p. 10 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (10 RESULTS), p. 12 (10 RESULTS), p. 12 (10 RESULTS), metrics p. 11 (10 RESULTS), p. 11 (10 RESULTS), p. 10 (10 RESULTS), p. 10 (10 RESULTS), p. 12 (10 RESULTS), p. 12 (10 RESULTS), baselines p. 11 (10 RESULTS), p. 12 (10 RESULTS), p. 10 (10 RESULTS), p. 11 (10 RESULTS), p. 12 (10 RESULTS), results p. 12 (10 RESULTS), p. 11 (10 RESULTS), p. 11 (10 RESULTS), p. 12 (10 RESULTS), p. 10 (10 RESULTS), p. 10 (10 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Similarly, for the strike task, the policy trained with both objectives successfully hits 99% of the targets, while the policy trained only to imitate the reference motion has a success ... (p. 11, 10 RESULTS).
+- **Metric evidence:** Performance is measured by the average return normalized by the minimum and maximum possible return per episode. (p. 10, 10 RESULTS).
+- **Baseline/ablation evidence:** The task is left unspecified for policies that are trained solely to imitate a reference motion without additional task objectives. (p. 10, 10 RESULTS).
+- **Failure/negative evidence:** Since the motion is highly sensitive to the initial conditions at takeoff, many strategies will result in failure. (p. 6, 4 BACKGROUND).

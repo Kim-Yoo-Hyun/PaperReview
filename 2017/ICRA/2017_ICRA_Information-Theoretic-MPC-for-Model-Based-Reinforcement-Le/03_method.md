@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/7989202/; PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/7989202/; PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -31,7 +31,7 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / error representation | motion·force 목표를 제어 error로 바꾼다 | joint/task state, reference, wrench | task frame, Jacobian, impedance, selection 또는 error coordinates를 구성 | desired task command | The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking. | p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL) |
 | Dynamics / constraint solve | 목표를 feasible actuator command로 바꾼다 | error, model, constraints | inverse dynamics, QP, MPC, operational mapping 또는 feedback law를 계산 | torque, force, velocity 또는 position command | The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur ... | p. 2 (II. MODEL PREDICTIVE CONTROL) |
@@ -69,9 +69,9 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value not recovered from the selected body cues. | The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. | episode/sequence/action-chunk boundary |
+| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value was not selected from the PDF body. | The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. | episode/sequence/action-chunk boundary |
 | Rate / latency | sensor/actuator control tick마다 feedback solve; numeric rate는 paper-specific. | Model predictive control (MPC) or receding horizon control tackles this problem by relying on online optimization of the cost function and is ... | Hz/fps, inference time and control rate |
-| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not recovered | window and reset |
+| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -116,8 +116,17 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), objective p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), temporal p. 6 (VI. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (III. INFORMATION THEORETIC CONTROL), p. 5 (IV. MPC WITH NEURAL NETWORK DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (II. MODEL PREDICTIVE CONTROL).
+- **Evidence anchors reviewed:** method p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), objective p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), temporal p. 6 (VI. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (III. INFORMATION THEORETIC CONTROL), p. 5 (IV. MPC WITH NEURAL NETWORK DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (II. MODEL PREDICTIVE CONTROL).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking. (p. 2, II. MODEL PREDICTIVE CONTROL).
+- **Objective/update evidence:** The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur in real time. (p. 2, II. MODEL PREDICTIVE CONTROL).
+- **Temporal/runtime evidence:** The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. (p. 6, VI. EXPERIMENTAL RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

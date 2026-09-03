@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error ... | p. 7 (Figure/Table caption) |
 | C. Dataset | BENCHMARK / DATASET | 11, 13, 5, 49) and (2) bi level planning that first generates high-level plans (typically subgoals), then compute and execute the low-level action plans ... | p. 6 (C. Dataset) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. | embodiment, simulator version and control stack | p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 5 (C. Dataset) |
 | Task/environment | Each episode contains an observation set with different modslities, an expert action trajectory, a natural language description of the overall task, referred to as ... | reset, timeout, object/scene variation | p. 5 (C. Dataset), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot) |
@@ -154,7 +154,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 - **p. 2 / A. Instruction Following Benchmarks for Table-Top Robot - extractive body cue:** For instance, CALVIN incorporates spatial semantics but lacks explicit partlevel semantics, treating components like a "door handle as standalone objects rather than parts of a ...
 - **p. 10 / V. Discussion - extractive body cue:** However, VLM-based planners can still fail during task planning, particularly in tasks that require a long chain of, skill instructions (e.., tasks in Test 4).
 
-- **PDF anchors reviewed:** datasets p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 5 (C. Dataset), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 6 (C. Dataset), p. 5 (C. Dataset), p. 6 (C. Dataset), metrics p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 6 (C. Dataset), p. 1 (Figure/Table caption), p. 5 (C. Dataset), baselines p. 6 (C. Dataset), p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), results p. 7 (Figure/Table caption), p. 6 (C. Dataset), p. 6 (C. Dataset), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 5 (C. Dataset), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 6 (C. Dataset), p. 5 (C. Dataset), p. 6 (C. Dataset), metrics p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 6 (C. Dataset), p. 1 (Figure/Table caption), p. 5 (C. Dataset), baselines p. 6 (C. Dataset), p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), results p. 7 (Figure/Table caption), p. 6 (C. Dataset), p. 6 (C. Dataset), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars denote the standard errors calculated ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. (p. 2, A. Instruction Following Benchmarks for Table-Top Robot).
+- **Baseline/ablation evidence:** Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. (p. 2, A. Instruction Following Benchmarks for Table-Top Robot).
+- **Failure/negative evidence:** The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).

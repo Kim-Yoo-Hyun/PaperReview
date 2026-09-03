@@ -35,17 +35,18 @@
 | Claim target | Body evidence | Anchor |
 |---|---|---|
 | Mechanism/contribution | There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS algorithms is the availability of extended surveillance ... | p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 1 (Abstract) |
-| Reported outcome | paper-specific outcome not recovered | 본문 anchor 없음 |
+| Reported outcome | PDF body did not yield a recoverable outcome statement; no claim inferred | 본문 anchor 없음 |
 | Failure/limitation | 3) Inaecuracies in vision-based inference: Vision-based state estimation is not perfect; therefore, false positives can often throw the safety module off, We had to use Kalman filtering to ensure minimal false positives ... | p. 10 (VI. LEARNED CHALLENGES AND LIMITATIONS), p. 7 (A. Experiment Design) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 These logics involve generating cost tables for agent states and possible actions through simulation and optimization [8].를 streams multiple camera inputs, provides state estimation, performs deep learning model edge inference, and computes avoidance maneuvers on board in real time.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 3) Inaecuracies in vision-based inference: Vision-based state estimation is not perfect; therefore, false positives can often throw the safety module off, We had to use Kalman filtering to ensure minimal false positives ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS algorithms is the availability of extended surveillance ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We use a simple PD controller as our nominal controller, where the computed desired safe control ujaje is then converted into low-level drone control actions in the form of velocity ... (p. 7, C. Supervisory Safety Controller).
+- **Paper-specific mechanism:** Assured safe-separation is essential for achi y operatloa of alrborve vehicles in a shared ip resource-constrained aerial systems with this fty-critical capability, we present ViSafe, a high-speed vi ‘only airborne ... (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. (p. 7, A. Experiment Design); the relevant task/metric cue is The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries. (p. 7, A. Experiment Design). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Across our wide array of simulation and real-world tests, ‘we find that our current system struggles when the intruder is below the horizon, As acknowledged in the benchmarking of ‘our ... (p. 11, B. Limitations).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 6. Horizontal rate of closure comparisons across diferent weather conditions in the digital twin: Higher values ind apart, showcasing diverging & safe wajectories. Across the diferent weather scenarios, ViSafeshoweases consistent b ....
-4. Report the body metric and its denominator/aggregation: The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries..
-5. Re-run the body-reported ablation/failure condition: 3) Inaecuracies in vision-based inference: Vision-based state estimation is not perfect; therefore, false positives can often throw the safety module off, We had to use Kalman filtering to ensure minimal false positives ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We use a simple PD controller as our nominal controller, where the computed desired safe control ujaje is then converted into low-level drone control actions in the form of velocity ... (p. 7, C. Supervisory Safety Controller); preserve the objective/update rule: Note that the non-linear constraint h(x) <0 is not necessarily a subset of d > dhiresk when d > 0. (p. 6, C. Supervisory Safety Controller).
+2. Use the paper-reported task/data/environment cue: These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. (p. 7, A. Experiment Design).
+3. Compare against the reported or matched baseline: Fig. 6. Horizontal rate of closure comparisons across diferent weather conditions in the digital twin: Higher values ind apart, showcasing diverging & safe wajectories. Across the diferent weather scenarios, ViSafeshoweases ... (p. 10, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries. (p. 7, A. Experiment Design).
+5. Re-run the reported ablation or stress/failure condition: PDF body did not yield a recoverable ablation/stress condition; no ablation inferred; if none is reported, design one around: Across our wide array of simulation and real-world tests, ‘we find that our current system struggles when the intruder is below the horizon, As acknowledged in the benchmarking of ‘our ... (p. 11, B. Limitations).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller); the primary result is directionally consistent at result anchor 없음; and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 2 (I. INTRopI), match the reported outcome at p. 7 (A. Experiment Design), p. 7 (A. Experiment Design), p. 10 (Figure/Table caption), and measure the boundary at p. 11 (B. Limitations), p. 10 (VI. LEARNED CHALLENGES AND LIMITATIONS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 There, variants, algorithm mechanism이 Fig. 6. Horizontal rate of closure comparisons across diferent weather conditions in the digital twin: Higher ... 대비 The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries.을 개선하고, 3) Inaecuracies in vision-based inference: Vision-based state estimation is not perfect; therefore, false positives can often ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We use a simple PD controller as our nominal controller, where the computed desired safe control ujaje is then converted into low-level ...), does the paper-specific mechanism (Assured safe-separation is essential for achi y operatloa of alrborve vehicles in a shared ip resource-constrained aerial systems with this fty-critical capability, ...) retain the reported evaluation outcome (The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries.) when tested against the paper's strongest explicit boundary (Across our wide array of simulation and real-world tests, ‘we find that our current system struggles when the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Assured safe-separation is essential for achi y operatloa of alrborve vehicles in a shared ip resource-constrained aerial systems with this fty-critical capability, we present ViSafe, a high-speed vi ‘only airborne ... (p. 1, Abstract).
+- **Paper-supported outcome:** These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. (p. 7, A. Experiment Design).
+- **Strongest explicit boundary:** Across our wide array of simulation and real-world tests, ‘we find that our current system struggles when the intruder is below the horizon, As acknowledged in the benchmarking of ‘our ... (p. 11, B. Limitations).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

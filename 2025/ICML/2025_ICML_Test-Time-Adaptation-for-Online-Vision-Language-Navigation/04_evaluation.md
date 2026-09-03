@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=K4GaB4fdIq; PDF retrieval source: https://openreview.net/pdf/a273e15cd7e38fd010663df74dfea2486251fe0e.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=K4GaB4fdIq; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168050. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5.4. Effects of Stochastic Gradient Revers
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.3. Implementation Details - extractive PDF cue:** For the REVERIE dataset, the results in the paper are obtained with p = 0.01 and α = -0.2 for the validation seen split, and ...
-- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** First, our FEEDTTA, without gradient regularization, enhances the OSR, SR and RGS metric after adaptation on the validation unseen dataset.
-- **p. 6 / 5.1. Main Navigation Results - extractive PDF cue:** Specifically, our method improves SR and OSR of DUET up to 41.53% and 40.20% on the validation unseen split, respectively.
-- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive PDF cue:** Providing feedback for every navigation episode may not be feasible in real-world scenarios.
-- **p. 7 / 5.1. Main Navigation Results - extractive PDF cue:** For instance, on the R2R validation unseen split, FEEDTTA improved 8.33% on SPL for DUET, while reducing 10.88% in NE.
-- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** In the validation unseen split, GD shows the highest result in PSR, but rather decreases CSR, hindering the balance of the two metrics.
-- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** To analyze our method in this perspective, we visualize the cumulative success rates and changes in the L1 weight magnitude on the validation unseen split ...
-- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** Comparison of Feedback Strategies Feedback Strategy SR SPL RGSPL Distance-based (Dense) 63.25 42.89 28.46 Goal-based (Sparse) 66.49 45.38 30.75 re-evaluated after the TTA on the ...
+- **p. 6 / 4.3. Implementation Details - extractive body cue:** For the REVERIE dataset, the results in the paper are obtained with p = 0.01 and α = -0.2 for the validation seen split, and ...
+- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** First, our FEEDTTA, without gradient regularization, enhances the OSR, SR and RGS metric after adaptation on the validation unseen dataset.
+- **p. 6 / 5.1. Main Navigation Results - extractive body cue:** Specifically, our method improves SR and OSR of DUET up to 41.53% and 40.20% on the validation unseen split, respectively.
+- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive body cue:** Providing feedback for every navigation episode may not be feasible in real-world scenarios.
+- **p. 7 / 5.1. Main Navigation Results - extractive body cue:** For instance, on the R2R validation unseen split, FEEDTTA improved 8.33% on SPL for DUET, while reducing 10.88% in NE.
+- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** In the validation unseen split, GD shows the highest result in PSR, but rather decreases CSR, hindering the balance of the two metrics.
+- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** To analyze our method in this perspective, we visualize the cumulative success rates and changes in the L1 weight magnitude on the validation unseen split ...
+- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** Comparison of Feedback Strategies Feedback Strategy SR SPL RGSPL Distance-based (Dense) 63.25 42.89 28.46 Goal-based (Sparse) 66.49 45.38 30.75 re-evaluated after the TTA on the ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5.4. Effects of Stochastic Gradient Revers
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.4. Effects of Stochastic Gradient Reversion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Furthermore, while GD and GS exhibit catastrophic forgetting, the proposed SGR rather brings substantial improvements in the success rates, strengthening the policy's generalizability as ... | p. 9 (5.4. Effects of Stochastic Gradient Reversion) |
 | 4.2. Evaluation Metrics | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition to these metrics, we propose the ‘Adapted Success Rate (ASR)' metric to accurately measure sample-wise transition of results before and after adaptation. | p. 5 (4.2. Evaluation Metrics) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (5.4. Effects of Stochastic Gradient Revers
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.3. Implementation Details - extractive PDF cue:** For the REVERIE dataset, the results in the paper are obtained with p = 0.01 and α = -0.2 for the validation seen split, and ...
-- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** First, our FEEDTTA, without gradient regularization, enhances the OSR, SR and RGS metric after adaptation on the validation unseen dataset.
-- **p. 6 / 5.1. Main Navigation Results - extractive PDF cue:** Specifically, our method improves SR and OSR of DUET up to 41.53% and 40.20% on the validation unseen split, respectively.
-- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive PDF cue:** Providing feedback for every navigation episode may not be feasible in real-world scenarios.
-- **p. 7 / 5.1. Main Navigation Results - extractive PDF cue:** For instance, on the R2R validation unseen split, FEEDTTA improved 8.33% on SPL for DUET, while reducing 10.88% in NE.
-- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** In the validation unseen split, GD shows the highest result in PSR, but rather decreases CSR, hindering the balance of the two metrics.
-- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** To analyze our method in this perspective, we visualize the cumulative success rates and changes in the L1 weight magnitude on the validation unseen split ...
-- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** Comparison of Feedback Strategies Feedback Strategy SR SPL RGSPL Distance-based (Dense) 63.25 42.89 28.46 Goal-based (Sparse) 66.49 45.38 30.75 re-evaluated after the TTA on the ...
+- **p. 6 / 4.3. Implementation Details - extractive body cue:** For the REVERIE dataset, the results in the paper are obtained with p = 0.01 and α = -0.2 for the validation seen split, and ...
+- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** First, our FEEDTTA, without gradient regularization, enhances the OSR, SR and RGS metric after adaptation on the validation unseen dataset.
+- **p. 6 / 5.1. Main Navigation Results - extractive body cue:** Specifically, our method improves SR and OSR of DUET up to 41.53% and 40.20% on the validation unseen split, respectively.
+- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive body cue:** Providing feedback for every navigation episode may not be feasible in real-world scenarios.
+- **p. 7 / 5.1. Main Navigation Results - extractive body cue:** For instance, on the R2R validation unseen split, FEEDTTA improved 8.33% on SPL for DUET, while reducing 10.88% in NE.
+- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** In the validation unseen split, GD shows the highest result in PSR, but rather decreases CSR, hindering the balance of the two metrics.
+- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** To analyze our method in this perspective, we visualize the cumulative success rates and changes in the L1 weight magnitude on the validation unseen split ...
+- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** Comparison of Feedback Strategies Feedback Strategy SR SPL RGSPL Distance-based (Dense) 63.25 42.89 28.46 Goal-based (Sparse) 66.49 45.38 30.75 re-evaluated after the TTA on the ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of the learning paradigm of FEEDTTA. The navigation agent adapts to streaming online test data by learning to maximize the cumulative binary ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Conceptual Illustration of SGR. (Left) By reversing the gradients, SGR reduces the distribution gap between the two extreme cases that may cause non-stationary ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Experimental results on the REVERIE dataset. † implies that the results are obtained from our re-implementation (same for Table 2 and Table 3). ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Experimental results on the R2R dataset. Methods Val Seen Val Unseen TL ↓ NE ↓ SR↑ SPL↑
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Experimental results on the R2R-CE dataset. Methods Val Seen Val Unseen TL ↓ NE ↓ OSR↑ SR↑
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Trajectory Length Analysis. We visualize the relation between the ground truth TL (x-axis) and the SR (y-axis) for the REVERIE dataset. The length ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Feedback Analysis. We study the sensitivity of our method on (a) feedback accuracy, (b) number of first K feedback samples, and (c) update ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Experiments on Large Language Model Oracle. LLMs Feedback Accuracy Navigation Performance Accuracy Recall Precision OSR↑
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the learning paradigm of FEEDTTA. The navigation agent adapts to streaming online test data by learning to maximize the cumulative binary ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Conceptual Illustration of SGR. (Left) By reversing the gradients, SGR reduces the distribution gap between the two extreme cases that may cause non-stationary ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Experimental results on the REVERIE dataset. † implies that the results are obtained from our re-implementation (same for Table 2 and Table 3). ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Experimental results on the R2R dataset. Methods Val Seen Val Unseen TL ↓ NE ↓ SR↑ SPL↑
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Experimental results on the R2R-CE dataset. Methods Val Seen Val Unseen TL ↓ NE ↓ OSR↑ SR↑
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Trajectory Length Analysis. We visualize the relation between the ground truth TL (x-axis) and the SR (y-axis) for the REVERIE dataset. The length ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Feedback Analysis. We study the sensitivity of our method on (a) feedback accuracy, (b) number of first K feedback samples, and (c) update ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Experiments on Large Language Model Oracle. LLMs Feedback Accuracy Navigation Performance Accuracy Recall Precision OSR↑
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For the REVERIE dataset, the results in the paper are obtained with p = 0.01 and α = -0.2 for the validation seen split, ... | embodiment, simulator version and control stack | p. 6 (4.3. Implementation Details), p. 9 (5.4. Effects of Stochastic Gradient Reversion) |
 | Task/environment | First, our FEEDTTA, without gradient regularization, enhances the OSR, SR and RGS metric after adaptation on the validation unseen dataset. | reset, timeout, object/scene variation | p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 6 (5.1. Main Navigation Results) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 9 (5.4. Effects of Stochastic Gradient Revers
 | Primary metric/result | In addition to these metrics, we propose the ‘Adapted Success Rate (ASR)' metric to accurately measure sample-wise transition of results before and after adaptation. | numeric claim only at cited anchor | p. 5 (4.2. Evaluation Metrics) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.3. Implementation Details - extractive PDF cue:** In the last column, we report the average inference time per 4 episodes, measured in milliseconds.
-- **p. 6 / 5.1. Main Navigation Results - extractive PDF cue:** Lastly, we compare the average inference time per 4 episodes.
-- **p. 3 / 3.2. Binary Episodic Feedback - extractive PDF cue:** In FEEDTTA, the rewards are assigned as 0 for t < T -1, and a binary episodic feedback F for t = T -1, giving ...
-- **p. 4 / 3.2. Binary Episodic Feedback - extractive PDF cue:** (Right) Specifically, among the variants of α, the negative value (reversion) shifts the original gradient closest to the counterfactual distribution. mated gradient of the policy ...
+- **p. 6 / 4.3. Implementation Details - extractive body cue:** In the last column, we report the average inference time per 4 episodes, measured in milliseconds.
+- **p. 6 / 5.1. Main Navigation Results - extractive body cue:** Lastly, we compare the average inference time per 4 episodes.
+- **p. 3 / 3.2. Binary Episodic Feedback - extractive body cue:** In FEEDTTA, the rewards are assigned as 0 for t < T -1, and a binary episodic feedback F for t = T -1, giving ...
+- **p. 4 / 3.2. Binary Episodic Feedback - extractive body cue:** (Right) Specifically, among the variants of α, the negative value (reversion) shifts the original gradient closest to the counterfactual distribution. mated gradient of the policy ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 9 (5.4. Effects of Stochastic Gradient Revers
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 6. Conclusion - extractive PDF cue:** The proposed adaptation strategy utilizing binary episodic feedback enables agents to dynamically interact with their external environment by providing them with a notion of success ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of the learning paradigm of FEEDTTA. The navigation agent adapts to streaming online test data by learning to maximize the cumulative binary ...
-- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive PDF cue:** Feedback accuracies less than 50% leads to obvious adaptation failure.
-- **p. 7 / 5.3. LLMs as Feedback Oracle - extractive PDF cue:** We leverage a two-step LLM architecture for determining the navigation success or failure.
-- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive PDF cue:** Specifically, for both data splits, SGR brings 14.21% and 10.28% improvements in CSR, respectively, indicating the flexibility of FEEDTTA in dealing with failure scenarios.
-- **p. 9 / 6. Conclusion - extractive PDF cue:** Impact Statement Although our FEEDTTA leads significant performance improvements, it does not guarantee perfect prediction across the diverse environment.
+- **p. 9 / 6. Conclusion - extractive body cue:** The proposed adaptation strategy utilizing binary episodic feedback enables agents to dynamically interact with their external environment by providing them with a notion of success ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the learning paradigm of FEEDTTA. The navigation agent adapts to streaming online test data by learning to maximize the cumulative binary ...
+- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive body cue:** Feedback accuracies less than 50% leads to obvious adaptation failure.
+- **p. 7 / 5.3. LLMs as Feedback Oracle - extractive body cue:** We leverage a two-step LLM architecture for determining the navigation success or failure.
+- **p. 8 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** Specifically, for both data splits, SGR brings 14.21% and 10.28% improvements in CSR, respectively, indicating the flexibility of FEEDTTA in dealing with failure scenarios.
+- **p. 9 / 6. Conclusion - extractive body cue:** Impact Statement Although our FEEDTTA leads significant performance improvements, it does not guarantee perfect prediction across the diverse environment.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.3. Implementation Details), p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 6 (5.1. Main Navigation Results), p. 7 (5.2. Quality and Quantity of Feedback), p. 7 (5.1. Main Navigation Results), p. 8 (5.4. Effects of Stochastic Gradient Reversion), metrics p. 5 (4.2. Evaluation Metrics), p. 8 (5.3. LLMs as Feedback Oracle), p. 5 (4.2. Evaluation Metrics), p. 8 (5.4. Effects of Stochastic Gradient Reversion), p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 9 (5.4. Effects of Stochastic Gradient Reversion), baselines p. 6 (5.1. Main Navigation Results), p. 6 (5.1. Main Navigation Results), p. 7 (5.2. Quality and Quantity of Feedback), p. 8 (5.3. LLMs as Feedback Oracle), p. 5 (4.2. Evaluation Metrics), p. 7 (5.2. Quality and Quantity of Feedback), results p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 5 (4.2. Evaluation Metrics), p. 7 (5.2. Quality and Quantity of Feedback), p. 7 (5.1. Main Navigation Results), p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 14 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.3. Implementation Details), p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 6 (5.1. Main Navigation Results), p. 7 (5.2. Quality and Quantity of Feedback), p. 7 (5.1. Main Navigation Results), p. 8 (5.4. Effects of Stochastic Gradient Reversion), metrics p. 5 (4.2. Evaluation Metrics), p. 8 (5.3. LLMs as Feedback Oracle), p. 5 (4.2. Evaluation Metrics), p. 8 (5.4. Effects of Stochastic Gradient Reversion), p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 9 (5.4. Effects of Stochastic Gradient Reversion), baselines p. 6 (5.1. Main Navigation Results), p. 6 (5.1. Main Navigation Results), p. 7 (5.2. Quality and Quantity of Feedback), p. 8 (5.3. LLMs as Feedback Oracle), p. 5 (4.2. Evaluation Metrics), p. 7 (5.2. Quality and Quantity of Feedback), results p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 5 (4.2. Evaluation Metrics), p. 7 (5.2. Quality and Quantity of Feedback), p. 7 (5.1. Main Navigation Results), p. 9 (5.4. Effects of Stochastic Gradient Reversion), p. 14 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

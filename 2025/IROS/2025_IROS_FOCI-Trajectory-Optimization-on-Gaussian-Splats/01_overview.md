@@ -1,8 +1,10 @@
 # FOCI: Trajectory Optimization on Gaussian Splats
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2505.08510.
-> PDF retrieval source: https://arxiv.org/pdf/2505.08510. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2505.08510.
+> PDF retrieval source: https://arxiv.org/pdf/2505.08510. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / IROS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2505.08510
 - Code/Project: https://rffr.leggedrobotics.com/works/foci/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. �
 ## Why Read It
 
 Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To overcome these challenges, we propose FOCI, a trajectory optimization algorithm that leverages the overlap integral - the spatial integral over the multiplication of two functions - as a proxy measure for ...를 문제로 두고, In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Although some steps have been taken in this direction [3], [4], [5], the huge number of Gaussians a scene can have, together with the specific formulation of an explicit collision ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ... (p. 5, A. Trajectory Evaluation).
+- **Explicit failure boundary:** 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points. (p. 7, V. LIMITATIONS).

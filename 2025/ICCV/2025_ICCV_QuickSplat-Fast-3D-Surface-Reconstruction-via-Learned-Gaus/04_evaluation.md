@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate our method on 20 unseen test scenes and report averaged metrics.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Dataset We train and evaluate our model on the ScanNet++ dataset [52].
-- **p. 5 / 4. Experiments - extractive PDF cue:** We calculate the absolute error, as well as the accuracy within different thresholds (2cm, 5cm, 10cm).
-- **p. 5 / 4. Experiments - extractive PDF cue:** Metrics To evaluate the quality of the reconstructed geometry, we measure the error between rendered depth and the ground-truth depth maps of ScanNet++ testing frames.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth compared ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison against baselines. We show top-down views of reconstructed mesh geometries (with and without vertex colors) in comparison to the ground-truth meshes ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting optimization ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method on 20 unseen test scenes and report averaged metrics.
+- **p. 5 / 4. Experiments - extractive body cue:** Dataset We train and evaluate our model on the ScanNet++ dataset [52].
+- **p. 5 / 4. Experiments - extractive body cue:** We calculate the absolute error, as well as the accuracy within different thresholds (2cm, 5cm, 10cm).
+- **p. 5 / 4. Experiments - extractive body cue:** Metrics To evaluate the quality of the reconstructed geometry, we measure the error between rendered depth and the ground-truth depth maps of ScanNet++ testing frames.
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth compared ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison against baselines. We show top-down views of reconstructed mesh geometries (with and without vertex colors) in comparison to the ground-truth meshes ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting optimization ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4. Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | PGSR renders unbiased depth maps from flattened 3D Gaussians and introduces both single-view and multi-view regularization losses to improve geometric reconstruction. | p. 5 (4. Experiments) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth ... | p. 6 (Figure/Table caption) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate our method on 20 unseen test scenes and report averaged metrics.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Dataset We train and evaluate our model on the ScanNet++ dataset [52].
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method on 20 unseen test scenes and report averaged metrics.
+- **p. 5 / 4. Experiments - extractive body cue:** Dataset We train and evaluate our model on the ScanNet++ dataset [52].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting optimization ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Method overview. From the SfM points of input multi-view images, our initializer network predicts an initial set of Gaussians G0. We then learn ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Importance sampling of densified Gaussians. Top: the densifier network predicts a pool of additional voxel features in an encoder-decoder architecture from the current ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison against baselines. We compare the quality and optimization runtime of our reconstructed surfaces against baseline methods, and show averaged results on ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth compared ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison against baselines. We show top-down views of reconstructed mesh geometries (with and without vertex colors) in comparison to the ground-truth meshes ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison between MonoSDF [54] and ours. Our QuickSplat achieves faster reconstruction and retains more fine details. For example, MonoSDF fails to reconstruct ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting optimization ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Method overview. From the SfM points of input multi-view images, our initializer network predicts an initial set of Gaussians G0. We then learn ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Importance sampling of densified Gaussians. Top: the densifier network predicts a pool of additional voxel features in an encoder-decoder architecture from the current ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison against baselines. We compare the quality and optimization runtime of our reconstructed surfaces against baseline methods, and show averaged results on ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth compared ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison against baselines. We show top-down views of reconstructed mesh geometries (with and without vertex colors) in comparison to the ground-truth meshes ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison between MonoSDF [54] and ours. Our QuickSplat achieves faster reconstruction and retains more fine details. For example, MonoSDF fails to reconstruct ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on 20 unseen test scenes and report averaged metrics. | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 5 (4. Experiments) |
 | Task/environment | Dataset We train and evaluate our model on the ScanNet++ dataset [52]. | reset, timeout, object/scene variation | p. 5 (4. Experiments) |
@@ -115,9 +115,9 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 | Primary metric/result | Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth ... | numeric claim only at cited anchor | p. 6 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experiments - extractive PDF cue:** After running our iterative optimization for t=5 timesteps, we optionally refine the Gaussians for another 2000 steps of gradient descent (without adaptive density control).
-- **p. 6 / Method - extractive PDF cue:** Abs err↓ Acc (2cm)↑ Acc (5cm)↑ Acc (10cm)↑ Chamfer↓ Time↓ SuGaR [22] 0.2061 0.1157 0.2774 0.4794 0.2078 3130s 2DGS [25] 0.1127 0.4021 0.6027 0.7422 0.2420 ...
-- **p. 8 / 4.3. Limitations - extractive PDF cue:** Our method accelerates optimization runtime by 8x and obtains more accurate surface reconstructions from posed images in comparison to baselines.
+- **p. 5 / 4. Experiments - extractive body cue:** After running our iterative optimization for t=5 timesteps, we optionally refine the Gaussians for another 2000 steps of gradient descent (without adaptive density control).
+- **p. 6 / Method - extractive body cue:** Abs err↓ Acc (2cm)↑ Acc (5cm)↑ Acc (10cm)↑ Chamfer↓ Time↓ SuGaR [22] 0.2061 0.1157 0.2774 0.4794 0.2078 3130s 2DGS [25] 0.1127 0.4021 0.6027 0.7422 0.2420 ...
+- **p. 8 / 4.3. Limitations - extractive body cue:** Our method accelerates optimization runtime by 8x and obtains more accurate surface reconstructions from posed images in comparison to baselines.
 
 ## Generalization and Failure Cases
 
@@ -152,11 +152,11 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.3. Limitations - extractive PDF cue:** Second, we assume static environments and therefore cannot reconstruct dynamic scenes (e.g., people walking inside of a room).
-- **p. 8 / 4.3. Limitations - extractive PDF cue:** Lastly, even though we significantly reduce optimization runtime, our method does not yet reconstruct in real-time, but could be integrated with recent SLAM-based approaches [26, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
+- **p. 8 / 4.3. Limitations - extractive body cue:** Second, we assume static environments and therefore cannot reconstruct dynamic scenes (e.g., people walking inside of a room).
+- **p. 8 / 4.3. Limitations - extractive body cue:** Lastly, even though we significantly reduce optimization runtime, our method does not yet reconstruct in real-time, but could be integrated with recent SLAM-based approaches [26, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), metrics p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4. Experiments), p. 1 (Figure/Table caption), p. 5 (4. Experiments), results p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), metrics p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4. Experiments), p. 1 (Figure/Table caption), p. 5 (4. Experiments), results p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

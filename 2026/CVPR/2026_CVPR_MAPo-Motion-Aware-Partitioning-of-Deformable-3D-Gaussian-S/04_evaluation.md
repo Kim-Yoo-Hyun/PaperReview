@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** We evaluate our method on two real-world dynamic scene datasets: N3DV [15] and Meet Room [14].
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** Quantitative comparison on the N3DV dataset.
-- **p. 7 / 5.3.1. Quantitative Comparisons - extractive PDF cue:** 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. An overview of MAPo. (a) 3DGs' deformation process. (b) Compute the dynamic score of 3DGs from history positions during training. (c) High-dynamic 3DGs ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Observation of static partition on Salmon. D3DGS model, which serves as our Baseline, and a naive temporal slicing approach of E-D3DGS (Baseline (seg)) ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Effectiveness of temporal partitioning strategy and consistency loss on a toy example. (a) A 3D curve \protect \mathbf {p}(t ) simulates a dynamic ...
-- **p. 7 / 5.3.2. Qualitative Comparisons - extractive PDF cue:** For example, in cases with fast-moving hands or detailed facial expressions, baseline methods exhibit severe motion blur and loss of detail.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 9. Ablation study on the Lcross. We visualize how Lcross improves temporal consistency and rendering quality across a par- tition boundary (frames 74-75). The ...
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** We evaluate our method on two real-world dynamic scene datasets: N3DV [15] and Meet Room [14].
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** Quantitative comparison on the N3DV dataset.
+- **p. 7 / 5.3.1. Quantitative Comparisons - extractive body cue:** 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. An overview of MAPo. (a) 3DGs' deformation process. (b) Compute the dynamic score of 3DGs from history positions during training. (c) High-dynamic 3DGs ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Observation of static partition on Salmon. D3DGS model, which serves as our Baseline, and a naive temporal slicing approach of E-D3DGS (Baseline (seg)) ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Effectiveness of temporal partitioning strategy and consistency loss on a toy example. (a) A 3D curve \protect \mathbf {p}(t ) simulates a dynamic ...
+- **p. 7 / 5.3.2. Qualitative Comparisons - extractive body cue:** For example, in cases with fast-moving hands or detailed facial expressions, baseline methods exhibit severe motion blur and loss of detail.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. Ablation study on the Lcross. We visualize how Lcross improves temporal consistency and rendering quality across a par- tition boundary (frames 74-75). The ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. Overview. (a-b) Deformation-based methods often blur details in regions with complex or rapid motion. (c) Our MAPo significantly improves rendering quality in ... | p. 1 (Figure/Table caption) |
 | 5.3.1. Quantitative Comparisons | EMPIRICAL / REAL-ROBOT OR HARDWARE | 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity ... | p. 7 (5.3.1. Quantitative Comparisons) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** We evaluate our method on two real-world dynamic scene datasets: N3DV [15] and Meet Room [14].
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** Quantitative comparison on the N3DV dataset.
-- **p. 7 / 5.3.1. Quantitative Comparisons - extractive PDF cue:** 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity and ...
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** We evaluate our method on two real-world dynamic scene datasets: N3DV [15] and Meet Room [14].
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** Quantitative comparison on the N3DV dataset.
+- **p. 7 / 5.3.1. Quantitative Comparisons - extractive body cue:** 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity and ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview. (a-b) Deformation-based methods often blur details in regions with complex or rapid motion. (c) Our MAPo significantly improves rendering quality in these ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Rendering results of a single unified model. (a) shows the temporally averaged representation, which is visualized by di- rectly rendering the canonical 3DGs. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. An overview of MAPo. (a) 3DGs' deformation process. (b) Compute the dynamic score of 3DGs from history positions during training. (c) High-dynamic 3DGs ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Effectiveness of temporal partitioning strategy and consistency loss on a toy example. (a) A 3D curve \protect \mathbf {p}(t ) simulates a dynamic ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparisons against existing SOTA methods on the MeetRoom and N3DV dataset. of the current view V , which is captured at timestamp ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on the N3DV dataset. 1 flame salmon was trained on only frag1. 2 only reported results on the flame salmon frag1 ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison on the Meet Room dataset. Storage, training time, and FPS are calculated on discussion.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Progressive component ablation on Meet Room. Stor- age, training time, and FPS are calculated on discussion. Configuration PSNR↑ SSIM↑ LPIPS↓ Storage↓ Time↓
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. (a-b) Deformation-based methods often blur details in regions with complex or rapid motion. (c) Our MAPo significantly improves rendering quality in these ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Rendering results of a single unified model. (a) shows the temporally averaged representation, which is visualized by di- rectly rendering the canonical 3DGs. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. An overview of MAPo. (a) 3DGs' deformation process. (b) Compute the dynamic score of 3DGs from history positions during training. (c) High-dynamic 3DGs ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Effectiveness of temporal partitioning strategy and consistency loss on a toy example. (a) A 3D curve \protect \mathbf {p}(t ) simulates a dynamic ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparisons against existing SOTA methods on the MeetRoom and N3DV dataset. of the current view V , which is captured at timestamp ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on the N3DV dataset. 1 flame salmon was trained on only frag1. 2 only reported results on the flame salmon frag1 ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison on the Meet Room dataset. Storage, training time, and FPS are calculated on discussion.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Progressive component ablation on Meet Room. Stor- age, training time, and FPS are calculated on discussion. Configuration PSNR↑ SSIM↑ LPIPS↓ Storage↓ Time↓
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on two real-world dynamic scene datasets: N3DV [15] and Meet Room [14]. | embodiment, simulator version and control stack | p. 6 (5.1. Dataset and Metrics), p. 6 (5.1. Dataset and Metrics) |
 | Task/environment | Quantitative comparison on the N3DV dataset. | reset, timeout, object/scene variation | p. 6 (5.1. Dataset and Metrics), p. 7 (5.3.1. Quantitative Comparisons) |
@@ -113,11 +113,11 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 | Primary metric/result | 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity ... | numeric claim only at cited anchor | p. 7 (5.3.1. Quantitative Comparisons) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** N3DV includes videos at 30 FPS captured by 20 cameras.
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** Following previous works, we downsample its images to 1352×1014 and segment the longer flame salmon sequence into four 10s clips.
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** 2 only reported results on the flame salmon frag1 and was trained on 8 GPUs.
-- **p. 6 / 5.1. Dataset and Metrics - extractive PDF cue:** Method PSNR↑ SSIM↑ LPIPS↓ Storage↓ Training Time↓ FPS↑ DyNeRF1,2 29.58 - 0.083 56MB 1344 hours 0.01 NeRFPlayer1,3 30.69 0.932 0.111 1654MB 5 hours 36 mins ...
-- **p. 6 / 4.2. Cross-Frame Consistency Loss - extractive PDF cue:** We apply Lcross only for training views whose frame indices are within 5 frames of any partition boundary.
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** N3DV includes videos at 30 FPS captured by 20 cameras.
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** Following previous works, we downsample its images to 1352×1014 and segment the longer flame salmon sequence into four 10s clips.
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** 2 only reported results on the flame salmon frag1 and was trained on 8 GPUs.
+- **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** Method PSNR↑ SSIM↑ LPIPS↓ Storage↓ Training Time↓ FPS↑ DyNeRF1,2 29.58 - 0.083 56MB 1344 hours 0.01 NeRFPlayer1,3 30.69 0.932 0.111 1654MB 5 hours 36 mins ...
+- **p. 6 / 4.2. Cross-Frame Consistency Loss - extractive body cue:** We apply Lcross only for training views whose frame indices are within 5 frames of any partition boundary.
 
 ## Generalization and Failure Cases
 
@@ -148,9 +148,9 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.3.2. Qualitative Comparisons - extractive PDF cue:** The comparison highlights that baseline methods often produce degraded results in areas with complex or rapid motion.
+- **p. 7 / 5.3.2. Qualitative Comparisons - extractive body cue:** The comparison highlights that baseline methods often produce degraded results in areas with complex or rapid motion.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Dataset and Metrics), p. 6 (5.1. Dataset and Metrics), p. 7 (5.3.1. Quantitative Comparisons), metrics p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (5.3.2. Qualitative Comparisons), p. 8 (Figure/Table caption), baselines p. 7 (5.3.1. Quantitative Comparisons), p. 7 (5.3.2. Qualitative Comparisons), p. 6 (5.1. Dataset and Metrics), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 7 (5.3.1. Quantitative Comparisons), p. 8 (Figure/Table caption), p. 6 (5.1. Dataset and Metrics), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Dataset and Metrics), p. 6 (5.1. Dataset and Metrics), p. 7 (5.3.1. Quantitative Comparisons), metrics p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (5.3.2. Qualitative Comparisons), p. 8 (Figure/Table caption), baselines p. 7 (5.3.1. Quantitative Comparisons), p. 7 (5.3.2. Qualitative Comparisons), p. 6 (5.1. Dataset and Metrics), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 7 (5.3.1. Quantitative Comparisons), p. 8 (Figure/Table caption), p. 6 (5.1. Dataset and Metrics), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

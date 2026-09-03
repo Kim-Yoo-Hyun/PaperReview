@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper ... | p. 9 (Figure/Table caption) |
 | VI. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B). | p. 6 (VI. EXPERIMENTS) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | of the proposed algorithms on a physical robotic system, Both the hardware design and code for the PP-Tac system are publicly released to support ... | embodiment, simulator version and control stack | p. 2 (4) We provide a full implementation and systematic evaluation), p. 6 (A. Grasp Motion Dataset Synthesis) |
 | Task/environment | After filtering out collision-prone sequences, we obtained a dataset of 500,000 grasp samples, ‘each consisting of Naxa ~ 100 frames. | reset, timeout, object/scene variation | p. 6 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** Slip) and the final success rate (Suce.
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** The average number of slip events detected (No.
 
-- **PDF anchors reviewed:** datasets p. 2 (4) We provide a full implementation and systematic evaluation), p. 6 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis), p. 6 (A. Implementation Details), metrics p. 9 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), baselines p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), results p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 2 (4) We provide a full implementation and systematic evaluation), p. 6 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis), p. 6 (A. Implementation Details), metrics p. 9 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), baselines p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), results p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, ... (p. 9, Figure/Table caption).
+- **Metric evidence:** Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B). (p. 6, VI. EXPERIMENTS).
+- **Baseline/ablation evidence:** Then, we per form systematic comparisons of our system on different flat ‘materials and supporting terrains (Section VI-C). (p. 6, VI. EXPERIMENTS).
+- **Failure/negative evidence:** However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).

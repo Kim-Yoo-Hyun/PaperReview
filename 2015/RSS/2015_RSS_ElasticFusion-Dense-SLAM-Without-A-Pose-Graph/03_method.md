@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss11/p01.html; PDF retrieval source: https://www.roboticsproceedings.org/rss11/p01.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss11/p01.html; PDF retrieval source: https://www.roboticsproceedings.org/rss11/p01.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 
 ## Method Body Digest
 
-- **p. 2 / II. APPROACH OVERVIEW - extractive PDF cue:** We adopt an architecture which is typically found in realtime dense visual SLAM systems that alternates between tracking and mapping [15, 25, 9, 8, 2, ...
-- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** If registration is successful, a loop has been closed to the older inactive model and the entire model is non-rigidly deformed into place to reflect ...
-- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** In the following section we describe our fused map representation and method for predictive tracking.
-- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** If a match is detected, register the views together and check if the registration is globally consistent with the model's geometry.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** As we show in our evaluation of the system in Section VII, this approach to dense SLAM achieves state-of-the-art performance with trajectory estimation results on ...
-- **p. 2 / II. APPROACH OVERVIEW - extractive PDF cue:** We mainly use CUDA to implement our tracking reduction process and the OpenGL Shading Language for view prediction and map management.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** After pose graph optimisation the final map is created by merging key surfel views [21].
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
+- **p. 2 / II. APPROACH OVERVIEW - extractive body cue:** We adopt an architecture which is typically found in realtime dense visual SLAM systems that alternates between tracking and mapping [15, 25, 9, 8, 2, ...
+- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** If registration is successful, a loop has been closed to the older inactive model and the entire model is non-rigidly deformed into place to reflect ...
+- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** In the following section we describe our fused map representation and method for predictive tracking.
+- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** If a match is detected, register the views together and check if the registration is globally consistent with the model's geometry.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** As we show in our evaluation of the system in Section VII, this approach to dense SLAM achieves state-of-the-art performance with trajectory estimation results on ...
+- **p. 2 / II. APPROACH OVERVIEW - extractive body cue:** We mainly use CUDA to implement our tracking reduction process and the OpenGL Shading Language for view prediction and map management.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** After pose graph optimisation the final map is created by merging key surfel views [21].
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
 
 ## Design Rationale
 
-- **p. 2 / II. APPROACH OVERVIEW - extractive PDF cue:** In the following, we summarise the key elements of our method.
-- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** This component of our method is inspired by the surfelbased fusion system of Keller et al.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
+- **p. 2 / II. APPROACH OVERVIEW - extractive body cue:** In the following, we summarise the key elements of our method.
+- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** This component of our method is inspired by the surfelbased fusion system of Keller et al.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
 
 ## Source Evidence Cues
 
-- **p. 2 / II. APPROACH OVERVIEW - extractive PDF cue:** We adopt an architecture which is typically found in realtime dense visual SLAM systems that alternates between tracking and mapping [15, 25, 9, 8, 2, ...
-- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** If registration is successful, a loop has been closed to the older inactive model and the entire model is non-rigidly deformed into place to reflect ...
-- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** In the following section we describe our fused map representation and method for predictive tracking.
-- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** If a match is detected, register the views together and check if the registration is globally consistent with the model's geometry.
+- **p. 2 / II. APPROACH OVERVIEW - extractive body cue:** We adopt an architecture which is typically found in realtime dense visual SLAM systems that alternates between tracking and mapping [15, 25, 9, 8, 2, ...
+- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** If registration is successful, a loop has been closed to the older inactive model and the entire model is non-rigidly deformed into place to reflect ...
+- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** In the following section we describe our fused map representation and method for predictive tracking.
+- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** If a match is detected, register the views together and check if the registration is globally consistent with the model's geometry.
 - **Detected method headings:** II. APPROACH OVERVIEW (p. 2); 1) Estimate a fused surfel-based model of the environment (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | We adopt an architecture which is typically found in realtime dense visual SLAM systems that alternates between tracking and mapping [15, 25, ... | p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fused surfel-based model of the environment) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | If registration is successful, a loop has been closed to the older inactive model and the entire model is non-rigidly deformed into ... | p. 2 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment) |
@@ -61,12 +61,12 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 
 ## Observation–State–Action Interface
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** As we show in our evaluation of the system in Section VII, this approach to dense SLAM achieves state-of-the-art performance with trajectory estimation results on ...
-- **p. 2 / II. APPROACH OVERVIEW - extractive PDF cue:** We mainly use CUDA to implement our tracking reduction process and the OpenGL Shading Language for view prediction and map management.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** After pose graph optimisation the final map is created by merging key surfel views [21].
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
-- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** In the following section we describe our fused map representation and method for predictive tracking.
-- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive PDF cue:** tracking and surface fusion (including surfel culling) to take place between the registered areas of the map.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** As we show in our evaluation of the system in Section VII, this approach to dense SLAM achieves state-of-the-art performance with trajectory estimation results on ...
+- **p. 2 / II. APPROACH OVERVIEW - extractive body cue:** We mainly use CUDA to implement our tracking reduction process and the OpenGL Shading Language for view prediction and map management.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** After pose graph optimisation the final map is created by merging key surfel views [21].
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
+- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** In the following section we describe our fused map representation and method for predictive tracking.
+- **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** tracking and surface fusion (including surfel culling) to take place between the registered areas of the map.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -101,9 +101,9 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 
 ## Failure and Ablation Link
 
-- **p. 7 / VII. EVALUATION - extractive PDF cue:** Points more than 0.1m from ground truth have been removed for visualisation purposes.
-- **p. 8 / VIII. CONCLUSION - extractive PDF cue:** In future work we wish to address the problem of map scalability beyond whole rooms and also investigate the problem of dense globally consistent SLAM ...
-- **p. 7 / VII. EVALUATION - extractive PDF cue:** We evaluate our approach on all four trajectories in the living room scene (including synthetic noise) providing surface reconstruction accuracy results in comparison to the ...
+- **p. 7 / VII. EVALUATION - extractive body cue:** Points more than 0.1m from ground truth have been removed for visualisation purposes.
+- **p. 8 / VIII. CONCLUSION - extractive body cue:** In future work we wish to address the problem of map scalability beyond whole rooms and also investigate the problem of dense globally consistent SLAM ...
+- **p. 7 / VII. EVALUATION - extractive body cue:** We evaluate our approach on all four trajectories in the living room scene (including synthetic noise) providing surface reconstruction accuracy results in comparison to the ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -117,7 +117,7 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment), objective 본문 anchor 없음, temporal p. 3 (III. FUSED PREDICTED TRACKING), p. 8 (VII. EVALUATION), p. 8 (VII. EVALUATION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment), objective 본문 anchor 없음, temporal p. 3 (III. FUSED PREDICTED TRACKING), p. 8 (VII. EVALUATION), p. 8 (VII. EVALUATION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=8oFvUBvF1u; PDF retrieval source: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=8oFvUBvF1u; PDF retrieval source: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.1.2 RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As can be seen, the mapping obtained with our method significantly outperforms baselines in terms of accuracy and continuity. | p. 10 (6.1.2 RESULTS) |
 | 6.1.2 RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Additionally, due to the generalization capability of pre-trained 2D backbones, we achieve much higher accuracy on out-of-distribution test categories listed in Tab. | p. 7 (6.1.2 RESULTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 6.2 ZERO-SHOT REAL WORLD ROBOTIC MANIPULATION We create six real-world manipulation environments, exploring the performance of DenseMatcher on daily life tasks by comparing the ... | embodiment, simulator version and control stack | p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS) |
 | Task/environment | The classification of tasks is based on the differences between the objects manipulated in the human demonstration and manipulated by the robot. | reset, timeout, object/scene variation | p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS) |
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 - **p. 21 / A.5 PERFORMANCE UNDER OCCLUSION - extractive body cue:** We study the performance of our model under occlusion in two cases.
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 11: Robot experiments visualization under occlusion conditions. A.5.2 PARTIAL SOURCE AND FULL TARGET In the second case, the source mesh is a partial mesh, ...
 
-- **PDF anchors reviewed:** datasets p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), metrics p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), baselines p. 7 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 9 (Figure/Table caption), p. 10 (6.1.2 RESULTS), p. 19 (Figure/Table caption), results p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), metrics p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), baselines p. 7 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 9 (Figure/Table caption), p. 10 (6.1.2 RESULTS), p. 19 (Figure/Table caption), results p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Performance comparison on DenseCorr3D shape matching benchmark. We report the results on both the full test set and the held-out set. Ablation studies are listed in Section 6.4. ... (p. 7, Figure/Table caption).
+- **Metric evidence:** We evaluate its performance when respectively trained on FAUST (Bogo et al., 2014a) and DenseCorr3D. (p. 7, 6 EXPERIMENTS).
+- **Baseline/ablation evidence:** 1, we found that our model achieves better AUC and Err compared to the baseline model. (p. 7, 6.1.2 RESULTS).
+- **Failure/negative evidence:** As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks that only utilize geometry information and are trained on category-specific datasets (Cao ... (p. 2, 1 INTRODUCTION).

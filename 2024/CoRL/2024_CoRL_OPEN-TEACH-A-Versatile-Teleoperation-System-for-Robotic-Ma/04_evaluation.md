@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/iyer25a.html; PDF retrieval source: https://arxiv.org/pdf/2403.07870. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/iyer25a.html; PDF retrieval source: https://arxiv.org/pdf/2403.07870. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4) How intuitive is the system for new use
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4) How intuitive is the system for new users? | EMPIRICAL / REAL-ROBOT OR HARDWARE | Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies. | p. 6 (4) How intuitive is the system for new users?) |
 | 4) How intuitive is the system for new users? | EMPIRICAL / REAL-ROBOT OR HARDWARE | Similar to prior work [20, 22], these policies were learned within 20 minutes and achieved an average success rate of 82%, validating the high ... | p. 6 (4) How intuitive is the system for new users?) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 6 (4) How intuitive is the system for new use
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The primary idea behind OPEN TEACH is that given any robotic setup, a user can purchase an affordable off-the-shelf VR headset (in this case, ... | embodiment, simulator version and control stack | p. 6 (4) How intuitive is the system for new users?), p. 6 (V. EXPERIMENTAL EVALUATION) |
 | Task/environment | Our experiments and tasks are designed to answer the following questions: 1) How versatile is OPEN TEACH across a range of robotics setups? | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTAL EVALUATION), p. 8 (4) How intuitive is the system for new users?) |
@@ -157,7 +157,16 @@ PDF body evaluation/result cue (p. 6 (4) How intuitive is the system for new use
 - **p. 8 / VI. LIMITATIONS AND DISCUSSION - extractive body cue:** However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: The demonstration collection process as viewed from within the VR application. Shown here is one task being performed for each real-world setup. High ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4) How intuitive is the system for new users?), p. 6 (V. EXPERIMENTAL EVALUATION), p. 8 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 7 (4) How intuitive is the system for new users?), metrics p. 8 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 8 (4) How intuitive is the system for new users?), p. 5 (Figure/Table caption), p. 8 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), results p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 13 (Figure/Table caption), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4) How intuitive is the system for new users?), p. 6 (V. EXPERIMENTAL EVALUATION), p. 8 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 7 (4) How intuitive is the system for new users?), metrics p. 8 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 8 (4) How intuitive is the system for new users?), p. 5 (Figure/Table caption), p. 8 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), results p. 6 (4) How intuitive is the system for new users?), p. 6 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 8 (4) How intuitive is the system for new users?), p. 13 (Figure/Table caption), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Robot Setup Task Number of Demos Success Rate Franka-Allegro Open Box 3 9/10 Grasp Sponge 6 7/10 Pick Up Tea Sachet 4 7/10 Grasp Object and Twist 6 8/10 Allegro ... (p. 8, 4) How intuitive is the system for new users?).
+- **Metric evidence:** Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies. (p. 6, 4) How intuitive is the system for new users?).
+- **Baseline/ablation evidence:** On these tasks, OPEN TEACH demonstrates a higher success rate along with significantly reduced median time to complete tasks compared to the other baselines. (p. 8, 4) How intuitive is the system for new users?).
+- **Failure/negative evidence:** However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset. (p. 8, VI. LIMITATIONS AND DISCUSSION).

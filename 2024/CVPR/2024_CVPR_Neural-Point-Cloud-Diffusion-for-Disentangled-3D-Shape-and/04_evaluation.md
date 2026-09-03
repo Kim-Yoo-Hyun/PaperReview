@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. 
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes.
-- **p. 7 / 4.3. Disentangled generation - extractive PDF cue:** Note that our method performs an actual recombination and does more than retrieval of objects from the training dataset.
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** Additionally, we use the PhotoShape Chairs dataset [30].
-- **p. 7 / 4.4. 3D diffusion comparison - extractive PDF cue:** We compare NPCD with Functa [10], SSDNeRF [8], and DiffRF [26], previous works that generate 3D shape and appearance on medium-scale datasets with 3D diffusion ...
-- **p. 6 / 4.2. Metrics - extractive PDF cue:** We use the images of the test set objects as the reference set.
-- **p. 6 / 4.2. Metrics - extractive PDF cue:** For comparability, we follow the evaluation procedures of previous works: on SRN Cars and Chairs, we generate the same number of objects as in the ...
-- **p. 6 / 4.2. Metrics - extractive PDF cue:** Furthermore, for the shape-only evaluation of our generated point clouds representing the coarse geometry, we employ 1-nearest-neighbor accuracy w.r.t.
-- **p. 7 / 4.4. 3D diffusion comparison - extractive PDF cue:** Our NPCD model achieves better scores than DiffRF and Functa.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes.
+- **p. 7 / 4.3. Disentangled generation - extractive body cue:** Note that our method performs an actual recombination and does more than retrieval of objects from the training dataset.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** Additionally, we use the PhotoShape Chairs dataset [30].
+- **p. 7 / 4.4. 3D diffusion comparison - extractive body cue:** We compare NPCD with Functa [10], SSDNeRF [8], and DiffRF [26], previous works that generate 3D shape and appearance on medium-scale datasets with 3D diffusion ...
+- **p. 6 / 4.2. Metrics - extractive body cue:** We use the images of the test set objects as the reference set.
+- **p. 6 / 4.2. Metrics - extractive body cue:** For comparability, we follow the evaluation procedures of previous works: on SRN Cars and Chairs, we generate the same number of objects as in the ...
+- **p. 6 / 4.2. Metrics - extractive body cue:** Furthermore, for the shape-only evaluation of our generated point clouds representing the coarse geometry, we employ 1-nearest-neighbor accuracy w.r.t.
+- **p. 7 / 4.4. 3D diffusion comparison - extractive body cue:** Our NPCD model achieves better scores than DiffRF and Functa.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. 3D diffusion comparison | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our NPCD model achieves better scores than DiffRF and Functa. | p. 7 (4.4. 3D diffusion comparison) |
 | 4.3. Disentangled generation | EMPIRICAL / SOURCE-REPORTED EVALUATION | The numbers show that we clearly outperform previous generative models that allow disentangled generation. | p. 7 (4.3. Disentangled generation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes.
-- **p. 7 / 4.3. Disentangled generation - extractive PDF cue:** Note that our method performs an actual recombination and does more than retrieval of objects from the training dataset.
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** Additionally, we use the PhotoShape Chairs dataset [30].
-- **p. 7 / 4.4. 3D diffusion comparison - extractive PDF cue:** We compare NPCD with Functa [10], SSDNeRF [8], and DiffRF [26], previous works that generate 3D shape and appearance on medium-scale datasets with 3D diffusion ...
-- **p. 6 / 4.2. Metrics - extractive PDF cue:** We use the images of the test set objects as the reference set.
-- **p. 6 / 4.2. Metrics - extractive PDF cue:** For comparability, we follow the evaluation procedures of previous works: on SRN Cars and Chairs, we generate the same number of objects as in the ...
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes.
+- **p. 7 / 4.3. Disentangled generation - extractive body cue:** Note that our method performs an actual recombination and does more than retrieval of objects from the training dataset.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** Additionally, we use the PhotoShape Chairs dataset [30].
+- **p. 7 / 4.4. 3D diffusion comparison - extractive body cue:** We compare NPCD with Functa [10], SSDNeRF [8], and DiffRF [26], previous works that generate 3D shape and appearance on medium-scale datasets with 3D diffusion ...
+- **p. 6 / 4.2. Metrics - extractive body cue:** We use the images of the test set objects as the reference set.
+- **p. 6 / 4.2. Metrics - extractive body cue:** For comparability, we follow the evaluation procedures of previous works: on SRN Cars and Chairs, we generate the same number of objects as in the ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We present a method to model 3D radiance field distributions using neural point denoising diffusion (left). Since our representa- tion disentangles coarse object ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of neural point cloud diffusion (NCPD). In the center we have a neural point cloud representation, where each point has a position ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative examples of disentangled generation on SRN cars, SRN chairs, PhotoShape chairs. (a) Appearance-only gener- ation: we show a generated object and objects ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison to disentanglement-capable approaches. The numbers show that we clearly outperform previous generative models that allow disentangled generation.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison to 3D diffusion models for uncondi- tional 3D shape and appearance generation. Our NPCD model achieves better scores than DiffRF and Functa. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Shape-only comparison. We evaluate the point cloud generation part of our approach individually. Despite being just the coarse structure of a finer radiance ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Comparison against previous generative models that allow disentangled generation.: While we present the first diffusion model allowing disentangled generation, earlier works are GAN-based. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Auto-decoded feature similarity. We compute per-point mean cosine similarities between optimized neural point features of 10 training examples for 100 different seeds. Zero ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present a method to model 3D radiance field distributions using neural point denoising diffusion (left). Since our representa- tion disentangles coarse object ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of neural point cloud diffusion (NCPD). In the center we have a neural point cloud representation, where each point has a position ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative examples of disentangled generation on SRN cars, SRN chairs, PhotoShape chairs. (a) Appearance-only gener- ation: we show a generated object and objects ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison to disentanglement-capable approaches. The numbers show that we clearly outperform previous generative models that allow disentangled generation.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparison to 3D diffusion models for uncondi- tional 3D shape and appearance generation. Our NPCD model achieves better scores than DiffRF and Functa. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Shape-only comparison. We evaluate the point cloud generation part of our approach individually. Despite being just the coarse structure of a finer radiance ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Comparison against previous generative models that allow disentangled generation.: While we present the first diffusion model allowing disentangled generation, earlier works are GAN-based. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Auto-decoded feature similarity. We compute per-point mean cosine similarities between optimized neural point features of 10 training examples for 100 different seeds. Zero ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes. | embodiment, simulator version and control stack | p. 5 (4.1. Datasets and experimental setup), p. 7 (4.3. Disentangled generation) |
 | Task/environment | Note that our method performs an actual recombination and does more than retrieval of objects from the training dataset. | reset, timeout, object/scene variation | p. 7 (4.3. Disentangled generation), p. 5 (4.1. Datasets and experimental setup) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. 
 | Primary metric/result | The numbers show that we clearly outperform previous generative models that allow disentangled generation. | numeric claim only at cited anchor | p. 7 (4.3. Disentangled generation) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** We extract point clouds with 30k points from the mesh and subsample them to 512 points with farthest point sampling.
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes.
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** We use the same test split as DiffRF [26] with 1, 552 objects.
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** From the remaining objects, we randomly select 2, 480 objects for training.
-- **p. 5 / 4.1. Datasets and experimental setup - extractive PDF cue:** We use a resolution of 128x128 pixels and the same point clouds with 512 points as for SRN chairs.
-- **p. 6 / 4.2. Metrics - extractive PDF cue:** For comparability, we follow the evaluation procedures of previous works: on SRN Cars and Chairs, we generate the same number of objects as in the ...
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** We extract point clouds with 30k points from the mesh and subsample them to 512 points with farthest point sampling.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** The dataset contains 15,576 objects and features more realistic textures on top of ShapeNet meshes.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** We use the same test split as DiffRF [26] with 1, 552 objects.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** From the remaining objects, we randomly select 2, 480 objects for training.
+- **p. 5 / 4.1. Datasets and experimental setup - extractive body cue:** We use a resolution of 128x128 pixels and the same point clouds with 512 points as for SRN chairs.
+- **p. 6 / 4.2. Metrics - extractive body cue:** For comparability, we follow the evaluation procedures of previous works: on SRN Cars and Chairs, we generate the same number of objects as in the ...
 
 ## Generalization and Failure Cases
 
@@ -154,9 +154,9 @@ PDF body evaluation/result cue (p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. 
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Datasets and experimental setup - extractive PDF cue:** Further details on the denoiser architecture, diffusion model parameters, and training parameters are provided in the supplementals.
+- **p. 6 / 4.1. Datasets and experimental setup - extractive body cue:** Further details on the denoiser architecture, diffusion model parameters, and training parameters are provided in the supplementals.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Datasets and experimental setup), p. 7 (4.3. Disentangled generation), p. 5 (4.1. Datasets and experimental setup), p. 7 (4.4. 3D diffusion comparison), p. 6 (4.2. Metrics), p. 6 (4.2. Metrics), metrics p. 6 (4.2. Metrics), p. 7 (4.4. 3D diffusion comparison), p. 6 (4.2. Metrics), p. 7 (4.6. Analysis), p. 8 (4.6. Analysis), p. 8 (4.6. Analysis), baselines p. 7 (4.3. Disentangled generation), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 7 (4.3. Disentangled generation), p. 8 (4.6. Analysis), results p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. Disentangled generation), p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (4.2. Metrics), p. 8 (4.6. Analysis).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets and experimental setup), p. 7 (4.3. Disentangled generation), p. 5 (4.1. Datasets and experimental setup), p. 7 (4.4. 3D diffusion comparison), p. 6 (4.2. Metrics), p. 6 (4.2. Metrics), metrics p. 6 (4.2. Metrics), p. 7 (4.4. 3D diffusion comparison), p. 6 (4.2. Metrics), p. 7 (4.6. Analysis), p. 8 (4.6. Analysis), p. 8 (4.6. Analysis), baselines p. 7 (4.3. Disentangled generation), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 7 (4.3. Disentangled generation), p. 8 (4.6. Analysis), results p. 7 (4.4. 3D diffusion comparison), p. 7 (4.3. Disentangled generation), p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (4.2. Metrics), p. 8 (4.6. Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

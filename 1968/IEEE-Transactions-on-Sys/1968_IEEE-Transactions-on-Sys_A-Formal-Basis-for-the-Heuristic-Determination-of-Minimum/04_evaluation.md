@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/TSSC.1968.300136; PDF retrieval source: https://doi.org/10.1109/TSSC.1968.300136. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/TSSC.1968.300136; PDF retrieval source: https://people.stfx.ca/jdelamer/courses/csci-564/_downloads/b2220c66675ddde471ca1795147b8e86/A_Formal_Basis_for_the_Heuristic_Determination_of_Minimum_Cost_Paths.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6. The value of 0(no) remains | SYSTEM / EVALUATION SCOPE UNRESOLVED | 0 ,On (3) We assume the infimum is achieved for some fOn In actual problems one probably never has an explicit representation for {Gn,0 ... | p. 4 (6. The value of 0(no) remains) |
 | 6. The value of 0(no) remains | SYSTEM / EVALUATION SCOPE UNRESOLVED | It means that any estimate h(n) calculated from data available in the "physical" situation represented by node n alone would not be improved by ... | p. 5 (6. The value of 0(no) remains) |
@@ -40,20 +40,20 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 
 ## Dataset / Benchmark Role
 
-- dataset/benchmark/environment role cue 없음
+- dataset/benchmark/environment role PDF body cue not selected; no claim inferred
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | not recovered | embodiment, simulator version and control stack | 본문 anchor 없음 |
-| Task/environment | not recovered | reset, timeout, object/scene variation | 본문 anchor 없음 |
+| Robot/hardware/simulator | not stated or recoverable in the selected PDF body | embodiment, simulator version and control stack | 본문 anchor 없음 |
+| Task/environment | not stated or recoverable in the selected PDF body | reset, timeout, object/scene variation | 본문 anchor 없음 |
 | Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl) |
 | Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM) |
 
@@ -140,7 +140,16 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 - **p. 2 / 2) The heuristic approach typically uses special knowl - extractive body cue:** Our algorithm prescribes how to use special knowledge-e.g., the knowledge that the shortest road route between any pair of cities cannot be less than the ...
 - **p. 4 / 6. The value of 0(no) remains - extractive body cue:** Limitation of Subgraphs by Informationfrom the Problem In the preceding section, we proved that if h(n) is any lower bound on h(n), then A* is ...
 
-- **PDF anchors reviewed:** datasets 본문 anchor 없음, metrics p. 5 (6. The value of 0(no) remains), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (1) Mark s "open" and calculatef(s)), p. 3 (1) Mark s "open" and calculatef(s)), p. 4 (6. The value of 0(no) remains), baselines p. 6 (6. The value of 0(no) remains), p. 6 (6. The value of 0(no) remains), p. 4 (6. The value of 0(no) remains), results p. 4 (6. The value of 0(no) remains), p. 5 (6. The value of 0(no) remains), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (1) Mark s "open" and calculatef(s)), p. 3 (1) Mark s "open" and calculatef(s)).
+- **Evidence anchors reviewed:** datasets 본문 anchor 없음, metrics p. 5 (6. The value of 0(no) remains), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (1) Mark s "open" and calculatef(s)), p. 3 (1) Mark s "open" and calculatef(s)), p. 4 (6. The value of 0(no) remains), baselines p. 6 (6. The value of 0(no) remains), p. 6 (6. The value of 0(no) remains), p. 4 (6. The value of 0(no) remains), results p. 4 (6. The value of 0(no) remains), p. 5 (6. The value of 0(no) remains), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (1) Mark s "open" and calculatef(s)), p. 3 (1) Mark s "open" and calculatef(s)).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The following is a typical illustration of the sort of problem to which our results are applicable. (p. 2, 2) The heuristic approach typically uses special knowl).
+- **Metric evidence:** In our example with cities connected by roads, no subgraph G01 is possible for which h(n) is less than the airline distance between city n and a preferred goal city ... (p. 4, 6. The value of 0(no) remains).
+- **Baseline/ablation evidence:** Case 3 Termination is at a goal node without achieving minimum cost. (p. 4, 6. The value of 0(no) remains).
+- **Failure/negative evidence:** Failure of A* to terminate could then only be caused by continued reopening of nodes within M steps of s. (p. 4, 6. The value of 0(no) remains).

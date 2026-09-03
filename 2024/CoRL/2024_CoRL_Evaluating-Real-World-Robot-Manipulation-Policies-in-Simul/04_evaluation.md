@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=LZh48DTg71; PDF retrieval source: https://arxiv.org/pdf/2405.05941.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=LZh48DTg71; PDF retrieval source: https://openreview.net/pdf?id=LZh48DTg71. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -173,3 +173,12 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 10: Comparison of SIMPLER-"Variant Aggregation" using SAPIEN (default) vs. Isaac Sim [49] on Google Robot "Pick Coke Can" and "Move Near" tasks. Both physics simulators lead to good correlation ... (p. 10, Figure/Table caption).
+- **Metric evidence:** We observe a strong correlation between the relative performances in simulation and in the real world across most policy checkpoints 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.2 0.4 0.6 ... (p. 7, 2) Can simulated evaluations not only capture the perfor).
+- **Baseline/ablation evidence:** Furthermore, "Visual Matching" (VisMatch) outperforms "Variant Aggregation" (VarAgg). (p. 8, 2) Can simulated evaluations not only capture the perfor).
+- **Failure/negative evidence:** Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and other visual details. (p. 11, VII. CONCLUSION).

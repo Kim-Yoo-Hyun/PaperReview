@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14341; PDF retrieval source: https://arxiv.org/pdf/2309.14341. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14341; PDF retrieval source: https://arxiv.org/pdf/2309.14341. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | 3.2 Reinforcement Learning from Scandots (Phase 1) We use the above rewards to learn a policy using model-free RL [33] in simulation. | p. 6 (3 Method), p. 5 (3 Method) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | We use Regularized Online Adaptation (ROA)[9] to train an estimator to recover environmental information from the history of observations. | p. 5 (3 Method), p. 5 (3 Method) |
@@ -134,8 +134,17 @@ PDF body method statement (p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 4 (3 Method), p. 4 (3 Method), objective p. 5 (3 Method), p. 2 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 4 (3 Method), temporal p. 5 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
+- **Evidence anchors reviewed:** method p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 4 (3 Method), p. 4 (3 Method), objective p. 5 (3 Method), p. 2 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 4 (3 Method), temporal p. 5 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For exteroception, similar to the RMA architecture in [2] we replace the scandots input to the base policy with a convnet-GRU pipeline that accepts depth. (p. 6, 3 Method).
+- **Objective/update evidence:** 4 3.1 Unified Reward for Extreme Parkour . . . . . . . . . . . . . . . . . . . . . . . ... (p. 2, 3 Method).
+- **Temporal/runtime evidence:** To train the vision backbone, a similar teacher-student framework is employed [2, 43, 23] where a teacher trained with privileged scandots information is distilled to a 4 (p. 4, 3 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://deepmind.google/research/publications/48151/; PDF retrieval source: https://deepmind.google/research/publications/48151/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://deepmind.google/research/publications/48151/; PDF retrieval source: https://deepmind.google/research/publications/48151/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | Robot episodes are first embedded by a visual encoder, then k-means unsupervised clustering is done in the space. | p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | In this paper, we propose AutoRT, a system that leverages existing foundation models to scale up the deployment of operational robots in ... | p. 1 (ABSTRACT), p. 7 (3. Place the napkin onto) |
@@ -85,12 +85,12 @@ PDF body method statement (p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT), p. 
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | We demonstrate AutoRT proposing instructions to over 20 robots across multiple buildings and collecting 77k real robot episodes via both teleoperation and ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | AutoRT is such a hybrid approach, collecting both teleoperated and autonomous episodes based on supply of human supervision, with a focus on ... | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | We demonstrate AutoRT proposing instructions to over 20 robots across multiple buildings and collecting 77k real robot episodes via both teleoperation and ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT), p. 7 (3. Place the napkin onto), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (3. Place the napkin onto), objective p. 2 (1 INTRODUCTION), p. 5 (3. Place the napkin onto), p. 5 (3. Place the napkin onto), p. 6 (3. Place the napkin onto), p. 7 (3. Place the napkin onto), p. 7 (3. Place the napkin onto), temporal p. 1 (ABSTRACT), p. 2 (2 RELATED WORK), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK), p. 4 (3. Place the napkin onto), p. 4 (3. Place the napkin onto).
+- **Evidence anchors reviewed:** method p. 7 (3. Place the napkin onto), p. 1 (ABSTRACT), p. 7 (3. Place the napkin onto), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (3. Place the napkin onto), objective p. 2 (1 INTRODUCTION), p. 5 (3. Place the napkin onto), p. 5 (3. Place the napkin onto), p. 6 (3. Place the napkin onto), p. 7 (3. Place the napkin onto), p. 7 (3. Place the napkin onto), temporal p. 1 (ABSTRACT), p. 2 (2 RELATED WORK), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK), p. 4 (3. Place the napkin onto), p. 4 (3. Place the napkin onto).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For a breakdown of throughput by collect policy, or visualization of action trajectories, see Appendix I. (p. 5, 3. Place the napkin onto).
+- **Objective/update evidence:** This process takes into account constraints specified via "constitutional prompting", where rules about robot behaviour can be defined by the user. (p. 2, 1 INTRODUCTION).
+- **Temporal/runtime evidence:** We demonstrate AutoRT proposing instructions to over 20 robots across multiple buildings and collecting 77k real robot episodes via both teleoperation and autonomous robot policies. (p. 1, ABSTRACT).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p060.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p060.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (B. Perception Manipulation Funnet), p. 8 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Perception Manipulation Funnet | SYSTEM / EVALUATION SCOPE UNRESOLVED | Additionally, a maximum entropy-based method is introduced to improve convergence efficiency. | p. 6 (B. Perception Manipulation Funnet) |
 | 2 Sample grid points G - Area | SYSTEM / EVALUATION SCOPE UNRESOLVED | Successful insertion motions are formulated as a sequence of interactions $ = [e},¢¥, ..¢?] that connect the initial inclined state to the target peg-inhole ... | p. 8 (2 Sample grid points G - Area) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (B. Perception Manipulation Funnet), p. 8 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Despite the trajectory being a dominant action representation in manipulation planning, itis unsuitable for funnel-based ‘manipulations as interactions with the task environment are allowed ... | embodiment, simulator version and control stack | p. 5 (A. Task Mechanics and Interaction Primitives), p. 6 (2 Sample grid points G - Area) |
 | Task/environment | The physical manipulation funnel aims to leverage environmental contacts as physical constraints in the execution task space to iteratively reduce Ax for peg-in-hole insertion ... | reset, timeout, object/scene variation | p. 6 (2 Sample grid points G - Area), p. 5 (A. Task Mechanics and Interaction Primitives) |
@@ -147,7 +147,16 @@ PDF body evaluation/result cue (p. 6 (B. Perception Manipulation Funnet), p. 8 (
 - **p. 9 / 2 Sample grid points G - Area - extractive body cue:** The peg cannot break the alignment according to Lemma 4, as the result {M} is always lower than {C} in the work! frame.
 - **p. 9 / 2 Sample grid points G - Area - extractive body cue:** Theoretically, the robustness of the insertion process is conditioned on the peg's state x, instead of its geometric size.
 
-- **PDF anchors reviewed:** datasets p. 5 (A. Task Mechanics and Interaction Primitives), p. 6 (2 Sample grid points G - Area), p. 5 (A. Task Mechanics and Interaction Primitives), p. 7 (2 Sample grid points G - Area), p. 7 (2 Sample grid points G - Area), p. 8 (2 Sample grid points G - Area), metrics p. 1 (Figure/Table caption), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 7 (2 Sample grid points G - Area), p. 7 (2 Sample grid points G - Area), p. 8 (2 Sample grid points G - Area), baselines p. 7 (2 Sample grid points G - Area), p. 11 (Figure/Table caption), results p. 6 (B. Perception Manipulation Funnet), p. 8 (2 Sample grid points G - Area), p. 11 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (A. Task Mechanics and Interaction Primitives), p. 6 (2 Sample grid points G - Area), p. 5 (A. Task Mechanics and Interaction Primitives), p. 7 (2 Sample grid points G - Area), p. 7 (2 Sample grid points G - Area), p. 8 (2 Sample grid points G - Area), metrics p. 1 (Figure/Table caption), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 7 (2 Sample grid points G - Area), p. 7 (2 Sample grid points G - Area), p. 8 (2 Sample grid points G - Area), baselines p. 7 (2 Sample grid points G - Area), p. 11 (Figure/Table caption), results p. 6 (B. Perception Manipulation Funnet), p. 8 (2 Sample grid points G - Area), p. 11 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 1: Motivation, Acknowledging that real-world uncertainties are inevitable, we exploit environmental constraints t0 shape the manipulation process toward the desired outcome rather than expecting the robot to precisely execute ... (p. 1, Figure/Table caption).
+- **Metric evidence:** Fig. 7: (a) Overview of the System Setup; (b) Ablation study on the perception manipulation funnel; (c) Ablation study on the physical manipulation funnel; (d) Performance evaluation on the overall ... (p. 11, Figure/Table caption).
+- **Baseline/ablation evidence:** Specifically, our objective is to formulate a potential well to let vj be the local minimum in a potential energy field so that vs tends to rest atv; without escaping. (p. 7, 2 Sample grid points G - Area).
+- **Failure/negative evidence:** We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided into the following categories: 1) high contact force which breaks the condition ... (p. 12, 1 Liye).

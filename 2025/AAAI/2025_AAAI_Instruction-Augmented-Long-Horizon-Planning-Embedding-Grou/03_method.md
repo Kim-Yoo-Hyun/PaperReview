@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33610; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33610. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33610; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33610. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (Problem Formulation), p. 4 (Problem Formulation
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | Given the PDDL problem P of a specific task, domain D, and user instruction i, we first query the LLM planner to ... | p. 5 (Problem Formulation), p. 4 (Problem Formulation) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | Then, the robot executes the actions generated and selected by the LLM planner based on the constructed PDDL problem. | p. 4 (Problem Formulation), p. 4 (Problem Formulation) |
@@ -83,14 +83,14 @@ PDF body method statement (p. 5 (Problem Formulation), p. 4 (Problem Formulation
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | Thus, the objective at time step t ∈{1 : H} can be expressed as the joint probability of skill sequence at:H and ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | Optimality We aim to maximize the optimality score Sop of the action sequence at:H at time step t. | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | not recovered | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | Discussion To investigate the types of failure cases in real-world experiments, we conducted 20 trials for each task within a realworld environment ... | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | Thus, the objective at time step t ∈{1 : H} can be expressed as the joint probability of skill sequence at:H and ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | Optimality We aim to maximize the optimality score Sop of the action sequence at:H at time step t. | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | Discussion To investigate the types of failure cases in real-world experiments, we conducted 20 trials for each task within a realworld environment ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 5 (Problem Formulation), p. 4 (Problem Formulation
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (Problem Formulation), p. 4 (Problem Formulation), p. 4 (Problem Formulation), p. 6 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), objective p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 4 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation), p. 4 (Problem Formulation), temporal p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Problem Formulation), p. 4 (Problem Formulation).
+- **Evidence anchors reviewed:** method p. 5 (Problem Formulation), p. 4 (Problem Formulation), p. 4 (Problem Formulation), p. 6 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), objective p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 4 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation), p. 4 (Problem Formulation), temporal p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Problem Formulation), p. 4 (Problem Formulation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Thus, the objective at time step t ∈{1 : H} can be expressed as the joint probability of skill sequence at:H and binary rewards rt:H given the instruction i and ... (p. 3, Problem Formulation).
+- **Objective/update evidence:** The later term of Equation 1 represents the probability that the action sequence at:H achieve rewards rt:H when executed from the state st, which is conditionally independent of the instruction ... (p. 3, Problem Formulation).
+- **Temporal/runtime evidence:** To address these limitations, we present the Instruction-Augmented Long-Horizon Planning (IALP) system, a novel framework that employs LLMs to generate feasible and optimal actions based on real-time sensor feedback, including ... (p. 1, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.10150; PDF retrieval source: https://arxiv.org/pdf/2309.10150. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.10150; PDF retrieval source: https://arxiv.org/pdf/2309.10150. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | training high-capacity models such as Transformers using RL algorithms has proven more difficult to instantiate effectively at large scale. | offline robot transition/trajectory dataset과 deployment MDP | body wording is the source claim |
-| Observation / input | The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF body |
 | State / latent | language, instruction, encoded, Universal, Sentence, Encoder, then, FiLM, EfficientNet, network | Q/value 또는 sequence-policy state | notation and tensor shape require body check |
 | Output / action | because, state, reward, only, after, inferring, executing, whole | dataset-supported action sequence | exact unit/frame/decoder require body check |
 | Target outcome | offline return and deployment safety | offline policy value, OOD safety와 closed-loop success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | dataset transition (s,a,r,s′); body terms: language, instruction, encoded, Universal, Sentence, Encoder, then, FiLM, EfficientNet, network | p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background) |
 | Decision / output variable | dataset-supported policy action; body terms: specific, regularizer, minimizes, values, every, action, taken, dataset | p. 2 (1 Introduction), p. 4 (3 Background), p. 1 (1 Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction) |
 | Success / guarantee | offline return and deployment safety | p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract)): We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ...
+PDF body contribution framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract)): We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ...
 
 - **p. 4 / 3 Background - extractive body cue:** Next, we introduce a particular conservative Q-function regularizer that enables learning from offline datasets.
 - **p. 1 / 1 Introduction - extractive body cue:** Human demonstrations Autonomous data Conservative regularization Autoregressive Q-learning Monte-Carlo returns Mixed quality data environment step action dimension … … Q-values per action dimension Q-Transformer Figure ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 1 (1 In
 
 ## Position in the Robotics Loop
 
-offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 3 (3 Background). The downstream handoff is claimed only when the body describes it.
+offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 3 (3 Background). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 3 (3 Background), objective p. 6 (3 Background), p. 2 (1 Introduction), p. 5 (3 Background), p. 5 (3 Background), p. 6 (3 Background), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 3 (3 Background), objective p. 6 (3 Background), p. 2 (1 Introduction), p. 5 (3 Background), p. 5 (3 Background), p. 6 (3 Background), p. 2 (1 Introduction).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** training high-capacity models such as Transformers using RL algorithms has proven more difficult to instantiate effectively at large scale. (p. 2, 1 Introduction).
+- **Formulation-changing contribution:** We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ... (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

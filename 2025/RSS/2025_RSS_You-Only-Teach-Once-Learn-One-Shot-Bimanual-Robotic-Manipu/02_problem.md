@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p149.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p149.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p149.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p149.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 4 (A. Problem Formulation)): Next, we present how to obtain
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Next, we present how to obtain sufficient training demonstrations proliferated from only a single-shot human teaching and how to improve existing diffusion-based ... | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | For all our bimanual tasks, the observation horizon is set to 1, so we only use the initial state observation of the ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF |
+| Observation / input | For all our bimanual tasks, the observation horizon is set to 1, so we only use the initial state observation of the ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
 | State / latent | bimanual, tasks, observation, horizon, only, initial, state, left, network, inputs | behavior policy와 temporal action context | notation and tensor shape require body check |
 | Output / action | mainly, consider, bimanual, robot, manipula, tion, tasks, where | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | observation history o_{t−H:t}; body terms: bimanual, tasks, observation, horizon, only, initial, state, left, network, inputs | p. 17 (A. Implementation Details of Our BiDP), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation) |
 | Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: altemative, project, points, onto, image, then, applying, stereo | p. 4 (B. Hand Motion Extraction and Injection), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP) |
@@ -38,7 +38,7 @@ PDF body framing (p. 4 (A. Problem Formulation)): Next, we present how to obtain
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP) |
 | Success / guarantee | closed-loop task success and robustness | p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 4 (A. Problem Formulation)): Next, we present how to obtain
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 4 (B. Hand Motion Extraction and Injection), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), p. 5 (B. Hand Motion Extraction and Injection), p. 17 (A. Implementation Details of Our BiDP)): As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}.
+PDF body contribution framing (p. 4 (B. Hand Motion Extraction and Injection), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), p. 5 (B. Hand Motion Extraction and Injection), p. 17 (A. Implementation Details of Our BiDP)): As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}.
 
 - **p. 4 / A. Problem Formulation - extractive body cue:** Next, we present how to obtain sufficient training demonstrations proliferated from only a single-shot human teaching and how to improve existing diffusion-based imitation policies for ...
 - **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** 1) Spaces of observation and action: We adopt a 13 ‘dimensional proprioception vector and a 7-dimensional action, space for each robot arm, respectively. ‘The proprioception ...
@@ -66,12 +66,21 @@ PDF contribution framing (p. 4 (B. Hand Motion Extraction and Injection), p. 4 (
 
 ## Position in the Robotics Loop
 
-il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 17 (A. Implementation Details of Our BiDP), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP). The downstream handoff is claimed only when the body describes it.
+il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 17 (A. Implementation Details of Our BiDP), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 4 (A. Problem Formulation), interface p. 17 (A. Implementation Details of Our BiDP), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), objective p. 4 (A. Problem Formulation).
+- **Evidence anchors reviewed:** problem p. 4 (A. Problem Formulation), interface p. 17 (A. Implementation Details of Our BiDP), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), objective p. 4 (A. Problem Formulation).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Next, we present how to obtain sufficient training demonstrations proliferated from only a single-shot human teaching and how to improve existing diffusion-based imitation policies for addressing the bimanual manipulation problem. (p. 4, A. Problem Formulation).
+- **Formulation-changing contribution:** As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}. (p. 4, B. Hand Motion Extraction and Injection).
+- **Assumption/failure evidence:** Due to space limitations, we did not continue the demonstration proliferation and policy training. (p. 11, B. Results Comparison).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

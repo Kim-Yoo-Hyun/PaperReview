@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/ICAPS/article/view/6739; PDF retrieval source: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/ICAPS/article/view/6739; PDF retrieval source: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -29,7 +29,7 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 9 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Adaptive outperforms Incremental, Focused, and Binding due to its ability to aggressively search over many bindings of a single stream plan. | p. 8 (9 Experiments) |
 | 9 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Focused, Binding, and Adaptive all outperform Incremental and perform about equivalently due to the less geometrically constrained nature of the domain. | p. 8 (9 Experiments) |
@@ -50,7 +50,7 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 9.1 Real-World Validation We applied PDDLStream to four real-world task and motion planning problems. | embodiment, simulator version and control stack | p. 8 (9 Experiments), p. 8 (9 Experiments) |
 | Task/environment | For each task, a PR2 robot observes the initial state, solves for a plan, and executes it in an open-loop fashion. | reset, timeout, object/scene variation | p. 8 (9 Experiments) |
@@ -126,7 +126,16 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 
 - **p. 8 / 9 Experiments - extractive body cue:** Adaptive is able to quickly identify a collision-free pair of placements supporting a solution.
 
-- **PDF anchors reviewed:** datasets p. 8 (9 Experiments), p. 8 (9 Experiments), metrics p. 8 (Figure/Table caption), p. 7 (9 Experiments), p. 8 (9 Experiments), baselines p. 7 (9 Experiments), p. 8 (9 Experiments), p. 8 (9 Experiments), results p. 8 (9 Experiments), p. 8 (9 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (9 Experiments), p. 8 (9 Experiments), metrics p. 8 (Figure/Table caption), p. 7 (9 Experiments), p. 8 (9 Experiments), baselines p. 7 (9 Experiments), p. 8 (9 Experiments), p. 8 (9 Experiments), results p. 8 (9 Experiments), p. 8 (9 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The Incremental and Focused algorithms serve as baselines that are representative of prior work (Garrett, Lozano-P´erez, and Kaelbling 2018). (p. 7, 9 Experiments).
+- **Metric evidence:** We experimented using the Incremental, Focused, Binding, and Adaptive algorithms on 100 randomly-generated problems within 3 domains in section 4. (p. 7, 9 Experiments).
+- **Baseline/ablation evidence:** The Incremental and Focused algorithms serve as baselines that are representative of prior work (Garrett, Lozano-P´erez, and Kaelbling 2018). (p. 7, 9 Experiments).
+- **Failure/negative evidence:** Adaptive is able to quickly identify a collision-free pair of placements supporting a solution. (p. 8, 9 Experiments).

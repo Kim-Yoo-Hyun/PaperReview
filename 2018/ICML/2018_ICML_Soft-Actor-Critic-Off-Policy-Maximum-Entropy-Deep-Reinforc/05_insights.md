@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 We will use ρπ(st) and ρπ(st, at) to denote the state and state-action marginals of the trajectory distribution induced by a policy π(at/st).를 The algorithm is agnostic to the parameterization of the policy, as long as it can be evaluated for any arbitrary state-action tuple.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Our results suggest that stochastic, entropy maximizing reinforcement learning algorithms can provide a promising avenue for improved robustness and stability, and further exploration of maximum entropy methods, including methods that i ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy and on-policy prior methods.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Though such algorithms have previously been proposed for conventional reinforcement learning, our method is, to our knowledge, the first off-policy actor-critic method in the maximum entropy reinforcement learning framework. (p. 3, 3.2. Maximum Entropy Reinforcement Learning).
+- **Paper-specific mechanism:** We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy and on-policy prior methods. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a large margin, both in terms ... (p. 7, 5.1. Comparative Evaluation); the relevant task/metric cue is With the right reward scaling, the model balances exploration and exploitation, leading to faster learning and better asymptotic performance. (p. 8, 5.2. Ablation Study). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For maximum entropy algorithms, which do not explicitly inject exploration noise, we either evaluated with the exploration noise (SQL) or use the mean action (SAC). (p. 6, 5. Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We compare our method to prior techniques on a range of challenging continuous control tasks from the OpenAI gym benchmark suite (Brockman et al., 2016) and also on the rllab implementation of ....
-3. Compare against the body-reported baseline or a matched simpler baseline: The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a large margin, both in terms of learning ....
-4. Report the body metric and its denominator/aggregation: The optimal reward scale varies between environments, and should be tuned for each task separately..
-5. Re-run the body-reported ablation/failure condition: Figure 4. Training curves for additional baseline (Trust-PCL) and for two SAC variants. Soft actor-critic with hard target update (blue) differs from standard SAC in that it copies the value function network ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Though such algorithms have previously been proposed for conventional reinforcement learning, our method is, to our knowledge, the first off-policy actor-critic method in the maximum entropy reinforcement learning framework. (p. 3, 3.2. Maximum Entropy Reinforcement Learning); preserve the objective/update rule: Let πold ∈Π and let πnew be the optimizer of the minimization problem defined in Equation 4. (p. 4, 4.1. Derivation of Soft Policy Iteration).
+2. Use the paper-reported task/data/environment cue: We compare our method to prior techniques on a range of challenging continuous control tasks from the OpenAI gym benchmark suite (Brockman et al., 2016) and also on the rllab ... (p. 6, 5. Experiments).
+3. Compare against the reported or matched baseline: The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a large margin, both in terms ... (p. 7, 5.1. Comparative Evaluation).
+4. Report the body metric with its denominator and aggregation: With the right reward scaling, the model balances exploration and exploitation, leading to faster learning and better asymptotic performance. (p. 8, 5.2. Ablation Study).
+5. Re-run the reported ablation or stress/failure condition: We have included trust region path consistency learning (Trust-PCL) (Nachum et al., 2017b) and two other variants of SAC in Appendix E. (p. 6, 5. Experiments); if none is reported, design one around: For maximum entropy algorithms, which do not explicitly inject exploration noise, we either evaluated with the exploration noise (SQL) or use the mean action (SAC). (p. 6, 5. Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic); the primary result is directionally consistent at p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 7 (5.1. Comparative Evaluation), p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), and measure the boundary at p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, empirical, soft mechanism이 The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks ... 대비 The optimal reward scale varies between environments, and should be tuned for each task separately.을 개선하고, Our results suggest that stochastic, entropy maximizing reinforcement learning algorithms can provide a promising avenue for ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Though such algorithms have previously been proposed for conventional reinforcement learning, our method is, to our knowledge, the first off-policy actor-critic method ...), does the paper-specific mechanism (We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy ...) retain the reported evaluation outcome (With the right reward scaling, the model balances exploration and exploitation, leading to faster learning and better asymptotic ...) when tested against the paper's strongest explicit boundary (For maximum entropy algorithms, which do not explicitly inject exploration noise, we either evaluated with the exploration noise ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (With the right reward scaling, the model balances exploration and exploitation, leading to faster learning and better asymptotic ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy and on-policy prior methods. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a large margin, both in terms ... (p. 7, 5.1. Comparative Evaluation).
+- **Strongest explicit boundary:** For maximum entropy algorithms, which do not explicitly inject exploration noise, we either evaluated with the exploration noise (SQL) or use the mean action (SAC). (p. 6, 5. Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

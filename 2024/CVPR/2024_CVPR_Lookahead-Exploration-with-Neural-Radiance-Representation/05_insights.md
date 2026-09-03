@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 together with a learnable view token V is inputted into the view encoder and output the encoded ˆR and ˆV.를 3.3.3 Lookahead Exploration and Action Prediction The model predicts a navigation goal score for each node in the topological map as follows: S = FFN(ˆV) (14) where FFN denotes a feed-forward network.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to perceive spatial ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • Utilizing predi ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Through the downsized depth images {dt,i ∈RH×W }12 i=1, each grid feature gt,j ∈RD is mapped to its 3D world position Pt,j = [px, py, pz] using camera pose [R, ... (p. 3, 3.2. Hierarchical Neural Radiance Representation).
+- **Paper-specific mechanism:** In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods); the relevant task/metric cue is There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation Error (NE), Success Rate (SR), SR given the Oracle stop policy (OSR), ... (p. 6, 4.1. Datasets and Evaluation Metrics). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to ... (p. 8, 4.3. Ablation Study).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL..
-3. Compare against the body-reported baseline or a matched simpler baseline: As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL..
-4. Report the body metric and its denominator/aggregation: There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation Error (NE), Success Rate (SR), SR given the Oracle stop policy (OSR), Normalized inverse ....
-5. Re-run the body-reported ablation/failure condition: The effect of different numbers of nearest features in the HNR model on the val unseen split of the R2R-CE dataset..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Through the downsized depth images {dt,i ∈RH×W }12 i=1, each grid feature gt,j ∈RD is mapped to its 3D world position Pt,j = [px, py, pz] using camera pose [R, ... (p. 3, 3.2. Hierarchical Neural Radiance Representation); preserve the objective/update rule: The model is optimized with the training loss αLrgbd + βLregion + γLview, where α, β, γ are the factors of proportionality. (p. 5, 3.2. Hierarchical Neural Radiance Representation).
+2. Use the paper-reported task/data/environment cue: We evaluate our model on the R2R-CE [22] and RxRCE [23] datasets in continuous environments. (p. 6, 4.1. Datasets and Evaluation Metrics).
+3. Compare against the reported or matched baseline: As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods).
+4. Report the body metric with its denominator and aggregation: There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation Error (NE), Success Rate (SR), SR given the Oracle stop policy (OSR), ... (p. 6, 4.1. Datasets and Evaluation Metrics).
+5. Re-run the reported ablation or stress/failure condition: As shown in Table 3, without the training objective Lregion of region-level semantic alignment (row 6) in Section 3.2.3, the performance of the HNR model has degraded. (p. 7, 4.3. Ablation Study); if none is reported, design one around: Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to ... (p. 8, 4.3. Ablation Study).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 3 (3.2. Hierarchical Neural Radiance Representation); the primary result is directionally consistent at p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 8 (4.3. Ablation Study); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), and measure the boundary at p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contributions, include mechanism이 As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model ... 대비 There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation ...을 개선하고, Without the position and orientation of the k-nearest features relative to the sampled point (row 7) ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Through the downsized depth images {dt,i ∈RH×W }12 i=1, each grid feature gt,j ∈RD is mapped to its 3D world position Pt,j ...), does the paper-specific mechanism (In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for ...) retain the reported evaluation outcome (There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation ...) when tested against the paper's strongest explicit boundary (Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (There are several standard metrics [5] in VLN for evaluating the agent's performance, including Trajectory Length (TL), Navigation ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods).
+- **Strongest explicit boundary:** Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to ... (p. 8, 4.3. Ablation Study).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

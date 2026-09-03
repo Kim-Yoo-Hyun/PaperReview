@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.05316; PDF retrieval source: https://arxiv.org/pdf/2304.05316. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.05316; PDF retrieval source: https://arxiv.org/pdf/2304.05316. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** The SemanticKITTI dataset [2] is based on the popular KITTI Odometry Benchmark [16] and focuses on the semantic scene understanding with LiDAR points and front ...
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The dataset includes 1000 driving sequences from various scenes.
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The nuScenes dataset [3] is a large-scale autonomous driving dataset, collected in Boston and Singapore.
-- **p. 7 / 4.4. Main Results - extractive PDF cue:** The results on nuScenes validation set is included in Appendix A.1.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** (GT) Occupancy (TPVFormer) Occupancy (Ours) Figure 4: Qualitative results on nuScenes validation set.
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** OccFormer is evaluated by its task of semantic scene completion, but with the monocular left camera as input following MonoScene [4].
-- **p. 7 / 4.4. Main Results - extractive PDF cue:** Method Layer params GFLOPs IoU↑mIoU↑ MsDeAttn3D 3 2.74M 329.3 35.74 13.22 MsDeAttn3D 6 4.07M 379.2 36.50 13.46 FPN-3D [32] - 4.35M 307.0 36.12 12.89 performs ...
-- **p. 8 / 4.6. Qualitative Results - extractive PDF cue:** 3, we visualize the predicted results of semantic scene completion on SemanticKITTI validation set from MonoScene [4] and our proposed OccFormer.
+- **p. 5 / 4.1. Datasets - extractive body cue:** The SemanticKITTI dataset [2] is based on the popular KITTI Odometry Benchmark [16] and focuses on the semantic scene understanding with LiDAR points and front ...
+- **p. 6 / 4.1. Datasets - extractive body cue:** The dataset includes 1000 driving sequences from various scenes.
+- **p. 6 / 4.1. Datasets - extractive body cue:** The nuScenes dataset [3] is a large-scale autonomous driving dataset, collected in Boston and Singapore.
+- **p. 7 / 4.4. Main Results - extractive body cue:** The results on nuScenes validation set is included in Appendix A.1.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** (GT) Occupancy (TPVFormer) Occupancy (Ours) Figure 4: Qualitative results on nuScenes validation set.
+- **p. 5 / 4.1. Datasets - extractive body cue:** OccFormer is evaluated by its task of semantic scene completion, but with the monocular left camera as input following MonoScene [4].
+- **p. 7 / 4.4. Main Results - extractive body cue:** Method Layer params GFLOPs IoU↑mIoU↑ MsDeAttn3D 3 2.74M 329.3 35.74 13.22 MsDeAttn3D 6 4.07M 379.2 36.50 13.46 FPN-3D [32] - 4.35M 307.0 36.12 12.89 performs ...
+- **p. 8 / 4.6. Qualitative Results - extractive body cue:** 3, we visualize the predicted results of semantic scene completion on SemanticKITTI validation set from MonoScene [4] and our proposed OccFormer.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Datasets | EMPIRICAL / SOURCE-REPORTED EVALUATION | The proposed OccFormer outperforms the only vision-based method TPVFormer [21] and achieves comparable performance with LiDAR-based methods. | p. 6 (4.1. Datasets) |
 | 4.4. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | OccFormer achieves comparable IoU for scene completion and significantly better performance for the SSC mIoU. | p. 7 (4.4. Main Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** The SemanticKITTI dataset [2] is based on the popular KITTI Odometry Benchmark [16] and focuses on the semantic scene understanding with LiDAR points and front ...
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The dataset includes 1000 driving sequences from various scenes.
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The nuScenes dataset [3] is a large-scale autonomous driving dataset, collected in Boston and Singapore.
-- **p. 7 / 4.4. Main Results - extractive PDF cue:** The results on nuScenes validation set is included in Appendix A.1.
-- **p. 8 / 4.5. Ablation Studies - extractive PDF cue:** (GT) Occupancy (TPVFormer) Occupancy (Ours) Figure 4: Qualitative results on nuScenes validation set.
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** OccFormer is evaluated by its task of semantic scene completion, but with the monocular left camera as input following MonoScene [4].
-- **p. 7 / 4.4. Main Results - extractive PDF cue:** Method Layer params GFLOPs IoU↑mIoU↑ MsDeAttn3D 3 2.74M 329.3 35.74 13.22 MsDeAttn3D 6 4.07M 379.2 36.50 13.46 FPN-3D [32] - 4.35M 307.0 36.12 12.89 performs ...
-- **p. 8 / 4.6. Qualitative Results - extractive PDF cue:** 3, we visualize the predicted results of semantic scene completion on SemanticKITTI validation set from MonoScene [4] and our proposed OccFormer.
+- **p. 5 / 4.1. Datasets - extractive body cue:** The SemanticKITTI dataset [2] is based on the popular KITTI Odometry Benchmark [16] and focuses on the semantic scene understanding with LiDAR points and front ...
+- **p. 6 / 4.1. Datasets - extractive body cue:** The dataset includes 1000 driving sequences from various scenes.
+- **p. 6 / 4.1. Datasets - extractive body cue:** The nuScenes dataset [3] is a large-scale autonomous driving dataset, collected in Boston and Singapore.
+- **p. 7 / 4.4. Main Results - extractive body cue:** The results on nuScenes validation set is included in Appendix A.1.
+- **p. 8 / 4.5. Ablation Studies - extractive body cue:** (GT) Occupancy (TPVFormer) Occupancy (Ours) Figure 4: Qualitative results on nuScenes validation set.
+- **p. 5 / 4.1. Datasets - extractive body cue:** OccFormer is evaluated by its task of semantic scene completion, but with the monocular left camera as input following MonoScene [4].
+- **p. 7 / 4.4. Main Results - extractive body cue:** Method Layer params GFLOPs IoU↑mIoU↑ MsDeAttn3D 3 2.74M 329.3 35.74 13.22 MsDeAttn3D 6 4.07M 379.2 36.50 13.46 FPN-3D [32] - 4.35M 307.0 36.12 12.89 performs ...
+- **p. 8 / 4.6. Qualitative Results - extractive body cue:** 3, we visualize the predicted results of semantic scene completion on SemanticKITTI validation set from MonoScene [4] and our proposed OccFormer.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: The framework of the proposed OccFormer for camera-based 3D semantic occupancy prediction. The pipeline consists of the image encoder for extracting multi-scale 2D ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Illustration of the dual-path transformer block. The local path processes the 3D feature by applying the shared windowed attention to each horizontal slice, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1: Semantic scene completion results on SemanticKITTI test set. * represents these methods are adapted for the RGB inputs, which are implemented and reported ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2: Semantic scene completion results on SemanticKITTI [2] validation set. * represents these methods are adapted for the RGB inputs, which are implemented and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3: LiDAR segmentation results on nuScenes test set. The proposed OccFormer outperforms the only vision-based method TPVFormer [21] and achieves comparable performance with LiDAR-based ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation study on the dual-path encoder. Local Global Params GFLOPs IoU↑mIoU↑  74.1M 494.2 36.42
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative results on SemanticKITTI validation set. The input monocular image is shown on the left and the 3D semantic occupancy results from MonoScene ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study on the pixel decoder.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: The framework of the proposed OccFormer for camera-based 3D semantic occupancy prediction. The pipeline consists of the image encoder for extracting multi-scale 2D ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration of the dual-path transformer block. The local path processes the 3D feature by applying the shared windowed attention to each horizontal slice, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Semantic scene completion results on SemanticKITTI test set. * represents these methods are adapted for the RGB inputs, which are implemented and reported ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2: Semantic scene completion results on SemanticKITTI [2] validation set. * represents these methods are adapted for the RGB inputs, which are implemented and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3: LiDAR segmentation results on nuScenes test set. The proposed OccFormer outperforms the only vision-based method TPVFormer [21] and achieves comparable performance with LiDAR-based ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4: Ablation study on the dual-path encoder. Local Global Params GFLOPs IoU↑mIoU↑  74.1M 494.2 36.42
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative results on SemanticKITTI validation set. The input monocular image is shown on the left and the 3D semantic occupancy results from MonoScene ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on the pixel decoder.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The SemanticKITTI dataset [2] is based on the popular KITTI Odometry Benchmark [16] and focuses on the semantic scene understanding with LiDAR points and ... | embodiment, simulator version and control stack | p. 5 (4.1. Datasets), p. 6 (4.1. Datasets) |
 | Task/environment | The dataset includes 1000 driving sequences from various scenes. | reset, timeout, object/scene variation | p. 6 (4.1. Datasets), p. 6 (4.1. Datasets) |
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | Primary metric/result | OccFormer achieves comparable IoU for scene completion and significantly better performance for the SSC mIoU. | numeric claim only at cited anchor | p. 7 (4.4. Main Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** Each sequence lasts for around 20 seconds and the key-frames are annotated at 2Hz with 3D bounding boxes.
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** We follow the official protocol to split the total scenes into train/val/test splits with 700/150/150 scenes.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** The view transformer creates the 3D feature volume of size 128×128×16, with 128 channels.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** The generated multi-scale 3D features are projected to 192 channels and processed the multiscale deformable self-attention with 6 layers.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** The predicted occupancy is upsampled 2× to 256×256×32 for full-scale evaluation.
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** Unless specified, we train the model for 30 epochs on SemanticKITTI dataset and 24 epochs on nuScenes dataset.
+- **p. 6 / 4.1. Datasets - extractive body cue:** Each sequence lasts for around 20 seconds and the key-frames are annotated at 2Hz with 3D bounding boxes.
+- **p. 6 / 4.1. Datasets - extractive body cue:** We follow the official protocol to split the total scenes into train/val/test splits with 700/150/150 scenes.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** The view transformer creates the 3D feature volume of size 128×128×16, with 128 channels.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** The generated multi-scale 3D features are projected to 192 channels and processed the multiscale deformable self-attention with 6 layers.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** The predicted occupancy is upsampled 2× to 256×256×32 for full-scale evaluation.
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** Unless specified, we train the model for 30 epochs on SemanticKITTI dataset and 24 epochs on nuScenes dataset.
 
 ## Generalization and Failure Cases
 
@@ -162,11 +162,11 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 5. Conclusion - extractive PDF cue:** It indicates that the predicted semantic occupancy from TPVFormer, despite reasonable visualizations, fails to contain accurate 3D positions.
-- **p. 7 / 4.4. Main Results - extractive PDF cue:** Note that our method requires only one model to perform both the LiDAR segmentation and the semantic occupancy prediction, while the TPVFormer [21] model trained ...
-- **p. 9 / 5. Conclusion - extractive PDF cue:** Second, we remove the windowed attention in the global path, whose weights are shared with the local path, and observe a degradation of around 0.5 ...
+- **p. 9 / 5. Conclusion - extractive body cue:** It indicates that the predicted semantic occupancy from TPVFormer, despite reasonable visualizations, fails to contain accurate 3D positions.
+- **p. 7 / 4.4. Main Results - extractive body cue:** Note that our method requires only one model to perform both the LiDAR segmentation and the semantic occupancy prediction, while the TPVFormer [21] model trained ...
+- **p. 9 / 5. Conclusion - extractive body cue:** Second, we remove the windowed attention in the global path, whose weights are shared with the local path, and observe a degradation of around 0.5 ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 6 (4.1. Datasets), p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 5 (4.1. Datasets), metrics p. 7 (4.4. Main Results), p. 6 (4.3. Metrics), p. 7 (4.4. Main Results), p. 6 (4.2. Implementation Details), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 7 (4.4. Main Results), p. 6 (4.2. Implementation Details), p. 7 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 8 (4.5. Ablation Studies), p. 5 (Figure/Table caption), results p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 7 (4.5. Ablation Studies), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 6 (4.1. Datasets), p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 5 (4.1. Datasets), metrics p. 7 (4.4. Main Results), p. 6 (4.3. Metrics), p. 7 (4.4. Main Results), p. 6 (4.2. Implementation Details), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 7 (4.4. Main Results), p. 6 (4.2. Implementation Details), p. 7 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 8 (4.5. Ablation Studies), p. 5 (Figure/Table caption), results p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 7 (4.5. Ablation Studies), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

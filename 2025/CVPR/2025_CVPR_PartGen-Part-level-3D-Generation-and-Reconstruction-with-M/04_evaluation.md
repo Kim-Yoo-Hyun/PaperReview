@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 7 (4.1. Part Seg
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** For all experiments, we use 100 held-out objects from the dataset described in Sec.
-- **p. 8 / 4.4. Applications - extractive PDF cue:** Real-world 3D object decomposition.
-- **p. 8 / 4.4. Applications - extractive PDF cue:** PartGen can also decompose real-world 3D objects.
-- **p. 6 / 4.1. Part Segmentation - extractive PDF cue:** First, we fine-tune SAM2's mask decoder on our dataset, given the ground-truth masks and randomly selected seed points for different views.
-- **p. 7 / 4.1. Part Segmentation - extractive PDF cue:** This is primarily because of the ambiguity of the segmentation task, which is better captured by our generator-based approach.
-- **p. 7 / 4.2. Part completion and reconstruction - extractive PDF cue:** The latter is an important metric since the completion task is highly ambiguous, which motivates evaluating semantic similarity.
-- **p. 7 / 4.1. Part Segmentation - extractive PDF cue:** We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J.
-- **p. 6 / 4.1. Part Segmentation - extractive PDF cue:** We then match these segments to the ground-truth segments Mk and report mean Average Precision (mAP).
+- **p. 6 / 4. Experiments - extractive body cue:** For all experiments, we use 100 held-out objects from the dataset described in Sec.
+- **p. 8 / 4.4. Applications - extractive body cue:** Real-world 3D object decomposition.
+- **p. 8 / 4.4. Applications - extractive body cue:** PartGen can also decompose real-world 3D objects.
+- **p. 6 / 4.1. Part Segmentation - extractive body cue:** First, we fine-tune SAM2's mask decoder on our dataset, given the ground-truth masks and randomly selected seed points for different views.
+- **p. 7 / 4.1. Part Segmentation - extractive body cue:** This is primarily because of the ambiguity of the segmentation task, which is better captured by our generator-based approach.
+- **p. 7 / 4.2. Part completion and reconstruction - extractive body cue:** The latter is an important metric since the completion task is highly ambiguous, which motivates evaluating semantic similarity.
+- **p. 7 / 4.1. Part Segmentation - extractive body cue:** We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J.
+- **p. 6 / 4.1. Part Segmentation - extractive body cue:** We then match these segments to the ground-truth segments Mk and report mean Average Precision (mAP).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 7 (4.1. Part Seg
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 2. Overview of PartGen. Our method begins with text, single images, or existing 3D objects to obtain an initial grid view of the ... | p. 4 (Figure/Table caption) |
 | 4.1. Part Segmentation | EMPIRICAL / REAL-ROBOT OR HARDWARE | We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J. | p. 7 (4.1. Part Segmentation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 7 (4.1. Part Seg
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** For all experiments, we use 100 held-out objects from the dataset described in Sec.
-- **p. 8 / 4.4. Applications - extractive PDF cue:** Real-world 3D object decomposition.
-- **p. 8 / 4.4. Applications - extractive PDF cue:** PartGen can also decompose real-world 3D objects.
-- **p. 6 / 4.1. Part Segmentation - extractive PDF cue:** First, we fine-tune SAM2's mask decoder on our dataset, given the ground-truth masks and randomly selected seed points for different views.
-- **p. 7 / 4.1. Part Segmentation - extractive PDF cue:** This is primarily because of the ambiguity of the segmentation task, which is better captured by our generator-based approach.
-- **p. 7 / 4.2. Part completion and reconstruction - extractive PDF cue:** The latter is an important metric since the completion task is highly ambiguous, which motivates evaluating semantic similarity.
+- **p. 6 / 4. Experiments - extractive body cue:** For all experiments, we use 100 held-out objects from the dataset described in Sec.
+- **p. 8 / 4.4. Applications - extractive body cue:** Real-world 3D object decomposition.
+- **p. 8 / 4.4. Applications - extractive body cue:** PartGen can also decompose real-world 3D objects.
+- **p. 6 / 4.1. Part Segmentation - extractive body cue:** First, we fine-tune SAM2's mask decoder on our dataset, given the ground-truth masks and randomly selected seed points for different views.
+- **p. 7 / 4.1. Part Segmentation - extractive body cue:** This is primarily because of the ambiguity of the segmentation task, which is better captured by our generator-based approach.
+- **p. 7 / 4.2. Part completion and reconstruction - extractive body cue:** The latter is an important metric since the completion task is highly ambiguous, which motivates evaluating semantic similarity.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce PartGen, a pipeline that generates compositional 3D objects similar to a human artist. It can start from text, an image, or ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of PartGen. Our method begins with text, single images, or existing 3D objects to obtain an initial grid view of the object. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Training data. We obtain a dataset of 3D objects de- composed into parts from artist-created assets. These come ‘natu- rally' segmented into parts ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Examples of automatic multi-view part segmentations. By running our method several times, we obtain diverse segmentations, covering the space of artist intents better ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Segmentation results. SAM2∗is fine-tuned on our data and SAM2† is fine-tuned for multi-view segmentation. Ours Sample 1 Ours Sample 2 Ours Sample 3 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative results of part completion. The images with blue borders are the inputs. Our algorithm produces various plausible completions across different runs. Even ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Part completion results. We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J. Then, we evaluate 3D ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Examples of applications. PartGen can effectively generate or reconstruct 3D objects with meaningful and realistic parts in different scenarios: a) Part-aware text-to-3D generation; ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce PartGen, a pipeline that generates compositional 3D objects similar to a human artist. It can start from text, an image, or ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of PartGen. Our method begins with text, single images, or existing 3D objects to obtain an initial grid view of the object. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Training data. We obtain a dataset of 3D objects de- composed into parts from artist-created assets. These come ‘natu- rally' segmented into parts ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Examples of automatic multi-view part segmentations. By running our method several times, we obtain diverse segmentations, covering the space of artist intents better ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Segmentation results. SAM2∗is fine-tuned on our data and SAM2† is fine-tuned for multi-view segmentation. Ours Sample 1 Ours Sample 2 Ours Sample 3 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results of part completion. The images with blue borders are the inputs. Our algorithm produces various plausible completions across different runs. Even ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Part completion results. We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J. Then, we evaluate 3D ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Examples of applications. PartGen can effectively generate or reconstruct 3D objects with meaningful and realistic parts in different scenarios: a) Part-aware text-to-3D generation; ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For all experiments, we use 100 held-out objects from the dataset described in Sec. | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 8 (4.4. Applications) |
 | Task/environment | Real-world 3D object decomposition. | reset, timeout, object/scene variation | p. 8 (4.4. Applications), p. 8 (4.4. Applications) |
@@ -119,10 +119,10 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 7 (4.1. Part Seg
 | Primary metric/result | We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J. | numeric claim only at cited anchor | p. 7 (4.1. Part Segmentation) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.2. Multi-view part segmentation - extractive PDF cue:** Given this mapping, we render the segmentation map as a multi-view RGB image C ∈[0, 1]3×2H×2W (Fig.
-- **p. 5 / 3.5. Training data - extractive PDF cue:** In the case of text conditioning, the training data consists of the pairs {(In, yn)}N n=1 of multi-view images and their text captions.
-- **p. 5 / 3.5. Training data - extractive PDF cue:** The segmentation diffusion network is trained on the dataset of pairs {(In, Mn)}N n=1, where the segmentation map M = [M k]S k=1 is a ...
-- **p. 6 / 3.5. Training data - extractive PDF cue:** Automatic Seeded Method mAP50↑mAP75↑mAP50↑ mAP75↑ Part123 [40] 11.5 7.4 10.3 6.5 SAM2† [67] 20.3 11.8 24.6 13.1 SAM2∗[67] 37.4 27.0 44.2 30.1 SAM2 [67] 35.3 ...
+- **p. 4 / 3.2. Multi-view part segmentation - extractive body cue:** Given this mapping, we render the segmentation map as a multi-view RGB image C ∈[0, 1]3×2H×2W (Fig.
+- **p. 5 / 3.5. Training data - extractive body cue:** In the case of text conditioning, the training data consists of the pairs {(In, yn)}N n=1 of multi-view images and their text captions.
+- **p. 5 / 3.5. Training data - extractive body cue:** The segmentation diffusion network is trained on the dataset of pairs {(In, Mn)}N n=1, where the segmentation map M = [M k]S k=1 is a ...
+- **p. 6 / 3.5. Training data - extractive body cue:** Automatic Seeded Method mAP50↑mAP75↑mAP50↑ mAP75↑ Part123 [40] 11.5 7.4 10.3 6.5 SAM2† [67] 20.3 11.8 24.6 13.1 SAM2∗[67] 37.4 27.0 44.2 30.1 SAM2 [67] 35.3 ...
 
 ## Generalization and Failure Cases
 
@@ -157,11 +157,11 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 7 (4.1. Part Seg
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Part Segmentation - extractive PDF cue:** Second, we concatenate the four orthogonal views in a multi-view image I and fine-tune SAM2 to predict the multi-view mask M (in this case, the ...
-- **p. 7 / 4.2. Part completion and reconstruction - extractive PDF cue:** We then compare ˆJ to the ground-truth render J using Peak Signalto-Noise Ratio (PSNR) of the foreground pixels, Learned Perceptual Image Patch Similarity (LPIPS) [97], ...
-- **p. 8 / 4.4. Applications - extractive PDF cue:** 6, PartGen can effectively generate 3D objects with distinct and completed parts, even in challenging cases with heavy occlusions, such as the gummy bear.
+- **p. 6 / 4.1. Part Segmentation - extractive body cue:** Second, we concatenate the four orthogonal views in a multi-view image I and fine-tune SAM2 to predict the multi-view mask M (in this case, the ...
+- **p. 7 / 4.2. Part completion and reconstruction - extractive body cue:** We then compare ˆJ to the ground-truth render J using Peak Signalto-Noise Ratio (PSNR) of the foreground pixels, Learned Perceptual Image Patch Similarity (LPIPS) [97], ...
+- **p. 8 / 4.4. Applications - extractive body cue:** 6, PartGen can effectively generate 3D objects with distinct and completed parts, even in challenging cases with heavy occlusions, such as the gummy bear.
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 8 (4.4. Applications), p. 8 (4.4. Applications), p. 6 (4.1. Part Segmentation), p. 7 (4.1. Part Segmentation), p. 7 (4.2. Part completion and reconstruction), metrics p. 7 (4.1. Part Segmentation), p. 6 (4.1. Part Segmentation), p. 8 (4.2. Part completion and reconstruction), p. 6 (4. Experiments), p. 7 (4.1. Part Segmentation), p. 8 (4.4. Applications), baselines p. 6 (4.1. Part Segmentation), p. 7 (4.2. Part completion and reconstruction), p. 7 (4.1. Part Segmentation), p. 8 (4.2. Part completion and reconstruction), p. 8 (4.2. Part completion and reconstruction), results p. 4 (Figure/Table caption), p. 7 (4.1. Part Segmentation), p. 7 (4.1. Part Segmentation), p. 8 (4.2. Part completion and reconstruction), p. 8 (4.4. Applications), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 8 (4.4. Applications), p. 8 (4.4. Applications), p. 6 (4.1. Part Segmentation), p. 7 (4.1. Part Segmentation), p. 7 (4.2. Part completion and reconstruction), metrics p. 7 (4.1. Part Segmentation), p. 6 (4.1. Part Segmentation), p. 8 (4.2. Part completion and reconstruction), p. 6 (4. Experiments), p. 7 (4.1. Part Segmentation), p. 8 (4.4. Applications), baselines p. 6 (4.1. Part Segmentation), p. 7 (4.2. Part completion and reconstruction), p. 7 (4.1. Part Segmentation), p. 8 (4.2. Part completion and reconstruction), p. 8 (4.2. Part completion and reconstruction), results p. 4 (Figure/Table caption), p. 7 (4.1. Part Segmentation), p. 7 (4.1. Part Segmentation), p. 8 (4.2. Part completion and reconstruction), p. 8 (4.4. Applications), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

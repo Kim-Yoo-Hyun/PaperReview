@@ -1,8 +1,10 @@
 # Act the Part: Learning Interaction Strategies for Articulated Object Part Discovery
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2105.01047.
-> PDF retrieval source: https://arxiv.org/pdf/2105.01047. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2105.01047.
+> PDF retrieval source: https://arxiv.org/pdf/2105.01047. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2105.01047
 - Code/Project: https://act-the-part.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.를 문제로 두고, To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.를 문제로 두고, To address these challenges, we introduce Act the Part 를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -31,7 +33,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Core Idea
 
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021
+- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part.
 - **p. 2 / 1. Introduction - extractive body cue:** (2) Our method generalizes to unseen object instances and categories with different numbers of parts and joints.
 - **p. 4 / 3.4. History Aggregation - extractive body cue:** We introduce a history aggregation algorithm to updated part memory V , based on predicted Mt and Mt+1.
 - **p. 2 / 3. Approach - extractive body cue:** We then explain the three components of our approach: an interaction network (Sec.
@@ -51,7 +53,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021
+- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part.
 - **p. 2 / 1. Introduction - extractive body cue:** (2) Our method generalizes to unseen object instances and categories with different numbers of parts and joints.
 - **p. 4 / 3.4. History Aggregation - extractive body cue:** We introduce a history aggregation algorithm to updated part memory V , based on predicted Mt and Mt+1.
 - **p. 2 / 3. Approach - extractive body cue:** We then explain the three components of our approach: an interaction network (Sec.
@@ -84,4 +86,13 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.를 문제로 두고, To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Learning to Act to Discover Parts) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.를 문제로 두고, To address these challenges, we introduce Act the Part 를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Learning to Act to Discover Parts) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories. (p. 1, 1. Introduction).
+- **Actual contribution:** Our task and approach novelty are highlighted in Fig. (p. 1, 1. Introduction).
+- **Evaluation boundary:** Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time. (p. 7, 4.2. Benchmark Results).
+- **Explicit failure boundary:** The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).

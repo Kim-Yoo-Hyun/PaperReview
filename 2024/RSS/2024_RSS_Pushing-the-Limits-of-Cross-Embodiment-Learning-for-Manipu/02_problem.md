@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p093.html; PDF retrieval source: https://arxiv.org/pdf/2402.19432.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p093.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p093.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -34,8 +34,8 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 |---|---|---|
 | State / observation variable | base-arm-object state and language/task goal; body terms: objective, goal-conditioned, imitation, learning, train, policy, output, actions, control, particular | p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
 | Decision / output variable | base plus arm/gripper action; body terms: While, particular, training, methodology, model, architecture, prior, techniques | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES) |
-| Objective / loss / cost | long-horizon task utility under reachability/contact constraints; cue terms: overall, objective, weighted, combination, losses, Ldiffusion, Ldistance, Note | p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
-| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
+| Objective / loss / cost | long-horizon task utility under reachability/contact constraints; cue terms: overall, objective, weighted, combination, losses, Ldiffusion, Ldistance, Note | p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
 | Success / guarantee | task completion and recovery | p. 8 (Figure/Table caption), p. 7 (VI. ANALYSIS), p. 7 (VI. ANALYSIS) |
 
 - **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
@@ -73,8 +73,17 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 
 ## Verification Questions
 
-- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), interface p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 7 (VI. ANALYSIS), objective p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), interface p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 7 (VI. ANALYSIS), objective p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate transfer to novel domains [1]. (p. 1, I. INTRODUCTION).
+- **Assumption/failure evidence:** Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading ... (p. 7, VI. ANALYSIS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

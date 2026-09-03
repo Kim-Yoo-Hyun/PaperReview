@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablat
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** For Evaluation, we adopt the Google Scanned Objects (GSO) dataset [13], which includes a wide variety of high-quality scanned household items, to evaluate the performance ...
-- **p. 8 / 4.6. Ablation Study - extractive PDF cue:** However, for some multiview datasets, obtaining accurate and complete groundtruth 3D models is not an easy task.
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** Baselines, Dataset, and Metrics Baselines.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Quantitative comparison on novel-view synthesis from single images on the GSO dataset, in terms of PSNR, SSIM, LPIPS, and runtime efficiency.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Quantitative Comparison for single view 3D reconstruction on the GSO dataset, in terms of Chamfer Distance ×10-3, Volume IoU and runtime efficiency.
-- **p. 8 / 4.6. Ablation Study - extractive PDF cue:** In the absence of ground-truth 3D models, we can address this issue by overfitting each object using Gaussian Splatting and leveraging them for pseudo-point-cloud supervision.
-- **p. 7 / 4.6. Ablation Study - extractive PDF cue:** As shown in Table 4, image-based shape codes achieve higher IoU com10330
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** For Evaluation, we adopt the Google Scanned Objects (GSO) dataset [13], which includes a wide variety of high-quality scanned household items, to evaluate the performance ...
+- **p. 8 / 4.6. Ablation Study - extractive body cue:** However, for some multiview datasets, obtaining accurate and complete groundtruth 3D models is not an easy task.
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** Baselines, Dataset, and Metrics Baselines.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Quantitative comparison on novel-view synthesis from single images on the GSO dataset, in terms of PSNR, SSIM, LPIPS, and runtime efficiency.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Quantitative Comparison for single view 3D reconstruction on the GSO dataset, in terms of Chamfer Distance ×10-3, Volume IoU and runtime efficiency.
+- **p. 8 / 4.6. Ablation Study - extractive body cue:** In the absence of ground-truth 3D models, we can address this issue by overfitting each object using Gaussian Splatting and leveraging them for pseudo-point-cloud supervision.
+- **p. 7 / 4.6. Ablation Study - extractive body cue:** As shown in Table 4, image-based shape codes achieve higher IoU com10330
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablat
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.5. Runtime Efficiency | SYSTEM / EVALUATION SCOPE UNRESOLVED | We can find that our method has achieved significant improvements in speed for both reconstruction and rendering processes compared to other baselines, benefiting from ... | p. 7 (4.5. Runtime Efficiency) |
 | 4.6. Ablation Study | SYSTEM / EVALUATION SCOPE UNRESOLVED | Our TriplaneGaussian, leveraging the projection-aware condition with explicit geometry, excels in producing more detailed texture compared to Triplane-NeRF, as illustrated in the red box ... | p. 7 (4.6. Ablation Study) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablat
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** For Evaluation, we adopt the Google Scanned Objects (GSO) dataset [13], which includes a wide variety of high-quality scanned household items, to evaluate the performance ...
-- **p. 8 / 4.6. Ablation Study - extractive PDF cue:** However, for some multiview datasets, obtaining accurate and complete groundtruth 3D models is not an easy task.
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** Baselines, Dataset, and Metrics Baselines.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Quantitative comparison on novel-view synthesis from single images on the GSO dataset, in terms of PSNR, SSIM, LPIPS, and runtime efficiency.
-- **p. 7 / 4.3. Single View Reconstruction - extractive PDF cue:** Quantitative Comparison for single view 3D reconstruction on the GSO dataset, in terms of Chamfer Distance ×10-3, Volume IoU and runtime efficiency.
-- **p. 8 / 4.6. Ablation Study - extractive PDF cue:** In the absence of ground-truth 3D models, we can address this issue by overfitting each object using Gaussian Splatting and leveraging them for pseudo-point-cloud supervision.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** For Evaluation, we adopt the Google Scanned Objects (GSO) dataset [13], which includes a wide variety of high-quality scanned household items, to evaluate the performance ...
+- **p. 8 / 4.6. Ablation Study - extractive body cue:** However, for some multiview datasets, obtaining accurate and complete groundtruth 3D models is not an easy task.
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** Baselines, Dataset, and Metrics Baselines.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Quantitative comparison on novel-view synthesis from single images on the GSO dataset, in terms of PSNR, SSIM, LPIPS, and runtime efficiency.
+- **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Quantitative Comparison for single view 3D reconstruction on the GSO dataset, in terms of Chamfer Distance ×10-3, Volume IoU and runtime efficiency.
+- **p. 8 / 4.6. Ablation Study - extractive body cue:** In the absence of ground-truth 3D models, we can address this issue by overfitting each object using Gaussian Splatting and leveraging them for pseudo-point-cloud supervision.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose a method that enables fast reconstruction from a single-view image. We build the 3D representation upon a hybrid Triplane-Gaussian representation by ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overview of our framework. Given an image with its camera parameters, we first encode them into a set of latent feature tokens ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset. Our approach achieves both ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparisons of geometry reconstruction from a single image between our method and other baselines on the GSO dataset. One-2-3-45 [35]. Point-E [45] ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative Comparison for single view 3D reconstruc- tion on the GSO dataset, in terms of Chamfer Distance ×10-3, Volume IoU and runtime efficiency. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison on novel-view synthesis from single images on the GSO dataset, in terms of PSNR, SSIM, LPIPS, and runtime efficiency. PSNR ↑ ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Quantitative comparison between different representa- tions for novel view synthesis on GSO.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Quantitative Comparison of different conditions for point cloud up-sampling in geometry reconstruction. P.C. G.E. GT 3D PSNR ↑ SSIM ↑ LPIPS ↓
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose a method that enables fast reconstruction from a single-view image. We build the 3D representation upon a hybrid Triplane-Gaussian representation by ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overview of our framework. Given an image with its camera parameters, we first encode them into a set of latent feature tokens ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset. Our approach achieves both ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparisons of geometry reconstruction from a single image between our method and other baselines on the GSO dataset. One-2-3-45 [35]. Point-E [45] ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Comparison for single view 3D reconstruc- tion on the GSO dataset, in terms of Chamfer Distance ×10-3, Volume IoU and runtime efficiency. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison on novel-view synthesis from single images on the GSO dataset, in terms of PSNR, SSIM, LPIPS, and runtime efficiency. PSNR ↑ ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative comparison between different representa- tions for novel view synthesis on GSO.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Quantitative Comparison of different conditions for point cloud up-sampling in geometry reconstruction. P.C. G.E. GT 3D PSNR ↑ SSIM ↑ LPIPS ↓
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Qualitative comparisons of novel view synthesis from reconstructed object between our method and other baselines on the GSO dataset. | embodiment, simulator version and control stack | p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details) |
 | Task/environment | For Evaluation, we adopt the Google Scanned Objects (GSO) dataset [13], which includes a wide variety of high-quality scanned household items, to evaluate the ... | reset, timeout, object/scene variation | p. 6 (4.1. Implementation Details), p. 8 (4.6. Ablation Study) |
@@ -119,11 +119,11 @@ PDF body evaluation/result cue (p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablat
 | Primary metric/result | Our TriplaneGaussian, leveraging the projection-aware condition with explicit geometry, excels in producing more detailed texture compared to Triplane-NeRF, as illustrated in the red box ... | numeric claim only at cited anchor | p. 7 (4.6. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** The positional embeddings of the point decoder consist of 2048 tokens with 512 dimensions, corresponding to 2048 points.
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** The positional embeddings of the triplane decoder comprise three 32 × 32 tokens, each with 512 dimensions, representing three axis-aligned planes.
-- **p. 7 / 4.6. Ablation Study - extractive PDF cue:** Furthermore, once the 3D Gaussians are decoded, our rendering process demonstrates faster performance compared to Triplane-NeRF (48ms).
-- **p. 5 / 3.2. Reconstruction from Single-View Images - extractive PDF cue:** Due to limited computation and memory resources, we only decode a coarse point cloud with 2048 points in this step.
-- **p. 5 / 3.2. Reconstruction from Single-View Images - extractive PDF cue:** Therefore, we adopt a lifting module with two-step Snowflake point deconvolution (SPD) [73, 74] to densify the point clouds from 2048 points to 16384 points.
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** The positional embeddings of the point decoder consist of 2048 tokens with 512 dimensions, corresponding to 2048 points.
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** The positional embeddings of the triplane decoder comprise three 32 × 32 tokens, each with 512 dimensions, representing three axis-aligned planes.
+- **p. 7 / 4.6. Ablation Study - extractive body cue:** Furthermore, once the 3D Gaussians are decoded, our rendering process demonstrates faster performance compared to Triplane-NeRF (48ms).
+- **p. 5 / 3.2. Reconstruction from Single-View Images - extractive body cue:** Due to limited computation and memory resources, we only decode a coarse point cloud with 2048 points in this step.
+- **p. 5 / 3.2. Reconstruction from Single-View Images - extractive body cue:** Therefore, we adopt a lifting module with two-step Snowflake point deconvolution (SPD) [73, 74] to densify the point clouds from 2048 points to 16384 points.
 
 ## Generalization and Failure Cases
 
@@ -157,10 +157,10 @@ PDF body evaluation/result cue (p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablat
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** One-2-345 [35] trains a robust multi-view reconstruction model which takes multi-view images generated from a 2D diffusion model (e.g., Zero-1-2-3).
-- **p. 7 / 4.4. Novel View Synthesis - extractive PDF cue:** Additionally, by leveraging the transformer architecture and local feature projection, our model exhibits robust generalization to unseen objects while preserving intricate textures.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** One-2-345 [35] trains a robust multi-view reconstruction model which takes multi-view images generated from a 2D diffusion model (e.g., Zero-1-2-3).
+- **p. 7 / 4.4. Novel View Synthesis - extractive body cue:** Additionally, by leveraging the transformer architecture and local feature projection, our model exhibits robust generalization to unseen objects while preserving intricate textures.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 8 (4.6. Ablation Study), p. 5 (4.1. Implementation Details), p. 7 (4.3. Single View Reconstruction), p. 7 (4.3. Single View Reconstruction), metrics p. 7 (4.3. Single View Reconstruction), p. 7 (4.6. Ablation Study), p. 8 (4.6. Ablation Study), p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), baselines p. 7 (4.5. Runtime Efficiency), p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 7 (4.5. Runtime Efficiency), p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), results p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablation Study), p. 6 (4.1. Implementation Details), p. 8 (4.6. Ablation Study), p. 8 (4.6. Ablation Study), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 8 (4.6. Ablation Study), p. 5 (4.1. Implementation Details), p. 7 (4.3. Single View Reconstruction), p. 7 (4.3. Single View Reconstruction), metrics p. 7 (4.3. Single View Reconstruction), p. 7 (4.6. Ablation Study), p. 8 (4.6. Ablation Study), p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), baselines p. 7 (4.5. Runtime Efficiency), p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 7 (4.5. Runtime Efficiency), p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), results p. 7 (4.5. Runtime Efficiency), p. 7 (4.6. Ablation Study), p. 6 (4.1. Implementation Details), p. 8 (4.6. Ablation Study), p. 8 (4.6. Ablation Study), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

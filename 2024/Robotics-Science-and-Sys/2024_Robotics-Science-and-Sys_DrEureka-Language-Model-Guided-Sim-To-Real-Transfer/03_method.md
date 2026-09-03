@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p094.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p094.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p094.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p094.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | Algorithm 2 Reward Aware Physics Prior (RAPP) 1: Require: Reinforcement learning policy πinitial, simulator S, success criteria F, domain randomization parameters P ... | p. 4 (IV. METHOD), p. 3 (IV. METHOD) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | In Eureka, the LLM first takes the task description ltask and a summary of the environment state and action spaces (provided by ... | p. 3 (IV. METHOD), p. 3 (IV. METHOD) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | Its observations include joint positions, joint velocities, and a gravity vector in the robot's local frame, as well as a history of ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | LLM for Domain Randomization Given the RAPP ranges for each DR parameter, the final step of DrEureka instructs the LLM to generate ... | Hz/fps, inference time and control rate |
 | Memory | trajectory, embodiment/task metadata와 dataset index. | Its observations include joint positions, joint velocities, and a gravity vector in the robot's local frame, as well as a history of ... | window and reset |
-| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD), objective p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD), temporal p. 5 (V. EXPERIMENTAL SETUP), p. 5 (IV. METHOD), p. 6 (V. EXPERIMENTAL SETUP), p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM SETTING), p. 8 (2) How important is each component of DrEureka?).
+- **Evidence anchors reviewed:** method p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD), objective p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD), temporal p. 5 (V. EXPERIMENTAL SETUP), p. 5 (IV. METHOD), p. 6 (V. EXPERIMENTAL SETUP), p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM SETTING), p. 8 (2) How important is each component of DrEureka?).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Algorithm 2 Reward Aware Physics Prior (RAPP) 1: Require: Reinforcement learning policy πinitial, simulator S, success criteria F, domain randomization parameters P and their respective search values R, 2: for ... (p. 4, IV. METHOD).
+- **Objective/update evidence:** Algorithm 2 Reward Aware Physics Prior (RAPP) 1: Require: Reinforcement learning policy πinitial, simulator S, success criteria F, domain randomization parameters P and their respective search values R, 2: for ... (p. 4, IV. METHOD).
+- **Temporal/runtime evidence:** Its observations include joint positions, joint velocities, and a gravity vector in the robot's local frame, as well as a history of past observations and actions. (p. 5, V. EXPERIMENTAL SETUP).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

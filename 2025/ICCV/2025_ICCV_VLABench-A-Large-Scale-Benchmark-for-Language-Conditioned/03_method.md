@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 ## Method Body Digest
 
-- **p. 7 / Model - extractive PDF cue:** We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs.
-- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
-- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
-- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** Voxposer w uses GPT-4V as the visual perception module.
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** The data collection framework includes multiple task-specific motion planners.
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** The final trajectory is smoothed using a Bezier curve to optimize path quality.
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** These motion planners call upon the skills in the skill library based on the current task progress and determine parameters by incorporating prior information.
+- **p. 7 / Model - extractive body cue:** We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs.
+- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive body cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
+- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
+- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** Voxposer w uses GPT-4V as the visual perception module.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** The data collection framework includes multiple task-specific motion planners.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** The final trajectory is smoothed using a Bezier curve to optimize path quality.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** These motion planners call upon the skills in the skill library based on the current task progress and determine parameters by incorporating prior information.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** We summarize contributions as follows: • We propose VLABench, the first benchmark designed to comprehensively evaluate the capabilities of VLAs and VLMs in robotics manipulation ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To better define the types of language-conditioned manipulation tasks suited for foundation models and provide a standardized evaluation suite to advance robotics research, we introduce ...
-- **p. 8 / 4.3. Comprehensive Ability of VLMs - extractive PDF cue:** This dataset consists of a complex set of tasks designed to assess the VLM's ability to perceive visual stimuli and comprehend verbal instructions.
+- **p. 2 / 1. Introduction - extractive body cue:** We summarize contributions as follows: • We propose VLABench, the first benchmark designed to comprehensively evaluate the capabilities of VLAs and VLMs in robotics manipulation ...
+- **p. 2 / 1. Introduction - extractive body cue:** To better define the types of language-conditioned manipulation tasks suited for foundation models and provide a standardized evaluation suite to advance robotics research, we introduce ...
+- **p. 8 / 4.3. Comprehensive Ability of VLMs - extractive body cue:** This dataset consists of a complex set of tasks designed to assess the VLM's ability to perceive visual stimuli and comprehend verbal instructions.
 
 ## Source Evidence Cues
 
-- **p. 7 / Model - extractive PDF cue:** We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs.
-- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
-- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
-- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** Voxposer w uses GPT-4V as the visual perception module.
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** The data collection framework includes multiple task-specific motion planners.
+- **p. 7 / Model - extractive body cue:** We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs.
+- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive body cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
+- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
+- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** Voxposer w uses GPT-4V as the visual perception module.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** The data collection framework includes multiple task-specific motion planners.
 - **Detected method headings:** Model (p. 7)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs. | p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are ... | p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 ## Objective / Update Rule
 
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** The final trajectory is smoothed using a Bezier curve to optimize path quality.
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** These motion planners call upon the skills in the skill library based on the current task progress and determine parameters by incorporating prior information.
-- **p. 7 / Model - extractive PDF cue:** Among these, the performance decline is more pronounced in models based on non-VLM architectures: RDT's progress score decreases by 45.2% while OpenVLA and π0 only ...
-- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** While Voxposer performed adequately on basic tasks and achieved the Progress Scores of 30-40, its reliance on LLMdriven motion planning often led to grasping failures ...
-- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** Evaluation progress score for Voxposer and CoPA.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** The final trajectory is smoothed using a Bezier curve to optimize path quality.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** These motion planners call upon the skills in the skill library based on the current task progress and determine parameters by incorporating prior information.
+- **p. 7 / Model - extractive body cue:** Among these, the performance decline is more pronounced in models based on non-VLM architectures: RDT's progress score decreases by 45.2% while OpenVLA and π0 only ...
+- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive body cue:** While Voxposer performed adequately on basic tasks and achieved the Progress Scores of 30-40, its reliance on LLMdriven motion planning often led to grasping failures ...
+- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** Evaluation progress score for Voxposer and CoPA.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by RT-2 and Palm-E ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Such tasks require agents to master multiple capabilities: interpreting natural language instructions, understanding complex environments, making decisions, formulating plans, and executing precise actions.
-- **p. 8 / 4.3. Comprehensive Ability of VLMs - extractive PDF cue:** Besides, performance declines significantly when linguistic instructions transition from direct semantics to abstract meanings, as shown in the 3As GLM-4V-9B does not support multiple image ...
-- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** The lack of closed-loop feedback limits these models' ability to perform physical reasoning tasks, particularly those involving dynamic interactions, leading to lower scores in this ...
-- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** Section 8.4 provides more details of the instruction generation.
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** We use GPT-4o [1] to generate descriptions that incorporate target-specific characteristics and interactive instructions that encompass a variety of contexts and intentions.
+- **p. 2 / 1. Introduction - extractive body cue:** The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by RT-2 and Palm-E ...
+- **p. 2 / 1. Introduction - extractive body cue:** Such tasks require agents to master multiple capabilities: interpreting natural language instructions, understanding complex environments, making decisions, formulating plans, and executing precise actions.
+- **p. 8 / 4.3. Comprehensive Ability of VLMs - extractive body cue:** Besides, performance declines significantly when linguistic instructions transition from direct semantics to abstract meanings, as shown in the 3As GLM-4V-9B does not support multiple image ...
+- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive body cue:** The lack of closed-loop feedback limits these models' ability to perform physical reasoning tasks, particularly those involving dynamic interactions, leading to lower scores in this ...
+- **p. 7 / 4.2. Zero-shot Ability of Agent - extractive body cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** Section 8.4 provides more details of the instruction generation.
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** We use GPT-4o [1] to generate descriptions that incorporate target-specific characteristics and interactive instructions that encompass a variety of contexts and intentions.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,9 +88,9 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 ## Training vs Inference
 
-- **p. 7 / Model - extractive PDF cue:** We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs.
-- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive PDF cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
+- **p. 7 / Model - extractive body cue:** We also discuss in detail the potential issues with current VLAs, such as multimodal data co-training and model architecture designs.
+- **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 ## Failure and Ablation Link
 
-- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Evaluation progress score for Voxposer and CoPA. Vox- poser w/o refers to the version without visual perception, where ground truth labels are directly ...
-- **p. 6 / 4.1. Generalization Ability of VLAs - extractive PDF cue:** Pretrained VLAs are expected to possess robust generalization and versatility similar to LLMs.
-- **p. 4 / 3.3. Benchmark - extractive PDF cue:** VLABench organizes evaluations into three categories: assessments of pretrained or fine-tuned visionlanguage-action (VLA) models, heuristic workflows that integrate foundation models with various algorithms, and multi-dimensional ...
-- **p. 5 / 3.3. Benchmark - extractive PDF cue:** Building upon Track 1, replace the instructions with unseen and more complex ones. - Track 5: Cross-domain behavior transferability.
-- **p. 5 / 3.3. Benchmark - extractive PDF cue:** The evaluation tasks are replaced with ones that differ from those in the training set, but require similar actions. - Track 6: Long-horizon task learning.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Overall experiment result of 6 evaluation tracks of fine-tuned VLAs. The detailed result of each task is reported in Table 9. above, we ...
+- **p. 6 / 3.4. Dataset Construction - extractive body cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Evaluation progress score for Voxposer and CoPA. Vox- poser w/o refers to the version without visual perception, where ground truth labels are directly ...
+- **p. 6 / 4.1. Generalization Ability of VLAs - extractive body cue:** Pretrained VLAs are expected to possess robust generalization and versatility similar to LLMs.
+- **p. 4 / 3.3. Benchmark - extractive body cue:** VLABench organizes evaluations into three categories: assessments of pretrained or fine-tuned visionlanguage-action (VLA) models, heuristic workflows that integrate foundation models with various algorithms, and multi-dimensional ...
+- **p. 5 / 3.3. Benchmark - extractive body cue:** Building upon Track 1, replace the instructions with unseen and more complex ones. - Track 5: Cross-domain behavior transferability.
+- **p. 5 / 3.3. Benchmark - extractive body cue:** The evaluation tasks are replaced with ones that differ from those in the training set, but require similar actions. - Track 6: Long-horizon task learning.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Overall experiment result of 6 evaluation tracks of fine-tuned VLAs. The detailed result of each task is reported in Table 9. above, we ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent), p. 6 (3.4. Dataset Construction), p. 8 (4.2. Zero-shot Ability of Agent), p. 6 (3.4. Dataset Construction), objective p. 6 (3.4. Dataset Construction), p. 6 (3.4. Dataset Construction), p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent), temporal p. 4 (3.1. Task Description), p. 1 (Abstract), p. 1 (Front matter), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Generalization Ability of VLAs).
+- **Evidence anchors reviewed:** method p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent), p. 6 (3.4. Dataset Construction), p. 8 (4.2. Zero-shot Ability of Agent), p. 6 (3.4. Dataset Construction), objective p. 6 (3.4. Dataset Construction), p. 6 (3.4. Dataset Construction), p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent), temporal p. 4 (3.1. Task Description), p. 1 (Abstract), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Generalization Ability of VLAs).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

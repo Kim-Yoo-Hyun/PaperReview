@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 RT-1 takes a short sequence of images and a natural language instruction as input and outputs an action for the robot at each time step.를 We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations to be ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 13: Various model ablations of RT-1 across seen tasks, generalization to unseen tasks, and robustness to distractors and backgrounds. for all the models, and therefore we focus our evaluation on just ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations to be ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations ... (p. 2, 3 Hz).
+- **Paper-specific mechanism:** We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations ... (p. 2, 3 Hz).
+- **Evidence boundary:** the reported outcome is Table 4: Experimental results for incorporating simulation data in RT-1. Adding simulation data does not impact the performance on real objects, while significantly improving real performance on objects that were ... (p. 12, Figure/Table caption); the relevant task/metric cue is We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness to backgrounds and distractors, and performance in long-horizon scenarios, as detailed below. (p. 8, 6 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 7 CONCLUSIONS, LIMITATIONS AND FUTURE WORK We presented Robotics Transformer 1, RT-1, a robot learning method that can effectively absorb large amounts of data and scales with data quantity and ... (p. 15, 6 EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: It also improves real-world generalization on simulated objects used with skills seen only in the real world (+26%), e.g. "move X to Y" where X only appeared in simulated "pick X" task. ....
-3. Compare against the body-reported baseline or a matched simpler baseline: (Appendix Section D.4) Throughout this section we will compare to two baseline state of the art architectures, Gato (Reed et al., 2022) and BC-Z (Jang et al., 2021)..
-4. Report the body metric and its denominator/aggregation: We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness to backgrounds and distractors, and performance in long-horizon scenarios, as detailed below..
-5. Re-run the body-reported ablation/failure condition: Table 5: Experimental results for mixing data from two different robots. Incorporating Kuka bin- picking data from QT-Opt (Kalashnikov et al., 2018) in RT-1 minimally impacts the standard class- room evaluation performance ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations ... (p. 2, 3 Hz); preserve the objective/update rule: At the end of an episode, the agent will be given a binary reward r ∈{0, 1} indicating whether the robot performed the instruction i. (p. 3, 3 PRELIMINARIES).
+2. Use the paper-reported task/data/environment cue: It also improves real-world generalization on simulated objects used with skills seen only in the real world (+26%), e.g. "move X to Y" where X only appeared in simulated "pick ... (p. 12, 6 EXPERIMENTS).
+3. Compare against the reported or matched baseline: (Appendix Section D.4) Throughout this section we will compare to two baseline state of the art architectures, Gato (Reed et al., 2022) and BC-Z (Jang et al., 2021). (p. 8, 6 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness to backgrounds and distractors, and performance in long-horizon scenarios, as detailed below. (p. 8, 6 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: First, it computes image tokens without the notion of language and each image token embedding is computed separately for each image patch, as opposed to early language fusion and global ... (p. 8, 6 EXPERIMENTS); if none is reported, design one around: 7 CONCLUSIONS, LIMITATIONS AND FUTURE WORK We presented Robotics Transformer 1, RT-1, a robot learning method that can effectively absorb large amounts of data and scales with data quantity and ... (p. 15, 6 EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES); the primary result is directionally consistent at p. 13 (Figure/Table caption), p. 13 (6 EXPERIMENTS), p. 12 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (3 Hz), p. 1 (ABSTRACT), match the reported outcome at p. 12 (Figure/Table caption), p. 28 (Figure/Table caption), p. 12 (6 EXPERIMENTS), and measure the boundary at p. 15 (6 EXPERIMENTS), p. 15 (6 EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 novel, architecture, call mechanism이 (Appendix Section D.4) Throughout this section we will compare to two baseline state of the art ... 대비 We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness ...을 개선하고, Table 13: Various model ablations of RT-1 across seen tasks, generalization to unseen tasks, and robustness ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, ...), does the paper-specific mechanism (We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, ...) retain the reported evaluation outcome (We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness ...) when tested against the paper's strongest explicit boundary (7 CONCLUSIONS, LIMITATIONS AND FUTURE WORK We presented Robotics Transformer 1, RT-1, a robot learning method that can ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We propose a novel architecture that we call RT-1 (Robotics Transformer 1), which by encoding high-dimensional inputs and outputs, including camera images, instructions and motor commands into compact token representations ... (p. 2, 3 Hz).
+- **Paper-supported outcome:** Table 4: Experimental results for incorporating simulation data in RT-1. Adding simulation data does not impact the performance on real objects, while significantly improving real performance on objects that were ... (p. 12, Figure/Table caption).
+- **Strongest explicit boundary:** 7 CONCLUSIONS, LIMITATIONS AND FUTURE WORK We presented Robotics Transformer 1, RT-1, a robot learning method that can effectively absorb large amounts of data and scales with data quantity and ... (p. 15, 6 EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

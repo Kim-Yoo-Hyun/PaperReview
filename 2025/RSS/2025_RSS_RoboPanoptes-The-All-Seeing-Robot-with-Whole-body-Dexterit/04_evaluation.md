@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p042.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p042.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p042.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p042.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Sweeping Task | EMPIRICAL / REAL-ROBOT OR HARDWARE | RoboPanoptes achieves a 96.6% success rate, outperforming all baselines. | p. 9 (B. Sweeping Task) |
 | C. Stowing Task | EMPIRICAL / REAL-ROBOT OR HARDWARE | RoboPanoptes achieves an overall success rate of 83.3%, compared to 27.8% for the w/o Camexa Pose policy and 0% for the Top-down Camera policy ... | p. 9 (C. Stowing Task) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Performance: ‘The training dataset contains 147 demonstration episodes, with each demonstration averaging 15s. | embodiment, simulator version and control stack | p. 7 (A. Unboxing Task), p. 8 (B. Sweeping Task) |
 | Task/environment | ‘Task: The robot needs to sweep all objects (small or large, randomly placed on a table or under a shelf) into a target region ... | reset, timeout, object/scene variation | p. 8 (B. Sweeping Task), p. 4 (V. DATA COLLECTION INTERFACE) |
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 - **p. 6 / 21 Whole - extractive body cue:** To make the system robust to such camera failure at test time, we employ a "blink training" strategy that randomly drops out camera inputs during ...
 - **p. 8 / A. Unboxing Task - extractive body cue:** This proves that our blink training strategy is critical to the robustness of the policy, especially during unexpected test-time sensor failures.
 
-- **PDF anchors reviewed:** datasets p. 7 (A. Unboxing Task), p. 8 (B. Sweeping Task), p. 4 (V. DATA COLLECTION INTERFACE), p. 4 (V. DATA COLLECTION INTERFACE), p. 5 (21 Whole), p. 5 (21 Whole), metrics p. 8 (A. Unboxing Task), p. 8 (B. Sweeping Task), p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task), p. 6 (21 Whole), p. 4 (V. DATA COLLECTION INTERFACE), baselines p. 8 (A. Unboxing Task), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 6 (VII. PRACTICAL Cons), p. 7 (VII. PRACTICAL Cons), p. 9 (C. Stowing Task), p. 9 (B. Sweeping Task), results p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task), p. 6 (21 Whole), p. 10 (IX. LIMITATIONS AND FUTURE WORK), p. 8 (B. Sweeping Task), p. 8 (B. Sweeping Task).
+- **Evidence anchors reviewed:** datasets p. 7 (A. Unboxing Task), p. 8 (B. Sweeping Task), p. 4 (V. DATA COLLECTION INTERFACE), p. 4 (V. DATA COLLECTION INTERFACE), p. 5 (21 Whole), p. 5 (21 Whole), metrics p. 8 (A. Unboxing Task), p. 8 (B. Sweeping Task), p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task), p. 6 (21 Whole), p. 4 (V. DATA COLLECTION INTERFACE), baselines p. 8 (A. Unboxing Task), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 6 (VII. PRACTICAL Cons), p. 7 (VII. PRACTICAL Cons), p. 9 (C. Stowing Task), p. 9 (B. Sweeping Task), results p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task), p. 6 (21 Whole), p. 10 (IX. LIMITATIONS AND FUTURE WORK), p. 8 (B. Sweeping Task), p. 8 (B. Sweeping Task).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** overall 94.4% success rate, outperforming all baselines. (p. 8, A. Unboxing Task).
+- **Metric evidence:** Consistent with observations in previous work [34], this simple strategy significantly improves the robustness of the policy, enabling it to succeed even when some cameras are completely disabled during test ... (p. 6, 21 Whole).
+- **Baseline/ablation evidence:** Variants using all of RoboPanoptes' cameras but without view-dependent pesitional encoding or without blink traning serve as ablations of our design. (p. 6, VII. PRACTICAL Cons).
+- **Failure/negative evidence:** The Top-down Camere policy fails to locate the hance. ‘odiing policy's actions ae less precise, leading to failures ike missing the shoe or misaligning the drawer. (p. 10, IX. LIMITATIONS AND FUTURE WORK).

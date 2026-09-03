@@ -1,8 +1,10 @@
 # DenseMatcher: Learning 3D Semantic Correspondence for Category-Level Manipulation from a Single Demo
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=8oFvUBvF1u.
-> PDF retrieval source: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=8oFvUBvF1u.
+> PDF retrieval source: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -35,7 +37,7 @@ Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위�
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Our method achieves 43.5% improvement over previous shape-matching baselines.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Our method addresses this by adding a 3D neural network, DiffusionNet (Sharp et al., 2022), to refine 2D features with 3D geometry, producing spatially consistent ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 4.3 LOSS FUNCTION Our loss function consists of two components: L = Lsemantic + Lpreservation.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** By establishing correspondences, we can enable the robot to identify semantically similar components between two objects, which is cru- ∗Equal contribution,†Corresponding author.
+- **p. 6 / 1 INTRODUCTION - extractive body cue:** Our approach, however, handles a diverse array of daily objects such as fruits and jugs, which lack distinguishable local features.
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** Our FeatUp module upsamples 16x16 features to 512x512 resolution.
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** Thanks to our 3D network, we found that using only 3 lateral views plus 1 top and 1 bottom view during both training and inferencing ...
 
@@ -54,7 +56,7 @@ Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위�
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Our method achieves 43.5% improvement over previous shape-matching baselines.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Our method addresses this by adding a 3D neural network, DiffusionNet (Sharp et al., 2022), to refine 2D features with 3D geometry, producing spatially consistent ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 4.3 LOSS FUNCTION Our loss function consists of two components: L = Lsemantic + Lpreservation.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** By establishing correspondences, we can enable the robot to identify semantically similar components between two objects, which is cru- ∗Equal contribution,†Corresponding author.
+- **p. 6 / 1 INTRODUCTION - extractive body cue:** Our approach, however, handles a diverse array of daily objects such as fruits and jugs, which lack distinguishable local features.
 - **p. 10 / 6.1.2 RESULTS - extractive body cue:** As can be seen, the mapping obtained with our method significantly outperforms baselines in terms of accuracy and continuity.
 - **p. 7 / 6.1.2 RESULTS - extractive body cue:** Additionally, due to the generalization capability of pre-trained 2D backbones, we achieve much higher accuracy on out-of-distribution test categories listed in Tab.
 - **p. 9 / 6.1.2 RESULTS - extractive body cue:** For each task, we measure the task success rates over five trials.
@@ -83,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위해 읽는다. 본문은 In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...를 문제로 두고, In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 18 (A.3.2 TRAINING DENSEMATCHER) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Our approach, however, handles a diverse array of daily objects such as fruits and jugs, which lack distinguishable local features. (p. 6, 1 INTRODUCTION).
+- **Actual contribution:** In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence ... (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Table 1: Performance comparison on DenseCorr3D shape matching benchmark. We report the results on both the full test set and the held-out set. Ablation studies are listed in Section 6.4. ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks that only utilize geometry information and are trained on category-specific datasets (Cao ... (p. 2, 1 INTRODUCTION).

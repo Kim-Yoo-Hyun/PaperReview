@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, terrain/perception observation과 velocity command → body/contact state, foothold 또는 behavior mode → joint target, torque, footstep 또는 locomotion action`.
-- 이 논문의 재사용 가능한 지점은 The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference variables tt-H...t.를 Besides the above, the policy input also includes estimated domain parameters: the velocity of the robot body and the ground friction, which are predicted from the observation history using supervised learning in ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 body/contact state, foothold 또는 behavior mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 1: Multiplicity of Behavior (MoB) enables a human to tune a single quadruped policy trained on flat ground to diverse unseen environments. Top row: A low-frequency gait fails to sprint on ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference variables tt-H...t. (p. 5, 3 Method).
+- **Paper-specific mechanism:** We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 3: Behavior tuning enables interventional studies on the relationship between gait proper- ties and performance criteria within a single policy. Here, we illustrate how power consumption varies across speeds ... (p. 6, Figure/Table caption); the relevant task/metric cue is For example, when implementing stance width as a behavior parameter, a naive approach would be to simply reward a constant desired distance between left and right feet. (p. 5, 3 Method). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Top row: A low-frequency gait fails to sprint on slippery terrain (Gait 2; inset) but tuning it to high frequency results in success (Gait 1). (p. 1, Body text (section boundary not confidently recovered)).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In a real-world example, the robot was able to crawl under a 22 cm bar; the robot body thickness is 13 cm, leaving 9 cm of clearance beneath the robot..
-3. Compare against the body-reported baseline or a matched simpler baseline: Pacing and trotting yield the best survival time in out-of-distribution deployment, outperforming the gait-free baseline..
-4. Report the body metric and its denominator/aggregation: Table 4: Zero-shot generalization to platform terrain (visualized right). Pacing and trotting yield the best survival time in out-of-distribution deployment, outperforming the gait-free baseline. Pronk- ing attains the best velocity tra ....
-5. Re-run the body-reported ablation/failure condition: Table 3: Behavior tuning enables interventional studies on the relationship between gait proper- ties and performance criteria within a single policy. Here, we illustrate how power consumption varies across speeds for common ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference variables tt-H...t. (p. 5, 3 Method); preserve the objective/update rule: This way, the agent is always rewarded for progress towards the task, more when auxiliary objectives are satisfied and less when they are not. (p. 5, 3 Method).
+2. Use the paper-reported task/data/environment cue: However, this penalizes the robot during fast turning tasks requiring relative lateral motion of the feet. (p. 5, 3 Method).
+3. Compare against the reported or matched baseline: Here, we illustrate how power consumption varies across speeds for common quadrupedal gaits and for a baseline policy without gait constraint. (p. 6, 3 Method).
+4. Report the body metric with its denominator and aggregation: For example, when implementing stance width as a behavior parameter, a naive approach would be to simply reward a constant desired distance between left and right feet. (p. 5, 3 Method).
+5. Re-run the reported ablation or stress/failure condition: Table 3: Behavior tuning enables interventional studies on the relationship between gait proper- ties and performance criteria within a single policy. Here, we illustrate how power consumption varies across speeds ... (p. 6, Figure/Table caption); if none is reported, design one around: Top row: A low-frequency gait fails to sprint on slippery terrain (Gait 2; inset) but tuning it to high frequency results in success (Gait 1). (p. 1, Body text (section boundary not confidently recovered)).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method); the primary result is directionally consistent at p. 11 (Figure/Table caption), p. 7 (3 Method), p. 7 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 6 (Figure/Table caption), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), and measure the boundary at p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, framework, policy mechanism이 Pacing and trotting yield the best survival time in out-of-distribution deployment, outperforming the gait-free baseline. 대비 Table 4: Zero-shot generalization to platform terrain (visualized right). Pacing and trotting yield the best survival time in ...을 개선하고, Figure 1: Multiplicity of Behavior (MoB) enables a human to tune a single quadruped policy trained ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference ...), does the paper-specific mechanism (We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below.) retain the reported evaluation outcome (For example, when implementing stance width as a behavior parameter, a naive approach would be to simply reward ...) when tested against the paper's strongest explicit boundary (Top row: A low-frequency gait fails to sprint on slippery terrain (Gait 2; inset) but tuning it to ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (For example, when implementing stance width as a behavior parameter, a naive approach would be to simply reward ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 3: Behavior tuning enables interventional studies on the relationship between gait proper- ties and performance criteria within a single policy. Here, we illustrate how power consumption varies across speeds ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** Top row: A low-frequency gait fails to sprint on slippery terrain (Gait 2; inset) but tuning it to high frequency results in success (Gait 1). (p. 1, Body text (section boundary not confidently recovered)).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

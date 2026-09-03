@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p094.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p094.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p094.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p094.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTAL SETUP | EMPIRICAL / REAL-ROBOT OR HARDWARE | The task of forward locomotion is to walk forward at 2 meters-per-second on flat terrains; while it is possible for the robot to walk ... | p. 5 (V. EXPERIMENTAL SETUP) |
 | V. EXPERIMENTAL SETUP | EMPIRICAL / REAL-ROBOT OR HARDWARE | DrEureka's average and best policies outperform Human-Designed and a prior reward-design baseline. | p. 6 (V. EXPERIMENTAL SETUP) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use the simulation environment as well as the real-world controller from Margolis et al. | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP) |
 | Task/environment | We adopt commercially available, low-cost robots with well-supported open-sourced simulators as our evaluation platforms. | reset, timeout, object/scene variation | p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMEN
 - **p. 9 / VIII. LIMITATIONS - extractive body cue:** Incorporating vision-based inputs could potentially improve the robustness and generalizability of the learned policies in the real world, where visual cues play a critical role ...
 - **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** This task is challenging because the policy only receives 16 joint angles and proprioceptive history, encoded via GRU [63], as observations and does not have ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), metrics p. 21 (Figure/Table caption), p. 6 (V. EXPERIMENTAL SETUP), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), baselines p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 28 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 26 (Figure/Table caption), p. 28 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), metrics p. 21 (Figure/Table caption), p. 6 (V. EXPERIMENTAL SETUP), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), baselines p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 28 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 26 (Figure/Table caption), p. 28 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Note that while CEM and BayRn tackle the same problem, their iterative procedure is conceptually different from DrEureka, which trains all policies in parallel; thus, this comparison favors the baselines ... (p. 6, V. EXPERIMENTAL SETUP).
+- **Metric evidence:** Therefore, the differences in performance between DrEureka and Human-Designed can be attributed to the different DR parameters as well as reward functions DrEureka produces. (p. 6, V. EXPERIMENTAL SETUP).
+- **Baseline/ablation evidence:** Forward locomotion specifically uses a teacher-student variant of PPO in which the teacher Sim-to-real Configuration Forward Velocity (m/s) Meters Traveled (m) Human-Designed [25] 1.32 ± 0.44 4.17 ± 1.57 Eureka ... (p. 6, V. EXPERIMENTAL SETUP).
+- **Failure/negative evidence:** While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual ... (p. 9, VIII. LIMITATIONS).

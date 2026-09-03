@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3.1.4. PROMPT ENGINEERING AND ENSEMBLING | SYSTEM / EVALUATION SCOPE UNRESOLVED | Learning Transferable Visual Models From Natural Language Supervision 8 Similar to the "prompt engineering" discussion around GPT3 (Brown et al., 2020; Gao et al., ... | p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING) |
 | 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS | SYSTEM / EVALUATION SCOPE UNRESOLVED | The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 ... | p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The 20 datasets with at least 16 examples per class were used in this analysis. we see that zero-shot CLIP is quite weak on ... | embodiment, simulator version and control stack | p. 9 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION) |
 | Task/environment | However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods ... | reset, timeout, object/scene variation | p. 6 (3.1.1. MOTIVATION), p. 11 (3.2. Representation Learning) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; ... | Learning Transferable Visual Models From Natural Language Supervision 8 Similar to the "prompt engineering" discussion around GPT3 (Brown et al., 2020; Gao et al., ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION) |
+| Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation ... | Learning Transferable Visual Models From Natural Language Supervision 8 Similar to the "prompt engineering" discussion around GPT3 (Brown et al., 2020; Gao et al., ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION) |
 | Primary metric/result | The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 ... | numeric claim only at cited anchor | p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS) |
 
 - Numeric sentences retained from the body:
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 - **p. 20 / 6. Limitations - extractive body cue:** In our work, we fall back to fitting linear classifiers on top of CLIP's features.
 - **p. 11 / 3.2. Representation Learning - extractive body cue:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development.
 
-- **PDF anchors reviewed:** datasets p. 9 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION), p. 11 (3.2. Representation Learning), p. 16 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 6 (3.1.1. MOTIVATION), metrics p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 10 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), baselines p. 7 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 11 (3.2. Representation Learning), p. 47 (Figure/Table caption), p. 12 (3.2. Representation Learning), results p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION).
+- **Evidence anchors reviewed:** datasets p. 9 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION), p. 11 (3.2. Representation Learning), p. 16 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 6 (3.1.1. MOTIVATION), metrics p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 10 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), baselines p. 7 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 11 (3.2. Representation Learning), p. 47 (Figure/Table caption), p. 12 (3.2. Representation Learning), results p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS).
+- **Metric evidence:** The best CLIP model improves accuracy on ImageNet from a proof of concept 11.5% to 76.2% and matches the performance of the original ResNet-50 despite using none of the 1.28 ... (p. 6, 3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS).
+- **Baseline/ablation evidence:** While GPT-1 (Radford et al., 2018) focused on pretraining as a transfer learning method to improve supervised fine-tuning, it also included an ablation study demonstrating that the performance of four ... (p. 6, 3.1.1. MOTIVATION).
+- **Failure/negative evidence:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. (p. 11, 3.2. Representation Learning).

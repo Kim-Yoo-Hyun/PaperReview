@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 Our key observation is that if the graph of primitives in input to the algorithm has multiple connected components (e.g., 3D object segments in different rooms), then the clustering can we performed ...를 Our first contribution (Section III) is to state the task-driven 3D scene understanding problem, where the robot is given a list of tasks, specified in natural language, and is required to build ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Despite the encouraging experimental results, our approach has multiple limitations.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** To obtain semantic features for the places, we compute a CLIP embedding vector for each input image provided to Clio. (p. 5, IV. TASK-DRIVEN CLUSTERING).
+- **Paper-specific mechanism:** We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is First and second-best results are bolded and underlined, respectively. ∗Total time for Clio-batch normalized by number of images; clustering step for batch run once on entire graph takes approximately 30 ... (p. 7, VI. EXPERIMENTS); the relevant task/metric cue is We report the F1 score as the harmonic mean of osR and osP and include average IOU of the top n most relevant estimated objects, total number of estimated objects ... (p. 6, VI. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Notably, Clio was only unable to select the correct target object in the scene graph once (i.e., the "Wrong Object" failure category). (p. 8, VI. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: During the experiments, the robot constructs a map with Clio in real-time while exploring a scene, and then is tasked to navigate to and pick up objects matching a provided natural language ....
-3. Compare against the body-reported baseline or a matched simpler baseline: In particular, in some cases Clio retains an order of magnitude less objects compared to taskagnostic baselines (cf. with the number of objects in ClioPrim, which is essentially Clio without the Information ....
-4. Report the body metric and its denominator/aggregation: We report the F1 score as the harmonic mean of osR and osP and include average IOU of the top n most relevant estimated objects, total number of estimated objects (Objs), and ....
-5. Re-run the body-reported ablation/failure condition: In particular, in some cases Clio retains an order of magnitude less objects compared to taskagnostic baselines (cf. with the number of objects in ClioPrim, which is essentially Clio without the Information ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: To obtain semantic features for the places, we compute a CLIP embedding vector for each input image provided to Clio. (p. 5, IV. TASK-DRIVEN CLUSTERING); preserve the objective/update rule: As suggested in [14], at each iteration k, we also compute δ(k) = I( ˜Xk; Y ) -I( ˜Xk-1; Y ) I(X; Y ) (3) as a measure of the ... (p. 4, IV. TASK-DRIVEN CLUSTERING).
+2. Use the paper-reported task/data/environment cue: For the Office, Apartment, and Cubicle datasets we manually annotate ground truth 3D bounding boxes for objects associated to the given set of tasks. (p. 6, VI. EXPERIMENTS).
+3. Compare against the reported or matched baseline: In particular, in some cases Clio retains an order of magnitude less objects compared to taskagnostic baselines (cf. with the number of objects in ClioPrim, which is essentially Clio without ... (p. 6, VI. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We report the F1 score as the harmonic mean of osR and osP and include average IOU of the top n most relevant estimated objects, total number of estimated objects ... (p. 6, VI. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: In particular, in some cases Clio retains an order of magnitude less objects compared to taskagnostic baselines (cf. with the number of objects in ClioPrim, which is essentially Clio without ... (p. 6, VI. EXPERIMENTS); if none is reported, design one around: Notably, Clio was only unable to select the correct target object in the scene graph once (i.e., the "Wrong Object" failure category). (p. 8, VI. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION); the primary result is directionally consistent at p. 8 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), and measure the boundary at p. 8 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Clio, novel, building mechanism이 In particular, in some cases Clio retains an order of magnitude less objects compared to taskagnostic ... 대비 We report the F1 score as the harmonic mean of osR and osP and include average IOU of ...을 개선하고, Despite the encouraging experimental results, our approach has multiple limitations. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (To obtain semantic features for the places, we compute a CLIP embedding vector for each input image provided to Clio.), does the paper-specific mechanism (We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics.) retain the reported evaluation outcome (We report the F1 score as the harmonic mean of osR and osP and include average IOU of ...) when tested against the paper's strongest explicit boundary (Notably, Clio was only unable to select the correct target object in the scene graph once (i.e., the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We report the F1 score as the harmonic mean of osR and osP and include average IOU of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** First and second-best results are bolded and underlined, respectively. ∗Total time for Clio-batch normalized by number of images; clustering step for batch run once on entire graph takes approximately 30 ... (p. 7, VI. EXPERIMENTS).
+- **Strongest explicit boundary:** Notably, Clio was only unable to select the correct target object in the scene graph once (i.e., the "Wrong Object" failure category). (p. 8, VI. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,12 +2,14 @@
   "schema_version": "1.0",
   "manifest": "work/sources/papers.json",
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-09-02",
+  "generated_on": "2026-09-03",
   "paper_count": 950,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "b0c984699a0d08ee19c03393db2d243393facdd8577048c36fef5b112f5fb66f",
-  "last_reconciled_on": "2026-09-02",
-  "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; tracker status remains user-controlled."
+  "manifest_sha256": "9010c07cffa45495c2a906d1a68b846f80e687fa6541a194bc7ee6d15cb7020f",
+  "last_reconciled_on": "2026-09-03",
+  "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
+  "relation_count": 34,
+  "relation_policy": "Directed curated edges in papers.json are not a full citation graph; each managed edge records type, target paper_id, confidence, basis, source, evidence_scope, and reviewed_on."
 }

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Visualization Results), p. 6 (4.3. Vi
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.2. Quantitative Evaluation - extractive PDF cue:** We evaluate quality and consistency following T3Bench [17], which provides a comprehensive benchmark for text-to-3D generation.
-- **p. 6 / 4.3. Visualization Results - extractive PDF cue:** When encountering prompts that involve the combination of multiple objects, such as the prompt "A plate piled high with chocolate chip cookies", the generated results ...
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** The covariance of the 3D Gaussians is converted into scaling and rotation for optimization, with learning rates of 10-3 and 10-2, respectively.
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** For the 3D Gaussians, the learning rates of opacity α and position µ are 10-2 and 5 × 10-5.
-- **p. 6 / 4.3. Visualization Results - extractive PDF cue:** 7, we provide more results generated with different human body poses.
-- **p. 6 / 4.3. Visualization Results - extractive PDF cue:** Furthermore, compared to DreamFusion, the plate we generate has better patterns.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall framework of GaussianDreamer. Firstly, we utilize a 3D diffusion model to generate the initialized point clouds. After executing noisy point growing and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The process of noisy point growing and color pertur- bation. "Grow&Pertb." denotes noisy point growing and color perturbation. and the nearest points found ...
+- **p. 5 / 4.2. Quantitative Evaluation - extractive body cue:** We evaluate quality and consistency following T3Bench [17], which provides a comprehensive benchmark for text-to-3D generation.
+- **p. 6 / 4.3. Visualization Results - extractive body cue:** When encountering prompts that involve the combination of multiple objects, such as the prompt "A plate piled high with chocolate chip cookies", the generated results ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** The covariance of the 3D Gaussians is converted into scaling and rotation for optimization, with learning rates of 10-3 and 10-2, respectively.
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** For the 3D Gaussians, the learning rates of opacity α and position µ are 10-2 and 5 × 10-5.
+- **p. 6 / 4.3. Visualization Results - extractive body cue:** 7, we provide more results generated with different human body poses.
+- **p. 6 / 4.3. Visualization Results - extractive body cue:** Furthermore, compared to DreamFusion, the plate we generate has better patterns.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall framework of GaussianDreamer. Firstly, we utilize a 3D diffusion model to generate the initialized point clouds. After executing noisy point growing and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The process of noisy point growing and color pertur- bation. "Grow&Pertb." denotes noisy point growing and color perturbation. and the nearest points found ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Visualization Results), p. 6 (4.3. Vi
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Visualization Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves a speedup of 4-24 times compared to other methods, while maintaining comparable quality. | p. 6 (4.3. Visualization Results) |
 | 4.3. Visualization Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Moreover, the 3D Gaussians generated by our method can directly achieve real-time rendering without further transformation into mesh-like structures. | p. 6 (4.3. Visualization Results) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 6 (4.3. Visualization Results), p. 6 (4.3. Vi
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.2. Quantitative Evaluation - extractive PDF cue:** We evaluate quality and consistency following T3Bench [17], which provides a comprehensive benchmark for text-to-3D generation.
-- **p. 6 / 4.3. Visualization Results - extractive PDF cue:** When encountering prompts that involve the combination of multiple objects, such as the prompt "A plate piled high with chocolate chip cookies", the generated results ...
+- **p. 5 / 4.2. Quantitative Evaluation - extractive body cue:** We evaluate quality and consistency following T3Bench [17], which provides a comprehensive benchmark for text-to-3D generation.
+- **p. 6 / 4.3. Visualization Results - extractive body cue:** When encountering prompts that involve the combination of multiple objects, such as the prompt "A plate piled high with chocolate chip cookies", the generated results ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose a simple yet efficient framework called GaussianDreamer. It bridges the 3D and 2D diffusion models via Gaussian splatting, having both 3D ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall framework of GaussianDreamer. Firstly, we utilize a 3D diffusion model to generate the initialized point clouds. After executing noisy point growing and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The process of noisy point growing and color pertur- bation. "Grow&Pertb." denotes noisy point growing and color perturbation. and the nearest points found ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparisons on T3Bench [17].
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparisons between our method and DreamFusion [52], Magic3D [32], Fantasia3D [6] and ProlificDreamer [77]. Here we count the GPU time in their ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. More generated samples by our GaussianDreamer. Two views of each sample are shown. designed for 3D generation with increasing complexity - single objects, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparisons between our method and DreamFusion [52], DreamAvatar [5], DreamWaltz [20], and AvatarVerse [86]. Someone kicks with Iron man kicks with his ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. More generated 3D avatars by our GaussianDreamer initialized with the different poses of SMPL [39]. Here, the differ- ent poses of SMPL are ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose a simple yet efficient framework called GaussianDreamer. It bridges the 3D and 2D diffusion models via Gaussian splatting, having both 3D ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall framework of GaussianDreamer. Firstly, we utilize a 3D diffusion model to generate the initialized point clouds. After executing noisy point growing and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The process of noisy point growing and color pertur- bation. "Grow&Pertb." denotes noisy point growing and color perturbation. and the nearest points found ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons on T3Bench [17].
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparisons between our method and DreamFusion [52], Magic3D [32], Fantasia3D [6] and ProlificDreamer [77]. Here we count the GPU time in their ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. More generated samples by our GaussianDreamer. Two views of each sample are shown. designed for 3D generation with increasing complexity - single objects, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparisons between our method and DreamFusion [52], DreamAvatar [5], DreamWaltz [20], and AvatarVerse [86]. Someone kicks with Iron man kicks with his ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. More generated 3D avatars by our GaussianDreamer initialized with the different poses of SMPL [39]. Here, the differ- ent poses of SMPL are ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate quality and consistency following T3Bench [17], which provides a comprehensive benchmark for text-to-3D generation. | embodiment, simulator version and control stack | p. 5 (4.2. Quantitative Evaluation), p. 6 (4.3. Visualization Results) |
 | Task/environment | When encountering prompts that involve the combination of multiple objects, such as the prompt "A plate piled high with chocolate chip cookies", the generated ... | reset, timeout, object/scene variation | p. 6 (4.3. Visualization Results) |
@@ -117,12 +117,12 @@ PDF body evaluation/result cue (p. 6 (4.3. Visualization Results), p. 6 (4.3. Vi
 | Primary metric/result | Moreover, the 3D Gaussians generated by our method can directly achieve real-time rendering without further transformation into mesh-like structures. | numeric claim only at cited anchor | p. 6 (4.3. Visualization Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** The color c of the 3d Gaussians is represented by the sh coefficient, with the degree set to 0 and the learning rate set to ...
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** The radius of the camera we use for rendering is from 1.5 to 4.0, with the azimuth in the range of -180 to 180 degrees ...
-- **p. 7 / 4.3. Visualization Results - extractive PDF cue:** DreamFusion DreamFusion DreamAvatar DreamWaltz AvatarVerse GaussianDreamer (Ours) Spiderman ~2 Hours
-- **p. 7 / 4.4. Ablation Study and Analysis - extractive PDF cue:** We show the initialization effects on 3 samples.
-- **p. 5 / 3.3. Gaussian Initialization with 3D Diffusion - extractive PDF cue:** Stage 2: Keep the points that meet the distance requirement. pr, cr = [ ], [ ] for all pu in psu do pun, i ...
-- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive PDF cue:** Average SJC [76] - 24.7 19.8 11.7 18.7 DreamFusion [52] 6 hours 24.4 24.6 16.1 21.7 Fantasia3D [6] 6 hours 26.4 27.0 18.5 24.0 LatentNeRF ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** The color c of the 3d Gaussians is represented by the sh coefficient, with the degree set to 0 and the learning rate set to ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** The radius of the camera we use for rendering is from 1.5 to 4.0, with the azimuth in the range of -180 to 180 degrees ...
+- **p. 7 / 4.3. Visualization Results - extractive body cue:** DreamFusion DreamFusion DreamAvatar DreamWaltz AvatarVerse GaussianDreamer (Ours) Spiderman ~2 Hours
+- **p. 7 / 4.4. Ablation Study and Analysis - extractive body cue:** We show the initialization effects on 3 samples.
+- **p. 5 / 3.3. Gaussian Initialization with 3D Diffusion - extractive body cue:** Stage 2: Keep the points that meet the distance requirement. pr, cr = [ ], [ ] for all pu in psu do pun, i ...
+- **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** Average SJC [76] - 24.7 19.8 11.7 18.7 DreamFusion [52] 6 hours 24.4 24.6 16.1 21.7 Fantasia3D [6] 6 hours 26.4 27.0 18.5 24.0 LatentNeRF ...
 
 ## Generalization and Failure Cases
 
@@ -152,10 +152,10 @@ PDF body evaluation/result cue (p. 6 (4.3. Visualization Results), p. 6 (4.3. Vi
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** Finally, we discuss the limitations of our method.
-- **p. 7 / 4.4. Ablation Study and Analysis - extractive PDF cue:** In the second row, the 3D assets generated by random initialization have the multi-head problem, which does not occur in our method.
+- **p. 5 / 4. Experiments - extractive body cue:** Finally, we discuss the limitations of our method.
+- **p. 7 / 4.4. Ablation Study and Analysis - extractive body cue:** In the second row, the 3D assets generated by random initialization have the multi-head problem, which does not occur in our method.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.2. Quantitative Evaluation), p. 6 (4.3. Visualization Results), metrics p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 6 (4.3. Visualization Results), p. 6 (4.3. Visualization Results), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (4.3. Visualization Results), p. 7 (4.4. Ablation Study and Analysis), p. 8 (Figure/Table caption), p. 7 (4.4. Ablation Study and Analysis), p. 5 (4. Experiments), results p. 6 (4.3. Visualization Results), p. 6 (4.3. Visualization Results), p. 1 (Figure/Table caption), p. 7 (4.4. Ablation Study and Analysis), p. 7 (4.4. Ablation Study and Analysis), p. 5 (4. Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (4.2. Quantitative Evaluation), p. 6 (4.3. Visualization Results), metrics p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 6 (4.3. Visualization Results), p. 6 (4.3. Visualization Results), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (4.3. Visualization Results), p. 7 (4.4. Ablation Study and Analysis), p. 8 (Figure/Table caption), p. 7 (4.4. Ablation Study and Analysis), p. 5 (4. Experiments), results p. 6 (4.3. Visualization Results), p. 6 (4.3. Visualization Results), p. 1 (Figure/Table caption), p. 7 (4.4. Ablation Study and Analysis), p. 7 (4.4. Ablation Study and Analysis), p. 5 (4. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

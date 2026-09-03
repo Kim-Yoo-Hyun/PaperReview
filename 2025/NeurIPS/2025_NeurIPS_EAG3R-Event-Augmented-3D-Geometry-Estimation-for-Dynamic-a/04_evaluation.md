@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Lf0W2gmNBg; PDF retrieval source: https://openreview.net/pdf/6b343e53056650c33b45d7572916a5fd82bd516c.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Lf0W2gmNBg; PDF retrieval source: https://arxiv.org/pdf/2512.00771. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Evaluation Body Digest
 
-- **p. 21 / A.7 Generalization to More Datasets - extractive PDF cue:** To assess the model's performance in high-dynamic-range (HDR) conditions, we evaluated EAG3R on the challenging M3ED robot dog dataset penno_plaza_lights split, which features rapid motion ...
-- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive PDF cue:** Our choice of the MVSEC dataset was guided by the strict requirements of our task: robust 3D geometry estimation in dynamic scenes under extreme lighting.
-- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive PDF cue:** Dataset Low-light Dynamic RGB Depth Sensor GT Pose Platform Environment DSEC ✓ ✓ ✓ LiDAR-16 ✗ Car Outdoor UZH-FPV ✗ ✓ ✓ ✗ MoCap Drone ...
-- **p. 21 / A.7 Generalization to More Datasets - extractive PDF cue:** To demonstrate EAG3R's scalability, we conducted additional experiments on MVSEC indoor and M3ED datasets, covering diverse environments (indoor, outdoor, night, HDR), sensor platforms (drones, robots, ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** The Event Adapter is pre-trained on the ETartanAir dataset.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Given the scarcity of such data, we selected the Multi Vehicle Stereo Event Camera (MVSEC) dataset [78].
-- **p. 8 / 4 Experiments - extractive PDF cue:** Prior methods such as DUSt3R and MonST3R serve as RGB-based baselines, with MonST3R extending pointmap prediction to dynamic scenes and Easi3R variants incorporating motion-aware masking.
-- **p. 16 / A.1 Dataset Processing - extractive PDF cue:** The Multi-Vehicle Stereo Event Camera (MVSEC) dataset integrates three distinct sensor modalities, each with independent timestamps: Active Pixel Sensor (APS) for frame-based images, Dynamic Vision ...
+- **p. 21 / A.7 Generalization to More Datasets - extractive body cue:** To assess the model's performance in high-dynamic-range (HDR) conditions, we evaluated EAG3R on the challenging M3ED robot dog dataset penno_plaza_lights split, which features rapid motion ...
+- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive body cue:** Our choice of the MVSEC dataset was guided by the strict requirements of our task: robust 3D geometry estimation in dynamic scenes under extreme lighting.
+- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive body cue:** Dataset Low-light Dynamic RGB Depth Sensor GT Pose Platform Environment DSEC ✓ ✓ ✓ LiDAR-16 ✗ Car Outdoor UZH-FPV ✗ ✓ ✓ ✗ MoCap Drone ...
+- **p. 21 / A.7 Generalization to More Datasets - extractive body cue:** To demonstrate EAG3R's scalability, we conducted additional experiments on MVSEC indoor and M3ED datasets, covering diverse environments (indoor, outdoor, night, HDR), sensor platforms (drones, robots, ...
+- **p. 7 / 4 Experiments - extractive body cue:** The Event Adapter is pre-trained on the ETartanAir dataset.
+- **p. 7 / 4 Experiments - extractive body cue:** Given the scarcity of such data, we selected the Multi Vehicle Stereo Event Camera (MVSEC) dataset [78].
+- **p. 8 / 4 Experiments - extractive body cue:** Prior methods such as DUSt3R and MonST3R serve as RGB-based baselines, with MonST3R extending pointmap prediction to dynamic scenes and Easi3R variants incorporating motion-aware masking.
+- **p. 16 / A.1 Dataset Processing - extractive body cue:** The Multi-Vehicle Stereo Event Camera (MVSEC) dataset integrates three distinct sensor modalities, each with independent timestamps: Active Pixel Sensor (APS) for frame-based images, Dynamic Vision ...
 
 ## Evaluation Type and Scope
 
@@ -26,11 +26,11 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 4 Experiments (p. 7); A.1 Dataset Processing (p. 16); A.2 Video Depth Estimation Results on MVSEC (p. 17); A.3 Dynamic Reconstruction Results (p. 17); A.4 Summary of Existing Event-RGB Datasets (p. 18); A.7 Generalization to More Datasets (p. 21); 4. Experimental result reproducibility (p. 24); 7. Experiment statistical significance (p. 25); 8. Experiments compute resources (p. 26).
+- **Detected evaluation headings:** 4 Experiments (p. 7); A.1 Dataset Processing (p. 16); A.2 Video Depth Estimation Results on MVSEC (p. 17); A.3 Dynamic Reconstruction Results (p. 17); A.4 Summary of Existing Event-RGB Datasets (p. 18); A.7 Generalization to More Datasets (p. 21).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Each addition improves performance, with the full EAG3R system achieving the best results. | p. 9 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fine-tuning MonST3R improves its performance across 7 | p. 7 (4 Experiments) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Dataset / Benchmark Role
 
-- **p. 21 / A.7 Generalization to More Datasets - extractive PDF cue:** To assess the model's performance in high-dynamic-range (HDR) conditions, we evaluated EAG3R on the challenging M3ED robot dog dataset penno_plaza_lights split, which features rapid motion ...
-- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive PDF cue:** Our choice of the MVSEC dataset was guided by the strict requirements of our task: robust 3D geometry estimation in dynamic scenes under extreme lighting.
-- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive PDF cue:** Dataset Low-light Dynamic RGB Depth Sensor GT Pose Platform Environment DSEC ✓ ✓ ✓ LiDAR-16 ✗ Car Outdoor UZH-FPV ✗ ✓ ✓ ✗ MoCap Drone ...
-- **p. 21 / A.7 Generalization to More Datasets - extractive PDF cue:** To demonstrate EAG3R's scalability, we conducted additional experiments on MVSEC indoor and M3ED datasets, covering diverse environments (indoor, outdoor, night, HDR), sensor platforms (drones, robots, ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** The Event Adapter is pre-trained on the ETartanAir dataset.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Given the scarcity of such data, we selected the Multi Vehicle Stereo Event Camera (MVSEC) dataset [78].
-- **p. 8 / 4 Experiments - extractive PDF cue:** Prior methods such as DUSt3R and MonST3R serve as RGB-based baselines, with MonST3R extending pointmap prediction to dynamic scenes and Easi3R variants incorporating motion-aware masking.
-- **p. 16 / A.1 Dataset Processing - extractive PDF cue:** The Multi-Vehicle Stereo Event Camera (MVSEC) dataset integrates three distinct sensor modalities, each with independent timestamps: Active Pixel Sensor (APS) for frame-based images, Dynamic Vision ...
+- **p. 21 / A.7 Generalization to More Datasets - extractive body cue:** To assess the model's performance in high-dynamic-range (HDR) conditions, we evaluated EAG3R on the challenging M3ED robot dog dataset penno_plaza_lights split, which features rapid motion ...
+- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive body cue:** Our choice of the MVSEC dataset was guided by the strict requirements of our task: robust 3D geometry estimation in dynamic scenes under extreme lighting.
+- **p. 18 / A.4 Summary of Existing Event-RGB Datasets - extractive body cue:** Dataset Low-light Dynamic RGB Depth Sensor GT Pose Platform Environment DSEC ✓ ✓ ✓ LiDAR-16 ✗ Car Outdoor UZH-FPV ✗ ✓ ✓ ✗ MoCap Drone ...
+- **p. 21 / A.7 Generalization to More Datasets - extractive body cue:** To demonstrate EAG3R's scalability, we conducted additional experiments on MVSEC indoor and M3ED datasets, covering diverse environments (indoor, outdoor, night, HDR), sensor platforms (drones, robots, ...
+- **p. 7 / 4 Experiments - extractive body cue:** The Event Adapter is pre-trained on the ETartanAir dataset.
+- **p. 7 / 4 Experiments - extractive body cue:** Given the scarcity of such data, we selected the Multi Vehicle Stereo Event Camera (MVSEC) dataset [78].
+- **p. 8 / 4 Experiments - extractive body cue:** Prior methods such as DUSt3R and MonST3R serve as RGB-based baselines, with MonST3R extending pointmap prediction to dynamic scenes and Easi3R variants incorporating motion-aware masking.
+- **p. 16 / A.1 Dataset Processing - extractive body cue:** The Multi-Vehicle Stereo Event Camera (MVSEC) dataset integrates three distinct sensor modalities, each with independent timestamps: Active Pixel Sensor (APS) for frame-based images, Dynamic Vision ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: EAG3R pipeline for event-augmented dynamic 3D reconstruction. EAG3R processes a low-light video and its corresponding event stream within a temporal window, extracting pairwise ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: EAG3R network. Left: The DUSt3R (MonST3R) architecture with reference and source views processed via ViT encoder-decoder structure. Middle: Our method (only the upstream ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Event-based photometric consistency loss. Harris corners are detected on the input image to define salient patches. Observed brightness increments are computed by integrating ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Monocular depth estimation performance on nighttime scenes. Evaluation is conducted on the MVSEC Night1, Night2, and Night3 sequences. Standard metrics are used: Abs ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Camera pose estimation on all MVSEC nighttime sequences. Evaluation is conducted on the MVSEC Night1, Night2, and Night3 sequences. Standard metrics are used: ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Comparison of estimated camera trajectories. The predicted trajectories (solid blue) from DUS3R, MonST3R, and EAG3R are evaluated against the ground truth (dashed gray). ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation study on depth estimation performance on the Night3 sequence. Modules are incrementally added to the MonST3R baseline. Each addition improves performance, with ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: EAG3R pipeline for event-augmented dynamic 3D reconstruction. EAG3R processes a low-light video and its corresponding event stream within a temporal window, extracting pairwise ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: EAG3R network. Left: The DUSt3R (MonST3R) architecture with reference and source views processed via ViT encoder-decoder structure. Middle: Our method (only the upstream ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Event-based photometric consistency loss. Harris corners are detected on the input image to define salient patches. Observed brightness increments are computed by integrating ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Monocular depth estimation performance on nighttime scenes. Evaluation is conducted on the MVSEC Night1, Night2, and Night3 sequences. Standard metrics are used: Abs ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Camera pose estimation on all MVSEC nighttime sequences. Evaluation is conducted on the MVSEC Night1, Night2, and Night3 sequences. Standard metrics are used: ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Comparison of estimated camera trajectories. The predicted trajectories (solid blue) from DUS3R, MonST3R, and EAG3R are evaluated against the ground truth (dashed gray). ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Ablation study on depth estimation performance on the Night3 sequence. Modules are incrementally added to the MonST3R baseline. Each addition improves performance, with ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To assess the model's performance in high-dynamic-range (HDR) conditions, we evaluated EAG3R on the challenging M3ED robot dog dataset penno_plaza_lights split, which features rapid ... | embodiment, simulator version and control stack | p. 21 (A.7 Generalization to More Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets) |
 | Task/environment | Our choice of the MVSEC dataset was guided by the strict requirements of our task: robust 3D geometry estimation in dynamic scenes under extreme ... | reset, timeout, object/scene variation | p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets) |
@@ -122,10 +122,10 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | Primary metric/result | Fine-tuning MonST3R improves its performance across 7 | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 Experiments - extractive PDF cue:** Fine-tuning is performed for 25 epochs, using 8,000 image-event pairs per epoch.
-- **p. 7 / 4 Experiments - extractive PDF cue:** The training process completes in approximately 24 hours on 4 NVIDIA RTX 3090 GPUs.
-- **p. 16 / A.1 Dataset Processing - extractive PDF cue:** The Velodyne Puck LITE provides depth data at a fixed frequency of 20 Hz, while the APS captures frames at approximately 100 Hz during daytime ...
-- **p. 20 / A.6 Runtime and Memory Analysis - extractive PDF cue:** Compared to MonST3R, EAG3R introduces only a minor overhead of approximately +0.4 GB VRAM, +0.11 TFLOPs, and +1.2 s per forward pass.
+- **p. 7 / 4 Experiments - extractive body cue:** Fine-tuning is performed for 25 epochs, using 8,000 image-event pairs per epoch.
+- **p. 7 / 4 Experiments - extractive body cue:** The training process completes in approximately 24 hours on 4 NVIDIA RTX 3090 GPUs.
+- **p. 16 / A.1 Dataset Processing - extractive body cue:** The Velodyne Puck LITE provides depth data at a fixed frequency of 20 Hz, while the APS captures frames at approximately 100 Hz during daytime ...
+- **p. 20 / A.6 Runtime and Memory Analysis - extractive body cue:** Compared to MonST3R, EAG3R introduces only a minor overhead of approximately +0.4 GB VRAM, +0.11 TFLOPs, and +1.2 s per forward pass.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Limitations and Verification Questions
 
-- **p. 22 / A.9 Limitations - extractive PDF cue:** In particular, we attempted to train our model using synthetic events generated by V2E [20], but observed that the low fidelity of these generated events ...
-- **p. 9 / 5 Conclusion - extractive PDF cue:** We discuss limitations and broader impact in the appendix.
-- **p. 21 / A.9 Limitations - extractive PDF cue:** Despite the strong empirical performance of EAG3R, several limitations remain: Limited dataset availability.
-- **p. 21 / A.9 Limitations - extractive PDF cue:** To address this, our future work aims to curate a diverse dataset featuring high-quality, real-world event-RGB pairs across varied lighting and motion scenarios.
-- **p. 7 / 4 Experiments - extractive PDF cue:** However, applying RetinexFormer, a widely used image enhancement network, as a preprocessing light-up step (denoted as (LightUp)) does not yield significant improvements and, in some ...
-- **p. 9 / 5 Conclusion - extractive PDF cue:** We presented EAG3R, a event-augmented framework for robust 3D geometry estimation under dynamic and low-light conditions.
+- **p. 22 / A.9 Limitations - extractive body cue:** In particular, we attempted to train our model using synthetic events generated by V2E [20], but observed that the low fidelity of these generated events ...
+- **p. 9 / 5 Conclusion - extractive body cue:** We discuss limitations and broader impact in the appendix.
+- **p. 21 / A.9 Limitations - extractive body cue:** Despite the strong empirical performance of EAG3R, several limitations remain: Limited dataset availability.
+- **p. 21 / A.9 Limitations - extractive body cue:** To address this, our future work aims to curate a diverse dataset featuring high-quality, real-world event-RGB pairs across varied lighting and motion scenarios.
+- **p. 7 / 4 Experiments - extractive body cue:** However, applying RetinexFormer, a widely used image enhancement network, as a preprocessing light-up step (denoted as (LightUp)) does not yield significant improvements and, in some ...
+- **p. 9 / 5 Conclusion - extractive body cue:** We presented EAG3R, a event-augmented framework for robust 3D geometry estimation under dynamic and low-light conditions.
 
-- **PDF anchors reviewed:** datasets p. 21 (A.7 Generalization to More Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 21 (A.7 Generalization to More Datasets), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 17 (A.2 Video Depth Estimation Results on MVSEC), p. 17 (A.2 Video Depth Estimation Results on MVSEC), p. 9 (4 Experiments), p. 21 (A.8 Statistical Analysis and Robustness Validation), p. 21 (A.7 Generalization to More Datasets), baselines p. 8 (4 Experiments), p. 20 (A.6 Runtime and Memory Analysis), p. 21 (A.7 Generalization to More Datasets), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 21 (A.7 Generalization to More Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 21 (A.7 Generalization to More Datasets), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 17 (A.2 Video Depth Estimation Results on MVSEC), p. 17 (A.2 Video Depth Estimation Results on MVSEC), p. 9 (4 Experiments), p. 21 (A.8 Statistical Analysis and Robustness Validation), p. 21 (A.7 Generalization to More Datasets), baselines p. 8 (4 Experiments), p. 20 (A.6 Runtime and Memory Analysis), p. 21 (A.7 Generalization to More Datasets), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

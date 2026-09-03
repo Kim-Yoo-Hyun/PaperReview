@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ab
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.2.2. Results - extractive PDF cue:** We also display some qualitative examples in Figure 3 across various scenes (both indoor and outdoor from various datasets [12, 21, 33]), feature fields (LeRF ...
-- **p. 6 / 4.1. Implementation and evaluation details - extractive PDF cue:** Segmentation quality is evaluated by first matching discovered sub-concepts to the dataset-defined sub-concepts (we match predictions with all of the scene's classes) using embeddings distances.
-- **p. 7 / 4.2.2. Results - extractive PDF cue:** However, the benchmark is still far from being saturated, showing the difficulty of the task and the room for future improvements.
-- **p. 5 / 4. Experimental evaluations - extractive PDF cue:** After introducing some implementation and evaluation details in subsection 4.1, we first present evaluations on the novel Open-Vocabulary Sub-concepts Discovery problem with a dedicated benchmark ...
-- **p. 6 / 4.1. Implementation and evaluation details - extractive PDF cue:** We introduce an extension of the Replica [33] dataset for Open-Vocabulary Sub-concepts Discovery.
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** First, we observe that the complete model's performance remains stable in both segmentation accuracy and the numFF Method PCLIP Hungarian PQ ↑ mIoU ↑ mAcc ...
-- **p. 6 / 4.1. Implementation and evaluation details - extractive PDF cue:** This enables comparison with the groundtruth query segmentation to compute classic segmentation metrics: Mean Accuracy (mAcc) and mean Intersection over Union (mIoU).
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** As illustrated in Figure 4, this 24% is usually related to sub-concepts with close semantic (e.g. "blanket" and "comforter") or ambiguous annotations (e.g. the armchair ...
+- **p. 7 / 4.2.2. Results - extractive body cue:** We also display some qualitative examples in Figure 3 across various scenes (both indoor and outdoor from various datasets [12, 21, 33]), feature fields (LeRF ...
+- **p. 6 / 4.1. Implementation and evaluation details - extractive body cue:** Segmentation quality is evaluated by first matching discovered sub-concepts to the dataset-defined sub-concepts (we match predictions with all of the scene's classes) using embeddings distances.
+- **p. 7 / 4.2.2. Results - extractive body cue:** However, the benchmark is still far from being saturated, showing the difficulty of the task and the room for future improvements.
+- **p. 5 / 4. Experimental evaluations - extractive body cue:** After introducing some implementation and evaluation details in subsection 4.1, we first present evaluations on the novel Open-Vocabulary Sub-concepts Discovery problem with a dedicated benchmark ...
+- **p. 6 / 4.1. Implementation and evaluation details - extractive body cue:** We introduce an extension of the Replica [33] dataset for Open-Vocabulary Sub-concepts Discovery.
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** First, we observe that the complete model's performance remains stable in both segmentation accuracy and the numFF Method PCLIP Hungarian PQ ↑ mIoU ↑ mAcc ...
+- **p. 6 / 4.1. Implementation and evaluation details - extractive body cue:** This enables comparison with the groundtruth query segmentation to compute classic segmentation metrics: Mean Accuracy (mAcc) and mean Intersection over Union (mIoU).
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** As illustrated in Figure 4, this 24% is usually related to sub-concepts with close semantic (e.g. "blanket" and "comforter") or ambiguous annotations (e.g. the armchair ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ab
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2.1. Evaluated methods | EMPIRICAL / SOURCE-REPORTED EVALUATION | Notice that the only difference between DiSCO-3D and those baselines relies on the fact that DiSCO-3D achieves USS and OVSeg jointly whereas the latters ... | p. 6 (4.2.1. Evaluated methods) |
 | 4.2.3. Ablations studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | To evaluate the ability of the produced CLIP prototypes to achieve semantic matching, we evaluate the OV-SD performance by replacing the prototypes matching by ... | p. 7 (4.2.3. Ablations studies) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ab
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.2.2. Results - extractive PDF cue:** We also display some qualitative examples in Figure 3 across various scenes (both indoor and outdoor from various datasets [12, 21, 33]), feature fields (LeRF ...
-- **p. 6 / 4.1. Implementation and evaluation details - extractive PDF cue:** Segmentation quality is evaluated by first matching discovered sub-concepts to the dataset-defined sub-concepts (we match predictions with all of the scene's classes) using embeddings distances.
-- **p. 7 / 4.2.2. Results - extractive PDF cue:** However, the benchmark is still far from being saturated, showing the difficulty of the task and the room for future improvements.
-- **p. 5 / 4. Experimental evaluations - extractive PDF cue:** After introducing some implementation and evaluation details in subsection 4.1, we first present evaluations on the novel Open-Vocabulary Sub-concepts Discovery problem with a dedicated benchmark ...
-- **p. 6 / 4.1. Implementation and evaluation details - extractive PDF cue:** We introduce an extension of the Replica [33] dataset for Open-Vocabulary Sub-concepts Discovery.
+- **p. 7 / 4.2.2. Results - extractive body cue:** We also display some qualitative examples in Figure 3 across various scenes (both indoor and outdoor from various datasets [12, 21, 33]), feature fields (LeRF ...
+- **p. 6 / 4.1. Implementation and evaluation details - extractive body cue:** Segmentation quality is evaluated by first matching discovered sub-concepts to the dataset-defined sub-concepts (we match predictions with all of the scene's classes) using embeddings distances.
+- **p. 7 / 4.2.2. Results - extractive body cue:** However, the benchmark is still far from being saturated, showing the difficulty of the task and the room for future improvements.
+- **p. 5 / 4. Experimental evaluations - extractive body cue:** After introducing some implementation and evaluation details in subsection 4.1, we first present evaluations on the novel Open-Vocabulary Sub-concepts Discovery problem with a dedicated benchmark ...
+- **p. 6 / 4.1. Implementation and evaluation details - extractive body cue:** We introduce an extension of the Replica [33] dataset for Open-Vocabulary Sub-concepts Discovery.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce the 3D Open-Vocabulary Sub-concepts Discovery (OV-SD) paradigm, which aims to provide a 3D semantic segmentation adapted to both the scene (semantic ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of DiSCO-3D for a LeRF Feature Field. DiSCO-3D inputs pairs of features from 3D samples into a projector net- work learnt to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. To ensure stability during training, we apply an Exponential Moving Average (EMA) across epochs, result- ing in the following update process for all ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. DiSCO-3D Qualitative Evaluation for OV-SD. We present results for various queries, scenes (which originate from [12, 21, 33]) and feature fields (LeRF in ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative Evaluation for OV-SD. Additional metrics can be found in sup. mat. "FF" stands for feature field. Lproto Nadd 0 2 5 10
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Ablative on # of Prototypes (N = NGT +Nadd). These are done in the Hungarian Matching paradigm and with LeRF. The last column ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Linking Sub-concepts to a posteriori Textual Classes. The queries of the left and right images are respectively "Sleep" and "Furniture". By comparing each ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. DiSCO-3D Quantitative Evaluation for OV-Seg. form of OV-SD where each query asks for a single sub- concept, and to USS, which can be ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce the 3D Open-Vocabulary Sub-concepts Discovery (OV-SD) paradigm, which aims to provide a 3D semantic segmentation adapted to both the scene (semantic ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of DiSCO-3D for a LeRF Feature Field. DiSCO-3D inputs pairs of features from 3D samples into a projector net- work learnt to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. To ensure stability during training, we apply an Exponential Moving Average (EMA) across epochs, result- ing in the following update process for all ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. DiSCO-3D Qualitative Evaluation for OV-SD. We present results for various queries, scenes (which originate from [12, 21, 33]) and feature fields (LeRF in ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Evaluation for OV-SD. Additional metrics can be found in sup. mat. "FF" stands for feature field. Lproto Nadd 0 2 5 10
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablative on # of Prototypes (N = NGT +Nadd). These are done in the Hungarian Matching paradigm and with LeRF. The last column ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Linking Sub-concepts to a posteriori Textual Classes. The queries of the left and right images are respectively "Sleep" and "Furniture". By comparing each ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. DiSCO-3D Quantitative Evaluation for OV-Seg. form of OV-SD where each query asks for a single sub- concept, and to USS, which can be ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We also display some qualitative examples in Figure 3 across various scenes (both indoor and outdoor from various datasets [12, 21, 33]), feature fields ... | embodiment, simulator version and control stack | p. 7 (4.2.2. Results), p. 6 (4.1. Implementation and evaluation details) |
 | Task/environment | Segmentation quality is evaluated by first matching discovered sub-concepts to the dataset-defined sub-concepts (we match predictions with all of the scene's classes) using embeddings ... | reset, timeout, object/scene variation | p. 6 (4.1. Implementation and evaluation details), p. 7 (4.2.2. Results) |
@@ -115,12 +115,12 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ab
 | Primary metric/result | To evaluate the ability of the produced CLIP prototypes to achieve semantic matching, we evaluate the OV-SD performance by replacing the prototypes matching by ... | numeric claim only at cited anchor | p. 7 (4.2.3. Ablations studies) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Implementation and evaluation details - extractive PDF cue:** All our experiments were run on the same single RTX 4090 GPU.
-- **p. 5 / 4.1. Implementation and evaluation details - extractive PDF cue:** They run for 100 epochs each, at approximately 20ms per epoch 20047
-- **p. 6 / 4.1. Implementation and evaluation details - extractive PDF cue:** (resulting in ∼2s optimization per query, which can be considered fast enough for most practical applications; see sup. mat. for further discussions on DiSCO's speed).
-- **p. 6 / 4.2.1. Evaluated methods - extractive PDF cue:** All the methods use the same hyperparameters and especially, we fix the number of prototypes N = 10 for all queries (as no concept query ...
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** Lproto Nadd 0 2 5 10 20 N = 10 ✗ Used Nadd -0.07 1.33 1.98 2.62 3.02 2.60 PQ ↑ 8.56 9.49 9.72 9.71 ...
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** Finally, the last column, corresponding to our main experiment with a fixed N = 10, shows that performance is maintained without requiring prior knowledge of ...
+- **p. 5 / 4.1. Implementation and evaluation details - extractive body cue:** All our experiments were run on the same single RTX 4090 GPU.
+- **p. 5 / 4.1. Implementation and evaluation details - extractive body cue:** They run for 100 epochs each, at approximately 20ms per epoch 20047
+- **p. 6 / 4.1. Implementation and evaluation details - extractive body cue:** (resulting in ∼2s optimization per query, which can be considered fast enough for most practical applications; see sup. mat. for further discussions on DiSCO's speed).
+- **p. 6 / 4.2.1. Evaluated methods - extractive body cue:** All the methods use the same hyperparameters and especially, we fix the number of prototypes N = 10 for all queries (as no concept query ...
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** Lproto Nadd 0 2 5 10 20 N = 10 ✗ Used Nadd -0.07 1.33 1.98 2.62 3.02 2.60 PQ ↑ 8.56 9.49 9.72 9.71 ...
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** Finally, the last column, corresponding to our main experiment with a fixed N = 10, shows that performance is maintained without requiring prior knowledge of ...
 
 ## Generalization and Failure Cases
 
@@ -152,10 +152,10 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ab
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4. Experimental evaluations - extractive PDF cue:** Additional details on hyperparameters, evaluation protocols and baselines can be found in the supplementary materials, as well as ablative experiments and analysis on DiSCO's limitations.
-- **p. 7 / 4.2.3. Ablations studies - extractive PDF cue:** The last column refers to the main experiment where the number of prototypes is fixed and does not depend on NGT .
+- **p. 5 / 4. Experimental evaluations - extractive body cue:** Additional details on hyperparameters, evaluation protocols and baselines can be found in the supplementary materials, as well as ablative experiments and analysis on DiSCO's limitations.
+- **p. 7 / 4.2.3. Ablations studies - extractive body cue:** The last column refers to the main experiment where the number of prototypes is fixed and does not depend on NGT .
 
-- **PDF anchors reviewed:** datasets p. 7 (4.2.2. Results), p. 6 (4.1. Implementation and evaluation details), p. 7 (4.2.2. Results), p. 5 (4. Experimental evaluations), p. 6 (4.1. Implementation and evaluation details), metrics p. 7 (4.2.3. Ablations studies), p. 6 (4.1. Implementation and evaluation details), p. 7 (4.2.3. Ablations studies), p. 5 (4. Experimental evaluations), p. 6 (4.2.2. Results), p. 3 (Figure/Table caption), baselines p. 5 (4.1. Implementation and evaluation details), p. 5 (4. Experimental evaluations), p. 6 (4.2.1. Evaluated methods), p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ablations studies), p. 7 (4.2.3. Ablations studies), results p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ablations studies), p. 5 (4.1. Implementation and evaluation details), p. 7 (4.2.2. Results), p. 5 (4. Experimental evaluations), p. 6 (4.2.2. Results).
+- **Evidence anchors reviewed:** datasets p. 7 (4.2.2. Results), p. 6 (4.1. Implementation and evaluation details), p. 7 (4.2.2. Results), p. 5 (4. Experimental evaluations), p. 6 (4.1. Implementation and evaluation details), metrics p. 7 (4.2.3. Ablations studies), p. 6 (4.1. Implementation and evaluation details), p. 7 (4.2.3. Ablations studies), p. 5 (4. Experimental evaluations), p. 6 (4.2.2. Results), p. 3 (Figure/Table caption), baselines p. 5 (4.1. Implementation and evaluation details), p. 5 (4. Experimental evaluations), p. 6 (4.2.1. Evaluated methods), p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ablations studies), p. 7 (4.2.3. Ablations studies), results p. 6 (4.2.1. Evaluated methods), p. 7 (4.2.3. Ablations studies), p. 5 (4.1. Implementation and evaluation details), p. 7 (4.2.2. Results), p. 5 (4. Experimental evaluations), p. 6 (4.2.2. Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

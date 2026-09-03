@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p156.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p156.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p156.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p156.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 12 (B. Table-Top Franka Arm Results), p. 12 (
 
 ## Evaluation Body Digest
 
-- **p. 13 / C. Mobile X-Arm Results - extractive PDF cue:** Although our training data includes multi-door objects, demonstrations are generated for opening the closest door to the initial pose of the robot.
-- **p. 7 / V. SIMULATION RESULTS - extractive PDF cue:** We use the PartNet-Mobility [55] dataset for the assets of the articulated object.
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** 8 (zoom-in for better views) visualizes ArticuBot's predictions on some of the real-world test objects.
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** FlowBot3D achieves a reasonable normalized opening performance of 0.38, starting from the state where the robot gripper already grasps the ‘object.
-- **p. 13 / C. Mobile X-Arm Results - extractive PDF cue:** Some of the tested real-world objects are quite challenging, for example, cabinet C3 has a very small handle that protrudes only 2 cm from the ...
-- **p. 7 / V. SIMULATION RESULTS - extractive PDF cue:** We extracted 332 objects from 5 different categories: storage furniture,
-- **p. 12 / C. Mobile X-Arm Results - extractive PDF cue:** As shown, ArticuBot achieves a grasping success rate of 0.9 and normalized opening performance of 0.54, showing it can
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** We also find OpenVLA fails to grasp or open any test objects, resulting in a grasping success rate and normalized opening performance of 0.
+- **p. 13 / C. Mobile X-Arm Results - extractive body cue:** Although our training data includes multi-door objects, demonstrations are generated for opening the closest door to the initial pose of the robot.
+- **p. 7 / V. SIMULATION RESULTS - extractive body cue:** We use the PartNet-Mobility [55] dataset for the assets of the articulated object.
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** 8 (zoom-in for better views) visualizes ArticuBot's predictions on some of the real-world test objects.
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** FlowBot3D achieves a reasonable normalized opening performance of 0.38, starting from the state where the robot gripper already grasps the ‘object.
+- **p. 13 / C. Mobile X-Arm Results - extractive body cue:** Some of the tested real-world objects are quite challenging, for example, cabinet C3 has a very small handle that protrudes only 2 cm from the ...
+- **p. 7 / V. SIMULATION RESULTS - extractive body cue:** We extracted 332 objects from 5 different categories: storage furniture,
+- **p. 12 / C. Mobile X-Arm Results - extractive body cue:** As shown, ArticuBot achieves a grasping success rate of 0.9 and normalized opening performance of 0.54, showing it can
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** We also find OpenVLA fails to grasp or open any test objects, resulting in a grasping success rate and normalized opening performance of 0.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (B. Table-Top Franka Arm Results), p. 12 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Table-Top Franka Arm Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | If we compute the normalized opening performance for ArticuBot only in cases where the grasp is successful (Le., the same starting conditions as FlowBot3D), ... | p. 12 (B. Table-Top Franka Arm Results) |
 | C. Mobile X-Arm Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown, ArticuBot achieves a grasping success rate of 0.9 and normalized opening performance of 0.54, showing it can | p. 12 (C. Mobile X-Arm Results) |
@@ -39,28 +39,28 @@ PDF body evaluation/result cue (p. 12 (B. Table-Top Franka Arm Results), p. 12 (
 
 ## Dataset / Benchmark Role
 
-- **p. 13 / C. Mobile X-Arm Results - extractive PDF cue:** Although our training data includes multi-door objects, demonstrations are generated for opening the closest door to the initial pose of the robot.
-- **p. 7 / V. SIMULATION RESULTS - extractive PDF cue:** We use the PartNet-Mobility [55] dataset for the assets of the articulated object.
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** 8 (zoom-in for better views) visualizes ArticuBot's predictions on some of the real-world test objects.
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** FlowBot3D achieves a reasonable normalized opening performance of 0.38, starting from the state where the robot gripper already grasps the ‘object.
-- **p. 13 / C. Mobile X-Arm Results - extractive PDF cue:** Some of the tested real-world objects are quite challenging, for example, cabinet C3 has a very small handle that protrudes only 2 cm from the ...
-- **p. 7 / V. SIMULATION RESULTS - extractive PDF cue:** We extracted 332 objects from 5 different categories: storage furniture,
+- **p. 13 / C. Mobile X-Arm Results - extractive body cue:** Although our training data includes multi-door objects, demonstrations are generated for opening the closest door to the initial pose of the robot.
+- **p. 7 / V. SIMULATION RESULTS - extractive body cue:** We use the PartNet-Mobility [55] dataset for the assets of the articulated object.
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** 8 (zoom-in for better views) visualizes ArticuBot's predictions on some of the real-world test objects.
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** FlowBot3D achieves a reasonable normalized opening performance of 0.38, starting from the state where the robot gripper already grasps the ‘object.
+- **p. 13 / C. Mobile X-Arm Results - extractive body cue:** Some of the tested real-world objects are quite challenging, for example, cabinet C3 has a very small handle that protrudes only 2 cm from the ...
+- **p. 7 / V. SIMULATION RESULTS - extractive body cue:** We extracted 332 objects from 5 different categories: storage furniture,
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: System overview of ArticuBot. Top: We combine sampling-based grasping, motion planning, and opening actions to efficiently generate thousands of demonstrations in simulation. These ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 3: Comparison of hierarchical and non-hierarchical poli
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4: Comparison of different high-level poli
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 6: Real-world test objects for
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: The three different real robot setups.
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 7: Comparison of AnticuBot with FlowBotSD and AO-Grasp on 9 test objects in Lab A with table-top Franka, We omit
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 8: Visualizations of the high-level policy's predictions (per-point weights and goal end-effector points) in three of the real-world test cases. The green points represent ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: System overview of ArticuBot. Top: We combine sampling-based grasping, motion planning, and opening actions to efficiently generate thousands of demonstrations in simulation. These ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Comparison of hierarchical and non-hierarchical poli
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Comparison of different high-level poli
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Real-world test objects for
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: The three different real robot setups.
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 7: Comparison of AnticuBot with FlowBotSD and AO-Grasp on 9 test objects in Lab A with table-top Franka, We omit
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 8: Visualizations of the high-level policy's predictions (per-point weights and goal end-effector points) in three of the real-world test cases. The green points represent ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Although our training data includes multi-door objects, demonstrations are generated for opening the closest door to the initial pose of the robot. | embodiment, simulator version and control stack | p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS) |
 | Task/environment | We use the PartNet-Mobility [55] dataset for the assets of the articulated object. | reset, timeout, object/scene variation | p. 7 (V. SIMULATION RESULTS), p. 12 (B. Table-Top Franka Arm Results) |
@@ -111,9 +111,9 @@ PDF body evaluation/result cue (p. 12 (B. Table-Top Franka Arm Results), p. 12 (
 | Primary metric/result | As shown, ArticuBot achieves a grasping success rate of 0.9 and normalized opening performance of 0.54, showing it can | numeric claim only at cited anchor | p. 12 (C. Mobile X-Arm Results) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / V. SIMULATION RESULTS - extractive PDF cue:** We extracted 332 objects from 5 different categories: storage furniture,
-- **p. 5 / 2. Hierarchical Policy Learning -- Low-level Policy Architecture - extractive PDF cue:** We filter out all trajectories where the final opened angle (radians for hinge doors and centimeters for drawers) is smaller than a threshold, e.g.. if ...
-- **p. 6 / B. Policy Learning with a Hierarchical Policy Representation - extractive PDF cue:** FFor the current end-effector points {ee?*}/_,, its feature for attention includes the following: the first partis a learnable embedding vf" for each of the 4 ...
+- **p. 7 / V. SIMULATION RESULTS - extractive body cue:** We extracted 332 objects from 5 different categories: storage furniture,
+- **p. 5 / 2. Hierarchical Policy Learning -- Low-level Policy Architecture - extractive body cue:** We filter out all trajectories where the final opened angle (radians for hinge doors and centimeters for drawers) is smaller than a threshold, e.g.. if ...
+- **p. 6 / B. Policy Learning with a Hierarchical Policy Representation - extractive body cue:** FFor the current end-effector points {ee?*}/_,, its feature for attention includes the following: the first partis a learnable embedding vf" for each of the 4 ...
 
 ## Generalization and Failure Cases
 
@@ -150,13 +150,13 @@ PDF body evaluation/result cue (p. 12 (B. Table-Top Franka Arm Results), p. 12 (
 
 ## Limitations and Verification Questions
 
-- **p. 13 / C. Mobile X-Arm Results - extractive PDF cue:** See Appendix L for visualizations of some of the failure cases of ArticuBot, and some basic failure recovery abilities of ArticuBot.
-- **p. 13 / C. Mobile X-Arm Results - extractive PDF cue:** We leave addressing these limitations as important future work.
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** Common failure ceases for table-top experiments include: 1, The robot arm runs to joint limits while opening the object, due to the limited space of ...
-- **p. 12 / B. Table-Top Franka Arm Results - extractive PDF cue:** The major failure case for FlowBot3D is that the predicted flow is in the wrong direction, e.g., it predicts upwards flows for ‘opening a microwave ...
-- **p. 11 / A. Setups - extractive PDF cue:** We do not input the optional segmentation mask for the target link to open for FlowBot3D, as such masks are not readily available in the ...
+- **p. 13 / C. Mobile X-Arm Results - extractive body cue:** See Appendix L for visualizations of some of the failure cases of ArticuBot, and some basic failure recovery abilities of ArticuBot.
+- **p. 13 / C. Mobile X-Arm Results - extractive body cue:** We leave addressing these limitations as important future work.
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** Common failure ceases for table-top experiments include: 1, The robot arm runs to joint limits while opening the object, due to the limited space of ...
+- **p. 12 / B. Table-Top Franka Arm Results - extractive body cue:** The major failure case for FlowBot3D is that the predicted flow is in the wrong direction, e.g., it predicts upwards flows for ‘opening a microwave ...
+- **p. 11 / A. Setups - extractive body cue:** We do not input the optional segmentation mask for the target link to open for FlowBot3D, as such masks are not readily available in the ...
 
-- **PDF anchors reviewed:** datasets p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS), p. 12 (B. Table-Top Franka Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS), metrics p. 12 (C. Mobile X-Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 4 (Figure/Table caption), baselines p. 12 (B. Table-Top Franka Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), results p. 12 (B. Table-Top Franka Arm Results), p. 12 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results).
+- **Evidence anchors reviewed:** datasets p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS), p. 12 (B. Table-Top Franka Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS), metrics p. 12 (C. Mobile X-Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 4 (Figure/Table caption), baselines p. 12 (B. Table-Top Franka Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), results p. 12 (B. Table-Top Franka Arm Results), p. 12 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effect
 
 ## Method Body Digest
 
-- **p. 3 / 3. Method - extractive PDF cue:** … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated Depth Align Ensembled ...
-- **p. 2 / 3. Method - extractive PDF cue:** The optimization stage remains unchanged.
-- **p. 3 / 3.2. Effective Depth Alignment - extractive PDF cue:** As the coarse model is not fully optimized, direct alpha-blending introduces noise.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** This implies that the resulting coarse Gaussian model offers a rough estimate of the scene's depth.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** (a) Rendered Depth from an under-optimized 3DGS model can achieve view-consistent recovery in well-observed areas but underperforms in low-texture regions.
-- **p. 5 / 3.3. Progressive Segmented Initialization - extractive PDF cue:** Besides, we downsample the training images to further reduce redundant 3D Gaussians.
-- **p. 5 / 3.2. Effective Depth Alignment - extractive PDF cue:** Since we do not have SfM points as ground truth, the rendered depths from the coarse Gaussian Model serve as references.
-- **p. 6 / 3.3. Progressive Segmented Initialization - extractive PDF cue:** we optimize the photometric loss to refine the ensembled depths {D1, D2, . . . , Dki} for all previous views.
+- **p. 3 / 3. Method - extractive body cue:** … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated Depth Align Ensembled ...
+- **p. 2 / 3. Method - extractive body cue:** The optimization stage remains unchanged.
+- **p. 3 / 3.2. Effective Depth Alignment - extractive body cue:** As the coarse model is not fully optimized, direct alpha-blending introduces noise.
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** This implies that the resulting coarse Gaussian model offers a rough estimate of the scene's depth.
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** (a) Rendered Depth from an under-optimized 3DGS model can achieve view-consistent recovery in well-observed areas but underperforms in low-texture regions.
+- **p. 5 / 3.3. Progressive Segmented Initialization - extractive body cue:** Besides, we downsample the training images to further reduce redundant 3D Gaussians.
+- **p. 5 / 3.2. Effective Depth Alignment - extractive body cue:** Since we do not have SfM points as ground truth, the rendered depths from the coarse Gaussian Model serve as references.
+- **p. 6 / 3.3. Progressive Segmented Initialization - extractive body cue:** we optimize the photometric loss to refine the ensembled depths {D1, D2, . . . , Dki} for all previous views.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D ...
-- **p. 2 / 3. Method - extractive PDF cue:** 3.3, we present a progressive segmented initialization with importance resampling.
-- **p. 3 / 3. Method - extractive PDF cue:** To address this, we propose an unbiased depth rendering method detailed in Sec.
+- **p. 2 / 1. Introduction - extractive body cue:** The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D ...
+- **p. 2 / 3. Method - extractive body cue:** 3.3, we present a progressive segmented initialization with importance resampling.
+- **p. 3 / 3. Method - extractive body cue:** To address this, we propose an unbiased depth rendering method detailed in Sec.
 
 ## Source Evidence Cues
 
-- **p. 3 / 3. Method - extractive PDF cue:** … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated Depth Align Ensembled ...
-- **p. 2 / 3. Method - extractive PDF cue:** The optimization stage remains unchanged.
-- **p. 3 / 3.2. Effective Depth Alignment - extractive PDF cue:** As the coarse model is not fully optimized, direct alpha-blending introduces noise.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** This implies that the resulting coarse Gaussian model offers a rough estimate of the scene's depth.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** (a) Rendered Depth from an under-optimized 3DGS model can achieve view-consistent recovery in well-observed areas but underperforms in low-texture regions.
-- **p. 5 / 3.3. Progressive Segmented Initialization - extractive PDF cue:** Besides, we downsample the training images to further reduce redundant 3D Gaussians.
-- **p. 5 / 3.2. Effective Depth Alignment - extractive PDF cue:** Since we do not have SfM points as ground truth, the rendered depths from the coarse Gaussian Model serve as references.
+- **p. 3 / 3. Method - extractive body cue:** … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated Depth Align Ensembled ...
+- **p. 2 / 3. Method - extractive body cue:** The optimization stage remains unchanged.
+- **p. 3 / 3.2. Effective Depth Alignment - extractive body cue:** As the coarse model is not fully optimized, direct alpha-blending introduces noise.
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** This implies that the resulting coarse Gaussian model offers a rough estimate of the scene's depth.
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** (a) Rendered Depth from an under-optimized 3DGS model can achieve view-consistent recovery in well-observed areas but underperforms in low-texture regions.
+- **p. 5 / 3.3. Progressive Segmented Initialization - extractive body cue:** Besides, we downsample the training images to further reduce redundant 3D Gaussians.
+- **p. 5 / 3.2. Effective Depth Alignment - extractive body cue:** Since we do not have SfM points as ground truth, the rendered depths from the coarse Gaussian Model serve as references.
 - **Detected method headings:** 3. Method (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated ... | p. 3 (3. Method), p. 2 (3. Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The optimization stage remains unchanged. | p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effect
 
 ## Objective / Update Rule
 
-- **p. 6 / 3.3. Progressive Segmented Initialization - extractive PDF cue:** we optimize the photometric loss to refine the ensembled depths {D1, D2, . . . , Dki} for all previous views.
-- **p. 3 / 3. Method - extractive PDF cue:** … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated Depth Align Ensembled ...
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** Visual comparison of depth maps and reprojected points with the standard alpha-blending method and our unbiased alphablending method. tion Gi, this problem is equivalent to ...
-- **p. 5 / 3.2. Effective Depth Alignment - extractive PDF cue:** We solve for the scale si and shift ti using the closed-form linear regression solution: si, ti = arg min X pi(kj)=1 //Dalign(kj) -Drender(k′ j)//2 ...
-- **p. 2 / 3. Method - extractive PDF cue:** The optimization stage remains unchanged.
-- **p. 2 / 3. Method - extractive PDF cue:** 3.3, we present a progressive segmented initialization with importance resampling.
+- **p. 6 / 3.3. Progressive Segmented Initialization - extractive body cue:** we optimize the photometric loss to refine the ensembled depths {D1, D2, . . . , Dki} for all previous views.
+- **p. 3 / 3. Method - extractive body cue:** … …… Importance Resampling Progressive Segmented Initialization RGB Images Random Init Monocular Depth Estimator Coarse Gaussian Model Estimate Render Rendered Depth Estimated Depth Align Ensembled ...
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** Visual comparison of depth maps and reprojected points with the standard alpha-blending method and our unbiased alphablending method. tion Gi, this problem is equivalent to ...
+- **p. 5 / 3.2. Effective Depth Alignment - extractive body cue:** We solve for the scale si and shift ti using the closed-form linear regression solution: si, ti = arg min X pi(kj)=1 //Dalign(kj) -Drender(k′ j)//2 ...
+- **p. 2 / 3. Method - extractive body cue:** The optimization stage remains unchanged.
+- **p. 2 / 3. Method - extractive body cue:** 3.3, we present a progressive segmented initialization with importance resampling.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.3. Progressive Segmented Initialization), p. 3 (3. Method), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.2. Effective Depth Alignment), p. 5 (3.3. Progressive Segmented Initialization).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effect
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 3. Method - extractive PDF cue:** We propose a pipeline to reconstruct photo-realistic scenes from posed image sequences without requiring an input point cloud.
-- **p. 5 / 3.2. Effective Depth Alignment - extractive PDF cue:** Specifically, taking the current view I along with its rendered image Irender and depth map Drender from Eq.
-- **p. 5 / 3.3. Progressive Segmented Initialization - extractive PDF cue:** For a sequence of n consecutively captured RGB images I = {I1, I2, . . . , In} with their corresponding ensembled depths D = ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Moreover, [14] generates Gaussians for every pixel of each input image, which leads to substantial computational costs.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** We compare the point cloud from different depths for single view and multiple views.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive PDF cue:** Consequently, approximating the Gaussian depth using the center depth can result in a point cloud with significant floaters when reprojected back into the world space, ...
-- **p. 3 / 3. Method - extractive PDF cue:** To address this, we propose an unbiased depth rendering method detailed in Sec.
+- **p. 2 / 3. Method - extractive body cue:** We propose a pipeline to reconstruct photo-realistic scenes from posed image sequences without requiring an input point cloud.
+- **p. 5 / 3.2. Effective Depth Alignment - extractive body cue:** Specifically, taking the current view I along with its rendered image Irender and depth map Drender from Eq.
+- **p. 5 / 3.3. Progressive Segmented Initialization - extractive body cue:** For a sequence of n consecutively captured RGB images I = {I1, I2, . . . , In} with their corresponding ensembled depths D = ...
+- **p. 2 / 1. Introduction - extractive body cue:** Moreover, [14] generates Gaussians for every pixel of each input image, which leads to substantial computational costs.
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** We compare the point cloud from different depths for single view and multiple views.
+- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** Consequently, approximating the Gaussian depth using the center depth can result in a point cloud with significant floaters when reprojected back into the world space, ...
+- **p. 3 / 3. Method - extractive body cue:** To address this, we propose an unbiased depth rendering method detailed in Sec.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,9 +90,9 @@ PDF body method statement (p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effect
 
 ## Training vs Inference
 
-- **p. 5 / 3.3. Progressive Segmented Initialization - extractive PDF cue:** Besides, we downsample the training images to further reduce redundant 3D Gaussians.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** The number of pre-training steps is set to 5000 for indoor datasets and 10000 for outdoor datasets to achieve a roughly accurate scene structure.
-- **p. 3 / 3.2. Effective Depth Alignment - extractive PDF cue:** As highlighted in RAINGS [18], the sparse-large-variance (SLV) initialization enables effective signal prediction within few training steps.
+- **p. 5 / 3.3. Progressive Segmented Initialization - extractive body cue:** Besides, we downsample the training images to further reduce redundant 3D Gaussians.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** The number of pre-training steps is set to 5000 for indoor datasets and 10000 for outdoor datasets to achieve a roughly accurate scene structure.
+- **p. 3 / 3.2. Effective Depth Alignment - extractive body cue:** As highlighted in RAINGS [18], the sparse-large-variance (SLV) initialization enables effective signal prediction within few training steps.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effect
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.2. Comparison - extractive PDF cue:** Ablation for proposed components in our framework on Mip-NeRF360 [5] dataset.
-- **p. 6 / 4.2. Comparison - extractive PDF cue:** This quantitatively validates that our approach achieves superior rendering and geometry results even without additional high-quality point clouds.
-- **p. 8 / 4.2. Comparison - extractive PDF cue:** Ablation for different depths used for initialization on Mip-NeRF360 [5] dataset.
-- **p. 6 / 4.2. Comparison - extractive PDF cue:** Additionally, since [14] does not account for scale when utilizing monocular depth to estimate camera poses and generate 3D points, directly using the ground-truth poses ...
-- **p. 8 / 4.2. Comparison - extractive PDF cue:** Depth PSNR↑ SSIM↑ LPIPS↓ Ensembled Depth 27.588 0.822 0.187 Aligned Depth 27.524 0.818 0.189 Estimated Depth 27.390 0.816 0.191 Rendered Depth 26.596 0.708 0.201 segmented ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Our initialization does not interfere with subsequent optimization.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Novel View Synthesis Comparison. We propose a novel Gaussian Splatting initialization pipeline to address the degradation in novel view rendering quality caused by ...
+- **p. 8 / 4.2. Comparison - extractive body cue:** Ablation for proposed components in our framework on Mip-NeRF360 [5] dataset.
+- **p. 6 / 4.2. Comparison - extractive body cue:** This quantitatively validates that our approach achieves superior rendering and geometry results even without additional high-quality point clouds.
+- **p. 8 / 4.2. Comparison - extractive body cue:** Ablation for different depths used for initialization on Mip-NeRF360 [5] dataset.
+- **p. 6 / 4.2. Comparison - extractive body cue:** Additionally, since [14] does not account for scale when utilizing monocular depth to estimate camera poses and generate 3D points, directly using the ground-truth poses ...
+- **p. 8 / 4.2. Comparison - extractive body cue:** Depth PSNR↑ SSIM↑ LPIPS↓ Ensembled Depth 27.588 0.822 0.187 Aligned Depth 27.524 0.818 0.189 Estimated Depth 27.390 0.816 0.191 Rendered Depth 26.596 0.708 0.201 segmented ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Our initialization does not interfere with subsequent optimization.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Novel View Synthesis Comparison. We propose a novel Gaussian Splatting initialization pipeline to address the degradation in novel view rendering quality caused by ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effect
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment), p. 4 (3.2. Effective Depth Alignment), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.3. Progressive Segmented Initialization), objective p. 6 (3.3. Progressive Segmented Initialization), p. 3 (3. Method), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.2. Effective Depth Alignment), p. 2 (3. Method), p. 2 (3. Method), temporal p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment), p. 3 (3. Method), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.3. Progressive Segmented Initialization), p. 5 (3.3. Progressive Segmented Initialization).
+- **Evidence anchors reviewed:** method p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment), p. 4 (3.2. Effective Depth Alignment), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.3. Progressive Segmented Initialization), objective p. 6 (3.3. Progressive Segmented Initialization), p. 3 (3. Method), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.2. Effective Depth Alignment), p. 2 (3. Method), p. 2 (3. Method), temporal p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment), p. 3 (3. Method), p. 4 (3.2. Effective Depth Alignment), p. 5 (3.3. Progressive Segmented Initialization), p. 5 (3.3. Progressive Segmented Initialization).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

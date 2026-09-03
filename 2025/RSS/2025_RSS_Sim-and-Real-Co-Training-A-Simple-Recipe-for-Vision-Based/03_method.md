@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p109.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p109.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p109.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p109.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | In practice, we use an ‘equivalent formulation of a, which represents the probability ‘of sampling from simulation data in each training batch. | p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | We adopt the co-training formulation following prior work [7], where ‘we minimize the behavioral cloning action loss | p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | Te ability to generalize across diverse environments and tasks is a critical step toward realizing generalist robotic systems. | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | In this framework, policies are trained to predict actions based fon ground truth state-action pairs provided in a demonstration dataset. | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | None of these 10 tasks is semantically equivalent to the real-world tasks-they involve different source and/or target receptacles, We use DexMimicGen [10], ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 2 (2) We demonstrate empirically how co-training on syn), objective p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 9 (C. Effectiveness of Co-Training in Data-Rich Settings), temporal p. 1 (1. IyrRopucTION), p. 2 (A. Learning Manipulation from Demonstration Data), p. 3 (C. Automated Synthetic Data Generation), p. 6 (4) The same environmental fixture categories (e.g. kitchen), p. 6 (B. Prior Task-Agnostic Simulation Data), p. 9 (VI. Limtrarions).
+- **Evidence anchors reviewed:** method p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 2 (2) We demonstrate empirically how co-training on syn), objective p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 9 (C. Effectiveness of Co-Training in Data-Rich Settings), temporal p. 1 (1. IyrRopucTION), p. 2 (A. Learning Manipulation from Demonstration Data), p. 3 (C. Automated Synthetic Data Generation), p. 6 (4) The same environmental fixture categories (e.g. kitchen), p. 6 (B. Prior Task-Agnostic Simulation Data), p. 9 (VI. Limtrarions).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We adopt the co-training formulation following prior work [7], where ‘we minimize the behavioral cloning action loss (p. 3, A. Co-Training on Real-World and Simulation Data).
+- **Objective/update evidence:** We adopt the co-training formulation following prior work [7], where ‘we minimize the behavioral cloning action loss (p. 3, A. Co-Training on Real-World and Simulation Data).
+- **Temporal/runtime evidence:** Te ability to generalize across diverse environments and tasks is a critical step toward realizing generalist robotic systems. (p. 1, 1. IyrRopucTION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

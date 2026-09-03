@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `start/goal, map, dynamics와 successor/operator description → path, trajectory, symbolic state 또는 task-motion decision → feasible action sequence 또는 minimum-cost plan`.
-- 이 논문의 재사용 가능한 지점은 The component labeled SE is the state estimator: it is responsible for updating the belief state based on the last action, the current observation, and the previous belief state, The component labeled ...를 As shown in Figure 1, the agent takes as input the state of the world and generates as output actions, which themselves affect the state of the world.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 path, trajectory, symbolic state 또는 task-motion decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In such belief states, the agent cannot select에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: This paper is intended to make two contributions.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The component labeled SE is the state estimator: it is responsible for updating the belief state based on the last action, the current observation, and the previous belief state, The ... (p. 9, 3.2 Problem Structure).
+- **Paper-specific mechanism:** This paper is intended to make two contributions. (p. 3, 1 Introduction).
+- **Evidence boundary:** the reported outcome is The linear program in Table 3 solves exactly this problem, The variable d is the minimum amount of improvement of Pew Over any policy tree in Uy at b. (p. 21, 44.3. Checking the witness condition); the relevant task/metric cue is i pproptiately and so tends to gain less long-term reward. (p. 15, 1) I step to go). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** as the agent does not observe the goal state, it will alwajrs have some non-zero belief that it is in any of the non-goal states, since the actions have non-zero ... (p. 11, 3.2 Problem Structure).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: A plan graph is essentially a finite-state controller, It uses the minimal possible amount of memory to act optimally in a partially observable environment..
-3. Compare against the body-reported baseline or a matched simpler baseline: As a result, compared to exhaustive caumeration, very few nonuseful policy trees are considered and the algorithm runs extremely quickly..
-4. Report the body metric and its denominator/aggregation: i pproptiately and so tends to gain less long-term reward..
-5. Re-run the body-reported ablation/failure condition: Note that we are defining two trees to be equal if they have the same value function; this makes it unnecessary to deal with the effect of ties in the set Uae.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The component labeled SE is the state estimator: it is responsible for updating the belief state based on the last action, the current observation, and the previous belief state, The ... (p. 9, 3.2 Problem Structure); preserve the objective/update rule: Tn what sense is the witness algorithm superior to previous algorithms for solving Pompps, then? (p. 18, 44 The Witness Algorithm).
+2. Use the paper-reported task/data/environment cue: A plan graph is essentially a finite-state controller, It uses the minimal possible amount of memory to act optimally in a partially observable environment. (p. 30, 5.4 Plan Graphs).
+3. Compare against the reported or matched baseline: This is because the behavior of ‘these algorithms on this problem appears to be extremely sensitive to the numerical precision used in comparisons-the better the precision, the longer the algorithms ... (p. 29, 5.4 Plan Graphs).
+4. Report the body metric with its denominator and aggregation: i pproptiately and so tends to gain less long-term reward. (p. 15, 1) I step to go).
+5. Re-run the reported ablation or stress/failure condition: The optimal action for cach belief state in this region is a(p), the action in the root node of policy tree p; furthermore, the entire policy tree p can be ... (p. 16, 1) I step to go); if none is reported, design one around: as the agent does not observe the goal state, it will alwajrs have some non-zero belief that it is in any of the non-goal states, since the actions have non-zero ... (p. 11, 3.2 Problem Structure).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 23 (4.5. Alternative Approaches), p. 19 (44 The Witness Algorithm), p. 7 (2.9 Computing an Optimal Policy); the primary result is directionally consistent at p. 18 (44 The Witness Algorithm), p. 20 (441 Witness inner loop), p. 20 (442 Identifying a witness); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1 Introduction), p. 3 (1 Introduction), match the reported outcome at p. 21 (44.3. Checking the witness condition), p. 22 (444 A single step of value iteration), p. 24 (4.5. Alternative Approaches), and measure the boundary at p. 11 (3.2 Problem Structure), p. 10 (3.2 Problem Structure).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 intended, make, contributions mechanism이 As a result, compared to exhaustive caumeration, very few nonuseful policy trees are considered and the ... 대비 i pproptiately and so tends to gain less long-term reward.을 개선하고, In such belief states, the agent cannot select 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The component labeled SE is the state estimator: it is responsible for updating the belief state based on the last action, the ...), does the paper-specific mechanism (This paper is intended to make two contributions.) retain the reported evaluation outcome (i pproptiately and so tends to gain less long-term reward.) when tested against the paper's strongest explicit boundary (as the agent does not observe the goal state, it will alwajrs have some non-zero belief that it ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (i pproptiately and so tends to gain less long-term reward.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** This paper is intended to make two contributions. (p. 3, 1 Introduction).
+- **Paper-supported outcome:** The linear program in Table 3 solves exactly this problem, The variable d is the minimum amount of improvement of Pew Over any policy tree in Uy at b. (p. 21, 44.3. Checking the witness condition).
+- **Strongest explicit boundary:** as the agent does not observe the goal state, it will alwajrs have some non-zero belief that it is in any of the non-goal states, since the actions have non-zero ... (p. 11, 3.2 Problem Structure).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

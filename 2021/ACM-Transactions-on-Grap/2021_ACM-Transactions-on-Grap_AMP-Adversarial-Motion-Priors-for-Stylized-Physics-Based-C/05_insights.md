@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 6.2 Network Architecture Each policy 𝜋is modeled by a neural network that maps a given state s𝑡and goal g to a Gaussian distribution over actions 𝜋(a𝑡/s𝑡, g) = N (𝜇(s𝑡, g), Σ), ...를 Behavioral cloning can be used to directly fit a policy to map from states observed in M to their corresponding actions using supervised learning [Bojarski et al.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 These additional motion clips then enable our character to recover from a fall and continue to perform a given task (Figure 3(c)).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The central contribution of this work is an adversarial learning approach for physics-based character animation that combines goalconditioned reinforcement with an adversarial motion prior, which enables the style of a character's movem ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** As such, before a state transition is provided as input to the discriminator, we first apply an observation map Φ(s𝑡) that ACM Trans. (p. 5, 4 BACKGROUND).
+- **Paper-specific mechanism:** We present one of the first adversarial learning systems that is able to produce high-quality full-body motions for physically simulated characters. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Training the motion prior with a diverse dataset results in more flexible and optimal policies that are able to achieve a wider range of target speeds. (p. 9, 8 RESULTS); the relevant task/metric cue is Performance is recorded as the average normalized task return, with 0 being the minimum possible return per episode and 1 being the maximum possible return. (p. 9, 8 RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that enables characters to imitate diverse behaviors from large unstructured datasets, without the ... (p. 12, 8 RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Each environment is denoted by "Character: Task (Dataset)"..
-3. Compare against the body-reported baseline or a matched simpler baseline: AMP produces results of comparable quality when compared to prior tracking-based methods, without requiring a manually designed reward function or synchronization between the policy and reference motion..
-4. Report the body metric and its denominator/aggregation: Since AMP does not use a phase variable to synchronize the policy with the reference motion, the motions may progress at different rates, resulting in de-synchronization that can lead to large pose ....
-5. Re-run the body-reported ablation/failure condition: The characters automatically learn to compose and generalize different skills from the motion data in order to fulfill high-level task objectives, without requiring mechanisms for explicit motion selection..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: As such, before a state transition is provided as input to the discriminator, we first apply an observation map Φ(s𝑡) that ACM Trans. (p. 5, 4 BACKGROUND); preserve the objective/update rule: The policy is then trained using the RL objective detailed in Equation 1, with rewards specified by, 𝑟𝑡= -log (1 -𝐷(s𝑡, a𝑡)) . (p. 5, 4 BACKGROUND).
+2. Use the paper-reported task/data/environment cue: Each environment is denoted by "Character: Task (Dataset)". (p. 8, 8 RESULTS).
+3. Compare against the reported or matched baseline: AMP produces results of comparable quality when compared to prior tracking-based methods, without requiring a manually designed reward function or synchronization between the policy and reference motion. (p. 12, 8 RESULTS).
+4. Report the body metric with its denominator and aggregation: Performance is recorded as the average normalized task return, with 0 being the minimum possible return per episode and 1 being the maximum possible return. (p. 9, 8 RESULTS).
+5. Re-run the reported ablation or stress/failure condition: The characters automatically learn to compose and generalize different skills from the motion data in order to fulfill high-level task objectives, without requiring mechanisms for explicit motion selection. (p. 7, 8 RESULTS); if none is reported, design one around: 9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that enables characters to imitate diverse behaviors from large unstructured datasets, without the ... (p. 12, 8 RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND); the primary result is directionally consistent at p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 9 (8 RESULTS), p. 11 (8 RESULTS), p. 12 (8 RESULTS), and measure the boundary at p. 12 (8 RESULTS), p. 13 (8 RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 central, contribution, adversarial mechanism이 AMP produces results of comparable quality when compared to prior tracking-based methods, without requiring a manually ... 대비 Since AMP does not use a phase variable to synchronize the policy with the reference motion, the motions ...을 개선하고, These additional motion clips then enable our character to recover from a fall and continue to ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (As such, before a state transition is provided as input to the discriminator, we first apply an observation map Φ(s𝑡) that ACM ...), does the paper-specific mechanism (We present one of the first adversarial learning systems that is able to produce high-quality full-body motions for physically simulated characters.) retain the reported evaluation outcome (Performance is recorded as the average normalized task return, with 0 being the minimum possible return per episode ...) when tested against the paper's strongest explicit boundary (9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Performance is recorded as the average normalized task return, with 0 being the minimum possible return per episode ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present one of the first adversarial learning systems that is able to produce high-quality full-body motions for physically simulated characters. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Training the motion prior with a diverse dataset results in more flexible and optimal policies that are able to achieve a wider range of target speeds. (p. 9, 8 RESULTS).
+- **Strongest explicit boundary:** 9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that enables characters to imitate diverse behaviors from large unstructured datasets, without the ... (p. 12, 8 RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

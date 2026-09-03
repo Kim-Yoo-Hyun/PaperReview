@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 By unifying all data sources across the data pyramid, we construct a consistent dataset where the input consists of the robot state, visual observations, and language instruction, and the output is the ...를 GR00T N1: An Open Foundation Model for Generalist Humanoid Robots Robot State "Pick up the industry object and place in yellow bin." Joint Positions Joint Velocities Base Position EEF Poses … Tokenize ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We introduce GR00T N1, an open foundation model for generalist humanoid robots.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** By unifying all data sources across the data pyramid, we construct a consistent dataset where the input consists of the robot state, visual observations, and language instruction, and the output ... (p. 2, 1. Introduction).
+- **Paper-specific mechanism:** We introduce GR00T N1, an open foundation model for generalist humanoid robots. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 9: Average Success Rate (%) across 24 Tasks in simulation and 8 tasks in the real world. In the RoboCasa simulation, we show all post-training results using 30, 100, ... (p. 16, Figure/Table caption); the relevant task/metric cue is Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last 5 checkpoints, where checkpoints are written every 500 ... (p. 14, 4.3. Experiment Setup). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp. (p. 24, 6. Conclusions).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We generate 1000 demonstrations for each task using the DexMimicGen data generation system and evaluate the model's ability to generalize to novel object configurations. • GR-1 Tabletop Tasks (24 tasks, GR-1) This ....
-3. Compare against the body-reported baseline or a matched simpler baseline: GR00T N1 outperforms both baselines, especially on the GR-1 task where it outperforms by more than 17 %..
-4. Report the body metric and its denominator/aggregation: Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last 5 checkpoints, where checkpoints are written every 500 training steps, ....
-5. Re-run the body-reported ablation/failure condition: It is natural, in the limit of large fine-tuning datasets, that the effect of pre-training dwindles..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: By unifying all data sources across the data pyramid, we construct a consistent dataset where the input consists of the robot state, visual observations, and language instruction, and the output ... (p. 2, 1. Introduction); preserve the objective/update rule: Pre-training During the pre-training phase, GR00T N1 is trained via flow-matching loss (Equation 1) on a diverse collection of embodiments and data sources, encompassing various real and synthetic robot datasets ... (p. 8, 2.3. Training Details).
+2. Use the paper-reported task/data/environment cue: These tasks closely mirror real-world industrial applications, making them highly relevant benchmarks for assessing dexterity in structured environments. • Multi-Agent Coordination (2 tasks, Coordination) Collaborative tasks require syn ... (p. 14, 4.2. Real-World Benchmarks).
+3. Compare against the reported or matched baseline: GR00T N1 outperforms both baselines, especially on the GR-1 task where it outperforms by more than 17 %. (p. 15, 4.4. Quantitative Results).
+4. Report the body metric with its denominator and aggregation: Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last 5 checkpoints, where checkpoints are written every 500 ... (p. 14, 4.3. Experiment Setup).
+5. Re-run the reported ablation or stress/failure condition: It employs a U-Net architecture that progressively removes noise from random samples to generate precise robot actions conditioned on observation sequences. (p. 14, 4.3. Experiment Setup); if none is reported, design one around: (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp. (p. 24, 6. Conclusions).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation); the primary result is directionally consistent at p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 16 (Figure/Table caption), p. 12 (4.1. Simulation Benchmarks), p. 15 (Figure/Table caption), and measure the boundary at p. 24 (6. Conclusions), p. 16 (4.5. Qualitative Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, GR00T, open mechanism이 GR00T N1 outperforms both baselines, especially on the GR-1 task where it outperforms by more than ... 대비 Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum ...을 개선하고, (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (By unifying all data sources across the data pyramid, we construct a consistent dataset where the input consists of the robot state, ...), does the paper-specific mechanism (We introduce GR00T N1, an open foundation model for generalist humanoid robots.) retain the reported evaluation outcome (Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum ...) when tested against the paper's strongest explicit boundary ((Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.875). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We introduce GR00T N1, an open foundation model for generalist humanoid robots. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 9: Average Success Rate (%) across 24 Tasks in simulation and 8 tasks in the real world. In the RoboCasa simulation, we show all post-training results using 30, 100, ... (p. 16, Figure/Table caption).
+- **Strongest explicit boundary:** (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp. (p. 24, 6. Conclusions).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

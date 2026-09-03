@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p001.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p001.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p001.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p001.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C. Platform-aware Predictions | EMPIRICAL / REAL-ROBOT OR HARDWARE | Il, our approach achieves the highest success rate across both environments. | p. 9 (C. Platform-aware Predictions) |
 | C. Platform-aware Predictions | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, our FDM integrated into an MPPI planner with simplified rewards achieves on average 81% goal success rate in complex environments. | p. 10 (C. Platform-aware Predictions) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Second, the failure states observed in simulation environments do not perfectly translate to real-world failures, and real-world data lacks demonstrations. of collisions due to ... | embodiment, simulator version and control stack | p. 10 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions) |
 | Task/environment | Trained with a mix of simulated and real-world data, the 'DM captures the complex dynamics of a quadrupedal robot and enables zero-shot adjustments of ... | reset, timeout, object/scene variation | p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 - **p. 10 / C. Platform-aware Predictions - extractive body cue:** As a resull, the simple combination of pose reward guiding the robot toward the goal and a failure reward preventing collisions proves sufficient for safe ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Demonstration of the proposed perceptive Forward Dynamics Model for robust navigation in complex environments. The model, trained with real-world and simulation data, predicts ...
 
-- **PDF anchors reviewed:** datasets p. 10 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), p. 6 (B. Model Architecture), p. 6 (B. Model Architecture), p. 7 (B. Model Architecture), metrics p. 10 (C. Platform-aware Predictions), p. 7 (A. FDM Percepriveness), p. 8 (B. Baseline Comparison), p. 8 (C. Platform-aware Predictions), p. 16 (Figure/Table caption), p. 9 (C. Platform-aware Predictions), baselines p. 7 (B. Baseline Comparison), p. 7 (B. Baseline Comparison), p. 8 (B. Baseline Comparison), p. 9 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), results p. 9 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 6 (B. Model Architecture), p. 8 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), p. 9 (C. Platform-aware Predictions).
+- **Evidence anchors reviewed:** datasets p. 10 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), p. 6 (B. Model Architecture), p. 6 (B. Model Architecture), p. 7 (B. Model Architecture), metrics p. 10 (C. Platform-aware Predictions), p. 7 (A. FDM Percepriveness), p. 8 (B. Baseline Comparison), p. 8 (C. Platform-aware Predictions), p. 16 (Figure/Table caption), p. 9 (C. Platform-aware Predictions), baselines p. 7 (B. Baseline Comparison), p. 7 (B. Baseline Comparison), p. 8 (B. Baseline Comparison), p. 9 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), results p. 9 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 6 (B. Model Architecture), p. 8 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), p. 9 (C. Platform-aware Predictions).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Trained with a mix of simulated and real-world data, the 'DM captures the complex dynamics of a quadrupedal robot and enables zero-shot adjustments of the planning objective. ‘The presented network ... (p. 10, C. Platform-aware Predictions).
+- **Metric evidence:** Regarding the collision estimation, the developed FDM demonstrates an accuracy of at least 89% over all ‘environments, Our method predicts collision in environments with 2D obstacles correctly with an FI ... (p. 8, B. Baseline Comparison).
+- **Baseline/ablation evidence:** Further, the better accuracy compared to the baselines becomes clearly (p. 7, B. Baseline Comparison).
+- **Failure/negative evidence:** Second, the failure states observed in simulation environments do not perfectly translate to real-world failures, and real-world data lacks demonstrations. of collisions due to the risk of hardware damage, leaving ... (p. 10, C. Platform-aware Predictions).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.00595; PDF retrieval source: https://arxiv.org/pdf/2307.00595. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.00595; PDF retrieval source: https://arxiv.org/pdf/2307.00595. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** It is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in the ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, the robot model is rendered in the scene based on the joint angles recorded in our dataset.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** With 40 robot demonstrations, the results of pretraining on our dataset outperform the counterpart trained with 75 demonstrations without pretraining.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** When training the network with 75 demonstrations, we observe that pretraining the model with selected data from our dataset, despite differences in camera viewpoints, robot ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We divide the task into 3 stages, namely whether the robot can reach the block, grasp it and place it on the weight, and measure ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Experimental Results We present the model's success rates under different training configurations in Tab.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** It is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in the ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, the robot model is rendered in the scene based on the joint angles recorded in our dataset.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** With 40 robot demonstrations, the results of pretraining on our dataset outperform the counterpart trained with 75 demonstrations without pretraining.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** When training the network with 75 demonstrations, we observe that pretraining the model with selected data from our dataset, despite differences in camera viewpoints, robot ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We divide the task into 3 stages, namely whether the robot can reach the block, grasp it and place it on the weight, and measure ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Experimental Results We present the model's success rates under different training configurations in Tab.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | BENCHMARK / DATASET | Additionally, the inclusion of data from different tasks during pretraining further improves the overall success rate. | p. 6 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | BENCHMARK / DATASET | Experimental Results We present the model's success rates under different training configurations in Tab. | p. 6 (IV. EXPERIMENTS) |
@@ -39,28 +39,28 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** It is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in the ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, the robot model is rendered in the scene based on the joint angles recorded in our dataset.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** With 40 robot demonstrations, the results of pretraining on our dataset outperform the counterpart trained with 75 demonstrations without pretraining.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** When training the network with 75 demonstrations, we observe that pretraining the model with selected data from our dataset, despite differences in camera viewpoints, robot ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** It is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in the ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, the robot model is rendered in the scene based on the joint angles recorded in our dataset.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** With 40 robot demonstrations, the results of pretraining on our dataset outperform the counterpart trained with 75 demonstrations without pretraining.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** When training the network with 75 demonstrations, we observe that pretraining the model with selected data from our dataset, despite differences in camera viewpoints, robot ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of our RH20T dataset. We adopt multiple robots and setup diverse environments for the data collection. The robot manipulation episodes include multi-modal ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: Statistics on the amount of robotic manipulation for different tasks. # of Robot Manipulations 25 50 100 125 150
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Statistics on the execution time of different robotic manip- ulations in our dataset. largest in our community at present. da) Data Hierarchy: Humans ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Example of data hierarchy: The leaf nodes in the hierarchy consist of human demonstrations (highlighted in green) and robot manipulations (highlighted in red, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: Illustration of our data collection platform high-quality of our dataset. The detailed data format and data access APIs are provided on our website.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 6: We display the point cloud generated by fusing the RGBD data from the multi-view cameras mounted in our data collection platform. The red ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1: Task description for our dataset. "Src." denotes the source of the task. Note that the task IDs are not necessarily continuous. Task Task ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our RH20T dataset. We adopt multiple robots and setup diverse environments for the data collection. The robot manipulation episodes include multi-modal ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Statistics on the amount of robotic manipulation for different tasks. # of Robot Manipulations 25 50 100 125 150
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Statistics on the execution time of different robotic manip- ulations in our dataset. largest in our community at present. da) Data Hierarchy: Humans ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Example of data hierarchy: The leaf nodes in the hierarchy consist of human demonstrations (highlighted in green) and robot manipulations (highlighted in red, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Illustration of our data collection platform high-quality of our dataset. The detailed data format and data access APIs are provided on our website.
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6: We display the point cloud generated by fusing the RGBD data from the multi-view cameras mounted in our data collection platform. The red ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Task description for our dataset. "Src." denotes the source of the task. Note that the task IDs are not necessarily continuous. Task Task ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in ... | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET) |
 | Task/environment | We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community. | reset, timeout, object/scene variation | p. 3 (III. RH20T DATASET), p. 5 (IV. EXPERIMENTS) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Primary metric/result | Experimental Results We present the model's success rates under different training configurations in Tab. | numeric claim only at cited anchor | p. 6 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / Dataset - extractive PDF cue:** Force Sensing 8.30k 12 1 v RoboTurk 28 2.10k 2 1 X RoboNet 162k N/A 7 x BridgeData Il 7.20k 4 1 x BC-Z 26.0k ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** To ensure task diversity, we selected 48 tasks from RLBench [19], 29 tasks from MetaWorld [EO], and introduced 70 self-proposed tasks that are frequently encountered ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** In total, it contains 147 tasks, consisting of 42 skills (i.e., verbs).
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** To ensure applicability across different robot configurations, we used 4 popular robot arms, 4 different robotic grippers, and 3 types of force-torque sensors, resulting in ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** [TM1 c) Scale: Our dataset consists of over 110,000 robot sequences and an equal number of human sequences, with more than 50 million images collected ...
-- **p. 3 / III. RH20T DATASET - extractive PDF cue:** On average, each skill contains approximately 750 robot manipulations.
+- **p. 3 / Dataset - extractive body cue:** Force Sensing 8.30k 12 1 v RoboTurk 28 2.10k 2 1 X RoboNet 162k N/A 7 x BridgeData Il 7.20k 4 1 x BC-Z 26.0k ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** To ensure task diversity, we selected 48 tasks from RLBench [19], 29 tasks from MetaWorld [EO], and introduced 70 self-proposed tasks that are frequently encountered ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** In total, it contains 147 tasks, consisting of 42 skills (i.e., verbs).
+- **p. 3 / III. RH20T DATASET - extractive body cue:** To ensure applicability across different robot configurations, we used 4 popular robot arms, 4 different robotic grippers, and 3 types of force-torque sensors, resulting in ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** [TM1 c) Scale: Our dataset consists of over 110,000 robot sequences and an equal number of human sequences, with more than 50 million images collected ...
+- **p. 3 / III. RH20T DATASET - extractive body cue:** On average, each skill contains approximately 750 robot manipulations.
 
 ## Generalization and Failure Cases
 
@@ -153,10 +153,10 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 6 / V. DISCUSSION AND CONCLUSION - extractive PDF cue:** The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models is ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** These results demonstrate that leveraging the diverse training data from our dataset enhances the adaptability and robustness of the robotic manipulation model.
+- **p. 6 / V. DISCUSSION AND CONCLUSION - extractive body cue:** The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models is ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** These results demonstrate that leveraging the diverse training data from our dataset enhances the adaptability and robustness of the robotic manipulation model.
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET), metrics p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Dataset), p. 3 (III. RH20T DATASET), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET), metrics p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Dataset), p. 3 (III. RH20T DATASET), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

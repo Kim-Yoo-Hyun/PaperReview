@@ -1,8 +1,10 @@
 # DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1804.02717.
-> PDF retrieval source: https://arxiv.org/pdf/1804.02717. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1804.02717.
+> PDF retrieval source: https://arxiv.org/pdf/1804.02717. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / TOG / SIGGRAPH
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1804.02717
 - Code/Project: https://github.com/xbpeng/DeepMimic
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,9 +35,9 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In our ablation studies, we identify two specific components of our method, reference state initialization and early termination, that are critical for achieving highly dynamic ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our method handles keyframed motions, highly-dynamic actions such as motion-captured flips and spins, and retargeted motions.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Highly dynamic skills learned by imitating reference motion capture clips using our method, executed by physically simulated characters.
 - **p. 4 / 4 BACKGROUND - extractive body cue:** The value function is modeled by a similar network, with exception of the output layer, which consists of a single linear unit.
-- **p. 4 / 4 BACKGROUND - extractive body cue:** 5.3 Reward The reward rt at each step t consists of two terms that encourage the character to match the reference motion while also satisfying ...
-- **p. 5 / 4 BACKGROUND - extractive body cue:** We will show that appropriate choices are crucial for allowing our method to learn challenging skills such as highly-dynamic kicks, spins, and flips.
 - **p. 6 / 4 BACKGROUND - extractive body cue:** Property Humanoid Atlas T-Rex Dragon Links 13 12 20 32 Total Mass (kg) 45 169.8 54.5 72.5 Height (m) 1.62 1.82 1.66 1.83 Degrees of ...
 - **p. 4 / 4 BACKGROUND - extractive body cue:** The action distribution is modeled as a Gaussian, with a state dependent mean µ(s) specified by the network, and a fixed diagonal covariance matrix Σ ...
 - **p. 4 / 4 BACKGROUND - extractive body cue:** The resulting features are then concatenated with the input state s and goal д, and processed by a similar fully-connected network as the one used ...
@@ -53,9 +55,9 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In our ablation studies, we identify two specific components of our method, reference state initialization and early termination, that are critical for achieving highly dynamic ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our method handles keyframed motions, highly-dynamic actions such as motion-captured flips and spins, and retargeted motions.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Highly dynamic skills learned by imitating reference motion capture clips using our method, executed by physically simulated characters.
 - **p. 4 / 4 BACKGROUND - extractive body cue:** The value function is modeled by a similar network, with exception of the output layer, which consists of a single linear unit.
-- **p. 4 / 4 BACKGROUND - extractive body cue:** 5.3 Reward The reward rt at each step t consists of two terms that encourage the character to match the reference motion while also satisfying ...
-- **p. 5 / 4 BACKGROUND - extractive body cue:** We will show that appropriate choices are crucial for allowing our method to learn challenging skills such as highly-dynamic kicks, spins, and flips.
 - **p. 12 / 10 RESULTS - extractive body cue:** The performance achieved by the Atlas policies are comparable to those achieved by the humanoid.
 - **p. 11 / 10 RESULTS - extractive body cue:** Success rate of policies trained with the imitation or task objectives disabled.
 - **p. 11 / 10 RESULTS - extractive body cue:** Similarly, for the strike task, the policy trained with both objectives successfully hits 99% of the targets, while the policy trained only to imitate the ...
@@ -83,3 +85,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Authoring motions for simulated characters remains notoriously difficult, and current interfaces still cannot provide users with an effective means of eliciting the desired behaviours from simulated characters.를 문제로 두고, Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven and physics-based character animation is novel and, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 6 (4 BACKGROUND) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Authoring motions for simulated characters remains notoriously difficult, and current interfaces still cannot provide users with an effective means of eliciting the desired behaviours from simulated characters. (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven and physics-based character animation is ... (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Similarly, for the strike task, the policy trained with both objectives successfully hits 99% of the targets, while the policy trained only to imitate the reference motion has a success ... (p. 11, 10 RESULTS).
+- **Explicit failure boundary:** Since the motion is highly sensitive to the initial conditions at takeoff, many strategies will result in failure. (p. 6, 4 BACKGROUND).

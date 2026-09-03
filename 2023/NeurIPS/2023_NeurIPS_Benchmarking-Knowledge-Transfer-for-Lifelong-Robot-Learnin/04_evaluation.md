@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (44 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.03310; PDF retrieval source: https://arxiv.org/pdf/2306.03310. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (44 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.03310; PDF retrieval source: https://arxiv.org/pdf/2306.03310. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5 Experiments - extractive PDF cue:** But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller.
-- **p. 8 / 5 Experiments - extractive PDF cue:** In contrast, if ER is used, we observe that RESNET-T performs better than VIT-T on all task suites except LIBERO-OBJECT.
-- **p. 6 / 5 Experiments - extractive PDF cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
-- **p. 6 / 5 Experiments - extractive PDF cue:** Q3: How do existing algorithms from lifelong supervised learning perform on LLDM tasks?
-- **p. 7 / 5 Experiments - extractive PDF cue:** Please refer to Appendix E.1 for the full results across all algorithms, policy architectures, and task suites.
-- **p. 7 / 5 Experiments - extractive PDF cue:** Results are reported when ER and PACKNET are used as they demonstrate the best lifelong learning performance across all task suites.
-- **p. 9 / 5 Experiments - extractive PDF cue:** The multi-task learning performance is also included for reference.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Study on task ordering (Q5) Figure 4 shows the result of the study on Q4.
+- **p. 8 / 5 Experiments - extractive body cue:** But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller.
+- **p. 8 / 5 Experiments - extractive body cue:** In contrast, if ER is used, we observe that RESNET-T performs better than VIT-T on all task suites except LIBERO-OBJECT.
+- **p. 6 / 5 Experiments - extractive body cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
+- **p. 6 / 5 Experiments - extractive body cue:** Q3: How do existing algorithms from lifelong supervised learning perform on LLDM tasks?
+- **p. 7 / 5 Experiments - extractive body cue:** Please refer to Appendix E.1 for the full results across all algorithms, policy architectures, and task suites.
+- **p. 7 / 5 Experiments - extractive body cue:** Results are reported when ER and PACKNET are used as they demonstrate the best lifelong learning performance across all task suites.
+- **p. 9 / 5 Experiments - extractive body cue:** The multi-task learning performance is also included for reference.
+- **p. 9 / 5 Experiments - extractive body cue:** Study on task ordering (Q5) Figure 4 shows the result of the study on Q4.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | BENCHMARK / DATASET | This is surprising since it indicates all lifelong learning algorithms we consider actually hurt forward transfer; 2) PACKNET outperforms other lifelong learning algorithms on ... | p. 8 (5 Experiments) |
 | 5 Experiments | BENCHMARK / DATASET | Q6: Can supervised pretraining improve downstream lifelong learning performance in LLDM? | p. 6 (5 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5 Experiments - extractive PDF cue:** But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller.
-- **p. 8 / 5 Experiments - extractive PDF cue:** In contrast, if ER is used, we observe that RESNET-T performs better than VIT-T on all task suites except LIBERO-OBJECT.
-- **p. 6 / 5 Experiments - extractive PDF cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
-- **p. 6 / 5 Experiments - extractive PDF cue:** Q3: How do existing algorithms from lifelong supervised learning perform on LLDM tasks?
-- **p. 7 / 5 Experiments - extractive PDF cue:** Please refer to Appendix E.1 for the full results across all algorithms, policy architectures, and task suites.
-- **p. 7 / 5 Experiments - extractive PDF cue:** Results are reported when ER and PACKNET are used as they demonstrate the best lifelong learning performance across all task suites.
-- **p. 9 / 5 Experiments - extractive PDF cue:** The multi-task learning performance is also included for reference.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Study on task ordering (Q5) Figure 4 shows the result of the study on Q4.
+- **p. 8 / 5 Experiments - extractive body cue:** But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller.
+- **p. 8 / 5 Experiments - extractive body cue:** In contrast, if ER is used, we observe that RESNET-T performs better than VIT-T on all task suites except LIBERO-OBJECT.
+- **p. 6 / 5 Experiments - extractive body cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
+- **p. 6 / 5 Experiments - extractive body cue:** Q3: How do existing algorithms from lifelong supervised learning perform on LLDM tasks?
+- **p. 7 / 5 Experiments - extractive body cue:** Please refer to Appendix E.1 for the full results across all algorithms, policy architectures, and task suites.
+- **p. 7 / 5 Experiments - extractive body cue:** Results are reported when ER and PACKNET are used as they demonstrate the best lifelong learning performance across all task suites.
+- **p. 9 / 5 Experiments - extractive body cue:** The multi-task learning performance is also included for reference.
+- **p. 9 / 5 Experiments - extractive body cue:** Study on task ordering (Q5) Figure 4 shows the result of the study on Q4.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Top: LIBERO has four procedurally-generated task suites: LIBERO-SPATIAL, LIBERO- OBJECT, and LIBERO-GOAL have 10 tasks each and require transferring knowledge about spatial relationships, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: LIBERO's procedural generation pipeline: Extracting behavioral templates from a large- scale human activity dataset (1), Ego4D, for generating task instructions (2); Based on ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Metrics for LLDM. 5.2 Experimental Results We present empirical results to address the research questions. Please refer to Appendix E.1 for the full ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Performance of the three neural architectures using ER and PACKNET on the four task suites. Results are averaged over three seeds and we ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Performance of three lifelong algorithms and the SEQL and MTL baselines on the four task suites, where the policy is fixed to be ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Performance of a lifelong learner using four different language embeddings on LIBERO- LONG, where we fix the policy architecture to RESNET-T and the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Performance of ER and PACKNET using RESNET-T on five different task orderings. An error bar shows the performance standard deviation for a fixed ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 5: Performance of different combinations of algorithms and architectures without pretraining or with pretraining. The multi-task learning performance is also included for reference. Findings: ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Top: LIBERO has four procedurally-generated task suites: LIBERO-SPATIAL, LIBERO- OBJECT, and LIBERO-GOAL have 10 tasks each and require transferring knowledge about spatial relationships, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: LIBERO's procedural generation pipeline: Extracting behavioral templates from a large- scale human activity dataset (1), Ego4D, for generating task instructions (2); Based on ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Metrics for LLDM. 5.2 Experimental Results We present empirical results to address the research questions. Please refer to Appendix E.1 for the full ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance of the three neural architectures using ER and PACKNET on the four task suites. Results are averaged over three seeds and we ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Performance of three lifelong algorithms and the SEQL and MTL baselines on the four task suites, where the policy is fixed to be ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Performance of a lifelong learner using four different language embeddings on LIBERO- LONG, where we fix the policy architecture to RESNET-T and the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Performance of ER and PACKNET using RESNET-T on five different task orderings. An error bar shows the performance standard deviation for a fixed ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Performance of different combinations of algorithms and architectures without pretraining or with pretraining. The multi-task learning performance is also included for reference. Findings: ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller. | embodiment, simulator version and control stack | p. 8 (5 Experiments), p. 8 (5 Experiments) |
 | Task/environment | In contrast, if ER is used, we observe that RESNET-T performs better than VIT-T on all task suites except LIBERO-OBJECT. | reset, timeout, object/scene variation | p. 8 (5 Experiments), p. 6 (5 Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 | Primary metric/result | Q6: Can supervised pretraining improve downstream lifelong learning performance in LLDM? | numeric claim only at cited anchor | p. 6 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5 Experiments - extractive PDF cue:** Then the three metrics are defined: FWT = X k∈[K] FWTk K , FWTk = 1 11 X e∈{0...50} ck,k,e NBT = X k∈[K] NBTk ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** Embedding Type Dimension FWT(↑) NBT(↓) AUC(↑) BERT 768 0.48 ± 0.02 0.32 ± 0.04 0.32 ± 0.01 CLIP 512 0.52 ± 0.00 0.34 ± 0.01 ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** For pretraining, we apply behavioral cloning on the 90 tasks using the three policy architectures for 50 epochs.
-- **p. 9 / 5 Experiments - extractive PDF cue:** We save a checkpoint every 5 epochs of training and then pick the checkpoint for each architecture that has the best performance as the pretrained ...
-- **p. 1 / Abstract - extractive PDF cue:** For benchmarking purpose, we create four task suites (130 tasks in total) that we use to investigate the above-mentioned research topics.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Procedural Generation Involve declarative knowledge Involve procedural knowledge LIBERO-Object LIBERO-Spatial LIBERO-Goal LIBERO-100 Different layouts, same objects Different objects, same layout Different goals, same objects & ...
+- **p. 6 / 5 Experiments - extractive body cue:** Then the three metrics are defined: FWT = X k∈[K] FWTk K , FWTk = 1 11 X e∈{0...50} ck,k,e NBT = X k∈[K] NBTk ...
+- **p. 9 / 5 Experiments - extractive body cue:** Embedding Type Dimension FWT(↑) NBT(↓) AUC(↑) BERT 768 0.48 ± 0.02 0.32 ± 0.04 0.32 ± 0.01 CLIP 512 0.52 ± 0.00 0.34 ± 0.01 ...
+- **p. 9 / 5 Experiments - extractive body cue:** For pretraining, we apply behavioral cloning on the 90 tasks using the three policy architectures for 50 epochs.
+- **p. 9 / 5 Experiments - extractive body cue:** We save a checkpoint every 5 epochs of training and then pick the checkpoint for each architecture that has the best performance as the pretrained ...
+- **p. 1 / Abstract - extractive body cue:** For benchmarking purpose, we create four task suites (130 tasks in total) that we use to investigate the above-mentioned research topics.
+- **p. 2 / 1 Introduction - extractive body cue:** Procedural Generation Involve declarative knowledge Involve procedural knowledge LIBERO-Object LIBERO-Spatial LIBERO-Goal LIBERO-100 Different layouts, same objects Different objects, same layout Different goals, same objects & ...
 
 ## Generalization and Failure Cases
 
@@ -163,11 +163,20 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 5 Experiments - extractive PDF cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
-- **p. 8 / 5 Experiments - extractive PDF cue:** Therefore, we conjecture that PACKNET is not rich enough to learn on LIBEROLONG; 3) EWC works worse than SEQL, showing that the regularization on the ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** This finding highlights an important direction for future research: developing algorithms or architectures that are robust to varying task orderings.
+- **p. 6 / 5 Experiments - extractive body cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
+- **p. 8 / 5 Experiments - extractive body cue:** Therefore, we conjecture that PACKNET is not rich enough to learn on LIBEROLONG; 3) EWC works worse than SEQL, showing that the regularization on the ...
+- **p. 9 / 5 Experiments - extractive body cue:** This finding highlights an important direction for future research: developing algorithms or architectures that are robust to varying task orderings.
 
-- **PDF anchors reviewed:** datasets p. 8 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 6 (5 Experiments), p. 27 (Figure/Table caption), p. 31 (Figure/Table caption), p. 9 (5 Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 43 (Figure/Table caption), p. 9 (Figure/Table caption), p. 19 (Figure/Table caption), p. 27 (Figure/Table caption), results p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 27 (Figure/Table caption), p. 8 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 6 (5 Experiments), p. 27 (Figure/Table caption), p. 31 (Figure/Table caption), p. 9 (5 Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 43 (Figure/Table caption), p. 9 (Figure/Table caption), p. 19 (Figure/Table caption), p. 27 (Figure/Table caption), results p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 27 (Figure/Table caption), p. 8 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (44 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Performance of three lifelong algorithms and the SEQL and MTL baselines on the four task suites, where the policy is fixed to be RESNET-T. Results are averaged over ... (p. 8, Figure/Table caption).
+- **Metric evidence:** All metrics are computed in terms of success rate, as previous literature has shown that the success rate is a more reliable metric than training loss for manipulation policies [42] ... (p. 6, 5 Experiments).
+- **Baseline/ablation evidence:** Study on Lifelong Learning Algorithms (Q1, Q3) Table 2 reports the lifelong learning performance of the three lifelong learning algorithms, together with the SEQL and MTL baselines. (p. 8, 5 Experiments).
+- **Failure/negative evidence:** Consider a scenario where a robot, initially trained to retrieve juice from a fridge, fails (p. 1, 1 Introduction).

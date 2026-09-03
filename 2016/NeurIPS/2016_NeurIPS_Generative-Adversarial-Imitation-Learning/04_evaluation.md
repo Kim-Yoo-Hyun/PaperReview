@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1606.03476; PDF retrieval source: https://arxiv.org/pdf/1606.03476. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1606.03476; PDF retrieval source: https://arxiv.org/pdf/1606.03476. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our algorithm almost always achieved at least 70% of expert performance for all dataset 7 | p. 7 (6 Experiments) |
 | 6 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | We were able to slightly improve our algorithm's performance on Reacher using causal entropy regularization-in the 4-trajectory setting, the improvement from λ = 0 ... | p. 7 (6 Experiments) |
@@ -53,7 +53,7 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 1
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We found that on the classic control tasks (cartpole, acrobot, and mountain car), behavioral cloning suffered in expert data efficiency compared to FEM and ... | embodiment, simulator version and control stack | p. 7 (6 Experiments), p. 7 (6 Experiments) |
 | Task/environment | Behavioral cloning: a given dataset of state-action pairs is split into 70% training data and 30% validation data. | reset, timeout, object/scene variation | p. 7 (6 Experiments) |
@@ -139,7 +139,16 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 1
 - **p. 5 / 2. Form a gradient estimate with Eq. (12) with c∗ - extractive body cue:** This carefully constructed step scheme ensures that divergence does not occur due to high noise in estimating the gradient (12).
 - **p. 5 / 2 Background - extractive body cue:** If C does not include a cost function that explains expert behavior well, then attempting to recover a policy from such an encoding will not ...
 
-- **PDF anchors reviewed:** datasets p. 7 (6 Experiments), p. 7 (6 Experiments), metrics p. 7 (6 Experiments), p. 7 (6 Experiments), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (Figure/Table caption), results p. 7 (6 Experiments), p. 7 (6 Experiments), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (6 Experiments), p. 7 (6 Experiments), metrics p. 7 (6 Experiments), p. 7 (6 Experiments), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (Figure/Table caption), results p. 7 (6 Experiments), p. 7 (6 Experiments), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We found that on the classic control tasks (cartpole, acrobot, and mountain car), behavioral cloning suffered in expert data efficiency compared to FEM and GTAL, which for the most part ... (p. 7, 6 Experiments).
+- **Metric evidence:** Our algorithm almost always achieved at least 70% of expert performance for all dataset 7 (p. 7, 6 Experiments).
+- **Baseline/ablation evidence:** We tested Algorithm 1 against three baselines: 1. (p. 7, 6 Experiments).
+- **Failure/negative evidence:** FEM and GTAL performed poorly for Ant, producing policies consistently worse than a policy that chooses actions uniformly at random. (p. 8, 6 Experiments).

@@ -1,8 +1,10 @@
 # DreamGen: Unlocking Generalization in Robot Learning through Video World Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/.
-> PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/.
+> PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/jang2025neural/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://research.nvidia.com/labs/lpr/publication/jang2025neural/
 - Code/Project: https://research.nvidia.com/labs/gear/dreamgen/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with minimal manual labor or engineering.를 문제로 두고, Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with minimal manual labor or engineering. (p. 2, 1 Introduction).
+- **Actual contribution:** Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments. (p. 3, 1 Introduction).
+- **Evaluation boundary:** Figure 5: Real-world Robot Evaluation Results. The red rectangular box shows the range of object randomization during training and evaluation. Low Data denotes training 10% of available training data (only ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** 7 Limitation Our approach is complementary to existing methods that learn from videos, although we do not directly benchmark against them. (p. 9, 6 Conclusion).

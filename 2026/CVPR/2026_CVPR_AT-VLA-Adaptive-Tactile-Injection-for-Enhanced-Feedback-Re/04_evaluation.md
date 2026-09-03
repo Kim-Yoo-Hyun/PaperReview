@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Contact-rich Task Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | It can reflect how much improvement our method achieves. | p. 5 (4.2. Contact-rich Task Evaluation) |
 | 4.2. Contact-rich Task Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | During the contact-rich stage, AT-VLA achieves an improvement over them, clearly demonstrating the necessity of tactile signals for complex manipulation tasks. | p. 6 (4.2. Contact-rich Task Evaluation) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 2) In contrast, VTLA and RDP, which do not have pretrained models on large-scale datasets, are trained only on the subset of our downstream ... | embodiment, simulator version and control stack | p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation) |
 | Task/environment | In practice, during testing, we manually place the robot in an ideal initial configuration (e.g., already grasping the stamp) to evaluate these two models' ... | reset, timeout, object/scene variation | p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup) |
@@ -159,7 +159,16 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 - **p. 8 / 5. Conclusion - extractive body cue:** Future work may explore scaling this framework to more complex tasks and diverse real-world environments, further advancing general-purpose embodied intelligence.
 - **p. 5 / 4.1. Setup - extractive body cue:** Insufficient compliance could result in collisions with the neck of the vase. d).
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup), p. 5 (4.1. Setup), metrics p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.2. Contact-rich Task Evaluation), p. 5 (4.2. Contact-rich Task Evaluation), p. 4 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup), p. 5 (4.1. Setup), metrics p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.2. Contact-rich Task Evaluation), p. 5 (4.2. Contact-rich Task Evaluation), p. 4 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** As shown in Table 1, our model outperforms all baseline methods. (p. 6, 4.2. Contact-rich Task Evaluation).
+- **Metric evidence:** We report the success rate of each subtask, reflecting the progress. (p. 6, 4.2. Contact-rich Task Evaluation).
+- **Baseline/ablation evidence:** Compared with state-of-the-art VLA models GO-1 and π0.5, which are trained without tactile feedback, our model demonstrates comparable performance during the pre-contact manipulation phase, indicating that it effectively preserves the ... (p. 6, 4.2. Contact-rich Task Evaluation).
+- **Failure/negative evidence:** In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, occasionally leading to failure cases where the gripper slips during unscrewing. (p. 6, 4.2. Contact-rich Task Evaluation).

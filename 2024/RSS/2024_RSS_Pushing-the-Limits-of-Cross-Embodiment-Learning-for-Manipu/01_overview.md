@@ -1,8 +1,8 @@
 # Pushing the Limits of Cross-Embodiment Learning for Manipulation and Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p093.html.
-> PDF retrieval source: https://arxiv.org/pdf/2402.19432.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p093.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p093.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, cross-embodiment, goal-conditioned policy, manipulation, Navigation, robot data
 - Official paper: https://www.roboticsproceedings.org/rss20/p093.html
-- Full-text retrieval: https://arxiv.org/pdf/2402.19432.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p093.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -49,7 +49,7 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 | Observation/input | The objective of goal-conditioned imitation learning is to train a policy π(a/o, og) to output actions that control a particular embodiment given the current and goal observations. | egocentric RGB-D, language/task goal, base-arm proprioception | p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
 | State/latent | objective, goal-conditioned, imitation, learning, train, policy, output, actions, control, particular, embodiment, given | map/object/contact state와 base-arm coordination decision | p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) |
 | Output/action | To solve this problem, we train a goal-conditioned policy π(a/o, og) that outputs k actions into the future given a context of c observations. | base motion plus arm/gripper action | p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 7 (VI. ANALYSIS) |
-| Objective/outcome | Our overall objective is the weighted combination of these two losses: L(θ, ϕ, ψ) = Ldiffusion(θ, ψ) + λLdistance(θ, ψ). | long-horizon task success, reachability, collision과 recovery | p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (III. PRELIMINARIES) |
+| Objective/outcome | Our overall objective is the weighted combination of these two losses: L(θ, ϕ, ψ) = Ldiffusion(θ, ψ) + λLdistance(θ, ψ). | long-horizon task success, reachability, collision과 recovery | p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)) |
 
 ## Main Claims and Actual Contribution
 
@@ -84,3 +84,12 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 ## Why Read It
 
 VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers.를 문제로 두고, While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for the first time that navigation data can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate transfer to novel domains [1]. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 5: Does navigation help manipulation? By aligning action coordinate frames, training on navigation and driving datasets results in a 20% improvement across five challenging tabletop manipulation tasks (success % ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading ... (p. 7, VI. ANALYSIS).

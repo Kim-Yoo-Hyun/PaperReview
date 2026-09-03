@@ -1,53 +1,75 @@
 # Insights — Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://arxiv.org/pdf/2406.04343.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We propose Flash3D, a method for scene reconstruction and novel view synthesis from a single image which is both very generalisable and efficient.
-- **Problem cue:** Introduction We consider the problem of reconstructing photorealistic 3D scenes from a single image in just one forward pass of a network.
-- **Claim/result cue:** It achieves state-of-the-art results when trained and tested on RealEstate10k.
+- **p. 1 / 1. Introduction - extractive body cue:** In this work, we introduce a new, simple, efficient and performant approach for monocular scene reconstruction called
+- **p. 4 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** Hence, we propose to predict a small number K > 1 of different Gaussians for each pixel.
+- **p. 4 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** For generalisation, we propose to build Flash3D on a highquality pre-trained model trained on a large amount of data.
+- **p. 2 / 1. Introduction - extractive body cue:** We show, in particular, that by building on a high-quality depth predictor [49], we can achieve excellent generalisation to new datasets, to the point that ...
+- **p. 5 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** As we show empirically, it is important for the network to be able to model 3D content just outside its field-of-view.
+- **p. 4 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** Given an image I and estimated depth map D, our baseline model consists of an additional network Φ(I, D) that takes as input the image ...
+- **p. 3 / 3. Method - extractive body cue:** Our goal is to learn a neural network Φ that takes as input I and predicts a representation G = Φ(I) of the 3D content ...
+- **Contribution anchor:** p. 1 (1. Introduction), p. 4 (3.2. Monocular feed-forward multi-Gaussians), p. 4 (3.2. Monocular feed-forward multi-Gaussians), p. 2 (1. Introduction), p. 5 (3.2. Monocular feed-forward multi-Gaussians), p. 4 (3.2. Monocular feed-forward multi-Gaussians)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** However, in scene reconstruction, there is not such a reservoir of background pixels, which poses a challenge for the method.
+- **p. 1 / 1. Introduction - extractive body cue:** In contrast, pixelSplat [9], MVSplat [11], latentSplat [87] and GS-LRM [102], which share a similar design, were designed for scene reconstruction; however, they address the ...
+- **p. 2 / 1. Introduction - extractive body cue:** A similar problem exists in 3D object reconstruction and generation [38, 39, 42, 43, 64, 104], where it is addressed by extending to 3D an ...
+- **p. 2 / 1. Introduction - extractive body cue:** For instance, we use 1/64th of the GPU resources of prior works such as MINE [37].
+- **p. 6 / 4.2. Cross-domain novel view synthesis - extractive body cue:** This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row).
+- **p. 7 / 4.4. Comparison to few-view novel view synthesis - extractive body cue:** Here, Flash3D cannot outperform two-view approaches on the interpolation task, due to receiving less information.
+- **p. 8 / 4.5. Ablation study and analysis - extractive body cue:** 5 additionally reveals a limitation of our method.
+- **Boundary to test:** This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row).
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In this work, we introduce a new, simple, efficient and performant approach for monocular scene reconstruction called | p. 1 (1. Introduction), p. 4 (3.2. Monocular feed-forward multi-Gaussians) |
+| Reported outcome | 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target. | p. 7 (4.3. In-domain novel view synthesis), p. 5 (4.1. Experiment settings) |
+| Failure/limitation | This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row). | p. 6 (4.2. Cross-domain novel view synthesis), p. 7 (4.4. Comparison to few-view novel view synthesis) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `3D reconstruction, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Geometry reconstruction, pose estimation, map update 원리를 robot의 spatial memory와 3D scene understanding 기반으로 사용할 수 있다.
-  - Classical geometry/SLAM의 metric constraint는 VLM/LLM 기반 semantic reasoning이 놓치는 scale, pose, visibility 문제를 보정한다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 Input: 1 Image of any Scene Flash 3D Output: Full 3D Reconstruction In-domain: RealEstate10k Cross-domain: KITTI, NYU Figure 1.를 To facilitate obtaining such Gaussians, the encoder Φenc starts with padding the input image and depth (I, D) with P > 0 pixels on each side, so that the outputs Φk(I, D) ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In this work, we introduce a new, simple, efficient and performant approach for monocular scene reconstruction called
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Geometry, Reconstruction, and SLAM`; tags: `3D reconstruction, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: It achieves state-of-the-art results when trained and tested on RealEstate10k.
-  - geometric accuracy 이후에도 open-vocabulary semantics, dynamic objects, learned priors, task-aware mapping은 후속 연구 지점으로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `3D reconstruction, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** This is thanks to leveraging a depth predictor which, when used on its own (fourth column), cannot represent occluded regions (third row, fourth row).; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: KITTI / accuracy, mAP, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: TUM RGB-D, EuRoC, KITTI, ScanNet
-  - 내 연구 확장 metric 후보: ATE, RPE, AbsRel, RMSE
-  - 검증 초점: pose/reconstruction accuracy, semantic map consistency, robot navigation/manipulation utility를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We follow the default training/testing split with 67,477 scenes for training and 7,289 for testing..
+3. Compare against the body-reported baseline or a matched simpler baseline: We outperform baselines which were trained on KITTI specifically..
+4. Report the body metric and its denominator/aggregation: We evaluate Novel View Synthesis accuracy on datasets not used in training of our method..
+5. Re-run the body-reported ablation/failure condition: Figure 4. Ablation. We show how Flash3D degrades when components are removed. Removing the depth network (4th column) results in incorrect geometry (orange wall, corner of the bed). Using only one layer ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 4 (3.2. Monocular feed-forward multi-Gaussians), p. 3 (3. Method), p. 4 (3.2. Monocular feed-forward multi-Gaussians); the primary result is directionally consistent at p. 7 (4.3. In-domain novel view synthesis), p. 5 (4.1. Experiment settings), p. 5 (4.1. Experiment settings); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-SLAM/reconstruction map에 language-aligned semantic feature를 붙여도 geometric consistency가 유지되는가?
+고정된 observation/action/data/compute budget에서 introduce, simple, efficient mechanism이 We outperform baselines which were trained on KITTI specifically. 대비 We evaluate Novel View Synthesis accuracy on datasets not used in training of our method.을 개선하고, This is thanks to leveraging a depth predictor which, when used on its own (fourth column), ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

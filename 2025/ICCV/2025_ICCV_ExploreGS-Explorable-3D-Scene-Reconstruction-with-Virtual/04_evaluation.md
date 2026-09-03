@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 7 (5.2. Results), p. 7 (
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. WildExplore - extractive PDF cue:** To address the lack of an appropriate benchmark for scene exploration, we introduce WildExplore, a new dataset comprising four indoor and four outdoor scenes.
-- **p. 6 / 4.2. Curated Nerfbusters - extractive PDF cue:** We curate the Nerfbusters dataset to better align with scene exploration objectives.
-- **p. 7 / 5.2. Results - extractive PDF cue:** Qualitative comparison on the curated Nerfbusters dataset.
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** We validate our finetuning approach by benchmarking it against the methods proposed by [21] , as shown in Table 4.
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** The model without the imagelevel confidence produces worse results in terms of LPIPS, as generated images whose viewpoints closely match the training set negatively impact ...
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** TopK vs BottomK Finetuning Curated Nerfbusters Image level Pixel level PSNR↑ SSIM↑ LPIPS↓ Distance [21] - 15.00 0.427 0.443 - Scale [21] 16.18 0.476 0.442 ...
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** Although both our image-level confidence map and scale based one are effective, our method leads to slight better performance.
-- **p. 6 / 4.2. Curated Nerfbusters - extractive PDF cue:** Our curated version includes seven scenes with swapped splits and two in their original form.
+- **p. 6 / 4.1. WildExplore - extractive body cue:** To address the lack of an appropriate benchmark for scene exploration, we introduce WildExplore, a new dataset comprising four indoor and four outdoor scenes.
+- **p. 6 / 4.2. Curated Nerfbusters - extractive body cue:** We curate the Nerfbusters dataset to better align with scene exploration objectives.
+- **p. 7 / 5.2. Results - extractive body cue:** Qualitative comparison on the curated Nerfbusters dataset.
+- **p. 8 / 5.3. Ablation study - extractive body cue:** We validate our finetuning approach by benchmarking it against the methods proposed by [21] , as shown in Table 4.
+- **p. 8 / 5.3. Ablation study - extractive body cue:** The model without the imagelevel confidence produces worse results in terms of LPIPS, as generated images whose viewpoints closely match the training set negatively impact ...
+- **p. 8 / 5.3. Ablation study - extractive body cue:** TopK vs BottomK Finetuning Curated Nerfbusters Image level Pixel level PSNR↑ SSIM↑ LPIPS↓ Distance [21] - 15.00 0.427 0.443 - Scale [21] 16.18 0.476 0.442 ...
+- **p. 8 / 5.3. Ablation study - extractive body cue:** Although both our image-level confidence map and scale based one are effective, our method leads to slight better performance.
+- **p. 6 / 4.2. Curated Nerfbusters - extractive body cue:** Our curated version includes seven scenes with swapped splits and two in their original form.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 7 (5.2. Results), p. 7 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Since our method effectively removes artifacts and fills missing regions, as observed in the qualitative analysis, our model outperforms across all metrics, particularly in ... | p. 6 (5.2. Results) |
 | 5.2. Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | See the supplementary materials for additional results. | p. 7 (5.2. Results) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 7 (5.2. Results), p. 7 (
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. WildExplore - extractive PDF cue:** To address the lack of an appropriate benchmark for scene exploration, we introduce WildExplore, a new dataset comprising four indoor and four outdoor scenes.
-- **p. 6 / 4.2. Curated Nerfbusters - extractive PDF cue:** We curate the Nerfbusters dataset to better align with scene exploration objectives.
-- **p. 7 / 5.2. Results - extractive PDF cue:** Qualitative comparison on the curated Nerfbusters dataset.
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** We validate our finetuning approach by benchmarking it against the methods proposed by [21] , as shown in Table 4.
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** The model without the imagelevel confidence produces worse results in terms of LPIPS, as generated images whose viewpoints closely match the training set negatively impact ...
+- **p. 6 / 4.1. WildExplore - extractive body cue:** To address the lack of an appropriate benchmark for scene exploration, we introduce WildExplore, a new dataset comprising four indoor and four outdoor scenes.
+- **p. 6 / 4.2. Curated Nerfbusters - extractive body cue:** We curate the Nerfbusters dataset to better align with scene exploration objectives.
+- **p. 7 / 5.2. Results - extractive body cue:** Qualitative comparison on the curated Nerfbusters dataset.
+- **p. 8 / 5.3. Ablation study - extractive body cue:** We validate our finetuning approach by benchmarking it against the methods proposed by [21] , as shown in Table 4.
+- **p. 8 / 5.3. Ablation study - extractive body cue:** The model without the imagelevel confidence produces worse results in terms of LPIPS, as generated images whose viewpoints closely match the training set negatively impact ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) Explorable 3D scene reconstruction results. Our method renders photorealistic images from any arbitrary viewpoints. (b) Virtual cameras are sampled in regions with ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed framework for scene exploration. (a) The scene is initially optimized using 3DGS on the given training viewpoints. (b) Based ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. (a) Viewpoint candidates for virtual camera viewpoint generation. (b) Information gain of each viewpoint. Simplified 2D examples of both are presented for clarity. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Viewpoint difference comparison with previous 3D re- construction dataset. Training and evaluation viewpoints are visu- alized. LVT = //IT -IV //1 + LD-SSIM(IT ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison on the curated Nerfbusters dataset. Qualitative comparison. Fig. 5 and Fig. 6 show qualita- tive comparisons among our method and baseline ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparison on the WildExplore dataset. Virtual View Sampling Curated Nerfbusters Info. Gain PSNR↑ SSIM↑ LPIPS↓ Grid view coverage [22]
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Comparisons on information gain design. Method (K = 3) Garbage PSNR↑ SSIM↑ LPIPS↓ 3DGS 14.42
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study on information gain. TopK vs BottomK Finetuning Curated Nerfbusters Image level Pixel level PSNR↑ SSIM↑ LPIPS↓
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Explorable 3D scene reconstruction results. Our method renders photorealistic images from any arbitrary viewpoints. (b) Virtual cameras are sampled in regions with ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed framework for scene exploration. (a) The scene is initially optimized using 3DGS on the given training viewpoints. (b) Based ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. (a) Viewpoint candidates for virtual camera viewpoint generation. (b) Information gain of each viewpoint. Simplified 2D examples of both are presented for clarity. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Viewpoint difference comparison with previous 3D re- construction dataset. Training and evaluation viewpoints are visu- alized. LVT = //IT -IV //1 + LD-SSIM(IT ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison on the curated Nerfbusters dataset. Qualitative comparison. Fig. 5 and Fig. 6 show qualita- tive comparisons among our method and baseline ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparison on the WildExplore dataset. Virtual View Sampling Curated Nerfbusters Info. Gain PSNR↑ SSIM↑ LPIPS↓ Grid view coverage [22]
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Comparisons on information gain design. Method (K = 3) Garbage PSNR↑ SSIM↑ LPIPS↓ 3DGS 14.42
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on information gain. TopK vs BottomK Finetuning Curated Nerfbusters Image level Pixel level PSNR↑ SSIM↑ LPIPS↓
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To address the lack of an appropriate benchmark for scene exploration, we introduce WildExplore, a new dataset comprising four indoor and four outdoor scenes. | embodiment, simulator version and control stack | p. 6 (4.1. WildExplore), p. 6 (4.2. Curated Nerfbusters) |
 | Task/environment | We curate the Nerfbusters dataset to better align with scene exploration objectives. | reset, timeout, object/scene variation | p. 6 (4.2. Curated Nerfbusters), p. 7 (5.2. Results) |
@@ -149,10 +149,10 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 7 (5.2. Results), p. 7 (
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** In addition, extending the scene bounding box to cover a large scale scene would be an interesting avenue for the future work.
-- **p. 8 / 5.3. Ablation study - extractive PDF cue:** Gridbased approach often fails to maximize information gain, as it includes the gain from free space, resulting in redundant viewpoint selections.
+- **p. 8 / 6. Conclusion - extractive body cue:** In addition, extending the scene bounding box to cover a large scale scene would be an interesting avenue for the future work.
+- **p. 8 / 5.3. Ablation study - extractive body cue:** Gridbased approach often fails to maximize information gain, as it includes the gain from free space, resulting in redundant viewpoint selections.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. WildExplore), p. 6 (4.2. Curated Nerfbusters), p. 7 (5.2. Results), p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), metrics p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), p. 6 (4.2. Curated Nerfbusters), p. 6 (4.2. Curated Nerfbusters), p. 7 (5.2. Results), p. 7 (5.3. Ablation study), baselines p. 7 (5.2. Results), p. 6 (5.2. Results), p. 7 (5.2. Results), p. 6 (5.1. Experimental Setup), p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), results p. 6 (5.2. Results), p. 7 (5.2. Results), p. 7 (5.2. Results), p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. WildExplore), p. 6 (4.2. Curated Nerfbusters), p. 7 (5.2. Results), p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), metrics p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), p. 6 (4.2. Curated Nerfbusters), p. 6 (4.2. Curated Nerfbusters), p. 7 (5.2. Results), p. 7 (5.3. Ablation study), baselines p. 7 (5.2. Results), p. 6 (5.2. Results), p. 7 (5.2. Results), p. 6 (5.1. Experimental Setup), p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), results p. 6 (5.2. Results), p. 7 (5.2. Results), p. 7 (5.2. Results), p. 8 (5.3. Ablation study), p. 8 (5.3. Ablation study), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

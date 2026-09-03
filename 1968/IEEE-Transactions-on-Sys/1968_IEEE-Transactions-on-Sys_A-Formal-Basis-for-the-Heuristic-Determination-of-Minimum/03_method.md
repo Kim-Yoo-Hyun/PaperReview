@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/TSSC.1968.300136; PDF retrieval source: https://doi.org/10.1109/TSSC.1968.300136. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/TSSC.1968.300136; PDF retrieval source: https://people.stfx.ca/jdelamer/courses/csci-564/_downloads/b2220c66675ddde471ca1795147b8e86/A_Formal_Basis_for_the_Heuristic_Determination_of_Minimum_Cost_Paths.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 2 (2) The heuristic approach typically uses specia
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | First, we must make some preliminary statements and definitions about graphs and search algorithms. | p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | Then, in a following section, we shall show, under a mild assumption, that this algorithm uses information from the problem represented by ... | p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM) |
@@ -74,12 +74,12 @@ PDF body method statement (p. 2 (2) The heuristic approach typically uses specia
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | Wolfe, "A duality theorem for nonlinear programming," Q. | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | Falk, "Lagrange multipliers and nonlinear programming," J. | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
-| Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -119,8 +119,17 @@ PDF body method statement (p. 2 (2) The heuristic approach typically uses specia
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), objective p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), temporal p. 1 (Front matter), p. 1 (Front matter), p. 2 (2) The heuristic approach typically uses special knowl), p. 4 (6. The value of 0(no) remains), p. 4 (6. The value of 0(no) remains), p. 5 (6. The value of 0(no) remains).
+- **Evidence anchors reviewed:** method p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), objective p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), temporal p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (2) The heuristic approach typically uses special knowl), p. 4 (6. The value of 0(no) remains), p. 4 (6. The value of 0(no) remains), p. 5 (6. The value of 0(no) remains).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** First, we must make some preliminary statements and definitions about graphs and search algorithms. (p. 2, 2) The heuristic approach typically uses special knowl).
+- **Objective/update evidence:** Then we can define a search algorithm as follows. (p. 3, II. AN ADMISSIBLE SEARCHING ALGORITHM).
+- **Temporal/runtime evidence:** Suppose we desire a technique for discovering a sequence of cities on the shortest route from a specified start to a specified goal city. (p. 2, 2) The heuristic approach typically uses special knowl).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

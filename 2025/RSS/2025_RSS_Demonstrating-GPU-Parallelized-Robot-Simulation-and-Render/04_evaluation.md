@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (30 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p021.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p021.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p021.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p021.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 25: Evaluated success rates of generalist robotics models like Octo and RT-IX on 4 different tasks. The correlation and MMRV metrics are close ... | p. 18 (Figure/Table caption) |
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 11: Wall-clock training time of PPO on GPU/CPU sim- ulation showing the average success rate over time across 5 seeds. Shaded areas correspond ... | p. 8 (Figure/Table caption) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | DROID [28] addresses some of OpenX's problems by using a consistant data collection platform, However, both Open-X and DROID require immense amounts ‘of human ... | embodiment, simulator version and control stack | p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few) |
 | Task/environment | OpenX [14] is one of the largest real-world roboties datasets but | reset, timeout, object/scene variation | p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 7 / A. Reinforcement Learning - extractive body cue:** We also support evaluating (but not training) several vision-language action (VLA) models, namely Octo [40], RT-X [14], and RDT-IB [32 We leave to future work ...
 - **p. 8 / A. Reinforcement Learning - extractive body cue:** During simulation training and real-world evaluation, observations are restricted to RGB inputs and robot joint positions; ‘no demonstrations or privileged state information such as cube ...
 
-- **PDF anchors reviewed:** datasets p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 7 (IV. BASELINES AND RESULTS), metrics p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 22 (Figure/Table caption), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), baselines p. 7 (IV. BASELINES AND RESULTS), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (Figure/Table caption), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 7 (Figure/Table caption), results p. 18 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 22 (Figure/Table caption), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 7 (IV. BASELINES AND RESULTS), metrics p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 22 (Figure/Table caption), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), baselines p. 7 (IV. BASELINES AND RESULTS), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (Figure/Table caption), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 7 (Figure/Table caption), results p. 18 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 22 (Figure/Table caption), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (30 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** ManiSkill3 provides several popular robot learning. baselines as well as simple reproducible setups for end-to-end trainable vision-based sim2real policies. (p. 7, IV. BASELINES AND RESULTS).
+- **Metric evidence:** Fig. 13: Koch pick-cube sim and real success rates on the grasp cube subtask as well as the full success consisting of grasping, lifting, and return the cube to a ... (p. 9, Figure/Table caption).
+- **Baseline/ablation evidence:** ManiSkill3 provides several popular robot learning. baselines as well as simple reproducible setups for end-to-end trainable vision-based sim2real policies. (p. 7, IV. BASELINES AND RESULTS).
+- **Failure/negative evidence:** Implementation Details: We further make several modifications to ReplicaCAD to make it completely interactive as some of the collision meshes for articulations were modelled incorrectly and thus did not support ... (p. 16, C. Room Scale Environments).

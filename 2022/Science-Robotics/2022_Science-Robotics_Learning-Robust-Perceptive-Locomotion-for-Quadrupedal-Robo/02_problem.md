@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.08117; PDF retrieval source: https://arxiv.org/pdf/2201.08117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.08117; PDF retrieval source: https://arxiv.org/pdf/2201.08117. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Most existing methods that rely on onboard terrain perception are still vulnerable to these failures. | legged robot, terrain과 contact dynamics | body wording is the source claim |
-| Observation / input | The controller gets onboard sensor observations and a desired velocity command, and outputs each joint's target position as the action. | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The controller gets onboard sensor observations and a desired velocity command, and outputs each joint's target position as the action. | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | controller, gets, onboard, sensor, observations, desired, velocity, command, outputs, joint | body/contact state, foothold 또는 behavior mode | notation and tensor shape require body check |
 | Output / action | Height, scan, Proprioception, Privileged, info, Teacher, Policy, Action | joint target, torque, footstep 또는 locomotion action | exact unit/frame/decoder require body check |
 | Target outcome | progress, balance and terrain robustness | velocity/progress, stability, energy와 terrain generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | body/proprioceptive/terrain state; body terms: controller, gets, onboard, sensor, observations, desired, velocity, command, outputs, joint | p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 10 (1. Teacher policy training) |
 | Decision / output variable | joint action/torque/footstep; body terms: consists, three, stages, illustrated, Figure, Here, present, terrain-aware | p. 8 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
-| Objective / loss / cost | return, tracking or stability objective; cue terms: not recovered | no optimization/equation sentence selected |
+| Objective / loss / cost | return, tracking or stability objective; cue terms: not stated or recoverable in the selected PDF body | no optimization/equation sentence selected |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | progress, balance and terrain robustness | p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 8 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION)): Our method consists of three stages, illustrated in Figure 6.
+PDF body contribution framing (p. 8 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION)): Our method consists of three stages, illustrated in Figure 6.
 
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** Here we present a terrain-aware locomotion controller for quadrupedal robots that overcomes limitations of previous approaches and enables robust traversal of harsh natural terrain at ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** The elevation map serves as an abstraction layer between sensors and the locomotion controller, making our method independent of depth sensor choices.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 8 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION
 
 ## Position in the Robotics Loop
 
-locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 10 (1. Teacher policy training), p. 8 (4. MATERIALS AND METHODS). The downstream handoff is claimed only when the body describes it.
+locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 10 (1. Teacher policy training), p. 8 (4. MATERIALS AND METHODS). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 10 (1. Teacher policy training), p. 8 (4. MATERIALS AND METHODS), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 10 (1. Teacher policy training), p. 8 (4. MATERIALS AND METHODS), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Endowing legged robots with this ability is a grand challenge in robotics. (p. 1, 1. INTRODUCTION).
+- **Formulation-changing contribution:** Here we present a terrain-aware locomotion controller for quadrupedal robots that overcomes limitations of previous approaches and enables robust traversal of harsh natural terrain at unprecedented speeds (Movie 1). (p. 3, 1. INTRODUCTION).
+- **Assumption/failure evidence:** Large noise magnitude for each scan point to simulate complete lack of terrain information due to occlusion or mapping failure. (p. 12, 2. Perturbing the height values).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

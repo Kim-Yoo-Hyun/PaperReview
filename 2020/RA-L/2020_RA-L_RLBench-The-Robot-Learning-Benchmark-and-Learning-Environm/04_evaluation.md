@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1909.12271; PDF retrieval source: https://arxiv.org/pdf/1909.12271. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1909.12271; PDF retrieval source: https://arxiv.org/pdf/1909.12271. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -28,7 +28,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption)): Fig. 6: An example
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 6: An example of a task python file. When using the task building tool, users are able to simultaneously edit the V-REP scene ... | p. 5 (Figure/Table caption) |
 
@@ -51,7 +51,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption)): Fig. 6: An example
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | However, with the rise of deep-learning methods becoming more prominent in robotics, we believe it is important to find the potential and limits of ... | embodiment, simulator version and control stack | p. 3 (III. BENCHMARK PROPERTIES), p. 3 (III. BENCHMARK PROPERTIES) |
 | Task/environment | Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world. | reset, timeout, object/scene variation | p. 3 (III. BENCHMARK PROPERTIES) |
@@ -129,7 +129,16 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption)): Fig. 6: An example
 - **p. 3 / III. BENCHMARK PROPERTIES - extractive body cue:** We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging ...
 - **p. 5 / IV. RLBENCH - extractive body cue:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in ...
 
-- **PDF anchors reviewed:** datasets p. 3 (III. BENCHMARK PROPERTIES), p. 3 (III. BENCHMARK PROPERTIES), metrics p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 3 (III. BENCHMARK PROPERTIES), results p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 3 (III. BENCHMARK PROPERTIES), p. 3 (III. BENCHMARK PROPERTIES), metrics p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 3 (III. BENCHMARK PROPERTIES), results p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world. (p. 3, III. BENCHMARK PROPERTIES).
+- **Metric evidence:** Fig. 3: A sample of the visual observations given from both the over-the-shoulder stereo and eye-in-hand monocular cameras, which supply rgb, depth, and mask images. d) Extensibility: Following on from ... (p. 3, Figure/Table caption).
+- **Baseline/ablation evidence:** We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging methods, to more challenging, long-time-horizon ... (p. 3, III. BENCHMARK PROPERTIES).
+- **Failure/negative evidence:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).

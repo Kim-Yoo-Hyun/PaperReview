@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 When the sensory inputs are high-dimensional images, latent dynamics models can abstract observations to predict forward in compact state spaces (Watter et al., 2015; Oh et al., 2017; Gregor et al., 2019).를 The representation model encodes observations and actions to create continuous vector-valued model states st with Markovian transitions (Watter et al., 2015; Zhang et al., 2019; Hafner et al., 2018).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 2: Image observations for 5 of the 20 visual control tasks used in our experiments. The tasks pose a variety of challenges including contact dynamics, sparse rewards, many degrees of freedom, ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present Dreamer, an agent that learns long-horizon behaviors from images purely by latent imagination.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** When the sensory inputs are high-dimensional images, latent dynamics models can abstract observations to predict forward in compact state spaces (Watter et al., 2015; Oh et al., 2017; Gregor et ... (p. 1, 1 INTRODUCTION).
+- **Paper-specific mechanism:** The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted if they use a finite imagination horizon. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 8: Comparison of representation learning objectives to be used with Dreamer. Pixel recon- struction performs best for the majority of tasks. The contrastive objective solves about half of the ... (p. 8, Figure/Table caption); the relevant task/metric cue is Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), an improved variant of DDPG (Lillicrap et al., 2015) that uses distributed ... (p. 8, 6 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: These tasks pose a variety of challenges, including sparse rewards, contact dynamics, and 3D scenes..
-3. Compare against the body-reported baseline or a matched simpler baseline: The training time for our Dreamer implementation is about 3 hours per 106 environment steps on the control suite, compared to 11 hours for online planning using PlaNet, and the 24 hours ....
-4. Report the body metric and its denominator/aggregation: Figure 11: Comparison of representation learning methods for Dreamer. The lines show mean scores and the shaded areas show the standard deviation across 5 seeds. We compare generating both images and rewards, ....
-5. Re-run the body-reported ablation/failure condition: PlaNet (Hafner et al., 2018) learns the same world model as Dreamer and selects actions via online planning without an action model and drastically improves over D4PG and A3C in data efficiency..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: When the sensory inputs are high-dimensional images, latent dynamics models can abstract observations to predict forward in compact state spaces (Watter et al., 2015; Oh et al., 2017; Gregor et ... (p. 1, 1 INTRODUCTION); preserve the objective/update rule: The value model optimizes Bellman consistency for imagined rewards and the action model is updated by propagating gradients of value estimates back through the neural network dynamics. • Executing the ... (p. 2, 1 INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: With an average score of 823 across tasks after 5 × 106 environment steps, Dreamer exceeds the performance of the strong model-free D4PG agent that achieves an average of 786 ... (p. 9, 6 EXPERIMENTS).
+3. Compare against the reported or matched baseline: PlaNet (Hafner et al., 2018) learns the same world model as Dreamer and selects actions via online planning without an action model and drastically improves over D4PG and A3C in ... (p. 8, 6 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), an improved variant of DDPG (Lillicrap et al., 2015) that uses distributed ... (p. 8, 6 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: PlaNet (Hafner et al., 2018) learns the same world model as Dreamer and selects actions via online planning without an action model and drastically improves over D4PG and A3C in ... (p. 8, 6 EXPERIMENTS); if none is reported, design one around: We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5 (B Sequence length); the primary result is directionally consistent at p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (6 EXPERIMENTS), and measure the boundary at p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, Dreamer, agent mechanism이 The training time for our Dreamer implementation is about 3 hours per 106 environment steps on ... 대비 Figure 11: Comparison of representation learning methods for Dreamer. The lines show mean scores and the shaded areas ...을 개선하고, Figure 2: Image observations for 5 of the 20 visual control tasks used in our experiments. ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (When the sensory inputs are high-dimensional images, latent dynamics models can abstract observations to predict forward in compact state spaces (Watter et ...), does the paper-specific mechanism (The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted ...) retain the reported evaluation outcome (Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), ...) when tested against the paper's strongest explicit boundary (We approach this limitation by predicting both actions and state values.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted if they use a finite imagination horizon. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 8: Comparison of representation learning objectives to be used with Dreamer. Pixel recon- struction performs best for the majority of tasks. The contrastive objective solves about half of the ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.10752; PDF retrieval source: https://arxiv.org/pdf/2112.10752. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.10752; PDF retrieval source: https://arxiv.org/pdf/2112.10752. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive PDF cue:** Complex datasets such as ImageNet require reduced compression rates to avoid reducing quality.
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive PDF cue:** 6 shows sample quality as a function of training progress for 2M steps of class-conditional models on the ImageNet [12] dataset.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the ImageNet dataset.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** The dashed line shows the FID scores for 200 steps, indicating the strong performance of LDM- {4-8}.
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive PDF cue:** Especially compared to pixel-based LDM-1, they achieve much lower FID scores while simultaneously significantly increasing sample throughput.
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive PDF cue:** 7, we compare models trained on CelebAHQ [39] and ImageNet in terms sampling speed for different numbers of denoising steps with the DDIM sampler [84] ...
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** FID scores assessed on 5000 samples.
+- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** Complex datasets such as ImageNet require reduced compression rates to avoid reducing quality.
+- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** 6 shows sample quality as a function of training progress for 2M steps of class-conditional models on the ImageNet [12] dataset.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the ImageNet dataset.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** The dashed line shows the FID scores for 200 steps, indicating the strong performance of LDM- {4-8}.
+- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** Especially compared to pixel-based LDM-1, they achieve much lower FID scores while simultaneously significantly increasing sample throughput.
+- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** 7, we compare models trained on CelebAHQ [39] and ImageNet in terms sampling speed for different numbers of denoising steps with the DDIM sampler [84] ...
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** FID scores assessed on 5000 samples.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. On Perceptual Compression Tradeoffs | SYSTEM / EVALUATION SCOPE UNRESOLVED | Especially compared to pixel-based LDM-1, they achieve much lower FID scores while simultaneously significantly increasing sample throughput. | p. 5 (4.1. On Perceptual Compression Tradeoffs) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 11. ×4 upscaling results on ImageNet-Val. (2562); †: FID features computed on validation split, ‡: FID features computed on train split. We also ... | p. 23 (Figure/Table caption) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive PDF cue:** Complex datasets such as ImageNet require reduced compression rates to avoid reducing quality.
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive PDF cue:** 6 shows sample quality as a function of training progress for 2M steps of class-conditional models on the ImageNet [12] dataset.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the ImageNet dataset.
+- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** Complex datasets such as ImageNet require reduced compression rates to avoid reducing quality.
+- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** 6 shows sample quality as a function of training progress for 2M steps of class-conditional models on the ImageNet [12] dataset.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the ImageNet dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Boosting the upper bound on achievable quality with less agressive downsampling. Since diffusion models offer excel- lent inductive biases for spatial data, we ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Illustrating perceptual and semantic compression: Most bits of a digital image correspond to imperceptible details. While DMs allow to suppress this semantically meaningless ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. We condition LDMs either via concatenation or by a more general cross-attention mechanism. See Sec. 3.3 includes the ability to build the underlying ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Samples from LDMs trained on CelebAHQ [39], FFHQ [41], LSUN-Churches [102], LSUN-Bedrooms [102] and class- conditional ImageNet [12], each with a resolution of ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Samples for user-defined text prompts from our model for text-to-image synthesis, LDM-8 (KL), which was trained on the LAION [78] database. Samples generated ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the Im- ageNet dataset. Pixel-based LDM-1 requires ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7. Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets. Different mark- ers indicate {10, 20, 50, 100, 200} sampling ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluation metrics for unconditional image synthesis. CelebA-HQ results reproduced from [43, 63, 100], FFHQ from [42, 43]. †: N-s refers to N sampling ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Boosting the upper bound on achievable quality with less agressive downsampling. Since diffusion models offer excel- lent inductive biases for spatial data, we ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Illustrating perceptual and semantic compression: Most bits of a digital image correspond to imperceptible details. While DMs allow to suppress this semantically meaningless ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. We condition LDMs either via concatenation or by a more general cross-attention mechanism. See Sec. 3.3 includes the ability to build the underlying ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Samples from LDMs trained on CelebAHQ [39], FFHQ [41], LSUN-Churches [102], LSUN-Bedrooms [102] and class- conditional ImageNet [12], each with a resolution of ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Samples for user-defined text prompts from our model for text-to-image synthesis, LDM-8 (KL), which was trained on the LAION [78] database. Samples generated ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the Im- ageNet dataset. Pixel-based LDM-1 requires ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets. Different mark- ers indicate {10, 20, 50, 100, 200} sampling ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Evaluation metrics for unconditional image synthesis. CelebA-HQ results reproduced from [43, 63, 100], FFHQ from [42, 43]. †: N-s refers to N sampling ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Complex datasets such as ImageNet require reduced compression rates to avoid reducing quality. | embodiment, simulator version and control stack | p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs) |
 | Task/environment | 6 shows sample quality as a function of training progress for 2M steps of class-conditional models on the ImageNet [12] dataset. | reset, timeout, object/scene variation | p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion) |
@@ -117,9 +117,9 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 | Primary metric/result | Table 11. ×4 upscaling results on ImageNet-Val. (2562); †: FID features computed on validation split, ‡: FID features computed on train split. We also ... | numeric claim only at cited anchor | p. 23 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** The dashed line shows the FID scores for 200 steps, indicating the strong performance of LDM- {4-8}.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** FID scores assessed on 5000 samples.
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive PDF cue:** [32] s = 3 Make-A-Scene∗[26] 11.84 - 4B c.f.g for AR models [98] s = 5 LDM-KL-8 23.31 20.03±0.33 1.45B
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** The dashed line shows the FID scores for 200 steps, indicating the strong performance of LDM- {4-8}.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** FID scores assessed on 5000 samples.
+- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** [32] s = 3 Make-A-Scene∗[26] 11.84 - 4B c.f.g for AR models [98] s = 5 LDM-KL-8 23.31 20.03±0.33 1.45B
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 5. Limitations & Societal Impact - extractive PDF cue:** Limitations While LDMs significantly reduce computational requirements compared to pixel-based approaches, their sequential sampling process is still slower than that of GANs.
-- **p. 23 / Figure/Table caption - extractive PDF cue:** Figure 18. LDM-BSR generalizes to arbitrary inputs and can be used as a general-purpose upsampler, upscaling samples from a class- conditional LDM (image cf. Fig. ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Interestingly, we find that LDMs trained in VQregularized latent spaces sometimes achieve better sample quality, even though the reconstruction capabilities of VQregularized first stage models ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Task 1: Subjects were shown ground truth and generated image and asked for preference. Task 2: Subjects had to decide between two generated ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 10. ImageNet 64→256 super-resolution on ImageNet-Val. LDM-SR has advantages at rendering realistic textures but SR3 can synthesize more coherent fine structures. See appendix for ...
-- **p. 20 / Figure/Table caption - extractive PDF cue:** Figure 15. Illustrating the effect of latent space rescaling on convolutional sampling, here for semantic image synthesis on landscapes. See Sec. 4.3.2 and Sec. D.1. ...
+- **p. 9 / 5. Limitations & Societal Impact - extractive body cue:** Limitations While LDMs significantly reduce computational requirements compared to pixel-based approaches, their sequential sampling process is still slower than that of GANs.
+- **p. 23 / Figure/Table caption - extractive body cue:** Figure 18. LDM-BSR generalizes to arbitrary inputs and can be used as a general-purpose upsampler, upscaling samples from a class- conditional LDM (image cf. Fig. ...
+- **p. 5 / 4. Experiments - extractive body cue:** Interestingly, we find that LDMs trained in VQregularized latent spaces sometimes achieve better sample quality, even though the reconstruction capabilities of VQregularized first stage models ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Task 1: Subjects were shown ground truth and generated image and asked for preference. Task 2: Subjects had to decide between two generated ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 10. ImageNet 64→256 super-resolution on ImageNet-Val. LDM-SR has advantages at rendering realistic textures but SR3 can synthesize more coherent fine structures. See appendix for ...
+- **p. 20 / Figure/Table caption - extractive body cue:** Figure 15. Illustrating the effect of latent space rescaling on convolutional sampling, here for semantic image synthesis on landscapes. See Sec. 4.3.2 and Sec. D.1. ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), p. 6 (4.2. Image Generation with Latent Diffusion), metrics p. 6 (4.2. Image Generation with Latent Diffusion), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), p. 20 (Figure/Table caption), p. 25 (Figure/Table caption), baselines p. 5 (4.2. Image Generation with Latent Diffusion), p. 7 (Figure/Table caption), p. 23 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), results p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 23 (Figure/Table caption), p. 6 (4.2. Image Generation with Latent Diffusion), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. On Perceptual Compression Tradeoffs).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), p. 6 (4.2. Image Generation with Latent Diffusion), metrics p. 6 (4.2. Image Generation with Latent Diffusion), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), p. 20 (Figure/Table caption), p. 25 (Figure/Table caption), baselines p. 5 (4.2. Image Generation with Latent Diffusion), p. 7 (Figure/Table caption), p. 23 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), results p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 23 (Figure/Table caption), p. 6 (4.2. Image Generation with Latent Diffusion), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. On Perceptual Compression Tradeoffs).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

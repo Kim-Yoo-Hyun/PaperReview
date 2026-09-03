@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.11989; PDF retrieval source: https://arxiv.org/pdf/2410.11989. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.11989; PDF retrieval source: https://arxiv.org/pdf/2410.11989. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | This makes it highly likely for the robot to navigate near the target, resulting in a significantly higher success rate compared to "Appearance" and ... | p. 7 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Additionally, in "Appearance" and "Positional Shift" scenarios, DovSG achieves a scene change recognition success rate approximately 28% higher than the GPT-4o. | p. 7 (IV. EXPERIMENTS) |
@@ -57,7 +57,7 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 2) Environment and Task Setups: To verify our method's ability to enable robots to perform long-term tasks in dynamic environments, we designed an experiment ... | embodiment, simulator version and control stack | p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
 | Task/environment | To evaluate the robot's ability to detect and adapt to environmental changes, we categorized the modifications to the objects in the second task into ... | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 6 / III. METHOD - extractive body cue:** In the first row, we cropped the point cloud input into anyGrasp within a certain range around the target object, allowing anyGrasp to focus more ...
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Although Ok-Robot can occasionally succeed in locating the correct object under minor changes (e.g., "Minor Adjustment"), it struggles with larger modifications such as "Appearance" or ...
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** This results in a 10.7% higher pick-up success rate than Ok-Robot, which relies solely on AnyGrasp. (p. 7, IV. EXPERIMENTS).
+- **Metric evidence:** (3) Task Success Rate: This metric represents the overall task completion success rate. (p. 7, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** In contrast, DovSG, supported by precise relocalization, can accurately identify the voxel index where changes have occurred in the scene, significantly outperforming the baseline. (p. 7, IV. EXPERIMENTS).
+- **Failure/negative evidence:** These changes are often invisible to previous approaches [3], [21], [14], and in such environments, if the robot cannot dynamically update its memory, it will soon face failure. (p. 4, III. METHOD).

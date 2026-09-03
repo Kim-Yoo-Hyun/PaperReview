@@ -1,20 +1,21 @@
 # RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2307.15818.
-> PDF retrieval source: https://arxiv.org/pdf/2307.15818. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2307.15818.
+> PDF retrieval source: https://arxiv.org/pdf/2307.15818. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Vision-Language Model, Robotics
-- Aliases: RT-2
 - Official paper: https://arxiv.org/abs/2307.15818
 - Full-text retrieval: https://arxiv.org/pdf/2307.15818
 - Code/Project: https://robotics-transformer2.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -24,7 +25,6 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 - **p. 1 / 1. Introduction - extractive body cue:** High-capacity models pretrained on broad web-scale datasets provide an effective and powerful platform for a wide range of downstream tasks: large language models can enable ...
 - **p. 1 / 1. Introduction - extractive body cue:** Such semantic reasoning, problem solving, and visual interpretation capabilities would be tremendously useful for generalist robots that must perform a variety of tasks in real-world ...
-- **p. 1 / 1. Introduction - extractive body cue:** All rights reserved arXiv:2307.15818v1 [cs.RO] 28 Jul 2023
 - **p. 2 / 1. Introduction - extractive body cue:** RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control Q: What is happening in the image?
 - **p. 2 / 1. Introduction - extractive body cue:** A grey donkey walks down the street.
 - **p. 2 / 1. Introduction - extractive body cue:** On the other hand, directly applying such models to robotic tasks is also difficult: such models reason about semantics, labels, and textual prompts, whereas robots ...
@@ -84,3 +84,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 On the other hand, directly applying such models to robotic tasks is also difficult: such models reason about semantics, labels, and textual prompts, whereas robots require grounded low-level actions, such as Cartesian ...를 문제로 두고, Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and semantically aware robotic policies.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (1. Introduction), p. 4 (3. Vision-Language-Action Models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Such semantic reasoning, problem solving, and visual interpretation capabilities would be tremendously useful for generalist robots that must perform a variety of tasks in real-world environments. (p. 1, 1. Introduction).
+- **Actual contribution:** Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and semantically aware robotic policies. (p. 3, 1. Introduction).
+- **Evaluation boundary:** RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (a) Performance comparison on various emergent skill evaluations (Figure 8) between RT-2 and two baselines. (p. 10, 4. Experiments).
+- **Explicit failure boundary:** Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach. (p. 11, 5. Limitations).

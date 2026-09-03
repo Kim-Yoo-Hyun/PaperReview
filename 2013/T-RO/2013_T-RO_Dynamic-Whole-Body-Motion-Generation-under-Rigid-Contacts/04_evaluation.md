@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://hal.science/lirmm-00831097; PDF retrieval source: https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://hal.science/lirmm-00831097; PDF retrieval source: https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENT
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VII. EXPERIMENTS | EMPIRICAL / SIMULATION | To improve the naturalness of the motion, a task egaze defined by (50) is set to constrain the gaze toward the armrest to be ... | p. 12 (VII. EXPERIMENTS) |
 | VII. EXPERIMENTS | EMPIRICAL / SIMULATION | The second gripper helps to improve the stability by decreasing the tangent forces at each contact point. | p. 14 (VII. EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENT
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The result of this simulation is a joint trajectory of the robot, that complies to the multi-body dynamics. | embodiment, simulator version and control stack | p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS) |
 | Task/environment | The acceleration ¨q can be integrated in simulation, or provided as control input to the robot servo control; or the torques can be given ... | reset, timeout, object/scene variation | p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENT
 - **p. 15 / VIII. CONCLUSION - extractive body cue:** Experiment C: Robustness criterion VI-C.
 - **p. 10 / VII. EXPERIMENTS - extractive body cue:** However, this solution has the drawback that the servo is on the position variables, while, as explained in the previous section, the robustness mainly relies ...
 
-- **PDF anchors reviewed:** datasets p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 12 (VII. EXPERIMENTS), p. 13 (VII. EXPERIMENTS), metrics p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 12 (VII. EXPERIMENTS), p. 12 (VII. EXPERIMENTS), baselines p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS), results p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 12 (VII. EXPERIMENTS), p. 13 (VII. EXPERIMENTS), metrics p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 12 (VII. EXPERIMENTS), p. 12 (VII. EXPERIMENTS), baselines p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS), results p. 12 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS), p. 14 (VII. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 2) Results: The experiment is summed up by Figures 3 to 6. (p. 11, VII. EXPERIMENTS).
+- **Metric evidence:** However, this solution has the drawback that the servo is on the position variables, while, as explained in the previous section, the robustness mainly relies on the accuracy of the ... (p. 10, VII. EXPERIMENTS).
+- **Baseline/ablation evidence:** All the joints are properly stopped at the limit, and can leave the neighborhood of the limit without being stuck as it may appear with some avoidance techniques. (p. 12, VII. EXPERIMENTS).
+- **Failure/negative evidence:** In reaction, all the other aligned joints move to overrun the neck limitation (chest joint of course, but also hip and ankle joints). (p. 12, VII. EXPERIMENTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To ensure that models learn from visual grounding rather than linguistic priors, we use deterministic templates that avoid ambiguity and minimize reliance ... | p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. Dataset Generation) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Stage 1: 3D Spatial Relation Extraction The first stage involves extracting spatial relationships between objects or between objects and free space, based ... | p. 4 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation) |
@@ -81,8 +81,8 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Is the frame in front of the window? | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Pinpoint several points within the vacant space situated in front of the frame. | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
-| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -127,8 +127,17 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.1. Spatial Relationships), p. 6 (Model), p. 6 (Model), objective p. 4 (3.2. Dataset Generation), p. 5 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation), temporal p. 7 (4.1.4. Out-of-Domain Evaluation), p. 7 (4.1.4. Out-of-Domain Evaluation), p. 1 (Abstract), p. 1 (Front matter), p. 2 (Dataset), p. 2 (Dataset).
+- **Evidence anchors reviewed:** method p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.1. Spatial Relationships), p. 6 (Model), p. 6 (Model), objective p. 4 (3.2. Dataset Generation), p. 5 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation), temporal p. 7 (4.1.4. Out-of-Domain Evaluation), p. 7 (4.1.4. Out-of-Domain Evaluation), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Dataset), p. 2 (Dataset).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The pipeline takes as input a scene dataset Ds that contains RGB images, camera poses (both extrinsic and intrinsic parameters), and oriented 3D bounding box annotations with semantic object labels. (p. 4, 3.2. Dataset Generation).
+- **Objective/update evidence:** The final answer is a list of 2D (x, y) image coordinates that satisfy the spatial context constraint. (p. 5, 3.2. Dataset Generation).
+- **Temporal/runtime evidence:** Is the frame in front of the window? (p. 7, 4.1.4. Out-of-Domain Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

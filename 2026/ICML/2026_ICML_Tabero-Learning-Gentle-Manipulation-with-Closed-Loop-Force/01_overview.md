@@ -1,19 +1,21 @@
 # Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2605.27886.
-> PDF retrieval source: https://arxiv.org/pdf/2605.27886. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2605.27886.
+> PDF retrieval source: https://arxiv.org/pdf/2605.27886. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: Robotics, VLA, tactile, force feedback, contact-rich manipulation, Benchmark, dexterity, language-conditioned manipulation
+- Tags: Robotics, VLA, tactile, force feedback, contact-rich manipulation, Benchmark, dexterity
 - Official paper: https://arxiv.org/abs/2605.27886
 - Full-text retrieval: https://arxiv.org/pdf/2605.27886
 - Code/Project: https://github.com/NathanWu7/Tabero
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Training such models, however, faces two major challenges.를 문제로 두고, In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 6 (3.6. Metrics Beyond Success Rate) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Training such models, however, faces two major challenges. (p. 1, 1. Introduction).
+- **Actual contribution:** In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ... (p. 2, 1. Introduction).
+- **Evaluation boundary:** When using the same robot kinematics and control policy as in the original dataset, our baseline configuration yields a success rate distribution that closely matches that reported in OpenVLA (Kim ... (p. 6, 4.1. Cross-Platform Data Validation).
+- **Explicit failure boundary:** 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation. (p. 7, 4.2. Tactile Data Diversity Analysis).

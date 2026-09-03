@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p070.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p070.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p070.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p070.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (A. Humanoid Whole-body Control), p. 10 (C.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Humanoid Whole-body Control | EMPIRICAL / REAL-ROBOT OR HARDWARE | In summary, symmetry data augmentation significantly improves training efficiency, while the use of symmetry loss effectively prevents the policy from sacrificing symmetry to complete ... | p. 8 (A. Humanoid Whole-body Control) |
 | C. Teleoperation System | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results, shown in Fig. /, indicate that our system achieves task completion times nearly half of those of the VRbased method. | p. 10 (C. Teleoperation System) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (A. Humanoid Whole-body Control), p. 10 (C.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This migration enables the use of HOMIE to control robots within a variety of simulated environments By leveraging these simulated scenes, the robots can ... | embodiment, simulator version and control stack | p. 10 (20 Bet), p. 10 (20 Bet) |
 | Task/environment | We capture RGB images, robot states q, the upper body commands quypers and the locomotion commands Cy at 10Hz, and collect 50 episodes per ... | reset, timeout, object/scene variation | p. 10 (20 Bet), p. 8 (A. Humanoid Whole-body Control) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 8 (A. Humanoid Whole-body Control), p. 10 (C.
 - **p. 9 / C. Teleoperation System - extractive body cue:** These tasks showcase the robustness of our loco-manipulation policy and HOMIE 's ability 10 teleopeate humanoids perform a wide range of complex tasks in various ...
 - **p. 9 / C. Teleoperation System - extractive body cue:** I (<), the robot is controlled to push a 60 kg person sitting in a chair, who weighs roughly twice as much as the robot, ...
 
-- **PDF anchors reviewed:** datasets p. 10 (20 Bet), p. 10 (20 Bet), p. 8 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 9 (C. Teleoperation System), p. 9 (C. Teleoperation System), metrics p. 8 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 7 (A. Humanoid Whole-body Control), p. 7 (C. Hardware System Design), p. 9 (C. Teleoperation System), p. 10 (C. Teleoperation System), baselines p. 8 (A. Humanoid Whole-body Control), p. 7 (A. Humanoid Whole-body Control), p. 7 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 9 (C. Teleoperation System), p. 9 (C. Teleoperation System), results p. 8 (A. Humanoid Whole-body Control), p. 10 (C. Teleoperation System), p. 7 (C. Hardware System Design), p. 7 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 9 (B. Teleoperation Hardware Performance).
+- **Evidence anchors reviewed:** datasets p. 10 (20 Bet), p. 10 (20 Bet), p. 8 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 9 (C. Teleoperation System), p. 9 (C. Teleoperation System), metrics p. 8 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 7 (A. Humanoid Whole-body Control), p. 7 (C. Hardware System Design), p. 9 (C. Teleoperation System), p. 10 (C. Teleoperation System), baselines p. 8 (A. Humanoid Whole-body Control), p. 7 (A. Humanoid Whole-body Control), p. 7 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 9 (C. Teleoperation System), p. 9 (C. Teleoperation System), results p. 8 (A. Humanoid Whole-body Control), p. 10 (C. Teleoperation System), p. 7 (C. Hardware System Design), p. 7 (A. Humanoid Whole-body Control), p. 8 (A. Humanoid Whole-body Control), p. 9 (B. Teleoperation Hardware Performance).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** These results indicate that just scaling up the height tracking reward in hei may initially lead to faster reduction in height tracking error, but it negatively affects the feedback from ... (p. 8, A. Humanoid Whole-body Control).
+- **Metric evidence:** Except for symmetry loss, the performance of ours and w/ aug is similar, However, when considering overall tracking accuracy, ours performs slightly better. (p. 8, A. Humanoid Whole-body Control).
+- **Baseline/ablation evidence:** Compared to the training setting of Unitree Gl. we only ‘change the range of height tracking and some robot-specific distance values, without any other changes in reward scales or training ... (p. 8, A. Humanoid Whole-body Control).
+- **Failure/negative evidence:** However, due to limitations in the accuracy, inference speed, and difficulty in handling occlusions of pose estimation, such approaches cannot guarantee rapid and accurate pose acquisition. (p. 2, A. Teleoperation Systems).

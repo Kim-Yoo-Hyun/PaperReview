@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2504.18684; PDF retrieval source: https://arxiv.org/pdf/2504.18684. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2504.18684; PDF retrieval source: https://arxiv.org/pdf/2504.18684. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESUL
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENTAL SETUP - extractive PDF cue:** Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to SOTA ...
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ZSVG3D* ...
-- **p. 5 / IV. EXPERIMENTAL SETUP - extractive PDF cue:** Both datasets consist of utterances describing a target object in a ScanNet [13] scene using spatial relations.
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** toolbox, which does not have to be from a particular dataset, and we employed no dataset-specific training or fine-tuning.
-- **p. 5 / IV. EXPERIMENTAL SETUP - extractive PDF cue:** For our methods, we conduct multiple trials on each data split to measure variance in LLMs, reported with standard deviation values on the grounding accuracy, ...
-- **p. 5 / V. RESULTS AND DISCUSSION - extractive PDF cue:** We also note that the use of LLMs introduces variance between trials, affecting grounding accuracy up to 6%.
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** Ablation of Captioning Module We evaluate the effect on grounding accuracy of adding open-vocabulary captions generated from 2D images of objects in the scene.
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy.
+- **p. 5 / IV. EXPERIMENTAL SETUP - extractive body cue:** Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to SOTA ...
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ZSVG3D* ...
+- **p. 5 / IV. EXPERIMENTAL SETUP - extractive body cue:** Both datasets consist of utterances describing a target object in a ScanNet [13] scene using spatial relations.
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** toolbox, which does not have to be from a particular dataset, and we employed no dataset-specific training or fine-tuning.
+- **p. 5 / IV. EXPERIMENTAL SETUP - extractive body cue:** For our methods, we conduct multiple trials on each data split to measure variance in LLMs, reported with standard deviation values on the grounding accuracy, ...
+- **p. 5 / V. RESULTS AND DISCUSSION - extractive body cue:** We also note that the use of LLMs introduces variance between trials, affecting grounding accuracy up to 6%.
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** Ablation of Captioning Module We evaluate the effect on grounding accuracy of adding open-vocabulary captions generated from 2D images of objects in the scene.
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESUL
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. RESULTS AND DISCUSSION | EMPIRICAL / SOURCE-REPORTED EVALUATION | On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy. | p. 6 (V. RESULTS AND DISCUSSION) |
 | V. RESULTS AND DISCUSSION | EMPIRICAL / SOURCE-REPORTED EVALUATION | Similarly, while Transcrib3D reports higher accuracies, it relies on guiding principles [6] that are tailored to the language used in Nr3D and Sr3D, which ... | p. 5 (V. RESULTS AND DISCUSSION) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESUL
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENTAL SETUP - extractive PDF cue:** Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to SOTA ...
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ZSVG3D* ...
-- **p. 5 / IV. EXPERIMENTAL SETUP - extractive PDF cue:** Both datasets consist of utterances describing a target object in a ScanNet [13] scene using spatial relations.
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** toolbox, which does not have to be from a particular dataset, and we employed no dataset-specific training or fine-tuning.
+- **p. 5 / IV. EXPERIMENTAL SETUP - extractive body cue:** Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to SOTA ...
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ZSVG3D* ...
+- **p. 5 / IV. EXPERIMENTAL SETUP - extractive body cue:** Both datasets consist of utterances describing a target object in a ScanNet [13] scene using spatial relations.
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** toolbox, which does not have to be from a particular dataset, and we employed no dataset-specific training or fine-tuning.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: An example of our system's workflow for using referential object grounding for downstream object-goal navigation. The agent uses the 2D image for fine-grained ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: The full system diagram for the SORT3D framework the characteristics of a query object in an image. Describe the <object> in this image, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Generated image crops and corresponding caption
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: Correct (a) and incorrect (b) grounding examples. Top left and bottom left respectively show correctly grounded view-independent and view-dependent statements. Top right and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Navigation on the mecanum robot in the university corridor given the statement "Go to the table next to the bookshelf, then to the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6: Navigation on the mecanum robot in the student lounge given the statement "I want to play a board game, fetch me one from ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: An example of our system's workflow for using referential object grounding for downstream object-goal navigation. The agent uses the 2D image for fine-grained ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: The full system diagram for the SORT3D framework the characteristics of a query object in an image. Describe the <object> in this image, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Generated image crops and corresponding caption
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Correct (a) and incorrect (b) grounding examples. Top left and bottom left respectively show correctly grounded view-independent and view-dependent statements. Top right and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Navigation on the mecanum robot in the university corridor given the statement "Go to the table next to the bookshelf, then to the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Navigation on the mecanum robot in the student lounge given the statement "I want to play a board game, fetch me one from ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to ... | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION) |
 | Task/environment | Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ... | reset, timeout, object/scene variation | p. 6 (V. RESULTS AND DISCUSSION), p. 5 (IV. EXPERIMENTAL SETUP) |
@@ -106,12 +106,12 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESUL
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| To this end, we propose SORT3D, a Spatial Object-centric Reasoning Toolbox for 3D Grounding Using LLMs, shown arXiv:2504.18684v2 [cs.CV] 15 Aug 2025 | On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |
+| To this end, we propose SORT3D, a Spatial Object-centric Reasoning Toolbox for 3D Grounding Using LLMs, shown | On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |
 | Primary metric/result | Similarly, while Transcrib3D reports higher accuracies, it relies on guiding principles [6] that are tailored to the language used in Nr3D and Sr3D, which ... | numeric claim only at cited anchor | p. 5 (V. RESULTS AND DISCUSSION) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ZSVG3D* ...
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** Supervised Methods ViL3DRel* [20] 72.8 63.8 73.2 3D-VisTA* [5] 76.4 58.9 77.3 SceneVerse-GPS* [19] 77.5 62.8 78.2 Zero-Shot Methods Transcrib3D* [6] (GPT-4) 98.4 98.2 98.4 ...
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** Supervised Methods NS3D* [7] 62.7 62.0 - ViL3DRel* [20] 64.4 62.0 64.5 3D-VisTA* [5] 64.2 61.5 65.1 SceneVerse-GPS* [19] 64.9 56.9 67.9 Zero-Shot Methods ZSVG3D* ...
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** Supervised Methods ViL3DRel* [20] 72.8 63.8 73.2 3D-VisTA* [5] 76.4 58.9 77.3 SceneVerse-GPS* [19] 77.5 62.8 78.2 Zero-Shot Methods Transcrib3D* [6] (GPT-4) 98.4 98.2 98.4 ...
 
 ## Generalization and Failure Cases
 
@@ -143,10 +143,10 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESUL
 
 ## Limitations and Verification Questions
 
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** We see that SORT3D is able to explainably resolve complex view-dependent relations with multiple anchors and complex semantic descriptions (Figure 4-a), while also providing explainable ...
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive PDF cue:** In the bottom right, the model fails at pragmatics, picking out the rightmost pillow, instead of recognizing that the sentence implies choosing a pillow on ...
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** We see that SORT3D is able to explainably resolve complex view-dependent relations with multiple anchors and complex semantic descriptions (Figure 4-a), while also providing explainable ...
+- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** In the bottom right, the model fails at pragmatics, picking out the rightmost pillow, instead of recognizing that the sentence implies choosing a pillow on ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION), p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION), metrics p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), results p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION), p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION), metrics p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), results p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

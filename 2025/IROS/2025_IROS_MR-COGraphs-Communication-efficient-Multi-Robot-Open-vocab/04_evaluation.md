@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2412.18381; PDF retrieval source: https://arxiv.org/pdf/2412.18381. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2412.18381; PDF retrieval source: https://arxiv.org/pdf/2412.18381. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Map Merging Evaluation 1) Dataset: Since the Replica dataset lacks multi-room scenes suitable for collaborative mapping [22] (only apartment2 is available), we construct two additional ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Open-vocabulary 3D Scene Graphs Evaluation 1) Dataset: The Replica dataset [32] has been widely used in studies related to 3D scene reconstruction and object retrieval.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** It comprises 18 indoor environments, from which we select three representative scenes (room0, office2, and apartment2) due to their substantial size and rich semantic diversity.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** demonstrate that our feature compression process does not compromise the object finding rate and query success rate across the three evaluated scenes.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** 7b, our real-world environment is 9m × 9m in size with 3 rooms.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Additional real-world demonstrations are available on our website.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Compared to baseline methods, our approach not only maintains high accuracy and query success rates but also ensures realtime performance in the mapping system.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** The topk score is calculated by querying all the 100 semantic texts and averaging the success rate that each image's true annotation is among the ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Map Merging Evaluation 1) Dataset: Since the Replica dataset lacks multi-room scenes suitable for collaborative mapping [22] (only apartment2 is available), we construct two additional ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Open-vocabulary 3D Scene Graphs Evaluation 1) Dataset: The Replica dataset [32] has been widely used in studies related to 3D scene reconstruction and object retrieval.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** It comprises 18 indoor environments, from which we select three representative scenes (room0, office2, and apartment2) due to their substantial size and rich semantic diversity.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** demonstrate that our feature compression process does not compromise the object finding rate and query success rate across the three evaluated scenes.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** 7b, our real-world environment is 9m × 9m in size with 3 rooms.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Additional real-world demonstrations are available on our website.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Compared to baseline methods, our approach not only maintains high accuracy and query success rates but also ensures realtime performance in the mapping system.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** The topk score is calculated by querying all the 100 semantic texts and averaging the success rate that each image's true annotation is among the ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to baseline methods, our approach not only maintains high accuracy and query success rates but also ensures realtime performance in the mapping system. | p. 6 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results show that both domainencode and general-encode achieve performance comparable to raw-clip. domain-encode performs the same with raw-clip when k = 1 while ... | p. 6 (IV. EXPERIMENTS) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Map Merging Evaluation 1) Dataset: Since the Replica dataset lacks multi-room scenes suitable for collaborative mapping [22] (only apartment2 is available), we construct two additional ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Open-vocabulary 3D Scene Graphs Evaluation 1) Dataset: The Replica dataset [32] has been widely used in studies related to 3D scene reconstruction and object retrieval.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** It comprises 18 indoor environments, from which we select three representative scenes (room0, office2, and apartment2) due to their substantial size and rich semantic diversity.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** demonstrate that our feature compression process does not compromise the object finding rate and query success rate across the three evaluated scenes.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** 7b, our real-world environment is 9m × 9m in size with 3 rooms.
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Additional real-world demonstrations are available on our website.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Map Merging Evaluation 1) Dataset: Since the Replica dataset lacks multi-room scenes suitable for collaborative mapping [22] (only apartment2 is available), we construct two additional ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Open-vocabulary 3D Scene Graphs Evaluation 1) Dataset: The Replica dataset [32] has been widely used in studies related to 3D scene reconstruction and object retrieval.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** It comprises 18 indoor environments, from which we select three representative scenes (room0, office2, and apartment2) due to their substantial size and rich semantic diversity.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** demonstrate that our feature compression process does not compromise the object finding rate and query success rate across the three evaluated scenes.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** 7b, our real-world environment is 9m × 9m in size with 3 rooms.
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Additional real-world demonstrations are available on our website.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Overview of the MR-COGraphs Framework. to the classes of objects annotated in the training datasets [6]. In contrast, open-vocabulary maps are not constrained ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. The Generation Process of COGraphs. projecting 2D semantic features onto 3D points and then encoding features into points [7] [8], instances [12] [28], ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Comparison of the original and decoded features when the encoder and decoder are trained on household-related images from ImageNet. same way as existing ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. COGraphs Merging. is functional for downstream tasks, the precision of the merging method is not a critical requirement. 1) Place Recognition: The feature ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. Feature Compression Evaluation. As illustrated in Fig. 5a, we compare the performance of the three encoding configurations with raw-clip, which directly uses the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6. Cosine Similarity between Text Features and Image Features (before feature encoding and after feature decoding). TABLE III MAP MERGING EVALUATION Scene Dimension Pose ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7. Experiment Environments and Visualization of the COGraph. TABLE IV
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Overview of the MR-COGraphs Framework. to the classes of objects annotated in the training datasets [6]. In contrast, open-vocabulary maps are not constrained ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. The Generation Process of COGraphs. projecting 2D semantic features onto 3D points and then encoding features into points [7] [8], instances [12] [28], ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Comparison of the original and decoded features when the encoder and decoder are trained on household-related images from ImageNet. same way as existing ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. COGraphs Merging. is functional for downstream tasks, the precision of the merging method is not a critical requirement. 1) Place Recognition: The feature ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. Feature Compression Evaluation. As illustrated in Fig. 5a, we compare the performance of the three encoding configurations with raw-clip, which directly uses the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. Cosine Similarity between Text Features and Image Features (before feature encoding and after feature decoding). TABLE III MAP MERGING EVALUATION Scene Dimension Pose ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7. Experiment Environments and Visualization of the COGraph. TABLE IV
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Map Merging Evaluation 1) Dataset: Since the Replica dataset lacks multi-room scenes suitable for collaborative mapping [22] (only apartment2 is available), we construct two ... | embodiment, simulator version and control stack | p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | Open-vocabulary 3D Scene Graphs Evaluation 1) Dataset: The Replica dataset [32] has been widely used in studies related to 3D scene reconstruction and object ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
@@ -120,8 +120,8 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Primary metric/result | The results show that both domainencode and general-encode achieve performance comparable to raw-clip. domain-encode performs the same with raw-clip when k = 1 while ... | numeric claim only at cited anchor | p. 6 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Experiments in Section IV are conducted on a desktop PC equipped with an Intel I7-13700 CPU and an Nvidia RTX 4080 GPU.
-- **p. 4 / III. METHOD - extractive PDF cue:** To address this, we compress the features into 3 dimensions using a lightweight feature encoder.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Experiments in Section IV are conducted on a desktop PC equipped with an Intel I7-13700 CPU and an Nvidia RTX 4080 GPU.
+- **p. 4 / III. METHOD - extractive body cue:** To address this, we compress the features into 3 dimensions using a lightweight feature encoder.
 
 ## Generalization and Failure Cases
 
@@ -157,12 +157,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** demonstrate that our feature compression process does not compromise the object finding rate and query success rate across the three evaluated scenes.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** 2) Metrics: Unlike multi-robot SLAM, our localization module relies on a ready-made SLAM algorithm, and the graph-structured map does not require high geometric precision.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Comparison of the original and decoded features when the encoder and decoder are trained on household-related images from ImageNet. same way as existing ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** In this section, we 1) conduct experimental evaluations comparing our approach with state-of-the-art methods (Section IVA), 2) analyze the open-vocabulary capabilities and design insights of ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** demonstrate that our feature compression process does not compromise the object finding rate and query success rate across the three evaluated scenes.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** 2) Metrics: Unlike multi-robot SLAM, our localization module relies on a ready-made SLAM algorithm, and the graph-structured map does not require high geometric precision.
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Comparison of the original and decoded features when the encoder and decoder are trained on household-related images from ImageNet. same way as existing ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** In this section, we 1) conduct experimental evaluations comparing our approach with state-of-the-art methods (Section IVA), 2) analyze the open-vocabulary capabilities and design insights of ...
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

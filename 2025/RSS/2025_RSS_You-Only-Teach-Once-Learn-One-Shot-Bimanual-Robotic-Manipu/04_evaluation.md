@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p149.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p149.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p149.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p149.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Results Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple ... | p. 10 (B. Results Comparison) |
 | B. Results Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Next, we replaced the input with point clouds containing only manipulated objects (id-2) or predicted simplified sparse keyposes (id-3), and the success rate and ... | p. 9 (B. Results Comparison) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We then processed these data into the form suitable for BiDP, including extracting 3D point clouds of manipulated objects and saving the corresponding multi-step ... | embodiment, simulator version and control stack | p. 8 (A. Experiment Setups), p. 7 (A. Experiment Setups) |
 | Task/environment | 1) Tasks: We evaluate YOTO on five real-world bimanual tasks, including pull drawer, pour water, unscrew bottle, uncover Lid and open box. | reset, timeout, object/scene variation | p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 - **p. 8 / B. Results Comparison - extractive body cue:** Here, we answer the questions raised at the beginning one by one, including basic in-distribution results and generalizations to out-of-distribution settings,
 - **p. 8 / A. Experiment Setups - extractive body cue:** Although above tests have new variations in object placements, we choose two tasks pul drawer and uncover 1id to perform more challenging ‘out-of-distribution (QOD) evaluations ...
 
-- **PDF anchors reviewed:** datasets p. 8 (A. Experiment Setups), p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups), p. 11 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), metrics p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), p. 17 (A. Implementation Details of Our BiDP), p. 8 (A. Experiment Setups), p. 8 (B. Results Comparison), baselines p. 11 (B. Results Comparison), p. 8 (A. Experiment Setups), p. 8 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), p. 11 (B. Results Comparison), results p. 10 (B. Results Comparison), p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 11 (B. Results Comparison), p. 17 (A. Implementation Details of Our BiDP), p. 10 (B. Results Comparison).
+- **Evidence anchors reviewed:** datasets p. 8 (A. Experiment Setups), p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups), p. 11 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), metrics p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), p. 17 (A. Implementation Details of Our BiDP), p. 8 (A. Experiment Setups), p. 8 (B. Results Comparison), baselines p. 11 (B. Results Comparison), p. 8 (A. Experiment Setups), p. 8 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), p. 11 (B. Results Comparison), results p. 10 (B. Results Comparison), p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 11 (B. Results Comparison), p. 17 (A. Implementation Details of Our BiDP), p. 10 (B. Results Comparison).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple substeps and less exploration of efficient ... (p. 10, B. Results Comparison).
+- **Metric evidence:** ‘TABLE V: Comparison of the average success rate of various ‘methods on all five tasks (in-distribution evaluations), (p. 9, B. Results Comparison).
+- **Baseline/ablation evidence:** also makes our model more robust compared to all baselines The core idea here is to rely on the still rapidly developing capabilities of vision foundation models, such as the ... (p. 11, B. Results Comparison).
+- **Failure/negative evidence:** Due to space limitations, we did not continue the demonstration proliferation and policy training. (p. 11, B. Results Comparison).

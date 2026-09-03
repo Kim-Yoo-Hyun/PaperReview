@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. O
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Setup - extractive PDF cue:** Both datasets contain scenes with complex layouts and possibly dynamic objects.
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** The distilled scene reconstruction model does not exhibit these issues, as it is trained on a diverse dataset.
-- **p. 5 / 4.1. Setup - extractive PDF cue:** We test our method on the challenging KITTI-360 [31] and Waymo [54] self-driving datasets.
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** In contrast, our synthesized scenes naturally handle such scenarios.
-- **p. 8 / 4.3.3. Viewpoint sampling - extractive PDF cue:** We evaluate several pose sampling strategies using our occupancy reconstruction benchmark.
-- **p. 7 / 4.3.1. Conditioning of the VCM - extractive PDF cue:** We evaluate different model configurations and training setups.
-- **p. 7 / 4.3.1. Conditioning of the VCM - extractive PDF cue:** We present scene reconstructions from several models on KITTI-360 [31] (left) and Waymo [54] (right).
-- **p. 8 / 4.4. Distillation into a Feed-Forward Model - extractive PDF cue:** The loss configuration used to distill synthetic data into the scene reconstruction model is critical to its performance.
+- **p. 5 / 4.1. Setup - extractive body cue:** Both datasets contain scenes with complex layouts and possibly dynamic objects.
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** The distilled scene reconstruction model does not exhibit these issues, as it is trained on a diverse dataset.
+- **p. 5 / 4.1. Setup - extractive body cue:** We test our method on the challenging KITTI-360 [31] and Waymo [54] self-driving datasets.
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** In contrast, our synthesized scenes naturally handle such scenarios.
+- **p. 8 / 4.3.3. Viewpoint sampling - extractive body cue:** We evaluate several pose sampling strategies using our occupancy reconstruction benchmark.
+- **p. 7 / 4.3.1. Conditioning of the VCM - extractive body cue:** We evaluate different model configurations and training setups.
+- **p. 7 / 4.3.1. Conditioning of the VCM - extractive body cue:** We present scene reconstructions from several models on KITTI-360 [31] (left) and Waymo [54] (right).
+- **p. 8 / 4.4. Distillation into a Feed-Forward Model - extractive body cue:** The loss configuration used to distill synthetic data into the scene reconstruction model is critical to its performance.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. O
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Scene Reconstruction | SYSTEM / EVALUATION SCOPE UNRESOLVED | We contend that, despite being slightly outperformed in quantitative metrics by the directly synthesized geometry, the distilled model is more reliable and significantly faster. | p. 6 (4.2. Scene Reconstruction) |
 | 4.3.2. Occlusion detection in novel views | SYSTEM / EVALUATION SCOPE UNRESOLVED | A camera rig with eight predefined poses and random rotations achieves the best performance. leverages two-way optical flow between the input and novel views ... | p. 8 (4.3.2. Occlusion detection in novel views) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. O
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Setup - extractive PDF cue:** Both datasets contain scenes with complex layouts and possibly dynamic objects.
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** The distilled scene reconstruction model does not exhibit these issues, as it is trained on a diverse dataset.
-- **p. 5 / 4.1. Setup - extractive PDF cue:** We test our method on the challenging KITTI-360 [31] and Waymo [54] self-driving datasets.
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** In contrast, our synthesized scenes naturally handle such scenarios.
-- **p. 8 / 4.3.3. Viewpoint sampling - extractive PDF cue:** We evaluate several pose sampling strategies using our occupancy reconstruction benchmark.
-- **p. 7 / 4.3.1. Conditioning of the VCM - extractive PDF cue:** We evaluate different model configurations and training setups.
-- **p. 7 / 4.3.1. Conditioning of the VCM - extractive PDF cue:** We present scene reconstructions from several models on KITTI-360 [31] (left) and Waymo [54] (right).
-- **p. 8 / 4.4. Distillation into a Feed-Forward Model - extractive PDF cue:** The loss configuration used to distill synthetic data into the scene reconstruction model is critical to its performance.
+- **p. 5 / 4.1. Setup - extractive body cue:** Both datasets contain scenes with complex layouts and possibly dynamic objects.
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** The distilled scene reconstruction model does not exhibit these issues, as it is trained on a diverse dataset.
+- **p. 5 / 4.1. Setup - extractive body cue:** We test our method on the challenging KITTI-360 [31] and Waymo [54] self-driving datasets.
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** In contrast, our synthesized scenes naturally handle such scenarios.
+- **p. 8 / 4.3.3. Viewpoint sampling - extractive body cue:** We evaluate several pose sampling strategies using our occupancy reconstruction benchmark.
+- **p. 7 / 4.3.1. Conditioning of the VCM - extractive body cue:** We evaluate different model configurations and training setups.
+- **p. 7 / 4.3.1. Conditioning of the VCM - extractive body cue:** We present scene reconstructions from several models on KITTI-360 [31] (left) and Waymo [54] (right).
+- **p. 8 / 4.4. Distillation into a Feed-Forward Model - extractive body cue:** The loss configuration used to distill synthetic data into the scene reconstruction model is critical to its performance.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Dream-to-Recon. We leverage fine-tuned diffusion models for inpainting and a pre-trained depth predictor to generate high- quality scene geometry from a single image, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method overview. a) We train a view completion model (VCM) that inpaints occluded areas and refines warped views. Training uses only a single ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative scene reconstruction. We report cene geometry estimation results using ground-truth derived from accumulated LiDAR scans and semantic annotations on KITTI-360 and Waymo. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative scene reconstruction. We present scene reconstructions from several models on KITTI-360 [31] (left) and Waymo [54] (right). The geometry is discretized into ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Effect of VCM conditioning. We evaluate different model configurations and training setups. VCMsimple receives only masked RGB input. VCMK and VCMK→W denote the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Effect of VCM conditioning. See Tab. 2.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Effect of occlusion detection strategies. We compare gradient-based (ours) to optical-flow based occlusion detection, and a combination of both. Occlusions are shown in ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Pose sampling strategies. We evaluate the quality of generated geometry under various pose sampling strategies. A camera rig with eight predefined poses and ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dream-to-Recon. We leverage fine-tuned diffusion models for inpainting and a pre-trained depth predictor to generate high- quality scene geometry from a single image, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method overview. a) We train a view completion model (VCM) that inpaints occluded areas and refines warped views. Training uses only a single ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative scene reconstruction. We report cene geometry estimation results using ground-truth derived from accumulated LiDAR scans and semantic annotations on KITTI-360 and Waymo. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative scene reconstruction. We present scene reconstructions from several models on KITTI-360 [31] (left) and Waymo [54] (right). The geometry is discretized into ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Effect of VCM conditioning. We evaluate different model configurations and training setups. VCMsimple receives only masked RGB input. VCMK and VCMK→W denote the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Effect of VCM conditioning. See Tab. 2.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Effect of occlusion detection strategies. We compare gradient-based (ours) to optical-flow based occlusion detection, and a combination of both. Occlusions are shown in ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Pose sampling strategies. We evaluate the quality of generated geometry under various pose sampling strategies. A camera rig with eight predefined poses and ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Both datasets contain scenes with complex layouts and possibly dynamic objects. | embodiment, simulator version and control stack | p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction) |
 | Task/environment | The distilled scene reconstruction model does not exhibit these issues, as it is trained on a diverse dataset. | reset, timeout, object/scene variation | p. 6 (4.2. Scene Reconstruction), p. 5 (4.1. Setup) |
@@ -123,8 +123,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. O
 | Primary metric/result | A camera rig with eight predefined poses and random rotations achieves the best performance. leverages two-way optical flow between the input and novel views ... | numeric claim only at cited anchor | p. 8 (4.3.2. Occlusion detection in novel views) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Setup - extractive PDF cue:** For KITTI-360, we load images at 384×1280 resolution during View Completion Model training and at 192 × 640 resolution otherwise.
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
+- **p. 5 / 4.1. Setup - extractive body cue:** For KITTI-360, we load images at 384×1280 resolution during View Completion Model training and at 192 × 640 resolution otherwise.
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
 
 ## Generalization and Failure Cases
 
@@ -159,13 +159,13 @@ PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. O
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** This failure stems from their use of multi-view data across multiple timesteps, which introduces inconsistency when the object is in motion.
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** Since depth prediction cannot reason about occluded areas, we do not report the IEacc and IErec metrics.
-- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive PDF cue:** The fused strategy mitigates some of the false positives compared to optical flow alone but still inherits many of its limitations.
-- **p. 7 / 4.3.2. Occlusion detection in novel views - extractive PDF cue:** The accuracy and robustness of our occlusion detection strategy directly influence the effectiveness of refining incomplete novel views using VCM.
-- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive PDF cue:** 5, the depth gradient method robustly captures occlusions without requiring extensive post-filtering.
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** This failure stems from their use of multi-view data across multiple timesteps, which introduces inconsistency when the object is in motion.
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** Since depth prediction cannot reason about occluded areas, we do not report the IEacc and IErec metrics.
+- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive body cue:** The fused strategy mitigates some of the false positives compared to optical flow alone but still inherits many of its limitations.
+- **p. 7 / 4.3.2. Occlusion detection in novel views - extractive body cue:** The accuracy and robustness of our occlusion detection strategy directly influence the effectiveness of refining incomplete novel views using VCM.
+- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive body cue:** 5, the depth gradient method robustly captures occlusions without requiring extensive post-filtering.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction), p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.3. Viewpoint sampling), p. 7 (4.3.1. Conditioning of the VCM), metrics p. 7 (4.3.2. Occlusion detection in novel views), p. 6 (4.1. Setup), p. 6 (4.1. Setup), p. 8 (4.4. Distillation into a Feed-Forward Model), p. 8 (Figure/Table caption), p. 5 (4.1. Setup), baselines p. 6 (4.2. Scene Reconstruction), p. 7 (4.3.1. Conditioning of the VCM), p. 6 (4.1. Setup), p. 8 (4.3.3. Viewpoint sampling), p. 8 (4.3.2. Occlusion detection in novel views), p. 4 (Figure/Table caption), results p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. Occlusion detection in novel views), p. 6 (4.2. Scene Reconstruction), p. 7 (4.3.1. Conditioning of the VCM), p. 7 (4.3.1. Conditioning of the VCM), p. 8 (4.4. Distillation into a Feed-Forward Model).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction), p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.3. Viewpoint sampling), p. 7 (4.3.1. Conditioning of the VCM), metrics p. 7 (4.3.2. Occlusion detection in novel views), p. 6 (4.1. Setup), p. 6 (4.1. Setup), p. 8 (4.4. Distillation into a Feed-Forward Model), p. 8 (Figure/Table caption), p. 5 (4.1. Setup), baselines p. 6 (4.2. Scene Reconstruction), p. 7 (4.3.1. Conditioning of the VCM), p. 6 (4.1. Setup), p. 8 (4.3.3. Viewpoint sampling), p. 8 (4.3.2. Occlusion detection in novel views), p. 4 (Figure/Table caption), results p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. Occlusion detection in novel views), p. 6 (4.2. Scene Reconstruction), p. 7 (4.3.1. Conditioning of the VCM), p. 7 (4.3.1. Conditioning of the VCM), p. 8 (4.4. Distillation into a Feed-Forward Model).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4195_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4195_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 12 / 4 Experiments - extractive PDF cue:** Also, our approach is better at distinguishing objects with similar colors, such as the "Green apple" prompt case. compare fine-grained mask localization quality, we annotate ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve the existing LERF-Localization [15] evaluation dataset and ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 13 Table 3: Comparison of Open Vocabulary Segmentation on LERF-Mask dataset.
-- **p. 13 / 4 Experiments - extractive PDF cue:** 9: 3D Object removal on the Tanks & Temples dataset [17].
-- **p. 9 / 4 Experiments - extractive PDF cue:** All datasets are trained for 30K iterations on one A100 GPU.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 11 Rendered Image K=1 K=5 K=10 K=5 + Post process K=0 Fig.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Ablation of 3D Regularization Loss We perform ablation of K in our 3D Regularization Loss on the Kitchen dataset of Mip-NeRF 360 [1] to select ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** In Table 3, the advantage of our Gaussian Grouping is significant, doubling the performance of LERF and SA3D on both the "figurines" and "ramen" scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** Also, our approach is better at distinguishing objects with similar colors, such as the "Green apple" prompt case. compare fine-grained mask localization quality, we annotate ...
+- **p. 9 / 4 Experiments - extractive body cue:** 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve the existing LERF-Localization [15] evaluation dataset and ...
+- **p. 13 / 4 Experiments - extractive body cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 13 Table 3: Comparison of Open Vocabulary Segmentation on LERF-Mask dataset.
+- **p. 13 / 4 Experiments - extractive body cue:** 9: 3D Object removal on the Tanks & Temples dataset [17].
+- **p. 9 / 4 Experiments - extractive body cue:** All datasets are trained for 30K iterations on one A100 GPU.
+- **p. 11 / 4 Experiments - extractive body cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 11 Rendered Image K=1 K=5 K=10 K=5 + Post process K=0 Fig.
+- **p. 11 / 4 Experiments - extractive body cue:** Ablation of 3D Regularization Loss We perform ablation of K in our 3D Regularization Loss on the Kitchen dataset of Mip-NeRF 360 [1] to select ...
+- **p. 12 / 4 Experiments - extractive body cue:** In Table 3, the advantage of our Gaussian Grouping is significant, doubling the performance of LERF and SA3D on both the "figurines" and "ramen" scenes.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 6 and Table 2, K = 5 achieves both the best balance between the scene reconstruction and 3D object removal accuracy. | p. 11 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Gaussian Grouping outperforms Panoptic Lifting in both performance and speed. | p. 12 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 12 / 4 Experiments - extractive PDF cue:** Also, our approach is better at distinguishing objects with similar colors, such as the "Green apple" prompt case. compare fine-grained mask localization quality, we annotate ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve the existing LERF-Localization [15] evaluation dataset and ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 13 Table 3: Comparison of Open Vocabulary Segmentation on LERF-Mask dataset.
-- **p. 13 / 4 Experiments - extractive PDF cue:** 9: 3D Object removal on the Tanks & Temples dataset [17].
-- **p. 9 / 4 Experiments - extractive PDF cue:** All datasets are trained for 30K iterations on one A100 GPU.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 11 Rendered Image K=1 K=5 K=10 K=5 + Post process K=0 Fig.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Ablation of 3D Regularization Loss We perform ablation of K in our 3D Regularization Loss on the Kitchen dataset of Mip-NeRF 360 [1] to select ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** In Table 3, the advantage of our Gaussian Grouping is significant, doubling the performance of LERF and SA3D on both the "figurines" and "ramen" scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** Also, our approach is better at distinguishing objects with similar colors, such as the "Green apple" prompt case. compare fine-grained mask localization quality, we annotate ...
+- **p. 9 / 4 Experiments - extractive body cue:** 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve the existing LERF-Localization [15] evaluation dataset and ...
+- **p. 13 / 4 Experiments - extractive body cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 13 Table 3: Comparison of Open Vocabulary Segmentation on LERF-Mask dataset.
+- **p. 13 / 4 Experiments - extractive body cue:** 9: 3D Object removal on the Tanks & Temples dataset [17].
+- **p. 9 / 4 Experiments - extractive body cue:** All datasets are trained for 30K iterations on one A100 GPU.
+- **p. 11 / 4 Experiments - extractive body cue:** Gaussian Grouping: Segment and Edit Anything in 3D Scenes 11 Rendered Image K=1 K=5 K=10 K=5 + Post process K=0 Fig.
+- **p. 11 / 4 Experiments - extractive body cue:** Ablation of 3D Regularization Loss We perform ablation of K in our 3D Regularization Loss on the Kitchen dataset of Mip-NeRF 360 [1] to select ...
+- **p. 12 / 4 Experiments - extractive body cue:** In Table 3, the advantage of our Gaussian Grouping is significant, doubling the performance of LERF and SA3D on both the "figurines" and "ramen" scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Our Gaussian Grouping jointly reconstructs (column a) and segments (column b) anything in full open-world 3D scenes, with fine-grained instance and stuff level ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: The method pipeline of our Gaussian Grouping contains three main steps: (a) We first prepare the input by deploying SAM to automatically generate ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 3: The grouped 3D Gaussians after training, where each group represents a specific instance / stuff of the 3D scene and can be fully ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 4: Ablation on the Identity Con- sistency across views, where we treat multi-view images as a video and as- sociate the mask labels to ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Influence of Identity Encoding on Mip-NeRF 360 [1] dataset with its 7 public scenes. The joint train- ing of the introduced Identity Encodings ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation of K of 3D Regularization Loss on the 3D object removal. RAcc: Object Removal Accuracy. Model Gaussian Splatting Gaussian Grouping K=0 K=1
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 6: Visual ablation of K in the 3D Regularization Loss on object removal editing of MipNeRF360. We remove Gaussians classified as lego with various ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our Gaussian Grouping jointly reconstructs (column a) and segments (column b) anything in full open-world 3D scenes, with fine-grained instance and stuff level ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: The method pipeline of our Gaussian Grouping contains three main steps: (a) We first prepare the input by deploying SAM to automatically generate ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 3: The grouped 3D Gaussians after training, where each group represents a specific instance / stuff of the 3D scene and can be fully ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4: Ablation on the Identity Con- sistency across views, where we treat multi-view images as a video and as- sociate the mask labels to ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Influence of Identity Encoding on Mip-NeRF 360 [1] dataset with its 7 public scenes. The joint train- ing of the introduced Identity Encodings ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Ablation of K of 3D Regularization Loss on the 3D object removal. RAcc: Object Removal Accuracy. Model Gaussian Splatting Gaussian Grouping K=0 K=1
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 6: Visual ablation of K in the 3D Regularization Loss on object removal editing of MipNeRF360. We remove Gaussians classified as lego with various ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Also, our approach is better at distinguishing objects with similar colors, such as the "Green apple" prompt case. compare fine-grained mask localization quality, we ... | embodiment, simulator version and control stack | p. 12 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve the existing LERF-Localization [15] evaluation dataset ... | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 13 (4 Experiments) |
@@ -123,9 +123,9 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Primary metric/result | Gaussian Grouping outperforms Panoptic Lifting in both performance and speed. | numeric claim only at cited anchor | p. 12 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 10 / 4 Experiments - extractive PDF cue:** GT Image Rendered Image Rendered Mask Cost-based Linear Assignment (2K Iterations, training time: > 1 hour) Our Zero-shot Mask Association (2K Iterations, training time: 1 ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** For 2K training iteration, linear assignment requires 1 hour but our associated mask input only requires 1 minute.
-- **p. 13 / 4 Experiments - extractive PDF cue:** 10: Comparison on 3D object inpainting cases, where SPIn-NeRF [33] requires 5h training while our method with better inpainting quality only needs 1 hour training ...
+- **p. 10 / 4 Experiments - extractive body cue:** GT Image Rendered Image Rendered Mask Cost-based Linear Assignment (2K Iterations, training time: > 1 hour) Our Zero-shot Mask Association (2K Iterations, training time: 1 ...
+- **p. 10 / 4 Experiments - extractive body cue:** For 2K training iteration, linear assignment requires 1 hour but our associated mask input only requires 1 minute.
+- **p. 13 / 4 Experiments - extractive body cue:** 10: Comparison on 3D object inpainting cases, where SPIn-NeRF [33] requires 5h training while our method with better inpainting quality only needs 1 hour training ...
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** Model Gaussian Splatting Gaussian Grouping K=0 K=1 k=2 K=5 K=10 PSNR 30.32 30.51 30.62 30.61 30.72 30.62 RAcc N/A 41.2% 40.5% 67.5% 76.6% 77.8% to ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** This is due to Gaussians inside the bear being occluded during training and cannot be supervised sufficiently.
-- **p. 14 / 4 Experiments - extractive PDF cue:** Limitation Due to the lack of dynamic modeling and time-dependent updating, Gaussian Grouping is currently limited to the static 3D scene.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Doubling the dimension to 32 does not bring a better reconstruction quality compared to 16 but make training 1.3 times slower.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Since SAM does not support language prompts, both SA3D and our method adopt Grounding DINO [25] to identify the mask ID in a 2D image, ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to ...
+- **p. 10 / 4 Experiments - extractive body cue:** Model Gaussian Splatting Gaussian Grouping K=0 K=1 k=2 K=5 K=10 PSNR 30.32 30.51 30.62 30.61 30.72 30.62 RAcc N/A 41.2% 40.5% 67.5% 76.6% 77.8% to ...
+- **p. 11 / 4 Experiments - extractive body cue:** This is due to Gaussians inside the bear being occluded during training and cannot be supervised sufficiently.
+- **p. 14 / 4 Experiments - extractive body cue:** Limitation Due to the lack of dynamic modeling and time-dependent updating, Gaussian Grouping is currently limited to the static 3D scene.
+- **p. 11 / 4 Experiments - extractive body cue:** Doubling the dimension to 32 does not bring a better reconstruction quality compared to 16 but make training 1.3 times slower.
+- **p. 12 / 4 Experiments - extractive body cue:** Since SAM does not support language prompts, both SA3D and our method adopt Grounding DINO [25] to identify the mask ID in a 2D image, ...
 
-- **PDF anchors reviewed:** datasets p. 12 (4 Experiments), p. 9 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 12 (4 Experiments), p. 9 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

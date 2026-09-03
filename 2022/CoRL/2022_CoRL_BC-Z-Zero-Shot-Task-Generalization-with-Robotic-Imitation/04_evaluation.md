@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2202.02005; PDF retrieval source: https://arxiv.org/pdf/2202.02005. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2202.02005; PDF retrieval source: https://arxiv.org/pdf/2202.02005. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. The first 4 tasks only use ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5: Mean number of interventions vs. task success rate. Each point represents a pol- icy evaluated during HG-DAgger data collection. There is a ... | p. 8 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our evaluation covered 29 unseen vision-based manipulation tasks with a variety of objects and scenes. | embodiment, simulator version and control stack | p. 8 (7 Discussion), p. 8 (7 Discussion) |
 | Task/environment | However, even for tasks that are less successful, the robot often exhibits behavior suggesting that it understands at least part of the task, reaching ... | reset, timeout, object/scene variation | p. 8 (7 Discussion) |
@@ -113,7 +113,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| These properties have been explored previously; our aim is to empirically study whether these ideas scale to a broad range of real-world tasks. *Equal ... | Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. The first 4 tasks only use ... | PDF body cue; verify exact table/figure and matched conditions | p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 14 (Figure/Table caption), p. 3 (Figure/Table caption) |
+| Our main contribution is an empirical study of a large-scale interactive imitation learning system that solves a breadth of tasks, including zero-shot and few-shot ... | Table 2: Success rates for zero-shot (language) and few-shot (video) generalization to tasks not in the training dataset. The first 4 tasks only use ... | PDF body cue; verify exact table/figure and matched conditions | p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 14 (Figure/Table caption), p. 3 (Figure/Table caption) |
 | Primary metric/result | Figure 5: Mean number of interventions vs. task success rate. Each point represents a pol- icy evaluated during HG-DAgger data collection. There is a ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
@@ -157,7 +157,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative examples of BC-Z successfully performing held-out tasks. push open a door while avoiding collisions. Both tasks use the architecture in Figure 3, ...
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Human demonstrations of the task (left) are augmented with random distortions and reflec- tions (right), then trained to match language features for the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (7 Discussion), p. 8 (7 Discussion), metrics p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 14 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (7 Discussion), p. 6 (Figure/Table caption), baselines p. 17 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (7 Discussion), p. 20 (Figure/Table caption), p. 21 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 14 (Figure/Table caption), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (7 Discussion), p. 8 (7 Discussion), metrics p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 14 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (7 Discussion), p. 6 (Figure/Table caption), baselines p. 17 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (7 Discussion), p. 20 (Figure/Table caption), p. 21 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 14 (Figure/Table caption), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each ... (p. 17, Figure/Table caption).
+- **Metric evidence:** Another limitation is the lower performance of the video-conditioned policy, which encourages future research on improving the generalization of video-based task representations and enhancing the performance of imitation learning algori ... (p. 8, 7 Discussion).
+- **Baseline/ablation evidence:** Table 4: Ablation Studies. Left: Multi-task vs. single task models on the ‘place the bottle in the ceramic bowl' task. Training across tasks and with adaptive state-diffs is important for ... (p. 8, Figure/Table caption).
+- **Failure/negative evidence:** Further, any collision of the robot base and arm (not including the gripper) with the environment counted as the task failure by the operator. (p. 20, C Featurization Details).

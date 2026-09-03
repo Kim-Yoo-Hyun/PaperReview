@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `joint/task state, reference와 sensor feedback → state estimate, task-space error와 control decision → torque, force, velocity 또는 position command`.
-- 이 논문의 재사용 가능한 지점은 However, observation and actuation noise ‘can lead to errors in state estimation, where the focus is often filtering, i.e., estimating the latest robot pose incrementally.를 ‘An approach to deal with the model gap is to use feedback controllers for trajectory following, given the latest state estimate [12, 33].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 state estimate, task-space error와 control decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The "multiple obstacles" environment is similar to the setups from simulated experiments, where collisions with obstacles are considered failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history and forward horizon of the planned trajectory. ‘The ‘combination of ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** However, observation and actuation noise ‘can lead to errors in state estimation, where the focus is often filtering, i.e., estimating the latest robot pose incrementally. (p. 2, 1. INTRODUCTION).
+- **Paper-specific mechanism:** Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired goal region without collisions. (p. 3, 1. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption); the relevant task/metric cue is Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System Exception, i. the accumulation of numerical errors, which does not occur for ... (p. 12, A. Experimemal setup).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Given the identified robot model /, (1, us). an environment ‘map that identifies obstacle regions %, and a motion planning query specifying 9 and Xq. the approach ealls an asymptotically optimal kinodynamie ....
-3. Compare against the body-reported baseline or a matched simpler baseline: The baseline comparison point is open-loop execution of the desired trajectory..
-4. Report the body metric and its denominator/aggregation: Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is 100%). Trajectory ....
-5. Re-run the body-reported ablation/failure condition: The ablation evaluation of the effect of the sliding window size, the use of the duration AT' as a factor variable, the impact of the obstacle factor, as well as the impact ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: However, observation and actuation noise ‘can lead to errors in state estimation, where the focus is often filtering, i.e., estimating the latest robot pose incrementally. (p. 2, 1. INTRODUCTION); preserve the objective/update rule: Beyond the ternary dynamics factor, there are costs imposed for the optimization by unary factors for obstacle avoidance (e(X.x)) over the intermediate state variables (X : Xp), a state prio ... (p. 5, B. Trajectory Optimization as a Motion Planner).
+2. Use the paper-reported task/data/environment cue: Given the identified robot model /, (1, us). an environment ‘map that identifies obstacle regions %, and a motion planning query specifying 9 and Xq. the approach ealls an asymptotically ... (p. 5, V. SIMULTANEOUS TRAIECTORY ESTIMATION).
+3. Compare against the reported or matched baseline: The baseline comparison point is open-loop execution of the desired trajectory. (p. 10, A. Experimemal setup).
+4. Report the body metric with its denominator and aggregation: Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: The ablation evaluation of the effect of the sliding window size, the use of the duration AT' as a factor variable, the impact of the obstacle factor, as well as ... (p. 12, A. Experimemal setup); if none is reported, design one around: The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System Exception, i. the accumulation of numerical errors, which does not occur for ... (p. 12, A. Experimemal setup).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner); the primary result is directionally consistent at p. 11 (Figure/Table caption), p. 12 (A. Experimemal setup), p. 11 (A. Experimemal setup); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), match the reported outcome at p. 11 (Figure/Table caption), p. 11 (A. Experimemal setup), p. 9 (Figure/Table caption), and measure the boundary at p. 12 (A. Experimemal setup), p. 12 (A. Experimemal setup).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 sliding, window, mechanism mechanism이 The baseline comparison point is open-loop execution of the desired trajectory. 대비 Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a ...을 개선하고, The "multiple obstacles" environment is similar to the setups from simulated experiments, where collisions with obstacles ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (However, observation and actuation noise ‘can lead to errors in state estimation, where the focus is often filtering, i.e., estimating the latest ...), does the paper-specific mechanism (Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired ...) retain the reported evaluation outcome (Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a ...) when tested against the paper's strongest explicit boundary (The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired goal region without collisions. (p. 3, 1. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption).
+- **Strongest explicit boundary:** The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System Exception, i. the accumulation of numerical errors, which does not occur for ... (p. 12, A. Experimemal setup).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

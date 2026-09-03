@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.11251; PDF retrieval source: https://arxiv.org/pdf/2010.11251. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.11251; PDF retrieval source: https://arxiv.org/pdf/2010.11251. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | The model computes a latent embedding ¯lt that represents the current state, and an action ¯at. | p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | The student model is a temporal convolutional network (TCN) [22] that receives a sequence of N proprioceptive observations as input. | p. 6 (4. MATERIALS AND METHODS), p. 7 (4. MATERIALS AND METHODS) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -122,8 +122,17 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), p. 7 (4. MATERIALS AND METHODS), objective p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), temporal p. 6 (3. DISCUSSION), p. 8 (50 Hz), p. 10 (50 N external force), p. 6 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION), p. 9 (50 Hz).
+- **Evidence anchors reviewed:** method p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), p. 7 (4. MATERIALS AND METHODS), objective p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), temporal p. 6 (3. DISCUSSION), p. 8 (50 Hz), p. 10 (50 N external force), p. 6 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION), p. 9 (50 Hz).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The model computes a latent embedding ¯lt that represents the current state, and an action ¯at. (p. 6, 4. MATERIALS AND METHODS).
+- **Objective/update evidence:** The training objective rewards locomotion in prescribed directions. (p. 6, 4. MATERIALS AND METHODS).
+- **Temporal/runtime evidence:** The student model is a temporal convolutional network (TCN) [22] that receives a sequence of N proprioceptive observations as input. (p. 6, 4. MATERIALS AND METHODS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

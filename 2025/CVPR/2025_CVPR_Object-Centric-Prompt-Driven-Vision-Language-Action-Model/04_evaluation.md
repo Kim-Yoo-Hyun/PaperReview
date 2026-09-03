@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Comparisons with Baselines - extractive PDF cue:** Simulator visualizations are shown in the left of Figure 4, illustrating the prompt input, the robot's contact state with the object, and the final state ...
-- **p. 6 / 4.1. Setup Details - extractive PDF cue:** Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes under ...
-- **p. 8 / 4.4. Real-world Experiment - extractive PDF cue:** We conduct experiments involving interaction with various real-world objects without additional sim-to-real finetuning.
-- **p. 8 / 4.4. Real-world Experiment - extractive PDF cue:** During fine-tuning, the image input includes only the object, while the language input excludes all 2D prompts but incorporates the current robot state to ensure ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚 0 Seen Unseen Ex1 ✓ - - - 0.42 0.37 ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Consequently, it becomes challenging to make accurate object-centric manipulation predictions when relying solely on language prompts.
-- **p. 6 / 4.1. Setup Details - extractive PDF cue:** We utilize the manipulation success rate to assess the effectiveness of the manipulation, calculated as the ratio of successfully manipulated samples to the total number ...
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Real-world success rate. * contains multiple steps.
+- **p. 6 / 4.2. Comparisons with Baselines - extractive body cue:** Simulator visualizations are shown in the left of Figure 4, illustrating the prompt input, the robot's contact state with the object, and the final state ...
+- **p. 6 / 4.1. Setup Details - extractive body cue:** Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes under ...
+- **p. 8 / 4.4. Real-world Experiment - extractive body cue:** We conduct experiments involving interaction with various real-world objects without additional sim-to-real finetuning.
+- **p. 8 / 4.4. Real-world Experiment - extractive body cue:** During fine-tuning, the image input includes only the object, while the language input excludes all 2D prompts but incorporates the current robot state to ensure ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚 0 Seen Unseen Ex1 ✓ - - - 0.42 0.37 ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Consequently, it becomes challenging to make accurate object-centric manipulation predictions when relying solely on language prompts.
+- **p. 6 / 4.1. Setup Details - extractive body cue:** We utilize the manipulation success rate to assess the effectiveness of the manipulation, calculated as the ratio of successfully manipulated samples to the total number ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Real-world success rate. * contains multiple steps.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | Beginning with Ex1, where only a 2D position prompt is provided, the model achieves impressive performance with scores of 0.42/0.37. | p. 6 (4.3. Ablation Study) |
 | 4.3.2. Tolerance Analysis of Prompt Noise | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results, shown in Figure 5, indicate that with 10% and 20% noise, our method achieves performance levels comparable to those of the noise-free ... | p. 8 (4.3.2. Tolerance Analysis of Prompt Noise) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Comparisons with Baselines - extractive PDF cue:** Simulator visualizations are shown in the left of Figure 4, illustrating the prompt input, the robot's contact state with the object, and the final state ...
-- **p. 6 / 4.1. Setup Details - extractive PDF cue:** Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes under ...
-- **p. 8 / 4.4. Real-world Experiment - extractive PDF cue:** We conduct experiments involving interaction with various real-world objects without additional sim-to-real finetuning.
-- **p. 8 / 4.4. Real-world Experiment - extractive PDF cue:** During fine-tuning, the image input includes only the object, while the language input excludes all 2D prompts but incorporates the current robot state to ensure ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚 0 Seen Unseen Ex1 ✓ - - - 0.42 0.37 ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Consequently, it becomes challenging to make accurate object-centric manipulation predictions when relying solely on language prompts.
+- **p. 6 / 4.2. Comparisons with Baselines - extractive body cue:** Simulator visualizations are shown in the left of Figure 4, illustrating the prompt input, the robot's contact state with the object, and the final state ...
+- **p. 6 / 4.1. Setup Details - extractive body cue:** Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes under ...
+- **p. 8 / 4.4. Real-world Experiment - extractive body cue:** We conduct experiments involving interaction with various real-world objects without additional sim-to-real finetuning.
+- **p. 8 / 4.4. Real-world Experiment - extractive body cue:** During fine-tuning, the image input includes only the object, while the language input excludes all 2D prompts but incorporates the current robot state to ensure ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚 0 Seen Unseen Ex1 ✓ - - - 0.42 0.37 ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Consequently, it becomes challenging to make accurate object-centric manipulation predictions when relying solely on language prompts.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) shows our expression of different color prompts. (b) shows that we utilize a sequence of images with crayon visual prompts to express ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. We design training pairs that convey varying levels of information to enable the model to comprehend each type of prompt and introduce loss ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustration of model inference with input generated in different ways. GPT-4 [1] is then prompted to select lines from all candidates to represent ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of our method against baseline methods. (s) and (f) denote suction gripper and finger gripper, respectively. Bold text indicates the highest score ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation Study. dict rotation given the same pixel coordinate, which results in lower scores of 0.35/0.31. This shows even without direc- tional prompts, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Robustness analysis on the noise in prompts. Open the trashcan Open microwave* Lift lid Wipe
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Real-world success rate. * contains multiple steps.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) shows our expression of different color prompts. (b) shows that we utilize a sequence of images with crayon visual prompts to express ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. We design training pairs that convey varying levels of information to enable the model to comprehend each type of prompt and introduce loss ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Illustration of model inference with input generated in different ways. GPT-4 [1] is then prompted to select lines from all candidates to represent ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison of our method against baseline methods. (s) and (f) denote suction gripper and finger gripper, respectively. Bold text indicates the highest score ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation Study. dict rotation given the same pixel coordinate, which results in lower scores of 0.35/0.31. This shows even without direc- tional prompts, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Robustness analysis on the noise in prompts. Open the trashcan Open microwave* Lift lid Wipe
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Real-world success rate. * contains multiple steps.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Simulator visualizations are shown in the left of Figure 4, illustrating the prompt input, the robot's contact state with the object, and the final ... | embodiment, simulator version and control stack | p. 6 (4.2. Comparisons with Baselines), p. 6 (4.1. Setup Details) |
 | Task/environment | Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes ... | reset, timeout, object/scene variation | p. 6 (4.1. Setup Details), p. 8 (4.4. Real-world Experiment) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 | Primary metric/result | The results, shown in Figure 5, indicate that with 10% and 20% noise, our method achieves performance levels comparable to those of the noise-free ... | numeric claim only at cited anchor | p. 8 (4.3.2. Tolerance Analysis of Prompt Noise) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Setup Details - extractive PDF cue:** Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes under ...
-- **p. 6 / 4.1. Setup Details - extractive PDF cue:** We follow the procedure in Section 3.2 to collect prompts within the simulator, which takes about 6-8 hours to collect about 10,000 training samples.
-- **p. 8 / 4.4. Real-world Experiment - extractive PDF cue:** The model is finetuned for 20 epochs using key frames and the corresponding predicted 3D poses from successful trials in the previous experiment as ground ...
+- **p. 6 / 4.1. Setup Details - extractive body cue:** Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes under ...
+- **p. 6 / 4.1. Setup Details - extractive body cue:** We follow the procedure in Section 3.2 to collect prompts within the simulator, which takes about 6-8 hours to collect about 10,000 training samples.
+- **p. 8 / 4.4. Real-world Experiment - extractive body cue:** The model is finetuned for 20 epochs using key frames and the corresponding predicted 3D poses from successful trials in the previous experiment as ground ...
 
 ## Generalization and Failure Cases
 
@@ -157,12 +157,12 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitation: As for the limitation, though our method can not directly avoid obstacles, we can incorporate collision-free motion planner library like curobo [48] to realize ...
-- **p. 8 / 4.3.2. Tolerance Analysis of Prompt Noise - extractive PDF cue:** Ablation experiments regarding the effectiveness of each loss and failure case analysis are shown in Appendix.5 and Appendix.6.
-- **p. 6 / 4.2. Comparisons with Baselines - extractive PDF cue:** However, our results demonstrate the robustness of CrayonRobo in handling such input inaccuracies.
-- **p. 6 / 4.2. Comparisons with Baselines - extractive PDF cue:** This is because the model is trained to manipulate objects, it can, to some extent, correct the noise in the prompts.
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitation: As for the limitation, though our method can not directly avoid obstacles, we can incorporate collision-free motion planner library like curobo [48] to realize ...
+- **p. 8 / 4.3.2. Tolerance Analysis of Prompt Noise - extractive body cue:** Ablation experiments regarding the effectiveness of each loss and failure case analysis are shown in Appendix.5 and Appendix.6.
+- **p. 6 / 4.2. Comparisons with Baselines - extractive body cue:** However, our results demonstrate the robustness of CrayonRobo in handling such input inaccuracies.
+- **p. 6 / 4.2. Comparisons with Baselines - extractive body cue:** This is because the model is trained to manipulate objects, it can, to some extent, correct the noise in the prompts.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Comparisons with Baselines), p. 6 (4.1. Setup Details), p. 8 (4.4. Real-world Experiment), p. 8 (4.4. Real-world Experiment), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), metrics p. 6 (4.1. Setup Details), p. 8 (4.3. Ablation Study), p. 8 (4.4. Real-world Experiment), p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-world Experiment), p. 8 (4.3.2. Tolerance Analysis of Prompt Noise), results p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Tolerance Analysis of Prompt Noise), p. 6 (4.2. Comparisons with Baselines), p. 7 (Figure/Table caption), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Comparisons with Baselines), p. 6 (4.1. Setup Details), p. 8 (4.4. Real-world Experiment), p. 8 (4.4. Real-world Experiment), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), metrics p. 6 (4.1. Setup Details), p. 8 (4.3. Ablation Study), p. 8 (4.4. Real-world Experiment), p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-world Experiment), p. 8 (4.3.2. Tolerance Analysis of Prompt Noise), results p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Tolerance Analysis of Prompt Noise), p. 6 (4.2. Comparisons with Baselines), p. 7 (Figure/Table caption), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

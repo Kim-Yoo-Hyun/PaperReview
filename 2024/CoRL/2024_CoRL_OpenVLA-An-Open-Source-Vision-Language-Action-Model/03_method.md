@@ -2,20 +2,22 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/kim25c.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/kim25c.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction)): OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot manipulation trajectories from the Open-X ...
+PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction), p. 3 (1 Introduction)): OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot manipulation trajectories from the Open-X ...
 
 ## Method Body Digest
 
 - **p. 2 / 1 Introduction - extractive body cue:** OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot ...
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA: [ x, , Grip] = … Δ Δθ Δ Multi-Robot Control & Efficient Fine-Tuning Large-Scale Robot Training Data Fully Data Weights Code Open-Source Figure ...
 - **p. 3 / 1 Introduction - extractive body cue:** As a final contribution, we open-source all models, deployment and fine-tuning notebooks, and the OpenVLA codebase for training VLAs at scale, with the hope that ...
 - **p. 3 / 1 Introduction - extractive body cue:** of compute efficient fine-tuning methods leveraging low-rank adaptation [LoRA; 25] and model quantization [26] to facilitate adapting OpenVLA models on consumer-grade GPUs instead of large ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Abstract: Large policies pretrained on a combination of Internet-scale visionlanguage data and diverse robot demonstrations have the potential to change how we teach robots new ...
 - **p. 2 / 1 Introduction - extractive body cue:** More recently, they have been used for directly learning visionlanguage-action models [VLAs; 1, 7, 17, 18] for control.
-- **p. 2 / 1 Introduction - extractive body cue:** VLAs provide a direct instantiation of using pretrained vision-and-language foundation models for robotics, directly fine-tuning visuallyconditioned language models (VLMs) such as PaLI [19, 20] to ...
 
 ## Design Rationale
 
@@ -27,23 +29,25 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 
 - **p. 2 / 1 Introduction - extractive body cue:** OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot ...
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA: [ x, , Grip] = … Δ Δθ Δ Multi-Robot Control & Efficient Fine-Tuning Large-Scale Robot Training Data Fully Data Weights Code Open-Source Figure ...
 - **p. 3 / 1 Introduction - extractive body cue:** As a final contribution, we open-source all models, deployment and fine-tuning notebooks, and the OpenVLA codebase for training VLAs at scale, with the hope that ...
 - **p. 3 / 1 Introduction - extractive body cue:** of compute efficient fine-tuning methods leveraging low-rank adaptation [LoRA; 25] and model quantization [26] to facilitate adapting OpenVLA models on consumer-grade GPUs instead of large ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation ... | p. 2 (1 Introduction), p. 3 (1 Introduction) |
-| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | As a final contribution, we open-source all models, deployment and fine-tuning notebooks, and the OpenVLA codebase for training VLAs at scale, with ... | p. 3 (1 Introduction), p. 3 (1 Introduction) |
+| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation ... | p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)) |
+| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP. | p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -52,13 +56,15 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | More, recently, they, have, been, directly, learning, visionlanguage-action, models, VLAs, control, provide, direct, instantiation | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | More, recently, they, have, been, directly, learning, visionlanguage-action, models, VLAs | language-grounded task state와 action-policy context | body cue; notation verify |
+| Input/observation | OpenVLA, Grip, Multi-Robot, Control, Efficient, Fine-Tuning, Large-Scale, Robot, Training, Data, Fully, Weights, Code, Open-Source | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
+| State/latent | OpenVLA, Grip, Multi-Robot, Control, Efficient, Fine-Tuning, Large-Scale, Robot, Training, Data | language-grounded task state와 action-policy context | body cue; notation verify |
 | Action/output | introduce, OpenVLA, B-parameter, open-source, VLA, establishes, state, generalist, robot, manipulation | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | policy/action modeling objective | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA: [ x, , Grip] = … Δ Δθ Δ Multi-Robot Control & Efficient Fine-Tuning Large-Scale Robot Training Data Fully Data Weights Code Open-Source Figure ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Abstract: Large policies pretrained on a combination of Internet-scale visionlanguage data and diverse robot demonstrations have the potential to change how we teach robots new ...
 - **p. 2 / 1 Introduction - extractive body cue:** More recently, they have been used for directly learning visionlanguage-action models [VLAs; 1, 7, 17, 18] for control.
 - **p. 2 / 1 Introduction - extractive body cue:** VLAs provide a direct instantiation of using pretrained vision-and-language foundation models for robotics, directly fine-tuning visuallyconditioned language models (VLMs) such as PaLI [19, 20] to ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
@@ -76,11 +82,11 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 ## Training vs Inference
 
 - **p. 2 / 1 Introduction - extractive body cue:** OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA: [ x, , Grip] = … Δ Δθ Δ Multi-Robot Control & Efficient Fine-Tuning Large-Scale Robot Training Data Fully Data Weights Code Open-Source Figure ...
 - **p. 3 / 1 Introduction - extractive body cue:** As a final contribution, we open-source all models, deployment and fine-tuning notebooks, and the OpenVLA codebase for training VLAs at scale, with the hope that ...
 - **p. 3 / 1 Introduction - extractive body cue:** of compute efficient fine-tuning methods leveraging low-rank adaptation [LoRA; 25] and model quantization [26] to facilitate adapting OpenVLA models on consumer-grade GPUs instead of large ...
 - **p. 8 / 7.0 GB - extractive body cue:** 4-bit inference achieves higher throughput due to reduced GPU memory transfer and thus recovers performance of the original bfloat16 model, while requiring less than half ...
-- **p. 8 / 7.0 GB - extractive body cue:** Importantly, LoRA matches full fine-tuning performance while fine-tuning only 1.4% of the parameters (r = 32), enabling us to fine-tune OpenVLA on a new task ...
-- **p. 6 / 4 Experiments - extractive body cue:** Average success rates ± StdErr are computed across 170 total rollouts per approach. fine-tuning and quantization to reduce the computational requirements for training and inference ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -120,8 +126,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective 본문 anchor 없음, temporal p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction), p. 3 (1 Introduction), objective 본문 anchor 없음, temporal p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Abstract: Large policies pretrained on a combination of Internet-scale visionlanguage data and diverse robot demonstrations have the potential to change how we teach robots new skills: rather than training new ... (p. 1, Body text (section boundary not confidently recovered)).
+- **Objective/update evidence:** OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP. (p. 1, Body text (section boundary not confidently recovered)).
+- **Temporal/runtime evidence:** We also compare to Diffusion Policy (matched), a version of Diffusion Policy that matches the input and output specifications of OpenVLA (i.e., no history, no action chunking). (p. 7, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -1,53 +1,72 @@
 # Insights — Grounded 3D-Aware Spatial Vision-Language Modeling
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We present GR3D, a spatial vision language model equipped with three complementary grounding capabilities—explicit 2D grounding, implicit 2D grounding, and monocular 3D grounding—within a single framework.
-- **Problem cue:** Together, these grounding capabilities enable GR3D to decompose complex spatial understanding problems into grounded 2D perception followed by 3D inference.
-- **Claim/result cue:** GR3D achieves consistent improvements across grounded and non-grounded spatial benchmarks, demonstrating grounding as an effective inductive bias for strengthening spatial understanding in VLMs.
+- **p. 3 / 2.2. Grounding in the 2D Plane - extractive body cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+- **p. 2 / 1. Introduction - extractive body cue:** To address these limitations, we introduce (GR3D), a spatial VLM that integrates grounding as a core mechanism for learning spatial representations.
+- **p. 3 / 2. Method - extractive body cue:** Building on this foundation, we introduce explicit and implicit 2D grounding (Sec.
+- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** To mitigate scale and depth ambiguity, we introduce an intrinsic-aware normalization strategy that rescales images according to focal length, yielding a consistent field of view ...
+- **p. 2 / 1. Introduction - extractive body cue:** This enables reasoning to evolve directly over grounded visual evidence, yielding coherent spatial predictions without any separate detection phase.
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence before the next ...
+- **p. 4 / 2.2.2. Implicit 2D Grounding - extractive body cue:** Our stream-based grounding can be viewed abstractly as analogous to a twostep process, i.e., first grounding entities with a VLM, and then performing region-conditioned reasoning ...
+- **Contribution anchor:** p. 3 (2.2. Grounding in the 2D Plane), p. 2 (1. Introduction), p. 3 (2. Method), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), p. 2 (1. Introduction), p. 4 (2.2.2. Implicit 2D Grounding)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** Two challenges, in particular, are under-addressed.
+- **p. 2 / 1. Introduction - extractive body cue:** While explicit 2D grounding predicts the location of queried objects, it cannot handle free-form reasoning where spatial cues are implicit.
+- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** This makes its 3D predictions unstable under changes in image size.
+- **p. 6 / 3.3. Visual Question Answering - extractive body cue:** In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general VQA ...
+- **Boundary to test:** This makes its 3D predictions unstable under changes in image size.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model. | p. 3 (2.2. Grounding in the 2D Plane), p. 2 (1. Introduction) |
+| Reported outcome | Compared with vision specialists, our model achieves competitive results overall and delivers notably better performance on indoor datasets. | p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visual Question Answering) |
+| Failure/limitation | This makes its 3D predictions unstable under changes in image size. | p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visual Question Answering) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `Vision-Language, 3D spatial, grounding` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - 3D observation을 language model이 다룰 수 있는 token/memory/query interface로 바꾸는 방식을 spatial reasoning과 embodied planning에 사용할 수 있다.
-  - LLM/VLM의 commonsense를 쓰되, 3D geometry가 제공하는 metric constraint로 hallucination을 제어하는 방향이 중요하다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion.를 Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature space.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This makes its 3D predictions unstable under changes in image size.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `Vision-Language, 3D spatial, grounding`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: GR3D achieves consistent improvements across grounded and non-grounded spatial benchmarks, demonstrating grounding as an effective inductive bias for strengthening spatial understanding in VLMs.
-  - 3D QA/reasoning 성능 이후에도 metric grounding, benchmark leakage, embodied action validation은 별도 검증이 필요하다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `Vision-Language, 3D spatial, grounding`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** This makes its 3D predictions unstable under changes in image size.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: EmbodiedScan, Sr3D / accuracy, IoU, AP, mAP, SR
-  - 내 연구 확장 benchmark 후보: ScanNet, SQA3D, EmbodiedScan, Matterport3D
-  - 내 연구 확장 metric 후보: accuracy, mIoU, grounding accuracy, task success
-  - 검증 초점: 3D spatial reasoning, answer grounding, embodied task transfer를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes..
+3. Compare against the body-reported baseline or a matched simpler baseline: 4, where our model outperforms all VLM baselines..
+4. Report the body metric and its denominator/aggregation: The Omni3D benchmark reports Average Precision (AP), where predictions are matched to ground-truth using 3D IoU with thresholds ranging from 0.05 to 0.50..
+5. Re-run the body-reported ablation/failure condition: Ablation study on the key components of GR3D-8B. "PT" denotes pretraining, "2D→3D" denotes 2D grounding followed by 3D prediction, and "Cam" denotes using normalized intrinsics. data consistently improves 3D detection performance..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.2.2. Implicit 2D Grounding); the primary result is directionally consistent at p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visual Question Answering), p. 7 (3.4. Implicit Grounding CoT); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-LLM이 답한 spatial reasoning이 실제 3D metric relation과 일치하는지 어떻게 자동 검증할 수 있는가?
+고정된 observation/action/data/compute budget에서 introduce, explicit, implicit mechanism이 4, where our model outperforms all VLM baselines. 대비 The Omni3D benchmark reports Average Precision (AP), where predictions are matched to ground-truth using 3D IoU with thresholds ...을 개선하고, This makes its 3D predictions unstable under changes in image size. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

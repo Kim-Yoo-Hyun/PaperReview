@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.3. Occupancy State Estimation - extractive PDF cue:** Image synthesis and geometry reconstruction evaluation on Boreas dataset [7].
-- **p. 6 / 4.3. Occupancy State Estimation - extractive PDF cue:** Two snowy scenes are excluded from geometry evaluation due to LiDAR inaccuracy.
-- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive PDF cue:** In the rain and night scenes, the camera is either blurred due to raindrops or has limited visibility due to low illumination.
-- **p. 7 / 4.4. Ablation Studies - extractive PDF cue:** Ablation studies on scene reconstruction.
-- **p. 7 / 4.4. Ablation Studies - extractive PDF cue:** Scene Reconstruction RMSE↓ R-CD↓ Acc.↑ Init Occ.
-- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive PDF cue:** In the snow scene, the LiDAR point cloud exhibits significant artifacts caused by snowfall.
-- **p. 6 / 4.3. Occupancy State Estimation - extractive PDF cue:** To assess the quality of occupancy estimation, we report the RMSE, Relative Chamfer Distance (R-CD), and Accuracy.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** Also, the occupancy map supervision improves 3× RadarSplat reconstruction accuracy.
+- **p. 6 / 4.3. Occupancy State Estimation - extractive body cue:** Image synthesis and geometry reconstruction evaluation on Boreas dataset [7].
+- **p. 6 / 4.3. Occupancy State Estimation - extractive body cue:** Two snowy scenes are excluded from geometry evaluation due to LiDAR inaccuracy.
+- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive body cue:** In the rain and night scenes, the camera is either blurred due to raindrops or has limited visibility due to low illumination.
+- **p. 7 / 4.4. Ablation Studies - extractive body cue:** Ablation studies on scene reconstruction.
+- **p. 7 / 4.4. Ablation Studies - extractive body cue:** Scene Reconstruction RMSE↓ R-CD↓ Acc.↑ Init Occ.
+- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive body cue:** In the snow scene, the LiDAR point cloud exhibits significant artifacts caused by snowfall.
+- **p. 6 / 4.3. Occupancy State Estimation - extractive body cue:** To assess the quality of occupancy estimation, we report the RMSE, Relative Chamfer Distance (R-CD), and Accuracy.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Also, the occupancy map supervision improves 3× RadarSplat reconstruction accuracy.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Novel Radar View Rendering | SYSTEM / EVALUATION SCOPE UNRESOLVED | With the correct noise modeling and rendering, our proposed method outperforms state-of-the-art, Radar Fields, by +3.4 PSNR and achieves more than 2.6× better in ... | p. 6 (4.2. Novel Radar View Rendering) |
 | 4.3. Occupancy State Estimation | SYSTEM / EVALUATION SCOPE UNRESOLVED | The results indicate that RadarSplat achieves accurate 3D reconstruction similar to LiDAR, by taking only 2D noisy radar images as input. | p. 7 (4.3. Occupancy State Estimation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.3. Occupancy State Estimation - extractive PDF cue:** Image synthesis and geometry reconstruction evaluation on Boreas dataset [7].
-- **p. 6 / 4.3. Occupancy State Estimation - extractive PDF cue:** Two snowy scenes are excluded from geometry evaluation due to LiDAR inaccuracy.
-- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive PDF cue:** In the rain and night scenes, the camera is either blurred due to raindrops or has limited visibility due to low illumination.
-- **p. 7 / 4.4. Ablation Studies - extractive PDF cue:** Ablation studies on scene reconstruction.
-- **p. 7 / 4.4. Ablation Studies - extractive PDF cue:** Scene Reconstruction RMSE↓ R-CD↓ Acc.↑ Init Occ.
-- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive PDF cue:** In the snow scene, the LiDAR point cloud exhibits significant artifacts caused by snowfall.
+- **p. 6 / 4.3. Occupancy State Estimation - extractive body cue:** Image synthesis and geometry reconstruction evaluation on Boreas dataset [7].
+- **p. 6 / 4.3. Occupancy State Estimation - extractive body cue:** Two snowy scenes are excluded from geometry evaluation due to LiDAR inaccuracy.
+- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive body cue:** In the rain and night scenes, the camera is either blurred due to raindrops or has limited visibility due to low illumination.
+- **p. 7 / 4.4. Ablation Studies - extractive body cue:** Ablation studies on scene reconstruction.
+- **p. 7 / 4.4. Ablation Studies - extractive body cue:** Scene Reconstruction RMSE↓ R-CD↓ Acc.↑ Init Occ.
+- **p. 8 / 4.5. Adverse Weather and Lighting Conditions - extractive body cue:** In the snow scene, the LiDAR point cloud exhibits significant artifacts caused by snowfall.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. RadarSplat enables radar 2D-to-3D scene reconstruction, image synthesis, and occupancy estimation. RadarSplat outperforms the state-of-the-art neural rendering method [5] both qualitatively and quantitatively ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. System Overview. RadarSplat takes radar images and poses as input. The preprocessing step includes noise detection and initial occupancy mapping. The multipath source ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Three types of radar noise of scanning radar highlighted in a raw radar image in polar space (bottom) and Cartesian space (top). The ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Range-power signal and its FFT of a radar azimuth beam with multipath effects. The constant and peak magnitude in the FFT results are ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Multipath modeling and denoising. The multipath effect is modeled by peak frequency and source power reflection and attenu- ation. The denoising method removes ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Our proposed radar image denoising method preserves rich information while remaining robust to multipath effects. In contrast, the dynamic threshold approach used in ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7. Modeling spectral leakage in the radar-power signal. (a) Ideal range FFT. (b) Practical range FFT with spectral leakage. (c) Practical range FFT sharpened ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Image synthesis and geometry reconstruction evaluation on Boreas dataset [7]. Image synthesis is evaluated from unseen views, and geometry reconstruction is evaluated against ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. RadarSplat enables radar 2D-to-3D scene reconstruction, image synthesis, and occupancy estimation. RadarSplat outperforms the state-of-the-art neural rendering method [5] both qualitatively and quantitatively ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. System Overview. RadarSplat takes radar images and poses as input. The preprocessing step includes noise detection and initial occupancy mapping. The multipath source ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Three types of radar noise of scanning radar highlighted in a raw radar image in polar space (bottom) and Cartesian space (top). The ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Range-power signal and its FFT of a radar azimuth beam with multipath effects. The constant and peak magnitude in the FFT results are ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Multipath modeling and denoising. The multipath effect is modeled by peak frequency and source power reflection and attenu- ation. The denoising method removes ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Our proposed radar image denoising method preserves rich information while remaining robust to multipath effects. In contrast, the dynamic threshold approach used in ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Modeling spectral leakage in the radar-power signal. (a) Ideal range FFT. (b) Practical range FFT with spectral leakage. (c) Practical range FFT sharpened ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Image synthesis and geometry reconstruction evaluation on Boreas dataset [7]. Image synthesis is evaluated from unseen views, and geometry reconstruction is evaluated against ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Image synthesis and geometry reconstruction evaluation on Boreas dataset [7]. | embodiment, simulator version and control stack | p. 6 (4.3. Occupancy State Estimation), p. 6 (4.3. Occupancy State Estimation) |
 | Task/environment | Two snowy scenes are excluded from geometry evaluation due to LiDAR inaccuracy. | reset, timeout, object/scene variation | p. 6 (4.3. Occupancy State Estimation), p. 8 (4.5. Adverse Weather and Lighting Conditions) |
@@ -119,9 +119,9 @@ PDF body evaluation/result cue (p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.
 | Primary metric/result | The results indicate that RadarSplat achieves accurate 3D reconstruction similar to LiDAR, by taking only 2D noisy radar images as input. | numeric claim only at cited anchor | p. 7 (4.3. Occupancy State Estimation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Following [5], we select every 5 frames as the test frame to create a traintest split.
-- **p. 6 / 4.2. Novel Radar View Rendering - extractive PDF cue:** The radar image rendering speed reaches 4.5 FPS on an NVIDIA A6000 GPU.
-- **p. 4 / 3.2. Multipath and Saturation Noise Detection - extractive PDF cue:** First, we apply FFT to all azimuth beams: X[k] = F{x[n]} = N-1 X n=0 x[n]e-j 2π N kn, (2) where x[n] represents the range-power ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Following [5], we select every 5 frames as the test frame to create a traintest split.
+- **p. 6 / 4.2. Novel Radar View Rendering - extractive body cue:** The radar image rendering speed reaches 4.5 FPS on an NVIDIA A6000 GPU.
+- **p. 4 / 3.2. Multipath and Saturation Noise Detection - extractive body cue:** First, we apply FFT to all azimuth beams: X[k] = F{x[n]} = N-1 X n=0 x[n]e-j 2π N kn, (2) where x[n] represents the range-power ...
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Novel Radar View Rendering - extractive PDF cue:** In contrast, Radar Fields fails to model the noise, resulting in noticeable performance degradation.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** RadarSplat also fails to model other noises when disabling the proposed noise probability. reconstruction.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** This enables radar inverse rendering for radar signal decomposition, high-fidelity radar data synthesis, and robust noise-free occupancy prediction.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Our proposed radar image denoising method preserves rich information while remaining robust to multipath effects. In contrast, the dynamic threshold approach used in ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Three types of radar noise of scanning radar highlighted in a raw radar image in polar space (bottom) and Cartesian space (top). The ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. System Overview. RadarSplat takes radar images and poses as input. The preprocessing step includes noise detection and initial occupancy mapping. The multipath source ...
+- **p. 6 / 4.2. Novel Radar View Rendering - extractive body cue:** In contrast, Radar Fields fails to model the noise, resulting in noticeable performance degradation.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** RadarSplat also fails to model other noises when disabling the proposed noise probability. reconstruction.
+- **p. 8 / 5. Conclusion - extractive body cue:** This enables radar inverse rendering for radar signal decomposition, high-fidelity radar data synthesis, and robust noise-free occupancy prediction.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Our proposed radar image denoising method preserves rich information while remaining robust to multipath effects. In contrast, the dynamic threshold approach used in ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Three types of radar noise of scanning radar highlighted in a raw radar image in polar space (bottom) and Cartesian space (top). The ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. System Overview. RadarSplat takes radar images and poses as input. The preprocessing step includes noise detection and initial occupancy mapping. The multipath source ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.3. Occupancy State Estimation), p. 6 (4.3. Occupancy State Estimation), p. 8 (4.5. Adverse Weather and Lighting Conditions), p. 7 (4.4. Ablation Studies), p. 7 (4.4. Ablation Studies), p. 8 (4.5. Adverse Weather and Lighting Conditions), metrics p. 6 (4.3. Occupancy State Estimation), p. 8 (4.4. Ablation Studies), p. 6 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 8 (4.5. Adverse Weather and Lighting Conditions), baselines p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 1 (Figure/Table caption), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), results p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 8 (4.4. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (4.3. Occupancy State Estimation).
+- **Evidence anchors reviewed:** datasets p. 6 (4.3. Occupancy State Estimation), p. 6 (4.3. Occupancy State Estimation), p. 8 (4.5. Adverse Weather and Lighting Conditions), p. 7 (4.4. Ablation Studies), p. 7 (4.4. Ablation Studies), p. 8 (4.5. Adverse Weather and Lighting Conditions), metrics p. 6 (4.3. Occupancy State Estimation), p. 8 (4.4. Ablation Studies), p. 6 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 8 (4.5. Adverse Weather and Lighting Conditions), baselines p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 1 (Figure/Table caption), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), results p. 6 (4.2. Novel Radar View Rendering), p. 7 (4.3. Occupancy State Estimation), p. 7 (4.3. Occupancy State Estimation), p. 8 (4.4. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (4.3. Occupancy State Estimation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

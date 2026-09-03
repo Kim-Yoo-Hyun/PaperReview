@@ -1,8 +1,10 @@
 # Demonstrating GPU Parallelized Robot Simulation and Rendering for Generalizable Embodied AI with ManiSkill3
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (30 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p021.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p021.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p021.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p021.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p021.pdf
 - Code/Project: https://github.com/haosulab/ManiSkill
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (30 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Existing GPU simulators have limitations that hinder the generalization and scalability of previous. work These simulators lack support for heterogeneous simulation, Where each parallel environment contains different scenes Additionally ...를 문제로 두고, We propose ManiSkill3 to address past imitations and open source the framework under the Apache-2.0 license, building upon past work in ManiSkill 1 and 2 (38, 19}.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (4) Simple Unified API to Easily Manage and Build) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (30 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Existing GPU simulators have limitations that hinder the generalization and scalability of previous. work These simulators lack support for heterogeneous simulation, Where each parallel environment contains different scenes Additionally ... (p. 1, 1. INTRODUCTION).
+- **Actual contribution:** The core contributions of ManiSkillS that set it apart from existing simulators are as follows: (p. 1, 1. INTRODUCTION).
+- **Evaluation boundary:** ManiSkill3 provides several popular robot learning. baselines as well as simple reproducible setups for end-to-end trainable vision-based sim2real policies. (p. 7, IV. BASELINES AND RESULTS).
+- **Explicit failure boundary:** Implementation Details: We further make several modifications to ReplicaCAD to make it completely interactive as some of the collision meshes for articulations were modelled incorrectly and thus did not support ... (p. 16, C. Room Scale Environments).

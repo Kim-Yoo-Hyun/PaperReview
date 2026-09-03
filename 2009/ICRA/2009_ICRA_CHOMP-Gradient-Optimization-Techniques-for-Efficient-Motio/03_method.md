@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | This normative approach makes it easy to derive the CHOMP update rule: we can understand equation 3 as the Lagrangian form of ... | p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | However, as we discuss in section V, while the algorithm solves a substantially larger breadth of planning problems than traditional trajectory optimization ... | p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP A
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | This indicator factor can be written mathematically as I(minj≤i d(xj(q)), although implementationally it is implemented simply by ignoring all terms after the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | We discretize the trajectories at the LittleDog host computer control cycle frequency, which is 100 Hz. | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | We discretize the trajectories at the LittleDog host computer control cycle frequency, which is 100 Hz. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 1 (II. THE CHOMP ALGORITHM), p. 4 (II. THE CHOMP ALGORITHM), objective p. 2 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 1 (II. THE CHOMP ALGORITHM), temporal p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 1 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 1 (II. THE CHOMP ALGORITHM), p. 4 (II. THE CHOMP ALGORITHM), objective p. 2 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 1 (II. THE CHOMP ALGORITHM), temporal p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 1 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** This normative approach makes it easy to derive the CHOMP update rule: we can understand equation 3 as the Lagrangian form of an optimization problem [1] that attempts to maximize ... (p. 3, II. THE CHOMP ALGORITHM).
+- **Objective/update evidence:** Setting the gradient of the right hand side of equation 3 to zero and solving for the minimizer results in the following more succinct update rule: ξk+1 = ξk -1 ... (p. 2, II. THE CHOMP ALGORITHM).
+- **Temporal/runtime evidence:** We discretize the trajectories at the LittleDog host computer control cycle frequency, which is 100 Hz. (p. 7, IV. IMPLEMENTATION ON A QUADRUPED ROBOT).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

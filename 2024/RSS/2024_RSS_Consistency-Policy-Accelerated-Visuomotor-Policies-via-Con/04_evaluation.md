@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -176,3 +176,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Policy NFE Lift Can Square ToolHang Push-T DDPM 27 1.00 .97 ± .01 .93 ± .02 .79 ± .03 .87 ± .03 DDiM 9 1.00 .82 ± .03 .85 ± ... (p. 6, IV. EXPERIMENTS).
+- **Metric evidence:** Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a particular policy network on the given task, along with the standard error ... (p. 6, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** Thus, we construct an optimistically strong baseline by assuming these speedups can be realized without degrading performance from the standard sequential samplers. (p. 5, IV. EXPERIMENTS).
+- **Failure/negative evidence:** Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).

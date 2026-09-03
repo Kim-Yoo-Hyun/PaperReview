@@ -1,112 +1,135 @@
-# Method — VGGT: Visual Geometry Grounded Transformer
+# Method - VGGT: Visual Geometry Grounded Transformer
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: source PDF 또는 공식 full-text source의 method/formulation 관련 본문 cue를 검토해 pipeline과 interface를 구조화했다. tracker의 reading status/evidence는 이 migration에서 변경하지 않았다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.11651; PDF retrieval source: https://arxiv.org/pdf/2503.11651. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-3D-inductive optimization pipeline을 large feed-forward Transformer의 joint multi-view prediction으로 reformulate한다.
+PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation), p. 10 (Method), p. 6 (3.4. Training), p. 5 (3.3. Prediction heads)): In order to implement the tracking module T , we use the CoTracker2 architecture [57], which takes the dense tracking features Ti as input.
+
+## Method Body Digest
+
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** In order to implement the tracking module T , we use the CoTracker2 architecture [57], which takes the dense tracking features Ti as input.
+- **p. 3 / 3.1. Problem definition and notation - extractive body cue:** The network architecture is designed to be permutation equivariant for all but the first frame.
+- **p. 3 / 3.1. Problem definition and notation - extractive body cue:** It ingests the query point yq and the dense tracking features Ti output by the transformer f and then computes the track.
+- **p. 10 / Method - extractive body cue:** Our backbone predicts the tracking features Ti, which replace the outputs of the feature extractor and later enter the rest of the CoTracker2 architecture, that ...
+- **p. 6 / 3.4. Training - extractive body cue:** The model consists of approximately 1.2 billion parameters in total.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** 3.4, the uncertainty maps are used in the loss and, after training, are proportional to the model's confidence in the predictions.
+- **p. 6 / 3.4. Training - extractive body cue:** We train the model by optimizing the training loss (2) with the AdamW optimizer for 160K iterations.
+- **p. 6 / 3.4. Training - extractive body cue:** Additionally, following CoTracker2 [57], we apply a visibility loss (binary cross-entropy) to estimate whether a point is visible in a given frame.
 
 ## Design Rationale
 
-pairwise reconstruction은 image 수가 늘면 post-processing/fusion과 optimization이 필요하고, classical bundle adjustment는 latency가 크다.
+- **p. 2 / 1. Introduction - extractive body cue:** To summarize, we make the following contributions: (1) We introduce VGGT, a large feed-forward transformer that, given one, a few, or even hundreds of images ...
+- **p. 3 / 3. Method - extractive body cue:** We introduce VGGT, a large transformer that ingests a set of images as input and produces a variety of 3D quantities as output.
+- **p. 4 / 3.1. Problem definition and notation - extractive body cue:** In the second row, our method correctly recovers a 3D scene from two images with no overlap, while DUSt3R fails.
 
 ## Source Evidence Cues
 
-- We present a qualitative comparison with DUSt3R on inthe-wild scenes in Fig.
-- Recent contributions like DUSt3R and its evolution We present VGGT, a feed-forward neural network that directly infers all key 3D attributes of a scene, including camera parameters, point ...
-- We compare our alternating-attention architecture against two variants: one using only global self-attention and another employing cross-attention. well, excelling on challenging out-of-domain examples, such as oil paintings, non-overlapping ...
-- Introduction We consider the problem of estimating the 3D attributes of a scene, captured in a set of images, utilizing a feedforward neural network.
-- Even so, visual geometry still plays a major role in 3D reconstruction, which increases complexity and computational cost.
-- **Source anchor:** 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** In order to implement the tracking module T , we use the CoTracker2 architecture [57], which takes the dense tracking features Ti as input.
+- **p. 3 / 3.1. Problem definition and notation - extractive body cue:** The network architecture is designed to be permutation equivariant for all but the first frame.
+- **p. 3 / 3.1. Problem definition and notation - extractive body cue:** It ingests the query point yq and the dense tracking features Ti output by the transformer f and then computes the track.
+- **p. 10 / Method - extractive body cue:** Our backbone predicts the tracking features Ti, which replace the outputs of the feature extractor and later enter the rest of the CoTracker2 architecture, that ...
+- **p. 6 / 3.4. Training - extractive body cue:** The model consists of approximately 1.2 billion parameters in total.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** 3.4, the uncertainty maps are used in the loss and, after training, are proportional to the model's confidence in the predictions.
+- **p. 6 / 3.4. Training - extractive body cue:** We train the model by optimizing the training loss (2) with the AdamW optimizer for 160K iterations.
+- **Detected method headings:** 3. Method (p. 3); Method (p. 10)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | Interface / expected benefit | Evidence |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Geometry extraction | image/point input에서 3D structure를 복원 | image set를 sequence/tokens로 입력한 Transformer가 모든 view에 대한 camera parameters, dense point maps/depth와 cross-view tracks를 공동 출력한다. | depth, pose, point, Gaussian 또는 correspondence representation을 추정. Source method cue: We present a qualitative comparison with DUSt3R on inthe-wild scenes in Fig. | geometric state/map | occlusion과 metric spatial relation을 노출 | 본문 method/formulation cue; exact subsection/page는 source audit와 대조 필요 |
-| Semantic / temporal fusion | geometry에 language/semantic/state를 정렬 | geometric state와 text/visual feature/history | feature lifting, scene graph, map update 또는 temporal fusion. Source method cue: Recent contributions like DUSt3R and its evolution We present VGGT, a feed-forward neural network that directly infers all key 3D attributes of a scene, including camera parameters, point ... | queryable semantic 3D state | robot task와 open vocabulary를 연결 | 본문 method/formulation cue; exact subsection/page는 source audit와 대조 필요 |
-| Robot query interface | 3D state를 planner/policy가 소비 | map/feature와 task query | grounding, target selection, collision/free-space 또는 action cue 생성. Source method cue: We compare our alternating-attention architecture against two variants: one using only global self-attention and another employing cross-attention. well, excelling on challenging out-of-domain examples, such as oil paintings, non-overlapping ... | goal/pose/path/action input | downstream behavior를 통해 perception value를 검증 | 본문 method/formulation cue; exact subsection/page는 source audit와 대조 필요 |
+| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In order to implement the tracking module T , we use the CoTracker2 architecture [57], which takes the dense tracking features Ti ... | p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem definition and notation) |
+| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The network architecture is designed to be permutation equivariant for all but the first frame. | p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation) |
+| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | It ingests the query point yq and the dense tracking features Ti output by the transformer f and then computes the track. | p. 3 (3.1. Problem definition and notation), p. 10 (Method) |
+
+- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **Primary objective:** multi-view geometric supervision에서 camera/point/depth/track prediction error를 공동으로 최소화한다.
-- **State/model bridge:** image set를 sequence/tokens로 입력한 Transformer가 모든 view에 대한 camera parameters, dense point maps/depth와 cross-view tracks를 공동 출력한다.
-- **Constraint or regularization boundary:** 입력 images가 충분한 overlap과 공통 scene geometry를 갖고 camera/projective ambiguity를 학습된 convention으로 해소해야 한다.
-- **Optimization/update:** module별 update와 optimizer/gain/solver의 exact choice는 아래 formal cue와 source anchor를 기준으로 확인한다; 근거 없는 수치·optimizer는 추가하지 않았다.
-- **Source:** method/formulation cue: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요
+- **p. 6 / 3.4. Training - extractive body cue:** We train the model by optimizing the training loss (2) with the AdamW optimizer for 160K iterations.
+- **p. 6 / 3.4. Training - extractive body cue:** Additionally, following CoTracker2 [57], we apply a visibility loss (binary cross-entropy) to estimate whether a point is visible in a given frame.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** 3.4, the uncertainty maps are used in the loss and, after training, are proportional to the model's confidence in the predictions.
+- **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
+- **Equation/algorithm anchors:** p. 5 (3.3. Prediction heads), p. 6 (3.4. Training), p. 6 (3.4. Training).
+- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
-| Symbol / parameter | Type / unit | Meaning | Used in | Source |
-|---|---|---|---|---|
-| I / P | image/point cloud | raw visual geometry | feature extraction | domain-normalized interface notation from the reviewed problem/method cue; exact equation/notation: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요 |
-| T / G | pose/map/scene graph | world-coordinate structure | fusion/query | domain-normalized interface notation from the reviewed problem/method cue; exact equation/notation: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요 |
-| z | semantic feature | open-vocabulary or task representation | grounding | domain-normalized interface notation from the reviewed problem/method cue; exact equation/notation: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요 |
-| r / a | robot query/action | downstream target or motion cue | robot interface | domain-normalized interface notation from the reviewed problem/method cue; exact equation/notation: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요 |
+| Role | PDF-derived terms | Normalized robotics interpretation | Status |
+|---|---|---|---|
+| Input/observation | introduce, VGGT, large, transformer, ingests, images, input, produces, variety, quantities, output, Additionally, DPT, head | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
+| State/latent | introduce, VGGT, large, transformer, ingests, images, input, produces, variety, quantities | geometry, map, object/relationship state | body cue; notation verify |
+| Action/output | summarize, make, following, contributions, introduce, VGGT, large, feed-forward, transformer, given | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Objective/constraint | train, model, optimizing, training, loss, AdamW, optimizer, iterations, Additionally, following | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **Observation / input:** RGB-D, image set, point cloud, depth와 camera pose
-- **State / latent representation:** geometry, map, object/relationship state
-- **Action / output:** point map, pose, scene graph, affordance 또는 query result
-- **Planner–controller / policy–environment interface:** multi-view images → camera/point/depth/track state → mapping, localization or collision-aware planning다.
+- **p. 3 / 3. Method - extractive body cue:** We introduce VGGT, a large transformer that ingests a set of images as input and produces a variety of 3D quantities as output.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** Additionally, the DPT head also outputs dense features Ti ∈RC×H×W , which serve as input to the tracking head.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** The output image tokens ˆtI i are used to predict the dense outputs, i.e., the depth maps Di, point maps Pi, and tracking features Ti.
+- **p. 6 / 3.3. Prediction heads - extractive body cue:** Note that, similar to VGGSfM [125], our tracker does not assume any temporal ordering of the input frames and, hence, can be applied to any ...
+- **p. 3 / 3.1. Problem definition and notation - extractive body cue:** The input is a sequence (Ii)N i=1 of N RGB images Ii ∈ R3×H×W , observing the same 3D scene.
+- **p. 4 / 3.2. Feature Backbone - extractive body cue:** To this end, each input image I is initially patchified into a set of K tokens1 tI ∈RK×C through DINO [78].
+- **p. 4 / 3.3. Prediction heads - extractive body cue:** First, for each input image Ii, we augment the corresponding image tokens tI i with an additional camera token tg i ∈R1×C′ and four register ...
+- **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
+- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
-- **Horizon:** single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요.
-- **Inference/control rate:** per-frame/streaming inference와 downstream policy/control rate가 분리된다.
-- **History / memory:** camera poses, map/scene graph/Gaussian state와 temporal feature.
-- **Compute / latency dependency:** 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다.
+| Contract | Generic domain prior | PDF body cue | Unresolved detail |
+|---|---|---|---|
+| Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | The order of the images in the input sequence is arbitrary, except that the first image is chosen as the reference frame. | episode/sequence/action-chunk boundary |
+| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | VGGT's transformer is a function that maps this sequence to a corresponding set of 3D annotations, one per frame: f  (Ii)N i=1 ... | Hz/fps, inference time and control rate |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | We do not include examples with more than 32 frames, as DUSt3R runs out of memory beyond this limit. | window and reset |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | We do not include examples with more than 32 frames, as DUSt3R runs out of memory beyond this limit. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- **Training / offline setup:** visual/3D/text supervision 또는 pretrained encoder adaptation; exact split 확인 필요.
-- **Inference / online execution:** scene observation을 map/feature로 변환해 planner/policy query를 제공한다.
-- **Boundary to keep separate:** training throughput, policy inference rate, low-level actuator rate와 feedback latency를 하나의 숫자로 합치지 않는다. paper-specific values는 본문 확인 필요.
+- **p. 5 / 3.3. Prediction heads - extractive body cue:** 3.4, the uncertainty maps are used in the loss and, after training, are proportional to the model's confidence in the predictions.
+- **p. 6 / 3.4. Training - extractive body cue:** We train the model by optimizing the training loss (2) with the AdamW optimizer for 160K iterations.
+
+- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
-- **Canonical equation/law cue:** 정확한 method-specific equation/loss/control law는 아래의 verified formulation bridge와 source cue를 기준으로 본문에서 대조한다. 현재 note는 근거 없는 수식 번호나 hyperparameter를 추가하지 않는다.
-- **Verified formulation bridge:** image set를 sequence/tokens로 입력한 Transformer가 모든 view에 대한 camera parameters, dense point maps/depth와 cross-view tracks를 공동 출력한다.
-- **Source location:** method/formulation cue: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요
+- **Body-defined terms:** order, implement, tracking, module, CoTracker2, architecture, takes, dense, features, input, network, designed, permutation, equivariant, first, frame, ingests, query, point, output.
+- **Relevant PDF headings:** 3. Method (p. 3); Method (p. 10).
+- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
-> **Reading rule:** 아래 표는 04의 baseline/ablation cue를 method module에 연결하는 audit link다. 새로운 결과 수치를 주장하지 않으며, 원래의 protocol과 값은 [04_evaluation.md](./04_evaluation.md)에 둔다.
-
-| Method module | What the evaluation should isolate | Baseline / ablation link | Evidence |
-|---|---|---|---|
-| Geometry extraction | occlusion과 metric spatial relation을 노출 | The network achieves state-of-the-art results in multiple 3D tasks, including camera parameter estimation, multi-view depth estimation, dense point cloud reconstruction, and 3D point tracking. | 04_evaluation.md cue; exact table/section 확인 필요 |
-| Semantic / temporal fusion | robot task와 open vocabulary를 연결 | Baseline: The network achieves state-of-the-art results in multiple 3D tasks, including camera parameter estimation, multi-view depth estimation, dense point cloud reconstruction, and 3D point tracking.; module removal/variant cue: 04_evaluation.md에 module ablation이 기록되지 않음 — 본문 확인 필요 | 04_evaluation.md cue; exact table/section 확인 필요 |
-| Robot query interface | downstream behavior를 통해 perception value를 검증 | Execution/recovery ablation: 04_evaluation.md에 module ablation이 기록되지 않음 — 본문 확인 필요; protocol cue: The network achieves state-of-the-art results in multiple 3D tasks, including camera parameter estimation, multi-view depth estimation, dense point cloud reconstruction, and 3D point tracking. MASt3R have shown promising results in this direction, but these networks can only process two images at once and rely on post-processing to reconstruct more images, fusing pairwise ... | 04_evaluation.md cue; exact table/section 확인 필요 |
-
-- **Protocol / metric cue:** The network achieves state-of-the-art results in multiple 3D tasks, including camera parameter estimation, multi-view depth estimation, dense point cloud reconstruction, and 3D point tracking. MASt3R have shown promising results in this direction, but these networks can only process two images at once and rely on post-processing to reconstruct more images, fusing pairwise ...
-- **Metric cue:** accuracy mAP
-- **Dataset / benchmark cue:** ScanNet Replica
+| Method component | Evaluation evidence to inspect | PDF anchor |
+|---|---|---|
+| Geometry / pose extraction | It represents a specific case of rigid point tracking, which is restricted to only two views, and hence a suitable evaluation benchmark ... | p. 8 (4.4. Image Matching), p. 6 (4.1. Camera Pose Estimation) |
+| Semantic / temporal fusion | Although our tracking head is not specialized for the twoview setting, it outperforms the state-of-the-art two-view matching method Roma. | p. 7 (4.1. Camera Pose Estimation), p. 9 (4.5. Ablation Studies) |
+| Robot query / planning handoff | Table 10. Camera Pose Estimation on IMC [54]. Our method achieves state-of-the-art performance on the challenging pho- totropism data, outperforming VGGSfMv2 [125] ... | p. 12 (Figure/Table caption), p. 8 (Figure/Table caption) |
 
 ## Failure and Ablation Link
 
-| Strong assumption | Why it matters to method | Failure / stress test |
-|---|---|---|
-| training 3D data가 deployment camera/scene distribution을 충분히 cover | metric geometry generalization을 위해 필요 | domain shift·dynamic object는 inconsistent map |
-| single forward pass의 correspondence가 geometry ambiguity를 해소 | post-processing 제거를 위해 필요 | textureless/repetitive scene은 scale/pose ambiguity |
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation Study for Transformer Backbone on ETH3D. We compare our alternating-attention architecture against two variants: one using only global self-attention and another employ- ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 6. Ablation Study for Multi-task Learning, which shows that simultaneous training with camera, depth and track estimation yields the highest accuracy in point map ...
+- **p. 7 / 4.2. Multi-view Depth Estimation - extractive body cue:** 2, DUSt3R and our VGGT are the only two methods operating without the knowledge of ground truth cameras.
+- **p. 7 / 4.1. Camera Pose Estimation - extractive body cue:** Compared to concurrent works [111, 127, 141, 156] (indicated by ‡), our method demonstrates significant performance advantages, with speed similar to the fastest variant Fast3R ...
+- **p. 9 / 4.5. Ablation Studies - extractive body cue:** 5 demonstrate that our Alternating-Attention architecture outperforms both baseline variants by a clear margin.
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 8. Dynamic Point Tracking Results on the TAP-Vid benchmarks. Although our model was not designed for dynamic scenes, simply fine-tuning CoTracker with our pretrained ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VGGT is a large feed-forward transformer with minimal 3D-inductive biases trained on a trove of 3D-annotated data. It accepts up to hundreds of ...
 
-- **Ablation to request if absent:** remove the paper-specific core module while holding input, data, compute, horizon and controller interface fixed.
-- **Failure evidence location:** [04_evaluation.md](./04_evaluation.md)의 failure/limitation 및 reproducibility cue; 현재 note에 새로운 failure claim을 만들지 않는다.
+- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] 01 overview와 source anchor에서 observation/state/action, exact notation과 model assumptions를 확인한다.
-2. [ ] Pipeline의 각 module을 input/output contract와 함께 구현하고, source-specific equation/solver/decoder를 고정한다.
-3. [ ] Training/offline setup, inference rate, horizon, memory, compute budget을 분리해 기록한다.
-4. [ ] 04의 baseline과 module-removal/variant ablation을 같은 task, data, seed, budget으로 실행한다.
-5. [ ] primary metric뿐 아니라 failure mode, latency, assumption sensitivity와 closed-loop recovery를 보고한다.
+1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
+2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
+3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
+4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
+5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
 
 ## Verification Questions
 
-- **Equation/source:** method/formulation cue: 본문의 feed-forward multi-image input, camera·point map·depth·track joint output과 optimization-free 3D task formulation.; equation 번호/page는 원문과 대조 필요
-- **Module attribution:** 04의 baseline/ablation이 어느 pipeline module을 실제로 제거·대체하는가?
-- **Runtime:** action horizon/chunk, memory window, inference rate와 low-level control rate가 각각 얼마인가?
-- **Evidence boundary:** 현재 evidence level에서 직접 확인되지 않은 exact value, negative result, reproducibility detail을 추가하지 않았는가?
+- **Evidence anchors reviewed:** method p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation), p. 10 (Method), p. 6 (3.4. Training), p. 5 (3.3. Prediction heads), objective p. 6 (3.4. Training), p. 6 (3.4. Training), p. 5 (3.3. Prediction heads), temporal p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation), p. 4 (3.1. Problem definition and notation), p. 6 (3.3. Prediction heads), p. 4 (3.2. Feature Backbone), p. 5 (3.3. Prediction heads).
+- Which module is genuinely new, and which is inherited infrastructure or a baseline?
+- What exact computation consumes each observation and emits each action/output?
+- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
+- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

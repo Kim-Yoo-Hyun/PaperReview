@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p018.html; PDF retrieval source: https://arxiv.org/pdf/2412.04453. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p018.html; PDF retrieval source: https://arxiv.org/pdf/2412.04453. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHO
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | VILA undergoes a 3-stage training process: first, it pre-trains a connector between the frozen LLM and vision backbones using alignment data [20]; ... | p. 3 (II. METHOD), p. 3 (II. METHOD) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | Our VLA model processes single-view images to produce mid-level actions in natural language, which are then converted into precise joint movements by ... | p. 3 (II. METHOD), p. 2 (II. METHOD) |
@@ -133,8 +133,17 @@ PDF body method statement (p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHOD), p. 5 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), objective p. 5 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), temporal p. 3 (II. METHOD), p. 4 (II. METHOD), p. 3 (II. METHOD), p. 5 (II. METHOD), p. 4 (II. METHOD), p. 2 (II. METHOD).
+- **Evidence anchors reviewed:** method p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHOD), p. 5 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), objective p. 5 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), temporal p. 3 (II. METHOD), p. 4 (II. METHOD), p. 3 (II. METHOD), p. 5 (II. METHOD), p. 4 (II. METHOD), p. 2 (II. METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** VILA undergoes a 3-stage training process: first, it pre-trains a connector between the frozen LLM and vision backbones using alignment data [20]; then it pre-trains both the connector and the ... (p. 3, II. METHOD).
+- **Objective/update evidence:** The right image shows a preprocessed height map with values clipped to sensor constraints; darker colors indicate higher heights. (p. 5, II. METHOD).
+- **Temporal/runtime evidence:** On the other hand, frames before time step t are historical frames that function as a memory bank, helping the agent track overall progress (e.g., remembering the starting location, reasoning ... (p. 3, II. METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

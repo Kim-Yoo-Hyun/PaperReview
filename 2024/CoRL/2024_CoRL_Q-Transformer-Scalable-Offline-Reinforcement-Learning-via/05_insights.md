@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `dataset state/observation, action, reward와 return-to-go → Q/value 또는 sequence-policy state → dataset-supported action sequence`.
-- 이 논문의 재사용 가능한 지점은 The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the robot camera images. for real-world robotic learning, where on-policy data ...를 FiLM EfficientNet + Transformer Positional encoding Universal Sentence Encoder Self-Attention Layers (8x) Camera images Language instruction Pick sponge… Q-values for each action bin One-hot action Feed previously predicted action dimen ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 Q/value 또는 sequence-policy state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 First, we focus on sparse binary reward tasks corresponding to success or failure for each trial.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data and broader ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the robot camera images. for real-world robotic learning, where ... (p. 4, 3 Background).
+- **Paper-specific mechanism:** We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ... (p. 8, 5 Experiments); the relevant task/metric cue is Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines (Decision Transformer, IQL), exceeding the average performance of the best-performing prior method ... (p. 7, 5 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To evaluate how well Q-Transformer can perform when learning from real-world offline datasets while effectively incorporating autonomously collected failed episodes, we evaluate Q-Transformer on 72 unique manipulation tasks, and a varie ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines (Decision Transformer, IQL), exceeding the average performance of the best-performing prior method by about ....
-4. Report the body metric and its denominator/aggregation: 5.2 Benchmarking in simulation Training steps Success rate QT-Opt CQL AW-Opt IQL Q-Transformer (ours) Decision Transformer RT-1 BC Figure 5: Performance comparison on a simulated picking task..
-5. Re-run the body-reported ablation/failure condition: Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the robot camera images. for real-world robotic learning, where ... (p. 4, 3 Background); preserve the objective/update rule: The reward is only applied on the last dimension (second line in the equation), as we do not receive any reward before executing the whole action. (p. 5, 3 Background).
+2. Use the paper-reported task/data/environment cue: To evaluate how well Q-Transformer can perform when learning from real-world offline datasets while effectively incorporating autonomously collected failed episodes, we evaluate Q-Transformer on 72 unique manipulation tasks, and a ... (p. 6, 5 Experiments).
+3. Compare against the reported or matched baseline: To ensure a fair comparison between Q-Transformer and imitation learning methods, we discard all successful episodes in the autonomously collected data when we train our method, to ensure that by ... (p. 6, 5 Experiments).
+4. Report the body metric with its denominator and aggregation: Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines (Decision Transformer, IQL), exceeding the average performance of the best-performing prior method ... (p. 7, 5 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ... (p. 8, 5 Experiments); if none is reported, design one around: This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3 Background), p. 4 (3 Background), p. 1 (1 Introduction); the primary result is directionally consistent at p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (5 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), and measure the boundary at p. 6 (5 Experiments), p. 6 (5 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 specific, regularizer, minimizes mechanism이 Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline ... 대비 5.2 Benchmarking in simulation Training steps Success rate QT-Opt CQL AW-Opt IQL Q-Transformer (ours) Decision Transformer RT-1 BC ...을 개선하고, First, we focus on sparse binary reward tasks corresponding to success or failure for each trial. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the ...), does the paper-specific mechanism (We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our ...) retain the reported evaluation outcome (Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines ...) when tested against the paper's strongest explicit boundary (This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ... (p. 8, 5 Experiments).
+- **Strongest explicit boundary:** This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

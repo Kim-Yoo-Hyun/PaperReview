@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 However, most existing human-to-robot (H2R) approaches omit tactile feedback entirely and instead focus on transferring more readily available observations such as egocentric vision or state-action pairs in configuration space.를 Problem Statement Our goal is to learn a latent-space mapping that transfers human tactile observations to robot tactile observations.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Moreover, tactile alignment alone does not address visual discrepancies between human and robot embodiments.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method consists of two stages: self-supervised representation learning and cross-embodiment alignment via pseudo-pairs.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We use f g i , pg i and f r j , pr j to denote the tactile observation and pose of a single fingertip at independent time indices ... (p. 3, III. METHODOLOGY).
+- **Paper-specific mechanism:** The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of the same task. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation. (p. 5, IV. EXPERIMENTS AND RESULTS); the relevant task/metric cue is Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. (p. 5, IV. EXPERIMENTS AND RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy cannot recover, often leading to complete unscrewing of the light bulb. (p. 7, 8. The pivoting and insertion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 10: ℓ1 force prediction error (mean ± std) along each axis, averaged over five evaluations. G →R evaluates force prediction on the robot using human tactile signals, with (blue) and without ....
-4. Report the body metric and its denominator/aggregation: Fig. 10: ℓ1 force prediction error (mean ± std) along each axis, averaged over five evaluations. G →R evaluates force prediction on the robot using human tactile signals, with (blue) and without ....
-5. Re-run the body-reported ablation/failure condition: Fig. 6: Pivoting Task. The task begins in a non-contact state and transitions to pivoting upon contact detection via tactile feedback, with the goal of maintaining contact without dropping the object. Top: ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We use f g i , pg i and f r j , pr j to denote the tactile observation and pose of a single fingertip at independent time indices ... (p. 3, III. METHODOLOGY); preserve the objective/update rule: In step2, we aggregate the learned latents from both domains to construct pseudo-pairs (h∗, r∗), and learn a velocity field vθ that transports the glove latent distribution to the robot ... (p. 3, III. METHODOLOGY).
+2. Use the paper-reported task/data/environment cue: The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation. (p. 5, IV. EXPERIMENTS AND RESULTS).
+3. Compare against the reported or matched baseline: Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. (p. 5, IV. EXPERIMENTS AND RESULTS).
+4. Report the body metric with its denominator and aggregation: Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. (p. 5, IV. EXPERIMENTS AND RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig. (p. 5, IV. EXPERIMENTS AND RESULTS); if none is reported, design one around: Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy cannot recover, often leading to complete unscrewing of the light bulb. (p. 7, 8. The pivoting and insertion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMENTS AND RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 5 (IV. EXPERIMENTS AND RESULTS), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 7 (8. The pivoting and insertion), p. 8 (V. LIMITATION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 consists, stages, self-supervised mechanism이 Fig. 10: ℓ1 force prediction error (mean ± std) along each axis, averaged over five evaluations. ... 대비 Fig. 10: ℓ1 force prediction error (mean ± std) along each axis, averaged over five evaluations. G →R ...을 개선하고, Moreover, tactile alignment alone does not address visual discrepancies between human and robot embodiments. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We use f g i , pg i and f r j , pr j to denote the tactile observation and pose ...), does the paper-specific mechanism (The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of ...) retain the reported evaluation outcome (Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig.) when tested against the paper's strongest explicit boundary (Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of the same task. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation. (p. 5, IV. EXPERIMENTS AND RESULTS).
+- **Strongest explicit boundary:** Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy cannot recover, often leading to complete unscrewing of the light bulb. (p. 7, 8. The pivoting and insertion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

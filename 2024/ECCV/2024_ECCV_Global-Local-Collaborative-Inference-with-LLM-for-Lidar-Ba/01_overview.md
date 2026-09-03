@@ -1,34 +1,84 @@
 # Global-Local Collaborative Inference with LLM for Lidar-Based Open-Vocabulary Detection
 
-- Year/Venue: 2024 / ECCV
-- Category: 3D Vision-Language Understanding
-- Tags: semantic
-- Paper link: ./2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5197_ECCV_2024_paper.php.
+> PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- In this way, the detection model fails to detect objects not belonging to the training object classes.
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2024 / ECCV
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: Robotics-enabling 3D perception
+- Tier: ARCHIVE
+- Tags: semantic
+- Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5197_ECCV_2024_paper.php
+- Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In this way, the detection model fails to detect objects not belonging to the training object classes.를 문제로 두고, In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions of the global scene-level information and local ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / 1 Introduction - extractive body cue:** As a basic function of machine perception, object detection has attracted much attention within computer vision communities.
+- **p. 1 / 1 Introduction - extractive body cue:** The traditional training pipeline for the detection model relies on elaborately labeled data, resulting in a limited number of classes that can be collected and ...
+- **p. 1 / 1 Introduction - extractive body cue:** In this way, the detection model fails to detect objects not belonging to the training object classes.
+- **p. 2 / X. Peng et al - extractive body cue:** Compared to open-vocabulary detection for 2D RGB images, lidar-based open-vocabulary detection suffers from more difficulties.
+- **p. 2 / X. Peng et al - extractive body cue:** However, the dominant paradigm of current state-of-the-art lidar-based OVD methods only focuses on object-level features and neglects the importance of
+- **p. 3 / X. Peng et al - extractive body cue:** 1a, the current paradigm determines the class of an object by comparing the object-level features and the text features of class names.
 
 ## Core Idea
-- In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result and a global ...
-- We use LLaMA as the LLM backbone, which is initialized by the checkpoint vicuna-7b-v1.5-16k .
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 3 / X. Peng et al - extractive body cue:** In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions ...
+- **p. 1 / body section not recovered - extractive body cue:** Extensive experiments on ScanNetV2 and SUN RGB-D demonstrate the superiority of our methods.
+- **p. 1 / body section not recovered - extractive body cue:** In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result ...
+- **p. 2 / X. Peng et al - extractive body cue:** (b) In contrast, we propose a Global-Local Collaborative Inference Scheme (GLIS) for 3D OVD, considering both the scene-level/global information and the object-level/local information.
+- **p. 3 / X. Peng et al - extractive body cue:** Superior performance on ScanNetV2 [7] and SUN RGB-D [38] demonstrates the effectiveness of our methods.
+- **p. 6 / X. Peng et al - extractive body cue:** Firstly, the Background-Aware Object Localization (BAOL) module extracts object proposals {bi, f i obj}Nobj i=1 from the local feature floc: \{ b _ i,f_{obj }^i ...
+- **p. 8 / X. Peng et al - extractive body cue:** Then class-agnostic object proposals, as well as their confidence scores and 3D features fobj, are generated by the BAOL module.
+- **p. 3 / X. Peng et al - extractive body cue:** For the local branch, we propose Reflected Pseudo Labels Generation (RPLG) to generate high-quality pseudo labels for training.
 
-## Main Claims
-- Extensive experiments on ScanNetV2 and SUN RGB-D demonstrate the superiority of our methods.
-- 1, our proposed GLIS greatly improves the open-vocabulary detection performance on ScanNetV2.
-- Our methods also significantly improve the detection precision of many classes, e.g., chair is improved by 10.79%, toilet is improved by 5.81%, and table is improved by 5.15%.
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | Due to noises within the point cloud, the detector may confuse foreground objects with the background and outputs false object proposals. | RGB-D, image set, point cloud, depth와 camera pose | p. 7 (X. Peng et al), p. 3 (X. Peng et al) |
+| State/latent | Due, noises, within, point, cloud, detector, confuse, foreground, objects, background, outputs, false | geometry, map, object/relationship state | p. 7 (X. Peng et al), p. 3 (X. Peng et al), p. 2 (X. Peng et al) |
+| Output/action | In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions of the global scene-level information and local ... | point map, pose, scene graph, affordance 또는 query result | p. 3 (X. Peng et al), p. 2 (X. Peng et al), p. 2 (X. Peng et al) |
+| Objective/outcome | Firstly, point clouds have lower resolutions compared to 2D RGB images, leading to the loss of object details, e.g. material, texture, color, etc. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 2 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. Peng et al) |
 
-## Contribution
-- Extensive experiments on ScanNetV2 and SUN RGB-D demonstrate the superiority of our methods.
-- In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result and a global ...
-- Intuitively, lidar point clouds provide 3D information, both object level and scene level, to generate trustful detection results.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- Open-Vocabulary Detection (OVD) is the task of detecting all interesting objects in a given scene without predefined object classes.
+- **p. 3 / X. Peng et al - extractive body cue:** In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions ...
+- **p. 1 / body section not recovered - extractive body cue:** Extensive experiments on ScanNetV2 and SUN RGB-D demonstrate the superiority of our methods.
+- **p. 1 / body section not recovered - extractive body cue:** In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result ...
+- **p. 2 / X. Peng et al - extractive body cue:** (b) In contrast, we propose a Global-Local Collaborative Inference Scheme (GLIS) for 3D OVD, considering both the scene-level/global information and the object-level/local information.
+- **p. 3 / X. Peng et al - extractive body cue:** Superior performance on ScanNetV2 [7] and SUN RGB-D [38] demonstrates the effectiveness of our methods.
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 4: Visualizations of GLIS. The score of each proposal is the confidence that the proposal is truly a foreground object. These proposals, as well ...
+- **p. 11 / 4 Experiments - extractive body cue:** Our methods also significantly improve the detection precision of many classes, e.g., chair is improved by 10.79%, toilet is improved by 5.81%, and table is ...
+- **p. 11 / 4 Experiments - extractive body cue:** 1, our proposed GLIS greatly improves the open-vocabulary detection performance on ScanNetV2.
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 13 (Figure/Table caption), p. 11 (4 Experiments) |
+| Embodiment/environment | SUN RGB-D is a large 3D object detection and scene understanding dataset, which contains 10335 samples with around 800 object classes. | hardware/simulator version and reset protocol | p. 11 (4 Experiments), p. 10 (4 Experiments) |
+| Dataset/benchmark | For a fair comparison, we evaluate our GLIS on the top-20 object classes in ScanNetV2 and SUN RGB-D respectively, following OV-3DET [26]. | role, split, size and leakage | p. 11 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments) |
+| Metric | We use the mean Average Precision (mAP) at the IoU threshold of 0.25 to evaluate the detection performance. | definition, denominator, direction and uncertainty | p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 11 (4 Experiments) |
+| Baseline/ablation | Compared to previous sota method CoDA [2], mAP 10cls 25 is raised from 28.76% to 30.94% and mAP 20cls 25 is raised from 19.32% to 20.83%. | fair input/data/compute/action matching | p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (Figure/Table caption) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 14 / X. Peng et al - extractive body cue:** These limitations could inspire our future work.
+- **p. 14 / X. Peng et al - extractive body cue:** The limitation of GLIS exists due to the noises within the point cloud and the false pseudo labels generated from the 2D image.
+- **p. 12 / X. Peng et al - extractive body cue:** This proves that BAOL can overcome the disturbance of noises in point clouds, resulting in better localization for interested objects.
+
+## Why Read It
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In this way, the detection model fails to detect objects not belonging to the training object classes.를 문제로 두고, In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions of the global scene-level information and local ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (X. Peng et al), p. 2 (X. Peng et al), p. 3 (X. Peng et al), p. 3 (X. Peng et al), p. 6 (X. Peng et al) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

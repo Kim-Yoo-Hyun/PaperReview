@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1806.10293; PDF retrieval source: https://arxiv.org/pdf/1806.10293. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1806.10293; PDF retrieval source: https://arxiv.org/pdf/1806.10293. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Me
 
 ## Method Body Digest
 
-- **p. 8 / Method - extractive PDF cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
-- **p. 7 / Method - extractive PDF cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
-- **p. 7 / Method - extractive PDF cue:** Dataset Test Bin emptying first 10 first 20 first 30 QT-Opt (ours) 580k off-policy + 28k on-policy 96% 88% 88% 76% Levine et al.
-- **p. 8 / Method - extractive PDF cue:** Although the training data included no more than ten objects at a time, the policy can still grasp in dense clutter, as shown in Fig.
-- **p. 7 / Method - extractive PDF cue:** This prior method does not reason about long-horizon rewards: although it can be used in closed-loop, the policy greedily optimizes for grasp success at the ...
-- **p. 8 / Method - extractive PDF cue:** All of these behaviors emerge automatically from optimizing the grasp success probability via QT-Opt.
-- **p. 7 / Method - extractive PDF cue:** Notably, all of these examples emerge automatically from training the policy to optimize grasp success.
-- **p. 2 / 1 Introduction - extractive PDF cue:** To make maximal use of this diverse dataset, we propose an off-policy training method based on a continuous-action generalization of Q-learning, which we call QTOpt.
+- **p. 8 / Method - extractive body cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
+- **p. 7 / Method - extractive body cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
+- **p. 7 / Method - extractive body cue:** Dataset Test Bin emptying first 10 first 20 first 30 QT-Opt (ours) 580k off-policy + 28k on-policy 96% 88% 88% 76% Levine et al.
+- **p. 8 / Method - extractive body cue:** Although the training data included no more than ten objects at a time, the policy can still grasp in dense clutter, as shown in Fig.
+- **p. 7 / Method - extractive body cue:** This prior method does not reason about long-horizon rewards: although it can be used in closed-loop, the policy greedily optimizes for grasp success at the ...
+- **p. 8 / Method - extractive body cue:** All of these behaviors emerge automatically from optimizing the grasp success probability via QT-Opt.
+- **p. 7 / Method - extractive body cue:** Notably, all of these examples emerge automatically from training the policy to optimize grasp success.
+- **p. 2 / 1 Introduction - extractive body cue:** To make maximal use of this diverse dataset, we propose an off-policy training method based on a continuous-action generalization of Q-learning, which we call QTOpt.
 
 ## Design Rationale
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Each cell (left) consists of a KUKA LBR IIWA arm with a two-finger gripper and an over-theshoulder RGB camera.
-- **p. 7 / Method - extractive PDF cue:** The performance of our method is shown in Table 1.
+- **p. 2 / 1 Introduction - extractive body cue:** We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that ...
+- **p. 2 / 1 Introduction - extractive body cue:** Each cell (left) consists of a KUKA LBR IIWA arm with a two-finger gripper and an over-theshoulder RGB camera.
+- **p. 7 / Method - extractive body cue:** The performance of our method is shown in Table 1.
 
 ## Source Evidence Cues
 
-- **p. 8 / Method - extractive PDF cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
-- **p. 7 / Method - extractive PDF cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
-- **p. 7 / Method - extractive PDF cue:** Dataset Test Bin emptying first 10 first 20 first 30 QT-Opt (ours) 580k off-policy + 28k on-policy 96% 88% 88% 76% Levine et al.
-- **p. 8 / Method - extractive PDF cue:** Although the training data included no more than ten objects at a time, the policy can still grasp in dense clutter, as shown in Fig.
+- **p. 8 / Method - extractive body cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
+- **p. 7 / Method - extractive body cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
+- **p. 7 / Method - extractive body cue:** Dataset Test Bin emptying first 10 first 20 first 30 QT-Opt (ours) 580k off-policy + 28k on-policy 96% 88% 88% 76% Levine et al.
+- **p. 8 / Method - extractive body cue:** Although the training data included no more than ten objects at a time, the policy can still grasp in dense clutter, as shown in Fig.
 - **Detected method headings:** Method (p. 7); C.1 Effect of Off-Policy Training on Performance (p. 17)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based ... | p. 8 (Method), p. 7 (Method) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection. | p. 7 (Method), p. 7 (Method) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Me
 
 ## Objective / Update Rule
 
-- **p. 7 / Method - extractive PDF cue:** This prior method does not reason about long-horizon rewards: although it can be used in closed-loop, the policy greedily optimizes for grasp success at the ...
-- **p. 8 / Method - extractive PDF cue:** All of these behaviors emerge automatically from optimizing the grasp success probability via QT-Opt.
-- **p. 7 / Method - extractive PDF cue:** Notably, all of these examples emerge automatically from training the policy to optimize grasp success.
-- **p. 8 / Method - extractive PDF cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
+- **p. 7 / Method - extractive body cue:** This prior method does not reason about long-horizon rewards: although it can be used in closed-loop, the policy greedily optimizes for grasp success at the ...
+- **p. 8 / Method - extractive body cue:** All of these behaviors emerge automatically from optimizing the grasp success probability via QT-Opt.
+- **p. 7 / Method - extractive body cue:** Notably, all of these examples emerge automatically from training the policy to optimize grasp success.
+- **p. 8 / Method - extractive body cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Me
 
 ## Observation–State–Action Interface
 
-- **p. 8 / Method - extractive PDF cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** To make maximal use of this diverse dataset, we propose an off-policy training method based on a continuous-action generalization of Q-learning, which we call QTOpt.
-- **p. 2 / 1 Introduction - extractive PDF cue:** This kind of dynamic closed-loop grasping is likely to be much more robust to unpredictable object physics, limited sensory information (e.g., monocular camera inputs instead ...
-- **p. 7 / Method - extractive PDF cue:** In contrast to most grasping systems, our method performs general closed-loop control with image observations, and can choose to reposition, open, or close the gripper ...
-- **p. 8 / Method - extractive PDF cue:** Our results demonstrate that reinforcement learning with vision-based inputs can scale to large datasets and very large models, and can enable policies that generalize effectively ...
-- **p. 7 / Method - extractive PDF cue:** What types of strategies does this policy adopt?
-- **p. 1 / 1 Introduction - extractive PDF cue:** It thus serves as a microcosm of the larger robotic manipulation problem, providing a challenging and practically applicable model problem for experimenting with generalization and ...
+- **p. 8 / Method - extractive body cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
+- **p. 2 / 1 Introduction - extractive body cue:** To make maximal use of this diverse dataset, we propose an off-policy training method based on a continuous-action generalization of Q-learning, which we call QTOpt.
+- **p. 2 / 1 Introduction - extractive body cue:** This kind of dynamic closed-loop grasping is likely to be much more robust to unpredictable object physics, limited sensory information (e.g., monocular camera inputs instead ...
+- **p. 7 / Method - extractive body cue:** In contrast to most grasping systems, our method performs general closed-loop control with image observations, and can choose to reposition, open, or close the gripper ...
+- **p. 8 / Method - extractive body cue:** Our results demonstrate that reinforcement learning with vision-based inputs can scale to large datasets and very large models, and can enable policies that generalize effectively ...
+- **p. 7 / Method - extractive body cue:** What types of strategies does this policy adopt?
+- **p. 1 / 1 Introduction - extractive body cue:** It thus serves as a microcosm of the larger robotic manipulation problem, providing a challenging and practically applicable model problem for experimenting with generalization and ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,10 +85,10 @@ PDF body method statement (p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Me
 
 ## Training vs Inference
 
-- **p. 8 / Method - extractive PDF cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
-- **p. 7 / Method - extractive PDF cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
-- **p. 8 / Method - extractive PDF cue:** Although the training data included no more than ten objects at a time, the policy can still grasp in dense clutter, as shown in Fig.
-- **p. 7 / Method - extractive PDF cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
+- **p. 8 / Method - extractive body cue:** 7 Discussion and Future Work We presented a framework for scalable robotic reinforcement learning with raw sensory inputs such as images, based on an algorithm ...
+- **p. 7 / Method - extractive body cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
+- **p. 8 / Method - extractive body cue:** Although the training data included no more than ten objects at a time, the policy can still grasp in dense clutter, as shown in Fig.
+- **p. 7 / Method - extractive body cue:** Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -108,13 +108,13 @@ PDF body method statement (p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Me
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative results in terms of grasp success rate on test objects. Policies are evaluated with object replacement (test) and without (bin emptying), with ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Off-policy and on-policy ablation of termination condition. Quantitative experiments The performance of our algorithm is evaluated empirically in a set of grasping experiments. ...
-- **p. 7 / Method - extractive PDF cue:** The results show both a variant of our method that is trained entirely using off-policy data, without any additional data collection from the latest policy, ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Table 8: Data efficiency comparison in simulation. We argue that the algorithm from Levine et al. [27] is less data efficient because it optimizes a ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 2: Off-policy ablation over state representation. Discount and Reward Definition To encourage faster grasps, we experimented with decreasing discount and adding a small reward ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 5: Off-policy performance with and without clipped Double-Q Learning. Data efficiency As discussed in Section 5 we collected 580k grasp attempts across 7 robots ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 5: Illustrations of the bin emptying experiment (a). The (a, right) shows a very small object getting stuck in the corner and requiring a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Quantitative results in terms of grasp success rate on test objects. Policies are evaluated with object replacement (test) and without (bin emptying), with ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Off-policy and on-policy ablation of termination condition. Quantitative experiments The performance of our algorithm is evaluated empirically in a set of grasping experiments. ...
+- **p. 7 / Method - extractive body cue:** The results show both a variant of our method that is trained entirely using off-policy data, without any additional data collection from the latest policy, ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Table 8: Data efficiency comparison in simulation. We argue that the algorithm from Levine et al. [27] is less data efficient because it optimizes a ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 2: Off-policy ablation over state representation. Discount and Reward Definition To encourage faster grasps, we experimented with decreasing discount and adding a small reward ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 5: Off-policy performance with and without clipped Double-Q Learning. Data efficiency As discussed in Section 5 we collected 580k grasp attempts across 7 robots ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 5: Illustrations of the bin emptying experiment (a). The (a, right) shows a very small object getting stuck in the corner and requiring a ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -128,7 +128,7 @@ PDF body method statement (p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Me
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Method), objective p. 7 (Method), p. 8 (Method), p. 7 (Method), p. 8 (Method), temporal p. 3 (2 Related Work), p. 4 (2 Related Work), p. 6 (2 Related Work), p. 6 (2 Related Work), p. 7 (Method), p. 7 (Method).
+- **Evidence anchors reviewed:** method p. 8 (Method), p. 7 (Method), p. 7 (Method), p. 8 (Method), objective p. 7 (Method), p. 8 (Method), p. 7 (Method), p. 8 (Method), temporal p. 3 (2 Related Work), p. 4 (2 Related Work), p. 6 (2 Related Work), p. 6 (2 Related Work), p. 7 (Method), p. 7 (Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fzmittHfq3; PDF retrieval source: https://openreview.net/pdf/d6aae457099a5d9e50bba1a6bbc48d8756a15c91.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fzmittHfq3; PDF retrieval source: https://openreview.net/pdf/d6aae457099a5d9e50bba1a6bbc48d8756a15c91.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | These are then concatenated with a learnable camera token tcam ∈RDs and fed into a Spatial Encoder Espl(·), which consists of N ... | p. 6 (3 Methodology), p. 4 (3 Methodology) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | 2, FALCON is an end-to-end VLA consists of three core components: (1) a 2D VLM for multimodal semantic representation, (2) an ESM ... | p. 4 (3 Methodology), p. 6 (3 Methodology) |
@@ -129,8 +129,17 @@ PDF body method statement (p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), objective p. 5 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), temporal p. 4 (3 Methodology), p. 7 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology).
+- **Evidence anchors reviewed:** method p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), objective p. 5 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), temporal p. 4 (3 Methodology), p. 7 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (27 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** A learnable action token tact is appended to it, and the corresponding output hidden state ˆtact ∈RDact, where Dact represents the feature dimension, is extracted as the semantic action representation, ... (p. 4, 3 Methodology).
+- **Objective/update evidence:** 3.3 Training Objective During the training process of FALCON, the objective for action sequence generation is formulated as the minimization of a composite loss function over the predicted action horizon. (p. 5, 3 Methodology).
+- **Temporal/runtime evidence:** For long-horizon robotic tasks that involve sequential decision-making, we employ a predictor based on the long short-term memory (LSTM) network [8, 11] that utilizes a history of feature representations. (p. 7, 3 Methodology).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

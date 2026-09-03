@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | The architecture for the action prediction policy network is composed by a PointNet [66] encoder for the visual information, and a SentenceTransformer ... | p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | The state representation consists of simulated pointclouds and robot proprioceptive information (for details of the network architecture, see Appendix A). | p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 6 (C. Learning from Previous Successful Exploration) |
@@ -83,10 +83,10 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | Then, it adapts the behavior to the robot's own morphology by sampling candidate actions around the human ones, and verifying them for ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | However, these techniques are restricted to short horizon skills and require tedious human supervision, tasked with ensuring that the robot exploration is ... | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | not recovered | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | not recovered | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | Then, it adapts the behavior to the robot's own morphology by sampling candidate actions around the human ones, and verifying them for ... | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | However, these techniques are restricted to short horizon skills and require tedious human supervision, tasked with ensuring that the robot exploration is ... | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -135,8 +135,17 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 6 (C. Learning from Previous Successful Exploration), p. 1 (Abstract), p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), objective p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), temporal p. 1 (Abstract), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 4 (I. INrRopucTION), p. 4 (B. Safe and Autonomous Real-World Adaptation).
+- **Evidence anchors reviewed:** method p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 6 (C. Learning from Previous Successful Exploration), p. 1 (Abstract), p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), objective p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), temporal p. 1 (Abstract), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 4 (I. INrRopucTION), p. 4 (B. Safe and Autonomous Real-World Adaptation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The architecture for the action prediction policy network is composed by a PointNet [66] encoder for the visual information, and a SentenceTransformer [67] for the task description, combined with an ... (p. 5, C. Learning from Previous Successful Exploration).
+- **Objective/update evidence:** Given this function, the robot's objective is to find a policy that maps states to the actions that maximize the task reward while remaining safe, given formally by: (p. 4, B. Safe and Autonomous Real-World Adaptation).
+- **Temporal/runtime evidence:** However, these techniques are restricted to short horizon skills and require tedious human supervision, tasked with ensuring that the robot exploration is safe, resetting the task constantly and detecting success, ... (p. 1, I. INrRopucTION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

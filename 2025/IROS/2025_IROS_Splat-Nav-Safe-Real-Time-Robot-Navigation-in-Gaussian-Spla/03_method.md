@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.02751; PDF retrieval source: https://arxiv.org/pdf/2403.02751. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.02751; PDF retrieval source: https://arxiv.org/pdf/2403.02751. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | We propose to solve maxs∈[0,1] K(s) using Algorithm 1. | p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | While there are many ways one could convert the ellipsoidal representation into a conservative occupancy grid, we propose the following method that ... | p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | We show online re-planning at more than 2 Hz and pose estimation at about 25 Hz, an order of magnitude faster than ... | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | At a frequency of about 3 Hz, the drone transmits images from its cameras and associated VIO poses to the desktop computer. | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | We show online re-planning at more than 2 Hz and pose estimation at about 25 Hz, an order of magnitude faster than ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 5 (IV. PLANNING WITH SAFE POLYTOPES), objective p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), temporal p. 1 (Abstract), p. 12 (VI. EXPERIMENTS), p. 15 (VII. CONCLUSION), p. 9 (V. MONOCULAR POSE ESTIMATION), p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 5 (IV. PLANNING WITH SAFE POLYTOPES), objective p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), temporal p. 1 (Abstract), p. 12 (VI. EXPERIMENTS), p. 15 (VII. CONCLUSION), p. 9 (V. MONOCULAR POSE ESTIMATION), p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Algorithm 1: K(s) Bisection Search Input: number of iterations k; Output: maximal estimator ˆs; // Initialize lower and upper bounds sl ←0, sh ←1; for i ←0 to k do ... (p. 6, IV. PLANNING WITH SAFE POLYTOPES).
+- **Objective/update evidence:** There are four primary components: (1) feasible path seeding through graph-based search, (2) construction of a collision set around each part of the path, (3) generation of hyperplane constraints, and ... (p. 7, IV. PLANNING WITH SAFE POLYTOPES).
+- **Temporal/runtime evidence:** At a frequency of about 3 Hz, the drone transmits images from its cameras and associated VIO poses to the desktop computer. (p. 12, VI. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

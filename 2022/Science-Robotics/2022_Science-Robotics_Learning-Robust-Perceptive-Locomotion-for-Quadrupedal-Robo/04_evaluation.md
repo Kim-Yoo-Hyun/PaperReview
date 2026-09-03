@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.08117; PDF retrieval source: https://arxiv.org/pdf/2201.08117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.08117; PDF retrieval source: https://arxiv.org/pdf/2201.08117. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 2. RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | First, we compared the success rate of overcoming fixed-height steps as shown in Figure 4A. | p. 5 (2. RESULTS) |
 | 2. RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | The success rate of the proprioceptive baseline dropped at 20 cm step height when the front legs started frequently getting stuck at the step ... | p. 5 (2. RESULTS) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The robot perceives the environment in the form of height samples from an elevation map constructed from point cloud input, as seen in Figure ... | embodiment, simulator version and control stack | p. 5 (2. RESULTS), p. 3 (2. RESULTS) |
 | Task/environment | The robot was robust in these conditions, even when occlusion and surface properties such as high reflectance impeded exteroception. | reset, timeout, object/scene variation | p. 3 (2. RESULTS), p. 3 (2. RESULTS) |
@@ -159,7 +159,16 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 - **p. 5 / 2. RESULTS - extractive body cue:** As shown in Figure 3 B-G, the estimated elevation map can unreliable due to sensing failures, limitations of the 2.5D height map representation, or viewpoint ...
 - **p. 6 / 2. RESULTS - extractive body cue:** The controller is robust to many perception challenges commonly encountered in the field: missing map information due to sensing failure (B, C, G) and misleading ...
 
-- **PDF anchors reviewed:** datasets p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 3 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS), p. 8 (2. RESULTS), metrics p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS), p. 3 (2. RESULTS), p. 6 (2. RESULTS), p. 6 (2. RESULTS), baselines p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 7 (2. RESULTS), p. 7 (2. RESULTS), p. 8 (2. RESULTS), results p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 8 (2. RESULTS), p. 3 (2. RESULTS), p. 8 (2. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 3 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS), p. 8 (2. RESULTS), metrics p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS), p. 3 (2. RESULTS), p. 6 (2. RESULTS), p. 6 (2. RESULTS), baselines p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 7 (2. RESULTS), p. 7 (2. RESULTS), p. 8 (2. RESULTS), results p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 8 (2. RESULTS), p. 3 (2. RESULTS), p. 8 (2. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** First, we compared the success rate of overcoming fixed-height steps as shown in Figure 4A. (p. 5, 2. RESULTS).
+- **Metric evidence:** First, we compared the success rate of overcoming fixed-height steps as shown in Figure 4A. (p. 5, 2. RESULTS).
+- **Baseline/ablation evidence:** The baseline, on the other hand, failed to track the path without human assistance. (p. 5, 2. RESULTS).
+- **Failure/negative evidence:** Large noise magnitude for each scan point to simulate complete lack of terrain information due to occlusion or mapping failure. (p. 12, 2. Perturbing the height values).

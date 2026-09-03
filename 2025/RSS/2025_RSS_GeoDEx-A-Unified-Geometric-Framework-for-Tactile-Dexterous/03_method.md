@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p057.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p057.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p057.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p057.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | In this section, we will first define the necessary concepts for our theoretical framework, and then use these concepts to address the ... | p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | We use MwoCo to simulate the arm, hand, and objects' kinematics, dynamics, and contact interactions. | p. 5 (B. Force Estimation), p. 5 (B. Force Estimation) |
@@ -85,12 +85,12 @@ PDF body method statement (p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force 
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | Additionally, compared to directly running ‘optimization using SOCP (Second Order Cone Programming), planning and force estimation using our framework achieves a Lx ... | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
-| Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 5 (B. Force Estimation), p. 2 (B. Utilizing Tactile Readings), p. 6 (A. Force Measurement via Tactile Array), p. 4 (B. Force Estimation), objective p. 5 (B. Force Estimation), p. 2 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 4 (B. Force Estimation), p. 4 (B. Force Estimation), temporal p. 1 (Front matter), p. 1 (Abstract), p. 2 (B. Utilizing Tactile Readings), p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 7 (B. Simulation Results).
+- **Evidence anchors reviewed:** method p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 5 (B. Force Estimation), p. 2 (B. Utilizing Tactile Readings), p. 6 (A. Force Measurement via Tactile Array), p. 4 (B. Force Estimation), objective p. 5 (B. Force Estimation), p. 2 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 4 (B. Force Estimation), p. 4 (B. Force Estimation), temporal p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 2 (B. Utilizing Tactile Readings), p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 7 (B. Simulation Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** the finger-object contacts with consideration of sensor error; a force estimator that uses tactile sensor reading, the robot state and the object pose to estimates all contact forces that would ... (p. 2, B. Utilizing Tactile Readings).
+- **Objective/update evidence:** Forces on FE-plane satisfy linear force equilibrium constraints: (p. 2, B. Utilizing Tactile Readings).
+- **Temporal/runtime evidence:** GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty (p. 1, Body text (section boundary not confidently recovered)).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

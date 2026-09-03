@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2509.23107. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2509.23107. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower than 1Edge precision corresponds to spatial ... | p. 5 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Across 17 trials, ST-OVSG achieved a success rate of 70.5%. | p. 6 (IV. EXPERIMENTS) |
@@ -56,7 +56,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Unlike static benchmarks, these videos feature continuous scene evolution, where objects are moved, occluded, rotated, duplicated, or removed. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | Static Representation Construction To evaluate the quality of the proposed static scene representation, we conducted experiments on the Replica dataset [32], which provides high-fidelity ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
@@ -156,7 +156,16 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Because our representation is designed for openvocabulary settings, automated evaluation of nodes and edges is unreliable: object categories and relational boundaries under open vocabulary cannot ...
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Motion blur, viewpoint shifts, and occlusions destabilize open-vocabulary detections.
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), metrics p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), results p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), metrics p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), results p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** These static results establish a baseline for subsequent experiments on dynamic environments, where temporal reasoning and latency-awareness play a central role. (p. 5, IV. EXPERIMENTS).
+- **Metric evidence:** Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower than 1Edge precision corresponds to spatial edges in ConceptGraph. (p. 5, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** With ST-OVSG, the average similarity score is 0.1702, compared to 0.164 without STOVSG. (p. 6, IV. EXPERIMENTS).
+- **Failure/negative evidence:** Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses. (p. 6, IV. EXPERIMENTS).

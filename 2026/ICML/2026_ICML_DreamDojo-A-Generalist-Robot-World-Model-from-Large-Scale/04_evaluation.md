@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (33 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2602.06949; PDF retrieval source: https://arxiv.org/abs/2602.06949. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2602.06949; PDF retrieval source: https://arxiv.org/abs/2602.06949. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 14 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization than the baseline after distillation. Lastly, we ablate ... | p. 13 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: Live teleoperation. We can teleoperate a virtual G1 robot using the PICO VR controller in real time. to DreamDojo to predict future ... | p. 14 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 14 (Figure/Tabl
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our curated data mixture excels in both scale and diversity, encompassing 15× longer duration, 96× more skills, and 2,000× more scenes than the previously ... | embodiment, simulator version and control stack | p. 5 (3.2. DreamDojo-HV Dataset), p. 9 (4. Experiments) |
 | Task/environment | We rigorously construct six evaluation benchmarks that reflect the diverse scenarios and actions present in human datasets, while being out-of-distribution for the robot training ... | reset, timeout, object/scene variation | p. 9 (4. Experiments), p. 5 (3.2. DreamDojo-HV Dataset) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 14 (Figure/Tabl
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Latent action model. [Left]: The information bottleneck design of our latent action model enforces action disentanglement, producing a continuous latent vector that represents ...
 - **p. 16 / 5. Conclusion - extractive body cue:** In contrast, we introduce the first foundation world model for dexterous manipulation, which exhibits strong generalization in simulating diverse out-of-distribution manipulation skills across multiple embodiments.
 
-- **PDF anchors reviewed:** datasets p. 5 (3.2. DreamDojo-HV Dataset), p. 9 (4. Experiments), p. 5 (3.2. DreamDojo-HV Dataset), p. 10 (0.219 Method), p. 9 (4.1. Experimental Setup), p. 10 (0.219 Method), metrics p. 13 (4.7. Downstream Applications), p. 13 (4.7. Downstream Applications), p. 14 (4.7. Downstream Applications), p. 10 (0.219 Method), p. 12 (4.3. Effects of Different Data Mixtures), p. 12 (4.5. Ablations of Our Design Choices), baselines p. 13 (Figure/Table caption), p. 8 (4. Experiments), p. 10 (0.219 Method), p. 11 (4.2. Effects of Different Action Conditions), p. 11 (4.2. Effects of Different Action Conditions), p. 12 (4.3. Effects of Different Data Mixtures), results p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), p. 12 (4.5. Ablations of Our Design Choices), p. 11 (0.219 Method), p. 12 (4.5. Ablations of Our Design Choices), p. 13 (4.7. Downstream Applications).
+- **Evidence anchors reviewed:** datasets p. 5 (3.2. DreamDojo-HV Dataset), p. 9 (4. Experiments), p. 5 (3.2. DreamDojo-HV Dataset), p. 10 (0.219 Method), p. 9 (4.1. Experimental Setup), p. 10 (0.219 Method), metrics p. 13 (4.7. Downstream Applications), p. 13 (4.7. Downstream Applications), p. 14 (4.7. Downstream Applications), p. 10 (0.219 Method), p. 12 (4.3. Effects of Different Data Mixtures), p. 12 (4.5. Ablations of Our Design Choices), baselines p. 13 (Figure/Table caption), p. 8 (4. Experiments), p. 10 (0.219 Method), p. 11 (4.2. Effects of Different Action Conditions), p. 11 (4.2. Effects of Different Action Conditions), p. 12 (4.3. Effects of Different Data Mixtures), results p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), p. 12 (4.5. Ablations of Our Design Choices), p. 11 (0.219 Method), p. 12 (4.5. Ablations of Our Design Choices), p. 13 (4.7. Downstream Applications).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (33 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization than the baseline after distillation. Lastly, we ablate the choice of teacher model in ... (p. 13, Figure/Table caption).
+- **Metric evidence:** The success rate is determined by the number of fruits successfully picked up from the table and placed into the bag, with 5 fruits designated as 100% success. (p. 13, 4.7. Downstream Applications).
+- **Baseline/ablation evidence:** Specifically, we aim to answer the following questions: (1) Compared to actionless pretraining, can latent actions enable more effective transfer from human videos? (p. 8, 4. Experiments).
+- **Failure/negative evidence:** Additionally, when conducting policy evaluation, the absolute success rates in DreamDojo are often higher than their real counterparts, indicating a limitation in accurately generating nuanced failures. (p. 15, 5. Conclusion).

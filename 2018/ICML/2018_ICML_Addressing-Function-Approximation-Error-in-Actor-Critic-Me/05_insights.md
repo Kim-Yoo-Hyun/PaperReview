@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 At each discrete time step t, with a given state s ∈S, the agent selects actions a ∈A with respect to its policy π : S →A, receiving a reward r and ...를 Algorithm 1 TD3 Initialize critic networks Qθ1, Qθ2, and actor network πφ with random parameters θ1, θ2, φ Initialize target networks θ′ 1 ←θ1, θ′ 2 ←θ2, φ′ ←φ Initialize replay buffer ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Due to the connection between noise and overestimation, we examine the accumulation of errors from temporal difference learning.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We propose that fitting the value of a small area around the target action y = r + Eϵ [Qθ′(s′, πφ′(s′) + ϵ)] , (13) would have the benefit of ... (p. 6, 5.3. Target Policy Smoothing Regularization).
+- **Paper-specific mechanism:** Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is While a larger d would result in a larger benefit with respect to accumulating errors, for fair comparison, the critics are only trained once per time step, and training the ... (p. 7, 6.1. Evaluation); the relevant task/metric cue is We present the Twin Delayed Deep Deterministic policy gradient algorithm (TD3), which builds on the Deep Deterministic Policy Gradient algorithm (DDPG) (Lillicrap et al., 2015) by applying the modifications described ... (p. 6, 6. Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise..
-3. Compare against the body-reported baseline or a matched simpler baseline: A full comparison between our re-tuned version and the baselines DDPG is provided in the supplementary material..
-4. Report the body metric and its denominator/aggregation: Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise..
-5. Re-run the body-reported ablation/failure condition: We additionally compare the effectiveness of the actor-critic variants of Double Q-learning (Van Hasselt, 2010) and Double DQN (Van Hasselt et al., 2016), denoted DQ-AC and DDQN-AC respectively, in Table 2..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We propose that fitting the value of a small area around the target action y = r + Eϵ [Qθ′(s′, πφ′(s′) + ϵ)] , (13) would have the benefit of ... (p. 6, 5.3. Target Policy Smoothing Regularization); preserve the objective/update rule: To ensure the TD-error remains small, we update the (p. 5, 5.2. Target Networks and Delayed Policy Updates).
+2. Use the paper-reported task/data/environment cue: (2016) with no modifications to the environment or reward. (p. 7, 6.1. Evaluation).
+3. Compare against the reported or matched baseline: A full comparison between our re-tuned version and the baselines DDPG is provided in the supplementary material. (p. 8, 6.1. Evaluation).
+4. Report the body metric with its denominator and aggregation: We present the Twin Delayed Deep Deterministic policy gradient algorithm (TD3), which builds on the Deep Deterministic Policy Gradient algorithm (DDPG) (Lillicrap et al., 2015) by applying the modifications described ... (p. 6, 6. Experiments).
+5. Re-run the reported ablation or stress/failure condition: To remove the dependency on the initial parameters of the policy we use a purely exploratory policy for the first 10000 time steps of stable length environments (HalfCheetah-v1 and Ant-v1) ... (p. 7, 6.1. Evaluation); if none is reported, design one around: For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization); the primary result is directionally consistent at p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluation), p. 6 (6. Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 7 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 6 (6. Experiments), and measure the boundary at p. 14 (4. Q values are stored in a lookup table), p. 6 (5.3. Target Policy Smoothing Regularization).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Finally, introduce, novel mechanism이 A full comparison between our re-tuned version and the baselines DDPG is provided in the supplementary ... 대비 Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise.을 개선하고, Due to the connection between noise and overestimation, we examine the accumulation of errors from temporal ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We propose that fitting the value of a small area around the target action y = r + Eϵ [Qθ′(s′, πφ′(s′) + ...), does the paper-specific mechanism (Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.) retain the reported evaluation outcome (We present the Twin Delayed Deep Deterministic policy gradient algorithm (TD3), which builds on the Deep Deterministic Policy ...) when tested against the paper's strongest explicit boundary (For transitions where the episode terminates by reaching some failure state, and not due to the episode running ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We present the Twin Delayed Deep Deterministic policy gradient algorithm (TD3), which builds on the Deep Deterministic Policy ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** While a larger d would result in a larger benefit with respect to accumulating errors, for fair comparison, the critics are only trained once per time step, and training the ... (p. 7, 6.1. Evaluation).
+- **Strongest explicit boundary:** For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v80/haarnoja18b.html; PDF retrieval source: https://arxiv.org/pdf/1801.01290. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v80/haarnoja18b.html; PDF retrieval source: https://arxiv.org/pdf/1801.01290. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | We will first present this derivation, verify that the corresponding algorithm converges to the optimal policy from its density class, and then ... | p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4.2. Soft Actor-Critic) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | Soft Actor-Critic estimated from a single action sample from the current policy without introducing a bias, but in practice, including a separate ... | p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic) |
@@ -82,10 +82,10 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | We train five different instances of each algorithm with different random seeds, with each performing one evaluation rollout every 1000 environment steps. | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | We train five different instances of each algorithm with different random seeds, with each performing one evaluation rollout every 1000 environment steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | The source code of our SAC implementation1 and videos2 are available online. | Hz/fps, inference time and control rate |
-| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not recovered | window and reset |
-| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -131,8 +131,17 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), p. 4 (4.2. Soft Actor-Critic), p. 5 (4.2. Soft Actor-Critic), p. 3 (4. From Soft Policy Iteration to Soft), objective p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), temporal p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study).
+- **Evidence anchors reviewed:** method p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), p. 4 (4.2. Soft Actor-Critic), p. 5 (4.2. Soft Actor-Critic), p. 3 (4. From Soft Policy Iteration to Soft), objective p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), temporal p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The algorithm is agnostic to the parameterization of the policy, as long as it can be evaluated for any arbitrary state-action tuple. (p. 6, 4.2. Soft Actor-Critic).
+- **Objective/update evidence:** Let πold ∈Π and let πnew be the optimizer of the minimization problem defined in Equation 4. (p. 4, 4.1. Derivation of Soft Policy Iteration).
+- **Temporal/runtime evidence:** We train five different instances of each algorithm with different random seeds, with each performing one evaluation rollout every 1000 environment steps. (p. 7, 5.1. Comparative Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

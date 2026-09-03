@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 These models take multimodal inputs-such as visual observations and natural language instructions-and predict the corresponding robotic actions.를 The remaining layers embed three inputs: (i) language instruction, (ii) RGB image(s), and (iii) robot sensorimotor state.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 5.1 Limitations We identify several limitations remaining in our contribution.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** These models take multimodal inputs-such as visual observations and natural language instructions-and predict the corresponding robotic actions. (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is The results show that, pretraining on community datasets leads to a substantial performance improvement (from 51.7 to 78.3). (p. 11, 4 Experiments); the relevant task/metric cue is Success rates (%) for various policies. (p. 11, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 5.1 Limitations We identify several limitations remaining in our contribution. (p. 14, 5 Discussion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For real-world evaluation, we collected three datasets using the SO-100 robot arm (Knight et al.) and 1 with SO-101 arm (Knight et al.), each corresponding to a different manipulation task..
-3. Compare against the body-reported baseline or a matched simpler baseline: SmolVLA outperforms other VLA-based approaches such as Octo (Team et al., 2024) and OpenVLA (Kim et al., 2024), as well as the diffusion policy baseline across both LIBERO and Meta-World..
-4. Report the body metric and its denominator/aggregation: We use a dataset (Kim et al., 2024; Pertsch et al., 2025)1 containing 1,693 episodes covering all tasks, and evaluate with 10 trials per task, reporting average success rates based on binary ....
-5. Re-run the body-reported ablation/failure condition: Effect of pretraining and multitask learning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: These models take multimodal inputs-such as visual observations and natural language instructions-and predict the corresponding robotic actions. (p. 2, 1 Introduction); preserve the objective/update rule: SmolVLA is pretrained on public community datasets and evaluated on low-cost robots. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: For real-world evaluation, we collected three datasets using the SO-100 robot arm (Knight et al.) and 1 with SO-101 arm (Knight et al.), each corresponding to a different manipulation task. (p. 8, 4 Experiments).
+3. Compare against the reported or matched baseline: SmolVLA outperforms other VLA-based approaches such as Octo (Team et al., 2024) and OpenVLA (Kim et al., 2024), as well as the diffusion policy baseline across both LIBERO and Meta-World. (p. 10, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: Success rates (%) for various policies. (p. 11, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: However, we observe in practice that the model can be trained for a much smaller number of steps without sacrificing significant performance levels. (p. 10, 4 Experiments); if none is reported, design one around: 5.1 Limitations We identify several limitations remaining in our contribution. (p. 14, 5 Discussion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract); the primary result is directionally consistent at p. 12 (4 Experiments), p. 12 (4 Experiments), p. 14 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 11 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), and measure the boundary at p. 14 (5 Discussion), p. 2 (1 Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, SmolVLA, compact mechanism이 SmolVLA outperforms other VLA-based approaches such as Octo (Team et al., 2024) and OpenVLA (Kim et ... 대비 We use a dataset (Kim et al., 2024; Pertsch et al., 2025)1 containing 1,693 episodes covering all tasks, ...을 개선하고, 5.1 Limitations We identify several limitations remaining in our contribution. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (These models take multimodal inputs-such as visual observations and natural language instructions-and predict the corresponding robotic actions.), does the paper-specific mechanism (We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs.) retain the reported evaluation outcome (Success rates (%) for various policies.) when tested against the paper's strongest explicit boundary (5.1 Limitations We identify several limitations remaining in our contribution.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Success rates (%) for various policies.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** The results show that, pretraining on community datasets leads to a substantial performance improvement (from 51.7 to 78.3). (p. 11, 4 Experiments).
+- **Strongest explicit boundary:** 5.1 Limitations We identify several limitations remaining in our contribution. (p. 14, 5 Discussion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

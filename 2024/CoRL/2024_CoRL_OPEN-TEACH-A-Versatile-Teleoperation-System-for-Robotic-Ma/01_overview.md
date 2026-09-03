@@ -1,8 +1,10 @@
 # OPEN TEACH: A Versatile Teleoperation System for Robotic Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v270/iyer25a.html.
-> PDF retrieval source: https://arxiv.org/pdf/2403.07870. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v270/iyer25a.html.
+> PDF retrieval source: https://arxiv.org/pdf/2403.07870. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2403.07870
 - Code/Project: https://open-teach.github.io/
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,9 +35,9 @@ Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하�
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we present OPEN TEACH, an open-source framework for robot teleoperation that supports a variety of robots, including bimanual and multi-finger manipulation, all ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present OPEN TEACH, a unified robot teleoperation framework that supports multiple arms and hands, allows mobile manipulation, is calibration-free, and works across both ...
 - **p. 4 / IV. OPEN TEACH - extractive body cue:** In this section, we provide details about the VR-based teleoperation setup and the system design that enables data collection using this framework.
 - **p. 4 / IV. OPEN TEACH - extractive body cue:** We observe that OPEN TEACH is the only framework that enables controlling multiple arms, hands, and mobile manipulators, is calibration-free, and is completely open-source.
-- **p. 5 / IV. OPEN TEACH - extractive body cue:** The high frame rate streaming enables reactive control by the user, while widgets for visualizing the robot's camera view help the user focus on fine-grained ...
 - **p. 3 / III. BACKGROUND ON IMITATION LEARNING - extractive body cue:** For both of these methods, the first phase involves obtaining a non-parametric base-policy πb : Z →A with encoded representations z ∈Z and actions a ...
 - **p. 3 / III. BACKGROUND ON IMITATION LEARNING - extractive body cue:** Behavior Cloning Given a dataset of expert rollouts for a desired task in the form of observation and action pairs D == {(o, a)} ⊂O ...
 - **p. 5 / IV. OPEN TEACH - extractive body cue:** We use different controllers for each.
@@ -53,9 +55,9 @@ Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하�
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we present OPEN TEACH, an open-source framework for robot teleoperation that supports a variety of robots, including bimanual and multi-finger manipulation, all ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present OPEN TEACH, a unified robot teleoperation framework that supports multiple arms and hands, allows mobile manipulation, is calibration-free, and works across both ...
 - **p. 4 / IV. OPEN TEACH - extractive body cue:** In this section, we provide details about the VR-based teleoperation setup and the system design that enables data collection using this framework.
 - **p. 4 / IV. OPEN TEACH - extractive body cue:** We observe that OPEN TEACH is the only framework that enables controlling multiple arms, hands, and mobile manipulators, is calibration-free, and is completely open-source.
-- **p. 5 / IV. OPEN TEACH - extractive body cue:** The high frame rate streaming enables reactive control by the user, while widgets for visualizing the robot's camera view help the user focus on fine-grained ...
 - **p. 6 / 4) How intuitive is the system for new users? - extractive body cue:** Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies.
 - **p. 6 / 4) How intuitive is the system for new users? - extractive body cue:** Similar to prior work [20, 22], these policies were learned within 20 minutes and achieved an average success rate of 82%, validating the high quality ...
 - **p. 8 / 4) How intuitive is the system for new users? - extractive body cue:** On these tasks, OPEN TEACH demonstrates a higher success rate along with significantly reduced median time to complete tasks compared to the other baselines.
@@ -80,3 +82,12 @@ Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하기 위해 읽는다. 본문은 The challenge of easy-to-use teleoperation devices is more apparent in dexterous manipulation problems [24, 47, 3, 4], owing to the high dimensional action space.를 문제로 두고, The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in both simula ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 3 (III. BACKGROUND ON IMITATION LEARNING), p. 5 (IV. OPEN TEACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The challenge of easy-to-use teleoperation devices is more apparent in dexterous manipulation problems [24, 47, 3, 4], owing to the high dimensional action space. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Robot Setup Task Number of Demos Success Rate Franka-Allegro Open Box 3 9/10 Grasp Sponge 6 7/10 Pick Up Tea Sachet 4 7/10 Grasp Object and Twist 6 8/10 Allegro ... (p. 8, 4) How intuitive is the system for new users?).
+- **Explicit failure boundary:** However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset. (p. 8, VI. LIMITATIONS AND DISCUSSION).

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Compared to AnyGrasp [14], the state-of-the-art in traditional grasping detection algorithms, GraspVLA supports natural language instructions and delivers a robust closed-loop grasping policy.를 These models process robotic visual observations and human instructions to directly generate robot actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 7 Limitations and Future Work Currently, our data generation and evaluation are conducted exclusively on the Franka Panda arm with front and side views.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, b) we ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** These models process robotic visual observations and human instructions to directly generate robot actions. (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 14: Impact of number of input views. Comparison of GraspVLA with different numbers of input views. The results demonstrate that while multiple views significantly improve performance, our single-view implementation ... (p. 24, Figure/Table caption); the relevant task/metric cue is (3) How much do our design choices contribute to GraspVLA's performance? (p. 5, 5 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, which reinforcement learning could potentially address. (p. 26, C Details about Data Generation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We define synthetic categories as those present in our SynGrasp-1B dataset, while web categories refer to those exclusively present in Internet grounding dataset. b) Synthetic categories c) Web categories 0.2m a) Robot ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Additionally, the SPL metric reveals that GraspVLA grasps objects with shorter path lengths compared to π0 baselines which often exhibit hesitation..
-4. Report the body metric and its denominator/aggregation: For each object group, we also report the average Success weighted by Path Length (SPL) [76], a widely used metric that weights success rate with motion efficiency by penalizing unnecessarily long paths..
-5. Re-run the body-reported ablation/failure condition: Additionally, to assess the effectiveness of pre-training on SynGrasp-1B, we report results of direct fine-tuning π0 from its VLM weights [77], without its cross-embodiment robotic pre-training..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: These models process robotic visual observations and human instructions to directly generate robot actions. (p. 2, 1 Introduction); preserve the objective/update rule: Synthetic data offers a cost-effective alternative, yet its potential remains largely underexplored. (p. 1, Body text (section boundary not confidently recovered)).
+2. Use the paper-reported task/data/environment cue: LIBERO [13] is a widely used simulation benchmark for robotic manipulation, encompassing diverse tasks and object categories. (p. 7, 5 Experiments).
+3. Compare against the reported or matched baseline: Interestingly, the π0 baseline without cross-embodiment pre-training performs better than its pre-trained counterpart, suggesting 6 (p. 6, 5 Experiments).
+4. Report the body metric with its denominator and aggregation: (3) How much do our design choices contribute to GraspVLA's performance? (p. 5, 5 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Interestingly, the π0 baseline without cross-embodiment pre-training performs better than its pre-trained counterpart, suggesting 6 (p. 6, 5 Experiments); if none is reported, design one around: Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, which reinforcement learning could potentially address. (p. 26, C Details about Data Generation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction); the primary result is directionally consistent at p. 24 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 3 (1 Introduction), match the reported outcome at p. 24 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), and measure the boundary at p. 26 (C Details about Data Generation), p. 24 (C Details about Data Generation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, contributions, follows mechanism이 Additionally, the SPL metric reveals that GraspVLA grasps objects with shorter path lengths compared to π0 ... 대비 For each object group, we also report the average Success weighted by Path Length (SPL) [76], a widely ...을 개선하고, 7 Limitations and Future Work Currently, our data generation and evaluation are conducted exclusively on the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (These models process robotic visual observations and human instructions to directly generate robot actions.), does the paper-specific mechanism (In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly ...) retain the reported evaluation outcome ((3) How much do our design choices contribute to GraspVLA's performance?) when tested against the paper's strongest explicit boundary (Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric ((3) How much do our design choices contribute to GraspVLA's performance?) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 14: Impact of number of input views. Comparison of GraspVLA with different numbers of input views. The results demonstrate that while multiple views significantly improve performance, our single-view implementation ... (p. 24, Figure/Table caption).
+- **Strongest explicit boundary:** Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, which reinforcement learning could potentially address. (p. 26, C Details about Data Generation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

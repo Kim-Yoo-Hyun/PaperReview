@@ -1,8 +1,10 @@
 # Planning Optimal Grasps
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/ROBOT.1992.219918.
-> PDF retrieval source: https://doi.org/10.1109/ROBOT.1992.219918. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/ROBOT.1992.219918.
+> PDF retrieval source: https://doi.org/10.1109/ROBOT.1992.219918. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1992 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://doi.org/10.1109/ROBOT.1992.219918
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Because of their intricate design, they are difficult to control and plan *Supported by the Italian Ministry for University and Scientific Research.를 문제로 두고, In section four, we introduce and discuss the quality criteria we are proposing.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Because of their intricate design, they are difficult to control and plan.
 
 ## Problem and Motivation
 
@@ -26,7 +28,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 1 / Abstract - extractive body cue:** Moreover their formalization, using various metrics on a space of generalized forces, will be detailed.
 - **p. 1 / Abstract - extractive body cue:** The geometric interpretation of the two criteria will lead to an efficient planning algorithm.
 - **p. 1 / Abstract - extractive body cue:** An example of its use in a robotic environment equipped with two-jaw and three-jaw grippers will also be shown.
-- **p. 1 / 1 Introduction - extractive body cue:** Because of their intricate design, they are difficult to control and plan *Supported by the Italian Ministry for University and Scientific Research.
+- **p. 1 / 1 Introduction - extractive body cue:** Because of their intricate design, they are difficult to control and plan.
 - **p. 1 / 1 Introduction - extractive body cue:** The geometrical aspects of grasping will be emphasized while the problem of controlling compliance between the object and the jaws is not considered.
 
 ## Core Idea
@@ -74,4 +76,13 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Because of their intricate design, they are difficult to control and plan *Supported by the Italian Ministry for University and Scientific Research.를 문제로 두고, In section four, we introduce and discuss the quality criteria we are proposing.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 3 (4.1 Representing Anger forces), p. 1 (2 Working hypotheses), p. 2 (2 Working hypotheses), p. 4 (4.3 Minimizing the maximum Anger force) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Because of their intricate design, they are difficult to control and plan.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (6 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Because of their intricate design, they are difficult to control and plan. (p. 1, 1 Introduction).
+- **Actual contribution:** In section four, we introduce and discuss the quality criteria we are proposing. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Figure 1: Graphic Evaluation of the Quality Criteria 5 An Example of Using the Quality Criteria In the next subsections, we will present an algo- rithm that can evaluate the ... (p. 5, Figure/Table caption).
+- **Explicit failure boundary:** In a force closure grasp, finger locations do not change to counter external forces. (p. 1, 2 Working hypotheses).

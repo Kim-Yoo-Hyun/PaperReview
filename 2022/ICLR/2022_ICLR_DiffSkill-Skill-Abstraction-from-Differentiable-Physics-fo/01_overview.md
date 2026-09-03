@@ -1,8 +1,10 @@
 # DiffSkill: Skill Abstraction from Differentiable Physics for Deformable Object Manipulations with Tools
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2203.17275.
-> PDF retrieval source: https://arxiv.org/pdf/2203.17275. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2203.17275.
+> PDF retrieval source: https://arxiv.org/pdf/2203.17275. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ICLR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2203.17275
 - Code/Project: https://diffskill.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -37,17 +39,17 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 4 / 2 METHOD - extractive body cue:** Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** The recent development of differentiable physics simulators for deformable objects has shown promising results for solving soft-body control problems (Hu et al., 2019b; Murthy et ...
 - **p. 3 / 2 METHOD - extractive body cue:** Given an initial state s0, a goal state sg and the transition dynamics p of a differentiable simulator, we use gradient-based trajectory optimization to solve ...
-- **p. 3 / 2 METHOD - extractive body cue:** Published as a conference paper at ICLR 2022 f(o, g) s0 sim s1 a0 ... sT sim back propagation Loss a1 policy feasibility predictor skill ...
 - **p. 2 / 2 METHOD - extractive body cue:** Since it is not feasible to directly use a standalone differentiable physics solver to find an optimal solution for long-horizontal tasks, we propose to first ...
+- **p. 4 / 2 METHOD - extractive body cue:** We use an MSE loss Lfea for model training, which was shown empirically to work better than a cross-entropy loss.
 
 ## Observation, State, and Output Interface
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
 | Observation/input | Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward predictor, as well as a variational auto-encoder ... | RGB-D/point cloud, object state와 contact/task observation | p. 4 (2 METHOD), p. 2 (1 INTRODUCTION) |
-| State/latent | neural, skill, abstraction, consists, goal-conditioned, policy, takes, sensory, observation, RGB-D, images, case | object geometry, affordance, contact mode 또는 end-effector state | p. 4 (2 METHOD), p. 2 (1 INTRODUCTION), p. 3 (2 METHOD) |
-| Output/action | Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ... | grasp, pose, force 또는 end-effector trajectory | p. 2 (1 INTRODUCTION), p. 3 (2 METHOD), p. 2 (2 METHOD) |
-| Objective/outcome | Published as a conference paper at ICLR 2022 f(o, g) s0 sim s1 a0 ... sT sim back propagation Loss a1 policy feasibility predictor skill 0 skill 0 skill 1 ... f(o, ... | task completion, contact success, pose/force error와 generalization | p. 3 (2 METHOD), p. 14 (A IMPLEMENTATION DETAILS), p. 5 (2 METHOD) |
+| State/latent | neural, skill, abstraction, consists, goal-conditioned, policy, takes, sensory, observation, RGB-D, images, case | object geometry, affordance, contact mode 또는 end-effector state | p. 4 (2 METHOD), p. 2 (1 INTRODUCTION), p. 2 (2 METHOD) |
+| Output/action | Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ... | grasp, pose, force 또는 end-effector trajectory | p. 2 (1 INTRODUCTION), p. 2 (2 METHOD), p. 4 (2 METHOD) |
+| Objective/outcome | Model parameter Value dimension of latent space 8 MLP hidden node number 1024 Training parameters Value learning rate 0.001 batch size 128 optimizer Adam beta1 0.9 beta2 0.999 weight decay 0 hindsight ... | task completion, contact success, pose/force error와 generalization | p. 14 (A IMPLEMENTATION DETAILS), p. 5 (2 METHOD), p. 5 (2 METHOD) |
 
 ## Main Claims and Actual Contribution
 
@@ -83,4 +85,13 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 These differentiable simulators have facilitated gradient-based trajectory optimizers to find a motion trajectory with much fewer samples, compared with black box optimizers such as CEM or reinforcement learning algorithms (Huang et al. ...를 문제로 두고, Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (2 METHOD), p. 3 (2 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 These differentiable simulators have facilitated gradient-based trajectory optimizers to find a motion trajectory with much fewer samples, compared with black box optimizers such as CEM or reinforcement learning algorithms (Huang et al. ...를 문제로 두고, Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (2 METHOD), p. 2 (2 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The recent development of differentiable physics simulators for deformable objects has shown promising results for solving soft-body control problems (Hu et al., 2019b; Murthy et al., 2020; Heiden et al., ... (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** To extend the use of differentiable physics models to these long-horizon tasks and enable the agent to directly consume visual observations, we propose DiffSkill: a novel framework where the agent ... (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS).
+- **Explicit failure boundary:** This threshold is manually picked by observing the performance gap between successful and failed trajectories. (p. 6, 3 EXPERIMENTS).

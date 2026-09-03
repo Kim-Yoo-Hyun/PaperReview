@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://hal.science/lirmm-00831097; PDF retrieval source: https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://hal.science/lirmm-00831097; PDF retrieval source: https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, inequality constraints cannot be taken into account explicitly. | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | It also eases the use of sensory feedback, since the sensory space is often a good task-space candidate [14], [15]. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | It also eases the use of sensory feedback, since the sensory space is often a good task-space candidate [14], [15]. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | eases, sensory, feedback, since, space, often, good, task-space, candidate, notation | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
 | Output / action | Submitted, IEEE, Transaction, Robotics, quadratic, program, point, clouds | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
 | Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | whole-body pose/contact/reference state; body terms: eases, sensory, feedback, since, space, often, good, task-space, candidate, notation | p. 2 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 3 (I. INTRODUCTION) |
 | Decision / output variable | joint/whole-body action; body terms: generic, solution, take, account, equalities, inequalities, strict, hierarchy | p. 3 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 2 (I. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 9 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 9 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS) |
 | Success / guarantee | motion/task success and recovery | p. 10 (VII. EXPERIMENTS), p. 10 (VII. EXPERIMENTS), p. 11 (VII. EXPERIMENTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 2 (I. INTRODUCTION)): In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.
+PDF body contribution framing (p. 3 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 2 (I. INTRODUCTION)): In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.
 
 - **p. 7 / V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS - extractive body cue:** To cope with this problem we propose to include the contact forces f in the optimization variables of the QP resolution.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In total, the motion has to be designed in a set that lives in the high-dimensional configuration space but is implicitly limited to a much ...
@@ -66,12 +66,21 @@ PDF contribution framing (p. 3 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION O
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 3 (I. INTRODUCTION), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS). The downstream handoff is claimed only when the body describes it.
+humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 3 (I. INTRODUCTION), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), interface p. 2 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 3 (I. INTRODUCTION), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), objective p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 9 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS).
+- **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), interface p. 2 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 3 (I. INTRODUCTION), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), objective p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 8 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 9 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, inequality constraints cannot be taken into account explicitly. (p. 2, I. INTRODUCTION).
+- **Formulation-changing contribution:** In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion. (p. 3, I. INTRODUCTION).
+- **Assumption/failure evidence:** In reaction, all the other aligned joints move to overrun the neck limitation (chest joint of course, but also hip and ankle joints). (p. 12, VII. EXPERIMENTS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

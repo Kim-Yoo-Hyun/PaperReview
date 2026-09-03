@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss16/p031.html; PDF retrieval source: https://www.roboticsproceedings.org/rss16/p031.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss16/p031.html; PDF retrieval source: https://www.roboticsproceedings.org/rss16/p031.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. RESULTS - extractive PDF cue:** The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment.
-- **p. 4 / IV. RESULTS - extractive PDF cue:** Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, each ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Feedforward networks obtain a notably lower reward, with high variance.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** As can be seen, dynamics randomization improves performance of both policy types and LSTM with dynamics randomization performs the best.
-- **p. 6 / V. CONCLUSION - extractive PDF cue:** The policies were learned and tested first in simulation, then transferred to the robot, demonstrating the robustness and promise of this approach.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I.
+- **p. 5 / IV. RESULTS - extractive body cue:** The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware.
+- **p. 5 / IV. RESULTS - extractive body cue:** All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment.
+- **p. 4 / IV. RESULTS - extractive body cue:** Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, each ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Feedforward networks obtain a notably lower reward, with high variance.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
+- **p. 5 / IV. RESULTS - extractive body cue:** As can be seen, dynamics randomization improves performance of both policy types and LSTM with dynamics randomization performs the best.
+- **p. 6 / V. CONCLUSION - extractive body cue:** The policies were learned and tested first in simulation, then transferred to the robot, demonstrating the robustness and promise of this approach.
+- **p. 5 / IV. RESULTS - extractive body cue:** We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As can be seen, dynamics randomization improves performance of both policy types and LSTM with dynamics randomization performs the best. | p. 5 (IV. RESULTS) |
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware. | p. 5 (IV. RESULTS) |
@@ -38,23 +38,23 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. RESULTS - extractive PDF cue:** The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment.
-- **p. 4 / IV. RESULTS - extractive PDF cue:** Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, each ...
+- **p. 5 / IV. RESULTS - extractive body cue:** The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware.
+- **p. 5 / IV. RESULTS - extractive body cue:** All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment.
+- **p. 4 / IV. RESULTS - extractive body cue:** Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, each ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: We provide an RNN with a clock input, a velocity command, and information about the robot's state. The RNN produces joint position commands ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: A diagram of the RNN structure (left) and conventional NN structure (right) we use in our experiments. The recurrent policy has connections which ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: A PCA projection of the hidden layer activations of a feedforward policy (top) and of an LSTM policy (bottom) could imply that using ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: Reward curve of LSTM and FF networks during training without dynamics randomization. The LSTM achieves a much higher reward with remarkably little variance, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: We provide an RNN with a clock input, a velocity command, and information about the robot's state. The RNN produces joint position commands ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: A diagram of the RNN structure (left) and conventional NN structure (right) we use in our experiments. The recurrent policy has connections which ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: A PCA projection of the hidden layer activations of a feedforward policy (top) and of an LSTM policy (bottom) could imply that using ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Reward curve of LSTM and FF networks during training without dynamics randomization. The LSTM achieves a much higher reward with remarkably little variance, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware. | embodiment, simulator version and control stack | p. 5 (IV. RESULTS), p. 5 (IV. RESULTS) |
 | Task/environment | All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment. | reset, timeout, object/scene variation | p. 5 (IV. RESULTS), p. 4 (IV. RESULTS) |
@@ -105,10 +105,10 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 | Primary metric/result | The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware. | numeric claim only at cited anchor | p. 5 (IV. RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Dots become lighter as a function of time. batch size of 64 trajectories and a maximum trajectory length of 300 timesteps, equal to 9 seconds ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** Parameter Set LSTM LSTM DR FF FF DR µ1 1.3s > 40.0s 1.6s 17.1s µ2 > 40.0s > 40.0s > 40s > 40.0s µ3 1.9s ...
-- **p. 5 / IV. RESULTS - extractive PDF cue:** 23.5s 40.0s 14.8s 22.1s TABLE II: Average time (in seconds) that ten randomly seeded policies were able to walk in simulation subject to the conditions ...
-- **p. 3 / III. METHOD - extractive PDF cue:** The policy is evaluated every 30 milliseconds, or roughly 33Hz, while the PD controller operates at 2kHz, as can be seen in Figure 2.
+- **p. 5 / IV. RESULTS - extractive body cue:** Dots become lighter as a function of time. batch size of 64 trajectories and a maximum trajectory length of 300 timesteps, equal to 9 seconds ...
+- **p. 5 / IV. RESULTS - extractive body cue:** Parameter Set LSTM LSTM DR FF FF DR µ1 1.3s > 40.0s 1.6s 17.1s µ2 > 40.0s > 40.0s > 40s > 40.0s µ3 1.9s ...
+- **p. 5 / IV. RESULTS - extractive body cue:** 23.5s 40.0s 14.8s 22.1s TABLE II: Average time (in seconds) that ten randomly seeded policies were able to walk in simulation subject to the conditions ...
+- **p. 3 / III. METHOD - extractive body cue:** The policy is evaluated every 30 milliseconds, or roughly 33Hz, while the PD controller operates at 2kHz, as can be seen in Figure 2.
 
 ## Generalization and Failure Cases
 
@@ -141,11 +141,11 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 
 ## Limitations and Verification Questions
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
-- **p. 6 / V. CONCLUSION - extractive PDF cue:** The policies were learned and tested first in simulation, then transferred to the robot, demonstrating the robustness and promise of this approach.
-- **p. 5 / IV. RESULTS - extractive PDF cue:** We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
+- **p. 6 / V. CONCLUSION - extractive body cue:** The policies were learned and tested first in simulation, then transferred to the robot, demonstrating the robustness and promise of this approach.
+- **p. 5 / IV. RESULTS - extractive body cue:** We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I.
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), metrics p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), p. 1 (Figure/Table caption), baselines p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption), results p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), metrics p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), p. 1 (Figure/Table caption), baselines p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption), results p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

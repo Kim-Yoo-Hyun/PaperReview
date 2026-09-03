@@ -1,8 +1,10 @@
 # PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p056.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces.를 문제로 두고, To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling region for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces. (p. 4, IV. PROBLEM STATEMENT).
+- **Actual contribution:** Despite recent advances in robotic Robots are increasingly popular as assistive agents in evhardware and embodied Al, existing systems continue to struggle eryday life, particularly within household environments (3) with ... (p. 1, Abstract).
+- **Evaluation boundary:** Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, ... (p. 9, Figure/Table caption).
+- **Explicit failure boundary:** However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p017.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p017.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p017.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p017.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | LI regression: The MLP action head consists of 4 layers with ReLU activation, mapping final Llama-2 decoder layer hidden states directly to ... | p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | For Diffusion Policy training, we use the DROID implementation [22], which conditions action predictions on DistilBERT [42] language embeddings of the task ... | p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 7 (3) LI regression objective) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | With 25-timestep action ‘chunks, OpenVLA-OFT+ achieves 43% faster throughput than base OpenVLA, demonstrating that our new fine-tuning recipe ‘enables real-time robot control ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Ress include policies finetuned from retained base models (Octo, DIT Policy, Seer xo), models trained from scratch (Diffusion Policy, Seer (rach), MDT), ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Ress include policies finetuned from retained base models (Octo, DIT Policy, Seer xo), models trained from scratch (Diffusion Policy, Seer (rach), MDT), ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 7 (3) LI regression objective), p. 14 (A. Model Architecture Details), p. 7 (3) LI regression objective), p. 8 (3) LI regression objective), objective p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (3) LI regression objective), p. 14 (B. Implementation Details), p. 14 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), temporal p. 2 (1. Iyrropucrion), p. 6 (C. LIBERO Inference Efficiency), p. 1 (1. Iyrropucrion), p. 14 (B. Implementation Details), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion).
+- **Evidence anchors reviewed:** method p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 7 (3) LI regression objective), p. 14 (A. Model Architecture Details), p. 7 (3) LI regression objective), p. 8 (3) LI regression objective), objective p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (3) LI regression objective), p. 14 (B. Implementation Details), p. 14 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), temporal p. 2 (1. Iyrropucrion), p. 6 (C. LIBERO Inference Efficiency), p. 1 (1. Iyrropucrion), p. 14 (B. Implementation Details), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Building on these insights, we introduce OpenVLA-OFT: an instantiation of an Optimized Fine-Tuning (OFT) recipe that integrates parallel decoding and action chunking, continuous action representations, and an LI regression objective ... (p. 1, 1. Iyrropucrion).
+- **Objective/update evidence:** We fine-tune OpenVLA using OFT+ on each task independently for 50-150K gradient steps (total batch size 32 with 8 A100/H100-80GB GPUs) with action chunk size IK ~ 2 At inference ... (p. 8, 3) LI regression objective).
+- **Temporal/runtime evidence:** for non-diffusion methods and 100-250K steps for diffusion methods (which converge slower), using a batch size of 64-128 across 8 A100/H100 GPUs. (p. 5, A. LIBERO Experimental Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

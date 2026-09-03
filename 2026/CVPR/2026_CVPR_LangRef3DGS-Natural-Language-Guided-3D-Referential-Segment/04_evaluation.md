@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5.3. Ablation and Analysis - extractive PDF cue:** Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed.
-- **p. 6 / 5.1. Experiment settings - extractive PDF cue:** To evaluate our framework across both object-centric and scene-level language-guided segmentation, we follow the dataset-specific protocols of LERF-Mask and LERF-OVS.
-- **p. 6 / 5.1. Experiment settings - extractive PDF cue:** LERF-Mask focuses on objectcentric indoor scenes with clear boundaries, while LERFOVS introduces complex layouts, occlusions, and multiple referring expressions, enabling evaluation under ambiguous or partial ...
-- **p. 7 / 5.3. Ablation and Analysis - extractive PDF cue:** Our method consistently outperforms existing approaches across both benchmarks.
-- **p. 7 / 5.2.2. Qualitative Results - extractive PDF cue:** Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
-- **p. 8 / 5.3. Ablation and Analysis - extractive PDF cue:** 10% 60.5 81.2 20% 57.3 78.6 30% 54.0 75.5 40% 50.8 72.3 ness of our framework under partial observations, we analyze model performance on the ...
-- **p. 7 / 5.3. Ablation and Analysis - extractive PDF cue:** Progressively adding these components, the ablation study provides a clear analysis of how each module influences our method's overall segmentation accuracy and robustness.
-- **p. 7 / 5.3. Ablation and Analysis - extractive PDF cue:** Specifically, Table 4 presents the performance obtained when the Dirichlet Process (DP), Gradient LowRank (GLR), and Contrastive Graph Semantic Loss (CGSL) modules are gradually integrated ...
+- **p. 8 / 5.3. Ablation and Analysis - extractive body cue:** Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed.
+- **p. 6 / 5.1. Experiment settings - extractive body cue:** To evaluate our framework across both object-centric and scene-level language-guided segmentation, we follow the dataset-specific protocols of LERF-Mask and LERF-OVS.
+- **p. 6 / 5.1. Experiment settings - extractive body cue:** LERF-Mask focuses on objectcentric indoor scenes with clear boundaries, while LERFOVS introduces complex layouts, occlusions, and multiple referring expressions, enabling evaluation under ambiguous or partial ...
+- **p. 7 / 5.3. Ablation and Analysis - extractive body cue:** Our method consistently outperforms existing approaches across both benchmarks.
+- **p. 7 / 5.2.2. Qualitative Results - extractive body cue:** Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
+- **p. 8 / 5.3. Ablation and Analysis - extractive body cue:** 10% 60.5 81.2 20% 57.3 78.6 30% 54.0 75.5 40% 50.8 72.3 ness of our framework under partial observations, we analyze model performance on the ...
+- **p. 7 / 5.3. Ablation and Analysis - extractive body cue:** Progressively adding these components, the ablation study provides a clear analysis of how each module influences our method's overall segmentation accuracy and robustness.
+- **p. 7 / 5.3. Ablation and Analysis - extractive body cue:** Specifically, Table 4 presents the performance obtained when the Dirichlet Process (DP), Gradient LowRank (GLR), and Contrastive Graph Semantic Loss (CGSL) modules are gradually integrated ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2.1. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Although our model improves performance in the dense-view setting, the relative gains become substantially larger under incompleteness. | p. 6 (5.2.1. Quantitative Results) |
 | 5.2.2. Qualitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Compared with prior methods, our results exhibit cleaner boundaries, fewer fragmented regions, and improved alignment with textual prompts. | p. 6 (5.2.2. Qualitative Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5.3. Ablation and Analysis - extractive PDF cue:** Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed.
-- **p. 6 / 5.1. Experiment settings - extractive PDF cue:** To evaluate our framework across both object-centric and scene-level language-guided segmentation, we follow the dataset-specific protocols of LERF-Mask and LERF-OVS.
-- **p. 6 / 5.1. Experiment settings - extractive PDF cue:** LERF-Mask focuses on objectcentric indoor scenes with clear boundaries, while LERFOVS introduces complex layouts, occlusions, and multiple referring expressions, enabling evaluation under ambiguous or partial ...
-- **p. 7 / 5.3. Ablation and Analysis - extractive PDF cue:** Our method consistently outperforms existing approaches across both benchmarks.
-- **p. 7 / 5.2.2. Qualitative Results - extractive PDF cue:** Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
-- **p. 8 / 5.3. Ablation and Analysis - extractive PDF cue:** 10% 60.5 81.2 20% 57.3 78.6 30% 54.0 75.5 40% 50.8 72.3 ness of our framework under partial observations, we analyze model performance on the ...
+- **p. 8 / 5.3. Ablation and Analysis - extractive body cue:** Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed.
+- **p. 6 / 5.1. Experiment settings - extractive body cue:** To evaluate our framework across both object-centric and scene-level language-guided segmentation, we follow the dataset-specific protocols of LERF-Mask and LERF-OVS.
+- **p. 6 / 5.1. Experiment settings - extractive body cue:** LERF-Mask focuses on objectcentric indoor scenes with clear boundaries, while LERFOVS introduces complex layouts, occlusions, and multiple referring expressions, enabling evaluation under ambiguous or partial ...
+- **p. 7 / 5.3. Ablation and Analysis - extractive body cue:** Our method consistently outperforms existing approaches across both benchmarks.
+- **p. 7 / 5.2.2. Qualitative Results - extractive body cue:** Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
+- **p. 8 / 5.3. Ablation and Analysis - extractive body cue:** 10% 60.5 81.2 20% 57.3 78.6 30% 54.0 75.5 40% 50.8 72.3 ness of our framework under partial observations, we analyze model performance on the ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our proposed LangRef3D3S enables robust language- guided 3D segmentation from partial RGB-D observations. De- spite significant missing data (e.g., the stuffed bear, plate, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed framework. Our method leverages 3D Gaussian Splatting (3DGS) to construct a semantically continu- ous and differentiable embedding from partial ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Performance comparison on the LERF-Mask dataset under the dense-view setting, where all RGB-D frames are available.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison on LERF-OVS under 20% view removal. Our method consistently outperforms existing approaches across both benchmarks.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed. Each subfigure shows ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on LERF-OVS under 20% view removal. Modules are added progressively to the baseline, and results are re- ported in terms of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Performance under different levels of partial views on LERF-OVS. A fraction of RGB-D frames is randomly removed during rendering to simulate missing viewpoints. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our proposed LangRef3D3S enables robust language- guided 3D segmentation from partial RGB-D observations. De- spite significant missing data (e.g., the stuffed bear, plate, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed framework. Our method leverages 3D Gaussian Splatting (3DGS) to construct a semantically continu- ous and differentiable embedding from partial ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Performance comparison on the LERF-Mask dataset under the dense-view setting, where all RGB-D frames are available.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison on LERF-OVS under 20% view removal. Our method consistently outperforms existing approaches across both benchmarks.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed. Each subfigure shows ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on LERF-OVS under 20% view removal. Modules are added progressively to the baseline, and results are re- ported in terms of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Performance under different levels of partial views on LERF-OVS. A fraction of RGB-D frames is randomly removed during rendering to simulate missing viewpoints. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Qualitative results on four scenes from the LERF-OVS dataset under the partial-view setting, where 20% of RGB-D frames are removed. | embodiment, simulator version and control stack | p. 8 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings) |
 | Task/environment | To evaluate our framework across both object-centric and scene-level language-guided segmentation, we follow the dataset-specific protocols of LERF-Mask and LERF-OVS. | reset, timeout, object/scene variation | p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings) |
@@ -121,7 +121,7 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 | Primary metric/result | Compared with prior methods, our results exhibit cleaner boundaries, fewer fragmented regions, and improved alignment with textual prompts. | numeric claim only at cited anchor | p. 6 (5.2.2. Qualitative Results) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 4.2. Triggering Novel Candidates via the Dirichlet - extractive PDF cue:** Accepted components yield soft assignments q(zi = k): LDP = - N X i=1 X k q(zi=k) log N(fi / µk, Σk).
+- no numeric body cue
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.2.2. Qualitative Results - extractive PDF cue:** Additionally, we will include detailed analyses and experiments, such as generalization performance, runtime efficiency, dense-view ablation studies, visual comparisons, and failure case analysis in the ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Experiments on LERF-Mask and LERF-OVS demonstrate strong performance in both dense- and partial-view scenarios, with improved robustness to unseen or partially visible objects.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our proposed LangRef3D3S enables robust language- guided 3D segmentation from partial RGB-D observations. De- spite significant missing data (e.g., the stuffed bear, plate, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed framework. Our method leverages 3D Gaussian Splatting (3DGS) to construct a semantically continu- ous and differentiable embedding from partial ...
-- **p. 6 / 5.2.2. Qualitative Results - extractive PDF cue:** All visualizations use the partialview setting, where RGB-D observations are randomly removed to simulate occlusion or missing viewpoints.
-- **p. 6 / 5.2.1. Quantitative Results - extractive PDF cue:** Concretely, we achieve an mIoU of 79.6 and mBIoU of 74.9 on LERF-Mask, and an mIoU of 57.3 and mAcc of 78.6 on LERF-OVS, demonstrating ...
+- **p. 7 / 5.2.2. Qualitative Results - extractive body cue:** Additionally, we will include detailed analyses and experiments, such as generalization performance, runtime efficiency, dense-view ablation studies, visual comparisons, and failure case analysis in the ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Experiments on LERF-Mask and LERF-OVS demonstrate strong performance in both dense- and partial-view scenarios, with improved robustness to unseen or partially visible objects.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our proposed LangRef3D3S enables robust language- guided 3D segmentation from partial RGB-D observations. De- spite significant missing data (e.g., the stuffed bear, plate, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed framework. Our method leverages 3D Gaussian Splatting (3DGS) to construct a semantically continu- ous and differentiable embedding from partial ...
+- **p. 6 / 5.2.2. Qualitative Results - extractive body cue:** All visualizations use the partialview setting, where RGB-D observations are randomly removed to simulate occlusion or missing viewpoints.
+- **p. 6 / 5.2.1. Quantitative Results - extractive body cue:** Concretely, we achieve an mIoU of 79.6 and mBIoU of 74.9 on LERF-Mask, and an mIoU of 57.3 and mAcc of 78.6 on LERF-OVS, demonstrating ...
 
-- **PDF anchors reviewed:** datasets p. 8 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings), p. 7 (5.3. Ablation and Analysis), p. 7 (5.2.2. Qualitative Results), p. 8 (5.3. Ablation and Analysis), metrics p. 7 (5.3. Ablation and Analysis), p. 7 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings), p. 8 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis), baselines p. 6 (5.1. Experiment settings), p. 8 (5.3. Ablation and Analysis), p. 8 (Figure/Table caption), p. 6 (5.2.2. Qualitative Results), p. 7 (5.3. Ablation and Analysis), p. 7 (5.2.2. Qualitative Results), results p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2. Qualitative Results), p. 7 (5.3. Ablation and Analysis), p. 7 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis).
+- **Evidence anchors reviewed:** datasets p. 8 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings), p. 7 (5.3. Ablation and Analysis), p. 7 (5.2.2. Qualitative Results), p. 8 (5.3. Ablation and Analysis), metrics p. 7 (5.3. Ablation and Analysis), p. 7 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings), p. 8 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis), baselines p. 6 (5.1. Experiment settings), p. 8 (5.3. Ablation and Analysis), p. 8 (Figure/Table caption), p. 6 (5.2.2. Qualitative Results), p. 7 (5.3. Ablation and Analysis), p. 7 (5.2.2. Qualitative Results), results p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2. Qualitative Results), p. 7 (5.3. Ablation and Analysis), p. 7 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

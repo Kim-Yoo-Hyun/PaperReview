@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=a3ptUbuzbW; PDF retrieval source: https://openreview.net/pdf/602b5d6d17415fb9e6df86e7df8a1fe5990406d7.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=a3ptUbuzbW; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114864. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 
 ## Method Body Digest
 
-- **p. 4 / 3 METHOD - extractive PDF cue:** 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
-- **p. 6 / 3 METHOD - extractive PDF cue:** To bypass the distillation step, we use an SH degree of 2 from the start, reducing the SH feature dimension from 48 to 27.
-- **p. 5 / 3 METHOD - extractive PDF cue:** The derived outputs are used for loss calculation.
-- **p. 6 / 3 METHOD - extractive PDF cue:** We first evaluate each point's contribution across all training data.
-- **p. 7 / 3 METHOD - extractive PDF cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
-- **p. 4 / 3 METHOD - extractive PDF cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
-- **p. 5 / 3 METHOD - extractive PDF cue:** 3.2 OPTIMIZATION MECHANISM This section elaborates on the proposed optimization mechanism for convergence acceleration and stable training.
-- **p. 6 / 3 METHOD - extractive PDF cue:** To alleviate this problem, we prioritize the gradient from SSIM loss and introduce a Decomposed-Gradient-based Densification (DGD) strategy.
+- **p. 4 / 3 METHOD - extractive body cue:** 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
+- **p. 6 / 3 METHOD - extractive body cue:** To bypass the distillation step, we use an SH degree of 2 from the start, reducing the SH feature dimension from 48 to 27.
+- **p. 5 / 3 METHOD - extractive body cue:** The derived outputs are used for loss calculation.
+- **p. 6 / 3 METHOD - extractive body cue:** We first evaluate each point's contribution across all training data.
+- **p. 7 / 3 METHOD - extractive body cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
+- **p. 4 / 3 METHOD - extractive body cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
+- **p. 5 / 3 METHOD - extractive body cue:** 3.2 OPTIMIZATION MECHANISM This section elaborates on the proposed optimization mechanism for convergence acceleration and stable training.
+- **p. 6 / 3 METHOD - extractive body cue:** To alleviate this problem, we prioritize the gradient from SSIM loss and introduce a Decomposed-Gradient-based Densification (DGD) strategy.
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In summary, our contributions are four-fold: • A novel optimization strategy for 2DGS, that accelerates its convergence under large-scale scenes and enables it to be ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Furthermore, our contribution-based vectree quantization enables a tenfold reduction in storage requirements for large-scale 2DGS.
-- **p. 6 / 3 METHOD - extractive PDF cue:** To resolve these issues, we propose a novel pipeline, as shown in Fig.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are four-fold: • A novel optimization strategy for 2DGS, that accelerates its convergence under large-scale scenes and enables it to be ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Furthermore, our contribution-based vectree quantization enables a tenfold reduction in storage requirements for large-scale 2DGS.
+- **p. 6 / 3 METHOD - extractive body cue:** To resolve these issues, we propose a novel pipeline, as shown in Fig.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3 METHOD - extractive PDF cue:** 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
-- **p. 6 / 3 METHOD - extractive PDF cue:** To bypass the distillation step, we use an SH degree of 2 from the start, reducing the SH feature dimension from 48 to 27.
-- **p. 5 / 3 METHOD - extractive PDF cue:** The derived outputs are used for loss calculation.
-- **p. 6 / 3 METHOD - extractive PDF cue:** We first evaluate each point's contribution across all training data.
-- **p. 7 / 3 METHOD - extractive PDF cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
-- **p. 4 / 3 METHOD - extractive PDF cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
-- **p. 5 / 3 METHOD - extractive PDF cue:** 3.2 OPTIMIZATION MECHANISM This section elaborates on the proposed optimization mechanism for convergence acceleration and stable training.
+- **p. 4 / 3 METHOD - extractive body cue:** 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
+- **p. 6 / 3 METHOD - extractive body cue:** To bypass the distillation step, we use an SH degree of 2 from the start, reducing the SH feature dimension from 48 to 27.
+- **p. 5 / 3 METHOD - extractive body cue:** The derived outputs are used for loss calculation.
+- **p. 6 / 3 METHOD - extractive body cue:** We first evaluate each point's contribution across all training data.
+- **p. 7 / 3 METHOD - extractive body cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
+- **p. 4 / 3 METHOD - extractive body cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
+- **p. 5 / 3 METHOD - extractive body cue:** 3.2 OPTIMIZATION MECHANISM This section elaborates on the proposed optimization mechanism for convergence acceleration and stable training.
 - **Detected method headings:** 3 METHOD (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS. | p. 4 (3 METHOD), p. 6 (3 METHOD) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To bypass the distillation step, we use an SH degree of 2 from the start, reducing the SH feature dimension from 48 ... | p. 6 (3 METHOD), p. 5 (3 METHOD) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 
 ## Objective / Update Rule
 
-- **p. 6 / 3 METHOD - extractive PDF cue:** To alleviate this problem, we prioritize the gradient from SSIM loss and introduce a Decomposed-Gradient-based Densification (DGD) strategy.
-- **p. 6 / 3 METHOD - extractive PDF cue:** Specifically, the gradient for densification is reformulated as: ∇densify = max  ω × /∇L/avg /∇LSSIM/avg , 1  × ∇LSSIM, (2) where ∇LSSIM is ...
-- **p. 4 / 3 METHOD - extractive PDF cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
-- **p. 5 / 3 METHOD - extractive PDF cue:** As the training progresses, we decrease the loss weight α exponentially to suppress the adverse effect of imperfect depth estimation gradually.
-- **p. 4 / 3 METHOD - extractive PDF cue:** The Gaussians with a gradient larger than a certain threshold would be cloned or split.
-- **p. 5 / 3 METHOD - extractive PDF cue:** The derived outputs are used for loss calculation.
+- **p. 6 / 3 METHOD - extractive body cue:** To alleviate this problem, we prioritize the gradient from SSIM loss and introduce a Decomposed-Gradient-based Densification (DGD) strategy.
+- **p. 6 / 3 METHOD - extractive body cue:** Specifically, the gradient for densification is reformulated as: ∇densify = max  ω × /∇L/avg /∇LSSIM/avg , 1  × ∇LSSIM, (2) where ∇LSSIM is ...
+- **p. 4 / 3 METHOD - extractive body cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
+- **p. 5 / 3 METHOD - extractive body cue:** As the training progresses, we decrease the loss weight α exponentially to suppress the adverse effect of imperfect depth estimation gradually.
+- **p. 4 / 3 METHOD - extractive body cue:** The Gaussians with a gradient larger than a certain threshold would be cloned or split.
+- **p. 5 / 3 METHOD - extractive body cue:** The derived outputs are used for loss calculation.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 
 ## Observation–State–Action Interface
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive PDF cue:** Secondly, for mesh extraction, occlusion and lack of observation hinder reconstruction of some road surfaces and building facades.
-- **p. 5 / 3 METHOD - extractive PDF cue:** The derived outputs are used for loss calculation.
-- **p. 5 / 3 METHOD - extractive PDF cue:** In light of this observation, we implement a straightforward yet effective Elongation Filter to address this problem.
-- **p. 7 / 3 METHOD - extractive PDF cue:** Moreover, GauU-Scene does not align the surface points extraction process across methods, leading to unfair comparison.
-- **p. 6 / 3 METHOD - extractive PDF cue:** Suppose that the images assigned to m-th block using CityGS (Liu et al., 2024)'s strategy is Vm, then the average contribution is: Cn = 1 ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** Published as a conference paper at ICLR 2025 Pretrain Parallel Tuning Pruning Distillation VecTree Quantization Parallel Tuning & Trimming Initial GS Posed Images Compressed Scene ...
+- **p. 7 / 3 METHOD - extractive body cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
+- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** Secondly, for mesh extraction, occlusion and lack of observation hinder reconstruction of some road surfaces and building facades.
+- **p. 5 / 3 METHOD - extractive body cue:** The derived outputs are used for loss calculation.
+- **p. 5 / 3 METHOD - extractive body cue:** In light of this observation, we implement a straightforward yet effective Elongation Filter to address this problem.
+- **p. 7 / 3 METHOD - extractive body cue:** Moreover, GauU-Scene does not align the surface points extraction process across methods, leading to unfair comparison.
+- **p. 6 / 3 METHOD - extractive body cue:** Suppose that the images assigned to m-th block using CityGS (Liu et al., 2024)'s strategy is Vm, then the average contribution is: Cn = 1 ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Another challenge lies in the evaluation protocol: due to insufficient observations in boundary regions, geometry estimation becomes error-prone and unstable in these areas.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,12 +90,12 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 
 ## Training vs Inference
 
-- **p. 4 / 3 METHOD - extractive PDF cue:** 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
-- **p. 6 / 3 METHOD - extractive PDF cue:** We first evaluate each point's contribution across all training data.
-- **p. 7 / 3 METHOD - extractive PDF cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** 3.2 OPTIMIZATION MECHANISM This section elaborates on the proposed optimization mechanism for convergence acceleration and stable training.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** The tiny version (ours-t) can even halve the training time.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** 2, the small version of CityGaussianV2 (ours-s) reduces training time by 25% and memory usage by over 50%, while delivering superior geometric performance and on-par ...
+- **p. 4 / 3 METHOD - extractive body cue:** 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
+- **p. 6 / 3 METHOD - extractive body cue:** We first evaluate each point's contribution across all training data.
+- **p. 7 / 3 METHOD - extractive body cue:** 5, we begin by initializing a 3DGS field with the ground-truth point cloud, then traverse all training views to rasterize and count visible frequency through ...
+- **p. 5 / 3 METHOD - extractive body cue:** 3.2 OPTIMIZATION MECHANISM This section elaborates on the proposed optimization mechanism for convergence acceleration and stable training.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** The tiny version (ours-t) can even halve the training time.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 2, the small version of CityGaussianV2 (ours-s) reduces training time by 25% and memory usage by over 50%, while delivering superior geometric performance and on-par ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -115,13 +115,13 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 
 ## Failure and Ablation Link
 
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 10: Qualitative ablation of 7K iteration results among different methods. This section provides additional qualitative comparisons. As illustrated in Fig. 8, the mesh produced ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 2: Ablation on model components.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation on model components. The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)). Here we take 2DGS ((Huang ...
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** 1 shows that even without parallel tuning, our proposed optimization strategy enables our model to achieve significantly better 8
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Illustration of our optimization mechanism. We densify Gaussians exclusively according to the gradient of SSIM loss. This helps remove large and blurry Gaussians ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Illustration of pipeline modification. The pipeline of CityGS (Liu et al., 2024) (dashed boxes and arrows) is compared with ours. We successfully removed ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 4: Detailed comparison among SOTA among parallel training methods. 2DGS* here means applying CityGS's training strategy to 2DGS without our proposed optimization mechanism. And ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 10: Qualitative ablation of 7K iteration results among different methods. This section provides additional qualitative comparisons. As illustrated in Fig. 8, the mesh produced ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Ablation on model components. The experiments are conducted on Residence scene of GauU-Scene dataset ((Xiong et al., 2024)). Here we take 2DGS ((Huang ...
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 1 shows that even without parallel tuning, our proposed optimization strategy enables our model to achieve significantly better 8
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration of our optimization mechanism. We densify Gaussians exclusively according to the gradient of SSIM loss. This helps remove large and blurry Gaussians ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Illustration of pipeline modification. The pipeline of CityGS (Liu et al., 2024) (dashed boxes and arrows) is compared with ours. We successfully removed ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 4: Detailed comparison among SOTA among parallel training methods. 2DGS* here means applying CityGS's training strategy to 2DGS without our proposed optimization mechanism. And ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Table 7: Ablation on gradient source of densification. The experiments are conducted on the Resi- dence scene of the GauU-Scene dataset ((Xiong et al., 2024)). ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -135,7 +135,7 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), temporal p. 2 (1 INTRODUCTION), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD).
+- **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), temporal p. 2 (1 INTRODUCTION), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

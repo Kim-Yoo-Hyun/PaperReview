@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p110.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p110.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p110.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p110.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (C. Comact and Coordination-Enhanced Feature Ext
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | Similarly, we also predict the action sequence of the hand using point clouds and the arm state, We use MSE loss to ... | p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | To help the robot system learn the features of hand-arm coordination, we also propose & correspondence-based design for action prediction. ‘The arm ... | p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 14 (B. Implementation Details) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 5 (C. Comact and Coordination-Enhanced Feature Ext
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | The episode length of each task will be limited to a maximum of 500 steps and ‘each task is evaluated with 20 ... | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | Contact map size rose ‘Loss weight 0 1 horizon 2 nob steps 4 action steps 6 | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | The episode length of each task will be limited to a maximum of 500 steps and ‘each task is evaluated with 20 ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 5 (C. Comact and Coordination-Enhanced Feature Ext
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 14 (B. Implementation Details), p. 14 (B. Implementation Details), p. 3 (A. Problem Formulation), p. 15 (B. Implementation Details), objective p. 3 (B. Interaction-aware Generation of 3D Point Clouds), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 3 (B. Interaction-aware Generation of 3D Point Clouds), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 15 (B. Implementation Details), temporal p. 6 (A. Experiment Setup), p. 15 (B. Implementation Details), p. 15 (B. Implementation Details), p. 5 (IV. EXPERIMENTS), p. 6 (6) LongHforiManip. ‘This task involves four sequential), p. 10 (C. Efficiency).
+- **Evidence anchors reviewed:** method p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 14 (B. Implementation Details), p. 14 (B. Implementation Details), p. 3 (A. Problem Formulation), p. 15 (B. Implementation Details), objective p. 3 (B. Interaction-aware Generation of 3D Point Clouds), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 3 (B. Interaction-aware Generation of 3D Point Clouds), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 15 (B. Implementation Details), temporal p. 6 (A. Experiment Setup), p. 15 (B. Implementation Details), p. 15 (B. Implementation Details), p. 5 (IV. EXPERIMENTS), p. 6 (6) LongHforiManip. ‘This task involves four sequential), p. 10 (C. Efficiency).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Similarly, we also predict the action sequence of the hand using point clouds and the arm state, We use MSE loss to compute the loss between the reconstructed and original ... (p. 5, C. Comact and Coordination-Enhanced Feature Extraction).
+- **Objective/update evidence:** On the one hand, real-world point cloud data, typically captured using stereo cameras or low-cost RGB-D scanners, suffers from geometric and semantic loss due to factors such as light reflection, ... (p. 3, B. Interaction-aware Generation of 3D Point Clouds).
+- **Temporal/runtime evidence:** The episode length of each task will be limited to a maximum of 500 steps and ‘each task is evaluated with 20 trials by default. (p. 6, A. Experiment Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

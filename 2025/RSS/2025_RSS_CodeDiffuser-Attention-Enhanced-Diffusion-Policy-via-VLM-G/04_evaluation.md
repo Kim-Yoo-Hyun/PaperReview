@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p072.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p072.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p072.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p072.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (B. Analysis of Existing Imitation Learning
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Analysis of Existing Imitation Learning Algorithm | EMPIRICAL / REAL-ROBOT OR HARDWARE | While the performance of ACT and DP initially improves, they generally show diminishing returns while success rate is still low, and in some cases ... | p. 7 (B. Analysis of Existing Imitation Learning Algorithm) |
 | B. Analysis of Existing Imitation Learning Algorithm | EMPIRICAL / REAL-ROBOT OR HARDWARE | In ‘contrast to Lang-DP (RGB), our method, which incorporates 2 similar pipeline from language instructions to 2D attention, achieves a performance improvement from 12% ... | p. 9 (B. Analysis of Existing Imitation Learning Algorithm) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (B. Analysis of Existing Imitation Learning
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | and the full system in both simulation and real-world tasks, including contact-rich 6-DoF manipulation with multi-object interactions, demonstrating the effectiveness of our approach, in ... | embodiment, simulator version and control stack | p. 2 (3) We conduct extensive evaluations of individual modules), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | For real-world robot experiments, we tse the ALOHA system for data collection and evaluation [6], along with four RealSense cameras positioned around the workspace ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (B. Analysis of Existing Imitation Learning
 - **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** Additional analysis and visualizations of 3D attention failure cases are provided in the
 - **p. 9 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** In addition, we analyze the common failure cases of our ‘method, as shown in Figure 9.
 
-- **PDF anchors reviewed:** datasets p. 2 (3) We conduct extensive evaluations of individual modules), p. 5 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 5 (IV. EXPERIMENTS), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), metrics p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (IV. EXPERIMENTS), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), baselines p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 10 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), results p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 10 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm).
+- **Evidence anchors reviewed:** datasets p. 2 (3) We conduct extensive evaluations of individual modules), p. 5 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 5 (IV. EXPERIMENTS), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), metrics p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (IV. EXPERIMENTS), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), baselines p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 10 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), results p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 10 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (B. Analysis of Existing Imitation Learning Algorithm).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 8: Evaluation of Entire System. (a) We qualitatively evaluate the entire pipeline from language instructions to low-level actions, ‘demonstrating how our system interprets semantic meanings from abstract instructions. Given ... (p. 10, Figure/Table caption).
+- **Metric evidence:** We find that adding additional demonstrations in these settings often shows diminishing returns at low success rates even with extensive demonstrations, indicating that additional training data alone may oot resolve ... (p. 6, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** For methods conditioned on language ‘or attention, we consider a rollout successful if the task is completed in the desired manner, such as successfully following the language instruction or picking ... (p. 6, IV. EXPERIMENTS).
+- **Failure/negative evidence:** Similarly, as the number of placement options increases, most failures occur during the placement stage of the task. ‘The observed correlation between (i) increased task ambiguity and (ii) declining task ... (p. 7, B. Analysis of Existing Imitation Learning Algorithm).

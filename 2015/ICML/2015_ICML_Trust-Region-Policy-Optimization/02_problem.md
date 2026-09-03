@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2 Prelimin
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Tetris is a classic benchmark problem for approximate dynamic programming (ADP) methods, stochastic optimization methods are difficult to beat on this task ... | robot/environment의 sequential decision process | body wording is the source claim |
-| Observation / input | This implies the classic result that the update performed by exact policy iteration, which uses the deterministic policy ˜π(s) = arg maxa ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | This implies the classic result that the update performed by exact policy iteration, which uses the deterministic policy ˜π(s) = arg maxa ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | implies, classic, result, update, performed, exact, policy, iteration, uses, deterministic | policy/value state와 action-selection variable | notation and tensor shape require body check |
 | Output / action | Trust, Region, Policy, Optimization, mate, performing, rollout, short | action policy와 induced trajectory | exact unit/frame/decoder require body check |
 | Target outcome | task return, success and safe execution | expected return, task success, stability와 sample efficiency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: implies, classic, result, update, performed, exact, policy, iteration, uses, deterministic | p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (2 Preliminaries) |
 | Decision / output variable | a_t sampled or selected by πθ; body terms: Instead, introduce, following, local, approximation, Trust, region, policy | p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (2 Preliminaries) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2 Prelimin
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization) |
 | Success / guarantee | task return, success and safe execution | p. 8 (Figure/Table caption), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2 Prelimin
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (2 Preliminaries), p. 1 (1 Introduction), p. 4 (2 Preliminaries)): Instead, we introduce the following local approximation to η: Lπ(˜π) = η(π) + X s ρπ(s) X a ˜π(a/s)Aπ(s, a).
+PDF body contribution framing (p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (2 Preliminaries), p. 1 (1 Introduction), p. 4 (2 Preliminaries)): Instead, we introduce the following local approximation to η: Lπ(˜π) = η(π) + X s ρπ(s) X a ˜π(a/s)Aπ(s, a).
 
 - **p. 3 / 2 Preliminaries - extractive body cue:** Trust region policy optimization, which we propose in the following section, is an approximation to Algorithm 1, which uses a constraint on the KL divergence ...
 - **p. 5 / 2 Preliminaries - extractive body cue:** 6 Practical Algorithm Here we present two practical policy optimization algorithm based on the ideas above, which use either the single path or vine sampling ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (
 
 ## Position in the Robotics Loop
 
-rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (3. Approximately solve this constrained optimization). The downstream handoff is claimed only when the body describes it.
+rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (3. Approximately solve this constrained optimization). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), interface p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (3. Approximately solve this constrained optimization), objective p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization).
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), interface p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (3. Approximately solve this constrained optimization), objective p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Tetris is a classic benchmark problem for approximate dynamic programming (ADP) methods, stochastic optimization methods are difficult to beat on this task (Gabillon et al., 2013). (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as playing Atari games directly from raw images. (p. 1, 1 Introduction).
+- **Assumption/failure evidence:** Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to be special limiting cases of an algorithm that optimizes a certain objective ... (p. 8, 9 Discussion).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

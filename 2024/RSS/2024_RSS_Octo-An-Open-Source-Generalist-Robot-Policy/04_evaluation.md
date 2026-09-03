@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (1) Can Octo c
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over ... | p. 8 (Figure/Table caption) |
 | 1) Can Octo control multiple robot embodiments and solve | SYSTEM / EVALUATION SCOPE UNRESOLVED | We evaluated our model on the WidowX tasks using goal image conditioning and found that it achieved a 25% higher success rate than when ... | p. 7 (1) Can Octo control multiple robot embodiments and solve) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (1) Can Octo c
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate Octo's capabilities to control robots in environments from the pretraining data out-of-the-box and to efficiently finetune to new tasks and environments with ... | embodiment, simulator version and control stack | p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve) |
 | Task/environment | For each robot, we selected two language tasks from the corresponding OXE dataset and performed 10 trials per task with varying initial conditions (details ... | reset, timeout, object/scene variation | p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (1) Can Octo c
 - **p. 5 / III. THE OCTO MODEL - extractive body cue:** Finally, we zero-pad any missing camera channels and align the gripper action spaces between the datasets such that a gripper command of +1 means "the ...
 - **p. 5 / III. THE OCTO MODEL - extractive body cue:** (1) The hyperparameters α, γ, and σ correspond to the noise schedule: we use the standard cosine schedule from [66].
 
-- **PDF anchors reviewed:** datasets p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (1) Can Octo control multiple robot embodiments and solve), metrics p. 8 (Figure/Table caption), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 4 (Figure/Table caption), baselines p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), results p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL).
+- **Evidence anchors reviewed:** datasets p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (1) Can Octo control multiple robot embodiments and solve), metrics p. 8 (Figure/Table caption), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 4 (Figure/Table caption), baselines p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), results p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task ... (p. 8, Figure/Table caption).
+- **Metric evidence:** While all methods acted reasonably across tasks in the pretraining environments, we found that on average Octo had a 29% higher success rate than RT-1-X (35M parameters). (p. 7, 1) Can Octo control multiple robot embodiments and solve).
+- **Baseline/ablation evidence:** On average across the six evaluation setups (detailed in Appendix F), Octo outperforms the next best baseline by 52%. (p. 7, 1) Can Octo control multiple robot embodiments and solve).
+- **Failure/negative evidence:** Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).

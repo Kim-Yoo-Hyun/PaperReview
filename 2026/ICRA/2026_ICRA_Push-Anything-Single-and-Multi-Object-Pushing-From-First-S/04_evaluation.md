@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.19974; PDF retrieval source: https://arxiv.org/pdf/2510.19974. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.19974; PDF retrieval source: https://arxiv.org/pdf/2510.19974. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWAR
 
 ## Evaluation Body Digest
 
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** All failures occurred when an object moved beyond the robot's reach.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The few outliers for the chicken broth and milk bottle occurred when the robot took longer to bring the objects back into reach, while the ...
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2. System diagram of the Push Anything framework. ject-environment contacts (demonstrated with up to 19 contact pairs), while planning over a multi-step horizon to ...
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** Under the tight tolerance, our method achieved a 92.5% success rate (210/227), with time-to-goal statistics for both tight and loose tolerances reported in Table II.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The mean time-to-goal across all trials is approximately 31 s, evaluated under tight success criterion requiring translational error ≤2 cm and rotational error ≤0.1 rad ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4. Visualization of the sampling strategy for end effector locations. The gray plane indicates the ground, and the orange planes represent local tangent planes ...
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained.
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** All failures occurred when an object moved beyond the robot's reach.
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** The few outliers for the chicken broth and milk bottle occurred when the robot took longer to bring the objects back into reach, while the ...
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2. System diagram of the Push Anything framework. ject-environment contacts (demonstrated with up to 19 contact pairs), while planning over a multi-step horizon to ...
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** Under the tight tolerance, our method achieved a 92.5% success rate (210/227), with time-to-goal statistics for both tight and loose tolerances reported in Table II.
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** The mean time-to-goal across all trials is approximately 31 s, evaluated under tight success criterion requiring translational error ≤2 cm and rotational error ≤0.1 rad ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4. Visualization of the sampling strategy for end effector locations. The gray plane indicates the ground, and the orange planes represent local tangent planes ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWAR
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. HARDWARE EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's | p. 6 (V. HARDWARE EXPERIMENTS) |
 | V. HARDWARE EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Under the tight tolerance, our method achieved a 92.5% success rate (210/227), with time-to-goal statistics for both tight and loose tolerances reported in Table ... | p. 7 (V. HARDWARE EXPERIMENTS) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWAR
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** All failures occurred when an object moved beyond the robot's reach.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The few outliers for the chicken broth and milk bottle occurred when the robot took longer to bring the objects back into reach, while the ...
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained.
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** All failures occurred when an object moved beyond the robot's reach.
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** The few outliers for the chicken broth and milk bottle occurred when the robot took longer to bring the objects back into reach, while the ...
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Experimental Setup: The Franka Emika Panda arm uses a spherical end effector to push and rearrange four objects from an initial cluttered configuration. ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2. System diagram of the Push Anything framework. ject-environment contacts (demonstrated with up to 19 contact pairs), while planning over a multi-step horizon to ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3. Illustration of sampling-based CI-MPC on the planar Push-T task [27]. Different end effector positions are shown with their associated MPC costs. The black ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4. Visualization of the sampling strategy for end effector locations. The gray plane indicates the ground, and the orange planes represent local tangent planes ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5. The C3+ projection step maps each point (λ◦, η◦) (blue) to its closest point (δλ k , δη k)∗(yellow) on the feasible complementarity ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 6. Diverse objects in Push Anything hardware experiments. object-wall object-ground object-object Nearest contact pairs: end effector-object
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 7. Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup. As defined below and illustrated in Fig. 5, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 8. Time-to-goal distributions for various objects. Boxplots show the median and interquartile range, while orange dots represent individual data points from each trial. For ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Experimental Setup: The Franka Emika Panda arm uses a spherical end effector to push and rearrange four objects from an initial cluttered configuration. ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2. System diagram of the Push Anything framework. ject-environment contacts (demonstrated with up to 19 contact pairs), while planning over a multi-step horizon to ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3. Illustration of sampling-based CI-MPC on the planar Push-T task [27]. Different end effector positions are shown with their associated MPC costs. The black ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4. Visualization of the sampling strategy for end effector locations. The gray plane indicates the ground, and the orange planes represent local tangent planes ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5. The C3+ projection step maps each point (λ◦, η◦) (blue) to its closest point (δλ k , δη k)∗(yellow) on the feasible complementarity ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6. Diverse objects in Push Anything hardware experiments. object-wall object-ground object-object Nearest contact pairs: end effector-object
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 7. Visualization of the selected contact pairs in planar pushing task. yielding a significant overall speedup. As defined below and illustrated in Fig. 5, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 8. Time-to-goal distributions for various objects. Boxplots show the median and interquartile range, while orange dots represent individual data points from each trial. For ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained. | embodiment, simulator version and control stack | p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS) |
 | Task/environment | All failures occurred when an object moved beyond the robot's reach. | reset, timeout, object/scene variation | p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS) |
@@ -109,12 +109,12 @@ PDF body evaluation/result cue (p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWAR
 | Primary metric/result | Under the tight tolerance, our method achieved a 92.5% success rate (210/227), with time-to-goal statistics for both tight and loose tolerances reported in Table ... | numeric claim only at cited anchor | p. 7 (V. HARDWARE EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** We select a diverse set of 33 objects including convex and non-convex shapes, from 3Dprinted letters to household objects (Fig.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** 7), three contact pairs for each object with the ground (purple circles), one contact pair for each object with the wall (green arrow, omitted in ...
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The mean time-to-goal across all trials is approximately 31 s, evaluated under tight success criterion requiring translational error ≤2 cm and rotational error ≤0.1 rad ...
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** For the Push T task, our framework achieves a mean time-to-goal of 26.9 s, improving upon prior work [4] at 30.5 s by 3.5 s ...
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** With these settings, we conducted a total of 227 trials, comprising 10 experiments for the 2-object case, 6 for the 3-object, and 5 for the ...
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** We select a diverse set of 33 objects including convex and non-convex shapes, from 3Dprinted letters to household objects (Fig.
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** 7), three contact pairs for each object with the ground (purple circles), one contact pair for each object with the wall (green arrow, omitted in ...
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** 8, we evaluated our method in 701 hardware trials, testing 25 objects, with each object run until 28 successful trials were obtained.
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** The mean time-to-goal across all trials is approximately 31 s, evaluated under tight success criterion requiring translational error ≤2 cm and rotational error ≤0.1 rad ...
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** For the Push T task, our framework achieves a mean time-to-goal of 26.9 s, improving upon prior work [4] at 30.5 s by 3.5 s ...
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** With these settings, we conducted a total of 227 trials, comprising 10 experiments for the 2-object case, 6 for the 3-object, and 5 for the ...
 
 ## Generalization and Failure Cases
 
@@ -150,12 +150,12 @@ PDF body evaluation/result cue (p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWAR
 
 ## Limitations and Verification Questions
 
-- **p. 7 / VI. LIMITATIONS AND FUTURE WORK - extractive PDF cue:** Another limitation is we model all objects with identical mass and inertia.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** All failures occurred when an object moved beyond the robot's reach.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive PDF cue:** We predefine contact geometries, but contact point pairs and their corresponding normals are determined dynamically via collision detection at each control loop.
+- **p. 7 / VI. LIMITATIONS AND FUTURE WORK - extractive body cue:** Another limitation is we model all objects with identical mass and inertia.
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
+- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** All failures occurred when an object moved beyond the robot's reach.
+- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** We predefine contact geometries, but contact point pairs and their corresponding normals are determined dynamically via collision detection at each control loop.
 
-- **PDF anchors reviewed:** datasets p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 6 (V. HARDWARE EXPERIMENTS), metrics p. 2 (Figure/Table caption), p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 6 (V. HARDWARE EXPERIMENTS), p. 4 (Figure/Table caption), baselines p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), results p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 2 (Figure/Table caption), p. 6 (V. HARDWARE EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 6 (V. HARDWARE EXPERIMENTS), metrics p. 2 (Figure/Table caption), p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 6 (V. HARDWARE EXPERIMENTS), p. 4 (Figure/Table caption), baselines p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), results p. 6 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 7 (V. HARDWARE EXPERIMENTS), p. 2 (Figure/Table caption), p. 6 (V. HARDWARE EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

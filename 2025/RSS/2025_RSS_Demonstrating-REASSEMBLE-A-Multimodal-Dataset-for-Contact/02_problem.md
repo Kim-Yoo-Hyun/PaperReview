@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | ‘To bridge the gap between these pressing challenges, we introduce REASSEMBLE, a comprehensive dataset tailored to long-horizon and contact-rich manipulation tasks. | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | Interaction forces and torques are measured using a wrist-mounted 6-axis force-torque (FT) sensor (AIDIN ROBOTICS AFT200-D80-C), as shown in Figure 2. | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Interaction forces and torques are measured using a wrist-mounted 6-axis force-torque (FT) sensor (AIDIN ROBOTICS AFT200-D80-C), as shown in Figure 2. | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Interaction, forces, torques, measured, wrist-mounted, axis, force-torque, sensor, AIDIN, ROBOTICS | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
 | Output / action | development, various, robot, learning, fields, like, hicrarchical, temporal | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
 | Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | trajectory D with task/embodiment metadata; body terms: Interaction, forces, torques, measured, wrist-mounted, axis, force-torque, sensor, AIDIN, ROBOTICS | p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm) |
 | Decision / output variable | normalized sample or downstream action; body terms: bridge, present, REASSEMBLE, Robotic, assEmbly, disASSEMBLy, datasEt, designed | p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to 
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (C. Interaction point diversity), p. 9 (C. Interaction point diversity) |
 | Success / guarantee | cross-domain transfer and task performance | p. 10 (V. BENCHMARKS), p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to 
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 11 (B. Motion Policy Learning), p. 3 (2) A dataset with multi-task labels to support algorithm)): To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation
+PDF body contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 11 (B. Motion Policy Learning), p. 3 (2) A dataset with multi-task labels to support algorithm)): To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation
 
 - **p. 2 / Abstract - extractive body cue:** By offering a rich, multi modal dataset, REASSEMBLE fosters the development of adaptive and versatile robotic systems capable of tackling the challenges of long-horizon, contact-rich ...
 - **p. 2 / Abstract - extractive body cue:** ‘To bridge the gap between these pressing challenges, we introduce REASSEMBLE, a comprehensive dataset tailored to long-horizon and contact-rich manipulation tasks.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 
 
 ## Position in the Robotics Loop
 
-robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
+robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), p. 4 (2) A dataset with multi-task labels to support algorithm), interface p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), objective p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 12 (B. Motion Policy Learning).
+- **Evidence anchors reviewed:** problem p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), p. 4 (2) A dataset with multi-task labels to support algorithm), interface p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), objective p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 12 (B. Motion Policy Learning).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, such datasets primarily focus on human activity and often lack relevance to robotic manipulation tasks. (p. 3, 2) A dataset with multi-task labels to support algorithm).
+- **Formulation-changing contribution:** To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation (p. 1, Abstract).
+- **Assumption/failure evidence:** ‘The number of failed demonstrations per action can serve as ‘4 metric for task difficulty, as operators are more likely to fail ‘when the motion is complex. (p. 7, B. Action difficulty and failure modes).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

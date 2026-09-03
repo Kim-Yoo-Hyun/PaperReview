@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `dataset state/observation, action, reward와 return-to-go → Q/value 또는 sequence-policy state → dataset-supported action sequence`.
-- 이 논문의 재사용 가능한 지점은 While most off-policy RL algorithms are applicable in the offline setting, they tend to under-perform due to "extrapolation error": an error in policy evaluation, where agents tend to poorly estimate the value ...를 The behavior of an RL agent is determined by a policy π which maps states to actions (deterministic policy), or states to a probability distribution over actions (stochastic policy).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 Q/value 또는 sequence-policy state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Finally, we believe the sheer simplicity of our approach highlights a possible overemphasis on algorithmic complexity made by the community, and we hope to inspire future work to revisit simpler alternatives which ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** This in turn affects policy improvement, where agents learn to prefer out-of-distribution actions whose value has been overestimated, resulting in poor performance [Fujimoto et al., 2019b]. (p. 1, 1 Introduction).
+- **Paper-specific mechanism:** Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 9: Average normalized score using the D4RL -v2 datasets. The highest performing scores are highlighted. ± captures the standard deviation over seeds. Total (DT) sums scores over the subset ... (p. 18, Figure/Table caption); the relevant task/metric cue is BC CQL Fisher-BRC TD3+BC 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 80 100 120 Normalized Score HalfCheetah-Random 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 ... (p. 8, 6 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub as we found those settings performed poorly. † denotes hyperparameters which deviate ... (p. 15, B Experimental Details).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate our proposed approach on the D4RL benchmark of OpenAI gym MuJoCo tasks [Todorov et al., 2012, Brockman et al., 2016, Fu et al., 2020], which encompasses a variety of dataset ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Our offline RL baselines include two state-of-the-art algorithms, CQL [Kumar et al., 2020] and Fisher-BRC [Kostrikov et al., 2021], as well as BRAC [Wu et al., 2019] and AWAC [Nair et al., ....
-4. Report the body metric and its denominator/aggregation: Table 2: Average normalized score over the final 10 evaluations and 5 seeds. The highest performing scores are highlighted. CQL and Fisher-BRC are re-run using author-provided implementations to ensure an identical evaluation ....
-5. Re-run the body-reported ablation/failure condition: Figure 5: Percent difference of the performance of an ablation of our proposed approach, compared to the full algorithm. TD3+λ+BC+Norm refers to the complete algorithm, where Norm refers to the state feature ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: This in turn affects policy improvement, where agents learn to prefer out-of-distribution actions whose value has been overestimated, resulting in poor performance [Fujimoto et al., 2019b]. (p. 1, 1 Introduction); preserve the objective/update rule: TD3's policy π is updated with the deterministic policy gradient [Silver et al., 2014]: π = argmax π E(s,a)∼D[Q(s, π(s))]. (p. 2, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: We evaluate our proposed approach on the D4RL benchmark of OpenAI gym MuJoCo tasks [Todorov et al., 2012, Brockman et al., 2016, Fu et al., 2020], which encompasses a variety ... (p. 7, 6 Experiments).
+3. Compare against the reported or matched baseline: Our offline RL baselines include two state-of-the-art algorithms, CQL [Kumar et al., 2020] and Fisher-BRC [Kostrikov et al., 2021], as well as BRAC [Wu et al., 2019] and AWAC [Nair ... (p. 7, 6 Experiments).
+4. Report the body metric with its denominator and aggregation: BC CQL Fisher-BRC TD3+BC 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 80 100 120 Normalized Score HalfCheetah-Random 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 ... (p. 8, 6 Experiments).
+5. Re-run the reported ablation or stress/failure condition: BC CQL Fisher-BRC TD3+BC 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 80 100 120 Normalized Score HalfCheetah-Random 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 ... (p. 8, 6 Experiments); if none is reported, design one around: We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub as we found those settings performed poorly. † denotes hyperparameters which deviate ... (p. 15, B Experimental Details).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstract); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (6 Experiments), and measure the boundary at p. 15 (B Experimental Details), p. 18 (C.3 Benchmarking against the Decision Transformer).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Consequently, offline, enables mechanism이 Our offline RL baselines include two state-of-the-art algorithms, CQL [Kumar et al., 2020] and Fisher-BRC [Kostrikov ... 대비 Table 2: Average normalized score over the final 10 evaluations and 5 seeds. The highest performing scores are ...을 개선하고, Finally, we believe the sheer simplicity of our approach highlights a possible overemphasis on algorithmic complexity ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (This in turn affects policy improvement, where agents learn to prefer out-of-distribution actions whose value has been overestimated, resulting in poor performance ...), does the paper-specific mechanism (Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of ...) retain the reported evaluation outcome (BC CQL Fisher-BRC TD3+BC 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 80 100 120 Normalized ...) when tested against the paper's strongest explicit boundary (We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (BC CQL Fisher-BRC TD3+BC 0.0 0.2 0.4 0.6 0.8 1.0 0 20 40 60 80 100 120 Normalized ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Table 9: Average normalized score using the D4RL -v2 datasets. The highest performing scores are highlighted. ± captures the standard deviation over seeds. Total (DT) sums scores over the subset ... (p. 18, Figure/Table caption).
+- **Strongest explicit boundary:** We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub as we found those settings performed poorly. † denotes hyperparameters which deviate ... (p. 15, B Experimental Details).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

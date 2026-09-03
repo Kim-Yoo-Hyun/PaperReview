@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `joint/task state, reference와 sensor feedback → state estimate, task-space error와 control decision → torque, force, velocity 또는 position command`.
-- 이 논문의 재사용 가능한 지점은 (5a) This is a locally-linear feedback policy with k ≜-Q-1 uuQu and K ≜-Q-1 uuQux (5b) the feed-forward modification and feedback gain matrix, respectively.를 Although indirect methods automatically take into account state constraints, control limits pose a difficulty.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 state estimate, task-space error와 control decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 As reported below, in our experiments the average number of factorizations was never larger than 2.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Finally, Section IV describes the results, illustrating the usefulness of our approach.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Although indirect methods automatically take into account state constraints, control limits pose a difficulty. (p. 1, Abstract).
+- **Paper-specific mechanism:** Finally, Section IV describes the results, illustrating the usefulness of our approach. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS); the relevant task/metric cue is Distance was measured using the Hubertype function z(x,p) = √ x2 + p2-p. (p. 5, IV. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This term encourages parking maneuvers which do not take the car far from ... (p. 5, IV. RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Finally, we demonstrate box-DDP on a complex platform, the humanoid robot HRP-2..
-3. Compare against the body-reported baseline or a matched simpler baseline: The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm..
-4. Report the body metric and its denominator/aggregation: We generated random LQ problems as follows..
-5. Re-run the body-reported ablation/failure condition: ablation/failure condition not recovered.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Although indirect methods automatically take into account state constraints, control limits pose a difficulty. (p. 1, Abstract); preserve the objective/update rule: Trajectory optimization is the process of finding a statecontrol sequence which locally minimizes a given cost function. (p. 1, I. INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: Finally, we demonstrate box-DDP on a complex platform, the humanoid robot HRP-2. (p. 4, IV. RESULTS).
+3. Compare against the reported or matched baseline: The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS).
+4. Report the body metric with its denominator and aggregation: Distance was measured using the Hubertype function z(x,p) = √ x2 + p2-p. (p. 5, IV. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: 3 compares the results obtained with the two solvers. (p. 5, IV. RESULTS); if none is reported, design one around: A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This term encourages parking maneuvers which do not take the car far from ... (p. 5, IV. RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING); the primary result is directionally consistent at p. 6 (IV. RESULTS), p. 5 (IV. RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), and measure the boundary at p. 5 (IV. RESULTS), p. 6 (IV. RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Finally, Section, describes mechanism이 The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and ... 대비 We generated random LQ problems as follows.을 개선하고, the paper's strongest untested assumption 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Although indirect methods automatically take into account state constraints, control limits pose a difficulty.), does the paper-specific mechanism (Finally, Section IV describes the results, illustrating the usefulness of our approach.) retain the reported evaluation outcome (Distance was measured using the Hubertype function z(x,p) = √ x2 + p2-p.) when tested against the paper's strongest explicit boundary (A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Distance was measured using the Hubertype function z(x,p) = √ x2 + p2-p.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Finally, Section IV describes the results, illustrating the usefulness of our approach. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS).
+- **Strongest explicit boundary:** A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This term encourages parking maneuvers which do not take the car far from ... (p. 5, IV. RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

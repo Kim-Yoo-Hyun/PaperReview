@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.02117; PDF retrieval source: https://arxiv.org/pdf/2401.02117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.02117; PDF retrieval source: https://arxiv.org/pdf/2401.02117. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.1. Co-training Improves Performance | EMPIRICAL / REAL-ROBOT OR HARDWARE | Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively. | p. 8 (6.1. Co-training Improves Performance) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ... | p. 7 (Figure/Table caption) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We then evaluate each policy in the real-world, with randomization of robot and objects configurations as described in Figure 3. | embodiment, simulator version and control stack | p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance) |
 | Task/environment | For example in the case of Lift Glass and Wipe sub-task, the #Attempts equals the number of success from the previous subtask Grasp Towel, ... | reset, timeout, object/scene variation | p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance) |
@@ -142,9 +142,9 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 | For pre-train, we first train ACT on the static ALOHA data and then fine-tune it with the Mobile ALOHA data. co-training, we simply co-train ... | p. 9 (6.1. Co-training Improves Performance) |
 | 20 40 60 80 Duration (s) Wipe Wine 1 2 3 4 5 Trial Num. | p. 10 (6.1. Co-training Improves Performance) |
 | All compute during data collection and inference is conducted on a consumer-grade laptop with Nvidia 3070 Ti GPU (8GB VRAM) and Intel i7-12800H. | p. 4 (3. Mobile ALOHA Hardware) |
+| The system costs $32k including onboard power and compute. | p. 1 (Body text (section boundary not confidently recovered)) |
 | (1) We lack accessible, plug-and-play hardware for whole-body teleoperation. | p. 2 (1. Introduction) |
 | Additional hardware and calibration are also necessary to enable teleoperation on these platforms. | p. 2 (1. Introduction) |
-| Untethered: Onboard power and compute. | p. 4 (3. Mobile ALOHA Hardware) |
 
 | Audit field | Current status |
 |---|---|
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 - **p. 8 / 6.1. Co-training Improves Performance - extractive body cue:** The only task that falls below 80% success is Cook Shrimp (40%), which is a 75-second long-horizon task for which we only collected 20 demonstrations.
 - **p. 10 / 8. User Studies - extractive body cue:** Conclusion, Limitations and Future Directions In summary, our paper tackles both the hardware and the software aspects of bimanual mobile manipulation.
 
-- **PDF anchors reviewed:** datasets p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 10 (6.1. Co-training Improves Performance), metrics p. 7 (Figure/Table caption), p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 3 (Figure/Table caption), p. 20 (Figure/Table caption), baselines p. 9 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), results p. 8 (6.1. Co-training Improves Performance), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance).
+- **Evidence anchors reviewed:** datasets p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 10 (6.1. Co-training Improves Performance), metrics p. 7 (Figure/Table caption), p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 3 (Figure/Table caption), p. 20 (Figure/Table caption), baselines p. 9 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), results p. 8 (6.1. Co-training Improves Performance), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. It is particularly important for ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively. (p. 8, 6.1. Co-training Improves Performance).
+- **Baseline/ablation evidence:** We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training. (p. 8, 6.1. Co-training Improves Performance).
+- **Failure/negative evidence:** In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or from rich contacts such as ... (p. 8, 6.1. Co-training Improves Performance).

@@ -10,7 +10,7 @@
 
 ### What was actually new
 
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021
+- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part.
 - **p. 2 / 1. Introduction - extractive body cue:** (2) Our method generalizes to unseen object instances and categories with different numbers of parts and joints.
 - **p. 4 / 3.4. History Aggregation - extractive body cue:** We introduce a history aggregation algorithm to updated part memory V , based on predicted Mt and Mt+1.
 - **p. 2 / 3. Approach - extractive body cue:** We then explain the three components of our approach: an interaction network (Sec.
@@ -34,7 +34,7 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021 | p. 1 (1. Introduction), p. 2 (1. Introduction) |
+| Mechanism/contribution | To address these challenges, we introduce Act the Part | p. 1 (1. Introduction), p. 2 (1. Introduction) |
 | Reported outcome | While other algorithms' performance saturate quickly with one or two interactions, [Ours-Touch] and [Ours-NoTouch] are able to improve with more interactions. | p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results) |
 | Failure/limitation | The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). | p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results) |
 
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Given the sequence of T observations, sensor readings, and actions, the goal is to infer part mask MT ∈{1, 2, ..., N +1}H×W , where each pixel is assigned a value corresponding ...를 (a) The interaction network computes hold and push from an image observation and current part memory.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** (a) The interaction network computes hold and push from an image observation and current part memory. (p. 3, 3.1. Problem Formulation).
+- **Paper-specific mechanism:** Our task and approach novelty are highlighted in Fig. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time. (p. 7, 4.2. Benchmark Results); the relevant task/metric cue is The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Dataset, test initialization, and pre-trained models will be released for reproducibility and benchmarking..
-3. Compare against the body-reported baseline or a matched simpler baseline: Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time..
-4. Report the body metric and its denominator/aggregation: The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%)..
-5. Re-run the body-reported ablation/failure condition: Without any fine-tuning, the algorithm shows promising results on inferring interaction strategies and reasoning about the observed motion for part discovery..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: (a) The interaction network computes hold and push from an image observation and current part memory. (p. 3, 3.1. Problem Formulation); preserve the objective/update rule: First, a hold action parameterized by its location and implemented as a fixed point constraint between the gripper and a part. (p. 3, 3.1. Problem Formulation).
+2. Use the paper-reported task/data/environment cue: Dataset, test initialization, and pre-trained models will be released for reproducibility and benchmarking. (p. 5, 4. Evaluation).
+3. Compare against the reported or matched baseline: Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time. (p. 7, 4.2. Benchmark Results).
+4. Report the body metric with its denominator and aggregation: The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).
+5. Re-run the reported ablation or stress/failure condition: To provide a better metric for these structures, we measure dH95, which is a part-aware variant of a common metric in medical image segmentation [8]. (p. 5, 4.1. Metrics and Points of Comparison); if none is reported, design one around: The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (3. Approach), p. 4 (3.5. Reward); the primary result is directionally consistent at p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 8 (4.3. Real World Results), and measure the boundary at p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 address, challenges, introduce mechanism이 Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline ... 대비 The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two ...을 개선하고, The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface ((a) The interaction network computes hold and push from an image observation and current part memory.), does the paper-specific mechanism (Our task and approach novelty are highlighted in Fig.) retain the reported evaluation outcome (The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two ...) when tested against the paper's strongest explicit boundary (The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our task and approach novelty are highlighted in Fig. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time. (p. 7, 4.2. Benchmark Results).
+- **Strongest explicit boundary:** The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

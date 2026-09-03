@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2202.08227; PDF retrieval source: https://arxiv.org/pdf/2202.08227. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2202.08227; PDF retrieval source: https://arxiv.org/pdf/2202.08227. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.5. Ablation Studies | EMPIRICAL / SIMULATION | 1, Ditto achieves superior or at least on-par performance on all metrics. | p. 8 (5.5. Ablation Studies) |
 | 5.4. Articulated Object Reconstruction | EMPIRICAL / SIMULATION | On both datasets, Ditto gets significantly better results on all metrics compared with the baselines. | p. 7 (5.4. Articulated Object Reconstruction) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Reconstructed unseen articulated objects in Shape2Motion [55] (top) and synthetic [1] (bottom) dataset. | embodiment, simulator version and control stack | p. 7 (5.2. Baselines), p. 6 (5.1. Datasets) |
 | Task/environment | The synthetic dataset contains procedurally generated articulated objects. | reset, timeout, object/scene variation | p. 6 (5.1. Datasets), p. 6 (5.1. Datasets) |
@@ -159,7 +159,16 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 - **p. 7 / 5.4. Articulated Object Reconstruction - extractive body cue:** In comparison, Ditto does not suffer from such a bottleneck as an end-to-end method.
 - **p. 6 / 5.1. Datasets - extractive body cue:** Even though we use multi-view depth images, the point cloud may still be incomplete due to the self-occlusion of the objects.
 
-- **PDF anchors reviewed:** datasets p. 7 (5.2. Baselines), p. 6 (5.1. Datasets), p. 6 (5.1. Datasets), p. 8 (5.4. Articulated Object Reconstruction), p. 8 (5.6. Real-World Experiments), p. 7 (5.4. Articulated Object Reconstruction), metrics p. 7 (5.3. Evaluation Metrics), p. 8 (5.5. Ablation Studies), p. 7 (5.3. Evaluation Metrics), p. 12 (Figure/Table caption), p. 6 (5.2. Baselines), p. 6 (5.1. Datasets), baselines p. 7 (5.4. Articulated Object Reconstruction), p. 6 (5.2. Baselines), p. 6 (5.2. Baselines), p. 7 (5.4. Articulated Object Reconstruction), p. 8 (5.5. Ablation Studies), p. 8 (5.5. Ablation Studies), results p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articulated Object Reconstruction), p. 7 (5.4. Articulated Object Reconstruction), p. 8 (5.5. Ablation Studies), p. 12 (Figure/Table caption), p. 6 (Dataset).
+- **Evidence anchors reviewed:** datasets p. 7 (5.2. Baselines), p. 6 (5.1. Datasets), p. 6 (5.1. Datasets), p. 8 (5.4. Articulated Object Reconstruction), p. 8 (5.6. Real-World Experiments), p. 7 (5.4. Articulated Object Reconstruction), metrics p. 7 (5.3. Evaluation Metrics), p. 8 (5.5. Ablation Studies), p. 7 (5.3. Evaluation Metrics), p. 12 (Figure/Table caption), p. 6 (5.2. Baselines), p. 6 (5.1. Datasets), baselines p. 7 (5.4. Articulated Object Reconstruction), p. 6 (5.2. Baselines), p. 6 (5.2. Baselines), p. 7 (5.4. Articulated Object Reconstruction), p. 8 (5.5. Ablation Studies), p. 8 (5.5. Ablation Studies), results p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articulated Object Reconstruction), p. 7 (5.4. Articulated Object Reconstruction), p. 8 (5.5. Ablation Studies), p. 12 (Figure/Table caption), p. 6 (Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** On both datasets, Ditto gets significantly better results on all metrics compared with the baselines. (p. 7, 5.4. Articulated Object Reconstruction).
+- **Metric evidence:** For the revolute joint, we also measure the axis position error (Pos Err) using the minimum distance between the predicted and ground truth rotation axis. (p. 7, 5.3. Evaluation Metrics).
+- **Baseline/ablation evidence:** On both datasets, Ditto gets significantly better results on all metrics compared with the baselines. (p. 7, 5.4. Articulated Object Reconstruction).
+- **Failure/negative evidence:** Failure of joint estimation also harms segmentation prediction because the joint parameter decoders and the segmentation decoder share the same feature planes. (p. 7, 5.4. Articulated Object Reconstruction).

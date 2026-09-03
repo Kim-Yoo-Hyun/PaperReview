@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p066.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p066.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p066.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p066.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | ‘The policy trained in the first stage can track the reference motion in the real-world but does not achieve high motion quality. ... | p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | As illustrated in Figure 2 (b), the delta action model is defined as Ady = (se, 44)» where the policy 77> leams ... | p. 5 (B. Training Delta Action Model), p. 5 (B. Training Delta Action Model) |
@@ -86,7 +86,7 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | The proprioception s? is defined as 3P 2 [de aes de an ea Gear Mesa], With Sestep history of joint position q, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | At each timestep 1, we use' a motion capture device and onboard sensors to record the state: s¢ = [p"*, vp", ab™*, ... | Hz/fps, inference time and control rate |
 | Memory | body pose, contact, reference/history와 fall/recovery state. | The proprioception s? is defined as 3P 2 [de aes de an ea Gear Mesa], With Sestep history of joint position q, ... | window and reset |
-| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 5 (B. Training Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 10 (A. Key Factors in Training Delta Action Models), objective p. 10 (B. Different Usage of Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), temporal p. 3 (B. Phase-based Motion Tracking Policy Training), p. 4 (A. Data Collection), p. 10 (A. Key Factors in Training Delta Action Models), p. 11 (B. Different Usage of Delta Action Model), p. 12 (B. Offine and Online System Identification for Roboties), p. 2 (Abstract).
+- **Evidence anchors reviewed:** method p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 5 (B. Training Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 10 (A. Key Factors in Training Delta Action Models), objective p. 10 (B. Different Usage of Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), temporal p. 3 (B. Phase-based Motion Tracking Policy Training), p. 4 (A. Data Collection), p. 10 (A. Key Factors in Training Delta Action Models), p. 11 (B. Different Usage of Delta Action Model), p. 12 (B. Offine and Online System Identification for Roboties), p. 2 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** As illustrated in Figure 2 (b), the delta action model is defined as Ady = (se, 44)» where the policy 77> leams to output corrective actions based on the current ... (p. 5, B. Training Delta Action Model).
+- **Objective/update evidence:** To ‘optimize the policy. we use the proximal policy optimization (PPO) {80}, aiming to maximize the cumulative discounted reward E (SP In) We identify several design choices that are crucial ... (p. 4, B. Phase-based Motion Tracking Policy Training).
+- **Temporal/runtime evidence:** The proprioception s? is defined as 3P 2 [de aes de an ea Gear Mesa], With Sestep history of joint position q, < K* joint velocity q, < R®°, root ... (p. 3, B. Phase-based Motion Tracking Policy Training).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

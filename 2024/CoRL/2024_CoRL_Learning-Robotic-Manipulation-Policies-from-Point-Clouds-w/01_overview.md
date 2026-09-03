@@ -1,7 +1,7 @@
 # Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2409.07343.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2409.07343.
 > PDF retrieval source: https://arxiv.org/pdf/2409.07343. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2409.07343
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 il 문제를 이해하기 위�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 il 문제를 이해하기 위해 읽는다. 본문은 To overcome these limitations, Conditional Flow Matching (CFM) has been proposed as an efficient generalization of diffusion models [12, 13, 11].를 문제로 두고, Inspired by recent flow-based generative models, we propose PointFlowMatch, a novel imitation learning algorithm for robotic manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Recently, generative models have been demonstrated to be effective at tackling some of these challenges. (p. 1, 1 Introduction).
+- **Actual contribution:** Inspired by recent flow-based generative models, we propose PointFlowMatch, a novel imitation learning algorithm for robotic manipulation. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 1: Performance comparison of PointFlowMatch with different baseline methods on the RLBench set of tasks. We report the success rate (SR) (↑) as well as the delta to our ... (p. 6, Figure/Table caption).
+- **Explicit failure boundary:** In addition to this, as usual in the fixed-data imitation learning setting, CFM cannot extrapolate out of distribution and thus, only learns motion correction behavior when included in the demonstration ... (p. 8, 5 Conclusion).

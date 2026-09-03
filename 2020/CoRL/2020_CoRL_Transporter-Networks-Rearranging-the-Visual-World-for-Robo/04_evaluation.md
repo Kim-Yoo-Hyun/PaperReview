@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.14406; PDF retrieval source: https://arxiv.org/pdf/2010.14406. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.14406; PDF retrieval source: https://arxiv.org/pdf/2010.14406. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Results - extractive PDF cue:** Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop workspace, ...
-- **p. 7 / 4 Results - extractive PDF cue:** Three of our benchmark tasks involve generalizing to unseen objects (see Tab.
-- **p. 7 / 4 Results - extractive PDF cue:** 2 shows sample efficiency of baselines trained from stochastic demonstrations for each task, and evaluated on unseen test settings, with random rotations and translations of ...
-- **p. 6 / 4 Results - extractive PDF cue:** In simulation, we benchmark on 10 discrete-time tabletop manipulation tasks, some which require closed-loop visual feedback for multi-step sequencing.
-- **p. 8 / 4 Results - extractive PDF cue:** Since it learns pick-conditioned placing, it can also stack plates with varying initial predicted pick locations from only 10 demonstrations on a real robot (bottom ...
-- **p. 8 / 4 Results - extractive PDF cue:** Transporter Networks test performance on real robots with human demonstration data.
-- **p. 7 / 4 Results - extractive PDF cue:** Task success rate (mean %) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training.
-- **p. 6 / 4 Results - extractive PDF cue:** Performance is evaluated with a metric from 0 (failure) to 100 (success).
+- **p. 6 / 4 Results - extractive body cue:** Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop workspace, ...
+- **p. 7 / 4 Results - extractive body cue:** Three of our benchmark tasks involve generalizing to unseen objects (see Tab.
+- **p. 7 / 4 Results - extractive body cue:** 2 shows sample efficiency of baselines trained from stochastic demonstrations for each task, and evaluated on unseen test settings, with random rotations and translations of ...
+- **p. 6 / 4 Results - extractive body cue:** In simulation, we benchmark on 10 discrete-time tabletop manipulation tasks, some which require closed-loop visual feedback for multi-step sequencing.
+- **p. 8 / 4 Results - extractive body cue:** Since it learns pick-conditioned placing, it can also stack plates with varying initial predicted pick locations from only 10 demonstrations on a real robot (bottom ...
+- **p. 8 / 4 Results - extractive body cue:** Transporter Networks test performance on real robots with human demonstration data.
+- **p. 7 / 4 Results - extractive body cue:** Task success rate (mean %) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training.
+- **p. 6 / 4 Results - extractive body cue:** Performance is evaluated with a metric from 0 (failure) to 100 (success).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Baseline comparisons. Task success rate (mean %) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training. Generalizing to ... | p. 7 (Figure/Table caption) |
 | 4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | We report results with the models that have achieved highest validation performance during training, averaged over 100 unseen test runs for each task. | p. 6 (4 Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Results - extractive PDF cue:** Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop workspace, ...
-- **p. 7 / 4 Results - extractive PDF cue:** Three of our benchmark tasks involve generalizing to unseen objects (see Tab.
-- **p. 7 / 4 Results - extractive PDF cue:** 2 shows sample efficiency of baselines trained from stochastic demonstrations for each task, and evaluated on unseen test settings, with random rotations and translations of ...
-- **p. 6 / 4 Results - extractive PDF cue:** In simulation, we benchmark on 10 discrete-time tabletop manipulation tasks, some which require closed-loop visual feedback for multi-step sequencing.
-- **p. 8 / 4 Results - extractive PDF cue:** Since it learns pick-conditioned placing, it can also stack plates with varying initial predicted pick locations from only 10 demonstrations on a real robot (bottom ...
-- **p. 8 / 4 Results - extractive PDF cue:** Transporter Networks test performance on real robots with human demonstration data.
+- **p. 6 / 4 Results - extractive body cue:** Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop workspace, ...
+- **p. 7 / 4 Results - extractive body cue:** Three of our benchmark tasks involve generalizing to unseen objects (see Tab.
+- **p. 7 / 4 Results - extractive body cue:** 2 shows sample efficiency of baselines trained from stochastic demonstrations for each task, and evaluated on unseen test settings, with random rotations and translations of ...
+- **p. 6 / 4 Results - extractive body cue:** In simulation, we benchmark on 10 discrete-time tabletop manipulation tasks, some which require closed-loop visual feedback for multi-step sequencing.
+- **p. 8 / 4 Results - extractive body cue:** Since it learns pick-conditioned placing, it can also stack plates with varying initial predicted pick locations from only 10 demonstrations on a real robot (bottom ...
+- **p. 8 / 4 Results - extractive body cue:** Transporter Networks test performance on real robots with human demonstration data.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. A Transporter Network is a simple model architecture that attends to a local region and predicts its spatial displacement (b) from visual input ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Simple planar pick-and-place task where (i) there is a distri- bution of successful pick poses, and (ii) for each successful pick pose, there ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. In this setting (a) where the task is to pick up the red block with an immobilizing grasp (e.g., suction) and place it ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. In this 6-DoF variant of the task presented in Fig. 3, the fixture location varies as well in the out-of-plane rotations (rx, ry), ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Each task in Ravens is characterized by a unique set of attributes. We use behavior cloning simulation experiments to compare with baselines. In ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Baseline comparisons. Task success rate (mean %) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training. Generalizing to Unseen ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Simplified 2DoF (no rotation) block-insertion is harder to learn with demonstrations from a stochastic oracle than a deterministic one. Sample Complexity in Simplified ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Transporter Networks can predict the desired spatial displacements of piles of small objects (left), which informs how to push them towards a target ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. A Transporter Network is a simple model architecture that attends to a local region and predicts its spatial displacement (b) from visual input ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Simple planar pick-and-place task where (i) there is a distri- bution of successful pick poses, and (ii) for each successful pick pose, there ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. In this setting (a) where the task is to pick up the red block with an immobilizing grasp (e.g., suction) and place it ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. In this 6-DoF variant of the task presented in Fig. 3, the fixture location varies as well in the out-of-plane rotations (rx, ry), ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Each task in Ravens is characterized by a unique set of attributes. We use behavior cloning simulation experiments to compare with baselines. In ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Baseline comparisons. Task success rate (mean %) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training. Generalizing to Unseen ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Simplified 2DoF (no rotation) block-insertion is harder to learn with demonstrations from a stochastic oracle than a deterministic one. Sample Complexity in Simplified ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Transporter Networks can predict the desired spatial displacements of piles of small objects (left), which informs how to push them towards a target ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop ... | embodiment, simulator version and control stack | p. 6 (4 Results), p. 7 (4 Results) |
 | Task/environment | Three of our benchmark tasks involve generalizing to unseen objects (see Tab. | reset, timeout, object/scene variation | p. 7 (4 Results), p. 7 (4 Results) |
@@ -121,11 +121,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 | Primary metric/result | We report results with the models that have achieved highest validation performance during training, averaged over 100 unseen test runs for each task. | numeric claim only at cited anchor | p. 6 (4 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Results - extractive PDF cue:** Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop workspace, ...
-- **p. 5 / 3 Method - extractive PDF cue:** 3.2 Network Architecture Observation Space: For tabletop manipulation, our visual observation ot is an orthographic top-down view of a 0.5×1m tabletop workspace, generated in simulation ...
-- **p. 5 / 3 Method - extractive PDF cue:** The top-down image ot has a pixel resolution of 160×320 - each pixel represents a 3.125×3.125mm vertical column of 3D space in the workspace.
-- **p. 6 / 3 Method - extractive PDF cue:** Total inference time (with both picking and placing models) amounts to 200ms on an Nvidia GTX 2080 GPU.
-- **p. 6 / 3 Method - extractive PDF cue:** 4), we evaluate Transporter Networks in their ability to learn from n = 1, 10, 100, or 1,000 demonstrations per task.
+- **p. 6 / 4 Results - extractive body cue:** Ravens, our simulated benchmark learning environment built with PyBullet [44], consists of a Universal Robot UR5e with a suction gripper overlooking a 0.5×1m tabletop workspace, ...
+- **p. 5 / 3 Method - extractive body cue:** 3.2 Network Architecture Observation Space: For tabletop manipulation, our visual observation ot is an orthographic top-down view of a 0.5×1m tabletop workspace, generated in simulation ...
+- **p. 5 / 3 Method - extractive body cue:** The top-down image ot has a pixel resolution of 160×320 - each pixel represents a 3.125×3.125mm vertical column of 3D space in the workspace.
+- **p. 6 / 3 Method - extractive body cue:** Total inference time (with both picking and placing models) amounts to 200ms on an Nvidia GTX 2080 GPU.
+- **p. 6 / 3 Method - extractive body cue:** 4), we evaluate Transporter Networks in their ability to learn from n = 1, 10, 100, or 1,000 demonstrations per task.
 
 ## Generalization and Failure Cases
 
@@ -162,14 +162,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5 Conclusion - extractive PDF cue:** In terms of its current limitations: it is sensitive to camera-robot calibration, and it remains unclear how to integrate torque/force actions with spatial action spaces.
-- **p. 6 / 4 Results - extractive PDF cue:** Performance is evaluated with a metric from 0 (failure) to 100 (success).
-- **p. 19 / Figure/Table caption - extractive PDF cue:** Figure 9. Depictions of the generalization ability of different models on the simplified translation-only block-insertion task. Each episode is visualized as a mark on the ...
-- **p. 7 / 4 Results - extractive PDF cue:** For example, when a stack of blocks falls over, they can re-build the stack of blocks as if they had just started the task.
-- **p. 6 / 4 Results - extractive PDF cue:** Our method does not require 3 cameras - having more cameras only improves visual coverage.
-- **p. 7 / 4 Results - extractive PDF cue:** We hypothesize that equivariance to rotations and translations enable them to learn these recovery behaviors even with little data on multi-step tasks (see Tab.
+- **p. 8 / 5 Conclusion - extractive body cue:** In terms of its current limitations: it is sensitive to camera-robot calibration, and it remains unclear how to integrate torque/force actions with spatial action spaces.
+- **p. 6 / 4 Results - extractive body cue:** Performance is evaluated with a metric from 0 (failure) to 100 (success).
+- **p. 19 / Figure/Table caption - extractive body cue:** Figure 9. Depictions of the generalization ability of different models on the simplified translation-only block-insertion task. Each episode is visualized as a mark on the ...
+- **p. 7 / 4 Results - extractive body cue:** For example, when a stack of blocks falls over, they can re-build the stack of blocks as if they had just started the task.
+- **p. 6 / 4 Results - extractive body cue:** Our method does not require 3 cameras - having more cameras only improves visual coverage.
+- **p. 7 / 4 Results - extractive body cue:** We hypothesize that equivariance to rotations and translations enable them to learn these recovery behaviors even with little data on multi-step tasks (see Tab.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), baselines p. 20 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), results p. 7 (Figure/Table caption), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 20 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), baselines p. 20 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), results p. 7 (Figure/Table caption), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 20 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

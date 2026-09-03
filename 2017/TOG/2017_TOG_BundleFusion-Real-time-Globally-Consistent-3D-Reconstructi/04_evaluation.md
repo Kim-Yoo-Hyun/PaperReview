@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1604.01093; PDF retrieval source: https://arxiv.org/pdf/1604.01093. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1604.01093; PDF retrieval source: https://arxiv.org/pdf/1604.01093. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RE
 
 ## Evaluation Body Digest
 
-- **p. 13 / 6 RESULTS - extractive PDF cue:** Te SUN3D dataset also contains eight scenes which contain manual object-correspondence annotations in order to guide their reconstructions; we show reconstruction results using our method ...
-- **p. 13 / 6 RESULTS - extractive PDF cue:** 7.1 Additional Qalitative Results Reconstructed models for the eight scenes in our dataset are publicly available 3.
-- **p. 14 / 6 RESULTS - extractive PDF cue:** Reconstruction results on scenes from the SUN3D dataset [57], using SUN3Dsfm and our approach.
-- **p. 15 / 6 RESULTS - extractive PDF cue:** Reconstruction results on eight scenes from the SUN3D dataset [57], chosen from the List of Annotated Scenes (our method is fully automated and does not ...
-- **p. 17 / 6 RESULTS - extractive PDF cue:** BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration • 1:17 Additionally, we further evaluate our camera tracking on the augmented ICL-NUIM dataset of ...
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Reconstruction results of scenes captured using our live system are shown in Fig.
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded or observes ...
-- **p. 9 / 6 RESULTS - extractive PDF cue:** Note, we do not compare to their newer non-rigid approach, since it fails on most of our dataset sequences.
+- **p. 13 / 6 RESULTS - extractive body cue:** Te SUN3D dataset also contains eight scenes which contain manual object-correspondence annotations in order to guide their reconstructions; we show reconstruction results using our method ...
+- **p. 13 / 6 RESULTS - extractive body cue:** 7.1 Additional Qalitative Results Reconstructed models for the eight scenes in our dataset are publicly available 3.
+- **p. 14 / 6 RESULTS - extractive body cue:** Reconstruction results on scenes from the SUN3D dataset [57], using SUN3Dsfm and our approach.
+- **p. 15 / 6 RESULTS - extractive body cue:** Reconstruction results on eight scenes from the SUN3D dataset [57], chosen from the List of Annotated Scenes (our method is fully automated and does not ...
+- **p. 17 / 6 RESULTS - extractive body cue:** BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration • 1:17 Additionally, we further evaluate our camera tracking on the augmented ICL-NUIM dataset of ...
+- **p. 8 / 6 RESULTS - extractive body cue:** Reconstruction results of scenes captured using our live system are shown in Fig.
+- **p. 8 / 6 RESULTS - extractive body cue:** Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded or observes ...
+- **p. 9 / 6 RESULTS - extractive body cue:** Note, we do not compare to their newer non-rigid approach, since it fails on most of our dataset sequences.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RE
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | While online alignment based on sparse features only (Ours (s)) achieves reasonable results, using dense matching only in per chunk alignment further increases accuracy ... | p. 12 (6 RESULTS) |
 | 6 RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Large-scale reconstruction results: our proposed real-time global pose optimization outperforms current state-of-the-art online reconstruction systems. | p. 9 (6 RESULTS) |
@@ -40,35 +40,35 @@ PDF body evaluation/result cue (p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RE
 
 ## Dataset / Benchmark Role
 
-- **p. 13 / 6 RESULTS - extractive PDF cue:** Te SUN3D dataset also contains eight scenes which contain manual object-correspondence annotations in order to guide their reconstructions; we show reconstruction results using our method ...
-- **p. 13 / 6 RESULTS - extractive PDF cue:** 7.1 Additional Qalitative Results Reconstructed models for the eight scenes in our dataset are publicly available 3.
-- **p. 14 / 6 RESULTS - extractive PDF cue:** Reconstruction results on scenes from the SUN3D dataset [57], using SUN3Dsfm and our approach.
-- **p. 15 / 6 RESULTS - extractive PDF cue:** Reconstruction results on eight scenes from the SUN3D dataset [57], chosen from the List of Annotated Scenes (our method is fully automated and does not ...
-- **p. 17 / 6 RESULTS - extractive PDF cue:** BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration • 1:17 Additionally, we further evaluate our camera tracking on the augmented ICL-NUIM dataset of ...
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Reconstruction results of scenes captured using our live system are shown in Fig.
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded or observes ...
-- **p. 9 / 6 RESULTS - extractive PDF cue:** Note, we do not compare to their newer non-rigid approach, since it fails on most of our dataset sequences.
+- **p. 13 / 6 RESULTS - extractive body cue:** Te SUN3D dataset also contains eight scenes which contain manual object-correspondence annotations in order to guide their reconstructions; we show reconstruction results using our method ...
+- **p. 13 / 6 RESULTS - extractive body cue:** 7.1 Additional Qalitative Results Reconstructed models for the eight scenes in our dataset are publicly available 3.
+- **p. 14 / 6 RESULTS - extractive body cue:** Reconstruction results on scenes from the SUN3D dataset [57], using SUN3Dsfm and our approach.
+- **p. 15 / 6 RESULTS - extractive body cue:** Reconstruction results on eight scenes from the SUN3D dataset [57], chosen from the List of Annotated Scenes (our method is fully automated and does not ...
+- **p. 17 / 6 RESULTS - extractive body cue:** BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration • 1:17 Additionally, we further evaluate our camera tracking on the augmented ICL-NUIM dataset of ...
+- **p. 8 / 6 RESULTS - extractive body cue:** Reconstruction results of scenes captured using our live system are shown in Fig.
+- **p. 8 / 6 RESULTS - extractive body cue:** Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded or observes ...
+- **p. 9 / 6 RESULTS - extractive body cue:** Note, we do not compare to their newer non-rigid approach, since it fails on most of our dataset sequences.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1. Our novel real-time 3D reconstruction approach solves for global pose alignment and obtains dense volumetric reconstructions at a level of quality and completeness ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Our global pose optimization takes as input the RGB-D stream of a commodity sensor, detects pairwise correspondences between the input frames, and performs ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4. Performance Evaluation: our proposed pipeline runs at well beyond 30Hz for all used test sequences. The computations are split up over two GPUs ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 5. Convergence analysis of the global keyframe optimization (log scale): peaks correspond to new global keyframes. Only a few iterations are re- quired for ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 6. Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 3. Large-scale reconstruction results: our proposed real-time global pose optimization outperforms current state-of-the-art online reconstruction systems. The globally aligned 3D reconstructions are at a ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 7. Our proposed real-time global pose optimization (top) outperforms the method of Whelan et al. [54] (botom) in terms of scan completeness and alignment ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 8. Our proposed real-time global pose optimization (top) delivers a reconstruction quality on par or even beter than the off-line Redwood [4] system (botom). ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Our novel real-time 3D reconstruction approach solves for global pose alignment and obtains dense volumetric reconstructions at a level of quality and completeness ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Our global pose optimization takes as input the RGB-D stream of a commodity sensor, detects pairwise correspondences between the input frames, and performs ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4. Performance Evaluation: our proposed pipeline runs at well beyond 30Hz for all used test sequences. The computations are split up over two GPUs ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 5. Convergence analysis of the global keyframe optimization (log scale): peaks correspond to new global keyframes. Only a few iterations are re- quired for ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6. Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 3. Large-scale reconstruction results: our proposed real-time global pose optimization outperforms current state-of-the-art online reconstruction systems. The globally aligned 3D reconstructions are at a ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 7. Our proposed real-time global pose optimization (top) outperforms the method of Whelan et al. [54] (botom) in terms of scan completeness and alignment ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 8. Our proposed real-time global pose optimization (top) delivers a reconstruction quality on par or even beter than the off-line Redwood [4] system (botom). ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Te SUN3D dataset also contains eight scenes which contain manual object-correspondence annotations in order to guide their reconstructions; we show reconstruction results using our ... | embodiment, simulator version and control stack | p. 13 (6 RESULTS), p. 13 (6 RESULTS) |
 | Task/environment | 7.1 Additional Qalitative Results Reconstructed models for the eight scenes in our dataset are publicly available 3. | reset, timeout, object/scene variation | p. 13 (6 RESULTS), p. 14 (6 RESULTS) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 1 (Body text (section not recovered)), p. 2 (1 INTRODUCTION) |
 | Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 
 ## Metrics and Success Definition
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RE
 | Primary metric/result | Large-scale reconstruction results: our proposed real-time global pose optimization outperforms current state-of-the-art online reconstruction systems. | numeric claim only at cited anchor | p. 9 (6 RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Te RGB-D stream is captured at 30Hz with a color and depth resolution of 640 × 480.
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Performance Evaluation: our proposed pipeline runs at well beyond 30Hz for all used test sequences.
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Tis also demonstrates that our global pose alignment strategy scales well to large spatial extents and long sequences (over 20,000 frames).
-- **p. 10 / 6 RESULTS - extractive PDF cue:** Our pipeline runs with a framerate well beyond 30Hz (see Fig.
-- **p. 10 / 6 RESULTS - extractive PDF cue:** Note that the global dense optimization runs in < 500ms at the end of the sequences.
-- **p. 13 / 6 RESULTS - extractive PDF cue:** Tis corresponds to about 14 minutes of continuous scanning, assuming 30Hz input - although many RGB-D sensors have a lower frame rate which allows for ...
+- **p. 8 / 6 RESULTS - extractive body cue:** Te RGB-D stream is captured at 30Hz with a color and depth resolution of 640 × 480.
+- **p. 8 / 6 RESULTS - extractive body cue:** Performance Evaluation: our proposed pipeline runs at well beyond 30Hz for all used test sequences.
+- **p. 8 / 6 RESULTS - extractive body cue:** Tis also demonstrates that our global pose alignment strategy scales well to large spatial extents and long sequences (over 20,000 frames).
+- **p. 10 / 6 RESULTS - extractive body cue:** Our pipeline runs with a framerate well beyond 30Hz (see Fig.
+- **p. 10 / 6 RESULTS - extractive body cue:** Note that the global dense optimization runs in < 500ms at the end of the sequences.
+- **p. 13 / 6 RESULTS - extractive body cue:** Tis corresponds to about 14 minutes of continuous scanning, assuming 30Hz input - although many RGB-D sensors have a lower frame rate which allows for ...
 
 ## Generalization and Failure Cases
 
@@ -148,13 +148,13 @@ PDF body evaluation/result cue (p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RE
 | Body reproducibility cue | Anchor |
 |---|---|
 | Tis sequence has a CPU memory footprint of 34.7GB and requires 7.3GB of GPU memory (4mm voxels) for tracking and reconstruction. | p. 11 (6 RESULTS) |
+| CCS Concepts: •Computing methodologies →Computer graphics; Shape modeling; Mesh geometry models; General Terms: RGB-D, scan, real-time, global consistency, scalable ACM Reference format: Angela Dai, ... | p. 1 (Body text (section not recovered)) |
 | Here, the user or robot must scan an entire room (or several spaces) in real-time, with instantaneous and continual integration of the accumulated 3D ... | p. 1 (1 INTRODUCTION) |
 | We measure the performance of our pipeline on an Intel Core i7 3.4GHz CPU (32GB RAM). | p. 10 (6 RESULTS) |
 | For compute, we use a combination of a NVIDIA GeForce GTX Titan X and a GTX Titan Black. | p. 10 (6 RESULTS) |
 | Performance comparison of our tailored GPU-based solver to Ceres [1]. | p. 11 (6 RESULTS) |
 | As can be seen, all steps of the globally consistent camera tracking increase precision while maintaining sufficient recall. | p. 12 (6 RESULTS) |
 | Another limitation is that we currently run our method on two GPUs. | p. 13 (6 RESULTS) |
-| With our current hardware configurations, we are limited to scans of up to 25,000 input RGB-D frames. | p. 13 (6 RESULTS) |
 
 | Audit field | Current status |
 |---|---|
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RE
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1. Our novel real-time 3D reconstruction approach solves for global pose alignment and obtains dense volumetric reconstructions at a level of quality and completeness ...
-- **p. 8 / 6 RESULTS - extractive PDF cue:** Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded or observes ...
-- **p. 11 / 6 RESULTS - extractive PDF cue:** [37]: in contrast to the frame-to-model tracking of VoxelHashing, our novel global pose optimization implicitly handles loop closure (top), robustly detects and recovers from tracking ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 7. Our proposed real-time global pose optimization (top) outperforms the method of Whelan et al. [54] (botom) in terms of scan completeness and alignment ...
-- **p. 11 / 6 RESULTS - extractive PDF cue:** To indicate tracking failure, the reconstruction is shown with a gray overlay.
-- **p. 13 / 6 RESULTS - extractive PDF cue:** Te relocalization (due to sensor occlusion) in the sequence Apt 2 cannot be handled by state-of-theart methods such as ElasticFusion and Redwood.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Our novel real-time 3D reconstruction approach solves for global pose alignment and obtains dense volumetric reconstructions at a level of quality and completeness ...
+- **p. 8 / 6 RESULTS - extractive body cue:** Recovery from tracking failure: our method is able to detect (gray overlay) and recover from tracking failure; i.e., if the sensor is occluded or observes ...
+- **p. 11 / 6 RESULTS - extractive body cue:** [37]: in contrast to the frame-to-model tracking of VoxelHashing, our novel global pose optimization implicitly handles loop closure (top), robustly detects and recovers from tracking ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 7. Our proposed real-time global pose optimization (top) outperforms the method of Whelan et al. [54] (botom) in terms of scan completeness and alignment ...
+- **p. 11 / 6 RESULTS - extractive body cue:** To indicate tracking failure, the reconstruction is shown with a gray overlay.
+- **p. 13 / 6 RESULTS - extractive body cue:** Te relocalization (due to sensor occlusion) in the sequence Apt 2 cannot be handled by state-of-theart methods such as ElasticFusion and Redwood.
 
-- **PDF anchors reviewed:** datasets p. 13 (6 RESULTS), p. 13 (6 RESULTS), p. 14 (6 RESULTS), p. 15 (6 RESULTS), p. 17 (6 RESULTS), p. 8 (6 RESULTS), metrics p. 13 (6 RESULTS), p. 17 (6 RESULTS), p. 9 (6 RESULTS), p. 12 (6 RESULTS), p. 12 (6 RESULTS), p. 10 (6 RESULTS), baselines p. 9 (6 RESULTS), p. 11 (6 RESULTS), p. 9 (Figure/Table caption), p. 8 (6 RESULTS), p. 11 (6 RESULTS), p. 12 (6 RESULTS), results p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 10 (6 RESULTS), p. 11 (6 RESULTS), p. 12 (6 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 13 (6 RESULTS), p. 13 (6 RESULTS), p. 14 (6 RESULTS), p. 15 (6 RESULTS), p. 17 (6 RESULTS), p. 8 (6 RESULTS), metrics p. 13 (6 RESULTS), p. 17 (6 RESULTS), p. 9 (6 RESULTS), p. 12 (6 RESULTS), p. 12 (6 RESULTS), p. 10 (6 RESULTS), baselines p. 9 (6 RESULTS), p. 11 (6 RESULTS), p. 9 (Figure/Table caption), p. 8 (6 RESULTS), p. 11 (6 RESULTS), p. 12 (6 RESULTS), results p. 12 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 10 (6 RESULTS), p. 11 (6 RESULTS), p. 12 (6 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

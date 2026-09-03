@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Instead, movement details and complexity should emerge from an automated procedure whose only inputs are intuitive high-level goals that are easy to specify.를 After three decades of intensive research, we now have algorithms that can make simulated humanoids walk robustly and realistically in response to high-level interactive inputs such as desired body velocity and orientation.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 One way to remove this limitation is to simply increase the number of potential contacts and cover the entire body with sufficient density.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: At the core of our framework is the contact-invariant optimization (CIO) method we introduce here.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** This is a very large domain because almost all limb movements performed on land are made for the purpose of establishing contact with some object (including the ground) and exerting ... (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** In this paper we present a step towards a more general yet fully automated framework for behavior synthesis, capable of produc (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object. (p. 6, 5 Results); the relevant task/metric cue is The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology. (p. 6, 5 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Another simplification we make is to penalize any relative velocity at contacting end effectors (see (2)), which results in trajectories that do not have any noticeable slipping. (p. 6, 5 Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object..
-3. Compare against the body-reported baseline or a matched simpler baseline: For example, animal trot pattern of contacts (moving front leg and opposite hind leg together) emerges for quadruped walking without explicitly being specified..
-4. Report the body metric and its denominator/aggregation: The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology..
-5. Re-run the body-reported ablation/failure condition: One way to remove this limitation is to simply increase the number of potential contacts and cover the entire body with sufficient density..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: This is a very large domain because almost all limb movements performed on land are made for the purpose of establishing contact with some object (including the ground) and exerting ... (p. 2, 1 Introduction); preserve the objective/update rule: These auxiliary variables affect not only the cost function but also the dynamics (by enabling and disabling contact forces), and are optimized together with the movement trajectory. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object. (p. 6, 5 Results).
+3. Compare against the reported or matched baseline: For example, animal trot pattern of contacts (moving front leg and opposite hind leg together) emerges for quadruped walking without explicitly being specified. (p. 6, 5 Results).
+4. Report the body metric with its denominator and aggregation: The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology. (p. 6, 5 Results).
+5. Re-run the reported ablation or stress/failure condition: One way to remove this limitation is to simply increase the number of potential contacts and cover the entire body with sufficient density. (p. 6, 5 Results); if none is reported, design one around: Another simplification we make is to penalize any relative velocity at contacting end effectors (see (2)), which results in trajectories that do not have any noticeable slipping. (p. 6, 5 Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction); the primary result is directionally consistent at p. 6 (5 Results), p. 6 (5 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 6 (5 Results), p. 6 (5 Results), p. 6 (5 Results), and measure the boundary at p. 6 (5 Results), p. 7 (5 Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 core, framework, contact-invariant mechanism이 For example, animal trot pattern of contacts (moving front leg and opposite hind leg together) emerges ... 대비 The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology.을 개선하고, One way to remove this limitation is to simply increase the number of potential contacts and ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (This is a very large domain because almost all limb movements performed on land are made for the purpose of establishing contact ...), does the paper-specific mechanism (In this paper we present a step towards a more general yet fully automated framework for behavior synthesis, capable of produc) retain the reported evaluation outcome (The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology.) when tested against the paper's strongest explicit boundary (Another simplification we make is to penalize any relative velocity at contacting end effectors (see (2)), which results ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper we present a step towards a more general yet fully automated framework for behavior synthesis, capable of produc (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object. (p. 6, 5 Results).
+- **Strongest explicit boundary:** Another simplification we make is to penalize any relative velocity at contacting end effectors (see (2)), which results in trajectories that do not have any noticeable slipping. (p. 6, 5 Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

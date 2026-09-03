@@ -1,36 +1,79 @@
 # Code as Policies: Language Model Programs for Embodied Control
 
-- Year/Venue: 2023 / ICRA
-- Category: VLA and Generalist Robot Policies
-- Tags: LLM, Planning, Robotics
-- Paper link: ./2023/ICRA/2023_ICRA_Code-as-Policies-Language-Model-Programs-for-Embodied-Cont/paper.pdf
-- Code/Project: https://code-as-policies.github.io/
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2209.07753.
+> PDF retrieval source: https://arxiv.org/pdf/2209.07753. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- More recent methods learn the grounding end-to-end (language to action) –, but they require copious amounts of training data, which can be expensive to obtain on real robots.
-- By chaining classic logic structures and referencing third-party libraries (e.g., NumPy, Shapely) to perform arithmetic, LLMs used in this way can write robot policies that (i) exhibit spatial-geometric ...
-- Central to our approach is prompting hierarchical code-gen (recursively defining undefined functions), which can write more complex code and also improves state-of-theart to solve 39.8% of problems on ...
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2023 / ICRA
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: VLA and generalist robot policies
+- Tier: REFERENCE
+- Tags: LLM, Planning, Robotics
+- Official paper: https://arxiv.org/abs/2209.07753
+- Full-text retrieval: https://arxiv.org/pdf/2209.07753
+- Code/Project: https://code-as-policies.github.io/
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While promising, this abstraction prevents the LLMs from directly influencing the perception-action feedback loop, making it difficult to ground language in ways that (i) generalize modes of feedback that share percepts and ...를 문제로 두고, Our approach enables robots to perform spatial-geometric reasoning, parse object relationships, and form multi-step behaviors using off-the-shelf models and few-shot prompting with no additional training.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / Abstract - extractive body cue:** Large language models (LLMs) trained on codecompletion have been shown to be capable of synthesizing simple Python programs from docstrings [1].
+- **p. 1 / Abstract - extractive body cue:** We find that these code-writing LLMs can be re-purposed to write robot policy code, given natural language commands.
+- **p. 1 / Abstract - extractive body cue:** Specifically, policy code can express functions or feedback loops that process perception outputs (e.g., from object detectors [2], [3]) and parameterize control primitive APIs.
+- **p. 1 / Abstract - extractive body cue:** When provided as input several example language commands (formatted as comments) followed by corresponding policy code (via few-shot prompting), LLMs can take in new commands ...
+- **p. 1 / Abstract - extractive body cue:** By chaining classic logic structures and referencing third-party libraries (e.g., NumPy, Shapely) to perform arithmetic, LLMs used in this way can write robot policies that ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** While promising, this abstraction prevents the LLMs from directly influencing the perception-action feedback loop, making it difficult to ground language in ways that (i) generalize ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Code as policies presents a new approach to linking words, percepts, and actions; enabling applications in human-robot interaction, but is not without limitations.
 
 ## Core Idea
-- RoboCodeGen: we introduce a new benchmark with 37 function generation problems with several key differences from previous code-gen benchmarks: (i) it is robotics-themed with questions on spatial reasoning ...
-- Our method also inherits LLM capabilities unrelated to code writing e.g., supporting instructions with non-English languages or emojis (Appendix L.
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our approach enables robots to perform spatial-geometric reasoning, parse object relationships, and form multi-step behaviors using off-the-shelf models and few-shot prompting with no additional training.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** See full videos and more tasks at code-as-policies.github.io We present Code as Policies (CaP): a robot-centric formulation of language model generated programs (LMPs) executed on ...
+- **p. 3 / III. METHOD - extractive body cue:** Broadly, we use the term LMP to refer to any program generated by a language model and executed on a system.
+- **p. 3 / III. METHOD - extractive body cue:** To execute an LMP, we first check that it is safe to run by ensuring there are no import statements, special variables that begin with ...
 
-## Main Claims
-- Central to our approach is prompting hierarchical code-gen (recursively defining undefined functions), which can write more complex code and also improves state-of-theart to solve 39.8% of problems on ...
-- This paper presents Code as Policies: a robot-centric formulation of language model generated programs (LMPs) that can represent reactive policies (e.g., impedance controllers), as well as waypoint-based policies ...
-- — Large language models (LLMs) trained on codecompletion have been shown to be capable of synthesizing simple Python programs from docstrings .
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | When provided with several example language commands followed by corresponding policy code (via few-shot prompting, in gray), LLMs can take in new commands (in green) and autonomously re-compose the API calls to ... | image/video, language instruction, proprioception과 history | p. 1 (I. INTRODUCTION), p. 3 (III. METHOD) |
+| State/latent | When, provided, several, example, language, commands, followed, corresponding, policy, code, few-shot, prompting | language-grounded task state와 action-policy context | p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION) |
+| Output/action | This work investigates Code as Policies, a class of LMPs that maps from language instructions to code snippets that (i) react to perceptual inputs (i.e., from sensors or modules on top of ... | continuous action, pose 또는 action chunk | p. 3 (III. METHOD), p. 1 (I. INTRODUCTION), p. 3 (III. METHOD) |
+| Objective/outcome | If the LMP is expected to return a value, we obtain it from locals after exec finishes. | instruction following, task success, generalization과 latency | p. 3 (III. METHOD), p. 3 (III. METHOD) |
 
-## Contribution
-- Central to our approach is prompting hierarchical code-gen (recursively defining undefined functions), which can write more complex code and also improves state-of-theart to solve 39.8% of problems on ...
-- More recent methods learn the grounding end-to-end (language to action) –, but they require copious amounts of training data, which can be expensive to obtain on real robots.
-- This paper presents Code as Policies: a robot-centric formulation of language model generated programs (LMPs) that can represent reactive policies (e.g., impedance controllers), as well as waypoint-based policies ...
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- — Large language models (LLMs) trained on codecompletion have been shown to be capable of synthesizing simple Python programs from docstrings .
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our approach enables robots to perform spatial-geometric reasoning, parse object relationships, and form multi-step behaviors using off-the-shelf models and few-shot prompting with no additional training.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** See full videos and more tasks at code-as-policies.github.io We present Code as Policies (CaP): a robot-centric formulation of language model generated programs (LMPs) executed on ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Within each model family, performance improves with larger models.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Numbers achieved are higher than in recent works [1], [11], [58].
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** With unseen task attributes, CLIPort's performance degrades significantly, while LLM-based methods retain similar performance.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** On unseen tasks and attributes, endto-end systems like CLIPort struggle to generalize, and CaP outperforms LLM reasoning directly with language (also observed in [20]).
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 4: Robot Code-Generation Benchmark Performance across Generalization Types for Flat (top) and Hierarchical (middle) Code- Generation, as well as the performance improvements made by ...
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
+| Embodiment/environment | CaP: Mobile Robot Navigation and Manipulation In this domain, a robot with a mobile base and a 7 DoF arm is tasked to perform navigation and manipulation tasks in real-world kitchen. | hardware/simulator version and reset protocol | p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
+| Dataset/benchmark | RoboCodeGen: we introduce a new benchmark with 37 function generation problems with several key differences from previous code-gen benchmarks: (i) it is robotics-themed with questions on spatial reasoning (e.g., find the closest ... | role, split, size and leakage | p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
+| Metric | Fig. 1: Given examples (via few-shot prompting), robots can use code-writing large language models (LLMs) to translate natural language commands into robot policy code which process perception outputs, parameterize control primitives, r ... | definition, denominator, direction and uncertainty | p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
+| Baseline/ablation | Due to the difficulty of evaluating open-ended tasks and a lack of comparable baselines, quantitative evaluations of a robot system using CaP is limited to a constrained set of simulated tasks in ... | fair input/data/compute/action matching | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 6 / V. DISCUSSION AND LIMITATIONS - extractive body cue:** Our approach also assumes all given instructions are feasible, and we cannot tell if a response will be correct a priori.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** It also illustrates the ability to follow long-horizon reactive commands with control structures as well as precise spatial reasoning, which cannot be easily accomplished by ...
+
+## Why Read It
+
+VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While promising, this abstraction prevents the LLMs from directly influencing the perception-action feedback loop, making it difficult to ground language in ways that (i) generalize modes of feedback that share percepts and ...를 문제로 두고, Our approach enables robots to perform spatial-geometric reasoning, parse object relationships, and form multi-step behaviors using off-the-shelf models and few-shot prompting with no additional training.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (IV. EXPERIMENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

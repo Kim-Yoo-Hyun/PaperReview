@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experimental Setup - extractive PDF cue:** Replica [35] is the simplest benchmark as it contains synthetic scenes, highly accurate and complete (synthetic) depth maps, and small displacements between consecutive camera poses.
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** On the relatively easy synthetic Replica [35] dataset, the de-facto evaluation benchmark, our approach reduces the trajectory error over the prior SOTA-dense baseline [30] by ...
-- **p. 5 / 5. Results & Discussion - extractive PDF cue:** In this section, we first discuss our evaluation results on camera pose estimation for the four benchmark datasets.
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** Therefore, we set up a novel benchmark for this using the new high-quality ScanNet++ [49] dataset.
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** With this novel benchmark that is able to correctly evaluate Novel-View Synthesis and SLAM simultaneously, as well as our approach as a strong initial baseline ...
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** The results for both novel-view and training-view rendering on this ScanNet++ benchmark can be found in Table 3.
-- **p. 8 / 5. Results & Discussion - extractive PDF cue:** Furthermore, SplaTAM can be scaled up to large-scale scenes through efficient representations like OpenVDB [24].
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** Using only an RGB loss successfully tracks the camera trajectory (although with more than 5x the error as using both).
+- **p. 5 / 4. Experimental Setup - extractive body cue:** Replica [35] is the simplest benchmark as it contains synthetic scenes, highly accurate and complete (synthetic) depth maps, and small displacements between consecutive camera poses.
+- **p. 6 / 5. Results & Discussion - extractive body cue:** On the relatively easy synthetic Replica [35] dataset, the de-facto evaluation benchmark, our approach reduces the trajectory error over the prior SOTA-dense baseline [30] by ...
+- **p. 5 / 5. Results & Discussion - extractive body cue:** In this section, we first discuss our evaluation results on camera pose estimation for the four benchmark datasets.
+- **p. 6 / 5. Results & Discussion - extractive body cue:** Therefore, we set up a novel benchmark for this using the new high-quality ScanNet++ [49] dataset.
+- **p. 7 / 5. Results & Discussion - extractive body cue:** With this novel benchmark that is able to correctly evaluate Novel-View Synthesis and SLAM simultaneously, as well as our approach as a strong initial baseline ...
+- **p. 7 / 5. Results & Discussion - extractive body cue:** The results for both novel-view and training-view rendering on this ScanNet++ benchmark can be found in Table 3.
+- **p. 8 / 5. Results & Discussion - extractive body cue:** Furthermore, SplaTAM can be scaled up to large-scale scenes through efficient representations like OpenVDB [24].
+- **p. 7 / 5. Results & Discussion - extractive body cue:** Using only an RGB loss successfully tracks the camera trajectory (although with more than 5x the error as using both).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Results & Discussion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared to prior methods in this category [30, 54], SplaTAM still significantly outperforms, decreasing the trajectory error of the prior SOTA in this category ... | p. 6 (5. Results & Discussion) |
 | 5. Results & Discussion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our approach achieves much better results than the other baselines Vox-Fusion [46] and NICESLAM [54], improving over both by around 10dB in PSNR. | p. 6 (5. Results & Discussion) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experimental Setup - extractive PDF cue:** Replica [35] is the simplest benchmark as it contains synthetic scenes, highly accurate and complete (synthetic) depth maps, and small displacements between consecutive camera poses.
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** On the relatively easy synthetic Replica [35] dataset, the de-facto evaluation benchmark, our approach reduces the trajectory error over the prior SOTA-dense baseline [30] by ...
-- **p. 5 / 5. Results & Discussion - extractive PDF cue:** In this section, we first discuss our evaluation results on camera pose estimation for the four benchmark datasets.
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** Therefore, we set up a novel benchmark for this using the new high-quality ScanNet++ [49] dataset.
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** With this novel benchmark that is able to correctly evaluate Novel-View Synthesis and SLAM simultaneously, as well as our approach as a strong initial baseline ...
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** The results for both novel-view and training-view rendering on this ScanNet++ benchmark can be found in Table 3.
-- **p. 8 / 5. Results & Discussion - extractive PDF cue:** Furthermore, SplaTAM can be scaled up to large-scale scenes through efficient representations like OpenVDB [24].
+- **p. 5 / 4. Experimental Setup - extractive body cue:** Replica [35] is the simplest benchmark as it contains synthetic scenes, highly accurate and complete (synthetic) depth maps, and small displacements between consecutive camera poses.
+- **p. 6 / 5. Results & Discussion - extractive body cue:** On the relatively easy synthetic Replica [35] dataset, the de-facto evaluation benchmark, our approach reduces the trajectory error over the prior SOTA-dense baseline [30] by ...
+- **p. 5 / 5. Results & Discussion - extractive body cue:** In this section, we first discuss our evaluation results on camera pose estimation for the four benchmark datasets.
+- **p. 6 / 5. Results & Discussion - extractive body cue:** Therefore, we set up a novel benchmark for this using the new high-quality ScanNet++ [49] dataset.
+- **p. 7 / 5. Results & Discussion - extractive body cue:** With this novel benchmark that is able to correctly evaluate Novel-View Synthesis and SLAM simultaneously, as well as our approach as a strong initial baseline ...
+- **p. 7 / 5. Results & Discussion - extractive body cue:** The results for both novel-view and training-view rendering on this ScanNet++ benchmark can be found in Table 3.
+- **p. 8 / 5. Results & Discussion - extractive body cue:** Furthermore, SplaTAM can be scaled up to large-scale scenes through efficient representations like OpenVDB [24].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. SplaTAM enables precise camera tracking and high-fidelity reconstruction for dense simultaneous localization and mapping (SLAM) in challenging real-world scenarios. SplaTAM achieves this by ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of SplaTAM. Top-Left: The input to our approach at each timestep is the current RGB-D frame and the 3D Gaussian Map Representation ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Online Camera-Pose Estimation Results on Four Datasets (ATE RMSE ↓[cm]). Our method consistently outperforms all the SOTA-dense baselines on ScanNet++, Replica, and TUM-RGBD, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative Train View Rendering Performance on Replica [35]. SplaTAM is comparable to the SOTA baseline, Point-SLAM [30] and consistently outperforms the other dense ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Novel & Train View Rendering Performance on Scan- Net++ [49]. SplaTAM provides high-fidelity performance on both training views seen during SLAM and held-out ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Color & Depth Loss Ablation on Replica/Room 0. Velo. Sil. Sil. ATE Dep. L1 PSNR Prop.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Camera Tracking Ablations on Replica/Room 0. depth loss. In Table 4, we ablate the decision to use both and investigate the performance of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Renderings on ScanNet++ [49]. Our method, SplaTAM, renders color & depth for the novel & train views with fidelity comparable to the ground ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SplaTAM enables precise camera tracking and high-fidelity reconstruction for dense simultaneous localization and mapping (SLAM) in challenging real-world scenarios. SplaTAM achieves this by ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of SplaTAM. Top-Left: The input to our approach at each timestep is the current RGB-D frame and the 3D Gaussian Map Representation ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Online Camera-Pose Estimation Results on Four Datasets (ATE RMSE ↓[cm]). Our method consistently outperforms all the SOTA-dense baselines on ScanNet++, Replica, and TUM-RGBD, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative Train View Rendering Performance on Replica [35]. SplaTAM is comparable to the SOTA baseline, Point-SLAM [30] and consistently outperforms the other dense ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Novel & Train View Rendering Performance on Scan- Net++ [49]. SplaTAM provides high-fidelity performance on both training views seen during SLAM and held-out ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Color & Depth Loss Ablation on Replica/Room 0. Velo. Sil. Sil. ATE Dep. L1 PSNR Prop.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Camera Tracking Ablations on Replica/Room 0. depth loss. In Table 4, we ablate the decision to use both and investigate the performance of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Renderings on ScanNet++ [49]. Our method, SplaTAM, renders color & depth for the novel & train views with fidelity comparable to the ground ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Replica [35] is the simplest benchmark as it contains synthetic scenes, highly accurate and complete (synthetic) depth maps, and small displacements between consecutive camera ... | embodiment, simulator version and control stack | p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion) |
 | Task/environment | On the relatively easy synthetic Replica [35] dataset, the de-facto evaluation benchmark, our approach reduces the trajectory error over the prior SOTA-dense baseline [30] ... | reset, timeout, object/scene variation | p. 6 (5. Results & Discussion), p. 5 (5. Results & Discussion) |
@@ -122,12 +122,12 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 | Primary metric/result | Our approach achieves much better results than the other baselines Vox-Fusion [46] and NICESLAM [54], improving over both by around 10dB in PSNR. | numeric claim only at cited anchor | p. 6 (5. Results & Discussion) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experimental Setup - extractive PDF cue:** Furthermore, for all comparisons to prior baselines, we present results as the average of 3 seeds (0-2) and use seed 0 for the ablations.
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** R0 R1 R2 Of0 Of1 Of2 Of3 Of4 DROID-SLAM [39] 0.38 0.53 0.38 0.45 0.35 0.24 0.36 0.33 0.43 Vox-Fusion [46] 3.09 1.37 4.70 1.47 ...
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** Kintinuous [42] 4.84 3.70 7.10 7.50 2.90 3.00 ElasticFusion [43] 6.91 2.53 6.83 21.49 1.17 2.52 ORB-SLAM2 [23] 1.98 1.60 2.20 4.70 0.40 1.00 NICE-SLAM ...
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** 0000 0059 0106 0169 0181 0207 Vox-Fusion [46] 26.90 68.84 24.18 8.41 27.28 23.30 9.41 NICE-SLAM [54] 10.70 12.00 14.00 7.90 10.90 13.40 6.20 Point-SLAM ...
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** R0 R1 R2 Of0 Of1 Of2 Of3 Of4 Vox-Fusion [46] PSNR ↑24.41 22.39 22.36 23.92 27.79 29.83 20.33 23.47 25.21 SSIM ↑0.80 0.68 0.75 0.80 ...
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** Using only an RGB loss successfully tracks the camera trajectory (although with more than 5x the error as using both).
+- **p. 5 / 4. Experimental Setup - extractive body cue:** Furthermore, for all comparisons to prior baselines, we present results as the average of 3 seeds (0-2) and use seed 0 for the ablations.
+- **p. 6 / 5. Results & Discussion - extractive body cue:** R0 R1 R2 Of0 Of1 Of2 Of3 Of4 DROID-SLAM [39] 0.38 0.53 0.38 0.45 0.35 0.24 0.36 0.33 0.43 Vox-Fusion [46] 3.09 1.37 4.70 1.47 ...
+- **p. 6 / 5. Results & Discussion - extractive body cue:** Kintinuous [42] 4.84 3.70 7.10 7.50 2.90 3.00 ElasticFusion [43] 6.91 2.53 6.83 21.49 1.17 2.52 ORB-SLAM2 [23] 1.98 1.60 2.20 4.70 0.40 1.00 NICE-SLAM ...
+- **p. 6 / 5. Results & Discussion - extractive body cue:** 0000 0059 0106 0169 0181 0207 Vox-Fusion [46] 26.90 68.84 24.18 8.41 27.28 23.30 9.41 NICE-SLAM [54] 10.70 12.00 14.00 7.90 10.90 13.40 6.20 Point-SLAM ...
+- **p. 7 / 5. Results & Discussion - extractive body cue:** R0 R1 R2 Of0 Of1 Of2 Of3 Of4 Vox-Fusion [46] PSNR ↑24.41 22.39 22.36 23.92 27.79 29.83 20.33 23.47 25.21 SSIM ↑0.80 0.68 0.75 0.80 ...
+- **p. 7 / 5. Results & Discussion - extractive body cue:** Using only an RGB loss successfully tracks the camera trajectory (although with more than 5x the error as using both).
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 
 ## Limitations and Verification Questions
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Renderings on ScanNet++ [49]. Our method, SplaTAM, renders color & depth for the novel & train views with fidelity comparable to the ground ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. SplaTAM enables precise camera tracking and high-fidelity reconstruction for dense simultaneous localization and mapping (SLAM) in challenging real-world scenarios. SplaTAM achieves this by ...
-- **p. 6 / 5. Results & Discussion - extractive PDF cue:** However, all current SLAM benchmarks don't have a hold-out set of images separate from the camera trajectory that the SLAM algorithm estimates, so they cannot ...
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** In contrast, Point-SLAM [30] fails at camera-pose tracking and overfits to the training views, and isn't able to successfully render novel views at all.
-- **p. 7 / 5. Results & Discussion - extractive PDF cue:** Since Point-SLAM [30] fails to successfully estimate the camera poses and build a good map, it also completely fails on the task of novel-view synthesis.
-- **p. 8 / 5. Results & Discussion - extractive PDF cue:** Silhouette is critical as without it tracking completely fails.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Renderings on ScanNet++ [49]. Our method, SplaTAM, renders color & depth for the novel & train views with fidelity comparable to the ground ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SplaTAM enables precise camera tracking and high-fidelity reconstruction for dense simultaneous localization and mapping (SLAM) in challenging real-world scenarios. SplaTAM achieves this by ...
+- **p. 6 / 5. Results & Discussion - extractive body cue:** However, all current SLAM benchmarks don't have a hold-out set of images separate from the camera trajectory that the SLAM algorithm estimates, so they cannot ...
+- **p. 7 / 5. Results & Discussion - extractive body cue:** In contrast, Point-SLAM [30] fails at camera-pose tracking and overfits to the training views, and isn't able to successfully render novel views at all.
+- **p. 7 / 5. Results & Discussion - extractive body cue:** Since Point-SLAM [30] fails to successfully estimate the camera poses and build a good map, it also completely fails on the task of novel-view synthesis.
+- **p. 8 / 5. Results & Discussion - extractive body cue:** Silhouette is critical as without it tracking completely fails.
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), p. 5 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 7 (5. Results & Discussion), metrics p. 7 (5. Results & Discussion), p. 8 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), baselines p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 5 (4. Experimental Setup), p. 1 (Figure/Table caption), results p. 6 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 8 (5. Results & Discussion), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), p. 5 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 7 (5. Results & Discussion), metrics p. 7 (5. Results & Discussion), p. 8 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), baselines p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 5 (4. Experimental Setup), p. 1 (Figure/Table caption), results p. 6 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 8 (5. Results & Discussion), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

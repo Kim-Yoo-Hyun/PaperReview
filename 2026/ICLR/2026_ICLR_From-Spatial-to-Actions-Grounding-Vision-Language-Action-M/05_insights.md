@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 3.1 Problem Definition We study the problem of task-oriented robot control, where a robot must interpret visual observations Ot = {I1 t , . . . , In t } at time ...를 At timestep t, the VLM processes visual observations Ot and language instructions L to produce a semantic action token ˆtact.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through an improved injection scheme.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 3.1 Problem Definition We study the problem of task-oriented robot control, where a robot must interpret visual observations Ot = {I1 t , . . . , In t } ... (p. 4, 3 Methodology).
+- **Paper-specific mechanism:** We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through an improved injection scheme. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance. (p. 8, 4 Experiments); the relevant task/metric cue is FALCON achieves an overall success rate of 62.9%, surpassing all baseline methods. (p. 8, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure. (p. 9, 4 Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: All models are initially pre-trained on a mixture of the Open X-Embodiment dataset [29] and then fine-tuned with multi-task real-robot data..
-3. Compare against the body-reported baseline or a matched simpler baseline: 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance..
-4. Report the body metric and its denominator/aggregation: In contrast, our method exhibits strong robustness to scale variations, avoiding these issues and achieving the highest success rates in both scenarios..
-5. Re-run the body-reported ablation/failure condition: To verify the effectiveness of our strategy for injecting 3D information into the action head, we evaluate a variant following the approach of most 3D-based VLAs, where spatial tokens from the ESM ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 3.1 Problem Definition We study the problem of task-oriented robot control, where a robot must interpret visual observations Ot = {I1 t , . . . , In t } ... (p. 4, 3 Methodology); preserve the objective/update rule: 3.3 Training Objective During the training process of FALCON, the objective for action sequence generation is formulated as the minimization of a composite loss function over the predicted action horizon. (p. 5, 3 Methodology).
+2. Use the paper-reported task/data/environment cue: All models are initially pre-trained on a mixture of the Open X-Embodiment dataset [29] and then fine-tuned with multi-task real-robot data. (p. 8, 4 Experiments).
+3. Compare against the reported or matched baseline: 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance. (p. 8, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: FALCON achieves an overall success rate of 62.9%, surpassing all baseline methods. (p. 8, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Kosmos-VLA (w/ rgb-d) is a point cloud-based variant where the ESM is replaced by a lightweight point cloud encoder [46] while retaining other parts. (p. 11, 4 Experiments); if none is reported, design one around: For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure. (p. 9, 4 Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology); the primary result is directionally consistent at p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 8 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), and measure the boundary at p. 9 (4 Experiments), p. 1 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 FALCON, Spatial, Action mechanism이 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves ... 대비 In contrast, our method exhibits strong robustness to scale variations, avoiding these issues and achieving the highest success ...을 개선하고, For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (3.1 Problem Definition We study the problem of task-oriented robot control, where a robot must interpret visual observations Ot = {I1 t ...), does the paper-specific mechanism (We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through ...) retain the reported evaluation outcome (FALCON achieves an overall success rate of 62.9%, surpassing all baseline methods.) when tested against the paper's strongest explicit boundary (For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (FALCON achieves an overall success rate of 62.9%, surpassing all baseline methods.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (27 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through an improved injection scheme. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance. (p. 8, 4 Experiments).
+- **Strongest explicit boundary:** For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure. (p. 9, 4 Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

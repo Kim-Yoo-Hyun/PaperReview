@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2602.02142. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html; PDF retrieval source: https://arxiv.org/pdf/2602.02142. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table capti
 
 ## Evaluation Body Digest
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Results are averaged over 30 evaluation episodes per task.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** To efficiently collect expert demonstrations, we use the 3Dconnexion SpaceMouse to teleoperate the robotic arm.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** This section presents an extensive evaluation of the FDVLA model through real-world experiments and analytical studies.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Across all the tasks, our FD-VLA achieves the highest overall performance with a mean success rate of 61.1%, substantially outperforming both SmolVLA without force encoding ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** 6 presents the success rates across three contact-rich manipulation tasks.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of our framework. During training, measured force signals are encoded into an actual force token via a lightweight projection. A learnable query ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: Visualization of the real robotic platform. We use a UR5e robot arm as the main manipulation platform, the Kinect Azure camera as the ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Results are averaged over 30 evaluation episodes per task.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** To efficiently collect expert demonstrations, we use the 3Dconnexion SpaceMouse to teleoperate the robotic arm.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** This section presents an extensive evaluation of the FDVLA model through real-world experiments and analytical studies.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Across all the tasks, our FD-VLA achieves the highest overall performance with a mean success rate of 61.1%, substantially outperforming both SmolVLA without force encoding ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** 6 presents the success rates across three contact-rich manipulation tasks.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of our framework. During training, measured force signals are encoded into an actual force token via a lightweight projection. A learnable query ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Visualization of the real robotic platform. We use a UR5e robot arm as the main manipulation platform, the Kinect Azure camera as the ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Across all the tasks, our FD-VLA achieves the highest overall performance with a mean success rate of 61.1%, substantially outperforming both SmolVLA without force ... | p. 6 (IV. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 6: Success rates for three contact-rich manipulation tasks: Plug in Socket, Clean Whiteboard, and Press Button. Results are averaged over 30 evaluation episodes ... | p. 6 (Figure/Table caption) |
@@ -39,25 +39,25 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table capti
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Results are averaged over 30 evaluation episodes per task.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** To efficiently collect expert demonstrations, we use the 3Dconnexion SpaceMouse to teleoperate the robotic arm.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** This section presents an extensive evaluation of the FDVLA model through real-world experiments and analytical studies.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Results are averaged over 30 evaluation episodes per task.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** To efficiently collect expert demonstrations, we use the 3Dconnexion SpaceMouse to teleoperate the robotic arm.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** This section presents an extensive evaluation of the FDVLA model through real-world experiments and analytical studies.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of our framework. During training, measured force signals are encoded into an actual force token via a lightweight projection. A learnable query ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualization of raw force in the plug insertion task.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualization of real-world experimental tasks: 1) Clean the whiteboard, 2) Press the emergency button, 3) Insert the plug into the socket. the control ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: Visualization of the real robotic platform. We use a UR5e robot arm as the main manipulation platform, the Kinect Azure camera as the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Success rates for three contact-rich manipulation tasks: Plug in Socket, Clean Whiteboard, and Press Button. Results are averaged over 30 evaluation episodes per ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7: Illustration of our visual generalization settings: (Left) Novel Background, where the scene's background differs from training; and (Right) Visual Perturbation, which involves changes ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of our framework. During training, measured force signals are encoded into an actual force token via a lightweight projection. A learnable query ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Visualization of raw force in the plug insertion task.
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Visualization of real-world experimental tasks: 1) Clean the whiteboard, 2) Press the emergency button, 3) Insert the plug into the socket. the control ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Visualization of the real robotic platform. We use a UR5e robot arm as the main manipulation platform, the Kinect Azure camera as the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Success rates for three contact-rich manipulation tasks: Plug in Socket, Clean Whiteboard, and Press Button. Results are averaged over 30 evaluation episodes per ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Illustration of our visual generalization settings: (Left) Novel Background, where the scene's background differs from training; and (Right) Visual Perturbation, which involves changes ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Results are averaged over 30 evaluation episodes per task. | embodiment, simulator version and control stack | p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
 | Task/environment | To efficiently collect expert demonstrations, we use the 3Dconnexion SpaceMouse to teleoperate the robotic arm. | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
@@ -142,13 +142,13 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table capti
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
-- **p. 4 / III. METHODOLOGY - extractive PDF cue:** This architecture allows our system to leverage the semantic richness of pretrained VLM while introducing stable, taskrelevant physical reasoning through force distillation, achieving both robustness ...
-- **p. 4 / III. METHODOLOGY - extractive PDF cue:** Finally, FDM mitigates the noise and instability of raw sensor signals by learning a supervised latent embedding that serves as a denoised, taskrelevant proxy for ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Our model achieves consistently higher performance, which highlights the benefit of force distillation for accurate and robust manipulation.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** For evaluation, each task was trained using a set of 50 demonstrations and subsequently evaluated over 30 independent test trials to ensure statistical robustness.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** This architecture allows our system to leverage the semantic richness of pretrained VLM while introducing stable, taskrelevant physical reasoning through force distillation, achieving both robustness ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** Finally, FDM mitigates the noise and instability of raw sensor signals by learning a supervised latent embedding that serves as a denoised, taskrelevant proxy for ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Our model achieves consistently higher performance, which highlights the benefit of force distillation for accurate and robust manipulation.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** For evaluation, each task was trained using a set of 50 demonstrations and subsequently evaluated over 30 independent test trials to ensure statistical robustness.
 
-- **PDF anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

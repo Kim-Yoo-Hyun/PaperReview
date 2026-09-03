@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p079.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p079.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p079.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p079.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -32,7 +32,7 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Visual observations and force readings are converted into tokens, fed to the encoder, then decoded into action tokens through cross attention. | p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | then tokenized by a vision encoder and a force encoder before fed into an action transformer to regress joint position targets gee. | p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model) |
@@ -42,7 +42,7 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -54,7 +54,7 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 | Input/observation | consider, policy, produces, chunk, future, actions, length, joint, positions, given, visual, observation, image, time | tactile image/force, vision과 proprioceptive history | body cue; exact tensor/frame verify |
 | State/latent | consider, policy, produces, chunk, future, actions, length, joint, positions, given | contact geometry, force state 또는 latent dynamics | body cue; notation verify |
 | Action/output | decoder, introduce, action, tokens, FACTR, allows, policy, beter, integrate, force | grasp/contact action, force command 또는 object motion | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | contact prediction/control error | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | contact prediction/control error | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -118,8 +118,17 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), objective 본문 anchor 없음, temporal p. 4 (A. Problem Statement and Base Model), p. 7 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 9 (C. Policy Evaluation).
+- **Evidence anchors reviewed:** method p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), objective 본문 anchor 없음, temporal p. 4 (A. Problem Statement and Base Model), p. 7 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 9 (C. Policy Evaluation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Visual observations and force readings are converted into tokens, fed to the encoder, then decoded into action tokens through cross attention. (p. 5, A. Problem Statement and Base Model).
+- **Objective/update evidence:** Each trajectory in D comprises tuples (I;,7:, 1). (p. 4, A. Problem Statement and Base Model).
+- **Temporal/runtime evidence:** Specifically, we visualize the cross attention of the action tokens to the memory tokens denoted as a{ and a") for the first layer of the decoder, where af? and ai!) ... (p. 8, C. Policy Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

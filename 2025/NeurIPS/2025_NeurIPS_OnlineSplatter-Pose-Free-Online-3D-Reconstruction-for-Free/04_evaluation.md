@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Y9AdTCCEgI; PDF retrieval source: https://openreview.net/pdf/561349dc7bef7809d41f05247cf1a1df95e7712f.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Y9AdTCCEgI; PDF retrieval source: https://arxiv.org/pdf/2510.20605. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences.
-- **p. 8 / 4 Experiments - extractive PDF cue:** For evaluation, we use two datasets of unseen objects.
-- **p. 10 / 4.2 Results - extractive PDF cue:** Future work could explore modeling non-rigid objects and integrate it with downstream tasks like robotic manipulation.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Unlike conventional few-view or image-to-3D setups that render from biased polar angles and fixed upright poses, our setting targets real-world freely moving object reconstruction, where ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** This difference is critical, as real-world data often includes partial views with unknown 7
-- **p. 9 / 4.2 Results - extractive PDF cue:** Results are reported on GSO dataset.
-- **p. 9 / 4.2 Results - extractive PDF cue:** 3.2, summarizing results on the GSO dataset in Table 2.
-- **p. 10 / 4.2 Results - extractive PDF cue:** Lastly, our framework is currently limited to rigid objects.
+- **p. 8 / 4 Experiments - extractive body cue:** Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences.
+- **p. 8 / 4 Experiments - extractive body cue:** For evaluation, we use two datasets of unseen objects.
+- **p. 10 / 4.2 Results - extractive body cue:** Future work could explore modeling non-rigid objects and integrate it with downstream tasks like robotic manipulation.
+- **p. 7 / 4 Experiments - extractive body cue:** Unlike conventional few-view or image-to-3D setups that render from biased polar angles and fixed upright poses, our setting targets real-world freely moving object reconstruction, where ...
+- **p. 7 / 4 Experiments - extractive body cue:** This difference is critical, as real-world data often includes partial views with unknown 7
+- **p. 9 / 4.2 Results - extractive body cue:** Results are reported on GSO dataset.
+- **p. 9 / 4.2 Results - extractive body cue:** 3.2, summarizing results on the GSO dataset in Table 2.
+- **p. 10 / 4.2 Results - extractive body cue:** Lastly, our framework is currently limited to rigid objects.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Even with fewer than four observations, OnlineSplatter significantly outperforms all baselines. | p. 8 (4.2 Results) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We therefore design a stage-wise evaluation protocol that examines performance across three distinct phases: 1) Early Stage (Tearly := {1 ≤t ≤4}): Tests the ... | p. 7 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences.
-- **p. 8 / 4 Experiments - extractive PDF cue:** For evaluation, we use two datasets of unseen objects.
-- **p. 10 / 4.2 Results - extractive PDF cue:** Future work could explore modeling non-rigid objects and integrate it with downstream tasks like robotic manipulation.
-- **p. 7 / 4 Experiments - extractive PDF cue:** Unlike conventional few-view or image-to-3D setups that render from biased polar angles and fixed upright poses, our setting targets real-world freely moving object reconstruction, where ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** This difference is critical, as real-world data often includes partial views with unknown 7
-- **p. 9 / 4.2 Results - extractive PDF cue:** Results are reported on GSO dataset.
-- **p. 9 / 4.2 Results - extractive PDF cue:** 3.2, summarizing results on the GSO dataset in Table 2.
-- **p. 10 / 4.2 Results - extractive PDF cue:** Lastly, our framework is currently limited to rigid objects.
+- **p. 8 / 4 Experiments - extractive body cue:** Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences.
+- **p. 8 / 4 Experiments - extractive body cue:** For evaluation, we use two datasets of unseen objects.
+- **p. 10 / 4.2 Results - extractive body cue:** Future work could explore modeling non-rigid objects and integrate it with downstream tasks like robotic manipulation.
+- **p. 7 / 4 Experiments - extractive body cue:** Unlike conventional few-view or image-to-3D setups that render from biased polar angles and fixed upright poses, our setting targets real-world freely moving object reconstruction, where ...
+- **p. 7 / 4 Experiments - extractive body cue:** This difference is critical, as real-world data often includes partial views with unknown 7
+- **p. 9 / 4.2 Results - extractive body cue:** Results are reported on GSO dataset.
+- **p. 9 / 4.2 Results - extractive body cue:** 3.2, summarizing results on the GSO dataset in Table 2.
+- **p. 10 / 4.2 Results - extractive body cue:** Lastly, our framework is currently limited to rigid objects.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Outline of proposed OnlineSplatter. From the incoming stream of pose-free RGB frames, OnlineSplatter "splats" the observations into a canonical cloud of 3D Gaussians ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of OnlineSplatter Pipeline. The input to our framework consists of a stream of RGB images {Vt}N t=0, where object masks {Mt}N t=0 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of different baselines on two datasets. Results are shown for early-stage, mid-stage, and late-stage settings. Best results are bolded and second best ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative results of different baselines and our method on the GSO (left) and HO3D (right) datasets. We visualize the results at inference timestep ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Impact of dual-key object memory design. Results are reported on GSO dataset. Variants Early-Stage Mid-Stage Late-Stage Mavg ↑ Mavg ↑
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Impact of training strategy components. Results are reported on GSO dataset. 4.3 Ablations and Analysis In this section, we ablate different components of ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 4: Visual comparison of mesh results between different methods. Methods marked with an asterisk (*) indicate that additional pre- or post-processing steps were applied ...
-- **p. 16 / Figure/Table caption - extractive PDF cue:** Table 4: List of mathematical notations used throughout the paper. 16
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Outline of proposed OnlineSplatter. From the incoming stream of pose-free RGB frames, OnlineSplatter "splats" the observations into a canonical cloud of 3D Gaussians ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of OnlineSplatter Pipeline. The input to our framework consists of a stream of RGB images {Vt}N t=0, where object masks {Mt}N t=0 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Comparison of different baselines on two datasets. Results are shown for early-stage, mid-stage, and late-stage settings. Best results are bolded and second best ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative results of different baselines and our method on the GSO (left) and HO3D (right) datasets. We visualize the results at inference timestep ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Impact of dual-key object memory design. Results are reported on GSO dataset. Variants Early-Stage Mid-Stage Late-Stage Mavg ↑ Mavg ↑
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Impact of training strategy components. Results are reported on GSO dataset. 4.3 Ablations and Analysis In this section, we ablate different components of ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 4: Visual comparison of mesh results between different methods. Methods marked with an asterisk (*) indicate that additional pre- or post-processing steps were applied ...
+- **p. 16 / Figure/Table caption - extractive body cue:** Table 4: List of mathematical notations used throughout the paper. 16
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | For evaluation, we use two datasets of unseen objects. | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 10 (4.2 Results) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 | Primary metric/result | We therefore design a stage-wise evaluation protocol that examines performance across three distinct phases: 1) Early Stage (Tearly := {1 ≤t ≤4}): Tests the ... | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 Experiments - extractive PDF cue:** For each test sequence of N frames {Vn}N n=1, we split the frames into two sets: Input frames (Vinput): A randomly sampled subset of N ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** First, we test on Google Scanned Objects (GSO) [7], rendering 36 frames per object using our training pipeline (each with distinct lighting and motion).
-- **p. 8 / 4 Experiments - extractive PDF cue:** To adapt it online, we introduce two frame selection strategies for each timestep: (1) rand4: randomly selects 4 frames from past observations (FSOrand4); (2) dist4: ...
-- **p. 7 / 3 Method - extractive PDF cue:** We use 8x A100 GPUs for 250K steps with a batch size of 64 in the Warm-up Training stage and 500K steps with a batch ...
+- **p. 7 / 4 Experiments - extractive body cue:** For each test sequence of N frames {Vn}N n=1, we split the frames into two sets: Input frames (Vinput): A randomly sampled subset of N ...
+- **p. 8 / 4 Experiments - extractive body cue:** First, we test on Google Scanned Objects (GSO) [7], rendering 36 frames per object using our training pipeline (each with distinct lighting and motion).
+- **p. 8 / 4 Experiments - extractive body cue:** To adapt it online, we introduce two frame selection strategies for each timestep: (1) rand4: randomly selects 4 frames from past observations (FSOrand4); (2) dist4: ...
+- **p. 7 / 3 Method - extractive body cue:** We use 8x A100 GPUs for 250K steps with a batch size of 64 in the Warm-up Training stage and 500K steps with a batch ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 4.2 Results - extractive PDF cue:** 5 Limitations and Future Work Our current framework has some limitations that warrant attention.
-- **p. 8 / 4.2 Results - extractive PDF cue:** Baselines using explicit frame selection often exhibit unstable or stagnant performance.
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 5: Impact of Training Data Quantity and Quality. C.2 Impact of Ray Alignment Loss in Geometrical Supervision. While photometric RGB-based loss can effectively supervise ...
-- **p. 10 / 4.2 Results - extractive PDF cue:** Future work could explore hybrid representations that maintain both rendering efficiency and mesh compatibility.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences.
-- **p. 9 / 4.2 Results - extractive PDF cue:** Specifically: Dual-key Design: Removing the latent key severely degrades performance at all stages due to loss of visual-geometrical cues.
+- **p. 10 / 4.2 Results - extractive body cue:** 5 Limitations and Future Work Our current framework has some limitations that warrant attention.
+- **p. 8 / 4.2 Results - extractive body cue:** Baselines using explicit frame selection often exhibit unstable or stagnant performance.
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 5: Impact of Training Data Quantity and Quality. C.2 Impact of Ray Alignment Loss in Geometrical Supervision. While photometric RGB-based loss can effectively supervise ...
+- **p. 10 / 4.2 Results - extractive body cue:** Future work could explore hybrid representations that maintain both rendering efficiency and mesh compatibility.
+- **p. 8 / 4 Experiments - extractive body cue:** Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences.
+- **p. 9 / 4.2 Results - extractive body cue:** Specifically: Dual-key Design: Removing the latent key severely degrades performance at all stages due to loss of visual-geometrical cues.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 10 (4.2 Results), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4.2 Results), metrics p. 8 (4.2 Results), p. 8 (4.2 Results), p. 9 (4.2 Results), p. 9 (4.2 Results), p. 10 (4.2 Results), p. 10 (4.2 Results), baselines p. 7 (4 Experiments), p. 8 (4.2 Results), p. 8 (4.2 Results), p. 9 (4.2 Results), p. 10 (4.2 Results), p. 10 (4.2 Results), results p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (4.2 Results), p. 10 (Figure/Table caption), p. 9 (4.2 Results), p. 10 (4.2 Results).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 10 (4.2 Results), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4.2 Results), metrics p. 8 (4.2 Results), p. 8 (4.2 Results), p. 9 (4.2 Results), p. 9 (4.2 Results), p. 10 (4.2 Results), p. 10 (4.2 Results), baselines p. 7 (4 Experiments), p. 8 (4.2 Results), p. 8 (4.2 Results), p. 9 (4.2 Results), p. 10 (4.2 Results), p. 10 (4.2 Results), results p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (4.2 Results), p. 10 (Figure/Table caption), p. 9 (4.2 Results), p. 10 (4.2 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

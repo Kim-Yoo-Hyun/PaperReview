@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Then the AVA module combines this recurrent state with textconditioned visual features from the current observation to generate soft importance scores, which ... | p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminaries) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | A typical VLA model Pθ, parameterized by θ, consists of four main components: a Large-Language-Model (LLM) backbone M, a vision encoder E, ... | p. 3 (3.1. Preliminaries), p. 3 (3.2. AVA-VLA Framework) |
@@ -80,7 +80,7 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | For each timestep t in this sequence, we calculate the action chunk prediction loss using the Mean Absolute Error (MAE): Lt,n = ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Specifically, at time step t, let the total sequence length be Lt o, we denote the attention score of the mth layer ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Therefore, the total loss of one training batch is the sum of the prediction loss and penalty loss of N truncated sequences: ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -126,8 +126,17 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminaries), p. 3 (3.2. AVA-VLA Framework), p. 5 (3.3. Active Visual Attention), p. 4 (3.2. AVA-VLA Framework), p. 5 (3.4. Training and Inference Procedure), objective p. 5 (3.4. Training and Inference Procedure), p. 5 (3.4. Training and Inference Procedure), temporal p. 5 (3.4. Training and Inference Procedure), p. 4 (3.3. Active Visual Attention), p. 3 (3.2. AVA-VLA Framework), p. 3 (3.2. AVA-VLA Framework), p. 5 (3.4. Training and Inference Procedure), p. 4 (3.2. AVA-VLA Framework).
+- **Evidence anchors reviewed:** method p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminaries), p. 3 (3.2. AVA-VLA Framework), p. 5 (3.3. Active Visual Attention), p. 4 (3.2. AVA-VLA Framework), p. 5 (3.4. Training and Inference Procedure), objective p. 5 (3.4. Training and Inference Procedure), p. 5 (3.4. Training and Inference Procedure), temporal p. 5 (3.4. Training and Inference Procedure), p. 4 (3.3. Active Visual Attention), p. 3 (3.2. AVA-VLA Framework), p. 3 (3.2. AVA-VLA Framework), p. 5 (3.4. Training and Inference Procedure), p. 4 (3.2. AVA-VLA Framework).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In a POMDP framework, the optimal policy at timestep t should be conditioned not only on the current observation xt but also on a belief state bt-1, which captures all ... (p. 3, 3.2. AVA-VLA Framework).
+- **Objective/update evidence:** However, given the substantial memory constraint and computational cost of modern VLA backbones, performing the full backpropagation through time is computationally prohibitive [34]. (p. 5, 3.4. Training and Inference Procedure).
+- **Temporal/runtime evidence:** To utilize the recurrent state, we introduce the active visual attention module by quantifying the importance of visual tokens and dynamically modulating the processing of the visual frame for the ... (p. 3, 3.2. AVA-VLA Framework).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

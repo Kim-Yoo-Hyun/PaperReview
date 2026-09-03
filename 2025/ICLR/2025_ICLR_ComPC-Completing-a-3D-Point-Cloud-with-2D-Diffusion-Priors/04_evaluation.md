@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=SoUwcVplq4; PDF retrieval source: https://openreview.net/pdf/07e0e163b5ab2a3918ebbccd045080a0decea42e.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=SoUwcVplq4; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114366. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 
 ## Evaluation Body Digest
 
-- **p. 19 / A.10 EVALUATION ON LIDAR POINTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 12: Quantitative comparison on ShapeNet dataset. "Known category" and "Unknown category" denote categories included and not ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** By introducing abundant priors from 2D diffusion model (Liu et al., 2023), our method can achieve robust completion for objects across different datasets.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from the ...
-- **p. 19 / A.10 EVALUATION ON LIDAR POINTS - extractive PDF cue:** AdaPoinTr SVDFormer PoinTr PointAttN Ours Input GT Figure 16: Qualitative comparison on objects from ShapeNet (Chang et al., 2015) dataset.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** As SDS-complete (Kasten et al., 2024) only provides codes for the processing of the Redwood dataset (Choi et al., 2016), we implement corresponding comparisons on ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Considering the impracticality of applying test-time completion methods (Kasten et al., 2024) to benchmarks such as Completion3D (Tchapmi et al., 2019) or ShapeNet (Chang et ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** We evaluated our method on both Redwood and synthetic datasets.
-- **p. 16 / A.9 EVALUATION ON SHAPENET - extractive PDF cue:** In this section, we further compare our methods with network-based methods on 16 common models from 4 different categories of ShapeNet dataset.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** By introducing abundant priors from 2D diffusion model (Liu et al., 2023), our method can achieve robust completion for objects across different datasets.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from the ...
+- **p. 19 / A.10 EVALUATION ON LIDAR POINTS - extractive body cue:** AdaPoinTr SVDFormer PoinTr PointAttN Ours Input GT Figure 16: Qualitative comparison on objects from ShapeNet (Chang et al., 2015) dataset.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As SDS-complete (Kasten et al., 2024) only provides codes for the processing of the Redwood dataset (Choi et al., 2016), we implement corresponding comparisons on ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Considering the impracticality of applying test-time completion methods (Kasten et al., 2024) to benchmarks such as Completion3D (Tchapmi et al., 2019) or ShapeNet (Chang et ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** We evaluated our method on both Redwood and synthetic datasets.
+- **p. 16 / A.9 EVALUATION ON SHAPENET - extractive body cue:** In this section, we further compare our methods with network-based methods on 16 common models from 4 different categories of ShapeNet dataset.
+- **p. 17 / A.10 EVALUATION ON LIDAR POINTS - extractive body cue:** To validate the effectiveness of our method across different sensor types, we conduct a comparison using point clouds from the Kitti dataset (Geiger et al., ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results demonstrate that the Preservation Constraint improves performance compared to standard view-dependent diffusion guidance. | p. 10 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results show that the normal map consistently outperforms other methods. | p. 9 (4 EXPERIMENTS) |
@@ -40,34 +40,34 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 19 / A.10 EVALUATION ON LIDAR POINTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Table 12: Quantitative comparison on ShapeNet dataset. "Known category" and "Unknown category" denote categories included and not ...
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** By introducing abundant priors from 2D diffusion model (Liu et al., 2023), our method can achieve robust completion for objects across different datasets.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from the ...
-- **p. 19 / A.10 EVALUATION ON LIDAR POINTS - extractive PDF cue:** AdaPoinTr SVDFormer PoinTr PointAttN Ours Input GT Figure 16: Qualitative comparison on objects from ShapeNet (Chang et al., 2015) dataset.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** As SDS-complete (Kasten et al., 2024) only provides codes for the processing of the Redwood dataset (Choi et al., 2016), we implement corresponding comparisons on ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Considering the impracticality of applying test-time completion methods (Kasten et al., 2024) to benchmarks such as Completion3D (Tchapmi et al., 2019) or ShapeNet (Chang et ...
-- **p. 10 / 4 EXPERIMENTS - extractive PDF cue:** We evaluated our method on both Redwood and synthetic datasets.
-- **p. 16 / A.9 EVALUATION ON SHAPENET - extractive PDF cue:** In this section, we further compare our methods with network-based methods on 16 common models from 4 different categories of ShapeNet dataset.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** By introducing abundant priors from 2D diffusion model (Liu et al., 2023), our method can achieve robust completion for objects across different datasets.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from the ...
+- **p. 19 / A.10 EVALUATION ON LIDAR POINTS - extractive body cue:** AdaPoinTr SVDFormer PoinTr PointAttN Ours Input GT Figure 16: Qualitative comparison on objects from ShapeNet (Chang et al., 2015) dataset.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As SDS-complete (Kasten et al., 2024) only provides codes for the processing of the Redwood dataset (Choi et al., 2016), we implement corresponding comparisons on ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Considering the impracticality of applying test-time completion methods (Kasten et al., 2024) to benchmarks such as Completion3D (Tchapmi et al., 2019) or ShapeNet (Chang et ...
+- **p. 10 / 4 EXPERIMENTS - extractive body cue:** We evaluated our method on both Redwood and synthetic datasets.
+- **p. 16 / A.9 EVALUATION ON SHAPENET - extractive body cue:** In this section, we further compare our methods with network-based methods on 16 common models from 4 different categories of ShapeNet dataset.
+- **p. 17 / A.10 EVALUATION ON LIDAR POINTS - extractive body cue:** To validate the effectiveness of our method across different sensor types, we conduct a comparison using point clouds from the Kitti dataset (Geiger et al., ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Different point cloud completion methods. (a) Existing network-based completion methods; (b) Test-time SDS-complete (Kasten et al., 2024) with text prompts to guide Neural ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Illustration of our framework. ①In Partial Gaussian Initialization (PGI), Reference Viewpoint Estimation estimates a camera pose Vp where Pin can be most completely ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Differences between our binarized opacity and original continuous opacity. ≺denotes smaller but not approaching. Gaussian Attributes Setting. Upon estimating the reference camera pose ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Illustration of Grid Pulling module. g(·) is a MLP-based SDF learned from the completed point cloud Psurf. Merge denotes merge layer from (Huang ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative comparison on synthetic data.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison on synthetic data. Bold marks the best results. Object Horse MaxPlanck Armadillo Cow Homer Teapot Bunny
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Qualitative comparison on Redwood dataset (Choi et al., 2016; Kasten et al., 2024).
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative comparison on Redwood dataset (Choi et al., 2016; Kasten et al., 2024). For the convenience, we re-optimize and normalize the results of ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Different point cloud completion methods. (a) Existing network-based completion methods; (b) Test-time SDS-complete (Kasten et al., 2024) with text prompts to guide Neural ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration of our framework. ①In Partial Gaussian Initialization (PGI), Reference Viewpoint Estimation estimates a camera pose Vp where Pin can be most completely ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Differences between our binarized opacity and original continuous opacity. ≺denotes smaller but not approaching. Gaussian Attributes Setting. Upon estimating the reference camera pose ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Illustration of Grid Pulling module. g(·) is a MLP-based SDF learned from the completed point cloud Psurf. Merge denotes merge layer from (Huang ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative comparison on synthetic data.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison on synthetic data. Bold marks the best results. Object Horse MaxPlanck Armadillo Cow Homer Teapot Bunny
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Qualitative comparison on Redwood dataset (Choi et al., 2016; Kasten et al., 2024).
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Quantitative comparison on Redwood dataset (Choi et al., 2016; Kasten et al., 2024). For the convenience, we re-optimize and normalize the results of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | Published as a conference paper at ICLR 2025 Table 12: Quantitative comparison on ShapeNet dataset. "Known category" and "Unknown category" denote categories included and ... | embodiment, simulator version and control stack | p. 19 (A.10 EVALUATION ON LIDAR POINTS), p. 9 (4 EXPERIMENTS) |
-| Task/environment | By introducing abundant priors from 2D diffusion model (Liu et al., 2023), our method can achieve robust completion for objects across different datasets. | reset, timeout, object/scene variation | p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
+| Robot/hardware/simulator | By introducing abundant priors from 2D diffusion model (Liu et al., 2023), our method can achieve robust completion for objects across different datasets. | embodiment, simulator version and control stack | p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
+| Task/environment | Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from ... | reset, timeout, object/scene variation | p. 9 (4 EXPERIMENTS), p. 19 (A.10 EVALUATION ON LIDAR POINTS) |
 | Observation/sensor | conditioning observation와 noisy/intermediate sample | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY) |
 | Output/decision | generated sample, action chunk 또는 trajectory | action frame, controller and termination | p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY) |
 
@@ -123,7 +123,7 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | Primary metric/result | The results show that the normal map consistently outperforms other methods. | numeric claim only at cited anchor | p. 9 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** We standardize point clouds and perform comparisons at a resolution of 16,384 points following PCN (Yuan et al., 2018).
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We standardize point clouds and perform comparisons at a resolution of 16,384 points following PCN (Yuan et al., 2018).
 
 ## Generalization and Failure Cases
 
@@ -131,10 +131,10 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 |---|---|---|
 | body limitation/failure cue | LIMITATION Our method shares similar limitations as claimed by SDS-complete (Kasten et al., 2024). | p. 10 (5 CONCLUSION) |
 | body limitation/failure cue | Figure 12: Some failure cases. AdaPoinTr SVDFormer Ours Input GT 0.0 0.001 | p. 17 (Figure/Table caption) |
-| body limitation/failure cue | Published as a conference paper at ICLR 2025 Output Ground Truth Partial Reference Image Figure 12: Some failure cases. | p. 17 (A.9 EVALUATION ON SHAPENET) |
 | body limitation/failure cue | As a test-time completion method, although our method does not require any training, the optimization on the test data would take relatively long time ... | p. 10 (5 CONCLUSION) |
 | body limitation/failure cue | We will explore it in our future work. | p. 15 (A.4 FAILURE CASES) |
 | body limitation/failure cue | Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from ... | p. 9 (4 EXPERIMENTS) |
+| body limitation/failure cue | Figure 13: Qualitative comparisons under different noise perturbations. Std denotes the Standard deviation of added noises. The green box marks a local area of ... | p. 17 (Figure/Table caption) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** LIMITATION Our method shares similar limitations as claimed by SDS-complete (Kasten et al., 2024).
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 12: Some failure cases. AdaPoinTr SVDFormer Ours Input GT 0.0 0.001
-- **p. 17 / A.9 EVALUATION ON SHAPENET - extractive PDF cue:** Published as a conference paper at ICLR 2025 Output Ground Truth Partial Reference Image Figure 12: Some failure cases.
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** As a test-time completion method, although our method does not require any training, the optimization on the test data would take relatively long time cost.
-- **p. 15 / A.4 FAILURE CASES - extractive PDF cue:** We will explore it in our future work.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from the ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** LIMITATION Our method shares similar limitations as claimed by SDS-complete (Kasten et al., 2024).
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 12: Some failure cases. AdaPoinTr SVDFormer Ours Input GT 0.0 0.001
+- **p. 10 / 5 CONCLUSION - extractive body cue:** As a test-time completion method, although our method does not require any training, the optimization on the test data would take relatively long time cost.
+- **p. 15 / A.4 FAILURE CASES - extractive body cue:** We will explore it in our future work.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from the ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 13: Qualitative comparisons under different noise perturbations. Std denotes the Standard deviation of added noises. The green box marks a local area of a ...
 
-- **PDF anchors reviewed:** datasets p. 19 (A.10 EVALUATION ON LIDAR POINTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.10 EVALUATION ON LIDAR POINTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 16 (A.7 EVALUATION ON MULTI-MODAL METRICS), p. 17 (A.10 EVALUATION ON LIDAR POINTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), results p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.7 EVALUATION ON MULTI-MODAL METRICS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.10 EVALUATION ON LIDAR POINTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 16 (A.7 EVALUATION ON MULTI-MODAL METRICS), p. 17 (A.10 EVALUATION ON LIDAR POINTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), results p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.7 EVALUATION ON MULTI-MODAL METRICS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

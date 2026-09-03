@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v80/haarnoja18b.html; PDF retrieval source: https://arxiv.org/pdf/1801.01290. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v80/haarnoja18b.html; PDF retrieval source: https://arxiv.org/pdf/1801.01290. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | The stability of the algorithm also plays a large role in performance: easier tasks make it more practical to tune hyperparameters to achieve good ... | p. 6 (5. Experiments) |
 | 5.1. Comparative Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with ... | p. 7 (5.1. Comparative Evaluation) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We compare our method to prior techniques on a range of challenging continuous control tasks from the OpenAI gym benchmark suite (Brockman et al., ... | embodiment, simulator version and control stack | p. 6 (5. Experiments), p. 6 (5. Experiments) |
 | Task/environment | Although the easier tasks can be solved by a wide range of different algorithms, the more complex benchmarks, such as the 21-dimensional Humanoid (rllab), ... | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 7 (5.2. Ablation Study) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 - **p. 8 / 5.2. Ablation Study - extractive body cue:** Note that the policy is trained to maximize also the entropy, and the mean action does not, in general, correspond the optimal action for the ...
 - **p. 6 / 5. Experiments - extractive body cue:** We turned off the exploration noise for evaluation for DDPG and PPO.
 
-- **PDF anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Ablation Study), p. 7 (5.1. Comparative Evaluation), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), metrics p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), p. 7 (5.2. Ablation Study), p. 7 (5.2. Ablation Study), p. 13 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 7 (5.1. Comparative Evaluation), p. 7 (5.2. Ablation Study), p. 14 (Figure/Table caption), p. 8 (5.2. Ablation Study), p. 6 (Figure/Table caption), results p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), p. 7 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Ablation Study), p. 7 (5.1. Comparative Evaluation), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), metrics p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), p. 7 (5.2. Ablation Study), p. 7 (5.2. Ablation Study), p. 13 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 7 (5.1. Comparative Evaluation), p. 7 (5.2. Ablation Study), p. 14 (Figure/Table caption), p. 8 (5.2. Ablation Study), p. 6 (Figure/Table caption), results p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), p. 7 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a large margin, both in terms ... (p. 7, 5.1. Comparative Evaluation).
+- **Metric evidence:** With the right reward scaling, the model balances exploration and exploitation, leading to faster learning and better asymptotic performance. (p. 8, 5.2. Ablation Study).
+- **Baseline/ablation evidence:** The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a large margin, both in terms ... (p. 7, 5.1. Comparative Evaluation).
+- **Failure/negative evidence:** For maximum entropy algorithms, which do not explicitly inject exploration noise, we either evaluated with the exploration noise (SQL) or use the mean action (SAC). (p. 6, 5. Experiments).

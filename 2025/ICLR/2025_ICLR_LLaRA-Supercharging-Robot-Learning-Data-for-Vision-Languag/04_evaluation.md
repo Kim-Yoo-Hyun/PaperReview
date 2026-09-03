@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (47 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=iVxxgZlXh6; PDF retrieval source: https://openreview.net/pdf/88e833c98e7c9f665ef182cf0d30f65c58655784.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=iVxxgZlXh6; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/113062. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 
 ## Evaluation Body Digest
 
-- **p. 7 / 6 EXPERIMENTS - extractive PDF cue:** We employ VIMA-Bench (Jiang et al., 2023), a simulated table-top robot manipulation environment to evaluate VLMs trained by our instruction tuning dataset.
-- **p. 6 / 6 EXPERIMENTS - extractive PDF cue:** Then, we conduct real-world robot experiments using three protocols: zero-shot generalization, finetuning, and joint training.
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** All tasks occur in an environment where a robot arm, equipped with either a spatula or a suction cup, is positioned alongside a flat table.
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** Each episode in the dataset features a multimodal task description that clarifies the episode's goal, incorporating images referred to as ‘reference images'.
-- **p. 7 / 6 EXPERIMENTS - extractive PDF cue:** The environment contains 17 tasks and each task is associated with a multi-modal instruction, including text instructions and reference images that refer to objects of ...
-- **p. 8 / 6 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 episodes to avoid overwhelming the primary learning objectives.
-- **p. 8 / 6 EXPERIMENTS - extractive PDF cue:** The ‘*' after a ‘✓' means the reference images that appeared only in the task description are not used to generate this dataset, which makes ...
-- **p. 16 / A.1 DATASET PREPARATION - extractive PDF cue:** In this subsection, we give more details and examples of the datasets used in this paper.
+- **p. 7 / 6 EXPERIMENTS - extractive body cue:** We employ VIMA-Bench (Jiang et al., 2023), a simulated table-top robot manipulation environment to evaluate VLMs trained by our instruction tuning dataset.
+- **p. 6 / 6 EXPERIMENTS - extractive body cue:** Then, we conduct real-world robot experiments using three protocols: zero-shot generalization, finetuning, and joint training.
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** All tasks occur in an environment where a robot arm, equipped with either a spatula or a suction cup, is positioned alongside a flat table.
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Each episode in the dataset features a multimodal task description that clarifies the episode's goal, incorporating images referred to as ‘reference images'.
+- **p. 7 / 6 EXPERIMENTS - extractive body cue:** The environment contains 17 tasks and each task is associated with a multi-modal instruction, including text instructions and reference images that refer to objects of ...
+- **p. 8 / 6 EXPERIMENTS - extractive body cue:** The ‘*' after a ‘✓' means the reference images that appeared only in the task description are not used to generate this dataset, which makes ...
+- **p. 8 / 6 EXPERIMENTS - extractive body cue:** Effectiveness of auxiliary datasets.
+- **p. 16 / A.1 DATASET PREPARATION - extractive body cue:** In this subsection, we give more details and examples of the datasets used in this paper.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5: Success rates of the models trained on VIMA subsets. The log-scale x-axis shows the number of expert episodes used in the training ... | p. 7 (Figure/Table caption) |
 | 6 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Methods based on RT-2 Style improve when more robot supervision data is available; however, they significantly underperform compared to our methods when data is ... | p. 7 (6 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 6 EXPERIMENTS - extractive PDF cue:** We employ VIMA-Bench (Jiang et al., 2023), a simulated table-top robot manipulation environment to evaluate VLMs trained by our instruction tuning dataset.
-- **p. 6 / 6 EXPERIMENTS - extractive PDF cue:** Then, we conduct real-world robot experiments using three protocols: zero-shot generalization, finetuning, and joint training.
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** All tasks occur in an environment where a robot arm, equipped with either a spatula or a suction cup, is positioned alongside a flat table.
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** Each episode in the dataset features a multimodal task description that clarifies the episode's goal, incorporating images referred to as ‘reference images'.
-- **p. 7 / 6 EXPERIMENTS - extractive PDF cue:** The environment contains 17 tasks and each task is associated with a multi-modal instruction, including text instructions and reference images that refer to objects of ...
-- **p. 8 / 6 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 episodes to avoid overwhelming the primary learning objectives.
-- **p. 8 / 6 EXPERIMENTS - extractive PDF cue:** The ‘*' after a ‘✓' means the reference images that appeared only in the task description are not used to generate this dataset, which makes ...
-- **p. 16 / A.1 DATASET PREPARATION - extractive PDF cue:** In this subsection, we give more details and examples of the datasets used in this paper.
+- **p. 7 / 6 EXPERIMENTS - extractive body cue:** We employ VIMA-Bench (Jiang et al., 2023), a simulated table-top robot manipulation environment to evaluate VLMs trained by our instruction tuning dataset.
+- **p. 6 / 6 EXPERIMENTS - extractive body cue:** Then, we conduct real-world robot experiments using three protocols: zero-shot generalization, finetuning, and joint training.
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** All tasks occur in an environment where a robot arm, equipped with either a spatula or a suction cup, is positioned alongside a flat table.
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Each episode in the dataset features a multimodal task description that clarifies the episode's goal, incorporating images referred to as ‘reference images'.
+- **p. 7 / 6 EXPERIMENTS - extractive body cue:** The environment contains 17 tasks and each task is associated with a multi-modal instruction, including text instructions and reference images that refer to objects of ...
+- **p. 8 / 6 EXPERIMENTS - extractive body cue:** The ‘*' after a ‘✓' means the reference images that appeared only in the task description are not used to generate this dataset, which makes ...
+- **p. 8 / 6 EXPERIMENTS - extractive body cue:** Effectiveness of auxiliary datasets.
+- **p. 16 / A.1 DATASET PREPARATION - extractive body cue:** In this subsection, we give more details and examples of the datasets used in this paper.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: A real-world demonstration of LLaRA solving an unseen task. In this setting, LLaRA converts only eight thousand simulated expert trajectories from VIMA (Jiang ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: LLaVA overview. A Large Language Model (LLM) is connected to the visual domain with suitable encoder and adap- tor neural networks. Consider a ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Example data for visuomotor instruction tuning. (left) inBC is our instruction tuning data created from BC, only taking textual task description. (right) D-inBC ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Auxiliary datasets for visuomotor instruction tuning. Given an input trajectory, we make use of expert information (e.g., object detections) to formulate conversations related ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Success rates of the models trained on VIMA subsets. The log-scale x-axis shows the number of expert episodes used in the training set. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison to VIMA (Jiang et al., 2023). Our best model not only achieves better performance but also requires less input and is trained ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: inBC (top) and D-inBC (bottom) with different auxiliary dataset settings. Each model is trained on VIMA-0.8k for 2 epochs. In general, the model ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Naming of different auxiliary dataset configurations. We always randomly sample the same amount of examples from each dataset. Det.: detection; Loc.: localization; Act.: ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: A real-world demonstration of LLaRA solving an unseen task. In this setting, LLaRA converts only eight thousand simulated expert trajectories from VIMA (Jiang ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: LLaVA overview. A Large Language Model (LLM) is connected to the visual domain with suitable encoder and adap- tor neural networks. Consider a ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Example data for visuomotor instruction tuning. (left) inBC is our instruction tuning data created from BC, only taking textual task description. (right) D-inBC ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Auxiliary datasets for visuomotor instruction tuning. Given an input trajectory, we make use of expert information (e.g., object detections) to formulate conversations related ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Success rates of the models trained on VIMA subsets. The log-scale x-axis shows the number of expert episodes used in the training set. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Comparison to VIMA (Jiang et al., 2023). Our best model not only achieves better performance but also requires less input and is trained ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: inBC (top) and D-inBC (bottom) with different auxiliary dataset settings. Each model is trained on VIMA-0.8k for 2 epochs. In general, the model ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Naming of different auxiliary dataset configurations. We always randomly sample the same amount of examples from each dataset. Det.: detection; Loc.: localization; Act.: ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We employ VIMA-Bench (Jiang et al., 2023), a simulated table-top robot manipulation environment to evaluate VLMs trained by our instruction tuning dataset. | embodiment, simulator version and control stack | p. 7 (6 EXPERIMENTS), p. 6 (6 EXPERIMENTS) |
 | Task/environment | Then, we conduct real-world robot experiments using three protocols: zero-shot generalization, finetuning, and joint training. | reset, timeout, object/scene variation | p. 6 (6 EXPERIMENTS), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 | Primary metric/result | Methods based on RT-2 Style improve when more robot supervision data is available; however, they significantly underperform compared to our methods when data is ... | numeric claim only at cited anchor | p. 7 (6 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 6 EXPERIMENTS - extractive PDF cue:** The environment contains 17 tasks and each task is associated with a multi-modal instruction, including text instructions and reference images that refer to objects of ...
-- **p. 8 / 6 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2025 episodes to avoid overwhelming the primary learning objectives.
-- **p. 8 / 6 EXPERIMENTS - extractive PDF cue:** On VIMA-0.8k, we control the total number of samples from the auxiliary dataset relative to the samples from the converted BC datasets and train all ...
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** The full accompanying dataset includes 660k expert trajectories, covering 13 of the 17 tasks.
-- **p. 21 / A.4 RT-2-STYLE BASELINES - extractive PDF cue:** So the action space is now 5 Degrees of Freedom (DoF): 4 numerical values present the 2D pick and place locations in robot coordinates, and ...
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** The full accompanying dataset includes 660k expert trajectories, covering 13 of the 17 tasks.
+- **p. 7 / 6 EXPERIMENTS - extractive body cue:** The environment contains 17 tasks and each task is associated with a multi-modal instruction, including text instructions and reference images that refer to objects of ...
+- **p. 8 / 6 EXPERIMENTS - extractive body cue:** On VIMA-0.8k, we control the total number of samples from the auxiliary dataset relative to the samples from the converted BC datasets and train all ...
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The full accompanying dataset includes 660k expert trajectories, covering 13 of the 17 tasks.
+- **p. 21 / A.4 RT-2-STYLE BASELINES - extractive body cue:** So the action space is now 5 Degrees of Freedom (DoF): 4 numerical values present the 2D pick and place locations in robot coordinates, and ...
+- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The full accompanying dataset includes 660k expert trajectories, covering 13 of the 17 tasks.
+- **p. 21 / A.4 RT-2-STYLE BASELINES - extractive body cue:** So the action space is now 5 Degrees of Freedom (DoF): 4 numerical values present the 2D pick and place locations in robot coordinates, and ...
 
 ## Generalization and Failure Cases
 
@@ -161,11 +161,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 
 ## Limitations and Verification Questions
 
-- **p. 27 / Figure/Table caption - extractive PDF cue:** Table 17: Robostness evaluation results of D-inBC + Aux (B) + Oracle (VIMA-80k, 8 epochs) Prob. of Failure L1 (%) L2 (%) L3 (%) 0 ...
-- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive PDF cue:** Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query.
-- **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive PDF cue:** 8 has shown its great power in many aspects when the reference image contains a scene that has multiple objects instead of one, the inBC ...
+- **p. 27 / Figure/Table caption - extractive body cue:** Table 17: Robostness evaluation results of D-inBC + Aux (B) + Oracle (VIMA-80k, 8 epochs) Prob. of Failure L1 (%) L2 (%) L3 (%) 0 ...
+- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query.
+- **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive body cue:** 8 has shown its great power in many aspects when the reference image contains a scene that has multiple objects instead of one, the inBC ...
 
-- **PDF anchors reviewed:** datasets p. 7 (6 EXPERIMENTS), p. 6 (6 EXPERIMENTS), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), metrics p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 1 (Figure/Table caption), baselines p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 19 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 17 (A.1.2 BUILD D-inBC FROM inBC), p. 10 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (6 EXPERIMENTS), p. 6 (6 EXPERIMENTS), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), metrics p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 1 (Figure/Table caption), baselines p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 19 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 17 (A.1.2 BUILD D-inBC FROM inBC), p. 10 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p039.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p039.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p039.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p039.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Ultimately, we learn om = om (A, RobotOccupancy (04 (t.)), RobotOccupancy (a (te))) ‘We use network architectures Similar to Georgakis et al. | p. 13 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | To evaluate the performance of the trained CNABUs, we use the unseen test set of the dataset used for their training. | p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details) |
@@ -81,7 +81,7 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Consider now a greedy clairvoyant oracle policy, which, at every time step, has access to all possible observations that could be taken ... | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | For evaluating the performance of the manipulation CNABU. om, we also choose 10 viewpoints at random and ‘obtain the pre-manipulation beliefs at ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | For each model, we report the total quantity of each detection at time step 20 summed over all 10 trials, Results in ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 13 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 13 (B. CNABU Implementation Details), p. 2 (A. Next Best Viewpoint Planning), p. 15 (B. CNABU Implementation Details), objective p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), temporal p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 4 (B. Neural Map Belief Dynamics), p. 6 (B. Neural Map Belief Dynamics), p. 9 (C. Push Selection Alternatives), p. 2 (2. The proticted elit map is visualized).
+- **Evidence anchors reviewed:** method p. 13 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 13 (B. CNABU Implementation Details), p. 2 (A. Next Best Viewpoint Planning), p. 15 (B. CNABU Implementation Details), objective p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), temporal p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 4 (B. Neural Map Belief Dynamics), p. 6 (B. Neural Map Belief Dynamics), p. 9 (C. Push Selection Alternatives), p. 2 (2. The proticted elit map is visualized).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To solve this POMDP, the agent should perform a belief update about the state of the map after both manipulation and observation actions. (p. 3, A. Overview).
+- **Objective/update evidence:** ‘The networks are trained using backpropagation in PyTorch [32], with grid search-optimized learning rates and ADAM ‘optimizer, as well as early stopping based on the validation loss. (p. 14, B. CNABU Implementation Details).
+- **Temporal/runtime evidence:** and fine-tuned the network weights provided by the authors for only 5,000 action steps. (p. 7, B. Simulation Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

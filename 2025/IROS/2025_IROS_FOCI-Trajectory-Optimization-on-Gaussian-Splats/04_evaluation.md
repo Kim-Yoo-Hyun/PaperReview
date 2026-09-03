@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.08510; PDF retrieval source: https://arxiv.org/pdf/2505.08510. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.08510; PDF retrieval source: https://arxiv.org/pdf/2505.08510. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Trajectory Evaluation | SYSTEM / EVALUATION SCOPE UNRESOLVED | Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge ... | p. 5 (A. Trajectory Evaluation) |
 | III. METHOD | SYSTEM / EVALUATION SCOPE UNRESOLVED | The spline can then be evaluated with x(s′) =  1 s′ s′2 s′3 1 6   1 4 1 0 -3 0 ... | p. 3 (III. METHOD) |
@@ -56,7 +56,7 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge ... | embodiment, simulator version and control stack | p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation) |
 | Task/environment | 3: Trajectories planned for a 3 Gaussian robot rotating through realistic scenes. | reset, timeout, object/scene variation | p. 5 (A. Trajectory Evaluation), p. 4 (IV. EXPERIMENTS) |
@@ -143,7 +143,16 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 - **p. 5 / A. Trajectory Evaluation - extractive body cue:** As Figure 2b shows, the planning algorithm effectively leverages the asymmetry of ANYmal to pass through the narrow opening collision-free.
 - **p. 5 / A. Trajectory Evaluation - extractive body cue:** 2) General Trajectory Planning Through 3DGS: Figure 3 shows that we can plan collision-free trajectories through splats that were created directly from the real-world environments.
 
-- **PDF anchors reviewed:** datasets p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 4 (IV. EXPERIMENTS), metrics p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 7 (Figure/Table caption), results p. 5 (A. Trajectory Evaluation), p. 3 (III. METHOD).
+- **Evidence anchors reviewed:** datasets p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 4 (IV. EXPERIMENTS), metrics p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 7 (Figure/Table caption), results p. 5 (A. Trajectory Evaluation), p. 3 (III. METHOD).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ... (p. 5, A. Trajectory Evaluation).
+- **Metric evidence:** The algorithm gracefully handles trajectories requiring additional turns while adapting the orientation to keep a maximum distance from the wall. (p. 5, A. Trajectory Evaluation).
+- **Baseline/ablation evidence:** Fig. 5: Comparison of the solver's creation and runtime running on the CPU and GPU for 50k environmental Gaus- sians and one robot Gaussian. The "serial" method is on a ... (p. 7, Figure/Table caption).
+- **Failure/negative evidence:** 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points. (p. 7, V. LIMITATIONS).

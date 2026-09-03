@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.12086; PDF retrieval source: https://arxiv.org/pdf/2201.12086. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.12086; PDF retrieval source: https://arxiv.org/pdf/2201.12086. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 
 ## Evaluation Body Digest
 
-- **p. 4 / 4.2. Effect of CapFilt - extractive PDF cue:** In Table 1, we compare models pre-trained on different datasets to demonstrate the efficacy of CapFilt on downstream tasks, including image-text retrieval and image captioning ...
-- **p. 4 / 4.1. Pre-training Details - extractive PDF cue:** We use the same pre-training dataset as Li et al.
-- **p. 5 / 4.2. Effect of CapFilt - extractive PDF cue:** BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation Pre-train dataset Bootstrap Vision backbone Retrieval-FT (COCO) Retrieval-ZS (Flickr) Caption-FT (COCO) Caption-ZS (NoCaps)
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack of ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model ...
-- **p. 4 / 4.1. Pre-training Details - extractive PDF cue:** The learning rate is warmed-up to 3e-4 (ViT-B) / 2e-4 (ViT-L) and decayed linearly with a rate of 0.85.
-- **p. 4 / 4.2. Effect of CapFilt - extractive PDF cue:** Furthermore, by using a large captioner and filter with ViT-L, performance of the base model can also be improved.
+- **p. 4 / 4.2. Effect of CapFilt - extractive body cue:** In Table 1, we compare models pre-trained on different datasets to demonstrate the efficacy of CapFilt on downstream tasks, including image-text retrieval and image captioning ...
+- **p. 4 / 4.1. Pre-training Details - extractive body cue:** We use the same pre-training dataset as Li et al.
+- **p. 5 / 4.2. Effect of CapFilt - extractive body cue:** BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation Pre-train dataset Bootstrap Vision backbone Retrieval-FT (COCO) Retrieval-ZS (Flickr) Caption-FT (COCO) Caption-ZS (NoCaps)
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack of ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model ...
+- **p. 4 / 4.1. Pre-training Details - extractive body cue:** The learning rate is warmed-up to 3e-4 (ViT-B) / 2e-4 (ViT-L) and decayed linearly with a rate of 0.85.
+- **p. 4 / 4.2. Effect of CapFilt - extractive body cue:** Furthermore, by using a large captioner and filter with ViT-L, performance of the base model can also be improved.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack ... | p. 8 (Figure/Table caption) |
 | 4.2. Effect of CapFilt | SYSTEM / EVALUATION SCOPE UNRESOLVED | Furthermore, by using a large captioner and filter with ViT-L, performance of the base model can also be improved. | p. 4 (4.2. Effect of CapFilt) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 4.2. Effect of CapFilt - extractive PDF cue:** In Table 1, we compare models pre-trained on different datasets to demonstrate the efficacy of CapFilt on downstream tasks, including image-text retrieval and image captioning ...
-- **p. 4 / 4.1. Pre-training Details - extractive PDF cue:** We use the same pre-training dataset as Li et al.
-- **p. 5 / 4.2. Effect of CapFilt - extractive PDF cue:** BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation Pre-train dataset Bootstrap Vision backbone Retrieval-FT (COCO) Retrieval-ZS (Flickr) Caption-FT (COCO) Caption-ZS (NoCaps)
+- **p. 4 / 4.2. Effect of CapFilt - extractive body cue:** In Table 1, we compare models pre-trained on different datasets to demonstrate the efficacy of CapFilt on downstream tasks, including image-text retrieval and image captioning ...
+- **p. 4 / 4.1. Pre-training Details - extractive body cue:** We use the same pre-training dataset as Li et al.
+- **p. 5 / 4.2. Effect of CapFilt - extractive body cue:** BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation Pre-train dataset Bootstrap Vision backbone Retrieval-FT (COCO) Retrieval-ZS (Flickr) Caption-FT (COCO) Caption-ZS (NoCaps)
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Learning framework of BLIP. We introduce a captioner to produce synthetic captions for web images, and a filter to remove noisy image-text pairs. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluation of the effect of the captioner (C) and filter (F) for dataset bootstrapping. Downstream tasks include image-text retrieval and image captioning with ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Examples of the web text Tw and the synthetic text Ts. Green texts are accepted by the filter, whereas red texts are rejected. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison between beam search and nucleus sampling for synthetic caption generation. Models are pre-trained on 14M images. Layers shared #parameters Retrieval-FT (COCO) Retrieval-ZS ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training. In Figure 4, we show some example captions and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Effect of sharing parameters between the captioner and filter. Models are pre-trained on 14M images.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Pre-training model architecture and objectives of BLIP (same parameters have the same color). We propose multimodal mixture of encoder-decoder, a unified vision-language model ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Learning framework of BLIP. We introduce a captioner to produce synthetic captions for web images, and a filter to remove noisy image-text pairs. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Evaluation of the effect of the captioner (C) and filter (F) for dataset bootstrapping. Downstream tasks include image-text retrieval and image captioning with ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Examples of the web text Tw and the synthetic text Ts. Green texts are accepted by the filter, whereas red texts are rejected. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Comparison between beam search and nucleus sampling for synthetic caption generation. Models are pre-trained on 14M images. Layers shared #parameters Retrieval-FT (COCO) Retrieval-ZS ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 3. Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training. In Figure 4, we show some example captions and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Effect of sharing parameters between the captioner and filter. Models are pre-trained on 14M images.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In Table 1, we compare models pre-trained on different datasets to demonstrate the efficacy of CapFilt on downstream tasks, including image-text retrieval and image ... | embodiment, simulator version and control stack | p. 4 (4.2. Effect of CapFilt), p. 4 (4.1. Pre-training Details) |
 | Task/environment | We use the same pre-training dataset as Li et al. | reset, timeout, object/scene variation | p. 4 (4.1. Pre-training Details), p. 5 (4.2. Effect of CapFilt) |
@@ -118,7 +118,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 | Primary metric/result | Furthermore, by using a large captioner and filter with ViT-L, performance of the base model can also be improved. | numeric claim only at cited anchor | p. 4 (4.2. Effect of CapFilt) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 4.1. Pre-training Details - extractive PDF cue:** We pre-train the model for 20 epochs using a batch size of 2880 (ViT-B) / 2400 (ViT-L).
+- **p. 4 / 4.1. Pre-training Details - extractive body cue:** We pre-train the model for 20 epochs using a batch size of 2880 (ViT-B) / 2400 (ViT-L).
 
 ## Generalization and Failure Cases
 
@@ -148,10 +148,10 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 
 ## Limitations and Verification Questions
 
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 6. Zero-shot image-text retrieval results on Flickr30K. layers except for SA leads to better performance compared to not sharing, while also reducing the model ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 6. Zero-shot image-text retrieval results on Flickr30K. layers except for SA leads to better performance compared to not sharing, while also reducing the model ...
 
-- **PDF anchors reviewed:** datasets p. 4 (4.2. Effect of CapFilt), p. 4 (4.1. Pre-training Details), p. 5 (4.2. Effect of CapFilt), metrics p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (4.1. Pre-training Details), p. 4 (4.2. Effect of CapFilt), p. 7 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 4 (4.2. Effect of CapFilt), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (4.2. Effect of CapFilt), p. 4 (4.1. Pre-training Details), p. 5 (4.2. Effect of CapFilt), metrics p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (4.1. Pre-training Details), p. 4 (4.2. Effect of CapFilt), p. 7 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 4 (4.2. Effect of CapFilt), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

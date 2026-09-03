@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=P64X2q1n1H; PDF retrieval source: https://openreview.net/pdf/d1d48bb8ae32dab3bc513e65d14fb7fc84c438ea.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=P64X2q1n1H; PDF retrieval source: https://openreview.net/pdf/d1d48bb8ae32dab3bc513e65d14fb7fc84c438ea.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** We evaluate the effectiveness of LaRA-VLA and the overall system through a comprehensive set of experiments spanning both simulation benchmarks and real-world robotic manipulation tasks.
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** SimplerEnv evaluates real-to-sim generalization of robot manipulation policies trained on real-world data.
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** Based on these benchmarks, we construct two training datasets, LIBERO-LaRA and Bridge-LaRA, which are used to train LaRA-VLA.
-- **p. 6 / 4. Experiments - extractive PDF cue:** (Section 4.1) • How well does LaRA-VLA perform on long-horizon real-world manipulation tasks compared to state-of-the-art approaches?
-- **p. 8 / 4.1. Simulation Experiments - extractive PDF cue:** Benchmark Method Gaussian Blur-H Gaussian Blur-L Gaussian Noise-H Gaussian Noise-L LIBERO Qwen-GR00T (Community, 2026) 30.0 76.0 55.7 87.9 LaRA-VLA (Ours) 42.9 79.4 76.0 92.7 SimplerEnv ...
-- **p. 8 / 4.2. Real-World Experiments - extractive PDF cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 7. Latent collapse analysis. corruption, but LaRA-VLA consistently maintains higher success rates across all perturbation types and severity lev- els. These results indicate that ...
+- **p. 6 / 4. Experiments - extractive body cue:** We evaluate the effectiveness of LaRA-VLA and the overall system through a comprehensive set of experiments spanning both simulation benchmarks and real-world robotic manipulation tasks.
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** SimplerEnv evaluates real-to-sim generalization of robot manipulation policies trained on real-world data.
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** Based on these benchmarks, we construct two training datasets, LIBERO-LaRA and Bridge-LaRA, which are used to train LaRA-VLA.
+- **p. 6 / 4. Experiments - extractive body cue:** (Section 4.1) • How well does LaRA-VLA perform on long-horizon real-world manipulation tasks compared to state-of-the-art approaches?
+- **p. 8 / 4.1. Simulation Experiments - extractive body cue:** Benchmark Method Gaussian Blur-H Gaussian Blur-L Gaussian Noise-H Gaussian Noise-L LIBERO Qwen-GR00T (Community, 2026) 30.0 76.0 55.7 87.9 LaRA-VLA (Ours) 42.9 79.4 76.0 92.7 SimplerEnv ...
+- **p. 8 / 4.2. Real-World Experiments - extractive body cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 7. Latent collapse analysis. corruption, but LaRA-VLA consistently maintains higher success rates across all perturbation types and severity lev- els. These results indicate that ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Real-World Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Figure 5, LaRA-VLA achieves the highest average success rate among all compared methods, substantially outperforming ACT and ECoT and surpassing GR00T ... | p. 8 (4.2. Real-World Experiments) |
 | 4.1. Simulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on ... | p. 7 (4.1. Simulation Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** We evaluate the effectiveness of LaRA-VLA and the overall system through a comprehensive set of experiments spanning both simulation benchmarks and real-world robotic manipulation tasks.
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** SimplerEnv evaluates real-to-sim generalization of robot manipulation policies trained on real-world data.
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** Based on these benchmarks, we construct two training datasets, LIBERO-LaRA and Bridge-LaRA, which are used to train LaRA-VLA.
-- **p. 6 / 4. Experiments - extractive PDF cue:** (Section 4.1) • How well does LaRA-VLA perform on long-horizon real-world manipulation tasks compared to state-of-the-art approaches?
-- **p. 8 / 4.1. Simulation Experiments - extractive PDF cue:** Benchmark Method Gaussian Blur-H Gaussian Blur-L Gaussian Noise-H Gaussian Noise-L LIBERO Qwen-GR00T (Community, 2026) 30.0 76.0 55.7 87.9 LaRA-VLA (Ours) 42.9 79.4 76.0 92.7 SimplerEnv ...
-- **p. 8 / 4.2. Real-World Experiments - extractive PDF cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
+- **p. 6 / 4. Experiments - extractive body cue:** We evaluate the effectiveness of LaRA-VLA and the overall system through a comprehensive set of experiments spanning both simulation benchmarks and real-world robotic manipulation tasks.
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** SimplerEnv evaluates real-to-sim generalization of robot manipulation policies trained on real-world data.
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** Based on these benchmarks, we construct two training datasets, LIBERO-LaRA and Bridge-LaRA, which are used to train LaRA-VLA.
+- **p. 6 / 4. Experiments - extractive body cue:** (Section 4.1) • How well does LaRA-VLA perform on long-horizon real-world manipulation tasks compared to state-of-the-art approaches?
+- **p. 8 / 4.1. Simulation Experiments - extractive body cue:** Benchmark Method Gaussian Blur-H Gaussian Blur-L Gaussian Noise-H Gaussian Noise-L LIBERO Qwen-GR00T (Community, 2026) 30.0 76.0 55.7 87.9 LaRA-VLA (Ours) 42.9 79.4 76.0 92.7 SimplerEnv ...
+- **p. 8 / 4.2. Real-World Experiments - extractive body cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison of CoT formulations in VLA models. (a) Textual CoT-based VLA explicitly generates discrete reasoning tokens and decodes them into actions through autoregressive ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. A taxonomy of VLA models based on the representation forms of chain-of-thought CoT and actions. Specifically, we categorize models by whether their textual ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of LaRA-VLA. Training proceeds in three stages: (i) explicit CoT fine-tuning with aligned visual prediction latents and inverse-dynamics supervision for actions; (ii) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Performance comparisons with state-of-the-art methods on LIBERO, grouped by different CoT paradigms. CoT Type
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Attention mechanism used in LaRA-VLA. of the current visual observation and language instruction, the intermediate text-based reasoning latent, and the pre- dicted future ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Performance comparisons with state-of-the-art methods on SimplerEnv-WindowX, grouped by different CoT paradigms. CoT Type
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Real-world setup of four long-horizon tasks. proach offer? (Section 4.3)
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Real-world results. ThinkAct (Huang et al., 2025), MolmoAct (Lee et al., 2025), π0.5 (Intelligence et al., 2025), and DeepThinkVLA (Yin et al., 2025). ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of CoT formulations in VLA models. (a) Textual CoT-based VLA explicitly generates discrete reasoning tokens and decodes them into actions through autoregressive ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. A taxonomy of VLA models based on the representation forms of chain-of-thought CoT and actions. Specifically, we categorize models by whether their textual ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2. Overview of LaRA-VLA. Training proceeds in three stages: (i) explicit CoT fine-tuning with aligned visual prediction latents and inverse-dynamics supervision for actions; (ii) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Performance comparisons with state-of-the-art methods on LIBERO, grouped by different CoT paradigms. CoT Type
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Attention mechanism used in LaRA-VLA. of the current visual observation and language instruction, the intermediate text-based reasoning latent, and the pre- dicted future ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Performance comparisons with state-of-the-art methods on SimplerEnv-WindowX, grouped by different CoT paradigms. CoT Type
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Real-world setup of four long-horizon tasks. proach offer? (Section 4.3)
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Real-world results. ThinkAct (Huang et al., 2025), MolmoAct (Lee et al., 2025), π0.5 (Intelligence et al., 2025), and DeepThinkVLA (Yin et al., 2025). ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate the effectiveness of LaRA-VLA and the overall system through a comprehensive set of experiments spanning both simulation benchmarks and real-world robotic manipulation ... | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments) |
 | Task/environment | SimplerEnv evaluates real-to-sim generalization of robot manipulation policies trained on real-world data. | reset, timeout, object/scene variation | p. 7 (4.1. Simulation Experiments), p. 7 (4.1. Simulation Experiments) |
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 | Primary metric/result | On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on ... | numeric claim only at cited anchor | p. 7 (4.1. Simulation Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4. Experiments - extractive PDF cue:** No CoT OpenVLA (Kim et al., 2025b) 0.0 0.0 0.0 4.1 1.0 Octo (Ghosh et al., 2024) 47.2 9.7 4.2 56.9 29.5 OpenVLA-OFT (Kim et ...
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** We report success rates for each suite and the overall average over 50 rollouts per task.
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** We evaluate on WidowX robots across four tasks and report pertask success rates and the overall average over 24 rollouts per task.
-- **p. 8 / 4.2. Real-World Experiments - extractive PDF cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
-- **p. 8 / 4.2. Real-World Experiments - extractive PDF cue:** During evaluation, each task is executed for 12 rollout trials.
-- **p. 9 / 4.3. Analysis - extractive PDF cue:** As shown in Figure 8, LaRA-VLA achieves the lowest inference latency among all compared methods, requiring only 135 ms per rollout.
+- **p. 7 / 4. Experiments - extractive body cue:** No CoT OpenVLA (Kim et al., 2025b) 0.0 0.0 0.0 4.1 1.0 Octo (Ghosh et al., 2024) 47.2 9.7 4.2 56.9 29.5 OpenVLA-OFT (Kim et ...
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** We report success rates for each suite and the overall average over 50 rollouts per task.
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** We evaluate on WidowX robots across four tasks and report pertask success rates and the overall average over 24 rollouts per task.
+- **p. 8 / 4.2. Real-World Experiments - extractive body cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
+- **p. 8 / 4.2. Real-World Experiments - extractive body cue:** During evaluation, each task is executed for 12 rollout trials.
+- **p. 9 / 4.3. Analysis - extractive body cue:** As shown in Figure 8, LaRA-VLA achieves the lowest inference latency among all compared methods, requiring only 135 ms per rollout.
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.3. Analysis - extractive PDF cue:** This suggests that the learned latent space does not collapse or become highly unstable under visual perturbations.
-- **p. 9 / 5. Limitations - extractive PDF cue:** Although LaRA-VLA achieves fast inference and strong performance through latent chain-of-thought reasoning, several limitations remain and warrant further investigation.
-- **p. 9 / 5. Limitations - extractive PDF cue:** Improving training efficiency while preserving stable latent reasoning remains an important direction for future work.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Robustness under visual perturbations. We report task success rates under Gaussian blur and Gaussian noise with two severity levels. H and L denote ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 12. Prompt for subtask description generation. actions without attending to explicit CoT-related tokens. Table 9 reports the results on four SimplerEnv tasks. Training with ...
-- **p. 7 / 4.1. Simulation Experiments - extractive PDF cue:** On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on the ...
+- **p. 8 / 4.3. Analysis - extractive body cue:** This suggests that the learned latent space does not collapse or become highly unstable under visual perturbations.
+- **p. 9 / 5. Limitations - extractive body cue:** Although LaRA-VLA achieves fast inference and strong performance through latent chain-of-thought reasoning, several limitations remain and warrant further investigation.
+- **p. 9 / 5. Limitations - extractive body cue:** Improving training efficiency while preserving stable latent reasoning remains an important direction for future work.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Robustness under visual perturbations. We report task success rates under Gaussian blur and Gaussian noise with two severity levels. H and L denote ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 12. Prompt for subtask description generation. actions without attending to explicit CoT-related tokens. Table 9 reports the results on four SimplerEnv tasks. Training with ...
+- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on the ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments), p. 7 (4.1. Simulation Experiments), p. 6 (4. Experiments), p. 8 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), metrics p. 7 (4.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 7 (4.1. Simulation Experiments), p. 8 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), p. 15 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), p. 7 (4. Experiments), p. 8 (4.3. Analysis), results p. 8 (4.2. Real-World Experiments), p. 7 (4.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 7 (4.1. Simulation Experiments), p. 17 (Figure/Table caption), p. 8 (4.2. Real-World Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments), p. 7 (4.1. Simulation Experiments), p. 6 (4. Experiments), p. 8 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), metrics p. 7 (4.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 7 (4.1. Simulation Experiments), p. 8 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), p. 15 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), p. 7 (4. Experiments), p. 8 (4.3. Analysis), results p. 8 (4.2. Real-World Experiments), p. 7 (4.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 7 (4.1. Simulation Experiments), p. 17 (Figure/Table caption), p. 8 (4.2. Real-World Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

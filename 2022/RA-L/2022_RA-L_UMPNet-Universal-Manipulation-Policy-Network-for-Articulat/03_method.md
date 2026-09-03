@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.05668; PDF retrieval source: https://arxiv.org/pdf/2109.05668. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.05668; PDF retrieval source: https://arxiv.org/pdf/2109.05668. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We use a U-Net architecture for this task, the network is supervised by the outcome of the executed action (one out of ... | p. 3 (III. APPROACH), p. 3 (III. APPROACH) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | DistDecoder is a fully-connected neural network trained using MSE loss Ldist for the executed action at. | p. 3 (III. APPROACH), p. 4 (III. APPROACH) |
@@ -129,8 +129,17 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH), p. 2 (III. APPROACH), p. 2 (III. APPROACH), objective p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), temporal p. 1 (I. INTRODUCTION), p. 5 (IV. EVALUATION), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORK), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION).
+- **Evidence anchors reviewed:** method p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH), p. 2 (III. APPROACH), p. 2 (III. APPROACH), objective p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), temporal p. 1 (I. INTRODUCTION), p. 5 (IV. EVALUATION), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORK), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2d) takes both embedding vector ψ(ot) and action a as input, and outputs a scalar as the distance prediction ˜rdist(adir t ). (p. 3, III. APPROACH).
+- **Objective/update evidence:** The network is trained with Binary Cross-Entropy loss. (p. 3, III. APPROACH).
+- **Temporal/runtime evidence:** Both [ Where2Act ] and [ SingleStep ] only take the current observation as input and infer actions for one step; hence, they do not need to understand the interaction ... (p. 5, IV. EVALUATION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Yasuki_GeoProg3D_Compositional_Visual_Reasoning_for_City-Scale_3D_Language_Fields_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Yasuki_GeoProg3D_Compositional_Visual_Reasoning_for_City-Scale_3D_Language_Fields_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Yasuki_GeoProg3D_Compositional_Visual_Reasoning_for_City-Scale_3D_Language_Fields_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Yasuki_GeoProg3D_Compositional_Visual_Reasoning_for_City-Scale_3D_Language_Fields_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,28 +10,28 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Method Body Digest
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for ...
-- **p. 6 / 4.1. Task Definition - extractive PDF cue:** The task set Qi = {(qk, ak)}Ki k=1 consists of pairs of queries qk and the corresponding ground truth answers ak.
-- **p. 2 / 1. Introduction - extractive PDF cue:** However, intuitive and efficient interaction with these detailed 3D city models using natural language remains largely unexplored.
-- **p. 6 / 4.3. Dataset construction and statistics - extractive PDF cue:** GeoEval3D is composed of unique 952 queries.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
+- **p. 2 / 1. Introduction - extractive body cue:** To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for ...
+- **p. 6 / 4.1. Task Definition - extractive body cue:** The task set Qi = {(qk, ak)}Ki k=1 consists of pairs of queries qk and the corresponding ground truth answers ak.
+- **p. 2 / 1. Introduction - extractive body cue:** However, intuitive and efficient interaction with these detailed 3D city models using natural language remains largely unexplored.
+- **p. 6 / 4.3. Dataset construction and statistics - extractive body cue:** GeoEval3D is composed of unique 952 queries.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for ...
-- **p. 6 / 4.1. Task Definition - extractive PDF cue:** The task set Qi = {(qk, ak)}Ki k=1 consists of pairs of queries qk and the corresponding ground truth answers ak.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
+- **p. 2 / 1. Introduction - extractive body cue:** To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for ...
+- **p. 6 / 4.1. Task Definition - extractive body cue:** The task set Qi = {(qk, ak)}Ki k=1 consists of pairs of queries qk and the corresponding ground truth answers ak.
 
 ## Source Evidence Cues
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for ...
-- **p. 6 / 4.1. Task Definition - extractive PDF cue:** The task set Qi = {(qk, ak)}Ki k=1 consists of pairs of queries qk and the corresponding ground truth answers ak.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
+- **p. 2 / 1. Introduction - extractive body cue:** To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for ...
+- **p. 6 / 4.1. Task Definition - extractive body cue:** The task set Qi = {(qk, ak)}Ki k=1 consists of pairs of queries qk and the corresponding ground truth answers ak.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual ... | p. 2 (1. Introduction), p. 2 (1. Introduction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset ... | p. 2 (1. Introduction), p. 6 (4.1. Task Definition) |
@@ -57,9 +57,9 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** However, intuitive and efficient interaction with these detailed 3D city models using natural language remains largely unexplored.
-- **p. 6 / 4.3. Dataset construction and statistics - extractive PDF cue:** GeoEval3D is composed of unique 952 queries.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform ...
+- **p. 2 / 1. Introduction - extractive body cue:** However, intuitive and efficient interaction with these detailed 3D city models using natural language remains largely unexplored.
+- **p. 6 / 4.3. Dataset construction and statistics - extractive body cue:** GeoEval3D is composed of unique 952 queries.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -94,12 +94,12 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Failure and Ablation Link
 
-- **p. 8 / 5.2. Experimental results - extractive PDF cue:** To assess the impact of each component of GeoProg3D, we conducted an ablation study to investigate the three tasks of GoogleEarth's GRD, SPR, and CMP.
-- **p. 8 / 5.2. Experimental results - extractive PDF cue:** See appendix B for more ablation studies.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7. Qualitative results and failure cases. The Ground Truth region for the GRD task is delineated by the yellow frame. localization that is independent ...
-- **p. 8 / 5.2. Experimental results - extractive PDF cue:** Ablation study of different Geographical Vision APIs. itative examples and failure cases.
-- **p. 7 / 5.1. Evaluation metrics - extractive PDF cue:** Note that MES-H and CMP are not evaluated in UrbanScene3D because Ground Truth for height cannot be obtained.
-- **p. 7 / 5.2. Experimental results - extractive PDF cue:** These results demonstrate the limitations of localization using 3D language fields alone in 3D urban scenes and the effectiveness of GV-APIs and visual programming in ...
+- **p. 8 / 5.2. Experimental results - extractive body cue:** To assess the impact of each component of GeoProg3D, we conducted an ablation study to investigate the three tasks of GoogleEarth's GRD, SPR, and CMP.
+- **p. 8 / 5.2. Experimental results - extractive body cue:** See appendix B for more ablation studies.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Qualitative results and failure cases. The Ground Truth region for the GRD task is delineated by the yellow frame. localization that is independent ...
+- **p. 8 / 5.2. Experimental results - extractive body cue:** Ablation study of different Geographical Vision APIs. itative examples and failure cases.
+- **p. 7 / 5.1. Evaluation metrics - extractive body cue:** Note that MES-H and CMP are not evaluated in UrbanScene3D because Ground Truth for height cannot be obtained.
+- **p. 7 / 5.2. Experimental results - extractive body cue:** These results demonstrate the limitations of localization using 3D language fields alone in 3D urban scenes and the effectiveness of GV-APIs and visual programming in ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -113,7 +113,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Task Definition), objective 본문 anchor 없음, temporal p. 7 (5.2. Experimental results), p. 7 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 3 (3.1. Overview of GeoProg3D), p. 1 (Abstract), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Task Definition), objective 본문 anchor 없음, temporal p. 7 (5.2. Experimental results), p. 7 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 3 (3.1. Overview of GeoProg3D), p. 1 (Abstract), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

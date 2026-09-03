@@ -1,8 +1,8 @@
 # GOAT: GO to Any Thing
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p073.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p073.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p073.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p073.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, Navigation, semantic memory, lifelong learning, mobile manipulation, open-world
 - Official paper: https://www.roboticsproceedings.org/rss20/p073.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p073.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p073.html
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -75,3 +75,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 In deployment scenarios such as homes and warehouses, mobile robots are expected to autonomously navigate for extended periods, seamlessly executing tasks articulated in terms that are intuitively understandable by human operators.를 문제로 두고, This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (IV. GOAT METHOD), p. 4 (IV. GOAT METHOD), p. 3 (IV. GOAT METHOD), p. 3 (IV. GOAT METHOD), p. 5 (V. RESULTS), p. 5 (V. RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, for extremely long trajectories a mechanism to increase parallelism or cull duplicate images would be necessary to increase matching speeds. g) Additional Limitations: To achieve robust imagematching results GOAT's ... (p. 10, VII. DISCUSSION).
+- **Actual contribution:** This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS).
+- **Explicit failure boundary:** 68.2). d) Real-World Open-Vocabulary Detection: Limitations and Opportunities: An interesting and noteworthy observation is that despite the rapid advances in open (or large) vocabulary vision-and-language models (VLMs) [37, 43], we ... (p. 10, VII. DISCUSSION).

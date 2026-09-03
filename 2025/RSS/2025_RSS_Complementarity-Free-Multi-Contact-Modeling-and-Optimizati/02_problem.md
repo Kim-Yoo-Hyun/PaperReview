@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p111.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p111.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p111.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p111.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (A. Ri
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | (III) Fewer hyperparameters: the proposed model has fewer parameters, making it easy to tune, and it also supports model auto-tuning using any ... | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | This implementation creates « closed-loop control effect on the real system, ie., feedback from system state qf to control input 1 (qi | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF |
+| Observation / input | This implementation creates « closed-loop control effect on the real system, ie., feedback from system state qf to control input 1 (qi | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
 | State / latent | implementation, creates, closed-loop, control, effect, real, system, feedback, state, input | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
 | Output / action | simplicity, model, manipulation, system, quasi-dynamic, formulation, primarily, captures | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
 | Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | object geometry/contact state; body terms: implementation, creates, closed-loop, control, effect, real, system, feedback, state, input | p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model) |
-| Decision / output variable | grasp/pose/force/trajectory; body terms: consistently, achieves, state-of-the, average, success, rate, across, objects | p. 1 (Abstract), p. 1 (Front matter), p. 2 (Abstract) |
+| Decision / output variable | grasp/pose/force/trajectory; body terms: consistently, achieves, state-of-the, average, success, rate, across, objects | p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Abstract) |
 | Objective / loss / cost | task/contact/pose objective; cue terms: searches, optimal, input, sequence, control, bounds, minimizing, path | p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (B. Planning and Control with Contact Dynamics), p. 4 (A. Duality of Optimization-based Contact Model), p. 4 (A. Duality of Optimization-based Contact Model) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (A. Duality of Optimization-based Contact Model), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model) |
 | Success / guarantee | completion, contact success and robustness | p. 12 (Figure/Table caption), p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,9 +49,9 @@ PDF body framing (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (A. Ri
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Abstract), p. 1 (Front matter), p. 2 (Abstract), p. 5 (B. New Complementarty-Free Multi-Contact Model), p. 2 (A. Rigid Body Multi-contact Models)): Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
+PDF body contribution framing (p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Abstract), p. 5 (B. New Complementarty-Free Multi-Contact Model), p. 2 (A. Rigid Body Multi-contact Models)): Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
 
-- **p. 1 / Front matter - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
 - **p. 2 / Abstract - extractive body cue:** Our method sets a new benchmark for model-based contact-rich dexterous manipulation: « Highly versatile dexterity: 96.5% average success rate across all objects and environments « ...
 - **p. 5 / B. New Complementarty-Free Multi-Contact Model - extractive body cue:** To circumvent the dual complementarity in (13), we propose ‘new contact model based on Lemma 1.
 - **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** (62, 33] developed penalty-based contact models.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (Abstract), p. 1 (Front matter), p. 2 (Abstract),
 
 ## Position in the Robotics Loop
 
-manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
+manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (C. Reinforcement Learning for Dexterous Manipulation), interface p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 2 (Abstract), objective p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (B. Planning and Control with Contact Dynamics), p. 4 (A. Duality of Optimization-based Contact Model), p. 4 (A. Duality of Optimization-based Contact Model).
+- **Evidence anchors reviewed:** problem p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (C. Reinforcement Learning for Dexterous Manipulation), interface p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 2 (Abstract), objective p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (B. Planning and Control with Contact Dynamics), p. 4 (A. Duality of Optimization-based Contact Model), p. 4 (A. Duality of Optimization-based Contact Model).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** This introduces computational challenges in both learning of contact dynamics [42] and combinatorics optimization of contact modes [14, 41. (p. 1, Abstract).
+- **Formulation-changing contribution:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects (p. 1, Abstract).
+- **Assumption/failure evidence:** [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

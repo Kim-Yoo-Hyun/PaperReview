@@ -11,7 +11,7 @@
 ### What was actually new
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Notably, our method exhibits markedly improved adaptability to previously unseen camera viewarXiv:2508.13103v1 [cs.RO] 18 Aug 2025
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Notably, our method exhibits markedly improved adaptability to previously unseen camera view.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We introduce the Observation-Centric VLA (OC-VLA) framework.
 - **p. 3 / III. METHOD - extractive body cue:** Different from previous end-effector action prediction, the predicted action in our method is in the camera space.
 - **p. 3 / III. METHOD - extractive body cue:** Based on the baseline architecture, we implement a variant specifically designed for discrete action prediction or continuous action prediction.
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 OC-VLA transforms the end effector pose whether defined in a discrete or continuous action space from the robot base coordinate to the third-person camera coordinate, unifying the observation and prediction targets across ...를 This implicitly requires the model to reconstruct or reason about consistent 3D actions from limited 2D observationsa fundamentally ill-posed challenge when only single- or dual-view inputs are available.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 5. A qualitative comparison in real-robot experiments. Failures are highlighted with red circles. the same data. This indicates that our method can partially compensate for the limited pretraining data and model ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly in the third-person camera coordinate system, named ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** OC-VLA transforms the end effector pose whether defined in a discrete or continuous action space from the robot base coordinate to the third-person camera coordinate, unifying the observation and prediction ... (p. 3, III. METHOD).
+- **Paper-specific mechanism:** To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly in the third-person camera coordinate ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Lastly, we present a comprehensive evaluation of the performance of our proposed method on both simulated benchmarks and real-world robotic platforms. (p. 4, IV. EXPERIMENTS); the relevant task/metric cue is For each task, we conduct 10 trials and measure performance by computing the task success rate. (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Failures are highlighted with red circles. the same data. (p. 7, IV. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Lastly, we present a comprehensive evaluation of the performance of our proposed method on both simulated benchmarks and real-world robotic platforms..
-3. Compare against the body-reported baseline or a matched simpler baseline: These models serve as baselines in our evaluation..
-4. Report the body metric and its denominator/aggregation: For each task, we conduct 10 trials and measure performance by computing the task success rate..
-5. Re-run the body-reported ablation/failure condition: For model finetuning, we fine-tune the model pretrained on the Droid dataset, using either end effector actions defined in the third-person camera coordinate or those in the robot base coordinate as prediction ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: OC-VLA transforms the end effector pose whether defined in a discrete or continuous action space from the robot base coordinate to the third-person camera coordinate, unifying the observation and prediction ... (p. 3, III. METHOD); preserve the objective/update rule: We then analyze the differences between camera-coordinate and robotcoordinate optimization. (p. 2, III. METHOD).
+2. Use the paper-reported task/data/environment cue: Lastly, we present a comprehensive evaluation of the performance of our proposed method on both simulated benchmarks and real-world robotic platforms. (p. 4, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: These models serve as baselines in our evaluation. (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: For each task, we conduct 10 trials and measure performance by computing the task success rate. (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: METHODS ANNOTATED WITH "(VAR)" INDICATE RESULTS OBTAINED UNDER ZERO-SHOT CAMERA EVALUATION, WHILE THOSE WITHOUT THE ANNOTATION CORRESPOND TO EVALUATIONS CONDUCTED USING THE TRAINING CAM 1. (p. 6, IV. EXPERIMENTS); if none is reported, design one around: Failures are highlighted with red circles. the same data. (p. 7, IV. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD); the primary result is directionally consistent at p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), and measure the boundary at p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 address, issues, novel mechanism이 These models serve as baselines in our evaluation. 대비 For each task, we conduct 10 trials and measure performance by computing the task success rate.을 개선하고, Fig. 5. A qualitative comparison in real-robot experiments. Failures are highlighted with red circles. the same ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (OC-VLA transforms the end effector pose whether defined in a discrete or continuous action space from the robot base coordinate to the ...), does the paper-specific mechanism (To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead ...) retain the reported evaluation outcome (For each task, we conduct 10 trials and measure performance by computing the task success rate.) when tested against the paper's strongest explicit boundary (Failures are highlighted with red circles. the same data.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (For each task, we conduct 10 trials and measure performance by computing the task success rate.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly in the third-person camera coordinate ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Lastly, we present a comprehensive evaluation of the performance of our proposed method on both simulated benchmarks and real-world robotic platforms. (p. 4, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** Failures are highlighted with red circles. the same data. (p. 7, IV. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

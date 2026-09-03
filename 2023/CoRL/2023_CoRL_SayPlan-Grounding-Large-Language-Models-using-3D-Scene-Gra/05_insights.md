@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 Finally, to ensure the feasibility of the proposed plan, we introduce an iterative replanning pipeline that verifies and refines the initial plan using feedback from a scene graph simulator in order to ...를 For LLMs to be effective planners in robotics, they must be grounded in reality, that is, they must adhere to the constraints presented by the physical environment in which the robot operates, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 2: 3D Scene Graph Token Count Number of tokens required for the full graph vs. collapsed graph. An odd failure case in the simple search instructions involved negation, where the agent ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only the top ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Finally, to ensure the feasibility of the proposed plan, we introduce an iterative replanning pipeline that verifies and refines the initial plan using feedback from a scene graph simulator in ... (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is We summarise the results for the semantic search evaluation in Table (p. 6, 5 Results); the relevant task/metric cue is The table shows the semantic search success rate in finding a suitable subgraph for planning. (p. 6, 5 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented with questions such as "Find me an office that does not have ... (p. 7, 1. SayPlan (GPT-3.5) consistently).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This static prompt is both task- and environment-agnostic and takes up ≈3900 tokens of the LLM's input..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 3: Scene Graph Token Progression Dur- ing Semantic Search. This graph illustrates the scalability of our approach to large-scale 3D scene graphs. Note the importance of node contraction in maintaining a ....
-4. Report the body metric and its denominator/aggregation: The table shows the semantic search success rate in finding a suitable subgraph for planning..
-5. Re-run the body-reported ablation/failure condition: Figure 5: 3D Scene Graph - Fully Expanded Office Environment. Full 3D scene graph exposing all the rooms, assets and objects available in the scene. Note that the LLM agent never sees ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Finally, to ensure the feasibility of the proposed plan, we introduce an iterative replanning pipeline that verifies and refines the initial plan using feedback from a scene graph simulator in ... (p. 2, 1 Introduction); preserve the objective/update rule: During semantic search, both the 3D Scene Graph and Memory components of the input prompt get updated at each step, while during iterative replanning only the Feedback component gets updated ... (p. 13, A Implementation Details).
+2. Use the paper-reported task/data/environment cue: This static prompt is both task- and environment-agnostic and takes up ≈3900 tokens of the LLM's input. (p. 13, A Implementation Details).
+3. Compare against the reported or matched baseline: We summarise the results for the semantic search evaluation in Table (p. 6, 5 Results).
+4. Report the body metric with its denominator and aggregation: The table shows the semantic search success rate in finding a suitable subgraph for planning. (p. 6, 5 Results).
+5. Re-run the reported ablation or stress/failure condition: Figure 5: 3D Scene Graph - Fully Expanded Office Environment. Full 3D scene graph exposing all the rooms, assets and objects available in the scene. Note that the LLM agent ... (p. 20, Figure/Table caption); if none is reported, design one around: An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented with questions such as "Find me an office that does not have ... (p. 7, 1. SayPlan (GPT-3.5) consistently).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 13 (A Implementation Details), p. 13 (A Implementation Details); the primary result is directionally consistent at p. 6 (5 Results), p. 7 (Figure/Table caption), p. 46 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 6 (5 Results), p. 6 (5 Results), p. 7 (Figure/Table caption), and measure the boundary at p. 7 (1. SayPlan (GPT-3.5) consistently), p. 8 (1. SayPlan (GPT-3.5) consistently).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Firstly, present, mechanism mechanism이 Figure 3: Scene Graph Token Progression Dur- ing Semantic Search. This graph illustrates the scalability of ... 대비 The table shows the semantic search success rate in finding a suitable subgraph for planning.을 개선하고, Table 2: 3D Scene Graph Token Count Number of tokens required for the full graph vs. ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Finally, to ensure the feasibility of the proposed plan, we introduce an iterative replanning pipeline that verifies and refines the initial plan ...), does the paper-specific mechanism (Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the ...) retain the reported evaluation outcome (The table shows the semantic search success rate in finding a suitable subgraph for planning.) when tested against the paper's strongest explicit boundary (An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The table shows the semantic search success rate in finding a suitable subgraph for planning.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (50 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** We summarise the results for the semantic search evaluation in Table (p. 6, 5 Results).
+- **Strongest explicit boundary:** An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented with questions such as "Find me an office that does not have ... (p. 7, 1. SayPlan (GPT-3.5) consistently).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

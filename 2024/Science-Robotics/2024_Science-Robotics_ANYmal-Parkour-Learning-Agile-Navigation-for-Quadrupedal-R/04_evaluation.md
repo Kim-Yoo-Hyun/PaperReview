@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14874; PDF retrieval source: https://arxiv.org/pdf/2306.14874. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14874; PDF retrieval source: https://arxiv.org/pdf/2306.14874. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) Climbing up. (D) Crouching. (E) Walking. ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Fig. 2: Description of our approach. We decompose the problem into three components: The perception module receives the point cloud measurements to estimate the ... | p. 4 (Figure/Table caption) |
@@ -54,7 +54,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The three learning-based modules operate together without expert demonstration, offline computation, or a priori knowledge of the environment and enable the robot to reliably ... | embodiment, simulator version and control stack | p. 5 (II. RESULTS), p. 5 (II. RESULTS) |
 | Task/environment | In trajectory B, the policy saturates the motor during the climb to propel the robot onto the 0.9 m high platform (Fig. | reset, timeout, object/scene variation | p. 5 (II. RESULTS) |
@@ -147,7 +147,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 - **p. 5 / II. RESULTS - extractive body cue:** 3 (A2)), which is necessary for the leg to reach the other side of the gap and catch the fall of the robot during the ...
 - **p. 5 / II. RESULTS - extractive body cue:** At this location, it has to perform precise foothold placement to pass the last step and prepare for the jump, despite the out-of-distribution scenario for ...
 
-- **PDF anchors reviewed:** datasets p. 5 (II. RESULTS), p. 5 (II. RESULTS), metrics p. 8 (Figure/Table caption), p. 5 (II. RESULTS), p. 5 (II. RESULTS), p. 4 (Figure/Table caption), p. 11 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 5 (II. RESULTS), p. 11 (Figure/Table caption), p. 5 (II. RESULTS), results p. 8 (Figure/Table caption), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (II. RESULTS), p. 5 (II. RESULTS), metrics p. 8 (Figure/Table caption), p. 5 (II. RESULTS), p. 5 (II. RESULTS), p. 4 (Figure/Table caption), p. 11 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 5 (II. RESULTS), p. 11 (Figure/Table caption), p. 5 (II. RESULTS), results p. 8 (Figure/Table caption), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) Climbing up. (D) Crouching. (E) Walking. (F) Success rate of each skill ... (p. 8, Figure/Table caption).
+- **Metric evidence:** The locomotion and navigation modules operate synchronously in a single node on the onboard computer. (p. 5, II. RESULTS).
+- **Baseline/ablation evidence:** The skill learns to turn on the spot in tight spaces and is more capable in such scenarios compared to other skills. (p. 5, II. RESULTS).
+- **Failure/negative evidence:** The complexity of the task exacerbates many of the challenges commonly faced by mobile robots: • The locomotion controller cannot rely on a stable and periodic gait but must use ... (p. 1, I. INTRODUCTION).

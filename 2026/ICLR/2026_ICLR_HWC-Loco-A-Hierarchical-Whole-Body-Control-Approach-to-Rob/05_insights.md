@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 For the High-level policy, the input is the same set of observations as used by the low-level policies, with the output being a two-dimensional Q-value.를 Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint torques.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified environmental dynamics.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint torques. (p. 15, A.2 Implementation Details).
+- **Paper-specific mechanism:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's performance. Setting H = 10 ... (p. 20, Figure/Table caption); the relevant task/metric cue is [64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed in Appendix A.2 [43]. c) Human-Like behavior: Measured as the Wasserstein-1 distance ... (p. 7, 5 Experiment). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Second, the humanoid robot used in real-world deployment has only 19 degrees of freedom, which limits whole-body coordination and constrains the expression of complex recovery behaviors..
-3. Compare against the body-reported baseline or a matched simpler baseline: HWC-Loco reaches a success rate of 81.27%, outperforming all baselines by a significant margin..
-4. Report the body metric and its denominator/aggregation: Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's performance. Setting H = 10 achieves the ....
-5. Re-run the body-reported ablation/failure condition: To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint torques. (p. 15, A.2 Implementation Details); preserve the objective/update rule: The objective is to enable the robot to track goal commands across a variety of terrains. (p. 16, A.2 Implementation Details).
+2. Use the paper-reported task/data/environment cue: [64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed in Appendix A.2 [43]. c) Human-Like behavior: Measured as the Wasserstein-1 distance ... (p. 7, 5 Experiment).
+3. Compare against the reported or matched baseline: To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).
+4. Report the body metric with its denominator and aggregation: [64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed in Appendix A.2 [43]. c) Human-Like behavior: Measured as the Wasserstein-1 distance ... (p. 7, 5 Experiment).
+5. Re-run the reported ablation or stress/failure condition: To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment); if none is reported, design one around: To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 17 (A.2 Implementation Details); the primary result is directionally consistent at p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), and measure the boundary at p. 7 (5 Experiment), p. 9 (5 Experiment).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 develop, reliable, locomotion mechanism이 HWC-Loco reaches a success rate of 81.27%, outperforming all baselines by a significant margin. 대비 Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the ...을 개선하고, To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint ...), does the paper-specific mechanism (To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario.) retain the reported evaluation outcome ([64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed ...) when tested against the paper's strongest explicit boundary (To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric ([64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's performance. Setting H = 10 ... (p. 20, Figure/Table caption).
+- **Strongest explicit boundary:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

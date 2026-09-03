@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1310.7730; PDF retrieval source: https://arxiv.org/pdf/1310.7730. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1310.7730; PDF retrieval source: https://arxiv.org/pdf/1310.7730. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 5 (A. Sequential Convex Optimization over SE(3)), 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | This distortion can severely slow down an optimization algorithm, by reducing the neighborhood where local (first and second-order) approximations are good. | p. 5 (A. Sequential Convex Optimization over SE(3)), p. 5 (A. Sequential Convex Optimization over SE(3)) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | In this work, at the ith iteration of SQP our trajectory consists of a sequence of nominal poses ˆ X (i) = ... | p. 5 (A. Sequential Convex Optimization over SE(3)), p. 9 (V. MOTION PLANNING BENCHMARK) |
@@ -83,12 +83,12 @@ PDF body method statement (p. 5 (A. Sequential Convex Optimization over SE(3)), 
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | In this work, we consider the trajectory optimization problem defined over the special Euclidean group SE(3), which is a 6D configuration space ... | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | At each time step t : 0 ≤t ≤T-1, we apply a rotation φt to the pose Xt and then propagate the ... | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
-| Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -128,8 +128,17 @@ PDF body method statement (p. 5 (A. Sequential Convex Optimization over SE(3)), 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (A. Sequential Convex Optimization over SE(3)), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), objective p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 9 (V. MOTION PLANNING BENCHMARK), temporal p. 5 (A. Sequential Convex Optimization over SE(3)), p. 11 (VIII. NEEDLE STEERING AND CHANNEL LAYOUT), p. 14 (X. SOURCE CODE AND REPRODUCIBILITY), p. 8 (3) Calculate the Jacobians of those points), p. 2 (I. INTRODUCTION), p. 5 (IV. NO-COLLISIONS CONSTRAINT).
+- **Evidence anchors reviewed:** method p. 5 (A. Sequential Convex Optimization over SE(3)), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), objective p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 5 (A. Sequential Convex Optimization over SE(3)), p. 9 (V. MOTION PLANNING BENCHMARK), temporal p. 5 (A. Sequential Convex Optimization over SE(3)), p. 11 (VIII. NEEDLE STEERING AND CHANNEL LAYOUT), p. 14 (X. SOURCE CODE AND REPRODUCIBILITY), p. 8 (3) Calculate the Jacobians of those points), p. 2 (I. INTRODUCTION), p. 5 (IV. NO-COLLISIONS CONSTRAINT).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Trajectory optimization is fundamental in optimal control where the objective is to solve for a trajectory encoded as a sequence of states and controls that optimizes a given objective subject ... (p. 1, I. INTRODUCTION).
+- **Objective/update evidence:** The optimization method outlined above operates in vector spaces of the form Rn. (p. 5, A. Sequential Convex Optimization over SE(3)).
+- **Temporal/runtime evidence:** In this work, we consider the trajectory optimization problem defined over the special Euclidean group SE(3), which is a 6D configuration space consisting of the robot pose (3D position and ... (p. 5, A. Sequential Convex Optimization over SE(3)).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

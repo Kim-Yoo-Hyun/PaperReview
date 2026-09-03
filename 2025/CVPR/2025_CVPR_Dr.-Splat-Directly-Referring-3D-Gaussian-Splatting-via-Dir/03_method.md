@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Method Body Digest
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Moreover, we propose to use a Product Quantization (PQ) feature encoding method to represent embeddings compactly and efficiently without any per-scene optimization.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
-- **p. 6 / 3.3. Text-query based 3D localization - extractive PDF cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
-- **p. 6 / 3.3. Text-query based 3D localization - extractive PDF cue:** Given a text, we first extract a query feature q using CLIP text encoder [31].
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** During the feature registration process, our algorithm iterates through training images of the scene.
-- **p. 4 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** LangSplat [30] addresses this by introducing an encoder-decoder network, while LeGaussian [34] and OpenGaussian [37] utilize codebook construc14140
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** The centroid indices ji = [ji1, ji2, . . . , jiL] are optimized by minimizing arg mink∥vi -sik∥to quantize a given vector vi where ...
+- **p. 2 / 1. Introduction - extractive body cue:** Moreover, we propose to use a Product Quantization (PQ) feature encoding method to represent embeddings compactly and efficiently without any per-scene optimization.
+- **p. 2 / 1. Introduction - extractive body cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
+- **p. 6 / 3.3. Text-query based 3D localization - extractive body cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
+- **p. 6 / 3.3. Text-query based 3D localization - extractive body cue:** Given a text, we first extract a query feature q using CLIP text encoder [31].
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** During the feature registration process, our algorithm iterates through training images of the scene.
+- **p. 4 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** LangSplat [30] addresses this by introducing an encoder-decoder network, while LeGaussian [34] and OpenGaussian [37] utilize codebook construc14140
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** The centroid indices ji = [ji1, ji2, . . . , jiL] are optimized by minimizing arg mink∥vi -sik∥to quantize a given vector vi where ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are summarized as follows: • We propose Dr.
-- **p. 3 / 3. Dr. Splat - extractive PDF cue:** Then, we introduce Product Quantization (PQ) into our framework to efficiently store Gaussian-registered language embeddings, Sec.
+- **p. 2 / 1. Introduction - extractive body cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We propose Dr.
+- **p. 3 / 3. Dr. Splat - extractive body cue:** Then, we introduce Product Quantization (PQ) into our framework to efficiently store Gaussian-registered language embeddings, Sec.
 
 ## Source Evidence Cues
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Moreover, we propose to use a Product Quantization (PQ) feature encoding method to represent embeddings compactly and efficiently without any per-scene optimization.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
-- **p. 6 / 3.3. Text-query based 3D localization - extractive PDF cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
-- **p. 6 / 3.3. Text-query based 3D localization - extractive PDF cue:** Given a text, we first extract a query feature q using CLIP text encoder [31].
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** During the feature registration process, our algorithm iterates through training images of the scene.
-- **p. 4 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** LangSplat [30] addresses this by introducing an encoder-decoder network, while LeGaussian [34] and OpenGaussian [37] utilize codebook construc14140
+- **p. 2 / 1. Introduction - extractive body cue:** Moreover, we propose to use a Product Quantization (PQ) feature encoding method to represent embeddings compactly and efficiently without any per-scene optimization.
+- **p. 2 / 1. Introduction - extractive body cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
+- **p. 6 / 3.3. Text-query based 3D localization - extractive body cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
+- **p. 6 / 3.3. Text-query based 3D localization - extractive body cue:** Given a text, we first extract a query feature q using CLIP text encoder [31].
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** During the feature registration process, our algorithm iterates through training images of the scene.
+- **p. 4 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** LangSplat [30] addresses this by introducing an encoder-decoder network, while LeGaussian [34] and OpenGaussian [37] utilize codebook construc14140
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Moreover, we propose to use a Product Quantization (PQ) feature encoding method to represent embeddings compactly and efficiently without any per-scene optimization. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the ... | p. 2 (1. Introduction), p. 6 (3.3. Text-query based 3D localization) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** The centroid indices ji = [ji1, ji2, . . . , jiL] are optimized by minimizing arg mink∥vi -sik∥to quantize a given vector vi where ...
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** The proposed process can be interpreted as an inverse volume rendering without gradient-based optimization, which enables our method to be faster than the prior methods ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** The 2D approach relies on multiview rendering, incurring high computational costs.
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** The weights are computed with the volume rendering equation Eq.
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** However, these approaches introduce additional perscene computational costs for scene-specific parameter tuning of neural networks or codebooks (see Fig.
-- **p. 1 / 1. Introduction - extractive PDF cue:** First, we found that there is a discrepancy between optimized embeddings in 3D Gaussians and 2D language-aligned embeddings.
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** The centroid indices ji = [ji1, ji2, . . . , jiL] are optimized by minimizing arg mink∥vi -sik∥to quantize a given vector vi where ...
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** The proposed process can be interpreted as an inverse volume rendering without gradient-based optimization, which enables our method to be faster than the prior methods ...
+- **p. 1 / 1. Introduction - extractive body cue:** The 2D approach relies on multiview rendering, incurring high computational costs.
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** The weights are computed with the volume rendering equation Eq.
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** However, these approaches introduce additional perscene computational costs for scene-specific parameter tuning of neural networks or codebooks (see Fig.
+- **p. 1 / 1. Introduction - extractive body cue:** First, we found that there is a discrepancy between optimized embeddings in 3D Gaussians and 2D language-aligned embeddings.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1. Feature registration process), p. 4 (3.1. Feature registration process), p. 6 (3.2. Product-Quantized CLIP embeddings).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 3.3. Text-query based 3D localization - extractive PDF cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our method bypasses the rendering stage, enabling direct interaction with 3D Gaussians for registering and referring the well-preserved language-aligned CLIP embeddings in the 3D space.
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** (1) as: w_i (\ m athbf { I }, \ma thbf {r}) = T_i(\mathbf {I}, \mathbf {r})\cdot \tilde {\alpha _i}(\mathbf {I}, \mathbf {r}), \label {eq:weight ...
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** Given training images, we extracts a dictionary of binary masks and language embeddings extracted from the images as: Fmap = {Mj : f map j ...
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
-- **p. 6 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** In our setup for language-based 3D scene understanding, we build PQ centroids based on CLIP embeddings using a large-scale image dataset, the LVIS dataset [10], ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** This unique representation uses 3D Gaussians to achieve high-quality scene rendering, offering a more structured representation that addresses some limitations of point clouds.
+- **p. 6 / 3.3. Text-query based 3D localization - extractive body cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our method bypasses the rendering stage, enabling direct interaction with 3D Gaussians for registering and referring the well-preserved language-aligned CLIP embeddings in the 3D space.
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** (1) as: w_i (\ m athbf { I }, \ma thbf {r}) = T_i(\mathbf {I}, \mathbf {r})\cdot \tilde {\alpha _i}(\mathbf {I}, \mathbf {r}), \label {eq:weight ...
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** Given training images, we extracts a dictionary of binary masks and language embeddings extracted from the images as: Fmap = {Mj : f map j ...
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
+- **p. 6 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** In our setup for language-based 3D scene understanding, we build PQ centroids based on CLIP embeddings using a large-scale image dataset, the LVIS dataset [10], ...
+- **p. 1 / 1. Introduction - extractive body cue:** This unique representation uses 3D Gaussians to achieve high-quality scene rendering, offering a more structured representation that addresses some limitations of point clouds.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,9 +90,9 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Training vs Inference
 
-- **p. 6 / 3.3. Text-query based 3D localization - extractive PDF cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
-- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive PDF cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
-- **p. 4 / 3.1. Feature registration process - extractive PDF cue:** During the feature registration process, our algorithm iterates through training images of the scene.
+- **p. 6 / 3.3. Text-query based 3D localization - extractive body cue:** After training 3D Gaussians Φours with our feature registration process and PQ, we describe the details of an inference mode that facilitates direct interaction with ...
+- **p. 5 / 3.2. Product-Quantized CLIP embeddings - extractive body cue:** In contrast, we propose to use Product Quantization (PQ) on a large-scale image dataset, eliminating per-scene training.
+- **p. 4 / 3.1. Feature registration process - extractive body cue:** During the feature registration process, our algorithm iterates through training images of the scene.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Failure and Ablation Link
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Limitations of point-based IoU measurement. This figure shows the effect of removing the top and bottom 30% of Gaussians according to the proposed ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** 2, without modification, global search over a whole scene is quite demanding.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** Ablation study on (a) PQ and (b) Top-k Gaussians.
-- **p. 8 / 4.4. Ablation study - extractive PDF cue:** We conduct an ablation study using the ScanNet dataset on different hyper-parameters of Dr.
-- **p. 7 / 4. Experiments - extractive PDF cue:** Splat (ours) model on the same RGB-pretrained 3DGS.
-- **p. 7 / 4.1. 3D object selection - extractive PDF cue:** For LangSplat-m, the activations often shows random 3D Gaussians or fail to localize entirely (e.g., see "coffee mug"), highlighting the limitations of rasterization-based methods and ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Limitations of point-based IoU measurement. This figure shows the effect of removing the top and bottom 30% of Gaussians according to the proposed ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Limitations of point-based IoU measurement. This figure shows the effect of removing the top and bottom 30% of Gaussians according to the proposed ...
+- **p. 7 / 4. Experiments - extractive body cue:** 2, without modification, global search over a whole scene is quite demanding.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** Ablation study on (a) PQ and (b) Top-k Gaussians.
+- **p. 8 / 4.4. Ablation study - extractive body cue:** We conduct an ablation study using the ScanNet dataset on different hyper-parameters of Dr.
+- **p. 7 / 4. Experiments - extractive body cue:** Splat (ours) model on the same RGB-pretrained 3DGS.
+- **p. 7 / 4.1. 3D object selection - extractive body cue:** For LangSplat-m, the activations often shows random 3D Gaussians or fail to localize entirely (e.g., see "coffee mug"), highlighting the limitations of rasterization-based methods and ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Limitations of point-based IoU measurement. This figure shows the effect of removing the top and bottom 30% of Gaussians according to the proposed ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.3. Text-query based 3D localization), p. 6 (3.3. Text-query based 3D localization), p. 5 (3.2. Product-Quantized CLIP embeddings), p. 4 (3.1. Feature registration process), objective p. 5 (3.2. Product-Quantized CLIP embeddings), p. 4 (3.1. Feature registration process), p. 1 (1. Introduction), p. 4 (3.1. Feature registration process), p. 5 (3.2. Product-Quantized CLIP embeddings), p. 1 (1. Introduction), temporal p. 2 (1. Introduction), p. 8 (4.4. Ablation study), p. 8 (4.4. Ablation study), p. 2 (1. Introduction), p. 3 (3. Dr. Splat), p. 3 (2. Related Work and Motivation).
+- **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.3. Text-query based 3D localization), p. 6 (3.3. Text-query based 3D localization), p. 5 (3.2. Product-Quantized CLIP embeddings), p. 4 (3.1. Feature registration process), objective p. 5 (3.2. Product-Quantized CLIP embeddings), p. 4 (3.1. Feature registration process), p. 1 (1. Introduction), p. 4 (3.1. Feature registration process), p. 5 (3.2. Product-Quantized CLIP embeddings), p. 1 (1. Introduction), temporal p. 2 (1. Introduction), p. 8 (4.4. Ablation study), p. 8 (4.4. Ablation study), p. 2 (1. Introduction), p. 3 (3. Dr. Splat), p. 3 (2. Related Work and Motivation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

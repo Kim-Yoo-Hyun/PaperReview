@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.07511; PDF retrieval source: https://arxiv.org/pdf/2503.07511. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.07511; PDF retrieval source: https://arxiv.org/pdf/2503.07511. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.6. Experimental Results on Simulation Bench | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, across all tasks and diverse settings, our proposed PointVLA achieves the highest average success rate, regardless of whether it is trained on 20 ... | p. 8 (4.6. Experimental Results on Simulation Bench) |
 | 4.6. Experimental Results on Simulation Bench | EMPIRICAL / REAL-ROBOT OR HARDWARE | The mean and standard deviation of these success rates were computed to obtain the experimental results presented below. | p. 8 (4.6. Experimental Results on Simulation Bench) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following the training setup in RoboTwin, the policy was trained using three random seeds (0, 1, 2) without cherry picking for each experiment. | embodiment, simulator version and control stack | p. 8 (4.6. Experimental Results on Simulation Bench), p. 5 (4. Experiment) |
 | Task/environment | Finally, we compare our method against simulation benchmarks. | reset, timeout, object/scene variation | p. 5 (4. Experiment), p. 6 (4.2. Few-Shot Multi-Tasking) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 - **p. 7 / 4.2. Few-Shot Multi-Tasking - extractive body cue:** Furthermore, even increasing the model size (ScaleDP-1B) does not lead to significant improvement.
 - **p. 8 / 4.5. Height Adaptability - extractive body cue:** Our observations show that conventional 2D-based VLA models, such as OpenVLA [25], DP [9], ScaleDP-1B [57], and DexVLA [46] all failed in this scenario.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.6. Experimental Results on Simulation Bench), p. 5 (4. Experiment), p. 6 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), metrics p. 8 (4.6. Experimental Results on Simulation Bench), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), baselines p. 6 (Figure/Table caption), p. 6 (4.1. Implementation Details), p. 7 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), results p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.1. Implementation Details).
+- **Evidence anchors reviewed:** datasets p. 8 (4.6. Experimental Results on Simulation Bench), p. 5 (4. Experiment), p. 6 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), metrics p. 8 (4.6. Experimental Results on Simulation Bench), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), baselines p. 6 (Figure/Table caption), p. 6 (4.1. Implementation Details), p. 7 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), results p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.1. Implementation Details).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We show experimental results on the bottom table. sented in Table 6, where our method outperforms all baselines in this scenario. (p. 7, 4.2. Few-Shot Multi-Tasking).
+- **Metric evidence:** Objects were placed randomly within a small range, and we report the average success rate for each method. (p. 6, 4.2. Few-Shot Multi-Tasking).
+- **Baseline/ablation evidence:** Note that since PointVLA is built on top of DexVLA, the DexVLA can be viewed as an ablation of our proposed PointVLA without the incorporation of 3D point cloud data. (p. 6, 4.1. Implementation Details).
+- **Failure/negative evidence:** Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to become entangled-an observation consistent with ... (p. 7, 4.2. Few-Shot Multi-Tasking).

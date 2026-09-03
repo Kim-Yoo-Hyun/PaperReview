@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (71 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OGxalNUHbJ; PDF retrieval source: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (71 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OGxalNUHbJ; PDF retrieval source: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then, we elaborate on RoboRefer, including its architecture and training strategies (Sec. | p. 3 (3 Method), p. 4 (3 Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | 2, RoboRefer employs separate RGB and depth encoders to extract features, which are then aligned via projectors with the LLM for VQA ... | p. 4 (3 Method), p. 4 (3 Method) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | 6, only our method can handle long-horizon tasks requiring complex multi-step spatial referring in cluttered and dynamic environments. | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Reasoning Step = 1 Please point out the black framed painting on the right of the lamp. | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | E Experimental Setting and Details E.1 Experiments Compute Resources We conduct experiments on an A100 GPU cluster, with each node equipped with ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 5 (3 Method), p. 50 (C Implementation Details and Samples of RefSpatial-Bench), objective p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 5 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 20 (B.3.5 Question-Answer Pair Generation), temporal p. 9 (4 Experiments), p. 61 (C Implementation Details and Samples of RefSpatial-Bench), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method).
+- **Evidence anchors reviewed:** method p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 5 (3 Method), p. 50 (C Implementation Details and Samples of RefSpatial-Bench), objective p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 5 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 20 (B.3.5 Question-Answer Pair Generation), temporal p. 9 (4 Experiments), p. 61 (C Implementation Details and Samples of RefSpatial-Bench), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (71 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** D.4.1 Sampling Action Groups Given an input state s = (O, Q), where O denotes the visual encoding of the RGB or RGB-D observation and Q the textual encoding of ... (p. 49, C Implementation Details and Samples of RefSpatial-Bench).
+- **Objective/update evidence:** Unlike PPO [154], which relies on a costly value network, GRPO estimates relative advantages by comparing intra-group rewards, reducing computation, and simplifying optimization. (p. 49, C Implementation Details and Samples of RefSpatial-Bench).
+- **Temporal/runtime evidence:** 6, only our method can handle long-horizon tasks requiring complex multi-step spatial referring in cluttered and dynamic environments. (p. 9, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

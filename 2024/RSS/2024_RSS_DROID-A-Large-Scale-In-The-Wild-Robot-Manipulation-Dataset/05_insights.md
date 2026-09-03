@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 For each trajectory, we record the output of all RGB cameras, relevant low level state information from the robot, equivalent robot control commands from various popular action spaces, a data collector ID, ...를 However, creating such datasets is challenging: in contrast to vision or language data, training manipulation policies typically requires robot manipulation data with recorded observations and actions, which cannot be easily scraped fro ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 To test how DROID and existing datasets affect policy robustness, we evaluate each task and method in two settings: "in-distribution," which reflects the distribution of tasks in the in-domain demonstrations with noise ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we introduce DROID (Distributed Robot Interaction Dataset), a robot manipulation dataset of unprecedented diversity (see Fig.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Each DROID episode contains three synchronized RGB camera streams, camera calibration, depth information, and natural language instructions. (p. 1, 13 Institutions).
+- **Paper-specific mechanism:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a robot manipulation dataset of unprecedented diversity (see Fig. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both ... (p. 9, Figure/Table caption); the relevant task/metric cue is Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both ... (p. 9, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Notably, when testing out of distribution performance, the No Co-training baseline performs quite poorly while the co-trained policies are much more effective. (p. 8, V. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Overall, we find that DROID significantly increases diversity in tasks, objects, scenes, viewpoints and interaction locations over existing large scale robot manipulation datasets..
-3. Compare against the body-reported baseline or a matched simpler baseline: One of the unique benefits of DROID compared to existing robot datasets is its amount of scene diversity..
-4. Report the body metric and its denominator/aggregation: Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both no co-training ....
-5. Re-run the body-reported ablation/failure condition: We then use GPT4 to de-duplicate the verbs, i.e., remove synonyms and typos..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Each DROID episode contains three synchronized RGB camera streams, camera calibration, depth information, and natural language instructions. (p. 1, 13 Institutions); preserve the objective/update rule: 2), a hardware platform for data collection that is shared between all institutions, allowing us to quickly set up new data collection units and roll out updates across the whole ... (p. 3, III. DROID DATA COLLECTION SETUP).
+2. Use the paper-reported task/data/environment cue: Overall, we find that DROID significantly increases diversity in tasks, objects, scenes, viewpoints and interaction locations over existing large scale robot manipulation datasets. (p. 5, IV. DROID DATASET ANALYSIS).
+3. Compare against the reported or matched baseline: In line with prior work [7], we train the diffusion policy to generate 16-step action sequences, and during rollouts, step 8 actions open loop before re-running policy inference. (p. 7, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both ... (p. 9, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: We then use GPT4 to de-duplicate the verbs, i.e., remove synonyms and typos. (p. 6, IV. DROID DATASET ANALYSIS); if none is reported, design one around: Notably, when testing out of distribution performance, the No Co-training baseline performs quite poorly while the co-trained policies are much more effective. (p. 8, V. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP); the primary result is directionally consistent at p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 9 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 20 (Figure/Table caption), and measure the boundary at p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, DROID, Distributed mechanism이 One of the unique benefits of DROID compared to existing robot datasets is its amount of ... 대비 Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training ...을 개선하고, To test how DROID and existing datasets affect policy robustness, we evaluate each task and method ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Each DROID episode contains three synchronized RGB camera streams, camera calibration, depth information, and natural language instructions.), does the paper-specific mechanism (In this work, we introduce DROID (Distributed Robot Interaction Dataset), a robot manipulation dataset of unprecedented diversity (see Fig.) retain the reported evaluation outcome (Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training ...) when tested against the paper's strongest explicit boundary (Notably, when testing out of distribution performance, the No Co-training baseline performs quite poorly while the co-trained policies ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a robot manipulation dataset of unprecedented diversity (see Fig. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both ... (p. 9, Figure/Table caption).
+- **Strongest explicit boundary:** Notably, when testing out of distribution performance, the No Co-training baseline performs quite poorly while the co-trained policies are much more effective. (p. 8, V. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

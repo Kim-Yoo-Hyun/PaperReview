@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p155.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p155.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p155.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p155.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, ... | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | By iteratively refining the training data and adjusting the weighting of consistent samples, our method creates a feedback loop that promotes tighter ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF |
+| Observation / input | By iteratively refining the training data and adjusting the weighting of consistent samples, our method creates a feedback loop that promotes tighter ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
 | State / latent | iteratively, refining, training, data, adjusting, weighting, consistent, samples, creates, feedback | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
 | Output / action | analyzing, relationship, view, mid-level, representations, bridge, between, sensory | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
 | Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | trajectory D with task/embodiment metadata; body terms: iteratively, refining, training, data, adjusting, weighting, consistent, samples, creates, feedback | p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction) |
 | Decision / output variable | normalized sample or downstream action; body terms: while, different, mid-level, representations, excel, tasks, leverage, task-specitfic | p. 2 (1. Ivrropuction), p. 6 (B. Training), p. 1 (Abstract) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (B. Training), p. 5 (B. Training), p. 9 (C. Different Architectures offer Different Tradeoffs berween) |
 | Success / guarantee | cross-domain transfer and task performance | p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Ivrropuction), p. 6 (B. Training), p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction)): We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.
+PDF body contribution framing (p. 2 (1. Ivrropuction), p. 6 (B. Training), p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction)): We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.
 
 - **p. 6 / B. Training - extractive body cue:** Similarly, our approach integrates mid-level expert outputs as implicit guidance in scenarios where no explicit reward signal is available, Instead of an advantage function, we ...
 - **p. 1 / Abstract - extractive body cue:** We propose a novel mixture-of-experts policy architecture that can combine multiple specialized expert models, each trained on a distinct ‘mid-level representation, to improve the generalization ...
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1. Ivrropuction), p. 6 (B. Training), p. 1 (Abst
 
 ## Position in the Robotics Loop
 
-robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction). The downstream handoff is claimed only when the body describes it.
+robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), interface p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction), objective p. 6 (B. Training), p. 5 (B. Training), p. 6 (B. Training).
+- **Evidence anchors reviewed:** problem p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), interface p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction), objective p. 6 (B. Training), p. 5 (B. Training), p. 6 (B. Training).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ... (p. 1, 1. Ivrropuction).
+- **Formulation-changing contribution:** We propose a novel mixture-of-experts policy architecture that can combine multiple specialized expert models, each trained on a distinct ‘mid-level representation, to improve the generalization of the policy. (p. 1, Abstract).
+- **Assumption/failure evidence:** This sensitivity-robusness tradeoff' underscores the necessity of developing robot policies that balance adherence 10 mid-level representations with the ability to remain adaptable and resilient in the face of environmental variations. ... (p. 4, 1. Ivrropuction).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

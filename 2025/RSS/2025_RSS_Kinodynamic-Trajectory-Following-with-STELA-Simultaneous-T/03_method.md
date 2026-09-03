@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p008.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p008.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p008.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p008.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / error representation | motion·force 목표를 제어 error로 바꾼다 | joint/task state, reference, wrench | task frame, Jacobian, impedance, selection 또는 error coordinates를 구성 | desired task command | 3: An 6 for robot planning employs the robot's model dy = Folds.) on a dynamics factor to compute a trajectory of ... | p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner) |
 | Dynamics / constraint solve | 목표를 feasible actuator command로 바꾼다 | error, model, constraints | inverse dynamics, QP, MPC, operational mapping 또는 feedback law를 계산 | torque, force, velocity 또는 position command | Beyond the ternary dynamics factor, there are costs imposed for the optimization by unary factors for obstacle avoidance (e(X.x)) over the intermediate ... | p. 5 (B. Trajectory Optimization as a Motion Planner) |
@@ -74,7 +74,7 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value not recovered from the selected body cues. | The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history ... | episode/sequence/action-chunk boundary |
+| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value was not selected from the PDF body. | The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history ... | episode/sequence/action-chunk boundary |
 | Rate / latency | sensor/actuator control tick마다 feedback solve; numeric rate는 paper-specific. | ‘A plan pr is a sequence of T' piece-wise constant controls {uo,-++,ur-1)}s where each control uj is executed for a timestep At, ... | Hz/fps, inference time and control rate |
 | Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history ... | window and reset |
 | Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history ... | hardware, batch and throughput |
@@ -121,8 +121,17 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner), objective p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner), temporal p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (A. Trajectory Estimation), p. 1 (Front matter), p. 6 (B. The STELA Factor Graph), p. 6 (V. SIMULTANEOUS TRAIECTORY ESTIMATION).
+- **Evidence anchors reviewed:** method p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner), objective p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner), temporal p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (A. Trajectory Estimation), p. 1 (Body text (section boundary not confidently recovered)), p. 6 (B. The STELA Factor Graph), p. 6 (V. SIMULTANEOUS TRAIECTORY ESTIMATION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** ‘An approach to deal with the model gap is to use feedback controllers for trajectory following, given the latest state estimate [12, 33]. (p. 2, 1. INTRODUCTION).
+- **Objective/update evidence:** Beyond the ternary dynamics factor, there are costs imposed for the optimization by unary factors for obstacle avoidance (e(X.x)) over the intermediate state variables (X : Xp), a state prio ... (p. 5, B. Trajectory Optimization as a Motion Planner).
+- **Temporal/runtime evidence:** The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history and forward horizon of the planned trajectory. ‘The ... (p. 3, 1. INTRODUCTION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 By training an autoregressive model on sequences of states, actions, and returns, we reduce policy sampling to autoregressive generative modeling.를 We use st, at, and rt = R(st, at) to denote the state, action, and reward at timestep t, respectively.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 TD learning (CQL) cannot effectively propagate Q-values over the long horizons involved and gets poor performance.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Training dataset consists of random walk trajectories and their per-node returns-to-go (middle).
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 4.1 Atari The Atari benchmark [10] is challenging due to its high-dimensional visual inputs and difficulty of credit assignment arising from the delay between actions and resulting rewards. (p. 6, 3 Method).
+- **Paper-specific mechanism:** Training dataset consists of random walk trajectories and their per-node returns-to-go (middle). (p. 3, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption); the relevant task/metric cue is Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while TD learning struggles to perform credit assignment. 5.5 Can transformers be accurate ... (p. 10, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To evaluate this, we consider a delayed return version of the D4RL benchmarks where the agent does not receive any rewards along the trajectory, and instead receives the cumulative reward of the ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 2: Results for D4RL datasets3. We report the mean and variance for three seeds. Decision Transformer (DT) outperforms conventional RL algorithms on almost all tasks. 3Given that CQL is generally the ....
-4. Report the body metric and its denominator/aggregation: Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while TD learning struggles to perform credit assignment. 5.5 Can transformers be accurate critics in ....
-5. Re-run the body-reported ablation/failure condition: Table 5: Ablation on context length. Decision Transformer (DT) performs better when using a longer context length (K = 50 for Pong, K = 30 for others). 5.4 Does Decision Transformer perform ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 4.1 Atari The Atari benchmark [10] is challenging due to its high-dimensional visual inputs and difficulty of credit assignment arising from the delay between actions and resulting rewards. (p. 6, 3 Method); preserve the objective/update rule: As a result, instead of feeding the rewards directly, we feed the model with the returns-to-go bRt = PT t′=t rt′. (p. 4, 3 Method).
+2. Use the paper-reported task/data/environment cue: To evaluate this, we consider a delayed return version of the D4RL benchmarks where the agent does not receive any rewards along the trajectory, and instead receives the cumulative reward ... (p. 10, Dataset).
+3. Compare against the reported or matched baseline: Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while TD learning struggles to perform credit assignment. 5.5 Can transformers be accurate ... (p. 10, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Table 5: Ablation on context length. Decision Transformer (DT) performs better when using a longer context length (K = 50 for Pong, K = 30 for others). 5.4 Does Decision ... (p. 9, Figure/Table caption); if none is reported, design one around: 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1 Introduction), p. 4 (1 Introduction), match the reported outcome at p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), and measure the boundary at p. 5 (3 Method), p. 10 (Dataset).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Training, dataset, consists mechanism이 Table 2: Results for D4RL datasets3. We report the mean and variance for three seeds. Decision ... 대비 Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while ...을 개선하고, TD learning (CQL) cannot effectively propagate Q-values over the long horizons involved and gets poor performance. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (4.1 Atari The Atari benchmark [10] is challenging due to its high-dimensional visual inputs and difficulty of credit assignment arising from the ...), does the paper-specific mechanism (Training dataset consists of random walk trajectories and their per-node returns-to-go (middle).) retain the reported evaluation outcome (Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while ...) when tested against the paper's strongest explicit boundary (1 for success or 0 for failure), as well as the environment starting state, as the conditioning information ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 6: Success rate for Key-to-Door environment. Methods using hindsight (Decision Transformer, %BC) can learn successful policies, while ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Training dataset consists of random walk trajectories and their per-node returns-to-go (middle). (p. 3, 1 Introduction).
+- **Paper-supported outcome:** Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

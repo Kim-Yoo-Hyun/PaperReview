@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/margolis23a.html; PDF retrieval source: https://arxiv.org/pdf/2212.03238. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/margolis23a.html; PDF retrieval source: https://arxiv.org/pdf/2212.03238. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (2 Background), p. 2 (1 Introduction), p. 2 (1 Introducti
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The difficulty of designing a single set of auxiliary rewards that promote generalization in diverse set of downstream tasks is illustrated in ... | legged robot, terrain과 contact dynamics | body wording is the source claim |
-| Observation / input | The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference ... | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The input to the policy is a 30-step history of observations ot-H...t, commands ct-H...t, behaviors bt-H...t, previous actions at-H-1...t-1, and timing reference ... | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | input, policy, step, history, observations, ot-H, commands, ct-H, behaviors, bt-H | body/contact state, foothold 또는 behavior mode | notation and tensor shape require body check |
 | Output / action | facilitate, generalization, diverse, scenarios, technique, Multiplicity, Behavior, MoB | joint target, torque, footstep 또는 locomotion action | exact unit/frame/decoder require body check |
 | Target outcome | progress, balance and terrain robustness | velocity/progress, stability, energy와 terrain generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | body/proprioceptive/terrain state; body terms: input, policy, step, history, observations, ot-H, commands, ct-H, behaviors, bt-H | p. 5 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction) |
 | Decision / output variable | joint action/torque/footstep; body terms: present, framework, policy, learning, enables, improved, performance, out-of-distribution | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 Method) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (2 Background), p. 2 (1 Introduction), p. 2 (1 Introducti
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method) |
 | Success / guarantee | progress, balance and terrain robustness | p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (3 Method) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 3 (2 Background), p. 2 (1 Introduction), p. 2 (1 Introducti
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method)): We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below.
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method)): We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below.
 
 - **p. 2 / 1 Introduction - extractive body cue:** To facilitate generalization to diverse scenarios, we propose a technique, Multiplicity of Behavior (MoB), that given the same observation history and a small set of ...
 - **p. 5 / 3 Method - extractive body cue:** The action at consists of position targets for each of the twelve joints.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 
 
 ## Position in the Robotics Loop
 
-locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction), p. 4 (3 Method). The downstream handoff is claimed only when the body describes it.
+locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction), p. 4 (3 Method). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (2 Background), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 5 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction), p. 4 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
+- **Evidence anchors reviewed:** problem p. 3 (2 Background), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 5 (3 Method), p. 5 (3 Method), p. 2 (1 Introduction), p. 4 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, this creates a hard learning problem due to creation of challenging or infeasible locomotion scenarios. (p. 2, 1 Introduction).
+- **Formulation-changing contribution:** We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** Top row: A low-frequency gait fails to sprint on slippery terrain (Gait 2; inset) but tuning it to high frequency results in success (Gait 1). (p. 1, Body text (section boundary not confidently recovered)).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

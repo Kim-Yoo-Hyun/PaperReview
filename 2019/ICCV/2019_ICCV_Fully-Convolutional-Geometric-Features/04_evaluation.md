@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content_ICCV_2019/html/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content_ICCV_2019/papers/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content_ICCV_2019/html/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content_ICCV_2019/papers/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 
 ## Evaluation Body Digest
 
-- **p. 4 / 6.1. Datasets and Training - extractive PDF cue:** This training set contains 11 sequences, which we split into train/val/test sets as follows: sequence 0 to 5 for training, sequence 7 to 8 for ...
-- **p. 4 / 6.1. Datasets and Training - extractive PDF cue:** For indoor data, we use the standard 3D Match dataset [36].
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** For the outdoor dataset, we use the Relative Translation Error and the Relative Rotation Error.
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** Thus, they are indirect measures, but we follow Yew and Lee [34] for outdoor dataset evaluation.
-- **p. 4 / 6. Experiments - extractive PDF cue:** We show that FCGF outperform all state-of-the-art methods in both accuracy and speed, and analyze the proposed hardestcontrastive and hardest-triplet losses.
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** Specifically, the registration recall uses the following error metric between estimated fragments {i, j}, and corresponding pose estimation ˆTi,j to define a true positive: ERMSE ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Feature-match recall with respect to inlier ratio threshold τ2 (left) and inlier distance accuracy tolerance τ1 (right). The vertical lines are τ2 = ...
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** The Relative Translation Error (RTE) and Relative Rotation Error (RRE) measure the registration errors of features used for RANSAC.
+- **p. 4 / 6.1. Datasets and Training - extractive body cue:** This training set contains 11 sequences, which we split into train/val/test sets as follows: sequence 0 to 5 for training, sequence 7 to 8 for ...
+- **p. 4 / 6.1. Datasets and Training - extractive body cue:** For indoor data, we use the standard 3D Match dataset [36].
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** For the outdoor dataset, we use the Relative Translation Error and the Relative Rotation Error.
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** Thus, they are indirect measures, but we follow Yew and Lee [34] for outdoor dataset evaluation.
+- **p. 4 / 6. Experiments - extractive body cue:** We show that FCGF outperform all state-of-the-art methods in both accuracy and speed, and analyze the proposed hardestcontrastive and hardest-triplet losses.
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** Specifically, the registration recall uses the following error metric between estimated fragments {i, j}, and corresponding pose estimation ˆTi,j to define a true positive: ERMSE ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Feature-match recall with respect to inlier ratio threshold τ2 (left) and inlier distance accuracy tolerance τ1 (right). The vertical lines are τ2 = ...
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** The Relative Translation Error (RTE) and Relative Rotation Error (RRE) measure the registration errors of features used for RANSAC.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6. Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | We show that FCGF outperform all state-of-the-art methods in both accuracy and speed, and analyze the proposed hardestcontrastive and hardest-triplet losses. | p. 4 (6. Experiments) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 6: Results on the KITTI dataset. Relative Trans- lation Error (RTE) and Relative Rotation Error (RRE) af- ter RANSAC on FCGF trained with ... | p. 8 (Figure/Table caption) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 6.1. Datasets and Training - extractive PDF cue:** This training set contains 11 sequences, which we split into train/val/test sets as follows: sequence 0 to 5 for training, sequence 7 to 8 for ...
-- **p. 4 / 6.1. Datasets and Training - extractive PDF cue:** For indoor data, we use the standard 3D Match dataset [36].
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** For the outdoor dataset, we use the Relative Translation Error and the Relative Rotation Error.
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** Thus, they are indirect measures, but we follow Yew and Lee [34] for outdoor dataset evaluation.
+- **p. 4 / 6.1. Datasets and Training - extractive body cue:** This training set contains 11 sequences, which we split into train/val/test sets as follows: sequence 0 to 5 for training, sequence 7 to 8 for ...
+- **p. 4 / 6.1. Datasets and Training - extractive body cue:** For indoor data, we use the standard 3D Match dataset [36].
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** For the outdoor dataset, we use the Relative Translation Error and the Relative Rotation Error.
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** Thus, they are indirect measures, but we follow Yew and Lee [34] for outdoor dataset evaluation.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Feature-match recall [6, 7] and speed in log scale on the 3DMatch benchmark [36]. Our approach is the most accurate and the fastest. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: We use a ResUNet architecture. The white blocks indicate input and output layers. Each block is character- ized by three parameters: kernel size, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Sampling and negative-mining strategy for each method. Traditional contrastive and triplet losses use random sampling. Our hardest-contrastive and hardest-triplet losses use the hardest ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Feature-match recall with respect to inlier ratio threshold τ2 (left) and inlier distance accuracy tolerance τ1 (right). The vertical lines are τ2 = ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Color-coded features overlaid on selected fragment pairs. The 32-dimensional FCGF features for each pair of point clouds are mapped to a scalar space ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6: Color-coded FCGF features for pairs of KITTI LIDAR scans that are 10m apart. FCGF features from downsampled LIDAR scans are mapped to a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Feature-match recall at τ1 = 0.1, τ2 = 0.05 [6] on 3DMatch [33]. FMR and STD indicate the Feature Match Recall and its ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Hardest-contrastive loss feature match recall with different feature dimensionality on 3DMatch. OOM de- notes Out Of Memory under the same hyperparameters. tance thresholds, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Feature-match recall [6, 7] and speed in log scale on the 3DMatch benchmark [36]. Our approach is the most accurate and the fastest. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: We use a ResUNet architecture. The white blocks indicate input and output layers. Each block is character- ized by three parameters: kernel size, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Sampling and negative-mining strategy for each method. Traditional contrastive and triplet losses use random sampling. Our hardest-contrastive and hardest-triplet losses use the hardest ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Feature-match recall with respect to inlier ratio threshold τ2 (left) and inlier distance accuracy tolerance τ1 (right). The vertical lines are τ2 = ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Color-coded features overlaid on selected fragment pairs. The 32-dimensional FCGF features for each pair of point clouds are mapped to a scalar space ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6: Color-coded FCGF features for pairs of KITTI LIDAR scans that are 10m apart. FCGF features from downsampled LIDAR scans are mapped to a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Feature-match recall at τ1 = 0.1, τ2 = 0.05 [6] on 3DMatch [33]. FMR and STD indicate the Feature Match Recall and its ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Hardest-contrastive loss feature match recall with different feature dimensionality on 3DMatch. OOM de- notes Out Of Memory under the same hyperparameters. tance thresholds, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This training set contains 11 sequences, which we split into train/val/test sets as follows: sequence 0 to 5 for training, sequence 7 to 8 ... | embodiment, simulator version and control stack | p. 4 (6.1. Datasets and Training), p. 4 (6.1. Datasets and Training) |
 | Task/environment | For indoor data, we use the standard 3D Match dataset [36]. | reset, timeout, object/scene variation | p. 4 (6.1. Datasets and Training), p. 5 (6.2. Evaluation Metrics) |
@@ -110,11 +110,11 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| If we use a 2D analogy, extracting 3D ∗Equal contribution. | We show that FCGF outperform all state-of-the-art methods in both accuracy and speed, and analyze the proposed hardestcontrastive and hardest-triplet losses. | PDF body cue; verify exact table/figure and matched conditions | p. 4 (6. Experiments), p. 8 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption) |
+| In this section, we propose metric learning losses for fully-convolutional feature learning. | We show that FCGF outperform all state-of-the-art methods in both accuracy and speed, and analyze the proposed hardestcontrastive and hardest-triplet losses. | PDF body cue; verify exact table/figure and matched conditions | p. 4 (6. Experiments), p. 8 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption) |
 | Primary metric/result | Table 6: Results on the KITTI dataset. Relative Trans- lation Error (RTE) and Relative Rotation Error (RRE) af- ter RANSAC on FCGF trained with ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 6.1. Datasets and Training - extractive PDF cue:** We train the networks for 100 epochs using Stochastic Gradient Descent starting with learning rate 0.1 with a Exponential learning rate schedule with γ = ...
+- **p. 5 / 6.1. Datasets and Training - extractive body cue:** We train the networks for 100 epochs using Stochastic Gradient Descent starting with learning rate 0.1 with a Exponential learning rate schedule with γ = ...
 
 ## Generalization and Failure Cases
 
@@ -151,13 +151,13 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 7. Conclusion - extractive PDF cue:** An interesting avenue for future work is to extend the FCGF methodology to end-to-end registration.
-- **p. 4 / 5. Implementation - extractive PDF cue:** Next, we find the hardest negatives for all positive pairs and filter out the hardest negatives that fall within the vicinity of positive pairs by ...
-- **p. 4 / 5. Implementation - extractive PDF cue:** First, we create a matrix P that contains the indices of positive pairs (i, j) as well as an additional matrix Pdt that contains all ...
-- **p. 5 / 6.1. Datasets and Training - extractive PDF cue:** If ICP fails or the number of overlapping voxels is less than 1k, we removed the pair from the dataset.
-- **p. 5 / 6.2. Evaluation Metrics - extractive PDF cue:** However, it does not measure the quality of feature when used within a reconstruction system.
+- **p. 8 / 7. Conclusion - extractive body cue:** An interesting avenue for future work is to extend the FCGF methodology to end-to-end registration.
+- **p. 4 / 5. Implementation - extractive body cue:** Next, we find the hardest negatives for all positive pairs and filter out the hardest negatives that fall within the vicinity of positive pairs by ...
+- **p. 4 / 5. Implementation - extractive body cue:** First, we create a matrix P that contains the indices of positive pairs (i, j) as well as an additional matrix Pdt that contains all ...
+- **p. 5 / 6.1. Datasets and Training - extractive body cue:** If ICP fails or the number of overlapping voxels is less than 1k, we removed the pair from the dataset.
+- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** However, it does not measure the quality of feature when used within a reconstruction system.
 
-- **PDF anchors reviewed:** datasets p. 4 (6.1. Datasets and Training), p. 4 (6.1. Datasets and Training), p. 5 (6.2. Evaluation Metrics), p. 5 (6.2. Evaluation Metrics), metrics p. 8 (Figure/Table caption), p. 4 (6. Experiments), p. 5 (6.2. Evaluation Metrics), p. 6 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 7 (Figure/Table caption), baselines p. 4 (6. Experiments), p. 5 (6.3. 3D Match Benchmark), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), results p. 4 (6. Experiments), p. 8 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (6.1. Datasets and Training), p. 4 (6.1. Datasets and Training), p. 5 (6.2. Evaluation Metrics), p. 5 (6.2. Evaluation Metrics), metrics p. 8 (Figure/Table caption), p. 4 (6. Experiments), p. 5 (6.2. Evaluation Metrics), p. 6 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 7 (Figure/Table caption), baselines p. 4 (6. Experiments), p. 5 (6.3. 3D Match Benchmark), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), results p. 4 (6. Experiments), p. 8 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p028.html; PDF retrieval source: https://arxiv.org/pdf/2412.09858. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p028.html; PDF retrieval source: https://arxiv.org/pdf/2412.09858. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | To predict an action, the transformer backbone takes in the tokenized observation and goal, then outputs a readout embedding 𝑒, which is ... | p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, ... | p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning) |
@@ -80,8 +80,8 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | There is a single RealSense D405 camera mounted on the robot's wrist for image observations. frame and 1 binary gripper action for ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | For a fair comparison, we use the same task setup, training configuration, observation and action space, and the number of successful episodes ... | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
-| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -127,8 +127,17 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning), p. 5 (3.3. Generalist Policy Finetuning), objective p. 4 (3.1. Online RL Training), p. 4 (3.1. Online RL Training), p. 5 (3.3. Generalist Policy Finetuning), p. 5 (3.3. Generalist Policy Finetuning), temporal p. 5 (4.1. Experimental Setup and Tasks), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.2. RLDG vs. Conventional Fine-tuning).
+- **Evidence anchors reviewed:** method p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning), p. 5 (3.3. Generalist Policy Finetuning), objective p. 4 (3.1. Online RL Training), p. 4 (3.1. Online RL Training), p. 5 (3.3. Generalist Policy Finetuning), p. 5 (3.3. Generalist Policy Finetuning), temporal p. 5 (4.1. Experimental Setup and Tasks), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.2. RLDG vs. Conventional Fine-tuning).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** To predict an action, the transformer backbone takes in the tokenized observation and goal, then outputs a readout embedding 𝑒, which is used to condition the denoising process trained on ... (p. 5, 3.3. Generalist Policy Finetuning).
+- **Objective/update evidence:** The policy objective 𝜋(𝑎𝑡/𝑠𝑡) is to maximize the expected discounted return: 𝐽(𝜋) = 𝔼 𝑠0∼𝜌0 𝑎𝑡∼𝜋(𝑎𝑡/𝑠𝑡) 𝑠𝑡+1∼𝑃(𝑠𝑡+1/𝑠𝑡,𝑎𝑡) [ 𝑇 ∑ 𝑡=0 𝛾𝑡𝑅(𝑠𝑡, 𝑎𝑡)] (1) where 𝜌0 defines the initial robot ... (p. 4, 3.1. Online RL Training).
+- **Temporal/runtime evidence:** There is a single RealSense D405 camera mounted on the robot's wrist for image observations. frame and 1 binary gripper action for tasks that involve grasping. (p. 5, 4.1. Experimental Setup and Tasks).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2111.06377; PDF retrieval source: https://arxiv.org/pdf/2111.06377. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2111.06377; PDF retrieval source: https://arxiv.org/pdf/2111.06377. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5. Transfer Learning Experiments), p. 5 (4
 
 ## Evaluation Body Digest
 
-- **p. 4 / 4.1. Main Properties - extractive PDF cue:** It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures.
-- **p. 5 / 4.1. Main Properties - extractive PDF cue:** Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow.
-- **p. 8 / 5. Transfer Learning Experiments - extractive PDF cue:** Transfer learning accuracy on classification datasets, using MAE pre-trained on IN1K and then fine-tuned.
-- **p. 8 / 5. Transfer Learning Experiments - extractive PDF cue:** Self-supervised entries use IN1K data without labels. dataset ViT-B ViT-L ViT-H ViT-H448 prev best iNat 2017 70.5 75.7 79.3 83.4 75.4 [55] iNat 2018 75.4 ...
-- **p. 4 / 4. ImageNet Experiments - extractive PDF cue:** We do self-supervised pre-training on the ImageNet-1K (IN1K) [13] training set.
-- **p. 7 / 4.2. Comparisons with Previous Results - extractive PDF cue:** Even so, our total pre-training time is less than the other methods when trained on the same hardware.
-- **p. 7 / 4.2. Comparisons with Previous Results - extractive PDF cue:** We improve over the state-of-the-art by a nontrivial margin in the highly competitive benchmark of IN1K (no external data).
-- **p. 12 / A. Implementation Details - extractive PDF cue:** We adjust the lr and finetuning epochs for each individual dataset. method model params acc iGPT [6] iGPT-L 1362 M 69.0 iGPT [6] iGPT-XL 6801 ...
+- **p. 4 / 4.1. Main Properties - extractive body cue:** It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures.
+- **p. 5 / 4.1. Main Properties - extractive body cue:** Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow.
+- **p. 8 / 5. Transfer Learning Experiments - extractive body cue:** Transfer learning accuracy on classification datasets, using MAE pre-trained on IN1K and then fine-tuned.
+- **p. 8 / 5. Transfer Learning Experiments - extractive body cue:** Self-supervised entries use IN1K data without labels. dataset ViT-B ViT-L ViT-H ViT-H448 prev best iNat 2017 70.5 75.7 79.3 83.4 75.4 [55] iNat 2018 75.4 ...
+- **p. 4 / 4. ImageNet Experiments - extractive body cue:** We do self-supervised pre-training on the ImageNet-1K (IN1K) [13] training set.
+- **p. 7 / 4.2. Comparisons with Previous Results - extractive body cue:** Even so, our total pre-training time is less than the other methods when trained on the same hardware.
+- **p. 7 / 4.2. Comparisons with Previous Results - extractive body cue:** We improve over the state-of-the-art by a nontrivial margin in the highly competitive benchmark of IN1K (no external data).
+- **p. 12 / A. Implementation Details - extractive body cue:** We adjust the lr and finetuning epochs for each individual dataset. method model params acc iGPT [6] iGPT-L 1362 M 69.0 iGPT [6] iGPT-XL 6801 ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5. Transfer Learning Experiments), p. 5 (4
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Transfer Learning Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | More significantly, with the larger ViT-L, our MAE pre-training outperforms supervised pre-training by 4.0 points (53.3 vs. | p. 8 (5. Transfer Learning Experiments) |
 | 4.1. Main Properties | EMPIRICAL / REAL-ROBOT OR HARDWARE | By removing the mask token from the encoder, we constrain the encoder to always see real patches and thus improve accuracy. | p. 5 (4.1. Main Properties) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (5. Transfer Learning Experiments), p. 5 (4
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 4.1. Main Properties - extractive PDF cue:** It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures.
-- **p. 5 / 4.1. Main Properties - extractive PDF cue:** Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow.
-- **p. 8 / 5. Transfer Learning Experiments - extractive PDF cue:** Transfer learning accuracy on classification datasets, using MAE pre-trained on IN1K and then fine-tuned.
-- **p. 8 / 5. Transfer Learning Experiments - extractive PDF cue:** Self-supervised entries use IN1K data without labels. dataset ViT-B ViT-L ViT-H ViT-H448 prev best iNat 2017 70.5 75.7 79.3 83.4 75.4 [55] iNat 2018 75.4 ...
-- **p. 4 / 4. ImageNet Experiments - extractive PDF cue:** We do self-supervised pre-training on the ImageNet-1K (IN1K) [13] training set.
-- **p. 7 / 4.2. Comparisons with Previous Results - extractive PDF cue:** Even so, our total pre-training time is less than the other methods when trained on the same hardware.
-- **p. 7 / 4.2. Comparisons with Previous Results - extractive PDF cue:** We improve over the state-of-the-art by a nontrivial margin in the highly competitive benchmark of IN1K (no external data).
-- **p. 12 / A. Implementation Details - extractive PDF cue:** We adjust the lr and finetuning epochs for each individual dataset. method model params acc iGPT [6] iGPT-L 1362 M 69.0 iGPT [6] iGPT-XL 6801 ...
+- **p. 4 / 4.1. Main Properties - extractive body cue:** It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures.
+- **p. 5 / 4.1. Main Properties - extractive body cue:** Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow.
+- **p. 8 / 5. Transfer Learning Experiments - extractive body cue:** Transfer learning accuracy on classification datasets, using MAE pre-trained on IN1K and then fine-tuned.
+- **p. 8 / 5. Transfer Learning Experiments - extractive body cue:** Self-supervised entries use IN1K data without labels. dataset ViT-B ViT-L ViT-H ViT-H448 prev best iNat 2017 70.5 75.7 79.3 83.4 75.4 [55] iNat 2018 75.4 ...
+- **p. 4 / 4. ImageNet Experiments - extractive body cue:** We do self-supervised pre-training on the ImageNet-1K (IN1K) [13] training set.
+- **p. 7 / 4.2. Comparisons with Previous Results - extractive body cue:** Even so, our total pre-training time is less than the other methods when trained on the same hardware.
+- **p. 7 / 4.2. Comparisons with Previous Results - extractive body cue:** We improve over the state-of-the-art by a nontrivial margin in the highly competitive benchmark of IN1K (no external data).
+- **p. 12 / A. Implementation Details - extractive body cue:** We adjust the lr and finetuning epochs for each individual dataset. method model params acc iGPT [6] iGPT-L 1362 M 69.0 iGPT [6] iGPT-XL 6801 ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our MAE architecture. During pre-training, a large random subset of image patches (e.g., 75%) is masked out. The encoder is applied to the ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Example results on ImageNet validation images. For each triplet, we show the masked image (left), our MAE reconstruction† (middle), and the ground-truth (right). ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 3. Example results on COCO validation images, using an MAE trained on ImageNet (the same model weights as in Figure 2). Observe the reconstructions ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 4. Reconstructions of ImageNet validation images using an MAE pre-trained with a masking ratio of 75% but applied on inputs with higher masking ratios. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 5. Masking ratio. A high masking ratio (75%) works well for both fine-tuning (top) and linear probing (bottom). The y-axes are ImageNet-1K validation accuracy ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. MAE ablation experiments with ViT-L/16 on ImageNet-1K. We report fine-tuning (ft) and linear probing (lin) accuracy (%). If not specified, the default is: ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow. The speedup is relative to the entry whose ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Mask sampling strategies determine the pretext task difficulty, influencing reconstruction quality and representations (Table 1f). Here each output is from an MAE trained ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our MAE architecture. During pre-training, a large random subset of image patches (e.g., 75%) is masked out. The encoder is applied to the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Example results on ImageNet validation images. For each triplet, we show the masked image (left), our MAE reconstruction† (middle), and the ground-truth (right). ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 3. Example results on COCO validation images, using an MAE trained on ImageNet (the same model weights as in Figure 2). Observe the reconstructions ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 4. Reconstructions of ImageNet validation images using an MAE pre-trained with a masking ratio of 75% but applied on inputs with higher masking ratios. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 5. Masking ratio. A high masking ratio (75%) works well for both fine-tuning (top) and linear probing (bottom). The y-axes are ImageNet-1K validation accuracy ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. MAE ablation experiments with ViT-L/16 on ImageNet-1K. We report fine-tuning (ft) and linear probing (lin) accuracy (%). If not specified, the default is: ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow. The speedup is relative to the entry whose ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Mask sampling strategies determine the pretext task difficulty, influencing reconstruction quality and representations (Table 1f). Here each output is from an MAE trained ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures. | embodiment, simulator version and control stack | p. 4 (4.1. Main Properties), p. 5 (4.1. Main Properties) |
 | Task/environment | Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow. | reset, timeout, object/scene variation | p. 5 (4.1. Main Properties), p. 8 (5. Transfer Learning Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 8 (5. Transfer Learning Experiments), p. 5 (4
 | Primary metric/result | By removing the mask token from the encoder, we constrain the encoder to always see real patches and thus improve accuracy. | numeric claim only at cited anchor | p. 5 (4.1. Main Properties) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 4. ImageNet Experiments - extractive PDF cue:** We report top-1 validation accuracy of a single 224×224 crop.
-- **p. 4 / 4. ImageNet Experiments - extractive PDF cue:** Here fine-tuning is only for 50 epochs (vs.
-- **p. 5 / 4.1. Main Properties - extractive PDF cue:** If not specified, the default is: the decoder has depth 8 and width 512, the reconstruction target is unnormalized pixels, the data augmentation is random ...
-- **p. 5 / 4.1. Main Properties - extractive PDF cue:** Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow.
-- **p. 6 / 4.1. Main Properties - extractive PDF cue:** Indeed, we have not observed saturation of linear probing accuracy even at 1600 epochs.
-- **p. 6 / 4.1. Main Properties - extractive PDF cue:** This behavior is unlike contrastive learning methods, e.g., MoCo v3 [9] saturates at 300 epochs for ViT-L.
+- **p. 4 / 4. ImageNet Experiments - extractive body cue:** We report top-1 validation accuracy of a single 224×224 crop.
+- **p. 4 / 4. ImageNet Experiments - extractive body cue:** Here fine-tuning is only for 50 epochs (vs.
+- **p. 5 / 4.1. Main Properties - extractive body cue:** If not specified, the default is: the decoder has depth 8 and width 512, the reconstruction target is unnormalized pixels, the data augmentation is random ...
+- **p. 5 / 4.1. Main Properties - extractive body cue:** Wall-clock time of our MAE training (800 epochs), benchmarked in 128 TPU-v3 cores with TensorFlow.
+- **p. 6 / 4.1. Main Properties - extractive body cue:** Indeed, we have not observed saturation of linear probing accuracy even at 1600 epochs.
+- **p. 6 / 4.1. Main Properties - extractive body cue:** This behavior is unlike contrastive learning methods, e.g., MoCo v3 [9] saturates at 300 epochs for ViT-L.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 8 (5. Transfer Learning Experiments), p. 5 (4
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Discussion and Conclusion - extractive PDF cue:** We hope this perspective will inspire future work.
-- **p. 4 / 4.1. Main Properties - extractive PDF cue:** It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures.
-- **p. 5 / 4.1. Main Properties - extractive PDF cue:** In this case, there is a gap between pre-training and deploying: this encoder has a large portion of mask tokens in its input in pretraining, ...
-- **p. 6 / 4.1. Main Properties - extractive PDF cue:** Using pixels does not suffer from these problems.
-- **p. 11 / A. Implementation Details - extractive PDF cue:** Directly applying the previous recipes to these larger models does not work.
-- **p. 11 / A. Implementation Details - extractive PDF cue:** Our MAE does not use relative position or layer scaling (which are used in the code of [2]).
+- **p. 8 / 6. Discussion and Conclusion - extractive body cue:** We hope this perspective will inspire future work.
+- **p. 4 / 4.1. Main Properties - extractive body cue:** It makes sense of the gestalt of objects and scenes, which cannot be simply completed by extending lines or textures.
+- **p. 5 / 4.1. Main Properties - extractive body cue:** In this case, there is a gap between pre-training and deploying: this encoder has a large portion of mask tokens in its input in pretraining, ...
+- **p. 6 / 4.1. Main Properties - extractive body cue:** Using pixels does not suffer from these problems.
+- **p. 11 / A. Implementation Details - extractive body cue:** Directly applying the previous recipes to these larger models does not work.
+- **p. 11 / A. Implementation Details - extractive body cue:** Our MAE does not use relative position or layer scaling (which are used in the code of [2]).
 
-- **PDF anchors reviewed:** datasets p. 4 (4.1. Main Properties), p. 5 (4.1. Main Properties), p. 8 (5. Transfer Learning Experiments), p. 8 (5. Transfer Learning Experiments), p. 4 (4. ImageNet Experiments), p. 7 (4.2. Comparisons with Previous Results), metrics p. 12 (Figure/Table caption), p. 7 (4.2. Comparisons with Previous Results), p. 4 (4. ImageNet Experiments), p. 4 (4. ImageNet Experiments), p. 5 (4.1. Main Properties), p. 5 (4.1. Main Properties), baselines p. 4 (4. ImageNet Experiments), p. 11 (A. Implementation Details), p. 7 (4.2. Comparisons with Previous Results), p. 7 (4.2. Comparisons with Previous Results), p. 8 (5. Transfer Learning Experiments), p. 8 (5. Transfer Learning Experiments), results p. 8 (5. Transfer Learning Experiments), p. 5 (4.1. Main Properties), p. 5 (4.1. Main Properties), p. 6 (4.1. Main Properties), p. 6 (4.1. Main Properties), p. 7 (4.2. Comparisons with Previous Results).
+- **Evidence anchors reviewed:** datasets p. 4 (4.1. Main Properties), p. 5 (4.1. Main Properties), p. 8 (5. Transfer Learning Experiments), p. 8 (5. Transfer Learning Experiments), p. 4 (4. ImageNet Experiments), p. 7 (4.2. Comparisons with Previous Results), metrics p. 12 (Figure/Table caption), p. 7 (4.2. Comparisons with Previous Results), p. 4 (4. ImageNet Experiments), p. 4 (4. ImageNet Experiments), p. 5 (4.1. Main Properties), p. 5 (4.1. Main Properties), baselines p. 4 (4. ImageNet Experiments), p. 11 (A. Implementation Details), p. 7 (4.2. Comparisons with Previous Results), p. 7 (4.2. Comparisons with Previous Results), p. 8 (5. Transfer Learning Experiments), p. 8 (5. Transfer Learning Experiments), results p. 8 (5. Transfer Learning Experiments), p. 5 (4.1. Main Properties), p. 5 (4.1. Main Properties), p. 6 (4.1. Main Properties), p. 6 (4.1. Main Properties), p. 7 (4.2. Comparisons with Previous Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

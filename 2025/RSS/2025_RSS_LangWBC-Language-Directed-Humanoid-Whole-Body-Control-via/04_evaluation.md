@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p065.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p065.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p065.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p065.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Fig. 9. Latent Space Interpolation: CLIP+CVAE ys. CLIP. Alone ‘Comparison of motion quality when iterpolting between forward and side- ‘ways walking. The CLIPSCVAE model ... | p. 9 (Figure/Table caption) |
 
@@ -54,7 +54,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct extensive experiments to evaluate our framework for language-directed humanoid whole-body control with 4 Unitree GI humanoid robot. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | Finally, we showcase a complex LLM-guided compositional task, illustrating the full capabilities of LangWBC. | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 6 (B. Latent Space Analysis) |
@@ -151,7 +151,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 - **p. 8 / C. Generalization to Unseen Texts - extractive body cue:** Moreover, the robot's movement stays agile and stable, demonstrating the framework's robustness to unseen latent codes,
 - **p. 8 / C. Generalization to Unseen Texts - extractive body cue:** ‘dynamics of humanoid motion, achieving smooth and coherent transitions ~ such as running, stopping, and switching to limb ‘movements - within a single policy, without ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (B. Latent Space Analysis), p. 7 (B. Latent Space Analysis), metrics p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 7 (B. Latent Space Analysis), baselines p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 9 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (B. Latent Space Analysis), p. 7 (B. Latent Space Analysis), metrics p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 7 (B. Latent Space Analysis), baselines p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 9 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We conduct extensive experiments to evaluate our framework for language-directed humanoid whole-body control with 4 Unitree GI humanoid robot. (p. 5, IV. EXPERIMENTS).
+- **Metric evidence:** We begin with an overview and demonstrate diverse motions enabled by our approach. (p. 5, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** We then analyze the learned latent space and its contribution to the policy's generalization to unseen commands, highlight key features such as smooth transitions and latent interpolation, and follow up ... (p. 5, IV. EXPERIMENTS).
+- **Failure/negative evidence:** CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP policy struggles to generalize from. (p. 7, C. Generalization to Unseen Texts).

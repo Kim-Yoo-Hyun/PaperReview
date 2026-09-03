@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (Dataset), p. 4 (Dataset)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | We find that history-dependent models can be extremely effective in learning from single and multi-human datasets while state-of-the-art batch RL algorithms struggle ... | p. 2 (1 Introduction), p. 3 (Dataset) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Unlike traditional supervised learning, where model selection can be achieved by using the model with the lowest validation loss [21], offline policy ... | p. 3 (Dataset), p. 4 (Dataset) |
@@ -133,8 +133,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 3 (Dataset), p. 4 (Dataset)
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 3 (Dataset), p. 4 (Dataset), p. 3 (Dataset), p. 1 (Abstract), p. 2 (1 Introduction), objective p. 3 (Dataset), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (Dataset), p. 5 (Dataset), temporal p. 7 (4 Experiments), p. 5 (Dataset), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 3 (Dataset), p. 4 (Dataset), p. 3 (Dataset), p. 1 (Abstract), p. 2 (1 Introduction), objective p. 3 (Dataset), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (Dataset), p. 5 (Dataset), temporal p. 7 (4 Experiments), p. 5 (Dataset), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We find that history-dependent models can be extremely effective in learning from single and multi-human datasets while state-of-the-art batch RL algorithms struggle to learn from such datasets, and that the ... (p. 2, 1 Introduction).
+- **Objective/update evidence:** Unlike traditional supervised learning, where model selection can be achieved by using the model with the lowest validation loss [21], offline policy learning often suffers from the fact that the ... (p. 3, Dataset).
+- **Temporal/runtime evidence:** Observation history is crucial for good performance. (p. 5, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

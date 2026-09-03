@@ -1,7 +1,7 @@
 # MimicPlay: Long-Horizon Imitation Learning by Watching Human Play
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2302.12422.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2302.12422.
 > PDF retrieval source: https://arxiv.org/pdf/2302.12422. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2302.12422
 - Code/Project: https://mimic-play.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +83,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.를 문제로 두고, To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that trains a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 14 (A Implementation details), p. 14 (A Implementation details), p. 7 (5 Results) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge. (p. 1, 1 Introduction).
+- **Actual contribution:** To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Therefore, in this experiment, we use the same teleoperated robot play dataset to train both high-level planner and low-level controller, and report the results of Ours (0% human) and baselines ... (p. 15, C Supplementary Experiment Results).
+- **Explicit failure boundary:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. (p. 7, 5 Results).

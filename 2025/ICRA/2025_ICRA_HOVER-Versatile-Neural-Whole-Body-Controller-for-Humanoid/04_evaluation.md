@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/lpr/publication/he2025hover/; PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/he2025hover/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/lpr/publication/he2025hover/; PDF retrieval source: https://research.nvidia.com/labs/lpr/publication/he2025hover/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | III. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | In this section, we present extensive experimental results in both IsaacGym [23] and the real-world Unitree H1 [24] robot to address the following questions: ... | p. 4 (III. EXPERIMENT) |
 | III. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results show that HOVER achieves consistently lower tracking error across 32/32 metrics and modes. | p. 5 (III. EXPERIMENT) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this section, we present extensive experimental results in both IsaacGym [23] and the real-world Unitree H1 [24] robot to address the following questions: ... | embodiment, simulator version and control stack | p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT) |
 | Task/environment | Real-World Evaluation To address Q3 (does HOVER transfer to real-world hardware and execute versatile multi-mode control?), we conduct quantitative tracking experiments and locomotion tests ... | reset, timeout, object/scene variation | p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT) |
@@ -151,7 +151,16 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 - **p. 6 / V. CONCLUSIONS - extractive body cue:** Future work will explore further developing an automated mode-switching module for real-world applications.
 - **p. 6 / III. EXPERIMENT - extractive body cue:** The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios (e.g., when there are occlusions in the ...
 
-- **PDF anchors reviewed:** datasets p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), metrics p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENT), p. 2 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), baselines p. 5 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 2 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), metrics p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENT), p. 2 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), baselines p. 5 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 2 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** In this section, we present extensive experimental results in both IsaacGym [23] and the real-world Unitree H1 [24] robot to address the following questions: • Q1: Can HOVER as a ... (p. 4, III. EXPERIMENT).
+- **Metric evidence:** We scale the tracking error via Emax-E(.) Emax-Emin for visualization, where larger radar webs indicate better tracking performance. (p. 5, III. EXPERIMENT).
+- **Baseline/ablation evidence:** In every command mode, HOVER outperforms prior work specialist controllers in at least 7 out of the 12 metrics, as highlighted by the bold values in Table III. (p. 5, III. EXPERIMENT).
+- **Failure/negative evidence:** The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios (e.g., when there are occlusions in the reference motions). (p. 6, III. EXPERIMENT).

@@ -1,53 +1,75 @@
 # Insights — SaPaVe: Towards Active Perception and Manipulation in Vision-Language Action Models for Robotics
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We compare our method against several strong baselines: (1) In the first experiment, we compare our model with current powerful VLM, including the general models (e.g., Qwen2.5-VL-72B , ...
-- **Problem cue:** Existing methods struggle to unify semantic-driven perception actively with robust, viewpoint-invariant execution accordingly.
-- **Claim/result cue:** Extensive experiments in both simulation and real-world settings show that SaPaVe outperforms recent VLA models such as GR00T N1 and π0 , achieving up to 31.25% higher success ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: • We propose SaPaVe, a novel end-to-end framework that first achieves active manipulation with a bottom-up learning strategy in ...
+- **p. 2 / 1. Introduction - extractive body cue:** To address the limitations of fixed-viewpoint manipulation evaluation, we introduce the first simulated active manipulation benchmark, featuring 12 richly annotated tasks across 100 objects and ...
+- **p. 4 / Model - extractive body cue:** To bridge this gap, we propose Universal Spatial Knowledge Injection, which efficiently leverages as much 3D information as possible to directly optimize the action output.
+- **p. 4 / Model - extractive body cue:** Therefore, we propose Decoupled Action Heads and Camera Adapter to enable our model to acquire rich semantic active perception priors and retain general manipulation knowledge ...
+- **p. 5 / 3.3. Two-Stage Training Strategy - extractive body cue:** To fill this gap, we propose a large-scale, high-quality dataset, ActiveViewPose-200K, comprising 200k image-language and camera movement pairs (see Sec.
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** Given an observation Ot ∈O and a language instruction L ∈L, the policy predicts a joint action trajectory At = {Ahead,t, Aother,t} ∈A.
+- **p. 3 / 3.2. Architecture - extractive body cue:** First, directly adding camera movement into the existing VLA action space would break the large-scale fixed-view manipulation priors learned from previous training.
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (Model), p. 4 (Model), p. 5 (3.3. Two-Stage Training Strategy), p. 3 (3.1. Problem Formulation)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** However, this discretization hinders fine-grained camera control and manipulation, as it fails to connect high-level semantics with the continuous camera pose space.
+- **p. 2 / 1. Introduction - extractive body cue:** To address the limitations of fixed-viewpoint manipulation evaluation, we introduce the first simulated active manipulation benchmark, featuring 12 richly annotated tasks across 100 objects and ...
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** Unlike prior works that unify camera motion and manipulation into a single action space, we decouple them and propose a two-stage learning strategy for active ...
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** At each timestep t, the observation Ot comprises the current RGB image It ∈RH×W ×3 and optional 3D geometric information Gt (e.g., depth maps and ...
+- **p. 7 / 4.4. Comparison with existing VLA models - extractive body cue:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.
+- **p. 7 / 4.3. Fixed and Dynamic Cameras Evaluation - extractive body cue:** This result indicates that a fixed camera greatly limits the model's ability to explore the accessible space, leading to failures for active manipulation.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
+- **Boundary to test:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In summary, our contributions are threefold: • We propose SaPaVe, a novel end-to-end framework that first achieves active manipulation with a bottom-up learning strategy in a data-efficient way. • We introduce ActiveViewPose-200K, ... | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Table 3. Performance on active manipulation in real-world set- tings. We report the success rate (%) compared to the existing VLA models. Our approach achieves the best performance. | p. 7 (Figure/Table caption), p. 1 (Figure/Table caption) |
+| Failure/limitation | Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors. | p. 7 (4.4. Comparison with existing VLA models), p. 7 (4.3. Fixed and Dynamic Cameras Evaluation) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `VLA, active perception, Robotics` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Language-conditioned perception을 바로 action/policy token으로 연결하는 방식을 3D object state, affordance, contact-aware manipulation으로 확장할 수 있다.
-  - 2D image 중심 VLA가 놓치는 pose, metric distance, occlusion을 3D representation이나 scene memory로 보강하는 연구 질문으로 이어진다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
+- 이 논문의 재사용 가능한 지점은 Given an observation Ot ∈O and a language instruction L ∈L, the policy predicts a joint action trajectory At = {Ahead,t, Aother,t} ∈A.를 SaPaVe can process RGB images and task instructions and output camera movement and manipulation actions in a decoupled action space.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are threefold: • We propose SaPaVe, a novel end-to-end framework that first achieves active manipulation with a bottom-up learning strategy in a data-efficient way. • We introduce ActiveViewPose-200K, ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `VLA and Generalist Robot Policies`; tags: `VLA, active perception, Robotics`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Extensive experiments in both simulation and real-world settings show that SaPaVe outperforms recent VLA models such as GR00T N1 and π0 , achieving up to 31.25% higher success ...
-  - robot action까지 보인 경우에도 3D state grounding, closed-loop correction, force/tactile feedback, unseen embodiment generalization은 별도 검증이 필요하다.
+- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `VLA, active perception, Robotics`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: Objaverse / success rate
-  - 내 연구 확장 benchmark 후보: CALVIN, LIBERO, RLBench, Open X-Embodiment
-  - 내 연구 확장 metric 후보: success rate, task completion, generalization gap, collision
-  - 검증 초점: language-conditioned manipulation success, unseen object/task generalization, closed-loop recovery를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Pick-and-Place Pick-and-Place Arti-Manip Arti-Manip π0 [6] 55 45 45 35 45.00 GR00T-N1 [5] 60 55 50 50 53.75 Ours 90 85 85 80 85.00 robot teleoperated dataset, including 4 task categories: Occluded/Out-of-View ....
+3. Compare against the body-reported baseline or a matched simpler baseline: Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints to reveal task-critical cues in cluttered ....
+4. Report the body metric and its denominator/aggregation: For all experiments, we report the success rate..
+5. Re-run the body-reported ablation/failure condition: We conduct a series of ablation experiments on 4 real-world tasks to evaluate the effectiveness of different components in our method..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 3 (3.2. Architecture); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Semantic Active Perception Evaluation); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-3D geometry token을 VLA policy에 넣을 때 action success와 language following 중 어느 부분이 실제로 개선되는가?
+고정된 observation/action/data/compute budget에서 summary, contributions, threefold mechanism이 Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception ... 대비 For all experiments, we report the success rate.을 개선하고, Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

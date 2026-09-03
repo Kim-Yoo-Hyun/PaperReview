@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=FcTeo26AfZ; PDF retrieval source: https://openreview.net/pdf/6306d082de46d27c14c27436e4597009a5c8371a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=FcTeo26AfZ; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167696. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method),
 
 ## Method Body Digest
 
-- **p. 3 / 3. Method - extractive PDF cue:** Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the encoded language utterance; ...
-- **p. 4 / 3. Method - extractive PDF cue:** The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language - query attentions ...
-- **p. 4 / 3. Method - extractive PDF cue:** The refined queries after each decoder layer Q(i+1) = X(i+1) 1:M are then used for mask prediction with the updated visual features and for language ...
-- **p. 3 / 3. Method - extractive PDF cue:** The model takes as input a language query, N RGB images of shape N × H × W × 3, and an associated 3D pointmap ...
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** To address this, we introduce a novel box loss.
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** For ablations in Table 7 and 5, we use a 88M parameter Swin (Liu et al., 2021) image-encoder.
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** We incorporate this box loss as an additional cost in both Hungarian matching and the final loss.
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** Box Loss: We observe a failure mode in our model where, when trained with the aforementioned objectives, some masks include a small number of distant, ...
+- **p. 3 / 3. Method - extractive body cue:** Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the encoded language utterance; ...
+- **p. 4 / 3. Method - extractive body cue:** The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language - query attentions ...
+- **p. 4 / 3. Method - extractive body cue:** The refined queries after each decoder layer Q(i+1) = X(i+1) 1:M are then used for mask prediction with the updated visual features and for language ...
+- **p. 3 / 3. Method - extractive body cue:** The model takes as input a language query, N RGB images of shape N × H × W × 3, and an associated 3D pointmap ...
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** To address this, we introduce a novel box loss.
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** For ablations in Table 7 and 5, we use a 88M parameter Swin (Liu et al., 2021) image-encoder.
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** We incorporate this box loss as an additional cost in both Hungarian matching and the final loss.
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** Box Loss: We observe a failure mode in our model where, when trained with the aforementioned objectives, some masks include a small number of distant, ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are: • Unified 2D-3D Visual Grounding: We propose a model that can consume and benefit from both 2D and 3D vision-language ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** In this paper, we introduce UniVLG, a unified 2D-3D visionlanguage model designed to improve 3D understanding by leveraging large-scale 2D data and pre-trained 2D models.
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** To address this, we introduce a novel box loss.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • Unified 2D-3D Visual Grounding: We propose a model that can consume and benefit from both 2D and 3D vision-language ...
+- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we introduce UniVLG, a unified 2D-3D visionlanguage model designed to improve 3D understanding by leveraging large-scale 2D data and pre-trained 2D models.
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** To address this, we introduce a novel box loss.
 
 ## Source Evidence Cues
 
-- **p. 3 / 3. Method - extractive PDF cue:** Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the encoded language utterance; ...
-- **p. 4 / 3. Method - extractive PDF cue:** The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language - query attentions ...
-- **p. 4 / 3. Method - extractive PDF cue:** The refined queries after each decoder layer Q(i+1) = X(i+1) 1:M are then used for mask prediction with the updated visual features and for language ...
-- **p. 3 / 3. Method - extractive PDF cue:** The model takes as input a language query, N RGB images of shape N × H × W × 3, and an associated 3D pointmap ...
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** To address this, we introduce a novel box loss.
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** For ablations in Table 7 and 5, we use a 88M parameter Swin (Liu et al., 2021) image-encoder.
+- **p. 3 / 3. Method - extractive body cue:** Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the encoded language utterance; ...
+- **p. 4 / 3. Method - extractive body cue:** The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language - query attentions ...
+- **p. 4 / 3. Method - extractive body cue:** The refined queries after each decoder layer Q(i+1) = X(i+1) 1:M are then used for mask prediction with the updated visual features and for language ...
+- **p. 3 / 3. Method - extractive body cue:** The model takes as input a language query, N RGB images of shape N × H × W × 3, and an associated 3D pointmap ...
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** To address this, we introduce a novel box loss.
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** For ablations in Table 7 and 5, we use a 88M parameter Swin (Liu et al., 2021) image-encoder.
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the ... | p. 3 (3. Method), p. 4 (3. Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language ... | p. 4 (3. Method), p. 4 (3. Method) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method),
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** We incorporate this box loss as an additional cost in both Hungarian matching and the final loss.
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** Box Loss: We observe a failure mode in our model where, when trained with the aforementioned objectives, some masks include a small number of distant, ...
-- **p. 3 / 3. Method - extractive PDF cue:** In datasets such as ScanNet, we obtain the 3D pointmap by unprojecting the sensed depth images using the camera parameters and standard pinhole-camera equations.
-- **p. 4 / 3. Method - extractive PDF cue:** Next, the visual tokens from the backbone are updated by crossattending to the updated object and text tokens.
-- **p. 4 / 3. Method - extractive PDF cue:** The refined queries after each decoder layer Q(i+1) = X(i+1) 1:M are then used for mask prediction with the updated visual features and for language ...
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** We incorporate this box loss as an additional cost in both Hungarian matching and the final loss.
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** Box Loss: We observe a failure mode in our model where, when trained with the aforementioned objectives, some masks include a small number of distant, ...
+- **p. 3 / 3. Method - extractive body cue:** In datasets such as ScanNet, we obtain the 3D pointmap by unprojecting the sensed depth images using the camera parameters and standard pinhole-camera equations.
+- **p. 4 / 3. Method - extractive body cue:** Next, the visual tokens from the backbone are updated by crossattending to the updated object and text tokens.
+- **p. 4 / 3. Method - extractive body cue:** The refined queries after each decoder layer Q(i+1) = X(i+1) 1:M are then used for mask prediction with the updated visual features and for language ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.1. Supervision Objective), p. 3 (3. Method), p. 5 (3.1. Supervision Objective), p. 4 (3. Method), p. 4 (3. Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method),
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** (D) Example task inputs/outputs for UniVLG. on both visual features and language instructions to ground objects mentioned in the language input.
-- **p. 3 / 3. Method - extractive PDF cue:** Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the encoded language utterance; ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Unlike models that operate directly on 3D point clouds, UniVLG processes RGB and RGB-D images-natural sensory inputs for embodied agents-and supports both single-view RGB images ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are: • Unified 2D-3D Visual Grounding: We propose a model that can consume and benefit from both 2D and 3D vision-language ...
-- **p. 3 / 3. Method - extractive PDF cue:** The model takes as input a language query, N RGB images of shape N × H × W × 3, and an associated 3D pointmap ...
-- **p. 4 / 3. Method - extractive PDF cue:** The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language - query attentions ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Today's real-world embodied systems rely on depth sensors and egocentric, calibrated camera setups for navigation and interaction with their surroundings (Ahn et al., 2022; Chiang ...
+- **p. 2 / 1. Introduction - extractive body cue:** (D) Example task inputs/outputs for UniVLG. on both visual features and language instructions to ground objects mentioned in the language input.
+- **p. 3 / 3. Method - extractive body cue:** Language Conditioned Mask Decoder: The mask decoder head takes as input the encoded visual features, their corresponding (relative) 3D coordinates, and the encoded language utterance; ...
+- **p. 1 / 1. Introduction - extractive body cue:** Unlike models that operate directly on 3D point clouds, UniVLG processes RGB and RGB-D images-natural sensory inputs for embodied agents-and supports both single-view RGB images ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • Unified 2D-3D Visual Grounding: We propose a model that can consume and benefit from both 2D and 3D vision-language ...
+- **p. 3 / 3. Method - extractive body cue:** The model takes as input a language query, N RGB images of shape N × H × W × 3, and an associated 3D pointmap ...
+- **p. 4 / 3. Method - extractive body cue:** The proposed decoder then iteratively updates a set of learnable queries as well as the 3D feature tokens though token - language - query attentions ...
+- **p. 1 / 1. Introduction - extractive body cue:** Today's real-world embodied systems rely on depth sensors and egocentric, calibrated camera setups for navigation and interaction with their surroundings (Ahn et al., 2022; Chiang ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,9 +88,9 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method),
 
 ## Training vs Inference
 
-- **p. 6 / 4.1. Evaluation on 3D Referential Grounding - extractive PDF cue:** Similarly, PQ3D adds the Multi3DRefer (Zhang et al., 2023) and Scan2Cap datasets (Chen et al., 2020b), but also utilizes a point encoder that was trained ...
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** Implementation details: UniVLG consists of 108M trainable parameters along with a frozen 220M parameter textencoder (Koukounas et al., 2024) and a 304M parameter image-encoder (Oquab ...
-- **p. 5 / 3.1. Supervision Objective - extractive PDF cue:** We train in data-parallel across 32 A100 80G GPUs with an effective batch size of 64.
+- **p. 6 / 4.1. Evaluation on 3D Referential Grounding - extractive body cue:** Similarly, PQ3D adds the Multi3DRefer (Zhang et al., 2023) and Scan2Cap datasets (Chen et al., 2020b), but also utilizes a point encoder that was trained ...
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** Implementation details: UniVLG consists of 108M trainable parameters along with a frozen 220M parameter textencoder (Koukounas et al., 2024) and a 304M parameter image-encoder (Oquab ...
+- **p. 5 / 3.1. Supervision Objective - extractive body cue:** We train in data-parallel across 32 A100 80G GPUs with an effective batch size of 64.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method),
 
 ## Failure and Ablation Link
 
-- **p. 8 / 1. Lifting 2D datasets to 3D improves 3D performance - extractive PDF cue:** In Table 6, we compare three variants of our model: one trained only on 3D data, one trained with 3D data and 2D images without ...
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Table 11. Ablation of visual backbones on 3D language grounding. We evaluate top-1 accuracy on the official validation set without assuming ground-truth proposals (Det).
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Table 10. Effect of Fine-tuning 2D backbones of UniVLG for Acc@25 in DetSetup. SR3D and NR3D are in-domain and Scan- Refer is out-of-domain
-- **p. 7 / 4.2. Evaluation on Out-of-Domain 3D Referential - extractive PDF cue:** We show the results of our model, both a 3D-only variant and our full model w/2D data + lifting in Table 2.
-- **p. 7 / 4.1. Evaluation on 3D Referential Grounding - extractive PDF cue:** Even without our joint 2D training strategy-and with less 3D data than prior methods-UniVLG-3D-only significantly outperforms all prior methods.
-- **p. 8 / 4.4. Evaluation on 2D Referential Grounding - extractive PDF cue:** As we show in our experiments, this approach leads to significant improvements in 3D performance without negatively affecting 2D performance.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 7. Ablations Acc@25 in DetSetup
+- **p. 8 / 1. Lifting 2D datasets to 3D improves 3D performance - extractive body cue:** In Table 6, we compare three variants of our model: one trained only on 3D data, one trained with 3D data and 2D images without ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Table 11. Ablation of visual backbones on 3D language grounding. We evaluate top-1 accuracy on the official validation set without assuming ground-truth proposals (Det).
+- **p. 17 / Figure/Table caption - extractive body cue:** Table 10. Effect of Fine-tuning 2D backbones of UniVLG for Acc@25 in DetSetup. SR3D and NR3D are in-domain and Scan- Refer is out-of-domain
+- **p. 7 / 4.2. Evaluation on Out-of-Domain 3D Referential - extractive body cue:** We show the results of our model, both a 3D-only variant and our full model w/2D data + lifting in Table 2.
+- **p. 7 / 4.1. Evaluation on 3D Referential Grounding - extractive body cue:** Even without our joint 2D training strategy-and with less 3D data than prior methods-UniVLG-3D-only significantly outperforms all prior methods.
+- **p. 8 / 4.4. Evaluation on 2D Referential Grounding - extractive body cue:** As we show in our experiments, this approach leads to significant improvements in 3D performance without negatively affecting 2D performance.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 7. Ablations Acc@25 in DetSetup
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method), p. 3 (3. Method), p. 5 (3.1. Supervision Objective), p. 5 (3.1. Supervision Objective), objective p. 5 (3.1. Supervision Objective), p. 5 (3.1. Supervision Objective), p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method), temporal p. 5 (3.1. Supervision Objective), p. 4 (3. Method), p. 4 (3. Method), p. 5 (3.1. Supervision Objective), p. 2 (1. Introduction), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method), p. 3 (3. Method), p. 5 (3.1. Supervision Objective), p. 5 (3.1. Supervision Objective), objective p. 5 (3.1. Supervision Objective), p. 5 (3.1. Supervision Objective), p. 3 (3. Method), p. 4 (3. Method), p. 4 (3. Method), temporal p. 5 (3.1. Supervision Objective), p. 4 (3. Method), p. 4 (3. Method), p. 5 (3.1. Supervision Objective), p. 2 (1. Introduction), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

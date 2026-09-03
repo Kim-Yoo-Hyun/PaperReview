@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.04382; PDF retrieval source: https://arxiv.org/pdf/2205.04382. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.04382; PDF retrieval source: https://arxiv.org/pdf/2205.04382. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,8 +21,8 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose to separate this problem into one of "affordance learning" and "motion planning." If a robot can predict the potential ...
 - **p. 2 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** We first present the theoretical grounding behind the intuition of our method, and we slowly relax assumptions and approximations to create a system that articulates ...
 
 ## Source Evidence Cues
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction ... | p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | During each step of training, we select an object in the dataset, randomize the state S of the object, and compute a ... | p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE) |
@@ -64,7 +64,7 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 |---|---|---|---|
 | Input/observation | General, Policy, Articulation, Flow, Algorithm, FlowBot3D, manipulation, Require, parameters, trained, prediction, network, Initial, observation | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
 | State/latent | General, Policy, Articulation, Flow, Algorithm, FlowBot3D, manipulation, Require, parameters, trained | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | Without, knowledge, policies, neither, operate, applied, novel, categories, Equal, contribution | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Action/output | present, FlowBot3D, deep, visionbased, robotic, system, predicts, dense, per-point, motion | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
 | Objective/constraint | objective, choose, contact, point, force, direction, maximizes, acceleration, articulation, child | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -85,7 +85,7 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Thus, the optimal policy to articulate a prismatic joint is to select any point on the surface and apply a force parallel ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | 2) Articulation Execution: At each time step t, we record a new observation Ot and estimate the current flow ˆFt. | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | An Idealized Policy Based On Dynamics and Kinematics The articulated objects we consider in this work are generally objects that 1) consist ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -132,8 +132,17 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), objective p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), temporal p. 3 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE).
+- **Evidence anchors reviewed:** method p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), objective p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), temporal p. 3 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** A General Policy using 3D Articulation Flow Algorithm 1 The FlowBot3D articulation manipulation policy Require: θ ←parameters of a trained flow prediction network (O0) ←Initial observation ˆF0 ←fθ(O0, [M0]), Predict ... (p. 4, III. METHOD - FROM THEORY TO PRACTICE).
+- **Objective/update evidence:** During each step of training, we select an object in the dataset, randomize the state S of the object, and compute a new supervised pair (OS, FS), which we use ... (p. 5, III. METHOD - FROM THEORY TO PRACTICE).
+- **Temporal/runtime evidence:** This process repeats in a closed loop fashion until the object has been fully-articulated, a max number of steps has been exceeded, or the episode is otherwise terminated. (p. 4, III. METHOD - FROM THEORY TO PRACTICE).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

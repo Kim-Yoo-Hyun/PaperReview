@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kxVjQhkAWz; PDF retrieval source: https://openreview.net/pdf/f8af5ab61a9d33b6aaa32fa274fb76ff5e2fd0dd.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kxVjQhkAWz; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247872. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Method Body Digest
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** (2025a;b), we first employ a sharedweight encoder to process input image sequences and extract image features Feai, which are then fed into the decoder.
-- **p. 6 / 3 METHOD - extractive PDF cue:** Suppose ˆ M = (i, j) is the set of ground-truth correspondences where the ith pixel in the first image matches the jth pixel in ...
-- **p. 8 / 3 METHOD - extractive PDF cue:** In practice, we first compute matches in a one-versus-all strategy using our model, and then triangulate these matches to obtain multi-view point clouds, following the ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** Given the need to predict a wider range of geometric outputs, this design also significantly reduces memory and computational overhead, keeping the training and inference ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** For a predicted camera, we use the local 3D regression loss to quantify the pointmap in its own coordinate frame.
-- **p. 7 / 3 METHOD - extractive PDF cue:** To further improve the performance of Dens3R on high-resolution inputs, we introduce a coarse-tofine training strategy.
-- **p. 6 / 3 METHOD - extractive PDF cue:** This loss function simultaneously optimizes for two objectives.
+- **p. 7 / 3 METHOD - extractive body cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
+- **p. 5 / 3 METHOD - extractive body cue:** (2025a;b), we first employ a sharedweight encoder to process input image sequences and extract image features Feai, which are then fed into the decoder.
+- **p. 6 / 3 METHOD - extractive body cue:** Suppose ˆ M = (i, j) is the set of ground-truth correspondences where the ith pixel in the first image matches the jth pixel in ...
+- **p. 8 / 3 METHOD - extractive body cue:** In practice, we first compute matches in a one-versus-all strategy using our model, and then triangulate these matches to obtain multi-view point clouds, following the ...
+- **p. 5 / 3 METHOD - extractive body cue:** Given the need to predict a wider range of geometric outputs, this design also significantly reduces memory and computational overhead, keeping the training and inference ...
+- **p. 6 / 3 METHOD - extractive body cue:** For a predicted camera, we use the local 3D regression loss to quantify the pointmap in its own coordinate frame.
+- **p. 7 / 3 METHOD - extractive body cue:** To further improve the performance of Dens3R on high-resolution inputs, we introduce a coarse-tofine training strategy.
+- **p. 6 / 3 METHOD - extractive body cue:** This loss function simultaneously optimizes for two objectives.
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** For the training strategy, we propose a novel two-staged approach.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** In contrast, our method allows the communication between 3D geometric representation and normal prediction without known camera poses.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In this paper, we present Dens3R, a foundation model for high-quality geometric prediction.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** For the training strategy, we propose a novel two-staged approach.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** In contrast, our method allows the communication between 3D geometric representation and normal prediction without known camera poses.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we present Dens3R, a foundation model for high-quality geometric prediction.
 
 ## Source Evidence Cues
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** (2025a;b), we first employ a sharedweight encoder to process input image sequences and extract image features Feai, which are then fed into the decoder.
-- **p. 6 / 3 METHOD - extractive PDF cue:** Suppose ˆ M = (i, j) is the set of ground-truth correspondences where the ith pixel in the first image matches the jth pixel in ...
-- **p. 8 / 3 METHOD - extractive PDF cue:** In practice, we first compute matches in a one-versus-all strategy using our model, and then triangulate these matches to obtain multi-view point clouds, following the ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** Given the need to predict a wider range of geometric outputs, this design also significantly reduces memory and computational overhead, keeping the training and inference ...
-- **p. 6 / 3 METHOD - extractive PDF cue:** For a predicted camera, we use the local 3D regression loss to quantify the pointmap in its own coordinate frame.
-- **p. 7 / 3 METHOD - extractive PDF cue:** To further improve the performance of Dens3R on high-resolution inputs, we introduce a coarse-tofine training strategy.
+- **p. 7 / 3 METHOD - extractive body cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
+- **p. 5 / 3 METHOD - extractive body cue:** (2025a;b), we first employ a sharedweight encoder to process input image sequences and extract image features Feai, which are then fed into the decoder.
+- **p. 6 / 3 METHOD - extractive body cue:** Suppose ˆ M = (i, j) is the set of ground-truth correspondences where the ith pixel in the first image matches the jth pixel in ...
+- **p. 8 / 3 METHOD - extractive body cue:** In practice, we first compute matches in a one-versus-all strategy using our model, and then triangulate these matches to obtain multi-view point clouds, following the ...
+- **p. 5 / 3 METHOD - extractive body cue:** Given the need to predict a wider range of geometric outputs, this design also significantly reduces memory and computational overhead, keeping the training and inference ...
+- **p. 6 / 3 METHOD - extractive body cue:** For a predicted camera, we use the local 3D regression loss to quantify the pointmap in its own coordinate frame.
+- **p. 7 / 3 METHOD - extractive body cue:** To further improve the performance of Dens3R on high-resolution inputs, we introduce a coarse-tofine training strategy.
 - **Detected method headings:** 3 METHOD (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction ... | p. 7 (3 METHOD), p. 5 (3 METHOD) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | (2025a;b), we first employ a sharedweight encoder to process input image sequences and extract image features Feai, which are then fed into ... | p. 5 (3 METHOD), p. 6 (3 METHOD) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Objective / Update Rule
 
-- **p. 6 / 3 METHOD - extractive PDF cue:** This loss function simultaneously optimizes for two objectives.
-- **p. 6 / 3 METHOD - extractive PDF cue:** With the above losses, we summarize the training objective as: Lstage1 = Lpts loc + η1Lpts glb + η2Lpts n + η3Lmatch, (8) where the ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** However, naively removing the loss without additional constraints leads to degraded performance, since previous models rely heavily on confidence weighting for point-view regression.
-- **p. 7 / 3 METHOD - extractive PDF cue:** The complete training objective for training stage 2 is as follows: Lstage2 = Lpts loc + λ1Lpts glb + λ2Lpts n + λ3Ln, (11) where ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** (2024), we adopted (1) local 3D regression loss Lpts loc , (2) Global 3D Regression Loss Lpts glb , (3) Pointmap Normal Loss Lpts n, ...
-- **p. 8 / 3 METHOD - extractive PDF cue:** (2024), and is trained jointly within our multitask objective.
+- **p. 6 / 3 METHOD - extractive body cue:** This loss function simultaneously optimizes for two objectives.
+- **p. 6 / 3 METHOD - extractive body cue:** With the above losses, we summarize the training objective as: Lstage1 = Lpts loc + η1Lpts glb + η2Lpts n + η3Lmatch, (8) where the ...
+- **p. 7 / 3 METHOD - extractive body cue:** However, naively removing the loss without additional constraints leads to degraded performance, since previous models rely heavily on confidence weighting for point-view regression.
+- **p. 7 / 3 METHOD - extractive body cue:** The complete training objective for training stage 2 is as follows: Lstage2 = Lpts loc + λ1Lpts glb + λ2Lpts n + λ3Ln, (11) where ...
+- **p. 5 / 3 METHOD - extractive body cue:** (2024), we adopted (1) local 3D regression loss Lpts loc , (2) Global 3D Regression Loss Lpts glb , (3) Pointmap Normal Loss Lpts n, ...
+- **p. 8 / 3 METHOD - extractive body cue:** (2024), and is trained jointly within our multitask objective.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 8 (3 METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Observation–State–Action Interface
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** The normal prediction head is connected after the initial point map training is completed, allowing the model to consistently output coherent normal mappings from the ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** Given an image pair of image sequence (Ii)2 i=1 ∈R3×H×W , Dens3R's dense visual transformer is a function f that maps the input to a ...
-- **p. 4 / 1 INTRODUCTION - extractive PDF cue:** (2024) proposes to directly map two input images in a single forward pass, leading to a more straightforward geometry representation.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Therefore, the direct application of diffusion models in geometric regression tasks faces significant challenges, especially in such tasks where a strict one-to-one correspondence between input ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** Meanwhile, extending the model inputs to multi-view images in the inference stage significantly improves the overall inference quality.
-- **p. 7 / 3 METHOD - extractive PDF cue:** Apart from the intrinsic-invariant pointmap, we also design a normal head to predict the view-space normal of each frame in input image pairs.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** This raises a key issue: while image generation tasks typically benefit from their inherent ambiguity and multi-modal output characteristics, geometric prediction is fundamentally different.
+- **p. 7 / 3 METHOD - extractive body cue:** The normal prediction head is connected after the initial point map training is completed, allowing the model to consistently output coherent normal mappings from the ...
+- **p. 5 / 3 METHOD - extractive body cue:** Given an image pair of image sequence (Ii)2 i=1 ∈R3×H×W , Dens3R's dense visual transformer is a function f that maps the input to a ...
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** (2024) proposes to directly map two input images in a single forward pass, leading to a more straightforward geometry representation.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Therefore, the direct application of diffusion models in geometric regression tasks faces significant challenges, especially in such tasks where a strict one-to-one correspondence between input ...
+- **p. 5 / 3 METHOD - extractive body cue:** Meanwhile, extending the model inputs to multi-view images in the inference stage significantly improves the overall inference quality.
+- **p. 7 / 3 METHOD - extractive body cue:** Apart from the intrinsic-invariant pointmap, we also design a normal head to predict the view-space normal of each frame in input image pairs.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** This raises a key issue: while image generation tasks typically benefit from their inherent ambiguity and multi-modal output characteristics, geometric prediction is fundamentally different.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,11 +90,11 @@ PDF body method statement (p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Training vs Inference
 
-- **p. 7 / 3 METHOD - extractive PDF cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
-- **p. 5 / 3 METHOD - extractive PDF cue:** Given the need to predict a wider range of geometric outputs, this design also significantly reduces memory and computational overhead, keeping the training and inference ...
-- **p. 7 / 3 METHOD - extractive PDF cue:** To further improve the performance of Dens3R on high-resolution inputs, we introduce a coarse-tofine training strategy.
-- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive PDF cue:** As for model inference, our model only requires a single Nvidia RTX3090 GPU for 1024-resolution image inputs.
-- **p. 7 / 3 METHOD - extractive PDF cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
+- **p. 7 / 3 METHOD - extractive body cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
+- **p. 5 / 3 METHOD - extractive body cue:** Given the need to predict a wider range of geometric outputs, this design also significantly reduces memory and computational overhead, keeping the training and inference ...
+- **p. 7 / 3 METHOD - extractive body cue:** To further improve the performance of Dens3R on high-resolution inputs, we introduce a coarse-tofine training strategy.
+- **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** As for model inference, our model only requires a single Nvidia RTX3090 GPU for 1024-resolution image inputs.
+- **p. 7 / 3 METHOD - extractive body cue:** Specifically, we introduce high-quality normal supervision based on the first stage's point map, and jointly fine-tune the encoder-decoder module, point map prediction head, and newly ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Failure and Ablation Link
 
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared encoder-decoder ...
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. inputs ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Table 3: Normal quantitative metrics for ablation. We demonstrate that both the intrinsic-invariant training and coarse-to-fine strategy contributes to accurate normal predictions.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Our method achieves high-quality pointmap prediction and depth estimation with the intrinsic-invariant pointmap and the novel training strategy.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of Dens3R. We propose Dens3R, a dense visual transformer backbone featuring a shared encoder-decoder architecture and multiple task-specific heads for geometric prediction. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Normal comparison. We demonstrate that the normal derived directly from the scale- invariant pointmap and MoGe both are not accurate enough. tasks-particularly surface ...
-- **p. 19 / Figure/Table caption - extractive PDF cue:** Figure 8: Ablation and downstream applications. A.2 DOWNSTREAM APPLICATIONS Segmentation Head Training. Dens3R serves as a visual foundation model that can be finetuned for several ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared encoder-decoder ...
+- **p. 24 / Figure/Table caption - extractive body cue:** Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. inputs ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Table 3: Normal quantitative metrics for ablation. We demonstrate that both the intrinsic-invariant training and coarse-to-fine strategy contributes to accurate normal predictions.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Our method achieves high-quality pointmap prediction and depth estimation with the intrinsic-invariant pointmap and the novel training strategy.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of Dens3R. We propose Dens3R, a dense visual transformer backbone featuring a shared encoder-decoder architecture and multiple task-specific heads for geometric prediction. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Normal comparison. We demonstrate that the normal derived directly from the scale- invariant pointmap and MoGe both are not accurate enough. tasks-particularly surface ...
+- **p. 19 / Figure/Table caption - extractive body cue:** Figure 8: Ablation and downstream applications. A.2 DOWNSTREAM APPLICATIONS Segmentation Head Training. Dens3R serves as a visual foundation model that can be finetuned for several ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 8 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 8 (3 METHOD), temporal p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 8 (3 METHOD).
+- **Evidence anchors reviewed:** method p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 8 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 8 (3 METHOD), temporal p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 8 (3 METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

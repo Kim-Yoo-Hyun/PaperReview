@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** This dataset comprises all 10 real-world scenes with slight viewpoint variations from [17].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We collect two real-world datasets for the experiments, called Real-S and Real-L.
-- **p. 7 / 4.2. Results - extractive PDF cue:** Comparison with state-of-the-art methods on two real-world datasets.
-- **p. 7 / 4.2. Results - extractive PDF cue:** In contrast, the latter two rows depict results for a scene from the Real-L dataset, featuring large masks that roughly cover unwanted areas.
-- **p. 8 / 4.2. Results - extractive PDF cue:** However, by leveraging the geometry diffusion prior, the reconstructed scenes exhibit enhanced geometry quality.
-- **p. 8 / 4.2. Results - extractive PDF cue:** Real-S Real-L PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ (i) (Masked NeRF) 17.121 0.761 353.766 3.089 24.189 0.222 137.960 0.040 ...
-- **p. 7 / 4.2. Results - extractive PDF cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
-- **p. 8 / 4.2. Results - extractive PDF cue:** We begin with training a Masked-NeRF (i) as a baseline and progressively incorporate the core modules: (i) Masked-NeRF, namely training a NeRF only using the ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** This dataset comprises all 10 real-world scenes with slight viewpoint variations from [17].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We collect two real-world datasets for the experiments, called Real-S and Real-L.
+- **p. 7 / 4.2. Results - extractive body cue:** Comparison with state-of-the-art methods on two real-world datasets.
+- **p. 7 / 4.2. Results - extractive body cue:** In contrast, the latter two rows depict results for a scene from the Real-L dataset, featuring large masks that roughly cover unwanted areas.
+- **p. 8 / 4.2. Results - extractive body cue:** However, by leveraging the geometry diffusion prior, the reconstructed scenes exhibit enhanced geometry quality.
+- **p. 8 / 4.2. Results - extractive body cue:** Real-S Real-L PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ (i) (Masked NeRF) 17.121 0.761 353.766 3.089 24.189 0.222 137.960 0.040 ...
+- **p. 7 / 4.2. Results - extractive body cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
+- **p. 8 / 4.2. Results - extractive body cue:** We begin with training a Masked-NeRF (i) as a baseline and progressively incorporate the core modules: (i) Masked-NeRF, namely training a NeRF only using the ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Effect of different normal map generation methods. In the first column, we present the input image with a mask (black region) and ... | p. 5 (Figure/Table caption) |
 | 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our MVIP-NeRF achieves superior performance compared to other methods for several reasons. | p. 7 (4.2. Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** This dataset comprises all 10 real-world scenes with slight viewpoint variations from [17].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We collect two real-world datasets for the experiments, called Real-S and Real-L.
-- **p. 7 / 4.2. Results - extractive PDF cue:** Comparison with state-of-the-art methods on two real-world datasets.
-- **p. 7 / 4.2. Results - extractive PDF cue:** In contrast, the latter two rows depict results for a scene from the Real-L dataset, featuring large masks that roughly cover unwanted areas.
-- **p. 8 / 4.2. Results - extractive PDF cue:** However, by leveraging the geometry diffusion prior, the reconstructed scenes exhibit enhanced geometry quality.
-- **p. 8 / 4.2. Results - extractive PDF cue:** Real-S Real-L PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ (i) (Masked NeRF) 17.121 0.761 353.766 3.089 24.189 0.222 137.960 0.040 ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** This dataset comprises all 10 real-world scenes with slight viewpoint variations from [17].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We collect two real-world datasets for the experiments, called Real-S and Real-L.
+- **p. 7 / 4.2. Results - extractive body cue:** Comparison with state-of-the-art methods on two real-world datasets.
+- **p. 7 / 4.2. Results - extractive body cue:** In contrast, the latter two rows depict results for a scene from the Real-L dataset, featuring large masks that roughly cover unwanted areas.
+- **p. 8 / 4.2. Results - extractive body cue:** However, by leveraging the geometry diffusion prior, the reconstructed scenes exhibit enhanced geometry quality.
+- **p. 8 / 4.2. Results - extractive body cue:** Real-S Real-L PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ (i) (Masked NeRF) 17.121 0.761 353.766 3.089 24.189 0.222 137.960 0.040 ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison of our MVIP-NeRF with two state-of-the-art approaches, Remove-NeRF [35] and SPIn-NeRF [17]. Existing methods heavily depend on explicit RGB and depth inpainting ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method overview. Given posed RGB images with corresponding masks, depth maps (optional), and a text description, MVIP- NeRF can faithfully recover plausible textures ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Effect of different normal map generation methods. In the first column, we present the input image with a mask (black region) and the ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Effect of multi-view score distillation. The first row shows inpainting results without the multi-view score, while the second row shows the results with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Visual comparison with two representative approaches [17, 35] on two scenes. The first scene is from the Real-S dataset with accurate masks, while ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison with state-of-the-art methods on two real-world datasets. Our method is best compared to other novel-view synthesis baselines in inpainting the missing regions ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation analysis. Our method is best compared to different variants of our method in inpainting the missing regions of the scene. Columns show ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Comparison with CLIP guidances. The input text prompt is "Stone Stairs". For each method, we show two novel view ren- derings. Our method ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of our MVIP-NeRF with two state-of-the-art approaches, Remove-NeRF [35] and SPIn-NeRF [17]. Existing methods heavily depend on explicit RGB and depth inpainting ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method overview. Given posed RGB images with corresponding masks, depth maps (optional), and a text description, MVIP- NeRF can faithfully recover plausible textures ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Effect of different normal map generation methods. In the first column, we present the input image with a mask (black region) and the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Effect of multi-view score distillation. The first row shows inpainting results without the multi-view score, while the second row shows the results with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visual comparison with two representative approaches [17, 35] on two scenes. The first scene is from the Real-S dataset with accurate masks, while ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison with state-of-the-art methods on two real-world datasets. Our method is best compared to other novel-view synthesis baselines in inpainting the missing regions ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation analysis. Our method is best compared to different variants of our method in inpainting the missing regions of the scene. Columns show ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Comparison with CLIP guidances. The input text prompt is "Stone Stairs". For each method, we show two novel view ren- derings. Our method ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This dataset comprises all 10 real-world scenes with slight viewpoint variations from [17]. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | We collect two real-world datasets for the experiments, called Real-S and Real-L. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 | Primary metric/result | Our MVIP-NeRF achieves superior performance compared to other methods for several reasons. | numeric claim only at cited anchor | p. 7 (4.2. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** It is also important to note that both RGB and depth images have been resized to 1008×567, aligning with the dimensions used in [17].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** This dataset, sourced from [35], comprises 16 scenes with large viewpoint variations.
-- **p. 5 / 3.4. Geometry Diffusion Prior - extractive PDF cue:** The first row shows inpainting results without the multi-view score, while the second row shows the results with the multi-view score (N = 5).
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** It is also important to note that both RGB and depth images have been resized to 1008×567, aligning with the dimensions used in [17].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** This dataset, sourced from [35], comprises 16 scenes with large viewpoint variations.
+- **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** The first row shows inpainting results without the multi-view score, while the second row shows the results with the multi-view score (N = 5).
 
 ## Generalization and Failure Cases
 
@@ -160,13 +160,13 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** However, our work has several limitations: (i) the use of diffusion priors for iterative detail recovery affects efficiency, (ii) our method requires effort to tune ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Technically, to ensure a valid and coherent recovery of both appearance and geometry, we employ diffusion priors to cooptimize the rendered RGB images and normal ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** One sequence includes the object, while the other does not, facilitating comprehensive evaluation and analysis.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** To assess geometric recovery, we compute the L2 errors between the depth maps rendered by our system and the (pseudo) ground-truth depth maps.
-- **p. 7 / 4.2. Results - extractive PDF cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
+- **p. 8 / 5. Conclusion - extractive body cue:** However, our work has several limitations: (i) the use of diffusion priors for iterative detail recovery affects efficiency, (ii) our method requires effort to tune ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Technically, to ensure a valid and coherent recovery of both appearance and geometry, we employ diffusion priors to cooptimize the rendered RGB images and normal ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** One sequence includes the object, while the other does not, facilitating comprehensive evaluation and analysis.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To assess geometric recovery, we compute the L2 errors between the depth maps rendered by our system and the (pseudo) ground-truth depth maps.
+- **p. 7 / 4.2. Results - extractive body cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), metrics p. 7 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Results), results p. 5 (Figure/Table caption), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.2. Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), metrics p. 7 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Results), results p. 5 (Figure/Table caption), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.2. Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

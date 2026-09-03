@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 It designs time-varying state-feedback controllers of the form un(x) = uff n + Kn(xn -xref n ) (8) where uff n is the feedforward control action and Kn a linear feedback controller ...를 The optimized control input obtained from the NMPC solver is then augmented with the output of two tracking controllers. instructions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 However, both parallel execution and vectorization cannot be leveraged automatically by standard compilers.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** While whole-body, contact invariant NMPC has been demonstrated on hardware before [15], the presented motions were rather slow or even quasi static, underlined by the fact that the authors do ... (p. 1, I. INTRODUCTION).
+- **Paper-specific mechanism:** In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Note that running only a single solver iteration before updating the state measurement results in better overall performance than running multiple iterations and letting the solver converge. (p. 5, VI. RESULTS); the relevant task/metric cue is The performance of our algorithms is assessed on both quadrupeds. (p. 5, VI. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Even placing planks under single feet does not deteriorate performance. (p. 5, VI. RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: While the robot does not always land perfectly, the MPC controller optimizes a trajectory from the current state and tries to get back as close as possible to the nominal state..
-3. Compare against the body-reported baseline or a matched simpler baseline: Compared to ANYmal the magnitude of the deviations is slightly larger..
-4. Report the body metric and its denominator/aggregation: Even placing planks under single feet does not deteriorate performance..
-5. Re-run the body-reported ablation/failure condition: The cost and sensitivity computation, which can be distributed among all available cores, is parallelizable for all our algorithm variants..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: While whole-body, contact invariant NMPC has been demonstrated on hardware before [15], the presented motions were rather slow or even quasi static, underlined by the fact that the authors do ... (p. 1, I. INTRODUCTION); preserve the objective/update rule: AN-1, B1, . . . , BN-1. - quadratize cost function (1) around X, U for multiple-shooting intervals 1 to N. policy update. (p. 3, III. NMPC APPROACH).
+2. Use the paper-reported task/data/environment cue: While the robot does not always land perfectly, the MPC controller optimizes a trajectory from the current state and tries to get back as close as possible to the nominal ... (p. 6, VI. RESULTS).
+3. Compare against the reported or matched baseline: HyQ can be perturbed significantly both on the base and the legs without reacting stiffly. (p. 5, VI. RESULTS).
+4. Report the body metric with its denominator and aggregation: The performance of our algorithms is assessed on both quadrupeds. (p. 5, VI. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: The cost and sensitivity computation, which can be distributed among all available cores, is parallelizable for all our algorithm variants. (p. 4, IV. SOFTWARE IMPLEMENTATION); if none is reported, design one around: Even placing planks under single feet does not deteriorate performance. (p. 5, VI. RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 5 (VI. RESULTS), p. 7 (VI. RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 5 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 6 (VI. RESULTS), and measure the boundary at p. 5 (VI. RESULTS), p. 6 (VI. RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, whole-body, Nonlinear mechanism이 Compared to ANYmal the magnitude of the deviations is slightly larger. 대비 Even placing planks under single feet does not deteriorate performance.을 개선하고, However, both parallel execution and vectorization cannot be leveraged automatically by standard compilers. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (While whole-body, contact invariant NMPC has been demonstrated on hardware before [15], the presented motions were rather slow or even quasi static, ...), does the paper-specific mechanism (In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.) retain the reported evaluation outcome (The performance of our algorithms is assessed on both quadrupeds.) when tested against the paper's strongest explicit boundary (Even placing planks under single feet does not deteriorate performance.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The performance of our algorithms is assessed on both quadrupeds.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Note that running only a single solver iteration before updating the state measurement results in better overall performance than running multiple iterations and letting the solver converge. (p. 5, VI. RESULTS).
+- **Strongest explicit boundary:** Even placing planks under single feet does not deteriorate performance. (p. 5, VI. RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

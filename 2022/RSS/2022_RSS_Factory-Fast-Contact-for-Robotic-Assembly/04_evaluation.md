@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.03532; PDF retrieval source: https://arxiv.org/pdf/2205.03532. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.03532; PDF retrieval source: https://arxiv.org/pdf/2205.03532. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. REINFORCEMENT LEARNING | EMPIRICAL / REAL-ROBOT OR HARDWARE | With the above approach, the Pick policy was able to achieve a 100% success rate within the randomization bounds. | p. 9 (V. REINFORCEMENT LEARNING) |
 | V. REINFORCEMENT LEARNING | EMPIRICAL / REAL-ROBOT OR HARDWARE | With this strategy, we achieved an end-to-end Pick, Place, and Screw success rate of 74.2%. | p. 10 (V. REINFORCEMENT LEARNING) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We also provide 60 carefully-designed, ISO-standard or manufacturer-based assets from the NIST Assembly Task Board 1, suitable for high-accuracy simulation; 3 robotic assembly scenes ... | embodiment, simulator version and control stack | p. 10 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING) |
 | Task/environment | The robotics community has demonstrated that RL can effectively solve simulated or real-world assembly tasks. | reset, timeout, object/scene variation | p. 8 (V. REINFORCEMENT LEARNING), p. 8 (IV. ROBOT LEARNING TOOLS) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 - **p. 11 / VIII. CONCLUSION - extractive body cue:** MM initially developed SDF collisions for FleX.
 - **p. 10 / V. REINFORCEMENT LEARNING - extractive body cue:** For a small number of subpolicies, this strategy may be effective; however, the approach does not scale to long sequences, as Policy N must be ...
 
-- **PDF anchors reviewed:** datasets p. 10 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING), p. 8 (IV. ROBOT LEARNING TOOLS), p. 10 (VI. DISCUSSION), p. 7 (IV. ROBOT LEARNING TOOLS), p. 11 (VII. LIMITATIONS), metrics p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 9 (V. REINFORCEMENT LEARNING), p. 9 (V. REINFORCEMENT LEARNING), baselines p. 7 (IV. ROBOT LEARNING TOOLS), p. 9 (V. REINFORCEMENT LEARNING), p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VII. LIMITATIONS), results p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 11 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING).
+- **Evidence anchors reviewed:** datasets p. 10 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING), p. 8 (IV. ROBOT LEARNING TOOLS), p. 10 (VI. DISCUSSION), p. 7 (IV. ROBOT LEARNING TOOLS), p. 11 (VII. LIMITATIONS), metrics p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 9 (V. REINFORCEMENT LEARNING), p. 9 (V. REINFORCEMENT LEARNING), baselines p. 7 (IV. ROBOT LEARNING TOOLS), p. 9 (V. REINFORCEMENT LEARNING), p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VII. LIMITATIONS), results p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 11 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a ... (p. 10, V. REINFORCEMENT LEARNING).
+- **Metric evidence:** Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a ... (p. 10, V. REINFORCEMENT LEARNING).
+- **Baseline/ablation evidence:** THE BASELINE TIMESTEP SIZE (BEFORE SUBSTEPPING) IS 1 60 s. (p. 7, IV. ROBOT LEARNING TOOLS).
+- **Failure/negative evidence:** A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut. (p. 9, V. REINFORCEMENT LEARNING).

@@ -2,86 +2,75 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (3 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), p. 8 (4.4. Ablation Studies), p. 6 (4.2. Dialogue Ability), p. 6 (4.1. Implementation Details), p. 8 (4.4. Ablation Studies)): 1, reveal that our method surpasses LLaMA-Mesh on multiple metrics and achieves a performance comparable to that of MeshXL, thereby validating the effectiveness of our Primitive-Mesh construction strategy and training ...
+PDF body evaluation/result cue (p. 3 (Figure/Table caption), p. 1 (1.1. Construction of Primitive-Mesh), p. 2 (2.2. Training Strategy Analysis), p. 1 (1.1. Construction of Primitive-Mesh)): Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the KNN-based Primitive-Mesh. Pre- training on large-scale ...
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We follow dataset split configurations from previous works [8, 49], extracting 10% of the 4 subsets (chair, table, bench, lamp) from ShapeNet and 1K samples ...
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We train for 2 epochs on the KNN-based Primitive-Mesh dataset, 3 epochs on the se14065
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Additionally, to mitigate catastrophic forgetting and retain the LLM's conversational capabilities, we randomly sample the data from the previous phase and ultra-chat dataset [17] with ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** This expansion enables MeshLLM to understand and generate 3D meshes through natural and intuitive language interactions, further solidifying LLMs as versatile and powerful tools. mantic ...
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** The primary ablation settings include: 1) KNN-based Primitive-Mesh: This design is critical for constructing a large-scale usable dataset.
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** The improvement primarily stems from the finer-grained semantic information embedded in Primitive-Meshes, as well as the mesh assembly task, which reinforces the connection between local ...
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** It is worth noting that while MeshXL and PolyGen excel in mesh generation tasks, neither possesses mesh understanding or interactive dialogue capabilities, which are unique ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** For the mesh understanding task, we use the BLEU-1 [51], CIDEr [63], METEOR [16], and ROUGE [40] metrics to evaluate the accuracy of the generated ...
+- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** We utilize 128 A800 GPUs and spent over three days constructing this dataset.
+- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** We further employ the zero-shot 3D part segmentation method, SamPart3D [7], to construct the Semantic-based Primitive-Mesh dataset.
+- **p. 2 / 2.2. Training Strategy Analysis - extractive body cue:** In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific ...
+- **p. 1 / 2.1. Shape Novelty Analysis - extractive body cue:** We compute the Chamfer Distance between samples to identify the three most similar training meshes to the generated meshes for comparison.
+- **p. 1 / 2.1. Shape Novelty Analysis - extractive body cue:** This demonstrates that our model possesses generalization ability and creativity rather than merely replicating training samples.
+- **p. 2 / 2.1. Shape Novelty Analysis - extractive body cue:** (b) The Semantic-based method generates mesh parts at the semantic level and includes corresponding textual annotations, which better aid LLMs in accurately understanding and generating ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Shape novelty. We compute the Chamfer Distance be- tween the generated meshes and those in the training set, selecting the three closest matches. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the KNN-based ...
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 4. Experimental Results (p. 5); 4.1. Implementation Details (p. 5); 4.3. Performance Evaluation (p. 6).
+- **Detected evaluation headings:** 1. Additional Implementation Details (p. 1); 2. Additional Results (p. 1).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. Performance Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, reveal that our method surpasses LLaMA-Mesh on multiple metrics and achieves a performance comparable to that of MeshXL, thereby validating the effectiveness of ... | p. 7 (4.3. Performance Evaluation) |
-| 4.3. Performance Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | MeshLLM generates 3D meshes with clean geometric details, outperforming the LLMbased LLaMA-Mesh and achieving performance comparable to Polygen and MeshXL, which are specifically designed ... | p. 7 (4.3. Performance Evaluation) |
-| 4.4. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | Excluding it results in a slight reduction in mesh generation quality and a marked degradation in mesh understanding performance. | p. 8 (4.4. Ablation Studies) |
-| 4.2. Dialogue Ability | EMPIRICAL / SOURCE-REPORTED EVALUATION | These findings demonstrate that our approach successfully integrates text-serialized 3D information into LLMs. | p. 6 (4.2. Dialogue Ability) |
-| 4.1. Implementation Details | EMPIRICAL / SOURCE-REPORTED EVALUATION | For the mesh understanding task, we use the BLEU-1 [51], CIDEr [63], METEOR [16], and ROUGE [40] metrics to evaluate the accuracy of the ... | p. 6 (4.1. Implementation Details) |
+| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the ... | p. 3 (Figure/Table caption) |
+| 1.1. Construction of Primitive-Mesh | SYSTEM / EVALUATION SCOPE UNRESOLVED | By integrating these segments with their corresponding textual labels, our proposed MeshLLM significantly enhances performance. | p. 1 (1.1. Construction of Primitive-Mesh) |
+| 2.2. Training Strategy Analysis | SYSTEM / EVALUATION SCOPE UNRESOLVED | As shown in Table 1, training on semantic Primitive-Mesh samples later yields better results. | p. 2 (2.2. Training Strategy Analysis) |
+| 1.1. Construction of Primitive-Mesh | SYSTEM / EVALUATION SCOPE UNRESOLVED | This strategy is highly efficient, requiring only 0.2 seconds to segment a 3D mesh, enabling the rapid generation of large-scale results. | p. 1 (1.1. Construction of Primitive-Mesh) |
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We follow dataset split configurations from previous works [8, 49], extracting 10% of the 4 subsets (chair, table, bench, lamp) from ShapeNet and 1K samples ...
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We train for 2 epochs on the KNN-based Primitive-Mesh dataset, 3 epochs on the se14065
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Additionally, to mitigate catastrophic forgetting and retain the LLM's conversational capabilities, we randomly sample the data from the previous phase and ultra-chat dataset [17] with ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** This expansion enables MeshLLM to understand and generate 3D meshes through natural and intuitive language interactions, further solidifying LLMs as versatile and powerful tools. mantic ...
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** The primary ablation settings include: 1) KNN-based Primitive-Mesh: This design is critical for constructing a large-scale usable dataset.
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** The improvement primarily stems from the finer-grained semantic information embedded in Primitive-Meshes, as well as the mesh assembly task, which reinforces the connection between local ...
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** It is worth noting that while MeshXL and PolyGen excel in mesh generation tasks, neither possesses mesh understanding or interactive dialogue capabilities, which are unique ...
+- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** We utilize 128 A800 GPUs and spent over three days constructing this dataset.
+- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** We further employ the zero-shot 3D part segmentation method, SamPart3D [7], to construct the Semantic-based Primitive-Mesh dataset.
+- **p. 2 / 2.2. Training Strategy Analysis - extractive body cue:** In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We propose MeshLLM, a method for effectively injecting text-serialized meshes into large language models, enabling the understanding and generation of 3D mesh through ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Differences between LLaMA-Mesh and MeshLLM. LLaMA-Mesh applies a single text-mesh alignment optimization strategy on only 31k available meshes. In contrast, our proposed MeshLLM ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustration of Primitive-Mesh. We utilize both KNN clustering and semantic segmentation to partition meshes into Primitive-Meshes that retain local structural information. This strategy ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of the MeshLLM framework. We adopt a progressive training process: Stage 1: Training on Primitive-Meshes obtained through KNN clustering, where two tasks ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 5. Example of the constructed SFT data for training LLM. then apply farthest point sampling (FPS) and KNN to iden- tify central points and ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Gallery results. MeshLLM demonstrates an ability to generate diverse and high-quality meshes. Mesh Understanding. Given a mesh M and its textual de- scription ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7. Dialogue results. MeshLLM extends the capabilities of LLMs to the domain of 3D mesh while retaining their advanced dialogue abilities, such as question-answering ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 8. Comparisons on the mesh generation. MeshLLM generates 3D meshes with clean geometric details, outperforming the LLM- based LLaMA-Mesh and achieving performance comparable to ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Examples of the constructed Primitive-Mesh. (a) The KNN-based method is simple and efficient, enabling the rapid con- struction of large-scale trainable mesh parts ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Shape novelty. We compute the Chamfer Distance be- tween the generated meshes and those in the training set, selecting the three closest matches. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the KNN-based ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Failure case. The limited semantic dataset size reduces text-geometry alignment for more fine-grained generations.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | We follow dataset split configurations from previous works [8, 49], extracting 10% of the 4 subsets (chair, table, bench, lamp) from ShapeNet and 1K ... | embodiment, simulator version and control stack | p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details) |
-| Task/environment | We train for 2 epochs on the KNN-based Primitive-Mesh dataset, 3 epochs on the se14065 | reset, timeout, object/scene variation | p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (3.2. Primitive-Mesh), p. 5 (3.4. SFT Data Curation) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (3.2. Primitive-Mesh), p. 1 (1. Introduction) |
+| Robot/hardware/simulator | We utilize 128 A800 GPUs and spent over three days constructing this dataset. | embodiment, simulator version and control stack | p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh) |
+| Task/environment | We further employ the zero-shot 3D part segmentation method, SamPart3D [7], to construct the Semantic-based Primitive-Mesh dataset. | reset, timeout, object/scene variation | p. 1 (1.1. Construction of Primitive-Mesh), p. 2 (2.2. Training Strategy Analysis) |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | 본문 anchor 없음 |
 
 ## Metrics and Success Definition
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
-| For the mesh understanding task, we use the BLEU-1 [51], CIDEr [63], METEOR [16], and ROUGE [40] metrics to evaluate the accuracy of the ... | definition/direction/unit from same section | p. 6 (4.1. Implementation Details) |
-| These metrics include Minimum Matching Distance (MMD, lower is better), Coverage (COV, higher is better), and 1-Nearest Neighbor Accuracy (1-NNA, the optimal value is ... | definition/direction/unit from same section | p. 6 (4.1. Implementation Details) |
-| 1, reveal that our method surpasses LLaMA-Mesh on multiple metrics and achieves a performance comparable to that of MeshXL, thereby validating the effectiveness of ... | definition/direction/unit from same section | p. 7 (4.3. Performance Evaluation) |
-| MeshLLM generates 3D meshes with clean geometric details, outperforming the LLMbased LLaMA-Mesh and achieving performance comparable to Polygen and MeshXL, which are specifically designed ... | definition/direction/unit from same section | p. 7 (4.3. Performance Evaluation) |
-| Figure 2. Differences between LLaMA-Mesh and MeshLLM. LLaMA-Mesh applies a single text-mesh alignment optimization strategy on only 31k available meshes. In contrast, our proposed ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
-| We employ the AdamW optimizer with a learning rate of 2e-5 and set the maximum context length to 8192. | definition/direction/unit from same section | p. 5 (4.1. Implementation Details) |
-| We then generate semantic-level Primitive-Meshes on this subset using the SamPart3D method [70], yielding over 100k+ semantic-level Primitive-Meshes. | definition/direction/unit from same section | p. 5 (4.1. Implementation Details) |
-| Ablating this component also leads to a pronounced performance decrease. | definition/direction/unit from same section | p. 8 (4.4. Ablation Studies) |
+| We compute the Chamfer Distance between samples to identify the three most similar training meshes to the generated meshes for comparison. | definition/direction/unit from same section | p. 1 (2.1. Shape Novelty Analysis) |
+| This demonstrates that our model possesses generalization ability and creativity rather than merely replicating training samples. | definition/direction/unit from same section | p. 1 (2.1. Shape Novelty Analysis) |
+| (b) The Semantic-based method generates mesh parts at the semantic level and includes corresponding textual annotations, which better aid LLMs in accurately understanding and ... | definition/direction/unit from same section | p. 2 (2.1. Shape Novelty Analysis) |
+| In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on ... | definition/direction/unit from same section | p. 2 (2.2. Training Strategy Analysis) |
+| Figure 2. Shape novelty. We compute the Chamfer Distance be- tween the generated meshes and those in the training set, selecting the three closest ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
+| Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -89,12 +78,8 @@ PDF body evaluation/result cue (p. 7 (4.3. Performance Evaluation), p. 7 (4.3. P
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
-| We further compare it with state-of-the-art methods in Fig. | comparison identity and matched condition | p. 6 (4.3. Performance Evaluation) |
-| The most directly related baseline to our approach is LLaMAMesh [64]. | comparison identity and matched condition | p. 6 (4.1. Implementation Details) |
-| Moreover, when compared with methods specifically designed for mesh generation like PolyGen and MeshXL, the overall performance of MeshLLM is comparable. | comparison identity and matched condition | p. 7 (4.3. Performance Evaluation) |
-| The generated descriptions are fluent and accurate and effectively reflect the structural characteristics of the meshes, which significantly surpass the LLaMA-Mesh baseline. | comparison identity and matched condition | p. 7 (4.3. Performance Evaluation) |
-| Quantitative comparisons of mesh quality. | comparison identity and matched condition | p. 8 (4.3. Performance Evaluation) |
-| Ablation studies of MeshLLM. "PM" denotes PrimitiveMesh. | comparison identity and matched condition | p. 8 (4.3. Performance Evaluation) |
+| And NX in the 1-NNA metric is a point cloud that is closest to X in both the generated and reference dataset, i.e., NX ... | comparison identity and matched condition | p. 1 (1.2. Metric Details) |
+| We compute the Chamfer Distance between samples to identify the three most similar training meshes to the generated meshes for comparison. | comparison identity and matched condition | p. 1 (2.1. Shape Novelty Analysis) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -107,30 +92,26 @@ PDF body evaluation/result cue (p. 7 (4.3. Performance Evaluation), p. 7 (4.3. P
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| In particular, the constructed data sets and training pipeline are fully compatible with any existing LLM without necessitating additional complex encoder-decoder designs. | component/input/data sensitivity | p. 6 (4.2. Dialogue Ability) |
-| Ablation studies of MeshLLM. "PM" denotes PrimitiveMesh. | component/input/data sensitivity | p. 8 (4.3. Performance Evaluation) |
-| We conduct a series of ablation experiments, the results of which are summarized in Tab. | component/input/data sensitivity | p. 8 (4.4. Ablation Studies) |
+| Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the ... | component/input/data sensitivity | p. 3 (Figure/Table caption) |
+| SamPart3D is pretrained on Objaverse [2] with a 3D backbone network designed to extract visual features. | component/input/data sensitivity | p. 1 (1.1. Construction of Primitive-Mesh) |
+| To obtain semantic labels for each part, we render multiview images and annotate the corresponding 2D regions for each segmented 3D component. | component/input/data sensitivity | p. 1 (1.1. Construction of Primitive-Mesh) |
 
 ## Main Results / Claim–Evidence Map
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| The main contributions of our work are as follows: • We introduce a mesh decomposition strategy to create 1500k+ Primitive-Meshes, expanding the scale of ... | 1, reveal that our method surpasses LLaMA-Mesh on multiple metrics and achieves a performance comparable to that of MeshXL, thereby validating the effectiveness of ... | PDF body cue; verify exact table/figure and matched conditions | p. 7 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), p. 8 (4.4. Ablation Studies), p. 6 (4.2. Dialogue Ability), p. 6 (4.1. Implementation Details), p. 8 (4.4. Ablation Studies) |
-| Primary metric/result | MeshLLM generates 3D meshes with clean geometric details, outperforming the LLMbased LLaMA-Mesh and achieving performance comparable to Polygen and MeshXL, which are specifically designed ... | numeric claim only at cited anchor | p. 7 (4.3. Performance Evaluation) |
+| In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on ... | Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the ... | PDF body cue; verify exact table/figure and matched conditions | p. 3 (Figure/Table caption), p. 1 (1.1. Construction of Primitive-Mesh), p. 2 (2.2. Training Strategy Analysis), p. 1 (1.1. Construction of Primitive-Mesh) |
+| Primary metric/result | By integrating these segments with their corresponding textual labels, our proposed MeshLLM significantly enhances performance. | numeric claim only at cited anchor | p. 1 (1.1. Construction of Primitive-Mesh) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We train for 2 epochs on the KNN-based Primitive-Mesh dataset, 3 epochs on the se14065
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Could you tell me what x is when 2x=4?
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** So, 2x divided by 2 is equal to 4 divided by 2.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** You can subtract 1 from both sides of the equation, which gives you 2x=3.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** This expansion enables MeshLLM to understand and generate 3D meshes through natural and intuitive language interactions, further solidifying LLMs as versatile and powerful tools. mantic ...
+- **p. 1 / 1.2. Metric Details - extractive body cue:** And NX in the 1-NNA metric is a point cloud that is closest to X in both the generated and reference dataset, i.e., NX = ...
+- **p. 1 / 1.2. Metric Details - extractive body cue:** And NX in the 1-NNA metric is a point cloud that is closest to X in both the generated and reference dataset, i.e., NX = ...
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
-| body limitation/failure cue | While MeshLLM shows the potential of LLMs for 3D mesh understanding and generation, certain limitations remain, highlighting future research areas: 1) The scale of ... | p. 8 (5. Limitation and Future Work) |
-| body limitation/failure cue | In this paper, we propose MeshLLM, a novel approach that rethinks the paradigm of generating text-serialized meshes using Large Language Models, which addresses two ... | p. 8 (6. Conclusions) |
+| body limitation/failure cue | Figure 3. Failure case. The limited semantic dataset size reduces text-geometry alignment for more fine-grained generations. | p. 3 (Figure/Table caption) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -138,12 +119,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Performance Evaluation), p. 7 (4.3. P
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| We employ the AdamW optimizer with a learning rate of 2e-5 and set the maximum context length to 8192. | p. 5 (4.1. Implementation Details) |
-| We train for 2 epochs on the KNN-based Primitive-Mesh dataset, 3 epochs on the se14065 | p. 5 (4.1. Implementation Details) |
-| In particular, the constructed data sets and training pipeline are fully compatible with any existing LLM without necessitating additional complex encoder-decoder designs. | p. 6 (4.2. Dialogue Ability) |
-| In addition, we render 8 different images of the meshes and compute the CLIP similarity [55] between these images and the text to assess ... | p. 6 (4.1. Implementation Details) |
-| MeshLLM surpasses the same-type method LLaMA-Mesh and is comparable to encoder-based MeshXL. | p. 8 (4.3. Performance Evaluation) |
-| The mesh is textualized through the following steps: 1) Quantization: The coordinate values of the mesh vertices are mapped to the integer values in ... | p. 3 (3. Method) |
+| We compute the Chamfer Distance between samples to identify the three most similar training meshes to the generated meshes for comparison. | p. 1 (2.1. Shape Novelty Analysis) |
 
 | Audit field | Current status |
 |---|---|
@@ -155,10 +131,9 @@ PDF body evaluation/result cue (p. 7 (4.3. Performance Evaluation), p. 7 (4.3. P
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Limitation and Future Work - extractive PDF cue:** While MeshLLM shows the potential of LLMs for 3D mesh understanding and generation, certain limitations remain, highlighting future research areas: 1) The scale of available ...
-- **p. 8 / 6. Conclusions - extractive PDF cue:** In this paper, we propose MeshLLM, a novel approach that rethinks the paradigm of generating text-serialized meshes using Large Language Models, which addresses two key ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Failure case. The limited semantic dataset size reduces text-geometry alignment for more fine-grained generations.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 8 (4.4. Ablation Studies), p. 7 (4.3. Performance Evaluation), metrics p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 7 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), p. 2 (Figure/Table caption), p. 5 (4.1. Implementation Details), baselines p. 6 (4.3. Performance Evaluation), p. 6 (4.1. Implementation Details), p. 7 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), p. 8 (4.3. Performance Evaluation), p. 8 (4.3. Performance Evaluation), results p. 7 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), p. 8 (4.4. Ablation Studies), p. 6 (4.2. Dialogue Ability), p. 6 (4.1. Implementation Details), p. 8 (4.4. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh), p. 2 (2.2. Training Strategy Analysis), metrics p. 1 (2.1. Shape Novelty Analysis), p. 1 (2.1. Shape Novelty Analysis), p. 2 (2.1. Shape Novelty Analysis), p. 2 (2.2. Training Strategy Analysis), p. 3 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 1 (1.2. Metric Details), p. 1 (2.1. Shape Novelty Analysis), results p. 3 (Figure/Table caption), p. 1 (1.1. Construction of Primitive-Mesh), p. 2 (2.2. Training Strategy Analysis), p. 1 (1.1. Construction of Primitive-Mesh).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

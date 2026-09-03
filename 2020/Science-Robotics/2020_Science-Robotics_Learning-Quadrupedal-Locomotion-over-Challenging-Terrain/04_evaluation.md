@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.11251; PDF retrieval source: https://arxiv.org/pdf/2010.11251. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.11251; PDF retrieval source: https://arxiv.org/pdf/2010.11251. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 2. RESULTS | EMPIRICAL / SIMULATION | (E) Success rates for different step heights. | p. 4 (2. RESULTS) |
 | 2. RESULTS | EMPIRICAL / SIMULATION | The success rate is evaluated over 10 trials for each condition. | p. 4 (2. RESULTS) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The objective of the competition is to develop robotic systems that rapidly map, navigate, and search complex underground environments, including tunnels, urban underground, and ... | embodiment, simulator version and control stack | p. 5 (2. RESULTS), p. 3 (2. RESULTS) |
 | Task/environment | The robots have different kinematics, inertia, and actuators. | reset, timeout, object/scene variation | p. 3 (2. RESULTS), p. 3 (2. RESULTS) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. A number of specific deployments. (A-F) Zero-shot gener- alization to slippery and deforming terrain. (G) Steep descent during the DARPA Subterranean Challenge. The ...
 - **p. 4 / 2. RESULTS - extractive body cue:** (A) Locomotion over unstable debris.
 
-- **PDF anchors reviewed:** datasets p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 3 (2. RESULTS), p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS), metrics p. 4 (2. RESULTS), p. 4 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 6 (2. RESULTS), baselines p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 4 (2. RESULTS), p. 6 (2. RESULTS), p. 4 (2. RESULTS), p. 6 (2. RESULTS), results p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 6 (2. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 3 (2. RESULTS), p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS), metrics p. 4 (2. RESULTS), p. 4 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 6 (2. RESULTS), baselines p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 4 (2. RESULTS), p. 6 (2. RESULTS), p. 4 (2. RESULTS), p. 6 (2. RESULTS), results p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 6 (2. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 3. Evaluation in an indoor environment. (A) Locomotion over unstable debris. The robot steps onto loose boards (highlighted in red and blue) that dislodge under the robot's feet. (B) ... (p. 4, Figure/Table caption).
+- **Metric evidence:** Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 m/s Ours w/ payload Baseline 0.6 m/s Baseline 0.2 m/s with payload ... (p. 4, 2. RESULTS).
+- **Baseline/ablation evidence:** We have compared the presented controller to a state-of-the-art baseline [1, 26] in the forest environment. (p. 5, 2. RESULTS).
+- **Failure/negative evidence:** Our controller does not rely on exteroception and is immune to such failure. (p. 5, 2. RESULTS).

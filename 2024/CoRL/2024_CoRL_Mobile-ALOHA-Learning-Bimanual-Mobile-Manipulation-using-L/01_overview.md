@@ -1,8 +1,10 @@
 # Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2401.02117.
-> PDF retrieval source: https://arxiv.org/pdf/2401.02117. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2401.02117.
+> PDF retrieval source: https://arxiv.org/pdf/2401.02117. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2401.02117
 - Code/Project: https://mobile-aloha.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -47,7 +49,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 | Observation/input | This observation is also consistent across different class of state-of-the-art imitation learning methods, including ACT [104] and Diffusion Policy [18]. | egocentric RGB-D, language/task goal, base-arm proprioception | p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware) |
 | State/latent | observation, consistent, across, different, class, state-of-the-art, imitation, learning, methods, including, ACT, Diffusion | map/object/contact state와 base-arm coordination decision | p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction) |
 | Output/action | We also record the joint positions of all 4 robot arms to be used as policy observations and actions. | base motion plus arm/gripper action | p. 4 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware) |
-| Objective/outcome | The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, 0], πm(oi)) ... | long-horizon task success, reachability, collision과 recovery | p. 5 (3. Mobile ALOHA Hardware), p. 1 (Abstract), p. 2 (1. Introduction) |
+| Objective/outcome | The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, 0], πm(oi)) ... | long-horizon task success, reachability, collision과 recovery | p. 5 (3. Mobile ALOHA Hardware), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract) |
 
 ## Main Claims and Actual Contribution
 
@@ -85,3 +87,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 (1) We lack accessible, plug-and-play hardware for whole-body teleoperation.를 문제로 두고, On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** (1) We lack accessible, plug-and-play hardware for whole-body teleoperation. (p. 2, 1. Introduction).
+- **Actual contribution:** The main contribution of this paper is a system for learning complex mobile bimanual manipulation tasks. (p. 2, 1. Introduction).
+- **Evaluation boundary:** Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. It is particularly important for ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or from rich contacts such as ... (p. 8, 6.1. Co-training Improves Performance).

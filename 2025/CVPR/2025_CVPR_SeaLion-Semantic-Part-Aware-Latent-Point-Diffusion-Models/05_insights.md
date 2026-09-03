@@ -1,53 +1,75 @@
 # Insights — SeaLion: Semantic Part-Aware Latent Point Diffusion Models for 3D Generation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** Therefore, in this paper, we present SeaLion, a novel diffusion model designed to generate high-quality and diverse point clouds with fine-grained segmentation labels.
-- **Problem cue:** This method enables existing metrics, such as 1-NNA, to measure both the local structural quality and inter-part coherence of generated point clouds.
-- **Claim/result cue:** Experiments on the largescale synthetic dataset ShapeNet and real-world medical dataset IntrA, demonstrate that SeaLion achieves remarkable performance in generation quality and diversity, outperforming the existing state-of-the-art model, ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds ...
+- **p. 2 / 1. Introduction - extractive body cue:** We propose a novel evaluation metric named part-aware Chamfer distance (p-CD) to address these limitations and to quantify the pairwise distance between two segmentation-labeled point ...
+- **p. 4 / 3.2. Model Architecture of SeaLion - extractive body cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
+- **p. 3 / 3. Methodology - extractive body cue:** Next, we introduce the architecture of SeaLion, and illustrate its usage as a part-aware 3D edition tool.
+- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware latent point diffusion ...
+- **p. 5 / 3.2. Model Architecture of SeaLion - extractive body cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Model Architecture of SeaLion), p. 3 (3. Methodology), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.2. Model Architecture of SeaLion)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** However, they still lack the ability to generate semantic labels.
+- **p. 2 / 1. Introduction - extractive body cue:** However, this method fails to measure the part-topart coherence within a shape.
+- **p. 1 / 1. Introduction - extractive body cue:** Nevertheless, these sub-parts lack clear semantic meaning, hindering the application of generated point clouds in domains such as generative data augmentation for training segmentation models ...
+- **p. 2 / 1. Introduction - extractive body cue:** On the other hand, 'groundtruth' segmentation labels are not available for generated samples, making it difficult to use metrics such as mIoU to evaluate label ...
+- **p. 5 / 3.4. Evaluation Metrics - extractive body cue:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.
+- **p. 5 / 3.4. Evaluation Metrics - extractive body cue:** As discussed in [32, 37], COV quantifies generation diversity and is sensitive to mode collapse, but it fails to evaluate the quality of G.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** As discussed in [32], 1-NNA measures both generation quality and diversity by computing the distribution similarity between R and G, while COV and MMD have ...
+- **Boundary to test:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds with accurate semantic segmentation labels. • We ... | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | The results show that SeaLion outperforms DiffFacto on the primary metric 1-NNA-P and achieves competitive performance on the other metrics. | p. 7 (4.2. Experimental Results), p. 8 (4.3. Experimental Analysis) |
+| Failure/limitation | However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds. | p. 5 (3.4. Evaluation Metrics), p. 5 (3.4. Evaluation Metrics) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `semantic, alignment, Diffusion, Generation, point cloud` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Diffusion/generative prior를 sparse observation completion, 3D scene/object generation, action trajectory proposal에 사용할 수 있다.
-  - 생성 모델의 prior는 부족한 geometry나 demonstration을 보완하지만, physical feasibility와 metric correctness를 별도 제약으로 확인해야 한다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `conditioning observation와 noisy/intermediate sample → latent/noise variable와 conditional distribution → generated sample, action chunk 또는 trajectory`.
+- 이 논문의 재사용 가능한 지점은 In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds with accurate semantic segmentation labels. • We ...를 The generative model acquires semantic part awareness by being trained to reconstruct input point clouds guided by segmentation encodings, forming a basis for extracting segmentation information from the latent feature h0 in ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 latent/noise variable와 conditional distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds with accurate semantic segmentation labels. • We ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Generative Modeling`; tags: `semantic, alignment, Diffusion, Generation, point cloud`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Experiments on the largescale synthetic dataset ShapeNet and real-world medical dataset IntrA, demonstrate that SeaLion achieves remarkable performance in generation quality and diversity, outperforming the existing state-of-the-art model, ...
-  - visual/shape generation 품질 이후에도 geometry correctness, controllability, physical plausibility, robot execution 가능성은 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `semantic, alignment, Diffusion, Generation, point cloud, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ShapeNet / accuracy, mIoU, Chamfer
-  - 내 연구 확장 benchmark 후보: ShapeNet, Objaverse, ScanNet, RLBench
-  - 내 연구 확장 metric 후보: Chamfer, F-score, CLIP score, success rate
-  - 검증 초점: generation fidelity, geometric validity, physical feasibility, downstream task utility를 함께 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: IntrA [34] is a real-world dataset containing 3D intracranial aneurysm point clouds reconstructed from MRI..
+3. Compare against the body-reported baseline or a matched simpler baseline: The results demonstrate that SeaLion outperforms both DiffFacto and the two-step approach, which combines the state-of-the-art generative and segmentation models, Lion and SPoTr..
+4. Report the body metric and its denominator/aggregation: The intra-part score measures the quality of the independently generated parts and the overall point cloud by averaging the results across all parts..
+5. Re-run the body-reported ablation/failure condition: Additional ablation studies are provided in the supplementary materials..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion), p. 5 (3.2. Model Architecture of SeaLion); the primary result is directionally consistent at p. 7 (4.2. Experimental Results), p. 8 (4.3. Experimental Analysis), p. 7 (4.2. Experimental Results); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D/3D diffusion prior가 실제 3D reconstruction이나 planning에서 metric error를 줄이는가, 아니면 plausible hallucination을 늘리는가?
+고정된 observation/action/data/compute budget에서 summary, contributions, novel mechanism이 The results demonstrate that SeaLion outperforms both DiffFacto and the two-step approach, which combines the state-of-the-art ... 대비 The intra-part score measures the quality of the independently generated parts and the overall point cloud by averaging ...을 개선하고, However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

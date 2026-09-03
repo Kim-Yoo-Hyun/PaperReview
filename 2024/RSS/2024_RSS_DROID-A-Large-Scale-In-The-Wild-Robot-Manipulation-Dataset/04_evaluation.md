@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.12945; PDF retrieval source: https://arxiv.org/pdf/2403.12945. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.12945; PDF retrieval source: https://arxiv.org/pdf/2403.12945. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in ... | p. 9 (Figure/Table caption) |
 | V. EXPERIMENTS | BENCHMARK / DATASET | Across the board, we find that DROID improves policy success rate while increasing robustness to scene changes like distractors or novel object instances. | p. 7 (V. EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Overall, we find that DROID significantly increases diversity in tasks, objects, scenes, viewpoints and interaction locations over existing large scale robot manipulation datasets. | embodiment, simulator version and control stack | p. 5 (IV. DROID DATASET ANALYSIS), p. 3 (Dataset) |
 | Task/environment | Calibration Public Robot Collection MIME [50] 8.3k 20 1 ✗ ✗ ✓ human teleop RoboTurk [36] 2.1k 2 1 ✗ ✗ ✓ human teleop ... | reset, timeout, object/scene variation | p. 3 (Dataset), p. 8 (V. EXPERIMENTS) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 - **p. 9 / VI. DISCUSSION - extractive body cue:** Our policy learning evaluations show that DROID is a valuable data resource for improving policy performance and robustness, even in comparison to existing large robot ...
 - **p. 3 / Dataset - extractive body cue:** Calibration Public Robot Collection MIME [50] 8.3k 20 1 ✗ ✗ ✓ human teleop RoboTurk [36] 2.1k 2 1 ✗ ✗ ✓ human teleop RoboNet ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. DROID DATASET ANALYSIS), p. 3 (Dataset), p. 8 (V. EXPERIMENTS), p. 3 (Dataset), p. 6 (IV. DROID DATASET ANALYSIS), p. 8 (V. EXPERIMENTS), metrics p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 22 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), baselines p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 3 (Dataset), results p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 20 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. DROID DATASET ANALYSIS), p. 3 (Dataset), p. 8 (V. EXPERIMENTS), p. 3 (Dataset), p. 6 (IV. DROID DATASET ANALYSIS), p. 8 (V. EXPERIMENTS), metrics p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 22 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), baselines p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 3 (Dataset), results p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 20 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both ... (p. 9, Figure/Table caption).
+- **Metric evidence:** Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution and OOD performance over both ... (p. 9, Figure/Table caption).
+- **Baseline/ablation evidence:** In line with prior work [7], we train the diffusion policy to generate 16-step action sequences, and during rollouts, step 8 actions open loop before re-running policy inference. (p. 7, V. EXPERIMENTS).
+- **Failure/negative evidence:** Notably, when testing out of distribution performance, the No Co-training baseline performs quite poorly while the co-trained policies are much more effective. (p. 8, V. EXPERIMENTS).

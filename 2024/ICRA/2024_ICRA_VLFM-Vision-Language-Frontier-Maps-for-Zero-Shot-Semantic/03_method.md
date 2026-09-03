@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.03275; PDF retrieval source: https://arxiv.org/pdf/2312.03275. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.03275; PDF retrieval source: https://arxiv.org/pdf/2312.03275. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -28,7 +28,7 @@ PDF body method statement (p. 2 (III. PROBLEM FORMULATION)): The action space co
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | The action space consists of the following: MOVE FORWARD (0.25m), TURN LEFT (30◦), TURN RIGHT (30◦), LOOK UP (30◦), LOOK DOWN (30◦), ... | p. 2 (III. PROBLEM FORMULATION) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | The action space consists of the following: MOVE FORWARD (0.25m), TURN LEFT (30◦), TURN RIGHT (30◦), LOOK UP (30◦), LOOK DOWN (30◦), ... | p. 2 (III. PROBLEM FORMULATION) |
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (III. PROBLEM FORMULATION)): The action space co
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -50,7 +50,7 @@ PDF body method statement (p. 2 (III. PROBLEM FORMULATION)): The action space co
 | Input/observation | VLFM, builds, occupancy, maps, depth, observations, identify, frontiers, explored, region, action, space, consists, following | camera/depth stream, pose, map와 language goal | body cue; exact tensor/frame verify |
 | State/latent | VLFM, builds, occupancy, maps, depth, observations, identify, frontiers, explored, region | robot pose, free-space/semantic map와 local goal | body cue; notation verify |
 | Action/output | Vision-Language, Frontier, Maps, VLFM, zero-shot, target-driven, semantic, navigation, unseen, object | collision-free trajectory 또는 velocity command | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | path cost, risk or goal utility | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | path cost, risk or goal utility | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -67,12 +67,12 @@ PDF body method statement (p. 2 (III. PROBLEM FORMULATION)): The action space co
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | It does not affect a pixel's semantic value score if that pixel was not seen until the current time step. | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | The confidence channel aims to determine how a pixel's value in the semantic value channel should be updated if it has a ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | HM3D's validation split contains 2000 episodes across 20 scenes and 6 object categories. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,8 +109,17 @@ PDF body method statement (p. 2 (III. PROBLEM FORMULATION)): The action space co
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (III. PROBLEM FORMULATION), objective 본문 anchor 없음, temporal p. 3 (IV. VISION-LANGUAGE FRONTIER MAPS), p. 3 (IV. VISION-LANGUAGE FRONTIER MAPS), p. 2 (III. PROBLEM FORMULATION), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 4 (IV. VISION-LANGUAGE FRONTIER MAPS).
+- **Evidence anchors reviewed:** method p. 2 (III. PROBLEM FORMULATION), objective 본문 anchor 없음, temporal p. 3 (IV. VISION-LANGUAGE FRONTIER MAPS), p. 3 (IV. VISION-LANGUAGE FRONTIER MAPS), p. 2 (III. PROBLEM FORMULATION), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 4 (IV. VISION-LANGUAGE FRONTIER MAPS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** VLFM builds occupancy maps from depth observations to identify frontiers of the explored map region. (p. 1, I. INTRODUCTION).
+- **Objective/update evidence:** The action space consists of the following: MOVE FORWARD (0.25m), TURN LEFT (30◦), TURN RIGHT (30◦), LOOK UP (30◦), LOOK DOWN (30◦), and STOP. (p. 2, III. PROBLEM FORMULATION).
+- **Temporal/runtime evidence:** HM3D's validation split contains 2000 episodes across 20 scenes and 6 object categories. (p. 5, V. EXPERIMENTAL SETUP).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

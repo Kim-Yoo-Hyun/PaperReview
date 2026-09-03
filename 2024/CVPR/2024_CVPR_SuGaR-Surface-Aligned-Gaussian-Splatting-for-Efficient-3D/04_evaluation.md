@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** For evaluating our model, we follow the approach from the original 3D Gaussian Splatting paper [15] and compare the performance of several variations of our ...
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** Results on the Mip-NeRF360 dataset are given in Table 1.
-- **p. 8 / 5.4. Mesh Rendering Ablation - extractive PDF cue:** Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2].
-- **p. 8 / 5.4. Mesh Rendering Ablation - extractive PDF cue:** Ablation for different mesh extraction methods on the Mip-NeRF360 dataset [2] after applying our regularization term.
-- **p. 7 / 5.1. Implementation details - extractive PDF cue:** We perform Poisson reconstruction with depth 10 and apply mesh simplification using quadric error metrics [9] to decrease the resolution of the meshes.
-- **p. 8 / 5.4. Mesh Rendering Ablation - extractive PDF cue:** Even though rendering with surface-aligned Gaussians provides better performance, rendering our meshes with traditional UV textures still produces satisfying results, which further illustrates the quality ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Efficiently estimating ˆf(p) of the SDF of the sur- face generated from Gaussians. We render depth maps of the Gaussians, sample points p ...
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** Two main reasons explain this performance.
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** For evaluating our model, we follow the approach from the original 3D Gaussian Splatting paper [15] and compare the performance of several variations of our ...
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** Results on the Mip-NeRF360 dataset are given in Table 1.
+- **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2].
+- **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Ablation for different mesh extraction methods on the Mip-NeRF360 dataset [2] after applying our regularization term.
+- **p. 7 / 5.1. Implementation details - extractive body cue:** We perform Poisson reconstruction with depth 10 and apply mesh simplification using quadric error metrics [9] to decrease the resolution of the meshes.
+- **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Even though rendering with surface-aligned Gaussians provides better performance, rendering our meshes with traditional UV textures still produces satisfying results, which further illustrates the quality ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Efficiently estimating ˆf(p) of the SDF of the sur- face generated from Gaussians. We render depth maps of the Gaussians, sample points p ...
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** Two main reasons explain this performance.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Real-Time Rendering of Real Scenes | SYSTEM / EVALUATION SCOPE UNRESOLVED | Even though SuGaR focuses on aligning 3D Gaussians for reconstructing a high quality mesh during the first stage of its optimization, it significantly outperforms ... | p. 7 (5.2. Real-Time Rendering of Real Scenes) |
 | 5.2. Real-Time Rendering of Real Scenes | SYSTEM / EVALUATION SCOPE UNRESOLVED | This performance is remarkable as SuGaR is able to extract a mesh significantly faster than other methods. | p. 7 (5.2. Real-Time Rendering of Real Scenes) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** For evaluating our model, we follow the approach from the original 3D Gaussian Splatting paper [15] and compare the performance of several variations of our ...
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** Results on the Mip-NeRF360 dataset are given in Table 1.
-- **p. 8 / 5.4. Mesh Rendering Ablation - extractive PDF cue:** Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2].
-- **p. 8 / 5.4. Mesh Rendering Ablation - extractive PDF cue:** Ablation for different mesh extraction methods on the Mip-NeRF360 dataset [2] after applying our regularization term.
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** For evaluating our model, we follow the approach from the original 3D Gaussian Splatting paper [15] and compare the performance of several variations of our ...
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** Results on the Mip-NeRF360 dataset are given in Table 1.
+- **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2].
+- **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Ablation for different mesh extraction methods on the Mip-NeRF360 dataset [2] after applying our regularization term.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce a method that extracts accurate and editable meshes from 3D Gaussian Splatting representations within minutes on a single GPU. The meshes ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Our algorithm can extract a highly detailed mesh from any 3D Gaussian Splatting scene [15] within minutes on a single GPU (top: Renderings ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 3. Extracting a mesh from Gaussians. Without regular- ization, the Gaussians have no special arrangement after optimiza- tion, which makes extracting a mesh very ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Examples of (a) renderings and (b) reconstructed meshes with SuGaR. The (c) normal maps help visualize the geometry. nally be approximated by density ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Efficiently estimating ˆf(p) of the SDF of the sur- face generated from Gaussians. We render depth maps of the Gaussians, sample points p ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and refine ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7. Joint refinement of mesh and Gaussians. Left: We bind Gaussians to the triangles of the mesh. Depending on the number of triangles in ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2]. SuGaR is best among the methods that recover a mesh, and still performs ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce a method that extracts accurate and editable meshes from 3D Gaussian Splatting representations within minutes on a single GPU. The meshes ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Our algorithm can extract a highly detailed mesh from any 3D Gaussian Splatting scene [15] within minutes on a single GPU (top: Renderings ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 3. Extracting a mesh from Gaussians. Without regular- ization, the Gaussians have no special arrangement after optimiza- tion, which makes extracting a mesh very ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Examples of (a) renderings and (b) reconstructed meshes with SuGaR. The (c) normal maps help visualize the geometry. nally be approximated by density ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Efficiently estimating ˆf(p) of the SDF of the sur- face generated from Gaussians. We render depth maps of the Gaussians, sample points p ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and refine ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Joint refinement of mesh and Gaussians. Left: We bind Gaussians to the triangles of the mesh. Depending on the number of triangles in ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1. Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2]. SuGaR is best among the methods that recover a mesh, and still performs ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For evaluating our model, we follow the approach from the original 3D Gaussian Splatting paper [15] and compare the performance of several variations of ... | embodiment, simulator version and control stack | p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes) |
 | Task/environment | Results on the Mip-NeRF360 dataset are given in Table 1. | reset, timeout, object/scene variation | p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation) |
@@ -117,8 +117,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 | Primary metric/result | This performance is remarkable as SuGaR is able to extract a mesh significantly faster than other methods. | numeric claim only at cited anchor | p. 7 (5.2. Real-Time Rendering of Real Scenes) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** Following [15], we select the same sets of 2 scenes from Tanks&Temples (Truck and Train) and 2 scenes from DeepBlending (Playroom and Dr.
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive PDF cue:** However, due to licensing issues and the unavailability of the scenes Flowers and Treehill, we perform the evaluation of all methods only on 7 scenes ...
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** Following [15], we select the same sets of 2 scenes from Tanks&Temples (Truck and Train) and 2 scenes from DeepBlending (Playroom and Dr.
+- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** However, due to licensing issues and the unavailability of the scenes Flowers and Treehill, we perform the evaluation of all methods only on 7 scenes ...
 
 ## Generalization and Failure Cases
 
@@ -152,11 +152,11 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** SuGaR does not come without limitations: Gaussians do tend to "cheat" on the geometry and depth by creating cavities to reproduce specular effects, instead of ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 3. Extracting a mesh from Gaussians. Without regular- ization, the Gaussians have no special arrangement after optimiza- tion, which makes extracting a mesh very ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and refine ...
+- **p. 8 / 6. Conclusion - extractive body cue:** SuGaR does not come without limitations: Gaussians do tend to "cheat" on the geometry and depth by creating cavities to reproduce specular effects, instead of ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 3. Extracting a mesh from Gaussians. Without regular- ization, the Gaussians have no special arrangement after optimiza- tion, which makes extracting a mesh very ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and refine ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), metrics p. 7 (5.1. Implementation details), p. 8 (5.4. Mesh Rendering Ablation), p. 5 (Figure/Table caption), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 1 (Figure/Table caption), baselines p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), metrics p. 7 (5.1. Implementation details), p. 8 (5.4. Mesh Rendering Ablation), p. 5 (Figure/Table caption), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 1 (Figure/Table caption), baselines p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

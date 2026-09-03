@@ -1,8 +1,10 @@
 # RoboPanoptes: The All-Seeing Robot with Whole-body Dexterity
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p042.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p042.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p042.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p042.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p042.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss21/p042.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, each camera requires an adapter cable that converts the camera board's JST connector to a USB-A port, and the ‘cameras cannot be daisy-chained.를 문제로 두고, In summary, our primary contribution is the RoboPanoptes system, demonstrating novel whole-body dexterity capabilities through whole-body vision.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (IV. MODULAR HARDWARE DESIGN), p. 2 (1. Ivrropuction), p. 3 (C. Whole-body Sensing), p. 1 (1. Ivrropuction), p. 1 (Abstract), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, each camera requires an adapter cable that converts the camera board's JST connector to a USB-A port, and the ‘cameras cannot be daisy-chained. (p. 4, IV. MODULAR HARDWARE DESIGN).
+- **Actual contribution:** design enables new robot capabilities such asa) simultaneously sweeping multiple sx (p. 1, 21 Cameras).
+- **Evaluation boundary:** overall 94.4% success rate, outperforming all baselines. (p. 8, A. Unboxing Task).
+- **Explicit failure boundary:** The Top-down Camere policy fails to locate the hance. ‘odiing policy's actions ae less precise, leading to failures ike missing the shoe or misaligning the drawer. (p. 10, IX. LIMITATIONS AND FUTURE WORK).

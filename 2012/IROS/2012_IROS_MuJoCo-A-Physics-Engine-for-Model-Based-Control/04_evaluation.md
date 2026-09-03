@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/IROS.2012.6386109; PDF retrieval source: https://doi.org/10.1109/IROS.2012.6386109. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/IROS.2012.6386109; PDF retrieval source: https://doi.org/10.1109/IROS.2012.6386109. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numer
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | I. INTRODUCTION | BENCHMARK / DATASET | Although this approach is a significant improvement over earlier spring-damper models of contact, it still requires manual tuning and small time steps. | p. 2 (I. INTRODUCTION) |
 | 5) Integrate numerically to obtain the next state | BENCHMARK / DATASET | Each iteration involves factorization of a -by-matrix; this could potentially be improved using Hessian-free methods. | p. 4 (5) Integrate numerically to obtain the next state) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numer
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It can be used to analyze data or to compute the torques that will cause a robot to follow a reference trajectory. | embodiment, simulator version and control stack | p. 5 (5) Integrate numerically to obtain the next state), p. 2 (I. INTRODUCTION) |
 | Task/environment | This limits their applications to robotics where contact dynamics are key. | reset, timeout, object/scene variation | p. 2 (I. INTRODUCTION), p. 5 (5) Integrate numerically to obtain the next state) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numer
 - **p. 5 / 5) Integrate numerically to obtain the next state - extractive body cue:** Instead it computes the desired next-state velocity v∗ which would result if penetrations decayed like criticallydamped springs (similar to equality-constraint violations) and there was no ...
 - **p. 7 / III. MODELING - extractive body cue:** Their primary use in the engine is collision detection as well as tendon wrapping.
 
-- **PDF anchors reviewed:** datasets p. 5 (5) Integrate numerically to obtain the next state), p. 2 (I. INTRODUCTION), p. 5 (5) Integrate numerically to obtain the next state), p. 6 (III. MODELING), p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), metrics p. 4 (5) Integrate numerically to obtain the next state), p. 4 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state), p. 2 (I. INTRODUCTION), p. 3 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), baselines p. 7 (IV. TIMING TESTS), p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), p. 6 (5) Integrate numerically to obtain the next state), p. 6 (III. MODELING), p. 7 (IV. TIMING TESTS), results p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), p. 4 (5) Integrate numerically to obtain the next state).
+- **Evidence anchors reviewed:** datasets p. 5 (5) Integrate numerically to obtain the next state), p. 2 (I. INTRODUCTION), p. 5 (5) Integrate numerically to obtain the next state), p. 6 (III. MODELING), p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), metrics p. 4 (5) Integrate numerically to obtain the next state), p. 4 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state), p. 2 (I. INTRODUCTION), p. 3 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), baselines p. 7 (IV. TIMING TESTS), p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), p. 6 (5) Integrate numerically to obtain the next state), p. 6 (III. MODELING), p. 7 (IV. TIMING TESTS), results p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), p. 4 (5) Integrate numerically to obtain the next state).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3: This is the inverse of Table 2. Here we show the number of dynamics evaluations per second. The results are quite remarkable. One a single desktop machine, we ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Solving for the contact impulse We now return to step 4. (p. 3, 5) Integrate numerically to obtain the next state).
+- **Baseline/ablation evidence:** Section IV presents timing tests and comparisons to SD/FAST - which does not handle contacts, but is the best prior engine for multi-joint dynamics in our opinion. (p. 2, I. INTRODUCTION).
+- **Failure/negative evidence:** In the absence of adequate tools, the field continues to rely on manual controller designs - which may be a large part of the reason why present-day robots do not ... (p. 1, I. INTRODUCTION).

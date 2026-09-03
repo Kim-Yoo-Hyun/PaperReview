@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610421/; PDF retrieval source: https://arxiv.org/pdf/2310.15145. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610421/; PDF retrieval source: https://arxiv.org/pdf/2310.15145. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | After 30k steps of autonomous online interaction, our method shows relative improvement of 51% upon the pre-trained performance, and outperforms BC by 58% on ... | p. 5 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In all simulation tasks, our method ROBOFUME consistently outperforms prior methods, achieving success rates at least 20% higher than all baselines within 200k steps ... | p. 5 (V. EXPERIMENTS) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Similarly, we find that one-hot task encodings perform substantially worse than language-conditioned policies, as the prior dataset used in real-robot training is larger and ... | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
 | Task/environment | Tasks that use the kitchen-sink environment (pot lid and pot pnp) frequently experience episode interruptions when the robot arm applies more than the maximum ... | reset, timeout, object/scene variation | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
@@ -142,7 +142,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Our method significantly improves over both offline-only and BC performance after 30k steps of online interaction (2-4 hours). | p. 5 (V. EXPERIMENTS) |
 | We report the success rate over the course of training, averaged over three seeds. | p. 6 (V. EXPERIMENTS) |
 | The metrics are computed on the data collected during fine-tuning against a hand-engineered ground truth reward. | p. 6 (V. EXPERIMENTS) |
-| All authors are affiliated with Department of Computer Science, Stanford University. | p. 1 (I. INTRODUCTION) |
 | Indeed, most existing works only show the benefit of the pre-train and fine-tune paradigm where the robot uses the same hardware instance in both ... | p. 1 (I. INTRODUCTION) |
 | The encoder ϕ is a 4-layer CNN, and is optimized exclusively against the critic loss. | p. 3 (IV. ROBOFUME) |
 | To best utilize the multi-task data, we encode task descriptions l using pre-trained CLIP embeddings, resulting in an embedding z = CLIP(l) which is ... | p. 3 (IV. ROBOFUME) |
@@ -162,7 +161,16 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** We find that in the Vase simulated task, VIP fails to obtain good behaviors.
 - **p. 6 / VI. CONCLUSION AND FUTURE WORK - extractive body cue:** Integrating this work with new VLM models that can exhibit robust zero-shot performance on unseen manipulation tasks and improving the reset efficiency of this framework ...
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 4 (V. EXPERIMENTS), baselines p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 4 (V. EXPERIMENTS), baselines p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** After 30k steps of autonomous online interaction, our method shows relative improvement of 51% upon the pre-trained performance, and outperforms BC by 58% on an average. (p. 5, V. EXPERIMENTS).
+- **Metric evidence:** For all other tasks, we report success rate over 20 trials. language instruction, given only a sparse binary reward. (p. 5, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** In all simulation tasks, our method ROBOFUME consistently outperforms prior methods, achieving success rates at least 20% higher than all baselines within 200k steps of online fine-tuning. (p. 5, V. EXPERIMENTS).
+- **Failure/negative evidence:** All tasks use 50 forward and 50 backward demos for the target task, and fewer than 20 combined trajectories of failures. (p. 5, V. EXPERIMENTS).

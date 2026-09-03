@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2004.02857; PDF retrieval source: https://arxiv.org/pdf/2004.02857. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2004.02857; PDF retrieval source: https://arxiv.org/pdf/2004.02857. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Method Body Digest
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** Specifically, we develop a simple sequence-to-sequence baseline architecture as well as a cross-modal attentionbased model.
-- **p. 3 / 1 Introduction - extractive PDF cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our VLN-CE setting (b) lifts these assumptions by instantiating the task in continuous environments with low-level actions - providing a more realistic testbed for robot ...
-- **p. 1 / 3 Facebook AI Research - extractive PDF cue:** To contextualize this new task, we develop models that mirror many of the advances made in prior settings as well as single-modality baselines.
-- **p. 1 / 3 Facebook AI Research - extractive PDF cue:** We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
-- **p. 2 / 1 Introduction - extractive PDF cue:** This is in contrast to the continuous stream of observations a real agent would encounter while moving. - Perfect localization.
-- **p. 4 / 1 Introduction - extractive PDF cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
-- **p. 2 / 1 Introduction - extractive PDF cue:** How an actual agent might acquire and update such a topology in new environments is an open question. - Oracle navigation.
+- **p. 3 / 1 Introduction - extractive body cue:** Specifically, we develop a simple sequence-to-sequence baseline architecture as well as a cross-modal attentionbased model.
+- **p. 3 / 1 Introduction - extractive body cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our VLN-CE setting (b) lifts these assumptions by instantiating the task in continuous environments with low-level actions - providing a more realistic testbed for robot ...
+- **p. 1 / 3 Facebook AI Research - extractive body cue:** To contextualize this new task, we develop models that mirror many of the advances made in prior settings as well as single-modality baselines.
+- **p. 1 / 3 Facebook AI Research - extractive body cue:** We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
+- **p. 2 / 1 Introduction - extractive body cue:** This is in contrast to the continuous stream of observations a real agent would encounter while moving. - Perfect localization.
+- **p. 4 / 1 Introduction - extractive body cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
+- **p. 2 / 1 Introduction - extractive body cue:** How an actual agent might acquire and update such a topology in new environments is an open question. - Oracle navigation.
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** This paradigm enables efficient data collection and high visual fidelity compared to 3D scanning or creating synthetic environments; however, scenes are only observed from a ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
+- **p. 3 / 1 Introduction - extractive body cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
+- **p. 1 / 1 Introduction - extractive body cue:** This paradigm enables efficient data collection and high visual fidelity compared to 3D scanning or creating synthetic environments; however, scenes are only observed from a ...
+- **p. 4 / 1 Introduction - extractive body cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
 
 ## Source Evidence Cues
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** Specifically, we develop a simple sequence-to-sequence baseline architecture as well as a cross-modal attentionbased model.
-- **p. 3 / 1 Introduction - extractive PDF cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our VLN-CE setting (b) lifts these assumptions by instantiating the task in continuous environments with low-level actions - providing a more realistic testbed for robot ...
-- **p. 1 / 3 Facebook AI Research - extractive PDF cue:** To contextualize this new task, we develop models that mirror many of the advances made in prior settings as well as single-modality baselines.
-- **p. 1 / 3 Facebook AI Research - extractive PDF cue:** We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
-- **p. 2 / 1 Introduction - extractive PDF cue:** This is in contrast to the continuous stream of observations a real agent would encounter while moving. - Perfect localization.
-- **p. 4 / 1 Introduction - extractive PDF cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
+- **p. 3 / 1 Introduction - extractive body cue:** Specifically, we develop a simple sequence-to-sequence baseline architecture as well as a cross-modal attentionbased model.
+- **p. 3 / 1 Introduction - extractive body cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our VLN-CE setting (b) lifts these assumptions by instantiating the task in continuous environments with low-level actions - providing a more realistic testbed for robot ...
+- **p. 1 / 3 Facebook AI Research - extractive body cue:** To contextualize this new task, we develop models that mirror many of the advances made in prior settings as well as single-modality baselines.
+- **p. 1 / 3 Facebook AI Research - extractive body cue:** We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
+- **p. 2 / 1 Introduction - extractive body cue:** This is in contrast to the continuous stream of observations a real agent would encounter while moving. - Perfect localization.
+- **p. 4 / 1 Introduction - extractive body cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Specifically, we develop a simple sequence-to-sequence baseline architecture as well as a cross-modal attentionbased model. | p. 3 (1 Introduction), p. 3 (1 Introduction) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN ... | p. 3 (1 Introduction), p. 2 (1 Introduction) |
@@ -48,8 +48,8 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Objective / Update Rule
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** How an actual agent might acquire and update such a topology in new environments is an open question. - Oracle navigation.
-- **p. 4 / 1 Introduction - extractive PDF cue:** This suggests prior results in VLN may be overly optimistic in terms of progress towards instruction-following robots functioning in the wild.
+- **p. 2 / 1 Introduction - extractive body cue:** How an actual agent might acquire and update such a topology in new environments is an open question. - Oracle navigation.
+- **p. 4 / 1 Introduction - extractive body cue:** This suggests prior results in VLN may be overly optimistic in terms of progress towards instruction-following robots functioning in the wild.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our VLN-CE setting (b) lifts these assumptions by instantiating the task in continuous environments with low-level actions - providing a more realistic testbed for robot ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** We perform a number of input-modality ablations to assess the biases and baselines in this new setting (including models without perception or instructions as suggested ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Taking a small step towards this goal, recent work has begun developing artificial agents that follow natural language navigation instructions in perceptually-rich, simulated environments [4,6].
-- **p. 1 / 1 Introduction - extractive PDF cue:** Springing forth from the pages of science fiction and capturing the daydreams of weary chore-doers everywhere, the promise and potential of general-purpose robotic assistants that ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Moreover, the views the agent receives along the way are not well-posed by careful human operators as in the panoramas, but rather a consequence of ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This is in contrast to the continuous stream of observations a real agent would encounter while moving. - Perfect localization.
-- **p. 4 / 1 Introduction - extractive PDF cue:** Ours is the only to provide unconstrained navigation in real environments for crowdsourced instructions.
+- **p. 2 / 1 Introduction - extractive body cue:** Our VLN-CE setting (b) lifts these assumptions by instantiating the task in continuous environments with low-level actions - providing a more realistic testbed for robot ...
+- **p. 3 / 1 Introduction - extractive body cue:** We perform a number of input-modality ablations to assess the biases and baselines in this new setting (including models without perception or instructions as suggested ...
+- **p. 1 / 1 Introduction - extractive body cue:** Taking a small step towards this goal, recent work has begun developing artificial agents that follow natural language navigation instructions in perceptually-rich, simulated environments [4,6].
+- **p. 1 / 1 Introduction - extractive body cue:** Springing forth from the pages of science fiction and capturing the daydreams of weary chore-doers everywhere, the promise and potential of general-purpose robotic assistants that ...
+- **p. 3 / 1 Introduction - extractive body cue:** Moreover, the views the agent receives along the way are not well-posed by careful human operators as in the panoramas, but rather a consequence of ...
+- **p. 2 / 1 Introduction - extractive body cue:** This is in contrast to the continuous stream of observations a real agent would encounter while moving. - Perfect localization.
+- **p. 4 / 1 Introduction - extractive body cue:** Ours is the only to provide unconstrained navigation in real environments for crowdsourced instructions.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -86,7 +86,7 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Training vs Inference
 
-- **p. 11 / 5 Experiments - extractive PDF cue:** We train on all ground-truth paths until convergence on val-unseen (at most 30 epochs).
+- **p. 11 / 5 Experiments - extractive body cue:** We train on all ground-truth paths until convergence on val-unseen (at most 30 epochs).
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -106,13 +106,13 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Failure and Ablation Link
 
-- **p. 12 / 5 Experiments - extractive PDF cue:** We believe that depth enable agents to quickly begin traversing environments effectively (e.g. without collisions) and without this it is very difficult to bootstrap to ...
-- **p. 12 / 5 Experiments - extractive PDF cue:** Seq2Seq and Single-Modality Ablations.
-- **p. 13 / 5 Experiments - extractive PDF cue:** We find that without data augmentation, the progress monitor over-fits considerably more (validation loss of 0.67 vs.
-- **p. 13 / 5 Experiments - extractive PDF cue:** Specifically, we pretrain with imitation learning, data augmentation, and the progress monitoring loss, then finetune using DAgger (with β=0.75n+1) on the original data.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 4. We develop a simple baseline agent (a) as well as an attentional agent (b) comparable to that in [29]. Both receive RGB and ...
-- **p. 14 / 5 Experiments - extractive PDF cue:** The second example shows a failure of the agent - it navigates towards the wrong windows and fails to first "pass the kitchen" - stopping ...
-- **p. 14 / 5 Experiments - extractive PDF cue:** We also observe failures when the agent never sees the object(s) referred to by the instruction in the scene - with a limited egocentric field-of-view, ...
+- **p. 12 / 5 Experiments - extractive body cue:** We believe that depth enable agents to quickly begin traversing environments effectively (e.g. without collisions) and without this it is very difficult to bootstrap to ...
+- **p. 12 / 5 Experiments - extractive body cue:** Seq2Seq and Single-Modality Ablations.
+- **p. 13 / 5 Experiments - extractive body cue:** We find that without data augmentation, the progress monitor over-fits considerably more (validation loss of 0.67 vs.
+- **p. 13 / 5 Experiments - extractive body cue:** Specifically, we pretrain with imitation learning, data augmentation, and the progress monitoring loss, then finetune using DAgger (with β=0.75n+1) on the original data.
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 4. We develop a simple baseline agent (a) as well as an attentional agent (b) comparable to that in [29]. Both receive RGB and ...
+- **p. 14 / 5 Experiments - extractive body cue:** The second example shows a failure of the agent - it navigates towards the wrong windows and fails to first "pass the kitchen" - stopping ...
+- **p. 14 / 5 Experiments - extractive body cue:** We also observe failures when the agent never sees the object(s) referred to by the instruction in the scene - with a limited egocentric field-of-view, ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,7 +126,7 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 1 (3 Facebook AI Research), p. 1 (3 Facebook AI Research), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 4 (1 Introduction), temporal p. 9 (2 Related Work), p. 9 (2 Related Work), p. 11 (2 Related Work), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments).
+- **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 1 (3 Facebook AI Research), p. 1 (3 Facebook AI Research), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 4 (1 Introduction), temporal p. 9 (2 Related Work), p. 9 (2 Related Work), p. 11 (2 Related Work), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

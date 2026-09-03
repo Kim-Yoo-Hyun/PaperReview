@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/gupta20a.html; PDF retrieval source: https://arxiv.org/pdf/1910.11956. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/gupta20a.html; PDF retrieval source: https://arxiv.org/pdf/1910.11956. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 1: Comparison of RIL to goal-conditioned behavior cloning with and without relabeling in terms success and step-completion rate averaged across 17 tasks. RIL ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 5: Comparison of the RPL algorithm with a number of baselines averaged over 17 compound goals and 2 (baseline methods) or 3 (our ... | p. 8 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The environment consists of a 9 DoF positioncontrolled Franka robot interacting with a kitchen scene that includes an openable microwave, four turnable oven burners, ... | embodiment, simulator version and control stack | p. 6 (3 Preliminaries), p. 4 (3 Preliminaries) |
 | Task/environment | [22]) D, corresponding to demonstrations of meaningful activities provided by the user, without any particular task in mind, e.g. opening cabinet doors, playing with ... | reset, timeout, object/scene variation | p. 4 (3 Preliminaries), p. 5 (3 Preliminaries) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 6 / 3 Preliminaries - extractive body cue:** While these trajectories did not necessarily reach the goals that were originally commanded, and therefore cannot be considered optimal for those goals, they do end ...
 - **p. 13 / Figure/Table caption - extractive body cue:** Figure 10: Visualization of failing learned behavior for moving kettle, turning the bottom knob, moving the slider and turning on the oven light 13
 
-- **PDF anchors reviewed:** datasets p. 6 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 4 (3 Preliminaries), metrics p. 7 (3 Preliminaries), p. 7 (3 Preliminaries), p. 8 (Figure/Table caption), p. 8 (3 Preliminaries), p. 6 (3 Preliminaries), p. 4 (3 Preliminaries), baselines p. 8 (Figure/Table caption), p. 8 (3 Preliminaries), p. 7 (Figure/Table caption), p. 7 (3 Preliminaries), p. 12 (Figure/Table caption), p. 4 (3 Preliminaries), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (3 Preliminaries), p. 7 (3 Preliminaries), p. 6 (3 Preliminaries), p. 4 (3 Preliminaries).
+- **Evidence anchors reviewed:** datasets p. 6 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 4 (3 Preliminaries), metrics p. 7 (3 Preliminaries), p. 7 (3 Preliminaries), p. 8 (Figure/Table caption), p. 8 (3 Preliminaries), p. 6 (3 Preliminaries), p. 4 (3 Preliminaries), baselines p. 8 (Figure/Table caption), p. 8 (3 Preliminaries), p. 7 (Figure/Table caption), p. 7 (3 Preliminaries), p. 12 (Figure/Table caption), p. 4 (3 Preliminaries), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (3 Preliminaries), p. 7 (3 Preliminaries), p. 6 (3 Preliminaries), p. 4 (3 Preliminaries).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 5: Comparison of the RPL algorithm with a number of baselines averaged over 17 compound goals and 2 (baseline methods) or 3 (our approach) random seeds. Fine-tuning with all ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Performing reinforcement fine-tuning individually on 17 different compound goals seen in the demonstrations, we observe a significant improvement in the average success rate and stepwise completion scores over all the ... (p. 7, 3 Preliminaries).
+- **Baseline/ablation evidence:** Figure 5: Comparison of the RPL algorithm with a number of baselines averaged over 17 compound goals and 2 (baseline methods) or 3 (our approach) random seeds. Fine-tuning with all ... (p. 8, Figure/Table caption).
+- **Failure/negative evidence:** While these trajectories did not necessarily reach the goals that were originally commanded, and therefore cannot be considered optimal for those goals, they do end up reaching the actual states ... (p. 6, 3 Preliminaries).

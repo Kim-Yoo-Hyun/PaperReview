@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation.
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 categories.
-- **p. 6 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** Text-based object retrieval results on the Sr3D dataset.
-- **p. 6 / 4.3. Quantitative Comparison - extractive PDF cue:** Compared to the existing SoTA 3D scene graph, HOV-SG [44], we achieve +8.9% mIoU and +11.0% mAcc on the Replica dataset.
-- **p. 7 / 4.3. Quantitative Comparison - extractive PDF cue:** For each sense in the HM3DSem [46] dataset, we randomly select 100 pairs of starting points and destinations in navigable areas.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** This is crucial for real-world deployment.
-- **p. 8 / 4.5. Qualitative Analysis - extractive PDF cue:** We also conduct real-world experiments to further validate the effectiveness of our method.
-- **p. 7 / 4.3. Quantitative Comparison - extractive PDF cue:** HOV-SG [44] can be directly used for path planning, thus it is evaluated and compared with our method in this task.
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation.
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 categories.
+- **p. 6 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** Text-based object retrieval results on the Sr3D dataset.
+- **p. 6 / 4.3. Quantitative Comparison - extractive body cue:** Compared to the existing SoTA 3D scene graph, HOV-SG [44], we achieve +8.9% mIoU and +11.0% mAcc on the Replica dataset.
+- **p. 7 / 4.3. Quantitative Comparison - extractive body cue:** For each sense in the HM3DSem [46] dataset, we randomly select 100 pairs of starting points and destinations in navigable areas.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** This is crucial for real-world deployment.
+- **p. 8 / 4.5. Qualitative Analysis - extractive body cue:** We also conduct real-world experiments to further validate the effectiveness of our method.
+- **p. 7 / 4.3. Quantitative Comparison - extractive body cue:** HOV-SG [44] can be directly used for path planning, thus it is evaluated and compared with our method in this task.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 4. Path planning results on HM3DSem. SR denotes success rate (%). s is the threshold within which the distance between the navigation endpoint ... | p. 6 (Figure/Table caption) |
 | 4.4. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | By contrast, our IFA achieves an improvement of 1.8% mIoU over Row 1. | p. 7 (4.4. Ablation Studies) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation.
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 categories.
-- **p. 6 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** Text-based object retrieval results on the Sr3D dataset.
-- **p. 6 / 4.3. Quantitative Comparison - extractive PDF cue:** Compared to the existing SoTA 3D scene graph, HOV-SG [44], we achieve +8.9% mIoU and +11.0% mAcc on the Replica dataset.
-- **p. 7 / 4.3. Quantitative Comparison - extractive PDF cue:** For each sense in the HM3DSem [46] dataset, we randomly select 100 pairs of starting points and destinations in navigable areas.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** This is crucial for real-world deployment.
-- **p. 8 / 4.5. Qualitative Analysis - extractive PDF cue:** We also conduct real-world experiments to further validate the effectiveness of our method.
-- **p. 7 / 4.3. Quantitative Comparison - extractive PDF cue:** HOV-SG [44] can be directly used for path planning, thus it is evaluated and compared with our method in this task.
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation.
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 categories.
+- **p. 6 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** Text-based object retrieval results on the Sr3D dataset.
+- **p. 6 / 4.3. Quantitative Comparison - extractive body cue:** Compared to the existing SoTA 3D scene graph, HOV-SG [44], we achieve +8.9% mIoU and +11.0% mAcc on the Replica dataset.
+- **p. 7 / 4.3. Quantitative Comparison - extractive body cue:** For each sense in the HM3DSem [46] dataset, we randomly select 100 pairs of starting points and destinations in navigable areas.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** This is crucial for real-world deployment.
+- **p. 8 / 4.5. Qualitative Analysis - extractive body cue:** We also conduct real-world experiments to further validate the effectiveness of our method.
+- **p. 7 / 4.3. Quantitative Comparison - extractive body cue:** HOV-SG [44] can be directly used for path planning, thus it is evaluated and compared with our method in this task.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) A 3D scene. (b) The corresponding semantic 3D map based on point clouds (6.8M). (c) Our Octree-Graph where each object is represented ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of our Octree-Graph. (a) Chronological Group-wise Segment Merging (CGSM). Given posed RGB-D inputs, 2D masks with semantic features are first extracted and ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustration of group split and CGSM merging.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of the nodes and edges in Octree-Graph. where cos(·) denotes cosine similarity, and av i,j is normal- ized via softmax. Intuitively, a ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Illustration of the construction of the adaptive-octree. The above displays the process, and the below shows an example. 5, an adaptive-octree is constructed ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Zero-shot 3D semantic segmentation results on Replica and ScanNet benchmark.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. 3D instance segmentation results on ScanNet200. sup. means supervised training, z.s. denotes the zero-shot setting.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Text-based object retrieval results on the Sr3D dataset.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) A 3D scene. (b) The corresponding semantic 3D map based on point clouds (6.8M). (c) Our Octree-Graph where each object is represented ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our Octree-Graph. (a) Chronological Group-wise Segment Merging (CGSM). Given posed RGB-D inputs, 2D masks with semantic features are first extracted and ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Illustration of group split and CGSM merging.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of the nodes and edges in Octree-Graph. where cos(·) denotes cosine similarity, and av i,j is normal- ized via softmax. Intuitively, a ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Illustration of the construction of the adaptive-octree. The above displays the process, and the below shows an example. 5, an adaptive-octree is constructed ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Zero-shot 3D semantic segmentation results on Replica and ScanNet benchmark.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. 3D instance segmentation results on ScanNet200. sup. means supervised training, z.s. denotes the zero-shot setting.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Text-based object retrieval results on the Sr3D dataset.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation. | embodiment, simulator version and control stack | p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics) |
 | Task/environment | For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 ... | reset, timeout, object/scene variation | p. 5 (4.2. Dataset and Evaluation Metrics), p. 6 (4.2. Dataset and Evaluation Metrics) |
@@ -122,11 +122,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 | Primary metric/result | By contrast, our IFA achieves an improvement of 1.8% mIoU over Row 1. | numeric claim only at cited anchor | p. 7 (4.4. Ablation Studies) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For zero-shot 3D semantic segmentation, we evaluate our method on common scenes following [7, 15, 44], i.e., 8 scenes from Replica [39] dataset and 5 ...
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 categories.
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For text-based object retrieval, we test our method on Sr3D [1] dataset, and follow the experiment setting of BBQ [23] that subsampled 526 free-form queries ...
-- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive PDF cue:** For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation.
-- **p. 7 / 4.3. Quantitative Comparison - extractive PDF cue:** Method Structure Storage↓time↓ A* Octree-Graph 268.41Kb 0.032s A* Point Cloud 71.16Mb 2.154s Jump Point Search Octree-Graph 268.41Kb 0.081s Jump Point Search Point Cloud 71.16Mb 2.153s ...
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For zero-shot 3D semantic segmentation, we evaluate our method on common scenes following [7, 15, 44], i.e., 8 scenes from Replica [39] dataset and 5 ...
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For zero-shot 3D instance segmentation, we assess our method on the widely-used ScanNet200 [36] benchmark, including a validation set of 312 scenes with 200 categories.
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For text-based object retrieval, we test our method on Sr3D [1] dataset, and follow the experiment setting of BBQ [23] that subsampled 526 free-form queries ...
+- **p. 5 / 4.2. Dataset and Evaluation Metrics - extractive body cue:** For the path planning task, we employ the HM3DSem [46] dataset used in HOV-SG [44], where 8 scenes are selected for evaluation.
+- **p. 7 / 4.3. Quantitative Comparison - extractive body cue:** Method Structure Storage↓time↓ A* Octree-Graph 268.41Kb 0.032s A* Point Cloud 71.16Mb 2.154s Jump Point Search Octree-Graph 268.41Kb 0.081s Jump Point Search Point Cloud 71.16Mb 2.153s ...
 
 ## Generalization and Failure Cases
 
@@ -156,9 +156,9 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.4. Ablation Studies - extractive PDF cue:** We also analyze the impact of hyper-parameter I, and the results in Rows 3-5 show that our method exhibits robustness to I ranging from 100 ...
+- **p. 7 / 4.4. Ablation Studies - extractive body cue:** We also analyze the impact of hyper-parameter I, and the results in Rows 3-5 show that our method exhibits robustness to I ranging from 100 ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics), p. 6 (4.2. Dataset and Evaluation Metrics), p. 6 (4.3. Quantitative Comparison), p. 7 (4.3. Quantitative Comparison), p. 8 (4.4. Ablation Studies), metrics p. 6 (4.3. Quantitative Comparison), p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics), p. 7 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 6 (4.3. Quantitative Comparison), baselines p. 6 (4.3. Quantitative Comparison), p. 8 (4.5. Qualitative Analysis), p. 6 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 7 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), results p. 6 (Figure/Table caption), p. 7 (4.4. Ablation Studies), p. 6 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics).
+- **Evidence anchors reviewed:** datasets p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics), p. 6 (4.2. Dataset and Evaluation Metrics), p. 6 (4.3. Quantitative Comparison), p. 7 (4.3. Quantitative Comparison), p. 8 (4.4. Ablation Studies), metrics p. 6 (4.3. Quantitative Comparison), p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics), p. 7 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 6 (4.3. Quantitative Comparison), baselines p. 6 (4.3. Quantitative Comparison), p. 8 (4.5. Qualitative Analysis), p. 6 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 7 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), results p. 6 (Figure/Table caption), p. 7 (4.4. Ablation Studies), p. 6 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

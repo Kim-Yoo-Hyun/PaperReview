@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.12981; PDF retrieval source: https://arxiv.org/pdf/2307.12981. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2307.12981; PDF retrieval source: https://arxiv.org/pdf/2307.12981. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 Experiments - extractive PDF cue:** Specifically, our 3D-language data generation pipeline generates the held-in datasets of multiple tasks. we split the datasets into train/val/test sets (8:1:1).
-- **p. 7 / 5 Experiments - extractive PDF cue:** We utilize training sets of held-in datasets for pre-training foundation 3D-LLMs, and their validation and test sets can be applied for held-in evaluation.
-- **p. 8 / 5 Experiments - extractive PDF cue:** 5.2 More Extensive Evaluation Held-In Evaluation We carry out experiments on held-in datasets of three tasks: 3D captioning, 3D-assited dialog and task decomposition.
-- **p. 8 / 5 Experiments - extractive PDF cue:** BLEU-1 BLEU-4 METEOR ROUHE-L CIDER EM SingleImage+MCAN 16.5 0.0 8.4 21.5 38.6 15.8 VoteNet+MCAN* 29.5 6.0 12.0 30.9 58.2 19.7 ScanRefer+MCAN* 27.9 7.5 11.9 30.7 ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** Describe the scene Black and white table with stairs in it.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Describe the scene A 3D model of a small, old, and ruined castle with a doorway and stairs Can you help me find my shoes?
-- **p. 7 / 5 Experiments - extractive PDF cue:** We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching.
-- **p. 7 / 5 Experiments - extractive PDF cue:** The models are trained with the standard language modeling loss to output responses.
+- **p. 7 / 5 Experiments - extractive body cue:** Specifically, our 3D-language data generation pipeline generates the held-in datasets of multiple tasks. we split the datasets into train/val/test sets (8:1:1).
+- **p. 7 / 5 Experiments - extractive body cue:** We utilize training sets of held-in datasets for pre-training foundation 3D-LLMs, and their validation and test sets can be applied for held-in evaluation.
+- **p. 8 / 5 Experiments - extractive body cue:** 5.2 More Extensive Evaluation Held-In Evaluation We carry out experiments on held-in datasets of three tasks: 3D captioning, 3D-assited dialog and task decomposition.
+- **p. 8 / 5 Experiments - extractive body cue:** BLEU-1 BLEU-4 METEOR ROUHE-L CIDER EM SingleImage+MCAN 16.5 0.0 8.4 21.5 38.6 15.8 VoteNet+MCAN* 29.5 6.0 12.0 30.9 58.2 19.7 ScanRefer+MCAN* 27.9 7.5 11.9 30.7 ...
+- **p. 9 / 5 Experiments - extractive body cue:** Describe the scene Black and white table with stairs in it.
+- **p. 9 / 5 Experiments - extractive body cue:** Describe the scene A 3D model of a small, old, and ruined castle with a doorway and stairs Can you help me find my shoes?
+- **p. 7 / 5 Experiments - extractive body cue:** We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching.
+- **p. 7 / 5 Experiments - extractive body cue:** The models are trained with the standard language modeling loss to output responses.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our model outperforms all baseline models for most of the evaluation metrics. they have much lower performances compared to 3D-LLMs, probably because features of ... | p. 8 (5 Experiments) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 4: Experimental results on 3DMV-VQA dataset. * denotes using explicit object representations and neuro-symbolic reasoning. Result Analysis Table 4 shows the performances on ... | p. 14 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 Experiments - extractive PDF cue:** Specifically, our 3D-language data generation pipeline generates the held-in datasets of multiple tasks. we split the datasets into train/val/test sets (8:1:1).
-- **p. 7 / 5 Experiments - extractive PDF cue:** We utilize training sets of held-in datasets for pre-training foundation 3D-LLMs, and their validation and test sets can be applied for held-in evaluation.
-- **p. 8 / 5 Experiments - extractive PDF cue:** 5.2 More Extensive Evaluation Held-In Evaluation We carry out experiments on held-in datasets of three tasks: 3D captioning, 3D-assited dialog and task decomposition.
-- **p. 8 / 5 Experiments - extractive PDF cue:** BLEU-1 BLEU-4 METEOR ROUHE-L CIDER EM SingleImage+MCAN 16.5 0.0 8.4 21.5 38.6 15.8 VoteNet+MCAN* 29.5 6.0 12.0 30.9 58.2 19.7 ScanRefer+MCAN* 27.9 7.5 11.9 30.7 ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** Describe the scene Black and white table with stairs in it.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Describe the scene A 3D model of a small, old, and ruined castle with a doorway and stairs Can you help me find my shoes?
+- **p. 7 / 5 Experiments - extractive body cue:** Specifically, our 3D-language data generation pipeline generates the held-in datasets of multiple tasks. we split the datasets into train/val/test sets (8:1:1).
+- **p. 7 / 5 Experiments - extractive body cue:** We utilize training sets of held-in datasets for pre-training foundation 3D-LLMs, and their validation and test sets can be applied for held-in evaluation.
+- **p. 8 / 5 Experiments - extractive body cue:** 5.2 More Extensive Evaluation Held-In Evaluation We carry out experiments on held-in datasets of three tasks: 3D captioning, 3D-assited dialog and task decomposition.
+- **p. 8 / 5 Experiments - extractive body cue:** BLEU-1 BLEU-4 METEOR ROUHE-L CIDER EM SingleImage+MCAN 16.5 0.0 8.4 21.5 38.6 15.8 VoteNet+MCAN* 29.5 6.0 12.0 30.9 58.2 19.7 ScanRefer+MCAN* 27.9 7.5 11.9 30.7 ...
+- **p. 9 / 5 Experiments - extractive body cue:** Describe the scene Black and white table with stairs in it.
+- **p. 9 / 5 Experiments - extractive body cue:** Describe the scene A 3D model of a small, old, and ruined castle with a doorway and stairs Can you help me find my shoes?
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Examples from our generated 3D-language data, which covers multiple 3D-related tasks. relationships, affordances, physics and interaction so on. Therefore, such LLMs pale in ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: 3D-language data generation pipelines. obstacles like how to handle the problem of data sparsity, how to align the 3D world with 2D images, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of our 3D-LLM framework. The first two columns show our 3D feature extractor. We first render a few multi-view images from the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. We observe a significant increase in the evaluation metrics. For example, for BLEU-1, our model outperforms the state-of-the-art ScanQA model by ∼9% for ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Experimental results on ScanQA validation set. * Means the models use explicit object representations. B-1, B-2, B-3, B-4 denote BLEU-1, BLEU-2, BLEU-3, BLEU-4 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Experimental results on ScanQA test set. * Means the models use explicit object representations. Our model outperforms all baseline models for most of ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Experimental Results on Held-In Datasets. 3D-LLMs outperform 2D VLMs. 8
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Qualitative examples of 3D-LLM's prediction. Qualitative Examples In Figure 4, we show qualitative examples of 3D-LLM's predictions. We can see that our 3D-LLM ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Examples from our generated 3D-language data, which covers multiple 3D-related tasks. relationships, affordances, physics and interaction so on. Therefore, such LLMs pale in ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: 3D-language data generation pipelines. obstacles like how to handle the problem of data sparsity, how to align the 3D world with 2D images, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Overview of our 3D-LLM framework. The first two columns show our 3D feature extractor. We first render a few multi-view images from the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. We observe a significant increase in the evaluation metrics. For example, for BLEU-1, our model outperforms the state-of-the-art ScanQA model by ∼9% for ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Experimental results on ScanQA validation set. * Means the models use explicit object representations. B-1, B-2, B-3, B-4 denote BLEU-1, BLEU-2, BLEU-3, BLEU-4 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Experimental results on ScanQA test set. * Means the models use explicit object representations. Our model outperforms all baseline models for most of ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Experimental Results on Held-In Datasets. 3D-LLMs outperform 2D VLMs. 8
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative examples of 3D-LLM's prediction. Qualitative Examples In Figure 4, we show qualitative examples of 3D-LLM's predictions. We can see that our 3D-LLM ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Specifically, our 3D-language data generation pipeline generates the held-in datasets of multiple tasks. we split the datasets into train/val/test sets (8:1:1). | embodiment, simulator version and control stack | p. 7 (5 Experiments), p. 7 (5 Experiments) |
 | Task/environment | We utilize training sets of held-in datasets for pre-training foundation 3D-LLMs, and their validation and test sets can be applied for held-in evaluation. | reset, timeout, object/scene variation | p. 7 (5 Experiments), p. 8 (5 Experiments) |
@@ -120,8 +120,8 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 | Primary metric/result | Table 4: Experimental results on 3DMV-VQA dataset. * denotes using explicit object representations and neuro-symbolic reasoning. Result Analysis Table 4 shows the performances on ... | numeric claim only at cited anchor | p. 14 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 14 / B.1 Implementation Details - extractive PDF cue:** The learning rate is increased linearly from 0 to 10-4 up over the first 5000 steps then held constant for the duration of training.
-- **p. 5 / 5. Facing the mirror and dress - extractive PDF cue:** HM3DSem [47] further adds semantic annotations and bounding boxes for more than 200 scenes of HM3D.
+- **p. 14 / B.1 Implementation Details - extractive body cue:** The learning rate is increased linearly from 0 to 10-4 up over the first 5000 steps then held constant for the duration of training.
+- **p. 5 / 5. Facing the mirror and dress - extractive body cue:** HM3DSem [47] further adds semantic annotations and bounding boxes for more than 200 scenes of HM3D.
 
 ## Generalization and Failure Cases
 
@@ -155,10 +155,10 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 6 Conclusion - extractive PDF cue:** A limitation is that the 3D feature extractor relies on 2D multi-view images, and thus all 3D scenes need to be rendered so that they ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching.
+- **p. 9 / 6 Conclusion - extractive body cue:** A limitation is that the 3D feature extractor relies on 2D multi-view images, and thus all 3D scenes need to be rendered so that they ...
+- **p. 7 / 5 Experiments - extractive body cue:** We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 13 (B.1 Implementation Details), p. 14 (B.1 Implementation Details), baselines p. 7 (Figure/Table caption), p. 8 (5 Experiments), p. 14 (Figure/Table caption), p. 8 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (5 Experiments), results p. 8 (5 Experiments), p. 14 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 16 (Figure/Table caption), p. 7 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 13 (B.1 Implementation Details), p. 14 (B.1 Implementation Details), baselines p. 7 (Figure/Table caption), p. 8 (5 Experiments), p. 14 (Figure/Table caption), p. 8 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (5 Experiments), results p. 8 (5 Experiments), p. 14 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 16 (Figure/Table caption), p. 7 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

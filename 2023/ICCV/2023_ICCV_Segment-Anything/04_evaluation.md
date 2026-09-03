@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.02643; PDF retrieval source: https://arxiv.org/pdf/2304.02643. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.02643; PDF retrieval source: https://arxiv.org/pdf/2304.02643. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5. Segment Anything Dataset - extractive PDF cue:** 5 we plot the spatial distribution of object centers in SA-1B compared to the largest existing segmentation datasets.
-- **p. 8 / 7. Zero-Shot Transfer Experiments - extractive PDF cue:** These experiments evaluate SAM on datasets and tasks that were not seen during training (our usage of "zero-shot transfer" follows its usage in CLIP [82]).
-- **p. 6 / 5. Segment Anything Dataset - extractive PDF cue:** We compare SA-1B with existing datasets and analyze mask quality and properties.
-- **p. 6 / 5. Segment Anything Dataset - extractive PDF cue:** We compare them directly to professional annotations and look at how various mask properties compare to prominent segmentation datasets.
-- **p. 7 / 5. Segment Anything Dataset - extractive PDF cue:** 6 (legend) we compare these datasets by size.
-- **p. 8 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** We use all 23 datasets for mIoU evaluation.
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** We compare per-dataset results in Fig.
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** SAM yields higher results on 16 of the 23 datasets, by as much as ∼47 IoU.
+- **p. 7 / 5. Segment Anything Dataset - extractive body cue:** 5 we plot the spatial distribution of object centers in SA-1B compared to the largest existing segmentation datasets.
+- **p. 8 / 7. Zero-Shot Transfer Experiments - extractive body cue:** These experiments evaluate SAM on datasets and tasks that were not seen during training (our usage of "zero-shot transfer" follows its usage in CLIP [82]).
+- **p. 6 / 5. Segment Anything Dataset - extractive body cue:** We compare SA-1B with existing datasets and analyze mask quality and properties.
+- **p. 6 / 5. Segment Anything Dataset - extractive body cue:** We compare them directly to professional annotations and look at how various mask properties compare to prominent segmentation datasets.
+- **p. 7 / 5. Segment Anything Dataset - extractive body cue:** 6 (legend) we compare these datasets by size.
+- **p. 8 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** We use all 23 datasets for mIoU evaluation.
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** We compare per-dataset results in Fig.
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** SAM yields higher results on 16 of the 23 datasets, by as much as ∼47 IoU.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 7.1. Zero-Shot Single Point Valid Mask Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | SAM significantly outperforms prior interactive segmenters with 1 point and is on par with more points. | p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation) |
 | 7.1. Zero-Shot Single Point Valid Mask Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | We observe that the gap between SAM and the baselines grows and SAM is able to achieve comparable results under either sampling method. | p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5. Segment Anything Dataset - extractive PDF cue:** 5 we plot the spatial distribution of object centers in SA-1B compared to the largest existing segmentation datasets.
-- **p. 8 / 7. Zero-Shot Transfer Experiments - extractive PDF cue:** These experiments evaluate SAM on datasets and tasks that were not seen during training (our usage of "zero-shot transfer" follows its usage in CLIP [82]).
-- **p. 6 / 5. Segment Anything Dataset - extractive PDF cue:** We compare SA-1B with existing datasets and analyze mask quality and properties.
-- **p. 6 / 5. Segment Anything Dataset - extractive PDF cue:** We compare them directly to professional annotations and look at how various mask properties compare to prominent segmentation datasets.
-- **p. 7 / 5. Segment Anything Dataset - extractive PDF cue:** 6 (legend) we compare these datasets by size.
-- **p. 8 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** We use all 23 datasets for mIoU evaluation.
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** We compare per-dataset results in Fig.
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** SAM yields higher results on 16 of the 23 datasets, by as much as ∼47 IoU.
+- **p. 7 / 5. Segment Anything Dataset - extractive body cue:** 5 we plot the spatial distribution of object centers in SA-1B compared to the largest existing segmentation datasets.
+- **p. 8 / 7. Zero-Shot Transfer Experiments - extractive body cue:** These experiments evaluate SAM on datasets and tasks that were not seen during training (our usage of "zero-shot transfer" follows its usage in CLIP [82]).
+- **p. 6 / 5. Segment Anything Dataset - extractive body cue:** We compare SA-1B with existing datasets and analyze mask quality and properties.
+- **p. 6 / 5. Segment Anything Dataset - extractive body cue:** We compare them directly to professional annotations and look at how various mask properties compare to prominent segmentation datasets.
+- **p. 7 / 5. Segment Anything Dataset - extractive body cue:** 6 (legend) we compare these datasets by size.
+- **p. 8 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** We use all 23 datasets for mIoU evaluation.
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** We compare per-dataset results in Fig.
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** SAM yields higher results on 16 of the 23 datasets, by as much as ∼47 IoU.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: We aim to build a foundation model for segmentation by introducing three interconnected components: a prompt- able segmentation task, a segmentation model (SAM) ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Example images with overlaid masks from our newly introduced dataset, SA-1B. SA-1B contains 11M diverse, high-resolution, licensed, and privacy protecting images and 1.1B ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Each column shows 3 valid masks generated by SAM from a single ambiguous point prompt (green circle). a broadly capable model that can ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4: Segment Anything Model (SAM) overview. A heavyweight image encoder outputs an image embedding that can then be efficiently queried by a variety of ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Image-size normalized mask center distributions.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6: Dataset mask properties. The legend references the number of images and masks in each dataset. Note, that SA-1B has 11× more images and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7: Estimated geographic distribution of SA-1B images. Most of the world's countries have more than 1000 images in SA-1B, and the three countries with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of geographic and income representa- tion. SA-1B has higher representation in Europe and Asia & Oceania as well as middle income countries. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We aim to build a foundation model for segmentation by introducing three interconnected components: a prompt- able segmentation task, a segmentation model (SAM) ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Example images with overlaid masks from our newly introduced dataset, SA-1B. SA-1B contains 11M diverse, high-resolution, licensed, and privacy protecting images and 1.1B ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Each column shows 3 valid masks generated by SAM from a single ambiguous point prompt (green circle). a broadly capable model that can ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4: Segment Anything Model (SAM) overview. A heavyweight image encoder outputs an image embedding that can then be efficiently queried by a variety of ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Image-size normalized mask center distributions.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: Dataset mask properties. The legend references the number of images and masks in each dataset. Note, that SA-1B has 11× more images and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7: Estimated geographic distribution of SA-1B images. Most of the world's countries have more than 1000 images in SA-1B, and the three countries with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Comparison of geographic and income representa- tion. SA-1B has higher representation in Europe and Asia & Oceania as well as middle income countries. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5 we plot the spatial distribution of object centers in SA-1B compared to the largest existing segmentation datasets. | embodiment, simulator version and control stack | p. 7 (5. Segment Anything Dataset), p. 8 (7. Zero-Shot Transfer Experiments) |
 | Task/environment | These experiments evaluate SAM on datasets and tasks that were not seen during training (our usage of "zero-shot transfer" follows its usage in CLIP ... | reset, timeout, object/scene variation | p. 8 (7. Zero-Shot Transfer Experiments), p. 6 (5. Segment Anything Dataset) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 | Primary metric/result | We observe that the gap between SAM and the baselines grows and SAM is able to achieve comparable results under either sampling method. | numeric claim only at cited anchor | p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5. Segment Anything Dataset - extractive PDF cue:** These images are high resolution (3300×4950 pixels on average), and the resulting data size can present accessibility and storage challenges.
-- **p. 6 / 5. Segment Anything Dataset - extractive PDF cue:** Even after downsampling, our images are significantly higher resolution than many existing vision datasets (e.g., COCO [66] images are ∼480×640 pixels).
-- **p. 8 / 6. Segment Anything RAI Analysis - extractive PDF cue:** mIoU at 1 point 3 points perceived gender presentation feminine 54.4 ±1.7 90.4 ±0.6 masculine 55.7 ±1.7 90.1 ±0.6 perceived age group older 62.9 ±6.7 ...
-- **p. 8 / 6. Segment Anything RAI Analysis - extractive PDF cue:** Our evaluation uses simulated interactive segmentation with random sampling of 1 and 3 points (see §D).
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** SAM significantly outperforms prior interactive segmenters with 1 point and is on par with more points.
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** Low absolute mIoU at 1 point is the result of ambiguity.
+- **p. 6 / 5. Segment Anything Dataset - extractive body cue:** These images are high resolution (3300×4950 pixels on average), and the resulting data size can present accessibility and storage challenges.
+- **p. 6 / 5. Segment Anything Dataset - extractive body cue:** Even after downsampling, our images are significantly higher resolution than many existing vision datasets (e.g., COCO [66] images are ∼480×640 pixels).
+- **p. 8 / 6. Segment Anything RAI Analysis - extractive body cue:** mIoU at 1 point 3 points perceived gender presentation feminine 54.4 ±1.7 90.4 ±0.6 masculine 55.7 ±1.7 90.1 ±0.6 perceived age group older 62.9 ±6.7 ...
+- **p. 8 / 6. Segment Anything RAI Analysis - extractive body cue:** Our evaluation uses simulated interactive segmentation with random sampling of 1 and 3 points (see §D).
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** SAM significantly outperforms prior interactive segmenters with 1 point and is on par with more points.
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** Low absolute mIoU at 1 point is the result of ambiguity.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 
 ## Limitations and Verification Questions
 
-- **p. 12 / 8. Discussion - extractive PDF cue:** It can miss fine structures, hallucinates small disconnected components at times, and does not produce boundaries as crisply as more computationally intensive methods that "zoom-in", ...
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive PDF cue:** SAM's mean ratings fall between 7 and 9, which corresponds to the qualitative rating guideline: "A high score (7-9): The object is identifiable and errors ...
-- **p. 11 / 7.5. Zero-Shot Text-to-Mask - extractive PDF cue:** When SAM fails to make a correct prediction, an additional point prompt can help.
-- **p. 11 / 7.5. Zero-Shot Text-to-Mask - extractive PDF cue:** When SAM fails to pick the right object from a text prompt only, an additional point often fixes the prediction, similar to [31].
-- **p. 12 / 8. Discussion - extractive PDF cue:** Our foray into the text-to-mask task is exploratory and not entirely robust, although we believe it can be improved with more effort.
-- **p. 8 / 6. Segment Anything RAI Analysis - extractive PDF cue:** As MIAP does not contain perceived skin tone annotations, we use a proprietary dataset that contains annotations for the perceived Fitzpatrick skin type [36], which ...
+- **p. 12 / 8. Discussion - extractive body cue:** It can miss fine structures, hallucinates small disconnected components at times, and does not produce boundaries as crisply as more computationally intensive methods that "zoom-in", ...
+- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** SAM's mean ratings fall between 7 and 9, which corresponds to the qualitative rating guideline: "A high score (7-9): The object is identifiable and errors ...
+- **p. 11 / 7.5. Zero-Shot Text-to-Mask - extractive body cue:** When SAM fails to make a correct prediction, an additional point prompt can help.
+- **p. 11 / 7.5. Zero-Shot Text-to-Mask - extractive body cue:** When SAM fails to pick the right object from a text prompt only, an additional point often fixes the prediction, similar to [31].
+- **p. 12 / 8. Discussion - extractive body cue:** Our foray into the text-to-mask task is exploratory and not entirely robust, although we believe it can be improved with more effort.
+- **p. 8 / 6. Segment Anything RAI Analysis - extractive body cue:** As MIAP does not contain perceived skin tone annotations, we use a proprietary dataset that contains annotations for the perceived Fitzpatrick skin type [36], which ...
 
-- **PDF anchors reviewed:** datasets p. 7 (5. Segment Anything Dataset), p. 8 (7. Zero-Shot Transfer Experiments), p. 6 (5. Segment Anything Dataset), p. 6 (5. Segment Anything Dataset), p. 7 (5. Segment Anything Dataset), p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), metrics p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 5 (Figure/Table caption), p. 24 (Figure/Table caption), p. 10 (7.2. Zero-Shot Edge Detection), p. 6 (5. Segment Anything Dataset), baselines p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (Figure/Table caption), p. 10 (7.3. Zero-Shot Object Proposals), p. 10 (Figure/Table caption), p. 12 (7.6. Ablations), results p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 12 (7.6. Ablations), p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 10 (7.4. Zero-Shot Instance Segmentation), p. 10 (7.3. Zero-Shot Object Proposals).
+- **Evidence anchors reviewed:** datasets p. 7 (5. Segment Anything Dataset), p. 8 (7. Zero-Shot Transfer Experiments), p. 6 (5. Segment Anything Dataset), p. 6 (5. Segment Anything Dataset), p. 7 (5. Segment Anything Dataset), p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), metrics p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 5 (Figure/Table caption), p. 24 (Figure/Table caption), p. 10 (7.2. Zero-Shot Edge Detection), p. 6 (5. Segment Anything Dataset), baselines p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (Figure/Table caption), p. 10 (7.3. Zero-Shot Object Proposals), p. 10 (Figure/Table caption), p. 12 (7.6. Ablations), results p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 12 (7.6. Ablations), p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 10 (7.4. Zero-Shot Instance Segmentation), p. 10 (7.3. Zero-Shot Object Proposals).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

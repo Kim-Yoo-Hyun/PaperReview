@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.17275; PDF retrieval source: https://arxiv.org/pdf/2203.17275. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.17275; PDF retrieval source: https://arxiv.org/pdf/2203.17275. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3 EXPERIMENTS | EMPIRICAL / SIMULATION | Each entry shows the normalized improvement / success rate. | p. 7 (3 EXPERIMENTS) |
 | 3 EXPERIMENTS | EMPIRICAL / SIMULATION | Method Task (H) LiftSpread (2) GatherTransport (2) CutRearrange (3) Tool A only Trajectory Opt (Oracle) 0.755 / 0% 0.386 / 0% 0.033 / 0% ... | p. 7 (3 EXPERIMENTS) |
@@ -63,12 +63,12 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We build our simulation environments on top of PlasticineLab (Huang et al., 2021), a differentiable physics benchmark using the DiffTaichi system (Hu et al., ... | embodiment, simulator version and control stack | p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS) |
 | Task/environment | We then train our VAE, policy, feasibility and score predictors over this demonstration video dataset. | reset, timeout, object/scene variation | p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS) |
 | Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 4 (2 METHOD), p. 2 (1 INTRODUCTION) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 3 (2 METHOD), p. 2 (2 METHOD) |
+| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 2 (2 METHOD), p. 4 (2 METHOD) |
 
 ## Metrics and Success Definition
 
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 - **p. 7 / 3 EXPERIMENTS - extractive body cue:** This is because the trajectory optimizer is more reliable at finding partial solutions that transport part of the dough to the target locations but does ...
 - **p. 9 / 4 RELATED WORK - extractive body cue:** There are a few interesting directions for future work.
 
-- **PDF anchors reviewed:** datasets p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), metrics p. 6 (3 EXPERIMENTS), p. 7 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 14 (A IMPLEMENTATION DETAILS), baselines p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 2 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), results p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), metrics p. 6 (3 EXPERIMENTS), p. 7 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 14 (A IMPLEMENTATION DETAILS), baselines p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 2 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), results p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS).
+- **Metric evidence:** After training, we find the feasibility and score predictor to perform well on the held out trajectories, achieving a L2 error of less than 0.05 for the score predictor and ... (p. 6, 3 EXPERIMENTS).
+- **Baseline/ablation evidence:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS).
+- **Failure/negative evidence:** This threshold is manually picked by observing the performance gap between successful and failed trajectories. (p. 6, 3 EXPERIMENTS).

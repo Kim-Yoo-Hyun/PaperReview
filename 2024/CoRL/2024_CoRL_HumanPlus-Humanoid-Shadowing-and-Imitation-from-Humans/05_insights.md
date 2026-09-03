@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 Using state-of-the-art human body and hand pose estimation algorithms [58, 81], we can estimate real-time human motion and retarget it to humanoid motion, which is passed as input to the low-level policy.를 At each time step, the input to the policy is humanoid proprioception and a humanoid target pose.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 4: Robustness Evaluation. Our low-level policy (Ours) can withstand large disturbance forces, has a shorter recovery time, and enables more whole-body skills than the manufacturer controller (H1 Default). Kinesthetic Teaching ALOH ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we present a full-stack system for humanoids to learn motion and autonomous skills from human data.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The complex dynamics and high-dimensional state and action spaces of humanoids pose difficulties in both perception and control. (p. 2, 1. Introduction).
+- **Paper-specific mechanism:** In this paper, we present a full-stack system for humanoids to learn motion and autonomous skills from human data. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Shown in Table 5, we compare our imitation learning method Humanoid Imitation Transformer with three baseline methods: HIT policies with monocular inputs (Monocular), ACT [104], and Open-loop trajectory replay, across ... (p. 10, 9. Experiments on Imitation); the relevant task/metric cue is In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is the only method that can be used for whole-body teleoperation, solving the ... (p. 10, 8.1. Comparisons with Other Teleoperation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** It fails the Wear a Shoe and Walk task completely, where depth perception is crucial. (p. 10, 9. Experiments on Imitation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Shown in Table 5, we compare our imitation learning method Humanoid Imitation Transformer with three baseline methods: HIT policies with monocular inputs (Monocular), ACT [104], and Open-loop trajectory replay, across all tasks: ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Overall HIT (Ours) outperforms others..
-4. Report the body metric and its denominator/aggregation: In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is the only method that can be used for whole-body teleoperation, solving the Rearrange Lower ....
-5. Re-run the body-reported ablation/failure condition: The participants are tasked to perform the Rearrange Objects task and its variant, Rearrange Lower Objects, where an object is placed on a lower table of height 0.55m, requiring the robot to ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The complex dynamics and high-dimensional state and action spaces of humanoids pose difficulties in both perception and control. (p. 2, 1. Introduction); preserve the objective/update rule: Typically, learning-based low-level policies are designed to be task-specific due to time-consuming reward engineering [19, 68], enabling the humanoid hardware to demonstrate only one skill at a time, such as ... (p. 2, 1. Introduction).
+2. Use the paper-reported task/data/environment cue: The participants are tasked to perform the Rearrange Objects task and its variant, Rearrange Lower Objects, where an object is placed on a lower table of height 0.55m, requiring the ... (p. 9, 8.1. Comparisons with Other Teleoperation).
+3. Compare against the reported or matched baseline: Overall HIT (Ours) outperforms others. (p. 9, 8. Experiments on Shadowing).
+4. Report the body metric with its denominator and aggregation: In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is the only method that can be used for whole-body teleoperation, solving the ... (p. 10, 8.1. Comparisons with Other Teleoperation).
+5. Re-run the reported ablation or stress/failure condition: The participants are tasked to perform the Rearrange Objects task and its variant, Rearrange Lower Objects, where an object is placed on a lower table of height 0.55m, requiring the ... (p. 9, 8.1. Comparisons with Other Teleoperation); if none is reported, design one around: It fails the Wear a Shoe and Walk task completely, where depth perception is crucial. (p. 10, 9. Experiments on Imitation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 5 (4. Human Body and Hand Data); the primary result is directionally consistent at p. 10 (9. Experiments on Imitation), p. 9 (Figure/Table caption), p. 9 (8.1. Comparisons with Other Teleoperation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 3 (1. Introduction), match the reported outcome at p. 10 (9. Experiments on Imitation), p. 9 (8.1. Comparisons with Other Teleoperation), p. 9 (8.1. Comparisons with Other Teleoperation), and measure the boundary at p. 10 (9. Experiments on Imitation), p. 10 (9. Experiments on Imitation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, full-stack, system mechanism이 Overall HIT (Ours) outperforms others. 대비 In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is ...을 개선하고, Table 4: Robustness Evaluation. Our low-level policy (Ours) can withstand large disturbance forces, has a shorter ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The complex dynamics and high-dimensional state and action spaces of humanoids pose difficulties in both perception and control.), does the paper-specific mechanism (In this paper, we present a full-stack system for humanoids to learn motion and autonomous skills from human data.) retain the reported evaluation outcome (In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is ...) when tested against the paper's strongest explicit boundary (It fails the Wear a Shoe and Walk task completely, where depth perception is crucial.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (In contrast, our system has the lowest timeto-completion, has the highest success rate of stable standing, and is ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present a full-stack system for humanoids to learn motion and autonomous skills from human data. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Shown in Table 5, we compare our imitation learning method Humanoid Imitation Transformer with three baseline methods: HIT policies with monocular inputs (Monocular), ACT [104], and Open-loop trajectory replay, across ... (p. 10, 9. Experiments on Imitation).
+- **Strongest explicit boundary:** It fails the Wear a Shoe and Walk task completely, where depth perception is crucial. (p. 10, 9. Experiments on Imitation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

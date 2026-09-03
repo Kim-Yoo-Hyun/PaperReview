@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p132.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p132.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p132.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p132.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | A feasible path p through G then has the interpretation as a continuous trajectory from the initial state to the target state, ... | p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 (IV. HIGH-LEVEL APPROACH) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | The first step in formulating our motion planning method is to consider the dynamics and kinematics in a fixed contact mode. | p. 3 (IV. HIGH-LEVEL APPROACH), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | The dynamics are then xk+1 = xk + hg(xk, uk) for k = 0, . . . , N -1 with the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible ... | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
-| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 (IV. HIGH-LEVEL APPROACH), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 6 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 6 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 (IV. HIGH-LEVEL APPROACH), objective p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 4 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 4 (V. BACKGROUND AND OPTIMIZATION TOOLS), temporal p. 6 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 3 (III. PROBLEM STATEMENT), p. 10 (IX. CONCLUSION AND FUTURE WORK).
+- **Evidence anchors reviewed:** method p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 (IV. HIGH-LEVEL APPROACH), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 6 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 6 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 3 (IV. HIGH-LEVEL APPROACH), objective p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 4 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 4 (V. BACKGROUND AND OPTIMIZATION TOOLS), temporal p. 6 (VII. MOTION PLANNING FOR PLANAR PUSHING), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 3 (III. PROBLEM STATEMENT), p. 10 (IX. CONCLUSION AND FUTURE WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The first step in formulating our motion planning method is to consider the dynamics and kinematics in a fixed contact mode. (p. 3, IV. HIGH-LEVEL APPROACH).
+- **Objective/update evidence:** In principle, this does not include all the tightening constraints (4d) and yields a potentially weaker convex relaxation, but in practice, we find that the loss in tightness is negligible ... (p. 7, VII. MOTION PLANNING FOR PLANAR PUSHING).
+- **Temporal/runtime evidence:** For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible solution for all the generated problem instances. (p. 9, VIII. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 2 Behavior Transformers Given a dataset of continuous observation and action pairs D ⌘{(o, a)} ⇢O ⇥A that contains behaviors we are interested in, our goal is to learn a behavior policy ...를 For each observation oi in the sequence, the head produces a k ⇥dim(A) matrix with k proposed residual action vectors, ⇣ ha(j) i i ⌘k j=1 = (hˆa(1) i i, hˆa(2) i ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** For each observation oi in the sequence, the head produces a k ⇥dim(A) matrix with k proposed residual action vectors, ⇣ ha(j) i i ⌘k j=1 = (hˆa(1) i i, ... (p. 5, 1 Introduction).
+- **Paper-specific mechanism:** In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able ... (p. 8, Figure/Table caption); the relevant task/metric cue is We now study the empirical performance of BeT on a variety of behavior learning tasks. (p. 5, 3 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD). (p. 6, 3 Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 3.1 Environments and datasets We experiment with five broad environments..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able to capture ....
-4. Report the body metric and its denominator/aggregation: Reward is normalized with respect to the best performing model..
-5. Re-run the body-reported ablation/failure condition: Table 3: Relative performance of ablated variants of BeT, normalized by average BeT successes at the task Ablations CARLA Block push Kitchen No offsets 0.94.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: For each observation oi in the sequence, the head produces a k ⇥dim(A) matrix with k proposed residual action vectors, ⇣ ha(j) i i ⌘k j=1 = (hˆa(1) i i, ... (p. 5, 1 Introduction); preserve the objective/update rule: While the standard cross entropy loss for binary classification can be thought of Lce(pt) = -log(pt), Focal loss adds a term (1 -pt)γ to this, to make the new loss ... (p. 4, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: 3.1 Environments and datasets We experiment with five broad environments. (p. 5, 3 Experiments).
+3. Compare against the reported or matched baseline: Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able ... (p. 8, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: We now study the empirical performance of BeT on a variety of behavior learning tasks. (p. 5, 3 Experiments).
+5. Re-run the reported ablation or stress/failure condition: (c) How important are the individual components of BeT? (p. 5, 3 Experiments); if none is reported, design one around: Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD). (p. 6, 3 Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction); the primary result is directionally consistent at p. 2 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 4 (1 Introduction), match the reported outcome at p. 8 (Figure/Table caption), p. 6 (3 Experiments), p. 5 (3 Experiments), and measure the boundary at p. 6 (3 Experiments), p. 5 (1 Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, Behavior, Transformers mechanism이 Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical ... 대비 Reward is normalized with respect to the best performing model.을 개선하고, Since the models are all behavioral cloning algorithms, they share the failure mode of failing once ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (For each observation oi in the sequence, the head produces a k ⇥dim(A) matrix with k proposed residual action vectors, ⇣ ha(j) ...), does the paper-specific mechanism (In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data.) retain the reported evaluation outcome (We now study the empirical performance of BeT on a variety of behavior learning tasks.) when tested against the paper's strongest explicit boundary (Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We now study the empirical performance of BeT on a variety of behavior learning tasks.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD). (p. 6, 3 Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

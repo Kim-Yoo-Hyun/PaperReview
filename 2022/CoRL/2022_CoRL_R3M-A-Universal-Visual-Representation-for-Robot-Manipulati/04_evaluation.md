@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/nair23a.html; PDF retrieval source: https://proceedings.mlr.press/v205/nair23a.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/nair23a.html; PDF retrieval source: https://proceedings.mlr.press/v205/nair23a.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 8: Performance over different views/dataset sizes. We report the success rate of R3M and baseline across each view (left) and dataset size (right). ... | p. 17 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Data Efficient Imitation Learning in Unseen Environments/Tasks. We report the success rates of downstream imitation learning with standard error bars. We observe ... | p. 7 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In our experiments, we aim to study how the pre-trained R3M representation can be re-used for multiple downstream robot learning tasks. | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 5 (4 Experiments) |
 | Task/environment | First, we study if R3M enables more data efficient imitation learning on unseen environments and tasks compared to existing visual representations and learning from ... | reset, timeout, object/scene variation | p. 5 (4 Experiments) |
@@ -150,7 +150,16 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 7 / 2. We - extractive body cue:** Specifically, we compare the full R3M with R3M(-Aug), which does not use crop augmentations, R3M(-L1), which does not include L1 regularization, and R3M(-Lang), which does ...
 - **p. 6 / 2. We - extractive body cue:** For a robust evaluation, we consider multiple views for each environment (See Figure 3), and 3 dataset sizes: [5, 10, 25] in MetaWorld and Franka ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4 Experiments), p. 8 (Figure/Table caption), p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4 Experiments), p. 8 (Figure/Table caption), p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 8: Performance over different views/dataset sizes. We report the success rate of R3M and baseline across each view (left) and dataset size (right). We see that the performance improvement ... (p. 17, Figure/Table caption).
+- **Metric evidence:** Finally, in the appendix, we take a deeper look at task performance of R3M and prior methods with different amounts of data, different camera viewpoints, and different tasks. (p. 5, 4 Experiments).
+- **Baseline/ablation evidence:** First, we study if R3M enables more data efficient imitation learning on unseen environments and tasks compared to existing visual representations and learning from scratch. (p. 5, 4 Experiments).
+- **Failure/negative evidence:** While we were excited by strong results on a wide set of simulated and real robotic tasks, a number of important limitations remain. (p. 8, 2. We).

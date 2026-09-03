@@ -1,8 +1,10 @@
 # Constrained Policy Optimization
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v70/achiam17a.html.
-> PDF retrieval source: https://arxiv.org/pdf/1705.10528. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v70/achiam17a.html.
+> PDF retrieval source: https://arxiv.org/pdf/1705.10528. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1705.10528
 - Code/Project: https://github.com/jachiam/cpo
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -80,3 +82,12 @@ RL, IL, offline learning, and robot data의 safety 문제를 이해하기 위해
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 safety 문제를 이해하기 위해 읽는다. 본문은 Although optimal policies for finite CMDPs with known models can be obtained by linear programming, methods for high-dimensional control are lacking.를 문제로 두고, In this work, we propose the first such algorithm, allowing applications to constrained deep RL.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 6 (6.1. Approximately Solving the CPO Update), p. 4 (5.2. Trust Region Methods), p. 3 (5. Constrained Policy Optimization), p. 5 (5.3. Trust Region Optimization for Constrained MDPs) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Although optimal policies for finite CMDPs with known models can be obtained by linear programming, methods for high-dimensional control are lacking. (p. 1, 1. Introduction).
+- **Actual contribution:** In this work, we propose the first such algorithm, allowing applications to constrained deep RL. (p. 1, 1. Introduction).
+- **Evaluation boundary:** In our experiments, we aim to answer the following: • Does CPO succeed at enforcing behavioral constraints when training neural network policies with thousands of parameters? • How does CPO ... (p. 6, 8. Experiments).
+- **Explicit failure boundary:** Additionally, PDO is sensitive to the initialization of the dual variable. (p. 7, 8.1. Evaluating CPO and Comparison Analysis).

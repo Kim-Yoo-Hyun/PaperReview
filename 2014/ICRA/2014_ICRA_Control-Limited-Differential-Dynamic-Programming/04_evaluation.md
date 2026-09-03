@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2014.6907001; PDF retrieval source: https://roboti.us/lab/papers/TassaICRA14.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2014.6907001; PDF retrieval source: https://roboti.us/lab/papers/TassaICRA14.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. RESULTS | EMPIRICAL / SIMULATION | However, despite some recent work in this direction [34], direct feed-forward current control is not yet a functional option, while the lack of joint ... | p. 6 (IV. RESULTS) |
 | IV. RESULTS | EMPIRICAL / SIMULATION | 3 compares the results obtained with the two solvers. | p. 5 (IV. RESULTS) |
@@ -56,7 +56,7 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Finally, we demonstrate box-DDP on a complex platform, the humanoid robot HRP-2. | embodiment, simulator version and control stack | p. 4 (IV. RESULTS), p. 5 (IV. RESULTS) |
 | Task/environment | Car Parking For the car-like robot, one of the control variables, the angle of the front wheels, is a kinematic, rather than a dynamic ... | reset, timeout, object/scene variation | p. 5 (IV. RESULTS), p. 6 (IV. RESULTS) |
@@ -136,9 +136,18 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 
 ## Limitations and Verification Questions
 
-- explicit limitation/failure sentence not recovered
+- explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
-- **PDF anchors reviewed:** datasets p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), metrics p. 4 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), baselines p. 4 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (Figure/Table caption), results p. 6 (IV. RESULTS), p. 5 (IV. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), metrics p. 4 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), baselines p. 4 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (Figure/Table caption), results p. 6 (IV. RESULTS), p. 5 (IV. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS).
+- **Metric evidence:** Distance was measured using the Hubertype function z(x,p) = √ x2 + p2-p. (p. 5, IV. RESULTS).
+- **Baseline/ablation evidence:** The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS).
+- **Failure/negative evidence:** A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This term encourages parking maneuvers which do not take the car far from ... (p. 5, IV. RESULTS).

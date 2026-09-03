@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Notably, ROBOVERSE streamlines this migration process by first aligning formats in the original simulator and automatically ensuring compatibility across all simulators. + ... | p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | We use a mobile device to capture ‘multi-view images, reconstruct a high-quality mesh, build a URDF using VLM, and then perform actions ... | p. 7 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | If no explicit manipulation data is available but pre-existing policies or reinforcement leaming frameworks exist, we either utilize these policies ‘or train ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | These devices' integrated sensors capture motion data, allowing natural, gesture-based control along with real-time, high-frequency communication for precise, low-cost remote operation. | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | Following the MimicGen [61] framework, for most tasks, we can decompose them into a sequence of objectcentric subtasks ($1(os, ), $2(0s,),---,Sas(0sy,)). | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION), objective p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 3 (B. Large-Scale Roboties Dataset), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), temporal p. 5 (IV. ROBOVERSE DATASET), p. 6 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION).
+- **Evidence anchors reviewed:** method p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION), objective p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 3 (B. Large-Scale Roboties Dataset), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), temporal p. 5 (IV. ROBOVERSE DATASET), p. 6 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Additionally, we generate over 50 million high-quality state transitions to support policy learning. (p. 2, 1. IyrRopucTION).
+- **Objective/update evidence:** Consequently, scaling real-world datasets, evaluating policies, and iterating development in real-world scenarios remain cost-prohibitive and difficult 10 standardize. (p. 2, 1. IyrRopucTION).
+- **Temporal/runtime evidence:** These devices' integrated sensors capture motion data, allowing natural, gesture-based control along with real-time, high-frequency communication for precise, low-cost remote operation. (p. 6, IV. ROBOVERSE DATASET).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

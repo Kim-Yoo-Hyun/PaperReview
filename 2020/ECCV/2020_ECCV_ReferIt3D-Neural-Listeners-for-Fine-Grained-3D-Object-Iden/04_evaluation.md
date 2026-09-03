@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://referit3d.github.io/; PDF retrieval source: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://referit3d.github.io/; PDF retrieval source: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 
 ## Evaluation Body Digest
 
-- **p. 13 / VI SD - extractive PDF cue:** This demonstrates the contribution of adding a synthetically generated dataset to a human one.
-- **p. 13 / VI SD - extractive PDF cue:** In Table 2, we observe how combining the two datasets provides a consistent boost in performance.
-- **p. 11 / VI SD - extractive PDF cue:** Scene-Discoverable (SD): does the utterance explicitly refer to the target's object class (or a synonym), hence permitting object-identification among all objects of the scene?
-- **p. 12 / VI SD - extractive PDF cue:** This enables the inspection of non-structured context when solving the reference task (PointNet++ is applied on a nonsegmented scene point cloud).
-- **p. 12 / VI SD - extractive PDF cue:** Vision + Language + Holistic Context (V + L + C): Similar to the above, but also fuses a PointNet++ scene-feature with each object's visual ...
-- **p. 11 / VI SD - extractive PDF cue:** Given an utterance we use the text-clf to predict the referred object-class.
-- **p. 11 / VI SD - extractive PDF cue:** 5 Experiments and Analysis We explore different listening architectures 4 and report the listening accuracy; each test utterance receives a binary score (1 if the ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3. Listening performance of various ablated models. The first two columns contain the obtained accuracy when no auxiliary losses are used, and the last ...
+- **p. 13 / VI SD - extractive body cue:** This demonstrates the contribution of adding a synthetically generated dataset to a human one.
+- **p. 13 / VI SD - extractive body cue:** In Table 2, we observe how combining the two datasets provides a consistent boost in performance.
+- **p. 11 / VI SD - extractive body cue:** Scene-Discoverable (SD): does the utterance explicitly refer to the target's object class (or a synonym), hence permitting object-identification among all objects of the scene?
+- **p. 12 / VI SD - extractive body cue:** This enables the inspection of non-structured context when solving the reference task (PointNet++ is applied on a nonsegmented scene point cloud).
+- **p. 12 / VI SD - extractive body cue:** Vision + Language + Holistic Context (V + L + C): Similar to the above, but also fuses a PointNet++ scene-feature with each object's visual ...
+- **p. 11 / VI SD - extractive body cue:** Given an utterance we use the text-clf to predict the referred object-class.
+- **p. 11 / VI SD - extractive body cue:** 5 Experiments and Analysis We explore different listening architectures 4 and report the listening accuracy; each test utterance receives a binary score (1 if the ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3. Listening performance of various ablated models. The first two columns contain the obtained accuracy when no auxiliary losses are used, and the last ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 2. ReferIt3DNet performance on Nr3D with/out Sr3D. The first row contains the achieved accuracy on the Nr3D testing data for a listener trained ... | p. 12 (Figure/Table caption) |
 | VI SD | SYSTEM / EVALUATION SCOPE UNRESOLVED | We observe the following main trends5: i) using the visual and linguistic auxiliary classification losses improves performance; ii) Simplified language (Sr3D) makes identification easier; ... | p. 12 (VI SD) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 13 / VI SD - extractive PDF cue:** This demonstrates the contribution of adding a synthetically generated dataset to a human one.
-- **p. 13 / VI SD - extractive PDF cue:** In Table 2, we observe how combining the two datasets provides a consistent boost in performance.
-- **p. 11 / VI SD - extractive PDF cue:** Scene-Discoverable (SD): does the utterance explicitly refer to the target's object class (or a synonym), hence permitting object-identification among all objects of the scene?
-- **p. 12 / VI SD - extractive PDF cue:** This enables the inspection of non-structured context when solving the reference task (PointNet++ is applied on a nonsegmented scene point cloud).
-- **p. 12 / VI SD - extractive PDF cue:** Vision + Language + Holistic Context (V + L + C): Similar to the above, but also fuses a PointNet++ scene-feature with each object's visual ...
-- **p. 11 / VI SD - extractive PDF cue:** Given an utterance we use the text-clf to predict the referred object-class.
+- **p. 13 / VI SD - extractive body cue:** This demonstrates the contribution of adding a synthetically generated dataset to a human one.
+- **p. 13 / VI SD - extractive body cue:** In Table 2, we observe how combining the two datasets provides a consistent boost in performance.
+- **p. 11 / VI SD - extractive body cue:** Scene-Discoverable (SD): does the utterance explicitly refer to the target's object class (or a synonym), hence permitting object-identification among all objects of the scene?
+- **p. 12 / VI SD - extractive body cue:** This enables the inspection of non-structured context when solving the reference task (PointNet++ is applied on a nonsegmented scene point cloud).
+- **p. 12 / VI SD - extractive body cue:** Vision + Language + Holistic Context (V + L + C): Similar to the above, but also fuses a PointNet++ scene-feature with each object's visual ...
+- **p. 11 / VI SD - extractive body cue:** Given an utterance we use the text-clf to predict the referred object-class.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1. Examples of natural free-form utterances. Each color-coded utterance distinguishes the corresponding object (marked with same color) against a distracting object in the underlying ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2. Examples of spatial reference types of Sr3D. In the left image, there are exam- ples of "horizontal proximity", "between", and "support" relations; the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Statistics of Sr3D. The first row contains the number of distinct commu- nication contexts yielded by each reference-type. The second row contains the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 3. Vocabulary histogram. was asked to select the referred object among its distractors. The game is struc- tured such that both ‘speaker' and ‘lis- ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 4. The ReferIt3DNet neural listener. A visual encoder processes (via a shared PointNet++) each 3D object of a given scene that is represented by ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Fig. 5. Easy vs. Hard communication contexts and examples of natural utterances with attributes that affect a navigating/listening agent. Scene-Discoverable (SD): does the utterance explicitly ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 2. ReferIt3DNet performance on Nr3D with/out Sr3D. The first row contains the achieved accuracy on the Nr3D testing data for a listener trained solely ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3. Listening performance of various ablated models. The first two columns contain the obtained accuracy when no auxiliary losses are used, and the last ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Examples of natural free-form utterances. Each color-coded utterance distinguishes the corresponding object (marked with same color) against a distracting object in the underlying ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2. Examples of spatial reference types of Sr3D. In the left image, there are exam- ples of "horizontal proximity", "between", and "support" relations; the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Statistics of Sr3D. The first row contains the number of distinct commu- nication contexts yielded by each reference-type. The second row contains the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 3. Vocabulary histogram. was asked to select the referred object among its distractors. The game is struc- tured such that both ‘speaker' and ‘lis- ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4. The ReferIt3DNet neural listener. A visual encoder processes (via a shared PointNet++) each 3D object of a given scene that is represented by ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 5. Easy vs. Hard communication contexts and examples of natural utterances with attributes that affect a navigating/listening agent. Scene-Discoverable (SD): does the utterance explicitly ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 2. ReferIt3DNet performance on Nr3D with/out Sr3D. The first row contains the achieved accuracy on the Nr3D testing data for a listener trained solely ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3. Listening performance of various ablated models. The first two columns contain the obtained accuracy when no auxiliary losses are used, and the last ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This demonstrates the contribution of adding a synthetically generated dataset to a human one. | embodiment, simulator version and control stack | p. 13 (VI SD), p. 13 (VI SD) |
 | Task/environment | In Table 2, we observe how combining the two datasets provides a consistent boost in performance. | reset, timeout, object/scene variation | p. 13 (VI SD), p. 11 (VI SD) |
@@ -145,11 +145,11 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 14 / 6 Conclusion - extractive PDF cue:** Success cases are in the top four images and Failure in the bottom two.
-- **p. 13 / VI SD - extractive PDF cue:** Finally, the last row shows two challenging failure cases of our model.
-- **p. 13 / VI SD - extractive PDF cue:** This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene w.r.t. ...
+- **p. 14 / 6 Conclusion - extractive body cue:** Success cases are in the top four images and Failure in the bottom two.
+- **p. 13 / VI SD - extractive body cue:** Finally, the last row shows two challenging failure cases of our model.
+- **p. 13 / VI SD - extractive body cue:** This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene w.r.t. ...
 
-- **PDF anchors reviewed:** datasets p. 13 (VI SD), p. 13 (VI SD), p. 11 (VI SD), p. 12 (VI SD), p. 12 (VI SD), p. 11 (VI SD), metrics p. 11 (VI SD), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 11 (VI SD), p. 11 (VI SD), p. 12 (VI SD), results p. 12 (Figure/Table caption), p. 12 (VI SD), p. 13 (Figure/Table caption), p. 11 (VI SD), p. 14 (Figure/Table caption), p. 11 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 13 (VI SD), p. 13 (VI SD), p. 11 (VI SD), p. 12 (VI SD), p. 12 (VI SD), p. 11 (VI SD), metrics p. 11 (VI SD), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 11 (VI SD), p. 11 (VI SD), p. 12 (VI SD), results p. 12 (Figure/Table caption), p. 12 (VI SD), p. 13 (Figure/Table caption), p. 11 (VI SD), p. 14 (Figure/Table caption), p. 11 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

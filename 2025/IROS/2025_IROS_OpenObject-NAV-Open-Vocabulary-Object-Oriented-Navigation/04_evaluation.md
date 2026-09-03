@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2409.18743; PDF retrieval source: https://arxiv.org/pdf/2409.18743. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2409.18743; PDF retrieval source: https://arxiv.org/pdf/2409.18743. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 
 ## Evaluation Body Digest
 
-- **p. 6 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** Real-World Validation We validated our algorithm using an Autolabor robot in a real scene, equipped with an industrial computer featuring an NVIDIA GeForce RTX 3080.
-- **p. 3 / III. METHOD - extractive PDF cue:** St = (Lt, CRt, CTt, Ft) ∈S (6) In the initial state S0 = (L0, CR0, CT0, F0), L0 is the initial position of the ...
-- **p. 4 / III. METHOD - extractive PDF cue:** Leveraging the LLM's commonsense understanding of object-carrier relationships (e.g., "a cup is unlikely to be placed on a toilet"), the LLM identifies the carrier object ...
-- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** Next, the robot is instructed to sequentially navigate to these objects in each scene.
-- **p. 2 / III. METHOD - extractive PDF cue:** Additionally, T represents the number of exploration attempts the robot makes to navigate to the target object.
-- **p. 2 / III. METHOD - extractive PDF cue:** Problem Definition In a daily environment, when given a navigation command, the robot queries the CRSG to determine the navigation endpoint and proceeds to the ...
-- **p. 3 / III. METHOD - extractive PDF cue:** We model the exploration of a displaced object as a fixedpolicy Markov decision process (MDP) below. state space S: In the current step t, we ...
-- **p. 4 / III. METHOD - extractive PDF cue:** As the robot navigates, it periodically captures RGB and depth images from the environment.
+- **p. 6 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** Real-World Validation We validated our algorithm using an Autolabor robot in a real scene, equipped with an industrial computer featuring an NVIDIA GeForce RTX 3080.
+- **p. 3 / III. METHOD - extractive body cue:** St = (Lt, CRt, CTt, Ft) ∈S (6) In the initial state S0 = (L0, CR0, CT0, F0), L0 is the initial position of the ...
+- **p. 4 / III. METHOD - extractive body cue:** Leveraging the LLM's commonsense understanding of object-carrier relationships (e.g., "a cup is unlikely to be placed on a toilet"), the LLM identifies the carrier object ...
+- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** Next, the robot is instructed to sequentially navigate to these objects in each scene.
+- **p. 2 / III. METHOD - extractive body cue:** Additionally, T represents the number of exploration attempts the robot makes to navigate to the target object.
+- **p. 2 / III. METHOD - extractive body cue:** Problem Definition In a daily environment, when given a navigation command, the robot queries the CRSG to determine the navigation endpoint and proceeds to the ...
+- **p. 3 / III. METHOD - extractive body cue:** We model the exploration of a displaced object as a fixedpolicy Markov decision process (MDP) below. state space S: In the current step t, we ...
+- **p. 4 / III. METHOD - extractive body cue:** As the robot navigates, it periodically captures RGB and depth images from the environment.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 1. Does the carrier-relationship scene graph (CRSG) im | EMPIRICAL / REAL-ROBOT OR HARDWARE | 4 illustrates an example of long-sequence navigation, where the efficiency of navigating to the target significantly improves as the number of navigated objects increases. | p. 5 (1. Does the carrier-relationship scene graph (CRSG) im) |
 | 1. Does the carrier-relationship scene graph (CRSG) im | EMPIRICAL / REAL-ROBOT OR HARDWARE | We report Success Rate(SR) and Success weighted by inverse Path Length (SPL) [39]. | p. 4 (1. Does the carrier-relationship scene graph (CRSG) im) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** Real-World Validation We validated our algorithm using an Autolabor robot in a real scene, equipped with an industrial computer featuring an NVIDIA GeForce RTX 3080.
-- **p. 3 / III. METHOD - extractive PDF cue:** St = (Lt, CRt, CTt, Ft) ∈S (6) In the initial state S0 = (L0, CR0, CT0, F0), L0 is the initial position of the ...
-- **p. 4 / III. METHOD - extractive PDF cue:** Leveraging the LLM's commonsense understanding of object-carrier relationships (e.g., "a cup is unlikely to be placed on a toilet"), the LLM identifies the carrier object ...
-- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** Next, the robot is instructed to sequentially navigate to these objects in each scene.
-- **p. 2 / III. METHOD - extractive PDF cue:** Additionally, T represents the number of exploration attempts the robot makes to navigate to the target object.
-- **p. 2 / III. METHOD - extractive PDF cue:** Problem Definition In a daily environment, when given a navigation command, the robot queries the CRSG to determine the navigation endpoint and proceeds to the ...
-- **p. 3 / III. METHOD - extractive PDF cue:** We model the exploration of a displaced object as a fixedpolicy Markov decision process (MDP) below. state space S: In the current step t, we ...
-- **p. 4 / III. METHOD - extractive PDF cue:** As the robot navigates, it periodically captures RGB and depth images from the environment.
+- **p. 6 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** Real-World Validation We validated our algorithm using an Autolabor robot in a real scene, equipped with an industrial computer featuring an NVIDIA GeForce RTX 3080.
+- **p. 3 / III. METHOD - extractive body cue:** St = (Lt, CRt, CTt, Ft) ∈S (6) In the initial state S0 = (L0, CR0, CT0, F0), L0 is the initial position of the ...
+- **p. 4 / III. METHOD - extractive body cue:** Leveraging the LLM's commonsense understanding of object-carrier relationships (e.g., "a cup is unlikely to be placed on a toilet"), the LLM identifies the carrier object ...
+- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** Next, the robot is instructed to sequentially navigate to these objects in each scene.
+- **p. 2 / III. METHOD - extractive body cue:** Additionally, T represents the number of exploration attempts the robot makes to navigate to the target object.
+- **p. 2 / III. METHOD - extractive body cue:** Problem Definition In a daily environment, when given a navigation command, the robot queries the CRSG to determine the navigation endpoint and proceeds to the ...
+- **p. 3 / III. METHOD - extractive body cue:** We model the exploration of a displaced object as a fixedpolicy Markov decision process (MDP) below. state space S: In the current step t, we ...
+- **p. 4 / III. METHOD - extractive body cue:** As the robot navigates, it periodically captures RGB and depth images from the environment.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. The robot executes long-sequence, multi-modal, and multi-type daily object navigation commands based on a dynamic carrier-relationship scene graph. First, it successfully navigates to ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. The OpenObject-NAV system framework consists of two main modules. The Scene Graph Construction module focuses on constructing the carrier-relationship scene graph. The Graph ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3. Static Object Query Experiment: Comparison of Target Object Query Results on the Offline Map.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. The visualization of a long-sequence instance navigation result in scene 2 is shown, where "Point to Point" represents the shortest path navigation. for ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. The first figure presents the SPL results in Sec. IV-B, while the second and third figures show the results of the ablation experiments ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6. The robot queries the CRSG for the position of the red book at the chair and navigates there. It then discovers that the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. The robot executes long-sequence, multi-modal, and multi-type daily object navigation commands based on a dynamic carrier-relationship scene graph. First, it successfully navigates to ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. The OpenObject-NAV system framework consists of two main modules. The Scene Graph Construction module focuses on constructing the carrier-relationship scene graph. The Graph ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3. Static Object Query Experiment: Comparison of Target Object Query Results on the Offline Map.
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. The visualization of a long-sequence instance navigation result in scene 2 is shown, where "Point to Point" represents the shortest path navigation. for ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. The first figure presents the SPL results in Sec. IV-B, while the second and third figures show the results of the ablation experiments ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6. The robot queries the CRSG for the position of the red book at the chair and navigates there. It then discovers that the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-World Validation We validated our algorithm using an Autolabor robot in a real scene, equipped with an industrial computer featuring an NVIDIA GeForce RTX ... | embodiment, simulator version and control stack | p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD) |
 | Task/environment | St = (Lt, CRt, CTt, Ft) ∈S (6) In the initial state S0 = (L0, CR0, CT0, F0), L0 is the initial position of ... | reset, timeout, object/scene variation | p. 3 (III. METHOD), p. 4 (III. METHOD) |
@@ -119,8 +119,8 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 | Primary metric/result | We report Success Rate(SR) and Success weighted by inverse Path Length (SPL) [39]. | numeric claim only at cited anchor | p. 4 (1. Does the carrier-relationship scene graph (CRSG) im) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** A total of 50 queries with different types of navigation instructions (semantic, instance and requirementdriven) were conducted across 3 scenes in Gibson [40].
-- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** Long-sequence Navigation Task for Frequently Used Everyday Items We conducted a series of long-sequence frequently used daily items navigation experiments (4 or 5 objects as ...
+- **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** A total of 50 queries with different types of navigation instructions (semantic, instance and requirementdriven) were conducted across 3 scenes in Gibson [40].
+- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** Long-sequence Navigation Task for Frequently Used Everyday Items We conducted a series of long-sequence frequently used daily items navigation experiments (4 or 5 objects as ...
 
 ## Generalization and Failure Cases
 
@@ -151,10 +151,10 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 
 ## Limitations and Verification Questions
 
-- **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** If the robot fails to reach the target, the SPL score is zero.
-- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive PDF cue:** VLMap Ours ConceptGraph Result: Success Result: Success Result: Failed ---Find a chair Result: Failed ---Find yellow bottle Result: Failed ---Find chairs Task 1: black bottle ...
+- **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** If the robot fails to reach the target, the SPL score is zero.
+- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** VLMap Ours ConceptGraph Result: Success Result: Success Result: Failed ---Find a chair Result: Failed ---Find yellow bottle Result: Failed ---Find chairs Task 1: black bottle ...
 
-- **PDF anchors reviewed:** datasets p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 2 (III. METHOD), p. 2 (III. METHOD), metrics p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), baselines p. 3 (III. METHOD), p. 4 (III. METHOD), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), results p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im).
+- **Evidence anchors reviewed:** datasets p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 2 (III. METHOD), p. 2 (III. METHOD), metrics p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), baselines p. 3 (III. METHOD), p. 4 (III. METHOD), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), results p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

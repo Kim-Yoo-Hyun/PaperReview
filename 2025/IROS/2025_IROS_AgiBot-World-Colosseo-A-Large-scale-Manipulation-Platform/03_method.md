@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://opendrivelab.com/AgiBot-World/; PDF retrieval source: https://arxiv.org/pdf/2503.06669. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://opendrivelab.com/AgiBot-World/; PDF retrieval source: https://arxiv.org/pdf/2503.06669. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | The inclusion of the latent planner yields an average improvement of 0.12 task completion score. | p. 7 (2) Implementation Details), p. 7 (2) Implementation Details) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | We choose the open-source RDT [10] model to study how much the AgiBot World dataset can help policy learning. | p. 7 (2) Implementation Details), p. 8 (2) Implementation Details) |
@@ -76,7 +76,7 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | The action expert decodes low-level action chunks, denoted by At = [at,at+1,...,at+H] with H = 30, using proprioceptive state pt over an ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | Each episode is meticulously designed, featuring multiple camera views, depth information, camera calibration, and language annotations for both the overall task and ... | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | The evaluation metric employs a normalized score, computed as the average across 10 rollouts per task, scenario, and method. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -123,8 +123,17 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details), p. 8 (2) Implementation Details), objective p. 7 (2) Implementation Details), temporal p. 6 (Dataset), p. 2 (I. INTRODUCTION), p. 6 (1) Evaluation Tasks), p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 4 (Dataset).
+- **Evidence anchors reviewed:** method p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details), p. 8 (2) Implementation Details), objective p. 7 (2) Implementation Details), temporal p. 6 (Dataset), p. 2 (I. INTRODUCTION), p. 6 (1) Evaluation Tasks), p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 4 (Dataset).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2) We propose GO-1, a robot foundation policy using latent action representations to unlock web-scale pre-training on web data. (p. 2, I. INTRODUCTION).
+- **Objective/update evidence:** For GO1, fine-tuning is conducted with a learning rate of 2e-5, a batch size of 768, and 30,000 optimization steps. (p. 7, 2) Implementation Details).
+- **Temporal/runtime evidence:** We evaluate GO-1 on five tasks of varying complexity, categorized by their visual richness and task horizon. (p. 7, 2) Implementation Details).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

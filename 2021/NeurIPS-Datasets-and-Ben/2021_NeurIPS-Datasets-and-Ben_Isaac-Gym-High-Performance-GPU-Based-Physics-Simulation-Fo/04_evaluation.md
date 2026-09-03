@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/; PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/; PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A.4.2 OpenAI Observations | BENCHMARK / DATASET | LSTMs Using sequence networks like LSTMs improve the performance and we find that we are able to achieve 37 consecutive successful cube rotations after ... | p. 31 (A.4.2 OpenAI Observations) |
 | Figure/Table caption | BENCHMARK / DATASET | Figure 9: Locomotion environments and the corresponding reward curves. improvements continue to happen as more experience is collected. Additionally, we find that the horizon ... | p. 15 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | • Shadow • Allegro • Trifinger While Ant and Humanoid are relatively simple environments popularised by MuJoCo continuous control benchmarks, the strength of our ... | embodiment, simulator version and control stack | p. 12 (4. Robotic Hands), p. 16 (4. Robotic Hands) |
 | Task/environment | With 4096 environments, we can train the full task on NVIDIA RTX A6000 and transfer to the real robot in under 20 minutes. | reset, timeout, object/scene variation | p. 16 (4. Robotic Hands), p. 16 (4. Robotic Hands) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 - **p. 10 / 2 Background - extractive body cue:** Setting new DOF states does not affect the root state.
 - **p. 18 / 4. Robotic Hands - extractive body cue:** Also note that this variant does not use any randomisations.
 
-- **PDF anchors reviewed:** datasets p. 12 (4. Robotic Hands), p. 16 (4. Robotic Hands), p. 16 (4. Robotic Hands), p. 20 (4. Robotic Hands), p. 31 (A.4.1 Randomizations), p. 10 (2 Background), metrics p. 19 (4. Robotic Hands), p. 11 (2 Background), p. 20 (4. Robotic Hands), p. 30 (A.2.3 Robotic Hands), p. 14 (4. Robotic Hands), p. 15 (Figure/Table caption), baselines p. 13 (4. Robotic Hands), p. 13 (4. Robotic Hands), p. 17 (4. Robotic Hands), p. 7 (Figure/Table caption), p. 10 (2 Background), p. 10 (2 Background), results p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (4. Robotic Hands), p. 20 (4. Robotic Hands), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 12 (4. Robotic Hands), p. 16 (4. Robotic Hands), p. 16 (4. Robotic Hands), p. 20 (4. Robotic Hands), p. 31 (A.4.1 Randomizations), p. 10 (2 Background), metrics p. 19 (4. Robotic Hands), p. 11 (2 Background), p. 20 (4. Robotic Hands), p. 30 (A.2.3 Robotic Hands), p. 14 (4. Robotic Hands), p. 15 (Figure/Table caption), baselines p. 13 (4. Robotic Hands), p. 13 (4. Robotic Hands), p. 17 (4. Robotic Hands), p. 7 (Figure/Table caption), p. 10 (2 Background), p. 10 (2 Background), results p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (4. Robotic Hands), p. 20 (4. Robotic Hands), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (32 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 17: Trifinger learns a variety of dexterous manipulation behaviours in order to move the cube to the correct position and orientation. These results are obtained on the real TriFinger ... (p. 20, Figure/Table caption).
+- **Metric evidence:** 6.4.2 TriFinger 0 25000 50000 75000 Time (sec) 2500 5000 7500 10000 12500 15000 Reward Steps (millions) 0 4194 (a) Reward 0 20000 40000 60000 80000 Time (sec) 0 20 ... (p. 19, 4. Robotic Hands).
+- **Baseline/ablation evidence:** This allows resetting a subset of environments without affecting the rest. (p. 10, 2 Background).
+- **Failure/negative evidence:** Running tens or hundreds of threads comes with other potential pitfalls including synchronization, context-switching overhead, and memory bandwidth limitations. (p. 6, 2 Background).

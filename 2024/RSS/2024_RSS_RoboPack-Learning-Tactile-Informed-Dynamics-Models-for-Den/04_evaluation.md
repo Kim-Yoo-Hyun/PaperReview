@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p130.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p130.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p130.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p130.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Does integrating tactile sensing information from prior interactions improve future prediction accuracy? ii. | p. 7 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | A trial is labeled as a success if it achieves an error lower than 0.02 for point-wise MSE within 10 pushes. histories than a ... | p. 9 (V. EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Benchmarking Real-World Planning Performance Next, we evaluate the performance of our approach in solving real-world robotic planning tasks. | embodiment, simulator version and control stack | p. 9 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP) |
 | Task/environment | The robot needs to avoid inserting into infeasible regions to prevent hardware and object damage. | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 - **p. 7 / IV. EXPERIMENTAL SETUP - extractive body cue:** Mathematically, the loss function is J (ˆot, og, at) = X x∈ˆot min y∈og //x -y//2 - X y∈og min x∈ˆot //x -y//2 + r ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Tactile sensing for dense packing. Tactile feedback is critical in tasks with heavy occlusion and rich contact, such as dense packing. (a) Humans ...
 
-- **PDF anchors reviewed:** datasets p. 9 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), metrics p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), results p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 9 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), metrics p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), results p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 2.65 ± 0.18 4.11 ± 0.17 4.57 ± 0.16 Dense RoboPack 0.070 ± 0.005 1.12 ± 0.036 2.01 ± 0.050 Packing RoboPack (no tactile) 0.088 ± 0.006 1.18 ± 0.043 ... (p. 8, V. EXPERIMENTS).
+- **Metric evidence:** We use a cost function that (i) penalizes the objects in the box from being pushed out of the boundary, (ii) encourages the robot to make space for placing the ... (p. 7, IV. EXPERIMENTAL SETUP).
+- **Baseline/ablation evidence:** Our method closely approximates the ground truth and outperforms all the baseline methods. (p. 8, V. EXPERIMENTS).
+- **Failure/negative evidence:** Due to heavy occlusions during task execution, the robot does not have access to meaningful visual feedback during robot execution other than the initial frame, but again tactile signals are ... (p. 6, IV. EXPERIMENTAL SETUP).

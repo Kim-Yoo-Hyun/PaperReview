@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2604.20472; PDF retrieval source: https://arxiv.org/pdf/2604.20472. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2604.20472; PDF retrieval source: https://arxiv.org/pdf/2604.20472. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models Algorithm 1 TDQC input Policy π, calibration dataset Dcal = {(hi T ... | p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models Algorithm 2 Early Stopping input Policy π, dataset Dcal, confidence α 1: ... | p. 7 (5.2. Application to Test-Time Guided Action Search), p. 7 (1. TD loss improves calibration and failure detection re) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | To calculate that threshold at each time step we first set a significance level α ∈(0, 1), which determines how conservative we ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | At each time step, given a VLA policy π and a simulator W, we sample from the policy M possible action candidates. | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 7 (1. TD loss improves calibration and failure detection re), p. 6 (5. Method), p. 10 (6.6. Application to guided test-time action search), p. 8 (6.1. Vision-Language-Action Models), objective p. 5 (5. Method), p. 6 (5. Method), p. 6 (5. Method), p. 5 (4. Problem Formulation), p. 4 (4. Problem Formulation), p. 4 (4. Problem Formulation), temporal p. 6 (5.1. Early Stopping with Conformal Prediction), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 4 (3. Related Work), p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 9 (6.4. TD loss improves calibration and failure detection).
+- **Evidence anchors reviewed:** method p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 7 (1. TD loss improves calibration and failure detection re), p. 6 (5. Method), p. 10 (6.6. Application to guided test-time action search), p. 8 (6.1. Vision-Language-Action Models), objective p. 5 (5. Method), p. 6 (5. Method), p. 6 (5. Method), p. 5 (4. Problem Formulation), p. 4 (4. Problem Formulation), p. 4 (4. Problem Formulation), temporal p. 6 (5.1. Early Stopping with Conformal Prediction), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 4 (3. Related Work), p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 9 (6.4. TD loss improves calibration and failure detection).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models Algorithm 1 TDQC input Policy π, calibration dataset Dcal = {(hi T , yi)N i=1} 1: Initialize network weights fθ ... (p. 6, 5. Method).
+- **Objective/update evidence:** Note that for sparse binary rewards Y (hT ) = R(hT ). (p. 4, 4. Problem Formulation).
+- **Temporal/runtime evidence:** The target network parameters θ-are updated with the current parameters θ every C steps and are held fixed between individual updates. (p. 6, 5. Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

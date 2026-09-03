@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=4SsNofUQf1; PDF retrieval source: https://openreview.net/pdf/4789cd82aac069c8a7cd1f2ccef5c8c864a271d7.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=4SsNofUQf1; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168191. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Qu
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** The ScanObjectNN (Uy et al., 2019) is a highly challenging 3D dataset comprising 15K real-world objects across 15 categories.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** The samples are drawn from the test split of the ScanObjectNN dataset, demonstrating its broad generalization capability across unseen data.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Note that our experiments on dataset ScanObjectNN sample 6
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** The raw point clouds are noisy and scattered, reflecting the inherent complexity of real-world data.
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** Comparisons of PEFT methods from NLP and 2D Vision on the hardest variant of ScanObjectNN.
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
-- **p. 5 / 3.4. Analysis and Discussion - extractive PDF cue:** The objective of our method is to facilitate task-specific model adaptation through the integration of geometricaware prompt mechanisms.
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** Since voting (Liu et al., 2019) is time-consuming, we focus on reporting overall accuracy without it.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** The ScanObjectNN (Uy et al., 2019) is a highly challenging 3D dataset comprising 15K real-world objects across 15 categories.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** The samples are drawn from the test split of the ScanObjectNN dataset, demonstrating its broad generalization capability across unseen data.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Note that our experiments on dataset ScanObjectNN sample 6
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** The raw point clouds are noisy and scattered, reflecting the inherent complexity of real-world data.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** Comparisons of PEFT methods from NLP and 2D Vision on the hardest variant of ScanObjectNN.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
+- **p. 5 / 3.4. Analysis and Discussion - extractive body cue:** The objective of our method is to facilitate task-specific model adaptation through the integration of geometricaware prompt mechanisms.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** Since voting (Liu et al., 2019) is time-consuming, we focus on reporting overall accuracy without it.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Qu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | In terms of FLOPs, our approach adds virtually no extra computational burden compared to baselines, significantly outperforming IDPT and Point-PEFT. | p. 7 (4.2. Quantitative Analysis) |
 | 4.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 1, our method GAPrompt achieves the highest accuracy among all the parameter-efficient fine-tuning methods for 3D vision models. | p. 7 (4.2. Quantitative Analysis) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Qu
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** The ScanObjectNN (Uy et al., 2019) is a highly challenging 3D dataset comprising 15K real-world objects across 15 categories.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** The samples are drawn from the test split of the ScanObjectNN dataset, demonstrating its broad generalization capability across unseen data.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Note that our experiments on dataset ScanObjectNN sample 6
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** The raw point clouds are noisy and scattered, reflecting the inherent complexity of real-world data.
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** Comparisons of PEFT methods from NLP and 2D Vision on the hardest variant of ScanObjectNN.
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
-- **p. 5 / 3.4. Analysis and Discussion - extractive PDF cue:** The objective of our method is to facilitate task-specific model adaptation through the integration of geometricaware prompt mechanisms.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** The ScanObjectNN (Uy et al., 2019) is a highly challenging 3D dataset comprising 15K real-world objects across 15 categories.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** The samples are drawn from the test split of the ScanObjectNN dataset, demonstrating its broad generalization capability across unseen data.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Note that our experiments on dataset ScanObjectNN sample 6
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** The raw point clouds are noisy and scattered, reflecting the inherent complexity of real-world data.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** Comparisons of PEFT methods from NLP and 2D Vision on the hardest variant of ScanObjectNN.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
+- **p. 5 / 3.4. Analysis and Discussion - extractive body cue:** The objective of our method is to facilitate task-specific model adaptation through the integration of geometricaware prompt mechanisms.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Our GAPrompt compares to full fine-tuning and existing PEFT methods. We compare the classification accuracy on the hardest variant of ScanObjectNN (Uy et ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Methods for adapting pre-trained 3D vision models. (a) Fine-tuning updates entire model parameters. (b) Prompt-based methods adapt the model to downstream tasks by ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The overall pipeline of GAPrompt. The raw input point clouds are processed by Point Shift Prompter, generating instance- specific shape features and shifted ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Classification on three variants of the ScanObjectNN and the ModelNet40, including the number of trainable parameters (Param) and overall accuracy (Acc). We report ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparisons of PEFT methods from NLP and 2D Vision on the hardest variant of ScanObjectNN.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. The effect of components in our GAPrompt. Point Prompt PS-Prompter Prompt Propagation Acc. ✓
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on Point Shift Prompter. Shift Head Prompt Enhance Adapter Enhance Acc. ✓
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Ablation study of Prompt Propagation mechanism and prompt enhancing factor βp. Effect of Point Shift Prompter Components. As shown in Table 4, we ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our GAPrompt compares to full fine-tuning and existing PEFT methods. We compare the classification accuracy on the hardest variant of ScanObjectNN (Uy et ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Methods for adapting pre-trained 3D vision models. (a) Fine-tuning updates entire model parameters. (b) Prompt-based methods adapt the model to downstream tasks by ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The overall pipeline of GAPrompt. The raw input point clouds are processed by Point Shift Prompter, generating instance- specific shape features and shifted ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Classification on three variants of the ScanObjectNN and the ModelNet40, including the number of trainable parameters (Param) and overall accuracy (Acc). We report ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparisons of PEFT methods from NLP and 2D Vision on the hardest variant of ScanObjectNN.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. The effect of components in our GAPrompt. Point Prompt PS-Prompter Prompt Propagation Acc. ✓
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on Point Shift Prompter. Shift Head Prompt Enhance Adapter Enhance Acc. ✓
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Ablation study of Prompt Propagation mechanism and prompt enhancing factor βp. Effect of Point Shift Prompter Components. As shown in Table 4, we ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The ScanObjectNN (Uy et al., 2019) is a highly challenging 3D dataset comprising 15K real-world objects across 15 categories. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study) |
 | Task/environment | The samples are drawn from the test split of the ScanObjectNN dataset, demonstrating its broad generalization capability across unseen data. | reset, timeout, object/scene variation | p. 8 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings) |
@@ -122,8 +122,8 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Qu
 | Primary metric/result | As shown in Table 1, our method GAPrompt achieves the highest accuracy among all the parameter-efficient fine-tuning methods for 3D vision models. | numeric claim only at cited anchor | p. 7 (4.2. Quantitative Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** Point-MAE 22.1 85.18 Linear Probing 0.3 75.99 Prefix Tuning 0.7 77.72 VPT 0.4 81.09 Adapter Tuning 0.9 83.93 LoRA 0.9 81.74 SSF 0.4 82.58 AdapterFormer ...
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** Following baselines, we sample 1024 points per instance.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** Point-MAE 22.1 85.18 Linear Probing 0.3 75.99 Prefix Tuning 0.7 77.72 VPT 0.4 81.09 Adapter Tuning 0.9 83.93 LoRA 0.9 81.74 SSF 0.4 82.58 AdapterFormer ...
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** Following baselines, we sample 1024 points per instance.
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Qu
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 3.4. Analysis and Discussion - extractive PDF cue:** The key distinction of our approach lies in the point-level operation, addressing the limitations of previous prompting 5
-- **p. 7 / 4.2. Quantitative Analysis - extractive PDF cue:** In contrast, IDPT, DAPT, and Point-PEFT fall short of full fine-tuning performance due to their limited ability to capture geometric information from point clouds.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Methods for adapting pre-trained 3D vision models. (a) Fine-tuning updates entire model parameters. (b) Prompt-based methods adapt the model to downstream tasks by ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** These objects consist of indoor scene data obtained by scanning, exhibiting characteristics such as cluttered backgrounds and occlusions.
-- **p. 7 / 4.1. Experimental Settings - extractive PDF cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** Intuitively, it is because this setting brings more randomness and results in more robust convergence.
+- **p. 5 / 3.4. Analysis and Discussion - extractive body cue:** The key distinction of our approach lies in the point-level operation, addressing the limitations of previous prompting 5
+- **p. 7 / 4.2. Quantitative Analysis - extractive body cue:** In contrast, IDPT, DAPT, and Point-PEFT fall short of full fine-tuning performance due to their limited ability to capture geometric information from point clouds.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Methods for adapting pre-trained 3D vision models. (a) Fine-tuning updates entire model parameters. (b) Prompt-based methods adapt the model to downstream tasks by ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** These objects consist of indoor scene data obtained by scanning, exhibiting characteristics such as cluttered backgrounds and occlusions.
+- **p. 7 / 4.1. Experimental Settings - extractive body cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Intuitively, it is because this setting brings more randomness and results in more robust convergence.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 7 (4.1. Experimental Settings), p. 7 (4.1. Experimental Settings), metrics p. 7 (4.1. Experimental Settings), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (4.2. Quantitative Analysis), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), results p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 6 (4. Experiments), p. 8 (4.3. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 7 (4.1. Experimental Settings), p. 7 (4.1. Experimental Settings), metrics p. 7 (4.1. Experimental Settings), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (4.2. Quantitative Analysis), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), results p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 6 (4. Experiments), p. 8 (4.3. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

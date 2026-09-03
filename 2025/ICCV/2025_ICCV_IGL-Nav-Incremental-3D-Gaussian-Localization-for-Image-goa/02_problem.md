@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Pro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | To address these limitations, RNRMap [14] introduces a renderable neural radiance map representation. | mapped 3D environment과 mobile robot | body wording is the source claim |
-| Observation / input | Incremental Scene Representation Scene Embedding 𝑬௧ Coarse-to-fine Navigation Reaching Target Local Policy Action Renderingbased Stopper Exploration Current RGB-D Input Target Image Activation ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Incremental Scene Representation Scene Embedding 𝑬௧ Coarse-to-fine Navigation Reaching Target Local Policy Action Renderingbased Stopper Exploration Current RGB-D Input Target Image Activation ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Incremental, Scene, Representation, Embedding, Coarse-to-fine, Navigation, Reaching, Target, Local, Policy | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
 | Output / action | receives, posed, RGB-D, video, stream, required, execute, action | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
 | Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | sensor/map state and goal; body terms: Incremental, Scene, Representation, Embedding, Coarse-to-fine, Navigation, Reaching, Target, Local, Policy | p. 5 (3.3.1. Coarse Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.1. Problem Statement) |
 | Decision / output variable | path/waypoint/velocity; body terms: IGL-Nav, Incremental, Gaussian, Localization, framework, progressively, constructs, DGS | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Pro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (3.2. Incremental Scene Representation), p. 4 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization) |
 | Success / guarantee | goal reach with collision-free execution | p. 7 (4.2. Comparison with State-of-the-art), p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comparison with State-of-the-art) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Pro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement), p. 3 (3.2. Incremental Scene Representation), p. 4 (3.3.1. Coarse Target Localization)): To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...
+PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement), p. 3 (3.2. Incremental Scene Representation), p. 4 (3.3.1. Coarse Target Localization)): To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...
 
 - **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose to leverage 3D Gaussian Splatting (3DGS) [10] as the scene representation for imagegoal navigation.
 - **p. 3 / 3.1. Problem Statement - extractive body cue:** A is the set of actions, which consists of move forward, turn left, turn right and stop.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (
 
 ## Position in the Robotics Loop
 
-navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (3.3.1. Coarse Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization). The downstream handoff is claimed only when the body describes it.
+navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3.3.1. Coarse Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 5 (3.3.1. Coarse Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization), objective p. 3 (3.2. Incremental Scene Representation), p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.1. Coarse Target Localization), p. 5 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 5 (3.3.1. Coarse Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization), objective p. 3 (3.2. Incremental Scene Representation), p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.1. Coarse Target Localization), p. 5 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** To address these limitations, RNRMap [14] introduces a renderable neural radiance map representation. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ... (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. (p. 8, 5. Conclusion).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRo
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Initially, it may be tempting use the VLM directly as a black-box solver of Eq.1 (ie. t0 solve the overarching behavior generation ... | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | The robot's observations 0 < O :=ZxQ combine RGB image data I € T and proprioceptive states q © Q(eg., end-effector pose, ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The robot's observations 0 < O :=ZxQ combine RGB image data I € T and proprioceptive states q © Q(eg., end-effector pose, ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | robot, observations, ZxQ, combine, RGB, image, data, proprioceptive, states, end-effector | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | contribute, predictive, category, methods, anticipates, future, outcomes, policy | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: robot, observations, ZxQ, combine, RGB, image, data, proprioceptive, states, end-effector | p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: Figure, present, examples, runtime, policy, steering, Fork, task | p. 8 (B. Policy Steering for Open-World Alignment), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRo
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 8 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 9 (B. Policy Steering for Open-World Alignment) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,11 +49,11 @@ PDF body framing (p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRo
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 8 (B. Policy Steering for Open-World Alignment), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 1 (Front matter), p. 1 (Abstract)): In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.
+PDF body contribution framing (p. 8 (B. Policy Steering for Open-World Alignment), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract)): In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.
 
 - **p. 4 / 1. InTRopucTION - extractive body cue:** The training data consists of both successful and failed rollouts from the base policy (a / 0) and additional demonstration data, This allows the world ...
 - **p. 2 / 1. InTRopucTION - extractive body cue:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those ...
-- **p. 1 / Front matter - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
 - **p. 1 / Abstract - extractive body cue:** We validate our framework across diverse robotic manipulation tasks, demonstrating its ability to bridge representational gaps and provide robust, generalizable policy steering.
 
 ## Assumptions and Failure Boundary
@@ -69,12 +69,21 @@ PDF contribution framing (p. 8 (B. Policy Steering for Open-World Alignment), p.
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), interface p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), interface p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, this strategy is sampleinefficient, requiring extensive embodied rollouts and human annotations to generate labels, Instead, we propose tackling the problem in Eq.1 in a way that leverages the unique ... (p. 3, 1. InTRopucTION).
+- **Formulation-changing contribution:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those narrations even under novel task ... (p. 2, 1. InTRopucTION).
+- **Assumption/failure evidence:** However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (4 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://lavalle.pl/rrtpubs.html; PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://lavalle.pl/rrtpubs.html; PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 2. Rapidly-Exploring Random Trees | EMPIRICAL / SIMULATION | For holonomie planning, one can define (ru) = and /lull <1, which implies that any bounded velocity can be achieved. | p. 2 (2. Rapidly-Exploring Random Trees) |
 | Abstract | EMPIRICAL / SIMULATION | To date, we have successfully applied RRTs to holonomic, nonholonomic, and kinodynamic planning problems of up to twelve degrees of freedom. | p. 1 (Abstract) |
@@ -50,16 +50,16 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Using state-space representations, this class of problems includes kinodynamic planning [3], which is an extremely general and important area in robotics, virtual prototyping, and ... | embodiment, simulator version and control stack | p. 1 (1 Introduction), p. 1 (1 Introduction) |
 | Task/environment | The probabilistic roadmap technique might require the connections of thousands of configurations or states to find a soluti and if each connection is akin ... | reset, timeout, object/scene variation | p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees) |
 | Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 2 (9 Return T), p. 2 (2. Rapidly-Exploring Random Trees) |
-| Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 1 (Abstract), p. 1 (1 Introduction) |
+| Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)) |
 
 ## Metrics and Success Definition
 
@@ -121,7 +121,6 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 | Body reproducibility cue | Anchor |
 |---|---|
 | Several desir- ‘able properties and a basic implementation of RRTs are discussed. | p. 1 (Abstract) |
-| LaValle Department of Computer Science Towa State University Ames, IA 50011 USA lavalledcsjastate.ed | p. 1 (Front matter) |
 | For a kinodynamic planning problem, X =T(C), which is the tangent bundle of the configuration space [7] (a state encodes both configuration and velocity). | p. 2 (2. Rapidly-Exploring Random Trees) |
 | The vector & denotes the derivative of state with respect to time, This controlstheoretic representation is powerful enough to encode virtually any kinematic and ... | p. 2 (2. Rapidly-Exploring Random Trees) |
 | In a related paper [7], we presented an RRT-based, planner that computes collision-free kinodynamic trajec~ tories that fire thrusters for hovercrafts and satellites in, ... | p. 3 (4 Examples) |
@@ -141,7 +140,16 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 - **p. 3 / 4 Examples - extractive body cue:** In a related paper [7], we presented an RRT-based, planner that computes collision-free kinodynamic trajec~ tories that fire thrusters for hovercrafts and satellites in, cluttered ...
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** Collision detection is a key bottleneck in path planning, and an RRT is completely suited for incremental collision detection, This allows the fastest-avaliable collision detection ...
 
-- **PDF anchors reviewed:** datasets p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), metrics p. 2 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), baselines p. 2 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), results p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs).
+- **Evidence anchors reviewed:** datasets p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), metrics p. 2 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), baselines p. 2 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), results p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (4 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based planner; however, itis difficult to make ... (p. 3, 3. Nice Properties of RRTs).
+- **Metric evidence:** parameters as possible, This tends to lead to better performance analysis and consistency of behavior. (p. 2, 1 Introduction).
+- **Baseline/ablation evidence:** The key advantages of RRTs are: 1) the expansion of an RRT is heavily biased. toward unexplored portions of the state space; 2) the dis tribution of vertices in an ... (p. 2, 3. Nice Properties of RRTs).
+- **Failure/negative evidence:** The primary difficulty with existing techniques is that, although powerful for standard path planning, they do not naturally extend to general nonholonomic planning problems. (p. 1, 1 Introduction).

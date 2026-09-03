@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011640; PDF retrieval source: https://arxiv.org/pdf/2503.00923. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011640; PDF retrieval source: https://arxiv.org/pdf/2503.00923. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on ... | p. 20 (Figure/Table caption) |
 | 5 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | HWC-Loco reaches a success rate of 81.27%, outperforming all baselines by a significant margin. | p. 8 (5 Experiment) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Second, the humanoid robot used in real-world deployment has only 19 degrees of freedom, which limits whole-body coordination and constrains the expression of complex ... | embodiment, simulator version and control stack | p. 9 (5 Experiment), p. 7 (5 Experiment) |
 | Task/environment | [64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed in Appendix A.2 [43]. c) Human-Like ... | reset, timeout, object/scene variation | p. 7 (5 Experiment), p. 7 (5 Experiment) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 - **p. 9 / 5 Experiment - extractive body cue:** Importantly, the controller does not rely solely on recovery mode but dynamically switches between goal-tracking and recovery policies, thereby adapting the action distribution to environmental ...
 - **p. 7 / 5 Experiment - extractive body cue:** 2) Robustness: How well can HWC-Loco stabilize the humanoid robot under varying levels of disturbance?
 
-- **PDF anchors reviewed:** datasets p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), metrics p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 9 (5 Experiment), baselines p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 20 (Figure/Table caption), results p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 20 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), metrics p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 9 (5 Experiment), baselines p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 20 (Figure/Table caption), results p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 20 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's performance. Setting H = 10 ... (p. 20, Figure/Table caption).
+- **Metric evidence:** [64] b) Goal Tracking performance: The ability to accurately follow velocity commands by maximizing task rewards rT detailed in Appendix A.2 [43]. c) Human-Like behavior: Measured as the Wasserstein-1 distance ... (p. 7, 5 Experiment).
+- **Baseline/ablation evidence:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).
+- **Failure/negative evidence:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing ... (p. 7, 5 Experiment).

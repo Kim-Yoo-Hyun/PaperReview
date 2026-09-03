@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.10602; PDF retrieval source: https://arxiv.org/pdf/2301.10602. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.10602; PDF retrieval source: https://arxiv.org/pdf/2301.10602. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 
 ## Evaluation Body Digest
 
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** Real-World Experimental Setup Real-world experiments were conducted using a Unitree A1 [26] robot.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** Explicit Estimation Comparison We simulated the robot walking in a stairs environment to compare the CENet with EstimatorNet in terms of their squared estimation error, ...
-- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive PDF cue:** To the best of our knowledge, this is the first time a Unitree A1, which is significantly smaller that an ANYmal robot, has been demonstrated ...
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** An additional onboard PC with a battery added a payload of approximately 500 g to the robot.
-- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive PDF cue:** policy in the real world was conducted through walking in diverse outdoor environments.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Learning curves of different algorithms. The results shown are obtained from ten different random seeds. The curves and shaded regions indicate the mean ...
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** We measured absolute tracking error (ATE) as the performance metric and constructed a
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** Real-World Experimental Setup Real-world experiments were conducted using a Unitree A1 [26] robot.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** Explicit Estimation Comparison We simulated the robot walking in a stairs environment to compare the CENet with EstimatorNet in terms of their squared estimation error, ...
+- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** To the best of our knowledge, this is the first time a Unitree A1, which is significantly smaller that an ANYmal robot, has been demonstrated ...
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** An additional onboard PC with a battery added a payload of approximately 500 g to the robot.
+- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** policy in the real world was conducted through walking in diverse outdoor environments.
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Learning curves of different algorithms. The results shown are obtained from ten different random seeds. The curves and shaded regions indicate the mean ...
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** We measured absolute tracking error (ATE) as the performance metric and constructed a
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 5: Estimation error of CENet and EstimatorNet. The superiority of CENet is highlighted when the robot's feet stumbled by stairs. barplot, as shown ... | p. 5 (Figure/Table caption) |
 | III. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The robust performance was achieved through the interplay between accurate estimation and robust policy learning of DreamWaQ. | p. 5 (III. EXPERIMENTS) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** Real-World Experimental Setup Real-world experiments were conducted using a Unitree A1 [26] robot.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** Explicit Estimation Comparison We simulated the robot walking in a stairs environment to compare the CENet with EstimatorNet in terms of their squared estimation error, ...
-- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive PDF cue:** To the best of our knowledge, this is the first time a Unitree A1, which is significantly smaller that an ANYmal robot, has been demonstrated ...
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** An additional onboard PC with a battery added a payload of approximately 500 g to the robot.
-- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive PDF cue:** policy in the real world was conducted through walking in diverse outdoor environments.
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** Real-World Experimental Setup Real-world experiments were conducted using a Unitree A1 [26] robot.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** Explicit Estimation Comparison We simulated the robot walking in a stairs environment to compare the CENet with EstimatorNet in terms of their squared estimation error, ...
+- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** To the best of our knowledge, this is the first time a Unitree A1, which is significantly smaller that an ANYmal robot, has been demonstrated ...
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** An additional onboard PC with a battery added a payload of approximately 500 g to the robot.
+- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** policy in the real world was conducted through walking in diverse outdoor environments.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of DreamWaQ. By learning a locomotion policy in a simulation, the robot can walk through challenging terrains such as stairs with zero-shot ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: The architecture of CENet consists of a body velocity estimation model and an auto-encoder model that shares a unified encoder. The shared encoder ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Learning curves of different algorithms. The results shown are obtained from ten different random seeds. The curves and shaded regions indicate the mean ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: Command tracking error represented as a boxplot. ve x and ve y are forward and lateral velocity tracking errors, respectively, measured in m/s. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: Estimation error of CENet and EstimatorNet. The superiority of CENet is highlighted when the robot's feet stumbled by stairs. barplot, as shown in ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Foot reflex against uncertainties due to (a) stumbling and (b) slipping in unstructured terrains. Real-time experiment videos are available online1. A B Start ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 7: The outdoor trajectory for testing the performance of the DreamWaQ policy was recorded using an RTK-GPS mounted on the robot. Course A consists ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of DreamWaQ. By learning a locomotion policy in a simulation, the robot can walk through challenging terrains such as stairs with zero-shot ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The architecture of CENet consists of a body velocity estimation model and an auto-encoder model that shares a unified encoder. The shared encoder ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Learning curves of different algorithms. The results shown are obtained from ten different random seeds. The curves and shaded regions indicate the mean ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Command tracking error represented as a boxplot. ve x and ve y are forward and lateral velocity tracking errors, respectively, measured in m/s. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Estimation error of CENet and EstimatorNet. The superiority of CENet is highlighted when the robot's feet stumbled by stairs. barplot, as shown in ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Foot reflex against uncertainties due to (a) stumbling and (b) slipping in unstructured terrains. Real-time experiment videos are available online1. A B Start ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: The outdoor trajectory for testing the performance of the DreamWaQ policy was recorded using an RTK-GPS mounted on the robot. Course A consists ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-World Experimental Setup Real-world experiments were conducted using a Unitree A1 [26] robot. | embodiment, simulator version and control stack | p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS) |
 | Task/environment | The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot. | reset, timeout, object/scene variation | p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS) |
@@ -116,11 +116,11 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 | Primary metric/result | The robust performance was achieved through the interplay between accurate estimation and robust policy learning of DreamWaQ. | numeric claim only at cited anchor | p. 5 (III. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** During inference, the policy runs synchronously with the CENet at 50 Hz.
-- **p. 4 / III. EXPERIMENTS - extractive PDF cue:** The desired joint angles were tracked using a PD controller with proportional and derivative gains of Kp = 28 and Kd = 0.7, respectively at ...
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** Algorithm Max. push (m/s) Survival rate (%) Baseline 0.511 ± 0.053 20.51 ± 6.44 AdaptationNet 0.714 ± 0.096 82.37 ± 2.49 EstimatorNet 0.871 ± 0.124 ...
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
-- **p. 3 / II. DREAMWAQ - extractive PDF cue:** Reward Equation (ri) Weight (wi) Lin. velocity tracking exp  -4(vcmd xy -vxy)2 1.0 Ang. velocity tracking exp  -4(ωcmd yaw -ωyaw)2 0.5 Linear velocity ...
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** During inference, the policy runs synchronously with the CENet at 50 Hz.
+- **p. 4 / III. EXPERIMENTS - extractive body cue:** The desired joint angles were tracked using a PD controller with proportional and derivative gains of Kp = 28 and Kd = 0.7, respectively at ...
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** Algorithm Max. push (m/s) Survival rate (%) Baseline 0.511 ± 0.053 20.51 ± 6.44 AdaptationNet 0.714 ± 0.096 82.37 ± 2.49 EstimatorNet 0.871 ± 0.124 ...
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
+- **p. 3 / II. DREAMWAQ - extractive body cue:** Reward Equation (ri) Weight (wi) Lin. velocity tracking exp  -4(vcmd xy -vxy)2 1.0 Ang. velocity tracking exp  -4(ωcmd yaw -ωyaw)2 0.5 Linear velocity ...
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 
 ## Limitations and Verification Questions
 
-- **p. 6 / IV. CONCLUSION - extractive PDF cue:** DreamWaQ's limitation lies in its adaptation mechanism, where it must first hit the obstacles with its legs.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** In severe cases, inaccurate estimation can lead to catastrophic failure.
-- **p. 6 / III. EXPERIMENTS - extractive PDF cue:** (a) Foot stumble Foot slip Normal walk Normal walk Normal walk Climb upstairs Go downstairs Irregular foothold Adaptation Recovery (a) (b) Normal walk Fig.
-- **p. 5 / III. EXPERIMENTS - extractive PDF cue:** 6 shows the robot's foot reflex when faced with foot stumbling and slipping.
-- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive PDF cue:** Finally, Section IV concludes this work and briefly discusses directions for future work.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: The architecture of CENet consists of a body velocity estimation model and an auto-encoder model that shares a unified encoder. The shared encoder ...
+- **p. 6 / IV. CONCLUSION - extractive body cue:** DreamWaQ's limitation lies in its adaptation mechanism, where it must first hit the obstacles with its legs.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** In severe cases, inaccurate estimation can lead to catastrophic failure.
+- **p. 6 / III. EXPERIMENTS - extractive body cue:** (a) Foot stumble Foot slip Normal walk Normal walk Normal walk Climb upstairs Go downstairs Irregular foothold Adaptation Recovery (a) (b) Normal walk Fig.
+- **p. 5 / III. EXPERIMENTS - extractive body cue:** 6 shows the robot's foot reflex when faced with foot stumbling and slipping.
+- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** Finally, Section IV concludes this work and briefly discusses directions for future work.
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The architecture of CENet consists of a body velocity estimation model and an auto-encoder model that shares a unified encoder. The shared encoder ...
 
-- **PDF anchors reviewed:** datasets p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), metrics p. 4 (Figure/Table caption), p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 6 (Figure/Table caption), baselines p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 5 (III. EXPERIMENTS), results p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), metrics p. 4 (Figure/Table caption), p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 6 (Figure/Table caption), baselines p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 5 (III. EXPERIMENTS), results p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 (2) 𝑝(𝑠,𝑔/𝜋) denotes the distribution of states and goals observed under the student policy.를 Character Observations: At each step, 𝜋FC observes the current humanoid state 𝑠𝑡, consisting of the 3D body pose and velocity, canonicalized with respect to the character's local coordinate frame: 𝑠𝑡= (𝜃𝑡⊖𝜃root 𝑡 ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our framework consists of two stages.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Character Observations: At each step, 𝜋FC observes the current humanoid state 𝑠𝑡, consisting of the 3D body pose and velocity, canonicalized with respect to the character's local coordinate frame: 𝑠𝑡= ... (p. 5, 3. Inference).
+- **Paper-specific mechanism:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking. (p. 10, 7.2 Evaluation); the relevant task/metric cue is We evaluate versions of the model with key components removed (Section 6), and measure the impact on the average success rate and error (i.e. average minimal distance from a valid ... (p. 14, 8 RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model. (p. 15, 8 RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To evaluate the effectiveness of our framework, we construct a benchmark consisting of common tasks introduced by prior systems..
-3. Compare against the body-reported baseline or a matched simpler baseline: This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking..
-4. Report the body metric and its denominator/aggregation: We evaluate versions of the model with key components removed (Section 6), and measure the impact on the average success rate and error (i.e. average minimal distance from a valid sitting position ....
-5. Re-run the body-reported ablation/failure condition: Table 6. Objects + ablation: We evaluate MaskedMimic and conduct an ablation on various design decisions. Experiments are conducted on the sitting task with a set of test objects. We evaluate versions ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Character Observations: At each step, 𝜋FC observes the current humanoid state 𝑠𝑡, consisting of the 3D body pose and velocity, canonicalized with respect to the character's local coordinate frame: 𝑠𝑡= ... (p. 5, 3. Inference); preserve the objective/update rule: The training objective is formulated as a motion-tracking reward and optimized using reinforcement learning [Mnih et al. (p. 5, 3. Inference).
+2. Use the paper-reported task/data/environment cue: To evaluate the effectiveness of our framework, we construct a benchmark consisting of common tasks introduced by prior systems. (p. 9, 7.2 Evaluation).
+3. Compare against the reported or matched baseline: This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking. (p. 10, 7.2 Evaluation).
+4. Report the body metric with its denominator and aggregation: We evaluate versions of the model with key components removed (Section 6), and measure the impact on the average success rate and error (i.e. average minimal distance from a valid ... (p. 14, 8 RESULTS).
+5. Re-run the reported ablation or stress/failure condition: This form of goal-engineering (akin to prompt-engineering for language models) enables MaskedMimic to perform a range of new tasks, without additional task-specific training. (p. 10, 7.2 Evaluation); if none is reported, design one around: 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model. (p. 15, 8 RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3. Inference); the primary result is directionally consistent at p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 Evaluation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 10 (7.2 Evaluation), p. 12 (8 RESULTS), p. 15 (8 RESULTS), and measure the boundary at p. 15 (8 RESULTS), p. 10 (8 RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 framework, consists, stages mechanism이 This test establishes the baseline capability for motion generation, both in terms of success rates and ... 대비 We evaluate versions of the model with key components removed (Section 6), and measure the impact on the ...을 개선하고, 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Character Observations: At each step, 𝜋FC observes the current humanoid state 𝑠𝑡, consisting of the 3D body pose and velocity, canonicalized with ...), does the paper-specific mechanism (Training on masked motion sequences enables the model to generalize to novel combinations of objectives.) retain the reported evaluation outcome (We evaluate versions of the model with key components removed (Section 6), and measure the impact on the ...) when tested against the paper's strongest explicit boundary (9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We evaluate versions of the model with key components removed (Section 6), and measure the impact on the ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking. (p. 10, 7.2 Evaluation).
+- **Strongest explicit boundary:** 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model. (p. 15, 8 RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

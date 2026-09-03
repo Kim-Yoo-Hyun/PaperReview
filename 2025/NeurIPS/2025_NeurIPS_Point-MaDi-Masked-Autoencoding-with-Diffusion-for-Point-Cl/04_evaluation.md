@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=sYeE1obXGG; PDF retrieval source: https://openreview.net/pdf/62bf13ac3402b1f0fcc04ba494b5fba2e1214fa0.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=sYeE1obXGG; PDF retrieval source: https://papers.nips.cc/paper_files/paper/2025/file/4809dd4b628b6253d0aad0154014f7a3-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.1 Downstream tasks Linear evaluation for real-world classification.
-- **p. 7 / 4 Experiments - extractive PDF cue:** We first fine-tune the proposed method on realworld scenes for 3D object classification.
-- **p. 9 / 4 Experiments - extractive PDF cue:** To further demonstrate the scene understanding ability of the proposed method, we fine-tune our Point-MaDi on the more challenging indoor dataset ScanNetV2 [6].
-- **p. 9 / 4 Experiments - extractive PDF cue:** Method Reference [P] Pre Dataset AP50 VoteNet [33] ICCV 2019 × - 33.5 STRL [16] ICCV 2021 ✓ ScanNet 38.4 PointContrast [57] ECCV 2020 ✓ ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** We validate our model on the indoor S3DIS [2] dataset to demonstrate the ability of the models to comprehend contextual semantics and intricate local geometric ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** We report ScanObjectNN results without voting.
-- **p. 23 / Figure/Table caption - extractive PDF cue:** Table 9: Few-shot classification results on ModelNet40. We perform ten separate trials for each experimental setting and the mean accuracy (%) and standard deviation are ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** While diffusion-based methods like PointDif may not consistently dominate on the relatively clean and less diverse ModelNet40 dataset, our Point-MaDi still achieves 93.8% accuracy, demonstrating ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.1 Downstream tasks Linear evaluation for real-world classification.
+- **p. 7 / 4 Experiments - extractive body cue:** We first fine-tune the proposed method on realworld scenes for 3D object classification.
+- **p. 9 / 4 Experiments - extractive body cue:** To further demonstrate the scene understanding ability of the proposed method, we fine-tune our Point-MaDi on the more challenging indoor dataset ScanNetV2 [6].
+- **p. 9 / 4 Experiments - extractive body cue:** Method Reference [P] Pre Dataset AP50 VoteNet [33] ICCV 2019 × - 33.5 STRL [16] ICCV 2021 ✓ ScanNet 38.4 PointContrast [57] ECCV 2020 ✓ ...
+- **p. 8 / 4 Experiments - extractive body cue:** We validate our model on the indoor S3DIS [2] dataset to demonstrate the ability of the models to comprehend contextual semantics and intricate local geometric ...
+- **p. 8 / 4 Experiments - extractive body cue:** We report ScanObjectNN results without voting.
+- **p. 23 / Figure/Table caption - extractive body cue:** Table 9: Few-shot classification results on ModelNet40. We perform ten separate trials for each experimental setting and the mean accuracy (%) and standard deviation are ...
+- **p. 7 / 4 Experiments - extractive body cue:** While diffusion-based methods like PointDif may not consistently dominate on the relatively clean and less diverse ModelNet40 dataset, our Point-MaDi still achieves 93.8% accuracy, demonstrating ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Tab. 2. Our Point-MaDi achieves state-of-the-art performance, with a category mIoU of 84.8% and an instance mIoU of 86.3%, improving over Point-MAE by 0.6% ... | p. 8 (Figure/Table caption) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our Point-MaDi achieves superior performance on all subsets, reaching 95.52%, 93.46%, and 89.52% accuracies, respectively. | p. 7 (4 Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.1 Downstream tasks Linear evaluation for real-world classification.
-- **p. 7 / 4 Experiments - extractive PDF cue:** We first fine-tune the proposed method on realworld scenes for 3D object classification.
-- **p. 9 / 4 Experiments - extractive PDF cue:** To further demonstrate the scene understanding ability of the proposed method, we fine-tune our Point-MaDi on the more challenging indoor dataset ScanNetV2 [6].
-- **p. 9 / 4 Experiments - extractive PDF cue:** Method Reference [P] Pre Dataset AP50 VoteNet [33] ICCV 2019 × - 33.5 STRL [16] ICCV 2021 ✓ ScanNet 38.4 PointContrast [57] ECCV 2020 ✓ ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** We validate our model on the indoor S3DIS [2] dataset to demonstrate the ability of the models to comprehend contextual semantics and intricate local geometric ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** We report ScanObjectNN results without voting.
+- **p. 7 / 4 Experiments - extractive body cue:** 4.1 Downstream tasks Linear evaluation for real-world classification.
+- **p. 7 / 4 Experiments - extractive body cue:** We first fine-tune the proposed method on realworld scenes for 3D object classification.
+- **p. 9 / 4 Experiments - extractive body cue:** To further demonstrate the scene understanding ability of the proposed method, we fine-tune our Point-MaDi on the more challenging indoor dataset ScanNetV2 [6].
+- **p. 9 / 4 Experiments - extractive body cue:** Method Reference [P] Pre Dataset AP50 VoteNet [33] ICCV 2019 × - 33.5 STRL [16] ICCV 2021 ✓ ScanNet 38.4 PointContrast [57] ECCV 2020 ✓ ...
+- **p. 8 / 4 Experiments - extractive body cue:** We validate our model on the indoor S3DIS [2] dataset to demonstrate the ability of the models to comprehend contextual semantics and intricate local geometric ...
+- **p. 8 / 4 Experiments - extractive body cue:** We report ScanObjectNN results without voting.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison between different pretext tasks. (a) Masked autoencoders reconstruct masked point patches. (b) PointDif uses a conditional point generator to guide the point-to-point ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: The pipeline of our Point-MaDi framework. The encoder adopts a center diffusion process, where noise is added to the centers of both visible ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Classification accuracy (%) on three variants of ScanObjectNN and ModelNet40. Parameters of inference models #P (M) are listed. We report ScanObjectNN results without ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Part segmentation on ShapeNetPart and semantic segmentation on S3DIS Area 5. The mean intersection over union (mIoU) for all classes (Cls.) and for ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Tab. 2. Our Point-MaDi achieves state-of-the-art performance, with a category mIoU of 84.8% and an instance mIoU of 86.3%, improving over Point-MAE by 0.6% and ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Object detection results on ScanNet. We report average precision (%). "Pre Dataset" refers to the pre-training dataset. ScanNet-Medium is a subset of ScanNet.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Classification accuracy (%) of decoder architectures on ScanObjectNN variants. The configurations differ in how attention is applied between visible and masked tokens. Decoder ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 5: Classification accuracy (%) of masking strategies on ScanObjectNN variants. "Random" is random masking, "Block" is block masking, "Rand & Block" combines both. Masking ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between different pretext tasks. (a) Masked autoencoders reconstruct masked point patches. (b) PointDif uses a conditional point generator to guide the point-to-point ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: The pipeline of our Point-MaDi framework. The encoder adopts a center diffusion process, where noise is added to the centers of both visible ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Classification accuracy (%) on three variants of ScanObjectNN and ModelNet40. Parameters of inference models #P (M) are listed. We report ScanObjectNN results without ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Part segmentation on ShapeNetPart and semantic segmentation on S3DIS Area 5. The mean intersection over union (mIoU) for all classes (Cls.) and for ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Tab. 2. Our Point-MaDi achieves state-of-the-art performance, with a category mIoU of 84.8% and an instance mIoU of 86.3%, improving over Point-MAE by 0.6% and ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Object detection results on ScanNet. We report average precision (%). "Pre Dataset" refers to the pre-training dataset. ScanNet-Medium is a subset of ScanNet.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Classification accuracy (%) of decoder architectures on ScanObjectNN variants. The configurations differ in how attention is applied between visible and masked tokens. Decoder ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 5: Classification accuracy (%) of masking strategies on ScanObjectNN variants. "Random" is random masking, "Block" is block masking, "Rand & Block" combines both. Masking ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.1 Downstream tasks Linear evaluation for real-world classification. | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | We first fine-tune the proposed method on realworld scenes for 3D object classification. | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 9 (4 Experiments) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 | Primary metric/result | Our Point-MaDi achieves superior performance on all subsets, reaching 95.52%, 93.46%, and 89.52% accuracies, respectively. | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 Experiments - extractive PDF cue:** Following previous research, we randomly sample 2,048 points from each input instance and adopt the same segmentation head for the fair comparison, which concatenates the ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** Cls. mIoU Inst. mIoU mAcc mIoU Supervised Learning Only PointNet [34] CVPR 2017 80.4 83.7 49.0 41.1 DGCNN [51] TOG 2019 82.3 85.2 - - ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Method Reference [P] Pre Dataset AP50 VoteNet [33] ICCV 2019 × - 33.5 STRL [16] ICCV 2021 ✓ ScanNet 38.4 PointContrast [57] ECCV 2020 ✓ ...
+- **p. 7 / 4 Experiments - extractive body cue:** Following previous research, we randomly sample 2,048 points from each input instance and adopt the same segmentation head for the fair comparison, which concatenates the ...
+- **p. 8 / 4 Experiments - extractive body cue:** Cls. mIoU Inst. mIoU mAcc mIoU Supervised Learning Only PointNet [34] CVPR 2017 80.4 83.7 49.0 41.1 DGCNN [51] TOG 2019 82.3 85.2 - - ...
+- **p. 9 / 4 Experiments - extractive body cue:** Method Reference [P] Pre Dataset AP50 VoteNet [33] ICCV 2019 × - 33.5 STRL [16] ICCV 2021 ✓ ScanNet 38.4 PointContrast [57] ECCV 2020 ✓ ...
 
 ## Generalization and Failure Cases
 
@@ -161,14 +161,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison between different pretext tasks. (a) Masked autoencoders reconstruct masked point patches. (b) PointDif uses a conditional point generator to guide the point-to-point ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: The pipeline of our Point-MaDi framework. The encoder adopts a center diffusion process, where noise is added to the centers of both visible ...
-- **p. 6 / 2 Related Work - extractive PDF cue:** The stop-gradient further ensures that decoder gradients do not disrupt the encoder's center diffusion task, preserving the encoder's robust feature representations.
-- **p. 7 / 2 Related Work - extractive PDF cue:** This hybrid approach enhances the robustness and generalization of patch reconstruction, complementing the encoder's sparse center denoising objective.
-- **p. 9 / 4 Experiments - extractive PDF cue:** It introduces more spatial diversity in corrupted regions, which encourages the model to learn more robust and generalized representations.
-- **p. 9 / 4 Experiments - extractive PDF cue:** The Cross decoder takes T v as queries and Xm as keys and values in cross-attention, mapping noise tokens to reconstructed patches within visible context.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between different pretext tasks. (a) Masked autoencoders reconstruct masked point patches. (b) PointDif uses a conditional point generator to guide the point-to-point ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: The pipeline of our Point-MaDi framework. The encoder adopts a center diffusion process, where noise is added to the centers of both visible ...
+- **p. 6 / 2 Related Work - extractive body cue:** The stop-gradient further ensures that decoder gradients do not disrupt the encoder's center diffusion task, preserving the encoder's robust feature representations.
+- **p. 7 / 2 Related Work - extractive body cue:** This hybrid approach enhances the robustness and generalization of patch reconstruction, complementing the encoder's sparse center denoising objective.
+- **p. 9 / 4 Experiments - extractive body cue:** It introduces more spatial diversity in corrupted regions, which encourages the model to learn more robust and generalized representations.
+- **p. 9 / 4 Experiments - extractive body cue:** The Cross decoder takes T v as queries and Xm as keys and values in cross-attention, mapping noise tokens to reconstructed patches within visible context.
 
-- **PDF anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 23 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 7 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 23 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 7 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

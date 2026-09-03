@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=W5e8c9nwNo; PDF retrieval source: https://openreview.net/pdf/27299763732e881621b2b6f37e47e47722f2e575.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=W5e8c9nwNo; PDF retrieval source: https://openreview.net/pdf/27299763732e881621b2b6f37e47e47722f2e575.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** GOAT-Bench: This benchmark challenges robots to sequentially execute 5 to 10 subtasks within unseen real-world scenes.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** A-EQA: Designed for active exploration and question answering, the A-EQA dataset comprises 557 natural language queries across 63 real-world indoor scenes.
-- **p. 7 / 4.3. Analysis on Sandbox Data - extractive PDF cue:** This confirms that our approach effectively mitigates the dependency on massive datasets, paving a scalable avenue for enhancing navigation policies by integrating abundant, low-cost sandbox ...
-- **p. 7 / 4.3. Analysis on Sandbox Data - extractive PDF cue:** All experiments use the model with 2B parameters on A-EQA. ing complementary environments during the Genesis phase, the agent learns more robust navigation priors that ...
-- **p. 8 / 4.5. Analysis and Ablation - extractive PDF cue:** Effects of Main Components. "Task" denotes synthesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping.
-- **p. 8 / 4.5. Analysis and Ablation - extractive PDF cue:** Subsequently, the introduction of sandbox-synthesized tasks (+Task) serves as a primary driver of capability, further raising A-EQA scores to 50.71% (2B) and 57.14% (4B).
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Adhering to the OpenEQA (Majumdar et al., 2024) standards, we quantify performance using LLM-Match Success Rate (SR†) and LLM-Match Success weighted by Path Length (SPL†), ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** GOAT-Bench employs standard Success Rate (SR) and Success weighted by Path Length (SPL).
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** GOAT-Bench: This benchmark challenges robots to sequentially execute 5 to 10 subtasks within unseen real-world scenes.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** A-EQA: Designed for active exploration and question answering, the A-EQA dataset comprises 557 natural language queries across 63 real-world indoor scenes.
+- **p. 7 / 4.3. Analysis on Sandbox Data - extractive body cue:** This confirms that our approach effectively mitigates the dependency on massive datasets, paving a scalable avenue for enhancing navigation policies by integrating abundant, low-cost sandbox ...
+- **p. 7 / 4.3. Analysis on Sandbox Data - extractive body cue:** All experiments use the model with 2B parameters on A-EQA. ing complementary environments during the Genesis phase, the agent learns more robust navigation priors that ...
+- **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** Effects of Main Components. "Task" denotes synthesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping.
+- **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** Subsequently, the introduction of sandbox-synthesized tasks (+Task) serves as a primary driver of capability, further raising A-EQA scores to 50.71% (2B) and 57.14% (4B).
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Adhering to the OpenEQA (Majumdar et al., 2024) standards, we quantify performance using LLM-Match Success Rate (SR†) and LLM-Match Success weighted by Path Length (SPL†), ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** GOAT-Bench employs standard Success Rate (SR) and Success weighted by Path Length (SPL).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Main Navigation Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | SAGE demonstrates superior performance, significantly outperforming traditional RL baselines by a large margin. | p. 6 (4.2. Main Navigation Results) |
 | 4.5. Analysis and Ablation | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 3, the full SAGE framework achieves substantial improvements of 9.70%/6.03% on A-EQA and 7.52%/8.09% on GOATBench compared to the baselines ... | p. 8 (4.5. Analysis and Ablation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** GOAT-Bench: This benchmark challenges robots to sequentially execute 5 to 10 subtasks within unseen real-world scenes.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** A-EQA: Designed for active exploration and question answering, the A-EQA dataset comprises 557 natural language queries across 63 real-world indoor scenes.
-- **p. 7 / 4.3. Analysis on Sandbox Data - extractive PDF cue:** This confirms that our approach effectively mitigates the dependency on massive datasets, paving a scalable avenue for enhancing navigation policies by integrating abundant, low-cost sandbox ...
-- **p. 7 / 4.3. Analysis on Sandbox Data - extractive PDF cue:** All experiments use the model with 2B parameters on A-EQA. ing complementary environments during the Genesis phase, the agent learns more robust navigation priors that ...
-- **p. 8 / 4.5. Analysis and Ablation - extractive PDF cue:** Effects of Main Components. "Task" denotes synthesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping.
-- **p. 8 / 4.5. Analysis and Ablation - extractive PDF cue:** Subsequently, the introduction of sandbox-synthesized tasks (+Task) serves as a primary driver of capability, further raising A-EQA scores to 50.71% (2B) and 57.14% (4B).
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** GOAT-Bench: This benchmark challenges robots to sequentially execute 5 to 10 subtasks within unseen real-world scenes.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** A-EQA: Designed for active exploration and question answering, the A-EQA dataset comprises 557 natural language queries across 63 real-world indoor scenes.
+- **p. 7 / 4.3. Analysis on Sandbox Data - extractive body cue:** This confirms that our approach effectively mitigates the dependency on massive datasets, paving a scalable avenue for enhancing navigation policies by integrating abundant, low-cost sandbox ...
+- **p. 7 / 4.3. Analysis on Sandbox Data - extractive body cue:** All experiments use the model with 2B parameters on A-EQA. ing complementary environments during the Genesis phase, the agent learns more robust navigation priors that ...
+- **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** Effects of Main Components. "Task" denotes synthesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping.
+- **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** Subsequently, the introduction of sandbox-synthesized tasks (+Task) serves as a primary driver of capability, further raising A-EQA scores to 50.71% (2B) and 57.14% (4B).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. (a): Our SAGE framework utilizes a physics-grounded sandbox for self-evolving data generation and policy optimization, enabling the agent to bridge the gap between ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The SAGE Framework. The system operates in three phases: (a) Genesis: A sandbox environment ES synthesizes task-oriented experience rules Kexp. (b) Evolution: The ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Asymmetric Adaptive Clipping (AAC). While both standard and augmented samples share a conservative lower bound (1 -ϵstd) to prevent policy collapse under A ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. (a)&(b): Impact of fixed and dynamic experience-injection probabilities on navigation performance. We compare fixed η ∈{0.0, 0.5, 0.8, 1.0} with a validation-dependent dynamic ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Performance of SAGE on A-EQA and GOAT-Bench. A-EQA results include both SR† (Eq. 14) and SPL† (Eq. 15). Methods with * are reported ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. (a): Comparison of data composition strategies. (b): Impact of data scale on model performance. All experiments use the model with 2B parameters on ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation on Visual Context Length. We analyze the impact of the number of input frames vt on navigation performance. vt = 4 yields ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Effects of Main Components. "Task" denotes syn- thesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping. Cret indicates experience re- trieved ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a): Our SAGE framework utilizes a physics-grounded sandbox for self-evolving data generation and policy optimization, enabling the agent to bridge the gap between ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The SAGE Framework. The system operates in three phases: (a) Genesis: A sandbox environment ES synthesizes task-oriented experience rules Kexp. (b) Evolution: The ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Asymmetric Adaptive Clipping (AAC). While both standard and augmented samples share a conservative lower bound (1 -ϵstd) to prevent policy collapse under A ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. (a)&(b): Impact of fixed and dynamic experience-injection probabilities on navigation performance. We compare fixed η ∈{0.0, 0.5, 0.8, 1.0} with a validation-dependent dynamic ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Performance of SAGE on A-EQA and GOAT-Bench. A-EQA results include both SR† (Eq. 14) and SPL† (Eq. 15). Methods with * are reported ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. (a): Comparison of data composition strategies. (b): Impact of data scale on model performance. All experiments use the model with 2B parameters on ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation on Visual Context Length. We analyze the impact of the number of input frames vt on navigation performance. vt = 4 yields ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Effects of Main Components. "Task" denotes syn- thesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping. Cret indicates experience re- trieved ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | GOAT-Bench: This benchmark challenges robots to sequentially execute 5 to 10 subtasks within unseen real-world scenes. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings) |
 | Task/environment | A-EQA: Designed for active exploration and question answering, the A-EQA dataset comprises 557 natural language queries across 63 real-world indoor scenes. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data) |
@@ -121,9 +121,9 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. 
 | Primary metric/result | As shown in Table 3, the full SAGE framework achieves substantial improvements of 9.70%/6.03% on A-EQA and 7.52%/8.09% on GOATBench compared to the baselines ... | numeric claim only at cited anchor | p. 8 (4.5. Analysis and Ablation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Following the evaluation protocol established by 3D-Mem, we conduct evaluations on a subset of the Val Unseen split in the main text, totaling 278 subtasks ...
-- **p. 8 / 4.4. Analysis on Evolution - extractive PDF cue:** Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps.
-- **p. 8 / 4.4. Analysis on Evolution - extractive PDF cue:** However, extending to 5 frames yields diminishing returns (SPL drops to 36.67%), suggesting that redundant visual tokens may dilute the VLM's attention without adding actionable ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Following the evaluation protocol established by 3D-Mem, we conduct evaluations on a subset of the Val Unseen split in the main text, totaling 278 subtasks ...
+- **p. 8 / 4.4. Analysis on Evolution - extractive body cue:** Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps.
+- **p. 8 / 4.4. Analysis on Evolution - extractive body cue:** However, extending to 5 frames yields diminishing returns (SPL drops to 36.67%), suggesting that redundant visual tokens may dilute the VLM's attention without adding actionable ...
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. 
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** (15) In cases of navigation failure, the agent defaults to blind guessing; the contribution to SPL† is set to 0.
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 7. Visualization of the word cloud. rules using regular expressions. The entire trajectory is discarded if the generated output fails to match the required ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Furthermore, we demonstrate the system's practical robustness via Real-World Deployment in Appendix J.
-- **p. 7 / 4.3. Analysis on Sandbox Data - extractive PDF cue:** All experiments use the model with 2B parameters on A-EQA. ing complementary environments during the Genesis phase, the agent learns more robust navigation priors that ...
-- **p. 8 / 4.4. Analysis on Evolution - extractive PDF cue:** Conservative clipping (ϵexp = 0.4) causes underfitting, failing to exploit Genesis signals.
-- **p. 8 / 4.4. Analysis on Evolution - extractive PDF cue:** Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** (15) In cases of navigation failure, the agent defaults to blind guessing; the contribution to SPL† is set to 0.
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 7. Visualization of the word cloud. rules using regular expressions. The entire trajectory is discarded if the generated output fails to match the required ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Furthermore, we demonstrate the system's practical robustness via Real-World Deployment in Appendix J.
+- **p. 7 / 4.3. Analysis on Sandbox Data - extractive body cue:** All experiments use the model with 2B parameters on A-EQA. ing complementary environments during the Genesis phase, the agent learns more robust navigation priors that ...
+- **p. 8 / 4.4. Analysis on Evolution - extractive body cue:** Conservative clipping (ϵexp = 0.4) causes underfitting, failing to exploit Genesis signals.
+- **p. 8 / 4.4. Analysis on Evolution - extractive body cue:** Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.5. Analysis and Ablation), p. 8 (4.5. Analysis and Ablation), metrics p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution), p. 8 (4.4. Analysis on Evolution), p. 7 (4.4. Analysis on Evolution), baselines p. 6 (4.2. Main Navigation Results), p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), results p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.5. Analysis and Ablation), p. 8 (4.5. Analysis and Ablation), metrics p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution), p. 8 (4.4. Analysis on Evolution), p. 7 (4.4. Analysis on Evolution), baselines p. 6 (4.2. Main Navigation Results), p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), results p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

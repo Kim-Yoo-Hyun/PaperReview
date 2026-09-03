@@ -1,20 +1,21 @@
 # A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/.
-> PDF retrieval source: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/.
+> PDF retrieval source: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / AISTATS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, policy learning
-- Aliases: DAgger
 - Official paper: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +86,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ℓ(s, ·) is convex in π for all states s.를 문제로 두고, We propose a new meta-algorithm for imitation learning which learns a stationary deterministic policy guaranteed to perform well under its induced distribution of states (number of mistakes/costs that grows linearly in T ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (2 PRELIMINARIES), p. 2 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 1 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Sequence Prediction problems arise commonly in practice. (p. 1, 1 INTRODUCTION).
+- **Actual contribution:** We take a reduction-based approach (Beygelzimer et al., 2005) that enables reusing existing supervised learning algorithms. (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently. (p. 8, 5 EXPERIMENTS).
+- **Explicit failure boundary:** We measure performance in terms of the average number of falls per lap. (p. 6, 5 EXPERIMENTS).

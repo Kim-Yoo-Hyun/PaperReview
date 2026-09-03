@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/; PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/; PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Figure 6. Calibration images (part) with different GelSight sensors. During calibration, a ball/ball array is pressed on the sensor, and the image intensity change ... | p. 9 (Figure/Table caption) |
 | 5. Evaluation | EMPIRICAL / SIMULATION | In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate the sensor's performance in estimating object ... | p. 15 (5. Evaluation) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In the long run, for making a good force measurement with GelSight, we should either collect a more comprehensive dataset (simulation methods could be ... | embodiment, simulator version and control stack | p. 18 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement) |
 | Task/environment | On the other hand, for the given training set and test set, the measurement is still influenced by the contact geometry. | reset, timeout, object/scene variation | p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement) |
@@ -154,7 +154,16 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 - **p. 18 / 6. Application - extractive body cue:** As indicated in Section 3.7, the GelSight sensor can estimate the slip and incipient slip state from the stretching of the surface.
 - **p. 17 / 5.2. Evaluation of Force Measurement - extractive body cue:** The results also show that the GelSight measurement of force can be robust regardless of the geometry of the contact objects.
 
-- **PDF anchors reviewed:** datasets p. 18 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 16 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), metrics p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), p. 16 (5.1. Evaluation of Shape Measurement), p. 4 (Figure/Table caption), baselines p. 16 (5.1. Evaluation of Shape Measurement), p. 17 (5.2. Evaluation of Force Measurement), results p. 9 (Figure/Table caption), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), p. 16 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement).
+- **Evidence anchors reviewed:** datasets p. 18 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 16 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), metrics p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), p. 16 (5.1. Evaluation of Shape Measurement), p. 4 (Figure/Table caption), baselines p. 16 (5.1. Evaluation of Shape Measurement), p. 17 (5.2. Evaluation of Force Measurement), results p. 9 (Figure/Table caption), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), p. 16 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The coefficient of determination (R2) and root mean square error (RMSE) for the results of three different objects are also listed in the figure. (p. 17, 5.2. Evaluation of Force Measurement).
+- **Metric evidence:** In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate the sensor's performance in estimating object shapes and contact force. (p. 15, 5. Evaluation).
+- **Baseline/ablation evidence:** In the figures, we compared the measured values and the ground truth, of the pitch and yaw angles of the surface normal. (p. 16, 5.1. Evaluation of Shape Measurement).
+- **Failure/negative evidence:** Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).

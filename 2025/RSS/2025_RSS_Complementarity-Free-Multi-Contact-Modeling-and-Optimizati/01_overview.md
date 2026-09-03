@@ -1,8 +1,10 @@
 # Complementarity-Free Multi-Contact Modeling and Optimization for Dexterous Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p111.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p111.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p111.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p111.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p111.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss21/p111.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -32,7 +34,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Core Idea
 
 - **p. 1 / Abstract - extractive body cue:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
-- **p. 1 / Front matter - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
 - **p. 2 / Abstract - extractive body cue:** Our method sets a new benchmark for model-based contact-rich dexterous manipulation: « Highly versatile dexterity: 96.5% average success rate across all objects and environments « ...
 - **p. 5 / B. New Complementarty-Free Multi-Contact Model - extractive body cue:** To circumvent the dual complementarity in (13), we propose ‘new contact model based on Lemma 1.
 - **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** (62, 33] developed penalty-based contact models.
@@ -52,7 +54,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Main Claims and Actual Contribution
 
 - **p. 1 / Abstract - extractive body cue:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
-- **p. 1 / Front matter - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
 - **p. 2 / Abstract - extractive body cue:** Our method sets a new benchmark for model-based contact-rich dexterous manipulation: « Highly versatile dexterity: 96.5% average success rate across all objects and environments « ...
 - **p. 5 / B. New Complementarty-Free Multi-Contact Model - extractive body cue:** To circumvent the dual complementarity in (13), we propose ‘new contact model based on Lemma 1.
 - **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** (62, 33] developed penalty-based contact models.
@@ -83,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 (III) Fewer hyperparameters: the proposed model has fewer parameters, making it easy to tune, and it also supports model auto-tuning using any learning framework ‘The goal of the new contact model is ...를 문제로 두고, Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (C. Reinforcement Learning for Dexterous Manipulation), p. 2 (A. Rigid Body Multi-contact Models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This introduces computational challenges in both learning of contact dynamics [42] and combinatorics optimization of contact modes [14, 41. (p. 1, Abstract).
+- **Actual contribution:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects (p. 1, Abstract).
+- **Evaluation boundary:** For each object, we conduct 20 trials with different random inital and target poses. ‘The results are in Table IV, where we quantify the manipulation accuracy by (p. 9, B. MPC Setting and Results).
+- **Explicit failure boundary:** [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).

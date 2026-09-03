@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/7914_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/7914_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 12 / 4 Experiments - extractive PDF cue:** Model 2D AP AP50 AP25 OpenScene [23] (2D Fusion) ✓ 10.9 15.6 17.3 OpenScene [23] (2D/3D Ens.) ✓ 8.2 10.4 13.3 OpenMask3D [30] ✓ 13.1 ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Among them, S3DIS, ScanNetv2, and ScanNet200 are indoor point cloud datasets generated from RGBD images, Replica is a photo-realistic 3D indoor scene reconstruction, while STPLS3D ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** With the enhanced recognition capability, the performance of 3D open-vocabulary Object Detection among the ScanNet dataset has also achieved state-of-the-art results by a large margin.
-- **p. 12 / 4 Experiments - extractive PDF cue:** It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes.
-- **p. 9 / 4 Experiments - extractive PDF cue:** We exclusively used the 3D data with colour from these datasets and did not employ any 2D images, poses, or depth maps.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We also explored the performance of OpenIns3D on a more challenging dataset with more class categories.
-- **p. 10 / 4 Experiments - extractive PDF cue:** For STPLIS3D, we followed Mask3D to split the large outdoor scene into patches of 50m \times 50 m and lifted the camera up to 10m.
+- **p. 12 / 4 Experiments - extractive body cue:** Model 2D AP AP50 AP25 OpenScene [23] (2D Fusion) ✓ 10.9 15.6 17.3 OpenScene [23] (2D/3D Ens.) ✓ 8.2 10.4 13.3 OpenMask3D [30] ✓ 13.1 ...
+- **p. 11 / 4 Experiments - extractive body cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
+- **p. 9 / 4 Experiments - extractive body cue:** Among them, S3DIS, ScanNetv2, and ScanNet200 are indoor point cloud datasets generated from RGBD images, Replica is a photo-realistic 3D indoor scene reconstruction, while STPLS3D ...
+- **p. 11 / 4 Experiments - extractive body cue:** With the enhanced recognition capability, the performance of 3D open-vocabulary Object Detection among the ScanNet dataset has also achieved state-of-the-art results by a large margin.
+- **p. 12 / 4 Experiments - extractive body cue:** It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes.
+- **p. 9 / 4 Experiments - extractive body cue:** We exclusively used the 3D data with colour from these datasets and did not employ any 2D images, poses, or depth maps.
+- **p. 10 / 4 Experiments - extractive body cue:** We also explored the performance of OpenIns3D on a more challenging dataset with more class categories.
+- **p. 10 / 4 Experiments - extractive body cue:** For STPLIS3D, we followed Mask3D to split the large outdoor scene into patches of 50m \times 50 m and lifted the camera up to 10m.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Significant improvements are achieved on the S3DIS dataset, and competitive results are observed on ScanNetv2 (B/N: Base/Novel). | p. 11 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Model use 2D APhead APcommon APtail AP AP50 AP25 OpenScene (2D Fusion) [23] ✓ 13.4 11.6 9.9 11.7 15.2 17.8 OpenScene (2D/3D Ens.) [23] ... | p. 12 (4 Experiments) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 12 / 4 Experiments - extractive PDF cue:** Model 2D AP AP50 AP25 OpenScene [23] (2D Fusion) ✓ 10.9 15.6 17.3 OpenScene [23] (2D/3D Ens.) ✓ 8.2 10.4 13.3 OpenMask3D [30] ✓ 13.1 ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Among them, S3DIS, ScanNetv2, and ScanNet200 are indoor point cloud datasets generated from RGBD images, Replica is a photo-realistic 3D indoor scene reconstruction, while STPLS3D ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** With the enhanced recognition capability, the performance of 3D open-vocabulary Object Detection among the ScanNet dataset has also achieved state-of-the-art results by a large margin.
-- **p. 12 / 4 Experiments - extractive PDF cue:** It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes.
-- **p. 9 / 4 Experiments - extractive PDF cue:** We exclusively used the 3D data with colour from these datasets and did not employ any 2D images, poses, or depth maps.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We also explored the performance of OpenIns3D on a more challenging dataset with more class categories.
-- **p. 10 / 4 Experiments - extractive PDF cue:** For STPLIS3D, we followed Mask3D to split the large outdoor scene into patches of 50m \times 50 m and lifted the camera up to 10m.
+- **p. 12 / 4 Experiments - extractive body cue:** Model 2D AP AP50 AP25 OpenScene [23] (2D Fusion) ✓ 10.9 15.6 17.3 OpenScene [23] (2D/3D Ens.) ✓ 8.2 10.4 13.3 OpenMask3D [30] ✓ 13.1 ...
+- **p. 11 / 4 Experiments - extractive body cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
+- **p. 9 / 4 Experiments - extractive body cue:** Among them, S3DIS, ScanNetv2, and ScanNet200 are indoor point cloud datasets generated from RGBD images, Replica is a photo-realistic 3D indoor scene reconstruction, while STPLS3D ...
+- **p. 11 / 4 Experiments - extractive body cue:** With the enhanced recognition capability, the performance of 3D open-vocabulary Object Detection among the ScanNet dataset has also achieved state-of-the-art results by a large margin.
+- **p. 12 / 4 Experiments - extractive body cue:** It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes.
+- **p. 9 / 4 Experiments - extractive body cue:** We exclusively used the 3D data with colour from these datasets and did not employ any 2D images, poses, or depth maps.
+- **p. 10 / 4 Experiments - extractive body cue:** We also explored the performance of OpenIns3D on a more challenging dataset with more class categories.
+- **p. 10 / 4 Experiments - extractive body cue:** For STPLIS3D, we followed Mask3D to split the large outdoor scene into patches of 50m \times 50 m and lifted the camera up to 10m.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Complex Queries 3D Instance Segmentation with OpenIns3D. Abstract. In this work, we introduce OpenIns3D, a new 3D-input-only framework for 3D open-vocabulary scene understanding. ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: High-level Illustrations of OpenIns3D and Quantitative Results. (a) OpenIns3D follows the "Mask-Snap-Lookup" steps for open-vocabulary scene under- standing. (b) A list of SOTA ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Four Categories of Open-Vocabulary 3D Scene Understanding Mod- els. a) 3D feature distillation frameworks, where 2D images are used as a bridge to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1. In summary, our contributions are: - OpenIns3D employs a distinct pipeline that operates without the need for well-aligned images. This approach achieves state-of-the-art ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4: General Pipeline of OpenIns3D OpenIns3D first processes point clouds with MPM to generate 3D mask proposals and mask scores. The Snap module (detailed ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 5: Snap and Mask2Pixel Maps. Multiscale snaps are conducted to render images with different levels of detail for scene understanding, including wide-corner snaps, wide-angle ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 6: Mask2Pixel Guided Lookup Il- lustration. IoUs between the 2D detec- tion results and the projected masks are the guidance to assign class names ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Zero-shot object classification on ScanNetv2. OpenIns3D's Snap and Lookup approach for mask classification, surpasses all previous methods, including the latest language-aligned large-scale 3D ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Complex Queries 3D Instance Segmentation with OpenIns3D. Abstract. In this work, we introduce OpenIns3D, a new 3D-input-only framework for 3D open-vocabulary scene understanding. ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: High-level Illustrations of OpenIns3D and Quantitative Results. (a) OpenIns3D follows the "Mask-Snap-Lookup" steps for open-vocabulary scene under- standing. (b) A list of SOTA ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Four Categories of Open-Vocabulary 3D Scene Understanding Mod- els. a) 3D feature distillation frameworks, where 2D images are used as a bridge to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. In summary, our contributions are: - OpenIns3D employs a distinct pipeline that operates without the need for well-aligned images. This approach achieves state-of-the-art ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: General Pipeline of OpenIns3D OpenIns3D first processes point clouds with MPM to generate 3D mask proposals and mask scores. The Snap module (detailed ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 5: Snap and Mask2Pixel Maps. Multiscale snaps are conducted to render images with different levels of detail for scene understanding, including wide-corner snaps, wide-angle ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 6: Mask2Pixel Guided Lookup Il- lustration. IoUs between the 2D detec- tion results and the projected masks are the guidance to assign class names ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Zero-shot object classification on ScanNetv2. OpenIns3D's Snap and Lookup approach for mask classification, surpasses all previous methods, including the latest language-aligned large-scale 3D ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Model 2D AP AP50 AP25 OpenScene [23] (2D Fusion) ✓ 10.9 15.6 17.3 OpenScene [23] (2D/3D Ens.) ✓ 8.2 10.4 13.3 OpenMask3D [30] ✓ ... | embodiment, simulator version and control stack | p. 12 (4 Experiments), p. 11 (4 Experiments) |
 | Task/environment | For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images ... | reset, timeout, object/scene variation | p. 11 (4 Experiments), p. 9 (4 Experiments) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (1 Introduction), p. 2 (1 Introduction) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 1 (Body text (section not recovered)), p. 2 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -155,11 +155,11 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 6: 3D instance segmentation results on the ScanNet200 validation set. OpenIns3D demonstrates robust performance when compared to 2D-input-free models. However, notable limitations emerge when ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes.
-- **p. 11 / 4 Experiments - extractive PDF cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 6: 3D instance segmentation results on the ScanNet200 validation set. OpenIns3D demonstrates robust performance when compared to 2D-input-free models. However, notable limitations emerge when ...
+- **p. 12 / 4 Experiments - extractive body cue:** It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes.
+- **p. 11 / 4 Experiments - extractive body cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
 
-- **PDF anchors reviewed:** datasets p. 12 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), metrics p. 12 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 6 (Figure/Table caption), p. 12 (4 Experiments), p. 13 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 12 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), metrics p. 12 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 6 (Figure/Table caption), p. 12 (4 Experiments), p. 13 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

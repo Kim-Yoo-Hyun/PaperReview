@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 
 ## Evaluation Body Digest
 
-- **p. 4 / 4.1. Dataset Preparation - extractive PDF cue:** We assume access to a multi-task dataset D = {ξi}ND i=1, containing a total of ND expert demonstrations paired with Dl = {li}ND i=1 language ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** Finally, we show HDP is capable of solving challenging real-world tasks efficiently and effectively on an open oven task with only 20 demonstrations.
-- **p. 8 / 5.4. Real Robot Experiment - extractive PDF cue:** We also conducted a real-world experiment on an opening oven task and a sorting objects into drawer task with a Franka Panda 7 DoF arm.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** For both tasks, the robot needs to accurately predict the trajectories that understand the task context conditioned on languages.
-- **p. 6 / 5. Experiments - extractive PDF cue:** For all simulation experiments, we use 100 demonstrations from RLBench [19] for each task and train for 100K (a) RRT (b) Joint Position (c) RK-Diffuser ...
-- **p. 4 / 4.1. Dataset Preparation - extractive PDF cue:** The observation odemo includes multi-view calibrated RGB-D camera observations and robot states.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** The Pose Diffusion denotes learning a diffusion policy directly over the end-effector pose trajectories and generate robot controls by solving the inverse kinematics.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** However, for tasks that require a fine-grained trajectory, e.g., toilet seat up, RRT fails completely.
+- **p. 4 / 4.1. Dataset Preparation - extractive body cue:** We assume access to a multi-task dataset D = {ξi}ND i=1, containing a total of ND expert demonstrations paired with Dl = {li}ND i=1 language ...
+- **p. 6 / 5. Experiments - extractive body cue:** Finally, we show HDP is capable of solving challenging real-world tasks efficiently and effectively on an open oven task with only 20 demonstrations.
+- **p. 8 / 5.4. Real Robot Experiment - extractive body cue:** We also conducted a real-world experiment on an opening oven task and a sorting objects into drawer task with a Franka Panda 7 DoF arm.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** For both tasks, the robot needs to accurately predict the trajectories that understand the task context conditioned on languages.
+- **p. 6 / 5. Experiments - extractive body cue:** For all simulation experiments, we use 100 demonstrations from RLBench [19] for each task and train for 100K (a) RRT (b) Joint Position (c) RK-Diffuser ...
+- **p. 4 / 4.1. Dataset Preparation - extractive body cue:** The observation odemo includes multi-view calibrated RGB-D camera observations and robot states.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** The Pose Diffusion denotes learning a diffusion policy directly over the end-effector pose trajectories and generate robot controls by solving the inverse kinematics.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** However, for tasks that require a fine-grained trajectory, e.g., toilet seat up, RRT fails completely.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Simulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | For red tasks, we expect no improvement of HDP over baselines; with blue tasks, we expect HDP to outperform many of the baselines. reach ... | p. 7 (5.2. Simulation Experiments) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Ablation Study: Success Rates (%) / IK Error Rates (%) of low-level agents with the ground-truth next-best poses. For red tasks, we ... | p. 8 (Figure/Table caption) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 4.1. Dataset Preparation - extractive PDF cue:** We assume access to a multi-task dataset D = {ξi}ND i=1, containing a total of ND expert demonstrations paired with Dl = {li}ND i=1 language ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** Finally, we show HDP is capable of solving challenging real-world tasks efficiently and effectively on an open oven task with only 20 demonstrations.
-- **p. 8 / 5.4. Real Robot Experiment - extractive PDF cue:** We also conducted a real-world experiment on an opening oven task and a sorting objects into drawer task with a Franka Panda 7 DoF arm.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** For both tasks, the robot needs to accurately predict the trajectories that understand the task context conditioned on languages.
-- **p. 6 / 5. Experiments - extractive PDF cue:** For all simulation experiments, we use 100 demonstrations from RLBench [19] for each task and train for 100K (a) RRT (b) Joint Position (c) RK-Diffuser ...
-- **p. 4 / 4.1. Dataset Preparation - extractive PDF cue:** The observation odemo includes multi-view calibrated RGB-D camera observations and robot states.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** The Pose Diffusion denotes learning a diffusion policy directly over the end-effector pose trajectories and generate robot controls by solving the inverse kinematics.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** However, for tasks that require a fine-grained trajectory, e.g., toilet seat up, RRT fails completely.
+- **p. 4 / 4.1. Dataset Preparation - extractive body cue:** We assume access to a multi-task dataset D = {ξi}ND i=1, containing a total of ND expert demonstrations paired with Dl = {li}ND i=1 language ...
+- **p. 6 / 5. Experiments - extractive body cue:** Finally, we show HDP is capable of solving challenging real-world tasks efficiently and effectively on an open oven task with only 20 demonstrations.
+- **p. 8 / 5.4. Real Robot Experiment - extractive body cue:** We also conducted a real-world experiment on an opening oven task and a sorting objects into drawer task with a Franka Panda 7 DoF arm.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** For both tasks, the robot needs to accurately predict the trajectories that understand the task context conditioned on languages.
+- **p. 6 / 5. Experiments - extractive body cue:** For all simulation experiments, we use 100 demonstrations from RLBench [19] for each task and train for 100K (a) RRT (b) Joint Position (c) RK-Diffuser ...
+- **p. 4 / 4.1. Dataset Preparation - extractive body cue:** The observation odemo includes multi-view calibrated RGB-D camera observations and robot states.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** The Pose Diffusion denotes learning a diffusion policy directly over the end-effector pose trajectories and generate robot controls by solving the inverse kinematics.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** However, for tasks that require a fine-grained trajectory, e.g., toilet seat up, RRT fails completely.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned on ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. We focus on learning multi-task language-guided agent for robotic manipulation. Unlike a standard motion planner that only samples an arbitrary trajectory to the ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of Hierarchical Diffusion Policy (HDP). HDP is a multi-task hierarchical agent for kinematics-aware robotic manip- ulation. HDP consists of two levels: a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Trajectory visualisations of the open box task. iterations. On a real robot, we show HDP can learn effi- ciently and effectively with only ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Success Rates (%) on RLBench Tasks. For red tasks, we expect no improvement of HDP over baselines; with blue tasks, we expect HDP ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation Study: Success Rates (%) / IK Error Rates (%) of low-level agents with the ground-truth next-best poses. For red tasks, we expect ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Real-robot execution sequences. For both tasks, the robot needs to accurately predict the trajectories that understand the task context conditioned on languages. As ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned on ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. We focus on learning multi-task language-guided agent for robotic manipulation. Unlike a standard motion planner that only samples an arbitrary trajectory to the ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Overview of Hierarchical Diffusion Policy (HDP). HDP is a multi-task hierarchical agent for kinematics-aware robotic manip- ulation. HDP consists of two levels: a ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Trajectory visualisations of the open box task. iterations. On a real robot, we show HDP can learn effi- ciently and effectively with only ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Success Rates (%) on RLBench Tasks. For red tasks, we expect no improvement of HDP over baselines; with blue tasks, we expect HDP ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation Study: Success Rates (%) / IK Error Rates (%) of low-level agents with the ground-truth next-best poses. For red tasks, we expect ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Real-robot execution sequences. For both tasks, the robot needs to accurately predict the trajectories that understand the task context conditioned on languages. As ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We assume access to a multi-task dataset D = {ξi}ND i=1, containing a total of ND expert demonstrations paired with Dl = {li}ND i=1 ... | embodiment, simulator version and control stack | p. 4 (4.1. Dataset Preparation), p. 6 (5. Experiments) |
 | Task/environment | Finally, we show HDP is capable of solving challenging real-world tasks efficiently and effectively on an open oven task with only 20 demonstrations. | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 8 (5.4. Real Robot Experiment) |
@@ -122,7 +122,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 | Primary metric/result | Table 2. Ablation Study: Success Rates (%) / IK Error Rates (%) of low-level agents with the ground-truth next-best poses. For red tasks, we ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.3. Low-Level RK-Diffuser - extractive PDF cue:** For the RGB-D image, we first convert it to a point cloud in the world frame and extract the features with PointNet++ [29]; for the ...
+- **p. 5 / 4.3. Low-Level RK-Diffuser - extractive body cue:** For the RGB-D image, we first convert it to a point cloud in the world frame and extract the features with PointNet++ [29]; for the ...
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Although we have demonstrated some robustness of RK-Diffuser to out-of-distribution poses, the nature of behaviour cloning for longer-horizon tasks suggests that error accumulation could lead ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** In addition to this, we perform a series of ablation studies and show: (1) IK errors contribute to the majority of the failure cases of ...
-- **p. 7 / 5.2. Simulation Experiments - extractive PDF cue:** The predicted trajectory consistently exceeds the turning radius of the lid hinge, leading to the failure.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** Specifically, most of the IK errors are caused by invalid quaternions and contribute to 75% of its failure cases.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned on ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Future works could explore improving the framework by designing more unified structures that minimises the compounding error.
+- **p. 8 / 6. Conclusion - extractive body cue:** Although we have demonstrated some robustness of RK-Diffuser to out-of-distribution poses, the nature of behaviour cloning for longer-horizon tasks suggests that error accumulation could lead ...
+- **p. 6 / 5. Experiments - extractive body cue:** In addition to this, we perform a series of ablation studies and show: (1) IK errors contribute to the majority of the failure cases of ...
+- **p. 7 / 5.2. Simulation Experiments - extractive body cue:** The predicted trajectory consistently exceeds the turning radius of the lid hinge, leading to the failure.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** Specifically, most of the IK errors are caused by invalid quaternions and contribute to 75% of its failure cases.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned on ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Future works could explore improving the framework by designing more unified structures that minimises the compounding error.
 
-- **PDF anchors reviewed:** datasets p. 4 (4.1. Dataset Preparation), p. 6 (5. Experiments), p. 8 (5.4. Real Robot Experiment), p. 8 (5.3. Ablation Studies), p. 6 (5. Experiments), p. 4 (4.1. Dataset Preparation), metrics p. 8 (5.3. Ablation Studies), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (5. Experiments), p. 7 (5.3. Ablation Studies), baselines p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (Figure/Table caption), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.3. Ablation Studies), results p. 7 (5.2. Simulation Experiments), p. 8 (Figure/Table caption), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (5.1. Trajectory Visualisations).
+- **Evidence anchors reviewed:** datasets p. 4 (4.1. Dataset Preparation), p. 6 (5. Experiments), p. 8 (5.4. Real Robot Experiment), p. 8 (5.3. Ablation Studies), p. 6 (5. Experiments), p. 4 (4.1. Dataset Preparation), metrics p. 8 (5.3. Ablation Studies), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (5. Experiments), p. 7 (5.3. Ablation Studies), baselines p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (Figure/Table caption), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.3. Ablation Studies), results p. 7 (5.2. Simulation Experiments), p. 8 (Figure/Table caption), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (5.1. Trajectory Visualisations).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

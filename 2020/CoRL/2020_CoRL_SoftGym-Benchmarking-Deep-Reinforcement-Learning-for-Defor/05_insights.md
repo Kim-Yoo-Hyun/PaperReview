@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 We benchmark a range of algorithms on these environments assuming different observation spaces for the policy, including full knowledge of the ground-truth state of the deformable object, a lowdimension state representation, and ...를 5.2 State Oracle Many robotic systems follow the paradigm of first performing state estimation and then using the estimated state as input to a policy.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 from a policy that always does nothing.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API and Python interface for creating new environments.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 4 SoftGym To advance research in reinforcement learning in complex environments with an inherently high dimensional state, we propose SoftGym. (p. 3, 1 Introduction).
+- **Paper-specific mechanism:** In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API and Python interface for creating new environments. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is 6.2 Benchmarking results on SoftGym-Medium A summary of the final normalized performance of all baselines on the evaluation set is shown in Figure 2. (p. 7, 6 Experiments); the relevant task/metric cue is 6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that we can more easily analyze the performance of each method (see Appendix ... (p. 6, 6 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We do not include the latent over-shooting in our experiment as it does not improve much over the one-step case. (p. 17, B.4 PlaNet).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Thus, this evaluation points to a clear need for new methods development for image-based robot manipulation of deformable objects..
-3. Compare against the body-reported baseline or a matched simpler baseline: While it outperforms the rest of the baselines due to the use of the segmentation map and a better action space for exploration, the result shows that there still exists a large ....
-4. Report the body metric and its denominator/aggregation: Table 3: Task specific planning horizon for CEM B.2 SAC and CURL-SAC We use the CURL-SAC implementation from the released code3. Both Q-value network and the policy network are MLPs with 2 ....
-5. Re-run the body-reported ablation/failure condition: from a policy that always does nothing..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 4 SoftGym To advance research in reinforcement learning in complex environments with an inherently high dimensional state, we propose SoftGym. (p. 3, 1 Introduction); preserve the objective/update rule: Given this information, we can use gradient free optimization to maximize the return. (p. 5, 1 Introduction).
+2. Use the paper-reported task/data/environment cue: In this section, we perform experiments with an aim to answer the following questions: • Are SoftGym tasks challenging for current reinforcement learning algorithms? • Is learning with state as ... (p. 6, 6 Experiments).
+3. Compare against the reported or matched baseline: While it outperforms the rest of the baselines due to the use of the segmentation map and a better action space for exploration, the result shows that there still exists ... (p. 7, 6 Experiments).
+4. Report the body metric with its denominator and aggregation: 6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that we can more easily analyze the performance of each method (see Appendix ... (p. 6, 6 Experiments).
+5. Re-run the reported ablation or stress/failure condition: 6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that we can more easily analyze the performance of each method (see Appendix ... (p. 6, 6 Experiments); if none is reported, design one around: We do not include the latent over-shooting in our experiment as it does not improve much over the one-step case. (p. 17, B.4 PlaNet).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction); the primary result is directionally consistent at p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 3 (1 Introduction), match the reported outcome at p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (6 Experiments), and measure the boundary at p. 17 (B.4 PlaNet), p. 7 (6 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, SoftGym, open-source mechanism이 While it outperforms the rest of the baselines due to the use of the segmentation map ... 대비 Table 3: Task specific planning horizon for CEM B.2 SAC and CURL-SAC We use the CURL-SAC implementation from ...을 개선하고, from a policy that always does nothing. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (4 SoftGym To advance research in reinforcement learning in complex environments with an inherently high dimensional state, we propose SoftGym.), does the paper-specific mechanism (In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API ...) retain the reported evaluation outcome (6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that ...) when tested against the paper's strongest explicit boundary (We do not include the latent over-shooting in our experiment as it does not improve much over the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API and Python interface for creating new environments. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** 6.2 Benchmarking results on SoftGym-Medium A summary of the final normalized performance of all baselines on the evaluation set is shown in Figure 2. (p. 7, 6 Experiments).
+- **Strongest explicit boundary:** We do not include the latent over-shooting in our experiment as it does not improve much over the one-step case. (p. 17, B.4 PlaNet).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

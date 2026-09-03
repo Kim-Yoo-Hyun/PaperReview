@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive PDF cue:** Grounding & Grasp Place Task OK-Robot [38] 11/32 4/16 3/16 0/10 DynaMem [37] 13/32 6/16 4/16 0/10 Dynam3D+OWLv2 [42, 57] 21/32 9/16 7/16 1/10 D3D-VLP ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate D3D-VLP on a diverse suite of five challenging benchmarks: 1-3) Vision-and-Language Navigation (VLN).
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** These tasks evaluate the ability of the agent to follow natural language instructions that ranges from stepby-step directions (R2R-CE) to coarse-grained destination descriptions (REVERIE-CE) and ...
-- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive PDF cue:** This task consists of sub-tasks including navigation, grounding and grasping the target, and
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on components and training data. Settings Training data R2R-CE Nav. SG3D Grounding OSR SR SPL
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Model Architecture Comparison. The end-to-end models directly map instructions to navigation actions, and modu- lar systems assemble multiple specialized components. Our D3D- VLP ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Framework of our D3D-VLP model. Given an instruction and streaming posed RGB-D images, a Dynam3D Encoder [57] builds and updates a Multi-level 3D ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The Unified Autoregressive Formulation of our D3D-VLP model. The core 3D Vision-Language-Planning model takes a comprehensive set of inputs: the natural language instruction, ...
+- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive body cue:** Grounding & Grasp Place Task OK-Robot [38] 11/32 4/16 3/16 0/10 DynaMem [37] 13/32 6/16 4/16 0/10 Dynam3D+OWLv2 [42, 57] 21/32 9/16 7/16 1/10 D3D-VLP ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate D3D-VLP on a diverse suite of five challenging benchmarks: 1-3) Vision-and-Language Navigation (VLN).
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** These tasks evaluate the ability of the agent to follow natural language instructions that ranges from stepby-step directions (R2R-CE) to coarse-grained destination descriptions (REVERIE-CE) and ...
+- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive body cue:** This task consists of sub-tasks including navigation, grounding and grasping the target, and
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on components and training data. Settings Training data R2R-CE Nav. SG3D Grounding OSR SR SPL
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Model Architecture Comparison. The end-to-end models directly map instructions to navigation actions, and modu- lar systems assemble multiple specialized components. Our D3D- VLP ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Framework of our D3D-VLP model. Given an instruction and streaming posed RGB-D images, a Dynam3D Encoder [57] builds and updates a Multi-level 3D ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The Unified Autoregressive Formulation of our D3D-VLP model. The core 3D Vision-Language-Planning model takes a comprehensive set of inputs: the natural language instruction, ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.5. Real-World Mobile Manipulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Grounding & Grasp Place Task OK-Robot [38] 11/32 4/16 3/16 0/10 DynaMem [37] 13/32 6/16 4/16 0/10 Dynam3D+OWLv2 [42, 57] 21/32 9/16 7/16 1/10 ... | p. 8 (4.5. Real-World Mobile Manipulation Experiments) |
 | 4.1. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | We evaluate D3D-VLP on a diverse suite of five challenging benchmarks: 1-3) Vision-and-Language Navigation (VLN). | p. 6 (4.1. Experimental Setup) |
@@ -38,27 +38,27 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive PDF cue:** Grounding & Grasp Place Task OK-Robot [38] 11/32 4/16 3/16 0/10 DynaMem [37] 13/32 6/16 4/16 0/10 Dynam3D+OWLv2 [42, 57] 21/32 9/16 7/16 1/10 D3D-VLP ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate D3D-VLP on a diverse suite of five challenging benchmarks: 1-3) Vision-and-Language Navigation (VLN).
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** These tasks evaluate the ability of the agent to follow natural language instructions that ranges from stepby-step directions (R2R-CE) to coarse-grained destination descriptions (REVERIE-CE) and ...
-- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive PDF cue:** This task consists of sub-tasks including navigation, grounding and grasping the target, and
+- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive body cue:** Grounding & Grasp Place Task OK-Robot [38] 11/32 4/16 3/16 0/10 DynaMem [37] 13/32 6/16 4/16 0/10 Dynam3D+OWLv2 [42, 57] 21/32 9/16 7/16 1/10 D3D-VLP ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate D3D-VLP on a diverse suite of five challenging benchmarks: 1-3) Vision-and-Language Navigation (VLN).
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** These tasks evaluate the ability of the agent to follow natural language instructions that ranges from stepby-step directions (R2R-CE) to coarse-grained destination descriptions (REVERIE-CE) and ...
+- **p. 8 / 4.5. Real-World Mobile Manipulation Experiments - extractive body cue:** This task consists of sub-tasks including navigation, grounding and grasping the target, and
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Model Architecture Comparison. The end-to-end models directly map instructions to navigation actions, and modu- lar systems assemble multiple specialized components. Our D3D- VLP ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Framework of our D3D-VLP model. Given an instruction and streaming posed RGB-D images, a Dynam3D Encoder [57] builds and updates a Multi-level 3D ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The Unified Autoregressive Formulation of our D3D-VLP model. The core 3D Vision-Language-Planning model takes a comprehensive set of inputs: the natural language instruction, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Composition of sample annotations in our constructed 3D CoT dataset. The fully annotated gold data is about 175K, and the partially annotated data ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Evaluation of embodied navigation benchmarks with monocular camera, ∗denotes zero-shot method. Methods System Type R2R-CE REVERIE-CE NavRAG-CE HM3D-OVON NE↓
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Evaluation of task-oriented sequential grounding and nav- igation task on SG3D-Nav [75] benchmark. Methods System Type Navigation Grounding s-SR t-SR
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study on components and training data. Settings Training data R2R-CE Nav. SG3D Grounding OSR SR SPL
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Evaluation of real-world mobile manipulation task. Methods Nav. Grounding & Grasp Place Task OK-Robot [38] 11/32
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Model Architecture Comparison. The end-to-end models directly map instructions to navigation actions, and modu- lar systems assemble multiple specialized components. Our D3D- VLP ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Framework of our D3D-VLP model. Given an instruction and streaming posed RGB-D images, a Dynam3D Encoder [57] builds and updates a Multi-level 3D ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The Unified Autoregressive Formulation of our D3D-VLP model. The core 3D Vision-Language-Planning model takes a comprehensive set of inputs: the natural language instruction, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Composition of sample annotations in our constructed 3D CoT dataset. The fully annotated gold data is about 175K, and the partially annotated data ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Evaluation of embodied navigation benchmarks with monocular camera, ∗denotes zero-shot method. Methods System Type R2R-CE REVERIE-CE NavRAG-CE HM3D-OVON NE↓
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Evaluation of task-oriented sequential grounding and nav- igation task on SG3D-Nav [75] benchmark. Methods System Type Navigation Grounding s-SR t-SR
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study on components and training data. Settings Training data R2R-CE Nav. SG3D Grounding OSR SR SPL
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Evaluation of real-world mobile manipulation task. Methods Nav. Grounding & Grasp Place Task OK-Robot [38] 11/32
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Grounding & Grasp Place Task OK-Robot [38] 11/32 4/16 3/16 0/10 DynaMem [37] 13/32 6/16 4/16 0/10 Dynam3D+OWLv2 [42, 57] 21/32 9/16 7/16 1/10 ... | embodiment, simulator version and control stack | p. 8 (4.5. Real-World Mobile Manipulation Experiments), p. 6 (4.1. Experimental Setup) |
 | Task/environment | We evaluate D3D-VLP on a diverse suite of five challenging benchmarks: 1-3) Vision-and-Language Navigation (VLN). | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
@@ -133,9 +133,9 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work could incorporate Reinforcement Learning to further enhance this framework.
+- **p. 8 / 5. Conclusion - extractive body cue:** Future work could incorporate Reinforcement Learning to further enhance this framework.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.5. Real-World Mobile Manipulation Experiments), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.5. Real-World Mobile Manipulation Experiments), metrics p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), results 본문 anchor 없음.
+- **Evidence anchors reviewed:** datasets p. 8 (4.5. Real-World Mobile Manipulation Experiments), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.5. Real-World Mobile Manipulation Experiments), metrics p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), results 본문 anchor 없음.
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

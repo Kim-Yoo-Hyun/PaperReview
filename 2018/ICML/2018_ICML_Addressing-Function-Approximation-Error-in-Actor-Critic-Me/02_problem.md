@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.09477; PDF retrieval source: https://arxiv.org/pdf/1802.09477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.09477; PDF retrieval source: https://arxiv.org/pdf/1802.09477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Backg
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Our proposed method addresses these issues, and greatly outperforms the current state of the art. | robot/environment의 sequential decision process | body wording is the source claim |
-| Observation / input | At each discrete time step t, with a given state s ∈S, the agent selects actions a ∈A with respect to its ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | At each discrete time step t, with a given state s ∈S, the agent selects actions a ∈A with respect to its ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | discrete, time, step, given, state, agent, selects, actions, respect, policy | policy/value state와 action-selection variable | notation and tensor shape require body check |
 | Output / action | fitting, value, small, area, around, target, action, would | action policy와 induced trajectory | exact unit/frame/decoder require body check |
 | Target outcome | task return, success and safe execution | expected return, task success, stability와 sample efficiency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: discrete, time, step, given, state, agent, selects, actions, respect, policy | p. 2 (3. Background), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization) |
 | Decision / output variable | a_t sampled or selected by πθ; body terms: Finally, introduce, novel, regularization, strategy, where, SARSA-style, update | p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (5.2. Target Networks and Delayed Policy Updates) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Backg
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.2. Target Networks and Delayed Policy Updates) |
 | Success / guarantee | task return, success and safe execution | p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6. Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Backg
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization)): Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.
+PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization)): Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.
 
 - **p. 1 / 1. Introduction - extractive body cue:** Second, to address the coupling of value and policy, we propose delaying policy updates until the value estimate has converged.
 - **p. 5 / 5.2. Target Networks and Delayed Policy Updates - extractive body cue:** We propose delaying policy updates until the value error is as small as possible.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (
 
 ## Position in the Robotics Loop
 
-rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (3. Background), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (3. Background), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Background), p. 3 (3. Background), interface p. 2 (3. Background), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization), p. 1 (1. Introduction), objective p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Background), p. 3 (3. Background), interface p. 2 (3. Background), p. 6 (5.3. Target Policy Smoothing Regularization), p. 6 (5.3. Target Policy Smoothing Regularization), p. 1 (1. Introduction), objective p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** In reinforcement learning problems with discrete action spaces, the issue of value overestimation as a result of function approximation errors is well-studied. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance. (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

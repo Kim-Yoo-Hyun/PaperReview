@@ -1,8 +1,10 @@
 # Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2303.18240.
-> PDF retrieval source: https://arxiv.org/abs/2303.18240. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2303.18240.
+> PDF retrieval source: https://arxiv.org/abs/2303.18240. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / arXiv
 - Authors: not duplicated here when not verified in the registry source
@@ -13,11 +15,11 @@
 - Full-text retrieval: https://arxiv.org/abs/2303.18240
 - Code/Project: https://eai-vc.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...를 문제로 두고, Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied AI (EAI) as an umbrella t ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...를 문제로 두고, The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 
 ## Problem and Motivation
 
@@ -27,12 +29,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 - **p. 1 / Abstract - extractive body cue:** To study the effect of pre-training data size and diversity, we combine over 4,000 hours of egocentric videos from 7 different sources (over 4.3M images) ...
 - **p. 1 / Abstract - extractive body cue:** Contrary to inferences from prior work, we find that scaling dataset size and diversity does not improve performance universally (but does so on average).
 - **p. 3 / 1 Introduction - extractive body cue:** Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls ...
-- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied AI ...
+- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed
 
 ## Core Idea
 
-- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied AI ...
 - **p. 1 / 1 Introduction - extractive body cue:** The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.
+- **p. 1 / 1 Introduction - extractive body cue:** In this work, we ask the same question that Fukushima [1, 2] asked nearly 50 years ago - how do we design an artificial visual ...
 - **p. 2 / 1 Introduction - extractive body cue:** The exhaustiveness of this study enables us to draw conclusions with unprecedented scope and confidence.
 - **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** We present an evaluation of object navigation (ObjectNav) using the HM3D-SEM dataset [61].
 - **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** The dataset was collected using Habitat-Web [61, 71] and Amazon Mechanical Turk, and consists of 77k demonstrations for 80 scenes from the HM3D-SEM dataset [69].
@@ -51,8 +53,8 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied AI ...
 - **p. 1 / 1 Introduction - extractive body cue:** The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.
+- **p. 1 / 1 Introduction - extractive body cue:** In this work, we ask the same question that Fukushima [1, 2] asked nearly 50 years ago - how do we design an artificial visual ...
 - **p. 2 / 1 Introduction - extractive body cue:** The exhaustiveness of this study enables us to draw conclusions with unprecedented scope and confidence.
 - **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** We present an evaluation of object navigation (ObjectNav) using the HM3D-SEM dataset [61].
 - **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** The dataset was collected using Habitat-Web [61, 71] and Amazon Mechanical Turk, and consists of 77k demonstrations for 80 scenes from the HM3D-SEM dataset [69].
@@ -84,4 +86,13 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...를 문제로 두고, Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied AI (EAI) as an umbrella t ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...를 문제로 두고, The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning ... (p. 3, 1 Introduction).
+- **Actual contribution:** The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement. (p. 1, 1 Introduction).
+- **Evaluation boundary:** Figure 4: Comparison of VC-1 with existing PVRs. VC-1 matches or exceeds existing PVRs on all benchmarks except R3M on AD, MW, and DMC, indicating an opportunity for model adaptation. ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** In aggregate, these results suggests that MAE adaptation can be explored as a powerful alternative in few-shot domains or where E2E fine-tuning fails. (p. 9, Results).

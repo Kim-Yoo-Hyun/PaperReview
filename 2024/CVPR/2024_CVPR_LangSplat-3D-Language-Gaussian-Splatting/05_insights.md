@@ -1,53 +1,73 @@
 # Insights — LangSplat: 3D Language Gaussian Splatting
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** Modeling a 3D language field to support open-ended language queries in 3D has gained increasing attention recently.
-- **Problem cue:** Unlike existing methods that ground CLIP language embeddings in a NeRF model, LangSplat advances the field by utilizing a collection of 3D Gaussians, each encoding language features distilled ...
-- **Claim/result cue:** Humans live in a 3D world and commonly use natural language to interact with a 3D scene.
+- **p. 2 / 1. Introduction - extractive body cue:** A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined ...
+- **p. 2 / 1. Introduction - extractive body cue:** We summarize the contributions of this paper as follows: • We propose the LangSplat, which is the first 3D Gaussian Splatting-based method for 3D language ...
+- **p. 4 / 3.3. 3D Gaussian Splatting for Language Fields - extractive body cue:** To address this issue, we present the first 3D Gaussian Splatting-based method for 3D language field modeling.
+- **p. 4 / 3.2. Learning Hierarchical Semantics with SAM - extractive body cue:** In this paper, we propose leveraging SAM to obtain precise object masks, which are then used to acquire pixel-aligned features.
+- **p. 5 / 3.3. 3D Gaussian Splatting for Language Fields - extractive body cue:** To reduce memory cost and improve efficiency, we introduce a scenewise language autoencoder.
+- **p. 5 / 3.3. 3D Gaussian Splatting for Language Fields - extractive body cue:** (4) to render the language embeddings from 3D to 2D, and then we use the trained scene-specific decoder Ψ to recover the CLIP image embeddings ...
+- **p. 5 / 3.3. 3D Gaussian Splatting for Language Fields - extractive body cue:** Specifically, we use the collections of CLIP features of SAM segmented masks {Ll t/l ∈{s, p, w}, 1 ≤t ≤T} to train a lightweight autoencoder.
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. 3D Gaussian Splatting for Language Fields), p. 4 (3.2. Learning Hierarchical Semantics with SAM), p. 5 (3.3. 3D Gaussian Splatting for Language Fields), p. 5 (3.3. 3D Gaussian Splatting for Language Fields)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** However, these methods [18, 24] suffer from significant limitations in both speed and accuracy, severely constraining their practical applicability.
+- **p. 2 / 1. Introduction - extractive body cue:** These inaccurate CLIP features lead to the trained 3D language field lacking clear boundaries and containing a significant amount of noise.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are ...
+- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** As LERF suffers from the patchy issue and learns over-smoothed features, it fails to find accurate object boundaries.
+- **p. 6 / 4.2. Results on the LERF dataset - extractive body cue:** We see that the LERF learned features fail to generate clear boundaries between objects while our method gives precise object shapes solely using CLIP features.
+- **Boundary to test:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are sent to the CLIP image encoder to ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined by SAM to address the point ambiguity ... | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | We observe that our method achieves an overall accuracy of 84.3%, significantly outperforming LERF. | p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset) |
+| Failure/limitation | Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are sent to the CLIP image encoder to ... | p. 4 (Figure/Table caption), p. 8 (4.3. Results on the 3D-OVS dataset) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `Gaussian Splatting, Vision-Language, grounding` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 We take a set of calibrated images {It/t = 1, 2, ...T} as input and train a 3D language field Φ with these images.를 A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined by SAM to address the point ambiguity ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are sent to the CLIP image encoder to ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined by SAM to address the point ambiguity ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Language-Grounded 3D Scene Representations`; tags: `Gaussian Splatting, Vision-Language, grounding`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Humans live in a 3D world and commonly use natural language to interact with a 3D scene.
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, Vision-Language, grounding`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are sent to the CLIP image encoder to ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: LERF / accuracy, mIoU, IoU
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: The LERF dataset [18] is captured using the iPhone App Polycam, which consists of complex in-the-wild scenes..
+3. Compare against the body-reported baseline or a matched simpler baseline: We observe that our method achieves an overall accuracy of 84.3%, significantly outperforming LERF..
+4. Report the body metric and its denominator/aggregation: We report the average IoU scores (%). iterations..
+5. Re-run the body-reported ablation/failure condition: Table 4. Ablations result on the bench scene of the 3D-OVS dataset. The image resolution is 1440 × 1080. our baseline equals LERF, which has a speed of 30.93 sec- onds per ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (3.3. 3D Gaussian Splatting for Language Fields), p. 4 (3.2. Learning Hierarchical Semantics with SAM), p. 5 (3.3. 3D Gaussian Splatting for Language Fields); the primary result is directionally consistent at p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 scenespecific, autoencoder, further mechanism이 We observe that our method achieves an overall accuracy of 84.3%, significantly outperforming LERF. 대비 We report the average IoU scores (%). iterations.을 개선하고, Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

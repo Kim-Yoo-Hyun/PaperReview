@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/274_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/274_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** 2) ScanNet [10] is a real-world dataset captured with challenging image quality.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use 8 ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** Chamfer-L1↓F-score ↑ COLMAP [41] 0.141 0.537 UNISURF [33] 0.359 0.267 NeuS [51] 0.194 0.291 VolSDF [58] 0.267 0.346 Manhattan-SDF [16] 0.070 0.602 MonoSDF (Grid) [62] ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** GSrec 11 Table 1: The quantitative results of the scene reconstruction on 8 Replica scenes.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Notably, the average training time of our approach on this dataset is about 40 minutes, which is similar to SuGaR.
-- **p. 14 / 4 Experiments - extractive PDF cue:** This shows the potential ability of 3DGS to achieve high-quality surface reconstruction for real-world capture.
-- **p. 12 / 4 Experiments - extractive PDF cue:** In terms of storage, thanks to the Scaffold-GS baseline, our framework only takes about 45MB for each scene while the size of the SuGaR model ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** For quantitative evaluation of surface quality, we measure Chamfer Distance, Normal Consistency Score and Fscore with a threshold of 5cm on Replica.
+- **p. 10 / 4 Experiments - extractive body cue:** 2) ScanNet [10] is a real-world dataset captured with challenging image quality.
+- **p. 10 / 4 Experiments - extractive body cue:** We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use 8 ...
+- **p. 14 / 4 Experiments - extractive body cue:** Chamfer-L1↓F-score ↑ COLMAP [41] 0.141 0.537 UNISURF [33] 0.359 0.267 NeuS [51] 0.194 0.291 VolSDF [58] 0.267 0.346 Manhattan-SDF [16] 0.070 0.602 MonoSDF (Grid) [62] ...
+- **p. 11 / 4 Experiments - extractive body cue:** GSrec 11 Table 1: The quantitative results of the scene reconstruction on 8 Replica scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** Notably, the average training time of our approach on this dataset is about 40 minutes, which is similar to SuGaR.
+- **p. 14 / 4 Experiments - extractive body cue:** This shows the potential ability of 3DGS to achieve high-quality surface reconstruction for real-world capture.
+- **p. 12 / 4 Experiments - extractive body cue:** In terms of storage, thanks to the Scaffold-GS baseline, our framework only takes about 45MB for each scene while the size of the SuGaR model ...
+- **p. 10 / 4 Experiments - extractive body cue:** For quantitative evaluation of surface quality, we measure Chamfer Distance, Normal Consistency Score and Fscore with a threshold of 5cm on Replica.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | While keeping the MLS term with the gradient term in the joint loss (w/o eikonal term), the F-score can be significantly improved thanks to ... | p. 13 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3 (b), although L = 1 has achieved good results, the F-score keeps improving as L gets increased. | p. 13 (4 Experiments) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** 2) ScanNet [10] is a real-world dataset captured with challenging image quality.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use 8 ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** Chamfer-L1↓F-score ↑ COLMAP [41] 0.141 0.537 UNISURF [33] 0.359 0.267 NeuS [51] 0.194 0.291 VolSDF [58] 0.267 0.346 Manhattan-SDF [16] 0.070 0.602 MonoSDF (Grid) [62] ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** GSrec 11 Table 1: The quantitative results of the scene reconstruction on 8 Replica scenes.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Notably, the average training time of our approach on this dataset is about 40 minutes, which is similar to SuGaR.
-- **p. 14 / 4 Experiments - extractive PDF cue:** This shows the potential ability of 3DGS to achieve high-quality surface reconstruction for real-world capture.
-- **p. 12 / 4 Experiments - extractive PDF cue:** In terms of storage, thanks to the Scaffold-GS baseline, our framework only takes about 45MB for each scene while the size of the SuGaR model ...
+- **p. 10 / 4 Experiments - extractive body cue:** 2) ScanNet [10] is a real-world dataset captured with challenging image quality.
+- **p. 10 / 4 Experiments - extractive body cue:** We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use 8 ...
+- **p. 14 / 4 Experiments - extractive body cue:** Chamfer-L1↓F-score ↑ COLMAP [41] 0.141 0.537 UNISURF [33] 0.359 0.267 NeuS [51] 0.194 0.291 VolSDF [58] 0.267 0.346 Manhattan-SDF [16] 0.070 0.602 MonoSDF (Grid) [62] ...
+- **p. 11 / 4 Experiments - extractive body cue:** GSrec 11 Table 1: The quantitative results of the scene reconstruction on 8 Replica scenes.
+- **p. 12 / 4 Experiments - extractive body cue:** Notably, the average training time of our approach on this dataset is about 40 minutes, which is similar to SuGaR.
+- **p. 14 / 4 Experiments - extractive body cue:** This shows the potential ability of 3DGS to achieve high-quality surface reconstruction for real-world capture.
+- **p. 12 / 4 Experiments - extractive body cue:** In terms of storage, thanks to the Scaffold-GS baseline, our framework only takes about 45MB for each scene while the size of the SuGaR model ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of GSrec. GSrec first leverages the monocular geometry cue as supervision to adjust the position and orientation of each 3D Gaussian primitive. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 2: Joint optimization of 3DGS and neural implicit representation. We propose a novel strategy to further align the Gaussians with the surface. We jointly ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 3: Qualitative results on Replica [44]. The surface produced by our approach achieves better quality compared with SuGaR [15] owing to the structural hints. ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 1: The quantitative results of the scene reconstruction on 8 Replica scenes. We compare our method against the SoTA surface reconstruction method for 3D ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation study on Replica. We compared the key components with the variants of [25] including the guidance and the joint optimization.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 4: Reconstructed surface by ablating proposed components on
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation study about the joint MLS optimization and the MLS computation. We provide an in-depth analysis by verifying the effectiveness of the joint ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 4: Scene-level 3D Reconstruction on ScanNet. (a) The quantitative re- sults of several neural implicit surface reconstruction methods and the 3DGS-based approaches [15] (b) ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of GSrec. GSrec first leverages the monocular geometry cue as supervision to adjust the position and orientation of each 3D Gaussian primitive. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 2: Joint optimization of 3DGS and neural implicit representation. We propose a novel strategy to further align the Gaussians with the surface. We jointly ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 3: Qualitative results on Replica [44]. The surface produced by our approach achieves better quality compared with SuGaR [15] owing to the structural hints. ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: The quantitative results of the scene reconstruction on 8 Replica scenes. We compare our method against the SoTA surface reconstruction method for 3D ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 2: Ablation study on Replica. We compared the key components with the variants of [25] including the guidance and the joint optimization.
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 4: Reconstructed surface by ablating proposed components on
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 3: Ablation study about the joint MLS optimization and the MLS computation. We provide an in-depth analysis by verifying the effectiveness of the joint ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 4: Scene-level 3D Reconstruction on ScanNet. (a) The quantitative re- sults of several neural implicit surface reconstruction methods and the 3DGS-based approaches [15] (b) ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 2) ScanNet [10] is a real-world dataset captured with challenging image quality. | embodiment, simulator version and control stack | p. 10 (4 Experiments), p. 10 (4 Experiments) |
 | Task/environment | We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use ... | reset, timeout, object/scene variation | p. 10 (4 Experiments), p. 14 (4 Experiments) |
@@ -122,11 +122,11 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p.
 | Primary metric/result | 3 (b), although L = 1 has achieved good results, the F-score keeps improving as L gets increased. | numeric claim only at cited anchor | p. 13 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 10 / 4 Experiments - extractive PDF cue:** Our experiments were run on a 24GB NVIDIA RTX 3090 GPU.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use 8 ...
-- **p. 10 / 4 Experiments - extractive PDF cue:** Following the setting [16,62], 4 scenes are selected from ScanNet for experiments and compared ours with both the
-- **p. 12 / 4 Experiments - extractive PDF cue:** Method Geometry Guidance MLS design Reconstruction metric Normal Depth IMLS RIMLS Normal-C ↑ F-score ↑ (a) Scaffold-GS [25]+D ✗ ✓ ✗ ✗ 66.53±2.56 55.33±6.29 (b) ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** 4 (a), we find that our approach is comparable with ManhattanSDF [16] and the MonoSDF [62] in which multi-resolution grid embedding [32] is utilized, while ...
+- **p. 10 / 4 Experiments - extractive body cue:** Our experiments were run on a 24GB NVIDIA RTX 3090 GPU.
+- **p. 10 / 4 Experiments - extractive body cue:** We conduct our experiments on 1) Replica [44] is a synthesized dataset with accurate camera poses and ground truth mesh for evaluation. we use 8 ...
+- **p. 10 / 4 Experiments - extractive body cue:** Following the setting [16,62], 4 scenes are selected from ScanNet for experiments and compared ours with both the
+- **p. 12 / 4 Experiments - extractive body cue:** Method Geometry Guidance MLS design Reconstruction metric Normal Depth IMLS RIMLS Normal-C ↑ F-score ↑ (a) Scaffold-GS [25]+D ✗ ✓ ✗ ✗ 66.53±2.56 55.33±6.29 (b) ...
+- **p. 14 / 4 Experiments - extractive body cue:** 4 (a), we find that our approach is comparable with ManhattanSDF [16] and the MonoSDF [62] in which multi-resolution grid embedding [32] is utilized, while ...
 
 ## Generalization and Failure Cases
 
@@ -158,11 +158,11 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 2: Joint optimization of 3DGS and neural implicit representation. We propose a novel strategy to further align the Gaussians with the surface. We jointly ...
-- **p. 14 / 4 Experiments - extractive PDF cue:** Although the MonoSDF (MLP) adopts pure MLP structure which shows robustness to the camera noise, the training time of such a variant gets much longer ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** 2, the inaccurate normal estimated by the density gradient will lead to a degraded iso-surface estimation compared with Scaffold-GS+D and ScaffoldGS+N.
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 2: Joint optimization of 3DGS and neural implicit representation. We propose a novel strategy to further align the Gaussians with the surface. We jointly ...
+- **p. 14 / 4 Experiments - extractive body cue:** Although the MonoSDF (MLP) adopts pure MLP structure which shows robustness to the camera noise, the training time of such a variant gets much longer ...
+- **p. 12 / 4 Experiments - extractive body cue:** 2, the inaccurate normal estimated by the density gradient will lead to a degraded iso-surface estimation compared with Scaffold-GS+D and ScaffoldGS+N.
 
-- **PDF anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 14 (4 Experiments), metrics p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), baselines p. 14 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 14 (4 Experiments), metrics p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), baselines p. 14 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

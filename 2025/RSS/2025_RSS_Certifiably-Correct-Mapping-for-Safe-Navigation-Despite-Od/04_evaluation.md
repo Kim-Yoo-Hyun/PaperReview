@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p007.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p007.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p007.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p007.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 1. INTRODUCTION | EMPIRICAL / REAL-ROBOT OR HARDWARE | Although recent advances have achieved significant accuracy improvements (11, 12, 13, 14, 15}, formal error analysis is often lacking. | p. 1 (1. INTRODUCTION) |
 | 1. INTRODUCTION | EMPIRICAL / REAL-ROBOT OR HARDWARE | The primary goals of these advancements have been to enhance localization and mapping accuracy, improve robustness under diverse environmental conditions, and develop algorithms with ... | p. 2 (1. INTRODUCTION) |
@@ -57,7 +57,7 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-world experiments with a robotic rover show that, while baseline methods result in collisions with previously mapped obstacles, the proposed framework enables the rover ... | embodiment, simulator version and control stack | p. 1 (Abstract), p. 2 (1. INTRODUCTION) |
 | Task/environment | «+ Finally, we demonstrate the approach in a real-world experiment on a robotic rover. | reset, timeout, object/scene variation | p. 2 (1. INTRODUCTION), p. 1 (Abstract) |
@@ -149,7 +149,16 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** Unlike baseline methods which result in collisions, our approach prevents crashes by deflating the safe regions appropriately.
 - **p. 12 / Figure/Table caption - extractive body cue:** Fig. 6. Rover Experimental Results. (,b) shows snapshots of the reconstructed obstacle map and de estimated rover pose with (a) the baseline method and (©) ...
 
-- **PDF anchors reviewed:** datasets p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 1 (Abstract), p. 2 (1. INTRODUCTION), metrics p. 1 (1. INTRODUCTION), p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 9 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 12 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 1 (Abstract), p. 2 (1. INTRODUCTION), metrics p. 1 (1. INTRODUCTION), p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 9 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 12 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Localization and Mapping (SLAM) systems now report translation error rates below 1% (19, 20], enabling more reliable navigation in real-world scenarios. (p. 2, experimental results).
+- **Metric evidence:** Localization and Mapping (SLAM) systems now report translation error rates below 1% (19, 20], enabling more reliable navigation in real-world scenarios. (p. 2, experimental results).
+- **Baseline/ablation evidence:** Perception methods have seen significant advancements lover the past few decades, driven by improvements in algorithms, sensors, and computational capabilities (17, 18]. (p. 2, experimental results).
+- **Failure/negative evidence:** In the baseline methods, the violation rates are between 6 and 60%, while in the certified methods, the violation rates are between 03%, Note, we cannot expect the certified methods ... (p. 9, Results).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/dair/publication/sonic2026/; PDF retrieval source: https://research.nvidia.com/labs/dair/publication/sonic2026/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/dair/publication/sonic2026/; PDF retrieval source: https://research.nvidia.com/labs/dair/publication/sonic2026/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical ... | p. 19 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 2: Scaling and benchmarking of SONIC for universal motion tracking. (A to C) Effect of scaling data size, model size, and compute on ... | p. 4 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 14,513 701 253 Dance 9,689 504 485 Injured 9,386 1,167 528 Action / Tool use 9,920 228 322 Others (10+ main cat.) 63,583 429 ... | embodiment, simulator version and control stack | p. 13 (3.1. Humanoid Motion Dataset), p. 3 (2.1. Motion Tracking) |
 | Task/environment | From our motion-capture dataset, we constructed two held-out splits. | reset, timeout, object/scene variation | p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 - **p. 5 / 2.1. Motion Tracking - extractive body cue:** Visualizations of out-of-distribution test motions, including successful and failed tracking cases, are provided in the Supplementary Materials (Fig.
 - **p. 3 / 2.1. Motion Tracking - extractive body cue:** The second, testrepetition (9,395 clips, 12 hours), evaluated robustness to new performances and repetitions of known motion types.
 
-- **PDF anchors reviewed:** datasets p. 13 (3.1. Humanoid Motion Dataset), p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 3 (2.1. Motion Tracking), p. 12 (2.6. Discussion), p. 13 (3.1. Humanoid Motion Dataset), metrics p. 4 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 11 (2.5. Foundation-Model-Driven Loco-manipulation), p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), baselines p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 3 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 19 (3.7. Statistical Analysis), results p. 19 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 9 (2.5. Foundation-Model-Driven Loco-manipulation), p. 11 (2.5. Foundation-Model-Driven Loco-manipulation).
+- **Evidence anchors reviewed:** datasets p. 13 (3.1. Humanoid Motion Dataset), p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 3 (2.1. Motion Tracking), p. 12 (2.6. Discussion), p. 13 (3.1. Humanoid Motion Dataset), metrics p. 4 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 11 (2.5. Foundation-Model-Driven Loco-manipulation), p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), baselines p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 3 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 19 (3.7. Statistical Analysis), results p. 19 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 9 (2.5. Foundation-Model-Driven Loco-manipulation), p. 11 (2.5. Foundation-Model-Driven Loco-manipulation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (39 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical test applied). (A) FSQ outperforms VQ-VAE ... (p. 19, Figure/Table caption).
+- **Metric evidence:** SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 4m 10m 22m 100m Frames (millions) 98.6% 98.8% 99.0% 99.2% 99.4% 99.6% 99.8% Success Rate 24.4mm 24.2mm 23.9mm 23.8mm 22.7mm 22.6mm ... (p. 4, 2.1. Motion Tracking).
+- **Baseline/ablation evidence:** For baseline comparisons, we additionally evaluated on PHUMA [43], a publicly available dataset of 3 (p. 3, 2.1. Motion Tracking).
+- **Failure/negative evidence:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).

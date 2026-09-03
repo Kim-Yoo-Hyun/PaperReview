@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2507.01125. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2507.01125. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM F
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The robot's motion is then modeled as a planar single integrator with a heading angle in the yaw direction. | p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We consider a robotic exploration problem in which a robot has an onboard, forward-facing RGB-D camera with reliable state estimation. | p. 3 (III. PROBLEM FORMULATION) |
@@ -115,8 +115,17 @@ PDF body method statement (p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM F
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), objective p. 3 (III. PROBLEM FORMULATION), temporal p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. VISTA), p. 2 (I. INTRODUCTION), p. 3 (IV. VISTA).
+- **Evidence anchors reviewed:** method p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), objective p. 3 (III. PROBLEM FORMULATION), temporal p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (IV. VISTA), p. 2 (I. INTRODUCTION), p. 3 (IV. VISTA).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** the robot's environment online using a Gaussian Splatting (3DGS) representation [5].1 To enable open-vocabulary, taskrelevant robot exploration, VISTA distills semantic features from vision-language models, e.g., CLIP [1], into the 3DGS ... (p. 2, I. INTRODUCTION).
+- **Objective/update evidence:** As the map updates, we assume that the motion of the robot is restricted in the z, ϕ, and θ axes. (p. 3, III. PROBLEM FORMULATION).
+- **Temporal/runtime evidence:** The offboard computer is equipped with a 4.2 GHz AMD Ryzen 7 7800X3D CPU and an NVIDIA GeForce RTX 4090 (24GB memory). (p. 6, V. RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

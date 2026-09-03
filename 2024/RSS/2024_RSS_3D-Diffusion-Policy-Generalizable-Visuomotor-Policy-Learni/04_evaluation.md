@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p067.html; PDF retrieval source: https://arxiv.org/pdf/2403.03954.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p067.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p067.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -168,3 +168,12 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (IV. SIMULATIO
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 2: Overview of 3D Diffusion Policy (DP3). Above: In the training phase, DP3 simultaneously trains its perception module and decision-making process in an end-to-end manner using expert demonstrations. During ... (p. 4, Figure/Table caption).
+- **Metric evidence:** We observe that DP3 achieves a success rate exceeding 90% in TABLE III: Task suite of DP3, including Adroit [49], BiDexHands [8], DexArt [5], DexDeform [31], DexMV [47], HORA [44], ... (p. 5, IV. SIMULATION EXPERIMENTS).
+- **Baseline/ablation evidence:** Additionally, we incorporate comparisons with IBC [11], BCRNN [35], and their 3D variations. (p. 5, IV. SIMULATION EXPERIMENTS).
+- **Failure/negative evidence:** DP3 learns the generalizable skill in 3D space; Diffusion Policy and IBC [11] only succeed in partial space; BC-RNN [35] fails to learn such a simple skill with limited data. (p. 4, III. METHOD).

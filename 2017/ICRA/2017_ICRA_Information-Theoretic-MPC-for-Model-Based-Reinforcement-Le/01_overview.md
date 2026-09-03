@@ -1,8 +1,10 @@
 # Information Theoretic MPC for Model-Based Reinforcement Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ieeexplore.ieee.org/document/7989202/.
-> PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ieeexplore.ieee.org/document/7989202/.
+> PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / ICRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://ieeexplore.ieee.org/document/7989202/
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 ## Why Read It
 
 Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 Despite all of the progress on both model-based and model-free RL methods, generalization remains a primary challenge.를 문제로 두고, This is a significant step forward because it enables a purely data-driven approach to model learning within the MPPI framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, in prior work, MPPI could only be applied to systems with control affine dynamics. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** This limits the method's ability to discover novel optimal control behaviors. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS).
+- **Explicit failure boundary:** Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).

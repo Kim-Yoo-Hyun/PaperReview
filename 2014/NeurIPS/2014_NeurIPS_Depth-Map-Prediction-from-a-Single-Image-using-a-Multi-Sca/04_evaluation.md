@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1406.2283; PDF retrieval source: https://arxiv.org/pdf/1406.2283. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1406.2283; PDF retrieval source: https://arxiv.org/pdf/1406.2283. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data for ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** 4.1 NYU Depth The NYU Depth dataset [18] is composed of 464 indoor scenes, taken as video sequences using a Microsoft Kinect camera.
-- **p. 6 / 4 Experiments - extractive PDF cue:** The depth for this dataset is sampled at irregularly spaced points, captured at different times using a rotating LIDAR scanner.
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.3 Baselines and Comparisons We compare our method against Make3D trained on the same datasets, as well as the published results of other current methods ...
-- **p. 7 / 5 Results - extractive PDF cue:** 5.2 KITTI We next examine results on the KITTI driving dataset.
-- **p. 7 / 5 Results - extractive PDF cue:** Here, the Make3D baseline is well-suited to the dataset, being composed of horizontally aligned images, and achieves relatively good results.
-- **p. 5 / 4 Experiments - extractive PDF cue:** These ratios were found by trial-and-error on a validation set (folded back into the training set for our final evaluations), and the global scale of ...
-- **p. 7 / 5 Results - extractive PDF cue:** 3 shows Make3D performing much better on this data, as expected, while using the scale-invariant error as a loss seems to have little effect in ...
+- **p. 5 / 4 Experiments - extractive body cue:** We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data for ...
+- **p. 5 / 4 Experiments - extractive body cue:** 4.1 NYU Depth The NYU Depth dataset [18] is composed of 464 indoor scenes, taken as video sequences using a Microsoft Kinect camera.
+- **p. 6 / 4 Experiments - extractive body cue:** The depth for this dataset is sampled at irregularly spaced points, captured at different times using a rotating LIDAR scanner.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.3 Baselines and Comparisons We compare our method against Make3D trained on the same datasets, as well as the published results of other current methods ...
+- **p. 7 / 5 Results - extractive body cue:** 5.2 KITTI We next examine results on the KITTI driving dataset.
+- **p. 7 / 5 Results - extractive body cue:** Here, the Make3D baseline is well-suited to the dataset, being composed of horizontally aligned images, and achieves relatively good results.
+- **p. 5 / 4 Experiments - extractive body cue:** These ratios were found by trial-and-error on a validation set (folded back into the training set for our final evaluations), and the global scale of ...
+- **p. 7 / 5 Results - extractive body cue:** 3 shows Make3D performing much better on this data, as expected, while using the scale-invariant error as a loss seems to have little effect in ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 3: Qualitative comparison of Make3D, our method trained with l2 loss (λ = 0), and our method trained with both l2 and scale-invariant ... | p. 7 (Figure/Table caption) |
 | 5 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our system achieves the best performance on all metrics, obtaining an average 35% relative gain compared to the runner-up. | p. 6 (5 Results) |
@@ -39,27 +39,27 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data for ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** 4.1 NYU Depth The NYU Depth dataset [18] is composed of 464 indoor scenes, taken as video sequences using a Microsoft Kinect camera.
-- **p. 6 / 4 Experiments - extractive PDF cue:** The depth for this dataset is sampled at irregularly spaced points, captured at different times using a rotating LIDAR scanner.
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.3 Baselines and Comparisons We compare our method against Make3D trained on the same datasets, as well as the published results of other current methods ...
-- **p. 7 / 5 Results - extractive PDF cue:** 5.2 KITTI We next examine results on the KITTI driving dataset.
-- **p. 7 / 5 Results - extractive PDF cue:** Here, the Make3D baseline is well-suited to the dataset, being composed of horizontally aligned images, and achieves relatively good results.
+- **p. 5 / 4 Experiments - extractive body cue:** We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data for ...
+- **p. 5 / 4 Experiments - extractive body cue:** 4.1 NYU Depth The NYU Depth dataset [18] is composed of 464 indoor scenes, taken as video sequences using a Microsoft Kinect camera.
+- **p. 6 / 4 Experiments - extractive body cue:** The depth for this dataset is sampled at irregularly spaced points, captured at different times using a rotating LIDAR scanner.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.3 Baselines and Comparisons We compare our method against Make3D trained on the same datasets, as well as the published results of other current methods ...
+- **p. 7 / 5 Results - extractive body cue:** 5.2 KITTI We next examine results on the KITTI driving dataset.
+- **p. 7 / 5 Results - extractive body cue:** Here, the Make3D baseline is well-suited to the dataset, being composed of horizontally aligned images, and achieves relatively good results.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Model architecture. as vanishing points, object locations, and room alignment. A local view (as is commonly used for stereo matching) is insufficient to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Weight vectors from layer Coarse 7 (coarse output), for (a) KITTI and (b) NYUDepth. Red is positive (farther) and blue is negative (closer); ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison on the NYUDepth dataset input m3d coarse L2 L2 scale-inv ground truth input
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative comparison of Make3D, our method trained with l2 loss (λ = 0), and our method trained with both l2 and scale-invariant loss ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Comparison on the KITTI dataset. 6
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Example predictions from our algorithm. NYUDepth on left, KITTI on right. For each image, we show (a) input, (b) output of coarse network, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Model architecture. as vanishing points, object locations, and room alignment. A local view (as is commonly used for stereo matching) is insufficient to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Weight vectors from layer Coarse 7 (coarse output), for (a) KITTI and (b) NYUDepth. Red is positive (farther) and blue is negative (closer); ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Comparison on the NYUDepth dataset input m3d coarse L2 L2 scale-inv ground truth input
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative comparison of Make3D, our method trained with l2 loss (λ = 0), and our method trained with both l2 and scale-invariant loss ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Comparison on the KITTI dataset. 6
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Example predictions from our algorithm. NYUDepth on left, KITTI on right. For each image, we show (a) input, (b) output of coarse network, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data ... | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 5 (4 Experiments) |
 | Task/environment | 4.1 NYU Depth The NYU Depth dataset [18] is composed of 464 indoor scenes, taken as video sequences using a Microsoft Kinect camera. | reset, timeout, object/scene variation | p. 5 (4 Experiments), p. 6 (4 Experiments) |
@@ -115,8 +115,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 | Primary metric/result | Our system achieves the best performance on all metrics, obtaining an average 35% relative gain compared to the runner-up. | numeric claim only at cited anchor | p. 6 (5 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4 Experiments - extractive PDF cue:** We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data for ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** We use 56 scenes from the "city," "residential," and "road" 2For KITTI, s ∈[1, 1.2], and rotations are not performed (images are horizontal from the ...
+- **p. 5 / 4 Experiments - extractive body cue:** We use the official train/test split, using 249 scenes for training and 215 for testing, and construct our training set using the raw data for ...
+- **p. 5 / 4 Experiments - extractive body cue:** We use 56 scenes from the "city," "residential," and "road" 2For KITTI, s ∈[1, 1.2], and rotations are not performed (images are horizontal from the ...
 
 ## Generalization and Failure Cases
 
@@ -148,11 +148,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 6 Discussion - extractive PDF cue:** In future work, we plan to extend our method to incorporate further 3D geometry information, such as surface normals.
-- **p. 6 / 5 Results - extractive PDF cue:** Although the fine-scale network does not improve in the error measurements, its effect is clearly visible in the depth maps - surface boundaries have sharper ...
-- **p. 7 / 5 Results - extractive PDF cue:** Again, the fine-scale network does not improve much over the coarse one in the error metrics, but differences between the two can be seen in ...
+- **p. 7 / 6 Discussion - extractive body cue:** In future work, we plan to extend our method to incorporate further 3D geometry information, such as surface normals.
+- **p. 6 / 5 Results - extractive body cue:** Although the fine-scale network does not improve in the error measurements, its effect is clearly visible in the depth maps - surface boundaries have sharper ...
+- **p. 7 / 5 Results - extractive body cue:** Again, the fine-scale network does not improve much over the coarse one in the error metrics, but differences between the two can be seen in ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (5 Results), p. 7 (5 Results), metrics p. 5 (4 Experiments), p. 7 (5 Results), p. 6 (5 Results), p. 6 (4 Experiments), p. 7 (5 Results), p. 5 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (5 Results), p. 7 (5 Results), p. 3 (Figure/Table caption), p. 7 (5 Results), results p. 7 (Figure/Table caption), p. 6 (5 Results), p. 6 (5 Results), p. 7 (5 Results).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (5 Results), p. 7 (5 Results), metrics p. 5 (4 Experiments), p. 7 (5 Results), p. 6 (5 Results), p. 6 (4 Experiments), p. 7 (5 Results), p. 5 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (5 Results), p. 7 (5 Results), p. 3 (Figure/Table caption), p. 7 (5 Results), results p. 7 (Figure/Table caption), p. 6 (5 Results), p. 6 (5 Results), p. 7 (5 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

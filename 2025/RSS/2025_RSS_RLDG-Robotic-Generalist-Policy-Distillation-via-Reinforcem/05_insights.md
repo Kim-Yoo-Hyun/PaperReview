@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 It takes a single image as observation input along with a language instruction.를 Octo is another open-source generalist robotic policy, designed to adapt to diverse sensory inputs and action spaces efficiently.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The second part focuses on dissecting the failure modes of the fine-tuned policies on each individual task.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data for robotic foundation models.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** It takes a single image as observation input along with a language instruction. (p. 4, 3.3. Generalist Policy Finetuning).
+- **Paper-specific mechanism:** To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data for robotic foundation models. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 4: Success rate comparison of OpenVLA and Octo policies fine-tuned with RLDG versus conventional methods using human demonstrations. Both generalists trained with RLDG consistently outperform their counterparts trained with ... (p. 7, Figure/Table caption); the relevant task/metric cue is When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring significantly fewer demonstrations to achieve perfect success rate in both scenarios while ... (p. 7, 4.2. RLDG vs. Conventional Fine-tuning). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Octo's failure was due to consistent grasping errors where the fingers are in front of the object, likely due to the lack of good depth perception. (p. 9, 5.1. Is RL data better because of better action).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We also use the single object insertion task of FMB (Luo et al., 2024c), a common and reproducible benchmark for comparing robotic manipulation methods..
-3. Compare against the body-reported baseline or a matched simpler baseline: On the precise FMB Insertion and Connector Insertion tasks, where we anticipated the generalist to benefit the most from higher quality training data, OpenVLA with RLDG saw 33% and 23% higher success ....
-4. Report the body metric and its denominator/aggregation: When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring significantly fewer demonstrations to achieve perfect success rate in both scenarios while the performance ....
-5. Re-run the body-reported ablation/failure condition: To further investigate the effectiveness of RLDG, we conduct a scaling experiment studying the success rate of OpenVLA policies on a seen VGA connector and an unseen Type-C connector when fine-tuned on ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: It takes a single image as observation input along with a language instruction. (p. 4, 3.3. Generalist Policy Finetuning); preserve the objective/update rule: The policy objective 𝜋(𝑎𝑡/𝑠𝑡) is to maximize the expected discounted return: 𝐽(𝜋) = 𝔼 𝑠0∼𝜌0 𝑎𝑡∼𝜋(𝑎𝑡/𝑠𝑡) 𝑠𝑡+1∼𝑃(𝑠𝑡+1/𝑠𝑡,𝑎𝑡) [ 𝑇 ∑ 𝑡=0 𝛾𝑡𝑅(𝑠𝑡, 𝑎𝑡)] (1) where 𝜌0 defines the initial robot ... (p. 4, 3.1. Online RL Training).
+2. Use the paper-reported task/data/environment cue: We also use the single object insertion task of FMB (Luo et al., 2024c), a common and reproducible benchmark for comparing robotic manipulation methods. (p. 6, 4.1. Experimental Setup and Tasks).
+3. Compare against the reported or matched baseline: On the precise FMB Insertion and Connector Insertion tasks, where we anticipated the generalist to benefit the most from higher quality training data, OpenVLA with RLDG saw 33% and 23% ... (p. 6, 4.2. RLDG vs. Conventional Fine-tuning).
+4. Report the body metric with its denominator and aggregation: When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring significantly fewer demonstrations to achieve perfect success rate in both scenarios while ... (p. 7, 4.2. RLDG vs. Conventional Fine-tuning).
+5. Re-run the reported ablation or stress/failure condition: Human demonstration policies often maintained contact pressure without necessary exploratory movements. (p. 9, 5.1. Is RL data better because of better action); if none is reported, design one around: Octo's failure was due to consistent grasping errors where the fingers are in front of the object, likely due to the lack of good depth perception. (p. 9, 5.1. Is RL data better because of better action).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning); the primary result is directionally consistent at p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (Figure/Table caption), p. 6 (4.2. RLDG vs. Conventional Fine-tuning); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 4 (3.3. Generalist Policy Finetuning), match the reported outcome at p. 7 (Figure/Table caption), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 9 (5.1. Is RL data better because of better action), and measure the boundary at p. 9 (5.1. Is RL data better because of better action), p. 9 (4.3. Generalization of RLDG vs. Original RL).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 tackle, challenge, Reinforcement mechanism이 On the precise FMB Insertion and Connector Insertion tasks, where we anticipated the generalist to benefit ... 대비 When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring ...을 개선하고, The second part focuses on dissecting the failure modes of the fine-tuned policies on each individual ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (It takes a single image as observation input along with a language instruction.), does the paper-specific mechanism (To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate ...) retain the reported evaluation outcome (When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring ...) when tested against the paper's strongest explicit boundary (Octo's failure was due to consistent grasping errors where the fingers are in front of the object, likely ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data for robotic foundation models. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** Figure 4: Success rate comparison of OpenVLA and Octo policies fine-tuned with RLDG versus conventional methods using human demonstrations. Both generalists trained with RLDG consistently outperform their counterparts trained with ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** Octo's failure was due to consistent grasping errors where the fingers are in front of the object, likely due to the lack of good depth perception. (p. 9, 5.1. Is RL data better because of better action).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

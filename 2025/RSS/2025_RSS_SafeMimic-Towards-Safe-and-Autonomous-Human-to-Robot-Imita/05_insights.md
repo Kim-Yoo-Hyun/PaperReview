@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning (1L) baselines based on a BCRNN Behavior Cloning policy with ...를 Given this function, the robot's objective is to find a policy that maps states to the actions that maximize the task reward while remaining safe, given formally by:로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Scaling to other types of safety violations or task failures presents an opportunity for future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: environments with different human teachers, and observe experimentally that our framework enables the robot to suc cessfully acquire the desired behaviors safely and more efficiently than direct sim-to-real imitation learning approaches ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** To that end, we then train an action prediction policy network that maps point clouds, P" and language description of the task, {to actions, e.g. the grasping mode, g © ... (p. 5, C. Learning from Previous Successful Exploration).
+- **Paper-specific mechanism:** In summary, SAFEMIMIC introduces several novel contributions: (p. 2, I. INrRopucTION).
+- **Evidence boundary:** the reported outcome is The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration); the relevant task/metric cue is The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning (1L) baselines based on a BCRNN Behavior Cloning policy with ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Note as well hat some lines overlap at the Same ly outperforms all baselines and achieves upto 100% sucess ia exploratory adaptation, indcaling © superior.
-4. Report the body metric and its denominator/aggregation: Fig. 4. Accumulated Success on Mult-Step Tasks. Accumulated success rate at each stage of each ofthe seven evaluated multi-step mobile manipulation tasks, indicating the percentage ofthe five tals each method completed up ....
-5. Re-run the body-reported ablation/failure condition: This baseline is SAFEMIMIC without the use of SQFs..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: To that end, we then train an action prediction policy network that maps point clouds, P" and language description of the task, {to actions, e.g. the grasping mode, g © ... (p. 5, C. Learning from Previous Successful Exploration); preserve the objective/update rule: Given this function, the robot's objective is to find a policy that maps states to the actions that maximize the task reward while remaining safe, given formally by: (p. 4, B. Safe and Autonomous Real-World Adaptation).
+2. Use the paper-reported task/data/environment cue: We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning (1L) baselines based on a BCRNN Behavior Cloning ... (p. 6, C. Learning from Previous Successful Exploration).
+3. Compare against the reported or matched baseline: This baseline is SAFEMIMIC without the use of SQFs. (p. 6, C. Learning from Previous Successful Exploration).
+4. Report the body metric with its denominator and aggregation: The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration).
+5. Re-run the reported ablation or stress/failure condition: This baseline is SAFEMIMIC without the use of SQFs. (p. 6, C. Learning from Previous Successful Exploration); if none is reported, design one around: Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 6 (C. Learning from Previous Successful Exploration); the primary result is directionally consistent at p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), match the reported outcome at p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), and measure the boundary at p. 3 (I. INrRopucTION), p. 5 (C. Learning from Previous Successful Exploration).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 environments, different, human mechanism이 Note as well hat some lines overlap at the Same ly outperforms all baselines and achieves ... 대비 Fig. 4. Accumulated Success on Mult-Step Tasks. Accumulated success rate at each stage of each ofthe seven evaluated ...을 개선하고, Scaling to other types of safety violations or task failures presents an opportunity for future work. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (To that end, we then train an action prediction policy network that maps point clouds, P" and language description of the task, ...), does the paper-specific mechanism (In summary, SAFEMIMIC introduces several novel contributions:) retain the reported evaluation outcome (The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for ...) when tested against the paper's strongest explicit boundary (Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, SAFEMIMIC introduces several novel contributions: (p. 2, I. INrRopucTION).
+- **Paper-supported outcome:** The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration).
+- **Strongest explicit boundary:** Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.07473; PDF retrieval source: https://arxiv.org/pdf/2309.07473. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.07473; PDF retrieval source: https://arxiv.org/pdf/2309.07473. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | For both the F-score and sample success rate, we use the average score of the four different training category combinations. | p. 7 (5 Experiments) |
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our framework also achieves comparable performance compared with Full-data, which is trained on all categories with abundant data. | p. 8 (5 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Similarity-guided Exploration 1 Part motion Franka Emika Panda Robot Similarity prediction Azure Kinect DK 2 No part motion 3 Fail to grasp Manipulation After ... | embodiment, simulator version and control stack | p. 9 (5 Experiments), p. 7 (5 Experiments) |
 | Task/environment | Compared with PointEncoder, we show that our framework better understands the semantic information for manipulation than a pre-trained encoder, even if it is trained ... | reset, timeout, object/scene variation | p. 7 (5 Experiments), p. 6 (5 Experiments) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 - **p. 7 / 5 Experiments - extractive body cue:** Compared to the AdaAfford, our results suggest that instance-level exploration strategies which focus on dynamic information for a single object fail to generalize well across ...
 - **p. 8 / 5 Experiments - extractive body cue:** Compared with other exploration strategies Explore-random and Explore-noSim that fail to discover important local areas, our strategy is dramatically more effective and efficient.
 
-- **PDF anchors reviewed:** datasets p. 9 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), baselines p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), results p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 9 (5 Experiments), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), baselines p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), results p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 9 (5 Experiments), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3: Ablations on the exploration strategy using different interaction budget (1, 2, 5). We also conduct few-shot affordance learning on representative categories separately to match the real-world scenario. Table ... (p. 8, Figure/Table caption).
+- **Metric evidence:** For both the F-score and sample success rate, we use the average score of the four different training category combinations. (p. 7, 5 Experiments).
+- **Baseline/ablation evidence:** We set up three baselines for comparisons. (p. 6, 5 Experiments).
+- **Failure/negative evidence:** Compared with AdaAfford, which fails to generalize to novel categories, our framework could still propose reasonable exploration strategies on novel categories leveraging local similarity. (p. 8, 5 Experiments).

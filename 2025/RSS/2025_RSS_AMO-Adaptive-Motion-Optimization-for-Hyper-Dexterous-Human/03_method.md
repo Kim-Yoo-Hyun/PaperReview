@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p061.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p061.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Ad
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | Upon collecting dataset, we first randomly select upper body motions from the AMASS dataset [43] and sample random torso commands. ‘Then, we ... | p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Adaptation Module Pre-Training) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | To train this adaptive module, first, we collect an AMO Dataset by randomly sampling upper commands and performing modelbased trajectory optimization to ... | p. 4 (B. Adaptation Module Pre-Training), p. 5 (C. Lower Policy Training) |
@@ -80,7 +80,7 @@ PDF body method statement (p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Ad
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | However, achieving these capabilities on real humanoids remains challenging due to their high degrees of freedom (DoF) and nonlinear dynamics, We propose ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | ‘To bridge this gap, we present Adaptive Motion Optimization (AMO)-a hierarchical framework for real-time wholebody control of humanoid robots through two synergistic ... | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | For each task, we collect 50 episodes using the teleoperation system and train an ACT to complete it autonomously. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -124,8 +124,17 @@ PDF body method statement (p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Ad
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Adaptation Module Pre-Training), p. 5 (C. Lower Policy Training), p. 3 (A. Problem Formulation and Notations), p. 3 (A. Problem Formulation and Notations), p. 5 (C. Lower Policy Training), objective p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Adaptation Module Pre-Training), p. 5 (C. Lower Policy Training), p. 5 (C. Lower Policy Training), temporal p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION).
+- **Evidence anchors reviewed:** method p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Adaptation Module Pre-Training), p. 5 (C. Lower Policy Training), p. 3 (A. Problem Formulation and Notations), p. 3 (A. Problem Formulation and Notations), p. 5 (C. Lower Policy Training), objective p. 4 (B. Adaptation Module Pre-Training), p. 4 (B. Adaptation Module Pre-Training), p. 5 (C. Lower Policy Training), p. 5 (C. Lower Policy Training), temporal p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We then employ ACT [78] with a DinoV2 {17, 53] visual encoder as the policy backbone. ‘The visual observation inchides two stereo images ing and iimg,sj_- DinoV2 divides each image ... (p. 5, C. Lower Policy Training).
+- **Objective/update evidence:** Upon collecting dataset, we first randomly select upper body motions from the AMASS dataset [43] and sample random torso commands. ‘Then, we perform trajectory optimizations to track torso objectives while ... (p. 4, B. Adaptation Module Pre-Training).
+- **Temporal/runtime evidence:** For each task, we collect 50 episodes using the teleoperation system and train an ACT to complete it autonomously. (p. 7, IV. EVALUATION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

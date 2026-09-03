@@ -1,8 +1,10 @@
 # DexterityGen: Foundation Controller for Unprecedented Dexterity
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/2026/program/papers/103/.
-> PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/2026/program/papers/103/.
+> PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://roboticsconference.org/2026/program/papers/103/
 - Code/Project: https://roboticsconference.org/2026/program/papers/103/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 This limitation makes it difficult to prompt existing models to generate more detailed, finger-level interaction behaviors, such as using a syringe or screwdriver.를 문제로 두고, "Motivated by these observations, in this paper, we propose를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 5 (A. Preliminaries), p. 6 (C. DexGen Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This limitation makes it difficult to prompt existing models to generate more detailed, finger-level interaction behaviors, such as using a syringe or screwdriver. (p. 2, 1. INTRODUCTION).
+- **Actual contribution:** "Motivated by these observations, in this paper, we propose (p. 2, 1. INTRODUCTION).
+- **Evaluation boundary:** figure, DexGen can successfully improve the performance of these polici (p. 7, IV. EXPERIMENTS).
+- **Explicit failure boundary:** We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments).

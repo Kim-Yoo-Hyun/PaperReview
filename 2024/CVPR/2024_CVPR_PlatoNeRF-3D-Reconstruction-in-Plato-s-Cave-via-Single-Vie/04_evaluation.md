@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** We create datasets of four scenes of a room with either a chair, bunny, dragon, or occluded bunny in a chair, shown in Fig.
-- **p. 5 / 4. Experiments - extractive PDF cue:** We validate our method on the task of 3D reconstruction across several scenes.
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The dataset captures a simple indoor scene, shown in Fig.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** 4.3.2 Ambient Light and Low Albedo Backgrounds In real-world settings, there may be high ambient light or low scene albedo, both of which make detection ...
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** We use a dataset of single-photon lidar data captured by Henley et al.
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** All ablations are done on the chair scene.
-- **p. 7 / 4.2. Results - extractive PDF cue:** (a) Captured scene (stars are illumination spots), (b) BF Lidar result, (c) PlatoNeRF result.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** The non-planar scene contains curved background walls.
+- **p. 5 / 4.1. Datasets - extractive body cue:** We create datasets of four scenes of a room with either a chair, bunny, dragon, or occluded bunny in a chair, shown in Fig.
+- **p. 5 / 4. Experiments - extractive body cue:** We validate our method on the task of 3D reconstruction across several scenes.
+- **p. 6 / 4.1. Datasets - extractive body cue:** The dataset captures a simple indoor scene, shown in Fig.
+- **p. 8 / 4.3. Ablations - extractive body cue:** 4.3.2 Ambient Light and Low Albedo Backgrounds In real-world settings, there may be high ambient light or low scene albedo, both of which make detection ...
+- **p. 6 / 4.1. Datasets - extractive body cue:** We use a dataset of single-photon lidar data captured by Henley et al.
+- **p. 7 / 4.3. Ablations - extractive body cue:** All ablations are done on the chair scene.
+- **p. 7 / 4.2. Results - extractive body cue:** (a) Captured scene (stars are illumination spots), (b) BF Lidar result, (c) PlatoNeRF result.
+- **p. 8 / 4.3. Ablations - extractive body cue:** The non-planar scene contains curved background walls.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | PlatoNeRF method achieves competitive performance. | p. 7 (4.2. Results) |
 | 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Due to our use of an implicit representation, we achieve much smoother results than BF Lidar. | p. 7 (4.2. Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Datasets - extractive PDF cue:** We create datasets of four scenes of a room with either a chair, bunny, dragon, or occluded bunny in a chair, shown in Fig.
-- **p. 5 / 4. Experiments - extractive PDF cue:** We validate our method on the task of 3D reconstruction across several scenes.
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The dataset captures a simple indoor scene, shown in Fig.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** 4.3.2 Ambient Light and Low Albedo Backgrounds In real-world settings, there may be high ambient light or low scene albedo, both of which make detection ...
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** We use a dataset of single-photon lidar data captured by Henley et al.
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** All ablations are done on the chair scene.
-- **p. 7 / 4.2. Results - extractive PDF cue:** (a) Captured scene (stars are illumination spots), (b) BF Lidar result, (c) PlatoNeRF result.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** The non-planar scene contains curved background walls.
+- **p. 5 / 4.1. Datasets - extractive body cue:** We create datasets of four scenes of a room with either a chair, bunny, dragon, or occluded bunny in a chair, shown in Fig.
+- **p. 5 / 4. Experiments - extractive body cue:** We validate our method on the task of 3D reconstruction across several scenes.
+- **p. 6 / 4.1. Datasets - extractive body cue:** The dataset captures a simple indoor scene, shown in Fig.
+- **p. 8 / 4.3. Ablations - extractive body cue:** 4.3.2 Ambient Light and Low Albedo Backgrounds In real-world settings, there may be high ambient light or low scene albedo, both of which make detection ...
+- **p. 6 / 4.1. Datasets - extractive body cue:** We use a dataset of single-photon lidar data captured by Henley et al.
+- **p. 7 / 4.3. Ablations - extractive body cue:** All ablations are done on the chair scene.
+- **p. 7 / 4.2. Results - extractive body cue:** (a) Captured scene (stars are illumination spots), (b) BF Lidar result, (c) PlatoNeRF result.
+- **p. 8 / 4.3. Ablations - extractive body cue:** The non-planar scene contains curved background walls.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. PlatoNeRF. We propose PlatoNeRF: a method to recover scene geometry from a single view using two-bounce signals captured by a single-photon lidar. (a) ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Problem Definition. We use a lidar system containing a SPAD at position xs and a pulsed laser at position xl. The SPAD view ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Method. PlatoNeRF learns 3D scene geometry from single-view two-bounce lidar time of flight, modeled with NeRF. Our method consists of three steps. (a) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Depth evaluation. We compare PlatoNeRF to both lidar- and RGB-based single-view 3D reconstruction methods, BF Lidar [7] and S3-NeRF [44], respectively. Depth metrics ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative Depth Results. We provide qualitative results for predicted depth on both train and novel test views, comparing our method, BF Lidar [7], ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Point Cloud Evaluation. We compute the Chamfer dis- tance between the point clouds generated by each method. Metrics are averaged over all four ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Real-World Results. (a) Captured scene (stars are illumi- nation spots), (b) BF Lidar result, (c) PlatoNeRF result. Our method yields similar results as ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablations on Lidar Sensor. Lidars on consumer devices have lower spatial- and temporal-resolution than research-grade lidars. We ablate the impact of these sensor ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. PlatoNeRF. We propose PlatoNeRF: a method to recover scene geometry from a single view using two-bounce signals captured by a single-photon lidar. (a) ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Problem Definition. We use a lidar system containing a SPAD at position xs and a pulsed laser at position xl. The SPAD view ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Method. PlatoNeRF learns 3D scene geometry from single-view two-bounce lidar time of flight, modeled with NeRF. Our method consists of three steps. (a) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Depth evaluation. We compare PlatoNeRF to both lidar- and RGB-based single-view 3D reconstruction methods, BF Lidar [7] and S3-NeRF [44], respectively. Depth metrics ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative Depth Results. We provide qualitative results for predicted depth on both train and novel test views, comparing our method, BF Lidar [7], ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Point Cloud Evaluation. We compute the Chamfer dis- tance between the point clouds generated by each method. Metrics are averaged over all four ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Real-World Results. (a) Captured scene (stars are illumi- nation spots), (b) BF Lidar result, (c) PlatoNeRF result. Our method yields similar results as ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablations on Lidar Sensor. Lidars on consumer devices have lower spatial- and temporal-resolution than research-grade lidars. We ablate the impact of these sensor ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We create datasets of four scenes of a room with either a chair, bunny, dragon, or occluded bunny in a chair, shown in Fig. | embodiment, simulator version and control stack | p. 5 (4.1. Datasets), p. 5 (4. Experiments) |
 | Task/environment | We validate our method on the task of 3D reconstruction across several scenes. | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 6 (4.1. Datasets) |
@@ -123,11 +123,11 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (
 | Primary metric/result | Due to our use of an implicit representation, we achieve much smoother results than BF Lidar. | numeric claim only at cited anchor | p. 7 (4.2. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** For each scene, we heuristically choose N =16 points in the left and right parts of the scene, corresponding to the left and right walls, ...
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** Our scene is measured using a 512×512 SPAD with a temporal resolution of 128 ps (3.84 cm).
-- **p. 6 / 4.1. Datasets - extractive PDF cue:** The scene is captured with a 200×200 pixel sensor with an instrument Table 2.
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** Ambient Light L1 Depth (m) Intensity Ours S3-NeRF 0 0.0862 0.1178 4 0.0794 0.3080 Scene Albedo L1 Depth (m) Albedo Ours S3-NeRF 0× less 0.0862 ...
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** Resulting spatial resolutions are 128×128, 64×64, and 32×32.
+- **p. 6 / 4.1. Datasets - extractive body cue:** For each scene, we heuristically choose N =16 points in the left and right parts of the scene, corresponding to the left and right walls, ...
+- **p. 6 / 4.1. Datasets - extractive body cue:** Our scene is measured using a 512×512 SPAD with a temporal resolution of 128 ps (3.84 cm).
+- **p. 6 / 4.1. Datasets - extractive body cue:** The scene is captured with a 200×200 pixel sensor with an instrument Table 2.
+- **p. 7 / 4.3. Ablations - extractive body cue:** Ambient Light L1 Depth (m) Intensity Ours S3-NeRF 0 0.0862 0.1178 4 0.0794 0.3080 Scene Albedo L1 Depth (m) Albedo Ours S3-NeRF 0× less 0.0862 ...
+- **p. 7 / 4.3. Ablations - extractive body cue:** Resulting spatial resolutions are 128×128, 64×64, and 32×32.
 
 ## Generalization and Failure Cases
 
@@ -160,14 +160,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Our method has a couple limitations.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** In contrast, lidar-based methods, such as PlatoNeRF, are fundamentally more robust to these low signal-to-noise (SNR) and signal-to-background (SBR) scenarios.
-- **p. 5 / 4. Experiments - extractive PDF cue:** First, we introduce the simulated datasets that we make available to accelerate future work in learning-based methods for single-photon lidars.
-- **p. 7 / 4.2. Results - extractive PDF cue:** In general, PlatoNeRF produces smoother depth, but small floaters are noticeable, especially in the nearby floor region, which is an area for future work.
-- **p. 7 / 4.2. Results - extractive PDF cue:** We also note that, as in the original work, we train S3-NeRF with RGB images rendered with only one bounce, as we found it does ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Depth evaluation. We compare PlatoNeRF to both lidar- and RGB-based single-view 3D reconstruction methods, BF Lidar [7] and S3-NeRF [44], respectively. Depth metrics ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Our method has a couple limitations.
+- **p. 8 / 4.3. Ablations - extractive body cue:** In contrast, lidar-based methods, such as PlatoNeRF, are fundamentally more robust to these low signal-to-noise (SNR) and signal-to-background (SBR) scenarios.
+- **p. 5 / 4. Experiments - extractive body cue:** First, we introduce the simulated datasets that we make available to accelerate future work in learning-based methods for single-photon lidars.
+- **p. 7 / 4.2. Results - extractive body cue:** In general, PlatoNeRF produces smoother depth, but small floaters are noticeable, especially in the nearby floor region, which is an area for future work.
+- **p. 7 / 4.2. Results - extractive body cue:** We also note that, as in the original work, we train S3-NeRF with RGB images rendered with only one bounce, as we found it does ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Depth evaluation. We compare PlatoNeRF to both lidar- and RGB-based single-view 3D reconstruction methods, BF Lidar [7] and S3-NeRF [44], respectively. Depth metrics ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 5 (4. Experiments), p. 6 (4.1. Datasets), p. 8 (4.3. Ablations), p. 6 (4.1. Datasets), p. 7 (4.3. Ablations), metrics p. 6 (4.2. Results), p. 7 (4.3. Ablations), p. 8 (4.3. Ablations), p. 8 (4.3. Ablations), p. 6 (4.1. Datasets), p. 5 (4. Experiments), baselines p. 7 (Figure/Table caption), p. 7 (4.3. Ablations), p. 5 (4. Experiments), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (4.3. Ablations), results p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (3.3. Implementation Details), p. 5 (4. Experiments), p. 6 (4.1. Datasets), p. 8 (4.3. Ablations).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 5 (4. Experiments), p. 6 (4.1. Datasets), p. 8 (4.3. Ablations), p. 6 (4.1. Datasets), p. 7 (4.3. Ablations), metrics p. 6 (4.2. Results), p. 7 (4.3. Ablations), p. 8 (4.3. Ablations), p. 8 (4.3. Ablations), p. 6 (4.1. Datasets), p. 5 (4. Experiments), baselines p. 7 (Figure/Table caption), p. 7 (4.3. Ablations), p. 5 (4. Experiments), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (4.3. Ablations), results p. 7 (4.2. Results), p. 7 (4.2. Results), p. 5 (3.3. Implementation Details), p. 5 (4. Experiments), p. 6 (4.1. Datasets), p. 8 (4.3. Ablations).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

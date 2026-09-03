@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1115/1.3662552; PDF retrieval source: https://doi.org/10.1115/1.3662552. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1115/1.3662552; PDF retrieval source: https://doi.org/10.1115/1.3662552. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 5 (Introduction), p. 5 (Introduction), p. 1 (Intro
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | State / observation model | latent robot/world state와 measurement 관계를 표현한다 | prior state와 sensor observation | transition, observation, uncertainty 또는 learned encoder를 구성 | state/uncertainty representation | The dynamics is then described in terms of state transitions, i.e., one must specify how one state is transformed into another as ... | p. 5 (Introduction), p. 5 (Introduction) |
 | Prediction / fusion | 새 시점의 prior 또는 fused state를 계산한다 | history, model, multi-sensor input | recursive prediction, registration, fusion 또는 temporal aggregation을 수행 | prior/fused state | In fact, if we consider (15) in the steady state (assuming it is a stable system), in other words, if we neglect ... | p. 5 (Introduction), p. 1 (Introduction) |
@@ -85,11 +85,11 @@ PDF body method statement (p. 5 (Introduction), p. 5 (Introduction), p. 1 (Intro
 | Horizon | 현재 observation의 filtering과 필요 시 future prediction/history smoothing horizon을 구분한다. | Zadeh and Ragazzini solved the finite-memory case [2]. | episode/sequence/action-chunk boundary |
 | Rate / latency | observation arrival마다 estimator update; numeric sensor/control rate는 paper-specific. | Fundamental assumptions and their consequences tend to be obscured. | Hz/fps, inference time and control rate |
 | Memory | state estimate와 uncertainty summary; smoothing이면 observation/history buffer가 추가된다. | Zadeh and Ragazzini solved the finite-memory case [2]. | window and reset |
-| Compute | state dimension, covariance/model update와 sensor synchronization이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | state dimension, covariance/model update와 sensor synchronization이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -129,8 +129,17 @@ PDF body method statement (p. 5 (Introduction), p. 5 (Introduction), p. 1 (Intro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (Introduction), p. 5 (Introduction), p. 1 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 1 (Introduction), objective p. 3 (Introduction), p. 3 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 6 (Introduction), p. 1 (Introduction), temporal p. 1 (Introduction), p. 1 (Introduction), p. 2 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 4 (Introduction).
+- **Evidence anchors reviewed:** method p. 5 (Introduction), p. 5 (Introduction), p. 1 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 1 (Introduction), objective p. 3 (Introduction), p. 3 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 6 (Introduction), p. 1 (Introduction), temporal p. 1 (Introduction), p. 1 (Introduction), p. 2 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 4 (Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 1 actually stands for n integrators such that the output of each is a state variable; F(t) indicates how the outputs of the integrators are fed back to the inputs ... (p. 5, Introduction).
+- **Objective/update evidence:** Booton discussed the nonstationary Wiener-Hopf equation [4]. (p. 1, Introduction).
+- **Temporal/runtime evidence:** Zadeh and Ragazzini solved the finite-memory case [2]. (p. 1, Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

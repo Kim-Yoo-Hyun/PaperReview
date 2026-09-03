@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 The figure shows distributions of predicted action sequences (indicated by the sequences of red to green dots) at different stages of the respective generation process. a) Diffusion Policy denoises an action sequence ...를 Single-step inference from our trained Consistency Policy works as follows: sample the initial position z ∼N(0, I), compute x = gθ(z, T, 0; o) where T is the max timestep we use ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In future work, we will explore how we can potentially re-introduce multimodality to Consistency Policy through more complex sampling schemes.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher success rates ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The figure shows distributions of predicted action sequences (indicated by the sequences of red to green dots) at different stages of the respective generation process. a) Diffusion Policy denoises an ... (p. 1, I. INTRODUCTION).
+- **Paper-specific mechanism:** Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Policy NFE Lift Can Square ToolHang Push-T DDPM 27 1.00 .97 ± .01 .93 ± .02 .79 ± .03 .87 ± .03 DDiM 9 1.00 .82 ± .03 .85 ± ... (p. 6, IV. EXPERIMENTS); the relevant task/metric cue is Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a particular policy network on the given task, along with the standard error ... (p. 6, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 1) Robomimic: From the robomimic [17] benchmark suite, we evaluate our method on the Lift, Can, Square and Tool Hang tasks, which compromise all the single-robot tasks in Robomimic..
-3. Compare against the body-reported baseline or a matched simpler baseline: Thus, we construct an optimistically strong baseline by assuming these speedups can be realized without degrading performance from the standard sequential samplers..
-4. Report the body metric and its denominator/aggregation: Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a particular policy network on the given task, along with the standard error of this ....
-5. Re-run the body-reported ablation/failure condition: Finally, we perform ablations over our core design choices and explore the intricacies of our model..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The figure shows distributions of predicted action sequences (indicated by the sequences of red to green dots) at different stages of the respective generation process. a) Diffusion Policy denoises an ... (p. 1, I. INTRODUCTION); preserve the objective/update rule: Following [13], we optimize the Denoising Score Matching (DSM) loss to train the EDM model: LDSM(θ) = Et,x0,xt/x0[d(x0, sϕ (xt, t; o))] (3) The DSM objective takes a sampled point ... (p. 3, 1) Teacher Model (EDM)).
+2. Use the paper-reported task/data/environment cue: Simulation Experiments Tasks: We evaluate Consistency Policy on six tasks across three benchmarks [9, 10, 17]. (p. 5, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Thus, we construct an optimistically strong baseline by assuming these speedups can be realized without degrading performance from the standard sequential samplers. (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a particular policy network on the given task, along with the standard error ... (p. 6, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Finally, we perform ablations over our core design choices and explore the intricacies of our model. (p. 5, IV. EXPERIMENTS); if none is reported, design one around: Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (2) Student Model (Consistency Policy)), p. 4 (2) Student Model (Consistency Policy)), p. 3 (1) Teacher Model (EDM)); the primary result is directionally consistent at p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (Abstract), match the reported outcome at p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), and measure the boundary at p. 4 (2) Student Model (Consistency Policy)), p. 5 (IV. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Overall, demonstrate, inference mechanism이 Thus, we construct an optimistically strong baseline by assuming these speedups can be realized without degrading ... 대비 Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a ...을 개선하고, In future work, we will explore how we can potentially re-introduce multimodality to Consistency Policy through ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The figure shows distributions of predicted action sequences (indicated by the sequences of red to green dots) at different stages of the ...), does the paper-specific mechanism (Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline ...) retain the reported evaluation outcome (Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a ...) when tested against the paper's strongest explicit boundary (Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Metrics: The key metric we report in the Robomimic experiments is the average success rate earned by a ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Policy NFE Lift Can Square ToolHang Push-T DDPM 27 1.00 .97 ± .01 .93 ± .02 .79 ± .03 .87 ± .03 DDiM 9 1.00 .82 ± .03 .85 ± ... (p. 6, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -22,7 +22,7 @@
 ### Strongest assumption and failure boundary
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, to realize these benefits for a real-world robotic learning system, we need to overcome a number of major challenges [64, 32, 11, 86], which ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In addition, by collecting experience simultaneously using controllers for a variety of tasks with different difficulty, arXiv:2104.08212v2 [cs.RO] 27 Apr 2021
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In addition, by collecting experience simultaneously using controllers for a variety of tasks with different difficulty.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** While existing methods are effective and able to generalize, they require considerable on-robot training time, as well as extensive engineering effort for setting up each ...
 - **p. 8 / VII. EXPERIMENTS - extractive body cue:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks.
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 At each time step, the policy selects an action a given the current state s and the current task Ti that is set at the beginning of the episode, and receives a ...를 2C), at each time step, a policy takes as input a camera image and a one-hot encoding of the task, and sends a motor command to the robot.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and their rewards. ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2C), at each time step, a policy takes as input a camera image and a one-hot encoding of the task, and sends a motor command to the robot. (p. 3, III. SYSTEM OVERVIEW).
+- **Paper-specific mechanism:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS); the relevant task/metric cue is (3) Does data sharing improve performance of the system? (p. 6, VII. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks. (p. 8, VII. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The goal of our real-world experiments is to answer the following questions: (1) How does MT-Opt perform, quantitatively and qualitatively, on a large set of vision-based robotic manipulation tasks?.
-3. Compare against the body-reported baseline or a matched simpler baseline: Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement..
-4. Report the body metric and its denominator/aggregation: 7 shows the success rates of MT-Opt on the 12 evaluation tasks..
-5. Re-run the body-reported ablation/failure condition: Tasks such as lift-carrot and Parameter Sharing Ablation (Success Rate) Model: 2-Task Model 12-Task Model lift-any 0.82 0.89 place-any 0.63 0.85 TABLE I: The effect of parameter sharing: the policy that learns ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2C), at each time step, a policy takes as input a camera image and a one-hot encoding of the task, and sends a motor command to the robot. (p. 3, III. SYSTEM OVERVIEW); preserve the objective/update rule: Prior work indicates that multi-task RL can indeed amortize the cost of single-task learning [20, 56, 60, 80, 30]. (p. 1, I. INTRODUCTION).
+2. Use the paper-reported task/data/environment cue: The goal of our real-world experiments is to answer the following questions: (1) How does MT-Opt perform, quantitatively and qualitatively, on a large set of vision-based robotic manipulation tasks? (p. 6, VII. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: (3) Does data sharing improve performance of the system? (p. 6, VII. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Tasks such as lift-carrot and Parameter Sharing Ablation (Success Rate) Model: 2-Task Model 12-Task Model lift-any 0.82 0.89 place-any 0.63 0.85 TABLE I: The effect of parameter sharing: the policy ... (p. 7, VII. EXPERIMENTS); if none is reported, design one around: These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks. (p. 8, VII. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), and measure the boundary at p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 further, make, following mechanism이 Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, ... 대비 7 shows the success rates of MT-Opt on the 12 evaluation tasks.을 개선하고, These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2C), at each time step, a policy takes as input a camera image and a one-hot encoding of the task, and sends ...), does the paper-specific mechanism (We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach ...) retain the reported evaluation outcome ((3) Does data sharing improve performance of the system?) when tested against the paper's strongest explicit boundary (These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric ((3) Does data sharing improve performance of the system?) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS).
+- **Strongest explicit boundary:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks. (p. 8, VII. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

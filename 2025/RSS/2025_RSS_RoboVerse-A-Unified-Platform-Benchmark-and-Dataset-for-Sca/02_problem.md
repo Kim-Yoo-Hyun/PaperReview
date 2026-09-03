@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p022.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p022.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | + Realistic Simulation and Rendering: With METASIM's hybrid simulation capability, we enable the fusion of advanced physics engines and rendering systems across ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| Observation / input | + Realistic Simulation and Rendering: With METASIM's hybrid simulation capability, we enable the fusion of advanced physics engines and rendering systems across ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Realistic, Simulation, Rendering, METASIM, hybrid, capability, enable, fusion, advanced, physics | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | Incorporating, randomization, robot, object, selection, initial, poses, large | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | standardized episode e and interface; body terms: Realistic, Simulation, Rendering, METASIM, hybrid, capability, enable, fusion, advanced, physics | p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET) |
 | Decision / output variable | method trajectory/action; body terms: Additionally, unified, benchmarks, imitation, learning, reinforcement, data, resource-intensive | p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (B. Large-Scale Roboties Dataset), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET) |
 | Success / guarantee | comparable score and protocol validity | p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (A. METASIM Overview)): Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.
+PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (A. METASIM Overview)): Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.
 
 - **p. 1 / Abstract - extractive body cue:** To address environments into a simulator-ag1 these challenges, we introduce ROBOVERSE, a comprehensive well as an API aligning different Framework comprising a simulation plaform, a ...
 - **p. 2 / 1. IyrRopucTION - extractive body cue:** Additionally, we introduce a standardized benchmarking protocol 10 assess varying levels of generalization and sim-to-real transferability.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTIO
 
 ## Position in the Robotics Loop
 
-benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), p. 2 (1. IyrRopucTION). The downstream handoff is claimed only when the body describes it.
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), p. 2 (1. IyrRopucTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 1 (Abstract), p. 3 (C. Benchmarking in Robotics), interface p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), p. 2 (1. IyrRopucTION), objective p. 2 (1. IyrRopucTION), p. 6 (IV. ROBOVERSE DATASET).
+- **Evidence anchors reviewed:** problem p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 1 (Abstract), p. 3 (C. Benchmarking in Robotics), interface p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), p. 2 (1. IyrRopucTION), objective p. 2 (1. IyrRopucTION), p. 6 (IV. ROBOVERSE DATASET).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols. (p. 2, 1. IyrRopucTION).
+- **Formulation-changing contribution:** Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization. (p. 1, Abstract).
+- **Assumption/failure evidence:** Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 2) Diffusion Policy Training: Train a policy fon this dataset t0 infer motions from tactile feedback and proprioceptive states, ensuring generalization to real-world robotic systems,를 trajectory with compliant finger control via tactile feedback; (3) Model based force tracking": combines the PP-Tac-lerived hand trajectory with compliant finger control via tactile feedback; (4) Non-disturbance: grasp using our dextero ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 As shown in the "Non-disturbance" baseline in Section VI-C, removing data disturbance led to a notable performance drop across all experiments, often resulting in complete failure when grasping stiff objects, such as ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling region for ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** One challenge is determining the control inputs for all finger joints and the hand pose (i.e. the end-effector pose of the manipulator). (p. 5, IV. PROBLEM STATEMENT).
+- **Paper-specific mechanism:** Despite recent advances in robotic Robots are increasingly popular as assistive agents in evhardware and embodied Al, existing systems continue to struggle eryday life, particularly within household environments (3) with ... (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, ... (p. 9, Figure/Table caption); the relevant task/metric cue is Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B). (p. 6, VI. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: of the proposed algorithms on a physical robotic system, Both the hardware design and code for the PP-Tac system are publicly released to support further research and. community development,.
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, slope, book ....
-4. Report the body metric and its denominator/aggregation: Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, slope, book ....
-5. Re-run the body-reported ablation/failure condition: Last, ablation studies are conducted to examine the influence of parameters, and the necessary training steps (Section VI-E)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: One challenge is determining the control inputs for all finger joints and the hand pose (i.e. the end-effector pose of the manipulator). (p. 5, IV. PROBLEM STATEMENT); preserve the objective/update rule: We implement this through the PPTac policy, developed in two stages: 1) Trajectory Optimization: Generate a dataset of grasping motions using trajectory ‘optimization. (p. 5, V. POLICY LEARNING FOR PAPER-PICKING).
+2. Use the paper-reported task/data/environment cue: of the proposed algorithms on a physical robotic system, Both the hardware design and code for the PP-Tac system are publicly released to support further research and. community development, (p. 2, 4) We provide a full implementation and systematic evaluation).
+3. Compare against the reported or matched baseline: Then, we per form systematic comparisons of our system on different flat ‘materials and supporting terrains (Section VI-C). (p. 6, VI. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B). (p. 6, VI. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Last, ablation studies are conducted to examine the influence of parameters, and the necessary training steps (Section VI-E). (p. 6, VI. EXPERIMENTS); if none is reported, design one around: However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy), p. 9 (B. Depth Reconstruction of VBTS); the primary result is directionally consistent at p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 4 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 4 (IV. PROBLEM STATEMENT), match the reported outcome at p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 2 (4) We provide a full implementation and systematic evaluation), and measure the boundary at p. 2 (A. Deformable Object Manipulation), p. 6 (VI. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 address, visionindependent, tactile-based mechanism이 Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different ... 대비 Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects ...을 개선하고, As shown in the "Non-disturbance" baseline in Section VI-C, removing data disturbance led to a notable ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (One challenge is determining the control inputs for all finger joints and the hand pose (i.e. the end-effector pose of the manipulator).), does the paper-specific mechanism (Despite recent advances in robotic Robots are increasingly popular as assistive agents in evhardware and embodied Al, existing systems continue to struggle ...) retain the reported evaluation outcome (Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B).) when tested against the paper's strongest explicit boundary (However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Despite recent advances in robotic Robots are increasingly popular as assistive agents in evhardware and embodied Al, existing systems continue to struggle eryday life, particularly within household environments (3) with ... (p. 1, Abstract).
+- **Paper-supported outcome:** Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, ... (p. 9, Figure/Table caption).
+- **Strongest explicit boundary:** However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

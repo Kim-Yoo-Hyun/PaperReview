@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p002.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p002.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p002.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p002.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 7 (C. Supervisory Safety Controller), p. 6 (C. Sup
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | We use a simple PD controller as our nominal controller, where the computed desired safe control ujaje is then converted into low-level ... | p. 7 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Our supervisory controller enforces our safety and actuation constraints, We devise this controller using our defined control barrier function, First, let our ... | p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller) |
@@ -119,8 +119,17 @@ PDF body method statement (p. 7 (C. Supervisory Safety Controller), p. 6 (C. Sup
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), objective p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), p. 7 (C. Supervisory Safety Controller), temporal p. 4 (A. Visual Detection Module), p. 7 (A. Experiment Design), p. 5 (B. Multi View Fusion & Coordinate Frame Conversion), p. 6 (C. Supervisory Safety Controller), p. 1 (Abstract), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 7 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), objective p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), p. 7 (C. Supervisory Safety Controller), temporal p. 4 (A. Visual Detection Module), p. 7 (A. Experiment Design), p. 5 (B. Multi View Fusion & Coordinate Frame Conversion), p. 6 (C. Supervisory Safety Controller), p. 1 (Abstract), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2) is as follows: While the visual detection module (Seetion IV-A) provides an mage-level intruder detection, the intruder state information is transformed to the North East Down (NED) coordinate system ... (p. 4, IV. ViSafe FRAMEWORK).
+- **Objective/update evidence:** Note that the non-linear constraint h(x) <0 is not necessarily a subset of d > dhiresk when d > 0. (p. 6, C. Supervisory Safety Controller).
+- **Temporal/runtime evidence:** Furthermore, we also upgraded the SWaP-C hardware, implementing efficient multi-camera image sharing (with zero memory copies) and further opti mizing the deep leaming model inference to operate at the desired ... (p. 4, A. Visual Detection Module).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

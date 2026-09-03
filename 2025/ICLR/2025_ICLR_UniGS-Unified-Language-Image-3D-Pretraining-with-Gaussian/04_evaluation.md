@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=6U2KI1dpfl; PDF retrieval source: https://openreview.net/pdf/a89f593acd0d100b23f75744f408665a3c531fbc.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=6U2KI1dpfl; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/113642. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 
 ## Evaluation Body Digest
 
-- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** As for the scene recognition task on the SUN RGBD dataset, UniGS follows the basic evaluation pattern to directly train 50 epochs on the training ...
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Due to the lack of real-world data in the pre-training dataset, the Top1 accuracy of MVImgNet is relatively low.
-- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive PDF cue:** All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** We leverage the SUN RGBD dataset (Song et al., 2015) as the scene data and classify objects into 37 categories following the setting of (Song ...
-- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** For the retrieval task, we randomly sample 1000 items to form the test set, and use the rest as training set.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
-- **p. 14 / B IMPLEMENTATION DETAILS - extractive PDF cue:** (2015) datasets; as well as the training and evaluation details on the Text-driven retrieval, Zero-shot classification, and scene recognition tasks.
+- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** As for the scene recognition task on the SUN RGBD dataset, UniGS follows the basic evaluation pattern to directly train 50 epochs on the training ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Due to the lack of real-world data in the pre-training dataset, the Top1 accuracy of MVImgNet is relatively low.
+- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive body cue:** All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** We leverage the SUN RGBD dataset (Song et al., 2015) as the scene data and classify objects into 37 categories following the setting of (Song ...
+- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** For the retrieval task, we randomly sample 1000 items to form the test set, and use the rest as training set.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
+- **p. 14 / B IMPLEMENTATION DETAILS - extractive body cue:** (2015) datasets; as well as the training and evaluation details on the Text-driven retrieval, Zero-shot classification, and scene recognition tasks.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5: Zero-shot classification with point clouds on ABO. Avg. denotes mean average classifica- tion accuracy. Results illustrate that properly converting point clouds into ... | p. 9 (Figure/Table caption) |
 | 4 EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 1, UniGS outperforms the current state-of-the-art approaches across all datasets and improves the Top 1 retrieval accuracy of CLIP2 and ... | p. 7 (4 EXPERIMENT) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 
 ## Dataset / Benchmark Role
 
-- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** As for the scene recognition task on the SUN RGBD dataset, UniGS follows the basic evaluation pattern to directly train 50 epochs on the training ...
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Due to the lack of real-world data in the pre-training dataset, the Top1 accuracy of MVImgNet is relatively low.
-- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive PDF cue:** All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU.
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** We leverage the SUN RGBD dataset (Song et al., 2015) as the scene data and classify objects into 37 categories following the setting of (Song ...
-- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** For the retrieval task, we randomly sample 1000 items to form the test set, and use the rest as training set.
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
-- **p. 14 / B IMPLEMENTATION DETAILS - extractive PDF cue:** (2015) datasets; as well as the training and evaluation details on the Text-driven retrieval, Zero-shot classification, and scene recognition tasks.
+- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** As for the scene recognition task on the SUN RGBD dataset, UniGS follows the basic evaluation pattern to directly train 50 epochs on the training ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Due to the lack of real-world data in the pre-training dataset, the Top1 accuracy of MVImgNet is relatively low.
+- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive body cue:** All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU.
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** We leverage the SUN RGBD dataset (Song et al., 2015) as the scene data and classify objects into 37 categories following the setting of (Song ...
+- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** For the retrieval task, we randomly sample 1000 items to form the test set, and use the rest as training set.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
+- **p. 14 / B IMPLEMENTATION DETAILS - extractive body cue:** (2015) datasets; as well as the training and evaluation details on the Text-driven retrieval, Zero-shot classification, and scene recognition tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Left: information gap in different 3D representations. Middle: our UniGS, a novel unified text-image-3D pre-training framework, leverages 3DGS as the 3D representation. Right: ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: The overview of UniGS. UniGS is an innovative, unified, and scalable 3D pretraining framework designed for 3D representation learning. It offers versatile pipelines ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Model overview of UniGS. Let µ, c, α, s, R denote the location, color, opacity, scale, and rotation attribute of 3DGS. (a) Given ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Top1, Top5 and Top10 Text-3D retrieval accuracy. Avg.: the mean average retrieval accuracy. * denotes training from scratch. Implementation Details. Following Section 3.5, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Zero-shot classification. Avg.: the mean average classification accuracy. * denotes training from scratch.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Recognition on SUN RGBD (dataset with point clouds). Avg.: the mean average Top1 accuracy across all categories. * denotes training from scratch. 13.6% ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Summary of the experimental results on Objaverse-LVIS zero-shot classification. Avg.: the mean average classification accuracy. All methods are trained from scratch. Training Initialization ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 5: Zero-shot classification with point clouds on ABO. Avg. denotes mean average classifica- tion accuracy. Results illustrate that properly converting point clouds into 3DGS ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Left: information gap in different 3D representations. Middle: our UniGS, a novel unified text-image-3D pre-training framework, leverages 3DGS as the 3D representation. Right: ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: The overview of UniGS. UniGS is an innovative, unified, and scalable 3D pretraining framework designed for 3D representation learning. It offers versatile pipelines ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Model overview of UniGS. Let µ, c, α, s, R denote the location, color, opacity, scale, and rotation attribute of 3DGS. (a) Given ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Top1, Top5 and Top10 Text-3D retrieval accuracy. Avg.: the mean average retrieval accuracy. * denotes training from scratch. Implementation Details. Following Section 3.5, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Zero-shot classification. Avg.: the mean average classification accuracy. * denotes training from scratch.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Recognition on SUN RGBD (dataset with point clouds). Avg.: the mean average Top1 accuracy across all categories. * denotes training from scratch. 13.6% ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Summary of the experimental results on Objaverse-LVIS zero-shot classification. Avg.: the mean average classification accuracy. All methods are trained from scratch. Training Initialization ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 5: Zero-shot classification with point clouds on ABO. Avg. denotes mean average classifica- tion accuracy. Results illustrate that properly converting point clouds into 3DGS ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | As for the scene recognition task on the SUN RGBD dataset, UniGS follows the basic evaluation pattern to directly train 50 epochs on the ... | embodiment, simulator version and control stack | p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 9 (4 EXPERIMENT) |
 | Task/environment | Due to the lack of real-world data in the pre-training dataset, the Top1 accuracy of MVImgNet is relatively low. | reset, timeout, object/scene variation | p. 9 (4 EXPERIMENT), p. 14 (B.1 DETAILS OF ENSEMBLE DATASETS) |
@@ -113,7 +113,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 | We further conduct detailed and comprehensive ablation studies to reveal the impact and power of our design for cross-modal learning. | component/input/data sensitivity | p. 6 (4 EXPERIMENT) |
 | We evaluate the zero-shot classification performance of UniGS on Objaverse-Lvis, ABO, and MVImgNet without accessing their training sets. | component/input/data sensitivity | p. 8 (4 EXPERIMENT) |
 | Ablation study on the proposed modules of UniGS. | component/input/data sensitivity | p. 9 (4 EXPERIMENT) |
-| Published as a conference paper at ICLR 2025 Figure 4: Additional ablation study of the quality of 3DGS on the Text-driven retrieval task. | component/input/data sensitivity | p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION) |
+| Figure 5: Additional ablation study of the quality of 3DGS on the Zero-shot classification task. The accuracy of Zero-shot classification on ABO under three ... | component/input/data sensitivity | p. 15 (Figure/Table caption) |
 
 ## Main Results / Claim–Evidence Map
 
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 | Primary metric/result | As shown in Table 1, UniGS outperforms the current state-of-the-art approaches across all datasets and improves the Top 1 retrieval accuracy of CLIP2 and ... | numeric claim only at cited anchor | p. 7 (4 EXPERIMENT) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
-- **p. 7 / 4 EXPERIMENT - extractive PDF cue:** We train UniGS with a learning rate of 1e-4 for 15 epochs for the retrieval task and 50 epochs for the zero-shot classification and scene ...
-- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive PDF cue:** All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU.
-- **p. 14 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** In terms of time consumption, the whole training process on Objaverse costs 12.5 hours with 6×RTX4090 GPU, where UniGS is trained for 15 epochs on ...
-- **p. 14 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** After training 15 epochs on Objaverse, UniGS is directly evaluated on the entire Objaverse-Lvis, ABO, and MVimgnet datasets.
-- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive PDF cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
+- **p. 7 / 4 EXPERIMENT - extractive body cue:** We train UniGS with a learning rate of 1e-4 for 15 epochs for the retrieval task and 50 epochs for the zero-shot classification and scene ...
+- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive body cue:** All datasets can be successfully prepared on 6×RTX4090 GPU within 2 days, where 15 scenes can be optimized simultaneously on each GPU.
+- **p. 14 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** In terms of time consumption, the whole training process on Objaverse costs 12.5 hours with 6×RTX4090 GPU, where UniGS is trained for 15 epochs on ...
+- **p. 14 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** After training 15 epochs on Objaverse, UniGS is directly evaluated on the entire Objaverse-Lvis, ABO, and MVimgnet datasets.
+- **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
 
 ## Generalization and Failure Cases
 
@@ -165,13 +165,13 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** Limitations: Despite the robust and effective performance of UniGS for 3D representation learning and downstream applications, its current version lacks performance validation of out-door scenarios ...
-- **p. 10 / 5 CONCLUSION - extractive PDF cue:** Moreover, at least one image with a camera pose is required for the optimization of 3DGS, and how to further consider a camera-pose-free approach (e.g., ...
-- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive PDF cue:** Note that the saving interval should not be a multiplier of the opacity reset interval, otherwise the retained results may become unstable.
-- **p. 6 / 4 EXPERIMENT - extractive PDF cue:** Note that 3DGS does not necessarily exist on the surface of objects, so there is a certain difference between point clouds and the 3D location ...
-- **p. 9 / 4 EXPERIMENT - extractive PDF cue:** Moreover, the success of UniGS in SUN RGBD shows the robustness of 3DGS representation to the number of multi-view images.
+- **p. 10 / 5 CONCLUSION - extractive body cue:** Limitations: Despite the robust and effective performance of UniGS for 3D representation learning and downstream applications, its current version lacks performance validation of out-door scenarios ...
+- **p. 10 / 5 CONCLUSION - extractive body cue:** Moreover, at least one image with a camera pose is required for the optimization of 3DGS, and how to further consider a camera-pose-free approach (e.g., ...
+- **p. 14 / B.1 DETAILS OF ENSEMBLE DATASETS - extractive body cue:** Note that the saving interval should not be a multiplier of the opacity reset interval, otherwise the retained results may become unstable.
+- **p. 6 / 4 EXPERIMENT - extractive body cue:** Note that 3DGS does not necessarily exist on the surface of objects, so there is a certain difference between point clouds and the 3D location ...
+- **p. 9 / 4 EXPERIMENT - extractive body cue:** Moreover, the success of UniGS in SUN RGBD shows the robustness of 3DGS representation to the number of multi-view images.
 
-- **PDF anchors reviewed:** datasets p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 9 (4 EXPERIMENT), p. 14 (B.1 DETAILS OF ENSEMBLE DATASETS), p. 9 (4 EXPERIMENT), p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 7 (4 EXPERIMENT), metrics p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), baselines p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 6 (4 EXPERIMENT), p. 16 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 9 (4 EXPERIMENT), p. 14 (B.1 DETAILS OF ENSEMBLE DATASETS), p. 9 (4 EXPERIMENT), p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 7 (4 EXPERIMENT), metrics p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), baselines p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 6 (4 EXPERIMENT), p. 16 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

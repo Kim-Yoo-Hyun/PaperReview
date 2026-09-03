@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://2026.ieee-icra.org/awards/; PDF retrieval source: https://arxiv.org/pdf/2503.08950. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://2026.ieee-icra.org/awards/; PDF retrieval source: https://arxiv.org/pdf/2503.08950. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** As we pre-train our FP3 model on the DROID dataset, we also build a real robot setup similar to DROID for evaluating downstream tasks.
-- **p. 4 / III. METHOD - extractive PDF cue:** Different from the fine-tuning settings adopted in most existing robot foundation models in which they focus on either fine-tuning the model to adapt to new ...
-- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** We further move the robot arm to novel environments and evaluate the policies with unseen objects.
-- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** More experiments on generalization Having demonstrated the efficient adaptation to new tasks and remarkable generalizability to novel objects and environments of FP3, we conduct more ...
-- **p. 4 / III. METHOD - extractive PDF cue:** To build a 3D policy foundation model, we need to train our model on large-scale 3D robotic manipulation datasets.
-- **p. 8 / V. LIMITATIONS - extractive PDF cue:** Future work can consider collecting larger 3D robotics datasets for pre-training.
-- **p. 8 / V. LIMITATIONS - extractive PDF cue:** One possible reason is that the pre-training dataset DROID is still not large enough compared to other 2D robotics datasets like OXE.
-- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** We fine-tune FP3 and baseline methods on 80 demonstrations from 8 environments and evaluate them on four in-domain environments with seen objects and four in-the-wild ...
+- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** As we pre-train our FP3 model on the DROID dataset, we also build a real robot setup similar to DROID for evaluating downstream tasks.
+- **p. 4 / III. METHOD - extractive body cue:** Different from the fine-tuning settings adopted in most existing robot foundation models in which they focus on either fine-tuning the model to adapt to new ...
+- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** We further move the robot arm to novel environments and evaluate the policies with unseen objects.
+- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** More experiments on generalization Having demonstrated the efficient adaptation to new tasks and remarkable generalizability to novel objects and environments of FP3, we conduct more ...
+- **p. 4 / III. METHOD - extractive body cue:** To build a 3D policy foundation model, we need to train our model on large-scale 3D robotic manipulation datasets.
+- **p. 8 / V. LIMITATIONS - extractive body cue:** Future work can consider collecting larger 3D robotics datasets for pre-training.
+- **p. 8 / V. LIMITATIONS - extractive body cue:** One possible reason is that the pre-training dataset DROID is still not large enough compared to other 2D robotics datasets like OXE.
+- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** We fine-tune FP3 and baseline methods on 80 demonstrations from 8 environments and evaluate them on four in-domain environments with seen objects and four in-the-wild ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4) Can FP3 correctly execute the corresponding tasks fol | EMPIRICAL / REAL-ROBOT OR HARDWARE | The actions predicted by the FP3 policy are significantly smoother and more precise, leading to a notably higher success rate compared to the strong ... | p. 5 (4) Can FP3 correctly execute the corresponding tasks fol) |
 | 4) Can FP3 correctly execute the corresponding tasks fol | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results in Table I show that in in-domain experiments, with only 10 demonstrations per scene, DP and DP3 can somewhat handle easier tasks, even ... | p. 5 (4) Can FP3 correctly execute the corresponding tasks fol) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** As we pre-train our FP3 model on the DROID dataset, we also build a real robot setup similar to DROID for evaluating downstream tasks.
-- **p. 4 / III. METHOD - extractive PDF cue:** Different from the fine-tuning settings adopted in most existing robot foundation models in which they focus on either fine-tuning the model to adapt to new ...
-- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** We further move the robot arm to novel environments and evaluate the policies with unseen objects.
-- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** More experiments on generalization Having demonstrated the efficient adaptation to new tasks and remarkable generalizability to novel objects and environments of FP3, we conduct more ...
-- **p. 4 / III. METHOD - extractive PDF cue:** To build a 3D policy foundation model, we need to train our model on large-scale 3D robotic manipulation datasets.
-- **p. 8 / V. LIMITATIONS - extractive PDF cue:** Future work can consider collecting larger 3D robotics datasets for pre-training.
-- **p. 8 / V. LIMITATIONS - extractive PDF cue:** One possible reason is that the pre-training dataset DROID is still not large enough compared to other 2D robotics datasets like OXE.
-- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** We fine-tune FP3 and baseline methods on 80 demonstrations from 8 environments and evaluate them on four in-domain environments with seen objects and four in-the-wild ...
+- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** As we pre-train our FP3 model on the DROID dataset, we also build a real robot setup similar to DROID for evaluating downstream tasks.
+- **p. 4 / III. METHOD - extractive body cue:** Different from the fine-tuning settings adopted in most existing robot foundation models in which they focus on either fine-tuning the model to adapt to new ...
+- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** We further move the robot arm to novel environments and evaluate the policies with unseen objects.
+- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** More experiments on generalization Having demonstrated the efficient adaptation to new tasks and remarkable generalizability to novel objects and environments of FP3, we conduct more ...
+- **p. 4 / III. METHOD - extractive body cue:** To build a 3D policy foundation model, we need to train our model on large-scale 3D robotic manipulation datasets.
+- **p. 8 / V. LIMITATIONS - extractive body cue:** Future work can consider collecting larger 3D robotics datasets for pre-training.
+- **p. 8 / V. LIMITATIONS - extractive body cue:** One possible reason is that the pre-training dataset DROID is still not large enough compared to other 2D robotics datasets like OXE.
+- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** We fine-tune FP3 and baseline methods on 80 demonstrations from 8 environments and evaluate them on four in-domain environments with seen objects and four in-the-wild ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of 3D Foundation Policy (FP3), a 1.3B 3D point cloud-based language-visuomotor policy pre-trained on 60k episodes from the DROID dataset [35]. FP3 ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: FP3 architecture. Each camera view's point cloud observation Pi t (with history length of two) is encoded with a Uni3D ViT-L [77] encoder. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Task illustrations. We evaluate our model on four downstream tasks: Fold Towel, Clean Table, Stand up Cup, and Pour Water. Tasks. We choose ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4: Visualizations of post-training environments and in-the-wild evaluations. The green boxes represent successful steps, while the red boxes represent failed ones. FP3 generalize well ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Generalization evaluation. We evaluate FP3 and baseline policies on a diverse set of tasks, covering different axes of generalization, including lighting, camera view, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 6: Instruction following evaluation. We evaluate FP3 and baseline policies in the same initial state with different language instructions. FP3 can perfectly follow the ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 8. We list the training hyperparameters for pre-training and fine-tuning in Table III and Table IV. We train all models on
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Fig. 7: Scenes visualization of 8 post-training scenes and 4 unseen scenes for evaluation.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of 3D Foundation Policy (FP3), a 1.3B 3D point cloud-based language-visuomotor policy pre-trained on 60k episodes from the DROID dataset [35]. FP3 ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: FP3 architecture. Each camera view's point cloud observation Pi t (with history length of two) is encoded with a Uni3D ViT-L [77] encoder. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Task illustrations. We evaluate our model on four downstream tasks: Fold Towel, Clean Table, Stand up Cup, and Pour Water. Tasks. We choose ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: Visualizations of post-training environments and in-the-wild evaluations. The green boxes represent successful steps, while the red boxes represent failed ones. FP3 generalize well ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Generalization evaluation. We evaluate FP3 and baseline policies on a diverse set of tasks, covering different axes of generalization, including lighting, camera view, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6: Instruction following evaluation. We evaluate FP3 and baseline policies in the same initial state with different language instructions. FP3 can perfectly follow the ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 8. We list the training hyperparameters for pre-training and fine-tuning in Table III and Table IV. We train all models on
+- **p. 14 / Figure/Table caption - extractive body cue:** Fig. 7: Scenes visualization of 8 post-training scenes and 4 unseen scenes for evaluation.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | As we pre-train our FP3 model on the DROID dataset, we also build a real robot setup similar to DROID for evaluating downstream tasks. | embodiment, simulator version and control stack | p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD) |
 | Task/environment | Different from the fine-tuning settings adopted in most existing robot foundation models in which they focus on either fine-tuning the model to adapt to ... | reset, timeout, object/scene variation | p. 4 (III. METHOD), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 | Primary metric/result | Results in Table I show that in in-domain experiments, with only 10 demonstrations per scene, DP and DP3 can somewhat handle easier tasks, even ... | numeric claim only at cited anchor | p. 5 (4) Can FP3 correctly execute the corresponding tasks fol) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / III. METHOD - extractive PDF cue:** Pour the water in the bottle into the cup Language Instruction (𝑥, 𝑦, 𝑧, α, 𝛽, 𝛾, 𝑔) Proprioception States Uni3D ViT Uni3D ViT CLIP ...
-- **p. 4 / III. METHOD - extractive PDF cue:** Thus, in this work, we pre-train FP3 with the DROID dataset [35], which includes 86 tasks and 76k demonstrations and provides depth observation data.
-- **p. 4 / III. METHOD - extractive PDF cue:** Further, we downsample each point cloud by farthest point sampling (FPS, [48]) to 4000 points to facilitate model training while retaining sufficient information.
-- **p. 4 / III. METHOD - extractive PDF cue:** The FP3 base model is pre-trained for 3M steps with a batch size of 128 using 8 NVIDIA A800 GPUs, which takes about 48 hours.
-- **p. 4 / III. METHOD - extractive PDF cue:** Fine-tuning the same model on a single NVIDIA A800 GPU takes approximately 2 hours and can be further sped up with multi-GPU training.
-- **p. 4 / III. METHOD - extractive PDF cue:** To handle the partial observation, we stack 2 frames as input, including 1 step observation history, to compensate for the missing dynamic information of the ...
+- **p. 4 / III. METHOD - extractive body cue:** Pour the water in the bottle into the cup Language Instruction (𝑥, 𝑦, 𝑧, α, 𝛽, 𝛾, 𝑔) Proprioception States Uni3D ViT Uni3D ViT CLIP ...
+- **p. 4 / III. METHOD - extractive body cue:** Thus, in this work, we pre-train FP3 with the DROID dataset [35], which includes 86 tasks and 76k demonstrations and provides depth observation data.
+- **p. 4 / III. METHOD - extractive body cue:** Further, we downsample each point cloud by farthest point sampling (FPS, [48]) to 4000 points to facilitate model training while retaining sufficient information.
+- **p. 4 / III. METHOD - extractive body cue:** The FP3 base model is pre-trained for 3M steps with a batch size of 128 using 8 NVIDIA A800 GPUs, which takes about 48 hours.
+- **p. 4 / III. METHOD - extractive body cue:** Fine-tuning the same model on a single NVIDIA A800 GPU takes approximately 2 hours and can be further sped up with multi-GPU training.
+- **p. 4 / III. METHOD - extractive body cue:** To handle the partial observation, we stack 2 frames as input, including 1 step observation history, to compensate for the missing dynamic information of the ...
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** This phenomenon happens probably because the fine-tuning data is limited, thus the policies without pre-training can fall into an out-of-distribution state after the first failure, ...
-- **p. 8 / V. LIMITATIONS - extractive PDF cue:** While FP3 shows strong performance as a policy foundation model, it still has several limitations.
-- **p. 8 / V. LIMITATIONS - extractive PDF cue:** One limitation is that although FP3 enables efficient and generalizable downstream fine-tuning, the base model exhibits limited zero-shot performance.
-- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** Qualitatively, we find that the failures of all baseline algorithms are mainly due to issues in the details, such as not being precise enough when ...
-- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive PDF cue:** Another interesting issue is the policy's response after an initial failure attempt.
-- **p. 7 / 8 Training Scenes - extractive PDF cue:** FP3 generalize well to all unseen environments and new objects, while Diffusion Policy often fails to recognize the target object or misses the target position.
+- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** This phenomenon happens probably because the fine-tuning data is limited, thus the policies without pre-training can fall into an out-of-distribution state after the first failure, ...
+- **p. 8 / V. LIMITATIONS - extractive body cue:** While FP3 shows strong performance as a policy foundation model, it still has several limitations.
+- **p. 8 / V. LIMITATIONS - extractive body cue:** One limitation is that although FP3 enables efficient and generalizable downstream fine-tuning, the base model exhibits limited zero-shot performance.
+- **p. 5 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** Qualitatively, we find that the failures of all baseline algorithms are mainly due to issues in the details, such as not being precise enough when ...
+- **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** Another interesting issue is the policy's response after an initial failure attempt.
+- **p. 7 / 8 Training Scenes - extractive body cue:** FP3 generalize well to all unseen environments and new objects, while Diffusion Policy often fails to recognize the target object or misses the target position.
 
-- **PDF anchors reviewed:** datasets p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD), p. 8 (V. LIMITATIONS), metrics p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 8 (8 Training Scenes), p. 1 (Figure/Table caption), p. 4 (III. METHOD), baselines p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 7 (8 Training Scenes), p. 8 (8 Training Scenes), results p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 7 (8 Training Scenes), p. 8 (8 Training Scenes), p. 4 (III. METHOD).
+- **Evidence anchors reviewed:** datasets p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD), p. 8 (V. LIMITATIONS), metrics p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 8 (8 Training Scenes), p. 1 (Figure/Table caption), p. 4 (III. METHOD), baselines p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 7 (8 Training Scenes), p. 8 (8 Training Scenes), results p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 7 (8 Training Scenes), p. 8 (8 Training Scenes), p. 4 (III. METHOD).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

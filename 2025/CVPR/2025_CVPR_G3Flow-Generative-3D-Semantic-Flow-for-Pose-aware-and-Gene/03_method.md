@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flo
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Our system, G3Flow, consists of five key modules detailed in the following sections: a) Object-centric Exploration for active multi-view observation collection; b) ... | p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Our framework consists of (top) an initialization phase that generates comprehensive 3D representation (surface normals, wireframe, and geometry) through object-centric exploration and ... | p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flo
 |---|---|---|---|
 | Horizon | noise/time schedule 또는 action sample horizon; exact denoising steps 확인 필요. | Our method significantly outperforms baselines, achieving a decision frequency of 34.04 Hz, nearly 6 times faster than GenDP [34], meeting the requirements ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 iterative sampling/inference rate가 분리된다. | Our framework operates in two phases: (1) Initial semantic flow construction through object-centric exploration and digital twin generation, where a robot actively ... | Hz/fps, inference time and control rate |
-| Memory | current noisy sample, condition과 time/noise embedding. | not recovered | window and reset |
+| Memory | current noisy sample, condition과 time/noise embedding. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | number of denoising/ODE steps와 network evaluation이 latency를 결정한다. | Our method significantly outperforms baselines, achieving a decision frequency of 34.04 Hz, nearly 6 times faster than GenDP [34], meeting the requirements ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flo
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction), p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), p. 3 (3.1. Overview), p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), objective p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), p. 3 (3.2. Initial Semantic Flow Construction), p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), p. 6 (3.4. G3Flow-Enhanced Diffusion Policy), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction), temporal p. 7 (4.4. Ablation Study), p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction), p. 5 (3.3. Dynamic Semantic Flow Maintenance), p. 5 (3.3. Dynamic Semantic Flow Maintenance).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction), p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), p. 3 (3.1. Overview), p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), objective p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), p. 3 (3.2. Initial Semantic Flow Construction), p. 5 (3.4. G3Flow-Enhanced Diffusion Policy), p. 6 (3.4. G3Flow-Enhanced Diffusion Policy), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction), temporal p. 7 (4.4. Ablation Study), p. 3 (3.1. Overview), p. 4 (3.2. Initial Semantic Flow Construction), p. 4 (3.2. Initial Semantic Flow Construction), p. 5 (3.3. Dynamic Semantic Flow Maintenance), p. 5 (3.3. Dynamic Semantic Flow Maintenance).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our system, G3Flow, consists of five key modules detailed in the following sections: a) Object-centric Exploration for active multi-view observation collection; b) Object 3D Model Generation through 3D generative models; ... (p. 3, 3.1. Overview).
+- **Objective/update evidence:** We employ the DDIM scheduler for noise scheduling and optimize a noise prediction objective. (p. 5, 3.4. G3Flow-Enhanced Diffusion Policy).
+- **Temporal/runtime evidence:** Our method significantly outperforms baselines, achieving a decision frequency of 34.04 Hz, nearly 6 times faster than GenDP [34], meeting the requirements of most real-time robotics manipulation tasks. (p. 7, 4.4. Ablation Study).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

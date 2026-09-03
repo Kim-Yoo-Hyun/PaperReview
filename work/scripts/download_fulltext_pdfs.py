@@ -115,6 +115,11 @@ PDF_FALLBACKS = {
     "pr-0458": "https://chatpaper.com/api/v1/articles/download/331054",
     "pr-0460": "https://chatpaper.com/api/v1/articles/download/331577",
     "pr-0465": "https://chatpaper.com/api/v1/articles/download/328620",
+    # The official ICML/OpenReview PDF endpoint was challenge-protected in
+    # this environment.  ChatPaper exposes a cached copy of the OpenReview
+    # manuscript; download validation still checks the PDF magic, page text,
+    # and title overlap before it is used as evidence.
+    "pr-0813": "https://chatpaper.com/api/v1/articles/download/328943",
     # OpenReview/venue pages whose public PDF endpoint was challenged during
     # the CORE/NEXT pass; the matching arXiv version is used and verified by
     # page count and first-page title overlap before it can become evidence.
@@ -167,6 +172,24 @@ PDF_FALLBACKS = {
     # the DOI remains the canonical bibliographic source and equations are
     # still treated as page-anchored evidence rather than copied verbatim.
     "pr-0823": "https://dl.icdst.org/pdfs/files/4133b00a8bb6a836906454c19812cdc6.pdf",
+    # Remaining all-registry records with body-level PDF sources located
+    # during the 2026-09-03 source audit.  The registry's canonical source
+    # remains the recorded venue/OpenReview page; these URLs are retrieval
+    # fallbacks only and are validated before note generation.
+    "pr-0108": "https://arxiv.org/pdf/2506.07961.pdf",
+    "pr-0112": "https://arxiv.org/pdf/2506.19212.pdf",
+    "pr-0116": "https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf",
+    "pr-0120": "https://arxiv.org/pdf/2506.06487.pdf",
+    "pr-0123": "https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf",
+    "pr-0126": "https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf",
+    "pr-0127": "https://arxiv.org/pdf/2505.21906.pdf",
+    "pr-0130": "https://arxiv.org/pdf/2505.16969.pdf",
+    "pr-0131": "https://arxiv.org/pdf/2503.22204.pdf",
+    "pr-0442": "https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf",
+    "pr-0445": "https://arxiv.org/pdf/2506.09417.pdf",
+    "pr-0447": "https://papers.nips.cc/paper_files/paper/2025/file/4809dd4b628b6253d0aad0154014f7a3-Paper-Conference.pdf",
+    "pr-0822": "https://people.stfx.ca/jdelamer/courses/csci-564/_downloads/b2220c66675ddde471ca1795147b8e86/A_Formal_Basis_for_the_Heuristic_Determination_of_Minimum_Cost_Paths.pdf",
+    "pr-0824": "https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf",
     "pr-0551": "https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/PRM/prmbasic_01.pdf",
     "pr-0552": "https://msl.cs.illinois.edu/~lavalle/papers/Lav98c.pdf",
     "pr-0558": "https://web.archive.org/web/20240419050012id_/http://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf",
@@ -174,6 +197,21 @@ PDF_FALLBACKS = {
     "pr-0827": "https://users.cs.duke.edu/~tomasi/public/ReadingGroup/Ferrari%20and%20Canny%20ICRA%201992.pdf",
     "pr-0828": "https://people.csail.mit.edu/katiebyl/kb/DW2008/papers_of_tangential_interest/kajita03.pdf",
     "pr-0831": "https://www.roboti.us/lab/papers/TodorovIROS12.pdf",
+    # Alternate official/author-hosted copies for the remaining insight-note
+    # refresh failures.  The registry's canonical source remains unchanged;
+    # these URLs are retrieval fallbacks and are validated before use.
+    "pr-0091": "https://arxiv.org/pdf/2602.09973.pdf",
+    "pr-0094": "https://arxiv.org/pdf/2602.09657.pdf",
+    "pr-0101": "https://edem-ai.github.io/sim2realvla.github.io/static/paper/Sim2Real_VLA1_2025.pdf",
+    "pr-0103": "https://arxiv.org/pdf/2509.22548.pdf",
+    "pr-0106": "https://arxiv.org/pdf/2510.21307.pdf",
+    "pr-0107": "https://arxiv.org/pdf/2501.01428.pdf",
+    "pr-0109": "https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf",
+    "pr-0113": "https://arxiv.org/pdf/2507.16815.pdf",
+    "pr-0115": "https://arxiv.org/pdf/2512.10046.pdf",
+    "pr-0384": "https://openaccess.thecvf.com/content/ICCV2025/papers/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.pdf",
+    "pr-0397": "https://arxiv.org/pdf/2410.01517.pdf",
+    "pr-0594": "https://groups.csail.mit.edu/robotics-center/public_papers/Kuindersma14.pdf",
 }
 
 PREFERRED_FALLBACK_IDS = {"pr-0551", "pr-0552", "pr-0558", "pr-0820", "pr-0823"}
@@ -267,7 +305,43 @@ def discovered_venue_fallback(path: Path, paper_id: str, prefix: str) -> str | N
     return None
 
 
-def candidates(item: dict[str, Any]) -> list[str]:
+def discovered_chatpaper_fallback(item: dict[str, Any], output_dir: Path) -> str | None:
+    """Use a validated search hit as a temporary PDF retrieval fallback.
+
+    The search result is task-scoped and is never treated as the canonical
+    bibliographic source.  It is useful when OpenReview's PDF endpoint is
+    challenge-protected, or when a proceedings host is temporarily
+    unavailable.  The downloader still validates the returned file before it
+    can be used by the full-text reviewer.
+    """
+    path = output_dir / "chatpaper_search_candidates.json"
+    if not path.exists():
+        return None
+    try:
+        records = json.loads(path.read_text(encoding="utf-8")).get("records", [])
+        record = next(
+            (value for value in records if value.get("paper_id") == item["paper_id"]),
+            None,
+        )
+        best = (record or {}).get("best") or {}
+        if (record or {}).get("status") != "matched":
+            return None
+        source_type = best.get("source_type")
+        source_id = best.get("source_id")
+        article_id = best.get("id")
+        if source_type == "openreview" and isinstance(article_id, int):
+            return f"https://chatpaper.com/api/v1/articles/download/{article_id}"
+        pdf_url = best.get("pdf_url")
+        if isinstance(pdf_url, str) and pdf_url.startswith(("http://", "https://")):
+            return pdf_url
+        if source_type == "arxiv" and isinstance(source_id, str) and source_id:
+            return f"https://arxiv.org/pdf/{source_id}.pdf"
+    except (OSError, json.JSONDecodeError, StopIteration, AttributeError, TypeError):
+        return None
+    return None
+
+
+def candidates(item: dict[str, Any], output_dir: Path | None = None) -> list[str]:
     urls: list[str] = []
     preferred_fallback = (
         PDF_FALLBACKS.get(item["paper_id"])
@@ -294,6 +368,7 @@ def candidates(item: dict[str, Any]) -> list[str]:
         ),
         pmlr_fallback(item),
         openreview_fallback(item),
+        discovered_chatpaper_fallback(item, output_dir) if output_dir else None,
     )
     for url in ordered:
         if isinstance(url, str) and url.startswith(("http://", "https://")) and url not in urls:
@@ -409,7 +484,7 @@ def download_one(
         "title": item["title"],
         "folder": item["folder"],
         "target": str(target.relative_to(ROOT)),
-        "candidate_urls": candidates(item) + overview_pdf_candidates(item),
+        "candidate_urls": candidates(item, output_dir) + overview_pdf_candidates(item),
         "checked_at": datetime.now(timezone.utc).isoformat(),
     }
 

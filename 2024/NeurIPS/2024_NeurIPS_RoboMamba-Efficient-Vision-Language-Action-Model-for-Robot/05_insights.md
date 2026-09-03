@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 In summary, our contributions are as follows: • We introduce RoboMamba, an efficient VLA model that integrates a vision encoder with the linear-complexity Mamba LLM, which possesses visual common sense and robotic-related ...를 With its strong reasoning abilities, RoboMamba achieves state-of-the-art (SOTA) manipulation performance in the SAPIEN simulation [28], requiring only a 7MB policy head and a few dozen minutes of fine-tuning on a single ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Prediction of past and future actions is crucial in robotic manipulation, as it not only enables effective rethinking of past failure actions but also enhances the robustness of future manipulation pose generation.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: • We introduce RoboMamba, an efficient VLA model that integrates a vision encoder with the linear-complexity Mamba LLM, which possesses visual common sense and robotic-related ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Manipulation Q: Given <image> Predict the contact point and orientation for pulling the {object} Question: Predict the contact point … RoboMamba Mamba Language Model Tokenizer Policy Head Vision Language Vision ... (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** Drawing inspiration from this, we raise a question: "Can we develop an efficient robotic VLA model that possesses strong reasoning capabilities while also acquiring robot manipulation skills in a cost-effective ... (p. 2, 1.1 Hz).
+- **Evidence boundary:** the reported outcome is 4.5 Real-world experiments As shown in Figure 4, we visualize RoboMamba's reasoning results across various robotic downstream tasks. (p. 10, 4 Experiment); the relevant task/metric cue is Manipulation evaluation benchmarks To evaluate our model's manipulation capabilities, we follow previous works [57, 63, 15] and test open-loop task completion accuracy exclusively in the simulator [28]. (p. 7, 4 Experiment). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 21, 2. Limitations).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Datasets (Stage 2) For the dataset used in the robot manipulation fine-tuning stage, we follow the data collection process of previous works [61, 15], adopting the SAPIEN engine [28] to set up ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We choose LLaMA-AdapterV2 as a baseline because it serves as the base model for the current state-of-the-art (SOTA) robot MLLM, ManipLLM [15]..
-4. Report the body metric and its denominator/aggregation: To measure the model's performance, we use the classical manipulation success rate, defined as the ratio of successfully manipulated samples to the total test samples..
-5. Re-run the body-reported ablation/failure condition: validate the effectiveness of each method design, we perform an ablation study in Section 4.4..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Manipulation Q: Given <image> Predict the contact point and orientation for pulling the {object} Question: Predict the contact point … RoboMamba Mamba Language Model Tokenizer Policy Head Vision Language Vision ... (p. 2, 1 Introduction); preserve the objective/update rule: A fundamental objective in robot manipulation is to enable models to comprehend visual scenes and execute actions. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: Datasets (Stage 2) For the dataset used in the robot manipulation fine-tuning stage, we follow the data collection process of previous works [61, 15], adopting the SAPIEN engine [28] to ... (p. 7, 4 Experiment).
+3. Compare against the reported or matched baseline: Before comparison, we reproduce all baselines and train them on our collected dataset. (p. 8, 4 Experiment).
+4. Report the body metric with its denominator and aggregation: Manipulation evaluation benchmarks To evaluate our model's manipulation capabilities, we follow previous works [57, 63, 15] and test open-loop task completion accuracy exclusively in the simulator [28]. (p. 7, 4 Experiment).
+5. Re-run the reported ablation or stress/failure condition: validate the effectiveness of each method design, we perform an ablation study in Section 4.4. (p. 7, 4 Experiment); if none is reported, design one around: Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 21, 2. Limitations).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (1.1 Hz), p. 1 (Abstract), p. 2 (1 Introduction); the primary result is directionally consistent at p. 8 (4 Experiment), p. 9 (4 Experiment), p. 8 (4 Experiment); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1.1 Hz), p. 3 (1.1 Hz), match the reported outcome at p. 10 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment), and measure the boundary at p. 21 (2. Limitations), p. 24 (8. Experiments Compute Resources).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, contributions, follows mechanism이 We choose LLaMA-AdapterV2 as a baseline because it serves as the base model for the current ... 대비 To measure the model's performance, we use the classical manipulation success rate, defined as the ratio of successfully ...을 개선하고, Prediction of past and future actions is crucial in robotic manipulation, as it not only enables ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Manipulation Q: Given <image> Predict the contact point and orientation for pulling the {object} Question: Predict the contact point … RoboMamba Mamba ...), does the paper-specific mechanism (Drawing inspiration from this, we raise a question: "Can we develop an efficient robotic VLA model that possesses strong reasoning capabilities while ...) retain the reported evaluation outcome (Manipulation evaluation benchmarks To evaluate our model's manipulation capabilities, we follow previous works [57, 63, 15] and test ...) when tested against the paper's strongest explicit boundary (Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Manipulation evaluation benchmarks To evaluate our model's manipulation capabilities, we follow previous works [57, 63, 15] and test ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Drawing inspiration from this, we raise a question: "Can we develop an efficient robotic VLA model that possesses strong reasoning capabilities while also acquiring robot manipulation skills in a cost-effective ... (p. 2, 1.1 Hz).
+- **Paper-supported outcome:** 4.5 Real-world experiments As shown in Figure 4, we visualize RoboMamba's reasoning results across various robotic downstream tasks. (p. 10, 4 Experiment).
+- **Strongest explicit boundary:** Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 21, 2. Limitations).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

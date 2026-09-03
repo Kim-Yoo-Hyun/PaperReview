@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=nI7wKr4eop; PDF retrieval source: https://openreview.net/pdf/cd7e09ca72d630a0363a9ec8424f3ecb4a20a578.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=nI7wKr4eop; PDF retrieval source: https://arxiv.org/pdf/2506.04789. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 
 ## Method Body Digest
 
-- **p. 9 / Method - extractive PDF cue:** Object-X is then applied to obtain the object embedding from this input which is then fed directly into our decoder.
-- **p. 9 / Method - extractive PDF cue:** In contrast, Object-X focuses on reconstruction rather than generation, leveraging voxel-grounded latent representations to maintain geometric consistency even under large appearance or domain shifts.
-- **p. 10 / Method - extractive PDF cue:** In constrast to the baselines, Object-X is used without training on this task.
-- **p. 10 / Method - extractive PDF cue:** We compare Object-X to 3DGS (28) optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
-- **p. 10 / Method - extractive PDF cue:** Unlike SGAligner, explicitly trained for this task using point cloud and object-level modalities, our method relies solely on the proposed Object-X embedding trained with reconstruction ...
-- **p. 9 / Method - extractive PDF cue:** We compare our approach to 3DGS (28) which optimizes 3D Gaussian splats based on a single masked image.
-- **p. 9 / Method - extractive PDF cue:** Runtime remains comparable to the 12-view baselines, and significantly faster than full-scene 3DGS optimization.
-- **p. 4 / 1 Introduction - extractive PDF cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
+- **p. 9 / Method - extractive body cue:** Object-X is then applied to obtain the object embedding from this input which is then fed directly into our decoder.
+- **p. 9 / Method - extractive body cue:** In contrast, Object-X focuses on reconstruction rather than generation, leveraging voxel-grounded latent representations to maintain geometric consistency even under large appearance or domain shifts.
+- **p. 10 / Method - extractive body cue:** In constrast to the baselines, Object-X is used without training on this task.
+- **p. 10 / Method - extractive body cue:** We compare Object-X to 3DGS [28] optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
+- **p. 10 / Method - extractive body cue:** Unlike SGAligner, explicitly trained for this task using point cloud and object-level modalities, our method relies solely on the proposed Object-X embedding trained with reconstruction ...
+- **p. 9 / Method - extractive body cue:** We compare our approach to 3DGS [28] which optimizes 3D Gaussian splats based on a single masked image.
+- **p. 9 / Method - extractive body cue:** Runtime remains comparable to the 12-view baselines, and significantly faster than full-scene 3DGS optimization.
+- **p. 4 / 1 Introduction - extractive body cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
 
 ## Design Rationale
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
-- **p. 5 / 1 Introduction - extractive PDF cue:** Specifically, we introduce a decompression function fdecomp that maps w back to a predicted ˆz = {ˆzi, pi}L i=1.
-- **p. 10 / Method - extractive PDF cue:** Our method, along with SceneGraphLoc and the recent CrossOver (24), uses a ViT to extract per-patch object embeddings from the query image.
+- **p. 4 / 1 Introduction - extractive body cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
+- **p. 5 / 1 Introduction - extractive body cue:** Specifically, we introduce a decompression function fdecomp that maps w back to a predicted ˆz = {ˆzi, pi}L i=1.
+- **p. 10 / Method - extractive body cue:** Our method, along with SceneGraphLoc and the recent CrossOver [23], uses a ViT to extract per-patch object embeddings from the query image.
 
 ## Source Evidence Cues
 
-- **p. 9 / Method - extractive PDF cue:** Object-X is then applied to obtain the object embedding from this input which is then fed directly into our decoder.
-- **p. 9 / Method - extractive PDF cue:** In contrast, Object-X focuses on reconstruction rather than generation, leveraging voxel-grounded latent representations to maintain geometric consistency even under large appearance or domain shifts.
-- **p. 10 / Method - extractive PDF cue:** In constrast to the baselines, Object-X is used without training on this task.
-- **p. 10 / Method - extractive PDF cue:** We compare Object-X to 3DGS (28) optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
+- **p. 9 / Method - extractive body cue:** Object-X is then applied to obtain the object embedding from this input which is then fed directly into our decoder.
+- **p. 9 / Method - extractive body cue:** In contrast, Object-X focuses on reconstruction rather than generation, leveraging voxel-grounded latent representations to maintain geometric consistency even under large appearance or domain shifts.
+- **p. 10 / Method - extractive body cue:** In constrast to the baselines, Object-X is used without training on this task.
+- **p. 10 / Method - extractive body cue:** We compare Object-X to 3DGS [28] optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
 - **Detected method headings:** Method (p. 9)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Object-X is then applied to obtain the object embedding from this input which is then fed directly into our decoder. | p. 9 (Method), p. 9 (Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | In contrast, Object-X focuses on reconstruction rather than generation, leveraging voxel-grounded latent representations to maintain geometric consistency even under large appearance or ... | p. 9 (Method), p. 10 (Method) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 
 ## Objective / Update Rule
 
-- **p. 10 / Method - extractive PDF cue:** Unlike SGAligner, explicitly trained for this task using point cloud and object-level modalities, our method relies solely on the proposed Object-X embedding trained with reconstruction ...
-- **p. 9 / Method - extractive PDF cue:** We compare our approach to 3DGS (28) which optimizes 3D Gaussian splats based on a single masked image.
-- **p. 9 / Method - extractive PDF cue:** Runtime remains comparable to the 12-view baselines, and significantly faster than full-scene 3DGS optimization.
-- **p. 10 / Method - extractive PDF cue:** We compare Object-X to 3DGS (28) optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
+- **p. 10 / Method - extractive body cue:** Unlike SGAligner, explicitly trained for this task using point cloud and object-level modalities, our method relies solely on the proposed Object-X embedding trained with reconstruction ...
+- **p. 9 / Method - extractive body cue:** We compare our approach to 3DGS [28] which optimizes 3D Gaussian splats based on a single masked image.
+- **p. 9 / Method - extractive body cue:** Runtime remains comparable to the 12-view baselines, and significantly faster than full-scene 3DGS optimization.
+- **p. 10 / Method - extractive body cue:** We compare Object-X to 3DGS [28] optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 10 (Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** 3.1 Structured Latents from Multi-View Images Let a set of object instances O be given, where each object o = (P, I, M, A, . ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This forces systems to retain the original, high-bandwidth source data (images, point clouds, meshes) alongside the learned embeddings, undermining the goals of creating a compact, ...
-- **p. 9 / Method - extractive PDF cue:** Using the object mask and depth map, we lift the object pixels in 3D, obtaining a point cloud.
-- **p. 10 / Method - extractive PDF cue:** We indicate whether a method uses point cloud (P), image (I), other modalities like object attribute and relationship (O), or the proposed U-3DGS embedding.
-- **p. 2 / 1 Introduction - extractive PDF cue:** More recently, implicit neural and Gaussian representations, notably Neural Radiance Fields (NeRF) (16) and 3D Gaussian Splatting (3DGS) (11), have achieved state-of-the-art results in synthesising ...
-- **p. 9 / Method - extractive PDF cue:** Retrieval recall at various thresholds using various methods and input modalities.
+- **p. 4 / 1 Introduction - extractive body cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
+- **p. 4 / 1 Introduction - extractive body cue:** 3.1 Structured Latents from Multi-View Images Let a set of object instances O be given, where each object o = (P, I, M, A, . ...
+- **p. 2 / 1 Introduction - extractive body cue:** This forces systems to retain the original, high-bandwidth source data (images, point clouds, meshes) alongside the learned embeddings, undermining the goals of creating a compact, ...
+- **p. 9 / Method - extractive body cue:** Using the object mask and depth map, we lift the object pixels in 3D, obtaining a point cloud.
+- **p. 10 / Method - extractive body cue:** We indicate whether a method uses point cloud (P), image (I), other modalities like object attribute and relationship (O), or the proposed U-3DGS embedding.
+- **p. 2 / 1 Introduction - extractive body cue:** More recently, implicit neural and Gaussian representations, notably Neural Radiance Fields (NeRF) [15] and 3D Gaussian Splatting (3DGS) [10], have achieved state-of-the-art results in synthesising ...
+- **p. 9 / Method - extractive body cue:** Retrieval recall at various thresholds using various methods and input modalities.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,8 +85,8 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 
 ## Training vs Inference
 
-- **p. 10 / Method - extractive PDF cue:** In constrast to the baselines, Object-X is used without training on this task.
-- **p. 10 / Method - extractive PDF cue:** We compare Object-X to 3DGS (28) optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
+- **p. 10 / Method - extractive body cue:** In constrast to the baselines, Object-X is used without training on this task.
+- **p. 10 / Method - extractive body cue:** We compare Object-X to 3DGS [28] optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -106,13 +106,13 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** Objects without available images were removed to ensure a consistent evaluation.
-- **p. 26 / Figure/Table caption - extractive PDF cue:** Table 7: Ablation study on occlusion. Before encoding an object, we randomly select a point on its surface and remove all parts within a spherical ...
-- **p. 26 / Figure/Table caption - extractive PDF cue:** Table 6: Ablation study on latent dimensions. Mean and median LPIPS and PSNR on a subset of scans from the test set. We compare the ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** Ablation studies, more visuals, and detailed descriptions of baselines are provided in the supplementary material.
-- **p. 7 / 4 Experiments - extractive PDF cue:** As in 3RScan, objects without associated images are discarded.
-- **p. 8 / 4 Experiments - extractive PDF cue:** Even without training, we achieve the highest novel view synthesis scores compared to the baselines, being the closest to the reference 3DGS reconstruction.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Object-X learns object-centric embeddings from an input object segmentation of a 3D scene reconstruction. The embeddings learned from multi-modal data (e.g., mesh, images, ...
+- **p. 7 / 4 Experiments - extractive body cue:** Objects without available images were removed to ensure a consistent evaluation.
+- **p. 26 / Figure/Table caption - extractive body cue:** Table 7: Ablation study on occlusion. Before encoding an object, we randomly select a point on its surface and remove all parts within a spherical ...
+- **p. 26 / Figure/Table caption - extractive body cue:** Table 6: Ablation study on latent dimensions. Mean and median LPIPS and PSNR on a subset of scans from the test set. We compare the ...
+- **p. 6 / 4 Experiments - extractive body cue:** Ablation studies, more visuals, and detailed descriptions of baselines are provided in the supplementary material.
+- **p. 7 / 4 Experiments - extractive body cue:** As in 3RScan, objects without associated images are discarded.
+- **p. 8 / 4 Experiments - extractive body cue:** Even without training, we achieve the highest novel view synthesis scores compared to the baselines, being the closest to the reference 3DGS reconstruction.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Object-X learns object-centric embeddings from an input object segmentation of a 3D scene reconstruction. The embeddings learned from multi-modal data (e.g., mesh, images, ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,7 +126,7 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (Method), objective p. 10 (Method), p. 9 (Method), p. 9 (Method), p. 10 (Method), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (Method), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (Method), objective p. 10 (Method), p. 9 (Method), p. 9 (Method), p. 10 (Method), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (Method), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

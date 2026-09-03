@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 
 ## Method Body Digest
 
-- **p. 6 / 3 Method - extractive PDF cue:** Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more ...
-- **p. 7 / 3 Method - extractive PDF cue:** Without loss of generality, we use scene A as an example in the following description.
-- **p. 8 / 3 Method - extractive PDF cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
-- **p. 6 / 3 Method - extractive PDF cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
-- **p. 8 / 3 Method - extractive PDF cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
-- **p. 7 / 3 Method - extractive PDF cue:** First, we input IA into a 2D CNN to get features RefA, {Srck A}n k=0, which turn into the cost volume CostA according to the ...
-- **p. 5 / 3 Method - extractive PDF cue:**   {(  ,  )}  I3D Feature Extraction Superpoint Match Point Match 
-- **p. 7 / 3 Method - extractive PDF cue:** Followed by the 3DCNN regularization, the probability volume PA ∈RD×H×W and feature volume FA ∈RC×D×H×W are obtained from the cost volumes, where C is the ...
+- **p. 6 / 3 Method - extractive body cue:** Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more ...
+- **p. 7 / 3 Method - extractive body cue:** Without loss of generality, we use scene A as an example in the following description.
+- **p. 8 / 3 Method - extractive body cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
+- **p. 6 / 3 Method - extractive body cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
+- **p. 8 / 3 Method - extractive body cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
+- **p. 7 / 3 Method - extractive body cue:** First, we input IA into a 2D CNN to get features RefA, {Srck A}n k=0, which turn into the cost volume CostA according to the ...
+- **p. 5 / 3 Method - extractive body cue:**   {(  ,  )}  I3D Feature Extraction Superpoint Match Point Match 
+- **p. 7 / 3 Method - extractive body cue:** Followed by the 3DCNN regularization, the probability volume PA ∈RD×H×W and feature volume FA ∈RC×D×H×W are obtained from the cost volumes, where C is the ...
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** The main contributions can be summarized as: • To the best of our knowledge, we are the first to explore the registration of 3D scenes ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Ultimately, we propose a novel coarse-to-fine GS registration framework: GaussReg.
-- **p. 2 / 1 Introduction - extractive PDF cue:** 1: The purpose of our method is to register scenes A and B with Gaussian Splatting [17] models, and then combine A with B to ...
+- **p. 3 / 1 Introduction - extractive body cue:** The main contributions can be summarized as: • To the best of our knowledge, we are the first to explore the registration of 3D scenes ...
+- **p. 3 / 1 Introduction - extractive body cue:** Ultimately, we propose a novel coarse-to-fine GS registration framework: GaussReg.
+- **p. 2 / 1 Introduction - extractive body cue:** 1: The purpose of our method is to register scenes A and B with Gaussian Splatting [17] models, and then combine A with B to ...
 
 ## Source Evidence Cues
 
-- **p. 6 / 3 Method - extractive PDF cue:** Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more ...
-- **p. 7 / 3 Method - extractive PDF cue:** Without loss of generality, we use scene A as an example in the following description.
-- **p. 8 / 3 Method - extractive PDF cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
-- **p. 6 / 3 Method - extractive PDF cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
-- **p. 8 / 3 Method - extractive PDF cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
-- **p. 7 / 3 Method - extractive PDF cue:** First, we input IA into a 2D CNN to get features RefA, {Srck A}n k=0, which turn into the cost volume CostA according to the ...
-- **p. 5 / 3 Method - extractive PDF cue:**   {(  ,  )}  I3D Feature Extraction Superpoint Match Point Match 
+- **p. 6 / 3 Method - extractive body cue:** Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more ...
+- **p. 7 / 3 Method - extractive body cue:** Without loss of generality, we use scene A as an example in the following description.
+- **p. 8 / 3 Method - extractive body cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
+- **p. 6 / 3 Method - extractive body cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
+- **p. 8 / 3 Method - extractive body cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
+- **p. 7 / 3 Method - extractive body cue:** First, we input IA into a 2D CNN to get features RefA, {Srck A}n k=0, which turn into the cost volume CostA according to the ...
+- **p. 5 / 3 Method - extractive body cue:**   {(  ,  )}  I3D Feature Extraction Superpoint Match Point Match 
 - **Detected method headings:** 3 Method (p. 5)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region ... | p. 6 (3 Method), p. 7 (3 Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Without loss of generality, we use scene A as an example in the following description. | p. 7 (3 Method), p. 8 (3 Method) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 
 ## Objective / Update Rule
 
-- **p. 7 / 3 Method - extractive PDF cue:** Followed by the 3DCNN regularization, the probability volume PA ∈RD×H×W and feature volume FA ∈RC×D×H×W are obtained from the cost volumes, where C is the ...
-- **p. 8 / 3 Method - extractive PDF cue:** Depth loss is a cross-entropy loss to supervise the probability volume: \labe l
-- **p. 6 / 3 Method - extractive PDF cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
-- **p. 6 / 3 Method - extractive PDF cue:** 3.3 Image-Guided Fine Registration Since the GS model doesn't impose specific geometric constraints during training, resulting point clouds may exhibit some distortion.
-- **p. 7 / 3 Method - extractive PDF cue:** Without loss of generality, we use scene A as an example in the following description.
-- **p. 8 / 3 Method - extractive PDF cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
+- **p. 7 / 3 Method - extractive body cue:** Followed by the 3DCNN regularization, the probability volume PA ∈RD×H×W and feature volume FA ∈RC×D×H×W are obtained from the cost volumes, where C is the ...
+- **p. 8 / 3 Method - extractive body cue:** Depth loss is a cross-entropy loss to supervise the probability volume: \labe l
+- **p. 6 / 3 Method - extractive body cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
+- **p. 6 / 3 Method - extractive body cue:** 3.3 Image-Guided Fine Registration Since the GS model doesn't impose specific geometric constraints during training, resulting point clouds may exhibit some distortion.
+- **p. 7 / 3 Method - extractive body cue:** Without loss of generality, we use scene A as an example in the following description.
+- **p. 8 / 3 Method - extractive body cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 7 (3 Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 
 ## Observation–State–Action Interface
 
-- **p. 5 / 3 Method - extractive PDF cue:** The coarse registration accepts PointsA and PointsB as input, and output a coarse transformation {sc, Rc, Tc}.
-- **p. 6 / 3 Method - extractive PDF cue:** Training Strategy and Loss Function Due to the scale uncertainty in monocular video reconstruction, we performed data augmentation not only on rotation and translation but ...
-- **p. 7 / 3 Method - extractive PDF cue:** Image-Guided 3D Feature Extraction As shown in Figure 3, we adopt the principle of multi-view stereo (MVS) to estimate depth and extract volumetric features.
-- **p. 6 / 3 Method - extractive PDF cue:** Even though we normalized the scale of input point clouds within a certain range, such data augmentation still preserves the diversity of relative scale differences.
-- **p. 5 / 3 Method - extractive PDF cue:** After that, an Image-Guided 3D (I3D) Feature Extraction is adopted to obtain volumetric features from images, which are used for subsequent matching, achieving the final ...
-- **p. 7 / 3 Method - extractive PDF cue:** Under the selected cameras, the image sets IA and IB are rendered from GaussianA and GaussianB to be fed into the next feature extraction stage.
-- **p. 2 / 1 Introduction - extractive PDF cue:** The mainstream methods typically involve extracting features from point clouds and locating matching points to calculate the transformation between the two input scenes.
+- **p. 5 / 3 Method - extractive body cue:** The coarse registration accepts PointsA and PointsB as input, and output a coarse transformation {sc, Rc, Tc}.
+- **p. 6 / 3 Method - extractive body cue:** Training Strategy and Loss Function Due to the scale uncertainty in monocular video reconstruction, we performed data augmentation not only on rotation and translation but ...
+- **p. 7 / 3 Method - extractive body cue:** Image-Guided 3D Feature Extraction As shown in Figure 3, we adopt the principle of multi-view stereo (MVS) to estimate depth and extract volumetric features.
+- **p. 6 / 3 Method - extractive body cue:** Even though we normalized the scale of input point clouds within a certain range, such data augmentation still preserves the diversity of relative scale differences.
+- **p. 5 / 3 Method - extractive body cue:** After that, an Image-Guided 3D (I3D) Feature Extraction is adopted to obtain volumetric features from images, which are used for subsequent matching, achieving the final ...
+- **p. 7 / 3 Method - extractive body cue:** Under the selected cameras, the image sets IA and IB are rendered from GaussianA and GaussianB to be fed into the next feature extraction stage.
+- **p. 2 / 1 Introduction - extractive body cue:** The mainstream methods typically involve extracting features from point clouds and locating matching points to calculate the transformation between the two input scenes.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,11 +90,11 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 
 ## Training vs Inference
 
-- **p. 6 / 3 Method - extractive PDF cue:** Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more ...
-- **p. 6 / 3 Method - extractive PDF cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
-- **p. 8 / 3 Method - extractive PDF cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
-- **p. 11 / 4 Experiment - extractive PDF cue:** Both networks are trained separately for 40 epochs with a batch size of 1.
-- **p. 10 / 4 Experiment - extractive PDF cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
+- **p. 6 / 3 Method - extractive body cue:** Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more ...
+- **p. 6 / 3 Method - extractive body cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
+- **p. 8 / 3 Method - extractive body cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
+- **p. 11 / 4 Experiment - extractive body cue:** Both networks are trained separately for 40 epochs with a batch size of 1.
+- **p. 10 / 4 Experiment - extractive body cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 
 ## Failure and Ablation Link
 
-- **p. 12 / 4 Experiment - extractive PDF cue:** 4.3 Ablation Study To deeply analyze GaussReg, we conduct detailed ablation studies on the ScanNetGSReg dataset to evaluate the effectiveness of the proposed components.
-- **p. 12 / 4 Experiment - extractive PDF cue:** As shown in Table 2, our method achieves registration results close to HLoc without fine-tuning, proving the strong generalizability of our approach.
-- **p. 13 / 4 Experiment - extractive PDF cue:** GaussReg 13 Table 5: Ablation study with different k in overlap image selection on ScanNetGSReg. ↓means lower is better.
-- **p. 13 / 4 Experiment - extractive PDF cue:** I3D 3.169 0.036 0.061 0.066 6 Ours 2.827 0.042 0.032 0.080 As shown in Table 6, in Index-5, we remove the image-guided 3D (I3D) feature ...
-- **p. 13 / 5 Discussion - extractive PDF cue:** Limitations and Future Work We only adopt a simple strategy to fuse and filter two GS models.
-- **p. 11 / 4 Experiment - extractive PDF cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
-- **p. 13 / 5 Discussion - extractive PDF cue:** Future work can further explore to address this issue.
+- **p. 12 / 4 Experiment - extractive body cue:** 4.3 Ablation Study To deeply analyze GaussReg, we conduct detailed ablation studies on the ScanNetGSReg dataset to evaluate the effectiveness of the proposed components.
+- **p. 12 / 4 Experiment - extractive body cue:** As shown in Table 2, our method achieves registration results close to HLoc without fine-tuning, proving the strong generalizability of our approach.
+- **p. 13 / 4 Experiment - extractive body cue:** GaussReg 13 Table 5: Ablation study with different k in overlap image selection on ScanNetGSReg. ↓means lower is better.
+- **p. 13 / 4 Experiment - extractive body cue:** I3D 3.169 0.036 0.061 0.066 6 Ours 2.827 0.042 0.032 0.080 As shown in Table 6, in Index-5, we remove the image-guided 3D (I3D) feature ...
+- **p. 13 / 5 Discussion - extractive body cue:** Limitations and Future Work We only adopt a simple strategy to fuse and filter two GS models.
+- **p. 11 / 4 Experiment - extractive body cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
+- **p. 13 / 5 Discussion - extractive body cue:** Future work can further explore to address this issue.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), objective p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), temporal p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment).
+- **Evidence anchors reviewed:** method p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), objective p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), temporal p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

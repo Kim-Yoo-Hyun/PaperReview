@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://vla-arena.github.io/; PDF retrieval source: https://arxiv.org/pdf/2512.22539. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://vla-arena.github.io/; PDF retrieval source: https://arxiv.org/pdf/2512.22539. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Analysis of Performance and Failure Modes | BENCHMARK / DATASET | Second, without explicit safety constraints, models prioritize task completion, often incurring high CC to achieve success. | p. 7 (4.2. Analysis of Performance and Failure Modes) |
 | 4.1. Experimental Setup | BENCHMARK / DATASET | To provide a comprehensive assessment, we employ success rate (SR) and cumulative cost (CC) as metrics. | p. 7 (4.1. Experimental Setup) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To facilitate reproducible fine-tuning, we introduce curated datasets derived from human demonstrations. | embodiment, simulator version and control stack | p. 7 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup) |
 | Task/environment | Datasets are organized by level (i.e., L0 or L1) and size (i.e., Small, Medium, and Large, containing 10, 30, and 50 trajectories per task, ... | reset, timeout, object/scene variation | p. 7 (4.1. Experimental Setup), p. 8 (4.5. Ablation Study) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 - **p. 8 / 4.3. Diagnosing Semantic and Visual Grounding - extractive body cue:** While models appear robust to language command perturbations, their failure in semantic extrapolation tasks exposes a fundamental deficit in language-driven skill generalization.
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 7. Cross-layer Attention Visualization on the "plate" Token and Generalization Analysis across Models. This figure illustrates the 18-layer attention distributions of π0.5, π0, and ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 6 (4. Experiments), p. 6 (4.1. Experimental Setup), metrics p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption), p. 47 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (4.4. Disentangling Memorization from Generalization), baselines p. 7 (4.2. Analysis of Performance and Failure Modes), p. 6 (4.1. Experimental Setup), p. 6 (4. Experiments), p. 8 (4.5. Ablation Study), p. 20 (Figure/Table caption), p. 7 (4.2. Analysis of Performance and Failure Modes), results p. 7 (4.2. Analysis of Performance and Failure Modes), p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption), p. 47 (Figure/Table caption), p. 8 (4.4. Disentangling Memorization from Generalization).
+- **Evidence anchors reviewed:** datasets p. 7 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 6 (4. Experiments), p. 6 (4.1. Experimental Setup), metrics p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption), p. 47 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (4.4. Disentangling Memorization from Generalization), baselines p. 7 (4.2. Analysis of Performance and Failure Modes), p. 6 (4.1. Experimental Setup), p. 6 (4. Experiments), p. 8 (4.5. Ablation Study), p. 20 (Figure/Table caption), p. 7 (4.2. Analysis of Performance and Failure Modes), results p. 7 (4.2. Analysis of Performance and Failure Modes), p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption), p. 47 (Figure/Table caption), p. 8 (4.4. Disentangling Memorization from Generalization).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Comprehensive Comparison with Existing Robotics Benchmarks. Benchmarks are grouped by their underlying Physics Engine. Resources: Data (Fine-grained, filtered datasets), Frmwk (Open framework supporting custom uploads). Structu ... (p. 3, Figure/Table caption).
+- **Metric evidence:** VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models VLA-Arena (Ours) LIBERO Benchmark 0.0 0.2 0.4 0.6 0.8 1.0 Success Rate -52% -28% -64% -28% w/ Correct Language Instruction w/ Wrong ... (p. 8, 4.3. Diagnosing Semantic and Visual Grounding).
+- **Baseline/ablation evidence:** In Table 2, a crossmodel comparison indicates that π0 generally outperforms the other models. (p. 7, 4.2. Analysis of Performance and Failure Modes).
+- **Failure/negative evidence:** While VLAs have progressed rapidly, their capability boundaries, limitations, and failure modes remain poorly understood. (p. 2, 1. Introduction).

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 Incremental Scene Representation Scene Embedding 𝑬௧ Coarse-to-fine Navigation Reaching Target Local Policy Action Renderingbased Stopper Exploration Current RGB-D Input Target Image Activation Map Target Embedding 𝑬௚ Occupancy Map + Cam ...를 Our incremental reconstruction model is essentially a mapping fθ from observations to 3DGS parameters, including position µk, opacity αk, covariance Σk and spherical harmonics ck: fθ : (It, Dt) 7→{(µk, αk, Σk, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Our incremental reconstruction model is essentially a mapping fθ from observations to 3DGS parameters, including position µk, opacity αk, covariance Σk and spherical harmonics ck: fθ : (It, Dt) 7→{(µk, ... (p. 3, 3.2. Incremental Scene Representation).
+- **Paper-specific mechanism:** To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav); the relevant task/metric cue is It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. (p. 8, 5. Conclusion).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We further deploy IGL-Nav on real-world robotic platform to test its generalization ability..
-3. Compare against the body-reported baseline or a matched simpler baseline: IGL-Nav establishes new state-of-the-art performance and outperforms previous methods by a large margin on all metrics, which validates the effectiveness of 3D gaussian representation and the proposed coarse-to-fine target localization ....
-4. Report the body metric and its denominator/aggregation: SR: Success Rate, SPL: Success weighted by Path Length..
-5. Re-run the body-reported ablation/failure condition: Since some methods [7, 29, 30, 33] only release test code, we perform zeroshot transfer to apply them to the new setting without retraining..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Our incremental reconstruction model is essentially a mapping fθ from observations to 3DGS parameters, including position µk, opacity αk, covariance Σk and spherical harmonics ck: fθ : (It, Dt) 7→{(µk, ... (p. 3, 3.2. Incremental Scene Representation); preserve the objective/update rule: Then we formulate the optimization loss as: L = 1 Q Q-1 X i=0 (/Xi g -Xi/2) (9) where Q is the number of matching pairs. (p. 5, 3.3.2. Fine Target Localization).
+2. Use the paper-reported task/data/environment cue: We further deploy IGL-Nav on real-world robotic platform to test its generalization ability. (p. 8, 4.4. Real-world Deployment).
+3. Compare against the reported or matched baseline: IGL-Nav establishes new state-of-the-art performance and outperforms previous methods by a large margin on all metrics, which validates the effectiveness of 3D gaussian representation and the proposed coarse-to-fine target localization ... (p. 6, 4.2. Comparison with State-of-the-art).
+4. Report the body metric with its denominator and aggregation: It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav).
+5. Re-run the reported ablation or stress/failure condition: Since some methods [7, 29, 30, 33] only release test code, we perform zeroshot transfer to apply them to the new setting without retraining. (p. 6, 4.1. Experimental Setup); if none is reported, design one around: A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. (p. 8, 5. Conclusion).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.1. Problem Statement); the primary result is directionally consistent at p. 7 (4.3. Analysis of IGL-Nav), p. 6 (4.2. Comparison with State-of-the-art), p. 7 (4.2. Comparison with State-of-the-art); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 7 (4.3. Analysis of IGL-Nav), p. 7 (4.2. Comparison with State-of-the-art), p. 6 (4.1. Experimental Setup), and measure the boundary at p. 8 (5. Conclusion), p. 1 (1. Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 IGL-Nav, Incremental, Gaussian mechanism이 IGL-Nav establishes new state-of-the-art performance and outperforms previous methods by a large margin on all metrics, ... 대비 SR: Success Rate, SPL: Success weighted by Path Length.을 개선하고, A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Our incremental reconstruction model is essentially a mapping fθ from observations to 3DGS parameters, including position µk, opacity αk, covariance Σk and ...), does the paper-specific mechanism (To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline ...) retain the reported evaluation outcome (It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization ...) when tested against the paper's strongest explicit boundary (A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav).
+- **Strongest explicit boundary:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. (p. 8, 5. Conclusion).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

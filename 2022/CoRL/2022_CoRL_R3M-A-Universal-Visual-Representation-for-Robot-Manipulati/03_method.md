@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/nair23a.html; PDF retrieval source: https://proceedings.mlr.press/v205/nair23a.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/nair23a.html; PDF retrieval source: https://proceedings.mlr.press/v205/nair23a.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -32,7 +32,7 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | In practice, we use more than one negative video example in training Equations 1 and 2. | p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | Using a larger number of positive examples from a single video and multiple negative examples from different videos stabilizes training. | p. 14 (A.3 Additional Implementation Details) |
@@ -74,7 +74,7 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | 4.1 Imitation Learning Evaluation Framework Our evaluation methodology is loosely inspired by Parisi et al. | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | Additionally in training for Equation 2, we consider the following positive pairs within a single batch element: Initial and Final Frames (I0, ... | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | We train the agent for 20,000 steps, evaluate it online in the environment every 1000 steps, and report the best success rate ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -120,8 +120,17 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details), objective p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details), temporal p. 5 (4 Experiments), p. 14 (A.3 Additional Implementation Details), p. 3 (3.1 Preliminaries), p. 3 (2 Related Work), p. 4 (3.1 Preliminaries), p. 5 (2. We).
+- **Evidence anchors reviewed:** method p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details), objective p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details), temporal p. 5 (4 Experiments), p. 14 (A.3 Additional Implementation Details), p. 3 (3.1 Preliminaries), p. 3 (2 Related Work), p. 4 (3.1 Preliminaries), p. 5 (2. We).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** First, it should contain information necessary for physical interaction, and thus should capture the temporal dynamics of the scene (i.e. how states might transition to other states). (p. 2, 1 Introduction).
+- **Objective/update evidence:** In practice, we use more than one negative video example in training Equations 1 and 2. (p. 14, A.3 Additional Implementation Details).
+- **Temporal/runtime evidence:** 4.1 Imitation Learning Evaluation Framework Our evaluation methodology is loosely inspired by Parisi et al. (p. 5, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1711.07280; PDF retrieval source: https://arxiv.org/pdf/1711.07280. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1711.07280; PDF retrieval source: https://arxiv.org/pdf/1711.07280. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 
 ## Method Body Digest
 
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an attention mechanism to ...
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
-- **p. 7 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** When then compute an attentional hidden state ˜ht = tanh (Wc[ct; h ′ t]), and calculate the predictive distribution over the next action as at ...
-- **p. 7 / 5.2. Training - extractive PDF cue:** We use dropout of 0.5 on embeddings, CNN features and within the attention model.
-- **p. 7 / 5.2. Training - extractive PDF cue:** In both cases, we use cross entropy loss at each step to maximize the likelihood of the ground-truth target action a∗ t given the previous ...
-- **p. 7 / 5.2. Training - extractive PDF cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** Action prediction with attention mechanism To predict a distribution over actions at step t, we first use an attention mechanism to identify the most relevant ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** However, VLN sequences are much longer and, uniquely among vision and language benchmark tasks using real images, the model outputs actions ⟨a0, a1, . . ...
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an attention mechanism to ...
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
+- **p. 7 / 5.1. Sequence-to-Sequence Model - extractive body cue:** When then compute an attentional hidden state ˜ht = tanh (Wc[ct; h ′ t]), and calculate the predictive distribution over the next action as at ...
+- **p. 7 / 5.2. Training - extractive body cue:** We use dropout of 0.5 on embeddings, CNN features and within the attention model.
+- **p. 7 / 5.2. Training - extractive body cue:** In both cases, we use cross entropy loss at each step to maximize the likelihood of the ground-truth target action a∗ t given the previous ...
+- **p. 7 / 5.2. Training - extractive body cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Action prediction with attention mechanism To predict a distribution over actions at step t, we first use an attention mechanism to identify the most relevant ...
+- **p. 2 / 1. Introduction - extractive body cue:** However, VLN sequences are much longer and, uniquely among vision and language benchmark tasks using real images, the model outputs actions ⟨a0, a1, . . ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To enable the reproducible evaluation of VLN methods, we present the Matterport3D Simulator.
-- **p. 2 / 1. Introduction - extractive PDF cue:** We introduce the Matterport3D Simulator, a software framework for visual reinforcement learning using the Matterport3D panoramic RGB-D dataset [11]; 2.
-- **p. 1 / 1. Introduction - extractive PDF cue:** The dataset particularly has been designed to simplify the application of vision and language methods to what might otherwise seem a distant problem.
+- **p. 2 / 1. Introduction - extractive body cue:** To enable the reproducible evaluation of VLN methods, we present the Matterport3D Simulator.
+- **p. 2 / 1. Introduction - extractive body cue:** We introduce the Matterport3D Simulator, a software framework for visual reinforcement learning using the Matterport3D panoramic RGB-D dataset [11]; 2.
+- **p. 1 / 1. Introduction - extractive body cue:** The dataset particularly has been designed to simplify the application of vision and language methods to what might otherwise seem a distant problem.
 
 ## Source Evidence Cues
 
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an attention mechanism to ...
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
-- **p. 7 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** When then compute an attentional hidden state ˜ht = tanh (Wc[ct; h ′ t]), and calculate the predictive distribution over the next action as at ...
-- **p. 7 / 5.2. Training - extractive PDF cue:** We use dropout of 0.5 on embeddings, CNN features and within the attention model.
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an attention mechanism to ...
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
+- **p. 7 / 5.1. Sequence-to-Sequence Model - extractive body cue:** When then compute an attentional hidden state ˜ht = tanh (Wc[ct; h ′ t]), and calculate the predictive distribution over the next action as at ...
+- **p. 7 / 5.2. Training - extractive body cue:** We use dropout of 0.5 on embeddings, CNN features and within the attention model.
 - **Detected method headings:** 5.1. Sequence-to-Sequence Model (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an ... | p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Sequence-to-Sequence Model) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a ... | p. 6 (5.1. Sequence-to-Sequence Model), p. 7 (5.1. Sequence-to-Sequence Model) |
@@ -45,9 +45,9 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 
 ## Objective / Update Rule
 
-- **p. 7 / 5.2. Training - extractive PDF cue:** In both cases, we use cross entropy loss at each step to maximize the likelihood of the ground-truth target action a∗ t given the previous ...
-- **p. 7 / 5.2. Training - extractive PDF cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** Action prediction with attention mechanism To predict a distribution over actions at step t, we first use an attention mechanism to identify the most relevant ...
+- **p. 7 / 5.2. Training - extractive body cue:** In both cases, we use cross entropy loss at each step to maximize the likelihood of the ground-truth target action a∗ t given the previous ...
+- **p. 7 / 5.2. Training - extractive body cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Action prediction with attention mechanism To predict a distribution over actions at step t, we first use an attention mechanism to identify the most relevant ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 7 (5.2. Training).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,13 +63,13 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an attention mechanism to ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** However, VLN sequences are much longer and, uniquely among vision and language benchmark tasks using real images, the model outputs actions ⟨a0, a1, . . ...
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** Recall that the agent begins with a natural language instruction ¯x = ⟨x1, x2, . . . xL⟩, and an initial image observation o0.
-- **p. 7 / 5.2. Training - extractive PDF cue:** The target output action a∗ t is always defined as the next action in the groundtruth shortest-path trajectory from the agent's current pose st = ...
-- **p. 7 / 5.2. Training - extractive PDF cue:** In this approach, at each step the next action is sampled from the agent's output probability distribution.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Although interpreting natural-language navigation instructions has received significant attention previously [12, 13, 20, 38, 41, 52], it is the recent success of recurrent neural network ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** As illustrated in Figure 1, the associated task requires an agent to follow natural-language instructions to navigate to a goal location in a previously unseen ...
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** At each step t, the decoder observes representations of the current image ot and the previous action at-1 as input, applies an attention mechanism to ...
+- **p. 2 / 1. Introduction - extractive body cue:** However, VLN sequences are much longer and, uniquely among vision and language benchmark tasks using real images, the model outputs actions ⟨a0, a1, . . ...
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Recall that the agent begins with a natural language instruction ¯x = ⟨x1, x2, . . . xL⟩, and an initial image observation o0.
+- **p. 7 / 5.2. Training - extractive body cue:** The target output action a∗ t is always defined as the next action in the groundtruth shortest-path trajectory from the agent's current pose st = ...
+- **p. 7 / 5.2. Training - extractive body cue:** In this approach, at each step the next action is sampled from the agent's output probability distribution.
+- **p. 1 / 1. Introduction - extractive body cue:** Although interpreting natural-language navigation instructions has received significant attention previously [12, 13, 20, 38, 41, 52], it is the recent success of recurrent neural network ...
+- **p. 2 / 1. Introduction - extractive body cue:** As illustrated in Figure 1, the associated task requires an agent to follow natural-language instructions to navigate to a goal location in a previously unseen ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,8 +84,8 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 
 ## Training vs Inference
 
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
-- **p. 7 / 5.2. Training - extractive PDF cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
+- **p. 7 / 5.2. Training - extractive body cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -105,8 +105,8 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 
 ## Failure and Ablation Link
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Example navigation graph for a partial floor of one building-scale scene in the Matterport3D Simulator. Navigable paths between panoramic viewpoints are illustrated in ...
-- **p. 7 / 6. Results - extractive PDF cue:** Nevertheless, people are not infallible when it comes to navigation.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Example navigation graph for a partial floor of one building-scale scene in the Matterport3D Simulator. Navigable paths between panoramic viewpoints are illustrated in ...
+- **p. 7 / 6. Results - extractive body cue:** Nevertheless, people are not infallible when it comes to navigation.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -120,7 +120,7 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Sequence-to-Sequence Model), p. 7 (5.1. Sequence-to-Sequence Model), p. 7 (5.2. Training), objective p. 7 (5.2. Training), p. 7 (5.2. Training), p. 6 (5.1. Sequence-to-Sequence Model), temporal p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 7 (5.2. Training), p. 7 (5.2. Training), p. 1 (Abstract), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Sequence-to-Sequence Model), p. 7 (5.1. Sequence-to-Sequence Model), p. 7 (5.2. Training), objective p. 7 (5.2. Training), p. 7 (5.2. Training), p. 6 (5.1. Sequence-to-Sequence Model), temporal p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 7 (5.2. Training), p. 7 (5.2. Training), p. 1 (Abstract), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

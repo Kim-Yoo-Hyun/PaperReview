@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2605.27886; PDF retrieval source: https://arxiv.org/pdf/2605.27886. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2605.27886; PDF retrieval source: https://arxiv.org/pdf/2605.27886. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Ablation and Comparison of VTLA | BENCHMARK / DATASET | Adding explicit force supervision enables precise force prediction and substantially improves performance under gentle conditions. | p. 8 (4.4. Ablation and Comparison of VTLA) |
 | 4.4. Ablation and Comparison of VTLA | BENCHMARK / DATASET | When tactile tokens such as images or force fields are provided, the policy gains basic force modulation ability and achieves nontrivial success. | p. 8 (4.4. Ablation and Comparison of VTLA) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Specifically, we select four subtasks from the LIBERO benchmark suite and compare the success rates of the original MuJoCo-based dataset with those of our ... | embodiment, simulator version and control stack | p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation) |
 | Task/environment | When using the same robot kinematics and control policy as in the original dataset, our baseline configuration yields a success rate distribution that closely ... | reset, timeout, object/scene variation | p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 - **p. 7 / 4.2. Tactile Data Diversity Analysis - extractive body cue:** Dataset B also employs continuous control but reduces the force to 10%, representing an extreme low-force regime where slippage is likely.
 - **p. 6 / 4.1. Cross-Platform Data Validation - extractive body cue:** This degradation is especially pronounced in tasks requiring delicate manipulation, where lower grip forces strongly correlate with reduced success.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.3. Effectiveness of Hybrid Controller), metrics p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.5. Semantic Force Generalization), p. 8 (4.4. Ablation and Comparison of VTLA), p. 7 (4.2. Tactile Data Diversity Analysis), baselines p. 6 (4.2. Tactile Data Diversity Analysis), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.3. Effectiveness of Hybrid Controller), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), results p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.3. Effectiveness of Hybrid Controller), metrics p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.5. Semantic Force Generalization), p. 8 (4.4. Ablation and Comparison of VTLA), p. 7 (4.2. Tactile Data Diversity Analysis), baselines p. 6 (4.2. Tactile Data Diversity Analysis), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.3. Effectiveness of Hybrid Controller), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), results p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** When using the same robot kinematics and control policy as in the original dataset, our baseline configuration yields a success rate distribution that closely matches that reported in OpenVLA (Kim ... (p. 6, 4.1. Cross-Platform Data Validation).
+- **Metric evidence:** Furthermore, the sharp drop in success rate from 25% to 10% Figure 6. (p. 7, 4.2. Tactile Data Diversity Analysis).
+- **Baseline/ablation evidence:** We conduct four ablation studies on the gripper controller: (a) full force with hybrid control, (b) reduced force with hybrid control, (c) reduced force without feedforward term, and (d) reduced ... (p. 7, 4.3. Effectiveness of Hybrid Controller).
+- **Failure/negative evidence:** 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation. (p. 7, 4.2. Tactile Data Diversity Analysis).

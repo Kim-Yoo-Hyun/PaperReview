@@ -1,8 +1,8 @@
 # Partially Observable Task and Motion Planning with Uncertainty and Risk Awareness
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p118.html.
-> PDF retrieval source: https://arxiv.org/pdf/2403.10454.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p118.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p118.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, TAMP, POMDP, uncertainty, risk-aware planning, closed-loop control
 - Official paper: https://www.roboticsproceedings.org/rss20/p118.html
-- Full-text retrieval: https://arxiv.org/pdf/2403.10454.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p118.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +82,12 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 ## Why Read It
 
 Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 However, computing 1A reference for all notation introduced henceforth is provided in Table IV in the appendix. the belief updates exactly is intractable in many problems.를 문제로 두고, To mitigate this, we introduce the concept of a belief-space controller, which takes the current belief as input and executes in closedloop fashion over extended time horizons.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (III. BACKGROUND), p. 1 (I. INTRODUCTION), p. 3 (III. BACKGROUND), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, computing 1A reference for all notation introduced henceforth is provided in Table IV in the appendix. the belief updates exactly is intractable in many problems. (p. 3, III. BACKGROUND).
+- **Actual contribution:** Our approach, TAMPURA, is to exploit a coarse model of each controller's preconditions and effects to rapidly solve deterministic, symbolic planning problems that guide the construction of a non-deterministic Markov ... (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** We applied TAMPURA to five simulated and two realworld robotics problems, illustrated in Figure 2 and Figure 1, (p. 7, VI. SIMULATED EXPERIMENTS & ANALYSIS).
+- **Explicit failure boundary:** 20:⃗ s ←[D[x] : x ∈zip(⃗Ψpre,⃗c,⃗Ψeff)] 21: ▷Compute f, num "failures" where c in Ψpre did not cause Ψeff. (p. 6, V. LEARNING THE SPARSE ABSTRACT MDP).

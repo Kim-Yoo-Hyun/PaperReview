@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2406.09414; PDF retrieval source: https://arxiv.org/pdf/2406.09414. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2406.09414; PDF retrieval source: https://arxiv.org/pdf/2406.09414. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Me
 
 ## Method Body Digest
 
-- **p. 9 / Method - extractive PDF cue:** First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder.
-- **p. 9 / Method - extractive PDF cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
-- **p. 8 / Method - extractive PDF cue:** Even our most lightweight model is superior to all other community models.
-- **p. 8 / Method - extractive PDF cue:** Similar results (i.e., better model but worse score) are also observed in [7, 28].
-- **p. 10 / Method - extractive PDF cue:** We can observe in Table 6 that the model trained with pseudo labels is significantly better than the manual-label counterpart.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** MiDaS [56] proposes a gradient matching loss Lgm to enhance the depth sharpness.
+- **p. 9 / Method - extractive body cue:** First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder.
+- **p. 9 / Method - extractive body cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
+- **p. 8 / Method - extractive body cue:** Even our most lightweight model is superior to all other community models.
+- **p. 8 / Method - extractive body cue:** Similar results (i.e., better model but worse score) are also observed in [7, 28].
+- **p. 10 / Method - extractive body cue:** We can observe in Table 6 that the model trained with pseudo labels is significantly better than the manual-label counterpart.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** MiDaS [56] proposes a gradient matching loss Lgm to enhance the depth sharpness.
 
 ## Design Rationale
 
-- **p. 6 / 1 Introduction - extractive PDF cue:** It consists of three steps: • train a reliable teacher model based on DINOv2-G purely on high-quality synthetic images. • produce precise pseudo depth on ...
-- **p. 7 / 1 Introduction - extractive PDF cue:** To address this, we introduce a second pipeline, where we carefully analyze images and manually identify challenging pairs.
-- **p. 4 / 1 Introduction - extractive PDF cue:** In the right side of Figure 4c, we show the fine-grained prediction of a MDE model trained on synthetic images.
+- **p. 6 / 1 Introduction - extractive body cue:** It consists of three steps: • train a reliable teacher model based on DINOv2-G purely on high-quality synthetic images. • produce precise pseudo depth on ...
+- **p. 7 / 1 Introduction - extractive body cue:** To address this, we introduce a second pipeline, where we carefully analyze images and manually identify challenging pairs.
+- **p. 4 / 1 Introduction - extractive body cue:** In the right side of Figure 4c, we show the fine-grained prediction of a MDE model trained on synthetic images.
 
 ## Source Evidence Cues
 
-- **p. 9 / Method - extractive PDF cue:** First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder.
-- **p. 9 / Method - extractive PDF cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
-- **p. 8 / Method - extractive PDF cue:** Even our most lightweight model is superior to all other community models.
-- **p. 8 / Method - extractive PDF cue:** Similar results (i.e., better model but worse score) are also observed in [7, 28].
-- **p. 10 / Method - extractive PDF cue:** We can observe in Table 6 that the model trained with pseudo labels is significantly better than the manual-label counterpart.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise.
+- **p. 9 / Method - extractive body cue:** First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder.
+- **p. 9 / Method - extractive body cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
+- **p. 8 / Method - extractive body cue:** Even our most lightweight model is superior to all other community models.
+- **p. 8 / Method - extractive body cue:** Similar results (i.e., better model but worse score) are also observed in [7, 28].
+- **p. 10 / Method - extractive body cue:** We can observe in Table 6 that the model trained with pseudo labels is significantly better than the manual-label counterpart.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise.
 - **Detected method headings:** Method (p. 8); Method (p. 9)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder. | p. 9 (Method), p. 9 (Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models. | p. 9 (Method), p. 8 (Method) |
@@ -48,9 +48,9 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Me
 
 ## Objective / Update Rule
 
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** MiDaS [56] proposes a gradient matching loss Lgm to enhance the depth sharpness.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** Image Loss weight 0.5 Loss weight 2.0 Loss weight 4.0 Figure 10: Effect of the gradient matching loss Lgm in terms of fine-grained details.
-- **p. 8 / Method - extractive PDF cue:** Despite the advantages, we do not expect DA-2K to replace current benchmarks.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** MiDaS [56] proposes a gradient matching loss Lgm to enhance the depth sharpness.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** Image Loss weight 0.5 Loss weight 2.0 Loss weight 4.0 Figure 10: Effect of the gradient matching loss Lgm in terms of fine-grained details.
+- **p. 8 / Method - extractive body cue:** Despite the advantages, we do not expect DA-2K to replace current benchmarks.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -66,13 +66,13 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Me
 
 ## Observation–State–Action Interface
 
-- **p. 9 / Method - extractive PDF cue:** This observation is indeed similar to SAM [33] that only releases its pseudo-labeled masks.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Precise depth information is not only favorable in classical applications, such as 3D reconstruction [47, 32, 93], navigation [82], and autonomous driving [80], but is ...
-- **p. 8 / Method - extractive PDF cue:** Method Community Models Depth Anything V2 (Ours) Marigold [31] Geowizard [20] DepthFM [25] Depth Anything V1 [89] ViT-S ViT-B ViT-L ViT-G Accuracy (%) 86.8 88.1 ...
-- **p. 9 / Method - extractive PDF cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
-- **p. 4 / 1 Introduction - extractive PDF cue:** In contrast, some real datasets constructed from web stereo images (e.g., HRWSI [83]) or monocular videos (e.g., MegaDepth [37]), can cover extensive real-world scenes.
-- **p. 5 / 1 Introduction - extractive PDF cue:** Unfortunately, as shown in Section B.9, the coarse depth map of real images is destructive to fine-grained prediction.
-- **p. 8 / Method - extractive PDF cue:** Finally, we annotate 1K images with 2K pixel pairs in total.
+- **p. 9 / Method - extractive body cue:** This observation is indeed similar to SAM [33] that only releases its pseudo-labeled masks.
+- **p. 2 / 1 Introduction - extractive body cue:** Precise depth information is not only favorable in classical applications, such as 3D reconstruction [47, 32, 93], navigation [82], and autonomous driving [80], but is ...
+- **p. 8 / Method - extractive body cue:** Method Community Models Depth Anything V2 (Ours) Marigold [31] Geowizard [20] DepthFM [25] Depth Anything V1 [89] ViT-S ViT-B ViT-L ViT-G Accuracy (%) 86.8 88.1 ...
+- **p. 9 / Method - extractive body cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
+- **p. 4 / 1 Introduction - extractive body cue:** In contrast, some real datasets constructed from web stereo images (e.g., HRWSI [83]) or monocular videos (e.g., MegaDepth [37]), can cover extensive real-world scenes.
+- **p. 5 / 1 Introduction - extractive body cue:** Unfortunately, as shown in Section B.9, the coarse depth map of real images is destructive to fine-grained prediction.
+- **p. 8 / Method - extractive body cue:** Finally, we annotate 1K images with 2K pixel pairs in total.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -87,12 +87,12 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Me
 
 ## Training vs Inference
 
-- **p. 9 / Method - extractive PDF cue:** First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder.
-- **p. 9 / Method - extractive PDF cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
-- **p. 10 / Method - extractive PDF cue:** We can observe in Table 6 that the model trained with pseudo labels is significantly better than the manual-label counterpart.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets.
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise.
-- **p. 11 / B.1 Fine-tuned to semantic segmentation - extractive PDF cue:** Similar to the practice in metric MDE, we further fine-tune our pre-trained encoder to downstream semantic segmentation task to especially examine its semantic awareness.
+- **p. 9 / Method - extractive body cue:** First, same as V1 [89], we follow the ZoeDepth [6] pipeline, but replace its MiDaS [7] encoder with our pre-trained encoder.
+- **p. 9 / Method - extractive body cue:** Different from Depth Anything V1 [89], we further attempt to remove the synthetic images during training student models.
+- **p. 10 / Method - extractive body cue:** We can observe in Table 6 that the model trained with pseudo labels is significantly better than the manual-label counterpart.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets.
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise.
+- **p. 11 / B.1 Fine-tuned to semantic segmentation - extractive body cue:** Similar to the practice in metric MDE, we further fine-tune our pre-trained encoder to downstream semantic segmentation task to especially examine its semantic awareness.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Me
 
 ## Failure and Ablation Link
 
-- **p. 8 / 7 Experiment - extractive PDF cue:** Since our model predicts affine-invariant inverse depth, for fairness, we compare with Depth Anything V1 [89] and MiDaS V3.1 [7] on five unseen test datasets.
-- **p. 16 / C.2 Comparison with the DIW dataset - extractive PDF cue:** In comparison, our DA-2K is precise, because we exclude many hard-to-decide or controversial pairs. • (better organized) DIW randomly downloads images from Flickr, without carefully ...
-- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive PDF cue:** Image Loss weight 0.5 Loss weight 2.0 Loss weight 4.0 Figure 10: Effect of the gradient matching loss Lgm in terms of fine-grained details.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7: Depth Anything V2. We first train the most capable teacher on precise synthetic images. Then, to mitigate the distribution shift and limited diversity ...
-- **p. 12 / Dataset - extractive PDF cue:** We achieve the results without Mapillary [1] or COCO [40] pre-training. our models of various scales consistently achieve the best performance, outperforming other methods remarkably.
-- **p. 14 / B.6 Comparison among various pre-trained encoders - extractive PDF cue:** The success of DINOv2 further reflects the promising future of the data-driven roadmap, since it carefully collects 142M pre-training data without designing fancy algorithms or ...
-- **p. 15 / B.9 Harm of real labeled images to fine-grained predictions - extractive PDF cue:** According to the ablation study in Depth Anything V1 [89], HRWSI [83] is the best-performed real training dataset.
+- **p. 8 / 7 Experiment - extractive body cue:** Since our model predicts affine-invariant inverse depth, for fairness, we compare with Depth Anything V1 [89] and MiDaS V3.1 [7] on five unseen test datasets.
+- **p. 16 / C.2 Comparison with the DIW dataset - extractive body cue:** In comparison, our DA-2K is precise, because we exclude many hard-to-decide or controversial pairs. • (better organized) DIW randomly downloads images from Flickr, without carefully ...
+- **p. 14 / B.7 Benefit of gradient matching loss to fine-grained predictions - extractive body cue:** Image Loss weight 0.5 Loss weight 2.0 Loss weight 4.0 Figure 10: Effect of the gradient matching loss Lgm in terms of fine-grained details.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 7: Depth Anything V2. We first train the most capable teacher on precise synthetic images. Then, to mitigate the distribution shift and limited diversity ...
+- **p. 12 / Dataset - extractive body cue:** We achieve the results without Mapillary [1] or COCO [40] pre-training. our models of various scales consistently achieve the best performance, outperforming other methods remarkably.
+- **p. 14 / B.6 Comparison among various pre-trained encoders - extractive body cue:** The success of DINOv2 further reflects the promising future of the data-driven roadmap, since it carefully collects 142M pre-training data without designing fancy algorithms or ...
+- **p. 15 / B.9 Harm of real labeled images to fine-grained predictions - extractive body cue:** According to the ablation study in Depth Anything V1 [89], HRWSI [83] is the best-performed real training dataset.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Me
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Method), p. 10 (Method), p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), objective p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), p. 8 (Method), temporal p. 5 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 9 (Method), p. 9 (Method), p. 8 (Method), p. 8 (Method), p. 10 (Method), p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), objective p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), p. 14 (B.7 Benefit of gradient matching loss to fine-grained predictions), p. 8 (Method), temporal p. 5 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

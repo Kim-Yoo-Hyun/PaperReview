@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/li25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/li25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | Both Ours and Ours-s achieve the same average success rate of 0.66 on single-arm tasks, demonstrating that our model can effectively handle different embodiments ... | p. 7 (4 Experiment) |
 | 4 Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | Remarkably, the model achieves similar accuracy as it does in clean background settings. | p. 8 (4 Experiment) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Since we establish associations between the robot and its environment through structured text input, our model learns to focus on task-relevant objects while disregarding ... | embodiment, simulator version and control stack | p. 8 (4 Experiment), p. 6 (4 Experiment) |
 | Task/environment | We train and test our methods using the same dataset as the baselines, with 100 demonstrations per task for training and 25 demonstrations for ... | reset, timeout, object/scene variation | p. 6 (4 Experiment), p. 7 (4 Experiment) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Visualization of simulation tasks. We conduct on both single-arm and dual-arm simula- tion tasks. 4. Bottle at rack: The robot needs to grasp ...
 - **p. 7 / 4 Experiment - extractive body cue:** The robustness of 3DS-VLA when handling noise.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 5 (4 Experiment), metrics p. 6 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment), p. 8 (4 Experiment), baselines p. 6 (4 Experiment), p. 8 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment), p. 15 (Figure/Table caption), results p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 5 (4 Experiment), metrics p. 6 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment), p. 8 (4 Experiment), baselines p. 6 (4 Experiment), p. 8 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment), p. 15 (Figure/Table caption), results p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 6 (4 Experiment), p. 8 (4 Experiment).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Additionally, we perform an extra experiment where we first fine-tune the pretrained VLM on the OXE dataset [74], which only takes 2D images as input, and then continue finetuning on ... (p. 7, 4 Experiment).
+- **Metric evidence:** 1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate. (p. 6, 4 Experiment).
+- **Baseline/ablation evidence:** 2, in the dual-arm setting, our method outperforms all baselines by a significant margin. (p. 6, 4 Experiment).
+- **Failure/negative evidence:** This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or ... (p. 8, 4 Experiment).

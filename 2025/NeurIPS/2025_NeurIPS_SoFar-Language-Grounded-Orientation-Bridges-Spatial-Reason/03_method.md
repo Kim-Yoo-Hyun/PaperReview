@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (46 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kmv7yg6QXv; PDF retrieval source: https://openreview.net/pdf/44ce67ddf7a771b623a5a1cba738c147c2617eb1.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (46 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kmv7yg6QXv; PDF retrieval source: https://arxiv.org/pdf/2502.13143. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Method Body Digest
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** 2.3 PointSO: A Cross-Modal 3D Transformer for Semantic Orientation Prediction We introduce PointSO, a plain Transformer-based architecture [114] with cross-modal 3D-language fusion as our orientation ...
-- **p. 5 / 1 Introduction - extractive PDF cue:** Position & Orientation Information Extraction Given a language query Q, we first prompt a visionlanguage model FVLM to extract a task-relevant set of object phrases ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** To support this, we introduce OrienText300K, a curated dataset of 3D models annotated with diverse language-guided orientation labels.
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning and robotic manipulation, enabling open-vocabulary, template-free orientation understanding for unseen objects.
-- **p. 5 / 1 Introduction - extractive PDF cue:** 3.1 Scene Graph with 6-DoF Information To integrate both the positional & orientational interaction relationships of objects, we use a scene graph with 6-DoF information ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** To this end, we design both the model architecture and the dataset accordingly.
-- **p. 4 / 1 Introduction - extractive PDF cue:** The optimization is to minimize the negative cosine similarity Lcos(v, k) = 1 - v·k ∥v∥·∥k∥between predicted and the ground truth semantic orientations: min θSO ...
+- **p. 4 / 1 Introduction - extractive body cue:** For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs ...
+- **p. 4 / 1 Introduction - extractive body cue:** 2.3 PointSO: A Cross-Modal 3D Transformer for Semantic Orientation Prediction We introduce PointSO, a plain Transformer-based architecture [114] with cross-modal 3D-language fusion as our orientation ...
+- **p. 5 / 1 Introduction - extractive body cue:** Position & Orientation Information Extraction Given a language query Q, we first prompt a visionlanguage model FVLM to extract a task-relevant set of object phrases ...
+- **p. 3 / 1 Introduction - extractive body cue:** To support this, we introduce OrienText300K, a curated dataset of 3D models annotated with diverse language-guided orientation labels.
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning and robotic manipulation, enabling open-vocabulary, template-free orientation understanding for unseen objects.
+- **p. 5 / 1 Introduction - extractive body cue:** 3.1 Scene Graph with 6-DoF Information To integrate both the positional & orientational interaction relationships of objects, we use a scene graph with 6-DoF information ...
+- **p. 2 / 1 Introduction - extractive body cue:** To this end, we design both the model architecture and the dataset accordingly.
+- **p. 4 / 1 Introduction - extractive body cue:** The optimization is to minimize the negative cosine similarity Lcos(v, k) = 1 - v·k ∥v∥·∥k∥between predicted and the ground truth semantic orientations: min θSO ...
 
 ## Design Rationale
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** We propose PointSO, a generalizable cross-modal 3D Transformer [114, 26, 89, 91] for semantic orientation prediction.
-- **p. 2 / 1 Introduction - extractive PDF cue:** In addition, we introduce Open6DOR V2, a large-scale benchmark for 6-DoF object rearrangement in simulation, which supports both open-loop and closed-loop control.
-- **p. 3 / 1 Introduction - extractive PDF cue:** Finally, we present two new benchmarks, Open6DOR V2 and 6-DoF SpatialBench, to evaluate 6-DoF rearrangement and spatial reasoning.
+- **p. 2 / 1 Introduction - extractive body cue:** We propose PointSO, a generalizable cross-modal 3D Transformer [114, 26, 89, 91] for semantic orientation prediction.
+- **p. 2 / 1 Introduction - extractive body cue:** In addition, we introduce Open6DOR V2, a large-scale benchmark for 6-DoF object rearrangement in simulation, which supports both open-loop and closed-loop control.
+- **p. 3 / 1 Introduction - extractive body cue:** Finally, we present two new benchmarks, Open6DOR V2 and 6-DoF SpatialBench, to evaluate 6-DoF rearrangement and spatial reasoning.
 
 ## Source Evidence Cues
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** 2.3 PointSO: A Cross-Modal 3D Transformer for Semantic Orientation Prediction We introduce PointSO, a plain Transformer-based architecture [114] with cross-modal 3D-language fusion as our orientation ...
-- **p. 5 / 1 Introduction - extractive PDF cue:** Position & Orientation Information Extraction Given a language query Q, we first prompt a visionlanguage model FVLM to extract a task-relevant set of object phrases ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** To support this, we introduce OrienText300K, a curated dataset of 3D models annotated with diverse language-guided orientation labels.
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning and robotic manipulation, enabling open-vocabulary, template-free orientation understanding for unseen objects.
-- **p. 5 / 1 Introduction - extractive PDF cue:** 3.1 Scene Graph with 6-DoF Information To integrate both the positional & orientational interaction relationships of objects, we use a scene graph with 6-DoF information ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** To this end, we design both the model architecture and the dataset accordingly.
-- **Detected method headings:** 0.63 Method (p. 29)
+- **p. 4 / 1 Introduction - extractive body cue:** For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs ...
+- **p. 4 / 1 Introduction - extractive body cue:** 2.3 PointSO: A Cross-Modal 3D Transformer for Semantic Orientation Prediction We introduce PointSO, a plain Transformer-based architecture [114] with cross-modal 3D-language fusion as our orientation ...
+- **p. 5 / 1 Introduction - extractive body cue:** Position & Orientation Information Extraction Given a language query Q, we first prompt a visionlanguage model FVLM to extract a task-relevant set of object phrases ...
+- **p. 3 / 1 Introduction - extractive body cue:** To support this, we introduce OrienText300K, a curated dataset of 3D models annotated with diverse language-guided orientation labels.
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning and robotic manipulation, enabling open-vocabulary, template-free orientation understanding for unseen objects.
+- **p. 5 / 1 Introduction - extractive body cue:** 3.1 Scene Graph with 6-DoF Information To integrate both the positional & orientational interaction relationships of objects, we use a scene graph with 6-DoF information ...
+- **p. 2 / 1 Introduction - extractive body cue:** To this end, we design both the model architecture and the dataset accordingly.
+- **Detected method headings:** 0.63 Method (p. 22)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and ... | p. 4 (1 Introduction), p. 4 (1 Introduction) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | 2.3 PointSO: A Cross-Modal 3D Transformer for Semantic Orientation Prediction We introduce PointSO, a plain Transformer-based architecture [114] with cross-modal 3D-language fusion ... | p. 4 (1 Introduction), p. 5 (1 Introduction) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Objective / Update Rule
 
-- **p. 4 / 1 Introduction - extractive PDF cue:** The optimization is to minimize the negative cosine similarity Lcos(v, k) = 1 - v·k ∥v∥·∥k∥between predicted and the ground truth semantic orientations: min θSO ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** These annotations are from Objaverse [20] and generated automatically by prompting GPT-4o [48] with rich semantic queries covering both intra-object spatial reasoning and inter-object manipulation ...
-- **p. 6 / 1 Introduction - extractive PDF cue:** 77.1 70.4 33.3 4.2 44.4 3.7 43.3 77.1 63.0 30.6 12.5 50.0 11.1 45.0 81.3 81.5 44.4 20.8 50.0 22.2 53.9 85.4 85.2 52.8 29.2 ...
-- **p. 7 / 1 Introduction - extractive PDF cue:** Method Position Track Rotation Track 6-DoF Track Time Cost (s) Level 0 Level 1 Overall Level 0 Level 1 Level 2 Overall Position Rotation Overall ...
-- **p. 1 / Abstract - extractive PDF cue:** While spatial reasoning has made progress in object localization relationships, it often overlooks object orientation-a key factor in 6-DoF fine-grained manipulation.
-- **p. 4 / 1 Introduction - extractive PDF cue:** Optimization Let FSO represent the PointSO model parameterized by θSO (the CLIP is kept frozen and thus its parameters are not included).
+- **p. 4 / 1 Introduction - extractive body cue:** The optimization is to minimize the negative cosine similarity Lcos(v, k) = 1 - v·k ∥v∥·∥k∥between predicted and the ground truth semantic orientations: min θSO ...
+- **p. 2 / 1 Introduction - extractive body cue:** These annotations are from Objaverse [20] and generated automatically by prompting GPT-4o [48] with rich semantic queries covering both intra-object spatial reasoning and inter-object manipulation ...
+- **p. 6 / 1 Introduction - extractive body cue:** 77.1 70.4 33.3 4.2 44.4 3.7 43.3 77.1 63.0 30.6 12.5 50.0 11.1 45.0 81.3 81.5 44.4 20.8 50.0 22.2 53.9 85.4 85.2 52.8 29.2 ...
+- **p. 7 / 1 Introduction - extractive body cue:** Method Position Track Rotation Track 6-DoF Track Time Cost (s) Level 0 Level 1 Overall Level 0 Level 1 Level 2 Overall Position Rotation Overall ...
+- **p. 1 / Abstract - extractive body cue:** While spatial reasoning has made progress in object localization relationships, it often overlooks object orientation-a key factor in 6-DoF fine-grained manipulation.
+- **p. 4 / 1 Introduction - extractive body cue:** Optimization Let FSO represent the PointSO model parameterized by θSO (the CLIP is kept frozen and thus its parameters are not included).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Observation–State–Action Interface
 
-- **p. 2 / Abstract - extractive PDF cue:** X Y Z Pose Estimation Category / Instance Template Needed Only axis, the relationship with instruction is unclear "Blow Wind" "Top" "Back" "Pick up" "Fan" ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs ...
-- **p. 4 / 1 Introduction - extractive PDF cue:** 4, PointSO takes the object's 3D point clouds and a language description as inputs, and predicts the corresponding semantic orientation. "Drilling" "Handle" "top" Transformer Block ...
-- **p. 5 / 1 Introduction - extractive PDF cue:** Given RGB-D images and language instructions, SOFAR first leverages a VLM to identify relevant object phrases and semantic orientations.
-- **p. 5 / 1 Introduction - extractive PDF cue:** 3.2 Spatial-Aware Task Reasoning We encode the 6-DoF scene graph G into descriptive language and input it to the VLM alongside the RGB image I ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Traditional orientation, defined relative to a base frame or template model [104, 58, 120, 16], is insufficient for open-world manipulation guided by language instructions [108, ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** An object X can be associated with multiple semantic orientations by varying the language input, forming a set SX = {sX ℓ1, sX ℓ2, . ...
+- **p. 2 / Abstract - extractive body cue:** X Y Z Pose Estimation Category / Instance Template Needed Only axis, the relationship with instruction is unclear "Blow Wind" "Top" "Back" "Pick up" "Fan" ...
+- **p. 4 / 1 Introduction - extractive body cue:** For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs ...
+- **p. 4 / 1 Introduction - extractive body cue:** 4, PointSO takes the object's 3D point clouds and a language description as inputs, and predicts the corresponding semantic orientation. "Drilling" "Handle" "top" Transformer Block ...
+- **p. 5 / 1 Introduction - extractive body cue:** Given RGB-D images and language instructions, SOFAR first leverages a VLM to identify relevant object phrases and semantic orientations.
+- **p. 5 / 1 Introduction - extractive body cue:** 3.2 Spatial-Aware Task Reasoning We encode the 6-DoF scene graph G into descriptive language and input it to the VLM alongside the RGB image I ...
+- **p. 2 / 1 Introduction - extractive body cue:** Traditional orientation, defined relative to a base frame or template model [104, 58, 120, 16], is insufficient for open-world manipulation guided by language instructions [108, ...
+- **p. 3 / 1 Introduction - extractive body cue:** An object X can be associated with multiple semantic orientations by varying the language input, forming a set SX = {sX ℓ1, sX ℓ2, . ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -97,7 +97,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** point, clouds, follow, first, sample, seed, points, farthest, sampling, FPS, then, group, inputs, KNN, feature, embedding, local, geometric, extraction, network.
-- **Relevant PDF headings:** 0.63 Method (p. 29).
+- **Relevant PDF headings:** 0.63 Method (p. 22).
 - Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
@@ -110,13 +110,13 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Failure and Ablation Link
 
-- **p. 32 / Figure/Table caption - extractive PDF cue:** Table 11: Ablation study of multi-modal fusion in PointSO. All experiments are conducted with the PointSO-Base variant. Fusion Method 45° 30° 15° 5°
-- **p. 7 / 4 Experiments - extractive PDF cue:** The tasks are divided into three tracks-position, orientation, and comprehensive & 6-DoF-each with simple and hard variants.
-- **p. 7 / 4 Experiments - extractive PDF cue:** We train different model variants on OrienText300K, and the results in Table 2 report performance across different angular thresholds ranging from 45° to 5°.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We present success rates for the "Variant Aggregation" and "Visual Matching" approaches.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3: Visualization of OrienText300K data construction and validation results. In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning and ...
-- **p. 29 / Figure/Table caption - extractive PDF cue:** Table 7: Zeroshot articulate object manipulation evaluation within the SAPIEN [123] simulator using PartNet-Mobility Dataset. Notably, while the baseline methods use distinct training and testing ...
-- **p. 32 / Figure/Table caption - extractive PDF cue:** Table 12: Ablation study of open vocabulary detection modules on Open6DOR perception tasks.
+- **p. 25 / Figure/Table caption - extractive body cue:** Table 11: Ablation study of multi-modal fusion in PointSO. All experiments are conducted with the PointSO-Base variant. Fusion Method 45° 30° 15° 5°
+- **p. 7 / 4 Experiments - extractive body cue:** The tasks are divided into three tracks-position, orientation, and comprehensive & 6-DoF-each with simple and hard variants.
+- **p. 7 / 4 Experiments - extractive body cue:** We train different model variants on OrienText300K, and the results in Table 2 report performance across different angular thresholds ranging from 45° to 5°.
+- **p. 8 / 4 Experiments - extractive body cue:** We present success rates for the "Variant Aggregation" and "Visual Matching" approaches.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3: Visualization of OrienText300K data construction and validation results. In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning and ...
+- **p. 22 / Figure/Table caption - extractive body cue:** Table 7: Zeroshot articulate object manipulation evaluation within the SAPIEN [123] simulator using PartNet-Mobility Dataset. Notably, while the baseline methods use distinct training and testing ...
+- **p. 25 / Figure/Table caption - extractive body cue:** Table 12: Ablation study of open vocabulary detection modules on Open6DOR perception tasks.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 4 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 1 (Abstract), p. 4 (1 Introduction), temporal p. 8 (4 Experiments), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 4 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 1 (Abstract), p. 4 (1 Introduction), temporal p. 8 (4 Experiments), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

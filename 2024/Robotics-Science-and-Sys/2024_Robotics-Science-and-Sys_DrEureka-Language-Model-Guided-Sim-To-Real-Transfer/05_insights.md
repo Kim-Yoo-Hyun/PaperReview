@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 A sim-to-real algorithm Algo for reward design and domain randomization takes M and task specification ltask as inputs, and outputs a reward function R and a distribution over transition functions, T : ...를 In Eureka, the LLM first takes the task description ltask and a summary of the environment state and action spaces (provided by environment code M) as input, and then samples several reward ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual inputs: The ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Instead, we propose to directly exploit the strong instructionfollowing capability of instruction-tuned LLMs [62] and prompt the LLM to explicitly consider including safety terms for stability, smoothness, and desirable task-specific ... (p. 4, IV. METHOD).
+- **Paper-specific mechanism:** In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Note that while CEM and BayRn tackle the same problem, their iterative procedure is conceptually different from DrEureka, which trains all policies in parallel; thus, this comparison favors the baselines ... (p. 6, V. EXPERIMENTAL SETUP); the relevant task/metric cue is Therefore, the differences in performance between DrEureka and Human-Designed can be attributed to the different DR parameters as well as reward functions DrEureka produces. (p. 6, V. EXPERIMENTAL SETUP). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual ... (p. 9, VIII. LIMITATIONS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We use the simulation environment as well as the real-world controller from Margolis et al..
-3. Compare against the body-reported baseline or a matched simpler baseline: Forward locomotion specifically uses a teacher-student variant of PPO in which the teacher Sim-to-real Configuration Forward Velocity (m/s) Meters Traveled (m) Human-Designed [25] 1.32 ± 0.44 4.17 ± 1.57 Eureka [9] 0.0 ....
-4. Report the body metric and its denominator/aggregation: Fig. 8: Forward locomotion training curves for 16 DR configurations. All runs are trained with the same reward function. B3. LLM Reward Reflection The following is an example of reward reflection on ....
-5. Re-run the body-reported ablation/failure condition: Forward locomotion specifically uses a teacher-student variant of PPO in which the teacher Sim-to-real Configuration Forward Velocity (m/s) Meters Traveled (m) Human-Designed [25] 1.32 ± 0.44 4.17 ± 1.57 Eureka [9] 0.0 ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Instead, we propose to directly exploit the strong instructionfollowing capability of instruction-tuned LLMs [62] and prompt the LLM to explicitly consider including safety terms for stability, smoothness, and desirable task-specific ... (p. 4, IV. METHOD); preserve the objective/update rule: Algorithm 2 Reward Aware Physics Prior (RAPP) 1: Require: Reinforcement learning policy πinitial, simulator S, success criteria F, domain randomization parameters P and their respective search values R, 2: for ... (p. 4, IV. METHOD).
+2. Use the paper-reported task/data/environment cue: We use the simulation environment as well as the real-world controller from Margolis et al. (p. 5, V. EXPERIMENTAL SETUP).
+3. Compare against the reported or matched baseline: Forward locomotion specifically uses a teacher-student variant of PPO in which the teacher Sim-to-real Configuration Forward Velocity (m/s) Meters Traveled (m) Human-Designed [25] 1.32 ± 0.44 4.17 ± 1.57 Eureka ... (p. 6, V. EXPERIMENTAL SETUP).
+4. Report the body metric with its denominator and aggregation: Therefore, the differences in performance between DrEureka and Human-Designed can be attributed to the different DR parameters as well as reward functions DrEureka produces. (p. 6, V. EXPERIMENTAL SETUP).
+5. Re-run the reported ablation or stress/failure condition: Forward locomotion specifically uses a teacher-student variant of PPO in which the teacher Sim-to-real Configuration Forward Velocity (m/s) Meters Traveled (m) Human-Designed [25] 1.32 ± 0.44 4.17 ± 1.57 Eureka ... (p. 6, V. EXPERIMENTAL SETUP); if none is reported, design one around: While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual ... (p. 9, VIII. LIMITATIONS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD); the primary result is directionally consistent at p. 5 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 26 (Figure/Table caption), and measure the boundary at p. 9 (VIII. LIMITATIONS), p. 4 (IV. METHOD).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 DrEureka, Domain, Randomization mechanism이 Forward locomotion specifically uses a teacher-student variant of PPO in which the teacher Sim-to-real Configuration Forward ... 대비 Fig. 8: Forward locomotion training curves for 16 DR configurations. All runs are trained with the same reward ...을 개선하고, While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Instead, we propose to directly exploit the strong instructionfollowing capability of instruction-tuned LLMs [62] and prompt the LLM to explicitly consider including ...), does the paper-specific mechanism (In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization ...) retain the reported evaluation outcome (Therefore, the differences in performance between DrEureka and Human-Designed can be attributed to the different DR parameters as ...) when tested against the paper's strongest explicit boundary (While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Therefore, the differences in performance between DrEureka and Human-Designed can be attributed to the different DR parameters as ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Note that while CEM and BayRn tackle the same problem, their iterative procedure is conceptually different from DrEureka, which trains all policies in parallel; thus, this comparison favors the baselines ... (p. 6, V. EXPERIMENTAL SETUP).
+- **Strongest explicit boundary:** While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual ... (p. 9, VIII. LIMITATIONS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms ... | p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ... | p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | Fortunately, as a result of the farsightedness of quasidynamic models, even an input sequence with T = 1 (i.e. a single time ... | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | Furthermore, by throwing away kinetic energy at every time step, quasidynamic models are also simpler as they do not need variables for ... | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
-| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), objective p. 4 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. LOCAL THEORY OF SMOOTHING), temporal p. 14 (VII. RRT THROUGH CONTACT), p. 2 (I. INTRODUCTION), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 10 (IV. SMOOTHING OF CONTACT DYNAMICS).
+- **Evidence anchors reviewed:** method p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), objective p. 4 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. LOCAL THEORY OF SMOOTHING), temporal p. 14 (VII. RRT THROUGH CONTACT), p. 2 (I. INTRODUCTION), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 10 (IV. SMOOTHING OF CONTACT DYNAMICS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity and acceleration, and focusing on ... (p. 6, III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE).
+- **Objective/update evidence:** Letting F(J, µ) denote the objective function, the gradients are ∂F/∂µ = Ew[f(¯x + w)] -µ∗, (10a) ∂F/∂J = Ew[ww⊺]J∗-Ew[f(¯x + w)w⊺]. (p. 4, II. LOCAL THEORY OF SMOOTHING).
+- **Temporal/runtime evidence:** Fortunately, as a result of the farsightedness of quasidynamic models, even an input sequence with T = 1 (i.e. a single time step) can steer the system fairly far away ... (p. 14, VII. RRT THROUGH CONTACT).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

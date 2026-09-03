@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 The goal of languageconditioned imitation learning is minimizing the negative loglikelihood of the expert action «, given the observation history Diy = (Uieoe-s U4) and language instruction f:를 To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At test time, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Inherent Limitations in Human Language Supervision.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT outperforms O ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The goal of languageconditioned imitation learning is minimizing the negative loglikelihood of the expert action «, given the observation history Diy = (Uieoe-s U4) and language instruction f: (p. 2, A. Preliminaries).
+- **Paper-specific mechanism:** Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT ... (p. 2, Abstract).
+- **Evidence boundary:** the reported outcome is [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared with OpenVLA based on its lightweight ... (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark); the relevant task/metric cue is As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%. (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from the gripper, as shown in Figure 9-(d), The heuristies does not adequately ... (p. 8, 256 33%).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This set of tasks serves as a benchmark for evaluating the model's ability to acquire new skills using in-domain data, We first collect indomain data through language-based teleoperation, gathering 10 episodes per ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We introduce baseline ‘models and then discuss the results in detail.
-4. Report the body metric and its denominator/aggregation: As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%..
-5. Re-run the body-reported ablation/failure condition: «+ CLIP-RT-Zero is an ablated model trained solely on the ‘OXE dataset without accessing any in-domain data,.
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The goal of languageconditioned imitation learning is minimizing the negative loglikelihood of the expert action «, given the observation history Diy = (Uieoe-s U4) and language instruction f: (p. 2, A. Preliminaries); preserve the objective/update rule: During deployment, humans provide language feedback to correct robotic behaviors, and policies are updated based on this feedback. (p. 2, Abstract).
+2. Use the paper-reported task/data/environment cue: Leveraging stochastic trajectory augmentation (STA), we augment each demonstration with 3 additional trajectories across all tasks. ‘This augmentation increases the dataset size to approximately 11K transitions for Common tasks and ... (p. 5, A. Tasks & Dataset).
+3. Compare against the reported or matched baseline: We introduce baseline ‘models and then discuss the results in detail (p. 5, C. Experiments on Common and Novel Tasks).
+4. Report the body metric with its denominator and aggregation: As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%. (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark).
+5. Re-run the reported ablation or stress/failure condition: «+ CLIP-RT-Zero is an ablated model trained solely on the ‘OXE dataset without accessing any in-domain data, (p. 5, C. Experiments on Common and Novel Tasks); if none is reported, design one around: This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from the gripper, as shown in Figure 9-(d), The heuristies does not adequately ... (p. 8, 256 33%).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 2 (Abstract); the primary result is directionally consistent at p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (Abstract), p. 1 (Abstract), match the reported outcome at p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (C. Experiments on Common and Novel Tasks), and measure the boundary at p. 8 (256 33%), p. 8 (256 33%).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Sec-, data, collection mechanism이 We introduce baseline ‘models and then discuss the results in detail 대비 As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate ...을 개선하고, Inherent Limitations in Human Language Supervision. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The goal of languageconditioned imitation learning is minimizing the negative loglikelihood of the expert action «, given the observation history Diy = ...), does the paper-specific mechanism (Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the ...) retain the reported evaluation outcome (As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate ...) when tested against the paper's strongest explicit boundary (This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT ... (p. 2, Abstract).
+- **Paper-supported outcome:** [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared with OpenVLA based on its lightweight ... (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark).
+- **Strongest explicit boundary:** This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from the gripper, as shown in Figure 9-(d), The heuristies does not adequately ... (p. 8, 256 33%).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

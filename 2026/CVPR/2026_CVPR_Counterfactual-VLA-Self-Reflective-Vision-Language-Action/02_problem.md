@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, the reasoning in current VLAs is largely descriptive rather than self-reflective. | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | End-to-end Vision-Language-Action (VLA) models have demonstrated promising progress in mapping visual context directly to control output. | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | End-to-end Vision-Language-Action (VLA) models have demonstrated promising progress in mapping visual context directly to control output. | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | End-to-end, Vision-Language-Action, VLA, models, have, demonstrated, promising, progress, mapping, visual | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | output, single, paragraph, diagnoses, predicted, meta-actions, less, preferable | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: End-to-end, Vision-Language-Action, VLA, models, have, demonstrated, promising, progress, mapping, visual | p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: Second, standard, training, pipelines, rarely, teach, models, answer | p. 2 (1. Introduction), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), p. 3 (3.1. Self-Reflective Counterfactual Reasoning) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (3.4. Implementation Details), p. 3 (3. Method), p. 3 (3.1. Self-Reflective Counterfactual Reasoning) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), p. 4 (3.2. Meta-Actions), p. 5 (3.4. Implementation Details)): Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this ...
+PDF body contribution framing (p. 2 (1. Introduction), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), p. 3 (3.1. Self-Reflective Counterfactual Reasoning), p. 4 (3.2. Meta-Actions), p. 5 (3.4. Implementation Details)): Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this ...
 
 - **p. 3 / 3.1. Self-Reflective Counterfactual Reasoning - extractive body cue:** To prepare data to fine-tune the model, we develop a rolloutfilter-label pipeline (Sec.
 - **p. 3 / 3.1. Self-Reflective Counterfactual Reasoning - extractive body cue:** Adaptive reasoning allows a model to decide dynamically when to conduct reasoning and when to respond directly.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 3 (3.1. Self-Reflective Cou
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 2 (1. Introduction), objective p. 5 (3.4. Implementation Details), p. 5 (3.4. Implementation Details), p. 3 (3.1. Self-Reflective Counterfactual Reasoning).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 2 (1. Introduction), objective p. 5 (3.4. Implementation Details), p. 5 (3.4. Implementation Details), p. 3 (3.1. Self-Reflective Counterfactual Reasoning).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, the reasoning in current VLAs is largely descriptive rather than self-reflective. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this ... (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects that an action it executed failed and then switches to an alternative ... (p. 2, 1. Introduction).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

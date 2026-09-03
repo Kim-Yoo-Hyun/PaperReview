@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.11477; PDF retrieval source: https://arxiv.org/pdf/2304.11477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.11477; PDF retrieval source: https://arxiv.org/pdf/2304.11477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (1) How well does LLM-AS-P work? To what ex
 
 ## Evaluation Body Digest
 
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive PDF cue:** Benchmark Problems We present seven robot planning domains borrowed from past International Planning Competitions and 20 automatically generated tasks for each domain [67].
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive PDF cue:** 4) GRIPPERS: A set of robots with two grippers is given a task to move objects among different rooms.
-- **p. 6 / 1) We observe that though LLM-AS-P provides a plan - extractive PDF cue:** Robot Demonstration We verify that LLM+P can efficiently solve realistic service robot problems by deploying it on a real robot tasked with tidying up a ...
-- **p. 3 / III. METHOD - extractive PDF cue:** The LLM+P method is directly applicable as a natural language interface for giving tasks to robot systems.
-- **p. 3 / III. METHOD - extractive PDF cue:** By in-context learning, we mean LLMs' ability to perform unseen downstream tasks by simply conditioning on a few input-label pairs (demonstrations) [10].
-- **p. 2 / 3. Move b4 from b2 to the table - extractive PDF cue:** 1: LLM+P makes use of a large language model (LLM) to produce the PDDL description of the given problem, then leverages a classical planner for ...
-- **p. 4 / III. METHOD - extractive PDF cue:** 2) A domain PDDL is provided to define the actions that the robot is capable of.
-- **p. 4 / III. METHOD - extractive PDF cue:** To summarize, the assumptions we need for LLM+P are: 1) A robot knows when to trigger LLM+P based on its conversation with a human user.
+- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** Benchmark Problems We present seven robot planning domains borrowed from past International Planning Competitions and 20 automatically generated tasks for each domain [67].
+- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** 4) GRIPPERS: A set of robots with two grippers is given a task to move objects among different rooms.
+- **p. 6 / 1) We observe that though LLM-AS-P provides a plan - extractive body cue:** Robot Demonstration We verify that LLM+P can efficiently solve realistic service robot problems by deploying it on a real robot tasked with tidying up a ...
+- **p. 3 / III. METHOD - extractive body cue:** The LLM+P method is directly applicable as a natural language interface for giving tasks to robot systems.
+- **p. 3 / III. METHOD - extractive body cue:** By in-context learning, we mean LLMs' ability to perform unseen downstream tasks by simply conditioning on a few input-label pairs (demonstrations) [10].
+- **p. 2 / 3. Move b4 from b2 to the table - extractive body cue:** 1: LLM+P makes use of a large language model (LLM) to produce the PDDL description of the given problem, then leverages a classical planner for ...
+- **p. 4 / III. METHOD - extractive body cue:** 2) A domain PDDL is provided to define the actions that the robot is capable of.
+- **p. 4 / III. METHOD - extractive body cue:** To summarize, the assumptions we need for LLM+P are: 1) A robot knows when to trigger LLM+P based on its conversation with a human user.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (1) How well does LLM-AS-P work? To what ex
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 1) How well does LLM-AS-P work? To what extent | EMPIRICAL / REAL-ROBOT OR HARDWARE | We report the success rate of the optimal alias, and for the domains that time out, we show the success rate of the sub-optimal ... | p. 5 (1) How well does LLM-AS-P work? To what extent) |
 | 1) How well does LLM-AS-P work? To what extent | EMPIRICAL / REAL-ROBOT OR HARDWARE | Domain Success Rate % LLMLLM LLMToT LLM+PLLM+P BARMAN 0 0 0 0 20 (100) BLOCKSWORLD 20 15 (30) 0 (5) 0 90 FLOORTILE 0 ... | p. 5 (1) How well does LLM-AS-P work? To what extent) |
@@ -38,25 +38,25 @@ PDF body evaluation/result cue (p. 5 (1) How well does LLM-AS-P work? To what ex
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive PDF cue:** Benchmark Problems We present seven robot planning domains borrowed from past International Planning Competitions and 20 automatically generated tasks for each domain [67].
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive PDF cue:** 4) GRIPPERS: A set of robots with two grippers is given a task to move objects among different rooms.
-- **p. 6 / 1) We observe that though LLM-AS-P provides a plan - extractive PDF cue:** Robot Demonstration We verify that LLM+P can efficiently solve realistic service robot problems by deploying it on a real robot tasked with tidying up a ...
-- **p. 3 / III. METHOD - extractive PDF cue:** The LLM+P method is directly applicable as a natural language interface for giving tasks to robot systems.
-- **p. 3 / III. METHOD - extractive PDF cue:** By in-context learning, we mean LLMs' ability to perform unseen downstream tasks by simply conditioning on a few input-label pairs (demonstrations) [10].
-- **p. 2 / 3. Move b4 from b2 to the table - extractive PDF cue:** 1: LLM+P makes use of a large language model (LLM) to produce the PDDL description of the given problem, then leverages a classical planner for ...
-- **p. 4 / III. METHOD - extractive PDF cue:** 2) A domain PDDL is provided to define the actions that the robot is capable of.
-- **p. 4 / III. METHOD - extractive PDF cue:** To summarize, the assumptions we need for LLM+P are: 1) A robot knows when to trigger LLM+P based on its conversation with a human user.
+- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** Benchmark Problems We present seven robot planning domains borrowed from past International Planning Competitions and 20 automatically generated tasks for each domain [67].
+- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** 4) GRIPPERS: A set of robots with two grippers is given a task to move objects among different rooms.
+- **p. 6 / 1) We observe that though LLM-AS-P provides a plan - extractive body cue:** Robot Demonstration We verify that LLM+P can efficiently solve realistic service robot problems by deploying it on a real robot tasked with tidying up a ...
+- **p. 3 / III. METHOD - extractive body cue:** The LLM+P method is directly applicable as a natural language interface for giving tasks to robot systems.
+- **p. 3 / III. METHOD - extractive body cue:** By in-context learning, we mean LLMs' ability to perform unseen downstream tasks by simply conditioning on a few input-label pairs (demonstrations) [10].
+- **p. 2 / 3. Move b4 from b2 to the table - extractive body cue:** 1: LLM+P makes use of a large language model (LLM) to produce the PDDL description of the given problem, then leverages a classical planner for ...
+- **p. 4 / III. METHOD - extractive body cue:** 2) A domain PDDL is provided to define the actions that the robot is capable of.
+- **p. 4 / III. METHOD - extractive body cue:** To summarize, the assumptions we need for LLM+P are: 1) A robot knows when to trigger LLM+P based on its conversation with a human user.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: LLM+P makes use of a large language model (LLM) to produce the PDDL description of the given problem, then leverages a classical planner ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: Demonstration of the optimal tidy-up plan. The robot starts at the coffee table and 1) picks up the bottle, 2) navigates to a ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: LLM+P makes use of a large language model (LLM) to produce the PDDL description of the given problem, then leverages a classical planner ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: Demonstration of the optimal tidy-up plan. The robot starts at the coffee table and 1) picks up the bottle, 2) navigates to a ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Benchmark Problems We present seven robot planning domains borrowed from past International Planning Competitions and 20 automatically generated tasks for each domain [67]. | embodiment, simulator version and control stack | p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent) |
 | Task/environment | 4) GRIPPERS: A set of robots with two grippers is given a task to move objects among different rooms. | reset, timeout, object/scene variation | p. 5 (1) How well does LLM-AS-P work? To what extent), p. 6 (1) We observe that though LLM-AS-P provides a plan) |
@@ -146,12 +146,12 @@ PDF body evaluation/result cue (p. 5 (1) How well does LLM-AS-P work? To what ex
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: Demonstration of the optimal tidy-up plan. The robot starts at the coffee table and 1) picks up the bottle, 2) navigates to a ...
-- **p. 2 / 3. Move b4 from b2 to the table - extractive PDF cue:** Limitation: In this paper, we do not ask the LLM to recognize that it has been posed a prompt that is suitable for processing using ...
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive PDF cue:** Robots can move around and change colors but cannot step on painted tiles.
-- **p. 6 / 1) We observe that though LLM-AS-P provides a plan - extractive PDF cue:** In particular, in the BLOCKSWORLD domain, LLM-AS-P cannot keep track of properties like ON and CLEAR.
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: Demonstration of the optimal tidy-up plan. The robot starts at the coffee table and 1) picks up the bottle, 2) navigates to a ...
+- **p. 2 / 3. Move b4 from b2 to the table - extractive body cue:** Limitation: In this paper, we do not ask the LLM to recognize that it has been posed a prompt that is suitable for processing using ...
+- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** Robots can move around and change colors but cannot step on painted tiles.
+- **p. 6 / 1) We observe that though LLM-AS-P provides a plan - extractive body cue:** In particular, in the BLOCKSWORLD domain, LLM-AS-P cannot keep track of properties like ON and CLEAR.
 
-- **PDF anchors reviewed:** datasets p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 6 (1) We observe that though LLM-AS-P provides a plan), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (3. Move b4 from b2 to the table), metrics p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 6 (1) We observe that though LLM-AS-P provides a plan), p. 2 (II. BACKGROUND), p. 2 (3. Move b4 from b2 to the table), p. 3 (III. METHOD), baselines p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 6 (1) We observe that though LLM-AS-P provides a plan), p. 6 (1) We observe that though LLM-AS-P provides a plan), results p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 2 (II. BACKGROUND).
+- **Evidence anchors reviewed:** datasets p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 6 (1) We observe that though LLM-AS-P provides a plan), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (3. Move b4 from b2 to the table), metrics p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 6 (1) We observe that though LLM-AS-P provides a plan), p. 2 (II. BACKGROUND), p. 2 (3. Move b4 from b2 to the table), p. 3 (III. METHOD), baselines p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 6 (1) We observe that though LLM-AS-P provides a plan), p. 6 (1) We observe that though LLM-AS-P provides a plan), results p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 2 (II. BACKGROUND).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

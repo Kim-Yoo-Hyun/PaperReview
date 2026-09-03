@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1606.03476; PDF retrieval source: https://arxiv.org/pdf/1606.03476. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1606.03476; PDF retrieval source: https://arxiv.org/pdf/1606.03476. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | networks [9], a technique from the deep learning community that has led to recent successes in modeling distributions of natural images: our ... | p. 2 (1 Introduction), p. 4 (2 Background) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | For a class of cost functions C ⊂RS×A, an apprenticeship learning algorithm finds a policy that performs better than the expert across ... | p. 4 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗) |
@@ -83,10 +83,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Our characterization introduces a framework for directly learning policies from data, bypassing any intermediate IRL step. | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Our characterization introduces a framework for directly learning policies from data, bypassing any intermediate IRL step. | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | Inverse reinforcement learning (IRL), on the other hand, learns a cost function that prioritizes entire trajectories over others, so compounding error, a ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -128,8 +128,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗), p. 2 (2 Background), p. 4 (2 Background), p. 3 (2 Background), objective p. 4 (2 Background), p. 5 (2 Background), p. 2 (2 Background), p. 2 (2 Background), p. 4 (2 Background), p. 5 (2 Background), temporal p. 1 (1 Introduction), p. 1 (1 Introduction), p. 7 (6 Experiments), p. 2 (2 Background), p. 2 (2 Background), p. 5 (2. Form a gradient estimate with Eq. (12) with c∗).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗), p. 2 (2 Background), p. 4 (2 Background), p. 3 (2 Background), objective p. 4 (2 Background), p. 5 (2 Background), p. 2 (2 Background), p. 2 (2 Background), p. 4 (2 Background), p. 5 (2 Background), temporal p. 1 (1 Introduction), p. 1 (1 Introduction), p. 7 (6 Experiments), p. 2 (2 Background), p. 2 (2 Background), p. 5 (2. Form a gradient estimate with Eq. (12) with c∗).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In reality, the expert trajectory distribution will be provided only as a finite set of samples, so in large environments, most of the expert's occupancy measure values will be exactly ... (p. 4, 2 Background).
+- **Objective/update evidence:** This is the dual of the optimization problem minimize ρ∈D -¯H(ρ) subject to ρ(s, a) = ρE(s, a) ∀s ∈S, a ∈A (7) with Lagrangian ¯L, for which the costs ... (p. 4, 2 Background).
+- **Temporal/runtime evidence:** Our characterization introduces a framework for directly learning policies from data, bypassing any intermediate IRL step. (p. 1, 1 Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

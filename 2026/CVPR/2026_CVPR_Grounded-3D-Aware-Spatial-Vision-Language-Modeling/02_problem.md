@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,27 +10,27 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): Two challenge
 
 ## PDF Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** We present GR3D, a spatial vision language model equipped with three complementary grounding capabilities-explicit 2D grounding, implicit 2D grounding, and monocular 3D grounding-within a single ...
-- **p. 1 / Abstract - extractive PDF cue:** GR3D introduces an implicit grounding mechanism that identifies entity mentions during generation and inserts the corresponding region tokens into the text stream, allowing the model ...
-- **p. 1 / Abstract - extractive PDF cue:** In parallel, a 1Work done during an internship at NVIDIA. region-prompted monocular 3D grounding design predicts 3D bounding boxes in the camera view from grounded ...
-- **p. 1 / Abstract - extractive PDF cue:** Together, these grounding capabilities enable GR3D to decompose complex spatial understanding problems into grounded 2D perception followed by 3D inference.
-- **p. 1 / Abstract - extractive PDF cue:** GR3D achieves consistent improvements across grounded and non-grounded spatial benchmarks, demonstrating grounding as an effective inductive bias for strengthening spatial understanding in VLMs.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Two challenges, in particular, are under-addressed.
-- **p. 2 / 1. Introduction - extractive PDF cue:** While explicit 2D grounding predicts the location of queried objects, it cannot handle free-form reasoning where spatial cues are implicit.
+- **p. 1 / Abstract - extractive body cue:** We present GR3D, a spatial vision language model equipped with three complementary grounding capabilities-explicit 2D grounding, implicit 2D grounding, and monocular 3D grounding-within a single ...
+- **p. 1 / Abstract - extractive body cue:** GR3D introduces an implicit grounding mechanism that identifies entity mentions during generation and inserts the corresponding region tokens into the text stream, allowing the model ...
+- **p. 1 / Abstract - extractive body cue:** In parallel, a 1Work done during an internship at NVIDIA. region-prompted monocular 3D grounding design predicts 3D bounding boxes in the camera view from grounded ...
+- **p. 1 / Abstract - extractive body cue:** Together, these grounding capabilities enable GR3D to decompose complex spatial understanding problems into grounded 2D perception followed by 3D inference.
+- **p. 1 / Abstract - extractive body cue:** GR3D achieves consistent improvements across grounded and non-grounded spatial benchmarks, demonstrating grounding as an effective inductive bias for strengthening spatial understanding in VLMs.
+- **p. 2 / 1. Introduction - extractive body cue:** Two challenges, in particular, are under-addressed.
+- **p. 2 / 1. Introduction - extractive body cue:** While explicit 2D grounding predicts the location of queried objects, it cannot handle free-form reasoning where spatial cues are implicit.
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Two challenges, in particular, are under-addressed. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | Without, reliable, spatial, grounding, link, between, high-level, instructions | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | image/point input I/P and pose; body terms: Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction) |
 | Decision / output variable | geometry/map/query r; body terms: introduce, explicit, implicit, forms, grounding, designed, strengthen, spatial | p. 3 (2.2. Grounding in the 2D Plane), p. 2 (1. Introduction), p. 3 (2. Method) |
@@ -38,20 +38,20 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): Two challenge
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.3. Monocular 3D Grounding via Region Prompt) |
 | Success / guarantee | spatial accuracy and downstream robot utility | p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** While explicit 2D grounding predicts the location of queried objects, it cannot handle free-form reasoning where spatial cues are implicit.
+- **p. 2 / 1. Introduction - extractive body cue:** While explicit 2D grounding predicts the location of queried objects, it cannot handle free-form reasoning where spatial cues are implicit.
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 3 (2.2. Grounding in the 2D Plane), p. 2 (1. Introduction), p. 3 (2. Method), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), p. 2 (1. Introduction)): We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+PDF body contribution framing (p. 3 (2.2. Grounding in the 2D Plane), p. 2 (1. Introduction), p. 3 (2. Method), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), p. 2 (1. Introduction)): We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To address these limitations, we introduce (GR3D), a spatial VLM that integrates grounding as a core mechanism for learning spatial representations.
-- **p. 3 / 2. Method - extractive PDF cue:** Building on this foundation, we introduce explicit and implicit 2D grounding (Sec.
-- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive PDF cue:** To mitigate scale and depth ambiguity, we introduce an intrinsic-aware normalization strategy that rescales images according to focal length, yielding a consistent field of view ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** This enables reasoning to evolve directly over grounded visual evidence, yielding coherent spatial predictions without any separate detection phase.
+- **p. 2 / 1. Introduction - extractive body cue:** To address these limitations, we introduce (GR3D), a spatial VLM that integrates grounding as a core mechanism for learning spatial representations.
+- **p. 3 / 2. Method - extractive body cue:** Building on this foundation, we introduce explicit and implicit 2D grounding (Sec.
+- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** To mitigate scale and depth ambiguity, we introduce an intrinsic-aware normalization strategy that rescales images according to focal length, yielding a consistent field of view ...
+- **p. 2 / 1. Introduction - extractive body cue:** This enables reasoning to evolve directly over grounded visual evidence, yielding coherent spatial predictions without any separate detection phase.
 
 ## Assumptions and Failure Boundary
 
@@ -64,11 +64,11 @@ PDF contribution framing (p. 3 (2.2. Grounding in the 2D Plane), p. 2 (1. Introd
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction), p. 2 (1. Introduction), objective p. 4 (2.2.2. Implicit 2D Grounding).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction), p. 2 (1. Introduction), objective p. 4 (2.2.2. Implicit 2D Grounding).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

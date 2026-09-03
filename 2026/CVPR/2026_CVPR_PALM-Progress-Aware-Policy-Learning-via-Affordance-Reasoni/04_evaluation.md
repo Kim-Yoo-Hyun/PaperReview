@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Simulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average success rate of 94.5%. | p. 6 (4.1. Simulation Experiments) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. LIBERO experimental results. For each task suite (Spatial, Object, Goal, Long), we report the average success rate and standard error across 3 ... | p. 7 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For pre-training, we utilize a mixed dataset from the DROID [54] and BridgeData V2 [113] datasets, which together provide large-scale, in-the-wild robotic arm demonstrations ... | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments) |
 | Task/environment | We select a mixed pre-training dataset composed of DROID [54] and BridgeData V2 [113], while the fine-tuning dataset consists of 200 demonstrations collected on ... | reset, timeout, object/scene variation | p. 8 (4.3. Real-World Experiments), p. 6 (4.1. Simulation Experiments) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 - **p. 8 / 5. Conclusion - extractive body cue:** PALM achieves stateof-the-art results on two benchmarks, with a 12.5% improvement on CALVIN ABC→D and 91.8% success on LIBEROLONG, and shows significant robustness in real-world ...
 - **p. 8 / 4.3. Real-World Experiments - extractive body cue:** As shown in Table 5, results demonstrate PALM's superior generalization over baselines as the task sequence length increases, showing its robustness in longhorizon settings.
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments), p. 6 (4.1. Simulation Experiments), p. 7 (4.2. Ablation Studies), p. 5 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), metrics p. 7 (4.2. Ablation Studies), p. 6 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 8 (4.3. Real-World Experiments), baselines p. 6 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), p. 8 (4.3. Real-World Experiments), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 7 (4.2. Ablation Studies), results p. 6 (4.1. Simulation Experiments), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 7 (4.2. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments), p. 6 (4.1. Simulation Experiments), p. 7 (4.2. Ablation Studies), p. 5 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), metrics p. 7 (4.2. Ablation Studies), p. 6 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 8 (4.3. Real-World Experiments), baselines p. 6 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), p. 8 (4.3. Real-World Experiments), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 7 (4.2. Ablation Studies), results p. 6 (4.1. Simulation Experiments), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 7 (4.2. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 1. In contrast to vanilla VLAs that directly map inputs to actions or to predictive methods that forecast dense future images, PALM introduces learnable queries to forecast a structured ... (p. 1, Figure/Table caption).
+- **Metric evidence:** Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average success rate of 94.5%. (p. 6, 4.1. Simulation Experiments).
+- **Baseline/ablation evidence:** PALM consistently and substantially outperforms all baselines. (p. 6, 4.1. Simulation Experiments).
+- **Failure/negative evidence:** This absence of temporal grounding leads to characteristic long-horizon failure modes: repeated or unnecessary actions, skipped required subtasks, premature termination, and even declaring success in incorrect states. (p. 2, 1. Introduction).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (4.2. Results),
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Notably, we also conducted validation using Building scene from Mega-NeRF [42] as well as Residences, Sci-Art and Campus scenes from UrbanScene3D [17], with results provided ...
-- **p. 7 / 4.3. LOD Generation - extractive PDF cue:** Quantitative results on three large scene datasets.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We use three detail levels for these scenes.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** This model significantly improves all three quality metrics across all scenes.
-- **p. 7 / 4.3. LOD Generation - extractive PDF cue:** However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an upper limit, and the scene may not ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Scene Rubble JNU-ZH BigCity w/o vis.
-- **p. 6 / 4.2. Results - extractive PDF cue:** The only exception is the Rubble scene, where the LPIPS score matches that of CityGaussian.
-- **p. 6 / 4.2. Results - extractive PDF cue:** This underscores our method's ability to achieve high-fidelity reconstructions of urban-scale scenes.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Notably, we also conducted validation using Building scene from Mega-NeRF [42] as well as Residences, Sci-Art and Campus scenes from UrbanScene3D [17], with results provided ...
+- **p. 7 / 4.3. LOD Generation - extractive body cue:** Quantitative results on three large scene datasets.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We use three detail levels for these scenes.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** This model significantly improves all three quality metrics across all scenes.
+- **p. 7 / 4.3. LOD Generation - extractive body cue:** However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an upper limit, and the scene may not ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Scene Rubble JNU-ZH BigCity w/o vis.
+- **p. 6 / 4.2. Results - extractive body cue:** The only exception is the Rubble scene, where the LPIPS score matches that of CityGaussian.
+- **p. 6 / 4.2. Results - extractive body cue:** This underscores our method's ability to achieve high-fidelity reconstructions of urban-scale scenes.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (4.2. Results),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Ablation Study | EMPIRICAL / SOURCE-REPORTED EVALUATION | This model significantly improves all three quality metrics across all scenes. | p. 8 (4.4. Ablation Study) |
 | 4.2. Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | This underscores our method's ability to achieve high-fidelity reconstructions of urban-scale scenes. | p. 6 (4.2. Results) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (4.2. Results),
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Notably, we also conducted validation using Building scene from Mega-NeRF [42] as well as Residences, Sci-Art and Campus scenes from UrbanScene3D [17], with results provided ...
-- **p. 7 / 4.3. LOD Generation - extractive PDF cue:** Quantitative results on three large scene datasets.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We use three detail levels for these scenes.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** This model significantly improves all three quality metrics across all scenes.
-- **p. 7 / 4.3. LOD Generation - extractive PDF cue:** However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an upper limit, and the scene may not ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Scene Rubble JNU-ZH BigCity w/o vis.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Notably, we also conducted validation using Building scene from Mega-NeRF [42] as well as Residences, Sci-Art and Campus scenes from UrbanScene3D [17], with results provided ...
+- **p. 7 / 4.3. LOD Generation - extractive body cue:** Quantitative results on three large scene datasets.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We use three detail levels for these scenes.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** This model significantly improves all three quality metrics across all scenes.
+- **p. 7 / 4.3. LOD Generation - extractive body cue:** However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an upper limit, and the scene may not ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Scene Rubble JNU-ZH BigCity w/o vis.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1. The process of scene and data division. (a) Obtain the 3D point cloud and its corresponding 2D feature points through estimating camera poses ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. In-partition prioritized densification. The red rectan- gle is the partition bounding box, and points represent Gaussians. Point colors indicate gradient thresholds. 𝐵1,ܶ 1, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Controllable LOD generation and detail level selec- tion. (a) During training, detail levels are progressively generated in a bottom-up manner, guided by resource ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of the appearance transform. For each image and 3D Gaussian, ℓ(G) represents the Gaussian embedding and ℓ(I) represents the image embedding, respectively. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results on three large scene datasets. We report SSIM↑, PSNR↑, LPIPS↓, the number of Gaussians (#G, in 106)↓ and FPS↑on test views. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization results. All methods (excluding 3DGS) render in LOD mode. Ours demonstrates better detail preservation and fewer artifacts. ity. However, increasing B to ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative evaluation of budget B for detail level generation. Adjusting the budget effectively controls resource consumption, but also impacts the quality.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Visualization results of ablation study. Our proposed components effectively suppress the artifacts. eras are assigmend to partitions solely based on spatial lo- cations. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. The process of scene and data division. (a) Obtain the 3D point cloud and its corresponding 2D feature points through estimating camera poses ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. In-partition prioritized densification. The red rectan- gle is the partition bounding box, and points represent Gaussians. Point colors indicate gradient thresholds. 𝐵1,ܶ 1, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Controllable LOD generation and detail level selec- tion. (a) During training, detail levels are progressively generated in a bottom-up manner, guided by resource ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of the appearance transform. For each image and 3D Gaussian, ℓ(G) represents the Gaussian embedding and ℓ(I) represents the image embedding, respectively. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results on three large scene datasets. We report SSIM↑, PSNR↑, LPIPS↓, the number of Gaussians (#G, in 106)↓ and FPS↑on test views. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visualization results. All methods (excluding 3DGS) render in LOD mode. Ours demonstrates better detail preservation and fewer artifacts. ity. However, increasing B to ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative evaluation of budget B for detail level generation. Adjusting the budget effectively controls resource consumption, but also impacts the quality.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Visualization results of ablation study. Our proposed components effectively suppress the artifacts. eras are assigmend to partitions solely based on spatial lo- cations. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Notably, we also conducted validation using Building scene from Mega-NeRF [42] as well as Residences, Sci-Art and Campus scenes from UrbanScene3D [17], with results ... | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 7 (4.3. LOD Generation) |
 | Task/environment | Quantitative results on three large scene datasets. | reset, timeout, object/scene variation | p. 7 (4.3. LOD Generation), p. 6 (4.1. Experimental Setup) |
@@ -156,13 +156,13 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (4.2. Results),
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work could explore incremental switching mechanisms for smoother transitions and improved resource efficiency.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Enhancing robustness to pose inaccuracies is thus an important future direction.
-- **p. 6 / 4.2. Results - extractive PDF cue:** Meanwhile, the FPS does not experience a significant decline and consistently ranks as either the best or second-best, making real-time rendering entirely feasible.
-- **p. 7 / 4.3. LOD Generation - extractive PDF cue:** However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an upper limit, and the scene may not ...
-- **p. 6 / 4.2. Results - extractive PDF cue:** Meanwhile, the quality experiences only minimal degradation.
+- **p. 8 / 5. Conclusion - extractive body cue:** Future work could explore incremental switching mechanisms for smoother transitions and improved resource efficiency.
+- **p. 8 / 5. Conclusion - extractive body cue:** Enhancing robustness to pose inaccuracies is thus an important future direction.
+- **p. 6 / 4.2. Results - extractive body cue:** Meanwhile, the FPS does not experience a significant decline and consistently ranks as either the best or second-best, making real-time rendering entirely feasible.
+- **p. 7 / 4.3. LOD Generation - extractive body cue:** However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an upper limit, and the scene may not ...
+- **p. 6 / 4.2. Results - extractive body cue:** Meanwhile, the quality experiences only minimal degradation.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.3. LOD Generation), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.3. LOD Generation), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.3. LOD Generation), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), results p. 8 (4.4. Ablation Study), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.3. LOD Generation), p. 8 (4.4. Ablation Study), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.3. LOD Generation), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.3. LOD Generation), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.3. LOD Generation), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), results p. 8 (4.4. Ablation Study), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.3. LOD Generation), p. 8 (4.4. Ablation Study), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

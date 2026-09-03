@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | We use the conjugate gradient algorithm followed by a line search, which is altogether only slightly more expensive than computing the gradient ... | p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | Empirically, it is hard to robustly choose the penalty coefficient, so we use a hard constraint instead of a penalty, with parameter ... | p. 5 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization) |
@@ -78,9 +78,9 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | 5.1 Single Path In this estimation procedure, we collect a sequence of states by sampling s0 ∼ρ0 and then simulating the policy ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | 5.1 Single Path In this estimation procedure, we collect a sequence of states by sampling s0 ∼ρ0 and then simulating the policy ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | We can rewrite Equation (1) with a sum over states instead of timesteps: η(˜π) = η(π) + ∞ X t=0 X s ... | Hz/fps, inference time and control rate |
-| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not recovered | window and reset |
+| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | We can rewrite Equation (1) with a sum over states instead of timesteps: η(˜π) = η(π) + ∞ X t=0 X s ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), objective p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), temporal p. 4 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), objective p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), temporal p. 4 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Trust Region Policy Optimization mate ˆQθi(sn, an,k) by performing a rollout (i.e., a short trajectory) starting with state sn and action an,k. (p. 5, 2 Preliminaries).
+- **Objective/update evidence:** The natural policy gradient (Kakade, 2002) can be obtained as a special case of the update in Equation (12) by using a linear approximation to L and a quadratic approximation ... (p. 6, 3. Approximately solve this constrained optimization).
+- **Temporal/runtime evidence:** 5.1 Single Path In this estimation procedure, we collect a sequence of states by sampling s0 ∼ρ0 and then simulating the policy πθold for some number of timesteps to generate ... (p. 4, 2 Preliminaries).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

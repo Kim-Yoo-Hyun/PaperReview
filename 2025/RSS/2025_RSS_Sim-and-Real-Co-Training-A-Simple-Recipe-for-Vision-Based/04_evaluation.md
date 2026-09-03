@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p109.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p109.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p109.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p109.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% ... | p. 7 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in the task, we evaluate on eight new object categories (carrot, ladle, third row of Table I policies trained on Rea? and ... | p. 7 (V. EXPERIMENTS) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The term "digital cousin" was recently introduced by Dai et al, [26] to describe simulation environments that are close to, but not perfectly aligned ... | embodiment, simulator version and control stack | p. 6 (C. Building Task-Aware Simulation Datasets), p. 7 (V. EXPERIMENTS) |
 | Task/environment | It is important to feal-world policies with minimal real-world data note that DC data is generated in task-aware digital cousin To explore this, we ... | reset, timeout, object/scene variation | p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
@@ -151,7 +151,16 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 8 / datasets - extractive body cue:** This result indicates that diverse simulation data substantially improve policy robustness to spatial variations.
 - **p. 17 / Figure/Table caption - extractive body cue:** Fig. 12: Examples of the Video2Video model outputs with different noise strength, Left: An example video frame from the simulation
 
-- **PDF anchors reviewed:** datasets p. 6 (C. Building Task-Aware Simulation Datasets), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (C. Building Task-Aware Simulation Datasets), p. 8 (datasets), p. 8 (V. EXPERIMENTS), metrics p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets), p. 6 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (datasets), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets), p. 6 (V. EXPERIMENTS), p. 8 (datasets).
+- **Evidence anchors reviewed:** datasets p. 6 (C. Building Task-Aware Simulation Datasets), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (C. Building Task-Aware Simulation Datasets), p. 8 (datasets), p. 8 (V. EXPERIMENTS), metrics p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets), p. 6 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (datasets), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets), p. 6 (V. EXPERIMENTS), p. 8 (datasets).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Specifically, we demonstrate how co-training with simulation data enhances the real-world policy's in-domain performance (Section V-A) and improves its generalization to novel scenarios (Section V-B). (p. 6, V. EXPERIMENTS).
+- **Metric evidence:** This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%. (p. 7, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and 80%. (p. 7, V. EXPERIMENTS).
+- **Failure/negative evidence:** Finally, for the CLoseDoo= task, we recon 4 success if the door's joint angle is less than 5° and record a failure otherwise (p. 15, 256. We also add language conditioning to facilitate training).

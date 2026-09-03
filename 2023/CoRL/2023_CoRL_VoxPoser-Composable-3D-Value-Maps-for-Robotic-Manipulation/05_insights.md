@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 On top of value map LMPs, we define two high-level LMPs to orchestrate their behaviors: planner takes user instruction L as input (e.g., "open drawer") and outputs a sequence of sub-tasks ℓ1:N, ...를 Given the RGB-D observation of the environment and a language instruction, LLMs generate code, which interacts with VLMs, to produce a sequence of 3D affordance maps and constraint maps (collectively referred to ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, from LLMs and VLMs for everyday manipulation ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We represent τ r i as a sequence of dense end-effector waypoints to be executed by an Operational Space Controller [117], where each waypoint consists of a desired 6-DoF end-effector pose, end-effector ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** On top of value map LMPs, we define two high-level LMPs to orchestrate their behaviors: planner takes user instruction L as input (e.g., "open drawer") and outputs a sequence of ... (p. 6, 3 Method).
+- **Paper-specific mechanism:** Rather than relying on robotic data that are often of limited amount or variability, the method leverages LLMs for open-world reasoning and VLMs for generalizable visual grounding in a model-based ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 4: Full experimental results in simulation on seen tasks and unseen tasks. "SA" indicates seen attributes and "UA" indicates unseen attributes. Each entry represents success rate averaged across 20 ... (p. 22, Figure/Table caption); the relevant task/metric cue is Each entry represents success rate averaged across 20 episodes. (p. 22, A.5.2 Full Results on Simulated Environments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, from LLMs and VLMs for ... (p. 8, 3 Method).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 4.2 Generalization to Unseen Instructions and Attributes To provide rigorous quantitative evaluations on generalization, we set up a simulated block-world environment that mirrors our real-world robot setup [120, 121] but features 13 ....
-3. Compare against the body-reported baseline or a matched simpler baseline: VoxPoser outperforms both baselines across 13 tasks from two categories on both seen and unseen tasks and maintains similar success rates. smoother trajectories but takes more time for optimization..
-4. Report the body metric and its denominator/aggregation: Each entry represents success rate averaged across 20 episodes..
-5. Re-run the body-reported ablation/failure condition: For baselines, we ablate the two components of VoxPoser, LLM and motion planner, by comparing to a variant of [75] that combines an LLM with primitives and to a variant of [50] ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: On top of value map LMPs, we define two high-level LMPs to orchestrate their behaviors: planner takes user instruction L as input (e.g., "open drawer") and outputs a sequence of ... (p. 6, 3 Method); preserve the objective/update rule: Note that while these additional trajectory parametrizations are not mapped to a real-valued "cost", they can also be factored in the optimization procedure (Equation 1) to parametrize the trajectories. (p. 5, 3 Method).
+2. Use the paper-reported task/data/environment cue: 4.2 Generalization to Unseen Instructions and Attributes To provide rigorous quantitative evaluations on generalization, we set up a simulated block-world environment that mirrors our real-world robot setup [120, 121] but ... (p. 7, 3 Method).
+3. Compare against the reported or matched baseline: VoxPoser outperforms both baselines across 13 tasks from two categories on both seen and unseen tasks and maintains similar success rates. smoother trajectories but takes more time for optimization. (p. 7, 3 Method).
+4. Report the body metric with its denominator and aggregation: Each entry represents success rate averaged across 20 episodes. (p. 22, A.5.2 Full Results on Simulated Environments).
+5. Re-run the reported ablation or stress/failure condition: We further compare to a variant of Code as Policies [75] that uses LLMs to parameterize a pre-defined list of simple primitives (e.g., move to pose, open gripper). (p. 7, 3 Method); if none is reported, design one around: 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, from LLMs and VLMs for ... (p. 8, 3 Method).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3 Method), p. 8 (3 Method), p. 4 (3 Method); the primary result is directionally consistent at p. 7 (3 Method), p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 3 (3 Method), match the reported outcome at p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (3 Method), and measure the boundary at p. 8 (3 Method), p. 8 (3 Method).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 represent, sequence, dense mechanism이 VoxPoser outperforms both baselines across 13 tasks from two categories on both seen and unseen tasks ... 대비 Each entry represents success rate averaged across 20 episodes.을 개선하고, 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (On top of value map LMPs, we define two high-level LMPs to orchestrate their behaviors: planner takes user instruction L as input ...), does the paper-specific mechanism (Rather than relying on robotic data that are often of limited amount or variability, the method leverages LLMs for open-world reasoning and ...) retain the reported evaluation outcome (Each entry represents success rate averaged across 20 episodes.) when tested against the paper's strongest explicit boundary (5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Each entry represents success rate averaged across 20 episodes.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Rather than relying on robotic data that are often of limited amount or variability, the method leverages LLMs for open-world reasoning and VLMs for generalizable visual grounding in a model-based ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 4: Full experimental results in simulation on seen tasks and unseen tasks. "SA" indicates seen attributes and "UA" indicates unseen attributes. Each entry represents success rate averaged across 20 ... (p. 22, Figure/Table caption).
+- **Strongest explicit boundary:** 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, from LLMs and VLMs for ... (p. 8, 3 Method).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p034.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p034.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p034.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p034.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking a
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Beyond the insights that led to this systems integration, our main contribution lies in how Vysies incorporates these two powerful tools together ... | p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Trajectory-Based Dynamics Model Learning | p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 4 (IV. APPROACH) |
@@ -80,12 +80,12 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking a
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | fon the first frame using XMem [17]. | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | The third is the temporal IoV of contact activation, which measures the overlap of when the robot-object contact happens in the simulated ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
-| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -124,8 +124,17 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking a
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 8 (A. Geometry Reconstruction), p. 3 (C. Simultaneous Tracking and Shape Reconstruction), objective p. 3 (C. Simultaneous Tracking and Shape Reconstruction), temporal p. 6 (V. EXPERIMENTAL SETUP), p. 7 (B. Metrics), p. 1 (Abstract), p. 2 (A. Vision-Based Geometry Reconstruction and Completion), p. 2 (B. Vision-Based Object Pose Estimation), p. 3 (B. Physics-Inspired Dynamics Learning).
+- **Evidence anchors reviewed:** method p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 8 (A. Geometry Reconstruction), p. 3 (C. Simultaneous Tracking and Shape Reconstruction), objective p. 3 (C. Simultaneous Tracking and Shape Reconstruction), temporal p. 6 (V. EXPERIMENTAL SETUP), p. 7 (B. Metrics), p. 1 (Abstract), p. 2 (A. Vision-Based Geometry Reconstruction and Completion), p. 2 (B. Vision-Based Object Pose Estimation), p. 3 (B. Physics-Inspired Dynamics Learning).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Beyond the insights that led to this systems integration, our main contribution lies in how Vysies incorporates these two powerful tools together such that they supervise ‘each other and output ... (p. 4, IV. APPROACH).
+- **Objective/update evidence:** While [56] avoids the problematic gradients in contactrch scenarios by using a gradient-free search over a discrete set of hypothesized geometries, Vysics leverages smooth, implicit-based losses and thus can directly ... (p. 3, C. Simultaneous Tracking and Shape Reconstruction).
+- **Temporal/runtime evidence:** fon the first frame using XMem [17]. (p. 6, V. EXPERIMENTAL SETUP).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

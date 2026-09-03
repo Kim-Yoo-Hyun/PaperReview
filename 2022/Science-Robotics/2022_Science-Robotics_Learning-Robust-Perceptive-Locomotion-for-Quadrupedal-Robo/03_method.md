@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.08117; PDF retrieval source: https://arxiv.org/pdf/2201.08117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.08117; PDF retrieval source: https://arxiv.org/pdf/2201.08117. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | Overview We train a neural network policy in simulation and then perform zeroshot sim-to-real transfer. | p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS AND METHODS) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | First, a teacher policy is trained with RL to follow a random target velocity over randomly generated terrain with random disturbances. | p. 8 (4. MATERIALS AND METHODS), p. 10 (1. Teacher policy training) |
@@ -43,7 +43,7 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -55,7 +55,7 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 | Input/observation | controller, gets, onboard, sensor, observations, desired, velocity, command, outputs, joint, target, position, action, student | proprioception, terrain/perception observation과 velocity command | body cue; exact tensor/frame verify |
 | State/latent | controller, gets, onboard, sensor, observations, desired, velocity, command, outputs, joint | body/contact state, foothold 또는 behavior mode | body cue; notation verify |
 | Action/output | consists, three, stages, illustrated, Figure, Here, present, terrain-aware, locomotion, controller | joint target, torque, footstep 또는 locomotion action | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | return, tracking or stability objective | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | return, tracking or stability objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -75,7 +75,7 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 |---|---|---|---|
 | Horizon | gait/skill episode horizon과 short-horizon body control이 계층적으로 분리된다. | Research Article ETH Zurich and Intel 13 Select with probability Height scan noise model Per point noise (sampled every timestep) Per foot ... | episode/sequence/action-chunk boundary |
 | Rate / latency | high-level command, policy rate와 low-level torque rate를 구분; exact rate 확인 필요. | Problem formulation We formulate our control problem in discrete time dynamics, where the environment is fully defined by the state st at ... | Hz/fps, inference time and control rate |
-| Memory | proprioceptive history, terrain latent와 contact/body state. | not recovered | window and reset |
+| Memory | proprioceptive history, terrain latent와 contact/body state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | policy inference, adaptation encoder와 whole-body/control solve가 latency를 결정한다. | Wooden steps of various height (from 12 cm to 36.5 cm) were placed ahead of the robot, which performed 10 trials to ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -121,8 +121,17 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS AND METHODS), p. 10 (1. Teacher policy training), objective 본문 anchor 없음, temporal p. 13 (2. Perturbing the height values), p. 11 (3. Deployment), p. 12 (2. Perturbing the height values), p. 11 (3. Deployment), p. 12 (3. Deployment), p. 1 (1. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS AND METHODS), p. 10 (1. Teacher policy training), objective 본문 anchor 없음, temporal p. 13 (2. Perturbing the height values), p. 11 (3. Deployment), p. 12 (2. Perturbing the height values), p. 11 (3. Deployment), p. 12 (3. Deployment), p. 1 (1. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The controller gets onboard sensor observations and a desired velocity command, and outputs each joint's target position as the action. (p. 3, 1. INTRODUCTION).
+- **Objective/update evidence:** Height scan Proprioception Privileged info Teacher Policy Action joint difference phase difference (p. 10, 1. Teacher policy training).
+- **Temporal/runtime evidence:** The commandfollowing reward is defined as follows: rcommand = ( 1.0, if vdes · v > /vdes/ exp(-(vdes · v -/vdes/)2), otherwise (1) where vdes ∈R2 is the desired horizontal ... (p. 12, 3. Deployment).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

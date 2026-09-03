@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 
 ## Evaluation Body Digest
 
-- **p. 7 / 3.5. Analysis and Ablation Study - extractive PDF cue:** The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes.
-- **p. 6 / 3.2. 3D Object Detection - extractive PDF cue:** We evaluate our model on the Omni3D test set, following the benchmark protocol and hyperparameters used in DetAny3D.
-- **p. 7 / 3.5. Analysis and Ablation Study - extractive PDF cue:** It also naturally decomposes the task into two subproblems-2D grounding and 3D inference-where the former benefits from significantly larger amounts of training data across generic ...
-- **p. 6 / 3. Experiments - extractive PDF cue:** 3.1), including the training stages and datasets used.
-- **p. 8 / 3.5. Analysis and Ablation Study - extractive PDF cue:** Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings.
-- **p. 8 / 3.5. Analysis and Ablation Study - extractive PDF cue:** ATTRIBUTE JUDGEMENT OBJECT AVERAGE AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ...
-- **p. 6 / 3.2. 3D Object Detection - extractive PDF cue:** The Omni3D benchmark reports Average Precision (AP), where predictions are matched to ground-truth using 3D IoU with thresholds ranging from 0.05 to 0.50.
-- **p. 7 / 3.4. Implicit Grounding CoT - extractive PDF cue:** To study this, we evaluate our model on the MMGCoT [63] benchmark, which provides three key metrics: answer accuracy (A-Acc), grounding accuracy (G-Acc), and answer-grounding ...
+- **p. 7 / 3.5. Analysis and Ablation Study - extractive body cue:** The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes.
+- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** We evaluate our model on the Omni3D test set, following the benchmark protocol and hyperparameters used in DetAny3D.
+- **p. 7 / 3.5. Analysis and Ablation Study - extractive body cue:** It also naturally decomposes the task into two subproblems-2D grounding and 3D inference-where the former benefits from significantly larger amounts of training data across generic ...
+- **p. 6 / 3. Experiments - extractive body cue:** 3.1), including the training stages and datasets used.
+- **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings.
+- **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** ATTRIBUTE JUDGEMENT OBJECT AVERAGE AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ...
+- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** The Omni3D benchmark reports Average Precision (AP), where predictions are matched to ground-truth using 3D IoU with thresholds ranging from 0.05 to 0.50.
+- **p. 7 / 3.4. Implicit Grounding CoT - extractive body cue:** To study this, we evaluate our model on the MMGCoT [63] benchmark, which provides three key metrics: answer accuracy (A-Acc), grounding accuracy (G-Acc), and answer-grounding ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3.2. 3D Object Detection | SYSTEM / EVALUATION SCOPE UNRESOLVED | Compared with vision specialists, our model achieves competitive results overall and delivers notably better performance on indoor datasets. | p. 6 (3.2. 3D Object Detection) |
 | 3.3. Visual Question Answering | SYSTEM / EVALUATION SCOPE UNRESOLVED | In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general ... | p. 6 (3.3. Visual Question Answering) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 3.5. Analysis and Ablation Study - extractive PDF cue:** The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes.
-- **p. 6 / 3.2. 3D Object Detection - extractive PDF cue:** We evaluate our model on the Omni3D test set, following the benchmark protocol and hyperparameters used in DetAny3D.
-- **p. 7 / 3.5. Analysis and Ablation Study - extractive PDF cue:** It also naturally decomposes the task into two subproblems-2D grounding and 3D inference-where the former benefits from significantly larger amounts of training data across generic ...
-- **p. 6 / 3. Experiments - extractive PDF cue:** 3.1), including the training stages and datasets used.
-- **p. 8 / 3.5. Analysis and Ablation Study - extractive PDF cue:** Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings.
-- **p. 8 / 3.5. Analysis and Ablation Study - extractive PDF cue:** ATTRIBUTE JUDGEMENT OBJECT AVERAGE AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ...
+- **p. 7 / 3.5. Analysis and Ablation Study - extractive body cue:** The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes.
+- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** We evaluate our model on the Omni3D test set, following the benchmark protocol and hyperparameters used in DetAny3D.
+- **p. 7 / 3.5. Analysis and Ablation Study - extractive body cue:** It also naturally decomposes the task into two subproblems-2D grounding and 3D inference-where the former benefits from significantly larger amounts of training data across generic ...
+- **p. 6 / 3. Experiments - extractive body cue:** 3.1), including the training stages and datasets used.
+- **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings.
+- **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** ATTRIBUTE JUDGEMENT OBJECT AVERAGE AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GR3D overview. Top-Left: Spatial CoT enabled by 2D implicit grounding. Top-Middle: Region-prompted 3D grounding predicts camera-relative 3D boxes. Top-Right: Grounded 3D detection performs ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Method overview. GR3D builds on Region-VLMs by adding streaming region insertion for visual Chain-of-Thought reasoning. During CoT, the model repeatedly predicts a region, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison on the Omni3D [32] benchmark between GR3D, vision specialists, and recent VLMs. We report AP15 and mAP for each dataset domain. GR3D ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. 2D detection results on the Omni3D benchmark. We report the mean Average Precision (mAP) for each dataset domain. yond sparse 3D-box labels. (i) ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Results on the BLINK-Depth benchmark for point-level region spatial understanding. Left: comparison with VLM base- lines. Right: visualization of one sample. Our method ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Performance comparison on general visual question answering and spatial reasoning benchmarks.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on 3D object detection. Our model produces accurate 3D bounding boxes on in-the-wild samples. whether the grounding genuinely contributes to correct ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings. AccA, AccG, and Cons. refer to answer accuracy, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GR3D overview. Top-Left: Spatial CoT enabled by 2D implicit grounding. Top-Middle: Region-prompted 3D grounding predicts camera-relative 3D boxes. Top-Right: Grounded 3D detection performs ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Method overview. GR3D builds on Region-VLMs by adding streaming region insertion for visual Chain-of-Thought reasoning. During CoT, the model repeatedly predicts a region, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Comparison on the Omni3D [32] benchmark between GR3D, vision specialists, and recent VLMs. We report AP15 and mAP for each dataset domain. GR3D ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. 2D detection results on the Omni3D benchmark. We report the mean Average Precision (mAP) for each dataset domain. yond sparse 3D-box labels. (i) ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Results on the BLINK-Depth benchmark for point-level region spatial understanding. Left: comparison with VLM base- lines. Right: visualization of one sample. Our method ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Performance comparison on general visual question answering and spatial reasoning benchmarks.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on 3D object detection. Our model produces accurate 3D bounding boxes on in-the-wild samples. whether the grounding genuinely contributes to correct ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings. AccA, AccG, and Cons. refer to answer accuracy, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes. | embodiment, simulator version and control stack | p. 7 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection) |
 | Task/environment | We evaluate our model on the Omni3D test set, following the benchmark protocol and hyperparameters used in DetAny3D. | reset, timeout, object/scene variation | p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study) |
@@ -153,10 +153,10 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 3.2. 3D Object Detection - extractive PDF cue:** This makes its 3D predictions unstable under changes in image size.
-- **p. 6 / 3.3. Visual Question Answering - extractive PDF cue:** In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general VQA ...
+- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** This makes its 3D predictions unstable under changes in image size.
+- **p. 6 / 3.3. Visual Question Answering - extractive body cue:** In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general VQA ...
 
-- **PDF anchors reviewed:** datasets p. 7 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study), p. 6 (3. Experiments), p. 8 (3.5. Analysis and Ablation Study), p. 8 (3.5. Analysis and Ablation Study), metrics p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), baselines p. 6 (3.2. 3D Object Detection), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study), p. 5 (Figure/Table caption), p. 7 (3.5. Analysis and Ablation Study), p. 8 (3.5. Analysis and Ablation Study), results p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visual Question Answering), p. 7 (3.4. Implicit Grounding CoT), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study), p. 6 (3. Experiments), p. 8 (3.5. Analysis and Ablation Study), p. 8 (3.5. Analysis and Ablation Study), metrics p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), baselines p. 6 (3.2. 3D Object Detection), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study), p. 5 (Figure/Table caption), p. 7 (3.5. Analysis and Ablation Study), p. 8 (3.5. Analysis and Ablation Study), results p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visual Question Answering), p. 7 (3.4. Implicit Grounding CoT), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

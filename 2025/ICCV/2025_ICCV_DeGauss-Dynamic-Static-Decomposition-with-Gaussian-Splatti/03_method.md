@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 ## Method Body Digest
 
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
-- **p. 3 / 3.2. Foreground deformable gaussian - extractive PDF cue:** The spatial-temporal module comprises an encoder H and a decoder D.
-- **p. 3 / 3.2. Foreground deformable gaussian - extractive PDF cue:** The encoder, based on Hexplane [3], extracts spatio-temporal features based on reference time t with fd = H(Gf, t), and the multi-head decoder D predicts ...
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** This decoupled formulation guarantee flexible yet accurate scene decomposition result. appearance modeling.
-- **p. 5 / 3.7. Loss function - extractive PDF cue:** We refer readers to Appendix A. for a detailed definition of each loss term.
-- **p. 5 / 3.8. Partial Opacity Reset - extractive PDF cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
-- **p. 5 / 3.7. Loss function - extractive PDF cue:** (11) While both main loss Lmain and utility loss Luti are used for optimizable parameters' update, only the gradient magnitude of Lmain are used to ...
-- **p. 5 / 3.7. Loss function - extractive PDF cue:** As the loss gradient magnitude controls the densification process of gaussians [10], we design the loss function L, which comprises two parts Lmain and Luti, ...
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
+- **p. 3 / 3.2. Foreground deformable gaussian - extractive body cue:** The spatial-temporal module comprises an encoder H and a decoder D.
+- **p. 3 / 3.2. Foreground deformable gaussian - extractive body cue:** The encoder, based on Hexplane [3], extracts spatio-temporal features based on reference time t with fd = H(Gf, t), and the multi-head decoder D predicts ...
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** This decoupled formulation guarantee flexible yet accurate scene decomposition result. appearance modeling.
+- **p. 5 / 3.7. Loss function - extractive body cue:** We refer readers to Appendix A. for a detailed definition of each loss term.
+- **p. 5 / 3.8. Partial Opacity Reset - extractive body cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
+- **p. 5 / 3.7. Loss function - extractive body cue:** (11) While both main loss Lmain and utility loss Luti are used for optimizable parameters' update, only the gradient magnitude of Lmain are used to ...
+- **p. 5 / 3.7. Loss function - extractive body cue:** As the loss gradient magnitude controls the densification process of gaussians [10], we design the loss function L, which comprises two parts Lmain and Luti, ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are: • We propose DeGauss, a decoupled foregroundbackground design which leverages dynamic-static Gaussian splatting for robust and generalizable dynamicstatic decomposition. • ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We show that our method achieves superior results compared to baseline dynamic scene modeling approaches, with notable advantages across diverse datasets [13, 21].
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • We propose DeGauss, a decoupled foregroundbackground design which leverages dynamic-static Gaussian splatting for robust and generalizable dynamicstatic decomposition. • ...
+- **p. 2 / 1. Introduction - extractive body cue:** We show that our method achieves superior results compared to baseline dynamic scene modeling approaches, with notable advantages across diverse datasets [13, 21].
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
-- **p. 3 / 3.2. Foreground deformable gaussian - extractive PDF cue:** The spatial-temporal module comprises an encoder H and a decoder D.
-- **p. 3 / 3.2. Foreground deformable gaussian - extractive PDF cue:** The encoder, based on Hexplane [3], extracts spatio-temporal features based on reference time t with fd = H(Gf, t), and the multi-head decoder D predicts ...
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** This decoupled formulation guarantee flexible yet accurate scene decomposition result. appearance modeling.
-- **p. 5 / 3.7. Loss function - extractive PDF cue:** We refer readers to Appendix A. for a detailed definition of each loss term.
-- **p. 5 / 3.8. Partial Opacity Reset - extractive PDF cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
+- **p. 3 / 3.2. Foreground deformable gaussian - extractive body cue:** The spatial-temporal module comprises an encoder H and a decoder D.
+- **p. 3 / 3.2. Foreground deformable gaussian - extractive body cue:** The encoder, based on Hexplane [3], extracts spatio-temporal features based on reference time t with fd = H(Gf, t), and the multi-head decoder D predicts ...
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** This decoupled formulation guarantee flexible yet accurate scene decomposition result. appearance modeling.
+- **p. 5 / 3.7. Loss function - extractive body cue:** We refer readers to Appendix A. for a detailed definition of each loss term.
+- **p. 5 / 3.8. Partial Opacity Reset - extractive body cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects. | p. 4 (3.4. Background Brightness Control), p. 3 (3.2. Foreground deformable gaussian) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The spatial-temporal module comprises an encoder H and a decoder D. | p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.7. Loss function - extractive PDF cue:** (11) While both main loss Lmain and utility loss Luti are used for optimizable parameters' update, only the gradient magnitude of Lmain are used to ...
-- **p. 5 / 3.7. Loss function - extractive PDF cue:** As the loss gradient magnitude controls the densification process of gaussians [10], we design the loss function L, which comprises two parts Lmain and Luti, ...
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** The raw background render Cb is rasterized by background gaussian Gb with equation (2).
-- **p. 4 / 3.6. Unsupervised scene decomposition - extractive PDF cue:** This design enables full gradient flow and allow gradually formulated composition mask during training, as shown in Fig.
-- **p. 3 / 3.3. Probabilistic Composition Mask Rasterization - extractive PDF cue:** Given the predicted mask elements \if mm od e \lbrace \else \textbraceleft \fi m_f^\prime , m_b^\prime \ } and the deformed attributes \ifm mod e ...
+- **p. 5 / 3.7. Loss function - extractive body cue:** (11) While both main loss Lmain and utility loss Luti are used for optimizable parameters' update, only the gradient magnitude of Lmain are used to ...
+- **p. 5 / 3.7. Loss function - extractive body cue:** As the loss gradient magnitude controls the densification process of gaussians [10], we design the loss function L, which comprises two parts Lmain and Luti, ...
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** The raw background render Cb is rasterized by background gaussian Gb with equation (2).
+- **p. 4 / 3.6. Unsupervised scene decomposition - extractive body cue:** This design enables full gradient flow and allow gradually formulated composition mask during training, as shown in Fig.
+- **p. 3 / 3.3. Probabilistic Composition Mask Rasterization - extractive body cue:** Given the predicted mask elements \if mm od e \lbrace \else \textbraceleft \fi m_f^\prime , m_b^\prime \ } and the deformed attributes \ifm mod e ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.7. Loss function), p. 5 (3.7. Loss function), p. 4 (3.4. Background Brightness Control), p. 4 (3.6. Unsupervised scene decomposition).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are: • We propose DeGauss, a decoupled foregroundbackground design which leverages dynamic-static Gaussian splatting for robust and generalizable dynamicstatic decomposition. • ...
-- **p. 4 / 3.4. Background Brightness Control - extractive PDF cue:** SH Attributes Foreground Render Probabilistic Mask Brightness Control Background Render Controlled Background Composed Render Input Image Activation Rasterize Mask Rasterize Rasterize Foreground Gaussians Background Gaussians ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To model dynamics in 3D reconstruction, recent methods such as NeRF-on-the-go, WildGaussians, and SpotlessSplats [12, 22, 24] propose to suppress transient regions during training, achieving ...
-- **p. 5 / 3.6. Unsupervised scene decomposition - extractive PDF cue:** Input Training Iterations SpotlessSplats Mask SpotSplats Render Our Foreground Brightness Control Our controlled background Composition Mask Figure 3.
-- **p. 3 / 3.1. 3D Gaussian Splatting - extractive PDF cue:** The final color \protect \mathbf {C} at each pixel is then computed by blending the contribution of all Gaussians, sorted by their depth:
-- **p. 3 / 3.1. 3D Gaussian Splatting - extractive PDF cue:** To render these Gaussians onto the image plane, we use differentiable splatting [40], which applies a projection transformation \protect \mathcal {P}(\mathcal {G} ).
-- **p. 4 / 3.6. Unsupervised scene decomposition - extractive PDF cue:** In our decoupled design, the dynamic/static gaussians rasterize the foreground/background renders Cf and Cb independently and compose (after rending) with the probabilistic mask Pf.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • We propose DeGauss, a decoupled foregroundbackground design which leverages dynamic-static Gaussian splatting for robust and generalizable dynamicstatic decomposition. • ...
+- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** SH Attributes Foreground Render Probabilistic Mask Brightness Control Background Render Controlled Background Composed Render Input Image Activation Rasterize Mask Rasterize Rasterize Foreground Gaussians Background Gaussians ...
+- **p. 2 / 1. Introduction - extractive body cue:** To model dynamics in 3D reconstruction, recent methods such as NeRF-on-the-go, WildGaussians, and SpotlessSplats [12, 22, 24] propose to suppress transient regions during training, achieving ...
+- **p. 5 / 3.6. Unsupervised scene decomposition - extractive body cue:** Input Training Iterations SpotlessSplats Mask SpotSplats Render Our Foreground Brightness Control Our controlled background Composition Mask Figure 3.
+- **p. 3 / 3.1. 3D Gaussian Splatting - extractive body cue:** The final color \protect \mathbf {C} at each pixel is then computed by blending the contribution of all Gaussians, sorted by their depth:
+- **p. 3 / 3.1. 3D Gaussian Splatting - extractive body cue:** To render these Gaussians onto the image plane, we use differentiable splatting [40], which applies a projection transformation \protect \mathcal {P}(\mathcal {G} ).
+- **p. 4 / 3.6. Unsupervised scene decomposition - extractive body cue:** In our decoupled design, the dynamic/static gaussians rasterize the foreground/background renders Cf and Cb independently and compose (after rending) with the probabilistic mask Pf.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,7 +88,7 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 ## Training vs Inference
 
-- **p. 5 / 3.8. Partial Opacity Reset - extractive PDF cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
+- **p. 5 / 3.8. Partial Opacity Reset - extractive body cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -108,13 +108,13 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 ## Failure and Ablation Link
 
-- **p. 6 / 4.3. Results - extractive PDF cue:** Left of the dashed line: composed render comparisons; right: static reconstruction comparison(without camera masks).
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 9. Ablation Study on AEA [16] dataset. w/o Ldepth Ours
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 10. Ablation Study on Neu3D dataet [13] cut beef scene.
-- **p. 8 / 6. Conclusion - extractive PDF cue:** This paper proposes DeGauss to robust decompose dynamicstatic elements in the scene with gaussian splatting.
-- **p. 7 / 4.3. Results - extractive PDF cue:** We show our method robustly handles occlusion and reconstructs fine static details compared to SpotlessSplats [24]in Fig.
-- **p. 7 / 4.3. Results - extractive PDF cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
+- **p. 6 / 4.3. Results - extractive body cue:** Left of the dashed line: composed render comparisons; right: static reconstruction comparison(without camera masks).
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. Ablation Study on AEA [16] dataset. w/o Ldepth Ours
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 10. Ablation Study on Neu3D dataet [13] cut beef scene.
+- **p. 8 / 6. Conclusion - extractive body cue:** This paper proposes DeGauss to robust decompose dynamicstatic elements in the scene with gaussian splatting.
+- **p. 7 / 4.3. Results - extractive body cue:** We show our method robustly handles occlusion and reconstructs fine static details compared to SpotlessSplats [24]in Fig.
+- **p. 7 / 4.3. Results - extractive body cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -128,7 +128,7 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.4. Background Brightness Control), p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian), p. 4 (3.4. Background Brightness Control), p. 5 (3.7. Loss function), p. 5 (3.8. Partial Opacity Reset), objective p. 5 (3.7. Loss function), p. 5 (3.7. Loss function), p. 4 (3.4. Background Brightness Control), p. 4 (3.6. Unsupervised scene decomposition), p. 3 (3.3. Probabilistic Composition Mask Rasterization), temporal p. 5 (4.2. Datasets), p. 5 (4.2. Datasets), p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian), p. 4 (3.4. Background Brightness Control), p. 6 (4.3. Results).
+- **Evidence anchors reviewed:** method p. 4 (3.4. Background Brightness Control), p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian), p. 4 (3.4. Background Brightness Control), p. 5 (3.7. Loss function), p. 5 (3.8. Partial Opacity Reset), objective p. 5 (3.7. Loss function), p. 5 (3.7. Loss function), p. 4 (3.4. Background Brightness Control), p. 4 (3.6. Unsupervised scene decomposition), p. 3 (3.3. Probabilistic Composition Mask Rasterization), temporal p. 5 (4.2. Datasets), p. 5 (4.2. Datasets), p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian), p. 4 (3.4. Background Brightness Control), p. 6 (4.3. Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

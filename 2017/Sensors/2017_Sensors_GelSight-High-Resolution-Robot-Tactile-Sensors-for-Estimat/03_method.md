@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/; PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/; PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | The reflectance function R models both the lighting environment and the surface reflectance. | p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | We model the surface of the sensor with a height function z = f (x, y), so that the surface normal is ... | p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape) |
@@ -77,8 +77,8 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | However, the relationship between the markers' motion and the contact force or shape is nonlinear when the contact geometry is unknown. | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse ... | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
-| Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -124,8 +124,17 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), objective p. 8 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), temporal p. 16 (5.2. Evaluation of Force Measurement), p. 18 (5.2. Evaluation of Force Measurement), p. 18 (5.2. Evaluation of Force Measurement), p. 2 (1. Introduction), p. 3 (2. Related Work), p. 4 (2. Related Work).
+- **Evidence anchors reviewed:** method p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), objective p. 8 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), temporal p. 16 (5.2. Evaluation of Force Measurement), p. 18 (5.2. Evaluation of Force Measurement), p. 18 (5.2. Evaluation of Force Measurement), p. 2 (1. Introduction), p. 3 (2. Related Work), p. 4 (2. Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** (4) We solve the Poission Equation (3) using fast Poisson solver with discrete sine transform (DST), thus we can get a fast computation on the heightmap reconstruction, and it is ... (p. 8, 3.3. Algorithm for Measuring Shape).
+- **Objective/update evidence:** In a simplified version, we only record the gradient at each entry space and match the gradient reading to the closest entry. (p. 8, 3.3. Algorithm for Measuring Shape).
+- **Temporal/runtime evidence:** Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

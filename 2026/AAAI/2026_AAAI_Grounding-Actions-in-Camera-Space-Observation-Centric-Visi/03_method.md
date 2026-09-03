@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/38947; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/38947. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/38947; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/38947. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -22,7 +22,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 ## Design Rationale
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Notably, our method exhibits markedly improved adaptability to previously unseen camera viewarXiv:2508.13103v1 [cs.RO] 18 Aug 2025
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Notably, our method exhibits markedly improved adaptability to previously unseen camera view.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We introduce the Observation-Centric VLA (OC-VLA) framework.
 
 ## Source Evidence Cues
@@ -37,7 +37,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | While these representations are widely used as supervision signals for Vision-Language-Action (VLA) models, they are tightly coupled with specific robot embodiment configurations, ... | p. 3 (III. METHOD), p. 3 (III. METHOD) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Consequently, it is difficult for the model to achieve a reasonable projection from image observation to corresponding actions, and thus the model ... | p. 3 (III. METHOD), p. 4 (III. METHOD) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | In addition to language and image tokens, we concatenate the current timestep and the noise-perturbed action as inputs to the causal transformer. | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | For models with a continuous action space, the objective is to minimize the mean squared error (MSE) between the robot's action (augmented ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Both models are optimized with AdamW [61] for 20,000 steps with a batch size of 512. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (IV. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** While these representations are widely used as supervision signals for Vision-Language-Action (VLA) models, they are tightly coupled with specific robot embodiment configurations, rather than being derived from the observation space. (p. 3, III. METHOD).
+- **Objective/update evidence:** We then analyze the differences between camera-coordinate and robotcoordinate optimization. (p. 2, III. METHOD).
+- **Temporal/runtime evidence:** Observation-Centric Action Prediction In current robotic datasets, action/pose annotations are often defined at a low level, either as joint commands or end-effector poses within the robot base coordinate frame. (p. 3, III. METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

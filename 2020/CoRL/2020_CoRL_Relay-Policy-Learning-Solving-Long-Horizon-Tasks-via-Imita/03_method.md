@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/gupta20a.html; PDF retrieval source: https://arxiv.org/pdf/1910.11956. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/gupta20a.html; PDF retrieval source: https://arxiv.org/pdf/1910.11956. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | This architecture consists of a high-level goal-setting policy and a low-level subgoal-conditioned policy, which together generate an environment action for a given ... | p. 3 (3 Preliminaries), p. 3 (3 Preliminaries) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | Unstructured Demos Relay Imitation Learning Relay Reinforcement Fine-tuning Env Reward Action Subgoal Relay Data Relabeling High level Low level Figure 2: Relay ... | p. 3 (3 Preliminaries), p. 4 (3 Preliminaries) |
@@ -83,10 +83,10 @@ PDF body method statement (p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Env Env Env Env Env Env Env High level goal Figure 3: Relay policy architecture: A high level goal setter πθ takes ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Env Env Env Env Env Env Env High level goal Figure 3: Relay policy architecture: A high level goal setter πθ takes ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | For the subsequent H steps, the goal produced by πh θ is kept fixed, while πl θ generates an action at at ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), p. 5 (3 Preliminaries), objective p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 1 (1 Introduction), temporal p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), p. 5 (3 Preliminaries), objective p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 1 (1 Introduction), temporal p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 7: end while 8: Distill fine-tuned policies into a single multi-goal policy Algorithm 2 Relay data relabeling for RIL low level Require: Demonstrations D = {τ0, τ1, ...τN} 1: for ... (p. 4, 3 Preliminaries).
+- **Objective/update evidence:** For the high-level policy, given a high-level goal-reaching reward function rh(st, gt, sh g), we can optimize it by running a similar goal-conditioned policy gradient optimization to maximize the sum ... (p. 5, 3 Preliminaries).
+- **Temporal/runtime evidence:** We simplify the long-horizon policy learning problem by using a novel data-relabeling algorithm for learning goal-conditioned hierarchical policies, where the low-level only acts for a fixed number of steps, regardless ... (p. 1, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

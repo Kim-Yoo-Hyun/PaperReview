@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 Given that any reward function is a function over the environment's state and action variables, the only requirement in the source code is that it exposes these environment variables, which is easy ...를 In practice, to ensure that the environment code fits within the LLM's context window and does not leak simulation internals (so that we can expect the same prompt to generalize to new ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This consistent improvement also cannot be replaced by just sampling more in the first iteration as the ablation's performances are lower than EUREKA after 2 iterations on both benchmarks.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Given that any reward function is a function over the environment's state and action variables, the only requirement in the source code is that it exposes these environment variables, which ... (p. 3, 3 METHOD).
+- **Paper-specific mechanism:** We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1. (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 10: EUREKA reward functions enjoy improved sample efficiency compared to various baseline reward functions on aggregate over 20 Dexterity tasks. Additional Evaluation Metrics. In Fig. 11, we present holistic ... (p. 28, Figure/Table caption); the relevant task/metric cue is Averaged over all Isaac tasks, EUREKA without reward reflection reduces the average normalized score by 28.6%; in App. (p. 7, 4.3 RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In addition to coverage over robot form factors, we ensure depth in our evaluation by including all 20 tasks from the Bidexterous Manipulation (Dexterity) benchmark (Chen et al., 2022)..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 4: EUREKA outperforms Human and L2R across all tasks. In particular, EUREKA realizes much greater gains on high-dimensional dexterity environments. about these tasks, making them ideal testbeds for assessing EUREKA's reward ....
-4. Report the body metric and its denominator/aggregation: Figure 13: Raw success rates of all methods on the Dexterity benchmark. Reward Reflection Ablations. In Fig. 14, we provide a detailed per-task breakdown on the impact of removing reward reflection in ....
-5. Re-run the body-reported ablation/failure condition: This ablation helps study, given a fixed number of reward function budget, whether it is more advantageous to perform the EUREKA evolution or simply sample more first-attempt rewards without iterative improvement..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Given that any reward function is a function over the environment's state and action variables, the only requirement in the source code is that it exposes these environment variables, which ... (p. 3, 3 METHOD); preserve the objective/update rule: Algorithm 1 EUREKA 1: Require: Task description l, environment code M, coding LLM LLM, fitness function F, initial prompt prompt 2: Hyperparameters: search iteration N, iteration batch size K 3: ... (p. 4, 3 METHOD).
+2. Use the paper-reported task/data/environment cue: Our environments consist of 10 distinct robots and 29 tasks implemented using the IsaacGym simulator (Makoviychuk et al., 2021). (p. 5, 4 EXPERIMENTS).
+3. Compare against the reported or matched baseline: This ablation helps study, given a fixed number of reward function budget, whether it is more advantageous to perform the EUREKA evolution or simply sample more first-attempt rewards without iterative ... (p. 7, 4.3 RESULTS).
+4. Report the body metric with its denominator and aggregation: Averaged over all Isaac tasks, EUREKA without reward reflection reduces the average normalized score by 28.6%; in App. (p. 7, 4.3 RESULTS).
+5. Re-run the reported ablation or stress/failure condition: This consistent improvement also cannot be replaced by just sampling more in the first iteration as the ablation's performances are lower than EUREKA after 2 iterations on both benchmarks. (p. 7, 4.3 RESULTS); if none is reported, design one around: This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD); the primary result is directionally consistent at p. 29 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (4.3 RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), match the reported outcome at p. 28 (Figure/Table caption), p. 29 (Figure/Table caption), p. 7 (4.3 RESULTS), and measure the boundary at p. 19 (B ENVIRONMENT DETAILS), p. 7 (4.3 RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, Evolution-driven, Universal mechanism이 Figure 4: EUREKA outperforms Human and L2R across all tasks. In particular, EUREKA realizes much greater ... 대비 Figure 13: Raw success rates of all methods on the Dexterity benchmark. Reward Reflection Ablations. In Fig. 14, ...을 개선하고, This consistent improvement also cannot be replaced by just sampling more in the first iteration as ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Given that any reward function is a function over the environment's state and action variables, the only requirement in the source code ...), does the paper-specific mechanism (We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: ...) retain the reported evaluation outcome (Averaged over all Isaac tasks, EUREKA without reward reflection reduces the average normalized score by 28.6%; in App.) when tested against the paper's strongest explicit boundary (This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Averaged over all Isaac tasks, EUREKA without reward reflection reduces the average normalized score by 28.6%; in App.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1. (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 10: EUREKA reward functions enjoy improved sample efficiency compared to various baseline reward functions on aggregate over 20 Dexterity tasks. Additional Evaluation Metrics. In Fig. 11, we present holistic ... (p. 28, Figure/Table caption).
+- **Strongest explicit boundary:** This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

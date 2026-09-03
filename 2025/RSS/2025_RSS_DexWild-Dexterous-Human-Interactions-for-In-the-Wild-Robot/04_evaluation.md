@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. ANALYSIS AND RI | EMPIRICAL / REAL-ROBOT OR HARDWARE | In our evaluations, we seek to investigate the following key questions: 1) How effectively does DexWild leverage human data to achieve strong in-the-wild performance? | p. 6 (V. ANALYSIS AND RI) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 7: Left: Cross-Task Performance - Evaluating DexWild on the Cross-Embodiment Performance ~ Testing DexWild policy on the Orig = Demonstrating improved DexWild performance ... | p. 8 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present ... | embodiment, simulator version and control stack | p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks) |
 | Task/environment | Finally, in Bimanual Clothes Folding, the robot uses both hands to fold a clothing item, assessing manipulation of deformable objects. | reset, timeout, object/scene variation | p. 6 (B. Evaluation Tasks) |
@@ -143,7 +143,16 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 - **p. 6 / 3) Does policy performance scale effectively with increasing - extractive body cue:** dlomain settings (64.7% success rate) but degrade significantly in more challenging scenarios-in-the-wild (28.5%) and inthe-wild extreme (22.0%).
 - **p. 7 / 3) Does policy performance scale effectively with increasing - extractive body cue:** 1:5) degrades performance (54.5% in-domain, 50.9% in-thewild), indicating that robot data remains essential for grounding fine-grained control,
 
-- **PDF anchors reviewed:** datasets p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks), metrics p. 6 (B. Evaluation Tasks), p. 5 (Figure/Table caption), p. 6 (V. ANALYSIS AND RI), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines 본문 anchor 없음, results p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (B. Evaluation Tasks), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks), metrics p. 6 (B. Evaluation Tasks), p. 5 (Figure/Table caption), p. 6 (V. ANALYSIS AND RI), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines 본문 anchor 없음, results p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (B. Evaluation Tasks), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot ... (p. 6, C. Evaluation Environments).
+- **Metric evidence:** Success requires the policy to adapt to varying object properties, environmental conditions, (p. 6, B. Evaluation Tasks).
+- **Baseline/ablation evidence:** Success requires the policy to adapt to varying object properties, environmental conditions, (p. 6, B. Evaluation Tasks).
+- **Failure/negative evidence:** This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).

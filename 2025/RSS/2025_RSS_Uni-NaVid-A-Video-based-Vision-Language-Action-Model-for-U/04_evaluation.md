@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p013.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p013.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p013.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p013.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Individual Task Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method ... | p. 8 (B. Individual Task Results) |
 | B. Individual Task Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | significant improvements, with a +25.7% increase in Success Rate (SR) on R2R. | p. 8 (B. Individual Task Results) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The robot then executes the predicted actions and calls STOP once the first predicted action is a stop action, For VLN and EQA tasks, ... | embodiment, simulator version and control stack | p. 7 (VI. EXPERIMENT), p. 7 (VI. EXPERIMENT) |
 | Task/environment | + Object goal navigation: We use the validation split of the Habitat Matterport 3D (HM3D) dataset [67], which requires the agent to find target ... | reset, timeout, object/scene variation | p. 7 (VI. EXPERIMENT), p. 8 (VI. EXPERIMENT) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 - **p. 11 / C. Qualitative Results in Real-World - extractive body cue:** This limitation could be alleviated by extending the moel to predict
 - **p. 10 / B. Individual Task Results - extractive body cue:** gies, while also highlighting robust open-world understanding capabilities.
 
-- **PDF anchors reviewed:** datasets p. 7 (VI. EXPERIMENT), p. 7 (VI. EXPERIMENT), p. 8 (VI. EXPERIMENT), p. 11 (C. Qualitative Results in Real-World), p. 8 (VI. EXPERIMENT), p. 10 (B. Individual Task Results), metrics p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 10 (C. Qualitative Results in Real-World), baselines p. 9 (B. Individual Task Results), p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), results p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World), p. 9 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World).
+- **Evidence anchors reviewed:** datasets p. 7 (VI. EXPERIMENT), p. 7 (VI. EXPERIMENT), p. 8 (VI. EXPERIMENT), p. 11 (C. Qualitative Results in Real-World), p. 8 (VI. EXPERIMENT), p. 10 (B. Individual Task Results), metrics p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 10 (C. Qualitative Results in Real-World), baselines p. 9 (B. Individual Task Results), p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), results p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World), p. 9 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method (DAgRL+0D [94]) on the VAL SEEN ... (p. 8, B. Individual Task Results).
+- **Metric evidence:** significant improvements, with a +25.7% increase in Success Rate (SR) on R2R. (p. 8, B. Individual Task Results).
+- **Baseline/ablation evidence:** Comparison on vision-and-language navigation, We evaluate our method with mainstream baselines on two publicly available benchmarks: VLN-CE R2R [42] and RxR [45]. (p. 8, B. Individual Task Results).
+- **Failure/negative evidence:** Despite the promising results, Uni-NaVid has several limitations. (p. 11, C. Qualitative Results in Real-World).

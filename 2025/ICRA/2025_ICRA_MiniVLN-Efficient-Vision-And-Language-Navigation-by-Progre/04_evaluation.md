@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2409.18800v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2409.18800v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table captio
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** On the R2R datasets, the results, as shown in Figure 4, reveal that the non-distilled model achieves an SR of only 74.16 and an SPL ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Id Ablation Validation Seen Validation Unseen text pano fuse SR SPL SR SPL #1 ✓ ✓ ✓ 78.35 70.69 78.80 70.17 #2 ✓ ✓ 76.79 ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Method Validation Unseen Test Unseen Param(M)↓ SR↑ SPL↑ RGS↑ RGSPL↑ SR↑ SPL↑ RGS↑ RGSPL↑ HAMT [4] 32.95 30.20 18.92 17.28 30.40 26.67 14.88 13.08 170.39 ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** This dataset offers a challenging testbed for vision-and-language navigation tasks.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** 2) Evaluation Metrics: We assess agent performance using standard VLN metrics, including Success Rate (SR) and Success weighted by Path Length (SPL).
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Remote Grounding Success (RGS) and its path-length penalized version (RGSPL) evaluate object localization accuracy.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** KDWeight Validation Seen Validation Unseen SR SPL SR SPL 0.01 76.30 69.49 76.76 67.89 0.1 78.35 70.69 78.80 70.17 1 76.98 69.78 78.20 69.94 Additionally, ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. When ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** On the R2R datasets, the results, as shown in Figure 4, reveal that the non-distilled model achieves an SR of only 74.16 and an SPL ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Id Ablation Validation Seen Validation Unseen text pano fuse SR SPL SR SPL #1 ✓ ✓ ✓ 78.35 70.69 78.80 70.17 #2 ✓ ✓ 76.79 ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Method Validation Unseen Test Unseen Param(M)↓ SR↑ SPL↑ RGS↑ RGSPL↑ SR↑ SPL↑ RGS↑ RGSPL↑ HAMT [4] 32.95 30.20 18.92 17.28 30.40 26.67 14.88 13.08 170.39 ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** This dataset offers a challenging testbed for vision-and-language navigation tasks.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** 2) Evaluation Metrics: We assess agent performance using standard VLN metrics, including Success Rate (SR) and Success weighted by Path Length (SPL).
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Remote Grounding Success (RGS) and its path-length penalized version (RGSPL) evaluate object localization accuracy.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** KDWeight Validation Seen Validation Unseen SR SPL SR SPL 0.01 76.30 69.49 76.76 67.89 0.1 78.35 70.69 78.80 70.17 1 76.98 69.78 78.20 69.94 Additionally, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. When ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | 2) Evaluation Metrics: We assess agent performance using standard VLN metrics, including Success Rate (SR) and Success weighted by Path Length (SPL). | p. 5 (V. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. ... | p. 1 (Figure/Table caption) |
@@ -40,24 +40,24 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table captio
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** On the R2R datasets, the results, as shown in Figure 4, reveal that the non-distilled model achieves an SR of only 74.16 and an SPL ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Id Ablation Validation Seen Validation Unseen text pano fuse SR SPL SR SPL #1 ✓ ✓ ✓ 78.35 70.69 78.80 70.17 #2 ✓ ✓ 76.79 ...
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Method Validation Unseen Test Unseen Param(M)↓ SR↑ SPL↑ RGS↑ RGSPL↑ SR↑ SPL↑ RGS↑ RGSPL↑ HAMT [4] 32.95 30.20 18.92 17.28 30.40 26.67 14.88 13.08 170.39 ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** This dataset offers a challenging testbed for vision-and-language navigation tasks.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** On the R2R datasets, the results, as shown in Figure 4, reveal that the non-distilled model achieves an SR of only 74.16 and an SPL ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Id Ablation Validation Seen Validation Unseen text pano fuse SR SPL SR SPL #1 ✓ ✓ ✓ 78.35 70.69 78.80 70.17 #2 ✓ ✓ 76.79 ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Method Validation Unseen Test Unseen Param(M)↓ SR↑ SPL↑ RGS↑ RGSPL↑ SR↑ SPL↑ RGS↑ RGSPL↑ HAMT [4] 32.95 30.20 18.92 17.28 30.40 26.67 14.88 13.08 170.39 ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** This dataset offers a challenging testbed for vision-and-language navigation tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. When ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. The overview of two-stage knowledge distillation process for VLN. In the pre-training phase, fine-grained knowledge is distilled, while navigation-specific knowledge is learned during ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Overall framework of MiniVLN. The yellow box represents the teacher model, while the blue box denotes the student model. The orange arrows represent ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. Ablation of two-stage distillation on the R2R dataset. MiniVLN maintains performance comparable to the teacher model while achieving approximately 4% higher performance than ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. The inference time comparison between ScaleVLN and MiniVLN with CPU. On both datasets, MiniVLN exhibits an inference speed that is more than three ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. When ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. The overview of two-stage knowledge distillation process for VLN. In the pre-training phase, fine-grained knowledge is distilled, while navigation-specific knowledge is learned during ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Overall framework of MiniVLN. The yellow box represents the teacher model, while the blue box denotes the student model. The orange arrows represent ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. Ablation of two-stage distillation on the R2R dataset. MiniVLN maintains performance comparable to the teacher model while achieving approximately 4% higher performance than ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. The inference time comparison between ScaleVLN and MiniVLN with CPU. On both datasets, MiniVLN exhibits an inference speed that is more than three ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | On the R2R datasets, the results, as shown in Figure 4, reveal that the non-distilled model achieves an SR of only 74.16 and an ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
 | Task/environment | Id Ablation Validation Seen Validation Unseen text pano fuse SR SPL SR SPL #1 ✓ ✓ ✓ 78.35 70.69 78.80 70.17 #2 ✓ ✓ ... | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
@@ -114,8 +114,8 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table captio
 | Primary metric/result | Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** The associated expert paths consist of six or seven nodes, covering a total distance of approximately 10 meters.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Agents follow 4 to 7 step trajectories and must select the correct object from predefined bounding boxes at the end of the path.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** The associated expert paths consist of six or seven nodes, covering a total distance of approximately 10 meters.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Agents follow 4 to 7 step trajectories and must select the correct object from predefined bounding boxes at the end of the path.
 
 ## Generalization and Failure Cases
 
@@ -147,7 +147,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table captio
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 3 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (Figure/Table caption), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 3 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (Figure/Table caption), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

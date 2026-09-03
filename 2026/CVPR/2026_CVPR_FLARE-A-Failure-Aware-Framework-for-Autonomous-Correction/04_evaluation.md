@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Our method achieves state-of-the-art performance on 8 out of 9 tasks. On the remaining task, Threading D0, although we do not obtain ... | p. 6 (Figure/Table caption) |
 | 4. Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | In this case, our method still achieves comparable performance, even when multiple baselines (PhoenixHuman, π0.5) reach a 100% success rate. | p. 6 (4. Experiment) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-world Validation To verify FLARE's effectiveness and address concerns about privileged simulation states, we conducted real-world experiments on a Piper arm with RealSense D435i ... | embodiment, simulator version and control stack | p. 7 (4. Experiment), p. 6 (4. Experiment) |
 | Task/environment | The successor to the π0 VLA model [4], which demonstrates improved generalization by training on diverse, multi-environment datasets. | reset, timeout, object/scene variation | p. 6 (4. Experiment), p. 7 (4. Experiment) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison of experimental results across 9 manipulation tasks in RoboMimic Simulation. The ‘D' suffix in the task names denotes the range of object ...
 - **p. 6 / 4. Experiment - extractive body cue:** For "reset" skills, we used Gemini-2.5-Pro to analyze failure videos.
 
-- **PDF anchors reviewed:** datasets p. 7 (4. Experiment), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 6 (4. Experiment), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning), metrics p. 6 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (Figure/Table caption), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 7 (5.1. Analysis of Perturbation & Bridging), baselines p. 6 (4. Experiment), p. 7 (4. Experiment), p. 6 (Figure/Table caption), p. 7 (5.1. Analysis of Perturbation & Bridging), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning), results p. 6 (Figure/Table caption), p. 6 (4. Experiment), p. 7 (5.1. Analysis of Perturbation & Bridging), p. 7 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning).
+- **Evidence anchors reviewed:** datasets p. 7 (4. Experiment), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 6 (4. Experiment), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning), metrics p. 6 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (Figure/Table caption), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 7 (5.1. Analysis of Perturbation & Bridging), baselines p. 6 (4. Experiment), p. 7 (4. Experiment), p. 6 (Figure/Table caption), p. 7 (5.1. Analysis of Perturbation & Bridging), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning), results p. 6 (Figure/Table caption), p. 6 (4. Experiment), p. 7 (5.1. Analysis of Perturbation & Bridging), p. 7 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Comparison of experimental results across 9 manipulation tasks in RoboMimic Simulation. The ‘D' suffix in the task names denotes the range of object randomization in scene initialization. The ... (p. 6, Figure/Table caption).
+- **Metric evidence:** In this case, our method still achieves comparable performance, even when multiple baselines (PhoenixHuman, π0.5) reach a 100% success rate. (p. 6, 4. Experiment).
+- **Baseline/ablation evidence:** More notably, our method even outperforms Phoenix-Human, demonstrating the comprehensive advantage of our framework over prior selfreflection approaches-even when compared to a baseline supplied with correct human guidance. (p. 6, 4. Experiment).
+- **Failure/negative evidence:** This leads to a critical failure: when a minor perturbation creates a state with a valid se t but a novel sr t, the policy incorrectly interprets this valid state ... (p. 3, 3.1. Problem Formulation).

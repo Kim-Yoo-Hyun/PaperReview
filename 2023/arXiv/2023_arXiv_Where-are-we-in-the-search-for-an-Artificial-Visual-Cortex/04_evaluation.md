@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.18240; PDF retrieval source: https://arxiv.org/abs/2303.18240. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.18240; PDF retrieval source: https://arxiv.org/abs/2303.18240. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Figure 1: An artificial visual cortex for embodied in- telligence must support a diverse range of sensorimotor skills, environments, and embodiments; we curate COR- ... | p. 2 (Figure/Table caption) |
 | Results | BENCHMARK / DATASET | Specifically, we see an improvement in ObjectNav success rate (SR) of +7.4 (60.3 →67.7), ImageNav SR of +11.3 (70.3 →81.6), and Mobile Pick SR ... | p. 8 (Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We carried out experiments on the real TriFinger robot (shown in Figure 9) for the Push-Cube task, after training a model using behavior cloning ... | embodiment, simulator version and control stack | p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 5 (Results) |
 | Task/environment | Interestingly, while the model pre-trained on the largest dataset (CLIP) performs well on one benchmark (ObjectNav) it does not perform well across all tasks. | reset, timeout, object/scene variation | p. 5 (Results), p. 5 (Results) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied ... | Figure 1: An artificial visual cortex for embodied in- telligence must support a diverse range of sensorimotor skills, environments, and embodiments; we curate COR- ... | PDF body cue; verify exact table/figure and matched conditions | p. 2 (Figure/Table caption), p. 8 (Results), p. 8 (Results), p. 7 (Results), p. 9 (Results), p. 5 (Results) |
+| The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement. | Figure 1: An artificial visual cortex for embodied in- telligence must support a diverse range of sensorimotor skills, environments, and embodiments; we curate COR- ... | PDF body cue; verify exact table/figure and matched conditions | p. 2 (Figure/Table caption), p. 8 (Results), p. 8 (Results), p. 7 (Results), p. 9 (Results), p. 5 (Results) |
 | Primary metric/result | Specifically, we see an improvement in ObjectNav success rate (SR) of +7.4 (60.3 →67.7), ImageNav SR of +11.3 (70.3 →81.6), and Mobile Pick SR ... | numeric claim only at cited anchor | p. 8 (Results) |
 
 - Numeric sentences retained from the body:
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 - **p. 5 / Results - extractive body cue:** Interestingly, while the model pre-trained on the largest dataset (CLIP) performs well on one benchmark (ObjectNav) it does not perform well across all tasks.
 - **p. 6 / Results - extractive body cue:** While larger than Ego4D+M and Ego4D+N, it does not include any new types of data beyond the manipulation and navigation videos in the previous subsets.
 
-- **PDF anchors reviewed:** datasets p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 5 (Results), p. 5 (Results), p. 6 (Results), p. 7 (Results), p. 9 (Results), metrics p. 4 (Results), p. 8 (Results), p. 2 (Figure/Table caption), p. 20 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Results), baselines p. 5 (Results), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Results), p. 7 (Results), p. 9 (Results), results p. 2 (Figure/Table caption), p. 8 (Results), p. 8 (Results), p. 7 (Results), p. 9 (Results), p. 5 (Results).
+- **Evidence anchors reviewed:** datasets p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 5 (Results), p. 5 (Results), p. 6 (Results), p. 7 (Results), p. 9 (Results), metrics p. 4 (Results), p. 8 (Results), p. 2 (Figure/Table caption), p. 20 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Results), baselines p. 5 (Results), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Results), p. 7 (Results), p. 9 (Results), results p. 2 (Figure/Table caption), p. 8 (Results), p. 8 (Results), p. 7 (Results), p. 9 (Results), p. 5 (Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Comparison of VC-1 with existing PVRs. VC-1 matches or exceeds existing PVRs on all benchmarks except R3M on AD, MW, and DMC, indicating an opportunity for model adaptation. ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Mean Success: the average success rate across all benchmarks. (p. 4, Results).
+- **Baseline/ablation evidence:** However, we find that several of these pre-trained models often outperform a random training from scratch baseline. (p. 5, Results).
+- **Failure/negative evidence:** In aggregate, these results suggests that MAE adaptation can be explored as a powerful alternative in few-shot domains or where E2E fine-tuning fails. (p. 9, Results).

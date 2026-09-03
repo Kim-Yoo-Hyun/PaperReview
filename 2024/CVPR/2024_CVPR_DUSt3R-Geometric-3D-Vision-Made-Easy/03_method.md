@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.14132; PDF retrieval source: https://arxiv.org/pdf/2312.14132. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.14132; PDF retrieval source: https://arxiv.org/pdf/2312.14132. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2. Tr
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The resulting token representations F 1 and F 2 are then passed to two transformer decoders that constantly exchange information via cross-attention. | p. 4 (3. Method), p. 4 (3.1. Overview) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To that aim, we train a network F that takes as input 2 RGB images I1, I2 ∈RW ×H×3 and outputs 2 ... | p. 4 (3.1. Overview), p. 5 (3.2. Training Objective) |
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2. Tr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 5 (3.2. Training Objective), p. 6 (3.4. Global Alignment), p. 6 (3.4. Global Alignment), objective p. 5 (3.2. Training Objective), p. 5 (3.3. Downstream Applications), p. 6 (3.4. Global Alignment), p. 4 (3. Method), p. 4 (3.2. Training Objective), p. 6 (3.4. Global Alignment), temporal p. 7 (4.2. Multi-view Pose Estimation), p. 14 (Appendix), p. 4 (3. Method), p. 4 (3. Method), p. 5 (3.3. Downstream Applications), p. 6 (3.4. Global Alignment).
+- **Evidence anchors reviewed:** method p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2. Training Objective), p. 5 (3.2. Training Objective), p. 6 (3.4. Global Alignment), p. 6 (3.4. Global Alignment), objective p. 5 (3.2. Training Objective), p. 5 (3.3. Downstream Applications), p. 6 (3.4. Global Alignment), p. 4 (3. Method), p. 4 (3.2. Training Objective), p. 6 (3.4. Global Alignment), temporal p. 7 (4.2. Multi-view Pose Estimation), p. 14 (Appendix), p. 4 (3. Method), p. 4 (3. Method), p. 5 (3.3. Downstream Applications), p. 6 (3.4. Global Alignment).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The resulting token representations F 1 and F 2 are then passed to two transformer decoders that constantly exchange information via cross-attention. (p. 4, 3. Method).
+- **Objective/update evidence:** The final training objective is the confidence-weighted regression loss from Eq. (p. 5, 3.2. Training Objective).
+- **Temporal/runtime evidence:** For each sequence, we random select 10 frames and feed all possible 45 pairs to DUSt3R. (p. 7, 4.2. Multi-view Pose Estimation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

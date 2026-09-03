@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 First, the world model is initialized with an initial observation o0, which is then passed as input to a policy π which produces a chunk of actions apred.를 This makes it possible to learn a single world model that, in principle, can be used as an interactive environment to evaluate any policies on any tasks. o0 o1 Policy o2 o3 ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Pick Carrot Pick Carrot Pick Carrot Pick Cat Pick Cat Pick Taylor Swift Pick Square Figure 10: OOD: Failure modes.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform a comprehensive set of studies to understand its ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 4.3 OUT-OF-DISTRIBUTION INPUTS In this section, use WorldGym to explore policies' performance on both OOD input images and OOD language instructions. (p. 7, 1 INTRODUCTION).
+- **Paper-specific mechanism:** Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform a comprehensive set of studies to ... (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Table 1: Policy Evaluations Results on Bridge OOD Language Tasks. "Move the pot to the counter" is perhaps the most challenging because the Bridge dataset does not contain trajectories which ... (p. 9, Figure/Table caption); the relevant task/metric cue is Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground truth task success labels. GPT-4o achieves ... (p. 17, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Notably, GPT-4o achieves very low false positives (i.e., the rollout is a failure but the VLM thinks it is a success), which is highly useful in policy evaluation. (p. 18, B.2 VALIDATING VLM SUCCESS PREDICTIONS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We suspect that OpenVLA consistently outperforms Octo and RT-1-X on OOD language tasks due to its strong VLM backbone and richer robot pretraining dataset (Kim et al.)..
-3. Compare against the body-reported baseline or a matched simpler baseline: We suspect that OpenVLA consistently outperforms Octo and RT-1-X on OOD language tasks due to its strong VLM backbone and richer robot pretraining dataset (Kim et al.)..
-4. Report the body metric and its denominator/aggregation: Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground truth task success labels. GPT-4o achieves high true ....
-5. Re-run the body-reported ablation/failure condition: RT-1-X Octo OpenVLA 0 10 20 30 40 50 60 70 Success Rate (%) 15.6% 23.8% 67.4% 7.6% 4.1% 39.4% Effect of OOD Distractors on Success Rates World Model World Model (with ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 4.3 OUT-OF-DISTRIBUTION INPUTS In this section, use WorldGym to explore policies' performance on both OOD input images and OOD language instructions. (p. 7, 1 INTRODUCTION); preserve the objective/update rule: Policies are evaluated via Monte Carlo rollouts in the world model, with a vision-language model providing rewards. (p. 1, ABSTRACT).
+2. Use the paper-reported task/data/environment cue: We suspect that OpenVLA consistently outperforms Octo and RT-1-X on OOD language tasks due to its strong VLM backbone and richer robot pretraining dataset (Kim et al.). (p. 8, 1 INTRODUCTION).
+3. Compare against the reported or matched baseline: Additionally, even without access to an image editing model, we demonstrate that WorldGym can be used to evaluate policies' performance on OOD language instructions. (p. 8, 1 INTRODUCTION).
+4. Report the body metric with its denominator and aggregation: Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground truth task success labels. GPT-4o achieves ... (p. 17, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Additionally, even without access to an image editing model, we demonstrate that WorldGym can be used to evaluate policies' performance on OOD language instructions. (p. 8, 1 INTRODUCTION); if none is reported, design one around: Notably, GPT-4o achieves very low false positives (i.e., the rollout is a failure but the VLM thinks it is a success), which is highly useful in policy evaluation. (p. 18, B.2 VALIDATING VLM SUCCESS PREDICTIONS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT); the primary result is directionally consistent at p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 23 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 9 (Figure/Table caption), p. 23 (Figure/Table caption), p. 9 (Figure/Table caption), and measure the boundary at p. 18 (B.2 VALIDATING VLM SUCCESS PREDICTIONS), p. 1 (ABSTRACT).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Key, contributions, include mechanism이 We suspect that OpenVLA consistently outperforms Octo and RT-1-X on OOD language tasks due to its ... 대비 Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 ...을 개선하고, Pick Carrot Pick Carrot Pick Carrot Pick Cat Pick Cat Pick Taylor Swift Pick Square Figure ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (4.3 OUT-OF-DISTRIBUTION INPUTS In this section, use WorldGym to explore policies' performance on both OOD input images and OOD language instructions.), does the paper-specific mechanism (Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, ...) retain the reported evaluation outcome (Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 ...) when tested against the paper's strongest explicit boundary (Notably, GPT-4o achieves very low false positives (i.e., the rollout is a failure but the VLM thinks it ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform a comprehensive set of studies to ... (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Table 1: Policy Evaluations Results on Bridge OOD Language Tasks. "Move the pot to the counter" is perhaps the most challenging because the Bridge dataset does not contain trajectories which ... (p. 9, Figure/Table caption).
+- **Strongest explicit boundary:** Notably, GPT-4o achieves very low false positives (i.e., the rollout is a failure but the VLM thinks it is a success), which is highly useful in policy evaluation. (p. 18, B.2 VALIDATING VLM SUCCESS PREDICTIONS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

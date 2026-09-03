@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IEduRUO55F; PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IEduRUO55F; PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | We propose reward reflection, an automated feedback that summarizes the policy training dynamics in texts. | p. 5 (3 METHOD), p. 3 (3 METHOD) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | EUREKA consists of three algorithmic components: 1) environment as context that enables zero-shot generation of executable rewards, 2) evolutionary search that iteratively ... | p. 3 (3 METHOD), p. 4 (3 METHOD) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | Evolution (32 Samples), which performs only the initial reward generation step, sampling the same number of reward functions as two iterations in ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | G.3, we provide several examples of EUREKA (Human Init.) steps. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | Evolution (32 Samples), which performs only the initial reward generation step, sampling the same number of reward functions as two iterations in ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), objective p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), temporal p. 7 (4.3 RESULTS), p. 8 (4.3 RESULTS), p. 8 (4.3 RESULTS), p. 9 (4.3 RESULTS), p. 9 (4.3 RESULTS).
+- **Evidence anchors reviewed:** method p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), objective p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), temporal p. 7 (4.3 RESULTS), p. 8 (4.3 RESULTS), p. 8 (4.3 RESULTS), p. 9 (4.3 RESULTS), p. 9 (4.3 RESULTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We propose reward reflection, an automated feedback that summarizes the policy training dynamics in texts. (p. 5, 3 METHOD).
+- **Objective/update evidence:** Algorithm 1 EUREKA 1: Require: Task description l, environment code M, coding LLM LLM, fitness function F, initial prompt prompt 2: Hyperparameters: search iteration N, iteration batch size K 3: ... (p. 4, 3 METHOD).
+- **Temporal/runtime evidence:** Evolution (32 Samples), which performs only the initial reward generation step, sampling the same number of reward functions as two iterations in the original EUREKA. (p. 7, 4.3 RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

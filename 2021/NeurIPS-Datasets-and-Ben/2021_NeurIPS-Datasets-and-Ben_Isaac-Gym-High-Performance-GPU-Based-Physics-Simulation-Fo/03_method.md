@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/; PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/; PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -32,7 +32,7 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Environment # Environments KL Threshold Mini-batch Size Horizon Length # PPO Epochs Hidden Units Training Steps Ant 4096 8e-3 32768 16 4 ... | p. 30 (A.3 Hyperparameters for Training PPO) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | Environment # Environments KL Threshold Mini-batch Size Horizon Length # PPO Epochs Hidden Units Training Steps Ant 4096 8e-3 32768 16 4 ... | p. 30 (A.3 Hyperparameters for Training PPO) |
@@ -74,7 +74,7 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | For rough terrain locomotion with sim-to-real, we extend the observations with 140 terrain heights around the robot's base and use the more ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | IsaacGym Tensor API Environment Logic (Observation, reward, non-physics logic) action, config tensors environment states Result: Learn on 1000s of realistic robots in ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | IsaacGym Tensor API Environment Logic (Observation, reward, non-physics logic) action, config tensors environment states Result: Learn on 1000s of realistic robots in ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -123,8 +123,17 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 30 (A.3 Hyperparameters for Training PPO), objective p. 30 (A.3 Hyperparameters for Training PPO), temporal p. 27 (A.2.2 Locomotion environments), p. 5 (1 GPU), p. 13 (4. Robotic Hands), p. 13 (4. Robotic Hands), p. 15 (4. Robotic Hands), p. 18 (4. Robotic Hands).
+- **Evidence anchors reviewed:** method p. 30 (A.3 Hyperparameters for Training PPO), objective p. 30 (A.3 Hyperparameters for Training PPO), temporal p. 27 (A.2.2 Locomotion environments), p. 5 (1 GPU), p. 13 (4. Robotic Hands), p. 13 (4. Robotic Hands), p. 15 (4. Robotic Hands), p. 18 (4. Robotic Hands).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (32 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Observation tensors can be used as inputs to a policy network and the resulting action tensors can be directly fed back into the physics system. (p. 5, 1 Introduction).
+- **Objective/update evidence:** The SH OpenAI LSTM experiment uses an LSTM layer of 1024 hidden dims followed by MLP of 512 dims, and a fixed learning rate of 1e-4 for the value function. (p. 30, A.3 Hyperparameters for Training PPO).
+- **Temporal/runtime evidence:** As we vary this number, we aim to keep the overall experience an RL agent observes constant by decreasing the horizon length proportionally (i.e. number of steps in PPO) for ... (p. 13, 4. Robotic Hands).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14594; PDF retrieval source: https://arxiv.org/pdf/2309.14594. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14594; PDF retrieval source: https://arxiv.org/pdf/2309.14594. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 
 ## Evaluation Body Digest
 
-- **p. 6 / VI. SIMULATION RESULTS - extractive PDF cue:** Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision events ...
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** When looking at policy w/o Foot Collision Reward in simulation, the policy learns to deal with collisions and treat the collisions as potentially useful proprioceptive ...
-- **p. 6 / VI. SIMULATION RESULTS - extractive PDF cue:** Model Architecture Reconstruction Loss (MAE) [cm] LSTM 2.806 Transformer 4.221 MLP 4.932 LSTM (w/o robot states) 4.448 loop performance in simulation shown in Figure 7-B.
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** For example, the robot will walk up high step-ups by sliding the foot along the vertical surface of the terrain.
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** Although foot collisions lead to frequent failures, policy w/o Foot Collision Reward has a similar success rate as Ours.
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** In Success Rate, all policies have approximately the same performance at easy Fig.
-- **p. 6 / VI. SIMULATION RESULTS - extractive PDF cue:** In Success Rate, all predictors produce similar performance over each terrain mode.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
+- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision events ...
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** When looking at policy w/o Foot Collision Reward in simulation, the policy learns to deal with collisions and treat the collisions as potentially useful proprioceptive ...
+- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** Model Architecture Reconstruction Loss (MAE) [cm] LSTM 2.806 Transformer 4.221 MLP 4.932 LSTM (w/o robot states) 4.448 loop performance in simulation shown in Figure 7-B.
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** For example, the robot will walk up high step-ups by sliding the foot along the vertical surface of the terrain.
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** Although foot collisions lead to frequent failures, policy w/o Foot Collision Reward has a similar success rate as Ours.
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** In Success Rate, all policies have approximately the same performance at easy Fig.
+- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** In Success Rate, all predictors produce similar performance over each terrain mode.
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 6: Depth image from simulation and real world, with corre- sponding real predicted heightmap and simulation heightmap. mode of terrains. For more difficult ... | p. 5 (Figure/Table caption) |
 | VI. SIMULATION RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In Success Rate, all policies have approximately the same performance at easy Fig. | p. 5 (VI. SIMULATION RESULTS) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / VI. SIMULATION RESULTS - extractive PDF cue:** Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision events ...
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** When looking at policy w/o Foot Collision Reward in simulation, the policy learns to deal with collisions and treat the collisions as potentially useful proprioceptive ...
-- **p. 6 / VI. SIMULATION RESULTS - extractive PDF cue:** Model Architecture Reconstruction Loss (MAE) [cm] LSTM 2.806 Transformer 4.221 MLP 4.932 LSTM (w/o robot states) 4.448 loop performance in simulation shown in Figure 7-B.
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** For example, the robot will walk up high step-ups by sliding the foot along the vertical surface of the terrain.
+- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision events ...
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** When looking at policy w/o Foot Collision Reward in simulation, the policy learns to deal with collisions and treat the collisions as potentially useful proprioceptive ...
+- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** Model Architecture Reconstruction Loss (MAE) [cm] LSTM 2.806 Transformer 4.221 MLP 4.932 LSTM (w/o robot states) 4.448 loop performance in simulation shown in Figure 7-B.
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** For example, the robot will walk up high step-ups by sliding the foot along the vertical surface of the terrain.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Our fully learned controller integrates vision and locomotion for reactive and agile gaits over terrains. The proposed approach enables bipedal robot Cassie traversing ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of the locomotion policy with vision module. Figure 2 illustrates our overall system, which has two main components: 1) a locomotion policy, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 3: Policy consists of a blind policy and a vision-based modulator. cos (2π(ϕt + γi t)). Here i ∈[left, right] indicates the leg, ϕ ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 5: Predictor architecture. Heightmap is captured from hardware. Network Architecture and Losses Figure 5 shows the network architecture, which consists of two stages. For ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 6: Depth image from simulation and real world, with corre- sponding real predicted heightmap and simulation heightmap. mode of terrains. For more difficult terrain ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 7: A. Ablation study on policy with simulation heightmap. B. Ablation study on policy with different heightmap predictor architectures. Each ablation study uses data ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our fully learned controller integrates vision and locomotion for reactive and agile gaits over terrains. The proposed approach enables bipedal robot Cassie traversing ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of the locomotion policy with vision module. Figure 2 illustrates our overall system, which has two main components: 1) a locomotion policy, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Policy consists of a blind policy and a vision-based modulator. cos (2π(ϕt + γi t)). Here i ∈[left, right] indicates the leg, ϕ ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 5: Predictor architecture. Heightmap is captured from hardware. Network Architecture and Losses Figure 5 shows the network architecture, which consists of two stages. For ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6: Depth image from simulation and real world, with corre- sponding real predicted heightmap and simulation heightmap. mode of terrains. For more difficult terrain ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: A. Ablation study on policy with simulation heightmap. B. Ablation study on policy with different heightmap predictor architectures. Each ablation study uses data ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision ... | embodiment, simulator version and control stack | p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS) |
 | Task/environment | When looking at policy w/o Foot Collision Reward in simulation, the policy learns to deal with collisions and treat the collisions as potentially useful ... | reset, timeout, object/scene variation | p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS) |
@@ -117,11 +117,11 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 | Primary metric/result | In Success Rate, all policies have approximately the same performance at easy Fig. | numeric claim only at cited anchor | p. 5 (VI. SIMULATION RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** For each policy setup, we collect 1000 episodes per terrain mode and compute three metrics as shown in Figure 7-A.
-- **p. 3 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive PDF cue:** The RL policy operates at 50Hz and outputs PD setpoints for all motors, which are provided to a PD controller operating at 2kHz.
-- **p. 3 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive PDF cue:** Episode termination conditions include: 1) roll or pitch angle of the floating base is greater than 15 degrees; 2) the norm of linear velocities of ...
-- **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive PDF cue:** In addition, the torque command sent to the simulator is delayed randomly up to 3ms.
-- **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive PDF cue:** The heightmap is passed into the policy with a randomized amount of delay up to 100ms, in order to account for faster locomotion speeds.
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** For each policy setup, we collect 1000 episodes per terrain mode and compute three metrics as shown in Figure 7-A.
+- **p. 3 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** The RL policy operates at 50Hz and outputs PD setpoints for all motors, which are provided to a PD controller operating at 2kHz.
+- **p. 3 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** Episode termination conditions include: 1) roll or pitch angle of the floating base is greater than 15 degrees; 2) the norm of linear velocities of ...
+- **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** In addition, the torque command sent to the simulator is delayed randomly up to 3ms.
+- **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** The heightmap is passed into the policy with a randomized amount of delay up to 100ms, in order to account for faster locomotion speeds.
 
 ## Generalization and Failure Cases
 
@@ -157,13 +157,13 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 7: A. Ablation study on policy with simulation heightmap. B. Ablation study on policy with different heightmap predictor architectures. Each ablation study uses data ...
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** These random foot collisions with the terrain could lead to failures.
-- **p. 5 / VI. SIMULATION RESULTS - extractive PDF cue:** Indeed, Terminations due to foot collision indicates that collisions account for most failure cases overall.
-- **p. 6 / VI. SIMULATION RESULTS - extractive PDF cue:** In Termination due to foot collision, compared to LSTM, other models fails with higher chances from unfavorable foot collisions.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: A. Ablation study on policy with simulation heightmap. B. Ablation study on policy with different heightmap predictor architectures. Each ablation study uses data ...
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** These random foot collisions with the terrain could lead to failures.
+- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** Indeed, Terminations due to foot collision indicates that collisions account for most failure cases overall.
+- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** In Termination due to foot collision, compared to LSTM, other models fails with higher chances from unfavorable foot collisions.
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
 
-- **PDF anchors reviewed:** datasets p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), metrics p. 5 (VI. SIMULATION RESULTS), p. 6 (Figure/Table caption), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), p. 4 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), metrics p. 5 (VI. SIMULATION RESULTS), p. 6 (Figure/Table caption), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), p. 4 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

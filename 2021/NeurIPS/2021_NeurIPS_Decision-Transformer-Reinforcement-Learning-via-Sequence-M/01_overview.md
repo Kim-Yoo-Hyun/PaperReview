@@ -1,8 +1,10 @@
 # Decision Transformer: Reinforcement Learning via Sequence Modeling
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2106.01345.
-> PDF retrieval source: https://arxiv.org/pdf/2106.01345. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2106.01345.
+> PDF retrieval source: https://arxiv.org/pdf/2106.01345. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2106.01345
 - Code/Project: https://github.com/kzl/decision-transformer
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 To get an intuition for our proposal, consider the task of finding the shortest path on a directed graph, which can be posed as an RL problem.를 문제로 두고, Training dataset consists of random walk trajectories and their per-node returns-to-go (middle).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To get an intuition for our proposal, consider the task of finding the shortest path on a directed graph, which can be posed as an RL problem. (p. 3, 1 Introduction).
+- **Actual contribution:** Training dataset consists of random walk trajectories and their per-node returns-to-go (middle). (p. 3, 1 Introduction).
+- **Evaluation boundary:** Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption).
+- **Explicit failure boundary:** 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).

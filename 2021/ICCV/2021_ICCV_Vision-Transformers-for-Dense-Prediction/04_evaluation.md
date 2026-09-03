@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.13413; PDF retrieval source: https://arxiv.org/pdf/2103.13413. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.13413; PDF retrieval source: https://arxiv.org/pdf/2103.13413. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** We split each dataset into a training set and a small validation set of about 1,000 images total.
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** To ensure that the observed improvements are not only due to the enlarged training set, we retrain the fullyconvolutional network used by MiDaS on our ...
-- **p. 4 / 4. Experiments - extractive PDF cue:** For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large training ...
-- **p. 4 / 4.1. Monocular Depth Estimation - extractive PDF cue:** We construct a meta-dataset that includes the original datasets that were used in [30] (referred to as MIX 5 in that work) and extend it ...
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** We refer to this meta-dataset as MIX 6.
-- **p. 6 / 4.2. Semantic Segmentation - extractive PDF cue:** We fine-tune DPTHybrid on the Pascal Context dataset [26] for 50 epochs.
-- **p. 6 / 4.1. Monocular Depth Estimation - extractive PDF cue:** This indicates that DPT can also be usefully applied to smaller datasets.
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** We choose these datasets since they provide high-quality ground truth.
+- **p. 7 / 4.3. Ablations - extractive body cue:** We split each dataset into a training set and a small validation set of about 1,000 images total.
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** To ensure that the observed improvements are not only due to the enlarged training set, we retrain the fullyconvolutional network used by MiDaS on our ...
+- **p. 4 / 4. Experiments - extractive body cue:** For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large training ...
+- **p. 4 / 4.1. Monocular Depth Estimation - extractive body cue:** We construct a meta-dataset that includes the original datasets that were used in [30] (referred to as MIX 5 in that work) and extend it ...
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** We refer to this meta-dataset as MIX 6.
+- **p. 6 / 4.2. Semantic Segmentation - extractive body cue:** We fine-tune DPTHybrid on the Pascal Context dataset [26] for 50 epochs.
+- **p. 6 / 4.1. Monocular Depth Estimation - extractive body cue:** This indicates that DPT can also be usefully applied to smaller datasets.
+- **p. 7 / 4.3. Ablations - extractive body cue:** We choose these datasets since they provide high-quality ground truth.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3. Evaluation on KITTI (Eigen split). Zero-shot cross-dataset transfer. Table 1 shows the re- sults of zero-shot transfer to different datasets that were ... | p. 5 (Figure/Table caption) |
 | 4. Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large ... | p. 4 (4. Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** We split each dataset into a training set and a small validation set of about 1,000 images total.
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** To ensure that the observed improvements are not only due to the enlarged training set, we retrain the fullyconvolutional network used by MiDaS on our ...
-- **p. 4 / 4. Experiments - extractive PDF cue:** For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large training ...
-- **p. 4 / 4.1. Monocular Depth Estimation - extractive PDF cue:** We construct a meta-dataset that includes the original datasets that were used in [30] (referred to as MIX 5 in that work) and extend it ...
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** We refer to this meta-dataset as MIX 6.
-- **p. 6 / 4.2. Semantic Segmentation - extractive PDF cue:** We fine-tune DPTHybrid on the Pascal Context dataset [26] for 50 epochs.
-- **p. 6 / 4.1. Monocular Depth Estimation - extractive PDF cue:** This indicates that DPT can also be usefully applied to smaller datasets.
-- **p. 7 / 4.3. Ablations - extractive PDF cue:** We choose these datasets since they provide high-quality ground truth.
+- **p. 7 / 4.3. Ablations - extractive body cue:** We split each dataset into a training set and a small validation set of about 1,000 images total.
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** To ensure that the observed improvements are not only due to the enlarged training set, we retrain the fullyconvolutional network used by MiDaS on our ...
+- **p. 4 / 4. Experiments - extractive body cue:** For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large training ...
+- **p. 4 / 4.1. Monocular Depth Estimation - extractive body cue:** We construct a meta-dataset that includes the original datasets that were used in [30] (referred to as MIX 5 in that work) and extend it ...
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** We refer to this meta-dataset as MIX 6.
+- **p. 6 / 4.2. Semantic Segmentation - extractive body cue:** We fine-tune DPTHybrid on the Pascal Context dataset [26] for 50 epochs.
+- **p. 6 / 4.1. Monocular Depth Estimation - extractive body cue:** This indicates that DPT can also be usefully applied to smaller datasets.
+- **p. 7 / 4.3. Ablations - extractive body cue:** We choose these datasets since they provide high-quality ground truth.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Left: Architecture overview. The input image is transformed into tokens (orange) either by extracting non-overlapping patches followed by a linear projection of their ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison to the state of the art on monocular depth estimation. We evaluate zero-shot cross-dataset transfer according to the protocol defined in [30]. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Evaluation on NYUv2 depth. δ>1.25 δ>1.252 δ>1.253 AbsRel RMSE RMSE log DORN [13]
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 3. Evaluation on KITTI (Eigen split). Zero-shot cross-dataset transfer. Table 1 shows the re- sults of zero-shot transfer to different datasets that were not ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2. Sample results for monocular depth estimation. Compared to the fully-convolutional network used by MiDaS, DPT shows better global coherence (e.g., sky, second row) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Sample results for semantic segmentation on ADE20K (first and second column) and Pascal Context (third and fourth column). Predictions are frequently better aligned ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Semantic segmentation results on the ADE20K validation set. Backbone pixAcc [%] mIoU [%] OCNet HRNet-W48 [42, 50]
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Finetuning results on the Pascal Context validation set. representation. Since the transformer backbone maintains a constant feature resolution, it is not clear at ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Left: Architecture overview. The input image is transformed into tokens (orange) either by extracting non-overlapping patches followed by a linear projection of their ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Comparison to the state of the art on monocular depth estimation. We evaluate zero-shot cross-dataset transfer according to the protocol defined in [30]. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Evaluation on NYUv2 depth. δ>1.25 δ>1.252 δ>1.253 AbsRel RMSE RMSE log DORN [13]
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 3. Evaluation on KITTI (Eigen split). Zero-shot cross-dataset transfer. Table 1 shows the re- sults of zero-shot transfer to different datasets that were not ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2. Sample results for monocular depth estimation. Compared to the fully-convolutional network used by MiDaS, DPT shows better global coherence (e.g., sky, second row) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Sample results for semantic segmentation on ADE20K (first and second column) and Pascal Context (third and fourth column). Predictions are frequently better aligned ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Semantic segmentation results on the ADE20K validation set. Backbone pixAcc [%] mIoU [%] OCNet HRNet-W48 [42, 50]
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Finetuning results on the Pascal Context validation set. representation. Since the transformer backbone maintains a constant feature resolution, it is not clear at ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We split each dataset into a training set and a small validation set of about 1,000 images total. | embodiment, simulator version and control stack | p. 7 (4.3. Ablations), p. 5 (4.1. Monocular Depth Estimation) |
 | Task/environment | To ensure that the observed improvements are not only due to the enlarged training set, we retrain the fullyconvolutional network used by MiDaS on ... | reset, timeout, object/scene variation | p. 5 (4.1. Monocular Depth Estimation), p. 4 (4. Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 | Primary metric/result | For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large ... | numeric claim only at cited anchor | p. 4 (4. Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** We train for 60 epochs, where one epoch consists of 72,000 steps with a batch size of 16.
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** Similar to [30], we first pretrain on a well-curated subset of the data [45, 46, 47] for 60 epochs before training on the full dataset. ...
-- **p. 6 / 4.2. Semantic Segmentation - extractive PDF cue:** We train the DPT on the ADE20K semantic segmentation dataset [54] for 240 epochs.
-- **p. 6 / 4.2. Semantic Segmentation - extractive PDF cue:** We fine-tune DPTHybrid on the Pascal Context dataset [26] for 50 epochs.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** To test this hypothesis, we plot the loss in performance of different architectures when performing inference at resolutions higher than the training resolution of 384×384 ...
-- **p. 3 / 3. Architecture - extractive PDF cue:** Tokens are assembled into feature maps with 1 s the spatial resolution of the input image.
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** We train for 60 epochs, where one epoch consists of 72,000 steps with a batch size of 16.
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** Similar to [30], we first pretrain on a well-curated subset of the data [45, 46, 47] for 60 epochs before training on the full dataset. ...
+- **p. 6 / 4.2. Semantic Segmentation - extractive body cue:** We train the DPT on the ADE20K semantic segmentation dataset [54] for 240 epochs.
+- **p. 6 / 4.2. Semantic Segmentation - extractive body cue:** We fine-tune DPTHybrid on the Pascal Context dataset [26] for 50 epochs.
+- **p. 8 / 4.3. Ablations - extractive body cue:** To test this hypothesis, we plot the loss in performance of different architectures when performing inference at resolutions higher than the training resolution of 384×384 ...
+- **p. 3 / 3. Architecture - extractive body cue:** Tokens are assembled into feature maps with 1 s the spatial resolution of the input image.
 
 ## Generalization and Failure Cases
 
@@ -162,10 +162,10 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.1. Monocular Depth Estimation - extractive PDF cue:** We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** We observe that the performance of DPT variants indeed degrades more gracefully as inference resolution increases.
+- **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].
+- **p. 8 / 4.3. Ablations - extractive body cue:** We observe that the performance of DPT variants indeed degrades more gracefully as inference resolution increases.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Ablations), p. 5 (4.1. Monocular Depth Estimation), p. 4 (4. Experiments), p. 4 (4.1. Monocular Depth Estimation), p. 5 (4.1. Monocular Depth Estimation), p. 6 (4.2. Semantic Segmentation), metrics p. 4 (4. Experiments), p. 5 (4.1. Monocular Depth Estimation), p. 6 (4.2. Semantic Segmentation), p. 8 (4.3. Ablations), p. 4 (4.1. Monocular Depth Estimation), p. 8 (4.3. Ablations), baselines p. 8 (4.3. Ablations), p. 8 (4.3. Ablations), p. 6 (Figure/Table caption), p. 4 (4. Experiments), p. 5 (4.1. Monocular Depth Estimation), p. 5 (4.1. Monocular Depth Estimation), results p. 5 (Figure/Table caption), p. 4 (4. Experiments), p. 8 (4.3. Ablations), p. 6 (4.1. Monocular Depth Estimation), p. 7 (4.3. Ablations), p. 8 (4.3. Ablations).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Ablations), p. 5 (4.1. Monocular Depth Estimation), p. 4 (4. Experiments), p. 4 (4.1. Monocular Depth Estimation), p. 5 (4.1. Monocular Depth Estimation), p. 6 (4.2. Semantic Segmentation), metrics p. 4 (4. Experiments), p. 5 (4.1. Monocular Depth Estimation), p. 6 (4.2. Semantic Segmentation), p. 8 (4.3. Ablations), p. 4 (4.1. Monocular Depth Estimation), p. 8 (4.3. Ablations), baselines p. 8 (4.3. Ablations), p. 8 (4.3. Ablations), p. 6 (Figure/Table caption), p. 4 (4. Experiments), p. 5 (4.1. Monocular Depth Estimation), p. 5 (4.1. Monocular Depth Estimation), results p. 5 (Figure/Table caption), p. 4 (4. Experiments), p. 8 (4.3. Ablations), p. 6 (4.1. Monocular Depth Estimation), p. 7 (4.3. Ablations), p. 8 (4.3. Ablations).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

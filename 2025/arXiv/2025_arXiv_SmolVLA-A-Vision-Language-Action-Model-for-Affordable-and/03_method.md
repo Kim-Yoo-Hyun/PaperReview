@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2506.01844; PDF retrieval source: https://arxiv.org/pdf/2506.01844. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2506.01844; PDF retrieval source: https://arxiv.org/pdf/2506.01844. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | In this work, we introduce SmolVLA, an open-source initiative featuring a compact yet capable VLA model, released alongside reproducible and efficient training ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | We introduce an optimized asynchronous inference stack that decouples action execution from observation processing and action prediction, reducing latency and enabling fast, ... | p. 2 (1 Introduction), p. 1 (Abstract) |
@@ -77,7 +77,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Our model predicts chunks of actions, where each chunk consists of n time steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | To ensure compatibility with these optimizations, we maintain a fixed sequence length and batch size, discarding any excess frames in an episode ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | During pretraining, we train for 200,000 steps with a global batch size of 256 on all our community datasets. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), objective p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 14 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 5 (2 Related work), p. 6 (2 Related work), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), objective p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 14 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 5 (2 Related work), p. 6 (2 Related work), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Self-Attention Self-Attention Self-Attention Cross-Attention Cross-Attention Self-Attention Task: Grasp the object and put it in the bin State Noisy Actions [at ,at+1 … ,at+H] KV KV QKV Vision-Language Model Action Expert ... (p. 1, Abstract).
+- **Objective/update evidence:** SmolVLA is pretrained on public community datasets and evaluated on low-cost robots. (p. 1, Abstract).
+- **Temporal/runtime evidence:** To ensure compatibility with these optimizations, we maintain a fixed sequence length and batch size, discarding any excess frames in an episode that do not fit a complete batch. (p. 10, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

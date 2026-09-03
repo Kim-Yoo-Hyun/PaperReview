@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/38919; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/38919. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/38919; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/38919. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | Because subtle scene-context variations are critical for robot learning, especially in few-shot learning, we introduce a lightweight Dispersive Loss that repels state ... | p. 1 (Abstract), p. 4 (Abstract) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | This can lead to a form of "feature collapse", where the policy network maps distinct environmental states that demand fundamentally different actions ... | p. 4 (Abstract), p. 3 (Abstract) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Since action generation requires multiple time steps to denoise, the inference process can be time-consuming, which may become a bottleneck in applications ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Since action generation requires multiple time steps to denoise, the inference process can be time-consuming, which may become a bottleneck in applications ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | All training and testing are performed on an NVIDIA RTX 4090 GPU, with a batch size of 128, optimization uses the AdamW ... | Hz/fps, inference time and control rate |
 | Memory | current observation, temporal history 또는 recurrent/sequence context. | All training and testing are performed on an NVIDIA RTX 4090 GPU, with a batch size of 128, optimization uses the AdamW ... | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | All training and testing are performed on an NVIDIA RTX 4090 GPU, with a batch size of 128, optimization uses the AdamW ... | hardware, batch and throughput |
@@ -135,8 +135,17 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), objective p. 1 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), temporal p. 1 (Abstract), p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), objective p. 1 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), temporal p. 1 (Abstract), p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Enhancing Representational generalization with Dispersive Loss While the MeanFlow objective Lcfg excels at learning the temporal dynamics required to produce accurate output trajectories, it provides only an indirect signal for ... (p. 4, Abstract).
+- **Objective/update evidence:** However, generative models within this field face a fundamental trade-off between the slow, iterative sampling of diffusion models and the architectural constraints of faster Flow-based methods, which often rely on ... (p. 1, Abstract).
+- **Temporal/runtime evidence:** All training and testing are performed on an NVIDIA RTX 4090 GPU, with a batch size of 128, optimization uses the AdamW optimizer with a learning rate of 0.0001 (Adroit ... (p. 5, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

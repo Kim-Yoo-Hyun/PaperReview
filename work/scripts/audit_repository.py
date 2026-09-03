@@ -24,6 +24,72 @@ MANIFEST = ROOT / "work" / "sources" / "papers.json"
 NOTE_NAMES = ["01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"]
 STATUSES = {"UNREAD", "SKIMMED", "READ", "SYNTHESIZED", "REPRODUCED"}
 EVIDENCE = {"CURATION_ONLY", "ABSTRACT_CHECKED", "FULL_TEXT_CHECKED", "EXPERIMENT_CHECKED"}
+RELATION_TYPES = {
+    "version_of",
+    "same_work_as",
+    "extends",
+    "replicates",
+    "baseline_for",
+    "uses_dataset",
+    "evaluates_on",
+    "builds_on",
+    "supersedes",
+}
+RELATION_CONFIDENCES = {"manual", "verified", "inferred"}
+RELATION_STATUSES = {"curated", "imported", "unverified"}
+RELATION_EVIDENCE_SCOPES = {
+    "paper_body",
+    "official_abstract",
+    "official_project",
+    "title_lineage",
+    "registry_identity",
+    "citation_reference",
+    "official_source",
+}
+DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+TRACKER_REQUIRED_FIELDS = {
+    "SKIMMED": ("problem_and_assumptions", "next_action"),
+    "READ": (
+        "problem_and_assumptions",
+        "observation_state_action_control",
+        "embodiment_task_data_metrics",
+        "failure_modes",
+        "research_relevance",
+        "next_action",
+    ),
+    "SYNTHESIZED": (
+        "problem_and_assumptions",
+        "observation_state_action_control",
+        "embodiment_task_data_metrics",
+        "failure_modes",
+        "research_relevance",
+        "next_action",
+    ),
+    "REPRODUCED": (
+        "problem_and_assumptions",
+        "observation_state_action_control",
+        "embodiment_task_data_metrics",
+        "failure_modes",
+        "research_relevance",
+        "next_action",
+        "personal_notes",
+    ),
+}
+MINIMUM_EVIDENCE_BY_STATUS = {
+    "SKIMMED": "ABSTRACT_CHECKED",
+    "READ": "FULL_TEXT_CHECKED",
+    "SYNTHESIZED": "FULL_TEXT_CHECKED",
+    "REPRODUCED": "EXPERIMENT_CHECKED",
+}
+SYNTHESIS_BY_TRACK = {
+    "Planning and control": "01_planning_control.md",
+    "RL, IL, offline learning, and robot data": "02_rl_il_offline.md",
+    "Manipulation, contact, tactile, and dexterity": "03_manipulation_contact.md",
+    "VLA and generalist robot policies": "04_vla_generalist.md",
+    "World models, safety, uncertainty, and recovery": "05_world_models_safety.md",
+    "Locomotion, whole-body, mobile manipulation, and humanoids": "06_locomotion_whole_body.md",
+    "Robotics-enabling 3D perception": "07_robotics_3d_perception.md",
+}
 CATALOGS = {
     "benchmark": ROOT / "work" / "sources" / "benchmark_catalog.json",
     "metric": ROOT / "work" / "sources" / "metric_catalog.json",
@@ -31,6 +97,13 @@ CATALOGS = {
 RESOURCES = ROOT / "work" / "sources" / "resources.json"
 REGISTRY_INDEX = ROOT / "research" / "REGISTRY_INDEX.csv"
 REGISTRY_STATS = ROOT / "research" / "REGISTRY_STATS.md"
+NOTE_REVIEW_MANIFEST_SPECS = [
+    {
+        "path": ROOT / "work" / "sources" / "fulltext_insights_review_manifest_2026-09-03.json",
+        "scope": "insights",
+        "note_name": "05_insights.md",
+    },
+]
 
 
 def norm(value: str) -> str:
@@ -126,7 +199,7 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
     required = {
         "paper_id", "title", "year", "venue", "category", "tier", "roles",
         "facets", "evidence_level", "reading_status", "primary_source",
-        "overview_path",
+        "overview_path", "outgoing_relations", "incoming_relation_count",
     }
     fields = set(rows[0]) if rows else set()
     missing = sorted(required - fields)
@@ -151,6 +224,29 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
             facets = {}
         if not isinstance(facets, dict) or any(key not in FACET_KEYS for key in facets):
             errors.append(f"generated registry index has invalid facets: {row.get('paper_id')}")
+        try:
+            indexed_relations = json.loads(row.get("outgoing_relations", "[]"))
+        except json.JSONDecodeError:
+            errors.append(f"generated registry index has invalid outgoing_relations: {row.get('paper_id')}")
+            indexed_relations = []
+        expected_relations = [
+            {
+                "type": relation.get("type"),
+                "paper_id": relation.get("paper_id"),
+                "confidence": relation.get("confidence"),
+            }
+            for relation in item.get("relations", [])
+        ]
+        if indexed_relations != expected_relations:
+            errors.append(f"generated registry index relation mismatch: {row.get('paper_id')}")
+        incoming = sum(
+            1
+            for candidate in papers_by_id.values()
+            for relation in candidate.get("relations", [])
+            if relation.get("paper_id") == row.get("paper_id")
+        )
+        if row.get("incoming_relation_count") != str(incoming):
+            errors.append(f"generated registry index incoming relation mismatch: {row.get('paper_id')}")
     return len(rows)
 
 
@@ -158,6 +254,95 @@ def note_evidence_for(path: Path) -> str:
     match = re.search(r"Evidence maturity:\s*`([^`]+)`", path.read_text(encoding="utf-8", errors="ignore"))
     value = match.group(1) if match else "MISSING"
     return value if value in EVIDENCE else "MISSING"
+
+
+def audit_note_review_manifest(
+    spec: dict,
+    papers_by_id: dict[str, dict],
+    errors: list[str],
+) -> dict[str, dict]:
+    """Validate a note-scoped full-text manifest and index its records.
+
+    Note manifests are intentionally audited independently of paper-level
+    review precedence.  The returned index is used below to check that the
+    provenance attachment in ``papers.json`` points to the same record.
+    """
+
+    path = spec["path"]
+    relative = str(path.relative_to(ROOT))
+    if not path.exists():
+        errors.append(f"missing note review manifest: {relative}")
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        errors.append(f"invalid note review manifest JSON: {relative}: {exc}")
+        return {}
+    records = payload.get("records")
+    if not isinstance(records, list):
+        errors.append(f"invalid note review manifest records: {relative}")
+        return {}
+    snapshot = payload.get("registry_snapshot") or {}
+    if snapshot.get("status") != "note_level":
+        errors.append(f"note review manifest is not marked note_level: {relative}")
+    if snapshot.get("note_name") != spec["note_name"]:
+        errors.append(f"note review manifest note_name mismatch: {relative}")
+    if payload.get("paper_count") not in {None, len(records)}:
+        errors.append(f"note review manifest paper_count mismatch: {relative}")
+    index: dict[str, dict] = {}
+    for record in records:
+        paper_id = record.get("paper_id")
+        if not paper_id or paper_id in index:
+            errors.append(f"duplicate or missing paper_id in note review manifest: {relative}")
+            continue
+        index[paper_id] = record
+        item = papers_by_id.get(paper_id)
+        if not item:
+            errors.append(f"note review manifest points to unknown paper_id: {relative} {paper_id}")
+            continue
+        if record.get("title") != item.get("title"):
+            errors.append(f"note review manifest title mismatch: {paper_id}")
+        if record.get("folder") and record.get("folder") != item.get("folder"):
+            errors.append(f"note review manifest folder mismatch: {paper_id}")
+        note_path = ROOT / item["folder"] / spec["note_name"]
+        if not note_path.exists():
+            errors.append(f"note review manifest note missing: {paper_id} {spec['note_name']}")
+            continue
+        record_evidence = record.get("evidence_level")
+        if record_evidence not in EVIDENCE:
+            errors.append(f"invalid note review evidence: {paper_id}")
+        elif note_evidence_for(note_path) != record_evidence:
+            errors.append(f"note review evidence mismatch: {paper_id} {spec['note_name']}")
+        if record.get("source_kind") != "PDF":
+            errors.append(f"note review source is not PDF: {paper_id}")
+        if record.get("status") not in {"downloaded", "reused"}:
+            errors.append(f"invalid note review status: {paper_id}")
+    if snapshot.get("reviewed_paper_count") not in {None, len(index)}:
+        errors.append(f"note review snapshot count mismatch: {relative}")
+    return {
+        paper_id: {
+            "manifest": relative,
+            "scope": spec["scope"],
+            "note_name": spec["note_name"],
+            "record": record,
+        }
+        for paper_id, record in index.items()
+    }
+
+
+def comparison_matrix_paths(path: Path) -> list[str]:
+    """Return registry overview paths linked from one hand-maintained matrix."""
+
+    text = path.read_text(encoding="utf-8")
+    marker = "## Comparison Matrix"
+    if marker not in text:
+        return []
+    section = text.split(marker, 1)[1]
+    next_heading = re.search(r"\n## (?!Comparison Matrix)", section)
+    if next_heading:
+        section = section[: next_heading.start()]
+    links = re.findall(r"\]\((\.\./[^)#]+/01_overview\.md)(?:#[^)]+)?\)", section)
+    return ["./" + urllib.parse.unquote(value[3:]) for value in links]
 
 
 def main() -> None:
@@ -249,16 +434,53 @@ def main() -> None:
             expected_scope = "venue_index" if primary["url"].casefold() in shared_primary_urls else "paper_specific"
             if primary.get("scope") != expected_scope:
                 errors.append(f"primary source scope mismatch: {item.get('paper_id')}")
+        relation_keys: set[tuple[str, str]] = set()
         for relation in item.get("relations", []):
-            if relation.get("paper_id") not in paper_ids:
+            if not isinstance(relation, dict):
+                errors.append(f"invalid relation record: {item.get('paper_id')}")
+                continue
+            relation_type = relation.get("type", "")
+            target_id = relation.get("paper_id", "")
+            if relation_type not in RELATION_TYPES:
+                errors.append(f"invalid relation type: {item.get('paper_id')} {relation_type}")
+            if target_id not in paper_ids:
                 errors.append(f"relation points to unknown paper_id: {item.get('paper_id')}")
+            if target_id == item.get("paper_id"):
+                errors.append(f"relation self-edge: {item.get('paper_id')} {relation_type}")
+            relation_key = (relation_type, target_id)
+            if relation_key in relation_keys:
+                errors.append(f"duplicate relation edge: {item.get('paper_id')} {relation_type} {target_id}")
+            relation_keys.add(relation_key)
             if relation.get("source") and not valid_http(relation.get("source")):
                 errors.append(f"invalid relation source URL: {item.get('paper_id')}")
+            if relation.get("confidence") and relation.get("confidence") not in RELATION_CONFIDENCES:
+                errors.append(f"invalid relation confidence: {item.get('paper_id')} {target_id}")
+            if relation.get("status") and relation.get("status") not in RELATION_STATUSES:
+                errors.append(f"invalid relation status: {item.get('paper_id')} {target_id}")
+            if relation.get("evidence_scope") and relation.get("evidence_scope") not in RELATION_EVIDENCE_SCOPES:
+                errors.append(f"invalid relation evidence scope: {item.get('paper_id')} {target_id}")
+            if relation.get("reviewed_on") and not DATE_PATTERN.match(str(relation.get("reviewed_on"))):
+                errors.append(f"invalid relation reviewed_on: {item.get('paper_id')} {target_id}")
+            managed = relation.get("status") == "curated" or relation.get("managed_by") == "reconcile_registry_v1"
+            if managed:
+                missing_provenance = [
+                    field
+                    for field in ("confidence", "basis", "source", "evidence_scope", "reviewed_on", "managed_by")
+                    if not str(relation.get(field) or "").strip()
+                ]
+                if missing_provenance:
+                    errors.append(
+                        f"curated relation missing provenance: {item.get('paper_id')} {relation_type} {target_id}; "
+                        f"missing {', '.join(missing_provenance)}"
+                    )
     identifier_values: dict[tuple[str, str], list[str]] = defaultdict(list)
     for item in papers:
         for namespace, identifier in (item.get("identifiers") or {}).items():
             identifier_values[(namespace, str(identifier).casefold())].append(item.get("paper_id", ""))
     paper_by_id = {item.get("paper_id"): item for item in papers}
+    note_review_index: dict[str, dict] = {}
+    for spec in NOTE_REVIEW_MANIFEST_SPECS:
+        note_review_index.update(audit_note_review_manifest(spec, paper_by_id, errors))
     duplicate_identifiers = {
         key: values for key, values in identifier_values.items() if len(values) > 1
     }
@@ -306,6 +528,62 @@ def main() -> None:
     tier_by_paper_id = {row.get("paper_id", ""): row for row in tiers}
     status_by_paper_id = {row.get("paper_id", ""): row for row in status}
     evidence_rank = {value: index for index, value in enumerate(["CURATION_ONLY", "ABSTRACT_CHECKED", "FULL_TEXT_CHECKED", "EXPERIMENT_CHECKED"])}
+    for row in status:
+        paper_id = row.get("paper_id", "")
+        current_status = row.get("status", "")
+        required_fields = TRACKER_REQUIRED_FIELDS.get(current_status, ())
+        missing_fields = [field for field in required_fields if not row.get(field, "").strip()]
+        if missing_fields:
+            errors.append(
+                f"reading status analysis incomplete: {paper_id} {current_status}; "
+                f"missing {', '.join(missing_fields)}"
+            )
+        minimum_evidence = MINIMUM_EVIDENCE_BY_STATUS.get(current_status)
+        if minimum_evidence and row.get("evidence_level") in evidence_rank:
+            if evidence_rank[row["evidence_level"]] < evidence_rank[minimum_evidence]:
+                errors.append(
+                    f"reading status/evidence mismatch: {paper_id} {current_status} requires {minimum_evidence}"
+                )
+
+    matrix_paths_by_track: dict[str, list[str]] = {}
+    matrix_path_owner: dict[str, str] = {}
+    for track, filename in SYNTHESIS_BY_TRACK.items():
+        matrix_path = ROOT / "synthesis" / filename
+        if not matrix_path.exists():
+            errors.append(f"missing synthesis matrix: synthesis/{filename}")
+            matrix_paths_by_track[track] = []
+            continue
+        paths = comparison_matrix_paths(matrix_path)
+        matrix_paths_by_track[track] = paths
+        duplicate_paths = [value for value, count in Counter(paths).items() if count > 1]
+        if duplicate_paths:
+            errors.append(f"duplicate comparison-matrix paper rows in {filename}: {len(duplicate_paths)}")
+        for overview_path in paths:
+            if overview_path not in paper_by_path:
+                errors.append(f"comparison matrix points to unknown overview_path: {filename} {overview_path}")
+                continue
+            previous_owner = matrix_path_owner.get(overview_path)
+            if previous_owner and previous_owner != filename:
+                errors.append(
+                    f"paper appears in multiple comparison matrices: {overview_path} ({previous_owner}, {filename})"
+                )
+            matrix_path_owner[overview_path] = filename
+
+    completed_matrix_rows = 0
+    for row in status:
+        if row.get("status") not in {"READ", "SYNTHESIZED", "REPRODUCED"}:
+            continue
+        paper_id = row.get("paper_id", "")
+        overview_path = row.get("overview_path", "")
+        item = paper_for_path(overview_path)
+        track = item.get("primary_track", "") if item else row.get("primary_track", "")
+        expected_matrix = matrix_paths_by_track.get(track, [])
+        if overview_path not in expected_matrix:
+            errors.append(
+                f"completed reading paper missing from comparison matrix: {paper_id} ({track})"
+            )
+        else:
+            completed_matrix_rows += 1
     for item in papers:
         provenance = item.get("provenance") or {}
         note_map = provenance.get("note_evidence")
@@ -333,6 +611,31 @@ def main() -> None:
             review_path = ROOT / review["manifest"]
             if not review_path.exists():
                 errors.append(f"review manifest path does not exist: {item.get('paper_id')}")
+        attached_note_reviews = provenance.get("note_review") or {}
+        if not isinstance(attached_note_reviews, dict):
+            errors.append(f"invalid provenance.note_review: {item.get('paper_id')}")
+            attached_note_reviews = {}
+        for note_name, attached in attached_note_reviews.items():
+            if note_name not in NOTE_NAMES or not isinstance(attached, dict):
+                errors.append(f"invalid note review attachment: {item.get('paper_id')} {note_name}")
+                continue
+            if attached.get("manifest"):
+                attached_path = ROOT / attached["manifest"]
+                if not attached_path.exists():
+                    errors.append(f"note review manifest path does not exist: {item.get('paper_id')} {note_name}")
+        expected_entry = note_review_index.get(item.get("paper_id"))
+        expected_note_reviews = (
+            {expected_entry["note_name"]: expected_entry}
+            if expected_entry
+            else {}
+        )
+        for note_name, expected in expected_note_reviews.items():
+            attached = attached_note_reviews.get(note_name)
+            if not isinstance(attached, dict):
+                errors.append(f"missing note review provenance: {item.get('paper_id')} {note_name}")
+                continue
+            if attached.get("manifest") != expected.get("manifest") or attached.get("note_name") != note_name:
+                errors.append(f"note review provenance mismatch: {item.get('paper_id')} {note_name}")
         if item.get("paper_id") in status_by_paper_id:
             tracker_evidence = status_by_paper_id[item["paper_id"]].get("evidence_level")
             if tracker_evidence != paper_evidence:
@@ -400,6 +703,7 @@ def main() -> None:
         generic += any(term in text for term in ("자동 추출 실패", "survey-level 해석", "paper-specific cue"))
     if generic:
         warnings.append(f"CORE papers retaining old scaffold markers: {generic}")
+    matrix_count = sum(len(set(paths)) for paths in matrix_paths_by_track.values())
     print({
         "papers": len(papers), "categories": len({p['category'] for p in papers}),
         "tier_counts": dict(counts), "intensive": len(status),
@@ -407,6 +711,8 @@ def main() -> None:
         "catalog_entries": catalog_counts,
         "combined_resources": resource_count,
         "registry_index_rows": index_count,
+        "comparison_matrix_rows": matrix_count,
+        "completed_matrix_rows": completed_matrix_rows,
         "errors": errors, "warnings": warnings,
     })
     if errors:

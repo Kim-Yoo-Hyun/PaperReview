@@ -1,8 +1,10 @@
 # ConceptFusion: Open-set Multimodal 3D Mapping
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2302.07241.
-> PDF retrieval source: https://arxiv.org/pdf/2302.07241. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2302.07241.
+> PDF retrieval source: https://arxiv.org/pdf/2302.07241. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2302.07241
 - Code/Project: https://concept-fusion.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 ## Why Read It
 
 Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In this work, we bridge the gap between the rich open-set capabilities enabled by large foundation models and the semantic reasoning abilities expected of futuristic 3D mapping systems.를 문제로 두고, To mitigate this, we introduce a novel mechanism to construct pixel-aligned features that combine global (image-level) context encapsulated in models like CLIP, with local (region-level) information.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This major limitation exists because most foundation models consume images (e.g., CLIP [6], ALIGN [9], AudioCLIP [8]) and produce only a single vector encoding of the entire image in an ... (p. 2, I. INTRODUCTION).
+- **Actual contribution:** Our key contributions are the following: • An approach to open-set multimodal 3D mapping that constructs map representations queryable by text, image, audio, and click queries in a zero-shot manner. ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** The results are presented in Table VII, and compared against a baseline approach that uses only the pointcloud obtained by backprojecting a single RGB-D image (2.5D). (p. 10, VI. OUTLOOK).
+- **Explicit failure boundary:** The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context to accomplish the task. (p. 9, 4) What previously infeasible downstream use-cases can).

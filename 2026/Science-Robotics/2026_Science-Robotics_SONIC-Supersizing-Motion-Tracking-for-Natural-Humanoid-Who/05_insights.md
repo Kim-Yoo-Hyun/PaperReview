@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as a retargeting loss that enables learning from ...를 The policy 𝜋outputs target joint positions 𝑎𝑡as actions, which are tracked by proportional-derivative (PD) controllers at each joint.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Our metric, similar to [29], captured the physically meaningful failure modes such as falling.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose Supersizing mOtion tracking for Natural humanoId Control (SONIC), a framework that enables natural humanoid control across a wide range of applications (Movie S1).
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as a retargeting loss that enables ... (p. 15, 3.2. Universal Humanoid Motion Tracking).
+- **Paper-specific mechanism:** In addition, we show how such a motion tracker can be applied to meaningful downstream tasks, and introduce two key contributions. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical test applied). (A) FSQ outperforms VQ-VAE ... (p. 19, Figure/Table caption); the relevant task/metric cue is SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 4m 10m 22m 100m Frames (millions) 98.6% 98.8% 99.0% 99.2% 99.4% 99.6% 99.8% Success Rate 24.4mm 24.2mm 23.9mm 23.8mm 22.7mm 22.6mm ... (p. 4, 2.1. Motion Tracking). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 14,513 701 253 Dance 9,689 504 485 Injured 9,386 1,167 528 Action / Tool use 9,920 228 322 Others (10+ main cat.) 63,583 429 890 Table 2: Dataset split statistics and main/sub-category ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We compared against state-of-the-art trackers: GMT [33], Any2Track [30], and BeyondMimic [29]..
-4. Report the body metric and its denominator/aggregation: (m/s) (H) Commanded vs Achieved Ideal OpenHomie SONIC 0 1 2 3 4 5 Commanded Velocity (m/s) 0 20 40 60 80 100 Survival Rate (%) (I) Stability SONIC OpenHomie 0 1 ....
-5. Re-run the body-reported ablation/failure condition: Table 1: Vision-language-action (VLA) control through the universal token interface. (A) Task success rates. A GR00T N1.5 model, fine-tuned on teleoperated data, is evaluated across five whole-body loco-manipulation tasks (the object-pi ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as a retargeting loss that enables ... (p. 15, 3.2. Universal Humanoid Motion Tracking); preserve the objective/update rule: All four losses are optimized jointly in a single end-to-end training loop. (p. 16, 3.2. Universal Humanoid Motion Tracking).
+2. Use the paper-reported task/data/environment cue: The dataset spans 33 motion categories (Tab. (p. 13, 3.1. Humanoid Motion Dataset).
+3. Compare against the reported or matched baseline: For baseline comparisons, we additionally evaluated on PHUMA [43], a publicly available dataset of 3 (p. 3, 2.1. Motion Tracking).
+4. Report the body metric with its denominator and aggregation: SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 4m 10m 22m 100m Frames (millions) 98.6% 98.8% 99.0% 99.2% 99.4% 99.6% 99.8% Success Rate 24.4mm 24.2mm 23.9mm 23.8mm 22.7mm 22.6mm ... (p. 4, 2.1. Motion Tracking).
+5. Re-run the reported ablation or stress/failure condition: Ablation tables report a single evaluation per configuration and are therefore descriptive. (p. 19, 3.7. Statistical Analysis); if none is reported, design one around: Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking); the primary result is directionally consistent at p. 19 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (2.1. Motion Tracking); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 3 (1. Introduction), match the reported outcome at p. 19 (Figure/Table caption), p. 4 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), and measure the boundary at p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Supersizing, mOtion, tracking mechanism이 We compared against state-of-the-art trackers: GMT [33], Any2Track [30], and BeyondMimic [29]. 대비 (m/s) (H) Commanded vs Achieved Ideal OpenHomie SONIC 0 1 2 3 4 5 Commanded Velocity (m/s) 0 ...을 개선하고, Our metric, similar to [29], captured the physically meaningful failure modes such as falling. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ...), does the paper-specific mechanism (In addition, we show how such a motion tracker can be applied to meaningful downstream tasks, and introduce two key contributions.) retain the reported evaluation outcome (SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 4m 10m 22m 100m Frames (millions) 98.6% 98.8% 99.0% ...) when tested against the paper's strongest explicit boundary (Our metric, similar to [29], captured the physically meaningful failure modes such as falling.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 4m 10m 22m 100m Frames (millions) 98.6% 98.8% 99.0% ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (39 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In addition, we show how such a motion tracker can be applied to meaningful downstream tasks, and introduce two key contributions. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical test applied). (A) FSQ outperforms VQ-VAE ... (p. 19, Figure/Table caption).
+- **Strongest explicit boundary:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

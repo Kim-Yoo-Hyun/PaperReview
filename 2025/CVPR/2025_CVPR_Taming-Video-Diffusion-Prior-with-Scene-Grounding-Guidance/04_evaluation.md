@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the scene-grounding ...
-- **p. 6 / 4.2. Comparisons - extractive PDF cue:** ScanNet++ is a dataset captured in realistic scenes, so it is more complicated and chal6138
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization.
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** We analyze their effects on the Replica dataset.
-- **p. 7 / 4.2. Comparisons - extractive PDF cue:** Qualitative comparisons on the Replica and ScanNet++ datasets.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Ablation experiments on the Replica dataset.
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** For quantitative comparisons, we report PSNR, SSIM [47], and LPIPS [62] scores.
-- **p. 8 / 4.4. Further Comparisons with Inpainting Methods - extractive PDF cue:** Our approach not only produces more plausible appearances around the inpainting regions but also predicts more consistent geometries in fine-grained local areas. inpainting on hole ...
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the scene-grounding ...
+- **p. 6 / 4.2. Comparisons - extractive body cue:** ScanNet++ is a dataset captured in realistic scenes, so it is more complicated and chal6138
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization.
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** We analyze their effects on the Replica dataset.
+- **p. 7 / 4.2. Comparisons - extractive body cue:** Qualitative comparisons on the Replica and ScanNet++ datasets.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation experiments on the Replica dataset.
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** For quantitative comparisons, we report PSNR, SSIM [47], and LPIPS [62] scores.
+- **p. 8 / 4.4. Further Comparisons with Inpainting Methods - extractive body cue:** Our approach not only produces more plausible appearances around the inpainting regions but also predicts more consistent geometries in fine-grained local areas. inpainting on hole ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Comparisons | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, our method achieves the highest performance on the Replica dataset, outperforming DNGaussian [18] and FSGS [64] by a significant margin of over 3.0 ... | p. 6 (4.2. Comparisons) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3. Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization. Trajectory Initialization Strategy. Tab. 2 (a) further ... | p. 8 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the scene-grounding ...
-- **p. 6 / 4.2. Comparisons - extractive PDF cue:** ScanNet++ is a dataset captured in realistic scenes, so it is more complicated and chal6138
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization.
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** We analyze their effects on the Replica dataset.
-- **p. 7 / 4.2. Comparisons - extractive PDF cue:** Qualitative comparisons on the Replica and ScanNet++ datasets.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Ablation experiments on the Replica dataset.
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the scene-grounding ...
+- **p. 6 / 4.2. Comparisons - extractive body cue:** ScanNet++ is a dataset captured in realistic scenes, so it is more complicated and chal6138
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization.
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** We analyze their effects on the Replica dataset.
+- **p. 7 / 4.2. Comparisons - extractive body cue:** Qualitative comparisons on the Replica and ScanNet++ datasets.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation experiments on the Replica dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We tackle the critical issues of (a) extrapolation and (b) occlusion in sparse-input 3DGS by leveraging a video diffusion model. Vanilla generation often ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Framework overview of our proposed method. It consists of three parts: scene-grounding guidance, trajectory initialization, and optimization scheme with generated sequences. Initially, a ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustration of the proposed trajectory initialization strat- egy. The yellow parts represent unobserved regions. For each input view, we sample a set of ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Sequences from the vanilla generation suffer from incon- sistencies. A 3DGS model optimized with these sequences renders images with black shadows, highlighted by ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparisons on the Replica and ScanNet++ datasets. All 3DGS-based methods are optimized using the initialized point cloud from DUSt3R [46]. Our method ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparisons on the Replica and ScanNet++ datasets. Including our approach, 3DGS-based methods marked with ↕are initialized with the point cloud from DUSt3R ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Our method not only effectively addresses extrapola- tion and occlusion (red boxes), improving the overall quality (blue boxes), but also predicts more plausible ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation experiments on the Replica dataset. (a) Effectiveness of the proposed scene-grounding guidance (Guide.) for generation, and the trajectory initialization strategy (Traj.). (Gen.) ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We tackle the critical issues of (a) extrapolation and (b) occlusion in sparse-input 3DGS by leveraging a video diffusion model. Vanilla generation often ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Framework overview of our proposed method. It consists of three parts: scene-grounding guidance, trajectory initialization, and optimization scheme with generated sequences. Initially, a ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Illustration of the proposed trajectory initialization strat- egy. The yellow parts represent unobserved regions. For each input view, we sample a set of ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Sequences from the vanilla generation suffer from incon- sistencies. A 3DGS model optimized with these sequences renders images with black shadows, highlighted by ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparisons on the Replica and ScanNet++ datasets. All 3DGS-based methods are optimized using the initialized point cloud from DUSt3R [46]. Our method ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons on the Replica and ScanNet++ datasets. Including our approach, 3DGS-based methods marked with ↕are initialized with the point cloud from DUSt3R ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Our method not only effectively addresses extrapola- tion and occlusion (red boxes), improving the overall quality (blue boxes), but also predicts more plausible ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation experiments on the Replica dataset. (a) Effectiveness of the proposed scene-grounding guidance (Guide.) for generation, and the trajectory initialization strategy (Traj.). (Gen.) ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the ... | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setups), p. 6 (4.2. Comparisons) |
 | Task/environment | ScanNet++ is a dataset captured in realistic scenes, so it is more complicated and chal6138 | reset, timeout, object/scene variation | p. 6 (4.2. Comparisons), p. 8 (4.3. Ablation Studies) |
@@ -117,8 +117,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 | Primary metric/result | Table 3. Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization. Trajectory Initialization Strategy. Tab. 2 (a) further ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the scene-grounding ...
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** For sequence generation, we employ the camera-controlled image-to-video diffusion model [57] which supports the generation of L = 25 frames.
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** A 3DGS model optimized with these sequences renders images with black shadows, highlighted by red boxes, while our method solves this issue with the scene-grounding ...
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** For sequence generation, we employ the camera-controlled image-to-video diffusion model [57] which supports the generation of L = 25 frames.
 
 ## Generalization and Failure Cases
 
@@ -151,14 +151,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 
 ## Limitations and Verification Questions
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Our method not only effectively addresses extrapola- tion and occlusion (red boxes), improving the overall quality (blue boxes), but also predicts more plausible ...
-- **p. 6 / 4.2. Comparisons - extractive PDF cue:** FreeNeRF [52] exhibits severe artifacts because it cannot effectively utilize the strong prior from the DUSt3R point cloud.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** In this paper, we have explored to address the critical issues of extrapolation and occlusion in sparse-input 3DGS modeling.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We tackle the critical issues of (a) extrapolation and (b) occlusion in sparse-input 3DGS by leveraging a video diffusion model. Vanilla generation often ...
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** Moreover, the ‘inside-out' viewing directions make occlusion common in this benchmark.
-- **p. 7 / 4.2. Comparisons - extractive PDF cue:** Our method effectively addresses the issues of extrapolation and occlusion while preserving finer details and reducing artifacts.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Our method not only effectively addresses extrapola- tion and occlusion (red boxes), improving the overall quality (blue boxes), but also predicts more plausible ...
+- **p. 6 / 4.2. Comparisons - extractive body cue:** FreeNeRF [52] exhibits severe artifacts because it cannot effectively utilize the strong prior from the DUSt3R point cloud.
+- **p. 8 / 5. Conclusion - extractive body cue:** In this paper, we have explored to address the critical issues of extrapolation and occlusion in sparse-input 3DGS modeling.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We tackle the critical issues of (a) extrapolation and (b) occlusion in sparse-input 3DGS by leveraging a video diffusion model. Vanilla generation often ...
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** Moreover, the ‘inside-out' viewing directions make occlusion common in this benchmark.
+- **p. 7 / 4.2. Comparisons - extractive body cue:** Our method effectively addresses the issues of extrapolation and occlusion while preserving finer details and reducing artifacts.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setups), p. 6 (4.2. Comparisons), p. 8 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Comparisons), p. 8 (4.3. Ablation Studies), metrics p. 6 (4.1. Experimental Setups), p. 8 (4.4. Further Comparisons with Inpainting Methods), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Comparisons), p. 7 (4.2. Comparisons), p. 7 (4.3. Ablation Studies), baselines p. 6 (4.1. Experimental Setups), p. 7 (4.2. Comparisons), p. 6 (4.1. Experimental Setups), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Further Comparisons with Inpainting Methods), p. 8 (4.3. Ablation Studies), results p. 6 (4.2. Comparisons), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Setups).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setups), p. 6 (4.2. Comparisons), p. 8 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Comparisons), p. 8 (4.3. Ablation Studies), metrics p. 6 (4.1. Experimental Setups), p. 8 (4.4. Further Comparisons with Inpainting Methods), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Comparisons), p. 7 (4.2. Comparisons), p. 7 (4.3. Ablation Studies), baselines p. 6 (4.1. Experimental Setups), p. 7 (4.2. Comparisons), p. 6 (4.1. Experimental Setups), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Further Comparisons with Inpainting Methods), p. 8 (4.3. Ablation Studies), results p. 6 (4.2. Comparisons), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Setups).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

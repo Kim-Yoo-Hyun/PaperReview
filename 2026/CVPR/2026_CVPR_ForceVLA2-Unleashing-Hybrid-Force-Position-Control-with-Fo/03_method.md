@@ -2,11 +2,11 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 1 (Abstract), p. 2 (1. Introduction), p. 3 (3. ForceVLA2 Framework)): Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, enhancing contact-rich manipulation by integrating force-prompt-driven VL ...
+PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 1 (Abstract), p. 2 (1. Introduction), p. 1 (Body text (section boundary not confidently recovered))): Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, enhancing contact-rich manipulation by integrating force-prompt-driven VL ...
 
 ## Method Body Digest
 
@@ -15,9 +15,9 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 - **p. 5 / 3.2.2. Adaptive Routing and Decoding - extractive body cue:** By conditioning the denoising process on the fused visual-language-force representation, the model achieves closed-loop, context-aware control that adapts fluidly to contact-rich interaction.
 - **p. 1 / Abstract - extractive body cue:** We propose ForceVLA2, an end-to-end vision-language-action framework that equips robots with hybrid force-position control and explicit force awareness.
 - **p. 2 / 1. Introduction - extractive body cue:** To overcome these limitations, we propose ForceVLA2, a novel framework that equips VLAs with active hybrid force-position control with force awareness to enhance contact-rich manipulation, ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Contact-rich manipulation requires force regulation, beyond visual and state observations (left).
 - **p. 3 / 3. ForceVLA2 Framework - extractive body cue:** Building upon these principles, we propose the ForceVLA2 architecture, which integrates multi-scale perception, contextual reasoning, and force-aware manipulation into a unified VLA framework.
 - **p. 3 / 3. ForceVLA2 Framework - extractive body cue:** In parallel, force observation bypasses high-level fusion and modulates the action expert via a direct gradient pathway, enabling a reactive response to observed force during ...
-- **p. 4 / 3.2. Short-Horizon Force-to-Control Loop - extractive body cue:** This design preserves gradient fidelity for rapid force feedback, avoids over-reliance on past trajectories, and enables active exploration (Appendix A).
 
 ## Design Rationale
 
@@ -32,13 +32,13 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 - **p. 5 / 3.2.2. Adaptive Routing and Decoding - extractive body cue:** By conditioning the denoising process on the fused visual-language-force representation, the model achieves closed-loop, context-aware control that adapts fluidly to contact-rich interaction.
 - **p. 1 / Abstract - extractive body cue:** We propose ForceVLA2, an end-to-end vision-language-action framework that equips robots with hybrid force-position control and explicit force awareness.
 - **p. 2 / 1. Introduction - extractive body cue:** To overcome these limitations, we propose ForceVLA2, a novel framework that equips VLAs with active hybrid force-position control with force awareness to enhance contact-rich manipulation, ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Contact-rich manipulation requires force regulation, beyond visual and state observations (left).
 - **p. 3 / 3. ForceVLA2 Framework - extractive body cue:** Building upon these principles, we propose the ForceVLA2 architecture, which integrates multi-scale perception, contextual reasoning, and force-aware manipulation into a unified VLA framework.
-- **p. 3 / 3. ForceVLA2 Framework - extractive body cue:** In parallel, force observation bypasses high-level fusion and modulates the action expert via a direct gradient pathway, enabling a reactive response to observed force during ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Our contributions are summarized as follows: • We introduce ForceVLA2, the first end-to-end hybrid force-position control framework with force awareness for VLAs, ... | p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | (3) The encoded EE 6D pose and force tokens are concatenated to form a multi-modal state representation, Estate = [EP ; EF ... | p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding) |
@@ -74,8 +74,8 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 - **p. 3 / 3. ForceVLA2 Framework - extractive body cue:** Inspired by findings in human sensorimotor control, we posit that force acts as a unifying signal across the perception-planning-execution hierarchy, providing essential feedback for dynamic ...
 - **p. 3 / 3.1. Long-Horizon Force Awareness via Prompting - extractive body cue:** Current VLA models rely on pre-trained priors for task decomposition; however, purely vision-language inputs are insufficient in contact-rich settings that require human-like task awareness and ...
 - **p. 4 / 3.2. Short-Horizon Force-to-Control Loop - extractive body cue:** ForceVLA2 encodes proprioceptive state and force differently within the action expert, passing them through the multi-modal encoder to fuse with visual-language embeddings for long-horizon reasoning, ...
-- **p. 2 / 1. Introduction - extractive body cue:** Yet, existing VLAs reduce force to an auxiliary perceptual input rather than leveraging it for active, adaptive closed-loop force interaction, a core requirement for genuine ...
-- **p. 5 / 3.2.2. Adaptive Routing and Decoding - extractive body cue:** The flow-matching policy head generates force-aware actions by progressively denoising a noise-initialized action conditioned on the fused multi-modal context.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Contact-rich manipulation requires force regulation, beyond visual and state observations (left).
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** It builds force awareness into task planning through incoming force signals, and it outputs hybrid force-position actions with dynamic balance (right).
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,12 +85,12 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | At the beginning of each time step t, a noisy action sample a(0) t ∼N(0, I) is iteratively refined according to the ... | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | 2, we conduct a stepwise ablation in which we progressively add the Force Prompt (FP), Cross-Scale MoE (CM), and Multimodal Encoder (ME) ... | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | The resulting dataset comprises 1000 trajectories and approximately 500K synchronized timesteps. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 1 (Abstract), p. 2 (1. Introduction), p. 3 (3. ForceVLA2 Framework), objective p. 3 (3. ForceVLA2 Framework), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 2 (1. Introduction), p. 3 (3.1. Long-Horizon Force Awareness via Prompting), p. 4 (3.1. Long-Horizon Force Awareness via Prompting), temporal p. 5 (3.2.2. Adaptive Routing and Decoding), p. 8 (5.3. Ablation Study), p. 5 (4. ForceVLA2-Dataset), p. 1 (Abstract), p. 1 (1. Introduction), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 1 (Abstract), p. 2 (1. Introduction), p. 1 (Body text (section boundary not confidently recovered)), objective p. 3 (3. ForceVLA2 Framework), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 2 (1. Introduction), p. 3 (3.1. Long-Horizon Force Awareness via Prompting), p. 4 (3.1. Long-Horizon Force Awareness via Prompting), temporal p. 5 (3.2.2. Adaptive Routing and Decoding), p. 8 (5.3. Ablation Study), p. 5 (4. ForceVLA2-Dataset), p. 1 (Abstract), p. 1 (1. Introduction), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** ForceVLA2 encodes proprioceptive state and force differently within the action expert, passing them through the multi-modal encoder to fuse with visual-language embeddings for long-horizon reasoning, while transient force signals bypass ... (p. 4, 3.2. Short-Horizon Force-to-Control Loop).
+- **Objective/update evidence:** This mechanism enables ForceVLA2 to inherit VLM knowledge, assess subtask completion, transition across stages, and explicitly update force cues to guide force-aware manipulation. (p. 3, 3.1. Long-Horizon Force Awareness via Prompting).
+- **Temporal/runtime evidence:** 2, we conduct a stepwise ablation in which we progressively add the Force Prompt (FP), Cross-Scale MoE (CM), and Multimodal Encoder (ME) modules on top of π0, and measure the ... (p. 8, 5.3. Ablation Study).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

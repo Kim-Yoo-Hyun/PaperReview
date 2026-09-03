@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.12143; PDF retrieval source: https://arxiv.org/pdf/2112.12143. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.12143; PDF retrieval source: https://arxiv.org/pdf/2112.12143. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** Training Datasets COCO: We use the panoptic segmentation [26] and caption [9] annotations in the 2017 splits which include 118k/5k train/val images.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Particularly, the underwater scene is not present in our training dataset COCO, but the model can still organize pixels into regions for ocean, coral, diver, ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Evaluation Datasets PASCAL Context: PASCAL Context [35] includes per-pixel segmentation annotations of object and stuffon 5k/5k train/val images from various indoor and outdoor senses.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Scaling training data with captions improves performance: To scale up training data we utilize the Localized Narrative dataset, which includes detailed narratives about the objects ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** We train OpenSeg on COCO dataset for 30k steps.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Notably, OpenSeg is trained on COCO which does not include underwater scenes.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We fine-tune the pre-trained image encoder and FPN layers on COCO dataset using a per-pixel cross-entropy loss to align pixel embeddings with text embeddings.
-- **p. 11 / 4 Experiments - extractive PDF cue:** OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
+- **p. 8 / 4 Experiments - extractive body cue:** Training Datasets COCO: We use the panoptic segmentation [26] and caption [9] annotations in the 2017 splits which include 118k/5k train/val images.
+- **p. 9 / 4 Experiments - extractive body cue:** Particularly, the underwater scene is not present in our training dataset COCO, but the model can still organize pixels into regions for ocean, coral, diver, ...
+- **p. 9 / 4 Experiments - extractive body cue:** Evaluation Datasets PASCAL Context: PASCAL Context [35] includes per-pixel segmentation annotations of object and stuffon 5k/5k train/val images from various indoor and outdoor senses.
+- **p. 12 / 4 Experiments - extractive body cue:** Scaling training data with captions improves performance: To scale up training data we utilize the Localized Narrative dataset, which includes detailed narratives about the objects ...
+- **p. 8 / 4 Experiments - extractive body cue:** We train OpenSeg on COCO dataset for 30k steps.
+- **p. 10 / 4 Experiments - extractive body cue:** Notably, OpenSeg is trained on COCO which does not include underwater scenes.
+- **p. 10 / 4 Experiments - extractive body cue:** We fine-tune the pre-trained image encoder and FPN layers on COCO dataset using a per-pixel cross-entropy loss to align pixel embeddings with text embeddings.
+- **p. 11 / 4 Experiments - extractive body cue:** OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly. | p. 11 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | This model significantly outperforms the strongest LSeg model with ViT-L backbone (+19.9 mIoU on PASCAL-20). | p. 12 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4 Experiments - extractive PDF cue:** Training Datasets COCO: We use the panoptic segmentation [26] and caption [9] annotations in the 2017 splits which include 118k/5k train/val images.
-- **p. 9 / 4 Experiments - extractive PDF cue:** Particularly, the underwater scene is not present in our training dataset COCO, but the model can still organize pixels into regions for ocean, coral, diver, ...
-- **p. 9 / 4 Experiments - extractive PDF cue:** Evaluation Datasets PASCAL Context: PASCAL Context [35] includes per-pixel segmentation annotations of object and stuffon 5k/5k train/val images from various indoor and outdoor senses.
-- **p. 12 / 4 Experiments - extractive PDF cue:** Scaling training data with captions improves performance: To scale up training data we utilize the Localized Narrative dataset, which includes detailed narratives about the objects ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** We train OpenSeg on COCO dataset for 30k steps.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Notably, OpenSeg is trained on COCO which does not include underwater scenes.
-- **p. 10 / 4 Experiments - extractive PDF cue:** We fine-tune the pre-trained image encoder and FPN layers on COCO dataset using a per-pixel cross-entropy loss to align pixel embeddings with text embeddings.
-- **p. 11 / 4 Experiments - extractive PDF cue:** OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
+- **p. 8 / 4 Experiments - extractive body cue:** Training Datasets COCO: We use the panoptic segmentation [26] and caption [9] annotations in the 2017 splits which include 118k/5k train/val images.
+- **p. 9 / 4 Experiments - extractive body cue:** Particularly, the underwater scene is not present in our training dataset COCO, but the model can still organize pixels into regions for ocean, coral, diver, ...
+- **p. 9 / 4 Experiments - extractive body cue:** Evaluation Datasets PASCAL Context: PASCAL Context [35] includes per-pixel segmentation annotations of object and stuffon 5k/5k train/val images from various indoor and outdoor senses.
+- **p. 12 / 4 Experiments - extractive body cue:** Scaling training data with captions improves performance: To scale up training data we utilize the Localized Narrative dataset, which includes detailed narratives about the objects ...
+- **p. 8 / 4 Experiments - extractive body cue:** We train OpenSeg on COCO dataset for 30k steps.
+- **p. 10 / 4 Experiments - extractive body cue:** Notably, OpenSeg is trained on COCO which does not include underwater scenes.
+- **p. 10 / 4 Experiments - extractive body cue:** We fine-tune the pre-trained image encoder and FPN layers on COCO dataset using a per-pixel cross-entropy loss to align pixel embeddings with text embeddings.
+- **p. 11 / 4 Experiments - extractive body cue:** OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Examples of image segmentation with arbitrary text queries. We propose a model, called OpenSeg, that can organize pixels into meaningful regions indicated by ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. ALIGN (middle) can only roughly localize text queries onto the image. In contrast, OpenSeg (right) can localize visual concepts with accurate seg- mentation. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. An overview of our approach. We compare OpenSeg with ALIGN / CLIP [23,40] and per-pixel segmentation models such as LSeg [29]. The major ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 1. Recall of segmentation mask proposals on COCO and PASCAL-Context datasets. All methods use 128 proposals. COCO PASCAL Context-59 R50 R70 R90 R50 R70 ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 4. Examples of predicted segmentation masks in an unseen scene. OpenSeg is able to segment an image into meaningful regions. These regions may be ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Figure 5. (Bottom) The mIoU and Grounding mIoU results of ALIGN, ALIGN w/proposal, LSeg+, and OpenSeg. (Top) Segmentation predictions on an image from the ADE20k ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 2. The mIoU results of our model and previous open-vocabulary and zero-shot segmentation methods. Results for SPNet and ZS3Net on PASCAL-20 are reported from ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 3. Backbone initialization with an ALIGN pre-trained image encoder is not critical. The models use the pre-trained ALIGN text encoder and are trained on ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of image segmentation with arbitrary text queries. We propose a model, called OpenSeg, that can organize pixels into meaningful regions indicated by ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. ALIGN (middle) can only roughly localize text queries onto the image. In contrast, OpenSeg (right) can localize visual concepts with accurate seg- mentation. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. An overview of our approach. We compare OpenSeg with ALIGN / CLIP [23,40] and per-pixel segmentation models such as LSeg [29]. The major ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 1. Recall of segmentation mask proposals on COCO and PASCAL-Context datasets. All methods use 128 proposals. COCO PASCAL Context-59 R50 R70 R90 R50 R70 ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 4. Examples of predicted segmentation masks in an unseen scene. OpenSeg is able to segment an image into meaningful regions. These regions may be ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Figure 5. (Bottom) The mIoU and Grounding mIoU results of ALIGN, ALIGN w/proposal, LSeg+, and OpenSeg. (Top) Segmentation predictions on an image from the ADE20k ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 2. The mIoU results of our model and previous open-vocabulary and zero-shot segmentation methods. Results for SPNet and ZS3Net on PASCAL-20 are reported from ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 3. Backbone initialization with an ALIGN pre-trained image encoder is not critical. The models use the pre-trained ALIGN text encoder and are trained on ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Training Datasets COCO: We use the panoptic segmentation [26] and caption [9] annotations in the 2017 splits which include 118k/5k train/val images. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | Particularly, the underwater scene is not present in our training dataset COCO, but the model can still organize pixels into regions for ocean, coral, ... | reset, timeout, object/scene variation | p. 9 (4 Experiments), p. 9 (4 Experiments) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Primary metric/result | This model significantly outperforms the strongest LSeg model with ViT-L backbone (+19.9 mIoU on PASCAL-20). | numeric claim only at cited anchor | p. 12 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 Experiments - extractive PDF cue:** To compute Fz and Fs, we apply a fc layer followed by 3 layers of 3×3 convolutions with 640 channels after F.
-- **p. 8 / 4 Experiments - extractive PDF cue:** All models are trained with an image size of 640×640.
-- **p. 9 / 4 Experiments - extractive PDF cue:** PASCAL VOC: PASCAL VOC 2012 [13] includes 20 object classes and a background class with 1.5k/1.5k train/val images.
-- **p. 9 / 4 Experiments - extractive PDF cue:** The full version has annotations in an open-vocabulary setting and includes 2693 object and stuffclasses.
+- **p. 8 / 4 Experiments - extractive body cue:** To compute Fz and Fs, we apply a fc layer followed by 3 layers of 3×3 convolutions with 640 channels after F.
+- **p. 8 / 4 Experiments - extractive body cue:** All models are trained with an image size of 640×640.
+- **p. 9 / 4 Experiments - extractive body cue:** PASCAL VOC: PASCAL VOC 2012 [13] includes 20 object classes and a background class with 1.5k/1.5k train/val images.
+- **p. 9 / 4 Experiments - extractive body cue:** The full version has annotations in an open-vocabulary setting and includes 2693 object and stuffclasses.
 
 ## Generalization and Failure Cases
 
@@ -163,13 +163,13 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Limitations and Verification Questions
 
-- **p. 14 / 5 Conclusion - extractive PDF cue:** We hope to encourage future works to learn a generalist segmentation model that can transfer across datasets using language as the interface.
-- **p. 14 / 4 Experiments - extractive PDF cue:** The small performance differences across different ways of text filtering show OpenSeg is robust to the noise in the input words to some degree.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Notably, OpenSeg is trained on COCO which does not include underwater scenes.
-- **p. 11 / 4 Experiments - extractive PDF cue:** We find that predictions in the mIoU and Grounding mIoU settings can look quite differently and sometimes mIoU does not correctly reflect the prediction quality ...
-- **p. 20 / Figure/Table caption - extractive PDF cue:** Table 7. OpenSeg is robust to the batch size. We present performance of OpenSeg trained on COCO+Loc. Narr. and different batch sizes. Numbers inside the ...
+- **p. 14 / 5 Conclusion - extractive body cue:** We hope to encourage future works to learn a generalist segmentation model that can transfer across datasets using language as the interface.
+- **p. 14 / 4 Experiments - extractive body cue:** The small performance differences across different ways of text filtering show OpenSeg is robust to the noise in the input words to some degree.
+- **p. 10 / 4 Experiments - extractive body cue:** Notably, OpenSeg is trained on COCO which does not include underwater scenes.
+- **p. 11 / 4 Experiments - extractive body cue:** We find that predictions in the mIoU and Grounding mIoU settings can look quite differently and sometimes mIoU does not correctly reflect the prediction quality ...
+- **p. 20 / Figure/Table caption - extractive body cue:** Table 7. OpenSeg is robust to the batch size. We present performance of OpenSeg trained on COCO+Loc. Narr. and different batch sizes. Numbers inside the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 12 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), metrics p. 9 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments), p. 19 (Figure/Table caption), p. 8 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 12 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), metrics p. 9 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments), p. 19 (Figure/Table caption), p. 8 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

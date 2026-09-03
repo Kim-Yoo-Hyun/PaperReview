@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1255_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1255_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 11 / 4 Experiments - extractive PDF cue:** The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 rooms) ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** To evaluate the generalization ability of our methods in real-world applications when scene graph annotations are not available, we conduct further experiments in the ScanNet ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** SceneGraphLoc 13 Table 3: Average time (ms) of obtaining the query image embedding (teq) and of the retrieval from 10, 50, and all scenes from ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** SceneGraphLoc 11 Table 1: Retrieval recall on the test set of 3RScan dataset [123] (%; target scene ranked within the top 1, 3, and 5 ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** The inferiority is because both methods learn shared embedding between entire scenes and query images of totally different objects due to viewpoint differences.
-- **p. 13 / 4 Experiments - extractive PDF cue:** We partly attribute this performance gap to the lack of object attributes in the dataset and the inaccurate instance segmentation predicted by [130].
-- **p. 10 / 4 Experiments - extractive PDF cue:** Both methods were fine-tuned on our dataset for accurate comparison.
-- **p. 10 / 4 Experiments - extractive PDF cue:** No existing methods directly tackle our task, but several recent advancements provide relevant baselines.
+- **p. 11 / 4 Experiments - extractive body cue:** The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 rooms) ...
+- **p. 12 / 4 Experiments - extractive body cue:** To evaluate the generalization ability of our methods in real-world applications when scene graph annotations are not available, we conduct further experiments in the ScanNet ...
+- **p. 13 / 4 Experiments - extractive body cue:** SceneGraphLoc 13 Table 3: Average time (ms) of obtaining the query image embedding (teq) and of the retrieval from 10, 50, and all scenes from ...
+- **p. 11 / 4 Experiments - extractive body cue:** SceneGraphLoc 11 Table 1: Retrieval recall on the test set of 3RScan dataset [123] (%; target scene ranked within the top 1, 3, and 5 ...
+- **p. 12 / 4 Experiments - extractive body cue:** The inferiority is because both methods learn shared embedding between entire scenes and query images of totally different objects due to viewpoint differences.
+- **p. 13 / 4 Experiments - extractive body cue:** We partly attribute this performance gap to the lack of object attributes in the dataset and the inaccurate instance segmentation predicted by [130].
+- **p. 10 / 4 Experiments - extractive body cue:** Both methods were fine-tuned on our dataset for accurate comparison.
+- **p. 10 / 4 Experiments - extractive body cue:** No existing methods directly tackle our task, but several recent advancements provide relevant baselines.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | SceneGraphLoc, even when excluding the image modality (I), outperforms other cross-modal strategies significantly. | p. 12 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | LidarCLIP shows a small improvement in accuracy. | p. 13 (4 Experiments) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 11 / 4 Experiments - extractive PDF cue:** The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 rooms) ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** To evaluate the generalization ability of our methods in real-world applications when scene graph annotations are not available, we conduct further experiments in the ScanNet ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** SceneGraphLoc 13 Table 3: Average time (ms) of obtaining the query image embedding (teq) and of the retrieval from 10, 50, and all scenes from ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** SceneGraphLoc 11 Table 1: Retrieval recall on the test set of 3RScan dataset [123] (%; target scene ranked within the top 1, 3, and 5 ...
-- **p. 12 / 4 Experiments - extractive PDF cue:** The inferiority is because both methods learn shared embedding between entire scenes and query images of totally different objects due to viewpoint differences.
-- **p. 13 / 4 Experiments - extractive PDF cue:** We partly attribute this performance gap to the lack of object attributes in the dataset and the inaccurate instance segmentation predicted by [130].
-- **p. 10 / 4 Experiments - extractive PDF cue:** Both methods were fine-tuned on our dataset for accurate comparison.
-- **p. 10 / 4 Experiments - extractive PDF cue:** No existing methods directly tackle our task, but several recent advancements provide relevant baselines.
+- **p. 11 / 4 Experiments - extractive body cue:** The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 rooms) ...
+- **p. 12 / 4 Experiments - extractive body cue:** To evaluate the generalization ability of our methods in real-world applications when scene graph annotations are not available, we conduct further experiments in the ScanNet ...
+- **p. 13 / 4 Experiments - extractive body cue:** SceneGraphLoc 13 Table 3: Average time (ms) of obtaining the query image embedding (teq) and of the retrieval from 10, 50, and all scenes from ...
+- **p. 11 / 4 Experiments - extractive body cue:** SceneGraphLoc 11 Table 1: Retrieval recall on the test set of 3RScan dataset [123] (%; target scene ranked within the top 1, 3, and 5 ...
+- **p. 12 / 4 Experiments - extractive body cue:** The inferiority is because both methods learn shared embedding between entire scenes and query images of totally different objects due to viewpoint differences.
+- **p. 13 / 4 Experiments - extractive body cue:** We partly attribute this performance gap to the lack of object attributes in the dataset and the inaccurate instance segmentation predicted by [130].
+- **p. 10 / 4 Experiments - extractive body cue:** Both methods were fine-tuned on our dataset for accurate comparison.
+- **p. 10 / 4 Experiments - extractive body cue:** No existing methods directly tackle our task, but several recent advancements provide relevant baselines.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: SceneGraphLoc addresses the novel problem of localizing a query image in a database of 3D scenes represented as compact multi-modal 3D scene graphs. ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview. The training phase is represented by orange arrows, while blue arrows denote the inference phase. During training, a query image and its ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: The embedding of im- age modality I for each object. The image crops of a pillow are shown as an example. This section ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4: The same scene at different time steps t. We use contrastive learning to learn a joint embedding space for the scene graph nodes ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 5: Qualitative Result of object-association-based scene retrieval from the 3RScan dataset [123]. The two left images show the ground truth (left) and predicted (right) ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 1: Retrieval recall on the test set of 3RScan dataset [123] (%; target scene ranked within the top 1, 3, and 5 of the ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 2: Retrieval recall in the temporal scenario on the test set of ScanNet dataset [21] (%; target scene ranked within the top 1, 3, ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 3: Average time (ms) of obtaining the query image embedding (teq) and of the retrieval from 10, 50, and all scenes from the 3RScan ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: SceneGraphLoc addresses the novel problem of localizing a query image in a database of 3D scenes represented as compact multi-modal 3D scene graphs. ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: Overview. The training phase is represented by orange arrows, while blue arrows denote the inference phase. During training, a query image and its ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: The embedding of im- age modality I for each object. The image crops of a pillow are shown as an example. This section ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: The same scene at different time steps t. We use contrastive learning to learn a joint embedding space for the scene graph nodes ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Qualitative Result of object-association-based scene retrieval from the 3RScan dataset [123]. The two left images show the ground truth (left) and predicted (right) ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: Retrieval recall on the test set of 3RScan dataset [123] (%; target scene ranked within the top 1, 3, and 5 of the ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 2: Retrieval recall in the temporal scenario on the test set of ScanNet dataset [21] (%; target scene ranked within the top 1, 3, ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 3: Average time (ms) of obtaining the query image embedding (teq) and of the retrieval from 10, 50, and all scenes from the 3RScan ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 ... | embodiment, simulator version and control stack | p. 11 (4 Experiments), p. 12 (4 Experiments) |
 | Task/environment | To evaluate the generalization ability of our methods in real-world applications when scene graph annotations are not available, we conduct further experiments in the ... | reset, timeout, object/scene variation | p. 12 (4 Experiments), p. 13 (4 Experiments) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 3 (1 Introduction), p. 2 (1 Introduction) |
-| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)) |
+| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 3 (1 Introduction), p. 2 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -121,12 +121,12 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 13 (4 Experiments), p.
 | Primary metric/result | LidarCLIP shows a small improvement in accuracy. | numeric claim only at cited anchor | p. 13 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 11 / 4 Experiments - extractive PDF cue:** The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 rooms) ...
-- **p. 11 / 4 Experiments - extractive PDF cue:** Thus, we reorganized the original validation set, allocating 34 scenes (17 rooms) for validation and 123 scenes (30 rooms) for testing.
-- **p. 11 / 4 Experiments - extractive PDF cue:** During testing, we examine all 123 scenes of 30 rooms within the test set, selecting query images from each scene.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Furthermore, we evaluate scene selection through two settings N = 50 and N = 10.
-- **p. 13 / 4 Experiments - extractive PDF cue:** We divide the official validation set, which includes 312 scenes, into two distinct subsets: the first 100 scenes form our validation set, while the remaining ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** The results are in Table 2 for scenarios selecting the target room from subsets of 10, 50, and the entire set of 210 scenes.
+- **p. 11 / 4 Experiments - extractive body cue:** The 3RScan dataset [123] comprises 1335 annotated indoor scenes, representing 432 distinct rooms, with 1178 scenes (385 rooms) allocated for training and 157 (47 rooms) ...
+- **p. 11 / 4 Experiments - extractive body cue:** Thus, we reorganized the original validation set, allocating 34 scenes (17 rooms) for validation and 123 scenes (30 rooms) for testing.
+- **p. 11 / 4 Experiments - extractive body cue:** During testing, we examine all 123 scenes of 30 rooms within the test set, selecting query images from each scene.
+- **p. 11 / 4 Experiments - extractive body cue:** Furthermore, we evaluate scene selection through two settings N = 50 and N = 10.
+- **p. 13 / 4 Experiments - extractive body cue:** We divide the official validation set, which includes 312 scenes, into two distinct subsets: the first 100 scenes form our validation set, while the remaining ...
+- **p. 13 / 4 Experiments - extractive body cue:** The results are in Table 2 for scenarios selecting the target room from subsets of 10, 50, and the entire set of 210 scenes.
 
 ## Generalization and Failure Cases
 
@@ -160,7 +160,7 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 13 (4 Experiments), p.
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), metrics p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), baselines p. 10 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), results p. 12 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), metrics p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), baselines p. 10 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), results p. 12 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

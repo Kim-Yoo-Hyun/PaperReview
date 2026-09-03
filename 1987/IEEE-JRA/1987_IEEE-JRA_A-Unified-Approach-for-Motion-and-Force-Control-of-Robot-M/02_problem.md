@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://cs.stanford.edu/group/manips/publications.html; PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://cs.stanford.edu/group/manips/publications.html; PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | The magnitude of these dynamic forces cannot be ignored when large accelerations and fast motions are considered. | robot mechanism의 state와 task-space dynamics | body wording is the source claim |
-| Observation / input | However, task specification for motion and contact forces, dynamics, and force sensing feedback are closely linked to the end-effector. | joint/task state, reference와 sensor feedback | exact sensor/frame/preprocessing from PDF |
+| Observation / input | However, task specification for motion and contact forces, dynamics, and force sensing feedback are closely linked to the end-effector. | joint/task state, reference와 sensor feedback | exact sensor/frame/preprocessing from PDF body |
 | State / latent | However, task, specification, motion, contact, forces, dynamics, force, sensing, feedback | state estimate, task-space error와 control decision | notation and tensor shape require body check |
 | Output / action | vectors, total, force, moment, applied, maintain, imposed, constraints | torque, force, velocity 또는 position command | exact unit/frame/decoder require body check |
 | Target outcome | stability, tracking and constraint satisfaction | tracking, stability, constraint satisfaction과 contact behavior | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | q, q̇, x, wrench; body terms: However, task, specification, motion, contact, forces, dynamics, force, sensing, feedback | p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion) |
 | Decision / output variable | u/τ subject to dynamics and actuator/contact constraints; body terms: development, dealing, problems, arising, kinematic, framework, analysis, control | p. 1 (Abstract), p. 1 (Abstract), p. 3 (I. Inrropucrion) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion) |
 | Success / guarantee | stability, tracking and constraint satisfaction | p. 5 (IV. Exp-Errecror Morton Controt), p. 7 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 3 (I. Inrropucrion)): These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn
+PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 3 (I. Inrropucrion)): These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn
 
 - **p. 1 / Abstract - extractive body cue:** A framework for the analysis and control of manipulator systems with respect to the dynamic behavior of their end-effectors is developed.
 - **p. 3 / I. Inrropucrion - extractive body cue:** This allows a more efficient implementation of the control system for real-time operations.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 3 (I. Inrropucrio
 
 ## Position in the Robotics Loop
 
-control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt). The downstream handoff is claimed only when the body describes it.
+control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 3 (I. Inrropucrion), interface p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt), objective p. 2 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion).
+- **Evidence anchors reviewed:** problem p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 3 (I. Inrropucrion), interface p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt), objective p. 2 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** The magnitude of these dynamic forces cannot be ignored when large accelerations and fast motions are considered. (p. 1, I. Inrropucrion).
+- **Formulation-changing contribution:** These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn (p. 1, Abstract).
+- **Assumption/failure evidence:** This performance has been obtained despite the limitations in controlling the manipulator joint torques [27]. ‘Accurate identification of the PUMA. (p. 10, IX. Susmary ano Discussion).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

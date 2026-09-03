@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 As illustrated in Figure 2 (b), the delta action model is defined as Ady = (se, 44)» where the policy 77> leams to output corrective actions based on the current state sy ...를 Wwe tin the dea action model by minimizing the discrepancy between simulation sales; and real-world sates () Policy Fine-taning: We freeze the ‘eli action model incorporate ito the siilator o align the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Such structured discrepancies cannot be effectively captured by merely adding uniform action noise.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: mnparal- or result in overly conservative policies that sacrifice a yaper, we present ASAP
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** ‘To answer QS (How to best use the delta action model of ASAP?), we compare multiple strategies: fixed-point iteration, gradient-based optimization, and reinforcement learning (RL). (p. 10, B. Different Usage of Delta Action Model).
+- **Paper-specific mechanism:** Primarily leveraging reinforcement learning algorithms [80] within physics simulators [58, 63, 88], humanoid robots have earned a wide range of skills, including robust locomo (p. 11, A. Learning-based Methods for Humanoid Control).
+- **Evidence boundary:** the reported outcome is This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 (). (p. 3, 3) Extensive experiments in both simulation and real-world); the relevant task/metric cue is settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion tracking errors. (p. 3, 3) Extensive experiments in both simulation and real-world). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For instance, when imitating a jumping motion, the policy often fails early in training and learns 10 remain on the ground to avoid landing penalties. (p. 4, B. Phase-based Motion Tracking Policy Training).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 ()..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror (MPIPE) is evaluted for both in-distbution (grea) and ....
-4. Report the body metric and its denominator/aggregation: settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion tracking errors..
-5. Re-run the body-reported ablation/failure condition: Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror (MPIPE) is evaluted for both in-distbution (grea) and ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: ‘To answer QS (How to best use the delta action model of ASAP?), we compare multiple strategies: fixed-point iteration, gradient-based optimization, and reinforcement learning (RL). (p. 10, B. Different Usage of Delta Action Model); preserve the objective/update rule: To ‘optimize the policy. we use the proximal policy optimization (PPO) {80}, aiming to maximize the cumulative discounted reward E (SP In) We identify several design choices that are crucial ... (p. 4, B. Phase-based Motion Tracking Policy Training).
+2. Use the paper-reported task/data/environment cue: This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 (). (p. 3, 3) Extensive experiments in both simulation and real-world).
+3. Compare against the reported or matched baseline: Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror (MPIPE) is evaluted for both in-distbution ... (p. 10, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion tracking errors. (p. 3, 3) Extensive experiments in both simulation and real-world).
+5. Re-run the reported ablation or stress/failure condition: Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror (MPIPE) is evaluted for both in-distbution ... (p. 10, Figure/Table caption); if none is reported, design one around: For instance, when imitating a jumping motion, the policy often fails early in training and learns 10 remain on the ground to avoid landing penalties. (p. 4, B. Phase-based Motion Tracking Policy Training).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 5 (B. Training Delta Action Model); the primary result is directionally consistent at p. 10 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 11 (A. Learning-based Methods for Humanoid Control), p. 1 (Abstract), match the reported outcome at p. 3 (3) Extensive experiments in both simulation and real-world), p. 10 (Figure/Table caption), p. 3 (3) Extensive experiments in both simulation and real-world), and measure the boundary at p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B. Phase-based Motion Tracking Policy Training).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 mnparal-, result, overly mechanism이 Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. ... 대비 settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion ...을 개선하고, Such structured discrepancies cannot be effectively captured by merely adding uniform action noise. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (‘To answer QS (How to best use the delta action model of ASAP?), we compare multiple strategies: fixed-point iteration, gradient-based optimization, and ...), does the paper-specific mechanism (Primarily leveraging reinforcement learning algorithms [80] within physics simulators [58, 63, 88], humanoid robots have earned a wide range of skills, including ...) retain the reported evaluation outcome (settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion ...) when tested against the paper's strongest explicit boundary (For instance, when imitating a jumping motion, the policy often fails early in training and learns 10 remain ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Primarily leveraging reinforcement learning algorithms [80] within physics simulators [58, 63, 88], humanoid robots have earned a wide range of skills, including robust locomo (p. 11, A. Learning-based Methods for Humanoid Control).
+- **Paper-supported outcome:** This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 (). (p. 3, 3) Extensive experiments in both simulation and real-world).
+- **Strongest explicit boundary:** For instance, when imitating a jumping motion, the policy often fails early in training and learns 10 remain on the ground to avoid landing penalties. (p. 4, B. Phase-based Motion Tracking Policy Training).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

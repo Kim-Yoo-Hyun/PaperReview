@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Concretely, learn, robot, policy, at/P, where, denotes, past, interaction, history | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | Input, images, divided, patches, encoded, ViT, model, produce | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: Concretely, learn, robot, policy, at/P, where, denotes, past, interaction, history | p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines) |
 | Decision / output variable | action, pose, option or chunk a; body terms: enable, single, agent, capabilities, make, three, contributions, novel | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (5. Visual constraint satisfaction. The robot must ma), p. 4 (6. Visual reasoning), p. 2 (1. Introduction) |
 | Success / guarantee | instruction-conditioned task success | p. 7 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results), p. 6 (5.2. Evaluation Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (Abstract), p. 3 (6. Visual reasoning)): To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot ...
+PDF body contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (Abstract), p. 3 (6. Visual reasoning)): To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot ...
 
 - **p. 2 / 1. Introduction - extractive body cue:** To this end, we introduce the VisuoMotor Attention agent (VIMA) to learn robot manipulation from multimodal prompts.
 - **p. 2 / 1. Introduction - extractive body cue:** We introduce VIMA, an embodied agent capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right). procedures (Aceituno et ...
@@ -67,12 +67,21 @@ PDF contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction), objective p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction), objective p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot ... (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot ... (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** To make VIMA robust to detection inaccuracies and failures, we apply object augmentation by randomly injecting false-positive detection outputs. (p. 5, 4. Novel task generalization. New tasks with novel).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

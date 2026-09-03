@@ -1,8 +1,10 @@
 # Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p073.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p073.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p073.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p073.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p073.pdf
 - Code/Project: https://cxu-tri.github.io/FAIL-Detect-Website/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Detecting failures in robotic manipulation tasks poses several challenges.를 문제로 두고, Aside from being performant, our method enables faster inference than prior work [1], which requires sampling, ‘multiple robot actions during inference.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (III. PROBLEM FORMULATION), p. 2 (1. INTRODUCTION), p. 3 (III. PROBLEM FORMULATION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Detecting failures in robotic manipulation tasks poses several challenges. (p. 1, 1. INTRODUCTION).
+- **Actual contribution:** A key novelty of our method is the ability to learn failure detection signals without access 10 failure data. (p. 1, 1. INTRODUCTION).
+- **Evaluation boundary:** Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using FM and DP. We consider two different ways to compute the CP band: "setting-lependent" ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as possible. (p. 6, V. EXPERIMENTS).

@@ -1,8 +1,10 @@
 # NaVILA: Legged Robot Vision-Language-Action Model for Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p018.html.
-> PDF retrieval source: https://arxiv.org/pdf/2412.04453. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p018.html.
+> PDF retrieval source: https://arxiv.org/pdf/2412.04453. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2412.04453
 - Code/Project: https://github.com/AnjieCheng/NaVILA
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -22,10 +24,10 @@ VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 �
 ## Problem and Motivation
 
 - **p. 1 / Abstract - extractive body cue:** This paper proposes to solve the problem of Visionand-Language Navigation with legged robots, which not only provides a flexible way for humans to command but ...
-- **p. 1 / Abstract - extractive body cue:** However, it is non-trivial to translate human language ∗Equal contribution, ordered alphabetically. † Equal advising. instructions all the way to low-level leg joint actions.
+- **p. 1 / Abstract - extractive body cue:** However, it is non-trivial to translate human language
 - **p. 1 / Abstract - extractive body cue:** We propose NaVILA, a 2-level framework that unifies a Vision-LanguageAction model (VLA) with locomotion skills.
 - **p. 1 / Abstract - extractive body cue:** Instead of directly predicting low-level actions from VLA, NaVILA first generates mid-level actions with spatial information in the form of language, (e.g., "moving forward 75cm"), ...
-- **p. 1 / Abstract - extractive body cue:** NaVILA substantially arXiv:2412.04453v2 [cs.RO] 17 Feb 2025
+- **p. 1 / Abstract - extractive body cue:** NaVILA substantially.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We construct a height map from raw LiDAR point clouds and introduce randomization to bridge the sim-to-real gap.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.
 
@@ -85,3 +87,12 @@ VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 �
 ## Why Read It
 
 VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 읽는다. 본문은 We construct a height map from raw LiDAR point clouds and introduce randomization to bridge the sim-to-real gap.를 문제로 두고, To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHOD), p. 5 (II. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** As shown in Table II, our method significantly outperforms NaVid, the current state-of-the-art model, with a substantial 10% improvement in SR. (p. 6, III. EXPERIMENTS).
+- **Explicit failure boundary:** While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx. (p. 9, V. CONCLUSION AND LIMITATIONS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00115009; PDF retrieval source: https://doi.org/10.1007/BF00115009. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00115009; PDF retrieval source: https://doi.org/10.1007/BF00115009. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | If either edge state, A or G, is entered, then the walk terminates. loss. | p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | For each nonterminal state i, there was a corresponding observation vector xi; if the walk was in state i at time t ... | p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example) |
@@ -83,10 +83,10 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | For a multi-step prediction problem, f Each time step's weight increments are then determined using VwQ(w, st), relying on the fact that ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | For a multi-step prediction problem, f Each time step's weight increments are then determined using VwQ(w, st), relying on the fact that ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | For a multi-step prediction problem in which Pt = P(zt, w) is meant to approximate E {z I st}, a natural error ... | Hz/fps, inference time and control rate |
-| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not recovered | window and reset |
-| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 9 (3.1 A game-playing example), p. 14 (3.2 A random-walk example), objective p. 9 (3.1 A game-playing example), p. 9 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), temporal p. 24 (4.3 Temporal-difference methods as gradient descent), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 7 (2.2 Computational issues), p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 15 (3.2 A random-walk example).
+- **Evidence anchors reviewed:** method p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 9 (3.1 A game-playing example), p. 14 (3.2 A random-walk example), objective p. 9 (3.1 A game-playing example), p. 9 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), temporal p. 24 (4.3 Temporal-difference methods as gradient descent), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 7 (2.2 Computational issues), p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 15 (3.2 A random-walk example).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** If either edge state, A or G, is entered, then the walk terminates. loss. (p. 10, 3.1 A game-playing example).
+- **Objective/update evidence:** The "bad" position is known from long experience to lead 90% of the time to a loss and only 10% of the time to a win. (p. 9, 3.1 A game-playing example).
+- **Temporal/runtime evidence:** A bounded random walk is a state sequence generated by taking random steps to the right or to the left until a boundary is reached. (p. 11, 3.2 A random-walk example).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v70/achiam17a.html; PDF retrieval source: https://arxiv.org/pdf/1705.10528. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v70/achiam17a.html; PDF retrieval source: https://arxiv.org/pdf/1705.10528. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 8.1. Evaluating CPO and Comparison Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return. | p. 8 (8.1. Evaluating CPO and Comparison Analysis) |
 | 8.1. Evaluating CPO and Comparison Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | Using cost shaping (CS) in the constraint while optimizing generally improves the agent's adherence to the true constraint on C-return. environment and makes sense ... | p. 8 (8.1. Evaluating CPO and Comparison Analysis) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We consider two tasks, and train multiple different agents (robots) for each task: • Circle: The agent is rewarded for running in a wide ... | embodiment, simulator version and control stack | p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis) |
 | Task/environment | To benchmark the environments, we also include TRPO (trust region policy optimization) (Schulman et al., 2015), a stateof-the-art unconstrained reinforcement learning algorithm. | reset, timeout, object/scene variation | p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments) |
@@ -151,7 +151,16 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 - **p. 6 / 6.2. Feasibility - extractive body cue:** Sometimes (11) will still be feasible and CPO can automatically recover from its bad step, but for the infeasible case, a recovery method is necessary.
 - **p. 6 / 6.3. Tightening Constraints via Cost Shaping - extractive body cue:** We choose ∆to be the probability of entering an unsafe state within a fixed time horizon, according to a learned model that is updated at ...
 
-- **PDF anchors reviewed:** datasets p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 5 (6.1. Approximately Solving the CPO Update), metrics p. 7 (Figure/Table caption), p. 6 (8. Experiments), p. 7 (8. Experiments), p. 8 (8.2. Ablation on Cost Shaping), p. 8 (8.3. Constraint vs. Fixed Penalty), p. 6 (6.2. Feasibility), baselines p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.2. Ablation on Cost Shaping), p. 5 (6.1. Approximately Solving the CPO Update), results p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 5 (6.1. Approximately Solving the CPO Update), metrics p. 7 (Figure/Table caption), p. 6 (8. Experiments), p. 7 (8. Experiments), p. 8 (8.2. Ablation on Cost Shaping), p. 8 (8.3. Constraint vs. Fixed Penalty), p. 6 (6.2. Feasibility), baselines p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.2. Ablation on Cost Shaping), p. 5 (6.1. Approximately Solving the CPO Update), results p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** In our experiments, we aim to answer the following: • Does CPO succeed at enforcing behavioral constraints when training neural network policies with thousands of parameters? • How does CPO ... (p. 6, 8. Experiments).
+- **Metric evidence:** We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return. (p. 8, 8.1. Evaluating CPO and Comparison Analysis).
+- **Baseline/ablation evidence:** We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return. (p. 8, 8.1. Evaluating CPO and Comparison Analysis).
+- **Failure/negative evidence:** Additionally, PDO is sensitive to the initialization of the dual variable. (p. 7, 8.1. Evaluating CPO and Comparison Analysis).

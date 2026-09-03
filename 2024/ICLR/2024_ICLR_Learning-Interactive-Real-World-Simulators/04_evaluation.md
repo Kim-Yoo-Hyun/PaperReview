@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2310.06114. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2310.06114. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot ... | p. 22 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 3: Evaluation of RL policy. Percentage of successful simulated rollouts (out of 48 tasks) using the VLA policy with and without RL finetuning ... | p. 7 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | [Bottom] Real-robot execution of an RL policy trained in simulation and zero-shot onto the real Language Table task. | embodiment, simulator version and control stack | p. 8 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple) |
 | Task/environment | We then directly deploy the RL policy trained in the simulator onto the real robot in zero-shot, and observe successful task executions as shown ... | reset, timeout, object/scene variation | p. 8 (1. Put cup 2. Pen 3. Apple) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 24 / Figure/Table caption - extractive body cue:** Figure 13: Failed environment simulation from the action "uncover bottle" without training on broad data as in UniSim. Top two videos are generated from only ...
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 14: When the text-to-video model behind UniSim is only trained on data from Brohan et al. (2022) as opposed incorporating broad data from the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), metrics p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 22 (Figure/Table caption), p. 5 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 6 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 22 (Figure/Table caption), results p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), metrics p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 22 (Figure/Table caption), p. 5 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 6 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 22 (Figure/Table caption), results p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot data in UniSim achieves the best ... (p. 22, Figure/Table caption).
+- **Metric evidence:** Purely finetuning on generated data drastically improves the captioning performance from no finetuning at all on ActivityNet (15.2 to 46.23), while achieving 84% performance of finetuning on true data. (p. 8, 1. Put cup 2. Pen 3. Apple).
+- **Baseline/ablation evidence:** CIDEr scores for PaLIX finetuned only on simulated data from UniSim compared to no finetuning and finetuning on true video data from ActivityNet Captions. (p. 8, 1. Put cup 2. Pen 3. Apple).
+- **Failure/negative evidence:** The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).

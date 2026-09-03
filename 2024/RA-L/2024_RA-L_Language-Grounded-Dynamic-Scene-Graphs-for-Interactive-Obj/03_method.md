@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.08605; PDF retrieval source: https://arxiv.org/pdf/2403.08605. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.08605; PDF retrieval source: https://arxiv.org/pdf/2403.08605. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,8 +21,8 @@ PDF body method statement (p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota 
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our approach incorporates a scene understanding module that, given object detections, constructs open-vocabulary scene ∗Equal contribution.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs.
+- **p. 1 / 2 Toyota Motor Europe (TME) - extractive body cue:** Furthermore, we introduce a novel evaluation paradigm for object search tasks, employing full efficiency curves to remove the dependency on arbitrary time budgets inherent in ...
 - **p. 3 / IV. MOMA-LLM - extractive body cue:** To address the challenges of interactive open-vocabulary household tasks, we propose MoMa-LLM, which intertwines high-level reasoning with scalable dynamic scene representations.
 
 ## Source Evidence Cues
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Scene / interaction state | base·arm·object 관계를 표현한다 | egocentric RGB-D, language goal, proprioception | map, object, reachability, contact 또는 affordance state를 구성 | base-arm interaction state | In this work, we propose MoMa-LLM, a novel approach that grounds language models within structured representations derived from openvocabulary scene graphs, dynamically ... | p. 1 (Abstract), p. 4 (IV. MOMA-LLM) |
 | Base-arm task decision | 접근·도킹·grasp·manipulation sequence를 결정한다 | interaction state와 task instruction | keypoint, option, trajectory, grasp 또는 joint planning을 수행 | base path plus arm/gripper plan | It consists of the following high-level actions: navigate(room_name, object_name): Navigation to an object in a room via an A∗planner in the explored ... | p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota Motor Europe (TME)) |
@@ -64,7 +64,7 @@ PDF body method statement (p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota 
 |---|---|---|---|
 | Input/observation | rely, simple, success, state, action, history, stating, failure, invalid, argument, case, output, LLM, could | egocentric RGB-D, language/task goal, base-arm proprioception | body cue; exact tensor/frame verify |
 | State/latent | rely, simple, success, state, action, history, stating, failure, invalid, argument | map/object/contact state와 base-arm coordination decision | body cue; notation verify |
-| Action/output | incorporates, scene, understanding, module, given, object, detections, constructs, open-vocabulary, Equal | base motion plus arm/gripper action | body cue; unit/decoder verify |
+| Action/output | address, challenges, grounding, LLMs, dynamically, built, scene, graphs, Furthermore, introduce | base motion plus arm/gripper action | body cue; unit/decoder verify |
 | Objective/constraint | Objects, then, assigned, room, label, node, minimizes, object, identify, distance | long-horizon task utility under reachability/contact constraints | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -83,14 +83,14 @@ PDF body method statement (p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | For simplicity, we recompute the scene graph each time step. | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | We terminate an episode if the agent reaches 50 high-level steps, indicating being stuck. | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | Removing the history also leads to a, although smaller, drop in performance. | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | not recovered | hardware, batch and throughput |
+| Horizon | paper-specific horizon; exact value was not selected from the PDF body. | For simplicity, we recompute the scene graph each time step. | episode/sequence/action-chunk boundary |
+| Rate / latency | paper-specific inference/control rate; exact value was not selected from the PDF body. | We terminate an episode if the agent reaches 50 high-level steps, indicating being stuck. | Hz/fps, inference time and control rate |
+| Memory | paper-specific history/state memory; exact value was not selected from the PDF body. | Removing the history also leads to a, although smaller, drop in performance. | window and reset |
+| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile was not selected from the PDF body. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota Motor Europe (TME)), p. 3 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), objective p. 4 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), p. 1 (Abstract), p. 3 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), temporal p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 1 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 4 (IV. MOMA-LLM), p. 1 (2 Toyota Motor Europe (TME)), p. 3 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), objective p. 4 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), p. 1 (Abstract), p. 3 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), temporal p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 1 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We rely on a simple success state to the action history, stating "success", "failure", or "invalid argument" in case the output of the LLM could not be matched to the ... (p. 5, IV. MOMA-LLM).
+- **Objective/update evidence:** In this work, we propose MoMa-LLM, a novel approach that grounds language models within structured representations derived from openvocabulary scene graphs, dynamically updated as the environment is explored. (p. 1, Abstract).
+- **Temporal/runtime evidence:** We terminate an episode if the agent reaches 50 high-level steps, indicating being stuck. (p. 6, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

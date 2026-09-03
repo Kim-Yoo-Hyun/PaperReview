@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=W86R5sIsxE; PDF retrieval source: https://openreview.net/pdf/27ac3094b9d6afc1c8c39e0ae99418fd937e0219.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=W86R5sIsxE; PDF retrieval source: https://openreview.net/pdf/27ac3094b9d6afc1c8c39e0ae99418fd937e0219.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Main Results - extractive PDF cue:** Navigation Performance on VLN-CE Benchmarks.
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** We use a unified benchmark that jointly evaluates navigation and low-level control.
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** We evaluated VLN-CE R2R/RxR and VLN-CE-Isaac using a unified set of metrics, including NE, OS, SR, SPL, and nDTW, which capture goal-reaching accuracy, feasibility, success ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 8: Ablation of Actor Network Dimensions. It shows the performance of different Actor network dimensions (A = [128, 128], A = [256, 128], A ...
-- **p. 7 / 4.2. Main Results - extractive PDF cue:** SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks 5.28 53.9 49.3 61.5 5.28 53.9 49.3 61.5 5.17 54.7 49.8 63.1 5.38 53.3 47.9 63.4 6.12 52.3 ...
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** For low-level locomotion, we quantify command tracking and safety using linear and angular velocity tracking errors and the collision rate.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: SNN action policy network ablations. The top row compares different spike encoding kernels (Laplacian, Gaussian, Triangular, and IMQ) in terms of reward, linear ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 6: Rewards across different population encoders. MEL donates Mean Episode Length, where higher values indicate better survival and task persistence. Kernel Classes Rewards MEL↑ ...
+- **p. 6 / 4.2. Main Results - extractive body cue:** Navigation Performance on VLN-CE Benchmarks.
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** We use a unified benchmark that jointly evaluates navigation and low-level control.
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** We evaluated VLN-CE R2R/RxR and VLN-CE-Isaac using a unified set of metrics, including NE, OS, SR, SPL, and nDTW, which capture goal-reaching accuracy, feasibility, success ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Ablation of Actor Network Dimensions. It shows the performance of different Actor network dimensions (A = [128, 128], A = [256, 128], A ...
+- **p. 7 / 4.2. Main Results - extractive body cue:** SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks 5.28 53.9 49.3 61.5 5.28 53.9 49.3 61.5 5.17 54.7 49.8 63.1 5.38 53.3 47.9 63.4 6.12 52.3 ...
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** For low-level locomotion, we quantify command tracking and safety using linear and angular velocity tracking errors and the collision rate.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: SNN action policy network ablations. The top row compares different spike encoding kernels (Laplacian, Gaussian, Triangular, and IMQ) in terms of reward, linear ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 6: Rewards across different population encoders. MEL donates Mean Episode Length, where higher values indicate better survival and task persistence. Kernel Classes Rewards MEL↑ ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 2, it achieves a strong and stable navigation performance, maintaining high metric scores compared to NaVILA (Cheng et al., 2025). | p. 6 (4.2. Main Results) |
 | 4.2. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | The current results suggest that SpikeVLA achieves performance comparable to strong baselines (Zhang et al., 2024a; Cheng et al., 2025) under the same RGB-only, ... | p. 6 (4.2. Main Results) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Main Results - extractive PDF cue:** Navigation Performance on VLN-CE Benchmarks.
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** We use a unified benchmark that jointly evaluates navigation and low-level control.
+- **p. 6 / 4.2. Main Results - extractive body cue:** Navigation Performance on VLN-CE Benchmarks.
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** We use a unified benchmark that jointly evaluates navigation and low-level control.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: SpikeVLA: Vision-Language-Action Models with Spik- ing Neural Networks.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Architecture of SpikeVLA. We introduce an SNN-based VLA architecture composed of a spiking neural network vision encoder, a multimodal spiking large language model, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3. The left side shows a comparison of resource con- sumption between the different components of SpikeVLA and NaVILA (Cheng et al., 2025), while ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Comparison of resource consumption and performance between ANN-based and SNN-based architectures.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison with SOTA methods on the VLN-CE Benchmarks. The table summarizes navigation performance metrics NE, OS, SR, and SPL, together with resource-efficiency metric, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: VLN-CE-Isaac evaluation results. NaVILA result is reproduced under the same conditions. All experiments evaluated on 1,077 episodes in the VLN-CE-Isaac. VLN-CE-Isaac Resource Efficiency ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: SNN action policy network ablations. The top row compares different spike encoding kernels (Laplacian, Gaussian, Triangular, and IMQ) in terms of reward, linear ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3: Comparison with SOTA methods on the Val-Unseen split of RxR-CE. The table summarizes navigation performance metrics NE, SR, SPL and nDTW, together with ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: SpikeVLA: Vision-Language-Action Models with Spik- ing Neural Networks.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Architecture of SpikeVLA. We introduce an SNN-based VLA architecture composed of a spiking neural network vision encoder, a multimodal spiking large language model, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3. The left side shows a comparison of resource con- sumption between the different components of SpikeVLA and NaVILA (Cheng et al., 2025), while ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Comparison of resource consumption and performance between ANN-based and SNN-based architectures.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Comparison with SOTA methods on the VLN-CE Benchmarks. The table summarizes navigation performance metrics NE, OS, SR, and SPL, together with resource-efficiency metric, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: VLN-CE-Isaac evaluation results. NaVILA result is reproduced under the same conditions. All experiments evaluated on 1,077 episodes in the VLN-CE-Isaac. VLN-CE-Isaac Resource Efficiency ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: SNN action policy network ablations. The top row compares different spike encoding kernels (Laplacian, Gaussian, Triangular, and IMQ) in terms of reward, linear ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Comparison with SOTA methods on the Val-Unseen split of RxR-CE. The table summarizes navigation performance metrics NE, SR, SPL and nDTW, together with ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Navigation Performance on VLN-CE Benchmarks. | embodiment, simulator version and control stack | p. 6 (4.2. Main Results), p. 6 (4.1. Experimental Setups) |
 | Task/environment | We use a unified benchmark that jointly evaluates navigation and low-level control. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setups) |
@@ -117,8 +117,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 | Primary metric/result | The current results suggest that SpikeVLA achieves performance comparable to strong baselines (Zhang et al., 2024a; Cheng et al., 2025) under the same RGB-only, ... | numeric claim only at cited anchor | p. 6 (4.2. Main Results) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.3. Multimodal Spiking Large Language Model - extractive PDF cue:** It =  Vh, Vc, T  ∈R(196×t+196+Ntext)×d, (6) where Vh ∈R(196×t)×d are history visual tokens, Vc ∈ R196×d are current visual tokens, T ∈RNtext×d ...
-- **p. 5 / 3.3. Multimodal Spiking Large Language Model - extractive PDF cue:** To stabilize training, we merge L consecutive fine-grained steps into a multi-level spike token: si[t′] = (t′+1)L-1 X t=t′L Si,t, t′ = 0, . . ...
+- **p. 4 / 3.3. Multimodal Spiking Large Language Model - extractive body cue:** It =  Vh, Vc, T  ∈R(196×t+196+Ntext)×d, (6) where Vh ∈R(196×t)×d are history visual tokens, Vc ∈ R196×d are current visual tokens, T ∈RNtext×d ...
+- **p. 5 / 3.3. Multimodal Spiking Large Language Model - extractive body cue:** To stabilize training, we merge L consecutive fine-grained steps into a multi-level spike token: si[t′] = (t′+1)L-1 X t=t′L Si,t, t′ = 0, . . ...
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Experimental Setups - extractive PDF cue:** For low-level locomotion, we quantify command tracking and safety using linear and angular velocity tracking errors and the collision rate.
-- **p. 5 / 3.4. Spiking Neural Network for Action Policy - extractive PDF cue:** This approach transforms continuous observations into sparse and robust spike events, improving the stability and noise robustness of quadruped locomotion control.
-- **p. 8 / A ANN - extractive PDF cue:** Therefore, SpikeVLA does not simply trade accuracy for efficiency. instead, it achieves higher energy efficiency through a sparse, event-driven computational paradigm.
-- **p. 6 / 4.2. Main Results - extractive PDF cue:** We evaluated SpikeVLA in the VLN-CE-Isaac simulator using the Unitree Go2 platform to assess its transferability to closedloop embodied execution under realistic dynamics and sensor ...
-- **p. 8 / A ANN - extractive PDF cue:** Resource Efficiency Error ↓ Error ↓ Mem(MB)↓Eng(µJ)↓ACEs(106)↓ NaVILA 0.23 0.38 1.20 5.80 161.48 SpikeVLA 0.42 0.29 2.35 0.31 5.53 mance degradation.
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 8: Ablation of Actor Network Dimensions. It shows the performance of different Actor network dimensions (A = [128, 128], A = [256, 128], A ...
+- **p. 6 / 4.1. Experimental Setups - extractive body cue:** For low-level locomotion, we quantify command tracking and safety using linear and angular velocity tracking errors and the collision rate.
+- **p. 5 / 3.4. Spiking Neural Network for Action Policy - extractive body cue:** This approach transforms continuous observations into sparse and robust spike events, improving the stability and noise robustness of quadruped locomotion control.
+- **p. 8 / A ANN - extractive body cue:** Therefore, SpikeVLA does not simply trade accuracy for efficiency. instead, it achieves higher energy efficiency through a sparse, event-driven computational paradigm.
+- **p. 6 / 4.2. Main Results - extractive body cue:** We evaluated SpikeVLA in the VLN-CE-Isaac simulator using the Unitree Go2 platform to assess its transferability to closedloop embodied execution under realistic dynamics and sensor ...
+- **p. 8 / A ANN - extractive body cue:** Resource Efficiency Error ↓ Error ↓ Mem(MB)↓Eng(µJ)↓ACEs(106)↓ NaVILA 0.23 0.38 1.20 5.80 161.48 SpikeVLA 0.42 0.29 2.35 0.31 5.53 mance degradation.
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Ablation of Actor Network Dimensions. It shows the performance of different Actor network dimensions (A = [128, 128], A = [256, 128], A ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Main Results), p. 6 (4.1. Experimental Setups), metrics p. 6 (4.1. Experimental Setups), p. 15 (Figure/Table caption), p. 7 (4.2. Main Results), p. 6 (4.1. Experimental Setups), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 15 (Figure/Table caption), p. 7 (4.2. Main Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Main Results), p. 6 (4.1. Experimental Setups), metrics p. 6 (4.1. Experimental Setups), p. 15 (Figure/Table caption), p. 7 (4.2. Main Results), p. 6 (4.1. Experimental Setups), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 15 (Figure/Table caption), p. 7 (4.2. Main Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2104.08212; PDF retrieval source: https://arxiv.org/abs/2104.08212. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2104.08212; PDF retrieval source: https://arxiv.org/abs/2104.08212. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | In fact, we use supervised learning to train a similar neural network architecture model (excluding the inputs responsible for action representation) as ... | p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 3 (III. SYSTEM OVERVIEW) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | First, we use a single, multi-task deep neural network to learn a policy for all the tasks simultaneously, which enables parameter sharing ... | p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | At each time step, the policy selects an action a given the current state s and the current task Ti that is ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | 2C), at each time step, a policy takes as input a camera image and a one-hot encoding of the task, and sends ... | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | 5) consists of 5400 episodes collected for that task (i.e. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -132,8 +132,17 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM OVERVIEW), p. 4 (III. SYSTEM OVERVIEW), p. 1 (I. INTRODUCTION), objective p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM OVERVIEW), p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 4 (III. SYSTEM OVERVIEW), p. 1 (I. INTRODUCTION), temporal p. 3 (III. SYSTEM OVERVIEW), p. 3 (III. SYSTEM OVERVIEW), p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM OVERVIEW), p. 4 (III. SYSTEM OVERVIEW), p. 1 (I. INTRODUCTION), objective p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM OVERVIEW), p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 4 (III. SYSTEM OVERVIEW), p. 1 (I. INTRODUCTION), temporal p. 3 (III. SYSTEM OVERVIEW), p. 3 (III. SYSTEM OVERVIEW), p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In fact, we use supervised learning to train a similar neural network architecture model (excluding the inputs responsible for action representation) as for the MT-Opt multi-task policy, which we describe ... (p. 5, V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS).
+- **Objective/update evidence:** Prior work indicates that multi-task RL can indeed amortize the cost of single-task learning [20, 56, 60, 80, 30]. (p. 1, I. INTRODUCTION).
+- **Temporal/runtime evidence:** In order to further reduce the variance of the evaluation, we shuffle the bins after each episode and (p. 6, VII. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

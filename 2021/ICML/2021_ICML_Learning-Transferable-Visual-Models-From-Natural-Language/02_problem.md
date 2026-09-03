@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduct
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs. | 논문이 정의한 robot/embodied environment | body wording is the source claim |
-| Observation / input | The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF body |
 | State / latent | development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic | task state 또는 decision variable | notation and tensor shape require body check |
 | Output / action | discussed, introduction, idea, however, terminology, describe, space, varied | paper-specific output/action | exact unit/frame/decoder require body check |
 | Target outcome | source task metric; robot link not established | primary task objective와 closed-loop behavior | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | source-defined input o; body terms: development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic | p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision) |
-| Decision / output variable | prediction/embedding/sample ŷ; body terms: Pre-training, methods, learn, directly, text, have, revolutionized, NLP | p. 1 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision) |
+| Decision / output variable | prediction/embedding/sample ŷ; body terms: Learning, natural, language, important, advantage, over, most, unsupervised | p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method) |
 | Objective / loss / cost | paper-specific objective; cue terms: knowledge, batch, construction, technique, objective, first, introduced, area | p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.4. Choosing and Scaling a Model) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (2.5. Training), p. 5 (2.5. Training), p. 3 (2.1. Natural Language Supervision) |
 | Success / guarantee | source task metric; robot link not established | p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,12 +49,12 @@ PDF body framing (p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduct
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 1 (1. Introduction and Motivating Work)): Pre-training methods which learn directly from raw text have revolutionized NLP over the last few years (Dai & Le, 2015; Peters et al., 2018; Howard & Ruder, 2018; Radford et ...
+PDF body contribution framing (p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 1 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION)): Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but also connects that representation to ...
 
-- **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but ...
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** At the core of our approach is the idea of learning perception from supervision contained in natural language.
 - **p. 4 / 2.3. Selecting an Efficient Pre-Training Method - extractive body cue:** In Figure 2 we show that a 63 million parameter transformer language model, which already uses twice the compute of its ResNet-50 image encoder, learns ...
 - **p. 1 / 1. Introduction and Motivating Work - extractive body cue:** The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has enabled taskagnostic architectures ...
+- **p. 6 / 3.1.1. MOTIVATION - extractive body cue:** However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods rather ...
 
 ## Assumptions and Failure Boundary
 
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (1. Introduction and Motivating Work), p. 3 (2.1.
 
 ## Position in the Robotics Loop
 
-upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method). The downstream handoff is claimed only when the body describes it.
+upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION), p. 6 (3.1.1. MOTIVATION), interface p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method), objective p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.4. Choosing and Scaling a Model).
+- **Evidence anchors reviewed:** problem p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION), p. 6 (3.1.1. MOTIVATION), interface p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method), objective p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.4. Choosing and Scaling a Model).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (48 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs. (p. 2, 1. Introduction and Motivating Work).
+- **Formulation-changing contribution:** At the core of our approach is the idea of learning perception from supervision contained in natural language. (p. 3, 2.1. Natural Language Supervision).
+- **Assumption/failure evidence:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. (p. 11, 3.2. Representation Learning).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

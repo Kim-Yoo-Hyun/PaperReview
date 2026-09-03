@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `start/goal, map, dynamics와 successor/operator description → path, trajectory, symbolic state 또는 task-motion decision → feasible action sequence 또는 minimum-cost plan`.
-- 이 논문의 재사용 가능한 지점은 2004) have been tackling problems that require long sequences of actions and large discrete state-spaces.를 This involves batch sampling a set of placement poses and grasp transforms to identify the pick and place actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 path, trajectory, symbolic state 또는 task-motion decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In practice, we do not increase the sampling parameter sizes upon a sampling failure.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** This involves batch sampling a set of placement poses and grasp transforms to identify the pick and place actions. (p. 2, 1.1 Approach).
+- **Paper-specific mechanism:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions. (p. 2, 1.1 Approach).
+- **Evidence boundary:** the reported outcome is Experiment results over 50 trials. informative heuristic estimate. (p. 31, 11.4 Results); the relevant task/metric cue is HF F Rob, HA gave the best performance in both success rate and runtime. (p. 30, 11.4 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In practice, we do not increase the sampling parameter sizes upon a sampling failure. (p. 30, 11 Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We will restrict the robot to four side grasps per objects except on problems 1-1 & 1-2 where we use a single top grasp..
-3. Compare against the body-reported baseline or a matched simpler baseline: The following heuristics are compared in the experiments: 1..
-4. Report the body metric and its denominator/aggregation: HF F Rob, HA gave the best performance in both success rate and runtime..
-5. Re-run the body-reported ablation/failure condition: Figure 15. A star-graph CRG visualized using end-effector poses. PATH(q, q′; (V, E)) (without considering any placed or held objects). In practice, we only create MOVE actions between start and goal configurations ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: This involves batch sampling a set of placement poses and grasp transforms to identify the pick and place actions. (p. 2, 1.1 Approach); preserve the objective/update rule: We model task and motion planning as symbolic planning where the conditions of actions are complex predicates involving geometric and kinematic constraints. (p. 2, 1.1 Approach).
+2. Use the paper-reported task/data/environment cue: 11.3 Implementation We implemented FFROB in Python using the OpenRAVE robotics framework (Diankov and Kuffner 2008) for simulation. (p. 30, 11 Experiments).
+3. Compare against the reported or matched baseline: The following heuristics are compared in the experiments: 1. (p. 29, 11 Experiments).
+4. Report the body metric with its denominator and aggregation: HF F Rob, HA gave the best performance in both success rate and runtime. (p. 30, 11.4 Results).
+5. Re-run the reported ablation or stress/failure condition: This allows a large number of placements to be created for constrained problems without greatly increasing the branching factor. (p. 30, 11 Experiments); if none is reported, design one around: In practice, we do not increase the sampling parameter sizes upon a sampling failure. (p. 30, 11 Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 Approach); the primary result is directionally consistent at p. 30 (11.4 Results), p. 30 (11.4 Results), p. 31 (11.4 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1.1 Approach), p. 1 (1 Introduction), match the reported outcome at p. 31 (11.4 Results), p. 27 (11 Experiments), p. 28 (11 Experiments), and measure the boundary at p. 30 (11 Experiments), p. 24 (A PPM).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, Extended, Action mechanism이 The following heuristics are compared in the experiments: 1. 대비 HF F Rob, HA gave the best performance in both success rate and runtime.을 개선하고, In practice, we do not increase the sampling parameter sizes upon a sampling failure. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (This involves batch sampling a set of placement poses and grasp transforms to identify the pick and place actions.), does the paper-specific mechanism (We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions.) retain the reported evaluation outcome (HF F Rob, HA gave the best performance in both success rate and runtime.) when tested against the paper's strongest explicit boundary (In practice, we do not increase the sampling parameter sizes upon a sampling failure.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (HF F Rob, HA gave the best performance in both success rate and runtime.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions. (p. 2, 1.1 Approach).
+- **Paper-supported outcome:** Experiment results over 50 trials. informative heuristic estimate. (p. 31, 11.4 Results).
+- **Strongest explicit boundary:** In practice, we do not increase the sampling parameter sizes upon a sampling failure. (p. 30, 11 Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

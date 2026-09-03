@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ebt72acjt6; PDF retrieval source: https://openreview.net/pdf/bfce7f71c1e37001e68263ecce2837ec77904739.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ebt72acjt6; PDF retrieval source: https://openreview.net/pdf/bfce7f71c1e37001e68263ecce2837ec77904739.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Ex
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** Our study focuses exclusively on static scenes, and consequently, the evaluation excludes all dynamic objects.
-- **p. 6 / 5.3. Qualitative Results - extractive PDF cue:** 2 compares novel view synthesis results of state-ofthe-art baselines and our EnerGS across different scenes.
-- **p. 7 / 5.3. Qualitative Results - extractive PDF cue:** Visual Comparison on KITTI and Waymo Open Dataset.
-- **p. 7 / 5.3. Qualitative Results - extractive PDF cue:** Method KITTI Waymo Open Dataset Photometry Geometry #G (M)↓ Photometry Geometry #G (M)↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ 3DGS ToG 23 15.01 0.938 12.5 16.1 0.22 1.39 1.51 ...
-- **p. 8 / 5.3. Qualitative Results - extractive PDF cue:** Ablation Study on KITTI and Waymo Open Dataset.
-- **p. 8 / 5.3. Qualitative Results - extractive PDF cue:** Variant KITTI Waymo Open Dataset Photometry Geometry Photometry Geometry ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ Full EnerGS 0.00 0.000 0.0 0.0 0.00 0.00 0.00 0.00 0.000 0.0 0.0 0.00 ...
-- **p. 5 / 4.3. Optimization Stability - extractive PDF cue:** We analyze the smoothness of the optimization trajectory by examining the Lipschitz properties of the driving force.
-- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive PDF cue:** It must migrate along the trajectory defined by -∂dT ∂µ until exiting Ωfree, thereby ensuring Sdeg ∩Ωfree = ∅in the convergence limit.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** Our study focuses exclusively on static scenes, and consequently, the evaluation excludes all dynamic objects.
+- **p. 6 / 5.3. Qualitative Results - extractive body cue:** 2 compares novel view synthesis results of state-ofthe-art baselines and our EnerGS across different scenes.
+- **p. 7 / 5.3. Qualitative Results - extractive body cue:** Visual Comparison on KITTI and Waymo Open Dataset.
+- **p. 7 / 5.3. Qualitative Results - extractive body cue:** Method KITTI Waymo Open Dataset Photometry Geometry #G (M)↓ Photometry Geometry #G (M)↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ 3DGS ToG 23 15.01 0.938 12.5 16.1 0.22 1.39 1.51 ...
+- **p. 8 / 5.3. Qualitative Results - extractive body cue:** Ablation Study on KITTI and Waymo Open Dataset.
+- **p. 8 / 5.3. Qualitative Results - extractive body cue:** Variant KITTI Waymo Open Dataset Photometry Geometry Photometry Geometry ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ Full EnerGS 0.00 0.000 0.0 0.0 0.00 0.00 0.00 0.00 0.000 0.0 0.0 0.00 ...
+- **p. 5 / 4.3. Optimization Stability - extractive body cue:** We analyze the smoothness of the optimization trajectory by examining the Lipschitz properties of the driving force.
+- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive body cue:** It must migrate along the trajectory defined by -∂dT ∂µ until exiting Ωfree, thereby ensuring Sdeg ∩Ωfree = ∅in the convergence limit.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Ex
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Quantitative Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | On KITTI, it attains the highest PSNR and OccCov together with the lowest Leak score, indicating improved alignment with occupied regions and fewer free ... | p. 6 (5.2. Quantitative Analysis) |
 | 5.1. Experimental Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | Beyond improvements in standard evaluation metrics, our primary objective is to validate that our proposed energy formulation successfully resolves the ill-posedness inherent in sparse ... | p. 6 (5.1. Experimental Setup) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Ex
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** Our study focuses exclusively on static scenes, and consequently, the evaluation excludes all dynamic objects.
-- **p. 6 / 5.3. Qualitative Results - extractive PDF cue:** 2 compares novel view synthesis results of state-ofthe-art baselines and our EnerGS across different scenes.
-- **p. 7 / 5.3. Qualitative Results - extractive PDF cue:** Visual Comparison on KITTI and Waymo Open Dataset.
-- **p. 7 / 5.3. Qualitative Results - extractive PDF cue:** Method KITTI Waymo Open Dataset Photometry Geometry #G (M)↓ Photometry Geometry #G (M)↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ 3DGS ToG 23 15.01 0.938 12.5 16.1 0.22 1.39 1.51 ...
-- **p. 8 / 5.3. Qualitative Results - extractive PDF cue:** Ablation Study on KITTI and Waymo Open Dataset.
-- **p. 8 / 5.3. Qualitative Results - extractive PDF cue:** Variant KITTI Waymo Open Dataset Photometry Geometry Photometry Geometry ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ Full EnerGS 0.00 0.000 0.0 0.0 0.00 0.00 0.00 0.00 0.000 0.0 0.0 0.00 ...
-- **p. 5 / 4.3. Optimization Stability - extractive PDF cue:** We analyze the smoothness of the optimization trajectory by examining the Lipschitz properties of the driving force.
-- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive PDF cue:** It must migrate along the trajectory defined by -∂dT ∂µ until exiting Ωfree, thereby ensuring Sdeg ∩Ωfree = ∅in the convergence limit.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** Our study focuses exclusively on static scenes, and consequently, the evaluation excludes all dynamic objects.
+- **p. 6 / 5.3. Qualitative Results - extractive body cue:** 2 compares novel view synthesis results of state-ofthe-art baselines and our EnerGS across different scenes.
+- **p. 7 / 5.3. Qualitative Results - extractive body cue:** Visual Comparison on KITTI and Waymo Open Dataset.
+- **p. 7 / 5.3. Qualitative Results - extractive body cue:** Method KITTI Waymo Open Dataset Photometry Geometry #G (M)↓ Photometry Geometry #G (M)↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ PSNR↑SSIM↑Leak↓OccCov↑Margin↑Thick↓ 3DGS ToG 23 15.01 0.938 12.5 16.1 0.22 1.39 1.51 ...
+- **p. 8 / 5.3. Qualitative Results - extractive body cue:** Ablation Study on KITTI and Waymo Open Dataset.
+- **p. 8 / 5.3. Qualitative Results - extractive body cue:** Variant KITTI Waymo Open Dataset Photometry Geometry Photometry Geometry ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ ∆PSNR↑∆SSIM↑∆Leak↓∆OccCov↑∆Margin↑∆Thick↓∆#G↓ Full EnerGS 0.00 0.000 0.0 0.0 0.00 0.00 0.00 0.00 0.000 0.0 0.0 0.00 ...
+- **p. 5 / 4.3. Optimization Stability - extractive body cue:** We analyze the smoothness of the optimization trajectory by examining the Lipschitz properties of the driving force.
+- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive body cue:** It must migrate along the trajectory defined by -∂dT ∂µ until exiting Ωfree, thereby ensuring Sdeg ∩Ωfree = ∅in the convergence limit.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR). However, in large-scale outdoor scenes, such priors ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative Comparison on KITTI and Waymo Open Dataset. We report Photometry (PSNR, SSIM), Geometry (Leak, OccCov, Margin, Thick), and Efficiency (#Gauss). Bold, underlined, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 2. Visual Comparison on KITTI and Waymo Open Dataset. Our EnerGS achieves superior novel view synthesis, particularly in geometrically unobserved regions (e.g., upper structures ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation Study on KITTI and Waymo Open Dataset. All values report differences (∆) relative to the full EnerGS model. Positive ∆indicates an increase ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. The Gap between Train and Test PSNR with Training Iteration. Our EnerGS consistently maintains a smaller train-test gap throughout training, indicating that our ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Figure 4. Random Initialization Experiment. We randomly initialize 50,000 Gaussian primitives (with 500 of them tracked and recorded) in free space and optimize them using ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Figure 5. Comparison of Gradient Norm between Vanilla 3DGS and EnerGS. 12
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 6. Comparison of rendering results in LiDAR blind-spot regions (unobservable geometry), highlighting the effect of enabling the UNK field. B. Derivation and Interpretation of ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR). However, in large-scale outdoor scenes, such priors ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Comparison on KITTI and Waymo Open Dataset. We report Photometry (PSNR, SSIM), Geometry (Leak, OccCov, Margin, Thick), and Efficiency (#Gauss). Bold, underlined, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 2. Visual Comparison on KITTI and Waymo Open Dataset. Our EnerGS achieves superior novel view synthesis, particularly in geometrically unobserved regions (e.g., upper structures ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation Study on KITTI and Waymo Open Dataset. All values report differences (∆) relative to the full EnerGS model. Positive ∆indicates an increase ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. The Gap between Train and Test PSNR with Training Iteration. Our EnerGS consistently maintains a smaller train-test gap throughout training, indicating that our ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 4. Random Initialization Experiment. We randomly initialize 50,000 Gaussian primitives (with 500 of them tracked and recorded) in free space and optimize them using ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 5. Comparison of Gradient Norm between Vanilla 3DGS and EnerGS. 12
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 6. Comparison of rendering results in LiDAR blind-spot regions (unobservable geometry), highlighting the effect of enabling the UNK field. B. Derivation and Interpretation of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our study focuses exclusively on static scenes, and consequently, the evaluation excludes all dynamic objects. | embodiment, simulator version and control stack | p. 6 (5.1. Experimental Setup), p. 6 (5.3. Qualitative Results) |
 | Task/environment | 2 compares novel view synthesis results of state-ofthe-art baselines and our EnerGS across different scenes. | reset, timeout, object/scene variation | p. 6 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results) |
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Ex
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** It shows that degenerate solutions in free space cannot form stable equilibria and that the geometric update field is well-conditioned.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR). However, in large-scale outdoor scenes, such priors ...
-- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive PDF cue:** We first prove that degenerate solutions (floaters) cannot persist in the trusted free space, regardless of their photometric consistency.
-- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive PDF cue:** If µ lies within the trusted free space Ωfree ⊂Ωtrust, it cannot be a stable stationary point of the decoupled update rule, even if µ ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We conduct our evaluation on the KITTI [37] and Waymo Open Dataset [35], selecting sequences characterized by complex occlusions and unbounded backgrounds.
-- **p. 6 / 4.4. Permissiveness via Asymptotic Variance Analysis - extractive PDF cue:** This mathematically justifies the system's ability to reconstruct geometry in blind spots (e.g., occlusion or far-field) solely through multi-view consistency.
+- **p. 8 / 6. Conclusion - extractive body cue:** It shows that degenerate solutions in free space cannot form stable equilibria and that the geometric update field is well-conditioned.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR). However, in large-scale outdoor scenes, such priors ...
+- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive body cue:** We first prove that degenerate solutions (floaters) cannot persist in the trusted free space, regardless of their photometric consistency.
+- **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive body cue:** If µ lies within the trusted free space Ωfree ⊂Ωtrust, it cannot be a stable stationary point of the decoupled update rule, even if µ ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We conduct our evaluation on the KITTI [37] and Waymo Open Dataset [35], selecting sequences characterized by complex occlusions and unbounded backgrounds.
+- **p. 6 / 4.4. Permissiveness via Asymptotic Variance Analysis - extractive body cue:** This mathematically justifies the system's ability to reconstruct geometry in blind spots (e.g., occlusion or far-field) solely through multi-view consistency.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), metrics p. 6 (5.2. Quantitative Analysis), p. 6 (5.2. Quantitative Analysis), p. 7 (5.3. Qualitative Results), p. 8 (5.4. Ablation Studies), p. 8 (5.4. Ablation Studies), p. 19 (Figure/Table caption), baselines p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 6 (5.3. Qualitative Results), p. 8 (5.5. Training Generalization Comparison), p. 6 (5.1. Experimental Setup), p. 7 (5.3. Qualitative Results), results p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Experimental Setup), p. 8 (5.5. Training Generalization Comparison), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), metrics p. 6 (5.2. Quantitative Analysis), p. 6 (5.2. Quantitative Analysis), p. 7 (5.3. Qualitative Results), p. 8 (5.4. Ablation Studies), p. 8 (5.4. Ablation Studies), p. 19 (Figure/Table caption), baselines p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 6 (5.3. Qualitative Results), p. 8 (5.5. Training Generalization Comparison), p. 6 (5.1. Experimental Setup), p. 7 (5.3. Qualitative Results), results p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Experimental Setup), p. 8 (5.5. Training Generalization Comparison), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

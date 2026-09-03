@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/IROS.2012.6386109; PDF retrieval source: https://doi.org/10.1109/IROS.2012.6386109. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/IROS.2012.6386109; PDF retrieval source: https://doi.org/10.1109/IROS.2012.6386109. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Physics state / interface | robot·environment state를 simulator contract로 표현한다 | geometry, dynamics, contact, control input | rigid-body/contact/differentiable state를 구성 | simulator state | The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: ... | p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS) |
 | Rollout / model query | candidate action의 consequence를 계산한다 | state와 action | physics step, learned dynamics, parallel 또는 differentiable rollout을 수행 | trajectory/reward/prediction | We start with notation and smooth dynamics which are fairly standard, then explain the contact simulation algorithms in more detail, followed by ... | p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS) |
@@ -82,8 +82,8 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 |---|---|---|---|
 | Horizon | simulator step, rollout length와 task episode horizon을 분리한다. | Although this approach is a significant improvement over earlier spring-damper models of contact, it still requires manual tuning and small time steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | simulation step rate와 learned policy/control rate를 별도로 기록한다. | Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates ... | Hz/fps, inference time and control rate |
-| Memory | sim state, contact state와 rollout/replay buffer. | not recovered | window and reset |
-| Compute | physics solver, parallel environments와 differentiable rollout cost가 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | sim state, contact state와 rollout/replay buffer. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | physics solver, parallel environments와 differentiable rollout cost가 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -128,8 +128,17 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 6 (III. MODELING), p. 6 (III. MODELING), p. 7 (III. MODELING), objective p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 7 (III. MODELING), p. 7 (III. MODELING), temporal p. 2 (I. INTRODUCTION), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 3 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), p. 6 (5) Integrate numerically to obtain the next state), p. 7 (IV. TIMING TESTS).
+- **Evidence anchors reviewed:** method p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 6 (III. MODELING), p. 6 (III. MODELING), p. 7 (III. MODELING), objective p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 7 (III. MODELING), p. 7 (III. MODELING), temporal p. 2 (I. INTRODUCTION), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 3 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), p. 6 (5) Integrate numerically to obtain the next state), p. 7 (IV. TIMING TESTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control inputs, optional activation states (used ... (p. 7, III. MODELING).
+- **Objective/update evidence:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix in generalized coordinates b "bias" ... (p. 2, II. ALGORITHMIC FOUNDATIONS).
+- **Temporal/runtime evidence:** The procedure for solving the above equations of motion consists of the following steps: (p. 2, II. ALGORITHMIC FOUNDATIONS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

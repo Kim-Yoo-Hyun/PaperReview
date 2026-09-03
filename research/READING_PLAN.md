@@ -1,6 +1,6 @@
 # Long-Term Robotics Reading Plan
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-03 KST
 - Source registry: [PAPER.md](../PAPER.md)
 - Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)
 - Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)

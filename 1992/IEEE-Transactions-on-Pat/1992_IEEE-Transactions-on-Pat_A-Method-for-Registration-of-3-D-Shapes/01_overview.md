@@ -1,8 +1,10 @@
 # A Method for Registration of 3-D Shapes
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/34.121791.
-> PDF retrieval source: https://doi.org/10.1109/34.121791. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1109/34.121791.
+> PDF retrieval source: https://doi.org/10.1109/34.121791. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1992 / IEEE Transactions on Pattern Analysis and Machine Intelligence
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://doi.org/10.1109/34.121791
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 ## Why Read It
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 reasonable quality curve data but has difficulty with very noisy curves because the method uses arclenath sampling of the curves to obtain corresponding point sets.를 문제로 두고, The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 in any ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 1 (1. Istmopuction), p. 1 (1) Point sets) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This is a problem with almost all of the shape ‘matching algorithms in the literature For any given fixed initial set of rotations, the global shape matching capability can be ... (p. 16, A BN).
+- **Actual contribution:** A recent conference proceedings [47] contains new contributions on this subject. (p. 2, 1) Point sets).
+- **Evaluation boundary:** To give a quantitative example comparison, the registration values, RMS error, maximum error, angular change, and cu ‘mulative are length values were recorded during 50 iterations of both the basic ... (p. 7, B. Convergence Theorem).
+- **Explicit failure boundary:** allowable occlusion percentages, e-., 10% oles, We do not advocate our proposed method if feature extraction techniques will successfully solve the problem. ‘The generalization to matching deformable models with high ... (p. 16, A BN).

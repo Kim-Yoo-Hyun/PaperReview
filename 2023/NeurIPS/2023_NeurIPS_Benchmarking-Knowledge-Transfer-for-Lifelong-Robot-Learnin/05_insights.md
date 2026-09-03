@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 In the end, a robot executes a policy by sampling a continuous value for end-effector action from the output distribution.를 (T2) Neural Architecture Design An important research question in LLDM is how to design effective neural architectures to abstract the multi-modal observations (images, language descriptions, and robot states) and transfer only relevant ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Q5: How robust are different LL algorithms to task ordering in LLDM?에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different types of distribution shift; 2) neural architecture design; 3) lifelong ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** (T2) Neural Architecture Design An important research question in LLDM is how to design effective neural architectures to abstract the multi-modal observations (images, language descriptions, and robot states) and transfer ... (p. 4, 2 Background).
+- **Paper-specific mechanism:** We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different types of distribution shift; 2) neural architecture design; ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 2: Performance of three lifelong algorithms and the SEQL and MTL baselines on the four task suites, where the policy is fixed to be RESNET-T. Results are averaged over ... (p. 8, Figure/Table caption); the relevant task/metric cue is All metrics are computed in terms of success rate, as previous literature has shown that the success rate is a more reliable metric than training loss for manipulation policies [42] ... (p. 6, 5 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Consider a scenario where a robot, initially trained to retrieve juice from a fridge, fails (p. 1, 1 Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller..
-3. Compare against the body-reported baseline or a matched simpler baseline: Study on Lifelong Learning Algorithms (Q1, Q3) Table 2 reports the lifelong learning performance of the three lifelong learning algorithms, together with the SEQL and MTL baselines..
-4. Report the body metric and its denominator/aggregation: All metrics are computed in terms of success rate, as previous literature has shown that the success rate is a more reliable metric than training loss for manipulation policies [42] (Detailed explanation ....
-5. Re-run the body-reported ablation/failure condition: Figure 5: Performance of different combinations of algorithms and architectures without pretraining or with pretraining. The multi-task learning performance is also included for reference. Findings: We observe that the basic supervised ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: (T2) Neural Architecture Design An important research question in LLDM is how to design effective neural architectures to abstract the multi-modal observations (images, language descriptions, and robot states) and transfer ... (p. 4, 2 Background); preserve the objective/update rule: But during training, we perform behavioral cloning [4] with the following surrogate objective function: min π JBC(π) = 1 k k X p=1 E ot,at∼Dp  lp X t=0 L ... (p. 3, 2 Background).
+2. Use the paper-reported task/data/environment cue: But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller. (p. 8, 5 Experiments).
+3. Compare against the reported or matched baseline: Study on Lifelong Learning Algorithms (Q1, Q3) Table 2 reports the lifelong learning performance of the three lifelong learning algorithms, together with the SEQL and MTL baselines. (p. 8, 5 Experiments).
+4. Report the body metric with its denominator and aggregation: All metrics are computed in terms of success rate, as previous literature has shown that the success rate is a more reliable metric than training loss for manipulation policies [42] ... (p. 6, 5 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Q6: Can supervised pretraining improve downstream lifelong learning performance in LLDM? (p. 6, 5 Experiments); if none is reported, design one around: Consider a scenario where a robot, initially trained to retrieve juice from a fridge, fails (p. 1, 1 Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Background); the primary result is directionally consistent at p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 1 (Abstract), match the reported outcome at p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 1 (1 Introduction), p. 3 (2 Background).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, initial, study mechanism이 Study on Lifelong Learning Algorithms (Q1, Q3) Table 2 reports the lifelong learning performance of the ... 대비 All metrics are computed in terms of success rate, as previous literature has shown that the success rate ...을 개선하고, Q5: How robust are different LL algorithms to task ordering in LLDM? 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface ((T2) Neural Architecture Design An important research question in LLDM is how to design effective neural architectures to abstract the multi-modal observations ...), does the paper-specific mechanism (We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different ...) retain the reported evaluation outcome (All metrics are computed in terms of success rate, as previous literature has shown that the success rate ...) when tested against the paper's strongest explicit boundary (Consider a scenario where a robot, initially trained to retrieve juice from a fridge, fails)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (All metrics are computed in terms of success rate, as previous literature has shown that the success rate ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (44 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different types of distribution shift; 2) neural architecture design; ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 2: Performance of three lifelong algorithms and the SEQL and MTL baselines on the four task suites, where the policy is fixed to be RESNET-T. Results are averaged over ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Consider a scenario where a robot, initially trained to retrieve juice from a fridge, fails (p. 1, 1 Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1310.7730; PDF retrieval source: https://arxiv.org/pdf/1310.7730. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1310.7730; PDF retrieval source: https://arxiv.org/pdf/1310.7730. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. MOTION PLANNING BENCHMARK | SYSTEM / EVALUATION SCOPE UNRESOLVED | Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. | p. 9 (V. MOTION PLANNING BENCHMARK) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Fig. 13. Effect of noise level on the success rate. Re-planning after each time step greatly increases the probability of success. Collocation consistently outperforms ... | p. 13 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Left and center: two of the scenes used for the arm planning benchmark. | embodiment, simulator version and control stack | p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK) |
 | Task/environment | For each scene we set up the robot in a number of diverse configurations. | reset, timeout, object/scene variation | p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3. Hinge penalty for collisions a user-defined distance dcheck between them where dcheck > dsafe, and formulate the collision penalty based on these pairs. ...
 - **p. 8 / V. MOTION PLANNING BENCHMARK - extractive body cue:** After finding a collision-free configuration W of this sort, we initialized with the trajectory SWG as described above.
 
-- **PDF anchors reviewed:** datasets p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (VI. PHYSICAL EXPERIMENTS), metrics p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 11 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), baselines p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), results p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 12 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (VI. PHYSICAL EXPERIMENTS), metrics p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 11 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), baselines p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), results p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 12 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. (p. 9, V. MOTION PLANNING BENCHMARK).
+- **Metric evidence:** Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP. (p. 9, V. MOTION PLANNING BENCHMARK).
+- **Baseline/ablation evidence:** We also compared TrajOpt to a recent implementation of CHOMP [61] on the arm planning problems. (p. 8, V. MOTION PLANNING BENCHMARK).
+- **Failure/negative evidence:** The upshot is that the continuous collision cost solves problems with thin obstacles where the discrete-time cost fails to get the trajectory out of collision. (p. 8, 3) Calculate the Jacobians of those points).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | ‘To illustrate the challenge of training autoregressive poli cies with current action tokenization approaches, we star With a simple didactic example. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | alternative, directly, trains, VLAS, output, ow-level, robot, control, commands, given | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | developed, FAST, universal, action, tokenizer, serve, strong, default | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: alternative, directly, trains, VLAS, output, ow-level, robot, control, commands, given | p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 10 (C. Universal Action Tokenizer) |
 | Decision / output variable | action, pose, option or chunk a; body terms: FAS, nple, effective, tokenization, robot, action, trajectories, time-series | p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training), p. 8 (B. Comparing Action Tokenizers for VLA Training) |
 | Success / guarantee | instruction-conditioned task success | p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION)): 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ...
+PDF body contribution framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION)): 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ...
 
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We introduce a new action tokenization approach that allows us to train the first autoregressive VLAs ‘on dexterous and high-frequency robot data
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We find that this scheme struggles to scale to high-frequency robot control tasks, We propose a new tokenization scheme for robot actions, based on time-series ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 10 (C. Universal Action Tokenizer), p. 2 (1. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 10 (C. Universal Action Tokenizer), p. 2 (1. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), interface p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 10 (C. Universal Action Tokenizer), p. 2 (1. INTRODUCTION), objective p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training).
+- **Evidence anchors reviewed:** problem p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), interface p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 10 (C. Universal Action Tokenizer), p. 2 (1. INTRODUCTION), objective p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** We observe that correlations between time steps are a major challenge for naive tokenization strategies when predicting sequences of (p. 1, 1. INTRODUCTION).
+- **Formulation-changing contribution:** 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ... (p. 1, 1. INTRODUCTION).
+- **Assumption/failure evidence:** We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures to help readers get a sense of the policy's capabilities (p. 18, B. Discussion of Alternative Compression Approaches).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 The objective of goal-conditioned imitation learning is to train a policy π(a/o, og) to output actions that control a particular embodiment given the current and goal observations.를 To solve this problem, we train a goal-conditioned policy π(a/o, og) that outputs k actions into the future given a context of c observations.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading to failure ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for the first time that navigation data can ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** At a high level, we want our model to process its observations using some encoder, feed its embeddings into a transformer, and then output both an action and the distance ... (p. 5, IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+- **Paper-specific mechanism:** The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate transfer to novel domains [1]. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 5: Does navigation help manipulation? By aligning action coordinate frames, training on navigation and driving datasets results in a 20% improvement across five challenging tabletop manipulation tasks (success % ... (p. 7, Figure/Table caption); the relevant task/metric cue is Our goal is to evaluate the performance of heterogeneous cross-embodiment policies in solving real-world manipulation and navigation tasks on a variety of embodiments. (p. 5, V. EVALUATION). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading ... (p. 7, VI. ANALYSIS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Across three different robots in challenging indoor and outdoor environments, adding manipulation datasets leads to 5 -7% improvement in navigation performance (success % on y-axis)..
-3. Compare against the body-reported baseline or a matched simpler baseline: Training our policy on a manipulation and navigation data split had a 20% greater success rate over 5 tasks compared to training only on manipulation data..
-4. Report the body metric and its denominator/aggregation: Fig. 6: Does manipulation help navigation? Across three different robots in challenging indoor and outdoor environments, adding manipulation datasets leads to 5 -7% improvement in navigation performance (success % on y-axis). 17% ....
-5. Re-run the body-reported ablation/failure condition: To further examine whether information from the goal image is essential to transferring navigation data to manipulation, we ran an ablation of our method without goalconditioning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: At a high level, we want our model to process its observations using some encoder, feed its embeddings into a transformer, and then output both an action and the distance ... (p. 5, IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING); preserve the objective/update rule: Note that a∗is agnostic to embodiment, meaning that optimizing an action prediction loss L(f(oi, oj), a∗), where f(oi, oj) tries to prediction a∗given its current and goal observation, will not ... (p. 3, IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
+2. Use the paper-reported task/data/environment cue: Our goal is to evaluate the performance of heterogeneous cross-embodiment policies in solving real-world manipulation and navigation tasks on a variety of embodiments. (p. 5, V. EVALUATION).
+3. Compare against the reported or matched baseline: To further examine whether information from the goal image is essential to transferring navigation data to manipulation, we ran an ablation of our method without goalconditioning. (p. 8, VI. ANALYSIS).
+4. Report the body metric with its denominator and aggregation: Our goal is to evaluate the performance of heterogeneous cross-embodiment policies in solving real-world manipulation and navigation tasks on a variety of embodiments. (p. 5, V. EVALUATION).
+5. Re-run the reported ablation or stress/failure condition: To further examine whether information from the goal image is essential to transferring navigation data to manipulation, we ran an ablation of our method without goalconditioning. (p. 8, VI. ANALYSIS); if none is reported, design one around: Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading ... (p. 7, VI. ANALYSIS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 9 (VI. ANALYSIS), p. 7 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (VI. ANALYSIS), and measure the boundary at p. 7 (VI. ANALYSIS), p. 10 (VII. CONCLUSION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 While, particular, training mechanism이 Training our policy on a manipulation and navigation data split had a 20% greater success rate ... 대비 Fig. 6: Does manipulation help navigation? Across three different robots in challenging indoor and outdoor environments, adding manipulation ...을 개선하고, Gauging object distance is analogous to testing the robustness to a change in table height in ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (At a high level, we want our model to process its observations using some encoder, feed its embeddings into a transformer, and ...), does the paper-specific mechanism (The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate ...) retain the reported evaluation outcome (Our goal is to evaluate the performance of heterogeneous cross-embodiment policies in solving real-world manipulation and navigation tasks ...) when tested against the paper's strongest explicit boundary (Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our goal is to evaluate the performance of heterogeneous cross-embodiment policies in solving real-world manipulation and navigation tasks ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate transfer to novel domains [1]. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 5: Does navigation help manipulation? By aligning action coordinate frames, training on navigation and driving datasets results in a 20% improvement across five challenging tabletop manipulation tasks (success % ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading ... (p. 7, VI. ANALYSIS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

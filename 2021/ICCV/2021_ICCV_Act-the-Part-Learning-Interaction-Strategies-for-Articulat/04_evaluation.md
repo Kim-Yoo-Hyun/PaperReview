@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2105.01047; PDF retrieval source: https://arxiv.org/pdf/2105.01047. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2105.01047; PDF retrieval source: https://arxiv.org/pdf/2105.01047. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Benchmark Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | While other algorithms' performance saturate quickly with one or two interactions, [Ours-Touch] and [Ours-NoTouch] are able to improve with more interactions. | p. 5 (4.2. Benchmark Results) |
 | 4.2. Benchmark Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Furthermore, this result suggests more complex perceptual modules are necessary to get push-only policies to achieve competitive performance at this task. | p. 7 (4.2. Benchmark Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Dataset, test initialization, and pre-trained models will be released for reproducibility and benchmarking. | embodiment, simulator version and control stack | p. 5 (4. Evaluation), p. 8 (4.3. Real World Results) |
 | Task/environment | To validate performance independent of robot execution accuracy, a human is instructed to execute the actions. | reset, timeout, object/scene variation | p. 8 (4.3. Real World Results), p. 6 (4.2. Benchmark Results) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021 | While other algorithms' performance saturate quickly with one or two interactions, [Ours-Touch] and [Ours-NoTouch] are able to improve with more interactions. | PDF body cue; verify exact table/figure and matched conditions | p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 5 (4.2. Benchmark Results), p. 6 (4.2. Benchmark Results) |
+| To address these challenges, we introduce Act the Part | While other algorithms' performance saturate quickly with one or two interactions, [Ours-Touch] and [Ours-NoTouch] are able to improve with more interactions. | PDF body cue; verify exact table/figure and matched conditions | p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 5 (4.2. Benchmark Results), p. 6 (4.2. Benchmark Results) |
 | Primary metric/result | Furthermore, this result suggests more complex perceptual modules are necessary to get push-only policies to achieve competitive performance at this task. | numeric claim only at cited anchor | p. 7 (4.2. Benchmark Results) |
 
 - Numeric sentences retained from the body:
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 - **p. 8 / 5. Conclusion and Future Work - extractive body cue:** We see broad scope for future work including extensions to 3D part segmentation and singular frameworks for rigid, articulated, and deformable object understanding.
 - **p. 6 / 4.2. Benchmark Results - extractive body cue:** Due to space limitation, only three interaction steps are shown in this figure.
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Evaluation), p. 8 (4.3. Real World Results), p. 6 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), metrics p. 5 (4.1. Metrics and Points of Comparison), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 8 (4.3. Real World Results), p. 5 (4.1. Metrics and Points of Comparison), baselines p. 7 (4.2. Benchmark Results), p. 5 (4.1. Metrics and Points of Comparison), p. 6 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results), results p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 5 (4.2. Benchmark Results), p. 6 (4.2. Benchmark Results).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Evaluation), p. 8 (4.3. Real World Results), p. 6 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), metrics p. 5 (4.1. Metrics and Points of Comparison), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 8 (4.3. Real World Results), p. 5 (4.1. Metrics and Points of Comparison), baselines p. 7 (4.2. Benchmark Results), p. 5 (4.1. Metrics and Points of Comparison), p. 6 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results), results p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 5 (4.2. Benchmark Results), p. 6 (4.2. Benchmark Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time. (p. 7, 4.2. Benchmark Results).
+- **Metric evidence:** The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).
+- **Baseline/ablation evidence:** Results on two unseen object categories show our methods (pink and brown) approach the oracle baseline over time. (p. 7, 4.2. Benchmark Results).
+- **Failure/negative evidence:** The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%). (p. 5, 4.1. Metrics and Points of Comparison).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (56 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=DgGF2LEBPS; PDF retrieval source: https://openreview.net/pdf/b9e775a028b2a809c09d3c36562f179b9cac55a4.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (56 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=DgGF2LEBPS; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/164956. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.2. Benchmark Results - extractive PDF cue:** These findings emphasize two key insights: (1) when designing MLLM-based embodied AI benchmarks, it is essential to consider action-level taxonomy, with greater attention to low-level ...
-- **p. 9 / 5.5. Error Analysis - extractive PDF cue:** For each environment, we sample 10 failure episodes from each subset, resulting in a total of 110 failed episodes to be analyzed.
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** We benchmark 24 models, including 8 leading proprietary models and 16 SOTA open-source models.
-- **p. 7 / 5.2. Benchmark Results - extractive PDF cue:** EMBODIEDBENCH: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents Table 2.
-- **p. 8 / 5.4. Visual-centric Ablation - extractive PDF cue:** In EB-Manipulation, detection boxes and visual markers are used to align language instructions with visual information, helping to localize key objects in the scene.
-- **p. 9 / 5.5. Error Analysis - extractive PDF cue:** Overall, planning errors are the most common issue in both environments, while perception errors are more prevalent in low-level tasks.
-- **p. 7 / 5.4. Visual-centric Ablation - extractive PDF cue:** Visual information is critical for the performance of lowlevel tasks.
-- **p. 8 / 5.4. Visual-centric Ablation - extractive PDF cue:** Previous work has primarily relied on text-based ICL demonstrations.
+- **p. 6 / 5.2. Benchmark Results - extractive body cue:** These findings emphasize two key insights: (1) when designing MLLM-based embodied AI benchmarks, it is essential to consider action-level taxonomy, with greater attention to low-level ...
+- **p. 9 / 5.5. Error Analysis - extractive body cue:** For each environment, we sample 10 failure episodes from each subset, resulting in a total of 110 failed episodes to be analyzed.
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** We benchmark 24 models, including 8 leading proprietary models and 16 SOTA open-source models.
+- **p. 7 / 5.2. Benchmark Results - extractive body cue:** EMBODIEDBENCH: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents Table 2.
+- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** In EB-Manipulation, detection boxes and visual markers are used to align language instructions with visual information, helping to localize key objects in the scene.
+- **p. 9 / 5.5. Error Analysis - extractive body cue:** Overall, planning errors are the most common issue in both environments, while perception errors are more prevalent in low-level tasks.
+- **p. 7 / 5.4. Visual-centric Ablation - extractive body cue:** Visual information is critical for the performance of lowlevel tasks.
+- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** Previous work has primarily relied on text-based ICL demonstrations.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.4. Visual-centric Ablation | BENCHMARK / DATASET | As shown in Figure 5 (d), the results demonstrate that visual ICL significantly outperforms language-only ICL. | p. 9 (5.4. Visual-centric Ablation) |
 | Figure/Table caption | BENCHMARK / DATASET | Figure 16. Impact of visual in-context learning on EMBODIEDBENCH. impressive gains in manipulation tasks. For instance, Claude-3.5-Sonnet achieves a 16.7% improvement in performance. These ... | p. 30 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.2. Benchmark Results - extractive PDF cue:** These findings emphasize two key insights: (1) when designing MLLM-based embodied AI benchmarks, it is essential to consider action-level taxonomy, with greater attention to low-level ...
-- **p. 9 / 5.5. Error Analysis - extractive PDF cue:** For each environment, we sample 10 failure episodes from each subset, resulting in a total of 110 failed episodes to be analyzed.
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** We benchmark 24 models, including 8 leading proprietary models and 16 SOTA open-source models.
-- **p. 7 / 5.2. Benchmark Results - extractive PDF cue:** EMBODIEDBENCH: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents Table 2.
-- **p. 8 / 5.4. Visual-centric Ablation - extractive PDF cue:** In EB-Manipulation, detection boxes and visual markers are used to align language instructions with visual information, helping to localize key objects in the scene.
-- **p. 9 / 5.5. Error Analysis - extractive PDF cue:** Overall, planning errors are the most common issue in both environments, while perception errors are more prevalent in low-level tasks.
-- **p. 7 / 5.4. Visual-centric Ablation - extractive PDF cue:** Visual information is critical for the performance of lowlevel tasks.
-- **p. 8 / 5.4. Visual-centric Ablation - extractive PDF cue:** Previous work has primarily relied on text-based ICL demonstrations.
+- **p. 6 / 5.2. Benchmark Results - extractive body cue:** These findings emphasize two key insights: (1) when designing MLLM-based embodied AI benchmarks, it is essential to consider action-level taxonomy, with greater attention to low-level ...
+- **p. 9 / 5.5. Error Analysis - extractive body cue:** For each environment, we sample 10 failure episodes from each subset, resulting in a total of 110 failed episodes to be analyzed.
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** We benchmark 24 models, including 8 leading proprietary models and 16 SOTA open-source models.
+- **p. 7 / 5.2. Benchmark Results - extractive body cue:** EMBODIEDBENCH: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents Table 2.
+- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** In EB-Manipulation, detection boxes and visual markers are used to align language instructions with visual information, helping to localize key objects in the scene.
+- **p. 9 / 5.5. Error Analysis - extractive body cue:** Overall, planning errors are the most common issue in both environments, while perception errors are more prevalent in low-level tasks.
+- **p. 7 / 5.4. Visual-centric Ablation - extractive body cue:** Visual information is critical for the performance of lowlevel tasks.
+- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** Previous work has primarily relied on text-based ICL demonstrations.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of EMBODIEDBENCH. Two key features of our benchmark: various action levels and capability-oriented evaluation. Habitat focus on high-level task decomposition and planning ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison with related benchmarks. EMBODIEDBENCH is a multi-domain benchmark including household, manipulation, and navigation tasks. "Fine-grained" indicates a multi-dimensional evaluation approach rather than ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The vision-driven agent pipeline used in EMBODIEDBENCH. This pipeline serves as a robust framework for processing multimodal inputs, reflection and reasoning, and generating ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Planning examples in EB-ALFRED and EB-Manipulation based on GPT-4o. [57, 61, 20, 10, 60, 25, 1]; and (2) additional information like YOLO (Redmon, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Task success rates on 6 subsets of EB-ALFRED and EB-Habitat, with the best proprietary model in bold and open-source model underlines per column. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Language-centric ablations on EB-ALFRED.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Visual-centric ablations on EB-Manipulation. than on visual input.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Task success rates on 5 subsets of EB-Navigation and EB-Manipulation, with the best proprietary model in bold and open-source model underlines per column.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of EMBODIEDBENCH. Two key features of our benchmark: various action levels and capability-oriented evaluation. Habitat focus on high-level task decomposition and planning ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Comparison with related benchmarks. EMBODIEDBENCH is a multi-domain benchmark including household, manipulation, and navigation tasks. "Fine-grained" indicates a multi-dimensional evaluation approach rather than ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The vision-driven agent pipeline used in EMBODIEDBENCH. This pipeline serves as a robust framework for processing multimodal inputs, reflection and reasoning, and generating ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Planning examples in EB-ALFRED and EB-Manipulation based on GPT-4o. [57, 61, 20, 10, 60, 25, 1]; and (2) additional information like YOLO (Redmon, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Task success rates on 6 subsets of EB-ALFRED and EB-Habitat, with the best proprietary model in bold and open-source model underlines per column. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Language-centric ablations on EB-ALFRED.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visual-centric ablations on EB-Manipulation. than on visual input.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Task success rates on 5 subsets of EB-Navigation and EB-Manipulation, with the best proprietary model in bold and open-source model underlines per column.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These findings emphasize two key insights: (1) when designing MLLM-based embodied AI benchmarks, it is essential to consider action-level taxonomy, with greater attention to ... | embodiment, simulator version and control stack | p. 6 (5.2. Benchmark Results), p. 9 (5.5. Error Analysis) |
 | Task/environment | For each environment, we sample 10 failure episodes from each subset, resulting in a total of 110 failed episodes to be analyzed. | reset, timeout, object/scene variation | p. 9 (5.5. Error Analysis), p. 6 (5.1. Experimental Setups) |
@@ -123,8 +123,8 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 | Primary metric/result | Figure 16. Impact of visual in-context learning on EMBODIEDBENCH. impressive gains in manipulation tasks. For instance, Claude-3.5-Sonnet achieves a 16.7% improvement in performance. These ... | numeric claim only at cited anchor | p. 30 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Experimental Setups - extractive PDF cue:** All images are standardized to a resolution of 500×500 pixels.
-- **p. 6 / 5.2. Benchmark Results - extractive PDF cue:** In EB-Manipulation, for example, Claude-3.5-Sonnet scores 14.6 and 5.6 points higher than GPT-4o on the complex instruction and visual appearance subsets, respectively, but falls significantly ...
+- **p. 6 / 5.1. Experimental Setups - extractive body cue:** All images are standardized to a resolution of 500×500 pixels.
+- **p. 6 / 5.2. Benchmark Results - extractive body cue:** In EB-Manipulation, for example, Claude-3.5-Sonnet scores 14.6 and 5.6 points higher than GPT-4o on the complex instruction and visual appearance subsets, respectively, but falls significantly ...
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 6. Conclusion - extractive PDF cue:** Limitations A key limitation of this work is that our evaluation is conducted solely in simulated environments, without real-world experiments.
-- **p. 9 / 5.5. Error Analysis - extractive PDF cue:** Perception errors make up 33% of failures, with wrong recognition errors (22%) being the most frequent.
-- **p. 31 / Figure/Table caption - extractive PDF cue:** Figure 17. Error Analysis on EB-Navigation. Perception Errors. The first category involves the model's ability to interpret visual observations and recognize the spatial position of ...
-- **p. 32 / Figure/Table caption - extractive PDF cue:** Table 11. Error Taxonomy with Definitions model failed to identify the target object even when it was present in the visual input. This suggests limitations ...
-- **p. 6 / 5.2. Benchmark Results - extractive PDF cue:** These results highlight the importance of fine-grained evaluations to uncover nuanced limitations in current models.
-- **p. 6 / 5.2. Benchmark Results - extractive PDF cue:** In EB-Manipulation, for example, Claude-3.5-Sonnet scores 14.6 and 5.6 points higher than GPT-4o on the complex instruction and visual appearance subsets, respectively, but falls significantly ...
+- **p. 9 / 6. Conclusion - extractive body cue:** Limitations A key limitation of this work is that our evaluation is conducted solely in simulated environments, without real-world experiments.
+- **p. 9 / 5.5. Error Analysis - extractive body cue:** Perception errors make up 33% of failures, with wrong recognition errors (22%) being the most frequent.
+- **p. 31 / Figure/Table caption - extractive body cue:** Figure 17. Error Analysis on EB-Navigation. Perception Errors. The first category involves the model's ability to interpret visual observations and recognize the spatial position of ...
+- **p. 32 / Figure/Table caption - extractive body cue:** Table 11. Error Taxonomy with Definitions model failed to identify the target object even when it was present in the visual input. This suggests limitations ...
+- **p. 6 / 5.2. Benchmark Results - extractive body cue:** These results highlight the importance of fine-grained evaluations to uncover nuanced limitations in current models.
+- **p. 6 / 5.2. Benchmark Results - extractive body cue:** In EB-Manipulation, for example, Claude-3.5-Sonnet scores 14.6 and 5.6 points higher than GPT-4o on the complex instruction and visual appearance subsets, respectively, but falls significantly ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5.2. Benchmark Results), p. 9 (5.5. Error Analysis), p. 6 (5.1. Experimental Setups), p. 7 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 9 (5.5. Error Analysis), metrics p. 6 (5.1. Experimental Setups), p. 7 (5.3. Language-centric Ablation), p. 7 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 26 (Figure/Table caption), p. 6 (5.2. Benchmark Results), baselines p. 9 (Figure/Table caption), p. 6 (5.2. Benchmark Results), p. 6 (5.2. Benchmark Results), p. 7 (5.3. Language-centric Ablation), p. 8 (5.4. Visual-centric Ablation), p. 29 (Figure/Table caption), results p. 9 (5.4. Visual-centric Ablation), p. 30 (Figure/Table caption), p. 26 (Figure/Table caption), p. 6 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 9 (5.4. Visual-centric Ablation).
+- **Evidence anchors reviewed:** datasets p. 6 (5.2. Benchmark Results), p. 9 (5.5. Error Analysis), p. 6 (5.1. Experimental Setups), p. 7 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 9 (5.5. Error Analysis), metrics p. 6 (5.1. Experimental Setups), p. 7 (5.3. Language-centric Ablation), p. 7 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 26 (Figure/Table caption), p. 6 (5.2. Benchmark Results), baselines p. 9 (Figure/Table caption), p. 6 (5.2. Benchmark Results), p. 6 (5.2. Benchmark Results), p. 7 (5.3. Language-centric Ablation), p. 8 (5.4. Visual-centric Ablation), p. 29 (Figure/Table caption), results p. 9 (5.4. Visual-centric Ablation), p. 30 (Figure/Table caption), p. 26 (Figure/Table caption), p. 6 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 9 (5.4. Visual-centric Ablation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

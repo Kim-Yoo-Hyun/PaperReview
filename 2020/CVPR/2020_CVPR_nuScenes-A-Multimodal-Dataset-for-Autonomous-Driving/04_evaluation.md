@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1903.11027; PDF retrieval source: https://arxiv.org/pdf/1903.11027. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1903.11027; PDF retrieval source: https://arxiv.org/pdf/1903.11027. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** In this section we present object detection and tracking experiments on the nuScenes dataset, analyze their characteristics and suggest avenues for future research.
-- **p. 3 / 1.2. Related datasets - extractive PDF cue:** The Lyft L5 dataset [45] is most similar to nuScenes.
-- **p. 3 / Dataset - extractive PDF cue:** (‡) The current Waymo Open dataset size is comparable to nuScenes, but at a 5x higher annotation frequency.
-- **p. 5 / 2. The nuScenes dataset - extractive PDF cue:** Due to the finegrained classes in nuScenes, the dataset shows severe class imbalance with a ratio of 1:10k for the least and most common class ...
-- **p. 7 / 4.2. Analysis - extractive PDF cue:** The case for a large benchmark dataset.
-- **p. 7 / 4.2. Analysis - extractive PDF cue:** One of the contributions of nuScenes is the dataset size, and in particular the increase compared to KITTI (Table 1).
-- **p. 8 / 4.2. Analysis - extractive PDF cue:** Object detection results on the test set of nuScenes.
-- **p. 5 / 2. The nuScenes dataset - extractive PDF cue:** Our dataset has 23 categories including different vehicles, types of pedestrians, mobility devices and other objects (Figure 8-SM).
+- **p. 6 / 4. Experiments - extractive body cue:** In this section we present object detection and tracking experiments on the nuScenes dataset, analyze their characteristics and suggest avenues for future research.
+- **p. 3 / 1.2. Related datasets - extractive body cue:** The Lyft L5 dataset [45] is most similar to nuScenes.
+- **p. 3 / Dataset - extractive body cue:** (‡) The current Waymo Open dataset size is comparable to nuScenes, but at a 5x higher annotation frequency.
+- **p. 5 / 2. The nuScenes dataset - extractive body cue:** Due to the finegrained classes in nuScenes, the dataset shows severe class imbalance with a ratio of 1:10k for the least and most common class ...
+- **p. 7 / 4.2. Analysis - extractive body cue:** The case for a large benchmark dataset.
+- **p. 7 / 4.2. Analysis - extractive body cue:** One of the contributions of nuScenes is the dataset size, and in particular the increase compared to KITTI (Table 1).
+- **p. 8 / 4.2. Analysis - extractive body cue:** Object detection results on the test set of nuScenes.
+- **p. 5 / 2. The nuScenes dataset - extractive body cue:** Our dataset has 23 categories including different vehicles, types of pedestrians, mobility devices and other objects (Figure 8-SM).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Baselines | BENCHMARK / DATASET | submissions, MonoDIS [70] was the best, significantly outperforming our image baseline and even some lidar based methods. | p. 7 (4.1. Baselines) |
 | 4.2. Analysis | BENCHMARK / DATASET | Multiple lidar sweeps improve performance. | p. 7 (4.2. Analysis) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** In this section we present object detection and tracking experiments on the nuScenes dataset, analyze their characteristics and suggest avenues for future research.
-- **p. 3 / 1.2. Related datasets - extractive PDF cue:** The Lyft L5 dataset [45] is most similar to nuScenes.
-- **p. 3 / Dataset - extractive PDF cue:** (‡) The current Waymo Open dataset size is comparable to nuScenes, but at a 5x higher annotation frequency.
-- **p. 5 / 2. The nuScenes dataset - extractive PDF cue:** Due to the finegrained classes in nuScenes, the dataset shows severe class imbalance with a ratio of 1:10k for the least and most common class ...
-- **p. 7 / 4.2. Analysis - extractive PDF cue:** The case for a large benchmark dataset.
-- **p. 7 / 4.2. Analysis - extractive PDF cue:** One of the contributions of nuScenes is the dataset size, and in particular the increase compared to KITTI (Table 1).
-- **p. 8 / 4.2. Analysis - extractive PDF cue:** Object detection results on the test set of nuScenes.
-- **p. 5 / 2. The nuScenes dataset - extractive PDF cue:** Our dataset has 23 categories including different vehicles, types of pedestrians, mobility devices and other objects (Figure 8-SM).
+- **p. 6 / 4. Experiments - extractive body cue:** In this section we present object detection and tracking experiments on the nuScenes dataset, analyze their characteristics and suggest avenues for future research.
+- **p. 3 / 1.2. Related datasets - extractive body cue:** The Lyft L5 dataset [45] is most similar to nuScenes.
+- **p. 3 / Dataset - extractive body cue:** (‡) The current Waymo Open dataset size is comparable to nuScenes, but at a 5x higher annotation frequency.
+- **p. 5 / 2. The nuScenes dataset - extractive body cue:** Due to the finegrained classes in nuScenes, the dataset shows severe class imbalance with a ratio of 1:10k for the least and most common class ...
+- **p. 7 / 4.2. Analysis - extractive body cue:** The case for a large benchmark dataset.
+- **p. 7 / 4.2. Analysis - extractive body cue:** One of the contributions of nuScenes is the dataset size, and in particular the increase compared to KITTI (Table 1).
+- **p. 8 / 4.2. Analysis - extractive body cue:** Object detection results on the test set of nuScenes.
+- **p. 5 / 2. The nuScenes dataset - extractive body cue:** Our dataset has 23 categories including different vehicles, types of pedestrians, mobility devices and other objects (Figure 8-SM).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. An example from the nuScenes dataset. We see 6 dif- ferent camera views, lidar and radar data, as well as the human annotated ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Front camera images collected from clear weather (col 1), nighttime (col 2), rain (col 3) and construction zones (col 4). and blind spots. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 1. AV dataset comparison. The top part of the table indicates datasets without range data. The middle and lower parts indicate datasets (not publications) ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 2. Sensor data in nuScenes. erage of 16km/h). Driving routes are carefully chosen to capture a diverse set of locations (urban, residential, nature and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Semantic map of nuScenes with 11 semantic layers in different colors. To show the path of the ego vehicle we plot each keyframe ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Sensor setup for our data collection platform.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Spatial data coverage for two nuScenes locations. Colors indicate the number of keyframes with ego vehicle poses within a 100m radius across all ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Amount of training data vs. mean Average Precision (mAP) on the val set of nuScenes. The dashed black line corre- sponds to the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. An example from the nuScenes dataset. We see 6 dif- ferent camera views, lidar and radar data, as well as the human annotated ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Front camera images collected from clear weather (col 1), nighttime (col 2), rain (col 3) and construction zones (col 4). and blind spots. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. AV dataset comparison. The top part of the table indicates datasets without range data. The middle and lower parts indicate datasets (not publications) ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 2. Sensor data in nuScenes. erage of 16km/h). Driving routes are carefully chosen to capture a diverse set of locations (urban, residential, nature and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Semantic map of nuScenes with 11 semantic layers in different colors. To show the path of the ego vehicle we plot each keyframe ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Sensor setup for our data collection platform.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Spatial data coverage for two nuScenes locations. Colors indicate the number of keyframes with ego vehicle poses within a 100m radius across all ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Amount of training data vs. mean Average Precision (mAP) on the val set of nuScenes. The dashed black line corre- sponds to the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this section we present object detection and tracking experiments on the nuScenes dataset, analyze their characteristics and suggest avenues for future research. | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 3 (1.2. Related datasets) |
 | Task/environment | The Lyft L5 dataset [45] is most similar to nuScenes. | reset, timeout, object/scene variation | p. 3 (1.2. Related datasets), p. 3 (Dataset) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 
 | Primary metric/result | Multiple lidar sweeps improve performance. | numeric claim only at cited anchor | p. 7 (4.2. Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / Dataset - extractive PDF cue:** (‡) The current Waymo Open dataset size is comparable to nuScenes, but at a 5x higher annotation frequency.
-- **p. 3 / 1.2. Related datasets - extractive PDF cue:** It provides 200k 3D boxes over 22 scenes which helped advance the state-of-the-art in 3D object detection.
-- **p. 3 / 1.2. Related datasets - extractive PDF cue:** Among these datasets, only the Waymo Open dataset [76] provides significantly more annotations, mostly due to the higher annotation frequency (10Hz vs.
-- **p. 3 / 1.2. Related datasets - extractive PDF cue:** A*3D takes an orthogonal approach where a similar number of frames (39k) are selected and annotated from 55 hours of data.
-- **p. 3 / 2. The nuScenes dataset - extractive PDF cue:** From a large body of training data we manually select 84 logs with 15h of driving data (242km travelled at an av4In preliminary analysis we ...
-- **p. 3 / 2. The nuScenes dataset - extractive PDF cue:** A similar conclusion was drawn for H3D [61] where annotations are interpolated from 2Hz to 10Hz.
+- **p. 3 / Dataset - extractive body cue:** (‡) The current Waymo Open dataset size is comparable to nuScenes, but at a 5x higher annotation frequency.
+- **p. 3 / 1.2. Related datasets - extractive body cue:** It provides 200k 3D boxes over 22 scenes which helped advance the state-of-the-art in 3D object detection.
+- **p. 3 / 1.2. Related datasets - extractive body cue:** Among these datasets, only the Waymo Open dataset [76] provides significantly more annotations, mostly due to the higher annotation frequency (10Hz vs.
+- **p. 3 / 1.2. Related datasets - extractive body cue:** A*3D takes an orthogonal approach where a similar number of frames (39k) are selected and annotated from 55 hours of data.
+- **p. 3 / 2. The nuScenes dataset - extractive body cue:** From a large body of training data we manually select 84 logs with 15h of driving data (242km travelled at an av4In preliminary analysis we ...
+- **p. 3 / 2. The nuScenes dataset - extractive body cue:** A similar conclusion was drawn for H3D [61] where annotations are interpolated from 2Hz to 10Hz.
 
 ## Generalization and Failure Cases
 
@@ -164,12 +164,12 @@ PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work will add image-level and pointlevel semantic labels and a benchmark for trajectory prediction [63].
-- **p. 3 / 2. The nuScenes dataset - extractive PDF cue:** From a large body of training data we manually select 84 logs with 15h of driving data (242km travelled at an av4In preliminary analysis we ...
-- **p. 4 / 2. The nuScenes dataset - extractive PDF cue:** This method is very robust and we achieve localization errors of ≤10cm.
-- **p. 7 / 4.2. Analysis - extractive PDF cue:** As expected, when using IOU matching, small objects like pedestrians and bicycles fail to achieve above 0 AP, making ordering impossible (Figure 7).
+- **p. 8 / 5. Conclusion - extractive body cue:** Future work will add image-level and pointlevel semantic labels and a benchmark for trajectory prediction [63].
+- **p. 3 / 2. The nuScenes dataset - extractive body cue:** From a large body of training data we manually select 84 logs with 15h of driving data (242km travelled at an av4In preliminary analysis we ...
+- **p. 4 / 2. The nuScenes dataset - extractive body cue:** This method is very robust and we achieve localization errors of ≤10cm.
+- **p. 7 / 4.2. Analysis - extractive body cue:** As expected, when using IOU matching, small objects like pedestrians and bicycles fail to achieve above 0 AP, making ordering impossible (Figure 7).
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 3 (1.2. Related datasets), p. 3 (Dataset), p. 5 (2. The nuScenes dataset), p. 7 (4.2. Analysis), p. 7 (4.2. Analysis), metrics p. 15 (Figure/Table caption), p. 8 (4.2. Analysis), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 7 (Figure/Table caption), p. 6 (4.1. Baselines), baselines p. 7 (4.1. Baselines), p. 6 (4.1. Baselines), p. 7 (4.1. Baselines), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 3 (1.2. Related datasets), results p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 4 (2. The nuScenes dataset), p. 4 (2. The nuScenes dataset).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 3 (1.2. Related datasets), p. 3 (Dataset), p. 5 (2. The nuScenes dataset), p. 7 (4.2. Analysis), p. 7 (4.2. Analysis), metrics p. 15 (Figure/Table caption), p. 8 (4.2. Analysis), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 7 (Figure/Table caption), p. 6 (4.1. Baselines), baselines p. 7 (4.1. Baselines), p. 6 (4.1. Baselines), p. 7 (4.1. Baselines), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 3 (1.2. Related datasets), results p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 4 (2. The nuScenes dataset), p. 4 (2. The nuScenes dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

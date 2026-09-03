@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 34.04 Hz | EMPIRICAL / REAL-ROBOT OR HARDWARE | G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the best baseline. | p. 7 (34.04 Hz) |
 | 4.4. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields. | p. 7 (4.4. Ablation Study) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our approach on five distinct manipulation tasks from the RoboTwin benchmark [19], as illustrated in Figure 6. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 7 (4.3. Evaluation on Generalization Performance) |
 | Task/environment | Unlike tasks that require the satisfaction of terminal constraints, we choose as few and similar visible objects as possible for the training set and ... | reset, timeout, object/scene variation | p. 7 (4.3. Evaluation on Generalization Performance), p. 6 (4.1. Experimental Setup) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 - **p. 7 / 34.04 Hz - extractive body cue:** This indicates robust handling of geometric variations while preserving semantic understanding.
 - **p. 7 / 4.4. Ablation Study - extractive body cue:** While D3Fields benefits from human prior knowledge, our method outperforms it by focusing on object-centered visual inputs, which reduces irrelevant background noise (Sec.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.3. Evaluation on Generalization Performance), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Ablation Study), metrics p. 6 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (4.2. Evaluation on Pose-aware Manipulation Tasks), p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Pose-aware Manipulation Tasks), p. 6 (4.1. Experimental Setup), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on Pose-aware Manipulation Tasks).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.3. Evaluation on Generalization Performance), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Ablation Study), metrics p. 6 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (4.2. Evaluation on Pose-aware Manipulation Tasks), p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Pose-aware Manipulation Tasks), p. 6 (4.1. Experimental Setup), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on Pose-aware Manipulation Tasks).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields. (p. 7, 4.4. Ablation Study).
+- **Metric evidence:** G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the best baseline. (p. 7, 34.04 Hz).
+- **Baseline/ablation evidence:** G3Flow nearly doubles the success rate compared to the strongest baseline, suggesting that our semantic representations effectively encode spatial relationships and object orientations. (p. 7, 4.2. Evaluation on Pose-aware Manipulation Tasks).
+- **Failure/negative evidence:** Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic interactions through real-time semantic flow, which addresses the limitations of existing geometry-centric ... (p. 3, 3.1. Overview).

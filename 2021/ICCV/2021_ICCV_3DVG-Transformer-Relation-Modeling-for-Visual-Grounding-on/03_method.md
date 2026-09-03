@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 ## Method Body Digest
 
-- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** The network structure of our coordinate-guided contextual aggregation module (a), which consists of 2 transformer layers (the multi-level feature fusion module is omitted here).
-- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** The first one is a self-attention block that exploits the relations among the spatial neighbors of the input clusters, which is then followed by an ...
-- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive PDF cue:** After feeding the word features Fword into an independent self-attention module, we propose a multiplex attention module to fuse the word features and the proposal ...
-- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive PDF cue:** In each pair, a self-attention block is firstly used to exploit the contextual relationships among the selected proposals and enhance the distinctiveness (a.k.a. disambiguation) of ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** The overall framework of our 3DVG-Transformer consists of three modules at three stages, including the object proposal generation module, the language encoding module, and the ...
-- **p. 5 / 3.4. Loss Function - extractive PDF cue:** Note that the object detection loss exactly follows the loss used in Qi et al.
-- **p. 5 / 3.4. Loss Function - extractive PDF cue:** The final loss is a linear combination of these terms, i.e., L = 0.3Lloc + 10Ldet + 0.1Lcls.
+- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** The network structure of our coordinate-guided contextual aggregation module (a), which consists of 2 transformer layers (the multi-level feature fusion module is omitted here).
+- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** The first one is a self-attention block that exploits the relations among the spatial neighbors of the input clusters, which is then followed by an ...
+- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive body cue:** After feeding the word features Fword into an independent self-attention module, we propose a multiplex attention module to fuse the word features and the proposal ...
+- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive body cue:** In each pair, a self-attention block is firstly used to exploit the contextual relationships among the selected proposals and enhance the distinctiveness (a.k.a. disambiguation) of ...
+- **p. 3 / 3. Methodology - extractive body cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
+- **p. 3 / 3.1. Overview - extractive body cue:** The overall framework of our 3DVG-Transformer consists of three modules at three stages, including the object proposal generation module, the language encoding module, and the ...
+- **p. 5 / 3.4. Loss Function - extractive body cue:** Note that the object detection loss exactly follows the loss used in Qi et al.
+- **p. 5 / 3.4. Loss Function - extractive body cue:** The final loss is a linear combination of these terms, i.e., L = 0.3Lloc + 10Ldet + 0.1Lcls.
 
 ## Design Rationale
 
-- **p. 3 / 3. Methodology - extractive PDF cue:** 3.1, we present an overview of our method.
-- **p. 3 / 3. Methodology - extractive PDF cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
-- **p. 2 / 1. Introduction - extractive PDF cue:** The contribution of this work is three-fold: (1) A simple and strong visual grounding framework (referred to as 3DVG-Transformer) specifically designed for point clouds, which ...
+- **p. 3 / 3. Methodology - extractive body cue:** 3.1, we present an overview of our method.
+- **p. 3 / 3. Methodology - extractive body cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
+- **p. 2 / 1. Introduction - extractive body cue:** The contribution of this work is three-fold: (1) A simple and strong visual grounding framework (referred to as 3DVG-Transformer) specifically designed for point clouds, which ...
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** The network structure of our coordinate-guided contextual aggregation module (a), which consists of 2 transformer layers (the multi-level feature fusion module is omitted here).
-- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** The first one is a self-attention block that exploits the relations among the spatial neighbors of the input clusters, which is then followed by an ...
-- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive PDF cue:** After feeding the word features Fword into an independent self-attention module, we propose a multiplex attention module to fuse the word features and the proposal ...
-- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive PDF cue:** In each pair, a self-attention block is firstly used to exploit the contextual relationships among the selected proposals and enhance the distinctiveness (a.k.a. disambiguation) of ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** The overall framework of our 3DVG-Transformer consists of three modules at three stages, including the object proposal generation module, the language encoding module, and the ...
+- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** The network structure of our coordinate-guided contextual aggregation module (a), which consists of 2 transformer layers (the multi-level feature fusion module is omitted here).
+- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** The first one is a self-attention block that exploits the relations among the spatial neighbors of the input clusters, which is then followed by an ...
+- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive body cue:** After feeding the word features Fword into an independent self-attention module, we propose a multiplex attention module to fuse the word features and the proposal ...
+- **p. 5 / 3.3. Cross-modal Proposal Disambiguation - extractive body cue:** In each pair, a self-attention block is firstly used to exploit the contextual relationships among the selected proposals and enhance the distinctiveness (a.k.a. disambiguation) of ...
+- **p. 3 / 3. Methodology - extractive body cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
+- **p. 3 / 3.1. Overview - extractive body cue:** The overall framework of our 3DVG-Transformer consists of three modules at three stages, including the object proposal generation module, the language encoding module, and the ...
 - **Detected method headings:** 3. Methodology (p. 3); 4.2. Comparisons with the state-of-the-art methods (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The network structure of our coordinate-guided contextual aggregation module (a), which consists of 2 transformer layers (the multi-level feature fusion module is ... | p. 4 (3.2. Relation-enhanced Proposal Generation), p. 4 (3.2. Relation-enhanced Proposal Generation) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The first one is a self-attention block that exploits the relations among the spatial neighbors of the input clusters, which is then ... | p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation) |
@@ -47,9 +47,9 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 ## Objective / Update Rule
 
-- **p. 3 / 3. Methodology - extractive PDF cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
-- **p. 5 / 3.4. Loss Function - extractive PDF cue:** Note that the object detection loss exactly follows the loss used in Qi et al.
-- **p. 5 / 3.4. Loss Function - extractive PDF cue:** The final loss is a linear combination of these terms, i.e., L = 0.3Lloc + 10Ldet + 0.1Lcls.
+- **p. 3 / 3. Methodology - extractive body cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
+- **p. 5 / 3.4. Loss Function - extractive body cue:** Note that the object detection loss exactly follows the loss used in Qi et al.
+- **p. 5 / 3.4. Loss Function - extractive body cue:** The final loss is a linear combination of these terms, i.e., L = 0.3Lloc + 10Ldet + 0.1Lcls.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3. Methodology), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Overview - extractive PDF cue:** The goal of visual grounding on 3D point clouds is to localize the object of interest (i.e., the target object) in each point cloud, and ...
-- **p. 3 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** However, these intermediate outputs only capture local point cloud features that describe the candidate objects, so they are not aware of the relations with other ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** As one emerging 3D visual understanding task, visual grounding on point clouds, also called as referring 3D object localization, aims to locate the desired objects ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** To be specific, they first use the state-of-theart (SOTA) 3D object detector [8] or the ground-truth (GT) bounding boxes to generate object proposals, whose features ...
-- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** Each coordinate-guided transformer layer refines its input cluster centers and cluster features.
-- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive PDF cue:** 2 (a), we use the initial cluster center xi, and the initial cluster feature fi as the input of this CCA module.
-- **p. 5 / 3.4. Loss Function - extractive PDF cue:** In detail, we randomly erase 20% words of the input sentences, and we also have 50% of chances to erase the target object nouns with ...
+- **p. 3 / 3.1. Overview - extractive body cue:** The goal of visual grounding on 3D point clouds is to localize the object of interest (i.e., the target object) in each point cloud, and ...
+- **p. 3 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** However, these intermediate outputs only capture local point cloud features that describe the candidate objects, so they are not aware of the relations with other ...
+- **p. 1 / 1. Introduction - extractive body cue:** As one emerging 3D visual understanding task, visual grounding on point clouds, also called as referring 3D object localization, aims to locate the desired objects ...
+- **p. 1 / 1. Introduction - extractive body cue:** To be specific, they first use the state-of-theart (SOTA) 3D object detector [8] or the ground-truth (GT) bounding boxes to generate object proposals, whose features ...
+- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** Each coordinate-guided transformer layer refines its input cluster centers and cluster features.
+- **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** 2 (a), we use the initial cluster center xi, and the initial cluster feature fi as the input of this CCA module.
+- **p. 5 / 3.4. Loss Function - extractive body cue:** In detail, we randomly erase 20% words of the input sentences, and we also have 50% of chances to erase the target object nouns with ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -86,7 +86,7 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 ## Training vs Inference
 
-- **p. 6 / 4.1. Datasets and Implementation Details - extractive PDF cue:** The network is trained for 120, 000 iterations, with a batch size of 8, in which each scene is paired with 8 sentences, thus there ...
+- **p. 6 / 4.1. Datasets and Implementation Details - extractive body cue:** The network is trained for 120, 000 iterations, with a batch size of 8, in which each scene is paired with 8 sentences, thus there ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -106,12 +106,12 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.3. Ablation Study and Analysis - extractive PDF cue:** We take the ScanRefer validation set [6] as an example to perform a comprehensive ablation study and analyze different components in our 3DVGTransformer.
-- **p. 7 / 4.2. Comparisons with the state-of-the-art methods - extractive PDF cue:** Ablation study on the ScanRefer validation set [6] under the "2D+3D" setting.
-- **p. 8 / 4.3. Ablation Study and Analysis - extractive PDF cue:** Results of our 3DVG-Transformer (i.e. "Add SPM") and two variants (i.e. "w/o SPM" and "Mul SPM") on the Nr3D validation set [7].
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. The pipeline of our 3DVG-Transformer, which includes an object proposal generation module, a language encoding module, and a cross-modal fusion module. The input ...
-- **p. 7 / 4.2. Comparisons with the state-of-the-art methods - extractive PDF cue:** The failure cases of ScanRefer indicate that this baseline method cannot well model complex relations and distinguish ambiguous objects.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The network structure of our coordinate-guided contex- tual aggregation module (a), which consists of 2 transformer lay- ers (the multi-level feature fusion module ...
+- **p. 8 / 4.3. Ablation Study and Analysis - extractive body cue:** We take the ScanRefer validation set [6] as an example to perform a comprehensive ablation study and analyze different components in our 3DVGTransformer.
+- **p. 7 / 4.2. Comparisons with the state-of-the-art methods - extractive body cue:** Ablation study on the ScanRefer validation set [6] under the "2D+3D" setting.
+- **p. 8 / 4.3. Ablation Study and Analysis - extractive body cue:** Results of our 3DVG-Transformer (i.e. "Add SPM") and two variants (i.e. "w/o SPM" and "Mul SPM") on the Nr3D validation set [7].
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The pipeline of our 3DVG-Transformer, which includes an object proposal generation module, a language encoding module, and a cross-modal fusion module. The input ...
+- **p. 7 / 4.2. Comparisons with the state-of-the-art methods - extractive body cue:** The failure cases of ScanRefer indicate that this baseline method cannot well model complex relations and distinguish ambiguous objects.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The network structure of our coordinate-guided contex- tual aggregation module (a), which consists of 2 transformer lay- ers (the multi-level feature fusion module ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Relation-enhanced Proposal Generation), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 3 (3. Methodology), p. 3 (3.1. Overview), objective p. 3 (3. Methodology), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function), temporal p. 3 (3.1. Overview), p. 5 (4.1. Datasets and Implementation Details), p. 7 (4.2. Comparisons with the state-of-the-art methods), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (2. Related Work).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Relation-enhanced Proposal Generation), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 3 (3. Methodology), p. 3 (3.1. Overview), objective p. 3 (3. Methodology), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function), temporal p. 3 (3.1. Overview), p. 5 (4.1. Datasets and Implementation Details), p. 7 (4.2. Comparisons with the state-of-the-art methods), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (2. Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

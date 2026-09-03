@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2212.06817; PDF retrieval source: https://arxiv.org/pdf/2212.06817. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2212.06817; PDF retrieval source: https://arxiv.org/pdf/2212.06817. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 13 (6 EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5: Experimental results for mixing data from two different robots. Incorporating Kuka bin- picking data from QT-Opt (Kalashnikov et al., 2018) in RT-1 ... | p. 13 (Figure/Table caption) |
 | 6 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Due to this generalization difficulty, SayCan with Gato is not able to finish any long horizon task, and SayCan with BC-Z is able to ... | p. 13 (6 EXPERIMENTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 13 (6 EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It also improves real-world generalization on simulated objects used with skills seen only in the real world (+26%), e.g. "move X to Y" where ... | embodiment, simulator version and control stack | p. 12 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS) |
 | Task/environment | Note, however, that all models are trained on the same data as RT-1, and the evaluation only compares the model architectures, not the task ... | reset, timeout, object/scene variation | p. 9 (6 EXPERIMENTS), p. 11 (6 EXPERIMENTS) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 13 (6 EXPERIMEN
 - **p. 13 / 6 EXPERIMENTS - extractive body cue:** Surprisingly, the manipulation performance does not 13
 - **p. 13 / 6 EXPERIMENTS - extractive body cue:** These results indicate that RT-1's absorption properties also include the ability to acquire new skills through observing other robots' experiences and present an exciting avenue ...
 
-- **PDF anchors reviewed:** datasets p. 12 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 11 (6 EXPERIMENTS), p. 12 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 13 (6 EXPERIMENTS), metrics p. 8 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 11 (6 EXPERIMENTS), p. 12 (6 EXPERIMENTS), p. 13 (6 EXPERIMENTS), p. 13 (6 EXPERIMENTS), baselines p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), results p. 13 (Figure/Table caption), p. 13 (6 EXPERIMENTS), p. 12 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 12 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 12 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 11 (6 EXPERIMENTS), p. 12 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 13 (6 EXPERIMENTS), metrics p. 8 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 11 (6 EXPERIMENTS), p. 12 (6 EXPERIMENTS), p. 13 (6 EXPERIMENTS), p. 13 (6 EXPERIMENTS), baselines p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), results p. 13 (Figure/Table caption), p. 13 (6 EXPERIMENTS), p. 12 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 12 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 4: Experimental results for incorporating simulation data in RT-1. Adding simulation data does not impact the performance on real objects, while significantly improving real performance on objects that were ... (p. 12, Figure/Table caption).
+- **Metric evidence:** We evaluate the success rate in experiments to measure performance on training instructions, generalization to unseen instructions, robustness to backgrounds and distractors, and performance in long-horizon scenarios, as detailed below. (p. 8, 6 EXPERIMENTS).
+- **Baseline/ablation evidence:** (Appendix Section D.4) Throughout this section we will compare to two baseline state of the art architectures, Gato (Reed et al., 2022) and BC-Z (Jang et al., 2021). (p. 8, 6 EXPERIMENTS).
+- **Failure/negative evidence:** 7 CONCLUSIONS, LIMITATIONS AND FUTURE WORK We presented Robotics Transformer 1, RT-1, a robot learning method that can effectively absorb large amounts of data and scales with data quantity and ... (p. 15, 6 EXPERIMENTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** To validate the effectiveness of AIDE, we conducted extensive experiments on three popular 3D benchmarks: ScanNet [20], S3DIS [2], and one outdoor dataset (nuScenes [7]).
-- **p. 6 / 4.2. Quantative Results - extractive PDF cue:** Improvements can also be observed on the outdoor dataset, nuScenes, as AIDE improves the hIoU from 47.7 and 24.3 to 62.2 and 48.4 on two ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Benchmarks, Baselines, and Implementation Benchmarks and category partitions.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Results on S3DIS and nuScenes. ‡ refers to numbers copied from Ding et al.
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive PDF cue:** Train Dataset Metrics (Baseline/AIDE) hIoU mIoUB mIoUN Test Dataset: S3DIS (B8/N4) ScanNet (B15/N4) 32.1/35.9 31.6/39.9 32.6/33.8 ScanNet (B12/N7) 22.2/25.8 25.0/23.3 19.9/28.9 ScanNet (B10/N9) 24.7/31.0 30.5/38.9 ...
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive PDF cue:** To better understand how our AIDE excels at segmenting seen and unseen objects, we visualize segmentation results in Figs.
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive PDF cue:** These results underscore the importance of the CLIP-rewarded alignment and adaptive segmentation modules in enhancing open-vocabulary segmentation models' transferability to novel categories and scenarios.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Performance of Semantic Segmentation on ScanNet (B15/N4 Split) [20] using PLA [23]. Metrics include harmonic IoU (hIoU), mIoU on base categories (mIoUB), and ...
+- **p. 5 / 4. Experiments - extractive body cue:** To validate the effectiveness of AIDE, we conducted extensive experiments on three popular 3D benchmarks: ScanNet [20], S3DIS [2], and one outdoor dataset (nuScenes [7]).
+- **p. 6 / 4.2. Quantative Results - extractive body cue:** Improvements can also be observed on the outdoor dataset, nuScenes, as AIDE improves the hIoU from 47.7 and 24.3 to 62.2 and 48.4 on two ...
+- **p. 5 / 4. Experiments - extractive body cue:** Benchmarks, Baselines, and Implementation Benchmarks and category partitions.
+- **p. 6 / 4. Experiments - extractive body cue:** Results on S3DIS and nuScenes. ‡ refers to numbers copied from Ding et al.
+- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** Train Dataset Metrics (Baseline/AIDE) hIoU mIoUB mIoUN Test Dataset: S3DIS (B8/N4) ScanNet (B15/N4) 32.1/35.9 31.6/39.9 32.6/33.8 ScanNet (B12/N7) 22.2/25.8 25.0/23.3 19.9/28.9 ScanNet (B10/N9) 24.7/31.0 30.5/38.9 ...
+- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** To better understand how our AIDE excels at segmenting seen and unseen objects, we visualize segmentation results in Figs.
+- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** These results underscore the importance of the CLIP-rewarded alignment and adaptive segmentation modules in enhancing open-vocabulary segmentation models' transferability to novel categories and scenarios.
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Performance of Semantic Segmentation on ScanNet (B15/N4 Split) [20] using PLA [23]. Metrics include harmonic IoU (hIoU), mIoU on base categories (mIoUB), and ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Qualitative Results-Generalization | EMPIRICAL / SOURCE-REPORTED EVALUATION | Qualitative results of segmentation compared between baseline and AIDE. achieves significant improvements in all metrics, with hIoU, mIoUB, and mIoUN increasing from 32.1, 31.6, ... | p. 8 (4.4. Qualitative Results-Generalization) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 5. Ablation studies on different numbers of learnable tokens of AIDE on ScanNet (B15/N4). conduct a series of experiments as shown in Tab. ... | p. 7 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** To validate the effectiveness of AIDE, we conducted extensive experiments on three popular 3D benchmarks: ScanNet [20], S3DIS [2], and one outdoor dataset (nuScenes [7]).
-- **p. 6 / 4.2. Quantative Results - extractive PDF cue:** Improvements can also be observed on the outdoor dataset, nuScenes, as AIDE improves the hIoU from 47.7 and 24.3 to 62.2 and 48.4 on two ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Benchmarks, Baselines, and Implementation Benchmarks and category partitions.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Results on S3DIS and nuScenes. ‡ refers to numbers copied from Ding et al.
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive PDF cue:** Train Dataset Metrics (Baseline/AIDE) hIoU mIoUB mIoUN Test Dataset: S3DIS (B8/N4) ScanNet (B15/N4) 32.1/35.9 31.6/39.9 32.6/33.8 ScanNet (B12/N7) 22.2/25.8 25.0/23.3 19.9/28.9 ScanNet (B10/N9) 24.7/31.0 30.5/38.9 ...
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive PDF cue:** To better understand how our AIDE excels at segmenting seen and unseen objects, we visualize segmentation results in Figs.
+- **p. 5 / 4. Experiments - extractive body cue:** To validate the effectiveness of AIDE, we conducted extensive experiments on three popular 3D benchmarks: ScanNet [20], S3DIS [2], and one outdoor dataset (nuScenes [7]).
+- **p. 6 / 4.2. Quantative Results - extractive body cue:** Improvements can also be observed on the outdoor dataset, nuScenes, as AIDE improves the hIoU from 47.7 and 24.3 to 62.2 and 48.4 on two ...
+- **p. 5 / 4. Experiments - extractive body cue:** Benchmarks, Baselines, and Implementation Benchmarks and category partitions.
+- **p. 6 / 4. Experiments - extractive body cue:** Results on S3DIS and nuScenes. ‡ refers to numbers copied from Ding et al.
+- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** Train Dataset Metrics (Baseline/AIDE) hIoU mIoUB mIoUN Test Dataset: S3DIS (B8/N4) ScanNet (B15/N4) 32.1/35.9 31.6/39.9 32.6/33.8 ScanNet (B12/N7) 22.2/25.8 25.0/23.3 19.9/28.9 ScanNet (B10/N9) 24.7/31.0 30.5/38.9 ...
+- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** To better understand how our AIDE excels at segmenting seen and unseen objects, we visualize segmentation results in Figs.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Previous methods use misaligned paired data (e.g., image/point cloud 1 is closest to text 2) and freeze the text encoder trained on 2D ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Performance of Semantic Segmentation on ScanNet (B15/N4 Split) [20] using PLA [23]. Metrics include harmonic IoU (hIoU), mIoU on base categories (mIoUB), and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The illustration of our AIDE with two proposed modules, i.e., CLIP-rewarded alignment module (Sec. 3.3) for enhancing the quality of 3D-text data pairs ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Results on ScanNet. † and ‡ refer to numbers copied from He et al. [32] and Ding et al. [23]. Best in Bold. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Results on S3DIS and nuScenes. ‡ refers to numbers copied from Ding et al. [23]. Best in Bold. image encoders (ftext and fimg) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation studies on different modules of AIDE. "Adap- tive Segmentation" refers to the adaptive segmentation mod- ule. "Caption Selection" and "Caption Sampling" refer ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation studies on different numbers of learnable tokens of AIDE on ScanNet (B15/N4). conduct a series of experiments as shown in Tab. 5. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 6. Ablation studies on different numbers of captions of AIDE for each temperature. Text Encoder ScanNet (B15/N4) hIoU mIoUB mIoUN
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Previous methods use misaligned paired data (e.g., image/point cloud 1 is closest to text 2) and freeze the text encoder trained on 2D ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Performance of Semantic Segmentation on ScanNet (B15/N4 Split) [20] using PLA [23]. Metrics include harmonic IoU (hIoU), mIoU on base categories (mIoUB), and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The illustration of our AIDE with two proposed modules, i.e., CLIP-rewarded alignment module (Sec. 3.3) for enhancing the quality of 3D-text data pairs ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Results on ScanNet. † and ‡ refer to numbers copied from He et al. [32] and Ding et al. [23]. Best in Bold. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Results on S3DIS and nuScenes. ‡ refers to numbers copied from Ding et al. [23]. Best in Bold. image encoders (ftext and fimg) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation studies on different modules of AIDE. "Adap- tive Segmentation" refers to the adaptive segmentation mod- ule. "Caption Selection" and "Caption Sampling" refer ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Ablation studies on different numbers of learnable tokens of AIDE on ScanNet (B15/N4). conduct a series of experiments as shown in Tab. 5. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 6. Ablation studies on different numbers of captions of AIDE for each temperature. Text Encoder ScanNet (B15/N4) hIoU mIoUB mIoUN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To validate the effectiveness of AIDE, we conducted extensive experiments on three popular 3D benchmarks: ScanNet [20], S3DIS [2], and one outdoor dataset (nuScenes ... | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 6 (4.2. Quantative Results) |
 | Task/environment | Improvements can also be observed on the outdoor dataset, nuScenes, as AIDE improves the hIoU from 47.7 and 24.3 to 62.2 and 48.4 on ... | reset, timeout, object/scene variation | p. 6 (4.2. Quantative Results), p. 5 (4. Experiments) |
@@ -154,12 +154,12 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** Due to space limitations, the details of benchmarks and partitions are deferred to Appendix C.1.
-- **p. 6 / 4.3. Ablation Studies - extractive PDF cue:** Due to the space limitation, ablation studies on the choice of temperatures (Tab.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 7. Ablation studies on using different text encoders of AIDE on ScanNet (B15/N4). this phenomenon. As generating over 30 captions per tem- perature will ...
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive PDF cue:** On the other side, AIDE still maintains a lead over the baseline, demonstrating its robustness to variations in vocabulary.
+- **p. 5 / 4. Experiments - extractive body cue:** Due to space limitations, the details of benchmarks and partitions are deferred to Appendix C.1.
+- **p. 6 / 4.3. Ablation Studies - extractive body cue:** Due to the space limitation, ablation studies on the choice of temperatures (Tab.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 7. Ablation studies on using different text encoders of AIDE on ScanNet (B15/N4). this phenomenon. As generating over 30 captions per tem- perature will ...
+- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** On the other side, AIDE still maintains a lead over the baseline, demonstrating its robustness to variations in vocabulary.
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 6 (4.2. Quantative Results), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.4. Qualitative Results-Generalization), p. 8 (4.4. Qualitative Results-Generalization), metrics p. 8 (4.4. Qualitative Results-Generalization), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 6 (4.2. Quantative Results), p. 8 (4.4. Qualitative Results-Generalization), p. 8 (4.4. Qualitative Results-Generalization), p. 7 (4.3. Ablation Studies), p. 5 (4. Experiments), p. 5 (4. Experiments), results p. 8 (4.4. Qualitative Results-Generalization), p. 7 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 6 (4.2. Quantative Results), p. 6 (4.2. Quantative Results), p. 8 (4.4. Qualitative Results-Generalization).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 6 (4.2. Quantative Results), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.4. Qualitative Results-Generalization), p. 8 (4.4. Qualitative Results-Generalization), metrics p. 8 (4.4. Qualitative Results-Generalization), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 6 (4.2. Quantative Results), p. 8 (4.4. Qualitative Results-Generalization), p. 8 (4.4. Qualitative Results-Generalization), p. 7 (4.3. Ablation Studies), p. 5 (4. Experiments), p. 5 (4. Experiments), results p. 8 (4.4. Qualitative Results-Generalization), p. 7 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 6 (4.2. Quantative Results), p. 6 (4.2. Quantative Results), p. 8 (4.4. Qualitative Results-Generalization).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

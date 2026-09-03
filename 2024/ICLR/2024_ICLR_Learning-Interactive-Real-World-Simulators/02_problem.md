@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2310.06114. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2310.06114. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUC
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | We illustrate that the observation prediction model can be rolled out autoregressively to obtain consistent and long-horizon videos. • We illustrate how ... | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | 2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | 2 LEARNING AN INTERACTIVE REAL-WORLD SIMULATOR We define a simulator of the real world as a model that, given some state of ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | LEARNING, INTERACTIVE, REAL-WORLD, SIMULATOR, define, real, world, model, given, some | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | Simulator-RL, improves, overall, performance, especially, pointing-based, tasks, contain | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: LEARNING, INTERACTIVE, REAL-WORLD, SIMULATOR, define, real, world, model, given, some | p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: combine, wealth, data, conditional, video, generation, framework, instantiate | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUC
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 22 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUC
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)): In this work, we propose to combine a wealth of data in a conditional video generation framework to instantiate a universal simulator (UniSim)1.
+PDF body contribution framing (p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)): In this work, we propose to combine a wealth of data in a conditional video generation framework to instantiate a universal simulator (UniSim)1.
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Nevertheless, we propose specific strategies for processing each type of data to unify the action space and align videos of variable lengths to actions in ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Under a unified action-in-video-out interface, the simulator enables rich interaction through fine-grained motion control of otherwise static scenes and objects.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 3 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 3 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), interface p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 3 (1 INTRODUCTION), objective p. 7 (1. Put cup 2. Pen 3. Apple).
+- **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), interface p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 3 (1 INTRODUCTION), objective p. 7 (1. Put cup 2. Pen 3. Apple).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Since different datasets are curated by different industrial or research communities for different purposes, divergence in information is natural and hard to overcome, posing difficulties to a real-world simulator that ... (p. 1, 1 INTRODUCTION).
+- **Formulation-changing contribution:** The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction by combining diverse datasets rich in along different ... (p. 2, 1 INTRODUCTION).
+- **Assumption/failure evidence:** The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

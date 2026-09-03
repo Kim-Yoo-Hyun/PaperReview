@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IkXFH6alZN; PDF retrieval source: https://openreview.net/pdf/6e898fbe18f2ef7449852473b4a8ab53fd0fda57.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IkXFH6alZN; PDF retrieval source: https://openreview.net/pdf/6e898fbe18f2ef7449852473b4a8ab53fd0fda57.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4.6. Real-world Generalization - extractive PDF cue:** Notably, the model is trained only on the R2R-CE and RxR-CE simulators, yet transfers in a zeroshot manner to real-world, previously unseen indoor scenes.
-- **p. 6 / 4.2.2. TRAINING DETAILS - extractive PDF cue:** Unseen-Dataset generalization performance on the RxRCE Val-Unseen split.
-- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive PDF cue:** Results are reported on the validation-unseen splits to assess generalization to novel environments.
-- **p. 8 / 4.6. Real-world Generalization - extractive PDF cue:** 4, MapDream generates task-driven maps that evolve with the robot's motion and encode navigationrelevant spatial affordances, allowing the robot to follow long-horizon language instructions successfully ...
-- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive PDF cue:** We evaluate our method on the widely adopted continuousenvironment VLN benchmarks R2R-CE (Krantz et al., 2020) and RxR-CE (Ku et al., 2020).
-- **p. 6 / 4.2.2. TRAINING DETAILS - extractive PDF cue:** Comparison of different methods on the R2R-CE Val-Unseen and RxR-CE Val-Unseen splits.
-- **p. 7 / 4.4. Qualitative Analysis - extractive PDF cue:** These results indicate that the learned maps serve as effective abstractions of the environment, supporting accurate navigation without requiring full scene reconstruction.
-- **p. 7 / 4.5.1. TWO-STAGE TRAINING - extractive PDF cue:** Effect of staged learning on R2R-CE val-unseen.
+- **p. 8 / 4.6. Real-world Generalization - extractive body cue:** Notably, the model is trained only on the R2R-CE and RxR-CE simulators, yet transfers in a zeroshot manner to real-world, previously unseen indoor scenes.
+- **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** Unseen-Dataset generalization performance on the RxRCE Val-Unseen split.
+- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive body cue:** Results are reported on the validation-unseen splits to assess generalization to novel environments.
+- **p. 8 / 4.6. Real-world Generalization - extractive body cue:** 4, MapDream generates task-driven maps that evolve with the robot's motion and encode navigationrelevant spatial affordances, allowing the robot to follow long-horizon language instructions successfully ...
+- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive body cue:** We evaluate our method on the widely adopted continuousenvironment VLN benchmarks R2R-CE (Krantz et al., 2020) and RxR-CE (Ku et al., 2020).
+- **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** Comparison of different methods on the R2R-CE Val-Unseen and RxR-CE Val-Unseen splits.
+- **p. 7 / 4.4. Qualitative Analysis - extractive body cue:** These results indicate that the learned maps serve as effective abstractions of the environment, supporting accurate navigation without requiring full scene reconstruction.
+- **p. 7 / 4.5.1. TWO-STAGE TRAINING - extractive body cue:** Effect of staged learning on R2R-CE val-unseen.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Comparison with State-of-the-Art Methods | EMPIRICAL / REAL-ROBOT OR HARDWARE | Across all settings, MapDream improves both success rate and path efficiency, which we attribute to its task-driven generative maps that are refined through two-stage ... | p. 6 (4.3. Comparison with State-of-the-Art Methods) |
 | 4.1.2. METRICS | EMPIRICAL / REAL-ROBOT OR HARDWARE | We adopt the standard VLN evaluation protocol (Krantz et al., 2020; Ku et al., 2020) to assess navigation performance using success rate (SR), oracle ... | p. 5 (4.1.2. METRICS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4.6. Real-world Generalization - extractive PDF cue:** Notably, the model is trained only on the R2R-CE and RxR-CE simulators, yet transfers in a zeroshot manner to real-world, previously unseen indoor scenes.
-- **p. 6 / 4.2.2. TRAINING DETAILS - extractive PDF cue:** Unseen-Dataset generalization performance on the RxRCE Val-Unseen split.
-- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive PDF cue:** Results are reported on the validation-unseen splits to assess generalization to novel environments.
-- **p. 8 / 4.6. Real-world Generalization - extractive PDF cue:** 4, MapDream generates task-driven maps that evolve with the robot's motion and encode navigationrelevant spatial affordances, allowing the robot to follow long-horizon language instructions successfully ...
-- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive PDF cue:** We evaluate our method on the widely adopted continuousenvironment VLN benchmarks R2R-CE (Krantz et al., 2020) and RxR-CE (Ku et al., 2020).
-- **p. 6 / 4.2.2. TRAINING DETAILS - extractive PDF cue:** Comparison of different methods on the R2R-CE Val-Unseen and RxR-CE Val-Unseen splits.
-- **p. 7 / 4.4. Qualitative Analysis - extractive PDF cue:** These results indicate that the learned maps serve as effective abstractions of the environment, supporting accurate navigation without requiring full scene reconstruction.
-- **p. 7 / 4.5.1. TWO-STAGE TRAINING - extractive PDF cue:** Effect of staged learning on R2R-CE val-unseen.
+- **p. 8 / 4.6. Real-world Generalization - extractive body cue:** Notably, the model is trained only on the R2R-CE and RxR-CE simulators, yet transfers in a zeroshot manner to real-world, previously unseen indoor scenes.
+- **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** Unseen-Dataset generalization performance on the RxRCE Val-Unseen split.
+- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive body cue:** Results are reported on the validation-unseen splits to assess generalization to novel environments.
+- **p. 8 / 4.6. Real-world Generalization - extractive body cue:** 4, MapDream generates task-driven maps that evolve with the robot's motion and encode navigationrelevant spatial affordances, allowing the robot to follow long-horizon language instructions successfully ...
+- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive body cue:** We evaluate our method on the widely adopted continuousenvironment VLN benchmarks R2R-CE (Krantz et al., 2020) and RxR-CE (Ku et al., 2020).
+- **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** Comparison of different methods on the R2R-CE Val-Unseen and RxR-CE Val-Unseen splits.
+- **p. 7 / 4.4. Qualitative Analysis - extractive body cue:** These results indicate that the learned maps serve as effective abstractions of the environment, supporting accurate navigation without requiring full scene reconstruction.
+- **p. 7 / 4.5.1. TWO-STAGE TRAINING - extractive body cue:** Effect of staged learning on R2R-CE val-unseen.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Map-in-the-Loop Architecture. Unlike previous ap- proaches that either omit maps or rely on expert-designed represen- tations, MapDream adopts a map-in-the-loop design that learns ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the MapDream Framework. The diagram shows the two-stage optimization of MapDream. Stage 1 learns structured task-driven maps from visual observations and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of different methods on the R2R-CE Val-Unseen and RxR-CE Val-Unseen splits. Observations used include single RGB camera (S.RGB), depth sensor (Depth), panoramic ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Unseen-Dataset generalization performance on the RxR- CE Val-Unseen split. All results are obtained only training on the R2R-CE training set.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative navigation example illustrating the effect of task-driven maps in MapDream. (Left) Trajectory comparison shows that MapDream (green) closely follows the ground-truth path ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Effect of staged learning on R2R-CE val-unseen. Map SPT RFT NE↓ OSR↑ SR↑ SPL↑
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Effect of Reinforcement Fine-tuning under Different Channel Initializations. Channel SPT RFT NE↓ OSR↑ SR↑
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Effect of BEV token capacity on R2R-CE val-unseen. Resolution Tokens NE ↓ OSR ↑ SR ↑ SPL ↑ Time(s)
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Map-in-the-Loop Architecture. Unlike previous ap- proaches that either omit maps or rely on expert-designed represen- tations, MapDream adopts a map-in-the-loop design that learns ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the MapDream Framework. The diagram shows the two-stage optimization of MapDream. Stage 1 learns structured task-driven maps from visual observations and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison of different methods on the R2R-CE Val-Unseen and RxR-CE Val-Unseen splits. Observations used include single RGB camera (S.RGB), depth sensor (Depth), panoramic ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Unseen-Dataset generalization performance on the RxR- CE Val-Unseen split. All results are obtained only training on the R2R-CE training set.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative navigation example illustrating the effect of task-driven maps in MapDream. (Left) Trajectory comparison shows that MapDream (green) closely follows the ground-truth path ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Effect of staged learning on R2R-CE val-unseen. Map SPT RFT NE↓ OSR↑ SR↑ SPL↑
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Effect of Reinforcement Fine-tuning under Different Channel Initializations. Channel SPT RFT NE↓ OSR↑ SR↑
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Effect of BEV token capacity on R2R-CE val-unseen. Resolution Tokens NE ↓ OSR ↑ SR ↑ SPL ↑ Time(s)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Notably, the model is trained only on the R2R-CE and RxR-CE simulators, yet transfers in a zeroshot manner to real-world, previously unseen indoor scenes. | embodiment, simulator version and control stack | p. 8 (4.6. Real-world Generalization), p. 6 (4.2.2. TRAINING DETAILS) |
 | Task/environment | Unseen-Dataset generalization performance on the RxRCE Val-Unseen split. | reset, timeout, object/scene variation | p. 6 (4.2.2. TRAINING DETAILS), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | Primary metric/result | We adopt the standard VLN evaluation protocol (Krantz et al., 2020; Ku et al., 2020) to assess navigation performance using success rate (SR), oracle ... | numeric claim only at cited anchor | p. 5 (4.1.2. METRICS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.2.2. TRAINING DETAILS - extractive PDF cue:** Stage 1 runs for two epochs and takes approximately 60 hours, and Stage 2 performs 2000 RL steps and takes approximately 10 hours.
-- **p. 6 / 4.2.2. TRAINING DETAILS - extractive PDF cue:** The model is trained for 2000 steps with a learning rate of 1 × 10-6, jointly fine-tuning both the map module and the VLN policy.
-- **p. 8 / 4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET - extractive PDF cue:** In particular, inference latency per decision step drops from 12.7 s to 1.3 s, making compact maps far more suitable for real-time continuous control.
-- **p. 5 / 3.4. Reinforcement Fine-tuning - extractive PDF cue:** It is defined as: ract = N-1 X i=0 iY j=0 1[at+j = a∗ t+j].
+- **p. 5 / 4.2.2. TRAINING DETAILS - extractive body cue:** Stage 1 runs for two epochs and takes approximately 60 hours, and Stage 2 performs 2000 RL steps and takes approximately 10 hours.
+- **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** The model is trained for 2000 steps with a learning rate of 1 × 10-6, jointly fine-tuning both the map module and the VLN policy.
+- **p. 8 / 4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET - extractive body cue:** In particular, inference latency per decision step drops from 12.7 s to 1.3 s, making compact maps far more suitable for real-time continuous control.
+- **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** It is defined as: ract = N-1 X i=0 iY j=0 1[at+j = a∗ t+j].
 
 ## Generalization and Failure Cases
 
@@ -161,12 +161,12 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive PDF cue:** We focus on the continuous-environment (CE) protocol because continuous control introduces fine motion granularity and realistic noise, making navigation sensitive to small geometric deviations.
-- **p. 5 / 4.2.1. DATASET COLLECTION - extractive PDF cue:** Additionally, we generate 500K non-oracle samples through exploratory rollouts in the training environments, improving robustness to outof-distribution states and enhancing generalization across diverse scenarios.
-- **p. 6 / 4.3. Comparison with State-of-the-Art Methods - extractive PDF cue:** These results empirically validate that learning spatial abstractions under navigation objectives leads to more robust decision making in continuous environments.
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** We conduct three ablation studies on R2R-CE that jointly probe MapDream along complementary design dimensions: optimization strategy, robustness to map initialization, and representation capacity.
+- **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive body cue:** We focus on the continuous-environment (CE) protocol because continuous control introduces fine motion granularity and realistic noise, making navigation sensitive to small geometric deviations.
+- **p. 5 / 4.2.1. DATASET COLLECTION - extractive body cue:** Additionally, we generate 500K non-oracle samples through exploratory rollouts in the training environments, improving robustness to outof-distribution states and enhancing generalization across diverse scenarios.
+- **p. 6 / 4.3. Comparison with State-of-the-Art Methods - extractive body cue:** These results empirically validate that learning spatial abstractions under navigation objectives leads to more robust decision making in continuous environments.
+- **p. 7 / 4.5. Ablation Study - extractive body cue:** We conduct three ablation studies on R2R-CE that jointly probe MapDream along complementary design dimensions: optimization strategy, robustness to map initialization, and representation capacity.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.6. Real-world Generalization), p. 6 (4.2.2. TRAINING DETAILS), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS), p. 8 (4.6. Real-world Generalization), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS), p. 6 (4.2.2. TRAINING DETAILS), metrics p. 5 (4.1.2. METRICS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 5 (4.1.2. METRICS), baselines p. 7 (4.5.1. TWO-STAGE TRAINING), p. 5 (4.2.1. DATASET COLLECTION), p. 5 (4.1.2. METRICS), p. 6 (4.2.2. TRAINING DETAILS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 7 (4.5.1. TWO-STAGE TRAINING), results p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 5 (4.1.2. METRICS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 7 (4.5.2. REINFORCEMENT FINE-TUNING UNDER).
+- **Evidence anchors reviewed:** datasets p. 8 (4.6. Real-world Generalization), p. 6 (4.2.2. TRAINING DETAILS), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS), p. 8 (4.6. Real-world Generalization), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS), p. 6 (4.2.2. TRAINING DETAILS), metrics p. 5 (4.1.2. METRICS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 5 (4.1.2. METRICS), baselines p. 7 (4.5.1. TWO-STAGE TRAINING), p. 5 (4.2.1. DATASET COLLECTION), p. 5 (4.1.2. METRICS), p. 6 (4.2.2. TRAINING DETAILS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 7 (4.5.1. TWO-STAGE TRAINING), results p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 5 (4.1.2. METRICS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 7 (4.5.2. REINFORCEMENT FINE-TUNING UNDER).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02310; PDF retrieval source: https://arxiv.org/pdf/2503.02310. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.02310; PDF retrieval source: https://arxiv.org/pdf/2503.02310. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Evaluation Body Digest
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** The CALVIN benchmark [35] is built on top of the PyBullet [46] simulator and involves a Franka Panda Robot arm that manipulates the scene.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** We collect a small robotic dataset including 3 tasks: push the button, lift the block, and pour the water into the bowl.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Can PD-VLA be effectively deployed in real-world robotic systems?
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Each task contains 50 demonstrations and evaluates 10 episodes for success rates.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, considering the requirements of robotic tasks, we also report execution frequency (in Hertz, Hz).
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Method Spatial Object Goal Long Average Diffusion Policy [26] 78.3% 92.5% 68.3% 50.5% 72.4% Octo [6] 78.9% 85.7% 84.6% 51.1% 75.1% OpenVLA [37] 84.9% 88.4% ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Compared with prior stateof-the-art approaches, PD-VLA achieves the best average performance, attaining a 91.7% success rate on the most challenging LIBERO-Long benchmark.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** We report the success rate and the average number of completed sequential tasks.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** The CALVIN benchmark [35] is built on top of the PyBullet [46] simulator and involves a Franka Panda Robot arm that manipulates the scene.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** We collect a small robotic dataset including 3 tasks: push the button, lift the block, and pour the water into the bowl.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Can PD-VLA be effectively deployed in real-world robotic systems?
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Each task contains 50 demonstrations and evaluates 10 episodes for success rates.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, considering the requirements of robotic tasks, we also report execution frequency (in Hertz, Hz).
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Method Spatial Object Goal Long Average Diffusion Policy [26] 78.3% 92.5% 68.3% 50.5% 72.4% Octo [6] 78.9% 85.7% 84.6% 51.1% 75.1% OpenVLA [37] 84.9% 88.4% ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Compared with prior stateof-the-art approaches, PD-VLA achieves the best average performance, attaining a 91.7% success rate on the most challenging LIBERO-Long benchmark.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** We report the success rate and the average number of completed sequential tasks.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Compared with prior stateof-the-art approaches, PD-VLA achieves the best average performance, attaining a 91.7% success rate on the most challenging LIBERO-Long benchmark. | p. 6 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | These components enable PD-VLA to improve 2.34 in success rates and realize 2.52× execution frequency compared to the fundamental model LLaVA-VLA. | p. 6 (IV. EXPERIMENTS) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** The CALVIN benchmark [35] is built on top of the PyBullet [46] simulator and involves a Franka Panda Robot arm that manipulates the scene.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** We collect a small robotic dataset including 3 tasks: push the button, lift the block, and pour the water into the bowl.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Can PD-VLA be effectively deployed in real-world robotic systems?
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Each task contains 50 demonstrations and evaluates 10 episodes for success rates.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Additionally, considering the requirements of robotic tasks, we also report execution frequency (in Hertz, Hz).
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Method Spatial Object Goal Long Average Diffusion Policy [26] 78.3% 92.5% 68.3% 50.5% 72.4% Octo [6] 78.9% 85.7% 84.6% 51.1% 75.1% OpenVLA [37] 84.9% 88.4% ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** The CALVIN benchmark [35] is built on top of the PyBullet [46] simulator and involves a Franka Panda Robot arm that manipulates the scene.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** We collect a small robotic dataset including 3 tasks: push the button, lift the block, and pour the water into the bowl.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Can PD-VLA be effectively deployed in real-world robotic systems?
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Each task contains 50 demonstrations and evaluates 10 episodes for success rates.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, considering the requirements of robotic tasks, we also report execution frequency (in Hertz, Hz).
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Method Spatial Object Goal Long Average Diffusion Policy [26] 78.3% 92.5% 68.3% 50.5% 72.4% Octo [6] 78.9% 85.7% 84.6% 51.1% 75.1% OpenVLA [37] 84.9% 88.4% ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Comparison between the proposed parallel decoding on the left and traditional autoregressive (AR) decoding on the right. Unlike AR decoding, which predicts action ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: The network architecture of our PD-VLA with a chunk size of m. Given images, proprioception and language instructions, our method first tokenizes the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 3: Representative results of real-world experiments. The sequential images showcase the trajectories of a robotic arm successfully executing three tasks.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4: Comparison of minimum, average, and maximum inference speed (tokens per second) between AR decoding and parallel decoding with different decoding horizons n.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Real-World Setup. The left panel shows the mechanical arm and the right panel shows the camera used. task. This demonstrates its suitability for ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison between the proposed parallel decoding on the left and traditional autoregressive (AR) decoding on the right. Unlike AR decoding, which predicts action ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The network architecture of our PD-VLA with a chunk size of m. Given images, proprioception and language instructions, our method first tokenizes the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Representative results of real-world experiments. The sequential images showcase the trajectories of a robotic arm successfully executing three tasks.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: Comparison of minimum, average, and maximum inference speed (tokens per second) between AR decoding and parallel decoding with different decoding horizons n.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Real-World Setup. The left panel shows the mechanical arm and the right panel shows the camera used. task. This demonstrates its suitability for ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The CALVIN benchmark [35] is built on top of the PyBullet [46] simulator and involves a Franka Panda Robot arm that manipulates the scene. | embodiment, simulator version and control stack | p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
 | Task/environment | We collect a small robotic dataset including 3 tasks: push the button, lift the block, and pour the water into the bowl. | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS) |
@@ -117,12 +117,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Primary metric/result | These components enable PD-VLA to improve 2.34 in success rates and realize 2.52× execution frequency compared to the fundamental model LLaVA-VLA. | numeric claim only at cited anchor | p. 6 (IV. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** CALVIN consists of 34 tasks and 4 different environments (A, B, C and D).
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We report the success rate for each evaluation suite as well as the overall average, where each suite comprises 10 tasks, and each task is ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Our fundamental model LLaVA-VLA is trained using 8 NVIDIA H100 GPUs over 1 epoch, which requires approximately 10 hours.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** The 7token method performs better than the 16-token one because it aligns with the distribution of the single action, facilitating more efficient decoding in accordance ...
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** With the increasing decoding horizon, the number of fixed tokens increases accordingly, which contributes to the decoding speed improved from 41.48 to 52.84 tokens/second.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** Notably, the redundant tokens when n = 16 make execution frequency even lower.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** CALVIN consists of 34 tasks and 4 different environments (A, B, C and D).
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We report the success rate for each evaluation suite as well as the overall average, where each suite comprises 10 tasks, and each task is ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our fundamental model LLaVA-VLA is trained using 8 NVIDIA H100 GPUs over 1 epoch, which requires approximately 10 hours.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** The 7token method performs better than the 16-token one because it aligns with the distribution of the single action, facilitating more efficient decoding in accordance ...
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** With the increasing decoding horizon, the number of fixed tokens increases accordingly, which contributes to the decoding speed improved from 41.48 to 52.84 tokens/second.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Notably, the redundant tokens when n = 16 make execution frequency even lower.
 
 ## Generalization and Failure Cases
 
@@ -156,11 +156,11 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Limitations and Verification Questions
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Notably, our PD-VLA does not incur extra training costs.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** All tasks include distractors to validate the robustness of the model.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** For the task "pour water", LLaVA-VLA failed to complete this task, while PD-VLA has a 50% higher success rate.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Notably, our PD-VLA does not incur extra training costs.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** All tasks include distractors to validate the robustness of the model.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** For the task "pour water", LLaVA-VLA failed to complete this task, while PD-VLA has a 50% higher success rate.
 
-- **PDF anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

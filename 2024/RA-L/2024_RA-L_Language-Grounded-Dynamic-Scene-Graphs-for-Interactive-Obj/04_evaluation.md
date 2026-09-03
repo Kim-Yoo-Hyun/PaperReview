@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.08605; PDF retrieval source: https://arxiv.org/pdf/2403.08605. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2403.08605; PDF retrieval source: https://arxiv.org/pdf/2403.08605. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Similarly, while HIMOS achieves a high success rate, it is unable to explore efficiently. | p. 7 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In contrast, MoMa-LLM achieves similar success rates as HIMOS with a much higher search efficiency, both in terms of SPL and AUC-E. | p. 7 (V. EXPERIMENTS) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Simulation Experiments We instantiate the task in the iGibson simulator [32] with a Fetch robot. | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS) |
 | Task/environment | We found that real-world scenes contained in iGibson regularly feature constant-diameter corridors and narrow passages due to furniture placements, which impede detecting rooms based ... | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS) |
@@ -112,7 +112,7 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Our approach incorporates a scene understanding module that, given object detections, constructs open-vocabulary scene ∗Equal contribution. | Similarly, while HIMOS achieves a high success rate, it is unable to explore efficiently. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
+| To address these challenges, we propose grounding LLMs in dynamically built scene graphs. | Similarly, while HIMOS achieves a high success rate, it is unable to explore efficiently. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
 | Primary metric/result | In contrast, MoMa-LLM achieves similar success rates as HIMOS with a much higher search efficiency, both in terms of SPL and AUC-E. | numeric claim only at cited anchor | p. 7 (V. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
@@ -139,7 +139,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | More advanced implementations would reduce costs through incremental updates. | p. 5 (V. EXPERIMENTS) |
 | We terminate an episode if the agent reaches 50 high-level steps, indicating being stuck. | p. 6 (V. EXPERIMENTS) |
 | We calculate the integral up to 5,000 low-level steps, at which points almost all methods make no further progress. | p. 6 (V. EXPERIMENTS) |
-| 1 Department of Computer Science, University of Freiburg, Germany. | p. 1 (I. INTRODUCTION) |
 | Based on this, we compute a Generalized Voronoi Diagram (GVD) that holds a set of points V with the same clearance to the closest ... | p. 3 (IV. MOMA-LLM) |
 | Grounded High-Level Planning We encode the accumulated knowledge of the scene graph into natural language by extracting the relevant components and embedding them in ... | p. 4 (IV. MOMA-LLM) |
 | 1) Scene Structure: We encode the main room-object structure from the scene graph into a structured list of rooms and their containing objects and ... | p. 4 (IV. MOMA-LLM) |
@@ -160,7 +159,16 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** This metric does not take into account the costs of object interactions.
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6. We construct a real-world apartment covering four rooms and 54 objects and transfer the model to a Toyota HSR robot. these objects would ...
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 8 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 8 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** This results in an efficiency curve, in which the best policies are located in the top left corner, enabling the comparison of success rates for arbitrary budgets. (p. 6, V. EXPERIMENTS).
+- **Metric evidence:** ESC-Interactive: ESC is a recent approach for semantic object search [27] which scores frontiers based on object-object and object-room co-occurrences as well as their distance. (p. 5, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** Unstructured LLM: This baseline provides the scene graph in a JSON format without any additional structure to the language model. (p. 6, V. EXPERIMENTS).
+- **Failure/negative evidence:** Furthermore, the agent was able to react to the (unseen) subpolicy failures, such as re-trying to open a drawer when the gripper slipped off the handle. (p. 7, V. EXPERIMENTS).

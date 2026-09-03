@@ -38,10 +38,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 Y In other words, the ~ value is the expected discounted reward for executing action a at state x and following policy 7r thereafter.를 Under a policy 7r, the value of state x is W(x) = ~A~(x)) + ~ ~]/%[~(x)]V~(y Y because the agent expects to receive 6~x(Tr(x)) immediately for performing the action 7r recommends, and ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In O~-learning, the agent's experience consists of a sequence of distinct stages or episodes.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Then, for n > h, by B.4, compare the value _~ARp(IX, n), a t ..... as) of taking actions at, ..., as at state x in the ARP, with Q(x, ... (p. 7, 3.2. The theorem).
+- **Paper-specific mechanism:** O~-learning (Watkins, 1989) is a form of model-free reinforcement learning. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Imagine each episode (xt, at, Yt, rt, °~t) written on a card. (p. 4, 3. The convergence proof); the relevant task/metric cue is The above completely specifies how state transitions and rewards are determined in the AFIP. (p. 4, 3. The convergence proof). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required. (p. 8, 4. Discussions and conclusions).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -53,19 +54,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: First, all the cards for episodes later than n are eliminated, leaving just a finite deck..
-3. Compare against the body-reported baseline or a matched simpler baseline: Assume, without loss of generality, that O~0(x, a) < 61/(1 - 3') and that 61 __..
-4. Report the body metric and its denominator/aggregation: DAYAN Theorem Given bounded rewards I rn [ -< (R, learning rates 0 < c~ n < 1, and ~ Otni(x,a ) : 0o, ~11 [~ni(x,a)] 2 < 0o, ~tX, a, i=1 ....
-5. Re-run the body-reported ablation/failure condition: 2 Note that during such a sequence, episode cards are only removed from the deck, and are never replaced..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Then, for n > h, by B.4, compare the value _~ARp(IX, n), a t ..... as) of taking actions at, ..., as at state x in the ARP, with Q(x, ... (p. 7, 3.2. The theorem); preserve the objective/update rule: The second term is the cost, from B.4, of the incorrect rewards and transition probabilities. (p. 7, 3.2. The theorem).
+2. Use the paper-reported task/data/environment cue: Imagine each episode (xt, at, Yt, rt, °~t) written on a card. (p. 4, 3. The convergence proof).
+3. Compare against the reported or matched baseline: Assume, without loss of generality, that O~0(x, a) < 61/(1 - 3') and that 61 __. (p. 6, 3.2. The theorem).
+4. Report the body metric with its denominator and aggregation: The above completely specifies how state transitions and rewards are determined in the AFIP. (p. 4, 3. The convergence proof).
+5. Re-run the reported ablation or stress/failure condition: 2 Note that during such a sequence, episode cards are only removed from the deck, and are never replaced. (p. 5, 3. The convergence proof); if none is reported, design one around: Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required. (p. 8, 4. Discussions and conclusions).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (3.2. The theorem), p. 2 (2. The task for ~-learning), p. 4 (3. The convergence proof); the primary result is directionally consistent at p. 6 (3.2. The theorem), p. 7 (3.2. The theorem), p. 7 (3.2. The theorem); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 4 (3. The convergence proof), p. 4 (3. The convergence proof), p. 4 (3. The convergence proof), and measure the boundary at p. 8 (4. Discussions and conclusions), p. 8 (4. Discussions and conclusions).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 learning, agent, experience mechanism이 Assume, without loss of generality, that O~0(x, a) < 61/(1 - 3') and that 61 __. 대비 DAYAN Theorem Given bounded rewards I rn [ -< (R, learning rates 0 < c~ n < 1, ...을 개선하고, Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Then, for n > h, by B.4, compare the value _~ARp(IX, n), a t ..... as) of taking actions at, ..., as ...), does the paper-specific mechanism (O~-learning (Watkins, 1989) is a form of model-free reinforcement learning.) retain the reported evaluation outcome (The above completely specifies how state transitions and rewards are determined in the AFIP.) when tested against the paper's strongest explicit boundary (Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The above completely specifies how state transitions and rewards are determined in the AFIP.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** O~-learning (Watkins, 1989) is a form of model-free reinforcement learning. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** Imagine each episode (xt, at, Yt, rt, °~t) written on a card. (p. 4, 3. The convergence proof).
+- **Strongest explicit boundary:** Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required. (p. 8, 4. Discussions and conclusions).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

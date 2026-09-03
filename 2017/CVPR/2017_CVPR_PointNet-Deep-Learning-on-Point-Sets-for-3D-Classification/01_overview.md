@@ -1,8 +1,10 @@
 # PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1612.00593.
-> PDF retrieval source: https://arxiv.org/pdf/1612.00593. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1612.00593.
+> PDF retrieval source: https://arxiv.org/pdf/1612.00593. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1612.00593
 - Code/Project: https://github.com/charlesq34/pointnet
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -32,7 +34,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 - **p. 2 / 1. Introduction - extractive body cue:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; ...
 - **p. 1 / 1. Introduction - extractive body cue:** We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates equal contributions. mug? table? car?
+- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates.
 - **p. 2 / 1. Introduction - extractive body cue:** We show that our network can approximate any set function that is continuous.
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** Our input form of point clouds allows us to achieve this goal in a much simpler way compared with [9].
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** The mininetwork itself resembles the big network and is composed by basic modules of point independent feature extraction, max pooling and fully connected layers.
@@ -52,7 +54,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 - **p. 2 / 1. Introduction - extractive body cue:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; ...
 - **p. 1 / 1. Introduction - extractive body cue:** We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates equal contributions. mug? table? car?
+- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates.
 - **p. 2 / 1. Introduction - extractive body cue:** We show that our network can approximate any set function that is continuous.
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** Our input form of point clouds allows us to achieve this goal in a much simpler way compared with [9].
 - **p. 7 / 5.1. Applications - extractive body cue:** Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method.
@@ -84,3 +86,12 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 ## Why Read It
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The problem of processing unordered sets by neural nets is a very general and fundamental problem - we expect that our ideas can be transferred to other domains as well.를 문제로 두고, The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such a net ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 7 (5.1. Applications) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The problem of processing unordered sets by neural nets is a very general and fundamental problem - we expect that our ideas can be transferred to other domains as well. (p. 2, 1. Introduction).
+- **Actual contribution:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such ... (p. 2, 1. Introduction).
+- **Evaluation boundary:** Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. (p. 7, 5.1. Applications).
+- **Explicit failure boundary:** During training we augment the point cloud on-the-fly by randomly rotating the object along the up-axis and jitter the position of each points by a Gaussian noise with zero mean ... (p. 6, 5.1. Applications).

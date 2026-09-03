@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ROBOT.2003.1241826; PDF retrieval source: https://doi.org/10.1109/ROBOT.2003.1241826. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ROBOT.2003.1241826; PDF retrieval source: https://doi.org/10.1109/ROBOT.2003.1241826. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 11: Modified ZMP of multibody model These information are stored to the buffer memory and loaded to use after delay time of T ... | p. 6 (Figure/Table caption) |
 | 1 Introduction | SYSTEM / EVALUATION SCOPE UNRESOLVED | We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with ... | p. 4 (1 Introduction) |
@@ -52,7 +52,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Walking on randomly placed stepping-stones Proceedings of the 2003 IEEE International Conference on Robotics & Automation Taipei, Taiwan, September 14-19, 2003 0-7803-7736-2/03/$17.00 ©2003 ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Walking on randomly placed stepping-stones.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: A pendulum under constraint where (px, py) is the location of the ZMP on the floor. By substituting Eqs. (5) to the 3D-LIPM ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 4: Pattern generation as ZMP tracking control 0 0.5 1 1.5 2 2.5 -0.05
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as ... | embodiment, simulator version and control stack | p. 3 (1 Introduction), p. 2 (1 Introduction) |
 | Task/environment | For the 3D-LIPM with the horizontal constraint (kx = ky = 0), we can easily calculate the zeromoment point (ZMP), which is widely used ... | reset, timeout, object/scene variation | p. 2 (1 Introduction), p. 2 (1 Introduction) |
@@ -149,7 +149,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 - **p. 4 / 1 Introduction - extractive body cue:** In this case, the resulted ZMP (bold line) does not 1623
 - **p. 4 / 1 Introduction - extractive body cue:** We see the controller does not need the information of far future because the magnitude of the preview gain Gp becomes very small in the ...
 
-- **PDF anchors reviewed:** datasets p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), metrics p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), baselines 본문 anchor 없음, results p. 6 (Figure/Table caption), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction).
+- **Evidence anchors reviewed:** datasets p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), metrics p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), baselines 본문 anchor 없음, results p. 6 (Figure/Table caption), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** ZMP τ x x cz xp m O Figure 3: A cart-table model 3 Walking pattern generation for given ZMP 3.1 Pattern generation as an inverse problem When we represent ... (p. 3, 1 Introduction).
+- **Metric evidence:** With the given reference of ZMP pref(k), the performance index is specified as J = ∞  i=k {Qee(i)2+∆xT (i)Qx∆x(i)+R∆u2(i)}, (14) where e(i) ≡p(i)-pref(i) is servo error, Qe, R > ... (p. 4, 1 Introduction).
+- **Baseline/ablation evidence:** We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with good accuracy. (p. 4, 1 Introduction).
+- **Failure/negative evidence:** In this case, the resulted ZMP (bold line) does not 1623 (p. 4, 1 Introduction).

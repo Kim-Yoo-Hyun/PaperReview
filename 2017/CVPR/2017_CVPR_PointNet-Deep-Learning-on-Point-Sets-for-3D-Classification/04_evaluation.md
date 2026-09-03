@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1612.00593; PDF retrieval source: https://arxiv.org/pdf/1612.00593. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1612.00593; PDF retrieval source: https://arxiv.org/pdf/1612.00593. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.1. Applications | SYSTEM / EVALUATION SCOPE UNRESOLVED | Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. | p. 7 (5.1. Applications) |
 | 5.1. Applications | SYSTEM / EVALUATION SCOPE UNRESOLVED | Even though we are working on a brand new data representation (point sets), we are able to achieve comparable or even better performance on ... | p. 5 (5.1. Applications) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Even though we are working on a brand new data representation (point sets), we are able to achieve comparable or even better performance on ... | embodiment, simulator version and control stack | p. 5 (5.1. Applications), p. 6 (5.1. Applications) |
 | Task/environment | Results on 3D object detection in scenes. | reset, timeout, object/scene variation | p. 6 (5.1. Applications), p. 6 (5.1. Applications) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 - **p. 7 / 5.1. Applications - extractive body cue:** Our network is able to output smooth predictions and is robust to missing points and occlusions.
 - **p. 5 / 4.3. Theoretical Analysis - extractive body cue:** The robustness is gained in analogy to the sparsity principle in machine learning models.
 
-- **PDF anchors reviewed:** datasets p. 5 (5.1. Applications), p. 6 (5.1. Applications), p. 6 (5.1. Applications), p. 5 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 7 (5.2. Architecture Design Analysis), metrics p. 6 (5.1. Applications), p. 6 (5.1. Applications), p. 12 (Figure/Table caption), p. 7 (5.2. Architecture Design Analysis), p. 7 (5.2. Architecture Design Analysis), p. 8 (5.2. Architecture Design Analysis), baselines p. 7 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 6 (Figure/Table caption), p. 6 (5.1. Applications), p. 5 (4.3. Theoretical Analysis), p. 5 (4.3. Theoretical Analysis), results p. 7 (5.1. Applications), p. 5 (5.1. Applications), p. 6 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 8 (5.4. Time and Space Complexity Analysis), p. 6 (5.1. Applications).
+- **Evidence anchors reviewed:** datasets p. 5 (5.1. Applications), p. 6 (5.1. Applications), p. 6 (5.1. Applications), p. 5 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 7 (5.2. Architecture Design Analysis), metrics p. 6 (5.1. Applications), p. 6 (5.1. Applications), p. 12 (Figure/Table caption), p. 7 (5.2. Architecture Design Analysis), p. 7 (5.2. Architecture Design Analysis), p. 8 (5.2. Architecture Design Analysis), baselines p. 7 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 6 (Figure/Table caption), p. 6 (5.1. Applications), p. 5 (4.3. Theoretical Analysis), p. 5 (4.3. Theoretical Analysis), results p. 7 (5.1. Applications), p. 5 (5.1. Applications), p. 6 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 8 (5.4. Time and Space Complexity Analysis), p. 6 (5.1. Applications).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. (p. 7, 5.1. Applications).
+- **Metric evidence:** In Table 2, we report per-category and mean IoU(%) scores. (p. 6, 5.1. Applications).
+- **Baseline/ablation evidence:** Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method. (p. 7, 5.1. Applications).
+- **Failure/negative evidence:** During training we augment the point cloud on-the-fly by randomly rotating the object along the up-axis and jitter the position of each points by a Gaussian noise with zero mean ... (p. 6, 5.1. Applications).

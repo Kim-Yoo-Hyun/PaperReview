@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p036.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p036.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p036.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p036.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. | p. 5 (IV. EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Fig. 8: Quantitative Comparisons on Planning. For four manipulation tasks-cloth lifting, box closing, rope manipulation, and plush toy relocating -we present the error curve ... | p. 9 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ‘€) Box: Two robot arms are used to open and close shipping boxes. | embodiment, simulator version and control stack | p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup) |
 | Task/environment | The robot performs various actions, cluding opening, closing, and rotating the bag. | reset, timeout, object/scene variation | p. 6 (A. Experiment Setup), p. 7 (A. Experiment Setup) |
@@ -154,7 +154,16 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views.
 
-- **PDF anchors reviewed:** datasets p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), metrics p. 9 (Figure/Table caption), p. 7 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), p. 9 (Figure/Table caption), p. 7 (A. Experiment Setup), results p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), p. 9 (Figure/Table caption), p. 6 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), metrics p. 9 (Figure/Table caption), p. 7 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), p. 9 (Figure/Table caption), p. 7 (A. Experiment Setup), results p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), p. 9 (Figure/Table caption), p. 6 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 13: Additional Qualitative Comparisons on Dynamics Prediction. Given the initial states and actions (leftmost column), we present the prediction results of the MPM with parameter identification baseline, the GBND ... (p. 19, Figure/Table caption).
+- **Metric evidence:** Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. (p. 5, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. (p. 5, IV. EXPERIMENTS).
+- **Failure/negative evidence:** For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, ... (p. 1, I. INTRODUCTION).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2209.05451; PDF retrieval source: https://arxiv.org/pdf/2209.05451. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2209.05451; PDF retrieval source: https://arxiv.org/pdf/2209.05451. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5. Success rates (mean %) of multi-task and single-task PERACT agents trained with 100 demos and evaluated on 25 episodes. In Table 1, ... | p. 24 (Figure/Table caption) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | All keyframes from an episode have the same language goal, which is constructed from templates (but human-annotated for real-world tasks). | embodiment, simulator version and control stack | p. 6 (4 Results), p. 6 (4 Results) |
 | Task/environment | We report average success rates on 25 evaluation episodes per task (25 × 18 = 450 total episodes) for agents trained with n = ... | reset, timeout, object/scene variation | p. 6 (4 Results), p. 7 (4 Results) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. PERACT Overview. PERACT is a language-conditioned behavior-cloning agent trained with supervised learning to detect actions. PERACT takes as input a language goal and ...
 - **p. 8 / 4 Results - extractive body cue:** See Appendix L for an extended discussion on PERACT's limitations.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 7 (4 Results), metrics p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 7 (4 Results), p. 8 (4 Results), p. 23 (Figure/Table caption), p. 6 (4 Results), baselines p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), results p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 8 (4 Results), p. 27 (Figure/Table caption), p. 6 (4 Results), p. 7 (4 Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 7 (4 Results), metrics p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 7 (4 Results), p. 8 (4 Results), p. 23 (Figure/Table caption), p. 6 (4 Results), baselines p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), results p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 8 (4 Results), p. 27 (Figure/Table caption), p. 6 (4 Results), p. 7 (4 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption).
+- **Baseline/ablation evidence:** PERACT outperforms C2FARM-BC [14], the most competitive baseline, with an average improvement of 1.33× with 10 demos and 2.83× with 100 demos. (p. 7, 4 Results).
+- **Failure/negative evidence:** The most common failures involved predicting incorrect gripper open actions, which often lead the agent into unseen states. (p. 8, 4 Results).

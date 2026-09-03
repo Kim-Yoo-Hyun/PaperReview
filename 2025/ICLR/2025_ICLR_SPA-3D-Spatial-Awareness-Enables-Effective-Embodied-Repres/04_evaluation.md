@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=6TLdqAZgzn; PDF retrieval source: https://openreview.net/pdf/69efa7c1cd34c4e72171331a81f56b7c914e9e24.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=6TLdqAZgzn; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114708. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** (14) F REAL-WORLD EXPERIMENT DETAILS Our real-world hardware setup is based on the open-source Low-Cost-Robot project (Koch, 2024).
-- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** The experiment is conducted on GraspNet-1Billion (Fang et al., 2020), a large-scale real-world object grasping benchmark.
-- **p. 31 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Cameras Leader Arms Follower Arms Figure 8: Real-world hardware platform.
-- **p. 21 / C.1 DATASET DETAILS - extractive PDF cue:** Each epoch includes 5 times the dataset size.
-- **p. 21 / C.1 DATASET DETAILS - extractive PDF cue:** The datasets used for SPA include ScanNet, ScanNet++, Hypersim, ADT, S3DIS, and Droid.
-- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** (2024) for camera pose estimation using the NAVI dataset (Jampani et al., 2023).
-- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** The models are evaluated on two subsets of the VC-1 benchmark.
-- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** It was trained on the ScanNet dataset without semantic supervision, ensuring a fair comparison with the result in the last line of Tab.
+- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** (14) F REAL-WORLD EXPERIMENT DETAILS Our real-world hardware setup is based on the open-source Low-Cost-Robot project (Koch, 2024).
+- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The experiment is conducted on GraspNet-1Billion (Fang et al., 2020), a large-scale real-world object grasping benchmark.
+- **p. 21 / C.1 DATASET DETAILS - extractive body cue:** Each epoch includes 5 times the dataset size.
+- **p. 21 / C.1 DATASET DETAILS - extractive body cue:** The datasets used for SPA include ScanNet, ScanNet++, Hypersim, ADT, S3DIS, and Droid.
+- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** (2024) for camera pose estimation using the NAVI dataset (Jampani et al., 2023).
+- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The models are evaluated on two subsets of the VC-1 benchmark.
+- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** It was trained on the ScanNet dataset without semantic supervision, ensuring a fair comparison with the result in the last line of Tab.
+- **p. 22 / C.1 DATASET DETAILS - extractive body cue:** Frames with very small valid depth areas or scene boxes are filtered out.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Correlation between mean success rate and camera pose regression error. 5.2 ADDITIONAL COMPARISONS (Q1) We primarily compare with SOTA methods using the ... | p. 8 (Figure/Table caption) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** (14) F REAL-WORLD EXPERIMENT DETAILS Our real-world hardware setup is based on the open-source Low-Cost-Robot project (Koch, 2024).
-- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** The experiment is conducted on GraspNet-1Billion (Fang et al., 2020), a large-scale real-world object grasping benchmark.
-- **p. 31 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** Published as a conference paper at ICLR 2025 Cameras Leader Arms Follower Arms Figure 8: Real-world hardware platform.
-- **p. 21 / C.1 DATASET DETAILS - extractive PDF cue:** Each epoch includes 5 times the dataset size.
-- **p. 21 / C.1 DATASET DETAILS - extractive PDF cue:** The datasets used for SPA include ScanNet, ScanNet++, Hypersim, ADT, S3DIS, and Droid.
-- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** (2024) for camera pose estimation using the NAVI dataset (Jampani et al., 2023).
-- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** The models are evaluated on two subsets of the VC-1 benchmark.
-- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** It was trained on the ScanNet dataset without semantic supervision, ensuring a fair comparison with the result in the last line of Tab.
+- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** (14) F REAL-WORLD EXPERIMENT DETAILS Our real-world hardware setup is based on the open-source Low-Cost-Robot project (Koch, 2024).
+- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The experiment is conducted on GraspNet-1Billion (Fang et al., 2020), a large-scale real-world object grasping benchmark.
+- **p. 21 / C.1 DATASET DETAILS - extractive body cue:** Each epoch includes 5 times the dataset size.
+- **p. 21 / C.1 DATASET DETAILS - extractive body cue:** The datasets used for SPA include ScanNet, ScanNet++, Hypersim, ADT, S3DIS, and Droid.
+- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** (2024) for camera pose estimation using the NAVI dataset (Jampani et al., 2023).
+- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The models are evaluated on two subsets of the VC-1 benchmark.
+- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** It was trained on the ScanNet dataset without semantic supervision, ensuring a fair comparison with the result in the last line of Tab.
+- **p. 22 / C.1 DATASET DETAILS - extractive body cue:** Frames with very small valid depth areas or scene boxes are filtered out.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Performance comparison across representations. Above: (a) Mean rank and (b) mean success rate on benchmarks. Lines represent the performance of SPA, best, and ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Pipeline Overview. Given multi-view images, we randomly mask patches and input the remaining into a Vision Transformer. The upsampled latent features generate multi-view ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of our large-scale embodied evaluation. We conduct the largest-scale evaluation of embodied representation learning to date. Our study encompasses 268 tasks across ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Influence of different datasets. We present the performance results on the VC-1 benchmark. Mean S.R. refers to the mean success rate across all ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Summary of different representation learning methods. ‘#Param.' is the total parameters of the encoder, while ‘#Frames' indicates the total number of image frames ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Comparison of different representation learning methods. ‘OOM' indicates an out- of-memory error during evaluation. The best and second-best results are bolded and underlined ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar chart ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4: Additional comparisons of ViT-base models. S.R. denotes ‘Success Rate'. Methods DINOV2-B (Oquab et al., 2023) MAE-B (He et al., 2022)
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Performance comparison across representations. Above: (a) Mean rank and (b) mean success rate on benchmarks. Lines represent the performance of SPA, best, and ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Pipeline Overview. Given multi-view images, we randomly mask patches and input the remaining into a Vision Transformer. The upsampled latent features generate multi-view ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Overview of our large-scale embodied evaluation. We conduct the largest-scale evaluation of embodied representation learning to date. Our study encompasses 268 tasks across ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Influence of different datasets. We present the performance results on the VC-1 benchmark. Mean S.R. refers to the mean success rate across all ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Summary of different representation learning methods. ‘#Param.' is the total parameters of the encoder, while ‘#Frames' indicates the total number of image frames ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Comparison of different representation learning methods. ‘OOM' indicates an out- of-memory error during evaluation. The best and second-best results are bolded and underlined ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar chart ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Additional comparisons of ViT-base models. S.R. denotes ‘Success Rate'. Methods DINOV2-B (Oquab et al., 2023) MAE-B (He et al., 2022)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | (14) F REAL-WORLD EXPERIMENT DETAILS Our real-world hardware setup is based on the open-source Low-Cost-Robot project (Koch, 2024). | embodiment, simulator version and control stack | p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS) |
-| Task/environment | The experiment is conducted on GraspNet-1Billion (Fang et al., 2020), a large-scale real-world object grasping benchmark. | reset, timeout, object/scene variation | p. 23 (C.2 PRE-TRAINING DETAILS), p. 31 (C.2 PRE-TRAINING DETAILS) |
+| Task/environment | The experiment is conducted on GraspNet-1Billion (Fang et al., 2020), a large-scale real-world object grasping benchmark. | reset, timeout, object/scene variation | p. 23 (C.2 PRE-TRAINING DETAILS), p. 21 (C.1 DATASET DETAILS) |
 | Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 4 (2 METHODOLOGY), p. 1 (1 INTRODUCTION) |
+| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 1 (1 INTRODUCTION), p. 23 (C.2 PRE-TRAINING DETAILS) |
 
 ## Metrics and Success Definition
 
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Primary metric/result | Figure 4: Correlation between mean success rate and camera pose regression error. 5.2 ADDITIONAL COMPARISONS (Q1) We primarily compare with SOTA methods using the ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 21 / C.1 DATASET DETAILS - extractive PDF cue:** For each scene, a random starting frame is selected, followed by the sampling of 1 to 8 frames at random, with an interval of 8 ...
-- **p. 21 / C.1 DATASET DETAILS - extractive PDF cue:** For each scene, a random starting frame is selected, followed by the sampling of 1 to 8 frames at random, with an interval of 5 ...
-- **p. 22 / C.1 DATASET DETAILS - extractive PDF cue:** For each scene, a random starting frame is selected, followed by the sampling of 1 to 8 frames at random, with an interval of 5 ...
-- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** The model is trained for 2000 epochs on 80 NVIDIA A100-80G GPUs, using a gradient clipping threshold of 1.0.
-- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** The model is trained for 100 epochs with a base learning rate of 1 × 10-3 and a starting percentage of 0.1.
-- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** For each task, we collect 50 demonstrations, and during evaluation, we conduct 25 rollouts, each with randomized object locations and orientations.
+- **p. 21 / C.1 DATASET DETAILS - extractive body cue:** For each scene, a random starting frame is selected, followed by the sampling of 1 to 8 frames at random, with an interval of 8 ...
+- **p. 21 / C.1 DATASET DETAILS - extractive body cue:** For each scene, a random starting frame is selected, followed by the sampling of 1 to 8 frames at random, with an interval of 5 ...
+- **p. 22 / C.1 DATASET DETAILS - extractive body cue:** For each scene, a random starting frame is selected, followed by the sampling of 1 to 8 frames at random, with an interval of 5 ...
+- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The model is trained for 2000 epochs on 80 NVIDIA A100-80G GPUs, using a gradient clipping threshold of 1.0.
+- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The model is trained for 100 epochs with a base learning rate of 1 × 10-3 and a starting percentage of 0.1.
+- **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** For each task, we collect 50 demonstrations, and during evaluation, we conduct 25 rollouts, each with randomized object locations and orientations.
 
 ## Generalization and Failure Cases
 
@@ -151,8 +151,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | We train for a total of 1.1M frames and all other hyperparameters including random seeds are kept as default and same. | p. 23 (C.2 PRE-TRAINING DETAILS) |
 | In this study, we maintained all settings identical-data loading, training techniques, hyperparameters, and the encoder-while replacing the volume neural rendering decoder with a multiview ... | p. 24 (C.2 PRE-TRAINING DETAILS) |
 | This alternative decoder receives masked patches filled with mask tokens corresponding to multiview images. | p. 24 (C.2 PRE-TRAINING DETAILS) |
-| Published as a conference paper at ICLR 2025 Cameras Leader Arms Follower Arms Figure 8: Real-world hardware platform. | p. 31 (C.2 PRE-TRAINING DETAILS) |
 | Following MAE, we apply random masking to input images to enhance robustness, but without a ViT decoder and MAE's pixel reconstruction objective. | p. 3 (2 METHODOLOGY) |
+| (2) Unlike prior work (Huang et al., 2023; Zhu et al., 2023b; Yang et al., 2024a), which employs an MLP to compute the attributes ... | p. 3 (2 METHODOLOGY) |
 
 | Audit field | Current status |
 |---|---|
@@ -164,12 +164,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 22 / C.1 DATASET DETAILS - extractive PDF cue:** Since Droid does not provide depth data, we utilize Croco-Stereo Weinzaepfel et al.
-- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** This initialization does not affect the validity of our conclusions, as demonstrated by the ablation study of SPA-MAE in Sec.
-- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive PDF cue:** Simple multiview attention-based interaction, as used in MV-MAE, does not perform as effectively in learning 3D spatial awareness.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar chart ...
+- **p. 22 / C.1 DATASET DETAILS - extractive body cue:** Since Droid does not provide depth data, we utilize Croco-Stereo Weinzaepfel et al.
+- **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** This initialization does not affect the validity of our conclusions, as demonstrated by the ablation study of SPA-MAE in Sec.
+- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** Simple multiview attention-based interaction, as used in MV-MAE, does not perform as effectively in learning 3D spatial awareness.
+- **p. 7 / Figure/Table caption - extractive body cue:** Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar chart ...
 
-- **PDF anchors reviewed:** datasets p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS), p. 31 (C.2 PRE-TRAINING DETAILS), p. 21 (C.1 DATASET DETAILS), p. 21 (C.1 DATASET DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS), metrics p. 24 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 23 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS), p. 21 (C.1 DATASET DETAILS), p. 21 (C.1 DATASET DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), metrics p. 24 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 23 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

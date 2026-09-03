@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajSmXqgS24; PDF retrieval source: https://arxiv.org/pdf/2502.09614. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajSmXqgS24; PDF retrieval source: https://arxiv.org/pdf/2502.09614. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -17,7 +17,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 - **p. 21 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** Our dexterous robot hand-object manipulation dataset is created by retargeting two public human-object datasets, namely GRAB Taheri et al.
 - **p. 24 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** To evaluate this, we construct a disturbed test set by adding random noise to the hand trajectory and the object position trajectory to test the ...
 - **p. 18 / B.2 REAL-WORLD EVALUATIONS - extractive body cue:** As observed in the table, the tracking results achieved by our method can be well transferred to the real-world robot, helping us achieve obviously better ...
-- **p. 19 / B.2 REAL-WORLD EVALUATIONS - extractive body cue:** Published as a conference paper at ICLR 2025 Table 8: Real-world quantitative comparisons (TACO dataset).
+- **p. 24 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** For our real-world test on trajectories from the GRAB dataset, we summarize the result in Table 14.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets. | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | On average, our method improves the tracking success rate by over 10% compared to the best prior methods. | p. 7 (4 EXPERIMENTS) |
@@ -47,7 +47,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 - **p. 21 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** Our dexterous robot hand-object manipulation dataset is created by retargeting two public human-object datasets, namely GRAB Taheri et al.
 - **p. 24 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** To evaluate this, we construct a disturbed test set by adding random noise to the hand trajectory and the object position trajectory to test the ...
 - **p. 18 / B.2 REAL-WORLD EVALUATIONS - extractive body cue:** As observed in the table, the tracking results achieved by our method can be well transferred to the real-world robot, helping us achieve obviously better ...
-- **p. 19 / B.2 REAL-WORLD EVALUATIONS - extractive body cue:** Published as a conference paper at ICLR 2025 Table 8: Real-world quantitative comparisons (TACO dataset).
+- **p. 24 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** For our real-world test on trajectories from the GRAB dataset, we summarize the result in Table 14.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -64,12 +64,12 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Tested on two HOI datasets featuring complex daily manipulation tasks, our method is assessed through both simulation and real-world evaluations (see Sec. | embodiment, simulator version and control stack | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
 | Task/environment | For the TACO dataset, we follow the generalization evaluating setting suggested by the authors (Liu et al., 2024b) and split the dataset into a ... | reset, timeout, object/scene variation | p. 7 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS) |
 | Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 3 (3 METHOD) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 3 (3 METHOD), p. 2 (1 INTRODUCTION) |
+| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 3 (3 METHOD), p. 1 (ABSTRACT) |
 
 ## Metrics and Success Definition
 
@@ -154,6 +154,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 | Both the simulation and the policy run at 60Hz. | p. 22 (C ADDITIONAL EXPERIMENTAL DETAILS) |
 | Experiments are conducted on a Ubuntu 20.04 machine with eight A10 GPU cards. | p. 22 (C ADDITIONAL EXPERIMENTAL DETAILS) |
 | Here we introduce three types of statistics: 1) object movement smoohtness so smooth: it quantifies the motion smoothness by calculating the per-frame average object ... | p. 25 (C ADDITIONAL EXPERIMENTAL DETAILS) |
+| To achieve the challenging goal above, we draw three key observations: 1) learning is crucial for handling heterogeneous reference motion noises and transferring data ... | p. 2 (1 INTRODUCTION) |
 
 | Audit field | Current status |
 |---|---|
@@ -172,7 +173,16 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 - **p. 20 / B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME - extractive body cue:** As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up from ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: DexTrack learns a generalizable neural tracking controller for dexterous manipulation from human references. It generates hand action commands from kinematic references, ensuring close ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 9 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 24 (C ADDITIONAL EXPERIMENTAL DETAILS), metrics p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 7 (4 EXPERIMENTS), p. 24 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 18 (B.2 REAL-WORLD EVALUATIONS), p. 9 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 9 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 24 (C ADDITIONAL EXPERIMENTAL DETAILS), metrics p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 7 (4 EXPERIMENTS), p. 24 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 18 (B.2 REAL-WORLD EVALUATIONS), p. 9 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 3: Robustness w.r.t. unreasonable states. Please check our website and video for animated results. We demonstrate the generalization ability and robustness of our tracking controller on unseen trajec- tories ... (p. 8, Figure/Table caption).
+- **Metric evidence:** (26) As the quality of the trajectory distribution gets worse and the tracking error decreases, the "robustness score" would increase. (p. 24, C ADDITIONAL EXPERIMENTAL DETAILS).
+- **Baseline/ablation evidence:** As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets. (p. 8, 4 EXPERIMENTS).
+- **Failure/negative evidence:** As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up from the table. (p. 20, B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME).

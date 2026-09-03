@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33617; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33617. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33617; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33617. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Abstract | EMPIRICAL / SIMULATION | Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids the performance bottleneck as presented in ... | p. 7 (Abstract) |
 | Abstract | EMPIRICAL / SIMULATION | For hard-level tasks (i.e., ‘Pick-Place'), the success rate of the task can be significantly improved by increasing the number of expert presentations, as shown ... | p. 7 (Abstract) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Experiments Dataset and Implementation Details Simulation Benchmarks We choose two preeminent environmental simulators, Adroit (Rajeswaran et al. | embodiment, simulator version and control stack | p. 5 (Abstract), p. 5 (Abstract) |
 | Task/environment | In contrast, the Metaworld benchmark offers a diverse array of tasks that span the spectrum of difficulty levels, from easy to very hard, typically ... | reset, timeout, object/scene variation | p. 5 (Abstract), p. 3 (Abstract) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 - **p. 3 / Abstract - extractive body cue:** Expert demonstrations Policy FlowPolicy State Noise a1 a0 Action Flow Network Execute Single-view Images Robot state Encoder Sparse 3D Encoder Compact 3D Repr.
 - **p. 3 / Abstract - extractive body cue:** The top section visualizes FlowPolicy, where a straight-line flow enables the fastest data transition from the noise distribution to the action distribution (Adroit: Open the ...
 
-- **PDF anchors reviewed:** datasets p. 5 (Abstract), p. 5 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 6 (Abstract), metrics p. 7 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 1 (Figure/Table caption), p. 5 (Abstract), p. 6 (Abstract), baselines p. 5 (Abstract), p. 6 (Abstract), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (Abstract), p. 7 (Abstract), results p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/Table caption), p. 6 (Abstract), p. 1 (Figure/Table caption), p. 5 (Abstract).
+- **Evidence anchors reviewed:** datasets p. 5 (Abstract), p. 5 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 6 (Abstract), metrics p. 7 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 1 (Figure/Table caption), p. 5 (Abstract), p. 6 (Abstract), baselines p. 5 (Abstract), p. 6 (Abstract), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (Abstract), p. 7 (Abstract), results p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/Table caption), p. 6 (Abstract), p. 1 (Figure/Table caption), p. 5 (Abstract).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 5: Ablation on the number of expert demonstrations. We choose four typical tasks to explore the impact of dif- ferent numbers of demonstrations on FlowPolicy and DP3. Both generally ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids the performance bottleneck as presented in DP3. (p. 7, Abstract).
+- **Baseline/ablation evidence:** We also compared state-of-the-art 2D-based approaches, including diffusion policy (DP) (Chi et al. (p. 5, Abstract).
+- **Failure/negative evidence:** Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the task (right). task. (p. 6, Abstract).

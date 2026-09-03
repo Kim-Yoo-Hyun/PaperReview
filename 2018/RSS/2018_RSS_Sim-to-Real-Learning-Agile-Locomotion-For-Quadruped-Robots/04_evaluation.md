@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p10.html; PDF retrieval source: https://arxiv.org/pdf/1804.10332. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p10.html; PDF retrieval source: https://arxiv.org/pdf/1804.10332. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VI. EVALUATION AND DISCUSSION | EMPIRICAL / REAL-ROBOT OR HARDWARE | After we improved the simulation (Section V-A), an agile galloping gait emerged automatically. | p. 6 (VI. EVALUATION AND DISCUSSION) |
 | VI. EVALUATION AND DISCUSSION | EMPIRICAL / REAL-ROBOT OR HARDWARE | After training with the improved simulator and random perturbations, the Minitaur is able to trot stably in simulation. | p. 6 (VI. EVALUATION AND DISCUSSION) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This time, we observed stable, comparable movements in both simulation and on the real robot. | embodiment, simulator version and control stack | p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. EVALUATION AND DISCUSSION) |
 | Task/environment | After the policies were learned, we deployed them on the real robot. | reset, timeout, object/scene variation | p. 6 (VI. EVALUATION AND DISCUSSION) |
@@ -154,7 +154,16 @@ PDF body evaluation/result cue (p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. 
 - **p. 8 / VII. CONCLUSION - extractive body cue:** With an accurate physical model and robust controllers, we have successfully deployed the controllers learned in simulation on the real robots.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Performance comparison of controllers that are trained with (red) and without (blue) randomization and tested with different body inertia. We also found that ...
 
-- **PDF anchors reviewed:** datasets p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. EVALUATION AND DISCUSSION), metrics p. 8 (Figure/Table caption), p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. EVALUATION AND DISCUSSION), metrics p. 8 (Figure/Table caption), p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 6 (VI. EVALUATION AND DISCUSSION), p. 6 (VI. EVALUATION AND DISCUSSION), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 6: Controller performance in simulation (blue) and on the robot (red). From left to right, the controllers are trained using baseline simulation, using baseline simulation with random perturbations, and ... (p. 7, Figure/Table caption).
+- **Metric evidence:** While it is unclear how to use reward shaping to learn such a gait, we can directly control the learned gait by providing an open loop signal (¯a(t) in eq. (p. 6, VI. EVALUATION AND DISCUSSION).
+- **Baseline/ablation evidence:** We compared the learned gaits with the handcrafted ones from Ghost Robotics [3]. (p. 6, VI. EVALUATION AND DISCUSSION).
+- **Failure/negative evidence:** However, the binary outcome of success or failure does not capture the key characteristics of locomotion, such as running speed and energy consumption. (p. 7, B. Narrowing the Reality Gap).

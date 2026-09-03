@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 12: Success rates of ACT, Diffusion Policy, and BAKU on RoboMIND. | p. 11 (Figure/Table caption) |
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 17: Success rates of models trained with different ratios of real-world and simulation data, | p. 15 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In addition to the diversity across robot, the varied task horizons in the dataset directly impact the temporal generalization capabilities of policies in real-world ... | embodiment, simulator version and control stack | p. 7 (A. Quantitative Analysis), p. 8 (B. Qualitative Analysis) |
 | Task/environment | RoboMIND features standardized settings to form a large-scale real-world manipulation dataset. ‘As shown in Figure 8, we compare our dataset with Open XEmbodiment, another ... | reset, timeout, object/scene variation | p. 8 (B. Qualitative Analysis), p. 7 (A. Quantitative Analysis) |
@@ -162,7 +162,16 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 - **p. 8 / B. Qualitative Analysis - extractive body cue:** The failure cases documented include scenarios where different types of humane operators filed to complete their assigned tasks, as well as in
 - **p. 11 / B. Single-task Imitation Learning Models - extractive body cue:** Each model was tested ten times, and the testers recorded the success or failure of each test and the reasons if there were any failures.
 
-- **PDF anchors reviewed:** datasets p. 7 (A. Quantitative Analysis), p. 8 (B. Qualitative Analysis), p. 7 (A. Quantitative Analysis), p. 8 (A. Quantitative Analysis), p. 10 (A. Experiment Setup), p. 10 (A. Experiment Setup), metrics p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (B. Qualitative Analysis), p. 9 (B. Qualitative Analysis), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 9 (B. Qualitative Analysis), results p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 7 (A. Quantitative Analysis), p. 9 (B. Qualitative Analysis), p. 9 (B. Qualitative Analysis), p. 14 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (A. Quantitative Analysis), p. 8 (B. Qualitative Analysis), p. 7 (A. Quantitative Analysis), p. 8 (A. Quantitative Analysis), p. 10 (A. Experiment Setup), p. 10 (A. Experiment Setup), metrics p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (B. Qualitative Analysis), p. 9 (B. Qualitative Analysis), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 9 (B. Qualitative Analysis), results p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 7 (A. Quantitative Analysis), p. 9 (B. Qualitative Analysis), p. 9 (B. Qualitative Analysis), p. 14 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** RoboMIND features standardized settings to form a large-scale real-world manipulation dataset. ‘As shown in Figure 8, we compare our dataset with Open XEmbodiment, another large-scale robotic learning dataset. (p. 8, B. Qualitative Analysis).
+- **Metric evidence:** A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream tasks. (p. 7, A. Quantitative Analysis).
+- **Baseline/ablation evidence:** 8: Comparison between Open X-Embodiment and RoboMIND. (p. 9, B. Qualitative Analysis).
+- **Failure/negative evidence:** Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).

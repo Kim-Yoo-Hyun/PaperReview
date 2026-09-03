@@ -1,8 +1,10 @@
 # Sparsh: Self-supervised touch representations for vision-based tactile sensing
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2410.24090.
-> PDF retrieval source: https://arxiv.org/pdf/2410.24090. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2410.24090.
+> PDF retrieval source: https://arxiv.org/pdf/2410.24090. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2410.24090
 - Code/Project: https://sparsh-ssl.github.io/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -67,9 +69,9 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 |---|---|---|---|
 | Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 7 (Figure/Table caption), p. 8 (8 Discussion) |
 | Embodiment/environment | Finally, we construct TacBench, a benchmark consisting of six touch-centric tasks that cover the space of relevant problems on tactile properties such as force estimation and slip detection, on perception such as ... | hardware/simulator version and reset protocol | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Dataset/benchmark | Such sensors have led to many recent advances in robot manipulation as they markedly complement vision, yet solutions today often rely on task and sensor specific handcrafted perception models. | role, split, size and leakage | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Front matter) |
+| Dataset/benchmark | Such sensors have led to many recent advances in robot manipulation as they markedly complement vision, yet solutions today often rely on task and sensor specific handcrafted perception models. | role, split, size and leakage | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)) |
 | Metric | Table 11: Mean and variance of distance traversed (in cm) before failure for policies based on Sparsh and E2E. Results over 10 randomized novel starting locations on the bead maze. In Table ... | definition, denominator, direction and uncertainty | p. 28 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption) |
-| Baseline/ablation | Figure 2: (a) We curate new and existing datasets of vision-based tactile sensors to train touch representations by adapting state-of-the-art SSL vision methods to the tactile domain, namely (b) Masked Autoencoder (MAE) ... | fair input/data/compute/action matching | p. 3 (Figure/Table caption), p. 1 (Front matter), p. 1 (Abstract) |
+| Baseline/ablation | Figure 2: (a) We curate new and existing datasets of vision-based tactile sensors to train touch representations by adapting state-of-the-art SSL vision methods to the tactile domain, namely (b) Masked Autoencoder (MAE) ... | fair input/data/compute/action matching | p. 3 (Figure/Table caption), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract) |
 
 ## Explicit Limitations and Failure Boundary
 
@@ -84,3 +86,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.를 문제로 두고, In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (8 Discussion) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, this did not translate to real robot performance due to lack of force control and system-level confounding variables not captured during training. (p. 8, 8 Discussion).
+- **Actual contribution:** Our contributions are as follows: 1. (p. 2, 1 Introduction).
+- **Evaluation boundary:** Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields general touch representations that work across ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** In Figure 13, we illustrate a failure case for Sparsh (VJEPA), as its results do not align with the ground truth. (p. 24, Model).

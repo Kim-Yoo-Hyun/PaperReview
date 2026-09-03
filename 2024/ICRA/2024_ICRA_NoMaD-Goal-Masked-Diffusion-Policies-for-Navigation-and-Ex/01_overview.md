@@ -1,7 +1,7 @@
 # NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2310.07896.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2310.07896.
 > PDF retrieval source: https://arxiv.org/pdf/2310.07896. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2310.07896
 - Code/Project: https://general-navigation-models.github.io/nomad/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -34,7 +34,7 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 ## Core Idea
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present a design for such a policy by combining a Transformer backbone for encoding the highdimensional stream of visual observations with ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contribution of our work is Navigation with Goal Masked Diffusion, or NoMaD, a novel architecture for robotic navigation in previously unseen environments arXiv:2310.07896v1 ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contribution of our work is Navigation with Goal Masked Diffusion, or NoMaD, a novel architecture for robotic navigation in previously unseen environments.
 - **p. 4 / IV. METHOD - extractive body cue:** The noise prediction network, ϵθ, consists of a 1D conditional U-Net [29, 31] with 15 convolutional layers.
 - **p. 4 / IV. METHOD - extractive body cue:** Note that we model the conditional (and not joint) action distribution, excluding ct from the output of the denoising process, which enables real-time control and ...
 - **p. 3 / IV. METHOD - extractive body cue:** Training a shared policy across both behaviors allows the model to learn a more expressive prior over actions at, which can be used for both ...
@@ -53,7 +53,7 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 ## Main Claims and Actual Contribution
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present a design for such a policy by combining a Transformer backbone for encoding the highdimensional stream of visual observations with ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contribution of our work is Navigation with Goal Masked Diffusion, or NoMaD, a novel architecture for robotic navigation in previously unseen environments arXiv:2310.07896v1 ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contribution of our work is Navigation with Goal Masked Diffusion, or NoMaD, a novel architecture for robotic navigation in previously unseen environments.
 - **p. 4 / IV. METHOD - extractive body cue:** The noise prediction network, ϵθ, consists of a 1D conditional U-Net [29, 31] with 15 convolutional layers.
 - **p. 4 / IV. METHOD - extractive body cue:** Note that we model the conditional (and not joint) action distribution, excluding ct from the output of the denoising process, which enables real-time control and ...
 - **p. 3 / IV. METHOD - extractive body cue:** Training a shared policy across both behaviors allows the model to learn a more expressive prior over actions at, which can be used for both ...
@@ -86,3 +86,12 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 ## Why Read It
 
 Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 Prior works have often addressed this challenge by training a separate high-level policy or goal proposal system that generates suitable exploratory tasks, for example using high-level planning [1], hierarchical reinforcement learning [ ...를 문제로 두고, In this paper, we present a design for such a policy by combining a Transformer backbone for encoding the highdimensional stream of visual observations with diffusion models for modeling a sequence of ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (III. PRELIMINARIES), p. 1 (I. INTRODUCTION), p. 2 (III. PRELIMINARIES), p. 4 (IV. METHOD), p. 3 (IV. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In this work, we study a particularly important instance of this problem in the domain of robotic navigation, where the user might specify a destination visually (i.e., via a picture), ... (p. 1, I. INTRODUCTION).
+- **Actual contribution:** The main contribution of our work is Navigation with Goal Masked Diffusion, or NoMaD, a novel architecture for robotic navigation in previously unseen environments. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Benchmarking Performance Towards understanding Q1, we compare NoMaD to six performant baselines for exploration and navigation in 6 challenging real-world environments. (p. 4, V. EVALUATION).
+- **Explicit failure boundary:** VIB and Masked ViNT struggle in all the environments we tested and frequently end in collisions, likely due to challenges with effectively modeling multimodal action distributions. (p. 5, V. EVALUATION).

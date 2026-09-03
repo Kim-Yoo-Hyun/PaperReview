@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 PERACT encodes language goals and RGB-D voxel observations with a Perceiver Transformer [1], and outputs discretized actions by "detecting the next best voxel action".를 Our results show that PERACT significantly outperforms image-to-action agents (by 34×) and 3D ConvNet baselines (by 2.8×), without using any explicit representations of instance segmentations, object poses, memory, or symbolic states.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Evaluations are scored either 0 for failures or 100 for complete successes.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An efficient action-centric framework for grounding language in 6-DoF actions. • ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** PERACT encodes language goals and RGB-D voxel observations with a Perceiver Transformer [1], and outputs discretized actions by "detecting the next best voxel action". (p. 1, Abstract).
+- **Paper-specific mechanism:** In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An efficient action-centric framework for grounding language in 6-DoF ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption); the relevant task/metric cue is Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The most common failures involved predicting incorrect gripper open actions, which often lead the agent into unseen states. (p. 8, 4 Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: All keyframes from an episode have the same language goal, which is constructed from templates (but human-annotated for real-world tasks)..
-3. Compare against the body-reported baseline or a matched simpler baseline: PERACT outperforms C2FARM-BC [14], the most competitive baseline, with an average improvement of 1.33× with 10 demos and 2.83× with 100 demos..
-4. Report the body metric and its denominator/aggregation: Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. Each evaluation ....
-5. Re-run the body-reported ablation/failure condition: Figure 3. Ablation Experiments. Success rate of PER- ACT after ablating key components. Ablations. Table 1 reports PERACT w/o Lang, an agent without any language conditioning. Without a language goal, the agent ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: PERACT encodes language goals and RGB-D voxel observations with a Perceiver Transformer [1], and outputs discretized actions by "detecting the next best voxel action". (p. 1, Abstract); preserve the objective/update rule: PERACT encodes language goals and RGB-D voxel observations with a Perceiver Transformer [1], and outputs discretized actions by "detecting the next best voxel action". (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: All keyframes from an episode have the same language goal, which is constructed from templates (but human-annotated for real-world tasks). (p. 6, 4 Results).
+3. Compare against the reported or matched baseline: PERACT outperforms C2FARM-BC [14], the most competitive baseline, with an average improvement of 1.33× with 10 demos and 2.83× with 100 demos. (p. 7, 4 Results).
+4. Report the body metric with its denominator and aggregation: Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Figure 3. Ablation Experiments. Success rate of PER- ACT after ablating key components. Ablations. Table 1 reports PERACT w/o Lang, an agent without any language conditioning. Without a language goal, ... (p. 7, Figure/Table caption); if none is reported, design one around: The most common failures involved predicting incorrect gripper open actions, which often lead the agent into unseen states. (p. 8, 4 Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Introduction); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 8 (4 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 8 (4 Results), p. 6 (4 Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, contributions, follows mechanism이 PERACT outperforms C2FARM-BC [14], the most competitive baseline, with an average improvement of 1.33× with 10 ... 대비 Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 ...을 개선하고, Evaluations are scored either 0 for failures or 100 for complete successes. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (PERACT encodes language goals and RGB-D voxel observations with a Perceiver Transformer [1], and outputs discretized actions by "detecting the next best ...), does the paper-specific mechanism (In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An ...) retain the reported evaluation outcome (Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 ...) when tested against the paper's strongest explicit boundary (The most common failures involved predicting incorrect gripper open actions, which often lead the agent into unseen states.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An efficient action-centric framework for grounding language in 6-DoF ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** The most common failures involved predicting incorrect gripper open actions, which often lead the agent into unseen states. (p. 8, 4 Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

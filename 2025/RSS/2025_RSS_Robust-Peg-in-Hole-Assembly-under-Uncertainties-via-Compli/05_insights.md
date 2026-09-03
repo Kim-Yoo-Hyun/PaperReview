@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 An interaction command cy = (xe, x3) at time ¢ is defined by its starting state x, (considered steady as %¢ - 0) and a desired state x}.를 Execution Task Space: Let Ax be the deviation between the steady state x, and the peg-in-hole state x", Based ‘on the estimated state distribution of Pr:(Tow), we aim to shrink Ax at ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 pose +1 automatically falls into its nearby local minimum에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Execution Task Space: Let Ax be the deviation between the steady state x, and the peg-in-hole state x", Based ‘on the estimated state distribution of Pr:(Tow), we aim to shrink ... (p. 4, B. Problem Statement).
+- **Paper-specific mechanism:** By examining the role of compliance under contact constraints, ‘we present a manipulation system that plans coli (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is Fig. 1: Motivation, Acknowledging that real-world uncertainties are inevitable, we exploit environmental constraints t0 shape the manipulation process toward the desired outcome rather than expecting the robot to precisely execute ... (p. 1, Figure/Table caption); the relevant task/metric cue is Fig. 7: (a) Overview of the System Setup; (b) Ablation study on the perception manipulation funnel; (c) Ablation study on the physical manipulation funnel; (d) Performance evaluation on the overall ... (p. 11, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided into the following categories: 1) high contact force which breaks the condition ... (p. 12, 1 Liye).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Despite the trajectory being a dominant action representation in manipulation planning, itis unsuitable for funnel-based ‘manipulations as interactions with the task environment are allowed to alter the motion of the manipulator [39]..
-3. Compare against the body-reported baseline or a matched simpler baseline: Specifically, our objective is to formulate a potential well to let vj be the local minimum in a potential energy field so that vs tends to rest atv; without escaping..
-4. Report the body metric and its denominator/aggregation: Fig. 1: Motivation, Acknowledging that real-world uncertainties are inevitable, we exploit environmental constraints t0 shape the manipulation process toward the desired outcome rather than expecting the robot to precisely execute any t ....
-5. Re-run the body-reported ablation/failure condition: Specifically, our objective is to formulate a potential well to let vj be the local minimum in a potential energy field so that vs tends to rest atv; without escaping..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Execution Task Space: Let Ax be the deviation between the steady state x, and the peg-in-hole state x", Based ‘on the estimated state distribution of Pr:(Tow), we aim to shrink ... (p. 4, B. Problem Statement); preserve the objective/update rule: Interaction with inclined states is designed to identify and exploit its environmental contact constraints. (p. 5, A. Task Mechanics and Interaction Primitives).
+2. Use the paper-reported task/data/environment cue: Despite the trajectory being a dominant action representation in manipulation planning, itis unsuitable for funnel-based ‘manipulations as interactions with the task environment are allowed to alter the motion of the ... (p. 5, A. Task Mechanics and Interaction Primitives).
+3. Compare against the reported or matched baseline: Specifically, our objective is to formulate a potential well to let vj be the local minimum in a potential energy field so that vs tends to rest atv; without escaping. (p. 7, 2 Sample grid points G - Area).
+4. Report the body metric with its denominator and aggregation: Fig. 7: (a) Overview of the System Setup; (b) Ablation study on the perception manipulation funnel; (c) Ablation study on the physical manipulation funnel; (d) Performance evaluation on the overall ... (p. 11, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Specifically, our objective is to formulate a potential well to let vj be the local minimum in a potential energy field so that vs tends to rest atv; without escaping. (p. 7, 2 Sample grid points G - Area); if none is reported, design one around: We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided into the following categories: 1) high contact force which breaks the condition ... (p. 12, 1 Liye).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING); the primary result is directionally consistent at p. 6 (B. Perception Manipulation Funnet), p. 8 (2 Sample grid points G - Area), p. 11 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 5 (A. Task Mechanics and Interaction Primitives), match the reported outcome at p. 1 (Figure/Table caption), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), and measure the boundary at p. 12 (1 Liye), p. 10 (V. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 paired, comer, hole mechanism이 Specifically, our objective is to formulate a potential well to let vj be the local minimum ... 대비 Fig. 1: Motivation, Acknowledging that real-world uncertainties are inevitable, we exploit environmental constraints t0 shape the manipulation process ...을 개선하고, pose +1 automatically falls into its nearby local minimum 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Execution Task Space: Let Ax be the deviation between the steady state x, and the peg-in-hole state x", Based ‘on the estimated ...), does the paper-specific mechanism (By examining the role of compliance under contact constraints, ‘we present a manipulation system that plans coli) retain the reported evaluation outcome (Fig. 7: (a) Overview of the System Setup; (b) Ablation study on the perception manipulation funnel; (c) Ablation ...) when tested against the paper's strongest explicit boundary (We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Fig. 7: (a) Overview of the System Setup; (b) Ablation study on the perception manipulation funnel; (c) Ablation ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** By examining the role of compliance under contact constraints, ‘we present a manipulation system that plans coli (p. 1, Abstract).
+- **Paper-supported outcome:** Fig. 1: Motivation, Acknowledging that real-world uncertainties are inevitable, we exploit environmental constraints t0 shape the manipulation process toward the desired outcome rather than expecting the robot to precisely execute ... (p. 1, Figure/Table caption).
+- **Strongest explicit boundary:** We acknowledge the gap between the established objectcentric theory and real-world implementation; the failure mode can be divided into the following categories: 1) high contact force which breaks the condition ... (p. 12, 1 Liye).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

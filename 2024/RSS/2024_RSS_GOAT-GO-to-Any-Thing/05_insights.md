@@ -38,10 +38,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
-- 이 논문의 재사용 가능한 지점은 It takes as input the current depth image Dt, RGB image It, and pose reading xt from onboard sensors.를 If no instance is localized, the global policy outputs an exploration goal.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 environment is fully explored, failures are almost exclusively due to failures in matching the correct goal.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** It takes as input the current depth image Dt, RGB image It, and pose reading xt from onboard sensors. (p. 3, IV. GOAT METHOD).
+- **Paper-specific mechanism:** This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS); the relevant task/metric cue is GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 68.2). d) Real-World Open-Vocabulary Detection: Limitations and Opportunities: An interesting and noteworthy observation is that despite the rapid advances in open (or large) vocabulary vision-and-language models (VLMs) [37, 43], we ... (p. 10, VII. DISCUSSION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -53,19 +54,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate the ability of the GOAT agent to tackle the GOAT task, i.e., reach a sequence of unseen multimodal object instances in unseen environments..
-3. Compare against the body-reported baseline or a matched simpler baseline: GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT..
-4. Report the body metric and its denominator/aggregation: GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT..
-5. Re-run the body-reported ablation/failure condition: Conversely, GOAT without memory shows no improvement from experience, while COW benefits but plateaus at much lower performance..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: It takes as input the current depth image Dt, RGB image It, and pose reading xt from onboard sensors. (p. 3, IV. GOAT METHOD); preserve the objective/update rule: We take a simple approach: when new observations are received from the sensors, we overwrite the relevant cells in the semantic map based on the updated occupancy information. (p. 4, IV. GOAT METHOD).
+2. Use the paper-reported task/data/environment cue: We evaluate the ability of the GOAT agent to tackle the GOAT task, i.e., reach a sequence of unseen multimodal object instances in unseen environments. (p. 5, V. RESULTS).
+3. Compare against the reported or matched baseline: GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS).
+4. Report the body metric with its denominator and aggregation: GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Conversely, GOAT without memory shows no improvement from experience, while COW benefits but plateaus at much lower performance. (p. 5, V. RESULTS); if none is reported, design one around: 68.2). d) Real-World Open-Vocabulary Detection: Limitations and Opportunities: An interesting and noteworthy observation is that despite the rapid advances in open (or large) vocabulary vision-and-language models (VLMs) [37, 43], we ... (p. 10, VII. DISCUSSION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (IV. GOAT METHOD), p. 4 (IV. GOAT METHOD), p. 3 (IV. GOAT METHOD); the primary result is directionally consistent at p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), and measure the boundary at p. 10 (VII. DISCUSSION), p. 10 (VII. DISCUSSION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 enables, GOAT, distinguish mechanism이 GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the ... 대비 GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of ...을 개선하고, environment is fully explored, failures are almost exclusively due to failures in matching the correct goal. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (It takes as input the current depth image Dt, RGB image It, and pose reading xt from onboard sensors.), does the paper-specific mechanism (This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained ...) retain the reported evaluation outcome (GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of ...) when tested against the paper's strongest explicit boundary (68.2). d) Real-World Open-Vocabulary Detection: Limitations and Opportunities: An interesting and noteworthy observation is that despite the rapid ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS).
+- **Strongest explicit boundary:** 68.2). d) Real-World Open-Vocabulary Detection: Limitations and Opportunities: An interesting and noteworthy observation is that despite the rapid advances in open (or large) vocabulary vision-and-language models (VLMs) [37, 43], we ... (p. 10, VII. DISCUSSION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.13542; PDF retrieval source: https://arxiv.org/pdf/2205.13542. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.13542; PDF retrieval source: https://arxiv.org/pdf/2205.13542. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,27 +10,27 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 
 ## Method Body Digest
 
-- **p. 2 / III. METHOD - extractive PDF cue:** Given different sensory inputs, we first apply modality-specific encoders to extract their features.
-- **p. 2 / III. METHOD - extractive PDF cue:** We then apply the convolution-based BEV encoder to the unified BEV features to alleviate the local misalignment between different features.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** (in BEV) BEV Map Segmentation 3D Object Detection LiDAR Features Fused BEV Features LiDAR Point Cloud Multi-View RGB Images Task-Specific Heads … Flatten (along z-axis) ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** BEVFusion sets the new state-of-the-art 3D object detection performance on both nuScenes and Waymo benchmarks.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** We maintain both geometric structure and semantic density (see Figure 1c) and naturally support most 3D perception tasks (since their output space can be naturally ...
-- **p. 3 / III. METHOD - extractive PDF cue:** log scale (a) Camera-to-BEV transformation (b) Efficient BEV pooling (c) Improvement breakdown Depth Grid Association Feat.
+- **p. 2 / III. METHOD - extractive body cue:** Given different sensory inputs, we first apply modality-specific encoders to extract their features.
+- **p. 2 / III. METHOD - extractive body cue:** We then apply the convolution-based BEV encoder to the unified BEV features to alleviate the local misalignment between different features.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** (in BEV) BEV Map Segmentation 3D Object Detection LiDAR Features Fused BEV Features LiDAR Point Cloud Multi-View RGB Images Task-Specific Heads … Flatten (along z-axis) ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** BEVFusion sets the new state-of-the-art 3D object detection performance on both nuScenes and Waymo benchmarks.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We maintain both geometric structure and semantic density (see Figure 1c) and naturally support most 3D perception tasks (since their output space can be naturally ...
+- **p. 3 / III. METHOD - extractive body cue:** log scale (a) Camera-to-BEV transformation (b) Efficient BEV pooling (c) Improvement breakdown Depth Grid Association Feat.
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Then, we propose a specialized kernel with precomputation and interval reduction to eliminate this bottleneck, achieving more than 40× speedup.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we propose BEVFusion to unify multi-modal features in a shared bird's-eye view (BEV) representation space for task-agnostic learning.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Then, we propose a specialized kernel with precomputation and interval reduction to eliminate this bottleneck, achieving more than 40× speedup.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose BEVFusion to unify multi-modal features in a shared bird's-eye view (BEV) representation space for task-agnostic learning.
 
 ## Source Evidence Cues
 
-- **p. 2 / III. METHOD - extractive PDF cue:** Given different sensory inputs, we first apply modality-specific encoders to extract their features.
-- **p. 2 / III. METHOD - extractive PDF cue:** We then apply the convolution-based BEV encoder to the unified BEV features to alleviate the local misalignment between different features.
+- **p. 2 / III. METHOD - extractive body cue:** Given different sensory inputs, we first apply modality-specific encoders to extract their features.
+- **p. 2 / III. METHOD - extractive body cue:** We then apply the convolution-based BEV encoder to the unified BEV features to alleviate the local misalignment between different features.
 - **Detected method headings:** III. METHOD (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Given different sensory inputs, we first apply modality-specific encoders to extract their features. | p. 2 (III. METHOD), p. 2 (III. METHOD) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We then apply the convolution-based BEV encoder to the unified BEV features to alleviate the local misalignment between different features. | p. 2 (III. METHOD) |
@@ -56,11 +56,11 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 
 ## Observation–State–Action Interface
 
-- **p. 2 / III. METHOD - extractive PDF cue:** Given different sensory inputs, we first apply modality-specific encoders to extract their features.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** (in BEV) BEV Map Segmentation 3D Object Detection LiDAR Features Fused BEV Features LiDAR Point Cloud Multi-View RGB Images Task-Specific Heads … Flatten (along z-axis) ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** BEVFusion sets the new state-of-the-art 3D object detection performance on both nuScenes and Waymo benchmarks.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** We maintain both geometric structure and semantic density (see Figure 1c) and naturally support most 3D perception tasks (since their output space can be naturally ...
-- **p. 3 / III. METHOD - extractive PDF cue:** log scale (a) Camera-to-BEV transformation (b) Efficient BEV pooling (c) Improvement breakdown Depth Grid Association Feat.
+- **p. 2 / III. METHOD - extractive body cue:** Given different sensory inputs, we first apply modality-specific encoders to extract their features.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** (in BEV) BEV Map Segmentation 3D Object Detection LiDAR Features Fused BEV Features LiDAR Point Cloud Multi-View RGB Images Task-Specific Heads … Flatten (along z-axis) ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** BEVFusion sets the new state-of-the-art 3D object detection performance on both nuScenes and Waymo benchmarks.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We maintain both geometric structure and semantic density (see Figure 1c) and naturally support most 3D perception tasks (since their output space can be naturally ...
+- **p. 3 / III. METHOD - extractive body cue:** log scale (a) Camera-to-BEV transformation (b) Efficient BEV pooling (c) Improvement breakdown Depth Grid Association Feat.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -75,8 +75,8 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 
 ## Training vs Inference
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We also measure the single-inference #MACs and latency on an RTX3090 GPU for all opensource methods.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** As in Table I, BEVFusion achieves state-of-the-art results on the nuScenes detection benchmark, with close-to-real-time (8.4 FPS) inference speed on a desktop GPU.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We also measure the single-inference #MACs and latency on an RTX3090 GPU for all opensource methods.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** As in Table I, BEVFusion achieves state-of-the-art results on the nuScenes detection benchmark, with close-to-real-time (8.4 FPS) inference speed on a desktop GPU.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -96,11 +96,11 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 
 ## Failure and Ablation Link
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** We use a single model without any test-time augmentation for both val and test results.
-- **p. 3 / A C - extractive PDF cue:** On the one hand, the LiDARto-BEV projection flattens the sparse LiDAR features along the height dimension, thus does not create geometric distortion in Figure 1a.
-- **p. 4 / A C - extractive PDF cue:** Our method could potentially benefit from more accurate depth estimation (e.g., supervising the view transformer with groundtruth depth [42], [53]), which we leave for future ...
-- **p. 4 / A C - extractive PDF cue:** This kernel removes the dependency between outputs (thus does not require multi-level tree reduction) and avoids writing the partial sums to the DRAM, reducing the ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** IV: BEVFusion is robust under different lighting and weather conditions, significantly boosting the performance single-modality models under challenging rainy(+10.7) and nighttime(+12.8) scenes.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We use a single model without any test-time augmentation for both val and test results.
+- **p. 3 / A C - extractive body cue:** On the one hand, the LiDARto-BEV projection flattens the sparse LiDAR features along the height dimension, thus does not create geometric distortion in Figure 1a.
+- **p. 4 / A C - extractive body cue:** Our method could potentially benefit from more accurate depth estimation (e.g., supervising the view transformer with groundtruth depth [42], [53]), which we leave for future ...
+- **p. 4 / A C - extractive body cue:** This kernel removes the dependency between outputs (thus does not require multi-level tree reduction) and avoids writing the partial sums to the DRAM, reducing the ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** IV: BEVFusion is robust under different lighting and weather conditions, significantly boosting the performance single-modality models under challenging rainy(+10.7) and nighttime(+12.8) scenes.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -114,7 +114,7 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (III. METHOD), p. 2 (III. METHOD), objective 본문 anchor 없음, temporal p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Abstract), p. 1 (Abstract), p. 3 (A C).
+- **Evidence anchors reviewed:** method p. 2 (III. METHOD), p. 2 (III. METHOD), objective 본문 anchor 없음, temporal p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Abstract), p. 1 (Abstract), p. 3 (A C).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

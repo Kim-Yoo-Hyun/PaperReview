@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | At time t, given observations ot "O, and task specification ⌧"T , and conditioned on the predicted affordance latent, the policy jointly ... | p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Architecture) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Building on prior inverse-dynamics formulations [18, 38, 112], these queries aggregate current observations with the predicted affordance latent to infer action sequences ... | p. 3 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | The action head is a denoising diffusion transformer [96] that conditions on the action-progress queries and the affordance latent to generate a ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | We group the baselines into four types and report the average success rate of the top three checkpoints, computed over 1,000 rollouts ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -132,8 +132,17 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), p. 4 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), objective p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 4 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), temporal p. 2 (1. Introduction), p. 3 (3.2. PALM Architecture), p. 1 (Front matter), p. 3 (3.1. Problem Formulation), p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), p. 4 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), objective p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 4 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), temporal p. 2 (1. Introduction), p. 3 (3.2. PALM Architecture), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3.1. Problem Formulation), p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** At time t, given observations ot "O, and task specification ⌧"T , and conditioned on the predicted affordance latent, the policy jointly decodes an action at " A alongside a ... (p. 3, 3.1. Problem Formulation).
+- **Objective/update evidence:** Each task ⌧" T defines an observation-action distribution p (ot, at ∂⌧) and an implicit temporal phase progression. (p. 3, 3.1. Problem Formulation).
+- **Temporal/runtime evidence:** The action head is a denoising diffusion transformer [96] that conditions on the action-progress queries and the affordance latent to generate a horizon-n trajectory: (ˆat⇥t+n-1, ˆpt⇥t+n-1) = DiT(l, ot, st, ... (p. 3, 3.2. PALM Architecture).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

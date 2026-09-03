@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1410.7284; PDF retrieval source: https://arxiv.org/pdf/1410.7284. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1410.7284; PDF retrieval source: https://arxiv.org/pdf/1410.7284. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 
 ## Evaluation Body Digest
 
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** In the following, however, we construct a more complex stepping task in simulation for the full 25 DoF robot.
-- **p. 15 / 5.4 Single Support Experiments - extractive PDF cue:** Indeed, while in simulation Cartesian tracking is perfect, on the real robot the tracking performance of the Cartesian task of the swing foot is not ...
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** Going from a 14 DoF robot to a 25 DoF robot with similar task setup makes the peak computation time rise from 1ms to 3ms.
-- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive PDF cue:** For both momentum control tasks, the robot was able to withstand impacts with high peak forces and strong impulses without falling.
-- **p. 15 / 5.4 Single Support Experiments - extractive PDF cue:** The goal of this experiment is to show that the controller can handle more complicated tasks involving contact switching and that the robot is able ...
-- **p. 16 / 5.4 Single Support Experiments - extractive PDF cue:** While the robot is performing the task, it is pushed strongly at the hip from the front as can be seen in the video.
-- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive PDF cue:** The legs of the robot are 0.82m high.
-- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive PDF cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
+- **p. 9 / 5.1 Processing Time - extractive body cue:** In the following, however, we construct a more complex stepping task in simulation for the full 25 DoF robot.
+- **p. 15 / 5.4 Single Support Experiments - extractive body cue:** Indeed, while in simulation Cartesian tracking is perfect, on the real robot the tracking performance of the Cartesian task of the swing foot is not ...
+- **p. 9 / 5.1 Processing Time - extractive body cue:** Going from a 14 DoF robot to a 25 DoF robot with similar task setup makes the peak computation time rise from 1ms to 3ms.
+- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive body cue:** For both momentum control tasks, the robot was able to withstand impacts with high peak forces and strong impulses without falling.
+- **p. 15 / 5.4 Single Support Experiments - extractive body cue:** The goal of this experiment is to show that the controller can handle more complicated tasks involving contact switching and that the robot is able ...
+- **p. 16 / 5.4 Single Support Experiments - extractive body cue:** While the robot is performing the task, it is pushed strongly at the hip from the front as can be seen in the video.
+- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** The legs of the robot are 0.82m high.
+- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2 Low-level torque control | EMPIRICAL / REAL-ROBOT OR HARDWARE | This controller design allowed us to achieve good torque tracking performance. | p. 8 (4.2 Low-level torque control) |
 | 4.2 Low-level torque control | EMPIRICAL / REAL-ROBOT OR HARDWARE | It is important to note that such performance was necessary to achieve good performance in the hierarchical inverse dynamics controller. | p. 8 (4.2 Low-level torque control) |
@@ -40,14 +40,14 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** In the following, however, we construct a more complex stepping task in simulation for the full 25 DoF robot.
-- **p. 15 / 5.4 Single Support Experiments - extractive PDF cue:** Indeed, while in simulation Cartesian tracking is perfect, on the real robot the tracking performance of the Cartesian task of the swing foot is not ...
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** Going from a 14 DoF robot to a 25 DoF robot with similar task setup makes the peak computation time rise from 1ms to 3ms.
-- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive PDF cue:** For both momentum control tasks, the robot was able to withstand impacts with high peak forces and strong impulses without falling.
-- **p. 15 / 5.4 Single Support Experiments - extractive PDF cue:** The goal of this experiment is to show that the controller can handle more complicated tasks involving contact switching and that the robot is able ...
-- **p. 16 / 5.4 Single Support Experiments - extractive PDF cue:** While the robot is performing the task, it is pushed strongly at the hip from the front as can be seen in the video.
-- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive PDF cue:** The legs of the robot are 0.82m high.
-- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive PDF cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
+- **p. 9 / 5.1 Processing Time - extractive body cue:** In the following, however, we construct a more complex stepping task in simulation for the full 25 DoF robot.
+- **p. 15 / 5.4 Single Support Experiments - extractive body cue:** Indeed, while in simulation Cartesian tracking is perfect, on the real robot the tracking performance of the Cartesian task of the swing foot is not ...
+- **p. 9 / 5.1 Processing Time - extractive body cue:** Going from a 14 DoF robot to a 25 DoF robot with similar task setup makes the peak computation time rise from 1ms to 3ms.
+- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive body cue:** For both momentum control tasks, the robot was able to withstand impacts with high peak forces and strong impulses without falling.
+- **p. 15 / 5.4 Single Support Experiments - extractive body cue:** The goal of this experiment is to show that the controller can handle more complicated tasks involving contact switching and that the robot is able ...
+- **p. 16 / 5.4 Single Support Experiments - extractive body cue:** While the robot is performing the task, it is pushed strongly at the hip from the front as can be seen in the video.
+- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** The legs of the robot are 0.82m high.
+- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -57,7 +57,7 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In the following, however, we construct a more complex stepping task in simulation for the full 25 DoF robot. | embodiment, simulator version and control stack | p. 9 (5.1 Processing Time), p. 15 (5.4 Single Support Experiments) |
 | Task/environment | Indeed, while in simulation Cartesian tracking is perfect, on the real robot the tracking performance of the Cartesian task of the swing foot is ... | reset, timeout, object/scene variation | p. 15 (5.4 Single Support Experiments), p. 9 (5.1 Processing Time) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 | Primary metric/result | It is important to note that such performance was necessary to achieve good performance in the hierarchical inverse dynamics controller. | numeric claim only at cited anchor | p. 8 (4.2 Low-level torque control) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** 2.1 3 3 eq PD control on CoG (2 -c) × 6 PD control on swing foot 4 25 + 6 eq PD control on ...
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** Going from a 14 DoF robot to a 25 DoF robot with similar task setup makes the peak computation time rise from 1ms to 3ms.
-- **p. 11 / 5.2.1 Specification of the tasks - extractive PDF cue:** (24) or (23) 14 + 6 eq PD control on posture 2 × 6 eq regularizer on GRFs DoFs: 14 max. time: 0.9 ms Table ...
-- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive PDF cue:** The robot was pushed at 4 points on the torso above the hip (from the front, right, back and left) and at 3 points at ...
-- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive PDF cue:** At each of the 7 points we applied 4 pushes of increasing impact up to peak forces of 290 N and impulses of 9.5 Ns, ...
-- **p. 13 / 5.3 Tracking Experiments in Double Support - extractive PDF cue:** We keep the same task hierarchy as in the balance experiments (see Table 2) and make the CoG track sine curves of 0.3 Hz and ...
+- **p. 9 / 5.1 Processing Time - extractive body cue:** 2.1 3 3 eq PD control on CoG (2 -c) × 6 PD control on swing foot 4 25 + 6 eq PD control on ...
+- **p. 9 / 5.1 Processing Time - extractive body cue:** Going from a 14 DoF robot to a 25 DoF robot with similar task setup makes the peak computation time rise from 1ms to 3ms.
+- **p. 11 / 5.2.1 Specification of the tasks - extractive body cue:** (24) or (23) 14 + 6 eq PD control on posture 2 × 6 eq regularizer on GRFs DoFs: 14 max. time: 0.9 ms Table ...
+- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive body cue:** The robot was pushed at 4 points on the torso above the hip (from the front, right, back and left) and at 3 points at ...
+- **p. 11 / 5.2.2 Comparison of momentum controllers - extractive body cue:** At each of the 7 points we applied 4 pushes of increasing impact up to peak forces of 290 N and impulses of 9.5 Ns, ...
+- **p. 13 / 5.3 Tracking Experiments in Double Support - extractive body cue:** We keep the same task hierarchy as in the balance experiments (see Table 2) and make the CoG track sine curves of 0.3 Hz and ...
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 
 ## Limitations and Verification Questions
 
-- **p. 17 / 6.2 Relation to other balancing approaches - extractive PDF cue:** Also, separating the EoM from kinematic contact constraints allows to keep solutions consistent with the dynamics even in postures where the feet cannot be kept ...
-- **p. 17 / 6.3 Relations to other hierarchical inverse dynamics - extractive PDF cue:** On the other hand, it allows for prioritization of inequality constraints, which we exploit e.g. to give more importance to hardware limitations than to contact ...
-- **p. 16 / 6.1 Task design and hierarchies - extractive PDF cue:** The bottom plot shows the CoP of the stance foot, which saturates close to the heel during the push, such that the foot does not ...
-- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive PDF cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
-- **p. 7 / 4 Experimental Setup - extractive PDF cue:** These details are important in order to understand the strengths and limitations of the presented experiments.
-- **p. 9 / 5.1 Processing Time - extractive PDF cue:** The highest two priorities satisfy hardware limitations and dynamic constraints, the third priority task tracks a predefined center of gravity and swing foot motion and ...
+- **p. 17 / 6.2 Relation to other balancing approaches - extractive body cue:** Also, separating the EoM from kinematic contact constraints allows to keep solutions consistent with the dynamics even in postures where the feet cannot be kept ...
+- **p. 17 / 6.3 Relations to other hierarchical inverse dynamics - extractive body cue:** On the other hand, it allows for prioritization of inequality constraints, which we exploit e.g. to give more importance to hardware limitations than to contact ...
+- **p. 16 / 6.1 Task design and hierarchies - extractive body cue:** The bottom plot shows the CoP of the stance foot, which saturates close to the heel during the push, such that the foot does not ...
+- **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
+- **p. 7 / 4 Experimental Setup - extractive body cue:** These details are important in order to understand the strengths and limitations of the presented experiments.
+- **p. 9 / 5.1 Processing Time - extractive body cue:** The highest two priorities satisfy hardware limitations and dynamic constraints, the third priority task tracks a predefined center of gravity and swing foot motion and ...
 
-- **PDF anchors reviewed:** datasets p. 9 (5.1 Processing Time), p. 15 (5.4 Single Support Experiments), p. 9 (5.1 Processing Time), p. 11 (5.2.2 Comparison of momentum controllers), p. 15 (5.4 Single Support Experiments), p. 16 (5.4 Single Support Experiments), metrics p. 11 (5.2.2 Comparison of momentum controllers), p. 11 (5.2.2 Comparison of momentum controllers), p. 8 (4.3 State estimation), p. 8 (4.1 Sarcos Humanoid Robot), p. 9 (5.1 Processing Time), p. 10 (5.2 Balance Control Experiments), baselines p. 16 (5.4 Single Support Experiments), p. 8 (4.4 Dynamic model), p. 9 (5.1 Processing Time), p. 9 (5.1 Processing Time), p. 10 (5.2 Balance Control Experiments), p. 11 (5.2.2 Comparison of momentum controllers), results p. 8 (4.2 Low-level torque control), p. 8 (4.2 Low-level torque control), p. 13 (5.3 Tracking Experiments in Double Support), p. 13 (5.3 Tracking Experiments in Double Support), p. 7 (4 Experimental Setup), p. 10 (5.2 Balance Control Experiments).
+- **Evidence anchors reviewed:** datasets p. 9 (5.1 Processing Time), p. 15 (5.4 Single Support Experiments), p. 9 (5.1 Processing Time), p. 11 (5.2.2 Comparison of momentum controllers), p. 15 (5.4 Single Support Experiments), p. 16 (5.4 Single Support Experiments), metrics p. 11 (5.2.2 Comparison of momentum controllers), p. 11 (5.2.2 Comparison of momentum controllers), p. 8 (4.3 State estimation), p. 8 (4.1 Sarcos Humanoid Robot), p. 9 (5.1 Processing Time), p. 10 (5.2 Balance Control Experiments), baselines p. 16 (5.4 Single Support Experiments), p. 8 (4.4 Dynamic model), p. 9 (5.1 Processing Time), p. 9 (5.1 Processing Time), p. 10 (5.2 Balance Control Experiments), p. 11 (5.2.2 Comparison of momentum controllers), results p. 8 (4.2 Low-level torque control), p. 8 (4.2 Low-level torque control), p. 13 (5.3 Tracking Experiments in Double Support), p. 13 (5.3 Tracking Experiments in Double Support), p. 7 (4 Experimental Setup), p. 10 (5.2 Balance Control Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

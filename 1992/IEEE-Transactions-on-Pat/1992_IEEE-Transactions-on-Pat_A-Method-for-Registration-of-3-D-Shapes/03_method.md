@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://doi.org/10.1109/34.121791; PDF retrieval source: https://doi.org/10.1109/34.121791. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://doi.org/10.1109/34.121791; PDF retrieval source: https://doi.org/10.1109/34.121791. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Then, the iterative closest point (ICP) algorithm is stated, and a theorem is proven concerning its monotonic convergence property. | p. 1 (1) Point sets), p. 8 (B. Convergence Theorem) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Unfortunately ifthe objective function evaluator changes the ‘values inthe state vector duting the optimization iteration, this | p. 8 (B. Convergence Theorem), p. 2 (1) Point sets) |
@@ -85,12 +85,12 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Similarly, the removal of statistical outliers is considered a preprocessing step, is probably best implemented as such, and will also not be ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Given the set of points from one frame, he applies a smoothness assumption to create a smoothing spine approximation of the | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | Any quoted approximate times are given for execution ona single-processor computer rated at 1.6 ‘flops on the 100 x 100 double-precision Linpack ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), p. 2 (1) Point sets), p. 2 (1) Point sets), p. 6 (B. Convergence Theorem), p. 7 (B. Convergence Theorem), objective p. 2 (1) Point sets), p. 3 (A. Point to Parametric Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), temporal p. 1 (1. Istmopuction), p. 2 (1) Point sets), p. 2 (1) Point sets), p. 3 (A. Point to Parametric Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance).
+- **Evidence anchors reviewed:** method p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), p. 2 (1) Point sets), p. 2 (1) Point sets), p. 6 (B. Convergence Theorem), p. 7 (B. Convergence Theorem), objective p. 2 (1) Point sets), p. 3 (A. Point to Parametric Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), temporal p. 1 (1. Istmopuction), p. 2 (1) Point sets), p. 2 (1) Point sets), p. 3 (A. Point to Parametric Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Unfortunately ifthe objective function evaluator changes the ‘values inthe state vector duting the optimization iteration, this (p. 8, B. Convergence Theorem).
+- **Objective/update evidence:** Horn and Harris [33] also addressed the problem of estimating the exact rigid-body motion of the observer given sequentially digitized range image frames of the same terrain, "They describe a ... (p. 2, 1) Point sets).
+- **Temporal/runtime evidence:** Any quoted approximate times are given for execution ona single-processor computer rated at 1.6 ‘flops on the 100 x 100 double-precision Linpack benchmark, (p. 10, VI. EXPERIMENTAL RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=VjI1NnsW4t; PDF retrieval source: https://openreview.net/pdf/1de18a350e0bb48018a9598f9f8511c407b8b26b.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=VjI1NnsW4t; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/166911. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4.5. Analysis and More Results), p. 9 (4.5
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes and ...
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** We train and evaluate our method on three largescale datasets: RealEstate10K (Zhou et al., 2018), a collection of both indoor and outdoor scenes; ACID (Liu ...
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** While RealEstate-10K and ACID encompass a variety of indoor and outdoor scenes, RealEstate-10K predominantly includes indoor environments, whereas ACID features numerous dynamic scenes.
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** This highlights the effectiveness of our method in managing varied scene and object types, reinforcing its applicability for practical view synthesis tasks.
-- **p. 6 / 4.2. Experimental Setting - extractive PDF cue:** Due to absence of GT depth in our datasets, we leverage their pre-trained weights and direct comparison is avoided.
-- **p. 9 / 4.5. Analysis and More Results - extractive PDF cue:** 5d, show that our method achieves a PSNR of over 20 dB for both datasets, significantly outperforming (Hong et al., 2024).
-- **p. 9 / 4.5. Analysis and More Results - extractive PDF cue:** To demonstrate the generalization capability, we conduct a cross-dataset evaluation and compare against (Hong et al., 2024).
-- **p. 6 / 4.2. Experimental Setting - extractive PDF cue:** Evaluation Protocol For evaluation, we follow the protocol outlined by (Hong et al., 2024) using unposed triplet images (I1, I2, It), with the test set ...
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes and ...
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** We train and evaluate our method on three largescale datasets: RealEstate10K (Zhou et al., 2018), a collection of both indoor and outdoor scenes; ACID (Liu ...
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** While RealEstate-10K and ACID encompass a variety of indoor and outdoor scenes, RealEstate-10K predominantly includes indoor environments, whereas ACID features numerous dynamic scenes.
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** This highlights the effectiveness of our method in managing varied scene and object types, reinforcing its applicability for practical view synthesis tasks.
+- **p. 6 / 4.2. Experimental Setting - extractive body cue:** Due to absence of GT depth in our datasets, we leverage their pre-trained weights and direct comparison is avoided.
+- **p. 9 / 4.5. Analysis and More Results - extractive body cue:** 5d, show that our method achieves a PSNR of over 20 dB for both datasets, significantly outperforming (Hong et al., 2024).
+- **p. 9 / 4.5. Analysis and More Results - extractive body cue:** To demonstrate the generalization capability, we conduct a cross-dataset evaluation and compare against (Hong et al., 2024).
+- **p. 6 / 4.2. Experimental Setting - extractive body cue:** Evaluation Protocol For evaluation, we follow the protocol outlined by (Hong et al., 2024) using unposed triplet images (I1, I2, It), with the test set ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4.5. Analysis and More Results), p. 9 (4.5
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.5. Analysis and More Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | 5d, show that our method achieves a PSNR of over 20 dB for both datasets, significantly outperforming (Hong et al., 2024). | p. 9 (4.5. Analysis and More Results) |
 | 4.5. Analysis and More Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | From these results, we find that our method achieves significantly better performance than the others, highlighting our capability to extend to multiple N views. | p. 9 (4.5. Analysis and More Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (4.5. Analysis and More Results), p. 9 (4.5
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes and ...
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** We train and evaluate our method on three largescale datasets: RealEstate10K (Zhou et al., 2018), a collection of both indoor and outdoor scenes; ACID (Liu ...
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** While RealEstate-10K and ACID encompass a variety of indoor and outdoor scenes, RealEstate-10K predominantly includes indoor environments, whereas ACID features numerous dynamic scenes.
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** This highlights the effectiveness of our method in managing varied scene and object types, reinforcing its applicability for practical view synthesis tasks.
-- **p. 6 / 4.2. Experimental Setting - extractive PDF cue:** Due to absence of GT depth in our datasets, we leverage their pre-trained weights and direct comparison is avoided.
-- **p. 9 / 4.5. Analysis and More Results - extractive PDF cue:** 5d, show that our method achieves a PSNR of over 20 dB for both datasets, significantly outperforming (Hong et al., 2024).
-- **p. 9 / 4.5. Analysis and More Results - extractive PDF cue:** To demonstrate the generalization capability, we conduct a cross-dataset evaluation and compare against (Hong et al., 2024).
-- **p. 6 / 4.2. Experimental Setting - extractive PDF cue:** Evaluation Protocol For evaluation, we follow the protocol outlined by (Hong et al., 2024) using unposed triplet images (I1, I2, It), with the test set ...
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes and ...
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** We train and evaluate our method on three largescale datasets: RealEstate10K (Zhou et al., 2018), a collection of both indoor and outdoor scenes; ACID (Liu ...
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** While RealEstate-10K and ACID encompass a variety of indoor and outdoor scenes, RealEstate-10K predominantly includes indoor environments, whereas ACID features numerous dynamic scenes.
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** This highlights the effectiveness of our method in managing varied scene and object types, reinforcing its applicability for practical view synthesis tasks.
+- **p. 6 / 4.2. Experimental Setting - extractive body cue:** Due to absence of GT depth in our datasets, we leverage their pre-trained weights and direct comparison is avoided.
+- **p. 9 / 4.5. Analysis and More Results - extractive body cue:** 5d, show that our method achieves a PSNR of over 20 dB for both datasets, significantly outperforming (Hong et al., 2024).
+- **p. 9 / 4.5. Analysis and More Results - extractive body cue:** To demonstrate the generalization capability, we conduct a cross-dataset evaluation and compare against (Hong et al., 2024).
+- **p. 6 / 4.2. Experimental Setting - extractive body cue:** Evaluation Protocol For evaluation, we follow the protocol outlined by (Hong et al., 2024) using unposed triplet images (I1, I2, It), with the test set ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. Overall architecture and loss of the proposed method. (a) Given a set of unposed images and their camera intrinsics, our method aligns the ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Tab. 4. A possible solution to mitigate this issue is to em- poloy iterative scene-specific optimization steps (Fu et al., 2023) or to assume ground-truth ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2. Proposed refinement and confidence estimation modules. In our Fine Alignment module, we refine depth and pose to improve 3D reconstruction and view synthesis ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative Comparison on RealEstate-10K and ACID. Given two context views (a) and (b), we compare novel view rendering results. Baselines. Following (Hong et ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Novel View Synthesis Performance on RealEstate-10K and ACID. Gray entries indicate methods that use ground truth camera poses during evaluation and are not ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Pose Estimation Performance on RealEstate-10K and ACID. Gray entries indicate methods that were not trained on the same dataset due to missing ground-truth ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Novel View Synthesis and Pose Estimation Performance on DL3DV. We include PixelSplat and MVSplat for reference only. DL3DV Pose-Free
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Component ablations on RealEstate10K. Components Avg PSNR SSIM LPIPS Rotation Translation
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overall architecture and loss of the proposed method. (a) Given a set of unposed images and their camera intrinsics, our method aligns the ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Tab. 4. A possible solution to mitigate this issue is to em- poloy iterative scene-specific optimization steps (Fu et al., 2023) or to assume ground-truth ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2. Proposed refinement and confidence estimation modules. In our Fine Alignment module, we refine depth and pose to improve 3D reconstruction and view synthesis ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative Comparison on RealEstate-10K and ACID. Given two context views (a) and (b), we compare novel view rendering results. Baselines. Following (Hong et ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Novel View Synthesis Performance on RealEstate-10K and ACID. Gray entries indicate methods that use ground truth camera poses during evaluation and are not ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Pose Estimation Performance on RealEstate-10K and ACID. Gray entries indicate methods that were not trained on the same dataset due to missing ground-truth ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Novel View Synthesis and Pose Estimation Performance on DL3DV. We include PixelSplat and MVSplat for reference only. DL3DV Pose-Free
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Component ablations on RealEstate10K. Components Avg PSNR SSIM LPIPS Rotation Translation
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes ... | embodiment, simulator version and control stack | p. 5 (4.2. Experimental Setting), p. 5 (4.2. Experimental Setting) |
 | Task/environment | We train and evaluate our method on three largescale datasets: RealEstate10K (Zhou et al., 2018), a collection of both indoor and outdoor scenes; ACID ... | reset, timeout, object/scene variation | p. 5 (4.2. Experimental Setting), p. 7 (4.3. Experimental Results) |
@@ -122,11 +122,11 @@ PDF body evaluation/result cue (p. 9 (4.5. Analysis and More Results), p. 9 (4.5
 | Primary metric/result | From these results, we find that our method achieves significantly better performance than the others, highlighting our capability to extend to multiple N views. | numeric claim only at cited anchor | p. 9 (4.5. Analysis and More Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes and ...
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** For ACID, we train on 10,935 scenes and evaluate on 1,893 scenes.
-- **p. 5 / 4.2. Experimental Setting - extractive PDF cue:** Lastly, for DL3DV, we train on 10,510 different scenes and evaluate on the standard benchmark set of 140 scenes for testing (Ling et al., 2024).
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** In other words, we cannot train our approach on their dataset, nor can they train theirs on ours. *: We also include a MASt3R variant ...
-- **p. 8 / 4.5. Analysis and More Results - extractive PDF cue:** However, for N = 12, our inference speed is slower than that of DBARF, as our method involves estimating camera poses via a robust solver ...
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** For RealEstate10K, due to some unavailable videos on YouTube, we use a subset of the full dataset, comprising a training set of 21,618 scenes and ...
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** For ACID, we train on 10,935 scenes and evaluate on 1,893 scenes.
+- **p. 5 / 4.2. Experimental Setting - extractive body cue:** Lastly, for DL3DV, we train on 10,510 different scenes and evaluate on the standard benchmark set of 140 scenes for testing (Ling et al., 2024).
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** In other words, we cannot train our approach on their dataset, nor can they train theirs on ours. *: We also include a MASt3R variant ...
+- **p. 8 / 4.5. Analysis and More Results - extractive body cue:** However, for N = 12, our inference speed is slower than that of DBARF, as our method involves estimating camera poses via a robust solver ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 9 (4.5. Analysis and More Results), p. 9 (4.5
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 5. Conclusion - extractive PDF cue:** Our framework, PFSplat, is built on foundation models to overcome inherent limitations of 3DGS.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Similar observations are made in (I-I), (I-II), and (I-V), where we identify that directly tuning the depth network or training only with photometric losses leads ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Tab. 4. A possible solution to mitigate this issue is to em- poloy iterative scene-specific optimization steps (Fu et al., 2023) or to assume ground-truth ...
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** Additionally, our approach also demonstrates superior pose estimation performance on both datasets, even surpassing (Hong et al., 2024) that trains its network with GT camera ...
-- **p. 7 / 4.3. Experimental Results - extractive PDF cue:** In other words, we cannot train our approach on their dataset, nor can they train theirs on ours. *: We also include a MASt3R variant ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** We also demonstrate that without pre-trained weights for the depth and correspondence networks, the training either fails or achieves significantly lower performance.
+- **p. 9 / 5. Conclusion - extractive body cue:** Our framework, PFSplat, is built on foundation models to overcome inherent limitations of 3DGS.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Similar observations are made in (I-I), (I-II), and (I-V), where we identify that directly tuning the depth network or training only with photometric losses leads ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Tab. 4. A possible solution to mitigate this issue is to em- poloy iterative scene-specific optimization steps (Fu et al., 2023) or to assume ground-truth ...
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** Additionally, our approach also demonstrates superior pose estimation performance on both datasets, even surpassing (Hong et al., 2024) that trains its network with GT camera ...
+- **p. 7 / 4.3. Experimental Results - extractive body cue:** In other words, we cannot train our approach on their dataset, nor can they train theirs on ours. *: We also include a MASt3R variant ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** We also demonstrate that without pre-trained weights for the depth and correspondence networks, the training either fails or achieves significantly lower performance.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.2. Experimental Setting), p. 5 (4.2. Experimental Setting), p. 7 (4.3. Experimental Results), p. 7 (4.3. Experimental Results), p. 6 (4.2. Experimental Setting), p. 9 (4.5. Analysis and More Results), metrics p. 7 (4.3. Experimental Results), p. 9 (4.5. Analysis and More Results), p. 7 (4.3. Experimental Results), p. 8 (4.5. Analysis and More Results), p. 8 (4.4. Ablation Study), p. 14 (Figure/Table caption), baselines p. 6 (4.3. Experimental Results), p. 7 (4.3. Experimental Results), p. 7 (4.3. Experimental Results), p. 8 (4.4. Ablation Study), p. 8 (4.5. Analysis and More Results), p. 9 (4.5. Analysis and More Results), results p. 9 (4.5. Analysis and More Results), p. 9 (4.5. Analysis and More Results), p. 8 (4.4. Ablation Study), p. 7 (4.3. Experimental Results), p. 6 (4.3. Experimental Results), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 5 (4.2. Experimental Setting), p. 5 (4.2. Experimental Setting), p. 7 (4.3. Experimental Results), p. 7 (4.3. Experimental Results), p. 6 (4.2. Experimental Setting), p. 9 (4.5. Analysis and More Results), metrics p. 7 (4.3. Experimental Results), p. 9 (4.5. Analysis and More Results), p. 7 (4.3. Experimental Results), p. 8 (4.5. Analysis and More Results), p. 8 (4.4. Ablation Study), p. 14 (Figure/Table caption), baselines p. 6 (4.3. Experimental Results), p. 7 (4.3. Experimental Results), p. 7 (4.3. Experimental Results), p. 8 (4.4. Ablation Study), p. 8 (4.5. Analysis and More Results), p. 9 (4.5. Analysis and More Results), results p. 9 (4.5. Analysis and More Results), p. 9 (4.5. Analysis and More Results), p. 8 (4.4. Ablation Study), p. 7 (4.3. Experimental Results), p. 6 (4.3. Experimental Results), p. 8 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

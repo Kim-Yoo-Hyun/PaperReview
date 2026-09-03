@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2506.23919. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2506.23919. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Q3: Can our framework generalize across diverse environments, tasks, object categories, and robot embodiments?
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** The framework's success across diverse tasks, objects, and environments (simulated and real), combined with its zeroshot deployment on different robot embodiments, demonstrates strong generalization, providing ...
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** The robot arm is fixed to a tabletop, and for each task, objects are placed in randomized
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** For detailed descriptions of our simulation and real-world tasks, please refer to the Appendix B and C.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** We design four distinct real-world tasks to evaluate a range of core manipulation capabilities: Place Tomato in Pan, a foundational pick-and-place task requiring reasoning about ...
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Real World Experiments (Q3) Our framework is tested on four diverse real-world manipulation tasks to validate its practical applicability.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** Our method, Goal-VLA, achieves a remarkable average success rate of 59.9%, significantly outperforming all baselines across a diverse set of eight manipulation tasks.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** For each seed, which defines a unique initial scene arrangement, we conduct 10 independent trials of each method, resulting in 100 evaluation runs per task ...
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Q3: Can our framework generalize across diverse environments, tasks, object categories, and robot embodiments?
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** The framework's success across diverse tasks, objects, and environments (simulated and real), combined with its zeroshot deployment on different robot embodiments, demonstrates strong generalization, providing ...
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** The robot arm is fixed to a tabletop, and for each task, objects are placed in randomized
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** For detailed descriptions of our simulation and real-world tasks, please refer to the Appendix B and C.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** We design four distinct real-world tasks to evaluate a range of core manipulation capabilities: Place Tomato in Pan, a foundational pick-and-place task requiring reasoning about ...
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Real World Experiments (Q3) Our framework is tested on four diverse real-world manipulation tasks to validate its practical applicability.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** Our method, Goal-VLA, achieves a remarkable average success rate of 59.9%, significantly outperforming all baselines across a diverse set of eight manipulation tasks.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** For each seed, which defines a unique initial scene arrangement, we conduct 10 independent trials of each method, resulting in 100 evaluation runs per task ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method, Goal-VLA, achieves a remarkable average success rate of 59.9%, significantly outperforming all baselines across a diverse set of eight manipulation tasks. | p. 6 (IV. EXPERIMENT) |
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table III, our method achieves a 60% average success rate, significantly outperforming baselines like MOKA (22.5%) and MolmoAct (27.5%). | p. 7 (IV. EXPERIMENT) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Q3: Can our framework generalize across diverse environments, tasks, object categories, and robot embodiments?
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** The framework's success across diverse tasks, objects, and environments (simulated and real), combined with its zeroshot deployment on different robot embodiments, demonstrates strong generalization, providing ...
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** The robot arm is fixed to a tabletop, and for each task, objects are placed in randomized
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** For detailed descriptions of our simulation and real-world tasks, please refer to the Appendix B and C.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** We design four distinct real-world tasks to evaluate a range of core manipulation capabilities: Place Tomato in Pan, a foundational pick-and-place task requiring reasoning about ...
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Real World Experiments (Q3) Our framework is tested on four diverse real-world manipulation tasks to validate its practical applicability.
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Q3: Can our framework generalize across diverse environments, tasks, object categories, and robot embodiments?
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** The framework's success across diverse tasks, objects, and environments (simulated and real), combined with its zeroshot deployment on different robot embodiments, demonstrates strong generalization, providing ...
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** The robot arm is fixed to a tabletop, and for each task, objects are placed in randomized
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** For detailed descriptions of our simulation and real-world tasks, please refer to the Appendix B and C.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** We design four distinct real-world tasks to evaluate a range of core manipulation capabilities: Place Tomato in Pan, a foundational pick-and-place task requiring reasoning about ...
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Real World Experiments (Q3) Our framework is tested on four diverse real-world manipulation tasks to validate its practical applicability.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to generate ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: Overview of the Goal-VLA framework, which decouples the manipulation pipeline into three stages: (a) Goal State Reasoning: A VLM generates a goal image ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3: An example of our Reflection-through-Synthesis process, which corrects a semantically correct but infeasible goal by refining the generation prompt.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4: Ablation Study. The performance of our full model ("World Model w/ Instruction & max 3 Reflection"), shown by the purple line, surpasses all ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Visualizations of Real-World Experiments. Figure 5 provides qualitative evidence for these findings. The visualizations illustrate how the generated goal image captures the task's ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to generate ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of the Goal-VLA framework, which decouples the manipulation pipeline into three stages: (a) Goal State Reasoning: A VLM generates a goal image ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: An example of our Reflection-through-Synthesis process, which corrects a semantically correct but infeasible goal by refining the generation prompt.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: Ablation Study. The performance of our full model ("World Model w/ Instruction & max 3 Reflection"), shown by the purple line, surpasses all ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Visualizations of Real-World Experiments. Figure 5 provides qualitative evidence for these findings. The visualizations illustrate how the generated goal image captures the task's ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Q3: Can our framework generalize across diverse environments, tasks, object categories, and robot embodiments? | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT) |
 | Task/environment | The framework's success across diverse tasks, objects, and environments (simulated and real), combined with its zeroshot deployment on different robot embodiments, demonstrates strong generalization, ... | reset, timeout, object/scene variation | p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT) |
@@ -113,7 +113,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | Primary metric/result | As shown in Table III, our method achieves a 60% average success rate, significantly outperforming baselines like MOKA (22.5%) and MolmoAct (27.5%). | numeric claim only at cited anchor | p. 7 (IV. EXPERIMENT) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** We conduct 10 trials for each task, with detailed results presented in Table III and Figure 5.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** We conduct 10 trials for each task, with detailed results presented in Table III and Figure 5.
 
 ## Generalization and Failure Cases
 
@@ -149,13 +149,13 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 
 ## Limitations and Verification Questions
 
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** Reflection's Necessary: Figure 3 highlights a typical failure mode of image generation.
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Failures originating from the Spatial Grounding module are the primary obstacle in several precision-demanding tasks.
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Failure Cases Analysis In our real-world experiments, we observe several typical failure modes as different tasks place varying demands on each module of our framework.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to generate ...
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** To robustly assess performance and account for variations in object placement, each task is evaluated across 10 random seeds.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** Reflection's Necessary: Figure 3 highlights a typical failure mode of image generation.
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Failures originating from the Spatial Grounding module are the primary obstacle in several precision-demanding tasks.
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Failure Cases Analysis In our real-world experiments, we observe several typical failure modes as different tasks place varying demands on each module of our framework.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to generate ...
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** To robustly assess performance and account for variations in object placement, each task is evaluated across 10 random seeds.
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

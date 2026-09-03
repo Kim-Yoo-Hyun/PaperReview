@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1407_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1407_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 
 ## Evaluation Body Digest
 
-- **p. 11 / 5 Experiments - extractive PDF cue:** We mainly consider 2 specific transfer settings in our experiments: (i) zero-shot: models trained by removing all the scenes from the target dataset, tested on ...
-- **p. 11 / 5 Experiments - extractive PDF cue:** We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test split ...
-- **p. 10 / 5 Experiments - extractive PDF cue:** Initially, when GPS is trained directly on the training sets of benchmark datasets, labeled as Ours (scratch), it underperforms compared to existing models that employ ...
-- **p. 12 / 5 Experiments - extractive PDF cue:** We pre-train GPS on SceneVerse and fine-tune the model on the 3D-QA dataset to compare with state-of-the-art models. ‚ In the OV-Seg task, as GPS ...
-- **p. 12 / 5 Experiments - extractive PDF cue:** As SceneVerse currently contains only descriptions of objects and scenes, we believe involving more types of language descriptions (e.g., question-answer pairs, dialogues) is a promising ...
-- **p. 14 / 5 Experiments - extractive PDF cue:** 8, models trained on synthetic subsets demonstrate remarkable performance on their corresponding test sets while suffering when transferred to real or other synthetic scenes.
-- **p. 10 / 5 Experiments - extractive PDF cue:** 2, GPS trained on SceneVerse achieves state-of-the-art results on all existing 3D-VL grounding benchmarks.
-- **p. 13 / 5 Experiments - extractive PDF cue:** We assess the performance of models trained using various scene-text sources, specifically focusing on their performance in the ScanRefer dataset without additional fine-tuning.
+- **p. 11 / 5 Experiments - extractive body cue:** We mainly consider 2 specific transfer settings in our experiments: (i) zero-shot: models trained by removing all the scenes from the target dataset, tested on ...
+- **p. 11 / 5 Experiments - extractive body cue:** We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test split ...
+- **p. 10 / 5 Experiments - extractive body cue:** Initially, when GPS is trained directly on the training sets of benchmark datasets, labeled as Ours (scratch), it underperforms compared to existing models that employ ...
+- **p. 12 / 5 Experiments - extractive body cue:** We pre-train GPS on SceneVerse and fine-tune the model on the 3D-QA dataset to compare with state-of-the-art models. ‚ In the OV-Seg task, as GPS ...
+- **p. 12 / 5 Experiments - extractive body cue:** As SceneVerse currently contains only descriptions of objects and scenes, we believe involving more types of language descriptions (e.g., question-answer pairs, dialogues) is a promising ...
+- **p. 14 / 5 Experiments - extractive body cue:** 8, models trained on synthetic subsets demonstrate remarkable performance on their corresponding test sets while suffering when transferred to real or other synthetic scenes.
+- **p. 10 / 5 Experiments - extractive body cue:** 2, GPS trained on SceneVerse achieves state-of-the-art results on all existing 3D-VL grounding benchmarks.
+- **p. 13 / 5 Experiments - extractive body cue:** We assess the performance of models trained using various scene-text sources, specifically focusing on their performance in the ScanRefer dataset without additional fine-tuning.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | However, when presented with extensive training data in SceneVerse, the results of our model without additional fine-tuning, i.e., Ours (pre-train), significantly improves and already ... | p. 10 (5 Experiments) |
 | 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 5, our model achieves state-of-the-art results on both benchmarks, outperforming recent strong pre-training-based baselines like 3D-VisTA and 3D-LLM. | p. 12 (5 Experiments) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 11 / 5 Experiments - extractive PDF cue:** We mainly consider 2 specific transfer settings in our experiments: (i) zero-shot: models trained by removing all the scenes from the target dataset, tested on ...
-- **p. 11 / 5 Experiments - extractive PDF cue:** We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test split ...
-- **p. 10 / 5 Experiments - extractive PDF cue:** Initially, when GPS is trained directly on the training sets of benchmark datasets, labeled as Ours (scratch), it underperforms compared to existing models that employ ...
-- **p. 12 / 5 Experiments - extractive PDF cue:** We pre-train GPS on SceneVerse and fine-tune the model on the 3D-QA dataset to compare with state-of-the-art models. ‚ In the OV-Seg task, as GPS ...
-- **p. 12 / 5 Experiments - extractive PDF cue:** As SceneVerse currently contains only descriptions of objects and scenes, we believe involving more types of language descriptions (e.g., question-answer pairs, dialogues) is a promising ...
-- **p. 14 / 5 Experiments - extractive PDF cue:** 8, models trained on synthetic subsets demonstrate remarkable performance on their corresponding test sets while suffering when transferred to real or other synthetic scenes.
-- **p. 10 / 5 Experiments - extractive PDF cue:** 2, GPS trained on SceneVerse achieves state-of-the-art results on all existing 3D-VL grounding benchmarks.
-- **p. 13 / 5 Experiments - extractive PDF cue:** We assess the performance of models trained using various scene-text sources, specifically focusing on their performance in the ScanRefer dataset without additional fine-tuning.
+- **p. 11 / 5 Experiments - extractive body cue:** We mainly consider 2 specific transfer settings in our experiments: (i) zero-shot: models trained by removing all the scenes from the target dataset, tested on ...
+- **p. 11 / 5 Experiments - extractive body cue:** We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test split ...
+- **p. 10 / 5 Experiments - extractive body cue:** Initially, when GPS is trained directly on the training sets of benchmark datasets, labeled as Ours (scratch), it underperforms compared to existing models that employ ...
+- **p. 12 / 5 Experiments - extractive body cue:** We pre-train GPS on SceneVerse and fine-tune the model on the 3D-QA dataset to compare with state-of-the-art models. ‚ In the OV-Seg task, as GPS ...
+- **p. 12 / 5 Experiments - extractive body cue:** As SceneVerse currently contains only descriptions of objects and scenes, we believe involving more types of language descriptions (e.g., question-answer pairs, dialogues) is a promising ...
+- **p. 14 / 5 Experiments - extractive body cue:** 8, models trained on synthetic subsets demonstrate remarkable performance on their corresponding test sets while suffering when transferred to real or other synthetic scenes.
+- **p. 10 / 5 Experiments - extractive body cue:** 2, GPS trained on SceneVerse achieves state-of-the-art results on all existing 3D-VL grounding benchmarks.
+- **p. 13 / 5 Experiments - extractive body cue:** We assess the performance of models trained using various scene-text sources, specifically focusing on their performance in the ScanRefer dataset without additional fine-tuning.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of SceneVerse. A million-scale 3D vision-language dataset that comprises over 68K various 3D indoor scenes and 2.5M aligned scene-language pairs in the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of SceneVerse with existing 3DVL Datasets. Scen- eVerse expands the data scale of prior work by order of magnitude. "VG" stands for ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: SceneVerse collection and statistics. Given a 3D scene (a), our automated pipeline (c) generates three types of description including scene caption, object caption ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 3: Overview of GPS model. We use contrastive alignment at three levels Lobj, Lscene, and Lref and a masked language modeling objective LMLM for ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 2: 3D visual grounding results on Nr3D, Sr3D, and ScanRefer. We use "pre-train" for our model trained on SceneVerse w/o additional fine-tuning, and "fine-tune" ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 3: Zero-shot transfer on existing benchmarks. "SR" stands for ScanRefer.
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 4: Zero-shot transfer on Scen- eVerse-val. Evaluation uses GT object proposals following Nr3D/Sr3D.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 5: 3D question answering re- sults on ScanQA and SQA3D. We re- port EM@1 score on ScanQA and SQA3D evaluation sets.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of SceneVerse. A million-scale 3D vision-language dataset that comprises over 68K various 3D indoor scenes and 2.5M aligned scene-language pairs in the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Comparison of SceneVerse with existing 3DVL Datasets. Scen- eVerse expands the data scale of prior work by order of magnitude. "VG" stands for ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: SceneVerse collection and statistics. Given a 3D scene (a), our automated pipeline (c) generates three types of description including scene caption, object caption ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 3: Overview of GPS model. We use contrastive alignment at three levels Lobj, Lscene, and Lref and a masked language modeling objective LMLM for ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: 3D visual grounding results on Nr3D, Sr3D, and ScanRefer. We use "pre-train" for our model trained on SceneVerse w/o additional fine-tuning, and "fine-tune" ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Zero-shot transfer on existing benchmarks. "SR" stands for ScanRefer.
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 4: Zero-shot transfer on Scen- eVerse-val. Evaluation uses GT object proposals following Nr3D/Sr3D.
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 5: 3D question answering re- sults on ScanQA and SQA3D. We re- port EM@1 score on ScanQA and SQA3D evaluation sets.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We mainly consider 2 specific transfer settings in our experiments: (i) zero-shot: models trained by removing all the scenes from the target dataset, tested ... | embodiment, simulator version and control stack | p. 11 (5 Experiments), p. 11 (5 Experiments) |
 | Task/environment | We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test ... | reset, timeout, object/scene variation | p. 11 (5 Experiments), p. 10 (5 Experiments) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 3 (1 Introduction), p. 7 (3. A bed with a striped comforter. (0.83)) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (1 Introduction), p. 6 (3. A bed with a striped comforter. (0.83)) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 1 (Body text (section not recovered)), p. 3 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -123,11 +123,11 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 | Primary metric/result | 5, our model achieves state-of-the-art results on both benchmarks, outperforming recent strong pre-training-based baselines like 3D-VisTA and 3D-LLM. | numeric claim only at cited anchor | p. 12 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 11 / 5 Experiments - extractive PDF cue:** We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test split ...
-- **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive PDF cue:** Scaling 3D Vision-Language Learning for Grounded Scene Understanding 7 Scene Captioning The scene-level captions emphasize global information, portraying the key objects in the scene along ...
-- **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive PDF cue:** The dataset contains 1.5M object instances ranging in 2290 object categories.
-- **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive PDF cue:** 4.1 Object-level Grounding Given a 3D scene point cloud S, we use an off-the-shelf 3D object segmentation model to decompose it into a bag of ...
-- **p. 8 / 3. A bed with a striped comforter. (0.83) - extractive PDF cue:** 4.2 Scene-level Grounding With aligned object features, we encode the scene by incorporating object spatial locations into the extracted object features.
+- **p. 11 / 5 Experiments - extractive body cue:** We create SceneVerse-val using 8.5K annotated object referrals of 271 scenes in MultiScan, and randomly split the scenes following a 4:1 train / test split ...
+- **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive body cue:** Scaling 3D Vision-Language Learning for Grounded Scene Understanding 7 Scene Captioning The scene-level captions emphasize global information, portraying the key objects in the scene along ...
+- **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive body cue:** The dataset contains 1.5M object instances ranging in 2290 object categories.
+- **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive body cue:** 4.1 Object-level Grounding Given a 3D scene point cloud S, we use an off-the-shelf 3D object segmentation model to decompose it into a bag of ...
+- **p. 8 / 3. A bed with a striped comforter. (0.83) - extractive body cue:** 4.2 Scene-level Grounding With aligned object features, we encode the scene by incorporating object spatial locations into the extracted object features.
 
 ## Generalization and Failure Cases
 
@@ -158,7 +158,7 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 11 (5 Experiments), p. 11 (5 Experiments), p. 10 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), metrics p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), p. 12 (Figure/Table caption), baselines p. 12 (5 Experiments), p. 13 (5 Experiments), p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), results p. 10 (5 Experiments), p. 12 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), p. 10 (5 Experiments), p. 12 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 11 (5 Experiments), p. 11 (5 Experiments), p. 10 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), metrics p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), p. 12 (Figure/Table caption), baselines p. 12 (5 Experiments), p. 13 (5 Experiments), p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), results p. 10 (5 Experiments), p. 12 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), p. 10 (5 Experiments), p. 12 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

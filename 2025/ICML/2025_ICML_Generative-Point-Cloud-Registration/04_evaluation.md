@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yoaErYlGE9; PDF retrieval source: https://openreview.net/pdf/21029630f918c57f19a095303310a01e9559a351.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yoaErYlGE9; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167215. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Comparison with Existing Methods - extractive PDF cue:** We first perform model evaluation on a widely-used, large-scale indoor benchmark dataset, ScanNet (Dai et al., 2017).
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset.
-- **p. 7 / 4.2. Comparison with Existing Methods - extractive PDF cue:** We next evaluate our method on 3DMatch (Zeng et al., 2017), another widely-used benchmark dataset for 3D registration.
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** Ablation studies on 3DMatch (Zeng et al., 2017) dataset.
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching performance.
-- **p. 7 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version.
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Following (El Banani et al., 2021; Yuan et al., 2023), we use rotation error, translation error, and Chamfer error, including the accuracy across varying thresholds ...
-- **p. 7 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** We first evaluate the performance contribution of our developed MatchControlNet: (i) The top block of Table 3 demonstrates that, compared to using generated image pairs ...
+- **p. 6 / 4.2. Comparison with Existing Methods - extractive body cue:** We first perform model evaluation on a widely-used, large-scale indoor benchmark dataset, ScanNet (Dai et al., 2017).
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset.
+- **p. 7 / 4.2. Comparison with Existing Methods - extractive body cue:** We next evaluate our method on 3DMatch (Zeng et al., 2017), another widely-used benchmark dataset for 3D registration.
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** Ablation studies on 3DMatch (Zeng et al., 2017) dataset.
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching performance.
+- **p. 7 / 4.3. Ablation Studies and Analysis - extractive body cue:** Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version.
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Following (El Banani et al., 2021; Yuan et al., 2023), we use rotation error, translation error, and Chamfer error, including the accuracy across varying thresholds ...
+- **p. 7 / 4.3. Ablation Studies and Analysis - extractive body cue:** We first evaluate the performance contribution of our developed MatchControlNet: (i) The top block of Table 3 demonstrates that, compared to using generated image pairs ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Studies and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version. | p. 7 (4.3. Ablation Studies and Analysis) |
 | 4.3. Ablation Studies and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | Increasing the number of finetuning samples (e.g., to 3K or 5K) provides additional improvements; however, models trained on 3K or 5K samples show comparable ... | p. 7 (4.3. Ablation Studies and Analysis) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Comparison with Existing Methods - extractive PDF cue:** We first perform model evaluation on a widely-used, large-scale indoor benchmark dataset, ScanNet (Dai et al., 2017).
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset.
-- **p. 7 / 4.2. Comparison with Existing Methods - extractive PDF cue:** We next evaluate our method on 3DMatch (Zeng et al., 2017), another widely-used benchmark dataset for 3D registration.
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** Ablation studies on 3DMatch (Zeng et al., 2017) dataset.
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching performance.
-- **p. 7 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version.
+- **p. 6 / 4.2. Comparison with Existing Methods - extractive body cue:** We first perform model evaluation on a widely-used, large-scale indoor benchmark dataset, ScanNet (Dai et al., 2017).
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset.
+- **p. 7 / 4.2. Comparison with Existing Methods - extractive body cue:** We next evaluate our method on 3DMatch (Zeng et al., 2017), another widely-used benchmark dataset for 3D registration.
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** Ablation studies on 3DMatch (Zeng et al., 2017) dataset.
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching performance.
+- **p. 7 / 4.3. Ablation Studies and Analysis - extractive body cue:** Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Paradigm comparison of our generative point cloud registration with conventional methods. Unlike geometry-only matching in previous methods, our approach introduces Match- ControlNet, a ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Pipeline of Generative Point Cloud Registration. Given a source and a target point cloud, we first apply Match-ControlNet to generate their corresponding images. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Instead of independently performing ControlNet to gen- erate source and target images, our Match-ControlNet integrates their denoising generation processes into a unified framework, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Compared to the zero-shot Match-ControlNet (top), the finetuned Match-ControlNet can tend to achieve higher 2D-3D geometric consistency and the cross-view texture consistency. information ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset. Rotation (deg) Translation (cm) Chamfer ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Left: The visualization of the generated RGB image pairs and the formed color source and target point clouds; Right: In low-overlap cases, the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison of the methods on rotation, translation, and Chamfer distance on 3DMatch (Zeng et al., 2017) benchmark dataset. Rotation (deg) Translation (cm) Chamfer ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation studies on 3DMatch (Zeng et al., 2017) dataset. (*) denotes the default configuration. Rotation (deg) Translation (cm) Chamfer (mm) Accuracy ↑ Error↓ ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Paradigm comparison of our generative point cloud registration with conventional methods. Unlike geometry-only matching in previous methods, our approach introduces Match- ControlNet, a ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Pipeline of Generative Point Cloud Registration. Given a source and a target point cloud, we first apply Match-ControlNet to generate their corresponding images. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Instead of independently performing ControlNet to gen- erate source and target images, our Match-ControlNet integrates their denoising generation processes into a unified framework, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Compared to the zero-shot Match-ControlNet (top), the finetuned Match-ControlNet can tend to achieve higher 2D-3D geometric consistency and the cross-view texture consistency. information ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset. Rotation (deg) Translation (cm) Chamfer ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Left: The visualization of the generated RGB image pairs and the formed color source and target point clouds; Right: In low-overlap cases, the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparison of the methods on rotation, translation, and Chamfer distance on 3DMatch (Zeng et al., 2017) benchmark dataset. Rotation (deg) Translation (cm) Chamfer ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation studies on 3DMatch (Zeng et al., 2017) dataset. (*) denotes the default configuration. Rotation (deg) Translation (cm) Chamfer (mm) Accuracy ↑ Error↓ ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We first perform model evaluation on a widely-used, large-scale indoor benchmark dataset, ScanNet (Dai et al., 2017). | embodiment, simulator version and control stack | p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.1. Experimental Setting) |
 | Task/environment | Comparison of the methods on rotation, translation, and Chamfer distance on ScanNet (Dai et al., 2017) benchmark dataset. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setting), p. 7 (4.2. Comparison with Existing Methods) |
@@ -121,8 +121,8 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 
 | Primary metric/result | Increasing the number of finetuning samples (e.g., to 3K or 5K) provides additional improvements; however, models trained on 3K or 5K samples show comparable ... | numeric claim only at cited anchor | p. 7 (4.3. Ablation Studies and Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setting - extractive PDF cue:** During the few-shot fine-tuning stage, we randomly select 3,000 sample pairs from the Scan5
-- **p. 6 / 4.2. Comparison with Existing Methods - extractive PDF cue:** We follow the official data split to divide this dataset into the training, validation, and testing subsets, and construct view pairs by sampling image pairs ...
+- **p. 5 / 4.1. Experimental Setting - extractive body cue:** During the few-shot fine-tuning stage, we randomly select 3,000 sample pairs from the Scan5
+- **p. 6 / 4.2. Comparison with Existing Methods - extractive body cue:** We follow the official data split to divide this dataset into the training, validation, and testing subsets, and construct view pairs by sampling image pairs ...
 
 ## Generalization and Failure Cases
 
@@ -158,12 +158,12 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 
 
 ## Limitations and Verification Questions
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Pipeline of Generative Point Cloud Registration. Given a source and a target point cloud, we first apply Match-ControlNet to generate their corresponding images. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Instead of independently performing ControlNet to gen- erate source and target images, our Match-ControlNet integrates their denoising generation processes into a unified framework, ...
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching performance.
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** Our results indicate that both overly high ω (which overemphasizes geometry) and overly low ω (which overemphasizes color) lead to degraded registration accuracy.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Pipeline of Generative Point Cloud Registration. Given a source and a target point cloud, we first apply Match-ControlNet to generate their corresponding images. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Instead of independently performing ControlNet to gen- erate source and target images, our Match-ControlNet integrates their denoising generation processes into a unified framework, ...
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching performance.
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** Our results indicate that both overly high ω (which overemphasizes geometry) and overly low ω (which overemphasizes color) lead to degraded registration accuracy.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.1. Experimental Setting), p. 7 (4.2. Comparison with Existing Methods), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis), metrics p. 6 (4.1. Experimental Setting), p. 6 (Figure/Table caption), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Studies and Analysis), baselines p. 6 (4.2. Comparison with Existing Methods), p. 7 (4.2. Comparison with Existing Methods), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 5 (Figure/Table caption), p. 6 (4.1. Experimental Setting), results p. 7 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 6 (4.1. Experimental Setting), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.1. Experimental Setting), p. 7 (4.2. Comparison with Existing Methods), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis), metrics p. 6 (4.1. Experimental Setting), p. 6 (Figure/Table caption), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Studies and Analysis), baselines p. 6 (4.2. Comparison with Existing Methods), p. 7 (4.2. Comparison with Existing Methods), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 5 (Figure/Table caption), p. 6 (4.1. Experimental Setting), results p. 7 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 6 (4.1. Experimental Setting), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

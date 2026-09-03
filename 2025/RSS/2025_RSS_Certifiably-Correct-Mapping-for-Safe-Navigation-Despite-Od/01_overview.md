@@ -1,8 +1,10 @@
 # Certifiably-Correct Mapping for Safe Navigation Despite Odometry Drift
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p007.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p007.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p007.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p007.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p007.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ World models, safety, uncertainty, and recovery의 navigation 문제를 이해�
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 navigation 문제를 이해하기 위해 읽는다. 본문은 Without quantified error bounds, guaranteeing the safety of a closed-loop robotic system remains a challenge.를 문제로 두고, In Section IV and V we introduce the deflation mechanism for both map representations, In Section VI we propose methods to use the certified maps to acheive safe navigation, Finally in Section ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Without quantified error bounds, guaranteeing the safety of a closed-loop robotic system remains a challenge. (p. 1, 1. INTRODUCTION).
+- **Actual contribution:** In Section IV and V we introduce the deflation mechanism for both map representations, In Section VI we propose methods to use the certified maps to acheive safe navigation, Finally ... (p. 2, 1. INTRODUCTION).
+- **Evaluation boundary:** Localization and Mapping (SLAM) systems now report translation error rates below 1% (19, 20], enabling more reliable navigation in real-world scenarios. (p. 2, experimental results).
+- **Explicit failure boundary:** In the baseline methods, the violation rates are between 6 and 60%, while in the certified methods, the violation rates are between 03%, Note, we cannot expect the certified methods ... (p. 9, Results).

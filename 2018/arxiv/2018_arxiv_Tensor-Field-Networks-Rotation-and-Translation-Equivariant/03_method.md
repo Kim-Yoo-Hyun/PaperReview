@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.08219; PDF retrieval source: https://arxiv.org/pdf/1802.08219. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.08219; PDF retrieval source: https://arxiv.org/pdf/1802.08219. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,29 +10,28 @@ PDF body method statement (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p.
 
 ## Method Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
-- **p. 2 / Abstract - extractive PDF cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
-- **p. 2 / Abstract - extractive PDF cue:** We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric ...
-- **p. 1 / Abstract - extractive PDF cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
-- **p. 1 / Abstract - extractive PDF cue:** Work in progress. arXiv:1802.08219v3 [cs.LG] 18 May 2018
-- **p. 1 / Abstract - extractive PDF cue:** Our network uses filters built from spherical harmonics; due to the mathematical consequences of this filter choice, each layer accepts as input (and guarantees as ...
+- **p. 1 / Abstract - extractive body cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
+- **p. 2 / Abstract - extractive body cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
+- **p. 2 / Abstract - extractive body cue:** We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric ...
+- **p. 1 / Abstract - extractive body cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
+- **p. 1 / Abstract - extractive body cue:** Our network uses filters built from spherical harmonics; due to the mathematical consequences of this filter choice, each layer accepts as input (and guarantees as ...
 
 ## Design Rationale
 
-- **p. 1 / Abstract - extractive PDF cue:** In this paper, we present a family of networks that enjoy richer equivariance: the symmetries of 3D Euclidean space.
-- **p. 1 / Abstract - extractive PDF cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
+- **p. 1 / Abstract - extractive body cue:** In this paper, we present a family of networks that enjoy richer equivariance: the symmetries of 3D Euclidean space.
+- **p. 1 / Abstract - extractive body cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
 
 ## Source Evidence Cues
 
-- **p. 1 / Abstract - extractive PDF cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
-- **p. 2 / Abstract - extractive PDF cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
-- **p. 2 / Abstract - extractive PDF cue:** We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric ...
-- **p. 1 / Abstract - extractive PDF cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
+- **p. 1 / Abstract - extractive body cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
+- **p. 2 / Abstract - extractive body cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
+- **p. 2 / Abstract - extractive body cue:** We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric ...
+- **p. 1 / Abstract - extractive body cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer. | p. 1 (Abstract), p. 2 (Abstract) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training ... | p. 2 (Abstract), p. 2 (Abstract) |
@@ -42,7 +41,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p.
 
 ## Objective / Update Rule
 
-- **p. 1 / Abstract - extractive PDF cue:** Work in progress. arXiv:1802.08219v3 [cs.LG] 18 May 2018
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -58,10 +56,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p.
 
 ## Observation–State–Action Interface
 
-- **p. 1 / Abstract - extractive PDF cue:** Our network uses filters built from spherical harmonics; due to the mathematical consequences of this filter choice, each layer accepts as input (and guarantees as ...
-- **p. 2 / Abstract - extractive PDF cue:** We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric ...
-- **p. 1 / Abstract - extractive PDF cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
-- **p. 2 / Abstract - extractive PDF cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
+- **p. 1 / Abstract - extractive body cue:** Our network uses filters built from spherical harmonics; due to the mathematical consequences of this filter choice, each layer accepts as input (and guarantees as ...
+- **p. 2 / Abstract - extractive body cue:** We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric ...
+- **p. 1 / Abstract - extractive body cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
+- **p. 2 / Abstract - extractive body cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -76,7 +74,7 @@ PDF body method statement (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p.
 
 ## Training vs Inference
 
-- **p. 2 / Abstract - extractive PDF cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
+- **p. 2 / Abstract - extractive body cue:** Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -96,12 +94,12 @@ PDF body method statement (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p.
 
 ## Failure and Ablation Link
 
-- **p. 2 / Abstract - extractive PDF cue:** This is significantly more important in 3D than in 2D: Without equivariant filters like those in our design, achieving an angular resolution of δ would ...
-- **p. 2 / Abstract - extractive PDF cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
-- **p. 1 / Abstract - extractive PDF cue:** 3D rotation equivariance removes the need for data augmentation to identify features in arbitrary orientations.
-- **p. 1 / Abstract - extractive PDF cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: A hypothetical example input and out- put of the missing point network. (A) A benzene molecule with hydrogen removed (B) The relative output ...
-- **p. 7 / 2 Related work - extractive PDF cue:** Any network that relies solely upon distances (such as SchNet [2]) or angles between points (such as ANI-1 [15]) cannot distinguish these shapes, but ours ...
+- **p. 2 / Abstract - extractive body cue:** This is significantly more important in 3D than in 2D: Without equivariant filters like those in our design, achieving an angular resolution of δ would ...
+- **p. 2 / Abstract - extractive body cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
+- **p. 1 / Abstract - extractive body cue:** 3D rotation equivariance removes the need for data augmentation to identify features in arbitrary orientations.
+- **p. 1 / Abstract - extractive body cue:** 1 Motivation Convolutional neural networks are translation-equivariant, which means that features can be identified anywhere in a given input.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: A hypothetical example input and out- put of the missing point network. (A) A benzene molecule with hydrogen removed (B) The relative output ...
+- **p. 7 / 2 Related work - extractive body cue:** Any network that relies solely upon distances (such as SchNet [2]) or angles between points (such as ANI-1 [15]) cannot distinguish these shapes, but ours ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -115,7 +113,7 @@ PDF body method statement (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstract), objective p. 1 (Abstract), temporal p. 1 (Abstract), p. 2 (2 Related work), p. 3 (2 Related work), p. 6 (2 Related work), p. 6 (2 Related work), p. 7 (2 Related work).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstract), objective p. 1 (Abstract), temporal p. 1 (Abstract), p. 2 (2 Related work), p. 3 (2 Related work), p. 6 (2 Related work), p. 6 (2 Related work), p. 7 (2 Related work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

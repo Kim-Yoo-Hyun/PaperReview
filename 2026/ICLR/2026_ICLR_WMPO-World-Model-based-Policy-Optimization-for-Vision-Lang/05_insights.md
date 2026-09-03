@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 Given c initial frames I0:c, the policy πθ takes the most recent m frames and language instruction g as input and predicts an action chunk 1 , i.e., ai:i+K ∼πθ(Ii-m:i, g).를 Initial State Language Instruction 𝑠0 𝑔 𝜋𝜃 Policy Model Update መ𝐴𝑖 መ𝐴1 መ𝐴𝐺로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The baseline policy, trained only on expert demonstrations, has never observed collisions during training; it continues to push the square against the stick until the maximum time horizon is reached, resulting in ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Vision-Language-Action (VLA) models [1-3] have emerged as a promising paradigm for general-purpose robotic manipulation, enabling robots to follow natural language instructions in complex, unstructured environments. (p. 1, 1 Introduction).
+- **Paper-specific mechanism:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is 0 128 256 Rollout Budget 45 50 55 60 65 Success Rate (%) Base Policy DPO WMPO Figure 6 Lifelong learning results of WMPO and baselines. (p. 9, 4 Experiments); the relevant task/metric cue is Performance is reported as the task success rate (%). (p. 7, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory. (p. 15, C Real World Cases).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We conduct extensive experiments to evaluate the effectiveness of WMPO, focusing on the following questions: (1) can WMPO outperform online and offline RL in simulation environments; (2) how does the behavior of ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Results show that WMPO consistently outperforms both GRPO and DPO baselines under different budgets..
-4. Report the body metric and its denominator/aggregation: Furthermore, we evaluate the reward model and find that it achieves an F1 score above 0.95 across all tasks, reliably distinguishing success from failure and effectively mitigating reward hacking..
-5. Re-run the body-reported ablation/failure condition: These trajectories are further used to fine-tune a world model, which predicts the next K = 8 frames given c = 4 conditioning frames and one action chunk..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Vision-Language-Action (VLA) models [1-3] have emerged as a promising paradigm for general-purpose robotic manipulation, enabling robots to follow natural language instructions in complex, unstructured environments. (p. 1, 1 Introduction); preserve the objective/update rule: The overall training procedure consists of three components: (1) Imagined Trajectory Generation, where policy model πθold and world model pϕ interact alternately to generate a full imagined trajectory; (2) Trajectory ... (p. 4, 1. Imagined Trajectory Generation).
+2. Use the paper-reported task/data/environment cue: We conduct extensive experiments to evaluate the effectiveness of WMPO, focusing on the following questions: (1) can WMPO outperform online and offline RL in simulation environments; (2) how does the ... (p. 6, 4 Experiments).
+3. Compare against the reported or matched baseline: Results show that WMPO consistently outperforms both GRPO and DPO baselines under different budgets. (p. 7, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: Performance is reported as the task success rate (%). (p. 7, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: We conduct extensive experiments to evaluate the effectiveness of WMPO, focusing on the following questions: (1) can WMPO outperform online and offline RL in simulation environments; (2) how does the ... (p. 6, 4 Experiments); if none is reported, design one around: In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory. (p. 15, C Real World Cases).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation); the primary result is directionally consistent at p. 6 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 9 (4 Experiments), p. 10 (4 Experiments), p. 6 (4 Experiments), and measure the boundary at p. 15 (C Real World Cases), p. 8 (4 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 World, Model-based, Policy mechanism이 Results show that WMPO consistently outperforms both GRPO and DPO baselines under different budgets. 대비 Furthermore, we evaluate the reward model and find that it achieves an F1 score above 0.95 across all ...을 개선하고, The baseline policy, trained only on expert demonstrations, has never observed collisions during training; it continues ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Vision-Language-Action (VLA) models [1-3] have emerged as a promising paradigm for general-purpose robotic manipulation, enabling robots to follow natural language instructions in ...), does the paper-specific mechanism (To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.) retain the reported evaluation outcome (Performance is reported as the task success rate (%).) when tested against the paper's strongest explicit boundary (In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Performance is reported as the task success rate (%).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** 0 128 256 Rollout Budget 45 50 55 60 65 Success Rate (%) Base Policy DPO WMPO Figure 6 Lifelong learning results of WMPO and baselines. (p. 9, 4 Experiments).
+- **Strongest explicit boundary:** In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory. (p. 15, C Real World Cases).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X; PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X; PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 18 (44 The Witness Algorithm), p. 20 (441 Wit
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 44 The Witness Algorithm | SYSTEM / EVALUATION SCOPE UNRESOLVED | ‘To improve the complexity of the valueiteration algorithm, we must avoid generating V;*; instead, we would like to generate the elements of V; direct] ... | p. 18 (44 The Witness Algorithm) |
 | 441 Witness inner loop | SYSTEM / EVALUATION SCOPE UNRESOLVED | The tree p is built with subtrees 7» for each observation 0, We add the new policy tree to Uy to improve the approximation. | p. 20 (441 Witness inner loop) |
@@ -54,10 +54,10 @@ PDF body evaluation/result cue (p. 18 (44 The Witness Algorithm), p. 20 (441 Wit
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | A plan graph is essentially a finite-state controller, It uses the minimal possible amount of memory to act optimally in a partially observable environment. | embodiment, simulator version and control stack | p. 30 (5.4 Plan Graphs) |
-| Task/environment | not recovered | reset, timeout, object/scene variation | 본문 anchor 없음 |
+| Task/environment | not stated or recoverable in the selected PDF body | reset, timeout, object/scene variation | 본문 anchor 없음 |
 | Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 9 (3.2 Problem Structure), p. 3 (1 Introduction) |
 | Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 10 (3.2 Problem Structure), p. 25 (5.1 The Tiger Problem) |
 
@@ -154,7 +154,16 @@ PDF body evaluation/result cue (p. 18 (44 The Witness Algorithm), p. 20 (441 Wit
 - **p. 25 / 5.1 The Tiger Problem - extractive body cue:** The LISTEN action does not change the state of the world.
 - **p. 26 / 5.2. Finite-Horizon Policies - extractive body cue:** If the agent starts from the uniform belief state, b= (0.5,0.5), listening once does not change the belief state enough to make the expected value ...
 
-- **PDF anchors reviewed:** datasets p. 30 (5.4 Plan Graphs), metrics p. 15 (1) I step to go), p. 15 (1) I step to go), p. 24 (5.1 The Tiger Problem), p. 24 (4.5. Alternative Approaches), p. 25 (5.1 The Tiger Problem), p. 25 (5.1 The Tiger Problem), baselines p. 24 (4.5. Alternative Approaches), p. 30 (5.4 Plan Graphs), p. 29 (5.4 Plan Graphs), p. 16 (1) I step to go), p. 29 (5.4 Plan Graphs), results p. 18 (44 The Witness Algorithm), p. 20 (441 Witness inner loop), p. 20 (442 Identifying a witness), p. 21 (44.3. Checking the witness condition), p. 21 (44.3. Checking the witness condition), p. 22 (44.3. Checking the witness condition).
+- **Evidence anchors reviewed:** datasets p. 30 (5.4 Plan Graphs), metrics p. 15 (1) I step to go), p. 15 (1) I step to go), p. 24 (5.1 The Tiger Problem), p. 24 (4.5. Alternative Approaches), p. 25 (5.1 The Tiger Problem), p. 25 (5.1 The Tiger Problem), baselines p. 24 (4.5. Alternative Approaches), p. 30 (5.4 Plan Graphs), p. 29 (5.4 Plan Graphs), p. 16 (1) I step to go), p. 29 (5.4 Plan Graphs), results p. 18 (44 The Witness Algorithm), p. 20 (441 Witness inner loop), p. 20 (442 Identifying a witness), p. 21 (44.3. Checking the witness condition), p. 21 (44.3. Checking the witness condition), p. 22 (44.3. Checking the witness condition).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The linear program in Table 3 solves exactly this problem, The variable d is the minimum amount of improvement of Pew Over any policy tree in Uy at b. (p. 21, 44.3. Checking the witness condition).
+- **Metric evidence:** i pproptiately and so tends to gain less long-term reward. (p. 15, 1) I step to go).
+- **Baseline/ablation evidence:** This is because the behavior of ‘these algorithms on this problem appears to be extremely sensitive to the numerical precision used in comparisons-the better the precision, the longer the algorithms ... (p. 29, 5.4 Plan Graphs).
+- **Failure/negative evidence:** as the agent does not observe the goal state, it will alwajrs have some non-zero belief that it is in any of the non-goal states, since the actions have non-zero ... (p. 11, 3.2 Problem Structure).

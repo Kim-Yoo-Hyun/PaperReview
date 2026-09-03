@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1509.02971; PDF retrieval source: https://arxiv.org/pdf/1509.02971. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1509.02971; PDF retrieval source: https://arxiv.org/pdf/1509.02971. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the average and best observed (across 5 ... | p. 7 (Figure/Table caption) |
 | 4 RESULTS | EMPIRICAL / SIMULATION | We normalized the scores using two baselines. | p. 5 (4 RESULTS) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We examined DDPG's estimates empirically by comparing the values estimated by Q after training with the true returns seen on test episodes. | embodiment, simulator version and control stack | p. 6 (4 RESULTS), p. 5 (4 RESULTS) |
 | Task/environment | In all tasks, we ran experiments using both a low-dimensional state description (such as joint angles and positions) and high-dimensional renderings of the environment. | reset, timeout, object/scene variation | p. 5 (4 RESULTS), p. 6 (4 RESULTS) |
@@ -152,7 +152,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p
 - **p. 6 / 4 RESULTS - extractive body cue:** We used an identical network architecture and learning algorithm hyper-parameters to the physics tasks but altered the noise process for exploration because of the very ...
 - **p. 6 / 4 RESULTS - extractive body cue:** On both low-dimensional and from pixels, some replicas were able to learn reasonable policies that are able to complete a circuit around the track though ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4 RESULTS), p. 5 (4 RESULTS), p. 6 (4 RESULTS), p. 4 (4 RESULTS), p. 4 (4 RESULTS), p. 5 (4 RESULTS), metrics p. 7 (Figure/Table caption), p. 6 (4 RESULTS), p. 5 (4 RESULTS), p. 6 (4 RESULTS), p. 5 (4 RESULTS), p. 7 (Figure/Table caption), baselines p. 5 (4 RESULTS), p. 5 (4 RESULTS), results p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p. 5 (4 RESULTS), p. 6 (4 RESULTS), p. 6 (4 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 6 (4 RESULTS), p. 5 (4 RESULTS), p. 6 (4 RESULTS), p. 4 (4 RESULTS), p. 4 (4 RESULTS), p. 5 (4 RESULTS), metrics p. 7 (Figure/Table caption), p. 6 (4 RESULTS), p. 5 (4 RESULTS), p. 6 (4 RESULTS), p. 5 (4 RESULTS), p. 7 (Figure/Table caption), baselines p. 5 (4 RESULTS), p. 5 (4 RESULTS), results p. 7 (Figure/Table caption), p. 5 (4 RESULTS), p. 5 (4 RESULTS), p. 6 (4 RESULTS), p. 6 (4 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the average and best observed (across 5 runs). All scores, except Torcs, are ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Cart Pendulum Swing-up Cartpole Swing-up Fixed Reacher Blockworld Gripper Puck Shooting Monoped Balancing Moving Gripper Cheetah Million Steps 0 1 1 0 1 1 0 0 1 1 0 0 ... (p. 6, 4 RESULTS).
+- **Baseline/ablation evidence:** We normalized the scores using two baselines. (p. 5, 4 RESULTS).
+- **Failure/negative evidence:** On both low-dimensional and from pixels, some replicas were able to learn reasonable policies that are able to complete a circuit around the track though other replicas failed to learn ... (p. 6, 4 RESULTS).

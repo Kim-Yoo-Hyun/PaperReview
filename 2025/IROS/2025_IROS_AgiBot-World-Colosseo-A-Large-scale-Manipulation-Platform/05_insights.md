@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes latent action ...를 2) We propose GO-1, a robot foundation policy using latent action representations to unlock web-scale pre-training on web data.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Notably, to expand data applicability and potential, we include imperfect data (i.e., failure recovery data with annotated error states) and tasks with dexterous hands.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes latent action ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes ... (p. 2, I. INTRODUCTION).
+- **Paper-specific mechanism:** Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 1: Introducing AgiBot World Colosseo, an open-sourced large-scale manipulation platform comprising data, models, benchmarks and ecosystem. AgiBot World stands out for its unparalleled scale and diversity compared to prior ... (p. 1, Figure/Table caption); the relevant task/metric cue is Each episode scores 1.0 for full success, with fractional scores for partial success, enabling a nuanced performance assessment. (p. 6, 1) Evaluation Tasks). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Teleoperator Training Data Collection Data Upload Data Processing Quality Check Failure Recovery Annotation Data Delivery Data Discard No: Discard Edge-side Cloud-side Task Succeed Failed No Yes Validity Varification Model Training ... (p. 4, Dataset).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Based on the hardware platform developed by us, AgiBot G1, we construct AgiBot Worldan open-source robot manipulation dataset collected by more than 100 homogeneous robots, providing high-quality data for challenging tasks spanning ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Across all tasks and comparisons, GO-1 outperforms baselines by a large margin..
-4. Report the body metric and its denominator/aggregation: Fig. 7: Further analysis on: a) how model performance scales with data size, and b) the impact of filtering undesir- able data through manual review on policy learning. World alpha dataset, despite ....
-5. Re-run the body-reported ablation/failure condition: We evaluate the real-world performance of policies pretrained on different data sources including the AgiBot World dataset, demonstrating the effectiveness credited from the GO-1 model in policy learning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes ... (p. 2, I. INTRODUCTION); preserve the objective/update rule: For GO1, fine-tuning is conducted with a learning rate of 2e-5, a batch size of 768, and 30,000 optimization steps. (p. 7, 2) Implementation Details).
+2. Use the paper-reported task/data/environment cue: Based on the hardware platform developed by us, AgiBot G1, we construct AgiBot Worldan open-source robot manipulation dataset collected by more than 100 homogeneous robots, providing high-quality data for challenging ... (p. 3, Dataset).
+3. Compare against the reported or matched baseline: Across all tasks and comparisons, GO-1 outperforms baselines by a large margin. (p. 7, 1) Evaluation Tasks).
+4. Report the body metric with its denominator and aggregation: Each episode scores 1.0 for full success, with fractional scores for partial success, enabling a nuanced performance assessment. (p. 6, 1) Evaluation Tasks).
+5. Re-run the reported ablation or stress/failure condition: We evaluate GO-1 against previous generalist policy RDT-1B and our baseline without the latent planner, with all policies pre-trained on AgiBot World beta. (p. 7, 1) Evaluation Tasks); if none is reported, design one around: Teleoperator Training Data Collection Data Upload Data Processing Quality Check Failure Recovery Annotation Data Delivery Data Discard No: Discard Edge-side Cloud-side Task Succeed Failed No Yes Validity Varification Model Training ... (p. 4, Dataset).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (2) Implementation Details); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (V. EXPERIMENT AND ANALYSIS), and measure the boundary at p. 4 (Dataset), p. 3 (Dataset).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Following, dataset, address mechanism이 Across all tasks and comparisons, GO-1 outperforms baselines by a large margin. 대비 Fig. 7: Further analysis on: a) how model performance scales with data size, and b) the impact of ...을 개선하고, Notably, to expand data applicability and potential, we include imperfect data (i.e., failure recovery data with ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie ...), does the paper-specific mechanism (Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie ...) retain the reported evaluation outcome (Each episode scores 1.0 for full success, with fractional scores for partial success, enabling a nuanced performance assessment.) when tested against the paper's strongest explicit boundary (Teleoperator Training Data Collection Data Upload Data Processing Quality Check Failure Recovery Annotation Data Delivery Data Discard No: ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Each episode scores 1.0 for full success, with fractional scores for partial success, enabling a nuanced performance assessment.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 1: Introducing AgiBot World Colosseo, an open-sourced large-scale manipulation platform comprising data, models, benchmarks and ecosystem. AgiBot World stands out for its unparalleled scale and diversity compared to prior ... (p. 1, Figure/Table caption).
+- **Strongest explicit boundary:** Teleoperator Training Data Collection Data Upload Data Processing Quality Check Failure Recovery Annotation Data Delivery Data Discard No: Discard Edge-side Cloud-side Task Succeed Failed No Yes Validity Varification Model Training ... (p. 4, Dataset).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

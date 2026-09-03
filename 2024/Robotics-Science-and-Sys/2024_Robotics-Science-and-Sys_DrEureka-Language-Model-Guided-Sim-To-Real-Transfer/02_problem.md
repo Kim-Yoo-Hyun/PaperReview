@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p094.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p094.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p094.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p094.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Directly synthesizing robot policies from LLMs is difficult because it does not explicitly reason through the physics of the environment, however, when ... | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | A sim-to-real algorithm Algo for reward design and domain randomization takes M and task specification ltask as inputs, and outputs a reward ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF |
+| Observation / input | A sim-to-real algorithm Algo for reward design and domain randomization takes M and task specification ltask as inputs, and outputs a reward ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
 | State / latent | sim-to-real, algorithm, Algo, reward, design, domain, randomization, takes, task, specification | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
 | Output / action | Algorithm, DrEureka, Reward, Design, Require, Task, description, ltask | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
 | Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | trajectory D with task/embodiment metadata; body terms: sim-to-real, algorithm, Algo, reward, design, domain, randomization, takes, task, specification | p. 3 (III. PROBLEM SETTING), p. 3 (IV. METHOD), p. 4 (IV. METHOD) |
 | Decision / output variable | normalized sample or downstream action; body terms: DrEureka, Domain, Randomization, Eureka, novel, algorithm, leverages, LLMs | p. 1 (I. INTRODUCTION), p. 4 (IV. METHOD), p. 1 (I. INTRODUCTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD) |
 | Success / guarantee | cross-domain transfer and task performance | p. 21 (Figure/Table caption), p. 6 (V. EXPERIMENTAL SETUP), p. 2 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (I. INTRODUCTION), p. 4 (IV. METHOD), p. 1 (I. INTRODUCTION), p. 3 (IV. METHOD), p. 4 (IV. METHOD)): In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer.
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 4 (IV. METHOD), p. 1 (I. INTRODUCTION), p. 3 (IV. METHOD), p. 4 (IV. METHOD)): In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer.
 
 - **p. 4 / IV. METHOD - extractive body cue:** Instead, we propose to directly exploit the strong instructionfollowing capability of instruction-tuned LLMs [62] and prompt the LLM to explicitly consider including safety terms for ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** We evaluate DrEureka on quadruped and dexterous manipulator platforms, demonstrating that our method is general
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (I. INTRODUCTION), p. 4 (IV. METHOD), p. 1 (I. IN
 
 ## Position in the Robotics Loop
 
-robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (III. PROBLEM SETTING), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD). The downstream handoff is claimed only when the body describes it.
+robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (III. PROBLEM SETTING), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PROBLEM SETTING), interface p. 3 (III. PROBLEM SETTING), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), objective p. 4 (IV. METHOD), p. 4 (IV. METHOD).
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PROBLEM SETTING), interface p. 3 (III. PROBLEM SETTING), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), objective p. 4 (IV. METHOD), p. 4 (IV. METHOD).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** These characteristics of designing DR parameters make it an ideal problem for LLMs to tackle because of their strong grasp of physical knowledge [1, 18] and effectiveness in generating hypotheses, ... (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer. (p. 1, I. INTRODUCTION).
+- **Assumption/failure evidence:** While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual ... (p. 9, VIII. LIMITATIONS).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

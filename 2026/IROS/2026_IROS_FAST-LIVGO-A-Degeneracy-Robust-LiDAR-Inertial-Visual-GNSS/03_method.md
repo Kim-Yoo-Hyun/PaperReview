@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.19190; PDF retrieval source: https://arxiv.org/pdf/2606.19190. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.19190; PDF retrieval source: https://arxiv.org/pdf/2606.19190. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Method Body Digest
 
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** The resulting optimal time lag δtrI is then compensated when utilizing GNSS observations.
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** Notation and State Transition Model We define the full system state vector x in continuous time as an element of the manifold M.
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** We construct the following objective function to solve for the
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** Following initialization, the ESIKF state is updated using two types of residuals: • Doppler Residual: Directly constrains the instantaneous velocity and the receiver clock drift ...
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** GNSS Update: Upon receiving GNSS data, a LIVOassisted integrity monitor first rejects outliers.
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** C(·) The vector (·) in the RGB camera frame. x, bx, ¯x The ground-truth, predicted, and updated estimation of x. δx The error state between ...
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** To unify spatial references, GNSS ephemeris and observations (e.g., position, velocity) are transformed from the EarthCentered, Earth-Fixed (ECEF) frame to the local East-NorthUp (ENU) frame ...
+- **p. 2 / III. METHODOLOGY - extractive body cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** The resulting optimal time lag δtrI is then compensated when utilizing GNSS observations.
+- **p. 2 / III. METHODOLOGY - extractive body cue:** Notation and State Transition Model We define the full system state vector x in continuous time as an element of the manifold M.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** We construct the following objective function to solve for the
+- **p. 2 / III. METHODOLOGY - extractive body cue:** Following initialization, the ESIKF state is updated using two types of residuals: • Doppler Residual: Directly constrains the instantaneous velocity and the receiver clock drift ...
+- **p. 2 / III. METHODOLOGY - extractive body cue:** GNSS Update: Upon receiving GNSS data, a LIVOassisted integrity monitor first rejects outliers.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** C(·) The vector (·) in the RGB camera frame. x, bx, ¯x The ground-truth, predicted, and updated estimation of x. δx The error state between ...
+- **p. 2 / III. METHODOLOGY - extractive body cue:** To unify spatial references, GNSS ephemeris and observations (e.g., position, velocity) are transformed from the EarthCentered, Earth-Fixed (ECEF) frame to the local East-NorthUp (ENU) frame ...
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in ...
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** The main contributions are summarized as follows: • A tightly-coupled LiDAR-Inertial-Visual-GNSS fusion framework based on ESIKF.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in ...
+- **p. 2 / III. METHODOLOGY - extractive body cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contributions are summarized as follows: • A tightly-coupled LiDAR-Inertial-Visual-GNSS fusion framework based on ESIKF.
 
 ## Source Evidence Cues
 
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** The resulting optimal time lag δtrI is then compensated when utilizing GNSS observations.
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** Notation and State Transition Model We define the full system state vector x in continuous time as an element of the manifold M.
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** We construct the following objective function to solve for the
+- **p. 2 / III. METHODOLOGY - extractive body cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** The resulting optimal time lag δtrI is then compensated when utilizing GNSS observations.
+- **p. 2 / III. METHODOLOGY - extractive body cue:** Notation and State Transition Model We define the full system state vector x in continuous time as an element of the manifold M.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** We construct the following objective function to solve for the
 - **Detected method headings:** III. METHODOLOGY (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera ... | p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The resulting optimal time lag δtrI is then compensated when utilizing GNSS observations. | p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Objective / Update Rule
 
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** Following initialization, the ESIKF state is updated using two types of residuals: • Doppler Residual: Directly constrains the instantaneous velocity and the receiver clock drift ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** We construct the following objective function to solve for the
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** GNSS Update: Upon receiving GNSS data, a LIVOassisted integrity monitor first rejects outliers.
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** C(·) The vector (·) in the RGB camera frame. x, bx, ¯x The ground-truth, predicted, and updated estimation of x. δx The error state between ...
+- **p. 2 / III. METHODOLOGY - extractive body cue:** Following initialization, the ESIKF state is updated using two types of residuals: • Doppler Residual: Directly constrains the instantaneous velocity and the receiver clock drift ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** We construct the following objective function to solve for the
+- **p. 2 / III. METHODOLOGY - extractive body cue:** GNSS Update: Upon receiving GNSS data, a LIVOassisted integrity monitor first rejects outliers.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** C(·) The vector (·) in the RGB camera frame. x, bx, ¯x The ground-truth, predicted, and updated estimation of x. δx The error state between ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Observation–State–Action Interface
 
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** To unify spatial references, GNSS ephemeris and observations (e.g., position, velocity) are transformed from the EarthCentered, Earth-Fixed (ECEF) frame to the local East-NorthUp (ENU) frame ...
-- **p. 2 / III. METHODOLOGY - extractive PDF cue:** This lightweight approach successfully avoids state augmentation while fully exploiting the submillimeter relative precision of carrier phase observations.
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** In a tightly-coupled formulation, GNSS observables depend not only on the platform pose and velocity but also on receiver clock states and inter-system biases.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Precise Doppler and fixed-anchor TDCP observation models are further constructed to introduce sub-millimeter relative constraints without state augmentation, improving global consistency. • A degeneracy-dependent dual-mode ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in ...
-- **p. 3 / III. METHODOLOGY - extractive PDF cue:** Outlier Rejection GNSS residual Yes No EKF Process t State Estimation Lidar points x 1 1 + - i k x 2 1 + - ...
-- **p. 4 / III. METHODOLOGY - extractive PDF cue:** (3) This LS problem provides an accurate initial global pose and refines the coarse lever-arm extrinsics.
+- **p. 2 / III. METHODOLOGY - extractive body cue:** To unify spatial references, GNSS ephemeris and observations (e.g., position, velocity) are transformed from the EarthCentered, Earth-Fixed (ECEF) frame to the local East-NorthUp (ENU) frame ...
+- **p. 2 / III. METHODOLOGY - extractive body cue:** This lightweight approach successfully avoids state augmentation while fully exploiting the submillimeter relative precision of carrier phase observations.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** In a tightly-coupled formulation, GNSS observables depend not only on the platform pose and velocity but also on receiver clock states and inter-system biases.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Precise Doppler and fixed-anchor TDCP observation models are further constructed to introduce sub-millimeter relative constraints without state augmentation, improving global consistency. • A degeneracy-dependent dual-mode ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in ...
+- **p. 3 / III. METHODOLOGY - extractive body cue:** Outlier Rejection GNSS residual Yes No EKF Process t State Estimation Lidar points x 1 1 + - i k x 2 1 + - ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** (3) This LS problem provides an accurate initial global pose and refines the coarse lever-arm extrinsics.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Failure and Ablation Link
 
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** An ablation variant, Ours w/o Rejection, was also evaluated by disabling the adaptive robust module and fusing all pre-screened GNSS observations.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Notably, although the ablation version (Ours w/o Rejection) outperforms pure FAST-LIVO2 due to GNSS integration, it remains slightly inferior to our complete version.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** In contrast, looser-coupled systems like LIO-SAM and LIGO generate meter-level errors but avoid complete failure.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Under such harsh conditions, a critical finding is that the ablation version (Ours w/o Rejection) directly suffers from trajectory divergence and system failure (marked as ...
-- **p. 5 / IV. STATE ESTIMATION - extractive PDF cue:** When encountering feature degradation (e.g., textureless long corridors), the prior covariance bPk inflates.
-- **p. 5 / IV. STATE ESTIMATION - extractive PDF cue:** Signals with low Carrier-to-Noise density (C/N0 <35 dB-Hz) or low elevation angles (< 15◦) are physically filtered out.
-- **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive PDF cue:** 2) Outdoor LIVO Degraded Scenario: In regions (a)-(c) of View 1 (Fig.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** An ablation variant, Ours w/o Rejection, was also evaluated by disabling the adaptive robust module and fusing all pre-screened GNSS observations.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Notably, although the ablation version (Ours w/o Rejection) outperforms pure FAST-LIVO2 due to GNSS integration, it remains slightly inferior to our complete version.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** In contrast, looser-coupled systems like LIO-SAM and LIGO generate meter-level errors but avoid complete failure.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Under such harsh conditions, a critical finding is that the ablation version (Ours w/o Rejection) directly suffers from trajectory divergence and system failure (marked as ...
+- **p. 5 / IV. STATE ESTIMATION - extractive body cue:** When encountering feature degradation (e.g., textureless long corridors), the prior covariance bPk inflates.
+- **p. 5 / IV. STATE ESTIMATION - extractive body cue:** Signals with low Carrier-to-Noise density (C/N0 <35 dB-Hz) or low elevation angles (< 15◦) are physically filtered out.
+- **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive body cue:** 2) Outdoor LIVO Degraded Scenario: In regions (a)-(c) of View 1 (Fig.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), objective p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), temporal p. 2 (III. METHODOLOGY), p. 1 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 1 (Abstract), p. 3 (III. METHODOLOGY).
+- **Evidence anchors reviewed:** method p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), objective p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), temporal p. 2 (III. METHODOLOGY), p. 1 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 1 (Abstract), p. 3 (III. METHODOLOGY).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

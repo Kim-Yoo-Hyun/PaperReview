@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p145.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p145.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p145.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p145.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Quantitative results | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table Ill, while performance varies across df= ferent tasks due to their diverse requirements, our full method achieves the best results ... | p. 6 (B. Quantitative results) |
 | B. Quantitative results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Lastly, the CEM process significantly improves sampling efficiency, producing action distributions that better align with the goal, which in general contributes the most to ... | p. 8 (B. Quantitative results) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | MOKA [13] chooses the 2D keypoints as intermediate representations for VLM to predict, which are then converted into actions based on the depth information ... | embodiment, simulator version and control stack | p. 5 (A. Experimental setup), p. 6 (B. Quantitative results) |
 | Task/environment | As for OpenVLA, and 79, while they can perform zero-shot on simple tasks due to their training on large-scale robotic datasets, their generalization is ... | reset, timeout, object/scene variation | p. 6 (B. Quantitative results), p. 5 (A. Experimental setup) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 - **p. 6 / B. Quantitative results - extractive body cue:** We show the action ‘optimization results of one planning step in subtask "wipe the spilled tea", Our digital twin could simulate diverse results with accurate ...
 - **p. 6 / B. Quantitative results - extractive body cue:** We visualize the action optimization process for a single planning step in the "clean up" task in Figure 4, Initially, the digital twin simulates a ...
 
-- **PDF anchors reviewed:** datasets p. 5 (A. Experimental setup), p. 6 (B. Quantitative results), p. 5 (A. Experimental setup), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 8 (B. Quantitative results), metrics p. 5 (A. Experimental setup), p. 5 (B. Quantitative results), p. 8 (B. Quantitative results), p. 8 (B. Quantitative results), p. 6 (B. Quantitative results), p. 6 (B. Quantitative results), baselines p. 5 (A. Experimental setup), p. 5 (B. Quantitative results), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), results p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 5 (A. Experimental setup), p. 5 (B. Quantitative results).
+- **Evidence anchors reviewed:** datasets p. 5 (A. Experimental setup), p. 6 (B. Quantitative results), p. 5 (A. Experimental setup), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 8 (B. Quantitative results), metrics p. 5 (A. Experimental setup), p. 5 (B. Quantitative results), p. 8 (B. Quantitative results), p. 8 (B. Quantitative results), p. 6 (B. Quantitative results), p. 6 (B. Quantitative results), baselines p. 5 (A. Experimental setup), p. 5 (B. Quantitative results), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), results p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 5 (A. Experimental setup), p. 5 (B. Quantitative results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** As shown in Table Ill, while performance varies across df= ferent tasks due to their diverse requirements, our full method achieves the best results in most of the tasks. (p. 6, B. Quantitative results).
+- **Metric evidence:** + Reconstruction error: ‘The quality of our digital twin depends on the accuracy of camera pose estimation and 3D reconstruction. (p. 8, B. Quantitative results).
+- **Baseline/ablation evidence:** We adopt GPT-4o [1] for both our method and the baselines. (p. 5, A. Experimental setup).
+- **Failure/negative evidence:** + Planning error: When subtasks are not properly defined or the model fails to recognize the current stage, the robot may execute actions incorrectly. (p. 8, B. Quantitative results).

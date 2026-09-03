@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2011.07215; PDF retrieval source: https://arxiv.org/pdf/2011.07215. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2011.07215; PDF retrieval source: https://arxiv.org/pdf/2011.07215. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Due to the large number of samples required by reinforcement learning, as well as the difficulty in specifying a reward function, all ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | We benchmark a range of algorithms on these environments assuming different observation spaces for the policy, including full knowledge of the ground-truth ... | p. 2 (1 Introduction), p. 5 (1 Introduction) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | All methods are trained for 106 time steps, except PlaNet, which is trained for 5 × 105 time steps due to computation ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | In Figure 2, we show the final performance of this method with 20 pick-and-place steps for each episode. | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | Given an initial set of five frames, PlaNet predicts the following 30 frames. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 5 (1 Introduction), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), temporal p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (1 Introduction), p. 8 (6 Experiments), p. 8 (6 Experiments), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 5 (1 Introduction), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), temporal p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (1 Introduction), p. 8 (6 Experiments), p. 8 (6 Experiments), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We benchmark a range of algorithms on these environments assuming different observation spaces for the policy, including full knowledge of the ground-truth state of the deformable object, a lowdimension state ... (p. 2, 1 Introduction).
+- **Objective/update evidence:** Given this information, we can use gradient free optimization to maximize the return. (p. 5, 1 Introduction).
+- **Temporal/runtime evidence:** In Figure 2, we show the final performance of this method with 20 pick-and-place steps for each episode. (p. 7, 6 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

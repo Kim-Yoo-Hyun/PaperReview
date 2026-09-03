@@ -14,7 +14,7 @@
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Our method achieves 43.5% improvement over previous shape-matching baselines.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Our method addresses this by adding a 3D neural network, DiffusionNet (Sharp et al., 2022), to refine 2D features with 3D geometry, producing spatially consistent ...
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 4.3 LOSS FUNCTION Our loss function consists of two components: L = Lsemantic + Lpreservation.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** By establishing correspondences, we can enable the robot to identify semantically similar components between two objects, which is cru- ∗Equal contribution,†Corresponding author.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** By establishing correspondences, we can enable the robot to identify semantically similar components between two objects, which is cru-.
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** Our FeatUp module upsamples 16x16 features to 512x512 resolution.
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** Thanks to our 3D network, we found that using only 3 lateral views plus 1 top and 1 bottom view during both training and inferencing ...
 - **Contribution anchor:** p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 18 (A.3.2 TRAINING DENSEMATCHER)
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Preprint SD& DINO • • • • • • • Renders Low-res Features SD& DINO SD& DINO High-res Features Remesh Project & Average DiffusionNet Functional Map Frozen FeatUp Render Sinusoidal Encoding Trainable ...를 y \rangle = x^T A y = \sum _i A_{ii} x_i y_i. \label {eq:innerprod} (2) Given the area matrix and the contingent weight matrix of the mesh W ∈Rn×n (Meyer et al., ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Additionally, due to the generalization capability of pre-trained 2D backbones, we achieve much higher accuracy on out-of-distribution test categories listed in Tab.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 4.3.2 FEATURE PRESERVATION LOSS We can view our DiffusionNet refiner as an nonlinear operater embedding features from fmultiview into foutput. (p. 6, 1 INTRODUCTION).
+- **Paper-specific mechanism:** In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence ... (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Table 1: Performance comparison on DenseCorr3D shape matching benchmark. We report the results on both the full test set and the held-out set. Ablation studies are listed in Section 6.4. ... (p. 7, Figure/Table caption); the relevant task/metric cue is We evaluate its performance when respectively trained on FAUST (Bogo et al., 2014a) and DenseCorr3D. (p. 7, 6 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks that only utilize geometry information and are trained on category-specific datasets (Cao ... (p. 2, 1 INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: 6.2 ZERO-SHOT REAL WORLD ROBOTIC MANIPULATION We create six real-world manipulation environments, exploring the performance of DenseMatcher on daily life tasks by comparing the shape, size, material and category of the manipulated ....
-3. Compare against the body-reported baseline or a matched simpler baseline: 1, we found that our model achieves better AUC and Err compared to the baseline model..
-4. Report the body metric and its denominator/aggregation: For each task, we measure the task success rates over five trials..
-5. Re-run the body-reported ablation/failure condition: Figure 10: Ablation study on dense correspondence results. (a) Effect of using different features (HKS, WKS) with functional maps. (b) Comparison of matching methods using the same features. 6.3 COLOR TRANSFER EXPERIMENTS ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 4.3.2 FEATURE PRESERVATION LOSS We can view our DiffusionNet refiner as an nonlinear operater embedding features from fmultiview into foutput. (p. 6, 1 INTRODUCTION); preserve the objective/update rule: We freeze the 2D backbone models during training, and optimize a 4-block DiffusionNet with 512 channels on DenseCorr3Dfor 6000 steps with a batch size of 8 using Adam Kingma & ... (p. 18, A.3.2 TRAINING DENSEMATCHER).
+2. Use the paper-reported task/data/environment cue: 6.2 ZERO-SHOT REAL WORLD ROBOTIC MANIPULATION We create six real-world manipulation environments, exploring the performance of DenseMatcher on daily life tasks by comparing the shape, size, material and category of ... (p. 7, 6.1.2 RESULTS).
+3. Compare against the reported or matched baseline: 1, we found that our model achieves better AUC and Err compared to the baseline model. (p. 7, 6.1.2 RESULTS).
+4. Report the body metric with its denominator and aggregation: We evaluate its performance when respectively trained on FAUST (Bogo et al., 2014a) and DenseCorr3D. (p. 7, 6 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: 1, we perform several ablation studies by (i) skipping DiffusionNet and directly feeding normalized fmultiview into functional map (ii) training our model without loss Lpreservation, and comparing the difference in ... (p. 10, 6.1.2 RESULTS); if none is reported, design one around: As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks that only utilize geometry information and are trained on category-specific datasets (Cao ... (p. 2, 1 INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRAINING DENSEMATCHER); the primary result is directionally consistent at p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 7 (Figure/Table caption), p. 8 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), and measure the boundary at p. 2 (1 INTRODUCTION), p. 7 (6.1.2 RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, make, following mechanism이 1, we found that our model achieves better AUC and Err compared to the baseline model. 대비 For each task, we measure the task success rates over five trials.을 개선하고, Additionally, due to the generalization capability of pre-trained 2D backbones, we achieve much higher accuracy on ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (4.3.2 FEATURE PRESERVATION LOSS We can view our DiffusionNet refiner as an nonlinear operater embedding features from fmultiview into foutput.), does the paper-specific mechanism (In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories ...) retain the reported evaluation outcome (We evaluate its performance when respectively trained on FAUST (Bogo et al., 2014a) and DenseCorr3D.) when tested against the paper's strongest explicit boundary (As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We evaluate its performance when respectively trained on FAUST (Bogo et al., 2014a) and DenseCorr3D.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence ... (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Table 1: Performance comparison on DenseCorr3D shape matching benchmark. We report the results on both the full test set and the held-out set. Ablation studies are listed in Section 6.4. ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks that only utilize geometry information and are trained on category-specific datasets (Cao ... (p. 2, 1 INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

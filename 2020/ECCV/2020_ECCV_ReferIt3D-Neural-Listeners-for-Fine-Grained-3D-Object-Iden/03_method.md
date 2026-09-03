@@ -2,43 +2,43 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://referit3d.github.io/; PDF retrieval source: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://referit3d.github.io/; PDF retrieval source: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 1 (2 King Abdullah University of Science and Technology), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction)): We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck for language-assisted 3D obje ...
+PDF body method statement (p. 1 (body section not recovered), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction)): We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck for language-assisted 3D obje ...
 
 ## Method Body Digest
 
-- **p. 1 / 2 King Abdullah University of Science and Technology - extractive PDF cue:** We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Even in embodied AI most works (e.g., embodied QA [21], or embodied visual recognition [69]), fine-grained 3D object identification is not explicitly modeled.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Despite this, developing datasets and methods with characteristics that enable machine learning models to perform well on this 3D reference task is far from straightforward; ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
-- **p. 3 / 1 Introduction - extractive PDF cue:** ReferIt3DNet: We explore the task of understanding object references grounded in real-world 3D data (including both language and scenes) by designing a novel visio-linguistic graph ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** The progress on connecting language and vision in the past decade has rekindled interest in tasks like visual question answering (e.g., [12,54]), image captioning (e.g., ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** As we show in our experiments, this step is critical for progress in 3D visual object identification from free-form language descriptions.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied ...
+- **p. 1 / body section not recovered - extractive body cue:** We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck ...
+- **p. 1 / 1 Introduction - extractive body cue:** Even in embodied AI most works (e.g., embodied QA [21], or embodied visual recognition [69]), fine-grained 3D object identification is not explicitly modeled.
+- **p. 2 / 1 Introduction - extractive body cue:** Despite this, developing datasets and methods with characteristics that enable machine learning models to perform well on this 3D reference task is far from straightforward; ...
+- **p. 3 / 1 Introduction - extractive body cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
+- **p. 3 / 1 Introduction - extractive body cue:** ReferIt3DNet: We explore the task of understanding object references grounded in real-world 3D data (including both language and scenes) by designing a novel visio-linguistic graph ...
+- **p. 1 / 1 Introduction - extractive body cue:** The progress on connecting language and vision in the past decade has rekindled interest in tasks like visual question answering (e.g., [12,54]), image captioning (e.g., ...
+- **p. 3 / 1 Introduction - extractive body cue:** As we show in our experiments, this step is critical for progress in 3D visual object identification from free-form language descriptions.
+- **p. 2 / 1 Introduction - extractive body cue:** Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied ...
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
-- **p. 3 / 1 Introduction - extractive PDF cue:** Fine-Grained ReferIt3D task: We introduce the task of language-based identification of specific 3D object instances, where fine-grained object-centric and multi-object understanding is necessary for its ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This flexibility enables us also to bypass camera view dependency (e.g., having access to parts of a scene occluded by a fixed camera) when we ...
+- **p. 3 / 1 Introduction - extractive body cue:** For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
+- **p. 3 / 1 Introduction - extractive body cue:** Fine-Grained ReferIt3D task: We introduce the task of language-based identification of specific 3D object instances, where fine-grained object-centric and multi-object understanding is necessary for its ...
+- **p. 2 / 1 Introduction - extractive body cue:** This flexibility enables us also to bypass camera view dependency (e.g., having access to parts of a scene occluded by a fixed camera) when we ...
 
 ## Source Evidence Cues
 
-- **p. 1 / 2 King Abdullah University of Science and Technology - extractive PDF cue:** We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Even in embodied AI most works (e.g., embodied QA [21], or embodied visual recognition [69]), fine-grained 3D object identification is not explicitly modeled.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Despite this, developing datasets and methods with characteristics that enable machine learning models to perform well on this 3D reference task is far from straightforward; ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
-- **p. 3 / 1 Introduction - extractive PDF cue:** ReferIt3DNet: We explore the task of understanding object references grounded in real-world 3D data (including both language and scenes) by designing a novel visio-linguistic graph ...
+- **p. 1 / body section not recovered - extractive body cue:** We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck ...
+- **p. 1 / 1 Introduction - extractive body cue:** Even in embodied AI most works (e.g., embodied QA [21], or embodied visual recognition [69]), fine-grained 3D object identification is not explicitly modeled.
+- **p. 2 / 1 Introduction - extractive body cue:** Despite this, developing datasets and methods with characteristics that enable machine learning models to perform well on this 3D reference task is far from straightforward; ...
+- **p. 3 / 1 Introduction - extractive body cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
+- **p. 3 / 1 Introduction - extractive body cue:** ReferIt3DNet: We explore the task of understanding object references grounded in real-world 3D data (including both language and scenes) by designing a novel visio-linguistic graph ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification ... | p. 1 (2 King Abdullah University of Science and Technology), p. 1 (1 Introduction) |
+| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification ... | p. 1 (body section not recovered), p. 1 (1 Introduction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Even in embodied AI most works (e.g., embodied QA [21], or embodied visual recognition [69]), fine-grained 3D object identification is not explicitly ... | p. 1 (1 Introduction), p. 2 (1 Introduction) |
 | Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | Despite this, developing datasets and methods with characteristics that enable machine learning models to perform well on this 3D reference task is ... | p. 2 (1 Introduction), p. 3 (1 Introduction) |
 
@@ -46,8 +46,8 @@ PDF body method statement (p. 1 (2 King Abdullah University of Science and Techn
 
 ## Objective / Update Rule
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** The progress on connecting language and vision in the past decade has rekindled interest in tasks like visual question answering (e.g., [12,54]), image captioning (e.g., ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** As we show in our experiments, this step is critical for progress in 3D visual object identification from free-form language descriptions.
+- **p. 1 / 1 Introduction - extractive body cue:** The progress on connecting language and vision in the past decade has rekindled interest in tasks like visual question answering (e.g., [12,54]), image captioning (e.g., ...
+- **p. 3 / 1 Introduction - extractive body cue:** As we show in our experiments, this step is critical for progress in 3D visual object identification from free-form language descriptions.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,12 +63,12 @@ PDF body method statement (p. 1 (2 King Abdullah University of Science and Techn
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** However, most of these works focus on developing better models that connect vision to language in images, which express after all only a 2D view ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Recent works have enhanced the accessibility of visual content through language via grounding (e.g., [49,48]), showing strong results in locating linguistically described visual elements in ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
-- **p. 2 / 1 Introduction - extractive PDF cue:** An alternative, yet more direct way to gain this understanding is by analyzing point cloud data of real-world scenes [3,52].
-- **p. 3 / 1 Introduction - extractive PDF cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
+- **p. 2 / 1 Introduction - extractive body cue:** Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied ...
+- **p. 1 / 1 Introduction - extractive body cue:** However, most of these works focus on developing better models that connect vision to language in images, which express after all only a 2D view ...
+- **p. 1 / 1 Introduction - extractive body cue:** Recent works have enhanced the accessibility of visual content through language via grounding (e.g., [49,48]), showing strong results in locating linguistically described visual elements in ...
+- **p. 3 / 1 Introduction - extractive body cue:** For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
+- **p. 2 / 1 Introduction - extractive body cue:** An alternative, yet more direct way to gain this understanding is by analyzing point cloud data of real-world scenes [3,52].
+- **p. 3 / 1 Introduction - extractive body cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,7 +83,7 @@ PDF body method statement (p. 1 (2 King Abdullah University of Science and Techn
 
 ## Training vs Inference
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
+- **p. 3 / 1 Introduction - extractive body cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -103,11 +103,11 @@ PDF body method statement (p. 1 (2 King Abdullah University of Science and Techn
 
 ## Failure and Ablation Link
 
-- **p. 12 / VI SD - extractive PDF cue:** The first row contains the achieved accuracy on the Nr3D testing data for a listener trained solely with the Nr3D training set; the other rows ...
-- **p. 12 / VI SD - extractive PDF cue:** Vision + Language + Graph (structured) Context (ReferIt3DNet): This is our proposed listener and comes in three variants that differ w.r.t. where we fuse the ...
-- **p. 14 / 6 Conclusion - extractive PDF cue:** Success cases are in the top four images and Failure in the bottom two.
-- **p. 13 / VI SD - extractive PDF cue:** Finally, the last row shows two challenging failure cases of our model.
-- **p. 13 / VI SD - extractive PDF cue:** This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene w.r.t. ...
+- **p. 12 / VI SD - extractive body cue:** The first row contains the achieved accuracy on the Nr3D testing data for a listener trained solely with the Nr3D training set; the other rows ...
+- **p. 12 / VI SD - extractive body cue:** Vision + Language + Graph (structured) Context (ReferIt3DNet): This is our proposed listener and comes in three variants that differ w.r.t. where we fuse the ...
+- **p. 14 / 6 Conclusion - extractive body cue:** Success cases are in the top four images and Failure in the bottom two.
+- **p. 13 / VI SD - extractive body cue:** Finally, the last row shows two challenging failure cases of our model.
+- **p. 13 / VI SD - extractive body cue:** This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene w.r.t. ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -121,7 +121,7 @@ PDF body method statement (p. 1 (2 King Abdullah University of Science and Techn
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (2 King Abdullah University of Science and Technology), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 1 (1 Introduction), p. 3 (1 Introduction), temporal p. 3 (1 Introduction), p. 6 (2 Related Work), p. 6 (2 Related Work), p. 7 (2 Related Work), p. 8 (2 Related Work), p. 9 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 1 (body section not recovered), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 1 (1 Introduction), p. 3 (1 Introduction), temporal p. 3 (1 Introduction), p. 6 (2 Related Work), p. 6 (2 Related Work), p. 7 (2 Related Work), p. 8 (2 Related Work), p. 9 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

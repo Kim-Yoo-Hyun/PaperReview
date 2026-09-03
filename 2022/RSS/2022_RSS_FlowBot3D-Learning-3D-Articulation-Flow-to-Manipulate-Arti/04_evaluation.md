@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.04382; PDF retrieval source: https://arxiv.org/pdf/2205.04382. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2205.04382; PDF retrieval source: https://arxiv.org/pdf/2205.04382. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able to predict reasonable 3D articulation flow vectors for ... | p. 8 (IV. RESULTS) |
 | IV. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | First, our formulation of FlowBot3D has a very high success rate across all categories, including test categories, which are completely novel types of objects ... | p. 7 (IV. RESULTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in ... | embodiment, simulator version and control stack | p. 7 (IV. RESULTS), p. 2 (4) Simulated experiments to test the performance of our) |
 | Task/environment | 5) Real-world experiments deployed on a Sawyer robot to test the generalizablity and feasibility of our system in real-world scenarios. | reset, timeout, object/scene variation | p. 2 (4) Simulated experiments to test the performance of our), p. 5 (IV. RESULTS) |
@@ -117,7 +117,7 @@ PDF body evaluation/result cue (p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Without such knowledge, the policies can neither operate nor be applied to novel categories. *Equal contribution. | Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able to predict reasonable 3D articulation flow vectors for ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS) |
+| In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, ... | Notice that even with occlusions, such as in the intermediate mini-fridge observation, the network is able to predict reasonable 3D articulation flow vectors for ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS) |
 | Primary metric/result | First, our formulation of FlowBot3D has a very high success rate across all categories, including test categories, which are completely novel types of objects ... | numeric claim only at cited anchor | p. 7 (IV. RESULTS) |
 
 - Numeric sentences retained from the body:
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV
 - **p. 8 / IV. RESULTS - extractive body cue:** Each object falls into one of either the training or test classes we selected from the PartNet-Mobility.
 - **p. 7 / IV. RESULTS - extractive body cue:** Normal Direction estimation suffers from occlusion issues and the normal is not always the correct direction to actuate the object (for example, for the spherical-shaped ...
 
-- **PDF anchors reviewed:** datasets p. 7 (IV. RESULTS), p. 2 (4) Simulated experiments to test the performance of our), p. 5 (IV. RESULTS), p. 2 (4) Simulated experiments to test the performance of our), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS), metrics p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 8 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), baselines p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 8 (IV. RESULTS), p. 14 (Figure/Table caption), results p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 7 (IV. RESULTS), p. 2 (4) Simulated experiments to test the performance of our), p. 5 (IV. RESULTS), p. 2 (4) Simulated experiments to test the performance of our), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS), metrics p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 8 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), baselines p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 8 (IV. RESULTS), p. 14 (Figure/Table caption), results p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in which we attempt to articulate a ... (p. 7, IV. RESULTS).
+- **Metric evidence:** Metrics: During our trials, we compute the following metrics for each policy: • Overall Success: Was the object articulated more than 90% of its range of motion (defined per-object)? • ... (p. 8, IV. RESULTS).
+- **Baseline/ablation evidence:** Baseline Comparisons: We compare our proposed method with several baseline methods: • UMP-DI: We implement a variant4 of UMPNet's Direction Inference network (DistNet) [39], where instead of bootstrapping an action ... (p. 6, IV. RESULTS).
+- **Failure/negative evidence:** However, the remaining failure modes raise questions we would like to explore in future work. (p. 9, V. CONCLUSION).

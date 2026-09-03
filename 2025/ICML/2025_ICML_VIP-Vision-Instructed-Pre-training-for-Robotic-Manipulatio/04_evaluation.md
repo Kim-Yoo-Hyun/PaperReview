@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ccUNMIbpcf; PDF retrieval source: https://openreview.net/pdf/fc80bd3b42c458d1d871411db0d2aec7f70c9c37.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ccUNMIbpcf; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168016. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** A Franka Panda robotic arm is deployed in each simulation environment to manipulate objects, with four cameras strategically positioned to observe the scene from various ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** For the real environment, we conduct experiments using the Cobot Magic robot (Agilex, 2024).
-- **p. 6 / 4. Experiments - extractive PDF cue:** 7, the three real-robot tasks include Pour Blueberries, Open the Lid, and Clean the Table.
-- **p. 7 / 4.1. VIP Effectiveness - extractive PDF cue:** The success rates of these policies are boosted in both simulated and real robotic manipulation environments, indicating the value of incorporating more diverse training data.
-- **p. 7 / 4. Experiments - extractive PDF cue:** VIP: Vision Instructed Pre-training for Robotic Manipulation Table 1.
-- **p. 8 / 4.3. Method Analysis - extractive PDF cue:** In this part, we study whether the data scaling law appears in the pre-training and fine-tuning procedures of robotic manipulation.
-- **p. 8 / 4.3. Method Analysis - extractive PDF cue:** Notably, to show the value of DINOv2 representation more clearly, when DINOv2 is not adopted, we replace the encoders in VIRT as ResNet18, the backbone ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate the effectiveness of our method in both real and simulated environments.
+- **p. 6 / 4. Experiments - extractive body cue:** A Franka Panda robotic arm is deployed in each simulation environment to manipulate objects, with four cameras strategically positioned to observe the scene from various ...
+- **p. 5 / 4. Experiments - extractive body cue:** For the real environment, we conduct experiments using the Cobot Magic robot (Agilex, 2024).
+- **p. 6 / 4. Experiments - extractive body cue:** 7, the three real-robot tasks include Pour Blueberries, Open the Lid, and Clean the Table.
+- **p. 7 / 4.1. VIP Effectiveness - extractive body cue:** The success rates of these policies are boosted in both simulated and real robotic manipulation environments, indicating the value of incorporating more diverse training data.
+- **p. 7 / 4. Experiments - extractive body cue:** VIP: Vision Instructed Pre-training for Robotic Manipulation Table 1.
+- **p. 8 / 4.3. Method Analysis - extractive body cue:** In this part, we study whether the data scaling law appears in the pre-training and fine-tuning procedures of robotic manipulation.
+- **p. 8 / 4.3. Method Analysis - extractive body cue:** Notably, to show the value of DINOv2 representation more clearly, when DINOv2 is not adopted, we replace the encoders in VIRT as ResNet18, the backbone ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate the effectiveness of our method in both real and simulated environments.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Method Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown, all these designs improve the success rates of VIRT on the three evaluated tasks significantly. | p. 8 (4.3. Method Analysis) |
 | 4.3. Method Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition, we can find that increasing the fine-tuning data volume boosts execution success rates more significantly, which is because the fine-tuning data aligns ... | p. 8 (4.3. Method Analysis) |
@@ -39,31 +39,31 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** A Franka Panda robotic arm is deployed in each simulation environment to manipulate objects, with four cameras strategically positioned to observe the scene from various ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** For the real environment, we conduct experiments using the Cobot Magic robot (Agilex, 2024).
-- **p. 6 / 4. Experiments - extractive PDF cue:** 7, the three real-robot tasks include Pour Blueberries, Open the Lid, and Clean the Table.
-- **p. 7 / 4.1. VIP Effectiveness - extractive PDF cue:** The success rates of these policies are boosted in both simulated and real robotic manipulation environments, indicating the value of incorporating more diverse training data.
-- **p. 7 / 4. Experiments - extractive PDF cue:** VIP: Vision Instructed Pre-training for Robotic Manipulation Table 1.
-- **p. 8 / 4.3. Method Analysis - extractive PDF cue:** In this part, we study whether the data scaling law appears in the pre-training and fine-tuning procedures of robotic manipulation.
-- **p. 8 / 4.3. Method Analysis - extractive PDF cue:** Notably, to show the value of DINOv2 representation more clearly, when DINOv2 is not adopted, we replace the encoders in VIRT as ResNet18, the backbone ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate the effectiveness of our method in both real and simulated environments.
+- **p. 6 / 4. Experiments - extractive body cue:** A Franka Panda robotic arm is deployed in each simulation environment to manipulate objects, with four cameras strategically positioned to observe the scene from various ...
+- **p. 5 / 4. Experiments - extractive body cue:** For the real environment, we conduct experiments using the Cobot Magic robot (Agilex, 2024).
+- **p. 6 / 4. Experiments - extractive body cue:** 7, the three real-robot tasks include Pour Blueberries, Open the Lid, and Clean the Table.
+- **p. 7 / 4.1. VIP Effectiveness - extractive body cue:** The success rates of these policies are boosted in both simulated and real robotic manipulation environments, indicating the value of incorporating more diverse training data.
+- **p. 7 / 4. Experiments - extractive body cue:** VIP: Vision Instructed Pre-training for Robotic Manipulation Table 1.
+- **p. 8 / 4.3. Method Analysis - extractive body cue:** In this part, we study whether the data scaling law appears in the pre-training and fine-tuning procedures of robotic manipulation.
+- **p. 8 / 4.3. Method Analysis - extractive body cue:** Notably, to show the value of DINOv2 representation more clearly, when DINOv2 is not adopted, we replace the encoders in VIRT as ResNet18, the backbone ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate the effectiveness of our method in both real and simulated environments.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Visualization comparison between the action attention maps of the text instructed policy and vision instructed policy. We can observe that the text instructed ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall pipeline of VIP. The input to the pre-trained policy includes two image frames (the observation frame and future frame) and sparse point ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The conceptual diagram of sparse point flow. Consecu- tive frames in a video comprise numerous pixels and contain much redundant information for describing ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of different vision instructions. The three columns of images in the first and second rows show the world model input, future ground ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Illustrations of the Cobot Magic robot and how it is tele- operated. The robot has two master arms and two puppet arms. (a) ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Illustrations of how we teleoperate the robot in Isaac Gym. We build a real-time hand pose acquisition system to map the human hand ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 7. Illustrations of the three designed real-robot tasks, which include Pour Blueberries, Open the Lid, and Clean the Table. Move a Single Box Transport ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 8. Illustrations of the three designed simulated tasks, which include Move a Single Box, Transport the Specified Box, and Stack the Specified Boxes. of ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Visualization comparison between the action attention maps of the text instructed policy and vision instructed policy. We can observe that the text instructed ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of VIP. The input to the pre-trained policy includes two image frames (the observation frame and future frame) and sparse point ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The conceptual diagram of sparse point flow. Consecu- tive frames in a video comprise numerous pixels and contain much redundant information for describing ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of different vision instructions. The three columns of images in the first and second rows show the world model input, future ground ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Illustrations of the Cobot Magic robot and how it is tele- operated. The robot has two master arms and two puppet arms. (a) ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Illustrations of how we teleoperate the robot in Isaac Gym. We build a real-time hand pose acquisition system to map the human hand ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Illustrations of the three designed real-robot tasks, which include Pour Blueberries, Open the Lid, and Clean the Table. Move a Single Box Transport ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 8. Illustrations of the three designed simulated tasks, which include Move a Single Box, Transport the Specified Box, and Stack the Specified Boxes. of ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | A Franka Panda robotic arm is deployed in each simulation environment to manipulate objects, with four cameras strategically positioned to observe the scene from ... | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 5 (4. Experiments) |
 | Task/environment | For the real environment, we conduct experiments using the Cobot Magic robot (Agilex, 2024). | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 6 (4. Experiments) |
@@ -122,7 +122,7 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 | Primary metric/result | In addition, we can find that increasing the fine-tuning data volume boosts execution success rates more significantly, which is because the fine-tuning data aligns ... | numeric claim only at cited anchor | p. 8 (4.3. Method Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.1. VIP Effectiveness - extractive PDF cue:** Pre-train Inference Move Box Transport Box Stack Boxes F Cropped 0.87 0.64 0.50 S Cropped 0.78 0.51 0.36 F+S Text 0.85 0.19 0.06 F+S Future ...
+- **p. 7 / 4.1. VIP Effectiveness - extractive body cue:** Pre-train Inference Move Box Transport Box Stack Boxes F Cropped 0.87 0.64 0.50 S Cropped 0.78 0.51 0.36 F+S Text 0.85 0.19 0.06 F+S Future ...
 
 ## Generalization and Failure Cases
 
@@ -158,12 +158,12 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.3. Method Analysis - extractive PDF cue:** Robustness analysis of VIRT to different disturbances, e.g., brightness change, vision noise, and image blur.
-- **p. 7 / 4.1. VIP Effectiveness - extractive PDF cue:** For ConvMLP, its primary problem is its output head is a naive MLP, which is fast but fails to estimate actions precisely.
-- **p. 8 / 4.3. Method Analysis - extractive PDF cue:** This part analyzes the robustness of VIRT to different unseen environment disturbances.
-- **p. 7 / 4.2. Instruction Comparison - extractive PDF cue:** According to the results, we can find that solely using a future image or sparse point flows does not lead to effective pre-training due to ...
+- **p. 8 / 4.3. Method Analysis - extractive body cue:** Robustness analysis of VIRT to different disturbances, e.g., brightness change, vision noise, and image blur.
+- **p. 7 / 4.1. VIP Effectiveness - extractive body cue:** For ConvMLP, its primary problem is its output head is a naive MLP, which is fast but fails to estimate actions precisely.
+- **p. 8 / 4.3. Method Analysis - extractive body cue:** This part analyzes the robustness of VIRT to different unseen environment disturbances.
+- **p. 7 / 4.2. Instruction Comparison - extractive body cue:** According to the results, we can find that solely using a future image or sparse point flows does not lead to effective pre-training due to ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. VIP Effectiveness), p. 7 (4. Experiments), p. 8 (4.3. Method Analysis), metrics p. 7 (4.1. VIP Effectiveness), p. 7 (4.1. VIP Effectiveness), p. 8 (4.3. Method Analysis), p. 8 (4.3. Method Analysis), p. 6 (4. Experiments), p. 6 (4. Experiments), baselines p. 7 (4.1. VIP Effectiveness), p. 4 (Figure/Table caption), p. 7 (4.1. VIP Effectiveness), p. 8 (4.3. Method Analysis), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (4.3. Method Analysis), p. 8 (4.3. Method Analysis), p. 7 (4.1. VIP Effectiveness), p. 7 (4.1. VIP Effectiveness).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. VIP Effectiveness), p. 7 (4. Experiments), p. 8 (4.3. Method Analysis), metrics p. 7 (4.1. VIP Effectiveness), p. 7 (4.1. VIP Effectiveness), p. 8 (4.3. Method Analysis), p. 8 (4.3. Method Analysis), p. 6 (4. Experiments), p. 6 (4. Experiments), baselines p. 7 (4.1. VIP Effectiveness), p. 4 (Figure/Table caption), p. 7 (4.1. VIP Effectiveness), p. 8 (4.3. Method Analysis), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (4.3. Method Analysis), p. 8 (4.3. Method Analysis), p. 7 (4.1. VIP Effectiveness), p. 7 (4.1. VIP Effectiveness).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

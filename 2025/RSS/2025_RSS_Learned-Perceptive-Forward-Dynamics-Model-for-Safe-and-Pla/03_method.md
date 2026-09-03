@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p001.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p001.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p001.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p001.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,7 +21,7 @@ PDF body method statement (p. 5 (B. Model Architecture), p. 2 (A. Dynamics Model
 
 ## Design Rationale
 
-- **p. 1 / Front matter - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
 - **p. 3 / B. Planning - extractive body cue:** Our method addresses domain discrepancies by incorporating real-world data into the ‘dynamics model while maintaining platform awareness through earning from past experiences.
 - **p. 5 / B. Model Architecture - extractive body cue:** The Forward Dynamics Model loss £ consists of supervised terms for network outputs.
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (B. Model Architecture), p. 2 (A. Dynamics Model
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | The Forward Dynamics Model loss £ consists of supervised terms for network outputs. | p. 5 (B. Model Architecture), p. 2 (A. Dynamics Modeling) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | Lately, world models have emerged, which encode system dynamics in a latent space, enabling policy optimization through imagined rollouts [19 20) Such ... | p. 2 (A. Dynamics Modeling), p. 6 (B. Model Architecture) |
@@ -74,7 +74,7 @@ PDF body method statement (p. 5 (B. Model Architecture), p. 2 (A. Dynamics Model
 - **p. 3 / A. Dynamics Modeling - extractive body cue:** Given the current observation 0 and sequence of actions a = dy,...esn-1 We predict a sequence of future states
 - **p. 5 / B. Model Architecture - extractive body cue:** Model Input: As introduced, the model receives as ‘observations a history of m past states 5,..«-n. proprioceptive readings m}""7,, and a height scan' for traversabil
 - **p. 5 / B. Model Architecture - extractive body cue:** The flattened output of the latter and the last embedding of the former are used to initialize the hidden state of the forward prediction GRU. ...
-- **p. 1 / Front matter - extractive body cue:** The model, trained with real-world and simulation data, predicts the robots future states given a sequence of velocity actions.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The model, trained with real-world and simulation data, predicts the robots future states given a sequence of velocity actions.
 - **p. 4 / B. Planning - extractive body cue:** ‘TABLE I: The observation space of the FDM combines proprioceptive information of the robot state m2" and the joint states m?""* with exteroceptive measurements h. ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
@@ -134,8 +134,17 @@ PDF body method statement (p. 5 (B. Model Architecture), p. 2 (A. Dynamics Model
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (B. Model Architecture), p. 2 (A. Dynamics Modeling), p. 6 (B. Model Architecture), p. 3 (A. Dynamics Modeling), p. 3 (A. Dynamics Modeling), p. 4 (A. Dynamics Modeling), objective p. 4 (A. Dynamics Modeling), p. 3 (B. Model Predictive Path Integral Control), p. 6 (B. Model Architecture), p. 3 (B. Model Predictive Path Integral Control), p. 5 (B. Model Architecture), p. 4 (B. Planning), temporal p. 5 (V. MeTHopoLoGy), p. 9 (C. Platform-aware Predictions), p. 1 (Front matter), p. 2 (1. Inrropucrion), p. 2 (1. Inrropucrion), p. 3 (B. Model Predictive Path Integral Control).
+- **Evidence anchors reviewed:** method p. 5 (B. Model Architecture), p. 2 (A. Dynamics Modeling), p. 6 (B. Model Architecture), p. 3 (A. Dynamics Modeling), p. 3 (A. Dynamics Modeling), p. 4 (A. Dynamics Modeling), objective p. 4 (A. Dynamics Modeling), p. 3 (B. Model Predictive Path Integral Control), p. 6 (B. Model Architecture), p. 3 (B. Model Predictive Path Integral Control), p. 5 (B. Model Architecture), p. 4 (B. Planning), temporal p. 5 (V. MeTHopoLoGy), p. 9 (C. Platform-aware Predictions), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Inrropucrion), p. 2 (1. Inrropucrion), p. 3 (B. Model Predictive Path Integral Control).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Lately, world models have emerged, which encode system dynamics in a latent space, enabling policy optimization through imagined rollouts [19 20) Such models can also be used to directly estimate ... (p. 2, A. Dynamics Modeling).
+- **Objective/update evidence:** These weights are computed based on the reward 7, of each trajectory, ensuring higherreward trajectories contrite more significantly to the update: (p. 3, B. Model Predictive Path Integral Control).
+- **Temporal/runtime evidence:** The future states are collected from the following m states with a frequency of 1/AV,, resulting in 4 prediction horizon of n - Af, For all samples, the poses of ... (p. 5, V. MeTHopoLoGy).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

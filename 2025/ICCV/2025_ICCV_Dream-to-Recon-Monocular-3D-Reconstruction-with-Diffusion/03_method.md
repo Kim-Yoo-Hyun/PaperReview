@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.2. Training the View Completion Model), p. 5 
 
 ## Method Body Digest
 
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat h c al ...
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
-- **p. 3 / 3.2. Training the View Completion Model - extractive PDF cue:** Then, a generative model fills in the empty or occluded regions conditioned on the known context and ideally removes artifacts.
-- **p. 3 / 3. Method - extractive PDF cue:** In the following, we first introduce our view completion model (VCM), which completes occlusions and removes artifacts in warped images.
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** We then directly supervise them via the depth predictions Di from V using a Gaussian Negative Log-Likelihood (GNLL) loss, as proposed in [46].
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** The training involves two loss terms.
-- **p. 4 / 3.3. Synthesizing Scene Geometry - extractive PDF cue:** Within the render-refine-repeat framework, we generate several synthetic novel views, complete them using the VCM, predict corresponding depth maps, and update the scene geometry.
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat h c al ...
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
+- **p. 3 / 3.2. Training the View Completion Model - extractive body cue:** Then, a generative model fills in the empty or occluded regions conditioned on the known context and ideally removes artifacts.
+- **p. 3 / 3. Method - extractive body cue:** In the following, we first introduce our view completion model (VCM), which completes occlusions and removes artifacts in warped images.
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** We then directly supervise them via the depth predictions Di from V using a Gaussian Negative Log-Likelihood (GNLL) loss, as proposed in [46].
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** The training involves two loss terms.
+- **p. 4 / 3.3. Synthesizing Scene Geometry - extractive body cue:** Within the render-refine-repeat framework, we generate several synthetic novel views, complete them using the VCM, predict corresponding depth maps, and update the scene geometry.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our contributions are: • A specialized view completion model that inpaints and refines synthetic novel views and which can be trained using only a single ...
-- **p. 3 / 3.1. Preliminaries - extractive PDF cue:** For a given scene, our method receives as input a single image Iin ∈([0, 1]3)Ω, where Ω= {1, . . . , H} × {1, ...
+- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • A specialized view completion model that inpaints and refines synthetic novel views and which can be trained using only a single ...
+- **p. 3 / 3.1. Preliminaries - extractive body cue:** For a given scene, our method receives as input a single image Iin ∈([0, 1]3)Ω, where Ω= {1, . . . , H} × {1, ...
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat h c al ...
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
-- **p. 3 / 3.2. Training the View Completion Model - extractive PDF cue:** Then, a generative model fills in the empty or occluded regions conditioned on the known context and ideally removes artifacts.
-- **p. 3 / 3. Method - extractive PDF cue:** In the following, we first introduce our view completion model (VCM), which completes occlusions and removes artifacts in warped images.
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** We then directly supervise them via the depth predictions Di from V using a Gaussian Negative Log-Likelihood (GNLL) loss, as proposed in [46].
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat h c al ...
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
+- **p. 3 / 3.2. Training the View Completion Model - extractive body cue:** Then, a generative model fills in the empty or occluded regions conditioned on the known context and ideally removes artifacts.
+- **p. 3 / 3. Method - extractive body cue:** In the following, we first introduce our view completion model (VCM), which completes occlusions and removes artifacts in warped images.
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** We then directly supervise them via the depth predictions Di from V using a Gaussian Negative Log-Likelihood (GNLL) loss, as proposed in [46].
 - **Detected method headings:** 3. Method (p. 3); 3.2. Training the View Completion Model (p. 3); 3.4. Distilling into a Scene Reconstruction Model (p. 5); 4.4. Distillation into a Feed-Forward Model (p. 8)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside ... | p. 4 (3.2. Training the View Completion Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat ... | p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 4 (3.2. Training the View Completion Model) |
@@ -47,10 +47,10 @@ PDF body method statement (p. 4 (3.2. Training the View Completion Model), p. 5 
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** We then directly supervise them via the depth predictions Di from V using a Gaussian Negative Log-Likelihood (GNLL) loss, as proposed in [46].
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** The training involves two loss terms.
-- **p. 4 / 3.3. Synthesizing Scene Geometry - extractive PDF cue:** Within the render-refine-repeat framework, we generate several synthetic novel views, complete them using the VCM, predict corresponding depth maps, and update the scene geometry.
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** We then directly supervise them via the depth predictions Di from V using a Gaussian Negative Log-Likelihood (GNLL) loss, as proposed in [46].
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** The training involves two loss terms.
+- **p. 4 / 3.3. Synthesizing Scene Geometry - extractive body cue:** Within the render-refine-repeat framework, we generate several synthetic novel views, complete them using the VCM, predict corresponding depth maps, and update the scene geometry.
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 4 (3.3. Synthesizing Scene Geometry).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -66,13 +66,13 @@ PDF body method statement (p. 4 (3.2. Training the View Completion Model), p. 5 
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.2. Training the View Completion Model - extractive PDF cue:** Given an input image Iin and predicted depth DIin, we first warp the pixels into a virtual novel view with a random camera pose.
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Starting from an input image, they first warp the pixels into a virtual novel view using the depth predictor.
-- **p. 3 / 3.2. Training the View Completion Model - extractive PDF cue:** From this input, the VCM produces an inpainted and refined image.
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** For areas of the input image, which would be occluded in the novel view, the backward warped image will be corrupted.
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** Given a single image as input, it predicts a discretized occupancy field ΘSRM ∈[0, 1]Z×H×W .
-- **p. 1 / 1. Introduction - extractive PDF cue:** Consequently, it is not possible to infer information about areas that are beyond the parts visible in the input image.
+- **p. 3 / 3.2. Training the View Completion Model - extractive body cue:** Given an input image Iin and predicted depth DIin, we first warp the pixels into a virtual novel view with a random camera pose.
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
+- **p. 2 / 1. Introduction - extractive body cue:** Starting from an input image, they first warp the pixels into a virtual novel view using the depth predictor.
+- **p. 3 / 3.2. Training the View Completion Model - extractive body cue:** From this input, the VCM produces an inpainted and refined image.
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** For areas of the input image, which would be occluded in the novel view, the backward warped image will be corrupted.
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** Given a single image as input, it predicts a discretized occupancy field ΘSRM ∈[0, 1]Z×H×W .
+- **p. 1 / 1. Introduction - extractive body cue:** Consequently, it is not possible to infer information about areas that are beyond the parts visible in the input image.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -87,11 +87,11 @@ PDF body method statement (p. 4 (3.2. Training the View Completion Model), p. 5 
 
 ## Training vs Inference
 
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
-- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive PDF cue:** The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat h c al ...
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
-- **p. 4 / 3.2. Training the View Completion Model - extractive PDF cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
-- **p. 5 / 4.1. Setup - extractive PDF cue:** We add batch-normalization layers to the backbone's decoder to stabilize mixed-precision training.
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** Training uses only a single view per scene and leverages forward-backward warping for data generation. b) The VCM is applied iteratively alongside a depth prediction ...
+- **p. 5 / 3.4. Distilling into a Scene Reconstruction Model - extractive body cue:** The loss term provides training signals to the surface areas of the predicted density field, which are particularly hard to learn. \mat h c al ...
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
+- **p. 4 / 3.2. Training the View Completion Model - extractive body cue:** 1 ControlNet Denoising U-Net VCM Noise CLIP(Iin) a) View Completion Model Training b) Multi-view and 3D Data Synthesis Predict Depth VCM c) Synthetic Data Distillation ...
+- **p. 5 / 4.1. Setup - extractive body cue:** We add batch-normalization layers to the backbone's decoder to stabilize mixed-precision training.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -111,13 +111,13 @@ PDF body method statement (p. 4 (3.2. Training the View Completion Model), p. 5 
 
 ## Failure and Ablation Link
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative effect of different loss terms. See Tab. 4. lated variants, our full loss setup achieves competitive Oacc and the highest IEacc. While ...
-- **p. 6 / 4.3.1. Conditioning of the VCM - extractive PDF cue:** We evaluate both configurations on the KITTI-360 dataset (VCMK), and further examine the effect of finetuning on Waymo (VCMK→W).
-- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive PDF cue:** Effect of occlusion detection strategies.
-- **p. 6 / 4.3. Scene Synthesis using the VCM - extractive PDF cue:** To this end, we rigorously validate our design choices through a series of ablation studies.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Effect of VCM conditioning. See Tab. 2.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Dream-to-Recon. We leverage fine-tuned diffusion models for inpainting and a pre-trained depth predictor to generate high- quality scene geometry from a single image, ...
-- **p. 6 / 4.2. Scene Reconstruction - extractive PDF cue:** This failure stems from their use of multi-view data across multiple timesteps, which introduces inconsistency when the object is in motion.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative effect of different loss terms. See Tab. 4. lated variants, our full loss setup achieves competitive Oacc and the highest IEacc. While ...
+- **p. 6 / 4.3.1. Conditioning of the VCM - extractive body cue:** We evaluate both configurations on the KITTI-360 dataset (VCMK), and further examine the effect of finetuning on Waymo (VCMK→W).
+- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive body cue:** Effect of occlusion detection strategies.
+- **p. 6 / 4.3. Scene Synthesis using the VCM - extractive body cue:** To this end, we rigorously validate our design choices through a series of ablation studies.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Effect of VCM conditioning. See Tab. 2.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dream-to-Recon. We leverage fine-tuned diffusion models for inpainting and a pre-trained depth predictor to generate high- quality scene geometry from a single image, ...
+- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** This failure stems from their use of multi-view data across multiple timesteps, which introduces inconsistency when the object is in motion.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -131,7 +131,7 @@ PDF body method statement (p. 4 (3.2. Training the View Completion Model), p. 5 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Training the View Completion Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 4 (3.2. Training the View Completion Model), p. 3 (3.2. Training the View Completion Model), p. 3 (3. Method), p. 5 (3.4. Distilling into a Scene Reconstruction Model), objective p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 4 (3.3. Synthesizing Scene Geometry), p. 4 (3.2. Training the View Completion Model), temporal p. 6 (4.2. Scene Reconstruction), p. 6 (4.2. Scene Reconstruction), p. 3 (3.2. Training the View Completion Model), p. 4 (3.3. Synthesizing Scene Geometry), p. 4 (3.3. Synthesizing Scene Geometry), p. 5 (3.3. Synthesizing Scene Geometry).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Training the View Completion Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 4 (3.2. Training the View Completion Model), p. 3 (3.2. Training the View Completion Model), p. 3 (3. Method), p. 5 (3.4. Distilling into a Scene Reconstruction Model), objective p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model), p. 4 (3.3. Synthesizing Scene Geometry), p. 4 (3.2. Training the View Completion Model), temporal p. 6 (4.2. Scene Reconstruction), p. 6 (4.2. Scene Reconstruction), p. 3 (3.2. Training the View Completion Model), p. 4 (3.3. Synthesizing Scene Geometry), p. 4 (3.3. Synthesizing Scene Geometry), p. 5 (3.3. Synthesizing Scene Geometry).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

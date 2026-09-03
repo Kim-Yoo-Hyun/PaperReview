@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 for the low-level action policy based on the task instruction and the current observation.를 3D Diffuser Actor (3D-DA) [18] tains a policy that is jointly conditioned on a tokenized 3D scene, proprioceptive feedback, and a natural-language instruction, It uses diffusion to generate 3D pose trajectories.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Our experimental results demonstrate that the part-level instruction following tasks in our Partinstruct benchmark remains extremely difficult for state-of-the-art end-to-end vision-language policy learning ‘methods. ‘There are several ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 3D Diffuser Actor (3D-DA) [18] tains a policy that is jointly conditioned on a tokenized 3D scene, proprioceptive feedback, and a natural-language instruction, It uses diffusion to generate 3D pose ... (p. 6, A. End-to-End Policy Learning).
+- **Paper-specific mechanism:** In this work, we introduce Partinstruct, the first large-scale benchmark for both (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars denote the standard errors calculated ... (p. 7, Figure/Table caption); the relevant task/metric cue is Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. (p. 2, A. Instruction Following Benchmarks for Table-Top Robot). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts..
-3. Compare against the body-reported baseline or a matched simpler baseline: 3) Demonstration Generation: Each demonstration is. a sequential execution of oracle high-level plans of base skills defined in Table X, To generate the trajectories in the demonstrations, we detect grasping point using ....
-4. Report the body metric and its denominator/aggregation: Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars denote the standard errors calculated across all ....
-5. Re-run the body-reported ablation/failure condition: Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 3D Diffuser Actor (3D-DA) [18] tains a policy that is jointly conditioned on a tokenized 3D scene, proprioceptive feedback, and a natural-language instruction, It uses diffusion to generate 3D pose ... (p. 6, A. End-to-End Policy Learning); preserve the objective/update rule: updates the skill instruction once every n steps, while the low-level action policy updates the action at every step. (p. 7, 1 Actions .ow-Level Action).
+2. Use the paper-reported task/data/environment cue: Each episode contains an observation set with different modslities, an expert action trajectory, a natural language description of the overall task, referred to as the task instruction Iga. as well ... (p. 5, C. Dataset).
+3. Compare against the reported or matched baseline: Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. (p. 2, A. Instruction Following Benchmarks for Table-Top Robot).
+4. Report the body metric with its denominator and aggregation: Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. (p. 2, A. Instruction Following Benchmarks for Table-Top Robot).
+5. Re-run the reported ablation or stress/failure condition: Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. (p. 2, A. Instruction Following Benchmarks for Table-Top Robot); if none is reported, design one around: The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (B. Bi-level Planning), p. 8 (B. Bi-level Planning), p. 8 (B. Bi-level Planning); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 6 (C. Dataset), p. 6 (C. Dataset); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 7 (B. Bi-level Planning), match the reported outcome at p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), and measure the boundary at p. 21 (C. Skill and Object Part Impact Study), p. 9 (V. Discussion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Specifically, bi-level, planner mechanism이 3) Demonstration Generation: Each demonstration is. a sequential execution of oracle high-level plans of base skills ... 대비 Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group ...을 개선하고, Our experimental results demonstrate that the part-level instruction following tasks in our Partinstruct benchmark remains extremely ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (3D Diffuser Actor (3D-DA) [18] tains a policy that is jointly conditioned on a tokenized 3D scene, proprioceptive feedback, and a natural-language ...), does the paper-specific mechanism (In this work, we introduce Partinstruct, the first large-scale benchmark for both) retain the reported evaluation outcome (Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of ...) when tested against the paper's strongest explicit boundary (The Failure Cause was calculated by dividing the number of times a skill chain failed because of a ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we introduce Partinstruct, the first large-scale benchmark for both (p. 1, Abstract).
+- **Paper-supported outcome:** Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars denote the standard errors calculated ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

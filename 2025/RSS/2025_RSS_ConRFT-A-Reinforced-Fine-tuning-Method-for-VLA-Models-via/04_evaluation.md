@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p019.html; PDF retrieval source: https://arxiv.org/pdf/2502.05450. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p019.html; PDF retrieval source: https://arxiv.org/pdf/2502.05450. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (V. EXPERIMENT
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Our approach, ConRFT, achieves the highest average success rate of 96.3% after 45 to 90 minutes of real-world training across all tasks, ... | p. 6 (Figure/Table caption) |
 | V. EXPERIMENT AND RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Meanwhile, RLDG achieves higher success rates using optimal data collected from RL policies, suggesting that the consistency of these RL-collected data can improve the ... | p. 8 (V. EXPERIMENT AND RESULTS) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (V. EXPERIMENT
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This figure presents the success rates, intervention rates, and episode lengths for HIL-SERL [20], HG-DAgger [19], PA-RL [14] and our method across five representative ... | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS) |
 | Task/environment | This enhanced sample efficiency and reduced episode length highlight the advantages of ConRFT for fine-tuning VLA models in real-world robotic applications. | reset, timeout, object/scene variation | p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (V. EXPERIMENT
 - **p. 7 / V. EXPERIMENT AND RESULTS - extractive body cue:** However, it fails to improve the policy performance in contact-rich tasks that require precise, careful manipulation, such as Insert Wheel.
 - **p. 8 / V. EXPERIMENT AND RESULTS - extractive body cue:** This indicates that simply adding more human-collected demonstrations with supervised learning does not necessarily guarantee higher performance due to the inconsistent and sub-optimal actions inherent ...
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 5 (V. EXPERIMENT AND RESULTS), p. 5 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), metrics p. 8 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), baselines p. 6 (V. EXPERIMENT AND RESULTS), p. 6 (Figure/Table caption), p. 5 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), results p. 6 (Figure/Table caption), p. 8 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 5 (V. EXPERIMENT AND RESULTS), p. 5 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), metrics p. 8 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), baselines p. 6 (V. EXPERIMENT AND RESULTS), p. 6 (Figure/Table caption), p. 5 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), results p. 6 (Figure/Table caption), p. 8 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), p. 6 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** This suggests that Cal-ConRFT enables quicker adaptation of the online learning process by leveraging the Q loss during the offline stage, allowing more effective and stable policy improvement with a ... (p. 8, V. EXPERIMENT AND RESULTS).
+- **Metric evidence:** As shown in Table IV, the results indicate that ConRFT can effectively enhance the performance of various VLAs, improving the success rates across multiple robotic tasks. (p. 8, V. EXPERIMENT AND RESULTS).
+- **Baseline/ablation evidence:** For the online stage, we compared HIL-ConRFT with multiple baselines, including HG-DAgger [19] that incorporates human corrections to fine-tune the policy through supervised learning, PA-RL [14] that optimized actions through ... (p. 6, V. EXPERIMENT AND RESULTS).
+- **Failure/negative evidence:** Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several limitations remain. (p. 8, VI. LIMITATIONS).

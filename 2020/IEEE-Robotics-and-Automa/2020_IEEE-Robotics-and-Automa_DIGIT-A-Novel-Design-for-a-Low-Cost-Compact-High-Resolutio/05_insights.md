@@ -38,10 +38,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 Second, we demonstrate the sensor by learning to manipulate small objects with a multi-finger hand from raw tactile inputs.를 One of the contributing factors that limit current robotic manipulation systems is the difficulty of precisely sensing contact forces - sensing and reasoning about contact forces are crucial to accurately control interactions ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This is a very challenging task because it requires controlling the slipping and rolling dynamics of the marble over the small and deformable DIGIT surfaces under different pressure and joint positions, as ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** One of the contributing factors that limit current robotic manipulation systems is the difficulty of precisely sensing contact forces - sensing and reasoning about contact forces are crucial to accurately ... (p. 1, Abstract).
+- **Paper-specific mechanism:** To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS); the relevant task/metric cue is LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -53,19 +54,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To validate our modeling choices, we measure the prediction error on a standard benchmark for video prediction, the BAIR robot pushing dataset [36], in addition to our DIGIT tactile marble manipulation videos..
-3. Compare against the body-reported baseline or a matched simpler baseline: However, compared to our MPC approach which is virtually parameters-free, this proved significantly more challenging..
-4. Report the body metric and its denominator/aggregation: In both datasets, we use 64 × 64 images and compare prediction performance with CDNA [35] used for tactile servoing in [17] in terms of per-pixel root mean squared error (RMSE) on ....
-5. Re-run the body-reported ablation/failure condition: Figure 4: DIGIT supports different types of elastomers which can be rapidly replaced thanks to its mechanical design. Here we show readings when touching an object (left) using three different elastomers: reflective, ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: One of the contributing factors that limit current robotic manipulation systems is the difficulty of precisely sensing contact forces - sensing and reasoning about contact forces are crucial to accurately ... (p. 1, Abstract); preserve the objective/update rule: To provide the robotic community access to reliable and low-cost tactile sensors, we open-source the DIGIT design at www.digit.ml. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: To validate our modeling choices, we measure the prediction error on a standard benchmark for video prediction, the BAIR robot pushing dataset [36], in addition to our DIGIT tactile marble ... (p. 6, V. EXPERIMENTAL RESULTS).
+3. Compare against the reported or matched baseline: In comparison, CDNA would take 69 seconds for a single step, making it impractical to use for control. (p. 6, V. EXPERIMENTAL RESULTS).
+4. Report the body metric with its denominator and aggregation: LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS).
+5. Re-run the reported ablation or stress/failure condition: These results are shown in Table III. (p. 6, V. EXPERIMENTAL RESULTS); if none is reported, design one around: (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (I. INTRODUCTION); the primary result is directionally consistent at p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 7 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), and measure the boundary at p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 better, fulfill, requirements mechanism이 However, compared to our MPC approach which is virtually parameters-free, this proved significantly more challenging. 대비 In both datasets, we use 64 × 64 images and compare prediction performance with CDNA [35] used for ...을 개선하고, This is a very challenging task because it requires controlling the slipping and rolling dynamics of ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (One of the contributing factors that limit current robotic manipulation systems is the difficulty of precisely sensing contact forces - sensing and ...), does the paper-specific mechanism (To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.) retain the reported evaluation outcome (LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 ...) when tested against the paper's strongest explicit boundary ((Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS).
+- **Strongest explicit boundary:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -1,8 +1,10 @@
 # GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p057.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p057.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p057.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p057.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p057.pdf
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 While force sensors can provide accurate force readings, physical limitations associated with ‘embedding the sensors into the robotic hands, as well as lack of high-resolution tactile information limit the use of these ...를 문제로 두고, Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping and extrinsic ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Iyrropucrion), p. 1 (Abstract), p. 2 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, accuracy of the measured forces is not ‘on a par with those of the force sensors due to the potential bration challenges and noise. (p. 1, Abstract).
+- **Actual contribution:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+- **Evaluation boundary:** The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for the success and failure cases is presented in table Ill, We can ... (p. 8, C. Hardware Results).
+- **Explicit failure boundary:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).

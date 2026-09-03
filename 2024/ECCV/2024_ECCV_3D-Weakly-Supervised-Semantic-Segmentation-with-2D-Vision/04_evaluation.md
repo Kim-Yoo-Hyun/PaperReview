@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/9223_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/9223_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 12 (Figure/Tabl
 
 ## Evaluation Body Digest
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** We adopt the default train-val split setting, where there are 1201 training scenes and 312 validation scenes.
-- **p. 9 / 4 Experiments - extractive PDF cue:** ScanNet [10] has 1513 training scenes and 100 test scenes with 20 classes.
-- **p. 9 / 4 Experiments - extractive PDF cue:** We reduce the learning rate by a multiplying factor of 0.7 every 20 epochs for a total of 80 epochs.
-- **p. 9 / 4 Experiments - extractive PDF cue:** 3.2, we use Adam optimizer with batch size of 16 and set an initial learning rate of 0.003 for the model.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: The proposed pseudo label generation procedure. We first leverage the text encoder εtext of Openseg to get embeddings of the full category labels ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Performance comparison on the S3DIS dataset. "Sup." indicates the type of supervision. "100%" represents full annotation. "scene." denotes scene-level annotation.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. Meanwhile, ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 5: Performance comparisons with different 3D backbones and ESS module back- bones on the S3DIS dataset. Module Backbone mIoU 3D MinkowskiNet14A 44.5 MinkowskiNet18A 45.3
+- **p. 9 / 4 Experiments - extractive body cue:** We adopt the default train-val split setting, where there are 1201 training scenes and 312 validation scenes.
+- **p. 9 / 4 Experiments - extractive body cue:** ScanNet [10] has 1513 training scenes and 100 test scenes with 20 classes.
+- **p. 9 / 4 Experiments - extractive body cue:** We reduce the learning rate by a multiplying factor of 0.7 every 20 epochs for a total of 80 epochs.
+- **p. 9 / 4 Experiments - extractive body cue:** 3.2, we use Adam optimizer with batch size of 16 and set an initial learning rate of 0.003 for the model.
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: The proposed pseudo label generation procedure. We first leverage the text encoder εtext of Openseg to get embeddings of the full category labels ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison on the S3DIS dataset. "Sup." indicates the type of supervision. "100%" represents full annotation. "scene." denotes scene-level annotation.
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. Meanwhile, ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Performance comparisons with different 3D backbones and ESS module back- bones on the S3DIS dataset. Module Backbone mIoU 3D MinkowskiNet14A 44.5 MinkowskiNet18A 45.3
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 12 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 1: Performance comparison on the S3DIS dataset. "Sup." indicates the type of supervision. "100%" represents full annotation. "scene." denotes scene-level annotation. | p. 10 (Figure/Table caption) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. ... | p. 12 (Figure/Table caption) |
@@ -39,25 +39,25 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 12 (Figure/Tabl
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 4 Experiments - extractive PDF cue:** We adopt the default train-val split setting, where there are 1201 training scenes and 312 validation scenes.
-- **p. 9 / 4 Experiments - extractive PDF cue:** ScanNet [10] has 1513 training scenes and 100 test scenes with 20 classes.
+- **p. 9 / 4 Experiments - extractive body cue:** We adopt the default train-val split setting, where there are 1201 training scenes and 312 validation scenes.
+- **p. 9 / 4 Experiments - extractive body cue:** ScanNet [10] has 1513 training scenes and 100 test scenes with 20 classes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: Comparison of different approaches. (a) The conventional 3D WSSS approach adopts the coarse-grained CAM method in a global manner and is supervised by ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: The proposed pseudo label generation procedure. We first leverage the text encoder εtext of Openseg to get embeddings of the full category labels ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 3: The proposed training procedure of our proposed 3DSS-VLG. Here, it is mainly divided into two stages: (a) Embeddings Specialization Stage and (b) Embeddings ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 1: Performance comparison on the S3DIS dataset. "Sup." indicates the type of supervision. "100%" represents full annotation. "scene." denotes scene-level annotation.
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 2: Performance comparison on the ScanNet test set and validation set. "Sup." indicates the type of supervision. "100%" represents full annotation. "subcloud." and "scene." ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation studies of the 3DSS-VLG components on S3DIS dataset. ESGS Filtering ESS mIoU (a) 37.7 (b) ✓ 38.2 (c)
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. Meanwhile, ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 5: Performance comparisons with different 3D backbones and ESS module back- bones on the S3DIS dataset. Module Backbone mIoU 3D MinkowskiNet14A 44.5 MinkowskiNet18A 45.3
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison of different approaches. (a) The conventional 3D WSSS approach adopts the coarse-grained CAM method in a global manner and is supervised by ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: The proposed pseudo label generation procedure. We first leverage the text encoder εtext of Openseg to get embeddings of the full category labels ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 3: The proposed training procedure of our proposed 3DSS-VLG. Here, it is mainly divided into two stages: (a) Embeddings Specialization Stage and (b) Embeddings ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison on the S3DIS dataset. "Sup." indicates the type of supervision. "100%" represents full annotation. "scene." denotes scene-level annotation.
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 2: Performance comparison on the ScanNet test set and validation set. "Sup." indicates the type of supervision. "100%" represents full annotation. "subcloud." and "scene." ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Ablation studies of the 3DSS-VLG components on S3DIS dataset. ESGS Filtering ESS mIoU (a) 37.7 (b) ✓ 38.2 (c)
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. Meanwhile, ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Performance comparisons with different 3D backbones and ESS module back- bones on the S3DIS dataset. Module Backbone mIoU 3D MinkowskiNet14A 44.5 MinkowskiNet18A 45.3
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We adopt the default train-val split setting, where there are 1201 training scenes and 312 validation scenes. | embodiment, simulator version and control stack | p. 9 (4 Experiments), p. 9 (4 Experiments) |
 | Task/environment | ScanNet [10] has 1513 training scenes and 100 test scenes with 20 classes. | reset, timeout, object/scene variation | p. 9 (4 Experiments) |
@@ -111,7 +111,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 12 (Figure/Tabl
 | Primary metric/result | Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. ... | numeric claim only at cited anchor | p. 12 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 9 / 4 Experiments - extractive PDF cue:** We reduce the learning rate by a multiplying factor of 0.7 every 20 epochs for a total of 80 epochs.
+- **p. 9 / 4 Experiments - extractive body cue:** We reduce the learning rate by a multiplying factor of 0.7 every 20 epochs for a total of 80 epochs.
 
 ## Generalization and Failure Cases
 
@@ -127,12 +127,12 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 12 (Figure/Tabl
 |---|---|
 | 3.2, we use Adam optimizer with batch size of 16 and set an initial learning rate of 0.003 for the model. | p. 9 (4 Experiments) |
 | We reduce the learning rate by a multiplying factor of 0.7 every 20 epochs for a total of 80 epochs. | p. 9 (4 Experiments) |
+| 3D Weakly Supervised Semantic Segmentation with 2D Vision-Language Guidance Xiaoxu Xu1, Yitian Yuan2 , Jinlong Li3 , Qiudan Zhang1 , Zequn Jie2 , Lin ... | p. 1 (Body text (section not recovered)) |
 | We first process these multi-view images using the image encoder of the pretrained off-the-shelf 2D OVSS model such as Openseg [12] to get the ... | p. 3 (X. Xu et al) |
 | We first leverage the text encoder εtext of Openseg to get embeddings of the full category labels FC, and leverage the 2D image encoder ... | p. 6 (X. Xu et al) |
 | 2, we first implement dense 2D embeddings extraction for each RGB image via the frozen visual encoder of Openseg [12], and back-project them onto ... | p. 6 (X. Xu et al) |
 | Similarly, we also freeze the text encoder and directly load the pretrained Openseg parameters. | p. 7 (X. Xu et al) |
 | We take the text encoder of Openseg to exact text embeddings FC ∈RK×d of full category labels, where K denoted the number of categories. | p. 7 (X. Xu et al) |
-| For (a), we first utilize the text encoder εtext of Openseg to obtain embeddings of the category labels FC, which are frozen during the ... | p. 8 (X. Xu et al) |
 
 | Audit field | Current status |
 |---|---|
@@ -146,7 +146,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 12 (Figure/Tabl
 
 - explicit limitation/failure sentence not recovered
 
-- **PDF anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 9 (4 Experiments), p. 14 (Figure/Table caption), p. 9 (4 Experiments), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 9 (4 Experiments), p. 14 (Figure/Table caption), p. 9 (4 Experiments), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

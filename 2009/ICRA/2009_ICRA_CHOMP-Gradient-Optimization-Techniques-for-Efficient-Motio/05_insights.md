@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `start/goal, map, dynamics와 successor/operator description → path, trajectory, symbolic state 또는 task-motion decision → feasible action sequence 또는 minimum-cost plan`.
-- 이 논문의 재사용 가능한 지점은 The approach shares much in common with elastic bands planning; however, unlike many previous path optimization techniques, we drop the requirement that the input path be Fig.를 Perhaps the most prevalent method of path optimization is the so-called "shortcut" heuristic, which picks pairs of configurations along the path and invokes a local planner to attempt to replace the intervening ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 path, trajectory, symbolic state 또는 task-motion decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform a na¨ıve initial guess into a trajectory suitable ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The approach shares much in common with elastic bands planning; however, unlike many previous path optimization techniques, we drop the requirement that the input path be Fig. (p. 1, I. INTRODUCTION).
+- **Paper-specific mechanism:** In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is This section presents experimental results for our implementation of CHOMP on Barrett Technology's WAM arm shown in figure 1. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM); the relevant task/metric cue is Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how the robot should best remove itself from collision. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, as we discuss in section V, while the algorithm solves a substantially larger breadth of planning problems than traditional trajectory optimization algorithms, it still falls prey to local minima ... (p. 3, II. THE CHOMP ALGORITHM).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We chose 15 different configurations in a given scene representing various tasks such as picking up an object 3The last degree of freedom simply rotates the hand in place..
-3. Compare against the body-reported baseline or a matched simpler baseline: CHOMP successfully found collision-free trajectories for 99 of the 105 problem.4 We additionally compared the performance of CHOMP when initialized to a straight-line trajectory through configuration space to its performance when initia ....
-4. Report the body metric and its denominator/aggregation: Because the amount of rotation over a footstep is generally quite small (under 30◦), the error between the inner product on exponential map vectors and the true quaternion distance metric is negligible..
-5. Re-run the body-reported ablation/failure condition: Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform a na¨ıve initial guess into a trajectory suitable ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The approach shares much in common with elastic bands planning; however, unlike many previous path optimization techniques, we drop the requirement that the input path be Fig. (p. 1, I. INTRODUCTION); preserve the objective/update rule: Setting the gradient of the right hand side of equation 3 to zero and solving for the minimizer results in the following more succinct update rule: ξk+1 = ξk -1 ... (p. 2, II. THE CHOMP ALGORITHM).
+2. Use the paper-reported task/data/environment cue: Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how the robot should best remove itself from collision. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM).
+3. Compare against the reported or matched baseline: However, we made little effort to make our code efficient; we stress that our algorithm is performing essentially the same amount of work as the smoother of a two stage ... (p. 6, III. EXPERIMENTS ON A ROBOTIC ARM).
+4. Report the body metric with its denominator and aggregation: Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how the robot should best remove itself from collision. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM).
+5. Re-run the reported ablation or stress/failure condition: Experimental results Our first experiment was designed to evaluate the efficacy of CHOMP and its probabilistic variants as a replacement for planning on a variety of everyday household manipulation problems. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM); if none is reported, design one around: However, as we discuss in section V, while the algorithm solves a substantially larger breadth of planning problems than traditional trajectory optimization algorithms, it still falls prey to local minima ... (p. 3, II. THE CHOMP ALGORITHM).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM); the primary result is directionally consistent at p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (Abstract), match the reported outcome at p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), and measure the boundary at p. 3 (II. THE CHOMP ALGORITHM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, Covariant, Hamiltonian mechanism이 CHOMP successfully found collision-free trajectories for 99 of the 105 problem.4 We additionally compared the performance ... 대비 Because the amount of rotation over a footstep is generally quite small (under 30◦), the error between the ...을 개선하고, Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The approach shares much in common with elastic bands planning; however, unlike many previous path optimization techniques, we drop the requirement that ...), does the paper-specific mechanism (In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic ...) retain the reported evaluation outcome (Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how ...) when tested against the paper's strongest explicit boundary (However, as we discuss in section V, while the algorithm solves a substantially larger breadth of planning problems ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Section II-C discusses a heuristic based on the signed distance field under which the obstacles themselves specify how ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** This section presents experimental results for our implementation of CHOMP on Barrett Technology's WAM arm shown in figure 1. (p. 5, III. EXPERIMENTS ON A ROBOTIC ARM).
+- **Strongest explicit boundary:** However, as we discuss in section V, while the algorithm solves a substantially larger breadth of planning problems than traditional trajectory optimization algorithms, it still falls prey to local minima ... (p. 3, II. THE CHOMP ALGORITHM).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

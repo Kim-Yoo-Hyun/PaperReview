@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1606.03476; PDF retrieval source: https://arxiv.org/pdf/1606.03476. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1606.03476; PDF retrieval source: https://arxiv.org/pdf/1606.03476. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1 Introduction), p. 4 (2 Background), p. 1 (1 Introducti
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Given that learner's true goal often is to take actions imitating the expert-indeed, many IRL algorithms are evaluated on the quality of ... | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | There are two main approaches suitable for this setting: behavioral cloning [20], which learns a policy as a supervised learning problem over ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF |
+| Observation / input | There are two main approaches suitable for this setting: behavioral cloning [20], which learns a policy as a supervised learning problem over ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
 | State / latent | There, main, approaches, suitable, setting, behavioral, cloning, learns, policy, supervised | behavior policy와 temporal action context | notation and tensor shape require body check |
 | Output / action | occupancy, measure, interpreted, distribution, state-action, pairs, agent, encounters | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | observation history o_{t−H:t}; body terms: There, main, approaches, suitable, setting, behavioral, cloning, learns, policy, supervised | p. 1 (1 Introduction), p. 4 (2 Background), p. 3 (2 Background) |
 | Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: certain, instantiation, framework, draws, analogy, between, imitation, learning | p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Background) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1 Introduction), p. 4 (2 Background), p. 1 (1 Introducti
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (2 Background), p. 4 (2 Background), p. 5 (2 Background) |
 | Success / guarantee | closed-loop task success and robustness | p. 7 (6 Experiments), p. 7 (6 Experiments), p. 13 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1 Introduction), p. 4 (2 Background), p. 1 (1 Introducti
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background), p. 4 (2 Background)): We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm that obtains ...
+PDF body contribution framing (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background), p. 4 (2 Background)): We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm that obtains ...
 
 - **p. 1 / 1 Introduction - extractive body cue:** Then, we instantiate our framework in Sections 4 and 5 with a new model-free imitation learning algorithm.
 - **p. 3 / 2 Background - extractive body cue:** We explore such algorithms in Sections 4 and 5, where we show that certain settings of ψ lead to both existing algorithms and a novel ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Backgr
 
 ## Position in the Robotics Loop
 
-il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1 Introduction), p. 4 (2 Background), p. 3 (2 Background), p. 4 (2 Background). The downstream handoff is claimed only when the body describes it.
+il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 4 (2 Background), p. 3 (2 Background), p. 4 (2 Background). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 4 (2 Background), p. 1 (1 Introduction), p. 2 (2 Background), p. 3 (2 Background), interface p. 1 (1 Introduction), p. 4 (2 Background), p. 3 (2 Background), p. 4 (2 Background), objective p. 5 (2 Background), p. 5 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗), p. 4 (2 Background), p. 7 (2. Form a gradient estimate with Eq. (12) with c∗), p. 3 (2 Background).
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 4 (2 Background), p. 1 (1 Introduction), p. 2 (2 Background), p. 3 (2 Background), interface p. 1 (1 Introduction), p. 4 (2 Background), p. 3 (2 Background), p. 4 (2 Background), objective p. 5 (2 Background), p. 5 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗), p. 4 (2 Background), p. 7 (2. Form a gradient estimate with Eq. (12) with c∗), p. 3 (2 Background).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Inverse reinforcement learning (IRL), on the other hand, learns a cost function that prioritizes entire trajectories over others, so compounding error, a problem for methods that fit single-timestep decisions, is ... (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** Then, we instantiate our framework in Sections 4 and 5 with a new model-free imitation learning algorithm. (p. 1, 1 Introduction).
+- **Assumption/failure evidence:** FEM and GTAL performed poorly for Ant, producing policies consistently worse than a policy that chooses actions uniformly at random. (p. 8, 6 Experiments).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

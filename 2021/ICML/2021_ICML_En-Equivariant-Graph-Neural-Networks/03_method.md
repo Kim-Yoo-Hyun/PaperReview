@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2102.09844; PDF retrieval source: https://arxiv.org/pdf/2102.09844. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2102.09844; PDF retrieval source: https://arxiv.org/pdf/2102.09844. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 
 ## Method Body Digest
 
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ˆA = g(z), ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9.
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Our EGNN network consists of 7 layers, 128 features per hidden layer and the Swish activation function as a non-linearity.
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The symmetry problem: The above stated autoencoder may seem straightforward to implement at first sight but in some cases there is a strong limitation regarding ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** As mentioned before, the encoder outputs an equivariant transformation on the coordinates which is the graph embedding and input to the decoder z = xL ...
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Additionally, since we are not provided with an adjacency matrix and molecules can scale up to 29 nodes, we use the extension of our model ...
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The training loss is defined as the binary cross entropy between the estimated and the ground truth edges L = P ij BCE( ˆAij, Aij).
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Since this is an invariant task and also x0 positions are static, there is no need to update the particle's position x by running Equation ...
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ˆA = g(z), ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9.
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Our EGNN network consists of 7 layers, 128 features per hidden layer and the Swish activation function as a non-linearity.
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The symmetry problem: The above stated autoencoder may seem straightforward to implement at first sight but in some cases there is a strong limitation regarding ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** As mentioned before, the encoder outputs an equivariant transformation on the coordinates which is the graph embedding and input to the decoder z = xL ...
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Additionally, since we are not provided with an adjacency matrix and molecules can scale up to 29 nodes, we use the extension of our model ...
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The training loss is defined as the binary cross entropy between the estimated and the ground truth edges L = P ij BCE( ˆAij, Aij).
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Since this is an invariant task and also x0 positions are static, there is no need to update the particle's position x by running Equation ...
 
 ## Design Rationale
 
-- **p. 2 / 2. Background - extractive PDF cue:** In this section we introduce the relevant materials on equivariance and graph neural networks which will later complement the definition of our method.
-- **p. 1 / 1. Introduction - extractive PDF cue:** In this work we present a new architecture that is translation, rotation and reflection equivariant (E(n)), and permutation equivariant with respect to an input set ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our method reports the best or very competitive performance in all three experiments.
+- **p. 2 / 2. Background - extractive body cue:** In this section we introduce the relevant materials on equivariance and graph neural networks which will later complement the definition of our method.
+- **p. 1 / 1. Introduction - extractive body cue:** In this work we present a new architecture that is translation, rotation and reflection equivariant (E(n)), and permutation equivariant with respect to an input set ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our method reports the best or very competitive performance in all three experiments.
 
 ## Source Evidence Cues
 
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ˆA = g(z), ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9.
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Our EGNN network consists of 7 layers, 128 features per hidden layer and the Swish activation function as a non-linearity.
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The symmetry problem: The above stated autoencoder may seem straightforward to implement at first sight but in some cases there is a strong limitation regarding ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** As mentioned before, the encoder outputs an equivariant transformation on the coordinates which is the graph embedding and input to the decoder z = xL ...
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Additionally, since we are not provided with an adjacency matrix and molecules can scale up to 29 nodes, we use the extension of our model ...
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ˆA = g(z), ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9.
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Our EGNN network consists of 7 layers, 128 features per hidden layer and the Swish activation function as a non-linearity.
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The symmetry problem: The above stated autoencoder may seem straightforward to implement at first sight but in some cases there is a strong limitation regarding ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** As mentioned before, the encoder outputs an equivariant transformation on the coordinates which is the graph embedding and input to the decoder z = xL ...
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Additionally, since we are not provided with an adjacency matrix and molecules can scale up to 29 nodes, we use the extension of our model ...
 - **Detected method headings:** 5.1. Modelling a dynamical system - N-body system (p. 5); 2. Our method outperforms both Radial Field and GNNs (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ... | p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9. | p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 
 ## Objective / Update Rule
 
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The training loss is defined as the binary cross entropy between the estimated and the ground truth edges L = P ij BCE( ˆAij, Aij).
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Since this is an invariant task and also x0 positions are static, there is no need to update the particle's position x by running Equation ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** The graph edges Aij are input as edge attributes aij in Equation 3.
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9.
-- **p. 8 / 5.2. Graph Autoencoder - extractive PDF cue:** Implementation details: Our EGNN receives as input the 3D coordinate locations of each atom which are provided as x0 i in Equation 3 and an ...
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The training loss is defined as the binary cross entropy between the estimated and the ground truth edges L = P ij BCE( ˆAij, Aij).
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Since this is an invariant task and also x0 positions are static, there is no need to update the particle's position x by running Equation ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** The graph edges Aij are input as edge attributes aij in Equation 3.
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** Implementation details: Our Equivariant Graph AutoEncoder is composed of an EGNN encoder followed by the decoder from Equation 9.
+- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Implementation details: Our EGNN receives as input the 3D coordinate locations of each atom which are provided as x0 i in Equation 3 and an ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (5.2. Graph Autoencoder), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ˆA = g(z), ...
-- **p. 2 / 2.1. Equivariance - extractive PDF cue:** We say a function φ : X -→Y is equivariant to g if there exists an equivalent transformation on its output space Sg : Y ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Additionally, in practice for many types of data the inputs and outputs are restricted to scalar values (for instance temperature or energy, referred to as ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** As mentioned before, the encoder outputs an equivariant transformation on the coordinates which is the graph embedding and input to the decoder z = xL ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** In our case we will simply input this noise as the input coordinates x0 ∼N(0, σI) ∈RM×n of our EGNN which will output an equivariant ...
-- **p. 2 / 2.1. Equivariance - extractive PDF cue:** If our transformation φ : X -→Y is translation equivariant, translating the input set Tg(x) and then applying the function φ(Tx(x)) on it, will deliver ...
-- **p. 6 / 5.2. Graph Autoencoder - extractive PDF cue:** This method introduces noise sampled from a Gaussian distribution into the input node features of the graph h0 i ∼N(0, σI).
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** The decoder g(·) proposed by (Liu et al., 2019) takes as input the embedding space z and outputs the reconstructed adjacency matrix ˆA = g(z), ...
+- **p. 2 / 2.1. Equivariance - extractive body cue:** We say a function φ : X -→Y is equivariant to g if there exists an equivalent transformation on its output space Sg : Y ...
+- **p. 1 / 1. Introduction - extractive body cue:** Additionally, in practice for many types of data the inputs and outputs are restricted to scalar values (for instance temperature or energy, referred to as ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** As mentioned before, the encoder outputs an equivariant transformation on the coordinates which is the graph embedding and input to the decoder z = xL ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** In our case we will simply input this noise as the input coordinates x0 ∼N(0, σI) ∈RM×n of our EGNN which will output an equivariant ...
+- **p. 2 / 2.1. Equivariance - extractive body cue:** If our transformation φ : X -→Y is translation equivariant, translating the input set Tg(x) and then applying the function φ(Tx(x)) on it, will deliver ...
+- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** This method introduces noise sampled from a Gaussian distribution into the input node features of the graph h0 i ∼N(0, σI).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,8 +88,8 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 
 ## Training vs Inference
 
-- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive PDF cue:** All algorithms are composed of 4 layers and have been trained under the same conditions, batch size 100, 10.000 epochs, Adam optimizer, the learning rate ...
-- **p. 7 / 5.2. Graph Autoencoder - extractive PDF cue:** All four models have 4 layers, 64 features for the hidden layers, the Swish activation function as a non-linearity and they were all trained for ...
+- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** All algorithms are composed of 4 layers and have been trained under the same conditions, batch size 100, 10.000 epochs, Adam optimizer, the learning rate ...
+- **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** All four models have 4 layers, 64 features for the hidden layers, the Swish activation function as a non-linearity and they were all trained for ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 
 ## Failure and Ablation Link
 
-- **p. 3 / 3.1. Analysis on E(n) equivariance - extractive PDF cue:** Inductively, a composition of EGCLs will also be equivariant.
-- **p. 3 / 3.1. Analysis on E(n) equivariance - extractive PDF cue:** Therefore the output hl+1 is E(n) invariant and xl+1 is E(n) equivariant to xl.
-- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive PDF cue:** This is an equivariant task since rotations and translations on the input set of particles result in the same transformations throughout the entire trajectory.
-- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive PDF cue:** Results As shown in Table 2 our model significantly outperforms the other equivariant and non-equivariant alternatives while still being efficient in terms of running time.
-- **p. 6 / 5.1. Modelling a dynamical system - N-body system - extractive PDF cue:** We compare the performances of our EGNN vs its non-equivariant GNN counterpart and the Radial Field algorithm.
-- **p. 6 / 5.1. Modelling a dynamical system - N-body system - extractive PDF cue:** E(n) Equivariant Graph Neural Networks 50.000 samples and we sweep over different amounts of data from 100 to 50.000 samples.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison over different works from the literature under the message passing framework notation. We created this table with the aim to provide a ...
+- **p. 3 / 3.1. Analysis on E(n) equivariance - extractive body cue:** Inductively, a composition of EGCLs will also be equivariant.
+- **p. 3 / 3.1. Analysis on E(n) equivariance - extractive body cue:** Therefore the output hl+1 is E(n) invariant and xl+1 is E(n) equivariant to xl.
+- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** This is an equivariant task since rotations and translations on the input set of particles result in the same transformations throughout the entire trajectory.
+- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** Results As shown in Table 2 our model significantly outperforms the other equivariant and non-equivariant alternatives while still being efficient in terms of running time.
+- **p. 6 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** We compare the performances of our EGNN vs its non-equivariant GNN counterpart and the Radial Field algorithm.
+- **p. 6 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** E(n) Equivariant Graph Neural Networks 50.000 samples and we sweep over different amounts of data from 100 to 50.000 samples.
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1. Comparison over different works from the literature under the message passing framework notation. We created this table with the aim to provide a ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), objective p. 6 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), temporal p. 5 (5.1. Modelling a dynamical system - N-body system), p. 5 (5.1. Modelling a dynamical system - N-body system), p. 6 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 3 (3.2. Extending EGNNs for vector type representations), p. 3 (3. Equivariant Graph Neural Networks).
+- **Evidence anchors reviewed:** method p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), objective p. 6 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), temporal p. 5 (5.1. Modelling a dynamical system - N-body system), p. 5 (5.1. Modelling a dynamical system - N-body system), p. 6 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 3 (3.2. Extending EGNNs for vector type representations), p. 3 (3. Equivariant Graph Neural Networks).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

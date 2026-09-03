@@ -1,46 +1,72 @@
 # Insights — Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`.
-> Analysis basis: `ABSTRACT_CHECKED`; 01_overview의 source audit와 기존 insight cue를 이관했다: publisher metadata, abstract, and official project page checked; benchmark details remain UNVERIFIED. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/LRA.2023.3270034; PDF retrieval source: https://arxiv.org/pdf/2301.04195.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 확인 범위는 공식 abstract/project 수준이다. 상세 method, exact metric, failure는 full-text 확인 전까지 확정하지 않는다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Problem cue:** 서로 다른 robot tasks와 learning workflow를 scalable simulator 위에서 재사용·구성하기 어렵다는 문제를 다룬다.
-- **Method cue:** scene, robot, sensor, task, reward와 environment vectorization을 modular configuration framework로 통합한다.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our main contributions are as follows:
+- **p. 1 / Abstract - extractive body cue:** We present ORBIT, a unified and modular framework for robot learning powered by NVIDIA Isaac Sim.
+- **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** ORBIT is a unified simulation infrastructure that provides both pre-built environments and easy-to-use interfaces that enables extendability and customization.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To prevent a scattering of efforts for building the necessary tooling to use the simulator for robot learning, we design a unified and modular framework ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Currently, this feature is under development for ORBIT.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We design the system bottom-up - from incorporating user-defined models for the actuator dynamics to modularizing task specifications for learning with different levels of observations ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** On the other hand, physics simulators for robotics, such as Isaac Gym [13] or SAPIEN [11], provide fast and reasonably accurate rigid-body contact dynamics but ...
+- **Contribution anchor:** p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** However, existing platforms often need to make a trade-off between these aspects.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Currently, this feature is under development for ORBIT.
+- **p. 7 / VI. DISCUSSION - extractive body cue:** ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, ...
+- **p. 6 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** To make the policy robust, we randomize the base mass (22 ± 5 kg) and add simulated random pushes.
+- **Boundary to test:** ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, and advance sensors, actuators, and motion gene ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | Our main contributions are as follows: | p. 2 (I. INTRODUCTION), p. 1 (Abstract) |
+| Reported outcome | The success rate and trajectory lengths are reported over 100 trials. | p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
+| Failure/limitation | ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, and advance sensors, actuators, and motion gene ... | p. 7 (VI. DISCUSSION), p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `data/evaluation → policy/control comparison`.
-- **Registry interface:** `Robotics, simulation, Robot Learning, Benchmark, NVIDIA` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Isaac Sim 위에서 locomotion·manipulation 학습 환경을 modular하게 구성한 framework로 Isaac Lab의 직접 전신이다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
+- 이 논문의 재사용 가능한 지점은 To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators.를 We design the system bottom-up - from incorporating user-defined models for the actuator dynamics to modularizing task specifications for learning with different levels of observations and action spaces.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, and advance sensors, actuators, and motion gene ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: Our main contributions are as follows:
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Isaac Gym/Isaac Sim → Orbit → Isaac Lab의 통합 robot-learning stack으로 이어진다.
-- The recorded arrow is a reading dependency, not a confirmed citation relationship unless the references are checked.
+- **Registry position:** `REFERENCE` in `RL, IL, offline learning, and robot data`; tags: `Robotics, simulation, Robot Learning, Benchmark, NVIDIA`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, and advance sensors, actuators, and motion gene ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-1. Confirm the paper-reported input, output, task, metric, baseline, and split from the full text.
-2. Implement the smallest paper-specific component and a simpler matched baseline.
-3. Evaluate the primary paper metric plus failure rate, latency, and sensitivity to the assumption most central to the method.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: It readily comes with different robotic platforms, sensors, CPU and GPU-based motion generators, and benchmark tasks that aim to provide a batteries-included experience for roboticists..
+3. Compare against the body-reported baseline or a matched simpler baseline: We provide wrappers to rlgames [35], RSL-rl [34], and stable-baselines-3 [36]..
+4. Report the body metric and its denominator/aggregation: The success rate and trajectory lengths are reported over 100 trials..
+5. Re-run the body-reported ablation/failure condition: Effect of cloth mesh resolution 294 pts 574 pts 2203 pts 8623 pts Fig..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT); the primary result is directionally consistent at p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-고정된 data·compute·action budget에서 Robotics, simulation, Robot Learning, Benchmark, NVIDIA를 사용하는 방법이 단순 baseline보다 paper task metric과 closed-loop robustness를 함께 개선하는가?
+고정된 observation/action/data/compute budget에서 main, contributions, follows mechanism이 We provide wrappers to rlgames [35], RSL-rl [34], and stable-baselines-3 [36]. 대비 The success rate and trajectory lengths are reported over 100 trials.을 개선하고, ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Ng2VDbKD4r; PDF retrieval source: https://openreview.net/pdf/bffc1758ee48ad880448c1cf829c2cac0fee26e6.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Ng2VDbKD4r; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247830. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** We conduct experiments on two large-scale autonomous driving benchmarks: Waymo Open (Sun et al., 2020) and nuScenes (Caesar et al., 2020) datasets.
-- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive PDF cue:** We benchmark the efficiency of our method against Omni-Scene, a state-of-the-art open-source driving-specific reconstruction model, on the nuScenes dataset (Caesar et al., 2020).
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We adopt image resolutions of 350 × 518 for the Waymo dataset and 224 × 406 for the nuScenes dataset.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Method Views Reconstruction Novel View Synthesis PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ EvolSplat (Miao et al., 2025) Front 23.35 0.70 0.29 - - - UniSplat ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** (2025), we evaluate UniSplat on the nuScenes benchmark under the same protocol.
-- **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive PDF cue:** Qualitative Comparisons on the nuScenes dataset.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Input View Dynamics Memory W/O Memory Back Left Front Left Rotate Rotate Back Left Rotate Figure 3: ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 EXPERIMENTAL SETTINGS Datasets and Metrics.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** We conduct experiments on two large-scale autonomous driving benchmarks: Waymo Open (Sun et al., 2020) and nuScenes (Caesar et al., 2020) datasets.
+- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive body cue:** We benchmark the efficiency of our method against Omni-Scene, a state-of-the-art open-source driving-specific reconstruction model, on the nuScenes dataset (Caesar et al., 2020).
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We adopt image resolutions of 350 × 518 for the Waymo dataset and 224 × 406 for the nuScenes dataset.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Method Views Reconstruction Novel View Synthesis PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ EvolSplat (Miao et al., 2025) Front 23.35 0.70 0.29 - - - UniSplat ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2025), we evaluate UniSplat on the nuScenes benchmark under the same protocol.
+- **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive body cue:** Qualitative Comparisons on the nuScenes dataset.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** 4.1 EXPERIMENTAL SETTINGS Datasets and Metrics.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.3 ABLATION STUDY In this section, we conduct ablation studies on the Waymo Open Dataset (Sun et al., 2020) to investigate the individual components of ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in 1st and 2nd rows, the incorporation of spatial scaffold fusion, which aggregates spatial information in 3D space, improves performance by +0.36dB ... | p. 8 (4 EXPERIMENTS) |
 | 4 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | UniSplat consistently outperforms all baselines across every metric for both input view reconstruction and novel view synthesis. | p. 7 (4 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** We conduct experiments on two large-scale autonomous driving benchmarks: Waymo Open (Sun et al., 2020) and nuScenes (Caesar et al., 2020) datasets.
-- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive PDF cue:** We benchmark the efficiency of our method against Omni-Scene, a state-of-the-art open-source driving-specific reconstruction model, on the nuScenes dataset (Caesar et al., 2020).
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** We adopt image resolutions of 350 × 518 for the Waymo dataset and 224 × 406 for the nuScenes dataset.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Method Views Reconstruction Novel View Synthesis PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ EvolSplat (Miao et al., 2025) Front 23.35 0.70 0.29 - - - UniSplat ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** (2025), we evaluate UniSplat on the nuScenes benchmark under the same protocol.
-- **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive PDF cue:** Qualitative Comparisons on the nuScenes dataset.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Input View Dynamics Memory W/O Memory Back Left Front Left Rotate Rotate Back Left Rotate Figure 3: ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** 4.1 EXPERIMENTAL SETTINGS Datasets and Metrics.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** We conduct experiments on two large-scale autonomous driving benchmarks: Waymo Open (Sun et al., 2020) and nuScenes (Caesar et al., 2020) datasets.
+- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive body cue:** We benchmark the efficiency of our method against Omni-Scene, a state-of-the-art open-source driving-specific reconstruction model, on the nuScenes dataset (Caesar et al., 2020).
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We adopt image resolutions of 350 × 518 for the Waymo dataset and 224 × 406 for the nuScenes dataset.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Method Views Reconstruction Novel View Synthesis PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ EvolSplat (Miao et al., 2025) Front 23.35 0.70 0.29 - - - UniSplat ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2025), we evaluate UniSplat on the nuScenes benchmark under the same protocol.
+- **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive body cue:** Qualitative Comparisons on the nuScenes dataset.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** 4.1 EXPERIMENTAL SETTINGS Datasets and Metrics.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.3 ABLATION STUDY In this section, we conduct ablation studies on the Waymo Open Dataset (Sun et al., 2020) to investigate the individual components of ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 1: Overview of UniSplat. Given multi-camera images from vehicle-mounted cameras, UniSplat leverages foundation models to construct geometry-semantic aware 3D latent scaffolds, where unified spatio-temporal ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative results on the Waymo Dataset. The best results are marked in bold and underlined entries indicate second-place performance. ∗: Evaluation conducted on ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative results on the nuScenes Dataset. We highlight best results in bold and second- place results with underlines. ∗: reported by Wei et ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 2: Qualitative comparisons on the Waymo dataset. Our method yields more detailed and consistent geometry than existing works. Red boxes indicate artifacts. Best viewed ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative results of scene completion on the Waymo dataset. Top: Aggregated scene without dynamic filtering, where red boxes indicate ghosting artifacts caused by ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Impact of feature composition of Ft. "Geo" and "Sem" denote geometric and semantic features, respectively. Geo Sem PSNR↑ SSIM↑ LPIPS↓
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: Analysis of spatio-temporal fusion. "Spa" and "Tem" denote spatial and temporal fu- sion, respectively. Spa Tem PSNR↑ SSIM↑
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study on the two branches of our Gaussian decoder. Point Voxel PSNR↑SSIM↑LPIPS↓ ✓ 24.62 0.72 0.38
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: Overview of UniSplat. Given multi-camera images from vehicle-mounted cameras, UniSplat leverages foundation models to construct geometry-semantic aware 3D latent scaffolds, where unified spatio-temporal ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Quantitative results on the Waymo Dataset. The best results are marked in bold and underlined entries indicate second-place performance. ∗: Evaluation conducted on ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Quantitative results on the nuScenes Dataset. We highlight best results in bold and second- place results with underlines. ∗: reported by Wei et ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 2: Qualitative comparisons on the Waymo dataset. Our method yields more detailed and consistent geometry than existing works. Red boxes indicate artifacts. Best viewed ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative results of scene completion on the Waymo dataset. Top: Aggregated scene without dynamic filtering, where red boxes indicate ghosting artifacts caused by ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Impact of feature composition of Ft. "Geo" and "Sem" denote geometric and semantic features, respectively. Geo Sem PSNR↑ SSIM↑ LPIPS↓
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Analysis of spatio-temporal fusion. "Spa" and "Tem" denote spatial and temporal fu- sion, respectively. Spa Tem PSNR↑ SSIM↑
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on the two branches of our Gaussian decoder. Point Voxel PSNR↑SSIM↑LPIPS↓ ✓ 24.62 0.72 0.38
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct experiments on two large-scale autonomous driving benchmarks: Waymo Open (Sun et al., 2020) and nuScenes (Caesar et al., 2020) datasets. | embodiment, simulator version and control stack | p. 6 (4 EXPERIMENTS), p. 16 (A.2 EFFICIENCY ANALYSIS) |
 | Task/environment | We benchmark the efficiency of our method against Omni-Scene, a state-of-the-art open-source driving-specific reconstruction model, on the nuScenes dataset (Caesar et al., 2020). | reset, timeout, object/scene variation | p. 16 (A.2 EFFICIENCY ANALYSIS), p. 7 (4 EXPERIMENTS) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Primary metric/result | UniSplat consistently outperforms all baselines across every metric for both input view reconstruction and novel view synthesis. | numeric claim only at cited anchor | p. 7 (4 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Method PSNR↑ SSIM↑ LPIPS↓ PixelSplat∗(Charatan et al., 2024) 21.51 0.616 0.372 MVSplat∗(Chen et al., 2024) 21.61 0.658 0.295 Omin-Scene (Wei et al., 2025) 24.27 0.736 ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** All models are trained for 20 epochs with a batch size of 32 on 16 GPUs.
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
-- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive PDF cue:** UniSplat attains higher runtime efficiency (4.0 FPS vs.
-- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive PDF cue:** 2.5 FPS) while surpassing Omni-Scene by a large margin in reconstruction quality.
-- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive PDF cue:** The reported inference time represents the end-to-end reconstruction and rendering of all 18 target frames per sample, averaged over 2,048 samples, with data loading time ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Method PSNR↑ SSIM↑ LPIPS↓ PixelSplat∗(Charatan et al., 2024) 21.51 0.616 0.372 MVSplat∗(Chen et al., 2024) 21.61 0.658 0.295 Omin-Scene (Wei et al., 2025) 24.27 0.736 ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** All models are trained for 20 epochs with a batch size of 32 on 16 GPUs.
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
+- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive body cue:** UniSplat attains higher runtime efficiency (4.0 FPS vs.
+- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive body cue:** 2.5 FPS) while surpassing Omni-Scene by a large margin in reconstruction quality.
+- **p. 16 / A.2 EFFICIENCY ANALYSIS - extractive body cue:** The reported inference time represents the end-to-end reconstruction and rendering of all 18 target frames per sample, averaged over 2,048 samples, with data loading time ...
 
 ## Generalization and Failure Cases
 
@@ -165,13 +165,13 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive PDF cue:** The third row illustrates a failure case in which a moving pedestrian is misclassified as static.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** The voxel-only variant is excluded from comparison as it fails catastrophically at long-range rendering (Wei et al., 2025), yielding consistently poor performance across all metrics.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Specifically, replacing the default model with MoGe-2 (Wang et al., 2025e), a recently introduced open-domain geometry estimation method, yields consistent performance, which indicates that our ...
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** Training is conducted with a batch size of 16 on 8 H20 GPUs for 40,000 iterations, as further training empirically degrades performance.
-- **p. 17 / A.3 MORE QUALITATIVE RESULTS - extractive PDF cue:** The final dual-branch decoder effectively combines these complementary strengths, recovering sharp details while maintaining robust structural integrity in novel views.
+- **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive body cue:** The third row illustrates a failure case in which a moving pedestrian is misclassified as static.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The voxel-only variant is excluded from comparison as it fails catastrophically at long-range rendering (Wei et al., 2025), yielding consistently poor performance across all metrics.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Specifically, replacing the default model with MoGe-2 (Wang et al., 2025e), a recently introduced open-domain geometry estimation method, yields consistent performance, which indicates that our ...
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Training is conducted with a batch size of 16 on 8 H20 GPUs for 40,000 iterations, as further training empirically degrades performance.
+- **p. 17 / A.3 MORE QUALITATIVE RESULTS - extractive body cue:** The final dual-branch decoder effectively combines these complementary strengths, recovering sharp details while maintaining robust structural integrity in novel views.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 16 (A.2 EFFICIENCY ANALYSIS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 16 (A.3 MORE QUALITATIVE RESULTS), metrics p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.2 EFFICIENCY ANALYSIS), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 16 (A.2 EFFICIENCY ANALYSIS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 16 (A.3 MORE QUALITATIVE RESULTS), metrics p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.2 EFFICIENCY ANALYSIS), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

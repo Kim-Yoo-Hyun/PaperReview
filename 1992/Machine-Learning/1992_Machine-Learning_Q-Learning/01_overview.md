@@ -1,8 +1,10 @@
 # Q-Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1007/BF00992698.
-> PDF retrieval source: https://doi.org/10.1007/BF00992698. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1007/BF00992698.
+> PDF retrieval source: https://doi.org/10.1007/BF00992698. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1992 / Machine Learning
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://doi.org/10.1007/BF00992698
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -34,10 +36,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 - **p. 4 / 3. The convergence proof - extractive body cue:** A state of the AFI~, (x, n), consists of a card number (or level) n, together with a state x from the real process.
 - **p. 4 / 3. The convergence proof - extractive body cue:** Replaying the episode on card t consists of emitting the reward, rt, written on the card, and then moving to the next state (Yt, t ...
 - **p. 1 / 1. Introduction - extractive body cue:** Examples of its use include Barto and Singh (1990), Sutton (1990), Chapman and Kaelbling (1991), Mahadevan and Connell (1991), and Lin (1992), who developed it ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We show that 0~-learning converges to the optimum action-values with probability 1 so long as all actions are repeatedly sampled in all states and the ...
 - **p. 7 / 3.2. The theorem - extractive body cue:** Then, for n > h, by B.4, compare the value _~ARp(IX, n), a t ..... as) of taking actions at, ..., as at state x ...
 - **p. 2 / 2. The task for ~-learning - extractive body cue:** Under a policy 7r, the value of state x is W(x) = ~A~(x)) + ~ ~]/%[~(x)]V~(y Y because the agent expects to receive 6~x(Tr(x)) immediately ...
 - **p. 3 / 2. The task for ~-learning - extractive body cue:** It is straightforward to show that V*(x) = max a O~*(x, a) and that if a* is an action at which the maximum is attained, ...
-- **p. 4 / 3. The convergence proof - extractive body cue:** Cards are then removed one at a time from top of this deck and examined until one is found whose starting state and action match ...
 
 ## Observation, State, and Output Interface
 
@@ -45,7 +47,7 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 |---|---|---|---|
 | Observation/input | Y In other words, the ~ value is the expected discounted reward for executing action a at state x and following policy 7r thereafter. | state 또는 observation, action, reward와 transition history | p. 2 (2. The task for ~-learning), p. 2 (2. The task for ~-learning) |
 | State/latent | other, words, value, expected, discounted, reward, executing, action, state, following, policy, thereafter | policy/value state와 action-selection variable | p. 2 (2. The task for ~-learning), p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning) |
-| Output/action | Under a policy 7r, the value of state x is W(x) = ~A~(x)) + ~ ~]/%[~(x)]V~(y Y because the agent expects to receive 6~x(Tr(x)) immediately for performing the action 7r recommends, and ... | action policy와 induced trajectory | p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning), p. 1 (1. Introduction) |
+| Output/action | Under a policy 7r, the value of state x is W(x) = ~A~(x)) + ~ ~]/%[~(x)]V~(y Y because the agent expects to receive 6~x(Tr(x)) immediately for performing the action 7r recommends, and ... | action policy와 induced trajectory | p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning), p. 1 (Body text (section boundary not confidently recovered)) |
 | Objective/outcome | The task facing the agent is that of determining an optimal policy, one that maximizes total discounted expected reward. | expected return, task success, stability와 sample efficiency | p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning), p. 7 (3.2. The theorem) |
 
 ## Main Claims and Actual Contribution
@@ -54,6 +56,7 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 - **p. 4 / 3. The convergence proof - extractive body cue:** A state of the AFI~, (x, n), consists of a card number (or level) n, together with a state x from the real process.
 - **p. 4 / 3. The convergence proof - extractive body cue:** Replaying the episode on card t consists of emitting the reward, rt, written on the card, and then moving to the next state (Yt, t ...
 - **p. 1 / 1. Introduction - extractive body cue:** Examples of its use include Barto and Singh (1990), Sutton (1990), Chapman and Kaelbling (1991), Mahadevan and Connell (1991), and Lin (1992), who developed it ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We show that 0~-learning converges to the optimum action-values with probability 1 so long as all actions are repeatedly sampled in all states and the ...
 
 - Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
 
@@ -75,3 +78,12 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Section 2 describes the problem, the method, and the notation, section 3 gives an overview of the proof, and section 4 discusses two extensions.를 문제로 두고, In O~-learning, the agent's experience consists of a sequence of distinct stages or episodes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 7 (3.2. The theorem), p. 2 (2. The task for ~-learning), p. 4 (3. The convergence proof), p. 3 (2. The task for ~-learning), p. 4 (3. The convergence proof) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Section 2 describes the problem, the method, and the notation, section 3 gives an overview of the proof, and section 4 discusses two extensions. (p. 1, 1. Introduction).
+- **Actual contribution:** O~-learning (Watkins, 1989) is a form of model-free reinforcement learning. (p. 1, 1. Introduction).
+- **Evaluation boundary:** Imagine each episode (xt, at, Yt, rt, °~t) written on a card. (p. 4, 3. The convergence proof).
+- **Explicit failure boundary:** Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in Kushner and Clark (1978) may be required. (p. 8, 4. Discussions and conclusions).

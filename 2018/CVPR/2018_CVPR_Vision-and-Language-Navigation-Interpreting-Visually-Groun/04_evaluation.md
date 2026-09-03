@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1711.07280; PDF retrieval source: https://arxiv.org/pdf/1711.07280. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1711.07280; PDF retrieval source: https://arxiv.org/pdf/1711.07280. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 
 ## Evaluation Body Digest
 
-- **p. 3 / 3.1. Matterport3D Dataset - extractive PDF cue:** These datasets typically offer only one or two paths through a scene, making them inadequate for simulating robot motion.
-- **p. 3 / 3.1. Matterport3D Dataset - extractive PDF cue:** Many of the scenes in the dataset can be viewed in the Matterport 3D spaces gallery2.
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** We reserve an additional 11 scenes and 2,349 instructions for validating in unseen environments (val unseen).
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** The remaining 61 scenes are pooled together, with instructions split 14,025 train / 1,020 val seen.
-- **p. 5 / 4.3. R2R Dataset Analysis - extractive PDF cue:** This likely reflects differences in people's mental models of the way a ‘smart robot' works [43], making the handling of these differences an important aspect ...
-- **p. 5 / 4.3. R2R Dataset Analysis - extractive PDF cue:** Although we use the R2R dataset in conjunction with the Matterport3D Simulator, we see no technical reason why this dataset couldn't also be used with ...
-- **p. 7 / 6. Results - extractive PDF cue:** In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions.
-- **p. 8 / 6. Results - extractive PDF cue:** The techniques and practices used to optimize performance on existing vision and language datasets are unlikely to be sufficient for models that are expected to ...
+- **p. 3 / 3.1. Matterport3D Dataset - extractive body cue:** These datasets typically offer only one or two paths through a scene, making them inadequate for simulating robot motion.
+- **p. 3 / 3.1. Matterport3D Dataset - extractive body cue:** Many of the scenes in the dataset can be viewed in the Matterport 3D spaces gallery2.
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** We reserve an additional 11 scenes and 2,349 instructions for validating in unseen environments (val unseen).
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** The remaining 61 scenes are pooled together, with instructions split 14,025 train / 1,020 val seen.
+- **p. 5 / 4.3. R2R Dataset Analysis - extractive body cue:** This likely reflects differences in people's mental models of the way a ‘smart robot' works [43], making the handling of these differences an important aspect ...
+- **p. 5 / 4.3. R2R Dataset Analysis - extractive body cue:** Although we use the R2R dataset in conjunction with the Matterport3D Simulator, we see no technical reason why this dataset couldn't also be used with ...
+- **p. 7 / 6. Results - extractive body cue:** In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions.
+- **p. 8 / 6. Results - extractive body cue:** The techniques and practices used to optimize performance on existing vision and language datasets are unlikely to be sufficient for models that are expected to ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6. Results | BENCHMARK / DATASET | As illustrated in Table 1, our exploitative RANDOM agent achieves an average success rate of 13.2% on the test set (which appears to be ... | p. 7 (6. Results) |
 | 6. Results | BENCHMARK / DATASET | Both methods improve significantly over the RANDOM baseline, as illustrated in Figure 8. | p. 8 (6. Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 
 ## Dataset / Benchmark Role
 
-- **p. 3 / 3.1. Matterport3D Dataset - extractive PDF cue:** These datasets typically offer only one or two paths through a scene, making them inadequate for simulating robot motion.
-- **p. 3 / 3.1. Matterport3D Dataset - extractive PDF cue:** Many of the scenes in the dataset can be viewed in the Matterport 3D spaces gallery2.
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** We reserve an additional 11 scenes and 2,349 instructions for validating in unseen environments (val unseen).
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** The remaining 61 scenes are pooled together, with instructions split 14,025 train / 1,020 val seen.
-- **p. 5 / 4.3. R2R Dataset Analysis - extractive PDF cue:** This likely reflects differences in people's mental models of the way a ‘smart robot' works [43], making the handling of these differences an important aspect ...
-- **p. 5 / 4.3. R2R Dataset Analysis - extractive PDF cue:** Although we use the R2R dataset in conjunction with the Matterport3D Simulator, we see no technical reason why this dataset couldn't also be used with ...
-- **p. 7 / 6. Results - extractive PDF cue:** In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions.
-- **p. 8 / 6. Results - extractive PDF cue:** The techniques and practices used to optimize performance on existing vision and language datasets are unlikely to be sufficient for models that are expected to ...
+- **p. 3 / 3.1. Matterport3D Dataset - extractive body cue:** These datasets typically offer only one or two paths through a scene, making them inadequate for simulating robot motion.
+- **p. 3 / 3.1. Matterport3D Dataset - extractive body cue:** Many of the scenes in the dataset can be viewed in the Matterport 3D spaces gallery2.
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** We reserve an additional 11 scenes and 2,349 instructions for validating in unseen environments (val unseen).
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** The remaining 61 scenes are pooled together, with instructions split 14,025 train / 1,020 val seen.
+- **p. 5 / 4.3. R2R Dataset Analysis - extractive body cue:** This likely reflects differences in people's mental models of the way a ‘smart robot' works [43], making the handling of these differences an important aspect ...
+- **p. 5 / 4.3. R2R Dataset Analysis - extractive body cue:** Although we use the R2R dataset in conjunction with the Matterport3D Simulator, we see no technical reason why this dataset couldn't also be used with ...
+- **p. 7 / 6. Results - extractive body cue:** In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions.
+- **p. 8 / 6. Results - extractive body cue:** The techniques and practices used to optimize performance on existing vision and language datasets are unlikely to be sufficient for models that are expected to ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Room-to-Room (R2R) navigation task. We focus on executing natural language navigation instructions in previously unseen real-world buildings. The agent's camera can be rotated ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Differences between Vision-and-Language Navigation (VLN) and Visual Question Answering (VQA). Both tasks can be formu- lated as visually grounded sequence-to-sequence transcoding problems. However, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Example navigation graph for a partial floor of one building-scale scene in the Matterport3D Simulator. Navigable paths between panoramic viewpoints are illustrated in ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Randomly selected examples of navigation instructions (three per trajectory) shown with the view from the starting pose. tion at leading to a new ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Distribution of instruction length and navigation trajec- tory length in the R2R dataset. end, we provide workers with an interactive 3D WebGL en- ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 6. Although we use the R2R dataset in conjunction with the Matterport3D Simulator, we see no technical rea- son why this dataset couldn't also ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Distribution of navigation instructions based on their first four words. Instructions are read from the center outwards. Arc lengths are proportional to the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Average R2R navigation results using evaluation metrics defined in Section 4.4. Our seq-2-seq model trained with student- forcing achieves promising results in previously ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Room-to-Room (R2R) navigation task. We focus on executing natural language navigation instructions in previously unseen real-world buildings. The agent's camera can be rotated ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Differences between Vision-and-Language Navigation (VLN) and Visual Question Answering (VQA). Both tasks can be formu- lated as visually grounded sequence-to-sequence transcoding problems. However, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Example navigation graph for a partial floor of one building-scale scene in the Matterport3D Simulator. Navigable paths between panoramic viewpoints are illustrated in ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Randomly selected examples of navigation instructions (three per trajectory) shown with the view from the starting pose. tion at leading to a new ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Distribution of instruction length and navigation trajec- tory length in the R2R dataset. end, we provide workers with an interactive 3D WebGL en- ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 6. Although we use the R2R dataset in conjunction with the Matterport3D Simulator, we see no technical rea- son why this dataset couldn't also ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Distribution of navigation instructions based on their first four words. Instructions are read from the center outwards. Arc lengths are proportional to the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Average R2R navigation results using evaluation metrics defined in Section 4.4. Our seq-2-seq model trained with student- forcing achieves promising results in previously ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These datasets typically offer only one or two paths through a scene, making them inadequate for simulating robot motion. | embodiment, simulator version and control stack | p. 3 (3.1. Matterport3D Dataset), p. 3 (3.1. Matterport3D Dataset) |
 | Task/environment | Many of the scenes in the dataset can be viewed in the Matterport 3D spaces gallery2. | reset, timeout, object/scene variation | p. 3 (3.1. Matterport3D Dataset), p. 6 (4.4. Evaluation Protocol) |
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 | Primary metric/result | Both methods improve significantly over the RANDOM baseline, as illustrated in Figure 8. | numeric claim only at cited anchor | p. 8 (6. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** The test set consists of 18 scenes, and 4,173 instructions.
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** We reserve an additional 11 scenes and 2,349 instructions for validating in unseen environments (val unseen).
-- **p. 6 / 4.4. Evaluation Protocol - extractive PDF cue:** The remaining 61 scenes are pooled together, with instructions split 14,025 train / 1,020 val seen.
-- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive PDF cue:** The left, right, up and down actions are defined to move the camera by 30 degrees.
-- **p. 7 / 5.2. Training - extractive PDF cue:** We set the simulator image resolution to 640 × 480 with a vertical field of view of 60 degrees.
-- **p. 7 / 5.2. Training - extractive PDF cue:** As we have discretized the agent's heading and elevation changes in 30 degree increments, for fast training we extract and pre-cache all CNN feature vectors.
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** The test set consists of 18 scenes, and 4,173 instructions.
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** We reserve an additional 11 scenes and 2,349 instructions for validating in unseen environments (val unseen).
+- **p. 6 / 4.4. Evaluation Protocol - extractive body cue:** The remaining 61 scenes are pooled together, with instructions split 14,025 train / 1,020 val seen.
+- **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** The left, right, up and down actions are defined to move the camera by 30 degrees.
+- **p. 7 / 5.2. Training - extractive body cue:** We set the simulator image resolution to 640 × 480 with a vertical field of view of 60 degrees.
+- **p. 7 / 5.2. Training - extractive body cue:** As we have discretized the agent's heading and elevation changes in 30 degree increments, for fast training we extract and pre-cache all CNN feature vectors.
 
 ## Generalization and Failure Cases
 
@@ -151,9 +151,9 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 6. Results - extractive PDF cue:** Nevertheless, people are not infallible when it comes to navigation.
+- **p. 7 / 6. Results - extractive body cue:** Nevertheless, people are not infallible when it comes to navigation.
 
-- **PDF anchors reviewed:** datasets p. 3 (3.1. Matterport3D Dataset), p. 3 (3.1. Matterport3D Dataset), p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 5 (4.3. R2R Dataset Analysis), p. 5 (4.3. R2R Dataset Analysis), metrics p. 8 (6. Results), p. 7 (6. Results), p. 8 (6. Results), p. 5 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), baselines p. 6 (4.4. Evaluation Protocol), p. 8 (6. Results), p. 7 (6. Results), p. 4 (Figure/Table caption), results p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. Results), p. 8 (6. Results), p. 5 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol).
+- **Evidence anchors reviewed:** datasets p. 3 (3.1. Matterport3D Dataset), p. 3 (3.1. Matterport3D Dataset), p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 5 (4.3. R2R Dataset Analysis), p. 5 (4.3. R2R Dataset Analysis), metrics p. 8 (6. Results), p. 7 (6. Results), p. 8 (6. Results), p. 5 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), baselines p. 6 (4.4. Evaluation Protocol), p. 8 (6. Results), p. 7 (6. Results), p. 4 (Figure/Table caption), results p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. Results), p. 8 (6. Results), p. 5 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

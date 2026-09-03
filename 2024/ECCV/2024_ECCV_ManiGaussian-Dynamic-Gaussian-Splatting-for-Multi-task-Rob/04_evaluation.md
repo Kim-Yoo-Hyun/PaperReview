@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves the best performance with an average success rate of 44.8%, which is state-of-the-art, outperforming the previous arts including both perceptive and ... | p. 11 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Though the dynamic loss may slightly impact short-term results due to the balance of different loss items, it significantly improves overall performance. | p. 12 (4 Experiments) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | On the contrary, our ManiGaussian learns the scene dynamics with the proposed dynamic Gaussian Splatting framework, so that the robotic agent can complete human ... | embodiment, simulator version and control stack | p. 11 (4 Experiments), p. 10 (4 Experiments) |
 | Task/environment | We evaluated 25 episodes in the testing set for each task to avoid result bias from noise. | reset, timeout, object/scene variation | p. 10 (4 Experiments), p. 10 (4 Experiments) |
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 11 / 4 Experiments - extractive body cue:** However, it ignores the scene-level spatiotemporal dynamics that demonstrate the interaction among objects, and the predicted actions still fail to achieve human goals because of ...
 - **p. 11 / 4 Experiments - extractive body cue:** Planning Long Tools Motion Screw Occlusion Average ✗ ✗ ✗ 36.0 2.0 25.3 52.0 4.0 28.0 23.6 ✓ ✗ ✗ 46.0 4.0 52.0 52.0 24.0 ...
 
-- **PDF anchors reviewed:** datasets p. 11 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 13 (Figure/Table caption), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 11 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 13 (Figure/Table caption), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** By adding the Gaussian regressor to predict the Gaussian parameters, the performance improves by 15.6% compared with the baseline. (p. 12, 4 Experiments).
+- **Metric evidence:** Our method achieves the best performance with an average success rate of 44.8%, which is state-of-the-art, outperforming the previous arts including both perceptive and generative-based methods by a sizable margin. (p. 11, 4 Experiments).
+- **Baseline/ablation evidence:** Then we compare our method with the state-of-the-art approaches to show the superiority in success rate (Section 4.2), and conduct an ablation study to verify the effectiveness of different components ... (p. 10, 4 Experiments).
+- **Failure/negative evidence:** However, it ignores the scene-level spatiotemporal dynamics that demonstrate the interaction among objects, and the predicted actions still fail to achieve human goals because of the incorrect interaction. (p. 11, 4 Experiments).

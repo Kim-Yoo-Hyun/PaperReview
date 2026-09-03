@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p130.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p130.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p130.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p130.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | The transformerbased decoder generates action sequences from the latent variable (only during training and set to be the mean of the prior ... | p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | ‘To show the advantage of leaming from an ee-centric demonstration compared to a joint space demonstration, we use the same demonstration trajectory ... | p. 10 (B. Implementation Details), p. 7 (B. EE-Centrie Policy Learning) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | Horizon Length Horizoa Steps NV State Cost Qy Rotation Cost Qe. | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -133,8 +133,17 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details), p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), objective p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 8 (B. Implementation Details), p. 9 (B. Implementation Details), p. 10 (B. Implementation Details), p. 11 (B. Implementation Details), temporal p. 8 (B. Implementation Details), p. 8 (A. Experimental Setup), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility).
+- **Evidence anchors reviewed:** method p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details), p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), objective p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 8 (B. Implementation Details), p. 9 (B. Implementation Details), p. 10 (B. Implementation Details), p. 11 (B. Implementation Details), temporal p. 8 (B. Implementation Details), p. 8 (A. Experimental Setup), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The transformerbased decoder generates action sequences from the latent variable (only during training and set to be the mean of the prior during testing), current joint observations, and encoded image ... (p. 7, B. EE-Centrie Policy Learning).
+- **Objective/update evidence:** Eq, (10a) defines the optimization objective, where HT represents the discrete prediction horizon. (p. 6, A. End-Effector-Centric Model Predictive Controller).
+- **Temporal/runtime evidence:** ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant prediction horizon, running in 100 Hz, and other ... (p. 8, B. Implementation Details).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

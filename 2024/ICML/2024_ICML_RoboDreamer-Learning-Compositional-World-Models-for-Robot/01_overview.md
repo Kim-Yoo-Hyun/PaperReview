@@ -1,8 +1,10 @@
 # RoboDreamer: Learning Compositional World Models for Robot Imagination
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html.
-> PDF retrieval source: https://arxiv.org/pdf/2404.12377. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html.
+> PDF retrieval source: https://arxiv.org/pdf/2404.12377. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICML
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2404.12377
 - Code/Project: https://robodreamer.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,7 +35,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 - **p. 2 / 1. Introduction - extractive body cue:** Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of ...
 - **p. 2 / 1. Introduction - extractive body cue:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language.
-- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1 arXiv:2404.12377v1 [cs.RO] 18 Apr 2024
+- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1.
 - **p. 3 / 2.1. Planning with Text-Conditioned Video Generation - extractive body cue:** This enables us to convert planning directly into a text-to-video generation problem.
 - **p. 1 / 1. Introduction - extractive body cue:** Such models have recently been applied in robotics, demonstrating significant potential in the development of policies, dynamic models, and planners (Du et al., 2023b; Ajay ...
 - **p. 3 / 2.1. Planning with Text-Conditioned Video Generation - extractive body cue:** Given a UPDP G, we then use a trajectory-task conditioned policy π(·/{xh}H h=0, c) : X H+1×C →∆(AH) to infer executable actions from synthesized videos.
@@ -52,7 +54,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 - **p. 2 / 1. Introduction - extractive body cue:** Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of ...
 - **p. 2 / 1. Introduction - extractive body cue:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language.
-- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1 arXiv:2404.12377v1 [cs.RO] 18 Apr 2024
+- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1.
 - **p. 3 / 2.1. Planning with Text-Conditioned Video Generation - extractive body cue:** This enables us to convert planning directly into a text-to-video generation problem.
 - **p. 1 / 1. Introduction - extractive body cue:** Such models have recently been applied in robotics, demonstrating significant potential in the development of policies, dynamic models, and planners (Du et al., 2023b; Ajay ...
 - **p. 7 / 4.2. Evaluation on Robotic Planning - extractive body cue:** According to the results presented in Table 3, RoboDreamer achieves superior task success rates compared to baseline models even if RoboDreamer is only given observation ...
@@ -81,3 +83,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 This is crucially important in robotics, where there is a lack of systematic data covering all possible actions in an environment and a need to be able to generalize to new unseen ...를 문제로 두고, Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of natural language. • We illustrate how RoboDream ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 3 (2.1. Planning with Text-Conditioned Video Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Furthermore, these challenges become even more pronounced in scenarios where language instructions deviate from those encountered during training time, especially in reinforcement learning datasets where the data are scarce and ... (p. 1, 1. Introduction).
+- **Actual contribution:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language. (p. 2, 1. Introduction).
+- **Evaluation boundary:** According to the results presented in Table 3, RoboDreamer achieves superior task success rates compared to baseline models even if RoboDreamer is only given observation from single cameras. (p. 7, 4.2. Evaluation on Robotic Planning).
+- **Explicit failure boundary:** The scores are 0, 1, where 0 means the robotic planning in the generated videos is unreasonable or fails to solve tasks and 1 means the robotic planning is executable ... (p. 6, 4.1. Evaluation on Video Generation).

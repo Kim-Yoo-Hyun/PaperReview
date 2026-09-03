@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (62 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.03342; PDF retrieval source: https://arxiv.org/pdf/2510.03342. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (62 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2510.03342; PDF retrieval source: https://arxiv.org/pdf/2510.03342. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | We use GR-ER 1.5 as the orchestrator. • Action model: The action model translates instructions issued by the orchestrator into lowlevel robot ... | p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | The full agentic system consists of an orchestrator and an action model that are implemented by the VLM and the VLA, respectively: ... | p. 3 (2.1. Model & Architecture), p. 10 (4. Gemini Robotics-ER 1.5 is a generalist embodied reasoning model) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | First, the model generates a language-based thinking trace by converting the complex task into a sequence of specific, short-horizon steps (e.g., transforming ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | For the real-time evaluations, we sample recorded real-world robot rollouts from Section 5, and run the model at 5Hz and simulate inference ... | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | For the real-time evaluations, we sample recorded real-world robot rollouts from Section 5, and run the model at 5Hz and simulate inference ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), p. 10 (4. Gemini Robotics-ER 1.5 is a generalist embodied reasoning model), p. 13 (4.2. Frontier capabilities for Embodied Reasoning), p. 4 (2.1. Model & Architecture), p. 12 (4.1. Generality), objective p. 3 (2.1. Model & Architecture), p. 10 (3.3. Thinking Helps Acting), p. 13 (4.1. Generality), p. 14 (4.2. Frontier capabilities for Embodied Reasoning), p. 5 (3. Gemini Robotics 1.5 is a general multi-embodiment Vision-Language-Action), p. 9 (3.3. Thinking Helps Acting), temporal p. 9 (3.3. Thinking Helps Acting), p. 15 (4.2. Frontier capabilities for Embodied Reasoning), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), p. 4 (2.3. Evaluation).
+- **Evidence anchors reviewed:** method p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), p. 10 (4. Gemini Robotics-ER 1.5 is a generalist embodied reasoning model), p. 13 (4.2. Frontier capabilities for Embodied Reasoning), p. 4 (2.1. Model & Architecture), p. 12 (4.1. Generality), objective p. 3 (2.1. Model & Architecture), p. 10 (3.3. Thinking Helps Acting), p. 13 (4.1. Generality), p. 14 (4.2. Frontier capabilities for Embodied Reasoning), p. 5 (3. Gemini Robotics 1.5 is a general multi-embodiment Vision-Language-Action), p. 9 (3.3. Thinking Helps Acting), temporal p. 9 (3.3. Thinking Helps Acting), p. 15 (4.2. Frontier capabilities for Embodied Reasoning), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), p. 4 (2.3. Evaluation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (62 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The full agentic system consists of an orchestrator and an action model that are implemented by the VLM and the VLA, respectively: • Orchestrator: The orchestrator processes user input and ... (p. 3, 2.1. Model & Architecture).
+- **Objective/update evidence:** It has additionally been optimized for complex embodied reasoning problems such as task planning, reasoning for spatial expertise, and task progress estimation. (p. 3, 2.1. Model & Architecture).
+- **Temporal/runtime evidence:** First, the model generates a language-based thinking trace by converting the complex task into a sequence of specific, short-horizon steps (e.g., transforming the goal of "sorting clothes" into a thought ... (p. 9, 3.3. Thinking Helps Acting).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

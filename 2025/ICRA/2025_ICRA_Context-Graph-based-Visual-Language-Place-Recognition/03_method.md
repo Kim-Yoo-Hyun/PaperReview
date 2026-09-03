@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2410.19341v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2410.19341v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. 
 
 ## Method Body Digest
 
-- **p. 3 / III. METHODS - extractive PDF cue:** Visual-Language Embedding We use the visual-language model LSeg [8] to obtain pixel-level embedding information from image frames captured by the robot's camera.
-- **p. 3 / III. METHODS - extractive PDF cue:** Subsequently, a transformerbased image encoder calculates dense per-pixel embeddings, resulting in an output embedding I ∈R ˜ H× ˜ W ×D.
-- **p. 4 / III. METHODS - extractive PDF cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
-- **p. 4 / III. METHODS - extractive PDF cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
-- **p. 4 / III. METHODS - extractive PDF cue:** There have been several approaches to remove potentially dynamic objects, such as parked cars, in the map building and update process [30]-[32] for autonomous navigation ...
-- **p. 3 / III. METHODS - extractive PDF cue:** The size of an input image is assumed to be H × W, while the output is downsampled to an image of size H s ...
-- **p. 4 / III. METHODS - extractive PDF cue:** 2 shows the result of the visuallanguage vocabulary of the input image.
-- **p. 3 / III. METHODS - extractive PDF cue:** Next, pixel-level embeddings are extracted from the input RGB image using the pre-trained visual encoder of LSeg.
+- **p. 3 / III. METHODS - extractive body cue:** Visual-Language Embedding We use the visual-language model LSeg [8] to obtain pixel-level embedding information from image frames captured by the robot's camera.
+- **p. 3 / III. METHODS - extractive body cue:** Subsequently, a transformerbased image encoder calculates dense per-pixel embeddings, resulting in an output embedding I ∈R ˜ H× ˜ W ×D.
+- **p. 4 / III. METHODS - extractive body cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
+- **p. 4 / III. METHODS - extractive body cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
+- **p. 4 / III. METHODS - extractive body cue:** There have been several approaches to remove potentially dynamic objects, such as parked cars, in the map building and update process [30]-[32] for autonomous navigation ...
+- **p. 3 / III. METHODS - extractive body cue:** The size of an input image is assumed to be H × W, while the output is downsampled to an image of size H s ...
+- **p. 4 / III. METHODS - extractive body cue:** 2 shows the result of the visuallanguage vocabulary of the input image.
+- **p. 3 / III. METHODS - extractive body cue:** Next, pixel-level embeddings are extracted from the input RGB image using the pre-trained visual encoder of LSeg.
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we propose a novel VPR method that operates robustly in dynamic scenes, based on a zero-shot, language-driven semantic segmentation approach [8].
-- **p. 4 / III. METHODS - extractive PDF cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a novel VPR method that operates robustly in dynamic scenes, based on a zero-shot, language-driven semantic segmentation approach [8].
+- **p. 4 / III. METHODS - extractive body cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
 
 ## Source Evidence Cues
 
-- **p. 3 / III. METHODS - extractive PDF cue:** Visual-Language Embedding We use the visual-language model LSeg [8] to obtain pixel-level embedding information from image frames captured by the robot's camera.
-- **p. 3 / III. METHODS - extractive PDF cue:** Subsequently, a transformerbased image encoder calculates dense per-pixel embeddings, resulting in an output embedding I ∈R ˜ H× ˜ W ×D.
-- **p. 4 / III. METHODS - extractive PDF cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
-- **p. 4 / III. METHODS - extractive PDF cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
+- **p. 3 / III. METHODS - extractive body cue:** Visual-Language Embedding We use the visual-language model LSeg [8] to obtain pixel-level embedding information from image frames captured by the robot's camera.
+- **p. 3 / III. METHODS - extractive body cue:** Subsequently, a transformerbased image encoder calculates dense per-pixel embeddings, resulting in an output embedding I ∈R ˜ H× ˜ W ×D.
+- **p. 4 / III. METHODS - extractive body cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
+- **p. 4 / III. METHODS - extractive body cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
 - **Detected method headings:** III. METHODS (p. 3); Approach (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Visual-Language Embedding We use the visual-language model LSeg [8] to obtain pixel-level embedding information from image frames captured by the robot's camera. | p. 3 (III. METHODS), p. 3 (III. METHODS) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Subsequently, a transformerbased image encoder calculates dense per-pixel embeddings, resulting in an output embedding I ∈R ˜ H× ˜ W ×D. | p. 3 (III. METHODS), p. 4 (III. METHODS) |
@@ -45,8 +45,8 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. 
 
 ## Objective / Update Rule
 
-- **p. 4 / III. METHODS - extractive PDF cue:** There have been several approaches to remove potentially dynamic objects, such as parked cars, in the map building and update process [30]-[32] for autonomous navigation ...
-- **p. 4 / III. METHODS - extractive PDF cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
+- **p. 4 / III. METHODS - extractive body cue:** There have been several approaches to remove potentially dynamic objects, such as parked cars, in the map building and update process [30]-[32] for autonomous navigation ...
+- **p. 4 / III. METHODS - extractive body cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (III. METHODS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -62,13 +62,13 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. 
 
 ## Observation–State–Action Interface
 
-- **p. 3 / III. METHODS - extractive PDF cue:** The size of an input image is assumed to be H × W, while the output is downsampled to an image of size H s ...
-- **p. 4 / III. METHODS - extractive PDF cue:** 2 shows the result of the visuallanguage vocabulary of the input image.
-- **p. 3 / III. METHODS - extractive PDF cue:** Next, pixel-level embeddings are extracted from the input RGB image using the pre-trained visual encoder of LSeg.
-- **p. 4 / III. METHODS - extractive PDF cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** The pre-trained language-driven semantic segmentation model is used to extract pixel-level language embedding information within the image.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In this paper, we propose a novel VPR method that operates robustly in dynamic scenes, based on a zero-shot, language-driven semantic segmentation approach [8].
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** This vocabulary is then used to recognize the revisited locations. • Context graph: We propose the Context Graph concept, which helps understand the context within ...
+- **p. 3 / III. METHODS - extractive body cue:** The size of an input image is assumed to be H × W, while the output is downsampled to an image of size H s ...
+- **p. 4 / III. METHODS - extractive body cue:** 2 shows the result of the visuallanguage vocabulary of the input image.
+- **p. 3 / III. METHODS - extractive body cue:** Next, pixel-level embeddings are extracted from the input RGB image using the pre-trained visual encoder of LSeg.
+- **p. 4 / III. METHODS - extractive body cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The pre-trained language-driven semantic segmentation model is used to extract pixel-level language embedding information within the image.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a novel VPR method that operates robustly in dynamic scenes, based on a zero-shot, language-driven semantic segmentation approach [8].
+- **p. 2 / I. INTRODUCTION - extractive body cue:** This vocabulary is then used to recognize the revisited locations. • Context graph: We propose the Context Graph concept, which helps understand the context within ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,7 +83,7 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. 
 
 ## Training vs Inference
 
-- **p. 3 / III. METHODS - extractive PDF cue:** Next, pixel-level embeddings are extracted from the input RGB image using the pre-trained visual encoder of LSeg.
+- **p. 3 / III. METHODS - extractive body cue:** Next, pixel-level embeddings are extracted from the input RGB image using the pre-trained visual encoder of LSeg.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -103,9 +103,9 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. 
 
 ## Failure and Ablation Link
 
-- **p. 4 / III. METHODS - extractive PDF cue:** Using the segmentation results, we can filter out dynamic objects that could potentially degrade VPR performance by predefining such categories.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
-- **p. 5 / III. METHODS - extractive PDF cue:** 4 illustrates the difference between the prior approach and ours, where our approach filters out dynamic objects, such as cars, that can degrade the performance ...
+- **p. 4 / III. METHODS - extractive body cue:** Using the segmentation results, we can filter out dynamic objects that could potentially degrade VPR performance by predefining such categories.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
+- **p. 5 / III. METHODS - extractive body cue:** 4 illustrates the difference between the prior approach and ours, where our approach filters out dynamic objects, such as cars, that can degrade the performance ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -119,7 +119,7 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. METHODS), p. 4 (III. METHODS), objective p. 4 (III. METHODS), p. 4 (III. METHODS), temporal p. 3 (III. METHODS), p. 4 (III. METHODS), p. 5 (IV. EXPERIMENTS), p. 2 (II. RELATED WORKS).
+- **Evidence anchors reviewed:** method p. 3 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. METHODS), p. 4 (III. METHODS), objective p. 4 (III. METHODS), p. 4 (III. METHODS), temporal p. 3 (III. METHODS), p. 4 (III. METHODS), p. 5 (IV. EXPERIMENTS), p. 2 (II. RELATED WORKS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

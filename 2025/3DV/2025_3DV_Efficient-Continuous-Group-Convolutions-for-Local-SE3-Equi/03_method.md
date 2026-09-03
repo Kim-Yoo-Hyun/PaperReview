@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=c6RR0bqNVI&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=c6RR0bqNVI&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 
 ## Method Body Digest
 
-- **p. 4 / 3.1. Group equivariant convolution - extractive PDF cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** A more formal definition of a convolution layer is then given as a learnable kernel operator Φ : X →Y that transforms feature maps f ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** We say that an operator Φ is equivariant to a specific Group G if it commutes with group representations on the input and output feature ...
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** Although F(x) only has 4 elements, this might still be restrictive for modern state-ofthe-art deep architectures used to process large 3D scenes.
-- **p. 4 / 3.2. Efficient group convolution - extractive PDF cue:** However, sampling O rotations per point increases the model's memory by a factor of O.
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** One solution is to use ∥x -y∥as input to the kernel at the cost of losing the capacity to capture directional features.
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
+- **p. 4 / 3.1. Group equivariant convolution - extractive body cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** A more formal definition of a convolution layer is then given as a learnable kernel operator Φ : X →Y that transforms feature maps f ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** We say that an operator Φ is equivariant to a specific Group G if it commutes with group representations on the input and output feature ...
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** Although F(x) only has 4 elements, this might still be restrictive for modern state-ofthe-art deep architectures used to process large 3D scenes.
+- **p. 4 / 3.2. Efficient group convolution - extractive body cue:** However, sampling O rotations per point increases the model's memory by a factor of O.
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** One solution is to use ∥x -y∥as input to the kernel at the cost of losing the capacity to capture directional features.
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In this paper, we propose using a finite subset F(x) ⊂ SE(3), referred to as a frame, to solve the group equivariant integral, which allows ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
-- **p. 4 / 3.2. Efficient group convolution - extractive PDF cue:** To achieve exact equivariance with tractable computational load, we propose a carefully constructed grid F(xj) ⊂SE(3) specific to each point xj ∈R3.
+- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose using a finite subset F(x) ⊂ SE(3), referred to as a frame, to solve the group equivariant integral, which allows ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
+- **p. 4 / 3.2. Efficient group convolution - extractive body cue:** To achieve exact equivariance with tractable computational load, we propose a carefully constructed grid F(xj) ⊂SE(3) specific to each point xj ∈R3.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.1. Group equivariant convolution - extractive PDF cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** A more formal definition of a convolution layer is then given as a learnable kernel operator Φ : X →Y that transforms feature maps f ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** We say that an operator Φ is equivariant to a specific Group G if it commutes with group representations on the input and output feature ...
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** Although F(x) only has 4 elements, this might still be restrictive for modern state-ofthe-art deep architectures used to process large 3D scenes.
-- **p. 4 / 3.2. Efficient group convolution - extractive PDF cue:** However, sampling O rotations per point increases the model's memory by a factor of O.
+- **p. 4 / 3.1. Group equivariant convolution - extractive body cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** A more formal definition of a convolution layer is then given as a learnable kernel operator Φ : X →Y that transforms feature maps f ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** We say that an operator Φ is equivariant to a specific Group G if it commutes with group representations on the input and output feature ...
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** Although F(x) only has 4 elements, this might still be restrictive for modern state-ofthe-art deep architectures used to process large 3D scenes.
+- **p. 4 / 3.2. Efficient group convolution - extractive body cue:** However, sampling O rotations per point increases the model's memory by a factor of O.
 - **Detected method headings:** 3. Methods (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists ... | p. 4 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | A more formal definition of a convolution layer is then given as a learnable kernel operator Φ : X →Y that transforms ... | p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution) |
@@ -47,9 +47,9 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 
 ## Objective / Update Rule
 
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** One solution is to use ∥x -y∥as input to the kernel at the cost of losing the capacity to capture directional features.
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
-- **p. 4 / 3.2. Efficient group convolution - extractive PDF cue:** Previous works such as [9, 48] have relied on the discretization of SO(3) using platonic solids that assign to each spatial component the same finite ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** One solution is to use ∥x -y∥as input to the kernel at the cost of losing the capacity to capture directional features.
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
+- **p. 4 / 3.2. Efficient group convolution - extractive body cue:** Previous works such as [9, 48] have relied on the discretization of SO(3) using platonic solids that assign to each spatial component the same finite ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Group equivariant convolution), p. 4 (3.2. Efficient group convolution).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** (Note that the definition given is cross-correlation instead of convolution since this aligns better with template-matching.) It is well known that convolution layers are translation ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive PDF cue:** We say that an operator Φ is equivariant to a specific Group G if it commutes with group representations on the input and output feature ...
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Equivariance is the property of an operator that allows the prediction of the transformation of the output given an input transformation, while group-invariant operators produce ...
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** Then, the input to the group convolution kernel is the relative position plus the relative orientations between points.
-- **p. 4 / 3.2. Efficient group convolution - extractive PDF cue:** Note that the point cloud is treated as a sparse feature map that defines the sampling of the spatial component.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Baking SE(3)- equivariance into the network architecture can thus be beneficial since equivariant features maintain information about the input group transform across neural layers, making ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** (Note that the definition given is cross-correlation instead of convolution since this aligns better with template-matching.) It is well known that convolution layers are translation ...
+- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** We say that an operator Φ is equivariant to a specific Group G if it commutes with group representations on the input and output feature ...
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
+- **p. 1 / 1. Introduction - extractive body cue:** Equivariance is the property of an operator that allows the prediction of the transformation of the output given an input transformation, while group-invariant operators produce ...
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** Then, the input to the group convolution kernel is the relative position plus the relative orientations between points.
+- **p. 4 / 3.2. Efficient group convolution - extractive body cue:** Note that the point cloud is treated as a sparse feature map that defines the sampling of the spatial component.
+- **p. 1 / 1. Introduction - extractive body cue:** Baking SE(3)- equivariance into the network architecture can thus be beneficial since equivariant features maintain information about the input group transform across neural layers, making ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -86,10 +86,10 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 
 ## Training vs Inference
 
-- **p. 4 / 3.1. Group equivariant convolution - extractive PDF cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
-- **p. 5 / 3.2. Efficient group convolution - extractive PDF cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
+- **p. 4 / 3.1. Group equivariant convolution - extractive body cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
+- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** (7) during training by only sampling a subset of the elements of F(x) for input and output domains of the feature maps.
+- **p. 5 / 4. Experiments - extractive body cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
+- **p. 6 / 4.2. Shape classification - extractive body cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.3. Semantic segmentation - extractive PDF cue:** This shows that with our method, we can introduce the equivariant property without extra costs, demonstrating the efficiency of our proposed model.
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
-- **p. 5 / 4.2. Shape classification - extractive PDF cue:** All models are evaluated when trained and tested without any rotation, I / I.
-- **p. 5 / 4.2. Shape classification - extractive PDF cue:** For this task, predictions must be invariant of the rotation applied to the model.
-- **p. 6 / 4.3. Semantic segmentation - extractive PDF cue:** The same is true for our non-equivariant version, STD.
-- **p. 7 / 4.3. Semantic segmentation - extractive PDF cue:** Global equivariant methods such as VN, or FA struggle with out-of-distribution models.
-- **p. 8 / 4.3. Semantic segmentation - extractive PDF cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
+- **p. 7 / 4.3. Semantic segmentation - extractive body cue:** This shows that with our method, we can introduce the equivariant property without extra costs, demonstrating the efficiency of our proposed model.
+- **p. 6 / 4.2. Shape classification - extractive body cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
+- **p. 5 / 4.2. Shape classification - extractive body cue:** All models are evaluated when trained and tested without any rotation, I / I.
+- **p. 5 / 4.2. Shape classification - extractive body cue:** For this task, predictions must be invariant of the rotation applied to the model.
+- **p. 6 / 4.3. Semantic segmentation - extractive body cue:** The same is true for our non-equivariant version, STD.
+- **p. 7 / 4.3. Semantic segmentation - extractive body cue:** Global equivariant methods such as VN, or FA struggle with out-of-distribution models.
+- **p. 8 / 4.3. Semantic segmentation - extractive body cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 5 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution), p. 4 (3.2. Efficient group convolution), objective p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 4 (3.2. Efficient group convolution), temporal p. 7 (4.3. Semantic segmentation), p. 7 (4.3. Semantic segmentation), p. 4 (3.2. Efficient group convolution), p. 4 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution).
+- **Evidence anchors reviewed:** method p. 4 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 5 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution), p. 4 (3.2. Efficient group convolution), objective p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 4 (3.2. Efficient group convolution), temporal p. 7 (4.3. Semantic segmentation), p. 7 (4.3. Semantic segmentation), p. 4 (3.2. Efficient group convolution), p. 4 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

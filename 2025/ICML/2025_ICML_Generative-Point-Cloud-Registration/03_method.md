@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yoaErYlGE9; PDF retrieval source: https://openreview.net/pdf/21029630f918c57f19a095303310a01e9559a351.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yoaErYlGE9; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167215. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 ## Method Body Digest
 
-- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** The denoiser follows a UNet architecture with an encoder, middle block, and skip-connected decoder, incorporating stacked transformer and residual modules.
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive PDF cue:** 4 illustrates that by coupling the source and target noisy latent representations, each feature element can establish longrange dependencies with all feature elements from both ...
-- **p. 5 / 3.4. Few-Shot Consistency Fine-tuning - extractive PDF cue:** Finally, we use the loss function below to finetune the denoiser: L = ExPQ t ,t,˜c,dPQ,ϵ∼N(0,1) h
-- **p. 5 / 3.5. Geometric-Color Fused Point Descriptor - extractive PDF cue:** Inspired by the powerful RGB representations of large vision models, we utilize them to directly extract zero-shot semantic features from the generated images.
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** Stable Diffusion is a widely used latent diffusion model for text-to-image generation.
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
-- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** This capability perfectly aligns with our objective and motivates us to convert the source and target point clouds into their corresponding depth maps, DP and ...
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive PDF cue:** Here, xP t , xQ t ∈RH′×W ′×d denote the noisy latent representations corresponding to source and target images; dP, dQ ∈RH′×W ′×d represent the ...
+- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** The denoiser follows a UNet architecture with an encoder, middle block, and skip-connected decoder, incorporating stacked transformer and residual modules.
+- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** 4 illustrates that by coupling the source and target noisy latent representations, each feature element can establish longrange dependencies with all feature elements from both ...
+- **p. 5 / 3.4. Few-Shot Consistency Fine-tuning - extractive body cue:** Finally, we use the loss function below to finetune the denoiser: L = ExPQ t ,t,˜c,dPQ,ϵ∼N(0,1) h
+- **p. 5 / 3.5. Geometric-Color Fused Point Descriptor - extractive body cue:** Inspired by the powerful RGB representations of large vision models, we utilize them to directly extract zero-shot semantic features from the generated images.
+- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** Stable Diffusion is a widely used latent diffusion model for text-to-image generation.
+- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
+- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** This capability perfectly aligns with our objective and motivates us to convert the source and target point clouds into their corresponding depth maps, DP and ...
+- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** Here, xP t , xQ t ∈RH′×W ′×d denote the noisy latent representations corresponding to source and target images; dP, dQ ∈RH′×W ′×d represent the ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** To summarize, our contributions are as follows: • We propose a new Generative Point Cloud Registration paradigm, aimed at generating cross-view image pairs for both ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To achieve this, we introduce MatchControlNet, a matching-specific, controllable 2D generative model.
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive PDF cue:** Additionally, we introduce two key designs: coupled conditional denoising and coupled prompt guidance to achieve the cross-view texture consistency generation.
+- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are as follows: • We propose a new Generative Point Cloud Registration paradigm, aimed at generating cross-view image pairs for both ...
+- **p. 2 / 1. Introduction - extractive body cue:** To achieve this, we introduce MatchControlNet, a matching-specific, controllable 2D generative model.
+- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** Additionally, we introduce two key designs: coupled conditional denoising and coupled prompt guidance to achieve the cross-view texture consistency generation.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** The denoiser follows a UNet architecture with an encoder, middle block, and skip-connected decoder, incorporating stacked transformer and residual modules.
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive PDF cue:** 4 illustrates that by coupling the source and target noisy latent representations, each feature element can establish longrange dependencies with all feature elements from both ...
-- **p. 5 / 3.4. Few-Shot Consistency Fine-tuning - extractive PDF cue:** Finally, we use the loss function below to finetune the denoiser: L = ExPQ t ,t,˜c,dPQ,ϵ∼N(0,1) h
-- **p. 5 / 3.5. Geometric-Color Fused Point Descriptor - extractive PDF cue:** Inspired by the powerful RGB representations of large vision models, we utilize them to directly extract zero-shot semantic features from the generated images.
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** Stable Diffusion is a widely used latent diffusion model for text-to-image generation.
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
+- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** The denoiser follows a UNet architecture with an encoder, middle block, and skip-connected decoder, incorporating stacked transformer and residual modules.
+- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** 4 illustrates that by coupling the source and target noisy latent representations, each feature element can establish longrange dependencies with all feature elements from both ...
+- **p. 5 / 3.4. Few-Shot Consistency Fine-tuning - extractive body cue:** Finally, we use the loss function below to finetune the denoiser: L = ExPQ t ,t,˜c,dPQ,ϵ∼N(0,1) h
+- **p. 5 / 3.5. Geometric-Color Fused Point Descriptor - extractive body cue:** Inspired by the powerful RGB representations of large vision models, we utilize them to directly extract zero-shot semantic features from the generated images.
+- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** Stable Diffusion is a widely used latent diffusion model for text-to-image generation.
+- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
 - **Detected method headings:** 3. Approach (p. 3); 4.2. Comparison with Existing Methods (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The denoiser follows a UNet architecture with an encoder, middle block, and skip-connected decoder, incorporating stacked transformer and residual modules. | p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 4 (3.3. Zero-Shot Texture Consistency Generation) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | 4 illustrates that by coupling the source and target noisy latent representations, each feature element can establish longrange dependencies with all feature ... | p. 4 (3.3. Zero-Shot Texture Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning) |
@@ -47,9 +47,9 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** This capability perfectly aligns with our objective and motivates us to convert the source and target point clouds into their corresponding depth maps, DP and ...
-- **p. 5 / 3.4. Few-Shot Consistency Fine-tuning - extractive PDF cue:** Finally, we use the loss function below to finetune the denoiser: L = ExPQ t ,t,˜c,dPQ,ϵ∼N(0,1) h
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive PDF cue:** Here, xP t , xQ t ∈RH′×W ′×d denote the noisy latent representations corresponding to source and target images; dP, dQ ∈RH′×W ′×d represent the ...
+- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** This capability perfectly aligns with our objective and motivates us to convert the source and target point clouds into their corresponding depth maps, DP and ...
+- **p. 5 / 3.4. Few-Shot Consistency Fine-tuning - extractive body cue:** Finally, we use the loss function below to finetune the denoiser: L = ExPQ t ,t,˜c,dPQ,ϵ∼N(0,1) h
+- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** Here, xP t , xQ t ∈RH′×W ′×d denote the noisy latent representations corresponding to source and target images; dP, dQ ∈RH′×W ′×d represent the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 3 (3. Approach).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** Notably, ControlNet allows the use of depth maps as conditional inputs to generate RGB images that preserve geometric structures well-aligned with the provided depth prior.
-- **p. 5 / 3.5. Geometric-Color Fused Point Descriptor - extractive PDF cue:** These color point clouds are subsequently used as inputs to the color point cloud registration method, like ColorPCR (Mu et al., 2024), for 3D registration.
-- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** Instead of independently performing ControlNet to generate source and target images, our Match-ControlNet integrates their denoising generation processes into a unified framework, facilitating feature interaction ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Additionally, by incorporating coupled conditional denoising and coupled prompt guidance, Match-ControlNet enables effective cross-view image feature interaction, achieving mutual texture message passing and thereby enhancing ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** However, in geometry-only point cloud registration, the RGB images corresponding to the point clouds are unavailable, and existing methods rely solely on 3D geometric information ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Match-ControlNet leverages ControlNet's depthconditioned generation capabilities to produce images geometrically aligned with depth maps (derived from the point cloud pairs), ensuring 2D-3D geometric consistency.
+- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** Notably, ControlNet allows the use of depth maps as conditional inputs to generate RGB images that preserve geometric structures well-aligned with the provided depth prior.
+- **p. 5 / 3.5. Geometric-Color Fused Point Descriptor - extractive body cue:** These color point clouds are subsequently used as inputs to the color point cloud registration method, like ColorPCR (Mu et al., 2024), for 3D registration.
+- **p. 4 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** Instead of independently performing ControlNet to generate source and target images, our Match-ControlNet integrates their denoising generation processes into a unified framework, facilitating feature interaction ...
+- **p. 2 / 1. Introduction - extractive body cue:** Additionally, by incorporating coupled conditional denoising and coupled prompt guidance, Match-ControlNet enables effective cross-view image feature interaction, achieving mutual texture message passing and thereby enhancing ...
+- **p. 1 / 1. Introduction - extractive body cue:** However, in geometry-only point cloud registration, the RGB images corresponding to the point clouds are unavailable, and existing methods rely solely on 3D geometric information ...
+- **p. 1 / 1. Introduction - extractive body cue:** Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing ...
+- **p. 2 / 1. Introduction - extractive body cue:** Match-ControlNet leverages ControlNet's depthconditioned generation capabilities to produce images geometrically aligned with depth maps (derived from the point cloud pairs), ensuring 2D-3D geometric consistency.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -86,9 +86,9 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 ## Training vs Inference
 
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Following the default fine-tuning configuration of ControlNet (Zhang et al., 2023), we adopt the AdamW optimizer (Loshchilov, 2017) with a learning rate of 1e-5 and ...
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive PDF cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
+- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Following the default fine-tuning configuration of ControlNet (Zhang et al., 2023), we adopt the AdamW optimizer (Loshchilov, 2017) with a learning rate of 1e-5 and ...
+- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -108,13 +108,13 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.2. Comparison with Existing Methods - extractive PDF cue:** 2 demonstrates that by incorporating FCGF, Predator, and GeoTrans into our generative point cloud registration framework, their generative variants also consistently achieve the performance gain, ...
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** 3.5) with three prevalent deep geometric descriptors: FCGF (Choy et al., 2019), Predator (Huang et al., 2021), and GeoTransformer (Qin et al., 2022), resulting in ...
-- **p. 7 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** We next conduct ablation studies on the zero-shot geometric-color feature fusion described in Eq.
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive PDF cue:** Ablation studies on 3DMatch (Zeng et al., 2017) dataset.
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 8. Source and target image generation via zero-shot Match-ControlNet without any finetuning. 13
-- **p. 5 / 4.1. Experimental Setting - extractive PDF cue:** During the few-shot fine-tuning stage, we randomly select 3,000 sample pairs from the Scan5
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Net training set (Dai et al., 2017) for model fine-tuning.
+- **p. 7 / 4.2. Comparison with Existing Methods - extractive body cue:** 2 demonstrates that by incorporating FCGF, Predator, and GeoTrans into our generative point cloud registration framework, their generative variants also consistently achieve the performance gain, ...
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** 3.5) with three prevalent deep geometric descriptors: FCGF (Choy et al., 2019), Predator (Huang et al., 2021), and GeoTransformer (Qin et al., 2022), resulting in ...
+- **p. 7 / 4.3. Ablation Studies and Analysis - extractive body cue:** We next conduct ablation studies on the zero-shot geometric-color feature fusion described in Eq.
+- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** Ablation studies on 3DMatch (Zeng et al., 2017) dataset.
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 8. Source and target image generation via zero-shot Match-ControlNet without any finetuning. 13
+- **p. 5 / 4.1. Experimental Setting - extractive body cue:** During the few-shot fine-tuning stage, we randomly select 3,000 sample pairs from the Scan5
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Net training set (Dai et al., 2017) for model fine-tuning.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -128,7 +128,7 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 4 (3.3. Zero-Shot Texture Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 5 (3.5. Geometric-Color Fused Point Descriptor), p. 3 (3.2. Zero-Shot Geometric Consistency Generation), p. 3 (3.2. Zero-Shot Geometric Consistency Generation), objective p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 4 (3.3. Zero-Shot Texture Consistency Generation), temporal p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.2. Comparison with Existing Methods), p. 7 (4.2. Comparison with Existing Methods), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 4 (3.3. Zero-Shot Texture Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 5 (3.5. Geometric-Color Fused Point Descriptor), p. 3 (3.2. Zero-Shot Geometric Consistency Generation), p. 3 (3.2. Zero-Shot Geometric Consistency Generation), objective p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 4 (3.3. Zero-Shot Texture Consistency Generation), temporal p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.2. Comparison with Existing Methods), p. 7 (4.2. Comparison with Existing Methods), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

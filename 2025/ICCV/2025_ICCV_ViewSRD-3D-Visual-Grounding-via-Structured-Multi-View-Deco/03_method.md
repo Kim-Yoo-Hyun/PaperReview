@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 
 ## Method Body Digest
 
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** To effectively integrate sentence features from text encoders with viewpoint features extracted from CCVTs, we introduce the Multi-view Textual Module, which employs a cross-attention mechanism ...
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** To effectively capture object features across diverse scenes, we introduce a Multi-View Scene Module that extracts and refines scene representations from multiple viewpoints.
-- **p. 6 / 3.5. Overall Loss Functions - extractive PDF cue:** For details of these losses, please refer to supplementary materials.
-- **p. 6 / 3.5. Overall Loss Functions - extractive PDF cue:** The total loss function is defined as: L = 𝜆𝑂𝑏𝑗L𝑂𝑏𝑗𝑒𝑐𝑡+ 𝜆𝑅𝑒𝑓L𝑃 𝑅𝑒𝑓+ 𝜆𝑆𝑒𝑛𝑡L𝑆𝑒𝑛𝑡.
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** The CCVTs are jointly optimized with our proposed textual and scene modules.
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** We take the average of these dot products across different sentences and compute a corresponding probability distribution using the softmax function.
-- **p. 1 / Abstract - extractive PDF cue:** These decomposed representations serve as the foundation for the Multi-view Textual-Scene Interaction (Multi-TSI) module, which integrates textual and scene features across multiple viewpoints using shared, ...
-- **p. 2 / 2. The nightstand is closest to the wall - extractive PDF cue:** 1(b), ViewSRD first applies the SRD module to decompose complex multi-anchor queries into a set of simpler single-anchor queries, isolating interactions between the target and ...
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** To effectively integrate sentence features from text encoders with viewpoint features extracted from CCVTs, we introduce the Multi-view Textual Module, which employs a cross-attention mechanism ...
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** To effectively capture object features across diverse scenes, we introduce a Multi-View Scene Module that extracts and refines scene representations from multiple viewpoints.
+- **p. 6 / 3.5. Overall Loss Functions - extractive body cue:** For details of these losses, please refer to supplementary materials.
+- **p. 6 / 3.5. Overall Loss Functions - extractive body cue:** The total loss function is defined as: L = 𝜆𝑂𝑏𝑗L𝑂𝑏𝑗𝑒𝑐𝑡+ 𝜆𝑅𝑒𝑓L𝑃 𝑅𝑒𝑓+ 𝜆𝑆𝑒𝑛𝑡L𝑆𝑒𝑛𝑡.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** The CCVTs are jointly optimized with our proposed textual and scene modules.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** We take the average of these dot products across different sentences and compute a corresponding probability distribution using the softmax function.
+- **p. 1 / Abstract - extractive body cue:** These decomposed representations serve as the foundation for the Multi-view Textual-Scene Interaction (Multi-TSI) module, which integrates textual and scene features across multiple viewpoints using shared, ...
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** 1(b), ViewSRD first applies the SRD module to decompose complex multi-anchor queries into a set of simpler single-anchor queries, isolating interactions between the target and ...
 
 ## Design Rationale
 
-- **p. 2 / 2. The nightstand is closest to the wall - extractive PDF cue:** In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling ...
-- **p. 2 / 2. The nightstand is closest to the wall - extractive PDF cue:** This structured decomposition enables the model to extract more effective textual features for grounding. • We develop the Multi-view Textual-Scene Interaction (Multi-TSI) module to explicitly ...
-- **p. 3 / 3. ViewSRD - extractive PDF cue:** The overall framework of our method is illustrated in Fig.
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling ...
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** This structured decomposition enables the model to extract more effective textual features for grounding. • We develop the Multi-view Textual-Scene Interaction (Multi-TSI) module to explicitly ...
+- **p. 3 / 3. ViewSRD - extractive body cue:** The overall framework of our method is illustrated in Fig.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** To effectively integrate sentence features from text encoders with viewpoint features extracted from CCVTs, we introduce the Multi-view Textual Module, which employs a cross-attention mechanism ...
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** To effectively capture object features across diverse scenes, we introduce a Multi-View Scene Module that extracts and refines scene representations from multiple viewpoints.
-- **p. 6 / 3.5. Overall Loss Functions - extractive PDF cue:** For details of these losses, please refer to supplementary materials.
-- **p. 6 / 3.5. Overall Loss Functions - extractive PDF cue:** The total loss function is defined as: L = 𝜆𝑂𝑏𝑗L𝑂𝑏𝑗𝑒𝑐𝑡+ 𝜆𝑅𝑒𝑓L𝑃 𝑅𝑒𝑓+ 𝜆𝑆𝑒𝑛𝑡L𝑆𝑒𝑛𝑡.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** To effectively integrate sentence features from text encoders with viewpoint features extracted from CCVTs, we introduce the Multi-view Textual Module, which employs a cross-attention mechanism ...
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** To effectively capture object features across diverse scenes, we introduce a Multi-View Scene Module that extracts and refines scene representations from multiple viewpoints.
+- **p. 6 / 3.5. Overall Loss Functions - extractive body cue:** For details of these losses, please refer to supplementary materials.
+- **p. 6 / 3.5. Overall Loss Functions - extractive body cue:** The total loss function is defined as: L = 𝜆𝑂𝑏𝑗L𝑂𝑏𝑗𝑒𝑐𝑡+ 𝜆𝑅𝑒𝑓L𝑃 𝑅𝑒𝑓+ 𝜆𝑆𝑒𝑛𝑡L𝑆𝑒𝑛𝑡.
 - **Detected method headings:** 4.4. SRD Enhances Other 3DVG Methods (p. 7)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To effectively integrate sentence features from text encoders with viewpoint features extracted from CCVTs, we introduce the Multi-view Textual Module, which employs ... | p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To effectively capture object features across diverse scenes, we introduce a Multi-View Scene Module that extracts and refines scene representations from multiple ... | p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 6 (3.5. Overall Loss Functions) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 
 ## Objective / Update Rule
 
-- **p. 6 / 3.5. Overall Loss Functions - extractive PDF cue:** For details of these losses, please refer to supplementary materials.
-- **p. 6 / 3.5. Overall Loss Functions - extractive PDF cue:** The total loss function is defined as: L = 𝜆𝑂𝑏𝑗L𝑂𝑏𝑗𝑒𝑐𝑡+ 𝜆𝑅𝑒𝑓L𝑃 𝑅𝑒𝑓+ 𝜆𝑆𝑒𝑛𝑡L𝑆𝑒𝑛𝑡.
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** The CCVTs are jointly optimized with our proposed textual and scene modules.
-- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive PDF cue:** We take the average of these dot products across different sentences and compute a corresponding probability distribution using the softmax function.
+- **p. 6 / 3.5. Overall Loss Functions - extractive body cue:** For details of these losses, please refer to supplementary materials.
+- **p. 6 / 3.5. Overall Loss Functions - extractive body cue:** The total loss function is defined as: L = 𝜆𝑂𝑏𝑗L𝑂𝑏𝑗𝑒𝑐𝑡+ 𝜆𝑅𝑒𝑓L𝑃 𝑅𝑒𝑓+ 𝜆𝑆𝑒𝑛𝑡L𝑆𝑒𝑛𝑡.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** The CCVTs are jointly optimized with our proposed textual and scene modules.
+- **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** We take the average of these dot products across different sentences and compute a corresponding probability distribution using the softmax function.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 
 ## Observation–State–Action Interface
 
-- **p. 1 / Abstract - extractive PDF cue:** These decomposed representations serve as the foundation for the Multi-view Textual-Scene Interaction (Multi-TSI) module, which integrates textual and scene features across multiple viewpoints using shared, ...
-- **p. 2 / 2. The nightstand is closest to the wall - extractive PDF cue:** 1(b), ViewSRD first applies the SRD module to decompose complex multi-anchor queries into a set of simpler single-anchor queries, isolating interactions between the target and ...
-- **p. 2 / 2. The nightstand is closest to the wall - extractive PDF cue:** In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling ...
-- **p. 3 / 3. ViewSRD - extractive PDF cue:** The second is the Multi-view Textual-Scene Interaction (Multi-TSI) module, which mitigates viewpoint dependency by integrating a shared, cross-modal consistent view token into both the language ...
-- **p. 1 / Abstract - extractive PDF cue:** Experiments on 3D visual grounding datasets show that ViewSRD significantly outperforms state-of-the-art methods, particularly in complex queries requiring precise spatial differentiation.
-- **p. 3 / 3. ViewSRD - extractive PDF cue:** This decomposition enables more precise inference of relative relationships between objects, improving the model's ability to capture spatial interactions.
-- **p. 4 / 3.1. Simple Relation Decoupling Module - extractive PDF cue:** Given an input sentence, 𝐶𝑙𝑎𝑠first determines which word belongs to the target.
+- **p. 1 / Abstract - extractive body cue:** These decomposed representations serve as the foundation for the Multi-view Textual-Scene Interaction (Multi-TSI) module, which integrates textual and scene features across multiple viewpoints using shared, ...
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** 1(b), ViewSRD first applies the SRD module to decompose complex multi-anchor queries into a set of simpler single-anchor queries, isolating interactions between the target and ...
+- **p. 2 / 2. The nightstand is closest to the wall - extractive body cue:** In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling ...
+- **p. 3 / 3. ViewSRD - extractive body cue:** The second is the Multi-view Textual-Scene Interaction (Multi-TSI) module, which mitigates viewpoint dependency by integrating a shared, cross-modal consistent view token into both the language ...
+- **p. 1 / Abstract - extractive body cue:** Experiments on 3D visual grounding datasets show that ViewSRD significantly outperforms state-of-the-art methods, particularly in complex queries requiring precise spatial differentiation.
+- **p. 3 / 3. ViewSRD - extractive body cue:** This decomposition enables more precise inference of relative relationships between objects, improving the model's ability to capture spatial interactions.
+- **p. 4 / 3.1. Simple Relation Decoupling Module - extractive body cue:** Given an input sentence, 𝐶𝑙𝑎𝑠first determines which word belongs to the target.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
-- **p. 7 / 4.2. 3D Visual Grounding Results - extractive PDF cue:** Moreover, under viewpoint shifts, CoT3DRef struggles to maintain alignment, whereas ViewSRD reliably grounds targets by capturing spatial relations invariant to viewpoint changes (e.g., "The trash ...
-- **p. 7 / 4.4. SRD Enhances Other 3DVG Methods - extractive PDF cue:** This decoupling mechanism reduces ambiguity in multi-anchor descriptions, enhances target grounding, and serves as a model-independent preprocessing step, ensuring seamless compatibility with various 3DVG methods ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** While the decomposition into overlapping relations does not degrade performance, it diminishes the intended benefits of simplification.
-- **p. 7 / 4.2. 3D Visual Grounding Results - extractive PDF cue:** These results confirm the robustness and generalizability of our approach across diverse scenario.
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
+- **p. 8 / 4.5. Ablation Study - extractive body cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
+- **p. 7 / 4.2. 3D Visual Grounding Results - extractive body cue:** Moreover, under viewpoint shifts, CoT3DRef struggles to maintain alignment, whereas ViewSRD reliably grounds targets by capturing spatial relations invariant to viewpoint changes (e.g., "The trash ...
+- **p. 7 / 4.4. SRD Enhances Other 3DVG Methods - extractive body cue:** This decoupling mechanism reduces ambiguity in multi-anchor descriptions, enhances target grounding, and serves as a model-independent preprocessing step, ensuring seamless compatibility with various 3DVG methods ...
+- **p. 8 / 5. Conclusion - extractive body cue:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
+- **p. 8 / 5. Conclusion - extractive body cue:** While the decomposition into overlapping relations does not degrade performance, it diminishes the intended benefits of simplification.
+- **p. 7 / 4.2. 3D Visual Grounding Results - extractive body cue:** These results confirm the robustness and generalizability of our approach across diverse scenario.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions), objective p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), temporal p. 7 (4.4. SRD Enhances Other 3DVG Methods), p. 1 (Abstract), p. 1 (2. The nightstand is closest to the wall), p. 3 (3. ViewSRD), p. 6 (3.4. Textual-Scene Reasoning Module), p. 8 (5. Conclusion).
+- **Evidence anchors reviewed:** method p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions), objective p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), temporal p. 7 (4.4. SRD Enhances Other 3DVG Methods), p. 1 (Abstract), p. 1 (2. The nightstand is closest to the wall), p. 3 (3. ViewSRD), p. 6 (3.4. Textual-Scene Reasoning Module), p. 8 (5. Conclusion).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

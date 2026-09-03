@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html; PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html; PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can ... | p. 7 (4 Results) |
 | 4 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of ... | p. 6 (4 Results) |
@@ -60,12 +60,12 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For each task, we evaluate in ten scenes that contain novel objects in arbitrary poses and distractor objects. | embodiment, simulator version and control stack | p. 6 (4 Results), p. 7 (4 Results) |
 | Task/environment | We compare the success rates over ten evaluation scenes given two demonstrations for each task. | reset, timeout, object/scene variation | p. 7 (4 Results), p. 7 (4 Results) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (1 Introduction), p. 3 (3. Language-Guided Manipulation) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose) |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation) |
 
 ## Metrics and Success Definition
 
@@ -153,7 +153,16 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Pipeline for Language-Guided Manipulation. (a) Encode the language query with CLIP, and compare its similarity to the average query point features over a ...
 - **p. 7 / 4 Results - extractive body cue:** The robot failed to grasp the stainless steel jug by its handle due to a small error in the grasp rotation.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 2 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 6 (4 Results), p. 6 (4 Results), p. 8 (4 Results), results p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 2 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 6 (4 Results), p. 6 (4 Results), p. 8 (4 Results), results p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We present the success rates in Table 1 and examples of robot executions in Figure 5. (p. 6, 4 Results).
+- **Metric evidence:** Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can leverage the rapid advancements in VLMs, ... (p. 7, 4 Results).
+- **Baseline/ablation evidence:** We reset the scenes to about the same configuration for each compared method. (p. 6, 4 Results).
+- **Failure/negative evidence:** The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).

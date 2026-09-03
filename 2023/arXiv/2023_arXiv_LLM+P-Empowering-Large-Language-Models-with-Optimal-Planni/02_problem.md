@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.11477; PDF retrieval source: https://arxiv.org/pdf/2304.11477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.11477; PDF retrieval source: https://arxiv.org/pdf/2304.11477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,27 +10,27 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. BACK
 
 ## PDF Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** Large language models (LLMs) have demonstrated remarkable zero-shot generalization abilities: stateof-the-art chatbots can provide plausible answers to many common questions that arise in daily life.
-- **p. 1 / Abstract - extractive PDF cue:** However, so far, LLMs cannot reliably solve long-horizon robot planning problems.
-- **p. 1 / Abstract - extractive PDF cue:** By contrast, classical planners, once a problem is given in a formatted way, can use efficient search algorithms to quickly identify correct, or even optimal, ...
-- **p. 1 / Abstract - extractive PDF cue:** In an effort to get the best of both worlds, this paper introduces LLM+P, the first framework that incorporates the strengths of classical planners into ...
-- **p. 1 / Abstract - extractive PDF cue:** LLM+P takes in a natural language description of a planning problem, then returns a correct (or optimal) plan for solving that problem in natural language.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** A Failure Example of GPT-4 in Planning Problem (P1): You have 5 blocks.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** One cannot place more than one block on another block. b5 is on top of b3. b4 is on top of b2. b2 is on ...
+- **p. 1 / Abstract - extractive body cue:** Large language models (LLMs) have demonstrated remarkable zero-shot generalization abilities: stateof-the-art chatbots can provide plausible answers to many common questions that arise in daily life.
+- **p. 1 / Abstract - extractive body cue:** However, so far, LLMs cannot reliably solve long-horizon robot planning problems.
+- **p. 1 / Abstract - extractive body cue:** By contrast, classical planners, once a problem is given in a formatted way, can use efficient search algorithms to quickly identify correct, or even optimal, ...
+- **p. 1 / Abstract - extractive body cue:** In an effort to get the best of both worlds, this paper introduces LLM+P, the first framework that incorporates the strengths of classical planners into ...
+- **p. 1 / Abstract - extractive body cue:** LLM+P takes in a natural language description of a planning problem, then returns a correct (or optimal) plan for solving that problem in natural language.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** A Failure Example of GPT-4 in Planning Problem (P1): You have 5 blocks.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** One cannot place more than one block on another block. b5 is on top of b3. b4 is on top of b2. b2 is on ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | A Failure Example of GPT-4 in Planning Problem (P1): You have 5 blocks. | graph, configuration space 또는 task-and-motion planning domain | body wording is the source claim |
-| Observation / input | S G are usually specified as a list of goal conditions, all of which must hold in a goal state. • A ... | start/goal, map, dynamics와 successor/operator description | exact sensor/frame/preprocessing from PDF |
+| Observation / input | S G are usually specified as a list of goal conditions, all of which must hold in a goal state. • A ... | start/goal, map, dynamics와 successor/operator description | exact sensor/frame/preprocessing from PDF body |
 | State / latent | usually, specified, list, goal, conditions, must, hold, state, symbolic, actions | path, trajectory, symbolic state 또는 task-motion decision | notation and tensor shape require body check |
 | Output / action | Large, Language, Model, PDDL, Writer, LLMs, planning, long-horizon | feasible action sequence 또는 minimum-cost plan | exact unit/frame/decoder require body check |
 | Target outcome | success/reachability and constraint satisfaction | path cost, goal reachability, feasibility와 computation | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s/q; body terms: usually, specified, list, goal, conditions, must, hold, state, symbolic, actions | p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 3 (III. METHOD) |
 | Decision / output variable | a/ξ ∈ feasible decisions; body terms: Given, LLMs, designed, trained, phenomenon, should, come, surprise | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
@@ -38,19 +38,19 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. BACK
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | success/reachability and constraint satisfaction | p. 5 (1) How well does LLM-AS-P work? To what extent), p. 5 (1) How well does LLM-AS-P work? To what extent), p. 6 (1) We observe that though LLM-AS-P provides a plan) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** One cannot place more than one block on another block. b5 is on top of b3. b4 is on top of b2. b2 is on ...
-- **p. 2 / II. BACKGROUND - extractive PDF cue:** The PDDL representation of a planning problem P is separated into two files: a domain file and a problem file.
-- **p. 2 / II. BACKGROUND - extractive PDF cue:** The problem PDDL file provides a list of objects to ground the domain, the problem's initial state sinit and goal conditions S G.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** One cannot place more than one block on another block. b5 is on top of b3. b4 is on top of b2. b2 is on ...
+- **p. 2 / II. BACKGROUND - extractive body cue:** The PDDL representation of a planning problem P is separated into two files: a domain file and a problem file.
+- **p. 2 / II. BACKGROUND - extractive body cue:** The problem PDDL file provides a list of objects to ground the domain, the problem's initial state sinit and goal conditions S G.
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Given how LLMs are designed and trained, this phenomenon should come as no surprise.
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Given how LLMs are designed and trained, this phenomenon should come as no surprise.
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Specifically, they can be (relatively) easily fooled by, for example, asking for the result of a straightforward arithmetic problem that does not appear in their ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Specifically, they can be (relatively) easily fooled by, for example, asking for the result of a straightforward arithmetic problem that does not appear in their ...
 
 ## Assumptions and Failure Boundary
 
@@ -65,11 +65,11 @@ PDF contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Given
 
 ## Position in the Robotics Loop
 
-planning writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 3 (III. METHOD), p. 3 (III. METHOD). The downstream handoff is claimed only when the body describes it.
+planning writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 3 (III. METHOD), p. 3 (III. METHOD). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), interface p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 3 (III. METHOD), p. 3 (III. METHOD), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), interface p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 3 (III. METHOD), p. 3 (III. METHOD), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

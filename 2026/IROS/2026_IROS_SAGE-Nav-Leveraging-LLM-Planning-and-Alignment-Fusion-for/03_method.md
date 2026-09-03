@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.25497; PDF retrieval source: https://arxiv.org/pdf/2606.25497. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.25497; PDF retrieval source: https://arxiv.org/pdf/2606.25497. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,30 +10,30 @@ PDF body method statement (p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD
 
 ## Method Body Digest
 
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence and generate the ...
-- **p. 3 / IV. PROPOSED METHOD - extractive PDF cue:** 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured spatial-semantic ...
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** These structural priors are then adaptively fused with real-time egocentric observations via the Goal-Aware Alignment-Fusion Network (GAFN).
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** Upon merging, the cluster's spatial and visual attributes (pk, fk) are updated via online averaging of its children.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** It decomposes abstract instructions into semantic waypoints, effectively decoupling asynchronous global reasoning from high-frequency control. • We design the Hierarchical Scene Graph Encoder (HSGE) to ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Deep Reinforcement Learning (DRL) has empowered agents to learn end-to-end navigation policies [4, 5] directly from egocentric visual inputs, achieving efficient exploration and object-goal approach ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** This forces lowlevel DRL policies to infer long-horizon strategies directly from fused features, compromising interpretability and leaving the agent without progress feedback during execution.
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence and generate the ...
+- **p. 3 / IV. PROPOSED METHOD - extractive body cue:** 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured spatial-semantic ...
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** These structural priors are then adaptively fused with real-time egocentric observations via the Goal-Aware Alignment-Fusion Network (GAFN).
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** Upon merging, the cluster's spatial and visual attributes (pk, fk) are updated via online averaging of its children.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** It decomposes abstract instructions into semantic waypoints, effectively decoupling asynchronous global reasoning from high-frequency control. • We design the Hierarchical Scene Graph Encoder (HSGE) to ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Deep Reinforcement Learning (DRL) has empowered agents to learn end-to-end navigation policies [4, 5] directly from egocentric visual inputs, achieving efficient exploration and object-goal approach ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** This forces lowlevel DRL policies to infer long-horizon strategies directly from fused features, compromising interpretability and leaving the agent without progress feedback during execution.
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation arXiv:2606.25497v1 [cs.RO] 24 Jun 2026
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In contrast, our method constructs a hierarchical scene graph as an explicit environment prior.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** By leveraging relational graph convolutions, it produces structure-aware embeddings designed to capture both semantic and spatial hierarchies. • We develop the Goal-aware Alignment-Fusion Network (GAFN) ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In contrast, our method constructs a hierarchical scene graph as an explicit environment prior.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** By leveraging relational graph convolutions, it produces structure-aware embeddings designed to capture both semantic and spatial hierarchies. • We develop the Goal-aware Alignment-Fusion Network (GAFN) ...
 
 ## Source Evidence Cues
 
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence and generate the ...
-- **p. 3 / IV. PROPOSED METHOD - extractive PDF cue:** 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured spatial-semantic ...
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** These structural priors are then adaptively fused with real-time egocentric observations via the Goal-Aware Alignment-Fusion Network (GAFN).
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence and generate the ...
+- **p. 3 / IV. PROPOSED METHOD - extractive body cue:** 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured spatial-semantic ...
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** These structural priors are then adaptively fused with real-time egocentric observations via the Goal-Aware Alignment-Fusion Network (GAFN).
 - **Detected method headings:** IV. PROPOSED METHOD (p. 2)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence ... | p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan ... | p. 3 (IV. PROPOSED METHOD), p. 2 (IV. PROPOSED METHOD) |
@@ -43,7 +43,7 @@ PDF body method statement (p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD
 
 ## Objective / Update Rule
 
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** Upon merging, the cluster's spatial and visual attributes (pk, fk) are updated via online averaging of its children.
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** Upon merging, the cluster's spatial and visual attributes (pk, fk) are updated via online averaging of its children.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 2 (IV. PROPOSED METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -59,11 +59,11 @@ PDF body method statement (p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD
 
 ## Observation–State–Action Interface
 
-- **p. 2 / IV. PROPOSED METHOD - extractive PDF cue:** Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence and generate the ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** It decomposes abstract instructions into semantic waypoints, effectively decoupling asynchronous global reasoning from high-frequency control. • We design the Hierarchical Scene Graph Encoder (HSGE) to ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Deep Reinforcement Learning (DRL) has empowered agents to learn end-to-end navigation policies [4, 5] directly from egocentric visual inputs, achieving efficient exploration and object-goal approach ...
-- **p. 3 / IV. PROPOSED METHOD - extractive PDF cue:** 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured spatial-semantic ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** This forces lowlevel DRL policies to infer long-horizon strategies directly from fused features, compromising interpretability and leaving the agent without progress feedback during execution.
+- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** Finally, the unified state representation is fed into an attentive Actor-Critic [6] network featuring a two-layer LSTM [40] to maintain temporal coherence and generate the ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** It decomposes abstract instructions into semantic waypoints, effectively decoupling asynchronous global reasoning from high-frequency control. • We design the Hierarchical Scene Graph Encoder (HSGE) to ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Deep Reinforcement Learning (DRL) has empowered agents to learn end-to-end navigation policies [4, 5] directly from egocentric visual inputs, achieving efficient exploration and object-goal approach ...
+- **p. 3 / IV. PROPOSED METHOD - extractive body cue:** 1: Pipeline Overview: (i) LLM-Guided Hierarchical Global Planner (H-GP) generates semantic waypoint sequences; (ii) Hierarchical Scene Graph Encoder (HSGE) grounds the plan in structured spatial-semantic ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** This forces lowlevel DRL policies to infer long-horizon strategies directly from fused features, compromising interpretability and leaving the agent without progress feedback during execution.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -78,7 +78,7 @@ PDF body method statement (p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD
 
 ## Training vs Inference
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** The A3C [6] policy is trained for 6 million episodes using Adam (learning rate 1 × 10-4).
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** The A3C [6] policy is trained for 6 million episodes using Adam (learning rate 1 × 10-4).
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -98,13 +98,13 @@ PDF body method statement (p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD
 
 ## Failure and Ablation Link
 
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Ablation Study on Zero-shot Generalization.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Ablation Studies Table IV summarizes the ablation study of proposed modules.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Notably, when GAFN is removed and substituted with simple feature concatenation (ID 6), the model exhibits a marginal SPL gain but a concurrent deterioration in ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Consequently, the optimization exclusively focuses on tuning the learnable components, namely the Hierarchical Scene Graph Encoder (HSGE) and the LSTM-based policy network.
-- **p. 6 / V. EXPERIMENTS - extractive PDF cue:** Component analysis further elucidates the hierarchical contributions of each module to the zero-shot capability.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** Limitations We analyze the failure cases (Fig.
-- **p. 7 / V. EXPERIMENTS - extractive PDF cue:** 5), which fall into four categories: (a) Target Visibility Failure, where the agent terminates despite the target (e.g., plates on high shelves) being outside the ...
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Ablation Study on Zero-shot Generalization.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Ablation Studies Table IV summarizes the ablation study of proposed modules.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Notably, when GAFN is removed and substituted with simple feature concatenation (ID 6), the model exhibits a marginal SPL gain but a concurrent deterioration in ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Consequently, the optimization exclusively focuses on tuning the learnable components, namely the Hierarchical Scene Graph Encoder (HSGE) and the LSTM-based policy network.
+- **p. 6 / V. EXPERIMENTS - extractive body cue:** Component analysis further elucidates the hierarchical contributions of each module to the zero-shot capability.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Limitations We analyze the failure cases (Fig.
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** 5), which fall into four categories: (a) Target Visibility Failure, where the agent terminates despite the target (e.g., plates on high shelves) being outside the ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -118,7 +118,7 @@ PDF body method statement (p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD), p. 2 (IV. PROPOSED METHOD), objective p. 2 (IV. PROPOSED METHOD), temporal p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 2 (IV. PROPOSED METHOD), p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD).
+- **Evidence anchors reviewed:** method p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD), p. 2 (IV. PROPOSED METHOD), objective p. 2 (IV. PROPOSED METHOD), temporal p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 2 (IV. PROPOSED METHOD), p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

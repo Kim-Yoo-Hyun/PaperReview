@@ -1,8 +1,10 @@
 # Diffusion Policy: Visuomotor Policy Learning via Action Diffusion
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2303.04137.
-> PDF retrieval source: https://arxiv.org/pdf/2303.04137. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2303.04137.
+> PDF retrieval source: https://arxiv.org/pdf/2303.04137. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2303.04137
 - Code/Project: https://github.com/real-stanford/diffusion_policy
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 (2022) fails to commit to a single mode due to its lack of temporal action consistency.를 문제로 두고, To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: • Closed-loop ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (1 Introduction), p. 1 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction), p. 16 (A.4 Hyperparameters) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** (2022) fails to commit to a single mode due to its lack of temporal action consistency. (p. 5, 1 Introduction).
+- **Actual contribution:** To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** Table 1. Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average of last 10 checkpoints), with each ... (p. 7, Figure/Table caption).
+- **Explicit failure boundary:** The primary failure modes for these were missed grasps for initial folding (the sleeves and the color), and the policy being unable to stop adjusting the shirt at the end. (p. 12, A C).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html; PDF retrieval source: https://arxiv.org/pdf/2401.18084. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html; PDF retrieval source: https://arxiv.org/pdf/2401.18084. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Cross-modal retrieval with touch), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Cross-modal retrieval with touch | EMPIRICAL / REAL-ROBOT OR HARDWARE | UniTouch achieves state-of-the-art performance on all three modalities and outperforms those supervised methods that are trained with paired modalities by a large Method LLM ... | p. 7 (4.3. Cross-modal retrieval with touch) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 8. Ablation study. We ablate the effectiveness of each of our proposed contributions via the zero-shot material classification. can significantly improve the performance, ... | p. 9 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Cross-modal retrieval with touch), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These include the real-world dataset Touch and Go [111], the robotic dataset Feeling of Success [6], the YCB-Slide [94] dataset featuring DIGIT sensor interactions, ... | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 5 (4. Experiments) |
 | Task/environment | To test the generalization ability of our model, we also evaluate it with three out-of-domain datasets with two unseen sensors, including ObjectFolder Real [33], ... | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 6 (4.1. UniTouch representation) |
@@ -166,7 +166,16 @@ PDF body evaluation/result cue (p. 7 (4.3. Cross-modal retrieval with touch), p.
 - **p. 8 / 4.5. Touch-LLM - extractive body cue:** Interpreting vision-based touch images, crucial for delicate tasks in fields like robotics, is challenging due to human perceptual limitations.
 - **p. 8 / 4.4. Image synthesis with touch - extractive body cue:** We observe the supervised state-of-the-art method [112] fails to change the visual style according to the touch images even though these are seen during the ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. UniTouch representation), p. 6 (4.2. Zero-shot touch understanding), p. 7 (4.3. Cross-modal retrieval with touch), p. 7 (4.2. Zero-shot touch understanding), metrics p. 6 (4.1. UniTouch representation), p. 5 (4.1. UniTouch representation), p. 6 (4.2. Zero-shot touch understanding), p. 8 (4.4. Image synthesis with touch), p. 5 (Figure/Table caption), p. 8 (4.7. Ablation study), baselines p. 5 (4.1. UniTouch representation), p. 6 (4.1. UniTouch representation), p. 7 (4.3. Cross-modal retrieval with touch), p. 8 (4.4. Image synthesis with touch), p. 6 (4.1. UniTouch representation), p. 7 (4.3. Cross-modal retrieval with touch), results p. 7 (4.3. Cross-modal retrieval with touch), p. 9 (Figure/Table caption), p. 6 (4.1. UniTouch representation), p. 8 (4.7. Ablation study), p. 8 (4.6. X-to-touch generation), p. 5 (4.1. UniTouch representation).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. UniTouch representation), p. 6 (4.2. Zero-shot touch understanding), p. 7 (4.3. Cross-modal retrieval with touch), p. 7 (4.2. Zero-shot touch understanding), metrics p. 6 (4.1. UniTouch representation), p. 5 (4.1. UniTouch representation), p. 6 (4.2. Zero-shot touch understanding), p. 8 (4.4. Image synthesis with touch), p. 5 (Figure/Table caption), p. 8 (4.7. Ablation study), baselines p. 5 (4.1. UniTouch representation), p. 6 (4.1. UniTouch representation), p. 7 (4.3. Cross-modal retrieval with touch), p. 8 (4.4. Image synthesis with touch), p. 6 (4.1. UniTouch representation), p. 7 (4.3. Cross-modal retrieval with touch), results p. 7 (4.3. Cross-modal retrieval with touch), p. 9 (Figure/Table caption), p. 6 (4.1. UniTouch representation), p. 8 (4.7. Ablation study), p. 8 (4.6. X-to-touch generation), p. 5 (4.1. UniTouch representation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 7. Prompt analysis for touch. We evaluate our prompt designs for zero-shot material classification on Touch and Go and ObjectFolder 2.0 datasets. set. Tab. 5 shows quantitative results, where ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Following [6, 33, 111], we evaluate models' performance via accuracy metric for both downstream tasks. (p. 5, 4.1. UniTouch representation).
+- **Baseline/ablation evidence:** UniTouch outperforms all the baselines by a large margin, implying that our tactile representations benefit from the alignment to a wellstructured embedding space trained on large-scale datasets. (p. 5, 4.1. UniTouch representation).
+- **Failure/negative evidence:** Failures occur when the grasped object slips by more than 3cm. (p. 6, 4.1. UniTouch representation).

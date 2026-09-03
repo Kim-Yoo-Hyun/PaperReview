@@ -1,8 +1,10 @@
 # Mastering Diverse Domains through World Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2301.04104.
-> PDF retrieval source: https://arxiv.org/pdf/2301.04104. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2301.04104.
+> PDF retrieval source: https://arxiv.org/pdf/2301.04104. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / Nature
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2301.04104
 - Code/Project: https://danijar.com/project/dreamerv3/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human data has been widely recognized as a ...를 문제로 두고, We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human data has been widely recognized ... (p. 3, Abstract).
+- **Actual contribution:** We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration. (p. 1, Abstract).
+- **Evaluation boundary:** Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At ... (p. 24, Figure/Table caption).
+- **Explicit failure boundary:** This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or tasks where tuning is prohibitive. (p. 2, Abstract).

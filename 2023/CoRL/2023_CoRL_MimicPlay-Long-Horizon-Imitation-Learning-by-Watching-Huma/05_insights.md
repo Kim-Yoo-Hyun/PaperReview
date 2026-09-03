@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 2(b)), we specify the goal image gr t (gr t ∈Vr) as the frame H steps after the input observation or t in the robot demonstration.를 Conditioned on these latent plans, the low-level controller incorporates state information essential for fined-grained manipulation to generate the final actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that trains a ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 2(b)), we specify the goal image gr t (gr t ∈Vr) as the frame H steps after the input observation or t in the robot demonstration. (p. 14, A Implementation details).
+- **Paper-specific mechanism:** To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Therefore, in this experiment, we use the same teleoperated robot play dataset to train both high-level planner and low-level controller, and report the results of Ours (0% human) and baselines ... (p. 15, C Supplementary Experiment Results); the relevant task/metric cue is 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours. (p. 7, 5 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. (p. 7, 5 Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask robot manipulation benchmark based on robosuite [61] and ....
-3. Compare against the body-reported baseline or a matched simpler baseline: 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours..
-4. Report the body metric and its denominator/aggregation: However, we do observe an uneven performance drop with our method (the success rate of the whiteboard task drops from 0.5 to 0.2)..
-5. Re-run the body-reported ablation/failure condition: Figure 8: System setups for the data collection. (a) Human play data collection. A human operator directly interacts with the scene with one of its hand and perform interesting behaviors based on ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 2(b)), we specify the goal image gr t (gr t ∈Vr) as the frame H steps after the input observation or t in the robot demonstration. (p. 14, A Implementation details); preserve the objective/update rule: The robot policy model is a GPT-style transformer [52], which consists of four multi-head layers with four heads. (p. 14, A Implementation details).
+2. Use the paper-reported task/data/environment cue: To extensively evaluate the methods with more testing trials and training seeds, we conduct an experiment in simulation LIBERO [60], which is a multitask robot manipulation benchmark based on robosuite ... (p. 15, C Supplementary Experiment Results).
+3. Compare against the reported or matched baseline: 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours. (p. 7, 5 Results).
+4. Report the body metric with its denominator and aggregation: 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours. (p. 7, 5 Results).
+5. Re-run the reported ablation or stress/failure condition: (a) Feature visualization results of our method without using KL divergence loss. (p. 16, C Supplementary Experiment Results); if none is reported, design one around: Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. (p. 7, 5 Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 14 (A Implementation details), p. 14 (A Implementation details); the primary result is directionally consistent at p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 15 (C Supplementary Experiment Results), p. 15 (Figure/Table caption), p. 7 (5 Results), and measure the boundary at p. 7 (5 Results), p. 8 (5 Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summarize, main, contributions mechanism이 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is ... 대비 However, we do observe an uneven performance drop with our method (the success rate of the whiteboard task ...을 개선하고, Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (2(b)), we specify the goal image gr t (gr t ∈Vr) as the frame H steps after the input observation or t ...), does the paper-specific mechanism (To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap ...) retain the reported evaluation outcome (2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower ...) when tested against the paper's strongest explicit boundary (Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Therefore, in this experiment, we use the same teleoperated robot play dataset to train both high-level planner and low-level controller, and report the results of Ours (0% human) and baselines ... (p. 15, C Supplementary Experiment Results).
+- **Strongest explicit boundary:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. (p. 7, 5 Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

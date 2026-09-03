@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (64 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.20020; PDF retrieval source: https://arxiv.org/abs/2503.20020. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (64 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.20020; PDF retrieval source: https://arxiv.org/abs/2503.20020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -29,7 +29,7 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 2.0 Pro Experimental | EMPIRICAL / SOURCE-REPORTED EVALUATION | (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories). | p. 10 (2.0 Pro Experimental) |
 
@@ -43,11 +43,11 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark | embodiment, simulator version and control stack | p. 5 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark) |
 | Task/environment | To capture progress in embodied reasoning for VLMs, we introduce ERQA, short for Embodied Reasoning Question Answering, a benchmark that focuses specifically on capabilities ... | reset, timeout, object/scene variation | p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark) |
@@ -133,7 +133,16 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 - **p. 28 / 6. Discussion - extractive body cue:** Robust human-level embodied reasoning is critical for robots and other physically grounded agents.
 - **p. 29 / 6. Discussion - extractive body cue:** This involves developing techniques to seamlessly integrate abstract reasoning with precise execution, leading to more robust and generalizable performance.
 
-- **PDF anchors reviewed:** datasets p. 5 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), metrics p. 10 (2.0 Pro Experimental), baselines p. 10 (2.0 Pro Experimental), results p. 10 (2.0 Pro Experimental).
+- **Evidence anchors reviewed:** datasets p. 5 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), metrics p. 10 (2.0 Pro Experimental), baselines p. 10 (2.0 Pro Experimental), results p. 10 (2.0 Pro Experimental).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (64 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark (p. 5, 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark).
+- **Metric evidence:** (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories). (p. 10, 2.0 Pro Experimental).
+- **Baseline/ablation evidence:** For each image pair, the left image with the point coordinates and the right image without coordinates are given, and the model predicts which of the labeled points in the ... (p. 10, 2.0 Pro Experimental).
+- **Failure/negative evidence:** While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive language attributes (e.g., "top black container", "blue clip") and fails to solve ... (p. 17, 3.3. Gemini Robotics can closely follow language instructions).

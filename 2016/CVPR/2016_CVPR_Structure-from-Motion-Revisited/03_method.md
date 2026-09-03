@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content_cvpr_2016/html/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content_cvpr_2016/html/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. In
 
 ## Method Body Digest
 
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** Starting from a metric reconstruction, new images can be registered to the current model by solving the Perspective-n-Point (PnP) problem [18] using feature correspondences to ...
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** Without further refinement, SfM usually drifts quickly to a non-recoverable state.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** and a loss function ρj to potentially down-weight outliers.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** In this case, indirect algorithms are the method of choice.
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** These methods suffer from limited robustness or high computational cost for use in SfM, which we address by proposing a robust and efficient triangulation method ...
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** BA [58] is the joint non-linear refinement of camera parameters Pc and point parameters Xk that minimizes the reprojection error E = X j ρj ...
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** Inexact methods approximately solve the system, usually by using an iterative solver, e.g. preconditioned conjugate gradients (PCG), which has O(NP ) time and space complexity ...
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** The outputs are pose estimates P = {Pc ∈SE(3) / c = 1...NP } for registered images and the reconstructed scene structure as a set ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** Starting from a metric reconstruction, new images can be registered to the current model by solving the Perspective-n-Point (PnP) problem [18] using feature correspondences to ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** Without further refinement, SfM usually drifts quickly to a non-recoverable state.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** and a loss function ρj to potentially down-weight outliers.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** In this case, indirect algorithms are the method of choice.
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** These methods suffer from limited robustness or high computational cost for use in SfM, which we address by proposing a robust and efficient triangulation method ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** BA [58] is the joint non-linear refinement of camera parameters Pc and point parameters Xk that minimizes the reprojection error E = X j ρj ...
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** Inexact methods approximately solve the system, usually by using an iterative solver, e.g. preconditioned conjugate gradients (PCG), which has O(NP ) time and space complexity ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** The outputs are pose estimates P = {Pc ∈SE(3) / c = 1...NP } for registered images and the reconstructed scene structure as a set ...
 
 ## Design Rationale
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** In this paper, we propose a new SfM algorithm to approach this ultimate goal.
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** We propose a novel robust next best image selection method for accurate pose estimation and reliable triangulation in Sec.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** 4.5, we propose a method to identify and parameterize highly overlapping images for efficient BA of dense collections.
+- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we propose a new SfM algorithm to approach this ultimate goal.
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** We propose a novel robust next best image selection method for accurate pose estimation and reliable triangulation in Sec.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** 4.5, we propose a method to identify and parameterize highly overlapping images for efficient BA of dense collections.
 
 ## Source Evidence Cues
 
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** Starting from a metric reconstruction, new images can be registered to the current model by solving the Perspective-n-Point (PnP) problem [18] using feature correspondences to ...
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** Without further refinement, SfM usually drifts quickly to a non-recoverable state.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** and a loss function ρj to potentially down-weight outliers.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** In this case, indirect algorithms are the method of choice.
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** Starting from a metric reconstruction, new images can be registered to the current model by solving the Perspective-n-Point (PnP) problem [18] using feature correspondences to ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** Without further refinement, SfM usually drifts quickly to a non-recoverable state.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** and a loss function ρj to potentially down-weight outliers.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** In this case, indirect algorithms are the method of choice.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Starting from a metric reconstruction, new images can be registered to the current model by solving the Perspective-n-Point (PnP) problem [18] using ... | p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. Incremental Reconstruction) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Without further refinement, SfM usually drifts quickly to a non-recoverable state. | p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. In
 
 ## Objective / Update Rule
 
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** These methods suffer from limited robustness or high computational cost for use in SfM, which we address by proposing a robust and efficient triangulation method ...
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** BA [58] is the joint non-linear refinement of camera parameters Pc and point parameters Xk that minimizes the reprojection error E = X j ρj ...
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** and a loss function ρj to potentially down-weight outliers.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** Inexact methods approximately solve the system, usually by using an iterative solver, e.g. preconditioned conjugate gradients (PCG), which has O(NP ) time and space complexity ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** These methods suffer from limited robustness or high computational cost for use in SfM, which we address by proposing a robust and efficient triangulation method ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** BA [58] is the joint non-linear refinement of camera parameters Pc and point parameters Xk that minimizes the reprojection error E = X j ρj ...
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** and a loss function ρj to potentially down-weight outliers.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** Inexact methods approximately solve the system, usually by using an iterative solver, e.g. preconditioned conjugate gradients (PCG), which has O(NP ) time and space complexity ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,12 +64,12 @@ PDF body method statement (p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. In
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** The outputs are pose estimates P = {Pc ∈SE(3) / c = 1...NP } for registered images and the reconstructed scene structure as a set ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** While the existing systems have advanced the state of the art tremendously, robustness, accuracy, completeness, and scalability remain the key problems in incremental SfM that ...
-- **p. 2 / 2.2. Incremental Reconstruction - extractive PDF cue:** The input to the reconstruction stage is the scene graph.
-- **p. 1 / 1. Introduction - extractive PDF cue:** In this paper, we propose a new SfM algorithm to approach this ultimate goal.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** 4.5, we propose a method to identify and parameterize highly overlapping images for efficient BA of dense collections.
-- **p. 3 / 2.2. Incremental Reconstruction - extractive PDF cue:** Especially for Internet photos, BA spends significant time on optimizing many near-duplicate images.
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** The outputs are pose estimates P = {Pc ∈SE(3) / c = 1...NP } for registered images and the reconstructed scene structure as a set ...
+- **p. 1 / 1. Introduction - extractive body cue:** While the existing systems have advanced the state of the art tremendously, robustness, accuracy, completeness, and scalability remain the key problems in incremental SfM that ...
+- **p. 2 / 2.2. Incremental Reconstruction - extractive body cue:** The input to the reconstruction stage is the scene graph.
+- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we propose a new SfM algorithm to approach this ultimate goal.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** 4.5, we propose a method to identify and parameterize highly overlapping images for efficient BA of dense collections.
+- **p. 3 / 2.2. Incremental Reconstruction - extractive body cue:** Especially for Internet photos, BA spends significant time on optimizing many near-duplicate images.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -104,13 +104,13 @@ PDF body method statement (p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. In
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Next best view scores for Gaussian distributed points xj ∈[0, 1]×[0, 1] with mean µ and std. dev. σ. Score S w.r.t. uni- ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** We run experiments on a large variety of datasets to evaluate both the proposed components and the overall system compared to state-of-the-art incremental (Bundler [53], ...
-- **p. 8 / 7.82 M - extractive PDF cue:** For each dataset, we report the largest reconstructed component.
-- **p. 8 / 7.82 M - extractive PDF cue:** Reconstruction of Gendarmenmarkt [61] for Bundler (left) and our method (right). of the overall system and thereby also evaluate the performance of the individual proposed ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** The proposed components of the algorithm improve the state of the art in terms of completeness, robustness, accuracy, and efficiency.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
-- **p. 7 / 5. Experiments - extractive PDF cue:** Robust and Efficient Triangulation.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Next best view scores for Gaussian distributed points xj ∈[0, 1]×[0, 1] with mean µ and std. dev. σ. Score S w.r.t. uni- ...
+- **p. 7 / 5. Experiments - extractive body cue:** We run experiments on a large variety of datasets to evaluate both the proposed components and the overall system compared to state-of-the-art incremental (Bundler [53], ...
+- **p. 8 / 7.82 M - extractive body cue:** For each dataset, we report the largest reconstructed component.
+- **p. 8 / 7.82 M - extractive body cue:** Reconstruction of Gendarmenmarkt [61] for Bundler (left) and our method (right). of the overall system and thereby also evaluate the performance of the individual proposed ...
+- **p. 8 / 6. Conclusion - extractive body cue:** The proposed components of the algorithm improve the state of the art in terms of completeness, robustness, accuracy, and efficiency.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. late ...
+- **p. 7 / 5. Experiments - extractive body cue:** Robust and Efficient Triangulation.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -124,7 +124,7 @@ PDF body method statement (p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. In
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), objective p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), temporal p. 1 (Abstract), p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), p. 3 (3. Challenges), p. 4 (4.2. Next Best View Selection), p. 4 (4.2. Next Best View Selection).
+- **Evidence anchors reviewed:** method p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), objective p. 2 (2.2. Incremental Reconstruction), p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), temporal p. 1 (Abstract), p. 2 (2.2. Incremental Reconstruction), p. 3 (2.2. Incremental Reconstruction), p. 3 (3. Challenges), p. 4 (4.2. Next Best View Selection), p. 4 (4.2. Next Best View Selection).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

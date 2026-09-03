@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Ng2VDbKD4r; PDF retrieval source: https://openreview.net/pdf/bffc1758ee48ad880448c1cf829c2cac0fee26e6.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Ng2VDbKD4r; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247830. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 
 ## Method Body Digest
 
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation.
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** To address the severe class imbalance in the dynamic segmentation loss, we incorporate a negative sampling strategy that randomly selects 50,000 negative pixels per sample ...
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** Due to the patch size constraint of our geometry foundation model, which requires image dimensions to be divisible by 14, we train our model at ...
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** Method FPS↑Mem.(GB)↓Param(M) PSNR↑SSIM↑LPIPS↓ Omin-Scene (Wei et al., 2025) 2.5 8.22 81.7 24.27 0.736 0.237 UniSplat 4.0 8.30 91.0 25.37 0.765 0.246 Gaussian-splatting pipeline, with dynamic ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Experimental results demonstrate that our approach achieves state-of-the-art performance across both datasets in input-view reconstruction and novelview synthesis.
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation.
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** To address the severe class imbalance in the dynamic segmentation loss, we incorporate a negative sampling strategy that randomly selects 50,000 negative pixels per sample ...
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Due to the patch size constraint of our geometry foundation model, which requires image dimensions to be divisible by 14, we train our model at ...
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Method FPS↑Mem.(GB)↓Param(M) PSNR↑SSIM↑LPIPS↓ Omin-Scene (Wei et al., 2025) 2.5 8.22 81.7 24.27 0.736 0.237 UniSplat 4.0 8.30 91.0 25.37 0.765 0.246 Gaussian-splatting pipeline, with dynamic ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Experimental results demonstrate that our approach achieves state-of-the-art performance across both datasets in input-view reconstruction and novelview synthesis.
 
 ## Design Rationale
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** In summary, our main contributions are as follows: • We introduce UniSplat, a novel feed-forward framework for dynamic scene reconstruction from multi-camera videos via a ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address these challenges, we propose UniSplat, a general feed-forward framework for dynamic scene modeling from multi-camera videos.
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our main contributions are as follows: • We introduce UniSplat, a novel feed-forward framework for dynamic scene reconstruction from multi-camera videos via a ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address these challenges, we propose UniSplat, a general feed-forward framework for dynamic scene modeling from multi-camera videos.
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
 
 ## Source Evidence Cues
 
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation.
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation.
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the ... | p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before ... | p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS) |
@@ -45,9 +45,9 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 
 ## Objective / Update Rule
 
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** To address the severe class imbalance in the dynamic segmentation loss, we incorporate a negative sampling strategy that randomly selects 50,000 negative pixels per sample ...
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** Due to the patch size constraint of our geometry foundation model, which requires image dimensions to be divisible by 14, we train our model at ...
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** Method FPS↑Mem.(GB)↓Param(M) PSNR↑SSIM↑LPIPS↓ Omin-Scene (Wei et al., 2025) 2.5 8.22 81.7 24.27 0.736 0.237 UniSplat 4.0 8.30 91.0 25.37 0.765 0.246 Gaussian-splatting pipeline, with dynamic ...
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** To address the severe class imbalance in the dynamic segmentation loss, we incorporate a negative sampling strategy that randomly selects 50,000 negative pixels per sample ...
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Due to the patch size constraint of our geometry foundation model, which requires image dimensions to be divisible by 14, we train our model at ...
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Method FPS↑Mem.(GB)↓Param(M) PSNR↑SSIM↑LPIPS↓ Omin-Scene (Wei et al., 2025) 2.5 8.22 81.7 24.27 0.736 0.237 UniSplat 4.0 8.30 91.0 25.37 0.765 0.246 Gaussian-splatting pipeline, with dynamic ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,13 +63,13 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Experimental results demonstrate that our approach achieves state-of-the-art performance across both datasets in input-view reconstruction and novelview synthesis.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Despite these advances, robust reconstruction in urban driving scenarios remains challenging, particularly in maintaining a unified latent representation that evolves smoothly over time, handling partial ...
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** However, these methods typically assume substantial viewpoint overlap among input images and rely on perscene optimization, which limits their applicability in real-time driving scenarios.
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** These methods typically encode inter-view correlations within the image domain via cross-attention or by constructing a multi-view stereo (MVS) cost volume, and subsequently decode the ...
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** We employ the SpConv (Contributors, 2022) library to implement the sparse 3D U-Net, which comprises convolutional and transposed convolutional layers and achieves a maximum downsampling ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Experimental results demonstrate that our approach achieves state-of-the-art performance across both datasets in input-view reconstruction and novelview synthesis.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Despite these advances, robust reconstruction in urban driving scenarios remains challenging, particularly in maintaining a unified latent representation that evolves smoothly over time, handling partial ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** However, these methods typically assume substantial viewpoint overlap among input images and rely on perscene optimization, which limits their applicability in real-time driving scenarios.
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** These methods typically encode inter-view correlations within the image domain via cross-attention or by constructing a multi-view stereo (MVS) cost volume, and subsequently decode the ...
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** We employ the SpConv (Contributors, 2022) library to implement the sparse 3D U-Net, which comprises convolutional and transposed convolutional layers and achieves a maximum downsampling ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -84,12 +84,12 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 
 ## Training vs Inference
 
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** All models are trained for 20 epochs with a batch size of 32 on 16 GPUs.
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** Training is conducted with a batch size of 16 on 8 H20 GPUs for 40,000 iterations, as further training empirically degrades performance.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For the general methods MVSplat and DepthSplat, we retrain them on the Waymo Open Dataset using their official codebases.
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** All models are trained for 20 epochs with a batch size of 32 on 16 GPUs.
+- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Training is conducted with a batch size of 16 on 8 H20 GPUs for 40,000 iterations, as further training empirically degrades performance.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For the general methods MVSplat and DepthSplat, we retrain them on the Waymo Open Dataset using their official codebases.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -109,13 +109,13 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 
 ## Failure and Ablation Link
 
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** We also compare against a variant that explicitly uses two consecutive frames without latent-space temporal propagation.
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** 4.3 ABLATION STUDY In this section, we conduct ablation studies on the Waymo Open Dataset (Sun et al., 2020) to investigate the individual components of ...
-- **p. 8 / 4 EXPERIMENTS - extractive PDF cue:** Ablation on Geometric and Semantic Features in Scaffold.
-- **p. 9 / 4 EXPERIMENTS - extractive PDF cue:** Top: Aggregated scene without dynamic filtering, where red boxes indicate ghosting artifacts caused by accumulating the dynamic car.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study on the two branches of our Gaussian decoder. Point Voxel PSNR↑SSIM↑LPIPS↓ ✓ 24.62 0.72 0.38
-- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive PDF cue:** For DepthSplat, we initialize from its official weights pre-trained on dl3dV (Ling et al., 2024) and use the variant equipped with a ViT-B backbone (Dosovitskiy ...
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** For our 3D scaffold reconstruction, we employ a frozen pretrained geometry transformer π3 (Wang et al., 2025f) for initial geometry generation and a pretrained DINOv2 ...
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We also compare against a variant that explicitly uses two consecutive frames without latent-space temporal propagation.
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.3 ABLATION STUDY In this section, we conduct ablation studies on the Waymo Open Dataset (Sun et al., 2020) to investigate the individual components of ...
+- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Ablation on Geometric and Semantic Features in Scaffold.
+- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Top: Aggregated scene without dynamic filtering, where red boxes indicate ghosting artifacts caused by accumulating the dynamic car.
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on the two branches of our Gaussian decoder. Point Voxel PSNR↑SSIM↑LPIPS↓ ✓ 24.62 0.72 0.38
+- **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For DepthSplat, we initialize from its official weights pre-trained on dl3dV (Ling et al., 2024) and use the variant equipped with a ViT-B backbone (Dosovitskiy ...
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For our 3D scaffold reconstruction, we employ a frozen pretrained geometry transformer π3 (Wang et al., 2025f) for initial geometry generation and a pretrained DINOv2 ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 15 (A.1 IMPLEMENTATION DETAILS), objective p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), temporal p. 3 (2 RELATED WORK), p. 2 (1 INTRODUCTION), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.1 IMPLEMENTATION DETAILS).
+- **Evidence anchors reviewed:** method p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 15 (A.1 IMPLEMENTATION DETAILS), objective p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), temporal p. 3 (2 RELATED WORK), p. 2 (1 INTRODUCTION), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.1 IMPLEMENTATION DETAILS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

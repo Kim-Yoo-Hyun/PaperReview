@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html; PDF retrieval source: https://arxiv.org/pdf/2511.05397. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html; PDF retrieval source: https://arxiv.org/pdf/2511.05397. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 
 
 ## Evaluation Body Digest
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Baselines On the LIBERO simulation benchmark, we report success rates across all four task suites, comparing against Diffusion Policy [3], Octo [5], DiT Policy [48], ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Our dataset was captured across multiple tabletop environments and span a diverse task set: pick1 - Base 2 - Shoulder 3 - Elbow 4 - ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Real-world evaluation results on in-distribution tasks, including picking a block, ball and rock.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Our model is able to beat state-of-the art models on tasks and environments present in the training set by 49% on average.
-- **p. 6 / V. RESULTS - extractive PDF cue:** Although our model performs similarly to [19] on picking and placing blocks (most common task in the collected dataset), the latter struggles when placing to ...
-- **p. 6 / V. RESULTS - extractive PDF cue:** Generalization results On generalization and robustness evaluation of unseen tasks, environments and conditions (Table IV), our model does the best.
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** For all experiments, we use the discrete actions, with the adaptive horizon ensembler (AdaHorizon), which yields higher success rates and improved grasp accuracy compared to ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Our experiments show better success rates on almost every single task.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Baselines On the LIBERO simulation benchmark, we report success rates across all four task suites, comparing against Diffusion Policy [3], Octo [5], DiT Policy [48], ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Our dataset was captured across multiple tabletop environments and span a diverse task set: pick1 - Base 2 - Shoulder 3 - Elbow 4 - ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Real-world evaluation results on in-distribution tasks, including picking a block, ball and rock.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our model is able to beat state-of-the art models on tasks and environments present in the training set by 49% on average.
+- **p. 6 / V. RESULTS - extractive body cue:** Although our model performs similarly to [19] on picking and placing blocks (most common task in the collected dataset), the latter struggles when placing to ...
+- **p. 6 / V. RESULTS - extractive body cue:** Generalization results On generalization and robustness evaluation of unseen tasks, environments and conditions (Table IV), our model does the best.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** For all experiments, we use the discrete actions, with the adaptive horizon ensembler (AdaHorizon), which yields higher success rates and improved grasp accuracy compared to ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our experiments show better success rates on almost every single task.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | For all experiments, we use the discrete actions, with the adaptive horizon ensembler (AdaHorizon), which yields higher success rates and improved grasp accuracy compared ... | p. 4 (IV. EXPERIMENTS) |
 | V. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results on Real-World Tests In real-world, in-distribution pick-and-place experiments, EverydayVLA outperforms other methods by an average of 49% in success rate across blocks, balls, ... | p. 6 (V. RESULTS) |
@@ -40,26 +40,26 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Baselines On the LIBERO simulation benchmark, we report success rates across all four task suites, comparing against Diffusion Policy [3], Octo [5], DiT Policy [48], ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** Our dataset was captured across multiple tabletop environments and span a diverse task set: pick1 - Base 2 - Shoulder 3 - Elbow 4 - ...
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Real-world evaluation results on in-distribution tasks, including picking a block, ball and rock.
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** Our model is able to beat state-of-the art models on tasks and environments present in the training set by 49% on average.
-- **p. 6 / V. RESULTS - extractive PDF cue:** Although our model performs similarly to [19] on picking and placing blocks (most common task in the collected dataset), the latter struggles when placing to ...
-- **p. 6 / V. RESULTS - extractive PDF cue:** Generalization results On generalization and robustness evaluation of unseen tasks, environments and conditions (Table IV), our model does the best.
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Baselines On the LIBERO simulation benchmark, we report success rates across all four task suites, comparing against Diffusion Policy [3], Octo [5], DiT Policy [48], ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Our dataset was captured across multiple tabletop environments and span a diverse task set: pick1 - Base 2 - Shoulder 3 - Elbow 4 - ...
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Real-world evaluation results on in-distribution tasks, including picking a block, ball and rock.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our model is able to beat state-of-the art models on tasks and environments present in the training set by 49% on average.
+- **p. 6 / V. RESULTS - extractive body cue:** Although our model performs similarly to [19] on picking and placing blocks (most common task in the collected dataset), the latter struggles when placing to ...
+- **p. 6 / V. RESULTS - extractive body cue:** Generalization results On generalization and robustness evaluation of unseen tasks, environments and conditions (Table IV), our model does the best.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. EveryDayVLA system. Top: EveryDayVLA finetunes a VLA for a low-cost manipulator to generate continuous and discrete actions, which are passed to an adaptive ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. EveryDayVLA architecture. The VLA takes as input an image and natural language instruction and these are tokenized via the vision and language encoders, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. EveryDayVLA hardware. The robot consists of 7 joints, including a base and claw gripper as the end-effector. In sum, the hardware costs $311.98, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. Real-world evaluation results on in-distribution tasks, including picking a block, ball and rock. Our model is able to beat state-of-the art models on ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5. Static and dynamic distractors. Top: We benchmark our model with static distractors, and a cluttered scene where we add different objects, and vary ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. EveryDayVLA system. Top: EveryDayVLA finetunes a VLA for a low-cost manipulator to generate continuous and discrete actions, which are passed to an adaptive ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. EveryDayVLA architecture. The VLA takes as input an image and natural language instruction and these are tokenized via the vision and language encoders, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. EveryDayVLA hardware. The robot consists of 7 joints, including a base and claw gripper as the end-effector. In sum, the hardware costs $311.98, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. Real-world evaluation results on in-distribution tasks, including picking a block, ball and rock. Our model is able to beat state-of-the art models on ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5. Static and dynamic distractors. Top: We benchmark our model with static distractors, and a cluttered scene where we add different objects, and vary ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Baselines On the LIBERO simulation benchmark, we report success rates across all four task suites, comparing against Diffusion Policy [3], Octo [5], DiT Policy ... | embodiment, simulator version and control stack | p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS) |
 | Task/environment | Our dataset was captured across multiple tabletop environments and span a diverse task set: pick1 - Base 2 - Shoulder 3 - Elbow 4 ... | reset, timeout, object/scene variation | p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
@@ -114,7 +114,7 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 
 | Primary metric/result | Results on Real-World Tests In real-world, in-distribution pick-and-place experiments, EverydayVLA outperforms other methods by an average of 49% in success rate across blocks, balls, ... | numeric claim only at cited anchor | p. 6 (V. RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / V. RESULTS - extractive PDF cue:** We also achieve an inference rate of up to 108.4 Hz (Table III), adding only 0.9 ms of latency relative to OpenVLA-OFT [35], which corresponds ...
+- **p. 6 / V. RESULTS - extractive body cue:** We also achieve an inference rate of up to 108.4 Hz (Table III), adding only 0.9 ms of latency relative to OpenVLA-OFT [35], which corresponds ...
 
 ## Generalization and Failure Cases
 
@@ -149,13 +149,13 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 
 
 ## Limitations and Verification Questions
 
-- **p. 6 / VI. CONCLUSIONS - extractive PDF cue:** We also experience limitations in executing fine-grained manipulation, which is due to the limited servo precision as well as relatively low number of expert demonstrations ...
-- **p. 6 / V. RESULTS - extractive PDF cue:** The primary failure mode for EverydayVLA is delayed object release and not finishing the task in a timely manner.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. EveryDayVLA system. Top: EveryDayVLA finetunes a VLA for a low-cost manipulator to generate continuous and discrete actions, which are passed to an adaptive ...
-- **p. 4 / IV. EXPERIMENTS - extractive PDF cue:** In real-world trials, we evaluate both in-distribution and out-of-distribution scenarios against OpenVLA and OpenVLA-OFT.
-- **p. 5 / V. RESULTS - extractive PDF cue:** Method Inference Rate (Hz) ↑ Latency (sec) ↓ OpenVLA [19] 4.2 0.2396 OpenVLA-OFT [35] 109.7 0.0729 Oursli 54.2-108.4 0.0738 TABLE IV GENERALIZATION AND ROBUSTNESS TO ...
+- **p. 6 / VI. CONCLUSIONS - extractive body cue:** We also experience limitations in executing fine-grained manipulation, which is due to the limited servo precision as well as relatively low number of expert demonstrations ...
+- **p. 6 / V. RESULTS - extractive body cue:** The primary failure mode for EverydayVLA is delayed object release and not finishing the task in a timely manner.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. EveryDayVLA system. Top: EveryDayVLA finetunes a VLA for a low-cost manipulator to generate continuous and discrete actions, which are passed to an adaptive ...
+- **p. 4 / IV. EXPERIMENTS - extractive body cue:** In real-world trials, we evaluate both in-distribution and out-of-distribution scenarios against OpenVLA and OpenVLA-OFT.
+- **p. 5 / V. RESULTS - extractive body cue:** Method Inference Rate (Hz) ↑ Latency (sec) ↓ OpenVLA [19] 4.2 0.2396 OpenVLA-OFT [35] 109.7 0.0729 Oursli 54.2-108.4 0.0738 TABLE IV GENERALIZATION AND ROBUSTNESS TO ...
 
-- **PDF anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), metrics p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (IV. EXPERIMENTS), baselines p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (V. RESULTS), p. 6 (V. RESULTS), results p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), metrics p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (IV. EXPERIMENTS), baselines p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (V. RESULTS), p. 6 (V. RESULTS), results p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

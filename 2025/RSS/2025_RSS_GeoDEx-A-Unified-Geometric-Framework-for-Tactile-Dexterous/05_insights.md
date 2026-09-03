@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 The interaction between the fingertips and the objects is measured using the tactile fingertips which output normal forces at the contact location. ‘The hardware setup and experiment objects are shown in Fig.를 the finger-object contacts with consideration of sensor error; a force estimator that uses tactile sensor reading, the robot state and the object pose to estimates all contact forces that would achieve force ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 For these failure cases, the main element at fault was the saturation of the tactile sensors of one or more fingertips.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping and extrinsic ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We use the error © between the desired forces and the ‘observations at each contact point along with the fingrtp's Jacobian J to compute direction of motion ofthe fingertips as (p. 5, B. Force Estimation).
+- **Paper-specific mechanism:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for the success and failure cases is presented in table Ill, We can ... (p. 8, C. Hardware Results); the relevant task/metric cue is ‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force error of the grasps when it was successful and when it failed (p. 8, C. Hardware Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The goal is for the objects to rotate about a pivot axis on the table, To this, using the distance between the pivot point and the contacts, the algorithm precomputes a trajectory ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We compared the controller when using the estimated force values against the raw measurements, with the results shown in Fig..
-4. Report the body metric and its denominator/aggregation: ‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force error of the grasps when it was successful and when it failed.
-5. Re-run the body-reported ablation/failure condition: 1) without over-pressuring it (following constraint in eq..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We use the error © between the desired forces and the ‘observations at each contact point along with the fingrtp's Jacobian J to compute direction of motion ofthe fingertips as (p. 5, B. Force Estimation); preserve the objective/update rule: Forces on FE-plane satisfy linear force equilibrium constraints: (p. 2, B. Utilizing Tactile Readings).
+2. Use the paper-reported task/data/environment cue: The simulation uses the same values as the hardware for the hand joints' PD gains. (p. 6, B. Simulation Results).
+3. Compare against the reported or matched baseline: We compared the controller when using the estimated force values against the raw measurements, with the results shown in Fig. (p. 6, B. Simulation Results).
+4. Report the body metric with its denominator and aggregation: ‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force error of the grasps when it was successful and when it failed (p. 8, C. Hardware Results).
+5. Re-run the reported ablation or stress/failure condition: 1) without over-pressuring it (following constraint in eq. (p. 7, C. Hardware Results); if none is reported, design one around: Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 5 (B. Force Estimation); the primary result is directionally consistent at p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 8 (C. Hardware Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (Abstract), match the reported outcome at p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 6 (B. Simulation Results), and measure the boundary at p. 1 (Abstract), p. 9 (C. Hardware Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Through, various, experimental mechanism이 We compared the controller when using the estimated force values against the raw measurements, with the ... 대비 ‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force ...을 개선하고, For these failure cases, the main element at fault was the saturation of the tactile sensors ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We use the error © between the desired forces and the ‘observations at each contact point along with the fingrtp's Jacobian J ...), does the paper-specific mechanism (Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable ...) retain the reported evaluation outcome (‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force ...) when tested against the paper's strongest explicit boundary (Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+- **Paper-supported outcome:** The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for the success and failure cases is presented in table Ill, We can ... (p. 8, C. Hardware Results).
+- **Strongest explicit boundary:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

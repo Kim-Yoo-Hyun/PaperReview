@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://jmlr.org/papers/v17/15-522.html; PDF retrieval source: https://jmlr.org/papers/volume17/15-522/15-522.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://jmlr.org/papers/v17/15-522.html; PDF retrieval source: https://jmlr.org/papers/volume17/15-522/15-522.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 23 (6.4 Deep Visuomotor Policy Evaluation), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.4 Deep Visuomotor Policy Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | When provided with pose estimation features, the policy has more freedom in how it uses the visual information, and achieves somewhat higher success rates. | p. 23 (6.4 Deep Visuomotor Policy Evaluation) |
 | 6.3 Spatial Softmax CNN Architecture Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results in Table 3 indicate that using the softmax and expectation operators improves pose estimation accuracy substantially. | p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 23 (6.4 Deep Visuomotor Policy Evaluation), p
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Does our trajectory optimization algorithm work on a real robotic platform with unknown dynamics, for a range of different tasks? | embodiment, simulator version and control stack | p. 16 (6. Experimental Evaluation), p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot) |
 | Task/environment | In this section, we demonstrate the range of manipulation tasks that can be learned using our trajectory optimization algorithm on a real PR2 robot. | reset, timeout, object/scene variation | p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 23 (6.4 Deep Visuomotor Policy Evaluation), p
 - **p. 26 / 7. Discussion and Future Work - extractive body cue:** More practical alternatives that could be explored in future work include simultaneously training the policy on multiple robots, each of which is located in a ...
 - **p. 18 / 6.1 Simulated Comparisons to Prior Policy Search Methods - extractive body cue:** Since the peg is 0.5 units long, distances above this amount correspond to controllers that cannot perform an insertion.
 
-- **PDF anchors reviewed:** datasets p. 16 (6. Experimental Evaluation), p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 16 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 23 (6.5 Features Learned with End-to-End Training), metrics p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 21 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 24 (6.5 Features Learned with End-to-End Training), p. 20 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), baselines p. 18 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 20 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 17 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 20 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), results p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 19 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 24 (6.5 Features Learned with End-to-End Training), p. 24 (6.5 Features Learned with End-to-End Training).
+- **Evidence anchors reviewed:** datasets p. 16 (6. Experimental Evaluation), p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 19 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 16 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 23 (6.5 Features Learned with End-to-End Training), metrics p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 21 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 24 (6.5 Features Learned with End-to-End Training), p. 20 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), baselines p. 18 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 20 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 17 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 20 (6.2 Learning Linear-Gaussian Controllers on a PR2 Robot), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), results p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 21 (6.3 Spatial Softmax CNN Architecture Evaluation), p. 19 (6.1 Simulated Comparisons to Prior Policy Search Methods), p. 23 (6.4 Deep Visuomotor Policy Evaluation), p. 24 (6.5 Features Learned with End-to-End Training), p. 24 (6.5 Features Learned with End-to-End Training).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (40 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The results in Table 3 indicate that using the softmax and expectation operators improves pose estimation accuracy substantially. (p. 21, 6.3 Spatial Softmax CNN Architecture Evaluation).
+- **Metric evidence:** To evaluate their robustness to errors in the specified target position, we conducted experiments on the lego block and ring tasks where the target object (the lower block and the ... (p. 20, 6.2 Learning Linear-Gaussian Controllers on a PR2 Robot).
+- **Baseline/ablation evidence:** On 3D insertion, it outperformed the iLQG baseline, which used a known model. (p. 18, 6.1 Simulated Comparisons to Prior Policy Search Methods).
+- **Failure/negative evidence:** The graph shows the average distance travelled on rollouts that did not fall, and shows that only our method was able to learn walking policies that succeeded consistently. (p. 19, 6.1 Simulated Comparisons to Prior Policy Search Methods).

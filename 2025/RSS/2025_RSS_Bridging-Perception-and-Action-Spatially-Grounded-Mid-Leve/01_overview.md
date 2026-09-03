@@ -1,8 +1,10 @@
 # Bridging Perception and Action: Spatially-Grounded Mid-Level Representations for Robot Generalization
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p155.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p155.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p155.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p155.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p155.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -69,7 +71,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 | Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 1 (Figure/Table caption), p. 6 (Figure/Table caption) |
 | Embodiment/environment | For RT-H, ‘we relabel robot demonstrations with the language "move the arm leftright/up/down." For each environment in simulation and the real-world, we vary the object locations, add distractor objects, and change the ... | hardware/simulator version and reset protocol | p. 7 (C. Experiment Setup) |
 | Dataset/benchmark | For RT-H, ‘we relabel robot demonstrations with the language "move the arm leftright/up/down." For each environment in simulation and the real-world, we vary the object locations, add distractor objects, and change the ... | role, split, size and leakage | p. 7 (C. Experiment Setup) |
-| Metric | not recovered | definition, denominator, direction and uncertainty | 본문 anchor 없음 |
+| Metric | not stated or recoverable in the selected PDF body | definition, denominator, direction and uncertainty | 본문 anchor 없음 |
 | Baseline/ablation | In addition, we provide two ablations based on prior ‘works investigating a single representation: a keypoints-based ablation based on MOKA (25] and a language baseline based on RE-H [2]. | fair input/data/compute/action matching | p. 7 (C. Experiment Setup), p. 7 (C. Experiment Setup), p. 7 (C. Experiment Setup) |
 
 ## Explicit Limitations and Failure Boundary
@@ -81,3 +83,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ...를 문제로 두고, We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 4 (V. ARCHITECTURE) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ... (p. 1, 1. Ivrropuction).
+- **Actual contribution:** We propose a novel mixture-of-experts policy architecture that can combine multiple specialized expert models, each trained on a distinct ‘mid-level representation, to improve the generalization of the policy. (p. 1, Abstract).
+- **Evaluation boundary:** In addition, we provide two ablations based on prior ‘works investigating a single representation: a keypoints-based ablation based on MOKA (25] and a language baseline based on RE-H [2]. (p. 7, C. Experiment Setup).
+- **Explicit failure boundary:** This sensitivity-robusness tradeoff' underscores the necessity of developing robot policies that balance adherence 10 mid-level representations with the ability to remain adaptable and resilient in the face of environmental variations. ... (p. 4, 1. Ivrropuction).

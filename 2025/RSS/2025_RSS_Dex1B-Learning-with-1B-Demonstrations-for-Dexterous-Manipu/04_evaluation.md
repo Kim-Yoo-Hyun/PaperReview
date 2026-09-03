@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Dataset Analysis | BENCHMARK / DATASET | Although LD slightly increases the penetration value, it significantly contributes to an improved success rate and Qi score, highlighting its importance in achieving reliable ... | p. 8 (B. Dataset Analysis) |
 | A. Grasping Synthesis Evaluation | BENCHMARK / DATASET | In terms of quality, DexSimple ¢with post-optimization) achieves the highest success rate (86.0%), the highest Qi soe (0.125), andthe lowest penetration (0.1) | p. 6 (A. Grasping Synthesis Evaluation) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We benchmark two methods for grasping and auticuation tasks on our datasets, and compare them with the | embodiment, simulator version and control stack | p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis) |
 | Task/environment | ‘TABLE Ill: Benchmarks on (a) lifting tasks with Dex¥CB (7 and our datasets, and (b) articulation tasks with ARCTIC [16] and our datasets. | reset, timeout, object/scene variation | p. 7 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 - **p. 7 / B. Dataset Analysis - extractive body cue:** dataset, including retargeting human demonstrations to robot trajectories and adding noise to generate a larger number of physically plausible demonstrations.
 - **p. 8 / B. Dataset Analysis - extractive body cue:** Notably, we observe that performance degradation is more pronounced for the lifting task than for the articulation task as training data decreases.
 
-- **PDF anchors reviewed:** datasets p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 6 (V. EXPERIMENTS), p. 8 (B. Dataset Analysis), metrics p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 7 (B. Dataset Analysis), p. 1 (Figure/Table caption), baselines p. 6 (A. Grasping Synthesis Evaluation), p. 6 (A. Grasping Synthesis Evaluation), p. 7 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), results p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis).
+- **Evidence anchors reviewed:** datasets p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 6 (V. EXPERIMENTS), p. 8 (B. Dataset Analysis), metrics p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 7 (B. Dataset Analysis), p. 1 (Figure/Table caption), baselines p. 6 (A. Grasping Synthesis Evaluation), p. 6 (A. Grasping Synthesis Evaluation), p. 7 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), results p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We adhere to the metrics established in the benchmark to ensure fair comparisons with baseline methods, which are divided into two categories: ‘quality (Success Rate, Qy-score, Penetration) and diversity (H ... (p. 6, A. Grasping Synthesis Evaluation).
+- **Metric evidence:** In terms of quality, DexSimple ¢with post-optimization) achieves the highest success rate (86.0%), the highest Qi soe (0.125), andthe lowest penetration (0.1) (p. 6, A. Grasping Synthesis Evaluation).
+- **Baseline/ablation evidence:** :ple outperforms baseline with a higher (p. 6, A. Grasping Synthesis Evaluation).
+- **Failure/negative evidence:** While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based ... (p. 2, 1. INrRopucTION).

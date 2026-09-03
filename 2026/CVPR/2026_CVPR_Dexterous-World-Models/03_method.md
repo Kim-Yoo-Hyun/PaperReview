@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_Dexterous_World_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_Dexterous_World_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | (2) Here, pd θ is the dynamics model that samples the scene and action-induced changes (S0, ∆S1:F ) given the actions A1:F ... | p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | Importantly, we instantiate the generative process as a latent video diffusion model [36] conditioned on two egocentric signals: (1) a static-scene video, ... | p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion) |
@@ -83,8 +83,8 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | We explore two variants: AdaLN (Global), which aggregates pose features over the entire sequence to provide a single global embedding, and AdaLN ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | Given a static 3D scene S0 and a sequence of embodied actions A1:F , the model generates a temporally coherent video that ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -131,8 +131,17 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 3 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), objective p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), temporal p. 8 (4.3. Ablation Study), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), p. 1 (Abstract), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 3 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), objective p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), temporal p. 8 (4.3. Ablation Study), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), p. 1 (Abstract), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** (2) Here, pd θ is the dynamics model that samples the scene and action-induced changes (S0, ∆S1:F ) given the actions A1:F = {C, H}1:F , while po θ is ... (p. 3, 3.1. Formulation of Dexterous World Models).
+- **Objective/update evidence:** The training objective follows the standard latent diffusion loss [36]: LLDM = Ez0,t,ϵ h ∥ϵ -ϵθ(zt, t / cs, ch)∥2 2 i . (p. 5, 3.2. Scene-Action-Conditioned Video Diffusion).
+- **Temporal/runtime evidence:** The observation model po θ then translates this evolving world, described by (S0, ∆S1:F ), into a sequence of visual frames observed along the camera trajectory C1:F , which is ... (p. 4, 3.1. Formulation of Dexterous World Models).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

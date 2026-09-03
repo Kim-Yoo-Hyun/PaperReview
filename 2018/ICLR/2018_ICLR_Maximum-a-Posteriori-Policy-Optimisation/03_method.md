@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=S1ANxQW0b; PDF retrieval source: https://openreview.net/forum?id=S1ANxQW0b. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=S1ANxQW0b; PDF retrieval source: https://openreview.net/forum?id=S1ANxQW0b. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -17,7 +17,7 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In contrast to typical off-policy value-gradient algorithms, the new algorithm does not require gradient of the Q-function to update the policy.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** 2016), Stochastic Value Gradient (SVG, Heess et al.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** In contrast, off-policy value-gradient algorithms such as the Deep Deterministic Policy Gradient (DDPG, Silver et al.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2018 rewards, what are the actions most likely to have been taken?".
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** By using this estimation objective we have more control over the policy change in both E and M steps, yielding robust learning.
 
 ## Design Rationale
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Policy / value representation | state에서 action과 return estimate를 표현한다 | state/observation과 task context | actor, critic, value, Q 또는 sequence policy를 계산 | policy/value estimate | We introduce a new algorithm for reinforcement learning called Maximum aposteriori Policy Optimisation (MPO) based on coordinate ascent on a relativeentropy objective. | p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION) |
 | Rollout / target construction | interaction에서 update target을 만든다 | state, action, reward, next state | return, advantage, TD target 또는 trajectory statistics를 구성 | training target | In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes. | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
@@ -48,7 +48,7 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In contrast to typical off-policy value-gradient algorithms, the new algorithm does not require gradient of the Q-function to update the policy.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** 2016), Stochastic Value Gradient (SVG, Heess et al.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** In contrast, off-policy value-gradient algorithms such as the Deep Deterministic Policy Gradient (DDPG, Silver et al.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2018 rewards, what are the actions most likely to have been taken?".
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** By using this estimation objective we have more control over the policy change in both E and M steps, yielding robust learning.
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -75,10 +75,10 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value not recovered from the selected body cues. | 5.1.2 COMPLETE RESULTS ON THE CONTROL SUITE The results for MPO (non-parameteric) - and a comparison to an implementation of state-of-the-art algorithms ... | episode/sequence/action-chunk boundary |
+| Horizon | rollout/return horizon과 episode termination; exact n-step/discount는 exact value was not selected from the PDF body. | 5.1.2 COMPLETE RESULTS ON THE CONTROL SUITE The results for MPO (non-parameteric) - and a comparison to an implementation of state-of-the-art algorithms ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training update와 environment step이 분리되며 deployment control rate는 별도 contract다. | 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + ... | Hz/fps, inference time and control rate |
 | Memory | replay/rollout buffer와 actor/critic parameters; recurrent history 여부 확인 필요. | Casting Reinforcement Learning (RL) as an inference problem has a long history dating back at least two decades (Dayan & Hinton, 1997). | window and reset |
-| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | environment interaction, value/policy update와 batch size가 비용을 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -120,8 +120,17 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 5 (2.1 RELATED WORK), p. 2 (1 INTRODUCTION), p. 2 (2.1 RELATED WORK), p. 3 (2.1 RELATED WORK).
+- **Evidence anchors reviewed:** method p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 5 (2.1 RELATED WORK), p. 2 (1 INTRODUCTION), p. 2 (2.1 RELATED WORK), p. 3 (2.1 RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We develop two off-policy algorithms and demonstrate that they are competitive with the state-of-the-art in deep reinforcement learning. (p. 1, ABSTRACT).
+- **Objective/update evidence:** In contrast to typical off-policy value-gradient algorithms, the new algorithm does not require gradient of the Q-function to update the policy. (p. 2, 1 INTRODUCTION).
+- **Temporal/runtime evidence:** 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy (optimized) agent=MPO agent=MPO (parametric) agent=PPO ... (p. 9, 5 EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

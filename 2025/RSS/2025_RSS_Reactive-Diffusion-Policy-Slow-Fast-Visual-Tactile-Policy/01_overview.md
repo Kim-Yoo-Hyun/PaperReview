@@ -1,8 +1,10 @@
 # Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p052.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p052.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p052.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p052.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p052.pdf
 - Code/Project: https://reactive-diffusion-policy.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -44,9 +46,9 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | ForceMimiec [1] adds a force sensor on a handheld device [11] to get force feedback, but suffers from the inaccuracy of pose estimation, and thus cannot directly train an end2end policy. | tactile image/force, vision과 proprioceptive history | p. 3 (B. Robot Data Collection System), p. 1 (Front matter) |
-| State/latent | ForceMimiec, adds, force, sensor, handheld, device, feedback, suffers, inaccuracy, pose, estimation, thus | contact geometry, force state 또는 latent dynamics | p. 3 (B. Robot Data Collection System), p. 1 (Front matter), p. 6 (B. Slow-Fast Policy Learning) |
-| Output/action | action trajectories with a slow policy network and achieve closed-loop control based on high-frequency tactile / force feedback | grasp/contact action, force command 또는 object motion | p. 1 (Front matter), p. 6 (B. Slow-Fast Policy Learning), p. 2 (I. Ivrropucrion) |
+| Observation/input | ForceMimiec [1] adds a force sensor on a handheld device [11] to get force feedback, but suffers from the inaccuracy of pose estimation, and thus cannot directly train an end2end policy. | tactile image/force, vision과 proprioceptive history | p. 3 (B. Robot Data Collection System), p. 1 (Body text (section boundary not confidently recovered)) |
+| State/latent | ForceMimiec, adds, force, sensor, handheld, device, feedback, suffers, inaccuracy, pose, estimation, thus | contact geometry, force state 또는 latent dynamics | p. 3 (B. Robot Data Collection System), p. 1 (Body text (section boundary not confidently recovered)), p. 6 (B. Slow-Fast Policy Learning) |
+| Output/action | action trajectories with a slow policy network and achieve closed-loop control based on high-frequency tactile / force feedback | grasp/contact action, force command 또는 object motion | p. 1 (Body text (section boundary not confidently recovered)), p. 6 (B. Slow-Fast Policy Learning), p. 2 (I. Ivrropucrion) |
 | Objective/outcome | During training, given the observation (including image, tactlity and propri- ‘oception), the gradient field is leamed by ep and the DDPM training objective can be rewritten as | slip/contact success, force/pose error와 robustness | p. 6 (B. Slow-Fast Policy Learning), p. 5 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction) |
 
 ## Main Claims and Actual Contribution
@@ -84,3 +86,12 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, most of ...를 문제로 두고, To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale {actile imit ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. Ivrropucrion), p. 3 (B. Robot Data Collection System), p. 4 (A. 3D Deformation Field Extraction), p. 1 (Abstract), p. 1 (Abstract), p. 5 (B. Slow-Fast Policy Learning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, ... (p. 2, I. Ivrropucrion).
+- **Actual contribution:** To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale ... (p. 1, Abstract).
+- **Evaluation boundary:** All devices are connected to a workstation with an Intel Core i9-14900K CPU and an NVIDIA RTX 4090 GPU for both data collection and evaluation 2) Baselines: We use the ... (p. 7, V. EXPERIMENTS).
+- **Explicit failure boundary:** We ‘observe that DP with pure visual input frequently predicts inaccurate trajectories and results in large contact forces (e.g. failure case 2 in Fig. (p. 9, B. Results).

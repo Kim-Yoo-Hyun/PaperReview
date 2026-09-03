@@ -1,8 +1,10 @@
 # PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/ICAPS/article/view/6739.
-> PDF retrieval source: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/ICAPS/article/view/6739.
+> PDF retrieval source: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ICAPS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593
 - Code/Project: https://github.com/caelan/pddlstream
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -71,3 +73,12 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black box.를 문제로 두고, We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ONR grant ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 8 (9 Experiments), p. 8 (9 Experiments) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black box. (p. 1, 1 Introduction).
+- **Actual contribution:** We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ... (p. 1, 1 Introduction).
+- **Evaluation boundary:** The Incremental and Focused algorithms serve as baselines that are representative of prior work (Garrett, Lozano-P´erez, and Kaelbling 2018). (p. 7, 9 Experiments).
+- **Explicit failure boundary:** Adaptive is able to quickly identify a collision-free pair of placements supporting a solution. (p. 8, 9 Experiments).

@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 Robots need more than force feedback, while the existing sensors do not obtain enough tactile information for the robots.를 Sensors 2017, 17, 2762 2 of 21 cup in the hand is going to slip, and thus adjust the gripping force accordingly; we can know whether a USB connector is going to ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 7. (a) when an indenter pressed on the GelSight surface in normal direction, the force is in linear relationship with the indenting depth, but the unloading curve is different from the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect the contact and contact force, or force ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The sensor has been applied to multiple commercialized robots, including the PR2 robot, and Barrett hands, and it successfully assisted common robotic tasks, such as contact detection and gripping force ... (p. 1, 1. Introduction).
+- **Paper-specific mechanism:** Tactile sensing is an important mode for both human and robots to perceive the environment. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is The coefficient of determination (R2) and root mean square error (RMSE) for the results of three different objects are also listed in the figure. (p. 17, 5.2. Evaluation of Force Measurement); the relevant task/metric cue is In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate the sensor's performance in estimating object shapes and contact force. (p. 15, 5. Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In the long run, for making a good force measurement with GelSight, we should either collect a more comprehensive dataset (simulation methods could be applied), or choose some other methods that can ....
-3. Compare against the body-reported baseline or a matched simpler baseline: In the figures, we compared the measured values and the ground truth, of the pitch and yaw angles of the surface normal..
-4. Report the body metric and its denominator/aggregation: We train the network with the mean squared error loss function for the regression problem..
-5. Re-run the body-reported ablation/failure condition: We replace the network's last fully-connected layer with an output layer of four neurons, corresponding to the forces and torques in four axes (Fx, Fy, Fz, Tz)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The sensor has been applied to multiple commercialized robots, including the PR2 robot, and Barrett hands, and it successfully assisted common robotic tasks, such as contact detection and gripping force ... (p. 1, 1. Introduction); preserve the objective/update rule: In a simplified version, we only record the gradient at each entry space and match the gradient reading to the closest entry. (p. 8, 3.3. Algorithm for Measuring Shape).
+2. Use the paper-reported task/data/environment cue: In the long run, for making a good force measurement with GelSight, we should either collect a more comprehensive dataset (simulation methods could be applied), or choose some other methods ... (p. 18, 5.2. Evaluation of Force Measurement).
+3. Compare against the reported or matched baseline: In the figures, we compared the measured values and the ground truth, of the pitch and yaw angles of the surface normal. (p. 16, 5.1. Evaluation of Shape Measurement).
+4. Report the body metric with its denominator and aggregation: In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate the sensor's performance in estimating object shapes and contact force. (p. 15, 5. Evaluation).
+5. Re-run the reported ablation or stress/failure condition: We replace the network's last fully-connected layer with an output layer of four neurons, corresponding to the forces and torques in four axes (Fx, Fy, Fz, Tz). (p. 17, 5.2. Evaluation of Force Measurement); if none is reported, design one around: Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape); the primary result is directionally consistent at p. 9 (Figure/Table caption), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 17 (5.2. Evaluation of Force Measurement), p. 17 (Figure/Table caption), p. 16 (5.1. Evaluation of Shape Measurement), and measure the boundary at p. 18 (5.2. Evaluation of Force Measurement), p. 19 (7. Conclusions).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 past, decades, researchers mechanism이 In the figures, we compared the measured values and the ground truth, of the pitch and ... 대비 We train the network with the mean squared error loss function for the regression problem.을 개선하고, Figure 7. (a) when an indenter pressed on the GelSight surface in normal direction, the force ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The sensor has been applied to multiple commercialized robots, including the PR2 robot, and Barrett hands, and it successfully assisted common robotic ...), does the paper-specific mechanism (Tactile sensing is an important mode for both human and robots to perceive the environment.) retain the reported evaluation outcome (In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate ...) when tested against the paper's strongest explicit boundary (Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Tactile sensing is an important mode for both human and robots to perceive the environment. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** The coefficient of determination (R2) and root mean square error (RMSE) for the results of three different objects are also listed in the figure. (p. 17, 5.2. Evaluation of Force Measurement).
+- **Strongest explicit boundary:** Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Recent works in robot imitation learning have proposed learning language-conditioned policies that predict actions given visual observations and the high-level task specified in language.를 Predicting these language motions as an intermediate step between high-level tasks and actions forces the policy to learn the shared structure of low-level motions across seemingly disparate tasks.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 1: Given a task in language like "close the pistachio jar" and an image of the scene, RT-H utilizes a Vision Language Model (VLM) to predict language motions like "move arm ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each step, RT-H conditions on the observation and ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Recent works in robot imitation learning have proposed learning language-conditioned policies that predict actions given visual observations and the high-level task specified in language. (p. 1, Abstract).
+- **Paper-specific mechanism:** Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level of language motions, leading to better language motion ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 3: Results on Diverse+Kitchen multi-task dataset, consisting of eight challenging evaluation tasks. 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). RT-H outperforms RT-2 ... (p. 6, Figure/Table caption); the relevant task/metric cue is 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). (p. 6, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** RT-2-IWR: We collect 30 episodes (failed episodes filtered out) of teleoperated corrections for the same eight tasks, using VR-based teleoperation instead of language motion corrections. (p. 9, V. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We use RT-H trained on only the Kitchen dataset [6] unless otherwise noted (i.e., not including the Diverse data), which consists of the following training and evaluation tasks on various objects: 1) ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 7: Results when models trained on Kitchen data [6] are deployed on the same tasks, but in a new building with novel backgrounds, lighting, and flooring. RT-H and RT-H-Joint each outperform ....
-4. Report the body metric and its denominator/aggregation: 95% Wilson Score confidence intervals [54] are shown on the average success rates (left)..
-5. Re-run the body-reported ablation/failure condition: Offline Performance: We investigate if language motions as an intermediate layer for action prediction has any noticeable effect by comparing the offline validation mean squared error (MSE) for end-to-end action prediction across ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Recent works in robot imitation learning have proposed learning language-conditioned policies that predict actions given visual observations and the high-level task specified in language. (p. 1, Abstract); preserve the objective/update rule: Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along with the high-level task, it then predicts actions, ... (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: We use RT-H trained on only the Kitchen dataset [6] unless otherwise noted (i.e., not including the Diverse data), which consists of the following training and evaluation tasks on various ... (p. 10, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Training on Online Corrections In this section we are interested in how well RT-H can learn from language motion corrections compared to methods without action hierarchy that use teleoperated correction ... (p. 8, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). (p. 6, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: RTH-Cluster replaces the automating labeling procedure with action clustering, and without language it performs slightly worse than RT-H on average. (p. 7, V. EXPERIMENTS); if none is reported, design one around: RT-2-IWR: We collect 30 episodes (failed episodes filtered out) of teleoperated corrections for the same eight tasks, using VR-based teleoperation instead of language motion corrections. (p. 9, V. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 5 (V. EXPERIMENTS), and measure the boundary at p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Motivated, benefits, language mechanism이 Fig. 7: Results when models trained on Kitchen data [6] are deployed on the same tasks, ... 대비 95% Wilson Score confidence intervals [54] are shown on the average success rates (left).을 개선하고, Fig. 1: Given a task in language like "close the pistachio jar" and an image of ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Recent works in robot imitation learning have proposed learning language-conditioned policies that predict actions given visual observations and the high-level task specified ...), does the paper-specific mechanism (Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level ...) retain the reported evaluation outcome (95% Wilson Score confidence intervals [54] are shown on the average success rates (left).) when tested against the paper's strongest explicit boundary (RT-2-IWR: We collect 30 episodes (failed episodes filtered out) of teleoperated corrections for the same eight tasks, using ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (95% Wilson Score confidence intervals [54] are shown on the average success rates (left).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level of language motions, leading to better language motion ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 3: Results on Diverse+Kitchen multi-task dataset, consisting of eight challenging evaluation tasks. 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). RT-H outperforms RT-2 ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** RT-2-IWR: We collect 30 episodes (failed episodes filtered out) of teleoperated corrections for the same eight tasks, using VR-based teleoperation instead of language motion corrections. (p. 9, V. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

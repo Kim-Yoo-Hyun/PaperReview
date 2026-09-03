@@ -1,8 +1,10 @@
 # RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p152.pdf
 - Code/Project: https://x-humanoidrobomind.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (21 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 In contrast 0 the acquisition of vision or language data, which can often be sourced through web-based collection methods (32, 55], collecting robotic data is difficult because such data cannot be easily ...를 문제로 두고, demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task execu ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 12 (C. Vision-Language-Action Large Models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, the curation of large-scale datasets for training general-purpose robotic models poses significant challenges. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This platform uses a cloudnative architecture ... (p. 4, I. INTRODUCTION).
+- **Evaluation boundary:** RoboMIND features standardized settings to form a large-scale real-world manipulation dataset. ‘As shown in Figure 8, we compare our dataset with Open XEmbodiment, another large-scale robotic learning dataset. (p. 8, B. Qualitative Analysis).
+- **Explicit failure boundary:** Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).

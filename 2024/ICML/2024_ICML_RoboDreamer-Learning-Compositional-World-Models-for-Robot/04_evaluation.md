@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html; PDF retrieval source: https://arxiv.org/pdf/2404.12377. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html; PDF retrieval source: https://arxiv.org/pdf/2404.12377. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Evaluation on Robotic Planning), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Evaluation on Robotic Planning | EMPIRICAL / REAL-ROBOT OR HARDWARE | According to the results presented in Table 3, RoboDreamer achieves superior task success rates compared to baseline models even if RoboDreamer is only given ... | p. 7 (4.2. Evaluation on Robotic Planning) |
 | 4.2. Evaluation on Robotic Planning | EMPIRICAL / REAL-ROBOT OR HARDWARE | On the other hand, RoboDreamer achieves a success rate of 15% with the help of predicted future observations. | p. 8 (4.2. Evaluation on Robotic Planning) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Evaluation on Robotic Planning), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We take the real-world robotics dataset RT-1 (Brohan et al., 2022) to evaluate video generation. | embodiment, simulator version and control stack | p. 6 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation) |
 | Task/environment | The dataset consists of various robotic manipulation tasks, i.e. pick brown chip bag from middle drawer. | reset, timeout, object/scene variation | p. 6 (4.1. Evaluation on Video Generation), p. 5 (4. Experiments) |
@@ -157,7 +157,16 @@ PDF body evaluation/result cue (p. 7 (4.2. Evaluation on Robotic Planning), p. 8
 - **p. 8 / 4.2. Evaluation on Robotic Planning - extractive body cue:** UniPi performs poorly as it does not align with task instructions well.
 - **p. 7 / 4.1. Evaluation on Video Generation - extractive body cue:** As is illustrated in Figure 4, the baseline method AVDC and HiP fail to accurately infer the spatial relationship between objects, incorrectly placing them in ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation), p. 5 (4. Experiments), p. 7 (4.2. Evaluation on Robotic Planning), p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), metrics p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 6 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation), baselines p. 7 (4.2. Evaluation on Robotic Planning), p. 5 (Figure/Table caption), p. 6 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation), results p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 7 (4.1. Evaluation on Video Generation), p. 8 (4.2. Evaluation on Robotic Planning), p. 5 (4. Experiments), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation), p. 5 (4. Experiments), p. 7 (4.2. Evaluation on Robotic Planning), p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), metrics p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 6 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation), baselines p. 7 (4.2. Evaluation on Robotic Planning), p. 5 (Figure/Table caption), p. 6 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 6 (4.1. Evaluation on Video Generation), results p. 7 (4.2. Evaluation on Robotic Planning), p. 8 (4.2. Evaluation on Robotic Planning), p. 7 (4.1. Evaluation on Video Generation), p. 8 (4.2. Evaluation on Robotic Planning), p. 5 (4. Experiments), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** According to the results presented in Table 3, RoboDreamer achieves superior task success rates compared to baseline models even if RoboDreamer is only given observation from single cameras. (p. 7, 4.2. Evaluation on Robotic Planning).
+- **Metric evidence:** On the other hand, RoboDreamer achieves a success rate of 15% with the help of predicted future observations. (p. 8, 4.2. Evaluation on Robotic Planning).
+- **Baseline/ablation evidence:** To make the comparison fair, we only give language instructions to RoboDreamer and all other baselines. (p. 6, 4.1. Evaluation on Video Generation).
+- **Failure/negative evidence:** The scores are 0, 1, where 0 means the robotic planning in the generated videos is unreasonable or fails to solve tasks and 1 means the robotic planning is executable ... (p. 6, 4.1. Evaluation on Video Generation).

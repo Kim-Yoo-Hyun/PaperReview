@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p066.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p066.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p066.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p066.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, a successful backflip requires ‘mastering the landing first-if the policy cannot land correctly, | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | As illustrated in Figure 2 (b), the delta action model is defined as Ady = (se, 44)» where the policy 77> leams ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | As illustrated in Figure 2 (b), the delta action model is defined as Ady = (se, 44)» where the policy 77> leams ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | illustrated, Figure, delta, action, model, defined, Ady, where, policy, leams | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
 | Output / action | However, directly, deploying, policy, real, hardware, degraded, performance | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
 | Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | whole-body pose/contact/reference state; body terms: illustrated, Figure, delta, action, model, defined, Ady, where, policy, leams | p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract) |
 | Decision / output variable | joint/whole-body action; body terms: mnparal-, result, overly, conservative, policies, sacrifice, yaper, present | p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract) |
@@ -38,7 +38,7 @@ PDF body framing (p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training) |
 | Success / guarantee | motion/task success and recovery | p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), p. 1 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (C. Fine-tuning Motion Tracking Policy under New Dynamics)): mnparal- or result in overly conservative policies that sacrifice a yaper, we present ASAP
+PDF body contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (C. Fine-tuning Motion Tracking Policy under New Dynamics)): mnparal- or result in overly conservative policies that sacrifice a yaper, we present ASAP
 
 - **p. 2 / Abstract - extractive body cue:** To this end, we propose ASAP, a two-stage framework that aligns the dynamics mismatch between simulation and realworld physics, enabling agile humanoid whole-body skills ASAP ...
 - **p. 3 / Abstract - extractive body cue:** 1) We introduce ASAP, a framework that bridges the simto-real gap by leveraging a delta action model trained via reinforcement learning (RL) with real-world data
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract). The downstream handoff is claimed only when the body describes it.
+humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), interface p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), objective p. 10 (B. Different Usage of Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 11 (B. Different Usage of Delta Action Model).
+- **Evidence anchors reviewed:** problem p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), interface p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), objective p. 10 (B. Different Usage of Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 11 (B. Different Usage of Delta Action Model).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, a successful backflip requires ‘mastering the landing first-if the policy cannot land correctly, (p. 4, B. Phase-based Motion Tracking Policy Training).
+- **Formulation-changing contribution:** Primarily leveraging reinforcement learning algorithms [80] within physics simulators [58, 63, 88], humanoid robots have earned a wide range of skills, including robust locomo (p. 11, A. Learning-based Methods for Humanoid Control).
+- **Assumption/failure evidence:** For instance, when imitating a jumping motion, the policy often fails early in training and learns 10 remain on the ground to avoid landing penalties. (p. 4, B. Phase-based Motion Tracking Policy Training).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

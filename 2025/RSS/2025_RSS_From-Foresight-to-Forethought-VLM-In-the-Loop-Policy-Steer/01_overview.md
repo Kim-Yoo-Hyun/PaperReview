@@ -1,8 +1,10 @@
 # From Foresight to Forethought: VLM-In-the-Loop Policy Steering via Latent Alignment
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p076.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p076.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p076.pdf
 - Code/Project: https://yilin-wu98.github.io/forewarn/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -34,7 +36,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks ...
 - **p. 4 / 1. InTRopucTION - extractive body cue:** The training data consists of both successful and failed rollouts from the base policy (a / 0) and additional demonstration data, This allows the world ...
 - **p. 2 / 1. InTRopucTION - extractive body cue:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those ...
-- **p. 1 / Front matter - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
 - **p. 1 / Abstract - extractive body cue:** We validate our framework across diverse robotic manipulation tasks, demonstrating its ability to bridge representational gaps and provide robust, generalizable policy steering.
 - **p. 9 / B. Policy Steering for Open-World Alignment - extractive body cue:** Our system queries the VLM twice to first generate behavior narrations and then select the best action plan, The overall inference time is 3.7 seconds ...
 - **p. 6 / A. From Action Rollouts to Behavior Narration - extractive body cue:** This method uses the encoder £4 on ground-truth future observations 10 get privileged (posterior) future latent states Zeer as input for the VLM.
@@ -54,7 +56,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 - **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks ...
 - **p. 4 / 1. InTRopucTION - extractive body cue:** The training data consists of both successful and failed rollouts from the base policy (a / 0) and additional demonstration data, This allows the world ...
 - **p. 2 / 1. InTRopucTION - extractive body cue:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those ...
-- **p. 1 / Front matter - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
 - **p. 1 / Abstract - extractive body cue:** We validate our framework across diverse robotic manipulation tasks, demonstrating its ability to bridge representational gaps and provide robust, generalizable policy steering.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** We collected 250 real-world trajectories per task, including both successful and failed rollouts from the base policy, along with additional 100 demonstrations used in base ...
@@ -84,3 +86,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Initially, it may be tempting use the VLM directly as a black-box solver of Eq.1 (ie. t0 solve the overarching behavior generation problem) by simply passing it the Ix action plan options, ...를 문제로 두고, In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 9 (B. Policy Steering for Open-World Alignment) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, this strategy is sampleinefficient, requiring extensive embodied rollouts and human annotations to generate labels, Instead, we propose tackling the problem in Eq.1 in a way that leverages the unique ... (p. 3, 1. InTRopucTION).
+- **Actual contribution:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those narrations even under novel task ... (p. 2, 1. InTRopucTION).
+- **Evaluation boundary:** In this task, the robot must pick up a fork from the table and place it inside a bowl. (p. 5, V. EXPERIMENTS).
+- **Explicit failure boundary:** However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).

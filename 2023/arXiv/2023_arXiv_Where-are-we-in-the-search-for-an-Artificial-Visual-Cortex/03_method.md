@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.18240; PDF retrieval source: https://arxiv.org/abs/2303.18240. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.18240; PDF retrieval source: https://arxiv.org/abs/2303.18240. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,8 +21,8 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 
 ## Design Rationale
 
-- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, prior studies are incommensurable - using different self-supervised learning (SSL) algorithms on different pre-training datasets, designed ∗Equal Contribution †Equal Contribution 3We use embodied AI ...
 - **p. 1 / 1 Introduction - extractive body cue:** The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.
+- **p. 1 / 1 Introduction - extractive body cue:** In this work, we ask the same question that Fukushima [1, 2] asked nearly 50 years ago - how do we design an artificial visual ...
 - **p. 2 / 1 Introduction - extractive body cue:** The exhaustiveness of this study enables us to draw conclusions with unprecedented scope and confidence.
 
 ## Source Evidence Cues
@@ -38,7 +38,7 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | We use patch representations for ViT-based PVRs and grid-features from last convolutional layer for ResNet models, passed through a compression layer [14] ... | p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | When using vision transformers (ViT) based PVRs, we use the [CLS] token as input to the policy, and with ResNets we use ... | p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH) |
@@ -61,7 +61,7 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 |---|---|---|---|
 | Input/observation | Reach-Cube, state, policy, where, current, fingertip, position, latent, visual, vector, obtained, passing, image, observation | standardized observation, action, task state와 evaluation split | body cue; exact tensor/frame verify |
 | State/latent | Reach-Cube, state, policy, where, current, fingertip, position, latent, visual, vector | benchmark state/goal와 method decision | body cue; notation verify |
-| Action/output | Unfortunately, prior, studies, incommensurable, different, self-supervised, learning, SSL, algorithms, pre-training | policy/controller trajectory 또는 measured result | body cue; unit/decoder verify |
+| Action/output | visual, cortex, region, organism, brain, together, motor, enables, sight, converted | policy/controller trajectory 또는 measured result | body cue; unit/decoder verify |
 | Objective/constraint | train, agents, reward, functions, presented, utilizing, following, settings, success, weighting | benchmark score and failure cost | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -82,7 +82,7 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | The episode length for this task is 20 steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | The motors are controlled at a frequency of 1kHz and the action sent to the robot is a 9 dimensional vector specifying ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | The episode length for this task is 20 steps. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details), p. 18 (A.6 Scaling Hypothesis Pretraining Details), objective p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), temporal p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 22 (A.12 Franka Hardware Experiment Setup), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details), p. 18 (A.6 Scaling Hypothesis Pretraining Details), objective p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), temporal p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 22 (A.12 Franka Hardware Experiment Setup), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (23 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** For Reach-Cube, the state for the BC policy is [xft t , zt], where xft t is the current fingertip position and zt is the latent visual state vector, obtained ... (p. 17, A.2 Overview of Downstream Policy Learning in CORTEXBENCH).
+- **Objective/update evidence:** We choose the number of epochs per run such that the number of model updates remain constant across all runs and match the number of model updates taken by MAE ... (p. 18, A.6 Scaling Hypothesis Pretraining Details).
+- **Temporal/runtime evidence:** The episode length for this task is 20 steps. (p. 21, A.11 TriFinger Hardware Experiment Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

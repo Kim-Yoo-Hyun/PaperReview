@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2311.12871; PDF retrieval source: https://arxiv.org/pdf/2311.12871. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2311.12871; PDF retrieval source: https://arxiv.org/pdf/2311.12871. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 
 ## Method Body Digest
 
-- **p. 3 / 2. Model - extractive PDF cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
-- **p. 3 / 2.3. Training & Inference - extractive PDF cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
-- **p. 4 / 2.3. Training & Inference - extractive PDF cue:** For tasks that require action commands, we map the textual outputs to action commands as discussed in Sec.
-- **p. 4 / 2.3. Training & Inference - extractive PDF cue:** More details on the model and training can be found in Appendix D.
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** Notably, all baselines are equipped with recurrent modules while LEO only incorporates truncated past actions, which could account for a lower success rate (see discussion ...
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** 3RScan ScanNet (0-shot) Yes No Overall Yes No Overall w/o Aug 1.00 0.01 0.34 0.98 0.16 0.43 w/ Aug 0.72 0.91 0.85 0.88 0.81 0.83 ...
-- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive PDF cue:** A.1, LEO is capable of generating high-quality responses, which encompass two features: 1) Precisely grounded to the 3D scenes.
-- **p. 3 / 2.3. Training & Inference - extractive PDF cue:** We formulate the learning objective of LEO following (Brown et al., 2020; Raffel et al., 2020) in a prefix language modeling fashion.
+- **p. 3 / 2. Model - extractive body cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
+- **p. 3 / 2.3. Training & Inference - extractive body cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
+- **p. 4 / 2.3. Training & Inference - extractive body cue:** For tasks that require action commands, we map the textual outputs to action commands as discussed in Sec.
+- **p. 4 / 2.3. Training & Inference - extractive body cue:** More details on the model and training can be found in Appendix D.
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** Notably, all baselines are equipped with recurrent modules while LEO only incorporates truncated past actions, which could account for a lower success rate (see discussion ...
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** 3RScan ScanNet (0-shot) Yes No Overall Yes No Overall w/o Aug 1.00 0.01 0.34 0.98 0.16 0.43 w/ Aug 0.72 0.91 0.85 0.88 0.81 0.83 ...
+- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive body cue:** A.1, LEO is capable of generating high-quality responses, which encompass two features: 1) Precisely grounded to the 3D scenes.
+- **p. 3 / 2.3. Training & Inference - extractive body cue:** We formulate the learning objective of LEO following (Brown et al., 2020; Raffel et al., 2020) in a prefix language modeling fashion.
 
 ## Design Rationale
 
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** We present the results of CLIPort manipulation and object navigation in Tabs.
-- **p. 1 / 1. Introduction - extractive PDF cue:** The development of such generalist agents encounters three primary challenges: the lack of suitable datasets, unified models, and effective learning strategies.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Furthermore, large-scale unified pretraining and efficient finetuning are under-explored by previous 3D VL models, which are often designed with strong priors (Zhao et al., 2021; ...
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** We present the results of CLIPort manipulation and object navigation in Tabs.
+- **p. 1 / 1. Introduction - extractive body cue:** The development of such generalist agents encounters three primary challenges: the lack of suitable datasets, unified models, and effective learning strategies.
+- **p. 1 / 1. Introduction - extractive body cue:** Furthermore, large-scale unified pretraining and efficient finetuning are under-explored by previous 3D VL models, which are often designed with strong priors (Zhao et al., 2021; ...
 
 ## Source Evidence Cues
 
-- **p. 3 / 2. Model - extractive PDF cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
-- **p. 3 / 2.3. Training & Inference - extractive PDF cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
-- **p. 4 / 2.3. Training & Inference - extractive PDF cue:** For tasks that require action commands, we map the textual outputs to action commands as discussed in Sec.
-- **p. 4 / 2.3. Training & Inference - extractive PDF cue:** More details on the model and training can be found in Appendix D.
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** Notably, all baselines are equipped with recurrent modules while LEO only incorporates truncated past actions, which could account for a lower success rate (see discussion ...
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** 3RScan ScanNet (0-shot) Yes No Overall Yes No Overall w/o Aug 1.00 0.01 0.34 0.98 0.16 0.43 w/ Aug 0.72 0.91 0.85 0.88 0.81 0.83 ...
-- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive PDF cue:** A.1, LEO is capable of generating high-quality responses, which encompass two features: 1) Precisely grounded to the 3D scenes.
+- **p. 3 / 2. Model - extractive body cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
+- **p. 3 / 2.3. Training & Inference - extractive body cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
+- **p. 4 / 2.3. Training & Inference - extractive body cue:** For tasks that require action commands, we map the textual outputs to action commands as discussed in Sec.
+- **p. 4 / 2.3. Training & Inference - extractive body cue:** More details on the model and training can be found in Appendix D.
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** Notably, all baselines are equipped with recurrent modules while LEO only incorporates truncated past actions, which could account for a lower success rate (see discussion ...
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** 3RScan ScanNet (0-shot) Yes No Overall Yes No Overall w/o Aug 1.00 0.01 0.34 0.98 0.16 0.43 w/ Aug 0.72 0.91 0.85 0.88 0.81 0.83 ...
+- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive body cue:** A.1, LEO is capable of generating high-quality responses, which encompass two features: 1) Precisely grounded to the 3D scenes.
 - **Detected method headings:** 2. Model (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings. | p. 3 (2. Model), p. 3 (2.3. Training & Inference) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, ... | p. 3 (2.3. Training & Inference), p. 4 (2.3. Training & Inference) |
@@ -48,10 +48,10 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 
 ## Objective / Update Rule
 
-- **p. 3 / 2.3. Training & Inference - extractive PDF cue:** We formulate the learning objective of LEO following (Brown et al., 2020; Raffel et al., 2020) in a prefix language modeling fashion.
-- **p. 3 / 2. Model - extractive PDF cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** 3RScan ScanNet (0-shot) Yes No Overall Yes No Overall w/o Aug 1.00 0.01 0.34 0.98 0.16 0.43 w/ Aug 0.72 0.91 0.85 0.88 0.81 0.83 ...
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** Test Loss (104) #Data 1.5 2.0 3 6 12 1.6 1.2 0.8 Aligned OPT-1.3B Scratch Vicuna-7B Aligned Vicuna-7B Aligned Vicuna-13B ditionally, we test generalization to ...
+- **p. 3 / 2.3. Training & Inference - extractive body cue:** We formulate the learning objective of LEO following (Brown et al., 2020; Raffel et al., 2020) in a prefix language modeling fashion.
+- **p. 3 / 2. Model - extractive body cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** 3RScan ScanNet (0-shot) Yes No Overall Yes No Overall w/o Aug 1.00 0.01 0.34 0.98 0.16 0.43 w/ Aug 0.72 0.91 0.85 0.88 0.81 0.83 ...
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** Test Loss (104) #Data 1.5 2.0 3 6 12 1.6 1.2 0.8 Aligned OPT-1.3B Scratch Vicuna-7B Aligned Vicuna-7B Aligned Vicuna-13B ditionally, we test generalization to ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (2. Model), p. 3 (2.3. Training & Inference), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 2. Model - extractive PDF cue:** The leading design principles of LEO are two-fold: 1) It should handle the multi-modal input of egocentric 2D, global 3D, and textual instruction, and the ...
-- **p. 4 / 2.3. Training & Inference - extractive PDF cue:** For tasks that require action commands, we map the textual outputs to action commands as discussed in Sec.
-- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive PDF cue:** Upon the 3D VL understanding and reasoning, we anticipate LEO to support more sophisticated interaction with humans, e.g., responding to complex multi-round user instructions in ...
-- **p. 3 / 2.1. Tokenization - extractive PDF cue:** We use SentencePiece tokenizer (Kudo & Richardson, 2018) to encode text with 32k subwords; 2D image tokens for egocentric 2D images; and object-centric 3D tokens ...
-- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive PDF cue:** The task plan proposed by LEO involves concrete objects related to the 3D scene, as well as plausible actions regarding these objects.
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** In particular, LEO directly produces motor commands without inductive bias (e.g., heatmap) that benefit previous methods, showcasing LEO's considerable capacity for learning embodied actions.
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive PDF cue:** 2) In ObjNav, LEO achieves a success rate that is comparable to the baselines and has a better SPL on MP3D-val, suggesting that LEO can ...
+- **p. 3 / 2. Model - extractive body cue:** The leading design principles of LEO are two-fold: 1) It should handle the multi-modal input of egocentric 2D, global 3D, and textual instruction, and the ...
+- **p. 4 / 2.3. Training & Inference - extractive body cue:** For tasks that require action commands, we map the textual outputs to action commands as discussed in Sec.
+- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive body cue:** Upon the 3D VL understanding and reasoning, we anticipate LEO to support more sophisticated interaction with humans, e.g., responding to complex multi-round user instructions in ...
+- **p. 3 / 2.1. Tokenization - extractive body cue:** We use SentencePiece tokenizer (Kudo & Richardson, 2018) to encode text with 32k subwords; 2D image tokens for egocentric 2D images; and object-centric 3D tokens ...
+- **p. 6 / 4.2. Scene-grounded Dialogue and Planning - extractive body cue:** The task plan proposed by LEO involves concrete objects related to the 3D scene, as well as plausible actions regarding these objects.
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** In particular, LEO directly produces motor commands without inductive bias (e.g., heatmap) that benefit previous methods, showcasing LEO's considerable capacity for learning embodied actions.
+- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** 2) In ObjNav, LEO achieves a success rate that is comparable to the baselines and has a better SPL on MP3D-val, suggesting that LEO can ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,10 +88,10 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 
 ## Training vs Inference
 
-- **p. 3 / 2. Model - extractive PDF cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
-- **p. 3 / 2.3. Training & Inference - extractive PDF cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
-- **p. 4 / 2.3. Training & Inference - extractive PDF cue:** More details on the model and training can be found in Appendix D.
-- **p. 3 / 2.3. Training & Inference - extractive PDF cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
+- **p. 3 / 2. Model - extractive body cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
+- **p. 3 / 2.3. Training & Inference - extractive body cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
+- **p. 4 / 2.3. Training & Inference - extractive body cue:** More details on the model and training can be found in Appendix D.
+- **p. 3 / 2.3. Training & Inference - extractive body cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -111,11 +111,11 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 
 ## Failure and Ablation Link
 
-- **p. 5 / 3.3. LLM-assisted 3D-language Data Generation - extractive PDF cue:** Clean the floor by sweeping to remove any dirt.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: Our proposed LLM-assisted 3D-language data generation pipeline and data examples.. (Top-left) Messages with 3D scene graphs, including object attributes and relations in a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 7: Quantitative results of LEO trained with differ- ent data configurations. w/o Align: without alignment stage. ScanNet: tuned on ScanNet scenes only. w/o Act: ...
-- **p. 4 / 3. Datasets - extractive PDF cue:** Due to the space limit, we defer details including data source and components to Appendix B.1.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts as input and formulates comprehensive 3D tasks ...
+- **p. 5 / 3.3. LLM-assisted 3D-language Data Generation - extractive body cue:** Clean the floor by sweeping to remove any dirt.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Our proposed LLM-assisted 3D-language data generation pipeline and data examples.. (Top-left) Messages with 3D scene graphs, including object attributes and relations in a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 7: Quantitative results of LEO trained with differ- ent data configurations. w/o Align: without alignment stage. ScanNet: tuned on ScanNet scenes only. w/o Act: ...
+- **p. 4 / 3. Datasets - extractive body cue:** Due to the space limit, we defer details including data source and components to Appendix B.1.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts as input and formulates comprehensive 3D tasks ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -129,7 +129,7 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2. Model), p. 3 (2.3. Training & Inference), p. 4 (2.3. Training & Inference), p. 4 (2.3. Training & Inference), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World), objective p. 3 (2.3. Training & Inference), p. 3 (2. Model), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World), temporal p. 2 (3. Fold and organize …), p. 2 (3. Fold and organize …), p. 3 (2. Model), p. 3 (2.2. Token Embedding & LLM), p. 7 (4.3. Embodied Action in 3D World).
+- **Evidence anchors reviewed:** method p. 3 (2. Model), p. 3 (2.3. Training & Inference), p. 4 (2.3. Training & Inference), p. 4 (2.3. Training & Inference), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World), objective p. 3 (2.3. Training & Inference), p. 3 (2. Model), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World), temporal p. 2 (3. Fold and organize …), p. 2 (3. Fold and organize …), p. 3 (2. Model), p. 3 (2.2. Token Embedding & LLM), p. 7 (4.3. Embodied Action in 3D World).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

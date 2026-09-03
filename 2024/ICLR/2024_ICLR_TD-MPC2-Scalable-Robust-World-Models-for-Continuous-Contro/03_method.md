@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.16828; PDF retrieval source: https://arxiv.org/pdf/2310.16828. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.16828; PDF retrieval source: https://arxiv.org/pdf/2310.16828. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their ... | p. 3 (2 BACKGROUND), p. 1 (ABSTRACT) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | TD-MPC is a model-based reinforcement learning (RL) algorithm that performs local trajectory optimization in the latent space of a learned implicit (decoderfree) ... | p. 1 (ABSTRACT), p. 5 (2 BACKGROUND) |
@@ -51,7 +51,7 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 - **p. 4 / 2 BACKGROUND - extractive body cue:** The h, d, R, Q components are jointly optimized to minimize the objective L (θ) .= E (s,a,r,s′)0:H∼B   H X t=0 λt  ...
 - **p. 3 / 2 BACKGROUND - extractive body cue:** Model Predictive Control (MPC) is a general framework for model-based control that optimizes action sequences at:t+H of finite length such that return is maximized (or ...
 - **p. 5 / 2 BACKGROUND - extractive body cue:** Notably, Equation 6 estimates the full RL objective introduced in Section 2 by bootstrapping with the learned terminal value function beyond horizon H.
-- **p. 3 / 2 BACKGROUND - extractive body cue:** Published as a conference paper at ICLR 2024 derive a control policy π: S 7→A such that the expected discounted sum of rewards (return) Eπ ...
+- **p. 3 / 2 BACKGROUND - extractive body cue:** The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their latent representations Latent ...
 - **p. 4 / 2 BACKGROUND - extractive body cue:** As the magnitude of rewards may differ drastically between tasks, TD-MPC2 formulates reward and value prediction as a discrete regression (multiclass classification) problem in a ...
 - **p. 5 / 2 BACKGROUND - extractive body cue:** Equation 6 is solved by iteratively sampling action sequences from N(µ, σ2), evaluating their expected return, and updating µ, σ based on a weighted average.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
@@ -85,7 +85,7 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | The h, d, R, Q components are jointly optimized to minimize the objective L (θ) .= E (s,a,r,s′)0:H∼B   H X ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | Episode return as a function of environment steps in Humanoid (A ∈R21) and Dog (A ∈R38) locomotion tasks from DMControl. | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | Score of a 19M parameter TD-MPC2 agent trained on 70 tasks and finetuned online to each of 10 heldout tasks for 20k ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -130,8 +130,17 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), objective p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 4 (2 BACKGROUND), p. 5 (2 BACKGROUND), temporal p. 4 (2 BACKGROUND), p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS), p. 8 (4.1 RESULTS), p. 3 (2 BACKGROUND), p. 6 (4 EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), objective p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 4 (2 BACKGROUND), p. 5 (2 BACKGROUND), temporal p. 4 (2 BACKGROUND), p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS), p. 8 (4.1 RESULTS), p. 3 (2 BACKGROUND), p. 6 (4 EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their latent representations Latent dynamics z′ = d(z, a, ... (p. 3, 2 BACKGROUND).
+- **Objective/update evidence:** The h, d, R, Q components are jointly optimized to minimize the objective L (θ) .= E (s,a,r,s′)0:H∼B   H X t=0 λt   ∥z′ t -sg(h(s′ t))∥2 ... (p. 4, 2 BACKGROUND).
+- **Temporal/runtime evidence:** Episode return as a function of environment steps in Humanoid (A ∈R21) and Dog (A ∈R38) locomotion tasks from DMControl. (p. 6, 4 EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

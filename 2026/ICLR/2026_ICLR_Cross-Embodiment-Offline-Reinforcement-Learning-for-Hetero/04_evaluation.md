@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10010454; PDF retrieval source: https://arxiv.org/pdf/2602.18025. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10010454; PDF retrieval source: https://arxiv.org/pdf/2602.18025. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 
 ## Evaluation Body Digest
 
-- **p. 7 / 1 INTRODUCTION - extractive PDF cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
-- **p. 8 / 1 INTRODUCTION - extractive PDF cue:** 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, . . . , GM}, dataset D Ensure: Policy θπ; critics/targets ...
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** The gains are especially large when the dataset contains more suboptimal trajectories, as in the replay and 70% Suboptimal splits.
-- **p. 7 / 1 INTRODUCTION - extractive PDF cue:** We represent each robot's embodiment as a graph to quantify inter-robot distances.
-- **p. 8 / 1 INTRODUCTION - extractive PDF cue:** Details on the robot graph construction and FGW distance hyperparameters are given in Appendix E.
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** Tab.4 reports the mean final return and variance on the 70% Suboptimal Forward dataset.
-- **p. 10 / 1 INTRODUCTION - extractive PDF cue:** We observe that with the 70% Suboptimal Forward dataset, the advantage of EG persists even after normalization.
-- **p. 10 / 1 INTRODUCTION - extractive PDF cue:** 5; performance peaks at small to moderate M, whereas excessive partitioning leads to a slight degradation (e.g., on the 70% Forward dataset the best score ...
+- **p. 7 / 1 INTRODUCTION - extractive body cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
+- **p. 8 / 1 INTRODUCTION - extractive body cue:** 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, . . . , GM}, dataset D Ensure: Policy θπ; critics/targets ...
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** The gains are especially large when the dataset contains more suboptimal trajectories, as in the replay and 70% Suboptimal splits.
+- **p. 7 / 1 INTRODUCTION - extractive body cue:** We represent each robot's embodiment as a graph to quantify inter-robot distances.
+- **p. 8 / 1 INTRODUCTION - extractive body cue:** Details on the robot graph construction and FGW distance hyperparameters are given in Appendix E.
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** Tab.4 reports the mean final return and variance on the 70% Suboptimal Forward dataset.
+- **p. 10 / 1 INTRODUCTION - extractive body cue:** We observe that with the 70% Suboptimal Forward dataset, the advantage of EG persists even after normalization.
+- **p. 10 / 1 INTRODUCTION - extractive body cue:** 5; performance peaks at small to moderate M, whereas excessive partitioning leads to a slight degradation (e.g., on the 70% Forward dataset the best score ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 1 INTRODUCTION | BENCHMARK / DATASET | From the table, EG achieves the most stable and substantial improvement on the 70% Suboptimal Forward dataset (+14.41, +38.34%). | p. 9 (1 INTRODUCTION) |
 | 1 INTRODUCTION | BENCHMARK / DATASET | First, we evaluate performance improvements in cross-embodiment offline RL on six datasets containing varying proportions of suboptimal data. | p. 8 (1 INTRODUCTION) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 1 INTRODUCTION - extractive PDF cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
-- **p. 8 / 1 INTRODUCTION - extractive PDF cue:** 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, . . . , GM}, dataset D Ensure: Policy θπ; critics/targets ...
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** The gains are especially large when the dataset contains more suboptimal trajectories, as in the replay and 70% Suboptimal splits.
-- **p. 7 / 1 INTRODUCTION - extractive PDF cue:** We represent each robot's embodiment as a graph to quantify inter-robot distances.
-- **p. 8 / 1 INTRODUCTION - extractive PDF cue:** Details on the robot graph construction and FGW distance hyperparameters are given in Appendix E.
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** Tab.4 reports the mean final return and variance on the 70% Suboptimal Forward dataset.
-- **p. 10 / 1 INTRODUCTION - extractive PDF cue:** We observe that with the 70% Suboptimal Forward dataset, the advantage of EG persists even after normalization.
-- **p. 10 / 1 INTRODUCTION - extractive PDF cue:** 5; performance peaks at small to moderate M, whereas excessive partitioning leads to a slight degradation (e.g., on the 70% Forward dataset the best score ...
+- **p. 7 / 1 INTRODUCTION - extractive body cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
+- **p. 8 / 1 INTRODUCTION - extractive body cue:** 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, . . . , GM}, dataset D Ensure: Policy θπ; critics/targets ...
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** The gains are especially large when the dataset contains more suboptimal trajectories, as in the replay and 70% Suboptimal splits.
+- **p. 7 / 1 INTRODUCTION - extractive body cue:** We represent each robot's embodiment as a graph to quantify inter-robot distances.
+- **p. 8 / 1 INTRODUCTION - extractive body cue:** Details on the robot graph construction and FGW distance hyperparameters are given in Appendix E.
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** Tab.4 reports the mean final return and variance on the 70% Suboptimal Forward dataset.
+- **p. 10 / 1 INTRODUCTION - extractive body cue:** We observe that with the 70% Suboptimal Forward dataset, the advantage of EG persists even after normalization.
+- **p. 10 / 1 INTRODUCTION - extractive body cue:** 5; performance peaks at small to moderate M, whereas excessive partitioning leads to a slight degradation (e.g., on the 70% Forward dataset the best score ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: BC vs. IQL performance across datasets (mean ± standard error over 5 seeds).
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 1: Comparison of learning curves between cross-embodiment pre-trained networks and net- works trained without cross-embodiment pre-training for Badger, Unitree G1, and Cassie. "leave-one-out" experiment. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: Expert vs. 70% Suboptimal IQL performance across robots and avg. gradient cosine similarity C on the 70% subop- timal dataset. Cells shaded blue ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2: Fraction of negative pairwise gradient cosine sim- ilarities. Expert 30%-suboptimal 70%-suboptimal 0.00 0.05 0.10
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. The resulting correlation, r = 0.815, indicates a strong positive relationship: robots that exhibit positive transfer have more aligned gradients, whereas those with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: (a) Embodiment-based similarity matrix (1 - min-max-normalized FGW distance between robot pairs); (b) Gradient cosine similarity matrix in Expert Forward dataset from Section ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Overview of Embodiment Grouping (EG) for cross-embodiment offline RL. 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Each Algorithm Performance across Dataset (± is Standard Error, 5 seeds)
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: BC vs. IQL performance across datasets (mean ± standard error over 5 seeds).
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of learning curves between cross-embodiment pre-trained networks and net- works trained without cross-embodiment pre-training for Badger, Unitree G1, and Cassie. "leave-one-out" experiment. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Expert vs. 70% Suboptimal IQL performance across robots and avg. gradient cosine similarity C on the 70% subop- timal dataset. Cells shaded blue ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: Fraction of negative pairwise gradient cosine sim- ilarities. Expert 30%-suboptimal 70%-suboptimal 0.00 0.05 0.10
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. The resulting correlation, r = 0.815, indicates a strong positive relationship: robots that exhibit positive transfer have more aligned gradients, whereas those with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: (a) Embodiment-based similarity matrix (1 - min-max-normalized FGW distance between robot pairs); (b) Gradient cosine similarity matrix in Expert Forward dataset from Section ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Overview of Embodiment Grouping (EG) for cross-embodiment offline RL. 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Each Algorithm Performance across Dataset (± is Standard Error, 5 seeds)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity ... | embodiment, simulator version and control stack | p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION) |
 | Task/environment | 5.3 EMBODIMENT-GROUPED OFFLINE RL UPDATE Algorithm 1 Embodiment-Grouped Offline RL Require: Robot groups {G1, . . . , GM}, dataset D Ensure: Policy θπ; ... | reset, timeout, object/scene variation | p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 | Primary metric/result | First, we evaluate performance improvements in cross-embodiment offline RL on six datasets containing varying proportions of suboptimal data. | numeric claim only at cited anchor | p. 8 (1 INTRODUCTION) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 1 INTRODUCTION - extractive PDF cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** Method Final return Relative % IQL (baseline) 37.57 ± 0.78 0.00% Random grouping 38.73 ± 2.03 +3.08% Heuristic 34.45 ± 1.97 -8.31% EG (ours) 51.98 ...
-- **p. 10 / 1 INTRODUCTION - extractive PDF cue:** Method (mean ± SEM) Normalized IQL 44.20 ± 2.22 IQL + EG 51.98 ± 1.70 ∆R +7.78 (iii) Compute- and data-normalized comparison EG performs M ...
-- **p. 4 / 1 INTRODUCTION - extractive PDF cue:** IQL performance across datasets (mean ± standard error over 5 seeds).
-- **p. 4 / 1 INTRODUCTION - extractive PDF cue:** Dataset BC IQL Expert Forward 63.31 ± 0.10 63.39 ± 0.05 Expert Backward 67.17 ± 0.01 67.10 ± 0.01 Expert Replay Forward 49.71 ± 1.06 ...
-- **p. 7 / 1 INTRODUCTION - extractive PDF cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
+- **p. 7 / 1 INTRODUCTION - extractive body cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** Method Final return Relative % IQL (baseline) 37.57 ± 0.78 0.00% Random grouping 38.73 ± 2.03 +3.08% Heuristic 34.45 ± 1.97 -8.31% EG (ours) 51.98 ...
+- **p. 10 / 1 INTRODUCTION - extractive body cue:** Method (mean ± SEM) Normalized IQL 44.20 ± 2.22 IQL + EG 51.98 ± 1.70 ∆R +7.78 (iii) Compute- and data-normalized comparison EG performs M ...
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** IQL performance across datasets (mean ± standard error over 5 seeds).
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** Dataset BC IQL Expert Forward 63.31 ± 0.10 63.39 ± 0.05 Expert Backward 67.17 ± 0.01 67.10 ± 0.01 Expert Replay Forward 49.71 ± 1.06 ...
+- **p. 7 / 1 INTRODUCTION - extractive body cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
 
 ## Generalization and Failure Cases
 
@@ -165,13 +165,13 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 7 CONCLUSION - extractive PDF cue:** We also identified a core failure mode, inter-robot gradient conflicts, whose incidence grows with both the proportion of suboptimal data and the number of embodiments.
-- **p. 10 / 7 CONCLUSION - extractive PDF cue:** We leave this combined direction for future work.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: Expert vs. 70% Suboptimal IQL performance across robots and avg. gradient cosine similarity C on the 70% subop- timal dataset. Cells shaded blue ...
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** A likely reason is that coarse categories such as leg count cannot capture gradient-relevant factors like actuator placement, link lengths, mass distribution, and joint couplings.
-- **p. 9 / 1 INTRODUCTION - extractive PDF cue:** In contrast, Random yields only a small gain (+1.16, +3.08%), and the intuitive fourway split Heuristic actually degrades performance (-3.14, -8.31%).
+- **p. 10 / 7 CONCLUSION - extractive body cue:** We also identified a core failure mode, inter-robot gradient conflicts, whose incidence grows with both the proportion of suboptimal data and the number of embodiments.
+- **p. 10 / 7 CONCLUSION - extractive body cue:** We leave this combined direction for future work.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Expert vs. 70% Suboptimal IQL performance across robots and avg. gradient cosine similarity C on the 70% subop- timal dataset. Cells shaded blue ...
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** A likely reason is that coarse categories such as leg count cannot capture gradient-relevant factors like actuator placement, link lengths, mass distribution, and joint couplings.
+- **p. 9 / 1 INTRODUCTION - extractive body cue:** In contrast, Random yields only a small gain (+1.16, +3.08%), and the intuitive fourway split Heuristic actually degrades performance (-3.14, -8.31%).
 
-- **PDF anchors reviewed:** datasets p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), metrics p. 14 (Figure/Table caption), p. 10 (1 INTRODUCTION), p. 15 (Figure/Table caption), p. 4 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (1 INTRODUCTION), baselines p. 9 (1 INTRODUCTION), p. 10 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 5 (Figure/Table caption), p. 8 (1 INTRODUCTION), results p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 14 (Figure/Table caption), p. 10 (1 INTRODUCTION), p. 10 (1 INTRODUCTION).
+- **Evidence anchors reviewed:** datasets p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), metrics p. 14 (Figure/Table caption), p. 10 (1 INTRODUCTION), p. 15 (Figure/Table caption), p. 4 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (1 INTRODUCTION), baselines p. 9 (1 INTRODUCTION), p. 10 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 5 (Figure/Table caption), p. 8 (1 INTRODUCTION), results p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 14 (Figure/Table caption), p. 10 (1 INTRODUCTION), p. 10 (1 INTRODUCTION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

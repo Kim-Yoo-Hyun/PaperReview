@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=F7BOaYmWl7; PDF retrieval source: https://openreview.net/pdf/ea38ded40d57a840cbde86fb7bfa9588256ea489.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=F7BOaYmWl7; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167147. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** SemanticKITTI (Behley et al., 2019; 2021) is an outdoor dataset derived from KITTI Vision Benchmark (Geiger et al., 2012).
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Datasts. nuScenes (Caesar et al., 2020; Fong et al., 2022) is a large-scale, multi-modal dataset designed for autonomous driving, containing data from a 32-beam LiDAR, ...
-- **p. 7 / 4.2. Benchmark Results - extractive PDF cue:** We present comprehensive comparison results for LiDAR panoptic segmentation performance on the nuScenes validation and test sets, as shown in Table 2 and Table 3.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** All experiments are conducted on the nuScenes validation set using the same hyper-parameters for fair comparison.
-- **p. 9 / 4.5. Qualitative Results and Discussion - extractive PDF cue:** We present qualitative evaluations on nuScenes validation set.
-- **p. 7 / 4.1. Experimental Setting - extractive PDF cue:** The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.
-- **p. 8 / 4.2. Benchmark Results - extractive PDF cue:** In Table 3, IAL also demonstrates superior performance, achieving the highest scores across most metrics on the nuScenes leaderboard.
-- **p. 9 / 4.5. Qualitative Results and Discussion - extractive PDF cue:** Furthermore, IAL outperforms its LiDAR branch in detecting remote objects (highlighted in the black boxes) and recognizing ambiguous classes (in yellow boxes), leveraging the assistance ...
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** SemanticKITTI (Behley et al., 2019; 2021) is an outdoor dataset derived from KITTI Vision Benchmark (Geiger et al., 2012).
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Datasts. nuScenes (Caesar et al., 2020; Fong et al., 2022) is a large-scale, multi-modal dataset designed for autonomous driving, containing data from a 32-beam LiDAR, ...
+- **p. 7 / 4.2. Benchmark Results - extractive body cue:** We present comprehensive comparison results for LiDAR panoptic segmentation performance on the nuScenes validation and test sets, as shown in Table 2 and Table 3.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** All experiments are conducted on the nuScenes validation set using the same hyper-parameters for fair comparison.
+- **p. 9 / 4.5. Qualitative Results and Discussion - extractive body cue:** We present qualitative evaluations on nuScenes validation set.
+- **p. 7 / 4.1. Experimental Setting - extractive body cue:** The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.
+- **p. 8 / 4.2. Benchmark Results - extractive body cue:** In Table 3, IAL also demonstrates superior performance, achieving the highest scores across most metrics on the nuScenes leaderboard.
+- **p. 9 / 4.5. Qualitative Results and Discussion - extractive body cue:** Furthermore, IAL outperforms its LiDAR branch in detecting remote objects (highlighted in the black boxes) and recognizing ambiguous classes (in yellow boxes), leveraging the assistance ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Benchmark Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 4, despite these constraints, our IAL achieves a 4.1% improvement in PQ over the state-of-the-art multi-modal baseline LCPS, demonstrating the ... | p. 8 (4.2. Benchmark Results) |
 | 4.2. Benchmark Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Compared to the LiDAR-only baseline (using the same augmentation strategies as P3Former adopts), IAL achieves a 5.3% improvement, primarily due to a 7.5% increase ... | p. 8 (4.2. Benchmark Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** SemanticKITTI (Behley et al., 2019; 2021) is an outdoor dataset derived from KITTI Vision Benchmark (Geiger et al., 2012).
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** Datasts. nuScenes (Caesar et al., 2020; Fong et al., 2022) is a large-scale, multi-modal dataset designed for autonomous driving, containing data from a 32-beam LiDAR, ...
-- **p. 7 / 4.2. Benchmark Results - extractive PDF cue:** We present comprehensive comparison results for LiDAR panoptic segmentation performance on the nuScenes validation and test sets, as shown in Table 2 and Table 3.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** All experiments are conducted on the nuScenes validation set using the same hyper-parameters for fair comparison.
-- **p. 9 / 4.5. Qualitative Results and Discussion - extractive PDF cue:** We present qualitative evaluations on nuScenes validation set.
-- **p. 7 / 4.1. Experimental Setting - extractive PDF cue:** The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.
-- **p. 8 / 4.2. Benchmark Results - extractive PDF cue:** In Table 3, IAL also demonstrates superior performance, achieving the highest scores across most metrics on the nuScenes leaderboard.
-- **p. 9 / 4.5. Qualitative Results and Discussion - extractive PDF cue:** Furthermore, IAL outperforms its LiDAR branch in detecting remote objects (highlighted in the black boxes) and recognizing ambiguous classes (in yellow boxes), leveraging the assistance ...
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** SemanticKITTI (Behley et al., 2019; 2021) is an outdoor dataset derived from KITTI Vision Benchmark (Geiger et al., 2012).
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Datasts. nuScenes (Caesar et al., 2020; Fong et al., 2022) is a large-scale, multi-modal dataset designed for autonomous driving, containing data from a 32-beam LiDAR, ...
+- **p. 7 / 4.2. Benchmark Results - extractive body cue:** We present comprehensive comparison results for LiDAR panoptic segmentation performance on the nuScenes validation and test sets, as shown in Table 2 and Table 3.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** All experiments are conducted on the nuScenes validation set using the same hyper-parameters for fair comparison.
+- **p. 9 / 4.5. Qualitative Results and Discussion - extractive body cue:** We present qualitative evaluations on nuScenes validation set.
+- **p. 7 / 4.1. Experimental Setting - extractive body cue:** The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.
+- **p. 8 / 4.2. Benchmark Results - extractive body cue:** In Table 3, IAL also demonstrates superior performance, achieving the highest scores across most metrics on the nuScenes leaderboard.
+- **p. 9 / 4.5. Qualitative Results and Discussion - extractive body cue:** Furthermore, IAL outperforms its LiDAR branch in detecting remote objects (highlighted in the black boxes) and recognizing ambiguous classes (in yellow boxes), leveraging the assistance ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. The architecture overview of our Image-Assists-LiDAR (IAL) framework. We first voxelize the point cloud into cylindrical voxels. In PieAug, we synchronize augmentation by ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Motivation and implementation variants of PieAug. Each column illustrates the motivation for LiDAR-image syn- chronized augmentation. Each row displays a different pie-cut strategy. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. (a) and (b) illustrate two challenges in LiDAR-image fusion introduced by cylindrical voxelization. In (a), relying on a virtual voxel center can lead ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Preliminary study of positional embedding for objects of thing classes. We conduct the experiment on our LiDAR branch. "GT" denotes using the ground ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison of panoptic segmentation performance on the nuScenes validation set. Top results are shown in bold. "M." indicates which modality (or modalities) each ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison on the nuScenes test set. Top and runner-up results are marked in bold and underline, respectively. "*" indicates the use of additional ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Comparison of panoptic segmentation performance on the SemanticKITTI validation set. Top results are shown in bold.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation study of the proposed modules in our framework. "PIE" denotes the PieAug module. PIE GTF PQG PQ PQ† RQ
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The architecture overview of our Image-Assists-LiDAR (IAL) framework. We first voxelize the point cloud into cylindrical voxels. In PieAug, we synchronize augmentation by ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Motivation and implementation variants of PieAug. Each column illustrates the motivation for LiDAR-image syn- chronized augmentation. Each row displays a different pie-cut strategy. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. (a) and (b) illustrate two challenges in LiDAR-image fusion introduced by cylindrical voxelization. In (a), relying on a virtual voxel center can lead ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Preliminary study of positional embedding for objects of thing classes. We conduct the experiment on our LiDAR branch. "GT" denotes using the ground ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparison of panoptic segmentation performance on the nuScenes validation set. Top results are shown in bold. "M." indicates which modality (or modalities) each ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison on the nuScenes test set. Top and runner-up results are marked in bold and underline, respectively. "*" indicates the use of additional ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Comparison of panoptic segmentation performance on the SemanticKITTI validation set. Top results are shown in bold.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation study of the proposed modules in our framework. "PIE" denotes the PieAug module. PIE GTF PQG PQ PQ† RQ
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | SemanticKITTI (Behley et al., 2019; 2021) is an outdoor dataset derived from KITTI Vision Benchmark (Geiger et al., 2012). | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setting), p. 6 (4.1. Experimental Setting) |
 | Task/environment | Datasts. nuScenes (Caesar et al., 2020; Fong et al., 2022) is a large-scale, multi-modal dataset designed for autonomous driving, containing data from a 32-beam ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setting), p. 7 (4.2. Benchmark Results) |
@@ -123,9 +123,9 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 | Primary metric/result | Compared to the LiDAR-only baseline (using the same augmentation strategies as P3Former adopts), IAL achieves a 5.3% improvement, primarily due to a 7.5% increase ... | numeric claim only at cited anchor | p. 8 (4.2. Benchmark Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** It includes 40,157 frames of outdoor scenes, with 34,149 frames labeled for training and validation, and the remaining reserved for testing.
-- **p. 6 / 4.1. Experimental Setting - extractive PDF cue:** It includes data from a 64-beam LiDAR sensor and two front-view cameras, including 8 "thing" classes and 11 "stuff" classes, comprising 19,130 frames for training, ...
-- **p. 7 / 4.1. Experimental Setting - extractive PDF cue:** The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** It includes 40,157 frames of outdoor scenes, with 34,149 frames labeled for training and validation, and the remaining reserved for testing.
+- **p. 6 / 4.1. Experimental Setting - extractive body cue:** It includes data from a 64-beam LiDAR sensor and two front-view cameras, including 8 "thing" classes and 11 "stuff" classes, comprising 19,130 frames for training, ...
+- **p. 7 / 4.1. Experimental Setting - extractive body cue:** The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.
 
 ## Generalization and Failure Cases
 
@@ -157,11 +157,11 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4.4. Augmentation Methods Comparison - extractive PDF cue:** Red circles highlight instances where the LiDAR branch fails to segment correctly, but our multi-modal method succeeds.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Preliminary study of positional embedding for objects of thing classes. We conduct the experiment on our LiDAR branch. "GT" denotes using the ground ...
-- **p. 8 / 4.2. Benchmark Results - extractive PDF cue:** As shown in Table 4, despite these constraints, our IAL achieves a 4.1% improvement in PQ over the state-of-the-art multi-modal baseline LCPS, demonstrating the robustness ...
+- **p. 9 / 4.4. Augmentation Methods Comparison - extractive body cue:** Red circles highlight instances where the LiDAR branch fails to segment correctly, but our multi-modal method succeeds.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Preliminary study of positional embedding for objects of thing classes. We conduct the experiment on our LiDAR branch. "GT" denotes using the ground ...
+- **p. 8 / 4.2. Benchmark Results - extractive body cue:** As shown in Table 4, despite these constraints, our IAL achieves a 4.1% improvement in PQ over the state-of-the-art multi-modal baseline LCPS, demonstrating the robustness ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setting), p. 6 (4.1. Experimental Setting), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Ablation Studies), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.1. Experimental Setting), metrics p. 8 (4.2. Benchmark Results), p. 9 (4.5. Qualitative Results and Discussion), p. 5 (Figure/Table caption), p. 8 (4.2. Benchmark Results), p. 7 (4.1. Experimental Setting), p. 7 (4.1. Experimental Setting), baselines p. 8 (4.3. Ablation Studies), p. 8 (4.2. Benchmark Results), p. 9 (4.4. Augmentation Methods Comparison), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.1. Experimental Setting), p. 7 (4.1. Experimental Setting), results p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 9 (4.5. Qualitative Results and Discussion), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.2. Benchmark Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setting), p. 6 (4.1. Experimental Setting), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Ablation Studies), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.1. Experimental Setting), metrics p. 8 (4.2. Benchmark Results), p. 9 (4.5. Qualitative Results and Discussion), p. 5 (Figure/Table caption), p. 8 (4.2. Benchmark Results), p. 7 (4.1. Experimental Setting), p. 7 (4.1. Experimental Setting), baselines p. 8 (4.3. Ablation Studies), p. 8 (4.2. Benchmark Results), p. 9 (4.4. Augmentation Methods Comparison), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.1. Experimental Setting), p. 7 (4.1. Experimental Setting), results p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 9 (4.5. Qualitative Results and Discussion), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.2. Benchmark Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

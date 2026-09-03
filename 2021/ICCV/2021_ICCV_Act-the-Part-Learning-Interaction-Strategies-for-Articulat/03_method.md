@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2105.01047; PDF retrieval source: https://arxiv.org/pdf/2105.01047. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2105.01047; PDF retrieval source: https://arxiv.org/pdf/2105.01047. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -21,7 +21,7 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 
 ## Design Rationale
 
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part arXiv:2105.01047v1 [cs.CV] 3 May 2021
+- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part.
 - **p. 2 / 1. Introduction - extractive body cue:** (2) Our method generalizes to unseen object instances and categories with different numbers of parts and joints.
 - **p. 4 / 3.4. History Aggregation - extractive body cue:** We introduce a history aggregation algorithm to updated part memory V , based on predicted Mt and Mt+1.
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Mask 𝑀!"# Part Network Mask Decoder Mask Decoder ResNet18 Image Observation Action Applied Figure 4. | p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (3. Approach) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We then explain the three components of our approach: an interaction network (Sec. | p. 2 (3. Approach), p. 4 (3.5. Reward) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | 2, we consider metrics after the fifth timestep. | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | We compute the average of perceptual metrics for each category at every timestep over five models trained with different random seeds. | Hz/fps, inference time and control rate |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | A next frame image is sent back to the model, at which point it runs the part network, history aggregation, and another ... | window and reset |
-| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (3. Approach), p. 4 (3.5. Reward), p. 3 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation), p. 2 (3. Approach), objective p. 4 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation), p. 4 (3.3. Learning to Discover Parts from Action), p. 2 (3. Approach), p. 3 (3.2. Learning to Act to Discover Parts), temporal p. 5 (4.1. Metrics and Points of Comparison), p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results), p. 3 (3.2. Learning to Act to Discover Parts), p. 4 (3.5. Reward), p. 1 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (3. Approach), p. 4 (3.5. Reward), p. 3 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation), p. 2 (3. Approach), objective p. 4 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation), p. 4 (3.3. Learning to Discover Parts from Action), p. 2 (3. Approach), p. 3 (3.2. Learning to Act to Discover Parts), temporal p. 5 (4.1. Metrics and Points of Comparison), p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results), p. 3 (3.2. Learning to Act to Discover Parts), p. 4 (3.5. Reward), p. 1 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** At each timestep t, an agent gets an observation It ∈RH×W ×C, and executes an action at ∈A on an object o ∈O, where A is the set of all ... (p. 2, 3.1. Problem Formulation).
+- **Objective/update evidence:** First, a hold action parameterized by its location and implemented as a fixed point constraint between the gripper and a part. (p. 3, 3.1. Problem Formulation).
+- **Temporal/runtime evidence:** A next frame image is sent back to the model, at which point it runs the part network, history aggregation, and another round of interaction inference. (p. 8, 4.3. Real World Results).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

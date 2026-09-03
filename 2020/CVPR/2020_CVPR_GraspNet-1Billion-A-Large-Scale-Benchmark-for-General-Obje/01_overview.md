@@ -1,8 +1,10 @@
 # GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; title-token overlap first two pages=0.75); canonical paper source: https://arxiv.org/abs/1912.13470.
-> PDF retrieval source: https://arxiv.org/pdf/1912.13470. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=0.75); canonical paper source: https://arxiv.org/abs/1912.13470.
+> PDF retrieval source: https://arxiv.org/pdf/1912.13470. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / CVPR
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1912.13470
 - Code/Project: https://graspnet.net/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; title-token overlap first two pages=0.75)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=0.75)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Secondly, it is difficult to obtain large-scale high quality training data [3].를 문제로 두고, Our methodology for building the dataset.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.2. Data Collection) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.75). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, for clustered scene, current researches suffer from the problems of insufficient training data and the lacking of evaluation benchmarks. (p. 1, Abstract).
+- **Actual contribution:** Our methodology for building the dataset. (p. 1, 1. Introduction).
+- **Evaluation boundary:** Currently, the Cornell dataset [11] has achieved over 99% accuracy. (p. 4, 3.4. Evaluation).
+- **Explicit failure boundary:** Such evaluation method does not assume the representation of the grasp pose, thus is general in practice. (p. 5, 3.5. Discussion).

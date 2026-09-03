@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 Algorithm 1: K(s) Bisection Search Input: number of iterations k; Output: maximal estimator ˆs; // Initialize lower and upper bounds sl ←0, sh ←1; for i ←0 to k do // Test ...를 Splat-Nav comprises a lightweight pose estimation module, Splat-Loc, coupled with a planning module, Splat-Plan, to enable safe navigation from RGB-only (monocular) camera observations, as illustrated in Figure 1.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Splat-Plan cannot do anything if an obstacle is completely missing from the scene, which is a fundamental limitation of the GSplat map representation.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe planning for drone navigation in GSplat maps. • We develop ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Algorithm 1: K(s) Bisection Search Input: number of iterations k; Output: maximal estimator ˆs; // Initialize lower and upper bounds sl ←0, sh ←1; for i ←0 to k do ... (p. 6, IV. PLANNING WITH SAFE POLYTOPES).
+- **Paper-specific mechanism:** The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe planning for drone navigation in GSplat maps. • ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Lastly, we examine the performance of the pose estimation algorithms in problems with a larger error in the initial estimate of the pose, with δR = 30◦and δt = 0.5 ... (p. 11, VI. EXPERIMENTS); the relevant task/metric cue is We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation time (C.T.) per frame, and the overall success rate (S.R.). (p. 11, VI. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** More importantly, we see that Splat-Plan never fails to return a trajectory, highlighted by the 0 failure rate. (p. 12, VI. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Simulation Results 1) Test Environments: We benchmark Splat-Plan and SplatLoc independently on four different environments: Stonehenge, a fully-synthetic scene, and three real-world scenes Statues, Flightroom, and Old Union..
-3. Compare against the body-reported baseline or a matched simpler baseline: Furthermore, we perform ablations against variations of the point-cloud planner in order to expose flaws when planning against point clouds compared to the full scene geometry..
-4. Report the body metric and its denominator/aggregation: We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation time (C.T.) per frame, and the overall success rate (S.R.)..
-5. Re-run the body-reported ablation/failure condition: Number of Gaussians is reported for both dense and sparse variants of the same scene..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Algorithm 1: K(s) Bisection Search Input: number of iterations k; Output: maximal estimator ˆs; // Initialize lower and upper bounds sl ←0, sh ←1; for i ←0 to k do ... (p. 6, IV. PLANNING WITH SAFE POLYTOPES); preserve the objective/update rule: There are four primary components: (1) feasible path seeding through graph-based search, (2) construction of a collision set around each part of the path, (3) generation of hyperplane constraints, and ... (p. 7, IV. PLANNING WITH SAFE POLYTOPES).
+2. Use the paper-reported task/data/environment cue: Simulation Results 1) Test Environments: We benchmark Splat-Plan and SplatLoc independently on four different environments: Stonehenge, a fully-synthetic scene, and three real-world scenes Statues, Flightroom, and Old Union. (p. 10, VI. EXPERIMENTS).
+3. Compare against the reported or matched baseline: Furthermore, we perform ablations against variations of the point-cloud planner in order to expose flaws when planning against point clouds compared to the full scene geometry. (p. 11, VI. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation time (C.T.) per frame, and the overall success rate (S.R.). (p. 11, VI. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Number of Gaussians is reported for both dense and sparse variants of the same scene. (p. 11, VI. EXPERIMENTS); if none is reported, design one around: More importantly, we see that Splat-Plan never fails to return a trajectory, highlighted by the 0 failure rate. (p. 12, VI. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES); the primary result is directionally consistent at p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 11 (VI. EXPERIMENTS), p. 10 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), and measure the boundary at p. 12 (VI. EXPERIMENTS), p. 16 (VIII. LIMITATIONS AND FUTURE WORK).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, follows, develop mechanism이 Furthermore, we perform ablations against variations of the point-cloud planner in order to expose flaws when ... 대비 We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation ...을 개선하고, Splat-Plan cannot do anything if an obstacle is completely missing from the scene, which is a ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Algorithm 1: K(s) Bisection Search Input: number of iterations k; Output: maximal estimator ˆs; // Initialize lower and upper bounds sl ←0, ...), does the paper-specific mechanism (The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe ...) retain the reported evaluation outcome (We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation ...) when tested against the paper's strongest explicit boundary (More importantly, we see that Splat-Plan never fails to return a trajectory, highlighted by the 0 failure rate.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We evaluate the rotation error (R.E.) and translation error (T.E.) with respect to the ground-truth pose, the computation ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe planning for drone navigation in GSplat maps. • ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Lastly, we examine the performance of the pose estimation algorithms in problems with a larger error in the initial estimate of the pose, with δR = 30◦and δt = 0.5 ... (p. 11, VI. EXPERIMENTS).
+- **Strongest explicit boundary:** More importantly, we see that Splat-Plan never fails to return a trajectory, highlighted by the 0 failure rate. (p. 12, VI. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

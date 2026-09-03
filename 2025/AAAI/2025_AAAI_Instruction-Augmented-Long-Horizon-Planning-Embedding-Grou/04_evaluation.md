@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33610; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33610. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33610; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33610. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Problem Formulation), p. 7 (Problem Formul
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Problem Formulation | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results indicate that IALP achieves a success rate of over 80% in all long-term tasks. | p. 7 (Problem Formulation) |
 | Problem Formulation | EMPIRICAL / REAL-ROBOT OR HARDWARE | As a result, the success rate is substantially lower than that of other configurations. | p. 7 (Problem Formulation) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Problem Formulation), p. 7 (Problem Formul
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | While 15 errors out of 100 may appear insignificant, they represent a considerable workload in real-world hardware experiments compared with numerical simulations due to ... | embodiment, simulator version and control stack | p. 7 (Problem Formulation), p. 3 (Problem Formulation) |
 | Task/environment | We assume an open-world setting, wherein the robot operates without prior knowledge of task-relevant objects or other ground truth information. | reset, timeout, object/scene variation | p. 3 (Problem Formulation), p. 7 (Problem Formulation) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 7 (Problem Formulation), p. 7 (Problem Formul
 - **p. 4 / Problem Formulation - extractive body cue:** The entire action sequence a1:H fails, denoted by Sfb = 0, if at least one action fails, i.e., rt = 0, ∃t ∈{1 : H}.
 - **p. 5 / Problem Formulation - extractive body cue:** We exclude any grasps that cannot be reached in the current state by computing a grasp reachability index for each candidate grasp.
 
-- **PDF anchors reviewed:** datasets p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 7 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), metrics p. 7 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 3 (Problem Formulation), p. 4 (Problem Formulation), baselines p. 7 (Figure/Table caption), p. 3 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), results p. 7 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation).
+- **Evidence anchors reviewed:** datasets p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 7 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), metrics p. 7 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 3 (Problem Formulation), p. 4 (Problem Formulation), baselines p. 7 (Figure/Table caption), p. 3 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), results p. 7 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 7: All failure cases of predicate checking in the real- world experiments across five long-horizon tasks. recorded the success cases of the LLM planner generating executable actions, as shown ... (p. 7, Figure/Table caption).
+- **Metric evidence:** We define the action sequence optimality score Sop = QH x=t p(ax / i, st:x, at:x-1), where the probability of the next skill ax is considered in terms of the ... (p. 3, Problem Formulation).
+- **Baseline/ablation evidence:** Figure 6: The success rate of IALP compared with that of IALP without feasibility feedback and without optimal se- lection, respectively. list the actions and PDDL problems generated for the ... (p. 7, Figure/Table caption).
+- **Failure/negative evidence:** Planning failures occur when the planner fails to generate the correct action sequence. (p. 7, Problem Formulation).

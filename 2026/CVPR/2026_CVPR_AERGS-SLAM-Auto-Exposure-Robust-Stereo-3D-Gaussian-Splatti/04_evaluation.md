@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Results and Evaluation - extractive PDF cue:** Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios.
-- **p. 7 / 4.3. Results and Evaluation - extractive PDF cue:** These results further demonstrate the generalization capability of the CEN in real-world scenarios.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** Experiments are conducted on the processed EuRoC and self-collected datasets.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** Moreover, as shown in the rows (2) and (4) of Table 3, applying the CEN module increases the PSNR metric by more than 5 dB ...
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** These keyframes act as the training set, with remaining frames used as the testing set.
-- **p. 7 / 4.3. Results and Evaluation - extractive PDF cue:** Additionally, compared with MonoGS [26], all decoupled pipelines achieve superior accuracy, highlighting the robustness of the decoupled framework.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** This is because higher localization accuracy can provide the mapping module with more accurate Gaussian ellipsoids and camera poses, thereby improving the accuracy of photorealistic ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Estimated CRF and exposure-controlled renderings. Top row: recovered CRF curves (i.e., ours and HDR-GS [2]) and ren- dered scene radiance map. Bottom row: ...
+- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios.
+- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** These results further demonstrate the generalization capability of the CEN in real-world scenarios.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Experiments are conducted on the processed EuRoC and self-collected datasets.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Moreover, as shown in the rows (2) and (4) of Table 3, applying the CEN module increases the PSNR metric by more than 5 dB ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** These keyframes act as the training set, with remaining frames used as the testing set.
+- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** Additionally, compared with MonoGS [26], all decoupled pipelines achieve superior accuracy, highlighting the robustness of the decoupled framework.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** This is because higher localization accuracy can provide the mapping module with more accurate Gaussian ellipsoids and camera poses, thereby improving the accuracy of photorealistic ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Estimated CRF and exposure-controlled renderings. Top row: recovered CRF curves (i.e., ours and HDR-GS [2]) and ren- dered scene radiance map. Bottom row: ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Results and Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios. | p. 7 (4.3. Results and Evaluation) |
 | 4.3. Results and Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | On the processed EuRoC dataset [1], AERGS-SLAM achieves the best localization performance against 3DGS-based baselines. | p. 7 (4.3. Results and Evaluation) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Results and Evaluation - extractive PDF cue:** Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios.
-- **p. 7 / 4.3. Results and Evaluation - extractive PDF cue:** These results further demonstrate the generalization capability of the CEN in real-world scenarios.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** Experiments are conducted on the processed EuRoC and self-collected datasets.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** Moreover, as shown in the rows (2) and (4) of Table 3, applying the CEN module increases the PSNR metric by more than 5 dB ...
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** These keyframes act as the training set, with remaining frames used as the testing set.
+- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios.
+- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** These results further demonstrate the generalization capability of the CEN in real-world scenarios.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Experiments are conducted on the processed EuRoC and self-collected datasets.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Moreover, as shown in the rows (2) and (4) of Table 3, applying the CEN module increases the PSNR metric by more than 5 dB ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** These keyframes act as the training set, with remaining frames used as the testing set.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Estimated CRF and exposure-controlled renderings. Top row: recovered CRF curves (i.e., ours and HDR-GS [2]) and ren- dered scene radiance map. Bottom row: ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed AERGS-SLAM. Firstly, the localization thread performs illumination-robust localization using stereo images, generating posed keyframes and sparse point clouds to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Feature detection in illumination-varying scene. handcrafted features [3] lack sufficient robustness to such appearance variations, reducing the reliability of residual E(k, j). As ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Exposure modeling in HDR-GS [2] and the proposed method. The differences between them are: 1) HDR-GS uses a network to map per-Gaussian radiance ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Exposure-controlled RGB renderings of CEN and HDR- GS [2] under varying exposure times ∆t. where SSIM(Ic, Ic gt) denotes structural similarity between the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results of localization (RMSE ↓). We color code eac column as best and second best. 'X' denotes running failure in our experiments. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative comparison of diverse systems from EuRoC MAV and our self-collected dataset. CEN's effectiveness; 4) ORB-SLAM3 [3], a classic hand- crafted feature-based SLAM ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results of Photorealistic mapping results. We color code each column as best and second best. 'X' denotes running failure in our experiments. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Estimated CRF and exposure-controlled renderings. Top row: recovered CRF curves (i.e., ours and HDR-GS [2]) and ren- dered scene radiance map. Bottom row: ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed AERGS-SLAM. Firstly, the localization thread performs illumination-robust localization using stereo images, generating posed keyframes and sparse point clouds to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Feature detection in illumination-varying scene. handcrafted features [3] lack sufficient robustness to such appearance variations, reducing the reliability of residual E(k, j). As ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Exposure modeling in HDR-GS [2] and the proposed method. The differences between them are: 1) HDR-GS uses a network to map per-Gaussian radiance ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Exposure-controlled RGB renderings of CEN and HDR- GS [2] under varying exposure times ∆t. where SSIM(Ic, Ic gt) denotes structural similarity between the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results of localization (RMSE ↓). We color code eac column as best and second best. 'X' denotes running failure in our experiments. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative comparison of diverse systems from EuRoC MAV and our self-collected dataset. CEN's effectiveness; 4) ORB-SLAM3 [3], a classic hand- crafted feature-based SLAM ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results of Photorealistic mapping results. We color code each column as best and second best. 'X' denotes running failure in our experiments. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios. | embodiment, simulator version and control stack | p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation) |
 | Task/environment | These results further demonstrate the generalization capability of the CEN in real-world scenarios. | reset, timeout, object/scene variation | p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies) |
@@ -119,10 +119,10 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 | Primary metric/result | On the processed EuRoC dataset [1], AERGS-SLAM achieves the best localization performance against 3DGS-based baselines. | numeric claim only at cited anchor | p. 7 (4.3. Results and Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / Datasets - extractive PDF cue:** (a) HDR-GS [2] with rendering speed of 416 FPS.
-- **p. 8 / Datasets - extractive PDF cue:** (b) Ours with rendering speed of 3700 FPS.
-- **p. 6 / Method - extractive PDF cue:** EuRoC MAV Self-collected MH01 MH03 V102 V103 V202 V203 S1 S2 S3 S4 S5 S6 ORB-SLAM3 [3] 0.044 X 0.088 X 0.125 1.522 0.359 0.523 ...
-- **p. 7 / Method - extractive PDF cue:** 0 200 400 600 800 1000 1200 1400 Frame Index 0 25 50 75 100 125 Exposure Time (ms) Ground Truth Ours HDR-GS 0 200 ...
+- **p. 8 / Datasets - extractive body cue:** (a) HDR-GS [2] with rendering speed of 416 FPS.
+- **p. 8 / Datasets - extractive body cue:** (b) Ours with rendering speed of 3700 FPS.
+- **p. 6 / Method - extractive body cue:** EuRoC MAV Self-collected MH01 MH03 V102 V103 V202 V203 S1 S2 S3 S4 S5 S6 ORB-SLAM3 [3] 0.044 X 0.088 X 0.125 1.522 0.359 0.523 ...
+- **p. 7 / Method - extractive body cue:** 0 200 400 600 800 1000 1200 1400 Frame Index 0 25 50 75 100 125 Exposure Time (ms) Ground Truth Ours HDR-GS 0 200 ...
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 
 ## Limitations and Verification Questions
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results of localization (RMSE ↓). We color code eac column as best and second best. 'X' denotes running failure in our experiments. ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Extensive experiments show the IRL module significantly improves localization accuracy and robustness.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** It adopts a decoupled pipeline enabling illumination-robust localization and auto-exposurerobust photorealistic mapping.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed AERGS-SLAM. Firstly, the localization thread performs illumination-robust localization using stereo images, generating posed keyframes and sparse point clouds to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Feature detection in illumination-varying scene. handcrafted features [3] lack sufficient robustness to such appearance variations, reducing the reliability of residual E(k, j). As ...
-- **p. 7 / 4.3. Results and Evaluation - extractive PDF cue:** Overall, these comprehensive evaluation results validate the effectiveness of our illumination-robust localization pipeline.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results of localization (RMSE ↓). We color code eac column as best and second best. 'X' denotes running failure in our experiments. ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Extensive experiments show the IRL module significantly improves localization accuracy and robustness.
+- **p. 8 / 5. Conclusion - extractive body cue:** It adopts a decoupled pipeline enabling illumination-robust localization and auto-exposurerobust photorealistic mapping.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed AERGS-SLAM. Firstly, the localization thread performs illumination-robust localization using stereo images, generating posed keyframes and sparse point clouds to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Feature detection in illumination-varying scene. handcrafted features [3] lack sufficient robustness to such appearance variations, reducing the reliability of residual E(k, j). As ...
+- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** Overall, these comprehensive evaluation results validate the effectiveness of our illumination-robust localization pipeline.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), p. 5 (4.1. Implementation Details), metrics p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 1 (Figure/Table caption), p. 5 (4.1. Implementation Details), p. 3 (Figure/Table caption), baselines p. 5 (4.2. Experiment Setup), p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 6 (Figure/Table caption), p. 8 (Datasets), p. 5 (4. Experiments), results p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), p. 4 (Figure/Table caption), p. 5 (4. Experiments).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), p. 5 (4.1. Implementation Details), metrics p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 1 (Figure/Table caption), p. 5 (4.1. Implementation Details), p. 3 (Figure/Table caption), baselines p. 5 (4.2. Experiment Setup), p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 6 (Figure/Table caption), p. 8 (Datasets), p. 5 (4. Experiments), results p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), p. 4 (Figure/Table caption), p. 5 (4. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

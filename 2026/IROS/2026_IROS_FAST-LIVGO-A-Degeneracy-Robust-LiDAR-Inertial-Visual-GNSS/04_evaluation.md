@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.19190; PDF retrieval source: https://arxiv.org/pdf/2606.19190. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.19190; PDF retrieval source: https://arxiv.org/pdf/2606.19190. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Evaluation on Benchmark Dataset (M3DGR) We conducted standardized quantitative comparisons on the public M3DGR dataset [10], which provides RTK ground
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Our platform with hardware synchronization for data acquisition.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** We benchmarked our method against SOTA open-source systems, including LIO-SAM [8], FAST-LIVO2 [3], and LIGO [21].
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Our robust mechanism effectively filters these hidden errors to extract ultimate accuracy.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** By sacrificing negligible accuracy in denied environments, our system gains significant global accuracy improvements in open areas and successfully prevents tightly-coupled system crashes, achieving optimal ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2. Schematic of the Time-Differenced Carrier Phase (TDCP) model. Consecutive epoch differencing provides precise relative position constraints (∆ρ) by eliminating integer ambiguities and mitigating ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7. Mapping results generated in complex LIDAR, Camera, and GNSS degenerated scenes. were severely occluded. Traditional schemes diverge easily here, but our strict outlier ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates the ...
+- **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** Evaluation on Benchmark Dataset (M3DGR) We conducted standardized quantitative comparisons on the public M3DGR dataset [10], which provides RTK ground
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our platform with hardware synchronization for data acquisition.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** We benchmarked our method against SOTA open-source systems, including LIO-SAM [8], FAST-LIVO2 [3], and LIGO [21].
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our robust mechanism effectively filters these hidden errors to extract ultimate accuracy.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** By sacrificing negligible accuracy in denied environments, our system gains significant global accuracy improvements in open areas and successfully prevents tightly-coupled system crashes, achieving optimal ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2. Schematic of the Time-Differenced Carrier Phase (TDCP) model. Consecutive epoch differencing provides precise relative position constraints (∆ρ) by eliminating integer ambiguities and mitigating ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7. Mapping results generated in complex LIDAR, Camera, and GNSS degenerated scenes. were severely occluded. Traditional schemes diverge easily here, but our strict outlier ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates the ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTAL RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | By sacrificing negligible accuracy in denied environments, our system gains significant global accuracy improvements in open areas and successfully prevents tightly-coupled system crashes, achieving ... | p. 6 (V. EXPERIMENTAL RESULTS) |
 | V. EXPERIMENTAL RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, although the ablation version (Ours w/o Rejection) outperforms pure FAST-LIVO2 due to GNSS integration, it remains slightly inferior to our complete version. | p. 6 (V. EXPERIMENTAL RESULTS) |
@@ -39,25 +39,25 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Evaluation on Benchmark Dataset (M3DGR) We conducted standardized quantitative comparisons on the public M3DGR dataset [10], which provides RTK ground
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Our platform with hardware synchronization for data acquisition.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** We benchmarked our method against SOTA open-source systems, including LIO-SAM [8], FAST-LIVO2 [3], and LIGO [21].
+- **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** Evaluation on Benchmark Dataset (M3DGR) We conducted standardized quantitative comparisons on the public M3DGR dataset [10], which provides RTK ground
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our platform with hardware synchronization for data acquisition.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** We benchmarked our method against SOTA open-source systems, including LIO-SAM [8], FAST-LIVO2 [3], and LIGO [21].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 1. System overview of our proposed framework. the GNSS antenna is modeled as a rigid transformation. To enable tightly-coupled fusion with raw GNSS measurements, ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 2. Schematic of the Time-Differenced Carrier Phase (TDCP) model. Consecutive epoch differencing provides precise relative position constraints (∆ρ) by eliminating integer ambiguities and mitigating ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 3. Our platform with hardware synchronization for data acquisition. (a) Handheld system, (b) Fixed-wing drone setup, (c) Drone top view, (d) Drone bottom view.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 4. Trajectory overview of the large-scale fixed-wing UAV experiment overlaid on Google Maps. The path segments (a), (b), and (c) correspond to challenging maneuvering ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6. Trajectory evaluation in the large-scale flight. (a) and (b) show ENU position estimates across different phases. Our method (green) tightly aligns with the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7. Mapping results generated in complex LIDAR, Camera, and GNSS degenerated scenes. were severely occluded. Traditional schemes diverge easily here, but our strict outlier ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 1. System overview of our proposed framework. the GNSS antenna is modeled as a rigid transformation. To enable tightly-coupled fusion with raw GNSS measurements, ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2. Schematic of the Time-Differenced Carrier Phase (TDCP) model. Consecutive epoch differencing provides precise relative position constraints (∆ρ) by eliminating integer ambiguities and mitigating ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3. Our platform with hardware synchronization for data acquisition. (a) Handheld system, (b) Fixed-wing drone setup, (c) Drone top view, (d) Drone bottom view.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. Trajectory overview of the large-scale fixed-wing UAV experiment overlaid on Google Maps. The path segments (a), (b), and (c) correspond to challenging maneuvering ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. Trajectory evaluation in the large-scale flight. (a) and (b) show ENU position estimates across different phases. Our method (green) tightly aligns with the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7. Mapping results generated in complex LIDAR, Camera, and GNSS degenerated scenes. were severely occluded. Traditional schemes diverge easily here, but our strict outlier ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Evaluation on Benchmark Dataset (M3DGR) We conducted standardized quantitative comparisons on the public M3DGR dataset [10], which provides RTK ground | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS) |
 | Task/environment | Our platform with hardware synchronization for data acquisition. | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS) |
@@ -142,14 +142,14 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 
 ## Limitations and Verification Questions
 
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** In contrast, looser-coupled systems like LIO-SAM and LIGO generate meter-level errors but avoid complete failure.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive PDF cue:** Under such harsh conditions, a critical finding is that the ablation version (Ours w/o Rejection) directly suffers from trajectory divergence and system failure (marked as ...
-- **p. 5 / IV. STATE ESTIMATION - extractive PDF cue:** When encountering feature degradation (e.g., textureless long corridors), the prior covariance bPk inflates.
-- **p. 5 / IV. STATE ESTIMATION - extractive PDF cue:** Signals with low Carrier-to-Noise density (C/N0 <35 dB-Hz) or low elevation angles (< 15◦) are physically filtered out.
-- **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive PDF cue:** 2) Outdoor LIVO Degraded Scenario: In regions (a)-(c) of View 1 (Fig.
-- **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive PDF cue:** 1) Indoor GNSS Degraded Scenario: In the long indoor corridor (see region (d) in Fig.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** In contrast, looser-coupled systems like LIO-SAM and LIGO generate meter-level errors but avoid complete failure.
+- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Under such harsh conditions, a critical finding is that the ablation version (Ours w/o Rejection) directly suffers from trajectory divergence and system failure (marked as ...
+- **p. 5 / IV. STATE ESTIMATION - extractive body cue:** When encountering feature degradation (e.g., textureless long corridors), the prior covariance bPk inflates.
+- **p. 5 / IV. STATE ESTIMATION - extractive body cue:** Signals with low Carrier-to-Noise density (C/N0 <35 dB-Hz) or low elevation angles (< 15◦) are physically filtered out.
+- **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive body cue:** 2) Outdoor LIVO Degraded Scenario: In regions (a)-(c) of View 1 (Fig.
+- **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive body cue:** 1) Indoor GNSS Degraded Scenario: In the long indoor corridor (see region (d) in Fig.
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), metrics p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), results p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), metrics p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), results p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

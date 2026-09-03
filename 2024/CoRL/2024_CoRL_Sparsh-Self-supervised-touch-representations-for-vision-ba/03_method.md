@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.24090; PDF retrieval source: https://arxiv.org/pdf/2410.24090. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.24090; PDF retrieval source: https://arxiv.org/pdf/2410.24090. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | In this work, we introduce general purpose touch representations for the increasingly accessible class of vision-based tactile sensors. | p. 1 (Abstract), p. 1 (Abstract) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | We present Sparsh, a family of SSL models that can support various vision-based tactile sensors, alleviating the need for custom labels through ... | p. 1 (Abstract), p. 2 (1 Introduction) |
@@ -70,7 +70,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 - **p. 2 / 1 Introduction - extractive body cue:** The prevailing approach to incorporating vision-based tactile sensors in robot tasks is to train custom models using labeled data [6, 12, 13, 14] to estimate ...
 - **p. 8 / 8 Discussion - extractive body cue:** We believe that incorporating data rich in shear interactions can further improve the representations.
 - **p. 1 / Abstract - extractive body cue:** In this work, we introduce general purpose touch representations for the increasingly accessible class of vision-based tactile sensors.
-- **p. 1 / Abstract - extractive body cue:** Collecting real data at scale with task centric ground truth labels, like contact forces and slip, is a challenge further compounded by sensors of various ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We find Sparsh pre-trained with self-supervision on a dataset of 460k+ tactile images can generalize across many tasks (right) and sensors (left) outperforming task and ...
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -104,7 +104,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
 | Multi-modal contact encoding | Finally, we construct TacBench, a benchmark consisting of six touch-centric tasks that cover the space of relevant problems on tactile properties such ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Contact / dynamics inference | Figure 2: (a) We curate new and existing datasets of vision-based tactile sensors to train touch representations by adapting state-of-the-art SSL vision ... | p. 3 (Figure/Table caption), p. 1 (Front matter) |
+| Contact / dynamics inference | Figure 2: (a) We curate new and existing datasets of vision-based tactile sensors to train touch representations by adapting state-of-the-art SSL vision ... | p. 3 (Figure/Table caption), p. 1 (Body text (section boundary not confidently recovered)) |
 | Force-aware action correction | Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with ... | p. 7 (Figure/Table caption), p. 8 (8 Discussion) |
 
 ## Failure and Ablation Link
@@ -129,8 +129,17 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (8 Discussion), p. 8 (8 Discussion), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 2 (1 Introduction), p. 8 (8 Discussion), temporal p. 7 (2 Related work), p. 5 (2 Related work), p. 2 (2 Related work), p. 2 (2 Related work), p. 3 (2 Related work), p. 4 (2 Related work).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (8 Discussion), p. 8 (8 Discussion), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 2 (1 Introduction), p. 8 (8 Discussion), temporal p. 7 (2 Related work), p. 5 (2 Related work), p. 2 (2 Related work), p. 2 (2 Related work), p. 3 (2 Related work), p. 4 (2 Related work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We present Sparsh, a family of SSL models that can support various vision-based tactile sensors, alleviating the need for custom labels through pre-training on 460k+ tactile images with masking and ... (p. 1, Abstract).
+- **Objective/update evidence:** For example, feature extractors trained on GelSight with markers may not transfer to other sensors, and encoders optimized for texture recognition [15] may not be suitable for tasks that require ... (p. 2, 1 Introduction).
+- **Temporal/runtime evidence:** Performance in the plot (middle) is with task decoders using 33% labeled data (except [T6] that uses 50%). (p. 1, Body text (section boundary not confidently recovered)).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

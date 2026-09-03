@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.05124; PDF retrieval source: https://arxiv.org/pdf/2112.05124. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.05124; PDF retrieval source: https://arxiv.org/pdf/2112.05124. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This enables imitation from few demonstrations, but current approaches-which operate in 2D-suffer several key limitations. | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | These latent codes are obtained as the output of a PointNet [32]- based point cloud encoder E that takes as input a ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF |
+| Observation / input | These latent codes are obtained as the output of a PointNet [32]- based point cloud encoder E that takes as input a ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
 | State / latent | latent, codes, obtained, output, PointNet, point, cloud, encoder, takes, input | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
 | Output / action | Translation, equivariance, conveniently, implemented, subtracting, center, mass, point | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
 | Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | object geometry/contact state; body terms: latent, codes, obtained, output, PointNet, point, cloud, encoder, takes, input | p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD) |
 | Decision / output variable | grasp/pose/force/trajectory; body terms: present, novel, representation, models, dense, correspondence, across, object | p. 2 (II. METHOD), p. 2 (I. INTRODUCTION), p. 5 (II. METHOD) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRO
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD) |
 | Success / guarantee | completion, contact success and robustness | p. 6 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRO
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (II. METHOD), p. 2 (I. INTRODUCTION), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD)): We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.
+PDF body contribution framing (p. 2 (II. METHOD), p. 2 (I. INTRODUCTION), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD)): We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Using this novel formulation, we propose a system that can imitate pick-and-place tasks for a category of objects from only a small handful of demonstrations.
 - **p. 5 / II. METHOD - extractive body cue:** 4), this encoding enables us to transfer a local frame with a reference pose ˆT when provided with a new point cloud by finding the ...
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (II. METHOD), p. 2 (I. INTRODUCTION), p. 5 (II. M
 
 ## Position in the Robotics Loop
 
-manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD). The downstream handoff is claimed only when the body describes it.
+manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), objective p. 2 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 5 (II. METHOD).
+- **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), objective p. 2 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 5 (II. METHOD).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, the ability of current methods to learn from demonstrations is severely limited. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames. (p. 2, II. METHOD).
+- **Assumption/failure evidence:** We find that DON's failures are usually a function of either insufficient precision in keypoint predictions, or failed registration of testtime keypoints to the demonstration keypoints. (p. 7, II. METHOD).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2011.5980280; PDF retrieval source: https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2011.5980280; PDF retrieval source: https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,27 +10,27 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We conduct experiments on a simulation of the Willow Garage PR2 robot in a simulated world, followed by a demonstration of performance on the real ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Real Robot The attached video shows demonstrations of trajectories planned using STOMP in a household environment, executed 1This result was obtained using the standard CHOMP ...
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** STOMP is an algorithm that performs local optimization, i.e. it finds a locally optimum trajectory rather than a global one.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Success in this scenario implies the generation of a collision-free trajectory.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** Hence, performance will vary depending on the initial
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** STOMP produced a collision-free trajectory in all (a) (b) (c) Fig.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. (a) Each curve depicts a column/row of the symmetric matrix R-1. (b) 20 random samples of ϵ, drawn from a zero mean normal ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We conduct experiments on a simulation of the Willow Garage PR2 robot in a simulated world, followed by a demonstration of performance on the real ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Real Robot The attached video shows demonstrations of trajectories planned using STOMP in a household environment, executed 1This result was obtained using the standard CHOMP ...
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** STOMP is an algorithm that performs local optimization, i.e. it finds a locally optimum trajectory rather than a global one.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Success in this scenario implies the generation of a collision-free trajectory.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** Hence, performance will vary depending on the initial
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** STOMP produced a collision-free trajectory in all (a) (b) (c) Fig.
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. (a) Each curve depicts a column/row of the symmetric matrix R-1. (b) 20 random samples of ϵ, drawn from a zero mean normal ...
 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** robot mechanism의 state와 task-space dynamics.
-- **Input boundary:** joint/task state, reference와 sensor feedback.
-- **Output/decision under evaluation:** torque, force, velocity 또는 position command.
-- **Primary target:** tracking, stability, constraint satisfaction과 contact behavior.
+- **Target system/task:** graph, configuration space 또는 task-and-motion planning domain.
+- **Input boundary:** start/goal, map, dynamics와 successor/operator description.
+- **Output/decision under evaluation:** feasible action sequence 또는 minimum-cost plan.
+- **Primary target:** path cost, goal reachability, feasibility와 computation.
 - **Detected evaluation headings:** V. EXPERIMENTS (p. 4).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The execution times are comparable, even though CHOMP usually requires more iterations to achieve success. | p. 5 (V. EXPERIMENTS) |
 | V. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The exploration noise magnitude for STOMP, and the gradient descent step size for CHOMP were both tuned to achieve good performance without instability. | p. 5 (V. EXPERIMENTS) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** We conduct experiments on a simulation of the Willow Garage PR2 robot in a simulated world, followed by a demonstration of performance on the real ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Real Robot The attached video shows demonstrations of trajectories planned using STOMP in a household environment, executed 1This result was obtained using the standard CHOMP ...
-- **p. 4 / V. EXPERIMENTS - extractive PDF cue:** STOMP is an algorithm that performs local optimization, i.e. it finds a locally optimum trajectory rather than a global one.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** We conduct experiments on a simulation of the Willow Garage PR2 robot in a simulated world, followed by a demonstration of performance on the real ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Real Robot The attached video shows demonstrations of trajectories planned using STOMP in a household environment, executed 1This result was obtained using the standard CHOMP ...
+- **p. 4 / V. EXPERIMENTS - extractive body cue:** STOMP is an algorithm that performs local optimization, i.e. it finds a locally optimum trajectory rather than a global one.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. (a) Each curve depicts a column/row of the symmetric matrix R-1. (b) 20 random samples of ϵ, drawn from a zero mean normal ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. (a) Simulation setup used to evaluate STOMP as a robot arm motion planner. (b) Initial straight-line trajectory between two shelves. (c) Trajectory optimized ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. Planning problem used to evaluate torque minimization. (a) Plan obtained without torque minimization: arm is stretched. (b,c) Two different plans obtained with torque ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. (a) Iterative evolution of trajectory costs for 10 trials of STOMP on a constrained planning task. (b) Feed-forward torques used in the planning ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. (a) Each curve depicts a column/row of the symmetric matrix R-1. (b) 20 random samples of ϵ, drawn from a zero mean normal ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. (a) Simulation setup used to evaluate STOMP as a robot arm motion planner. (b) Initial straight-line trajectory between two shelves. (c) Trajectory optimized ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. Planning problem used to evaluate torque minimization. (a) Plan obtained without torque minimization: arm is stretched. (b,c) Two different plans obtained with torque ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. (a) Iterative evolution of trajectory costs for 10 trials of STOMP on a constrained planning task. (b) Feed-forward torques used in the planning ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct experiments on a simulation of the Willow Garage PR2 robot in a simulated world, followed by a demonstration of performance on the ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS) |
 | Task/environment | Real Robot The attached video shows demonstrations of trajectories planned using STOMP in a household environment, executed 1This result was obtained using the standard ... | reset, timeout, object/scene variation | p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS) |
-| Observation/sensor | joint/task state, reference와 sensor feedback | calibration, preprocessing, privileged input | p. 2 (III. THE STOMP ALGORITHM), p. 1 (I. INTRODUCTION) |
-| Output/decision | torque, force, velocity 또는 position command | action frame, controller and termination | p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |
+| Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 2 (III. THE STOMP ALGORITHM), p. 1 (I. INTRODUCTION) |
+| Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |
 
 ## Metrics and Success Definition
 
@@ -109,9 +109,9 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Primary metric/result | The exploration noise magnitude for STOMP, and the gradient descent step size for CHOMP were both tuned to achieve good performance without instability. | numeric claim only at cited anchor | p. 5 (V. EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Scenario STOMP CHOMP STOMP Unconstrained Unconstrained Constrained Number of 210 / 210 149 / 210 196 / 210 successful plans Avg. planning time 0.88 ± ...
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Seven of these cabinets were reachable by the 7 degree-of-freedom right arm of the PR2.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** In order to test the part of the cost function that deals with minimization of torques, we ran 10 trials on the planning problem shown ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Scenario STOMP CHOMP STOMP Unconstrained Unconstrained Constrained Number of 210 / 210 149 / 210 196 / 210 successful plans Avg. planning time 0.88 ± ...
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Seven of these cabinets were reachable by the 7 degree-of-freedom right arm of the PR2.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** In order to test the part of the cost function that deals with minimization of torques, we ran 10 trials on the planning problem shown ...
 
 ## Generalization and Failure Cases
 
@@ -148,14 +148,14 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 
 ## Limitations and Verification Questions
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
-- **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive PDF cue:** (c) Trajectory optimized by STOMP to avoid collision with the shelf, constrained to maintain the upright orientation of the gripper.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** STOMP produced a collision-free trajectory in all (a) (b) (c) Fig.
-- **p. 5 / V. EXPERIMENTS - extractive PDF cue:** Success in this scenario implies the generation of a collision-free trajectory.
-- **p. 3 / 5) Update θ ←θ + δθ - extractive PDF cue:** An additional advantage is that no gradient step-size parameter is required; the only open parameter in this algorithm is the magnitude of the exploration noise.
-- **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive PDF cue:** Additionally, since the convex combination of noise is smoothed through the M matrix, the resulting updated trajectory smoothly touches the joint limit as opposed to ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
+- **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** (c) Trajectory optimized by STOMP to avoid collision with the shelf, constrained to maintain the upright orientation of the gripper.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** STOMP produced a collision-free trajectory in all (a) (b) (c) Fig.
+- **p. 5 / V. EXPERIMENTS - extractive body cue:** Success in this scenario implies the generation of a collision-free trajectory.
+- **p. 3 / 5) Update θ ←θ + δθ - extractive body cue:** An additional advantage is that no gradient step-size parameter is required; the only open parameter in this algorithm is the magnitude of the exploration noise.
+- **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** Additionally, since the convex combination of noise is smoothed through the M matrix, the resulting updated trajectory smoothly touches the joint limit as opposed to ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

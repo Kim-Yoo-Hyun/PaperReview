@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 This is achieved by adopting a relative state-action representation, where each state and action is captured as the relative difference from the previous time step's pose.를 Achieving this goal requires careful alignment of both the observation space and the action space between humans and robots.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Next, because humans typically perform these tasks successfully their demonstrations seldom include error recovery-causing trained policies to struggle to recover from unexpected failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Other approaches aim to estimate both hand and wrist poses directly from visual input [29, 35, 5, 45, 28, 20, 32]. (p. 2, C. Human Action Tracking Systems).
+- **Paper-specific mechanism:** In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations. (p. 2, 1. IyrRopuction).
+- **Evidence boundary:** the reported outcome is We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot ... (p. 6, C. Evaluation Environments); the relevant task/metric cue is Success requires the policy to adapt to varying object properties, environmental conditions, (p. 6, B. Evaluation Tasks). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot training data ....
-3. Compare against the body-reported baseline or a matched simpler baseline: baseline not recovered.
-4. Report the body metric and its denominator/aggregation: Success requires the policy to adapt to varying object properties, environmental conditions,.
-5. Re-run the body-reported ablation/failure condition: Next, because humans typically perform these tasks successfully their demonstrations seldom include error recovery-causing trained policies to struggle to recover from unexpected failures..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Other approaches aim to estimate both hand and wrist poses directly from visual input [29, 35, 5, 45, 28, 20, 32]. (p. 2, C. Human Action Tracking Systems); preserve the objective/update rule: ‘Through the careful design of our hardware, observation, and action interfaces, we are able to train dexterous robot policies using a simple behavior cloning (BC) objective [31, 37, 36}. (p. 5, B. Training Data Modalities and Preprocessing).
+2. Use the paper-reported task/data/environment cue: We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot ... (p. 6, C. Evaluation Environments).
+3. Compare against the reported or matched baseline: Success requires the policy to adapt to varying object properties, environmental conditions, (p. 6, B. Evaluation Tasks).
+4. Report the body metric with its denominator and aggregation: Success requires the policy to adapt to varying object properties, environmental conditions, (p. 6, B. Evaluation Tasks).
+5. Re-run the reported ablation or stress/failure condition: Success requires the policy to adapt to varying object properties, environmental conditions, (p. 6, B. Evaluation Tasks); if none is reported, design one around: This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (B. Training Data Modalities and Preprocessing), p. 5 (B. Training Data Modalities and Preprocessing), p. 3 (C. Human Action Tracking Systems); the primary result is directionally consistent at p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. IyrRopuction), p. 2 (1. IyrRopuction), match the reported outcome at p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks), p. 1 (Figure/Table caption), and measure the boundary at p. 4 (A. Data Collection System), p. 8 (06 06 06 _).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, DexWild, system mechanism이 a matched simpler baseline 대비 Success requires the policy to adapt to varying object properties, environmental conditions,을 개선하고, Next, because humans typically perform these tasks successfully their demonstrations seldom include error recovery-causing trained policies ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Other approaches aim to estimate both hand and wrist poses directly from visual input [29, 35, 5, 45, 28, 20, 32].), does the paper-specific mechanism (In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and ...) retain the reported evaluation outcome (Success requires the policy to adapt to varying object properties, environmental conditions,) when tested against the paper's strongest explicit boundary (This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Success requires the policy to adapt to varying object properties, environmental conditions,) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations. (p. 2, 1. IyrRopuction).
+- **Paper-supported outcome:** We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot ... (p. 6, C. Evaluation Environments).
+- **Strongest explicit boundary:** This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

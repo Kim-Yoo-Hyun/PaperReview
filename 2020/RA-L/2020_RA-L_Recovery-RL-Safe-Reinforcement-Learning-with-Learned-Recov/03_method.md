@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.15920; PDF retrieval source: https://arxiv.org/pdf/2010.15920. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.15920; PDF retrieval source: https://arxiv.org/pdf/2010.15920. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Thus, endowing RL agents with the ability to satisfy constraints during learning not only enables robots to interact safely, but also allows them to more ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We present Recovery RL, a new algorithm for safe robotic RL.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** If it tips over the carton, then not only can this possibly break the carton and create a mess, but it also requires laborious human ...
+- **p. 1 / Abstract - extractive body cue:** We propose Recovery RL, an algorithm which navigates this tradeoff by (1) leveraging offline data to learn about constraint violating zones before policy learning and ...
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | [8] to plan over a learned stochastic dynamics model, while for tasks with visual observations, we use a VAE based latent dynamics ... | p. 5 (IV. RECOVERY RL), p. 1 (Abstract) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | We propose Recovery RL, an algorithm which navigates this tradeoff by (1) leveraging offline data to learn about constraint violating zones before ... | p. 1 (Abstract), p. 2 (I. INTRODUCTION) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | We do not report reward per episode, as episodes terminate on task completion or constraint violation. | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | All experiments involve policy learning under state space constraints, in which a constraint violation terminates the current episode. | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -94,7 +94,7 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 - **p. 2 / I. INTRODUCTION - extractive body cue:** First, the inherent objective conflict between exploring to learn new tasks and limiting exploration to avoid constraint violations can lead to suboptimalities in policy optimization.
 - **p. 4 / IV. RECOVERY RL - extractive body cue:** Then π selects actions as follows: at = ( aπtask t (st,aπtask t ) ∈T π safe aπrec t (st,aπtask t ) ∈T π rec ...
 - **p. 3 / III. PROBLEM STATEMENT - extractive body cue:** We present an algorithm to optimize equation (III.1) by utilizing a pair of policies, a task policy πtask, which is trained to maximize Rπ over ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** THANANJEYAN*, BALAKRISHNA* et al.: RECOVERY RL: SAFE REINFORCEMENT LEARNING WITH LEARNED RECOVERY ZONES 7 Figure 5: Sensitivity Experiments: We report the final number of task ...
+- **p. 7 / V. EXPERIMENTS - extractive body cue:** Figure 5: Sensitivity Experiments: We report the final number of task ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -134,8 +134,17 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 4 (IV. RECOVERY RL), p. 4 (IV. RECOVERY RL), p. 3 (III. PROBLEM STATEMENT), objective p. 4 (IV. RECOVERY RL), p. 3 (III. PROBLEM STATEMENT), p. 4 (IV. RECOVERY RL), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 3 (II. RELATED WORK).
+- **Evidence anchors reviewed:** method p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 4 (IV. RECOVERY RL), p. 4 (IV. RECOVERY RL), p. 3 (III. PROBLEM STATEMENT), objective p. 4 (IV. RECOVERY RL), p. 3 (III. PROBLEM STATEMENT), p. 4 (IV. RECOVERY RL), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 3 (II. RELATED WORK).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We present an algorithm to optimize equation (III.1) by utilizing a pair of policies, a task policy πtask, which is trained to maximize Rπ over πtask ∈Π and a recovery ... (p. 3, III. PROBLEM STATEMENT).
+- **Objective/update evidence:** We propose Recovery RL, an algorithm which navigates this tradeoff by (1) leveraging offline data to learn about constraint violating zones before policy learning and (2) separating the goals of ... (p. 1, Abstract).
+- **Temporal/runtime evidence:** We do not report reward per episode, as episodes terminate on task completion or constraint violation. (p. 5, V. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

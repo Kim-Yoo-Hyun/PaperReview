@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1804.02717; PDF retrieval source: https://arxiv.org/pdf/1804.02717. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1804.02717; PDF retrieval source: https://arxiv.org/pdf/1804.02717. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In our ablation studies, we identify two specific components of our method, reference state initialization and early termination, that are critical for achieving highly dynamic ...
-- **p. 4 / 4 BACKGROUND - extractive body cue:** The value function is modeled by a similar network, with exception of the output layer, which consists of a single linear unit.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our method handles keyframed motions, highly-dynamic actions such as motion-captured flips and spins, and retargeted motions.
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | Property Humanoid Atlas T-Rex Dragon Links 13 12 20 32 Total Mass (kg) 45 169.8 54.5 72.5 Height (m) 1.62 1.82 1.66 ... | p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | The action distribution is modeled as a Gaussian, with a state dependent mean µ(s) specified by the network, and a fixed diagonal ... | p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
@@ -55,7 +55,7 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 6 / 4 BACKGROUND - extractive body cue:** Multi-Clip Reward: To utilize multiple reference motion clips during training, we define a composite imitation objective calculated simply as the max over the previously introduced ...
 - **p. 4 / 4 BACKGROUND - extractive body cue:** The policy gradient can therefore be interpreted as increasing the likelihood of actions that lead to higher than expected returns, while decreasing the likelihood of ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
-- **Equation/algorithm anchors:** p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 2 (1 INTRODUCTION), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND).
+- **Equation/algorithm anchors:** p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -85,8 +85,8 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 |---|---|---|---|
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | Training proceeds episodically, where at the start of each episode, an initial state s0 is sampled uniformly from the reference motion (section ... | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | We demonstrate that a single model-free framework is capable of a wider range of motion skills (from walks to highly dynamic kicks ... | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not recovered | window and reset |
-| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -132,8 +132,17 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 3 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), objective p. 5 (4 BACKGROUND), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), temporal p. 5 (4 BACKGROUND), p. 2 (2 RELATED WORK), p. 3 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND).
+- **Evidence anchors reviewed:** method p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 3 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), objective p. 5 (4 BACKGROUND), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), temporal p. 5 (4 BACKGROUND), p. 2 (2 RELATED WORK), p. 3 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Training proceeds episodically, where at the start of each episode, an initial state s0 is sampled uniformly from the reference motion (section 6.1), and rollouts are generated by sampling actions ... (p. 5, 4 BACKGROUND).
+- **Objective/update evidence:** The policy is updated using gradients computed from the surrogate objective, with advantages At computed using GAE(λ) [Schulman et al. (p. 5, 4 BACKGROUND).
+- **Temporal/runtime evidence:** Each episode is simulated to a fixed time horizon or until a termination condition has been triggered (section 6.2). (p. 5, 4 BACKGROUND).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

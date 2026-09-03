@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Therefore, to address these issues, we propose the Adaptive Tactile Injection module, which dynamically controls when and where tactile feedback is injected ... | p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Framework of AT-VLA) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | 2, the policy πθ takes as input the image observations I = {Ih, Ir, Il} from the head camera, right wrist camera, ... | p. 3 (3.1. Framework of AT-VLA), p. 4 (3.1. Framework of AT-VLA) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | Building on previous action chunking strategies, the visual and language observation at time step tn can provide guidance for a future horizon ... | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | Consequently, slow stream's output serves as a latent condition that temporally guides action generation across the following H time steps. | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | Furthermore, to enable rapid and accurate tactile responses, we propose a Tactile Reaction Dual-Stream mechanism, which decouples sensory processing into a slow ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Framework of AT-VLA), p. 4 (3.1. Framework of AT-VLA), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 3 (3.1. Framework of AT-VLA), objective p. 5 (3.4. Training Objectives and Inference Pipeline), p. 4 (3.2. Adaptive Tactile Injection), p. 4 (3.1. Framework of AT-VLA), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), temporal p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 4 (3.2. Adaptive Tactile Injection), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Framework of AT-VLA), p. 4 (3.1. Framework of AT-VLA), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 3 (3.1. Framework of AT-VLA), objective p. 5 (3.4. Training Objectives and Inference Pipeline), p. 4 (3.2. Adaptive Tactile Injection), p. 4 (3.1. Framework of AT-VLA), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), temporal p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 4 (3.2. Adaptive Tactile Injection), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 2, the policy πθ takes as input the image observations I = {Ih, Ir, Il} from the head camera, right wrist camera, and left wrist camera, respectively; the language instruction ... (p. 3, 3.1. Framework of AT-VLA).
+- **Objective/update evidence:** All objectives are trained simultaneously, under the overall supervision L = La + λ1 ∗Lg + λ2 ∗Lr, λ1 and λ2 are all both to 0.01 to balance different losses' ... (p. 5, 3.4. Training Objectives and Inference Pipeline).
+- **Temporal/runtime evidence:** For supervision, we manually annotate the training episodes by assigning a label of 0 to non-contact frames and 1 to contact frames, and adopt binary cross-entropy gating loss Lg to ... (p. 4, 3.2. Adaptive Tactile Injection).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

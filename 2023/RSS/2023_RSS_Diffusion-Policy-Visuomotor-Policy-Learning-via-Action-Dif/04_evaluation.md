@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.04137; PDF retrieval source: https://arxiv.org/pdf/2303.04137. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.04137; PDF retrieval source: https://arxiv.org/pdf/2303.04137. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Tab. 6. Diffusion Policy with R3M achieves an 80% success rate but predicts jittery actions and is more likely to get stuck compared to ... | p. 9 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The benchmark consists of 5 tasks with a proficient human (PH) teleoperated demonstration dataset for each and mixed proficient/non-proficient human (MH) demonstration datasets for ... | embodiment, simulator version and control stack | p. 6 (5 Evaluation), p. 7 (5 Evaluation) |
 | Task/environment | (2019), the Franka Kitchen environment contains 7 objects for interaction and comes with a human demonstration dataset of 566 demonstrations, each completing 4 tasks ... | reset, timeout, object/scene variation | p. 7 (5 Evaluation), p. 6 (5 Evaluation) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 12 / A C - extractive body cue:** The primary failure modes for these were missed grasps during initial grasp of the mat, where the policy struggled to correct itself and thus got ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Multimodal behavior. At the given state, the end-effector (blue) can either go left or right to push the block. Diffusion Policy learns both ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Evaluation), p. 7 (5 Evaluation), p. 6 (5 Evaluation), p. 7 (5 Evaluation), p. 8 (5 Evaluation), p. 8 (5 Evaluation), metrics p. 9 (5 Evaluation), p. 9 (5 Evaluation), p. 6 (Figure/Table caption), p. 7 (5 Evaluation), p. 7 (5 Evaluation), p. 8 (5 Evaluation), baselines p. 6 (5 Evaluation), p. 8 (5 Evaluation), p. 9 (5 Evaluation), p. 7 (5 Evaluation), p. 7 (5 Evaluation), p. 8 (5 Evaluation), results p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 6 (5 Evaluation), p. 9 (5 Evaluation), p. 8 (5 Evaluation), p. 8 (5 Evaluation).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Evaluation), p. 7 (5 Evaluation), p. 6 (5 Evaluation), p. 7 (5 Evaluation), p. 8 (5 Evaluation), p. 8 (5 Evaluation), metrics p. 9 (5 Evaluation), p. 9 (5 Evaluation), p. 6 (Figure/Table caption), p. 7 (5 Evaluation), p. 7 (5 Evaluation), p. 8 (5 Evaluation), baselines p. 6 (5 Evaluation), p. 8 (5 Evaluation), p. 9 (5 Evaluation), p. 7 (5 Evaluation), p. 7 (5 Evaluation), p. 8 (5 Evaluation), results p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 6 (5 Evaluation), p. 9 (5 Evaluation), p. 8 (5 Evaluation), p. 8 (5 Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average of last 10 checkpoints), with each ... (p. 7, Figure/Table caption).
+- **Metric evidence:** 0.84 average IoU, compared with the 0% and 20% success rate of best-performing IBC and LSTM-GMM variants. (p. 9, 5 Evaluation).
+- **Baseline/ablation evidence:** We found Diffusion Policy to consistently outperform the prior state-of-the-art on all of the tested benchmarks, with an average success-rate improvement of 46.9%. (p. 6, 5 Evaluation).
+- **Failure/negative evidence:** The primary failure modes for these were missed grasps for initial folding (the sleeves and the color), and the policy being unable to stop adjusting the shirt at the end. (p. 12, A C).

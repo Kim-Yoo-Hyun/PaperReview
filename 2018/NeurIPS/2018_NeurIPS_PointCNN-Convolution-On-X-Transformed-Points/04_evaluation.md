@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1801.07791; PDF retrieval source: https://arxiv.org/pdf/1801.07791. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1801.07791; PDF retrieval source: https://arxiv.org/pdf/1801.07791. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** Material Section 2, and the PointCNN architectures for the tasks on these datasets can be found in Supp.
-- **p. 6 / 4 Experiments - extractive PDF cue:** We conducted an extensive evaluation of PointCNN for shape classification on six datasets (ModelNet40 [52], ScanNet [9], TU-Berlin [11], Quick Draw [15], MNIST, CIFAR10), and ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** We evaluate PointCNN on the segmentation of ShapeNet Parts, S3DIS, and ScanNet datasets, and summarize the results in Table 2.
-- **p. 7 / 4 Experiments - extractive PDF cue:** It is interesting to study whether architectural elements from Sketch-a-Net can be adopted and integrated into PointCNN to improve its performance on the sketch datasets.
-- **p. 8 / 4 Experiments - extractive PDF cue:** To verify this, we show T-SNE visualization of Fo, F∗and FX of 15 randomly picked representative points from the ModelNet40 dataset in Figure 5, each ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** ShapeNet Parts S3DIS ScanNet pIoU mpIoU mIoU OA SyncSpecCNN [55] 84.74 82.0 - - Pd-Network [22] 85.49 82.7 - - SSCN [12] 85.98 83.3 - ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Table 3: Segmentation result comparisons on the S3DIS [2] Area 5 in overall accuracy (OA, %), micro-averaged accuracy (mAcc, %), micro-averaged IoU (mIoU, %) and ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** Note that the part averaged IoU metric for ShapeNet Parts is the one used in [56].
+- **p. 6 / 4 Experiments - extractive body cue:** Material Section 2, and the PointCNN architectures for the tasks on these datasets can be found in Supp.
+- **p. 6 / 4 Experiments - extractive body cue:** We conducted an extensive evaluation of PointCNN for shape classification on six datasets (ModelNet40 [52], ScanNet [9], TU-Berlin [11], Quick Draw [15], MNIST, CIFAR10), and ...
+- **p. 7 / 4 Experiments - extractive body cue:** We evaluate PointCNN on the segmentation of ShapeNet Parts, S3DIS, and ScanNet datasets, and summarize the results in Table 2.
+- **p. 7 / 4 Experiments - extractive body cue:** It is interesting to study whether architectural elements from Sketch-a-Net can be adopted and integrated into PointCNN to improve its performance on the sketch datasets.
+- **p. 8 / 4 Experiments - extractive body cue:** To verify this, we show T-SNE visualization of Fo, F∗and FX of 15 randomly picked representative points from the ModelNet40 dataset in Figure 5, each ...
+- **p. 7 / 4 Experiments - extractive body cue:** ShapeNet Parts S3DIS ScanNet pIoU mpIoU mIoU OA SyncSpecCNN [55] 84.74 82.0 - - Pd-Network [22] 85.49 82.7 - - SSCN [12] 85.98 83.3 - ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Table 3: Segmentation result comparisons on the S3DIS [2] Area 5 in overall accuracy (OA, %), micro-averaged accuracy (mAcc, %), micro-averaged IoU (mIoU, %) and ...
+- **p. 7 / 4 Experiments - extractive body cue:** Note that the part averaged IoU metric for ShapeNet Parts is the one used in [56].
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3: Segmentation result comparisons on the S3DIS [2] Area 5 in overall accuracy (OA, %), micro-averaged accuracy (mAcc, %), micro-averaged IoU (mIoU, %) ... | p. 14 (Figure/Table caption) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | PointCNN outperforms PointNet++ on both datasets, with a more prominent advantage on Quick Draw (25M data samples), which is significantly larger than TU-Berlin (0.02M ... | p. 7 (4 Experiments) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** Material Section 2, and the PointCNN architectures for the tasks on these datasets can be found in Supp.
-- **p. 6 / 4 Experiments - extractive PDF cue:** We conducted an extensive evaluation of PointCNN for shape classification on six datasets (ModelNet40 [52], ScanNet [9], TU-Berlin [11], Quick Draw [15], MNIST, CIFAR10), and ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** We evaluate PointCNN on the segmentation of ShapeNet Parts, S3DIS, and ScanNet datasets, and summarize the results in Table 2.
-- **p. 7 / 4 Experiments - extractive PDF cue:** It is interesting to study whether architectural elements from Sketch-a-Net can be adopted and integrated into PointCNN to improve its performance on the sketch datasets.
-- **p. 8 / 4 Experiments - extractive PDF cue:** To verify this, we show T-SNE visualization of Fo, F∗and FX of 15 randomly picked representative points from the ModelNet40 dataset in Figure 5, each ...
+- **p. 6 / 4 Experiments - extractive body cue:** Material Section 2, and the PointCNN architectures for the tasks on these datasets can be found in Supp.
+- **p. 6 / 4 Experiments - extractive body cue:** We conducted an extensive evaluation of PointCNN for shape classification on six datasets (ModelNet40 [52], ScanNet [9], TU-Berlin [11], Quick Draw [15], MNIST, CIFAR10), and ...
+- **p. 7 / 4 Experiments - extractive body cue:** We evaluate PointCNN on the segmentation of ShapeNet Parts, S3DIS, and ScanNet datasets, and summarize the results in Table 2.
+- **p. 7 / 4 Experiments - extractive body cue:** It is interesting to study whether architectural elements from Sketch-a-Net can be adopted and integrated into PointCNN to improve its performance on the sketch datasets.
+- **p. 8 / 4 Experiments - extractive body cue:** To verify this, we show T-SNE visualization of Fo, F∗and FX of 15 randomly picked representative points from the ModelNet40 dataset in Figure 5, each ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Convolution input from regular grids (i) and point clouds (ii-iv). In (i), each grid cell is associated with a feature. In (ii-iv), the ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Hierarchical convolution on regular grids (upper) and point clouds (lower). In reg- ular grids, convolutions are recursively applied on local grid patches, which ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: The process for converting point coordinates to features. Neighboring points are transformed to the local coordinate systems of the representative points (a and ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4: PointCNN architecture for classification (a and b) and segmentation (c), where N and C denote the output representative point number and feature dimen- ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Comparisons of mean per-class accuracy (mA) and overall accuracy (OA) (%) on ModelNet40 [52] and Scan- Net [9]. The reported perfor- mances are ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Segmentation comparisons on ShapeNet Parts in part-averaged IoU (pIoU, %) and mean per- class pIoU (mpIoU, %), S3DIS in mean per-class IoU (mIoU, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Sketch classification results.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4: Image classification results. 4.2 Ablation Experiments and Visualizations Ablation test of the core X-Conv operator. To verify the effectiveness of the X-transformation, we ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Convolution input from regular grids (i) and point clouds (ii-iv). In (i), each grid cell is associated with a feature. In (ii-iv), the ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Hierarchical convolution on regular grids (upper) and point clouds (lower). In reg- ular grids, convolutions are recursively applied on local grid patches, which ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: The process for converting point coordinates to features. Neighboring points are transformed to the local coordinate systems of the representative points (a and ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4: PointCNN architecture for classification (a and b) and segmentation (c), where N and C denote the output representative point number and feature dimen- ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Comparisons of mean per-class accuracy (mA) and overall accuracy (OA) (%) on ModelNet40 [52] and Scan- Net [9]. The reported perfor- mances are ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Segmentation comparisons on ShapeNet Parts in part-averaged IoU (pIoU, %) and mean per- class pIoU (mpIoU, %), S3DIS in mean per-class IoU (mIoU, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Sketch classification results.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4: Image classification results. 4.2 Ablation Experiments and Visualizations Ablation test of the core X-Conv operator. To verify the effectiveness of the X-transformation, we ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Material Section 2, and the PointCNN architectures for the tasks on these datasets can be found in Supp. | embodiment, simulator version and control stack | p. 6 (4 Experiments), p. 6 (4 Experiments) |
 | Task/environment | We conducted an extensive evaluation of PointCNN for shape classification on six datasets (ModelNet40 [52], ScanNet [9], TU-Berlin [11], Quick Draw [15], MNIST, CIFAR10), ... | reset, timeout, object/scene variation | p. 6 (4 Experiments), p. 7 (4 Experiments) |
@@ -117,8 +117,8 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 | Primary metric/result | PointCNN outperforms PointNet++ on both datasets, with a more prominent advantage on Quick Draw (25M data samples), which is significantly larger than TU-Berlin (0.02M ... | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4 Experiments - extractive PDF cue:** Methods PointNet [33] PointNet++ [35] 3DmFV-Net [4] DGCNN [50] SpecGCN [46] PCNN [3] PointCNN Parameters 3.48M 1.48M 45.77M 1.84M 2.05M 8.2M 0.6M FLOPs Training 43.82B ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** 1b, where the Xs are 4×4 matrices, as K = 4 in this figure.
+- **p. 8 / 4 Experiments - extractive body cue:** Methods PointNet [33] PointNet++ [35] 3DmFV-Net [4] DGCNN [50] SpecGCN [46] PCNN [3] PointCNN Parameters 3.48M 1.48M 45.77M 1.84M 2.05M 8.2M 0.6M FLOPs Training 43.82B ...
+- **p. 2 / 1 Introduction - extractive body cue:** 1b, where the Xs are 4×4 matrices, as K = 4 in this figure.
 
 ## Generalization and Failure Cases
 
@@ -146,9 +146,9 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** Together with the lack of "shape" information, PointNet++ fails completely on this task.
+- **p. 7 / 4 Experiments - extractive body cue:** Together with the lack of "shape" information, PointNet++ fails completely on this task.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), metrics p. 7 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (Figure/Table caption), p. 6 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), metrics p. 7 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (Figure/Table caption), p. 6 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=c3BVcHcSiR; PDF retrieval source: https://openreview.net/pdf/7c6c1101cef920f79b251ef422b6399d7e8f4ae1.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=c3BVcHcSiR; PDF retrieval source: https://openreview.net/pdf/7c6c1101cef920f79b251ef422b6399d7e8f4ae1.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 
 ## Method Body Digest
 
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive PDF cue:** As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement ...
-- **p. 3 / 3.1. Overview - extractive PDF cue:** Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** A unified transformer jointly attends to visual features, language embeddings, and partially unmasked action tokens, progressively demasking remaining masked action tokens according to a diffusion ...
-- **p. 4 / 3.4. Algorithmic Pipeline - extractive PDF cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
-- **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive PDF cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive PDF cue:** At step t, the model yields perposition posteriors pθ(at-1 / at, c) instantiating Eq.
-- **p. 4 / 3.2. Formulation of Discrete Diffusion over Actions - extractive PDF cue:** In implementation, we follow mask diffusion formulations and collapse the multi-step chain into a single masked-token prediction objective.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
+- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement ...
+- **p. 3 / 3.1. Overview - extractive body cue:** Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion.
+- **p. 3 / 3.1. Overview - extractive body cue:** A unified transformer jointly attends to visual features, language embeddings, and partially unmasked action tokens, progressively demasking remaining masked action tokens according to a diffusion ...
+- **p. 4 / 3.4. Algorithmic Pipeline - extractive body cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
+- **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive body cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
+- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** At step t, the model yields perposition posteriors pθ(at-1 / at, c) instantiating Eq.
+- **p. 4 / 3.2. Formulation of Discrete Diffusion over Actions - extractive body cue:** In implementation, we follow mask diffusion formulations and collapse the multi-step chain into a single masked-token prediction objective.
+- **p. 3 / 3.1. Overview - extractive body cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 2) We develop an adaptive decoding strategy with secondary re-masking that enables confidence-based actiontoken decoding and robust error correction, improving both effectiveness and efficiency.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Drawing on recent advances in discrete diffusion and discrete flow-matching for language and multi-modal generation (Nie et al., 2025a; Shi et al., 2024b; Gat et ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior ...
+- **p. 2 / 1. Introduction - extractive body cue:** 2) We develop an adaptive decoding strategy with secondary re-masking that enables confidence-based actiontoken decoding and robust error correction, improving both effectiveness and efficiency.
+- **p. 1 / 1. Introduction - extractive body cue:** Drawing on recent advances in discrete diffusion and discrete flow-matching for language and multi-modal generation (Nie et al., 2025a; Shi et al., 2024b; Gat et ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive PDF cue:** As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement ...
-- **p. 3 / 3.1. Overview - extractive PDF cue:** Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** A unified transformer jointly attends to visual features, language embeddings, and partially unmasked action tokens, progressively demasking remaining masked action tokens according to a diffusion ...
-- **p. 4 / 3.4. Algorithmic Pipeline - extractive PDF cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
-- **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive PDF cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive PDF cue:** At step t, the model yields perposition posteriors pθ(at-1 / at, c) instantiating Eq.
+- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement ...
+- **p. 3 / 3.1. Overview - extractive body cue:** Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion.
+- **p. 3 / 3.1. Overview - extractive body cue:** A unified transformer jointly attends to visual features, language embeddings, and partially unmasked action tokens, progressively demasking remaining masked action tokens according to a diffusion ...
+- **p. 4 / 3.4. Algorithmic Pipeline - extractive body cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
+- **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive body cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
+- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** At step t, the model yields perposition posteriors pθ(at-1 / at, c) instantiating Eq.
 - **Detected method headings:** 2.1. Vision-Language-Action Models (p. 2); 2.2. Discrete Diffusion Models (p. 2); 3. Discrete Diffusion VLA Model (p. 3); 3.3. Architecture of Discrete Diffusion VLA (p. 4); 3.4. Algorithmic Pipeline (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then ... | p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion. | p. 3 (3.1. Overview), p. 3 (3.1. Overview) |
@@ -47,11 +47,11 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.2. Formulation of Discrete Diffusion over Actions - extractive PDF cue:** In implementation, we follow mask diffusion formulations and collapse the multi-step chain into a single masked-token prediction objective.
-- **p. 4 / 3.4. Algorithmic Pipeline - extractive PDF cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
-- **p. 3 / 3.2. Formulation of Discrete Diffusion over Actions - extractive PDF cue:** The forward (noising) process of discrete diffusion is a Markov chain {at}T t=0 with per-step transition matrices Qt ∈RV ×V that independently map each token ...
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive PDF cue:** We keep the top (1-γt+1)L positions Kt and update the tokens via tempered Gumbel sampling to encourage exploration: at+1,i∈Kt ∼Categorical  softmax log pθ(· / ...
+- **p. 4 / 3.2. Formulation of Discrete Diffusion over Actions - extractive body cue:** In implementation, we follow mask diffusion formulations and collapse the multi-step chain into a single masked-token prediction objective.
+- **p. 4 / 3.4. Algorithmic Pipeline - extractive body cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
+- **p. 3 / 3.1. Overview - extractive body cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
+- **p. 3 / 3.2. Formulation of Discrete Diffusion over Actions - extractive body cue:** The forward (noising) process of discrete diffusion is a Markov chain {at}T t=0 with per-step transition matrices Qt ∈RV ×V that independently map each token ...
+- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** We keep the top (1-γt+1)L positions Kt and update the tokens via tempered Gumbel sampling to encourage exploration: at+1,i∈Kt ∼Categorical  softmax log pθ(· / ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.4. Algorithmic Pipeline), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -67,13 +67,13 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Overview - extractive PDF cue:** Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Modern VLA frameworks typically adapt a large pretrained vision-language model (VLM) by adding an action-generation head that outputs motor commands (either continuous trajectories or discrete ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We evaluate Discrete Diffusion VLA on a Franka Panda arm (LIBERO (Liu et al., 2023)), a Google Robot (SimplerEnvFractal (Li et al., 2025)), and a ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Vision-Language-Action (VLA) models enable robots to interpret visual and linguistic inputs and execute corresponding action sequences.
-- **p. 2 / 1. Introduction - extractive PDF cue:** At inference, the method starts with all action tokens masked, concatenated with visual and language inputs, and iteratively predicts and re-masks low-confidence tokens until convergence, ...
-- **p. 3 / 3.1. Overview - extractive PDF cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
-- **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive PDF cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
+- **p. 3 / 3.1. Overview - extractive body cue:** Given image observations (single- or multi-view) and a language instruction, the model extends a VLM backbone to generate actions via discrete diffusion.
+- **p. 1 / 1. Introduction - extractive body cue:** Modern VLA frameworks typically adapt a large pretrained vision-language model (VLM) by adding an action-generation head that outputs motor commands (either continuous trajectories or discrete ...
+- **p. 2 / 1. Introduction - extractive body cue:** We evaluate Discrete Diffusion VLA on a Franka Panda arm (LIBERO (Liu et al., 2023)), a Google Robot (SimplerEnvFractal (Li et al., 2025)), and a ...
+- **p. 1 / 1. Introduction - extractive body cue:** Vision-Language-Action (VLA) models enable robots to interpret visual and linguistic inputs and execute corresponding action sequences.
+- **p. 2 / 1. Introduction - extractive body cue:** At inference, the method starts with all action tokens masked, concatenated with visual and language inputs, and iteratively predicts and re-masks low-confidence tokens until convergence, ...
+- **p. 3 / 3.1. Overview - extractive body cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
+- **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive body cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,9 +88,9 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 
 ## Training vs Inference
 
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive PDF cue:** As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement ...
-- **p. 4 / 3.4. Algorithmic Pipeline - extractive PDF cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
+- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement ...
+- **p. 4 / 3.4. Algorithmic Pipeline - extractive body cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -110,13 +110,13 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4.4. Ablation Study - extractive PDF cue:** Action head without robot pretraining.
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
-- **p. 6 / 4.3. Extended Evaluation Across Robot Platforms - extractive PDF cue:** On Variant Aggregation, Discrete Diffusion VLA attains 56.9%, competitive with RT-2-X (64.3%) and π0FAST (59.0%).
-- **p. 7 / 4.3. Extended Evaluation Across Robot Platforms - extractive PDF cue:** Model Visual Matching Variant Aggregation #Overall Average Pick Coke Mv Near Drawer Avg.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Ablation study on decoding strategy.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** (ii) Right y-axis: Ablation on denoising steps.
-- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive PDF cue:** We fine-tune Discrete Diffusion VLA from OpenVLA backbone (Prismatic-7B) with images resized to 224 × 224.
+- **p. 7 / 4.4. Ablation Study - extractive body cue:** Action head without robot pretraining.
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** We evaluate Discrete Diffusion VLA on three different robot settings: (i) Franka Panda arm on LIBERO (Liu et al., 2023) (four suites: Spatial, Object, Goal, ...
+- **p. 6 / 4.3. Extended Evaluation Across Robot Platforms - extractive body cue:** On Variant Aggregation, Discrete Diffusion VLA attains 56.9%, competitive with RT-2-X (64.3%) and π0FAST (59.0%).
+- **p. 7 / 4.3. Extended Evaluation Across Robot Platforms - extractive body cue:** Model Visual Matching Variant Aggregation #Overall Average Pick Coke Mv Near Drawer Avg.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Ablation study on decoding strategy.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** (ii) Right y-axis: Ablation on denoising steps.
+- **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** We fine-tune Discrete Diffusion VLA from OpenVLA backbone (Prismatic-7B) with images resized to 224 × 224.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -130,7 +130,7 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), objective p. 4 (3.2. Formulation of Discrete Diffusion over Actions), p. 4 (3.4. Algorithmic Pipeline), p. 3 (3.1. Overview), p. 3 (3.2. Formulation of Discrete Diffusion over Actions), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), temporal p. 7 (4.4. Ablation Study), p. 8 (4.5. Inference Efficiency), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.5. Inference Efficiency), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 2 (2.1. Vision-Language-Action Models).
+- **Evidence anchors reviewed:** method p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), objective p. 4 (3.2. Formulation of Discrete Diffusion over Actions), p. 4 (3.4. Algorithmic Pipeline), p. 3 (3.1. Overview), p. 3 (3.2. Formulation of Discrete Diffusion over Actions), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), temporal p. 7 (4.4. Ablation Study), p. 8 (4.5. Inference Efficiency), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.5. Inference Efficiency), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 2 (2.1. Vision-Language-Action Models).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.24767; PDF retrieval source: https://arxiv.org/pdf/2606.24767. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2606.24767; PDF retrieval source: https://arxiv.org/pdf/2606.24767. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. ME
 
 ## Method Body Digest
 
-- **p. 3 / III. METHOD - extractive PDF cue:** In this section, we introduce an object-oriented mapping workflow and the principles behind each module.
-- **p. 5 / III. METHOD - extractive PDF cue:** To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP loss to suppress ...
-- **p. 3 / III. METHOD - extractive PDF cue:** Object-oriented Mapping (Sec III-A): Given a set of posed RGBD images from a scene, this step is to process these RGBD observations and build an ...
-- **p. 4 / III. METHOD - extractive PDF cue:** Recent progress suggested that the advanced CLIP model can work as an effective object descriptor encoder [7].
-- **p. 4 / III. METHOD - extractive PDF cue:** Top-k patches with maximal visibility are input into a CLIP visual encoder and an average pooling layer to obtain a multiview CLIP feature f 3d: ...
-- **p. 5 / III. METHOD - extractive PDF cue:** Benefiting from this loss, we can achieve stable pose optimization.
-- **p. 4 / III. METHOD - extractive PDF cue:** Our object-level tracker improves relocalization performance relying on a coarse-to-fine strategy and a novel loss.
-- **p. 4 / III. METHOD - extractive PDF cue:** The goal is to solve an optimal assignment from Gq to Gl so that the total matching score is maximized, as shown in Fig.
+- **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce an object-oriented mapping workflow and the principles behind each module.
+- **p. 5 / III. METHOD - extractive body cue:** To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP loss to suppress ...
+- **p. 3 / III. METHOD - extractive body cue:** Object-oriented Mapping (Sec III-A): Given a set of posed RGBD images from a scene, this step is to process these RGBD observations and build an ...
+- **p. 4 / III. METHOD - extractive body cue:** Recent progress suggested that the advanced CLIP model can work as an effective object descriptor encoder [7].
+- **p. 4 / III. METHOD - extractive body cue:** Top-k patches with maximal visibility are input into a CLIP visual encoder and an average pooling layer to obtain a multiview CLIP feature f 3d: ...
+- **p. 5 / III. METHOD - extractive body cue:** Benefiting from this loss, we can achieve stable pose optimization.
+- **p. 4 / III. METHOD - extractive body cue:** Our object-level tracker improves relocalization performance relying on a coarse-to-fine strategy and a novel loss.
+- **p. 4 / III. METHOD - extractive body cue:** The goal is to solve an optimal assignment from Gq to Gl so that the total matching score is maximized, as shown in Fig.
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Overall, our contributions can be summarized as follows: • We introduce a multi-modal landmark association module that combines open-vocabulary object descriptors with a global scene ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** We construct an objectoriented map suite that consists of a global scene graph, openvocabulary object descriptors, object geometry, and reference frames.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** In response to these challenges, we propose OpenReLoc, a semantic-aware, memory-efficient, and scalable camera relocalization framework based on object-level representations with open-vocabulary understanding.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Overall, our contributions can be summarized as follows: • We introduce a multi-modal landmark association module that combines open-vocabulary object descriptors with a global scene ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** We construct an objectoriented map suite that consists of a global scene graph, openvocabulary object descriptors, object geometry, and reference frames.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In response to these challenges, we propose OpenReLoc, a semantic-aware, memory-efficient, and scalable camera relocalization framework based on object-level representations with open-vocabulary understanding.
 
 ## Source Evidence Cues
 
-- **p. 3 / III. METHOD - extractive PDF cue:** In this section, we introduce an object-oriented mapping workflow and the principles behind each module.
-- **p. 5 / III. METHOD - extractive PDF cue:** To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP loss to suppress ...
-- **p. 3 / III. METHOD - extractive PDF cue:** Object-oriented Mapping (Sec III-A): Given a set of posed RGBD images from a scene, this step is to process these RGBD observations and build an ...
-- **p. 4 / III. METHOD - extractive PDF cue:** Recent progress suggested that the advanced CLIP model can work as an effective object descriptor encoder [7].
-- **p. 4 / III. METHOD - extractive PDF cue:** Top-k patches with maximal visibility are input into a CLIP visual encoder and an average pooling layer to obtain a multiview CLIP feature f 3d: ...
-- **p. 5 / III. METHOD - extractive PDF cue:** Benefiting from this loss, we can achieve stable pose optimization.
+- **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce an object-oriented mapping workflow and the principles behind each module.
+- **p. 5 / III. METHOD - extractive body cue:** To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP loss to suppress ...
+- **p. 3 / III. METHOD - extractive body cue:** Object-oriented Mapping (Sec III-A): Given a set of posed RGBD images from a scene, this step is to process these RGBD observations and build an ...
+- **p. 4 / III. METHOD - extractive body cue:** Recent progress suggested that the advanced CLIP model can work as an effective object descriptor encoder [7].
+- **p. 4 / III. METHOD - extractive body cue:** Top-k patches with maximal visibility are input into a CLIP visual encoder and an average pooling layer to obtain a multiview CLIP feature f 3d: ...
+- **p. 5 / III. METHOD - extractive body cue:** Benefiting from this loss, we can achieve stable pose optimization.
 - **Detected method headings:** III. METHOD (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In this section, we introduce an object-oriented mapping workflow and the principles behind each module. | p. 3 (III. METHOD), p. 5 (III. METHOD) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP ... | p. 5 (III. METHOD), p. 3 (III. METHOD) |
@@ -47,10 +47,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. ME
 
 ## Objective / Update Rule
 
-- **p. 5 / III. METHOD - extractive PDF cue:** Benefiting from this loss, we can achieve stable pose optimization.
-- **p. 4 / III. METHOD - extractive PDF cue:** Our object-level tracker improves relocalization performance relying on a coarse-to-fine strategy and a novel loss.
-- **p. 4 / III. METHOD - extractive PDF cue:** The goal is to solve an optimal assignment from Gq to Gl so that the total matching score is maximized, as shown in Fig.
-- **p. 5 / III. METHOD - extractive PDF cue:** To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP loss to suppress ...
+- **p. 5 / III. METHOD - extractive body cue:** Benefiting from this loss, we can achieve stable pose optimization.
+- **p. 4 / III. METHOD - extractive body cue:** Our object-level tracker improves relocalization performance relying on a coarse-to-fine strategy and a novel loss.
+- **p. 4 / III. METHOD - extractive body cue:** The goal is to solve an optimal assignment from Gq to Gl so that the total matching score is maximized, as shown in Fig.
+- **p. 5 / III. METHOD - extractive body cue:** To ensure more robust and accurate pose estimation, we use a Huber kernel H with a threshold δ on the 2D ICP loss to suppress ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -66,13 +66,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. ME
 
 ## Observation–State–Action Interface
 
-- **p. 3 / III. METHOD - extractive PDF cue:** Object-oriented Mapping (Sec III-A): Given a set of posed RGBD images from a scene, this step is to process these RGBD observations and build an ...
-- **p. 3 / III. METHOD - extractive PDF cue:** Based on depth observations, we can reconstruct the scene mesh by TSDF-Fusion [20] and convert vertices into the scene point cloud P.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** The goal is to estimate the 6-DOF camera pose given a visual observation in a known map.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** ACCEPTED JUNE 2026 2 Input Multi-floor Scene Object-level Mapping and Matching Pose Estimation Third floor Second floor First floor Query Image Fig.
-- **p. 4 / III. METHOD - extractive PDF cue:** Top-k patches with maximal visibility are input into a CLIP visual encoder and an average pooling layer to obtain a multiview CLIP feature f 3d: ...
-- **p. 5 / III. METHOD - extractive PDF cue:** Li forward = 1 Npi X n∈pi H(//pn i -ψ(pn i , mi)//2, δ) , (7a) Li backward = 1 Nmi X n∈mi H(//mn i ...
-- **p. 4 / III. METHOD - extractive PDF cue:** We project point clouds Pi on the image plane to find patches S of the same landmark in different views.
+- **p. 3 / III. METHOD - extractive body cue:** Object-oriented Mapping (Sec III-A): Given a set of posed RGBD images from a scene, this step is to process these RGBD observations and build an ...
+- **p. 3 / III. METHOD - extractive body cue:** Based on depth observations, we can reconstruct the scene mesh by TSDF-Fusion [20] and convert vertices into the scene point cloud P.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The goal is to estimate the 6-DOF camera pose given a visual observation in a known map.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** 2 Input Multi-floor Scene Object-level Mapping and Matching Pose Estimation Third floor Second floor First floor Query Image Fig.
+- **p. 4 / III. METHOD - extractive body cue:** Top-k patches with maximal visibility are input into a CLIP visual encoder and an average pooling layer to obtain a multiview CLIP feature f 3d: ...
+- **p. 5 / III. METHOD - extractive body cue:** Li forward = 1 Npi X n∈pi H(//pn i -ψ(pn i , mi)//2, δ) , (7a) Li backward = 1 Nmi X n∈mi H(//mn i ...
+- **p. 4 / III. METHOD - extractive body cue:** We project point clouds Pi on the image plane to find patches S of the same landmark in different views.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -107,13 +107,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. ME
 
 ## Failure and Ablation Link
 
-- **p. 5 / IV. EXPERIMENTS - extractive PDF cue:** They contain rich object categories and diverse scenes without temporal changes, but only provide sequential frames with high visual overlap.
-- **p. 7 / 3.5 MB - extractive PDF cue:** Ablation Study To verify the rationality of our main module designs, we conduct ablation studies on different datasets in Tab.
-- **p. 7 / 3.5 MB - extractive PDF cue:** Removing either stage inevitably degrades performance, highlighting contributions and complementary roles of these two stages.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6: Open-vocabulary Object Matching. Open-vocabulary object-level mapping allows us to recognize diverse objects. methods achieve comparable efficiency. The relocalization module typically serves as an ...
-- **p. 7 / IV. EXPERIMENTS - extractive PDF cue:** Such a distribution falls beyond the scope of closed-vocabulary methods, leading to their failure.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** IV show that ORB-SLAM2 experienced failure, succeeding on very few frames, despite achieving better accuracy.
-- **p. 6 / IV. EXPERIMENTS - extractive PDF cue:** As a result, GoReloc fails to identify valid matching objects in many observations.
+- **p. 5 / IV. EXPERIMENTS - extractive body cue:** They contain rich object categories and diverse scenes without temporal changes, but only provide sequential frames with high visual overlap.
+- **p. 7 / 3.5 MB - extractive body cue:** Ablation Study To verify the rationality of our main module designs, we conduct ablation studies on different datasets in Tab.
+- **p. 7 / 3.5 MB - extractive body cue:** Removing either stage inevitably degrades performance, highlighting contributions and complementary roles of these two stages.
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Open-vocabulary Object Matching. Open-vocabulary object-level mapping allows us to recognize diverse objects. methods achieve comparable efficiency. The relocalization module typically serves as an ...
+- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Such a distribution falls beyond the scope of closed-vocabulary methods, leading to their failure.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** IV show that ORB-SLAM2 experienced failure, succeeding on very few frames, despite achieving better accuracy.
+- **p. 6 / IV. EXPERIMENTS - extractive body cue:** As a result, GoReloc fails to identify valid matching objects in many observations.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -127,7 +127,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. ME
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), objective p. 5 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), temporal p. 7 (IV. EXPERIMENTS), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (IV. EXPERIMENTS), p. 1 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), objective p. 5 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), temporal p. 7 (IV. EXPERIMENTS), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (IV. EXPERIMENTS), p. 1 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

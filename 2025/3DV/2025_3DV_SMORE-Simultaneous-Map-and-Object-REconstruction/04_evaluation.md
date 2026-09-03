@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=1NhnG9BvQB&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=1NhnG9BvQB&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (6. Qualitativ
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** Datasets: All of our experiments are conducted on nuScenes[3] and Argoverse 2.0[42].
-- **p. 6 / 5. Experiments - extractive PDF cue:** Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be out-of-phase ...
-- **p. 7 / 5.2. Pose Estimation - extractive PDF cue:** (Left) Each column shows nuScenes and Argoverse object reconstructions using ground truth poses compared to (right) ours.
-- **p. 5 / 5. Experiments - extractive PDF cue:** We focus primarily on nuScenes as its noisy annotations and sparse LiDAR present the greatest challenge to accurate geometry recovery.
-- **p. 6 / 5. Experiments - extractive PDF cue:** Here, we visualize the set of rays captured at a time instant (blue lines) for NuScenes (top) and Argoverse [42] (bottom).
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** Pose accuracy evaluation on nuScenes (using NuScene's default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth ...
-- **p. 7 / 6. Qualitative Results - extractive PDF cue:** Visualizations of our foreground reconstructions on nuScenes and Argoverse are shown in Fig.
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** Background reconstructions from nuScenes and Argoverse are shown in Fig.
+- **p. 5 / 5. Experiments - extractive body cue:** Datasets: All of our experiments are conducted on nuScenes[3] and Argoverse 2.0[42].
+- **p. 6 / 5. Experiments - extractive body cue:** Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be out-of-phase ...
+- **p. 7 / 5.2. Pose Estimation - extractive body cue:** (Left) Each column shows nuScenes and Argoverse object reconstructions using ground truth poses compared to (right) ours.
+- **p. 5 / 5. Experiments - extractive body cue:** We focus primarily on nuScenes as its noisy annotations and sparse LiDAR present the greatest challenge to accurate geometry recovery.
+- **p. 6 / 5. Experiments - extractive body cue:** Here, we visualize the set of rays captured at a time instant (blue lines) for NuScenes (top) and Argoverse [42] (bottom).
+- **p. 8 / 6. Qualitative Results - extractive body cue:** Pose accuracy evaluation on nuScenes (using NuScene's default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth ...
+- **p. 7 / 6. Qualitative Results - extractive body cue:** Visualizations of our foreground reconstructions on nuScenes and Argoverse are shown in Fig.
+- **p. 8 / 6. Qualitative Results - extractive body cue:** Background reconstructions from nuScenes and Argoverse are shown in Fig.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (6. Qualitativ
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 2. Dynamic object reconstructions using human-annotated bounding-box annotations (top left) tend to be noisy. Optimizing over object pose (top right) improves accuracy, while ... | p. 2 (Figure/Table caption) |
 | 6. Qualitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | 2, we show how accounting for this distortion can significantly improve the reconstructions. | p. 8 (6. Qualitative Results) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (6. Qualitativ
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** Datasets: All of our experiments are conducted on nuScenes[3] and Argoverse 2.0[42].
-- **p. 6 / 5. Experiments - extractive PDF cue:** Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be out-of-phase ...
-- **p. 7 / 5.2. Pose Estimation - extractive PDF cue:** (Left) Each column shows nuScenes and Argoverse object reconstructions using ground truth poses compared to (right) ours.
-- **p. 5 / 5. Experiments - extractive PDF cue:** We focus primarily on nuScenes as its noisy annotations and sparse LiDAR present the greatest challenge to accurate geometry recovery.
-- **p. 6 / 5. Experiments - extractive PDF cue:** Here, we visualize the set of rays captured at a time instant (blue lines) for NuScenes (top) and Argoverse [42] (bottom).
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** Pose accuracy evaluation on nuScenes (using NuScene's default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth ...
-- **p. 7 / 6. Qualitative Results - extractive PDF cue:** Visualizations of our foreground reconstructions on nuScenes and Argoverse are shown in Fig.
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** Background reconstructions from nuScenes and Argoverse are shown in Fig.
+- **p. 5 / 5. Experiments - extractive body cue:** Datasets: All of our experiments are conducted on nuScenes[3] and Argoverse 2.0[42].
+- **p. 6 / 5. Experiments - extractive body cue:** Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be out-of-phase ...
+- **p. 7 / 5.2. Pose Estimation - extractive body cue:** (Left) Each column shows nuScenes and Argoverse object reconstructions using ground truth poses compared to (right) ours.
+- **p. 5 / 5. Experiments - extractive body cue:** We focus primarily on nuScenes as its noisy annotations and sparse LiDAR present the greatest challenge to accurate geometry recovery.
+- **p. 6 / 5. Experiments - extractive body cue:** Here, we visualize the set of rays captured at a time instant (blue lines) for NuScenes (top) and Argoverse [42] (bottom).
+- **p. 8 / 6. Qualitative Results - extractive body cue:** Pose accuracy evaluation on nuScenes (using NuScene's default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth ...
+- **p. 7 / 6. Qualitative Results - extractive body cue:** Visualizations of our foreground reconstructions on nuScenes and Argoverse are shown in Fig.
+- **p. 8 / 6. Qualitative Results - extractive body cue:** Background reconstructions from nuScenes and Argoverse are shown in Fig.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. NuScenes surface reconstruction produced by aggregating LiDAR scans using human-annotated ego-pose and dynamic object bounding boxes (left). We introduce a global optimization that ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Dynamic object reconstructions using human-annotated bounding-box annotations (top left) tend to be noisy. Optimizing over object pose (top right) improves accuracy, while de-skewing ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Depth maps produced by our method (left) as compared to those from a SOTA NeRF-based method[33] (right). In the top row we see ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. (Left) A LiDAR sweep where each point has been col- ored according to which laser it belongs to (hue) and the time within ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. LiDAR is often abstracted as 360-degree sweeps captured with a global shutter, but is actually captured with a continuous rotating shutter from a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. (Left) Each column shows nuScenes and Argoverse ob- ject reconstructions using ground truth poses compared to (right) ours.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Examples of the synthesized point clouds from our method (left) versus NeuRAD [33] (right). Ground truth is shown in blue and the predicted ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1. Evaluation of our method's robustness to actor annotation errors (subsampling or real tracks). We measure reconstruction accuracy using the nearest-neighbor distance between the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. NuScenes surface reconstruction produced by aggregating LiDAR scans using human-annotated ego-pose and dynamic object bounding boxes (left). We introduce a global optimization that ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Dynamic object reconstructions using human-annotated bounding-box annotations (top left) tend to be noisy. Optimizing over object pose (top right) improves accuracy, while de-skewing ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Depth maps produced by our method (left) as compared to those from a SOTA NeRF-based method[33] (right). In the top row we see ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. (Left) A LiDAR sweep where each point has been col- ored according to which laser it belongs to (hue) and the time within ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. LiDAR is often abstracted as 360-degree sweeps captured with a global shutter, but is actually captured with a continuous rotating shutter from a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. (Left) Each column shows nuScenes and Argoverse ob- ject reconstructions using ground truth poses compared to (right) ours.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Examples of the synthesized point clouds from our method (left) versus NeuRAD [33] (right). Ground truth is shown in blue and the predicted ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1. Evaluation of our method's robustness to actor annotation errors (subsampling or real tracks). We measure reconstruction accuracy using the nearest-neighbor distance between the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Datasets: All of our experiments are conducted on nuScenes[3] and Argoverse 2.0[42]. | embodiment, simulator version and control stack | p. 5 (5. Experiments), p. 6 (5. Experiments) |
 | Task/environment | Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be ... | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 7 (5.2. Pose Estimation) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (1. Introduction), p. 3 (3. Problem Statement) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (3. Problem Statement), p. 5 (4.4. What is a LiDAR sweep?) |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 3 (3. Problem Statement), p. 3 (3. Problem Statement) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 5 (4.4. What is a LiDAR sweep?), p. 4 (3. Problem Statement) |
 
 ## Metrics and Success Definition
 
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (6. Qualitativ
 | Primary metric/result | 2, we show how accounting for this distortion can significantly improve the reconstructions. | numeric claim only at cited anchor | p. 8 (6. Qualitative Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.1. Lidar Novel View Synthesis - extractive PDF cue:** Iterations are stopped if the mean registration error for an object falls below 1 centimeter for three consecutive iterations.
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** NN Dist (m) ↓Acc Relax ↑Acc Strict ↑ NKSR[12] + GT tracks 0.071 0.9 0.76 NKSR[12] + LT3D[27] 0.071 0.9 0.76 Ours + GT tracks ...
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** Specifically, we compute the percent of points less than 10cm and 5cm for the relaxed and strict metrics, respectively Annotation Rate 1Hz 0.5Hz 0.25Hz Interpolation ...
-- **p. 8 / 6. Qualitative Results - extractive PDF cue:** Pose accuracy evaluation on nuScenes (using NuScene's default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth ...
-- **p. 4 / 4.2. Optimize surfaces - extractive PDF cue:** First, we use the fact the distance is unaffected by a global rigid transformation to see that D(TM, X) = D(M, T-1X).
-- **p. 4 / 4.4. What is a LiDAR sweep? - extractive PDF cue:** Instead, they rotate continuously and measure depth across 16-128 vertically arranged lasers, typically taking 100ms to complete a 360-degree rotation.
+- **p. 6 / 5.1. Lidar Novel View Synthesis - extractive body cue:** Iterations are stopped if the mean registration error for an object falls below 1 centimeter for three consecutive iterations.
+- **p. 8 / 6. Qualitative Results - extractive body cue:** NN Dist (m) ↓Acc Relax ↑Acc Strict ↑ NKSR[12] + GT tracks 0.071 0.9 0.76 NKSR[12] + LT3D[27] 0.071 0.9 0.76 Ours + GT tracks ...
+- **p. 8 / 6. Qualitative Results - extractive body cue:** Specifically, we compute the percent of points less than 10cm and 5cm for the relaxed and strict metrics, respectively Annotation Rate 1Hz 0.5Hz 0.25Hz Interpolation ...
+- **p. 8 / 6. Qualitative Results - extractive body cue:** Pose accuracy evaluation on nuScenes (using NuScene's default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth ...
+- **p. 4 / 4.2. Optimize surfaces - extractive body cue:** First, we use the fact the distance is unaffected by a global rigid transformation to see that D(TM, X) = D(M, T-1X).
+- **p. 4 / 4.4. What is a LiDAR sweep? - extractive body cue:** Instead, they rotate continuously and measure depth across 16-128 vertically arranged lasers, typically taking 100ms to complete a 360-degree rotation.
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (6. Qualitativ
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 5.1. Lidar Novel View Synthesis - extractive PDF cue:** Iterations are stopped if the mean registration error for an object falls below 1 centimeter for three consecutive iterations.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. NuScenes surface reconstruction produced by aggregating LiDAR scans using human-annotated ego-pose and dynamic object bounding boxes (left). We introduce a global optimization that ...
-- **p. 6 / 5. Experiments - extractive PDF cue:** Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be out-of-phase ...
-- **p. 7 / 5.1. Lidar Novel View Synthesis - extractive PDF cue:** For testing, however, the reference implementation does not support optimizing new poses that were not present at train time.
-- **p. 5 / 5. Experiments - extractive PDF cue:** We focus primarily on nuScenes as its noisy annotations and sparse LiDAR present the greatest challenge to accurate geometry recovery.
-- **p. 7 / 5.2. Pose Estimation - extractive PDF cue:** 1 further confirm the robustness of our method to input annotation errors.
+- **p. 6 / 5.1. Lidar Novel View Synthesis - extractive body cue:** Iterations are stopped if the mean registration error for an object falls below 1 centimeter for three consecutive iterations.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. NuScenes surface reconstruction produced by aggregating LiDAR scans using human-annotated ego-pose and dynamic object bounding boxes (left). We introduce a global optimization that ...
+- **p. 6 / 5. Experiments - extractive body cue:** Interestingly, our approach is even more effective for recent AV datasets [30, 42] that employ multiple spinning lidars, which are often set to be out-of-phase ...
+- **p. 7 / 5.1. Lidar Novel View Synthesis - extractive body cue:** For testing, however, the reference implementation does not support optimizing new poses that were not present at train time.
+- **p. 5 / 5. Experiments - extractive body cue:** We focus primarily on nuScenes as its noisy annotations and sparse LiDAR present the greatest challenge to accurate geometry recovery.
+- **p. 7 / 5.2. Pose Estimation - extractive body cue:** 1 further confirm the robustness of our method to input annotation errors.
 
-- **PDF anchors reviewed:** datasets p. 5 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Pose Estimation), p. 5 (5. Experiments), p. 6 (5. Experiments), p. 8 (6. Qualitative Results), metrics p. 8 (6. Qualitative Results), p. 8 (Figure/Table caption), p. 6 (5.1. Lidar Novel View Synthesis), p. 7 (5.2. Pose Estimation), p. 7 (5.1. Lidar Novel View Synthesis), p. 2 (Figure/Table caption), baselines p. 8 (6. Qualitative Results), p. 7 (5.1. Lidar Novel View Synthesis), p. 7 (5.2. Pose Estimation), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 2 (Figure/Table caption), p. 8 (6. Qualitative Results), p. 6 (5.1. Lidar Novel View Synthesis), p. 7 (5.1. Lidar Novel View Synthesis), p. 7 (5.1. Lidar Novel View Synthesis), p. 8 (6. Qualitative Results).
+- **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Pose Estimation), p. 5 (5. Experiments), p. 6 (5. Experiments), p. 8 (6. Qualitative Results), metrics p. 8 (6. Qualitative Results), p. 8 (Figure/Table caption), p. 6 (5.1. Lidar Novel View Synthesis), p. 7 (5.2. Pose Estimation), p. 7 (5.1. Lidar Novel View Synthesis), p. 2 (Figure/Table caption), baselines p. 8 (6. Qualitative Results), p. 7 (5.1. Lidar Novel View Synthesis), p. 7 (5.2. Pose Estimation), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 2 (Figure/Table caption), p. 8 (6. Qualitative Results), p. 6 (5.1. Lidar Novel View Synthesis), p. 7 (5.1. Lidar Novel View Synthesis), p. 7 (5.1. Lidar Novel View Synthesis), p. 8 (6. Qualitative Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

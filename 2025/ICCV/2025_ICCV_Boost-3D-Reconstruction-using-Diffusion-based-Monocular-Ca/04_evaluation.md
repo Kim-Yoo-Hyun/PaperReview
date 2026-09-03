@@ -2,87 +2,87 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D Vision Tasks), p. 6 (4.2. Camera Intrinsic Evaluation), p. 7 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study)): Our work significantly outperforms strong baselines such as Metric3D [85] by a large margin, and achieves comparable performance with the SOTA work Unidepth [46].
+PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Evaluation), p. 5 (7.8. The Importance of camera image in metric), p. 2 (6.3. More implementation details and discussions), p. 2 (6.3. More implementation details and discussions), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction)): Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods.
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For camera intrinsic estimation, the training data is sourced from a variety of datasets, including NuScenes [7], KITTI [19], CityScapes [11], NYUv2 [44], SUN3D [78], ...
-- **p. 6 / 4.2. Camera Intrinsic Evaluation - extractive PDF cue:** Notably, our method also performs well on the highly challenging Scenes11 dataset [10], which features randomly shaped, moving objects, further demonstrating its robustness in extreme ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We adopt Waymo [67], RGBD [65], ScanNet [13], MVS [16], and Scenes11 [10] datasets for zeroshot testing.
-- **p. 6 / 4.2. Camera Intrinsic Evaluation - extractive PDF cue:** Among the methods, Unidepth [46] shows the weakest performance, particularly in real-world, unconstrained scenarios such as the MVS dataset.
-- **p. 7 / 4.4. More 3D Vision Tasks - extractive PDF cue:** We present the predicted metric depth in both various scenes.
-- **p. 7 / 4.4. More 3D Vision Tasks - extractive PDF cue:** NuScenes Ibims ETH3D RGB GT Ours UniDepth Metric3D m Figure 5.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Our method accurately recovers real-world metrics and demonstrates robustness to variations in focal length. in Tab.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Omitting the camera image representation slightly reduces accuracy and we further justify the importance of the camera image in metric depth estimation with evaluation on ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Dataset Images Scene Intrinsic Training Set NuScenes [7] 28k Outdoor Calibrated KITTI [11] 18 k Outdoor Calibrated CityScapes [11] 23k Outdoor Calibrated NYUv2 [44] 6k ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Dataset Images Scene Acquisition Training Set Hypersim [52] 54k Indoor Synthetic Virtual KITTI [6] 20k Outdoor Synthetic Taskonomy [87] 40M Indoor RGB-D TartanAir [74] 305k ...
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** NuScenes KITTI CityScapes NYUv2 eb 0.051 0.021 0.055 0.050 ˆeb 0.007 0.014 0.011 0.009 ensure more robust estimation and support future broader applications and datasets ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 ...
+- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** We present the predicted metric depth in both outdoor and indoor scenes.
+- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** Nuscenes DIODE(Outdoor) DIODE(Outdoor) Eth3D NYUv2 DIODE(Indoor) VOID RGB GT Ours UniDepth Metric3D m Figure 9.
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks.
+- **p. 5 / 7.8. The Importance of camera image in metric - extractive body cue:** Metrology of in-the-wild scenes for UniDepth.
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
+- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setup (p. 5); 4.2. Camera Intrinsic Evaluation (p. 6); 4.3. Depth Evaluation (p. 6).
+- **Detected evaluation headings:** 6. Implementation Details (p. 1); 6.3. More implementation details and discussions (p. 1); 7. More experimental Results (p. 2); 7.7. The Importance of Principal Point Evaluation (p. 3).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. Depth Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our work significantly outperforms strong baselines such as Metric3D [85] by a large margin, and achieves comparable performance with the SOTA work Unidepth [46]. | p. 6 (4.3. Depth Evaluation) |
-| 4.4. More 3D Vision Tasks | EMPIRICAL / REAL-ROBOT OR HARDWARE | 13 of the supplementary, reconstructions without intrinsic cues exhibit notable distortions and misalignments, whereas incorporating intrinsic cues significantly improves accuracy and alignment. | p. 7 (4.4. More 3D Vision Tasks) |
-| 4.2. Camera Intrinsic Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown, our method achieves the highest calibration accuracy. | p. 6 (4.2. Camera Intrinsic Evaluation) |
-| 4.5. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | While multi-resolution noise[32] improves performance slightly, it remains suboptimal. | p. 7 (4.5. Ablation Study) |
-| 4.5. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method demonstrates superior foreground-background differentiation (e.g., flower) and improved understanding (e.g., wall painting). | p. 8 (4.5. Ablation Study) |
+| 7.7. The Importance of Principal Point Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods. | p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| 7.8. The Importance of camera image in metric | EMPIRICAL / SOURCE-REPORTED EVALUATION | With intrinsic cues, our method achieves more accurate and better-aligned reconstructions. results on three additional datasets in Tab.12, complementing the findings in Tab.5. | p. 5 (7.8. The Importance of camera image in metric) |
+| 6.3. More implementation details and discussions | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results demonstrate that Dust3r achieves more accurate reconstruction when equipped with our estimated intrinsics. | p. 2 (6.3. More implementation details and discussions) |
+| 6.3. More implementation details and discussions | EMPIRICAL / SOURCE-REPORTED EVALUATION | Then we employ single-step diffusion at timestamp T to generate depth latent code ˆzd, which is then decoded into predicted metric depth ˆd. ground ... | p. 2 (6.3. More implementation details and discussions) |
+| 7.6. Single view 3D reconstuction | EMPIRICAL / SOURCE-REPORTED EVALUATION | Zero-Shot Metric Depth Estimation Results. | p. 3 (7.6. Single view 3D reconstuction) |
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For camera intrinsic estimation, the training data is sourced from a variety of datasets, including NuScenes [7], KITTI [19], CityScapes [11], NYUv2 [44], SUN3D [78], ...
-- **p. 6 / 4.2. Camera Intrinsic Evaluation - extractive PDF cue:** Notably, our method also performs well on the highly challenging Scenes11 dataset [10], which features randomly shaped, moving objects, further demonstrating its robustness in extreme ...
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We adopt Waymo [67], RGBD [65], ScanNet [13], MVS [16], and Scenes11 [10] datasets for zeroshot testing.
-- **p. 6 / 4.2. Camera Intrinsic Evaluation - extractive PDF cue:** Among the methods, Unidepth [46] shows the weakest performance, particularly in real-world, unconstrained scenarios such as the MVS dataset.
-- **p. 7 / 4.4. More 3D Vision Tasks - extractive PDF cue:** We present the predicted metric depth in both various scenes.
-- **p. 7 / 4.4. More 3D Vision Tasks - extractive PDF cue:** NuScenes Ibims ETH3D RGB GT Ours UniDepth Metric3D m Figure 5.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Our method accurately recovers real-world metrics and demonstrates robustness to variations in focal length. in Tab.
-- **p. 8 / 4.5. Ablation Study - extractive PDF cue:** Omitting the camera image representation slightly reduces accuracy and we further justify the importance of the camera image in metric depth estimation with evaluation on ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Dataset Images Scene Intrinsic Training Set NuScenes [7] 28k Outdoor Calibrated KITTI [11] 18 k Outdoor Calibrated CityScapes [11] 23k Outdoor Calibrated NYUv2 [44] 6k ...
+- **p. 1 / 6.2. Metric depth prediction - extractive body cue:** Dataset Images Scene Acquisition Training Set Hypersim [52] 54k Indoor Synthetic Virtual KITTI [6] 20k Outdoor Synthetic Taskonomy [87] 40M Indoor RGB-D TartanAir [74] 305k ...
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** NuScenes KITTI CityScapes NYUv2 eb 0.051 0.021 0.055 0.050 ˆeb 0.007 0.014 0.011 0.009 ensure more robust estimation and support future broader applications and datasets ...
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** Method Waymo RGBD ScanNet MVS Scenes11 Average ef eb ef eb ef eb ef eb ef eb ef eb Ours-small 0.138 0.033 0.051 0.012 0.084 ...
+- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** We present the predicted metric depth in both outdoor and indoor scenes.
+- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** Nuscenes DIODE(Outdoor) DIODE(Outdoor) Eth3D NYUv2 DIODE(Indoor) VOID RGB GT Ours UniDepth Metric3D m Figure 9.
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks.
+- **p. 5 / 7.8. The Importance of camera image in metric - extractive body cue:** Metrology of in-the-wild scenes for UniDepth.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Images generated using text prompts that specify different focal lengths. images generated by a stable diffusion model [53] using sim- ilar text prompts ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Visualization of incidence map and Camera Image. We show the input RGB image, the incidence map and our proposed Camera Image for reference. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Error analysis of camera representations. We first use pre-trained VAE to encode and decode each camera representation, and plot the FoV reconstruction errors ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. The overview training framework of DM-Calib. The input image x and the camera image c are first encoded into latent space using a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Monocular Camera Calibration on Zero-Shot Datasets. We report the calibration errors for both focal length and optical center. †: focuses on focal length ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Zero-Shot Metric Depth Estimation Results. We present the predicted metric depth in both various scenes. Our method provides more detailed results and recovers ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison on Zero-Shot Metric Depth Evaluation. We achieve comparable precision to state-of-the-art models while utilizing less training data.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Relative distance error. We compare the reconstruction performance with and without intrinsic cues. Sofa Car Pavilion StoneWall w/o. cue 1.67
+- **p. 1 / Figure/Table caption - extractive body cue:** Table 6. Datasets List for camera calibration. List of the training and testing datasets: number of images, scene type, and method of calibration. SfM: Structure-from-Motion.
+- **p. 1 / Figure/Table caption - extractive body cue:** Table 7. Datasets List for Metric Depth estimation. List of the training and testing datasets for metric depth estimation: number of images, scene type, and ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 3: Our Camera Image is image-dependent, unlike other camera representations that are not. For other methods, lines can be plotted directly based on different ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Tab. 9: We assess the generalization ability across five zero- shot datasets by aligning the predicted depth ˆd to the ground- truth depth d with ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Tab. 10: The pose estimation is compared against pseudo
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 8. Monocular Camera Calibration on Zero-Shot Datasets. We report the calibration errors for both focal length and optical center. Small means we train our ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 8. The overview of metric depth training pipeline. The encoded image and camera image zx and zc are concatenated and sent to pretrained U-Net. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 9. Zero-Shot Metric Depth Estimation Results. We present the predicted metric depth in both outdoor and indoor scenes. Our method provides more detailed results ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | For camera intrinsic estimation, the training data is sourced from a variety of datasets, including NuScenes [7], KITTI [19], CityScapes [11], NYUv2 [44], SUN3D ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Camera Intrinsic Evaluation) |
-| Task/environment | Notably, our method also performs well on the highly challenging Scenes11 dataset [10], which features randomly shaped, moving objects, further demonstrating its robustness in ... | reset, timeout, object/scene variation | p. 6 (4.2. Camera Intrinsic Evaluation), p. 5 (4.1. Experimental Setup) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (3.2. Camera Image Representation), p. 4 (3.2. Camera Image Representation) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (3. Method), p. 3 (3.1. Preliminaries on Diffusion Model) |
+| Robot/hardware/simulator | Dataset Images Scene Intrinsic Training Set NuScenes [7] 28k Outdoor Calibrated KITTI [11] 18 k Outdoor Calibrated CityScapes [11] 23k Outdoor Calibrated NYUv2 [44] ... | embodiment, simulator version and control stack | p. 1 (6.2. Metric depth prediction), p. 1 (6.2. Metric depth prediction) |
+| Task/environment | Dataset Images Scene Acquisition Training Set Hypersim [52] 54k Indoor Synthetic Virtual KITTI [6] 20k Outdoor Synthetic Taskonomy [87] 40M Indoor RGB-D TartanAir [74] ... | reset, timeout, object/scene variation | p. 1 (6.2. Metric depth prediction), p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction) |
 
 ## Metrics and Success Definition
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
-| Incorporating our camera image representation significantly reduces the error, and the combination of both strategies produces the best results, demonstrating their complementary effectiveness. | definition/direction/unit from same section | p. 7 (4.5. Ablation Study) |
-| Table 3. Relative distance error. We compare the reconstruction performance with and without intrinsic cues. Sofa Car Pavilion StoneWall w/o. cue 1.67 | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
-| Compared to Metric3D[85], our method provides more accurate distance estimates across different focal lengths and demonstrates robustness in both outdoor and indoor scenarios (see ... | definition/direction/unit from same section | p. 6 (4.4. More 3D Vision Tasks) |
-| For camera intrinsic estimation, we follow the evaluation protocol of [23, 96] using the relative error: 7114 | definition/direction/unit from same section | p. 5 (4.1. Experimental Setup) |
-| As shown, our method achieves the highest calibration accuracy. | definition/direction/unit from same section | p. 6 (4.2. Camera Intrinsic Evaluation) |
-| Omitting the camera image representation slightly reduces accuracy and we further justify the importance of the camera image in metric depth estimation with evaluation ... | definition/direction/unit from same section | p. 8 (4.5. Ablation Study) |
-| Our method accurately recovers real-world metrics and demonstrates robustness to variations in focal length. in Tab. | definition/direction/unit from same section | p. 8 (4.5. Ablation Study) |
-| Figure 3. Error analysis of camera representations. We first use pre-trained VAE to encode and decode each camera representation, and plot the FoV reconstruction ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
+| Then we employ single-step diffusion at timestamp T to generate depth latent code ˆzd, which is then decoded into predicted metric depth ˆd. ground ... | definition/direction/unit from same section | p. 2 (6.3. More implementation details and discussions) |
+| Principal points error We compare the error of principle point estimation when assuming principal point lies at the image center with the error of ... | definition/direction/unit from same section | p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| Our method provides more detailed results and recovers accurate metric depths. camera intrinsics and metric depth map. | definition/direction/unit from same section | p. 3 (7.6. Single view 3D reconstuction) |
+| We demonstrate the robustness of our intrinsic estimation and depth prediction through in-the-wild single-view 3D reconstructions. | definition/direction/unit from same section | p. 3 (7.6. Single view 3D reconstuction) |
+| Our method accurately recovers real-world metrics while demonstrating robustness to variations in focal length. | definition/direction/unit from same section | p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| We report the calibration errors for both focal length and optical center. | definition/direction/unit from same section | p. 2 (6.3. More implementation details and discussions) |
+| Without the aggregation, the standard deviation is sometimes not negligible, as presented in Tab. | definition/direction/unit from same section | p. 5 (7.9. Test-time ensembling) |
+| This significantly minimizes the randomness of the diffusion model, as evidenced by the small standard deviation in Tab. | definition/direction/unit from same section | p. 5 (7.9. Test-time ensembling) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -90,11 +90,12 @@ PDF body evaluation/result cue (p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
-| Our work significantly outperforms strong baselines such as Metric3D [85] by a large margin, and achieves comparable performance with the SOTA work Unidepth [46]. | comparison identity and matched condition | p. 6 (4.3. Depth Evaluation) |
-| For metric depth estimation, we compare our method with 4 state-of-the-art methods. | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
-| We achieve comparable precision to state-of-the-art models while utilizing less training data. | comparison identity and matched condition | p. 7 (4.4. More 3D Vision Tasks) |
-| Figure 1. Images generated using text prompts that specify different focal lengths. images generated by a stable diffusion model [53] using sim- ilar text ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-| Ablation Study on Camera Calibration. | comparison identity and matched condition | p. 7 (4.5. Ablation Study) |
+| 10: The pose estimation is compared against pseudo | comparison identity and matched condition | p. 1 (6.3. More implementation details and discussions) |
+| Notably, our training set includes more data compared to He et al. | comparison identity and matched condition | p. 1 (6.1. Camera intrinsic prediction) |
+| The quantitative comparison for relative depth is shown in Tab. | comparison identity and matched condition | p. 2 (7.2. Relative Depth) |
+| To validate this, we conduct an ablation study comparing | comparison identity and matched condition | p. 3 (7.7. The Importance of Principal Point Evaluation) |
+| Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks. | comparison identity and matched condition | p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods. | comparison identity and matched condition | p. 4 (7.7. The Importance of Principal Point Evaluation) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -107,33 +108,34 @@ PDF body evaluation/result cue (p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| We evaluate the effectiveness of our proposed camera image representation and multi-resolution noise strategy through an ablation study on the GSV dataset [2], which ... | component/input/data sensitivity | p. 7 (4.5. Ablation Study) |
-| [73] on our self-captured images with and without our estimated intrinsics. | component/input/data sensitivity | p. 6 (4.4. More 3D Vision Tasks) |
-| Despite being designed for metric depth, our model achieves performance comparable to methods tailored for affine-invariant depth. | component/input/data sensitivity | p. 6 (4.3. Depth Evaluation) |
-| Ablation on Metric Depth Estimation. | component/input/data sensitivity | p. 7 (4.5. Ablation Study) |
-| Zero-shot qualitative affine-invariant depth results. | component/input/data sensitivity | p. 8 (4.5. Ablation Study) |
-| Figure 4. The overview training framework of DM-Calib. The input image x and the camera image c are first encoded into latent space using ... | component/input/data sensitivity | p. 5 (Figure/Table caption) |
+| Ablation study on the effectiveness of camera images for metric depth estimation. ibims Diode indoor Diode outdoor w. cam img 88.7 50.1 41.0 w.o ... | component/input/data sensitivity | p. 5 (7.8. The Importance of camera image in metric) |
+| Figure 8. The overview of metric depth training pipeline. The encoded image and camera image zx and zc are concatenated and sent to pretrained ... | component/input/data sensitivity | p. 2 (Figure/Table caption) |
+| To validate this, we conduct an ablation study comparing | component/input/data sensitivity | p. 3 (7.7. The Importance of Principal Point Evaluation) |
+| Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks. | component/input/data sensitivity | p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods. | component/input/data sensitivity | p. 4 (7.7. The Importance of Principal Point Evaluation) |
+| Without the aggregation, the standard deviation is sometimes not negligible, as presented in Tab. | component/input/data sensitivity | p. 5 (7.9. Test-time ensembling) |
 
 ## Main Results / Claim–Evidence Map
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| To summarize, our main contributions are: • We introduce the Camera Image, a novel image-based representation specifically designed to encode camera intrinsic, optimized to ... | Our work significantly outperforms strong baselines such as Metric3D [85] by a large margin, and achieves comparable performance with the SOTA work Unidepth [46]. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D Vision Tasks), p. 6 (4.2. Camera Intrinsic Evaluation), p. 7 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study) |
-| Primary metric/result | 13 of the supplementary, reconstructions without intrinsic cues exhibit notable distortions and misalignments, whereas incorporating intrinsic cues significantly improves accuracy and alignment. | numeric claim only at cited anchor | p. 7 (4.4. More 3D Vision Tasks) |
+| In contrast, our method is specifically designed to recover camera intrinsics. | Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods. | PDF body cue; verify exact table/figure and matched conditions | p. 4 (7.7. The Importance of Principal Point Evaluation), p. 5 (7.8. The Importance of camera image in metric), p. 2 (6.3. More implementation details and discussions), p. 2 (6.3. More implementation details and discussions), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction) |
+| Primary metric/result | With intrinsic cues, our method achieves more accurate and better-aligned reconstructions. results on three additional datasets in Tab.12, complementing the findings in Tab.5. | numeric claim only at cited anchor | p. 5 (7.8. The Importance of camera image in metric) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.4. More 3D Vision Tasks - extractive PDF cue:** Sofa Car Pavilion StoneWall w/o. cue 1.67 0.87 1.03 1.43 w. cue 1.37 0.68 0.68 1.06 points, was reduced by around 20% on four in-the-wild ...
+- **p. 6 / 7.9. Test-time ensembling - extractive body cue:** Waymo RGBD ScanNet MVS Scenes11 Average ef 0.115 ± 0.008 0.041 ± 0.002 0.089 ± 0.002 0.087 ± 0.006 0.061 ± 0.006 0.078 ± 0.006 ...
+- **p. 6 / 7.9. Test-time ensembling - extractive body cue:** Waymo RGBD ScanNet MVS Scenes11 Average ef 0.115 ± 0.035 0.041 ± 0.010 0.089 ± 0.024 0.087 ± 0.008 0.061 ± 0.009 0.078 ± 0.017 ...
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
-| body limitation/failure cue | Future work could address ultra-wide-angle images by incorporating more diverse training data and improve inference efficiency by developing a few-step diffusion [42] model to ... | p. 8 (5. Conclusion) |
-| body limitation/failure cue | Figure 4. The overview training framework of DM-Calib. The input image x and the camera image c are first encoded into latent space using ... | p. 5 (Figure/Table caption) |
-| body limitation/failure cue | Compared to Metric3D[85], our method provides more accurate distance estimates across different focal lengths and demonstrates robustness in both outdoor and indoor scenarios (see ... | p. 6 (4.4. More 3D Vision Tasks) |
-| body limitation/failure cue | Notably, our method also performs well on the highly challenging Scenes11 dataset [10], which features randomly shaped, moving objects, further demonstrating its robustness in ... | p. 6 (4.2. Camera Intrinsic Evaluation) |
-| body limitation/failure cue | While multi-resolution noise[32] improves performance slightly, it remains suboptimal. | p. 7 (4.5. Ablation Study) |
-| body limitation/failure cue | Table 4. Ablation on Intrinsic Estimation. Multi-Res. Noise Camera Image Mean Error (◦)↓ Median Error (◦) ↓ ✗ | p. 7 (Figure/Table caption) |
+| body limitation/failure cue | While it shows some limitations in focal estimation, this leads to slightly less accurate visualizations. | p. 2 (7.3. Metrologie) |
+| body limitation/failure cue | This process is less robust and often converges to a local minimum. | p. 2 (6.3. More implementation details and discussions) |
+| body limitation/failure cue | We have a significant amount of data where the principal point does not lie at the image center in certain datasets, and our model ... | p. 3 (7.7. The Importance of Principal Point Evaluation) |
+| body limitation/failure cue | We demonstrate the robustness of our intrinsic estimation and depth prediction through in-the-wild single-view 3D reconstructions. | p. 3 (7.6. Single view 3D reconstuction) |
+| body limitation/failure cue | The camera image (intrinsic information) is essential for robust and accurate metric depth estimation. | p. 4 (7.8. The Importance of camera image in metric) |
+| body limitation/failure cue | Our method accurately recovers real-world metrics while demonstrating robustness to variations in focal length. | p. 4 (7.7. The Importance of Principal Point Evaluation) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -141,14 +143,10 @@ PDF body evaluation/result cue (p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| Ablation NYU-v2 KITTI δ1 ↑ SIlog ↓ A.Rel ↓ δ1 ↑ SIlog ↓ A.Rel ↓ Full Model 85.8 8.17 13.5 89.1 13.3 11.7 w.o ... | p. 7 (4.5. Ablation Study) |
-| Additionally, prior methods that froze the VAE decoder during one-step training have shown to be inadequate for metric depth estimation, as demonstrated in our ... | p. 8 (4.5. Ablation Study) |
-| 2) to encode camera intrinsics as a detail-preserving color image (see Sec. | p. 3 (3. Method) |
-| For any given input image x, the corresponding latent code is generated by the VAE encoder: z = E(x). | p. 3 (3.1. Preliminaries on Diffusion Model) |
-| This code is concatenated with zx, serving as the input for the pretrained U-Net. | p. 4 (3.3. Camera Intrinsic Estimation) |
-| Multi-resolution noise [32] ϵc is then added to the camera latents zc, forming the noisy code zc T . | p. 4 (3.3. Camera Intrinsic Estimation) |
-| Pre-trained Latent Encoder ℰ Add Noise by Timestamp 𝑡𝑡 | p. 5 (3.3. Camera Intrinsic Estimation) |
-| Note that both U-Net U and the VAE decoder D are trained to allow predictions in any range. | p. 5 (3.4. Downstream 3D vision tasks) |
+| For metric depth estimation, we use the same optimizer and learning rate with a total batch size of 96, and the training process takes ... | p. 1 (6. Implementation Details) |
+| To train camera intrinsic estimation model, we employ the AdamW optimizer with a learning rate of 3e-5 and train the model for 30,000 iterations ... | p. 1 (6. Implementation Details) |
+| The encoded image and camera image zx and zc are concatenated and sent to pretrained U-Net. | p. 2 (6.3. More implementation details and discussions) |
+| Then we employ single-step diffusion at timestamp T to generate depth latent code ˆzd, which is then decoded into predicted metric depth ˆd. ground ... | p. 2 (6.3. More implementation details and discussions) |
 
 | Audit field | Current status |
 |---|---|
@@ -160,14 +158,14 @@ PDF body evaluation/result cue (p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work could address ultra-wide-angle images by incorporating more diverse training data and improve inference efficiency by developing a few-step diffusion [42] model to further ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. The overview training framework of DM-Calib. The input image x and the camera image c are first encoded into latent space using a ...
-- **p. 6 / 4.4. More 3D Vision Tasks - extractive PDF cue:** Compared to Metric3D[85], our method provides more accurate distance estimates across different focal lengths and demonstrates robustness in both outdoor and indoor scenarios (see Fig.
-- **p. 6 / 4.2. Camera Intrinsic Evaluation - extractive PDF cue:** Notably, our method also performs well on the highly challenging Scenes11 dataset [10], which features randomly shaped, moving objects, further demonstrating its robustness in extreme ...
-- **p. 7 / 4.5. Ablation Study - extractive PDF cue:** While multi-resolution noise[32] improves performance slightly, it remains suboptimal.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation on Intrinsic Estimation. Multi-Res. Noise Camera Image Mean Error (◦)↓ Median Error (◦) ↓ ✗
+- **p. 2 / 7.3. Metrologie - extractive body cue:** While it shows some limitations in focal estimation, this leads to slightly less accurate visualizations.
+- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** This process is less robust and often converges to a local minimum.
+- **p. 3 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** We have a significant amount of data where the principal point does not lie at the image center in certain datasets, and our model effectively ...
+- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** We demonstrate the robustness of our intrinsic estimation and depth prediction through in-the-wild single-view 3D reconstructions.
+- **p. 4 / 7.8. The Importance of camera image in metric - extractive body cue:** The camera image (intrinsic information) is essential for robust and accurate metric depth estimation.
+- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Our method accurately recovers real-world metrics while demonstrating robustness to variations in focal length.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 6 (4.2. Camera Intrinsic Evaluation), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Camera Intrinsic Evaluation), p. 7 (4.4. More 3D Vision Tasks), p. 7 (4.4. More 3D Vision Tasks), metrics p. 7 (4.5. Ablation Study), p. 7 (Figure/Table caption), p. 6 (4.4. More 3D Vision Tasks), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Camera Intrinsic Evaluation), p. 8 (4.5. Ablation Study), baselines p. 6 (4.3. Depth Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.4. More 3D Vision Tasks), p. 2 (Figure/Table caption), p. 7 (4.5. Ablation Study), results p. 6 (4.3. Depth Evaluation), p. 7 (4.4. More 3D Vision Tasks), p. 6 (4.2. Camera Intrinsic Evaluation), p. 7 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 1 (6.2. Metric depth prediction), p. 1 (6.2. Metric depth prediction), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 2 (6.3. More implementation details and discussions), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction), metrics p. 2 (6.3. More implementation details and discussions), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 2 (6.3. More implementation details and discussions), baselines p. 1 (6.3. More implementation details and discussions), p. 1 (6.1. Camera intrinsic prediction), p. 2 (7.2. Relative Depth), p. 3 (7.7. The Importance of Principal Point Evaluation), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 4 (7.7. The Importance of Principal Point Evaluation), results p. 4 (7.7. The Importance of Principal Point Evaluation), p. 5 (7.8. The Importance of camera image in metric), p. 2 (6.3. More implementation details and discussions), p. 2 (6.3. More implementation details and discussions), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

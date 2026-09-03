@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p028.html; PDF retrieval source: https://arxiv.org/pdf/2412.09858. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p028.html; PDF retrieval source: https://arxiv.org/pdf/2412.09858. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. RLDG vs. Conventional Fine-tuning | EMPIRICAL / REAL-ROBOT OR HARDWARE | When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring significantly fewer demonstrations to achieve perfect ... | p. 7 (4.2. RLDG vs. Conventional Fine-tuning) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Success rate comparison of OpenVLA and Octo policies fine-tuned with RLDG versus conventional methods using human demonstrations. Both generalists trained with RLDG ... | p. 7 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We also use the single object insertion task of FMB (Luo et al., 2024c), a common and reproducible benchmark for comparing robotic manipulation methods. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup and Tasks), p. 5 (4.1. Experimental Setup and Tasks) |
 | Task/environment | We also test our method on a pickand-place task, where the robot grasps an object from a randomized location and places it in a ... | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup and Tasks), p. 6 (4.1. Experimental Setup and Tasks) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 - **p. 8 / 4.3. Generalization of RLDG vs. Original RL - extractive body cue:** 4, the RL policy success rate quickly degraded from 20/20 for the training scenario to 1/20 for the unseen scenario of the Pick and Place ...
 - **p. 8 / 4.3. Generalization of RLDG vs. Original RL - extractive body cue:** Compared to directly using the RL policies that generated the data, RLDG also demonstrated much greater generalization capabilities and robustness to unseen test scenarios.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup and Tasks), p. 5 (4.1. Experimental Setup and Tasks), p. 6 (4.1. Experimental Setup and Tasks), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 5 (4.1. Experimental Setup and Tasks), metrics p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), baselines p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 9 (4.3. Generalization of RLDG vs. Original RL), results p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (Figure/Table caption), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 9 (5.1. Is RL data better because of better action), p. 2 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup and Tasks), p. 5 (4.1. Experimental Setup and Tasks), p. 6 (4.1. Experimental Setup and Tasks), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 5 (4.1. Experimental Setup and Tasks), metrics p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), baselines p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 9 (4.3. Generalization of RLDG vs. Original RL), results p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (Figure/Table caption), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 9 (5.1. Is RL data better because of better action), p. 2 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Success rate comparison of OpenVLA and Octo policies fine-tuned with RLDG versus conventional methods using human demonstrations. Both generalists trained with RLDG consistently outperform their counterparts trained with ... (p. 7, Figure/Table caption).
+- **Metric evidence:** When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring significantly fewer demonstrations to achieve perfect success rate in both scenarios while ... (p. 7, 4.2. RLDG vs. Conventional Fine-tuning).
+- **Baseline/ablation evidence:** On the precise FMB Insertion and Connector Insertion tasks, where we anticipated the generalist to benefit the most from higher quality training data, OpenVLA with RLDG saw 33% and 23% ... (p. 6, 4.2. RLDG vs. Conventional Fine-tuning).
+- **Failure/negative evidence:** Octo's failure was due to consistent grasping errors where the fingers are in front of the object, likely due to the lack of good depth perception. (p. 9, 5.1. Is RL data better because of better action).

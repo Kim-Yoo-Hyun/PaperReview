@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p071.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p071.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -80,7 +80,7 @@ PDF body method statement (p. 4 (2) Student Model (Consistency Policy)), p. 4 (2
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | Given chaining timesteps {t1, t2}, we denoise from T →0 as usual, then noise to time t1, denoise back to time 0, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | Specifically, we take as input two frames of observations (including wrist camera image and third person view camera image, and end effector ... | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | Policy NFE Inference Time (ms) DDPM 100 110 DDiM 15 11 CP (ours) 1 1 CP (ours) 3 2 Table III: Simulation ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -135,3 +135,12 @@ PDF body method statement (p. 4 (2) Student Model (Consistency Policy)), p. 4 (2
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Single-step inference from our trained Consistency Policy works as follows: sample the initial position z ∼N(0, I), compute x = gθ(z, T, 0; o) where T is the max timestep ... (p. 4, 2) Student Model (Consistency Policy)).
+- **Objective/update evidence:** Following [13], we optimize the Denoising Score Matching (DSM) loss to train the EDM model: LDSM(θ) = Et,x0,xt/x0[d(x0, sϕ (xt, t; o))] (3) The DSM objective takes a sampled point ... (p. 3, 1) Teacher Model (EDM)).
+- **Temporal/runtime evidence:** Specifically, we take as input two frames of observations (including wrist camera image and third person view camera image, and end effector pose) and output a sequence of end effector ... (p. 5, IV. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

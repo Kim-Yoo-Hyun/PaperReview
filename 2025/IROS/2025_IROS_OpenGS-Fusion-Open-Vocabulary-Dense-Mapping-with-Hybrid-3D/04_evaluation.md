@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2508.01150; PDF retrieval source: https://arxiv.org/pdf/2508.01150. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2508.01150; PDF retrieval source: https://arxiv.org/pdf/2508.01150. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 
 ## Evaluation Body Digest
 
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Replica ScanNet Methods mAcc↑ mIoU↑ FPS↑ mAcc↑ mIoU↑ FPS↑ ConceptFusion* 28.02 11.49 0.49 21.22 10.64 0.52 ConceptGraphs 38.21 18.16 - 44.28 23.94 - LangSplat 10.32 ...
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** 3) Datasets: The experiments are carried out on 8 synthetic scenes from the Replica dataset and 6 real-world scenes from the ScanNet dataset, following the ...
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Real-World Experiments In this section, we describe the practical implementation of OpenGS-Fusion for the reconstruction and understanding of indoor scenes using a mobile robotic device.
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Finally, we implement and validate the proposed algorithm in real-world scenarios using our robotic mobile platform (Sec.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations.
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** We aggregate these measurements into dataset-level evaluation metrics, specifically mean IoU (mIoU) and mean accuracy (mAcc).
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** We also evaluated geometric reconstruction accuracy with depth L1 loss and system efficiency with mapping frame rate (FPS).
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Replica ScanNet Methods mAcc↑ mIoU↑ FPS↑ mAcc↑ mIoU↑ FPS↑ ConceptFusion* 28.02 11.49 0.49 21.22 10.64 0.52 ConceptGraphs 38.21 18.16 - 44.28 23.94 - LangSplat 10.32 ...
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** 3) Datasets: The experiments are carried out on 8 synthetic scenes from the Replica dataset and 6 real-world scenes from the ScanNet dataset, following the ...
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Real-World Experiments In this section, we describe the practical implementation of OpenGS-Fusion for the reconstruction and understanding of indoor scenes using a mobile robotic device.
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Finally, we implement and validate the proposed algorithm in real-world scenarios using our robotic mobile platform (Sec.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations.
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** We aggregate these measurements into dataset-level evaluation metrics, specifically mean IoU (mIoU) and mean accuracy (mAcc).
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** We also evaluated geometric reconstruction accuracy with depth L1 loss and system efficiency with mapping frame rate (FPS).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | Specifically, our method outperforms the state-of-the-art 3DGS-based approach, OpenGaussian, with improvements of 9.5% (Replica) and 12.2% (ScanNet) in terms of mIoU performance, while operating ... | p. 5 (IV. EXPERIMENT) |
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves the best performance in both open-vocabulary 3D object segmentation accuracy and training efficiency. | p. 5 (IV. EXPERIMENT) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Replica ScanNet Methods mAcc↑ mIoU↑ FPS↑ mAcc↑ mIoU↑ FPS↑ ConceptFusion* 28.02 11.49 0.49 21.22 10.64 0.52 ConceptGraphs 38.21 18.16 - 44.28 23.94 - LangSplat 10.32 ...
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** 3) Datasets: The experiments are carried out on 8 synthetic scenes from the Replica dataset and 6 real-world scenes from the ScanNet dataset, following the ...
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Real-World Experiments In this section, we describe the practical implementation of OpenGS-Fusion for the reconstruction and understanding of indoor scenes using a mobile robotic device.
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Finally, we implement and validate the proposed algorithm in real-world scenarios using our robotic mobile platform (Sec.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations.
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Replica ScanNet Methods mAcc↑ mIoU↑ FPS↑ mAcc↑ mIoU↑ FPS↑ ConceptFusion* 28.02 11.49 0.49 21.22 10.64 0.52 ConceptGraphs 38.21 18.16 - 44.28 23.94 - LangSplat 10.32 ...
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** 3) Datasets: The experiments are carried out on 8 synthetic scenes from the Replica dataset and 6 real-world scenes from the ScanNet dataset, following the ...
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Real-World Experiments In this section, we describe the practical implementation of OpenGS-Fusion for the reconstruction and understanding of indoor scenes using a mobile robotic device.
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Finally, we implement and validate the proposed algorithm in real-world scenarios using our robotic mobile platform (Sec.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Comparison of Model Architectures. Compared to 3DGS-feature- field-based methods [12]-[15], our approach enables online modeling of scene appearance, geometry, and semantics while supporting ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Overview of OpenGS-Fusion. Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. A visual demonstration of our proposed AT-MLLM. This strategy enables the precise localization of multiple objects in 3D space through multi-stage threshold adjustment ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. Qualitative comparison of open-vocabulary 3D understanding on ScanNet (top two rows) and Replica (last two rows), benchmarking 3DGS- based methods (OpenGaussian [4] and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 5. Qualitative rendering results from training views on the ScanNet dataset. Zoom in for a clearer view. * denotes that the method employs a ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6. An Example of Language-Guided Scene Editing. OpenGS-Fusion accurately localizes objects in 3D space and efficiently executes language- guided scene modifications. The spatial position ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7. Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations. RGB-D camera system and an NVIDIA Jetson AGX ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Comparison of Model Architectures. Compared to 3DGS-feature- field-based methods [12]-[15], our approach enables online modeling of scene appearance, geometry, and semantics while supporting ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Overview of OpenGS-Fusion. Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. A visual demonstration of our proposed AT-MLLM. This strategy enables the precise localization of multiple objects in 3D space through multi-stage threshold adjustment ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. Qualitative comparison of open-vocabulary 3D understanding on ScanNet (top two rows) and Replica (last two rows), benchmarking 3DGS- based methods (OpenGaussian [4] and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. Qualitative rendering results from training views on the ScanNet dataset. Zoom in for a clearer view. * denotes that the method employs a ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. An Example of Language-Guided Scene Editing. OpenGS-Fusion accurately localizes objects in 3D space and efficiently executes language- guided scene modifications. The spatial position ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7. Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations. RGB-D camera system and an NVIDIA Jetson AGX ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Replica ScanNet Methods mAcc↑ mIoU↑ FPS↑ mAcc↑ mIoU↑ FPS↑ ConceptFusion* 28.02 11.49 0.49 21.22 10.64 0.52 ConceptGraphs 38.21 18.16 - 44.28 23.94 - LangSplat ... | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT) |
 | Task/environment | 3) Datasets: The experiments are carried out on 8 synthetic scenes from the Replica dataset and 6 real-world scenes from the ScanNet dataset, following ... | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT) |
@@ -118,11 +118,11 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 | Primary metric/result | Our method achieves the best performance in both open-vocabulary 3D object segmentation accuracy and training efficiency. | numeric claim only at cited anchor | p. 5 (IV. EXPERIMENT) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** (AVERAGE PERFORMANCE ON 6 SCENES) Method PSNR ↑ SSIM ↑ LPIPS ↓ Depth L1 ↓ FPS ↑ MonoGS 17.31 0.636 0.583 21.30 14.02 RTG-SLAM 18.22 ...
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** (AVERAGE PERFORMANCE ON 8 SCENES) Method PSNR ↑ SSIM ↑ LPIPS ↓ Depth L1 ↓ FPS ↑ MonoGS 36.50 0.960 0.070 0.77 4.691 RTG-SLAM 35.43 ...
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Our algorithm was deployed on a computing setup with an NVIDIA RTX 4090 GPU and an Intel Core i9-14900K CPU.
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** To improve efficiency, MobileSAMv2 [42] was used as the 2D segmentation model in our 2D Embedding Extractor model, enabling real-time image segmentation at more than ...
-- **p. 7 / IV. EXPERIMENT - extractive PDF cue:** Parallel processing on the server achieved an overall operational efficiency of 4 fps.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** (AVERAGE PERFORMANCE ON 6 SCENES) Method PSNR ↑ SSIM ↑ LPIPS ↓ Depth L1 ↓ FPS ↑ MonoGS 17.31 0.636 0.583 21.30 14.02 RTG-SLAM 18.22 ...
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** (AVERAGE PERFORMANCE ON 8 SCENES) Method PSNR ↑ SSIM ↑ LPIPS ↓ Depth L1 ↓ FPS ↑ MonoGS 36.50 0.960 0.070 0.77 4.691 RTG-SLAM 35.43 ...
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Our algorithm was deployed on a computing setup with an NVIDIA RTX 4090 GPU and an Intel Core i9-14900K CPU.
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** To improve efficiency, MobileSAMv2 [42] was used as the 2D segmentation model in our 2D Embedding Extractor model, enabling real-time image segmentation at more than ...
+- **p. 7 / IV. EXPERIMENT - extractive body cue:** Parallel processing on the server achieved an overall operational efficiency of 4 fps.
 
 ## Generalization and Failure Cases
 
@@ -159,13 +159,13 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 
 ## Limitations and Verification Questions
 
-- **p. 7 / V. CONCLUSIONS - extractive PDF cue:** However, our method currently relies on accurate pose estimation and faces limitations in query efficiency.
-- **p. 7 / V. CONCLUSIONS - extractive PDF cue:** Future work will explore how to leverage hybrid scene representation for pose estimation and investigate lightweight MLLMs specifically designed for image retrieval tasks to further ...
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** OpenGaussian fails to locate both instances as they are segmented into separate entities, and the model by default only retrieves the instance that best matches ...
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** We attribute this to the incorporation of our extra GS initialization and pruning mechanism, which leverages the TSDF to improve robustness when handling real-world scene ...
+- **p. 7 / V. CONCLUSIONS - extractive body cue:** However, our method currently relies on accurate pose estimation and faces limitations in query efficiency.
+- **p. 7 / V. CONCLUSIONS - extractive body cue:** Future work will explore how to leverage hybrid scene representation for pose estimation and investigate lightweight MLLMs specifically designed for image retrieval tasks to further ...
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** OpenGaussian fails to locate both instances as they are segmented into separate entities, and the model by default only retrieves the instance that best matches ...
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** We attribute this to the incorporation of our extra GS initialization and pruning mechanism, which leverages the TSDF to improve robustness when handling real-world scene ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), baselines p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), baselines p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

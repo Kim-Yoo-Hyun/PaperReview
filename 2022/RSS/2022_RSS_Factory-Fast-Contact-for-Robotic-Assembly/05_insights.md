@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 The contact forces generated during policy execution are compared to literature values from the real world and show strong consistency.를 Using a state-ofthe-art GPU, we can only simulate 20 nut-and-bolt assemblies in parallel (Table V).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Specifically, we uniquely combine SDF collisions [61], contact reduction [72], and a Gauss-Seidel solver [60], allowing us to simulate interactions of highly-detailed models substantially faster than previous efforts. (p. 4, III. CONTACT-RICH SIMULATION METHODS).
+- **Paper-specific mechanism:** In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a ... (p. 10, V. REINFORCEMENT LEARNING); the relevant task/metric cue is Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a ... (p. 10, V. REINFORCEMENT LEARNING). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut. (p. 9, V. REINFORCEMENT LEARNING).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We also provide 60 carefully-designed, ISO-standard or manufacturer-based assets from the NIST Assembly Task Board 1, suitable for high-accuracy simulation; 3 robotic assembly scenes in Isaac Gym where a robot can interact ....
-3. Compare against the body-reported baseline or a matched simpler baseline: THE BASELINE TIMESTEP SIZE (BEFORE SUBSTEPPING) IS 1 60 s..
-4. Report the body metric and its denominator/aggregation: Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a combined policy ....
-5. Re-run the body-reported ablation/failure condition: As a simplifying assumption, the joint limit of the end-effector was removed, allowing the Franka to avoid regrasping (akin to the Kinova Gen3)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Specifically, we uniquely combine SDF collisions [61], contact reduction [72], and a Gauss-Seidel solver [60], allowing us to simulate interactions of highly-detailed models substantially faster than previous efforts. (p. 4, III. CONTACT-RICH SIMULATION METHODS); preserve the objective/update rule: The gradient ∇φ(x) provides the normal at a point x on the surface. (p. 4, III. CONTACT-RICH SIMULATION METHODS).
+2. Use the paper-reported task/data/environment cue: Each environment consists of a Franka robot and the gear assembly from NIST Task Board 1. (p. 7, IV. ROBOT LEARNING TOOLS).
+3. Compare against the reported or matched baseline: THE BASELINE TIMESTEP SIZE (BEFORE SUBSTEPPING) IS 1 60 s. (p. 7, IV. ROBOT LEARNING TOOLS).
+4. Report the body metric with its denominator and aggregation: Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a ... (p. 10, V. REINFORCEMENT LEARNING).
+5. Re-run the reported ablation or stress/failure condition: As a simplifying assumption, the joint limit of the end-effector was removed, allowing the Franka to avoid regrasping (akin to the Kinova Gen3). (p. 9, V. REINFORCEMENT LEARNING); if none is reported, design one around: A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut. (p. 9, V. REINFORCEMENT LEARNING).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (III. CONTACT-RICH SIMULATION METHODS), p. 4 (III. CONTACT-RICH SIMULATION METHODS), p. 4 (III. CONTACT-RICH SIMULATION METHODS); the primary result is directionally consistent at p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 4 (III. CONTACT-RICH SIMULATION METHODS), match the reported outcome at p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 8 (IV. ROBOT LEARNING TOOLS), and measure the boundary at p. 9 (V. REINFORCEMENT LEARNING), p. 11 (VII. LIMITATIONS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, Factory, physics mechanism이 THE BASELINE TIMESTEP SIZE (BEFORE SUBSTEPPING) IS 1 60 s. 대비 Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a ...을 개선하고, A common initial failure case during training was collision between the gripper and the bolt, dislodging ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Specifically, we uniquely combine SDF collisions [61], contact reduction [72], and a Gauss-Seidel solver [60], allowing us to simulate interactions of highly-detailed ...), does the paper-specific mechanism (In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig.) retain the reported evaluation outcome (Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a ...) when tested against the paper's strongest explicit boundary (A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Policy chaining can be challenging, as errors in each subpolicy can accumulate into poor overall performance; as a simple example, 3 perfectlycoupled subpolicies with 90% success rates can produce a ... (p. 10, V. REINFORCEMENT LEARNING).
+- **Strongest explicit boundary:** A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut. (p. 9, V. REINFORCEMENT LEARNING).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

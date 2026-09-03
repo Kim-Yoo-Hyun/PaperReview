@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 At each time step, the input to each arm is a voxel observation v, proprioception data of both robot arms ρ, a language goal l ∈{ℓas, ℓsa}, and an arm ID ξ ...를 Voxel representations, when coupled with discretized action spaces, can increase sample efficiency and generalization by introducing spatial equivariance into a learned system, where transformations of the input lead to corresponding tr ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** At each time step, the input to each arm is a voxel observation v, proprioception data of both robot arms ρ, a language goal l ∈{ℓas, ℓsa}, and an arm ... (p. 4, 4 Method).
+- **Paper-specific mechanism:** To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 4: Example successful rollouts (one per row) of VoxAct-B on a real-world bimanual setup with UR5s. Ablation experiments. Table 2 reports results on Open Drawer in simulation, based on ... (p. 8, Figure/Table caption); the relevant task/metric cue is We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) to improve performance. (p. 6, 5 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace. (p. 8, 6 Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For simulation experiments, we build on top of RLBench [14], a popular robot manipulation benchmark widely used in prior work, including VoxPoser and PerAct..
-3. Compare against the body-reported baseline or a matched simpler baseline: When we train all methods using more demonstrations (100), VoxAct-B still outperforms all baselines..
-4. Report the body metric and its denominator/aggregation: Then, we use the bestperforming acting and stabilizing checkpoints to obtain the test success rate..
-5. Re-run the body-reported ablation/failure condition: Table 5: Ablation results of ACT and Diffusion Policy trained on 100 demonstrations and evaluated across five training seeds. "FAS" refers to the demonstrations with fixed acting and stabilizing arms (i.e., right ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: At each time step, the input to each arm is a voxel observation v, proprioception data of both robot arms ρ, a language goal l ∈{ℓas, ℓsa}, and an arm ... (p. 4, 4 Method); preserve the objective/update rule: While one can increase the number of voxels, this would consume more memory, slow down training, and adversely affect learning as the policy is optimizing over a larger state space. (p. 5, 4 Method).
+2. Use the paper-reported task/data/environment cue: For simulation experiments, we build on top of RLBench [14], a popular robot manipulation benchmark widely used in prior work, including VoxPoser and PerAct. (p. 6, 5 Experiments).
+3. Compare against the reported or matched baseline: 5.1 Baselines and Ablations In simulation, we compare against several strong baseline methods: Action Chunking with Transformers (ACT) [3], Diffusion Policy [15], and VoxPoser [16]. (p. 6, 5 Experiments).
+4. Report the body metric with its denominator and aggregation: We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) to improve performance. (p. 6, 5 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Note that the real-world jar and drawer cannot be opened without the use of a second arm. (p. 6, 5 Experiments); if none is reported, design one around: 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace. (p. 8, 6 Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Additional Implementation Details); the primary result is directionally consistent at p. 16 (C Additional Implementation Details for the Baselines), p. 6 (5 Experiments), p. 7 (6 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 1 (1 Introduction), match the reported outcome at p. 8 (Figure/Table caption), p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 8 (6 Results), p. 8 (6 Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 VoxAct-B, novel, voxel-based mechanism이 When we train all methods using more demonstrations (100), VoxAct-B still outperforms all baselines. 대비 Then, we use the bestperforming acting and stabilizing checkpoints to obtain the test success rate.을 개선하고, 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (At each time step, the input to each arm is a voxel observation v, proprioception data of both robot arms ρ, a ...), does the paper-specific mechanism (To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation.) retain the reported evaluation outcome (We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters ...) when tested against the paper's strongest explicit boundary (6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Figure 4: Example successful rollouts (one per row) of VoxAct-B on a real-world bimanual setup with UR5s. Ablation experiments. Table 2 reports results on Open Drawer in simulation, based on ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace. (p. 8, 6 Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 The physics simulation determines state st ∈S and transition dynamics T while our policy πPHC computes per-step action at ∈A.를 P(F ) shares the same input and output space as P(1) · · · P(k), but since the reference motion does not provide useful information about failstate recovery (the humanoid should not ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Although we can train single-clip controller to overfit on these sequences (see the supplement), our full controller often fails to learn these sequences.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To summarize, our contributions are as follows: (1) we propose a Perpetual Humanoid Controller that can successfully imitate 98.9% of the AMASS dataset without applying any external forces; (2) we propose the ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Specifically, our composer C(w1:K+1 t /st) consumes the same input as the primitives and outputs a weight vector w1:K+1 t ∈Rk+1 to activate the primitives. (p. 6, 3.2. Progressive Multiplicative Control Policy).
+- **Paper-specific mechanism:** To summarize, our contributions are as follows: (1) we propose a Perpetual Humanoid Controller that can successfully imitate 98.9% of the AMASS dataset without applying any external forces; (2) we ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 (p. 7, 4.1. Motion Imitation); the relevant task/metric cue is From Tab.4 we can see that both of our keypoint-based and rotation-based controllers can recover from fall state with high success rate (> 90%) even in the challenging scenario when ... (p. 8, 4.2. Fail-state Recovery). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Thus, it is important to have a controller that can gracefully handle unexpected falls and noisy input, naturally recover from failstate, and resume imitation. (p. 2, 1. Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: PHC is trained on the training split of the AMASS [23] dataset..
-3. Compare against the body-reported baseline or a matched simpler baseline: Similar to results on MoCap Imitation, PHC outperforms the baselines 10901.
-4. Report the body metric and its denominator/aggregation: On testing, PHC shows a high success rate on unseen MoCap sequences from both the AMASS and H36M data..
-5. Re-run the body-reported ablation/failure condition: Comparing R4 and R5 shows that PMCP is effective in adding fail-state recovery capability without compromising motion imitation..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Specifically, our composer C(w1:K+1 t /st) consumes the same input as the primitives and outputs a weight vector w1:K+1 t ∈Rk+1 to activate the primitives. (p. 6, 3.2. Progressive Multiplicative Control Policy); preserve the objective/update rule: The policy's goal is to maximize the discounted reward E hPT t=1 γt-1rt i , and we use the proximal policy gradient (PPO) [35] to learn πPHC. (p. 3, 3.1. Goal Conditioned Motion Imitation with Ad).
+2. Use the paper-reported task/data/environment cue: PHC is trained on the training split of the AMASS [23] dataset. (p. 7, 4. Experiments).
+3. Compare against the reported or matched baseline: Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 (p. 7, 4.1. Motion Imitation).
+4. Report the body metric with its denominator and aggregation: From Tab.4 we can see that both of our keypoint-based and rotation-based controllers can recover from fall state with high success rate (> 90%) even in the challenging scenario when ... (p. 8, 4.2. Fail-state Recovery).
+5. Re-run the reported ablation or stress/failure condition: We compare against UHC both with and without residual force control. (p. 7, 4. Experiments); if none is reported, design one around: Thus, it is important to have a controller that can gracefully handle unexpected falls and noisy input, naturally recover from failstate, and resume imitation. (p. 2, 1. Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy); the primary result is directionally consistent at p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), match the reported outcome at p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), and measure the boundary at p. 2 (1. Introduction), p. 5 (3.2. Progressive Multiplicative Control Policy).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summarize, contributions, follows mechanism이 Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 대비 On testing, PHC shows a high success rate on unseen MoCap sequences from both the AMASS and H36M ...을 개선하고, Although we can train single-clip controller to overfit on these sequences (see the supplement), our full ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Specifically, our composer C(w1:K+1 t /st) consumes the same input as the primitives and outputs a weight vector w1:K+1 t ∈Rk+1 to ...), does the paper-specific mechanism (To summarize, our contributions are as follows: (1) we propose a Perpetual Humanoid Controller that can successfully imitate 98.9% of the AMASS ...) retain the reported evaluation outcome (From Tab.4 we can see that both of our keypoint-based and rotation-based controllers can recover from fall state ...) when tested against the paper's strongest explicit boundary (Thus, it is important to have a controller that can gracefully handle unexpected falls and noisy input, naturally ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (From Tab.4 we can see that both of our keypoint-based and rotation-based controllers can recover from fall state ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To summarize, our contributions are as follows: (1) we propose a Perpetual Humanoid Controller that can successfully imitate 98.9% of the AMASS dataset without applying any external forces; (2) we ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Similar to results on MoCap Imitation, PHC outperforms the baselines 10901 (p. 7, 4.1. Motion Imitation).
+- **Strongest explicit boundary:** Thus, it is important to have a controller that can gracefully handle unexpected falls and noisy input, naturally recover from failstate, and resume imitation. (p. 2, 1. Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Settings - extractive PDF cue:** The LERF dataset [18] is captured using the iPhone App Polycam, which consists of complex in-the-wild scenes.
-- **p. 6 / 4.1. Settings - extractive PDF cue:** The LERF dataset is designed for 3D object localization tasks, here we extend the LERF dataset by annotating ground truth masks for textual queries, enabling ...
-- **p. 7 / 4.2. Results on the LERF dataset - extractive PDF cue:** Ablations result on the bench scene of the 3D-OVS dataset.
-- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** Note that in this dataset, we generate object masks only based on the query text while others, such as 3D-OVS, require the complete category list.
-- **p. 7 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** We compare LangSplat with other 2D and 3D state-of-the-art methods on the 3D-OVS dataset in Table 5.
-- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** We visualize the segmentation results in 2 scenes.
-- **p. 6 / 4.1. Settings - extractive PDF cue:** We report the average IoU scores (%). iterations.
-- **p. 6 / 4.1. Settings - extractive PDF cue:** We report localization accuracy for the 3D object localization task following LERF [18], and report the IoU results for the 3D semantic segmentation task.
+- **p. 6 / 4.1. Settings - extractive body cue:** The LERF dataset [18] is captured using the iPhone App Polycam, which consists of complex in-the-wild scenes.
+- **p. 6 / 4.1. Settings - extractive body cue:** The LERF dataset is designed for 3D object localization tasks, here we extend the LERF dataset by annotating ground truth masks for textual queries, enabling ...
+- **p. 7 / 4.2. Results on the LERF dataset - extractive body cue:** Ablations result on the bench scene of the 3D-OVS dataset.
+- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** Note that in this dataset, we generate object masks only based on the query text while others, such as 3D-OVS, require the complete category list.
+- **p. 7 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We compare LangSplat with other 2D and 3D state-of-the-art methods on the 3D-OVS dataset in Table 5.
+- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We visualize the segmentation results in 2 scenes.
+- **p. 6 / 4.1. Settings - extractive body cue:** We report the average IoU scores (%). iterations.
+- **p. 6 / 4.1. Settings - extractive body cue:** We report localization accuracy for the 3D object localization task following LERF [18], and report the IoU results for the 3D semantic segmentation task.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Results on the LERF dataset | EMPIRICAL / SOURCE-REPORTED EVALUATION | We observe that our method achieves an overall accuracy of 84.3%, significantly outperforming LERF. | p. 6 (4.2. Results on the LERF dataset) |
 | 4.3. Results on the 3D-OVS dataset | EMPIRICAL / SOURCE-REPORTED EVALUATION | We observe that LangSplat not only outperforms 2D-based methods such as ODISE [46] and OV-Seg [23], but also achieves better results than 3D-based methods ... | p. 7 (4.3. Results on the 3D-OVS dataset) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Settings - extractive PDF cue:** The LERF dataset [18] is captured using the iPhone App Polycam, which consists of complex in-the-wild scenes.
-- **p. 6 / 4.1. Settings - extractive PDF cue:** The LERF dataset is designed for 3D object localization tasks, here we extend the LERF dataset by annotating ground truth masks for textual queries, enabling ...
-- **p. 7 / 4.2. Results on the LERF dataset - extractive PDF cue:** Ablations result on the bench scene of the 3D-OVS dataset.
-- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** Note that in this dataset, we generate object masks only based on the query text while others, such as 3D-OVS, require the complete category list.
-- **p. 7 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** We compare LangSplat with other 2D and 3D state-of-the-art methods on the 3D-OVS dataset in Table 5.
-- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** We visualize the segmentation results in 2 scenes.
+- **p. 6 / 4.1. Settings - extractive body cue:** The LERF dataset [18] is captured using the iPhone App Polycam, which consists of complex in-the-wild scenes.
+- **p. 6 / 4.1. Settings - extractive body cue:** The LERF dataset is designed for 3D object localization tasks, here we extend the LERF dataset by annotating ground truth masks for textual queries, enabling ...
+- **p. 7 / 4.2. Results on the LERF dataset - extractive body cue:** Ablations result on the bench scene of the 3D-OVS dataset.
+- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** Note that in this dataset, we generate object masks only based on the query text while others, such as 3D-OVS, require the complete category list.
+- **p. 7 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We compare LangSplat with other 2D and 3D state-of-the-art methods on the 3D-OVS dataset in Table 5.
+- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We visualize the segmentation results in 2 scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Visualization of learned 3D language features of the previous SOTA method LERF and our LangSplat. While LERF generates imprecise and vague 3D features, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Localization accuracy (%) comparisons on LERF dataset. Test Scene LSeg [21] LERF [18] LangSplat ramen 7.0 28.2
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparisons of 3D semantic segmentation on the LERF dataset. We report the average IoU scores (%). iterations. Our autoencoder is implemented by ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparisons of open-vocabulary 3D object localization on the LERF dataset. The red points are the model predictions and the black dashed bounding ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparisons of open-vocabulary 3D semantic segmentation on the LERF dataset. Component Performance AE 3D-GS SAM IoU (%) Speed (s/q)
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablations. The results are obtained on the ramen scene. Component Performance AE 3D-GS SAM mIoU (%) Speed (s/q)
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablations result on the bench scene of the 3D-OVS dataset. The image resolution is 1440 × 1080. our baseline equals LERF, which has ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Visualization of learned 3D language features of the previous SOTA method LERF and our LangSplat. While LERF generates imprecise and vague 3D features, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Localization accuracy (%) comparisons on LERF dataset. Test Scene LSeg [21] LERF [18] LangSplat ramen 7.0 28.2
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparisons of 3D semantic segmentation on the LERF dataset. We report the average IoU scores (%). iterations. Our autoencoder is implemented by ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparisons of open-vocabulary 3D object localization on the LERF dataset. The red points are the model predictions and the black dashed bounding ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparisons of open-vocabulary 3D semantic segmentation on the LERF dataset. Component Performance AE 3D-GS SAM IoU (%) Speed (s/q)
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablations. The results are obtained on the ramen scene. Component Performance AE 3D-GS SAM mIoU (%) Speed (s/q)
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablations result on the bench scene of the 3D-OVS dataset. The image resolution is 1440 × 1080. our baseline equals LERF, which has ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The LERF dataset [18] is captured using the iPhone App Polycam, which consists of complex in-the-wild scenes. | embodiment, simulator version and control stack | p. 6 (4.1. Settings), p. 6 (4.1. Settings) |
 | Task/environment | The LERF dataset is designed for 3D object localization tasks, here we extend the LERF dataset by annotating ground truth masks for textual queries, ... | reset, timeout, object/scene variation | p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset) |
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 | Primary metric/result | We observe that LangSplat not only outperforms 2D-based methods such as ODISE [46] and OV-Seg [23], but also achieves better results than 3D-based methods ... | numeric claim only at cited anchor | p. 7 (4.3. Results on the 3D-OVS dataset) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Settings - extractive PDF cue:** We train it for 30,000 iterations, and in the end, each scene comprises around 2,500,000 points.
-- **p. 6 / 4.1. Settings - extractive PDF cue:** For a 1440 × 1080 resolution scene, our model is trained for ∼25 minutes on an NVIDIA RTX-3090 GPU and takes roughly 4GB of memory.
-- **p. 6 / 4.2. Results on the LERF dataset - extractive PDF cue:** We test the query speed on an NVIDIA RTX-3090 GPU.
-- **p. 7 / 4.2. Results on the LERF dataset - extractive PDF cue:** We further conducted the ablations on the 3D-OVS dataset, which has a higher image resolution of 1440×1080.
-- **p. 7 / 4.2. Results on the LERF dataset - extractive PDF cue:** We also tested the query speed on an NVIDIA RTX-3090 GPU.
-- **p. 7 / 4.2. Results on the LERF dataset - extractive PDF cue:** We could replace the decoder with a 1×1 convolutional layer to attain a higher speedup.
+- **p. 6 / 4.1. Settings - extractive body cue:** We train it for 30,000 iterations, and in the end, each scene comprises around 2,500,000 points.
+- **p. 6 / 4.1. Settings - extractive body cue:** For a 1440 × 1080 resolution scene, our model is trained for ∼25 minutes on an NVIDIA RTX-3090 GPU and takes roughly 4GB of memory.
+- **p. 6 / 4.2. Results on the LERF dataset - extractive body cue:** We test the query speed on an NVIDIA RTX-3090 GPU.
+- **p. 7 / 4.2. Results on the LERF dataset - extractive body cue:** We further conducted the ablations on the 3D-OVS dataset, which has a higher image resolution of 1440×1080.
+- **p. 7 / 4.2. Results on the LERF dataset - extractive body cue:** We also tested the query speed on an NVIDIA RTX-3090 GPU.
+- **p. 7 / 4.2. Results on the LERF dataset - extractive body cue:** We could replace the decoder with a 1×1 convolutional layer to attain a higher speedup.
 
 ## Generalization and Failure Cases
 
@@ -158,11 +158,11 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 
 ## Limitations and Verification Questions
 
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are ...
-- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive PDF cue:** As LERF suffers from the patchy issue and learns over-smoothed features, it fails to find accurate object boundaries.
-- **p. 6 / 4.2. Results on the LERF dataset - extractive PDF cue:** We see that the LERF learned features fail to generate clear boundaries between objects while our method gives precise object shapes solely using CLIP features.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are ...
+- **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** As LERF suffers from the patchy issue and learns over-smoothed features, it fails to find accurate object boundaries.
+- **p. 6 / 4.2. Results on the LERF dataset - extractive body cue:** We see that the LERF learned features fail to generate clear boundaries between objects while our method gives precise object shapes solely using CLIP features.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Settings), p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), metrics p. 6 (4.1. Settings), p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), baselines p. 6 (4.2. Results on the LERF dataset), p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), results p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 6 (4.1. Settings), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Settings), p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), metrics p. 6 (4.1. Settings), p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), baselines p. 6 (4.2. Results on the LERF dataset), p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), results p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 6 (4.1. Settings), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

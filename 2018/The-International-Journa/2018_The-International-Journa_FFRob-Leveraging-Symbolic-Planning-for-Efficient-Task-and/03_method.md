@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114; PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114; PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Problem / state representation | decision state와 feasible set을 만든다 | state, map, goal, constraints | source-specific graph, symbolic state, belief 또는 configuration representation을 구성 | search/optimization state | We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions. | p. 2 (1.1 Approach), p. 2 (1.1 Approach) |
 | Search / trajectory decision | goal을 향한 candidate를 생성·개선한다 | state와 cost/heuristic | search, sampling, dynamic programming 또는 trajectory optimization을 적용 | plan, path, option 또는 trajectory | EAS is able to represent actions with complex conditions much more concisely than a traditional symbolic planning representation. | p. 2 (1.1 Approach), p. 3 (1.1 Approach) |
@@ -74,12 +74,12 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 |---|---|---|---|
 | Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | The probability that FFROB has not identified a solution contained in the minimal length robust set of mode sequences decreases exponentially in ... | episode/sequence/action-chunk boundary |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | An algorithm is exponentially convergent over a class of problems if and only if the probability that the algorithm has not terminated ... | Hz/fps, inference time and control rate |
-| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
+| Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | Each problem and algorithm combination was simulated over 50 trials. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -119,8 +119,17 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 Approach), objective p. 2 (1.1 Approach), p. 2 (1.1 Approach), temporal p. 27 (A PPM), p. 18 (A PPM), p. 18 (A PPM), p. 24 (A PPM), p. 27 (A PPM), p. 30 (11 Experiments).
+- **Evidence anchors reviewed:** method p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 Approach), objective p. 2 (1.1 Approach), p. 2 (1.1 Approach), temporal p. 27 (A PPM), p. 18 (A PPM), p. 18 (A PPM), p. 24 (A PPM), p. 27 (A PPM), p. 30 (11 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions. (p. 2, 1.1 Approach).
+- **Objective/update evidence:** We model task and motion planning as symbolic planning where the conditions of actions are complex predicates involving geometric and kinematic constraints. (p. 2, 1.1 Approach).
+- **Temporal/runtime evidence:** 11.3 Implementation We implemented FFROB in Python using the OpenRAVE robotics framework (Diankov and Kuffner 2008) for simulation. (p. 30, 11 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

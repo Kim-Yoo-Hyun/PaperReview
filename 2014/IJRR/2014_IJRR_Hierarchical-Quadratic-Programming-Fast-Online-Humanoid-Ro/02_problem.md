@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1177/0278364914521306; PDF retrieval source: https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1177/0278364914521306; PDF retrieval source: https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | An improvement is done by temporarily relaxing the most distant DOF in [Mansard and Chaumette, 2009], but that cannot solve the main ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | Consider a robot defined by its configuration vector q and whose control input is the joint velocity ˙q. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Consider a robot defined by its configuration vector q and whose control input is the joint velocity ˙q. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Consider, robot, defined, configuration, vector, whose, control, input, joint, velocity | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
 | Output / action | observation, exploited, Escande, constitute, preliminary, version, fasten, computation | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
 | Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | whole-body pose/contact/reference state; body terms: Consider, robot, defined, configuration, vector, whose, control, input, joint, velocity | p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction) |
 | Decision / output variable | joint/whole-body action; body terms: original, decomposition, encompasses, hierarchy, among, constraints, Equality, hierarchical | p. 6 (1 Introduction), p. 6 (1 Introduction), p. 5 (1 Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduc
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 28 (B.2 Algorithm 3 termination), p. 28 (B.2 Algorithm 3 termination) |
 | Success / guarantee | motion/task success and recovery | p. 27 (6.2.2 Results), p. 26 (6.2.2 Results), p. 26 (6.2.2 Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 6 (1 Introduction), p. 6 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction)): We propose an original decomposition that encompasses the hierarchy among the constraints.
+PDF body contribution framing (p. 6 (1 Introduction), p. 6 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction)): We propose an original decomposition that encompasses the hierarchy among the constraints.
 
 - **p. 6 / 1 Introduction - extractive body cue:** 2 Equality hierarchical quadratic program We propose in this section a method to solve a hierarchy of linear equality in the least-square sense.
 - **p. 5 / 1 Introduction - extractive body cue:** However, this expressivity reduction enables to obtain very impressive result for walking, jumping or, as shown in [Mordatch et al., 2012], for planning contacts and ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 6 (1 Introduction), p. 6 (1 Introduction), p. 5 (1 
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 1 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 1 (1 Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), interface p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 1 (1 Introduction), objective p. 28 (B.2 Algorithm 3 termination), p. 28 (B.2 Algorithm 3 termination).
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), interface p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 1 (1 Introduction), objective p. 28 (B.2 Algorithm 3 termination), p. 28 (B.2 Algorithm 3 termination).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (32 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** An improvement is done by temporarily relaxing the most distant DOF in [Mansard and Chaumette, 2009], but that cannot solve the main problem. (p. 2, 1 Introduction).
+- **Formulation-changing contribution:** Before defining the objectives and specificities of our approach, we rewrite briefly the main resolution schemes for hierarchy of quadratic problems (with and without inequalities) in the next sections. (p. 3, 1 Introduction).
+- **Assumption/failure evidence:** Contrary to the previous simulation, the joints do not systematically remain on the exact limits since the robot is moving to follow the rotation of the wheel. (p. 23, 6.2.2 Results).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

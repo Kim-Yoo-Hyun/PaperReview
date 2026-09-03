@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.01495; PDF retrieval source: https://arxiv.org/pdf/1707.01495. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.01495; PDF retrieval source: https://arxiv.org/pdf/1707.01495. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the ... | robot/environment의 sequential decision process | body wording is the source claim |
-| Observation / input | A deterministic policy is a mapping from states to actions: π : S →A. | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | A deterministic policy is a mapping from states to actions: π : S →A. | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | deterministic, policy, mapping, states, actions, setup, possible, train, approximator, Q-function | policy/value state와 action-selection variable | notation and tensor shape require body check |
 | Output / action | training, universal, policies, Schaul, take, input, only, current | action policy와 induced trajectory | exact unit/frame/decoder require body check |
 | Target outcome | task return, success and safe execution | expected return, task success, stability와 sample efficiency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: deterministic, policy, mapping, states, actions, setup, possible, train, approximator, Q-function | p. 2 (2 Background), p. 3 (2 Background), p. 2 (1 Introduction) |
 | Decision / output variable | a_t sampled or selected by πθ; body terms: introduce, technique, called, Hindsight, Experience, Replay, HER, allows | p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (2 Background) |
@@ -38,7 +38,7 @@ PDF body framing (p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (2 Background), p. 3 (2 Background), p. 3 (2 Background) |
 | Success / guarantee | task return, success and safe execution | p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (2 Background), p. 2 (2 Background), p. 3 (2 Background)): In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy ...
+PDF body contribution framing (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (2 Background), p. 2 (2 Background), p. 3 (2 Background)): In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy ...
 
 - **p. 1 / Abstract - extractive body cue:** We present a novel technique called Hindsight Experience Replay which allows sample-efficient learning from rewards which are sparse and binary and therefore avoid the need ...
 - **p. 4 / 2 Background - extractive body cue:** In order to solve this problem we introduce the technique of Hindsight Experience Replay which is the crux of our approach.
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (2 Backgr
 
 ## Position in the Robotics Loop
 
-rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (2 Background), p. 3 (2 Background), p. 2 (1 Introduction), p. 3 (2 Background). The downstream handoff is claimed only when the body describes it.
+rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (2 Background), p. 3 (2 Background), p. 2 (1 Introduction), p. 3 (2 Background). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background), p. 1 (1 Introduction), interface p. 2 (2 Background), p. 3 (2 Background), p. 2 (1 Introduction), p. 3 (2 Background), objective p. 2 (2 Background), p. 2 (2 Background), p. 3 (2 Background), p. 3 (2 Background).
+- **Evidence anchors reviewed:** problem p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background), p. 1 (1 Introduction), interface p. 2 (2 Background), p. 3 (2 Background), p. 2 (1 Introduction), p. 3 (2 Background), objective p. 2 (2 Background), p. 2 (2 Background), p. 3 (2 Background), p. 3 (2 Background).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, a common challenge, especially for robotics, is the need to engineer a reward function that not only reflects the task at hand but is also carefully shaped (Ng et ... (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy ... (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary ... (p. 5, 2 Background).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

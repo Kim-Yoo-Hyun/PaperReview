@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1810.04805; PDF retrieval source: https://arxiv.org/pdf/1810.04805. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1810.04805; PDF retrieval source: https://arxiv.org/pdf/1810.04805. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** 4.1 GLUE The General Language Understanding Evaluation (GLUE) benchmark (Wang et al., 2018a) is a collection of diverse natural language understanding tasks.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We can see that larger models lead to a strict accuracy improvement across all four datasets, even for MRPC which only has 3,600 labeled training ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** Detailed descriptions of GLUE datasets are included in Appendix B.1.
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.2 SQuAD v1.1 The Stanford Question Answering Dataset (SQuAD v1.1) is a collection of 100k crowdsourced question/answer pairs (Rajpurkar et al., 2016).
-- **p. 6 / 4 Experiments - extractive PDF cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** When fine-tuning on the SWAG dataset, we construct four input sequences, each containing the concatenation of the given sentence (sentence A) and a possible continuation ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.4 SWAG The Situations With Adversarial Generations (SWAG) dataset contains 113k sentence-pair completion examples that evaluate grounded commonsense inference (Zellers et al., 2018).
-- **p. 8 / 4 Experiments - extractive PDF cue:** This is directly comparable to OpenAI GPT, but using our larger training dataset, our input representation, and our fine-tuning scheme.
+- **p. 5 / 4 Experiments - extractive body cue:** 4.1 GLUE The General Language Understanding Evaluation (GLUE) benchmark (Wang et al., 2018a) is a collection of diverse natural language understanding tasks.
+- **p. 8 / 4 Experiments - extractive body cue:** We can see that larger models lead to a strict accuracy improvement across all four datasets, even for MRPC which only has 3,600 labeled training ...
+- **p. 5 / 4 Experiments - extractive body cue:** Detailed descriptions of GLUE datasets are included in Appendix B.1.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.2 SQuAD v1.1 The Stanford Question Answering Dataset (SQuAD v1.1) is a collection of 100k crowdsourced question/answer pairs (Rajpurkar et al., 2016).
+- **p. 6 / 4 Experiments - extractive body cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
+- **p. 7 / 4 Experiments - extractive body cue:** When fine-tuning on the SWAG dataset, we construct four input sequences, each containing the concatenation of the given sentence (sentence A) and a possible continuation ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.4 SWAG The Situations With Adversarial Generations (SWAG) dataset contains 113k sentence-pair completion examples that evaluate grounded commonsense inference (Zellers et al., 2018).
+- **p. 8 / 4 Experiments - extractive body cue:** This is directly comparable to OpenAI GPT, but using our larger training dataset, our input representation, and our fine-tuning scheme.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Both BERTBASE and BERTLARGE outperform all systems on all tasks by a substantial margin, obtaining 4.5% and 7.0% respective average accuracy improvement over the ... | p. 6 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | This does significantly improve results on SQuAD, but the results are still far worse than those of the pretrained bidirectional models. | p. 8 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** 4.1 GLUE The General Language Understanding Evaluation (GLUE) benchmark (Wang et al., 2018a) is a collection of diverse natural language understanding tasks.
-- **p. 8 / 4 Experiments - extractive PDF cue:** We can see that larger models lead to a strict accuracy improvement across all four datasets, even for MRPC which only has 3,600 labeled training ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** Detailed descriptions of GLUE datasets are included in Appendix B.1.
-- **p. 6 / 4 Experiments - extractive PDF cue:** 4.2 SQuAD v1.1 The Stanford Question Answering Dataset (SQuAD v1.1) is a collection of 100k crowdsourced question/answer pairs (Rajpurkar et al., 2016).
-- **p. 6 / 4 Experiments - extractive PDF cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** When fine-tuning on the SWAG dataset, we construct four input sequences, each containing the concatenation of the given sentence (sentence A) and a possible continuation ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** 4.4 SWAG The Situations With Adversarial Generations (SWAG) dataset contains 113k sentence-pair completion examples that evaluate grounded commonsense inference (Zellers et al., 2018).
-- **p. 8 / 4 Experiments - extractive PDF cue:** This is directly comparable to OpenAI GPT, but using our larger training dataset, our input representation, and our fine-tuning scheme.
+- **p. 5 / 4 Experiments - extractive body cue:** 4.1 GLUE The General Language Understanding Evaluation (GLUE) benchmark (Wang et al., 2018a) is a collection of diverse natural language understanding tasks.
+- **p. 8 / 4 Experiments - extractive body cue:** We can see that larger models lead to a strict accuracy improvement across all four datasets, even for MRPC which only has 3,600 labeled training ...
+- **p. 5 / 4 Experiments - extractive body cue:** Detailed descriptions of GLUE datasets are included in Appendix B.1.
+- **p. 6 / 4 Experiments - extractive body cue:** 4.2 SQuAD v1.1 The Stanford Question Answering Dataset (SQuAD v1.1) is a collection of 100k crowdsourced question/answer pairs (Rajpurkar et al., 2016).
+- **p. 6 / 4 Experiments - extractive body cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
+- **p. 7 / 4 Experiments - extractive body cue:** When fine-tuning on the SWAG dataset, we construct four input sequences, each containing the concatenation of the given sentence (sentence A) and a possible continuation ...
+- **p. 7 / 4 Experiments - extractive body cue:** 4.4 SWAG The Situations With Adversarial Generations (SWAG) dataset contains 113k sentence-pair completion examples that evaluate grounded commonsense inference (Zellers et al., 2018).
+- **p. 8 / 4 Experiments - extractive body cue:** This is directly comparable to OpenAI GPT, but using our larger training dataset, our input representation, and our fine-tuning scheme.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Overall pre-training and fine-tuning procedures for BERT. Apart from output layers, the same architec- tures are used in both pre-training and fine-tuning. The ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: BERT input representation. The input embeddings are the sum of the token embeddings, the segmenta- tion embeddings and the position embeddings. The NSP ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: GLUE Test results, scored by the evaluation server (https://gluebenchmark.com/leaderboard). The number below each task denotes the number of training examples. The "Average" column ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: SQuAD 1.1 results. The BERT ensemble is 7x systems which use different pre-training check- points and fine-tuning seeds. System Dev Test EM
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: SQuAD 2.0 results. We exclude entries that use BERT as one of their components. tuning data, we only lose 0.1-0.4 F1, still outper- ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4: SWAG Dev and Test accuracies. †Human per- formance is measured with 100 samples, as reported in the SWAG paper. ˆ si,j = maxj≥iS·Ti ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation over the pre-training tasks using the BERTBASE architecture. "No NSP" is trained without the next sentence prediction task. "LTR & No NSP" ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 6. In this table, we report the average Dev Set accuracy from 5 random restarts of fine-tuning. We can see that larger models lead ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overall pre-training and fine-tuning procedures for BERT. Apart from output layers, the same architec- tures are used in both pre-training and fine-tuning. The ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: BERT input representation. The input embeddings are the sum of the token embeddings, the segmenta- tion embeddings and the position embeddings. The NSP ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: GLUE Test results, scored by the evaluation server (https://gluebenchmark.com/leaderboard). The number below each task denotes the number of training examples. The "Average" column ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: SQuAD 1.1 results. The BERT ensemble is 7x systems which use different pre-training check- points and fine-tuning seeds. System Dev Test EM
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: SQuAD 2.0 results. We exclude entries that use BERT as one of their components. tuning data, we only lose 0.1-0.4 F1, still outper- ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4: SWAG Dev and Test accuracies. †Human per- formance is measured with 100 samples, as reported in the SWAG paper. ˆ si,j = maxj≥iS·Ti ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5: Ablation over the pre-training tasks using the BERTBASE architecture. "No NSP" is trained without the next sentence prediction task. "LTR & No NSP" ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. In this table, we report the average Dev Set accuracy from 5 random restarts of fine-tuning. We can see that larger models lead ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 4.1 GLUE The General Language Understanding Evaluation (GLUE) benchmark (Wang et al., 2018a) is a collection of diverse natural language understanding tasks. | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | We can see that larger models lead to a strict accuracy improvement across all four datasets, even for MRPC which only has 3,600 labeled ... | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 5 (4 Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 | Primary metric/result | This does significantly improve results on SQuAD, but the results are still far worse than those of the pretrained bidirectional models. | numeric claim only at cited anchor | p. 8 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Experiments - extractive PDF cue:** We use a batch size of 32 and fine-tune for 3 epochs over the data for all GLUE tasks.
-- **p. 6 / 4 Experiments - extractive PDF cue:** We fine-tune for 3 epochs with a learning rate of 5e-5 and a batch size of 32.
-- **p. 7 / 4 Experiments - extractive PDF cue:** The BERT ensemble is 7x systems which use different pre-training checkpoints and fine-tuning seeds.
-- **p. 7 / 4 Experiments - extractive PDF cue:** We exclude entries that use BERT as one of their components. tuning data, we only lose 0.1-0.4 F1, still outperforming all existing systems by a ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** For prediction, we compare the score of the no-answer span: snull = S·C + E·C to the score of the best non-null span 12The TriviaQA ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** System Dev Test ESIM+GloVe 51.9 52.7 ESIM+ELMo 59.1 59.2 OpenAI GPT - 78.0 BERTBASE 81.6 - BERTLARGE 86.6 86.3 Human (expert)† - 85.0 Human (5 ...
+- **p. 6 / 4 Experiments - extractive body cue:** We use a batch size of 32 and fine-tune for 3 epochs over the data for all GLUE tasks.
+- **p. 6 / 4 Experiments - extractive body cue:** We fine-tune for 3 epochs with a learning rate of 5e-5 and a batch size of 32.
+- **p. 7 / 4 Experiments - extractive body cue:** The BERT ensemble is 7x systems which use different pre-training checkpoints and fine-tuning seeds.
+- **p. 7 / 4 Experiments - extractive body cue:** We exclude entries that use BERT as one of their components. tuning data, we only lose 0.1-0.4 F1, still outperforming all existing systems by a ...
+- **p. 7 / 4 Experiments - extractive body cue:** For prediction, we compare the score of the no-answer span: snull = S·C + E·C to the score of the best non-null span 12The TriviaQA ...
+- **p. 7 / 4 Experiments - extractive body cue:** System Dev Test ESIM+GloVe 51.9 52.7 ESIM+ELMo 59.1 59.2 OpenAI GPT - 78.0 BERTBASE 81.6 - BERTLARGE 86.6 86.3 Human (expert)† - 85.0 Human (5 ...
 
 ## Generalization and Failure Cases
 
@@ -163,11 +163,11 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4 Experiments - extractive PDF cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
-- **p. 6 / 4 Experiments - extractive PDF cue:** Given a question and a passage from 9The GLUE data set distribution does not include the Test labels, and we only made a single GLUE ...
-- **p. 8 / 4 Experiments - extractive PDF cue:** The left-only constraint was also applied at fine-tuning, because removing it introduced a pre-train/fine-tune mismatch that degraded downstream performance.
+- **p. 6 / 4 Experiments - extractive body cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
+- **p. 6 / 4 Experiments - extractive body cue:** Given a question and a passage from 9The GLUE data set distribution does not include the Test labels, and we only made a single GLUE ...
+- **p. 8 / 4 Experiments - extractive body cue:** The left-only constraint was also applied at fine-tuning, because removing it introduced a pre-train/fine-tune mismatch that degraded downstream performance.
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 6 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 6 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

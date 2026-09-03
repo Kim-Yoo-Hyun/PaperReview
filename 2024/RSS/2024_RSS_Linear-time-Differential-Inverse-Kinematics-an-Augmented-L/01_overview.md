@@ -1,8 +1,8 @@
 # Linear-time Differential Inverse Kinematics: an Augmented Lagrangian Perspective
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p110.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p110.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p110.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p110.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, inverse kinematics, whole-body control, augmented Lagrangian, ADMM, real-time
 - Official paper: https://www.roboticsproceedings.org/rss20/p110.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p110.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p110.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +83,12 @@ Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 The weighted approach addresses these conflicts by defining slack variables on equality constraints, and relaxing the problem into a weighted quadratic penalization over these slack variables.를 문제로 두고, 2) Inequality constraints: We propose an ADMM-based strategy dealing with inequality constraints, where each ADMM iteration is made efficient by using the aforementioned inner solver.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (II. BACKGROUND) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, constrainedABA only considered the equalityconstrained forward dynamics problems and therefore does not support additional terms handled in QP-based differential IK such as joint-space and task-space inequality constraints. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Therefore, our contributions can significantly accelerate these downstream computationally expensive downstream tasks. (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** We evaluate the performance of differential IK solvers in a benchmark of inverse kinematics scenarios, which we plan to release as open source software after peer-review of this work 2. (p. 8, V. EXPERIMENTAL VALIDATION AND BENCHMARKS).
+- **Explicit failure boundary:** Limitations While we have assessed the effectiveness of LOIK over a wide range of robots, we note that, at present, its expressivity presents a couple of limitations. (p. 10, V. EXPERIMENTAL VALIDATION AND BENCHMARKS).

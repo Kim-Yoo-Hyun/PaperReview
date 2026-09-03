@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, terrain/perception observation과 velocity command → body/contact state, foothold 또는 behavior mode → joint target, torque, footstep 또는 locomotion action`.
-- 이 논문의 재사용 가능한 지점은 Inspired by the recent progress on VLM [10, 11] for spatial location and distance reasoning, we propose NaVILA, a twolevel framework for legged robot VLN: A VLM is finetuned to output a ...를 Instruction Joint Positions Policy π VLA History Views Velocity Commands Proprioception Prior Actions Joint Pos. & Vel.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 body/contact state, foothold 또는 behavior mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Next, we estimate camera poses using MASt3R [27] to extract step-bystep actions, and we generate natural language instructions for each trajectory using VLM-based [13] captioning followed by LLM [28] rephrasing. (p. 4, II. METHOD).
+- **Paper-specific mechanism:** To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is As shown in Table II, our method significantly outperforms NaVid, the current state-of-the-art model, with a substantial 10% improvement in SR. (p. 6, III. EXPERIMENTS); the relevant task/metric cue is Error ↓ Collision Rate ↓ ROA(w/BCLoss) [68] 0.189 0.152 3.25 ROA [68] 0.161 0.152 3.09 NaVILA 0.066 0.113 0.81 the vision-based policy outperforms the blind policy by 14% in Success ... (p. 7, III. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx. (p. 9, V. CONCLUSION AND LIMITATIONS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To evaluate NaVILA's capabilities in scene understanding, we conduct evaluations on the ScanQA Validation benchmark, a widely used dataset for 3D Question Answering..
-3. Compare against the body-reported baseline or a matched simpler baseline: We also compare NaVILAs with a baseline using Oracle's low-level policy (assuming perfect command execution without realistic physics)..
-4. Report the body metric and its denominator/aggregation: We employ the following widely used evaluation metrics for VLN tasks: Navigation Error (NE), Oracle Success Rate (OS), Success Rate (SR), Success-weighted Path Length (SPL), and normalize dynamic time wrapping (nDTW)..
-5. Re-run the body-reported ablation/failure condition: All results are obtained without training on the RxRCE training set..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Next, we estimate camera poses using MASt3R [27] to extract step-bystep actions, and we generate natural language instructions for each trajectory using VLM-based [13] captioning followed by LLM [28] rephrasing. (p. 4, II. METHOD); preserve the objective/update rule: The right image shows a preprocessed height map with values clipped to sensor constraints; darker colors indicate higher heights. (p. 5, II. METHOD).
+2. Use the paper-reported task/data/environment cue: Legged Robot Navigation Performance in Simulation High-fidelity VLN-CE-Isaac Benchmark. (p. 7, III. EXPERIMENTS).
+3. Compare against the reported or matched baseline: We also compare NaVILAs with a baseline using Oracle's low-level policy (assuming perfect command execution without realistic physics). (p. 7, III. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Error ↓ Collision Rate ↓ ROA(w/BCLoss) [68] 0.189 0.152 3.25 ROA [68] 0.161 0.152 3.09 NaVILA 0.066 0.113 0.81 the vision-based policy outperforms the blind policy by 14% in Success ... (p. 7, III. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: All results are obtained without training on the RxRCE training set. (p. 6, III. EXPERIMENTS); if none is reported, design one around: While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx. (p. 9, V. CONCLUSION AND LIMITATIONS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHOD); the primary result is directionally consistent at p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), and measure the boundary at p. 9 (V. CONCLUSION AND LIMITATIONS), p. 7 (III. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 better, simulate, challenges mechanism이 We also compare NaVILAs with a baseline using Oracle's low-level policy (assuming perfect command execution without ... 대비 We employ the following widely used evaluation metrics for VLN tasks: Navigation Error (NE), Oracle Success Rate (OS), ...을 개선하고, While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Next, we estimate camera poses using MASt3R [27] to extract step-bystep actions, and we generate natural language instructions for each trajectory using ...), does the paper-specific mechanism (To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.) retain the reported evaluation outcome (Error ↓ Collision Rate ↓ ROA(w/BCLoss) [68] 0.189 0.152 3.25 ROA [68] 0.161 0.152 3.09 NaVILA 0.066 0.113 ...) when tested against the paper's strongest explicit boundary (While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Error ↓ Collision Rate ↓ ROA(w/BCLoss) [68] 0.189 0.152 3.25 ROA [68] 0.161 0.152 3.09 NaVILA 0.066 0.113 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** As shown in Table II, our method significantly outperforms NaVid, the current state-of-the-art model, with a substantial 10% improvement in SR. (p. 6, III. EXPERIMENTS).
+- **Strongest explicit boundary:** While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx. (p. 9, V. CONCLUSION AND LIMITATIONS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

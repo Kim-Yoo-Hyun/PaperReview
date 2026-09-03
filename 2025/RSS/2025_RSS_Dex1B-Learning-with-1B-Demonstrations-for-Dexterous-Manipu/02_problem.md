@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p106.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p106.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 2 (7 S65 69
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods ... | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | of dexterous robotic hands tothe real world, using point cloud and RGB inputs, respectively. | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF |
+| Observation / input | of dexterous robotic hands tothe real world, using point cloud and RGB inputs, respectively. | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
 | State / latent | dexterous, robotic, hands, tothe, real, world, point, cloud, RGB, inputs | behavior policy와 temporal action context | notation and tensor shape require body check |
 | Output / action | employ, point, cloud, visual, input, full, sampled, object | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | observation history o_{t−H:t}; body terms: dexterous, robotic, hands, tothe, real, world, point, cloud, RGB, inputs | p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL) |
-| Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: address, feasibility, issue, incorporating, geometric, constraints, generative, model | p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 1 (Front matter) |
+| Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: address, feasibility, issue, incorporating, geometric, constraints, generative, model | p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 1 (Body text (section boundary not confidently recovered)) |
 | Objective / loss / cost | imitation or action-distribution loss; cue terms: enforce, geometric, constraints, introduce, SDF-based, loss, Objectives, CVAE | p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 3 (7 S65 69K- Graplt) |
 | Success / guarantee | closed-loop task success and robustness | p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 8 (B. Dataset Analysis) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,10 +49,10 @@ PDF body framing (p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 2 (7 S65 69
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 1 (Front matter), p. 1 (Abstract), p. 3 (7 S65 69K- Graplt)): ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques with generative models, leveraging the ...
+PDF body contribution framing (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 3 (7 S65 69K- Graplt)): ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques with generative models, leveraging the ...
 
 - **p. 2 / 7 S65 69K- Graplt - extractive body cue:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks.
-- **p. 1 / Front matter - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
 - **p. 1 / Abstract - extractive body cue:** In this paper, we introduce DexIB, a largeseale, diverse, and high-quality demonstration dataset produced with generative models.
 - **p. 3 / 7 S65 69K- Graplt - extractive body cue:** We presents the differences of several representative manipulation datasets in Tab.
 
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 1
 
 ## Position in the Robotics Loop
 
-il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt). The downstream handoff is claimed only when the body describes it.
+il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 2 (7 S65 69K- Graplt), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), interface p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), objective p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge).
+- **Evidence anchors reviewed:** problem p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 2 (7 S65 69K- Graplt), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), interface p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), objective p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based ... (p. 2, 1. INrRopucTION).
+- **Formulation-changing contribution:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks. (p. 2, 7 S65 69K- Graplt).
+- **Assumption/failure evidence:** While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based ... (p. 2, 1. INrRopucTION).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

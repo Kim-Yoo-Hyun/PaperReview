@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p064.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p064.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p064.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p064.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 
 ## Method Body Digest
 
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** postures, PD controllers, observation and action spaces.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** The lower bounds for the vertical force and action bound are ON and 0.25, respectively.
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** We make the following adjustment to work the algorithm: scale of pulling force, height for curriculum, height for stage
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** We make the following adjustment to work the algorithm: more strict constraints on hip joint deviation rewards, weights for reward groups, and additional thigh orientation ...
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** The mul critic architecture is based on previous work [33]. where each advantage function is independently calculated and normalized within its corresponding reward group.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** We present the complete set of ward functions and their detailed descriptions in Tulble V1 Several regularization reward terms are adapted from prior work [21, ...
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** Reward functions within the same group are independently normalized, Whose assovited advantaged functions are eaimated via disinet criti.
+- **p. 12 / B. More Implementation Details - extractive body cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
+- **p. 13 / B. More Implementation Details - extractive body cue:** postures, PD controllers, observation and action spaces.
+- **p. 12 / B. More Implementation Details - extractive body cue:** The lower bounds for the vertical force and action bound are ON and 0.25, respectively.
+- **p. 13 / B. More Implementation Details - extractive body cue:** We make the following adjustment to work the algorithm: scale of pulling force, height for curriculum, height for stage
+- **p. 13 / B. More Implementation Details - extractive body cue:** We make the following adjustment to work the algorithm: more strict constraints on hip joint deviation rewards, weights for reward groups, and additional thigh orientation ...
+- **p. 12 / B. More Implementation Details - extractive body cue:** The mul critic architecture is based on previous work [33]. where each advantage function is independently calculated and normalized within its corresponding reward group.
+- **p. 12 / B. More Implementation Details - extractive body cue:** We present the complete set of ward functions and their detailed descriptions in Tulble V1 Several regularization reward terms are adapted from prior work [21, ...
+- **p. 13 / B. More Implementation Details - extractive body cue:** Reward functions within the same group are independently normalized, Whose assovited advantaged functions are eaimated via disinet criti.
 
 ## Design Rationale
 
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, ...
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** We overview the real-world performance of our controllers in Fg. / and summarize our core contributions as follows:
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We overview the real-world performance of our controllers in Fg. / and summarize our core contributions as follows:
+- **p. 12 / B. More Implementation Details - extractive body cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
 
 ## Source Evidence Cues
 
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** postures, PD controllers, observation and action spaces.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** The lower bounds for the vertical force and action bound are ON and 0.25, respectively.
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** We make the following adjustment to work the algorithm: scale of pulling force, height for curriculum, height for stage
+- **p. 12 / B. More Implementation Details - extractive body cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
+- **p. 13 / B. More Implementation Details - extractive body cue:** postures, PD controllers, observation and action spaces.
+- **p. 12 / B. More Implementation Details - extractive body cue:** The lower bounds for the vertical force and action bound are ON and 0.25, respectively.
+- **p. 13 / B. More Implementation Details - extractive body cue:** We make the following adjustment to work the algorithm: scale of pulling force, height for curriculum, height for stage
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, ... | p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | postures, PD controllers, observation and action spaces. | p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details) |
@@ -45,10 +45,10 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 
 ## Objective / Update Rule
 
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** We make the following adjustment to work the algorithm: more strict constraints on hip joint deviation rewards, weights for reward groups, and additional thigh orientation ...
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** The mul critic architecture is based on previous work [33]. where each advantage function is independently calculated and normalized within its corresponding reward group.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** We present the complete set of ward functions and their detailed descriptions in Tulble V1 Several regularization reward terms are adapted from prior work [21, ...
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** Reward functions within the same group are independently normalized, Whose assovited advantaged functions are eaimated via disinet criti.
+- **p. 13 / B. More Implementation Details - extractive body cue:** We make the following adjustment to work the algorithm: more strict constraints on hip joint deviation rewards, weights for reward groups, and additional thigh orientation ...
+- **p. 12 / B. More Implementation Details - extractive body cue:** The mul critic architecture is based on previous work [33]. where each advantage function is independently calculated and normalized within its corresponding reward group.
+- **p. 12 / B. More Implementation Details - extractive body cue:** We present the complete set of ward functions and their detailed descriptions in Tulble V1 Several regularization reward terms are adapted from prior work [21, ...
+- **p. 13 / B. More Implementation Details - extractive body cue:** Reward functions within the same group are independently normalized, Whose assovited advantaged functions are eaimated via disinet criti.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 13 (B. More Implementation Details).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,12 +64,12 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 
 ## Observation–State–Action Interface
 
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** postures, PD controllers, observation and action spaces.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** The lower bounds for the vertical force and action bound are ON and 0.25, respectively.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** Curriculum Setup. ‘The curriculum adjustment condition is consistent for both the vertical force and action bound: the head height /jeaa must reach a target height ...
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** Observation noises are without curriculum, set as below:
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** + Real-world posture-adaptive motions are well achieved through our proposed RL-based method, without relying on predefined trajectories or sim-to-real adaptation techniques.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Reinforcement learning (RL) offers an alternative effective framework for humanoid locomotion and whole-body control [36, 13, 4 54], benefiting from minimal modeling assumptions.
+- **p. 13 / B. More Implementation Details - extractive body cue:** postures, PD controllers, observation and action spaces.
+- **p. 12 / B. More Implementation Details - extractive body cue:** The lower bounds for the vertical force and action bound are ON and 0.25, respectively.
+- **p. 12 / B. More Implementation Details - extractive body cue:** Curriculum Setup. ‘The curriculum adjustment condition is consistent for both the vertical force and action bound: the head height /jeaa must reach a target height ...
+- **p. 13 / B. More Implementation Details - extractive body cue:** Observation noises are without curriculum, set as below:
+- **p. 2 / I. INTRODUCTION - extractive body cue:** + Real-world posture-adaptive motions are well achieved through our proposed RL-based method, without relying on predefined trajectories or sim-to-real adaptation techniques.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Reinforcement learning (RL) offers an alternative effective framework for humanoid locomotion and whole-body control [36, 13, 4 54], benefiting from minimal modeling assumptions.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -104,13 +104,13 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 
 ## Failure and Ablation Link
 
-- **p. 8 / B. Sim-to-real Analysis - extractive PDF cue:** ‘We select the successful episode to compute smocthaess to reflect the effect of L2C2 regularization tier.
-- **p. 8 / B. Sim-to-real Analysis - extractive PDF cue:** In this analysis, we investigate the effect of various domain randomization terms on the sim-to-real gap, as shown in Fig.
-- **p. 6 / B. Main Results - extractive PDF cue:** While the robot can learn to stand up without action bounds (HOST-w/o-Bound), its movements are excessively violent, as indicated by three performance metrics.
-- **p. 6 / B. Main Results - extractive PDF cue:** Without the proposed force curriculum, the robot fails to stand up on all terrains except the platform, as the other terrains require exploration from a ...
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** are handcrafted without collision models.
-- **p. 12 / B. More Implementation Details - extractive PDF cue:** HOST-Bound0.25 uses a fixed action bound of $ ~ 0.25 without a curriculum, HOST-wip-r*"* eliminates all style-telated reward functions.
-- **p. 13 / B. More Implementation Details - extractive PDF cue:** Observation noises are without curriculum, set as below:
+- **p. 8 / B. Sim-to-real Analysis - extractive body cue:** ‘We select the successful episode to compute smocthaess to reflect the effect of L2C2 regularization tier.
+- **p. 8 / B. Sim-to-real Analysis - extractive body cue:** In this analysis, we investigate the effect of various domain randomization terms on the sim-to-real gap, as shown in Fig.
+- **p. 6 / B. Main Results - extractive body cue:** While the robot can learn to stand up without action bounds (HOST-w/o-Bound), its movements are excessively violent, as indicated by three performance metrics.
+- **p. 6 / B. Main Results - extractive body cue:** Without the proposed force curriculum, the robot fails to stand up on all terrains except the platform, as the other terrains require exploration from a ...
+- **p. 12 / B. More Implementation Details - extractive body cue:** are handcrafted without collision models.
+- **p. 12 / B. More Implementation Details - extractive body cue:** HOST-Bound0.25 uses a fixed action bound of $ ~ 0.25 without a curriculum, HOST-wip-r*"* eliminates all style-telated reward functions.
+- **p. 13 / B. More Implementation Details - extractive body cue:** Observation noises are without curriculum, set as below:
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -124,7 +124,7 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), objective p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), temporal p. 5 (C. Force Curriculum as Exploration Strategy), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 3 (C. Learning Quadrupedal Robot Standing-up Control), p. 3 (C. Learning Quadrupedal Robot Standing-up Control), p. 5 (C. Force Curriculum as Exploration Strategy).
+- **Evidence anchors reviewed:** method p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), objective p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), temporal p. 5 (C. Force Curriculum as Exploration Strategy), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 3 (C. Learning Quadrupedal Robot Standing-up Control), p. 3 (C. Learning Quadrupedal Robot Standing-up Control), p. 5 (C. Force Curriculum as Exploration Strategy).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

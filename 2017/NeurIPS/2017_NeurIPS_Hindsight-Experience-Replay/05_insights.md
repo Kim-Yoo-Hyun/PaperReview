@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
-- 이 논문의 재사용 가능한 지점은 A deterministic policy is a mapping from states to actions: π : S →A.를 (2015a) show that in this setup it is possible to train an approximator to the Q-function using direct bootstrapping from the Bellman equation (just like in case of DQN) and that a ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it has to hit the puck with such ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** A deterministic policy is a mapping from states to actions: π : S →A. (p. 2, 2 Background).
+- **Paper-specific mechanism:** In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is 4.6 we show the results of the experiments on the physical robot. (p. 5, 4 Experiments); the relevant task/metric cue is 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 100 150 200 epoch number (every epoch = 800 episodes = 800x50 ... (p. 9, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary ... (p. 5, 2 Background).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We decided to use manipulation environments based on an existing hardware robot to ensure that the challenges we face correspond as closely as possible to the real world..
-3. Compare against the body-reported baseline or a matched simpler baseline: 4.2 we compare the performance of DDPG with and without HER..
-4. Report the body metric and its denominator/aggregation: 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 100 150 200 epoch number (every epoch = 800 episodes = 800x50 timesteps) 0% ....
-5. Re-run the body-reported ablation/failure condition: In this section we check how the performance of DDPG with and without HER changes if we replace this reward with one which is shaped..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: A deterministic policy is a mapping from states to actions: π : S →A. (p. 2, 2 Background); preserve the objective/update rule: The network is trained using mini-batch gradient descent on the loss L which encourages the approximated Q-function to satisfy the Bellman equation: L = E (Q(st, at) -yt)2, where yt ... (p. 2, 2 Background).
+2. Use the paper-reported task/data/environment cue: We decided to use manipulation environments based on an existing hardware robot to ensure that the challenges we face correspond as closely as possible to the real world. (p. 5, 4 Experiments).
+3. Compare against the reported or matched baseline: 4.2 we compare the performance of DDPG with and without HER. (p. 5, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 100 150 200 epoch number (every epoch = 800 episodes = 800x50 ... (p. 9, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: In this section we check how the performance of DDPG with and without HER changes if we replace this reward with one which is shaped. (p. 8, 4 Experiments); if none is reported, design one around: These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary ... (p. 5, 2 Background).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (2 Background), p. 2 (2 Background), p. 2 (1 Introduction); the primary result is directionally consistent at p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 1 (Abstract), match the reported outcome at p. 5 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), and measure the boundary at p. 5 (2 Background), p. 6 (4 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, technique, called mechanism이 4.2 we compare the performance of DDPG with and without HER. 대비 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 ...을 개선하고, In this task a puck is placed on a long slippery table and the target position ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (A deterministic policy is a mapping from states to actions: π : S →A.), does the paper-specific mechanism (In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of ...) retain the reported evaluation outcome (0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 ...) when tested against the paper's strongest explicit boundary (These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** 4.6 we show the results of the experiments on the physical robot. (p. 5, 4 Experiments).
+- **Strongest explicit boundary:** These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary ... (p. 5, 2 Background).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.17270; PDF retrieval source: https://arxiv.org/pdf/2203.17270. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2203.17270; PDF retrieval source: https://arxiv.org/pdf/2203.17270. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,30 +10,30 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 
 ## Method Body Digest
 
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Only L1 loss and L1 cost are used during training phase.
-- **p. 16 / A.4 Spatial Cross-Attention - extractive PDF cue:** However, the computational cost of this straightforward way is unaffordable.
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** For the human visual perception system, temporal information plays a crucial role in inferring the motion state of objects and identifying occluded objects, and many ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** For the map segmentation task, we also achieve the state-ofthe-art performance, more than 5.0 points higher than Lift-Splat [32] on the most challenging lane segmentation.
-- **p. 3 / 1 Introduction - extractive PDF cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
+- **p. 16 / A.3 Task Heads - extractive body cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
+- **p. 16 / A.3 Task Heads - extractive body cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
+- **p. 16 / A.3 Task Heads - extractive body cue:** Only L1 loss and L1 cost are used during training phase.
+- **p. 16 / A.4 Spatial Cross-Attention - extractive body cue:** However, the computational cost of this straightforward way is unaffordable.
+- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
+- **p. 2 / 1 Introduction - extractive body cue:** For the human visual perception system, temporal information plays a crucial role in inferring the motion state of objects and identifying occluded objects, and many ...
+- **p. 3 / 1 Introduction - extractive body cue:** For the map segmentation task, we also achieve the state-ofthe-art performance, more than 5.0 points higher than Lift-Splat [32] on the most challenging lane segmentation.
+- **p. 3 / 1 Introduction - extractive body cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
 
 ## Design Rationale
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** To this end, we present a transformer-based bird's-eye-view (BEV) encoder, termed BEVFormer, which can effectively aggregate spatiotemporal features from multi-view cameras and history BEV features.
-- **p. 3 / 1 Introduction - extractive PDF cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
+- **p. 2 / 1 Introduction - extractive body cue:** To this end, we present a transformer-based bird's-eye-view (BEV) encoder, termed BEVFormer, which can effectively aggregate spatiotemporal features from multi-view cameras and history BEV features.
+- **p. 3 / 1 Introduction - extractive body cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
 
 ## Source Evidence Cues
 
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
+- **p. 16 / A.3 Task Heads - extractive body cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
+- **p. 16 / A.3 Task Heads - extractive body cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference. | p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer ... | p. 16 (A.3 Task Heads) |
@@ -43,8 +43,8 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 
 ## Objective / Update Rule
 
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Only L1 loss and L1 cost are used during training phase.
-- **p. 16 / A.4 Spatial Cross-Attention - extractive PDF cue:** However, the computational cost of this straightforward way is unaffordable.
+- **p. 16 / A.3 Task Heads - extractive body cue:** Only L1 loss and L1 cost are used during training phase.
+- **p. 16 / A.4 Spatial Cross-Attention - extractive body cue:** However, the computational cost of this straightforward way is unaffordable.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 16 (A.3 Task Heads).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -60,12 +60,12 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** For the human visual perception system, temporal information plays a crucial role in inferring the motion state of objects and identifying occluded objects, and many ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** For the map segmentation task, we also achieve the state-ofthe-art performance, more than 5.0 points higher than Lift-Splat [32] on the most challenging lane segmentation.
-- **p. 3 / 1 Introduction - extractive PDF cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
-- **p. 16 / A Implementation Details - extractive PDF cue:** In this section, we provide more implementation details of the proposed method and experiments.
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
+- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
+- **p. 2 / 1 Introduction - extractive body cue:** For the human visual perception system, temporal information plays a crucial role in inferring the motion state of objects and identifying occluded objects, and many ...
+- **p. 3 / 1 Introduction - extractive body cue:** For the map segmentation task, we also achieve the state-ofthe-art performance, more than 5.0 points higher than Lift-Splat [32] on the most challenging lane segmentation.
+- **p. 3 / 1 Introduction - extractive body cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
+- **p. 16 / A Implementation Details - extractive body cue:** In this section, we provide more implementation details of the proposed method and experiments.
+- **p. 16 / A.3 Task Heads - extractive body cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -80,8 +80,8 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 
 ## Training vs Inference
 
-- **p. 16 / A.3 Task Heads - extractive PDF cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
-- **p. 16 / A.1 Traning Strategy - extractive PDF cue:** Following previous methods [47, 56], we train all models with 24 epochs, a batch size of 1 (containing 6 view images) per GPU, a learning ...
+- **p. 16 / A.3 Task Heads - extractive body cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
+- **p. 16 / A.1 Traning Strategy - extractive body cue:** Following previous methods [47, 56], we train all models with 24 epochs, a batch size of 1 (containing 6 view images) per GPU, a learning ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -101,13 +101,13 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 
 ## Failure and Ablation Link
 
-- **p. 7 / 4 Experiments - extractive PDF cue:** To eliminate the effect of task heads and compare other BEV generating methods fairly, we use VPN [30] and Lift-Splat [32] to replace our BEVFormer ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** On the test set, our model achieves 56.9% NDS without bells and whistles, 9.0 points 7
-- **p. 18 / Figure/Table caption - extractive PDF cue:** Table 8: Ablation Experiments on nuScenes val set. "A." indicates aligning history BEV fea- tures with ego-motion. "R." indicates randomly sampling 4 frames from 5 ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: The detection results of different methods with various BEV encoders on nuScenes val set. "Memory" is the consumed GPU memory during training. *: ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 4: 3D detection and map segmentation results on nuScenes val set. Comparison of training segmentation and detection tasks jointly or not. *: We use ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: 3D detection results on nuScenes test set. ∗notes that VoVNet-99 (V2-99) [21] was pre-trained on the depth estimation task with extra data [31]. ...
-- **p. 9 / C R101 - extractive PDF cue:** However, the jointly trained model does not perform as well as individually trained models for road and lane segmentation, which is a common phenomenon called ...
+- **p. 7 / 4 Experiments - extractive body cue:** To eliminate the effect of task heads and compare other BEV generating methods fairly, we use VPN [30] and Lift-Splat [32] to replace our BEVFormer ...
+- **p. 7 / 4 Experiments - extractive body cue:** On the test set, our model achieves 56.9% NDS without bells and whistles, 9.0 points 7
+- **p. 18 / Figure/Table caption - extractive body cue:** Table 8: Ablation Experiments on nuScenes val set. "A." indicates aligning history BEV fea- tures with ego-motion. "R." indicates randomly sampling 4 frames from 5 ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: The detection results of different methods with various BEV encoders on nuScenes val set. "Memory" is the consumed GPU memory during training. *: ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: 3D detection and map segmentation results on nuScenes val set. Comparison of training segmentation and detection tasks jointly or not. *: We use ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: 3D detection results on nuScenes test set. ∗notes that VoVNet-99 (V2-99) [21] was pre-trained on the depth estimation task with extra data [31]. ...
+- **p. 9 / C R101 - extractive body cue:** However, the jointly trained model does not perform as well as individually trained models for road and lane segmentation, which is a common phenomenon called ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -121,7 +121,7 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads), objective p. 16 (A.3 Task Heads), p. 16 (A.4 Spatial Cross-Attention), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 4 (2 Related Work), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads), objective p. 16 (A.3 Task Heads), p. 16 (A.4 Spatial Cross-Attention), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 4 (2 Related Work), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

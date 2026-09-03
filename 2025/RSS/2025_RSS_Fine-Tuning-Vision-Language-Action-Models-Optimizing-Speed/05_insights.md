@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 ‘decoding, action chunking, a conti and a simple L1 regression-based lea ference efficiency, policy performance, and flex inthe rodel's input-output opecicatios.를 This setup differs significantly from OpenVLA's pretraining, which includes single-arm robot data only, a single camera viewpoint from 4 third-person camera, no robot state inputs, low-frequency control (3-10 Hz), and relative end-effec ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 On the other hand, zy demonstrates more robust execution ‘with smoother motions and better reactivity to feedback, often successfully recovering from initial failures (as shown in Figure 6).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In the next section, ‘we present a parallel generation scheme that enables efficient action chunking.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** This setup differs significantly from OpenVLA's pretraining, which includes single-arm robot data only, a single camera viewpoint from 4 third-person camera, no robot state inputs, low-frequency control (3-10 Hz), and ... (p. 7, 3) LI regression objective).
+- **Paper-specific mechanism:** In the next section, ‘we present a parallel generation scheme that enables efficient action chunking. (p. 3, 1. Iyrropucrion).
+- **Evidence boundary:** the reported outcome is For methods using action chunking, we set chunk size to A' = 8 to match the Diffusion Policy baseline [5], and execute full chunks before replanning, which we find improves ... (p. 5, A. LIBERO Experimental Setup); the relevant task/metric cue is To provide fine-grained assessment, we use a predetermined rubric that assigns scores for partial task completion (see Appendix FF for details). (p. 8, C. ALOHA Task Performance Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** As visualized in Figure 6, it often fails to correct mistakes in the "scoop X into (p. 8, C. ALOHA Task Performance Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We evaluate on the LIBERO simulation benchmark [26], which features a Franka Emika Panda arm in simulation with demonstrations containing camera images, robot state, task annotations, and delta end-effector pose actions..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fine-tuned VLA pol cies generally outperform the from-scratch baselines in both task execution and language following, consistent with prior findings (27, 3]..
-4. Report the body metric and its denominator/aggregation: Success rates in approaching for language-dependent tasks..
-5. Re-run the body-reported ablation/failure condition: Note that we do not use FILM for LIBERO ‘experiments since the fine-tuned policies without it already demonstrate good language grounding..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: This setup differs significantly from OpenVLA's pretraining, which includes single-arm robot data only, a single camera viewpoint from 4 third-person camera, no robot state inputs, low-frequency control (3-10 Hz), and ... (p. 7, 3) LI regression objective); preserve the objective/update rule: We fine-tune OpenVLA using OFT+ on each task independently for 50-150K gradient steps (total batch size 32 with 8 A100/H100-80GB GPUs) with action chunk size IK ~ 2 At inference ... (p. 8, 3) LI regression objective).
+2. Use the paper-reported task/data/environment cue: We evaluate on the LIBERO simulation benchmark [26], which features a Franka Emika Panda arm in simulation with demonstrations containing camera images, robot state, task annotations, and delta end-effector pose ... (p. 5, A. LIBERO Experimental Setup).
+3. Compare against the reported or matched baseline: Fine-tuned VLA pol cies generally outperform the from-scratch baselines in both task execution and language following, consistent with prior findings (27, 3]. (p. 8, C. ALOHA Task Performance Results).
+4. Report the body metric with its denominator and aggregation: To provide fine-grained assessment, we use a predetermined rubric that assigns scores for partial task completion (see Appendix FF for details). (p. 8, C. ALOHA Task Performance Results).
+5. Re-run the reported ablation or stress/failure condition: Note that Seer uses additional LIBERO90 pretraining data (p. 5, A. LIBERO Experimental Setup); if none is reported, design one around: As visualized in Figure 6, it often fails to correct mistakes in the "scoop X into (p. 8, C. ALOHA Task Performance Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 7 (3) LI regression objective); the primary result is directionally consistent at p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. Iyrropucrion), p. 1 (Abstract), match the reported outcome at p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), and measure the boundary at p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 next, section, present mechanism이 Fine-tuned VLA pol cies generally outperform the from-scratch baselines in both task execution and language following, ... 대비 Success rates in approaching for language-dependent tasks.을 개선하고, On the other hand, zy demonstrates more robust execution ‘with smoother motions and better reactivity to ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (This setup differs significantly from OpenVLA's pretraining, which includes single-arm robot data only, a single camera viewpoint from 4 third-person camera, no ...), does the paper-specific mechanism (In the next section, ‘we present a parallel generation scheme that enables efficient action chunking.) retain the reported evaluation outcome (To provide fine-grained assessment, we use a predetermined rubric that assigns scores for partial task completion (see Appendix ...) when tested against the paper's strongest explicit boundary (As visualized in Figure 6, it often fails to correct mistakes in the "scoop X into)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (To provide fine-grained assessment, we use a predetermined rubric that assigns scores for partial task completion (see Appendix ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In the next section, ‘we present a parallel generation scheme that enables efficient action chunking. (p. 3, 1. Iyrropucrion).
+- **Paper-supported outcome:** For methods using action chunking, we set chunk size to A' = 8 to match the Diffusion Policy baseline [5], and execute full chunks before replanning, which we find improves ... (p. 5, A. LIBERO Experimental Setup).
+- **Strongest explicit boundary:** As visualized in Figure 6, it often fails to correct mistakes in the "scoop X into (p. 8, C. ALOHA Task Performance Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

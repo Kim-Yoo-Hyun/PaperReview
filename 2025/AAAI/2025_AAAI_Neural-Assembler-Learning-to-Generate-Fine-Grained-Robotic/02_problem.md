@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al. | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | The goal of the task is to generate a sequence of fine-grained assembly instructions, encompassing all parameters-such as component types, geometric poses ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The goal of the task is to generate a sequence of fine-grained assembly instructions, encompassing all parameters-such as component types, geometric poses ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | goal, task, generate, sequence, fine-grained, assembly, instructions, encompassing, parameters-such, component | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | Neural, Assembler, Object, library, Shape, Texture, Relation, Graph | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | standardized episode e and interface; body terms: goal, task, generate, sequence, fine-grained, assembly, instructions, encompassing, parameters-such, component | p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction) |
 | Decision / output variable | method trajectory/action; body terms: novel, task, end-to-end, neural, network, dubbed, Assembler, present | p. 2 (1 Introduction), p. 2 (1 Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 12 (A.2 Implementation Details) |
 | Success / guarantee | comparable score and protocol validity | p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.
 
 - **p. 2 / 1 Introduction - extractive body cue:** We present two datasets for the proposed image-guided assembly task, namely the CLEVR-Assembly dataset and LEGO-Assembly dataset.
 
@@ -65,12 +65,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): For thi
 
 ## Position in the Robotics Loop
 
-benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), objective p. 12 (A.2 Implementation Details).
+- **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), objective p. 12 (A.2 Implementation Details).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al. (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct keypoint identification, occlusion results in a less confident. (p. 9, 4 Experiments).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

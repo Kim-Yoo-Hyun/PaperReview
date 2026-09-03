@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.08864; PDF retrieval source: https://arxiv.org/pdf/2310.08864. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.08864; PDF retrieval source: https://arxiv.org/pdf/2310.08864. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -22,8 +22,8 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 ## Design Rationale
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Addressing goal (1), our empirical contribution is to demonstrate that several recent robotic learning methods, with minimal modification, can utilize X-embodiment data and enable positive ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe.
 - **p. 3 / III. THE OPEN X-EMBODIMENT REPOSITORY - extractive body cue:** We introduce the Open X-Embodiment Repository (robotics-transformer-x.github.io) - an open-source repository which includes large-scale data along with pre-trained model checkpoints for X-embodied robot learning research.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We show that the resulting models, which we call RT-X, can improve over policies trained only on data from the evaluation domain, exhibiting better generalization ...
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Policy architectures We consider two model architectures in our experiments: (1) RT-1 [8], an efficient Transformer-based architecture designed for robotic control, and ... | p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | These tokens are fed into a decoder-only Transformer, which outputs the tokenized actions. | p. 4 (IV. RT-X DESIGN), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY) |
@@ -50,7 +50,7 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 
 - **p. 4 / IV. RT-X DESIGN - extractive body cue:** Training and inference details Both models use a standard categorical cross-entropy objective over their output space (discrete buckets for RT1 and all possible language tokens ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
-- **Equation/algorithm anchors:** p. 4 (IV. RT-X DESIGN).
+- **Equation/algorithm anchors:** p. 4 (IV. RT-X DESIGN), p. 1 (Body text (section boundary not confidently recovered)).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -67,9 +67,10 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 - **p. 4 / 5 Hz - extractive body cue:** 3: RT-1-X and RT-2-X both take images and a text instruction as input and output discretized end-effector actions.
 - **p. 4 / IV. RT-X DESIGN - extractive body cue:** Both models take in a visual input and natural language instruction describing the task, and output a tokenized action.
 - **p. 3 / III. THE OPEN X-EMBODIMENT REPOSITORY - extractive body cue:** We use the RLDS data format [119], which saves data in serialized tfrecord files and accommodates the various action spaces and input modalities of different ...
-- **p. 1 / Abstract - extractive body cue:** Can we instead train "generalist" X-robot policy that can be adapted efficiently to new robots, tasks, arXiv:2310.08864v9 [cs.RO] 14 May 2025
+- **p. 1 / Abstract - extractive body cue:** Can we instead train "generalist" X-robot policy that can be adapted efficiently to new robots, tasks.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Even the largest data collection efforts still end up with datasets that are a fraction of the size and diversity of benchmark datasets in vision ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, these lessons are difficult to apply in robotics: any single robotic domain might be too narrow, and while computer vision and NLP can leverage ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -129,8 +130,17 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 2 (I. INTRODUCTION), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 5 (IV. RT-X DESIGN), objective p. 4 (IV. RT-X DESIGN), temporal p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN).
+- **Evidence anchors reviewed:** method p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 2 (I. INTRODUCTION), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 5 (IV. RT-X DESIGN), objective p. 4 (IV. RT-X DESIGN), temporal p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Policy architectures We consider two model architectures in our experiments: (1) RT-1 [8], an efficient Transformer-based architecture designed for robotic control, and (2) RT-2 [9] a large visionlanguage model co-fine-tuned ... (p. 4, IV. RT-X DESIGN).
+- **Objective/update evidence:** Training and inference details Both models use a standard categorical cross-entropy objective over their output space (discrete buckets for RT1 and all possible language tokens for RT-2). (p. 4, IV. RT-X DESIGN).
+- **Temporal/runtime evidence:** We note that including a short history of images significantly improves generalization performance (row (4) vs row (5)). (p. 6, V. EXPERIMENTAL RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

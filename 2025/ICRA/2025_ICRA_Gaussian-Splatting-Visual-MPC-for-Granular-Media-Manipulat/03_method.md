@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2410.09740v3. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2410.09740v3. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We form the node features of the GNN as (ci t,σi t ,Ri t,gi t,si t) for node vi t. f consists ... | p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The trajectory optimization problem over a horizon T can be defined as follows: u0:T-1 = argminu0:T-1c(ZT,Ztarget) (6) Z0 = h(O0), Ztarget = ... | p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH) |
@@ -80,7 +80,7 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | We directly Algorithm 1: Our Visual MPC Planning Algorithm Data: Current observation Ot, target Otarget, planning horizon T, the dynamics model f, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Both of the rollout results show that the dynamics model prediction is accurate for a few steps. • NFD[29] uses a fully ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | We directly Algorithm 1: Our Visual MPC Planning Algorithm Data: Current observation Ot, target Otarget, planning horizon T, the dynamics model f, ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -123,8 +123,17 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), objective p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), temporal p. 4 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 4 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS).
+- **Evidence anchors reviewed:** method p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), objective p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), temporal p. 4 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 4 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The trajectory optimization problem over a horizon T can be defined as follows: u0:T-1 = argminu0:T-1c(ZT,Ztarget) (6) Z0 = h(O0), Ztarget = h(Otarget), Zt+1 = f(Zt,ut) (7) where h is ... (p. 3, IV. OUR APPROACH).
+- **Objective/update evidence:** We perform the optimization shown in Equation 6 as part of a gradient-based MPC loop (as shown in Alg. (p. 4, IV. OUR APPROACH).
+- **Temporal/runtime evidence:** We directly Algorithm 1: Our Visual MPC Planning Algorithm Data: Current observation Ot, target Otarget, planning horizon T, the dynamics model f, Number of sampled action sequence K and gradient ... (p. 4, V. EXPERIMENTAL RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p036.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p036.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p036.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p036.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Given particle positions 7X, and velocities V_ fused from multi-view depth images as input, our model predicts dense per-particle motion by first ... | p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | We apply the Model-Predictive Path Integral (MPPD) [50] trajectory optimization algorithm to minimize the cost and to synthesize the robots actions. | p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | and standard deviation of the prediction error over a 3-second horizon, The best results are highlighted | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | and the LPIPS score measures appearance-wise similarities between predicted frames and ground truth video recordings. | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | Given particle positions 7X, and velocities V_ fused from multi-view depth images as input, our model predicts dense per-particle motion by first ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -124,8 +124,17 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling), p. 4 (B. Model Components), p. 2 (A. Physics-Based Deformable Modeling), p. 2 (B. Learning-Based Deformable Modeling), objective p. 5 (B. Model Components), p. 5 (B. Model Components), p. 4 (B. Model Components), p. 4 (B. Learning-Based Deformable Modeling), p. 3 (B. Learning-Based Deformable Modeling), temporal p. 7 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 8 (C. Sparse-View Dynamics Prediction), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling), p. 4 (B. Model Components), p. 2 (A. Physics-Based Deformable Modeling), p. 2 (B. Learning-Based Deformable Modeling), objective p. 5 (B. Model Components), p. 5 (B. Model Components), p. 4 (B. Model Components), p. 4 (B. Learning-Based Deformable Modeling), p. 3 (B. Learning-Based Deformable Modeling), temporal p. 7 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 8 (C. Sparse-View Dynamics Prediction), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We apply the Model-Predictive Path Integral (MPPD) [50] trajectory optimization algorithm to minimize the cost and to synthesize the robots actions. (p. 5, B. Model Components).
+- **Objective/update evidence:** Since the ‘dynamics function fy is fully differentiable, we optimize the network parameters «and 1 using gradient descent. (p. 5, B. Model Components).
+- **Temporal/runtime evidence:** and standard deviation of the prediction error over a 3-second horizon, The best results are highlighted (p. 7, A. Experiment Setup).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

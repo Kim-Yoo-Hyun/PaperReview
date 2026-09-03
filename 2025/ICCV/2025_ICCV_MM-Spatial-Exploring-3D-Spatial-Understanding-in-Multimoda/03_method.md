@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,33 +10,33 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 
 ## Method Body Digest
 
-- **p. 4 / 4.1. Model Architecture - extractive PDF cue:** We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM ...
-- **p. 4 / 4.2. Data and Training - extractive PDF cue:** We use AXLearn [7] for model training.
-- **p. 6 / Model - extractive PDF cue:** 13 ), suggesting that our model can successfully use additional views to improve 3D perception. • Multi-view 19 vs.
-- **p. 6 / Model - extractive PDF cue:** 2D object grounding and depth prediction) and/or leveraging more test-time compute benefits model accuracy. • Depth (GT): Tool-use vs.
-- **p. 7 / Model - extractive PDF cue:** We evaluate the metric depth estimates of our CoT model produced as part of its responses on the CA-VQA benchmark.
-- **p. 7 / Model - extractive PDF cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
-- **p. 8 / Model - extractive PDF cue:** Training on a mixture of CA-VQAω and OSD performs best.
-- **p. 8 / Model - extractive PDF cue:** MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, outperforming SpatialRGPT-VILA-1.5-8B (which fully encodes depth).
+- **p. 4 / 4.1. Model Architecture - extractive body cue:** We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM ...
+- **p. 4 / 4.2. Data and Training - extractive body cue:** We use AXLearn [7] for model training.
+- **p. 6 / Model - extractive body cue:** 13 ), suggesting that our model can successfully use additional views to improve 3D perception. • Multi-view 19 vs.
+- **p. 6 / Model - extractive body cue:** 2D object grounding and depth prediction) and/or leveraging more test-time compute benefits model accuracy. • Depth (GT): Tool-use vs.
+- **p. 7 / Model - extractive body cue:** We evaluate the metric depth estimates of our CoT model produced as part of its responses on the CA-VQA benchmark.
+- **p. 7 / Model - extractive body cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
+- **p. 8 / Model - extractive body cue:** Training on a mixture of CA-VQAω and OSD performs best.
+- **p. 8 / Model - extractive body cue:** MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, outperforming SpatialRGPT-VILA-1.5-8B (which fully encodes depth).
 
 ## Design Rationale
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** To address these †Equal contribution.
+- design rationale cue 없음
 
 ## Source Evidence Cues
 
-- **p. 4 / 4.1. Model Architecture - extractive PDF cue:** We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM ...
-- **p. 4 / 4.2. Data and Training - extractive PDF cue:** We use AXLearn [7] for model training.
-- **p. 6 / Model - extractive PDF cue:** 13 ), suggesting that our model can successfully use additional views to improve 3D perception. • Multi-view 19 vs.
-- **p. 6 / Model - extractive PDF cue:** 2D object grounding and depth prediction) and/or leveraging more test-time compute benefits model accuracy. • Depth (GT): Tool-use vs.
-- **p. 7 / Model - extractive PDF cue:** We evaluate the metric depth estimates of our CoT model produced as part of its responses on the CA-VQA benchmark.
-- **p. 7 / Model - extractive PDF cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
-- **p. 8 / Model - extractive PDF cue:** Training on a mixture of CA-VQAω and OSD performs best.
+- **p. 4 / 4.1. Model Architecture - extractive body cue:** We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM ...
+- **p. 4 / 4.2. Data and Training - extractive body cue:** We use AXLearn [7] for model training.
+- **p. 6 / Model - extractive body cue:** 13 ), suggesting that our model can successfully use additional views to improve 3D perception. • Multi-view 19 vs.
+- **p. 6 / Model - extractive body cue:** 2D object grounding and depth prediction) and/or leveraging more test-time compute benefits model accuracy. • Depth (GT): Tool-use vs.
+- **p. 7 / Model - extractive body cue:** We evaluate the metric depth estimates of our CoT model produced as part of its responses on the CA-VQA benchmark.
+- **p. 7 / Model - extractive body cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
+- **p. 8 / Model - extractive body cue:** Training on a mixture of CA-VQAω and OSD performs best.
 - **Detected method headings:** 4. Model (p. 4); 4.1. Model Architecture (p. 4); 5.1. Model Variants (p. 4); Model (p. 6); Model (p. 7); Model (p. 8)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and ... | p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and Training) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We use AXLearn [7] for model training. | p. 4 (4.2. Data and Training), p. 6 (Model) |
@@ -57,18 +57,18 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 |---|---|---|---|
 | Input/observation | MM-Spatial-3B, achieves, SOTA, image-only, input, tool-use, monocular, depth, outperforming, SpatialRGPT-VILA-1, fully, encodes, There, have | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
 | State/latent | MM-Spatial-3B, achieves, SOTA, image-only, input, tool-use, monocular, depth, outperforming, SpatialRGPT-VILA-1 | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | address, Equal, contribution, MM-Spatial-3B, achieves, SOTA, image-only, input, tool-use, monocular | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Action/output | MM-Spatial-3B, achieves, SOTA, image-only, input, tool-use, monocular, depth, outperforming, SpatialRGPT-VILA-1 | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
 | Objective/constraint | not recovered | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **p. 8 / Model - extractive PDF cue:** MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, outperforming SpatialRGPT-VILA-1.5-8B (which fully encodes depth).
-- **p. 1 / 1. Introduction - extractive PDF cue:** There have been comparatively few works on 3D object perception with MLLMs [15, 20, 27, 28, 32, 98]; moreover, they only consider a subset of ...
-- **p. 4 / 4.1. Model Architecture - extractive PDF cue:** Our model supports multi-image input, allowing us to concatenate multiple views into sequences It→N, ..., It→1, It.
-- **p. 4 / 4.1. Model Architecture - extractive PDF cue:** We also consider variants of our model that incorporate either multiple views or depth maps as additional inputs: • Multi-view.
-- **p. 6 / Model - extractive PDF cue:** Model performance is further improved by incorporating multi-view and/or depth as additional input signals, as well as by leveraging CoT, which relies on our model's ...
-- **p. 7 / Model - extractive PDF cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
-- **p. 8 / Model - extractive PDF cue:** MM-Spatial-3B outperforms the SOTA SpatialRGPT-VILA-1.5-8B 5 with different data mixtures 10 - 12 , with and without 8 depth input (SpatialRGPT uses depth maps via ...
+- **p. 8 / Model - extractive body cue:** MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, outperforming SpatialRGPT-VILA-1.5-8B (which fully encodes depth).
+- **p. 1 / 1. Introduction - extractive body cue:** There have been comparatively few works on 3D object perception with MLLMs [15, 20, 27, 28, 32, 98]; moreover, they only consider a subset of ...
+- **p. 4 / 4.1. Model Architecture - extractive body cue:** Our model supports multi-image input, allowing us to concatenate multiple views into sequences It→N, ..., It→1, It.
+- **p. 4 / 4.1. Model Architecture - extractive body cue:** We also consider variants of our model that incorporate either multiple views or depth maps as additional inputs: • Multi-view.
+- **p. 6 / Model - extractive body cue:** Model performance is further improved by incorporating multi-view and/or depth as additional input signals, as well as by leveraging CoT, which relies on our model's ...
+- **p. 7 / Model - extractive body cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
+- **p. 8 / Model - extractive body cue:** MM-Spatial-3B outperforms the SOTA SpatialRGPT-VILA-1.5-8B 5 with different data mixtures 10 - 12 , with and without 8 depth input (SpatialRGPT uses depth maps via ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,11 +83,11 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 
 ## Training vs Inference
 
-- **p. 4 / 4.2. Data and Training - extractive PDF cue:** We use AXLearn [7] for model training.
-- **p. 8 / Model - extractive PDF cue:** Training on a mixture of CA-VQAω and OSD performs best.
-- **p. 4 / 4.2. Data and Training - extractive PDF cue:** We use the same training hyperparameters as MM1.5 [128], with unfrozen image encoder and LLM.
-- **p. 4 / 4.2. Data and Training - extractive PDF cue:** For the 3) supervised fine-tuning (SFT) stage, we start from the MM1.5 single-image SFT mixture, which includes datasets across multiple categories: General VQA, Knowledge (math, ...
-- **p. 5 / 5.1. Model Variants - extractive PDF cue:** Trained on singleview RGB inputs plus fully encoded depth maps, as described in Sec.
+- **p. 4 / 4.2. Data and Training - extractive body cue:** We use AXLearn [7] for model training.
+- **p. 8 / Model - extractive body cue:** Training on a mixture of CA-VQAω and OSD performs best.
+- **p. 4 / 4.2. Data and Training - extractive body cue:** We use the same training hyperparameters as MM1.5 [128], with unfrozen image encoder and LLM.
+- **p. 4 / 4.2. Data and Training - extractive body cue:** For the 3) supervised fine-tuning (SFT) stage, we start from the MM1.5 single-image SFT mixture, which includes datasets across multiple categories: General VQA, Knowledge (math, ...
+- **p. 5 / 5.1. Model Variants - extractive body cue:** Trained on singleview RGB inputs plus fully encoded depth maps, as described in Sec.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -107,13 +107,13 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 
 ## Failure and Ablation Link
 
-- **p. 4 / 5.1. Model Variants - extractive PDF cue:** Trained on single-view RGB inputs, without depth information.
-- **p. 4 / 5.1. Model Variants - extractive PDF cue:** We explore the following model variants in our study, leveraging the various input signals provided within CA-VQA: • MM-Spatial.
-- **p. 5 / 5.3. Results on our CA-VQA Benchmark - extractive PDF cue:** We assess the model variants outlined in Sec.
-- **p. 5 / 5.2. Overview of Benchmark Category Results - extractive PDF cue:** 4.2 by default; some ablations use Specialist Models trained only on CA-VQA.
-- **p. 7 / 5.5. SpatialRGPT-Bench Results - extractive PDF cue:** To enable a fair comparison of model capabilities, we thus align with the benchmark by generating CA-VQAω, a variant of CA-VQA adopting their AABB-based definitions, ...
-- **p. 2 / Dataset - extractive PDF cue:** We apply this pipeline to CA-1M [61] to generate Cubify Anything VQA (CAVQA), a new spatial understanding dataset for MLLM fine-tuning, covering diverse indoor scenes.
-- **p. 2 / Dataset - extractive PDF cue:** CA-VQA is the first dataset that is based on high-quality 3D ground truth, includes depth maps (both from sensors and monocular) and multi-view images, covers ...
+- **p. 4 / 5.1. Model Variants - extractive body cue:** Trained on single-view RGB inputs, without depth information.
+- **p. 4 / 5.1. Model Variants - extractive body cue:** We explore the following model variants in our study, leveraging the various input signals provided within CA-VQA: • MM-Spatial.
+- **p. 5 / 5.3. Results on our CA-VQA Benchmark - extractive body cue:** We assess the model variants outlined in Sec.
+- **p. 5 / 5.2. Overview of Benchmark Category Results - extractive body cue:** 4.2 by default; some ablations use Specialist Models trained only on CA-VQA.
+- **p. 7 / 5.5. SpatialRGPT-Bench Results - extractive body cue:** To enable a fair comparison of model capabilities, we thus align with the benchmark by generating CA-VQAω, a variant of CA-VQA adopting their AABB-based definitions, ...
+- **p. 2 / Dataset - extractive body cue:** We apply this pipeline to CA-1M [61] to generate Cubify Anything VQA (CAVQA), a new spatial understanding dataset for MLLM fine-tuning, covering diverse indoor scenes.
+- **p. 2 / Dataset - extractive body cue:** CA-VQA is the first dataset that is based on high-quality 3D ground truth, includes depth maps (both from sensors and monocular) and multi-view images, covers ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -127,7 +127,7 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and Training), p. 6 (Model), p. 6 (Model), p. 7 (Model), p. 7 (Model), objective 본문 anchor 없음, temporal p. 5 (5.1. Model Variants), p. 3 (2.2. 3D Spatial Understanding with MLLMs), p. 4 (3.3. Multi-view and Metric Depth Data), p. 1 (Front matter), p. 3 (2.2. 3D Spatial Understanding with MLLMs), p. 4 (3.3. Multi-view and Metric Depth Data).
+- **Evidence anchors reviewed:** method p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and Training), p. 6 (Model), p. 6 (Model), p. 7 (Model), p. 7 (Model), objective 본문 anchor 없음, temporal p. 5 (5.1. Model Variants), p. 3 (2.2. 3D Spatial Understanding with MLLMs), p. 4 (3.3. Multi-view and Metric Depth Data), p. 1 (Body text (section not recovered)), p. 3 (2.2. 3D Spatial Understanding with MLLMs), p. 4 (3.3. Multi-view and Metric Depth Data).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

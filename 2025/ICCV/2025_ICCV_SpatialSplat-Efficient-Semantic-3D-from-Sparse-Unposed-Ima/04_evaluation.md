@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes.
-- **p. 8 / 25.58 MB - extractive PDF cue:** Notably, since Replica is a synthetic dataset with a different data modality from our training set, this underscores the strong generalization ability of our approach.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For evaluation, we follow LSM and select 40 unseen scenes from ScanNet to assess our model's performance.
-- **p. 8 / 25.58 MB - extractive PDF cue:** Model efficiency comparison. "-Lite": the model replaces LSeg with CLIP ViT-B/16. unseen Replica dataset in both novel view synthesis and open-vocabulary segmentation.
-- **p. 6 / 4.2. Results and Analysis - extractive PDF cue:** We observe that LSM struggles in certain scenes due to its reliance on accurate depth for aligning views during training as shown in Fig.
-- **p. 7 / 4.2. Results and Analysis - extractive PDF cue:** Results of Cross-Dataset Generalization.
-- **p. 7 / 4.2. Results and Analysis - extractive PDF cue:** Following LSM's approach, we map category labels from the Scannet dataset into common categories: Wall, Floor, Ceiling, Chair, Table, Bed, Sofa, Others.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based on 3DGS [19] and NeRF [29], respectively.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes.
+- **p. 8 / 25.58 MB - extractive body cue:** Notably, since Replica is a synthetic dataset with a different data modality from our training set, this underscores the strong generalization ability of our approach.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For evaluation, we follow LSM and select 40 unseen scenes from ScanNet to assess our model's performance.
+- **p. 8 / 25.58 MB - extractive body cue:** Model efficiency comparison. "-Lite": the model replaces LSeg with CLIP ViT-B/16. unseen Replica dataset in both novel view synthesis and open-vocabulary segmentation.
+- **p. 6 / 4.2. Results and Analysis - extractive body cue:** We observe that LSM struggles in certain scenes due to its reliance on accurate depth for aligning views during training as shown in Fig.
+- **p. 7 / 4.2. Results and Analysis - extractive body cue:** Results of Cross-Dataset Generalization.
+- **p. 7 / 4.2. Results and Analysis - extractive body cue:** Following LSM's approach, we map category labels from the Scannet dataset into common categories: Wall, Floor, Ceiling, Chair, Table, Bed, Sofa, Others.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based on 3DGS [19] and NeRF [29], respectively.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experimental Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | In challenging cases where LSM fails, such as the table legs in the first two rows and the corners in the last two rows, ... | p. 6 (4.1. Experimental Setup) |
 | 4.2. Results and Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, SpatialSplat significantly outperforms latest SOTA method LSM. | p. 6 (4.2. Results and Analysis) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes.
-- **p. 8 / 25.58 MB - extractive PDF cue:** Notably, since Replica is a synthetic dataset with a different data modality from our training set, this underscores the strong generalization ability of our approach.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** For evaluation, we follow LSM and select 40 unseen scenes from ScanNet to assess our model's performance.
-- **p. 8 / 25.58 MB - extractive PDF cue:** Model efficiency comparison. "-Lite": the model replaces LSeg with CLIP ViT-B/16. unseen Replica dataset in both novel view synthesis and open-vocabulary segmentation.
-- **p. 6 / 4.2. Results and Analysis - extractive PDF cue:** We observe that LSM struggles in certain scenes due to its reliance on accurate depth for aligning views during training as shown in Fig.
-- **p. 7 / 4.2. Results and Analysis - extractive PDF cue:** Results of Cross-Dataset Generalization.
-- **p. 7 / 4.2. Results and Analysis - extractive PDF cue:** Following LSM's approach, we map category labels from the Scannet dataset into common categories: Wall, Floor, Ceiling, Chair, Table, Bed, Sofa, Others.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based on 3DGS [19] and NeRF [29], respectively.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes.
+- **p. 8 / 25.58 MB - extractive body cue:** Notably, since Replica is a synthetic dataset with a different data modality from our training set, this underscores the strong generalization ability of our approach.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** For evaluation, we follow LSM and select 40 unseen scenes from ScanNet to assess our model's performance.
+- **p. 8 / 25.58 MB - extractive body cue:** Model efficiency comparison. "-Lite": the model replaces LSeg with CLIP ViT-B/16. unseen Replica dataset in both novel view synthesis and open-vocabulary segmentation.
+- **p. 6 / 4.2. Results and Analysis - extractive body cue:** We observe that LSM struggles in certain scenes due to its reliance on accurate depth for aligning views during training as shown in Fig.
+- **p. 7 / 4.2. Results and Analysis - extractive body cue:** Results of Cross-Dataset Generalization.
+- **p. 7 / 4.2. Results and Analysis - extractive body cue:** Following LSM's approach, we map category labels from the Scannet dataset into common categories: Wall, Floor, Ceiling, Chair, Table, Bed, Sofa, Others.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based on 3DGS [19] and NeRF [29], respectively.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison between previous methods and our SpatialSplat. (a): Previous methods predict pixel-wise Gaussians, associating each primitive with compressed semantic feature. (b): Our SpatialSplat ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Pipeline of SpatialSplat. The SpatialSplat processes unposed images along with their intrinsics through a 3D geometry trans- former. The extracted features from the ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative Comparison in 3D Tasks on Scannet dataset. Our method outperforms both the latest SOTA semantic-aware feed-forward approach and per-scene optimization methods. "-Lite": ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison in NVS. SpatialSplat can synthesize realistic novel views. In challenging cases where LSM fails, such as the table legs in the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Out-of-distribution (OOD) comparison on Replica dataset. SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison in OVS. SpatialSplat achieves sharper and more precise segmentation results compared to previous methods. Notably, our method excels in challenging details, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. The rendered instance features. SpatialSplat predicts clear and consistent instance features across different views. cent SOTA methods designed specifically for novel view synthesis. ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative results of cross-dataset generalization. Zoom out for clearer visualization. for other compared methods. As illustrated in Fig. 4, Spa- tialSplat produces sharp ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between previous methods and our SpatialSplat. (a): Previous methods predict pixel-wise Gaussians, associating each primitive with compressed semantic feature. (b): Our SpatialSplat ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Pipeline of SpatialSplat. The SpatialSplat processes unposed images along with their intrinsics through a 3D geometry trans- former. The extracted features from the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Comparison in 3D Tasks on Scannet dataset. Our method outperforms both the latest SOTA semantic-aware feed-forward approach and per-scene optimization methods. "-Lite": ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison in NVS. SpatialSplat can synthesize realistic novel views. In challenging cases where LSM fails, such as the table legs in the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Out-of-distribution (OOD) comparison on Replica dataset. SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison in OVS. SpatialSplat achieves sharper and more precise segmentation results compared to previous methods. Notably, our method excels in challenging details, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. The rendered instance features. SpatialSplat predicts clear and consistent instance features across different views. cent SOTA methods designed specifically for novel view synthesis. ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative results of cross-dataset generalization. Zoom out for clearer visualization. for other compared methods. As illustrated in Fig. 4, Spa- tialSplat produces sharp ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB) |
 | Task/environment | Notably, since Replica is a synthetic dataset with a different data modality from our training set, this underscores the strong generalization ability of our ... | reset, timeout, object/scene variation | p. 8 (25.58 MB), p. 5 (4.1. Experimental Setup) |
@@ -121,8 +121,8 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 | Primary metric/result | 1, SpatialSplat significantly outperforms latest SOTA method LSM. | numeric claim only at cited anchor | p. 6 (4.2. Results and Analysis) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes.
-- **p. 8 / 4.2. Results and Analysis - extractive PDF cue:** Method Latency↓ Gaussian Size ↓ Num. ↓ Feature-3DGS [52] 1069 s
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We filter out bad scenes and those with incomplete extrinsic parameters, resulting in a training dataset of approximately 1,500 scenes.
+- **p. 8 / 4.2. Results and Analysis - extractive body cue:** Method Latency↓ Gaussian Size ↓ Num. ↓ Feature-3DGS [52] 1069 s
 
 ## Generalization and Failure Cases
 
@@ -154,12 +154,12 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** In challenging cases where LSM fails, such as the table legs in the first two rows and the corners in the last two rows, our ...
-- **p. 8 / 4.3. Ablations and Analysis - extractive PDF cue:** The primary issue is that per-primitive semantic learning struggles to maintain accurate semantics and fails to preserve clear instance boundaries, as illustrated in Fig.
-- **p. 8 / 25.58 MB - extractive PDF cue:** Furthermore, as our method does not rely on dense semantic supervision, we leverage a lightweight pretrained 2D model, significantly accelerating inference speed.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Out-of-distribution (OOD) comparison on Replica dataset.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** In challenging cases where LSM fails, such as the table legs in the first two rows and the corners in the last two rows, our ...
+- **p. 8 / 4.3. Ablations and Analysis - extractive body cue:** The primary issue is that per-primitive semantic learning struggles to maintain accurate semantics and fails to preserve clear instance boundaries, as illustrated in Fig.
+- **p. 8 / 25.58 MB - extractive body cue:** Furthermore, as our method does not rely on dense semantic supervision, we leverage a lightweight pretrained 2D model, significantly accelerating inference speed.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Out-of-distribution (OOD) comparison on Replica dataset.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 6 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results and Analysis), p. 8 (25.58 MB), p. 6 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), baselines p. 7 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Ablations and Analysis), p. 1 (Figure/Table caption), results p. 6 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), p. 8 (4.3. Ablations and Analysis), p. 8 (4.3. Ablations and Analysis).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 6 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results and Analysis), p. 8 (25.58 MB), p. 6 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), baselines p. 7 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Ablations and Analysis), p. 1 (Figure/Table caption), results p. 6 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), p. 8 (4.3. Ablations and Analysis), p. 8 (4.3. Ablations and Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

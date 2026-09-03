@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (76 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1105.1186; PDF retrieval source: https://arxiv.org/pdf/1105.1186. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (76 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1105.1186; PDF retrieval source: https://arxiv.org/pdf/1105.1186. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,27 +10,27 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 
 ## Evaluation Body Digest
 
-- **p. 31 / V RRT∗ - extractive PDF cue:** However, in many online real-time applications such as robotics, it is highly desirable to reduce the computation time of each iteration under sublinear bounds, e.g., ...
-- **p. 25 / V RRT∗ - extractive PDF cue:** A single tile is shown in the left; a tiling of the optimal trajectory σ∗is shown on the right.
-- **p. 29 / V RRT∗ - extractive PDF cue:** 4.3 Computational Complexity The objective of this section is to compare the computational complexity of the algorithms provided in Section 3.
-- **p. 31 / V RRT∗ - extractive PDF cue:** Complexity of the CollisionFree procedure In this section, complexity of the CollisionFree procedure in terms of the number of obstacles in the environment is analyzed, ...
-- **p. 32 / V RRT∗ - extractive PDF cue:** Let n denote the total number of iterations (or, alternatively, the number of samples), and m denote the number of obstacles in the environment.
-- **p. 33 / V RRT∗ - extractive PDF cue:** Both algorithms are run in a square environment.
-- **p. 61 / Figure/Table caption - extractive PDF cue:** Figure 25: The set eBn,m of non-intersection balls is illustrated. Finally, the following lemma states that the cost of the minimum cost path in the ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 1: An illustration of the δ-interior of Xfree. The obstacle region Xobs is shown in dark grey and the δ-interior of Xfree is shown ...
+- **p. 31 / V RRT∗ - extractive body cue:** However, in many online real-time applications such as robotics, it is highly desirable to reduce the computation time of each iteration under sublinear bounds, e.g., ...
+- **p. 25 / V RRT∗ - extractive body cue:** A single tile is shown in the left; a tiling of the optimal trajectory σ∗is shown on the right.
+- **p. 29 / V RRT∗ - extractive body cue:** 4.3 Computational Complexity The objective of this section is to compare the computational complexity of the algorithms provided in Section 3.
+- **p. 31 / V RRT∗ - extractive body cue:** Complexity of the CollisionFree procedure In this section, complexity of the CollisionFree procedure in terms of the number of obstacles in the environment is analyzed, ...
+- **p. 32 / V RRT∗ - extractive body cue:** Let n denote the total number of iterations (or, alternatively, the number of samples), and m denote the number of obstacles in the environment.
+- **p. 33 / V RRT∗ - extractive body cue:** Both algorithms are run in a square environment.
+- **p. 61 / Figure/Table caption - extractive body cue:** Figure 25: The set eBn,m of non-intersection balls is illustrated. Finally, the following lemma states that the cost of the minimum cost path in the ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of the δ-interior of Xfree. The obstacle region Xobs is shown in dark grey and the δ-interior of Xfree is shown ...
 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** robot mechanism의 state와 task-space dynamics.
-- **Input boundary:** joint/task state, reference와 sensor feedback.
-- **Output/decision under evaluation:** torque, force, velocity 또는 position command.
-- **Primary target:** tracking, stability, constraint satisfaction과 contact behavior.
+- **Target system/task:** graph, configuration space 또는 task-and-motion planning domain.
+- **Input boundary:** start/goal, map, dynamics와 successor/operator description.
+- **Output/decision under evaluation:** feasible action sequence 또는 minimum-cost plan.
+- **Primary target:** path cost, goal reachability, feasibility와 computation.
 - **Detected evaluation headings:** not reliably recovered.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V RRT∗ | SYSTEM / EVALUATION SCOPE UNRESOLVED | An approximate nearest neighbor can be computed using balanced-box decomposition (BBD) trees, which achieves O(cd,ε log n) query time using O(d n) space (Arya ... | p. 31 (V RRT∗) |
 | V RRT∗ | SYSTEM / EVALUATION SCOPE UNRESOLVED | On the other hand, running the RRT∗algorithm further improves the paths in the tree to lower cost ones. | p. 33 (V RRT∗) |
@@ -40,34 +40,34 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 
 ## Dataset / Benchmark Role
 
-- **p. 31 / V RRT∗ - extractive PDF cue:** However, in many online real-time applications such as robotics, it is highly desirable to reduce the computation time of each iteration under sublinear bounds, e.g., ...
-- **p. 25 / V RRT∗ - extractive PDF cue:** A single tile is shown in the left; a tiling of the optimal trajectory σ∗is shown on the right.
-- **p. 29 / V RRT∗ - extractive PDF cue:** 4.3 Computational Complexity The objective of this section is to compare the computational complexity of the algorithms provided in Section 3.
-- **p. 31 / V RRT∗ - extractive PDF cue:** Complexity of the CollisionFree procedure In this section, complexity of the CollisionFree procedure in terms of the number of obstacles in the environment is analyzed, ...
-- **p. 32 / V RRT∗ - extractive PDF cue:** Let n denote the total number of iterations (or, alternatively, the number of samples), and m denote the number of obstacles in the environment.
-- **p. 33 / V RRT∗ - extractive PDF cue:** Both algorithms are run in a square environment.
+- **p. 31 / V RRT∗ - extractive body cue:** However, in many online real-time applications such as robotics, it is highly desirable to reduce the computation time of each iteration under sublinear bounds, e.g., ...
+- **p. 25 / V RRT∗ - extractive body cue:** A single tile is shown in the left; a tiling of the optimal trajectory σ∗is shown on the right.
+- **p. 29 / V RRT∗ - extractive body cue:** 4.3 Computational Complexity The objective of this section is to compare the computational complexity of the algorithms provided in Section 3.
+- **p. 31 / V RRT∗ - extractive body cue:** Complexity of the CollisionFree procedure In this section, complexity of the CollisionFree procedure in terms of the number of obstacles in the environment is analyzed, ...
+- **p. 32 / V RRT∗ - extractive body cue:** Let n denote the total number of iterations (or, alternatively, the number of samples), and m denote the number of obstacles in the environment.
+- **p. 33 / V RRT∗ - extractive body cue:** Both algorithms are run in a square environment.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1: Summary of results. Time and space complexity are expressed as a function of the number of samples n, for a fixed environment.
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 1: An illustration of the δ-interior of Xfree. The obstacle region Xobs is shown in dark grey and the δ-interior of Xfree is shown ...
-- **p. 21 / Figure/Table caption - extractive PDF cue:** Figure 2: An illustration of a path σ with weak δ-clearance. The path σ′ that lies inside intδ(Xfree) and is in the same homotopy class ...
-- **p. 21 / Figure/Table caption - extractive PDF cue:** Figure 3: An illustration of an example path σ that does not have weak δ-clearance. For any positive value of δ, there is no path ...
-- **p. 22 / Figure/Table caption - extractive PDF cue:** Figure 4: An illustration of a path that has weak δ-clearance. The path passes through a point where two spheres representing the obstacle region are ...
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Figure 5: An illustration of the tiles mention in the proof of Theorem 31. A single tile is shown in the left; a tiling of ...
-- **p. 26 / Figure/Table caption - extractive PDF cue:** Figure 6: The event that the inner cube contains no points and each outer cube contains at least k points of the point process is ...
-- **p. 27 / Figure/Table caption - extractive PDF cue:** Figure 7: An illustration of the covering of the optimal path, σ∗, with openly disjoint balls. The balls cover only a portion of σ∗that lies ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Summary of results. Time and space complexity are expressed as a function of the number of samples n, for a fixed environment.
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of the δ-interior of Xfree. The obstacle region Xobs is shown in dark grey and the δ-interior of Xfree is shown ...
+- **p. 21 / Figure/Table caption - extractive body cue:** Figure 2: An illustration of a path σ with weak δ-clearance. The path σ′ that lies inside intδ(Xfree) and is in the same homotopy class ...
+- **p. 21 / Figure/Table caption - extractive body cue:** Figure 3: An illustration of an example path σ that does not have weak δ-clearance. For any positive value of δ, there is no path ...
+- **p. 22 / Figure/Table caption - extractive body cue:** Figure 4: An illustration of a path that has weak δ-clearance. The path passes through a point where two spheres representing the obstacle region are ...
+- **p. 25 / Figure/Table caption - extractive body cue:** Figure 5: An illustration of the tiles mention in the proof of Theorem 31. A single tile is shown in the left; a tiling of ...
+- **p. 26 / Figure/Table caption - extractive body cue:** Figure 6: The event that the inner cube contains no points and each outer cube contains at least k points of the point process is ...
+- **p. 27 / Figure/Table caption - extractive body cue:** Figure 7: An illustration of the covering of the optimal path, σ∗, with openly disjoint balls. The balls cover only a portion of σ∗that lies ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | However, in many online real-time applications such as robotics, it is highly desirable to reduce the computation time of each iteration under sublinear bounds, ... | embodiment, simulator version and control stack | p. 31 (V RRT∗), p. 25 (V RRT∗) |
 | Task/environment | A single tile is shown in the left; a tiling of the optimal trajectory σ∗is shown on the right. | reset, timeout, object/scene variation | p. 25 (V RRT∗), p. 29 (V RRT∗) |
-| Observation/sensor | joint/task state, reference와 sensor feedback | calibration, preprocessing, privileged input | p. 1 (1 Introduction), p. 11 (1 Introduction) |
-| Output/decision | torque, force, velocity 또는 position command | action frame, controller and termination | p. 13 (1 Introduction), p. 2 (1 Introduction) |
+| Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 1 (1 Introduction), p. 11 (1 Introduction) |
+| Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 13 (1 Introduction), p. 2 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -117,12 +117,12 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 | Primary metric/result | On the other hand, running the RRT∗algorithm further improves the paths in the tree to lower cost ones. | numeric claim only at cited anchor | p. 33 (V RRT∗) |
 
 - Numeric sentences retained from the body:
-- **p. 25 / V RRT∗ - extractive PDF cue:** Let In,m denote the indicator random variable for the event that the center cube of this tile contains no samples, whereas every outer cube contains ...
-- **p. 25 / V RRT∗ - extractive PDF cue:** The probability that an outer cube contains at least k + 1 samples is 1 -P  {Poisson(2-d/µ(Xfree)) ≥k + 1}  = 1 - P({Poisson(2-d/µ(Xfree)) ...
-- **p. 30 / V RRT∗ - extractive PDF cue:** Similarly, for the RRT, MRRT n = 1 for all n ∈N.
-- **p. 34 / V RRT∗ - extractive PDF cue:** The number of iterations versus the cost of the best path averaged over 100 trials is shown in Figure 20.
-- **p. 8 / 1 Introduction - extractive PDF cue:** In the case of random r-disc graphs, Theorem 6 (Percolation of random r-disc graphs (Penrose, 2003)) Let Gdisc(n, r) be a random r-disc graph in ...
-- **p. 8 / 1 Introduction - extractive PDF cue:** Then, almost surely, lim n→∞ Nmax(Gdisc(n, rn)) n = 0, if rn < (λc/n)1/d , and lim n→∞ Nmax(Gdisc(n, r)) n > 0, if rn ...
+- **p. 25 / V RRT∗ - extractive body cue:** Let In,m denote the indicator random variable for the event that the center cube of this tile contains no samples, whereas every outer cube contains ...
+- **p. 25 / V RRT∗ - extractive body cue:** The probability that an outer cube contains at least k + 1 samples is 1 -P  {Poisson(2-d/µ(Xfree)) ≥k + 1}  = 1 - P({Poisson(2-d/µ(Xfree)) ...
+- **p. 30 / V RRT∗ - extractive body cue:** Similarly, for the RRT, MRRT n = 1 for all n ∈N.
+- **p. 34 / V RRT∗ - extractive body cue:** The number of iterations versus the cost of the best path averaged over 100 trials is shown in Figure 20.
+- **p. 8 / 1 Introduction - extractive body cue:** In the case of random r-disc graphs, Theorem 6 (Percolation of random r-disc graphs (Penrose, 2003)) Let Gdisc(n, r) be a random r-disc graph in ...
+- **p. 8 / 1 Introduction - extractive body cue:** Then, almost surely, lim n→∞ Nmax(Gdisc(n, rn)) n = 0, if rn < (λc/n)1/d , and lim n→∞ Nmax(Gdisc(n, r)) n > 0, if rn ...
 
 ## Generalization and Failure Cases
 
@@ -160,14 +160,14 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 
 ## Limitations and Verification Questions
 
-- **p. 35 / 6 Conclusion - extractive PDF cue:** In order to address these limitations of existing algorithms, a number of new algorithms are introduced, and proven to be asymptotically optimal and computational efficient, ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 1: An illustration of the δ-interior of Xfree. The obstacle region Xobs is shown in dark grey and the δ-interior of Xfree is shown ...
-- **p. 29 / V RRT∗ - extractive PDF cue:** First, each algorithm is analyzed in terms of the number of calls to the CollisionFree procedure.
-- **p. 29 / V RRT∗ - extractive PDF cue:** Number of calls to the CollisionFree procedure Let MALG n denote the total number of calls to the CollisionFree procedure by algorithm ALG in iteration ...
-- **p. 30 / V RRT∗ - extractive PDF cue:** The next lemma upper-bounds the number of calls to the CollisionFree procedure in the proposed algorithms.
-- **p. 30 / V RRT∗ - extractive PDF cue:** Let A denote the event that the sample Xn drawn at the last iteration falls into the rn interior of Xfree.
+- **p. 35 / 6 Conclusion - extractive body cue:** In order to address these limitations of existing algorithms, a number of new algorithms are introduced, and proven to be asymptotically optimal and computational efficient, ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of the δ-interior of Xfree. The obstacle region Xobs is shown in dark grey and the δ-interior of Xfree is shown ...
+- **p. 29 / V RRT∗ - extractive body cue:** First, each algorithm is analyzed in terms of the number of calls to the CollisionFree procedure.
+- **p. 29 / V RRT∗ - extractive body cue:** Number of calls to the CollisionFree procedure Let MALG n denote the total number of calls to the CollisionFree procedure by algorithm ALG in iteration ...
+- **p. 30 / V RRT∗ - extractive body cue:** The next lemma upper-bounds the number of calls to the CollisionFree procedure in the proposed algorithms.
+- **p. 30 / V RRT∗ - extractive body cue:** Let A denote the event that the sample Xn drawn at the last iteration falls into the rn interior of Xfree.
 
-- **PDF anchors reviewed:** datasets p. 31 (V RRT∗), p. 25 (V RRT∗), p. 29 (V RRT∗), p. 31 (V RRT∗), p. 32 (V RRT∗), p. 33 (V RRT∗), metrics p. 61 (Figure/Table caption), p. 17 (Figure/Table caption), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 21 (Figure/Table caption), p. 25 (V RRT∗), baselines p. 29 (V RRT∗), p. 32 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 42 (Figure/Table caption), p. 43 (Figure/Table caption), results p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 5 (Figure/Table caption), p. 29 (V RRT∗).
+- **Evidence anchors reviewed:** datasets p. 31 (V RRT∗), p. 25 (V RRT∗), p. 29 (V RRT∗), p. 31 (V RRT∗), p. 32 (V RRT∗), p. 33 (V RRT∗), metrics p. 61 (Figure/Table caption), p. 17 (Figure/Table caption), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 21 (Figure/Table caption), p. 25 (V RRT∗), baselines p. 29 (V RRT∗), p. 32 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 42 (Figure/Table caption), p. 43 (Figure/Table caption), results p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 5 (Figure/Table caption), p. 29 (V RRT∗).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

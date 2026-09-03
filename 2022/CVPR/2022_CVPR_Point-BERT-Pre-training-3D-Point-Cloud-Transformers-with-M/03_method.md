@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2111.14819; PDF retrieval source: https://arxiv.org/pdf/2111.14819. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2111.14819; PDF retrieval source: https://arxiv.org/pdf/2111.14819. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,31 +10,31 @@ PDF body method statement (p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked 
 
 ## Method Body Digest
 
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** With our point patch mixing technique, the optimization of contrastive loss encourages the model to pay attention to the high-level semantics of point clouds by ...
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
-- **p. 4 / 3.3. Masked Point Modeling - extractive PDF cue:** Motivated by BERT [8] and BEiT [2], we extend the masked modeling strategy to point cloud learning and devise a masked point modeling (MPM) task ...
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** The pre-training objective can be formalized as maximizing the log-likelihood of the correct point tokens zi given the masked input embeddings XM: max X X∈D ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Block Masking Input Masked Input Output Random Masking Input Masked Input Output Real Scans from ScanObjectNN Input Masked Input Output Input Masked Input Output Figure ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 2) Masked Point Modeling: A ‘masked point modeling' (MPM) task is performed to pre-train Transformers, which masks a portion of input point cloud and learns ...
-- **p. 3 / 1. Introduction - extractive PDF cue:** We also show that the representations learned by Point-BERT transfer well to new tasks and domains, where our models largely advance the state-of-the-art of few-shot ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Compared to conventional hand-crafted feature extraction methods, Convolutional Neural Networks (CNN) [20] is dependent on much less prior knowledge.
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** With our point patch mixing technique, the optimization of contrastive loss encourages the model to pay attention to the high-level semantics of point clouds by ...
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
+- **p. 4 / 3.3. Masked Point Modeling - extractive body cue:** Motivated by BERT [8] and BEiT [2], we extend the masked modeling strategy to point cloud learning and devise a masked point modeling (MPM) task ...
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** The pre-training objective can be formalized as maximizing the log-likelihood of the correct point tokens zi given the masked input embeddings XM: max X X∈D ...
+- **p. 2 / 1. Introduction - extractive body cue:** Block Masking Input Masked Input Output Random Masking Input Masked Input Output Real Scans from ScanObjectNN Input Masked Input Output Input Masked Input Output Figure ...
+- **p. 2 / 1. Introduction - extractive body cue:** 2) Masked Point Modeling: A ‘masked point modeling' (MPM) task is performed to pre-train Transformers, which masks a portion of input point cloud and learns ...
+- **p. 3 / 1. Introduction - extractive body cue:** We also show that the representations learned by Point-BERT transfer well to new tasks and domains, where our models largely advance the state-of-the-art of few-shot ...
+- **p. 1 / 1. Introduction - extractive body cue:** Compared to conventional hand-crafted feature extraction methods, Convolutional Neural Networks (CNN) [20] is dependent on much less prior knowledge.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Driven by the above analysis, we present Point-BERT, a new scheme for learning point cloud Transformers.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Recently, the structural superiority and versatility of standard Transformers are proved in both language [3, 8, 18, 25, 36] and *Equal contribution. †Corresponding author.
-- **p. 2 / 1. Introduction - extractive PDF cue:** We hope that our model enables reasoning the geometric relations among different patches of the point cloud, capturing meaningful geometric features for point cloud understanding.
+- **p. 2 / 1. Introduction - extractive body cue:** Driven by the above analysis, we present Point-BERT, a new scheme for learning point cloud Transformers.
+- **p. 2 / 1. Introduction - extractive body cue:** We hope that our model enables reasoning the geometric relations among different patches of the point cloud, capturing meaningful geometric features for point cloud understanding.
+- **p. 3 / 1. Introduction - extractive body cue:** We hope a neat and unified Transformer architecture across images and point clouds could facilitate both domains since it enables joint modeling of 2D and ...
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** With our point patch mixing technique, the optimization of contrastive loss encourages the model to pay attention to the high-level semantics of point clouds by ...
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
-- **p. 4 / 3.3. Masked Point Modeling - extractive PDF cue:** Motivated by BERT [8] and BEiT [2], we extend the masked modeling strategy to point cloud learning and devise a masked point modeling (MPM) task ...
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** With our point patch mixing technique, the optimization of contrastive loss encourages the model to pay attention to the high-level semantics of point clouds by ...
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
+- **p. 4 / 3.3. Masked Point Modeling - extractive body cue:** Motivated by BERT [8] and BEiT [2], we extend the masked modeling strategy to point cloud learning and devise a masked point modeling (MPM) task ...
 - **Detected method headings:** 3.3. Masked Point Modeling (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | With our point patch mixing technique, the optimization of contrastive loss encourages the model to pay attention to the high-level semantics of ... | p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are ... | p. 5 (3.3. Masked Point Modeling), p. 4 (3.3. Masked Point Modeling) |
@@ -44,8 +44,8 @@ PDF body method statement (p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked 
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** The pre-training objective can be formalized as maximizing the log-likelihood of the correct point tokens zi given the masked input embeddings XM: max X X∈D ...
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** The pre-training objective can be formalized as maximizing the log-likelihood of the correct point tokens zi given the masked input embeddings XM: max X X∈D ...
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -61,13 +61,13 @@ PDF body method statement (p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked 
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Block Masking Input Masked Input Output Random Masking Input Masked Input Output Real Scans from ScanObjectNN Input Masked Input Output Input Masked Input Output Figure ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** 2) Masked Point Modeling: A ‘masked point modeling' (MPM) task is performed to pre-train Transformers, which masks a portion of input point cloud and learns ...
-- **p. 3 / 1. Introduction - extractive PDF cue:** We also show that the representations learned by Point-BERT transfer well to new tasks and domains, where our models largely advance the state-of-the-art of few-shot ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Compared to conventional hand-crafted feature extraction methods, Convolutional Neural Networks (CNN) [20] is dependent on much less prior knowledge.
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** In practice, we directly apply such a block-wise masking strategy like [2] to the inputs of the Transformer.
-- **p. 5 / 3.3. Masked Point Modeling - extractive PDF cue:** Finally, the corrupted input embeddings XM = {xi : i /∈M}g i=1 ∪{E[M] + posi : i ∈M}g i=1 are fed into the Transformer encoder.
-- **p. 3 / 1. Introduction - extractive PDF cue:** We hope a neat and unified Transformer architecture across images and point clouds could facilitate both domains since it enables joint modeling of 2D and ...
+- **p. 2 / 1. Introduction - extractive body cue:** Block Masking Input Masked Input Output Random Masking Input Masked Input Output Real Scans from ScanObjectNN Input Masked Input Output Input Masked Input Output Figure ...
+- **p. 2 / 1. Introduction - extractive body cue:** 2) Masked Point Modeling: A ‘masked point modeling' (MPM) task is performed to pre-train Transformers, which masks a portion of input point cloud and learns ...
+- **p. 3 / 1. Introduction - extractive body cue:** We also show that the representations learned by Point-BERT transfer well to new tasks and domains, where our models largely advance the state-of-the-art of few-shot ...
+- **p. 1 / 1. Introduction - extractive body cue:** Compared to conventional hand-crafted feature extraction methods, Convolutional Neural Networks (CNN) [20] is dependent on much less prior knowledge.
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** In practice, we directly apply such a block-wise masking strategy like [2] to the inputs of the Transformer.
+- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** Finally, the corrupted input embeddings XM = {xi : i /∈M}g i=1 ∪{E[M] + posi : i ∈M}g i=1 are fed into the Transformer encoder.
+- **p. 3 / 1. Introduction - extractive body cue:** We hope a neat and unified Transformer architecture across images and point clouds could facilitate both domains since it enables joint modeling of 2D and ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -82,8 +82,8 @@ PDF body method statement (p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked 
 
 ## Training vs Inference
 
-- **p. 6 / 4.1. Pre-training Setups - extractive PDF cue:** The model is trained for 300 epochs with a batch size of 128.
-- **p. 6 / 4.1. Pre-training Setups - extractive PDF cue:** We train dVAE for a total of 150,000 steps with a batch size of 64.
+- **p. 6 / 4.1. Pre-training Setups - extractive body cue:** The model is trained for 300 epochs with a batch size of 128.
+- **p. 6 / 4.1. Pre-training Setups - extractive body cue:** We train dVAE for a total of 150,000 steps with a batch size of 64.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -103,13 +103,13 @@ PDF body method statement (p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked 
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 5. Ablation study. We investigate the effects of different designs and report the classification accuracy (%) after fine-tuning on ModelNet40. All models are trained ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We also conduct an ablation study for our Point-BERT.
-- **p. 6 / 4.2. Downstream Tasks - extractive PDF cue:** We also observe that adding more points will not significantly improve the Transformer model without pre-training while Point-BERT models can be consistently improved by increasing ...
-- **p. 7 / 4.2. Downstream Tasks - extractive PDF cue:** We follow previous works to conduct experiments on three main variants: OBJ-BG, OBJ-ONLY, and PB-T50-RS.
-- **p. 5 / 4. Experiments - extractive PDF cue:** In this section, we first introduce the setups of our pretraining scheme.
-- **p. 8 / 4.4. Visualization - extractive PDF cue:** As can be seen, features from different categories can be well separated by our method even before fine-tuning.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** We also consider another type of augmentations: randomly replace some input embeddings with those from other samples.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Ablation study. We investigate the effects of different designs and report the classification accuracy (%) after fine-tuning on ModelNet40. All models are trained ...
+- **p. 5 / 4. Experiments - extractive body cue:** We also conduct an ablation study for our Point-BERT.
+- **p. 6 / 4.2. Downstream Tasks - extractive body cue:** We also observe that adding more points will not significantly improve the Transformer model without pre-training while Point-BERT models can be consistently improved by increasing ...
+- **p. 7 / 4.2. Downstream Tasks - extractive body cue:** We follow previous works to conduct experiments on three main variants: OBJ-BG, OBJ-ONLY, and PB-T50-RS.
+- **p. 5 / 4. Experiments - extractive body cue:** In this section, we first introduce the setups of our pretraining scheme.
+- **p. 8 / 4.4. Visualization - extractive body cue:** As can be seen, features from different categories can be well separated by our method even before fine-tuning.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** We also consider another type of augmentations: randomly replace some input embeddings with those from other samples.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -123,7 +123,7 @@ PDF body method statement (p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling), p. 4 (3.3. Masked Point Modeling), objective p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling), temporal p. 5 (4.1. Pre-training Setups), p. 5 (4.1. Pre-training Setups), p. 6 (4.1. Pre-training Setups), p. 6 (4.1. Pre-training Setups), p. 7 (4.2. Downstream Tasks), p. 1 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling), p. 4 (3.3. Masked Point Modeling), objective p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling), temporal p. 5 (4.1. Pre-training Setups), p. 5 (4.1. Pre-training Setups), p. 6 (4.1. Pre-training Setups), p. 6 (4.1. Pre-training Setups), p. 7 (4.2. Downstream Tasks), p. 1 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2409.20445v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2409.20445v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 
 ## Evaluation Body Digest
 
-- **p. 5 / V. RESULTS AND ANALYSIS - extractive PDF cue:** Implementation For the real-world experiments, we utilize both the Ghost Vision 60 legged robot and the Clearpath Husky wheeled robot.
-- **p. 5 / V. RESULTS AND ANALYSIS - extractive PDF cue:** Comparison Methods • DWA [30]: A baseline motion planner that performs simple collision avoidance and goal-reaching behaviors. • GA-Nav [4]:
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: The VLM-GroNav system employs a reasoning module that integrates visual inputs from aerial imagery, weather conditions, and proprioceptive data through a large VLM ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Comparison of navigation trajectories across various environments using different methods: DWA (Black), GA-Nav (orange), CoNVOI (Dark purple), ViNT (light purple), and our method ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective. We leverage VLMs and aerial imagery to ...
-- **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive PDF cue:** We observe that this results in errors in predicting the terrain's traversbility while navigating, which in turn ill-informs the local and global planners, causing failures.
-- **p. 4 / IV. OUR APPROACH - extractive PDF cue:** The difference between these measurements reflects the degree of slippage experienced by the robot.
-- **p. 4 / IV. OUR APPROACH - extractive PDF cue:** The traversability indicator (τsinkage and τslip) are time-shifted to match the visual inputs, τshifted(t) = τ(t -∆t).
+- **p. 5 / V. RESULTS AND ANALYSIS - extractive body cue:** Implementation For the real-world experiments, we utilize both the Ghost Vision 60 legged robot and the Clearpath Husky wheeled robot.
+- **p. 5 / V. RESULTS AND ANALYSIS - extractive body cue:** Comparison Methods • DWA [30]: A baseline motion planner that performs simple collision avoidance and goal-reaching behaviors. • GA-Nav [4]:
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: The VLM-GroNav system employs a reasoning module that integrates visual inputs from aerial imagery, weather conditions, and proprioceptive data through a large VLM ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Comparison of navigation trajectories across various environments using different methods: DWA (Black), GA-Nav (orange), CoNVOI (Dark purple), ViNT (light purple), and our method ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective. We leverage VLMs and aerial imagery to ...
+- **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive body cue:** We observe that this results in errors in predicting the terrain's traversbility while navigating, which in turn ill-informs the local and global planners, causing failures.
+- **p. 4 / IV. OUR APPROACH - extractive body cue:** The difference between these measurements reflects the degree of slippage experienced by the robot.
+- **p. 4 / IV. OUR APPROACH - extractive body cue:** The traversability indicator (τsinkage and τslip) are time-shifted to match the visual inputs, τshifted(t) = τ(t -∆t).
 
 ## Evaluation Type and Scope
 
@@ -30,25 +30,25 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective. We leverage VLMs and aerial imagery ... | p. 1 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / V. RESULTS AND ANALYSIS - extractive PDF cue:** Implementation For the real-world experiments, we utilize both the Ghost Vision 60 legged robot and the Clearpath Husky wheeled robot.
+- **p. 5 / V. RESULTS AND ANALYSIS - extractive body cue:** Implementation For the real-world experiments, we utilize both the Ghost Vision 60 legged robot and the Clearpath Husky wheeled robot.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective. We leverage VLMs and aerial imagery to ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 2: The VLM-GroNav system employs a reasoning module that integrates visual inputs from aerial imagery, weather conditions, and proprioceptive data through a large VLM ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Comparison of navigation trajectories across various environments using different methods: DWA (Black), GA-Nav (orange), CoNVOI (Dark purple), ViNT (light purple), and our method ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective. We leverage VLMs and aerial imagery to ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: The VLM-GroNav system employs a reasoning module that integrates visual inputs from aerial imagery, weather conditions, and proprioceptive data through a large VLM ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Comparison of navigation trajectories across various environments using different methods: DWA (Black), GA-Nav (orange), CoNVOI (Dark purple), ViNT (light purple), and our method ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Implementation For the real-world experiments, we utilize both the Ghost Vision 60 legged robot and the Clearpath Husky wheeled robot. | embodiment, simulator version and control stack | p. 5 (V. RESULTS AND ANALYSIS) |
 | Task/environment | not recovered | reset, timeout, object/scene variation | 본문 anchor 없음 |
@@ -93,9 +93,9 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 | Primary metric/result | not separately recovered | numeric claim only at cited anchor | 본문 anchor 없음 |
 
 - Numeric sentences retained from the body:
-- **p. 5 / V. RESULTS AND ANALYSIS - extractive PDF cue:** The Ghost Vision 60 is equipped with a front-facing wide-angle camera, an OS1-32 LiDAR, GPS, and an onboard Intel NUC 11 system, which includes an ...
-- **p. 6 / A method - extractive PDF cue:** 4 DWA [30] 20 0.97 31923 GA-NAV [4] 40 1.51 28345 CoNVOI [51] 60 1.44 29473 ViNT [50] 40 1.16 25451 VLM-GroNav w/o GP 60 ...
-- **p. 6 / A method - extractive PDF cue:** Evaluation Metrics • Success Rate: The ratio of successful navigation trials where the robot was able to reach its goal without freezing or colliding with ...
+- **p. 5 / V. RESULTS AND ANALYSIS - extractive body cue:** The Ghost Vision 60 is equipped with a front-facing wide-angle camera, an OS1-32 LiDAR, GPS, and an onboard Intel NUC 11 system, which includes an ...
+- **p. 6 / A method - extractive body cue:** 4 DWA [30] 20 0.97 31923 GA-NAV [4] 40 1.51 28345 CoNVOI [51] 60 1.44 29473 ViNT [50] 40 1.16 25451 VLM-GroNav w/o GP 60 ...
+- **p. 6 / A method - extractive body cue:** Evaluation Metrics • Success Rate: The ratio of successful navigation trials where the robot was able to reach its goal without freezing or colliding with ...
 
 ## Generalization and Failure Cases
 
@@ -129,13 +129,13 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive PDF cue:** We observe that this results in errors in predicting the terrain's traversbility while navigating, which in turn ill-informs the local and global planners, causing failures.
-- **p. 4 / IV. OUR APPROACH - extractive PDF cue:** The difference between these measurements reflects the degree of slippage experienced by the robot.
-- **p. 4 / IV. OUR APPROACH - extractive PDF cue:** The traversability indicator (τsinkage and τslip) are time-shifted to match the visual inputs, τshifted(t) = τ(t -∆t).
-- **p. 5 / V. RESULTS AND ANALYSIS - extractive PDF cue:** Comparison Methods • DWA [30]: A baseline motion planner that performs simple collision avoidance and goal-reaching behaviors. • GA-Nav [4]:
-- **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive PDF cue:** Scenarios 3 and 4 involve the wheeled robot navigating through unstructured and slippery terrains, VLM-GroNav excels at maintaining a high success rate and reduced IMU ...
+- **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive body cue:** We observe that this results in errors in predicting the terrain's traversbility while navigating, which in turn ill-informs the local and global planners, causing failures.
+- **p. 4 / IV. OUR APPROACH - extractive body cue:** The difference between these measurements reflects the degree of slippage experienced by the robot.
+- **p. 4 / IV. OUR APPROACH - extractive body cue:** The traversability indicator (τsinkage and τslip) are time-shifted to match the visual inputs, τshifted(t) = τ(t -∆t).
+- **p. 5 / V. RESULTS AND ANALYSIS - extractive body cue:** Comparison Methods • DWA [30]: A baseline motion planner that performs simple collision avoidance and goal-reaching behaviors. • GA-Nav [4]:
+- **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive body cue:** Scenarios 3 and 4 involve the wheeled robot navigating through unstructured and slippery terrains, VLM-GroNav excels at maintaining a high success rate and reduced IMU ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. RESULTS AND ANALYSIS), metrics p. 5 (V. RESULTS AND ANALYSIS), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 5 (V. RESULTS AND ANALYSIS), p. 5 (Figure/Table caption), results p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. RESULTS AND ANALYSIS), metrics p. 5 (V. RESULTS AND ANALYSIS), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 5 (V. RESULTS AND ANALYSIS), p. 5 (Figure/Table caption), results p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

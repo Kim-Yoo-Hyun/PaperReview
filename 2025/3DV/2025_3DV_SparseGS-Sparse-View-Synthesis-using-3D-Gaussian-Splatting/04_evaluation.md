@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=O9GMl5UJbe&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=O9GMl5UJbe&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparison), p. 3 (Figure/Table capti
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** The LLFF dataset comprises eight complex forward-facing real scenes, while the DTU dataset includes object-centric scenes with foreground masks.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** We conduct our experiments on three datasets, categorized into two settings: 1) the Mip-NeRF360 [2] dataset, which features seven challenging 360° scenes; 2) the LLFF ...
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** We use the Mip-NeRF360 dataset to evaluate 3D reconstruction of unbounded 360° scenes.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For the Mip-NeRF360 dataset, we Figure 5.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Qualitative evaluation on the Mip-NeRF 360 dataset.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Qualitative evaluation on the forward-facing datasets.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During training, ...
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** We also provide evaluations on the forward-facing datasets (LLFF and DTU) to demonstrate robustness of our pipeline.
+- **p. 7 / 4.2. Comparison - extractive body cue:** The LLFF dataset comprises eight complex forward-facing real scenes, while the DTU dataset includes object-centric scenes with foreground masks.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** We conduct our experiments on three datasets, categorized into two settings: 1) the Mip-NeRF360 [2] dataset, which features seven challenging 360° scenes; 2) the LLFF ...
+- **p. 7 / 4.2. Comparison - extractive body cue:** We use the Mip-NeRF360 dataset to evaluate 3D reconstruction of unbounded 360° scenes.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For the Mip-NeRF360 dataset, we Figure 5.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Qualitative evaluation on the Mip-NeRF 360 dataset.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Qualitative evaluation on the forward-facing datasets.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During training, ...
+- **p. 7 / 4.2. Comparison - extractive body cue:** We also provide evaluations on the forward-facing datasets (LLFF and DTU) to demonstrate robustness of our pipeline.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparison), p. 3 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Comparison | SYSTEM / EVALUATION SCOPE UNRESOLVED | 1, SparseGS significantly outperforms previous NeRF-based methods and concurrent works, FSGS and DNGaussian, in both 12-view and 24-view settings. | p. 7 (4.2. Comparison) |
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During ... | p. 3 (Figure/Table caption) |
@@ -39,29 +39,29 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparison), p. 3 (Figure/Table capti
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** The LLFF dataset comprises eight complex forward-facing real scenes, while the DTU dataset includes object-centric scenes with foreground masks.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** We conduct our experiments on three datasets, categorized into two settings: 1) the Mip-NeRF360 [2] dataset, which features seven challenging 360° scenes; 2) the LLFF ...
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** We use the Mip-NeRF360 dataset to evaluate 3D reconstruction of unbounded 360° scenes.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** For the Mip-NeRF360 dataset, we Figure 5.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Qualitative evaluation on the Mip-NeRF 360 dataset.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Qualitative evaluation on the forward-facing datasets.
+- **p. 7 / 4.2. Comparison - extractive body cue:** The LLFF dataset comprises eight complex forward-facing real scenes, while the DTU dataset includes object-centric scenes with foreground masks.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** We conduct our experiments on three datasets, categorized into two settings: 1) the Mip-NeRF360 [2] dataset, which features seven challenging 360° scenes; 2) the LLFF ...
+- **p. 7 / 4.2. Comparison - extractive body cue:** We use the Mip-NeRF360 dataset to evaluate 3D reconstruction of unbounded 360° scenes.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** For the Mip-NeRF360 dataset, we Figure 5.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Qualitative evaluation on the Mip-NeRF 360 dataset.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Qualitative evaluation on the forward-facing datasets.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view synthesis ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During training, ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. A Demonstration of the Three Kinds of Depth. The weights wi are shown at the top, with the weights after apply- ing softmax ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of benefits from the SDS loss. While the scene structure is well preserved, the high-frequency noise in both geometry and texture is ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. The proposed floater pruning technique removes Gaussians at inaccurate depths. An example (a) demonstrates our pruning method: before pruning, there are floaters (blue) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison on Mip-NeRF360 dataset for 12/24 input-view settings. ing COLMAP [32, 33]. Specifically, the initial point cloud is output from the multi-view ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative comparison on forward-facing datasets. Depth PCC PSNR ↑ LPIPS ↓ SSIM ↑ Alpha-blending Softmax-scaling UVR
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation Studies. We ablate our components on the Mip-NeRF360 dataset under 12-view setting. regions, where input coverage is insufficient, NeRF-based methods often produce ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view synthesis ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During training, ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. A Demonstration of the Three Kinds of Depth. The weights wi are shown at the top, with the weights after apply- ing softmax ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of benefits from the SDS loss. While the scene structure is well preserved, the high-frequency noise in both geometry and texture is ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. The proposed floater pruning technique removes Gaussians at inaccurate depths. An example (a) demonstrates our pruning method: before pruning, there are floaters (blue) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison on Mip-NeRF360 dataset for 12/24 input-view settings. ing COLMAP [32, 33]. Specifically, the initial point cloud is output from the multi-view ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison on forward-facing datasets. Depth PCC PSNR ↑ LPIPS ↓ SSIM ↑ Alpha-blending Softmax-scaling UVR
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation Studies. We ablate our components on the Mip-NeRF360 dataset under 12-view setting. regions, where input coverage is insufficient, NeRF-based methods often produce ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The LLFF dataset comprises eight complex forward-facing real scenes, while the DTU dataset includes object-centric scenes with foreground masks. | embodiment, simulator version and control stack | p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings) |
 | Task/environment | We conduct our experiments on three datasets, categorized into two settings: 1) the Mip-NeRF360 [2] dataset, which features seven challenging 360° scenes; 2) the ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Settings), p. 7 (4.2. Comparison) |
@@ -152,14 +152,14 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparison), p. 3 (Figure/Table capti
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** This limitation actually prompted the introduction of positional encoding [20, 37].
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** In contrast, FSGS excels in preserving fine details due to its densification technique but fails to reconstruct background geometry.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** In regions with little coverage by input views, we leverage Score Distillation Sampling (SDS) and Depth Warping to reduce collapse in geometry and noise in ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view synthesis ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of benefits from the SDS loss. While the scene structure is well preserved, the high-frequency noise in both geometry and texture is ...
-- **p. 7 / 4.2. Comparison - extractive PDF cue:** We also provide evaluations on the forward-facing datasets (LLFF and DTU) to demonstrate robustness of our pipeline.
+- **p. 7 / 4.2. Comparison - extractive body cue:** This limitation actually prompted the introduction of positional encoding [20, 37].
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** In contrast, FSGS excels in preserving fine details due to its densification technique but fails to reconstruct background geometry.
+- **p. 8 / 5. Conclusion - extractive body cue:** In regions with little coverage by input views, we leverage Score Distillation Sampling (SDS) and Depth Warping to reduce collapse in geometry and noise in ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view synthesis ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of benefits from the SDS loss. While the scene structure is well preserved, the high-frequency noise in both geometry and texture is ...
+- **p. 7 / 4.2. Comparison - extractive body cue:** We also provide evaluations on the forward-facing datasets (LLFF and DTU) to demonstrate robustness of our pipeline.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 3 (Figure/Table caption), p. 7 (4.2. Comparison), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), baselines p. 7 (4.2. Comparison), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 8 (Figure/Table caption), results p. 7 (4.2. Comparison), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 3 (Figure/Table caption), p. 7 (4.2. Comparison), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), baselines p. 7 (4.2. Comparison), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 8 (Figure/Table caption), results p. 7 (4.2. Comparison), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ROBOT.1992.219918; PDF retrieval source: https://doi.org/10.1109/ROBOT.1992.219918. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ROBOT.1992.219918; PDF retrieval source: https://doi.org/10.1109/ROBOT.1992.219918. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 3 (4.1 Representing Anger forces)): We theref
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1 Representing Anger forces | SYSTEM / EVALUATION SCOPE UNRESOLVED | We therefore want to guarantee a level of performance as judged by the local quality measure over all possible wrenches, and this is the ... | p. 3 (4.1 Representing Anger forces) |
 
@@ -54,7 +54,7 @@ PDF body evaluation/result cue (p. 3 (4.1 Representing Anger forces)): We theref
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Avoiding large forces minimizes the deformation of both the object and the jaws. | embodiment, simulator version and control stack | p. 2 (4 The Quality of Grasp), p. 2 (2 Working hypotheses) |
 | Task/environment | Any force and torque on the object can be represented by a point in the wrench space. | reset, timeout, object/scene variation | p. 2 (2 Working hypotheses), p. 3 (4.1 Representing Anger forces) |
@@ -120,7 +120,6 @@ PDF body evaluation/result cue (p. 3 (4.1 Representing Anger forces)): We theref
 | Body reproducibility cue | Anchor |
 |---|---|
 | Our criteria can be calculated easily for a wide variety of gripper and part types, although the implementation so far has been for planar ... | p. 1 (1 Introduction) |
-| This author is also with the department of Electronics and Computer Science of the University of Padova, +Supported by a David and Lucile Padcard ... | p. 1 (1 Introduction) |
 | Hence it is enough to compute the convex hull over the elements of that set. | p. 4 (4.3 Minimizing the maximum Anger force) |
 | Again, the formula gives a way to compute WL, , by computing the convex hull over a finite set of points. | p. 4 (4.3 Minimizing the maximum Anger force) |
 | 0 Compute the convex hull and determine the facet of minimum distance from the origin. | p. 5 (5.1 Two-jaw gripper grasping a polygonal object) |
@@ -139,7 +138,16 @@ PDF body evaluation/result cue (p. 3 (4.1 Representing Anger forces)): We theref
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: Three-jaw Gripper grasping a Polygonal Ob- ject In the case of a three fingered gripper there is an additional test in order to ...
 - **p. 3 / 4.1 Representing Anger forces - extractive body cue:** Given n contacts, we have the following definition: As we pointed out earlier, specifying g does not determine the actual wrench acting on the object ...
 
-- **PDF anchors reviewed:** datasets p. 2 (4 The Quality of Grasp), p. 2 (2 Working hypotheses), p. 3 (4.1 Representing Anger forces), p. 3 (4.1 Representing Anger forces), p. 4 (4.3 Minimizing the maximum Anger force), p. 4 (4.3 Minimizing the maximum Anger force), metrics p. 3 (4.1 Representing Anger forces), p. 3 (4.1 Representing Anger forces), p. 4 (4.3 Minimizing the maximum Anger force), p. 4 (4.3 Minimizing the maximum Anger force), p. 5 (5.1 Two-jaw gripper grasping a polygonal object), p. 6 (Figure/Table caption), baselines p. 2 (4 The Quality of Grasp), p. 3 (4.1 Representing Anger forces), results p. 3 (4.1 Representing Anger forces).
+- **Evidence anchors reviewed:** datasets p. 2 (4 The Quality of Grasp), p. 2 (2 Working hypotheses), p. 3 (4.1 Representing Anger forces), p. 3 (4.1 Representing Anger forces), p. 4 (4.3 Minimizing the maximum Anger force), p. 4 (4.3 Minimizing the maximum Anger force), metrics p. 3 (4.1 Representing Anger forces), p. 3 (4.1 Representing Anger forces), p. 4 (4.3 Minimizing the maximum Anger force), p. 4 (4.3 Minimizing the maximum Anger force), p. 5 (5.1 Two-jaw gripper grasping a polygonal object), p. 6 (Figure/Table caption), baselines p. 2 (4 The Quality of Grasp), p. 3 (4.1 Representing Anger forces), results p. 3 (4.1 Representing Anger forces).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (6 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 1: Graphic Evaluation of the Quality Criteria 5 An Example of Using the Quality Criteria In the next subsections, we will present an algo- rithm that can evaluate the ... (p. 5, Figure/Table caption).
+- **Metric evidence:** Then, Q is just the distance of the nearest point to the origin, from the origin itself. (p. 3, 4.1 Representing Anger forces).
+- **Baseline/ablation evidence:** Some grasp configurations can be better than others in the sense that they can balance every external force, without applying too large finger forces. (p. 2, 4 The Quality of Grasp).
+- **Failure/negative evidence:** In a force closure grasp, finger locations do not change to counter external forces. (p. 1, 2 Working hypotheses).

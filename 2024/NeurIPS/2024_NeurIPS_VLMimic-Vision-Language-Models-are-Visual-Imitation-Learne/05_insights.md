@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 In unseen environments, a skill adapter with an iterative comparison strategy revises and updates the learned skills based on observations and task instructions.를 To overcome this obstacle, a human-object interaction grounding module is proposed, which parses videos into multiple segments, and estimates object-centric actions for subsequent analysis.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 5: Examples of failure cases. 4.5 Real-world failure cases Figure 5 elucidates scenarios that present significant challenges for resolution through VLM reasoning. These scenarios encompass: (I) The task execution may exceed ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic skills from 2
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In unseen environments, a skill adapter with an iterative comparison strategy revises and updates the learned skills based on observations and task instructions. (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic skills from 2 (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Experimental results, as depicted in Table 3, obviously exhibit a substantial enhancement achieved by our method over baseline methods. (p. 8, 4 Experiments); the relevant task/metric cue is Our method, learned with only 5 human videos, obviously outperforms R3M-DP and DP by over 61% in overall performance, despite both being trained on 100 robot demonstrations. (p. 7, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 23, 2. Limitations).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To assess our approach on challenging robotic manipulation tasks, the RLBench [65] benchmark is utilized for simulation tasks..
-3. Compare against the body-reported baseline or a matched simpler baseline: VLMimic is compared with five representative methods: (1) R3M-DP that utilizes the pre-trained R3M visual representation [13] with the state-of-the-art (SOTA) diffusion policy [7]; (2) Diffusion Policy (DP) [7], a SOTA end-to-end ....
-4. Report the body metric and its denominator/aggregation: Results indicate that our method attains high success rates on complex tasks with a single human video demonstration, and increasing the number of videos yields performance gains..
-5. Re-run the body-reported ablation/failure condition: Variants that exclusively reason semantic constraints or directly obtain geometric constraints without semantic analysis, lead to diminished performance..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In unseen environments, a skill adapter with an iterative comparison strategy revises and updates the learned skills based on observations and task instructions. (p. 2, 1 Introduction); preserve the objective/update rule: In manipulation constraint learning, keypoints are obtained by uniformly sampling 10 points. (p. 15, A Implementation details).
+2. Use the paper-reported task/data/environment cue: To assess our approach on challenging robotic manipulation tasks, the RLBench [65] benchmark is utilized for simulation tasks. (p. 7, 4 Experiments).
+3. Compare against the reported or matched baseline: VLMimic is compared with five representative methods: (1) R3M-DP that utilizes the pre-trained R3M visual representation [13] with the state-of-the-art (SOTA) diffusion policy [7]; (2) Diffusion Policy (DP) [7], a ... (p. 6, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: Our method, learned with only 5 human videos, obviously outperforms R3M-DP and DP by over 61% in overall performance, despite both being trained on 100 robot demonstrations. (p. 7, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: Variants that exclusively reason semantic constraints or directly obtain geometric constraints without semantic analysis, lead to diminished performance. (p. 9, 4 Experiments); if none is reported, design one around: Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 23, 2. Limitations).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 15 (A Implementation details), p. 15 (A Implementation details); the primary result is directionally consistent at p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), and measure the boundary at p. 23 (2. Limitations), p. 9 (4 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contributions, summarized mechanism이 VLMimic is compared with five representative methods: (1) R3M-DP that utilizes the pre-trained R3M visual representation ... 대비 Results indicate that our method attains high success rates on complex tasks with a single human video demonstration, ...을 개선하고, Figure 5: Examples of failure cases. 4.5 Real-world failure cases Figure 5 elucidates scenarios that present ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In unseen environments, a skill adapter with an iterative comparison strategy revises and updates the learned skills based on observations and task ...), does the paper-specific mechanism (Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to ...) retain the reported evaluation outcome (Our method, learned with only 5 human videos, obviously outperforms R3M-DP and DP by over 61% in overall ...) when tested against the paper's strongest explicit boundary (Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our method, learned with only 5 human videos, obviously outperforms R3M-DP and DP by over 61% in overall ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic skills from 2 (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Experimental results, as depicted in Table 3, obviously exhibit a substantial enhancement achieved by our method over baseline methods. (p. 8, 4 Experiments).
+- **Strongest explicit boundary:** Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 23, 2. Limitations).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

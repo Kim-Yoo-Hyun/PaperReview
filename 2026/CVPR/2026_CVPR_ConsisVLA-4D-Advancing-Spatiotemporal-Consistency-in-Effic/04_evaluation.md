@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We conduct evaluations across multiple simulation benchmarks, including: 1) the four task suites of LIBERO [44]-Spatial, Object, Goal, and Long; 2) three pick-and-place tasks emphasizing ...
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** Simulation Results on RoboTwin 2.0 Benchmark.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** ConsisVLA-4D is deployed on both the AgileX Cobot Magic [16] and Galaxea R1 Lite [17] platforms for real-world evaluations, covering four categories of long-horizon tasks: ...
-- **p. 8 / 5.4. Qualitative Analysis - extractive PDF cue:** 6 illustrates the model's ability to execute manipulation tasks smoothly and accurately across four long-horizon real-world scenarios.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Visualization of ConsisVLA-4D performing four long-horizon real-world manipulation tasks on the Galaxea R1 Lite platform, illustrating key execution-stage observations.
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** Decimal values indicate averages over 15 trials, and the average success rate reflects complete task completion.
-- **p. 7 / 5.2. Overall Performance & Efficiency - extractive PDF cue:** ConsisVLA-4D leads significantly in both phased and final success rates across 4 diverse long-horizon bimanual tasks, with strong performance stably maintained across deployment platforms (±1.7%).
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We conduct evaluations across multiple simulation benchmarks, including: 1) the four task suites of LIBERO [44]-Spatial, Object, Goal, and Long; 2) three pick-and-place tasks emphasizing ...
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** Simulation Results on RoboTwin 2.0 Benchmark.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** ConsisVLA-4D is deployed on both the AgileX Cobot Magic [16] and Galaxea R1 Lite [17] platforms for real-world evaluations, covering four categories of long-horizon tasks: ...
+- **p. 8 / 5.4. Qualitative Analysis - extractive body cue:** 6 illustrates the model's ability to execute manipulation tasks smoothly and accurately across four long-horizon real-world scenarios.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Visualization of ConsisVLA-4D performing four long-horizon real-world manipulation tasks on the Galaxea R1 Lite platform, illustrating key execution-stage observations.
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** Decimal values indicate averages over 15 trials, and the average success rate reflects complete task completion.
+- **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** ConsisVLA-4D leads significantly in both phased and final success rates across 4 diverse long-horizon bimanual tasks, with strong performance stably maintained across deployment platforms (±1.7%).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Overall Performance & Efficiency | EMPIRICAL / REAL-ROBOT OR HARDWARE | Particularly, it achieves exceptional success rates of 98.8% and 99.8% in the Spatial and Object suites, which assess spatial perception and object recognition, respectively. | p. 7 (5.2. Overall Performance & Efficiency) |
 | 5.2. Overall Performance & Efficiency | EMPIRICAL / REAL-ROBOT OR HARDWARE | ConsisVLA-4D leads significantly in both phased and final success rates across 4 diverse long-horizon bimanual tasks, with strong performance stably maintained across deployment platforms ... | p. 7 (5.2. Overall Performance & Efficiency) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** We conduct evaluations across multiple simulation benchmarks, including: 1) the four task suites of LIBERO [44]-Spatial, Object, Goal, and Long; 2) three pick-and-place tasks emphasizing ...
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** Simulation Results on RoboTwin 2.0 Benchmark.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
-- **p. 6 / 5.1. Experimental Setup - extractive PDF cue:** ConsisVLA-4D is deployed on both the AgileX Cobot Magic [16] and Galaxea R1 Lite [17] platforms for real-world evaluations, covering four categories of long-horizon tasks: ...
-- **p. 8 / 5.4. Qualitative Analysis - extractive PDF cue:** 6 illustrates the model's ability to execute manipulation tasks smoothly and accurately across four long-horizon real-world scenarios.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Visualization of ConsisVLA-4D performing four long-horizon real-world manipulation tasks on the Galaxea R1 Lite platform, illustrating key execution-stage observations.
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** We conduct evaluations across multiple simulation benchmarks, including: 1) the four task suites of LIBERO [44]-Spatial, Object, Goal, and Long; 2) three pick-and-place tasks emphasizing ...
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** Simulation Results on RoboTwin 2.0 Benchmark.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
+- **p. 6 / 5.1. Experimental Setup - extractive body cue:** ConsisVLA-4D is deployed on both the AgileX Cobot Magic [16] and Galaxea R1 Lite [17] platforms for real-world evaluations, covering four categories of long-horizon tasks: ...
+- **p. 8 / 5.4. Qualitative Analysis - extractive body cue:** 6 illustrates the model's ability to execute manipulation tasks smoothly and accurately across four long-horizon real-world scenarios.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Visualization of ConsisVLA-4D performing four long-horizon real-world manipulation tasks on the Galaxea R1 Lite platform, illustrating key execution-stage observations.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison with Existing Paradigms. Beyond con- ventional 2D visual inputs, Para. A employs explicit 3D/4D in- puts (e.g., point clouds, depth maps, historical ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Efficient 3D-Perception ensures spatial consistency through the Cross-View Aligner (red) and Cross-Object Fuser (or- ange). The former employs an Explicit Semantic Object Selec- ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The Mechanism from 3D-Perception to 4D-Reasoning. The Cross-View Aligner selects spatial objects with matching identities across different views, and through 4D-Reasoning, further predicts ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Efficient 4D-Reasoning. IK (implicit knowledge). Cross-Scene Thinker with Spatiotemporal Consistency Attention (SC-Attn) ensures: 1) Three sets of initialized dynamic tokens de- code dynamic ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Simulation Results on LIBERO Benchmark. Task suc- cess rates across four suites and their overall average.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Simulation Results on ManiSkill2 Benchmark. "†" denotes results reproduced under identical settings as ConsisVLA- 4D. The results are averaged over 20 or 100 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Efficiency Optimization Results. "†" denotes re- sults reproduced under identical settings as ConsisVLA-4D. La- tency and Throughput (T-put) represent the inference delay and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Simulation Results on RoboTwin 2.0 Benchmark. The tasks cover diverse scenarios, with each task conducted in 100 trials.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison with Existing Paradigms. Beyond con- ventional 2D visual inputs, Para. A employs explicit 3D/4D in- puts (e.g., point clouds, depth maps, historical ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Efficient 3D-Perception ensures spatial consistency through the Cross-View Aligner (red) and Cross-Object Fuser (or- ange). The former employs an Explicit Semantic Object Selec- ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The Mechanism from 3D-Perception to 4D-Reasoning. The Cross-View Aligner selects spatial objects with matching identities across different views, and through 4D-Reasoning, further predicts ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Efficient 4D-Reasoning. IK (implicit knowledge). Cross-Scene Thinker with Spatiotemporal Consistency Attention (SC-Attn) ensures: 1) Three sets of initialized dynamic tokens de- code dynamic ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Simulation Results on LIBERO Benchmark. Task suc- cess rates across four suites and their overall average.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Simulation Results on ManiSkill2 Benchmark. "†" denotes results reproduced under identical settings as ConsisVLA- 4D. The results are averaged over 20 or 100 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Efficiency Optimization Results. "†" denotes re- sults reproduced under identical settings as ConsisVLA-4D. La- tency and Throughput (T-put) represent the inference delay and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Simulation Results on RoboTwin 2.0 Benchmark. The tasks cover diverse scenarios, with each task conducted in 100 trials.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct evaluations across multiple simulation benchmarks, including: 1) the four task suites of LIBERO [44]-Spatial, Object, Goal, and Long; 2) three pick-and-place tasks ... | embodiment, simulator version and control stack | p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup) |
 | Task/environment | Simulation Results on RoboTwin 2.0 Benchmark. | reset, timeout, object/scene variation | p. 7 (5.1. Experimental Setup), p. 7 (5.3. Ablation Studies) |
@@ -118,12 +118,12 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 | Primary metric/result | ConsisVLA-4D leads significantly in both phased and final success rates across 4 diverse long-horizon bimanual tasks, with strong performance stably maintained across deployment platforms ... | numeric claim only at cited anchor | p. 7 (5.2. Overall Performance & Efficiency) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** The tasks cover diverse scenarios, with each task conducted in 100 trials.
-- **p. 7 / 5.1. Experimental Setup - extractive PDF cue:** Decimal values indicate averages over 15 trials, and the average success rate reflects complete task completion.
-- **p. 7 / 5.2. Overall Performance & Efficiency - extractive PDF cue:** The significant throughput improvement by 33.4 Hz enables real-time, smooth operation of large VLA models on real hardware.
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** Two tasks (Microwave Operation, T-shirt Folding) are selected, with 15 trials per task extended to 30 to ensure stable ablation results.
-- **p. 6 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive PDF cue:** The results are averaged over 20 or 100 trials.
-- **p. 6 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive PDF cue:** Method Latency ↓T-put ↑FLOPs ↓Cost ↓ Simulation: Unimanual tasks RT-2-X [PMLR'23] [6] 0.200 s
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** The tasks cover diverse scenarios, with each task conducted in 100 trials.
+- **p. 7 / 5.1. Experimental Setup - extractive body cue:** Decimal values indicate averages over 15 trials, and the average success rate reflects complete task completion.
+- **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** The significant throughput improvement by 33.4 Hz enables real-time, smooth operation of large VLA models on real hardware.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** Two tasks (Microwave Operation, T-shirt Folding) are selected, with 15 trials per task extended to 30 to ensure stable ablation results.
+- **p. 6 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive body cue:** The results are averaged over 20 or 100 trials.
+- **p. 6 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive body cue:** Method Latency ↓T-put ↑FLOPs ↓Cost ↓ Simulation: Unimanual tasks RT-2-X [PMLR'23] [6] 0.200 s
 
 ## Generalization and Failure Cases
 
@@ -159,12 +159,12 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.3. Ablation Studies - extractive PDF cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Through the integration of CVAligner, CO-Fuser, and CS-Thinker, it achieves cross-view, cross-object, and cross-scene consistency, enabling robust and efficient understanding of dynamic environments.
-- **p. 7 / 5.2. Overall Performance & Efficiency - extractive PDF cue:** Notably, its realworld results are nearly consistent with those on RoboTwin 2.0 (ALOHA manipulator), demonstrating robust sim-toreal transfer capability.
-- **p. 8 / 5.3. Ablation Studies - extractive PDF cue:** Moreover, all modules are adaptively designed, and swapping them with counterparts in SigLIP and DINOv2 degrades performance.
+- **p. 7 / 5.3. Ablation Studies - extractive body cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
+- **p. 8 / 6. Conclusion - extractive body cue:** Through the integration of CVAligner, CO-Fuser, and CS-Thinker, it achieves cross-view, cross-object, and cross-scene consistency, enabling robust and efficient understanding of dynamic environments.
+- **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** Notably, its realworld results are nearly consistent with those on RoboTwin 2.0 (ALOHA manipulator), demonstrating robust sim-toreal transfer capability.
+- **p. 8 / 5.3. Ablation Studies - extractive body cue:** Moreover, all modules are adaptively designed, and swapping them with counterparts in SigLIP and DINOv2 degrades performance.
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 7 (5.3. Ablation Studies), p. 6 (5.1. Experimental Setup), p. 8 (5.4. Qualitative Analysis), p. 8 (5.3. Ablation Studies), metrics p. 7 (5.1. Experimental Setup), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), baselines p. 7 (5.2. Overall Performance & Efficiency), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.4. Qualitative Analysis), results p. 7 (5.2. Overall Performance & Efficiency), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.4. Qualitative Analysis), p. 3 (Figure/Table caption), p. 6 (5.1. Experimental Setup).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 7 (5.3. Ablation Studies), p. 6 (5.1. Experimental Setup), p. 8 (5.4. Qualitative Analysis), p. 8 (5.3. Ablation Studies), metrics p. 7 (5.1. Experimental Setup), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), baselines p. 7 (5.2. Overall Performance & Efficiency), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.4. Qualitative Analysis), results p. 7 (5.2. Overall Performance & Efficiency), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.4. Qualitative Analysis), p. 3 (Figure/Table caption), p. 6 (5.1. Experimental Setup).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p074.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p074.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p074.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p074.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Real-world Benchmarks | EMPIRICAL / REAL-ROBOT OR HARDWARE | For example, with changes in goal color, UniPi achieves a success rate of 40%, UVA achieves 64%, while OpenVLA only reaches 32%. | p. 8 (B. Real-world Benchmarks) |
 | B. Real-world Benchmarks | EMPIRICAL / REAL-ROBOT OR HARDWARE | All tests are unseen during training, and even with more challenging distractor objects and backgrounds, UVA achieves higher success rates than DP-UML To more ... | p. 8 (B. Real-world Benchmarks) |
@@ -62,12 +62,12 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Trained on a diverse dataset spanning multiple robot embodiments and tasks, xo demonstrates. strong zero-shot and fine-tuned performance. | embodiment, simulator version and control stack | p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks) |
 | Task/environment | Since the training data were collected independently in prior work, all evaluation cases are Out-of-Distribution (OOD), involving unseen environments, objects, and robots. | reset, timeout, object/scene variation | p. 5 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks) |
 | Observation/sensor | observation, uncertainty/risk estimate와 task command | calibration, preprocessing, privileged input | p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion) |
-| Output/decision | shielded, recovery 또는 safe action | action frame, controller and termination | p. 1 (Front matter), p. 2 (1. Iyrropucrion) |
+| Output/decision | shielded, recovery 또는 safe action | action frame, controller and termination | p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Iyrropucrion) |
 
 ## Metrics and Success Definition
 
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 - **p. 6 / B. Real-world Benchmarks - extractive body cue:** We evaluate policy learning results with UVA compared to the baseline methods on a few different axes: 1) action prediction accuracy, 2) inference speed, 3) ...
 - **p. 8 / B. Real-world Benchmarks - extractive body cue:** Robustness to History Length: Prior policy learning meth- ‘ods, such as DP-C, often experience performance degradation as the history length increases as shown in Figure ...
 
-- **PDF anchors reviewed:** datasets p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), metrics p. 5 (A. Simulation Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), baselines p. 7 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 5 (A. Simulation Benchmarks), p. 5 (A. Simulation Benchmarks), p. 6 (B. Real-world Benchmarks), results p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 5 (A. Simulation Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks).
+- **Evidence anchors reviewed:** datasets p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), metrics p. 5 (A. Simulation Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), baselines p. 7 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 5 (A. Simulation Benchmarks), p. 5 (A. Simulation Benchmarks), p. 6 (B. Real-world Benchmarks), results p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 5 (A. Simulation Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We evaluate policy learning results with UVA compared to the baseline methods on a few different axes: 1) action prediction accuracy, 2) inference speed, 3) robustness to visual disturbances, 4) ... (p. 6, B. Real-world Benchmarks).
+- **Metric evidence:** Our approach demonstrates. superior performance in the multi-task setting, achieving a 15% higher success rate on the Cup task and a 40% higher success rate ‘on the Mouse task compared ... (p. 7, B. Real-world Benchmarks).
+- **Baseline/ablation evidence:** We evaluate policy learning results with UVA compared to the baseline methods on a few different axes: 1) action prediction accuracy, 2) inference speed, 3) robustness to visual disturbances, 4) ... (p. 6, B. Real-world Benchmarks).
+- **Failure/negative evidence:** Limitation and Future Work: One limitation of our frame- ‘work is that it does not currently leverage large amounts of actionless video data, which could provide valuable additional supervision. (p. 10, IX. Discussion).

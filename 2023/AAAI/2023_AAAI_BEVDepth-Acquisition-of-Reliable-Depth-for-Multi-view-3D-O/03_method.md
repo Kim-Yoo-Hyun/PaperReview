@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10092; PDF retrieval source: https://arxiv.org/pdf/2206.10092. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10092; PDF retrieval source: https://arxiv.org/pdf/2206.10092. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,28 +10,28 @@ PDF body method statement (p. 1 (1 Introduction), p. 1 (1 Introduction)): They f
 
 ## Method Body Digest
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** They first "lift" multi-view features to 3D frustums using estimated depth, then "splat" frustums onto a reference plane, usually being a plane in Bird's-Eye-View (BEV).
-- **p. 1 / 1 Introduction - extractive PDF cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** While LiDAR-based methods have demonstrated their ability to deliver trustworthy 3D detection results, multi-view camera-based methods have recently attracted increasing attention because of their lower ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Input Image Lift-splat BEVDepth Figure 1: Depth estimation results in Lift-splat detector and BEVDepth.
-- **p. 1 / Abstract - extractive PDF cue:** Our work is based on a key observation - depth estimation in recent approaches is surprisingly inadequate given the fact that depth is essential to ...
-- **p. 1 / Abstract - extractive PDF cue:** Aided by customized Efficient Voxel Pooling and multi-frame mechanism, BEVDepth achieves the new stateof-the-art 60.9% NDS on the challenging nuScenes test set while maintaining high ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, usually being the attaching regions between objects and the ground.
+- **p. 1 / 1 Introduction - extractive body cue:** They first "lift" multi-view features to 3D frustums using estimated depth, then "splat" frustums onto a reference plane, usually being a plane in Bird's-Eye-View (BEV).
+- **p. 1 / 1 Introduction - extractive body cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
+- **p. 1 / 1 Introduction - extractive body cue:** While LiDAR-based methods have demonstrated their ability to deliver trustworthy 3D detection results, multi-view camera-based methods have recently attracted increasing attention because of their lower ...
+- **p. 2 / 1 Introduction - extractive body cue:** Input Image Lift-splat BEVDepth Figure 1: Depth estimation results in Lift-splat detector and BEVDepth.
+- **p. 1 / Abstract - extractive body cue:** Our work is based on a key observation - depth estimation in recent approaches is surprisingly inadequate given the fact that depth is essential to ...
+- **p. 1 / Abstract - extractive body cue:** Aided by customized Efficient Voxel Pooling and multi-frame mechanism, BEVDepth achieves the new stateof-the-art 60.9% NDS on the challenging nuScenes test set while maintaining high ...
+- **p. 2 / 1 Introduction - extractive body cue:** Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, usually being the attaching regions between objects and the ground.
 
 ## Design Rationale
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** Therefore, in this work, we introduce BEVDepth, a new multi-view 3D detector that leverages depth supervision derives from point clouds to guide depth learning.
-- **p. 1 / 1 Introduction - extractive PDF cue:** The BEV representation is non-trivial since it not only enables an end-to-end training scheme of a multiple input cameras system but also provides a unified ...
+- **p. 1 / 1 Introduction - extractive body cue:** Therefore, in this work, we introduce BEVDepth, a new multi-view 3D detector that leverages depth supervision derives from point clouds to guide depth learning.
+- **p. 1 / 1 Introduction - extractive body cue:** The BEV representation is non-trivial since it not only enables an end-to-end training scheme of a multiple input cameras system but also provides a unified ...
 
 ## Source Evidence Cues
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** They first "lift" multi-view features to 3D frustums using estimated depth, then "splat" frustums onto a reference plane, usually being a plane in Bird's-Eye-View (BEV).
-- **p. 1 / 1 Introduction - extractive PDF cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
+- **p. 1 / 1 Introduction - extractive body cue:** They first "lift" multi-view features to 3D frustums using estimated depth, then "splat" frustums onto a reference plane, usually being a plane in Bird's-Eye-View (BEV).
+- **p. 1 / 1 Introduction - extractive body cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
 - **Detected method headings:** Method (p. 7)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | They first "lift" multi-view features to 3D frustums using estimated depth, then "splat" frustums onto a reference plane, usually being a plane ... | p. 1 (1 Introduction), p. 1 (1 Introduction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since ... | p. 1 (1 Introduction) |
@@ -41,8 +41,8 @@ PDF body method statement (p. 1 (1 Introduction), p. 1 (1 Introduction)): They f
 
 ## Objective / Update Rule
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** While LiDAR-based methods have demonstrated their ability to deliver trustworthy 3D detection results, multi-view camera-based methods have recently attracted increasing attention because of their lower ...
-- **p. 1 / 1 Introduction - extractive PDF cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
+- **p. 1 / 1 Introduction - extractive body cue:** While LiDAR-based methods have demonstrated their ability to deliver trustworthy 3D detection results, multi-view camera-based methods have recently attracted increasing attention because of their lower ...
+- **p. 1 / 1 Introduction - extractive body cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (1 Introduction).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -58,10 +58,10 @@ PDF body method statement (p. 1 (1 Introduction), p. 1 (1 Introduction)): They f
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Input Image Lift-splat BEVDepth Figure 1: Depth estimation results in Lift-splat detector and BEVDepth.
-- **p. 1 / Abstract - extractive PDF cue:** Our work is based on a key observation - depth estimation in recent approaches is surprisingly inadequate given the fact that depth is essential to ...
-- **p. 1 / Abstract - extractive PDF cue:** Aided by customized Efficient Voxel Pooling and multi-frame mechanism, BEVDepth achieves the new stateof-the-art 60.9% NDS on the challenging nuScenes test set while maintaining high ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, usually being the attaching regions between objects and the ground.
+- **p. 2 / 1 Introduction - extractive body cue:** Input Image Lift-splat BEVDepth Figure 1: Depth estimation results in Lift-splat detector and BEVDepth.
+- **p. 1 / Abstract - extractive body cue:** Our work is based on a key observation - depth estimation in recent approaches is surprisingly inadequate given the fact that depth is essential to ...
+- **p. 1 / Abstract - extractive body cue:** Aided by customized Efficient Voxel Pooling and multi-frame mechanism, BEVDepth achieves the new stateof-the-art 60.9% NDS on the challenging nuScenes test set while maintaining high ...
+- **p. 2 / 1 Introduction - extractive body cue:** Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, usually being the attaching regions between objects and the ground.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -76,8 +76,8 @@ PDF body method statement (p. 1 (1 Introduction), p. 1 (1 Introduction)): They f
 
 ## Training vs Inference
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
-- **p. 6 / 5 Experiment - extractive PDF cue:** When compared to other methods, BEVDepth is trained for 20 epochs with CBGS.
+- **p. 1 / 1 Introduction - extractive body cue:** Based on this observation, we point out that the depth learning mechanism in existing Lift-splat brings three deficiencies: • Inaccurate Depth Since the depth prediction ...
+- **p. 6 / 5 Experiment - extractive body cue:** When compared to other methods, BEVDepth is trained for 20 epochs with CBGS.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -97,13 +97,13 @@ PDF body method statement (p. 1 (1 Introduction), p. 1 (1 Introduction)): They f
 
 ## Failure and Ablation Link
 
-- **p. 6 / 5 Experiment - extractive PDF cue:** For the ablation study, all experiments are trained for 24 epochs without using CBGS strategy (Zhu et al.
-- **p. 6 / 5 Experiment - extractive PDF cue:** 5.2 Ablation Study Component Analysis As shown in Table 4, our vanilla BEVDepth achieves 28.2% mAP and 32.7% NDS.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 8: Comparison on the nuScenes test set. L denotes LiDAR and C denotes camera. BEVDepth uses pretrained VovNet as backbone. the resolution of the ...
-- **p. 5 / 2 Related Work - extractive PDF cue:** If the 2.5D projection of a certain point cloud does not fall into the ith view, we simply discard it.
-- **p. 5 / 2 Related Work - extractive PDF cue:** Benefiting from the decoupled nature of LSS (Philion and Fidler 2020), the camera-aware depth prediction module is isolated from the detection head and thus the ...
-- **p. 6 / 5 Experiment - extractive PDF cue:** See Table 6, when we use 1×3 conv on CD ×W dimension, the information does not exchange along the depth axis, and
-- **p. 4 / 2 Related Work - extractive PDF cue:** Such a phenomenon implies that the model without depth loss has a higher risk of over-fitting, and thus it may also be sensitive to the ...
+- **p. 6 / 5 Experiment - extractive body cue:** For the ablation study, all experiments are trained for 24 epochs without using CBGS strategy (Zhu et al.
+- **p. 6 / 5 Experiment - extractive body cue:** 5.2 Ablation Study Component Analysis As shown in Table 4, our vanilla BEVDepth achieves 28.2% mAP and 32.7% NDS.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 8: Comparison on the nuScenes test set. L denotes LiDAR and C denotes camera. BEVDepth uses pretrained VovNet as backbone. the resolution of the ...
+- **p. 5 / 2 Related Work - extractive body cue:** If the 2.5D projection of a certain point cloud does not fall into the ith view, we simply discard it.
+- **p. 5 / 2 Related Work - extractive body cue:** Benefiting from the decoupled nature of LSS (Philion and Fidler 2020), the camera-aware depth prediction module is isolated from the detection head and thus the ...
+- **p. 6 / 5 Experiment - extractive body cue:** See Table 6, when we use 1×3 conv on CD ×W dimension, the information does not exchange along the depth axis, and
+- **p. 4 / 2 Related Work - extractive body cue:** Such a phenomenon implies that the model without depth loss has a higher risk of over-fitting, and thus it may also be sensitive to the ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -117,7 +117,7 @@ PDF body method statement (p. 1 (1 Introduction), p. 1 (1 Introduction)): They f
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (1 Introduction), p. 1 (1 Introduction), objective p. 1 (1 Introduction), p. 1 (1 Introduction), temporal p. 6 (5 Experiment), p. 1 (Abstract), p. 3 (2 Related Work), p. 3 (2 Related Work), p. 5 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 1 (1 Introduction), p. 1 (1 Introduction), objective p. 1 (1 Introduction), p. 1 (1 Introduction), temporal p. 6 (5 Experiment), p. 1 (Abstract), p. 3 (2 Related Work), p. 3 (2 Related Work), p. 5 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

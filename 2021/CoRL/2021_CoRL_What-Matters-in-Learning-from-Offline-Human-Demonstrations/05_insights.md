@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 Offline policy learning is sensitive to the state and action space coverage in the dataset, and by extension, the size of the dataset itself.를 To study the effect of observation modalities, we capture a diverse set of sensor streams when collecting the dataset, including end-effector, gripper fingers, and joints, groundtruth object poses, and images from an ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", "Adequate", and "Worse" human operators, and finally ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present success rates averaged over 3 seeds for each method across the low-dim Machine-Generated (MG), Proficient-Human (PH), and Multi-Human (MH) datasets.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Both include end-effector poses and gripper finger positions, and only differ in whether ground-truth object information is used (low-dim) or whether that information is replaced by the available camera observations ... (p. 4, Dataset).
+- **Paper-specific mechanism:** Differences from classic supervised learning, such as a mismatch between training and evaluation objectives (task success rate), can make selecting a final policy challenging [21, 22], especially in real-world settings ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 2: Results on Suboptimal Human Data. We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations ... (p. 4, Figure/Table caption); the relevant task/metric cue is We first note that less complex tasks (Lift, Can) can yield proficient policies (75%-100% success rate) using a small fraction of the data (20%). (p. 7, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", "Adequate", and "Worse" human operators, ... (p. 4, Dataset).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We collected 3 additional real-world datasets with a Franka robotic arm - Lift (Real), Can (Real), and Tool Hang (Real)..
-3. Compare against the body-reported baseline or a matched simpler baseline: BC-RNN is a strong baseline on suboptimal human data, but there is room for improvement..
-4. Report the body metric and its denominator/aggregation: Figure 3: Effect of Dataset Size. We study how the BC-RNN success rate changes when lowering the quantity of data to 20% and 50%. Results show that less complex tasks (Lift, Can) ....
-5. Re-run the body-reported ablation/failure condition: 4.3 Effect of Observation Space (C5) Learning from image observations can match low-dim agent performance..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Both include end-effector poses and gripper finger positions, and only differ in whether ground-truth object information is used (low-dim) or whether that information is replaced by the available camera observations ... (p. 4, Dataset); preserve the objective/update rule: Unlike traditional supervised learning, where model selection can be achieved by using the model with the lowest validation loss [21], offline policy learning often suffers from the fact that the ... (p. 3, Dataset).
+2. Use the paper-reported task/data/environment cue: We further show that important design decisions made through our study in simulation directly translate to effective policy learning on real world tasks and datasets. (p. 3, Dataset).
+3. Compare against the reported or matched baseline: Interestingly, results are lower for MH datasets compared to PH datasets, even though the MH datasets contain 100 more demos (300 demos vs. (p. 5, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: We first note that less complex tasks (Lift, Can) can yield proficient policies (75%-100% success rate) using a small fraction of the data (20%). (p. 7, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: 4.3 Effect of Observation Space (C5) Learning from image observations can match low-dim agent performance. (p. 6, 4 Experiments); if none is reported, design one around: We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", "Adequate", and "Worse" human operators, ... (p. 4, Dataset).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (1 Introduction), p. 3 (Dataset), p. 4 (Dataset); the primary result is directionally consistent at p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), and measure the boundary at p. 4 (Dataset), p. 6 (4 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, success, rates mechanism이 BC-RNN is a strong baseline on suboptimal human data, but there is room for improvement. 대비 Figure 3: Effect of Dataset Size. We study how the BC-RNN success rate changes when lowering the quantity ...을 개선하고, We present success rates averaged over 3 seeds for each method across different subsets of the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Both include end-effector poses and gripper finger positions, and only differ in whether ground-truth object information is used (low-dim) or whether that ...), does the paper-specific mechanism (Differences from classic supervised learning, such as a mismatch between training and evaluation objectives (task success rate), can make selecting a final ...) retain the reported evaluation outcome (We first note that less complex tasks (Lift, Can) can yield proficient policies (75%-100% success rate) using a ...) when tested against the paper's strongest explicit boundary (We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We first note that less complex tasks (Lift, Can) can yield proficient policies (75%-100% success rate) using a ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Differences from classic supervised learning, such as a mismatch between training and evaluation objectives (task success rate), can make selecting a final policy challenging [21, 22], especially in real-world settings ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 2: Results on Suboptimal Human Data. We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations ... (p. 4, Figure/Table caption).
+- **Strongest explicit boundary:** We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", "Adequate", and "Worse" human operators, ... (p. 4, Dataset).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

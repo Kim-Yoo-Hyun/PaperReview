@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.07241; PDF retrieval source: https://arxiv.org/pdf/2302.07241. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.07241; PDF retrieval source: https://arxiv.org/pdf/2302.07241. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. THE ConceptFusion APPROACH | EMPIRICAL / REAL-ROBOT OR HARDWARE | By applying both quantization and tracing techniques to our models, we are able to achieve significant improvements in their efficiency, without compromising their accuracy. | p. 6 (IV. THE ConceptFusion APPROACH) |
 | 4) What previously infeasible downstream use-cases can | EMPIRICAL / REAL-ROBOT OR HARDWARE | We see that, each component of the proposed method results in clear, significant improvement in performance. | p. 10 (4) What previously infeasible downstream use-cases can) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This real-world dataset comprises 3D scans of 78 commonly found household and office objects on a tabletop surface (see Fig. | embodiment, simulator version and control stack | p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can) |
 | Task/environment | Zero-shot tabletop rearrangement: To evaluate the applicability of ConceptFusion to real-world robotic interaction, we conduct experiments on a zero-shot tabletop rearrangement task with a ... | reset, timeout, object/scene variation | p. 8 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 - **p. 10 / VI. OUTLOOK - extractive body cue:** However, this approach still fails for room-level containment queries of type is <OBJ> in <ROOM>); which require additional context.
 - **p. 10 / 4) What previously infeasible downstream use-cases can - extractive body cue:** The "Remove uniqueness term..." variant fuses features computed from individual masks with those computed over the entire image, but does not account for mask uniqueness ...
 
-- **PDF anchors reviewed:** datasets p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can), p. 7 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK), metrics p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (VI. OUTLOOK), p. 6 (IV. THE ConceptFusion APPROACH), p. 9 (Figure/Table caption), p. 10 (VI. OUTLOOK), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK), p. 6 (4) What previously infeasible downstream use-cases can), p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), results p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), p. 9 (Figure/Table caption), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can).
+- **Evidence anchors reviewed:** datasets p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can), p. 7 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK), metrics p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (VI. OUTLOOK), p. 6 (IV. THE ConceptFusion APPROACH), p. 9 (Figure/Table caption), p. 10 (VI. OUTLOOK), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK), p. 6 (4) What previously infeasible downstream use-cases can), p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), results p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), p. 9 (Figure/Table caption), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The results are presented in Table VII, and compared against a baseline approach that uses only the pointcloud obtained by backprojecting a single RGB-D image (2.5D). (p. 10, VI. OUTLOOK).
+- **Metric evidence:** Accuracy (%) IoU source-ambiguous Random 7.14% N/A AudioCLIP [8] 23.81% N/A ConceptFusion 64.29% 0.287 ecological Random 5.56% N/A AudioCLIP [8] 22.22% N/A ConceptFusion 66.67% 0.301 TABLE IV: Audio-query based detection ... (p. 6, IV. THE ConceptFusion APPROACH).
+- **Baseline/ablation evidence:** MaskCLIP is the closest zero-shot baseline; we outperform it by a large margin. (p. 8, 4) What previously infeasible downstream use-cases can).
+- **Failure/negative evidence:** The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context to accomplish the task. (p. 9, 4) What previously infeasible downstream use-cases can).

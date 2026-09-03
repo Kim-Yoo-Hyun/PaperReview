@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.09477; PDF retrieval source: https://arxiv.org/pdf/1802.09477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1802.09477; PDF retrieval source: https://arxiv.org/pdf/1802.09477. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.2. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | Method HCheetah Hopper Walker2d Ant TD3 9532.99 3304.75 4565.24 4185.06 DDPG 3162.50 1731.94 1520.90 816.35 AHE 8401.02 1061.77 2362.13 564.07 AHE + DP 7588.64 ... | p. 8 (6.2. Ablation Studies) |
 | 6.1. Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | TD3 matches or outperforms all other algorithms in both final performance and learning speed across all tasks. | p. 8 (6.1. Evaluation) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise. | embodiment, simulator version and control stack | p. 8 (6.1. Evaluation), p. 7 (6.1. Evaluation) |
 | Task/environment | (2016) with no modifications to the environment or reward. | reset, timeout, object/scene variation | p. 7 (6.1. Evaluation), p. 7 (6. Experiments) |
@@ -161,7 +161,16 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 - **p. 7 / 6.1. Evaluation - extractive body cue:** Unlike the original implementation of DDPG, we used uncorrelated noise for exploration as we found noise drawn from the Ornstein-Uhlenbeck (Uhlenbeck & Ornstein, 1930) process ...
 - **p. 8 / 6.1. Evaluation - extractive body cue:** Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise.
 
-- **PDF anchors reviewed:** datasets p. 8 (6.1. Evaluation), p. 7 (6.1. Evaluation), p. 7 (6. Experiments), p. 8 (6.2. Ablation Studies), metrics p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6. Experiments), p. 7 (6.1. Evaluation), p. 5 (Figure/Table caption), p. 8 (6.1. Evaluation), baselines p. 8 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 13 (Figure/Table caption), p. 7 (6.1. Evaluation), p. 7 (6.1. Evaluation), p. 5 (Figure/Table caption), results p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6.1. Evaluation), p. 7 (6.1. Evaluation).
+- **Evidence anchors reviewed:** datasets p. 8 (6.1. Evaluation), p. 7 (6.1. Evaluation), p. 7 (6. Experiments), p. 8 (6.2. Ablation Studies), metrics p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6. Experiments), p. 7 (6.1. Evaluation), p. 5 (Figure/Table caption), p. 8 (6.1. Evaluation), baselines p. 8 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 13 (Figure/Table caption), p. 7 (6.1. Evaluation), p. 7 (6.1. Evaluation), p. 5 (Figure/Table caption), results p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6.1. Evaluation), p. 7 (6.1. Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** While a larger d would result in a larger benefit with respect to accumulating errors, for fair comparison, the critics are only trained once per time step, and training the ... (p. 7, 6.1. Evaluation).
+- **Metric evidence:** We present the Twin Delayed Deep Deterministic policy gradient algorithm (TD3), which builds on the Deep Deterministic Policy Gradient algorithm (DDPG) (Lillicrap et al., 2015) by applying the modifications described ... (p. 6, 6. Experiments).
+- **Baseline/ablation evidence:** A full comparison between our re-tuned version and the baselines DDPG is provided in the supplementary material. (p. 8, 6.1. Evaluation).
+- **Failure/negative evidence:** For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).

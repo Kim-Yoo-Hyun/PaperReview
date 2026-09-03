@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html; PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/shen23a.html; PDF retrieval source: https://proceedings.mlr.press/v229/shen23a/shen23a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose),
 
 - **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language ...
 - **p. 1 / Abstract - extractive body cue:** Using features distilled from a vision-language model, CLIP, we present a way to designate novel objects for manipulation via free-text natural language, and demonstrate its ...
-- **p. 1 / 1 Introduction - extractive body cue:** We also source features *Equal contribution.
+- **p. 1 / 1 Introduction - extractive body cue:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation.
 
 ## Source Evidence Cues
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose),
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | (c) We concatenate feature vectors at these query points, then average over n (we use n = 2) demonstrations. | p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We speed up grasp pose inference by first running a coarse proposal step where we filter out regions in the feature field ... | p. 5 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose) |
@@ -62,7 +62,7 @@ PDF body method statement (p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose),
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user, Figure, right, First, produce | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
+| Input/observation | robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user, Figure, right, Distilled, Feature | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
 | State/latent | robot, then, references, demonstrations, language, instructions, grasp, objects, specified, user | geometry, map, object/relationship state | body cue; notation verify |
 | Action/output | Feature, Fields, Robotic, Manipulation, F3RM, present, distilling, pre-trained, representations, vision | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
 | Objective/constraint | optimize, minimizing, quadratic, loss, Lfeat, initial, poses, following, cost, function | geometric/semantic reconstruction or matching loss | equation anchor required |
@@ -70,10 +70,10 @@ PDF body method statement (p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose),
 ## Observation–State–Action Interface
 
 - **p. 1 / 1 Introduction - extractive body cue:** The robot then references demonstrations and language instructions to grasp objects specified by a user (Figure 1, right).
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation William Shen∗1, Ge Yang∗1,2, Alan Yu1, Jansen Wong1, Leslie Pack Kaelbling1, Phillip Isola1 1MIT CSAIL, 2Institute for Artificial ...
 - **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** First, how to produce the feature field of a scene automatically at a reasonable speed; second, how to represent and infer 6-DOF grasping and placing ...
 - **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** This is needed because CLIP uses a small, fixed number of input patches from a square crop.
 - **p. 4 / 6 DOF Gripper Pose - extractive body cue:** For a 6-DOF gripper pose T, we sample the feature field f at each point in the query point cloud, transformed by T (Fig.2b).
-- **p. 1 / Abstract - extractive body cue:** Self-supervised and language-supervised image models contain rich knowledge of the world that is important for generalization.
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** The robot's goal is to predict a pose T that achieves the task.
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** In each scene, the robot is given a set of RGB images {I} with their corresponding camera poses.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
@@ -85,7 +85,7 @@ PDF body method statement (p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose),
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | The robot first scans a tabletop scene by taking a sequence of photos using an RGB camera mounted on a selfie stick ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | We parameterize a 6-DOF grasp or place pose as T = (R, t) in the world frame (see Figure 2), where R ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | These two techniques combined enable us to extract dense, high-resolution patch-level 2D features from RGB images at about 25 frames per second ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -131,8 +131,17 @@ PDF body method statement (p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose),
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), objective p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 6 (6 DOF Gripper Pose), temporal p. 1 (1 Introduction), p. 2 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose).
+- **Evidence anchors reviewed:** method p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), objective p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 6 (6 DOF Gripper Pose), temporal p. 1 (1 Introduction), p. 2 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 4 (6 DOF Gripper Pose), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation William Shen∗1, Ge Yang∗1,2, Alan Yu1, Jansen Wong1, Leslie Pack Kaelbling1, Phillip Isola1 1MIT CSAIL, 2Institute for Artificial Intelligence and Fundamental Interac ... (p. 1, Body text (section boundary not confidently recovered)).
+- **Objective/update evidence:** We optimize f by minimizing the quadratic loss Lfeat = P r∈R (p. 3, 3. Language-Guided Manipulation).
+- **Temporal/runtime evidence:** The robot first scans a tabletop scene by taking a sequence of photos using an RGB camera mounted on a selfie stick (Figure 1, left). (p. 1, 1 Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

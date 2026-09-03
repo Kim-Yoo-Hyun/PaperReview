@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p128.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p128.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 1 (I. INrRo
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | These works address the requirement of autonomy, but generally sidestep the question of safety - ‘critical challenge when learning mobile manipulation in ... | mobile base와 one/two-arm manipulation environment | body wording is the source claim |
-| Observation / input | We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning ... | egocentric RGB-D, language/task goal, base-arm proprioception | exact sensor/frame/preprocessing from PDF |
+| Observation / input | We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning ... | egocentric RGB-D, language/task goal, base-arm proprioception | exact sensor/frame/preprocessing from PDF body |
 | State / latent | evaluate, data, generated, train, safety, Qfunctions, would, suffice, training, task | map/object/contact state와 base-arm coordination decision | notation and tensor shape require body check |
 | Output / action | then, train, action, prediction, policy, network, maps, point | base motion plus arm/gripper action | exact unit/frame/decoder require body check |
 | Target outcome | task completion and recovery | long-horizon task success, reachability, collision과 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | base-arm-object state and language/task goal; body terms: evaluate, data, generated, train, safety, Qfunctions, would, suffice, training, task | p. 6 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 5 (C. Learning from Previous Successful Exploration) |
 | Decision / output variable | base plus arm/gripper action; body terms: environments, different, human, teachers, observe, experimentally, framework, enables | p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 2 (I. INrRopucTION) |
@@ -38,7 +38,7 @@ PDF body framing (p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 1 (I. INrRo
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION) |
 | Success / guarantee | task completion and recovery | p. 6 (Figure/Table caption), p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 1 (I. INrRo
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 4 (B. Safe and Autonomous Real-World Adaptation)): environments with different human teachers, and observe experimentally that our framework enables the robot to suc cessfully acquire the desired behaviors safely and more efficiently than direct sim-to-real imitation learning ...
+PDF body contribution framing (p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 4 (B. Safe and Autonomous Real-World Adaptation)): environments with different human teachers, and observe experimentally that our framework enables the robot to suc cessfully acquire the desired behaviors safely and more efficiently than direct sim-to-real imitation learning ...
 
 - **p. 1 / Abstract - extractive body cue:** Our experiments show that our method allows robots to safely fand efficiently learn multistep mobile manipulation behaviors from a single human demonstration, from different users, ...
 - **p. 2 / I. INrRopucTION - extractive body cue:** In summary, SAFEMIMIC introduces several novel contributions:
@@ -69,12 +69,21 @@ PDF contribution framing (p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 2 (I. INrR
 
 ## Position in the Robotics Loop
 
-mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 6 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 5 (C. Learning from Previous Successful Exploration), p. 2 (I. INrRopucTION). The downstream handoff is claimed only when the body describes it.
+mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 5 (C. Learning from Previous Successful Exploration), p. 2 (I. INrRopucTION). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), interface p. 6 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 5 (C. Learning from Previous Successful Exploration), p. 2 (I. INrRopucTION), objective p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 4 (B. Safe and Autonomous Real-World Adaptation).
+- **Evidence anchors reviewed:** problem p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), interface p. 6 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 5 (C. Learning from Previous Successful Exploration), p. 2 (I. INrRopucTION), objective p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 4 (B. Safe and Autonomous Real-World Adaptation).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, these approaches assume access to a black box policy or dynamics model of the environment, both which are unknown in the ‘case of learning a new task from human ... (p. 3, I. INrRopucTION).
+- **Formulation-changing contribution:** In summary, SAFEMIMIC introduces several novel contributions: (p. 2, I. INrRopucTION).
+- **Assumption/failure evidence:** Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

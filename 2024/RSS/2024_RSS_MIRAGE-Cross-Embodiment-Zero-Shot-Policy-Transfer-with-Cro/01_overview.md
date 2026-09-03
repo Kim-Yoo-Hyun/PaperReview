@@ -1,8 +1,8 @@
 # MIRAGE: Cross-Embodiment Zero-Shot Policy Transfer with Cross-Painting
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p069.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p069.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p069.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p069.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, cross-embodiment, zero-shot transfer, policy transfer, manipulation, domain adaptation
 - Official paper: https://www.roboticsproceedings.org/rss20/p069.html
-- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p069.pdf
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p069.html
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -87,3 +87,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This poses several challenges, as outlined in prior work [108], stemming from variations in kinematic configuration, control scheme, camera viewpoint, and end-effector morphology.를 문제로 두고, To summarize, our key contributions are:를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 4 (4) We assume that the background and lighting conditions), p. 3 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), p. 4 (4) We assume that the background and lighting conditions), p. 4 (4) We assume that the background and lighting conditions) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This poses several challenges, as outlined in prior work [108], stemming from variations in kinematic configuration, control scheme, camera viewpoint, and end-effector morphology. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** To summarize, our key contributions are: (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Study Results Table I shows that when the target robots have the same gripper as the source robot, most unseen target robots achieve very high task success rates. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
+- **Explicit failure boundary:** Less robust source policies leave little room for error, while more robust ones tend to retry even if the target robot fails to grasp the object the first time. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).

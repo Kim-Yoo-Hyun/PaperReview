@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p110.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p110.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p110.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p110.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: We present the interaction-aware point clouds, ... | p. 1 (Figure/Table caption) |
 | IV. EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? | p. 5 (IV. EXPERIMENTS) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ‘We conduct comprehensive real-world experiments to answer the following questions: | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | ‘+ To what extent can our framework promote the learning of the visuomotor policy for dexterous manipulation across diverse real-world scenarios (Section IV-B)? | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 6 (A. Experiment Setup) |
@@ -160,7 +160,16 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: We present the interaction-aware point clouds, which ...
 - **p. 15 / B. Implementation Details - extractive body cue:** We utilize FoundationPose (60] to perform robust 6D pose estimation for various objects across tasks.
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup), p. 15 (B. Implementation Details), p. 14 (B. Implementation Details), metrics p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 15 (B. Implementation Details), p. 4 (Figure/Table caption), p. 15 (B. Implementation Details), baselines p. 15 (B. Implementation Details), p. 15 (B. Implementation Details), p. 4 (Figure/Table caption), p. 14 (B. Implementation Details), p. 16 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), p. 15 (B. Implementation Details), p. 15 (B. Implementation Details).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup), p. 15 (B. Implementation Details), p. 14 (B. Implementation Details), metrics p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 15 (B. Implementation Details), p. 4 (Figure/Table caption), p. 15 (B. Implementation Details), baselines p. 15 (B. Implementation Details), p. 15 (B. Implementation Details), p. 4 (Figure/Table caption), p. 14 (B. Implementation Details), p. 16 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), p. 15 (B. Implementation Details), p. 15 (B. Implementation Details).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The visual results are shown in the figure 10. (p. 15, B. Implementation Details).
+- **Metric evidence:** ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? (p. 5, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)? (p. 5, IV. EXPERIMENTS).
+- **Failure/negative evidence:** As shown in ‘Table VI, the image-based diffusion policy is highly sensitive to ‘camera viewpoints and completely fails across all three camera views. (p. 9, C. Efficiency).

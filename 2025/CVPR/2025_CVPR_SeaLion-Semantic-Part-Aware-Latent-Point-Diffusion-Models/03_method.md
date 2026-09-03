@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,34 +10,34 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 
 ## Method Body Digest
 
-- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware latent point diffusion ...
-- **p. 4 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
-- **p. 5 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** Next, we introduce the architecture of SeaLion, and illustrate its usage as a part-aware 3D edition tool.
-- **p. 5 / 3.3. Part-aware 3D Shape Edition Tool - extractive PDF cue:** In this process, the unfrozen latent points are perturbed for τ steps (τ < T) and then denoised for the same number of steps.
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** In the first stage, we train the components of hierarchical VAE, including ϕz, ϕh, and ξh, to maximize a variational lower bound on the data ...
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** The training objectives for ϵz and ϵh are: \la b el {eq:latent_dd pm _ glob al} \mathcal {L}(\epsilon _z) = \mathbb {E}_{t, z_0, \epsilon } ...
+- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware latent point diffusion ...
+- **p. 4 / 3.2. Model Architecture of SeaLion - extractive body cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
+- **p. 5 / 3.2. Model Architecture of SeaLion - extractive body cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
+- **p. 3 / 3. Methodology - extractive body cue:** Next, we introduce the architecture of SeaLion, and illustrate its usage as a part-aware 3D edition tool.
+- **p. 5 / 3.3. Part-aware 3D Shape Edition Tool - extractive body cue:** In this process, the unfrozen latent points are perturbed for τ steps (τ < T) and then denoised for the same number of steps.
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** In the first stage, we train the components of hierarchical VAE, including ϕz, ϕh, and ξh, to maximize a variational lower bound on the data ...
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** The training objectives for ϵz and ϵh are: \la b el {eq:latent_dd pm _ glob al} \mathcal {L}(\epsilon _z) = \mathbb {E}_{t, z_0, \epsilon } ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** We propose a novel evaluation metric named part-aware Chamfer distance (p-CD) to address these limitations and to quantify the pairwise distance between two segmentation-labeled point ...
-- **p. 4 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds ...
+- **p. 2 / 1. Introduction - extractive body cue:** We propose a novel evaluation metric named part-aware Chamfer distance (p-CD) to address these limitations and to quantify the pairwise distance between two segmentation-labeled point ...
+- **p. 4 / 3.2. Model Architecture of SeaLion - extractive body cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
 
 ## Source Evidence Cues
 
-- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware latent point diffusion ...
-- **p. 4 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
-- **p. 5 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
-- **p. 3 / 3. Methodology - extractive PDF cue:** Next, we introduce the architecture of SeaLion, and illustrate its usage as a part-aware 3D edition tool.
-- **p. 5 / 3.3. Part-aware 3D Shape Edition Tool - extractive PDF cue:** In this process, the unfrozen latent points are perturbed for τ steps (τ < T) and then denoised for the same number of steps.
+- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware latent point diffusion ...
+- **p. 4 / 3.2. Model Architecture of SeaLion - extractive body cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
+- **p. 5 / 3.2. Model Architecture of SeaLion - extractive body cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
+- **p. 3 / 3. Methodology - extractive body cue:** Next, we introduce the architecture of SeaLion, and illustrate its usage as a part-aware 3D edition tool.
+- **p. 5 / 3.3. Part-aware 3D Shape Edition Tool - extractive body cue:** In this process, the unfrozen latent points are perturbed for τ steps (τ < T) and then denoised for the same number of steps.
 - **Detected method headings:** 3. Methodology (p. 3); 3.2. Model Architecture of SeaLion (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware ... | p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion) |
 | Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion. | p. 4 (3.2. Model Architecture of SeaLion), p. 5 (3.2. Model Architecture of SeaLion) |
@@ -47,9 +47,9 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 
 ## Objective / Update Rule
 
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** In the first stage, we train the components of hierarchical VAE, including ϕz, ϕh, and ξh, to maximize a variational lower bound on the data ...
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** The training objectives for ϵz and ϵh are: \la b el {eq:latent_dd pm _ glob al} \mathcal {L}(\epsilon _z) = \mathbb {E}_{t, z_0, \epsilon } ...
-- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** The training loss function is: \ma t hcal {L}(\epsilo n _{ \ thet a }) = \mathbb {E}_{t, x_0, \epsilon } [{// \epsilon _{\theta } ...
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** In the first stage, we train the components of hierarchical VAE, including ϕz, ϕh, and ξh, to maximize a variational lower bound on the data ...
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** The training objectives for ϵz and ϵh are: \la b el {eq:latent_dd pm _ glob al} \mathcal {L}(\epsilon _z) = \mathbb {E}_{t, z_0, \epsilon } ...
+- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** The training loss function is: \ma t hcal {L}(\epsilo n _{ \ thet a }) = \mathbb {E}_{t, x_0, \epsilon } [{// \epsilon _{\theta } ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.2. Model Architecture of SeaLion).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds ...
-- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** The generative model acquires semantic part awareness by being trained to reconstruct input point clouds guided by segmentation encodings, forming a basis for extracting segmentation ...
-- **p. 4 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** PVCNN, a U-Net style architecture for point cloud data, uses the set abstraction layer [26] and feature propagation layer [26] for downsampling and up-sampling the ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Current state-of-the-art diffusion-based point cloud generative models [21, 37, 40] have achieved impressive performance.
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** Given the input ht, the data flow in the down-sampling path is as follows:
-- **p. 5 / 3.2. Model Architecture of SeaLion - extractive PDF cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
-- **p. 3 / 3. Methodology - extractive PDF cue:** Finally, we discuss the limitation of current metrics for evaluating generated labeled point clouds and propose novel metrics based on part-aware Chamfer distance (p-CD).
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds ...
+- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** The generative model acquires semantic part awareness by being trained to reconstruct input point clouds guided by segmentation encodings, forming a basis for extracting segmentation ...
+- **p. 4 / 3.2. Model Architecture of SeaLion - extractive body cue:** PVCNN, a U-Net style architecture for point cloud data, uses the set abstraction layer [26] and feature propagation layer [26] for downsampling and up-sampling the ...
+- **p. 1 / 1. Introduction - extractive body cue:** Current state-of-the-art diffusion-based point cloud generative models [21, 37, 40] have achieved impressive performance.
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Given the input ht, the data flow in the down-sampling path is as follows:
+- **p. 5 / 3.2. Model Architecture of SeaLion - extractive body cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
+- **p. 3 / 3. Methodology - extractive body cue:** Finally, we discuss the limitation of current metrics for evaluating generated labeled point clouds and propose novel metrics based on part-aware Chamfer distance (p-CD).
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -86,8 +86,8 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 
 ## Training vs Inference
 
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
-- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive PDF cue:** As illustrated in Figure 2 (b), the inference process consists of three steps.
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
+- **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** As illustrated in Figure 2 (b), the inference process consists of three steps.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -107,13 +107,13 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.3. Experimental Analysis - extractive PDF cue:** Additional ablation studies are provided in the supplementary materials.
-- **p. 8 / 4.3. Experimental Analysis - extractive PDF cue:** L refers to the use of 10% data with segmentation labels, while U refers to the remaining data without segmentation labels.
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. (a) Training: The generative model develops semantic part awareness by being trained to reconstruct input point clouds x guided by segmentation encodings y, ...
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** DiffFacto [23] provides pretrained weights for four categories in ShapeNet: airplane, car, chair, and lamp.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** Additionally, we use a pretrained PointNet++ [26] and SPoTr [25], an open-source and state-of-the-art model on ShapeNet part segmentation benchmark [24], to assign pseudo segmentation ...
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Note that certain data is missing because DiffFacto [23] only provides pretrained models for airplane, car, chair, and lamp categories, while Lion [37] only releases ...
-- **p. 5 / 3.4. Evaluation Metrics - extractive PDF cue:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.
+- **p. 8 / 4.3. Experimental Analysis - extractive body cue:** Additional ablation studies are provided in the supplementary materials.
+- **p. 8 / 4.3. Experimental Analysis - extractive body cue:** L refers to the use of 10% data with segmentation labels, while U refers to the remaining data without segmentation labels.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. (a) Training: The generative model develops semantic part awareness by being trained to reconstruct input point clouds x guided by segmentation encodings y, ...
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** DiffFacto [23] provides pretrained weights for four categories in ShapeNet: airplane, car, chair, and lamp.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** Additionally, we use a pretrained PointNet++ [26] and SPoTr [25], an open-source and state-of-the-art model on ShapeNet part segmentation benchmark [24], to assign pseudo segmentation ...
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Note that certain data is missing because DiffFacto [23] only provides pretrained models for airplane, car, chair, and lamp categories, while Lion [37] only releases ...
+- **p. 5 / 3.4. Evaluation Metrics - extractive body cue:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -127,7 +127,7 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion), p. 5 (3.2. Model Architecture of SeaLion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3. Methodology), p. 5 (3.3. Part-aware 3D Shape Edition Tool), objective p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), temporal p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.3. Part-aware 3D Shape Edition Tool), p. 6 (4.2. Experimental Results).
+- **Evidence anchors reviewed:** method p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion), p. 5 (3.2. Model Architecture of SeaLion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3. Methodology), p. 5 (3.3. Part-aware 3D Shape Edition Tool), objective p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), temporal p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.3. Part-aware 3D Shape Edition Tool), p. 6 (4.2. Experimental Results).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

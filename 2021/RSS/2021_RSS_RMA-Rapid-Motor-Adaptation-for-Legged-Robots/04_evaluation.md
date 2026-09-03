@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2107.04034; PDF retrieval source: https://arxiv.org/pdf/2107.04034. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2107.04034; PDF retrieval source: https://arxiv.org/pdf/2107.04034. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, ... | p. 1 (Figure/Table caption) |
 | IV. EXPERIMENTAL SETUP | EMPIRICAL / REAL-ROBOT OR HARDWARE | We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen deformable surfaces, such as a memory ... | p. 6 (IV. EXPERIMENTAL SETUP) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Environment Details Hardware Details: We use A1 robot from Unitree for all our real-world experiments. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP) |
 | Task/environment | Each RL episode lasts for a maximum of 1000 steps, with early termination if the height of the robots drops below 0.28m, magnitude of ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP) |
@@ -144,7 +144,7 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | Each RL episode lasts for a maximum of 1000 steps, with early termination if the height of the robots drops below 0.28m, magnitude of ... | p. 5 (IV. EXPERIMENTAL SETUP) |
 | Note that if a method drastically failed at a task, we only run two trials and then report a failure. | p. 8 (6) Advantage Weighted Regression for Domain Adaptation) |
 | We run 5 trials for each method and report the success rate, time to fall (TTF), and distance covered. | p. 8 (6) Advantage Weighted Regression for Domain Adaptation) |
-| The policy π and the environmental factor encoder µ are jointly trained via RL in simulation. | p. 2 (10 Hz) |
+| The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without a single failure in all our ... | p. 1 (Body text (section boundary not confidently recovered)) |
 
 | Audit field | Current status |
 |---|---|
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 - **p. 7 / IV. EXPERIMENTAL SETUP - extractive body cue:** When the robot enters the slippery patch we see a change in the two components of the extrinsics vector ˆz, indicating that the slip event ...
 - **p. 7 / IV. EXPERIMENTAL SETUP - extractive body cue:** Note that post adaptation, the recovered gait time period is similar to the original, the torque magnitudes have increased and ˆz continues to capture the ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (IV. EXPERIMENTAL SETUP), p. 7 (IV. EXPERIMENTAL SETUP), metrics p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 7 (IV. EXPERIMENTAL SETUP), baselines p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 1 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 7 (IV. EXPERIMENTAL SETUP).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (IV. EXPERIMENTAL SETUP), p. 7 (IV. EXPERIMENTAL SETUP), metrics p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 7 (IV. EXPERIMENTAL SETUP), baselines p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 1 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 7 (IV. EXPERIMENTAL SETUP).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without ... (p. 1, Figure/Table caption).
+- **Metric evidence:** We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen deformable surfaces, such as a memory foam mattress and a slightly uneven ... (p. 6, IV. EXPERIMENTAL SETUP).
+- **Baseline/ablation evidence:** We compare RMA to A1's controller and RMA without the adaptation module. (p. 6, IV. EXPERIMENTAL SETUP).
+- **Failure/negative evidence:** RMA w/o adaptation fails to move for payloads more than 8Kg, but rarely falls. (p. 6, IV. EXPERIMENTAL SETUP).

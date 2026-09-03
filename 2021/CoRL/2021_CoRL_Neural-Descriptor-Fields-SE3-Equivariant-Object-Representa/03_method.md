@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.05124; PDF retrieval source: https://arxiv.org/pdf/2112.05124. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.05124; PDF retrieval source: https://arxiv.org/pdf/2112.05124. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (II. METHOD), p. 3 (II. METHOD), p. 7 (II. METHO
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | We then discuss how to apply this novel representation for transferring grasp and place poses from a set of pick-andplace demonstrations: We ... | p. 3 (II. METHOD), p. 3 (II. METHOD) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | These latent codes are obtained as the output of a PointNet [32]- based point cloud encoder E that takes as input a ... | p. 3 (II. METHOD), p. 7 (II. METHOD) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 3 (II. METHOD), p. 3 (II. METHOD), p. 7 (II. METHO
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames. | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | In Section II-B, we leverage these point descriptors to establish correspondence for a rigid set of points, whose configuration is used to ... | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
-| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -135,8 +135,17 @@ PDF body method statement (p. 3 (II. METHOD), p. 3 (II. METHOD), p. 7 (II. METHO
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (II. METHOD), p. 3 (II. METHOD), p. 7 (II. METHOD), p. 2 (II. METHOD), p. 2 (II. METHOD), p. 7 (II. METHOD), objective p. 5 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), temporal p. 2 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), p. 5 (II. METHOD).
+- **Evidence anchors reviewed:** method p. 3 (II. METHOD), p. 3 (II. METHOD), p. 7 (II. METHOD), p. 2 (II. METHOD), p. 2 (II. METHOD), p. 7 (II. METHOD), objective p. 5 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), temporal p. 2 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD), p. 4 (II. METHOD), p. 4 (II. METHOD), p. 5 (II. METHOD).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** These latent codes are obtained as the output of a PointNet [32]- based point cloud encoder E that takes as input a point cloud P, leading to a conditional occupancy ... (p. 3, II. METHOD).
+- **Objective/update evidence:** We demonstrate that we can represent this function using a neural network trained in a task-agnostic manner via 3D reconstruction, and that this training objective learns descriptors that encode point-wise ... (p. 2, II. METHOD).
+- **Temporal/runtime evidence:** We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames. (p. 2, II. METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

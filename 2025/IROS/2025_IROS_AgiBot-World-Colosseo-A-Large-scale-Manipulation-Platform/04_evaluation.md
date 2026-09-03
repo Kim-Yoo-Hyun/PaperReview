@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://opendrivelab.com/AgiBot-World/; PDF retrieval source: https://arxiv.org/pdf/2503.06669. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://opendrivelab.com/AgiBot-World/; PDF retrieval source: https://arxiv.org/pdf/2503.06669. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 7: Further analysis on: a) how model performance scales with data size, and b) the impact of filtering undesir- able data through manual ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 5: Is GO-1 a more powerful robot generalist policy? We evaluate GO-1 against previous generalist policy RDT-1B and our baseline without the latent ... | p. 7 (Figure/Table caption) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Based on the hardware platform developed by us, AgiBot G1, we construct AgiBot Worldan open-source robot manipulation dataset collected by more than 100 homogeneous ... | embodiment, simulator version and control stack | p. 3 (Dataset), p. 5 (Dataset) |
 | Task/environment | 3: Dataset Statistics. a) AgiBot World dataset covers the vast majority of robotic application scenarios, as well as a wide range of interactive objects. ... | reset, timeout, object/scene variation | p. 5 (Dataset), p. 3 (Dataset) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 8 / 2) Implementation Details - extractive body cue:** 7(b), being larger in quantity does not necessarily translate to improved performance, while a smaller set of human-verified data yields a 0.18 boost in the ...
 - **p. 5 / Dataset - extractive body cue:** This ensures that our dataset adequately represents a broad spectrum of skills, providing sufficient data for each to support robust policy learning.
 
-- **PDF anchors reviewed:** datasets p. 3 (Dataset), p. 5 (Dataset), p. 3 (Dataset), p. 4 (Dataset), p. 4 (Dataset), p. 5 (Dataset), metrics p. 7 (Figure/Table caption), p. 6 (1) Evaluation Tasks), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details), p. 6 (1) Evaluation Tasks), p. 4 (Dataset), baselines p. 7 (1) Evaluation Tasks), p. 7 (1) Evaluation Tasks), p. 1 (Figure/Table caption), p. 5 (Dataset), p. 3 (Dataset), p. 4 (Dataset), results p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (2) Implementation Details), p. 6 (1) Evaluation Tasks), p. 3 (Dataset), p. 4 (Dataset).
+- **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 5 (Dataset), p. 3 (Dataset), p. 4 (Dataset), p. 4 (Dataset), p. 5 (Dataset), metrics p. 7 (Figure/Table caption), p. 6 (1) Evaluation Tasks), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details), p. 6 (1) Evaluation Tasks), p. 4 (Dataset), baselines p. 7 (1) Evaluation Tasks), p. 7 (1) Evaluation Tasks), p. 1 (Figure/Table caption), p. 5 (Dataset), p. 3 (Dataset), p. 4 (Dataset), results p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (2) Implementation Details), p. 6 (1) Evaluation Tasks), p. 3 (Dataset), p. 4 (Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Fig. 1: Introducing AgiBot World Colosseo, an open-sourced large-scale manipulation platform comprising data, models, benchmarks and ecosystem. AgiBot World stands out for its unparalleled scale and diversity compared to prior ... (p. 1, Figure/Table caption).
+- **Metric evidence:** Each episode scores 1.0 for full success, with fractional scores for partial success, enabling a nuanced performance assessment. (p. 6, 1) Evaluation Tasks).
+- **Baseline/ablation evidence:** Across all tasks and comparisons, GO-1 outperforms baselines by a large margin. (p. 7, 1) Evaluation Tasks).
+- **Failure/negative evidence:** Teleoperator Training Data Collection Data Upload Data Processing Quality Check Failure Recovery Annotation Data Delivery Data Discard No: Discard Edge-side Cloud-side Task Succeed Failed No Yes Validity Varification Model Training ... (p. 4, Dataset).

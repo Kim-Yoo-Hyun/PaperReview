@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14896; PDF retrieval source: https://arxiv.org/pdf/2306.14896. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14896; PDF retrieval source: https://arxiv.org/pdf/2306.14896. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Overall, RVT outperforms all baselines with the best rank and success rate when averaged across all tasks. | p. 6 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our model overall achieves an 82.5% success rate on non-marker tasks. | p. 8 (4 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Just like the baselines, we use the RLBench training dataset with 100 expert demonstrations per task (1800 demonstrations over all tasks). | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | We also found that RVT can work on real-world manipulation tasks with only a few demonstrations. | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 8 (4 Experiments) |
@@ -169,7 +169,16 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 - **p. 6 / 4 Experiments - extractive body cue:** Hence, the reported performance does not reflect a single multi-task model.
 - **p. 5 / 4 Experiments - extractive body cue:** The visual observations are captured from four noiseless RGB-D cameras positioned at the front, left shoulder, right shoulder, and wrist with a resolution of 128×128.
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 6 (4 Experiments), p. 5 (Figure/Table caption), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 6 (4 Experiments), p. 5 (Figure/Table caption), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 2: Left: Ablations on RLBench. A larger res., adding view correspondence, adding depth channel, separating initial attention layers, orthographic projection, using rotation aug., and re- rendered views around cube ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Our model overall achieves an 82.5% success rate on non-marker tasks. (p. 8, 4 Experiments).
+- **Baseline/ablation evidence:** Overall, RVT outperforms all baselines with the best rank and success rate when averaged across all tasks. (p. 6, 4 Experiments).
+- **Failure/negative evidence:** 5 Conclusions and Limitations We proposed RVT, a multi-view transformer model for 3D object manipulation. (p. 8, 4 Experiments).

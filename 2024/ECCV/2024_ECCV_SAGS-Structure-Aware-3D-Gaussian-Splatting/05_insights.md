@@ -1,52 +1,74 @@
 # Insights — SAGS: Structure-Aware 3D Gaussian Splatting
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2887_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** In this work, we propose a structure-aware Gaussian Splatting method (SAGS) that implicitly encodes the geometry of the scene, which reflects to state-of-the-art rendering performance and reduced storage ...
-- **Problem cue:** Novel View Synthesis (NVS) is a long-studied problem that aims to generate images of a scene from a specific point of view, using only a sparse set of ...
+- **p. 3 / 1 Introduction - extractive body cue:** To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and ...
+- **p. 2 / 1 Introduction - extractive body cue:** In this study, we propose a structure-aware Gaussian splatting method that aims to implicitly encode the scene's geometry and learn inductive biases that
+- **p. 3 / 1 Introduction - extractive body cue:** Inspired by the success of Point Cloud analysis [28], we found our method on a graph constructed from the input scene and learn to model ...
+- **p. 5 / 3 Method - extractive body cue:** To tackle such cases, we introduce a densification step that aims to populate areas with zero or few points.
+- **p. 5 / 3 Method - extractive body cue:** 3.2 Structure-Aware 3D Gaussian Splatting In this work, we propose a structure-aware 3D Gaussian Splatting method, that takes as input a sparse point cloud P ...
+- **p. 7 / 3 Method - extractive body cue:** To enforce high rendering speed, we defined each decoder as a small MLP that takes as input the structure-aware encoding and the view-dependent point positions ...
+- **p. 6 / 3 Method - extractive body cue:** To enable point interactions within local regions and learn structural-aware features, we founded our method on a graph neural network encoder that aggregates local and ...
+- **Contribution anchor:** p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1 Introduction - extractive body cue:** [15] introduced 3D Gaussian Splatting (3D-GS) to tackle this limitation using a set of differentiable 3D Gaussians that can achieve state-of-the-art rendering quality and real-time ...
+- **p. 1 / 1 Introduction - extractive body cue:** Novel View Synthesis (NVS) is a long-studied problem that aims to generate images of a scene from a specific point of view, using only a ...
+- **p. 3 / 1 Introduction - extractive body cue:** Intuitively, points within the same local region often share common attributes and features, such as normals and color, that are neglected by current 3D-GS methods.
+- **p. 9 / 4 Experiments - extractive body cue:** Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their ...
+- **p. 11 / 4 Experiments - extractive body cue:** Furthermore, Scaffold-GS method falls short in accurately representing flat surfaces, as can be seen in the walls and the table,
+- **p. 11 / 4 Experiments - extractive body cue:** Both the 3D-GS and Scaffold-GS methodologies depend on a rudimentary point optimization approach, that neglects the local topology and fails to guide the Gaussians in ...
+- **Boundary to test:** Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their initial positions.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and global structure of the scene. - We ... | p. 3 (1 Introduction), p. 2 (1 Introduction) |
+| Reported outcome | Fig. 3: Overview of the densification. Given an initial SfM [31] point cloud (left) we estimate the curvature following [25]. Curvature values are presented color-coded on the input COLMAP point cloud (middle) ... | p. 6 (Figure/Table caption), p. 2 (Figure/Table caption) |
+| Failure/limitation | Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their initial positions. | p. 9 (4 Experiments), p. 11 (4 Experiments) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `Gaussian Splatting, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 To enforce high rendering speed, we defined each decoder as a small MLP that takes as input the structure-aware encoding and the view-dependent point positions pi and outputs the Gaussian attributes for ...를 3.2 Structure-Aware 3D Gaussian Splatting In this work, we propose a structure-aware 3D Gaussian Splatting method, that takes as input a sparse point cloud P ∈RM×3 from COLMAP [31] along with a ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their initial positions.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and global structure of the scene. - We ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Neural Scene Representations`; tags: `Gaussian Splatting, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: In this work, we propose a structure-aware Gaussian Splatting method (SAGS) that implicitly encodes the geometry of the scene, which reflects to state-of-the-art rendering performance and reduced storage ...
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their initial positions.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / AP, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: To evaluate the proposed method, on par with the 3D-GS [15], we utilized 13 scenes including nine scenes from Mip-NeRF360 [2], two scenes from Tanks&Temples [16] and two scenes from Deep Blending ....
+3. Compare against the body-reported baseline or a matched simpler baseline: We compared the proposed method with NeRF- and 3D-GS-based state-of-the-art works in novel-view synthesis, including the Mip-NeRF360 [2], Plenoxels [10], iNGP [23], 3D-GS [15] along with the recent Scaffold-GS [20]..
+4. Report the body metric and its denominator/aggregation: We evaluate the proposed SAGS model in terms of rendering quality, structure preservation, and rendering performance..
+5. Re-run the body-reported ablation/failure condition: This is caused by the unstructured nature of the Gaussian optimization that attempts to minimize only the rendering constraints without any structural guidance..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (4 Experiments); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 contributions, summarized, follows mechanism이 We compared the proposed method with NeRF- and 3D-GS-based state-of-the-art works in novel-view synthesis, including the ... 대비 We evaluate the proposed SAGS model in terms of rendering quality, structure preservation, and rendering performance.을 개선하고, Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

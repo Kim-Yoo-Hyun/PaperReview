@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Real-World - extractive PDF cue:** We collect real-world robotic demonstrations for household-related tasks, including Clean Up, Trash Collection, Open Drawer, and Sorting Pills, as shown in Figure 4.
-- **p. 6 / 4.1. Simulation - extractive PDF cue:** We utilize the MuJoCo engine [21] to simulate tasks from the Meta-World robot manipulation benchmark [30].
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** These findings strongly support that IOSP helps decompose complex visual scenes into task-relevant object representations, DGMoE module routes the adaptive knowledge, EDA ensures the integrity ...
-- **p. 7 / 4.2. Real-World - extractive PDF cue:** Real-world evaluation across four tasks.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Validation loss comparison in ablation study across four tasks.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Visualization of expert activation distribution per task for different object types.
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** We compare the task success rate and record the validation loss during the training process.
-- **p. 7 / 4.2. Real-World - extractive PDF cue:** In contrast, FedAvg exhibits a significant performance drop across all tasks, with an average success rate of 53.3%, which is 10.0% lower than our method.
+- **p. 6 / 4.2. Real-World - extractive body cue:** We collect real-world robotic demonstrations for household-related tasks, including Clean Up, Trash Collection, Open Drawer, and Sorting Pills, as shown in Figure 4.
+- **p. 6 / 4.1. Simulation - extractive body cue:** We utilize the MuJoCo engine [21] to simulate tasks from the Meta-World robot manipulation benchmark [30].
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** These findings strongly support that IOSP helps decompose complex visual scenes into task-relevant object representations, DGMoE module routes the adaptive knowledge, EDA ensures the integrity ...
+- **p. 7 / 4.2. Real-World - extractive body cue:** Real-world evaluation across four tasks.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Validation loss comparison in ablation study across four tasks.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Visualization of expert activation distribution per task for different object types.
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** We compare the task success rate and record the validation loss during the training process.
+- **p. 7 / 4.2. Real-World - extractive body cue:** In contrast, FedAvg exhibits a significant performance drop across all tasks, with an average success rate of 53.3%, which is 10.0% lower than our method.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Simulation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Furthermore, FedVLA consistently outperforms FedAvg, which only achieves an average success rate of 51.7%. | p. 6 (4.1. Simulation) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Simulation evaluation across four tasks. Performance Comparison. The evaluation results in the simulation environment are presented in Table 1. Fed- VLA achieves ... | p. 6 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Real-World - extractive PDF cue:** We collect real-world robotic demonstrations for household-related tasks, including Clean Up, Trash Collection, Open Drawer, and Sorting Pills, as shown in Figure 4.
-- **p. 6 / 4.1. Simulation - extractive PDF cue:** We utilize the MuJoCo engine [21] to simulate tasks from the Meta-World robot manipulation benchmark [30].
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** These findings strongly support that IOSP helps decompose complex visual scenes into task-relevant object representations, DGMoE module routes the adaptive knowledge, EDA ensures the integrity ...
-- **p. 7 / 4.2. Real-World - extractive PDF cue:** Real-world evaluation across four tasks.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Validation loss comparison in ablation study across four tasks.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Visualization of expert activation distribution per task for different object types.
+- **p. 6 / 4.2. Real-World - extractive body cue:** We collect real-world robotic demonstrations for household-related tasks, including Clean Up, Trash Collection, Open Drawer, and Sorting Pills, as shown in Figure 4.
+- **p. 6 / 4.1. Simulation - extractive body cue:** We utilize the MuJoCo engine [21] to simulate tasks from the Meta-World robot manipulation benchmark [30].
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** These findings strongly support that IOSP helps decompose complex visual scenes into task-relevant object representations, DGMoE module routes the adaptive knowledge, EDA ensures the integrity ...
+- **p. 7 / 4.2. Real-World - extractive body cue:** Real-world evaluation across four tasks.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Validation loss comparison in ablation study across four tasks.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Visualization of expert activation distribution per task for different object types.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison between centralized and federated VLA training. Centralized training collects all user data on the cloud, raising privacy concerns due to potential exposure ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Illustration of the proposed FedVLA framework and its key component. (a) An overview of the FedVLA, which consists of multiple clients and a ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Instruction-Oriented Scene-Parsing module, which de- composes observations into object-level representations guided by task instructions, enhancing task-aware feature extraction through vision-language alignment. The overview ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The clients train their models locally and commu- nicate with the server per round until the model converges. The following sections introduce our ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Simulation evaluation across four tasks. Performance Comparison. The evaluation results in the simulation environment are presented in Table 1. Fed- VLA achieves an ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Real-World Tasks. Each column represents a different task, while each row demonstrates keyframes of task execution. From left to right, the tasks are: ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Real-world evaluation across four tasks.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation studies of proposed FedVLA without IOSP, DG- MoE, and EDA. From Table 3, we can see that each module contributes significantly to ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between centralized and federated VLA training. Centralized training collects all user data on the cloud, raising privacy concerns due to potential exposure ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Illustration of the proposed FedVLA framework and its key component. (a) An overview of the FedVLA, which consists of multiple clients and a ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Instruction-Oriented Scene-Parsing module, which de- composes observations into object-level representations guided by task instructions, enhancing task-aware feature extraction through vision-language alignment. The overview ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The clients train their models locally and commu- nicate with the server per round until the model converges. The following sections introduce our ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Simulation evaluation across four tasks. Performance Comparison. The evaluation results in the simulation environment are presented in Table 1. Fed- VLA achieves an ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Real-World Tasks. Each column represents a different task, while each row demonstrates keyframes of task execution. From left to right, the tasks are: ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Real-world evaluation across four tasks.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation studies of proposed FedVLA without IOSP, DG- MoE, and EDA. From Table 3, we can see that each module contributes significantly to ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We collect real-world robotic demonstrations for household-related tasks, including Clean Up, Trash Collection, Open Drawer, and Sorting Pills, as shown in Figure 4. | embodiment, simulator version and control stack | p. 6 (4.2. Real-World), p. 6 (4.1. Simulation) |
 | Task/environment | We utilize the MuJoCo engine [21] to simulate tasks from the Meta-World robot manipulation benchmark [30]. | reset, timeout, object/scene variation | p. 6 (4.1. Simulation), p. 7 (4.3. Ablation Studies) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 | Primary metric/result | Table 1. Simulation evaluation across four tasks. Performance Comparison. The evaluation results in the simulation environment are presented in Table 1. Fed- VLA achieves ... | numeric claim only at cited anchor | p. 6 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4. Experiments - extractive PDF cue:** We employ the pretrained HPT [28] as the backbone of our VLA model and train it for 1,000 communication rounds between clients and the server, ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** In simulation, the model is trained with a learning rate of 5 × 10-6, while in real-world settings, the learning rate is set to 2×10-5.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Each task takes for 15 trials and repeats for 5 times.
-- **p. 6 / 4.1. Simulation - extractive PDF cue:** For each task, we collect approximately 30-80 episodes, each consisting of 40-100 steps.
-- **p. 6 / 4.2. Real-World - extractive PDF cue:** A RealSense D435i RGB-D camera is mounted above the robot, capturing RGB images in real time at a resolution of 1280 × 720 with a ...
-- **p. 6 / 4.2. Real-World - extractive PDF cue:** Each task includes approximately 50 demonstrations, with each trajectory consisting of 20 to 80 steps.
+- **p. 6 / 4. Experiments - extractive body cue:** We employ the pretrained HPT [28] as the backbone of our VLA model and train it for 1,000 communication rounds between clients and the server, ...
+- **p. 6 / 4. Experiments - extractive body cue:** In simulation, the model is trained with a learning rate of 5 × 10-6, while in real-world settings, the learning rate is set to 2×10-5.
+- **p. 6 / 4. Experiments - extractive body cue:** Each task takes for 15 trials and repeats for 5 times.
+- **p. 6 / 4.1. Simulation - extractive body cue:** For each task, we collect approximately 30-80 episodes, each consisting of 40-100 steps.
+- **p. 6 / 4.2. Real-World - extractive body cue:** A RealSense D435i RGB-D camera is mounted above the robot, capturing RGB images in real time at a resolution of 1280 × 720 with a ...
+- **p. 6 / 4.2. Real-World - extractive body cue:** Each task includes approximately 50 demonstrations, with each trajectory consisting of 20 to 80 steps.
 
 ## Generalization and Failure Cases
 
@@ -156,11 +156,11 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** For evaluation, the success and failure of a trial are recoreded as 1 and 0.
-- **p. 6 / 4.1. Simulation - extractive PDF cue:** For collision detection and dynamics simulation, we employ official physics engines to ensure accurate robotic interactions within the simulation environment.
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** The integration of these modules together results in a architecture that supports FedVLA's robustness and adaptability across diverse tasks.
+- **p. 6 / 4. Experiments - extractive body cue:** For evaluation, the success and failure of a trial are recoreded as 1 and 0.
+- **p. 6 / 4.1. Simulation - extractive body cue:** For collision detection and dynamics simulation, we employ official physics engines to ensure accurate robotic interactions within the simulation environment.
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** The integration of these modules together results in a architecture that supports FedVLA's robustness and adaptability across diverse tasks.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Real-World), p. 6 (4.1. Simulation), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Real-World), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 7 (4.3. Ablation Studies), p. 7 (4.2. Real-World), p. 6 (4.1. Simulation), p. 6 (4.1. Simulation), p. 3 (Figure/Table caption), p. 8 (4.3. Ablation Studies), baselines p. 6 (4.1. Simulation), p. 6 (4. Experiments), p. 8 (4.4. Analysis on DGMoE), p. 8 (4.4. Analysis on DGMoE), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), results p. 6 (4.1. Simulation), p. 6 (Figure/Table caption), p. 7 (4.2. Real-World), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Analysis on DGMoE), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Real-World), p. 6 (4.1. Simulation), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Real-World), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 7 (4.3. Ablation Studies), p. 7 (4.2. Real-World), p. 6 (4.1. Simulation), p. 6 (4.1. Simulation), p. 3 (Figure/Table caption), p. 8 (4.3. Ablation Studies), baselines p. 6 (4.1. Simulation), p. 6 (4. Experiments), p. 8 (4.4. Analysis on DGMoE), p. 8 (4.4. Analysis on DGMoE), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), results p. 6 (4.1. Simulation), p. 6 (Figure/Table caption), p. 7 (4.2. Real-World), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Analysis on DGMoE), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

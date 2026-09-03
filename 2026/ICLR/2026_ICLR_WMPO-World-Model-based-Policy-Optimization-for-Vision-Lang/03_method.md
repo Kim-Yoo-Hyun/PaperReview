@@ -2,11 +2,11 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10007263; PDF retrieval source: https://arxiv.org/pdf/2511.09515. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10007263; PDF retrieval source: https://arxiv.org/pdf/2511.09515. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (1. Imagined Trajectory Generation)): First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with behavioral data collected by the policy itself.
+PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered))): First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with behavioral data collected by the policy itself.
 
 ## Method Body Digest
 
@@ -15,8 +15,8 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** Thus, each imagined trajectory in the world model is represented as a labeled pair (τ, y), which is then used for policy optimization.
 - **p. 1 / Abstract - extractive body cue:** We introduce World-Model-based Policy Optimization (WMPO), a principled framework for onpolicy VLA RL without interacting with the real environment.
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** WMPO: World Model-based Policy Optimization for Vision-Language-Action Models Fangqi Zhu1,2, Zhengyang Yan1, Zicong Hong1, Quanxin Shou1, Xiao Ma2,∗, Song Guo1,∗ 1Hong Kong University of Science ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** 3.3 Reward Model A key requirement for scalable policy optimization in the world model is automatically judging whether an imagined trajectory indicates task success.
-- **p. 6 / 1. Imagined Trajectory Generation - extractive body cue:** We adopt Group Relative Policy Optimization (GRPO) as the policy optimization algorithm, since it provides stable and scalable training in settings with sparse rewards.
 - **p. 4 / 1. Imagined Trajectory Generation - extractive body cue:** Our objective is to train a policy πθ(a / s) such that the predicted cumulative return of the imagined trajectories will be maximized max θ ...
 
 ## Design Rationale
@@ -32,13 +32,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** Thus, each imagined trajectory in the world model is represented as a labeled pair (τ, y), which is then used for policy optimization.
 - **p. 1 / Abstract - extractive body cue:** We introduce World-Model-based Policy Optimization (WMPO), a principled framework for onpolicy VLA RL without interacting with the real environment.
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** WMPO: World Model-based Policy Optimization for Vision-Language-Action Models Fangqi Zhu1,2, Zhengyang Yan1, Zicong Hong1, Quanxin Shou1, Xiao Ma2,∗, Song Guo1,∗ 1Hong Kong University of Science ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** 3.3 Reward Model A key requirement for scalable policy optimization in the world model is automatically judging whether an imagined trajectory indicates task success.
-- **p. 6 / 1. Imagined Trajectory Generation - extractive body cue:** We adopt Group Relative Policy Optimization (GRPO) as the policy optimization algorithm, since it provides stable and scalable training in settings with sparse rewards.
 - **Detected method headings:** 3. Policy Update (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with ... | p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | The overall training procedure consists of three components: (1) Imagined Trajectory Generation, where policy model πθold and world model pϕ interact alternately ... | p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation) |
@@ -74,7 +74,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** To address this mismatch, we fine-tune the world model on real rollout trajectories collected from the policy itself, thereby adapting it to the downstream (state, ...
 - **p. 1 / 1 Introduction - extractive body cue:** Vision-Language-Action (VLA) models [1-3] have emerged as a promising paradigm for general-purpose robotic manipulation, enabling robots to follow natural language instructions in complex, unstructured environments.
 - **p. 4 / 1. Imagined Trajectory Generation - extractive body cue:** S = I × G, where I denotes the image observation space, i.e., image sequences I0:K, and G denotes the language instruction space.
-- **p. 1 / 1 Introduction - extractive body cue:** When encountering out-of-distribution states not seen during training, they can take suboptimal actions that lead to compounding errors [5], making task completion or recovery nearly ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** WMPO: World Model-based Policy Optimization for Vision-Language-Action Models Fangqi Zhu1,2, Zhengyang Yan1, Zicong Hong1, Quanxin Shou1, Xiao Ma2,∗, Song Guo1,∗ 1Hong Kong University of Science ...
 - **p. 2 / 1 Introduction - extractive body cue:** First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with behavioral data collected ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
@@ -85,14 +85,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | While this design supports long-horizon rollouts, it also introduces challenges such as visual distortion and action-frame misalignment. | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | These trajectories are further used to fine-tune a world model, which predicts the next K = 8 frames given c = 4 ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | These trajectories are further used to fine-tune a world model, which predicts the next K = 8 frames given c = 4 ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
 - **p. 2 / 1 Introduction - extractive body cue:** First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with behavioral data collected ...
 - **p. 4 / 1. Imagined Trajectory Generation - extractive body cue:** The overall training procedure consists of three components: (1) Imagined Trajectory Generation, where policy model πθold and world model pϕ interact alternately to generate a ...
-- **p. 6 / 1. Imagined Trajectory Generation - extractive body cue:** We adopt Group Relative Policy Optimization (GRPO) as the policy optimization algorithm, since it provides stable and scalable training in settings with sparse rewards.
 - **p. 7 / 4 Experiments - extractive body cue:** 4.1 Experiment Settings Implementation Details In this work, we fine-tune OpenVLA-OFT [24] via imitation learning on target manipulation tasks as our base policy.
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** When applying the imagined trajectory to VLA optimization, we decode the images back into pixel space to better leverage the pretrained knowledge, rather than retraining ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** To mitigate this issue, we introduce a noisy-frame conditioning technique: during training, conditional frames Ii-m:i are perturbed with diffusion noise at 50/1000 steps rather than ...
@@ -135,8 +134,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (1. Imagined Trajectory Generation), objective p. 4 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), temporal p. 2 (1 Introduction), p. 7 (4 Experiments), p. 5 (1. Imagined Trajectory Generation), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), objective p. 4 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), temporal p. 2 (1 Introduction), p. 7 (4 Experiments), p. 5 (1. Imagined Trajectory Generation), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (16 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We adopt Group Relative Policy Optimization (GRPO) as the policy optimization algorithm, since it provides stable and scalable training in settings with sparse rewards. (p. 6, 1. Imagined Trajectory Generation).
+- **Objective/update evidence:** The overall training procedure consists of three components: (1) Imagined Trajectory Generation, where policy model πθold and world model pϕ interact alternately to generate a full imagined trajectory; (2) Trajectory ... (p. 4, 1. Imagined Trajectory Generation).
+- **Temporal/runtime evidence:** These trajectories are further used to fine-tune a world model, which predicts the next K = 8 frames given c = 4 conditioning frames and one action chunk. (p. 7, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

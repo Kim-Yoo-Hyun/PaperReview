@@ -1,35 +1,87 @@
 # MVIP-NeRF: Multi-view 3D Inpainting on NeRF Scenes via Diffusion Prior
 
-- Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling
-- Tags: NeRF, Diffusion, Generation, 3D Vision
-- Paper link: ./2024/CVPR/2024_CVPR_MVIP-NeRF-Multi-view-3D-Inpainting-on-NeRF-Scenes-via-Diff/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.html.
+> PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
-## Problem
-- To overcome these limitations, we propose a novel approach called MVIP-NeRF that harnesses the potential of diffusion priors for NeRF inpainting, addressing both appearance and geometry aspects.
-- Inpainting on NeRF scenes presents two intricate challenges: (i) how to ensure that the same region observed in multiple views is completed in a consistent way, espe- cially ...
-- Several NeRF inpainting techniques have been developed to address speciﬁc aspects of these challenges .
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2024 / CVPR
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: Robotics-enabling 3D perception
+- Tier: ARCHIVE
+- Tags: NeRF, Diffusion, Generation, 3D Vision
+- Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.html
+- Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.pdf
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Why This Paper Is Here
+
+Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, this method is difficult to adapt to scenes with large view variations and requires non-trivial depth alignment.를 문제로 두고, To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / Abstract - extractive body cue:** Despite the emergence of successful NeRF inpainting methods built upon explicit RGB and depth 2D inpainting supervisions, these methods are inherently constrained by the capabilities ...
+- **p. 1 / Abstract - extractive body cue:** This is due to two key reasons: (i) independently inpainting constituent images results in view-inconsistent imagery, and (ii) 2D inpainters struggle to ensure high-quality geometry ...
+- **p. 1 / Abstract - extractive body cue:** To overcome these limitations, we propose a novel approach called MVIP-NeRF that harnesses the potential of diffusion priors for NeRF inpainting, addressing both appearance and ...
+- **p. 1 / Abstract - extractive body cue:** MVIP-NeRF performs joint inpainting across multiple views to reach a consistent solution, which is achieved via an iterative optimization process based on Score Distillation Sampling ...
+- **p. 1 / Abstract - extractive body cue:** Apart from recovering the rendered RGB images, we also extract normal maps as a geometric representation and define a normal SDS loss that motivates accurate ...
+- **p. 2 / 1. Introduction - extractive body cue:** However, this method is difficult to adapt to scenes with large view variations and requires non-trivial depth alignment.
+- **p. 1 / 1. Introduction - extractive body cue:** Inpainting on NeRF scenes presents two intricate challenges: (i) how to ensure that the same region observed in multiple views is completed in a consistent ...
 
 ## Core Idea
-- To overcome these limitations, we propose a novel approach called MVIP-NeRF that harnesses the potential of diffusion priors for NeRF inpainting, addressing both appearance and geometry aspects.
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / 1. Introduction - extractive body cue:** To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.
+- **p. 2 / 1. Introduction - extractive body cue:** (iv) Extensive experiments to show the effectiveness of our method over existing NeRF inpainting techniques.
+- **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** To further enhance consistency for large-view motion, we introduce a multi-view score function.
+- **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** For masked regions, we introduce an RGB and normal map co-filling approach, utilizing SDS losses.
+- **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** In the first column, we present the input image with a mask (black region) and the depth map generated by NeRF, optimized with unmasked pixels.
+- **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** Then, a latent diffusion model is employed as the appearance and geometry prior.
+- **p. 4 / 3.3. Appearance Diffusion Prior - extractive body cue:** In this work, we use the stablediffusion-inpainting model [21] as our guidance model.
+- **p. 3 / 3.1. Preliminary - extractive body cue:** Formally, let x = g(θ) represent an image rendered by a differentiable generator g with parameter θ, then SDS minimizes density distillation loss [18] which ...
 
-## Main Claims
-- Our experimental results show better appearance and geometry recovery than previous NeRF inpainting methods.
-- MVIP-NeRF performs joint inpainting across multiple views to reach a consistent solution, which is achieved via an iterative optimization process based on Score Distillation Sampling (SDS).
-- This is due to two key reasons: (i) independently inpainting constituent images results in view-inconsistent imagery, and (ii) 2D inpainters struggle to ensure high-quality geometry completion and alignment ...
+## Observation, State, and Output Interface
 
-## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | Input views, masks, and camera poses Shared diffusion priorࣦ ௨௡௠௔௦௞௘ௗ ௔ Multi-view appearance SDS ࣦ ௠௔௦௞௘ௗ ௔ Geometry SDS ࣦ ௠௔௦௞௘ௗ ௚ࣦ ௨௡௠௔௦௞௘ௗ ௚ ࠁ Text prompt:"stone bench" and the mask Color ... | conditioning observation와 noisy/intermediate sample | p. 4 (3.2. Problem formulation and overview), p. 5 (3.4. Geometry Diffusion Prior) |
+| State/latent | Input, views, masks, camera, poses, Shared, diffusion, prior, Multi-view, appearance, SDS, Geometry | latent/noise variable와 conditional distribution | p. 4 (3.2. Problem formulation and overview), p. 5 (3.4. Geometry Diffusion Prior), p. 4 (3.4. Geometry Diffusion Prior) |
+| Output/action | In the first column, we present the input image with a mask (black region) and the depth map generated by NeRF, optimized with unmasked pixels. | generated sample, action chunk 또는 trajectory | p. 5 (3.4. Geometry Diffusion Prior), p. 4 (3.4. Geometry Diffusion Prior), p. 3 (3.2. Problem formulation and overview) |
+| Objective/outcome | To update θ, we again employ the SDS loss that computes the gradient w.r.t. θ as: ∇θLg masked = w(t)  ϵω φ(zt; m, y, t) -ϵ  ∂z ∂n ∂n ∂θ ... | distribution fit, multimodality, sample quality와 latency | p. 5 (3.4. Geometry Diffusion Prior), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview) |
 
-## Contribution
-- To overcome these limitations, we propose a novel approach called MVIP-NeRF that harnesses the potential of diffusion priors for NeRF inpainting, addressing both appearance and geometry aspects.
-- Our experimental results show better appearance and geometry recovery than previous NeRF inpainting methods.
-- MVIP-NeRF performs joint inpainting across multiple views to reach a consistent solution, which is achieved via an iterative optimization process based on Score Distillation Sampling (SDS).
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- Despite the emergence of successful NeRF inpainting methods built upon explicit RGB and depth 2D inpainting supervisions, these methods are inherently constrained by the capabilities of their underlying 2D inpainters.
+- **p. 2 / 1. Introduction - extractive body cue:** To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.
+- **p. 2 / 1. Introduction - extractive body cue:** (iv) Extensive experiments to show the effectiveness of our method over existing NeRF inpainting techniques.
+- **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** To further enhance consistency for large-view motion, we introduce a multi-view score function.
+- **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** For masked regions, we introduce an RGB and normal map co-filling approach, utilizing SDS losses.
+- **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** In the first column, we present the input image with a mask (black region) and the depth map generated by NeRF, optimized with unmasked pixels.
+- **p. 7 / 4.2. Results - extractive body cue:** Our MVIP-NeRF achieves superior performance compared to other methods for several reasons.
+- **p. 7 / 4.2. Results - extractive body cue:** Real-S Real-L PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ Remove-NeRF + LaMa [35] 17.556 0.665 254.345 8.748 25.176 0.187 88.245 ...
+- **p. 8 / 4.2. Results - extractive body cue:** Finally, by comparing (iv) and (v), the observed improvement further affirms the effectiveness of the multi-view score.
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 5 (Figure/Table caption), p. 7 (4.2. Results) |
+| Embodiment/environment | This dataset comprises all 10 real-world scenes with slight viewpoint variations from [17]. | hardware/simulator version and reset protocol | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
+| Dataset/benchmark | Comparison with state-of-the-art methods on two real-world datasets. | role, split, size and leakage | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results) |
+| Metric | Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio (PSNR), perceptual metric (LPIPS), featurebased statistical distance ... | definition, denominator, direction and uncertainty | p. 7 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.1. Experimental Setup) |
+| Baseline/ablation | Table 1. Comparison with state-of-the-art methods on two real-world datasets. Our method is best compared to other novel-view synthesis baselines in inpainting the missing regions of the scene. Columns show the deviation ... | fair input/data/compute/action matching | p. 7 (Figure/Table caption), p. 6 (4.2. Results), p. 6 (4.2. Results) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 8 / 5. Conclusion - extractive body cue:** However, our work has several limitations: (i) the use of diffusion priors for iterative detail recovery affects efficiency, (ii) our method requires effort to tune ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Technically, to ensure a valid and coherent recovery of both appearance and geometry, we employ diffusion priors to cooptimize the rendered RGB images and normal ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** One sequence includes the object, while the other does not, facilitating comprehensive evaluation and analysis.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To assess geometric recovery, we compute the L2 errors between the depth maps rendered by our system and the (pseudo) ground-truth depth maps.
+- **p. 7 / 4.2. Results - extractive body cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
+
+## Why Read It
+
+Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, this method is difficult to adapt to scenes with large view variations and requires non-trivial depth alignment.를 문제로 두고, To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Problem formulation and overview), p. 4 (3.2. Problem formulation and overview), p. 4 (3.3. Appearance Diffusion Prior) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

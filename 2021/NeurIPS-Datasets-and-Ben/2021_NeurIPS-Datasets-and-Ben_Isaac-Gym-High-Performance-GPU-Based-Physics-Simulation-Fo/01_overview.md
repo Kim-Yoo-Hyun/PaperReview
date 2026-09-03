@@ -1,8 +1,10 @@
 # Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/.
-> PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/.
+> PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS Datasets and Benchmarks
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, some bottlenecks were still not addressed in the work - simulation was on GPU but physics state was copied back to CPU.를 문제로 두고, To address these bottlenecks, we present Isaac Gym - an end-to-end high performance robotics simulation platform.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (1 Introduction), p. 7 (2 Background), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 30 (A.3 Hyperparameters for Training PPO) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (32 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, some bottlenecks were still not addressed in the work - simulation was on GPU but physics state was copied back to CPU. (p. 4, 1 Introduction).
+- **Actual contribution:** To address these bottlenecks, we present Isaac Gym - an end-to-end high performance robotics simulation platform. (p. 5, 1 Introduction).
+- **Evaluation boundary:** Figure 17: Trifinger learns a variety of dexterous manipulation behaviours in order to move the cube to the correct position and orientation. These results are obtained on the real TriFinger ... (p. 20, Figure/Table caption).
+- **Explicit failure boundary:** Running tens or hundreds of threads comes with other potential pitfalls including synchronization, context-switching overhead, and memory bandwidth limitations. (p. 6, 2 Background).

@@ -1,8 +1,10 @@
 # Denoising Diffusion Probabilistic Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2006.11239.
-> PDF retrieval source: https://arxiv.org/pdf/2006.11239. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2006.11239.
+> PDF retrieval source: https://arxiv.org/pdf/2006.11239. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2006.11239
 - Code/Project: https://github.com/hojonathanho/diffusion
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -85,3 +87,12 @@ RL, IL, offline learning, and robot data의 generative 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 generative 문제를 이해하기 위해 읽는다. 본문은 (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates.를 문제로 두고, We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive decoding that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction), p. 4 (2 Background), p. 1 (Abstract), p. 5 (2 Background) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates. (p. 3, 2 Background).
+- **Actual contribution:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. (p. 5, 4 Experiments).
+- **Explicit failure boundary:** We fixed the noise for different values of λ so xt and x′ t remain the same. (p. 8, 4 Experiments).

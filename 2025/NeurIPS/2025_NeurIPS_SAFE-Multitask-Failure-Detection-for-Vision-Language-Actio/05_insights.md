@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 𝒆𝑇 MLP ǁ𝑠𝑇 𝒆1 LSTM 𝑠1 𝒆2 LSTM 𝑠2 𝒆3 ...를 Recently, scaling up robot manipulation datasets has enabled the development of large visionlanguage-action (VLA) models, which are generalist manipulation policies that can follow language instructions and accomplish a wide range of ta ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 1: The internal features of a VLA capture high-level information about task success and failure. When the VLA is failing, the features, even those from different tasks, fall into the same ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The contributions of our paper can be summarized as follows: • We analyze the VLA feature space and show that, across different task instructions and environments, the internal features of the VLA ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 𝒆𝑇 MLP ǁ𝑠𝑇 𝒆1 LSTM 𝑠1 𝒆2 LSTM ... (p. 5, 4 Method).
+- **Paper-specific mechanism:** VLAs are designed to accomplish diverse tasks and may frequently encounter novel task instructions and unseen environments during deployment. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Figure 6: SAFE-MLP achieves the best failure detection performance in real-world experiments with both π0-FAST Franka and OpenVLA WidowX. Plot (a) presents quantitative results, while (b-e) show qualitative examples from ... (p. 10, Figure/Table caption); the relevant task/metric cue is We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%). (p. 6, 5 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This means that the human annotator does not think these rollouts are failures until the very last moment, where the VLA model is probably on the right track and fails ... (p. 28, C.3 Failure Detection Time).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Real-world WidowX Experiments: We also deploy the OpenVLA model pretrained on the "Open-X Magic Soup++" dataset [2] on a WidowX robot manipulator in our lab..
-3. Compare against the body-reported baseline or a matched simpler baseline: Averaged across simulation benchmarks, SAFE-MLP and SAFE-LSTM have similar performance, both outperforming the best baseline by 4-5% on unseen tasks, while still achieving the best performance on seen tasks..
-4. Report the body metric and its denominator/aggregation: We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%)..
-5. Re-run the body-reported ablation/failure condition: On SimplerEnv, we test pretrained π0 models from a reproduction [64], which we denote as π∗ 0 in this paper..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 𝒆𝑇 MLP ǁ𝑠𝑇 𝒆1 LSTM 𝑠1 𝒆2 LSTM ... (p. 5, 4 Method); preserve the objective/update rule: We study this hypothesis by visualizing the VLA features in Fig. (p. 4, 4 Method).
+2. Use the paper-reported task/data/environment cue: Real-world WidowX Experiments: We also deploy the OpenVLA model pretrained on the "Open-X Magic Soup++" dataset [2] on a WidowX robot manipulator in our lab. (p. 6, 5 Experiments).
+3. Compare against the reported or matched baseline: Averaged across simulation benchmarks, SAFE-MLP and SAFE-LSTM have similar performance, both outperforming the best baseline by 4-5% on unseen tasks, while still achieving the best performance on seen tasks. (p. 9, 6 Results).
+4. Report the body metric with its denominator and aggregation: We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%). (p. 6, 5 Experiments).
+5. Re-run the reported ablation or stress/failure condition: We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%). (p. 6, 5 Experiments); if none is reported, design one around: This means that the human annotator does not think these rollouts are failures until the very last moment, where the VLA model is probably on the right track and fails ... (p. 28, C.3 Failure Detection Time).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method); the primary result is directionally consistent at p. 10 (6 Results), p. 10 (Figure/Table caption), p. 9 (6 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 10 (Figure/Table caption), p. 27 (Figure/Table caption), p. 9 (6 Results), and measure the boundary at p. 28 (C.3 Failure Detection Time), p. 26 (C.1 Feature Visualization and Analysis).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, summarized, follows mechanism이 Averaged across simulation benchmarks, SAFE-MLP and SAFE-LSTM have similar performance, both outperforming the best baseline by ... 대비 We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%).을 개선하고, Figure 1: The internal features of a VLA capture high-level information about task success and failure. ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 ...), does the paper-specific mechanism (VLAs are designed to accomplish diverse tasks and may frequently encounter novel task instructions and unseen environments during deployment.) retain the reported evaluation outcome (We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%).) when tested against the paper's strongest explicit boundary (This means that the human annotator does not think these rollouts are failures until the very last moment, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** VLAs are designed to accomplish diverse tasks and may frequently encounter novel task instructions and unseen environments during deployment. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** Figure 6: SAFE-MLP achieves the best failure detection performance in real-world experiments with both π0-FAST Franka and OpenVLA WidowX. Plot (a) presents quantitative results, while (b-e) show qualitative examples from ... (p. 10, Figure/Table caption).
+- **Strongest explicit boundary:** This means that the human annotator does not think these rollouts are failures until the very last moment, where the VLA model is probably on the right track and fails ... (p. 28, C.3 Failure Detection Time).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.14127; PDF retrieval source: https://arxiv.org/pdf/2103.14127. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.14127; PDF retrieval source: https://arxiv.org/pdf/2103.14127. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTAL EVALUATION | EMPIRICAL / SIMULATION | We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic ... | p. 6 (IV. EXPERIMENTAL EVALUATION) |
 | IV. EXPERIMENTAL EVALUATION | EMPIRICAL / SIMULATION | The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most grasps that we execute lie in ... | p. 6 (IV. EXPERIMENTAL EVALUATION) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method in a grasping study with a Franka robot where we pick unknown objects in cluttered scenes. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION) |
 | Task/environment | We closely replicate the 9 cluttered scenes defined in [12] with a total of 51 unseen objects. | reset, timeout, object/scene variation | p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION) |
@@ -160,7 +160,16 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 - **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** However, grasping in only one or two trials is crucial in cluttered scenes (e.g. in households) with large, densely packed objects where collisions should be ...
 - **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** In the end we execute the most confident grasp that is kinematically reachable and where the robot does not collide with the scene [38].
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), metrics p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 3 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), results p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), metrics p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 3 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), results p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines. (p. 6, IV. EXPERIMENTAL EVALUATION).
+- **Metric evidence:** The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most grasps that we execute lie in the first decimal of coverage. (p. 6, IV. EXPERIMENTAL EVALUATION).
+- **Baseline/ablation evidence:** We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines. (p. 6, IV. EXPERIMENTAL EVALUATION).
+- **Failure/negative evidence:** Failure Cases: We observe some failure cases for thick objects that only allow grasps almost at maximum grasp width. (p. 6, IV. EXPERIMENTAL EVALUATION).

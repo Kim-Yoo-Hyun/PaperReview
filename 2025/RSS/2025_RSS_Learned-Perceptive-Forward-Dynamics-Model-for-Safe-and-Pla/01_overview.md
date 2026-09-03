@@ -1,8 +1,10 @@
 # Learned Perceptive Forward Dynamics Model for Safe and Platform-aware Robotic Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p001.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p001.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p001.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p001.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p001.pdf
 - Code/Project: https://github.com/leggedrobotics/fdm
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -21,17 +23,17 @@ World models, safety, uncertainty, and recovery의 locomotion 문제를 이해�
 
 ## Problem and Motivation
 
-- **p. 1 / Front matter - extractive body cue:** Robotics: Science and Systems 2025 Los Angeles, CA, USA, June 21-25, 2025
-- **p. 1 / Front matter - extractive body cue:** Learned Perceptive Forward Dynamics Model for Safe
-- **p. 1 / Front matter - extractive body cue:** 1: Demonstration of the proposed perceptive Forward Dynamics Model for robust navigation in complex environments.
-- **p. 1 / Front matter - extractive body cue:** The model, trained with real-world and simulation data, predicts the robots future states given a sequence of velocity actions.
-- **p. 1 / Front matter - extractive body cue:** It takes as input the surrounding geometry in the form of a height scan, along with past states and proprioceptive measurements.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Learned Perceptive Forward Dynamics Model for Safe
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: Demonstration of the proposed perceptive Forward Dynamics Model for robust navigation in complex environments.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The model, trained with real-world and simulation data, predicts the robots future states given a sequence of velocity actions.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** It takes as input the surrounding geometry in the form of a height scan, along with past states and proprioceptive measurements.
 - **p. 2 / 1. Inrropucrion - extractive body cue:** However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.
 - **p. 2 / 1. Inrropucrion - extractive body cue:** However, training neural networks to represent robot dynamics often requires substantial amounts of state-action trajectories, motivating the use of synthetic data to mitigate the challenges ...
 
 ## Core Idea
 
-- **p. 1 / Front matter - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
 - **p. 3 / B. Planning - extractive body cue:** Our method addresses domain discrepancies by incorporating real-world data into the ‘dynamics model while maintaining platform awareness through earning from past experiences.
 - **p. 5 / B. Model Architecture - extractive body cue:** The Forward Dynamics Model loss £ consists of supervised terms for network outputs.
 - **p. 2 / 1. Inrropucrion - extractive body cue:** The main contributions of this work are as follows:
@@ -51,7 +53,7 @@ World models, safety, uncertainty, and recovery의 locomotion 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Front matter - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
 - **p. 3 / B. Planning - extractive body cue:** Our method addresses domain discrepancies by incorporating real-world data into the ‘dynamics model while maintaining platform awareness through earning from past experiences.
 - **p. 5 / B. Model Architecture - extractive body cue:** The Forward Dynamics Model loss £ consists of supervised terms for network outputs.
 - **p. 2 / 1. Inrropucrion - extractive body cue:** The main contributions of this work are as follows:
@@ -84,4 +86,13 @@ World models, safety, uncertainty, and recovery의 locomotion 문제를 이해�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.를 문제로 두고, To overcome these issues, we propose a novel learned perceptive를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Inrropucrion), p. 2 (1. Inrropucrion), p. 1 (Front matter), p. 3 (B. Planning), p. 3 (A. Dynamics Modeling), p. 5 (B. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+World models, safety, uncertainty, and recovery의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.를 문제로 두고, To overcome these issues, we propose a novel learned perceptive를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Inrropucrion), p. 2 (1. Inrropucrion), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (B. Planning), p. 3 (A. Dynamics Modeling), p. 5 (B. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system. (p. 2, 1. Inrropucrion).
+- **Actual contribution:** To overcome these issues, we propose a novel learned perceptive (p. 1, Body text (section boundary not confidently recovered)).
+- **Evaluation boundary:** Trained with a mix of simulated and real-world data, the 'DM captures the complex dynamics of a quadrupedal robot and enables zero-shot adjustments of the planning objective. ‘The presented network ... (p. 10, C. Platform-aware Predictions).
+- **Explicit failure boundary:** Second, the failure states observed in simulation environments do not perfectly translate to real-world failures, and real-world data lacks demonstrations. of collisions due to the risk of hardware damage, leaving ... (p. 10, C. Platform-aware Predictions).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html; PDF retrieval source: https://arxiv.org/pdf/2404.12377. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v235/zhou24f.html; PDF retrieval source: https://arxiv.org/pdf/2404.12377. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 3 (2.1. Planning with Text-Conditioned Video Gener
 
 - **p. 2 / 1. Introduction - extractive body cue:** Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of ...
 - **p. 2 / 1. Introduction - extractive body cue:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language.
-- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1 arXiv:2404.12377v1 [cs.RO] 18 Apr 2024
+- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1.
 
 ## Source Evidence Cues
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 3 (2.1. Planning with Text-Conditioned Video Gener
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | Given a UPDP G, we then use a trajectory-task conditioned policy π(·/{xh}H h=0, c) : X H+1×C →∆(AH) to infer executable actions ... | p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 3 (2.1. Planning with Text-Conditioned Video Generation) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | To implement this generation problem, we use the video diffusion model and use the base source code from (Ko et al., 2023). | p. 3 (2.1. Planning with Text-Conditioned Video Generation) |
@@ -43,7 +43,7 @@ PDF body method statement (p. 3 (2.1. Planning with Text-Conditioned Video Gener
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -55,7 +55,7 @@ PDF body method statement (p. 3 (2.1. Planning with Text-Conditioned Video Gener
 | Input/observation | policy, takes, input, adjacent, image, observations, synthesized, video, outputs, action, execute, RoboDreamer, Learning, Compositional | observation, uncertainty/risk estimate와 task command | body cue; exact tensor/frame verify |
 | State/latent | policy, takes, input, adjacent, image, observations, synthesized, video, outputs, action | safe set, recovery state 또는 constraint margin | body cue; notation verify |
 | Action/output | contributions, three-fold, introduce, RoboDreamer, compositional, world, model, capable, factorizing, video | shielded, recovery 또는 safe action | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | task utility subject to safety constraint | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | task utility subject to safety constraint | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -74,7 +74,7 @@ PDF body method statement (p. 3 (2.1. Planning with Text-Conditioned Video Gener
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | We use a spatial-temporal convolution network in each ResNet block of U-Net for efficiency. | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | We use a similar tiling approach to enhance temporal consistency. | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | RoboDreamer: Learning Compositional World Models for Robot Imagination Algorithm 1 Training 1: Input: Diffusion Model ϵθ, Training Step N 2: for i ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -120,8 +120,17 @@ PDF body method statement (p. 3 (2.1. Planning with Text-Conditioned Video Gener
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 3 (2.1. Planning with Text-Conditioned Video Generation), objective 본문 anchor 없음, temporal p. 6 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 5 (3.2. Compositional Generation), p. 2 (2. Background), p. 3 (2.1. Planning with Text-Conditioned Video Generation).
+- **Evidence anchors reviewed:** method p. 3 (2.1. Planning with Text-Conditioned Video Generation), p. 3 (2.1. Planning with Text-Conditioned Video Generation), objective 본문 anchor 없음, temporal p. 6 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 7 (4.1. Evaluation on Video Generation), p. 5 (3.2. Compositional Generation), p. 2 (2. Background), p. 3 (2.1. Planning with Text-Conditioned Video Generation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The policy takes as input two adjacent image observations xt and xt+1 in the synthesized video τ and outputs an action a to execute. (p. 3, 2.2. Executing Videos Plans).
+- **Objective/update evidence:** To implement this generation problem, we use the video diffusion model and use the base source code from (Ko et al., 2023). (p. 3, 2.1. Planning with Text-Conditioned Video Generation).
+- **Temporal/runtime evidence:** For all methods, we use pertaining T5-XXL as text encoder. (p. 6, 4.1. Evaluation on Video Generation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

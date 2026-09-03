@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other.
-- **p. 7 / 4.3. Applications of OOR - extractive PDF cue:** We demonstrate the efficacy of our proposed scene arrangement methods using ParaHome DB [27], which provides 3D scenes with separate object meshes.
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive PDF cue:** We evaluate our method and the baselines on a total of 150 scenes derived from 30 category pairs with 5 scenes generated per prompt.
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive PDF cue:** Thus, we compare ours with LLM-based methods that pursue similar goals: SceneMotifCoder (SMC) [58], which focuses on 3D object alignments, and SceneTeller [39], which deals ...
-- **p. 8 / 4.3. Applications of OOR - extractive PDF cue:** First, we begin with the initial scene with two objects and the human interacting with them.
-- **p. 8 / 4.3. Applications of OOR - extractive PDF cue:** Human Motion Synthesis for Two-Object Interaction.
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** 2 further demonstrates the superiority of our method, especially in the case of VLM score and user study.
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** However, for per-image scores such as CLIP score and VQA score, we apply them only to the ControlNet-generated images.
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other.
+- **p. 7 / 4.3. Applications of OOR - extractive body cue:** We demonstrate the efficacy of our proposed scene arrangement methods using ParaHome DB [27], which provides 3D scenes with separate object meshes.
+- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** We evaluate our method and the baselines on a total of 150 scenes derived from 30 category pairs with 5 scenes generated per prompt.
+- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** Thus, we compare ours with LLM-based methods that pursue similar goals: SceneMotifCoder (SMC) [58], which focuses on 3D object alignments, and SceneTeller [39], which deals ...
+- **p. 8 / 4.3. Applications of OOR - extractive body cue:** First, we begin with the initial scene with two objects and the human interacting with them.
+- **p. 8 / 4.3. Applications of OOR - extractive body cue:** Human Motion Synthesis for Two-Object Interaction.
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** 2 further demonstrates the superiority of our method, especially in the case of VLM score and user study.
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** However, for per-image scores such as CLIP score and VQA score, we apply them only to the ControlNet-generated images.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4. Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 4.2 demonstrates our advanced sampling approach produces significantly better results compared to text-to-3D models. | p. 6 (4. Experiments) |
 | 4.1. Pairwise OOR Generation | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1 shows that our method outperforms baselines for all metrics. | p. 7 (4.1. Pairwise OOR Generation) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other.
-- **p. 7 / 4.3. Applications of OOR - extractive PDF cue:** We demonstrate the efficacy of our proposed scene arrangement methods using ParaHome DB [27], which provides 3D scenes with separate object meshes.
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive PDF cue:** We evaluate our method and the baselines on a total of 150 scenes derived from 30 category pairs with 5 scenes generated per prompt.
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive PDF cue:** Thus, we compare ours with LLM-based methods that pursue similar goals: SceneMotifCoder (SMC) [58], which focuses on 3D object alignments, and SceneTeller [39], which deals ...
-- **p. 8 / 4.3. Applications of OOR - extractive PDF cue:** First, we begin with the initial scene with two objects and the human interacting with them.
-- **p. 8 / 4.3. Applications of OOR - extractive PDF cue:** Human Motion Synthesis for Two-Object Interaction.
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other.
+- **p. 7 / 4.3. Applications of OOR - extractive body cue:** We demonstrate the efficacy of our proposed scene arrangement methods using ParaHome DB [27], which provides 3D scenes with separate object meshes.
+- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** We evaluate our method and the baselines on a total of 150 scenes derived from 30 category pairs with 5 scenes generated per prompt.
+- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** Thus, we compare ours with LLM-based methods that pursue similar goals: SceneMotifCoder (SMC) [58], which focuses on 3D object alignments, and SceneTeller [39], which deals ...
+- **p. 8 / 4.3. Applications of OOR - extractive body cue:** First, we begin with the initial scene with two objects and the human interacting with them.
+- **p. 8 / 4.3. Applications of OOR - extractive body cue:** Human Motion Synthesis for Two-Object Interaction.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Object-Object Spatial Relationships (OOR). Given a textual description of the spatial relationship between two objects, our method models OOR, representing their relative poses ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Our Coordinate Systems. We conceptually model the transformation from a scale-normalized space, where the tightest 3D bounding box of each object is normalized ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Dataset Generation Overview. For a given text prompt related to an object pair, we obtain multi-view images and point clouds using off-the-shelf models. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Training Process of OOR Diffusion. Our OOR diffu- sion generates OOR samples by taking the context c, base object category B, and target ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Scene Graph Example. The scene graph for multi-object OOR is represented as a connected DAG with one start node. starting node (global base), ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative Comparisons of Pairwise OOR Generation. Our method models object-object spatial relationships better than LLM-based baselines. Metrics SMC [58] SceneTeller [39] Ours CLIP ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative Comparisons of Pairwise OOR Gen- eration. For each method, we evaluate CLIP score [45], VQA score [33], our proposed VLM score [65], ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 7. Qualitative Comparisons of Multi-object OOR Gen- eration. We generate multi-object OOR by combining each sample from our pairwise OOR diffusion model. Our method ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Object-Object Spatial Relationships (OOR). Given a textual description of the spatial relationship between two objects, our method models OOR, representing their relative poses ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Our Coordinate Systems. We conceptually model the transformation from a scale-normalized space, where the tightest 3D bounding box of each object is normalized ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Dataset Generation Overview. For a given text prompt related to an object pair, we obtain multi-view images and point clouds using off-the-shelf models. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Training Process of OOR Diffusion. Our OOR diffu- sion generates OOR samples by taking the context c, base object category B, and target ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Scene Graph Example. The scene graph for multi-object OOR is represented as a connected DAG with one start node. starting node (global base), ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative Comparisons of Pairwise OOR Generation. Our method models object-object spatial relationships better than LLM-based baselines. Metrics SMC [58] SceneTeller [39] Ours CLIP ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Comparisons of Pairwise OOR Gen- eration. For each method, we evaluate CLIP score [45], VQA score [33], our proposed VLM score [65], ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Qualitative Comparisons of Multi-object OOR Gen- eration. We generate multi-object OOR by combining each sample from our pairwise OOR diffusion model. Our method ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other. | embodiment, simulator version and control stack | p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.3. Applications of OOR) |
 | Task/environment | We demonstrate the efficacy of our proposed scene arrangement methods using ParaHome DB [27], which provides 3D scenes with separate object meshes. | reset, timeout, object/scene variation | p. 7 (4.3. Applications of OOR), p. 6 (4.1. Pairwise OOR Generation) |
@@ -114,10 +114,10 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 | Primary metric/result | 1 shows that our method outperforms baselines for all metrics. | numeric claim only at cited anchor | p. 7 (4.1. Pairwise OOR Generation) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive PDF cue:** We evaluate our method and the baselines on a total of 150 scenes derived from 30 category pairs with 5 scenes generated per prompt.
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other.
-- **p. 7 / 4.3. Applications of OOR - extractive PDF cue:** In practice, optimization is completed within 50 steps.
-- **p. 5 / 3.3. OOR Diffusion - extractive PDF cue:** As a result, we train our model for 475 distinct contexts with 23750 text prompts, each capturing various spatial relationships between object pairs across 188 ...
+- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** We evaluate our method and the baselines on a total of 150 scenes derived from 30 category pairs with 5 scenes generated per prompt.
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** We evaluate 20 scenes where 3 to 5 objects have spatial relations with each other.
+- **p. 7 / 4.3. Applications of OOR - extractive body cue:** In practice, optimization is completed within 50 steps.
+- **p. 5 / 3.3. OOR Diffusion - extractive body cue:** As a result, we train our model for 475 distinct contexts with 23750 text prompts, each capturing various spatial relationships between object pairs across 188 ...
 
 ## Generalization and Failure Cases
 
@@ -151,12 +151,12 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive PDF cue:** However, due to the inherent limitation of estimating 3D information without direct 3D data, it lacks fine-grained control.
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** 7, GraphDreamer often fails to capture OOR (e.g., "A knife cuts an apple.").
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive PDF cue:** Since SMC and SceneTeller cannot be directly extended to multi-object OOR using only pairwise OOR data, we compare our model to another baseline GraphDreamer [13], ...
-- **p. 8 / 4.3. Applications of OOR - extractive PDF cue:** (a) adding random noise to the original scene and then rearranging it.
+- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** However, due to the inherent limitation of estimating 3D information without direct 3D data, it lacks fine-grained control.
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** 7, GraphDreamer often fails to capture OOR (e.g., "A knife cuts an apple.").
+- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** Since SMC and SceneTeller cannot be directly extended to multi-object OOR using only pairwise OOR data, we compare our model to another baseline GraphDreamer [13], ...
+- **p. 8 / 4.3. Applications of OOR - extractive body cue:** (a) adding random noise to the original scene and then rearranging it.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.3. Applications of OOR), p. 6 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 8 (4.3. Applications of OOR), p. 8 (4.3. Applications of OOR), metrics p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.2. Multi-object OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 5 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 6 (4.1. Pairwise OOR Generation), p. 7 (4.1. Pairwise OOR Generation), p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR Generation), results p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 7 (4.2. Multi-object OOR Generation), p. 8 (4.3. Applications of OOR), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.3. Applications of OOR), p. 6 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 8 (4.3. Applications of OOR), p. 8 (4.3. Applications of OOR), metrics p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.2. Multi-object OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 5 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 6 (4.1. Pairwise OOR Generation), p. 7 (4.1. Pairwise OOR Generation), p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR Generation), results p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 7 (4.2. Multi-object OOR Generation), p. 8 (4.3. Applications of OOR), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

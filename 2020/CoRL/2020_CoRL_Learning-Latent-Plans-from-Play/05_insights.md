@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Algorithm 2 Training Play-LMP 1: Input: Play data D : {(s1, a1), · · · , (sT , aT )} 2: Randomly initialize model parameters θ = {θV , θCG, θπLMP , ...를 (a) Training: 1) sample a random window of experience from a memory of play data; 2) train to recognize and organize a repertoire of behaviors executed during play in a latent plan ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping an object in upright position). The agent fails initially, missing the block at first then knocking ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human teleoperates the ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human ... (p. 2, 1 Introduction).
+- **Paper-specific mechanism:** In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human ... (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is 10 5 0 5 10 15 20 25 Improvement of Play-LMP over Play-GCBC (absolute accuracy % points) rotate left close sliding grasp upright sweep right grasp flat pull out shelf ... (p. 7, 4 Experiments); the relevant task/metric cue is 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 18 tasks average accuracy % Play-LMP (ours) Play-GCBC (ours) BC (b) Robustness ... (p. 7, 4 Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future work. (p. 17, A.5 Limitations).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To compare our play-supervised models to a conventional scenario, we collect a training set of 100 expert demonstrations per task in the environment, and train one behavioral cloning policy (BC, details in ....
-3. Compare against the body-reported baseline or a matched simpler baseline: (a) Play-LMP consistently outperforms the baselines, whether trained on groundtruth states or directly on pixels..
-4. Report the body metric and its denominator/aggregation: 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 18 tasks average accuracy % Play-LMP (ours) Play-GCBC (ours) BC (b) Robustness to variations..
-5. Re-run the body-reported ablation/failure condition: These data ablation numbers were obtained from models trained on ground truth state observations..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human ... (p. 2, 1 Introduction); preserve the objective/update rule: An updated version of the Mujoco HAPTIX system is used to collect teleoperation demonstration data [39]. (p. 15, A.3.4 Training Data).
+2. Use the paper-reported task/data/environment cue: To compare our play-supervised models to a conventional scenario, we collect a training set of 100 expert demonstrations per task in the environment, and train one behavioral cloning policy (BC, ... (p. 7, 4 Experiments).
+3. Compare against the reported or matched baseline: (a) Play-LMP consistently outperforms the baselines, whether trained on groundtruth states or directly on pixels. (p. 7, 4 Experiments).
+4. Report the body metric with its denominator and aggregation: 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 18 tasks average accuracy % Play-LMP (ours) Play-GCBC (ours) BC (b) Robustness ... (p. 7, 4 Experiments).
+5. Re-run the reported ablation or stress/failure condition: These data ablation numbers were obtained from models trained on ground truth state observations. (p. 8, 4 Experiments); if none is reported, design one around: The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future work. (p. 17, A.5 Limitations).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space); the primary result is directionally consistent at p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 3 (1 Introduction), match the reported outcome at p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (Figure/Table caption), and measure the boundary at p. 17 (A.5 Limitations), p. 8 (4 Experiments).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 alternative, means, obtaining mechanism이 (a) Play-LMP consistently outperforms the baselines, whether trained on groundtruth states or directly on pixels. 대비 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 ...을 개선하고, Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of ...), does the paper-specific mechanism (In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of ...) retain the reported evaluation outcome (0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 ...) when tested against the paper's strongest explicit boundary (The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human ... (p. 2, 1 Introduction).
+- **Paper-supported outcome:** 10 5 0 5 10 15 20 25 Improvement of Play-LMP over Play-GCBC (absolute accuracy % points) rotate left close sliding grasp upright sweep right grasp flat pull out shelf ... (p. 7, 4 Experiments).
+- **Strongest explicit boundary:** The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future work. (p. 17, A.5 Limitations).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

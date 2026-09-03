@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4252_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4252_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 
 ## Method Body Digest
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
-- **p. 4 / X. Zhu et al - extractive PDF cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
-- **p. 1 / 4 HKUST - extractive PDF cue:** We propose a novel method, namely Diff2Scene, which leverages frozen representations from text-image generative models, along with salient-aware and geometric-aware masks, for open-vocabulary 3D semantic ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
-- **p. 8 / X. Zhu et al - extractive PDF cue:** It serves as an implicit distillation objective to make the 3D model learn high-resolution, semantically-rich feature representations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** These lifted feature representations for 3D points can then be used to query with open-vocabulary descriptions, achieving semantic understanding in 3D.
-- **p. 7 / X. Zhu et al - extractive PDF cue:** First of all, our 2D semantic understanding model uses a mask-based segmentation head which does not provide semantically-rich features in the pixel level.
-- **p. 4 / X. Zhu et al - extractive PDF cue:** LP D and LMD denote point-based distillation loss and mask-based distillation loss.
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
+- **p. 4 / X. Zhu et al - extractive body cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
+- **p. 1 / 4 HKUST - extractive body cue:** We propose a novel method, namely Diff2Scene, which leverages frozen representations from text-image generative models, along with salient-aware and geometric-aware masks, for open-vocabulary 3D semantic ...
+- **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
+- **p. 8 / X. Zhu et al - extractive body cue:** It serves as an implicit distillation objective to make the 3D model learn high-resolution, semantically-rich feature representations.
+- **p. 2 / 1 Introduction - extractive body cue:** These lifted feature representations for 3D points can then be used to query with open-vocabulary descriptions, achieving semantic understanding in 3D.
+- **p. 7 / X. Zhu et al - extractive body cue:** First of all, our 2D semantic understanding model uses a mask-based segmentation head which does not provide semantically-rich features in the pixel level.
+- **p. 4 / X. Zhu et al - extractive body cue:** LP D and LMD denote point-based distillation loss and mask-based distillation loss.
 
 ## Design Rationale
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** To mitigate these issues, we propose a novel mask distillation method tailored to distill knowledge from the Mask2Former style 2D branch [10, 87] to the ...
-- **p. 1 / 4 HKUST - extractive PDF cue:** We propose Diff2Scene, a 3D model that performs open-vocabulary semantic segmentation and visual grounding tasks given novel text prompts, without relying on any annotated 3D ...
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
+- **p. 3 / 1 Introduction - extractive body cue:** To mitigate these issues, we propose a novel mask distillation method tailored to distill knowledge from the Mask2Former style 2D branch [10, 87] to the ...
+- **p. 1 / 4 HKUST - extractive body cue:** We propose Diff2Scene, a 3D model that performs open-vocabulary semantic segmentation and visual grounding tasks given novel text prompts, without relying on any annotated 3D ...
 
 ## Source Evidence Cues
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
-- **p. 4 / X. Zhu et al - extractive PDF cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
-- **p. 1 / 4 HKUST - extractive PDF cue:** We propose a novel method, namely Diff2Scene, which leverages frozen representations from text-image generative models, along with salient-aware and geometric-aware masks, for open-vocabulary 3D semantic ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
-- **p. 8 / X. Zhu et al - extractive PDF cue:** It serves as an implicit distillation objective to make the 3D model learn high-resolution, semantically-rich feature representations.
-- **p. 2 / 1 Introduction - extractive PDF cue:** These lifted feature representations for 3D points can then be used to query with open-vocabulary descriptions, achieving semantic understanding in 3D.
-- **p. 7 / X. Zhu et al - extractive PDF cue:** First of all, our 2D semantic understanding model uses a mask-based segmentation head which does not provide semantically-rich features in the pixel level.
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
+- **p. 4 / X. Zhu et al - extractive body cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
+- **p. 1 / 4 HKUST - extractive body cue:** We propose a novel method, namely Diff2Scene, which leverages frozen representations from text-image generative models, along with salient-aware and geometric-aware masks, for open-vocabulary 3D semantic ...
+- **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
+- **p. 8 / X. Zhu et al - extractive body cue:** It serves as an implicit distillation objective to make the 3D model learn high-resolution, semantically-rich feature representations.
+- **p. 2 / 1 Introduction - extractive body cue:** These lifted feature representations for 3D points can then be used to query with open-vocabulary descriptions, achieving semantic understanding in 3D.
+- **p. 7 / X. Zhu et al - extractive body cue:** First of all, our 2D semantic understanding model uses a mask-based segmentation head which does not provide semantically-rich features in the pixel level.
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion ... | p. 3 (1 Introduction), p. 4 (X. Zhu et al) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations ... | p. 4 (X. Zhu et al), p. 1 (4 HKUST) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 
 ## Objective / Update Rule
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
-- **p. 4 / X. Zhu et al - extractive PDF cue:** LP D and LMD denote point-based distillation loss and mask-based distillation loss.
-- **p. 4 / X. Zhu et al - extractive PDF cue:** As [19] pointed out, the projection from 3D to 2D has information loss and the solution is suboptimal.
-- **p. 5 / X. Zhu et al - extractive PDF cue:** A neural network is trained to associate the 3D point cloud with these pseudo labels through contrastive loss.
-- **p. 7 / X. Zhu et al - extractive PDF cue:** On the other hand, the pointbased feature representations from 2D foundation model can be naively distilled by minimizing the per-point feature distance.
-- **p. 8 / X. Zhu et al - extractive PDF cue:** We propose a multimodal mask distillation loss to train our 3D mask generator:
+- **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
+- **p. 4 / X. Zhu et al - extractive body cue:** LP D and LMD denote point-based distillation loss and mask-based distillation loss.
+- **p. 4 / X. Zhu et al - extractive body cue:** As [19] pointed out, the projection from 3D to 2D has information loss and the solution is suboptimal.
+- **p. 5 / X. Zhu et al - extractive body cue:** A neural network is trained to associate the 3D point cloud with these pseudo labels through contrastive loss.
+- **p. 7 / X. Zhu et al - extractive body cue:** On the other hand, the pointbased feature representations from 2D foundation model can be naively distilled by minimizing the per-point feature distance.
+- **p. 8 / X. Zhu et al - extractive body cue:** We propose a multimodal mask distillation loss to train our 3D mask generator:
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 4 (X. Zhu et al), p. 5 (X. Zhu et al), p. 8 (X. Zhu et al), p. 8 (X. Zhu et al).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 
 ## Observation–State–Action Interface
 
-- **p. 5 / X. Zhu et al - extractive PDF cue:** It takes posed RGB images and the reconstructed 3D point cloud as model inputs.
-- **p. 8 / X. Zhu et al - extractive PDF cue:** 3.4 Open-Vocabulary Inference During inference, Diff2Scene takes a 3D point cloud and its multiview 2D images as inputs.
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
-- **p. 5 / X. Zhu et al - extractive PDF cue:** As a result, researchers have applied it to many understanding tasks such as image classification [46], object detection [9], image semantic segmentation [6,38,87], instance segmentation ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** Specifically, we design our 3D branch to take a 3D point cloud as input and to predict their 3D features.
-- **p. 6 / X. Zhu et al - extractive PDF cue:** The 3D branch utilizes the point cloud and 2D mask embeddings as input.
-- **p. 6 / X. Zhu et al - extractive PDF cue:** The 3D branch takes the point cloud and the 2D mask embeddings as inputs.
+- **p. 5 / X. Zhu et al - extractive body cue:** It takes posed RGB images and the reconstructed 3D point cloud as model inputs.
+- **p. 8 / X. Zhu et al - extractive body cue:** 3.4 Open-Vocabulary Inference During inference, Diff2Scene takes a 3D point cloud and its multiview 2D images as inputs.
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
+- **p. 5 / X. Zhu et al - extractive body cue:** As a result, researchers have applied it to many understanding tasks such as image classification [46], object detection [9], image semantic segmentation [6,38,87], instance segmentation ...
+- **p. 3 / 1 Introduction - extractive body cue:** Specifically, we design our 3D branch to take a 3D point cloud as input and to predict their 3D features.
+- **p. 6 / X. Zhu et al - extractive body cue:** The 3D branch utilizes the point cloud and 2D mask embeddings as input.
+- **p. 6 / X. Zhu et al - extractive body cue:** The 3D branch takes the point cloud and the 2D mask embeddings as inputs.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,10 +90,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 
 ## Training vs Inference
 
-- **p. 3 / 1 Introduction - extractive PDF cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
-- **p. 4 / X. Zhu et al - extractive PDF cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
-- **p. 3 / 1 Introduction - extractive PDF cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
+- **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
+- **p. 4 / X. Zhu et al - extractive body cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
+- **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
+- **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -113,13 +113,13 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 
 ## Failure and Ablation Link
 
-- **p. 9 / 4 Experiment - extractive PDF cue:** We then perform comprehensive ablation studies to validate our designs.
-- **p. 9 / 4 Experiment - extractive PDF cue:** Except for Replica, point clouds and multi-view images in the training split without ground truth annotations are used for model training.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Illustration of open-vocabulary 3D semantic scene understanding. We propose Diff2Scene, a 3D model that performs open-vocabulary semantic segmentation and visual grounding tasks given ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 3: Performance of different model ablations. We observe that each com- ponent of our model gains consistent improvements.
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 2: Effectiveness of Different Distillation Settings. We report mIoU of different methods on the Replica [77] dataset. Setting Distillation Type Head Tail All fine-tuned ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 4: Qualitative results from our model and OpenScene on zero-shot se- mantic segmentation. We visualize the segmentation results on the validation set of ScanNet200 ...
-- **p. 13 / 5 Conclusion - extractive PDF cue:** There are several limitations of the proposed model.
+- **p. 9 / 4 Experiment - extractive body cue:** We then perform comprehensive ablation studies to validate our designs.
+- **p. 9 / 4 Experiment - extractive body cue:** Except for Replica, point clouds and multi-view images in the training split without ground truth annotations are used for model training.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Illustration of open-vocabulary 3D semantic scene understanding. We propose Diff2Scene, a 3D model that performs open-vocabulary semantic segmentation and visual grounding tasks given ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Performance of different model ablations. We observe that each com- ponent of our model gains consistent improvements.
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 2: Effectiveness of Different Distillation Settings. We report mIoU of different methods on the Replica [77] dataset. Setting Distillation Type Head Tail All fine-tuned ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 4: Qualitative results from our model and OpenScene on zero-shot se- mantic segmentation. We visualize the segmentation results on the validation set of ScanNet200 ...
+- **p. 13 / 5 Conclusion - extractive body cue:** There are several limitations of the proposed model.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -133,7 +133,7 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 HKUST), p. 3 (1 Introduction), p. 8 (X. Zhu et al), p. 2 (1 Introduction), objective p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 4 (X. Zhu et al), p. 5 (X. Zhu et al), p. 7 (X. Zhu et al), p. 8 (X. Zhu et al), temporal p. 6 (X. Zhu et al), p. 7 (X. Zhu et al), p. 8 (X. Zhu et al), p. 11 (X. Zhu et al).
+- **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 HKUST), p. 3 (1 Introduction), p. 8 (X. Zhu et al), p. 2 (1 Introduction), objective p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 4 (X. Zhu et al), p. 5 (X. Zhu et al), p. 7 (X. Zhu et al), p. 8 (X. Zhu et al), temporal p. 6 (X. Zhu et al), p. 7 (X. Zhu et al), p. 8 (X. Zhu et al), p. 11 (X. Zhu et al).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

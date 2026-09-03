@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1115/1.3662552; PDF retrieval source: https://doi.org/10.1115/1.3662552. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1115/1.3662552; PDF retrieval source: https://doi.org/10.1115/1.3662552. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (Introduction), p. 2 (Introduction), p. 1 (Introduction),
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | (3) Important generalizations (e.g., growing-memory filters, nonstationary prediction) require new derivations, frequently of considerable difficulty to the nonspecialist. | 부분 관측·noise가 있는 동적 시스템 | body wording is the source claim |
-| Observation / input | 1 actually stands for n integrators such that the output of each is a state variable; F(t) indicates how the outputs of ... | 시간별 sensor observation과 알려진 model/control input | exact sensor/frame/preprocessing from PDF |
+| Observation / input | 1 actually stands for n integrators such that the output of each is a state variable; F(t) indicates how the outputs of ... | 시간별 sensor observation과 알려진 model/control input | exact sensor/frame/preprocessing from PDF body |
 | State / latent | actually, stands, integrators, output, state, variable, indicates, outputs, back, inputs | latent state와 uncertainty/belief | notation and tensor shape require body check |
 | Output / action | other, words, optimal, estimate, regarded, output, linear, filter | causal estimate, prediction 또는 smoothing output | exact unit/frame/decoder require body check |
 | Target outcome | calibrated state estimate for downstream control | estimation error, covariance 또는 downstream state quality | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | latent state x_t and observation o_t; body terms: actually, stands, integrators, output, state, variable, indicates, outputs, back, inputs | p. 5 (Introduction), p. 4 (Introduction), p. 4 (Introduction) |
 | Decision / output variable | estimate x̂_t and uncertainty Σ_t; body terms: developed, here, applied, well-known, problems, confirming, extending, earlier | p. 1 (Introduction), p. 9 (Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (Introduction), p. 2 (Introduction), p. 1 (Introduction),
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (Introduction), p. 6 (Introduction), p. 1 (Introduction) |
 | Success / guarantee | calibrated state estimate for downstream control | p. 7 (Introduction), p. 6 (Introduction), p. 7 (Introduction) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (Introduction), p. 2 (Introduction), p. 1 (Introduction),
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (Introduction), p. 9 (Introduction)): The new method developed here is applied to two well-known problems, confirming and extending earlier results.
+PDF body contribution framing (p. 1 (Introduction), p. 9 (Introduction)): The new method developed here is applied to two well-known problems, confirming and extending earlier results.
 
 - **p. 9 / Introduction - extractive body cue:** (q) The duality theorem offers a powerful tool for developing more deeply the theory (as opposed to the computation) of Wiener filters, as mentioned in ...
 
@@ -66,12 +66,21 @@ PDF contribution framing (p. 1 (Introduction), p. 9 (Introduction)): The new met
 
 ## Position in the Robotics Loop
 
-estimation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 5 (Introduction). The downstream handoff is claimed only when the body describes it.
+estimation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 5 (Introduction). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (Introduction), p. 2 (Introduction), p. 1 (Introduction), p. 3 (Introduction), p. 4 (Introduction), interface p. 5 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 5 (Introduction), objective p. 1 (Introduction), p. 1 (Introduction), p. 2 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 3 (Introduction).
+- **Evidence anchors reviewed:** problem p. 1 (Introduction), p. 2 (Introduction), p. 1 (Introduction), p. 3 (Introduction), p. 4 (Introduction), interface p. 5 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 5 (Introduction), objective p. 1 (Introduction), p. 1 (Introduction), p. 2 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 3 (Introduction).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** This paper introduces a new look at this whole assemblage of problems, sidestepping the difficulties just mentioned. (p. 1, Introduction).
+- **Formulation-changing contribution:** Zadeh and Ragazzini solved the finite-memory case [2]. (p. 1, Introduction).
+- **Assumption/failure evidence:** In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise! (p. 9, Introduction).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GQHUET0V6f; PDF retrieval source: https://openreview.net/pdf/81f57d1abb2e9779707b1274c08b3260d8f44d29.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GQHUET0V6f; PDF retrieval source: https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 
 ## Evaluation Body Digest
 
-- **p. 8 / 5 Experiment - extractive PDF cue:** For the NuScenes dataset, it includes six cameras and a LiDAR sensor, with keyframes that are typically used, which are time-synchronized based on timestamps.
-- **p. 8 / 5 Experiment - extractive PDF cue:** We conducted experiments on two public autonomous driving datasets: NuScenes [4] and KITTI-360 [15] dataset, each with five representative timesynchronized LiDAR point cloud and image ...
-- **p. 9 / 5 Experiment - extractive PDF cue:** As for the registration-first approach, ColoredICP [24] exhibits limited accuracy in large-scale outdoor scenes.
-- **p. 9 / 5 Experiment - extractive PDF cue:** Methods LiDAR Metrics Image Metrics CD ↓F-score ↑MAEI ↓PSNR ↑ SSIM ↑ LPIPS ↓ Experiments on KITTI - 360 [15], i-NGP: i-NGP w/ point cloud. ...
-- **p. 10 / 5 Experiment - extractive PDF cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
-- **p. 10 / 5 Experiment - extractive PDF cue:** 6 Limitation MUP demonstrates strong performance in pose-free multimodal NVS and pose estimation under challenging large-scale scenes.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Consistency constraint. We project rendered images onto other frames by depth obtained from NeRF to compute the photometric error. It's particularly effective for ...
-- **p. 8 / 5 Experiment - extractive PDF cue:** Following [36, 55] for point cloud NVS, we adopt CD to assess 3D geometric errors and the F-score with a 5 cm threshold.
+- **p. 8 / 5 Experiment - extractive body cue:** For the NuScenes dataset, it includes six cameras and a LiDAR sensor, with keyframes that are typically used, which are time-synchronized based on timestamps.
+- **p. 8 / 5 Experiment - extractive body cue:** We conducted experiments on two public autonomous driving datasets: NuScenes [4] and KITTI-360 [15] dataset, each with five representative timesynchronized LiDAR point cloud and image ...
+- **p. 9 / 5 Experiment - extractive body cue:** As for the registration-first approach, ColoredICP [24] exhibits limited accuracy in large-scale outdoor scenes.
+- **p. 9 / 5 Experiment - extractive body cue:** Methods LiDAR Metrics Image Metrics CD ↓F-score ↑MAEI ↓PSNR ↑ SSIM ↑ LPIPS ↓ Experiments on KITTI - 360 [15], i-NGP: i-NGP w/ point cloud. ...
+- **p. 10 / 5 Experiment - extractive body cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
+- **p. 10 / 5 Experiment - extractive body cue:** 6 Limitation MUP demonstrates strong performance in pose-free multimodal NVS and pose estimation under challenging large-scale scenes.
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Consistency constraint. We project rendered images onto other frames by depth obtained from NeRF to compute the photometric error. It's particularly effective for ...
+- **p. 8 / 5 Experiment - extractive body cue:** Following [36, 55] for point cloud NVS, we adopt CD to assess 3D geometric errors and the F-score with a 5 cm threshold.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 7: Qualitative NVS results with GT- poses. MUP outperforms single-modal meth- ods i-NGP w/ and w/o point clouds and LiDAR- NeRF. Our method ... | p. 9 (Figure/Table caption) |
 | 5 Experiment | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves the highest pose estimation accuracy. | p. 9 (5 Experiment) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 5 Experiment - extractive PDF cue:** For the NuScenes dataset, it includes six cameras and a LiDAR sensor, with keyframes that are typically used, which are time-synchronized based on timestamps.
-- **p. 8 / 5 Experiment - extractive PDF cue:** We conducted experiments on two public autonomous driving datasets: NuScenes [4] and KITTI-360 [15] dataset, each with five representative timesynchronized LiDAR point cloud and image ...
-- **p. 9 / 5 Experiment - extractive PDF cue:** As for the registration-first approach, ColoredICP [24] exhibits limited accuracy in large-scale outdoor scenes.
-- **p. 9 / 5 Experiment - extractive PDF cue:** Methods LiDAR Metrics Image Metrics CD ↓F-score ↑MAEI ↓PSNR ↑ SSIM ↑ LPIPS ↓ Experiments on KITTI - 360 [15], i-NGP: i-NGP w/ point cloud. ...
-- **p. 10 / 5 Experiment - extractive PDF cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
-- **p. 10 / 5 Experiment - extractive PDF cue:** 6 Limitation MUP demonstrates strong performance in pose-free multimodal NVS and pose estimation under challenging large-scale scenes.
+- **p. 8 / 5 Experiment - extractive body cue:** For the NuScenes dataset, it includes six cameras and a LiDAR sensor, with keyframes that are typically used, which are time-synchronized based on timestamps.
+- **p. 8 / 5 Experiment - extractive body cue:** We conducted experiments on two public autonomous driving datasets: NuScenes [4] and KITTI-360 [15] dataset, each with five representative timesynchronized LiDAR point cloud and image ...
+- **p. 9 / 5 Experiment - extractive body cue:** As for the registration-first approach, ColoredICP [24] exhibits limited accuracy in large-scale outdoor scenes.
+- **p. 9 / 5 Experiment - extractive body cue:** Methods LiDAR Metrics Image Metrics CD ↓F-score ↑MAEI ↓PSNR ↑ SSIM ↑ LPIPS ↓ Experiments on KITTI - 360 [15], i-NGP: i-NGP w/ point cloud. ...
+- **p. 10 / 5 Experiment - extractive body cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
+- **p. 10 / 5 Experiment - extractive body cue:** 6 Limitation MUP demonstrates strong performance in pose-free multimodal NVS and pose estimation under challenging large-scale scenes.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: NVS results w/ and w/o accurate poses. Compared to continuous LiDAR-Camera Fields, projecting LiDAR point clouds onto images as discrete depth priors fails ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of our proposed MUP. MUP derives pose gradients through both im- plicit global optimization from the Unified Neural LiDAR-Camera Fields and our ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Modality fusion in Hash-grids and geo-MLP. We truncate the gradients of each modal- ity separately in hash grids and geo-MLP. The results show ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Consistency constraint. We project rendered images onto other frames by depth obtained from NeRF to compute the photometric error. It's particularly effective for ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative comparison of NVS in pose-free setting. We conduct experiments under the pose-free setup. The estimated trajectory is aligned with the ground truth ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative comparison of NVS. We compared MUP with pose-free and registration-first methods. Nope-NeRF and Colored-ICP-assisted fail due to the large-scale scene. BA-Alignmif struggles ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation studies on the MMG mod- ule and image modality under the pose-free setting(top). MMG module plays a pivotal role in pose optimization. ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Quantitative comparison on NVS with GT-poses. We conducted experiments un- der GT-poses to demonstrate the effectiveness of our method in modal fusion.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: NVS results w/ and w/o accurate poses. Compared to continuous LiDAR-Camera Fields, projecting LiDAR point clouds onto images as discrete depth priors fails ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our proposed MUP. MUP derives pose gradients through both im- plicit global optimization from the Unified Neural LiDAR-Camera Fields and our ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Modality fusion in Hash-grids and geo-MLP. We truncate the gradients of each modal- ity separately in hash grids and geo-MLP. The results show ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Consistency constraint. We project rendered images onto other frames by depth obtained from NeRF to compute the photometric error. It's particularly effective for ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Quantitative comparison of NVS in pose-free setting. We conduct experiments under the pose-free setup. The estimated trajectory is aligned with the ground truth ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative comparison of NVS. We compared MUP with pose-free and registration-first methods. Nope-NeRF and Colored-ICP-assisted fail due to the large-scale scene. BA-Alignmif struggles ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Ablation studies on the MMG mod- ule and image modality under the pose-free setting(top). MMG module plays a pivotal role in pose optimization. ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Quantitative comparison on NVS with GT-poses. We conducted experiments un- der GT-poses to demonstrate the effectiveness of our method in modal fusion.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For the NuScenes dataset, it includes six cameras and a LiDAR sensor, with keyframes that are typically used, which are time-synchronized based on timestamps. | embodiment, simulator version and control stack | p. 8 (5 Experiment), p. 8 (5 Experiment) |
 | Task/environment | We conducted experiments on two public autonomous driving datasets: NuScenes [4] and KITTI-360 [15] dataset, each with five representative timesynchronized LiDAR point cloud and ... | reset, timeout, object/scene variation | p. 8 (5 Experiment), p. 9 (5 Experiment) |
@@ -121,8 +121,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 | Primary metric/result | Our method achieves the highest pose estimation accuracy. | numeric claim only at cited anchor | p. 9 (5 Experiment) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 5 Experiment - extractive PDF cue:** All experiments were conducted on a single NVIDIA GeForce RTX 3090 GPU.
-- **p. 8 / 5 Experiment - extractive PDF cue:** 768 points were uniformly sampled along each ray for two modalities.
+- **p. 8 / 5 Experiment - extractive body cue:** All experiments were conducted on a single NVIDIA GeForce RTX 3090 GPU.
+- **p. 8 / 5 Experiment - extractive body cue:** 768 points were uniformly sampled along each ray for two modalities.
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 7 Conclusion - extractive PDF cue:** We revisit the limitations of single-modality pose-free methods in large-scale scenes.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: NVS results w/ and w/o accurate poses. Compared to continuous LiDAR-Camera Fields, projecting LiDAR point clouds onto images as discrete depth priors fails ...
-- **p. 9 / 5 Experiment - extractive PDF cue:** Alignmif [37] cannot be effectively used in ill-conditioned optimization.
-- **p. 10 / 5 Experiment - extractive PDF cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Qualitative comparison of NVS. We compared MUP with pose-free and registration-first methods. Nope-NeRF and Colored-ICP-assisted fail due to the large-scale scene. BA-Alignmif struggles ...
-- **p. 8 / 5 Experiment - extractive PDF cue:** Following [47, 16], we perturbed poses of car with additive noise corresponding to a standard deviation of 20 deg in rotation and 3m in translation.
+- **p. 10 / 7 Conclusion - extractive body cue:** We revisit the limitations of single-modality pose-free methods in large-scale scenes.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: NVS results w/ and w/o accurate poses. Compared to continuous LiDAR-Camera Fields, projecting LiDAR point clouds onto images as discrete depth priors fails ...
+- **p. 9 / 5 Experiment - extractive body cue:** Alignmif [37] cannot be effectively used in ill-conditioned optimization.
+- **p. 10 / 5 Experiment - extractive body cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative comparison of NVS. We compared MUP with pose-free and registration-first methods. Nope-NeRF and Colored-ICP-assisted fail due to the large-scale scene. BA-Alignmif struggles ...
+- **p. 8 / 5 Experiment - extractive body cue:** Following [47, 16], we perturbed poses of car with additive noise corresponding to a standard deviation of 20 deg in rotation and 3m in translation.
 
-- **PDF anchors reviewed:** datasets p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 10 (5 Experiment), metrics p. 6 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 10 (5 Experiment), baselines p. 7 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 2 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), results p. 9 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 10 (5 Experiment), p. 7 (Figure/Table caption), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 10 (5 Experiment), metrics p. 6 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 10 (5 Experiment), baselines p. 7 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 2 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), results p. 9 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 10 (5 Experiment), p. 7 (Figure/Table caption), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

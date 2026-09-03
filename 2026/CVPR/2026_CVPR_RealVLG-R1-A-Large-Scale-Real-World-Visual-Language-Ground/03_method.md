@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 
 ## Method Body Digest
 
-- **p. 6 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** 3, the policy model receives an image and a task prompt, then generates structured outputs according to task requirements.
-- **p. 5 / 4.1. Overview - extractive PDF cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Grasp Contact SAM2 Answer Reference Model Reinforcement Fine-tuning KL Reward Policy Model (LVLMs) Figure 3.
-- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** The predicted contact points P p 1 , P p 2 are first converted into a rectangular grasp pose Gp with fixed width, and then ...
-- **p. 5 / 4.1. Overview - extractive PDF cue:** Furthermore, we introduce a Verifiable Reward Mechanism that dynamically evaluates and guides model predictions in terms of both semantic correctness and physical feasibility.
-- **p. 8 / Method - extractive PDF cue:** These results suggest that GRPO's reward formulation better enhances finegrained action precision in smaller models, while GSPO's sequence-level incentives provide smoother optimization for larger models, ...
-- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** Then, the grasping reward is formulated as the negative sum of Huber losses computed over all pose components: R_{\ t e x t {Grasp}} = ...
-- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Furthermore, the objective of RealVLG-R1 aims to maximize the expected reward while introducing a KL-divergence regularization 42400
+- **p. 6 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** 3, the policy model receives an image and a task prompt, then generates structured outputs according to task requirements.
+- **p. 5 / 4.1. Overview - extractive body cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Grasp Contact SAM2 Answer Reference Model Reinforcement Fine-tuning KL Reward Policy Model (LVLMs) Figure 3.
+- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** The predicted contact points P p 1 , P p 2 are first converted into a rectangular grasp pose Gp with fixed width, and then ...
+- **p. 5 / 4.1. Overview - extractive body cue:** Furthermore, we introduce a Verifiable Reward Mechanism that dynamically evaluates and guides model predictions in terms of both semantic correctness and physical feasibility.
+- **p. 8 / Method - extractive body cue:** These results suggest that GRPO's reward formulation better enhances finegrained action precision in smaller models, while GSPO's sequence-level incentives provide smoother optimization for larger models, ...
+- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** Then, the grasping reward is formulated as the negative sum of Huber losses computed over all pose components: R_{\ t e x t {Grasp}} = ...
+- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Furthermore, the objective of RealVLG-R1 aims to maximize the expected reward while introducing a KL-divergence regularization 42400
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our main contributions are as follows: • RealVLG-11B Dataset: The largest real-world grounding and grasping dataset with multi-granularity annotations from semantic localization to ...
-- **p. 5 / 4.1. Overview - extractive PDF cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
+- **p. 2 / 1. Introduction - extractive body cue:** 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • RealVLG-11B Dataset: The largest real-world grounding and grasping dataset with multi-granularity annotations from semantic localization to ...
+- **p. 5 / 4.1. Overview - extractive body cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
 
 ## Source Evidence Cues
 
-- **p. 6 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** 3, the policy model receives an image and a task prompt, then generates structured outputs according to task requirements.
-- **p. 5 / 4.1. Overview - extractive PDF cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Grasp Contact SAM2 Answer Reference Model Reinforcement Fine-tuning KL Reward Policy Model (LVLMs) Figure 3.
-- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** The predicted contact points P p 1 , P p 2 are first converted into a rectangular grasp pose Gp with fixed width, and then ...
-- **p. 5 / 4.1. Overview - extractive PDF cue:** Furthermore, we introduce a Verifiable Reward Mechanism that dynamically evaluates and guides model predictions in terms of both semantic correctness and physical feasibility.
-- **p. 8 / Method - extractive PDF cue:** These results suggest that GRPO's reward formulation better enhances finegrained action precision in smaller models, while GSPO's sequence-level incentives provide smoother optimization for larger models, ...
-- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** Then, the grasping reward is formulated as the negative sum of Huber losses computed over all pose components: R_{\ t e x t {Grasp}} = ...
+- **p. 6 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** 3, the policy model receives an image and a task prompt, then generates structured outputs according to task requirements.
+- **p. 5 / 4.1. Overview - extractive body cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Grasp Contact SAM2 Answer Reference Model Reinforcement Fine-tuning KL Reward Policy Model (LVLMs) Figure 3.
+- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** The predicted contact points P p 1 , P p 2 are first converted into a rectangular grasp pose Gp with fixed width, and then ...
+- **p. 5 / 4.1. Overview - extractive body cue:** Furthermore, we introduce a Verifiable Reward Mechanism that dynamically evaluates and guides model predictions in terms of both semantic correctness and physical feasibility.
+- **p. 8 / Method - extractive body cue:** These results suggest that GRPO's reward formulation better enhances finegrained action precision in smaller models, while GSPO's sequence-level incentives provide smoother optimization for larger models, ...
+- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** Then, the grasping reward is formulated as the negative sum of Huber losses computed over all pose components: R_{\ t e x t {Grasp}} = ...
 - **Detected method headings:** 4. RealVLG-R1 Model (p. 5); 4.2. Policy Optimization with Verifiable Rewards (p. 5); Method (p. 8)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | 3, the policy model receives an image and a task prompt, then generates structured outputs according to task requirements. | p. 6 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22]. | p. 5 (4.1. Overview), p. 6 (4.2. Policy Optimization with Verifiable Rewards) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 
 ## Objective / Update Rule
 
-- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Furthermore, the objective of RealVLG-R1 aims to maximize the expected reward while introducing a KL-divergence regularization 42400
-- **p. 8 / Method - extractive PDF cue:** These results suggest that GRPO's reward formulation better enhances finegrained action precision in smaller models, while GSPO's sequence-level incentives provide smoother optimization for larger models, ...
-- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Unlike conventional approaches [5, 35, 87] that rely on learned reward models, RLVR leverages task-intrinsic verifiable criteria to provide objective reward signals through a binary ...
-- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** Then, the grasping reward is formulated as the negative sum of Huber losses computed over all pose components: R_{\ t e x t {Grasp}} = ...
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Prompt Grasp Prompt Contact Prompt Image Prompts Verifiable Reward Policy Optimization Completions Format Reward <think> Reasoning </think> <answer> … </answer> Task-Specific Reward IoU Reward Bbox ...
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, segmentation, grasp rectangles, and contact ...
+- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Furthermore, the objective of RealVLG-R1 aims to maximize the expected reward while introducing a KL-divergence regularization 42400
+- **p. 8 / Method - extractive body cue:** These results suggest that GRPO's reward formulation better enhances finegrained action precision in smaller models, while GSPO's sequence-level incentives provide smoother optimization for larger models, ...
+- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Unlike conventional approaches [5, 35, 87] that rely on learned reward models, RLVR leverages task-intrinsic verifiable criteria to provide objective reward signals through a binary ...
+- **p. 7 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** Then, the grasping reward is formulated as the negative sum of Huber losses computed over all pose components: R_{\ t e x t {Grasp}} = ...
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Prompt Grasp Prompt Contact Prompt Image Prompts Verifiable Reward Policy Optimization Completions Format Reward <think> Reasoning </think> <answer> … </answer> Task-Specific Reward IoU Reward Bbox ...
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, segmentation, grasp rectangles, and contact ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** During training, input images and task prompts are processed through a policy optimization module to generate candidate outputs, which are then updated using verifiable reward ...
-- **p. 6 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive PDF cue:** The core of RealVLG-R1 is its composite reward function R(q, o), providing hierarchical and verifiable feedback by combining output format compliance with task-specific geometric accuracy: ...
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Input Output Object <image> A yellow banana under the white bottle.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Leveraging LVLMs (e.g., the QwenVL series) as the backbone, the model is trained using a Reinforcement Fine-tuning strategy to directly predict segmentation masks, bounding boxes, ...
-- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Formally, the verifiable reward function R(q, o) is defined as, R( q, o ) = \ b egin { cases} 1 , & \text {if ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** Isaac Newton Visual-Language Grounding (VLG) aims to establish semantic correspondences between natural language and visual entities in images, enabling models to accurately identify and localize ...
-- **p. 8 / Method - extractive PDF cue:** The visual grasping task imposes higher demands on physical reasoning and action coherence.
+- **p. 2 / 1. Introduction - extractive body cue:** During training, input images and task prompts are processed through a policy optimization module to generate candidate outputs, which are then updated using verifiable reward ...
+- **p. 6 / 4.3. Task-Specific Pipelines and Verifiable Rewards - extractive body cue:** The core of RealVLG-R1 is its composite reward function R(q, o), providing hierarchical and verifiable feedback by combining output format compliance with task-specific geometric accuracy: ...
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Input Output Object <image> A yellow banana under the white bottle.
+- **p. 2 / 1. Introduction - extractive body cue:** Leveraging LVLMs (e.g., the QwenVL series) as the backbone, the model is trained using a Reinforcement Fine-tuning strategy to directly predict segmentation masks, bounding boxes, ...
+- **p. 5 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Formally, the verifiable reward function R(q, o) is defined as, R( q, o ) = \ b egin { cases} 1 , & \text {if ...
+- **p. 1 / 1. Introduction - extractive body cue:** Isaac Newton Visual-Language Grounding (VLG) aims to establish semantic correspondences between natural language and visual entities in images, enabling models to accurately identify and localize ...
+- **p. 8 / Method - extractive body cue:** The visual grasping task imposes higher demands on physical reasoning and action coherence.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,10 +90,10 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 
 ## Training vs Inference
 
-- **p. 5 / 4.1. Overview - extractive PDF cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** Grasp Contact SAM2 Answer Reference Model Reinforcement Fine-tuning KL Reward Policy Model (LVLMs) Figure 3.
-- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive PDF cue:** RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, segmentation, grasp rectangles, and contact ...
-- **p. 8 / Method - extractive PDF cue:** Following the data split in Table 2, both RealVLG-R1 and Qwen2.5-VL+SFT were fine-tuned for 10 epochs using only 10% of the training set.
+- **p. 5 / 4.1. Overview - extractive body cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** Grasp Contact SAM2 Answer Reference Model Reinforcement Fine-tuning KL Reward Policy Model (LVLMs) Figure 3.
+- **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, segmentation, grasp rectangles, and contact ...
+- **p. 8 / Method - extractive body cue:** Following the data split in Table 2, both RealVLG-R1 and Qwen2.5-VL+SFT were fine-tuned for 10 epochs using only 10% of the training set.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -107,17 +107,17 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Task / interface definition | The dataset contains approximately 165,000 images, over 800 object instances, 1.3 million segmentation, detection, and language annotations, and 11 billion grasp examples, ... | p. 4 (3.1. Overview), p. 5 (5 Based on the resulting Rect Grasp Poses) |
-| Baseline harness | As summarized in Table 1, compared to existing datasets, RealVLG-11B provides consistent bounding boxes, segmentation masks, rectangular grasp poses, and language descriptions ... | p. 5 (5 Based on the resulting Rect Grasp Poses), p. 7 (5.1. Data Quality Evaluation) |
+| Task / interface definition | The dataset contains approximately 165,000 images, over 800 object instances, 1.3 million segmentation, detection, and language annotations, and 11 billion grasp examples, ... | p. 4 (3.1. Overview), p. 4 (3.2. Data Source) |
+| Baseline harness | As shown in Table 3, benefiting from our carefully designed LVLM-assisted and human double-review annotation pipeline, RealVLG-11B consistently outperforms existing datasets across ... | p. 7 (5.1. Data Quality Evaluation), p. 7 (5.1. Data Quality Evaluation) |
 | Metric / failure reporting | In rectangular grasp pose prediction, performance relies on mean IoU (mIoU) and Grasp Accuracy (gAcc) [26], where gAcc is achieved when the ... | p. 7 (5.2. RealVLG Benchmark), p. 7 (5.1. Data Quality Evaluation) |
 
 ## Failure and Ablation Link
 
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Framework of RealVLG-R1. RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, ...
-- **p. 8 / 6. Conclusions - extractive PDF cue:** Future work will extend RealVLG to 3D space, and explore efficient models such as SmolVLM [43] to improve runtime without extra fine-tuning.
-- **p. 3 / 3.1. Overview - extractive PDF cue:** Existing grasping datasets generally suffer from two major limitations.
-- **p. 5 / 5 Based on the resulting Rect Grasp Poses - extractive PDF cue:** The computation is designed to ensure that contact points accurately lie on the object surface: if the midpoint along the gripper's closing direction falls outside ...
-- **p. 7 / 5.1. Data Quality Evaluation - extractive PDF cue:** Linguistic and grounding quality comparison. grasp points located within segmentation masks (Rg), and proportion of contact centers falling inside segmentation masks (Rc).
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Framework of RealVLG-R1. RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, ...
+- **p. 8 / 6. Conclusions - extractive body cue:** Future work will extend RealVLG to 3D space, and explore efficient models such as SmolVLM [43] to improve runtime without extra fine-tuning.
+- **p. 3 / 3.1. Overview - extractive body cue:** Existing grasping datasets generally suffer from two major limitations.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Dataset split for RealVLG-11B. age instance. 5 Based on the resulting Rect Grasp Poses and segmentation masks, grasp contact points are subse- quently ...
+- **p. 7 / 5.1. Data Quality Evaluation - extractive body cue:** Linguistic and grounding quality comparison. grasp points located within segmentation masks (Rg), and proportion of contact centers falling inside segmentation masks (Rc).
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -131,7 +131,7 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 8 (Method), objective p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 8 (Method), p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), temporal p. 7 (5.2. RealVLG Benchmark), p. 8 (Method), p. 8 (Method), p. 1 (Abstract), p. 1 (Front matter), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 6 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 8 (Method), objective p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 8 (Method), p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), temporal p. 7 (5.2. RealVLG Benchmark), p. 8 (Method), p. 8 (Method), p. 1 (Abstract), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

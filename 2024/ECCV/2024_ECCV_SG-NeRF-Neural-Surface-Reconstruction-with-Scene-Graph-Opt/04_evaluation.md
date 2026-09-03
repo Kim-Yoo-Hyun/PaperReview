@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 
 ## Evaluation Body Digest
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** We then report the comparisons with state-of-the-art methods on both the proposed dataset and a widely used benchmark, DTU dataset [21] (Sec.
-- **p. 13 / 7.71 3.77† - extractive PDF cue:** We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component.
-- **p. 10 / 4 Experiments - extractive PDF cue:** After SfM, to prune the scene graph, we set the angular threshold to τ = 70 degrees for our dataset.
-- **p. 11 / 4 Experiments - extractive PDF cue:** 4.3 Comparisons We compare our method with existing approaches on the proposed dataset and the DTU dataset.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our method runs in average 11 hours for 150k iterations on the proposed dataset, and 18 hours for 300k iterations on the DTU dataset.
-- **p. 12 / 4 Experiments - extractive PDF cue:** 6: Qualitative comparison on the DTU dataset (top five).
-- **p. 12 / 4 Experiments - extractive PDF cue:** We also compare with recent work PoRF [2] on our dataset.
-- **p. 13 / 7.71 3.77† - extractive PDF cue:** SG-NeRF (Ours) 0.87 2.39 0.88 0.38 1.13 1.13 Results on the DTU dataset.
+- **p. 10 / 4 Experiments - extractive body cue:** We then report the comparisons with state-of-the-art methods on both the proposed dataset and a widely used benchmark, DTU dataset [21] (Sec.
+- **p. 13 / 7.71 3.77† - extractive body cue:** We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component.
+- **p. 10 / 4 Experiments - extractive body cue:** After SfM, to prune the scene graph, we set the angular threshold to τ = 70 degrees for our dataset.
+- **p. 11 / 4 Experiments - extractive body cue:** 4.3 Comparisons We compare our method with existing approaches on the proposed dataset and the DTU dataset.
+- **p. 11 / 4 Experiments - extractive body cue:** Our method runs in average 11 hours for 150k iterations on the proposed dataset, and 18 hours for 300k iterations on the DTU dataset.
+- **p. 12 / 4 Experiments - extractive body cue:** 6: Qualitative comparison on the DTU dataset (top five).
+- **p. 12 / 4 Experiments - extractive body cue:** We also compare with recent work PoRF [2] on our dataset.
+- **p. 13 / 7.71 3.77† - extractive body cue:** SG-NeRF (Ours) 0.87 2.39 0.88 0.38 1.13 1.13 Results on the DTU dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 7.71 3.77† | EMPIRICAL / SOURCE-REPORTED EVALUATION | While BARF* achieves the best results in scene 37, it is more likely to impose negative impact on camera poses, thereby has worse performance ... | p. 13 (7.71 3.77†) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Overall, our method achieves the best reconstruction results. | p. 11 (4 Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 10 / 4 Experiments - extractive PDF cue:** We then report the comparisons with state-of-the-art methods on both the proposed dataset and a widely used benchmark, DTU dataset [21] (Sec.
-- **p. 13 / 7.71 3.77† - extractive PDF cue:** We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component.
-- **p. 10 / 4 Experiments - extractive PDF cue:** After SfM, to prune the scene graph, we set the angular threshold to τ = 70 degrees for our dataset.
-- **p. 11 / 4 Experiments - extractive PDF cue:** 4.3 Comparisons We compare our method with existing approaches on the proposed dataset and the DTU dataset.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our method runs in average 11 hours for 150k iterations on the proposed dataset, and 18 hours for 300k iterations on the DTU dataset.
-- **p. 12 / 4 Experiments - extractive PDF cue:** 6: Qualitative comparison on the DTU dataset (top five).
-- **p. 12 / 4 Experiments - extractive PDF cue:** We also compare with recent work PoRF [2] on our dataset.
-- **p. 13 / 7.71 3.77† - extractive PDF cue:** SG-NeRF (Ours) 0.87 2.39 0.88 0.38 1.13 1.13 Results on the DTU dataset.
+- **p. 10 / 4 Experiments - extractive body cue:** We then report the comparisons with state-of-the-art methods on both the proposed dataset and a widely used benchmark, DTU dataset [21] (Sec.
+- **p. 13 / 7.71 3.77† - extractive body cue:** We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component.
+- **p. 10 / 4 Experiments - extractive body cue:** After SfM, to prune the scene graph, we set the angular threshold to τ = 70 degrees for our dataset.
+- **p. 11 / 4 Experiments - extractive body cue:** 4.3 Comparisons We compare our method with existing approaches on the proposed dataset and the DTU dataset.
+- **p. 11 / 4 Experiments - extractive body cue:** Our method runs in average 11 hours for 150k iterations on the proposed dataset, and 18 hours for 300k iterations on the DTU dataset.
+- **p. 12 / 4 Experiments - extractive body cue:** 6: Qualitative comparison on the DTU dataset (top five).
+- **p. 12 / 4 Experiments - extractive body cue:** We also compare with recent work PoRF [2] on our dataset.
+- **p. 13 / 7.71 3.77† - extractive body cue:** SG-NeRF (Ours) 0.87 2.39 0.88 0.38 1.13 1.13 Results on the DTU dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 2: An overview of the proposed joint learning pipeline. Given a set of images, we first apply a Structure-from-Motion (SfM) algorithm to construct an ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 3: Visualization of matches that are falsely established as correspondences from non-overlapping regions. The results are obtained using COLMAP [40] with Super- Point [12] ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 4: Illustration of the two-view intersection-over-union (IoU) loss in 2D that can be easily extended into 3D. Given a pair of matched keypoints from ...
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 1: Quantitative results on our dataset. The red and blue numbers indicate the first and second performer for each scene. † denotes that only ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 5: Qualitative comparisons on the proposed dataset. As shown, our method is more robust to outlier poses, producing less distortion and better geometric detail. ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Fig. 6: Qualitative comparison on the DTU dataset (top five). Neuralangelo shows detailed windows but struggles with the gap area between buildings. In contrast, our ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 2: Quantitative results on the DTU dataset with noisy camera poses as input. Chamfer distance ↓ 24 37 40 55 63
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: An overview of the proposed joint learning pipeline. Given a set of images, we first apply a Structure-from-Motion (SfM) algorithm to construct an ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Visualization of matches that are falsely established as correspondences from non-overlapping regions. The results are obtained using COLMAP [40] with Super- Point [12] ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 4: Illustration of the two-view intersection-over-union (IoU) loss in 2D that can be easily extended into 3D. Given a pair of matched keypoints from ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: Quantitative results on our dataset. The red and blue numbers indicate the first and second performer for each scene. † denotes that only ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 5: Qualitative comparisons on the proposed dataset. As shown, our method is more robust to outlier poses, producing less distortion and better geometric detail. ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 6: Qualitative comparison on the DTU dataset (top five). Neuralangelo shows detailed windows but struggles with the gap area between buildings. In contrast, our ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 2: Quantitative results on the DTU dataset with noisy camera poses as input. Chamfer distance ↓ 24 37 40 55 63
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We then report the comparisons with state-of-the-art methods on both the proposed dataset and a widely used benchmark, DTU dataset [21] (Sec. | embodiment, simulator version and control stack | p. 10 (4 Experiments), p. 13 (7.71 3.77†) |
 | Task/environment | We select three representative scenes from the proposed dataset and conduct ablation studies to evaluate the effectiveness of each component. | reset, timeout, object/scene variation | p. 13 (7.71 3.77†), p. 10 (4 Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 | Primary metric/result | Overall, our method achieves the best reconstruction results. | numeric claim only at cited anchor | p. 11 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 10 / 4 Experiments - extractive PDF cue:** After SfM, to prune the scene graph, we set the angular threshold to τ = 70 degrees for our dataset.
-- **p. 10 / 4 Experiments - extractive PDF cue:** For the DTU dataset, we set τ = 45 degrees because the viewpoints are more densely sampled.
-- **p. 10 / 4 Experiments - extractive PDF cue:** The MoG of each ray is calculated using 8 points with the highest densities.
-- **p. 11 / 4 Experiments - extractive PDF cue:** All of the experiments are conducted on NVIDIA RTX 3090 GPUs.
-- **p. 11 / 4 Experiments - extractive PDF cue:** Our method runs in average 11 hours for 150k iterations on the proposed dataset, and 18 hours for 300k iterations on the DTU dataset.
-- **p. 5 / 3 Method - extractive PDF cue:** 3.1 Scene Graph A scene graph G = (V, E) in SfM consists of a set of nodes V and edges E.
+- **p. 10 / 4 Experiments - extractive body cue:** After SfM, to prune the scene graph, we set the angular threshold to τ = 70 degrees for our dataset.
+- **p. 10 / 4 Experiments - extractive body cue:** For the DTU dataset, we set τ = 45 degrees because the viewpoints are more densely sampled.
+- **p. 10 / 4 Experiments - extractive body cue:** The MoG of each ray is calculated using 8 points with the highest densities.
+- **p. 11 / 4 Experiments - extractive body cue:** All of the experiments are conducted on NVIDIA RTX 3090 GPUs.
+- **p. 11 / 4 Experiments - extractive body cue:** Our method runs in average 11 hours for 150k iterations on the proposed dataset, and 18 hours for 300k iterations on the DTU dataset.
+- **p. 5 / 3 Method - extractive body cue:** 3.1 Scene Graph A scene graph G = (V, E) in SfM consists of a set of nodes V and edges E.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
-- **p. 14 / 5 Conclusion - extractive PDF cue:** Even though our method can greatly refine the inlier poses, the improvement on outlier poses is moderate (whose effect is still largely alleviated with the ...
-- **p. 13 / 4 Experiments - extractive PDF cue:** Please also note that there are several failure cases from the competitors indicating completely incorrect reconstruction.
-- **p. 10 / 4 Experiments - extractive PDF cue:** Most of these poses tend to come with a large angular deviation and cannot be rectified through local optimization.
-- **p. 12 / 4 Experiments - extractive PDF cue:** The subpar performance of the competitors is due to their pose optimization processes, namely, local optimizations, which cannot rectify the poses with significant errors.
-- **p. 12 / 4 Experiments - extractive PDF cue:** As shown, our method is more robust to outlier poses, producing less distortion and better geometric detail.
+- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
+- **p. 14 / 5 Conclusion - extractive body cue:** Even though our method can greatly refine the inlier poses, the improvement on outlier poses is moderate (whose effect is still largely alleviated with the ...
+- **p. 13 / 4 Experiments - extractive body cue:** Please also note that there are several failure cases from the competitors indicating completely incorrect reconstruction.
+- **p. 10 / 4 Experiments - extractive body cue:** Most of these poses tend to come with a large angular deviation and cannot be rectified through local optimization.
+- **p. 12 / 4 Experiments - extractive body cue:** The subpar performance of the competitors is due to their pose optimization processes, namely, local optimizations, which cannot rectify the poses with significant errors.
+- **p. 12 / 4 Experiments - extractive body cue:** As shown, our method is more robust to outlier poses, producing less distortion and better geometric detail.
 
-- **PDF anchors reviewed:** datasets p. 10 (4 Experiments), p. 13 (7.71 3.77†), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), metrics p. 14 (Figure/Table caption), p. 12 (4 Experiments), p. 14 (7.71 3.77†), p. 10 (4 Experiments), p. 13 (7.71 3.77†), p. 13 (7.71 3.77†), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (7.71 3.77†), p. 13 (7.71 3.77†), results p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (7.71 3.77†), p. 14 (7.71 3.77†), p. 14 (7.71 3.77†).
+- **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 13 (7.71 3.77†), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), metrics p. 14 (Figure/Table caption), p. 12 (4 Experiments), p. 14 (7.71 3.77†), p. 10 (4 Experiments), p. 13 (7.71 3.77†), p. 13 (7.71 3.77†), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (7.71 3.77†), p. 13 (7.71 3.77†), results p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (7.71 3.77†), p. 14 (7.71 3.77†), p. 14 (7.71 3.77†).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

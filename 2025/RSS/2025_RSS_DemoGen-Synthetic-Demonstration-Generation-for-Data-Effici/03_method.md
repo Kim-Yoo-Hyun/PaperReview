@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p157.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p157.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p157.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p157.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | In real-world experiments, we use the DBSCAN [15] elustering algorithm to discard the outlier points and downsample the number of points in ... | p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for ... | p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation) |
@@ -78,9 +78,9 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | Specifically, assuming the task involves the sequential manipulation of A' objects {O1,O2,...,Ox}. the initial object configuration sp is defined as the set ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | To stabilize the training process, we use AdamW [32] optimizer and set the learning rate to be Le with a 500 step ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 5 (A. Problem Formulation), p. 6 (C. TAMP-based Action Generation), objective p. 17 (A. Policy Training and Implementation Details), p. 6 (C. TAMP-based Action Generation), p. 17 (A. Policy Training and Implementation Details), temporal p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation), p. 11 (B. Cluttered Scene), p. 17 (A. Policy Training and Implementation Details), p. 1 (Abstract), p. 2 (Abstract).
+- **Evidence anchors reviewed:** method p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 5 (A. Problem Formulation), p. 6 (C. TAMP-based Action Generation), objective p. 17 (A. Policy Training and Implementation Details), p. 6 (C. TAMP-based Action Generation), p. 17 (A. Policy Training and Implementation Details), temporal p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation), p. 11 (B. Cluttered Scene), p. 17 (A. Policy Training and Implementation Details), p. 1 (Abstract), p. 2 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details).
+- **Objective/update evidence:** To stabilize the training process, we use AdamW [32] optimizer and set the learning rate to be Le with a 500 step warmup. (p. 17, A. Policy Training and Implementation Details).
+- **Temporal/runtime evidence:** Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 seconds. responsive enough for conducting dexterous ... (p. 17, A. Policy Training and Implementation Details).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p156.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p156.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p156.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p156.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,27 +10,27 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION)): However, few 
 
 ## PDF Body Digest
 
-- **p. 1 / Abstract - extractive PDF cue:** This paper presents ArticuBot, in which a learned policy enables a robotics system to open diverse cate egories of unseen articulated objects in the real ...
-- **p. 1 / Abstract - extractive PDF cue:** This task has long been challenging for robotics due to the large variations in the geometry, size, and articulation types of such objects.
-- **p. 1 / Abstract - extractive PDF cue:** Our system, ArticuBot, consists of three parts: generating, a large number of demonstrations in physics-based simulation, distilling all generated demonstrations into a point cloud-based neural ...
-- **p. 1 / Abstract - extractive PDF cue:** demonstrations over 322 training articulated objects.
-- **p. 1 / Abstract - extractive PDF cue:** For policy learning, we propose a novel hierarchical policy representation,
-- **p. 2 / 1. INTRODUCTION - extractive PDF cue:** However, few have demonstrated generalization to manipulating many different articulated objects in the real world without simplifying assumptions (e.g, using a suction gripper (10).
-- **p. 2 / 1. INTRODUCTION - extractive PDF cue:** Many prior works have studied the problem of articulated object' manipulation [58 31, 10, 19, 21, 53, 15, 32].
+- **p. 1 / Abstract - extractive body cue:** This paper presents ArticuBot, in which a learned policy enables a robotics system to open diverse cate egories of unseen articulated objects in the real ...
+- **p. 1 / Abstract - extractive body cue:** This task has long been challenging for robotics due to the large variations in the geometry, size, and articulation types of such objects.
+- **p. 1 / Abstract - extractive body cue:** Our system, ArticuBot, consists of three parts: generating, a large number of demonstrations in physics-based simulation, distilling all generated demonstrations into a point cloud-based neural ...
+- **p. 1 / Abstract - extractive body cue:** demonstrations over 322 training articulated objects.
+- **p. 1 / Abstract - extractive body cue:** For policy learning, we propose a novel hierarchical policy representation,
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** However, few have demonstrated generalization to manipulating many different articulated objects in the real world without simplifying assumptions (e.g, using a suction gripper (10).
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** Many prior works have studied the problem of articulated object' manipulation [58 31, 10, 19, 21, 53, 15, 32].
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, few have demonstrated generalization to manipulating many different articulated objects in the real world without simplifying assumptions (e.g, using a suction ... | mobile base와 one/two-arm manipulation environment | body wording is the source claim |
-| Observation / input | takes 3D point cloud as input and outputs delta endeffector transformations as the actions. + DP3 Transformer, which replaces the simplified PointNet ... | egocentric RGB-D, language/task goal, base-arm proprioception | exact sensor/frame/preprocessing from PDF |
+| Observation / input | takes 3D point cloud as input and outputs delta endeffector transformations as the actions. + DP3 Transformer, which replaces the simplified PointNet ... | egocentric RGB-D, language/task goal, base-arm proprioception | exact sensor/frame/preprocessing from PDF body |
 | State / latent | takes, point, cloud, input, outputs, delta, endeffector, transformations, actions, DP3 | map/object/contact state와 base-arm coordination decision | notation and tensor shape require body check |
 | Output / action | Bottom, goal-conditioned, diffusion, policy, low-level, first, applies, attention | base motion plus arm/gripper action | exact unit/frame/decoder require body check |
 | Target outcome | task completion and recovery | long-horizon task success, reachability, collision과 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | base-arm-object state and language/task goal; body terms: takes, point, cloud, input, outputs, delta, endeffector, transformations, actions, DP3 | p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture) |
 | Decision / output variable | base plus arm/gripper action; body terms: Instead, hilrarchical, policy, representation, consists, high-level, low-level, present | p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION) |
@@ -38,20 +38,20 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION)): However, few 
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 6 (B. Policy Learning with a Hierarchical Policy Representation), p. 7 (B. Policy Learning with a Hierarchical Policy Representation) |
 | Success / guarantee | task completion and recovery | p. 12 (C. Mobile X-Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 2 / 1. INTRODUCTION - extractive PDF cue:** Many prior works have studied the problem of articulated object' manipulation [58 31, 10, 19, 21, 53, 15, 32].
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** Many prior works have studied the problem of articulated object' manipulation [58 31, 10, 19, 21, 53, 15, 32].
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (B. Sim2real Policy Learning), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture)): Instead, we propose to use a hilrarchical policy representation, which consists of 4 high-level policy and a low-level policy.
+PDF body contribution framing (p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (B. Sim2real Policy Learning), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture)): Instead, we propose to use a hilrarchical policy representation, which consists of 4 high-level policy and a low-level policy.
 
-- **p. 2 / 1. INTRODUCTION - extractive PDF cue:** ‘+ We present a weighted displacement policy representation that scales up well with the number of demonstrations, outperforming alternative policy representations.
-- **p. 2 / 1. INTRODUCTION - extractive PDF cue:** 1 for a visualization of some of the different real-world articulated objects that our policy is able to open, In summary, our contributions are:
-- **p. 3 / B. Sim2real Policy Learning - extractive PDF cue:** In contrast, we train a single model that ean be applied to opening various categories of articulated objects Besides, their system requires a specialized gripper, ...
-- **p. 4 / 2. Hierarchical Policy Learning -- Low-level Policy Architecture - extractive PDF cue:** Middle: We propose a weighted displacement model for the high-level policy, which predicts the sub-goal end-effector pose.
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** ‘+ We present a weighted displacement policy representation that scales up well with the number of demonstrations, outperforming alternative policy representations.
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** 1 for a visualization of some of the different real-world articulated objects that our policy is able to open, In summary, our contributions are:
+- **p. 3 / B. Sim2real Policy Learning - extractive body cue:** In contrast, we train a single model that ean be applied to opening various categories of articulated objects Besides, their system requires a specialized gripper, ...
+- **p. 4 / 2. Hierarchical Policy Learning -- Low-level Policy Architecture - extractive body cue:** Middle: We propose a weighted displacement model for the high-level policy, which predicts the sub-goal end-effector pose.
 
 ## Assumptions and Failure Boundary
 
@@ -66,11 +66,11 @@ PDF contribution framing (p. 5 (B. Policy Learning with a Hierarchical Policy Re
 
 ## Position in the Robotics Loop
 
-mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 5 (B. Policy Learning with a Hierarchical Policy Representation). The downstream handoff is claimed only when the body describes it.
+mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 5 (B. Policy Learning with a Hierarchical Policy Representation). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 5 (B. Policy Learning with a Hierarchical Policy Representation), objective p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 6 (B. Policy Learning with a Hierarchical Policy Representation), p. 7 (B. Policy Learning with a Hierarchical Policy Representation).
+- **Evidence anchors reviewed:** problem p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 5 (B. Policy Learning with a Hierarchical Policy Representation), objective p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 6 (B. Policy Learning with a Hierarchical Policy Representation), p. 7 (B. Policy Learning with a Hierarchical Policy Representation).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

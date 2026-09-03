@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1904.08889; PDF retrieval source: https://arxiv.org/pdf/1904.08889. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1904.08889; PDF retrieval source: https://arxiv.org/pdf/1904.08889. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,30 +10,30 @@ PDF body method statement (p. 5 (3.4. Kernel Point Network Architectures), p. 5 
 
 ## Method Body Digest
 
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** Skip links are used to pass the features between intermediate layers of the encoder and the decoder.
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** The encoder part is the same as in KP-CNN, and the decoder part uses nearest upsampling to get the final pointwise features.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Input points with a constant scalar feature (in grey) are convolved through a KPConv that is defined by a set of kernel points (in black) ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** The kernel weights are thus carried by points, like the input features, and their area of influence is defined by a correlation function.
-- **p. 2 / 1. Introduction - extractive PDF cue:** The robustness of our convolution to varying densities is ensured by the combination of radius neighborhoods and regular subsampling of the input cloud [38].
-- **p. 1 / 1. Introduction - extractive PDF cue:** Other approaches use multilayer perceptrons (MLP) to process point clouds directly, following the idea proposed by [49, 26].
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** After the last layer, the features are aggregated by a global average pooling and processed by the fully connected and softmax layers like in an ...
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** Combining analogy with successful image networks and empirical studies, we designed two network architectures for the classification and the segmentation tasks.
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** Skip links are used to pass the features between intermediate layers of the encoder and the decoder.
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** The encoder part is the same as in KP-CNN, and the decoder part uses nearest upsampling to get the final pointwise features.
+- **p. 1 / 1. Introduction - extractive body cue:** Input points with a constant scalar feature (in grey) are convolved through a KPConv that is defined by a set of kernel points (in black) ...
+- **p. 2 / 1. Introduction - extractive body cue:** The kernel weights are thus carried by points, like the input features, and their area of influence is defined by a correlation function.
+- **p. 2 / 1. Introduction - extractive body cue:** The robustness of our convolution to varying densities is ensured by the combination of radius neighborhoods and regular subsampling of the input cloud [38].
+- **p. 1 / 1. Introduction - extractive body cue:** Other approaches use multilayer perceptrons (MLP) to process point clouds directly, following the idea proposed by [49, 26].
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** After the last layer, the features are aggregated by a global average pooling and processed by the fully connected and softmax layers like in an ...
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** Combining analogy with successful image networks and empirical studies, we designed two network architectures for the classification and the segmentation tasks.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Furthermore, we propose a deformable version of our convolution [7], which consists of learning local shifts applied to the kernel points (see Figure 3).
-- **p. 2 / 1. Introduction - extractive PDF cue:** KPConv also consists of a set of local 3D filters, but overcomes previous point convolution limitations as shown in related work.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Various approaches have been proposed to handle such data, and can be grouped into different categories that we will develop in the related work section.
+- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we propose a deformable version of our convolution [7], which consists of learning local shifts applied to the kernel points (see Figure 3).
+- **p. 2 / 1. Introduction - extractive body cue:** KPConv also consists of a set of local 3D filters, but overcomes previous point convolution limitations as shown in related work.
+- **p. 1 / 1. Introduction - extractive body cue:** Various approaches have been proposed to handle such data, and can be grouped into different categories that we will develop in the related work section.
 
 ## Source Evidence Cues
 
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** Skip links are used to pass the features between intermediate layers of the encoder and the decoder.
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** The encoder part is the same as in KP-CNN, and the decoder part uses nearest upsampling to get the final pointwise features.
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** Skip links are used to pass the features between intermediate layers of the encoder and the decoder.
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** The encoder part is the same as in KP-CNN, and the decoder part uses nearest upsampling to get the final pointwise features.
 - **Detected method headings:** 3.4. Kernel Point Network Architectures (p. 5); Method (p. 15)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Skip links are used to pass the features between intermediate layers of the encoder and the decoder. | p. 5 (3.4. Kernel Point Network Architectures), p. 5 (3.4. Kernel Point Network Architectures) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The encoder part is the same as in KP-CNN, and the decoder part uses nearest upsampling to get the final pointwise features. | p. 5 (3.4. Kernel Point Network Architectures) |
@@ -59,12 +59,12 @@ PDF body method statement (p. 5 (3.4. Kernel Point Network Architectures), p. 5 
 
 ## Observation–State–Action Interface
 
-- **p. 1 / 1. Introduction - extractive PDF cue:** Input points with a constant scalar feature (in grey) are convolved through a KPConv that is defined by a set of kernel points (in black) ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** The kernel weights are thus carried by points, like the input features, and their area of influence is defined by a correlation function.
-- **p. 2 / 1. Introduction - extractive PDF cue:** The robustness of our convolution to varying densities is ensured by the combination of radius neighborhoods and regular subsampling of the input cloud [38].
-- **p. 1 / 1. Introduction - extractive PDF cue:** Other approaches use multilayer perceptrons (MLP) to process point clouds directly, following the idea proposed by [49, 26].
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** After the last layer, the features are aggregated by a global average pooling and processed by the fully connected and softmax layers like in an ...
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive PDF cue:** Combining analogy with successful image networks and empirical studies, we designed two network architectures for the classification and the segmentation tasks.
+- **p. 1 / 1. Introduction - extractive body cue:** Input points with a constant scalar feature (in grey) are convolved through a KPConv that is defined by a set of kernel points (in black) ...
+- **p. 2 / 1. Introduction - extractive body cue:** The kernel weights are thus carried by points, like the input features, and their area of influence is defined by a correlation function.
+- **p. 2 / 1. Introduction - extractive body cue:** The robustness of our convolution to varying densities is ensured by the combination of radius neighborhoods and regular subsampling of the input cloud [38].
+- **p. 1 / 1. Introduction - extractive body cue:** Other approaches use multilayer perceptrons (MLP) to process point clouds directly, following the idea proposed by [49, 26].
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** After the last layer, the features are aggregated by a global average pooling and processed by the fully connected and softmax layers like in an ...
+- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** Combining analogy with successful image networks and empirical studies, we designed two network architectures for the classification and the segmentation tasks.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -99,12 +99,12 @@ PDF body method statement (p. 5 (3.4. Kernel Point Network Architectures), p. 5 
 
 ## Failure and Ablation Link
 
-- **p. 6 / 4.1. 3D Shape Classification and Segmentation - extractive PDF cue:** For generalizability to real data, we only consider scores obtained without shape normals on ModelNet40 dataset.
-- **p. 6 / 4.2. 3D Scene Segmentation - extractive PDF cue:** SubSparseCNN score on Scannet was not reported in their original paper [9], so it is hard to compare without knowing their experimental setup.
-- **p. 7 / 4.4. Learned Features and Effective Receptive Field - extractive PDF cue:** Ablation study on Scannet validation set.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We conduct an ablation study to support our claim that deformable KPConv has a stronger descriptive power than rigid KPConv.
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Figure 11. Illustration of the deformations learned by a KPConv network with or without regularization.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We use Scannet dataset (same parameters as before) and use the official validation set, because the test set cannot be used for such evaluations.
+- **p. 6 / 4.1. 3D Shape Classification and Segmentation - extractive body cue:** For generalizability to real data, we only consider scores obtained without shape normals on ModelNet40 dataset.
+- **p. 6 / 4.2. 3D Scene Segmentation - extractive body cue:** SubSparseCNN score on Scannet was not reported in their original paper [9], so it is hard to compare without knowing their experimental setup.
+- **p. 7 / 4.4. Learned Features and Effective Receptive Field - extractive body cue:** Ablation study on Scannet validation set.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We conduct an ablation study to support our claim that deformable KPConv has a stronger descriptive power than rigid KPConv.
+- **p. 13 / Figure/Table caption - extractive body cue:** Figure 11. Illustration of the deformations learned by a KPConv network with or without regularization.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We use Scannet dataset (same parameters as before) and use the official validation set, because the test set cannot be used for such evaluations.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -118,7 +118,7 @@ PDF body method statement (p. 5 (3.4. Kernel Point Network Architectures), p. 5 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3.4. Kernel Point Network Architectures), p. 5 (3.4. Kernel Point Network Architectures), objective 본문 anchor 없음, temporal p. 5 (4.1. 3D Shape Classification and Segmentation), p. 6 (4.2. 3D Scene Segmentation), p. 6 (4.2. 3D Scene Segmentation), p. 7 (4.2. 3D Scene Segmentation), p. 8 (4.4. Learned Features and Effective Receptive Field).
+- **Evidence anchors reviewed:** method p. 5 (3.4. Kernel Point Network Architectures), p. 5 (3.4. Kernel Point Network Architectures), objective 본문 anchor 없음, temporal p. 5 (4.1. 3D Shape Classification and Segmentation), p. 6 (4.2. 3D Scene Segmentation), p. 6 (4.2. 3D Scene Segmentation), p. 7 (4.2. 3D Scene Segmentation), p. 8 (4.4. Learned Features and Effective Receptive Field).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

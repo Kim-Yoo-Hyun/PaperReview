@@ -2,22 +2,22 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=SBYCu5uJJf; PDF retrieval source: https://openreview.net/pdf/3c62afbe7e4670f87d9c26f52fd00d1be34082d5.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=SBYCu5uJJf; PDF retrieval source: https://arxiv.org/pdf/2506.03642. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments)): Figure 6: Two examples from VSI-Bench comparing predictions from Qwen2.5-VL-7B and Ours. this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that spatial fine-tuning can be harmonized ...
+PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (Figure/Table caption), p. 9 (5 Experiments), p. 6 (5 Experiments)): Results show that this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that spatial fine-tuning can be harmonized with broader capabilities through data balancing.
 
 ## Evaluation Body Digest
 
-- **p. 9 / 5 Experiments - extractive PDF cue:** Importantly, both datasets and the VSI-Bench benchmark originate from the same source (i.e., ScanNet [31]), resulting in minimal data discrepancy.
-- **p. 8 / 5 Experiments - extractive PDF cue:** These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets.
-- **p. 8 / 5 Experiments - extractive PDF cue:** To investigate whether enhancing visualspatial capabilities via fine-tuning adversely impacts a model's general performance, we conducted evaluations on MVBench [55] and Video-MME [56], two broad ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** As shown in Table 4, fine-tuning on either of these datasets results in lower performance compared to ScanForgeQA, and even reduces accuracy on tasks involving ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B.
-- **p. 7 / 5 Experiments - extractive PDF cue:** 5.1 Performace Comparison We investigated the following five key questions to assess our approach: Q1: Which scene representation format is most interpretable by VLMs?
-- **p. 8 / 5 Experiments - extractive PDF cue:** Base +ScanForgeQA +5% +10% 69.0 69.5 70.0 70.5 71.0 71.5 72.0 72.5 Accuracy (%) MVBench Video-MME(w sub) Figure 4: Performance of Qwen2.5-VL-7B on MVBench and ...
-- **p. 8 / 5 Experiments - extractive PDF cue:** This contrast underscores the potential of VLMs to complement human perception in spatial tasks.
+- **p. 9 / 5 Experiments - extractive body cue:** Importantly, both datasets and the VSI-Bench benchmark originate from the same source (i.e., ScanNet [31]), resulting in minimal data discrepancy.
+- **p. 8 / 5 Experiments - extractive body cue:** These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets.
+- **p. 8 / 5 Experiments - extractive body cue:** To investigate whether enhancing visualspatial capabilities via fine-tuning adversely impacts a model's general performance, we conducted evaluations on MVBench [52] and Video-MME [53], two broad ...
+- **p. 9 / 5 Experiments - extractive body cue:** As shown in Table 3, fine-tuning on either of these datasets results in lower performance compared to ScanForgeQA, and even reduces accuracy on tasks involving ...
+- **p. 6 / 5 Experiments - extractive body cue:** The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B.
+- **p. 7 / 5 Experiments - extractive body cue:** Consequently, we adopted the textual description format in subsequent experiments as the default scene representation.
+- **p. 7 / 5 Experiments - extractive body cue:** Method Room Size Avg Qwen2.5-VL-7B 38.9 37.2 +SQA3D 38.8 38.9 +ScanQA 38.5 39.1 +ScanForgeQA 44.9 43.3 Qwen2.5-VL-72B 49.8 39.2 +CoT-Question 50.6 41.3 +CoT-Scene 52.1 42.7 ...
+- **p. 7 / 5 Experiments - extractive body cue:** Method OpenEQA ScanQA SQA3D Acc/Score BLEU-1 EM-1 Qwen2.5-VL-7B 50.1/3.1 32.5 17.2 +SpatialMind 53.7/3.2 33.1 19.8 +ScanForgeQA 56.2/3.3 34.8 23.3 +Both 58.6/3.5 37.9 24.5 Qwen2.5-VL-72B 53.8/3.2 ...
 
 ## Evaluation Type and Scope
 
@@ -26,43 +26,44 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
 - **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
-- **Detected evaluation headings:** 5 Experiments (p. 7); A Experimental Settings (p. 22); A.1 Benchmarks (p. 22); B More Experimental Results (p. 24).
+- **Detected evaluation headings:** 5 Experiments (p. 6); 5 Experiments (p. 16); A.1 Benchmarks (p. 16); B More Experimental Results (p. 16); A Experimental Settings (p. 17); A.1 Benchmarks (p. 17); B More Experimental Results (p. 19).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 6: Two examples from VSI-Bench comparing predictions from Qwen2.5-VL-7B and Ours. this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that ... | p. 9 (Figure/Table caption) |
-| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results, reported in the "+Both" row of Table 2, show consistent performance improvements across all evaluated models. | p. 8 (5 Experiments) |
-| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Figure 4, fine-tuning with ScanForgeQA slightly improves performance on MVBench but leads to a marginal drop on Video-MME. | p. 8 (5 Experiments) |
-| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 4, both variants independently improve spatial reasoning performance, but are less effective than the full combined prompt. | p. 9 (5 Experiments) |
-| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by 7 | p. 7 (5 Experiments) |
+| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Results show that this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that spatial fine-tuning can be harmonized with broader capabilities through ... | p. 8 (5 Experiments) |
+| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by +Grid, while +Map yields the least improvement. | p. 7 (5 Experiments) |
+| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results, reported in the "+Both" row of Table 1, show consistent performance improvements across all evaluated models. | p. 8 (5 Experiments) |
+| Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 6: Two examples from VSI-Bench comparing predictions from Qwen2.5-VL-7B and Ours. On prompting strategy. To isolate the contributions of each component in the ... | p. 9 (Figure/Table caption) |
+| 5 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method consistently outperforms the baseline across all settings, with performance further improving as the number of frames and resolution increase. | p. 9 (5 Experiments) |
 
 ## Dataset / Benchmark Role
 
-- **p. 9 / 5 Experiments - extractive PDF cue:** Importantly, both datasets and the VSI-Bench benchmark originate from the same source (i.e., ScanNet [31]), resulting in minimal data discrepancy.
-- **p. 8 / 5 Experiments - extractive PDF cue:** These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets.
-- **p. 8 / 5 Experiments - extractive PDF cue:** To investigate whether enhancing visualspatial capabilities via fine-tuning adversely impacts a model's general performance, we conducted evaluations on MVBench [55] and Video-MME [56], two broad ...
-- **p. 9 / 5 Experiments - extractive PDF cue:** As shown in Table 4, fine-tuning on either of these datasets results in lower performance compared to ScanForgeQA, and even reduces accuracy on tasks involving ...
-- **p. 7 / 5 Experiments - extractive PDF cue:** The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B.
-- **p. 7 / 5 Experiments - extractive PDF cue:** 5.1 Performace Comparison We investigated the following five key questions to assess our approach: Q1: Which scene representation format is most interpretable by VLMs?
+- **p. 9 / 5 Experiments - extractive body cue:** Importantly, both datasets and the VSI-Bench benchmark originate from the same source (i.e., ScanNet [31]), resulting in minimal data discrepancy.
+- **p. 8 / 5 Experiments - extractive body cue:** These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets.
+- **p. 8 / 5 Experiments - extractive body cue:** To investigate whether enhancing visualspatial capabilities via fine-tuning adversely impacts a model's general performance, we conducted evaluations on MVBench [52] and Video-MME [53], two broad ...
+- **p. 9 / 5 Experiments - extractive body cue:** As shown in Table 3, fine-tuning on either of these datasets results in lower performance compared to ScanForgeQA, and even reduces accuracy on tasks involving ...
+- **p. 6 / 5 Experiments - extractive body cue:** The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B.
+- **p. 7 / 5 Experiments - extractive body cue:** Consequently, we adopted the textual description format in subsequent experiments as the default scene representation.
+- **p. 7 / 5 Experiments - extractive body cue:** Method Room Size Avg Qwen2.5-VL-7B 38.9 37.2 +SQA3D 38.8 38.9 +ScanQA 38.5 39.1 +ScanForgeQA 44.9 43.3 Qwen2.5-VL-72B 49.8 39.2 +CoT-Question 50.6 41.3 +CoT-Scene 52.1 42.7 ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Illustration of our SpatailMind prompting strategy. 3 SpatialMind Prompting Strategy As shown in Figure 1, our SpatialMind prompting strategy consists of two main ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: The pipeline of ScanForgeQA data construction. object content (e.g., aisle, stairwell). The final dataset consists of 34,116 single-room scenes across six common categories: ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of 3D QA Datasets
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Effects of different scene expression. Spatial Reasoning. This category targets inter- object spatial relationships, requiring models to infer positional and geometric properties such ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2: Performance comparison on VSI-Bench. † indicates results on VSI-Bench (tiny) set.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Performance comparison on the EM-EQA subset of OpenEQA and the validation set of ScanQA and SQA3D.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4: Effects of different fine- tuning data and prompting strategy.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4: Performance of Qwen2.5-VL-7B on MVBench and Video-MME. 8 16 24 32 Frame 128
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of our SpatailMind prompting strategy. for real-world deployment. In this context, we further investigate whether purely vision-based inputs can provide a more ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: The pipeline of ScanForgeQA data construction. Separation. We modify existing scene datasets to leverage available resources effectively. Specifi- cally, we utilize the 3D-FRONT ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Effects of different scene expression. Spatial Reasoning. This category targets inter- object spatial relationships, requiring models to infer positional and geometric properties such ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison on VSI-Bench. † indicates results on VSI-Bench (tiny) set.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Performance comparison on the EM-EQA subset of OpenEQA and the validation set of ScanQA and SQA3D.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Effects of different fine- tuning data and prompting strategy.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Performance of Qwen2.5-VL-7B on MVBench and Video-MME. 8 16 24 32 Frame 128
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Ablation study of Qwen2.5-VL-7B under varying numbers of frames and resolution. across a range of VLMs, varying in architectures, parameter size, and openness ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Importantly, both datasets and the VSI-Bench benchmark originate from the same source (i.e., ScanNet [31]), resulting in minimal data discrepancy. | embodiment, simulator version and control stack | p. 9 (5 Experiments), p. 8 (5 Experiments) |
 | Task/environment | These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets. | reset, timeout, object/scene variation | p. 8 (5 Experiments), p. 8 (5 Experiments) |
@@ -73,14 +74,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
+| Method OpenEQA ScanQA SQA3D Acc/Score BLEU-1 EM-1 Qwen2.5-VL-7B 50.1/3.1 32.5 17.2 +SpatialMind 53.7/3.2 33.1 19.8 +ScanForgeQA 56.2/3.3 34.8 23.3 +Both 58.6/3.5 37.9 24.5 Qwen2.5-VL-72B ... | definition/direction/unit from same section | p. 7 (5 Experiments) |
+| Our enhanced variant, benefiting from both structured prompting and spatially grounded fine-tuning, demonstrates notable improvements in accuracy and reasoning robustness. | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | Base +ScanForgeQA +5% +10% 69.0 69.5 70.0 70.5 71.0 71.5 72.0 72.5 Accuracy (%) MVBench Video-MME(w sub) Figure 4: Performance of Qwen2.5-VL-7B on MVBench ... | definition/direction/unit from same section | p. 8 (5 Experiments) |
-| As shown in Table 4, fine-tuning on either of these datasets results in lower performance compared to ScanForgeQA, and even reduces accuracy on tasks ... | definition/direction/unit from same section | p. 9 (5 Experiments) |
+| As shown in Table 3, fine-tuning on either of these datasets results in lower performance compared to ScanForgeQA, and even reduces accuracy on tasks ... | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | This contrast underscores the potential of VLMs to complement human perception in spatial tasks. | definition/direction/unit from same section | p. 8 (5 Experiments) |
-| To evaluate the robustness of our approach, we analyzed performance sensitivity to the number of input frames and image resolution. | definition/direction/unit from same section | p. 9 (5 Experiments) |
-| Figure 7: A complete example illustrating the visual prompting process with intermediate outputs. such as "What is between the sofa and the table?" or ... | definition/direction/unit from same section | p. 24 (Figure/Table caption) |
-| Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and ... | definition/direction/unit from same section | p. 25 (Figure/Table caption) |
-| Figure 1: Illustration of our SpatailMind prompting strategy. 3 SpatialMind Prompting Strategy As shown in Figure 1, our SpatialMind prompting strategy consists of two ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
-| Figure 3: Effects of different scene expression. Spatial Reasoning. This category targets inter- object spatial relationships, requiring models to infer positional and geometric properties ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
+| Figure 7: A complete example illustrating the visual prompting process with intermediate outputs. such as "What is between the sofa and the table?" or ... | definition/direction/unit from same section | p. 19 (Figure/Table caption) |
+| Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
+| How do SpatialMind and ScanForgeQA impact VLM performance? | definition/direction/unit from same section | p. 7 (5 Experiments) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -89,11 +90,11 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Our method consistently outperforms the baseline across all settings, with performance further improving as the number of frames and resolution increase. | comparison identity and matched condition | p. 9 (5 Experiments) |
-| Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by 7 | comparison identity and matched condition | p. 7 (5 Experiments) |
-| The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B. | comparison identity and matched condition | p. 7 (5 Experiments) |
+| The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B. | comparison identity and matched condition | p. 6 (5 Experiments) |
+| Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by +Grid, while +Map yields the least improvement. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | For instance, Qwen2.5-VL-7B gains 6.1% from fine-tuning, compared to only 2.0% from prompting. | comparison identity and matched condition | p. 8 (5 Experiments) |
+| Results show that this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that spatial fine-tuning can be harmonized with broader capabilities through ... | comparison identity and matched condition | p. 8 (5 Experiments) |
 | 5.3 Qualitative Analysis In Figure 6, we presented two illustrative examples from VSI-Bench, comparing predictions from the baseline Qwen2.5-VL-7B and our enhanced variant (+Both). | comparison identity and matched condition | p. 9 (5 Experiments) |
-| 8 16 24 32 Frame 128 256 384 512 Resolution 4 5 6 7 Gain (+Both - Base) 4.5 5.0 5.5 6.0 6.5 Figure ... | comparison identity and matched condition | p. 8 (5 Experiments) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -106,37 +107,36 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| As shown in Table 4, both variants independently improve spatial reasoning performance, but are less effective than the full combined prompt. | component/input/data sensitivity | p. 9 (5 Experiments) |
-| 5.2 Ablation Study In this section, we explored the impact of various design choices, including prompting strategies, fine-tuning datasets, frame sampling strategies, and input ... | component/input/data sensitivity | p. 9 (5 Experiments) |
-| Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by 7 | component/input/data sensitivity | p. 7 (5 Experiments) |
-| 8 16 24 32 Frame 128 256 384 512 Resolution 4 5 6 7 Gain (+Both - Base) 4.5 5.0 5.5 6.0 6.5 Figure ... | component/input/data sensitivity | p. 8 (5 Experiments) |
-| Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and ... | component/input/data sensitivity | p. 25 (Figure/Table caption) |
-| Does fine-tuning affect performance on other tasks? | component/input/data sensitivity | p. 8 (5 Experiments) |
+| Figure 6: Two examples from VSI-Bench comparing predictions from Qwen2.5-VL-7B and Ours. On prompting strategy. To isolate the contributions of each component in the ... | component/input/data sensitivity | p. 9 (Figure/Table caption) |
+| Figure 5: Ablation study of Qwen2.5-VL-7B under varying numbers of frames and resolution. across a range of VLMs, varying in architectures, parameter size, and ... | component/input/data sensitivity | p. 8 (Figure/Table caption) |
+| 5.2 Ablation Study In this section, we explored the impact of various design choices, including prompting strategies, fine-tuning datasets, frame sampling strategies, and input ... | component/input/data sensitivity | p. 8 (5 Experiments) |
+| Our enhanced variant, benefiting from both structured prompting and spatially grounded fine-tuning, demonstrates notable improvements in accuracy and reasoning robustness. | component/input/data sensitivity | p. 9 (5 Experiments) |
+| Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by +Grid, while +Map yields the least improvement. | component/input/data sensitivity | p. 7 (5 Experiments) |
+| Figure 1: Illustration of our SpatailMind prompting strategy. for real-world deployment. In this context, we further investigate whether purely vision-based inputs can provide a ... | component/input/data sensitivity | p. 3 (Figure/Table caption) |
 
 ## Main Results / Claim–Evidence Map
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Our contributions are summarized as follows: • We introduce SpatialMind, a spatial prompting strategy that decomposes spatial reasoning into structured steps, enabling pre-trained VLMs ... | Figure 6: Two examples from VSI-Bench comparing predictions from Qwen2.5-VL-7B and Ours. this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that ... | PDF body cue; verify exact table/figure and matched conditions | p. 9 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments) |
-| Primary metric/result | The results, reported in the "+Both" row of Table 2, show consistent performance improvements across all evaluated models. | numeric claim only at cited anchor | p. 8 (5 Experiments) |
+| Our contributions are summarized as follows: • We introduce SpatialMind, a spatial prompting strategy that decomposes spatial reasoning into structured steps, enabling pre-trained VLMs ... | Results show that this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that spatial fine-tuning can be harmonized with broader capabilities through ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (Figure/Table caption), p. 9 (5 Experiments), p. 6 (5 Experiments) |
+| Primary metric/result | Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by +Grid, while +Map yields the least improvement. | numeric claim only at cited anchor | p. 7 (5 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 5 Experiments - extractive PDF cue:** 8 16 24 32 Frame 128 256 384 512 Resolution 4 5 6 7 Gain (+Both - Base) 4.5 5.0 5.5 6.0 6.5 Figure 5: ...
-- **p. 5 / A B - extractive PDF cue:** We define a circular trajectory centered in the room at a height of approximately 1.5 meters, corresponding to typical adult eye level.
-- **p. 5 / A B - extractive PDF cue:** An image is captured every 5 degrees of rotation, resulting in 72 frames per orbit scan.
-- **p. 5 / A B - extractive PDF cue:** For each path, the camera first performs a 360-degree rotation at the starting point, capturing an image every 12 degrees (30 images total).
-- **p. 5 / A B - extractive PDF cue:** It then traverses the path toward the destination, during which 12 frames are uniformly sampled.
-- **p. 5 / A B - extractive PDF cue:** In total, 72 frames are recorded per path.
+- **p. 8 / 5 Experiments - extractive body cue:** 8 16 24 32 Frame 128 256 384 512 Resolution 4 5 6 7 Gain (+Both - Base) 4.5 5.0 5.5 6.0 6.5 Figure 5: ...
+- **p. 5 / A B - extractive body cue:** We define a circular trajectory centered in the room at a height of approximately 1.5 meters, corresponding to typical adult eye level.
+- **p. 5 / A B - extractive body cue:** An image is captured every 5 degrees of rotation, resulting in 72 frames per orbit scan.
+- **p. 5 / A B - extractive body cue:** For each path, the camera first performs a 360-degree rotation at the starting point, capturing an image every 12 degrees (30 images total).
+- **p. 5 / A B - extractive body cue:** It then traverses the path toward the destination, during which 12 frames are uniformly sampled.
+- **p. 6 / A B - extractive body cue:** In total, 72 frames are recorded per path.
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
-| body limitation/failure cue | For embedding (e.g., fitting an item into a drawer), the object's height must also fall within the bounds of the specific container's volume. | p. 6 (A B) |
 | body limitation/failure cue | In Case (a), Qwen2.5-VL-7B fails to produce the correct directional prediction, likely due to its limited capacity for 3D spatial reasoning. | p. 9 (5 Experiments) |
 | body limitation/failure cue | Case (b) involves a simpler spatial reasoning task, however, Qwen2.5-VL-7B still fails, potentially due to insufficient object localization. | p. 9 (5 Experiments) |
 | body limitation/failure cue | These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets. | p. 8 (5 Experiments) |
-| body limitation/failure cue | Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and ... | p. 25 (Figure/Table caption) |
+| body limitation/failure cue | Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and ... | p. 20 (Figure/Table caption) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -162,13 +162,12 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 
 ## Limitations and Verification Questions
 
-- **p. 6 / A B - extractive PDF cue:** For embedding (e.g., fitting an item into a drawer), the object's height must also fall within the bounds of the specific container's volume.
-- **p. 9 / 5 Experiments - extractive PDF cue:** In Case (a), Qwen2.5-VL-7B fails to produce the correct directional prediction, likely due to its limited capacity for 3D spatial reasoning.
-- **p. 9 / 5 Experiments - extractive PDF cue:** Case (b) involves a simpler spatial reasoning task, however, Qwen2.5-VL-7B still fails, potentially due to insufficient object localization.
-- **p. 8 / 5 Experiments - extractive PDF cue:** These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets.
-- **p. 25 / Figure/Table caption - extractive PDF cue:** Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and generalizability ...
+- **p. 9 / 5 Experiments - extractive body cue:** In Case (a), Qwen2.5-VL-7B fails to produce the correct directional prediction, likely due to its limited capacity for 3D spatial reasoning.
+- **p. 9 / 5 Experiments - extractive body cue:** Case (b) involves a simpler spatial reasoning task, however, Qwen2.5-VL-7B still fails, potentially due to insufficient object localization.
+- **p. 8 / 5 Experiments - extractive body cue:** These results validate the robustness of our approach and confirm its applicability across diverse spatial tasks and datasets.
+- **p. 20 / Figure/Table caption - extractive body cue:** Figure 8: Distribution of room types in the ScanForgeQA dataset. are consistent with those reported in our main analysis, further reinforcing the effectiveness and generalizability ...
 
-- **PDF anchors reviewed:** datasets p. 9 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), baselines p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), results p. 9 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 9 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), metrics p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 19 (Figure/Table caption), baselines p. 9 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), results p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (Figure/Table caption), p. 9 (5 Experiments), p. 6 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

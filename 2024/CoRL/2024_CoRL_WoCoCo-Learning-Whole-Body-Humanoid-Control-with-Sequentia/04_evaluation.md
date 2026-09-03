@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Czs2xH9114; PDF retrieval source: https://arxiv.org/pdf/2406.06005. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Czs2xH9114; PDF retrieval source: https://arxiv.org/pdf/2406.06005. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3: Learned whole-body box loco-manipulation behaviors in the real world. Results. As shown in Fig. 3, the humanoid can efficiently turn, transition seamlessly ... | p. 6 (Figure/Table caption) |
 | 1 Introduction | EMPIRICAL / REAL-ROBOT OR HARDWARE | By defining the contact sequence solely on the hands, we leverage RL to achieve robust locomotion while simplifying the whole task. | p. 6 (1 Introduction) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Left Middle Right Figure 4: Learned dancing motions in simulation and the real-world. | embodiment, simulator version and control stack | p. 7 (1 Introduction), p. 7 (1 Introduction) |
 | Task/environment | Each end effector's goal region is bounded by a 2-d square. push recover direction Figure 5: Learned cliffside climbing behavior in simulation and the ... | reset, timeout, object/scene variation | p. 7 (1 Introduction), p. 8 (1 Introduction) |
@@ -153,7 +153,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 - **p. 5 / 1 Introduction - extractive body cue:** 2, demonstrating the humanoid's capability to perform versatile continuous jumping while tracking upper body postures, and robustness against perturbations such as unseen gravels.
 - **p. 6 / 1 Introduction - extractive body cue:** It can also recover after stepping on a belt tied to itself, showcasing robustness.
 
-- **PDF anchors reviewed:** datasets p. 7 (1 Introduction), p. 7 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (1 Introduction), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (1 Introduction), baselines p. 8 (Figure/Table caption), p. 8 (1 Introduction), p. 6 (1 Introduction), results p. 6 (Figure/Table caption), p. 6 (1 Introduction), p. 8 (1 Introduction), p. 7 (Figure/Table caption), p. 7 (1 Introduction).
+- **Evidence anchors reviewed:** datasets p. 7 (1 Introduction), p. 7 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (1 Introduction), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (1 Introduction), baselines p. 8 (Figure/Table caption), p. 8 (1 Introduction), p. 6 (1 Introduction), results p. 6 (Figure/Table caption), p. 6 (1 Introduction), p. 8 (1 Introduction), p. 7 (Figure/Table caption), p. 7 (1 Introduction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Learned dancing motions in simulation and the real-world. Black bounding boxes indicate the foot contact goals and the hand task goals. Reward. There are two task-related rewards, one ... (p. 7, Figure/Table caption).
+- **Metric evidence:** There are two task-related reward terms, which incentivize minimizing the distances between the hands and the box, and between the box and its destination. (p. 6, 1 Introduction).
+- **Baseline/ablation evidence:** In comparison, our curiosity rewards achieves effective exploration without overfitting specific behaviors. (p. 8, 1 Introduction).
+- **Failure/negative evidence:** 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail. (p. 8, 1 Introduction).

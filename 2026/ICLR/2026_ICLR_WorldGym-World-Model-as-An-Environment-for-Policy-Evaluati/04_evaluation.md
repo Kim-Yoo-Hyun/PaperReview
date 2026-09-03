@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10008029; PDF retrieval source: https://arxiv.org/pdf/2506.00613. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10008029; PDF retrieval source: https://arxiv.org/pdf/2506.00613. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground ... | p. 17 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: Success Rates of different model versions in WorldGym. We evaluate different generations of Octo and OpenVLA in the world model, showing that ... | p. 6 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We suspect that OpenVLA consistently outperforms Octo and RT-1-X on OOD language tasks due to its strong VLM backbone and richer robot pretraining dataset ... | embodiment, simulator version and control stack | p. 8 (1 INTRODUCTION), p. 8 (1 INTRODUCTION) |
 | Task/environment | Put orange on plate Image Model Put orange on plate Legend Image Edit Prompt Robot Policy Instruction (a) add an orange Put orange on ... | reset, timeout, object/scene variation | p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground truth ...
 - **p. 24 / Figure/Table caption - extractive body cue:** Table 6: Detailed Bridge OOD Image task results. OpenVLA appears to be more robust across the different OOD settings of object generalization, distractions and classification. ...
 
-- **PDF anchors reviewed:** datasets p. 8 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), metrics p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), baselines p. 8 (1 INTRODUCTION), p. 22 (Figure/Table caption), p. 8 (1 INTRODUCTION), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 25 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 23 (Figure/Table caption), p. 22 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), metrics p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), baselines p. 8 (1 INTRODUCTION), p. 22 (Figure/Table caption), p. 8 (1 INTRODUCTION), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 25 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 23 (Figure/Table caption), p. 22 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Policy Evaluations Results on Bridge OOD Language Tasks. "Move the pot to the counter" is perhaps the most challenging because the Bridge dataset does not contain trajectories which ... (p. 9, Figure/Table caption).
+- **Metric evidence:** Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground truth task success labels. GPT-4o achieves ... (p. 17, Figure/Table caption).
+- **Baseline/ablation evidence:** Additionally, even without access to an image editing model, we demonstrate that WorldGym can be used to evaluate policies' performance on OOD language instructions. (p. 8, 1 INTRODUCTION).
+- **Failure/negative evidence:** Notably, GPT-4o achieves very low false positives (i.e., the rollout is a failure but the VLM thinks it is a success), which is highly useful in policy evaluation. (p. 18, B.2 VALIDATING VLM SUCCESS PREDICTIONS).

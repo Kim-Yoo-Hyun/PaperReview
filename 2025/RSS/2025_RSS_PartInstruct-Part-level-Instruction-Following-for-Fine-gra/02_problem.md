@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p148.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p148.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (Abstract), p. 1 (Abstract)): Kine-grained robot manipula
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Kine-grained robot manipulation, such as lifting and rotating a bottle to display the label on the cap, requires robust reasoning about object ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | for the low-level action policy based on the task instruction and the current observation. | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| Observation / input | for the low-level action policy based on the task instruction and the current observation. | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | low-level, action, policy, task, instruction, current, observation, Diffuser, Actor, D-DA | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | skill, instruction, low-level, action, policy, then, generates, actions | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | standardized episode e and interface; body terms: low-level, action, policy, task, instruction, current, observation, Diffuser, Actor, D-DA | p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action) |
 | Decision / output variable | method trajectory/action; body terms: Specifically, bi-level, planner, consists, modules, high-level, task, low-level | p. 7 (B. Bi-level Planning), p. 4 (A. Problem Setup), p. 6 (A. End-to-End Policy Learning) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (Abstract), p. 1 (Abstract)): Kine-grained robot manipula
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 7 (1 Actions .ow-Level Action), p. 7 (B. Bi-level Planning) |
 | Success / guarantee | comparable score and protocol validity | p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -46,7 +46,7 @@ PDF body framing (p. 1 (Abstract), p. 1 (Abstract)): Kine-grained robot manipula
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 7 (B. Bi-level Planning), p. 4 (A. Problem Setup), p. 6 (A. End-to-End Policy Learning)): Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy.
+PDF body contribution framing (p. 7 (B. Bi-level Planning), p. 4 (A. Problem Setup), p. 6 (A. End-to-End Policy Learning)): Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy.
 
 - **p. 4 / A. Problem Setup - extractive body cue:** ‘To develop an embodied agent capable of executing tasks defined by g, we hypothesize that it would be beneficial to star, With a set of ...
 - **p. 6 / A. End-to-End Policy Learning - extractive body cue:** Diffusion Policy (DP) [5] represents a visuomotor policy as a conditional denoising diffusion process in the action space, which allows it to effectively handle multimodal ...
@@ -64,12 +64,21 @@ PDF contribution framing (p. 7 (B. Bi-level Planning), p. 4 (A. Problem Setup), 
 
 ## Position in the Robotics Loop
 
-benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 8 (B. Bi-level Planning). The downstream handoff is claimed only when the body describes it.
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 8 (B. Bi-level Planning). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), interface p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 8 (B. Bi-level Planning), objective p. 7 (1 Actions .ow-Level Action), p. 7 (B. Bi-level Planning).
+- **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), interface p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 8 (B. Bi-level Planning), objective p. 7 (1 Actions .ow-Level Action), p. 7 (B. Bi-level Planning).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Our experimental results demonstrate that the part-level instruction following tasks in our Partinstruct benchmark remains extremely difficult for state-of-the-art end-to-end vision-language policy learning ‘methods. ‘There are several ... (p. 9, V. Discussion).
+- **Formulation-changing contribution:** In this work, we introduce Partinstruct, the first large-scale benchmark for both (p. 1, Abstract).
+- **Assumption/failure evidence:** The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

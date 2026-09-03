@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p152.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p152.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 12 (C. Vision-Language-Action Large Models), p. 10
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | The first category consists of tasks similar to those performed by the single-arm Franka robot, which are intended to evaluate the model's ... | p. 12 (C. Vision-Language-Action Large Models), p. 10 (B. Single-task Imitation Learning Models) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | In terms of the im tation learning algorithms, we used three well-known and commonly used methods: ACT [116], Diffusion Policy {17}, and ... | p. 10 (B. Single-task Imitation Learning Models), p. 10 (B. Single-task Imitation Learning Models) |
@@ -79,7 +79,7 @@ PDF body method statement (p. 12 (C. Vision-Language-Action Large Models), p. 10
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | We calculate the average task horizon (the number of time steps in one trajectory) for each embodiment, as shown in Figure 1(b). | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | In contrast, tasks from Tien Kung and AgileX have longer trajectories (over 500 time steps), better suited for longhorizon task training and ... | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | RoboMIND includes over 96 object categories from five usage scenarios, as shown in Figure 1(d), covering most daily life settings: domestic, industrial, ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 12 (C. Vision-Language-Action Large Models), p. 10
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 12 (C. Vision-Language-Action Large Models), p. 10 (B. Single-task Imitation Learning Models), p. 10 (B. Single-task Imitation Learning Models), p. 12 (C. Vision-Language-Action Large Models), p. 11 (B. Single-task Imitation Learning Models), p. 11 (B. Single-task Imitation Learning Models), objective p. 11 (B. Single-task Imitation Learning Models), temporal p. 7 (A. Quantitative Analysis), p. 7 (A. Quantitative Analysis), p. 1 (Front matter), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION).
+- **Evidence anchors reviewed:** method p. 12 (C. Vision-Language-Action Large Models), p. 10 (B. Single-task Imitation Learning Models), p. 10 (B. Single-task Imitation Learning Models), p. 12 (C. Vision-Language-Action Large Models), p. 11 (B. Single-task Imitation Learning Models), p. 11 (B. Single-task Imitation Learning Models), objective p. 11 (B. Single-task Imitation Learning Models), temporal p. 7 (A. Quantitative Analysis), p. 7 (A. Quantitative Analysis), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In terms of the im tation learning algorithms, we used three well-known and commonly used methods: ACT [116], Diffusion Policy {17}, and BAKU [39]. (p. 10, B. Single-task Imitation Learning Models).
+- **Objective/update evidence:** This discrepancy could be attributed to the hyper-parameter settings from the original BAKU paper, which is primarily optimized for simulation environments rather than real-world robotic platforms tested in our experiments. (p. 11, B. Single-task Imitation Learning Models).
+- **Temporal/runtime evidence:** We calculate the average task horizon (the number of time steps in one trajectory) for each embodiment, as shown in Figure 1(b). (p. 7, A. Quantitative Analysis).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

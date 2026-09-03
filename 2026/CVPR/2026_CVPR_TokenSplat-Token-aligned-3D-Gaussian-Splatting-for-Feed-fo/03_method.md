@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 
 ## Method Body Digest
 
-- **p. 3 / 3.2. Architecture - extractive PDF cue:** The outputs of these decoders are then utilized in two parallel branches: the Camera Pose Estimation Head predicts per-view camera transformations, while the Token-aligned Gaussian ...
-- **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive PDF cue:** Multi-scale features {Fi}nl i=1 from different layers of the Transformer decoder corresponding to the fused tokens are first upsampled and linearly projected: ˆFi = Proji(Fi), ...
-- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive PDF cue:** The ADF-Decoder consists of 12 decoder blocks.
-- **p. 3 / 3.2. Architecture - extractive PDF cue:** To establish a canonical scene representation, the reference view I1 is decoded using a ViT decoder with cross-attention to other views.
-- **p. 2 / 3.1. Problem Formulation - extractive PDF cue:** We aim to learn a feed-forward network that jointly reconstructs 3D Gaussians and predicts camera poses from a sequence of N unposed images {Ii}N i=1, ...
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The overall camera pose loss is: Lpose = LMSE(P, ˆP) + Lalign.
-- **p. 3 / 3.1. Problem Formulation - extractive PDF cue:** (2) During training, both the 3D Gaussian attributes and camera poses are jointly optimized.
+- **p. 3 / 3.2. Architecture - extractive body cue:** The outputs of these decoders are then utilized in two parallel branches: the Camera Pose Estimation Head predicts per-view camera transformations, while the Token-aligned Gaussian ...
+- **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive body cue:** Multi-scale features {Fi}nl i=1 from different layers of the Transformer decoder corresponding to the fused tokens are first upsampled and linearly projected: ˆFi = Proji(Fi), ...
+- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** The ADF-Decoder consists of 12 decoder blocks.
+- **p. 3 / 3.2. Architecture - extractive body cue:** To establish a canonical scene representation, the reference view I1 is decoded using a ViT decoder with cross-attention to other views.
+- **p. 2 / 3.1. Problem Formulation - extractive body cue:** We aim to learn a feed-forward network that jointly reconstructs 3D Gaussians and predicts camera poses from a sequence of N unposed images {Ii}N i=1, ...
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The overall camera pose loss is: Lpose = LMSE(P, ˆP) + Lalign.
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** (2) During training, both the 3D Gaussian attributes and camera poses are jointly optimized.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our main contributions are as follows: • We propose TokenSplat, a feed-forward pose-free reconstruction framework that jointly estimates camera poses and 3D Gaussian ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** To address these challenges, we propose TokenSplat, a feed-forward 3D Gaussian splatting framework that reconstructs 3D scenes from an arbitrary number of unposed images while ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To jointly optimize 3D reconstruction and camera pose estimation within a feed-forward architecture, we introduce learnable camera tokens and an Asymmetric DualFlow Decoder (ADF-Decoder) that ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We propose TokenSplat, a feed-forward pose-free reconstruction framework that jointly estimates camera poses and 3D Gaussian ...
+- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we propose TokenSplat, a feed-forward 3D Gaussian splatting framework that reconstructs 3D scenes from an arbitrary number of unposed images while ...
+- **p. 2 / 1. Introduction - extractive body cue:** To jointly optimize 3D reconstruction and camera pose estimation within a feed-forward architecture, we introduce learnable camera tokens and an Asymmetric DualFlow Decoder (ADF-Decoder) that ...
 
 ## Source Evidence Cues
 
-- **p. 3 / 3.2. Architecture - extractive PDF cue:** The outputs of these decoders are then utilized in two parallel branches: the Camera Pose Estimation Head predicts per-view camera transformations, while the Token-aligned Gaussian ...
-- **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive PDF cue:** Multi-scale features {Fi}nl i=1 from different layers of the Transformer decoder corresponding to the fused tokens are first upsampled and linearly projected: ˆFi = Proji(Fi), ...
-- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive PDF cue:** The ADF-Decoder consists of 12 decoder blocks.
-- **p. 3 / 3.2. Architecture - extractive PDF cue:** To establish a canonical scene representation, the reference view I1 is decoded using a ViT decoder with cross-attention to other views.
-- **p. 2 / 3.1. Problem Formulation - extractive PDF cue:** We aim to learn a feed-forward network that jointly reconstructs 3D Gaussians and predicts camera poses from a sequence of N unposed images {Ii}N i=1, ...
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The overall camera pose loss is: Lpose = LMSE(P, ˆP) + Lalign.
+- **p. 3 / 3.2. Architecture - extractive body cue:** The outputs of these decoders are then utilized in two parallel branches: the Camera Pose Estimation Head predicts per-view camera transformations, while the Token-aligned Gaussian ...
+- **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive body cue:** Multi-scale features {Fi}nl i=1 from different layers of the Transformer decoder corresponding to the fused tokens are first upsampled and linearly projected: ˆFi = Proji(Fi), ...
+- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** The ADF-Decoder consists of 12 decoder blocks.
+- **p. 3 / 3.2. Architecture - extractive body cue:** To establish a canonical scene representation, the reference view I1 is decoded using a ViT decoder with cross-attention to other views.
+- **p. 2 / 3.1. Problem Formulation - extractive body cue:** We aim to learn a feed-forward network that jointly reconstructs 3D Gaussians and predicts camera poses from a sequence of N unposed images {Ii}N i=1, ...
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The overall camera pose loss is: Lpose = LMSE(P, ˆP) + Lalign.
 - **Detected method headings:** 3. Method (p. 2); 3.2. Architecture (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The outputs of these decoders are then utilized in two parallel branches: the Camera Pose Estimation Head predicts per-view camera transformations, while ... | p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for Scene Reconstruction) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Multi-scale features {Fi}nl i=1 from different layers of the Transformer decoder corresponding to the fused tokens are first upsampled and linearly projected: ... | p. 4 (3.4. Token Fusion for Scene Reconstruction), p. 4 (3.3. Asymmetric Dual-Flow Decoder) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The overall camera pose loss is: Lpose = LMSE(P, ˆP) + Lalign.
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
-- **p. 3 / 3.1. Problem Formulation - extractive PDF cue:** (2) During training, both the 3D Gaussian attributes and camera poses are jointly optimized.
-- **p. 3 / 3.3. Asymmetric Dual-Flow Decoder - extractive PDF cue:** To prevent entangling viewpoint-specific cues with scene semantics, it employs an asymmetric update scheme where image tokens primarily aggregate scene context, whereas camera tokens extract ...
-- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive PDF cue:** The updates are computed as: ˆtI i ←Softmax  QI iKI i ⊤/ √ d 
-- **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive PDF cue:** Features are then progressively fused from deep to shallow layers using the residual fusion module RF composed of residual blocks and upsampling: F fusion nl ...
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The overall camera pose loss is: Lpose = LMSE(P, ˆP) + Lalign.
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** (2) During training, both the 3D Gaussian attributes and camera poses are jointly optimized.
+- **p. 3 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** To prevent entangling viewpoint-specific cues with scene semantics, it employs an asymmetric update scheme where image tokens primarily aggregate scene context, whereas camera tokens extract ...
+- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** The updates are computed as: ˆtI i ←Softmax  QI iKI i ⊤/ √ d 
+- **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive body cue:** Features are then progressively fused from deep to shallow layers using the residual fusion module RF composed of residual blocks and upsampling: F fusion nl ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Problem Formulation - extractive PDF cue:** For camera pose estimation, the network predicts per-view poses Pi that transform each input image Ii into the canonical reference view I1.
-- **p. 1 / 1. Introduction - extractive PDF cue:** Recent feed-forward variants [1, 5, 18, 40, 50] alleviate this by predicting 3D Gaussians directly from input images, but their applicability remains constrained by the ...
-- **p. 3 / 3.2. Architecture - extractive PDF cue:** Each input view is first encoded into image tokens via a shared ViT Encoder.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To jointly optimize 3D reconstruction and camera pose estimation within a feed-forward architecture, we introduce learnable camera tokens and an Asymmetric DualFlow Decoder (ADF-Decoder) that ...
-- **p. 2 / 3.1. Problem Formulation - extractive PDF cue:** We aim to learn a feed-forward network that jointly reconstructs 3D Gaussians and predicts camera poses from a sequence of N unposed images {Ii}N i=1, ...
-- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive PDF cue:** Camera tokens attend to their corresponding image tokens to extract geometric cues for pose estimation.
-- **p. 1 / 1. Introduction - extractive PDF cue:** More recent posefree frameworks [15, 31, 36, 44] attempt to infer both camera poses and 3D structure directly from sparse unposed images.
+- **p. 3 / 3.1. Problem Formulation - extractive body cue:** For camera pose estimation, the network predicts per-view poses Pi that transform each input image Ii into the canonical reference view I1.
+- **p. 1 / 1. Introduction - extractive body cue:** Recent feed-forward variants [1, 5, 18, 40, 50] alleviate this by predicting 3D Gaussians directly from input images, but their applicability remains constrained by the ...
+- **p. 3 / 3.2. Architecture - extractive body cue:** Each input view is first encoded into image tokens via a shared ViT Encoder.
+- **p. 2 / 1. Introduction - extractive body cue:** To jointly optimize 3D reconstruction and camera pose estimation within a feed-forward architecture, we introduce learnable camera tokens and an Asymmetric DualFlow Decoder (ADF-Decoder) that ...
+- **p. 2 / 3.1. Problem Formulation - extractive body cue:** We aim to learn a feed-forward network that jointly reconstructs 3D Gaussians and predicts camera poses from a sequence of N unposed images {Ii}N i=1, ...
+- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** Camera tokens attend to their corresponding image tokens to extract geometric cues for pose estimation.
+- **p. 1 / 1. Introduction - extractive body cue:** More recent posefree frameworks [15, 31, 36, 44] attempt to infer both camera poses and 3D structure directly from sparse unposed images.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,9 +90,9 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 
 ## Training vs Inference
 
-- **p. 5 / 3.6. Loss Functions - extractive PDF cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** This gain stems from our directionally constrained ADF-Decoder, which enforces disentangled interaction between camera and image tokens, leading to more stable pose learning.
-- **p. 8 / 4.3. Ablation Analysis - extractive PDF cue:** Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with SSIM ...
+- **p. 5 / 3.6. Loss Functions - extractive body cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** This gain stems from our directionally constrained ADF-Decoder, which enforces disentangled interaction between camera and image tokens, leading to more stable pose learning.
+- **p. 8 / 4.3. Ablation Analysis - extractive body cue:** Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with SSIM ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -112,13 +112,13 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4.2. Experimental Results - extractive PDF cue:** Component ablations on RE10K (8 view).
-- **p. 8 / 4.3. Ablation Analysis - extractive PDF cue:** We perform ablation studies on RE10K (8 views), summarized in Tab.
-- **p. 5 / 4.2. Experimental Results - extractive PDF cue:** Here, AnySplat refers to zero-shot results trained on other datasets, while AnySplat∗ denotes the results we achieved after fine-tuning on the corresponding dataset.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** It yields consistent accuracy improvements and robust zero-shot generalization across diverse datasets.
-- **p. 5 / 4.2. Experimental Results - extractive PDF cue:** Despite the difference in view counts, TokenSplat maintains stable reconstruction quality, while competing methods, including AnySplat, which fuses pixel-aligned Gaussians by predicting fusion confidence, and ...
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** FreeSplat generates numerous scattered Gaussians, while NoPoSplat and SPFSplat show poor scalability and fail to generalize to unseen distant viewpoints.
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
+- **p. 8 / 4.2. Experimental Results - extractive body cue:** Component ablations on RE10K (8 view).
+- **p. 8 / 4.3. Ablation Analysis - extractive body cue:** We perform ablation studies on RE10K (8 views), summarized in Tab.
+- **p. 5 / 4.2. Experimental Results - extractive body cue:** Here, AnySplat refers to zero-shot results trained on other datasets, while AnySplat∗ denotes the results we achieved after fine-tuning on the corresponding dataset.
+- **p. 8 / 5. Conclusion - extractive body cue:** It yields consistent accuracy improvements and robust zero-shot generalization across diverse datasets.
+- **p. 5 / 4.2. Experimental Results - extractive body cue:** Despite the difference in view counts, TokenSplat maintains stable reconstruction quality, while competing methods, including AnySplat, which fuses pixel-aligned Gaussians by predicting fusion confidence, and ...
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** FreeSplat generates numerous scattered Gaussians, while NoPoSplat and SPFSplat show poor scalability and fail to generalize to unseen distant viewpoints.
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -132,7 +132,7 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for Scene Reconstruction), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 3 (3.2. Architecture), p. 2 (3.1. Problem Formulation), p. 5 (3.6. Loss Functions), objective p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.1. Problem Formulation), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.4. Token Fusion for Scene Reconstruction), temporal p. 2 (3.1. Problem Formulation), p. 3 (3.2. Architecture), p. 5 (4.1. Experimental Settings), p. 5 (4. Experiment), p. 6 (4.2. Experimental Results), p. 1 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for Scene Reconstruction), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 3 (3.2. Architecture), p. 2 (3.1. Problem Formulation), p. 5 (3.6. Loss Functions), objective p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.1. Problem Formulation), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.4. Token Fusion for Scene Reconstruction), temporal p. 2 (3.1. Problem Formulation), p. 3 (3.2. Architecture), p. 5 (4.1. Experimental Settings), p. 5 (4. Experiment), p. 6 (4.2. Experimental Results), p. 1 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

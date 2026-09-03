@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1803.10122; PDF retrieval source: https://arxiv.org/pdf/1803.10122. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1803.10122; PDF retrieval source: https://arxiv.org/pdf/1803.10122. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Figure 11. Limiting our controller to see only zt, but not ht results in wobbly and unstable driving behaviours. Although the agent is still ... | p. 5 (Figure/Table caption) |
 | 3.1. World Model for Feature Extraction | EMPIRICAL / SIMULATION | 3In principle, we can train both models together in an end-toend manner, although we found that training each separately is more practical, and also ... | p. 4 (3.1. World Model for Feature Extraction) |
@@ -54,7 +54,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A World Model, from Scott McCloud's Understanding Comics. (McCloud, 1993; E, 2012) current motor actions (Keller et al., 2012; Leinweber et al., 2017). ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 2. What we see is based on our brain's prediction of the future (Kitaoka, 2002; Watanabe et al., 2018). arXiv:1803.10122v4 [cs.LG] 9 May 2018
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 2. What we see is based on our brain's prediction of the future (Kitaoka, 2002; Watanabe et al., 2018).
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 3. In this work, we build probabilistic generative models of OpenAI Gym environments. The RNN-based world models are trained using collected observations recorded from ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 4. Our agent consists of three components that work closely together: Vision (V), Memory (M), and Controller (C)
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 5. Flow diagram of a Variational Autoencoder (VAE). Here, we use a simple Variational Autoencoder (Kingma & Welling, 2013; Rezende et al., 2014) as ...
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To train our V model, we first collect a dataset of 10,000 random rollouts of the environment. | embodiment, simulator version and control stack | p. 4 (3.1. World Model for Feature Extraction), p. 4 (3.1. World Model for Feature Extraction) |
 | Task/environment | We use this dataset to train V to learn a latent space of each frame observed. | reset, timeout, object/scene variation | p. 4 (3.1. World Model for Feature Extraction), p. 7 (4.2. Procedure) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 17. An interactive VAE of Doom in the online article. We see that even though the V model is not able to capture all ...
 - **p. 6 / 4.1. Learning Inside of a Dream - extractive body cue:** After all, our agent does not directly observe the reality, but only sees what the world model lets it see.
 
-- **PDF anchors reviewed:** datasets p. 4 (3.1. World Model for Feature Extraction), p. 4 (3.1. World Model for Feature Extraction), p. 7 (4.2. Procedure), p. 7 (4.1. Learning Inside of a Dream), p. 5 (3.1. World Model for Feature Extraction), p. 5 (3.1. World Model for Feature Extraction), metrics p. 4 (3.1. World Model for Feature Extraction), p. 15 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 5 (3.2. Procedure), p. 5 (3.1. World Model for Feature Extraction), p. 7 (4.1. Learning Inside of a Dream), baselines p. 4 (3.1. World Model for Feature Extraction), p. 1 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 4 (3. Car Racing Experiment), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (3.1. World Model for Feature Extraction), p. 4 (3.1. World Model for Feature Extraction), p. 7 (4.2. Procedure), p. 7 (4.1. Learning Inside of a Dream), p. 5 (3.1. World Model for Feature Extraction), p. 5 (3.1. World Model for Feature Extraction), metrics p. 4 (3.1. World Model for Feature Extraction), p. 15 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 5 (3.2. Procedure), p. 5 (3.1. World Model for Feature Extraction), p. 7 (4.1. Learning Inside of a Dream), baselines p. 4 (3.1. World Model for Feature Extraction), p. 1 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 4 (3. Car Racing Experiment), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 11. Limiting our controller to see only zt, but not ht results in wobbly and unstable driving behaviours. Although the agent is still able to navigate the race track ... (p. 5, Figure/Table caption).
+- **Metric evidence:** Using this pre-processed data, along with the recorded random actions at taken, our MDN-RNN can now be trained to model P(zt+1 / at, zt, ht) as a mixture of Gaussians.3 ... (p. 4, 3.1. World Model for Feature Extraction).
+- **Baseline/ablation evidence:** We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters. (p. 4, 3.1. World Model for Feature Extraction).
+- **Failure/negative evidence:** For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but failed to reproduce task-relevant tiles on the road in the Car Racing ... (p. 12, 7. Discussion).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.11929; PDF retrieval source: https://arxiv.org/pdf/2010.11929. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2010.11929; PDF retrieval source: https://arxiv.org/pdf/2010.11929. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 4 / 4 EXPERIMENTS - extractive PDF cue:** We transfer the models trained on these dataset to several benchmark tasks: ImageNet on the original validation labels and the cleaned-up ReaL labels (Beyer et ...
-- **p. 4 / 4 EXPERIMENTS - extractive PDF cue:** To understand the data requirements of each model, we pre-train on datasets of varying size and evaluate many benchmark tasks.
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** The smaller ViT-L/16 model pre-trained on JFT-300M outperforms BiT-L (which is pre-trained on the same dataset) on all tasks, while requiring substantially less computational resources ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2021 Ours-JFT Ours-JFT Ours-I21k BiT-L Noisy Student (ViT-H/14) (ViT-L/16) (ViT-L/16) (ResNet152x4) (EfficientNet-L2) ImageNet 88.55 ± 0.04 87.76 ± ...
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** We report results on downstream datasets either through few-shot or fine-tuning accuracy.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** With fewer inductive biases for vision than ResNets, how crucial is the dataset size?
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Similarly, larger ViT variants overtake smaller ones as the dataset grows.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained on larger datasets.
+- **p. 4 / 4 EXPERIMENTS - extractive body cue:** We transfer the models trained on these dataset to several benchmark tasks: ImageNet on the original validation labels and the cleaned-up ReaL labels (Beyer et ...
+- **p. 4 / 4 EXPERIMENTS - extractive body cue:** To understand the data requirements of each model, we pre-train on datasets of varying size and evaluate many benchmark tasks.
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** The smaller ViT-L/16 model pre-trained on JFT-300M outperforms BiT-L (which is pre-trained on the same dataset) on all tasks, while requiring substantially less computational resources ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** We report results on downstream datasets either through few-shot or fine-tuning accuracy.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** With fewer inductive biases for vision than ResNets, how crucial is the dataset size?
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** First, we pre-train ViT models on datasets of increasing size: ImageNet, ImageNet-21k, and JFT300M.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Similarly, larger ViT variants overtake smaller ones as the dataset grows.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained on larger datasets.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 5: Performance versus pre-training compute for different architectures: Vision Transformers, ResNets, and hybrids. Vision Transformers generally outperform ResNets with the same compu- tational ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 2: Comparison with state of the art on popular image classification benchmarks. We re- port mean and standard deviation of the accuracies, averaged ... | p. 6 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 4 EXPERIMENTS - extractive PDF cue:** We transfer the models trained on these dataset to several benchmark tasks: ImageNet on the original validation labels and the cleaned-up ReaL labels (Beyer et ...
-- **p. 4 / 4 EXPERIMENTS - extractive PDF cue:** To understand the data requirements of each model, we pre-train on datasets of varying size and evaluate many benchmark tasks.
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** The smaller ViT-L/16 model pre-trained on JFT-300M outperforms BiT-L (which is pre-trained on the same dataset) on all tasks, while requiring substantially less computational resources ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2021 Ours-JFT Ours-JFT Ours-I21k BiT-L Noisy Student (ViT-H/14) (ViT-L/16) (ViT-L/16) (ResNet152x4) (EfficientNet-L2) ImageNet 88.55 ± 0.04 87.76 ± ...
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** We report results on downstream datasets either through few-shot or fine-tuning accuracy.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** With fewer inductive biases for vision than ResNets, how crucial is the dataset size?
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** Similarly, larger ViT variants overtake smaller ones as the dataset grows.
-- **p. 7 / 4 EXPERIMENTS - extractive PDF cue:** While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained on larger datasets.
+- **p. 4 / 4 EXPERIMENTS - extractive body cue:** We transfer the models trained on these dataset to several benchmark tasks: ImageNet on the original validation labels and the cleaned-up ReaL labels (Beyer et ...
+- **p. 4 / 4 EXPERIMENTS - extractive body cue:** To understand the data requirements of each model, we pre-train on datasets of varying size and evaluate many benchmark tasks.
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** The smaller ViT-L/16 model pre-trained on JFT-300M outperforms BiT-L (which is pre-trained on the same dataset) on all tasks, while requiring substantially less computational resources ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** We report results on downstream datasets either through few-shot or fine-tuning accuracy.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** With fewer inductive biases for vision than ResNets, how crucial is the dataset size?
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** First, we pre-train ViT models on datasets of increasing size: ImageNet, ImageNet-21k, and JFT300M.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Similarly, larger ViT variants overtake smaller ones as the dataset grows.
+- **p. 7 / 4 EXPERIMENTS - extractive body cue:** While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained on larger datasets.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1: Details of Vision Transformer model variants. We also evaluate on the 19-task VTAB classification suite (Zhai et al., 2019b). VTAB evaluates low-data transfer ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: Comparison with state of the art on popular image classification benchmarks. We re- port mean and standard deviation of the accuracies, averaged over ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2: Breakdown of VTAB performance in Natural, Specialized, and Structured task groups. model still took substantially less compute to pre-train than prior state of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3: Transfer to ImageNet. While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Linear few-shot evaluation on Ima- geNet versus pre-training size. ResNets per- form better with smaller pre-training datasets but plateau sooner than ViT, which ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Performance versus pre-training compute for different architectures: Vision Transformers, ResNets, and hybrids. Vision Transformers generally outperform ResNets with the same compu- tational budget. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Representative ex- amples of attention from the output token to the input space. See Appendix D.7 for details. To begin to understand how ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Details of Vision Transformer model variants. We also evaluate on the 19-task VTAB classification suite (Zhai et al., 2019b). VTAB evaluates low-data transfer ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Comparison with state of the art on popular image classification benchmarks. We re- port mean and standard deviation of the accuracies, averaged over ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: Breakdown of VTAB performance in Natural, Specialized, and Structured task groups. model still took substantially less compute to pre-train than prior state of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Transfer to ImageNet. While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Linear few-shot evaluation on Ima- geNet versus pre-training size. ResNets per- form better with smaller pre-training datasets but plateau sooner than ViT, which ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Performance versus pre-training compute for different architectures: Vision Transformers, ResNets, and hybrids. Vision Transformers generally outperform ResNets with the same compu- tational budget. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Representative ex- amples of attention from the output token to the input space. See Appendix D.7 for details. To begin to understand how ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We transfer the models trained on these dataset to several benchmark tasks: ImageNet on the original validation labels and the cleaned-up ReaL labels (Beyer ... | embodiment, simulator version and control stack | p. 4 (4 EXPERIMENTS), p. 4 (4 EXPERIMENTS) |
 | Task/environment | To understand the data requirements of each model, we pre-train on datasets of varying size and evaluate many benchmark tasks. | reset, timeout, object/scene variation | p. 4 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS) |
@@ -78,11 +78,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | VTAB (19 tasks) 65 70 75 80 Accuracy [%] Natural (7 tasks) 70 80 90 Specialized (4 tasks) 80 82 85 88 90 Structured ... | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
 | Figure 13: Performance of Axial-Attention based models, in terms of top-1 accuracy on ImageNet 5-shot linear, versus their speed in terms of number of ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | We report results on downstream datasets either through few-shot or fine-tuning accuracy. | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2021 ImageNet ImageNet-21k JFT-300M Pre-training dataset 70 75 80 85 90 ImageNet Top1 Accuracy [%] BiT ViT-B/32 ... | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | Figure 7: Left: Filters of the initial linear embedding of RGB values of ViT-L/32. Center: Sim- ilarity of position embeddings of ViT-L/32. Tiles show ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Table 6: Detailed results of model scaling experiments. These correspond to Figure 5 in the main paper. We show transfer accuracy on several datasets, ... | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
 | We report mean and standard deviation of the accuracies, averaged over three fine-tuning runs. | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
 | Table 5: Top1 accuracy (in %) of Vision Transformer on various datasets when pre-trained on Im- ageNet, ImageNet-21k or JFT300M. These values correspond to ... | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
+| We use a linear learning rate warmup and decay, see Appendix B.1 for details. | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -123,10 +123,9 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | Primary metric/result | Table 2: Comparison with state of the art on popular image classification benchmarks. We re- port mean and standard deviation of the accuracies, averaged ... | numeric claim only at cited anchor | p. 6 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** In what follows we use brief notation to indicate the model size and the input patch size: for instance, ViT-L/16 means the "Large" variant with ...
-- **p. 5 / 4 EXPERIMENTS - extractive PDF cue:** Option (ii) results in a 4x longer sequence length, and a more expensive ViT model.
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2021 Ours-JFT Ours-JFT Ours-I21k BiT-L Noisy Student (ViT-H/14) (ViT-L/16) (ViT-L/16) (ResNet152x4) (EfficientNet-L2) ImageNet 88.55 ± 0.04 87.76 ± ...
-- **p. 6 / 4 EXPERIMENTS - extractive PDF cue:** VTAB (19 tasks) 65 70 75 80 Accuracy [%] Natural (7 tasks) 70 80 90 Specialized (4 tasks) 80 82 85 88 90 Structured (8 ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** In what follows we use brief notation to indicate the model size and the input patch size: for instance, ViT-L/16 means the "Large" variant with ...
+- **p. 5 / 4 EXPERIMENTS - extractive body cue:** Option (ii) results in a 4x longer sequence length, and a more expensive ViT model.
+- **p. 6 / 4 EXPERIMENTS - extractive body cue:** VTAB (19 tasks) 65 70 75 80 Accuracy [%] Natural (7 tasks) 70 80 90 Specialized (4 tasks) 80 82 85 88 90 Structured (8 ...
 
 ## Generalization and Failure Cases
 
@@ -158,10 +157,10 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 300 M - extractive PDF cue:** Further analysis of few-shot properties of ViT is an exciting direction of future work.
-- **p. 8 / 300 M - extractive PDF cue:** In this setting data size does not bottleneck the models' performances, and we assess performance versus pre-training cost of each model.
+- **p. 7 / 300 M - extractive body cue:** Further analysis of few-shot properties of ViT is an exciting direction of future work.
+- **p. 8 / 300 M - extractive body cue:** In this setting data size does not bottleneck the models' performances, and we assess performance versus pre-training cost of each model.
 
-- **PDF anchors reviewed:** datasets p. 4 (4 EXPERIMENTS), p. 4 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (4 EXPERIMENTS), p. 4 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (4 EXPERIMENTS), baselines p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

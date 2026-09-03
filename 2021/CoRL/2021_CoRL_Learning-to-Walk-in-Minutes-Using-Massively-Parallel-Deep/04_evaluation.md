@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/rudin22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/rudin22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Resu
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4 Results - extractive PDF cue:** As such, we simplify the task by reducing the maximum step size of stairs and obstacles and directly train robots on the full range of ...
-- **p. 6 / 4 Results - extractive PDF cue:** On the other hand, below a certain threshold, we see a slow decrease in (a) (b) (c) Figure 4: (a) Average and standard deviation (over ...
-- **p. 7 / 4 Results - extractive PDF cue:** In terms of training time, we see a nearly linear scaling up to 4000 robots, after which simulation throughput gains slow down.
-- **p. 7 / 4 Results - extractive PDF cue:** From the third plot we can conclude that using 2048 to 4096 robots with a batch size of ≈100k or ≈200k provides the best trade-off ...
-- **p. 8 / 4 Results - extractive PDF cue:** 4.3 Sim-to-real Transfer On the physical robot, our policy is fixed.
-- **p. 8 / 4 Results - extractive PDF cue:** Finally, we apply our approach to Agility Robotics' bipedal robot Cassie.
-- **p. 7 / 4 Results - extractive PDF cue:** (b) Success rate for climbing and descending sloped terrains.
-- **p. 7 / 4 Results - extractive PDF cue:** (a) (b) Figure 5: Success rate of the tested policy on increasing terrain complexities.
+- **p. 6 / 4 Results - extractive body cue:** As such, we simplify the task by reducing the maximum step size of stairs and obstacles and directly train robots on the full range of ...
+- **p. 6 / 4 Results - extractive body cue:** On the other hand, below a certain threshold, we see a slow decrease in (a) (b) (c) Figure 4: (a) Average and standard deviation (over ...
+- **p. 7 / 4 Results - extractive body cue:** In terms of training time, we see a nearly linear scaling up to 4000 robots, after which simulation throughput gains slow down.
+- **p. 7 / 4 Results - extractive body cue:** From the third plot we can conclude that using 2048 to 4096 robots with a batch size of ≈100k or ≈200k provides the best trade-off ...
+- **p. 8 / 4 Results - extractive body cue:** 4.3 Sim-to-real Transfer On the physical robot, our policy is fixed.
+- **p. 8 / 4 Results - extractive body cue:** Finally, we apply our approach to Agility Robotics' bipedal robot Cassie.
+- **p. 7 / 4 Results - extractive body cue:** (b) Success rate for climbing and descending sloped terrains.
+- **p. 7 / 4 Results - extractive body cue:** (a) (b) Figure 5: Success rate of the tested policy on increasing terrain complexities.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Resu
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | (b) Success rate for climbing and descending sloped terrains. | p. 7 (4 Results) |
 | 4 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | (a) (b) Figure 5: Success rate of the tested policy on increasing terrain complexities. | p. 7 (4 Results) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Resu
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4 Results - extractive PDF cue:** As such, we simplify the task by reducing the maximum step size of stairs and obstacles and directly train robots on the full range of ...
-- **p. 6 / 4 Results - extractive PDF cue:** On the other hand, below a certain threshold, we see a slow decrease in (a) (b) (c) Figure 4: (a) Average and standard deviation (over ...
-- **p. 7 / 4 Results - extractive PDF cue:** In terms of training time, we see a nearly linear scaling up to 4000 robots, after which simulation throughput gains slow down.
-- **p. 7 / 4 Results - extractive PDF cue:** From the third plot we can conclude that using 2048 to 4096 robots with a batch size of ≈100k or ≈200k provides the best trade-off ...
-- **p. 8 / 4 Results - extractive PDF cue:** 4.3 Sim-to-real Transfer On the physical robot, our policy is fixed.
-- **p. 8 / 4 Results - extractive PDF cue:** Finally, we apply our approach to Agility Robotics' bipedal robot Cassie.
+- **p. 6 / 4 Results - extractive body cue:** As such, we simplify the task by reducing the maximum step size of stairs and obstacles and directly train robots on the full range of ...
+- **p. 6 / 4 Results - extractive body cue:** On the other hand, below a certain threshold, we see a slow decrease in (a) (b) (c) Figure 4: (a) Average and standard deviation (over ...
+- **p. 7 / 4 Results - extractive body cue:** In terms of training time, we see a nearly linear scaling up to 4000 robots, after which simulation throughput gains slow down.
+- **p. 7 / 4 Results - extractive body cue:** From the third plot we can conclude that using 2048 to 4096 robots with a batch size of ≈100k or ≈200k provides the best trade-off ...
+- **p. 8 / 4 Results - extractive body cue:** 4.3 Sim-to-real Transfer On the physical robot, our policy is fixed.
+- **p. 8 / 4 Results - extractive body cue:** Finally, we apply our approach to Agility Robotics' bipedal robot Cassie.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Thousands of robots learning to walk in simulation. 1
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Terrain types used for training and testing in simulation. (a) Randomly rough terrain with variations of 0.1 m. (b) Sloped terrain with an ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: 4000 robots progressing through the terrains with automatic curriculum, after 500 (top) and 1000 (bottom) policy updates. The robots start the training session ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: (a) Average and standard deviation (over 5 runs) of the total reward of an episode after 1500 policy updates for different number of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Success rate of the tested policy on increasing terrain complexities. Robots start in the center of the terrain and are given a forward ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6: ANYmal C with a fixed arm, ANYmal B, A1 and Cassie in simulation. performance with fewer robots. We believe this is explained by ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7: Locomotion policy, trained in under 20min, deployed on the physical robot. weight, and the ANYmal B robot, which has comparable dimensions but modified ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Thousands of robots learning to walk in simulation. 1
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Terrain types used for training and testing in simulation. (a) Randomly rough terrain with variations of 0.1 m. (b) Sloped terrain with an ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: 4000 robots progressing through the terrains with automatic curriculum, after 500 (top) and 1000 (bottom) policy updates. The robots start the training session ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: (a) Average and standard deviation (over 5 runs) of the total reward of an episode after 1500 policy updates for different number of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Success rate of the tested policy on increasing terrain complexities. Robots start in the center of the terrain and are given a forward ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: ANYmal C with a fixed arm, ANYmal B, A1 and Cassie in simulation. performance with fewer robots. We believe this is explained by ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7: Locomotion policy, trained in under 20min, deployed on the physical robot. weight, and the ANYmal B robot, which has comparable dimensions but modified ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | As such, we simplify the task by reducing the maximum step size of stairs and obstacles and directly train robots on the full range ... | embodiment, simulator version and control stack | p. 6 (4 Results), p. 6 (4 Results) |
 | Task/environment | On the other hand, below a certain threshold, we see a slow decrease in (a) (b) (c) Figure 4: (a) Average and standard deviation ... | reset, timeout, object/scene variation | p. 6 (4 Results), p. 7 (4 Results) |
@@ -115,12 +115,12 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Resu
 | Primary metric/result | (a) (b) Figure 5: Success rate of the tested policy on increasing terrain complexities. | numeric claim only at cited anchor | p. 7 (4 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4 Results - extractive PDF cue:** We start from 128 robots corresponding to the level of parallelization of previous CPU implementations and increase that number up to 16384, which is close ...
-- **p. 6 / 4 Results - extractive PDF cue:** The ideal case of a batch size of 1M samples with 20000 robots is shown in red.
-- **p. 7 / 4 Results - extractive PDF cue:** In terms of training time, we see a nearly linear scaling up to 4000 robots, after which simulation throughput gains slow down.
-- **p. 7 / 4 Results - extractive PDF cue:** From the third plot we can conclude that using 2048 to 4096 robots with a batch size of ≈100k or ≈200k provides the best trade-off ...
-- **p. 7 / 4 Results - extractive PDF cue:** 4.2 Simulation For our simulation and deployment experiments, we use a policy trained with 4096 robots and a batch size of 98304, which we train ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** For quadrupeds, DRL has been used to train blind policies robust to highly uneven ground [16] (12 hours of training).
+- **p. 6 / 4 Results - extractive body cue:** We start from 128 robots corresponding to the level of parallelization of previous CPU implementations and increase that number up to 16384, which is close ...
+- **p. 6 / 4 Results - extractive body cue:** The ideal case of a batch size of 1M samples with 20000 robots is shown in red.
+- **p. 7 / 4 Results - extractive body cue:** In terms of training time, we see a nearly linear scaling up to 4000 robots, after which simulation throughput gains slow down.
+- **p. 7 / 4 Results - extractive body cue:** From the third plot we can conclude that using 2048 to 4096 robots with a batch size of ≈100k or ≈200k provides the best trade-off ...
+- **p. 7 / 4 Results - extractive body cue:** 4.2 Simulation For our simulation and deployment experiments, we use a policy trained with 4096 robots and a batch size of 98304, which we train ...
+- **p. 2 / 1 Introduction - extractive body cue:** For quadrupeds, DRL has been used to train blind policies robust to highly uneven ground [16] (12 hours of training).
 
 ## Generalization and Failure Cases
 
@@ -156,12 +156,12 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Resu
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4 Results - extractive PDF cue:** As such, we can conclude that increasing the number of robots is beneficial for both final performance and training time, but there is an upper ...
-- **p. 8 / 5 Conclusion - extractive PDF cue:** The purpose of this work is not to obtain the absolute best-performing policy with the highest robustness.
-- **p. 8 / 4 Results - extractive PDF cue:** As part of future work, we plan to merge the two approaches.
-- **p. 7 / 4 Results - extractive PDF cue:** To that end, we perform robustness and traversability tests.
+- **p. 7 / 4 Results - extractive body cue:** As such, we can conclude that increasing the number of robots is beneficial for both final performance and training time, but there is an upper ...
+- **p. 8 / 5 Conclusion - extractive body cue:** The purpose of this work is not to obtain the absolute best-performing policy with the highest robustness.
+- **p. 8 / 4 Results - extractive body cue:** As part of future work, we plan to merge the two approaches.
+- **p. 7 / 4 Results - extractive body cue:** To that end, we perform robustness and traversability tests.
 
-- **PDF anchors reviewed:** datasets p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 6 (Figure/Table caption), p. 8 (4 Results), baselines p. 6 (4 Results), p. 6 (4 Results), p. 4 (Figure/Table caption), p. 8 (4 Results), results p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 8 (4 Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 6 (Figure/Table caption), p. 8 (4 Results), baselines p. 6 (4 Results), p. 6 (4 Results), p. 4 (Figure/Table caption), p. 8 (4 Results), results p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 8 (4 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

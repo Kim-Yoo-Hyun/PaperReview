@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=c6RR0bqNVI&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=c6RR0bqNVI&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/T
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Semantic segmentation - extractive PDF cue:** We test our method on ScanNet [14], a dataset composed of several indoor 3D scene scans, to show its applicability to real-world scenarios.
-- **p. 5 / 4.2. Shape classification - extractive PDF cue:** We use the ModelNet40 dataset [40] since this is a standard benchmark for rotation equivariant networks [15].
-- **p. 7 / 4.3. Semantic segmentation - extractive PDF cue:** 4.3.2 Scene understanding Scenes consist of multiple parts or objects with arbitrary orientations, making local equivariance essential for generalizing to unseen configurations.
-- **p. 6 / 4.3. Semantic segmentation - extractive PDF cue:** The PosePrior dataset consists of challenging poses significantly divergent from those executed in DFAUST, which we use to test our model for generalization to unseen, ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
-- **p. 6 / 4.3. Semantic segmentation - extractive PDF cue:** 3 depicts predictions for different models tested on the dataset.
-- **p. 8 / 4.3. Semantic segmentation - extractive PDF cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
-- **p. 8 / 4.3. Semantic segmentation - extractive PDF cue:** Comparison of our method to other rotation equivariant models on the segmentation task for out-of-distribution poses.
+- **p. 7 / 4.3. Semantic segmentation - extractive body cue:** We test our method on ScanNet [14], a dataset composed of several indoor 3D scene scans, to show its applicability to real-world scenarios.
+- **p. 5 / 4.2. Shape classification - extractive body cue:** We use the ModelNet40 dataset [40] since this is a standard benchmark for rotation equivariant networks [15].
+- **p. 7 / 4.3. Semantic segmentation - extractive body cue:** 4.3.2 Scene understanding Scenes consist of multiple parts or objects with arbitrary orientations, making local equivariance essential for generalizing to unseen configurations.
+- **p. 6 / 4.3. Semantic segmentation - extractive body cue:** The PosePrior dataset consists of challenging poses significantly divergent from those executed in DFAUST, which we use to test our model for generalization to unseen, ...
+- **p. 5 / 4. Experiments - extractive body cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
+- **p. 6 / 4.3. Semantic segmentation - extractive body cue:** 3 depicts predictions for different models tested on the dataset.
+- **p. 8 / 4.3. Semantic segmentation - extractive body cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
+- **p. 8 / 4.3. Semantic segmentation - extractive body cue:** Comparison of our method to other rotation equivariant models on the segmentation task for out-of-distribution poses.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/T
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Shape classification | EMPIRICAL / REAL-ROBOT OR HARDWARE | When we look at the SO(3) / SO(3) setup, all three methods achieve good performance; MC and Ours are able to outperform STD, while ... | p. 6 (4.2. Shape classification) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost ... | p. 7 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/T
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Semantic segmentation - extractive PDF cue:** We test our method on ScanNet [14], a dataset composed of several indoor 3D scene scans, to show its applicability to real-world scenarios.
-- **p. 5 / 4.2. Shape classification - extractive PDF cue:** We use the ModelNet40 dataset [40] since this is a standard benchmark for rotation equivariant networks [15].
-- **p. 7 / 4.3. Semantic segmentation - extractive PDF cue:** 4.3.2 Scene understanding Scenes consist of multiple parts or objects with arbitrary orientations, making local equivariance essential for generalizing to unseen configurations.
-- **p. 6 / 4.3. Semantic segmentation - extractive PDF cue:** The PosePrior dataset consists of challenging poses significantly divergent from those executed in DFAUST, which we use to test our model for generalization to unseen, ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
-- **p. 6 / 4.3. Semantic segmentation - extractive PDF cue:** 3 depicts predictions for different models tested on the dataset.
-- **p. 8 / 4.3. Semantic segmentation - extractive PDF cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
-- **p. 8 / 4.3. Semantic segmentation - extractive PDF cue:** Comparison of our method to other rotation equivariant models on the segmentation task for out-of-distribution poses.
+- **p. 7 / 4.3. Semantic segmentation - extractive body cue:** We test our method on ScanNet [14], a dataset composed of several indoor 3D scene scans, to show its applicability to real-world scenarios.
+- **p. 5 / 4.2. Shape classification - extractive body cue:** We use the ModelNet40 dataset [40] since this is a standard benchmark for rotation equivariant networks [15].
+- **p. 7 / 4.3. Semantic segmentation - extractive body cue:** 4.3.2 Scene understanding Scenes consist of multiple parts or objects with arbitrary orientations, making local equivariance essential for generalizing to unseen configurations.
+- **p. 6 / 4.3. Semantic segmentation - extractive body cue:** The PosePrior dataset consists of challenging poses significantly divergent from those executed in DFAUST, which we use to test our model for generalization to unseen, ...
+- **p. 5 / 4. Experiments - extractive body cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
+- **p. 6 / 4.3. Semantic segmentation - extractive body cue:** 3 depicts predictions for different models tested on the dataset.
+- **p. 8 / 4.3. Semantic segmentation - extractive body cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
+- **p. 8 / 4.3. Semantic segmentation - extractive body cue:** Comparison of our method to other rotation equivariant models on the segmentation task for out-of-distribution poses.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. While global equivariant designs ensure robustness to whole-scene rotations, they fail with randomly rotated scene parts or elements. In contrast, local equivariant operations ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of our convolution operation. Given a central point with an orientation, first, we sample neighboring points. For each point, we use PCA ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Results for different configurations for the classification task on the ModelNet40 dataset. The results show that using our sampling approach increases the performance ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost perfect ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison to equivariant models on the classification task of ModelNet40 for different setups. Equiv.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Semantic segmentation results for different models trained on DFAUST and tested on PosePrior. By using our sam- pling approach, mAcc, and mIoU increase ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Comparison of our method to other rotation equivariant models on the segmentation task for out-of-distribution poses. Equiv.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Computational and memory resources of a single convo- lution layer for our approach and state-of-the-art methods.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. While global equivariant designs ensure robustness to whole-scene rotations, they fail with randomly rotated scene parts or elements. In contrast, local equivariant operations ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our convolution operation. Given a central point with an orientation, first, we sample neighboring points. For each point, we use PCA ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Results for different configurations for the classification task on the ModelNet40 dataset. The results show that using our sampling approach increases the performance ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost perfect ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Comparison to equivariant models on the classification task of ModelNet40 for different setups. Equiv.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Semantic segmentation results for different models trained on DFAUST and tested on PosePrior. By using our sam- pling approach, mAcc, and mIoU increase ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Comparison of our method to other rotation equivariant models on the segmentation task for out-of-distribution poses. Equiv.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Computational and memory resources of a single convo- lution layer for our approach and state-of-the-art methods.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We test our method on ScanNet [14], a dataset composed of several indoor 3D scene scans, to show its applicability to real-world scenarios. | embodiment, simulator version and control stack | p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification) |
 | Task/environment | We use the ModelNet40 dataset [40] since this is a standard benchmark for rotation equivariant networks [15]. | reset, timeout, object/scene variation | p. 5 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/T
 | Primary metric/result | Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost ... | numeric claim only at cited anchor | p. 7 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** With only 2 samples, our method is able to match or even surpass the accuracy of using the full frame, 4 samples.
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** Moreover, using only 1 or 2 samples appears to be more robust than using the full frame, 4 samples, when tested with different numbers of ...
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** We hypothesize that training with random 1 or 2 samples, rather than using the full frame, introduces stochasticity that acts as a regularizer, enhancing robustness ...
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** In contrast, MC is more sensitive to the number of samples, exhibiting significant performance degradation with 1 or 2 samples.
-- **p. 6 / 4.3. Semantic segmentation - extractive PDF cue:** When evaluating the model robustness to the number of samples in the SO(3) integral, Ours outperforms MC in all cases except when trained on 4 ...
+- **p. 6 / 4.2. Shape classification - extractive body cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
+- **p. 6 / 4.2. Shape classification - extractive body cue:** With only 2 samples, our method is able to match or even surpass the accuracy of using the full frame, 4 samples.
+- **p. 6 / 4.2. Shape classification - extractive body cue:** Moreover, using only 1 or 2 samples appears to be more robust than using the full frame, 4 samples, when tested with different numbers of ...
+- **p. 6 / 4.2. Shape classification - extractive body cue:** We hypothesize that training with random 1 or 2 samples, rather than using the full frame, introduces stochasticity that acts as a regularizer, enhancing robustness ...
+- **p. 6 / 4.2. Shape classification - extractive body cue:** In contrast, MC is more sensitive to the number of samples, exhibiting significant performance degradation with 1 or 2 samples.
+- **p. 6 / 4.3. Semantic segmentation - extractive body cue:** When evaluating the model robustness to the number of samples in the SO(3) integral, Ours outperforms MC in all cases except when trained on 4 ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/T
 
 ## Limitations and Verification Questions
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost perfect ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 4. Additional Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models, especially up-side down models. Our method, on the ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 5. Additional Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost ...
-- **p. 6 / 4.2. Shape classification - extractive PDF cue:** When compared to global equivariant networks, our method falls behind in the I / SO(3) setup and achieves similar performance on the z / SO(3) ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. While global equivariant designs ensure robustness to whole-scene rotations, they fail with randomly rotated scene parts or elements. In contrast, local equivariant operations ...
-- **p. 8 / 5. Conclusions - extractive PDF cue:** Moreover, by restricting the receptive field of our convolution, our operation becomes local equivariant, allowing us to be robust to local transformations.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost perfect ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 4. Additional Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models, especially up-side down models. Our method, on the ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5. Additional Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost ...
+- **p. 6 / 4.2. Shape classification - extractive body cue:** When compared to global equivariant networks, our method falls behind in the I / SO(3) setup and achieves similar performance on the z / SO(3) ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. While global equivariant designs ensure robustness to whole-scene rotations, they fail with randomly rotated scene parts or elements. In contrast, local equivariant operations ...
+- **p. 8 / 5. Conclusions - extractive body cue:** Moreover, by restricting the receptive field of our convolution, our operation becomes local equivariant, allowing us to be robust to local transformations.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 6 (4.3. Semantic segmentation), p. 5 (4. Experiments), p. 6 (4.3. Semantic segmentation), metrics p. 5 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.3. Semantic segmentation), baselines p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 8 (4.3. Semantic segmentation), results p. 6 (4.2. Shape classification), p. 7 (Figure/Table caption), p. 6 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 6 (4.3. Semantic segmentation), p. 5 (4. Experiments), p. 6 (4.3. Semantic segmentation), metrics p. 5 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.3. Semantic segmentation), baselines p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 8 (4.3. Semantic segmentation), results p. 6 (4.2. Shape classification), p. 7 (Figure/Table caption), p. 6 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

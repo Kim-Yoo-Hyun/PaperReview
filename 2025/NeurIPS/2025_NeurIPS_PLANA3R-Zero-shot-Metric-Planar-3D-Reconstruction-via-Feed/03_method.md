@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=YTwRZP8mNO; PDF retrieval source: https://openreview.net/pdf/97ce495e96b390789b58ad6d64e1a93cade2a0cf.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=YTwRZP8mNO; PDF retrieval source: https://arxiv.org/pdf/2510.18714. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Method Body Digest
 
-- **p. 4 / 3 Method - extractive PDF cue:** These features are then processed by two transformer decoders with cross-attention to produce low-resolution decoder embeddings {Gi low}i=1,2 ∈ R H 16 × W 16 ...
-- **p. 5 / 3 Method - extractive PDF cue:** To achieve a more compact and efficient geometric representation using fewer primitives, we propose a hierarchical primitive prediction architecture (HPPA) to fit the scene using ...
-- **p. 5 / 3 Method - extractive PDF cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
-- **p. 4 / 3 Method - extractive PDF cue:** Input images {Ii}i=1,2 are first encoded in a Siamese fashion using a ViT encoder [7], producing feature maps {F i}i=1,2 ∈R H 16 × W ...
-- **p. 6 / 3 Method - extractive PDF cue:** For the predicted relative pose Prel = [t, q], we use MSE loss and relative angle loss to provide supervision: Lpose = γ1
-- **p. 3 / 3 Method - extractive PDF cue:** PLANA3R is a transformer-based model for two-view metric 3D reconstruction, using sparse 3D planar primitives as a scene representation.
-- **p. 6 / 3 Method - extractive PDF cue:** 1 , (4) where ∗∈{low, high, selected} and β1, β2 balance the loss magnitudes for stable training.
-- **p. 4 / 3 Method - extractive PDF cue:** 3.2, outline training objectives in Sec.
+- **p. 4 / 3 Method - extractive body cue:** These features are then processed by two transformer decoders with cross-attention to produce low-resolution decoder embeddings {Gi low}i=1,2 ∈ R H 16 × W 16 ...
+- **p. 5 / 3 Method - extractive body cue:** To achieve a more compact and efficient geometric representation using fewer primitives, we propose a hierarchical primitive prediction architecture (HPPA) to fit the scene using ...
+- **p. 5 / 3 Method - extractive body cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
+- **p. 4 / 3 Method - extractive body cue:** Input images {Ii}i=1,2 are first encoded in a Siamese fashion using a ViT encoder [7], producing feature maps {F i}i=1,2 ∈R H 16 × W ...
+- **p. 6 / 3 Method - extractive body cue:** For the predicted relative pose Prel = [t, q], we use MSE loss and relative angle loss to provide supervision: Lpose = γ1
+- **p. 3 / 3 Method - extractive body cue:** PLANA3R is a transformer-based model for two-view metric 3D reconstruction, using sparse 3D planar primitives as a scene representation.
+- **p. 6 / 3 Method - extractive body cue:** 1 , (4) where ∗∈{low, high, selected} and β1, β2 balance the loss magnitudes for stable training.
+- **p. 4 / 3 Method - extractive body cue:** 3.2, outline training objectives in Sec.
 
 ## Design Rationale
 
-- **p. 5 / 3 Method - extractive PDF cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
-- **p. 2 / 1 Introduction - extractive PDF cue:** Once the model is trained, our method generates a set of 3D planar primitives that approximate indoor scenes far more efficiently than per-scene optimization methods ...
-- **p. 4 / 3 Method - extractive PDF cue:** The input consists of two images I1, I2 ∈R3×H×W with camera intrinsics K1 and K2.
+- **p. 5 / 3 Method - extractive body cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
+- **p. 2 / 1 Introduction - extractive body cue:** Once the model is trained, our method generates a set of 3D planar primitives that approximate indoor scenes far more efficiently than per-scene optimization methods ...
+- **p. 4 / 3 Method - extractive body cue:** The input consists of two images I1, I2 ∈R3×H×W with camera intrinsics K1 and K2.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3 Method - extractive PDF cue:** These features are then processed by two transformer decoders with cross-attention to produce low-resolution decoder embeddings {Gi low}i=1,2 ∈ R H 16 × W 16 ...
-- **p. 5 / 3 Method - extractive PDF cue:** To achieve a more compact and efficient geometric representation using fewer primitives, we propose a hierarchical primitive prediction architecture (HPPA) to fit the scene using ...
-- **p. 5 / 3 Method - extractive PDF cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
-- **p. 4 / 3 Method - extractive PDF cue:** Input images {Ii}i=1,2 are first encoded in a Siamese fashion using a ViT encoder [7], producing feature maps {F i}i=1,2 ∈R H 16 × W ...
-- **p. 6 / 3 Method - extractive PDF cue:** For the predicted relative pose Prel = [t, q], we use MSE loss and relative angle loss to provide supervision: Lpose = γ1
-- **p. 3 / 3 Method - extractive PDF cue:** PLANA3R is a transformer-based model for two-view metric 3D reconstruction, using sparse 3D planar primitives as a scene representation.
-- **p. 6 / 3 Method - extractive PDF cue:** 1 , (4) where ∗∈{low, high, selected} and β1, β2 balance the loss magnitudes for stable training.
+- **p. 4 / 3 Method - extractive body cue:** These features are then processed by two transformer decoders with cross-attention to produce low-resolution decoder embeddings {Gi low}i=1,2 ∈ R H 16 × W 16 ...
+- **p. 5 / 3 Method - extractive body cue:** To achieve a more compact and efficient geometric representation using fewer primitives, we propose a hierarchical primitive prediction architecture (HPPA) to fit the scene using ...
+- **p. 5 / 3 Method - extractive body cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
+- **p. 4 / 3 Method - extractive body cue:** Input images {Ii}i=1,2 are first encoded in a Siamese fashion using a ViT encoder [7], producing feature maps {F i}i=1,2 ∈R H 16 × W ...
+- **p. 6 / 3 Method - extractive body cue:** For the predicted relative pose Prel = [t, q], we use MSE loss and relative angle loss to provide supervision: Lpose = γ1
+- **p. 3 / 3 Method - extractive body cue:** PLANA3R is a transformer-based model for two-view metric 3D reconstruction, using sparse 3D planar primitives as a scene representation.
+- **p. 6 / 3 Method - extractive body cue:** 1 , (4) where ∗∈{low, high, selected} and β1, β2 balance the loss magnitudes for stable training.
 - **Detected method headings:** 3 Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | These features are then processed by two transformer decoders with cross-attention to produce low-resolution decoder embeddings {Gi low}i=1,2 ∈ R H 16 ... | p. 4 (3 Method), p. 5 (3 Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To achieve a more compact and efficient geometric representation using fewer primitives, we propose a hierarchical primitive prediction architecture (HPPA) to fit ... | p. 5 (3 Method), p. 5 (3 Method) |
@@ -48,14 +48,14 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Objective / Update Rule
 
-- **p. 4 / 3 Method - extractive PDF cue:** 3.2, outline training objectives in Sec.
-- **p. 5 / 3 Method - extractive PDF cue:** After the warm-up phase, we introduce a rendering loss.
-- **p. 5 / 3 Method - extractive PDF cue:** 1 , (3) where ∗∈{low, high}, α1 and α2 are loss weights.
-- **p. 6 / 3 Method - extractive PDF cue:** For the predicted relative pose Prel = [t, q], we use MSE loss and relative angle loss to provide supervision: Lpose = γ1
-- **p. 6 / 3 Method - extractive PDF cue:** We compute the gradient magnitude for each pixel in low-resolution Npatch low and use high-resolution planar primitives only for those pixels whose gradients exceed a ...
-- **p. 24 / A.2 Implementation Details - extractive PDF cue:** For our final model used for evaluation, we set the loss weights α1 = 5, α2 = 5, α3 = 20 in Eq.
+- **p. 4 / 3 Method - extractive body cue:** 3.2, outline training objectives in Sec.
+- **p. 5 / 3 Method - extractive body cue:** After the warm-up phase, we introduce a rendering loss.
+- **p. 5 / 3 Method - extractive body cue:** 1 , (3) where ∗∈{low, high}, α1 and α2 are loss weights.
+- **p. 6 / 3 Method - extractive body cue:** For the predicted relative pose Prel = [t, q], we use MSE loss and relative angle loss to provide supervision: Lpose = γ1
+- **p. 6 / 3 Method - extractive body cue:** We compute the gradient magnitude for each pixel in low-resolution Npatch low and use high-resolution planar primitives only for those pixels whose gradients exceed a ...
+- **p. 17 / A.2 Implementation Details - extractive body cue:** For our final model used for evaluation, we set the loss weights α1 = 5, α2 = 5, α3 = 20 in Eq.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
-- **Equation/algorithm anchors:** p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 24 (A.2 Implementation Details).
+- **Equation/algorithm anchors:** p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 17 (A.2 Implementation Details).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
@@ -69,13 +69,13 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3 Method - extractive PDF cue:** Our goal is to train a network F outputs a set of sparse 3D planar primitives and the 6-DoF relative camera pose Prel.
-- **p. 4 / 3 Method - extractive PDF cue:** Given two images captured from the same scene, PLANA3R outputs a set of 3D planar primitives and 6-DoF relative camera pose Prel in metric scale.
-- **p. 5 / 3 Method - extractive PDF cue:** For each input image, using dπ in predicted primitives, we derive the patched depth maps: Dpatch low ∈R1× H 16 × W 16 and Dpatch ...
-- **p. 5 / 3 Method - extractive PDF cue:** 3.3 Training Losses and Training Strategies For input images {Ii}i=1,2, PLANA3R generates planar primitives at both low and high resolutions.
-- **p. 6 / 3 Method - extractive PDF cue:** 3.4 3D Plane Merge Given a pair of input images, once the collection of 3D planar primitives is predicted, we perform a similar merging in ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Planar reconstruction approaches include feedforward solutions in monocular [40, 16, 27, 24, 18, 42] and two-view [11, 1, 28] settings, and per-scene optimization approaches [29, ...
-- **p. 6 / 3 Method - extractive PDF cue:** This process enables the extraction of semantic information for each plane and yields the final planar surface reconstruction.
+- **p. 4 / 3 Method - extractive body cue:** Our goal is to train a network F outputs a set of sparse 3D planar primitives and the 6-DoF relative camera pose Prel.
+- **p. 4 / 3 Method - extractive body cue:** Given two images captured from the same scene, PLANA3R outputs a set of 3D planar primitives and 6-DoF relative camera pose Prel in metric scale.
+- **p. 5 / 3 Method - extractive body cue:** For each input image, using dπ in predicted primitives, we derive the patched depth maps: Dpatch low ∈R1× H 16 × W 16 and Dpatch ...
+- **p. 5 / 3 Method - extractive body cue:** 3.3 Training Losses and Training Strategies For input images {Ii}i=1,2, PLANA3R generates planar primitives at both low and high resolutions.
+- **p. 6 / 3 Method - extractive body cue:** 3.4 3D Plane Merge Given a pair of input images, once the collection of 3D planar primitives is predicted, we perform a similar merging in ...
+- **p. 2 / 1 Introduction - extractive body cue:** Planar reconstruction approaches include feedforward solutions in monocular [40, 16, 27, 24, 18, 42] and two-view [11, 1, 28] settings, and per-scene optimization approaches [29, ...
+- **p. 6 / 3 Method - extractive body cue:** This process enables the extraction of semantic information for each plane and yields the final planar surface reconstruction.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,11 +90,11 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Training vs Inference
 
-- **p. 5 / 3 Method - extractive PDF cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
-- **p. 6 / 3 Method - extractive PDF cue:** 1 , (4) where ∗∈{low, high, selected} and β1, β2 balance the loss magnitudes for stable training.
-- **p. 6 / 4 Experiment - extractive PDF cue:** The model is trained for a total of 256 GPU-days on NVIDIA H20 GPUs, with a per-GPU batch size of 6.
-- **p. 6 / 4 Experiment - extractive PDF cue:** 4.1 Implementation Details We initialize the ViT encoder and the transformer decoder's part of PLANA3R model with DUSt3R's pre-trained 512-DPT weights.
-- **p. 25 / A.3 Runtime Analysis - extractive PDF cue:** We evaluate the inference runtime of our PLANA3R using an NVIDIA RTX 3090 GPU.
+- **p. 5 / 3 Method - extractive body cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
+- **p. 6 / 3 Method - extractive body cue:** 1 , (4) where ∗∈{low, high, selected} and β1, β2 balance the loss magnitudes for stable training.
+- **p. 6 / 4 Experiment - extractive body cue:** The model is trained for a total of 256 GPU-days on NVIDIA H20 GPUs, with a per-GPU batch size of 6.
+- **p. 6 / 4 Experiment - extractive body cue:** 4.1 Implementation Details We initialize the ViT encoder and the transformer decoder's part of PLANA3R model with DUSt3R's pre-trained 512-DPT weights.
+- **p. 18 / A.3 Runtime Analysis - extractive body cue:** We evaluate the inference runtime of our PLANA3R using an NVIDIA RTX 3090 GPU.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Failure and Ablation Link
 
-- **p. 8 / 4 Experiment - extractive PDF cue:** Here, we show that PLANA3R can perform zero-shot plane-level semantic segmentation without plane annotations.
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation study on the gradient threshold (gth). We show the relationship between the number of per-view primitives and performance. ScanNetV2 Reconstruction NYUv2 Depth ...
-- **p. 21 / A.2 Implementation Details - extractive PDF cue:** Data means training without 0.57M nonoverlapping image pairs).
-- **p. 22 / A.2 Implementation Details - extractive PDF cue:** We also conduct an additional ablation study to evaluate the impact of incorporating the 0.57M non-overlapping image pairs on model performance during training.
-- **p. 25 / A.5 Limitations - extractive PDF cue:** While this represents a limitation in our current analysis, it also highlights the urgent need for better benchmarks in this field.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of our PLANA3R. Given two images captured from the same scene, PLANA3R outputs a set of 3D planar primitives and 6-DoF relative ...
-- **p. 7 / 4 Experiment - extractive PDF cue:** This process does not require merging the primitives and can be performed with a single feed-forward pass.
+- **p. 8 / 4 Experiment - extractive body cue:** Here, we show that PLANA3R can perform zero-shot plane-level semantic segmentation without plane annotations.
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on the gradient threshold (gth). We show the relationship between the number of per-view primitives and performance. ScanNetV2 Reconstruction NYUv2 Depth ...
+- **p. 14 / A.2 Implementation Details - extractive body cue:** Data means training without 0.57M nonoverlapping image pairs).
+- **p. 15 / A.2 Implementation Details - extractive body cue:** We also conduct an additional ablation study to evaluate the impact of incorporating the 0.57M non-overlapping image pairs on model performance during training.
+- **p. 18 / A.5 Limitations - extractive body cue:** While this represents a limitation in our current analysis, it also highlights the urgent need for better benchmarks in this field.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our PLANA3R. Given two images captured from the same scene, PLANA3R outputs a set of 3D planar primitives and 6-DoF relative ...
+- **p. 7 / 4 Experiment - extractive body cue:** This process does not require merging the primitives and can be performed with a single feed-forward pass.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 3 (3 Method), objective p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 24 (A.2 Implementation Details), temporal p. 4 (3 Method), p. 4 (3 Method), p. 7 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment), p. 21 (A.2 Implementation Details).
+- **Evidence anchors reviewed:** method p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 3 (3 Method), objective p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 17 (A.2 Implementation Details), temporal p. 4 (3 Method), p. 4 (3 Method), p. 7 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment), p. 14 (A.2 Implementation Details).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

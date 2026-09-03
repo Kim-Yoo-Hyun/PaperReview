@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610040/; PDF retrieval source: https://arxiv.org/pdf/2401.16013. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610040/; PDF retrieval source: https://arxiv.org/pdf/2401.16013. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Experiments | BENCHMARK / DATASET | The learned RL policies not only outperformed their BC counterparts by as much as 10x in terms of success rate but also improved on ... | p. 8 (5. Experiments) |
 | 5. Experiments | BENCHMARK / DATASET | The policy converged in 19 minutes and achieved a 100/100 success rate with 20 initial human demonstrations, successfully reproducing our results. | p. 9 (5. Experiments) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Task # of Demos Image Input Random Reset Reward Specification Bin Size Training Time PCB ... | embodiment, simulator version and control stack | p. 8 (5. Experiments), p. 7 (5. Experiments) |
 | Task/environment | Our experimental evaluation aims to study how efficiently our system can learn a variety of robotic manipulation tasks, including contact-rich tasks, deformable object manipulation, ... | reset, timeout, object/scene variation | p. 7 (5. Experiments), p. 8 (5. Experiments) |
@@ -156,7 +156,16 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 
 - **p. 9 / 6. Discussion - extractive body cue:** Our framework does have a number of limitations.
 
-- **PDF anchors reviewed:** datasets p. 8 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 9 (5. Experiments), p. 9 (5. Experiments), metrics p. 7 (Figure/Table caption), p. 9 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 9 (5. Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5. Experiments), p. 8 (5. Experiments), p. 9 (5. Experiments), p. 7 (Figure/Table caption), p. 9 (5. Experiments), results p. 8 (5. Experiments), p. 9 (5. Experiments), p. 8 (5. Experiments), p. 7 (Figure/Table caption), p. 9 (5. Experiments), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 9 (5. Experiments), p. 9 (5. Experiments), metrics p. 7 (Figure/Table caption), p. 9 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 9 (5. Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5. Experiments), p. 8 (5. Experiments), p. 9 (5. Experiments), p. 7 (Figure/Table caption), p. 9 (5. Experiments), results p. 8 (5. Experiments), p. 9 (5. Experiments), p. 8 (5. Experiments), p. 7 (Figure/Table caption), p. 9 (5. Experiments), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Comparison to results reported on similar tasks in prior work. The overall success rates for our method are generally higher, and the training times are generally lower, as ... (p. 7, Figure/Table caption).
+- **Metric evidence:** SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington these prior works generally have either lower success rates or longer training ... (p. 9, 5. Experiments).
+- **Baseline/ablation evidence:** For the cable routing task and PCB insertion task, our policies outperform BC baselines by a large margin, despite training with 5x fewer demonstrations than BC, suggesting that demos alone ... (p. 8, 5. Experiments).
+- **Failure/negative evidence:** Our framework does have a number of limitations. (p. 9, 6. Discussion).

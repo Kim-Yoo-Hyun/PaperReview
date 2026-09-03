@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -34,7 +34,7 @@ PDF body method statement (p. 13 (A.2 Implementation Details), p. 12 (A.2 Implem
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Model Architecture A pre-trained Vision Transformer (ViT-B/16) processes an image of size 224×224, yielding image features of dimension 768×(196+1). | p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | We use the pre-trained ViT-B/16 weights and fine-tune it with the learning rate setting to the same value as other modules. | p. 12 (A.2 Implementation Details), p. 13 (A.2 Implementation Details) |
@@ -76,7 +76,7 @@ PDF body method statement (p. 13 (A.2 Implementation Details), p. 12 (A.2 Implem
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | For example, The SLAM (simultaneous localization and mapping) task requires reconstructing the 3D geometric scene and estimating camera poses given a sequence ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | This comparison aims to highlight the enhanced predictive capabilities our GCN model brings to complex assembly sequences. | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | Training is conducted on an RTX 3090 GPU using AdamW, with an initial rate of 5e-4, decaying by 0.8 per epoch, a ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -126,8 +126,17 @@ PDF body method statement (p. 13 (A.2 Implementation Details), p. 12 (A.2 Implem
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details), p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details), objective p. 12 (A.2 Implementation Details), temporal p. 2 (2 Related work), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** method p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details), p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details), objective p. 12 (A.2 Implementation Details), temporal p. 2 (2 Related work), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Hyperparameters For training loss: L = α · Lcount + β · Lgraph + Lpose, (6) Lpose = Lkeypoint + Lmask + γ1Lrotation (7) + γ2Lshape + γ3Ltexture + γ4Lconfidence, ... (p. 12, A.2 Implementation Details).
+- **Objective/update evidence:** Hyperparameters For training loss: L = α · Lcount + β · Lgraph + Lpose, (6) Lpose = Lkeypoint + Lmask + γ1Lrotation (7) + γ2Lshape + γ3Ltexture + γ4Lconfidence, ... (p. 12, A.2 Implementation Details).
+- **Temporal/runtime evidence:** This comparison aims to highlight the enhanced predictive capabilities our GCN model brings to complex assembly sequences. (p. 6, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

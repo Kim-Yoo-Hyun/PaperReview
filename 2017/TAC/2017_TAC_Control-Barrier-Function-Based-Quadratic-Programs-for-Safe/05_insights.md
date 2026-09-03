@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 (43) Here, x = (x1, x2, x3) := (vf, vl, D) where vf and vl are the velocity of the following and leading vehicle (in m/s), respectively, D is the distance between ...를 The model parameters a, b, Cr, Iz and v0 are all positive, and hence the system is exponentially stable, and therefore input-to-state stable [41].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Future work will be devoted to building upon the foundations presented in this paper in the context of safety-critical control of cyber-physical systems, with a special focus on robotic and automotive systems.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in the relationships shown in Fig.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** (43) Here, x = (x1, x2, x3) := (vf, vl, D) where vf and vl are the velocity of the following and leading vehicle (in m/s), respectively, D is the ... (p. 10, V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS).
+- **Paper-specific mechanism:** Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in the relationships shown in Fig. (p. 2, B. Contributions).
+- **Evidence boundary:** the reported outcome is Comparison of two QPs Recall that Figure 2 showed simulation results obtained by applying the QP controller in (ACC QP), where the force constraints were not taken into account. (p. 13, VI. SIMULATION RESULTS); the relevant task/metric cue is Simulation results for ACC Various problem formulations are compared here. (p. 13, VI. SIMULATION RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Note that, due to limits on the wheel forces, the speed converges to vd more slowly, and begins braking earlier, as evidenced by the top plot in Fig. (p. 13, VI. SIMULATION RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The parameters used for the simulation are given in Table I..
-3. Compare against the body-reported baseline or a matched simpler baseline: Simulation results for ACC Various problem formulations are compared here..
-4. Report the body metric and its denominator/aggregation: The feedforward term xff = [0, 0, 0, rd]⊤reduces tracking error..
-5. Re-run the body-reported ablation/failure condition: Fig. 3. The projection of CF onto the (y, ˙y)-plane is bounded by the upper and lower curves. The subset CLK ⊂Int(CF ) is bounded by the dotted lines. Any feedback controller ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: (43) Here, x = (x1, x2, x3) := (vf, vl, D) where vf and vl are the velocity of the following and leading vehicle (in m/s), respectively, D is the ... (p. 10, V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS); preserve the objective/update rule: Safety critical systems involve the tight coupling between potentially conflicting control objectives and safety constraints. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: The parameters used for the simulation are given in Table I. (p. 13, VI. SIMULATION RESULTS).
+3. Compare against the reported or matched baseline: Simulation results for ACC Various problem formulations are compared here. (p. 13, VI. SIMULATION RESULTS).
+4. Report the body metric with its denominator and aggregation: Simulation results for ACC Various problem formulations are compared here. (p. 13, VI. SIMULATION RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Fig. 3. The projection of CF onto the (y, ˙y)-plane is bounded by the upper and lower curves. The subset CLK ⊂Int(CF ) is bounded by the dotted lines. Any ... (p. 13, Figure/Table caption); if none is reported, design one around: Note that, due to limits on the wheel forces, the speed converges to vd more slowly, and begins braking earlier, as evidenced by the top plot in Fig. (p. 13, VI. SIMULATION RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1 (Abstract); the primary result is directionally consistent at p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (0.1 N); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (B. Contributions), p. 1 (I. INTRODUCTION), match the reported outcome at p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), and measure the boundary at p. 13 (VI. SIMULATION RESULTS), p. 1 (I. INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Importantly, under, mild mechanism이 Simulation results for ACC Various problem formulations are compared here. 대비 The feedforward term xff = [0, 0, 0, rd]⊤reduces tracking error.을 개선하고, Future work will be devoted to building upon the foundations presented in this paper in the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface ((43) Here, x = (x1, x2, x3) := (vf, vl, D) where vf and vl are the velocity of the following and ...), does the paper-specific mechanism (Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, ...) retain the reported evaluation outcome (Simulation results for ACC Various problem formulations are compared here.) when tested against the paper's strongest explicit boundary (Note that, due to limits on the wheel forces, the speed converges to vd more slowly, and begins ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Simulation results for ACC Various problem formulations are compared here.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in the relationships shown in Fig. (p. 2, B. Contributions).
+- **Paper-supported outcome:** Comparison of two QPs Recall that Figure 2 showed simulation results obtained by applying the QP controller in (ACC QP), where the force constraints were not taken into account. (p. 13, VI. SIMULATION RESULTS).
+- **Strongest explicit boundary:** Note that, due to limits on the wheel forces, the speed converges to vd more slowly, and begins braking earlier, as evidenced by the top plot in Fig. (p. 13, VI. SIMULATION RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

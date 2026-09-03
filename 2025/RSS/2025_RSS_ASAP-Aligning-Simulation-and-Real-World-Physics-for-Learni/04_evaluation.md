@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p066.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p066.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p066.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p066.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror ... | p. 10 (Figure/Table caption) |
 
@@ -49,7 +49,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 (). | embodiment, simulator version and control stack | p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world) |
 | Task/environment | ) Retargeting SMPL Motions to Robot Motions: With the cleaned dataset D&at in SMPL format, we retarget the motions into robot motions following the ... | reset, timeout, object/scene variation | p. 3 (3) Extensive experiments in both simulation and real-world) |
@@ -139,7 +139,16 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 - **p. 10 / A. Key Factors in Training Delta Action Models - extractive body cue:** However, this trend ‘does not consistently extend to closed-loop performance.
 - **p. 3 / 3) Extensive experiments in both simulation and real-world - extractive body cue:** b) Simulation-based Data Cleaning: Since the reconstruction process can introduce noise and errors [25], some estimated motions may not be physically feasible, making them unsuitable ...
 
-- **PDF anchors reviewed:** datasets p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), metrics p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), p. 1 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 10 (Figure/Table caption), results p. 10 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), metrics p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), p. 1 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 10 (Figure/Table caption), results p. 10 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 (). (p. 3, 3) Extensive experiments in both simulation and real-world).
+- **Metric evidence:** settings demonstrate that ASAP effectively reduces dyrnamies mismatch, enabling highly agile motions on robots and significantly reducing motion tracking errors. (p. 3, 3) Extensive experiments in both simulation and real-world).
+- **Baseline/ablation evidence:** Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror (MPIPE) is evaluted for both in-distbution ... (p. 10, Figure/Table caption).
+- **Failure/negative evidence:** For instance, when imitating a jumping motion, the policy often fails early in training and learns 10 remain on the ground to avoid landing penalties. (p. 4, B. Phase-based Motion Tracking Policy Training).

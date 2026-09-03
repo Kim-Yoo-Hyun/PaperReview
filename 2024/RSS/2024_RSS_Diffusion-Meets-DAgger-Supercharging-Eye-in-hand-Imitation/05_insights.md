@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Purple-outlined images are diffusion-generated augmenting samples. c) The original task data and augmenting dataset are combined for policy learning. views from a wrist camera, and the actions at are the relative end-effector ...를 In this paper, we pursue an alternate paradigm: automatically generating observations and action labels for out-of-distribution states.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to the receiving cup; the blue cup then ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Purple-outlined images are diffusion-generated augmenting samples. c) The original task data and augmenting dataset are combined for policy learning. views from a wrist camera, and the actions at are the ... (p. 3, III. APPROACH).
+- **Paper-specific mechanism:** We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 9: Diffusion vs NeRF We visualize perturbed samples generated using DMD and NeRF with different masking strategies. The top row shows images generated for a forward movement relative to ... (p. 7, Figure/Table caption); the relevant task/metric cue is This advantage results in higher task performance: DMD achieves a 100% success rate, while SPARTN [86] achieves only 50%. (p. 7, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to the receiving cup; the blue ... (p. 9, 24 Demo).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Finally, we test whether DMD improves generalization to novel objects and environment when provided with a diverse task dataset, as described in Section IV-E..
-3. Compare against the body-reported baseline or a matched simpler baseline: Actions are executed on the robot by commanding the robot to go 1cm in the predicted direction. d) Baselines: We use vanilla behavior cloning on the expert data as the baseline as ....
-4. Report the body metric and its denominator/aggregation: This advantage results in higher task performance: DMD achieves a 100% success rate, while SPARTN [86] achieves only 50%..
-5. Re-run the body-reported ablation/failure condition: We modified VIME's [78] grabber mount for Franka, allowing the robot to reach end-effector poses without reaching joint limits. spaces (pouring, hanging a shirt), generalization to new objects (stacking), precision in reaching ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Purple-outlined images are diffusion-generated augmenting samples. c) The original task data and augmenting dataset are combined for policy learning. views from a wrist camera, and the actions at are the ... (p. 3, III. APPROACH); preserve the objective/update rule: This gives the final training objective of: L = //ϵ -ϵθ(xb t, E(Ia), aTb, t)// where xb 0 = E(Ib). (p. 3, III. APPROACH).
+2. Use the paper-reported task/data/environment cue: Finally, we test whether DMD improves generalization to novel objects and environment when provided with a diverse task dataset, as described in Section IV-E. (p. 5, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: On the pushing task, we present visual comparisons to NeRF-based synthesis approach SPARTN [86] in Section IV-A2 and in-depth quantitative analysis (ablation of design choices, offline evaluations) in Section IV-A3. (p. 5, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: This advantage results in higher task performance: DMD achieves a 100% success rate, while SPARTN [86] achieves only 50%. (p. 7, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: On the pushing task, we present visual comparisons to NeRF-based synthesis approach SPARTN [86] in Section IV-A2 and in-depth quantitative analysis (ablation of design choices, offline evaluations) in Section IV-A3. (p. 5, IV. EXPERIMENTS); if none is reported, design one around: A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to the receiving cup; the blue ... (p. 9, 24 Demo).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), and measure the boundary at p. 9 (24 Demo), p. 10 (24 Demo).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 present, experiments, evaluate mechanism이 Actions are executed on the robot by commanding the robot to go 1cm in the predicted ... 대비 This advantage results in higher task performance: DMD achieves a 100% success rate, while SPARTN [86] achieves only ...을 개선하고, A common failure case for BC is that as the robot rotates the cup with coffee ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Purple-outlined images are diffusion-generated augmenting samples. c) The original task data and augmenting dataset are combined for policy learning. views from a ...), does the paper-specific mechanism (We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning.) retain the reported evaluation outcome (This advantage results in higher task performance: DMD achieves a 100% success rate, while SPARTN [86] achieves only ...) when tested against the paper's strongest explicit boundary (A common failure case for BC is that as the robot rotates the cup with coffee beans, it ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (This advantage results in higher task performance: DMD achieves a 100% success rate, while SPARTN [86] achieves only ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 9: Diffusion vs NeRF We visualize perturbed samples generated using DMD and NeRF with different masking strategies. The top row shows images generated for a forward movement relative to ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to the receiving cup; the blue ... (p. 9, 24 Demo).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

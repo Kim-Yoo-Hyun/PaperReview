@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (33 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.02145; PDF retrieval source: https://arxiv.org/pdf/2312.02145. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.02145; PDF retrieval source: https://arxiv.org/pdf/2312.02145. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablatio
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** In the case of the ScanNet dataset, we randomly sampled 800 images from the 312 official validation scenes for testing.
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** Hypersim [37] is a photorealistic dataset with 461 indoor scenes.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** When fine-tuned on a single synthetic dataset, the pretrained LDM can already be adapted for monocular depth estimation to a certain degree, while the more ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** To better understand the impact of the synthetic datasets used for our fine-tuning protocol, we ablate on a photorealistic street-scene Virtual KITTI [7], and a ...
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** Qualitative comparison (depth) of monocular depth estimation methods across different datasets.
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** We implement Marigold using PyTorch and utilize Stable Diffusion v2 [38] as our backbone, following the original pre-training setup with a v-objective [42].
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall layout of the scene (e.g., walls in ETH3D example and chairs in DIODE ...
-- **p. 6 / 4.1. Implementation - extractive PDF cue:** All metrics† are presented in percentage terms; bold numbers are the best, underscored second best.
+- **p. 6 / 4.2. Evaluation - extractive body cue:** In the case of the ScanNet dataset, we randomly sampled 800 images from the 312 official validation scenes for testing.
+- **p. 6 / 4.2. Evaluation - extractive body cue:** Hypersim [37] is a photorealistic dataset with 461 indoor scenes.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** When fine-tuned on a single synthetic dataset, the pretrained LDM can already be adapted for monocular depth estimation to a certain degree, while the more ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** To better understand the impact of the synthetic datasets used for our fine-tuning protocol, we ablate on a photorealistic street-scene Virtual KITTI [7], and a ...
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Qualitative comparison (depth) of monocular depth estimation methods across different datasets.
+- **p. 5 / 4.1. Implementation - extractive body cue:** We implement Marigold using PyTorch and utilize Stable Diffusion v2 [38] as our backbone, following the original pre-training setup with a v-objective [42].
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall layout of the scene (e.g., walls in ETH3D example and chairs in DIODE ...
+- **p. 6 / 4.1. Implementation - extractive body cue:** All metrics† are presented in percentage terms; bold numbers are the best, underscored second best.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablatio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | 2, training with multi-resolution noise significantly improves the depth prediction accuracy over using standard Gaussian noise. | p. 8 (4.3. Ablation Studies) |
 | 4.3. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | Hypersim [37] delivers strong results; Virtual KITTI [7] improves outdoor performance. | p. 8 (4.3. Ablation Studies) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablatio
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** In the case of the ScanNet dataset, we randomly sampled 800 images from the 312 official validation scenes for testing.
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** Hypersim [37] is a photorealistic dataset with 461 indoor scenes.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** When fine-tuned on a single synthetic dataset, the pretrained LDM can already be adapted for monocular depth estimation to a certain degree, while the more ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** To better understand the impact of the synthetic datasets used for our fine-tuning protocol, we ablate on a photorealistic street-scene Virtual KITTI [7], and a ...
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** Qualitative comparison (depth) of monocular depth estimation methods across different datasets.
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** We implement Marigold using PyTorch and utilize Stable Diffusion v2 [38] as our backbone, following the original pre-training setup with a v-objective [42].
-- **p. 7 / 4.3. Ablation Studies - extractive PDF cue:** Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall layout of the scene (e.g., walls in ETH3D example and chairs in DIODE ...
+- **p. 6 / 4.2. Evaluation - extractive body cue:** In the case of the ScanNet dataset, we randomly sampled 800 images from the 312 official validation scenes for testing.
+- **p. 6 / 4.2. Evaluation - extractive body cue:** Hypersim [37] is a photorealistic dataset with 461 indoor scenes.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** When fine-tuned on a single synthetic dataset, the pretrained LDM can already be adapted for monocular depth estimation to a certain degree, while the more ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** To better understand the impact of the synthetic datasets used for our fine-tuning protocol, we ablate on a photorealistic street-scene Virtual KITTI [7], and a ...
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Qualitative comparison (depth) of monocular depth estimation methods across different datasets.
+- **p. 5 / 4.1. Implementation - extractive body cue:** We implement Marigold using PyTorch and utilize Stable Diffusion v2 [38] as our backbone, following the original pre-training setup with a v-objective [42].
+- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall layout of the scene (e.g., walls in ETH3D example and chairs in DIODE ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We present Marigold, a diffusion model and associated fine-tuning protocol for monocular depth estimation. Its core principle is to leverage the rich visual ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the Marigold fine-tuning protocol. Start- ing from pretrained Stable Diffusion, we encode the image x and depth d into the latent ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion VAE into the latent ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics† are presented in percentage terms; bold numbers are ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison (depth) of monocular depth estimation methods across different datasets. Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison (unprojected, colored as normals) of monocular depth estimation methods across different datasets. Marigold stands out for its superior reconstruction of flat ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Ablation of ensemble size. We observe a monotonic improvement with the growth of ensemble size. This improvement starts to diminish after 10 predictions ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation of training noise. Multi-resolution noise im- proves over Gaussian noise; annealing yields further improvement. Multi-res. noise Annealed NYUv2 KITTI AbsRel↓
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present Marigold, a diffusion model and associated fine-tuning protocol for monocular depth estimation. Its core principle is to leverage the rich visual ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the Marigold fine-tuning protocol. Start- ing from pretrained Stable Diffusion, we encode the image x and depth d into the latent ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion VAE into the latent ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics† are presented in percentage terms; bold numbers are ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative comparison (depth) of monocular depth estimation methods across different datasets. Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison (unprojected, colored as normals) of monocular depth estimation methods across different datasets. Marigold stands out for its superior reconstruction of flat ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Ablation of ensemble size. We observe a monotonic improvement with the growth of ensemble size. This improvement starts to diminish after 10 predictions ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation of training noise. Multi-resolution noise im- proves over Gaussian noise; annealing yields further improvement. Multi-res. noise Annealed NYUv2 KITTI AbsRel↓
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In the case of the ScanNet dataset, we randomly sampled 800 images from the 312 official validation scenes for testing. | embodiment, simulator version and control stack | p. 6 (4.2. Evaluation), p. 6 (4.2. Evaluation) |
 | Task/environment | Hypersim [37] is a photorealistic dataset with 461 indoor scenes. | reset, timeout, object/scene variation | p. 6 (4.2. Evaluation), p. 8 (4.3. Ablation Studies) |
@@ -119,12 +119,12 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablatio
 | Primary metric/result | Hypersim [37] delivers strong results; Virtual KITTI [7] improves outdoor performance. | numeric claim only at cited anchor | p. 8 (4.3. Ablation Studies) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** At inference time, we apply the DDIM scheduler [49] and only sample 50 steps.
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** To fit one GPU, we accumulate gradients for 16 steps.
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** Training our method to convergence takes approximately 2.5 days on a single Nvidia RTX 4090 GPU card.
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** We use the official split with around 54K samples from 365 scenes for training.
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** The second dataset, Virtual KITTI [7] is a synthetic street-scene dataset featuring 5 scenes under varying conditions like weather or camera perspectives.
-- **p. 6 / 4.2. Evaluation - extractive PDF cue:** We crop the images to the KITTI benchmark resolution [17] and set the far plane to 80 meters.
+- **p. 5 / 4.1. Implementation - extractive body cue:** At inference time, we apply the DDIM scheduler [49] and only sample 50 steps.
+- **p. 5 / 4.1. Implementation - extractive body cue:** To fit one GPU, we accumulate gradients for 16 steps.
+- **p. 5 / 4.1. Implementation - extractive body cue:** Training our method to convergence takes approximately 2.5 days on a single Nvidia RTX 4090 GPU card.
+- **p. 6 / 4.2. Evaluation - extractive body cue:** We use the official split with around 54K samples from 365 scenes for training.
+- **p. 6 / 4.2. Evaluation - extractive body cue:** The second dataset, Virtual KITTI [7] is a synthetic street-scene dataset featuring 5 scenes under varying conditions like weather or camera perspectives.
+- **p. 6 / 4.2. Evaluation - extractive body cue:** We crop the images to the KITTI benchmark resolution [17] and set the far plane to 80 meters.
 
 ## Generalization and Failure Cases
 
@@ -160,12 +160,12 @@ PDF body evaluation/result cue (p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablatio
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future research directions to overcome current limitations include improving inference efficiency, ensuring that similar inputs yield consistent outputs despite the model's generative nature, and better ...
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** During training, we apply the DDPM noise scheduler [20] with 1000 diffusion steps.
-- **p. 5 / 4.1. Implementation - extractive PDF cue:** For the final prediction, we aggregate results from 10 inference runs with varying starting noise.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** We investigate the impact of three types of noise during the training phase.
+- **p. 8 / 5. Conclusion - extractive body cue:** Future research directions to overcome current limitations include improving inference efficiency, ensuring that similar inputs yield consistent outputs despite the model's generative nature, and better ...
+- **p. 5 / 4.1. Implementation - extractive body cue:** During training, we apply the DDPM noise scheduler [20] with 1000 diffusion steps.
+- **p. 5 / 4.1. Implementation - extractive body cue:** For the final prediction, we aggregate results from 10 inference runs with varying starting noise.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** We investigate the impact of three types of noise during the training phase.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Evaluation), p. 6 (4.2. Evaluation), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 5 (4.1. Implementation), metrics p. 6 (4.1. Implementation), p. 6 (4.2. Evaluation), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 5 (4.1. Implementation), baselines p. 6 (Figure/Table caption), p. 6 (4.2. Evaluation), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 8 (Figure/Table caption), results p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Evaluation), p. 6 (4.1. Implementation), p. 4 (Figure/Table caption), p. 5 (4.1. Implementation).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Evaluation), p. 6 (4.2. Evaluation), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 5 (4.1. Implementation), metrics p. 6 (4.1. Implementation), p. 6 (4.2. Evaluation), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 5 (4.1. Implementation), baselines p. 6 (Figure/Table caption), p. 6 (4.2. Evaluation), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 8 (Figure/Table caption), results p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Evaluation), p. 6 (4.1. Implementation), p. 4 (Figure/Table caption), p. 5 (4.1. Implementation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

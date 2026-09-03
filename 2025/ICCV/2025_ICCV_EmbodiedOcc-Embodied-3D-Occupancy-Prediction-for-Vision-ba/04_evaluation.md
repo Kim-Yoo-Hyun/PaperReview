@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which comprises ...
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits.
-- **p. 7 / 4.3. Main Results - extractive PDF cue:** We also implemented several state-of-the-art driving scene methods [11, 13, 46] on this benchmark and our local refinement module outperforms them by a large margin.
-- **p. 7 / 4.3. Main Results - extractive PDF cue:** This is because they mainly focus on the coarse layout (e.g., positions of objects) while indoor scenes require modeling of the fine-grained structure (e.g., shapes ...
-- **p. 8 / 4.4. Experimental Analysis - extractive PDF cue:** We present in Table 7 a runtime analysis on scene 0687-00 from the EmbodiedOcc-ScanNet dataset.
-- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We trained and evaluated our local refinement module on the Occ-ScanNet dataset [56], which provides frames in 60\times 60\times 36 voxel grids (a 4.8m\times 4.8m\times ...
-- **p. 8 / 4.4. Experimental Analysis - extractive PDF cue:** We analyze the effect of different Gaussian parameters in Table 6 using the Occ-ScanNet-mini2 and the EmbodiedOcc-ScanNet-mini datasets.
-- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We conducted two tasks to evaluate our EmbodiedOcc framework: local occupancy prediction and embodied occupancy prediction.
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which comprises ...
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits.
+- **p. 7 / 4.3. Main Results - extractive body cue:** We also implemented several state-of-the-art driving scene methods [11, 13, 46] on this benchmark and our local refinement module outperforms them by a large margin.
+- **p. 7 / 4.3. Main Results - extractive body cue:** This is because they mainly focus on the coarse layout (e.g., positions of objects) while indoor scenes require modeling of the fine-grained structure (e.g., shapes ...
+- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** We present in Table 7 a runtime analysis on scene 0687-00 from the EmbodiedOcc-ScanNet dataset.
+- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We trained and evaluated our local refinement module on the Occ-ScanNet dataset [56], which provides frames in 60\times 60\times 36 voxel grids (a 4.8m\times 4.8m\times ...
+- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** We analyze the effect of different Gaussian parameters in Table 6 using the Occ-ScanNet-mini2 and the EmbodiedOcc-ScanNet-mini datasets.
+- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We conducted two tasks to evaluate our EmbodiedOcc framework: local occupancy prediction and embodied occupancy prediction.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | As shown in Table 1, the results indicate that our local refinement module outperforms ISO [56]. | p. 7 (4.3. Main Results) |
 | 4.3. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | We spliced the local occupancy obtained from our local module to serve as the main baseline (referred to as SplicingOcc), as our local module ... | p. 7 (4.3. Main Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which comprises ...
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits.
-- **p. 7 / 4.3. Main Results - extractive PDF cue:** We also implemented several state-of-the-art driving scene methods [11, 13, 46] on this benchmark and our local refinement module outperforms them by a large margin.
-- **p. 7 / 4.3. Main Results - extractive PDF cue:** This is because they mainly focus on the coarse layout (e.g., positions of objects) while indoor scenes require modeling of the fine-grained structure (e.g., shapes ...
-- **p. 8 / 4.4. Experimental Analysis - extractive PDF cue:** We present in Table 7 a runtime analysis on scene 0687-00 from the EmbodiedOcc-ScanNet dataset.
-- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We trained and evaluated our local refinement module on the Occ-ScanNet dataset [56], which provides frames in 60\times 60\times 36 voxel grids (a 4.8m\times 4.8m\times ...
-- **p. 8 / 4.4. Experimental Analysis - extractive PDF cue:** We analyze the effect of different Gaussian parameters in Table 6 using the Occ-ScanNet-mini2 and the EmbodiedOcc-ScanNet-mini datasets.
-- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We conducted two tasks to evaluate our EmbodiedOcc framework: local occupancy prediction and embodied occupancy prediction.
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which comprises ...
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits.
+- **p. 7 / 4.3. Main Results - extractive body cue:** We also implemented several state-of-the-art driving scene methods [11, 13, 46] on this benchmark and our local refinement module outperforms them by a large margin.
+- **p. 7 / 4.3. Main Results - extractive body cue:** This is because they mainly focus on the coarse layout (e.g., positions of objects) while indoor scenes require modeling of the fine-grained structure (e.g., shapes ...
+- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** We present in Table 7 a runtime analysis on scene 0687-00 from the EmbodiedOcc-ScanNet dataset.
+- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We trained and evaluated our local refinement module on the Occ-ScanNet dataset [56], which provides frames in 60\times 60\times 36 voxel grids (a 4.8m\times 4.8m\times ...
+- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** We analyze the effect of different Gaussian parameters in Table 6 using the Occ-ScanNet-mini2 and the EmbodiedOcc-ScanNet-mini datasets.
+- **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We conducted two tasks to evaluate our EmbodiedOcc framework: local occupancy prediction and embodied occupancy prediction.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Given streaming monocular RGB inputs, our EmbodiedOcc conducts embodied occupancy prediction in an online manner for indoor scenes. Different from existing methods which ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Framework of our EmbodiedOcc for embodied 3D occupancy prediction. We maintain an explicit global memory of 3D Gaussians during the exploration of the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Motivation of the depth-aware branch. Along a spe- cific ray, Gaussians distributed in front of the true depth point are likely to model ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of our Gaussian memory. During each update, the Gaussians within the current frustum are taken from the memory. Confidence values of those ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Local Prediction Performance on the Occ-ScanNet dataset.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Embodied Prediction Performance on the EmbodiedOcc-ScanNet dataset.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Look-Back Prediction vs First-Time Prediction. For \ protect \mathrm {K}= k, we simply select 0, 1, ..., \ m athrm {k-1}th frames to ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Performance with different stopping ratios. 50.78 41.45 41.05 40.80 50.15
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Given streaming monocular RGB inputs, our EmbodiedOcc conducts embodied occupancy prediction in an online manner for indoor scenes. Different from existing methods which ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Framework of our EmbodiedOcc for embodied 3D occupancy prediction. We maintain an explicit global memory of 3D Gaussians during the exploration of the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Motivation of the depth-aware branch. Along a spe- cific ray, Gaussians distributed in front of the true depth point are likely to model ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of our Gaussian memory. During each update, the Gaussians within the current frustum are taken from the memory. Confidence values of those ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Local Prediction Performance on the Occ-ScanNet dataset.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Embodied Prediction Performance on the EmbodiedOcc-ScanNet dataset.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Look-Back Prediction vs First-Time Prediction. For \ protect \mathrm {K}= k, we simply select 0, 1, ..., \ m athrm {k-1}th frames to ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Performance with different stopping ratios. 50.78 41.45 41.05 40.80 50.15
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which ... | embodiment, simulator version and control stack | p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark) |
 | Task/environment | We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits. | reset, timeout, object/scene variation | p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results) |
@@ -120,12 +120,12 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 | Primary metric/result | We spliced the local occupancy obtained from our local module to serve as the main baseline (referred to as SplicingOcc), as our local module ... | numeric claim only at cited anchor | p. 7 (4.3. Main Results) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** Our EmbodiedOcc-ScanNet comprises 537/137 scenes in the train/val splits.
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which comprises ...
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits.
-- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive PDF cue:** It is worth mentioning that the global occupancy used here is the union of the frustums corresponding to 30 frames of each scene, which represents ...
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** We train our local refinement module for 10 epochs using 8 NVIDIA GeForce RTX 4090 GPUs on the Occ-ScanNet dataset and 20 epochs on the ...
-- **p. 6 / 4.2. Implementation Details - extractive PDF cue:** We train our EmbodiedOcc for 5 epochs using 8 NVIDIA GeForce RTX 4090 GPUs on the EmbodiedOcc-ScanNet dataset and 20 epochs using 4 NVIDIA GeForce ...
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** Our EmbodiedOcc-ScanNet comprises 537/137 scenes in the train/val splits.
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** Apart from Occ-ScanNet and EmbodiedOcc-ScanNet datasets in the original scale, we sampled a small set from the EmbodiedOcc-ScanNet dataset as the EmbodiedOccScanNet-mini dataset which comprises ...
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We sampled from the Occ-ScanNet dataset accordingly and obtained an Occ-ScanNet-mini2 dataset, which comprises 5504/2376 frames in the train/val splits.
+- **p. 6 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** It is worth mentioning that the global occupancy used here is the union of the frustums corresponding to 30 frames of each scene, which represents ...
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** We train our local refinement module for 10 epochs using 8 NVIDIA GeForce RTX 4090 GPUs on the Occ-ScanNet dataset and 20 epochs on the ...
+- **p. 6 / 4.2. Implementation Details - extractive body cue:** We train our EmbodiedOcc for 5 epochs using 8 NVIDIA GeForce RTX 4090 GPUs on the EmbodiedOcc-ScanNet dataset and 20 epochs using 4 NVIDIA GeForce ...
 
 ## Generalization and Failure Cases
 
@@ -157,10 +157,10 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.4. Experimental Analysis - extractive PDF cue:** Due to space limitations, we will use a more diverse set of samples to further show the visual effect of our EmbodiedOcc in the supplementary ...
-- **p. 8 / 4.4. Experimental Analysis - extractive PDF cue:** Besides, we replaced DepthAnything-V2 with IndoorDepth [6] in the last row to prove that our depth-aware branch does not rely on a specific depth prediction ...
+- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** Due to space limitations, we will use a more diverse set of samples to further show the visual effect of our EmbodiedOcc in the supplementary ...
+- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** Besides, we replaced DepthAnything-V2 with IndoorDepth [6] in the last row to prove that our depth-aware branch does not rely on a specific depth prediction ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 5 (4.1. EmbodiedOcc-ScanNet Benchmark), metrics p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.4. Experimental Analysis), p. 7 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), baselines p. 7 (4.3. Main Results), p. 5 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), results p. 7 (4.3. Main Results), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 5 (4.1. EmbodiedOcc-ScanNet Benchmark), metrics p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.4. Experimental Analysis), p. 7 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), baselines p. 7 (4.3. Main Results), p. 5 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), results p. 7 (4.3. Main Results), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,22 +2,22 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2503.17406v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2503.17406v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 1 (I. INTRODUCTION), p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption)): An agent that can 1) similarly solve such a problem, 2) handle imperfect or ambiguous language, and 3) interact with humans to achieve the intended goal would be valuable in ...
+PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption)): Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs are close to the radiator, so ...
 
 ## Evaluation Body Digest
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** First, we provide the largest real-world dataset based on 3D scenes from a diverse set of existing indoor scans.
-- **p. 1 / Abstract - extractive PDF cue:** To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Breakdown of regions from each data source heavily on original user intent and preferences. Thus, human- labeled scores may better quantify quality, though ...
-- **p. 1 / Abstract - extractive PDF cue:** We verify the generalizability of our dataset by evaluating with state-of-the-art models to obtain a performance baseline and also develop a graphsearch baseline to demonstrate ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** An agent that can 1) similarly solve such a problem, 2) handle imperfect or ambiguous language, and 3) interact with humans to achieve the intended ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** First, we provide the largest real-world dataset based on 3D scenes from a diverse set of existing indoor scans.
+- **p. 1 / Abstract - extractive body cue:** To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Breakdown of regions from each data source heavily on original user intent and preferences. Thus, human- labeled scores may better quantify quality, though ...
+- **p. 1 / Abstract - extractive body cue:** We verify the generalizability of our dataset by evaluating with state-of-the-art models to obtain a performance baseline and also develop a graphsearch baseline to demonstrate ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Third, the scale of available visionlanguage data in the 3D space pales in comparison to the amount of 2D data, which was crucial to the ...
 
 ## Evaluation Type and Scope
 
@@ -30,32 +30,32 @@ PDF body evaluation/result cue (p. 1 (I. INTRODUCTION), p. 5 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| I. INTRODUCTION | BENCHMARK / DATASET | An agent that can 1) similarly solve such a problem, 2) handle imperfect or ambiguous language, and 3) interact with humans to achieve the ... | p. 1 (I. INTRODUCTION) |
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs ... | p. 5 (Figure/Table caption) |
 | I. INTRODUCTION | BENCHMARK / DATASET | Third, the scale of available visionlanguage data in the 3D space pales in comparison to the amount of 2D data, which was crucial to ... | p. 1 (I. INTRODUCTION) |
+| I. INTRODUCTION | BENCHMARK / DATASET | The pursuit of such agents that can identify and understand 3D scenes, consolidate visual input with language semantics, and display robust performance for real-world ... | p. 1 (I. INTRODUCTION) |
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 2. Breakdown of regions from each data source heavily on original user intent and preferences. Thus, human- labeled scores may better quantify quality, ... | p. 3 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** First, we provide the largest real-world dataset based on 3D scenes from a diverse set of existing indoor scans.
-- **p. 1 / Abstract - extractive PDF cue:** To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** First, we provide the largest real-world dataset based on 3D scenes from a diverse set of existing indoor scans.
+- **p. 1 / Abstract - extractive body cue:** To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1. Sample region from the dataset visualized with (a) a scene graph and (b) a corresponding referential statement . The pursuit of such agents ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Breakdown of regions from each data source heavily on original user intent and preferences. Thus, human- labeled scores may better quantify quality, though ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. Number of statements per relation type from each dataset processed TABLE I SUMMARY OF SEMANTIC RELATIONSHIP TYPES IN IREF-VLA Relation Definition Synonyms Properties
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4. Data processing pipeline consisting of: 3D Scan Processing, Scene Graph Generation, and Language Generation
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs are ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Sample region from the dataset visualized with (a) a scene graph and (b) a corresponding referential statement . The pursuit of such agents ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Breakdown of regions from each data source heavily on original user intent and preferences. Thus, human- labeled scores may better quantify quality, though ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Number of statements per relation type from each dataset processed TABLE I SUMMARY OF SEMANTIC RELATIONSHIP TYPES IN IREF-VLA Relation Definition Synonyms Properties
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4. Data processing pipeline consisting of: 3D Scan Processing, Scene Graph Generation, and Language Generation
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs are ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | First, we provide the largest real-world dataset based on 3D scenes from a diverse set of existing indoor scans. | embodiment, simulator version and control stack | p. 1 (I. INTRODUCTION), p. 1 (Abstract) |
 | Task/environment | To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references. | reset, timeout, object/scene variation | p. 1 (Abstract) |
@@ -100,8 +100,8 @@ PDF body evaluation/result cue (p. 1 (I. INTRODUCTION), p. 5 (Figure/Table capti
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential ... | An agent that can 1) similarly solve such a problem, 2) handle imperfect or ambiguous language, and 3) interact with humans to achieve the ... | PDF body cue; verify exact table/figure and matched conditions | p. 1 (I. INTRODUCTION), p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption) |
-| Primary metric/result | Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs ... | numeric claim only at cited anchor | p. 5 (Figure/Table caption) |
+| To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential ... | Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs ... | PDF body cue; verify exact table/figure and matched conditions | p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption) |
+| Primary metric/result | Third, the scale of available visionlanguage data in the 3D space pales in comparison to the amount of 2D data, which was crucial to ... | numeric claim only at cited anchor | p. 1 (I. INTRODUCTION) |
 
 - Numeric sentences retained from the body:
 - no numeric body cue
@@ -132,11 +132,11 @@ PDF body evaluation/result cue (p. 1 (I. INTRODUCTION), p. 5 (Figure/Table capti
 
 ## Limitations and Verification Questions
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Second, human referential language often involves spatial reasoning, implicit and explicit affordances, open-vocabulary language, and may even be incorrect or refer to something that does ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Second, human referential language often involves spatial reasoning, implicit and explicit affordances, open-vocabulary language, and may even be incorrect or refer to something that does ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
 
-- **PDF anchors reviewed:** datasets p. 1 (I. INTRODUCTION), p. 1 (Abstract), metrics p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption), p. 1 (Abstract), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 1 (Abstract), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (I. INTRODUCTION), results p. 1 (I. INTRODUCTION), p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 1 (I. INTRODUCTION), p. 1 (Abstract), metrics p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption), p. 1 (Abstract), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 1 (Abstract), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (I. INTRODUCTION), results p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

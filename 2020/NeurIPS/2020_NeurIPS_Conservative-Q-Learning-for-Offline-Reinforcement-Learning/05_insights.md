@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `dataset state/observation, action, reward와 return-to-go → Q/value 또는 sequence-policy state → dataset-supported action sequence`.
-- 이 논문의 재사용 가능한 지점은 S, A represent state and action spaces, T(s′/s, a) and r(s, a) represent the dynamics and reward function, and γ ∈(0, 1) represents the discount factor. πβ(a/s) represents the behavior policy, D ...를 However, the policy may suffer from state distribution shift at test time.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 Q/value 또는 sequence-policy state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This has made current results fall short of the full promise of such methods.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Intuitively, since Equation 2 maximizes Q-values under the behavior policy ˆπβ, Q-values for actions that are likely under ˆπβ might be overestimated, and hence ˆQπ may not lower-bound Qπ pointwise. (p. 3, 2 Preliminaries).
+- **Paper-specific mechanism:** We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms. (p. 2, 1 Introduction).
+- **Evidence boundary:** the reported outcome is Table 6: Average return obtained by CQL(H) and CQL(H) without the dataset average Q-value maximization term. The latter formulation corresponds to Equation 1, which is void of the dataset Q-value ... (p. 31, Figure/Table caption); the relevant task/metric cue is Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 seeds. On the harder mazes, CQL is the only method that attains ... (p. 8, Figure/Table caption). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Of course, policy constraints should prevent the policy from choosing OOD actions, however, as we will show that in certain cases, policy constraint methods might also fail to prevent the ... (p. 15, B Discussion of Gap-Expanding Behavior of CQL Backups).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: CQL outperforms prior methods by as much as 2-5x on many benchmark tasks, and is the only method that can outperform simple behavioral cloning on a number of realistic datasets collected from ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Table 5: Average return obtained by CQL(H), and CQL(ρ) on three D4RL MuJoCo environments. Observe that on these environments, CQL(H) generally outperforms CQL(ρ). Next, we evaluate the answer to question (2). On ....
-4. Report the body metric and its denominator/aggregation: We also empirically demonstrate the robustness of our approach to Q-function estimation error..
-5. Re-run the body-reported ablation/failure condition: Table 4: Difference between policy values predicted by each algorithm and the true policy value for CQL, a variant of CQL that uses Equation 1, the minimum of an ensemble of varying ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Intuitively, since Equation 2 maximizes Q-values under the behavior policy ˆπβ, Q-values for actions that are likely under ˆπβ might be overestimated, and hence ˆQπ may not lower-bound Qπ pointwise. (p. 3, 2 Preliminaries); preserve the objective/update rule: In Theorem 3.5, we first show that CQL (Equation 2) optimizes a well-defined penalized RL empirical objective. (p. 5, 2 Preliminaries).
+2. Use the paper-reported task/data/environment cue: CQL outperforms prior methods by as much as 2-5x on many benchmark tasks, and is the only method that can outperform simple behavioral cloning on a number of realistic datasets ... (p. 2, 1 Introduction).
+3. Compare against the reported or matched baseline: Table 5: Average return obtained by CQL(H), and CQL(ρ) on three D4RL MuJoCo environments. Observe that on these environments, CQL(H) generally outperforms CQL(ρ). Next, we evaluate the answer to question ... (p. 30, Figure/Table caption).
+4. Report the body metric with its denominator and aggregation: Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 seeds. On the harder mazes, CQL is the only method that attains ... (p. 8, Figure/Table caption).
+5. Re-run the reported ablation or stress/failure condition: Table 4: Difference between policy values predicted by each algorithm and the true policy value for CQL, a variant of CQL that uses Equation 1, the minimum of an ensemble ... (p. 9, Figure/Table caption); if none is reported, design one around: Of course, policy constraints should prevent the policy from choosing OOD actions, however, as we will show that in certain cases, policy constraint methods might also fail to prevent the ... (p. 15, B Discussion of Gap-Expanding Behavior of CQL Backups).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 (2 Preliminaries); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 31 (Figure/Table caption), p. 5 (2 Preliminaries); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 Introduction), p. 2 (1 Introduction), match the reported outcome at p. 31 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), and measure the boundary at p. 15 (B Discussion of Gap-Expanding Behavior of CQL Backups), p. 16 (B Discussion of Gap-Expanding Behavior of CQL Backups).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 novel, learning, conservative mechanism이 Table 5: Average return obtained by CQL(H), and CQL(ρ) on three D4RL MuJoCo environments. Observe that ... 대비 We also empirically demonstrate the robustness of our approach to Q-function estimation error.을 개선하고, This has made current results fall short of the full promise of such methods. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Intuitively, since Equation 2 maximizes Q-values under the behavior policy ˆπβ, Q-values for actions that are likely under ˆπβ might be overestimated, ...), does the paper-specific mechanism (We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.) retain the reported evaluation outcome (Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 ...) when tested against the paper's strongest explicit boundary (Of course, policy constraints should prevent the policy from choosing OOD actions, however, as we will show that ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms. (p. 2, 1 Introduction).
+- **Paper-supported outcome:** Table 6: Average return obtained by CQL(H) and CQL(H) without the dataset average Q-value maximization term. The latter formulation corresponds to Equation 1, which is void of the dataset Q-value ... (p. 31, Figure/Table caption).
+- **Strongest explicit boundary:** Of course, policy constraints should prevent the policy from choosing OOD actions, however, as we will show that in certain cases, policy constraint methods might also fail to prevent the ... (p. 15, B Discussion of Gap-Expanding Behavior of CQL Backups).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

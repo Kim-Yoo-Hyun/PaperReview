@@ -1,53 +1,75 @@
 # Insights — SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** We propose two modules: the Perspective Adaptation Module, which dynamically selects viewpoints for query-relevant image rendering, and the Fusion Alignment Module, which integrates 2D images with 3D spatial ...
-- **Problem cue:** To overcome these limitations, we introduce SeeGround, a zero-shot 3DVG framework leveraging 2D Vision-Language Models (VLMs) trained on largescale 2D data.
-- **Claim/result cue:** Extensive experiments on ScanRefer and Nr3D demonstrate that our approach outperforms existing 1.
+- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG.
+- **p. 2 / 1. Introduction - extractive body cue:** Considering that 2D-VLMs cannot process 3D data directly, we introduce a cross-modal alignment representation that enables 2D-VLMs to interpret 3D scenes.
+- **p. 3 / 3. Methodology - extractive body cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
+- **p. 3 / 3. Methodology - extractive body cue:** This representation allows our framework to align the rich visual features from 2D renderings with the spatial context from 3D scene descriptions.
+- **p. 4 / 3.2. Perspective Adaptation Module - extractive body cue:** To meet these needs, we propose a query-driven dynamic scene rendering method that aligns the rendered viewpoint with the query description, capturing more scene details, ...
+- **p. 5 / 3.3. Fusion Alignment Module - extractive body cue:** To address this, we introduce the Fusion Alignment Module, which explicitly associates key visual features in the scene with the textual description, ensuring a clear ...
+- **p. 4 / 3.1. Multimodal 3D Representation - extractive body cue:** Finally, the 2D-VLM outputs the target object's ID, which is then used to retrieve its 3D bounding box from the OLT , providing the final, ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 3 (3. Methodology), p. 4 (3.2. Perspective Adaptation Module), p. 5 (3.3. Fusion Alignment Module)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** This approach avoids redundancy in multi-view methods and limitations of bird's-eye views, which lack height and orientation details.
+- **p. 2 / 1. Introduction - extractive body cue:** However, when textual descriptions and images are processed separately by 2D-VLMs, the model cannot associate 3D spatial information from text to the object in the ...
+- **p. 1 / 1. Introduction - extractive body cue:** Previous research has focused on specific scenarios, where models [5, 19, 41, 52, 59, 62, 63] are trained on small-scale datasets, limiting their scalability and ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, ...
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Bird's Eye View, though comprehensive, cannot adjust to the query and misses key spatial details like object orientation and height.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** Current viewpoint selection strategies also fall short in handling complex scenarios like "when the window is on the left" or "upon entering from the door".
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the SeeGround framework. We first use a 2D-VLM to interpret the query, identifying both the target object (e.g., "laptop") and a ...
+- **Boundary to test:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, and ignores contextual objects, risking misidentification if ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Our method achieves 46.1% accuracy on Nr3D, which is a 18.2% improvement over the previous zero-shot baseline, ZSVG3D [60] (39.0%). | p. 7 (4.2. Comparative Study), p. 7 (4.2. Comparative Study) |
+| Failure/limitation | ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, and ignores contextual objects, risking misidentification if ... | p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `3D visual grounding, zero-shot, open-vocabulary` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - 2D vision-language feature를 3D object/point/field/map에 정렬해 open-vocabulary querying과 semantic grounding에 사용할 수 있다.
-  - 핵심은 language prior를 3D metric structure와 맞추면서 view inconsistency와 hallucination을 줄이는 것이다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 ies [55, 60] attempt to reduce 3D-specific training requirements by reformatting 3D scenes and text descriptions for large language models (LLMs) [38, 39], but these methods primarily rely on text input, neglecting ...를 However, prior 3D scene representations - such as point clouds [14, 40], voxels [29], and implicit representations [22] - are not directly compatible with the input format required by 2D-VLM.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, and ignores contextual objects, risking misidentification if ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `3D visual grounding, zero-shot, open-vocabulary`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Extensive experiments on ScanRefer and Nr3D demonstrate that our approach outperforms existing 1.
-  - open-vocabulary recognition이나 grounding을 보인 뒤에도 3D consistency, ambiguous reference resolution, robot-action relevance는 남는다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D visual grounding, zero-shot, open-vocabulary`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial relations, but this approach lacks flexibility, omits visual cues, and ignores contextual objects, risking misidentification if ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ScanNet, ScanRefer, ReferIt3D, Nr3D, LERF / accuracy, mAP
-  - 내 연구 확장 benchmark 후보: ScanNet, ScanRefer, ReferIt3D, SQA3D
-  - 내 연구 확장 metric 후보: mIoU, Acc@0.25, Acc@0.5, Recall@K
-  - 검증 초점: open-vocabulary segmentation/localization, 3D consistency, task-relevant grounding을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We use two popular benchmark datasets to evaluate our 3DVG approach..
+3. Compare against the body-reported baseline or a matched simpler baseline: 1 compares methods on the ScanRefer dataset. our method outperforms other zero-shot methods [55, 60] and the weakly supervised WS-3DVG [50], achieving competitive results with supervised methods..
+4. Report the body metric and its denominator/aggregation: While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates competitive zero-shot performance, highlighting its potential for scalable, annotation-free 3D gro ....
+5. Re-run the body-reported ablation/failure condition: Ablation study on different components in our framework on Nr3D [1]. "3D Pos.": 3D object coordinates; "Layout": Scene layout; "Texture": Object color/texture; "FAM": Fusion Alignment Module; and "PAM": Perspective Adaptation Module. # ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (3.3. Fusion Alignment Module), p. 4 (3.1. Multimodal 3D Representation), p. 3 (3. Methodology); the primary result is directionally consistent at p. 7 (4.2. Comparative Study), p. 7 (4.2. Comparative Study), p. 6 (4.2. Comparative Study); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-2D VLM feature를 3D로 lift할 때 multi-view consistency와 fine-grained object boundary를 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 contributions, follows, introduce mechanism이 1 compares methods on the ScanRefer dataset. our method outperforms other zero-shot methods [55, 60] and ... 대비 While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates ...을 개선하고, ZSVG3D [60] projects object centers onto a 2D image and uses predefined functions to infer spatial ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

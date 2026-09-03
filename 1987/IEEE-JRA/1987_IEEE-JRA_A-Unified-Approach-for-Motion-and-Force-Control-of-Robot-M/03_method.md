@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://cs.stanford.edu/group/manips/publications.html; PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://cs.stanford.edu/group/manips/publications.html; PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / error representation | motion·force 목표를 제어 error로 바꾼다 | joint/task state, reference, wrench | task frame, Jacobian, impedance, selection 또는 error coordinates를 구성 | desired task command | The real-time computation of these coefficients can then be paced by the rate of configuration changes, which is much lower than that ... | p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion) |
 | Dynamics / constraint solve | 목표를 feasible actuator command로 바꾼다 | error, model, constraints | inverse dynamics, QP, MPC, operational mapping 또는 feedback law를 계산 | torque, force, velocity 또는 position command | However, task specification for motion and contact forces, dynamics, and force sensing feedback are closely linked to the end-effector. | p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion) |
@@ -83,14 +83,14 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value not recovered from the selected body cues. | Within this framework of control and at the level ‘f the uncoupled system linear, nonlinear, robust [32], and adaptive [3] control structures ... | episode/sequence/action-chunk boundary |
+| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value was not selected from the PDF body. | Within this framework of control and at the level ‘f the uncoupled system linear, nonlinear, robust [32], and adaptive [3] control structures ... | episode/sequence/action-chunk boundary |
 | Rate / latency | sensor/actuator control tick마다 feedback solve; numeric rate는 paper-specific. | Kinematic singularities is another area that has been ‘considered within the framework of joint space control and | Hz/fps, inference time and control rate |
-| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not recovered | window and reset |
-| Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- training/inference separation cue 없음
+- training/inference separation PDF body cue not selected; no claim inferred
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -130,8 +130,17 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 6 (V. Constnainep Motion Operarions), p. 2 (I. Inrropucrion), objective p. 2 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion), temporal p. 5 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 3 (I. Inrropucrion).
+- **Evidence anchors reviewed:** method p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 6 (V. Constnainep Motion Operarions), p. 2 (I. Inrropucrion), objective p. 2 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion), temporal p. 5 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 3 (I. Inrropucrion).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** However, task specification for motion and contact forces, dynamics, and force sensing feedback are closely linked to the end-effector. (p. 1, I. Inrropucrion).
+- **Objective/update evidence:** The number of degrees of freedom of the constrained end-effector is given by the difference between mo and the number of independent ‘equations specifying the geometric constraints, assumed to be ... (p. 2, I. Inrropucrion).
+- **Temporal/runtime evidence:** Kinematic singularities is another area that has been ‘considered within the framework of joint space control and (p. 1, I. Inrropucrion).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

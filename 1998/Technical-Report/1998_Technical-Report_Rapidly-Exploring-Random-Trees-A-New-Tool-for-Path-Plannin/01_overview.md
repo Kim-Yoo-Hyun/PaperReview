@@ -1,8 +1,10 @@
 # Rapidly-Exploring Random Trees: A New Tool for Path Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://lavalle.pl/rrtpubs.html.
-> PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://lavalle.pl/rrtpubs.html.
+> PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1998 / Technical Report
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://lavalle.pl/papers/Lav98c.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -45,7 +47,7 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 |---|---|---|---|
 | Observation/input | Step 5 selects an input, w, that m rizes the distance from year tO rand» and ensures that the state remains in Xj,,.. | start/goal, map, dynamics와 successor/operator description | p. 2 (9 Return T), p. 2 (2. Rapidly-Exploring Random Trees) |
 | State/latent | Step, selects, input, rizes, distance, year, rand, ensures, state, remains, transition, equation | path, trajectory, symbolic state 또는 task-motion decision | p. 2 (9 Return T), p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract) |
-| Output/action | A state transition equation of the form # = f(2,u) is defined to express the nonholonomic constraints, The vector u is selected from a set, U, of inputs. | feasible action sequence 또는 minimum-cost plan | p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (1 Introduction) |
+| Output/action | A state transition equation of the form # = f(2,u) is defined to express the nonholonomic constraints, The vector u is selected from a set, U, of inputs. | feasible action sequence 또는 minimum-cost plan | p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)) |
 | Objective/outcome | A state transition equation of the form # = f(2,u) is defined to express the nonholonomic constraints, The vector u is selected from a set, U, of inputs. | path cost, goal reachability, feasibility와 computation | p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction), p. 1 (1 Introduction) |
 
 ## Main Claims and Actual Contribution
@@ -81,3 +83,12 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 The primary difficulty with existing techniques is that, although powerful for standard path planning, they do not naturally extend to general nonholonomic planning problems.를 문제로 두고, Tn this paper, we introduce a randomized data structure for path planning that is designed for problems that, have nonholonomic constraints.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (3. Nice Properties of RRTs), p. 1 (Abstract), p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (4 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** For planning of holonomic systems or steerable nonholonomic systems (see [6] and references therein), the local planning step might be efficient; however, in general, the connection problem can be as ... (p. 1, 1 Introduction).
+- **Actual contribution:** Tn this paper, we introduce a randomized data structure for path planning that is designed for problems that, have nonholonomic constraints. (p. 1, 1 Introduction).
+- **Evaluation boundary:** For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based planner; however, itis difficult to make ... (p. 3, 3. Nice Properties of RRTs).
+- **Explicit failure boundary:** The primary difficulty with existing techniques is that, although powerful for standard path planning, they do not naturally extend to general nonholonomic planning problems. (p. 1, 1 Introduction).

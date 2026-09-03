@@ -1,8 +1,10 @@
 # HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p061.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p061.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss20/p061.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss20/p061.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p061.pdf
 - Code/Project: https://humanoid-bench.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -84,3 +86,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 benchmark 문제�
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, all these works focus fon demonstrating their approaches on specific humanoid tasks and lack a diversity of tasks.를 문제로 두고, To accelerate the progress of research for humanoid robots, We present the first-of-its-kind humanoid robot benchmark, HumanoidBench, with a diverse set of locomotion and manipulation tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (1 pages; pdftotext fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, research in humanoid robots is often bottlenecked by the To accelerate the progress of research for humanoid robots, costly and fragile hardware setups. (p. 1, Abstract).
+- **Actual contribution:** [3] Firas Al-Hafez, Guoping Zhao, Jan Peters, and Davide We presented HumanoidBench, a high-dimensional hu- Tateo. (p. 1, V. B ENCHMARKING R ESULTS).
+- **Evaluation boundary:** The results in combination of dense rewards and sparse subtask completion Figure 7 show that the presence of hands, with their additional rewards, and for each of these we provide ... (p. 1, V. B ENCHMARKING R ESULTS).
+- **Explicit failure boundary:** Mobility Fellowship 211086, ONR MURI N00014-22-1-2773, Common Failure on door. (p. 1, V. B ENCHMARKING R ESULTS).

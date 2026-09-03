@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluatio
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** The second dataset employed originates from [7], encompassing 1650 ShapeNet [3] objects that span six categories: bowls, bottles, cameras, jars, guitars, and mugs.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Experimental results for different numbers of touches on dataset ShapeNet.
-- **p. 7 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** Comparison of touch exploration on dataset ABC.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Ablation study results on dataset ABC.
-- **p. 7 / 4.3. Evaluation on Policy - extractive PDF cue:** The former policy selects one of the available actions at random while the latter results in uniform coverage of the target object.
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** Especially on the visual-tactile 3D reconstruction task, we obtain a very low CD error, which validates the multi-modal fusion ability of our model.
+- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** The second dataset employed originates from [7], encompassing 1650 ShapeNet [3] objects that span six categories: bowls, bottles, cameras, jars, guitars, and mugs.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Experimental results for different numbers of touches on dataset ShapeNet.
+- **p. 7 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** Comparison of touch exploration on dataset ABC.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Ablation study results on dataset ABC.
+- **p. 7 / 4.3. Evaluation on Policy - extractive body cue:** The former policy selects one of the available actions at random while the latter results in uniform coverage of the target object.
+- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** Especially on the visual-tactile 3D reconstruction task, we obtain a very low CD error, which validates the multi-modal fusion ability of our model.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluatio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.4. Ablation Study | EMPIRICAL / SOURCE-REPORTED EVALUATION | The evaluation results in different modes validate that our method can effectively integrate visual and tactile information to achieve a better reconstruction performance. | p. 7 (4.4. Ablation Study) |
 | 4.2. Evaluation on Reconstruction Performance | EMPIRICAL / SOURCE-REPORTED EVALUATION | The latter method (we called ActiveVT here) proposes an active touch sensing for 3D reconstruction method to improve the reconstruction performance. | p. 6 (4.2. Evaluation on Reconstruction Performance) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluatio
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** The second dataset employed originates from [7], encompassing 1650 ShapeNet [3] objects that span six categories: bowls, bottles, cameras, jars, guitars, and mugs.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Experimental results for different numbers of touches on dataset ShapeNet.
-- **p. 7 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** Comparison of touch exploration on dataset ABC.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Ablation study results on dataset ABC.
-- **p. 7 / 4.3. Evaluation on Policy - extractive PDF cue:** The former policy selects one of the available actions at random while the latter results in uniform coverage of the target object.
+- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** The second dataset employed originates from [7], encompassing 1650 ShapeNet [3] objects that span six categories: bowls, bottles, cameras, jars, guitars, and mugs.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Experimental results for different numbers of touches on dataset ShapeNet.
+- **p. 7 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** Comparison of touch exploration on dataset ABC.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Ablation study results on dataset ABC.
+- **p. 7 / 4.3. Evaluation on Policy - extractive body cue:** The former policy selects one of the available actions at random while the latter results in uniform coverage of the target object.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (1) Exploring the target object and capturing the tactile image to reconstruct the 3D shape. We trained a diffusion model to obtain a ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. We pretrained (a) the shape encoder and decoder, (b) the touch CNN model that is used for touch chart prediction, and (c) the ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Touch shape fusion module. The black arrows indicate the flow of the shape decoder, while the red arrows represent the flow after incorporating ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Experimental results for different settings and different numbers of grasps on dataset ABC. The evaluation metric is CD (lower is better).
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Experimental results for different numbers of touches on dataset ShapeNet. OursT and OursT V respectively represent our methods under the tactile only and ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results of ActiveVT [34] and ours. While ActiveVT struggles with visualizations and detail preservation, our method excels in maintaining global shape accuracy ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Comparison of touch exploration on dataset ABC. Num- bers represent a ratio (%) between CD after 5 actions and initial CD (with zero ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. The evolution of the reconstructed shape with an increasing number of grasps (in the tactile only setting). Initially, limited information makes determining the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (1) Exploring the target object and capturing the tactile image to reconstruct the 3D shape. We trained a diffusion model to obtain a ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. We pretrained (a) the shape encoder and decoder, (b) the touch CNN model that is used for touch chart prediction, and (c) the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Touch shape fusion module. The black arrows indicate the flow of the shape decoder, while the red arrows represent the flow after incorporating ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Experimental results for different settings and different numbers of grasps on dataset ABC. The evaluation metric is CD (lower is better).
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Experimental results for different numbers of touches on dataset ShapeNet. OursT and OursT V respectively represent our methods under the tactile only and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results of ActiveVT [34] and ours. While ActiveVT struggles with visualizations and detail preservation, our method excels in maintaining global shape accuracy ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Comparison of touch exploration on dataset ABC. Num- bers represent a ratio (%) between CD after 5 actions and initial CD (with zero ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. The evolution of the reconstructed shape with an increasing number of grasps (in the tactile only setting). Initially, limited information makes determining the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing. | embodiment, simulator version and control stack | p. 6 (4.2. Evaluation on Reconstruction Performance), p. 5 (4.1. Experimental Settings) |
 | Task/environment | This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings) |
@@ -120,10 +120,10 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluatio
 | Primary metric/result | The latter method (we called ActiveVT here) proposes an active touch sensing for 3D reconstruction method to improve the reconstruction performance. | numeric claim only at cited anchor | p. 6 (4.2. Evaluation on Reconstruction Performance) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle.
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** After the diffusion model training finished, we conducted policy training in silmulation environment [34] for 200 epochs with a learning rate of 0.0003 and batch ...
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** To calculate the Chamfer Distance (CD) for our SDF volume, we run marching cubes to get the object meshes and extract 30,000 points from each ...
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive PDF cue:** The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** This dataset comprises 40,000 objects with ambiguous class definitions and diverse shapes, presenting a significant generalization hurdle.
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** After the diffusion model training finished, we conducted policy training in silmulation environment [34] for 200 epochs with a learning rate of 0.0003 and batch ...
+- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** To calculate the Chamfer Distance (CD) for our SDF volume, we run marching cubes to get the object meshes and extract 30,000 points from each ...
+- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing.
 
 ## Generalization and Failure Cases
 
@@ -156,9 +156,9 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluatio
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.3. Evaluation on Policy - extractive PDF cue:** Furthermore, the Oracle policy is used to select the action which resulted in the best improvement, which is viewed as an upper-bound point of comparison ...
+- **p. 7 / 4.3. Evaluation on Policy - extractive body cue:** Furthermore, the Oracle policy is used to select the action which resulted in the best improvement, which is viewed as an upper-bound point of comparison ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2. Evaluation on Reconstruction Performance), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.4. Ablation Study), p. 5 (4. Experiment), p. 6 (4.1. Experimental Settings), p. 1 (Figure/Table caption), baselines p. 7 (4.3. Evaluation on Policy), p. 7 (4.3. Evaluation on Policy), p. 1 (Figure/Table caption), p. 5 (4. Experiment), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study), results p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2. Evaluation on Reconstruction Performance), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.4. Ablation Study), p. 5 (4. Experiment), p. 6 (4.1. Experimental Settings), p. 1 (Figure/Table caption), baselines p. 7 (4.3. Evaluation on Policy), p. 7 (4.3. Evaluation on Policy), p. 1 (Figure/Table caption), p. 5 (4. Experiment), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study), results p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

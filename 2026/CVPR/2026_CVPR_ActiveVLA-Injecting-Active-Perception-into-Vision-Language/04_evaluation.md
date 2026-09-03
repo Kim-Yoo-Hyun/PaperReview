@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results in Table 2 show that ActiveVLA achieves a new state of the art on COLOSSEUM, with an average success rate of 65.9% and ... | p. 7 (4.1. Experimental Results) |
 | 4.1. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of 92.4%, 66.3%, and 45.1%, surpassing 8147 | p. 7 (4.1. Experimental Results) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-world experiments are conducted on a KINOVA GEN2 robot with a RealSense D455 camera in an eye-to-hand setup, covering occlusion-rich manipulation tasks. | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 7 (4.1. Experimental Results) |
 | Task/environment | Right of the dotted line (fine stage): using these regions, perform (c) active view selection and (d) active 3D zoom-in for fine-grained manipulation in ... | reset, timeout, object/scene variation | p. 7 (4.1. Experimental Results), p. 6 (4. Experiments) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 - **p. 8 / 4.2. Ablation Study - extractive body cue:** Adding A-VS dynamically selects informative views, raising performance to 89.4% at 0.45 s by improving scene coverage and reducing occlusion.
 - **p. 8 / 4.1. Experimental Results - extractive body cue:** It actively perceives and precisely completes tasks despite severe occlusions and complex spatial structures. baselines such as 3D-LOTUS++ and BridgeVLA.
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.1. Experimental Results), p. 6 (4. Experiments), p. 8 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.1. Experimental Results), metrics p. 8 (4.2. Ablation Study), p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 6 (4. Experiments), baselines p. 6 (4. Experiments), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 8 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 1 (Figure/Table caption), results p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 8 (4.2. Ablation Study), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Results).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.1. Experimental Results), p. 6 (4. Experiments), p. 8 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.1. Experimental Results), metrics p. 8 (4.2. Ablation Study), p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 6 (4. Experiments), baselines p. 6 (4. Experiments), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 8 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 1 (Figure/Table caption), results p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 8 (4.2. Ablation Study), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Results in Table 2 show that ActiveVLA achieves a new state of the art on COLOSSEUM, with an average success rate of 65.9% and an average rank of 1.07, outperforming ... (p. 7, 4.1. Experimental Results).
+- **Metric evidence:** As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of 92.4%, 66.3%, and 45.1%, surpassing 8147 (p. 7, 4.1. Experimental Results).
+- **Baseline/ablation evidence:** We compare ActiveVLA with state-of-the-art baselines. (p. 6, 4. Experiments).
+- **Failure/negative evidence:** It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains robust even under occlusions (e.g., Place Cups, 65.6%). (p. 6, 4.1. Experimental Results).

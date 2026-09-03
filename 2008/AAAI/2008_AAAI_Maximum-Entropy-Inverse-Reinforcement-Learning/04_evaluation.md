@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.cs.cmu.edu/~bziebart/publications/maximum-entropy-inverse-reinforcement-learning.html; PDF retrieval source: https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.cs.cmu.edu/~bziebart/publications/maximum-entropy-inverse-reinforcement-learning.html; PDF retrieval source: https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 3 (2. Recursively compute fo
 
 ## Evaluation Body Digest
 
-- **p. 4 / 2. Recursively compute for N iterations - extractive PDF cue:** We discarded roughly 30% of the trips that were too short (fewer than 10 road segments), too cyclic, or too noisy, and split 20% of ...
-- **p. 5 / A B - extractive PDF cue:** We use a training set to form a prior over destinations and evaluate our model on a withheld test set.
-- **p. 4 / 2. Recursively compute for N iterations - extractive PDF cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
-- **p. 5 / A B - extractive PDF cue:** The final metric measures the average log probability of paths in the training set under the given model.
-- **p. 2 / Abstract - extractive PDF cue:** The authors propose a strategy of matching feature expectations (Equation 1) between an observed policy and a learner's behavior; they demonstrate that this matching is ...
-- **p. 2 / Abstract - extractive PDF cue:** However, given demonstrated trajectories that are absorbed in a finite number of steps, the reward weights maximizing entropy must be convergent.
-- **p. 3 / Abstract - extractive PDF cue:** The gradient is the difference between expected empirical feature counts and the learner's expected feature counts, which can be expressed in terms of expected state ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Example of probability distributions over paths. There are three obvious paths from A to B in Figure 2. As- suming each path provides ...
+- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** We discarded roughly 30% of the trips that were too short (fewer than 10 road segments), too cyclic, or too noisy, and split 20% of ...
+- **p. 5 / A B - extractive body cue:** We use a training set to form a prior over destinations and evaluate our model on a withheld test set.
+- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
+- **p. 5 / A B - extractive body cue:** The final metric measures the average log probability of paths in the training set under the given model.
+- **p. 2 / Abstract - extractive body cue:** The authors propose a strategy of matching feature expectations (Equation 1) between an observed policy and a learner's behavior; they demonstrate that this matching is ...
+- **p. 2 / Abstract - extractive body cue:** However, given demonstrated trajectories that are absorbed in a finite number of steps, the reward weights maximizing entropy must be convergent.
+- **p. 3 / Abstract - extractive body cue:** The gradient is the difference between expected empirical feature counts and the learner's expected feature counts, which can be expressed in terms of expected state ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Example of probability distributions over paths. There are three obvious paths from A to B in Figure 2. As- suming each path provides ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 3 (2. Recursively compute fo
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Abstract | SYSTEM / EVALUATION SCOPE UNRESOLVED | The authors propose a strategy of matching feature expectations (Equation 1) between an observed policy and a learner's behavior; they demonstrate that this matching ... | p. 2 (Abstract) |
 | 2. Recursively compute for N iterations | SYSTEM / EVALUATION SCOPE UNRESOLVED | Space doesn't permit the full exposition of the incomplete (and non-convex) log-likelihood, but the intuitive expectation-maximization algorithm that results fits the maximumentropy model using ... | p. 3 (2. Recursively compute for N iterations) |
@@ -40,25 +40,25 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 3 (2. Recursively compute fo
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 2. Recursively compute for N iterations - extractive PDF cue:** We discarded roughly 30% of the trips that were too short (fewer than 10 road segments), too cyclic, or too noisy, and split 20% of ...
-- **p. 5 / A B - extractive PDF cue:** We use a training set to form a prior over destinations and evaluate our model on a withheld test set.
-- **p. 4 / 2. Recursively compute for N iterations - extractive PDF cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
-- **p. 5 / A B - extractive PDF cue:** The final metric measures the average log probability of paths in the training set under the given model.
+- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** We discarded roughly 30% of the trips that were too short (fewer than 10 road segments), too cyclic, or too noisy, and split 20% of ...
+- **p. 5 / A B - extractive body cue:** We use a training set to form a prior over destinations and evaluate our model on a withheld test set.
+- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
+- **p. 5 / A B - extractive body cue:** The final metric measures the average log probability of paths in the training set under the given model.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: A deterministic MDP (a) and a single path from its path-space (b). A non-deterministic MDP (c) and a single path from its path-space ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Example of probability distributions over paths. There are three obvious paths from A to B in Figure 2. As- suming each path provides ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1: Comparison of different models' abilities to match most likely path predictions to withheld paths (average per- centage of distance matching and percentage of ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Learned costs of turns (left) and miles of differ- ent road types (right) normalized to seconds (with interstate driving fixed to 65 miles ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4: Destination distribution (from 5 destinations) and remaining path distribution given partially traveled path. The partially traveled path is heading westward, which is a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5: Posterior prediction accuracy over five destina- tions given partial path.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: A deterministic MDP (a) and a single path from its path-space (b). A non-deterministic MDP (c) and a single path from its path-space ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Example of probability distributions over paths. There are three obvious paths from A to B in Figure 2. As- suming each path provides ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Comparison of different models' abilities to match most likely path predictions to withheld paths (average per- centage of distance matching and percentage of ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Learned costs of turns (left) and miles of differ- ent road types (right) normalized to seconds (with interstate driving fixed to 65 miles ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4: Destination distribution (from 5 destinations) and remaining path distribution given partially traveled path. The partially traveled path is heading westward, which is a ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Posterior prediction accuracy over five destina- tions given partial path.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We discarded roughly 30% of the trips that were too short (fewer than 10 road segments), too cyclic, or too noisy, and split 20% ... | embodiment, simulator version and control stack | p. 4 (2. Recursively compute for N iterations), p. 5 (A B) |
 | Task/environment | We use a training set to form a prior over destinations and evaluate our model on a withheld test set. | reset, timeout, object/scene variation | p. 5 (A B), p. 4 (2. Recursively compute for N iterations) |
@@ -112,8 +112,8 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 3 (2. Recursively compute fo
 | Primary metric/result | Space doesn't permit the full exposition of the incomplete (and non-convex) log-likelihood, but the intuitive expectation-maximization algorithm that results fits the maximumentropy model using ... | numeric claim only at cited anchor | p. 3 (2. Recursively compute for N iterations) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 2. Recursively compute for N iterations - extractive PDF cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
-- **p. 4 / 2. Recursively compute for N iterations - extractive PDF cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
+- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
+- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** This yielded a dataset of over 100,000 miles of travel collected during over 3,000 hours of driving and covering a large area surrounding Pittsburgh.
 
 ## Generalization and Failure Cases
 
@@ -145,10 +145,10 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 3 (2. Recursively compute fo
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Abstract - extractive PDF cue:** This arises quite frequently when, for instance, the behavior demonstrated by the agent is imperfect, or the planning algorithm only captures a part of the ...
-- **p. 2 / Abstract - extractive PDF cue:** We employ the principle of maximum entropy, which resolves this ambiguity by choosing the distribution that does not exhibit any additional preferences beyond matching feature ...
+- **p. 2 / Abstract - extractive body cue:** This arises quite frequently when, for instance, the behavior demonstrated by the agent is imperfect, or the planning algorithm only captures a part of the ...
+- **p. 2 / Abstract - extractive body cue:** We employ the principle of maximum entropy, which resolves this ambiguity by choosing the distribution that does not exhibit any additional preferences beyond matching feature ...
 
-- **PDF anchors reviewed:** datasets p. 4 (2. Recursively compute for N iterations), p. 5 (A B), p. 4 (2. Recursively compute for N iterations), p. 5 (A B), metrics p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Figure/Table caption), p. 3 (2. Recursively compute for N iterations), p. 4 (2. Recursively compute for N iterations), baselines p. 2 (Abstract), p. 5 (A B), p. 4 (2. Recursively compute for N iterations), p. 5 (Figure/Table caption), results p. 2 (Abstract), p. 3 (2. Recursively compute for N iterations), p. 5 (Figure/Table caption), p. 3 (2. Recursively compute for N iterations), p. 2 (Abstract), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 4 (2. Recursively compute for N iterations), p. 5 (A B), p. 4 (2. Recursively compute for N iterations), p. 5 (A B), metrics p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Figure/Table caption), p. 3 (2. Recursively compute for N iterations), p. 4 (2. Recursively compute for N iterations), baselines p. 2 (Abstract), p. 5 (A B), p. 4 (2. Recursively compute for N iterations), p. 5 (Figure/Table caption), results p. 2 (Abstract), p. 3 (2. Recursively compute for N iterations), p. 5 (Figure/Table caption), p. 3 (2. Recursively compute for N iterations), p. 2 (Abstract), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

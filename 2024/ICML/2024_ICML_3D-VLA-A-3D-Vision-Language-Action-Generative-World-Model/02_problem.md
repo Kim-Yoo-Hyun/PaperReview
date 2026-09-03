@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://icml.cc/virtual/2024/poster/34575; PDF retrieval source: https://arxiv.org/pdf/2403.09631.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://icml.cc/virtual/2024/poster/34575; PDF retrieval source: https://icml.cc/virtual/2024/poster/34575. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -77,3 +77,12 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Another challenge for building such a generative world model lies in the lack of data. (p. 2, 1. Introduction).
+- **Formulation-changing contribution:** To sum up, we have the following contributions: • We propose 3D-VLA, a new family of 3D vision-languageaction embodied foundation models that unify 3D perception, reasoning, and action with a ... (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process. (p. 7, 5.2. Multi-modal Goal Generation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

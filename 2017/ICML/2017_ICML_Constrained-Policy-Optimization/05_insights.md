@@ -39,10 +39,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 Constrained Policy Optimization Algorithm 1 Constrained Policy Optimization Input: Initial policy π0 ∈Πθ tolerance α for k = 0, 1, 2, ... do Sample a set of trajectories D = {τ} ∼πk ...를 Recently, deep reinforcement learning has enabled neural network policies to achieve state-of-the-art performance on many high-dimensional control tasks, including Atari games (using pixels as inputs) (Mnih et al., 2015; 2016), robot lo ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Sometimes (11) will still be feasible and CPO can automatically recover from its bad step, but for the infeasible case, a recovery method is necessary.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this work, we propose the first such algorithm, allowing applications to constrained deep RL.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Recently, deep reinforcement learning has enabled neural network policies to achieve state-of-the-art performance on many high-dimensional control tasks, including Atari games (using pixels as inputs) (Mnih et al., 2015; 2016), ... (p. 1, 1. Introduction).
+- **Paper-specific mechanism:** In this work, we propose the first such algorithm, allowing applications to constrained deep RL. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is In our experiments, we aim to answer the following: • Does CPO succeed at enforcing behavioral constraints when training neural network policies with thousands of parameters? • How does CPO ... (p. 6, 8. Experiments); the relevant task/metric cue is We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return. (p. 8, 8.1. Evaluating CPO and Comparison Analysis). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Additionally, PDO is sensitive to the initialization of the dual variable. (p. 7, 8.1. Evaluating CPO and Comparison Analysis).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -54,19 +55,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We consider two tasks, and train multiple different agents (robots) for each task: • Circle: The agent is rewarded for running in a wide circle, but is constrained to stay within a ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return..
-4. Report the body metric and its denominator/aggregation: Figure 1. Average performance for CPO, PDO, and TRPO over several seeds (5 in the Point environments, 10 in all others); the x-axis is training iteration. CPO drives the constraint function almost ....
-5. Re-run the body-reported ablation/failure condition: However, CPO is nearly constraint-satisfying even without cost shaping..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Recently, deep reinforcement learning has enabled neural network policies to achieve state-of-the-art performance on many high-dimensional control tasks, including Atari games (using pixels as inputs) (Mnih et al., 2015; 2016), ... (p. 1, 1. Introduction); preserve the objective/update rule: When the objective is estimated by linearizing around πk as J(πk) + gT (θ -θk), g is the policy gradient, and the standard policy gradient update is obtained by choosing ... (p. 3, 5. Constrained Policy Optimization).
+2. Use the paper-reported task/data/environment cue: We consider two tasks, and train multiple different agents (robots) for each task: • Circle: The agent is rewarded for running in a wide circle, but is constrained to stay ... (p. 6, 8. Experiments).
+3. Compare against the reported or matched baseline: We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return. (p. 8, 8.1. Evaluating CPO and Comparison Analysis).
+4. Report the body metric with its denominator and aggregation: We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return. (p. 8, 8.1. Evaluating CPO and Comparison Analysis).
+5. Re-run the reported ablation or stress/failure condition: However, CPO is nearly constraint-satisfying even without cost shaping. (p. 8, 8.2. Ablation on Cost Shaping); if none is reported, design one around: Additionally, PDO is sensitive to the initialization of the dual variable. (p. 7, 8.1. Evaluating CPO and Comparison Analysis).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (6.1. Approximately Solving the CPO Update), p. 4 (5.2. Trust Region Methods), p. 3 (5. Constrained Policy Optimization); the primary result is directionally consistent at p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8.1. Evaluating CPO and Comparison Analysis); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 6 (8. Experiments), p. 7 (8. Experiments), p. 8 (8.1. Evaluating CPO and Comparison Analysis), and measure the boundary at p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8.1. Evaluating CPO and Comparison Analysis).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 first, algorithm, allowing mechanism이 We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to ... 대비 Figure 1. Average performance for CPO, PDO, and TRPO over several seeds (5 in the Point environments, 10 ...을 개선하고, Sometimes (11) will still be feasible and CPO can automatically recover from its bad step, but ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Recently, deep reinforcement learning has enabled neural network policies to achieve state-of-the-art performance on many high-dimensional control tasks, including Atari games (using ...), does the paper-specific mechanism (In this work, we propose the first such algorithm, allowing applications to constrained deep RL.) retain the reported evaluation outcome (We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return.) when tested against the paper's strongest explicit boundary (Additionally, PDO is sensitive to the initialization of the dual variable.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this work, we propose the first such algorithm, allowing applications to constrained deep RL. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** In our experiments, we aim to answer the following: • Does CPO succeed at enforcing behavioral constraints when training neural network policies with thousands of parameters? • How does CPO ... (p. 6, 8. Experiments).
+- **Strongest explicit boundary:** Additionally, PDO is sensitive to the initialization of the dual variable. (p. 7, 8.1. Evaluating CPO and Comparison Analysis).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

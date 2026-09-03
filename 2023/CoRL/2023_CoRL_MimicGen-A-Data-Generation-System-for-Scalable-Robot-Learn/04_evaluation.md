@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/mandlekar23a.html; PDF retrieval source: https://arxiv.org/pdf/2310.17596. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/mandlekar23a.html; PDF retrieval source: https://arxiv.org/pdf/2310.17596. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (6 Experiments
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: (left) Agent Performance on Source and Generated Datasets. Success rates (3 seeds) of image- based agents trained with BC on the 10 ... | p. 6 (Figure/Table caption) |
 | 6 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | MimicGen data vastly improves agent performance on the source task. | p. 5 (6 Experiments) |
@@ -56,7 +56,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (6 Experiments
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We present experiments that (1) highlight the diverse array of situations that MimicGen can generate data for, (2) show that MimicGen compares favorably to ... | embodiment, simulator version and control stack | p. 5 (6 Experiments), p. 5 (6 Experiments) |
 | Task/environment | A straightforward application of MimicGen is to collect a small dataset on some task of interest and then generate more data for that task. | reset, timeout, object/scene variation | p. 5 (6 Experiments), p. 6 (6 Experiments) |
@@ -140,7 +140,16 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (6 Experiments
 
 - **p. 8 / 8 Conclusion - extractive body cue:** We hope that MimicGen motivates and enables exploring a more data-centric perspective on imitation learning in future work.
 
-- **PDF anchors reviewed:** datasets p. 5 (6 Experiments), p. 5 (6 Experiments), p. 6 (6 Experiments), metrics p. 6 (Figure/Table caption), p. 6 (6 Experiments), p. 8 (Figure/Table caption), p. 5 (6 Experiments), p. 5 (6 Experiments), p. 2 (Figure/Table caption), baselines p. 6 (6 Experiments), p. 6 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 5 (6 Experiments), p. 6 (6 Experiments), p. 8 (Figure/Table caption), p. 5 (6 Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (6 Experiments), p. 5 (6 Experiments), p. 6 (6 Experiments), metrics p. 6 (Figure/Table caption), p. 6 (6 Experiments), p. 8 (Figure/Table caption), p. 5 (6 Experiments), p. 5 (6 Experiments), p. 2 (Figure/Table caption), baselines p. 6 (6 Experiments), p. 6 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 5 (6 Experiments), p. 6 (6 Experiments), p. 8 (Figure/Table caption), p. 5 (6 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: (left) Agent Performance on Source and Generated Datasets. Success rates (3 seeds) of image- based agents trained with BC on the 10 source demos and each 1000 demo ... (p. 6, Figure/Table caption).
+- **Metric evidence:** MimicGen data vastly improves agent performance on the source task. (p. 5, 6 Experiments).
+- **Baseline/ablation evidence:** Assembly 1.3 ± 0.9 82.0 ± 1.6 62.7 ± 2.5 13.3 ± 3.8 Hammer Cleanup 59.3 ± 5.7 100.0 ± 0.0 62.7 ± 4.7 - Mug Cleanup 12.7 ± 2.5 ... (p. 6, 6 Experiments).
+- **Failure/negative evidence:** Why might a data generation attempt result in a failure? (p. 17, 2. What are some limitations of MimicGen?).

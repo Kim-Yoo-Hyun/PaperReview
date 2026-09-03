@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, terrain/perception observation과 velocity command → body/contact state, foothold 또는 behavior mode → joint target, torque, footstep 또는 locomotion action`.
-- 이 논문의 재사용 가능한 지점은 The model computes a latent embedding ¯lt that represents the current state, and an action ¯at.를 The student model is a temporal convolutional network (TCN) [22] that receives a sequence of N proprioceptive observations as input.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 body/contact state, foothold 또는 behavior mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We see a number of limitations and opportunities for future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Here we present a radically robust controller for blind quadrupedal locomotion on challenging terrain.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The model computes a latent embedding ¯lt that represents the current state, and an action ¯at. (p. 6, 4. MATERIALS AND METHODS).
+- **Paper-specific mechanism:** Here we present a radically robust controller for blind quadrupedal locomotion on challenging terrain. (p. 3, 1. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 3. Evaluation in an indoor environment. (A) Locomotion over unstable debris. The robot steps onto loose boards (highlighted in red and blue) that dislodge under the robot's feet. (B) ... (p. 4, Figure/Table caption); the relevant task/metric cue is Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 m/s Ours w/ payload Baseline 0.6 m/s Baseline 0.2 m/s with payload ... (p. 4, 2. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Our controller does not rely on exteroception and is immune to such failure. (p. 5, 2. RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The objective of the competition is to develop robotic systems that rapidly map, navigate, and search complex underground environments, including tunnels, urban underground, and cave networks..
-3. Compare against the body-reported baseline or a matched simpler baseline: We have compared the presented controller to a state-of-the-art baseline [1, 26] in the forest environment..
-4. Report the body metric and its denominator/aggregation: Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 m/s Ours w/ payload Baseline 0.6 m/s Baseline 0.2 m/s with payload Ours E ....
-5. Re-run the body-reported ablation/failure condition: Fig. 5. Ablation studies. We trained each model 5 times using different random seeds. Error bars denote 95 % confidence intervals. (A) Test setups. The robot is commanded to advance for 10 ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The model computes a latent embedding ¯lt that represents the current state, and an action ¯at. (p. 6, 4. MATERIALS AND METHODS); preserve the objective/update rule: The training objective rewards locomotion in prescribed directions. (p. 6, 4. MATERIALS AND METHODS).
+2. Use the paper-reported task/data/environment cue: The objective of the competition is to develop robotic systems that rapidly map, navigate, and search complex underground environments, including tunnels, urban underground, and cave networks. (p. 5, 2. RESULTS).
+3. Compare against the reported or matched baseline: We have compared the presented controller to a state-of-the-art baseline [1, 26] in the forest environment. (p. 5, 2. RESULTS).
+4. Report the body metric with its denominator and aggregation: Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 m/s Ours w/ payload Baseline 0.6 m/s Baseline 0.2 m/s with payload ... (p. 4, 2. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: Our controller and a baseline [1, 26] are commanded to walk over a step with and without the 10 kg payload. (p. 4, 2. RESULTS); if none is reported, design one around: Our controller does not rely on exteroception and is immune to such failure. (p. 5, 2. RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), p. 7 (4. MATERIALS AND METHODS); the primary result is directionally consistent at p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), match the reported outcome at p. 4 (Figure/Table caption), p. 4 (2. RESULTS), p. 10 (Figure/Table caption), and measure the boundary at p. 5 (2. RESULTS), p. 5 (2. RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Here, present, radically mechanism이 We have compared the presented controller to a state-of-the-art baseline [1, 26] in the forest environment. 대비 Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 ...을 개선하고, We see a number of limitations and opportunities for future work. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The model computes a latent embedding ¯lt that represents the current state, and an action ¯at.), does the paper-specific mechanism (Here we present a radically robust controller for blind quadrupedal locomotion on challenging terrain.) retain the reported evaluation outcome (Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 ...) when tested against the paper's strongest explicit boundary (Our controller does not rely on exteroception and is immune to such failure.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Here we present a radically robust controller for blind quadrupedal locomotion on challenging terrain. (p. 3, 1. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 3. Evaluation in an indoor environment. (A) Locomotion over unstable debris. The robot steps onto loose boards (highlighted in red and blue) that dislodge under the robot's feet. (B) ... (p. 4, Figure/Table caption).
+- **Strongest explicit boundary:** Our controller does not rely on exteroception and is immune to such failure. (p. 5, 2. RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

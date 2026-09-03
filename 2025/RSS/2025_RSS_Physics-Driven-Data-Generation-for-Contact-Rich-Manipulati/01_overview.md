@@ -1,8 +1,10 @@
 # Physics-Driven Data Generation for Contact-Rich Manipulation via Trajectory Optimization
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p053.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p053.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p053.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p053.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p053.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss21/p053.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -34,7 +36,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 4 / IV. AUTOMATED DATA GENERATION - extractive body cue:** In this section, we present our method for automatically generating large quantities of physically feasible trajectories for contact-rich manipulation tasks across a range of objects, ...
 - **p. 3 / C. Trajectory Optimization for Contact-Rich Tasks - extractive body cue:** We present a Virtual Reality (VR)-based data collection pipeline designed for intuitive and efficient collection of hu- ‘man demonstrations across multiple robot embodiments. ‘The pipeline ...
 - **p. 1 / Abstract - extractive body cue:** We present a low-cost data generation pipeline that integrates physics-based. simulation, human demonstrations, and model-based planning to efficiently generate large- ‘sale, high-quality datasets for contact-rich ...
-- **p. 1 / Front matter - extractive body cue:** Leveraging trajectory optimization, our framework automatically generates thousands of ‘dynamically feasible contactrich trajectories across a range of embodiments and physical parameters from only 24 human ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Leveraging trajectory optimization, our framework automatically generates thousands of ‘dynamically feasible contactrich trajectories across a range of embodiments and physical parameters from only 24 human ...
 - **p. 2 / 1. IyTRODUCTION - extractive body cue:** 1) We present an intuitive, embodiment-flexible demonstration interface based on virtual reality and physics simulation, enabling fast data collection for dexterous contact-rich manipulation.
 - **p. 3 / C. Trajectory Optimization for Contact-Rich Tasks - extractive body cue:** While these approaches search over the parameters of a neural network policy and potentially optimize 4 more global objective, we leverage trajectory optimization as a ...
 - **p. 7 / B. Demonstration-Guided Trajectory Optimization - extractive body cue:** ‘The iiwa and Panda arms differ in contact geometry, velocity limits, and joint constraints, all of which are explicitly modeled within the trajectory optimization framework ...
@@ -54,7 +56,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 4 / IV. AUTOMATED DATA GENERATION - extractive body cue:** In this section, we present our method for automatically generating large quantities of physically feasible trajectories for contact-rich manipulation tasks across a range of objects, ...
 - **p. 3 / C. Trajectory Optimization for Contact-Rich Tasks - extractive body cue:** We present a Virtual Reality (VR)-based data collection pipeline designed for intuitive and efficient collection of hu- ‘man demonstrations across multiple robot embodiments. ‘The pipeline ...
 - **p. 1 / Abstract - extractive body cue:** We present a low-cost data generation pipeline that integrates physics-based. simulation, human demonstrations, and model-based planning to efficiently generate large- ‘sale, high-quality datasets for contact-rich ...
-- **p. 1 / Front matter - extractive body cue:** Leveraging trajectory optimization, our framework automatically generates thousands of ‘dynamically feasible contactrich trajectories across a range of embodiments and physical parameters from only 24 human ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Leveraging trajectory optimization, our framework automatically generates thousands of ‘dynamically feasible contactrich trajectories across a range of embodiments and physical parameters from only 24 human ...
 - **p. 2 / 1. IyTRODUCTION - extractive body cue:** 1) We present an intuitive, embodiment-flexible demonstration interface based on virtual reality and physics simulation, enabling fast data collection for dexterous contact-rich manipulation.
 - **p. 8 / A. Policy Evaluation in Simulation - extractive body cue:** In contrast, policies trained on the expanded dataset generated by our pipeline demonstrate a higher likelihood of re-establishing contact with the object after initial misses, ...
 - **p. 8 / A. Policy Evaluation in Simulation - extractive body cue:** 2) Bimanual Robot Arms: ‘The baseline policy trained on the original set of 24 human demonstrations achieves a success rate of 27/48 = 56% on ...
@@ -85,3 +87,12 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 ## Why Read It
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 data collection [31, 32], reducing cognitive load, physical strain, and user frustration compared to traditional techniques like kinesthetic teaching or 3D mouse control (33). ‘These technologies offer a more intuitive data collection ...를 문제로 두고, In this section, we present our method for automatically generating large quantities of physically feasible trajectories for contact-rich manipulation tasks across a range of objects, initial conditions, and embodiments from only a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (4) We achieve high success rates in zero-shot hardware), p. 1 (1. IyTRODUCTION), p. 1 (1. IyTRODUCTION), p. 2 (B. Data Augmentation), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, the significant embodiment gap and limited action labeling make this data difficult 10 transfer effectively to robot policies. (p. 1, 1. IyTRODUCTION).
+- **Actual contribution:** In this section, we present our method for automatically generating large quantities of physically feasible trajectories for contact-rich manipulation tasks across a range of objects, initial conditions, and embodiments from ... (p. 4, IV. AUTOMATED DATA GENERATION).
+- **Evaluation boundary:** In contrast, policies trained on the expanded dataset generated by our pipeline demonstrate a higher likelihood of re-establishing contact with the object after initial misses, resulting in significantly improved success ... (p. 8, A. Policy Evaluation in Simulation).
+- **Explicit failure boundary:** Second, although our method demonstrates strong performance in the vicinity of the demonstration due to trajectory optimization, the learned policies struggle to recover from states far outside the demonstrated regions, ... (p. 10, B. Policy Evaluation on Hardware).

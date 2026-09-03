@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | To jointly train multiple properties, we propose a versatile transformer-based model comprising a point cloud encoder and a prompt-based decoder. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D ... | p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented) |
@@ -83,8 +83,8 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Each demonstration consists of a sequence of keysteps of RGB-D image observations from three cameras and a 7-DoF action denoting the position, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | We introduce SUGAR , a pre-training framework for robotic-related tasks, which learns semantic, geometry and affordance on both single- and multi-object scenes. ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -129,8 +129,17 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented), p. 6 (1) OBJ ONLY which only includes ground truth segmented), p. 7 (4.2. Referring Expression Grounding), p. 1 (1. Introduction), objective p. 1 (Abstract), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented), temporal p. 8 (4.3. Language-guided Robotic Manipulation), p. 1 (1. Introduction), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Network Architecture).
+- **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented), p. 6 (1) OBJ ONLY which only includes ground truth segmented), p. 7 (4.2. Referring Expression Grounding), p. 1 (1. Introduction), objective p. 1 (Abstract), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented), temporal p. 8 (4.3. Language-guided Robotic Manipulation), p. 1 (1. Introduction), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Network Architecture).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • ... (p. 2, 1. Introduction).
+- **Objective/update evidence:** We underscore the importance of cluttered scenes in 3D representation learning, and automatically construct a multi-object dataset benefiting from cost-free supervision in simulation. (p. 1, Abstract).
+- **Temporal/runtime evidence:** Each demonstration consists of a sequence of keysteps of RGB-D image observations from three cameras and a 7-DoF action denoting the position, rotation and openness state of the gripper. (p. 8, 4.3. Language-guided Robotic Manipulation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

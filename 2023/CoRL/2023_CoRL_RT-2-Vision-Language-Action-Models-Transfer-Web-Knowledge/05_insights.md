@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Although such models are typically trained to produce natural language tokens, we can train them on robotic trajectories by tokenizing the actions into text tokens and creating "multimodal sentences" (Driess et al., ...를 Taking the action representation described above, we convert our robot data to be suitable for VLM model fine-tuning, where our inputs include robot camera image and textual task description (using standard VQA ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and semantically aware robotic policies.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Although such models are typically trained to produce natural language tokens, we can train them on robotic trajectories by tokenizing the actions into text tokens and creating "multimodal sentences" (Driess ... (p. 2, 1. Introduction).
+- **Paper-specific mechanism:** Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and semantically aware robotic policies. (p. 3, 1. Introduction).
+- **Evidence boundary:** the reported outcome is RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (a) Performance comparison on various emergent skill evaluations (Figure 8) between RT-2 and two baselines. (p. 10, 4. Experiments); the relevant task/metric cue is To evaluate in-distribution performance as well as generalization capabilities, we compare the RT-2-PaLI-X and RT-2-PaLM-E models to the four baselines listed in the previous sections. (p. 7, 4. Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach. (p. 11, 5. Limitations).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Each robot demonstration trajectory is annotated with a natural language instruction that describes the task performed, consisting of a verb describing the skill (e.g., "pick", "open", "place into") and one or more ....
-3. Compare against the body-reported baseline or a matched simpler baseline: We compare our method to multiple state-of-the-art baselines that challenge different aspects of our method..
-4. Report the body metric and its denominator/aggregation: The performance on seen tasks is similar between the RT-2 models and RT-1, with other baselines attaining a lower success rate..
-5. Re-run the body-reported ablation/failure condition: Inspired by the chain-of-thought prompting method in LLMs (Wei et al., 2022), we fine-tune a variant of RT-2 with PaLM-E for just a few hundred gradient steps to increase its capability of ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Although such models are typically trained to produce natural language tokens, we can train them on robotic trajectories by tokenizing the actions into text tokens and creating "multimodal sentences" (Driess ... (p. 2, 1. Introduction); preserve the objective/update rule: First, we describe the general architecture of our models and how they can be derived from models that are commonly used for vision-language tasks. (p. 4, 3. Vision-Language-Action Models).
+2. Use the paper-reported task/data/environment cue: Each robot demonstration trajectory is annotated with a natural language instruction that describes the task performed, consisting of a verb describing the skill (e.g., "pick", "open", "place into") and one ... (p. 7, 4. Experiments).
+3. Compare against the reported or matched baseline: We compare our method to multiple state-of-the-art baselines that challenge different aspects of our method. (p. 7, 4. Experiments).
+4. Report the body metric with its denominator and aggregation: To evaluate in-distribution performance as well as generalization capabilities, we compare the RT-2-PaLI-X and RT-2-PaLM-E models to the four baselines listed in the previous sections. (p. 7, 4. Experiments).
+5. Re-run the reported ablation or stress/failure condition: Inspired by the chain-of-thought prompting method in LLMs (Wei et al., 2022), we fine-tune a variant of RT-2 with PaLM-E for just a few hundred gradient steps to increase its ... (p. 10, 4. Experiments); if none is reported, design one around: Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach. (p. 11, 5. Limitations).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. Robot-Action Fine-tuning), p. 4 (3. Vision-Language-Action Models); the primary result is directionally consistent at p. 9 (4. Experiments), p. 8 (4. Experiments), p. 8 (4. Experiments); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. Introduction), p. 3 (1. Introduction), match the reported outcome at p. 10 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), and measure the boundary at p. 11 (5. Limitations), p. 11 (5. Limitations).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contribution, RT-2 mechanism이 We compare our method to multiple state-of-the-art baselines that challenge different aspects of our method. 대비 The performance on seen tasks is similar between the RT-2 models and RT-1, with other baselines attaining a ...을 개선하고, Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Although such models are typically trained to produce natural language tokens, we can train them on robotic trajectories by tokenizing the actions ...), does the paper-specific mechanism (Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act ...) retain the reported evaluation outcome (To evaluate in-distribution performance as well as generalization capabilities, we compare the RT-2-PaLI-X and RT-2-PaLM-E models to the ...) when tested against the paper's strongest explicit boundary (Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (To evaluate in-distribution performance as well as generalization capabilities, we compare the RT-2-PaLI-X and RT-2-PaLM-E models to the ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and semantically aware robotic policies. (p. 3, 1. Introduction).
+- **Paper-supported outcome:** RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (a) Performance comparison on various emergent skill evaluations (Figure 8) between RT-2 and two baselines. (p. 10, 4. Experiments).
+- **Strongest explicit boundary:** Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach. (p. 11, 5. Limitations).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 III-B) Based on this, we train an auto-regressive transformer-based vision-language-action model, which takes visual observations and task instructions as inputs to predict latent action tokens in a unified latent space; 3) (Sec.를 Our policy architecture is founded on the Prismatic-7B Vision-Language Model (VLM) [37], which processes projected visual embeddings and tokenized task instructions as inputs to predict latent action tokens in an auto-regressive manner.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 UniVLA demonstrates superior performance across all evaluated tasks, showcasing its exceptional ability to generalize from high-level semantic comprehension to low-level visual robustness.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling scalable and efficient decision-making by learning from ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** III-B) Based on this, we train an auto-regressive transformer-based vision-language-action model, which takes visual observations and task instructions as inputs to predict latent action tokens in a unified latent space; ... (p. 3, III. METHODOLOGY).
+- **Paper-specific mechanism:** In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling scalable and efficient decision-making by ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 4: Task setup on the LIBERO benchmark. TABLE I: Results on LIBERO benchmark across four evaluation suites. Our proposed UniVLA exhibits superior performance across all benchmarked tasks compared to ... (p. 6, Figure/Table caption); the relevant task/metric cue is Our experiments exclusively focus on supervised fine-tuning within the target task suite, evaluating the performance of various policies trained through behavioral cloning on successful task demonstrations. (p. 6, 1) Manipulation Benchmark on LIBERO). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While UniVLA advances generalist robotic policies, several limitations remain. (p. 11, VI. LIMITATIONS AND FUTURE WORK).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: These benchmarks offer a set of languageguided navigation tasks and continuous environments for executing low-level actions in reconstructed photorealistic indoor scenes..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 4: Task setup on the LIBERO benchmark. TABLE I: Results on LIBERO benchmark across four evaluation suites. Our proposed UniVLA exhibits superior performance across all benchmarked tasks compared to existing baseline ....
-4. Report the body metric and its denominator/aggregation: Fig. 5: Real-world robot experiments. We propose four different tasks: "Store the screwdriver", "Clean the cutting board", "Fold towel twice", and "Stack tower of hanoi", towards the evaluation of four axis of ....
-5. Re-run the body-reported ablation/failure condition: Fig. 1: We introduce UniVLA, a unified vision-language-action (VLA) framework that enables policy learning across different environments. By deriving task-centric latent actions in an unsupervised manner, UniVLA can leverage data from a ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: III-B) Based on this, we train an auto-regressive transformer-based vision-language-action model, which takes visual observations and task instructions as inputs to predict latent action tokens in a unified latent space; ... (p. 3, III. METHODOLOGY); preserve the objective/update rule: Quantized action tokens az ∈RN×d are optimized with VQ-VAE [76] objective, with a codebook of /C/ vocabulary size. (p. 3, III. METHODOLOGY).
+2. Use the paper-reported task/data/environment cue: The LIBERO benchmark [48] comprises four task suites specifically designed to facilitate research on lifelong learning in robotic manipulation. (p. 6, 1) Manipulation Benchmark on LIBERO).
+3. Compare against the reported or matched baseline: Additionally, we conduct latent action analysis to quantify the task-centric property, and perform ablation studies to explore critical design choices. (p. 5, IV. EVALUATIONS).
+4. Report the body metric with its denominator and aggregation: Our experiments exclusively focus on supervised fine-tuning within the target task suite, evaluating the performance of various policies trained through behavioral cloning on successful task demonstrations. (p. 6, 1) Manipulation Benchmark on LIBERO).
+5. Re-run the reported ablation or stress/failure condition: Additionally, we conduct latent action analysis to quantify the task-centric property, and perform ablation studies to explore critical design choices. (p. 5, IV. EVALUATIONS); if none is reported, design one around: While UniVLA advances generalist robotic policies, several limitations remain. (p. 11, VI. LIMITATIONS AND FUTURE WORK).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY); the primary result is directionally consistent at p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption), and measure the boundary at p. 11 (VI. LIMITATIONS AND FUTURE WORK), p. 6 (4) LIBERO-Long focuses on long-horizon manipulation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, main, contributions mechanism이 Fig. 4: Task setup on the LIBERO benchmark. TABLE I: Results on LIBERO benchmark across four ... 대비 Fig. 5: Real-world robot experiments. We propose four different tasks: "Store the screwdriver", "Clean the cutting board", "Fold ...을 개선하고, UniVLA demonstrates superior performance across all evaluated tasks, showcasing its exceptional ability to generalize from high-level ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (III-B) Based on this, we train an auto-regressive transformer-based vision-language-action model, which takes visual observations and task instructions as inputs to predict ...), does the paper-specific mechanism (In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic ...) retain the reported evaluation outcome (Our experiments exclusively focus on supervised fine-tuning within the target task suite, evaluating the performance of various policies ...) when tested against the paper's strongest explicit boundary (While UniVLA advances generalist robotic policies, several limitations remain.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our experiments exclusively focus on supervised fine-tuning within the target task suite, evaluating the performance of various policies ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling scalable and efficient decision-making by ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 4: Task setup on the LIBERO benchmark. TABLE I: Results on LIBERO benchmark across four evaluation suites. Our proposed UniVLA exhibits superior performance across all benchmarked tasks compared to ... (p. 6, Figure/Table caption).
+- **Strongest explicit boundary:** While UniVLA advances generalist robotic policies, several limitations remain. (p. 11, VI. LIMITATIONS AND FUTURE WORK).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1712.02889; PDF retrieval source: https://arxiv.org/pdf/1712.02889. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1712.02889; PDF retrieval source: https://arxiv.org/pdf/1712.02889. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 8. MPC update rate as recorded during two trotting experiments on ANYmal. While iLQR achieves update rates of around 80 Hz, GNMS reaches ... | p. 7 (Figure/Table caption) |
 | VI. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Also, we add a strong cost penalty on the base orientation to improve stability. | p. 5 (VI. RESULTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | While the robot does not always land perfectly, the MPC controller optimizes a trajectory from the current state and tries to get back as ... | embodiment, simulator version and control stack | p. 6 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION) |
 | Task/environment | Structure of the estimation and control approach for hardware execution of the NMPC controller. | reset, timeout, object/scene variation | p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 - **p. 6 / VI. RESULTS - extractive body cue:** Also here we observe that the controller is robust to disturbances.
 - **p. 7 / VII. SUMMARY AND OUTLOOK - extractive body cue:** We expect that a longer time horizon could show more elaborate disturbance rejection and recovery behavior since it offers more flexibility and predictive capabilities to ...
 
-- **PDF anchors reviewed:** datasets p. 6 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS), p. 7 (VI. RESULTS), metrics p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS), baselines p. 6 (VI. RESULTS), p. 6 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), results p. 7 (Figure/Table caption), p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 6 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS), p. 7 (VI. RESULTS), metrics p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS), baselines p. 6 (VI. RESULTS), p. 6 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), results p. 7 (Figure/Table caption), p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Note that running only a single solver iteration before updating the state measurement results in better overall performance than running multiple iterations and letting the solver converge. (p. 5, VI. RESULTS).
+- **Metric evidence:** The performance of our algorithms is assessed on both quadrupeds. (p. 5, VI. RESULTS).
+- **Baseline/ablation evidence:** HyQ can be perturbed significantly both on the base and the legs without reacting stiffly. (p. 5, VI. RESULTS).
+- **Failure/negative evidence:** Even placing planks under single feet does not deteriorate performance. (p. 5, VI. RESULTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://homes.cs.washington.edu/~zoran/behavior-discovery.html; PDF retrieval source: https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://homes.cs.washington.edu/~zoran/behavior-discovery.html; PDF retrieval source: https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 6 (5 Results)): Because con
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Because contacts can be made with the surfaces of other characters, the task is achieved by one character climbing on top of the other. | p. 6 (5 Results) |
 | 5 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Two characters also cooperate to achieve tasks impossible for one, such as ℓpos for one of the characters specifying a target location above character's ... | p. 6 (5 Results) |
@@ -49,7 +49,7 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 6 (5 Results)): Because con
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object. | embodiment, simulator version and control stack | p. 6 (5 Results), p. 6 (5 Results) |
 | Task/environment | For the task of moving the object above, multiple characters distribute the workload and cooperate to pass the object from one to the other. | reset, timeout, object/scene variation | p. 6 (5 Results) |
@@ -131,7 +131,16 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 6 (5 Results)): Because con
 - **p. 5 / 2 Related Work - extractive body cue:** Exactly the same continuation scheme was successful in all of the diverse behaviors we studied, and so our method does not need behavior-specific adjustments.
 - **p. 5 / 2 Related Work - extractive body cue:** The solution obtained at the end of each phase is perturbed with small zero-mean Gaussian noise (to break any symmetries) and used to initialize the ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Results), p. 6 (5 Results), metrics p. 6 (5 Results), p. 6 (5 Results), p. 8 (Figure/Table caption), baselines p. 6 (5 Results), results p. 6 (5 Results), p. 6 (5 Results).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Results), p. 6 (5 Results), metrics p. 6 (5 Results), p. 6 (5 Results), p. 8 (Figure/Table caption), baselines p. 6 (5 Results), results p. 6 (5 Results), p. 6 (5 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Tasks similar to ℓpos and ℓdir are used to specify final position and orientation of the object. (p. 6, 5 Results).
+- **Metric evidence:** The optimization was successful in getting up, walking and climbing scenarios, with strategies appropriate for each morphology. (p. 6, 5 Results).
+- **Baseline/ablation evidence:** For example, animal trot pattern of contacts (moving front leg and opposite hind leg together) emerges for quadruped walking without explicitly being specified. (p. 6, 5 Results).
+- **Failure/negative evidence:** Another simplification we make is to penalize any relative velocity at contacting end effectors (see (2)), which results in trajectories that do not have any noticeable slipping. (p. 6, 5 Results).

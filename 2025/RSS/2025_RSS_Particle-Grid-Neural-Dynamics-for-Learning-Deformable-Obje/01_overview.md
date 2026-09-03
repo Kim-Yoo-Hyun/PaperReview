@@ -1,8 +1,10 @@
 # Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p036.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p036.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p036.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p036.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p036.pdf
 - Code/Project: https://kywind.github.io/pgnd
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -79,3 +81,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, video-based predictive ...를 문제로 두고, The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing objects with 3D Gaussian Splatting and int ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, developing dynamics models for deformable objects that are both accurate and generalizable remains a significant challenge. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** To address these limitations, we introduce a novel class of/ dynamic models called particle-grid neural dynamics. (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 13: Additional Qualitative Comparisons on Dynamics Prediction. Given the initial states and actions (leftmost column), we present the prediction results of the MPM with parameter identification baseline, the GBND ... (p. 19, Figure/Table caption).
+- **Explicit failure boundary:** For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, ... (p. 1, I. INTRODUCTION).

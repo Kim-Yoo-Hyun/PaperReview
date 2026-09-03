@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.deisenroth.cc/publication/deisenroth-2011-c/; PDF retrieval source: https://www.deisenroth.cc/publication/deisenroth-2011-c/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.deisenroth.cc/publication/deisenroth-2011-c/; PDF retrieval source: https://www.deisenroth.cc/publication/deisenroth-2011-c/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3.3. Unicycle Riding | EMPIRICAL / SIMULATION | The success rate was approximately 93%; bringing the unicycle upright from extreme initial configurations was sometimes impossible due to the torque constraints. | p. 6 (3.3. Unicycle Riding) |
 | Figure/Table caption | EMPIRICAL / SIMULATION | Figure 1. Small data set of observed transitions (left), multiple plausible deterministic function approximators (center), probabilistic function approximator (right). The probabilistic approximator models uncertainty ... | p. 2 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In this section, we report pilco's success in efficiently learning challenging control tasks, including both standard benchmark problems and high-dimensional control problems. | embodiment, simulator version and control stack | p. 5 (3. Experimental Results), p. 6 (3.3. Unicycle Riding) |
 | Task/environment | Robotic unicycle system and simulation results. | reset, timeout, object/scene variation | p. 6 (3.3. Unicycle Riding), p. 5 (3.1. Cart-Pole Swing-up) |
@@ -152,7 +152,16 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 - **p. 6 / 3.3. Unicycle Riding - extractive body cue:** The goal was to ride the unicycle, i.e., to prevent it from falling.
 - **p. 6 / 3.3. Unicycle Riding - extractive body cue:** After 1.2 s, either the unicycle had fallen or the learned controller had managed to balance it very closely to the desired upright position.
 
-- **PDF anchors reviewed:** datasets p. 5 (3. Experimental Results), p. 6 (3.3. Unicycle Riding), p. 5 (3.1. Cart-Pole Swing-up), p. 6 (3.3. Unicycle Riding), metrics p. 6 (3.3. Unicycle Riding), p. 6 (3.3. Unicycle Riding), p. 3 (2.2. Policy Evaluation), p. 3 (2.2. Policy Evaluation), p. 5 (3. Experimental Results), p. 5 (3.1. Cart-Pole Swing-up), baselines p. 6 (3.4. Data Efficiency), results p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table caption), p. 3 (2.2. Policy Evaluation), p. 5 (3. Experimental Results), p. 5 (3.2. Cart-Double-Pendulum Swing-up), p. 6 (3.3. Unicycle Riding).
+- **Evidence anchors reviewed:** datasets p. 5 (3. Experimental Results), p. 6 (3.3. Unicycle Riding), p. 5 (3.1. Cart-Pole Swing-up), p. 6 (3.3. Unicycle Riding), metrics p. 6 (3.3. Unicycle Riding), p. 6 (3.3. Unicycle Riding), p. 3 (2.2. Policy Evaluation), p. 3 (2.2. Policy Evaluation), p. 5 (3. Experimental Results), p. 5 (3.1. Cart-Pole Swing-up), baselines p. 6 (3.4. Data Efficiency), results p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table caption), p. 3 (2.2. Policy Evaluation), p. 5 (3. Experimental Results), p. 5 (3.2. Cart-Double-Pendulum Swing-up), p. 6 (3.3. Unicycle Riding).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Robotic unicycle system and simulation results. (p. 6, 3.3. Unicycle Riding).
+- **Metric evidence:** The success rate was approximately 93%; bringing the unicycle upright from extreme initial configurations was sometimes impossible due to the torque constraints. (p. 6, 3.3. Unicycle Riding).
+- **Baseline/ablation evidence:** In the following, we compare pilco's data efficiency (required interaction time) to other RL methods that learn previously discussed tasks from scratch, i.e., without informative prior knowledge. (p. 6, 3.4. Data Efficiency).
+- **Failure/negative evidence:** Trial-and-error learning leads to some limitations in the discovered policy: Pilco is not an optimal control method; it merely finds a solution for the task. (p. 7, 4. Discussion and Conclusion).

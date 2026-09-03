@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2604.20472; PDF retrieval source: https://arxiv.org/pdf/2604.20472. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2604.20472; PDF retrieval source: https://arxiv.org/pdf/2604.20472. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5. Extended Analysis of Guided Action Search and TDQC Efficiency. The results demonstrate that RNN-TDQC provides the highest success rates, while the Threshold ... | p. 23 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. Sequential Brier scores across benchmarks. Sequential Brier score (lower is better) on an unseen validation set averaged over 21 random seeds (train/validation ... | p. 2 (Figure/Table caption) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-World Franka We consider the Franka Emika Panda Robot in Gu et al. | embodiment, simulator version and control stack | p. 8 (6.2. Benchmarks), p. 8 (6.2. Benchmarks) |
 | Task/environment | An episode in LIBERO is stopped once the robot completes its task. | reset, timeout, object/scene variation | p. 8 (6.2. Benchmarks), p. 7 (6. Experiments) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 - **p. 10 / 7. Conclusion and Future Works - extractive body cue:** First, we observe that the failure predictor generalizes across unseen tasks within an environment but not across environments, embodiments, or action parameterizations.
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 7. Successful rollout with informative failure scores of TDQC top 10 probabilities on OpenVLA LIBERO-10 benckmark. task: "put both the alphabet soup and the ...
 
-- **PDF anchors reviewed:** datasets p. 8 (6.2. Benchmarks), p. 8 (6.2. Benchmarks), p. 7 (6. Experiments), metrics p. 28 (Figure/Table caption), p. 2 (Figure/Table caption), p. 23 (Figure/Table caption), p. 10 (Figure/Table caption), p. 18 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (Figure/Table caption), p. 17 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 23 (Figure/Table caption), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 28 (Figure/Table caption), p. 25 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (6.2. Benchmarks), p. 8 (6.2. Benchmarks), p. 7 (6. Experiments), metrics p. 28 (Figure/Table caption), p. 2 (Figure/Table caption), p. 23 (Figure/Table caption), p. 10 (Figure/Table caption), p. 18 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (Figure/Table caption), p. 17 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 23 (Figure/Table caption), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 28 (Figure/Table caption), p. 25 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3. Benchmark statistics: task split into seen/unseen subsets and corresponding numbers of training and evaluation rollouts. Table 3 summarize each benchmark statistics on the number of tasks and rollouts. ... (p. 17, Figure/Table caption).
+- **Metric evidence:** Table 16. Performance degregation as a function of failed trajectories, evaluated on π0-FAST LIBERO-10 (unseen tasks). We vary the proportion of failed trajectories retained during training from 100% down to ... (p. 26, Figure/Table caption).
+- **Baseline/ablation evidence:** Figure 5. Extended Analysis of Guided Action Search and TDQC Efficiency. The results demonstrate that RNN-TDQC provides the highest success rates, while the Threshold 0.35 variant offers a significant reduction ... (p. 23, Figure/Table caption).
+- **Failure/negative evidence:** We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones and is widely used for uncertainty quantification in LLMs (Huang et al., ... (p. 9, 6.4. TD loss improves calibration and failure detection).

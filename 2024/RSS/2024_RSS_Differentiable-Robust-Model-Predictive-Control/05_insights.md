@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `joint/task state, reference와 sensor feedback → state estimate, task-space error와 control decision → torque, force, velocity 또는 position command`.
-- 이 논문의 재사용 가능한 지점은 Safety is enforced through the use of discrete barrier states [3], which enables scalable constraint satisfaction such that safe planning and control can be executed in real-time.를 This allows for an implicit form of feedback since the controls are reoptimized from the current state of the system at every time step of the problem [43].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 state estimate, task-space error와 control decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of disturbances received, leading to a large number of failures even when controlled using NTMPC.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Safety is enforced through the use of discrete barrier states [3], which enables scalable constraint satisfaction such that safe planning and control can be executed in real-time. (p. 2, I. INTRODUCTION).
+- **Paper-specific mechanism:** In summary, the main contributions of this work include: 1) the derivation of a general differentiable optimal control framework enabled through a novel application of the implicit function theorem, 2) ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 11: Robot arm numerical comparisons. As Diff-MPC [5] uses an LQ approximation to the control problem, their algorithm is able to achieve very fast timings. However, this results in ... (p. 20, Figure/Table caption); the relevant task/metric cue is On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal trajectory by tuning the ancillary MPC in real-time, drastically increasing the success ... (p. 10, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of disturbances received, leading to a large number of failures even when controlled ... (p. 10, V. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The generality of the proposed DT-MPC is established through benchmarks on five nonlinear robotics systems subject to highly non-convex constraints such as dense obstacle fields..
-3. Compare against the body-reported baseline or a matched simpler baseline: 8), a state-of-the-art, remotely accessible robotics hardware platform for multi-agent control [52]..
-4. Report the body metric and its denominator/aggregation: On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal trajectory by tuning the ancillary MPC in real-time, drastically increasing the success rate to ....
-5. Re-run the body-reported ablation/failure condition: In the experiments that follow, the nominal MPC is tuned to perform the task successfully and then the algorithms are deployed on the true system, without further tuning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Safety is enforced through the use of discrete barrier states [3], which enables scalable constraint satisfaction such that safe planning and control can be executed in real-time. (p. 2, I. INTRODUCTION); preserve the objective/update rule: The learning objective is therefore defined as the following bilevel optimization over the parameters of Problem 3: Problem 4 (Learning Problem). min θ L(τ ∗(θ)), (4) where L is a ... (p. 5, III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL).
+2. Use the paper-reported task/data/environment cue: 5: Environment for the robot arm task. the linear and angular velocities are sampled from a larger range of [-0.1, 0.1] - this choice emulates large unmodeled forces and moments ... (p. 10, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: This puts the proposed framework to the test, especially in comparison to the non-adaptive, nonlinear tube-based MPC. (p. 9, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal trajectory by tuning the ancillary MPC in real-time, drastically increasing the success ... (p. 10, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: In the experiments that follow, the nominal MPC is tuned to perform the task successfully and then the algorithms are deployed on the true system, without further tuning. (p. 9, V. EXPERIMENTS); if none is reported, design one around: For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of disturbances received, leading to a large number of failures even when controlled ... (p. 10, V. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC); the primary result is directionally consistent at p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 20 (Figure/Table caption), p. 10 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), and measure the boundary at p. 10 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contribution, development mechanism이 8), a state-of-the-art, remotely accessible robotics hardware platform for multi-agent control [52]. 대비 On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal ...을 개선하고, For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Safety is enforced through the use of discrete barrier states [3], which enables scalable constraint satisfaction such that safe planning and control ...), does the paper-specific mechanism (In summary, the main contributions of this work include: 1) the derivation of a general differentiable optimal control framework enabled through a ...) retain the reported evaluation outcome (On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal ...) when tested against the paper's strongest explicit boundary (For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, the main contributions of this work include: 1) the derivation of a general differentiable optimal control framework enabled through a novel application of the implicit function theorem, 2) ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 11: Robot arm numerical comparisons. As Diff-MPC [5] uses an LQ approximation to the control problem, their algorithm is able to achieve very fast timings. However, this results in ... (p. 20, Figure/Table caption).
+- **Strongest explicit boundary:** For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of disturbances received, leading to a large number of failures even when controlled ... (p. 10, V. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

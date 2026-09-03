@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (54 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.21845; PDF retrieval source: https://arxiv.org/pdf/2410.21845. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (54 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.21845; PDF retrieval source: https://arxiv.org/pdf/2410.21845. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | This is a significant improvement over the HG-DAgger baseline, which achieved an average success rate of 49.7% across all tasks. | p. 15 (4.3. Experimental Results) |
 | 4.3. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1, HIL-SERL achieved a success rate of 100% within 1 to 2.5 hours of real-world training on nearly all the tasks. | p. 15 (4.3. Experimental Results) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Each task also uses either a scripted robot motion or manually human reset to randomize the initial state of the task. | embodiment, simulator version and control stack | p. 9 (4.1. Overview of Experiments), p. 9 (4.1. Overview of Experiments) |
 | Task/environment | We solve these tasks by utilizing either a single robot arm or a dual-arm setup, together with various combinations of observations and actions. | reset, timeout, object/scene variation | p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 6: Robustness evaluation for policies learned by our method. (A) RAM insertion under external perturbations, such as a moving motherboard. (B) Retrying behavior during ...
 - **p. 14 / 4.3. Experimental Results - extractive body cue:** For HG-DAgger, the success rate fluctuates throughout training episodes and does not necessarily increase as training progresses.
 
-- **PDF anchors reviewed:** datasets p. 9 (4.1. Overview of Experiments), p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), metrics p. 8 (Figure/Table caption), p. 17 (5. Result Analysis), p. 18 (5.1. Reliability of the Learned Policies), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), baselines p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), results p. 15 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), p. 17 (5. Result Analysis), p. 18 (5.1. Reliability of the Learned Policies), p. 19 (5.1. Reliability of the Learned Policies), p. 18 (5.1. Reliability of the Learned Policies).
+- **Evidence anchors reviewed:** datasets p. 9 (4.1. Overview of Experiments), p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), metrics p. 8 (Figure/Table caption), p. 17 (5. Result Analysis), p. 18 (5.1. Reliability of the Learned Policies), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), baselines p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), results p. 15 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), p. 17 (5. Result Analysis), p. 18 (5.1. Reliability of the Learned Policies), p. 19 (5.1. Reliability of the Learned Policies), p. 18 (5.1. Reliability of the Learned Policies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (54 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1: Experiment results. (a) HIL-SERL against imitation learning baselines. (b) HIL-SERL against various other baselines. In this subsection, we present the experimental results for all the tasks mentioned above. ... (p. 13, Figure/Table caption).
+- **Metric evidence:** One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks. (p. 18, 5.1. Reliability of the Learned Policies).
+- **Baseline/ablation evidence:** In the remainder of this section, we will first describe each task in detail, and present relevant results as well as comparisons to other state-of-the-art methods. (p. 9, 4.1. Overview of Experiments).
+- **Failure/negative evidence:** For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from wrist and/or side cameras as inputs, and predicts whether the current state ... (p. 9, 4.1. Overview of Experiments).

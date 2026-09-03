@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p49.html; PDF retrieval source: https://arxiv.org/pdf/1709.10087. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://roboticsproceedings.org/rss14/p49.html; PDF retrieval source: https://arxiv.org/pdf/1709.10087. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 10: Performance of RL with demonstrations methods - DAPG(ours) and DDPGfD. DAPG significantly outperforms DDPGfD. For DAPG, we plot the performance of the ... | p. 8 (Figure/Table caption) |
 | 2) Do the resulting policies exhibit desirable properties like | EMPIRICAL / REAL-ROBOT OR HARDWARE | With the shaped rewards, we find that NPG is indeed able to achieve high success percentage on these tasks (Figure 7), while DDPG was ... | p. 6 (2) Do the resulting policies exhibit desirable properties like) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In order to benchmark the capabilities of DRL with regard to the dexterous manipulation tasks outlined in Section III, we evaluate the NPG algorithm ... | embodiment, simulator version and control stack | p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like) |
 | Task/environment | 0 20 40 60 80 100 Robot Hours 0 20 40 60 80 100 Success Percentage Object Relocation 0 5 10 15 20 Robot ... | reset, timeout, object/scene variation | p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like) |
@@ -148,7 +148,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 - **p. 7 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** The mental models of solution strategies that humans have for these tasks are indeed quite robust.
 - **p. 7 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** Furthermore, we take the additional step of analyzing the robustness of these policies to variations in environments that were not experienced during training.
 
-- **PDF anchors reviewed:** datasets p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), metrics p. 6 (V. RESULTS AND DISCUSSION), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), metrics p. 6 (V. RESULTS AND DISCUSSION), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 1: We demonstrate a wide range of dexterous manipulation skills such as object relocation, in-hand manipulation, tool use, and opening doors using DRL methods. By augmenting with human demonstrations, ... (p. 1, Figure/Table caption).
+- **Metric evidence:** Subsequently, we demonstrate the benefits of incorporating human demonstrations with regard to faster learning, increased robustness of trained policies, and ability to cope with sparse task completion rewards. (p. 6, V. RESULTS AND DISCUSSION).
+- **Baseline/ablation evidence:** We score the different methods based on the percentage of successful trajectories the trained policies can generate, using a sample size of 100 trajectories. (p. 6, 2) Do the resulting policies exhibit desirable properties like).
+- **Failure/negative evidence:** Indeed, model-free methods have been used for acquiring manipulation skills [52], [13], but so far have been limited to simpler behaviors with 2-3 finger hands or wholearm manipulators, which do ... (p. 1, I. INTRODUCTION).

@@ -1,8 +1,10 @@
 # Demonstrating MOSART: Opening Articulated Structures in the Real World
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p033.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p033.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p033.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p033.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p033.pdf
 - Code/Project: https://www.roboticsproceedings.org/rss21/p033.html
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (25 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -33,8 +35,8 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, ...
 - **p. 4 / B. Generating Motion Plans - extractive body cue:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any ...
-- **p. 1 / Front matter - extractive body cue:** g novel cabinets, drawers, and ovens
-- **p. 1 / Front matter - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** g novel cabinets, drawers, and ovens
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
 - **p. 2 / Abstract - extractive body cue:** ‘models developed in isolation struggle when faced with robot ‘centric viewpoints.
 - **p. 20 / A. Robot Utility Models - extractive body cue:** We provide additional details about Robot Utility Models (RUM) [16].
 
@@ -51,8 +53,8 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, ...
 - **p. 4 / B. Generating Motion Plans - extractive body cue:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any ...
-- **p. 1 / Front matter - extractive body cue:** g novel cabinets, drawers, and ovens
-- **p. 1 / Front matter - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** g novel cabinets, drawers, and ovens
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
 - **p. 2 / Abstract - extractive body cue:** ‘models developed in isolation struggle when faced with robot ‘centric viewpoints.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments.
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: MOSART Design. The perception module outputs 3D articulation parameters in the robot frame using RGB-D images. The robot then navigates to the target ...
@@ -83,3 +85,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 Finally, we also consluct experiments to understand a) how MOSART compares to an end-to-end leaming approach, ) how sensitive MOSART is to the performance of each individual submodule, c) whether MOSART can ...를 문제로 두고, We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, Our approach, called MOSART for a MOdular ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 1 (Abstract), p. 20 (A. Robot Utility Models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Finally, we also consluct experiments to understand a) how MOSART compares to an end-to-end leaming approach, ) how sensitive MOSART is to the performance of each individual submodule, c) whether ... (p. 2, 1. Iyrropucrion).
+- **Actual contribution:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any privileged information. (p. 4, B. Generating Motion Plans).
+- **Evaluation boundary:** We first present ‘our end-to-end system test results, evaluating MOSART on 31 novel drawers and cupboards across 10 buildings (Section IV-A), To see how a modular system compares to an ... (p. 6, IV. EXPERIMENTS).
+- **Explicit failure boundary:** Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles. (p. 10, Discussion).

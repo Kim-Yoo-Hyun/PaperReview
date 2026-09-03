@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** The two datasets both contain high-quality RGB-D sequences of various indoor scenes and 3D instance-level semantic annotations.
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** For Scene0645 in the ScanNetV2 dataset, our method takes an average of 410 ms to perform rendering optimization for 5 keyframes with 20 iterations, 350 ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Qualitative 3D Semantic Segmentation Comparison of ScanNetV2 Dataset.
-- **p. 6 / 4.2. Main Experiments - extractive PDF cue:** 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets.
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** 1, compared to the performance gap in 3D semantic segmentation, we further narrow the gap with offline baselines in 3D panoptic segmentation performance, even surpassing ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** The results are evaluated on ScanNetV2 dataset.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** The two datasets both contain high-quality RGB-D sequences of various indoor scenes and 3D instance-level semantic annotations.
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** For Scene0645 in the ScanNetV2 dataset, our method takes an average of 410 ms to perform rendering optimization for 5 keyframes with 20 iterations, 350 ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Qualitative 3D Semantic Segmentation Comparison of ScanNetV2 Dataset.
+- **p. 6 / 4.2. Main Experiments - extractive body cue:** 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets.
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** 1, compared to the performance gap in 3D semantic segmentation, we further narrow the gap with offline baselines in 3D panoptic segmentation performance, even surpassing ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** The results are evaluated on ScanNetV2 dataset.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Studies | EMPIRICAL / SOURCE-REPORTED EVALUATION | Compared to single-cue clustering, multi-cue clustering achieves 8 to 18 PRQ improvement with only ∼40 33275 | p. 7 (4.3. Ablation Studies) |
 | 4.2. Main Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets. | p. 6 (4.2. Main Experiments) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** The two datasets both contain high-quality RGB-D sequences of various indoor scenes and 3D instance-level semantic annotations.
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** For Scene0645 in the ScanNetV2 dataset, our method takes an average of 410 ms to perform rendering optimization for 5 keyframes with 20 iterations, 350 ...
-- **p. 6 / 4.1. Experimental Settings - extractive PDF cue:** Qualitative 3D Semantic Segmentation Comparison of ScanNetV2 Dataset.
-- **p. 6 / 4.2. Main Experiments - extractive PDF cue:** 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets.
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** 1, compared to the performance gap in 3D semantic segmentation, we further narrow the gap with offline baselines in 3D panoptic segmentation performance, even surpassing ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** The results are evaluated on ScanNetV2 dataset.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** The two datasets both contain high-quality RGB-D sequences of various indoor scenes and 3D instance-level semantic annotations.
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** For Scene0645 in the ScanNetV2 dataset, our method takes an average of 410 ms to perform rendering optimization for 5 keyframes with 20 iterations, 350 ...
+- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Qualitative 3D Semantic Segmentation Comparison of ScanNetV2 Dataset.
+- **p. 6 / 4.2. Main Experiments - extractive body cue:** 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets.
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** 1, compared to the performance gap in 3D semantic segmentation, we further narrow the gap with offline baselines in 3D panoptic segmentation performance, even surpassing ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** The results are evaluated on ScanNetV2 dataset.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and 2D ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the proposed approach. Our system performs online open-vocabulary panoptic mapping from RGB-D streams using a local-to-global paradigm. (a) Maintaining a sliding ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. 3D Semantic and Panoptic Segmentation Results on ScanNetV2 and Replica Datasets. ∗indicates the baseline results are taken from [58] which use the 3D ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative 3D Semantic Segmentation Comparison of ScanNetV2 Dataset. Our approach outperforms recent online ap- proaches, O2V-Mapping [42] and OnlineAnySeg [41], by a large ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative Results of Open-Vocabulary Query. We use different colors to distinguish different instances found in the query. Compared to OnlineAnySeg [41], our approach ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 5. Left: ablation studies of using different segments clus- tering cues for local map construction. Right: ablation studies of using different feature grid resolutions. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset. Settings PRQ (T) PRQ (S) #1 NN Match 24.67
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation studies of our system components. The results are evaluated on ScanNetV2 dataset. Settings mIoU PRQ (T) PRQ (S) #1 w/o. Segment Clustering ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and 2D ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the proposed approach. Our system performs online open-vocabulary panoptic mapping from RGB-D streams using a local-to-global paradigm. (a) Maintaining a sliding ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. 3D Semantic and Panoptic Segmentation Results on ScanNetV2 and Replica Datasets. ∗indicates the baseline results are taken from [58] which use the 3D ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative 3D Semantic Segmentation Comparison of ScanNetV2 Dataset. Our approach outperforms recent online ap- proaches, O2V-Mapping [42] and OnlineAnySeg [41], by a large ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative Results of Open-Vocabulary Query. We use different colors to distinguish different instances found in the query. Compared to OnlineAnySeg [41], our approach ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Left: ablation studies of using different segments clus- tering cues for local map construction. Right: ablation studies of using different feature grid resolutions. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset. Settings PRQ (T) PRQ (S) #1 NN Match 24.67
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation studies of our system components. The results are evaluated on ScanNetV2 dataset. Settings mIoU PRQ (T) PRQ (S) #1 w/o. Segment Clustering ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset. | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings) |
 | Task/environment | The two datasets both contain high-quality RGB-D sequences of various indoor scenes and 3D instance-level semantic annotations. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Settings), p. 7 (4.2. Main Experiments) |
@@ -120,11 +120,11 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 | Primary metric/result | 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets. | numeric claim only at cited anchor | p. 6 (4.2. Main Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** We sample a keyframe every 20 frames and maintain a sliding window of size 12.
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** We evaluate the runtime performance of OnlinePG on a desktop computer equipped with an AMD Ryzen 9 7950X CPU and an NVIDIA RTX 4090 GPU.
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** For Scene0645 in the ScanNetV2 dataset, our method takes an average of 410 ms to perform rendering optimization for 5 keyframes with 20 iterations, 350 ...
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** Since clustering and fusion process multiple keyframes per sliding window movement (frequency much lower than framerate), our system achieves 18 FPS on simple scenes and ...
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Following [50, 58], we take the commonly-used 8 scenes {room0-2,office0-4} for Replica dataset.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** We sample a keyframe every 20 frames and maintain a sliding window of size 12.
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** We evaluate the runtime performance of OnlinePG on a desktop computer equipped with an AMD Ryzen 9 7950X CPU and an NVIDIA RTX 4090 GPU.
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** For Scene0645 in the ScanNetV2 dataset, our method takes an average of 410 ms to perform rendering optimization for 5 keyframes with 20 iterations, 350 ...
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** Since clustering and fusion process multiple keyframes per sliding window movement (frequency much lower than framerate), our system achieves 18 FPS on simple scenes and ...
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitations: (1) Our method currently cannot reconstruct dynamic objects.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Our future work will explore feed-forward approaches [20, 46, 47] that eliminate these requirements for fully pose-free and depth-free openvocabulary reconstruction.
-- **p. 5 / 4.1. Experimental Settings - extractive PDF cue:** Since the baselines [31, 33, 50] marked with ∗ cannot obtain 3D panoptic results, we use the performance reported in [58], which uses a supervised ...
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** While OnlineAnySeg can handle simple queries (e.g., "television"), it fails on some fine-grained and multi-instance queries (e.g., "pillow", "toilet paper", "bag") due to inaccurate 3D ...
-- **p. 7 / 4.2. Main Experiments - extractive PDF cue:** Since some offline baselines (LangSplat [33], OpenGaussian [50], OpenScene [31]) marked with ∗cannot inherently output 3D instances, PanoGS [58] provides supervised instance annotations [44] for ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and 2D ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitations: (1) Our method currently cannot reconstruct dynamic objects.
+- **p. 8 / 5. Conclusion - extractive body cue:** Our future work will explore feed-forward approaches [20, 46, 47] that eliminate these requirements for fully pose-free and depth-free openvocabulary reconstruction.
+- **p. 5 / 4.1. Experimental Settings - extractive body cue:** Since the baselines [31, 33, 50] marked with ∗ cannot obtain 3D panoptic results, we use the performance reported in [58], which uses a supervised ...
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** While OnlineAnySeg can handle simple queries (e.g., "television"), it fails on some fine-grained and multi-instance queries (e.g., "pillow", "toilet paper", "bag") due to inaccurate 3D ...
+- **p. 7 / 4.2. Main Experiments - extractive body cue:** Since some offline baselines (LangSplat [33], OpenGaussian [50], OpenScene [31]) marked with ∗cannot inherently output 3D instances, PanoGS [58] provides supervised instance annotations [44] for ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and 2D ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 7 (4.2. Main Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), metrics p. 8 (4.3. Ablation Studies), p. 5 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 7 (4.2. Main Experiments), p. 5 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), baselines p. 6 (Figure/Table caption), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 6 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), results p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 7 (4.2. Main Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), metrics p. 8 (4.3. Ablation Studies), p. 5 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 7 (4.2. Main Experiments), p. 5 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), baselines p. 6 (Figure/Table caption), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 6 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), results p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

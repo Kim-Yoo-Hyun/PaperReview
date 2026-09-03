@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p079.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p079.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p079.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p079.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C. Policy Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | For the test objects, the vision-only policy achieves a success rate of 21.3% on average, which is significantly worse than policies incorporating force. | p. 8 (C. Policy Evaluation) |
 | C. Policy Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Without a curriculum, policies naively incorporating force achieve a success rate of 61.2%, ‘hile FACTR achieves a success rate of 87.5%, which shows that ... | p. 8 (C. Policy Evaluation) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These asks are challenging as they require the robot to perceive and respond to the force feedback as it manipulates objects with unseen visual ... | embodiment, simulator version and control stack | p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation) |
 | Task/environment | We hypothesize that the force information provides important signals for mode switehing at moments such as when the robots get into contact withthe box ... | reset, timeout, object/scene variation | p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation) |
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 - **p. 7 / C. Policy Evaluation - extractive body cue:** 6, All the policies perform similarly on the train objects for most tasks, except for the rolling dough task, where the vision-only policy smashes the ...
 - **p. 8 / C. Policy Evaluation - extractive body cue:** FACTR leads to better recovery behavior.
 
-- **PDF anchors reviewed:** datasets p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 8 (C. Policy Evaluation), metrics p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), baselines p. 7 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 9 (C. Policy Evaluation), p. 9 (C. Policy Evaluation), results p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 9 (C. Policy Evaluation).
+- **Evidence anchors reviewed:** datasets p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 8 (C. Policy Evaluation), metrics p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), baselines p. 7 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 9 (C. Policy Evaluation), p. 9 (C. Policy Evaluation), results p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 9 (C. Policy Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation).
+- **Metric evidence:** Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation).
+- **Baseline/ablation evidence:** ‘+ How does FACTR perform compared to baseline approaches that do not use force feedback and ones that use force feedback without FACTR? (p. 7, C. Policy Evaluation).
+- **Failure/negative evidence:** While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift or balance the novel boxes. (p. 8, C. Policy Evaluation).

@@ -2,86 +2,85 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (5 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.3. Quantitative Results), p. 8 (4.5. Runtime Analysis), p. 7 (4.3. Quantitative Results), p. 5 (4. Experimental Results), p. 6 (4.1.1. Datasets), p. 8 (Figure/Table caption)): The results reveal that FROSS achieves the highest performance among all baseline methods with much lower processing latency.
+PDF body evaluation/result cue (p. 2 (7.3. 2D Scene Graph Generation Performance), p. 2 (Figure/Table caption), p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (Figure/Table caption), p. 3 (8. Statistics of the ReplicaSSG Dataset)): The above observations reveal that the integration of RT-DETR as the object detection backbone results in substantial processing efficiency improvements, with only a slight impact on relationship prediction performance for ...
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1.1. Datasets - extractive PDF cue:** 3DSSG augments the base dataset with object attributes, hierarchical category labels, and directed edges that describe inter-object semantic relationships such as ‘standing on,' ‘attached to,' ...
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** Although Replica encompasses only 18 scenes, which precludes its use for training purposes, it serves as an effective evaluation benchmark.
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** In the evaluation of FROSS, seven scenes serve as validation environments for hyperparameter optimization, while the remaining 11 scenes function as performance assessment platforms.
-- **p. 5 / 4.1.1. Datasets - extractive PDF cue:** The 3DSSG dataset [31] extends 3RScan [30], which encompasses 1,482 scans of indoor environments with their corresponding RGB-D image sequences, 3D meshes, and dense instance ...
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** Performance comparison of 3D SSG generation methods on the 3DSSG dataset and the end-to-end latency without environmental mapping reported in their original literature, along with ...
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** Qualitative comparison between FROSS and Wu [35] on the 3DSSG dataset.
-- **p. 8 / 4.5. Runtime Analysis - extractive PDF cue:** Det. refers to the object detection model RT-DETR [21, 44], while Rel.
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** Errors are marked in red, with ground truth label shown in parentheses.
+- **p. 2 / 7.1. Object and Predicate Performance per Class - extractive body cue:** Qualitative results of FROSS on four scenes in the ReplicaSSG dataset.
+- **p. 5 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** The number of objects present in each scene within the ReplicaSSG dataset.
+- **p. 2 / 7.3. 2D Scene Graph Generation Performance - extractive body cue:** For these evaluations, the models tested on ReplicaSSG received training on the Visual Genome dataset, whereas the models tested on the other two datasets used ...
+- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** In addition, FROSS's per-class object and predicate performance on the proposed ReplicaSSG dataset is presented in Table 8.
+- **p. 3 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** Evaluation results of two 2D SG generation models across three datasets. ‘RT-DETR+EGTR' represents the EGTR model with RT-DETR as its object detector backbone.
+- **p. 4 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** The occurrence frequency of each object category in the ReplicaSSG dataset.
+- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** Despite retaining only the top seven most frequent relationships, the 3DSSG dataset still exhibits an extreme imbalance, with the top two classes occurring at substantially ...
+- **p. 3 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** Object Recall per Class bag bskt. bed bench bike book botl. bowl box cab. chair clock cntr. cup curt. desk door mean 25.0 50.0 0.0 ...
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
 - **Target system/task:** mapped 3D environment과 mobile robot.
 - **Input boundary:** camera/depth stream, pose, map와 language goal.
 - **Output/decision under evaluation:** collision-free trajectory 또는 velocity command.
 - **Primary target:** goal reach, safety, localization error와 replanning latency.
-- **Detected evaluation headings:** 4. Experimental Results (p. 5); 4.1. Evaluation Setup (p. 5); 4.1.1. Datasets (p. 5); 4.1.4. Evaluation Metrics (p. 6); 4.2. Implementation Details (p. 6); 4.3. Quantitative Results (p. 7); 4.4. Qualitative Results (p. 7).
+- **Detected evaluation headings:** 6. Detailed Evaluation Metric (p. 1); 7. Additional Experimental Results (p. 1); 7.2. Additional Qualitative Results (p. 2); 8. Statistics of the ReplicaSSG Dataset (p. 2).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results reveal that FROSS achieves the highest performance among all baseline methods with much lower processing latency. | p. 7 (4.3. Quantitative Results) |
-| 4.5. Runtime Analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | Compared to the previous methods for online real-time 3D SSG generation methods [16, 34, 35], FROSS demonstrates significantly reduced end-to-end latency and increased FPS, ... | p. 8 (4.5. Runtime Analysis) |
-| 4.3. Quantitative Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Kim's baseline [16] achieves similar object recall to FROSS due to the same 2D SG generation pipeline. | p. 7 (4.3. Quantitative Results) |
-| 4. Experimental Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Moreover, the effectiveness of our approach is further demonstrated through qualitative results in Section 4.4. | p. 5 (4. Experimental Results) |
-| 4.1.1. Datasets | EMPIRICAL / SOURCE-REPORTED EVALUATION | In the evaluation of FROSS, seven scenes serve as validation environments for hyperparameter optimization, while the remaining 11 scenes function as performance assessment platforms. | p. 6 (4.1.1. Datasets) |
+| 7.3. 2D Scene Graph Generation Performance | SYSTEM / EVALUATION SCOPE UNRESOLVED | The above observations reveal that the integration of RT-DETR as the object detection backbone results in substantial processing efficiency improvements, with only a slight ... | p. 2 (7.3. 2D Scene Graph Generation Performance) |
+| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 9. For these evaluations, the models tested on Repli- caSSG received training on the Visual Genome dataset, whereas the models tested on the ... | p. 2 (Figure/Table caption) |
+| 7.1. Object and Predicate Performance per Class | SYSTEM / EVALUATION SCOPE UNRESOLVED | FROSS's ability to capture complex visual features leads to significantly higher performance in both object recall and mean recall. | p. 1 (7.1. Object and Predicate Performance per Class) |
+| 7.1. Object and Predicate Performance per Class | SYSTEM / EVALUATION SCOPE UNRESOLVED | FROSS's predicate performance is significantly affected by class imbalance, excelling in relationship classes such as attached to, build in, and standing on, while performing ... | p. 1 (7.1. Object and Predicate Performance per Class) |
+| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 10. Per-class object detection performance in 2D SG generation with RT-DETR (AP@50). | p. 3 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1.1. Datasets - extractive PDF cue:** 3DSSG augments the base dataset with object attributes, hierarchical category labels, and directed edges that describe inter-object semantic relationships such as ‘standing on,' ‘attached to,' ...
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** Although Replica encompasses only 18 scenes, which precludes its use for training purposes, it serves as an effective evaluation benchmark.
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** In the evaluation of FROSS, seven scenes serve as validation environments for hyperparameter optimization, while the remaining 11 scenes function as performance assessment platforms.
-- **p. 5 / 4.1.1. Datasets - extractive PDF cue:** The 3DSSG dataset [31] extends 3RScan [30], which encompasses 1,482 scans of indoor environments with their corresponding RGB-D image sequences, 3D meshes, and dense instance ...
-- **p. 7 / 4.2. Implementation Details - extractive PDF cue:** Performance comparison of 3D SSG generation methods on the 3DSSG dataset and the end-to-end latency without environmental mapping reported in their original literature, along with ...
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** Qualitative comparison between FROSS and Wu [35] on the 3DSSG dataset.
-- **p. 8 / 4.5. Runtime Analysis - extractive PDF cue:** Det. refers to the object detection model RT-DETR [21, 44], while Rel.
+- **p. 2 / 7.1. Object and Predicate Performance per Class - extractive body cue:** Qualitative results of FROSS on four scenes in the ReplicaSSG dataset.
+- **p. 5 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** The number of objects present in each scene within the ReplicaSSG dataset.
+- **p. 2 / 7.3. 2D Scene Graph Generation Performance - extractive body cue:** For these evaluations, the models tested on ReplicaSSG received training on the Visual Genome dataset, whereas the models tested on the other two datasets used ...
+- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** In addition, FROSS's per-class object and predicate performance on the proposed ReplicaSSG dataset is presented in Table 8.
+- **p. 3 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** Evaluation results of two 2D SG generation models across three datasets. ‘RT-DETR+EGTR' represents the EGTR model with RT-DETR as its object detector backbone.
+- **p. 4 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** The occurrence frequency of each object category in the ReplicaSSG dataset.
+- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** Despite retaining only the top seven most frequent relationships, the 3DSSG dataset still exhibits an extreme imbalance, with the top two classes occurring at substantially ...
+- **p. 3 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** Object Recall per Class bag bskt. bed bench bike book botl. bowl box cab. chair clock cntr. cup curt. desk door mean 25.0 50.0 0.0 ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We introduce FROSS, an online real-time 3D semantic scene graph generation method that leverages and integrates 2D scene graphs. FROSS represents objects as ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. An overview of the FROSS framework: (a) The process initiates with object detection via RT-DETR [44] from an RGB-D image and its associated ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Illustration of the object merging process using the proposed algorithm described in Section 3.4. (a) Starting with an input image, a set of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Performance comparison of 3D SSG generation methods on the 3DSSG dataset and the end-to-end latency without envi- ronmental mapping reported in their original ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative comparison between FROSS and Wu [35] on the 3DSSG dataset. Only representative objects are visualized. Errors are marked in red, with ground ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Runtime analysis of the key components of FROSS. Obj. Det. refers to the object detection model RT-DETR [21, 44], while Rel. Ext. corresponds ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Analysis of FROSS with predicted and ground truth 2D SGs as input on both the 3DSSG and ReplicaSSG datasets. ‘w/ GT' denotes the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Performance comparison of FROSS with the predicted and the ground truth camera trajectories as input on the Repli- caSSG dataset. Please note that ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Table 6. Per-class performance comparison of 3D SSG generation methods on 3DSSG for object recall (%). The best and second-best results are highlighted in red, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Table 7. Per-class performance comparison of 3D SSG generation methods on 3DSSG for predicate recall (%). The best and second-best results are highlighted in red, ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results of FROSS on four scenes in the ReplicaSSG dataset. Please note that only representative objects are visualized, with misclassified objects marked ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 9. For these evaluations, the models tested on Repli- caSSG received training on the Visual Genome dataset, whereas the models tested on the other ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 8. Per-class performance comparison of FROSS on the ReplicaSSG dataset for object and predicate recall (%). Object Recall per Class bag bskt. bed bench ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 9. Evaluation results of two 2D SG generation models across three datasets. ‘RT-DETR+EGTR' represents the EGTR model with RT-DETR as its object detector backbone. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 10. Per-class object detection performance in 2D SG generation with RT-DETR (AP@50).
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 11. Per-class relationship extraction performance in 2D SG generation with RT-DETR+EGTR (Recall@K).
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | 3DSSG augments the base dataset with object attributes, hierarchical category labels, and directed edges that describe inter-object semantic relationships such as ‘standing on,' ‘attached ... | embodiment, simulator version and control stack | p. 5 (4.1.1. Datasets), p. 6 (4.1.1. Datasets) |
-| Task/environment | Although Replica encompasses only 18 scenes, which precludes its use for training purposes, it serves as an effective evaluation benchmark. | reset, timeout, object/scene variation | p. 6 (4.1.1. Datasets), p. 6 (4.1.1. Datasets) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 4 (3.3. Lifting 2D SG to 3D), p. 3 (3.2. Overview of Framework) |
-| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 2 (1. Introduction), p. 3 (3.1. Problem Definition) |
+| Robot/hardware/simulator | Qualitative results of FROSS on four scenes in the ReplicaSSG dataset. | embodiment, simulator version and control stack | p. 2 (7.1. Object and Predicate Performance per Class), p. 5 (8. Statistics of the ReplicaSSG Dataset) |
+| Task/environment | The number of objects present in each scene within the ReplicaSSG dataset. | reset, timeout, object/scene variation | p. 5 (8. Statistics of the ReplicaSSG Dataset), p. 2 (7.3. 2D Scene Graph Generation Performance) |
+| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 1 (Body text (section not recovered)), p. 2 (8. Statistics of the ReplicaSSG Dataset) |
+| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | 본문 anchor 없음 |
 
 ## Metrics and Success Definition
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
-| Errors are marked in red, with ground truth label shown in parentheses. | definition/direction/unit from same section | p. 7 (4.3. Quantitative Results) |
-| In contrast, IMP [36] employs a voting mechanism for object classification, while VGfM [9] uses a basic recurrent neural network, which may restrict their ... | definition/direction/unit from same section | p. 7 (4.3. Quantitative Results) |
-| (a) Starting with an input image, a set of objects with predicted categories and bounding boxes is generated. | definition/direction/unit from same section | p. 5 (4.1.1. Datasets) |
-| Moreover, the effectiveness of our approach is further demonstrated through qualitative results in Section 4.4. | definition/direction/unit from same section | p. 5 (4. Experimental Results) |
-| Object recall quantifies the proportion of ground truth instances matched to predictions with correct category labels. | definition/direction/unit from same section | p. 6 (4.1.4. Evaluation Metrics) |
-| Note that a more detailed explanation of the utilized recall metric is offered in the supplementary materials (Section 6). | definition/direction/unit from same section | p. 6 (4.1.4. Evaluation Metrics) |
-| Table 5. Recall on the validation split of the 3DSSG dataset with different Hellinger distance thresholds. Threshold δd 0.6 0.65 0.7 0.75 0.8 | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
-| Table 4. Performance comparison of FROSS with the predicted and the ground truth camera trajectories as input on the Repli- caSSG dataset. Please note ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
+| Specifically, for a detected triplet in which both the subject and object match ground truth objects, only the predicted class labels for the subject, ... | definition/direction/unit from same section | p. 1 (6. Detailed Evaluation Metric) |
+| Per-class performance comparison of 3D SSG generation methods on 3DSSG for object recall (%). | definition/direction/unit from same section | p. 1 (7.1. Object and Predicate Performance per Class) |
+| These results further demonstrate FROSS's robustness in diverse scene conditions. | definition/direction/unit from same section | p. 2 (7.2. Additional Qualitative Results) |
+| Moreover, both models were optimized and accelerated using TensorRT3. | definition/direction/unit from same section | p. 2 (7.3. 2D Scene Graph Generation Performance) |
+| Per-class performance comparison of FROSS on the ReplicaSSG dataset for object and predicate recall (%). | definition/direction/unit from same section | p. 3 (8. Statistics of the ReplicaSSG Dataset) |
+| Table 11. Per-class relationship extraction performance in 2D SG generation with RT-DETR+EGTR (Recall@K). | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -89,12 +88,9 @@ PDF body evaluation/result cue (p. 7 (4.3. Quantitative Results), p. 8 (4.5. Run
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
-| Section 4.1 introduces the datasets, baseline SSG generation methods, and evaluation metrics. | comparison identity and matched condition | p. 5 (4. Experimental Results) |
-| We evaluated FROSS on the 3DSSG dataset against several baseline methods for SSG generation. | comparison identity and matched condition | p. 6 (4.1.2. Baseline Methods) |
-| Kim's 3D object representation and merging mechanism are integrated into FROSS for its baseline implementation, while other baseline implementations follow [35]1. | comparison identity and matched condition | p. 6 (4.1.2. Baseline Methods) |
-| Kim's baseline [16] achieves similar object recall to FROSS due to the same 2D SG generation pipeline. | comparison identity and matched condition | p. 7 (4.3. Quantitative Results) |
-| The results reveal that FROSS achieves the highest performance among all baseline methods with much lower processing latency. | comparison identity and matched condition | p. 7 (4.3. Quantitative Results) |
-| Compared to the previous methods for online real-time 3D SSG generation methods [16, 34, 35], FROSS demonstrates significantly reduced end-to-end latency and increased FPS, ... | comparison identity and matched condition | p. 8 (4.5. Runtime Analysis) |
+| The per-class performance comparison of FROSS and other baselines is presented in Tables 6 and 7. | comparison identity and matched condition | p. 1 (7.1. Object and Predicate Performance per Class) |
+| Per-class performance comparison of 3D SSG generation methods on 3DSSG for object recall (%). | comparison identity and matched condition | p. 1 (7.1. Object and Predicate Performance per Class) |
+| Per-class performance comparison of FROSS on the ReplicaSSG dataset for object and predicate recall (%). | comparison identity and matched condition | p. 3 (8. Statistics of the ReplicaSSG Dataset) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -107,32 +103,26 @@ PDF body evaluation/result cue (p. 7 (4.3. Quantitative Results), p. 8 (4.5. Run
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| We further provide runtime analyses on the ReplicaSSG dataset in Section 4.5, along with additional ablation studies in Section 4.6. | component/input/data sensitivity | p. 5 (4. Experimental Results) |
-| In the ablation studies, we investigate the impact of using ground truth 2D SGs and camera trajectories on the ReplicaSSG dataset. | component/input/data sensitivity | p. 6 (4.1.2. Baseline Methods) |
-| As FROSS generates predictions without explicit point cloud output, we establish evaluation metrics using backprojected 3D points. | component/input/data sensitivity | p. 6 (4.1.3. Matching Object Predictions to Ground Truth) |
-| Figure 1. We introduce FROSS, an online real-time 3D semantic scene graph generation method that leverages and integrates 2D scene graphs. FROSS represents objects ... | component/input/data sensitivity | p. 1 (Figure/Table caption) |
-| The impact of estimated trajectories are further analyzed via ablation studies in Section 4.6.2. | component/input/data sensitivity | p. 7 (4.2. Implementation Details) |
-| Performance comparison of 3D SSG generation methods on the 3DSSG dataset and the end-to-end latency without environmental mapping reported in their original literature, along ... | component/input/data sensitivity | p. 7 (4.2. Implementation Details) |
+| The latter replaces the object detection backbone in the original EGTR with RT-DETR [44] object detector. | component/input/data sensitivity | p. 2 (7.3. 2D Scene Graph Generation Performance) |
 
 ## Main Results / Claim–Evidence Map
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| The main contributions of the paper can be summarized as follows: • We introduce FROSS, an innovative methodology for online real-time generation of 3D ... | The results reveal that FROSS achieves the highest performance among all baseline methods with much lower processing latency. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (4.3. Quantitative Results), p. 8 (4.5. Runtime Analysis), p. 7 (4.3. Quantitative Results), p. 5 (4. Experimental Results), p. 6 (4.1.1. Datasets), p. 8 (Figure/Table caption) |
-| Primary metric/result | Compared to the previous methods for online real-time 3D SSG generation methods [16, 34, 35], FROSS demonstrates significantly reduced end-to-end latency and increased FPS, ... | numeric claim only at cited anchor | p. 8 (4.5. Runtime Analysis) |
+| In this section, we present the evaluation of two models: the original EGTR [12] 2D SG generation model and our modified version employed in ... | The above observations reveal that the integration of RT-DETR as the object detection backbone results in substantial processing efficiency improvements, with only a slight ... | PDF body cue; verify exact table/figure and matched conditions | p. 2 (7.3. 2D Scene Graph Generation Performance), p. 2 (Figure/Table caption), p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (Figure/Table caption), p. 3 (8. Statistics of the ReplicaSSG Dataset) |
+| Primary metric/result | Table 9. For these evaluations, the models tested on Repli- caSSG received training on the Visual Genome dataset, whereas the models tested on the ... | numeric claim only at cited anchor | p. 2 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** Specifically, the original 160 object categories map to 20 categories from NYUv2 [23], while seven of the 26 predicate categories remain.
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** Although Replica encompasses only 18 scenes, which precludes its use for training purposes, it serves as an effective evaluation benchmark.
-- **p. 6 / 4.1.1. Datasets - extractive PDF cue:** In the evaluation of FROSS, seven scenes serve as validation environments for hyperparameter optimization, while the remaining 11 scenes function as performance assessment platforms.
-- **p. 7 / 4.5. Runtime Analysis - extractive PDF cue:** The metrics represent averages across 14,400 frames from four ReplicaSSG test scenes.
+- no numeric body cue
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
-| body limitation/failure cue | However, its merging mechanism fails to suppress duplicate detections, which hinders relationship aggregation and leads to significantly lower relationship and predicate recall. | p. 7 (4.3. Quantitative Results) |
-| body limitation/failure cue | This substantiates the advantages of lifting scene graphs from 2D images over direct point cloud reasoning [31, 34, 35], as point clouds can sometimes ... | p. 7 (4.3. Quantitative Results) |
+| body limitation/failure cue | The only difference is the exclusion of the ‘none' relationship category, as FROSS does not predict it. | p. 1 (6. Detailed Evaluation Metric) |
+| body limitation/failure cue | While addressing this issue could potentially enhance FROSS's performance, we leave it as future work, as class imbalance is not the primary focus of ... | p. 1 (7.1. Object and Predicate Performance per Class) |
+| body limitation/failure cue | These results further demonstrate FROSS's robustness in diverse scene conditions. | p. 2 (7.2. Additional Qualitative Results) |
+| body limitation/failure cue | Misclassified objects are likely caused by occlusions from certain viewpoints or unusual viewing angles. | p. 2 (7.2. Additional Qualitative Results) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -140,14 +130,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Quantitative Results), p. 8 (4.5. Run
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| Section 4.2 presents the implementation details. | p. 5 (4. Experimental Results) |
-| We further provide runtime analyses on the ReplicaSSG dataset in Section 4.5, along with additional ablation studies in Section 4.6. | p. 5 (4. Experimental Results) |
-| The dataset splits and label mapping are available in the released code. | p. 6 (4.1.1. Datasets) |
-| Predicate recall computes the proportion of correctly classified predicates between detected objects, regardless of the object classes. | p. 6 (4.1.4. Evaluation Metrics) |
-| Our implementation applies a confidence threshold of 0.7 for object filtering and retains only the top ten relationships per 2D SG. | p. 7 (4.2. Implementation Details) |
-| All hyperparameters were determined through grid search evaluation on the validation split, with particular emphasis on relationship recall optimization. | p. 7 (4.2. Implementation Details) |
-| This process involves two key steps: (1) the conversion of object bounding boxes to 2D Gaussians, and (2) their subsequent back-projection into 3D space ... | p. 3 (3.3. Lifting 2D SG to 3D) |
-| Merging (Section 3.4) CNN Backbone & Encoder Self-Attention Layer 0 Self-Attention Layer 1 Self-Attention Layer N Hidden Layers Self-Attention Features RT-DETR Detected Objects EGTR ... | p. 4 (3.3. Lifting 2D SG to 3D) |
+| Wu [35] also provided results evaluated under this protocol in their publicly released code. | p. 1 (6. Detailed Evaluation Metric) |
 
 | Audit field | Current status |
 |---|---|
@@ -159,10 +142,12 @@ PDF body evaluation/result cue (p. 7 (4.3. Quantitative Results), p. 8 (4.5. Run
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** However, its merging mechanism fails to suppress duplicate detections, which hinders relationship aggregation and leads to significantly lower relationship and predicate recall.
-- **p. 7 / 4.3. Quantitative Results - extractive PDF cue:** This substantiates the advantages of lifting scene graphs from 2D images over direct point cloud reasoning [31, 34, 35], as point clouds can sometimes present ...
+- **p. 1 / 6. Detailed Evaluation Metric - extractive body cue:** The only difference is the exclusion of the ‘none' relationship category, as FROSS does not predict it.
+- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** While addressing this issue could potentially enhance FROSS's performance, we leave it as future work, as class imbalance is not the primary focus of this ...
+- **p. 2 / 7.2. Additional Qualitative Results - extractive body cue:** These results further demonstrate FROSS's robustness in diverse scene conditions.
+- **p. 2 / 7.2. Additional Qualitative Results - extractive body cue:** Misclassified objects are likely caused by occlusions from certain viewpoints or unusual viewing angles.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1.1. Datasets), p. 6 (4.1.1. Datasets), p. 6 (4.1.1. Datasets), p. 5 (4.1.1. Datasets), p. 7 (4.2. Implementation Details), p. 7 (4.3. Quantitative Results), metrics p. 7 (4.3. Quantitative Results), p. 7 (4.3. Quantitative Results), p. 5 (4.1.1. Datasets), p. 5 (4. Experimental Results), p. 6 (4.1.4. Evaluation Metrics), p. 6 (4.1.4. Evaluation Metrics), baselines p. 5 (4. Experimental Results), p. 6 (4.1.2. Baseline Methods), p. 6 (4.1.2. Baseline Methods), p. 7 (4.3. Quantitative Results), p. 7 (4.3. Quantitative Results), p. 8 (4.5. Runtime Analysis), results p. 7 (4.3. Quantitative Results), p. 8 (4.5. Runtime Analysis), p. 7 (4.3. Quantitative Results), p. 5 (4. Experimental Results), p. 6 (4.1.1. Datasets), p. 8 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 2 (7.1. Object and Predicate Performance per Class), p. 5 (8. Statistics of the ReplicaSSG Dataset), p. 2 (7.3. 2D Scene Graph Generation Performance), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (8. Statistics of the ReplicaSSG Dataset), p. 4 (8. Statistics of the ReplicaSSG Dataset), metrics p. 1 (6. Detailed Evaluation Metric), p. 1 (7.1. Object and Predicate Performance per Class), p. 2 (7.2. Additional Qualitative Results), p. 2 (7.3. 2D Scene Graph Generation Performance), p. 3 (8. Statistics of the ReplicaSSG Dataset), p. 3 (Figure/Table caption), baselines p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (8. Statistics of the ReplicaSSG Dataset), results p. 2 (7.3. 2D Scene Graph Generation Performance), p. 2 (Figure/Table caption), p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (Figure/Table caption), p. 3 (8. Statistics of the ReplicaSSG Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

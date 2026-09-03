@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.14127; PDF retrieval source: https://arxiv.org/pdf/2103.14127. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.14127; PDF retrieval source: https://arxiv.org/pdf/2103.14127. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | The network has four heads with two 1DConv layers each and per-point outputs s ∈R, z1 ∈R3, z2 ∈ R3, o ∈R10, ... | p. 4 (III. METHOD), p. 3 (III. METHOD) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | In pink we show the five gripper points v that we used in the ladd-s loss. been shown to be difficult in ... | p. 3 (III. METHOD), p. 4 (III. METHOD) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | Our grasp representation: c depicts an observed contact point. a and b constitute the 3-DoF rotation, w is the predicted grasp width, ... | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | An overview of our offline and online training data generation is given in Fig. | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | We train with a batch size of 3 for 144.000 iterations which takes ∼40 hours on a single Nvidia V100 GPU. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), objective p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), temporal p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 6 (V. CONCLUSIONS).
+- **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), objective p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), temporal p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 6 (V. CONCLUSIONS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Target Losses The contact grasp success predictions ˆs ∈R are evaluated at all output points pi ∈R3 : ∀i ∈[0, m] using binary cross entropy. (p. 4, III. METHOD).
+- **Objective/update evidence:** On the grasp width bin predictions, we optimize a weighted, multi-label binary cross entropy loss lwidth. (p. 4, III. METHOD).
+- **Temporal/runtime evidence:** Our grasp representation: c depicts an observed contact point. a and b constitute the 3-DoF rotation, w is the predicted grasp width, d the distance from baseline to base frame. (p. 3, III. METHOD).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

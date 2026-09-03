@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=8oFvUBvF1u; PDF retrieval source: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=8oFvUBvF1u; PDF retrieval source: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRA
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Our FeatUp module upsamples 16x16 features to 512x512 resolution. | p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRAINING DENSEMATCHER) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Thanks to our 3D network, we found that using only 3 lateral views plus 1 top and 1 bottom view during both ... | p. 18 (A.3.2 TRAINING DENSEMATCHER) |
@@ -122,8 +122,17 @@ PDF body method statement (p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRA
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRAINING DENSEMATCHER), objective p. 18 (A.3.2 TRAINING DENSEMATCHER), temporal p. 9 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 10 (7 CONCLUSION).
+- **Evidence anchors reviewed:** method p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRAINING DENSEMATCHER), objective p. 18 (A.3.2 TRAINING DENSEMATCHER), temporal p. 9 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 10 (7 CONCLUSION).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 4.3.2 FEATURE PRESERVATION LOSS We can view our DiffusionNet refiner as an nonlinear operater embedding features from fmultiview into foutput. (p. 6, 1 INTRODUCTION).
+- **Objective/update evidence:** We freeze the 2D backbone models during training, and optimize a 4-block DiffusionNet with 512 channels on DenseCorr3Dfor 6000 steps with a batch size of 8 using Adam Kingma & ... (p. 18, A.3.2 TRAINING DENSEMATCHER).
+- **Temporal/runtime evidence:** Since Robo-ABC has its own collected affordance memory, we compared two variants: one with full memory capabilities and another where Robo-ABC's affordance memory is only allowed to be collected from ... (p. 9, 6.1.2 RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

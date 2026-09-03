@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4.3. Zero-Shot Generalization - extractive PDF cue:** We further evaluate the zero-shot generalization ability of SR3R on the DTU dataset, a challenging object-centric benchmark with unseen geometries and illumination conditions.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** To further assess generalization, we perform zero-shot 3DSR experiments on the DTU dataset, which features object-centric scenes with different camera motion and scene types from ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** RE10K and ACID are two large-scale datasets, containing indoor real estate walkthrough videos and outdoor natural scenes captured by aerial drones, respectively.
-- **p. 8 / 4.3. Zero-Shot Generalization - extractive PDF cue:** This indicates that SR3R effectively preserves geometric and photometric fidelity even on completely unseen scenes.
-- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive PDF cue:** We evaluate SR3R through 4× 3DSR experiments on the large-scale RE10K and ACID datasets, and compare it against the SOTA feed-forward 3DGS reconstruction models NoPoSplat ...
-- **p. 8 / 4.3. Zero-Shot Generalization - extractive PDF cue:** SRGS and FSGS+SRGS use per-scene optimization.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Adding PointTransformerV3 further boosts accuracy through multi-scale spatial reasoning, producing the full SR3R model with the best performance.
-- **p. 7 / 4.3. Zero-Shot Generalization - extractive PDF cue:** As shown in Table 2, SR3R achieves substantially higher accuracy than all feed-forward baselines in the zero-shot 33390
+- **p. 7 / 4.3. Zero-Shot Generalization - extractive body cue:** We further evaluate the zero-shot generalization ability of SR3R on the DTU dataset, a challenging object-centric benchmark with unseen geometries and illumination conditions.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To further assess generalization, we perform zero-shot 3DSR experiments on the DTU dataset, which features object-centric scenes with different camera motion and scene types from ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** RE10K and ACID are two large-scale datasets, containing indoor real estate walkthrough videos and outdoor natural scenes captured by aerial drones, respectively.
+- **p. 8 / 4.3. Zero-Shot Generalization - extractive body cue:** This indicates that SR3R effectively preserves geometric and photometric fidelity even on completely unseen scenes.
+- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** We evaluate SR3R through 4× 3DSR experiments on the large-scale RE10K and ACID datasets, and compare it against the SOTA feed-forward 3DGS reconstruction models NoPoSplat ...
+- **p. 8 / 4.3. Zero-Shot Generalization - extractive body cue:** SRGS and FSGS+SRGS use per-scene optimization.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Adding PointTransformerV3 further boosts accuracy through multi-scale spatial reasoning, producing the full SR3R model with the best performance.
+- **p. 7 / 4.3. Zero-Shot Generalization - extractive body cue:** As shown in Table 2, SR3R achieves substantially higher accuracy than all feed-forward baselines in the zero-shot 33390
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 3. Component-wise ablation on RE10K (4× 3DSR). Modules are added cumulatively to the NoPoSplat baseline. Each component improves performance, and Gaussian Offset Learning ... | p. 8 (Figure/Table caption) |
 | 4.4. Ablation Study | EMPIRICAL / SOURCE-REPORTED EVALUATION | Offset w/o PTv3), it significantly improves reconstruction quality while reducing the number of learnable Gaussian parameters, demonstrating its efficiency. | p. 8 (4.4. Ablation Study) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4.3. Zero-Shot Generalization - extractive PDF cue:** We further evaluate the zero-shot generalization ability of SR3R on the DTU dataset, a challenging object-centric benchmark with unseen geometries and illumination conditions.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** To further assess generalization, we perform zero-shot 3DSR experiments on the DTU dataset, which features object-centric scenes with different camera motion and scene types from ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** RE10K and ACID are two large-scale datasets, containing indoor real estate walkthrough videos and outdoor natural scenes captured by aerial drones, respectively.
-- **p. 8 / 4.3. Zero-Shot Generalization - extractive PDF cue:** This indicates that SR3R effectively preserves geometric and photometric fidelity even on completely unseen scenes.
-- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive PDF cue:** We evaluate SR3R through 4× 3DSR experiments on the large-scale RE10K and ACID datasets, and compare it against the SOTA feed-forward 3DGS reconstruction models NoPoSplat ...
-- **p. 8 / 4.3. Zero-Shot Generalization - extractive PDF cue:** SRGS and FSGS+SRGS use per-scene optimization.
+- **p. 7 / 4.3. Zero-Shot Generalization - extractive body cue:** We further evaluate the zero-shot generalization ability of SR3R on the DTU dataset, a challenging object-centric benchmark with unseen geometries and illumination conditions.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** To further assess generalization, we perform zero-shot 3DSR experiments on the DTU dataset, which features object-centric scenes with different camera motion and scene types from ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** RE10K and ACID are two large-scale datasets, containing indoor real estate walkthrough videos and outdoor natural scenes captured by aerial drones, respectively.
+- **p. 8 / 4.3. Zero-Shot Generalization - extractive body cue:** This indicates that SR3R effectively preserves geometric and photometric fidelity even on completely unseen scenes.
+- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** We evaluate SR3R through 4× 3DSR experiments on the large-scale RE10K and ACID datasets, and compare it against the SOTA feed-forward 3DGS reconstruction models NoPoSplat ...
+- **p. 8 / 4.3. Zero-Shot Generalization - extractive body cue:** SRGS and FSGS+SRGS use per-scene optimization.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We reformulate 3DGS-based 3DSR as a feed-forward mapping problem from sparse LR views to HR 3DGS representation. (a) Unlike existing methods that rely ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the SR3R framework. Given two LR input views, a feed-forward 3DGS backbone produces an LR 3DGS, which is then densified via ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison with SOTA feed-forward 3DGS reconstruction methods on Re10k (top three) and ACID (bottom three) datasets. SR3R delivers significantly sharper details and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative comparison of 4× 3DSR on the large-scale RE10K and ACID datasets. SR3R consistently and substantially outperforms all baselines and their upscaled-input versions ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative ablation results of SR3R components. Each component of SR3R progressively improves reconstruction quality, with upsampling reducing coarse blur, cross-attention improving feature alignment, ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Zero-shot generalization results from RE10K to DTU. Feed-forward models are trained on RE10K and tested on DTU without fine-tuning. SRGS and FSGS+SRGS use ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Component-wise ablation on RE10K (4× 3DSR). Modules are added cumulatively to the NoPoSplat baseline. Each component improves performance, and Gaussian Offset Learning yields ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation on upsampling strategies on RE10K (4× 3DSR). SR3R maintains consistently strong performance across all interpolation and learning-based upsampling methods. Upsampling RE10K (64 ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We reformulate 3DGS-based 3DSR as a feed-forward mapping problem from sparse LR views to HR 3DGS representation. (a) Unlike existing methods that rely ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the SR3R framework. Given two LR input views, a feed-forward 3DGS backbone produces an LR 3DGS, which is then densified via ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison with SOTA feed-forward 3DGS reconstruction methods on Re10k (top three) and ACID (bottom three) datasets. SR3R delivers significantly sharper details and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of 4× 3DSR on the large-scale RE10K and ACID datasets. SR3R consistently and substantially outperforms all baselines and their upscaled-input versions ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative ablation results of SR3R components. Each component of SR3R progressively improves reconstruction quality, with upsampling reducing coarse blur, cross-attention improving feature alignment, ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Zero-shot generalization results from RE10K to DTU. Feed-forward models are trained on RE10K and tested on DTU without fine-tuning. SRGS and FSGS+SRGS use ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Component-wise ablation on RE10K (4× 3DSR). Modules are added cumulatively to the NoPoSplat baseline. Each component improves performance, and Gaussian Offset Learning yields ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation on upsampling strategies on RE10K (4× 3DSR). SR3R maintains consistently strong performance across all interpolation and learning-based upsampling methods. Upsampling RE10K (64 ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We further evaluate the zero-shot generalization ability of SR3R on the DTU dataset, a challenging object-centric benchmark with unseen geometries and illumination conditions. | embodiment, simulator version and control stack | p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup) |
 | Task/environment | To further assess generalization, we perform zero-shot 3DSR experiments on the DTU dataset, which features object-centric scenes with different camera motion and scene types ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
@@ -121,11 +121,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation
 | Primary metric/result | Offset w/o PTv3), it significantly improves reconstruction quality while reducing the number of learnable Gaussian parameters, demonstrating its efficiency. | numeric claim only at cited anchor | p. 8 (4.4. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** Both the backbone and our mapping network are trained for 75,000 iterations with a batch size of 8 and a learning rate of 2.5×10-5.
-- **p. 7 / 4.1. Experimental Setup - extractive PDF cue:** All experiments are conducted on four NVIDIA RTX 5090 GPUs.
-- **p. 8 / 4.3. Zero-Shot Generalization - extractive PDF cue:** Time ↓ SRGS [9] 12.420 0.327 0.598 300s FSGS+SRGS [47] 13.720 0.444 0.481 420s NopoSplat [38] 12.628 0.343 0.581 0.01s Up-Noposplat 16.643 0.598 0.369 0.16s ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Time ↓ Bilinear 24.586 0.795 0.204 1.59s Bicubic 24.663 0.817 0.193 1.53s SwinIR [18] 24.794 0.827 0.188 1.69s HAT [3] 24.782 0.819 0.183 1.75s
-- **p. 4 / 3.3. LR 3DGS Reconstruction and Densification - extractive PDF cue:** The final densified 3DGS is obtained by aggregating all sub-Gaussians: \mat h c a l { G} ^{\ text { Den s e}} = \bi ...
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Both the backbone and our mapping network are trained for 75,000 iterations with a batch size of 8 and a learning rate of 2.5×10-5.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** All experiments are conducted on four NVIDIA RTX 5090 GPUs.
+- **p. 8 / 4.3. Zero-Shot Generalization - extractive body cue:** Time ↓ SRGS [9] 12.420 0.327 0.598 300s FSGS+SRGS [47] 13.720 0.444 0.481 420s NopoSplat [38] 12.628 0.343 0.581 0.01s Up-Noposplat 16.643 0.598 0.369 0.16s ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Time ↓ Bilinear 24.586 0.795 0.204 1.59s Bicubic 24.663 0.817 0.193 1.53s SwinIR [18] 24.794 0.827 0.188 1.69s HAT [3] 24.782 0.819 0.183 1.75s
+- **p. 4 / 3.3. LR 3DGS Reconstruction and Densification - extractive body cue:** The final densified 3DGS is obtained by aggregating all sub-Gaussians: \mat h c a l { G} ^{\ text { Den s e}} = \bi ...
 
 ## Generalization and Failure Cases
 
@@ -161,12 +161,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive PDF cue:** These improvements hold for both 3DGS backbones, confirming that our offsetbased refinement and cross-view fusion effectively restore 3D-specific high-frequency structures that 2D upsampling and direct ...
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Applying 2D upsampling reduces excessive softness but still fails to recover reliable high-frequency structures, often introducing ambiguous or hallucinated textures.
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Notably, even Bilinear interpolation already surpasses all feed-forward baselines (Table 1), indicating that SR3R does not depend on a particular upsampling design.
-- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive PDF cue:** These results highlight the advantage of learning Gaussian offsets over direct parameter regression, enabling more accurate high-frequency recovery under sparse LR inputs.
+- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** These improvements hold for both 3DGS backbones, confirming that our offsetbased refinement and cross-view fusion effectively restore 3D-specific high-frequency structures that 2D upsampling and direct ...
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Applying 2D upsampling reduces excessive softness but still fails to recover reliable high-frequency structures, often introducing ambiguous or hallucinated textures.
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Notably, even Bilinear interpolation already surpasses all feed-forward baselines (Table 1), indicating that SR3R does not depend on a particular upsampling design.
+- **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** These results highlight the advantage of learning Gaussian offsets over direct parameter regression, enabling more accurate high-frequency recovery under sparse LR inputs.
 
-- **PDF anchors reviewed:** datasets p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Zero-Shot Generalization), p. 7 (4.2. Comparison with State-of-the-Art), p. 8 (4.3. Zero-Shot Generalization), metrics p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 1 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.3. Zero-Shot Generalization), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), results p. 8 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 6 (4.1. Experimental Setup).
+- **Evidence anchors reviewed:** datasets p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Zero-Shot Generalization), p. 7 (4.2. Comparison with State-of-the-Art), p. 8 (4.3. Zero-Shot Generalization), metrics p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 1 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.3. Zero-Shot Generalization), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), results p. 8 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 6 (4.1. Experimental Setup).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.05124; PDF retrieval source: https://arxiv.org/pdf/2112.05124. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.05124; PDF retrieval source: https://arxiv.org/pdf/2112.05124. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | II. METHOD | EMPIRICAL / REAL-ROBOT OR HARDWARE | For objects in arbitrary poses (bottom row), DON's performance suffers, while NDFs maintains higher success rates due to their equivariance to SE(3) transformations. to ... | p. 6 (II. METHOD) |
 | II. METHOD | EMPIRICAL / REAL-ROBOT OR HARDWARE | For objects in upright poses (top row), NDFs perform on par with DON on grasp success rate, but outperforms DON on overall pick-and-place success ... | p. 6 (II. METHOD) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Next, we consider a harder setting: while the demonstrations are all performed on upright-posed objects, the robot must subsequently execute the task on objects ... | embodiment, simulator version and control stack | p. 7 (II. METHOD), p. 5 (II. METHOD) |
 | Task/environment | We provide 10 demonstrations for each task, and measure execution success rates on unseen object instances with randomly sampled initial poses and a random | reset, timeout, object/scene variation | p. 5 (II. METHOD), p. 3 (II. METHOD) |
@@ -168,7 +168,16 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 - **p. 8 / VI. DISCUSSION AND CONCLUSION - extractive body cue:** Furthermore, we assume the placement target remains static: future work may explore similarly inferring an object-centric representation of the placement target.
 - **p. 3 / II. METHOD - extractive body cue:** This is an attractive property, as at test time, we regularly only observe partial point clouds of objects due to occlusions.
 
-- **PDF anchors reviewed:** datasets p. 7 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), metrics p. 6 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), p. 1 (Figure/Table caption), baselines p. 6 (II. METHOD), p. 7 (II. METHOD), p. 7 (II. METHOD), p. 3 (II. METHOD), p. 6 (II. METHOD), results p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD).
+- **Evidence anchors reviewed:** datasets p. 7 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), metrics p. 6 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), p. 1 (Figure/Table caption), baselines p. 6 (II. METHOD), p. 7 (II. METHOD), p. 7 (II. METHOD), p. 3 (II. METHOD), p. 6 (II. METHOD), results p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For objects in arbitrary poses (bottom row), DON's performance suffers, while NDFs maintains higher success rates due to their equivariance to SE(3) transformations. to achieve success rate above 10%. (p. 6, II. METHOD).
+- **Metric evidence:** For objects in arbitrary poses (bottom row), DON's performance suffers, while NDFs maintains higher success rates due to their equivariance to SE(3) transformations. to achieve success rate above 10%. (p. 6, II. METHOD).
+- **Baseline/ablation evidence:** Prior work has leveraged this property of the activations of Φ to classify which semantic part of an object a given coordinate x belongs to [17], a task which is ... (p. 3, II. METHOD).
+- **Failure/negative evidence:** We find that DON's failures are usually a function of either insufficient precision in keypoint predictions, or failed registration of testtime keypoints to the demonstration keypoints. (p. 7, II. METHOD).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=eKhOrQWAVJ; PDF retrieval source: https://openreview.net/pdf/5b6d4b55e3d738aceaa3495460aa12907b69dcee.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=eKhOrQWAVJ; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247957. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 
 ## Evaluation Body Digest
 
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on the ...
-- **p. 6 / 3 EXPERIMENTS - extractive PDF cue:** We further evaluate ST4VLA on the LIBERO simulation suite, detailed in Appendix Section B.2 Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) benchmark.
-- **p. 6 / 3 EXPERIMENTS - extractive PDF cue:** Compared with prior state-of-the-art models, it attains a 5.9% gain in Google Robot Visual Matching, a 5.3% gain in Visual Aggregation, and a 9.8% gain ...
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 3: Result comparisons of robotic manipulation on SimplerEnv (WidowX) benchmark.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** Details of the real-world robot setup and additional experimental configurations are provided in Appendix Section D.3.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 200 simulated tasks, the post-training leverages both large-scale simulation data and real-world trajectories.
-- **p. 4 / 3 EXPERIMENTS - extractive PDF cue:** Finally, we examine real-robot performance on both short-horizon and long-horizon tasks to validate practical deployment capabilities (Section 3.5).
-- **p. 4 / 3 EXPERIMENTS - extractive PDF cue:** We then evaluate large-scale instruction-following pick-and-place in simulation and real-world to test generalization (Section 3.3 and Section 3.4 ).
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on the ...
+- **p. 6 / 3 EXPERIMENTS - extractive body cue:** We further evaluate ST4VLA on the LIBERO simulation suite, detailed in Appendix Section B.2 Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) benchmark.
+- **p. 6 / 3 EXPERIMENTS - extractive body cue:** Compared with prior state-of-the-art models, it attains a 5.9% gain in Google Robot Visual Matching, a 5.3% gain in Visual Aggregation, and a 9.8% gain ...
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** Details of the real-world robot setup and additional experimental configurations are provided in Appendix Section D.3.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** (2025), underwent extensive pretraining on large corpora of action data, we ensured a fair comparison by post-training our model on a large-scale dataset of 244K ...
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** ST4VLA outperforms all baselines across real-world test settings.
+- **p. 4 / 3 EXPERIMENTS - extractive body cue:** Finally, we examine real-robot performance on both short-horizon and long-horizon tasks to validate practical deployment capabilities (Section 3.5).
+- **p. 4 / 3 EXPERIMENTS - extractive body cue:** We then evaluate large-scale instruction-following pick-and-place in simulation and real-world to test generalization (Section 3.3 and Section 3.4 ).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4: Success rate (%) across different generalization settings on 200 simulated instruction- following pick-and-place tasks. Results. Since both baseline methods, π0 Black et ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5. Compared to previous strong baselines, such as GR00T N1 and π0, the ST4VLA framework achieves notable improvements, particularly on the spatial and ... | p. 20 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on the ...
-- **p. 6 / 3 EXPERIMENTS - extractive PDF cue:** We further evaluate ST4VLA on the LIBERO simulation suite, detailed in Appendix Section B.2 Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) benchmark.
-- **p. 6 / 3 EXPERIMENTS - extractive PDF cue:** Compared with prior state-of-the-art models, it attains a 5.9% gain in Google Robot Visual Matching, a 5.3% gain in Visual Aggregation, and a 9.8% gain ...
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 Table 3: Result comparisons of robotic manipulation on SimplerEnv (WidowX) benchmark.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** Details of the real-world robot setup and additional experimental configurations are provided in Appendix Section D.3.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** Published as a conference paper at ICLR 2026 200 simulated tasks, the post-training leverages both large-scale simulation data and real-world trajectories.
-- **p. 4 / 3 EXPERIMENTS - extractive PDF cue:** Finally, we examine real-robot performance on both short-horizon and long-horizon tasks to validate practical deployment capabilities (Section 3.5).
-- **p. 4 / 3 EXPERIMENTS - extractive PDF cue:** We then evaluate large-scale instruction-following pick-and-place in simulation and real-world to test generalization (Section 3.3 and Section 3.4 ).
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on the ...
+- **p. 6 / 3 EXPERIMENTS - extractive body cue:** We further evaluate ST4VLA on the LIBERO simulation suite, detailed in Appendix Section B.2 Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) benchmark.
+- **p. 6 / 3 EXPERIMENTS - extractive body cue:** Compared with prior state-of-the-art models, it attains a 5.9% gain in Google Robot Visual Matching, a 5.3% gain in Visual Aggregation, and a 9.8% gain ...
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** Details of the real-world robot setup and additional experimental configurations are provided in Appendix Section D.3.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** (2025), underwent extensive pretraining on large corpora of action data, we ensured a fair comparison by post-training our model on a large-scale dataset of 244K ...
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** ST4VLA outperforms all baselines across real-world test settings.
+- **p. 4 / 3 EXPERIMENTS - extractive body cue:** Finally, we examine real-robot performance on both short-horizon and long-horizon tasks to validate practical deployment capabilities (Section 3.5).
+- **p. 4 / 3 EXPERIMENTS - extractive body cue:** We then evaluate large-scale instruction-following pick-and-place in simulation and real-world to test generalization (Section 3.3 and Section 3.4 ).
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: ST4VLA integrates spatial priors into the vision-language-action training pipeline. Given a task instruction, the VLM planner produces latent plans through explicit spatial prompting, ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of ST4VLA. ST4VLA adopts a spatially guided two-stage training pipeline. Stage 1 (spatial grounding pre-training): the VLM is trained on large-scale multisource ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3: Ablation study on the effect of auxiliary spatial prompting during co-training. From left to right: (a) perception performance (IoU@0.5 on RefCOCO-g); (b) manipulation ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1: Study of VLA training strategies and their effects on multi-modal understanding, spatial grounding, and robot manipulation performance. Multi-modal Understanding Spatial Grounding Robotic Manipulation ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) benchmark. The underlined scores indicate the best results excluding ST4VLA. Numbers are officially reported; otherwise, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Result comparisons of robotic manipulation on SimplerEnv (WidowX) benchmark. The underlined scores indicate the best results, excluding our results. WidowX Robot Models Co-Train ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4: Success rate (%) across different generalization settings on 200 simulated instruction- following pick-and-place tasks. Results. Since both baseline methods, π0 Black et al. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4: Comparison of results on real-world generalization of pick-and-place tasks. Success rates (%) are reported. Abbreviations: In dist.: in-distribution; New inst.: new instance; Similar ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: ST4VLA integrates spatial priors into the vision-language-action training pipeline. Given a task instruction, the VLM planner produces latent plans through explicit spatial prompting, ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Overview of ST4VLA. ST4VLA adopts a spatially guided two-stage training pipeline. Stage 1 (spatial grounding pre-training): the VLM is trained on large-scale multisource ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Ablation study on the effect of auxiliary spatial prompting during co-training. From left to right: (a) perception performance (IoU@0.5 on RefCOCO-g); (b) manipulation ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Study of VLA training strategies and their effects on multi-modal understanding, spatial grounding, and robot manipulation performance. Multi-modal Understanding Spatial Grounding Robotic Manipulation ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) benchmark. The underlined scores indicate the best results excluding ST4VLA. Numbers are officially reported; otherwise, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Result comparisons of robotic manipulation on SimplerEnv (WidowX) benchmark. The underlined scores indicate the best results, excluding our results. WidowX Robot Models Co-Train ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Success rate (%) across different generalization settings on 200 simulated instruction- following pick-and-place tasks. Results. Since both baseline methods, π0 Black et al. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Comparison of results on real-world generalization of pick-and-place tasks. Success rates (%) are reported. Abbreviations: In dist.: in-distribution; New inst.: new instance; Similar ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on ... | embodiment, simulator version and control stack | p. 7 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS) |
 | Task/environment | We further evaluate ST4VLA on the LIBERO simulation suite, detailed in Appendix Section B.2 Table 2: Result comparisons of robotic manipulation on SimplerEnv (Google-Robot) ... | reset, timeout, object/scene variation | p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 | Primary metric/result | Table 5. Compared to previous strong baselines, such as GR00T N1 and π0, the ST4VLA framework achieves notable improvements, particularly on the spatial and ... | numeric claim only at cited anchor | p. 20 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** With the inclusion of background elements, the benchmark encompasses more than 3,000 objects and containers.
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** Furthermore, for each of the 200 tasks, we additionally collected 5 trajectories with identical object sets but randomized layouts, which were used for post-training.
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on the ...
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** We collect 1K pick-and-place trajectories involving 23 objects and 5 containers, which are used for post-training.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** 3.5 EVALUATION IN LONG-HORIZON MANIPULATION 𝝅𝟎 GR00t N1.5 ST4VLA 29 42 59 In distribution 16 41 54 Physical interference 26 45 57 Task replanning Success ...
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** We collect 22 hours of teleoperated demonstrations, segment trajectories into subtasks, and train ST4VLA jointly on task decomposition, subtask identification and action prediction.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** With the inclusion of background elements, the benchmark encompasses more than 3,000 objects and containers.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** Furthermore, for each of the 200 tasks, we additionally collected 5 trajectories with identical object sets but randomized layouts, which were used for post-training.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** 3.4 EVALUATION IN REAL-WORLD CLUTTERED-SCENE PICK-AND-PLACE We use the Franka Research 3 robot to evaluate the generalization performance of our model and baselines on the ...
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** We collect 1K pick-and-place trajectories involving 23 objects and 5 containers, which are used for post-training.
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** 3.5 EVALUATION IN LONG-HORIZON MANIPULATION 𝝅𝟎 GR00t N1.5 ST4VLA 29 42 59 In distribution 16 41 54 Physical interference 26 45 57 Task replanning Success ...
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** We collect 22 hours of teleoperated demonstrations, segment trajectories into subtasks, and train ST4VLA jointly on task decomposition, subtask identification and action prediction.
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 
 ## Limitations and Verification Questions
 
-- **p. 36 / Figure/Table caption - extractive PDF cue:** Figure 23: Failure case study. To better understand the limitations of ST4VLA, we analyze representative failure cases during real-world instruction-following pick-and-place tasks. As shown in ...
-- **p. 38 / Figure/Table caption - extractive PDF cue:** Figure 25: Simulation data synthesis pipeline. The pipeline generates diverse robotic manipulation data from a large asset library, converts intermediate representations into VQA data, and ...
-- **p. 5 / 3 EXPERIMENTS - extractive PDF cue:** Vanilla co-training partially preserves perception but exhibits unstable oscillations in both metrics.
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** To address these limitations, we construct a large-scale simulation benchmark in Isaac-Sim by GenManip Gao et al.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** Results in Figure 5 show that ST4VLA consistently surpasses GR00T N1.5 and π0, reliably grounding high-level goals into executable steps, adapting to disturbances, and dynamically ...
-- **p. 9 / 4 RELATED WORK - extractive PDF cue:** (2025a) also adopts spatial pre-training, though it does not explicitly leverage spatial prompting to guide action generation.
+- **p. 36 / Figure/Table caption - extractive body cue:** Figure 23: Failure case study. To better understand the limitations of ST4VLA, we analyze representative failure cases during real-world instruction-following pick-and-place tasks. As shown in ...
+- **p. 38 / Figure/Table caption - extractive body cue:** Figure 25: Simulation data synthesis pipeline. The pipeline generates diverse robotic manipulation data from a large asset library, converts intermediate representations into VQA data, and ...
+- **p. 5 / 3 EXPERIMENTS - extractive body cue:** Vanilla co-training partially preserves perception but exhibits unstable oscillations in both metrics.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** To address these limitations, we construct a large-scale simulation benchmark in Isaac-Sim by GenManip Gao et al.
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** Results in Figure 5 show that ST4VLA consistently surpasses GR00T N1.5 and π0, reliably grounding high-level goals into executable steps, adapting to disturbances, and dynamically ...
+- **p. 9 / 4 RELATED WORK - extractive body cue:** (2025a) also adopts spatial pre-training, though it does not explicitly leverage spatial prompting to guide action generation.
 
-- **PDF anchors reviewed:** datasets p. 7 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), metrics p. 5 (Figure/Table caption), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 20 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 20 (Figure/Table caption), p. 5 (3 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 7 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), metrics p. 5 (Figure/Table caption), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 20 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 20 (Figure/Table caption), p. 5 (3 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

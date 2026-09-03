@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `simulated state, geometry, contact와 control input → dynamics/contact state 또는 learned simulator representation → simulation step, trajectory 또는 environment query`.
-- 이 논문의 재사용 가능한 지점은 The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control inputs, optional activation states (used to model ...를 These observations indicated that we need a new engine, representing the state in joint coordinates and simulating contacts in ways that are related to LCP but better.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 dynamics/contact state 또는 learned simulator representation가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect potential collisions (with some safety margin), and construct the Jacobians .에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the presence of contacts and equality constraints.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix in generalized coordinates b "bias" ... (p. 2, II. ALGORITHMIC FOUNDATIONS).
+- **Paper-specific mechanism:** This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the presence of contacts and equality ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Table 3: This is the inverse of Table 2. Here we show the number of dynamics evaluations per second. The results are quite remarkable. One a single desktop machine, we ... (p. 8, Figure/Table caption); the relevant task/metric cue is Solving for the contact impulse We now return to step 4. (p. 3, 5) Integrate numerically to obtain the next state). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In the absence of adequate tools, the field continues to rely on manual controller designs - which may be a large part of the reason why present-day robots do not ... (p. 1, I. INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: It can be used to analyze data or to compute the torques that will cause a robot to follow a reference trajectory..
-3. Compare against the body-reported baseline or a matched simpler baseline: Performance on smooth dynamics compared to SD/FAST We measured the speed of multi-joint dynamics simulation in the absence of contacts or equality constraints..
-4. Report the body metric and its denominator/aggregation: Furthermore the pyramid approximation introduces errors..
-5. Re-run the body-reported ablation/failure condition: It is needed for three reasons: is often singular; without the inverse cannot be defined (see below); one can enable contact interactions from a distance - which can be very useful in ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix in generalized coordinates b "bias" ... (p. 2, II. ALGORITHMIC FOUNDATIONS); preserve the objective/update rule: Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix in generalized coordinates b "bias" ... (p. 2, II. ALGORITHMIC FOUNDATIONS).
+2. Use the paper-reported task/data/environment cue: It can be used to analyze data or to compute the torques that will cause a robot to follow a reference trajectory. (p. 5, 5) Integrate numerically to obtain the next state).
+3. Compare against the reported or matched baseline: Section IV presents timing tests and comparisons to SD/FAST - which does not handle contacts, but is the best prior engine for multi-joint dynamics in our opinion. (p. 2, I. INTRODUCTION).
+4. Report the body metric with its denominator and aggregation: Solving for the contact impulse We now return to step 4. (p. 3, 5) Integrate numerically to obtain the next state).
+5. Re-run the reported ablation or stress/failure condition: It is needed for three reasons: is often singular; without the inverse cannot be defined (see below); one can enable contact interactions from a distance - which can be very ... (p. 4, 5) Integrate numerically to obtain the next state); if none is reported, design one around: In the absence of adequate tools, the field continues to rely on manual controller designs - which may be a large part of the reason why present-day robots do not ... (p. 1, I. INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS); the primary result is directionally consistent at p. 2 (I. INTRODUCTION), p. 4 (5) Integrate numerically to obtain the next state), p. 5 (5) Integrate numerically to obtain the next state); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 5 (5) Integrate numerically to obtain the next state), p. 7 (IV. TIMING TESTS), and measure the boundary at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 useful, approximating, derivatives mechanism이 Performance on smooth dynamics compared to SD/FAST We measured the speed of multi-joint dynamics simulation in ... 대비 Furthermore the pyramid approximation introduces errors.을 개선하고, 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates ...), does the paper-specific mechanism (This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, ...) retain the reported evaluation outcome (Solving for the contact impulse We now return to step 4.) when tested against the paper's strongest explicit boundary (In the absence of adequate tools, the field continues to rely on manual controller designs - which may ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Solving for the contact impulse We now return to step 4.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the presence of contacts and equality ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** Table 3: This is the inverse of Table 2. Here we show the number of dynamics evaluations per second. The results are quite remarkable. One a single desktop machine, we ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** In the absence of adequate tools, the field continues to rely on manual controller designs - which may be a large part of the reason why present-day robots do not ... (p. 1, I. INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

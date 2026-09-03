@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14874; PDF retrieval source: https://arxiv.org/pdf/2306.14874. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.14874; PDF retrieval source: https://arxiv.org/pdf/2306.14874. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (3) We develop a neural terrain reconstruction m
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | Pre-training low-level skills with imitation learning and then controlling them through latent actions has been proposed for both character animation [33] and ... | p. 5 (3) We develop a neural terrain reconstruction method that), p. 3 (3) We develop a neural terrain reconstruction method that) |
 | Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | We also modify the network architecture to allow for efficient inference with large batch sizes during RL training. | p. 3 (3) We develop a neural terrain reconstruction method that), p. 14 (IV. MATERIALS AND METHODS) |
@@ -83,7 +83,7 @@ PDF body method statement (p. 5 (3) We develop a neural terrain reconstruction m
 |---|---|---|---|
 | Horizon | gait/skill episode horizon과 short-horizon body control이 계층적으로 분리된다. | We train these networks in an unsupervised fashion from simulated data on a total of 2000 trajectories with 100 timesteps each. | episode/sequence/action-chunk boundary |
 | Rate / latency | high-level command, policy rate와 low-level torque rate를 구분; exact rate 확인 필요. | Despite the sparsity of the measurements on the top surface, the network remembers this region since it could be seen during the ... | Hz/fps, inference time and control rate |
-| Memory | proprioceptive history, terrain latent와 contact/body state. | not recovered | window and reset |
+| Memory | proprioceptive history, terrain latent와 contact/body state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | policy inference, adaptation encoder와 whole-body/control solve가 latency를 결정한다. | We train these networks in an unsupervised fashion from simulated data on a total of 2000 trajectories with 100 timesteps each. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -129,8 +129,17 @@ PDF body method statement (p. 5 (3) We develop a neural terrain reconstruction m
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (3) We develop a neural terrain reconstruction method that), p. 3 (3) We develop a neural terrain reconstruction method that), p. 14 (IV. MATERIALS AND METHODS), p. 3 (3) We develop a neural terrain reconstruction method that), p. 12 (IV. MATERIALS AND METHODS), p. 12 (IV. MATERIALS AND METHODS), objective p. 14 (IV. MATERIALS AND METHODS), p. 14 (IV. MATERIALS AND METHODS), p. 4 (3) We develop a neural terrain reconstruction method that), p. 12 (IV. MATERIALS AND METHODS), temporal p. 14 (IV. MATERIALS AND METHODS), p. 10 (C B), p. 3 (3) We develop a neural terrain reconstruction method that), p. 3 (3) We develop a neural terrain reconstruction method that), p. 4 (3) We develop a neural terrain reconstruction method that), p. 5 (3) We develop a neural terrain reconstruction method that).
+- **Evidence anchors reviewed:** method p. 5 (3) We develop a neural terrain reconstruction method that), p. 3 (3) We develop a neural terrain reconstruction method that), p. 14 (IV. MATERIALS AND METHODS), p. 3 (3) We develop a neural terrain reconstruction method that), p. 12 (IV. MATERIALS AND METHODS), p. 12 (IV. MATERIALS AND METHODS), objective p. 14 (IV. MATERIALS AND METHODS), p. 14 (IV. MATERIALS AND METHODS), p. 4 (3) We develop a neural terrain reconstruction method that), p. 12 (IV. MATERIALS AND METHODS), temporal p. 14 (IV. MATERIALS AND METHODS), p. 10 (C B), p. 3 (3) We develop a neural terrain reconstruction method that), p. 3 (3) We develop a neural terrain reconstruction method that), p. 4 (3) We develop a neural terrain reconstruction method that), p. 5 (3) We develop a neural terrain reconstruction method that).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The navigation and locomotion modules both use its output to make path planning, policy selection, foothold placement, and contact decisions. (p. 12, IV. MATERIALS AND METHODS).
+- **Objective/update evidence:** While the navigation module receives a full 3D representation of the map, it is impractical for the locomotion policies due to their high update rate and the corresponding computational cost ... (p. 14, IV. MATERIALS AND METHODS).
+- **Temporal/runtime evidence:** A path is first sampled using primitive collision shapes, and a sequence (p. 3, 3) We develop a neural terrain reconstruction method that).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

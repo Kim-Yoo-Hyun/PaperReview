@@ -1,7 +1,7 @@
 # Efficient Online Reinforcement Learning with Offline Data
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v202/ball23a.html.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.mlr.press/v202/ball23a.html.
 > PDF retrieval source: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -15,7 +15,7 @@
 - Full-text retrieval: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf
 - Code/Project: https://github.com/ikostrikov/rlpd
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +82,12 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 While the individual ingredients of RLPD are refreshingly simple modifications on existing RL components, we show that their combination delivers state-of-the-art performance on a number of popular online RL with offline data ...를 문제로 두고, First, we propose a simple mechanism for incorporating the prior data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Preliminaries), p. 5 (4.4. Per-Environment Design Choices) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** In real-world problems, however, we are often confronted with scenarios where samples are expensive, and furthermore, rewards are sparse, often exacerbated by high dimensional state and action spaces. (p. 1, 1. Introduction).
+- **Actual contribution:** Here we show the difficult D4RL AntMaze domain (10 seeds, 1 std. shaded), averaged over all 6 tasks. (p. 1, 1. Introduction).
+- **Evaluation boundary:** Figure 18. D4RL Ablations. The impact of LayerNorm is not so clear cut in Figure 18; this is to be expected as online approaches already achieve strong results in this ... (p. 15, Figure/Table caption).
+- **Explicit failure boundary:** To this end, we show that Layer Normalization (LayerNorm) (Ba et al., 2016) can bound the extrapolation of networks but, crucially, does not explicitly constrain the policy to remain close ... (p. 4, 4. Online RL with Offline Data).

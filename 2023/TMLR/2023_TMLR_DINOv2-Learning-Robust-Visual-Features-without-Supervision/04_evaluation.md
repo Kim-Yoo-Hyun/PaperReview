@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.07193; PDF retrieval source: https://arxiv.org/pdf/2304.07193. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.07193; PDF retrieval source: https://arxiv.org/pdf/2304.07193. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 
 ## Evaluation Body Digest
 
-- **p. 13 / 7 Results - extractive PDF cue:** This benchmark covers scenes, objects (food, cars, planes), and textures.
-- **p. 13 / 7 Results - extractive PDF cue:** The image benchmarks contain a large quantity of fine-grained examples about objects or scenes.
-- **p. 14 / 7 Results - extractive PDF cue:** Accuracy on 12 benchmarks covering objects, scenes and textures following the evaluation protocol proposed in Chen et al.
-- **p. 14 / 7 Results - extractive PDF cue:** Even though these benchmarks favor text-guided pretraining, our features are still competitive with OpenCLIP on most classification benchmarks, with the exception of a few datasets, ...
-- **p. 30 / B.1 Unsupervised pre-training - extractive PDF cue:** Published in Transactions on Machine Learning Research (01/2024) Task Dataset / Split Images Retrieval Retrieved Final classification ImageNet-22k / - 14,197,086 as is - 14,197,086 ...
-- **p. 30 / B.1 Unsupervised pre-training - extractive PDF cue:** We report the list of datasets and associated splits used to build the dataset, how they were included (as is without retrieval or via sample-based ...
-- **p. 11 / 7 Results - extractive PDF cue:** We detail the list of benchmarks in Appendix C.
-- **p. 11 / 7 Results - extractive PDF cue:** We question if the ability of our models to produce high quality frozen features impact their performance when finetuned with supervision on a specific dataset.
+- **p. 13 / 7 Results - extractive body cue:** This benchmark covers scenes, objects (food, cars, planes), and textures.
+- **p. 13 / 7 Results - extractive body cue:** The image benchmarks contain a large quantity of fine-grained examples about objects or scenes.
+- **p. 14 / 7 Results - extractive body cue:** Accuracy on 12 benchmarks covering objects, scenes and textures following the evaluation protocol proposed in Chen et al.
+- **p. 14 / 7 Results - extractive body cue:** Even though these benchmarks favor text-guided pretraining, our features are still competitive with OpenCLIP on most classification benchmarks, with the exception of a few datasets, ...
+- **p. 30 / B.1 Unsupervised pre-training - extractive body cue:** We report the list of datasets and associated splits used to build the dataset, how they were included (as is without retrieval or via sample-based ...
+- **p. 11 / 7 Results - extractive body cue:** We detail the list of benchmarks in Appendix C.
+- **p. 11 / 7 Results - extractive body cue:** We question if the ability of our models to produce high quality frozen features impact their performance when finetuned with supervision on a specific dataset.
+- **p. 12 / 7 Results - extractive body cue:** We use the best performing linear classifier as described above and simply run inference on those benchmarks.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 6: Role of resolution. Performance of ViT-L/16 trained on ImageNet-1k at fixed resolution ("224" and "416") or trained at 224 then 416 for ... | p. 10 (Figure/Table caption) |
 | 7 Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Interestingly, our model significantly outperforms OpenCLIP ViT-G/14 on both variants of iNaturalist (+8.6% and +9.7% for 2018 and 2021 respectively), and lags slightly behind ... | p. 13 (7 Results) |
@@ -40,36 +40,36 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 
 ## Dataset / Benchmark Role
 
-- **p. 13 / 7 Results - extractive PDF cue:** This benchmark covers scenes, objects (food, cars, planes), and textures.
-- **p. 13 / 7 Results - extractive PDF cue:** The image benchmarks contain a large quantity of fine-grained examples about objects or scenes.
-- **p. 14 / 7 Results - extractive PDF cue:** Accuracy on 12 benchmarks covering objects, scenes and textures following the evaluation protocol proposed in Chen et al.
-- **p. 14 / 7 Results - extractive PDF cue:** Even though these benchmarks favor text-guided pretraining, our features are still competitive with OpenCLIP on most classification benchmarks, with the exception of a few datasets, ...
-- **p. 30 / B.1 Unsupervised pre-training - extractive PDF cue:** Published in Transactions on Machine Learning Research (01/2024) Task Dataset / Split Images Retrieval Retrieved Final classification ImageNet-22k / - 14,197,086 as is - 14,197,086 ...
-- **p. 30 / B.1 Unsupervised pre-training - extractive PDF cue:** We report the list of datasets and associated splits used to build the dataset, how they were included (as is without retrieval or via sample-based ...
-- **p. 11 / 7 Results - extractive PDF cue:** We detail the list of benchmarks in Appendix C.
-- **p. 11 / 7 Results - extractive PDF cue:** We question if the ability of our models to produce high quality frozen features impact their performance when finetuned with supervision on a specific dataset.
+- **p. 13 / 7 Results - extractive body cue:** This benchmark covers scenes, objects (food, cars, planes), and textures.
+- **p. 13 / 7 Results - extractive body cue:** The image benchmarks contain a large quantity of fine-grained examples about objects or scenes.
+- **p. 14 / 7 Results - extractive body cue:** Accuracy on 12 benchmarks covering objects, scenes and textures following the evaluation protocol proposed in Chen et al.
+- **p. 14 / 7 Results - extractive body cue:** Even though these benchmarks favor text-guided pretraining, our features are still competitive with OpenCLIP on most classification benchmarks, with the exception of a few datasets, ...
+- **p. 30 / B.1 Unsupervised pre-training - extractive body cue:** We report the list of datasets and associated splits used to build the dataset, how they were included (as is without retrieval or via sample-based ...
+- **p. 11 / 7 Results - extractive body cue:** We detail the list of benchmarks in Appendix C.
+- **p. 11 / 7 Results - extractive body cue:** We question if the ability of our models to produce high quality frozen features impact their performance when finetuned with supervision on a specific dataset.
+- **p. 12 / 7 Results - extractive body cue:** We use the best performing linear classifier as described above and simply run inference on those benchmarks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: Visualization of the first PCA components. We compute a PCA between the patches of the images from the same column (a, b, c ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Evolution of performance when scaling in parameters. We show performance on eight types of vision tasks, as presented in Sec. 7, and average ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Overview of our data processing pipeline. Images from curated and uncurated data sources are first mapped to embeddings. Uncurated images are then deduplicated ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Ablation study of the training differences between iBOT and DINOv2. We optimize for k-NN performance, as in our experience, the linear probe performance ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation of the source of pretraining data. We compare the INet-22k dataset that was used in iBOT to our dataset, LVD-142M. Each model ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 4: Model scale versus data scale. Evolution of performance as a function of model size for two different pretraining datasets: ImageNet-22k (14M images) and ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: (a) Effect of the KoLeo loss term. (b) Effect of the iBOT Masked Image Modeling (MIM) loss term. Evaluation performed on ImageNet-{1k,A} (classification ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 5: Effectiveness of knowledge distillation. Comparison between a ViT-L trained from scratch or distilled from DINOv2 using ViT-g/14. For reference, we also report the ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Visualization of the first PCA components. We compute a PCA between the patches of the images from the same column (a, b, c ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Evolution of performance when scaling in parameters. We show performance on eight types of vision tasks, as presented in Sec. 7, and average ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Overview of our data processing pipeline. Images from curated and uncurated data sources are first mapped to embeddings. Uncurated images are then deduplicated ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Ablation study of the training differences between iBOT and DINOv2. We optimize for k-NN performance, as in our experience, the linear probe performance ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Ablation of the source of pretraining data. We compare the INet-22k dataset that was used in iBOT to our dataset, LVD-142M. Each model ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Model scale versus data scale. Evolution of performance as a function of model size for two different pretraining datasets: ImageNet-22k (14M images) and ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: (a) Effect of the KoLeo loss term. (b) Effect of the iBOT Masked Image Modeling (MIM) loss term. Evaluation performed on ImageNet-{1k,A} (classification ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Effectiveness of knowledge distillation. Comparison between a ViT-L trained from scratch or distilled from DINOv2 using ViT-g/14. For reference, we also report the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This benchmark covers scenes, objects (food, cars, planes), and textures. | embodiment, simulator version and control stack | p. 13 (7 Results), p. 13 (7 Results) |
 | Task/environment | The image benchmarks contain a large quantity of fine-grained examples about objects or scenes. | reset, timeout, object/scene variation | p. 13 (7 Results), p. 14 (7 Results) |
-| Observation/sensor | 논문이 명시한 observation과 task input | calibration, preprocessing, privileged input | p. 3 (1 Introduction), p. 30 (B.1 Unsupervised pre-training) |
-| Output/decision | paper-specific output/action | action frame, controller and termination | p. 2 (1 Introduction), p. 2 (1 Introduction) |
+| Observation/sensor | 논문이 명시한 observation과 task input | calibration, preprocessing, privileged input | p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| Output/decision | paper-specific output/action | action frame, controller and termination | p. 31 (B.1 Unsupervised pre-training), p. 2 (1 Introduction) |
 
 ## Metrics and Success Definition
 
@@ -123,9 +123,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 | Primary metric/result | Interestingly, our model significantly outperforms OpenCLIP ViT-G/14 on both variants of iNaturalist (+8.6% and +9.7% for 2018 and 2021 respectively), and lags slightly behind ... | numeric claim only at cited anchor | p. 13 (7 Results) |
 
 - Numeric sentences retained from the body:
-- **p. 15 / 7 Results - extractive PDF cue:** 5, the segmentation training in this experiment took 28 hours on 16 V100 GPUs.
-- **p. 30 / B.1 Unsupervised pre-training - extractive PDF cue:** Published in Transactions on Machine Learning Research (01/2024) Task Dataset / Split Images Retrieval Retrieved Final classification ImageNet-22k / - 14,197,086 as is - 14,197,086 ...
-- **p. 30 / B.1 Unsupervised pre-training - extractive PDF cue:** Published in Transactions on Machine Learning Research (01/2024) Task Dataset / Split Images Retrieval Retrieved Final classification ImageNet-22k / - 14,197,086 as is - 14,197,086 ...
+- **p. 15 / 7 Results - extractive body cue:** 5, the segmentation training in this experiment took 28 hours on 16 V100 GPUs.
 
 ## Generalization and Failure Cases
 
@@ -163,14 +161,14 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 
 ## Limitations and Verification Questions
 
-- **p. 15 / 7 Results - extractive PDF cue:** This procedure is extremely simple but cannot easily produce high-resolution segmentations. +ms: a boosted version of the linear setup.
-- **p. 16 / 7 Results - extractive PDF cue:** This observation supports the intuition that caption-based feature learning fails to learn subtle patterns like this one.
-- **p. 12 / 7 Results - extractive PDF cue:** When comparing with state-of-the-art SSL methods, our models shows drastically better robustness (+29.6% on A (Hendrycks et al., 2021b), +22.1% on R (Hendrycks et al., ...
-- **p. 12 / Figure/Table caption - extractive PDF cue:** Table 5: Supervised finetuning on ImageNet-1k. We use the pipeline of Touvron et al. (2022) to finetune our encoders on ImageNet-1k at resolutions 224 × ...
-- **p. 16 / 7 Results - extractive PDF cue:** Out-of-distribution generalization.
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 8: Examples of out-of-distribution examples with frozen DINOv2-g features and a linear probe. PCA of patch features. We show the results of the principal ...
+- **p. 15 / 7 Results - extractive body cue:** This procedure is extremely simple but cannot easily produce high-resolution segmentations. +ms: a boosted version of the linear setup.
+- **p. 16 / 7 Results - extractive body cue:** This observation supports the intuition that caption-based feature learning fails to learn subtle patterns like this one.
+- **p. 12 / 7 Results - extractive body cue:** When comparing with state-of-the-art SSL methods, our models shows drastically better robustness (+29.6% on A (Hendrycks et al., 2021b), +22.1% on R (Hendrycks et al., ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Table 5: Supervised finetuning on ImageNet-1k. We use the pipeline of Touvron et al. (2022) to finetune our encoders on ImageNet-1k at resolutions 224 × ...
+- **p. 16 / 7 Results - extractive body cue:** Out-of-distribution generalization.
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 8: Examples of out-of-distribution examples with frozen DINOv2-g features and a linear probe. PCA of patch features. We show the results of the principal ...
 
-- **PDF anchors reviewed:** datasets p. 13 (7 Results), p. 13 (7 Results), p. 14 (7 Results), p. 14 (7 Results), p. 30 (B.1 Unsupervised pre-training), p. 30 (B.1 Unsupervised pre-training), metrics p. 9 (Figure/Table caption), p. 11 (7 Results), p. 31 (B.3 Linear probing evaluation), p. 18 (Figure/Table caption), p. 11 (7 Results), p. 12 (7 Results), baselines p. 12 (7 Results), p. 14 (7 Results), p. 11 (7 Results), p. 11 (7 Results), p. 13 (7 Results), p. 13 (7 Results), results p. 10 (Figure/Table caption), p. 13 (7 Results), p. 14 (7 Results), p. 14 (7 Results), p. 8 (Figure/Table caption), p. 11 (7 Results).
+- **Evidence anchors reviewed:** datasets p. 13 (7 Results), p. 13 (7 Results), p. 14 (7 Results), p. 14 (7 Results), p. 30 (B.1 Unsupervised pre-training), p. 11 (7 Results), metrics p. 9 (Figure/Table caption), p. 11 (7 Results), p. 31 (B.3 Linear probing evaluation), p. 18 (Figure/Table caption), p. 11 (7 Results), p. 12 (7 Results), baselines p. 12 (7 Results), p. 14 (7 Results), p. 11 (7 Results), p. 11 (7 Results), p. 13 (7 Results), p. 13 (7 Results), results p. 10 (Figure/Table caption), p. 13 (7 Results), p. 14 (7 Results), p. 14 (7 Results), p. 8 (Figure/Table caption), p. 11 (7 Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

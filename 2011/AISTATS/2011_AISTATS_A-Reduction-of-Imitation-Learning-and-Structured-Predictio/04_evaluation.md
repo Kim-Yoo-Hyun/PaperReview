@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/; PDF retrieval source: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / SIMULATION | Though even after 5 iterations, the policy we obtain almost never falls off the track and is significantly outperforming both SMILe and the baseline ... | p. 6 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / SIMULATION | DAgger (βi = I(i=1)) SMILe (α = 0.1) Supervised Figure 2: Average falls/lap as a function of training data. supervised approach where training always ... | p. 6 (5 EXPERIMENTS) |
@@ -59,7 +59,7 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use the dataset of Taskar et al. | embodiment, simulator version and control stack | p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
 | Task/environment | This dataset contains roughly 6600 words (for a total of over 52000 characters) partitioned in 10 folds. | reset, timeout, object/scene variation | p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** D0 D0.5 D0.9 Se1 Se0.4 Sm0.1 Sup Figure 4: Average distance/stage as a function of data. approach, performance stagnates as we collect more data from ...
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** 6 FUTURE WORK We show that by batching over iterations of interaction with a system, no-regret methods, including the presented DAGGER approach can provide a ...
 
-- **PDF anchors reviewed:** datasets p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), metrics p. 7 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), baselines p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), metrics p. 7 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), baselines p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently. (p. 8, 5 EXPERIMENTS).
+- **Metric evidence:** We compare performance in terms of the average distance travelled by Mario per stage before dying, running out of time or completing the stage, on randomly generated stages of difficulty ... (p. 7, 5 EXPERIMENTS).
+- **Baseline/ablation evidence:** Though even after 5 iterations, the policy we obtain almost never falls off the track and is significantly outperforming both SMILe and the baseline supervised approach. (p. 6, 5 EXPERIMENTS).
+- **Failure/negative evidence:** We measure performance in terms of the average number of falls per lap. (p. 6, 5 EXPERIMENTS).

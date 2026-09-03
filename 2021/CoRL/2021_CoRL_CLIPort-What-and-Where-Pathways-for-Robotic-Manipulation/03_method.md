@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.12098; PDF retrieval source: https://arxiv.org/pdf/2109.12098. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.12098; PDF retrieval source: https://arxiv.org/pdf/2109.12098. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | The key insight of the approach is formulating tabletop manipulation as a series of pick-and-place affordance predictions, where the objective is to ... | p. 2 (1 Introduction), p. 1 (Abstract) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | To this end, we propose a framework that combines the best of both worlds: a two-stream architecture with semantic and spatial pathways ... | p. 1 (Abstract), p. 2 (1 Introduction) |
@@ -79,7 +79,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | As in Transporter [2, 6], our framework can be extended to handle any motion primitive like pushing, sliding, etc. that can be ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Our end-to-end framework is capable of solving a variety of language-specified tabletop tasks from packing unseen objects to folding cloths, all without ... | Hz/fps, inference time and control rate |
 | Memory | image-language-proprioception history, transformer context 또는 persistent memory. | Our end-to-end framework is capable of solving a variety of language-specified tabletop tasks from packing unseen objects to folding cloths, all without ... | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -127,8 +127,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (1 Introduction), temporal p. 5 (2 Related Work), p. 1 (Abstract), p. 4 (2 Related Work), p. 4 (2 Related Work), p. 1 (1 Introduction), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (1 Introduction), temporal p. 5 (2 Related Work), p. 1 (Abstract), p. 4 (2 Related Work), p. 4 (2 Related Work), p. 1 (1 Introduction), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The key insight of the approach is formulating tabletop manipulation as a series of pick-and-place affordance predictions, where the objective is to detect actions rather than detect objects and then ... (p. 2, 1 Introduction).
+- **Objective/update evidence:** The key insight of the approach is formulating tabletop manipulation as a series of pick-and-place affordance predictions, where the objective is to detect actions rather than detect objects and then ... (p. 2, 1 Introduction).
+- **Temporal/runtime evidence:** Our end-to-end framework is capable of solving a variety of language-specified tabletop tasks from packing unseen objects to folding cloths, all without any explicit representations of object poses, instance segmentations, ... (p. 1, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

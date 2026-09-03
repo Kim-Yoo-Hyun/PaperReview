@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 The inverse dynamics model is a simple residual multilayer perceptron that outputs a normal distribution to model the actions conditioned on the current robot state and motion ‘command.를 The above function encourages the generated future fingertip position to closely match the commanded fingertip position Since the action of the robot hand has a high degree of freedom (16 for the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We find that without our assistance, the noisy ‘expert has much more frequent failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: "Motivated by these observations, in this paper, we propose
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** However, the external inputs in these studies are limited to a few discretized commands, lacking control over low-level interactions, such as finger movements and object contact. (p. 2, 1. INTRODUCTION).
+- **Paper-specific mechanism:** "Motivated by these observations, in this paper, we propose (p. 2, 1. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is figure, DexGen can successfully improve the performance of these polici (p. 7, IV. EXPERIMENTS); the relevant task/metric cue is In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance the robustness and success rate of extremely suboptimal policies. (p. 6, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: ‘We have demonstrated that our system can provide effective assistance through simulated validation. ‘Then, we further design several tasks for benchmarking in the real world..
-3. Compare against the body-reported baseline or a matched simpler baseline: Compared to the baseline, our system can successfully help the user to solve many tasks in various challenging setups..
-4. Report the body metric and its denominator/aggregation: In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance the robustness and success rate of extremely suboptimal policies..
-5. Re-run the body-reported ablation/failure condition: We find that without our assistance, the noisy ‘expert has much more frequent failures..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: However, the external inputs in these studies are limited to a few discretized commands, lacking control over low-level interactions, such as finger movements and object contact. (p. 2, 1. INTRODUCTION); preserve the objective/update rule: During inference, we can sample actions from this distribution and further aligned with extemal motion ‘commands using gradient guidance. (p. 4, III. THE DEXGEN CONTROLLER).
+2. Use the paper-reported task/data/environment cue: 5: Our large-scale, multi-task pretraining dataset covers diverse grasp to grasp transitions (arrows). (p. 5, B. Large-Scale Behavior Dataset Generation).
+3. Compare against the reported or matched baseline: Compared to the baseline, our system can successfully help the user to solve many tasks in various challenging setups. (p. 8, B. Simulated Experiments).
+4. Report the body metric with its denominator and aggregation: In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance the robustness and success rate of extremely suboptimal policies. (p. 6, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments); if none is reported, design one around: We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture); the primary result is directionally consistent at p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), match the reported outcome at p. 7 (IV. EXPERIMENTS), p. 8 (B. Simulated Experiments), p. 6 (IV. EXPERIMENTS), and measure the boundary at p. 7 (B. Simulated Experiments), p. 7 (IV. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Motivated, observations, pretrain mechanism이 Compared to the baseline, our system can successfully help the user to solve many tasks in ... 대비 In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance ...을 개선하고, We find that without our assistance, the noisy ‘expert has much more frequent failures. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (However, the external inputs in these studies are limited to a few discretized commands, lacking control over low-level interactions, such as finger ...), does the paper-specific mechanism ("Motivated by these observations, in this paper, we propose) retain the reported evaluation outcome (In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance ...) when tested against the paper's strongest explicit boundary (We find that without our assistance, the noisy ‘expert has much more frequent failures.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (In the experiments, we first validate the effectiveness of DexGen through simulated experiments, demonstrating its ability to enhance ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** "Motivated by these observations, in this paper, we propose (p. 2, 1. INTRODUCTION).
+- **Paper-supported outcome:** figure, DexGen can successfully improve the performance of these polici (p. 7, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

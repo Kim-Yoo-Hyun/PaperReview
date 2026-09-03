@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p039.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p039.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p039.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p039.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. CNABU Implementation Details | EMPIRICAL / REAL-ROBOT OR HARDWARE | The mfoU serves as a measure of the correctness of the predicitons, while the mECE measures the confidence calibration of these predictions, i.e., how ... | p. 14 (B. CNABU Implementation Details) |
 | B. Simulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method uses pushing to achieve significantly higher mloUs. | p. 8 (B. Simulation Experiments) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset for training o,, consists of 30,000 randomly sampled scenes, while the dataset for training a, consists of 11.700 pushes. | embodiment, simulator version and control stack | p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details) |
 | Task/environment | Both datasets were split into train, validation and test splits at a ratio of 0.8:0.1:0.1, Dataset generation details are discussed in Sec. | reset, timeout, object/scene variation | p. 14 (B. CNABU Implementation Details), p. 7 (A. Experimental Setup) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 - **p. 7 / B. Simulation Experiments - extractive body cue:** [11's pipeline does not update its belief after a push, it requires multiple subsequent observations to reconcile inconsistencies between the actual scene and the previously ...
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** For added robustness in real-world scenarios, we augment the simulation <data with sat-and-pepper noise, random rotations and translations and add Gaussian noise to the depth ...
 
-- **PDF anchors reviewed:** datasets p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 7 (A. Experimental Setup), p. 7 (B. Simulation Experiments), p. 13 (B. CNABU Implementation Details), p. 15 (B. CNABU Implementation Details), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), baselines p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), results p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (B. Simulation Experiments), p. 7 (V. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 7 (A. Experimental Setup), p. 7 (B. Simulation Experiments), p. 13 (B. CNABU Implementation Details), p. 15 (B. CNABU Implementation Details), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), baselines p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), results p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (B. Simulation Experiments), p. 7 (V. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]. (p. 6, V. EXPERIMENTS).
+- **Metric evidence:** Further evaluations, which validate the individual CNABU's performance and the use of VIG as a reward proxy, are provided in Appendices C and D. (p. 7, V. EXPERIMENTS).
+- **Baseline/ablation evidence:** Next, we present a series of ablations of our method and evaluate several interactive baselines. (p. 6, V. EXPERIMENTS).
+- **Failure/negative evidence:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision ... (p. 9, VI. LIMITATIONS).

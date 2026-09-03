@@ -1,8 +1,10 @@
 # Prompting with the Future: Open-World Model Predictive Control with Interactive Digital Twins
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p145.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p145.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p145.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p145.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p145.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 ## Why Read It
 
 World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 We do not assume access to task-specific training data, in-context ‘examples, or hard-coded motion primitives as used in prior work (20, 27, 13, 25].를 문제로 두고, To validate the effectiveness of our framework, in this section, we design eight real-world manipulation tasks that require 6 DoF control, semantic understanding, and diverse ‘manipulation skills, We compare our approach against ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (III. PROBLEM FORMULATION), p. 4 (A. Construction of Interactive Digital Twins), p. 3 (A. Construction of Interactive Digital Twins), p. 3 (III. PROBLEM FORMULATION), p. 4 (A. Construction of Interactive Digital Twins), p. 5 (C. Motion Planning via Simulation-Informed Prompting) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** We do not assume access to task-specific training data, in-context ‘examples, or hard-coded motion primitives as used in prior work (20, 27, 13, 25]. (p. 3, III. PROBLEM FORMULATION).
+- **Actual contribution:** To validate the effectiveness of our framework, in this section, we design eight real-world manipulation tasks that require 6 DoF control, semantic understanding, and diverse ‘manipulation skills, We compare our ... (p. 5, C. Motion Planning via Simulation-Informed Prompting).
+- **Evaluation boundary:** As shown in Table Ill, while performance varies across df= ferent tasks due to their diverse requirements, our full method achieves the best results in most of the tasks. (p. 6, B. Quantitative results).
+- **Explicit failure boundary:** + Planning error: When subtasks are not properly defined or the model fails to recognize the current stage, the robot may execute actions incorrectly. (p. 8, B. Quantitative results).

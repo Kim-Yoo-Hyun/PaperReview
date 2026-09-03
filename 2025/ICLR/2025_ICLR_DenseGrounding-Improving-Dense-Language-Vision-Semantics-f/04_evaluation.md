@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=iGafR0hSln; PDF retrieval source: https://openreview.net/pdf/62bd16ea0919efef86e53459069a9dc57160d76d.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=iGafR0hSln; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114854. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 
 ## Evaluation Body Digest
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** For benchmarking, the official dataset maintains a non-public test set for the test leaderboard and divides the original training set into new subsets for training ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** This makes the dataset significantly larger and more challenging than previous ones, providing a more rigorous benchmark for 3D visual grounding tasks.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We evaluate the 3D visual grounding performance of our proposed method, DenseGrounding, and report the results in Table 1, where we compare it against established ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** These qualitative results demonstrate the enhanced performance of DenseGrounding, especially in complex scenes with multiple distractors, solidifying its robustness and precision in real-world applications.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** The table is divided into two sections: the upper half presents models trained on the full training set, while the lower half showcases performance using ...
-- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive PDF cue:** As shown in Table 6, our method significantly outperforms the baseline in this zero-shot setting, demonstrating superior robustness and the ability to generalize effectively to ...
-- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive PDF cue:** This process is particularly challenging due to differences in camera settings, scene layouts, and object characteristics in visual data across various datasets, which can significantly ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Future research should explore integrating human-agent interaction, allowing the model to query users for clarification, and improving adaptability and robustness in real-world scenarios.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** For benchmarking, the official dataset maintains a non-public test set for the test leaderboard and divides the original training set into new subsets for training ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** This makes the dataset significantly larger and more challenging than previous ones, providing a more rigorous benchmark for 3D visual grounding tasks.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We evaluate the 3D visual grounding performance of our proposed method, DenseGrounding, and report the results in Table 1, where we compare it against established ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** These qualitative results demonstrate the enhanced performance of DenseGrounding, especially in complex scenes with multiple distractors, solidifying its robustness and precision in real-world applications.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** The table is divided into two sections: the upper half presents models trained on the full training set, while the lower half showcases performance using ...
+- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive body cue:** As shown in Table 6, our method significantly outperforms the baseline in this zero-shot setting, demonstrating superior robustness and the ability to generalize effectively to ...
+- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive body cue:** This process is particularly challenging due to differences in camera settings, scene layouts, and object characteristics in visual data across various datasets, which can significantly ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Future research should explore integrating human-agent interaction, allowing the model to query users for clarification, and improving adaptability and robustness in real-world scenarios.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results demonstrate that "LLM+DB(R+L)" achieves the notable over all improvement of 2.45% against naive baseline, confirming the effectiveness of incorporating both object relationships ... | p. 9 (5 EXPERIMENTS) |
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | On the full training set, DenseGrounding achieves a significant improvement of 5.81% over the previous strongest baseline, EmbodiedScan. | p. 8 (5 EXPERIMENTS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** For benchmarking, the official dataset maintains a non-public test set for the test leaderboard and divides the original training set into new subsets for training ...
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** This makes the dataset significantly larger and more challenging than previous ones, providing a more rigorous benchmark for 3D visual grounding tasks.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** We evaluate the 3D visual grounding performance of our proposed method, DenseGrounding, and report the results in Table 1, where we compare it against established ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** These qualitative results demonstrate the enhanced performance of DenseGrounding, especially in complex scenes with multiple distractors, solidifying its robustness and precision in real-world applications.
-- **p. 8 / 5 EXPERIMENTS - extractive PDF cue:** The table is divided into two sections: the upper half presents models trained on the full training set, while the lower half showcases performance using ...
-- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive PDF cue:** As shown in Table 6, our method significantly outperforms the baseline in this zero-shot setting, demonstrating superior robustness and the ability to generalize effectively to ...
-- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive PDF cue:** This process is particularly challenging due to differences in camera settings, scene layouts, and object characteristics in visual data across various datasets, which can significantly ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** Future research should explore integrating human-agent interaction, allowing the model to query users for clarification, and improving adaptability and robustness in real-world scenarios.
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** For benchmarking, the official dataset maintains a non-public test set for the test leaderboard and divides the original training set into new subsets for training ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** This makes the dataset significantly larger and more challenging than previous ones, providing a more rigorous benchmark for 3D visual grounding tasks.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We evaluate the 3D visual grounding performance of our proposed method, DenseGrounding, and report the results in Table 1, where we compare it against established ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** These qualitative results demonstrate the enhanced performance of DenseGrounding, especially in complex scenes with multiple distractors, solidifying its robustness and precision in real-world applications.
+- **p. 8 / 5 EXPERIMENTS - extractive body cue:** The table is divided into two sections: the upper half presents models trained on the full training set, while the lower half showcases performance using ...
+- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive body cue:** As shown in Table 6, our method significantly outperforms the baseline in this zero-shot setting, demonstrating superior robustness and the ability to generalize effectively to ...
+- **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive body cue:** This process is particularly challenging due to differences in camera settings, scene layouts, and object characteristics in visual data across various datasets, which can significantly ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Future research should explore integrating human-agent interaction, allowing the model to query users for clarification, and improving adaptability and robustness in real-world scenarios.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: (a) illustrates how limited context due to arbitrary descriptions leads to insufficient lan- guage semantics. (b) highlights the issue of losing fine-grained semantics ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 2: (a) shows overall framework, while (b) details the Language Semantic Enhancer (LSE) module, and (c) describes the Hierarchical Scene Semantic Enhancer (HSSE) module. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 1: Validation Result: Accuracy performance of the models on the official full validation set. We follow the experimental setting proposed by Wang et al. ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 2: Ablation on LSE. R and L refers to object relationship and object location infor- mation in SIDB, respectively.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 3: Ablation of Proposed Methods. The reported values are Accuracies for predic- tions greater than 25% IoU with groundtruth. LSE HSSE Easy Hard Overall
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 4: Ablation on the number of self at- tention layers for HSSE. Lscene Easy Hard Overall 1 40.15
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Table 5: Ablation on the view feature map size after pooling for HSSE. Pooled Size Easy Hard Overall 1 40.61
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Figure 3: Qualitative Analysis. Comparison of Ground Truth, our baseline, and DenseGrounding. Ground truth boxes are shown in green, baseline in red, and DenseGrounding's predictions ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) illustrates how limited context due to arbitrary descriptions leads to insufficient lan- guage semantics. (b) highlights the issue of losing fine-grained semantics ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: (a) shows overall framework, while (b) details the Language Semantic Enhancer (LSE) module, and (c) describes the Hierarchical Scene Semantic Enhancer (HSSE) module. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Validation Result: Accuracy performance of the models on the official full validation set. We follow the experimental setting proposed by Wang et al. ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Ablation on LSE. R and L refers to object relationship and object location infor- mation in SIDB, respectively.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Ablation of Proposed Methods. The reported values are Accuracies for predic- tions greater than 25% IoU with groundtruth. LSE HSSE Easy Hard Overall
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 4: Ablation on the number of self at- tention layers for HSSE. Lscene Easy Hard Overall 1 40.15
+- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Ablation on the view feature map size after pooling for HSSE. Pooled Size Easy Hard Overall 1 40.61
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative Analysis. Comparison of Ground Truth, our baseline and DenseGrounding. Ground truth boxes are shown in green, baseline in red, and DenseGrounding's predictions ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For benchmarking, the official dataset maintains a non-public test set for the test leaderboard and divides the original training set into new subsets for ... | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
 | Task/environment | This makes the dataset significantly larger and more challenging than previous ones, providing a more rigorous benchmark for 3D visual grounding tasks. | reset, timeout, object/scene variation | p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
@@ -77,7 +77,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 |---|---|---|
 | Method Data Easy Hard Indep Dep Overall ACC25 ACC25 ACC25 ACC25 ACC25 ScanRefer (Chen et al., 2020) Full 13.78 9.12 13.44 10.77 12.85 BUTD-DETR ... | definition/direction/unit from same section | p. 8 (5 EXPERIMENTS) |
 | These qualitative results demonstrate the enhanced performance of DenseGrounding, especially in complex scenes with multiple distractors, solidifying its robustness and precision in real-world applications. | definition/direction/unit from same section | p. 10 (5 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2025 Table 1: Validation Result: Accuracy performance of the models on the official full validation set. | definition/direction/unit from same section | p. 8 (5 EXPERIMENTS) |
+| Remarkably, even against this enhanced baseline, DenseGrounding attains a substantial 5.57% improvement in overall accuracy, culminating in a total performance gain of 7.56% over ... | definition/direction/unit from same section | p. 8 (5 EXPERIMENTS) |
 | These consistent gains across different metrics underscore the robustness and generalizability of our approach in 3D visual grounding tasks. | definition/direction/unit from same section | p. 9 (5 EXPERIMENTS) |
 | The reported values are Accuracies for predictions greater than 25% IoU with groundtruth. | definition/direction/unit from same section | p. 9 (5 EXPERIMENTS) |
 | 5.4 LIMITATIONS While the DenseGrounding significantly improves the ego-centric 3D visual grounding task performance, it has limitations. | definition/direction/unit from same section | p. 10 (5 EXPERIMENTS) |
@@ -112,8 +112,8 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 | 4, we conduct an ablation study to determine the optimal number of self-attention layers needed for effective learning of the scenefeature representation. | component/input/data sensitivity | p. 9 (5 EXPERIMENTS) |
 | For inference, our model processes descriptions directly, without any enhancement, aligning with our baseline methods for fair comparison. | component/input/data sensitivity | p. 8 (5 EXPERIMENTS) |
 | The "Dep" and "Indep" metrics further challenge spatial understanding ability by assessing its performance with and without perspective-specific descriptions. | component/input/data sensitivity | p. 8 (5 EXPERIMENTS) |
-| Published as a conference paper at ICLR 2025 Table 4: Ablation on the number of self attention layers for HSSE. | component/input/data sensitivity | p. 10 (5 EXPERIMENTS) |
 | In real-life applications, vague or ambiguous descriptions from human instructions pose challenges, as the model struggles without the necessary information to resolve ambiguities. | component/input/data sensitivity | p. 10 (5 EXPERIMENTS) |
+| Lscene Easy Hard Overall 1 40.15 35.44 39.77 2 40.76 32.70 40.11 3 41.95 34.38 41.34 4 41.06 33.96 40.49 6 40.66 33.23 40.06 ... | component/input/data sensitivity | p. 10 (5 EXPERIMENTS) |
 
 ## Main Results / Claim–Evidence Map
 
@@ -123,7 +123,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 | Primary metric/result | On the full training set, DenseGrounding achieves a significant improvement of 5.81% over the previous strongest baseline, EmbodiedScan. | numeric claim only at cited anchor | p. 8 (5 EXPERIMENTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** It consists of 5,185 scene scans sourced from well-known datasets such as ScanNet (Dai et al., 2017), 3RScan (Wald et al., 2019), and Matterport3D (Chang ...
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** It consists of 5,185 scene scans sourced from well-known datasets such as ScanNet (Dai et al., 2017), 3RScan (Wald et al., 2019), and Matterport3D (Chang ...
 
 ## Generalization and Failure Cases
 
@@ -159,14 +159,14 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5 EXPERIMENTS - extractive PDF cue:** Due to resource limitations, we reserve the full training dataset for baseline comparisons on the test set and leaderboard submissions to ensure a fair and ...
-- **p. 10 / 5 EXPERIMENTS - extractive PDF cue:** 5.4 LIMITATIONS While the DenseGrounding significantly improves the ego-centric 3D visual grounding task performance, it has limitations.
-- **p. 10 / 6 CONCLUSION - extractive PDF cue:** By leveraging LLMs for description enhancement and introducing the HSSE to enhance fine-grained visual semantics, our method significantly improves the accuracy and robustness of 3D ...
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** These consistent gains across different metrics underscore the robustness and generalizability of our approach in 3D visual grounding tasks.
-- **p. 9 / 5 EXPERIMENTS - extractive PDF cue:** In cases where the baseline model struggles to disambiguate between multiple similar objects, DenseGrounding successfully detects the correct target by leveraging its enriched textual descriptions ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 5: Comparison of DenseGrounding and EmbodiedScan on limited data scenario. A.4 ROBUSTNESS ANALYSIS
+- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Due to resource limitations, we reserve the full training dataset for baseline comparisons on the test set and leaderboard submissions to ensure a fair and ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 5.4 LIMITATIONS While the DenseGrounding significantly improves the ego-centric 3D visual grounding task performance, it has limitations.
+- **p. 10 / 6 CONCLUSION - extractive body cue:** By leveraging LLMs for description enhancement and introducing the HSSE to enhance fine-grained visual semantics, our method significantly improves the accuracy and robustness of 3D ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** These consistent gains across different metrics underscore the robustness and generalizability of our approach in 3D visual grounding tasks.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** In cases where the baseline model struggles to disambiguate between multiple similar objects, DenseGrounding successfully detects the correct target by leveraging its enriched textual descriptions ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Comparison of DenseGrounding and EmbodiedScan on limited data scenario. A.4 ROBUSTNESS ANALYSIS
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 15 (A.4 ROBUSTNESS ANALYSIS), metrics p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 15 (A.3 ANALYSIS ON LIMITED DATA SCENARIO), p. 15 (A.4 ROBUSTNESS ANALYSIS), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 15 (A.4 ROBUSTNESS ANALYSIS).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 15 (A.4 ROBUSTNESS ANALYSIS), metrics p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 15 (A.3 ANALYSIS ON LIMITED DATA SCENARIO), p. 15 (A.4 ROBUSTNESS ANALYSIS), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 15 (A.4 ROBUSTNESS ANALYSIS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

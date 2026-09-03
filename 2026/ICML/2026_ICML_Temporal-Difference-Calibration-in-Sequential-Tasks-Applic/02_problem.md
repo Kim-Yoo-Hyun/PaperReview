@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2604.20472; PDF retrieval source: https://arxiv.org/pdf/2604.20472. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2604.20472; PDF retrieval source: https://arxiv.org/pdf/2604.20472. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, neural networks are commonly used in sequential decision problems as well, for example, in reinforcement and imitation learning (Black et al., ... | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | In principle, the history ht should contain all signals available at time t that are informative about future success, e.g., the current ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF |
+| Observation / input | In principle, the history ht should contain all signals available at time t that are informative about future success, e.g., the current ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
 | State / latent | principle, history, should, contain, signals, available, time, informative, about, future | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
 | Output / action | VLAs, encode, decision, policies, visual, observations, language, instructions | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
 | Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | state/history and risk h(s); body terms: principle, history, should, contain, signals, available, time, informative, about, future | p. 6 (5. Method), p. 7 (1. TD loss improves calibration and failure detection re), p. 2 (1. Introduction) |
 | Decision / output variable | filtered/recovery action u_safe; body terms: Before, Algorithm, provide, brief, summary, call, TemporalDifference, Q-based | p. 6 (5. Method), p. 1 (1. Introduction), p. 2 (1. Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (4. Problem Formulation), p. 4 (4. Problem Formulation), p. 4 (4. Problem Formulation) |
 | Success / guarantee | low violation/failure probability with useful intervention | p. 28 (Figure/Table caption), p. 2 (Figure/Table caption), p. 23 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 6 (5. Method), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (5. Method)): Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.
+PDF body contribution framing (p. 6 (5. Method), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (5. Method)): Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.
 
 - **p. 1 / 1. Introduction - extractive body cue:** This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence.
 - **p. 2 / 1. Introduction - extractive body cue:** This is essential to measure calibration of black-box models, for which the hidden state is often not accessible from APIs; • We show that the ...
@@ -69,12 +69,21 @@ PDF contribution framing (p. 6 (5. Method), p. 1 (1. Introduction), p. 2 (1. Int
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 6 (5. Method), p. 7 (1. TD loss improves calibration and failure detection re), p. 2 (1. Introduction), p. 6 (5. Method). The downstream handoff is claimed only when the body describes it.
+safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (5. Method), p. 7 (1. TD loss improves calibration and failure detection re), p. 2 (1. Introduction), p. 6 (5. Method). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. Problem Formulation), interface p. 6 (5. Method), p. 7 (1. TD loss improves calibration and failure detection re), p. 2 (1. Introduction), p. 6 (5. Method), objective p. 6 (5. Method), p. 6 (5. Method), p. 10 (6.6. Application to guided test-time action search), p. 10 (6.6. Application to guided test-time action search), p. 8 (6.1. Vision-Language-Action Models).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. Problem Formulation), interface p. 6 (5. Method), p. 7 (1. TD loss improves calibration and failure detection re), p. 2 (1. Introduction), p. 6 (5. Method), objective p. 6 (5. Method), p. 6 (5. Method), p. 10 (6.6. Application to guided test-time action search), p. 10 (6.6. Application to guided test-time action search), p. 8 (6.1. Vision-Language-Action Models).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, neural networks are commonly used in sequential decision problems as well, for example, in reinforcement and imitation learning (Black et al., 2024; Guo et al., 2025). (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence. (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** We evaluate failure detection using ROC-AUC, which measures how well a score ranks failed rollouts above successful ones and is widely used for uncertainty quantification in LLMs (Huang et al., ... (p. 9, 6.4. TD loss improves calibration and failure detection).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

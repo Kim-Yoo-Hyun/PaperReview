@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.16828; PDF retrieval source: https://arxiv.org/pdf/2310.16828. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2310.16828; PDF retrieval source: https://arxiv.org/pdf/2310.16828. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 13. Single-task Meta-World results. Success rate (%) as a function of environment steps. TD-MPC2 performance is comparable to existing methods on easy tasks, ... | p. 22 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 16. Single-task MyoSuite results. Success rate (%) as a function of environment steps. This task domain includes high-dimensional contact-rich musculoskeletal motor control (A ... | p. 23 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | However, TD-MPC2 can be readily applied to tasks with other input 120k environment steps corresponds to 20 episodes in DMControl and 100 episodes in ... | embodiment, simulator version and control stack | p. 8 (4.1 RESULTS), p. 6 (4 EXPERIMENTS) |
 | Task/environment | Pick YCB considers manipulation of all 74 objects from the YCB (Calli et al., 2015) dataset. | reset, timeout, object/scene variation | p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS) |
@@ -126,9 +126,9 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 - **p. 5 / 4 EXPERIMENTS - extractive body cue:** We evaluate TD-MPC2 across a total of 104 diverse continuous control tasks spanning 4 task domains: DMControl (Tassa et al., 2018), Meta-World (Yu et al., ...
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** Success rate (%) as a function of environment steps on 5 object manipulation tasks from ManiSkill2.
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** Pick YCB considers manipulation of all 74 objects from the YCB (Calli et al., 2015) dataset.
-- **p. 7 / 4.1 RESULTS - extractive body cue:** Published as a conference paper at ICLR 2024 1M 10M 100M 1B Model parameters 0 20 40 60 80 Normalized score 16.0 49.5 57.1 68.0 ...
 - **p. 7 / 4.1 RESULTS - extractive body cue:** (Right) T-SNE (van der Maaten & Hinton, 2008) visualization of task embeddings learned by a TD-MPC2 agent trained on 80 tasks from DMControl and Meta-World.
 - **p. 7 / 4.1 RESULTS - extractive body cue:** Approximate TD-MPC2 training cost on the 80-task dataset, reported in GPU days on a single NVIDIA GeForce RTX 3090 GPU.
+- **p. 7 / 4.1 RESULTS - extractive body cue:** 0 20 40 60 Normalized score 24.0 47.0 Finetuning 10 tasks From scratch Finetuned Figure 8.
 
 ## Generalization and Failure Cases
 
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 - **p. 7 / 4.1 RESULTS - extractive body cue:** While our work mainly focuses on the scaling and robustness of world models, we also explore the efficacy of finetuning pretrained world models for few-shot ...
 - **p. 8 / 4.1 RESULTS - extractive body cue:** We observe that all of our proposed improvements contribute meaningfully to the robustness and strong performance of TD-MPC2 in both single-task RL and multi-task RL.
 
-- **PDF anchors reviewed:** datasets p. 8 (4.1 RESULTS), p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS), p. 7 (4.1 RESULTS), p. 9 (4.1 RESULTS), p. 9 (4.1 RESULTS), metrics p. 7 (4.1 RESULTS), p. 5 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 6 (4.1 RESULTS), p. 6 (4 EXPERIMENTS), p. 9 (4.1 RESULTS), p. 7 (4.1 RESULTS), p. 8 (4.1 RESULTS), p. 9 (4.1 RESULTS), results p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Figure/Table caption), p. 23 (Figure/Table caption), p. 7 (4.1 RESULTS), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (4.1 RESULTS), p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS), p. 7 (4.1 RESULTS), p. 9 (4.1 RESULTS), p. 9 (4.1 RESULTS), metrics p. 7 (4.1 RESULTS), p. 5 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 6 (4.1 RESULTS), p. 6 (4 EXPERIMENTS), p. 9 (4.1 RESULTS), p. 7 (4.1 RESULTS), p. 8 (4.1 RESULTS), p. 9 (4.1 RESULTS), results p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Figure/Table caption), p. 23 (Figure/Table caption), p. 7 (4.1 RESULTS), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (31 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 16. Single-task MyoSuite results. Success rate (%) as a function of environment steps. This task domain includes high-dimensional contact-rich musculoskeletal motor control (A ∈R39) with a physiologically accurate robot ... (p. 23, Figure/Table caption).
+- **Metric evidence:** To summarize agent performance with a single metric, we produce a normalized score that is an average of all individual task success rates (Meta-World) and episode returns normalized to the ... (p. 7, 4.1 RESULTS).
+- **Baseline/ablation evidence:** TD-MPC2 outperforms baselines by a large margin on these tasks, despite using the same hyperparameters across all tasks. (p. 6, 4.1 RESULTS).
+- **Failure/negative evidence:** While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task rewards can lead to unintended outcomes (Clark & Amodei, 2016) that may ... (p. 9, 4.1 RESULTS).

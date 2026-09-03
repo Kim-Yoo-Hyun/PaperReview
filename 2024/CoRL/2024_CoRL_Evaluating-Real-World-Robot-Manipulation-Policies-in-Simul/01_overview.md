@@ -1,8 +1,8 @@
 # Evaluating Real-World Robot Manipulation Policies in Simulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=LZh48DTg71.
-> PDF retrieval source: https://arxiv.org/pdf/2405.05941.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=LZh48DTg71.
+> PDF retrieval source: https://openreview.net/pdf?id=LZh48DTg71. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,10 +12,10 @@
 - Tier: NEXT
 - Tags: Robotics, Benchmark, simulation, real-to-sim, policy evaluation, generalist policy
 - Official paper: https://openreview.net/forum?id=LZh48DTg71
-- Full-text retrieval: https://arxiv.org/pdf/2405.05941.pdf
+- Full-text retrieval: https://openreview.net/pdf?id=LZh48DTg71
 - Code/Project: https://simpler-env.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -36,6 +36,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose simulated evaluation as a possible answer, in which manipulation policies trained on real data are evaluated in purpose-built simulated environments ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** 2: We introduce SIMPLER, a suite of open-source simulated evaluation environments for common real robot manipulation setups, namely the Google Robot evaluations from the RT-series ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our approach yields a strong correlation between real-world and simulated performance (right) for various open-source robot policies [6, 11, 50] across two commonly used robot ...
 - **p. 1 / Abstract - extractive body cue:** We then employ these approaches to create SIMPLER, a collection of simulated environments for manipulation policy evaluation on common real robot setups.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** As such, SIMPLER is a first step towards using simulated evaluation as a tool for reliable, scalable, and reproducible manipulation policy evaluation.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** These advances are underpinned by large-scale datasets [11, 66] and expressive models [1, 6, 29].
@@ -54,11 +55,11 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose simulated evaluation as a possible answer, in which manipulation policies trained on real data are evaluated in purpose-built simulated environments ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** 2: We introduce SIMPLER, a suite of open-source simulated evaluation environments for common real robot manipulation setups, namely the Google Robot evaluations from the RT-series ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our approach yields a strong correlation between real-world and simulated performance (right) for various open-source robot policies [6, 11, 50] across two commonly used robot ...
 - **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** Thus, the approaches we introduced in Section IV-B for narrowing the visual gap between simulated and real scene can significantly improve real-andsim evaluation performance correlation, ...
 - **p. 7 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** For Octo simulated evaluations, since the model involves a non-deterministic diffusion head, we average its success rates across three different random seeds to produce a ...
 - **p. 7 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** We observe a strong correlation between the relative performances in simulation and in the real world across most policy checkpoints 0.0 0.2 0.4 0.6 0.8 ...
 - **p. 8 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** For simulated results and realworld results, we report the difference in success rate with and without each distribution shift: ∆Success(shift) = 1 2 2 X ...
-- **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** To investigate whether our results are sensitive to the underlying physics simulator, we reproduce the Google Robot evaluation in Isaac Simulator Ablation SAPIEN MMRV = ...
 
 - Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
 
@@ -85,3 +86,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, performing simulated evaluations for robotic manipulation poses additional challenges due to the diverse interactions between agent and environment.를 문제로 두고, In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in simulated manipulation ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (22 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, performing simulated evaluations for robotic manipulation poses additional challenges due to the diverse interactions between agent and environment. (p. 2, I. INTRODUCTION).
+- **Actual contribution:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** Fig. 10: Comparison of SIMPLER-"Variant Aggregation" using SAPIEN (default) vs. Isaac Sim [49] on Google Robot "Pick Coke Can" and "Move Near" tasks. Both physics simulators lead to good correlation ... (p. 10, Figure/Table caption).
+- **Explicit failure boundary:** Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and other visual details. (p. 11, VII. CONCLUSION).

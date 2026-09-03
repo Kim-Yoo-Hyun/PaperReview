@@ -2,22 +2,22 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/deng25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/deng25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 7 (5 Hz), p. 7 (5 Hz), p. 8 (5 Hz)): In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ...
+PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction), p. 7 (5 Hz)): In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ...
 
 ## Method Body Digest
 
 - **p. 2 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real ...
 - **p. 2 / 1 Introduction - extractive body cue:** To efficiently learn from this dataset, we propose GraspVLA, an end-to-end network that integrates autoregressive perception tasks and flow-matching-based action generation into a unified Chainof-Thought ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To bridge this gap, we explore the feasibility of training Vision-Language-Action (VLA) models entirely with large-scale synthetic action data.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Abstract: Embodied foundation models are gaining increasing attention for their zero-shot generalization, scalability, and adaptability to new tasks through few-shot post-training.
 - **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
 - **p. 7 / 5 Hz - extractive body cue:** We benchmark GraspVLA against AnyGrasp [14], a state-of-the-art grasp detection model specialized in grasping.
 - **p. 7 / 5 Hz - extractive body cue:** 5.5 Efficient Post-Training A defining characteristic of foundation models is their ability to adapt to new tasks.
-- **p. 8 / 5 Hz - extractive body cue:** GraspVLA shows superior adaptability to novel tasks, surpassing the model without pretraining and all baselines.
-- **p. 8 / 5 Hz - extractive body cue:** We experimented with three different post-training tasks to showcase that our model can quickly learn to grasp new items in (a), new grasping patterns in ...
-- **p. 2 / 1 Introduction - extractive body cue:** In contrast, synthetic data offers a more accessible and cost-effective alternative - yet its potential remains largely underestimated.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Synthetic data offers a cost-effective alternative, yet its potential remains largely underexplored.
 
 ## Design Rationale
 
@@ -29,27 +29,29 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 
 - **p. 2 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real ...
 - **p. 2 / 1 Introduction - extractive body cue:** To efficiently learn from this dataset, we propose GraspVLA, an end-to-end network that integrates autoregressive perception tasks and flow-matching-based action generation into a unified Chainof-Thought ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To bridge this gap, we explore the feasibility of training Vision-Language-Action (VLA) models entirely with large-scale synthetic action data.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Abstract: Embodied foundation models are gaining increasing attention for their zero-shot generalization, scalability, and adaptability to new tasks through few-shot post-training.
 - **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
 - **p. 7 / 5 Hz - extractive body cue:** We benchmark GraspVLA against AnyGrasp [14], a state-of-the-art grasp detection model specialized in grasping.
 - **p. 7 / 5 Hz - extractive body cue:** 5.5 Efficient Post-Training A defining characteristic of foundation models is their ability to adapt to new tasks.
-- **p. 8 / 5 Hz - extractive body cue:** GraspVLA shows superior adaptability to novel tasks, surpassing the model without pretraining and all baselines.
-- **p. 8 / 5 Hz - extractive body cue:** We experimented with three different post-training tasks to showcase that our model can quickly learn to grasp new items in (a), new grasping patterns in ...
 - **Detected method headings:** none reliably recovered
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly ... | p. 2 (1 Introduction), p. 2 (1 Introduction) |
-| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | To efficiently learn from this dataset, we propose GraspVLA, an end-to-end network that integrates autoregressive perception tasks and flow-matching-based action generation into ... | p. 2 (1 Introduction), p. 3 (1 Introduction) |
-| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, ... | p. 3 (1 Introduction), p. 7 (5 Hz) |
+| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | To efficiently learn from this dataset, we propose GraspVLA, an end-to-end network that integrates autoregressive perception tasks and flow-matching-based action generation into ... | p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)) |
+| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | To bridge this gap, we explore the feasibility of training Vision-Language-Action (VLA) models entirely with large-scale synthetic action data. | p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **p. 2 / 1 Introduction - extractive body cue:** In contrast, synthetic data offers a more accessible and cost-effective alternative - yet its potential remains largely underestimated.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Synthetic data offers a cost-effective alternative, yet its potential remains largely underexplored.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** However, existing models rely heavily on real-world data, which is costly and labor-intensive to collect.
 - **p. 2 / 1 Introduction - extractive body cue:** However, gathering real-world data at a large scale is both labor-intensive and costly, requiring a large number of robots and human operators, as well as ...
+- **p. 2 / 1 Introduction - extractive body cue:** PAG treats perception tasks, i.e., visual grounding and grasping pose prediction, as intermediate steps in action generation, forming a CoT process that causally infers actions.
 - **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
@@ -62,17 +64,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 | Input/observation | Compared, AnyGrasp, state-of-the-art, traditional, grasping, detection, algorithms, GraspVLA, supports, natural, language, instructions, delivers, robust | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
 | State/latent | Compared, AnyGrasp, state-of-the-art, traditional, grasping, detection, algorithms, GraspVLA, supports, natural | language-grounded task state와 action-policy context | body cue; notation verify |
 | Action/output | summary, contributions, follows, introduce, novel, pretraining, paradigm, relies, entirely, synthetic | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
-| Objective/constraint | contrast, synthetic, data, offers, more, accessible, cost-effective, alternative, potential, remains | policy/action modeling objective | equation anchor required |
+| Objective/constraint | Synthetic, data, offers, cost-effective, alternative, potential, remains, largely, underexplored, However | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
 - **p. 2 / 1 Introduction - extractive body cue:** Compared to AnyGrasp [14], the state-of-the-art in traditional grasping detection algorithms, GraspVLA supports natural language instructions and delivers a robust closed-loop grasping policy.
 - **p. 2 / 1 Introduction - extractive body cue:** These models process robotic visual observations and human instructions to directly generate robot actions.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To bridge this gap, we explore the feasibility of training Vision-Language-Action (VLA) models entirely with large-scale synthetic action data.
 - **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
 - **p. 7 / 5 Hz - extractive body cue:** In the language-conditioned test set, both model achieve similar performance, with GraspVLA slightly outperforming AnyGrasp in grounding ability, due to its comprehensive multiview observation.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Building on this, we present GraspVLA, a VLA model pretrained on large-scale synthetic action data as a foundational model for grasping tasks.
 - **p. 7 / 5 Hz - extractive body cue:** We benchmark GraspVLA against AnyGrasp [14], a state-of-the-art grasp detection model specialized in grasping.
-- **p. 8 / 5 Hz - extractive body cue:** Introducing 2D bounding boxes as intermediate action steps (PAG-2D) yields significant improvements for web categories.
-- **p. 8 / 5 Hz - extractive body cue:** This suggests that extending GraspVLA to new objects does not necessitate action annotations, thereby greatly reducing data collection effort.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -88,10 +90,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 ## Training vs Inference
 
 - **p. 2 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real ...
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To bridge this gap, we explore the feasibility of training Vision-Language-Action (VLA) models entirely with large-scale synthetic action data.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Abstract: Embodied foundation models are gaining increasing attention for their zero-shot generalization, scalability, and adaptability to new tasks through few-shot post-training.
 - **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
 - **p. 7 / 5 Hz - extractive body cue:** 5.5 Efficient Post-Training A defining characteristic of foundation models is their ability to adapt to new tasks.
-- **p. 8 / 5 Hz - extractive body cue:** GraspVLA shows superior adaptability to novel tasks, surpassing the model without pretraining and all baselines.
-- **p. 8 / 5 Hz - extractive body cue:** We experimented with three different post-training tasks to showcase that our model can quickly learn to grasp new items in (a), new grasping patterns in ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -131,8 +133,17 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 7 (5 Hz), p. 7 (5 Hz), p. 8 (5 Hz), objective p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 5 (2 Related Work), p. 5 (2 Related Work), p. 1 (Front matter), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (2 Related Work).
+- **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (1 Introduction), p. 7 (5 Hz), objective p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 5 (2 Related Work), p. 5 (2 Related Work), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (2 Related Work).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Compared to AnyGrasp [14], the state-of-the-art in traditional grasping detection algorithms, GraspVLA supports natural language instructions and delivers a robust closed-loop grasping policy. (p. 2, 1 Introduction).
+- **Objective/update evidence:** Synthetic data offers a cost-effective alternative, yet its potential remains largely underexplored. (p. 1, Body text (section boundary not confidently recovered)).
+- **Temporal/runtime evidence:** In other words, we test each method for 15 × 2 × 5 × 2 = 300 trials in total. (p. 6, 5 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

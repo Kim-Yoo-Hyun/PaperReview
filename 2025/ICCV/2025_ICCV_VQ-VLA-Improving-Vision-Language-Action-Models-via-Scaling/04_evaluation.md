@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.2.1. Experiment Setup - extractive PDF cue:** In simulation, evaluations are performed on the LIBERO90 benchmark within the LIBERO dataset.
-- **p. 4 / 4.1.1. Experiment Setup - extractive PDF cue:** We utilize the LIBERO benchmark[29] to validate and evaluate the effectiveness and scalability of the action tokenizer, using the Franka Panda robot.
-- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive PDF cue:** Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity of ...
-- **p. 4 / 4.1.1. Experiment Setup - extractive PDF cue:** Specifically, the entire LIBERO task suite-including LIBERO-Spatial, LIBEROObject, LIBERO-Goal, LIBERO-10, and LIBERO-90-is used as the entire LIBERO dataset.
-- **p. 5 / 4.2.1. Experiment Setup - extractive PDF cue:** For each task, we collect 50 demonstrations and evaluate performance over 20 trials: 1) Pull out a tissue paper: The robot need to grasp and ...
-- **p. 6 / 4.2.1. Experiment Setup - extractive PDF cue:** All Evaluation environments:We conduct comprehensive evaluations of VQ-VLA in both simulation and real-world settings.
-- **p. 5 / 4.2.1. Experiment Setup - extractive PDF cue:** Our experimental benchmark comprises six manipulation tasks (4 short-horizon tasks, 2 long-horizon tasks) designed to evaluate the model's ability to handle varying task complexities.
-- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive PDF cue:** The model was tested in three real-world tasks (one long-horizon and two short-horizon tasks), and the results are shown in Tab.
+- **p. 6 / 4.2.1. Experiment Setup - extractive body cue:** In simulation, evaluations are performed on the LIBERO90 benchmark within the LIBERO dataset.
+- **p. 4 / 4.1.1. Experiment Setup - extractive body cue:** We utilize the LIBERO benchmark[29] to validate and evaluate the effectiveness and scalability of the action tokenizer, using the Franka Panda robot.
+- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive body cue:** Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity of ...
+- **p. 4 / 4.1.1. Experiment Setup - extractive body cue:** Specifically, the entire LIBERO task suite-including LIBERO-Spatial, LIBEROObject, LIBERO-Goal, LIBERO-10, and LIBERO-90-is used as the entire LIBERO dataset.
+- **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** For each task, we collect 50 demonstrations and evaluate performance over 20 trials: 1) Pull out a tissue paper: The robot need to grasp and ...
+- **p. 6 / 4.2.1. Experiment Setup - extractive body cue:** All Evaluation environments:We conduct comprehensive evaluations of VQ-VLA in both simulation and real-world settings.
+- **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** Our experimental benchmark comprises six manipulation tasks (4 short-horizon tasks, 2 long-horizon tasks) designed to evaluate the model's ability to handle varying task complexities.
+- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive body cue:** The model was tested in three real-world tasks (one long-horizon and two short-horizon tasks), and the results are shown in Tab.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1.2. Effectiveness of Conv Residual VQ-VAE | EMPIRICAL / REAL-ROBOT OR HARDWARE | The evaluation results of residual VQ-VAE architectures.The results demonstrate that the Conv Residual VQ-VAE outperforms the MLP-based version, particularly when trained on the full ... | p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Real-world experimental results: We compare the performance of Baseline, VQO, VQO+L, and VQO+L+M on both short-horizon and long-horizon tasks. In terms of ... | p. 7 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.2.1. Experiment Setup - extractive PDF cue:** In simulation, evaluations are performed on the LIBERO90 benchmark within the LIBERO dataset.
-- **p. 4 / 4.1.1. Experiment Setup - extractive PDF cue:** We utilize the LIBERO benchmark[29] to validate and evaluate the effectiveness and scalability of the action tokenizer, using the Franka Panda robot.
-- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive PDF cue:** Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity of ...
-- **p. 4 / 4.1.1. Experiment Setup - extractive PDF cue:** Specifically, the entire LIBERO task suite-including LIBERO-Spatial, LIBEROObject, LIBERO-Goal, LIBERO-10, and LIBERO-90-is used as the entire LIBERO dataset.
-- **p. 5 / 4.2.1. Experiment Setup - extractive PDF cue:** For each task, we collect 50 demonstrations and evaluate performance over 20 trials: 1) Pull out a tissue paper: The robot need to grasp and ...
-- **p. 6 / 4.2.1. Experiment Setup - extractive PDF cue:** All Evaluation environments:We conduct comprehensive evaluations of VQ-VLA in both simulation and real-world settings.
-- **p. 5 / 4.2.1. Experiment Setup - extractive PDF cue:** Our experimental benchmark comprises six manipulation tasks (4 short-horizon tasks, 2 long-horizon tasks) designed to evaluate the model's ability to handle varying task complexities.
-- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive PDF cue:** The model was tested in three real-world tasks (one long-horizon and two short-horizon tasks), and the results are shown in Tab.
+- **p. 6 / 4.2.1. Experiment Setup - extractive body cue:** In simulation, evaluations are performed on the LIBERO90 benchmark within the LIBERO dataset.
+- **p. 4 / 4.1.1. Experiment Setup - extractive body cue:** We utilize the LIBERO benchmark[29] to validate and evaluate the effectiveness and scalability of the action tokenizer, using the Franka Panda robot.
+- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive body cue:** Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity of ...
+- **p. 4 / 4.1.1. Experiment Setup - extractive body cue:** Specifically, the entire LIBERO task suite-including LIBERO-Spatial, LIBEROObject, LIBERO-Goal, LIBERO-10, and LIBERO-90-is used as the entire LIBERO dataset.
+- **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** For each task, we collect 50 demonstrations and evaluate performance over 20 trials: 1) Pull out a tissue paper: The robot need to grasp and ...
+- **p. 6 / 4.2.1. Experiment Setup - extractive body cue:** All Evaluation environments:We conduct comprehensive evaluations of VQ-VLA in both simulation and real-world settings.
+- **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** Our experimental benchmark comprises six manipulation tasks (4 short-horizon tasks, 2 long-horizon tasks) designed to evaluate the model's ability to handle varying task complexities.
+- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive body cue:** The model was tested in three real-world tasks (one long-horizon and two short-horizon tasks), and the results are shown in Tab.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1. The VQ-VLA pipeline, consisting of two main stages: (1) training a general convolutional residual VQ-VAE and (2) fine-tuning OpenVLA using the LoRA approach. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. The evaluation results of residual VQ-VAE architec- tures.The results demonstrate that the Conv Residual VQ-VAE outperforms the MLP-based version, particularly when trained on ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Effectiveness of VQ-VAE Action Tokenizers in Scaling Simulation Data.The results demonstrate VQM+R reached 80.98%, outperforming the OpenVLA baseline by 7.45%
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 2. All Evaluation environments:We conduct comprehen- sive evaluations of VQ-VLA in both simulation and real-world settings. In simulation, evaluations are performed on the LIBERO- ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Real-world experimental results: We compare the performance of Baseline, VQO, VQO+L, and VQO+L+M on both short-horizon and long-horizon tasks. In terms of the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Tab. 3. The results indicate that the performance of VQL is comparable to that of both VQO+L and VQO, suggesting that the domain gap between ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Performance Comparison Across Real-World Tasks: We observe that the performance of VQL is comparable to that of both VQO+L and VQO, indicating that ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. The Results of Frequencies. We report the comparison results of our VQ-VLA and baseline OpenVLA.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The VQ-VLA pipeline, consisting of two main stages: (1) training a general convolutional residual VQ-VAE and (2) fine-tuning OpenVLA using the LoRA approach. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. The evaluation results of residual VQ-VAE architec- tures.The results demonstrate that the Conv Residual VQ-VAE outperforms the MLP-based version, particularly when trained on ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Effectiveness of VQ-VAE Action Tokenizers in Scaling Simulation Data.The results demonstrate VQM+R reached 80.98%, outperforming the OpenVLA baseline by 7.45%
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 2. All Evaluation environments:We conduct comprehen- sive evaluations of VQ-VLA in both simulation and real-world settings. In simulation, evaluations are performed on the LIBERO- ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Real-world experimental results: We compare the performance of Baseline, VQO, VQO+L, and VQO+L+M on both short-horizon and long-horizon tasks. In terms of the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Tab. 3. The results indicate that the performance of VQL is comparable to that of both VQO+L and VQO, suggesting that the domain gap between ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Performance Comparison Across Real-World Tasks: We observe that the performance of VQL is comparable to that of both VQO+L and VQO, indicating that ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. The Results of Frequencies. We report the comparison results of our VQ-VLA and baseline OpenVLA.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In simulation, evaluations are performed on the LIBERO90 benchmark within the LIBERO dataset. | embodiment, simulator version and control stack | p. 6 (4.2.1. Experiment Setup), p. 4 (4.1.1. Experiment Setup) |
 | Task/environment | We utilize the LIBERO benchmark[29] to validate and evaluate the effectiveness and scalability of the action tokenizer, using the Franka Panda robot. | reset, timeout, object/scene variation | p. 4 (4.1.1. Experiment Setup), p. 7 (4.2.4. Sim&Real Domain Gap Analysis) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 | Primary metric/result | Figure 3. Real-world experimental results: We compare the performance of Baseline, VQO, VQO+L, and VQO+L+M on both short-horizon and long-horizon tasks. In terms of ... | numeric claim only at cited anchor | p. 7 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 4.1.1. Experiment Setup - extractive PDF cue:** Among these, LIBERO90 comprises 90 short-horizon tasks, while the other task suites each contain 10 tasks, with 50 demonstrations per task.
-- **p. 5 / 4.1.1. Experiment Setup - extractive PDF cue:** Additionally, we fine-tune the original OpenVLA model on the LIBERO-90 dataset using LoRA as a baseline for comparison.For a fair comparison, all fine-tuning on the ...
-- **p. 5 / 4.2.1. Experiment Setup - extractive PDF cue:** The system operates at 20 Hz (moderately reduced from the native 100 Hz control frequency to balance training efficiency and motion continuity), with actions defined ...
-- **p. 5 / 4.2.1. Experiment Setup - extractive PDF cue:** For each task, we collect 50 demonstrations and evaluate performance over 20 trials: 1) Pull out a tissue paper: The robot need to grasp and ...
-- **p. 6 / 4.2.3. Performance on Long-Horizon Tasks - extractive PDF cue:** For the "Put the toy into the drawer" task, a representative longhorizon scenario, the baseline model was only able to complete the first step of ...
-- **p. 3 / 3. Methods - extractive PDF cue:** LLM's vocabulary, OpenVLA overwrites the 256 least-used tokens in the Llama tokenizer (last 256 tokens) rather than using special tokens, as the original tokenizer only ...
+- **p. 4 / 4.1.1. Experiment Setup - extractive body cue:** Among these, LIBERO90 comprises 90 short-horizon tasks, while the other task suites each contain 10 tasks, with 50 demonstrations per task.
+- **p. 5 / 4.1.1. Experiment Setup - extractive body cue:** Additionally, we fine-tune the original OpenVLA model on the LIBERO-90 dataset using LoRA as a baseline for comparison.For a fair comparison, all fine-tuning on the ...
+- **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** The system operates at 20 Hz (moderately reduced from the native 100 Hz control frequency to balance training efficiency and motion continuity), with actions defined ...
+- **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** For each task, we collect 50 demonstrations and evaluate performance over 20 trials: 1) Pull out a tissue paper: The robot need to grasp and ...
+- **p. 6 / 4.2.3. Performance on Long-Horizon Tasks - extractive body cue:** For the "Put the toy into the drawer" task, a representative longhorizon scenario, the baseline model was only able to complete the first step of ...
+- **p. 3 / 3. Methods - extractive body cue:** LLM's vocabulary, OpenVLA overwrites the 256 least-used tokens in the Llama tokenizer (last 256 tokens) rather than using special tokens, as the original tokenizer only ...
 
 ## Generalization and Failure Cases
 
@@ -164,12 +164,12 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Limitations and Future Works - extractive PDF cue:** Despite these promising results, there still remain some limitations and opportunities for future work.
-- **p. 6 / 4.2.1. Experiment Setup - extractive PDF cue:** 4) Flip the pot upright: We set a flipped pot on the platform, the robot need to flip and upright a fallen cooking pot.
-- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive PDF cue:** Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity of ...
-- **p. 6 / 4.2.3. Performance on Long-Horizon Tasks - extractive PDF cue:** In contrast, the VQO+L+M model successfully opened the drawer in all test cases, demonstrating its robustness and reliability in handling complex sequential tasks.
+- **p. 8 / 5. Limitations and Future Works - extractive body cue:** Despite these promising results, there still remain some limitations and opportunities for future work.
+- **p. 6 / 4.2.1. Experiment Setup - extractive body cue:** 4) Flip the pot upright: We set a flipped pot on the platform, the robot need to flip and upright a fallen cooking pot.
+- **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive body cue:** Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity of ...
+- **p. 6 / 4.2.3. Performance on Long-Horizon Tasks - extractive body cue:** In contrast, the VQO+L+M model successfully opened the drawer in all test cases, demonstrating its robustness and reliability in handling complex sequential tasks.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.2.1. Experiment Setup), p. 4 (4.1.1. Experiment Setup), p. 7 (4.2.4. Sim&Real Domain Gap Analysis), p. 4 (4.1.1. Experiment Setup), p. 5 (4.2.1. Experiment Setup), p. 6 (4.2.1. Experiment Setup), metrics p. 6 (4.2.2. Performance on Short-Horizon Tasks), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 7 (4.2.3. Performance on Long-Horizon Tasks), baselines p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.3. Scaling Data Improves VQ-VAE Action Tokenizer), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 8 (4.3.2. Embedding Integration Effectiveness), p. 8 (4.3.1. Action Chunking via VQ-VAE and Autoregressive), results p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 7 (Figure/Table caption), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 8 (4.3.2. Embedding Integration Effectiveness).
+- **Evidence anchors reviewed:** datasets p. 6 (4.2.1. Experiment Setup), p. 4 (4.1.1. Experiment Setup), p. 7 (4.2.4. Sim&Real Domain Gap Analysis), p. 4 (4.1.1. Experiment Setup), p. 5 (4.2.1. Experiment Setup), p. 6 (4.2.1. Experiment Setup), metrics p. 6 (4.2.2. Performance on Short-Horizon Tasks), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 7 (4.2.3. Performance on Long-Horizon Tasks), baselines p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.3. Scaling Data Improves VQ-VAE Action Tokenizer), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 8 (4.3.2. Embedding Integration Effectiveness), p. 8 (4.3.1. Action Chunking via VQ-VAE and Autoregressive), results p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 7 (Figure/Table caption), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 8 (4.3.2. Embedding Integration Effectiveness).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

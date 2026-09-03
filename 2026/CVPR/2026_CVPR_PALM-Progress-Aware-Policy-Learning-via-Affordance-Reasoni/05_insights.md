@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 PALM processes three synchronized inputs: a language instruction l, an image observation ot, and a robot state st.를 This explicit progress signal reduces ambiguity in long-horizon control: visually similar observations may correspond to different actions depending on stage, and pt disambiguates these cases by providing a continuous indicator of "wher ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 PALM achieves stateof-the-art results on two benchmarks, with a 12.5% improvement on CALVIN ABC→D and 91.8% success on LIBEROLONG, and shows significant robustness in real-world experiments across long-horizon generalization settings.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation to enable reliable execution across longhorizon, contact-rich manipulati ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** PALM processes three synchronized inputs: a language instruction l, an image observation ot, and a robot state st. (p. 3, 3.2. PALM Architecture).
+- **Paper-specific mechanism:** Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation to enable reliable execution across longhorizon, contact-rich manipulati ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Figure 1. In contrast to vanilla VLAs that directly map inputs to actions or to predictive methods that forecast dense future images, PALM introduces learnable queries to forecast a structured ... (p. 1, Figure/Table caption); the relevant task/metric cue is Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average success rate of 94.5%. (p. 6, 4.1. Simulation Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** This absence of temporal grounding leads to characteristic long-horizon failure modes: repeated or unnecessary actions, skipped required subtasks, premature termination, and even declaring success in incorrect states. (p. 2, 1. Introduction).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For pre-training, we utilize a mixed dataset from the DROID [54] and BridgeData V2 [113] datasets, which together provide large-scale, in-the-wild robotic arm demonstrations to build a foundational understanding of diverse real-world ....
-3. Compare against the body-reported baseline or a matched simpler baseline: PALM consistently and substantially outperforms all baselines..
-4. Report the body metric and its denominator/aggregation: For each task suite (Spatial, Object, Goal, Long), we report the average success rate and standard error across 3 seeds with 500 episodes each..
-5. Re-run the body-reported ablation/failure condition: Ablation studies of affordance components on CALVIN ABC→D and LIBERO-LONG benchmarks demonstrate the effectiveness of the four components of affordance prediction. increases (e.g., 82.0% for five consecutive subtasks)..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: PALM processes three synchronized inputs: a language instruction l, an image observation ot, and a robot state st. (p. 3, 3.2. PALM Architecture); preserve the objective/update rule: Each task ⌧" T defines an observation-action distribution p (ot, at ∂⌧) and an implicit temporal phase progression. (p. 3, 3.1. Problem Formulation).
+2. Use the paper-reported task/data/environment cue: For pre-training, we utilize a mixed dataset from the DROID [54] and BridgeData V2 [113] datasets, which together provide large-scale, in-the-wild robotic arm demonstrations to build a foundational understanding of ... (p. 5, 4. Experiments).
+3. Compare against the reported or matched baseline: PALM consistently and substantially outperforms all baselines. (p. 6, 4.1. Simulation Experiments).
+4. Report the body metric with its denominator and aggregation: Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average success rate of 94.5%. (p. 6, 4.1. Simulation Experiments).
+5. Re-run the reported ablation or stress/failure condition: Ablation studies of affordance components on CALVIN ABC→D and LIBERO-LONG benchmarks demonstrate the effectiveness of the four components of affordance prediction. increases (e.g., 82.0% for five consecutive subtasks). (p. 6, 4.1. Simulation Experiments); if none is reported, design one around: This absence of temporal grounding leads to characteristic long-horizon failure modes: repeated or unnecessary actions, skipped required subtasks, premature termination, and even declaring success in incorrect states. (p. 2, 1. Introduction).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics); the primary result is directionally consistent at p. 6 (4.1. Simulation Experiments), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 2 (1. Introduction), match the reported outcome at p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), and measure the boundary at p. 2 (1. Introduction), p. 2 (1. Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, follows, introduce mechanism이 PALM consistently and substantially outperforms all baselines. 대비 For each task suite (Spatial, Object, Goal, Long), we report the average success rate and standard error across ...을 개선하고, PALM achieves stateof-the-art results on two benchmarks, with a 12.5% improvement on CALVIN ABC→D and 91.8% ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (PALM processes three synchronized inputs: a language instruction l, an image observation ot, and a robot state st.), does the paper-specific mechanism (Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation ...) retain the reported evaluation outcome (Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average ...) when tested against the paper's strongest explicit boundary (This absence of temporal grounding leads to characteristic long-horizon failure modes: repeated or unnecessary actions, skipped required subtasks, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation to enable reliable execution across longhorizon, contact-rich manipulati ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Figure 1. In contrast to vanilla VLAs that directly map inputs to actions or to predictive methods that forecast dense future images, PALM introduces learnable queries to forecast a structured ... (p. 1, Figure/Table caption).
+- **Strongest explicit boundary:** This absence of temporal grounding leads to characteristic long-horizon failure modes: repeated or unnecessary actions, skipped required subtasks, premature termination, and even declaring success in incorrect states. (p. 2, 1. Introduction).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

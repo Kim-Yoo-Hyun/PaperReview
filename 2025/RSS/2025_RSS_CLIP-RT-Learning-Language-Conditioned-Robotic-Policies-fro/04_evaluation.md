@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p016.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p016.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p016.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p016.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Adapting CLIP-RT to the LIBERO Benchmark | EMPIRICAL / SIMULATION | As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%. | p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark) |
 | B. Adapting CLIP-RT to the LIBERO Benchmark | EMPIRICAL / SIMULATION | [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared ... | p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark) |
@@ -62,7 +62,7 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This set of tasks serves as a benchmark for evaluating the model's ability to acquire new skills using in-domain data, We first collect indomain ... | embodiment, simulator version and control stack | p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark) |
 | Task/environment | This modification enables us to evaluate the core architectural strengths of CLIP-RT-language-based policy pretraining and lightweight design-on a widely used simulation benchmark (LIBERO), ‘The ... | reset, timeout, object/scene variation | p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (A. Tasks & Dataset) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 9: Example failure cases of CLIP-RT. (a) CLIP-RT
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: A simplified 2D example of stochastic trajectory augmentation (STA). (a): a demonstration trajectory from the starts to the endpoint ¢, passing through a ...
 
-- **PDF anchors reviewed:** datasets p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 8 (A. Tasks & Dataset), p. 8 (B. Adapting CLIP-RT to the LIBERO Benchmark), metrics p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 5 (C. Experiments on Common and Novel Tasks), p. 5 (C. Experiments on Common and Novel Tasks), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 6 (Figure/Table caption), results p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (C. Experiments on Common and Novel Tasks).
+- **Evidence anchors reviewed:** datasets p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 8 (A. Tasks & Dataset), p. 8 (B. Adapting CLIP-RT to the LIBERO Benchmark), metrics p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 5 (C. Experiments on Common and Novel Tasks), p. 5 (C. Experiments on Common and Novel Tasks), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 6 (Figure/Table caption), results p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (C. Experiments on Common and Novel Tasks).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared with OpenVLA based on its lightweight ... (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark).
+- **Metric evidence:** As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%. (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark).
+- **Baseline/ablation evidence:** We introduce baseline ‘models and then discuss the results in detail (p. 5, C. Experiments on Common and Novel Tasks).
+- **Failure/negative evidence:** This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from the gripper, as shown in Figure 9-(d), The heuristies does not adequately ... (p. 8, 256 33%).

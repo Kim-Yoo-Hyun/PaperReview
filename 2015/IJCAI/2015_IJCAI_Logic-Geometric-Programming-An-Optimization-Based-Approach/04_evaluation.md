@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf; PDF retrieval source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf; PDF retrieval source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | For brevity, we provide a detailed definition of ψ(x(T)) and quantitative results on achieved scores in an appendix on the author webpage. | p. 5 (5 Experiments) |
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The example demonstrates success on our construction problems, leading to (locally, approximately) optimal full manipulation paths across up to 50 manipulations. | p. 6 (5 Experiments) |
@@ -52,7 +52,7 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Instead we optimize the grasp pose (the relative object-hand pose), assuming that a compliant real-world gripper could perform the actual grasp. | embodiment, simulator version and control stack | p. 5 (5 Experiments), p. 5 (5 Experiments) |
 | Task/environment | The control costs penalized accelerations and implemented a weak prior for the robot arm to be in the homing posi1934 | reset, timeout, object/scene variation | p. 5 (5 Experiments), p. 6 (5 Experiments) |
@@ -131,7 +131,16 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 - **p. 5 / 5 Experiments - extractive body cue:** The geometric and differential constraints hpath, gpath implement zero velocity of the object-hand pose while inhand, zero velocities and accelerations during pick and place, and ...
 - **p. 6 / 5 Experiments - extractive body cue:** The resulting trajectories are smooth and collision free (if keyframe optimization indicated feasibility) and generate the optimized end state.
 
-- **PDF anchors reviewed:** datasets p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), metrics p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), baselines 본문 anchor 없음, results p. 5 (5 Experiments), p. 6 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), metrics p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), baselines 본문 anchor 없음, results p. 5 (5 Experiments), p. 6 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For brevity, we provide a detailed definition of ψ(x(T)) and quantitative results on achieved scores in an appendix on the author webpage. (p. 5, 5 Experiments).
+- **Metric evidence:** When blocks are placed on a board, we reward more central positionings. (p. 5, 5 Experiments).
+- **Baseline/ablation evidence:** For brevity, we provide a detailed definition of ψ(x(T)) and quantitative results on achieved scores in an appendix on the author webpage. (p. 5, 5 Experiments).
+- **Failure/negative evidence:** We did not consider articulated fingers and optimize over finger motions for grasping as this is unrealistic to transfer to real-world. (p. 5, 5 Experiments).

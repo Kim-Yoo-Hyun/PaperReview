@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 The planner outputs a sequence of high-level actions π = (a1, . . . , aM) with grounded arguments (e.g., centroids and sizes), which are parsed into skill parameters for downstream controllers.를 Crucially, because each frame-level graph Mn stores both its capture timestamp τn and estimated latency ∆Tn, the planner can retrieve the scene state aligned with the user's instruction time τu.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal dynamics of ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** An image encoder Φv and a text encoder Φt (e.g., CLIP [27]) are adopted to extract masked visual features f img i = Φv(Irgb n ; bi,n) and natural-language features ... (p. 3, III. METHODOLOGY).
+- **Paper-specific mechanism:** The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal ... (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is These static results establish a baseline for subsequent experiments on dynamic environments, where temporal reasoning and latency-awareness play a central role. (p. 5, IV. EXPERIMENTS); the relevant task/metric cue is Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower than 1Edge precision corresponds to spatial edges in ConceptGraph. (p. 5, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses. (p. 6, IV. EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Unlike static benchmarks, these videos feature continuous scene evolution, where objects are moved, occluded, rotated, duplicated, or removed..
-3. Compare against the body-reported baseline or a matched simpler baseline: With ST-OVSG, the average similarity score is 0.1702, compared to 0.164 without STOVSG..
-4. Report the body metric and its denominator/aggregation: Across 17 trials, ST-OVSG achieved a success rate of 70.5%..
-5. Re-run the body-reported ablation/failure condition: Fig. 3. Execution process of the proposed method in a task. Left: users provide a natural-language grasp-and-place instruction at the local side (issue at 5.5s and communication latency is 500ms). ST-OVSG builds ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: An image encoder Φv and a text encoder Φt (e.g., CLIP [27]) are adopted to extract masked visual features f img i = Φv(Irgb n ; bi,n) and natural-language features ... (p. 3, III. METHODOLOGY); preserve the objective/update rule: The cost is cspa j,k,n = wiou (1 -IoU(uj,k,n, zj,k,n)) + warea (p. 4, III. METHODOLOGY).
+2. Use the paper-reported task/data/environment cue: Static Representation Construction To evaluate the quality of the proposed static scene representation, we conducted experiments on the Replica dataset [32], which provides high-fidelity indoor environments. (p. 5, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: With ST-OVSG, the average similarity score is 0.1702, compared to 0.164 without STOVSG. (p. 6, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower than 1Edge precision corresponds to spatial edges in ConceptGraph. (p. 5, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: Unlike static benchmarks, these videos feature continuous scene evolution, where objects are moved, occluded, rotated, duplicated, or removed. (p. 5, IV. EXPERIMENTS); if none is reported, design one around: Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses. (p. 6, IV. EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY); the primary result is directionally consistent at p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), and measure the boundary at p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contributions, summarized mechanism이 With ST-OVSG, the average similarity score is 0.1702, compared to 0.164 without STOVSG. 대비 Across 17 trials, ST-OVSG achieved a success rate of 70.5%.을 개선하고, Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (An image encoder Φv and a text encoder Φt (e.g., CLIP [27]) are adopted to extract masked visual features f img i ...), does the paper-specific mechanism (The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which ...) retain the reported evaluation outcome (Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower ...) when tested against the paper's strongest explicit boundary (Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal ... (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** These static results establish a baseline for subsequent experiments on dynamic environments, where temporal reasoning and latency-awareness play a central role. (p. 5, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses. (p. 6, IV. EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

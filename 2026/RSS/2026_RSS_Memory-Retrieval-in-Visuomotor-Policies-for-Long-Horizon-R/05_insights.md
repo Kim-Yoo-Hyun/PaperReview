@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 We parameterize the visuomotor policy πθ(at / τt, l) with three main components: (i) modality-specific encoders consisting of an observation encoder gobs θ and an action encoder gact θ , which map ...를 Given Mt, the current embedding xt, and the task instruction l, the policy backbone fθ produces a latent state zt = fθ(Mt, xt, l), This latent state is passed to two prediction ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 2. HALO learns to retrieve diverse forms of task-relevant information from history, guided by priors distilled from vision-language foundation models. observations can amplify this effect, as the policy repeatedly attends to ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We parameterize the visuomotor policy πθ(at / τt, l) with three main components: (i) modality-specific encoders consisting of an observation encoder gobs θ and an action encoder gact θ , ... (p. 3, III. HALO).
+- **Paper-specific mechanism:** To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning. (p. 2, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS); the relevant task/metric cue is A moderate value (k = 8) achieves the best performance (52% success). (p. 8, IV. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift and cascading failures over long horizons. (p. 3, III. HALO).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In addition, we measure manipulation and memory failures in real-world evaluations, finding that HALO reduces them by 8% and 25% absolute over full attention in the ‘Retrieve Object' task, respectively..
-3. Compare against the body-reported baseline or a matched simpler baseline: (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%..
-4. Report the body metric and its denominator/aggregation: A moderate value (k = 8) achieves the best performance (52% success)..
-5. Re-run the body-reported ablation/failure condition: We compare HALO against a variant trained without VQA supervision..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We parameterize the visuomotor policy πθ(at / τt, l) with three main components: (i) modality-specific encoders consisting of an observation encoder gobs θ and an action encoder gact θ , ... (p. 3, III. HALO); preserve the objective/update rule: Concretely, it generates task-relevant, memory-dependent question-answer pairs from demonstration trajectories and trains the policy jointly with a video questionanswering objective, transferring VLM priors to the visuomotor policy. (p. 1, Abstract).
+2. Use the paper-reported task/data/environment cue: In addition, we measure manipulation and memory failures in real-world evaluations, finding that HALO reduces them by 8% and 25% absolute over full attention in the ‘Retrieve Object' task, respectively. (p. 7, IV. EXPERIMENTS).
+3. Compare against the reported or matched baseline: (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: A moderate value (k = 8) achieves the best performance (52% success). (p. 8, IV. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: We compare HALO against a variant trained without VQA supervision. (p. 8, IV. EXPERIMENTS); if none is reported, design one around: These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift and cascading failures over long horizons. (p. 3, III. HALO).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (III. HALO), p. 4 (III. HALO), p. 3 (III. HALO); the primary result is directionally consistent at p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), and measure the boundary at p. 3 (III. HALO), p. 7 (IV. EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 address, challenges, HALO mechanism이 (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard ... 대비 A moderate value (k = 8) achieves the best performance (52% success).을 개선하고, Fig. 2. HALO learns to retrieve diverse forms of task-relevant information from history, guided by priors ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We parameterize the visuomotor policy πθ(at / τt, l) with three main components: (i) modality-specific encoders consisting of an observation encoder gobs ...), does the paper-specific mechanism (To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning.) retain the reported evaluation outcome (A moderate value (k = 8) achieves the best performance (52% success).) when tested against the paper's strongest explicit boundary (These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (A moderate value (k = 8) achieves the best performance (52% success).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (10 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning. (p. 2, I. INTRODUCTION).
+- **Paper-supported outcome:** (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS).
+- **Strongest explicit boundary:** These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift and cascading failures over long horizons. (p. 3, III. HALO).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

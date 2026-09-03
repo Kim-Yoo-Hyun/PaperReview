@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality; PDF retrieval source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality; PDF retrieval source: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | We use Proximal Policy Optimisation (PPO) [9] to learn a parametric stochastic policy πθ (actor), mapping from observations o ∈O to actions ... | p. 4 (2 Method), p. 10 (2 Method) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | To account for unmodelled dynamics, we use a Random Network Adversary (RNA, see below). | p. 10 (2 Method), p. 6 (2 Method) |
@@ -133,8 +133,17 @@ PDF body method statement (p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p. 17 (Method), p. 6 (2 Method), p. 7 (2 Method), objective p. 4 (2 Method), p. 6 (2 Method), p. 16 (Method), p. 6 (2 Method), p. 4 (2 Method), p. 7 (2 Method), temporal p. 10 (2 Method), p. 10 (2 Method), p. 7 (2 Method), p. 11 (2 Method), p. 13 (Experiment), p. 17 (Method).
+- **Evidence anchors reviewed:** method p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p. 17 (Method), p. 6 (2 Method), p. 7 (2 Method), objective p. 4 (2 Method), p. 6 (2 Method), p. 16 (Method), p. 6 (2 Method), p. 4 (2 Method), p. 7 (2 Method), temporal p. 10 (2 Method), p. 10 (2 Method), p. 7 (2 Method), p. 11 (2 Method), p. 13 (Experiment), p. 17 (Method).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We use Proximal Policy Optimisation (PPO) [9] to learn a parametric stochastic policy πθ (actor), mapping from observations o ∈O to actions a ∈A. (p. 4, 2 Method).
+- **Objective/update evidence:** 2.3 Policy Learning with RL RL Formulation: The task of manipulating the cube to the desired orientation is modelled as a sequential decision making problem where the agent interacts with ... (p. 4, 2 Method).
+- **Temporal/runtime evidence:** To make our policies more robust to the changing inference frequency and jitter resulting from our ROS-based inference system, we add stochastic delays to cube pose and action delivery time ... (p. 10, 2 Method).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

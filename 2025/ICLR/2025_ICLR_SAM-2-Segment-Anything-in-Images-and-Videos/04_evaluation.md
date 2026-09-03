@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2408.00714; PDF retrieval source: https://arxiv.org/pdf/2408.00714. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2408.00714; PDF retrieval source: https://arxiv.org/pdf/2408.00714. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 
 ## Evaluation Body Digest
 
-- **p. 30 / dataset - extractive PDF cue:** Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world scenarios for video ...
-- **p. 32 / dataset - extractive PDF cue:** The video benchmark suite included domains such as driving data, microscopy, egocentric video, robotic surgery.
-- **p. 30 / dataset - extractive PDF cue:** Sparse All 12 12 4,012 412 LVOSv2 (Hong et al., 2024) LVOSv2 Long videos Long-term video object segmentation benchmark, on average 1.14 minutes Dense Validation ...
-- **p. 33 / dataset - extractive PDF cue:** The dataset was designed for the PVS task.
-- **p. 31 / dataset - extractive PDF cue:** LVOS val Method J &F J F DEVA (Cheng et al., 2023b) 55.9 51.1 60.7 DDMemory (Hong et al., 2023) 60.7 55.0 66.3 Cutie-base (Cheng ...
-- **p. 31 / dataset - extractive PDF cue:** LVOSv2 val Method J &F Js Fs Ju Fu STCN (Cheng et al., 2021a) 60.6 57.2 64.0 57.5 63.8 RDE (Li et al., 2022a) 62.2 ...
-- **p. 32 / dataset - extractive PDF cue:** SAM 2 was evaluated on the same suite of image benchmarks as Kirillov et al.
-- **p. 33 / 3. Who funded the creation of the dataset? - extractive PDF cue:** The dataset was funded by Meta FAIR.
+- **p. 30 / dataset - extractive body cue:** Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world scenarios for video ...
+- **p. 32 / dataset - extractive body cue:** The video benchmark suite included domains such as driving data, microscopy, egocentric video, robotic surgery.
+- **p. 30 / dataset - extractive body cue:** Sparse All 12 12 4,012 412 LVOSv2 (Hong et al., 2024) LVOSv2 Long videos Long-term video object segmentation benchmark, on average 1.14 minutes Dense Validation ...
+- **p. 33 / dataset - extractive body cue:** The dataset was designed for the PVS task.
+- **p. 31 / dataset - extractive body cue:** LVOS val Method J &F J F DEVA (Cheng et al., 2023b) 55.9 51.1 60.7 DDMemory (Hong et al., 2023) 60.7 55.0 66.3 Cutie-base (Cheng ...
+- **p. 31 / dataset - extractive body cue:** LVOSv2 val Method J &F Js Fs Ju Fu STCN (Cheng et al., 2021a) 60.6 57.2 64.0 57.5 63.8 RDE (Li et al., 2022a) 62.2 ...
+- **p. 32 / dataset - extractive body cue:** SAM 2 was evaluated on the same suite of image benchmarks as Kirillov et al.
+- **p. 33 / 3. Who funded the creation of the dataset? - extractive body cue:** The dataset was funded by Meta FAIR.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | dataset | SYSTEM / EVALUATION SCOPE UNRESOLVED | We report the performance of prior works as evaluated by the LVOSv2 authors. | p. 31 (dataset) |
 | dataset | SYSTEM / EVALUATION SCOPE UNRESOLVED | Risks and harms In Section E.1.1 of the main text we analyze SAM 2 performance on people across demographic groups. | p. 32 (dataset) |
@@ -38,14 +38,14 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 
 ## Dataset / Benchmark Role
 
-- **p. 30 / dataset - extractive PDF cue:** Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world scenarios for video ...
-- **p. 32 / dataset - extractive PDF cue:** The video benchmark suite included domains such as driving data, microscopy, egocentric video, robotic surgery.
-- **p. 30 / dataset - extractive PDF cue:** Sparse All 12 12 4,012 412 LVOSv2 (Hong et al., 2024) LVOSv2 Long videos Long-term video object segmentation benchmark, on average 1.14 minutes Dense Validation ...
-- **p. 33 / dataset - extractive PDF cue:** The dataset was designed for the PVS task.
-- **p. 31 / dataset - extractive PDF cue:** LVOS val Method J &F J F DEVA (Cheng et al., 2023b) 55.9 51.1 60.7 DDMemory (Hong et al., 2023) 60.7 55.0 66.3 Cutie-base (Cheng ...
-- **p. 31 / dataset - extractive PDF cue:** LVOSv2 val Method J &F Js Fs Ju Fu STCN (Cheng et al., 2021a) 60.6 57.2 64.0 57.5 63.8 RDE (Li et al., 2022a) 62.2 ...
-- **p. 32 / dataset - extractive PDF cue:** SAM 2 was evaluated on the same suite of image benchmarks as Kirillov et al.
-- **p. 33 / 3. Who funded the creation of the dataset? - extractive PDF cue:** The dataset was funded by Meta FAIR.
+- **p. 30 / dataset - extractive body cue:** Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world scenarios for video ...
+- **p. 32 / dataset - extractive body cue:** The video benchmark suite included domains such as driving data, microscopy, egocentric video, robotic surgery.
+- **p. 30 / dataset - extractive body cue:** Sparse All 12 12 4,012 412 LVOSv2 (Hong et al., 2024) LVOSv2 Long videos Long-term video object segmentation benchmark, on average 1.14 minutes Dense Validation ...
+- **p. 33 / dataset - extractive body cue:** The dataset was designed for the PVS task.
+- **p. 31 / dataset - extractive body cue:** LVOS val Method J &F J F DEVA (Cheng et al., 2023b) 55.9 51.1 60.7 DDMemory (Hong et al., 2023) 60.7 55.0 66.3 Cutie-base (Cheng ...
+- **p. 31 / dataset - extractive body cue:** LVOSv2 val Method J &F Js Fs Ju Fu STCN (Cheng et al., 2021a) 60.6 57.2 64.0 57.5 63.8 RDE (Li et al., 2022a) 62.2 ...
+- **p. 32 / dataset - extractive body cue:** SAM 2 was evaluated on the same suite of image benchmarks as Kirillov et al.
+- **p. 33 / 3. Who funded the creation of the dataset? - extractive body cue:** The dataset was funded by Meta FAIR.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -55,7 +55,7 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world scenarios for ... | embodiment, simulator version and control stack | p. 30 (dataset), p. 32 (dataset) |
 | Task/environment | The video benchmark suite included domains such as driving data, microscopy, egocentric video, robotic surgery. | reset, timeout, object/scene variation | p. 32 (dataset), p. 30 (dataset) |
@@ -101,10 +101,10 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 | Primary metric/result | Risks and harms In Section E.1.1 of the main text we analyze SAM 2 performance on people across demographic groups. | numeric claim only at cited anchor | p. 32 (dataset) |
 
 - Numeric sentences retained from the body:
-- **p. 32 / dataset - extractive PDF cue:** Cost and impact of compute The released SAM 2 was trained on 256 A100 GPUs for 108 hours.
-- **p. 27 / Method - extractive PDF cue:** SAM 2 (Hiera-B+) trained only on SA-1B outperforms SAM (ViT-H) on 1-click accuracy, and both SAM (ViT-H) and HQ-SAM (ViT-H) on 5-click accuracy while being ...
-- **p. 27 / Method - extractive PDF cue:** SAM 2 (Hiera-L) further improves the 1-click accuracy by 1 point on average, but trading off speed.
-- **p. 27 / Method - extractive PDF cue:** Despite being slower than Hiera-B+, it is still 3.4x faster than SAM (ViT-H) and 1.5x faster than SAM (ViT-B).
+- **p. 32 / dataset - extractive body cue:** Cost and impact of compute The released SAM 2 was trained on 256 A100 GPUs for 108 hours.
+- **p. 27 / Method - extractive body cue:** SAM 2 (Hiera-B+) trained only on SA-1B outperforms SAM (ViT-H) on 1-click accuracy, and both SAM (ViT-H) and HQ-SAM (ViT-H) on 5-click accuracy while being ...
+- **p. 27 / Method - extractive body cue:** SAM 2 (Hiera-L) further improves the 1-click accuracy by 1 point on average, but trading off speed.
+- **p. 27 / Method - extractive body cue:** Despite being slower than Hiera-B+, it is still 3.4x faster than SAM (ViT-H) and 1.5x faster than SAM (ViT-B).
 
 ## Generalization and Failure Cases
 
@@ -139,14 +139,14 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 
 ## Limitations and Verification Questions
 
-- **p. 21 / C Limitations - extractive PDF cue:** We leveraged our online model in the loop setup to enable this, requesting annotators to use SAM 2 interactively to identify failure modes and then ...
-- **p. 18 / C Limitations - extractive PDF cue:** If the ground-truth does not contain a mask for a frame, we do not supervise any of the mask outputs (but always supervise the occlusion ...
-- **p. 16 / C Limitations - extractive PDF cue:** The model may fail to segment objects across shot changes and can lose track of or confuse objects in crowded scenes, after long occlusions or ...
-- **p. 17 / C Limitations - extractive PDF cue:** Our memory encoder does not use an additional image encoder and instead reuses the image embeddings produced by the Hiera encoder, which are fused with ...
-- **p. 23 / C Limitations - extractive PDF cue:** 3We note that this estimation does not account for the model's tracking FPS.
-- **p. 24 / C Limitations - extractive PDF cue:** If a dataset does not follow the standard VOS format, we preprocess it into a format similar to MOSE (Ding et al., 2023).
+- **p. 21 / C Limitations - extractive body cue:** We leveraged our online model in the loop setup to enable this, requesting annotators to use SAM 2 interactively to identify failure modes and then ...
+- **p. 18 / C Limitations - extractive body cue:** If the ground-truth does not contain a mask for a frame, we do not supervise any of the mask outputs (but always supervise the occlusion ...
+- **p. 16 / C Limitations - extractive body cue:** The model may fail to segment objects across shot changes and can lose track of or confuse objects in crowded scenes, after long occlusions or ...
+- **p. 17 / C Limitations - extractive body cue:** Our memory encoder does not use an additional image encoder and instead reuses the image embeddings produced by the Hiera encoder, which are fused with ...
+- **p. 23 / C Limitations - extractive body cue:** 3We note that this estimation does not account for the model's tracking FPS.
+- **p. 24 / C Limitations - extractive body cue:** If a dataset does not follow the standard VOS format, we preprocess it into a format similar to MOSE (Ding et al., 2023).
 
-- **PDF anchors reviewed:** datasets p. 30 (dataset), p. 32 (dataset), p. 30 (dataset), p. 33 (dataset), p. 31 (dataset), p. 31 (dataset), metrics p. 30 (dataset), p. 31 (dataset), p. 32 (dataset), p. 32 (dataset), baselines p. 31 (dataset), p. 31 (dataset), results p. 31 (dataset), p. 32 (dataset), p. 32 (dataset).
+- **Evidence anchors reviewed:** datasets p. 30 (dataset), p. 32 (dataset), p. 30 (dataset), p. 33 (dataset), p. 31 (dataset), p. 31 (dataset), metrics p. 30 (dataset), p. 31 (dataset), p. 32 (dataset), p. 32 (dataset), baselines p. 31 (dataset), p. 31 (dataset), results p. 31 (dataset), p. 32 (dataset), p. 32 (dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

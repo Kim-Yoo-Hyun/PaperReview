@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.4. Ablation
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** These scores are assessed under two setups: "seen rooms" where the localization is performed in the environments present in the training dataset and "unseen rooms" ...
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** The dataset is labeled with 35 distinct action classes for classification tasks.
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** This demonstrates the broad applicability and flexibility of our approach in real-world environments.
-- **p. 6 / 5.2. Inertial Localization Results - extractive PDF cue:** This is because each recording in the dataset is relatively long, with an average duration of 525 seconds and a maximum of 2,526 seconds.
-- **p. 8 / 5.4. Ablation Studies - extractive PDF cue:** This holistic reasoning capability ensures the model generates a more precise and coherent trajectory prediction of the user's movements within their environment.
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
-- **p. 6 / 5.2. Inertial Localization Results - extractive PDF cue:** In their original work, they trained three separate models, each for a different scene.
-- **p. 8 / 5.4. Ablation Studies - extractive PDF cue:** It shows that when these two modules work in tandem, they align sequential motion data with the environmental settings.
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** These scores are assessed under two setups: "seen rooms" where the localization is performed in the environments present in the training dataset and "unseen rooms" ...
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** The dataset is labeled with 35 distinct action classes for classification tasks.
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** This demonstrates the broad applicability and flexibility of our approach in real-world environments.
+- **p. 6 / 5.2. Inertial Localization Results - extractive body cue:** This is because each recording in the dataset is relatively long, with an average duration of 525 seconds and a maximum of 2,526 seconds.
+- **p. 8 / 5.4. Ablation Studies - extractive body cue:** This holistic reasoning capability ensures the model generates a more precise and coherent trajectory prediction of the user's movements within their environment.
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
+- **p. 6 / 5.2. Inertial Localization Results - extractive body cue:** In their original work, they trained three separate models, each for a different scene.
+- **p. 8 / 5.4. Ablation Studies - extractive body cue:** It shows that when these two modules work in tandem, they align sequential motion data with the environmental settings.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.4. Ablation
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Inertial Localization Results. We evaluate the accuracy using two metrics: the localization success rate (%) at various error distance thresholds and the ... | p. 6 (Figure/Table caption) |
 | 5.4. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | 4, using only IMU signals, we achieve results comparable to IMU2CLIP [41]. | p. 8 (5.4. Ablation Studies) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.4. Ablation
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** These scores are assessed under two setups: "seen rooms" where the localization is performed in the environments present in the training dataset and "unseen rooms" ...
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** The dataset is labeled with 35 distinct action classes for classification tasks.
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** This demonstrates the broad applicability and flexibility of our approach in real-world environments.
-- **p. 6 / 5.2. Inertial Localization Results - extractive PDF cue:** This is because each recording in the dataset is relatively long, with an average duration of 525 seconds and a maximum of 2,526 seconds.
-- **p. 8 / 5.4. Ablation Studies - extractive PDF cue:** This holistic reasoning capability ensures the model generates a more precise and coherent trajectory prediction of the user's movements within their environment.
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
-- **p. 6 / 5.2. Inertial Localization Results - extractive PDF cue:** In their original work, they trained three separate models, each for a different scene.
-- **p. 8 / 5.4. Ablation Studies - extractive PDF cue:** It shows that when these two modules work in tandem, they align sequential motion data with the environmental settings.
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** These scores are assessed under two setups: "seen rooms" where the localization is performed in the environments present in the training dataset and "unseen rooms" ...
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** The dataset is labeled with 35 distinct action classes for classification tasks.
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** This demonstrates the broad applicability and flexibility of our approach in real-world environments.
+- **p. 6 / 5.2. Inertial Localization Results - extractive body cue:** This is because each recording in the dataset is relatively long, with an average duration of 525 seconds and a maximum of 2,526 seconds.
+- **p. 8 / 5.4. Ablation Studies - extractive body cue:** This holistic reasoning capability ensures the model generates a more precise and coherent trajectory prediction of the user's movements within their environment.
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
+- **p. 6 / 5.2. Inertial Localization Results - extractive body cue:** In their original work, they trained three separate models, each for a different scene.
+- **p. 8 / 5.4. Ablation Studies - extractive body cue:** It shows that when these two modules work in tandem, they align sequential motion data with the environmental settings.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Egocentric Action-aware Inertial Localization (EAIL). Our framework leverages egocentric action cues obtained from the head-mounted IMU to perform inertial localization in the environ- ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Short-Term Action-Location Alignment. In this first stage, our objective is to train a point cloud encoder and an IMU encoder using contrastive learning. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Sequential Motion Localization. In this second stage, we generate a sequence of the user's locations and actions over T seconds using a series ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Inertial Localization Results. We evaluate the accuracy using two metrics: the localization success rate (%) at various error distance thresholds and the Relative ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Inertial Localization Error Over Time Elapsed. While velocity accumulation-based methods experience signifi- cant trajectory drift, our approach remains accurate over time. Velocity Cumulation ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Inertial Action Recognition Results. We evaluate per- formance using top1 and top5 accuracy metrics. Higher values indicate better performance.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation Studies. We report the inertial localization accuracy and the inertial action recognition (A) accuracy simultaneously.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Visualization of Heatmaps in Each Stage. Quantitative Evaluation As shown in Tab. 2, DeepCon- vLSTM performs relatively poorly due to its architecture's difficulty ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Egocentric Action-aware Inertial Localization (EAIL). Our framework leverages egocentric action cues obtained from the head-mounted IMU to perform inertial localization in the environ- ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Short-Term Action-Location Alignment. In this first stage, our objective is to train a point cloud encoder and an IMU encoder using contrastive learning. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Sequential Motion Localization. In this second stage, we generate a sequence of the user's locations and actions over T seconds using a series ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Inertial Localization Results. We evaluate the accuracy using two metrics: the localization success rate (%) at various error distance thresholds and the Relative ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Inertial Localization Error Over Time Elapsed. While velocity accumulation-based methods experience signifi- cant trajectory drift, our approach remains accurate over time. Velocity Cumulation ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Inertial Action Recognition Results. We evaluate per- formance using top1 and top5 accuracy metrics. Higher values indicate better performance.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation Studies. We report the inertial localization accuracy and the inertial action recognition (A) accuracy simultaneously.
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of Heatmaps in Each Stage. Quantitative Evaluation As shown in Tab. 2, DeepCon- vLSTM performs relatively poorly due to its architecture's difficulty ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These scores are assessed under two setups: "seen rooms" where the localization is performed in the environments present in the training dataset and "unseen ... | embodiment, simulator version and control stack | p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup) |
 | Task/environment | The dataset is labeled with 35 distinct action classes for classification tasks. | reset, timeout, object/scene variation | p. 5 (5.1. Experimental Setup), p. 7 (5.4. Ablation Studies) |
@@ -122,11 +122,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.4. Ablation
 | Primary metric/result | 4, using only IMU signals, we achieve results comparable to IMU2CLIP [41]. | numeric claim only at cited anchor | p. 8 (5.4. Ablation Studies) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** For this paper, we used the cooking activities subset, which includes 173 participants across 60 kitchens, totaling 564.13 hours of recordings.
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** The activity area for these cooking activities averaged around 2.8 meters per side, with the largest spanning 6.15 meters.
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** Each local 1 m2 point cloud is sub-sampled to contain 8192 points, and the IMU signals are recorded at an 800 Hz sample rate.
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** The IMU signals are preprocessed following [22] and downsampled to 400 Hz.
-- **p. 5 / 5.1. Experimental Setup - extractive PDF cue:** We trained Stage 1 for 250 epochs and Stage 2 for 100 epochs, using a batch size of 64, a learning rate of 10^{-3} , ...
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** For this paper, we used the cooking activities subset, which includes 173 participants across 60 kitchens, totaling 564.13 hours of recordings.
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** The activity area for these cooking activities averaged around 2.8 meters per side, with the largest spanning 6.15 meters.
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** Each local 1 m2 point cloud is sub-sampled to contain 8192 points, and the IMU signals are recorded at an 800 Hz sample rate.
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** The IMU signals are preprocessed following [22] and downsampled to 400 Hz.
+- **p. 5 / 5.1. Experimental Setup - extractive body cue:** We trained Stage 1 for 250 epochs and Stage 2 for 100 epochs, using a batch size of 64, a learning rate of 10^{-3} , ...
 
 ## Generalization and Failure Cases
 
@@ -160,13 +160,13 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.4. Ablation
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
-- **p. 8 / 6. Limitations and Future Directions - extractive PDF cue:** While our method can robustly exploit head-mounted IMU signals for human localization within pre-built point clouds, it does hinge on several factors that present avenues ...
-- **p. 8 / 6. Limitations and Future Directions - extractive PDF cue:** Finally, our experiments are based on IMU data from head-mounted devices, and substantially different sensor placements (e.g., ankle or wrist) may necessitate model adaptations for ...
-- **p. 6 / 5.2. Inertial Localization Results - extractive PDF cue:** Nevertheless, its lack of spatial awareness still leads to reduced accuracy, whereas our approach leverages point cloud structures to deliver robust inertial localization across diverse ...
-- **p. 7 / 5.4. Ablation Studies - extractive PDF cue:** To accomplish this, we leverage the power of robust pre-trained and prealigned vision-language models, such as [43, 50].
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
+- **p. 8 / 6. Limitations and Future Directions - extractive body cue:** While our method can robustly exploit head-mounted IMU signals for human localization within pre-built point clouds, it does hinge on several factors that present avenues ...
+- **p. 8 / 6. Limitations and Future Directions - extractive body cue:** Finally, our experiments are based on IMU data from head-mounted devices, and substantially different sensor placements (e.g., ankle or wrist) may necessitate model adaptations for ...
+- **p. 6 / 5.2. Inertial Localization Results - extractive body cue:** Nevertheless, its lack of spatial awareness still leads to reduced accuracy, whereas our approach leverages point cloud structures to deliver robust inertial localization across diverse ...
+- **p. 7 / 5.4. Ablation Studies - extractive body cue:** To accomplish this, we leverage the power of robust pre-trained and prealigned vision-language models, such as [43, 50].
 
-- **PDF anchors reviewed:** datasets p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 7 (5.4. Ablation Studies), p. 6 (5.2. Inertial Localization Results), p. 8 (5.4. Ablation Studies), p. 7 (5.4. Ablation Studies), metrics p. 6 (5.2. Inertial Localization Results), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 6 (5.2. Inertial Localization Results), p. 7 (5.3. Inertial Action Recognition Results), p. 7 (5.4. Ablation Studies), baselines p. 5 (5.2. Inertial Localization Results), p. 6 (5.2. Inertial Localization Results), p. 6 (5.3. Inertial Action Recognition Results), p. 1 (Figure/Table caption), p. 7 (5.4. Ablation Studies), p. 7 (5.4. Ablation Studies), results p. 6 (Figure/Table caption), p. 8 (5.4. Ablation Studies), p. 8 (5.4. Ablation Studies), p. 5 (5.1. Experimental Setup), p. 6 (5.2. Inertial Localization Results), p. 7 (5.4. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 7 (5.4. Ablation Studies), p. 6 (5.2. Inertial Localization Results), p. 8 (5.4. Ablation Studies), p. 7 (5.4. Ablation Studies), metrics p. 6 (5.2. Inertial Localization Results), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 6 (5.2. Inertial Localization Results), p. 7 (5.3. Inertial Action Recognition Results), p. 7 (5.4. Ablation Studies), baselines p. 5 (5.2. Inertial Localization Results), p. 6 (5.2. Inertial Localization Results), p. 6 (5.3. Inertial Action Recognition Results), p. 1 (Figure/Table caption), p. 7 (5.4. Ablation Studies), p. 7 (5.4. Ablation Studies), results p. 6 (Figure/Table caption), p. 8 (5.4. Ablation Studies), p. 8 (5.4. Ablation Studies), p. 5 (5.1. Experimental Setup), p. 6 (5.2. Inertial Localization Results), p. 7 (5.4. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

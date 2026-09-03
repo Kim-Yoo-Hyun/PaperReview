@@ -25,7 +25,7 @@
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** However, when directly used as task planners, VLMs (Huang et al., 2023; 2024; Ahn et al., 2022; Zheng et al., 2025a; Yang et al., 2025) ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** (3) They lack task relevance, as they fail to emphasize information directly tied to task execution, thereby reducing efficiency and effectiveness.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** However, existing works often focus on a single type of scene graphs.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2026 Figure 2: Direct planning often fails even for strong closed-source models like GPT-5, producing wrong actions or ...
+- **p. 4 / 1 INTRODUCTION - extractive body cue:** Figure 2: Direct planning often fails even for strong closed-source models like GPT-5, producing wrong actions or ...
 - **p. 11 / Figure/Table caption - extractive body cue:** Figure 6: Quantitative real-robot evaluation. (a) Environment setup of the real-robot experiment. (b) Failure analysis illustrating success/failure rates across different reasoning stages. Task Setup. We ...
 - **p. 11 / 7 CONCLUSION - extractive body cue:** This work addresses to the fundamental limitations of existing scene graphs for embodied agents: reliance on a single type of relationship, inability to adapt to ...
 - **Boundary to test:** Figure 6: Quantitative real-robot evaluation. (a) Environment setup of the real-robot experiment. (b) Failure analysis illustrating success/failure rates across different reasoning stages. Task Setup. We evaluate the following natural l ...
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 In this work, we do not focus on the agent's interaction policy; instead, our emphasis lies on how to capture and incorporate observed state changes in the environment into the scene graph ...를 4.1 MOMAGRAPH DEFINITION Given a single indoor room, the agent receives as input a set of multi-view images {Ii}n i=1 and a natural language instruction T .로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 6: Quantitative real-robot evaluation. (a) Environment setup of the real-robot experiment. (b) Failure analysis illustrating success/failure rates across different reasoning stages. Task Setup. We evaluate the following natural l ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships while incorporating part-level interactive nodes, providin ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** 4.1 MOMAGRAPH DEFINITION Given a single indoor room, the agent receives as input a set of multi-view images {Ii}n i=1 and a natural language instruction T . (p. 5, 4 METHOD).
+- **Paper-specific mechanism:** In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships while incorporating part-level interactive nodes, ... (p. 2, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Table 2: Performance comparison on the MomaGraph-Bench. We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. Type Models Params MomaGraph Benchmark Tier ... (p. 9, Figure/Table caption); the relevant task/metric cue is We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. (p. 9, 6 EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** (b) Failure analysis illustrating success/failure rates across different reasoning stages. (p. 11, 6 EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: To rigorously evaluate spatial-functional reasoning and task planning capabilities, we design a comprehensive multi-choice VQA benchmark based on the scenes and tasks in our dataset..
-3. Compare against the body-reported baseline or a matched simpler baseline: Across all models, the w/ Graph setting consistently outperforms the w/o Graph baseline, demonstrating that explicitly structuring task-oriented scene graphs provides a tangible benefit for downstream planning..
-4. Report the body metric and its denominator/aggregation: This evaluation includes success rates and failure analysis across different stages to validate overall system performance under realistic, sequential conditions (see Figure 6)..
-5. Re-run the body-reported ablation/failure condition: We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: 4.1 MOMAGRAPH DEFINITION Given a single indoor room, the agent receives as input a set of multi-view images {Ii}n i=1 and a natural language instruction T . (p. 5, 4 METHOD); preserve the objective/update rule: The overall reward converges to ∼0.93, while accuracy reward stabilizes at ∼0.9. (p. 19, A.3 TRAINING CURVE).
+2. Use the paper-reported task/data/environment cue: To rigorously evaluate spatial-functional reasoning and task planning capabilities, we design a comprehensive multi-choice VQA benchmark based on the scenes and tasks in our dataset. (p. 19, A.4.1 BENCHMARK DESIGN).
+3. Compare against the reported or matched baseline: Across all models, the w/ Graph setting consistently outperforms the w/o Graph baseline, demonstrating that explicitly structuring task-oriented scene graphs provides a tangible benefit for downstream planning. (p. 9, 6 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. (p. 9, 6 EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. (p. 9, 6 EXPERIMENTS); if none is reported, design one around: (b) Failure analysis illustrating success/failure rates across different reasoning stages. (p. 11, 6 EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD); the primary result is directionally consistent at p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 11 (6 EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 9 (Figure/Table caption), p. 22 (Figure/Table caption), p. 10 (6 EXPERIMENTS), and measure the boundary at p. 11 (6 EXPERIMENTS), p. 11 (6 EXPERIMENTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, makes, following mechanism이 Across all models, the w/ Graph setting consistently outperforms the w/o Graph baseline, demonstrating that explicitly ... 대비 This evaluation includes success rates and failure analysis across different stages to validate overall system performance under realistic, ...을 개선하고, Figure 6: Quantitative real-robot evaluation. (a) Environment setup of the real-robot experiment. (b) Failure analysis illustrating ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (4.1 MOMAGRAPH DEFINITION Given a single indoor room, the agent receives as input a set of multi-view images {Ii}n i=1 and a ...), does the paper-specific mechanism (In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial ...) retain the reported evaluation outcome (We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning.) when tested against the paper's strongest explicit boundary ((b) Failure analysis illustrating success/failure rates across different reasoning stages.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (26 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships while incorporating part-level interactive nodes, ... (p. 2, 1 INTRODUCTION).
+- **Paper-supported outcome:** Table 2: Performance comparison on the MomaGraph-Bench. We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. Type Models Params MomaGraph Benchmark Tier ... (p. 9, Figure/Table caption).
+- **Strongest explicit boundary:** (b) Failure analysis illustrating success/failure rates across different reasoning stages. (p. 11, 6 EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

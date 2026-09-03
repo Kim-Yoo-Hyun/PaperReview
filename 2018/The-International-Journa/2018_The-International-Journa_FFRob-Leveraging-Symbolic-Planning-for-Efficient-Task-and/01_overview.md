@@ -1,8 +1,10 @@
 # FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114.
-> PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114.
+> PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / The International Journal of Robotics Research
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://journals.sagepub.com/doi/10.1177/0278364917739114
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Planning for mobile manipulation problems involving cluttered environments and multiple manipulation primitives still presents substantial challenges.를 문제로 두고, We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1.1 Approach), p. 2 (1.1 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (35 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Planning for mobile manipulation problems involving cluttered environments and multiple manipulation primitives still presents substantial challenges. (p. 1, 1 Introduction).
+- **Actual contribution:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions. (p. 2, 1.1 Approach).
+- **Evaluation boundary:** Experiment results over 50 trials. informative heuristic estimate. (p. 31, 11.4 Results).
+- **Explicit failure boundary:** In practice, we do not increase the sampling parameter sizes upon a sampling failure. (p. 30, 11 Experiments).

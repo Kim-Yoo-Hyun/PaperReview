@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (50 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/rana23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.06135. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/rana23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.06135. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | We evaluate our framework across a range of 90 tasks organised into four levels of difficulty. | mobile base와 one/two-arm manipulation environment | body wording is the source claim |
-| Observation / input | Finally, to ensure the feasibility of the proposed plan, we introduce an iterative replanning pipeline that verifies and refines the initial plan ... | egocentric RGB-D, language/task goal, base-arm proprioception | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Finally, to ensure the feasibility of the proposed plan, we introduce an iterative replanning pipeline that verifies and refines the initial plan ... | egocentric RGB-D, language/task goal, base-arm proprioception | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Finally, ensure, feasibility, plan, introduce, iterative, replanning, pipeline, verifies, refines | map/object/contact state와 base-arm coordination decision | notation and tensor shape require body check |
 | Output / action | Secondly, horizon, task, plans, across, environments, tends, grow | base motion plus arm/gripper action | exact unit/frame/decoder require body check |
 | Target outcome | task completion and recovery | long-horizon task success, reachability, collision과 recovery | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | base-arm-object state and language/task goal; body terms: Finally, ensure, feasibility, plan, introduce, iterative, replanning, pipeline, verifies, refines | p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction) |
 | Decision / output variable | base plus arm/gripper action; body terms: Firstly, present, mechanism, enables, LLM, conduct, semantic, search | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduc
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 13 (A Implementation Details) |
 | Success / guarantee | task completion and recovery | p. 6 (5 Results), p. 7 (Figure/Table caption), p. 32 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,7 +49,7 @@ PDF body framing (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction)): Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only ...
+PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction)): Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only ...
 
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we present a scalable approach to ground LLM-based task planners across environments spanning multiple rooms and floors.
 - **p. 3 / 1 Introduction - extractive body cue:** We evaluate our framework across a range of 90 tasks organised into four levels of difficulty.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 
 
 ## Position in the Robotics Loop
 
-mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details). The downstream handoff is claimed only when the body describes it.
+mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details), objective p. 13 (A Implementation Details).
+- **Evidence anchors reviewed:** problem p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details), objective p. 13 (A Implementation Details).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (50 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** The challenge lies in scaling these models. (p. 1, 1 Introduction).
+- **Formulation-changing contribution:** Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only ... (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** An odd failure case in the simple search instructions involved negation, where the agent consistently failed when presented with questions such as "Find me an office that does not have ... (p. 7, 1. SayPlan (GPT-3.5) consistently).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

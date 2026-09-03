@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/par/maskedmimic/; PDF retrieval source: https://research.nvidia.com/labs/par/maskedmimic/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/par/maskedmimic/; PDF retrieval source: https://research.nvidia.com/labs/par/maskedmimic/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 8 RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | While MaskedMimic demonstrates high success rates in generating diverse motions, there are three notable areas for improvement in terms of motion quality. | p. 15 (8 RESULTS) |
 | 8 RESULTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | We attribute these performance improvements to our architecture and data augmentation techniques. | p. 11 (8 RESULTS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To evaluate the effectiveness of our framework, we construct a benchmark consisting of common tasks introduced by prior systems. | embodiment, simulator version and control stack | p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation) |
 | Task/environment | In this task, we focus on sitting on a set of held-out objects. | reset, timeout, object/scene variation | p. 10 (7.2 Evaluation), p. 11 (8 RESULTS) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 - **p. 15 / 8 RESULTS - extractive body cue:** We hypothesize that this limitation stems from the naive mapping of motions from flat to irregular terrains based on the root-to-floor distance normalization.
 - **p. 14 / 8 RESULTS - extractive body cue:** Notably, MaskedMimic does not produce a single solution.
 
-- **PDF anchors reviewed:** datasets p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 12 (8 RESULTS), p. 14 (8 RESULTS), metrics p. 14 (8 RESULTS), p. 9 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 13 (8 RESULTS), p. 10 (7.2 Evaluation), baselines p. 10 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 12 (8 RESULTS), p. 11 (8 RESULTS), results p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 12 (8 RESULTS), p. 14 (8 RESULTS), metrics p. 14 (8 RESULTS), p. 9 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 13 (8 RESULTS), p. 10 (7.2 Evaluation), baselines p. 10 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 12 (8 RESULTS), p. 11 (8 RESULTS), results p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking. (p. 10, 7.2 Evaluation).
+- **Metric evidence:** We evaluate versions of the model with key components removed (Section 6), and measure the impact on the average success rate and error (i.e. average minimal distance from a valid ... (p. 14, 8 RESULTS).
+- **Baseline/ablation evidence:** This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking. (p. 10, 7.2 Evaluation).
+- **Failure/negative evidence:** 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model. (p. 15, 8 RESULTS).

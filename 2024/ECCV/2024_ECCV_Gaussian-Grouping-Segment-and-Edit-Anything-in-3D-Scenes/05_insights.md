@@ -1,53 +1,75 @@
 # Insights — Gaussian Grouping: Segment and Edit Anything in 3D Scenes
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4195_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** To address this issue, we propose Gaussian Grouping, which extends Gaussian Splatting to jointly reconstruct and segment anything in open-world 3D scenes.
-- **Problem cue:** Existing methods rely on manually-labeled datasets, which are both costly and limited in scope, or require accurately scanned point clouds as input.
-- **Claim/result cue:** The recent Gaussian Splatting achieves high-quality and realtime novel-view synthesis of the 3D scenes.
+- **p. 4 / 1 Introduction - extractive body cue:** To our knowledge, we propose the first Gaussian-based method to tackle open-world 3D scene understanding, where we show the advantages compared to existing NeRF-based approaches ...
+- **p. 2 / 1 Introduction - extractive body cue:** We propose Gaussian Grouping, which represents the whole 3D scene with a set of grouped 3D Gaussians.
+- **p. 2 / 1 Introduction - extractive body cue:** By inputting multi-view captures and the corresponding automatically generated masks by SAM, our method learns a discrete and grouped 3D representation for reconstructing and segmenting ...
+- **p. 3 / 1 Introduction - extractive body cue:** We introduce Gaussian Grouping, the first 3D Gaussian Splatting-based segmentation framework that lifts knowledge of SAM to 3D scene anything zero-shot segmentation without the need ...
+- **p. 5 / 3 Method - extractive body cue:** We design our method based on the recent 3D Gaussian Splatting [14], and extend it from pure 3D reconstruction to fine-grained scene understanding.
+- **p. 7 / 3 Method - extractive body cue:** 1 as input, we first add a linear layer f to recover its feature dimension back to K and then take softmax(f(Eid)) for identity classification, ...
+- **p. 6 / 3 Method - extractive body cue:** (b) Then, to obtain the consistent mask IDs across training views, we take a universal temporal propagation model [7] to associate the mask labels and ...
+- **Contribution anchor:** p. 4 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Method), p. 7 (3 Method)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 4 / 1 Introduction - extractive body cue:** Most of these methods cannot generalize to open-world scenarios.
+- **p. 2 / 1 Introduction - extractive body cue:** Open-world 3D scene understanding is an essential challenge, with far-reaching implications for robotics, AR / VR, and autonomous driving.
+- **p. 2 / 1 Introduction - extractive body cue:** Further, it is hard to directly adjust NeRF-based approaches for the downstream local editing tasks [18], because the learned neural networks, such as MLPs, cannot ...
+- **p. 4 / 1 Introduction - extractive body cue:** However, none of the existing Gaussian Splatting works enables object / stufflevel or semantic understanding of the 3D scene.
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to ...
+- **p. 10 / 4 Experiments - extractive body cue:** Model Gaussian Splatting Gaussian Grouping K=0 K=1 k=2 K=5 K=10 PSNR 30.32 30.51 30.62 30.61 30.72 30.62 RAcc N/A 41.2% 40.5% 67.5% 76.6% 77.8% to ...
+- **p. 11 / 4 Experiments - extractive body cue:** This is due to Gaussians inside the bear being occluded during training and cannot be supervised sufficiently.
+- **Boundary to test:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to segment and associate the chair across frames. ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To our knowledge, we propose the first Gaussian-based method to tackle open-world 3D scene understanding, where we show the advantages compared to existing NeRF-based approaches [15,18,43] in segmentation quality, efficiency and good ... | p. 4 (1 Introduction), p. 2 (1 Introduction) |
+| Reported outcome | 6 and Table 2, K = 5 achieves both the best balance between the scene reconstruction and 3D object removal accuracy. | p. 11 (4 Experiments), p. 12 (4 Experiments) |
+| Failure/limitation | Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to segment and associate the chair across frames. ... | p. 10 (Figure/Table caption), p. 10 (4 Experiments) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `Gaussian Splatting, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 We then detail the input data pre-processing steps and further describe the proposed Gaussian Grouping in Section 3.2.를 (a) 2D Image and Mask Input To prepare the input for Gaussian Grouping, in Figure 2(a), we first deploy SAM to automatically generate masks for each image of the multi-view collection.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to segment and associate the chair across frames. ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To our knowledge, we propose the first Gaussian-based method to tackle open-world 3D scene understanding, where we show the advantages compared to existing NeRF-based approaches [15,18,43] in segmentation quality, efficiency and good ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Neural Scene Representations`; tags: `Gaussian Splatting, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: The recent Gaussian Splatting achieves high-quality and realtime novel-view synthesis of the 3D scenes.
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to segment and associate the chair across frames. ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ScanNet, Replica, LERF / accuracy, mIoU, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Also, our approach is better at distinguishing objects with similar colors, such as the "Green apple" prompt case. compare fine-grained mask localization quality, we annotate the test views of three 3D scenes ....
+3. Compare against the body-reported baseline or a matched simpler baseline: Model Scene Seg Scene Edit PSNR↑SSIM↑LPIPS↓FPS Baseline: Gaussian Splatting [14] - - 28.69 0.870 0.182 ∼200 Gaussian Grouping ✓ ✓ 28.43 0.863 0.189 ∼170 Table 2: Ablation of K of 3D Regularization ....
+4. Report the body metric and its denominator/aggregation: 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve the existing LERF-Localization [15] evaluation dataset and propose the LERF-Mask dataset, where we ma ....
+5. Re-run the body-reported ablation/failure condition: 4.2 Ablation Experiments Ablation on Mask Cross-view Association To study the effect of cross-view masks association [7] for input preparation, we replace the associated masks input to the individual masks predicted by ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method); the primary result is directionally consistent at p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 knowledge, first, Gaussian-based mechanism이 Model Scene Seg Scene Edit PSNR↑SSIM↑LPIPS↓FPS Baseline: Gaussian Splatting [14] - - 28.69 0.870 0.182 ∼200 ... 대비 4.1 Dataset and Experiment Setup Datasets To measure segmentation or fine-grained localization accuracy in open-world scene, we evolve ...을 개선하고, Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

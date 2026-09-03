@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 We align our touch embedding with a pre-trained image embedding derived from large-scale vision language data, using sensor-specific tokens for multi-sensor training.를 Moreover, touch sensors are not fully standardized, and thus there are large differences between outputs of different sensors [31, 121].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Failures occur when the grasped object slips by more than 3cm.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We align our touch embedding with a pre-trained image embedding derived from large-scale vision language data, using sensor-specific tokens for multi-sensor training. (p. 3, 3. Method).
+- **Paper-specific mechanism:** In this paper, we show that this approach can be adapted to tactile sensing. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is Table 7. Prompt analysis for touch. We evaluate our prompt designs for zero-shot material classification on Touch and Go and ObjectFolder 2.0 datasets. set. Tab. 5 shows quantitative results, where ... (p. 8, Figure/Table caption); the relevant task/metric cue is Following [6, 33, 111], we evaluate models' performance via accuracy metric for both downstream tasks. (p. 5, 4.1. UniTouch representation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Failures occur when the grasped object slips by more than 3cm. (p. 6, 4.1. UniTouch representation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: These include the real-world dataset Touch and Go [111], the robotic dataset Feeling of Success [6], the YCB-Slide [94] dataset featuring DIGIT sensor interactions, and the multimodal dataset ObjectFolder 2.0 [32] which ....
-3. Compare against the body-reported baseline or a matched simpler baseline: UniTouch outperforms all the baselines by a large margin, implying that our tactile representations benefit from the alignment to a wellstructured embedding space trained on large-scale datasets..
-4. Report the body metric and its denominator/aggregation: We evaluate the performance using mean Average Precision (mAP) on ObjectFolder 2.0. † denotes results from [33]. and sensors validate our proposed sensor-specific tokens and in-batch sampling strategy during training - resulting ....
-5. Re-run the body-reported ablation/failure condition: Table 8. Ablation study. We ablate the effectiveness of each of our proposed contributions via the zero-shot material classification. can significantly improve the performance, indicating that language can indeed understand touch. We ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We align our touch embedding with a pre-trained image embedding derived from large-scale vision language data, using sensor-specific tokens for multi-sensor training. (p. 3, 3. Method); preserve the objective/update rule: We optimize this objective using InfoNCE loss [81] to match touches to correct images: LT →V = -1 (p. 3, 3.1. Binding touch with images).
+2. Use the paper-reported task/data/environment cue: These include the real-world dataset Touch and Go [111], the robotic dataset Feeling of Success [6], the YCB-Slide [94] dataset featuring DIGIT sensor interactions, and the multimodal dataset ObjectFolder 2.0 ... (p. 5, 4. Experiments).
+3. Compare against the reported or matched baseline: UniTouch outperforms all the baselines by a large margin, implying that our tactile representations benefit from the alignment to a wellstructured embedding space trained on large-scale datasets. (p. 5, 4.1. UniTouch representation).
+4. Report the body metric with its denominator and aggregation: Following [6, 33, 111], we evaluate models' performance via accuracy metric for both downstream tasks. (p. 5, 4.1. UniTouch representation).
+5. Re-run the reported ablation or stress/failure condition: We freeze the learned touch embeddings and train a linear classifier on the downstream tasks for specific datasets. (p. 5, 4.1. UniTouch representation); if none is reported, design one around: Failures occur when the grasped object slips by more than 3cm. (p. 6, 4.1. UniTouch representation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method); the primary result is directionally consistent at p. 7 (4.3. Cross-modal retrieval with touch), p. 9 (Figure/Table caption), p. 6 (4.1. UniTouch representation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 3 (3. Method), match the reported outcome at p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), and measure the boundary at p. 6 (4.1. UniTouch representation), p. 6 (4.2. Zero-shot touch understanding).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 First, present, contrastive mechanism이 UniTouch outperforms all the baselines by a large margin, implying that our tactile representations benefit from ... 대비 We evaluate the performance using mean Average Precision (mAP) on ObjectFolder 2.0. † denotes results from [33]. and ...을 개선하고, Failures occur when the grasped object slips by more than 3cm. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We align our touch embedding with a pre-trained image embedding derived from large-scale vision language data, using sensor-specific tokens for multi-sensor training.), does the paper-specific mechanism (In this paper, we show that this approach can be adapted to tactile sensing.) retain the reported evaluation outcome (Following [6, 33, 111], we evaluate models' performance via accuracy metric for both downstream tasks.) when tested against the paper's strongest explicit boundary (Failures occur when the grasped object slips by more than 3cm.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Following [6, 33, 111], we evaluate models' performance via accuracy metric for both downstream tasks.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we show that this approach can be adapted to tactile sensing. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** Table 7. Prompt analysis for touch. We evaluate our prompt designs for zero-shot material classification on Touch and Go and ObjectFolder 2.0 datasets. set. Tab. 5 shows quantitative results, where ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** Failures occur when the grasped object slips by more than 3cm. (p. 6, 4.1. UniTouch representation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

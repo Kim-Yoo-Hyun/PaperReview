@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Visual G
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Visual Geometry Results - extractive PDF cue:** Following the evaluation settings in [55, 62], we evaluate the quality of reconstructed multiview point maps on the 7-Scenes [45] and ETH3D [44] datasets.
-- **p. 6 / 4.1. Visual Geometry Results - extractive PDF cue:** Following the methodology of [55, 57, 62], we evaluate our method on monocular depth estimation task using the Sintel [7] and NYU-V2 [46] datasets.
-- **p. 7 / 4.1. Visual Geometry Results - extractive PDF cue:** G2VLM effectively reconstructs a diverse set of open-domain images, spanning object-level, structure-level, indoor, and outdoor scenes, including both dynamic and static content.
-- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive PDF cue:** We evaluate our model on comprehensive spatial understanding and reasoning benchmarks, including SPARBench [79], OmniSpatial [24], MindCube [73] (spatial mental modeling), and OST-Bench [33] (online ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate our method across a wide range of spatial tasks.
-- **p. 7 / 4.1. Visual Geometry Results - extractive PDF cue:** These results demonstrate that our method achieves on-par performance with VGGT in completion and comparable results in accuracy.
-- **p. 6 / 4.1. Visual Geometry Results - extractive PDF cue:** We report the Absolute Relative Error (Abs Rel) and the prediction accuracy at a threshold of δ < 1.25.
-- **p. 7 / 4.1. Visual Geometry Results - extractive PDF cue:** Consistent with prior works [4, 51, 55, 57], we report Accuracy (Acc.) and Completion (Comp.) in Table 1a.
+- **p. 6 / 4.1. Visual Geometry Results - extractive body cue:** Following the evaluation settings in [55, 62], we evaluate the quality of reconstructed multiview point maps on the 7-Scenes [45] and ETH3D [44] datasets.
+- **p. 6 / 4.1. Visual Geometry Results - extractive body cue:** Following the methodology of [55, 57, 62], we evaluate our method on monocular depth estimation task using the Sintel [7] and NYU-V2 [46] datasets.
+- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** G2VLM effectively reconstructs a diverse set of open-domain images, spanning object-level, structure-level, indoor, and outdoor scenes, including both dynamic and static content.
+- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive body cue:** We evaluate our model on comprehensive spatial understanding and reasoning benchmarks, including SPARBench [79], OmniSpatial [24], MindCube [73] (spatial mental modeling), and OST-Bench [33] (online ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method across a wide range of spatial tasks.
+- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** These results demonstrate that our method achieves on-par performance with VGGT in completion and comparable results in accuracy.
+- **p. 6 / 4.1. Visual Geometry Results - extractive body cue:** We report the Absolute Relative Error (Abs Rel) and the prediction accuracy at a threshold of δ < 1.25.
+- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** Consistent with prior works [4, 51, 55, 57], we report Accuracy (Acc.) and Completion (Comp.) in Table 1a.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Visual G
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 2. Ablation study on the design choices for G2VLM. GP denotes the geometric perception expert. Our results validate the superiority of our approach ... | p. 8 (Figure/Table caption) |
 | 4.1. Visual Geometry Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | These results demonstrate that our method achieves on-par performance with VGGT in completion and comparable results in accuracy. | p. 7 (4.1. Visual Geometry Results) |
@@ -40,28 +40,28 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Visual G
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Visual Geometry Results - extractive PDF cue:** Following the evaluation settings in [55, 62], we evaluate the quality of reconstructed multiview point maps on the 7-Scenes [45] and ETH3D [44] datasets.
-- **p. 6 / 4.1. Visual Geometry Results - extractive PDF cue:** Following the methodology of [55, 57, 62], we evaluate our method on monocular depth estimation task using the Sintel [7] and NYU-V2 [46] datasets.
-- **p. 7 / 4.1. Visual Geometry Results - extractive PDF cue:** G2VLM effectively reconstructs a diverse set of open-domain images, spanning object-level, structure-level, indoor, and outdoor scenes, including both dynamic and static content.
-- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive PDF cue:** We evaluate our model on comprehensive spatial understanding and reasoning benchmarks, including SPARBench [79], OmniSpatial [24], MindCube [73] (spatial mental modeling), and OST-Bench [33] (online ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We evaluate our method across a wide range of spatial tasks.
+- **p. 6 / 4.1. Visual Geometry Results - extractive body cue:** Following the evaluation settings in [55, 62], we evaluate the quality of reconstructed multiview point maps on the 7-Scenes [45] and ETH3D [44] datasets.
+- **p. 6 / 4.1. Visual Geometry Results - extractive body cue:** Following the methodology of [55, 57, 62], we evaluate our method on monocular depth estimation task using the Sintel [7] and NYU-V2 [46] datasets.
+- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** G2VLM effectively reconstructs a diverse set of open-domain images, spanning object-level, structure-level, indoor, and outdoor scenes, including both dynamic and static content.
+- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive body cue:** We evaluate our model on comprehensive spatial understanding and reasoning benchmarks, including SPARBench [79], OmniSpatial [24], MindCube [73] (spatial mental modeling), and OST-Bench [33] (online ...
+- **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method across a wide range of spatial tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. We present G2VLM, a geometry grounded vision-language model proficient in both spatial 3D reconstruction and spatial understanding tasks. For spatial reasoning questions, G2VLM ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Our model, G2VLM, employs an architecture inspired by the two-streams hypothesis. It features two experts: a geomet- ric perception expert (our "where pathway") ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. We present G2VLM, a unified model that integrates both a geometric perception expert for 3D reconstruction and a semantic perception expert for multimodal ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Comparison of three different loss supervision mecha- nisms for the joint-training stage. Note that for visual geometry scores, lower is better. The VG ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison with mainstream feed-forward 3D reconstruction methods on visual geometry tasks and with representative VLMs on spatial understanding and reasoning tasks. Our model ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative results of our model. G2VLM effectively reconstructs a diverse set of open-domain images, spanning object-level, structure-level, indoor, and outdoor scenes, including both ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Experimental study results. (a) The dual encoder design, with both a semantic-rich CLIP encoder and a low-level vision DINO encoder, yields the best ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study on the design choices for G2VLM. GP denotes the geometric perception expert. Our results validate the superiority of our approach over ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present G2VLM, a geometry grounded vision-language model proficient in both spatial 3D reconstruction and spatial understanding tasks. For spatial reasoning questions, G2VLM ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Our model, G2VLM, employs an architecture inspired by the two-streams hypothesis. It features two experts: a geomet- ric perception expert (our "where pathway") ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. We present G2VLM, a unified model that integrates both a geometric perception expert for 3D reconstruction and a semantic perception expert for multimodal ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Comparison of three different loss supervision mecha- nisms for the joint-training stage. Note that for visual geometry scores, lower is better. The VG ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison with mainstream feed-forward 3D reconstruction methods on visual geometry tasks and with representative VLMs on spatial understanding and reasoning tasks. Our model ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results of our model. G2VLM effectively reconstructs a diverse set of open-domain images, spanning object-level, structure-level, indoor, and outdoor scenes, including both ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Experimental study results. (a) The dual encoder design, with both a semantic-rich CLIP encoder and a low-level vision DINO encoder, yields the best ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation study on the design choices for G2VLM. GP denotes the geometric perception expert. Our results validate the superiority of our approach over ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Following the evaluation settings in [55, 62], we evaluate the quality of reconstructed multiview point maps on the 7-Scenes [45] and ETH3D [44] datasets. | embodiment, simulator version and control stack | p. 6 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results) |
 | Task/environment | Following the methodology of [55, 57, 62], we evaluate our method on monocular depth estimation task using the Sintel [7] and NYU-V2 [46] datasets. | reset, timeout, object/scene variation | p. 6 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results) |
@@ -117,8 +117,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Visual G
 | Primary metric/result | These results demonstrate that our method achieves on-par performance with VGGT in completion and comparable results in accuracy. | numeric claim only at cited anchor | p. 7 (4.1. Visual Geometry Results) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive PDF cue:** Notably, G2VLM-SR achieves the best results among all existing works, surpassing the proprietary GPT4o by 18.48 points on SPAR-Bench.
-- **p. 5 / 3.3. Spatial Reasoning Learning - extractive PDF cue:** Similar to VGGT, for every batch, we randomly sample 2-24 frames from a random training scene.
+- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive body cue:** Notably, G2VLM-SR achieves the best results among all existing works, surpassing the proprietary GPT4o by 18.48 points on SPAR-Bench.
+- **p. 5 / 3.3. Spatial Reasoning Learning - extractive body cue:** Similar to VGGT, for every batch, we randomly sample 2-24 frames from a random training scene.
 
 ## Generalization and Failure Cases
 
@@ -150,11 +150,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Visual G
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** While our model exhibits strong generalization abilities in both visual geometry and spatial reasoning, one potential limitation is training instability with large-scale models.
-- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive PDF cue:** We leave the scaling of our model to future work, as this is a promising direction to unlock even stronger performance.
-- **p. 7 / 4.1. Visual Geometry Results - extractive PDF cue:** These results underscore our model's strong capabilities, particularly since it does not use camera tokens (like VGGT) which provides a strong camera pose prior or ...
+- **p. 8 / 5. Conclusion - extractive body cue:** While our model exhibits strong generalization abilities in both visual geometry and spatial reasoning, one potential limitation is training instability with large-scale models.
+- **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive body cue:** We leave the scaling of our model to future work, as this is a promising direction to unlock even stronger performance.
+- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** These results underscore our model's strong capabilities, particularly since it does not use camera tokens (like VGGT) which provides a strong camera pose prior or ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results), p. 7 (4.2. Spatial Understanding & Reasoning Results), p. 5 (4. Experiments), metrics p. 7 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results), p. 5 (Figure/Table caption), p. 6 (4.1. Visual Geometry Results), p. 5 (4. Experiments), baselines p. 8 (Figure/Table caption), p. 7 (4.1. Visual Geometry Results), p. 7 (4.2. Spatial Understanding & Reasoning Results), p. 6 (4.1. Visual Geometry Results), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results), p. 7 (4.2. Spatial Understanding & Reasoning Results), p. 5 (4. Experiments), metrics p. 7 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results), p. 5 (Figure/Table caption), p. 6 (4.1. Visual Geometry Results), p. 5 (4. Experiments), baselines p. 8 (Figure/Table caption), p. 7 (4.1. Visual Geometry Results), p. 7 (4.2. Spatial Understanding & Reasoning Results), p. 6 (4.1. Visual Geometry Results), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (4.1. Visual Geometry Results), p. 7 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 6 (4.1. Visual Geometry Results), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

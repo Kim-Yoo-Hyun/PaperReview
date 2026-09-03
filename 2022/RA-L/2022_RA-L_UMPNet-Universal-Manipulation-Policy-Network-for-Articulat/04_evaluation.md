@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.05668; PDF retrieval source: https://arxiv.org/pdf/2109.05668. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.05668; PDF retrieval source: https://arxiv.org/pdf/2109.05668. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | When combined with heuristic filter, the performance improves slightly. | p. 5 (IV. EVALUATION) |
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | I we can see that [ Where2Act ] is able to achieve similar performance in "single action effects", however, both [ Where2Act ] and ... | p. 5 (IV. EVALUATION) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Being able to effectively explore the possible states of an object without a specific goal is a critical first step for many robot learning ... | embodiment, simulator version and control stack | p. 5 (IV. EVALUATION), p. 7 (IV. EVALUATION) |
 | Task/environment | In addition, our system assumes the agent uses a suction-based end-effector, which can provide robust grasps for a large variety of objects and is ... | reset, timeout, object/scene variation | p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p.
 - **p. 5 / IV. EVALUATION - extractive body cue:** This heuristic helps to avoid back-and-forth actions, however cannot be applied for goal-conditioned manipulation. • SingleStep: Single-step version of our method that only takes the ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 8: Real-world experiment. We test the model trained in simulation on a real-world platform. (a) We an RGB-D camera to capture visual observation and ...
 
-- **PDF anchors reviewed:** datasets p. 5 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 4 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), metrics p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), baselines p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), results p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION).
+- **Evidence anchors reviewed:** datasets p. 5 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 4 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), metrics p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), baselines p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), results p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive to error propagation, where one sub-optimal action would affect all following steps ... (p. 5, IV. EVALUATION).
+- **Metric evidence:** When combined with the heuristic the algorithm [ Where2Act+HP ] can avoid back-and-forth action, however, it is sensitive to error propagation, where one sub-optimal action would affect all following steps ... (p. 5, IV. EVALUATION).
+- **Baseline/ablation evidence:** Compared to [ AoTOnly ], we can observe that by explicitly predicting the distance value for each action candidate, [ UMPNet ] can better differentiate (p. 5, IV. EVALUATION).
+- **Failure/negative evidence:** Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction). (p. 7, IV. EVALUATION).

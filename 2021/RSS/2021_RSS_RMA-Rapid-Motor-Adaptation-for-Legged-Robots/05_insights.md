@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, terrain/perception observation과 velocity command → body/contact state, foothold 또는 behavior mode → joint target, torque, footstep 또는 locomotion action`.
-- 이 논문의 재사용 가능한 지점은 In the first phase, the base policy π takes as input the current state xt, previous action at-1 and the privileged environmental factors et which is encoded into the latent extrinsics vector ...를 Alternately, we could have trained a base policy which directly takes the state and action history as input without decoupling them into the two modules.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 body/contact state, foothold 또는 behavior mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without a single ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: The combination of these components enables the robot to adapt to novel situations in fractions of a second.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We additionally define the joint angles as q, joint velocities as ˙q, joint torques as τ, ground reaction forces at the feet as f, velocity of the feet as vf ... (p. 4, III. RAPID MOTOR ADAPTATION).
+- **Paper-specific mechanism:** The combination of these components enables the robot to adapt to novel situations in fractions of a second. (p. 1, Abstract).
+- **Evidence boundary:** the reported outcome is Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without ... (p. 1, Figure/Table caption); the relevant task/metric cue is We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen deformable surfaces, such as a memory foam mattress and a slightly uneven ... (p. 6, IV. EXPERIMENTAL SETUP). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** RMA w/o adaptation fails to move for payloads more than 8Kg, but rarely falls. (p. 6, IV. EXPERIMENTAL SETUP).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Environment Details Hardware Details: We use A1 robot from Unitree for all our real-world experiments..
-3. Compare against the body-reported baseline or a matched simpler baseline: Overall, the proposed method consistently dominates the baseline methods..
-4. Report the body metric and its denominator/aggregation: Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without a single ....
-5. Re-run the body-reported ablation/failure condition: Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without a single ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We additionally define the joint angles as q, joint velocities as ˙q, joint torques as τ, ground reaction forces at the feet as f, velocity of the feet as vf ... (p. 4, III. RAPID MOTOR ADAPTATION); preserve the objective/update rule: First, the reward function is motivated from bioenergetic constraints of minimizing work and ground impact [42]. (p. 4, III. RAPID MOTOR ADAPTATION).
+2. Use the paper-reported task/data/environment cue: Environment Details Hardware Details: We use A1 robot from Unitree for all our real-world experiments. (p. 5, IV. EXPERIMENTAL SETUP).
+3. Compare against the reported or matched baseline: We compare RMA to A1's controller and RMA without the adaptation module. (p. 6, IV. EXPERIMENTAL SETUP).
+4. Report the body metric with its denominator and aggregation: We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen deformable surfaces, such as a memory foam mattress and a slightly uneven ... (p. 6, IV. EXPERIMENTAL SETUP).
+5. Re-run the reported ablation or stress/failure condition: We compare RMA to A1's controller and RMA without the adaptation module. (p. 6, IV. EXPERIMENTAL SETUP); if none is reported, design one around: RMA w/o adaptation fails to move for payloads more than 8Kg, but rarely falls. (p. 6, IV. EXPERIMENTAL SETUP).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract); the primary result is directionally consistent at p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (Abstract), p. 1 (I. INTRODUCTION), match the reported outcome at p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), and measure the boundary at p. 6 (IV. EXPERIMENTAL SETUP), p. 9 (VI. CONCLUSION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 combination, components, enables mechanism이 Overall, the proposed method consistently dominates the baseline methods. 대비 Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to ...을 개선하고, Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We additionally define the joint angles as q, joint velocities as ˙q, joint torques as τ, ground reaction forces at the feet ...), does the paper-specific mechanism (The combination of these components enables the robot to adapt to novel situations in fractions of a second.) retain the reported evaluation outcome (We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen ...) when tested against the paper's strongest explicit boundary (RMA w/o adaptation fails to move for payloads more than 8Kg, but rarely falls.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The combination of these components enables the robot to adapt to novel situations in fractions of a second. (p. 1, Abstract).
+- **Paper-supported outcome:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without ... (p. 1, Figure/Table caption).
+- **Strongest explicit boundary:** RMA w/o adaptation fails to move for payloads more than 8Kg, but rarely falls. (p. 6, IV. EXPERIMENTAL SETUP).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=oL1WEZQal8; PDF retrieval source: https://arxiv.org/pdf/2406.08858. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=oL1WEZQal8; PDF retrieval source: https://arxiv.org/pdf/2406.08858. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 1 Introduction | EMPIRICAL / REAL-ROBOT OR HARDWARE | We draw two key conclusions: (1) The Diffusion Policy significantly outperforms vanilla BC with ResNet; (2) In our LfD training, predicting a sequence of ... | p. 8 (1 Introduction) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5: OmniH2O shows superior robustness against human strikes and different outdoor terrains. History Steps and Architecture. Real-world evaluation in Table 2(b) also shows ... | p. 7 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We benchmark a variety of imitation learning algorithms on four tasks in our collected dataset (shown in Figure 7), including Diffusion Policy [58] with ... | embodiment, simulator version and control stack | p. 8 (1 Introduction), p. 8 (1 Introduction) |
 | Task/environment | (d) Rock-Paper-Scissors (b) Squat (a) Catch-Release (c) Hammer-Catch Figure 7: OmniH2O autonomously conducts four tasks using LfD models trained with our collected data. minutes ... | reset, timeout, object/scene variation | p. 8 (1 Introduction) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 - **p. 7 / 1 Introduction - extractive body cue:** (a) Disturbances (b) Outdoor Terrains Figure 5: OmniH2O shows superior robustness against human strikes and different outdoor terrains.
 - **p. 6 / 1 Introduction - extractive body cue:** In Table 1(d), we find that linear velocity information does not boost performance in simulation, but it introduces significant challenges in real-world deployment (details illustrated ...
 
-- **PDF anchors reviewed:** datasets p. 8 (1 Introduction), p. 8 (1 Introduction), metrics p. 8 (1 Introduction), p. 8 (1 Introduction), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 22 (Figure/Table caption), p. 24 (Figure/Table caption), results p. 8 (1 Introduction), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (1 Introduction), p. 24 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (1 Introduction), p. 8 (1 Introduction), metrics p. 8 (1 Introduction), p. 8 (1 Introduction), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 22 (Figure/Table caption), p. 24 (Figure/Table caption), results p. 8 (1 Introduction), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (1 Introduction), p. 24 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 5: OmniH2O shows superior robustness against human strikes and different outdoor terrains. History Steps and Architecture. Real-world evaluation in Table 2(b) also shows that our choice of 25 steps ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Figure 5: OmniH2O shows superior robustness against human strikes and different outdoor terrains. History Steps and Architecture. Real-world evaluation in Table 2(b) also shows that our choice of 25 steps ... (p. 7, Figure/Table caption).
+- **Baseline/ablation evidence:** Figure 8: The illustration of using ZED camera VIO module, and the comparison of the velocity estimation of VIO with neural state estimators. H Ablation on Dataset Motion Distribution The ... (p. 22, Figure/Table caption).
+- **Failure/negative evidence:** Another limitation is safety; although the OmniH2O policy has shown great robustness, we do not have guarantees or safety checks for extreme disturbances or out-of-distribution motion goals (e.g., large discontinuity ... (p. 8, 1 Introduction).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_Dexterous_World_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_Dexterous_World_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Qualitative Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Including real-world data for training significantly improves both perceptual and pixel-level metrics across synthetic and real-world test sets, demonstrating that static-camera real-world interactions enhance ... | p. 8 (4.2. Qualitative Results) |
 | 4.1. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1, where our method achieves superior performance across all metrics. | p. 6 (4.1. Comparison) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Despite real-world scenes with dynamic view being completely unseen during training, and the absence of any training samples involving opening a window, DWM successfully ... | embodiment, simulator version and control stack | p. 6 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction) |
 | Task/environment | Collecting such triplets in real-world environments is challenging in practice, as it would require capturing both a static scene and a dynamic human-object interaction ... | reset, timeout, object/scene variation | p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 7 (4.1. Comparison) |
@@ -164,7 +164,16 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 - **p. 6 / 4.1. Comparison - extractive body cue:** InterDyn [2] produces spatially aligned hands with the input masks but fails to model resulting object dynamics.
 - **p. 7 / 4.1. Comparison - extractive body cue:** Baselines fail to perform meaningful actions or hallucinate incorrect interactions.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 7 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 6 (4.1. Comparison), p. 7 (4.1. Comparison), metrics p. 6 (4. Experiments), p. 6 (3.4. Action Evaluation with DWM), p. 7 (4.2. Qualitative Results), p. 7 (4.1. Comparison), p. 8 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), baselines p. 6 (4.1. Comparison), p. 6 (4.1. Comparison), p. 7 (4.1. Comparison), p. 7 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), results p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comparison), p. 8 (4.3. Ablation Study), p. 6 (4.1. Comparison), p. 7 (4.2. Qualitative Results), p. 7 (4.1. Comparison).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 7 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 6 (4.1. Comparison), p. 7 (4.1. Comparison), metrics p. 6 (4. Experiments), p. 6 (3.4. Action Evaluation with DWM), p. 7 (4.2. Qualitative Results), p. 7 (4.1. Comparison), p. 8 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), baselines p. 6 (4.1. Comparison), p. 6 (4.1. Comparison), p. 7 (4.1. Comparison), p. 7 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), results p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comparison), p. 8 (4.3. Ablation Study), p. 6 (4.1. Comparison), p. 7 (4.2. Qualitative Results), p. 7 (4.1. Comparison).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Quantitatively, ours outperforms baselines across all metrics on real-world static camera videos. (p. 6, 4.1. Comparison).
+- **Metric evidence:** 1, where our method achieves superior performance across all metrics. (p. 6, 4.1. Comparison).
+- **Baseline/ablation evidence:** Quantitatively, ours outperforms baselines across all metrics on real-world static camera videos. (p. 6, 4.1. Comparison).
+- **Failure/negative evidence:** CVX-Fun Fine-tuned often fails to interact with the correct target and hallucinates the object of interest. (p. 6, 4.1. Comparison).

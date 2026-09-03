@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -36,7 +36,7 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | Proprioception consists of oprop-priv t = [vt, ωt, gt, at→1, qt, ˙qt, f finger t ] where vt, ωt are base linear ... | p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | For the student's vision backbone, we adopt a state-of-the-art image encoder [61] to extract high-quality RGB features, which are fused with proprioceptive ... | p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training) |
@@ -82,7 +82,7 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 | Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | We also evaluate choices for the student policy head, including a single-step MLP and a history-aware architecture that incorporates temporal context. | episode/sequence/action-chunk boundary |
 | Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | At time step t, the teacher ωteacher(at/opriv t ) outputs a high-level command for the low-level WBC policy given privileged observation. | Hz/fps, inference time and control rate |
 | Memory | body pose, contact, reference/history와 fall/recovery state. | We also evaluate choices for the student policy head, including a single-step MLP and a history-aware architecture that incorporates temporal context. | window and reset |
-| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -131,8 +131,17 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 5 (2.2. Key Elements of Student Training), p. 5 (2.2. Key Elements of Student Training), objective p. 3 (2.1. Key Elements of Teacher Training), p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.1. Key Elements of Teacher Training), p. 4 (2.1. Key Elements of Teacher Training), temporal p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training), p. 5 (2.3. Key Elements of Sim-to-Real Transfer), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. Introduction).
+- **Evidence anchors reviewed:** method p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 5 (2.2. Key Elements of Student Training), p. 5 (2.2. Key Elements of Student Training), objective p. 3 (2.1. Key Elements of Teacher Training), p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.1. Key Elements of Teacher Training), p. 4 (2.1. Key Elements of Teacher Training), temporal p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training), p. 5 (2.3. Key Elements of Sim-to-Real Transfer), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Phase 1: In simulation, a privileged RL teacher policy ωteacher receives full-state proprioception and exteroception of the task information and outputs WBC commands. (p. 2, 1. Introduction).
+- **Objective/update evidence:** Therefore, we define four key rewards: 1. (p. 3, 2.1. Key Elements of Teacher Training).
+- **Temporal/runtime evidence:** We also evaluate choices for the student policy head, including a single-step MLP and a history-aware architecture that incorporates temporal context. (p. 4, 2.2. Key Elements of Student Training).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,80 +2,78 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 1 (Front matter), p. 1 (Front matter), p. 3 (Front matter), p. 3 (Front matter), p. 2 (Front matter), p. 2 (Front matter)): For rigid objects, the numerical state consists of their full 6-DoF rigid transformation.
+PDF body method statement (p. 4 (3.2. Action Planning via Simulation-enabled VLM), p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method), p. 4 (3.1. Simulation Construction), p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method)): 1, our planner takes as input the initial RGB-D observation I0, the initial simulator state s0, task description `task, VLM, and SIM.
 
 ## Method Body Digest
 
-- **p. 1 / Front matter - extractive body cue:** For rigid objects, the numerical state consists of their full 6-DoF rigid transformation.
-- **p. 1 / Front matter - extractive body cue:** Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated state rollout si.
-- **p. 3 / Front matter - extractive body cue:** These tasks appear more sensitive to accurate physical modeling and contact dynamics.
-- **p. 3 / Front matter - extractive body cue:** Only the first entry is shown for repeated fields, with omitted entries summarized using comments. quences for task success, we also include 10 unoptimized VLM ...
-- **p. 2 / Front matter - extractive body cue:** Action Optimization We provide details the action optimization prompt `opt in Fig.
-- **p. 2 / Front matter - extractive body cue:** Your objective is to decompose a high-level natural language instruction into multiple distinct, high-level action plans.
-- **p. 4 / Front matter - extractive body cue:** Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task.
-- **p. 2 / Front matter - extractive body cue:** Additional Qualitative Results We show qualitative results for the sweeping task that was not included in the main paper due to space constraints in Fig.
+- **p. 4 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** 1, our planner takes as input the initial RGB-D observation I0, the initial simulator state s0, task description `task, VLM, and SIM.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** In particular, at each selected time step t, we render a simulator observation image Ii t and include the numerical action ai t and state ...
+- **p. 3 / 3. Method - extractive body cue:** The resulting visual observations and object states from each rollout are then fed back to the VLM as additional context for iterative refinement.
+- **p. 4 / 3.1. Simulation Construction - extractive body cue:** Each reconstructed mesh is then centered and scaled according to the size of its corresponding real-world bounding box obtained from point cloud segmentation, yielding Mi ...
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** Given sampled action sequences A = {ai}K i=1, we first perform simulation rollouts to obtain their corresponding state trajectories S = {si}K i=1.
+- **p. 3 / 3. Method - extractive body cue:** Next, we instantiate a manipulation planner that integrates the simulator with a VLM as its core reasoning module.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** If the VLM determines that the proposed action sequence achieves the task objective, the sequence is executed in the real environment.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** From these proposals, the VLM optimizer reasons a non-trivial action update that pushes the bottle for the correct distance without toppling in both simulation and ...
 
 ## Design Rationale
 
-- **p. 1 / Front matter - extractive body cue:** For rigid objects, the numerical state consists of their full 6-DoF rigid transformation.
-- **p. 1 / Front matter - extractive body cue:** Additionally, we present more qualitative examples, an ablation on the number of VLM-sampled action proposals, and a study comparing a CEM-based Prompting-with-theFuture-style variant [45], which ...
-- **p. 2 / Front matter - extractive body cue:** Further Ablation Analysis We additionally consider a variant of our method in which we simultaneously replace the VLM sampler with a random sampler and switch ...
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We present ...
+- **p. 2 / 1. Introduction - extractive body cue:** By augmenting VLMs with physical simulation, our framework enables them to anticipate action consequences, evaluate predicted outcomes, and iteratively adjust their decisions at test time, ...
+- **p. 3 / 3. Method - extractive body cue:** Our framework enables zero-shot robotic manipulation action generation from a single RGB-D image input I0 and natural language instruction `task and outputs robot action sequence ...
 
 ## Source Evidence Cues
 
-- **p. 1 / Front matter - extractive body cue:** For rigid objects, the numerical state consists of their full 6-DoF rigid transformation.
-- **p. 1 / Front matter - extractive body cue:** Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated state rollout si.
-- **p. 3 / Front matter - extractive body cue:** These tasks appear more sensitive to accurate physical modeling and contact dynamics.
-- **p. 3 / Front matter - extractive body cue:** Only the first entry is shown for repeated fields, with omitted entries summarized using comments. quences for task success, we also include 10 unoptimized VLM ...
-- **p. 2 / Front matter - extractive body cue:** Action Optimization We provide details the action optimization prompt `opt in Fig.
-- **p. 2 / Front matter - extractive body cue:** Your objective is to decompose a high-level natural language instruction into multiple distinct, high-level action plans.
-- **p. 4 / Front matter - extractive body cue:** Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task.
-- **Detected method headings:** none reliably recovered
+- **p. 4 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** 1, our planner takes as input the initial RGB-D observation I0, the initial simulator state s0, task description `task, VLM, and SIM.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** In particular, at each selected time step t, we render a simulator observation image Ii t and include the numerical action ai t and state ...
+- **p. 3 / 3. Method - extractive body cue:** The resulting visual observations and object states from each rollout are then fed back to the VLM as additional context for iterative refinement.
+- **p. 4 / 3.1. Simulation Construction - extractive body cue:** Each reconstructed mesh is then centered and scaled according to the size of its corresponding real-world bounding box obtained from point cloud segmentation, yielding Mi ...
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** Given sampled action sequences A = {ai}K i=1, we first perform simulation rollouts to obtain their corresponding state trajectories S = {si}K i=1.
+- **p. 3 / 3. Method - extractive body cue:** Next, we instantiate a manipulation planner that integrates the simulator with a VLM as its core reasoning module.
+- **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | For rigid objects, the numerical state consists of their full 6-DoF rigid transformation. | p. 1 (Front matter), p. 1 (Front matter) |
-| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated ... | p. 1 (Front matter), p. 3 (Front matter) |
-| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | These tasks appear more sensitive to accurate physical modeling and contact dynamics. | p. 3 (Front matter), p. 3 (Front matter) |
+| Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | 1, our planner takes as input the initial RGB-D observation I0, the initial simulator state s0, task description `task, VLM, and SIM. | p. 4 (3.2. Action Planning via Simulation-enabled VLM), p. 5 (3.2. Action Planning via Simulation-enabled VLM) |
+| Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | In particular, at each selected time step t, we render a simulator observation image Ii t and include the numerical action ai ... | p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method) |
+| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | The resulting visual observations and object states from each rollout are then fed back to the VLM as additional context for iterative ... | p. 3 (3. Method), p. 4 (3.1. Simulation Construction) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **p. 4 / Front matter - extractive body cue:** Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task.
-- **p. 2 / Front matter - extractive body cue:** Your objective is to decompose a high-level natural language instruction into multiple distinct, high-level action plans.
-- **p. 2 / Front matter - extractive body cue:** Additional Qualitative Results We show qualitative results for the sweeping task that was not included in the main paper due to space constraints in Fig.
-- **p. 1 / Front matter - extractive body cue:** Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated state rollout si.
-- **p. 1 / Front matter - extractive body cue:** We describe the full simulation-construction pipeline, including VLMbased prediction of rigid and deformable object parameters, as well as the symbolic action space and prompting strategy ...
-- **p. 3 / Front matter - extractive body cue:** Example rollout context for action optimization in pivoting task.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** If the VLM determines that the proposed action sequence achieves the task objective, the sequence is executed in the real environment.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** From these proposals, the VLM optimizer reasons a non-trivial action update that pushes the bottle for the correct distance without toppling in both simulation and ...
+- **p. 3 / 3. Method - extractive body cue:** Finally, the optimized action sequence is executed as end-effector commands on the real robot system.
+- **p. 4 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** Using both A and S, a VLM-based optimizer refines the proposed action sequences and produces a new action sequence ak.
+- **p. 4 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** I0, `task, s0; VLM " }; 5 S S [ {si SIMROLLOUT ! s0, ai; SIM " }; // Iterative action optimization 6 for k ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
-- **Equation/algorithm anchors:** p. 2 (Front matter), p. 2 (Front matter), p. 4 (Front matter), p. 5 (Front matter), p. 5 (Front matter), p. 6 (Front matter).
+- **Equation/algorithm anchors:** p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 5 (3.2. Action Planning via Simulation-enabled VLM).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Input, Specification, Task, Instruction, Main, goal, Real-World, Context, Workspace, limits, safe, ranges, Simulation, Rollouts | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | Input, Specification, Task, Instruction, Main, goal, Real-World, Context, Workspace, limits | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | rigid, objects, numerical, state, consists, full, DoF, transformation, Additionally, present | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
-| Objective/constraint | Your, objective, analyze, simulation, rollouts, optimized, action, plan, real-world, task | policy/action modeling objective | equation anchor required |
+| Input/observation | framework, enables, zero-shot, robotic, manipulation, action, generation, single, RGB-D, image, input, natural, language, instruction | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
+| State/latent | framework, enables, zero-shot, robotic, manipulation, action, generation, single, RGB-D, image | language-grounded task state와 action-policy context | body cue; notation verify |
+| Action/output | summary, makes, following, contributions, introduce, test-time, zero-shot, framework, enabling, VLMs | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Objective/constraint | VLM, determines, action, sequence, achieves, task, objective, executed, real, environment | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **p. 4 / Front matter - extractive body cue:** Input Specification • Task Instruction: Main task goal. • Real-World Context: Workspace limits, safe ranges • Simulation Rollouts: Specify the format of input context describing ...
-- **p. 2 / Front matter - extractive body cue:** Input Specification • Image of the Scene: Visual observation of the workspace. • Additional Scene Context: Object and end-effector coordinates in the world frame, workspace ...
-- **p. 2 / Front matter - extractive body cue:** This prompt includes task specifications, input requirements, action primitive definitions, planning guidelines, and output format.
-- **p. 3 / Front matter - extractive body cue:** The context contains the action waypoints and the simulated state snapshots at each waypoint, including gripper pose, object poses, and screenshot paths.
-- **p. 1 / Front matter - extractive body cue:** We sample the state at the end of each symbolic action, where each action specifies the gripper's Cartesian position (x, y, z) and orientation (roll, ...
-- **p. 1 / Front matter - extractive body cue:** Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated state rollout si.
-- **p. 4 / Front matter - extractive body cue:** It is combined with simulation rollout context as input to the VLM action optimizer to generate optimized action sequences.
+- **p. 3 / 3. Method - extractive body cue:** Our framework enables zero-shot robotic manipulation action generation from a single RGB-D image input I0 and natural language instruction `task and outputs robot action sequence ...
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** In particular, at each selected time step t, we render a simulator observation image Ii t and include the numerical action ai t and state ...
+- **p. 4 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** 1, our planner takes as input the initial RGB-D observation I0, the initial simulator state s0, task description `task, VLM, and SIM.
+- **p. 3 / 3.1. Simulation Construction - extractive body cue:** We initialize the state as s0, assuming objects remain static prior to interaction, and construct parameters via ✓= CreateSim(I0) from the initial RGBD image I0.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** Given the simulation rollout sk, we render the final simulation state and extract both an observation image Ik T and the simulator state sk T ...
+- **p. 2 / 1. Introduction - extractive body cue:** To address this limitation, we propose a framework that augments VLMs with physical simulation rollouts as contextual feedback, enabling test-time physical reasoning for action planning.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We present ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -83,41 +81,42 @@ PDF body method statement (p. 1 (Front matter), p. 1 (Front matter), p. 3 (Front
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated ... | episode/sequence/action-chunk boundary |
-| Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | 1) Analyze Rollouts: Inspect each rollout's action sequence, robot/object poses at each waypoint, and screenshots. | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
-| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | For each action sequence, we construct an optimization context ci by subsampling time steps and gathering intermediate information. | episode/sequence/action-chunk boundary |
+| Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | The simulation follows the discrete-time state transition: st = SIM(st-1, at; ✓) (1) where st denotes the state at time step t, ... | Hz/fps, inference time and control rate |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | For each task, we run 10 trials per method. | hardware, batch and throughput |
 
 ## Training vs Inference
 
-- **p. 1 / Front matter - extractive body cue:** Optimization Context c Generation To instantiate the OPTIMIZE function, we construct the context ci from the action sequence ai and the simulated state rollout si.
-- **p. 4 / Front matter - extractive body cue:** Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task.
+- **p. 3 / 3. Method - extractive body cue:** The resulting visual observations and object states from each rollout are then fed back to the VLM as additional context for iterative refinement.
+- **p. 5 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** Given sampled action sequences A = {ai}K i=1, we first perform simulation rollouts to obtain their corresponding state trajectories S = {si}K i=1.
+- **p. 8 / 4.3. Ablation study - extractive body cue:** 1) affects performance, reporting success rates over 10 trials in Table 4: using only 3 samples degrades performance, as limited rollouts fail to provide sufficient ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
-- **Body-defined terms:** rigid, objects, numerical, state, consists, full, DoF, transformation, Optimization, Context, Generation, instantiate, OPTIMIZE, function, construct, action, sequence, simulated, rollout, tasks.
-- **Relevant PDF headings:** not reliably recovered.
+- **Body-defined terms:** planner, takes, input, initial, RGB-D, observation, simulator, state, task, description, VLM, SIM, particular, selected, time, step, render, image, include, numerical.
+- **Relevant PDF headings:** 3. Method (p. 3).
 - Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Multimodal task encoding | Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task. | p. 4 (Front matter), p. 3 (Front matter) |
-| Action / skill decoding | Our zero-shot method outperforms imitation learning baseline HULC [40] and VLA baseline Figure 14. | p. 5 (Front matter), p. 5 (Front matter) |
-| Receding execution / feedback | We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks. | p. 2 (Front matter), p. 5 (Front matter) |
+| Multimodal task encoding | We use ⇡0.5 [2], a recent open-source VLA model pretrained on a large robot manipulation dataset, as a representative baseline. | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
+| Action / skill decoding | Overall, our method consistently outperforms baseline methods across all evaluated tasks, highlighting its strong performance on challenging, physicsaware, fine-grained manipulation tasks. | p. 7 (4.2. Results), p. 8 (4.3. Ablation study) |
+| Receding execution / feedback | Our approach consistently achieves a substantially higher success rate than baselines, highlighting the effectiveness of simulation-enabled VLMs for action planning. | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results) |
 
 ## Failure and Ablation Link
 
-- **p. 2 / Front matter - extractive body cue:** Further Ablation Analysis We additionally consider a variant of our method in which we simultaneously replace the VLM sampler with a random sampler and switch ...
-- **p. 2 / Front matter - extractive body cue:** Notably, this simplified variant is algorithmically identical to Prompting-with-the-Future (PWTF) [45].
-- **p. 5 / Front matter - extractive body cue:** These execution failures highlight the sensitivity and difficulty of our tasks: even minor errors in the planned actions can lead to failure.
-- **p. 3 / Front matter - extractive body cue:** The VLM planning stage is the most time-consuming component.
-- **p. 3 / Front matter - extractive body cue:** Computation Time Table 5 reports the runtime of each component in our method.
-- **p. 4 / Front matter - extractive body cue:** Component Time (mins) simulation construction 1.9 action sampling 2.8 simulation rollout 0.8 action optimization 0.9 on the task.
-- **p. 2 / Front matter - extractive body cue:** Correlation Between Simulation and RealWorld Performance This section examines the correlation between simulation and real-world results, specifically whether success or failure in simulation predicts the ...
+- **p. 7 / 4.3. Ablation study - extractive body cue:** (2) Removing simulation rollout context: We evaluate whether current VLMs can reason effectively without simulation rollouts.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation. Success rates (%) over 10 trials for each task after removing each component of our method. Results demonstrate the importance of VLM-conditioned ...
+- **p. 5 / 4. Experiments - extractive body cue:** We validate our design choices through systematic ablation studies.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For simulation, we implement the projective dynamics variant solver using PyTorch [47] and the MPM simulator using Warp [39].
+- **p. 8 / 4.3. Ablation study - extractive body cue:** This indicates that language-based reasoning without physical grounding cannot reliably infer successful action.
+- **p. 8 / 4.3. Ablation study - extractive body cue:** However, the variant still outperforms baseline methods, largely due to the hierarchical action sampling strategy introduced in Sec.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Action optimization process. We show a representative example from the non-toppling push task. The left three images show simulation rollouts from initial VLM-sampled ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -131,8 +130,17 @@ PDF body method statement (p. 1 (Front matter), p. 1 (Front matter), p. 3 (Front
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Front matter), p. 1 (Front matter), p. 3 (Front matter), p. 3 (Front matter), p. 2 (Front matter), p. 2 (Front matter), objective p. 4 (Front matter), p. 2 (Front matter), p. 2 (Front matter), p. 1 (Front matter), p. 1 (Front matter), p. 3 (Front matter), temporal p. 1 (Front matter), p. 4 (Front matter), p. 4 (Front matter), p. 1 (Front matter), p. 2 (Front matter), p. 2 (Front matter).
+- **Evidence anchors reviewed:** method p. 4 (3.2. Action Planning via Simulation-enabled VLM), p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method), p. 4 (3.1. Simulation Construction), p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method), objective p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method), p. 4 (3.2. Action Planning via Simulation-enabled VLM), p. 4 (3.2. Action Planning via Simulation-enabled VLM), temporal p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3.1. Simulation Construction), p. 5 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3. Method), p. 4 (3.1. Simulation Construction), p. 4 (3.1. Simulation Construction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** 1, our planner takes as input the initial RGB-D observation I0, the initial simulator state s0, task description `task, VLM, and SIM. (p. 4, 3.2. Action Planning via Simulation-enabled VLM).
+- **Objective/update evidence:** From these proposals, the VLM optimizer reasons a non-trivial action update that pushes the bottle for the correct distance without toppling in both simulation and real-world execution. (p. 5, 3.2. Action Planning via Simulation-enabled VLM).
+- **Temporal/runtime evidence:** For each action sequence, we construct an optimization context ci by subsampling time steps and gathering intermediate information. (p. 5, 3.2. Action Planning via Simulation-enabled VLM).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** (2) 80-epoch full-task training on all benchmark datasets with promptable queries.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Answer accuracy on the ScanQA [2] benchmark, with separate evaluations for "test w/ object" and "test w/o object".
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** For embodied AI tasks, we replace the T5-small [49] model of generation head with Vicuna-7B [13] using the instructionfollowing dataset [21].
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We evaluate the Mamba-3VL on multiple 3D-VL datasets, i.e., ScanNet200 [51], Multi3DRefer [67], ScanRefer [6], Sr3D/Nr3D [1], SQA3D [42], ScanQA [2], Scan2Cap [11].
-- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive PDF cue:** Results on CLIPort robot manipulation.
-- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive PDF cue:** Embodied Navigation and Robotic Manipulation.
-- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive PDF cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
-- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive PDF cue:** When comparing (b) and (d), the relation-prioritized spatial scanning brings substantial gains on the SQA3D [42] (2.3%) and Multi3DRefer [67] (1.6%) datasets, underscoring capabilities to ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** (2) 80-epoch full-task training on all benchmark datasets with promptable queries.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Answer accuracy on the ScanQA [2] benchmark, with separate evaluations for "test w/ object" and "test w/o object".
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** For embodied AI tasks, we replace the T5-small [49] model of generation head with Vicuna-7B [13] using the instructionfollowing dataset [21].
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** We evaluate the Mamba-3VL on multiple 3D-VL datasets, i.e., ScanNet200 [51], Multi3DRefer [67], ScanRefer [6], Sr3D/Nr3D [1], SQA3D [42], ScanQA [2], Scan2Cap [11].
+- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Results on CLIPort robot manipulation.
+- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Embodied Navigation and Robotic Manipulation.
+- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
+- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** When comparing (b) and (d), the relation-prioritized spatial scanning brings substantial gains on the SQA3D [42] (2.3%) and Multi3DRefer [67] (1.6%) datasets, underscoring capabilities to ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Results on 3D Vision-Language Tasks | EMPIRICAL / SOURCE-REPORTED EVALUATION | The model achieves landmark accuracies of 79.9% (Unique) and 48.9% (Multiple) on the ScanRefer [6], outperforming PQ3D [74] by 1.7% and 2.7%, respectively. | p. 6 (4.2. Results on 3D Vision-Language Tasks) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 6. Visualization results of the scene-aware task planning and embodied conversation on the 3RPlan [21] and 3RDialog [21] datasets. petitors on challenging unseen ... | p. 8 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** (2) 80-epoch full-task training on all benchmark datasets with promptable queries.
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Answer accuracy on the ScanQA [2] benchmark, with separate evaluations for "test w/ object" and "test w/o object".
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** For embodied AI tasks, we replace the T5-small [49] model of generation head with Vicuna-7B [13] using the instructionfollowing dataset [21].
-- **p. 5 / 4.1. Implementation Details - extractive PDF cue:** We evaluate the Mamba-3VL on multiple 3D-VL datasets, i.e., ScanNet200 [51], Multi3DRefer [67], ScanRefer [6], Sr3D/Nr3D [1], SQA3D [42], ScanQA [2], Scan2Cap [11].
-- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive PDF cue:** Results on CLIPort robot manipulation.
-- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive PDF cue:** Embodied Navigation and Robotic Manipulation.
-- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive PDF cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
-- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive PDF cue:** When comparing (b) and (d), the relation-prioritized spatial scanning brings substantial gains on the SQA3D [42] (2.3%) and Multi3DRefer [67] (1.6%) datasets, underscoring capabilities to ...
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** (2) 80-epoch full-task training on all benchmark datasets with promptable queries.
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Answer accuracy on the ScanQA [2] benchmark, with separate evaluations for "test w/ object" and "test w/o object".
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** For embodied AI tasks, we replace the T5-small [49] model of generation head with Vicuna-7B [13] using the instructionfollowing dataset [21].
+- **p. 5 / 4.1. Implementation Details - extractive body cue:** We evaluate the Mamba-3VL on multiple 3D-VL datasets, i.e., ScanNet200 [51], Multi3DRefer [67], ScanRefer [6], Sr3D/Nr3D [1], SQA3D [42], ScanQA [2], Scan2Cap [11].
+- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Results on CLIPort robot manipulation.
+- **p. 7 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Embodied Navigation and Robotic Manipulation.
+- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
+- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** When comparing (b) and (d), the relation-prioritized spatial scanning brings substantial gains on the SQA3D [42] (2.3%) and Multi3DRefer [67] (1.6%) datasets, underscoring capabilities to ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Mamba-3VL serves as an interactive and general-purpose interface for 3D vision-language tasks, including Referring Segmentation, Visual Grounding, Question Answering, Dense Captioning, while generalizing ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Comparison of grounding accuracy and model efficiency. human commands in real scenarios. Towards this goal, nu- merous datasets and 3D foundation models for ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Preliminaries on pipeline of the proposed Mamba-3VL. (a) Our Mamba-3VL is a query-based decoding framework composed of stacked Mamba Mixer and IDPA layers. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualized examples for promptable segmentation tasks.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 1. Grounding accuracy (%) on 3D-VG benchmarks. Results on ScanRefer and Multi3DRefer are reported under IoU@0.5. The ZT and ST results from Multi3DRefer are ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2. Instance segmentation results on ScanNet200 [51], with w/cls indicating the closed-vocabulary classification head.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 3. Answer accuracy on the SQA3D [42] by question types. ε is a small constant for numerical stability. α(T) and β(T) are learnable factors ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 4. Results of 3D dense captioning on Scan2Cap [11] under IoU@50, evaluated by text similarity scores. The output ¯xi of IDPA is incorporated into ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Mamba-3VL serves as an interactive and general-purpose interface for 3D vision-language tasks, including Referring Segmentation, Visual Grounding, Question Answering, Dense Captioning, while generalizing ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Comparison of grounding accuracy and model efficiency. human commands in real scenarios. Towards this goal, nu- merous datasets and 3D foundation models for ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Preliminaries on pipeline of the proposed Mamba-3VL. (a) Our Mamba-3VL is a query-based decoding framework composed of stacked Mamba Mixer and IDPA layers. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Visualized examples for promptable segmentation tasks.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Grounding accuracy (%) on 3D-VG benchmarks. Results on ScanRefer and Multi3DRefer are reported under IoU@0.5. The ZT and ST results from Multi3DRefer are ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Instance segmentation results on ScanNet200 [51], with w/cls indicating the closed-vocabulary classification head.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 3. Answer accuracy on the SQA3D [42] by question types. ε is a small constant for numerical stability. α(T) and β(T) are learnable factors ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 4. Results of 3D dense captioning on Scan2Cap [11] under IoU@50, evaluated by text similarity scores. The output ¯xi of IDPA is incorporated into ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | (2) 80-epoch full-task training on all benchmark datasets with promptable queries. | embodiment, simulator version and control stack | p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details) |
 | Task/environment | Answer accuracy on the ScanQA [2] benchmark, with separate evaluations for "test w/ object" and "test w/o object". | reset, timeout, object/scene variation | p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details) |
@@ -123,7 +123,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 | Primary metric/result | Figure 6. Visualization results of the scene-aware task planning and embodied conversation on the 3RPlan [21] and 3RDialog [21] datasets. petitors on challenging unseen ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / Method - extractive PDF cue:** Scan2Cap [11] 53.7 35.2 22.4 21.4 43.6 30.7 3DJCG [4] 60.8 47.7 31.5 24.3 51.1 38.7 3D-VisTA [73] 71.0 66.9 34.0 27.1 54.3 45.6 X-Trans2Cap ...
+- **p. 5 / Method - extractive body cue:** Scan2Cap [11] 53.7 35.2 22.4 21.4 43.6 30.7 3DJCG [4] 60.8 47.7 31.5 24.3 51.1 38.7 3D-VisTA [73] 71.0 66.9 34.0 27.1 54.3 45.6 X-Trans2Cap ...
 
 ## Generalization and Failure Cases
 
@@ -157,11 +157,11 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Results on 3D Vision-Language Tasks - extractive PDF cue:** Our method exhibits view-invariant robustness with 3.9% and 6.2% improvements over PQ3D on VD subsets of Nr3D/Sr3D benchmarks.
-- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive PDF cue:** FIS/NIS) results in performance degradation, suggesting their complementary roles.
-- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive PDF cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
+- **p. 6 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Our method exhibits view-invariant robustness with 3.9% and 6.2% improvements over PQ3D on VD subsets of Nr3D/Sr3D benchmarks.
+- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** FIS/NIS) results in performance degradation, suggesting their complementary roles.
+- **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), metrics p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), baselines p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (Figure/Table caption), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (4.3. Ablation Study and In-depth Analysis), results p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 8 (Figure/Table caption), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (4.3. Ablation Study and In-depth Analysis).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), metrics p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), baselines p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (Figure/Table caption), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (4.3. Ablation Study and In-depth Analysis), results p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 8 (Figure/Table caption), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (4.3. Ablation Study and In-depth Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,22 +2,22 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 2 (Front matter), p. 5 (Front matter), p. 5 (Front matter), p. 2 (Front matter), p. 3 (Front matter), p. 4 (Front matter)): We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks.
+PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study)): Our approach consistently achieves a substantially higher success rate than baselines, highlighting the effectiveness of simulation-enabled VLMs for action planning.
 
 ## Evaluation Body Digest
 
-- **p. 4 / Front matter - extractive body cue:** Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task.
-- **p. 3 / Front matter - extractive body cue:** Across tasks, we observe a high degree of consistency between simulation and real-world outcomes, with 89% of all cases exhibiting aligned success or failure.
-- **p. 4 / Front matter - extractive body cue:** Input Specification • Task Instruction: Main task goal. • Real-World Context: Workspace limits, safe ranges • Simulation Rollouts: Specify the format of input context describing ...
-- **p. 5 / Front matter - extractive body cue:** Standardized Benchmark Results We also provide evaluation of our method on the CALVIN benchmark [41] containing long-horizon tasks in simulation, as shown in Table 8.
-- **p. 2 / Front matter - extractive body cue:** We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks.
-- **p. 2 / Front matter - extractive body cue:** Task Specification You are a versatile, general-purpose AI assistant functioning as an embodied planner for a robot arm.
-- **p. 5 / Front matter - extractive body cue:** Evaluation results on the CALVIN Long-Horizon MultiTask Language Control (LH-MTLC) benchmark. #.
-- **p. 3 / Front matter - extractive body cue:** With more efficient VLMs tailored for robotics applications, the
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We use ⇡0.5 [2], a recent open-source VLA model pretrained on a large robot manipulation dataset, as a representative baseline.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We compare our approach against the following baselines: (1) VLA models that are trained on largescale robot action datasets to directly predict joint velocities from ...
+- **p. 7 / 4.2. Results - extractive body cue:** 5 shows simulation and real-world rollouts of six of our seven tasks.
+- **p. 5 / 4. Experiments - extractive body cue:** To evaluate the effectiveness of our framework, we design seven challenging, real-world, physics-aware, fine-grained manipulation tasks.
+- **p. 7 / 4.2. Results - extractive body cue:** In contrast, our method integrates simulation-enabled reasoning with VLM, enabling the robot to iteratively refine its action plan using simulation rollouts as context.
+- **p. 8 / 4.5. Limitations - extractive body cue:** We include an optional replanning mechanism for recovery that updates the simulator using real-world feedback (see Suppl.
+- **p. 8 / 4.4. Failure Case Analysis - extractive body cue:** Execution failures arise when kinematic or dynamic discrepancies between simulation and reality cause actions that succeed in simulation to fail in real-world execution.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our system using a Franka Research 3 robot arm with a parallel-jaw gripper.
 
 ## Evaluation Type and Scope
 
@@ -26,63 +26,63 @@ PDF body evaluation/result cue (p. 2 (Front matter), p. 5 (Front matter), p. 5 (
 - **Input boundary:** image/video, language instruction, proprioception과 history.
 - **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
 - **Primary target:** instruction following, task success, generalization과 latency.
-- **Detected evaluation headings:** not reliably recovered.
+- **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setup (p. 5); 4.2. Results (p. 7).
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Front matter | EMPIRICAL / REAL-ROBOT OR HARDWARE | We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks. | p. 2 (Front matter) |
-| Front matter | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our framework can also incorporate real-world feedback to improve the success rate after execution failures. | p. 5 (Front matter) |
-| Front matter | EMPIRICAL / REAL-ROBOT OR HARDWARE | Increasing the number of sampled proposals may improve performance in such cases. | p. 5 (Front matter) |
-| Front matter | EMPIRICAL / REAL-ROBOT OR HARDWARE | Avoid aggressive or risky proposals and focus on plans with high success rates. | p. 2 (Front matter) |
-| Front matter | EMPIRICAL / REAL-ROBOT OR HARDWARE | Despite the overall high alignment ratio, there remains room to improve simulation and real consistency. | p. 3 (Front matter) |
+| 4.1. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our approach consistently achieves a substantially higher success rate than baselines, highlighting the effectiveness of simulation-enabled VLMs for action planning. | p. 6 (4.1. Experimental Setup) |
+| 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | VLM-based methods, VoxPoser and MOKA, leveraging VLM's strong sceneunderstanding and reasoning capabilities, achieve non-zero success rates on tasks such as bowl stacking, shape rope ... | p. 7 (4.2. Results) |
+| 4.3. Ablation study | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1) affects performance, reporting success rates over 10 trials in Table 4: using only 3 samples degrades performance, as limited rollouts fail to provide ... | p. 8 (4.3. Ablation study) |
+| 4.1. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | 10 shows the results of the remaining task. achieve a sufficiently large contact area. | p. 6 (4.1. Experimental Setup) |
+| 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Overall, our method consistently outperforms baseline methods across all evaluated tasks, highlighting its strong performance on challenging, physicsaware, fine-grained manipulation tasks. | p. 7 (4.2. Results) |
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / Front matter - extractive body cue:** Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task.
-- **p. 3 / Front matter - extractive body cue:** Across tasks, we observe a high degree of consistency between simulation and real-world outcomes, with 89% of all cases exhibiting aligned success or failure.
-- **p. 4 / Front matter - extractive body cue:** Input Specification • Task Instruction: Main task goal. • Real-World Context: Workspace limits, safe ranges • Simulation Rollouts: Specify the format of input context describing ...
-- **p. 5 / Front matter - extractive body cue:** Standardized Benchmark Results We also provide evaluation of our method on the CALVIN benchmark [41] containing long-horizon tasks in simulation, as shown in Table 8.
-- **p. 2 / Front matter - extractive body cue:** We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks.
-- **p. 2 / Front matter - extractive body cue:** Task Specification You are a versatile, general-purpose AI assistant functioning as an embodied planner for a robot arm.
-- **p. 5 / Front matter - extractive body cue:** Evaluation results on the CALVIN Long-Horizon MultiTask Language Control (LH-MTLC) benchmark. #.
-- **p. 3 / Front matter - extractive body cue:** With more efficient VLMs tailored for robotics applications, the
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We use ⇡0.5 [2], a recent open-source VLA model pretrained on a large robot manipulation dataset, as a representative baseline.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We compare our approach against the following baselines: (1) VLA models that are trained on largescale robot action datasets to directly predict joint velocities from ...
+- **p. 7 / 4.2. Results - extractive body cue:** 5 shows simulation and real-world rollouts of six of our seven tasks.
+- **p. 5 / 4. Experiments - extractive body cue:** To evaluate the effectiveness of our framework, we design seven challenging, real-world, physics-aware, fine-grained manipulation tasks.
+- **p. 7 / 4.2. Results - extractive body cue:** In contrast, our method integrates simulation-enabled reasoning with VLM, enabling the robot to iteratively refine its action plan using simulation rollouts as context.
+- **p. 8 / 4.5. Limitations - extractive body cue:** We include an optional replanning mechanism for recovery that updates the simulator using real-world feedback (see Suppl.
+- **p. 8 / 4.4. Failure Case Analysis - extractive body cue:** Execution failures arise when kinematic or dynamic discrepancies between simulation and reality cause actions that succeed in simulation to fail in real-world execution.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our system using a Franka Research 3 robot arm with a parallel-jaw gripper.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 8. Action sampling prompt `sample outline. This prompt includes task specifications, input requirements, action primitive defini- tions, planning guidelines, and output format. It is ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 9. Example rollout context for action optimization in pivoting task. The context contains the action waypoints and the simulated state snapshots at each waypoint, ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 10. Additional qualitative results. Following Fig. 5, this figure shows the initial state, execution progress, and final state for the sweeping tasks. better understand ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 11. Action optimization prompt `opt outline. This prompt includes task, input, and output specifications. It is combined with simulation rollout context as input to ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 12. Correlation Between Simulation and Real-world Success/Failure. Results from 20 samples per task (100 total). Each rollout is categorized as one of: sim-success/real-success (green), ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Table 5. Computation time. We compute the average computa- tion time over 10 cases from each task. Component Time (mins) simulation construction 1.9 action sampling ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 13. Example scene setup variations. Throughout our ex- periments, we vary the object types, poses, colors and materials to demonstrate the robustness and generalizability ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 6. Robustness analysis of VLM-estimated physics parame- ters (N = 10 samples). The low variance and stable ranges indi- cate consistent estimation capabilities. Task ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Simulation-Enabled VLM Action Planning. Given a single RGB-D image and a language task description (left), our method efficiently constructs a physics simulator that ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Simulation construction from a single RGBD image. Given an RGB-D image and a language task description, our pipeline automatically generates either a mesh-based ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Method overview. Our method first instantiates a physics simulator given the real-world scene. Next, a VLM-based action sampler and optimizer iteratively refine the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Action optimization process. We show a representative example from the non-toppling push task. The left three images show simulation rollouts from initial VLM-sampled ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Definition of tasks. For each manipulation task, we list the corresponding instruction and success criteria. Tasks Instruction Success Condition Non-toppling push Push the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Success rates of our method and baselines. For each task, we run 10 trials per method. Our approach consistently achieves a substantially higher ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results. The figure shows the initial state, execution progress, and final state for six tasks in both the real world (top) and ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation. Success rates (%) over 10 trials for each task after removing each component of our method. Results demonstrate the importance of VLM-conditioned ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | Your objective is to analyze simulation rollouts and propose one optimized action plan for a real-world task. | embodiment, simulator version and control stack | p. 4 (Front matter), p. 3 (Front matter) |
-| Task/environment | Across tasks, we observe a high degree of consistency between simulation and real-world outcomes, with 89% of all cases exhibiting aligned success or failure. | reset, timeout, object/scene variation | p. 3 (Front matter), p. 4 (Front matter) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 4 (Front matter), p. 2 (Front matter) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 2 (Front matter), p. 3 (Front matter) |
+| Robot/hardware/simulator | We use ⇡0.5 [2], a recent open-source VLA model pretrained on a large robot manipulation dataset, as a representative baseline. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
+| Task/environment | We compare our approach against the following baselines: (1) VLA models that are trained on largescale robot action datasets to directly predict joint velocities ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results) |
+| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 3 (3. Method), p. 5 (3.2. Action Planning via Simulation-enabled VLM) |
+| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 4 (3.2. Action Planning via Simulation-enabled VLM), p. 3 (3.1. Simulation Construction) |
 
 ## Metrics and Success Definition
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
-| Avoid aggressive or risky proposals and focus on plans with high success rates. | definition/direction/unit from same section | p. 2 (Front matter) |
-| We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks. | definition/direction/unit from same section | p. 2 (Front matter) |
-| Success rate vs friction coefficient µ. | definition/direction/unit from same section | p. 5 (Front matter) |
-| Planning failures in simulation also transfer to the real world, further reducing success rates. | definition/direction/unit from same section | p. 5 (Front matter) |
-| Robustness Validation We validate the robustness of our method by randomizing the scene layout and introducing different distractors for each rollout, as illustrated in ... | definition/direction/unit from same section | p. 4 (Front matter) |
-| Figure 11. Action optimization prompt `opt outline. This prompt includes task, input, and output specifications. It is combined with simulation rollout context as input ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
-| After initial failed execution, we perform re-planning after simulation update leading to successful completion. planning successfully recovers 50% of them, with an average of ... | definition/direction/unit from same section | p. 6 (Front matter) |
-| These tasks appear more sensitive to accurate physical modeling and contact dynamics. | definition/direction/unit from same section | p. 3 (Front matter) |
+| 1) affects performance, reporting success rates over 10 trials in Table 4: using only 3 samples degrades performance, as limited rollouts fail to provide ... | definition/direction/unit from same section | p. 8 (4.3. Ablation study) |
+| Success rates of our method and baselines. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
+| Success rate is our primary evaluation metric. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
+| VLM-based methods, VoxPoser and MOKA, leveraging VLM's strong sceneunderstanding and reasoning capabilities, achieve non-zero success rates on tasks such as bowl stacking, shape rope ... | definition/direction/unit from same section | p. 7 (4.2. Results) |
+| Success rates (%) over 10 trials varying numbers of in-context examples for tasks non-toppling push, bowl stacking, shape rope. #Samples Non-toppling push Bowl stacking ... | definition/direction/unit from same section | p. 8 (4.3. Ablation study) |
+| However, they struggle with tasks that require precise action planning, where small errors, such as pushing the wrong part of an object (in non-toppling ... | definition/direction/unit from same section | p. 7 (4.2. Results) |
+| Figure 2. Simulation construction from a single RGBD image. Given an RGB-D image and a language task description, our pipeline automatically generates either a ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
+| Figure 3. Method overview. Our method first instantiates a physics simulator given the real-world scene. Next, a VLM-based action sampler and optimizer iteratively refine ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
 
@@ -90,9 +90,12 @@ PDF body evaluation/result cue (p. 2 (Front matter), p. 5 (Front matter), p. 5 (
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
-| Our zero-shot method outperforms imitation learning baseline HULC [40] and VLA baseline Figure 14. | comparison identity and matched condition | p. 5 (Front matter) |
-| We also include results from the current best performing baseline FLOWER [56] as a reference. | comparison identity and matched condition | p. 5 (Front matter) |
-| Further Ablation Analysis We additionally consider a variant of our method in which we simultaneously replace the VLM sampler with a random sampler and ... | comparison identity and matched condition | p. 2 (Front matter) |
+| Overall, our method consistently outperforms baseline methods across all evaluated tasks, highlighting its strong performance on challenging, physicsaware, fine-grained manipulation tasks. | comparison identity and matched condition | p. 7 (4.2. Results) |
+| However, the variant still outperforms baseline methods, largely due to the hierarchical action sampling strategy introduced in Sec. | comparison identity and matched condition | p. 8 (4.3. Ablation study) |
+| Qualitative comparison with baseline methods. | comparison identity and matched condition | p. 7 (4.1. Experimental Setup) |
+| We assess whether our method enables zero-shot planning on these tasks, comparing it against other state-of-the-art zero-shot methods. | comparison identity and matched condition | p. 5 (4. Experiments) |
+| Success rates of our method and baselines. | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
+| We use ⇡0.5 [2], a recent open-source VLA model pretrained on a large robot manipulation dataset, as a representative baseline. | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -105,38 +108,38 @@ PDF body evaluation/result cue (p. 2 (Front matter), p. 5 (Front matter), p. 5 (
 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
-| Further Ablation Analysis We additionally consider a variant of our method in which we simultaneously replace the VLM sampler with a random sampler and ... | component/input/data sensitivity | p. 2 (Front matter) |
-| Notably, this simplified variant is algorithmically identical to Prompting-with-the-Future (PWTF) [45]. | component/input/data sensitivity | p. 2 (Front matter) |
-| These execution failures highlight the sensitivity and difficulty of our tasks: even minor errors in the planned actions can lead to failure. | component/input/data sensitivity | p. 5 (Front matter) |
-| The VLM planning stage is the most time-consuming component. | component/input/data sensitivity | p. 3 (Front matter) |
-| Computation Time Table 5 reports the runtime of each component in our method. | component/input/data sensitivity | p. 3 (Front matter) |
-| Component Time (mins) simulation construction 1.9 action sampling 2.8 simulation rollout 0.8 action optimization 0.9 on the task. | component/input/data sensitivity | p. 4 (Front matter) |
+| (2) Removing simulation rollout context: We evaluate whether current VLMs can reason effectively without simulation rollouts. | component/input/data sensitivity | p. 7 (4.3. Ablation study) |
+| Table 3. Ablation. Success rates (%) over 10 trials for each task after removing each component of our method. Results demonstrate the importance of ... | component/input/data sensitivity | p. 7 (Figure/Table caption) |
+| We validate our design choices through systematic ablation studies. | component/input/data sensitivity | p. 5 (4. Experiments) |
+| For simulation, we implement the projective dynamics variant solver using PyTorch [47] and the MPM simulator using Warp [39]. | component/input/data sensitivity | p. 6 (4.1. Experimental Setup) |
+| This indicates that language-based reasoning without physical grounding cannot reliably infer successful action. | component/input/data sensitivity | p. 8 (4.3. Ablation study) |
+| However, the variant still outperforms baseline methods, largely due to the hierarchical action sampling strategy introduced in Sec. | component/input/data sensitivity | p. 8 (4.3. Ablation study) |
 
 ## Main Results / Claim–Evidence Map
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| For rigid objects, the numerical state consists of their full 6-DoF rigid transformation. | We evaluate this variant and find that it consistently achieves a zero success rate across all of our real-world tasks. | PDF body cue; verify exact table/figure and matched conditions | p. 2 (Front matter), p. 5 (Front matter), p. 5 (Front matter), p. 2 (Front matter), p. 3 (Front matter), p. 4 (Front matter) |
-| Primary metric/result | Our framework can also incorporate real-world feedback to improve the success rate after execution failures. | numeric claim only at cited anchor | p. 5 (Front matter) |
+| In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We ... | Our approach consistently achieves a substantially higher success rate than baselines, highlighting the effectiveness of simulation-enabled VLMs for action planning. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study) |
+| Primary metric/result | VLM-based methods, VoxPoser and MOKA, leveraging VLM's strong sceneunderstanding and reasoning capabilities, achieve non-zero success rates on tasks such as bowl stacking, shape rope ... | numeric claim only at cited anchor | p. 7 (4.2. Results) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / Front matter - extractive body cue:** Example Rollout Context { "timestamp": "20260112_224423", "object_names": ["brown_box", "pocky_box"], % total 2 objects ,! "waypoints": [ { "position": [0.4199, -0.2452, 0.3555], ,! "orientation": [0.00, 0.71, ...
-- **p. 3 / Front matter - extractive body cue:** Each task therefore has 20 samples: 10 from the main experiments using our full pipeline, and 10 using direct VLM sampled action sequences.
-- **p. 4 / Front matter - extractive body cue:** Results from 20 samples per task (100 total).
-- **p. 5 / Front matter - extractive body cue:** Robustness analysis of VLM-estimated physics parameters (N = 10 samples).
-- **p. 5 / Front matter - extractive body cue:** Task Parameter Mean ± Std Range [Min, Max] Non-toppling Push Mass (kg) 1.033 ± 0.0015 [1.0, 1.05] Friction Coeff. µ 0.36 ± 0.11 [0.3, 0.5] ...
-- **p. 3 / Front matter - extractive body cue:** Example Rollout Context { "timestamp": "20260112_224423", "object_names": ["brown_box", "pocky_box"], % total 2 objects ,! "waypoints": [ { "position": [0.4199, -0.2452, 0.3555], ,! "orientation": [0.00, 0.71, ...
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our system using a Franka Research 3 robot arm with a parallel-jaw gripper.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For each task, we run 10 trials per method.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** Success rates (%) over 10 trials for each task after removing each component of our method.
+- **p. 8 / 4.3. Ablation study - extractive body cue:** Success rates (%) over 10 trials varying numbers of in-context examples for tasks non-toppling push, bowl stacking, shape rope. #Samples Non-toppling push Bowl stacking Shape ...
+- **p. 8 / 4.3. Ablation study - extractive body cue:** 1) affects performance, reporting success rates over 10 trials in Table 4: using only 3 samples degrades performance, as limited rollouts fail to provide sufficient ...
+- **p. 4 / 3.2. Action Planning via Simulation-enabled VLM - extractive body cue:** I0, `task, s0; VLM " }; 5 S S [ {si SIMROLLOUT ! s0, ai; SIM " }; // Iterative action optimization 6 for k ...
 
 ## Generalization and Failure Cases
 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
-| body limitation/failure cue | Correlation Between Simulation and RealWorld Performance This section examines the correlation between simulation and real-world results, specifically whether success or failure in simulation predicts ... | p. 2 (Front matter) |
-| body limitation/failure cue | Across tasks, we observe a high degree of consistency between simulation and real-world outcomes, with 89% of all cases exhibiting aligned success or failure. | p. 3 (Front matter) |
-| body limitation/failure cue | Simulated failures enable the VLM to avoid similar real-world failures, while simulated successes offer informative guidance for selecting effective action sequences. | p. 3 (Front matter) |
-| body limitation/failure cue | 2) Infer Logic & Physics: Identify the causes of failures and the characteristics of successful attempts. | p. 4 (Front matter) |
-| body limitation/failure cue | Simulation and real outcomes match in 89% of cases (both success or both failure), with 11% showing sim-success/real-fail. | p. 4 (Front matter) |
-| body limitation/failure cue | The pivoting and shape rope failures are both planning failures. | p. 5 (Front matter) |
+| body limitation/failure cue | Planning failures occur when the robot fails to generate a feasible action sequence even after multiple rounds of action optimization. | p. 8 (4.4. Failure Case Analysis) |
+| body limitation/failure cue | Failures are categorized as perception, planning, or execution. successful action sequence is particularly challenging. | p. 8 (4.4. Failure Case Analysis) |
+| body limitation/failure cue | We show representative failures from baseline methods that lack simulationenabled reasoning. | p. 7 (4.1. Experimental Setup) |
+| body limitation/failure cue | However, they struggle with tasks that require precise action planning, where small errors, such as pushing the wrong part of an object (in non-toppling ... | p. 7 (4.2. Results) |
+| body limitation/failure cue | Table 1. Definition of tasks. For each manipulation task, we list the corresponding instruction and success criteria. Tasks Instruction Success Condition Non-toppling push Push ... | p. 5 (Figure/Table caption) |
+| body limitation/failure cue | Figure 4. Action optimization process. We show a representative example from the non-toppling push task. The left three images show simulation rollouts from initial ... | p. 5 (Figure/Table caption) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -144,11 +147,10 @@ PDF body evaluation/result cue (p. 2 (Front matter), p. 5 (Front matter), p. 5 (
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| We follow the open-sourced CEM implementation from PWTF and adopt the same set of hyperparameters. | p. 2 (Front matter) |
-| SIMPACT: Simulation-Enabled Action Planning using Vision-Language Models Supplementary Material This supplementary material provides additional implementation details, experiment analyses, and qualitative results supporting our main ... | p. 1 (Front matter) |
-| Computation Time Table 5 reports the runtime of each component in our method. | p. 3 (Front matter) |
-| The image segmentation and pose estimation steps require significantly less time. | p. 3 (Front matter) |
-| We compute the average computation time over 10 cases from each task. | p. 4 (Front matter) |
+| For each task, we run 10 trials per method. | p. 6 (4.1. Experimental Setup) |
+| Success rates (%) over 10 trials varying numbers of in-context examples for tasks non-toppling push, bowl stacking, shape rope. #Samples Non-toppling push Bowl stacking ... | p. 8 (4.3. Ablation study) |
+| 1) affects performance, reporting success rates over 10 trials in Table 4: using only 3 samples degrades performance, as limited rollouts fail to provide ... | p. 8 (4.3. Ablation study) |
+| For each action sequence, we construct an optimization context ci by subsampling time steps and gathering intermediate information. | p. 5 (3.2. Action Planning via Simulation-enabled VLM) |
 
 | Audit field | Current status |
 |---|---|
@@ -160,14 +162,23 @@ PDF body evaluation/result cue (p. 2 (Front matter), p. 5 (Front matter), p. 5 (
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Front matter - extractive body cue:** Correlation Between Simulation and RealWorld Performance This section examines the correlation between simulation and real-world results, specifically whether success or failure in simulation predicts the ...
-- **p. 3 / Front matter - extractive body cue:** Across tasks, we observe a high degree of consistency between simulation and real-world outcomes, with 89% of all cases exhibiting aligned success or failure.
-- **p. 3 / Front matter - extractive body cue:** Simulated failures enable the VLM to avoid similar real-world failures, while simulated successes offer informative guidance for selecting effective action sequences.
-- **p. 4 / Front matter - extractive body cue:** 2) Infer Logic & Physics: Identify the causes of failures and the characteristics of successful attempts.
-- **p. 4 / Front matter - extractive body cue:** Simulation and real outcomes match in 89% of cases (both success or both failure), with 11% showing sim-success/real-fail.
-- **p. 5 / Front matter - extractive body cue:** The pivoting and shape rope failures are both planning failures.
+- **p. 8 / 4.4. Failure Case Analysis - extractive body cue:** Planning failures occur when the robot fails to generate a feasible action sequence even after multiple rounds of action optimization.
+- **p. 8 / 4.4. Failure Case Analysis - extractive body cue:** Failures are categorized as perception, planning, or execution. successful action sequence is particularly challenging.
+- **p. 7 / 4.1. Experimental Setup - extractive body cue:** We show representative failures from baseline methods that lack simulationenabled reasoning.
+- **p. 7 / 4.2. Results - extractive body cue:** However, they struggle with tasks that require precise action planning, where small errors, such as pushing the wrong part of an object (in non-toppling push) ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Definition of tasks. For each manipulation task, we list the corresponding instruction and success criteria. Tasks Instruction Success Condition Non-toppling push Push the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Action optimization process. We show a representative example from the non-toppling push task. The left three images show simulation rollouts from initial VLM-sampled ...
 
-- **PDF anchors reviewed:** datasets p. 4 (Front matter), p. 3 (Front matter), p. 4 (Front matter), p. 5 (Front matter), p. 2 (Front matter), p. 2 (Front matter), metrics p. 2 (Front matter), p. 2 (Front matter), p. 5 (Front matter), p. 5 (Front matter), p. 4 (Front matter), p. 4 (Figure/Table caption), baselines p. 5 (Front matter), p. 5 (Front matter), p. 2 (Front matter), results p. 2 (Front matter), p. 5 (Front matter), p. 5 (Front matter), p. 2 (Front matter), p. 3 (Front matter), p. 4 (Front matter).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 5 (4. Experiments), p. 7 (4.2. Results), p. 8 (4.5. Limitations), metrics p. 8 (4.3. Ablation study), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study), p. 7 (4.2. Results), baselines p. 7 (4.2. Results), p. 8 (4.3. Ablation study), p. 7 (4.1. Experimental Setup), p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), results p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 8 (4.3. Ablation study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 3. Ablation. Success rates (%) over 10 trials for each task after removing each component of our method. Results demonstrate the importance of VLM-conditioned sampling and the VLM's simulation-enabled ... (p. 7, Figure/Table caption).
+- **Metric evidence:** Success rates (%) over 10 trials varying numbers of in-context examples for tasks non-toppling push, bowl stacking, shape rope. #Samples Non-toppling push Bowl stacking Shape rope 3 samples 50% 50% ... (p. 8, 4.3. Ablation study).
+- **Baseline/ablation evidence:** Qualitative comparison with baseline methods. (p. 7, 4.1. Experimental Setup).
+- **Failure/negative evidence:** However, they struggle with tasks that require precise action planning, where small errors, such as pushing the wrong part of an object (in non-toppling push) or squeezing an incorrect region ... (p. 7, 4.2. Results).

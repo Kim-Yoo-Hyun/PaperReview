@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.02794; PDF retrieval source: https://arxiv.org/pdf/2405.02794. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.02794; PDF retrieval source: https://arxiv.org/pdf/2405.02794. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VI. EXPERIMENTAL RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | For both OCTOPI7b and OCTOPI-13b, including the object property significantly improves performance, which supports our overall hypothesis that leveraging these properties is helpful for ... | p. 7 (VI. EXPERIMENTAL RESULTS) |
 | VI. EXPERIMENTAL RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | For avocado property prediction, OCTOPI-13b achieves an accuracy of 35.50%, which is significantly higher than that of the random baseline (3.70%). | p. 8 (VI. EXPERIMENTAL RESULTS) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To address the above questions, we evaluated OCTOPI using (i) accuracy on the physical understanding tasks in PHYSICLEAR's test set, (ii) accuracy on scenario ... | embodiment, simulator version and control stack | p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS) |
 | Task/environment | Avocado Ripeness Classification To evaluate OCTOPI's usefulness as a tactile-grounded physical reasoning system for real world tasks, we integrated two GelSight sensors on a ... | reset, timeout, object/scene variation | p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS) |
@@ -156,7 +156,16 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 
 - **p. 8 / VI. EXPERIMENTAL RESULTS - extractive body cue:** This suggests that OCTOPI-13b's physical property prediction capability is robust to differences in tactile exploratory procedures.
 
-- **PDF anchors reviewed:** datasets p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), metrics p. 6 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 17 (Figure/Table caption), baselines p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), results p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS).
+- **Evidence anchors reviewed:** datasets p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), metrics p. 6 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 17 (Figure/Table caption), baselines p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), results p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** To address the above questions, we evaluated OCTOPI using (i) accuracy on the physical understanding tasks in PHYSICLEAR's test set, (ii) accuracy on scenario reasoning tasks, (iii) task success rate ... (p. 6, VI. EXPERIMENTAL RESULTS).
+- **Metric evidence:** To address the above questions, we evaluated OCTOPI using (i) accuracy on the physical understanding tasks in PHYSICLEAR's test set, (ii) accuracy on scenario reasoning tasks, (iii) task success rate ... (p. 6, VI. EXPERIMENTAL RESULTS).
+- **Baseline/ablation evidence:** It reasons about the rice state correctly without being trained to do so. (p. 7, VI. EXPERIMENTAL RESULTS).
+- **Failure/negative evidence:** The choice of these specific properties was also informed by the data collection methodology [27], tailored to the limitations and strengths of the GelSight sensor, including considerations for its sensitivity ... (p. 3, III. PHYSICLEAR - TACTILE AND PHYSICAL).

@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `tactile image/force, vision과 proprioceptive history → contact geometry, force state 또는 latent dynamics → grasp/contact action, force command 또는 object motion`.
-- 이 논문의 재사용 가능한 지점은 We consider a policy o(- / -) that produces a chunk of future actions of length k d..++1 (joint positions) given visual observation [, (image at time 1), and (ii) an external ...를 attends to vision vs. force tokens at layer [, and will be the Finally, we project the decoder output H/? to action space,로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 contact geometry, force state 또는 latent dynamics가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Developing. adaptive or self-tuning curriculum strategies could help mitigate this issue by dynamically adjusting hyperparameters based on task-specific requirements, Addressing these limitations could further enhance FACTR's applicabil ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: For the decoder, we introduce & action tokens, A ¢ R**¢.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** We consider a policy o(- / -) that produces a chunk of future actions of length k d..++1 (joint positions) given visual observation [, (image at time 1), and (ii) ... (p. 4, A. Problem Statement and Base Model).
+- **Paper-specific mechanism:** For the decoder, we introduce & action tokens, A ¢ R**¢. (p. 5, A. Problem Statement and Base Model).
+- **Evidence boundary:** the reported outcome is Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation); the relevant task/metric cue is Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift or balance the novel boxes. (p. 8, C. Policy Evaluation).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: These asks are challenging as they require the robot to perceive and respond to the force feedback as it manipulates objects with unseen visual appearances and geometries,.
-3. Compare against the body-reported baseline or a matched simpler baseline: ‘+ How does FACTR perform compared to baseline approaches that do not use force feedback and ones that use force feedback without FACTR?.
-4. Report the body metric and its denominator/aggregation: We present the average success rate for truining and testing objects, respectively..
-5. Re-run the body-reported ablation/failure condition: We discuss more detailed ablations ‘on the curriculum in See..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: We consider a policy o(- / -) that produces a chunk of future actions of length k d..++1 (joint positions) given visual observation [, (image at time 1), and (ii) ... (p. 4, A. Problem Statement and Base Model); preserve the objective/update rule: Each trajectory in D comprises tuples (I;,7:, 1). (p. 4, A. Problem Statement and Base Model).
+2. Use the paper-reported task/data/environment cue: We observe that for tasks that require continuous contact between the arm and an object, such as non-prehensile pivoting and bimanual box lifting, the un-actuated teleoperation system often causes the ... (p. 7, B. Teleoperation Evaluation).
+3. Compare against the reported or matched baseline: ‘+ How does FACTR perform compared to baseline approaches that do not use force feedback and ones that use force feedback without FACTR? (p. 7, C. Policy Evaluation).
+4. Report the body metric with its denominator and aggregation: Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation).
+5. Re-run the reported ablation or stress/failure condition: We discuss more detailed ablations ‘on the curriculum in See. (p. 7, C. Policy Evaluation); if none is reported, design one around: While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift or balance the novel boxes. (p. 8, C. Policy Evaluation).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model); the primary result is directionally consistent at p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (C. Policy Evaluation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 5 (A. Problem Statement and Base Model), p. 1 (Abstract), match the reported outcome at p. 7 (B. Teleoperation Evaluation), p. 9 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), and measure the boundary at p. 8 (C. Policy Evaluation), p. 7 (C. Policy Evaluation).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 decoder, introduce, action mechanism이 ‘+ How does FACTR perform compared to baseline approaches that do not use force feedback and ... 대비 We present the average success rate for truining and testing objects, respectively.을 개선하고, Developing. adaptive or self-tuning curriculum strategies could help mitigate this issue by dynamically adjusting hyperparameters based ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (We consider a policy o(- / -) that produces a chunk of future actions of length k d..++1 (joint positions) given visual ...), does the paper-specific mechanism (For the decoder, we introduce & action tokens, A ¢ R**¢.) retain the reported evaluation outcome (Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% ...) when tested against the paper's strongest explicit boundary (While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** For the decoder, we introduce & action tokens, A ¢ R**¢. (p. 5, A. Problem Statement and Base Model).
+- **Paper-supported outcome:** Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation).
+- **Strongest explicit boundary:** While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift or balance the novel boxes. (p. 8, C. Policy Evaluation).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

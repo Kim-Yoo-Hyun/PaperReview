@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide 10 ...
-- **p. 7 / 4.3.1. Object Removal - extractive PDF cue:** 5 presents qualitative results across three scenes from the SPIn-NeRF dataset.
-- **p. 7 / 4.3.2. Object Re-Texturing - extractive PDF cue:** For the CLIPdir scores, we averaged the scores across six scenes from the SPIn-NeRF [25] and MipNeRF360 [1] datasets.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** 1) For the object removal task, we evaluate our method using PSNR, SSIM, and LPIPS scores on the SPIn-NeRF dataset [25].
-- **p. 8 / 4.3.3. Object Replacement - extractive PDF cue:** The quantitative ablation study of key components on the object removal task using SPIn-NeRF dataset [25].
-- **p. 8 / 4.3.3. Object Replacement - extractive PDF cue:** The visualization of ablation study for key components on the object replacement task using LLFF dataset [22].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Qualitative results of the object re-texturing task.
-- **p. 6 / 4.3. Results - extractive PDF cue:** We primarily provide quantitative and qualitative comparisons of three inpainting tasks, i.e., object removal, object 16350
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide 10 ...
+- **p. 7 / 4.3.1. Object Removal - extractive body cue:** 5 presents qualitative results across three scenes from the SPIn-NeRF dataset.
+- **p. 7 / 4.3.2. Object Re-Texturing - extractive body cue:** For the CLIPdir scores, we averaged the scores across six scenes from the SPIn-NeRF [25] and MipNeRF360 [1] datasets.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** 1) For the object removal task, we evaluate our method using PSNR, SSIM, and LPIPS scores on the SPIn-NeRF dataset [25].
+- **p. 8 / 4.3.3. Object Replacement - extractive body cue:** The quantitative ablation study of key components on the object removal task using SPIn-NeRF dataset [25].
+- **p. 8 / 4.3.3. Object Replacement - extractive body cue:** The visualization of ablation study for key components on the object replacement task using LLFF dataset [22].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Qualitative results of the object re-texturing task.
+- **p. 6 / 4.3. Results - extractive body cue:** We primarily provide quantitative and qualitative comparisons of three inpainting tasks, i.e., object removal, object 16350
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experimental Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our method achieves clear improvements in PSNR and obtains better scores in most metrics. | p. 6 (4.1. Experimental Setup) |
 | 4.4. Ablation Study | EMPIRICAL / SOURCE-REPORTED EVALUATION | By integrating DDIM inversion and AFP within the 2D inpainter, we achieve a notable 0.21 improvement in PSNR, indicating significant enhancements. | p. 8 (4.4. Ablation Study) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide 10 ...
-- **p. 7 / 4.3.1. Object Removal - extractive PDF cue:** 5 presents qualitative results across three scenes from the SPIn-NeRF dataset.
-- **p. 7 / 4.3.2. Object Re-Texturing - extractive PDF cue:** For the CLIPdir scores, we averaged the scores across six scenes from the SPIn-NeRF [25] and MipNeRF360 [1] datasets.
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** 1) For the object removal task, we evaluate our method using PSNR, SSIM, and LPIPS scores on the SPIn-NeRF dataset [25].
-- **p. 8 / 4.3.3. Object Replacement - extractive PDF cue:** The quantitative ablation study of key components on the object removal task using SPIn-NeRF dataset [25].
-- **p. 8 / 4.3.3. Object Replacement - extractive PDF cue:** The visualization of ablation study for key components on the object replacement task using LLFF dataset [22].
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** Qualitative results of the object re-texturing task.
-- **p. 6 / 4.3. Results - extractive PDF cue:** We primarily provide quantitative and qualitative comparisons of three inpainting tasks, i.e., object removal, object 16350
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide 10 ...
+- **p. 7 / 4.3.1. Object Removal - extractive body cue:** 5 presents qualitative results across three scenes from the SPIn-NeRF dataset.
+- **p. 7 / 4.3.2. Object Re-Texturing - extractive body cue:** For the CLIPdir scores, we averaged the scores across six scenes from the SPIn-NeRF [25] and MipNeRF360 [1] datasets.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** 1) For the object removal task, we evaluate our method using PSNR, SSIM, and LPIPS scores on the SPIn-NeRF dataset [25].
+- **p. 8 / 4.3.3. Object Replacement - extractive body cue:** The quantitative ablation study of key components on the object removal task using SPIn-NeRF dataset [25].
+- **p. 8 / 4.3.3. Object Replacement - extractive body cue:** The visualization of ablation study for key components on the object replacement task using LLFF dataset [22].
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Qualitative results of the object re-texturing task.
+- **p. 6 / 4.3. Results - extractive body cue:** We primarily provide quantitative and qualitative comparisons of three inpainting tasks, i.e., object removal, object 16350
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. DiGA3D is a versatile 3D inpainting framework guided by text prompts, supporting multiple inpainting tasks including ob- ject replacement, removal, and re-texturing, etc. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Our proposed framework. Before performing 3D inpainting, we first calculate the camera pose using COLMAP [32] and extract masks from mask prompts Tm. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. (a) The illustration of the proposed Attention Feature Propagation (AFP). The outputs of AFP are the inpainted image Ii and the depth map ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of the multi-view consistent image inpainting with DDIM inversion and the AFP module in Sec. 3.3. 3D Gaussians (see Sec. 3.3). In ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative results of the object removal task. For each scene, we present two novel views to compare the rendering quality and multi-view consistency ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Qualitative results of the object re-texturing task. For each scene, we present two novel views to compare the rendering quality and multi-view consistency ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results of the object removal task. We compared our method with four baselines, i.e., SPIn-NeRF [25], NeRFiller [38], MVIP-NeRF [7], and GScream ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results of object re-texturing and re- placement. We compared our method with three competitors, i.e., Instruct-NeRF2NeRF (IN2N) [12], GaussianEditor [8], and GaussCtrl ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. DiGA3D is a versatile 3D inpainting framework guided by text prompts, supporting multiple inpainting tasks including ob- ject replacement, removal, and re-texturing, etc. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed framework. Before performing 3D inpainting, we first calculate the camera pose using COLMAP [32] and extract masks from mask prompts Tm. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. (a) The illustration of the proposed Attention Feature Propagation (AFP). The outputs of AFP are the inpainted image Ii and the depth map ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of the multi-view consistent image inpainting with DDIM inversion and the AFP module in Sec. 3.3. 3D Gaussians (see Sec. 3.3). In ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results of the object removal task. For each scene, we present two novel views to compare the rendering quality and multi-view consistency ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Qualitative results of the object re-texturing task. For each scene, we present two novel views to compare the rendering quality and multi-view consistency ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results of the object removal task. We compared our method with four baselines, i.e., SPIn-NeRF [25], NeRFiller [38], MVIP-NeRF [7], and GScream ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results of object re-texturing and re- placement. We compared our method with three competitors, i.e., Instruct-NeRF2NeRF (IN2N) [12], GaussianEditor [8], and GaussCtrl ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal) |
 | Task/environment | 5 presents qualitative results across three scenes from the SPIn-NeRF dataset. | reset, timeout, object/scene variation | p. 7 (4.3.1. Object Removal), p. 7 (4.3.2. Object Re-Texturing) |
@@ -123,8 +123,8 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 | Primary metric/result | By integrating DDIM inversion and AFP within the 2D inpainter, we achieve a notable 0.21 improvement in PSNR, indicating significant enhancements. | numeric claim only at cited anchor | p. 8 (4.4. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide 10 ...
-- **p. 2 / 3.1. Preliminary - extractive PDF cue:** The Gaussian ellipse is calculated as G(x) = e-1 2 xT Σ-1x, where x is the displacement from the center µ.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We evaluate our versatile 3D inpainting methods in three different datasets with multi-view images from feed-forward and 360 degrees: 1) SPIn-NeRF dataset [25] provide 10 ...
+- **p. 2 / 3.1. Preliminary - extractive body cue:** The Gaussian ellipse is calculated as G(x) = e-1 2 xT Σ-1x, where x is the displacement from the center µ.
 
 ## Generalization and Failure Cases
 
@@ -157,9 +157,9 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 
 ## Limitations and Verification Questions
 
-- **p. 7 / 4.3.1. Object Removal - extractive PDF cue:** While our rendering results exhibit some limitations in the masked LPIPS compared to GScream, we achieve a comparable score in this metric and show significant ...
+- **p. 7 / 4.3.1. Object Removal - extractive body cue:** While our rendering results exhibit some limitations in the masked LPIPS compared to GScream, we achieve a comparable score in this metric and show significant ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal), p. 7 (4.3.2. Object Re-Texturing), p. 5 (4.1. Experimental Setup), p. 8 (4.3.3. Object Replacement), p. 8 (4.3.3. Object Replacement), metrics p. 7 (4.3.3. Object Replacement), p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3.2. Object Re-Texturing), p. 8 (4.4. Ablation Study), baselines p. 6 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal), p. 6 (4.1. Experimental Setup), p. 7 (4.3.2. Object Re-Texturing), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.3.1. Object Removal), p. 8 (4.4. Ablation Study), p. 7 (4.3.3. Object Replacement), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal), p. 7 (4.3.2. Object Re-Texturing), p. 5 (4.1. Experimental Setup), p. 8 (4.3.3. Object Replacement), p. 8 (4.3.3. Object Replacement), metrics p. 7 (4.3.3. Object Replacement), p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3.2. Object Re-Texturing), p. 8 (4.4. Ablation Study), baselines p. 6 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal), p. 6 (4.1. Experimental Setup), p. 7 (4.3.2. Object Re-Texturing), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.3.1. Object Removal), p. 8 (4.4. Ablation Study), p. 7 (4.3.3. Object Replacement), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

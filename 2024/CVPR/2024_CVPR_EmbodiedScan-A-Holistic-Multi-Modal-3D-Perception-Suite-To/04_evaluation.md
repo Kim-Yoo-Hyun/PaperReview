@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 
 ## Evaluation Body Digest
 
-- **p. 2 / Dataset - extractive PDF cue:** To bridge this divide, we introduce a multi-modal, egocentric 3D perception dataset and benchmark for holistic 3D scene understanding, termed EmbodiedScan, aimed at facilitating real-world ...
-- **p. 2 / Dataset - extractive PDF cue:** Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark.
-- **p. 4 / 3.3. Statistics - extractive PDF cue:** We remove four categories, {wall, ceiling, floor, object} in our 3D detection benchmark and divide the remaining 284 categories into three splits, {head, common, tail} ...
-- **p. 6 / 5. Benchmark - extractive PDF cue:** Scenebased benchmarks mean the samples are based on different scenes, covering continuous and multi-view perception.
-- **p. 6 / 5. Benchmark - extractive PDF cue:** Detailed splits will be discussed in each benchmark.
-- **p. 7 / 5. Benchmark - extractive PDF cue:** Continuous and multi-view occupancy prediction benchmark (split by the double line). "refri." means "refrigerator".
-- **p. 8 / 5.2. Language-Grounded Benchmark - extractive PDF cue:** Data sample splits align with previous benchmarks' 3D scan splits.
-- **p. 3 / 3.1. Data Collection & Processing - extractive PDF cue:** Considering there have been readily available 3D indoor scene scans from existing datasets, we start with integrating those providing ego-centric RGB-D captures with the corresponding ...
+- **p. 2 / Dataset - extractive body cue:** To bridge this divide, we introduce a multi-modal, egocentric 3D perception dataset and benchmark for holistic 3D scene understanding, termed EmbodiedScan, aimed at facilitating real-world ...
+- **p. 2 / Dataset - extractive body cue:** Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark.
+- **p. 4 / 3.3. Statistics - extractive body cue:** We remove four categories, {wall, ceiling, floor, object} in our 3D detection benchmark and divide the remaining 284 categories into three splits, {head, common, tail} ...
+- **p. 6 / 5. Benchmark - extractive body cue:** Scenebased benchmarks mean the samples are based on different scenes, covering continuous and multi-view perception.
+- **p. 6 / 5. Benchmark - extractive body cue:** Detailed splits will be discussed in each benchmark.
+- **p. 7 / 5. Benchmark - extractive body cue:** Continuous and multi-view occupancy prediction benchmark (split by the double line). "refri." means "refrigerator".
+- **p. 8 / 5.2. Language-Grounded Benchmark - extractive body cue:** Data sample splits align with previous benchmarks' 3D scan splits.
+- **p. 3 / 3.1. Data Collection & Processing - extractive body cue:** Considering there have been readily available 3D indoor scene scans from existing datasets, we start with integrating those providing ego-centric RGB-D captures with the corresponding ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.1. Fundamental 3D Perception Benchmarks | BENCHMARK / DATASET | Substituting this with our decoder design markedly improves performance. | p. 7 (5.1. Fundamental 3D Perception Benchmarks) |
 | Figure/Table caption | BENCHMARK / DATASET | Figure 3. EmbodiedScan annotation and statistics. (a) UI for 3D box annotation. We select keyframes and generate their SAM masks with corresponding axis-aligned boxes. ... | p. 3 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 
 ## Dataset / Benchmark Role
 
-- **p. 2 / Dataset - extractive PDF cue:** To bridge this divide, we introduce a multi-modal, egocentric 3D perception dataset and benchmark for holistic 3D scene understanding, termed EmbodiedScan, aimed at facilitating real-world ...
-- **p. 2 / Dataset - extractive PDF cue:** Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark.
-- **p. 4 / 3.3. Statistics - extractive PDF cue:** We remove four categories, {wall, ceiling, floor, object} in our 3D detection benchmark and divide the remaining 284 categories into three splits, {head, common, tail} ...
-- **p. 6 / 5. Benchmark - extractive PDF cue:** Scenebased benchmarks mean the samples are based on different scenes, covering continuous and multi-view perception.
-- **p. 6 / 5. Benchmark - extractive PDF cue:** Detailed splits will be discussed in each benchmark.
-- **p. 7 / 5. Benchmark - extractive PDF cue:** Continuous and multi-view occupancy prediction benchmark (split by the double line). "refri." means "refrigerator".
-- **p. 8 / 5.2. Language-Grounded Benchmark - extractive PDF cue:** Data sample splits align with previous benchmarks' 3D scan splits.
-- **p. 3 / 3.1. Data Collection & Processing - extractive PDF cue:** Considering there have been readily available 3D indoor scene scans from existing datasets, we start with integrating those providing ego-centric RGB-D captures with the corresponding ...
+- **p. 2 / Dataset - extractive body cue:** To bridge this divide, we introduce a multi-modal, egocentric 3D perception dataset and benchmark for holistic 3D scene understanding, termed EmbodiedScan, aimed at facilitating real-world ...
+- **p. 2 / Dataset - extractive body cue:** Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark.
+- **p. 4 / 3.3. Statistics - extractive body cue:** We remove four categories, {wall, ceiling, floor, object} in our 3D detection benchmark and divide the remaining 284 categories into three splits, {head, common, tail} ...
+- **p. 6 / 5. Benchmark - extractive body cue:** Scenebased benchmarks mean the samples are based on different scenes, covering continuous and multi-view perception.
+- **p. 6 / 5. Benchmark - extractive body cue:** Detailed splits will be discussed in each benchmark.
+- **p. 7 / 5. Benchmark - extractive body cue:** Continuous and multi-view occupancy prediction benchmark (split by the double line). "refri." means "refrigerator".
+- **p. 8 / 5.2. Language-Grounded Benchmark - extractive body cue:** Data sample splits align with previous benchmarks' 3D scan splits.
+- **p. 3 / 3.1. Data Collection & Processing - extractive body cue:** Considering there have been readily available 3D indoor scene scans from existing datasets, we start with integrating those providing ego-centric RGB-D captures with the corresponding ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. EmbodiedScan provides a multi-modal, ego-centric 3D perception dataset with massive real-scanned data and rich annotations for indoor scenes. It benchmarks language-grounded holistic 3D ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark. EmbodiedScan features more ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Dataset composition. Embodied- Scan is composed of three data sources and has similar scans, images, objects, and cate- gories in each of them. ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. EmbodiedScan annotation and statistics. (a) UI for 3D box annotation. We select keyframes and generate their SAM masks with corresponding axis-aligned boxes. With ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Embodied Perceptron accepts RGB-D sequence with any number of views along with texts as multi-modal input. It uses classical encoders to extract features ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Continuous and multi-view 3D object detection benchmark on EmbodiedScan (split by the double line). Methods Input Large-Vocabulary Head Common Tail AP25
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Continuous and multi-view occupancy prediction benchmark (split by the double line). "refri." means "refrigerator". Methods Input mIOU empty floor wall chair
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Monocular 3D object detection benchmark on EmbodiedScan. Methods Input
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. EmbodiedScan provides a multi-modal, ego-centric 3D perception dataset with massive real-scanned data and rich annotations for indoor scenes. It benchmarks language-grounded holistic 3D ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark. EmbodiedScan features more ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Dataset composition. Embodied- Scan is composed of three data sources and has similar scans, images, objects, and cate- gories in each of them. ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. EmbodiedScan annotation and statistics. (a) UI for 3D box annotation. We select keyframes and generate their SAM masks with corresponding axis-aligned boxes. With ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Embodied Perceptron accepts RGB-D sequence with any number of views along with texts as multi-modal input. It uses classical encoders to extract features ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Continuous and multi-view 3D object detection benchmark on EmbodiedScan (split by the double line). Methods Input Large-Vocabulary Head Common Tail AP25
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Continuous and multi-view occupancy prediction benchmark (split by the double line). "refri." means "refrigerator". Methods Input mIOU empty floor wall chair
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Monocular 3D object detection benchmark on EmbodiedScan. Methods Input
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To bridge this divide, we introduce a multi-modal, egocentric 3D perception dataset and benchmark for holistic 3D scene understanding, termed EmbodiedScan, aimed at facilitating ... | embodiment, simulator version and control stack | p. 2 (Dataset), p. 2 (Dataset) |
 | Task/environment | Comparison with other 3D indoor scene datasets. "Cats" refers to the categories with box annotations for the 3D detection benchmark. | reset, timeout, object/scene variation | p. 2 (Dataset), p. 4 (3.3. Statistics) |
@@ -123,10 +123,10 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 | Primary metric/result | Figure 3. EmbodiedScan annotation and statistics. (a) UI for 3D box annotation. We select keyframes and generate their SAM masks with corresponding axis-aligned boxes. ... | numeric claim only at cited anchor | p. 3 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.1. Data Collection & Processing - extractive PDF cue:** As for different sampling rates of images in ScanNet and 3RScan videos, we sample one keyframe per 10 frames for ScanNet and keep all the ...
-- **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive PDF cue:** Here, N = 10 during training with random view sampling, while in evaluation, N = 50 with fixed views.
-- **p. 8 / 5.1. Fundamental 3D Perception Benchmarks - extractive PDF cue:** Train Val Overall Head Common Tail Render Render 22.11 33.01 16.44 6.74 Render Real 18.72 27.02 14.85 6.25 Real Real 21.98 32.91 17.18 5.05 frame ...
-- **p. 4 / 3.1. Data Collection & Processing - extractive PDF cue:** As for different sampling rates of images in ScanNet and 3RScan videos, we sample one keyframe per 10 frames for ScanNet and keep all the ...
+- **p. 4 / 3.1. Data Collection & Processing - extractive body cue:** As for different sampling rates of images in ScanNet and 3RScan videos, we sample one keyframe per 10 frames for ScanNet and keep all the ...
+- **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Here, N = 10 during training with random view sampling, while in evaluation, N = 50 with fixed views.
+- **p. 8 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Train Val Overall Head Common Tail Render Render 22.11 33.01 16.44 6.74 Render Real 18.72 27.02 14.85 6.25 Real Real 21.98 32.91 17.18 5.05 frame ...
+- **p. 4 / 3.1. Data Collection & Processing - extractive body cue:** As for different sampling rates of images in ScanNet and 3RScan videos, we sample one keyframe per 10 frames for ScanNet and keep all the ...
 
 ## Generalization and Failure Cases
 
@@ -164,14 +164,14 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 
 ## Limitations and Verification Questions
 
-- **p. 2 / Dataset - extractive PDF cue:** On the other hand, since we cannot trivially obtain the reconstruction of a new environment, models trained with scene-level input are not directly applicable in ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Dataset composition. Embodied- Scan is composed of three data sources and has similar scans, images, objects, and cate- gories in each of them. ...
-- **p. 4 / 3.2. Annotation - extractive PDF cue:** 3a) to address limitations in existing 3D box annotations, i.e., lack of orientation and small object annotations.
-- **p. 4 / 3.3. Statistics - extractive PDF cue:** Generated language prompts following SR3D fall into five types of spatial object-to-object relations: Horizontal Proximity, Vertical Proximity, Support, Allocentric, and Between.
-- **p. 6 / 5. Benchmark - extractive PDF cue:** Due to the space limitation, please refer to the appendix for implementation details of different baselines, and more quantitative and qualitative results including an "in-the-wild" ...
-- **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive PDF cue:** Unlike continuous settings, multi-view 3D perception does not predefine the order of views but provides all views to the model for scene-level results.
+- **p. 2 / Dataset - extractive body cue:** On the other hand, since we cannot trivially obtain the reconstruction of a new environment, models trained with scene-level input are not directly applicable in ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Dataset composition. Embodied- Scan is composed of three data sources and has similar scans, images, objects, and cate- gories in each of them. ...
+- **p. 4 / 3.2. Annotation - extractive body cue:** 3a) to address limitations in existing 3D box annotations, i.e., lack of orientation and small object annotations.
+- **p. 4 / 3.3. Statistics - extractive body cue:** Generated language prompts following SR3D fall into five types of spatial object-to-object relations: Horizontal Proximity, Vertical Proximity, Support, Allocentric, and Between.
+- **p. 6 / 5. Benchmark - extractive body cue:** Due to the space limitation, please refer to the appendix for implementation details of different baselines, and more quantitative and qualitative results including an "in-the-wild" ...
+- **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Unlike continuous settings, multi-view 3D perception does not predefine the order of views but provides all views to the model for scene-level results.
 
-- **PDF anchors reviewed:** datasets p. 2 (Dataset), p. 2 (Dataset), p. 4 (3.3. Statistics), p. 6 (5. Benchmark), p. 6 (5. Benchmark), p. 7 (5. Benchmark), metrics p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset), p. 8 (5.3. Analysis), p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), baselines p. 8 (5.2. Language-Grounded Benchmark), p. 8 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset), p. 2 (Dataset), p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), results p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 3 (Figure/Table caption), p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 8 (5.2. Language-Grounded Benchmark), p. 8 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset).
+- **Evidence anchors reviewed:** datasets p. 2 (Dataset), p. 2 (Dataset), p. 4 (3.3. Statistics), p. 6 (5. Benchmark), p. 6 (5. Benchmark), p. 7 (5. Benchmark), metrics p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset), p. 8 (5.3. Analysis), p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), baselines p. 8 (5.2. Language-Grounded Benchmark), p. 8 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset), p. 2 (Dataset), p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), results p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 3 (Figure/Table caption), p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 8 (5.2. Language-Grounded Benchmark), p. 8 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

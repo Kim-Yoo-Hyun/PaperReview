@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Abla
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1.2. Datasets - extractive PDF cue:** To analyze our method under controllable settings, we construct a SD-Replica dataset by simulating the hybrid pixel camera's sampling process on the Replica [15] scenes.
-- **p. 6 / 4.1.3. Evaluation Metrics - extractive PDF cue:** For tracking accuracy, we adopt the Root Mean Square Error (RMSE) of Absolute Trajectory Error (ATE), following standard camera 6-DoF pose estimation benchmarks.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** And a semi-isotropic loss can help tracking accuracy for scenes with sharp edges like fr1/desk and fr2/xyz, however it slightly reduces tracking accuracy in fr3/office ...
-- **p. 7 / 4.2.2. Deblurring Metrics - extractive PDF cue:** RMSE ATE[cm] on the TUM-RGBD dataset.
-- **p. 7 / 4.2.2. Deblurring Metrics - extractive PDF cue:** Reconstruction results on the stereo-Tianmouc dataset.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** We conduct the ablation study of image pyramids and semiisotropic loss on TUM-RGBD dataset.
-- **p. 7 / 4.2.1. Tracking Accuracy - extractive PDF cue:** Under fast and extreme motion, our approach demonstrates significant advantages, while other methods based on dense RGB frames suffer from motion blur and rapid error ...
-- **p. 7 / 4.2.1. Tracking Accuracy - extractive PDF cue:** We first evaluate our method against state-of-the-art approaches in terms of tracking 6-DoF pose accuracy and robustness under various motion conditions, based on the stereo ...
+- **p. 6 / 4.1.2. Datasets - extractive body cue:** To analyze our method under controllable settings, we construct a SD-Replica dataset by simulating the hybrid pixel camera's sampling process on the Replica [15] scenes.
+- **p. 6 / 4.1.3. Evaluation Metrics - extractive body cue:** For tracking accuracy, we adopt the Root Mean Square Error (RMSE) of Absolute Trajectory Error (ATE), following standard camera 6-DoF pose estimation benchmarks.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** And a semi-isotropic loss can help tracking accuracy for scenes with sharp edges like fr1/desk and fr2/xyz, however it slightly reduces tracking accuracy in fr3/office ...
+- **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** RMSE ATE[cm] on the TUM-RGBD dataset.
+- **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** Reconstruction results on the stereo-Tianmouc dataset.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** We conduct the ablation study of image pyramids and semiisotropic loss on TUM-RGBD dataset.
+- **p. 7 / 4.2.1. Tracking Accuracy - extractive body cue:** Under fast and extreme motion, our approach demonstrates significant advantages, while other methods based on dense RGB frames suffer from motion blur and rapid error ...
+- **p. 7 / 4.2.1. Tracking Accuracy - extractive body cue:** We first evaluate our method against state-of-the-art approaches in terms of tracking 6-DoF pose accuracy and robustness under various motion conditions, based on the stereo ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Abla
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2.1. Tracking Accuracy | EMPIRICAL / SIMULATION | 2, across three complex scenarios, while our method exhibits marginally lower overall tracking accuracy compared to the baseline approaches, it achieves a substantial improvement ... | p. 7 (4.2.1. Tracking Accuracy) |
 | 4.3. Ablation Study | EMPIRICAL / SIMULATION | We can see that a pyramid strategy can significantly improve system's tracking accuracy under long sequences like fr3/office. | p. 8 (4.3. Ablation Study) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Abla
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1.2. Datasets - extractive PDF cue:** To analyze our method under controllable settings, we construct a SD-Replica dataset by simulating the hybrid pixel camera's sampling process on the Replica [15] scenes.
-- **p. 6 / 4.1.3. Evaluation Metrics - extractive PDF cue:** For tracking accuracy, we adopt the Root Mean Square Error (RMSE) of Absolute Trajectory Error (ATE), following standard camera 6-DoF pose estimation benchmarks.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** And a semi-isotropic loss can help tracking accuracy for scenes with sharp edges like fr1/desk and fr2/xyz, however it slightly reduces tracking accuracy in fr3/office ...
-- **p. 7 / 4.2.2. Deblurring Metrics - extractive PDF cue:** RMSE ATE[cm] on the TUM-RGBD dataset.
-- **p. 7 / 4.2.2. Deblurring Metrics - extractive PDF cue:** Reconstruction results on the stereo-Tianmouc dataset.
-- **p. 8 / 4.3. Ablation Study - extractive PDF cue:** We conduct the ablation study of image pyramids and semiisotropic loss on TUM-RGBD dataset.
+- **p. 6 / 4.1.2. Datasets - extractive body cue:** To analyze our method under controllable settings, we construct a SD-Replica dataset by simulating the hybrid pixel camera's sampling process on the Replica [15] scenes.
+- **p. 6 / 4.1.3. Evaluation Metrics - extractive body cue:** For tracking accuracy, we adopt the Root Mean Square Error (RMSE) of Absolute Trajectory Error (ATE), following standard camera 6-DoF pose estimation benchmarks.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** And a semi-isotropic loss can help tracking accuracy for scenes with sharp edges like fr1/desk and fr2/xyz, however it slightly reduces tracking accuracy in fr3/office ...
+- **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** RMSE ATE[cm] on the TUM-RGBD dataset.
+- **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** Reconstruction results on the stereo-Tianmouc dataset.
+- **p. 8 / 4.3. Ablation Study - extractive body cue:** We conduct the ablation study of image pyramids and semiisotropic loss on TUM-RGBD dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Differential rasterization and reconstructed sparse map: elongated Gaussians are used as an efficient primitive to represent scene geometry and to perform camera pose ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Our approach follows a "sketch-then-paint" paradigm. Similar to drawing the outline before adding colors, we first generate a discrete outline (skeleton) for efficient ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. (a) Hybrid pixel layout, which offers color and high- frame-rate spatial difference in one sensor. (b) RGB and spatial difference comparison under high ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 4. SDGS overview: our approach uses high-frame-rate SD inputs to optimize a sparse Gaussian map and performs camera pose estimation via edge alignment. With ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 5. (a) Binary SD image. (b) Euclidean distance transform (in pixels); warmer colors indicate larger distance to the nearest edge, cooler colors indicate smaller ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 6. Mutually exclusive supervision. Note that it is shown in the rendered image and distorted into sensor domain as in Fig. 3a, each RGB ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Tracking error (RMSE ATE [cm]) on stereo-Tianmouc. ∗Outer pose estimators. † Sim(3) alignment.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. RMSE ATE[cm] on the TUM-RGBD dataset.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Differential rasterization and reconstructed sparse map: elongated Gaussians are used as an efficient primitive to represent scene geometry and to perform camera pose ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Our approach follows a "sketch-then-paint" paradigm. Similar to drawing the outline before adding colors, we first generate a discrete outline (skeleton) for efficient ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. (a) Hybrid pixel layout, which offers color and high- frame-rate spatial difference in one sensor. (b) RGB and spatial difference comparison under high ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. SDGS overview: our approach uses high-frame-rate SD inputs to optimize a sparse Gaussian map and performs camera pose estimation via edge alignment. With ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 5. (a) Binary SD image. (b) Euclidean distance transform (in pixels); warmer colors indicate larger distance to the nearest edge, cooler colors indicate smaller ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Mutually exclusive supervision. Note that it is shown in the rendered image and distorted into sensor domain as in Fig. 3a, each RGB ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Tracking error (RMSE ATE [cm]) on stereo-Tianmouc. ∗Outer pose estimators. † Sim(3) alignment.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. RMSE ATE[cm] on the TUM-RGBD dataset.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To analyze our method under controllable settings, we construct a SD-Replica dataset by simulating the hybrid pixel camera's sampling process on the Replica [15] ... | embodiment, simulator version and control stack | p. 6 (4.1.2. Datasets), p. 6 (4.1.3. Evaluation Metrics) |
 | Task/environment | For tracking accuracy, we adopt the Root Mean Square Error (RMSE) of Absolute Trajectory Error (ATE), following standard camera 6-DoF pose estimation benchmarks. | reset, timeout, object/scene variation | p. 6 (4.1.3. Evaluation Metrics), p. 8 (4.3. Ablation Study) |
@@ -116,8 +116,8 @@ PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Abla
 | Primary metric/result | We can see that a pyramid strategy can significantly improve system's tracking accuracy under long sequences like fr3/office. | numeric claim only at cited anchor | p. 8 (4.3. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1.1. System Setup - extractive PDF cue:** The RGB stream is recorded at 30 FPS, while the differential output is synchronously recorded at 757 FPS with a dynamic range over 100 dB.
-- **p. 6 / 3.4.2. SD-guided Mutually Exclusive RGB Supervision - extractive PDF cue:** We then apply 2×2 average pooling to form a H 2 × W 2 grid, and construct a chessboard-sampled grid as in Fig.
+- **p. 6 / 4.1.1. System Setup - extractive body cue:** The RGB stream is recorded at 30 FPS, while the differential output is synchronously recorded at 757 FPS with a dynamic range over 100 dB.
+- **p. 6 / 3.4.2. SD-guided Mutually Exclusive RGB Supervision - extractive body cue:** We then apply 2×2 average pooling to form a H 2 × W 2 grid, and construct a chessboard-sampled grid as in Fig.
 
 ## Generalization and Failure Cases
 
@@ -154,14 +154,14 @@ PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Abla
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** By combining emerging hybrid pixel cameras, we not only maintain robust tracking accuracy under extreme motions where other methods fail, but also reconstruct dense maps ...
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Our system balances tracking robustness, high-fidelity reconstruction, and system efficiency.
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Our approach follows a "sketch-then-paint" paradigm. Similar to drawing the outline before adding colors, we first generate a discrete outline (skeleton) for efficient ...
-- **p. 6 / 4.1.2. Datasets - extractive PDF cue:** We evaluate our method on three datasets to verify both the robustness and generalization ability: SD-Replica Datasets.
-- **p. 7 / 4.2.1. Tracking Accuracy - extractive PDF cue:** We first evaluate our method against state-of-the-art approaches in terms of tracking 6-DoF pose accuracy and robustness under various motion conditions, based on the stereo ...
-- **p. 7 / 4.2.2. Deblurring Metrics - extractive PDF cue:** Method Input tianmouc/slow tianmouc/fast tianmouc/extreme Average Gaussian-SLAM RGB 4.60 fail fail - SplaTAM 6.52 fail fail - MonoGS-RGBD 3.32 24.52 fail - WildGS-SLAM∗† 2.01 8.21 ...
+- **p. 8 / 5. Conclusion - extractive body cue:** By combining emerging hybrid pixel cameras, we not only maintain robust tracking accuracy under extreme motions where other methods fail, but also reconstruct dense maps ...
+- **p. 8 / 5. Conclusion - extractive body cue:** Our system balances tracking robustness, high-fidelity reconstruction, and system efficiency.
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Our approach follows a "sketch-then-paint" paradigm. Similar to drawing the outline before adding colors, we first generate a discrete outline (skeleton) for efficient ...
+- **p. 6 / 4.1.2. Datasets - extractive body cue:** We evaluate our method on three datasets to verify both the robustness and generalization ability: SD-Replica Datasets.
+- **p. 7 / 4.2.1. Tracking Accuracy - extractive body cue:** We first evaluate our method against state-of-the-art approaches in terms of tracking 6-DoF pose accuracy and robustness under various motion conditions, based on the stereo ...
+- **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** Method Input tianmouc/slow tianmouc/fast tianmouc/extreme Average Gaussian-SLAM RGB 4.60 fail fail - SplaTAM 6.52 fail fail - MonoGS-RGBD 3.32 24.52 fail - WildGS-SLAM∗† 2.01 8.21 ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1.2. Datasets), p. 6 (4.1.3. Evaluation Metrics), p. 8 (4.3. Ablation Study), p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.2. Deblurring Metrics), p. 8 (4.3. Ablation Study), metrics p. 6 (4.1.3. Evaluation Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), baselines p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 8 (4.2.3. Performance Analysis), p. 3 (Figure/Table caption), results p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), p. 6 (4.1. Experiment Setup).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1.2. Datasets), p. 6 (4.1.3. Evaluation Metrics), p. 8 (4.3. Ablation Study), p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.2. Deblurring Metrics), p. 8 (4.3. Ablation Study), metrics p. 6 (4.1.3. Evaluation Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), baselines p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 8 (4.2.3. Performance Analysis), p. 3 (Figure/Table caption), results p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), p. 6 (4.1. Experiment Setup).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

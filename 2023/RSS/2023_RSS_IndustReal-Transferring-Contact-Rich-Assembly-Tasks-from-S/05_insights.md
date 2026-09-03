@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 We used proximal policy optimization (PPO) [53] to learn a stochastic policy a ∼πθ(o) (actor), mapping from observations o ∈O to actions a ∈A and parameterized by a network with weights θ; ...를 An established approach for applying policy actions is sd t+1 = st ⊕at = st ⊕Π(ot), (2) where sd t+1 is the desired state, at is an action expressed as an incremental ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Second, our primary failure cases on the real system were due to slip of the object in the gripper and wedging of plugs in their corresponding sockets.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our secondary contributions are the following: • Hardware: We present IndustRealKit, which contains CAD models for all parts designed for our setup, as well as a list of all purchased parts.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In summary, we developed the IndustRealLib library, which accepts trained policy checkpoints from Isaac Gym as input, and outputs targets for a Franka robot controlled via a taskspace impedance (TSI) ... (p. 6, V. POLICY DEPLOYMENT IN REAL WORLD).
+- **Paper-specific mechanism:** Specifically, our primary contributions are the following: • Algorithms: For simulation, we propose three methods to allow RL agents to solve contact-rich tasks in a simulator: a simulation-aware policy update ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Asset Pick Insert Pick-Place-Insert Success Success Engage Success Engage Round peg 8 mm 19/20 7/10 7/10 7/10 7/10 Round peg 12 mm 19/20 7/10 9/10 7/10 7/10 Round peg 16 ... (p. 9, VI. REAL-WORLD EXPERIMENTS); the relevant task/metric cue is Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III). (p. 8, VI. REAL-WORLD EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce gripper (e.g., Robotiq) would fully resolve this issue. (p. 8, VI. REAL-WORLD EXPERIMENTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The goal was for the robot to detect all the pegs and use the simulation-trained Pick policy to pick up the objects before releasing them..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 3: Evaluation of Simulation-Aware Policy Update. Success rates are computed for episodes where the maximum interpenetration distance was less than the specified value at test time. Boxes indicate median and IQR. ....
-4. Report the body metric and its denominator/aggregation: Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III)..
-5. Re-run the body-reported ablation/failure condition: To our knowledge, IndustReal is the first system to demonstrate RL-based sim-to-real transfer for the end-to-end assembly task (i.e., detection, grasping, part transport, and insertion) without any policy adaptation phase in the ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In summary, we developed the IndustRealLib library, which accepts trained policy checkpoints from Isaac Gym as input, and outputs targets for a Franka robot controlled via a taskspace impedance (TSI) ... (p. 6, V. POLICY DEPLOYMENT IN REAL WORLD); preserve the objective/update rule: The objective was to learn a policy π : O →P(A) that maximized the expected sum of discounted rewards Eπ[ΣT -1 t=0 γtr(st)]. (p. 3, IV. POLICY LEARNING IN SIMULATION).
+2. Use the paper-reported task/data/environment cue: The goal was for the robot to detect all the pegs and use the simulation-trained Pick policy to pick up the objects before releasing them. (p. 8, VI. REAL-WORLD EXPERIMENTS).
+3. Compare against the reported or matched baseline: To our knowledge, IndustReal is the first system to demonstrate RL-based sim-to-real transfer for the end-to-end assembly task (i.e., detection, grasping, part transport, and insertion) without any policy adaptation phase ... (p. 8, VI. REAL-WORLD EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III). (p. 8, VI. REAL-WORLD EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: To our knowledge, IndustReal is the first system to demonstrate RL-based sim-to-real transfer for the end-to-end assembly task (i.e., detection, grasping, part transport, and insertion) without any policy adaptation phase ... (p. 8, VI. REAL-WORLD EXPERIMENTS); if none is reported, design one around: Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce gripper (e.g., Robotiq) would fully resolve this issue. (p. 8, VI. REAL-WORLD EXPERIMENTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. POLICY LEARNING IN SIMULATION), p. 4 (IV. POLICY LEARNING IN SIMULATION); the primary result is directionally consistent at p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), match the reported outcome at p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), and measure the boundary at p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VIII. LIMITATIONS & FUTURE WORK).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 secondary, contributions, following mechanism이 Fig. 3: Evaluation of Simulation-Aware Policy Update. Success rates are computed for episodes where the maximum ... 대비 Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III).을 개선하고, Second, our primary failure cases on the real system were due to slip of the object ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In summary, we developed the IndustRealLib library, which accepts trained policy checkpoints from Isaac Gym as input, and outputs targets for a ...), does the paper-specific mechanism (Specifically, our primary contributions are the following: • Algorithms: For simulation, we propose three methods to allow RL agents to solve contact-rich ...) retain the reported evaluation outcome (Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III).) when tested against the paper's strongest explicit boundary (Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III).) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Specifically, our primary contributions are the following: • Algorithms: For simulation, we propose three methods to allow RL agents to solve contact-rich tasks in a simulator: a simulation-aware policy update ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** Asset Pick Insert Pick-Place-Insert Success Success Engage Success Engage Round peg 8 mm 19/20 7/10 7/10 7/10 7/10 Round peg 12 mm 19/20 7/10 9/10 7/10 7/10 Round peg 16 ... (p. 9, VI. REAL-WORLD EXPERIMENTS).
+- **Strongest explicit boundary:** Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce gripper (e.g., Robotiq) would fully resolve this issue. (p. 8, VI. REAL-WORLD EXPERIMENTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

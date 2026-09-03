@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/xu23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.09955. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v229/xu23a.html; PDF retrieval source: https://arxiv.org/pdf/2307.09955. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -22,7 +22,7 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 ## Design Rationale
 
 - **p. 2 / 1 Introduction - extractive body cue:** Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first ...
-- **p. 1 / 1 Introduction - extractive body cue:** We refer to the task as "Cross-Embodiment Skill Discovery" and introduce our method 7th Conference on Robot Learning (CoRL 2023), Atlanta, USA. arXiv:2307.09955v2 [cs.RO] 28 ...
+- **p. 1 / 1 Introduction - extractive body cue:** We refer to the task as "Cross-Embodiment Skill Discovery" and introduce our method 7th Conference on Robot Learning (CoRL 2023), Atlanta, USA.
 - **p. 2 / 1 Introduction - extractive body cue:** To encourage across-embodiment alignment, we introduce a set of learnable skill prototypes through feature clustering.
 
 ## Source Evidence Cues
@@ -35,7 +35,7 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | From this video prompt, the algorithm first identifies the order of skills used in the prompt and then composes the skills using ... | p. 3 (3 Approach), p. 4 (3 Approach) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | Then, we extract the skill representation zij = ftemporal(vij) from each video clip with a temporal skill encoder consisting of a vision ... | p. 4 (3 Approach), p. 3 (3 Approach) |
@@ -76,10 +76,10 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | If the robot executes an undemonstrated sub-task, the episode ends. | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | If the robot executes an undemonstrated sub-task, the episode ends. | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | The video clip length L and uniform sample frames M are set as 8 and 100 for both simulated and real-world kitchens. | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -122,8 +122,17 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approach), p. 4 (3 Approach), objective p. 4 (3 Approach), p. 4 (3 Approach), temporal p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 4 (3 Approach), p. 5 (B P), p. 8 (4 Subtasks Avg).
+- **Evidence anchors reviewed:** method p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approach), p. 4 (3 Approach), objective p. 4 (3 Approach), p. 4 (3 Approach), temporal p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 4 (3 Approach), p. 5 (B P), p. 8 (4 Subtasks Avg).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** In the transfer phase, the algorithm uses the robot teleoperation dataset Dr to learn the skill-conditioned visuomotor policy P(a/s, z), where z ∈Z and s includes both robot proprioception and ... (p. 3, 3 Approach).
+- **Objective/update evidence:** Both ftemporal and fprototype are trained jointly to minimize the CorssEntropy loss between the predicted pij and target qij skill prototypes distributions: Lprototype = (p. 4, 3 Approach).
+- **Temporal/runtime evidence:** If the robot executes an undemonstrated sub-task, the episode ends. (p. 6, 4 Evaluation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

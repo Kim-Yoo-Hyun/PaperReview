@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive PDF cue:** The LERF dataset consists of 3D scenes in the wild, which are captured by using the Polycam application on the iPhone.
-- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive PDF cue:** The 3DOVS dataset consists of the diverse set of long-tail objects, which are captured with various poses under different backgrounds.
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** Performance comparisons of novel view rendering on the LERF [10] dataset (the best results are shown in bold). can see that the proposed method is ...
-- **p. 6 / 4.3. Performance Evaluation - extractive PDF cue:** Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset.
-- **p. 6 / 4.3. Performance Evaluation - extractive PDF cue:** Furthermore, the qualitative comparison with LangSplat [20], Feature-3DGS [34], GSGrouping [31], GOI [21], and LEGaussian [24] is presented on LERF and 3D-OVS datasets in Figs.
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** Performance comparisons of open-vocabulary 3D semantic segmentation on the 3D-OVS [14] dataset (the best mIoU results are shown in bold).
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Performance analysis of the proposed method based on changes in progressive mask expanding, identity-aware semantic consistency loss, and outlier filtering on the LERF dataset (the ...
-- **p. 8 / 4.5. 3D Scene Editing - extractive PDF cue:** To further demonstrate the practical applicability of the proposed method, we apply it to 3D scene editing tasks.
+- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive body cue:** The LERF dataset consists of 3D scenes in the wild, which are captured by using the Polycam application on the iPhone.
+- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive body cue:** The 3DOVS dataset consists of the diverse set of long-tail objects, which are captured with various poses under different backgrounds.
+- **p. 7 / 4.3. Performance Evaluation - extractive body cue:** Performance comparisons of novel view rendering on the LERF [10] dataset (the best results are shown in bold). can see that the proposed method is ...
+- **p. 6 / 4.3. Performance Evaluation - extractive body cue:** Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset.
+- **p. 6 / 4.3. Performance Evaluation - extractive body cue:** Furthermore, the qualitative comparison with LangSplat [20], Feature-3DGS [34], GSGrouping [31], GOI [21], and LEGaussian [24] is presented on LERF and 3D-OVS datasets in Figs.
+- **p. 7 / 4.3. Performance Evaluation - extractive body cue:** Performance comparisons of open-vocabulary 3D semantic segmentation on the 3D-OVS [14] dataset (the best mIoU results are shown in bold).
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Performance analysis of the proposed method based on changes in progressive mask expanding, identity-aware semantic consistency loss, and outlier filtering on the LERF dataset (the ...
+- **p. 8 / 4.5. 3D Scene Editing - extractive body cue:** To further demonstrate the practical applicability of the proposed method, we apply it to 3D scene editing tasks.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Performance Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | Specifically, the proposed method achieves 80.5 mIoU and 76.0 mBIoU on the LERF dataset, which outperforms the stateof-the-art methods by a considerable margin for ... | p. 5 (4.3. Performance Evaluation) |
 | 4.3. Performance Evaluation | EMPIRICAL / SOURCE-REPORTED EVALUATION | As can be seen, the proposed method achieves 94.4 mIoU, which shows the superior performance compared to previous methods. | p. 5 (4.3. Performance Evaluation) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive PDF cue:** The LERF dataset consists of 3D scenes in the wild, which are captured by using the Polycam application on the iPhone.
-- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive PDF cue:** The 3DOVS dataset consists of the diverse set of long-tail objects, which are captured with various poses under different backgrounds.
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** Performance comparisons of novel view rendering on the LERF [10] dataset (the best results are shown in bold). can see that the proposed method is ...
-- **p. 6 / 4.3. Performance Evaluation - extractive PDF cue:** Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset.
-- **p. 6 / 4.3. Performance Evaluation - extractive PDF cue:** Furthermore, the qualitative comparison with LangSplat [20], Feature-3DGS [34], GSGrouping [31], GOI [21], and LEGaussian [24] is presented on LERF and 3D-OVS datasets in Figs.
-- **p. 7 / 4.3. Performance Evaluation - extractive PDF cue:** Performance comparisons of open-vocabulary 3D semantic segmentation on the 3D-OVS [14] dataset (the best mIoU results are shown in bold).
-- **p. 8 / 4.4. Ablation Study - extractive PDF cue:** Performance analysis of the proposed method based on changes in progressive mask expanding, identity-aware semantic consistency loss, and outlier filtering on the LERF dataset (the ...
-- **p. 8 / 4.5. 3D Scene Editing - extractive PDF cue:** To further demonstrate the practical applicability of the proposed method, we apply it to 3D scene editing tasks.
+- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive body cue:** The LERF dataset consists of 3D scenes in the wild, which are captured by using the Polycam application on the iPhone.
+- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive body cue:** The 3DOVS dataset consists of the diverse set of long-tail objects, which are captured with various poses under different backgrounds.
+- **p. 7 / 4.3. Performance Evaluation - extractive body cue:** Performance comparisons of novel view rendering on the LERF [10] dataset (the best results are shown in bold). can see that the proposed method is ...
+- **p. 6 / 4.3. Performance Evaluation - extractive body cue:** Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset.
+- **p. 6 / 4.3. Performance Evaluation - extractive body cue:** Furthermore, the qualitative comparison with LangSplat [20], Feature-3DGS [34], GSGrouping [31], GOI [21], and LEGaussian [24] is presented on LERF and 3D-OVS datasets in Figs.
+- **p. 7 / 4.3. Performance Evaluation - extractive body cue:** Performance comparisons of open-vocabulary 3D semantic segmentation on the 3D-OVS [14] dataset (the best mIoU results are shown in bold).
+- **p. 8 / 4.4. Ablation Study - extractive body cue:** Performance analysis of the proposed method based on changes in progressive mask expanding, identity-aware semantic consistency loss, and outlier filtering on the LERF dataset (the ...
+- **p. 8 / 4.5. 3D Scene Editing - extractive body cue:** To further demonstrate the practical applicability of the proposed method, we apply it to 3D scene editing tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. (a) RGB images. (b)(c) Results of the cosine similar- ity between the text embedding of the input query and language features by the ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. The overall framework of the proposed method. Language and identity embeddings are augmented into the Gaussian primitive. Coherent identity labels serve as pseudo ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The proposed progressive mask expanding scheme. Rasterized language and identity feature maps are used to com- pute the cosine similarity with the input ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3. This progressive expanding scheme helps the model con- sider the local relationship between segments in the same target, which ensures to extract segmentation ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. (a) Cosine similarity between the rasterized language feature map and the text embedding of the input query. (b)(c) Re- sults of semantic segmentation ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset. (a) Rendered images by 3DGS [9]. Results by (b) the proposed ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Performance comparisons of open-vocabulary 3D semantic segmentation on the LERF [10] dataset (the best results are shown in bold). rendering performance for novel ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset. (a) Rendered images by 3DGS [9]. Results by (b) the proposed ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) RGB images. (b)(c) Results of the cosine similar- ity between the text embedding of the input query and language features by the ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overall framework of the proposed method. Language and identity embeddings are augmented into the Gaussian primitive. Coherent identity labels serve as pseudo ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The proposed progressive mask expanding scheme. Rasterized language and identity feature maps are used to com- pute the cosine similarity with the input ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. This progressive expanding scheme helps the model con- sider the local relationship between segments in the same target, which ensures to extract segmentation ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. (a) Cosine similarity between the rasterized language feature map and the text embedding of the input query. (b)(c) Re- sults of semantic segmentation ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset. (a) Rendered images by 3DGS [9]. Results by (b) the proposed ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Performance comparisons of open-vocabulary 3D semantic segmentation on the LERF [10] dataset (the best results are shown in bold). rendering performance for novel ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Some examples of open-vocabulary 3D semantic segmentation on the LERF [10] dataset. (a) Rendered images by 3DGS [9]. Results by (b) the proposed ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The LERF dataset consists of 3D scenes in the wild, which are captured by using the Polycam application on the iPhone. | embodiment, simulator version and control stack | p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics) |
 | Task/environment | The 3DOVS dataset consists of the diverse set of long-tail objects, which are captured with various poses under different backgrounds. | reset, timeout, object/scene variation | p. 5 (4.2. Datasets and Evaluation Metrics), p. 7 (4.3. Performance Evaluation) |
@@ -121,7 +121,7 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 | Primary metric/result | As can be seen, the proposed method achieves 94.4 mIoU, which shows the superior performance compared to previous methods. | numeric claim only at cited anchor | p. 5 (4.3. Performance Evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive PDF cue:** During training, we randomly select a subset of Gaussians and compute the identity-aware semantic consistency loss Lcons, which is defined as follows: Lcons = Lsame ...
+- **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** During training, we randomly select a subset of Gaussians and compute the identity-aware semantic consistency loss Lcons, which is defined as follows: Lcons = Lsame ...
 
 ## Generalization and Failure Cases
 
@@ -153,10 +153,10 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 4.3. Performance Evaluation - extractive PDF cue:** Furthermore, we also evaluate the performance of the proposed method with photometric metrics, such as peak signal-to-noise ratio (PSNR), structural similarity index (SSIM) [27], and ...
-- **p. 6 / 4.3. Performance Evaluation - extractive PDF cue:** In addition, previous methods often fail to extract boundaries accurately due to the use of fixed threshold values in generating semantic segmentation masks(see Fig.
+- **p. 5 / 4.3. Performance Evaluation - extractive body cue:** Furthermore, we also evaluate the performance of the proposed method with photometric metrics, such as peak signal-to-noise ratio (PSNR), structural similarity index (SSIM) [27], and ...
+- **p. 6 / 4.3. Performance Evaluation - extractive body cue:** In addition, previous methods often fail to extract boundaries accurately due to the use of fixed threshold values in generating semantic segmentation masks(see Fig.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics), p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), metrics p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics), p. 6 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.5. 3D Scene Editing), baselines p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), results p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.3. Performance Evaluation).
+- **Evidence anchors reviewed:** datasets p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics), p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), metrics p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics), p. 6 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.5. 3D Scene Editing), baselines p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), results p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.3. Performance Evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p061.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p061.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 8 (IV. EVALUATION), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | cate that AMO achieves superior tracking accuracy in roll and pitch directions. ‘The most notable improvement isin pitch tracking, where other baselines struggle to ... | p. 6 (IV. EVALUATION) |
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | With the most complete setting, the policy achieves a near-perfect success rate. | p. 8 (IV. EVALUATION) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 8 (IV. EVALUATION), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 6: Autonomous tasks performed in the real-world setting. | embodiment, simulator version and control stack | p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION) |
 | Task/environment | For each task, we collect 50 episodes using the teleoperation system and train an ACT to complete it autonomously. | reset, timeout, object/scene variation | p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION) |
@@ -152,7 +152,16 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 8 (IV. EVALUATION), p.
 - **p. 6 / IV. EVALUATION - extractive body cue:** ‘AMO, the policy fails to learn the transformation rlation
 - **p. 7 / IV. EVALUATION - extractive body cue:** ‘To further highlight the robustness and hyper-dexterity of, the AMO system, We select several challenging tasks that require adaptive whole-body control and perform imitation
 
-- **PDF anchors reviewed:** datasets p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), metrics p. 8 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 5 (IV. EVALUATION), baselines p. 7 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), results p. 6 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (IV. EVALUATION).
+- **Evidence anchors reviewed:** datasets p. 7 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), metrics p. 8 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 5 (IV. EVALUATION), baselines p. 7 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), results p. 6 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 7 (IV. EVALUATION), p. 8 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (IV. EVALUATION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** cate that AMO achieves superior tracking accuracy in roll and pitch directions. ‘The most notable improvement isin pitch tracking, where other baselines struggle to maintain accuracy, whereas our model significantly ... (p. 6, IV. EVALUATION).
+- **Metric evidence:** Despite this limitation, AMO remains capable of performing stable locomotion with a low tracking error, demonstrating its robustness. (p. 6, IV. EVALUATION).
+- **Baseline/ablation evidence:** + wlo priv: This baseline is trained without additional privileged observations si. (p. 6, IV. EVALUATION).
+- **Failure/negative evidence:** It is evident that w/o AMO struggles with 0.0.D. commands: it fails to track torso pitch and yaw commands before they reach the sampled training ranges, and it does not ... (p. 7, IV. EVALUATION).

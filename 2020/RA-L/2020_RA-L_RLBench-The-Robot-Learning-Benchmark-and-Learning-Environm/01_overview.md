@@ -1,8 +1,10 @@
 # RLBench: The Robot Learning Benchmark & Learning Environment
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1909.12271.
-> PDF retrieval source: https://arxiv.org/pdf/1909.12271. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1909.12271.
+> PDF retrieval source: https://arxiv.org/pdf/1909.12271. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / RA-L
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/1909.12271
 - Code/Project: https://github.com/stepjam/RLBench
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -78,3 +80,12 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 The benchmark includes 100 completely unique, hand-designed tasks ranging in difficulty (shown in Figure 1), which share a common Franka Emika Panda robot arm, featuring a range of sensor modalities, including joint ...를 문제로 두고, To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation areas.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), p. 1 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, there is currently no standard in place for comparing manipulation methods in these respective areas. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ... (p. 1, I. INTRODUCTION).
+- **Evaluation boundary:** Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world. (p. 3, III. BENCHMARK PROPERTIES).
+- **Explicit failure boundary:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).

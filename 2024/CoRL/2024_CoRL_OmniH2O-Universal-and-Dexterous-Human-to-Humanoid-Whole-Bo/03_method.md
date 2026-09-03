@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=oL1WEZQal8; PDF retrieval source: https://arxiv.org/pdf/2406.08858. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=oL1WEZQal8; PDF retrieval source: https://arxiv.org/pdf/2406.08858. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | To tackle this issue, We first train a teacher policy that uses privileged state information and then distill it to a student ... | p. 4 (1 Introduction), p. 8 (1 Introduction) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | We draw two key conclusions: (1) The Diffusion Policy significantly outperforms vanilla BC with ResNet; (2) In our LfD training, predicting a ... | p. 8 (1 Introduction), p. 8 (1 Introduction) |
@@ -134,8 +134,17 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), objective p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), temporal p. 6 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), objective p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), temporal p. 6 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** We draw two key conclusions: (1) The Diffusion Policy significantly outperforms vanilla BC with ResNet; (2) In our LfD training, predicting a sequence of actions is crucial, as it enables ... (p. 8, 1 Introduction).
+- **Objective/update evidence:** We apply the Proximal Policy Optimization algorithm (PPO) [48] to maximize the cumulative discounted reward E hPT t=1 γt-1rt i . (p. 3, 1 Introduction).
+- **Temporal/runtime evidence:** We train our deployable teleoperation policy πOmniH2O following the DAgger [51] framework: for each episode, we roll out the student policy πOmniH2O(at/sp-real t , sg-real t ) in simulation to ... (p. 5, 1 Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

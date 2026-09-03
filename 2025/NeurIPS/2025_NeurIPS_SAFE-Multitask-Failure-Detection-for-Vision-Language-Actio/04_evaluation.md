@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 75.54 53.93 82.37 70.00 Euclid. k-NN 80.35 60.27 72.01 53.64 Cosine k-NN 80.23 59.51 74.76 65.88 PCA-KMeans 49.98 51.03 75.62 47.22 RND 62.00 45.83 ... | p. 10 (6 Results) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: SAFE-MLP achieves the best failure detection performance in real-world experiments with both π0-FAST Franka and OpenVLA WidowX. Plot (a) presents quantitative results, ... | p. 10 (Figure/Table caption) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Real-world WidowX Experiments: We also deploy the OpenVLA model pretrained on the "Open-X Magic Soup++" dataset [2] on a WidowX robot manipulator in our ... | embodiment, simulator version and control stack | p. 6 (5 Experiments), p. 6 (5 Experiments) |
 | Task/environment | Real-world Franka Experiments: We deploy the π0-FAST-DROID checkpoint [4, 5]1 on a Franka Emika Panda Robot. | reset, timeout, object/scene variation | p. 6 (5 Experiments), p. 9 (6 Results) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 - **p. 5 / 3. Calibrate failure detection - extractive body cue:** If the predicted score exceeds the threshold during testing, SAFE confidently detects a failure. timely manner.
 - **p. 6 / 3. Calibrate failure detection - extractive body cue:** We use uppert as the failure flag threshold δt, and more details about functional CP can be found in Appendix.
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 9 (6 Results), p. 10 (6 Results), p. 7 (5 Experiments), p. 9 (6 Results), metrics p. 6 (5 Experiments), p. 10 (6 Results), p. 10 (6 Results), p. 8 (Figure/Table caption), p. 9 (6 Results), p. 9 (6 Results), baselines p. 9 (6 Results), p. 27 (Figure/Table caption), p. 9 (6 Results), p. 10 (6 Results), p. 10 (6 Results), p. 7 (Figure/Table caption), results p. 10 (6 Results), p. 10 (Figure/Table caption), p. 9 (6 Results), p. 9 (6 Results), p. 27 (Figure/Table caption), p. 6 (5 Experiments).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 9 (6 Results), p. 10 (6 Results), p. 7 (5 Experiments), p. 9 (6 Results), metrics p. 6 (5 Experiments), p. 10 (6 Results), p. 10 (6 Results), p. 8 (Figure/Table caption), p. 9 (6 Results), p. 9 (6 Results), baselines p. 9 (6 Results), p. 27 (Figure/Table caption), p. 9 (6 Results), p. 10 (6 Results), p. 10 (6 Results), p. 7 (Figure/Table caption), results p. 10 (6 Results), p. 10 (Figure/Table caption), p. 9 (6 Results), p. 9 (6 Results), p. 27 (Figure/Table caption), p. 6 (5 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 6: SAFE-MLP achieves the best failure detection performance in real-world experiments with both π0-FAST Franka and OpenVLA WidowX. Plot (a) presents quantitative results, while (b-e) show qualitative examples from ... (p. 10, Figure/Table caption).
+- **Metric evidence:** We exclude the "pick up coke" task because π∗ 0 rarely fails on it (success rate at 98%). (p. 6, 5 Experiments).
+- **Baseline/ablation evidence:** Averaged across simulation benchmarks, SAFE-MLP and SAFE-LSTM have similar performance, both outperforming the best baseline by 4-5% on unseen tasks, while still achieving the best performance on seen tasks. (p. 9, 6 Results).
+- **Failure/negative evidence:** This means that the human annotator does not think these rollouts are failures until the very last moment, where the VLA model is probably on the right track and fails ... (p. 28, C.3 Failure Detection Time).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11275; PDF retrieval source: https://arxiv.org/pdf/2006.11275. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11275; PDF retrieval source: https://arxiv.org/pdf/2006.11275. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Result
 
 ## Evaluation Body Digest
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** CenterPoint-Voxel uses a (0.1m, 0.1m, 0.15m) voxel size following PV-RCNN [44] while CenterPoint-Pillar uses a grid size of (0.32m, 0.32m). nuScenes Dataset. nuScenes [6] contains ...
-- **p. 5 / 5. Experiments - extractive PDF cue:** We evaluate CenterPoint on Waymo Open Dataset and nuScenes dataset.
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** We think the reason is that the nuScenes dataset uses 32 lanes Lidar, which produces about 30k Lidar points per frame, about 1 6 of ...
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** We also divide the dataset into three splits: small, medium, and large, and each split contains 1 3 of the overall ground truth boxes.
-- **p. 6 / 5.1. Main Results - extractive PDF cue:** [10] 55.0 17533 33216 950 Ours 63.8 18612 22928 760 Table 4: State-of-the-art comparisons for 3D tracking on nuScenes test set.
-- **p. 6 / 5.1. Main Results - extractive PDF cue:** Method mAP↑ NDS↑ PKL↓ WYSIWYG [23] 35.0 41.9 1.14 PointPillars [28] 40.1 55.0 1.00 CVCNet [7] 55.3 64.4 0.92 PointPainting [49] 46.4 58.1 0.89 PMPNet ...
-- **p. 8 / 5.2. Ablation studies - extractive PDF cue:** Detector Tracker AMOTA↑AMOTP↓Ttrack Ttot CenterPoint-Voxel Point 63.7 0.606 1ms 62ms CBGS [67] Point 59.8 0.682 1ms > 182ms CenterPoint-Voxel M-KF 60.0 0.765 73ms 135ms CBGS ...
-- **p. 8 / 5.2. Ablation studies - extractive PDF cue:** To compare with prior work that did not evaluate on Waymo test, we also report results on the Waymo validation split in Table 11.
+- **p. 5 / 5. Experiments - extractive body cue:** CenterPoint-Voxel uses a (0.1m, 0.1m, 0.15m) voxel size following PV-RCNN [44] while CenterPoint-Pillar uses a grid size of (0.32m, 0.32m). nuScenes Dataset. nuScenes [6] contains ...
+- **p. 5 / 5. Experiments - extractive body cue:** We evaluate CenterPoint on Waymo Open Dataset and nuScenes dataset.
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** We think the reason is that the nuScenes dataset uses 32 lanes Lidar, which produces about 30k Lidar points per frame, about 1 6 of ...
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** We also divide the dataset into three splits: small, medium, and large, and each split contains 1 3 of the overall ground truth boxes.
+- **p. 6 / 5.1. Main Results - extractive body cue:** [10] 55.0 17533 33216 950 Ours 63.8 18612 22928 760 Table 4: State-of-the-art comparisons for 3D tracking on nuScenes test set.
+- **p. 6 / 5.1. Main Results - extractive body cue:** Method mAP↑ NDS↑ PKL↓ WYSIWYG [23] 35.0 41.9 1.14 PointPillars [28] 40.1 55.0 1.00 CVCNet [7] 55.3 64.4 0.92 PointPainting [49] 46.4 58.1 0.89 PMPNet ...
+- **p. 8 / 5.2. Ablation studies - extractive body cue:** Detector Tracker AMOTA↑AMOTP↓Ttrack Ttot CenterPoint-Voxel Point 63.7 0.606 1ms 62ms CBGS [67] Point 59.8 0.682 1ms > 182ms CenterPoint-Voxel M-KF 60.0 0.765 73ms 135ms CBGS ...
+- **p. 8 / 5.2. Ablation studies - extractive body cue:** To compare with prior work that did not evaluate on Waymo test, we also report results on the Waymo validation split in Table 11.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Result
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.1. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | More importantly, our model significantly outperforms all other submissions under the neural planar metric (PKL), a hidden metric evaluated by the organizers after our ... | p. 6 (5.1. Main Results) |
 | 5.1. Main Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our velocity-based closest distance matching described in Section 4 significantly outperforms the official tracking baseline in the Waymo paper [48], which uses a Kalman-filter ... | p. 6 (5.1. Main Results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Result
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 5. Experiments - extractive PDF cue:** CenterPoint-Voxel uses a (0.1m, 0.1m, 0.15m) voxel size following PV-RCNN [44] while CenterPoint-Pillar uses a grid size of (0.32m, 0.32m). nuScenes Dataset. nuScenes [6] contains ...
-- **p. 5 / 5. Experiments - extractive PDF cue:** We evaluate CenterPoint on Waymo Open Dataset and nuScenes dataset.
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** We think the reason is that the nuScenes dataset uses 32 lanes Lidar, which produces about 30k Lidar points per frame, about 1 6 of ...
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** We also divide the dataset into three splits: small, medium, and large, and each split contains 1 3 of the overall ground truth boxes.
-- **p. 6 / 5.1. Main Results - extractive PDF cue:** [10] 55.0 17533 33216 950 Ours 63.8 18612 22928 760 Table 4: State-of-the-art comparisons for 3D tracking on nuScenes test set.
-- **p. 6 / 5.1. Main Results - extractive PDF cue:** Method mAP↑ NDS↑ PKL↓ WYSIWYG [23] 35.0 41.9 1.14 PointPillars [28] 40.1 55.0 1.00 CVCNet [7] 55.3 64.4 0.92 PointPainting [49] 46.4 58.1 0.89 PMPNet ...
-- **p. 8 / 5.2. Ablation studies - extractive PDF cue:** Detector Tracker AMOTA↑AMOTP↓Ttrack Ttot CenterPoint-Voxel Point 63.7 0.606 1ms 62ms CBGS [67] Point 59.8 0.682 1ms > 182ms CenterPoint-Voxel M-KF 60.0 0.765 73ms 135ms CBGS ...
-- **p. 8 / 5.2. Ablation studies - extractive PDF cue:** To compare with prior work that did not evaluate on Waymo test, we also report results on the Waymo validation split in Table 11.
+- **p. 5 / 5. Experiments - extractive body cue:** CenterPoint-Voxel uses a (0.1m, 0.1m, 0.15m) voxel size following PV-RCNN [44] while CenterPoint-Pillar uses a grid size of (0.32m, 0.32m). nuScenes Dataset. nuScenes [6] contains ...
+- **p. 5 / 5. Experiments - extractive body cue:** We evaluate CenterPoint on Waymo Open Dataset and nuScenes dataset.
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** We think the reason is that the nuScenes dataset uses 32 lanes Lidar, which produces about 30k Lidar points per frame, about 1 6 of ...
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** We also divide the dataset into three splits: small, medium, and large, and each split contains 1 3 of the overall ground truth boxes.
+- **p. 6 / 5.1. Main Results - extractive body cue:** [10] 55.0 17533 33216 950 Ours 63.8 18612 22928 760 Table 4: State-of-the-art comparisons for 3D tracking on nuScenes test set.
+- **p. 6 / 5.1. Main Results - extractive body cue:** Method mAP↑ NDS↑ PKL↓ WYSIWYG [23] 35.0 41.9 1.14 PointPillars [28] 40.1 55.0 1.00 CVCNet [7] 55.3 64.4 0.92 PointPainting [49] 46.4 58.1 0.89 PMPNet ...
+- **p. 8 / 5.2. Ablation studies - extractive body cue:** Detector Tracker AMOTA↑AMOTP↓Ttrack Ttot CenterPoint-Voxel Point 63.7 0.606 1ms 62ms CBGS [67] Point 59.8 0.682 1ms > 182ms CenterPoint-Voxel M-KF 60.0 0.765 73ms 135ms CBGS ...
+- **p. 8 / 5.2. Ablation studies - extractive body cue:** To compare with prior work that did not evaluate on Waymo test, we also report results on the Waymo validation split in Table 11.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: We present a center-based framework to represent, detect and track objects. Previous anchor-based methods use axis-aligned anchors with respect to ego-vehicle coordinate. When ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Overview of our CenterPoint framework. We rely on a standard 3D backbone that extracts map-view feature representation from Lidar point-clouds. Then, a 2D ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: State-of-the-art comparisons for 3D detection on Waymo test set. We show the mAP and mAPH for both level 1 and level 2 benchmarks.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: State-of-the-art comparisons for 3D detection on nuScenes test set. We show the nuScenes detection score (NDS), and mean Average Precision (mAP). Difficulty
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3: State-of-the-art comparisons for 3D tracking on Waymo test set. We show MOTA, and MOTP. ↑is for higher better and ↓is for lower better. ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4: State-of-the-art comparisons for 3D tracking on nuScenes test set. We show AMOTA, the number of false positives (FP), false negatives (FN), id switches ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 5: Comparison between anchor-based and center- based methods for 3D detection on Waymo validation. We show the per-calss and average LEVEL 2 mAPH. Encoder
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 6: Comparison between anchor-based and center- based methods for 3D detection on nuScenes validation. We show mean average precision (mAP) and nuScenes detection score ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We present a center-based framework to represent, detect and track objects. Previous anchor-based methods use axis-aligned anchors with respect to ego-vehicle coordinate. When ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our CenterPoint framework. We rely on a standard 3D backbone that extracts map-view feature representation from Lidar point-clouds. Then, a 2D ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: State-of-the-art comparisons for 3D detection on Waymo test set. We show the mAP and mAPH for both level 1 and level 2 benchmarks.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: State-of-the-art comparisons for 3D detection on nuScenes test set. We show the nuScenes detection score (NDS), and mean Average Precision (mAP). Difficulty
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3: State-of-the-art comparisons for 3D tracking on Waymo test set. We show MOTA, and MOTP. ↑is for higher better and ↓is for lower better. ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4: State-of-the-art comparisons for 3D tracking on nuScenes test set. We show AMOTA, the number of false positives (FP), false negatives (FN), id switches ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 5: Comparison between anchor-based and center- based methods for 3D detection on Waymo validation. We show the per-calss and average LEVEL 2 mAPH. Encoder
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 6: Comparison between anchor-based and center- based methods for 3D detection on nuScenes validation. We show mean average precision (mAP) and nuScenes detection score ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | CenterPoint-Voxel uses a (0.1m, 0.1m, 0.15m) voxel size following PV-RCNN [44] while CenterPoint-Pillar uses a grid size of (0.32m, 0.32m). nuScenes Dataset. nuScenes [6] ... | embodiment, simulator version and control stack | p. 5 (5. Experiments), p. 5 (5. Experiments) |
 | Task/environment | We evaluate CenterPoint on Waymo Open Dataset and nuScenes dataset. | reset, timeout, object/scene variation | p. 5 (5. Experiments), p. 7 (5.2. Ablation studies) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Result
 | Primary metric/result | Our velocity-based closest distance matching described in Section 4 significantly outperforms the official tracking baseline in the Waymo paper [48], which uses a Kalman-filter ... | numeric claim only at cited anchor | p. 6 (5.1. Main Results) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 5. Experiments - extractive PDF cue:** The point-clouds are captured with a 64 lanes Lidar, which produces about 180k Lidar points every 0.1s.
-- **p. 5 / 5. Experiments - extractive PDF cue:** Each sequence is approximately 20-second long, with a Lidar frequency of 20 FPS.
-- **p. 5 / 5. Experiments - extractive PDF cue:** The dataset provides calibrated vehicle pose information for each Lidar frame but only provides box annotations every ten frames (0.5s). nuScenes uses a 32 lanes ...
-- **p. 6 / 5.1. Main Results - extractive PDF cue:** Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection.
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** Tproposal Trefine VoxelNet First Stage 66.5 62.7 71ms + Box Center 68.0 64.9 71ms 5ms + Surface Center 68.3 65.3 71ms 6ms Dense Sampling 68.2 ...
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** Methods Vehicle Pedestrian Runtime BEV Feature 68.3 65.3 77ms w/ VSA [44] 68.3 65.2 98ms w/ RBF Interpolation [20,41] 68.4 65.7 89ms Table 10: Ablation ...
+- **p. 5 / 5. Experiments - extractive body cue:** The point-clouds are captured with a 64 lanes Lidar, which produces about 180k Lidar points every 0.1s.
+- **p. 5 / 5. Experiments - extractive body cue:** Each sequence is approximately 20-second long, with a Lidar frequency of 20 FPS.
+- **p. 5 / 5. Experiments - extractive body cue:** The dataset provides calibrated vehicle pose information for each Lidar frame but only provides box annotations every ten frames (0.5s). nuScenes uses a 32 lanes ...
+- **p. 6 / 5.1. Main Results - extractive body cue:** Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection.
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** Tproposal Trefine VoxelNet First Stage 66.5 62.7 71ms + Box Center 68.0 64.9 71ms 5ms + Surface Center 68.3 65.3 71ms 6ms Dense Sampling 68.2 ...
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** Methods Vehicle Pedestrian Runtime BEV Feature 68.3 65.3 77ms w/ VSA [44] 68.3 65.2 98ms w/ RBF Interpolation [20,41] 68.4 65.7 89ms Table 10: Ablation ...
 
 ## Generalization and Failure Cases
 
@@ -162,10 +162,10 @@ PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Result
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 5.1. Main Results - extractive PDF cue:** Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection.
-- **p. 7 / 5.2. Ablation studies - extractive PDF cue:** Two-stage refinement does not bring an improvement over the single-stage CenterPoint model on nuScenes in our experiments.
+- **p. 6 / 5.1. Main Results - extractive body cue:** Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection.
+- **p. 7 / 5.2. Ablation studies - extractive body cue:** Two-stage refinement does not bring an improvement over the single-stage CenterPoint model on nuScenes in our experiments.
 
-- **PDF anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5. Experiments), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), metrics p. 4 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 8 (5.2. Ablation studies), p. 6 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), baselines p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 8 (5.2. Ablation studies), p. 5 (5.1. Main Results), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), results p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 12 (Figure/Table caption), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 5 (5.1. Main Results).
+- **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5. Experiments), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), metrics p. 4 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 8 (5.2. Ablation studies), p. 6 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), baselines p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 8 (5.2. Ablation studies), p. 5 (5.1. Main Results), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), results p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 12 (Figure/Table caption), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 5 (5.1. Main Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

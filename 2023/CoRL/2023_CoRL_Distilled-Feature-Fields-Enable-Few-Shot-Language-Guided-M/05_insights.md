@@ -12,7 +12,7 @@
 
 - **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language ...
 - **p. 1 / Abstract - extractive body cue:** Using features distilled from a vision-language model, CLIP, we present a way to designate novel objects for manipulation via free-text natural language, and demonstrate its ...
-- **p. 1 / 1 Introduction - extractive body cue:** We also source features *Equal contribution.
+- **p. 1 / 1 Introduction - extractive body cue:** We also source features.
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** During learning, each demonstration D consists of the tuple ⟨{I}, T∗⟩, where {I}N i=1 are N RGB camera views of the scene and T∗is a ...
 - **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** We present few-shot learning experiments on grasping and placing tasks, where our robot is able to handle open-set generalization to objects that differ significantly in ...
 - **p. 4 / 6 DOF Gripper Pose - extractive body cue:** (c) We concatenate feature vectors at these query points, then average over n (we use n = 2) demonstrations.
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 The robot then references demonstrations and language instructions to grasp objects specified by a user (Figure 1, right).를 First, how to produce the feature field of a scene automatically at a reasonable speed; second, how to represent and infer 6-DOF grasping and placing poses; and finally, how to incorporate language ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In comparison, 21/27 failures for CLIP ViT and ResNet combined may be attributed to this issue.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields for open-e ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In each scene, the robot is given a set of RGB images {I} with their corresponding camera poses. (p. 2, 3. Language-Guided Manipulation).
+- **Paper-specific mechanism:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation. (p. 1, 1 Introduction).
+- **Evidence boundary:** the reported outcome is We present the success rates in Table 1 and examples of robot executions in Figure 5. (p. 6, 4 Results); the relevant task/metric cue is Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can leverage the rapid advancements in VLMs, ... (p. 7, 4 Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: For each task, we evaluate in ten scenes that contain novel objects in arbitrary poses and distractor objects..
-3. Compare against the body-reported baseline or a matched simpler baseline: We reset the scenes to about the same configuration for each compared method..
-4. Report the body metric and its denominator/aggregation: Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can leverage the rapid advancements in VLMs, which hold ....
-5. Re-run the body-reported ablation/failure condition: (Bottom Row) Robot executing grasps sequentially without rescanning..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In each scene, the robot is given a set of RGB images {I} with their corresponding camera poses. (p. 2, 3. Language-Guided Manipulation); preserve the objective/update rule: We optimize f by minimizing the quadratic loss Lfeat = P r∈R (p. 3, 3. Language-Guided Manipulation).
+2. Use the paper-reported task/data/environment cue: We consider a run successful if the robot grasps or places the correct corresponding object part for the task. (p. 7, 4 Results).
+3. Compare against the reported or matched baseline: We reset the scenes to about the same configuration for each compared method. (p. 6, 4 Results).
+4. Report the body metric with its denominator and aggregation: Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can leverage the rapid advancements in VLMs, ... (p. 7, 4 Results).
+5. Re-run the reported ablation or stress/failure condition: (Bottom Row) Robot executing grasps sequentially without rescanning. (p. 8, 4 Results); if none is reported, design one around: The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose); the primary result is directionally consistent at p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1 Introduction), p. 1 (Abstract), match the reported outcome at p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), and measure the boundary at p. 7 (4 Results), p. 6 (4 Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Feature, Fields, Robotic mechanism이 We reset the scenes to about the same configuration for each compared method. 대비 Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual ...을 개선하고, In comparison, 21/27 failures for CLIP ViT and ResNet combined may be attributed to this issue. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In each scene, the robot is given a set of RGB images {I} with their corresponding camera poses.), does the paper-specific mechanism (The main contribution of this work is to study the use of DFFs instead for robotic manipulation.) retain the reported evaluation outcome (Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual ...) when tested against the paper's strongest explicit boundary (The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation. (p. 1, 1 Introduction).
+- **Paper-supported outcome:** We present the success rates in Table 1 and examples of robot executions in Figure 5. (p. 6, 4 Results).
+- **Strongest explicit boundary:** The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2507.01125. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html; PDF retrieval source: https://arxiv.org/pdf/2507.01125. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | On the more challenging map domain, we find that our method has a significant improvement over the baseline methods, where our method has a ... | p. 6 (V. RESULTS) |
 | V. RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our geometric information gain metric significantly outperforms baselines FisherRF and Bayes Rays in the next best view selection task for about 50K iterations in ... | p. 6 (V. RESULTS) |
@@ -55,7 +55,7 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate each method across six scenes: three benchmark scenes in Nerfstudio (Plane, Kitchen, and Poster) and three additional datasets (Flight, Clutter, and Adirondacks), ... | embodiment, simulator version and control stack | p. 5 (V. RESULTS), p. 5 (V. RESULTS) |
 | Task/environment | Lastly, we demonstrate our full pipeline in hardware on a Boston Dynamics Spot quadruped robot to show the versatility of our method to different ... | reset, timeout, object/scene variation | p. 5 (V. RESULTS), p. 6 (V. RESULTS) |
@@ -142,7 +142,16 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 - **p. 6 / V. RESULTS - extractive body cue:** Through these experiments, we find that all methods have some successes on the easy low-occlusion map domain.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. The top row shows our three environments and two robots, with the search object in a green circle. The second row shows an ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), metrics p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 7 (Figure/Table caption), results p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS).
+- **Evidence anchors reviewed:** datasets p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), metrics p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 7 (Figure/Table caption), results p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The results suggest that our method is able to outperform both baselines on both maps because we reason about both semantic and geometric information gain. (p. 6, V. RESULTS).
+- **Metric evidence:** Our method has the highest success rate on this map with an 83.33% success rate over the RT-Guide baseline success rate of 66.67%, and semantic baseline success rate of 50%. (p. 6, V. RESULTS).
+- **Baseline/ablation evidence:** In our baseline comparisons, we train a radiance field using a predetermined set of training views for a fixed number of iterations (1000). (p. 5, V. RESULTS).
+- **Failure/negative evidence:** In the second map, we expect methods that do not account for geometric information gain to struggle to find the query object. (p. 6, V. RESULTS).

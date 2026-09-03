@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/dair/publication/sonic2026/; PDF retrieval source: https://research.nvidia.com/labs/dair/publication/sonic2026/. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://research.nvidia.com/labs/dair/publication/sonic2026/; PDF retrieval source: https://research.nvidia.com/labs/dair/publication/sonic2026/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | Specialized encoders map heterogeneous human and robot motion inputs into a shared latent representation, which is quantized into a universal token that ... | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking) |
 | Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | First, a robot control decoder 𝒟𝑐transforms the universal token into motor commands that control the robot's joints. 𝒟𝑐takes as input the concatenation ... | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking) |
@@ -135,8 +135,17 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), objective p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), temporal p. 14 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 2 (1. Introduction), p. 13 (3.1. Humanoid Motion Dataset), p. 13 (3.1. Humanoid Motion Dataset), p. 15 (3.2. Universal Humanoid Motion Tracking).
+- **Evidence anchors reviewed:** method p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), objective p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), temporal p. 14 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 2 (1. Introduction), p. 13 (3.1. Humanoid Motion Dataset), p. 13 (3.1. Humanoid Motion Dataset), p. 15 (3.2. Universal Humanoid Motion Tracking).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (39 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as a retargeting loss that enables ... (p. 15, 3.2. Universal Humanoid Motion Tracking).
+- **Objective/update evidence:** All four losses are optimized jointly in a single end-to-end training loop. (p. 16, 3.2. Universal Humanoid Motion Tracking).
+- **Temporal/runtime evidence:** After retargeting to the Unitree G1 using General Motion Retargeting (GMR) [54] and PyRoki [55], we filtered out physically implausible motions (such as stair climbing and seated activities) that cannot ... (p. 13, 3.1. Humanoid Motion Dataset).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

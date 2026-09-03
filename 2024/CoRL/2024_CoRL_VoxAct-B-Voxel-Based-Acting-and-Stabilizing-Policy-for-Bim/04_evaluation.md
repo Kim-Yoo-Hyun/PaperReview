@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/liu25i.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/liu25i/liu25i.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/liu25i.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/liu25i/liu25i.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C Additional Implementation Details for the Baselines | EMPIRICAL / REAL-ROBOT OR HARDWARE | We found the Time-series Diffusion Transformer to outperform the CNN-based Diffusion Policy on Open Drawer and Open Jar, while both of them achieved comparable ... | p. 16 (C Additional Implementation Details for the Baselines) |
 | 5 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) ... | p. 6 (5 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | For simulation experiments, we build on top of RLBench [14], a popular robot manipulation benchmark widely used in prior work, including VoxPoser and PerAct. | embodiment, simulator version and control stack | p. 6 (5 Experiments), p. 6 (5 Experiments) |
 | Task/environment | 5.2 Experiment Protocol and Evaluation To generate demonstrations in simulation, we follow the convention from RLBench and define a sequence of waypoints to complete ... | reset, timeout, object/scene variation | p. 6 (5 Experiments), p. 7 (5 Experiments) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 - **p. 6 / 5 Experiments - extractive body cue:** Note that the real-world jar and drawer cannot be opened without the use of a second arm.
 - **p. 6 / 5 Experiments - extractive body cue:** We also test the following ablations of VoxAct-B: • VoxAct-B w/o VLMs: does not use the VLMs to detect the object of interest and crop ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 14 (A.1 Additional Implementation Details), p. 7 (6 Results), p. 14 (A.1 Additional Implementation Details), metrics p. 14 (A.1 Additional Implementation Details), p. 16 (C Additional Implementation Details for the Baselines), p. 7 (6 Results), p. 8 (6 Results), p. 8 (6 Results), p. 6 (5 Experiments), baselines p. 7 (6 Results), p. 6 (5 Experiments), p. 17 (Figure/Table caption), p. 6 (5 Experiments), p. 7 (6 Results), p. 8 (6 Results), results p. 16 (C Additional Implementation Details for the Baselines), p. 6 (5 Experiments), p. 7 (6 Results), p. 17 (Figure/Table caption), p. 7 (6 Results), p. 16 (C Additional Implementation Details for the Baselines).
+- **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 14 (A.1 Additional Implementation Details), p. 7 (6 Results), p. 14 (A.1 Additional Implementation Details), metrics p. 14 (A.1 Additional Implementation Details), p. 16 (C Additional Implementation Details for the Baselines), p. 7 (6 Results), p. 8 (6 Results), p. 8 (6 Results), p. 6 (5 Experiments), baselines p. 7 (6 Results), p. 6 (5 Experiments), p. 17 (Figure/Table caption), p. 6 (5 Experiments), p. 7 (6 Results), p. 8 (6 Results), results p. 16 (C Additional Implementation Details for the Baselines), p. 6 (5 Experiments), p. 7 (6 Results), p. 17 (Figure/Table caption), p. 7 (6 Results), p. 16 (C Additional Implementation Details for the Baselines).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 4: Example successful rollouts (one per row) of VoxAct-B on a real-world bimanual setup with UR5s. Ablation experiments. Table 2 reports results on Open Drawer in simulation, based on ... (p. 8, Figure/Table caption).
+- **Metric evidence:** We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) to improve performance. (p. 6, 5 Experiments).
+- **Baseline/ablation evidence:** 5.1 Baselines and Ablations In simulation, we compare against several strong baseline methods: Action Chunking with Transformers (ACT) [3], Diffusion Policy [15], and VoxPoser [16]. (p. 6, 5 Experiments).
+- **Failure/negative evidence:** 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace. (p. 8, 6 Results).

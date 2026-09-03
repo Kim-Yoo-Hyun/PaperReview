@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00115009; PDF retrieval source: https://doi.org/10.1007/BF00115009. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1007/BF00115009; PDF retrieval source: https://doi.org/10.1007/BF00115009. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Most pattern recognition problems, for examt)le, can be treated as prediction problems in which the classifier nmst predict the correct classifications. | robot/environment의 sequential decision process | body wording is the source claim |
-| Observation / input | For each nonterminal state i, there was a corresponding observation vector xi; if the walk was in state i at time t ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | For each nonterminal state i, there was a corresponding observation vector xi; if the walk was in state i at time t ... | state 또는 observation, action, reward와 transition history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | nonterminal, state, there, corresponding, observation, vector, walk, time, then, Thus | policy/value state와 action-selection variable | notation and tensor shape require body check |
 | Output / action | multi-layer, networks, focuses, learning, input-output, pings, more, comt | action policy와 induced trajectory | exact unit/frame/decoder require body check |
 | Target outcome | task return, success and safe execution | expected return, task success, stability와 sample efficiency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: nonterminal, state, there, corresponding, observation, vector, walk, time, then, Thus | p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 3 (1. Introduction) |
 | Decision / output variable | a_t sampled or selected by πθ; body terms: TTON, article, introduce, provide, tilt, first, formal, theory | p. 2 (1. Introduction), p. 11 (3.2 A random-walk example), p. 2 (1. Introduction) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 10 (3.1 A game-playing example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example) |
 | Success / guarantee | task return, success and safe execution | p. 13 (3.2 A random-walk example), p. 28 (6.1 Samuel's checker-playing program), p. 12 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1. Introduction), p. 11 (3.2 A random-walk example), p. 2 (1. Introduction), p. 8 (3. Examples of faster learning with TD methods), p. 9 (3.1 A game-playing example)): S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems.
+PDF body contribution framing (p. 2 (1. Introduction), p. 11 (3.2 A random-walk example), p. 2 (1. Introduction), p. 8 (3. Examples of faster learning with TD methods), p. 9 (3.1 A game-playing example)): S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems.
 
 - **p. 11 / 3.2 A random-walk example - extractive body cue:** In this paper, we propose that the only required characteristic is that the system predicted be a dynamical one, that it have a state which ...
 - **p. 2 / 1. Introduction - extractive body cue:** This simplification allows us to evaluate them in isolation and has enabled us to obtain formal results.
@@ -67,12 +67,21 @@ PDF contribution framing (p. 2 (1. Introduction), p. 11 (3.2 A random-walk examp
 
 ## Position in the Robotics Loop
 
-rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 3 (1. Introduction), p. 9 (3.1 A game-playing example). The downstream handoff is claimed only when the body describes it.
+rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 3 (1. Introduction), p. 9 (3.1 A game-playing example). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 3 (1. Introduction), p. 9 (3.1 A game-playing example), objective p. 9 (3.1 A game-playing example), p. 9 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 12 (3.2 A random-walk example).
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 3 (1. Introduction), p. 9 (3.1 A game-playing example), objective p. 9 (3.1 A game-playing example), p. 9 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 12 (3.2 A random-walk example).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (36 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Most pattern recognition problems, for examt)le, can be treated as prediction problems in which the classifier nmst predict the correct classifications. (p. 1, 1. Introduction).
+- **Formulation-changing contribution:** S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems. (p. 2, 1. Introduction).
+- **Assumption/failure evidence:** In a poh,-balancing problem one may want to predict time until a failure in balancing, and in a packet-switched telecomnnmications network one may want to pre(tict the total delay in ... (p. 25, 5.1 Predicting cumulative outcomes).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

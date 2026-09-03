@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2503.05189v1. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2503.05189v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3) Persistent Object Tracking phase for online tracking | EMPIRICAL / REAL-ROBOT OR HARDWARE | Tier 1 Tier 2 Perturbations Success Rate Time (s) Success Rate Time (s) Clockwise 24/25 6.30 20/25 12.26 CCW 24/25 5.72 20/25 13.06 Follow ... | p. 6 (3) Persistent Object Tracking phase for online tracking) |
 | 3) Persistent Object Tracking phase for online tracking | EMPIRICAL / REAL-ROBOT OR HARDWARE | Similar performance trends were observed in the other tasks, where POGS consistently outperformed ablations that either had depth perception turned off or were optimized ... | p. 5 (3) Persistent Object Tracking phase for online tracking) |
@@ -61,7 +61,7 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | As such objects are moved by humans or robots, POGS can update their state online, allowing for flexible, multi-step tasks that require continuous interaction ... | embodiment, simulator version and control stack | p. 2 (Abstract), p. 2 (Abstract) |
 | Task/environment | This paper makes the following contributions: • Persistent Object Gaussian Splat (POGS), a novel feature field representation for tracking and manipulating previously unseen irregularly ... | reset, timeout, object/scene variation | p. 2 (Abstract), p. 4 (3) Persistent Object Tracking phase for online tracking) |
@@ -170,7 +170,16 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 - **p. 6 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** This variation arises because each trial was executed until a grasping failure occurred-i.e., when the error in object state estimation became too high to recover-resulting ...
 - **p. 4 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** mask does not exist) is helpful in reducing group feature noise for the scene background (anything in the scene that is not a tracked object).
 
-- **PDF anchors reviewed:** datasets p. 2 (Abstract), p. 2 (Abstract), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 8 (3) Persistent Object Tracking phase for online tracking), p. 3 (Abstract), p. 3 (Abstract), metrics p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), baselines p. 5 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), results p. 6 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 2 (Abstract).
+- **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 2 (Abstract), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 8 (3) Persistent Object Tracking phase for online tracking), p. 3 (Abstract), p. 3 (Abstract), metrics p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), baselines p. 5 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), results p. 6 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 2 (Abstract).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Jigsaw to Shelf Clothes Iron to Shelf Shoe to Shoerack Tier 1 Tier 2 Tier 1 Tier 2 Tier 1 Tier 2 No Depth No DINO POGS POGS No Depth ... (p. 6, 3) Persistent Object Tracking phase for online tracking).
+- **Metric evidence:** The performance metrics included the maximum and mean number of consecutive successful object resets without losing tracking, the successful object reset rates, and the mean and standard deviation of the ... (p. 5, 3) Persistent Object Tracking phase for online tracking).
+- **Baseline/ablation evidence:** Each Gaussian cluster pose parameter is optimized independently, allowing POGS to track multiple moving objects, without imposing constraints on their relative movements. unlike prior work in real-time tracking of gaussian ... (p. 4, 3) Persistent Object Tracking phase for online tracking).
+- **Failure/negative evidence:** Tracking remains running the entire time, and these consecutive object resets continue until POGS loses tracking of the objects, defined as when repeated grasp planning failures occur due to irrecoverable ... (p. 5, 3) Persistent Object Tracking phase for online tracking).

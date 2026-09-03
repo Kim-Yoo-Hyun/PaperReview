@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1115/1.3662552; PDF retrieval source: https://doi.org/10.1115/1.3662552. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1115/1.3662552; PDF retrieval source: https://doi.org/10.1115/1.3662552. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Introduction | SYSTEM / EVALUATION SCOPE UNRESOLVED | This is due to two things: (1) The time dependence of Φ(t + 1; t) and M(t); (2) the fact that the estimation starts ... | p. 8 (Introduction) |
 | Introduction | SYSTEM / EVALUATION SCOPE UNRESOLVED | These results may be summarized as follows: | p. 4 (Introduction) |
@@ -46,14 +46,14 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 
 ## Figures / Tables as Body Evidence
 
-- figure/table caption cue 없음
+- figure/table caption PDF body cue not selected; no claim inferred
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Of course, the solution of Equation (32), or of its differential-equation equivalent, is a much simpler task than solution of the Wiener-Hopf equation. | embodiment, simulator version and control stack | p. 7 (Introduction) |
-| Task/environment | not recovered | reset, timeout, object/scene variation | 본문 anchor 없음 |
+| Task/environment | not stated or recoverable in the selected PDF body | reset, timeout, object/scene variation | 본문 anchor 없음 |
 | Observation/sensor | 시간별 sensor observation과 알려진 model/control input | calibration, preprocessing, privileged input | p. 5 (Introduction), p. 4 (Introduction) |
 | Output/decision | causal estimate, prediction 또는 smoothing output | action frame, controller and termination | p. 4 (Introduction), p. 5 (Introduction) |
 
@@ -147,7 +147,16 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 - **p. 8 / Introduction - extractive body cue:** The first general solution of the noise-free regulator problem is due to the author [18].
 - **p. 8 / Introduction - extractive body cue:** The Dual Problem Let us now consider another problem which is conceptually very different from optimal estimation, namely, the noise-free regulator problem.
 
-- **PDF anchors reviewed:** datasets p. 7 (Introduction), metrics p. 7 (Introduction), p. 6 (Introduction), p. 7 (Introduction), p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction), baselines p. 4 (Introduction), p. 9 (Introduction), results p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 7 (Introduction), p. 7 (Introduction), p. 8 (Introduction).
+- **Evidence anchors reviewed:** datasets p. 7 (Introduction), metrics p. 7 (Introduction), p. 6 (Introduction), p. 7 (Introduction), p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction), baselines p. 4 (Introduction), p. 9 (Introduction), results p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 7 (Introduction), p. 7 (Introduction), p. 8 (Introduction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** These results may be summarized as follows: (p. 4, Introduction).
+- **Metric evidence:** The estimation error is also governed by a linear dynamic system. (p. 6, Introduction).
+- **Baseline/ablation evidence:** Without being able to separate in some sense causes and effects, i.e., without the assumption of causality, one can hardly hope for useful results. (p. 4, Introduction).
+- **Failure/negative evidence:** In any case, x2*(t/t - 1) = 0 at all times; one cannot predict independent noise! (p. 9, Introduction).

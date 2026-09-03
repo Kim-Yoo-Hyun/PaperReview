@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p034.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p034.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p034.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p034.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SIMULATION | Fig. 8: The quantitative comparison of the geometric recon- struction accuracy. Each dot is one session. The results of the | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SIMULATION | Fig. 9: The quantitative comparison of the dynamics prediction accuracy in pose error. Trajectories are predicted by replaying the robot interaction with the estimated ... | p. 8 (Figure/Table caption) |
@@ -57,7 +57,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These robot interactions were teleoperated via commanded end effector poses tracked with impedance control. ‘The dataset includes the RGBD videos of the objects in ... | embodiment, simulator version and control stack | p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP) |
 | Task/environment | While PLL is capable of identifying friction coefficients essentially by observing acceleration during periods of sliding, sliding motions in our dataset largely occur during ... | reset, timeout, object/scene variation | p. 6 (V. EXPERIMENTAL SETUP) |
@@ -148,7 +148,16 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 6 / V. EXPERIMENTAL SETUP - extractive body cue:** In the evaluation, we excluded the sessions in which BundleSDF lost track of the object and failed to yield the object trajectory.
 - **p. 7 / B. Metrics - extractive body cue:** 7: A qualitative comparison of the geometry reconstruc tion under heavy occlusion between our method and the vision-only baseline.
 
-- **PDF anchors reviewed:** datasets p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), metrics p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), metrics p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** These robot interactions were teleoperated via commanded end effector poses tracked with impedance control. ‘The dataset includes the RGBD videos of the objects in interactions with object ‘mask annotations, as ... (p. 6, V. EXPERIMENTAL SETUP).
+- **Metric evidence:** Fig. 12: For quantifying dynamics prediction performance, wwe compare how far into an open-loop rollout the predicted pose stays within 10em of position error and within 45 degrees of rotational ... (p. 9, Figure/Table caption).
+- **Baseline/ablation evidence:** Fig. 7: A qualitative comparison of the geometry reconstruc tion under heavy occlusion between our method and the vision-only baseline. In the image view, the mesh projection is shown in ... (p. 7, Figure/Table caption).
+- **Failure/negative evidence:** In the evaluation, we excluded the sessions in which BundleSDF lost track of the object and failed to yield the object trajectory. (p. 6, V. EXPERIMENTAL SETUP).

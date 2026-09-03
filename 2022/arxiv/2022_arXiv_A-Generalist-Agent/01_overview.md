@@ -1,20 +1,21 @@
 # A Generalist Agent
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2205.06175.
-> PDF retrieval source: https://arxiv.org/abs/2205.06175. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2205.06175.
+> PDF retrieval source: https://arxiv.org/abs/2205.06175. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / arXiv
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, Generalist Agent, Transformer, Multimodal Learning, Google DeepMind
-- Aliases: Gato
 - Official paper: https://arxiv.org/abs/2205.06175
 - Full-text retrieval: https://arxiv.org/abs/2205.06175
 - Code/Project: https://deepmind.google/discover/blog/a-generalist-agent/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -86,3 +87,12 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 ## Why Read It
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 There are two challenges in this benchmark: Skill Mastery (where the agent is provided data from the 5 test object triplets it is later tested on) and Skill Generalization (where data can ...를 문제로 두고, During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 7 (1 Introduction), p. 10 (1 Introduction), p. 14 (1 Introduction), p. 8 (1 Introduction), p. 9 (1 Introduction), p. 4 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (42 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** There are two challenges in this benchmark: Skill Mastery (where the agent is provided data from the 5 test object triplets it is later tested on) and Skill Generalization (where ... (p. 7, 1 Introduction).
+- **Actual contribution:** During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here. (p. 4, 1 Introduction).
+- **Evaluation boundary:** Figure 10: Robotics fine-tuning results. Left: Comparison of real robot Skill Generalization success rate averaged across test triplets for Gato, expert, and CRR trained on 35k expert episodes (upper bound). ... (p. 12, Figure/Table caption).
+- **Explicit failure boundary:** After this point (at 5000), performance degrades slightly but does not drop far below the expert's performance. (p. 12, 1 Introduction).

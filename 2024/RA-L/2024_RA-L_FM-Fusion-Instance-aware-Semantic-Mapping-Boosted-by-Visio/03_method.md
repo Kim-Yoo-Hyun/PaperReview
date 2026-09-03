@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2402.04555; PDF retrieval source: https://arxiv.org/pdf/2402.04555. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2402.04555; PDF retrieval source: https://arxiv.org/pdf/2402.04555. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,31 @@ PDF body method statement (p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p.
 
 ## Method Body Digest
 
-- **p. 6 / 6 Method - extractive PDF cue:** The rest of the ScanNet experiment focus on evaluating each module of our method through an ablation study.
-- **p. 6 / 6 Method - extractive PDF cue:** Our instance refinement module merges over-segmented instances caused by inconsistent instance masks at changed viewpoints.
-- **p. 7 / 6 Method - extractive PDF cue:** We consider those limitations of foundation models.
-- **p. 7 / 6 Method - extractive PDF cue:** One of the reasons is that foundation models preserve strong generalization ability.
-- **p. 6 / 6 Method - extractive PDF cue:** Since Kimera updates the label measurements with a manually assigned likelihood probability and ignores the similarity score provided by GroundingDINO, it is easier to be ...
-- **p. 7 / 6 Method - extractive PDF cue:** Hence, our statistical label likelihood can be used across domains.
-- **p. 7 / 6 Method - extractive PDF cue:** RAM-Grounded-SAM maintains a similar label likelihood matrix across the image distribution.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** GroundingDINO [6], the latest State-of-the-Arts (SOTA) openset object detection network, reads a text prompt and performs Manuscript received: October 24, 2023; Accepted: January, 1, 2024.
+- **p. 6 / 6 Method - extractive body cue:** The rest of the ScanNet experiment focus on evaluating each module of our method through an ablation study.
+- **p. 6 / 6 Method - extractive body cue:** Our instance refinement module merges over-segmented instances caused by inconsistent instance masks at changed viewpoints.
+- **p. 7 / 6 Method - extractive body cue:** We consider those limitations of foundation models.
+- **p. 7 / 6 Method - extractive body cue:** One of the reasons is that foundation models preserve strong generalization ability.
+- **p. 6 / 6 Method - extractive body cue:** Since Kimera updates the label measurements with a manually assigned likelihood probability and ignores the similarity score provided by GroundingDINO, it is easier to be ...
+- **p. 7 / 6 Method - extractive body cue:** Hence, our statistical label likelihood can be used across domains.
+- **p. 7 / 6 Method - extractive body cue:** RAM-Grounded-SAM maintains a similar label likelihood matrix across the image distribution.
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Our method incrementally fuses the object detections from foundation models into an instance-aware semantic map.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** To address such challenges, we propose a probabilistic label fusion method following the Bayes filter algorithm.
-- **p. 6 / 6 Method - extractive PDF cue:** Compared with Kimera using RAM-GroundedSAM, our method achieved +15.6 mAP50.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method incrementally fuses the object detections from foundation models into an instance-aware semantic map.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** To address such challenges, we propose a probabilistic label fusion method following the Bayes filter algorithm.
+- **p. 6 / 6 Method - extractive body cue:** Compared with Kimera using RAM-GroundedSAM, our method achieved +15.6 mAP50.
 
 ## Source Evidence Cues
 
-- **p. 6 / 6 Method - extractive PDF cue:** The rest of the ScanNet experiment focus on evaluating each module of our method through an ablation study.
-- **p. 6 / 6 Method - extractive PDF cue:** Our instance refinement module merges over-segmented instances caused by inconsistent instance masks at changed viewpoints.
-- **p. 7 / 6 Method - extractive PDF cue:** We consider those limitations of foundation models.
-- **p. 7 / 6 Method - extractive PDF cue:** One of the reasons is that foundation models preserve strong generalization ability.
+- **p. 6 / 6 Method - extractive body cue:** The rest of the ScanNet experiment focus on evaluating each module of our method through an ablation study.
+- **p. 6 / 6 Method - extractive body cue:** Our instance refinement module merges over-segmented instances caused by inconsistent instance masks at changed viewpoints.
+- **p. 7 / 6 Method - extractive body cue:** We consider those limitations of foundation models.
+- **p. 7 / 6 Method - extractive body cue:** One of the reasons is that foundation models preserve strong generalization ability.
 - **Detected method headings:** 6 Method (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | The rest of the ScanNet experiment focus on evaluating each module of our method through an ablation study. | p. 6 (6 Method), p. 6 (6 Method) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Our instance refinement module merges over-segmented instances caused by inconsistent instance masks at changed viewpoints. | p. 6 (6 Method), p. 7 (6 Method) |
@@ -45,9 +44,9 @@ PDF body method statement (p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p.
 
 ## Objective / Update Rule
 
-- **p. 6 / 6 Method - extractive PDF cue:** Since Kimera updates the label measurements with a manually assigned likelihood probability and ignores the similarity score provided by GroundingDINO, it is easier to be ...
-- **p. 7 / 6 Method - extractive PDF cue:** Hence, our statistical label likelihood can be used across domains.
-- **p. 7 / 6 Method - extractive PDF cue:** RAM-Grounded-SAM maintains a similar label likelihood matrix across the image distribution.
+- **p. 6 / 6 Method - extractive body cue:** Since Kimera updates the label measurements with a manually assigned likelihood probability and ignores the similarity score provided by GroundingDINO, it is easier to be ...
+- **p. 7 / 6 Method - extractive body cue:** Hence, our statistical label likelihood can be used across domains.
+- **p. 7 / 6 Method - extractive body cue:** RAM-Grounded-SAM maintains a similar label likelihood matrix across the image distribution.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 6 (6 Method).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,13 +62,12 @@ PDF body method statement (p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p.
 
 ## Observation–State–Action Interface
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** GroundingDINO [6], the latest State-of-the-Arts (SOTA) openset object detection network, reads a text prompt and performs Manuscript received: October 24, 2023; Accepted: January, 1, 2024.
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** The SLAM modules generate a camera pose and a global volumetric map.
-- **p. 2 / I. INTRODUCTION - extractive PDF cue:** Our main contributions are: • An approach to fuse the object detections from visionlanguage foundation models into an instance-aware semantic map.
-- **p. 6 / 6 Method - extractive PDF cue:** We further fused instance volume with a global volumetric map.
-- **p. 6 / 6 Method - extractive PDF cue:** 8: The reconstructed instance map using RAM-Grounded-SAM in ScanNet scene0011, scene0435 and scene0633 (from top to bottom).
-- **p. 7 / 6 Method - extractive PDF cue:** The images are from ScanNet scene0329.
-- **p. 7 / 6 Method - extractive PDF cue:** More results can be found in our supplementary video.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The SLAM modules generate a camera pose and a global volumetric map.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our main contributions are: • An approach to fuse the object detections from visionlanguage foundation models into an instance-aware semantic map.
+- **p. 6 / 6 Method - extractive body cue:** We further fused instance volume with a global volumetric map.
+- **p. 6 / 6 Method - extractive body cue:** 8: The reconstructed instance map using RAM-Grounded-SAM in ScanNet scene0011, scene0435 and scene0633 (from top to bottom).
+- **p. 7 / 6 Method - extractive body cue:** The images are from ScanNet scene0329.
+- **p. 7 / 6 Method - extractive body cue:** More results can be found in our supplementary video.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -104,13 +102,13 @@ PDF body method statement (p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p.
 
 ## Failure and Ablation Link
 
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 10: An image of object detection from Ablation-B and our method are shown in (a) and (b). The labels incorporated by text prompt augmentation ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 11: Reconstructions in SceneNN 096. False semantic and over-segmented instances are highlighted in red circles. So far, the system run offline. As shown in ...
-- **p. 5 / V. EXPERIMENT - extractive PDF cue:** We evaluated a pre-trained Mask R-CNN and a fine-tuned Mask R-CNN.
-- **p. 5 / V. EXPERIMENT - extractive PDF cue:** The pre-trained one is trained in COCO instance segmentation dataset, while we also fine-tuned it using ScanNet dataset.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 8: The reconstructed instance map using RAM-Grounded-SAM in ScanNet scene0011, scene0435 and scene0633 (from top to bottom). The falsely predicted semantic classes in (a) ...
-- **p. 7 / 6 Method - extractive PDF cue:** As shown in Figure 10(a), RAM fails to recognize a table due to the extreme viewpoint, and GroundingDINO cannot detect it either.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 6: The visualization shows instance voxel grid map (a) before and (b) after the merge. The inconsistent instance mask is a natural limitation for ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 10: An image of object detection from Ablation-B and our method are shown in (a) and (b). The labels incorporated by text prompt augmentation ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 11: Reconstructions in SceneNN 096. False semantic and over-segmented instances are highlighted in red circles. So far, the system run offline. As shown in ...
+- **p. 5 / V. EXPERIMENT - extractive body cue:** We evaluated a pre-trained Mask R-CNN and a fine-tuned Mask R-CNN.
+- **p. 5 / V. EXPERIMENT - extractive body cue:** The pre-trained one is trained in COCO instance segmentation dataset, while we also fine-tuned it using ScanNet dataset.
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 8: The reconstructed instance map using RAM-Grounded-SAM in ScanNet scene0011, scene0435 and scene0633 (from top to bottom). The falsely predicted semantic classes in (a) ...
+- **p. 7 / 6 Method - extractive body cue:** As shown in Figure 10(a), RAM fails to recognize a table due to the extreme viewpoint, and GroundingDINO cannot detect it either.
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6: The visualization shows instance voxel grid map (a) before and (b) after the merge. The inconsistent instance mask is a natural limitation for ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -124,7 +122,7 @@ PDF body method statement (p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p. 7 (6 Method), objective p. 6 (6 Method), p. 7 (6 Method), p. 7 (6 Method), temporal p. 1 (I. INTRODUCTION), p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 7 (6 Method), p. 7 (6 Method), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 6 (6 Method), p. 6 (6 Method), p. 7 (6 Method), p. 7 (6 Method), objective p. 6 (6 Method), p. 7 (6 Method), p. 7 (6 Method), temporal p. 1 (I. INTRODUCTION), p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 7 (6 Method), p. 7 (6 Method), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

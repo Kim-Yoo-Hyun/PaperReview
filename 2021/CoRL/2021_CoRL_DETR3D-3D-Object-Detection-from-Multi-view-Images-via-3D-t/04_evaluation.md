@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2110.06922; PDF retrieval source: https://arxiv.org/pdf/2110.06922. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2110.06922; PDF retrieval source: https://arxiv.org/pdf/2110.06922. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate of ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works in ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** On the nuScenes dataset, there are no publicly available pseudo-LiDAR works for us to make a direct comparison.
-- **p. 6 / 4 Experiments - extractive PDF cue:** For evaluation, we use the nuScenes evalutation toolkit.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** We visualize bounding boxes decoded from the object queries in each layer.
-- **p. 7 / 4 Experiments - extractive PDF cue:** One possible explanation is that pseudoLiDAR object detectors suffer from compounding errors introduced by inaccurate depth prediction, that in turn is known to overfit to ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** We evaluate average translation error (ATE), average scale error (ASE), average orientation error (AOE), average velocity error (AVE), and average attribute error (AAE).
+- **p. 5 / 4 Experiments - extractive body cue:** We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate of ...
+- **p. 5 / 4 Experiments - extractive body cue:** We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works in ...
+- **p. 7 / 4 Experiments - extractive body cue:** On the nuScenes dataset, there are no publicly available pseudo-LiDAR works for us to make a direct comparison.
+- **p. 6 / 4 Experiments - extractive body cue:** For evaluation, we use the nuScenes evalutation toolkit.
+- **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
+- **p. 7 / 4 Experiments - extractive body cue:** We visualize bounding boxes decoded from the object queries in each layer.
+- **p. 7 / 4 Experiments - extractive body cue:** One possible explanation is that pseudoLiDAR object detectors suffer from compounding errors introduced by inaccurate depth prediction, that in turn is known to overfit to ...
+- **p. 5 / 4 Experiments - extractive body cue:** We evaluate average translation error (ATE), average scale error (ASE), average orientation error (AOE), average velocity error (AVE), and average attribute error (AAE).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | We also provide quantitative results in Table 5, which shows that iterative refinement indeed improves performance significantly. | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | Furthermore, we provide ablations on the number of object queries in Table 6; increasing the number queries consistently improves the performance until it gets ... | p. 7 (4 Experiments) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4 Experiments - extractive PDF cue:** We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate of ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works in ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** On the nuScenes dataset, there are no publicly available pseudo-LiDAR works for us to make a direct comparison.
-- **p. 6 / 4 Experiments - extractive PDF cue:** For evaluation, we use the nuScenes evalutation toolkit.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
-- **p. 7 / 4 Experiments - extractive PDF cue:** We visualize bounding boxes decoded from the object queries in each layer.
+- **p. 5 / 4 Experiments - extractive body cue:** We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate of ...
+- **p. 5 / 4 Experiments - extractive body cue:** We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works in ...
+- **p. 7 / 4 Experiments - extractive body cue:** On the nuScenes dataset, there are no publicly available pseudo-LiDAR works for us to make a direct comparison.
+- **p. 6 / 4 Experiments - extractive body cue:** For evaluation, we use the nuScenes evalutation toolkit.
+- **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
+- **p. 7 / 4 Experiments - extractive body cue:** We visualize bounding boxes decoded from the object queries in each layer.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and a ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1: Comparisons to recent works on the validation set. Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2: Comparisons to top-performing works on the test set from the leaderboard. #: initialized from a DD3D checkpoint. †: initialized from a backbone pre-trained ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3: Comparisons in Overlap Region. ‡: this model is trained with depth weight 1.0 and initial- ized from a FCOS3D checkpoint; the checkpoint is ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4: Comparisons to pseudo-LiDAR Methods.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5: Evaluation on detection results from different layers. Layer ↑ NDS ↑ mAP ↑ mATE ↓ mASE ↓ mAOE ↓ mAVE ↓
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 2: Detection results from layer 1 to layer 5 in the DETR3D head. We visualize the bounding boxes in the BEV and overlay the ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 6: Results with different number of queries. # queries 30 100 300 600 900 1200
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and a ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Comparisons to recent works on the validation set. Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Comparisons to top-performing works on the test set from the leaderboard. #: initialized from a DD3D checkpoint. †: initialized from a backbone pre-trained ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Comparisons in Overlap Region. ‡: this model is trained with depth weight 1.0 and initial- ized from a FCOS3D checkpoint; the checkpoint is ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4: Comparisons to pseudo-LiDAR Methods.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5: Evaluation on detection results from different layers. Layer ↑ NDS ↑ mAP ↑ mATE ↓ mASE ↓ mAOE ↓ mAVE ↓
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 2: Detection results from layer 1 to layer 5 in the DETR3D head. We visualize the bounding boxes in the BEV and overlay the ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 6: Results with different number of queries. # queries 30 100 300 600 900 1200
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate ... | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 5 (4 Experiments) |
 | Task/environment | We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works ... | reset, timeout, object/scene variation | p. 5 (4 Experiments), p. 7 (4 Experiments) |
@@ -120,11 +120,11 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 | Primary metric/result | Furthermore, we provide ablations on the number of object queries in Table 6; increasing the number queries consistently improves the performance until it gets ... | numeric claim only at cited anchor | p. 7 (4 Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4 Experiments - extractive PDF cue:** We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate of ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** Camera parameters including intrinsics and extrinsics are available. nuScenes provides annotations every 0.5s; in total there are 28k, 6k, and 6k annotated samples for training, ...
-- **p. 5 / 4 Experiments - extractive PDF cue:** The DETR3D detection head consists of 6 layers, where each layer is a combination of a feature refinement step and a multi-head attention layer.
-- **p. 5 / 4 Experiments - extractive PDF cue:** The model is trained for 12 epochs in total on 8 RTX 3090 GPUs and the per-GPU batch size is 1.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Method NDS ↑ mAP ↑ mATE ↓ mASE ↓ mAOE ↓ mAVE ↓ mAAE ↓ NMS Mono3D 0.429 0.366 0.642 0.252 0.523 1.591 0.119 N/A ...
+- **p. 5 / 4 Experiments - extractive body cue:** We test our method on the nuScenes dataset [33]. nuScenes consists of 1,000 sequences; each sequence is roughly 20s long, with a sampling rate of ...
+- **p. 5 / 4 Experiments - extractive body cue:** Camera parameters including intrinsics and extrinsics are available. nuScenes provides annotations every 0.5s; in total there are 28k, 6k, and 6k annotated samples for training, ...
+- **p. 5 / 4 Experiments - extractive body cue:** The DETR3D detection head consists of 6 layers, where each layer is a combination of a feature refinement step and a multi-head attention layer.
+- **p. 5 / 4 Experiments - extractive body cue:** The model is trained for 12 epochs in total on 8 RTX 3090 GPUs and the per-GPU batch size is 1.
+- **p. 6 / 4 Experiments - extractive body cue:** Method NDS ↑ mAP ↑ mATE ↓ mASE ↓ mAOE ↓ mAVE ↓ mAAE ↓ NMS Mono3D 0.429 0.366 0.642 0.252 0.523 1.591 0.119 N/A ...
 
 ## Generalization and Failure Cases
 
@@ -160,12 +160,12 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 5 Conclusion - extractive PDF cue:** Some failure cases include the far ahead car in CAM FRONT, that was not detected.
-- **p. 6 / 4 Experiments - extractive PDF cue:** To further demonstrate the advantages of fused inference, we calculate the metrics for boxes falling into the camera overlaps.
-- **p. 8 / 5 Conclusion - extractive PDF cue:** Furthermore, the new detection head is input-agnostic, and including other modalities such as LiDAR/RADAR would enhance performance and robustness.
-- **p. 6 / 4 Experiments - extractive PDF cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
+- **p. 9 / 5 Conclusion - extractive body cue:** Some failure cases include the far ahead car in CAM FRONT, that was not detected.
+- **p. 6 / 4 Experiments - extractive body cue:** To further demonstrate the advantages of fused inference, we calculate the metrics for boxes falling into the camera overlaps.
+- **p. 8 / 5 Conclusion - extractive body cue:** Furthermore, the new detection head is input-agnostic, and including other modalities such as LiDAR/RADAR would enhance performance and robustness.
+- **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 3 (Figure/Table caption), p. 5 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 3 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 3 (Figure/Table caption), p. 5 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 3 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

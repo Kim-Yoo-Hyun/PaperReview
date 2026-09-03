@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ojs.aaai.org/index.php/AAAI/article/view/33613; PDF retrieval source: https://ojs.aaai.org/index.php/AAAI/article/view/33613. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | BENCHMARK / DATASET | As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust ... | p. 9 (4 Experiments) |
 | 4 Experiments | BENCHMARK / DATASET | As shown in Tables 1 and 2, the result shows that more perspectives as input can improve the performance. | p. 7 (4 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | (2022b) 7.3 21.8 Ours 34.2 58.5 Real-World Dataset LSTM Graves and Graves (2012) 7.3 21.8 DETR3D Wang et al. | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | (2022b) 2.4 12.8 Ours 22.0 50.5 Table 3: The performance of the fine-tuned model on the novel simulated dataset and real-world dataset. | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 9 (4 Experiments) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **p. 6 / 4 Experiments - extractive body cue:** The two datasets, characterized by brick number, occlusion from variable visibility, and complex assembly graph, reflect the complexity of assembly tasks.
 - **p. 7 / 4 Experiments - extractive body cue:** This is because each brick may not be seen from some perspectives due to the existence of occlusion.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 5 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 5 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust applicability. (p. 9, 4 Experiments).
+- **Metric evidence:** For per-step metrics, we evaluate the Pos Acc and Rot Acc (3D position accuracy and rotation accuracy), Shape Acc and Texture Acc (shape accuracy and texture accuracy), Kps Mse (error ... (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** Neural Assembler outperforms baseline models in all metrics considered. (p. 7, 4 Experiments).
+- **Failure/negative evidence:** The model confidently but incorrectly predicts the highlighted block in View 1, while in View 3, despite correct keypoint identification, occlusion results in a less confident. (p. 9, 4 Experiments).

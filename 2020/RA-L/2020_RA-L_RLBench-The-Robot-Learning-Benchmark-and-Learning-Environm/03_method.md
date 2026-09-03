@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1909.12271; PDF retrieval source: https://arxiv.org/pdf/1909.12271. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1909.12271; PDF retrieval source: https://arxiv.org/pdf/1909.12271. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | Robot manipulation systems broadly fall somewhere on a spectrum ranging from traditional, modular methods, that include object recognition, state estimation, and planning, ... | p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to ... | p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 |---|---|---|---|
 | Horizon | benchmark episode/task horizon과 method rollout horizon을 명시해야 한다. | 1 from rlbench.environment import Environment 2 from rlbench.action_modes import ActionMode 3 from rlbench.tasks import ReachTarget 4 5 DATASET = 'path/to/demo/dataset' 6 7 ... | episode/sequence/action-chunk boundary |
 | Rate / latency | benchmark step/control rate, reset and evaluation throughput을 분리한다. | The tasks lengths vary from 100 to 1000 timesteps. | Hz/fps, inference time and control rate |
-| Memory | episode logs, seed/split metadata와 method state/history. | not recovered | window and reset |
+| Memory | episode logs, seed/split metadata와 method state/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | environment throughput, policy inference와 evaluation parallelism이 결정한다. | 1 from rlbench.environment import Environment 2 from rlbench.action_modes import ActionMode 3 from rlbench.tasks import ReachTarget 4 5 DATASET = 'path/to/demo/dataset' 6 7 ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -129,8 +129,17 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 5 (IV. RLBENCH), objective p. 4 (IV. RLBENCH), p. 4 (IV. RLBENCH), p. 5 (IV. RLBENCH), p. 1 (Abstract), p. 5 (IV. RLBENCH), temporal p. 5 (IV. RLBENCH), p. 6 (V. THE RLBENCH FEW-SHOT CHALLENGE (v 1.0)), p. 1 (Front matter), p. 2 (II. RELATED WORK), p. 2 (II. RELATED WORK), p. 3 (III. BENCHMARK PROPERTIES).
+- **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 5 (IV. RLBENCH), objective p. 4 (IV. RLBENCH), p. 4 (IV. RLBENCH), p. 5 (IV. RLBENCH), p. 1 (Abstract), p. 5 (IV. RLBENCH), temporal p. 5 (IV. RLBENCH), p. 6 (V. THE RLBENCH FEW-SHOT CHALLENGE (v 1.0)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (II. RELATED WORK), p. 2 (II. RELATED WORK), p. 3 (III. BENCHMARK PROPERTIES).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Robot manipulation systems broadly fall somewhere on a spectrum ranging from traditional, modular methods, that include object recognition, state estimation, and planning, to fully end-to-end approaches that leverage deep learning ... (p. 1, I. INTRODUCTION).
+- **Objective/update evidence:** Each variation comes with a list of textual descriptions that describes the objective. (p. 4, IV. RLBENCH).
+- **Temporal/runtime evidence:** 1 from rlbench.environment import Environment 2 from rlbench.action_modes import ActionMode 3 from rlbench.tasks import ReachTarget 4 5 DATASET = 'path/to/demo/dataset' 6 7 env = Environment( 8 DATASET, ActionMode.ABS_JOINT_VELOCITY) 9 ... (p. 5, IV. RLBENCH).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

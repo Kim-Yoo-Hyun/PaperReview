@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610040/; PDF retrieval source: https://arxiv.org/pdf/2401.16013. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/10610040/; PDF retrieval source: https://arxiv.org/pdf/2401.16013. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -37,7 +37,7 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | The output from the RL policy is tracked within a block of time by the downstream controller. this objective will then be ... | p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich) |
 | Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | This might seem reasonable, but can be impractical in some scenarios: some objects such as the PCB board may require a very ... | p. 6 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich) |
@@ -80,9 +80,9 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | tion Frame Let the robot's base frame be {𝑠}; for the 𝑖-th episode of rolling out the policy, we denote {𝑏(𝑖) 𝑡} ... | episode/sequence/action-chunk boundary |
+| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value was not selected from the PDF body. | tion Frame Let the robot's base frame be {𝑠}; for the 𝑖-th episode of rolling out the policy, we denote {𝑏(𝑖) 𝑡} ... | episode/sequence/action-chunk boundary |
 | Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | This might seem reasonable, but can be impractical in some scenarios: some objects such as the PCB board may require a very ... | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
+| Memory | current observation, temporal history 또는 recurrent/sequence context. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | 4, where a high-level RL controller 𝜋(𝐚/𝐬) sends control targets at 10HZ for the low-level impedance controller to track at 1K HZ, ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 7 (4.6. Relative Observation and Action Frame), p. 7 (4.6. Relative Observation and Action Frame), objective p. 5 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.6. Relative Observation and Action Frame), p. 7 (4.6. Relative Observation and Action Frame), temporal p. 9 (7.1. Details on Relative Observation and Ac), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 8 (5. Experiments), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 10 (7.1. Details on Relative Observation and Ac), p. 4 (4. Sample Efficient Robotic Reinforce).
+- **Evidence anchors reviewed:** method p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 7 (4.6. Relative Observation and Action Frame), p. 7 (4.6. Relative Observation and Action Frame), objective p. 5 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.6. Relative Observation and Action Frame), p. 7 (4.6. Relative Observation and Action Frame), temporal p. 9 (7.1. Details on Relative Observation and Ac), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 8 (5. Experiments), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 10 (7.1. Details on Relative Observation and Ac), p. 4 (4. Sample Efficient Robotic Reinforce).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the current ... (p. 3, 3. Preliminaries and Problem Statement).
+- **Objective/update evidence:** A typical impedance control objective for this controller is 𝐹= 𝑘𝑝⋅𝑒+ 𝑘𝑑⋅̇ 𝑒+ 𝐹𝑓𝑓+ 𝐹𝑐𝑜𝑟, where 𝑒= 𝑝-𝑝𝑟𝑒𝑓, 𝑝is the measured pose, and 𝑝𝑟𝑒𝑓is the target pose computed by the ... (p. 5, 4.5. Impedance Controller for Contact-Rich).
+- **Temporal/runtime evidence:** tion Frame Let the robot's base frame be {𝑠}; for the 𝑖-th episode of rolling out the policy, we denote {𝑏(𝑖) 𝑡} as the endeffector frame expressed w.r.t. {𝑠} at ... (p. 9, 7.1. Details on Relative Observation and Ac).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

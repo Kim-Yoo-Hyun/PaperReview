@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (30 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p021.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p021.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p021.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p021.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Task / interface definition | method 비교에 필요한 task·state·action contract를 고정한다 | environment, embodiment, task variation, split | episode, instruction, observation/action schema와 reset rule을 정의 | benchmark episodes | We introduce and open source ManiSKilI, the fastest state-visual GPU parallelized robotics simulator with contact-rich physics targeting generalizable manipulation. | p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering) |
 | Baseline harness | 같은 protocol로 method와 baseline을 실행한다 | episode와 method interface | baseline, ablation, seed, checkpoint와 rollout budget을 통제 | comparable trajectories/scores | RL replay buffers or larger neural network models such as large vision language action models. ‘Training and inference can be kept extremely ... | p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few) |
@@ -134,8 +134,17 @@ PDF body method statement (p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (4) Simple Unified API to Easily Manage and Build), p. 7 (A. Reinforcement Learning), p. 8 (A. Reinforcement Learning), objective p. 7 (A. Reinforcement Learning), p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), temporal p. 3 (B. GPU Parallelized Simulation and Rendering), p. 1 (Abstract), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 4 (B. GPU Parallelized Simulation and Rendering), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (4) Simple Unified API to Easily Manage and Build), p. 7 (A. Reinforcement Learning), p. 8 (A. Reinforcement Learning), objective p. 7 (A. Reinforcement Learning), p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), temporal p. 3 (B. GPU Parallelized Simulation and Rendering), p. 1 (Abstract), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 4 (B. GPU Parallelized Simulation and Rendering), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (30 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** During simulation training and real-world evaluation, observations are restricted to RGB inputs and robot joint positions; ‘no demonstrations or privileged state information such as cube pose is used, and the ... (p. 8, A. Reinforcement Learning).
+- **Objective/update evidence:** Sample Efficient Reinforcement Learning: All of the RL baselines in the wall-time efficient setting besides PPO are included here with configurations tuned towards more gradient updates and fewer environment steps ... (p. 7, A. Reinforcement Learning).
+- **Temporal/runtime evidence:** From experimentation with visual RL, we find that GPU memory efficiency becomes much more important as the FPS gains from more parallel environments become marginal GPU memory efficiency is especially ... (p. 3, B. GPU Parallelized Simulation and Rendering).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

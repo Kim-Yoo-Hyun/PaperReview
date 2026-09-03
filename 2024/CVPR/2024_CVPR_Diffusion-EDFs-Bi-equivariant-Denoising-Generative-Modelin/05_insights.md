@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Due to the bi-equivariance, the trained policy can be effectively generalized to previously unseen configurations in the observation of the scene and the grasp. representations are equivalent representations of the real Wigner ...를 Let the target policy distribution1 be P0(g0/Os, Oe), where g0 ∈SE(3) is the target end-effector pose, and Os and Oe are the observed point clouds of the scene and the grasped object, ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 One limitation of Diffusion-EDFs is the inability of control-level or trajectory-level inference.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Let the target policy distribution1 be P0(g0/Os, Oe), where g0 ∈SE(3) is the target end-effector pose, and Os and Oe are the observed point clouds of the scene and the ... (p. 3, 3.1. Problem Formulation).
+- **Paper-specific mechanism:** This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations. (p. 1, 1. Introduction).
+- **Evidence boundary:** the reported outcome is On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results); the relevant task/metric cue is On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** In this task, even a minor error of a centimeter can result in complete failure due to noisy observation and the small size of mug handles. (p. 6, 5. Experiments and Results).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The mug-on-a-hanger task is similar to the one in the simulation benchmark..
-3. Compare against the body-reported baseline or a matched simpler baseline: 1, Diffusion-EDFs consistently outperform both the SE(3)-equivariant baseline (R-NDFs [68]) and diffusion model baseline (SE(3)-DiffusionFields [75]) in almost all scenarios, despite not being provided with pre-training or segmented inputs..
-4. Report the body metric and its denominator/aggregation: While slightly better than R-NDFs, SE(3)- DiffusionFields also record low success rates, presumably due to the lack of SE(3)-equivariance..
-5. Re-run the body-reported ablation/failure condition: Scenario Method Without Pretraining Without Obj..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Let the target policy distribution1 be P0(g0/Os, Oe), where g0 ∈SE(3) is the target end-effector pose, and Os and Oe are the observed point clouds of the scene and the ... (p. 3, 3.1. Problem Formulation); preserve the objective/update rule: Still, the following mean squared error (MSE) loss can be used to train our score model st(g/Os, Oe) without requiring the integration of Eq. (p. 4, 3.4. Score Matching Objectives).
+2. Use the paper-reported task/data/environment cue: The mug-on-a-hanger task is similar to the one in the simulation benchmark. (p. 6, 5. Experiments and Results).
+3. Compare against the reported or matched baseline: 1, Diffusion-EDFs consistently outperform both the SE(3)-equivariant baseline (R-NDFs [68]) and diffusion model baseline (SE(3)-DiffusionFields [75]) in almost all scenarios, despite not being provided with pre-training or segmented inputs. (p. 6, 5. Experiments and Results).
+4. Report the body metric with its denominator and aggregation: On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results).
+5. Re-run the reported ablation or stress/failure condition: We train Diffusion-EDFs in a fully end-to-end manner without using any pre-training or object segmentation. (p. 6, 5. Experiments and Results); if none is reported, design one around: In this task, even a minor error of a centimeter can result in complete failure due to noisy observation and the small size of mug handles. (p. 6, 5. Experiments and Results).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.5. Bi-equivariant Score Model), p. 4 (3.5. Bi-equivariant Score Model), p. 5 (4.3. Score Model); the primary result is directionally consistent at p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (1. Introduction), p. 1 (1. Introduction), match the reported outcome at p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), and measure the boundary at p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 enables, trained, end-to-end mechanism이 1, Diffusion-EDFs consistently outperform both the SE(3)-equivariant baseline (R-NDFs [68]) and diffusion model baseline (SE(3)-DiffusionFields [75]) ... 대비 While slightly better than R-NDFs, SE(3)- DiffusionFields also record low success rates, presumably due to the lack of ...을 개선하고, One limitation of Diffusion-EDFs is the inability of control-level or trajectory-level inference. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Let the target policy distribution1 be P0(g0/Os, Oe), where g0 ∈SE(3) is the target end-effector pose, and Os and Oe are the ...), does the paper-specific mechanism (This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are ...) retain the reported evaluation outcome (On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due ...) when tested against the paper's strongest explicit boundary (In this task, even a minor error of a centimeter can result in complete failure due to noisy ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations. (p. 1, 1. Introduction).
+- **Paper-supported outcome:** On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results).
+- **Strongest explicit boundary:** In this task, even a minor error of a centimeter can result in complete failure due to noisy observation and the small size of mug handles. (p. 6, 5. Experiments and Results).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

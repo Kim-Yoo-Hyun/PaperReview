@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.10075; PDF retrieval source: https://arxiv.org/pdf/2505.10075. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.10075; PDF retrieval source: https://arxiv.org/pdf/2505.10075. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4. Visual planning results on the VP2 benchmark. We report the mean and the min/max performance of different methods over multiple runs with ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Qualitative results on the SimplerEnv RT-1 and Language Table benchmark. We show the predicted frames and the scene flows except for Vanilla, ... | p. 6 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct video prediction experiments on the real-world RT-1 robot manipulation dataset. | embodiment, simulator version and control stack | p. 14 (A. Implementation Details), p. 14 (A. Implementation Details) |
 | Task/environment | The RT-1 real-world dataset contains more tasks, lighting conditions, and camera positions, making it a much harder task than on the simulation data. | reset, timeout, object/scene variation | p. 14 (A. Implementation Details), p. 13 (A. Implementation Details) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 14 / A. Implementation Details - extractive body cue:** However, our performance still outperforms Vanilla, as Vanilla cannot even keep the consistency of the background during generation.
 - **p. 4 / 3.3. Future Generation - extractive body cue:** Depth map Dt and the scene flow ˆft→t+1 are firstly downsampled to the same shape of zt by several convolutional layers, and then channel-wise concatenated ...
 
-- **PDF anchors reviewed:** datasets p. 14 (A. Implementation Details), p. 14 (A. Implementation Details), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 2 (3. We perform comprehensive evaluations across several), p. 4 (4. Experiments), metrics p. 7 (Figure/Table caption), p. 8 (4.3. Additional Analysis on Flow Prediction), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), results p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details).
+- **Evidence anchors reviewed:** datasets p. 14 (A. Implementation Details), p. 14 (A. Implementation Details), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 2 (3. We perform comprehensive evaluations across several), p. 4 (4. Experiments), metrics p. 7 (Figure/Table caption), p. 8 (4.3. Additional Analysis on Flow Prediction), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), results p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 5. Qualitative results on the Robodesk and Robosuite dataset. The trajectory comes from the validation set, which is split from the original training trajectories and is not used for ... (p. 7, Figure/Table caption).
+- **Metric evidence:** benchmarks, demonstrating the efficacy of our approach in both visual performance and visual planning tasks. (p. 2, 3. We perform comprehensive evaluations across several).
+- **Baseline/ablation evidence:** benchmarks, demonstrating the efficacy of our approach in both visual performance and visual planning tasks. (p. 2, 3. We perform comprehensive evaluations across several).
+- **Failure/negative evidence:** We hypothesize that the failure lies in that the visual reward cannot always point to the correct trajectory, which is also revealed by [87]. (p. 8, 4.2. Visual Planning).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.01495; PDF retrieval source: https://arxiv.org/pdf/1707.01495. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.01495; PDF retrieval source: https://arxiv.org/pdf/1707.01495. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 4.3 we check if HER improves performance in the single-goal setup. | p. 5 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | In order to verify if HER improves performance we evaluate DDPG with and without HER on all 3 tasks. | p. 7 (4 Experiments) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We decided to use manipulation environments based on an existing hardware robot to ensure that the challenges we face correspond as closely as possible ... | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 10 (4 Experiments) |
 | Task/environment | 4.6 Deployment on a physical robot We took a policy for the pick-and-place task trained in the simulator (version with the future strategy and ... | reset, timeout, object/scene variation | p. 10 (4 Experiments), p. 6 (4 Experiments) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Learning curves for the shaped reward r(s, a, g) = -/g -s′ object/2 (it performed best among the shaped rewards we have tried). ...
 - **p. 10 / 4 Experiments - extractive body cue:** After retraining the policy with gaussian noise (std=1cm) added to observations10 the success rate increased to 5/5.
 
-- **PDF anchors reviewed:** datasets p. 5 (4 Experiments), p. 10 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), baselines p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), results p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 10 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), baselines p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), results p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 4.6 we show the results of the experiments on the physical robot. (p. 5, 4 Experiments).
+- **Metric evidence:** 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 100 150 200 epoch number (every epoch = 800 episodes = 800x50 ... (p. 9, 4 Experiments).
+- **Baseline/ablation evidence:** 4.2 we compare the performance of DDPG with and without HER. (p. 5, 4 Experiments).
+- **Failure/negative evidence:** These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary ... (p. 5, 2 Background).

@@ -1,53 +1,73 @@
 # Insights — Deep Closest Point: Learning Representations for Point Cloud Registration
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1905.03304; PDF retrieval source: https://arxiv.org/pdf/1905.03304. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** To address local optima and other difficulties in the ICP pipeline, we propose a learning-based method, titled Deep Closest Point (DCP), inspired by recent techniques in computer vision ...
-- **Problem cue:** Point cloud registration is a key problem for computer vision applied to robotics, medical imaging, and other applications.
-- **Claim/result cue:** Beyond providing a state-of-the-art registration technique, we evaluate the suitability of our learned features transferred to unseen objects.
+- **p. 2 / 1. Introduction - extractive body cue:** Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple ...
+- **p. 1 / 1. Introduction - extractive body cue:** However, only our method achieve satisfying alignment for objects with sharp features and large transformation. globally optimal alignment; similarly, computing matchings becomes easier given some ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
+- **p. 5 / 4.5. Loss - extractive body cue:** The initial feature module (§4.1) and the attention module (§4.2) are both parameterized by a set of neural network weights, which must be learned during ...
+- **p. 5 / 4.5. Loss - extractive body cue:** We use the following loss function to measure our model's agreement to the ground-truth rigid motions: Loss = ∥R⊤ XYRg XY -I∥2 + ∥tXY -tg ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4.5. Loss), p. 5 (4.5. Loss)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / 1. Introduction - extractive body cue:** Many modeling and computational challenges hamper the design of a stable and efficient registration method.
+- **p. 2 / 1. Introduction - extractive body cue:** Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple ...
+- **p. 2 / 1. Introduction - extractive body cue:** Our learned features generalize to unseen data, suggesting that our model is learning salient geometric features.
+- **p. 3 / 3. Problem Statement - extractive body cue:** This classic orthogonal Procrustes problem assumes that the point sets are matched to each 3
+- **p. 3 / 3. Problem Statement - extractive body cue:** In the rigid alignment problem, we assume Y is transformed from X by an unknown rigid motion.
+- **p. 6 / 5.4. DCP Followed By ICP - extractive body cue:** In large part, this failure is due to the lack of a good initial guess.
+- **p. 6 / 5.4. DCP Followed By ICP - extractive body cue:** Since our experiments involve point clouds whose initial poses are far from aligned, ICP fails nearly every experiment we have presented so far.
+- **Boundary to test:** In large part, this failure is due to the lack of a good initial guess.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple architecture to predict a rigid transformation alignin ... | p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Reported outcome | DCP-v1 already outperforms other methods under all the performance metrics, and DCP-v2 exhibits even stronger performance. | p. 6 (5. Experiments), p. 8 (Figure/Table caption) |
+| Failure/limitation | In large part, this failure is due to the lack of a good initial guess. | p. 6 (5.4. DCP Followed By ICP), p. 6 (5.4. DCP Followed By ICP) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `3D Vision, registration, point cloud, alignment` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - SE(3)/rotation/translation structure를 representation이나 policy에 넣어 viewpoint, pose, sensor-frame 변화에 강한 3D reasoning을 만들 수 있다.
-  - Registration/calibration 관점은 multi-view, LiDAR-camera, robot-camera alignment 문제의 공통 기반으로 사용할 수 있다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare PointNet [30] and DGCNN [48] for this ...를 Given these two observations, most algorithms alternate between these two steps to try to obtain a better result.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In large part, this failure is due to the lack of a good initial guess.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple architecture to predict a rigid transformation alignin ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Geometry, Registration, and Equivariance`; tags: `3D Vision, registration, point cloud, alignment`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Beyond providing a state-of-the-art registration technique, we evaluate the suitability of our learned features transferred to unseen objects.
-  - symmetry-aware representation이 특정 task에서 성능을 보인 뒤에도 large-scale scene, language grounding, real robot noise에서의 이득은 별도 검증이 필요하다.
+- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D Vision, registration, point cloud, alignment`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** In large part, this failure is due to the lack of a good initial guess.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ModelNet40 / accuracy, mAP, RMSE
-  - 내 연구 확장 benchmark 후보: ModelNet40, ScanNet, KITTI, nuScenes
-  - 내 연구 확장 metric 후보: rotation error, translation error, mIoU, success rate
-  - 검증 초점: pose robustness, calibration/registration accuracy, downstream perception/action 성능을 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: ModelNet40: Full Dataset Train & Test In our first experiment, we randomly divide all the point clouds in the ModelNet40 dataset into training and test sets, with no knowledge of the category ....
+3. Compare against the body-reported baseline or a matched simpler baseline: DCP-v1 already outperforms other methods under all the performance metrics, and DCP-v2 exhibits even stronger performance..
+4. Report the body metric and its denominator/aggregation: Ideally, all of these error metrics should be zero if the rigid alignment is perfect..
+5. Re-run the body-reported ablation/failure condition: Table 5. Ablation study: PointNet or DGCNN? use ICP as a local algorithm by initializing ICP with a rigid transformation output from our DCP model. Figure 3 shows an example of this ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (4.5. Loss), p. 5 (4.5. Loss); the primary result is directionally consistent at p. 6 (5. Experiments), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-SE(3)-equivariant feature가 open-vocabulary 3D grounding이나 manipulation policy에서도 실제 sample efficiency를 높이는가?
+고정된 observation/action/data/compute budget에서 Contributions, include, following mechanism이 DCP-v1 already outperforms other methods under all the performance metrics, and DCP-v2 exhibits even stronger performance. 대비 Ideally, all of these error metrics should be zero if the rigid alignment is perfect.을 개선하고, In large part, this failure is due to the lack of a good initial guess. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

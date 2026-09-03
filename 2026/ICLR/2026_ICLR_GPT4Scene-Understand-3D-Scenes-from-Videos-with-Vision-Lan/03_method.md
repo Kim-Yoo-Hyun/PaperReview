@@ -2,44 +2,43 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=0fib2BYc0L; PDF retrieval source: https://openreview.net/pdf/94dff9ec5dcdca1b79537df06addeb9d3d3b2185.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=0fib2BYc0L; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247573. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY)): Here we introduce GPT4Scene's architecture.
+PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY)): Here we introduce GPT4Scene's architecture.
 
 ## Method Body Digest
 
-- **p. 3 / 2 METHODOLOGY - extractive PDF cue:** Here we introduce GPT4Scene's architecture.
-- **p. 5 / 2 METHODOLOGY - extractive PDF cue:** Published as a conference paper at ICLR 2026 2.3 ENHANCING VLMS WITH SCANALIGN FINE-TUNING Table 2: ScanAlign: Datasets used for training GPT4Scene (Supervised Fine-Tuning), Source ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** In a zero-shot setting, the model must create a global-local understanding of a 3D scene by fusing local 2D frame features with global BEV (Bird's-Eye ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Our analysis shows that directly inputting scene videos into VLMs fails in 3D scene understanding due to two factors: i) the lack of a global ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** The desk is wooden and beige in color Object 47, 16, 2, 19, 20, 28 3D Dense Caption A wooden desk against the wall Describe ...
-- **p. 3 / 2 METHODOLOGY - extractive PDF cue:** Given an input video sequence V = {I1, . . . , IN} captured during indoor scene traversal, we first reconstruct the 3D scene from ...
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
+- **p. 3 / 2 METHODOLOGY - extractive body cue:** Here we introduce GPT4Scene's architecture.
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** In a zero-shot setting, the model must create a global-local understanding of a 3D scene by fusing local 2D frame features with global BEV (Bird's-Eye ...
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our analysis shows that directly inputting scene videos into VLMs fails in 3D scene understanding due to two factors: i) the lack of a global ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** The desk is wooden and beige in color Object 47, 16, 2, 19, 20, 28 3D Dense Caption A wooden desk against the wall Describe ...
+- **p. 3 / 2 METHODOLOGY - extractive body cue:** Given an input video sequence V = {I1, . . . , IN} captured during indoor scene traversal, we first reconstruct the 3D scene from ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
+- **p. 5 / 2 METHODOLOGY - extractive body cue:** To this end, we constructed ScanAlign, a large-scale instruction-tuning dataset designed to empower 2D VLMs with 3D understanding.
 
 ## Design Rationale
 
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address this, we propose GPT4Scene, a framework that enhances VLMs' spatial understanding (see Figure 1).
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** For smaller open-source vision-language models (VLMs), we introduce ScanAlign, a multimodal dataset comprising 165K aligned data pairs featuring STO-marker-annotated video frames, BEV images, and textual ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this, we propose GPT4Scene, a framework that enhances VLMs' spatial understanding (see Figure 1).
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** For smaller open-source vision-language models (VLMs), we introduce ScanAlign, a multimodal dataset comprising 165K aligned data pairs featuring STO-marker-annotated video frames, BEV images, and textual ...
 
 ## Source Evidence Cues
 
-- **p. 3 / 2 METHODOLOGY - extractive PDF cue:** Here we introduce GPT4Scene's architecture.
-- **p. 5 / 2 METHODOLOGY - extractive PDF cue:** Published as a conference paper at ICLR 2026 2.3 ENHANCING VLMS WITH SCANALIGN FINE-TUNING Table 2: ScanAlign: Datasets used for training GPT4Scene (Supervised Fine-Tuning), Source ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** In a zero-shot setting, the model must create a global-local understanding of a 3D scene by fusing local 2D frame features with global BEV (Bird's-Eye ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
+- **p. 3 / 2 METHODOLOGY - extractive body cue:** Here we introduce GPT4Scene's architecture.
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** In a zero-shot setting, the model must create a global-local understanding of a 3D scene by fusing local 2D frame features with global BEV (Bird's-Eye ...
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
 - **Detected method headings:** 2 METHODOLOGY (p. 3)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Here we introduce GPT4Scene's architecture. | p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY) |
-| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Published as a conference paper at ICLR 2026 2.3 ENHANCING VLMS WITH SCANALIGN FINE-TUNING Table 2: ScanAlign: Datasets used for training GPT4Scene ... | p. 5 (2 METHODOLOGY), p. 4 (2 METHODOLOGY) |
-| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | In a zero-shot setting, the model must create a global-local understanding of a 3D scene by fusing local 2D frame features with ... | p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY) |
+| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Here we introduce GPT4Scene's architecture. | p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY) |
+| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | In a zero-shot setting, the model must create a global-local understanding of a 3D scene by fusing local 2D frame features with ... | p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY) |
+| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form ... | p. 4 (2 METHODOLOGY) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -61,13 +60,13 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY), p. 4 (2 M
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Our analysis shows that directly inputting scene videos into VLMs fails in 3D scene understanding due to two factors: i) the lack of a global ...
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** The desk is wooden and beige in color Object 47, 16, 2, 19, 20, 28 3D Dense Caption A wooden desk against the wall Describe ...
-- **p. 3 / 2 METHODOLOGY - extractive PDF cue:** Given an input video sequence V = {I1, . . . , IN} captured during indoor scene traversal, we first reconstruct the 3D scene from ...
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
-- **p. 5 / 2 METHODOLOGY - extractive PDF cue:** To this end, we constructed ScanAlign, a large-scale instruction-tuning dataset designed to empower 2D VLMs with 3D understanding.
-- **p. 5 / 2 METHODOLOGY - extractive PDF cue:** Published as a conference paper at ICLR 2026 2.3 ENHANCING VLMS WITH SCANALIGN FINE-TUNING Table 2: ScanAlign: Datasets used for training GPT4Scene (Supervised Fine-Tuning), Source ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** From the 3D point cloud P reconstructed from the video V, we apply 3D instance segmentation (e.g., Mask3D) to obtain instance masks M = {M1, ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our analysis shows that directly inputting scene videos into VLMs fails in 3D scene understanding due to two factors: i) the lack of a global ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** The desk is wooden and beige in color Object 47, 16, 2, 19, 20, 28 3D Dense Caption A wooden desk against the wall Describe ...
+- **p. 3 / 2 METHODOLOGY - extractive body cue:** Given an input video sequence V = {I1, . . . , IN} captured during indoor scene traversal, we first reconstruct the 3D scene from ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
+- **p. 5 / 2 METHODOLOGY - extractive body cue:** To this end, we constructed ScanAlign, a large-scale instruction-tuning dataset designed to empower 2D VLMs with 3D understanding.
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** From the 3D point cloud P reconstructed from the video V, we apply 3D instance segmentation (e.g., Mask3D) to obtain instance masks M = {M1, ...
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** We then generate a BEV image from the global point cloud: Ib = T (P, Etop) (2) Here, Etop ∈SE(3) represents the camera extrinsic for ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -82,15 +81,14 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY), p. 4 (2 M
 
 ## Training vs Inference
 
-- **p. 5 / 2 METHODOLOGY - extractive PDF cue:** Published as a conference paper at ICLR 2026 2.3 ENHANCING VLMS WITH SCANALIGN FINE-TUNING Table 2: ScanAlign: Datasets used for training GPT4Scene (Supervised Fine-Tuning), Source ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
-- **p. 5 / 3 EXPERIMENTS - extractive PDF cue:** Training is done for one epoch with a base learning rate of 5e-6 and cosine annealing, completing in about 6 hours on 8×A100 GPUs.
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
+- **p. 5 / 3 EXPERIMENTS - extractive body cue:** Training is done for one epoch with a base learning rate of 5e-6 and cosine annealing, completing in about 6 hours on 8×A100 GPUs.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
-- **Body-defined terms:** Here, introduce, GPT4Scene, architecture, Published, conference, ICLR, ENHANCING, VLMS, SCANALIGN, FINE-TUNING, Table, Datasets, training, Supervised, Source, Data, Type, Task, Samples.
+- **Body-defined terms:** Here, introduce, GPT4Scene, architecture, zero-shot, setting, model, must, create, global-local, understanding, scene, fusing, local, frame, features, global, BEV, Bird, s-Eye.
 - **Relevant PDF headings:** 2 METHODOLOGY (p. 3).
 - Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
@@ -98,19 +96,19 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY), p. 4 (2 M
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Geometry / pose extraction | The experiments are conducted across two different datasets, ScanNet ("S") and ARKitScenes ("NS"), to test the framework's robustness in various types of ... | p. 9 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS) |
+| Geometry / pose extraction | The experiments are conducted across two different datasets, ScanNet ("S") and ARKitScenes ("NS"), to test the framework's robustness in various types of ... | p. 9 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS) |
 | Semantic / temporal fusion | These models not only significantly outperform the untuned baseline VLMs but also comprehensively outperform the previous SOTA models in the 3D point ... | p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS) |
 | Robot query / planning handoff | In terms of specific metrics, models fine-tuned using the GPT4Scene framework (based on the ScanAlign dataset) show outstanding performance: Qwen2-VL-7B (GPT4Scene) achieves ... | p. 5 (3 EXPERIMENTS), p. 9 (Figure/Table caption) |
 
 ## Failure and Ablation Link
 
-- **p. 5 / 3 EXPERIMENTS - extractive PDF cue:** Finally, Subsection 3.3 details the ablation study, demonstrating the effectiveness of individual components.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 6: Ablation study on the Efficacy of GPT4Scene. (1) on fully fine-tuned models with GPT4Scene; (2) on pure-video fine-tuned models; (3) in a zero-shot ...
-- **p. 17 / Figure/Table caption - extractive PDF cue:** Figure 6. First, we remove the regularized formatting from the answers. Next, we clean the answers by addressing singular/plural forms and case sensitivity. This final ...
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** 3.3 ABLATION STUDY In this section, we conduct ablation studies to validate the effectiveness of GPT4Scene.
-- **p. 5 / 3 EXPERIMENTS - extractive PDF cue:** Our experimental analysis demonstrates that the baseline Qwen2-VL-7B model without fine-tuning shows constrained capability in 3D QA scenarios.
-- **p. 7 / 3 EXPERIMENTS - extractive PDF cue:** Next, we perform module-wise ablation to assess individual components.
-- **p. 8 / 3 EXPERIMENTS - extractive PDF cue:** This ablation study in Table 9 provides a detailed analysis of GPT4Scene's two core components: the BEV image and STO-Markers.
+- **p. 5 / 3 EXPERIMENTS - extractive body cue:** Finally, Subsection 3.3 details the ablation study, demonstrating the effectiveness of individual components.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 6: Ablation study on the Efficacy of GPT4Scene. (1) on fully fine-tuned models with GPT4Scene; (2) on pure-video fine-tuned models; (3) in a zero-shot ...
+- **p. 17 / Figure/Table caption - extractive body cue:** Figure 6. First, we remove the regularized formatting from the answers. Next, we clean the answers by addressing singular/plural forms and case sensitivity. This final ...
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** 3.3 ABLATION STUDY In this section, we conduct ablation studies to validate the effectiveness of GPT4Scene.
+- **p. 5 / 3 EXPERIMENTS - extractive body cue:** Our experimental analysis demonstrates that the baseline Qwen2-VL-7B model without fine-tuning shows constrained capability in 3D QA scenarios.
+- **p. 7 / 3 EXPERIMENTS - extractive body cue:** Next, we perform module-wise ablation to assess individual components.
+- **p. 8 / 3 EXPERIMENTS - extractive body cue:** This ablation study in Table 9 provides a detailed analysis of GPT4Scene's two core components: the BEV image and STO-Markers.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -124,7 +122,7 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY), p. 4 (2 M
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2 METHODOLOGY), p. 5 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), objective 본문 anchor 없음, temporal p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 5 (3 EXPERIMENTS), p. 5 (2 METHODOLOGY), p. 9 (3 EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), objective 본문 anchor 없음, temporal p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 5 (3 EXPERIMENTS), p. 5 (2 METHODOLOGY), p. 9 (3 EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

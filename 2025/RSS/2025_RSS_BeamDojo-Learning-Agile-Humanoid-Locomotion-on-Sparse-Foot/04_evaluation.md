@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p068.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p068.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p068.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p068.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 
 ## Evaluation Body Digest
 
-- **p. 6 / evaluation - extractive PDF cue:** 1) Hardware Setup: We use Unitree G1 humanoid robot for our experiments in this work.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** ‘TABLE I: Benchmarked Comparison in Simulation.
-- **p. 5 / evaluation - extractive PDF cue:** This terrain requires the robot to make large steps to cross, the gaps.
-- **p. 5 / evaluation - extractive PDF cue:** We begin by training the robot on the Stones Everywhere terrain in Stage 1 with soft terrain constraints to develop generalizable policy.
-- **p. 6 / evaluation - extractive PDF cue:** To address this, we followed [34] to construct a robotcentric, complete, and robust elevation map.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
-- **p. 8 / B. Simulation Experiments - extractive PDF cue:** 6, Both the two-stage training setup and the double critic improve learning efficiency, with the two-stage setup contributing the ‘most.
-- **p. 7 / B. Simulation Experiments - extractive PDF cue:** single-stage approaches and ablation designs, achieving, high success rates and low foothold errors across all ‘challenging terrains.
+- **p. 6 / evaluation - extractive body cue:** 1) Hardware Setup: We use Unitree G1 humanoid robot for our experiments in this work.
+- **p. 7 / A. Experimental Setup - extractive body cue:** ‘TABLE I: Benchmarked Comparison in Simulation.
+- **p. 5 / evaluation - extractive body cue:** This terrain requires the robot to make large steps to cross, the gaps.
+- **p. 5 / evaluation - extractive body cue:** We begin by training the robot on the Stones Everywhere terrain in Stage 1 with soft terrain constraints to develop generalizable policy.
+- **p. 6 / evaluation - extractive body cue:** To address this, we followed [34] to construct a robotcentric, complete, and robust elevation map.
+- **p. 7 / A. Experimental Setup - extractive body cue:** The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
+- **p. 8 / B. Simulation Experiments - extractive body cue:** 6, Both the two-stage training setup and the double critic improve learning efficiency, with the two-stage setup contributing the ‘most.
+- **p. 7 / B. Simulation Experiments - extractive body cue:** single-stage approaches and ablation designs, achieving, high success rates and low foothold errors across all ‘challenging terrains.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Simulation Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1) Quantitative results: We report the success rate (Race) and traverse rate (R,9y) for four terrains at medium and hard difficulty levels (terrain level ... | p. 7 (B. Simulation Experiments) |
 | A. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | 4 Success Rate Raocc: The percentage of successful at | p. 7 (A. Experimental Setup) |
@@ -40,30 +40,30 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / evaluation - extractive PDF cue:** 1) Hardware Setup: We use Unitree G1 humanoid robot for our experiments in this work.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** ‘TABLE I: Benchmarked Comparison in Simulation.
-- **p. 5 / evaluation - extractive PDF cue:** This terrain requires the robot to make large steps to cross, the gaps.
-- **p. 5 / evaluation - extractive PDF cue:** We begin by training the robot on the Stones Everywhere terrain in Stage 1 with soft terrain constraints to develop generalizable policy.
-- **p. 6 / evaluation - extractive PDF cue:** To address this, we followed [34] to construct a robotcentric, complete, and robust elevation map.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
-- **p. 8 / B. Simulation Experiments - extractive PDF cue:** 6, Both the two-stage training setup and the double critic improve learning efficiency, with the two-stage setup contributing the ‘most.
+- **p. 6 / evaluation - extractive body cue:** 1) Hardware Setup: We use Unitree G1 humanoid robot for our experiments in this work.
+- **p. 7 / A. Experimental Setup - extractive body cue:** ‘TABLE I: Benchmarked Comparison in Simulation.
+- **p. 5 / evaluation - extractive body cue:** This terrain requires the robot to make large steps to cross, the gaps.
+- **p. 5 / evaluation - extractive body cue:** We begin by training the robot on the Stones Everywhere terrain in Stage 1 with soft terrain constraints to develop generalizable policy.
+- **p. 6 / evaluation - extractive body cue:** To address this, we followed [34] to construct a robotcentric, complete, and robust elevation map.
+- **p. 7 / A. Experimental Setup - extractive body cue:** The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
+- **p. 8 / B. Simulation Experiments - extractive body cue:** 6, Both the two-stage training setup and the double critic improve learning efficiency, with the two-stage setup contributing the ‘most.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2: Foothold Reward. We sample n points under the foot. Green points indicate contact with the surface within the safe region, while red points ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 4: Terrain Setting in Simulation. (a) is used for stage 1 taining, while (b) and (c) are used for stage 2 taining. The training ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 5: Foothold Error Comparison. The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 6: Learning Efficiency. The learning curves show the maximum terrain levels achieved in two training stages of all methods. Faster attainment of terrain level ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 7: Foot Placement Planning Visualization. We illustrate (wo trajectories forthe foot placement process: the yellow line represents BEAMDOvO, while the red line corresponds to ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 8: Real-world Experiments. We build terrains inthe real world similar to those in simulation. (a) Stepping Stones: stones with a size of 20 cm, ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Fig. 9: Robustness Test. We evaluate the robusiness of the humanoid robot in real-world scenarios with: (a) heavy payload, (b) external
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 10: Generalization ‘Test on Non-Flat Terrains. We conduct real-world experiments on (a) stairs with a width of 2Sem and a height of 15cm, and ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Foothold Reward. We sample n points under the foot. Green points indicate contact with the surface within the safe region, while red points ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Terrain Setting in Simulation. (a) is used for stage 1 taining, while (b) and (c) are used for stage 2 taining. The training ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Foothold Error Comparison. The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Learning Efficiency. The learning curves show the maximum terrain levels achieved in two training stages of all methods. Faster attainment of terrain level ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Foot Placement Planning Visualization. We illustrate (wo trajectories forthe foot placement process: the yellow line represents BEAMDOvO, while the red line corresponds to ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 8: Real-world Experiments. We build terrains inthe real world similar to those in simulation. (a) Stepping Stones: stones with a size of 20 cm, ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9: Robustness Test. We evaluate the robusiness of the humanoid robot in real-world scenarios with: (a) heavy payload, (b) external
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 10: Generalization ‘Test on Non-Flat Terrains. We conduct real-world experiments on (a) stairs with a width of 2Sem and a height of 15cm, and ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 1) Hardware Setup: We use Unitree G1 humanoid robot for our experiments in this work. | embodiment, simulator version and control stack | p. 6 (evaluation), p. 7 (A. Experimental Setup) |
 | Task/environment | ‘TABLE I: Benchmarked Comparison in Simulation. | reset, timeout, object/scene variation | p. 7 (A. Experimental Setup), p. 5 (evaluation) |
@@ -122,10 +122,10 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 | Primary metric/result | 4 Success Rate Raocc: The percentage of successful at | numeric claim only at cited anchor | p. 7 (A. Experimental Setup) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / evaluation - extractive PDF cue:** The robot weighs 35 kg. stands 1.32 meters tall, and features 23 actuated degrees of freedom: 6 in each leg, 5 in each arm, and ...
-- **p. 6 / evaluation - extractive PDF cue:** During deployment, the elevation map publishes information ata frequency of 10 Hz, while the learned policy operates at 50 Hz.
-- **p. 6 / evaluation - extractive PDF cue:** The policy's action outputs are subsequently sent to 4 PD controller, which runs at 500 Hz, ensuring smooth and precise actuation
-- **p. 5 / C. Learning Terrain-Aware Locomotion via Two-Stage RL - extractive PDF cue:** This map samples 15 > 15 points within a 0.1 m grid in both the longitudinal and lateral directions.
+- **p. 6 / evaluation - extractive body cue:** The robot weighs 35 kg. stands 1.32 meters tall, and features 23 actuated degrees of freedom: 6 in each leg, 5 in each arm, and ...
+- **p. 6 / evaluation - extractive body cue:** During deployment, the elevation map publishes information ata frequency of 10 Hz, while the learned policy operates at 50 Hz.
+- **p. 6 / evaluation - extractive body cue:** The policy's action outputs are subsequently sent to 4 PD controller, which runs at 500 Hz, ensuring smooth and precise actuation
+- **p. 5 / C. Learning Terrain-Aware Locomotion via Two-Stage RL - extractive body cue:** This map samples 15 > 15 points within a 0.1 m grid in both the longitudinal and lateral directions.
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 
 ## Limitations and Verification Questions
 
-- **p. 10 / 7 Single Leg Support ) Stand Still - extractive PDF cue:** 5) Failure Cases: ‘To investigate the framework's perfor- ‘mance limitations, we evaluate its performance across varying. stone sizes and step distances, as shown in Fig.
-- **p. 8 / B. Simulation Experiments - extractive PDF cue:** Meanwhile, the double-critic setup separates the foothold reward from the locomotion rewards, ensuring that its updates remain unaffected by the noise of unstable locomotion signals, ...
-- **p. 10 / Figure/Table caption - extractive PDF cue:** Fig. 11: Failure Case Analysis. We evaluate the success rate on varying (a) stove sizes, and (b) step distances.
-- **p. 7 / A. Experimental Setup - extractive PDF cue:** before falling to the total terrain length (8 m).
-- **p. 8 / 10 3 oss Liss - extractive PDF cue:** This advantage is achieved by leveraging LiDAR to its full potential, whereas a single depth camera, cannot handle such scenarios.
-- **p. 9 / 7 Single Leg Support ) Stand Still - extractive PDF cue:** ‘We compare this approach with other binary and coarse reward designs: when p% of the sampled points fall outside the safe area, a full penalty ...
+- **p. 10 / 7 Single Leg Support ) Stand Still - extractive body cue:** 5) Failure Cases: ‘To investigate the framework's perfor- ‘mance limitations, we evaluate its performance across varying. stone sizes and step distances, as shown in Fig.
+- **p. 8 / B. Simulation Experiments - extractive body cue:** Meanwhile, the double-critic setup separates the foothold reward from the locomotion rewards, ensuring that its updates remain unaffected by the noise of unstable locomotion signals, ...
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 11: Failure Case Analysis. We evaluate the success rate on varying (a) stove sizes, and (b) step distances.
+- **p. 7 / A. Experimental Setup - extractive body cue:** before falling to the total terrain length (8 m).
+- **p. 8 / 10 3 oss Liss - extractive body cue:** This advantage is achieved by leveraging LiDAR to its full potential, whereas a single depth camera, cannot handle such scenarios.
+- **p. 9 / 7 Single Leg Support ) Stand Still - extractive body cue:** ‘We compare this approach with other binary and coarse reward designs: when p% of the sampled points fall outside the safe area, a full penalty ...
 
-- **PDF anchors reviewed:** datasets p. 6 (evaluation), p. 7 (A. Experimental Setup), p. 5 (evaluation), p. 5 (evaluation), p. 6 (evaluation), p. 7 (A. Experimental Setup), metrics p. 7 (B. Simulation Experiments), p. 7 (A. Experimental Setup), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 8 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), baselines p. 5 (evaluation), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), p. 5 (evaluation), results p. 7 (B. Simulation Experiments), p. 7 (A. Experimental Setup), p. 8 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), p. 10 (Figure/Table caption), p. 6 (evaluation).
+- **Evidence anchors reviewed:** datasets p. 6 (evaluation), p. 7 (A. Experimental Setup), p. 5 (evaluation), p. 5 (evaluation), p. 6 (evaluation), p. 7 (A. Experimental Setup), metrics p. 7 (B. Simulation Experiments), p. 7 (A. Experimental Setup), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 8 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), baselines p. 5 (evaluation), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), p. 5 (evaluation), results p. 7 (B. Simulation Experiments), p. 7 (A. Experimental Setup), p. 8 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), p. 10 (Figure/Table caption), p. 6 (evaluation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

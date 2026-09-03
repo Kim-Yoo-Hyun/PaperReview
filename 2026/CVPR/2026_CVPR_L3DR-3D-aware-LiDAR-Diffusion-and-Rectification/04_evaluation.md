@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.2. Experiment Setup - extractive PDF cue:** All datasets are split into trainvalidation-test according to official recommendations.
-- **p. 6 / 5.2. Experiment Setup - extractive PDF cue:** We train and evaluate our method on SemanticKITTI [1, 10], KITTI360 [20], nuScenes [4], and Waymo Open Dataset [40].
-- **p. 7 / 5.2. Experiment Setup - extractive PDF cue:** L3DR exhibits consistent improvements on all datasets, improving all metrics by an average of 11.6% and 7.0% on nuScenes and Waymo conditional generation, respectively.
-- **p. 7 / 5.2. Experiment Setup - extractive PDF cue:** We conclude that L3DR is widely applicable and sets new state-of-the-arts on the nuScenes and Waymo semanticconditioned generation tasks.
-- **p. 3 / 3.2. Theoretical Analysis - extractive PDF cue:** Therefore, DDIM outputs are smooth, with softly transitioned object boundaries.
-- **p. 4 / 3.3. Empirical Analysis - extractive PDF cue:** We conclude that 3D models generate sharper object borders than 2D models, thus being preferable for rectification of 2D image diffusion results.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
-- **p. 7 / 5.3. Other Results - extractive PDF cue:** The best overall performance attributes to SPUNET with Welsch loss and semantic-map input.
+- **p. 6 / 5.2. Experiment Setup - extractive body cue:** All datasets are split into trainvalidation-test according to official recommendations.
+- **p. 6 / 5.2. Experiment Setup - extractive body cue:** We train and evaluate our method on SemanticKITTI [1, 10], KITTI360 [20], nuScenes [4], and Waymo Open Dataset [40].
+- **p. 7 / 5.2. Experiment Setup - extractive body cue:** L3DR exhibits consistent improvements on all datasets, improving all metrics by an average of 11.6% and 7.0% on nuScenes and Waymo conditional generation, respectively.
+- **p. 7 / 5.2. Experiment Setup - extractive body cue:** We conclude that L3DR is widely applicable and sets new state-of-the-arts on the nuScenes and Waymo semanticconditioned generation tasks.
+- **p. 3 / 3.2. Theoretical Analysis - extractive body cue:** Therefore, DDIM outputs are smooth, with softly transitioned object boundaries.
+- **p. 4 / 3.3. Empirical Analysis - extractive body cue:** We conclude that 3D models generate sharper object borders than 2D models, thus being preferable for rectification of 2D image diffusion results.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
+- **p. 7 / 5.3. Other Results - extractive body cue:** The best overall performance attributes to SPUNET with Welsch loss and semantic-map input.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.2. Experiment Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | We conclude that L3DR significantly improves conditional generation capability compared to the baselines. | p. 7 (5.2. Experiment Setup) |
 | 5.2. Experiment Setup | EMPIRICAL / SOURCE-REPORTED EVALUATION | Meanwhile, L3DR with semantic-map input improves generation quality consistently, providing further 10.2% average performance boost on all metrics upon raw L3DR. | p. 7 (5.2. Experiment Setup) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.2. Experiment Setup - extractive PDF cue:** All datasets are split into trainvalidation-test according to official recommendations.
-- **p. 6 / 5.2. Experiment Setup - extractive PDF cue:** We train and evaluate our method on SemanticKITTI [1, 10], KITTI360 [20], nuScenes [4], and Waymo Open Dataset [40].
-- **p. 7 / 5.2. Experiment Setup - extractive PDF cue:** L3DR exhibits consistent improvements on all datasets, improving all metrics by an average of 11.6% and 7.0% on nuScenes and Waymo conditional generation, respectively.
-- **p. 7 / 5.2. Experiment Setup - extractive PDF cue:** We conclude that L3DR is widely applicable and sets new state-of-the-arts on the nuScenes and Waymo semanticconditioned generation tasks.
-- **p. 3 / 3.2. Theoretical Analysis - extractive PDF cue:** Therefore, DDIM outputs are smooth, with softly transitioned object boundaries.
-- **p. 4 / 3.3. Empirical Analysis - extractive PDF cue:** We conclude that 3D models generate sharper object borders than 2D models, thus being preferable for rectification of 2D image diffusion results.
+- **p. 6 / 5.2. Experiment Setup - extractive body cue:** All datasets are split into trainvalidation-test according to official recommendations.
+- **p. 6 / 5.2. Experiment Setup - extractive body cue:** We train and evaluate our method on SemanticKITTI [1, 10], KITTI360 [20], nuScenes [4], and Waymo Open Dataset [40].
+- **p. 7 / 5.2. Experiment Setup - extractive body cue:** L3DR exhibits consistent improvements on all datasets, improving all metrics by an average of 11.6% and 7.0% on nuScenes and Waymo conditional generation, respectively.
+- **p. 7 / 5.2. Experiment Setup - extractive body cue:** We conclude that L3DR is widely applicable and sets new state-of-the-arts on the nuScenes and Waymo semanticconditioned generation tasks.
+- **p. 3 / 3.2. Theoretical Analysis - extractive body cue:** Therefore, DDIM outputs are smooth, with softly transitioned object boundaries.
+- **p. 4 / 3.3. Empirical Analysis - extractive body cue:** We conclude that 3D models generate sharper object borders than 2D models, thus being preferable for rectification of 2D image diffusion results.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. L3DR effectively rectifies LiDAR range-view (RV) diffusion artifacts by selectively ignoring anomalous training regions. (a) Depth bleeding creates fake points between the foreground ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Empirical validation of Theorem 1. The graph shows the distribution of ∥∇x∥for GT, vanilla RV diffusion, and our rectified RV, including the corresponding ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. The training pipeline of the proposed L3DR framework. In the LiDAR diffusion training stage, generated and ground-truth point cloud pairs are collected using ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 5. The inference pipeline of the proposed L3DR. truths, and yet remain imbued with RV artifacts on a limited scale, as depicted in Figure ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Benchmarking of unconditional generation on KITTI360 and semantic-conditioned generation on nuScenes and Waymo. For the semantic-conditioned experiments, RRN takes segmentation map as additional ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Comparison of conditional LiDAR point cloud generation on SemanticKITTI and KITTI360. Gray areas highlight direct comparisons with the baseline, LiDM. ‘Ours-Sem' denotes our ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Visualization of conditional generation on SemanticKITTI. Cyan regions highlight the improved RV artifacts from the diffusion-generated (i.e., denoised) data to our rectified data, ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. L3DR effectively rectifies LiDAR range-view (RV) diffusion artifacts by selectively ignoring anomalous training regions. (a) Depth bleeding creates fake points between the foreground ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Empirical validation of Theorem 1. The graph shows the distribution of ∥∇x∥for GT, vanilla RV diffusion, and our rectified RV, including the corresponding ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The training pipeline of the proposed L3DR framework. In the LiDAR diffusion training stage, generated and ground-truth point cloud pairs are collected using ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. The inference pipeline of the proposed L3DR. truths, and yet remain imbued with RV artifacts on a limited scale, as depicted in Figure ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Benchmarking of unconditional generation on KITTI360 and semantic-conditioned generation on nuScenes and Waymo. For the semantic-conditioned experiments, RRN takes segmentation map as additional ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Comparison of conditional LiDAR point cloud generation on SemanticKITTI and KITTI360. Gray areas highlight direct comparisons with the baseline, LiDM. ‘Ours-Sem' denotes our ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Visualization of conditional generation on SemanticKITTI. Cyan regions highlight the improved RV artifacts from the diffusion-generated (i.e., denoised) data to our rectified data, ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | All datasets are split into trainvalidation-test according to official recommendations. | embodiment, simulator version and control stack | p. 6 (5.2. Experiment Setup), p. 6 (5.2. Experiment Setup) |
 | Task/environment | We train and evaluate our method on SemanticKITTI [1, 10], KITTI360 [20], nuScenes [4], and Waymo Open Dataset [40]. | reset, timeout, object/scene variation | p. 6 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup) |
@@ -121,10 +121,10 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 | Primary metric/result | Meanwhile, L3DR with semantic-map input improves generation quality consistently, providing further 10.2% average performance boost on all metrics upon raw L3DR. | numeric claim only at cited anchor | p. 7 (5.2. Experiment Setup) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 5.2. Experiment Setup - extractive PDF cue:** All networks are trained with 4× RTX 4090 24G up to 150 epochs.
-- **p. 7 / 5.2. Experiment Setup - extractive PDF cue:** L3DR again achieved better performance compared to the baselines, gaining 15.0(∆15.3%) FPVD, 0.07(∆2.8%) JSD, and an astonishing 1.69 × 10-4(∆46.5%) MMD on SemanticKITTI, and 24.9(∆3.5%) ...
-- **p. 8 / 5.3. Other Results - extractive PDF cue:** On an RTX 4090 GPU 24G, the additional time for RRN rectification is 19.65 ms which is negligible compared to LiDM and R2DM sampling processes ...
-- **p. 6 / 4.4. Diffusion-agnostic Inference - extractive PDF cue:** Perceptual Distributional Task Method FSVD↓ FPVD↓ JSD↓ MMD×10(-4) ↓ KITTI360 Unconditional LiDARGAN [3] 183.4 168.1 0.272 4.74 LiDARVAE [3] 129.9 105.8 0.237 7.07 ProjectedGAN [36] ...
+- **p. 6 / 5.2. Experiment Setup - extractive body cue:** All networks are trained with 4× RTX 4090 24G up to 150 epochs.
+- **p. 7 / 5.2. Experiment Setup - extractive body cue:** L3DR again achieved better performance compared to the baselines, gaining 15.0(∆15.3%) FPVD, 0.07(∆2.8%) JSD, and an astonishing 1.69 × 10-4(∆46.5%) MMD on SemanticKITTI, and 24.9(∆3.5%) ...
+- **p. 8 / 5.3. Other Results - extractive body cue:** On an RTX 4090 GPU 24G, the additional time for RRN rectification is 19.65 ms which is negligible compared to LiDM and R2DM sampling processes ...
+- **p. 6 / 4.4. Diffusion-agnostic Inference - extractive body cue:** Perceptual Distributional Task Method FSVD↓ FPVD↓ JSD↓ MMD×10(-4) ↓ KITTI360 Unconditional LiDARGAN [3] 183.4 168.1 0.272 4.74 LiDARVAE [3] 129.9 105.8 0.237 7.07 ProjectedGAN [36] ...
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 
 ## Limitations and Verification Questions
 
-- **p. 3 / 3.2. Theoretical Analysis - extractive PDF cue:** As a result of Lipschitz continuity throughout the DDIM sampling process, the generated image in theory cannot exhibit arbitrarily sharp spatial transitions.
-- **p. 3 / 3.2. Theoretical Analysis - extractive PDF cue:** While 3D models are still generally Lipschitz, the spatial proximity of a point is defined in 3D rather than 2D, adding an additional dimension of ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Visualization of conditional generation on SemanticKITTI. Cyan regions highlight the improved RV artifacts from the diffusion-generated (i.e., denoised) data to our rectified data, ...
-- **p. 7 / 5.2. Experiment Setup - extractive PDF cue:** While L3DR does not top the MMD metric, our method still provides a average 7.3% improvement, and is comparable to the bestperforming ProjectedGAN which scores ...
-- **p. 4 / 3.2. Theoretical Analysis - extractive PDF cue:** Training Seg. w/ noise Generated GT UNet Generated RV & PC RRVP Residuals GT - Gen RVP 3D UNet Welsh Loss Diff.
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
+- **p. 3 / 3.2. Theoretical Analysis - extractive body cue:** As a result of Lipschitz continuity throughout the DDIM sampling process, the generated image in theory cannot exhibit arbitrarily sharp spatial transitions.
+- **p. 3 / 3.2. Theoretical Analysis - extractive body cue:** While 3D models are still generally Lipschitz, the spatial proximity of a point is defined in 3D rather than 2D, adding an additional dimension of ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Visualization of conditional generation on SemanticKITTI. Cyan regions highlight the improved RV artifacts from the diffusion-generated (i.e., denoised) data to our rectified data, ...
+- **p. 7 / 5.2. Experiment Setup - extractive body cue:** While L3DR does not top the MMD metric, our method still provides a average 7.3% improvement, and is comparable to the bestperforming ProjectedGAN which scores ...
+- **p. 4 / 3.2. Theoretical Analysis - extractive body cue:** Training Seg. w/ noise Generated GT UNet Generated RV & PC RRVP Residuals GT - Gen RVP 3D UNet Welsh Loss Diff.
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
 
-- **PDF anchors reviewed:** datasets p. 6 (5.2. Experiment Setup), p. 6 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 3 (3.2. Theoretical Analysis), p. 4 (3.3. Empirical Analysis), metrics p. 5 (Figure/Table caption), p. 7 (5.3. Other Results), p. 7 (5.3. Other Results), p. 8 (5.3. Other Results), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (5.2. Experiment Setup), p. 7 (5.3. Other Results), p. 8 (Figure/Table caption), p. 8 (5.3. Other Results), p. 6 (Figure/Table caption), p. 4 (3.3. Empirical Analysis), results p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 8 (5.3. Other Results), p. 8 (5.3. Other Results), p. 4 (3.2. Theoretical Analysis), p. 4 (3.3. Empirical Analysis).
+- **Evidence anchors reviewed:** datasets p. 6 (5.2. Experiment Setup), p. 6 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 3 (3.2. Theoretical Analysis), p. 4 (3.3. Empirical Analysis), metrics p. 5 (Figure/Table caption), p. 7 (5.3. Other Results), p. 7 (5.3. Other Results), p. 8 (5.3. Other Results), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (5.2. Experiment Setup), p. 7 (5.3. Other Results), p. 8 (Figure/Table caption), p. 8 (5.3. Other Results), p. 6 (Figure/Table caption), p. 4 (3.3. Empirical Analysis), results p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 8 (5.3. Other Results), p. 8 (5.3. Other Results), p. 4 (3.2. Theoretical Analysis), p. 4 (3.3. Empirical Analysis).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p059.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p059.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. BENCHMARKS | BENCHMARK / DATASET | Preliminary results demonstrate improved performance through the integration of visual, auditory, force-torque (wrench), gripper, and pose information. ‘These findings are promising, and we plan ... | p. 11 (V. BENCHMARKS) |
 | V. BENCHMARKS | BENCHMARK / DATASET | We hypothesize that the lower performance of DiffAct on the REASSEMBLE dataset is due to the increased challenges it presents, Firstly, the REASSEMBLE dataset ... | p. 11 (V. BENCHMARKS) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In robotic manipulation, most simulated environments and datasets primarily focus on fundamental tasks such as picking, placing, in-hand manipulation, lifting, and stacking (15), (17), ... | embodiment, simulator version and control stack | p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm) |
 | Task/environment | We compare several commonly used datasets based on the number of demonstrations, the number of verbs they contain, the sensors used during data collection, ... | reset, timeout, object/scene variation | p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS) |
@@ -167,7 +167,16 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 - **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** ‘and disassembly, which require stringent tolerances, demand accurate and high-resolution contact information, including force-torque data, that visual sensing alone cannot reliably ‘capture.
 - **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** To address these limitations, REASSEMBLE introduces a novel dataset incorporating high-resolution force-torque sensing specifically tailored for tight-tolerance, high-precision, and ong-horizon tasks.
 
-- **PDF anchors reviewed:** datasets p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS), metrics p. 10 (V. BENCHMARKS), p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (Figure/Table caption), baselines p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), results p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (Figure/Table caption), p. 10 (V. BENCHMARKS).
+- **Evidence anchors reviewed:** datasets p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS), metrics p. 10 (V. BENCHMARKS), p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (Figure/Table caption), baselines p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), results p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (Figure/Table caption), p. 10 (V. BENCHMARKS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Preliminary results demonstrate improved performance through the integration of visual, auditory, force-torque (wrench), gripper, and pose information. ‘These findings are promising, and we plan 10 conduct a more comprehensive analysis ... (p. 11, V. BENCHMARKS).
+- **Metric evidence:** + FI scores at 10%, 25%, and S0% overlap: Measure (p. 10, V. BENCHMARKS).
+- **Baseline/ablation evidence:** For benchmarking purposes, we evaluate the performance of a state-of-the-art visual TAS model, DiffAct [37]. (p. 10, V. BENCHMARKS).
+- **Failure/negative evidence:** ‘The number of failed demonstrations per action can serve as ‘4 metric for task difficulty, as operators are more likely to fail ‘when the motion is complex. (p. 7, B. Action difficulty and failure modes).

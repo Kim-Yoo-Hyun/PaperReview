@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2007.10985; PDF retrieval source: https://arxiv.org/pdf/2007.10985. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2007.10985; PDF retrieval source: https://arxiv.org/pdf/2007.10985. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,43 +10,43 @@ PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): This status quo
 
 ## PDF Body Digest
 
-- **p. 1 / 1 Introduction - extractive PDF cue:** Representation learning is one of the main driving forces of deep learning research.
-- **p. 1 / 1 Introduction - extractive PDF cue:** In 2D vision, the finding that pre-training a network on a rich source set (e.g.
-- **p. 1 / 1 Introduction - extractive PDF cue:** ImageNet classification) can help boost performance once fine-tuned on the usually much smaller target set, has been key to the success of many applications.
-- **p. 1 / 1 Introduction - extractive PDF cue:** A particularly important setting is when the pre-training stage is unsupervised, as this opens up the possibility to utilize a practically infinite ⋆Work done while ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Unsupervised pre-training has been remarkably successful in natural language processing [49, 13], and has recently attracted increasing attention in 2D vision [42, 3, 27, 63, ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data is harder to ...
-- **p. 2 / 1 Introduction - extractive PDF cue:** Notably, all existing representation learning schemes are tested either on single objects or low-level tasks (e.g. registration).
+- **p. 1 / 1 Introduction - extractive body cue:** Representation learning is one of the main driving forces of deep learning research.
+- **p. 1 / 1 Introduction - extractive body cue:** In 2D vision, the finding that pre-training a network on a rich source set (e.g.
+- **p. 1 / 1 Introduction - extractive body cue:** ImageNet classification) can help boost performance once fine-tuned on the usually much smaller target set, has been key to the success of many applications.
+- **p. 1 / 1 Introduction - extractive body cue:** A particularly important setting is when the pre-training stage is unsupervised, as this opens up the possibility to utilize a practically infinite ⋆Work done while ...
+- **p. 2 / 1 Introduction - extractive body cue:** Unsupervised pre-training has been remarkably successful in natural language processing [49, 13], and has recently attracted increasing attention in 2D vision [42, 3, 27, 63, ...
+- **p. 2 / 1 Introduction - extractive body cue:** This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data is harder to ...
+- **p. 2 / 1 Introduction - extractive body cue:** Notably, all existing representation learning schemes are tested either on single objects or low-level tasks (e.g. registration).
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| Observation / input | Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | contributions, summarized, follows, evaluate, first, time, transferability, learned, representation, point | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | finding, pre-training, network, rich, source, ImageNet, help, boost | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | image/point input I/P and pose; body terms: contributions, summarized, follows, evaluate, first, time, transferability, learned, representation, point | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (2 Stanford University) |
+| State / observation variable | image/point input I/P and pose; body terms: contributions, summarized, follows, evaluate, first, time, transferability, learned, representation, point | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (body section not recovered) |
 | Decision / output variable | geometry/map/query r; body terms: contributions, summarized, follows, evaluate, first, time, transferability, learned | p. 2 (1 Introduction) |
-| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: pre-training, objective, evaluate, different, contrastive, losses, Hardest-contrastive, loss | p. 2 (1 Introduction), p. 1 (2 Stanford University), p. 2 (1 Introduction) |
-| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 1 (2 Stanford University), p. 2 (1 Introduction) |
+| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: pre-training, objective, evaluate, different, contrastive, losses, Hardest-contrastive, loss | p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction) |
 | Success / guarantee | spatial accuracy and downstream robot utility | p. 10 (Figure/Table caption), p. 23 (Figure/Table caption), p. 23 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 2 / 1 Introduction - extractive PDF cue:** Notably, all existing representation learning schemes are tested either on single objects or low-level tasks (e.g. registration).
+- **p. 2 / 1 Introduction - extractive body cue:** Notably, all existing representation learning schemes are tested either on single objects or low-level tasks (e.g. registration).
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 Introduction)): Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level scene understanding. - Our results ...
+PDF body contribution framing (p. 2 (1 Introduction)): Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level scene understanding. - Our results ...
 
 - additional contribution cue 없음
 
@@ -63,11 +63,11 @@ PDF contribution framing (p. 2 (1 Introduction)): Our contributions can be summa
 
 ## Position in the Robotics Loop
 
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (2 Stanford University), p. 1 (2 Stanford University). The downstream handoff is claimed only when the body describes it.
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (body section not recovered), p. 1 (body section not recovered). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (2 Stanford University), p. 1 (2 Stanford University), objective p. 2 (1 Introduction), p. 1 (2 Stanford University), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (body section not recovered), p. 1 (body section not recovered), objective p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

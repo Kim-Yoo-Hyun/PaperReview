@@ -1,53 +1,73 @@
 # Insights — BlenderAlchemy: Editing 3D Graphics with Vision-Language Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** In this paper, we propose a system that leverages Vision-Language Models (VLMs), like GPT-4V, to intelligently search the design action space to arrive at an answer that can ...
-- **Problem cue:** Moreover, slightly different design goals may require completely different sequences, making automation difficult.
-- **Claim/result cue:** Specifically, we design a vision-based edit generator and state evaluator to work together to find the correct sequence of actions to achieve the goal.
+- **p. 1 / Body text (section not recovered) - extractive body cue:** By the same argument, even if BlenderGPT [2] was equipped with visual perception and a state evaluator to choose among 32 candidates, it would still ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Finally, we showcase some renderings of scenes that feature BlenderAlchemy materials in Section 6.
+- **p. 2 / Body text (section not recovered) - extractive body cue:** We show the ViT-B/32 CLIP scores here. -Vision -Vision G -Imagin. -Revert -Leap -Tweak Ours Edit 1 27.4 27.6 26.8 27.1 27.1 27.2 27.8 Edit ...
+- **p. 3 / Body text (section not recovered) - extractive body cue:** For reference, we show the input and the output of our unablated system on the right.
+- **p. 6 / Body text (section not recovered) - extractive body cue:** 1: procedure MultiskillRefine(Iteration number N, Agent collection {(G1, V1), (G2, V2)...(Gk, Vk)}, Base state Sbase and Initial programs {p(1) 0 , p(2) 0 , ...p(k) ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** We outline the prompts we use for the state evaluator and edit generator in Section 4.
+- **p. 2 / Body text (section not recovered) - extractive body cue:** Visual Imagination Visual imagination is an additional image-generation step before launching the procedure in Algorithm 1 in the main paper , with the intended effect ...
+- **Contribution anchor:** p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 3 (Body text (section not recovered)), p. 6 (Body text (section not recovered)), p. 1 (Body text (section not recovered))
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Lastly, we discuss the societal impact and limitations of our work in Sections 7 and 8.
+- **p. 3 / Body text (section not recovered) - extractive body cue:** Without a visual target to compare against, the edit generator has a difficult time knowing how to adjust the parameters of the shader node graph.
+- **p. 14 / Body text (section not recovered) - extractive body cue:** 8 Limitations Cost and speed of inference Our system uses state of the art vision-language models.
+- **p. 14 / Body text (section not recovered) - extractive body cue:** Such libraries are likely to be extremely domain-specific (library tools used by a material editor would be very different than animation), and will be the ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Blender material graph of the "celestial nebula" material. Note the correspondence between "swirls" and the noise texture node, as well as the colors ...
+- **Boundary to test:** 8 Limitations Cost and speed of inference Our system uses state of the art vision-language models.
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | By the same argument, even if BlenderGPT [2] was equipped with visual perception and a state evaluator to choose among 32 candidates, it would still suffer from the same issues as the ... | p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)) |
+| Reported outcome | Fig. 4: Blender material graph of the "digital camo" material. To achieve the "sharp angles", our system chose to use a Voronoi texture node, and chooses the right colors in the color ... | p. 5 (Figure/Table caption), p. 14 (Body text (section not recovered)) |
+| Failure/limitation | 8 Limitations Cost and speed of inference Our system uses state of the art vision-language models. | p. 14 (Body text (section not recovered)), p. 14 (Body text (section not recovered)) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation/language → task decision → action/control`.
-- **Registry interface:** `Vision-Language Model, 3D Vision, Graph Reasoning` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Object, relation, room/scene hierarchy를 graph로 구조화해 3D perception 결과를 robot planning과 language reasoning에 넘기는 중간 표현으로 사용할 수 있다.
-  - 관계 중심 표현은 단일 object detection보다 task-relevant affordance, spatial relation, commonsense reasoning을 붙이기 쉽다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 For reference, we show the input and the output of our unablated system on the right.를 Without it, user intentions communicated using abstract language descriptions lead to poorer edits due to having limited information to properly guide the low-level visual comparisons (e.g. color, textures, ...etc.) by the state ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 8 Limitations Cost and speed of inference Our system uses state of the art vision-language models.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: By the same argument, even if BlenderGPT [2] was equipped with visual perception and a state evaluator to choose among 32 candidates, it would still suffer from the same issues as the ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Vision-Language Understanding`; tags: `Vision-Language Model, 3D Vision, Graph Reasoning`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Specifically, we design a vision-based edit generator and state evaluator to work together to find the correct sequence of actions to achieve the goal.
-  - static scene graph 품질을 보인 뒤에도 dynamic updates, uncertainty, open-vocabulary relation grounding, robot action coupling은 별도 문제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Vision-Language Model, 3D Vision, Graph Reasoning`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** 8 Limitations Cost and speed of inference Our system uses state of the art vision-language models.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / success rate
-  - 내 연구 확장 benchmark 후보: ScanNet, 3RScan, Matterport3D
-  - 내 연구 확장 metric 후보: mIoU, Recall@K, relation accuracy, task success
-  - 검증 초점: relation prediction, open-vocabulary grounding, downstream planning utility를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: 6 BlenderAlchemy Materials In Scenes In this section we show the results of applying the material outputs of BlenderAlchemy onto meshes that we download from the internet..
+3. Compare against the body-reported baseline or a matched simpler baseline: We suspect that this is because tweaking in iterations (3 and 4) gets the material closer to the desired outcome, and the need for radical changes is lowered in the 2nd and ....
+4. Report the body metric and its denominator/aggregation: Table 2: Ablating system design decisions. For the text-based material editing task, we compare against variants in which we remove (1) visual perception from G and V (-Vision), (2) visual perception from ....
+5. Re-run the body-reported ablation/failure condition: Table 2: Ablating system design decisions. For the text-based material editing task, we compare against variants in which we remove (1) visual perception from G and V (-Vision), (2) visual perception from ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 6 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)); the primary result is directionally consistent at p. 5 (Figure/Table caption), p. 14 (Body text (section not recovered)), p. 2 (Figure/Table caption); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-3D scene graph의 node/edge uncertainty를 planning cost나 action selection에 어떻게 반영할 수 있는가?
+고정된 observation/action/data/compute budget에서 same, argument, even mechanism이 We suspect that this is because tweaking in iterations (3 and 4) gets the material closer ... 대비 Table 2: Ablating system design decisions. For the text-based material editing task, we compare against variants in which ...을 개선하고, 8 Limitations Cost and speed of inference Our system uses state of the art vision-language models. 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

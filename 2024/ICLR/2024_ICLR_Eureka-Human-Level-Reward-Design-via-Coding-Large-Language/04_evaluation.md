@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IEduRUO55F; PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IEduRUO55F; PDF retrieval source: https://openreview.net/forum?id=IEduRUO55F. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 29 (Figure/Table caption), p. 2 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 12: EUREKA reward functions' improvement over alternative reward functions are statistically significant. Dexterity Performance Breakdown. We present the raw success rates of EUREKA, ... | p. 29 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 2: EUREKA takes unmodified environment source code and language task description as context to zero-shot generate executable reward functions from a coding LLM. ... | p. 2 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 29 (Figure/Table caption), p. 2 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | In addition to coverage over robot form factors, we ensure depth in our evaluation by including all 20 tasks from the Bidexterous Manipulation (Dexterity) ... | embodiment, simulator version and control stack | p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS) |
 | Task/environment | Our environments consist of 10 distinct robots and 29 tasks implemented using the IsaacGym simulator (Makoviychuk et al., 2021). | reset, timeout, object/scene variation | p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS) |
@@ -92,9 +92,9 @@ PDF body evaluation/result cue (p. 29 (Figure/Table caption), p. 2 (Figure/Table
 |---|---|---|
 | Figure 4: EUREKA outperforms Human and L2R across all tasks. In particular, EUREKA realizes much greater gains on high-dimensional dexterity environments. about these tasks, ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 10: EUREKA reward functions enjoy improved sample efficiency compared to various baseline reward functions on aggregate over 20 Dexterity tasks. Additional Evaluation Metrics. ... | comparison identity and matched condition | p. 28 (Figure/Table caption) |
-| Published as a conference paper at ICLR 2024 Figure 4: EUREKA outperforms Human and L2R across all tasks. | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | As shown, EUREKA mostly generates weakly correlated reward functions that outperform the human ones. | comparison identity and matched condition | p. 7 (4.3 RESULTS) |
 | This ablation helps study, given a fixed number of reward function budget, whether it is more advantageous to perform the EUREKA evolution or simply ... | comparison identity and matched condition | p. 7 (4.3 RESULTS) |
+| Isaac and Dexterity share a well-tuned PPO implementation (Schulman et al., 2017; Makoviichuk & Makoviychuk, 2021), and we use this implementation and the task-specific ... | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | To demonstrate the importance of curriculum learning, we also directly train a policy from scratch on the target task using EUREKA reward without the ... | comparison identity and matched condition | p. 8 (4.3 RESULTS) |
 
 | Fairness dimension | Required matched condition |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 29 (Figure/Table caption), p. 2 (Figure/Table
 - **p. 30 / Figure/Table caption - extractive body cue:** Figure 14: EUREKA without the reward reflection mechanism exhibits degraded performance. EUREKA with GPT-3.5. In Fig. 15, we compare the performance of EUREKA with GPT- ...
 - **p. 30 / Figure/Table caption - extractive body cue:** Figure 15: Using GPT3.5 observes performance degradation in EUREKA but still remains comparable to GPT-4 on a majority of the tasks. Reward Correlation Experiments. To ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4.3 RESULTS), p. 7 (4.3 RESULTS), metrics p. 29 (Figure/Table caption), p. 22 (Figure/Table caption), p. 29 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 7 (4.3 RESULTS), p. 7 (4.3 RESULTS), baselines p. 6 (Figure/Table caption), p. 28 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 7 (4.3 RESULTS), p. 7 (4.3 RESULTS), p. 8 (4.3 RESULTS), results p. 29 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (4.3 RESULTS), p. 29 (Figure/Table caption), p. 28 (Figure/Table caption), p. 7 (4.3 RESULTS).
+- **Evidence anchors reviewed:** datasets p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4.3 RESULTS), p. 7 (4.3 RESULTS), metrics p. 29 (Figure/Table caption), p. 22 (Figure/Table caption), p. 29 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 7 (4.3 RESULTS), p. 7 (4.3 RESULTS), baselines p. 6 (Figure/Table caption), p. 28 (Figure/Table caption), p. 7 (4.3 RESULTS), p. 7 (4.3 RESULTS), p. 6 (4 EXPERIMENTS), p. 8 (4.3 RESULTS), results p. 29 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (4.3 RESULTS), p. 29 (Figure/Table caption), p. 28 (Figure/Table caption), p. 7 (4.3 RESULTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (45 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 10: EUREKA reward functions enjoy improved sample efficiency compared to various baseline reward functions on aggregate over 20 Dexterity tasks. Additional Evaluation Metrics. In Fig. 11, we present holistic ... (p. 28, Figure/Table caption).
+- **Metric evidence:** Averaged over all Isaac tasks, EUREKA without reward reflection reduces the average normalized score by 28.6%; in App. (p. 7, 4.3 RESULTS).
+- **Baseline/ablation evidence:** This ablation helps study, given a fixed number of reward function budget, whether it is more advantageous to perform the EUREKA evolution or simply sample more first-attempt rewards without iterative ... (p. 7, 4.3 RESULTS).
+- **Failure/negative evidence:** This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).

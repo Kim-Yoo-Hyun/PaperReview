@@ -41,10 +41,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 PointVLA Framework Vision-Language Model Action Expert Point Cloud Injector Robot Action Block_12 Block_13 Block_16 Block_1 Injection Block_1 Injection Block_2 Injection Block_5 Zero Linear Adapter Zero Linear Point Cloud Injector Zero ...를 The VLM acts as the model's 'brain,' processing instructions and current visual input to understand the task state.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to become entangled-an observation consistent with previous findings ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Left: The 2D image observation and instruction are processed by the vision-language model. (p. 4, 3.2. Injecting Point Cloud into VLA).
+- **Paper-specific mechanism:** In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models. (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is We show experimental results on the bottom table. sented in Table 6, where our method outperforms all baselines in this scenario. (p. 7, 4.2. Few-Shot Multi-Tasking); the relevant task/metric cue is Objects were placed randomly within a small range, and we report the average success rate for each method. (p. 6, 4.2. Few-Shot Multi-Tasking). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to become entangled-an observation consistent with ... (p. 7, 4.2. Few-Shot Multi-Tasking).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -56,19 +57,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Following the training setup in RoboTwin, the policy was trained using three random seeds (0, 1, 2) without cherry picking for each experiment..
-3. Compare against the body-reported baseline or a matched simpler baseline: Figure 6. Experimental results on few-shot multi-tasking on bimanual AgileX. last checkpoint for evaluation to avoid cherry picking. We set chunk size to 50 for all tasks. Baseline. In our experiments, we ....
-4. Report the body metric and its denominator/aggregation: The mean and standard deviation of these success rates were computed to obtain the experimental results presented below..
-5. Re-run the body-reported ablation/failure condition: Note that since PointVLA is built on top of DexVLA, the DexVLA can be viewed as an ablation of our proposed PointVLA without the incorporation of 3D point cloud data..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Left: The 2D image observation and instruction are processed by the vision-language model. (p. 4, 3.2. Injecting Point Cloud into VLA); preserve the objective/update rule: First, the computational cost would be prohibitively high due to the required conditioning blocks. (p. 4, 3.2. Injecting Point Cloud into VLA).
+2. Use the paper-reported task/data/environment cue: Finally, we compare our method against simulation benchmarks. (p. 5, 4. Experiment).
+3. Compare against the reported or matched baseline: Note that since PointVLA is built on top of DexVLA, the DexVLA can be viewed as an ablation of our proposed PointVLA without the incorporation of 3D point cloud data. (p. 6, 4.1. Implementation Details).
+4. Report the body metric with its denominator and aggregation: Objects were placed randomly within a small range, and we report the average success rate for each method. (p. 6, 4.2. Few-Shot Multi-Tasking).
+5. Re-run the reported ablation or stress/failure condition: Note that since PointVLA is built on top of DexVLA, the DexVLA can be viewed as an ablation of our proposed PointVLA without the incorporation of 3D point cloud data. (p. 6, 4.1. Implementation Details); if none is reported, design one around: Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to become entangled-an observation consistent with ... (p. 7, 4.2. Few-Shot Multi-Tasking).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.2. Injecting Point Cloud into VLA), p. 3 (3. Methodology), p. 4 (3.2. Injecting Point Cloud into VLA); the primary result is directionally consistent at p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 4 (3.2. Injecting Point Cloud into VLA), match the reported outcome at p. 7 (4.2. Few-Shot Multi-Tasking), p. 9 (Figure/Table caption), p. 6 (Figure/Table caption), and measure the boundary at p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.4. Real-vs-Photo Discrimination).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 introduce, PointVLA, novel mechanism이 Figure 6. Experimental results on few-shot multi-tasking on bimanual AgileX. last checkpoint for evaluation to avoid ... 대비 The mean and standard deviation of these success rates were computed to obtain the experimental results presented below.을 개선하고, Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Left: The 2D image observation and instruction are processed by the vision-language model.), does the paper-specific mechanism (In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models.) retain the reported evaluation outcome (Objects were placed randomly within a small range, and we report the average success rate for each method.) when tested against the paper's strongest explicit boundary (Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Objects were placed randomly within a small range, and we report the average success rate for each method.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models. (p. 2, 1. Introduction).
+- **Paper-supported outcome:** We show experimental results on the bottom table. sented in Table 6, where our method outperforms all baselines in this scenario. (p. 7, 4.2. Few-Shot Multi-Tasking).
+- **Strongest explicit boundary:** Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to become entangled-an observation consistent with ... (p. 7, 4.2. Few-Shot Multi-Tasking).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

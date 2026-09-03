@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,28 +10,28 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 
 ## Method Body Digest
 
-- **p. 6 / Method - extractive PDF cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
-- **p. 6 / Method - extractive PDF cue:** We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians.
-- **p. 2 / 1. Introduction - extractive PDF cue:** LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD dataset offers over ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** For instance, simple commands like apple can be directly interpreted, while more complex instructions, such as Can you localize the red, round, sweet fruit on ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
-- **p. 6 / Method - extractive PDF cue:** Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is deemed successful if the pixel with the highest relevance falls within the labeled ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** As shown in Figure 1, these instructions involve locating the target object, interpreting the intent of the description, and accounting for occlusion.
+- **p. 6 / Method - extractive body cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
+- **p. 6 / Method - extractive body cue:** We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians.
+- **p. 2 / 1. Introduction - extractive body cue:** LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD dataset offers over ...
+- **p. 1 / 1. Introduction - extractive body cue:** For instance, simple commands like apple can be directly interpreted, while more complex instructions, such as Can you localize the red, round, sweet fruit on ...
+- **p. 2 / 1. Introduction - extractive body cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
+- **p. 6 / Method - extractive body cue:** Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is deemed successful if the pixel with the highest relevance falls within the labeled ...
+- **p. 1 / 1. Introduction - extractive body cue:** As shown in Figure 1, these instructions involve locating the target object, interpreting the intent of the description, and accounting for occlusion.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Furthermore, we introduce a novel ReasoningGD dataset containing over 10K complex scenes and 263 object types, with a total of approximately 2 million annotations.
-- **p. 2 / 1. Introduction - extractive PDF cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
+- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we introduce a novel ReasoningGD dataset containing over 10K complex scenes and 263 object types, with a total of approximately 2 million annotations.
+- **p. 2 / 1. Introduction - extractive body cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
 
 ## Source Evidence Cues
 
-- **p. 6 / Method - extractive PDF cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
-- **p. 6 / Method - extractive PDF cue:** We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians.
+- **p. 6 / Method - extractive body cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
+- **p. 6 / Method - extractive body cue:** We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians.
 - **Detected method headings:** Method (p. 6)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | To extract language features from each image, we use the OpenCLIP ViT-B/16 model. | p. 6 (Method), p. 6 (Method) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians. | p. 6 (Method) |
@@ -57,12 +57,12 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 
 ## Observation–State–Action Interface
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD dataset offers over ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** For instance, simple commands like apple can be directly interpreted, while more complex instructions, such as Can you localize the red, round, sweet fruit on ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
-- **p. 6 / Method - extractive PDF cue:** Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is deemed successful if the pixel with the highest relevance falls within the labeled ...
-- **p. 6 / Method - extractive PDF cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
-- **p. 1 / 1. Introduction - extractive PDF cue:** As shown in Figure 1, these instructions involve locating the target object, interpreting the intent of the description, and accounting for occlusion.
+- **p. 2 / 1. Introduction - extractive body cue:** LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD dataset offers over ...
+- **p. 1 / 1. Introduction - extractive body cue:** For instance, simple commands like apple can be directly interpreted, while more complex instructions, such as Can you localize the red, round, sweet fruit on ...
+- **p. 2 / 1. Introduction - extractive body cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
+- **p. 6 / Method - extractive body cue:** Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is deemed successful if the pixel with the highest relevance falls within the labeled ...
+- **p. 6 / Method - extractive body cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
+- **p. 1 / 1. Introduction - extractive body cue:** As shown in Figure 1, these instructions involve locating the target object, interpreting the intent of the description, and accounting for occlusion.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -77,7 +77,7 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 
 ## Training vs Inference
 
-- **p. 6 / Method - extractive PDF cue:** We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians.
+- **p. 6 / Method - extractive body cue:** We then train the hierarchical feature Gaussian field by fixing all other parameters of the 3D Gaussians.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -97,13 +97,13 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 
 ## Failure and Ablation Link
 
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 7. Ablation studies. The results are presented for two dif- ferent scenes: the Figurines scene from the LERF dataset and the 001 scene from ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Mean IoU (%) on LERF for open-vocabulary 3D vi- sual grounding. Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is ...
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Examples of open-vocabulary 3D visual grounding and reasoning. In a given scene, the user observes from a per- spective with occlusions and asks ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** The dataset features multiple object instances with varying levels of occlusion, making it ideal for evaluating the ability in open-vocabulary 3D reasoning, grounding, and amodal ...
-- **p. 7 / 4.2. Evaluation on 3D Reasoning - extractive PDF cue:** Existing openvocabulary 3D visual grounding methods struggle with localizing complete objects in novel views with occlusion, limiting their real-world applicability.
-- **p. 7 / 4.2. Evaluation on 3D Reasoning - extractive PDF cue:** To test robustness, we selected five challenging scenes with small proportions, including multi-hierarchical structures and similar objects, along with ten text queries per scene from ...
-- **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive PDF cue:** This highlights the robustness of our ReasonGrounder in complex situations.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 7. Ablation studies. The results are presented for two dif- ferent scenes: the Figurines scene from the LERF dataset and the 001 scene from ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Mean IoU (%) on LERF for open-vocabulary 3D vi- sual grounding. Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of open-vocabulary 3D visual grounding and reasoning. In a given scene, the user observes from a per- spective with occlusions and asks ...
+- **p. 5 / 4. Experiments - extractive body cue:** The dataset features multiple object instances with varying levels of occlusion, making it ideal for evaluating the ability in open-vocabulary 3D reasoning, grounding, and amodal ...
+- **p. 7 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** Existing openvocabulary 3D visual grounding methods struggle with localizing complete objects in novel views with occlusion, limiting their real-world applicability.
+- **p. 7 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** To test robustness, we selected five challenging scenes with small proportions, including multi-hierarchical structures and similar objects, along with ten text queries per scene from ...
+- **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** This highlights the robustness of our ReasonGrounder in complex situations.
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -117,7 +117,7 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 6 (Method), p. 6 (Method), objective 본문 anchor 없음, temporal p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Scale-Hierarchical Feature Gaussian Field), p. 4 (3.1. Scale-Hierarchical Feature Gaussian Field).
+- **Evidence anchors reviewed:** method p. 6 (Method), p. 6 (Method), objective 본문 anchor 없음, temporal p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Scale-Hierarchical Feature Gaussian Field), p. 4 (3.1. Scale-Hierarchical Feature Gaussian Field).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

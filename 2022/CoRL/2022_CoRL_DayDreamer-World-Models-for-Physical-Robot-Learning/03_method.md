@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/wu23c.html; PDF retrieval source: https://arxiv.org/pdf/2206.14176. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/wu23c.html; PDF retrieval source: https://arxiv.org/pdf/2206.14176. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: ... | p. 3 (2 Approach), p. 4 (2 Approach) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | The actor critic algorithm consists of two neural networks: Actor Network: π(at / st) Critic Network: v(st) (2) The role of the ... | p. 4 (2 Approach), p. 3 (2 Approach) |
@@ -79,7 +79,7 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | As the goal is fixed, after 100 environment steps, we end the episode and randomize the robot's position through a sequence of ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | As shown in Figure 7, Dreamer achieves an average distance to the goal of 0.15, measured in units of the area size ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | We control the high-performance UR5 robot from Universal Robotics at 2 Hz. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -127,8 +127,17 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach), p. 4 (2 Approach), objective p. 4 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach), p. 3 (2 Approach), temporal p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments), p. 2 (1 Introduction), p. 5 (3 Experiments), p. 6 (3 Experiments).
+- **Evidence anchors reviewed:** method p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach), p. 4 (2 Approach), objective p. 4 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach), p. 3 (2 Approach), temporal p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments), p. 2 (1 Introduction), p. 5 (3 Experiments), p. 6 (3 Experiments).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: encθ(st / st-1, at-1, xt) Decoder Network: decθ(st) ... (p. 3, 2 Approach).
+- **Objective/update evidence:** Different gradient estimators are available for computing the policy gradient for optimizing the actor, such as Reinforce (Williams, 1992) and the reparameterization trick (Kingma and Welling, 2013; Rezende et al., ... (p. 4, 2 Approach).
+- **Temporal/runtime evidence:** As the goal is fixed, after 100 environment steps, we end the episode and randomize the robot's position through a sequence of high power random motor actions. (p. 7, 3 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

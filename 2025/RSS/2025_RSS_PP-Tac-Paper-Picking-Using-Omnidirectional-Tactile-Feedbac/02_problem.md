@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p056.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p056.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p.
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces. | contact-rich manipulation scene | body wording is the source claim |
-| Observation / input | 2) Diffusion Policy Training: Train a policy fon this dataset t0 infer motions from tactile feedback and proprioceptive states, ensuring generalization to ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | 2) Diffusion Policy Training: Train a policy fon this dataset t0 infer motions from tactile feedback and proprioceptive states, ensuring generalization to ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | Diffusion, Policy, Training, Train, dataset, infer, motions, tactile, feedback, proprioceptive | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
 | Output / action | Motion, Noise, ATR, Port, Puvit, dioe, PP-Tac, Policy | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
 | Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | visual/tactile/proprioceptive contact history; body terms: Diffusion, Policy, Training, Train, dataset, infer, motions, tactile, feedback, proprioceptive | p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 9 (B. Depth Reconstruction of VBTS), p. 7 (A. Implementation Details) |
 | Decision / output variable | contact-aware action/force; body terms: address, visionindependent, tactile-based, core, idea, leverages, tactile, feedback | p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 6 (A. Implementation Details), p. 5 (IV. PROBLEM STATEMENT) |
@@ -38,7 +38,7 @@ PDF body framing (p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p.
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 8 (B. Depth Reconstruction of VBTS), p. 8 (B. Depth Reconstruction of VBTS) |
 | Success / guarantee | slip/contact success and safe interaction | p. 9 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), p. 7 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -48,7 +48,7 @@ PDF body framing (p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p.
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 6 (A. Implementation Details), p. 5 (IV. PROBLEM STATEMENT), p. 8 (B. Depth Reconstruction of VBTS), p. 4 (IV. PROBLEM STATEMENT)): To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling ...
+PDF body contribution framing (p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 6 (A. Implementation Details), p. 5 (IV. PROBLEM STATEMENT), p. 8 (B. Depth Reconstruction of VBTS), p. 4 (IV. PROBLEM STATEMENT)): To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling ...
 
 - **p. 6 / A. Implementation Details - extractive body cue:** Thus, the entire inference process consists of 10 steps.
 - **p. 5 / IV. PROBLEM STATEMENT - extractive body cue:** In practice, our approach solved this problem by adopting a Iearing-based policy rather than a model-based optimization paradigm.
@@ -68,12 +68,21 @@ PDF contribution framing (p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 6 (A. 
 
 ## Position in the Robotics Loop
 
-tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 9 (B. Depth Reconstruction of VBTS), p. 7 (A. Implementation Details), p. 6 (B. PP-Tac Policy). The downstream handoff is claimed only when the body describes it.
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 9 (B. Depth Reconstruction of VBTS), p. 7 (A. Implementation Details), p. 6 (B. PP-Tac Policy). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), interface p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 9 (B. Depth Reconstruction of VBTS), p. 7 (A. Implementation Details), p. 6 (B. PP-Tac Policy), objective p. 7 (B. Depth Reconstruction of VBTS).
+- **Evidence anchors reviewed:** problem p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), interface p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 9 (B. Depth Reconstruction of VBTS), p. 7 (A. Implementation Details), p. 6 (B. PP-Tac Policy), objective p. 7 (B. Depth Reconstruction of VBTS).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces. (p. 4, IV. PROBLEM STATEMENT).
+- **Formulation-changing contribution:** Despite recent advances in robotic Robots are increasingly popular as assistive agents in evhardware and embodied Al, existing systems continue to struggle eryday life, particularly within household environments (3) with ... (p. 1, Abstract).
+- **Assumption/failure evidence:** However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

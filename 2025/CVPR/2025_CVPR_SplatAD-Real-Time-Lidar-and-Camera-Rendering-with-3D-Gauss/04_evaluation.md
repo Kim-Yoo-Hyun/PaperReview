@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** Datasets: We perform experiments on PandaSet [41], Argoverse2 [38] and nuScenes [5].
-- **p. 7 / 4. Experiments - extractive PDF cue:** Depth ↓ Intensity ↓ Drop acc. ↑ CD ↓ MR/s ↑ PandaSet UniSim 0.08 0.086 - 10.3§ 0.9 NeuRAD 0.01 0.063 96.2 1.9 1.1 PVG ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** NVS results for image, over three datasets.
-- **p. 7 / 4. Experiments - extractive PDF cue:** Note that all methods are designed for dynamic scenes and use lidar data for supervision.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** Metrics are averaged over all three datasets to avoid any dataset-specific biases.
-- **p. 8 / 4.2. Lidar rendering - extractive PDF cue:** NVS results averaged over 10 sequences from PandaSet, nuScenes, and Argoverse2 when removing model components.
-- **p. 7 / 4.2. Lidar rendering - extractive PDF cue:** We measure the quality of our lidar point clouds using the same metrics as in [35], i.e., median squared depth error, RMSE intensity error, ray ...
-- **p. 8 / 4.2. Lidar rendering - extractive PDF cue:** FDDINOv2 scores when shifting pose of ego vehicle or actors.
+- **p. 6 / 4. Experiments - extractive body cue:** Datasets: We perform experiments on PandaSet [41], Argoverse2 [38] and nuScenes [5].
+- **p. 7 / 4. Experiments - extractive body cue:** Depth ↓ Intensity ↓ Drop acc. ↑ CD ↓ MR/s ↑ PandaSet UniSim 0.08 0.086 - 10.3§ 0.9 NeuRAD 0.01 0.063 96.2 1.9 1.1 PVG ...
+- **p. 6 / 4. Experiments - extractive body cue:** NVS results for image, over three datasets.
+- **p. 7 / 4. Experiments - extractive body cue:** Note that all methods are designed for dynamic scenes and use lidar data for supervision.
+- **p. 8 / 4.3. Ablations - extractive body cue:** Metrics are averaged over all three datasets to avoid any dataset-specific biases.
+- **p. 8 / 4.2. Lidar rendering - extractive body cue:** NVS results averaged over 10 sequences from PandaSet, nuScenes, and Argoverse2 when removing model components.
+- **p. 7 / 4.2. Lidar rendering - extractive body cue:** We measure the quality of our lidar point clouds using the same metrics as in [35], i.e., median squared depth error, RMSE intensity error, ray ...
+- **p. 8 / 4.2. Lidar rendering - extractive body cue:** FDDINOv2 scores when shifting pose of ego vehicle or actors.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 4. Removing our rolling shutter modeling compensation leads to inaccurate geometries and inconsistencies in the learning. We measure speed using resolution-agnostic megapixels per ... | p. 7 (Figure/Table caption) |
 | 4.1. Image rendering | SYSTEM / EVALUATION SCOPE UNRESOLVED | SplatAD achieves SOTA results while rendering ×10 faster than the previous best method. | p. 7 (4.1. Image rendering) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** Datasets: We perform experiments on PandaSet [41], Argoverse2 [38] and nuScenes [5].
-- **p. 7 / 4. Experiments - extractive PDF cue:** Depth ↓ Intensity ↓ Drop acc. ↑ CD ↓ MR/s ↑ PandaSet UniSim 0.08 0.086 - 10.3§ 0.9 NeuRAD 0.01 0.063 96.2 1.9 1.1 PVG ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** NVS results for image, over three datasets.
-- **p. 7 / 4. Experiments - extractive PDF cue:** Note that all methods are designed for dynamic scenes and use lidar data for supervision.
-- **p. 8 / 4.3. Ablations - extractive PDF cue:** Metrics are averaged over all three datasets to avoid any dataset-specific biases.
-- **p. 8 / 4.2. Lidar rendering - extractive PDF cue:** NVS results averaged over 10 sequences from PandaSet, nuScenes, and Argoverse2 when removing model components.
+- **p. 6 / 4. Experiments - extractive body cue:** Datasets: We perform experiments on PandaSet [41], Argoverse2 [38] and nuScenes [5].
+- **p. 7 / 4. Experiments - extractive body cue:** Depth ↓ Intensity ↓ Drop acc. ↑ CD ↓ MR/s ↑ PandaSet UniSim 0.08 0.086 - 10.3§ 0.9 NeuRAD 0.01 0.063 96.2 1.9 1.1 PVG ...
+- **p. 6 / 4. Experiments - extractive body cue:** NVS results for image, over three datasets.
+- **p. 7 / 4. Experiments - extractive body cue:** Note that all methods are designed for dynamic scenes and use lidar data for supervision.
+- **p. 8 / 4.3. Ablations - extractive body cue:** Metrics are averaged over all three datasets to avoid any dataset-specific biases.
+- **p. 8 / 4.2. Lidar rendering - extractive body cue:** NVS results averaged over 10 sequences from PandaSet, nuScenes, and Argoverse2 when removing model components.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. SplatAD is the first method capable of realistic camera and lidar rendering using 3D Gaussian Splatting. Whereas previous methods are either fast or ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of our proposed method. Given the composition of static and dynamic 3D Gaussians, SplatAD is capable of differentiable rendering of both lidar ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Compared to the baselines, SplatAD produces sharp images with a high level of detail. Further, the bottom row highlights the superiority of our ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. NVS results for image, over three datasets. First , second , third . PSNR ↑ SSIM ↑ LPIPS ↓ MP/s ↑
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. NVS results for lidar, over three datasets. §without missing points. First , second , third . Depth ↓ Intensity ↓ Drop acc. ↑ ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Removing our rolling shutter modeling compensation leads to inaccurate geometries and inconsistencies in the learning. We measure speed using resolution-agnostic megapixels per second. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Reconstruction results for image and lidar point clouds on PandaSet. §without missing points. First , second , third . Image Lidar Efficiency PSNR ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. FDDINOv2 scores when shifting pose of ego vehicle or actors. First , second , third . Ego lane shift Ego vert. shift Actor ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SplatAD is the first method capable of realistic camera and lidar rendering using 3D Gaussian Splatting. Whereas previous methods are either fast or ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our proposed method. Given the composition of static and dynamic 3D Gaussians, SplatAD is capable of differentiable rendering of both lidar ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Compared to the baselines, SplatAD produces sharp images with a high level of detail. Further, the bottom row highlights the superiority of our ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. NVS results for image, over three datasets. First , second , third . PSNR ↑ SSIM ↑ LPIPS ↓ MP/s ↑
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. NVS results for lidar, over three datasets. §without missing points. First , second , third . Depth ↓ Intensity ↓ Drop acc. ↑ ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Removing our rolling shutter modeling compensation leads to inaccurate geometries and inconsistencies in the learning. We measure speed using resolution-agnostic megapixels per second. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Reconstruction results for image and lidar point clouds on PandaSet. §without missing points. First , second , third . Image Lidar Efficiency PSNR ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. FDDINOv2 scores when shifting pose of ego vehicle or actors. First , second , third . Ego lane shift Ego vert. shift Actor ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Datasets: We perform experiments on PandaSet [41], Argoverse2 [38] and nuScenes [5]. | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 7 (4. Experiments) |
 | Task/environment | Depth ↓ Intensity ↓ Drop acc. ↑ CD ↓ MR/s ↑ PandaSet UniSim 0.08 0.086 - 10.3§ 0.9 NeuRAD 0.01 0.063 96.2 1.9 1.1 ... | reset, timeout, object/scene variation | p. 7 (4. Experiments), p. 6 (4. Experiments) |
@@ -121,7 +121,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 | Primary metric/result | SplatAD achieves SOTA results while rendering ×10 faster than the previous best method. | numeric claim only at cited anchor | p. 7 (4.1. Image rendering) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.3. Lidar rendering - extractive PDF cue:** Most AD datasets deploy lidars that use several laser diodes (16-128) mounted in a vertical array, where the array of diodes is rotated to capture ...
+- **p. 4 / 3.3. Lidar rendering - extractive body cue:** Most AD datasets deploy lidars that use several laser diodes (16-128) mounted in a vertical array, where the array of diodes is rotated to capture ...
 
 ## Generalization and Failure Cases
 
@@ -157,12 +157,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitations and future work: SplatAD is currently limited to modeling all dynamic actors as rigid.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Drawing inspiration from recent advances in human reconstruction [18, 20, 26] can provide inspiration how to overcome this limitation in future research.
-- **p. 7 / 4.1. Image rendering - extractive PDF cue:** However, we note that using Inception-v3 features instead does not change the model ranking or our conclusions.
-- **p. 6 / 4. Experiments - extractive PDF cue:** To validate the robustness of our method, we evaluate it across multiple popular AD datasets, using the same set of hyperparameters.
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future work: SplatAD is currently limited to modeling all dynamic actors as rigid.
+- **p. 8 / 5. Conclusion - extractive body cue:** Drawing inspiration from recent advances in human reconstruction [18, 20, 26] can provide inspiration how to overcome this limitation in future research.
+- **p. 7 / 4.1. Image rendering - extractive body cue:** However, we note that using Inception-v3 features instead does not change the model ranking or our conclusions.
+- **p. 6 / 4. Experiments - extractive body cue:** To validate the robustness of our method, we evaluate it across multiple popular AD datasets, using the same set of hyperparameters.
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4. Experiments), p. 6 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Ablations), p. 8 (4.2. Lidar rendering), metrics p. 7 (4.2. Lidar rendering), p. 8 (4.2. Lidar rendering), p. 8 (4.3. Ablations), p. 6 (3.4. Optimization and implementation), p. 1 (Figure/Table caption), p. 6 (4. Experiments), baselines p. 6 (3.4. Optimization and implementation), p. 7 (4. Experiments), p. 7 (4.1. Image rendering), p. 8 (4.2. Lidar rendering), p. 8 (4.2. Lidar rendering), p. 6 (3.4. Optimization and implementation), results p. 7 (Figure/Table caption), p. 7 (4.1. Image rendering), p. 8 (4.3. Ablations), p. 8 (4.2. Lidar rendering), p. 6 (3.4. Optimization and implementation), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4. Experiments), p. 6 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Ablations), p. 8 (4.2. Lidar rendering), metrics p. 7 (4.2. Lidar rendering), p. 8 (4.2. Lidar rendering), p. 8 (4.3. Ablations), p. 6 (3.4. Optimization and implementation), p. 1 (Figure/Table caption), p. 6 (4. Experiments), baselines p. 6 (3.4. Optimization and implementation), p. 7 (4. Experiments), p. 7 (4.1. Image rendering), p. 8 (4.2. Lidar rendering), p. 8 (4.2. Lidar rendering), p. 6 (3.4. Optimization and implementation), results p. 7 (Figure/Table caption), p. 7 (4.1. Image rendering), p. 8 (4.3. Ablations), p. 8 (4.2. Lidar rendering), p. 6 (3.4. Optimization and implementation), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

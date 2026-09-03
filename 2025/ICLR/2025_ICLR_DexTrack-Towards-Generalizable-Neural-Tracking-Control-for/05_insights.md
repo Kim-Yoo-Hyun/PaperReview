@@ -15,7 +15,7 @@
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To make sure the data flywheel functions effectively, we introduce two key designs.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a data-driven way to generate homotopy paths, enabling solving challenging tracking problems.
 - **p. 3 / 3 METHOD - extractive body cue:** Dexterous manipulation "tracking" involves controlling a robotic hand to mimic a kinematic hand-object state sequence, the goal trajectory, denoted as {ˆsn}N n=0.
-- **p. 4 / 3 METHOD - extractive body cue:** Published as a conference paper at ICLR 2025 Expert Action Trajectory {𝒂!", … , 𝒂#", … } t Robot Tracking Demonstrations Kinematic
+- **p. 4 / 3 METHOD - extractive body cue:** Expert Action Trajectory {𝒂!", … , 𝒂#", … } t Robot Tracking Demonstrations Kinematic
 - **p. 3 / 3 METHOD - extractive body cue:** A "tracking demonstration" pairs a kinematic reference {ˆsn} with an expert action sequence {aL n}, guiding the robot from s0 = ˆs0 to 3
 - **Contribution anchor:** p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (3 METHOD), p. 4 (3 METHOD)
 
@@ -23,7 +23,7 @@
 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** However, challenges remain due to noisy kinematic references, differences in morphology between human and robotic hands, complex dynamics with rich contacts, and diverse object geometry ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Achieving human-level robotic dexterous manipulation is challenging due to two main difficulties: the intricate dynamics of contact-rich manipulation, which complicates optimization (Pang & Tedrake, 2021; ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Published as a conference paper at ICLR 2025 We demonstrate the superiority of our method and compare it with previous methods on challenging manipulation tracking ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We demonstrate the superiority of our method and compare it with previous methods on challenging manipulation tracking ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a data-driven way to generate homotopy paths, enabling solving challenging tracking problems.
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 10: Failure cases in real-world experiments. Please refer to our website for animated
 - **p. 19 / B.2 REAL-WORLD EVALUATIONS - extractive body cue:** Method soap shovel brush roller knife spoon PPO (w/o sup., tracking rew) 33.3/0/0 25.0/0.0/0.0 25.0/0/0 25.0/25.0/0.0 0/0/0 25.0/0/0 Ours 100.0/66.7/66.7 50.0/25.0/25.0 25.0/25.0/0.0 50.0/25.0/25.0 25.0/25.0/0.0 50.0/50.0/25.0 ...
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 To achieve the challenging goal above, we draw three key observations: 1) learning is crucial for handling heterogeneous reference motion noises and transferring data prior to new scenarios, supporting robust and generalizable ...를 These "kinematic references" are retargeted from human manipulation trajectories, with ˆsn representing the robot hand state and object pose at timestep n.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 10: Failure cases in real-world experiments. Please refer to our website for animated에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** These "kinematic references" are retargeted from human manipulation trajectories, with ˆsn representing the robot hand state and object pose at timestep n. (p. 3, 3 METHOD).
+- **Paper-specific mechanism:** Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ... (p. 3, 1 INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Figure 3: Robustness w.r.t. unreasonable states. Please check our website and video for animated results. We demonstrate the generalization ability and robustness of our tracking controller on unseen trajec- tories ... (p. 8, Figure/Table caption); the relevant task/metric cue is (26) As the quality of the trajectory distribution gets worse and the tracking error decreases, the "robustness score" would increase. (p. 24, C ADDITIONAL EXPERIMENTAL DETAILS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up from the table. (p. 20, B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Tested on two HOI datasets featuring complex daily manipulation tasks, our method is assessed through both simulation and real-world evaluations (see Sec..
-3. Compare against the body-reported baseline or a matched simpler baseline: As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets..
-4. Report the body metric and its denominator/aggregation: Test set Rerr (rad, ↓) Terr (cm, ↓) Ewrist (↓) Efinger (rad, ↓) Success Rate (%, ↑) S1 0.5787 2.43 0.1481 0.4703 35.97/67.63 S2 0.6026 2.46 0.1455 0.4709 30.83/65.00 S3 0.6508 8.06 ....
-5. Re-run the body-reported ablation/failure condition: We ablate these strategies by creating two variants: "Ours (w/o data, w/o homotopy)", where the dataset is built by optimizing each trajectory without prior knowledge, and "Ours (w/o data)", which uses only ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: These "kinematic references" are retargeted from human manipulation trajectories, with ˆsn representing the robot hand state and object pose at timestep n. (p. 3, 3 METHOD); preserve the objective/update rule: Current reinforcement learning and trajectory optimization methods often fall short due to their dependence on task-specific rewards or precise system models. (p. 1, ABSTRACT).
+2. Use the paper-reported task/data/environment cue: Tested on two HOI datasets featuring complex daily manipulation tasks, our method is assessed through both simulation and real-world evaluations (see Sec. (p. 7, 4 EXPERIMENTS).
+3. Compare against the reported or matched baseline: As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets. (p. 8, 4 EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: (26) As the quality of the trajectory distribution gets worse and the tracking error decreases, the "robustness score" would increase. (p. 24, C ADDITIONAL EXPERIMENTAL DETAILS).
+5. Re-run the reported ablation or stress/failure condition: We ablate these strategies by creating two variants: "Ours (w/o data, w/o homotopy)", where the dataset is built by optimizing each trajectory without prior knowledge, and "Ours (w/o data)", which ... (p. 9, 4 EXPERIMENTS); if none is reported, design one around: As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up from the table. (p. 20, B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD); the primary result is directionally consistent at p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 18 (B.2 REAL-WORLD EVALUATIONS), p. 18 (B.2 REAL-WORLD EVALUATIONS), and measure the boundary at p. 20 (B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME), p. 20 (B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 contributions, threefold, present mechanism이 As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, ... 대비 Test set Rerr (rad, ↓) Terr (cm, ↓) Ewrist (↓) Efinger (rad, ↓) Success Rate (%, ↑) S1 ...을 개선하고, Figure 10: Failure cases in real-world experiments. Please refer to our website for animated 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (These "kinematic references" are retargeted from human manipulation trajectories, with ˆsn representing the robot hand state and object pose at timestep n.), does the paper-specific mechanism (Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating ...) retain the reported evaluation outcome ((26) As the quality of the trajectory distribution gets worse and the tracking error decreases, the "robustness score" ...) when tested against the paper's strongest explicit boundary (As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric ((26) As the quality of the trajectory distribution gets worse and the tracking error decreases, the "robustness score" ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ... (p. 3, 1 INTRODUCTION).
+- **Paper-supported outcome:** Figure 3: Robustness w.r.t. unreasonable states. Please check our website and video for animated results. We demonstrate the generalization ability and robustness of our tracking controller on unseen trajec- tories ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up from the table. (p. 20, B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

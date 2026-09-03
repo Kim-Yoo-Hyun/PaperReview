@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2101.02691; PDF retrieval source: https://arxiv.org/pdf/2101.02691. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2101.02691; PDF retrieval source: https://arxiv.org/pdf/2101.02691. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Transfer Datasets and Tasks - extractive PDF cue:** We use diverse downstream datasets - full scenes/object centric; using different 3D sensors; single/multi-view; real/synthetic; indoor/outdoor.
-- **p. 5 / 4. Experiments - extractive PDF cue:** DepthContrast outperforms the scratch model on all benchmarks and is better than the detection-specific supervised pretraining on two datasets.
-- **p. 4 / 4. Experiments - extractive PDF cue:** We evaluate DepthContrast pretraining by transfer learning, i.e., fine-tuning on downstream tasks and datasets.
-- **p. 7 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** Fig 4 shows the gain of our pretrained model over the scratch model across object classes on the SUNRGBD dataset.
-- **p. 7 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** This suggests that DepthContrast pretraining can partially address the long tailed label distributions of current 3D scene understanding benchmarks.
-- **p. 6 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** Overfitting is more pronounced on small datasets like S3DIS.
-- **p. 6 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** In Table 2, we observe that small labeled datasets benefit more from pretraining.
-- **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive PDF cue:** For transfer learning, we use the standard KITTI [26] object detection benchmark, and PointRCNN [80] and Part-A2 [81] for down-stream models.
+- **p. 5 / 4.1. Transfer Datasets and Tasks - extractive body cue:** We use diverse downstream datasets - full scenes/object centric; using different 3D sensors; single/multi-view; real/synthetic; indoor/outdoor.
+- **p. 5 / 4. Experiments - extractive body cue:** DepthContrast outperforms the scratch model on all benchmarks and is better than the detection-specific supervised pretraining on two datasets.
+- **p. 4 / 4. Experiments - extractive body cue:** We evaluate DepthContrast pretraining by transfer learning, i.e., fine-tuning on downstream tasks and datasets.
+- **p. 7 / 4.2. Pretraining with Point Input Format - extractive body cue:** Fig 4 shows the gain of our pretrained model over the scratch model across object classes on the SUNRGBD dataset.
+- **p. 7 / 4.2. Pretraining with Point Input Format - extractive body cue:** This suggests that DepthContrast pretraining can partially address the long tailed label distributions of current 3D scene understanding benchmarks.
+- **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** Overfitting is more pronounced on small datasets like S3DIS.
+- **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** In Table 2, we observe that small labeled datasets benefit more from pretraining.
+- **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive body cue:** For transfer learning, we use the standard KITTI [26] object detection benchmark, and PointRCNN [80] and Part-A2 [81] for down-stream models.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Pretraining with Point Input Format | EMPIRICAL / SOURCE-REPORTED EVALUATION | DepthContrast outperforms training from scratch on all the four datasets, and improves performance by 12.1% mAP on the small S3DIS dataset that has only ... | p. 5 (4.2. Pretraining with Point Input Format) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 1: Label-efficiency of our self-supervised pretraining. We finetune detection models from scratch or using our pretraining as initialization. Our pretraining which uses unlabeled ... | p. 1 (Figure/Table caption) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Transfer Datasets and Tasks - extractive PDF cue:** We use diverse downstream datasets - full scenes/object centric; using different 3D sensors; single/multi-view; real/synthetic; indoor/outdoor.
-- **p. 5 / 4. Experiments - extractive PDF cue:** DepthContrast outperforms the scratch model on all benchmarks and is better than the detection-specific supervised pretraining on two datasets.
-- **p. 4 / 4. Experiments - extractive PDF cue:** We evaluate DepthContrast pretraining by transfer learning, i.e., fine-tuning on downstream tasks and datasets.
-- **p. 7 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** Fig 4 shows the gain of our pretrained model over the scratch model across object classes on the SUNRGBD dataset.
-- **p. 7 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** This suggests that DepthContrast pretraining can partially address the long tailed label distributions of current 3D scene understanding benchmarks.
-- **p. 6 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** Overfitting is more pronounced on small datasets like S3DIS.
-- **p. 6 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** In Table 2, we observe that small labeled datasets benefit more from pretraining.
-- **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive PDF cue:** For transfer learning, we use the standard KITTI [26] object detection benchmark, and PointRCNN [80] and Part-A2 [81] for down-stream models.
+- **p. 5 / 4.1. Transfer Datasets and Tasks - extractive body cue:** We use diverse downstream datasets - full scenes/object centric; using different 3D sensors; single/multi-view; real/synthetic; indoor/outdoor.
+- **p. 5 / 4. Experiments - extractive body cue:** DepthContrast outperforms the scratch model on all benchmarks and is better than the detection-specific supervised pretraining on two datasets.
+- **p. 4 / 4. Experiments - extractive body cue:** We evaluate DepthContrast pretraining by transfer learning, i.e., fine-tuning on downstream tasks and datasets.
+- **p. 7 / 4.2. Pretraining with Point Input Format - extractive body cue:** Fig 4 shows the gain of our pretrained model over the scratch model across object classes on the SUNRGBD dataset.
+- **p. 7 / 4.2. Pretraining with Point Input Format - extractive body cue:** This suggests that DepthContrast pretraining can partially address the long tailed label distributions of current 3D scene understanding benchmarks.
+- **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** Overfitting is more pronounced on small datasets like S3DIS.
+- **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** In Table 2, we observe that small labeled datasets benefit more from pretraining.
+- **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive body cue:** For transfer learning, we use the standard KITTI [26] object detection benchmark, and PointRCNN [80] and Part-A2 [81] for down-stream models.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1: Label-efficiency of our self-supervised pretraining. We finetune detection models from scratch or using our pretraining as initialization. Our pretraining which uses unlabeled single-view ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2: Approach Overview. We propose DepthContrast - a simple 3D representation learning method that uses large amounts of unprocessed single/multi-view depth maps. Given a ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Table 1: Pretraining datasets and transfer tasks used in this paper. We use two different pretraining datasets without post-processing like 3D registration, camera calibration. We ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 2: Detection AP25 using VoteNet [67]. We evaluate differ- ent pretrained models - random initialization, supervised VoteNet on ScanNet, and our self-supervised DepthContrast using ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Table 3: Transfer using state-of-the-art detection frameworks. We use our pretrained model (PointNet++ 3× on Redwood-vid +ScanNet-vid) and transfer it using two state-of-the-art detection frameworks ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3: Scaling the model size and pretraining data. We increase the model capacity of the PointNet++ model by increasing the width by {2×, 3×, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Pretraining benefits long tail classes. We analyze the gain of our pretraining across different classes for SUNRGBD object detection. The training data has ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4: Multiple input formats. We study the importance of training 3D representations jointly using multiple input formats - points and voxels. We vary the ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Label-efficiency of our self-supervised pretraining. We finetune detection models from scratch or using our pretraining as initialization. Our pretraining which uses unlabeled single-view ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Approach Overview. We propose DepthContrast - a simple 3D representation learning method that uses large amounts of unprocessed single/multi-view depth maps. Given a ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Pretraining datasets and transfer tasks used in this paper. We use two different pretraining datasets without post-processing like 3D registration, camera calibration. We ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2: Detection AP25 using VoteNet [67]. We evaluate differ- ent pretrained models - random initialization, supervised VoteNet on ScanNet, and our self-supervised DepthContrast using ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 3: Transfer using state-of-the-art detection frameworks. We use our pretrained model (PointNet++ 3× on Redwood-vid +ScanNet-vid) and transfer it using two state-of-the-art detection frameworks ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Scaling the model size and pretraining data. We increase the model capacity of the PointNet++ model by increasing the width by {2×, 3×, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Pretraining benefits long tail classes. We analyze the gain of our pretraining across different classes for SUNRGBD object detection. The training data has ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4: Multiple input formats. We study the importance of training 3D representations jointly using multiple input formats - points and voxels. We vary the ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We use diverse downstream datasets - full scenes/object centric; using different 3D sensors; single/multi-view; real/synthetic; indoor/outdoor. | embodiment, simulator version and control stack | p. 5 (4.1. Transfer Datasets and Tasks), p. 5 (4. Experiments) |
 | Task/environment | DepthContrast outperforms the scratch model on all benchmarks and is better than the detection-specific supervised pretraining on two datasets. | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 4 (4. Experiments) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 | Primary metric/result | Figure 1: Label-efficiency of our self-supervised pretraining. We finetune detection models from scratch or using our pretraining as initialization. Our pretraining which uses unlabeled ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.5. Implementation Details - extractive PDF cue:** We use a standard SGD optimizer with momentum 0.9, cosine learning rate scheduler [53] starting from 0.12 to 0.00012 and train the model for 1000 ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Following the train/val split from [67], we extract around 190K RGB-D scans (one frame every 15 frames) from about 1200 video sequences in the train ...
-- **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive PDF cue:** 5x fewer labels Figure 5: Using outdoor LiDAR data.
-- **p. 3 / 3.1. Instance Discrimination - extractive PDF cue:** As using a large number of negatives is important for contrastive learning [13, 36, 59, 107], we 1Points in a depth map are a set, ...
-- **p. 4 / 3.3. Model Architecture - extractive PDF cue:** The network's final layer produces C dimensional per-point features for 1024 points after aggregation.
-- **p. 4 / 3.5. Implementation Details - extractive PDF cue:** We use a standard SGD optimizer with momentum 0.9, cosine learning rate scheduler [53] starting from 0.12 to 0.00012 and train the model for 1000 ...
+- **p. 4 / 3.5. Implementation Details - extractive body cue:** We use a standard SGD optimizer with momentum 0.9, cosine learning rate scheduler [53] starting from 0.12 to 0.00012 and train the model for 1000 ...
+- **p. 5 / 4. Experiments - extractive body cue:** Following the train/val split from [67], we extract around 190K RGB-D scans (one frame every 15 frames) from about 1200 video sequences in the train ...
+- **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive body cue:** 5x fewer labels Figure 5: Using outdoor LiDAR data.
+- **p. 3 / 3.1. Instance Discrimination - extractive body cue:** As using a large number of negatives is important for contrastive learning [13, 36, 59, 107], we 1Points in a depth map are a set, ...
+- **p. 4 / 3.3. Model Architecture - extractive body cue:** The network's final layer produces C dimensional per-point features for 1024 points after aggregation.
+- **p. 4 / 3.5. Implementation Details - extractive body cue:** We use a standard SGD optimizer with momentum 0.9, cosine learning rate scheduler [53] starting from 0.12 to 0.00012 and train the model for 1000 ...
 
 ## Generalization and Failure Cases
 
@@ -164,13 +164,13 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** More importantly, the Redwood-vid dataset does not contain camera extrinsic parameters and thus cannot be registered to get a multi-view dataset which is a necessity ...
-- **p. 8 / 6. Conclusion - extractive PDF cue:** We hope DepthContrast helps future work in 3D self-supervised learning.
-- **p. 5 / 4.2. Pretraining with Point Input Format - extractive PDF cue:** We observe overfitting on the small datasets like S3DIS where increasing the model capacity does not improve performance.
-- **p. 7 / 4.3. Pretraining with Multiple Input Formats - extractive PDF cue:** For the voxel models, this pretraining does not improve consistently over training from scratch, which is in line with observations from recent work [109].
-- **p. 8 / 5.2. Impact of Single-view or Multi-view 3D Data - extractive PDF cue:** This is not surprising given that our objective does not rely on multi-view information.
+- **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** More importantly, the Redwood-vid dataset does not contain camera extrinsic parameters and thus cannot be registered to get a multi-view dataset which is a necessity ...
+- **p. 8 / 6. Conclusion - extractive body cue:** We hope DepthContrast helps future work in 3D self-supervised learning.
+- **p. 5 / 4.2. Pretraining with Point Input Format - extractive body cue:** We observe overfitting on the small datasets like S3DIS where increasing the model capacity does not improve performance.
+- **p. 7 / 4.3. Pretraining with Multiple Input Formats - extractive body cue:** For the voxel models, this pretraining does not improve consistently over training from scratch, which is in line with observations from recent work [109].
+- **p. 8 / 5.2. Impact of Single-view or Multi-view 3D Data - extractive body cue:** This is not surprising given that our objective does not rely on multi-view information.
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Transfer Datasets and Tasks), p. 5 (4. Experiments), p. 4 (4. Experiments), p. 7 (4.2. Pretraining with Point Input Format), p. 7 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), metrics p. 5 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 7 (4.3. Pretraining with Multiple Input Formats), p. 8 (5.1. Importance of Data Augmentation), p. 8 (5.1. Importance of Data Augmentation), p. 5 (4.2. Pretraining with Point Input Format), baselines p. 5 (Figure/Table caption), p. 5 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 7 (4.3. Pretraining with Multiple Input Formats), p. 1 (Figure/Table caption), p. 8 (5.2. Impact of Single-view or Multi-view 3D Data), results p. 5 (4.2. Pretraining with Point Input Format), p. 1 (Figure/Table caption), p. 6 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 4 (4. Experiments), p. 5 (4.2. Pretraining with Point Input Format).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Transfer Datasets and Tasks), p. 5 (4. Experiments), p. 4 (4. Experiments), p. 7 (4.2. Pretraining with Point Input Format), p. 7 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), metrics p. 5 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 7 (4.3. Pretraining with Multiple Input Formats), p. 8 (5.1. Importance of Data Augmentation), p. 8 (5.1. Importance of Data Augmentation), p. 5 (4.2. Pretraining with Point Input Format), baselines p. 5 (Figure/Table caption), p. 5 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 7 (4.3. Pretraining with Multiple Input Formats), p. 1 (Figure/Table caption), p. 8 (5.2. Impact of Single-view or Multi-view 3D Data), results p. 5 (4.2. Pretraining with Point Input Format), p. 1 (Figure/Table caption), p. 6 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 4 (4. Experiments), p. 5 (4.2. Pretraining with Point Input Format).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

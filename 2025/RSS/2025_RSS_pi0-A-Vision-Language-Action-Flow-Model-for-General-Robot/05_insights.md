@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), and 0 ...를 We further augment this backbone with roboties-specific inputs and outputs - namely, proprioceptive state and robot actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 DISCUSSION, LIMITATIONS, AND FUTURE WORK에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), ... (p. 5, IV. THE x MODEL).
+- **Paper-specific mechanism:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption); the relevant task/metric cue is How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We study this question by directly evaluating 79, with comparisons to other robot foundation models..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, and three ....
-4. Report the body metric and its denominator/aggregation: Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with a method that receives intermediate commands from ....
-5. Re-run the body-reported ablation/failure condition: How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), ... (p. 5, IV. THE x MODEL); preserve the objective/update rule: Our architecture is inspired by Transfusion [59], which trains a single transformer using multiple objectives, with tokens! corresponding to continuous outputs supervised via a flow matching loss and tokens corresponding ... (p. 4, IV. THE x MODEL).
+2. Use the paper-reported task/data/environment cue: These tasks take between 5 and 20 minutes to complete. (p. 7, VI. EXPERIMENTAL EVALUATION).
+3. Compare against the reported or matched baseline: We study this question by directly evaluating 79, with comparisons to other robot foundation models. (p. 7, VI. EXPERIMENTAL EVALUATION).
+4. Report the body metric with its denominator and aggregation: How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION).
+5. Re-run the reported ablation or stress/failure condition: How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION); if none is reported, design one around: OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL); the primary result is directionally consistent at p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), and measure the boundary at p. 7 (A. Evaluating the base model), p. 11 (C. Learning new dexterous tasks).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 more, complex, dexterous mechanism이 Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version ... 대비 Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task ...을 개선하고, DISCUSSION, LIMITATIONS, AND FUTURE WORK 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions ...), does the paper-specific mechanism (The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an ...) retain the reported evaluation outcome (How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ...) when tested against the paper's strongest explicit boundary (OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p137.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p137.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p137.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p137.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 
 ## Evaluation Body Digest
 
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy map, ...
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** Robot states are estimated by an OptiTrack motion capture system,
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 quadruped ...
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** For dynamic environments, we improve the ‘computational speed of our PDE solver by warm-starting each PDE solution with the previous safety function, producing
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** The results corresponding to this experiment are depicted in Fig 5,
-- **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive PDF cue:** ‘A fundamental limitation of the proposed algorithm (and a limitation of all non-predictive safety filters) is that such safety-critical controllers may introduce undesired equilibria, These ...
-- **p. 7 / VI. DEMONSTRATIONS - extractive PDF cue:** Simulations: Double Integrator We define a 2D occupancy map defined by an open, bounded and connected domain © where J® characterizes obstacle surfaces. and consider ...
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective.
+- **p. 8 / B. Hardware Experiments - extractive body cue:** First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy map, ...
+- **p. 8 / B. Hardware Experiments - extractive body cue:** Robot states are estimated by an OptiTrack motion capture system,
+- **p. 8 / B. Hardware Experiments - extractive body cue:** ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 quadruped ...
+- **p. 8 / B. Hardware Experiments - extractive body cue:** For dynamic environments, we improve the ‘computational speed of our PDE solver by warm-starting each PDE solution with the previous safety function, producing
+- **p. 8 / B. Hardware Experiments - extractive body cue:** The results corresponding to this experiment are depicted in Fig 5,
+- **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive body cue:** ‘A fundamental limitation of the proposed algorithm (and a limitation of all non-predictive safety filters) is that such safety-critical controllers may introduce undesired equilibria, These ...
+- **p. 7 / VI. DEMONSTRATIONS - extractive body cue:** Simulations: Double Integrator We define a 2D occupancy map defined by an open, bounded and connected domain © where J® characterizes obstacle surfaces. and consider ...
+- **p. 8 / B. Hardware Experiments - extractive body cue:** From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective.
 
 ## Evaluation Type and Scope
 
@@ -30,28 +30,28 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. Hardware Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | For dynamic environments, we improve the ‘computational speed of our PDE solver by warm-starting each PDE solution with the previous safety function, producing | p. 8 (B. Hardware Experiments) |
 | B. Hardware Experiments | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results corresponding to this experiment are depicted in Fig 5, | p. 8 (B. Hardware Experiments) |
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy map, ...
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** Robot states are estimated by an OptiTrack motion capture system,
+- **p. 8 / B. Hardware Experiments - extractive body cue:** First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy map, ...
+- **p. 8 / B. Hardware Experiments - extractive body cue:** Robot states are estimated by an OptiTrack motion capture system,
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Safe set synthesis from perception data via Poisson's equation Hardware experimental footage: hitps//youtu.be/TBRUkAJGixL,
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 3: Smooth guidance field generation via Laplace' equation (26) [left] Boundary conditions ¥ = bi encoding the desired negative ux fon obstacle surfaces: and ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 4: Double integrator simulations using safety filers synthesized from: (el) Signed Distance Function (40); and {middle and right) the Poisson Safety Function, constructed with ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Fig. 7: Interior sphere condition for [left] smooth boundary and [right] Lipschitz boundary.
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Safe set synthesis from perception data via Poisson's equation Hardware experimental footage: hitps//youtu.be/TBRUkAJGixL,
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Smooth guidance field generation via Laplace' equation (26) [left] Boundary conditions ¥ = bi encoding the desired negative ux fon obstacle surfaces: and ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Double integrator simulations using safety filers synthesized from: (el) Signed Distance Function (40); and {middle and right) the Poisson Safety Function, constructed with ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 7: Interior sphere condition for [left] smooth boundary and [right] Lipschitz boundary.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy ... | embodiment, simulator version and control stack | p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments) |
 | Task/environment | Robot states are estimated by an OptiTrack motion capture system, | reset, timeout, object/scene variation | p. 8 (B. Hardware Experiments) |
@@ -97,8 +97,8 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 | Primary metric/result | The results corresponding to this experiment are depicted in Fig 5, | numeric claim only at cited anchor | p. 8 (B. Hardware Experiments) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** After considering the entire processing chain, we update the Poisson safety function A online at approximately 10 Hz.
-- **p. 6 / B. Indirect Assignment - Variational Approach - extractive PDF cue:** The terms n,,ny,r. represent the components of the outward unit normal vector fi = (Mg, ny, 7s) 9 > B® such that V(y) = W(y)A(y) ...
+- **p. 8 / B. Hardware Experiments - extractive body cue:** After considering the entire processing chain, we update the Poisson safety function A online at approximately 10 Hz.
+- **p. 6 / B. Indirect Assignment - Variational Approach - extractive body cue:** The terms n,,ny,r. represent the components of the outward unit normal vector fi = (Mg, ny, 7s) 9 > B® such that V(y) = W(y)A(y) ...
 
 ## Generalization and Failure Cases
 
@@ -128,13 +128,13 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive PDF cue:** ‘A fundamental limitation of the proposed algorithm (and a limitation of all non-predictive safety filters) is that such safety-critical controllers may introduce undesired equilibria, These ...
-- **p. 7 / VI. DEMONSTRATIONS - extractive PDF cue:** Simulations: Double Integrator We define a 2D occupancy map defined by an open, bounded and connected domain © where J® characterizes obstacle surfaces. and consider ...
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective.
-- **p. 8 / B. Hardware Experiments - extractive PDF cue:** ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 quadruped ...
-- **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive PDF cue:** Examining the value of h during the experiment, it ean be ‘observed that the robot effectively employed its safety filter to avoid collisions.
+- **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive body cue:** ‘A fundamental limitation of the proposed algorithm (and a limitation of all non-predictive safety filters) is that such safety-critical controllers may introduce undesired equilibria, These ...
+- **p. 7 / VI. DEMONSTRATIONS - extractive body cue:** Simulations: Double Integrator We define a 2D occupancy map defined by an open, bounded and connected domain © where J® characterizes obstacle surfaces. and consider ...
+- **p. 8 / B. Hardware Experiments - extractive body cue:** From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective.
+- **p. 8 / B. Hardware Experiments - extractive body cue:** ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 quadruped ...
+- **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive body cue:** Examining the value of h during the experiment, it ean be ‘observed that the robot effectively employed its safety filter to avoid collisions.
 
-- **PDF anchors reviewed:** datasets p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), metrics p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), baselines p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), results p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments).
+- **Evidence anchors reviewed:** datasets p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), metrics p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), baselines p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), results p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

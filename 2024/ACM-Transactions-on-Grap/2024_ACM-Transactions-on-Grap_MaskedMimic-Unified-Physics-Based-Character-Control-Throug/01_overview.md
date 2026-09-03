@@ -1,8 +1,10 @@
 # MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/par/maskedmimic/.
-> PDF retrieval source: https://research.nvidia.com/labs/par/maskedmimic/. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/par/maskedmimic/.
+> PDF retrieval source: https://research.nvidia.com/labs/par/maskedmimic/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ACM Transactions on Graphics
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://research.nvidia.com/labs/par/maskedmimic/
 - Code/Project: https://research.nvidia.com/labs/par/maskedmimic/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -31,10 +33,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Core Idea
 
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** Our framework consists of two stages.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We present MaskedMimic, a versatile control model that enables physically simulated characters to generate diverse behaviors from flexible userspecified constraints.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose a framework that trains a versatile control model by leveraging the rich multi-modal information within existing motion capture datasets, such as kinematic trajectories, ...
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** We now review the fundamental concepts and notations behind our framework.
-- **p. 5 / 3. Inference - extractive body cue:** 5 FULLY-CONSTRAINED CONTROLLER In the first stage of our framework, we train a fully-constrained motion tracking controller 𝜋FC using reinforcement learning.
 - **p. 7 / 3. Inference - extractive body cue:** The decoder D(𝑎𝑡/𝑠𝑡,𝑧𝑡) is then conditioned on a latent sampled from the encoder's distribution, and produces an action for the simulated character.
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** To train a versatile controller that can be directed using partial goals, we propose a simple training scheme that trains the controller on randomly masked ...
 - **p. 8 / 3. Inference - extractive body cue:** The encoder and decoder are modeled as fully-connected networks, and observe a flattened concatenation of the input features.
@@ -51,10 +53,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Main Claims and Actual Contribution
 
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** Our framework consists of two stages.
+- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We present MaskedMimic, a versatile control model that enables physically simulated characters to generate diverse behaviors from flexible userspecified constraints.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose a framework that trains a versatile control model by leveraging the rich multi-modal information within existing motion capture datasets, such as kinematic trajectories, ...
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** We now review the fundamental concepts and notations behind our framework.
-- **p. 5 / 3. Inference - extractive body cue:** 5 FULLY-CONSTRAINED CONTROLLER In the first stage of our framework, we train a fully-constrained motion tracking controller 𝜋FC using reinforcement learning.
 - **p. 15 / 8 RESULTS - extractive body cue:** While MaskedMimic demonstrates high success rates in generating diverse motions, there are three notable areas for improvement in terms of motion quality.
 - **p. 11 / 8 RESULTS - extractive body cue:** We attribute these performance improvements to our architecture and data augmentation techniques.
 - **p. 9 / 7.2 Evaluation - extractive body cue:** For each tasks, we report a success rate metric and an error rate metric.
@@ -84,3 +86,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and VR tracking.를 문제로 두고, Our framework consists of two stages.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3. Inference) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This challenge spans a wide range of applications, including gaming, digital humans, virtual reality, and many more. (p. 2, 1 INTRODUCTION).
+- **Actual contribution:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives. (p. 2, 1 INTRODUCTION).
+- **Evaluation boundary:** This test establishes the baseline capability for motion generation, both in terms of success rates and tracking quality, and allows comparison to prior systems for motion tracking. (p. 10, 7.2 Evaluation).
+- **Explicit failure boundary:** 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model. (p. 15, 8 RESULTS).

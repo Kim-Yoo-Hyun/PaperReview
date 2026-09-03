@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Specifically, FlowPolicy conditions on the observed 3D point cloud, where consistency flow matching directly defines straight-line flows from different time states to the same action space, while simultaneously constraining their veloci ...를 Visual observations include the robot state and scene point clouds, and actions are usually sequences of trajectories of the robot to accomplish a specific task.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the task (right). task.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with few demonstrations, ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Specifically, FlowPolicy conditions on the observed 3D point cloud, where consistency flow matching directly defines straight-line flows from different time states to the same action space, while simultaneously constraining their ... (p. 1, Abstract).
+- **Paper-specific mechanism:** In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with ... (p. 2, Abstract).
+- **Evidence boundary:** the reported outcome is Figure 5: Ablation on the number of expert demonstrations. We choose four typical tasks to explore the impact of dif- ferent numbers of demonstrations on FlowPolicy and DP3. Both generally ... (p. 7, Figure/Table caption); the relevant task/metric cue is Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids the performance bottleneck as presented in DP3. (p. 7, Abstract). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the task (right). task. (p. 6, Abstract).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Experiments Dataset and Implementation Details Simulation Benchmarks We choose two preeminent environmental simulators, Adroit (Rajeswaran et al..
-3. Compare against the body-reported baseline or a matched simpler baseline: We also compared state-of-the-art 2D-based approaches, including diffusion policy (DP) (Chi et al..
-4. Report the body metric and its denominator/aggregation: Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids the performance bottleneck as presented in DP3..
-5. Re-run the body-reported ablation/failure condition: More importantly, Consistency-FM can be trained to produce a robust flow model without the aid of distillation, which is valuable to robots performing unseen tasks, as it is difficult to find a ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Specifically, FlowPolicy conditions on the observed 3D point cloud, where consistency flow matching directly defines straight-line flows from different time states to the same action space, while simultaneously constraining their ... (p. 1, Abstract); preserve the objective/update rule: We evaluate 37 tasks from Adroit and Metaworld across 3 random seeds and report the success rate (%) with standard deviation. ‘∗' indicates that the NFE of Adaflow is not ... (p. 5, Abstract).
+2. Use the paper-reported task/data/environment cue: Experiments Dataset and Implementation Details Simulation Benchmarks We choose two preeminent environmental simulators, Adroit (Rajeswaran et al. (p. 5, Abstract).
+3. Compare against the reported or matched baseline: We also compared state-of-the-art 2D-based approaches, including diffusion policy (DP) (Chi et al. (p. 5, Abstract).
+4. Report the body metric with its denominator and aggregation: Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids the performance bottleneck as presented in DP3. (p. 7, Abstract).
+5. Re-run the reported ablation or stress/failure condition: More importantly, Consistency-FM can be trained to produce a robust flow model without the aid of distillation, which is valuable to robots performing unseen tasks, as it is difficult to ... (p. 3, Abstract); if none is reported, design one around: Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the task (right). task. (p. 6, Abstract).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract); the primary result is directionally consistent at p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (Abstract), p. 1 (Abstract), match the reported outcome at p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), and measure the boundary at p. 6 (Abstract), p. 7 (Abstract).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, main, contributions mechanism이 We also compared state-of-the-art 2D-based approaches, including diffusion policy (DP) (Chi et al. 대비 Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids ...을 개선하고, Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Specifically, FlowPolicy conditions on the observed 3D point cloud, where consistency flow matching directly defines straight-line flows from different time states to ...), does the paper-specific mechanism (In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual ...) retain the reported evaluation outcome (Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids ...) when tested against the paper's strongest explicit boundary (Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (9 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with ... (p. 2, Abstract).
+- **Paper-supported outcome:** Figure 5: Ablation on the number of expert demonstrations. We choose four typical tasks to explore the impact of dif- ferent numbers of demonstrations on FlowPolicy and DP3. Both generally ... (p. 7, Figure/Table caption).
+- **Strongest explicit boundary:** Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the task (right). task. (p. 6, Abstract).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -1,50 +1,75 @@
 # Insights — ThermalGaussian: Thermal 3D Gaussian Splatting
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ybFRoGxZjs; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114610. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** Given the higher reconstruction quality of 3DGS (Kerbl et al., 2023) com- (a) RGB GT (b) Thermal GT (c) ThermoNerf (d) 3DGS (e) OursOM M G (f) Ours ...
+- **p. 7 / 3 METHOD - extractive body cue:** The final design of this loss is: L = γLRGB + (1 -γ)Lthermal (12) 4 SELF-COLLECTED THERAML DATASET We introduce a new dataset, named RGBT-Scenes, ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, the main contributions as follows: (1)We propose ThermalGaussian, the first multimodal 3DGS capable of simultaneously rendering photorealistic thermal and RGB images of a ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** In contrast, our method not only improves thermal rendering quality but also enhances RGB rendering quality by 1 dB.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** The dataset consists of paired RGB and thermal images captured from multiple viewpoints across 10 different scenes.
+- **p. 4 / 3 METHOD - extractive body cue:** Then, we provide a detailed description of our method's specific implementation details, including multimodal initialization, three types of multimodal thermal Gaussians, thermal loss, and multimodal ...
+- **p. 5 / 3 METHOD - extractive body cue:** Multimodal Fine-Tuning Gaussians (MFTG): Inspired by the fine-tuning approach used in largescale models, our first multimodal training strategy is training a basic Gaussian with RGB ...
+- **p. 6 / 3 METHOD - extractive body cue:** However, because thermal images exhibit unique low-texture and ghosting characteristics, we design a specific thermal loss function to better accommodate these features.
+- **Contribution anchor:** p. 7 (3 METHOD), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (3 METHOD), p. 5 (3 METHOD)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** However, these datasets suffer from problems such as lack of color images registered with thermal images, inconsistencies in thermal information from different views, and watermarked ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** However, these methods not only fail to fully exploit thermal information but are also constrained by the limitations of traditional 3D reconstruction techniques, which impede ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Quantitative evaluation of thermal image using our method compared to previous work from test views. "×" indicates a failure to localize using only ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** We then performed a comprehensive comparison across various dimensions, including rendering capability, the quality of rendered color and thermal images, training time, model memory usage, ...
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Our results demonstrate that, under multimodal constraints, when one modality fails, our approach leverages accurate information from the other modality to enhance the model's understanding ...
+- **p. 10 / 5 EXPERIMENTS - extractive body cue:** In the appendix, we discuss the limitations of this work and potential directions for future research.
+- **p. 9 / 5 EXPERIMENTS - extractive body cue:** This enables our method to advance 3D reconstruction in low-light scenes and enhances the robustness of 3D reconstruction techniques to some extent.
+- **Boundary to test:** Figure 2: Top: camera poses and point cloud generated by SfM. Bottom: input images for SfM. geometry methods (Newcombe et al., 2011) are used to achieve a 3D geometric reconstruction. In the ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | The final design of this loss is: L = γLRGB + (1 -γ)Lthermal (12) 4 SELF-COLLECTED THERAML DATASET We introduce a new dataset, named RGBT-Scenes, which consists of aligned collections of thermal ... | p. 7 (3 METHOD), p. 2 (1 INTRODUCTION) |
+| Reported outcome | We not only achieve simultaneous rendering of thermal and RGB images but also significantly improve the rendering quality of both color and thermal images. | p. 10 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
+| Failure/limitation | Figure 2: Top: camera poses and point cloud generated by SfM. Bottom: input images for SfM. geometry methods (Newcombe et al., 2011) are used to achieve a 3D geometric reconstruction. In the ... | p. 2 (Figure/Table caption), p. 8 (Figure/Table caption) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `Gaussian Splatting, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 We capture simultaneous color and thermal images before thermal equilibrium, which occurs when two systems reach a balanced state with equal temperatures, halting heat flow.를 Subsequently, these rendered images of both modalities are compared separately with the ground truth of their respective inputs using loss functions: L = LRGB + Lthermal (7) The details of Lthermal constraint ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 2: Top: camera poses and point cloud generated by SfM. Bottom: input images for SfM. geometry methods (Newcombe et al., 2011) are used to achieve a 3D geometric reconstruction. In the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: The final design of this loss is: L = γLRGB + (1 -γ)Lthermal (12) 4 SELF-COLLECTED THERAML DATASET We introduce a new dataset, named RGBT-Scenes, which consists of aligned collections of thermal ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `Neural Scene Representations`; tags: `Gaussian Splatting, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `Gaussian Splatting, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Figure 2: Top: camera poses and point cloud generated by SfM. Bottom: input images for SfM. geometry methods (Newcombe et al., 2011) are used to achieve a 3D geometric reconstruction. In the ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy, PSNR, SSIM, LPIPS
-  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: As shown in Table 2, even in scenes with pronounced thermal variations, specifically targeting lowtexture thermal characteristics, direct application of thermal data proves challenging for 3DGS..
+3. Compare against the body-reported baseline or a matched simpler baseline: We conducted ablation experiments by gradually adding each component to the baseline 3DGS model..
+4. Report the body metric and its denominator/aggregation: In very few successful cases, inadequate precision in thermal camera positioning has compromised the quality of thermal reconstructions..
+5. Re-run the body-reported ablation/failure condition: 5.4 ABLATION STUDY We separate different contributions and algorithm choices to test their effectiveness..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 7 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD); the primary result is directionally consistent at p. 10 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 1 (Figure/Table caption); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+고정된 observation/action/data/compute budget에서 final, design, loss mechanism이 We conducted ablation experiments by gradually adding each component to the baseline 3DGS model. 대비 In very few successful cases, inadequate precision in thermal camera positioning has compromised the quality of thermal reconstructions.을 개선하고, Figure 2: Top: camera poses and point cloud generated by SfM. Bottom: input images for SfM. ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

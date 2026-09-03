@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1703.06907; PDF retrieval source: https://arxiv.org/pdf/1703.06907. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1703.06907; PDF retrieval source: https://arxiv.org/pdf/1703.06907. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | IV. EXPERIMENTS | EMPIRICAL / SIMULATION | However, using a pre-trained model can significantly improve performance when less training data is used. | p. 5 (IV. EXPERIMENTS) |
 | IV. EXPERIMENTS | EMPIRICAL / SIMULATION | 1Categories for which the best final performance was achieved for detector trained from scratch. | p. 4 (IV. EXPERIMENTS) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The goals of our experiments are: (a) Evaluate the localization accuracy of our trained detectors in the real world, including in the presence of ... | embodiment, simulator version and control stack | p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
 | Task/environment | Robotics experiments To demonstrate the potential of this technique for transferring robotic behaviors learned in simulation to the real world, 3Note the total number ... | reset, timeout, object/scene variation | p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS) |
@@ -147,7 +147,16 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Adding noise during pretraining appears to have a negligible effect.
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our object detectors are able to localize objects to within 1.5 cm (on average) in the real world and perform well in the presence of ...
 
-- **PDF anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), results p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS).
+- **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), results p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** The goals of our experiments are: (a) Evaluate the localization accuracy of our trained detectors in the real world, including in the presence of distractor objects and partial occlusions (b) ... (p. 4, IV. EXPERIMENTS).
+- **Metric evidence:** The goals of our experiments are: (a) Evaluate the localization accuracy of our trained detectors in the real world, including in the presence of distractor objects and partial occlusions (b) ... (p. 4, IV. EXPERIMENTS).
+- **Baseline/ablation evidence:** Randomizing the position of the camera also consistently provides a slight accuracy boost, but reasonably high accuracy is achievable without it. (p. 5, IV. EXPERIMENTS).
+- **Failure/negative evidence:** Ablation study To evaluate the importance of different factors of our training methodology, we assessed the sensitivity of the algorithm to the following: • Number of training images • Number ... (p. 5, IV. EXPERIMENTS).

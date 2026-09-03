@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments.
-- **p. 6 / 4. Experiments - extractive PDF cue:** To assess the effectiveness of our approach, we conduct experiments on two benchmark datasets using the mean Intersection over Union (mIoU) metric.
-- **p. 7 / 4.1. Experiments on LERF - extractive PDF cue:** Evaluations are conducted on four LERF scenes.
-- **p. 7 / 4.1. Experiments on LERF - extractive PDF cue:** Segmentation results on the figurines (top) and kitchen (bottom) scenes.
-- **p. 8 / 4.2. Experiments on 3D-OVS - extractive PDF cue:** Qualitative comparison on 3D-OVS dataset.
-- **p. 8 / 4.2. Experiments on 3D-OVS - extractive PDF cue:** Quantitative experiments results on 3D-OVS dataset.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Note that the Room scene contains a significant annotation error; thus, we exclude it from quantitative evaluation and provide qualitative results only in the supplementary ...
-- **p. 6 / 4.1. Experiments on LERF - extractive PDF cue:** We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four scenes, outperforming ...
+- **p. 6 / 4. Experiments - extractive body cue:** The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments.
+- **p. 6 / 4. Experiments - extractive body cue:** To assess the effectiveness of our approach, we conduct experiments on two benchmark datasets using the mean Intersection over Union (mIoU) metric.
+- **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Evaluations are conducted on four LERF scenes.
+- **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Segmentation results on the figurines (top) and kitchen (bottom) scenes.
+- **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** Qualitative comparison on 3D-OVS dataset.
+- **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** Quantitative experiments results on 3D-OVS dataset.
+- **p. 6 / 4. Experiments - extractive body cue:** Note that the Room scene contains a significant annotation error; thus, we exclude it from quantitative evaluation and provide qualitative results only in the supplementary ...
+- **p. 6 / 4.1. Experiments on LERF - extractive body cue:** We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four scenes, outperforming ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Experiments on LERF | EMPIRICAL / REAL-ROBOT OR HARDWARE | We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four scenes, ... | p. 6 (4.1. Experiments on LERF) |
 | 4.1. Experiments on LERF | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves consistent multi-view segmentation and accurately captures challenging objects like the cabinet, outperforming prior approaches. glass of water kamaboko RGB GT Ours ... | p. 7 (4.1. Experiments on LERF) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4. Experiments - extractive PDF cue:** The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments.
-- **p. 6 / 4. Experiments - extractive PDF cue:** To assess the effectiveness of our approach, we conduct experiments on two benchmark datasets using the mean Intersection over Union (mIoU) metric.
-- **p. 7 / 4.1. Experiments on LERF - extractive PDF cue:** Evaluations are conducted on four LERF scenes.
-- **p. 7 / 4.1. Experiments on LERF - extractive PDF cue:** Segmentation results on the figurines (top) and kitchen (bottom) scenes.
-- **p. 8 / 4.2. Experiments on 3D-OVS - extractive PDF cue:** Qualitative comparison on 3D-OVS dataset.
-- **p. 8 / 4.2. Experiments on 3D-OVS - extractive PDF cue:** Quantitative experiments results on 3D-OVS dataset.
+- **p. 6 / 4. Experiments - extractive body cue:** The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments.
+- **p. 6 / 4. Experiments - extractive body cue:** To assess the effectiveness of our approach, we conduct experiments on two benchmark datasets using the mean Intersection over Union (mIoU) metric.
+- **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Evaluations are conducted on four LERF scenes.
+- **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Segmentation results on the figurines (top) and kitchen (bottom) scenes.
+- **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** Qualitative comparison on 3D-OVS dataset.
+- **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** Quantitative experiments results on 3D-OVS dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Quantitative comparison of our method and LangSplat under three challenging scenarios: Occlusion, Image Blur, and View- Dependent Variations. The results clearly demonstrate the ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The framework of our CCL-LGS. Top: Instance tracker responsible for mask association. Middle: CCL module that constructs consistent 2D semantic supervision. For multi-view ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Tab. 1. We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative experiments results on LERF dataset. The best result is bolded, and the second-best result is underlined.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Ablation study on LERF dataset. "tea in glass" "ottolenghi" "miffy" Ground Truth 2D Feature w/ CCL Module 2D Feature
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison of 2D feature maps with and without CCL module. Visualization Results. Fig. 4 illustrates segmentation re- sults for two scenes: figurines ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Segmentation results on the figurines (top) and kitchen (bottom) scenes. Our method achieves consistent multi-view segmentation and accurately captures challenging objects like the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative comparison of different loss configurations. The pull loss improves intra-class consistency (e.g., for "glass of water"), while the push loss reduces false ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Quantitative comparison of our method and LangSplat under three challenging scenarios: Occlusion, Image Blur, and View- Dependent Variations. The results clearly demonstrate the ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The framework of our CCL-LGS. Top: Instance tracker responsible for mask association. Middle: CCL module that constructs consistent 2D semantic supervision. For multi-view ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Tab. 1. We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative experiments results on LERF dataset. The best result is bolded, and the second-best result is underlined.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation study on LERF dataset. "tea in glass" "ottolenghi" "miffy" Ground Truth 2D Feature w/ CCL Module 2D Feature
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison of 2D feature maps with and without CCL module. Visualization Results. Fig. 4 illustrates segmentation re- sults for two scenes: figurines ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Segmentation results on the figurines (top) and kitchen (bottom) scenes. Our method achieves consistent multi-view segmentation and accurately captures challenging objects like the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative comparison of different loss configurations. The pull loss improves intra-class consistency (e.g., for "glass of water"), while the push loss reduces false ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments. | embodiment, simulator version and control stack | p. 6 (4. Experiments), p. 6 (4. Experiments) |
 | Task/environment | To assess the effectiveness of our approach, we conduct experiments on two benchmark datasets using the mean Intersection over Union (mIoU) metric. | reset, timeout, object/scene variation | p. 6 (4. Experiments), p. 7 (4.1. Experiments on LERF) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 | Primary metric/result | Our method achieves consistent multi-view segmentation and accurately captures challenging objects like the cabinet, outperforming prior approaches. glass of water kamaboko RGB GT Ours ... | numeric claim only at cited anchor | p. 7 (4.1. Experiments on LERF) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.2. Two-Level Semantic Feature Extraction - extractive PDF cue:** In our method, a uniform 32×32 point prompt is provided to SAM to generate three types of masks corresponding to the semantic scales of subparts, ...
+- **p. 4 / 3.2. Two-Level Semantic Feature Extraction - extractive body cue:** In our method, a uniform 32×32 point prompt is provided to SAM to generate three types of masks corresponding to the semantic scales of subparts, ...
 
 ## Generalization and Failure Cases
 
@@ -157,14 +157,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Limitations remain due to inherent capabilities of SAM and SAM2, as imperfect masks still affect results.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work will refine masks for greater robustness.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Quantitative comparison of our method and LangSplat under three challenging scenarios: Occlusion, Image Blur, and View- Dependent Variations. The results clearly demonstrate the ...
-- **p. 6 / 4. Experiments - extractive PDF cue:** The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments.
-- **p. 6 / 4.1. Experiments on LERF - extractive PDF cue:** In the kitchen scene, we specifically focus on the cabinet, a challenging object that other methods frequently fail to segment correctly.
-- **p. 7 / 4.1. Experiments on LERF - extractive PDF cue:** Combining both ensures robust, discriminative 3D semantic segmentation in challenging scenes.
+- **p. 8 / 5. Conclusion - extractive body cue:** Limitations remain due to inherent capabilities of SAM and SAM2, as imperfect masks still affect results.
+- **p. 8 / 5. Conclusion - extractive body cue:** Future work will refine masks for greater robustness.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Quantitative comparison of our method and LangSplat under three challenging scenarios: Occlusion, Image Blur, and View- Dependent Variations. The results clearly demonstrate the ...
+- **p. 6 / 4. Experiments - extractive body cue:** The dataset's real-world imaging conditions, including severe occlusions and motion blur, make it particularly suited for testing segmentation robustness in complex environments.
+- **p. 6 / 4.1. Experiments on LERF - extractive body cue:** In the kitchen scene, we specifically focus on the cabinet, a challenging object that other methods frequently fail to segment correctly.
+- **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Combining both ensures robust, discriminative 3D semantic segmentation in challenging scenes.
 
-- **PDF anchors reviewed:** datasets p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 8 (4.2. Experiments on 3D-OVS), metrics p. 6 (4. Experiments), p. 6 (4.1. Experiments on LERF), p. 1 (Figure/Table caption), p. 7 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), baselines p. 7 (4.1. Experiments on LERF), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (4.1. Experiments on LERF), p. 6 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), results p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 1 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 8 (4.2. Experiments on 3D-OVS), metrics p. 6 (4. Experiments), p. 6 (4.1. Experiments on LERF), p. 1 (Figure/Table caption), p. 7 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), baselines p. 7 (4.1. Experiments on LERF), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (4.1. Experiments on LERF), p. 6 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), results p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 1 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

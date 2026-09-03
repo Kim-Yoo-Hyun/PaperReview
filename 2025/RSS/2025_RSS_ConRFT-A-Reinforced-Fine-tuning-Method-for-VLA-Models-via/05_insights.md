@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 To address these issues, we formulate each robotic task as a Markov Decision Process (MDP), where the goal of RL is to find the optimal policy in the MDP, M = (S, ...를 The consistency policy is a diffusion-model-based policy [46] that learns to map random actions sampled from the unit Gaussian to generate actions drawn from the expert action distribution conditioned on the current ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several limitations remain.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage and further fine-tunes the VLA model via consistency policy through ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** By coupling the VLA policy with the learned Q-function, RFT allows the VLA model to refine its behavior based on trial-and-error interactions and task-specific feedback. (p. 2, III. PROBLEM SETUP AND PRELIMINARIES).
+- **Paper-specific mechanism:** Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage and further fine-tunes the VLA model via consistency ... (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is This suggests that Cal-ConRFT enables quicker adaptation of the online learning process by leveraging the Q loss during the offline stage, allowing more effective and stable policy improvement with a ... (p. 8, V. EXPERIMENT AND RESULTS); the relevant task/metric cue is As shown in Table IV, the results indicate that ConRFT can effectively enhance the performance of various VLAs, improving the success rates across multiple robotic tasks. (p. 8, V. EXPERIMENT AND RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several limitations remain. (p. 8, VI. LIMITATIONS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: This figure presents the success rates, intervention rates, and episode lengths for HIL-SERL [20], HG-DAgger [19], PA-RL [14] and our method across five representative real-world tasks, displayed as a running average over ....
-3. Compare against the body-reported baseline or a matched simpler baseline: For the online stage, we compared HIL-ConRFT with multiple baselines, including HG-DAgger [19] that incorporates human corrections to fine-tune the policy through supervised learning, PA-RL [14] that optimized actions through a policy-a ....
-4. Report the body metric and its denominator/aggregation: This suggests that Cal-ConRFT enables quicker adaptation of the online learning process by leveraging the Q loss during the offline stage, allowing more effective and stable policy improvement with a small set ....
-5. Re-run the body-reported ablation/failure condition: This ability to fine-tune the action generation while leveraging the pretrained visual components underscores the broad applicability of ConRFT..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: By coupling the VLA policy with the learned Q-function, RFT allows the VLA model to refine its behavior based on trial-and-error interactions and task-specific feedback. (p. 2, III. PROBLEM SETUP AND PRELIMINARIES); preserve the objective/update rule: Motivated by combining the BC loss with Q guidance under a consistency-based objective [18], we introduce Cal-ConRFT in the offline stage. (p. 3, IV. METHOD).
+2. Use the paper-reported task/data/environment cue: This figure presents the success rates, intervention rates, and episode lengths for HIL-SERL [20], HG-DAgger [19], PA-RL [14] and our method across five representative real-world tasks, displayed as a running ... (p. 6, V. EXPERIMENT AND RESULTS).
+3. Compare against the reported or matched baseline: For the online stage, we compared HIL-ConRFT with multiple baselines, including HG-DAgger [19] that incorporates human corrections to fine-tune the policy through supervised learning, PA-RL [14] that optimized actions through ... (p. 6, V. EXPERIMENT AND RESULTS).
+4. Report the body metric with its denominator and aggregation: As shown in Table IV, the results indicate that ConRFT can effectively enhance the performance of various VLAs, improving the success rates across multiple robotic tasks. (p. 8, V. EXPERIMENT AND RESULTS).
+5. Re-run the reported ablation or stress/failure condition: PA-RL is implemented without human intervention. (p. 6, V. EXPERIMENT AND RESULTS); if none is reported, design one around: Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several limitations remain. (p. 8, VI. LIMITATIONS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 8 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 8 (V. EXPERIMENT AND RESULTS), p. 7 (V. EXPERIMENT AND RESULTS), p. 8 (V. EXPERIMENT AND RESULTS), and measure the boundary at p. 8 (VI. LIMITATIONS), p. 6 (V. EXPERIMENT AND RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Motivated, insights, CPQL mechanism이 For the online stage, we compared HIL-ConRFT with multiple baselines, including HG-DAgger [19] that incorporates human ... 대비 This suggests that Cal-ConRFT enables quicker adaptation of the online learning process by leveraging the Q loss during ...을 개선하고, Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (By coupling the VLA policy with the learned Q-function, RFT allows the VLA model to refine its behavior based on trial-and-error interactions ...), does the paper-specific mechanism (Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage ...) retain the reported evaluation outcome (As shown in Table IV, the results indicate that ConRFT can effectively enhance the performance of various VLAs, ...) when tested against the paper's strongest explicit boundary (Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (As shown in Table IV, the results indicate that ConRFT can effectively enhance the performance of various VLAs, ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Motivated by insights from CPQL [18], we propose a unified training objective that integrates supervised learning with Qlearning in the offline stage and further fine-tunes the VLA model via consistency ... (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** This suggests that Cal-ConRFT enables quicker adaptation of the online learning process by leveraging the Q loss during the offline stage, allowing more effective and stable policy improvement with a ... (p. 8, V. EXPERIMENT AND RESULTS).
+- **Strongest explicit boundary:** Although our approach demonstrates strong performance and sample efficiency for fine-tuning VLA models in realworld manipulation tasks, several limitations remain. (p. 8, VI. LIMITATIONS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

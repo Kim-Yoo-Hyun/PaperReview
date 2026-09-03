@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 In contrast, recent works [73, 27, 28] incorporate visual observations as input to predict action poses.를 Driven by advancements in diffusion-based generative models [41, 95, 89], diffusion policy [17] and subsequent works [82, 86, 105] focus on transforming random Gaussian noise into coherent action sequences, with methods such ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In the failure ‘case, the arm fails to locate the correct slot position, causing the plate to slip out of the rack, likely due to visual occlusion or interference from the operator.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task execu ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** In contrast, recent works [73, 27, 28] incorporate visual observations as input to predict action poses. (p. 3, I. INTRODUCTION).
+- **Paper-specific mechanism:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This platform uses a cloudnative architecture ... (p. 4, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is RoboMIND features standardized settings to form a large-scale real-world manipulation dataset. ‘As shown in Figure 8, we compare our dataset with Open XEmbodiment, another large-scale robotic learning dataset. (p. 8, B. Qualitative Analysis); the relevant task/metric cue is A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream tasks. (p. 7, A. Quantitative Analysis). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: In addition to the diversity across robot, the varied task horizons in the dataset directly impact the temporal generalization capabilities of policies in real-world scenarios..
-3. Compare against the body-reported baseline or a matched simpler baseline: 8: Comparison between Open X-Embodiment and RoboMIND..
-4. Report the body metric and its denominator/aggregation: Fig. 12: Success rates of ACT, Diffusion Policy, and BAKU on RoboMIND..
-5. Re-run the body-reported ablation/failure condition: The heterogeneous set of embodiment data collected under a unified standard can provide pretraining data for policy models with different action spaces (65, 51], as well as experimental data for the cross-embodiment ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: In contrast, recent works [73, 27, 28] incorporate visual observations as input to predict action poses. (p. 3, I. INTRODUCTION); preserve the objective/update rule: This discrepancy could be attributed to the hyper-parameter settings from the original BAKU paper, which is primarily optimized for simulation environments rather than real-world robotic platforms tested in our experiments. (p. 11, B. Single-task Imitation Learning Models).
+2. Use the paper-reported task/data/environment cue: In addition to the diversity across robot, the varied task horizons in the dataset directly impact the temporal generalization capabilities of policies in real-world scenarios. (p. 7, A. Quantitative Analysis).
+3. Compare against the reported or matched baseline: 8: Comparison between Open X-Embodiment and RoboMIND. (p. 9, B. Qualitative Analysis).
+4. Report the body metric with its denominator and aggregation: A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream tasks. (p. 7, A. Quantitative Analysis).
+5. Re-run the reported ablation or stress/failure condition: A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream tasks. (p. 7, A. Quantitative Analysis); if none is reported, design one around: Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 12 (C. Vision-Language-Action Large Models), p. 10 (B. Single-task Imitation Learning Models), p. 10 (B. Single-task Imitation Learning Models); the primary result is directionally consistent at p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 7 (A. Quantitative Analysis); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 4 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), match the reported outcome at p. 8 (B. Qualitative Analysis), p. 7 (A. Quantitative Analysis), p. 7 (A. Quantitative Analysis), and measure the boundary at p. 6 (B. Data Preprocessing and Classification), p. 9 (B. Qualitative Analysis).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 demonstrate, RoboMIND, effectively mechanism이 8: Comparison between Open X-Embodiment and RoboMIND. 대비 Fig. 12: Success rates of ACT, Diffusion Policy, and BAKU on RoboMIND.을 개선하고, In the failure ‘case, the arm fails to locate the correct slot position, causing the plate ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (In contrast, recent works [73, 27, 28] incorporate visual observations as input to predict action poses.), does the paper-specific mechanism (To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the ...) retain the reported evaluation outcome (A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream ...) when tested against the paper's strongest explicit boundary (Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This platform uses a cloudnative architecture ... (p. 4, I. INTRODUCTION).
+- **Paper-supported outcome:** RoboMIND features standardized settings to form a large-scale real-world manipulation dataset. ‘As shown in Figure 8, we compare our dataset with Open XEmbodiment, another large-scale robotic learning dataset. (p. 8, B. Qualitative Analysis).
+- **Strongest explicit boundary:** Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

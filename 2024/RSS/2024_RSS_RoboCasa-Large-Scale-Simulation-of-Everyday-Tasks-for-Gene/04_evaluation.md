@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2406.02523; PDF retrieval source: https://arxiv.org/pdf/2406.02523. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2406.02523; PDF retrieval source: https://arxiv.org/pdf/2406.02523. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 
 ## Evaluation Body Digest
 
-- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** We conduct experiments in a real-world kitchen environment with a Franka Emika Panda robot running on the DROID hardware infrastructure [20].
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** 2) Generated-3000: A dataset of 72,000 demonstrations synthesized by MimicGen1 across 24 atomic tasks2 1These experiments feature Objaverse objects.
-- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** For each seed, we evaluate the model over five seen object categories and 3 unseen object categories (unseen with respect to the real-world demonstrations).
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** In these datasets, our focus is specifically on a Franka Panda robot with an Omron mobile base, resembling the Omni-Frankie robot [13].
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** We compare training on four different multi-task datasets, including a human dataset with 50 demonstrations per task, a machine generated dataset with 3000 demonstrations per ...
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** For each task, we collected 50 human demonstrations and compared the following settings: • Scratch: learning a policy from scratch on these 50 demonstrations; • ...
-- **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive PDF cue:** This section outlines these tasks and our large multi-task dataset accompanying them.
-- **p. 5 / IV. ROBOCASA ACTIVITY DATASET - extractive PDF cue:** Atomic Tasks: Building Blocks of Behavior For a robot to perform complex tasks, it must master the foundational skills needed to solve these tasks.
+- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** We conduct experiments in a real-world kitchen environment with a Franka Emika Panda robot running on the DROID hardware infrastructure [20].
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** 2) Generated-3000: A dataset of 72,000 demonstrations synthesized by MimicGen1 across 24 atomic tasks2 1These experiments feature Objaverse objects.
+- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** For each seed, we evaluate the model over five seen object categories and 3 unseen object categories (unseen with respect to the real-world demonstrations).
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** In these datasets, our focus is specifically on a Franka Panda robot with an Omron mobile base, resembling the Omni-Frankie robot [13].
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** We compare training on four different multi-task datasets, including a human dataset with 50 demonstrations per task, a machine generated dataset with 3000 demonstrations per ...
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** For each task, we collected 50 human demonstrations and compared the following settings: • Scratch: learning a policy from scratch on these 50 demonstrations; • ...
+- **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** This section outlines these tasks and our large multi-task dataset accompanying them.
+- **p. 5 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** Atomic Tasks: Building Blocks of Behavior For a robot to perform complex tasks, it must master the foundational skills needed to solve these tasks.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Fig. 7: Comparison between human demonstrations and machine-generated datasets. We present learning results across 24 atomic tasks spanning diverse robot skills. We compare training ... | p. 7 (Figure/Table caption) |
 | 3) Can large-scale simulation datasets facilitate knowledge | BENCHMARK / DATASET | The overall performance on human data is 28.8% success rate, and with the fully generated dataset, we observe a significant improvement at 47.6% success ... | p. 6 (3) Can large-scale simulation datasets facilitate knowledge) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** We conduct experiments in a real-world kitchen environment with a Franka Emika Panda robot running on the DROID hardware infrastructure [20].
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** 2) Generated-3000: A dataset of 72,000 demonstrations synthesized by MimicGen1 across 24 atomic tasks2 1These experiments feature Objaverse objects.
-- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** For each seed, we evaluate the model over five seen object categories and 3 unseen object categories (unseen with respect to the real-world demonstrations).
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** In these datasets, our focus is specifically on a Franka Panda robot with an Omron mobile base, resembling the Omni-Frankie robot [13].
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** We compare training on four different multi-task datasets, including a human dataset with 50 demonstrations per task, a machine generated dataset with 3000 demonstrations per ...
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** For each task, we collected 50 human demonstrations and compared the following settings: • Scratch: learning a policy from scratch on these 50 demonstrations; • ...
-- **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive PDF cue:** This section outlines these tasks and our large multi-task dataset accompanying them.
-- **p. 5 / IV. ROBOCASA ACTIVITY DATASET - extractive PDF cue:** Atomic Tasks: Building Blocks of Behavior For a robot to perform complex tasks, it must master the foundational skills needed to solve these tasks.
+- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** We conduct experiments in a real-world kitchen environment with a Franka Emika Panda robot running on the DROID hardware infrastructure [20].
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** 2) Generated-3000: A dataset of 72,000 demonstrations synthesized by MimicGen1 across 24 atomic tasks2 1These experiments feature Objaverse objects.
+- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** For each seed, we evaluate the model over five seen object categories and 3 unseen object categories (unseen with respect to the real-world demonstrations).
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** In these datasets, our focus is specifically on a Franka Panda robot with an Omron mobile base, resembling the Omni-Frankie robot [13].
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** We compare training on four different multi-task datasets, including a human dataset with 50 demonstrations per task, a machine generated dataset with 3000 demonstrations per ...
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** For each task, we collected 50 human demonstrations and compared the following settings: • Scratch: learning a policy from scratch on these 50 demonstrations; • ...
+- **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** This section outlines these tasks and our large multi-task dataset accompanying them.
+- **p. 5 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** Atomic Tasks: Building Blocks of Behavior For a robot to perform complex tasks, it must master the foundational skills needed to solve these tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Fig. 1: Overview of RoboCasa. RoboCasa is a simulation framework for training generalist robot agents. Four pillars underlie RoboCasa: (1) Diverse assets, including 120 kitchen ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 3: Kitchen Floor Plans. We consult home planning and architecture magazines and compile a list of common kitchen floor plans. Our floor plans take ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Fig. 4: Examples of Interactable Appliances. Our simulation framework comes with dozens of appliances. Several types of appliances are articulated. For example, we can open ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Fig. 5: Diverse High-Quality 3D Objects. RoboCasa offers 2,509 high- quality 3D objects across 153 diverse categories spanning vegetables, poultry, drinks, and more. Here we ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 6: Creating Diverse Tasks with Large Language Models. We employ LLMs to generate diverse tasks. First, we prompt GPT-4 to give diverse high-level kitchen ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 7: Comparison between human demonstrations and machine-generated datasets. We present learning results across 24 atomic tasks spanning diverse robot skills. We compare training on ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Fig. 8: Learning Results on Composite Tasks. We learn single-task policies for five representative composite tasks. We compare learning these tasks from scratch with 50 ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Fig. 9: Real-World Experiment Setup. We conduct experiments in a real- world kitchen environment with a Franka Emika Panda arm on a wheeled mobile platform. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of RoboCasa. RoboCasa is a simulation framework for training generalist robot agents. Four pillars underlie RoboCasa: (1) Diverse assets, including 120 kitchen ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Kitchen Floor Plans. We consult home planning and architecture magazines and compile a list of common kitchen floor plans. Our floor plans take ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Examples of Interactable Appliances. Our simulation framework comes with dozens of appliances. Several types of appliances are articulated. For example, we can open ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Diverse High-Quality 3D Objects. RoboCasa offers 2,509 high- quality 3D objects across 153 diverse categories spanning vegetables, poultry, drinks, and more. Here we ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Creating Diverse Tasks with Large Language Models. We employ LLMs to generate diverse tasks. First, we prompt GPT-4 to give diverse high-level kitchen ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Comparison between human demonstrations and machine-generated datasets. We present learning results across 24 atomic tasks spanning diverse robot skills. We compare training on ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: Learning Results on Composite Tasks. We learn single-task policies for five representative composite tasks. We compare learning these tasks from scratch with 50 ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 9: Real-World Experiment Setup. We conduct experiments in a real- world kitchen environment with a Franka Emika Panda arm on a wheeled mobile platform. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct experiments in a real-world kitchen environment with a Franka Emika Panda robot running on the DROID hardware infrastructure [20]. | embodiment, simulator version and control stack | p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge) |
 | Task/environment | 2) Generated-3000: A dataset of 72,000 demonstrations synthesized by MimicGen1 across 24 atomic tasks2 1These experiments feature Objaverse objects. | reset, timeout, object/scene variation | p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge) |
@@ -117,12 +117,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 | Primary metric/result | The overall performance on human data is 28.8% success rate, and with the fully generated dataset, we observe a significant improvement at 47.6% success ... | numeric claim only at cited anchor | p. 6 (3) Can large-scale simulation datasets facilitate knowledge) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive PDF cue:** Our simulator supports a wide array of possible kitchen activities, and we represent these activities with a comprehensive suite of 100 tasks.
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** We take the 50 human demonstrations as input for each task and use them to generate 3,000 trajectories autonomously.
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** This results in a total of 7,200 trajectories.
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** This results in a total of 2,400 trajectories.
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** For each task, we evaluate the model performance across 50 trials across five fixed evaluation scenes, each with a distinct floor plan and style.
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** Learning on these composite tasks is very challenging, with the Scratch baseline failing to achieve any non-zero success rate on 4/5 tasks.
+- **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** Our simulator supports a wide array of possible kitchen activities, and we represent these activities with a comprehensive suite of 100 tasks.
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** We take the 50 human demonstrations as input for each task and use them to generate 3,000 trajectories autonomously.
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** This results in a total of 7,200 trajectories.
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** This results in a total of 2,400 trajectories.
+- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** For each task, we evaluate the model performance across 50 trials across five fixed evaluation scenes, each with a distinct floor plan and style.
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** Learning on these composite tasks is very challenging, with the Scratch baseline failing to achieve any non-zero success rate on 4/5 tasks.
 
 ## Generalization and Failure Cases
 
@@ -158,12 +158,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 
 ## Limitations and Verification Questions
 
-- **p. 8 / VI. CONCLUSION - extractive PDF cue:** We now pinpoint limitations and discuss exciting avenues for future future.
-- **p. 8 / VI. CONCLUSION - extractive PDF cue:** While the generated trajectories are technically considered successful, many exhibited undesirable effects, such as jerky motions and collisions.
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** Some common failure modes include difficulty with fine-grained manipulation and difficulty effectively transitioning to the next stage of the task.
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive PDF cue:** The choice of policy architecture, learning algorithm, and finetuning strategy may play a critical role in performance, and these factors warrant investigation in future work.
+- **p. 8 / VI. CONCLUSION - extractive body cue:** We now pinpoint limitations and discuss exciting avenues for future future.
+- **p. 8 / VI. CONCLUSION - extractive body cue:** While the generated trajectories are technically considered successful, many exhibited undesirable effects, such as jerky motions and collisions.
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** Some common failure modes include difficulty with fine-grained manipulation and difficulty effectively transitioning to the next stage of the task.
+- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** The choice of policy architecture, learning algorithm, and finetuning strategy may play a critical role in performance, and these factors warrant investigation in future work.
 
-- **PDF anchors reviewed:** datasets p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), metrics p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (V. EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (V. EXPERIMENTS), results p. 7 (Figure/Table caption), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge).
+- **Evidence anchors reviewed:** datasets p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), metrics p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (V. EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (V. EXPERIMENTS), results p. 7 (Figure/Table caption), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

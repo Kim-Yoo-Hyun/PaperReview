@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 
 ## Evaluation Body Digest
 
-- **p. 6 / 15.11 FPS - extractive PDF cue:** Testing scenes are drawn from the official test splits of each dataset, which remain unseen during training.
-- **p. 7 / 5.1. Results - extractive PDF cue:** More importantly, we find our joint trained model has improved performance compared to training on a single dataset, indicating that exposure to diverse reconstruction artifacts ...
-- **p. 6 / 15.11 FPS - extractive PDF cue:** Rendering Refinement Performance on DL3DV and RE10K Datasets.
-- **p. 7 / 5.1. Results - extractive PDF cue:** We compare GaussFusion with baseline methods on diverse scenes from DL3DV [31] and RE10K [72].
-- **p. 8 / 5.1. Results - extractive PDF cue:** Ablation on Input Modalities on DL3DV Dataset.
-- **p. 8 / 5.2. Ablation Studies - extractive PDF cue:** For efficiency, all models are trained on one-third of the full dataset.
-- **p. 7 / 5.1. Results - extractive PDF cue:** A slightly higher FID score is observed, which we attribute to the reduced number of denoising steps and minor loss of high-frequency details.
-- **p. 7 / 5.1. Results - extractive PDF cue:** From top to bottom, our model demonstrates strong generalization across various refinement scenarios: (1) inpainting missing regions, (2) outpainting beyond the original view, (3-4) correcting ...
+- **p. 6 / 15.11 FPS - extractive body cue:** Testing scenes are drawn from the official test splits of each dataset, which remain unseen during training.
+- **p. 7 / 5.1. Results - extractive body cue:** More importantly, we find our joint trained model has improved performance compared to training on a single dataset, indicating that exposure to diverse reconstruction artifacts ...
+- **p. 6 / 15.11 FPS - extractive body cue:** Rendering Refinement Performance on DL3DV and RE10K Datasets.
+- **p. 7 / 5.1. Results - extractive body cue:** We compare GaussFusion with baseline methods on diverse scenes from DL3DV [31] and RE10K [72].
+- **p. 8 / 5.1. Results - extractive body cue:** Ablation on Input Modalities on DL3DV Dataset.
+- **p. 8 / 5.2. Ablation Studies - extractive body cue:** For efficiency, all models are trained on one-third of the full dataset.
+- **p. 7 / 5.1. Results - extractive body cue:** A slightly higher FID score is observed, which we attribute to the reduced number of denoising steps and minor loss of high-frequency details.
+- **p. 7 / 5.1. Results - extractive body cue:** From top to bottom, our model demonstrates strong generalization across various refinement scenarios: (1) inpainting missing regions, (2) outpainting beyond the original view, (3-4) correcting ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 15.11 FPS | EMPIRICAL / SOURCE-REPORTED EVALUATION | The joint training variant achieves the best overall fidelity and perceptual quality (highest PSNR/SSIM, lowest LPIPS/FID), while the distilled model attains comparable performance with ... | p. 6 (15.11 FPS) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization ... | p. 1 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 15.11 FPS - extractive PDF cue:** Testing scenes are drawn from the official test splits of each dataset, which remain unseen during training.
-- **p. 7 / 5.1. Results - extractive PDF cue:** More importantly, we find our joint trained model has improved performance compared to training on a single dataset, indicating that exposure to diverse reconstruction artifacts ...
-- **p. 6 / 15.11 FPS - extractive PDF cue:** Rendering Refinement Performance on DL3DV and RE10K Datasets.
-- **p. 7 / 5.1. Results - extractive PDF cue:** We compare GaussFusion with baseline methods on diverse scenes from DL3DV [31] and RE10K [72].
-- **p. 8 / 5.1. Results - extractive PDF cue:** Ablation on Input Modalities on DL3DV Dataset.
-- **p. 8 / 5.2. Ablation Studies - extractive PDF cue:** For efficiency, all models are trained on one-third of the full dataset.
+- **p. 6 / 15.11 FPS - extractive body cue:** Testing scenes are drawn from the official test splits of each dataset, which remain unseen during training.
+- **p. 7 / 5.1. Results - extractive body cue:** More importantly, we find our joint trained model has improved performance compared to training on a single dataset, indicating that exposure to diverse reconstruction artifacts ...
+- **p. 6 / 15.11 FPS - extractive body cue:** Rendering Refinement Performance on DL3DV and RE10K Datasets.
+- **p. 7 / 5.1. Results - extractive body cue:** We compare GaussFusion with baseline methods on diverse scenes from DL3DV [31] and RE10K [72].
+- **p. 8 / 5.1. Results - extractive body cue:** Ablation on Input Modalities on DL3DV Dataset.
+- **p. 8 / 5.2. Ablation Studies - extractive body cue:** For efficiency, all models are trained on one-third of the full dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization or ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. GaussFusion Video Generator Architecture. Our model refines video latents using geometry-aware conditioning derived from 3D Gaussian splatting (3DGS). A Gaussian primitive buffer-comprising color, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Rendering Refinement Performance on DL3DV and RE10K Datasets. We compare our method against state-of-the-art 3DGS refinement approaches. The joint training variant achieves the ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Feed-forward View Synthesis Results on RE10K [72]. Our method consistently improves feed-forward 3DGS recon- struction on different backbones while baseline methods Difix3D and ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Performance on Improving 3D Reconstruction. GaussFusion demonstrates superior performance on most metrics, showcasing the multi-view consistency in our enhanced frames. synthesis, as reported ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative Comparison on Novel-View Refinement. We compare GaussFusion with baseline methods on diverse scenes from DL3DV [31] and RE10K [72]. GaussFusion effectively removes ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative Comparison on 3D Reconstruction. We show the novel-view renderings from the improved 3D reconstruc- tion refined using enhanced views from different methods. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation on Input Modalities on DL3DV Dataset. In- clusion of more geometric cues (depth, normal, alpha, covariance) improves reconstruction fidelity and perceptual quality. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization or ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. GaussFusion Video Generator Architecture. Our model refines video latents using geometry-aware conditioning derived from 3D Gaussian splatting (3DGS). A Gaussian primitive buffer-comprising color, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Rendering Refinement Performance on DL3DV and RE10K Datasets. We compare our method against state-of-the-art 3DGS refinement approaches. The joint training variant achieves the ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Feed-forward View Synthesis Results on RE10K [72]. Our method consistently improves feed-forward 3DGS recon- struction on different backbones while baseline methods Difix3D and ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Performance on Improving 3D Reconstruction. GaussFusion demonstrates superior performance on most metrics, showcasing the multi-view consistency in our enhanced frames. synthesis, as reported ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative Comparison on Novel-View Refinement. We compare GaussFusion with baseline methods on diverse scenes from DL3DV [31] and RE10K [72]. GaussFusion effectively removes ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative Comparison on 3D Reconstruction. We show the novel-view renderings from the improved 3D reconstruc- tion refined using enhanced views from different methods. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation on Input Modalities on DL3DV Dataset. In- clusion of more geometric cues (depth, normal, alpha, covariance) improves reconstruction fidelity and perceptual quality. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Testing scenes are drawn from the official test splits of each dataset, which remain unseen during training. | embodiment, simulator version and control stack | p. 6 (15.11 FPS), p. 7 (5.1. Results) |
 | Task/environment | More importantly, we find our joint trained model has improved performance compared to training on a single dataset, indicating that exposure to diverse reconstruction ... | reset, timeout, object/scene variation | p. 7 (5.1. Results), p. 6 (15.11 FPS) |
@@ -121,11 +121,11 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 | Primary metric/result | Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization ... | numeric claim only at cited anchor | p. 1 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 15.11 FPS - extractive PDF cue:** The joint training variant achieves the best overall fidelity and perceptual quality (highest PSNR/SSIM, lowest LPIPS/FID), while the distilled model attains comparable performance with significantly ...
-- **p. 6 / 15.11 FPS - extractive PDF cue:** We train our model on 8 H200 GPUs for 100K steps with a batch size of 8 and a frame resolution of 480×832.
-- **p. 6 / 15.11 FPS - extractive PDF cue:** Training uses the AdamW optimizer with a linear learning rate (LR) warm-up over the first 1K steps, followed by a constant LR of 1×10-5.
-- **p. 6 / 15.11 FPS - extractive PDF cue:** All methods are tested at their native operating resolution and resized to 480×832 for comparison.
-- **p. 7 / 5.1. Results - extractive PDF cue:** Our distilled model maintains comparable PSNR, SSIM, and LPIPS to the nondistilled version, while surpassing all baselines with a realtime speed of 16 FPS.
+- **p. 6 / 15.11 FPS - extractive body cue:** The joint training variant achieves the best overall fidelity and perceptual quality (highest PSNR/SSIM, lowest LPIPS/FID), while the distilled model attains comparable performance with significantly ...
+- **p. 6 / 15.11 FPS - extractive body cue:** We train our model on 8 H200 GPUs for 100K steps with a batch size of 8 and a frame resolution of 480×832.
+- **p. 6 / 15.11 FPS - extractive body cue:** Training uses the AdamW optimizer with a linear learning rate (LR) warm-up over the first 1K steps, followed by a constant LR of 1×10-5.
+- **p. 6 / 15.11 FPS - extractive body cue:** All methods are tested at their native operating resolution and resized to 480×832 for comparison.
+- **p. 7 / 5.1. Results - extractive body cue:** Our distilled model maintains comparable PSNR, SSIM, and LPIPS to the nondistilled version, while surpassing all baselines with a realtime speed of 16 FPS.
 
 ## Generalization and Failure Cases
 
@@ -157,12 +157,12 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** We discuss our limitations and future work in Supp.
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization or ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. GaussFusion Video Generator Architecture. Our model refines video latents using geometry-aware conditioning derived from 3D Gaussian splatting (3DGS). A Gaussian primitive buffer-comprising color, ...
-- **p. 8 / 5.2. Ablation Studies - extractive PDF cue:** 4), which combines optimization- and feed-forward degradations while injecting pose and coverage diversity.
+- **p. 8 / 6. Conclusion - extractive body cue:** We discuss our limitations and future work in Supp.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization or ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. GaussFusion Video Generator Architecture. Our model refines video latents using geometry-aware conditioning derived from 3D Gaussian splatting (3DGS). A Gaussian primitive buffer-comprising color, ...
+- **p. 8 / 5.2. Ablation Studies - extractive body cue:** 4), which combines optimization- and feed-forward degradations while injecting pose and coverage diversity.
 
-- **PDF anchors reviewed:** datasets p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 8 (5.1. Results), p. 8 (5.2. Ablation Studies), metrics p. 7 (5.1. Results), p. 7 (5.1. Results), p. 8 (5.2. Ablation Studies), p. 6 (5.1. Results), p. 6 (5.1. Results), p. 8 (5.2. Ablation Studies), baselines p. 6 (5.1. Results), p. 8 (5.1. Results), p. 7 (Figure/Table caption), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 8 (5.2. Ablation Studies), results p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (5.1. Results), p. 7 (5.1. Results).
+- **Evidence anchors reviewed:** datasets p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 8 (5.1. Results), p. 8 (5.2. Ablation Studies), metrics p. 7 (5.1. Results), p. 7 (5.1. Results), p. 8 (5.2. Ablation Studies), p. 6 (5.1. Results), p. 6 (5.1. Results), p. 8 (5.2. Ablation Studies), baselines p. 6 (5.1. Results), p. 8 (5.1. Results), p. 7 (Figure/Table caption), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 8 (5.2. Ablation Studies), results p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (5.1. Results), p. 7 (5.1. Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

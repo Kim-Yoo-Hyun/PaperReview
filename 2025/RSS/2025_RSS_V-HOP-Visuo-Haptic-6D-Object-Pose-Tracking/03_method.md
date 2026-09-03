@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multi-modal contact encoding | vision과 touch를 contact feature로 결합한다 | tactile image/force, vision, proprioception | tactile encoder, calibration, fusion 또는 temporal feature extraction을 수행 | contact feature/state | Later, we introduce our visuo-haptic model and how it is trained. | p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY) |
 | Contact / dynamics inference | contact mode와 object response를 추정한다 | contact feature와 action history | mode classifier, force/dynamics model 또는 state estimator를 update | contact/force prediction | We first outline the core representations used in our haptic modality: gripper and object representations. | p. 3 (III. MeTHODOLOGY) |
@@ -43,7 +43,7 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 
 ## Objective / Update Rule
 
-- objective/update cue 없음 - inspect equations and algorithm boxes
+- objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** none selected.
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -55,7 +55,7 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 | Input/observation | Problem, Definition, tackle, model-based, visu, tracking, assuming, access, Visual, observations, RGB-D, sensor, observes, object | tactile image/force, vision과 proprioceptive history | body cue; exact tensor/frame verify |
 | State/latent | Problem, Definition, tackle, model-based, visu, tracking, assuming, access, Visual, observations | contact geometry, force state 또는 latent dynamics | body cue; notation verify |
 | Action/output | First, introduce, novel, unified, haptic, representation, facilitates, cross-embodiment, learning, address | grasp/contact action, force command 또는 object motion | body cue; unit/decoder verify |
-| Objective/constraint | not recovered | contact prediction/control error | equation anchor required |
+| Objective/constraint | not stated or recoverable in the selected PDF body | contact prediction/control error | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -74,7 +74,7 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 |---|---|---|---|
 | Horizon | contact episode 또는 action chunk horizon; contact event timing이 핵심이다. | We validate our framework in our dataset and the Feelsight dataset, demonstrating significant per~ formance improvement on challenging sequences. | episode/sequence/action-chunk boundary |
 | Rate / latency | tactile sampling/control loop가 visual policy rate와 다를 수 있다; numeric values 확인 필요. | Moreover, they typically process each frame independently, which can result in less coherent object pose tracking over sequences in real-world deployments. | Hz/fps, inference time and control rate |
-| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not recovered | window and reset |
+| Memory | recent tactile/force history와 visual state; recurrent memory 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | sensor fusion, contact inference와 high-frequency correction이 latency를 결정한다. | In terms of computational efficiency, V-HOP is appro: mately 10 times faster than NeuralFeels, achieving 32 FPS compared to NeuralFeels' 3 FPS ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -119,8 +119,17 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY), objective 본문 anchor 없음, temporal p. 1 (Abstract), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 7 (B. Bimanual Handover Experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment).
+- **Evidence anchors reviewed:** method p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY), objective 본문 anchor 없음, temporal p. 1 (Abstract), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 7 (B. Bimanual Handover Experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** A, Problem Definition We tackle the model-based visu tracking problem, assuming access to: + Visual observations: An RGB-D sensor observes the object in the environment. + Haptic feedback: The object ... (p. 2, 1. INTRODUCTION).
+- **Objective/update evidence:** Later, we introduce our visuo-haptic model and how it is trained. (p. 3, III. MeTHODOLOGY).
+- **Temporal/runtime evidence:** The task requires the robot to perform the following sequence of actions: (p. 7, B. Bimanual Handover Experiment).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

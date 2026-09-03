@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=6TLdqAZgzn; PDF retrieval source: https://openreview.net/pdf/69efa7c1cd34c4e72171331a81f56b7c914e9e24.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=6TLdqAZgzn; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114708. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -10,48 +10,48 @@ PDF body framing (p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION)): This limitation
 
 ## PDF Body Digest
 
-- **p. 1 / ABSTRACT - extractive PDF cue:** In this paper, we introduce SPA, a novel representation learning framework that emphasizes the importance of 3D spatial awareness in embodied AI.
-- **p. 1 / ABSTRACT - extractive PDF cue:** Our approach leverages differentiable neural rendering on multi-view images to endow a vanilla Vision Transformer (ViT) with intrinsic spatial understanding.
-- **p. 1 / ABSTRACT - extractive PDF cue:** We present the most comprehensive evaluation of embodied representation learning to date, covering 268 tasks across 8 simulators with diverse policies in both single-task and ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** The results are compelling: SPA consistently outperforms more than 10 state-of-the-art representation methods, including those specifically designed for embodied AI, vision-centric tasks, and multi-modal applications, ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** Furthermore, we conduct a series of real-world experiments to confirm its effectiveness in practical scenarios.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** This limitation arises from their primary emphasis on 2D semantic understanding, which, though valuable, is still insufficient for the sophisticated spatial reasoning required in embodied ...
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Existing visual representation learning methods for embodied AI (Nair et al., 2022; Radosavovic et al., 2023; Majumdar et al., 2023; Karamcheti et al., 2023; Shang ...
+- **p. 1 / ABSTRACT - extractive body cue:** In this paper, we introduce SPA, a novel representation learning framework that emphasizes the importance of 3D spatial awareness in embodied AI.
+- **p. 1 / ABSTRACT - extractive body cue:** Our approach leverages differentiable neural rendering on multi-view images to endow a vanilla Vision Transformer (ViT) with intrinsic spatial understanding.
+- **p. 1 / ABSTRACT - extractive body cue:** We present the most comprehensive evaluation of embodied representation learning to date, covering 268 tasks across 8 simulators with diverse policies in both single-task and ...
+- **p. 1 / ABSTRACT - extractive body cue:** The results are compelling: SPA consistently outperforms more than 10 state-of-the-art representation methods, including those specifically designed for embodied AI, vision-centric tasks, and multi-modal applications, ...
+- **p. 1 / ABSTRACT - extractive body cue:** Furthermore, we conduct a series of real-world experiments to confirm its effectiveness in practical scenarios.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** This limitation arises from their primary emphasis on 2D semantic understanding, which, though valuable, is still insufficient for the sophisticated spatial reasoning required in embodied ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Existing visual representation learning methods for embodied AI (Nair et al., 2022; Radosavovic et al., 2023; Majumdar et al., 2023; Karamcheti et al., 2023; Shang ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | This limitation arises from their primary emphasis on 2D semantic understanding, which, though valuable, is still insufficient for the sophisticated spatial reasoning ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | In this section, we first describe our process for handling multi-view image inputs and feature extraction in Sec. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF |
+| Observation / input | In this section, we first describe our process for handling multi-view image inputs and feature extraction in Sec. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | section, first, describe, process, handling, multi-view, image, inputs, feature, extraction | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | Published, conference, ICLR, Vision, Transformer, Upsampler, Multi-View, Input | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
+| Output / action | Unlike, explicit, representations, like, point, clouds, meshes-which, prior | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | multimodal context o,l,p/history; body terms: section, first, describe, process, handling, multi-view, image, inputs, feature, extraction | p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY) |
+| State / observation variable | multimodal context o,l,p/history; body terms: section, first, describe, process, handling, multi-view, image, inputs, feature, extraction | p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 1 (1 INTRODUCTION) |
 | Decision / output variable | action, pose, option or chunk a; body terms: contribution, summarized, follows, significant, spatial, hypothesis, awareness, crucial | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
 | Objective / loss / cost | policy/action modeling objective; cue terms: Finally, explain, image, rendering, feature, volume, loss, functions | p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS) |
 | Success / guarantee | instruction-conditioned task success | p. 24 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Existing visual representation learning methods for embodied AI (Nair et al., 2022; Radosavovic et al., 2023; Majumdar et al., 2023; Karamcheti et al., 2023; Shang ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Existing visual representation learning methods for embodied AI (Nair et al., 2022; Radosavovic et al., 2023; Majumdar et al., 2023; Karamcheti et al., 2023; Shang ...
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY)): Our contribution can be summarized as follows. • We propose a significant spatial hypothesis: 3D spatial awareness is crucial for embodied representation learning.
+PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY)): Our contribution can be summarized as follows. • We propose a significant spatial hypothesis: 3D spatial awareness is crucial for embodied representation learning.
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Our experiments provide clear evidence for the hypothesis. • We introduce SPA, a novel paradigm for representation learning in embodied AI.
-- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** In this paper, we introduce SPA, a general 3D spatial-aware representation learning framework for embodied AI.
-- **p. 3 / 2 METHODOLOGY - extractive PDF cue:** Unlike the bird's-eye view (BEV) construction in autonomous driving (Li et al., 2022), which usually relies on a fixed scene range around ego vehicle , ...
-- **p. 4 / 2 METHODOLOGY - extractive PDF cue:** Our framework has the capability to distill knowledge from multiple vision foundation models by adding multiple rendering heads.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our experiments provide clear evidence for the hypothesis. • We introduce SPA, a novel paradigm for representation learning in embodied AI.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce SPA, a general 3D spatial-aware representation learning framework for embodied AI.
+- **p. 3 / 2 METHODOLOGY - extractive body cue:** Unlike the bird's-eye view (BEV) construction in autonomous driving (Li et al., 2022), which usually relies on a fixed scene range around ego vehicle , ...
+- **p. 4 / 2 METHODOLOGY - extractive body cue:** Our framework has the capability to distill knowledge from multiple vision foundation models by adding multiple rendering heads.
 
 ## Assumptions and Failure Boundary
 
@@ -66,11 +66,11 @@ PDF contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 1 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 1 (1 INTRODUCTION), p. 23 (C.2 PRE-TRAINING DETAILS). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 1 (1 INTRODUCTION), objective p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS).
+- **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 1 (1 INTRODUCTION), p. 23 (C.2 PRE-TRAINING DETAILS), objective p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?

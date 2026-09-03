@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.01603; PDF retrieval source: https://arxiv.org/pdf/1912.01603. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.01603; PDF retrieval source: https://arxiv.org/pdf/1912.01603. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), an improved variant of DDPG (Lillicrap ... | p. 8 (6 EXPERIMENTS) |
 | 6 EXPERIMENTS | EMPIRICAL / SOURCE-REPORTED EVALUATION | With an average score of 823 across tasks after 5 × 106 environment steps, Dreamer exceeds the performance of the strong model-free D4PG agent ... | p. 9 (6 EXPERIMENTS) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | These tasks pose a variety of challenges, including sparse rewards, contact dynamics, and 3D scenes. | embodiment, simulator version and control stack | p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS) |
 | Task/environment | Agent observations are images of shape 64 × 64 × 3, actions range from 1 to 12 dimensions, rewards range from 0 to 1, ... | reset, timeout, object/scene variation | p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS) |
@@ -122,9 +122,9 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** Agent observations are images of shape 64 × 64 × 3, actions range from 1 to 12 dimensions, rewards range from 0 to 1, episodes ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** The training time for our Dreamer implementation is about 3 hours per 106 environment steps on the control suite, compared to 11 hours for online ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** Performance curves for all 19 tasks with horizon of 20 are shown in Appendix D, where Dreamer outperforms the alternatives on 16 of 20 tasks, ...
-- **p. 4 / B Sequence length - extractive body cue:** Published as a conference paper at ICLR 2020 10 20 30 40 Imagination Horizon 0 200 400 600 800 1000 Episode Return Cartpole Swingup 10 ...
 - **p. 4 / B Sequence length - extractive body cue:** State values can be estimated in multiple ways that trade off bias and variance (Sutton and Barto, 2018), VR(sτ) .= Eqθ,qφ  t+H X n=τ ...
 - **p. 5 / B Sequence length - extractive body cue:** We apply the representation model to the first 5 images of two hold-out trajectories and predict forward for 45 steps using the latent dynamics, given ...
+- **p. 6 / B Sequence length - extractive body cue:** Sparse Finger Spin Hopper Hop Acrobot Swingup 0 200 400 600 800 1000 Episode Return n/a n/a n/a n/a Dreamer (5e6 steps) PlaNet (5e6 steps) ...
 
 ## Generalization and Failure Cases
 
@@ -146,9 +146,9 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | With an average score of 823 across tasks after 5 × 106 environment steps, Dreamer exceeds the performance of the strong model-free D4PG agent ... | p. 9 (6 EXPERIMENTS) |
 | (c) The agent encodes the history of the episode to compute the current model state and predict the next action to execute in the ... | p. 3 (1 INTRODUCTION) |
 | Since all steps are implemented as neural networks, we analytically compute ∇φEqθ,qφ   Pt+H τ=t Vλ(sτ)  by stochastic backpropagation (Kingma and Welling, 2013; ... | p. 5 (B Sequence length) |
-| Published as a conference paper at ICLR 2020 0.0 0.5 1.0 1.5 2.0 0 100 200 300 400 Episode Return Acrobot Swingup 0.0 0.5 ... | p. 7 (B Sequence length) |
 | L Imagination horizon H Learning rate α 3 | p. 3 (B Sequence length) |
 | The representation model encodes observations and actions to create continuous vector-valued model states st with Markovian transitions (Watter et al., 2015; Zhang et al., ... | p. 2 (1 INTRODUCTION) |
+| Vk N estimates rewards beyond k steps with the learned value model. | p. 4 (B Sequence length) |
 
 | Audit field | Current status |
 |---|---|
@@ -165,7 +165,16 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 4: Imagination horizons. We compare the final performance of Dreamer, learning an action model without value prediction, and online planning using PlaNet. Learning a ...
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 12: Robustness of Dreamer to different control frequencies. Reinforcement learning methods can be sensitive to this hyper parameter, which could be amplified when learning ...
 
-- **PDF anchors reviewed:** datasets p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), metrics p. 18 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (6 EXPERIMENTS), p. 17 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), baselines p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), metrics p. 18 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (6 EXPERIMENTS), p. 17 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), baselines p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (20 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 8: Comparison of representation learning objectives to be used with Dreamer. Pixel recon- struction performs best for the majority of tasks. The contrastive objective solves about half of the ... (p. 8, Figure/Table caption).
+- **Metric evidence:** Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), an improved variant of DDPG (Lillicrap et al., 2015) that uses distributed ... (p. 8, 6 EXPERIMENTS).
+- **Baseline/ablation evidence:** PlaNet (Hafner et al., 2018) learns the same world model as Dreamer and selects actions via online planning without an action model and drastically improves over D4PG and A3C in ... (p. 8, 6 EXPERIMENTS).
+- **Failure/negative evidence:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).

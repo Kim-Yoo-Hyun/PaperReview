@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p053.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p053.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p053.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p053.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 3 (C. Trajectory Optimization for Contact-Rich Tas
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | While these approaches search over the parameters of a neural network policy and potentially optimize 4 more global objective, we leverage trajectory ... | p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 7 (B. Demonstration-Guided Trajectory Optimization) |
 | Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | ‘The iiwa and Panda arms differ in contact geometry, velocity limits, and joint constraints, all of which are explicitly modeled within the ... | p. 7 (B. Demonstration-Guided Trajectory Optimization), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 3 (C. Trajectory Optimization for Contact-Rich Tas
 |---|---|---|---|
 | Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | We solve (1) using 4 Sequential Quadratic Programming (SQP)-style algorithm: during each iteration, the nonpenetration constraint (1b) is linearized and the matching ... | episode/sequence/action-chunk boundary |
 | Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | space of the Allegro hand and the Iong-horizon nature of the task, which requires a sequence of coordinated rolling, pitching, and yawing ... | Hz/fps, inference time and control rate |
-| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
-| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -133,8 +133,17 @@ PDF body method statement (p. 3 (C. Trajectory Optimization for Contact-Rich Tas
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 7 (B. Demonstration-Guided Trajectory Optimization), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 6 (B. Demonstration-Guided Trajectory Optimization), p. 6 (B. Demonstration-Guided Trajectory Optimization), p. 5 (B. Demonstration-Guided Trajectory Optimization), objective p. 7 (B. Demonstration-Guided Trajectory Optimization), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 5 (B. Demonstration-Guided Trajectory Optimization), p. 4 (C. Trajectory Optimization for Contact-Rich Tasks), p. 4 (C. Trajectory Optimization for Contact-Rich Tasks), temporal p. 4 (A. Kinematic Motion Retargeting), p. 8 (A. Policy Evaluation in Simulation), p. 4 (A. Kinematic Motion Retargeting), p. 7 (A. Policy Evaluation in Simulation), p. 7 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation).
+- **Evidence anchors reviewed:** method p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 7 (B. Demonstration-Guided Trajectory Optimization), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 6 (B. Demonstration-Guided Trajectory Optimization), p. 6 (B. Demonstration-Guided Trajectory Optimization), p. 5 (B. Demonstration-Guided Trajectory Optimization), objective p. 7 (B. Demonstration-Guided Trajectory Optimization), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 3 (C. Trajectory Optimization for Contact-Rich Tasks), p. 5 (B. Demonstration-Guided Trajectory Optimization), p. 4 (C. Trajectory Optimization for Contact-Rich Tasks), p. 4 (C. Trajectory Optimization for Contact-Rich Tasks), temporal p. 4 (A. Kinematic Motion Retargeting), p. 8 (A. Policy Evaluation in Simulation), p. 4 (A. Kinematic Motion Retargeting), p. 7 (A. Policy Evaluation in Simulation), p. 7 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (14 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** While these approaches search over the parameters of a neural network policy and potentially optimize 4 more global objective, we leverage trajectory optimization as a complementary tool to locally refine ... (p. 3, C. Trajectory Optimization for Contact-Rich Tasks).
+- **Objective/update evidence:** Contact-Implicit Trajectory Optimization Existing works based on contact-implicit trajectory optimization (CITO) [22, 21] have sought to formulate the combinatorial problem into 4 smooth optimization problem by using complementarity con ... (p. 3, C. Trajectory Optimization for Contact-Rich Tasks).
+- **Temporal/runtime evidence:** space of the Allegro hand and the Iong-horizon nature of the task, which requires a sequence of coordinated rolling, pitching, and yawing actions to reorient the cube to an upright ... (p. 8, A. Policy Evaluation in Simulation).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

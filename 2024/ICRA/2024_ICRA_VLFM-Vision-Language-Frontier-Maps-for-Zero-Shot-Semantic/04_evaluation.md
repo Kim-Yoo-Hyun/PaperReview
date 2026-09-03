@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.03275; PDF retrieval source: https://arxiv.org/pdf/2312.03275. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2312.03275; PDF retrieval source: https://arxiv.org/pdf/2312.03275. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | V. EXPERIMENTAL SETUP | EMPIRICAL / REAL-ROBOT OR HARDWARE | For all approaches, we report success rate (SR) and Success weighted by inverse Path Length (SPL) [31]. | p. 5 (V. EXPERIMENTAL SETUP) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 1: VLFM achieves state-of-the-art semantic Object Goal Navigation performance in unfamiliar environments, without task-specific training, pre-built maps, or prior knowledge of the surroundings. ... | p. 1 (Figure/Table caption) |
@@ -54,7 +54,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our approach using the Habitat [5] simulator on the validation splits of three different datasets of 3D scans of real-world environments; Gibson ... | embodiment, simulator version and control stack | p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP) |
 | Task/environment | HM3D's validation split contains 2000 episodes across 20 scenes and 6 object categories. | reset, timeout, object/scene variation | p. 5 (V. EXPERIMENTAL SETUP) |
@@ -136,7 +136,16 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 - **p. 6 / VII. CONCLUSION - extractive body cue:** VLFM has a number of limitations that could be addressed by future work.
 - **p. 6 / VII. CONCLUSION - extractive body cue:** So, we cannot leverage this map in sequentially executed semantic navigation tasks to different objects or in executing other navigation tasks requiring targets specified by ...
 
-- **PDF anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), metrics p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), results p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), metrics p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), results p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** We evaluate our approach using the Habitat [5] simulator on the validation splits of three different datasets of 3D scans of real-world environments; Gibson [6], HM3D [8], and MP3D [7]. (p. 5, V. EXPERIMENTAL SETUP).
+- **Metric evidence:** For all approaches, we report success rate (SR) and Success weighted by inverse Path Length (SPL) [31]. (p. 5, V. EXPERIMENTAL SETUP).
+- **Baseline/ablation evidence:** Our method outperforms previous zero-shot methods and performs competitively against methods directly trained on the Object Navigation task. (p. 5, V. EXPERIMENTAL SETUP).
+- **Failure/negative evidence:** VLFM has a number of limitations that could be addressed by future work. (p. 6, VII. CONCLUSION).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yAzN4tz7oI; PDF retrieval source: https://openreview.net/pdf/29d56379d000b8c0e05906c5958e67e2e870ab0c.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=yAzN4tz7oI; PDF retrieval source: https://openreview.net/pdf/29d56379d000b8c0e05906c5958e67e2e870ab0c.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (Figure/Table captio
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | In Wash Cup and Pour Water, RDT can still achieve a high success rate on unseen scenarios, and its performance is not much different ... | p. 9 (5 EXPERIMENTS) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 3: Quantitative results. We report success rates (%) of ACT, OpenVLA, RDT (from scratch, no pre-trained), and RDT (ours, pre-trained) for 7 tasks. ... | p. 10 (Figure/Table caption) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (Figure/Table captio
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We aim to answer the following questions through real-robot experiments: Q1: Can RDT zero-shot generalize to unseen objects and scenes? | embodiment, simulator version and control stack | p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
 | Task/environment | TASK NAME DIMENSION EXPLANATION Wash Cup Unseen Object (Q1) To wash one seen and two unseen cups with the faucet Pour Water Unseen Scene ... | reset, timeout, object/scene variation | p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS) |
@@ -171,7 +171,16 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (Figure/Table captio
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** In contrast, the other baselines cannot even complete the entire task.
 - **p. 10 / 6 CONCLUSION - extractive body cue:** We further introduce a Physically Interpretable Unified Action Space to unify action representations across different robots, enhancing robustness and transferability.
 
-- **PDF anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (Figure/Table caption), p. 26 (Figure/Table caption), baselines p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 10 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 26 (Figure/Table caption), p. 6 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (Figure/Table caption), p. 26 (Figure/Table caption), baselines p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 10 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 26 (Figure/Table caption), p. 6 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (28 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 5.2 RESULTS ANALYSIS From the results in Table 3, we can see that RDT consistently outperforms other baselines. (p. 9, 5 EXPERIMENTS).
+- **Metric evidence:** In Wash Cup and Pour Water, RDT can still achieve a high success rate on unseen scenarios, and its performance is not much different from that on seen ones. (p. 9, 5 EXPERIMENTS).
+- **Baseline/ablation evidence:** 5.2 RESULTS ANALYSIS From the results in Table 3, we can see that RDT consistently outperforms other baselines. (p. 9, 5 EXPERIMENTS).
+- **Failure/negative evidence:** It probably makes ACT prone to failure. (p. 10, 5 EXPERIMENTS).

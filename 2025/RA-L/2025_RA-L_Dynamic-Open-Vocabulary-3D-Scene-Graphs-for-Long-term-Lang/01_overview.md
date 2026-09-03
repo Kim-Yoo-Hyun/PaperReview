@@ -1,8 +1,10 @@
 # Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2410.11989.
-> PDF retrieval source: https://arxiv.org/pdf/2410.11989. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2410.11989.
+> PDF retrieval source: https://arxiv.org/pdf/2410.11989. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RA-L
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://arxiv.org/pdf/2410.11989
 - Code/Project: https://github.com/BJHYZJ/DovSG
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -25,7 +27,6 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 - **p. 1 / Abstract - extractive body cue:** Traditional methods typically assume static scenes, which limits their applicability in the continuously changing real world.
 - **p. 1 / Abstract - extractive body cue:** To overcome these limitations, we present DovSG, a novel mobile manipulation framework that leverages dynamic open-vocabulary 3D scene graphs and a language-guided task planning module ...
 - **p. 1 / Abstract - extractive body cue:** DovSG takes RGB-D sequences as input and utilizes vision-language models (VLMs) for object detection to obtain high-level object semantic features.
-- **p. 1 / Abstract - extractive body cue:** Based on the segmented Manuscript received: October 16, 2024; Revised January 2, 2025; Accepted February 4, 2025.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** This limitation restricts their applicability in real-world scenarios where adaptability is crucial.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** To address the challenge of scene perception, our perception module integrates advanced tools such as RecognizeAnything [6], Grounding DINO [7], Segment Anything-2 [8], and CLIP ...
 
@@ -83,3 +84,12 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 ## Why Read It
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 This limitation restricts their applicability in real-world scenarios where adaptability is crucial.를 문제로 두고, Our contributions are as follows: • We propose a novel robotic framework that integrates dynamic open-vocabulary 3D scene graphs with languageguided task planning, enabling accurate long-term task execution in dynamic and interactive ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** This limitation restricts their applicability in real-world scenarios where adaptability is crucial. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Our contributions are as follows: • We propose a novel robotic framework that integrates dynamic open-vocabulary 3D scene graphs with languageguided task planning, enabling accurate long-term task execution in dynamic ... (p. 2, I. INTRODUCTION).
+- **Evaluation boundary:** This results in a 10.7% higher pick-up success rate than Ok-Robot, which relies solely on AnyGrasp. (p. 7, IV. EXPERIMENTS).
+- **Explicit failure boundary:** These changes are often invisible to previous approaches [3], [21], [14], and in such environments, if the robot cannot dynamically update its memory, it will soon face failure. (p. 4, III. METHOD).

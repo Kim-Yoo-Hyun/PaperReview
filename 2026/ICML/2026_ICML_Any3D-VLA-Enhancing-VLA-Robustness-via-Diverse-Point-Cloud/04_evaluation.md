@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=zyMvoKYWMZ; PDF retrieval source: https://openreview.net/pdf/01fd7931fc7be08bf369b6a34264822e6d1de9b9.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=zyMvoKYWMZ; PDF retrieval source: https://openreview.net/pdf/01fd7931fc7be08bf369b6a34264822e6d1de9b9.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD | EMPIRICAL / REAL-ROBOT OR HARDWARE | In particular, the overall average success rate for (Setting 2, DA3) reaches 62.5%, representing a 29.2% improvement over the strongest baseline SpatialVLA, which achieves ... | p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD) |
 | 6.5. LIBERO and CALVIN Benchmarks | EMPIRICAL / REAL-ROBOT OR HARDWARE | ANY3D-VLA achieves good results: it improves over GraspVLA by 13.9% on LIBERO; on CALVIN, it increases the average length by 0.71 compared to GraspVLA; ... | p. 8 (6.5. LIBERO and CALVIN Benchmarks) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | This dataset includes 15 object categories that appeared in the pre-training data, while the layouts and backgrounds are randomly generated and unseen during pre-training, ... | embodiment, simulator version and control stack | p. 3 (3. Dataset and Benchmark), p. 3 (3. Dataset and Benchmark) |
 | Task/environment | To validate the effectiveness of pre-training in simulation, we constructed an RGBD evaluation dataset as a benchmark using the same procedure. | reset, timeout, object/scene variation | p. 3 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 - **p. 3 / 3. Dataset and Benchmark - extractive body cue:** To isolate the impact of observation space design and visual representation construction on VLA performance, we adopt the following controlled settings: (1) We use the ...
 - **p. 4 / 3. Dataset and Benchmark - extractive body cue:** 2D backbones struggle to effectively infer occlusion relationships and absolute scales from flattened depth maps.
 
-- **PDF anchors reviewed:** datasets p. 3 (3. Dataset and Benchmark), p. 3 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation), p. 6 (6.1.1. REAL-WORLD SETUP), p. 6 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), metrics p. 6 (6.1.1. REAL-WORLD SETUP), p. 7 (6.1.3. REAL-WORLD POST-TRAINING), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation), p. 8 (6.4. Ablation Study), p. 21 (Figure/Table caption), baselines p. 7 (6.1.3. REAL-WORLD POST-TRAINING), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 6 (6.1.1. REAL-WORLD SETUP), p. 8 (0.3 FPS), p. 8 (0.3 FPS), p. 4 (3. Dataset and Benchmark), results p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 21 (Figure/Table caption), p. 4 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation).
+- **Evidence anchors reviewed:** datasets p. 3 (3. Dataset and Benchmark), p. 3 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation), p. 6 (6.1.1. REAL-WORLD SETUP), p. 6 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), metrics p. 6 (6.1.1. REAL-WORLD SETUP), p. 7 (6.1.3. REAL-WORLD POST-TRAINING), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation), p. 8 (6.4. Ablation Study), p. 21 (Figure/Table caption), baselines p. 7 (6.1.3. REAL-WORLD POST-TRAINING), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 6 (6.1.1. REAL-WORLD SETUP), p. 8 (0.3 FPS), p. 8 (0.3 FPS), p. 4 (3. Dataset and Benchmark), results p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 21 (Figure/Table caption), p. 4 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark).
+- **Metric evidence:** Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark).
+- **Baseline/ablation evidence:** ANY3DVLA outperforms the baselines on both tasks. (p. 7, 6.1.3. REAL-WORLD POST-TRAINING).
+- **Failure/negative evidence:** Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single robotic arm and a limited ... (p. 8, 7. Limitations and Future Work).

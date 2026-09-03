@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1038/nature14236; PDF retrieval source: https://doi.org/10.1038/nature14236. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1038/nature14236; PDF retrieval source: https://doi.org/10.1038/nature14236. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 
 ## Evaluation Body Digest
 
-- **p. 5 / 2 6 F E B R U A R Y - extractive PDF cue:** Reinforcement learning for robot soccer.
-- **p. 5 / 2 6 F E B R U A R Y - extractive PDF cue:** Reinforcement learning for robots using neural networks.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, Krull ...
-- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** First, we use a technique known as experience replay23 in which we store the agent's experiences at each time-step, et5(st,at, rt,st 1 1), in a ...
-- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** Note that these evaluation episodes were not truncated at 5 min leading to higher scores on Enduro than the ones reported in Extended Data Table ...
-- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** Each agent was evaluated every 250,000 training frames for 135,000 validation frames and the highest average episode score is reported.
-- **p. 4 / 2 6 F E B R U A R Y - extractive PDF cue:** Object recognition with features inspired by visual cortex.
+- **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Reinforcement learning for robot soccer.
+- **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Reinforcement learning for robots using neural networks.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, Krull ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** First, we use a technique known as experience replay23 in which we store the agent's experiences at each time-step, et5(st,at, rt,st 1 1), in a ...
+- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Note that these evaluation episodes were not truncated at 5 min leading to higher scores on Enduro than the ones reported in Extended Data Table ...
+- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Each agent was evaluated every 250,000 training frames for 135,000 validation frames and the highest average episode score is reported.
+- **p. 4 / 2 6 F E B R U A R Y - extractive body cue:** Object recognition with features inspired by visual cortex.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess | SYSTEM / EVALUATION SCOPE UNRESOLVED | The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game. | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess | SYSTEM / EVALUATION SCOPE UNRESOLVED | This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, ... | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
@@ -40,14 +40,14 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 2 6 F E B R U A R Y - extractive PDF cue:** Reinforcement learning for robot soccer.
-- **p. 5 / 2 6 F E B R U A R Y - extractive PDF cue:** Reinforcement learning for robots using neural networks.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, Krull ...
-- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** First, we use a technique known as experience replay23 in which we store the agent's experiences at each time-step, et5(st,at, rt,st 1 1), in a ...
-- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** Note that these evaluation episodes were not truncated at 5 min leading to higher scores on Enduro than the ones reported in Extended Data Table ...
-- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** Each agent was evaluated every 250,000 training frames for 135,000 validation frames and the highest average episode score is reported.
-- **p. 4 / 2 6 F E B R U A R Y - extractive PDF cue:** Object recognition with features inspired by visual cortex.
+- **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Reinforcement learning for robot soccer.
+- **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Reinforcement learning for robots using neural networks.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, Krull ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** First, we use a technique known as experience replay23 in which we store the agent's experiences at each time-step, et5(st,at, rt,st 1 1), in a ...
+- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Note that these evaluation episodes were not truncated at 5 min leading to higher scores on Enduro than the ones reported in Extended Data Table ...
+- **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Each agent was evaluated every 250,000 training frames for 135,000 validation frames and the highest average episode score is reported.
+- **p. 4 / 2 6 F E B R U A R Y - extractive body cue:** Object recognition with features inspired by visual cortex.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -57,7 +57,7 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Reinforcement learning for robot soccer. | embodiment, simulator version and control stack | p. 5 (2 6 F E B R U A R Y), p. 5 (2 6 F E B R U A R Y) |
 | Task/environment | Reinforcement learning for robots using neural networks. | reset, timeout, object/scene variation | p. 5 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
@@ -114,12 +114,12 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 | Primary metric/result | This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, ... | numeric claim only at cited anchor | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** 10 Hz is about the fastest that a human player can select the ‘fire' button, and setting the random agent to this frequency avoids spurious ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** As in the original Atari 2600 environment, the emulator was run at 60 Hz and the audio output was disabled: as such, the sensory input ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** 10 Hz is about the fastest that a human player can select the ‘fire' button, and setting the random agent to this frequency avoids spurious ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** As in the original Atari 2600 environment, the emulator was run at 60 Hz and the audio output was disabled: as such, the sensory input ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** 10 Hz is about the fastest that a human player can select the ‘fire' button, and setting the random agent to this frequency avoids spurious ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** As in the original Atari 2600 environment, the emulator was run at 60 Hz and the audio output was disabled: as such, the sensory input ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** 10 Hz is about the fastest that a human player can select the ‘fire' button, and setting the random agent to this frequency avoids spurious ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** As in the original Atari 2600 environment, the emulator was run at 60 Hz and the audio output was disabled: as such, the sensory input ...
 
 ## Generalization and Failure Cases
 
@@ -156,14 +156,14 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 
 ## Limitations and Verification Questions
 
-- **p. 5 / 2 6 F E B R U A R Y - extractive PDF cue:** Why there are complementary learning systems in the hippocampus and neocortex: insights from the successes and failures of connectionist models of learning and memory.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** At the same time, it could affect the performance of our agent since it cannot differentiate between rewards of different magnitude.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** Thevaluesofallthehyperparametersandoptimizationparameterswereselected by performing an informal search on the games Pong, Breakout, Seaquest, Space Invaders and Beam Rider.
-- **p. 9 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** At time point 2, the agent starts moving the paddle towards the ball and the value of the ‘up' action stays high while the value ...
-- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** The final term is the variance of the targets, which does not depend on the parameters hi that we are currently optimizing, and may therefore ...
-- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive PDF cue:** This approach is in some respects limited because the memory buffer does not differentiate important transitions and always overwrites with recent transitions owing to the ...
+- **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Why there are complementary learning systems in the hippocampus and neocortex: insights from the successes and failures of connectionist models of learning and memory.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** At the same time, it could affect the performance of our agent since it cannot differentiate between rewards of different magnitude.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Thevaluesofallthehyperparametersandoptimizationparameterswereselected by performing an informal search on the games Pong, Breakout, Seaquest, Space Invaders and Beam Rider.
+- **p. 9 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** At time point 2, the agent starts moving the paddle towards the ball and the value of the ‘up' action stays high while the value ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The final term is the variance of the targets, which does not depend on the parameters hi that we are currently optimizing, and may therefore ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This approach is in some respects limited because the memory buffer does not differentiate important transitions and always overwrites with recent transitions owing to the ...
 
-- **PDF anchors reviewed:** datasets p. 5 (2 6 F E B R U A R Y), p. 5 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), metrics p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 4 (2 6 F E B R U A R Y), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), baselines p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 13 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), results p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess).
+- **Evidence anchors reviewed:** datasets p. 5 (2 6 F E B R U A R Y), p. 5 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), metrics p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 4 (2 6 F E B R U A R Y), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), baselines p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 13 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), results p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

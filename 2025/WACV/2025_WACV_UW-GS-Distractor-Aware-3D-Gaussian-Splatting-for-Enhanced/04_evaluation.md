@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/WACV2025/html/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/WACV2025/papers/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5. Results and Discussion), p. 8 (5. Resul
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4. Experiment Configuration - extractive PDF cue:** On the other hand, we will also use these three metrics in dynamic scenes after using motion mask provided from dataset to exclude moving objects.
-- **p. 6 / 4. Experiment Configuration - extractive PDF cue:** We used their official implementation, but trained on the same sequence using the same dataset split strategy.
-- **p. 8 / 5. Results and Discussion - extractive PDF cue:** We selected two challenging scenes from the IW dataset [39], which includes motion masks that aid in assessing reconstruction quality by excluding dynamic content.
-- **p. 6 / 4. Experiment Configuration - extractive PDF cue:** The BMM, is applied to the scenes containing dynamic objects.
-- **p. 7 / 4. Experiment Configuration - extractive PDF cue:** Novel view rendering comparison in Panama from Seathru-NeRF dataset [26] and Reef from S-UW.
-- **p. 8 / 5. Results and Discussion - extractive PDF cue:** However, because BMM may imperfectly classify, the reconstruction quality in static areas is somewhat degraded, as seen in the objective results of IW dataset shown ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Visual comparison between 3DGS [22] and our proposed UW-GS method. Left to right: Raw videos and the results of 3DGS and UW-GS, respectively. ...
-- **p. 7 / 5. Results and Discussion - extractive PDF cue:** Our approach illustrates effectiveness and robustness across various scenes.
+- **p. 7 / 4. Experiment Configuration - extractive body cue:** On the other hand, we will also use these three metrics in dynamic scenes after using motion mask provided from dataset to exclude moving objects.
+- **p. 6 / 4. Experiment Configuration - extractive body cue:** We used their official implementation, but trained on the same sequence using the same dataset split strategy.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** We selected two challenging scenes from the IW dataset [39], which includes motion masks that aid in assessing reconstruction quality by excluding dynamic content.
+- **p. 6 / 4. Experiment Configuration - extractive body cue:** The BMM, is applied to the scenes containing dynamic objects.
+- **p. 7 / 4. Experiment Configuration - extractive body cue:** Novel view rendering comparison in Panama from Seathru-NeRF dataset [26] and Reef from S-UW.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** However, because BMM may imperfectly classify, the reconstruction quality in static areas is somewhat degraded, as seen in the objective results of IW dataset shown ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Visual comparison between 3DGS [22] and our proposed UW-GS method. Left to right: Raw videos and the results of 3DGS and UW-GS, respectively. ...
+- **p. 7 / 5. Results and Discussion - extractive body cue:** Our approach illustrates effectiveness and robustness across various scenes.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5. Results and Discussion), p. 8 (5. Resul
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Results and Discussion | EMPIRICAL / SOURCE-REPORTED EVALUATION | For the SeaThru-NeRF dataset, our method shows the best overall performance and achieves average 2.09dB and 2.70dB PSNR improvement compared to 3DGS and Seathru-NeRF ... | p. 7 (5. Results and Discussion) |
 | 5. Results and Discussion | EMPIRICAL / SOURCE-REPORTED EVALUATION | The results are shown in Table 2 verifies that our architecture can achieve the overall best performance while others suffer from performance degradation. | p. 8 (5. Results and Discussion) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5. Results and Discussion), p. 8 (5. Resul
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4. Experiment Configuration - extractive PDF cue:** On the other hand, we will also use these three metrics in dynamic scenes after using motion mask provided from dataset to exclude moving objects.
-- **p. 6 / 4. Experiment Configuration - extractive PDF cue:** We used their official implementation, but trained on the same sequence using the same dataset split strategy.
-- **p. 8 / 5. Results and Discussion - extractive PDF cue:** We selected two challenging scenes from the IW dataset [39], which includes motion masks that aid in assessing reconstruction quality by excluding dynamic content.
-- **p. 6 / 4. Experiment Configuration - extractive PDF cue:** The BMM, is applied to the scenes containing dynamic objects.
-- **p. 7 / 4. Experiment Configuration - extractive PDF cue:** Novel view rendering comparison in Panama from Seathru-NeRF dataset [26] and Reef from S-UW.
-- **p. 8 / 5. Results and Discussion - extractive PDF cue:** However, because BMM may imperfectly classify, the reconstruction quality in static areas is somewhat degraded, as seen in the objective results of IW dataset shown ...
+- **p. 7 / 4. Experiment Configuration - extractive body cue:** On the other hand, we will also use these three metrics in dynamic scenes after using motion mask provided from dataset to exclude moving objects.
+- **p. 6 / 4. Experiment Configuration - extractive body cue:** We used their official implementation, but trained on the same sequence using the same dataset split strategy.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** We selected two challenging scenes from the IW dataset [39], which includes motion masks that aid in assessing reconstruction quality by excluding dynamic content.
+- **p. 6 / 4. Experiment Configuration - extractive body cue:** The BMM, is applied to the scenes containing dynamic objects.
+- **p. 7 / 4. Experiment Configuration - extractive body cue:** Novel view rendering comparison in Panama from Seathru-NeRF dataset [26] and Reef from S-UW.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** However, because BMM may imperfectly classify, the reconstruction quality in static areas is somewhat degraded, as seen in the objective results of IW dataset shown ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Additionally, underwater scenes typically contain moving elements, such as fish and floating debris, increas- ing complexity. These elements are frequently referred to as ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1. Visual comparison between 3DGS [22] and our proposed UW-GS method. Left to right: Raw videos and the results of 3DGS and UW-GS, respectively. ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The diagram of our proposed UW-GS approach, combining a novel color appearance model, physical-based density control and binary motion mask to 3DGS. Our ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Left: Diagram of 2D Position gradient calculation. Right: Illustration of densification failures (G2 highlighted in orange) that appear to be not cloned or ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Sample images from S-UW dataset. dataset from [39], and iii) our dataset, S-UW. SeaThru- NeRF [26] comprises four image sequences captured in dif- ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Qualitative results of the proposed method evaluated on SeaThru-NeRF and S-UW dataset. ↑refers larger values are better while ↓is opposite. Bold indicates the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Novel view rendering comparison in Panama from Seathru-NeRF dataset [26] and Reef from S-UW. We have shown details blow the images. Please note ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. The first row presents render images while the second row shows their corresponding estimated clean images ˆJ, which are obtained by solely using ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Additionally, underwater scenes typically contain moving elements, such as fish and floating debris, increas- ing complexity. These elements are frequently referred to as ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Visual comparison between 3DGS [22] and our proposed UW-GS method. Left to right: Raw videos and the results of 3DGS and UW-GS, respectively. ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The diagram of our proposed UW-GS approach, combining a novel color appearance model, physical-based density control and binary motion mask to 3DGS. Our ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Left: Diagram of 2D Position gradient calculation. Right: Illustration of densification failures (G2 highlighted in orange) that appear to be not cloned or ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Sample images from S-UW dataset. dataset from [39], and iii) our dataset, S-UW. SeaThru- NeRF [26] comprises four image sequences captured in dif- ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Qualitative results of the proposed method evaluated on SeaThru-NeRF and S-UW dataset. ↑refers larger values are better while ↓is opposite. Bold indicates the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Novel view rendering comparison in Panama from Seathru-NeRF dataset [26] and Reef from S-UW. We have shown details blow the images. Please note ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. The first row presents render images while the second row shows their corresponding estimated clean images ˆJ, which are obtained by solely using ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | On the other hand, we will also use these three metrics in dynamic scenes after using motion mask provided from dataset to exclude moving ... | embodiment, simulator version and control stack | p. 7 (4. Experiment Configuration), p. 6 (4. Experiment Configuration) |
 | Task/environment | We used their official implementation, but trained on the same sequence using the same dataset split strategy. | reset, timeout, object/scene variation | p. 6 (4. Experiment Configuration), p. 8 (5. Results and Discussion) |
@@ -118,8 +118,8 @@ PDF body evaluation/result cue (p. 7 (5. Results and Discussion), p. 8 (5. Resul
 | Primary metric/result | The results are shown in Table 2 verifies that our architecture can achieve the overall best performance while others suffer from performance degradation. | numeric claim only at cited anchor | p. 8 (5. Results and Discussion) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 3.5. Binary Motion Mask - extractive PDF cue:** For this reason, a 3×3 diffusion kernel B is applied to maintain spatial smoothness as shown in Equation 9.
-- **p. 5 / 3.5. Binary Motion Mask - extractive PDF cue:** Moreover, to avoid high-frequency content being treated as outliers, every 8 × 8 patch R8×8 is classified according to the average value of its 16×16 ...
+- **p. 5 / 3.5. Binary Motion Mask - extractive body cue:** For this reason, a 3×3 diffusion kernel B is applied to maintain spatial smoothness as shown in Equation 9.
+- **p. 5 / 3.5. Binary Motion Mask - extractive body cue:** Moreover, to avoid high-frequency content being treated as outliers, every 8 × 8 patch R8×8 is classified according to the average value of its 16×16 ...
 
 ## Generalization and Failure Cases
 
@@ -154,14 +154,14 @@ PDF body evaluation/result cue (p. 7 (5. Results and Discussion), p. 8 (5. Resul
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Results and Discussion - extractive PDF cue:** The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected.
-- **p. 7 / 5. Results and Discussion - extractive PDF cue:** The limited improvement compared to 3DGS can be attributed to the unstable lighting from above the water surface.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. The diagram of our proposed UW-GS approach, combining a novel color appearance model, physical-based density control and binary motion mask to 3DGS. Our ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Left: Diagram of 2D Position gradient calculation. Right: Illustration of densification failures (G2 highlighted in orange) that appear to be not cloned or ...
-- **p. 7 / 5. Results and Discussion - extractive PDF cue:** Our approach illustrates effectiveness and robustness across various scenes.
-- **p. 8 / 5. Results and Discussion - extractive PDF cue:** The results are shown in Table 2 verifies that our architecture can achieve the overall best performance while others suffer from performance degradation.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** The improvement of our method is not obvious in the shallow underwater scene because the disturbance of light from above the water cannot be neglected.
+- **p. 7 / 5. Results and Discussion - extractive body cue:** The limited improvement compared to 3DGS can be attributed to the unstable lighting from above the water surface.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The diagram of our proposed UW-GS approach, combining a novel color appearance model, physical-based density control and binary motion mask to 3DGS. Our ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Left: Diagram of 2D Position gradient calculation. Right: Illustration of densification failures (G2 highlighted in orange) that appear to be not cloned or ...
+- **p. 7 / 5. Results and Discussion - extractive body cue:** Our approach illustrates effectiveness and robustness across various scenes.
+- **p. 8 / 5. Results and Discussion - extractive body cue:** The results are shown in Table 2 verifies that our architecture can achieve the overall best performance while others suffer from performance degradation.
 
-- **PDF anchors reviewed:** datasets p. 7 (4. Experiment Configuration), p. 6 (4. Experiment Configuration), p. 8 (5. Results and Discussion), p. 6 (4. Experiment Configuration), p. 7 (4. Experiment Configuration), p. 8 (5. Results and Discussion), metrics p. 2 (Figure/Table caption), p. 7 (5. Results and Discussion), p. 6 (4. Experiment Configuration), p. 6 (4. Experiment Configuration), p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), baselines p. 6 (4. Experiment Configuration), p. 7 (5. Results and Discussion), p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 2 (Figure/Table caption), results p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 5 (Figure/Table caption), p. 6 (4. Experiment Configuration).
+- **Evidence anchors reviewed:** datasets p. 7 (4. Experiment Configuration), p. 6 (4. Experiment Configuration), p. 8 (5. Results and Discussion), p. 6 (4. Experiment Configuration), p. 7 (4. Experiment Configuration), p. 8 (5. Results and Discussion), metrics p. 2 (Figure/Table caption), p. 7 (5. Results and Discussion), p. 6 (4. Experiment Configuration), p. 6 (4. Experiment Configuration), p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), baselines p. 6 (4. Experiment Configuration), p. 7 (5. Results and Discussion), p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 2 (Figure/Table caption), results p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 7 (5. Results and Discussion), p. 8 (5. Results and Discussion), p. 5 (Figure/Table caption), p. 6 (4. Experiment Configuration).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

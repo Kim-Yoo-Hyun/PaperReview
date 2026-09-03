@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions ... | p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | In practice, the network is trained by sampling random noise « ~ \'(0, 1), computing the "noisy actions" Aj = rAy + ... | p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | In contrast, our model employs a novel design that fine-tunes a VLM to produce actions via flow matching (52, 28], a variant ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | ur empirical evaluation studies tasks that combine dexterity, generalization, and temporally extended multi-stage behaviors. ur model incorporates Internet-scale vision-language model (VLM) pre-training ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
+| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | In contrast, our model employs a novel design that fine-tunes a VLM to produce actions via flow matching (52, 28], a variant ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -134,8 +134,17 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 7 (A. Evaluating the base model), objective p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 5 (IV. THE x MODEL), p. 8 (A. Evaluating the base model), temporal p. 3 (1. INTRODUCTION), p. 11 (C. Learning new dexterous tasks), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL).
+- **Evidence anchors reviewed:** method p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 7 (A. Evaluating the base model), objective p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 5 (IV. THE x MODEL), p. 8 (A. Evaluating the base model), temporal p. 3 (1. INTRODUCTION), p. 11 (C. Learning new dexterous tasks), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our architecture is inspired by Transfusion [59], which trains a single transformer using multiple objectives, with tokens! corresponding to continuous outputs supervised via a flow matching loss and tokens corresponding ... (p. 4, IV. THE x MODEL).
+- **Objective/update evidence:** Our architecture is inspired by Transfusion [59], which trains a single transformer using multiple objectives, with tokens! corresponding to continuous outputs supervised via a flow matching loss and tokens corresponding ... (p. 4, IV. THE x MODEL).
+- **Temporal/runtime evidence:** In contrast, our model employs a novel design that fine-tunes a VLM to produce actions via flow matching (52, 28], a variant of diffusion [20, 46} This allows us to ... (p. 3, 1. INTRODUCTION).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

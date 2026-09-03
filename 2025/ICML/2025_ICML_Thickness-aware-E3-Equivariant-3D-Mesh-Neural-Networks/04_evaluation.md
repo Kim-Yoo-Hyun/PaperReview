@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Ya2ksKuNMh; PDF retrieval source: https://openreview.net/pdf/9288751ce812b90a105565d83b7d5b425b2f11d7.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Ya2ksKuNMh; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167333. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RE
 
 ## Evaluation Body Digest
 
-- **p. 6 / 5.1. Dataset Description - extractive PDF cue:** We evaluate T-EMNN using a dataset from real-world injection molding applications.
-- **p. 6 / 5.1. Dataset Description - extractive PDF cue:** This dataset is well-suited for evaluating T-EMNN as its geometries exhibit thickness across all surfaces, enabling thickness-related interaction modeling.
-- **p. 7 / 5.3. Evaluation Settings - extractive PDF cue:** We assess the model performance using three metrics: 1) RMSE, which evaluates the effectiveness of handling outliers, 2) MAE, which measures the consistency and accuracy ...
-- **p. 8 / 5.4.3. EVALUATION UNDER DYNAMIC SETTING - extractive PDF cue:** To evaluate the dynamic capabilities of our framework-particularly the thickness processor-we conduct next-timestep deformation prediction using the Deforming Plate dataset (Pfaff et al., 2020).
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive PDF cue:** Spatial information plays a critical role in capturing localized patterns, which are essential for accurate interpretation in downstream tasks.
-- **p. 8 / 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK - extractive PDF cue:** This result validates the importance of the thickness in 3D objects, and its effective integration can improve the models' capability in static analysis.
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive PDF cue:** This underscores the critical role of E(3)-equivariance in ensuring the robustness of the coordinate system.
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive PDF cue:** The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful relationships ...
+- **p. 6 / 5.1. Dataset Description - extractive body cue:** We evaluate T-EMNN using a dataset from real-world injection molding applications.
+- **p. 6 / 5.1. Dataset Description - extractive body cue:** This dataset is well-suited for evaluating T-EMNN as its geometries exhibit thickness across all surfaces, enabling thickness-related interaction modeling.
+- **p. 7 / 5.3. Evaluation Settings - extractive body cue:** We assess the model performance using three metrics: 1) RMSE, which evaluates the effectiveness of handling outliers, 2) MAE, which measures the consistency and accuracy ...
+- **p. 8 / 5.4.3. EVALUATION UNDER DYNAMIC SETTING - extractive body cue:** To evaluate the dynamic capabilities of our framework-particularly the thickness processor-we conduct next-timestep deformation prediction using the Deforming Plate dataset (Pfaff et al., 2020).
+- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** Spatial information plays a critical role in capturing localized patterns, which are essential for accurate interpretation in downstream tasks.
+- **p. 8 / 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK - extractive body cue:** This result validates the importance of the thickness in 3D objects, and its effective integration can improve the models' capability in static analysis.
+- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** This underscores the critical role of E(3)-equivariance in ensuring the robustness of the coordinate system.
+- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful relationships ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RE
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5.4.1. MAIN RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful ... | p. 7 (5.4.1. MAIN RESULTS) |
 | 5.4.1. MAIN RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The enhanced alignment provided by our proposed data-driven coordinate system significantly improves the representation of spatial relationships, leading to superior performance in downstream tasks. | p. 7 (5.4.1. MAIN RESULTS) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RE
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 5.1. Dataset Description - extractive PDF cue:** We evaluate T-EMNN using a dataset from real-world injection molding applications.
-- **p. 6 / 5.1. Dataset Description - extractive PDF cue:** This dataset is well-suited for evaluating T-EMNN as its geometries exhibit thickness across all surfaces, enabling thickness-related interaction modeling.
-- **p. 7 / 5.3. Evaluation Settings - extractive PDF cue:** We assess the model performance using three metrics: 1) RMSE, which evaluates the effectiveness of handling outliers, 2) MAE, which measures the consistency and accuracy ...
-- **p. 8 / 5.4.3. EVALUATION UNDER DYNAMIC SETTING - extractive PDF cue:** To evaluate the dynamic capabilities of our framework-particularly the thickness processor-we conduct next-timestep deformation prediction using the Deforming Plate dataset (Pfaff et al., 2020).
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive PDF cue:** Spatial information plays a critical role in capturing localized patterns, which are essential for accurate interpretation in downstream tasks.
-- **p. 8 / 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK - extractive PDF cue:** This result validates the importance of the thickness in 3D objects, and its effective integration can improve the models' capability in static analysis.
+- **p. 6 / 5.1. Dataset Description - extractive body cue:** We evaluate T-EMNN using a dataset from real-world injection molding applications.
+- **p. 6 / 5.1. Dataset Description - extractive body cue:** This dataset is well-suited for evaluating T-EMNN as its geometries exhibit thickness across all surfaces, enabling thickness-related interaction modeling.
+- **p. 7 / 5.3. Evaluation Settings - extractive body cue:** We assess the model performance using three metrics: 1) RMSE, which evaluates the effectiveness of handling outliers, 2) MAE, which measures the consistency and accuracy ...
+- **p. 8 / 5.4.3. EVALUATION UNDER DYNAMIC SETTING - extractive body cue:** To evaluate the dynamic capabilities of our framework-particularly the thickness processor-we conduct next-timestep deformation prediction using the Deforming Plate dataset (Pfaff et al., 2020).
+- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** Spatial information plays a critical role in capturing localized patterns, which are essential for accurate interpretation in downstream tasks.
+- **p. 8 / 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK - extractive body cue:** This result validates the importance of the thickness in 3D objects, and its effective integration can improve the models' capability in static analysis.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The left figures show a mesh, with two different target nodes (•), their thickness paired nodes (•), thickness distance (-), and nearby nodes ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of T-EMNN. 𝐛! 𝐛" 𝐛# 𝐱$$%& 𝐱'( 𝐛# 𝐯= 𝐱!" -𝐱##$%
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Our proposed data-driven coordinate system. system defined by the shape itself, independent of its orien- tation or alignment in the original coordinate system. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. The concept of thickness (left) and width (right). Sec 3.3. In brief, thickness is characterized by the spatial separation between opposing surfaces, with ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses). Bold indicates the best performance among the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Learning curve of the thickness threshold τ during train- ing across three seeds (left), and the distribution of thickness values t(vi) with the ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Performance comparison of T-EMNN with a fixed thick- ness threshold. The value 5.68 corresponds to the learned thickness threshold in T-EMNN when using ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7. Visualization of error magnitude (RMSE). The ground truth shows deformation magnitude (a), while (b-f) illustrate prediction errors. Additional examples are in Fig. 15 ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The left figures show a mesh, with two different target nodes (•), their thickness paired nodes (•), thickness distance (-), and nearby nodes ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of T-EMNN. 𝐛! 𝐛" 𝐛# 𝐱$$%& 𝐱'( 𝐛# 𝐯= 𝐱!" -𝐱##$%
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Our proposed data-driven coordinate system. system defined by the shape itself, independent of its orien- tation or alignment in the original coordinate system. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. The concept of thickness (left) and width (right). Sec 3.3. In brief, thickness is characterized by the spatial separation between opposing surfaces, with ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses). Bold indicates the best performance among the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Learning curve of the thickness threshold τ during train- ing across three seeds (left), and the distribution of thickness values t(vi) with the ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Performance comparison of T-EMNN with a fixed thick- ness threshold. The value 5.68 corresponds to the learned thickness threshold in T-EMNN when using ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Visualization of error magnitude (RMSE). The ground truth shows deformation magnitude (a), while (b-f) illustrate prediction errors. Additional examples are in Fig. 15 ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate T-EMNN using a dataset from real-world injection molding applications. | embodiment, simulator version and control stack | p. 6 (5.1. Dataset Description), p. 6 (5.1. Dataset Description) |
 | Task/environment | This dataset is well-suited for evaluating T-EMNN as its geometries exhibit thickness across all surfaces, enabling thickness-related interaction modeling. | reset, timeout, object/scene variation | p. 6 (5.1. Dataset Description), p. 7 (5.3. Evaluation Settings) |
@@ -120,7 +120,7 @@ PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RE
 | Primary metric/result | The enhanced alignment provided by our proposed data-driven coordinate system significantly improves the representation of spatial relationships, leading to superior performance in downstream tasks. | numeric claim only at cited anchor | p. 7 (5.4.1. MAIN RESULTS) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 5.3. Evaluation Settings - extractive PDF cue:** Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses).
+- **p. 7 / 5.3. Evaluation Settings - extractive body cue:** Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses).
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RE
 
 ## Limitations and Verification Questions
 
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 14. Comparisons between volume mesh and surface mesh. The methods used for comparison are based on the MGN framework with coordinate embeddings from our ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 13. R2 scores for all test data. In the shape IDs, ‘s' indicates seen shapes included in the training data, while ‘us' refers to ...
-- **p. 13 / Figure/Table caption - extractive PDF cue:** Table 4. Comparison of training speed (iteration/sec) and GPU memory usage (MB) across different models. Our model is based on MGN, with an additional thickness ...
-- **p. 6 / 5.3. Evaluation Settings - extractive PDF cue:** Note that the out-of-distribution scenario is designed to assess how well the methods adapt to objects 6
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive PDF cue:** This underscores the critical role of E(3)-equivariance in ensuring the robustness of the coordinate system.
-- **p. 7 / 5.3. Evaluation Settings - extractive PDF cue:** Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses).
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 14. Comparisons between volume mesh and surface mesh. The methods used for comparison are based on the MGN framework with coordinate embeddings from our ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 13. R2 scores for all test data. In the shape IDs, ‘s' indicates seen shapes included in the training data, while ‘us' refers to ...
+- **p. 13 / Figure/Table caption - extractive body cue:** Table 4. Comparison of training speed (iteration/sec) and GPU memory usage (MB) across different models. Our model is based on MGN, with an additional thickness ...
+- **p. 6 / 5.3. Evaluation Settings - extractive body cue:** Note that the out-of-distribution scenario is designed to assess how well the methods adapt to objects 6
+- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** This underscores the critical role of E(3)-equivariance in ensuring the robustness of the coordinate system.
+- **p. 7 / 5.3. Evaluation Settings - extractive body cue:** Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses).
 
-- **PDF anchors reviewed:** datasets p. 6 (5.1. Dataset Description), p. 6 (5.1. Dataset Description), p. 7 (5.3. Evaluation Settings), p. 8 (5.4.3. EVALUATION UNDER DYNAMIC SETTING), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), metrics p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.1. MAIN RESULTS), p. 14 (Figure/Table caption), p. 8 (5.4.1. MAIN RESULTS), p. 12 (Figure/Table caption), baselines p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 8 (5.4.1. MAIN RESULTS), p. 6 (5.2. Baselines), p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 13 (Figure/Table caption), results p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 14 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK).
+- **Evidence anchors reviewed:** datasets p. 6 (5.1. Dataset Description), p. 6 (5.1. Dataset Description), p. 7 (5.3. Evaluation Settings), p. 8 (5.4.3. EVALUATION UNDER DYNAMIC SETTING), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), metrics p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.1. MAIN RESULTS), p. 14 (Figure/Table caption), p. 8 (5.4.1. MAIN RESULTS), p. 12 (Figure/Table caption), baselines p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 8 (5.4.1. MAIN RESULTS), p. 6 (5.2. Baselines), p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 13 (Figure/Table caption), results p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 14 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

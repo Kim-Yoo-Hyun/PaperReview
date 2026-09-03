@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 Real-Time Force Feedback System VTLA System VIT Paligemma Action Expert Robot States Force-aware Instruction Marker Motion Field?를 All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are sampled synchronously at 20 Hz to produce temporally aligned multimodal ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ...
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are sampled synchronously at 20 Hz to produce temporally ... (p. 4, 3.2. Cross-Modal Data Acquisition).
+- **Paper-specific mechanism:** In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ... (p. 2, 1. Introduction).
+- **Evidence boundary:** the reported outcome is When using the same robot kinematics and control policy as in the original dataset, our baseline configuration yields a success rate distribution that closely matches that reported in OpenVLA (Kim ... (p. 6, 4.1. Cross-Platform Data Validation); the relevant task/metric cue is Furthermore, the sharp drop in success rate from 25% to 10% Figure 6. (p. 7, 4.2. Tactile Data Diversity Analysis). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation. (p. 7, 4.2. Tactile Data Diversity Analysis).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: Specifically, we select four subtasks from the LIBERO benchmark suite and compare the success rates of the original MuJoCo-based dataset with those of our replayed version in Isaac Lab..
-3. Compare against the body-reported baseline or a matched simpler baseline: We compare a baseline using binary gripper control against our approach, which explicitly sets different force parameters during execution, the results are shown in fig..
-4. Report the body metric and its denominator/aggregation: Cross-platform data validation: Task success rates across four LIBERO subtasks..
-5. Re-run the body-reported ablation/failure condition: We conduct four ablation studies on the gripper controller: (a) full force with hybrid control, (b) reduced force with hybrid control, (c) reduced force without feedforward term, and (d) reduced force without ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are sampled synchronously at 20 Hz to produce temporally ... (p. 4, 3.2. Cross-Modal Data Acquisition); preserve the objective/update rule: Below, we detail the tactile tokenizer and loss function, and also compare alternative tactile injection strategies inspired by prior work. (p. 4, 3.4. Tabero-VTLA).
+2. Use the paper-reported task/data/environment cue: Specifically, we select four subtasks from the LIBERO benchmark suite and compare the success rates of the original MuJoCo-based dataset with those of our replayed version in Isaac Lab. (p. 6, 4.1. Cross-Platform Data Validation).
+3. Compare against the reported or matched baseline: We conduct four ablation studies on the gripper controller: (a) full force with hybrid control, (b) reduced force with hybrid control, (c) reduced force without feedforward term, and (d) reduced ... (p. 7, 4.3. Effectiveness of Hybrid Controller).
+4. Report the body metric with its denominator and aggregation: Furthermore, the sharp drop in success rate from 25% to 10% Figure 6. (p. 7, 4.2. Tactile Data Diversity Analysis).
+5. Re-run the reported ablation or stress/failure condition: We adapt a base VLA model using LoRA to incorporate tactile marker fields (Dataset A and B), while a vision-language-only variant is trained on Dataset C for ablation. (p. 7, 4.2. Tactile Data Diversity Analysis); if none is reported, design one around: 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation. (p. 7, 4.2. Tactile Data Diversity Analysis).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 4 (3.4. Tabero-VTLA), p. 4 (3.4. Tabero-VTLA), p. 6 (3.6. Metrics Beyond Success Rate); the primary result is directionally consistent at p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), p. 6 (4.1. Cross-Platform Data Validation); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. Introduction), p. 4 (3.4. Tabero-VTLA), match the reported outcome at p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.2. Tactile Data Diversity Analysis), p. 6 (4.1. Cross-Platform Data Validation), and measure the boundary at p. 7 (4.2. Tactile Data Diversity Analysis), p. 1 (1. Introduction).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 summary, makes, following mechanism이 We compare a baseline using binary gripper control against our approach, which explicitly sets different force ... 대비 Cross-platform data validation: Task success rates across four LIBERO subtasks.을 개선하고, 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (All cameras are rendered in parallel using tiled rendering, and all modalities, including visual, tactile, force, language instructions, and executed actions, are ...), does the paper-specific mechanism (In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in ...) retain the reported evaluation outcome (Furthermore, the sharp drop in success rate from 25% to 10% Figure 6.) when tested against the paper's strongest explicit boundary (2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Furthermore, the sharp drop in success rate from 25% to 10% Figure 6.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ... (p. 2, 1. Introduction).
+- **Paper-supported outcome:** When using the same robot kinematics and control policy as in the original dataset, our baseline configuration yields a success rate distribution that closely matches that reported in OpenVLA (Kim ... (p. 6, 4.1. Cross-Platform Data Validation).
+- **Strongest explicit boundary:** 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation. (p. 7, 4.2. Tactile Data Diversity Analysis).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

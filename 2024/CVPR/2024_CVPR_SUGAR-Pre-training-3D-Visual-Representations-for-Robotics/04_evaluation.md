@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5. Performance of training with 10 demonstrations. (Ens m) significantly boosts the performance of the model trained from scratch with over 30% improvement. ... | p. 8 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 4. Success rates of multi-task policies on 10 tasks of RLBench simulator. | p. 8 (Figure/Table caption) |
@@ -58,7 +58,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ScanObjectNN is one of the most challenging 3D datasets, consisting of 15 common categories and 587 real-world 3D scans in the test split. | embodiment, simulator version and control stack | p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4. Evaluation on Robotic-related Tasks) |
 | Task/environment | To thoroughly evaluate the pre-trained representation, we resort to three robotic-related tasks including zero-shot object recognition, referring expression grounding, and languageguided robotic manipulation. | reset, timeout, object/scene variation | p. 5 (4. Evaluation on Robotic-related Tasks) |
@@ -141,9 +141,18 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- explicit limitation/failure sentence not recovered
+- explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4. Evaluation on Robotic-related Tasks), metrics p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4.1. Zero-shot Object Recognition), results p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4. Evaluation on Robotic-related Tasks), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4. Evaluation on Robotic-related Tasks), metrics p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4.1. Zero-shot Object Recognition), results p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4. Evaluation on Robotic-related Tasks), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Table 1. Zero-shot object recognition performance on three benchmarks. The Top1 accuracy is reported if not specified otherwise. The blue colored results in brackets on the ScanObjectNN dataset are obtained ... (p. 6, Figure/Table caption).
+- **Metric evidence:** We present datasets, downstream adaptation and quantitative results for each task in the following three sections. (p. 5, 4. Evaluation on Robotic-related Tasks).
+- **Baseline/ablation evidence:** The objects are synthetic 3D models without colors. (p. 5, 4.1. Zero-shot Object Recognition).
+- **Failure/negative evidence:** While these 2D representations have demonstrated promising performance, they still fall short in addressing occlusions in complex cluttered scenes [79] and accurately predicting robotic actions [7] in the 3D world. (p. 1, 1. Introduction).

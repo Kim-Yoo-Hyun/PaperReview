@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1612.00593; PDF retrieval source: https://arxiv.org/pdf/1612.00593. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1612.00593; PDF retrieval source: https://arxiv.org/pdf/1612.00593. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -23,7 +23,7 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 
 - **p. 2 / 1. Introduction - extractive body cue:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; ...
 - **p. 1 / 1. Introduction - extractive body cue:** We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates equal contributions. mug? table? car?
+- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates.
 
 ## Source Evidence Cues
 
@@ -35,7 +35,7 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | The mininetwork itself resembles the big network and is composed by basic modules of point independent feature extraction, max pooling and fully ... | p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Our network has three key modules: the max pooling layer as a symmetric function to aggregate information from all the points, a ... | p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture) |
@@ -78,7 +78,7 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | The MLP close to the output consists of two layers with sizes 512,256. points as n×3 arrays, RNN model that considers input ... | episode/sequence/action-chunk boundary |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Empirically, PointNet is able to process more than one million points per second for point cloud classification (around 1K objects/second) or semantic ... | Hz/fps, inference time and control rate |
-| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | Empirically, PointNet is able to process more than one million points per second for point cloud classification (around 1K objects/second) or semantic ... | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -124,8 +124,17 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), objective p. 4 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), temporal p. 7 (5.2. Architecture Design Analysis), p. 8 (5.4. Time and Space Complexity Analysis), p. 2 (3. Problem Statement), p. 2 (2. Related Work), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture).
+- **Evidence anchors reviewed:** method p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), objective p. 4 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), temporal p. 7 (5.2. Architecture Design Analysis), p. 8 (5.4. Time and Space Complexity Analysis), p. 2 (3. Problem Statement), p. 2 (2. Related Work), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Here, a symmetric function takes n vectors as input and outputs a new vector that is invariant to the input order. (p. 3, 4.2. PointNet Architecture).
+- **Objective/update evidence:** We therefore add a regularization term to our softmax training loss. (p. 4, 4.2. PointNet Architecture).
+- **Temporal/runtime evidence:** The MLP close to the output consists of two layers with sizes 512,256. points as n×3 arrays, RNN model that considers input point as a sequence, and a model based ... (p. 7, 5.2. Architecture Design Analysis).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

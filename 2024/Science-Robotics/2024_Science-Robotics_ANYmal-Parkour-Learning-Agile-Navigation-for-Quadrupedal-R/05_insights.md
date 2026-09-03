@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `proprioception, terrain/perception observation과 velocity command → body/contact state, foothold 또는 behavior mode → joint target, torque, footstep 또는 locomotion action`.
-- 이 논문의 재사용 가능한 지점은 As input, the policies receive the current proprioceptive state, a local map of the surrounding terrain, an intermediate command, and output position commands to the motors.를 While these approaches produce a separate representation, the exteroceptive measurements can also be directly provided as input to the policy [8], [40].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 body/contact state, foothold 또는 behavior mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Finally, since the navigation module must make a series of correct decisions to reach the goal with many possibilities leading to failure, the algorithm requires many iterations to converge.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Despite the promising results and the close similarity to our method, this work requires human-designed path and skill selection and is limited to a single pre-mapped environment with a motion capture system.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Pre-training low-level skills with imitation learning and then controlling them through latent actions has been proposed for both character animation [33] and robotics [18]. (p. 5, 3) We develop a neural terrain reconstruction method that).
+- **Paper-specific mechanism:** We can summarize our contributions as follows: (p. 3, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) Climbing up. (D) Crouching. (E) Walking. (F) Success rate of each skill ... (p. 8, Figure/Table caption); the relevant task/metric cue is The locomotion and navigation modules operate synchronously in a single node on the onboard computer. (p. 5, II. RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The complexity of the task exacerbates many of the challenges commonly faced by mobile robots: • The locomotion controller cannot rely on a stable and periodic gait but must use ... (p. 1, I. INTRODUCTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The three learning-based modules operate together without expert demonstration, offline computation, or a priori knowledge of the environment and enable the robot to reliably reach a target across different arrangements of randomized ....
-3. Compare against the body-reported baseline or a matched simpler baseline: The skill learns to turn on the spot in tight spaces and is more capable in such scenarios compared to other skills..
-4. Report the body metric and its denominator/aggregation: Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) Climbing up. (D) Crouching. (E) Walking. (F) Success rate of each skill for obstacles ....
-5. Re-run the body-reported ablation/failure condition: The three learning-based modules operate together without expert demonstration, offline computation, or a priori knowledge of the environment and enable the robot to reliably reach a target across different arrangements of randomized ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Pre-training low-level skills with imitation learning and then controlling them through latent actions has been proposed for both character animation [33] and robotics [18]. (p. 5, 3) We develop a neural terrain reconstruction method that); preserve the objective/update rule: While the navigation module receives a full 3D representation of the map, it is impractical for the locomotion policies due to their high update rate and the corresponding computational cost ... (p. 14, IV. MATERIALS AND METHODS).
+2. Use the paper-reported task/data/environment cue: In trajectory B, the policy saturates the motor during the climb to propel the robot onto the 0.9 m high platform (Fig. (p. 5, II. RESULTS).
+3. Compare against the reported or matched baseline: The skill learns to turn on the spot in tight spaces and is more capable in such scenarios compared to other skills. (p. 5, II. RESULTS).
+4. Report the body metric with its denominator and aggregation: The locomotion and navigation modules operate synchronously in a single node on the onboard computer. (p. 5, II. RESULTS).
+5. Re-run the reported ablation or stress/failure condition: The three learning-based modules operate together without expert demonstration, offline computation, or a priori knowledge of the environment and enable the robot to reliably reach a target across different arrangements ... (p. 5, II. RESULTS); if none is reported, design one around: The complexity of the task exacerbates many of the challenges commonly faced by mobile robots: • The locomotion controller cannot rely on a stable and periodic gait but must use ... (p. 1, I. INTRODUCTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 5 (3) We develop a neural terrain reconstruction method that), p. 3 (3) We develop a neural terrain reconstruction method that), p. 14 (IV. MATERIALS AND METHODS); the primary result is directionally consistent at p. 8 (Figure/Table caption), p. 4 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), match the reported outcome at p. 8 (Figure/Table caption), p. 5 (II. RESULTS), p. 5 (II. RESULTS), and measure the boundary at p. 1 (I. INTRODUCTION), p. 12 (A. Current Limitations).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Despite, promising, close mechanism이 The skill learns to turn on the spot in tight spaces and is more capable in ... 대비 Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) ...을 개선하고, Finally, since the navigation module must make a series of correct decisions to reach the goal ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Pre-training low-level skills with imitation learning and then controlling them through latent actions has been proposed for both character animation [33] and ...), does the paper-specific mechanism (We can summarize our contributions as follows:) retain the reported evaluation outcome (The locomotion and navigation modules operate synchronously in a single node on the onboard computer.) when tested against the paper's strongest explicit boundary (The complexity of the task exacerbates many of the challenges commonly faced by mobile robots: • The locomotion ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The locomotion and navigation modules operate synchronously in a single node on the onboard computer.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** We can summarize our contributions as follows: (p. 3, I. INTRODUCTION).
+- **Paper-supported outcome:** Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) Climbing up. (D) Crouching. (E) Walking. (F) Success rate of each skill ... (p. 8, Figure/Table caption).
+- **Strongest explicit boundary:** The complexity of the task exacerbates many of the challenges commonly faced by mobile robots: • The locomotion controller cannot rely on a stable and periodic gait but must use ... (p. 1, I. INTRODUCTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

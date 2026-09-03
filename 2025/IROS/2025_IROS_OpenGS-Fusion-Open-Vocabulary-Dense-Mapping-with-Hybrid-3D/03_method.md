@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2508.01150; PDF retrieval source: https://arxiv.org/pdf/2508.01150. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2508.01150; PDF retrieval source: https://arxiv.org/pdf/2508.01150. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,35 +10,35 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 
 ## Method Body Digest
 
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** We first input Q into the CLIP model to extract text features, which are then compared with semantic features F of all global voxels V ...
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** Therefore, we propose an adaptive threshold adjustment strategy assisted by MLLM, where MLLM refers to large vision language models that support both image and text ...
-- **p. 3 / III. OPENGS-FUSION - extractive PDF cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
-- **p. 2 / III. OPENGS-FUSION - extractive PDF cue:** We first extract 2D semantic features St following the methodology described in Sec.III-A.
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** 3) Scene Optimization Strategy: To supervise the learning of our Gaussian representation, we apply the same loss function as described in [24].
+- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** We first input Q into the CLIP model to extract text features, which are then compared with semantic features F of all global voxels V ...
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** Therefore, we propose an adaptive threshold adjustment strategy assisted by MLLM, where MLLM refers to large vision language models that support both image and text ...
+- **p. 3 / III. OPENGS-FUSION - extractive body cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
+- **p. 2 / III. OPENGS-FUSION - extractive body cue:** We first extract 2D semantic features St following the methodology described in Sec.III-A.
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** 3) Scene Optimization Strategy: To supervise the learning of our Gaussian representation, we apply the same loss function as described in [24].
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Our method enables versatile task-oriented interactions, such as 3D object extraction and editing in an interactive manner.
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
-- **p. 1 / I. INTRODUCTION - extractive PDF cue:** Compared to 3DGS-featurefield-based methods [12]-[15], our approach enables online modeling of scene appearance, geometry, and semantics while supporting 3D objectlevel queries.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method enables versatile task-oriented interactions, such as 3D object extraction and editing in an interactive manner.
+- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Compared to 3DGS-featurefield-based methods [12]-[15], our approach enables online modeling of scene appearance, geometry, and semantics while supporting 3D objectlevel queries.
 
 ## Source Evidence Cues
 
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** We first input Q into the CLIP model to extract text features, which are then compared with semantic features F of all global voxels V ...
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** Therefore, we propose an adaptive threshold adjustment strategy assisted by MLLM, where MLLM refers to large vision language models that support both image and text ...
-- **p. 3 / III. OPENGS-FUSION - extractive PDF cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
-- **p. 2 / III. OPENGS-FUSION - extractive PDF cue:** We first extract 2D semantic features St following the methodology described in Sec.III-A.
+- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** We first input Q into the CLIP model to extract text features, which are then compared with semantic features F of all global voxels V ...
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** Therefore, we propose an adaptive threshold adjustment strategy assisted by MLLM, where MLLM refers to large vision language models that support both image and text ...
+- **p. 3 / III. OPENGS-FUSION - extractive body cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
+- **p. 2 / III. OPENGS-FUSION - extractive body cue:** We first extract 2D semantic features St following the methodology described in Sec.III-A.
 - **Detected method headings:** 1) Rigid Offline Pipeline. These methods rely on essen (p. 1)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene ... | p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 4 (III. OPENGS-FUSION) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | We first input Q into the CLIP model to extract text features, which are then compared with semantic features F of all ... | p. 4 (III. OPENGS-FUSION), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen) |
@@ -48,12 +48,12 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 
 ## Objective / Update Rule
 
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** 3) Scene Optimization Strategy: To supervise the learning of our Gaussian representation, we apply the same loss function as described in [24].
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** This approach allows our method to obtain a relatively accurate geometric representation at the initialization stage, reducing the optimization cost.
-- **p. 1 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** The TSDF's voxel-based structure facilitates lossless fusion of semantic arXiv:2508.01150v1 [cs.CV] 2 Aug 2025
-- **p. 1 / Abstract - extractive PDF cue:** OpenGSFusion combines 3D Gaussian representation with a Truncated Signed Distance Field to facilitate lossless fusion of semantic features on-the-fly.
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** features and guides 3D Gaussian initialization, ensuring full semantic preservation while significantly improving scene update efficiency.
-- **p. 2 / III. OPENGS-FUSION - extractive PDF cue:** Subsequently, the tuple {Ct, Dt, St, Pt} is used to update our hybrid scene representation M (Sec.III-B), following the approach in Sec.IIIC.
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** 3) Scene Optimization Strategy: To supervise the learning of our Gaussian representation, we apply the same loss function as described in [24].
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** This approach allows our method to obtain a relatively accurate geometric representation at the initialization stage, reducing the optimization cost.
+- **p. 1 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** The TSDF's voxel-based structure facilitates lossless fusion of semantic.
+- **p. 1 / Abstract - extractive body cue:** OpenGSFusion combines 3D Gaussian representation with a Truncated Signed Distance Field to facilitate lossless fusion of semantic features on-the-fly.
+- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** features and guides 3D Gaussian initialization, ensuring full semantic preservation while significantly improving scene update efficiency.
+- **p. 2 / III. OPENGS-FUSION - extractive body cue:** Subsequently, the tuple {Ct, Dt, St, Pt} is used to update our hybrid scene representation M (Sec.III-B), following the approach in Sec.IIIC.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 1 (2) Limited 3D Object-Level Understanding. Most exist), p. 1 (Abstract), p. 4 (III. OPENGS-FUSION), p. 4 (III. OPENGS-FUSION), p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 2 (III. OPENGS-FUSION).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -69,13 +69,13 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 
 ## Observation–State–Action Interface
 
-- **p. 4 / III. OPENGS-FUSION - extractive PDF cue:** Therefore, we propose an adaptive threshold adjustment strategy assisted by MLLM, where MLLM refers to large vision language models that support both image and text ...
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
-- **p. 1 / Abstract - extractive PDF cue:** Extensive experiments demonstrate that our method outperforms existing methods in 3D object understanding and scene reconstruction quality, as well as showcasing its effectiveness in language-guided ...
-- **p. 2 / III. OPENGS-FUSION - extractive PDF cue:** By inputting these proposals into the CLIP model, we can extract region-level semantic features, where all pixels within region Ri share a unified language embeddings ...
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
-- **p. 3 / III. OPENGS-FUSION - extractive PDF cue:** Open-Vocabulary Dense Scene Mapping Given input {Ct, Dt, St, Pt}, we update the global map M in three stages.
-- **p. 3 / III. OPENGS-FUSION - extractive PDF cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
+- **p. 4 / III. OPENGS-FUSION - extractive body cue:** Therefore, we propose an adaptive threshold adjustment strategy assisted by MLLM, where MLLM refers to large vision language models that support both image and text ...
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
+- **p. 1 / Abstract - extractive body cue:** Extensive experiments demonstrate that our method outperforms existing methods in 3D object understanding and scene reconstruction quality, as well as showcasing its effectiveness in language-guided ...
+- **p. 2 / III. OPENGS-FUSION - extractive body cue:** By inputting these proposals into the CLIP model, we can extract region-level semantic features, where all pixels within region Ri share a unified language embeddings ...
+- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
+- **p. 3 / III. OPENGS-FUSION - extractive body cue:** Open-Vocabulary Dense Scene Mapping Given input {Ct, Dt, St, Pt}, we update the global map M in three stages.
+- **p. 3 / III. OPENGS-FUSION - extractive body cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -90,11 +90,11 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 
 ## Training vs Inference
 
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive PDF cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** Additionally, compared to our code-based approach GSICPTABLE III QUANTITATIVE TRAIN VIEW RENDERING PERFORMANCE ON REPLICA.
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive PDF cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
+- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** Additionally, compared to our code-based approach GSICPTABLE III QUANTITATIVE TRAIN VIEW RENDERING PERFORMANCE ON REPLICA.
+- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -114,13 +114,13 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 
 ## Failure and Ablation Link
 
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** To ensure fairness, we adhere to [4] for training LangSplat, OpenGaussian, and our method, without optimizing the positional attributes of Gaussian primitives.
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** Specifically, our method outperforms the state-of-the-art 3DGS-based approach, OpenGaussian, with improvements of 9.5% (Replica) and 12.2% (ScanNet) in terms of mIoU performance, while operating in ...
-- **p. 6 / IV. EXPERIMENT - extractive PDF cue:** Ablation Experiments To further validate our method, we conducted ablation studies focusing on the core parameters of our hybrid representation, specifically the voxel size of ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Fig. 2. Overview of OpenGS-Fusion. Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic ...
-- **p. 7 / V. CONCLUSIONS - extractive PDF cue:** However, our method currently relies on accurate pose estimation and faces limitations in query efficiency.
-- **p. 7 / V. CONCLUSIONS - extractive PDF cue:** Future work will explore how to leverage hybrid scene representation for pose estimation and investigate lightweight MLLMs specifically designed for image retrieval tasks to further ...
-- **p. 5 / IV. EXPERIMENT - extractive PDF cue:** OpenGaussian fails to locate both instances as they are segmented into separate entities, and the model by default only retrieves the instance that best matches ...
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** To ensure fairness, we adhere to [4] for training LangSplat, OpenGaussian, and our method, without optimizing the positional attributes of Gaussian primitives.
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** Specifically, our method outperforms the state-of-the-art 3DGS-based approach, OpenGaussian, with improvements of 9.5% (Replica) and 12.2% (ScanNet) in terms of mIoU performance, while operating in ...
+- **p. 6 / IV. EXPERIMENT - extractive body cue:** Ablation Experiments To further validate our method, we conducted ablation studies focusing on the core parameters of our hybrid representation, specifically the voxel size of ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Overview of OpenGS-Fusion. Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic ...
+- **p. 7 / V. CONCLUSIONS - extractive body cue:** However, our method currently relies on accurate pose estimation and faces limitations in query efficiency.
+- **p. 7 / V. CONCLUSIONS - extractive body cue:** Future work will explore how to leverage hybrid scene representation for pose estimation and investigate lightweight MLLMs specifically designed for image retrieval tasks to further ...
+- **p. 5 / IV. EXPERIMENT - extractive body cue:** OpenGaussian fails to locate both instances as they are segmented into separate entities, and the model by default only retrieves the instance that best matches ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -134,7 +134,7 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 4 (III. OPENGS-FUSION), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 4 (III. OPENGS-FUSION), p. 3 (III. OPENGS-FUSION), objective p. 4 (III. OPENGS-FUSION), p. 4 (III. OPENGS-FUSION), p. 1 (2) Limited 3D Object-Level Understanding. Most exist), p. 1 (Abstract), p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 2 (III. OPENGS-FUSION), temporal p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 2 (II. RELATED WORKS).
+- **Evidence anchors reviewed:** method p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 4 (III. OPENGS-FUSION), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 4 (III. OPENGS-FUSION), p. 3 (III. OPENGS-FUSION), objective p. 4 (III. OPENGS-FUSION), p. 4 (III. OPENGS-FUSION), p. 1 (2) Limited 3D Object-Level Understanding. Most exist), p. 1 (Abstract), p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 2 (III. OPENGS-FUSION), temporal p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 2 (II. RELATED WORKS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

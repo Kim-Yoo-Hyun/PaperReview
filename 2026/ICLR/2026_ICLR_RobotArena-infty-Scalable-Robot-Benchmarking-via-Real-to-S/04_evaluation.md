@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OutljIofvS; PDF retrieval source: https://openreview.net/pdf/4355de50de1431de9a4ef52786c9b5f7f9f124fe.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OutljIofvS; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/245501. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Published as a conference paper at ICLR 2026 Robotic Datasets Bridge V2 Make the cup lie down " Put the tomato in the pot " ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.
-- **p. 1 / ABSTRACT - extractive PDF cue:** We introduce RobotArena ∞, a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human feedback.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** BEHAVIOR boasts an impressive manual effort of asset and environment creation, while SIMPLER reconstructs four real-world Bridge scenes and includes hand-designed reward functions.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We present a scalable and extensible benchmarking protocol for robotics, by coupling physics engines, real-to-sim translation and human preference feedback.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Both our benchmark environments and evaluation code will be publicly released and centrally maintained for continual support.
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Figure 19: Example VLM-generated task evaluation curves on perturbed environments. Top: A successful pick-and-place execution-after the object lift the VLM score climbs steadily and correctly ...
-- **p. 22 / Figure/Table caption - extractive PDF cue:** Figure 17: Example VLM-generated task evaluation curves on base environment. Left panels: Representative frames sampled at low- and high-progress points. Right panels: VLM-assigned completion score ...
+- **p. 1 / ABSTRACT - extractive body cue:** The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.
+- **p. 1 / ABSTRACT - extractive body cue:** We introduce RobotArena ∞, a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human feedback.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** BEHAVIOR boasts an impressive manual effort of asset and environment creation, while SIMPLER reconstructs four real-world Bridge scenes and includes hand-designed reward functions.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We present a scalable and extensible benchmarking protocol for robotics, by coupling physics engines, real-to-sim translation and human preference feedback.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Both our benchmark environments and evaluation code will be publicly released and centrally maintained for continual support.
+- **p. 24 / Figure/Table caption - extractive body cue:** Figure 19: Example VLM-generated task evaluation curves on perturbed environments. Top: A successful pick-and-place execution-after the object lift the VLM score climbs steadily and correctly ...
+- **p. 22 / Figure/Table caption - extractive body cue:** Figure 17: Example VLM-generated task evaluation curves on base environment. Left panels: Representative frames sampled at low- and high-progress points. Right panels: VLM-assigned completion score ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | BENCHMARK / DATASET | Figure 9: Policy evaluation results in RobotArena ∞ versus SIMPLER of Li et al. (2024c). 5.3 ROBOTARENA ∞VERSUS SIMPLER OF LI ET AL. (2024C) ... | p. 9 (Figure/Table caption) |
 | Figure/Table caption | BENCHMARK / DATASET | Figure 4: Left: Task progress scores computed by prompting Gemini 2.5 Pro with image frames and synchronized object and robot state sequences. Right: Example ... | p. 6 (Figure/Table caption) |
@@ -40,32 +40,32 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Published as a conference paper at ICLR 2026 Robotic Datasets Bridge V2 Make the cup lie down " Put the tomato in the pot " ...
-- **p. 1 / ABSTRACT - extractive PDF cue:** The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.
-- **p. 1 / ABSTRACT - extractive PDF cue:** We introduce RobotArena ∞, a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human feedback.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** BEHAVIOR boasts an impressive manual effort of asset and environment creation, while SIMPLER reconstructs four real-world Bridge scenes and includes hand-designed reward functions.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We present a scalable and extensible benchmarking protocol for robotics, by coupling physics engines, real-to-sim translation and human preference feedback.
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Both our benchmark environments and evaluation code will be publicly released and centrally maintained for continual support.
+- **p. 1 / ABSTRACT - extractive body cue:** The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.
+- **p. 1 / ABSTRACT - extractive body cue:** We introduce RobotArena ∞, a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human feedback.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** BEHAVIOR boasts an impressive manual effort of asset and environment creation, while SIMPLER reconstructs four real-world Bridge scenes and includes hand-designed reward functions.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** We present a scalable and extensible benchmarking protocol for robotics, by coupling physics engines, real-to-sim translation and human preference feedback.
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Both our benchmark environments and evaluation code will be publicly released and centrally maintained for continual support.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 1: RobotArena ∞provides a scalable and extensible robot benchmarking framework by automating environment construction and evaluation. It automatically generates simulated environment seeded from real ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2: Automated video-to-simulation translation in RobotArena ∞. Given a frame from a video demonstration, we automatically create a corresponding simulated environment. and task evaluation ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3: Automated robot-camera calibra- tion through differentiable rendering of pose- conditioned 3D robot Gaussians. RobotArena ∞automatically creates simula- tion environments in physics engines from ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4: Left: Task progress scores computed by prompting Gemini 2.5 Pro with image frames and synchronized object and robot state sequences. Right: Example task ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5: Simulation environments in RobotArena ∞seeded from videos demonstrations in the datasets of Bridge, RH20T and DROID. in the estimated rankings, we compute confidence ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 7: Policy evaluation results obtained from VLMs (a) in all RobotArena ∞environments and (b) in perturbations of BridgeSim environments. 5. X-VLA Zheng et al. ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6: Human preference ranking of VLAs in BridgeSim environments from 8,749 pairwise comparisons. We show the VLA rankings derived from human pairwise preferences in ...
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Figure 8: Comparison of Simulation- Based Against Real-World-based Robot Evaluations using Ma et al. (2024)
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: RobotArena ∞provides a scalable and extensible robot benchmarking framework by automating environment construction and evaluation. It automatically generates simulated environment seeded from real ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Automated video-to-simulation translation in RobotArena ∞. Given a frame from a video demonstration, we automatically create a corresponding simulated environment. and task evaluation ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Automated robot-camera calibra- tion through differentiable rendering of pose- conditioned 3D robot Gaussians. RobotArena ∞automatically creates simula- tion environments in physics engines from ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Left: Task progress scores computed by prompting Gemini 2.5 Pro with image frames and synchronized object and robot state sequences. Right: Example task ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Simulation environments in RobotArena ∞seeded from videos demonstrations in the datasets of Bridge, RH20T and DROID. in the estimated rankings, we compute confidence ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7: Policy evaluation results obtained from VLMs (a) in all RobotArena ∞environments and (b) in perturbations of BridgeSim environments. 5. X-VLA Zheng et al. ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Human preference ranking of VLAs in BridgeSim environments from 8,749 pairwise comparisons. We show the VLA rankings derived from human pairwise preferences in ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Figure 8: Comparison of Simulation- Based Against Real-World-based Robot Evaluations using Ma et al. (2024)
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | Published as a conference paper at ICLR 2026 Robotic Datasets Bridge V2 Make the cup lie down " Put the tomato in the pot ... | embodiment, simulator version and control stack | p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT) |
-| Task/environment | The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape. | reset, timeout, object/scene variation | p. 1 (ABSTRACT), p. 1 (ABSTRACT) |
+| Robot/hardware/simulator | The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape. | embodiment, simulator version and control stack | p. 1 (ABSTRACT), p. 1 (ABSTRACT) |
+| Task/environment | We introduce RobotArena ∞, a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human ... | reset, timeout, object/scene variation | p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION) |
 | Observation/sensor | standardized observation, action, task state와 evaluation split | calibration, preprocessing, privileged input | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 | Output/decision | policy/controller trajectory 또는 measured result | action frame, controller and termination | p. 1 (ABSTRACT), p. 1 (ABSTRACT) |
 
@@ -155,14 +155,14 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 2 RELATED WORK - extractive PDF cue:** Intuitively, this focuses evaluation on the terminal phase of execution, where task completion (or failure) is most evident.
-- **p. 24 / Figure/Table caption - extractive PDF cue:** Figure 19: Example VLM-generated task evaluation curves on perturbed environments. Top: A successful pick-and-place execution-after the object lift the VLM score climbs steadily and correctly ...
-- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our benchmark is not without limitations.
-- **p. 8 / 2 RELATED WORK - extractive PDF cue:** For example, in RH20TSim, RoboVLM (19.05%) achieves a substantially higher score than all other models, while X-VLA fails (0.00%).
-- **p. 9 / 2 RELATED WORK - extractive PDF cue:** 6 LIMITATIONS AND FUTURE DIRECTIONS By leveraging recent advances in reality-to-simulation translation and crowdsourced evaluation, RobotArena ∞provides a scalable and extensible robot benchmark.
-- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Second, even within the same environment, performance degrades under perturbations, showing that robustness to distribution shifts remains an open challenge.
+- **p. 6 / 2 RELATED WORK - extractive body cue:** Intuitively, this focuses evaluation on the terminal phase of execution, where task completion (or failure) is most evident.
+- **p. 24 / Figure/Table caption - extractive body cue:** Figure 19: Example VLM-generated task evaluation curves on perturbed environments. Top: A successful pick-and-place execution-after the object lift the VLM score climbs steadily and correctly ...
+- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our benchmark is not without limitations.
+- **p. 8 / 2 RELATED WORK - extractive body cue:** For example, in RH20TSim, RoboVLM (19.05%) achieves a substantially higher score than all other models, while X-VLA fails (0.00%).
+- **p. 9 / 2 RELATED WORK - extractive body cue:** 6 LIMITATIONS AND FUTURE DIRECTIONS By leveraging recent advances in reality-to-simulation translation and crowdsourced evaluation, RobotArena ∞provides a scalable and extensible robot benchmark.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Second, even within the same environment, performance degrades under perturbations, showing that robustness to distribution shifts remains an open challenge.
 
-- **PDF anchors reviewed:** datasets p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), metrics p. 24 (Figure/Table caption), p. 22 (Figure/Table caption), p. 24 (Figure/Table caption), p. 2 (1 INTRODUCTION), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 6 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
+- **Evidence anchors reviewed:** datasets p. 1 (ABSTRACT), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), metrics p. 24 (Figure/Table caption), p. 22 (Figure/Table caption), p. 24 (Figure/Table caption), p. 2 (1 INTRODUCTION), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 6 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

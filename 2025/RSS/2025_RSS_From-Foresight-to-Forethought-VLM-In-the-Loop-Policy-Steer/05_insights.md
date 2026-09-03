@@ -13,11 +13,11 @@
 - **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks ...
 - **p. 4 / 1. InTRopucTION - extractive body cue:** The training data consists of both successful and failed rollouts from the base policy (a / 0) and additional demonstration data, This allows the world ...
 - **p. 2 / 1. InTRopucTION - extractive body cue:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those ...
-- **p. 1 / Front matter - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
+- **p. 1 / body section boundary not confidently recovered - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
 - **p. 1 / Abstract - extractive body cue:** We validate our framework across diverse robotic manipulation tasks, demonstrating its ability to bridge representational gaps and provide robust, generalizable policy steering.
 - **p. 9 / B. Policy Steering for Open-World Alignment - extractive body cue:** Our system queries the VLM twice to first generate behavior narrations and then select the best action plan, The overall inference time is 3.7 seconds ...
 - **p. 6 / A. From Action Rollouts to Behavior Narration - extractive body cue:** This method uses the encoder £4 on ground-truth future observations 10 get privileged (posterior) future latent states Zeer as input for the VLM.
-- **Contribution anchor:** p. 8 (B. Policy Steering for Open-World Alignment), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 1 (Front matter), p. 1 (Abstract), p. 9 (B. Policy Steering for Open-World Alignment)
+- **Contribution anchor:** p. 8 (B. Policy Steering for Open-World Alignment), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 1 (body section boundary not confidently recovered), p. 1 (Abstract), p. 9 (B. Policy Steering for Open-World Alignment)
 
 ### Strongest assumption and failure boundary
 
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
-- 이 논문의 재사용 가능한 지점은 The robot's observations 0 < O :=ZxQ combine RGB image data I € T and proprioceptive states q © Q(eg., end-effector pose, gripper state), and ay := ay.¢.7 denotes a robot's T ...를 The training data consists of both successful and failed rollouts from the base policy (a / 0) and additional demonstration data, This allows the world model to accurately predict the outcomes of ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We consider three real-world robot manipulation tasks that exhibit underlying multi-modal behavio hhard-to-model outcomes, and nuanced failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The robot's observations 0 < O :=ZxQ combine RGB image data I € T and proprioceptive states q © Q(eg., end-effector pose, gripper state), and ay := ay.¢.7 denotes a ... (p. 3, 1. InTRopucTION).
+- **Paper-specific mechanism:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those narrations even under novel task ... (p. 2, 1. InTRopucTION).
+- **Evidence boundary:** the reported outcome is In this task, the robot must pick up a fork from the table and place it inside a bowl. (p. 5, V. EXPERIMENTS); the relevant task/metric cue is V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. (p. 5, V. EXPERIMENTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We consider three real-world robot manipulation tasks that exhibit underlying multi-modal behavio hhard-to-model outcomes, and nuanced failures..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 3: Examples of Behavior Narrations Predicted by Each Approach. The top row displays the ground-truth robot ‘observations and the prompt used for querying VLMs. Only FOREWARN and FOREWARN-Oracle consistently produce accurate ....
-4. Report the body metric and its denominator/aggregation: V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec..
-5. Re-run the body-reported ablation/failure condition: VLM Fine-tuning, We construct our VQA dataset for fine-tuning from the same offline dataset, Dyyy, used to train the world model..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The robot's observations 0 < O :=ZxQ combine RGB image data I € T and proprioceptive states q © Q(eg., end-effector pose, gripper state), and ay := ay.¢.7 denotes a ... (p. 3, 1. InTRopucTION); preserve the objective/update rule: We use GPT-4o [29] to process the predicted visual observations and generate behavior narrations in a zero-shot manner. (p. 6, A. From Action Rollouts to Behavior Narration).
+2. Use the paper-reported task/data/environment cue: We consider three real-world robot manipulation tasks that exhibit underlying multi-modal behavio hhard-to-model outcomes, and nuanced failures. (p. 5, V. EXPERIMENTS).
+3. Compare against the reported or matched baseline: V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. (p. 5, V. EXPERIMENTS).
+4. Report the body metric with its denominator and aggregation: V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. (p. 5, V. EXPERIMENTS).
+5. Re-run the reported ablation or stress/failure condition: V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec. (p. 5, V. EXPERIMENTS); if none is reported, design one around: However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 9 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 8 (B. Policy Steering for Open-World Alignment); the primary result is directionally consistent at p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 2 (1. InTRopucTION), p. 8 (B. Policy Steering for Open-World Alignment), match the reported outcome at p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), and measure the boundary at p. 1 (1. InTRopucTION), p. 2 (1. InTRopucTION).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 Figure, present, examples mechanism이 Fig. 3: Examples of Behavior Narrations Predicted by Each Approach. The top row displays the ground-truth ... 대비 V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task ...을 개선하고, We consider three real-world robot manipulation tasks that exhibit underlying multi-modal behavio hhard-to-model outcomes, and nuanced ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The robot's observations 0 < O :=ZxQ combine RGB image data I € T and proprioceptive states q © Q(eg., end-effector pose, ...), does the paper-specific mechanism (Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by ...) retain the reported evaluation outcome (V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task ...) when tested against the paper's strongest explicit boundary (However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those narrations even under novel task ... (p. 2, 1. InTRopucTION).
+- **Paper-supported outcome:** In this task, the robot must pick up a fork from the table and place it inside a bowl. (p. 5, V. EXPERIMENTS).
+- **Strongest explicit boundary:** However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

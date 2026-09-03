@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=NuR4lG4gKB; PDF retrieval source: https://openreview.net/pdf/fa8a077d4c454280e6633258b55a9ff0b4d204e5.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=NuR4lG4gKB; PDF retrieval source: https://openreview.net/pdf/fa8a077d4c454280e6633258b55a9ff0b4d204e5.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4
 
 ## Evaluation Body Digest
 
-- **p. 4 / 3.2. Evaluation Framework - extractive PDF cue:** Compared to traditional ground robot tasks, aerial mobile manipulation introduces unique challenges such as dynamic coupling of the floating base, volumetric workspaces, and temporal complexity ...
-- **p. 5 / 4.1. VLA Experiments - extractive PDF cue:** Q5: Safety constraints are critical in robotic tasks.
-- **p. 5 / 4.1.1. EXPERIMENTAL SETUP - extractive PDF cue:** The training dataset is derived from our human-teleoperated simulation data, fully reflecting the 5
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive PDF cue:** Our evaluation revealed destructive interactions with the environment in certain episodes, indicating that addressing safety constraints in Aerial Manipulation Systems remains a pivotal direction for ...
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive PDF cue:** Furthermore, they demonstrate that pre-training on massive crossembodiment data (including mobile robotics) enables models to acquire generalizable mechanical manipulation priors.
-- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive PDF cue:** To establish a representative benchmark, we analyze six diverse open-source VLMs.
-- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive PDF cue:** Molmo7B-D-0924 (Deitke et al., 2024) employs a data-centric strategy via the PixMo dataset for efficient alignment.
-- **p. 4 / 3.2. Evaluation Framework - extractive PDF cue:** For VLA models, we conduct closed-loop evaluations based on an online simulation environment, focusing on UAV-Arm Coordination capabilities under real-time inference.
+- **p. 4 / 3.2. Evaluation Framework - extractive body cue:** Compared to traditional ground robot tasks, aerial mobile manipulation introduces unique challenges such as dynamic coupling of the floating base, volumetric workspaces, and temporal complexity ...
+- **p. 5 / 4.1. VLA Experiments - extractive body cue:** Q5: Safety constraints are critical in robotic tasks.
+- **p. 5 / 4.1.1. EXPERIMENTAL SETUP - extractive body cue:** The training dataset is derived from our human-teleoperated simulation data, fully reflecting the 5
+- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Our evaluation revealed destructive interactions with the environment in certain episodes, indicating that addressing safety constraints in Aerial Manipulation Systems remains a pivotal direction for ...
+- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Furthermore, they demonstrate that pre-training on massive crossembodiment data (including mobile robotics) enables models to acquire generalizable mechanical manipulation priors.
+- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive body cue:** To establish a representative benchmark, we analyze six diverse open-source VLMs.
+- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive body cue:** Molmo7B-D-0924 (Deitke et al., 2024) employs a data-centric strategy via the PixMo dataset for efficient alignment.
+- **p. 4 / 3.2. Evaluation Framework - extractive body cue:** For VLA models, we conduct closed-loop evaluations based on an online simulation environment, focusing on UAV-Arm Coordination capabilities under real-time inference.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1.2. MAIN RESULTS AND ANALYSIS | BENCHMARK / DATASET | Compared to low-DoF ground-based platforms, the performance of existing VLA models on high-DoF aerial platforms remains suboptimal. π0 achieves its peak success rate in ... | p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS) |
 | 4.2.2. RESULTS AND ANALYSIS | BENCHMARK / DATASET | The table displays normalized sub-metric scores and planning success rates (Succ, %) for each model across different task scenarios and instruction types. | p. 8 (4.2.2. RESULTS AND ANALYSIS) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4
 
 ## Dataset / Benchmark Role
 
-- **p. 4 / 3.2. Evaluation Framework - extractive PDF cue:** Compared to traditional ground robot tasks, aerial mobile manipulation introduces unique challenges such as dynamic coupling of the floating base, volumetric workspaces, and temporal complexity ...
-- **p. 5 / 4.1. VLA Experiments - extractive PDF cue:** Q5: Safety constraints are critical in robotic tasks.
-- **p. 5 / 4.1.1. EXPERIMENTAL SETUP - extractive PDF cue:** The training dataset is derived from our human-teleoperated simulation data, fully reflecting the 5
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive PDF cue:** Our evaluation revealed destructive interactions with the environment in certain episodes, indicating that addressing safety constraints in Aerial Manipulation Systems remains a pivotal direction for ...
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive PDF cue:** Furthermore, they demonstrate that pre-training on massive crossembodiment data (including mobile robotics) enables models to acquire generalizable mechanical manipulation priors.
-- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive PDF cue:** To establish a representative benchmark, we analyze six diverse open-source VLMs.
-- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive PDF cue:** Molmo7B-D-0924 (Deitke et al., 2024) employs a data-centric strategy via the PixMo dataset for efficient alignment.
-- **p. 4 / 3.2. Evaluation Framework - extractive PDF cue:** For VLA models, we conduct closed-loop evaluations based on an online simulation environment, focusing on UAV-Arm Coordination capabilities under real-time inference.
+- **p. 4 / 3.2. Evaluation Framework - extractive body cue:** Compared to traditional ground robot tasks, aerial mobile manipulation introduces unique challenges such as dynamic coupling of the floating base, volumetric workspaces, and temporal complexity ...
+- **p. 5 / 4.1. VLA Experiments - extractive body cue:** Q5: Safety constraints are critical in robotic tasks.
+- **p. 5 / 4.1.1. EXPERIMENTAL SETUP - extractive body cue:** The training dataset is derived from our human-teleoperated simulation data, fully reflecting the 5
+- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Our evaluation revealed destructive interactions with the environment in certain episodes, indicating that addressing safety constraints in Aerial Manipulation Systems remains a pivotal direction for ...
+- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Furthermore, they demonstrate that pre-training on massive crossembodiment data (including mobile robotics) enables models to acquire generalizable mechanical manipulation priors.
+- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive body cue:** To establish a representative benchmark, we analyze six diverse open-source VLMs.
+- **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive body cue:** Molmo7B-D-0924 (Deitke et al., 2024) employs a data-centric strategy via the PixMo dataset for efficient alignment.
+- **p. 4 / 3.2. Evaluation Framework - extractive body cue:** For VLA models, we conduct closed-loop evaluations based on an online simulation environment, focusing on UAV-Arm Coordination capabilities under real-time inference.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview of AIR-VLA model framework and dataset of aerial manipulation tasks.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of the AIR-VLA benchmark. AIR-VLA serves as a full-stack Vision-Language-Action platform tailored for aerial manipulation systems. It integrates a simulation-based teleoperation data ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Detailed performance evaluation of models across four task suites and overall average. The table displays normalized scores for sub-metrics and weighted total scores ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Robustness evaluation of π0.5 under disturbance and perception-deprived conditions. The table shows absolute scores for each metric, with values in parentheses indicating the ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 3. Evaluation pipeline for VLM high-level planning capabilities in aerial manipulation tasks.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 3. Detailed evaluation of VLM task planning capabilities. The table displays normalized sub-metric scores and planning success rates (Succ, %) for each model across ...
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 4. Task examples in AIR-VLA dataset. Coupled Dynamics and Long-Horizon Reasoning. Unlike traditional benchmarks that often treat navigation and manipulation as decoupled phases or ...
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 5. Observation Space. This figure illustrates instances of observations from various camera perspectives.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of AIR-VLA model framework and dataset of aerial manipulation tasks.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of the AIR-VLA benchmark. AIR-VLA serves as a full-stack Vision-Language-Action platform tailored for aerial manipulation systems. It integrates a simulation-based teleoperation data ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Detailed performance evaluation of models across four task suites and overall average. The table displays normalized scores for sub-metrics and weighted total scores ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Robustness evaluation of π0.5 under disturbance and perception-deprived conditions. The table shows absolute scores for each metric, with values in parentheses indicating the ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Evaluation pipeline for VLM high-level planning capabilities in aerial manipulation tasks.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Detailed evaluation of VLM task planning capabilities. The table displays normalized sub-metric scores and planning success rates (Succ, %) for each model across ...
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 4. Task examples in AIR-VLA dataset. Coupled Dynamics and Long-Horizon Reasoning. Unlike traditional benchmarks that often treat navigation and manipulation as decoupled phases or ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5. Observation Space. This figure illustrates instances of observations from various camera perspectives.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Compared to traditional ground robot tasks, aerial mobile manipulation introduces unique challenges such as dynamic coupling of the floating base, volumetric workspaces, and temporal ... | embodiment, simulator version and control stack | p. 4 (3.2. Evaluation Framework), p. 5 (4.1. VLA Experiments) |
 | Task/environment | Q5: Safety constraints are critical in robotic tasks. | reset, timeout, object/scene variation | p. 5 (4.1. VLA Experiments), p. 5 (4.1.1. EXPERIMENTAL SETUP) |
@@ -119,7 +119,7 @@ PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4
 | Primary metric/result | The table displays normalized sub-metric scores and planning success rates (Succ, %) for each model across different task scenarios and instruction types. | numeric claim only at cited anchor | p. 8 (4.2.2. RESULTS AND ANALYSIS) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1.1. EXPERIMENTAL SETUP - extractive PDF cue:** We adopted a differentiated fine-tuning strategy based on task difficulty: 30 trajectories were used for fine-tuning simple single-step tasks with less physical interaction, while 50 ...
+- **p. 6 / 4.1.1. EXPERIMENTAL SETUP - extractive body cue:** We adopted a differentiated fine-tuning strategy based on task difficulty: 30 trajectories were used for fine-tuning simple single-step tasks with less physical interaction, while 50 ...
 
 ## Generalization and Failure Cases
 
@@ -151,14 +151,14 @@ PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4
 
 ## Limitations and Verification Questions
 
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive PDF cue:** Due to the inherent characteristics of the floating base, collisions and unreasonable physical interactions cause significantly more severe disturbances to the system than in ground-based ...
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive PDF cue:** Notably, in spatial understanding tasks, the models exhibit Spatial Grounding Failure: although the correct object category is identified, the agent manipulates an identical object at ...
-- **p. 7 / 4.2.2. RESULTS AND ANALYSIS - extractive PDF cue:** In summary, VLMs hold immense potential for high-level planning in aerial manipulation, particularly in mitigating the long-horizon reasoning limitations of VLA models.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Our findings reveal that while transferring pre-trained VLA models to aerial platforms is feasible, existing models still face severe challenges in handling floating-base dynamic coupling, ...
-- **p. 7 / 4.2. VLM Experiments - extractive PDF cue:** Robustness evaluation of π0.5 under disturbance and perception-deprived conditions.
-- **p. 5 / 4.1. VLA Experiments - extractive PDF cue:** Q2: Can VLA models cope with external disturbances in AMS and complete tasks under random base jitter?
+- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Due to the inherent characteristics of the floating base, collisions and unreasonable physical interactions cause significantly more severe disturbances to the system than in ground-based ...
+- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Notably, in spatial understanding tasks, the models exhibit Spatial Grounding Failure: although the correct object category is identified, the agent manipulates an identical object at ...
+- **p. 7 / 4.2.2. RESULTS AND ANALYSIS - extractive body cue:** In summary, VLMs hold immense potential for high-level planning in aerial manipulation, particularly in mitigating the long-horizon reasoning limitations of VLA models.
+- **p. 8 / 5. Conclusion - extractive body cue:** Our findings reveal that while transferring pre-trained VLA models to aerial platforms is feasible, existing models still face severe challenges in handling floating-base dynamic coupling, ...
+- **p. 7 / 4.2. VLM Experiments - extractive body cue:** Robustness evaluation of π0.5 under disturbance and perception-deprived conditions.
+- **p. 5 / 4.1. VLA Experiments - extractive body cue:** Q2: Can VLA models cope with external disturbances in AMS and complete tasks under random base jitter?
 
-- **PDF anchors reviewed:** datasets p. 4 (3.2. Evaluation Framework), p. 5 (4.1. VLA Experiments), p. 5 (4.1.1. EXPERIMENTAL SETUP), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.1. EXPERIMENTAL SETUP), metrics p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2. VLM Experiments), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 5 (4.1. VLA Experiments), baselines p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2. VLM Experiments), results p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework).
+- **Evidence anchors reviewed:** datasets p. 4 (3.2. Evaluation Framework), p. 5 (4.1. VLA Experiments), p. 5 (4.1.1. EXPERIMENTAL SETUP), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.1. EXPERIMENTAL SETUP), metrics p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2. VLM Experiments), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 5 (4.1. VLA Experiments), baselines p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2. VLM Experiments), results p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

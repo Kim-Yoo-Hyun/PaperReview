@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 This VLA model can directly take natural language instructions and RGB video streams as inputs and output low-level robotic actions in an end-to-end manner.를 Uni-NaVid_ takes egocentric RGB video streams and natural language instructions as inputs, and directly generates low-level actions for navigation in continuous environments. ‘To achieve multi-task navigation While supporting efficient ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 standard evaluation metrics [4], including success rate (SR), oracle success rate (OS), success weighted by path length (SPL) [3], trajectory length (TL), following rate (FR) [65], collision rate (CR) [65] and navigation ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** This VLA model can directly take natural language instructions and RGB video streams as inputs and output low-level robotic actions in an end-to-end manner. (p. 1, Abstract).
+- **Paper-specific mechanism:** However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach. (p. 3, 1. Ivrropuction).
+- **Evidence boundary:** the reported outcome is The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method (DAgRL+0D [94]) on the VAL SEEN ... (p. 8, B. Individual Task Results); the relevant task/metric cue is significant improvements, with a +25.7% increase in Success Rate (SR) on R2R. (p. 8, B. Individual Task Results). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Despite the promising results, Uni-NaVid has several limitations. (p. 11, C. Qualitative Results in Real-World).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The robot then executes the predicted actions and calls STOP once the first predicted action is a stop action, For VLN and EQA tasks, we directly use the text instruction provided by ....
-3. Compare against the body-reported baseline or a matched simpler baseline: Compared to ‘mainstream baselines, we find that Uni-NaVid archives the best performance on four metrics, including BLUE-1 (417.9%), ROUGE (5.7%), METEOR (+ 16.2%), and CIDEr (413.1%) ‘This proves the superiority of our ....
-4. Report the body metric and its denominator/aggregation: standard evaluation metrics [4], including success rate (SR), oracle success rate (OS), success weighted by path length (SPL) [3], trajectory length (TL), following rate (FR) [65], collision rate (CR) [65] and navigation ....
-5. Re-run the body-reported ablation/failure condition: It is worth noting that for EQA [21] task, the agent executes navigation actions until a stop command is issued, We then remove the navigation-specific token <NAV> and query the questions using ....
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: This VLA model can directly take natural language instructions and RGB video streams as inputs and output low-level robotic actions in an end-to-end manner. (p. 1, Abstract); preserve the objective/update rule: Following the training strategy of VLM [SI], we optimize the trainable parameters for only 1 epoch (p. 7, B. Training Strategy of Uni-NaVid).
+2. Use the paper-reported task/data/environment cue: The robot then executes the predicted actions and calls STOP once the first predicted action is a stop action, For VLN and EQA tasks, we directly use the text instruction ... (p. 7, VI. EXPERIMENT).
+3. Compare against the reported or matched baseline: Comparison on vision-and-language navigation, We evaluate our method with mainstream baselines on two publicly available benchmarks: VLN-CE R2R [42] and RxR [45]. (p. 8, B. Individual Task Results).
+4. Report the body metric with its denominator and aggregation: significant improvements, with a +25.7% increase in Success Rate (SR) on R2R. (p. 8, B. Individual Task Results).
+5. Re-run the reported ablation or stress/failure condition: It is worth noting that for EQA [21] task, the agent executes navigation actions until a stop command is issued, We then remove the navigation-specific token <NAV> and query the ... (p. 7, VI. EXPERIMENT); if none is reported, design one around: Despite the promising results, Uni-NaVid has several limitations. (p. 11, C. Qualitative Results in Real-World).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Training Strategy of Uni-NaVid); the primary result is directionally consistent at p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (1. Ivrropuction), p. 1 (Abstract), match the reported outcome at p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World), and measure the boundary at p. 11 (C. Qualitative Results in Real-World), p. 11 (C. Qualitative Results in Real-World).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 However, goal, train mechanism이 Compared to ‘mainstream baselines, we find that Uni-NaVid archives the best performance on four metrics, including ... 대비 standard evaluation metrics [4], including success rate (SR), oracle success rate (OS), success weighted by path length (SPL) ...을 개선하고, standard evaluation metrics [4], including success rate (SR), oracle success rate (OS), success weighted by path ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (This VLA model can directly take natural language instructions and RGB video streams as inputs and output low-level robotic actions in an ...), does the paper-specific mechanism (However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach.) retain the reported evaluation outcome (significant improvements, with a +25.7% increase in Success Rate (SR) on R2R.) when tested against the paper's strongest explicit boundary (Despite the promising results, Uni-NaVid has several limitations.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (significant improvements, with a +25.7% increase in Success Rate (SR) on R2R.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach. (p. 3, 1. Ivrropuction).
+- **Paper-supported outcome:** The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method (DAgRL+0D [94]) on the VAL SEEN ... (p. 8, B. Individual Task Results).
+- **Strongest explicit boundary:** Despite the promising results, Uni-NaVid has several limitations. (p. 11, C. Qualitative Results in Real-World).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

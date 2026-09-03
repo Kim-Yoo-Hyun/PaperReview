@@ -249,11 +249,16 @@ def body_header(item: dict[str, Any], row: dict[str, str], record: dict[str, Any
         boundary_note = f"Evidence boundary: selected {evidence_label} sentences, captions and section anchors were used; exact table/equation values remain at those anchors."
     else:
         boundary_note = f"Evidence boundary: selected {evidence_label} statements and source anchors were used; no PDF was identified at review time."
+    origin_note = (
+        f" PDF provenance note: {record['pdf_origin']}."
+        if record.get("pdf_origin")
+        else ""
+    )
     return (
         prefix
         + f"> Evidence maturity: {BT}{evidence_level}{BT}.\n"
         + f"> Analysis basis: {basis}; "
-        + f"canonical paper source: {source_url(item)}; {label}: {retrieved}. "
+        + f"canonical paper source: {source_url(item)}; {label}: {retrieved}.{origin_note} "
         + f"The note is an evidence-anchored {evidence_label} analysis; {anchor_note}. "
         + f"{boundary_note} "
         + "Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"
@@ -325,6 +330,11 @@ def overview_note(
         boundary_note = "selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors"
     else:
         boundary_note = "selected official source-body statements; no PDF was identified at review time"
+    origin_note = (
+        f" PDF provenance note: {record['pdf_origin']}."
+        if record.get("pdf_origin")
+        else ""
+    )
     why = (
         f"{track}의 {domain} 문제를 이해하기 위해 읽는다. 본문은 "
         f"{first(problem, 'paper-specific bottleneck not recovered')}를 문제로 두고, "
@@ -334,7 +344,7 @@ def overview_note(
     return (
         f"# {item['title']}\n\n"
         f"> Evidence maturity: {BT}{evidence_level}{BT}.\n"
-        f"> Analysis basis: {source_audit}; canonical paper source: {source_url(item)}.\n"
+        f"> Analysis basis: {source_audit}; canonical paper source: {source_url(item)}.{origin_note}\n"
         f"> {'PDF retrieval source' if source_kind == 'PDF' else 'Body source'}: {retrieval_source(record, item)[1]}. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"
         f"> Evidence boundary: {boundary_note}.\n\n"
         f"- Year/Venue: {item.get('year', row.get('year', 'not recorded'))} / {item.get('venue', row.get('venue', 'not recorded'))}\n"

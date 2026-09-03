@@ -244,6 +244,12 @@ def heading_name(line: str) -> str | None:
         "downstream application evaluation", "depth fidelity evaluation", "training details",
         "bibliography", "acknowledgements", "acknowledgments", "supplement", "appendices",
         "additional quantitative analysis", "additional qualitative analysis",
+        "model and data updates", "model and data improvements", "experimental results",
+        "architecture validation", "data-limited post-training in simulated environments",
+        "real gr-1 language following", "learning to manipulate novel objects from human ego videos",
+        "generalization to novel behaviors using neural trajectories", "post-training on unitree g1",
+        "bimanual yam demo videos", "agibot demo videos", "unitree g1 locomanipulation demo videos",
+        "experiments",
     }
     if low in known:
         return value
@@ -333,7 +339,7 @@ def evidence_is_usable(value: Evidence, document: dict[str, Any]) -> bool:
             return False
     if section in {"references", "bibliography", "acknowledgements", "acknowledgments"}:
         return False
-    if "front matter" in section and document.get("extraction_method") != "tesseract OCR fallback":
+    if "front matter" in section:
         return False
     if "reference" in section or "bibliograph" in section or "acknowledg" in section:
         return False
@@ -384,7 +390,14 @@ def caption_evidence(document: dict[str, Any]) -> list[Evidence]:
     return result
 
 
-def extract_document(path: Path) -> dict[str, Any]:
+def extract_document(path: Path, *, allow_ocr: bool = True) -> dict[str, Any]:
+    """Extract a PDF into page-aware evidence rows.
+
+    ``allow_ocr`` is opt-out for the normal note-generation path.  A semantic
+    QA pass may disable it for a fast first sweep and then route only the
+    resulting low-quality files through OCR; this keeps one canonical parser
+    while avoiding an all-document OCR bottleneck.
+    """
     document = fitz.open(path)
     page_rows: list[dict[str, Any]] = []
     try:
@@ -422,9 +435,9 @@ def extract_document(path: Path) -> dict[str, Any]:
             text_chars = len(flat)
             extraction_method = "pdftotext fallback"
 
-    if unusable_text_layer or text_chars < 1500 or (
+    if allow_ocr and (unusable_text_layer or text_chars < 1500 or (
         original_page_count >= 4 and text_chars / max(1, original_page_count) < 250
-    ):
+    )):
         ocr_rows: list[dict[str, Any]] = []
         document = fitz.open(path)
         try:
@@ -458,8 +471,8 @@ def extract_document(path: Path) -> dict[str, Any]:
 
     headings: list[tuple[int, str]] = []
     section_parents: dict[str, str] = {}
-    current_section = "Front matter"
-    current_parent = "Front matter"
+    current_section = "Body text (section not recovered)"
+    current_parent = "Body text (section not recovered)"
     sentences: list[Evidence] = []
     for row in page_rows:
         segments: list[tuple[str, str, str]] = []
@@ -989,12 +1002,18 @@ def note_header(kind: str, item: dict[str, Any], record: dict[str, Any]) -> str:
         retrieval_label = "public full-text transcription mirror used for retrieval (canonical paper source retained)"
     else:
         retrieval_label = "PDF retrieval source" if source_kind == "PDF" else "body source"
+    origin_note = (
+        f" PDF provenance note: {record['pdf_origin']}."
+        if record.get("pdf_origin")
+        else ""
+    )
     return (
         f"# {kind} - {item['title']}\n\n"
         "> Canonical metadata: [01_overview.md](./01_overview.md).\n"
         f"> Evidence maturity: {BT}{evidence_level}{BT}.\n"
         f"> Analysis basis: {basis}; "
         f"canonical paper source: {canonical}; {retrieval_label}: {retrieval}. "
+        f"{origin_note} "
         f"The note is an evidence-anchored {evidence_label} analysis; {anchor_note}. "
         f"{boundary_note} "
         "Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"

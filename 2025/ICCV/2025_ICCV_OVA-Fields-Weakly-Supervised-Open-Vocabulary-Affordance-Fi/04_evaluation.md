@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experiment Settings - extractive PDF cue:** Our experimental dataset comprises multi-source RGB-D sequences captured using consumer-grade devices (Apple iPad Pro with LiDAR) and benchmark datasets to systematically evaluate cross-environment generalization.
-- **p. 5 / 4.1. Experiment Settings - extractive PDF cue:** The data collection protocol integrates first-person-view captures from two real-world environments (home and lab scenes) with three ScanNet [3] scenes (kitchen, living room, office) and ...
-- **p. 6 / 4.3. Ablation Study - extractive PDF cue:** This shows that the SR module is crucial for improving affordance detection accuracy for detecting smaller items, probably making it better suited for real-world robotic ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** The experiments are conducted based on real-world scenes with many kinds of objects, such as refrigerators, laptops, knives, bottles, cups, microwaves, and so on.
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** Real robot quantitative results. transformation matrix to map all point cloud coordinates to the real-world coordinate system.
-- **p. 6 / 4.3. Ablation Study - extractive PDF cue:** The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Our model demonstrates superior localization of actionable regions, particularly in real scenes with small or fine-grained objects.
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** Success rates of the real robot for different objects and semantic complexity levels.
+- **p. 5 / 4.1. Experiment Settings - extractive body cue:** Our experimental dataset comprises multi-source RGB-D sequences captured using consumer-grade devices (Apple iPad Pro with LiDAR) and benchmark datasets to systematically evaluate cross-environment generalization.
+- **p. 5 / 4.1. Experiment Settings - extractive body cue:** The data collection protocol integrates first-person-view captures from two real-world environments (home and lab scenes) with three ScanNet [3] scenes (kitchen, living room, office) and ...
+- **p. 6 / 4.3. Ablation Study - extractive body cue:** This shows that the SR module is crucial for improving affordance detection accuracy for detecting smaller items, probably making it better suited for real-world robotic ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** The experiments are conducted based on real-world scenes with many kinds of objects, such as refrigerators, laptops, knives, bottles, cups, microwaves, and so on.
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** Real robot quantitative results. transformation matrix to map all point cloud coordinates to the real-world coordinate system.
+- **p. 6 / 4.3. Ablation Study - extractive body cue:** The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Our model demonstrates superior localization of actionable regions, particularly in real scenes with small or fine-grained objects.
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** Success rates of the real robot for different objects and semantic complexity levels.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 5. Real Robot Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The case of "grab the cup" reveals that although affordance detection reaches 90% spatial accuracy, the current pipeline achieves a 20% success rate for ... | p. 8 (5. Real Robot Experiments) |
 | 4.3. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments. | p. 6 (4.3. Ablation Study) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experiment Settings - extractive PDF cue:** Our experimental dataset comprises multi-source RGB-D sequences captured using consumer-grade devices (Apple iPad Pro with LiDAR) and benchmark datasets to systematically evaluate cross-environment generalization.
-- **p. 5 / 4.1. Experiment Settings - extractive PDF cue:** The data collection protocol integrates first-person-view captures from two real-world environments (home and lab scenes) with three ScanNet [3] scenes (kitchen, living room, office) and ...
-- **p. 6 / 4.3. Ablation Study - extractive PDF cue:** This shows that the SR module is crucial for improving affordance detection accuracy for detecting smaller items, probably making it better suited for real-world robotic ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** The experiments are conducted based on real-world scenes with many kinds of objects, such as refrigerators, laptops, knives, bottles, cups, microwaves, and so on.
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** Real robot quantitative results. transformation matrix to map all point cloud coordinates to the real-world coordinate system.
-- **p. 6 / 4.3. Ablation Study - extractive PDF cue:** The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments.
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** Our model demonstrates superior localization of actionable regions, particularly in real scenes with small or fine-grained objects.
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** Success rates of the real robot for different objects and semantic complexity levels.
+- **p. 5 / 4.1. Experiment Settings - extractive body cue:** Our experimental dataset comprises multi-source RGB-D sequences captured using consumer-grade devices (Apple iPad Pro with LiDAR) and benchmark datasets to systematically evaluate cross-environment generalization.
+- **p. 5 / 4.1. Experiment Settings - extractive body cue:** The data collection protocol integrates first-person-view captures from two real-world environments (home and lab scenes) with three ScanNet [3] scenes (kitchen, living room, office) and ...
+- **p. 6 / 4.3. Ablation Study - extractive body cue:** This shows that the SR module is crucial for improving affordance detection accuracy for detecting smaller items, probably making it better suited for real-world robotic ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** The experiments are conducted based on real-world scenes with many kinds of objects, such as refrigerators, laptops, knives, bottles, cups, microwaves, and so on.
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** Real robot quantitative results. transformation matrix to map all point cloud coordinates to the real-world coordinate system.
+- **p. 6 / 4.3. Ablation Study - extractive body cue:** The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments.
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** Our model demonstrates superior localization of actionable regions, particularly in real scenes with small or fine-grained objects.
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** Success rates of the real robot for different objects and semantic complexity levels.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. The OVA-Fields Framework. Our framework directly maps the user's open-vocabulary semantic queries to actionable affordance locations in the complex 3D scenes, allowing robots ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and affordance ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison results of different affordance detection models. * denotes adjusted models. Best results are highlighted in bold. Refrigerator Laptop Cup mIoU mPrec mIoU ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Performance comparison of various models on the Affordance detection task for different objects. From these two indicators, the OVA-Fields consistently outperforms the baselines, ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation study results. The impact of different compo- nents on the OVA-Fields' performance in Lab and Home scenes. mIoU Instruction Acc. Geo-Only 52.3 ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 4. Effectiveness of dynamic feature arbitration. Our dy- namic weighting shows that static blending fails to handle feature conflicts in open-vocabulary settings. Notably, pure ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Qualitative comparison of affordance detection results across various models. The experiments are conducted based on real-world scenes with many kinds of objects, such ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 4. Comparison of the small object processing procedure in the ablation study. a systematic ablation study on the dynamic weight mecha- nism by comparing ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The OVA-Fields Framework. Our framework directly maps the user's open-vocabulary semantic queries to actionable affordance locations in the complex 3D scenes, allowing robots ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and affordance ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison results of different affordance detection models. * denotes adjusted models. Best results are highlighted in bold. Refrigerator Laptop Cup mIoU mPrec mIoU ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Performance comparison of various models on the Affordance detection task for different objects. From these two indicators, the OVA-Fields consistently outperforms the baselines, ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Ablation study results. The impact of different compo- nents on the OVA-Fields' performance in Lab and Home scenes. mIoU Instruction Acc. Geo-Only 52.3 ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Effectiveness of dynamic feature arbitration. Our dy- namic weighting shows that static blending fails to handle feature conflicts in open-vocabulary settings. Notably, pure ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative comparison of affordance detection results across various models. The experiments are conducted based on real-world scenes with many kinds of objects, such ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Comparison of the small object processing procedure in the ablation study. a systematic ablation study on the dynamic weight mecha- nism by comparing ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our experimental dataset comprises multi-source RGB-D sequences captured using consumer-grade devices (Apple iPad Pro with LiDAR) and benchmark datasets to systematically evaluate cross-environment generalization. | embodiment, simulator version and control stack | p. 5 (4.1. Experiment Settings), p. 5 (4.1. Experiment Settings) |
 | Task/environment | The data collection protocol integrates first-person-view captures from two real-world environments (home and lab scenes) with three ScanNet [3] scenes (kitchen, living room, office) ... | reset, timeout, object/scene variation | p. 5 (4.1. Experiment Settings), p. 6 (4.3. Ablation Study) |
@@ -123,9 +123,9 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 | Primary metric/result | The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments. | numeric claim only at cited anchor | p. 6 (4.3. Ablation Study) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** When processing "Take out some food from the refrigerator", the system identifies fridge handles with 4.7s average response time, significantly outperforming geometric baselines.
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** For ambiguous queries like "I want to cook the chicken", it correctly activates microwave handle affordances within 3.2s, demonstrating 80% intent inference accuracy across 10 ...
-- **p. 8 / 5. Real Robot Experiments - extractive PDF cue:** For example, "Open the refrigerator" (Level 1) achieves 100% success (10/10 trials), while context-dependent instructions like "Find a snack for my lunch" (Level 3) drop ...
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** When processing "Take out some food from the refrigerator", the system identifies fridge handles with 4.7s average response time, significantly outperforming geometric baselines.
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** For ambiguous queries like "I want to cook the chicken", it correctly activates microwave handle affordances within 3.2s, demonstrating 80% intent inference accuracy across 10 ...
+- **p. 8 / 5. Real Robot Experiments - extractive body cue:** For example, "Open the refrigerator" (Level 1) achieves 100% success (10/10 trials), while context-dependent instructions like "Find a snack for my lunch" (Level 3) drop ...
 
 ## Generalization and Failure Cases
 
@@ -163,14 +163,14 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 6. Conclusion - extractive PDF cue:** The key limitations emerge in handling articulated objects (e.g., doors/drawers).
-- **p. 8 / 6. Conclusion - extractive PDF cue:** Although grasp positions are reliably detected, the current implementation cannot infer required force application directions or kinematic movement patterns essential for operating hinge-based mechanisms.
-- **p. 5 / 4.2. Numerical and Visual Comparisons - extractive PDF cue:** This approach demonstrates particular strength in multimodal feature fusion, as 89.3% of failure cases in singlemodality baselines result from either geometric oversimplification or semantic ambiguity.
-- **p. 6 / 4.3. Ablation Study - extractive PDF cue:** Our dynamic weighting shows that static blending fails to handle feature conflicts in open-vocabulary settings.
-- **p. 5 / 4.2. Numerical and Visual Comparisons - extractive PDF cue:** The method maintains robustness under ScanNet's realworld noise conditions, achieving 27.6% precision at 13.2% mIoU compared to CLIP-FO3D's 21.2% precision with 15.3% mIoU.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and affordance ...
+- **p. 8 / 6. Conclusion - extractive body cue:** The key limitations emerge in handling articulated objects (e.g., doors/drawers).
+- **p. 8 / 6. Conclusion - extractive body cue:** Although grasp positions are reliably detected, the current implementation cannot infer required force application directions or kinematic movement patterns essential for operating hinge-based mechanisms.
+- **p. 5 / 4.2. Numerical and Visual Comparisons - extractive body cue:** This approach demonstrates particular strength in multimodal feature fusion, as 89.3% of failure cases in singlemodality baselines result from either geometric oversimplification or semantic ambiguity.
+- **p. 6 / 4.3. Ablation Study - extractive body cue:** Our dynamic weighting shows that static blending fails to handle feature conflicts in open-vocabulary settings.
+- **p. 5 / 4.2. Numerical and Visual Comparisons - extractive body cue:** The method maintains robustness under ScanNet's realworld noise conditions, achieving 27.6% precision at 13.2% mIoU compared to CLIP-FO3D's 21.2% precision with 15.3% mIoU.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and affordance ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experiment Settings), p. 5 (4.1. Experiment Settings), p. 6 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (5. Real Robot Experiments), p. 6 (4.3. Ablation Study), metrics p. 7 (4.3. Ablation Study), p. 8 (5. Real Robot Experiments), p. 8 (5. Real Robot Experiments), p. 5 (4.2. Numerical and Visual Comparisons), p. 5 (4.2. Numerical and Visual Comparisons), p. 6 (4.3. Ablation Study), baselines p. 5 (4.2. Numerical and Visual Comparisons), p. 6 (4.2. Numerical and Visual Comparisons), p. 8 (5. Real Robot Experiments), p. 5 (4.2. Numerical and Visual Comparisons), p. 7 (4.3. Ablation Study), p. 6 (4.2. Numerical and Visual Comparisons), results p. 8 (5. Real Robot Experiments), p. 6 (4.3. Ablation Study), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 5 (4.2. Numerical and Visual Comparisons).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experiment Settings), p. 5 (4.1. Experiment Settings), p. 6 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (5. Real Robot Experiments), p. 6 (4.3. Ablation Study), metrics p. 7 (4.3. Ablation Study), p. 8 (5. Real Robot Experiments), p. 8 (5. Real Robot Experiments), p. 5 (4.2. Numerical and Visual Comparisons), p. 5 (4.2. Numerical and Visual Comparisons), p. 6 (4.3. Ablation Study), baselines p. 5 (4.2. Numerical and Visual Comparisons), p. 6 (4.2. Numerical and Visual Comparisons), p. 8 (5. Real Robot Experiments), p. 5 (4.2. Numerical and Visual Comparisons), p. 7 (4.3. Ablation Study), p. 6 (4.2. Numerical and Visual Comparisons), results p. 8 (5. Real Robot Experiments), p. 6 (4.3. Ablation Study), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 5 (4.2. Numerical and Visual Comparisons).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

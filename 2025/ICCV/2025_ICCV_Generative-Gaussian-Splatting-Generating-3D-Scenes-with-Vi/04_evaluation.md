@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** Despite the similar name, ScanNet++ features different cameras and scenes from ScanNet, allowing us to assess the generalization of our method in real-world scenarios.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Our internal dataset contains around 95,000 synthetic indoor environments with smooth camera trajectories achieved through spline interpolation.
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive PDF cue:** But ultimately, our goal is to generate high-quality 3D scenes.
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive PDF cue:** Baseline Comparison Given Two Reference Images: We benchmark the approaches on RealEstate10K and evaluate generalization on ScanNet++.
-- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** Autoregressive Scene Synthesis with GGS: By generating consistent views between the reference images and from additional viewpoints, GGS can augment the set of 5 reference ...
-- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** 6, we show a reconstructed 3D scene from GGS using only 5 reference images.
-- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** Next, we re-render the generated scene as condition for the next step, biasing the model towards 3D-consistent inpainting.
-- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** For results on a longer trajectory, see Appendix E.3.
+- **p. 5 / 4. Experiments - extractive body cue:** Despite the similar name, ScanNet++ features different cameras and scenes from ScanNet, allowing us to assess the generalization of our method in real-world scenarios.
+- **p. 5 / 4. Experiments - extractive body cue:** Our internal dataset contains around 95,000 synthetic indoor environments with smooth camera trajectories achieved through spline interpolation.
+- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** But ultimately, our goal is to generate high-quality 3D scenes.
+- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** Baseline Comparison Given Two Reference Images: We benchmark the approaches on RealEstate10K and evaluate generalization on ScanNet++.
+- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** Autoregressive Scene Synthesis with GGS: By generating consistent views between the reference images and from additional viewpoints, GGS can augment the set of 5 reference ...
+- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** 6, we show a reconstructed 3D scene from GGS using only 5 reference images.
+- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** Next, we re-render the generated scene as condition for the next step, biasing the model towards 3D-consistent inpainting.
+- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** For results on a longer trajectory, see Appendix E.3.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Scene Synthesis From a Single Image | EMPIRICAL / REAL-ROBOT OR HARDWARE | On RealEstate10K, our approach significantly improves image quality and 3D consistency over the baselines. | p. 6 (4.1. Scene Synthesis From a Single Image) |
 | 4.3. Autoregressive Scene Synthesis | EMPIRICAL / REAL-ROBOT OR HARDWARE | With improved consistency, floating artifacts in the reconstructions are significantly reduced (see also Fig. | p. 8 (4.3. Autoregressive Scene Synthesis) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4. Experiments - extractive PDF cue:** Despite the similar name, ScanNet++ features different cameras and scenes from ScanNet, allowing us to assess the generalization of our method in real-world scenarios.
-- **p. 5 / 4. Experiments - extractive PDF cue:** Our internal dataset contains around 95,000 synthetic indoor environments with smooth camera trajectories achieved through spline interpolation.
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive PDF cue:** But ultimately, our goal is to generate high-quality 3D scenes.
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive PDF cue:** Baseline Comparison Given Two Reference Images: We benchmark the approaches on RealEstate10K and evaluate generalization on ScanNet++.
-- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** Autoregressive Scene Synthesis with GGS: By generating consistent views between the reference images and from additional viewpoints, GGS can augment the set of 5 reference ...
-- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** 6, we show a reconstructed 3D scene from GGS using only 5 reference images.
-- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** Next, we re-render the generated scene as condition for the next step, biasing the model towards 3D-consistent inpainting.
-- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive PDF cue:** For results on a longer trajectory, see Appendix E.3.
+- **p. 5 / 4. Experiments - extractive body cue:** Despite the similar name, ScanNet++ features different cameras and scenes from ScanNet, allowing us to assess the generalization of our method in real-world scenarios.
+- **p. 5 / 4. Experiments - extractive body cue:** Our internal dataset contains around 95,000 synthetic indoor environments with smooth camera trajectories achieved through spline interpolation.
+- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** But ultimately, our goal is to generate high-quality 3D scenes.
+- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** Baseline Comparison Given Two Reference Images: We benchmark the approaches on RealEstate10K and evaluate generalization on ScanNet++.
+- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** Autoregressive Scene Synthesis with GGS: By generating consistent views between the reference images and from additional viewpoints, GGS can augment the set of 5 reference ...
+- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** 6, we show a reconstructed 3D scene from GGS using only 5 reference images.
+- **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** Next, we re-render the generated scene as condition for the next step, biasing the model towards 3D-consistent inpainting.
+- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** For results on a longer trajectory, see Appendix E.3.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Overview: Given one or more input images, GGS leverages a video diffusion prior to directly generate a 3D radiance field parameterized via 3D ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 3. To address this limitation, we introduce a stronger bias in the model to learn correct spatial relationships be- tween frames. Specifically, we integrate ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Model Architecture: Our approach, GGS, directly synthesizes a 3D representation, which is parameterized by a set of Gaussian splats {gm}, from a set ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Baseline Comparison Given One Reference Image: We benchmark the approaches on RealEstate10K and evaluate generalization ability on ScanNet++. The reported metrics are cal- ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Both, PixelSplat and LatentSplat perform well RE10K Scannet++ Interpolation Extrapolation Interpolation Extrapolation
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Baseline Comparison Given Two Reference Images: We benchmark the approaches on RealEstate10K and evaluate generalization on ScanNet++. We report PSNR, LPIPS and TSED ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Fig. 4. Similar to the single image results, ViewCrafter per- forms particularly well on ScanNet++ but lacks 3D con- sistency as indicated by a lower ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 3. Baseline Comparison Given One Reference Image: We show results for the strongest baselines CameraCtrl [15] and ViewCrafter[76] together with our approach without (Ours-No3D) ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview: Given one or more input images, GGS leverages a video diffusion prior to directly generate a 3D radiance field parameterized via 3D ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 3. To address this limitation, we introduce a stronger bias in the model to learn correct spatial relationships be- tween frames. Specifically, we integrate ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Model Architecture: Our approach, GGS, directly synthesizes a 3D representation, which is parameterized by a set of Gaussian splats {gm}, from a set ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Baseline Comparison Given One Reference Image: We benchmark the approaches on RealEstate10K and evaluate generalization ability on ScanNet++. The reported metrics are cal- ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Both, PixelSplat and LatentSplat perform well RE10K Scannet++ Interpolation Extrapolation Interpolation Extrapolation
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Baseline Comparison Given Two Reference Images: We benchmark the approaches on RealEstate10K and evaluate generalization on ScanNet++. We report PSNR, LPIPS and TSED ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. Similar to the single image results, ViewCrafter per- forms particularly well on ScanNet++ but lacks 3D con- sistency as indicated by a lower ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Baseline Comparison Given One Reference Image: We show results for the strongest baselines CameraCtrl [15] and ViewCrafter[76] together with our approach without (Ours-No3D) ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Despite the similar name, ScanNet++ features different cameras and scenes from ScanNet, allowing us to assess the generalization of our method in real-world scenarios. | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 5 (4. Experiments) |
 | Task/environment | Our internal dataset contains around 95,000 synthetic indoor environments with smooth camera trajectories achieved through spline interpolation. | reset, timeout, object/scene variation | p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images) |
@@ -123,12 +123,12 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 | Primary metric/result | With improved consistency, floating artifacts in the reconstructions are significantly reduced (see also Fig. | numeric claim only at cited anchor | p. 8 (4.3. Autoregressive Scene Synthesis) |
 
 - Numeric sentences retained from the body:
-- **p. 5 / 4. Experiments - extractive PDF cue:** RealEstate10K comprises sequences of approximately 30-100 frames from 10,000 real estate recordings, featuring smooth camera trajectories with minimal roll or pitch.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For the single-view setting, we subsample 8 frames for RealEstate10K with a stride of 10, similar to [68, 74], and use a stride of 4 ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** We report results on 128 randomly selected scenes from the RealEstate10K testset and 50 scenes from ScanNet++.
-- **p. 5 / 4. Experiments - extractive PDF cue:** For the two-view conditional model, we comply with the training strategy of PixelSplat [5] and sample 8 views randomly within a maximum gap of 80 ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Note that the video backbones of CameraCtrl[14] and ViewCrafter [76] require 14, and 25 frames, respectively, while we consider an 8-frame setting.
-- **p. 6 / 4. Experiments - extractive PDF cue:** Inference is performed with a discrete Euler scheduler using 30 steps.
+- **p. 5 / 4. Experiments - extractive body cue:** RealEstate10K comprises sequences of approximately 30-100 frames from 10,000 real estate recordings, featuring smooth camera trajectories with minimal roll or pitch.
+- **p. 5 / 4. Experiments - extractive body cue:** For the single-view setting, we subsample 8 frames for RealEstate10K with a stride of 10, similar to [68, 74], and use a stride of 4 ...
+- **p. 5 / 4. Experiments - extractive body cue:** We report results on 128 randomly selected scenes from the RealEstate10K testset and 50 scenes from ScanNet++.
+- **p. 5 / 4. Experiments - extractive body cue:** For the two-view conditional model, we comply with the training strategy of PixelSplat [5] and sample 8 views randomly within a maximum gap of 80 ...
+- **p. 5 / 4. Experiments - extractive body cue:** Note that the video backbones of CameraCtrl[14] and ViewCrafter [76] require 14, and 25 frames, respectively, while we consider an 8-frame setting.
+- **p. 6 / 4. Experiments - extractive body cue:** Inference is performed with a discrete Euler scheduler using 30 steps.
 
 ## Generalization and Failure Cases
 
@@ -166,14 +166,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 
 ## Limitations and Verification Questions
 
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Table 3. To address this limitation, we introduce a stronger bias in the model to learn correct spatial relationships be- tween frames. Specifically, we integrate ...
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive PDF cue:** However, PixelSplat does not support view extrapolation, which is our primary objective.
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive PDF cue:** Our approach achieves similar results on RealEstate10K but does not reach the same reconstruction quality on ScanNet++.
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Model Architecture: Our approach, GGS, directly synthesizes a 3D representation, which is parameterized by a set of Gaussian splats {gm}, from a set ...
-- **p. 5 / 4. Experiments - extractive PDF cue:** Peak Signal-to-Noise Ratio and LPIPS [80] quantify reconstruction quality.
-- **p. 8 / 4.4. Ablation Studies - extractive PDF cue:** Compared to the 2D decoder (GGS), the 3D decoder improves 3D consistency but moderately degrades visual fidelity.
+- **p. 3 / Figure/Table caption - extractive body cue:** Table 3. To address this limitation, we introduce a stronger bias in the model to learn correct spatial relationships be- tween frames. Specifically, we integrate ...
+- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** However, PixelSplat does not support view extrapolation, which is our primary objective.
+- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** Our approach achieves similar results on RealEstate10K but does not reach the same reconstruction quality on ScanNet++.
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Model Architecture: Our approach, GGS, directly synthesizes a 3D representation, which is parameterized by a set of Gaussian splats {gm}, from a set ...
+- **p. 5 / 4. Experiments - extractive body cue:** Peak Signal-to-Noise Ratio and LPIPS [80] quantify reconstruction quality.
+- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Compared to the 2D decoder (GGS), the 3D decoder improves 3D consistency but moderately degrades visual fidelity.
 
-- **PDF anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 8 (4.3. Autoregressive Scene Synthesis), p. 7 (4.3. Autoregressive Scene Synthesis), metrics p. 7 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 7 (4.3. Autoregressive Scene Synthesis), baselines p. 7 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Scene Synthesis From a Single Image), p. 8 (4.4. Ablation Studies), results p. 6 (4.1. Scene Synthesis From a Single Image), p. 8 (4.3. Autoregressive Scene Synthesis), p. 6 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 8 (4.4. Ablation Studies), p. 5 (4. Experiments).
+- **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 8 (4.3. Autoregressive Scene Synthesis), p. 7 (4.3. Autoregressive Scene Synthesis), metrics p. 7 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 7 (4.3. Autoregressive Scene Synthesis), baselines p. 7 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Scene Synthesis From a Single Image), p. 8 (4.4. Ablation Studies), results p. 6 (4.1. Scene Synthesis From a Single Image), p. 8 (4.3. Autoregressive Scene Synthesis), p. 6 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 8 (4.4. Ablation Studies), p. 5 (4. Experiments).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

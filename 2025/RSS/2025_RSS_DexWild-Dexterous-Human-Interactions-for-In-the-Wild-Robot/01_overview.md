@@ -1,8 +1,10 @@
 # DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p075.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p075.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p075.pdf
 - Code/Project: https://dexwild.github.io
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -70,7 +72,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 | Embodiment/environment | We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot training data ... | hardware/simulator version and reset protocol | p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks) |
 | Dataset/benchmark | We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot training data ... | role, split, size and leakage | p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks) |
 | Metric | Success requires the policy to adapt to varying object properties, environmental conditions, | definition, denominator, direction and uncertainty | p. 6 (B. Evaluation Tasks), p. 5 (Figure/Table caption), p. 6 (V. ANALYSIS AND RI) |
-| Baseline/ablation | not recovered | fair input/data/compute/action matching | 본문 anchor 없음 |
+| Baseline/ablation | not stated or recoverable in the selected PDF body | fair input/data/compute/action matching | 본문 anchor 없음 |
 
 ## Explicit Limitations and Failure Boundary
 
@@ -84,3 +86,12 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 ## Why Read It
 
 RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 This lack of robustness remains a key limitation of current systems.를 문제로 두고, In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (A. Generalization for Imitation Learning), p. 2 (B. Data Generation for Robot Manipulation), p. 1 (1. IyrRopuction), p. 1 (Abstract), p. 4 (A. Data Collection System), p. 4 (B. Training Data Modalities and Preprocessing) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** 1) Lack of haptic feedback: Operators cannot feel objects, ‘making fine manipulation difficult for certain tasks. (p. 8, 06 06 06 _).
+- **Actual contribution:** In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations. (p. 2, 1. IyrRopuction).
+- **Evaluation boundary:** We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot ... (p. 6, C. Evaluation Environments).
+- **Explicit failure boundary:** This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html; PDF retrieval source: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html; PDF retrieval source: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | VI. RESULTS WITH GENERAL IMPLEMENTATION | EMPIRICAL / SOURCE-REPORTED EVALUATION | For each such pair of times we report the success rate in answering the query (s, 9). | p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
 | VI. RESULTS WITH GENERAL IMPLEMENTATION | EMPIRICAL / SOURCE-REPORTED EVALUATION | We present results obtained with two representative examples. | p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
@@ -54,11 +54,11 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Stil, the cases treated here are considerably easier than in the scenes of Section V, due 10, the relatively low number of dofs of ... | embodiment, simulator version and control stack | p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
 | Task/environment | Ress with gee planer fr scenes of Fi 9 and 10. _oe ot, [aaa nae THF problems in several minutes, but itis silvery ficient ... | reset, timeout, object/scene variation | p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
-| Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 6 (B. The Query Phase), p. 1 (Front matter) |
+| Observation/sensor | start/goal, map, dynamics와 successor/operator description | calibration, preprocessing, privileged input | p. 6 (B. The Query Phase), p. 1 (Body text (section boundary not confidently recovered)) |
 | Output/decision | feasible action sequence 또는 minimum-cost plan | action frame, controller and termination | p. 1 (Abstract), p. 2 (1. IntRopuction) |
 
 ## Metrics and Success Definition
@@ -149,7 +149,16 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 - **p. 12 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** (1); and collision checking is done analytically, using routines from the PLAGEO library [19].
 - **p. 13 / VI. Coxctusion - extractive body cue:** For more complicated ‘geometries, the use of an iterative collision checker, like the ‘one in {4}, will be advantageous.
 
-- **PDF anchors reviewed:** datasets p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), metrics p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), baselines 본문 anchor 없음, results p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 10 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), metrics p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), baselines 본문 anchor 없음, results p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 10 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** 12 reports some experimental results obtained over many independently ‘constructed roadmaps, for different learning times. (p. 13, VI. RESULTS WITH GENERAL IMPLEMENTATION).
+- **Metric evidence:** For each such pair of times we report the success rate in answering the query (s, 9). (p. 12, VI. RESULTS WITH GENERAL IMPLEMENTATION).
+- **Baseline/ablation evidence:** We present results obtained with two representative examples. (p. 12, VI. RESULTS WITH GENERAL IMPLEMENTATION).
+- **Failure/negative evidence:** We have observed that in cases when the above motion does not manage to connect configurations a and 6, it nevertheless brings the robot to a configuration b' very close ... (p. 8, IV. APPLICATION 10 PLANAR ARTICULATED ROBOTS).

@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.12168; PDF retrieval source: https://arxiv.org/pdf/2401.12168. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.12168; PDF retrieval source: https://arxiv.org/pdf/2401.12168. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 
 ## Evaluation Body Digest
 
-- **p. 8 / 4. Experiments - extractive PDF cue:** It shows state-of-the-art performance in OKVQA benchmark, as well as being capable of robot planning tasks.
-- **p. 9 / 4.2. Effect of Spatial VQA Data to General VQA - extractive PDF cue:** We compared our model with the vanilla PaLM 2-E trained without the spatial VQA dataset on general VQA benchmarks, and as summarized in Table.
-- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** We train VLMs using the noisy datasets and evaluate them using a human annotated quantitative spatial VQA benchmark for manipulation.
-- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** Therefore, we leverage our robotic manipulation dataset, which provides near-groundtruth depth information captured using a depth camera.
-- **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive PDF cue:** Weconduct a real robot experiment where we specify a task in nature language and ask SpatialVLM to annotate a reward for each frame in a ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** We train our model using a mixture of PaLM-E training set and our spatial VQA dataset.
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** Such visual question-answer pairs can be easily mixed together with other captioning or question answering datasets and use the same training objectives.
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** Thanks to the diversity of object captions and distance units, our synthetic dataset features significant diversity in terms of object description, question type and phrasing.
+- **p. 8 / 4. Experiments - extractive body cue:** It shows state-of-the-art performance in OKVQA benchmark, as well as being capable of robot planning tasks.
+- **p. 9 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** We compared our model with the vanilla PaLM 2-E trained without the spatial VQA dataset on general VQA benchmarks, and as summarized in Table.
+- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** We train VLMs using the noisy datasets and evaluate them using a human annotated quantitative spatial VQA benchmark for manipulation.
+- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** Therefore, we leverage our robotic manipulation dataset, which provides near-groundtruth depth information captured using a depth camera.
+- **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive body cue:** Weconduct a real robot experiment where we specify a task in nature language and ask SpatialVLM to annotate a reward for each frame in a ...
+- **p. 7 / 4. Experiments - extractive body cue:** We train our model using a mixture of PaLM-E training set and our spatial VQA dataset.
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** Such visual question-answer pairs can be easily mixed together with other captioning or question answering datasets and use the same training objectives.
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** Thanks to the diversity of object captions and distance units, our synthetic dataset features significant diversity in terms of object description, question type and phrasing.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Spatial VQA performance | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our approach SpatialVLM achieves significantly higher success rate than all baselines, achieving inrange results on almost half of the questions. | p. 9 (4.1. Spatial VQA performance) |
 | 4.1. Spatial VQA performance | EMPIRICAL / REAL-ROBOT OR HARDWARE | It is shown that SpatialVLM is able to achieve significantly higher accuracy compared to all baselines that are not trained using the synthetic spatial ... | p. 8 (4.1. Spatial VQA performance) |
@@ -40,14 +40,14 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 
 ## Dataset / Benchmark Role
 
-- **p. 8 / 4. Experiments - extractive PDF cue:** It shows state-of-the-art performance in OKVQA benchmark, as well as being capable of robot planning tasks.
-- **p. 9 / 4.2. Effect of Spatial VQA Data to General VQA - extractive PDF cue:** We compared our model with the vanilla PaLM 2-E trained without the spatial VQA dataset on general VQA benchmarks, and as summarized in Table.
-- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** We train VLMs using the noisy datasets and evaluate them using a human annotated quantitative spatial VQA benchmark for manipulation.
-- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** Therefore, we leverage our robotic manipulation dataset, which provides near-groundtruth depth information captured using a depth camera.
-- **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive PDF cue:** Weconduct a real robot experiment where we specify a task in nature language and ask SpatialVLM to annotate a reward for each frame in a ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** We train our model using a mixture of PaLM-E training set and our spatial VQA dataset.
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** Such visual question-answer pairs can be easily mixed together with other captioning or question answering datasets and use the same training objectives.
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** Thanks to the diversity of object captions and distance units, our synthetic dataset features significant diversity in terms of object description, question type and phrasing.
+- **p. 8 / 4. Experiments - extractive body cue:** It shows state-of-the-art performance in OKVQA benchmark, as well as being capable of robot planning tasks.
+- **p. 9 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** We compared our model with the vanilla PaLM 2-E trained without the spatial VQA dataset on general VQA benchmarks, and as summarized in Table.
+- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** We train VLMs using the noisy datasets and evaluate them using a human annotated quantitative spatial VQA benchmark for manipulation.
+- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** Therefore, we leverage our robotic manipulation dataset, which provides near-groundtruth depth information captured using a depth camera.
+- **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive body cue:** Weconduct a real robot experiment where we specify a task in nature language and ask SpatialVLM to annotate a reward for each frame in a ...
+- **p. 7 / 4. Experiments - extractive body cue:** We train our model using a mixture of PaLM-E training set and our spatial VQA dataset.
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** Such visual question-answer pairs can be easily mixed together with other captioning or question answering datasets and use the same training objectives.
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** Thanks to the diversity of object captions and distance units, our synthetic dataset features significant diversity in terms of object description, question type and phrasing.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
@@ -57,12 +57,12 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | It shows state-of-the-art performance in OKVQA benchmark, as well as being capable of robot planning tasks. | embodiment, simulator version and control stack | p. 8 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA) |
 | Task/environment | We compared our model with the vanilla PaLM 2-E trained without the spatial VQA dataset on general VQA benchmarks, and as summarized in Table. | reset, timeout, object/scene variation | p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 6 (3.3. Learning Spatial Reasoning), p. 2 (1. Introduction) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 5 (3.1. Spatial Grounding from 2D Images), p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset) |
+| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 6 (3.3. Learning Spatial Reasoning), p. 1 (Body text (section not recovered)) |
+| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1. Introduction), p. 5 (3.1. Spatial Grounding from 2D Images) |
 
 ## Metrics and Success Definition
 
@@ -116,12 +116,12 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 | Primary metric/result | It is shown that SpatialVLM is able to achieve significantly higher accuracy compared to all baselines that are not trained using the synthetic spatial ... | numeric claim only at cited anchor | p. 8 (4.1. Spatial VQA performance) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** 20 centimeters Figure 3 / Example data entries from the synthetic dataset.
-- **p. 9 / 4.1. Spatial VQA performance - extractive PDF cue:** We found that SpatialVLM does well on medium range scenes like those with objects 1-10 meters from the camera.
-- **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive PDF cue:** In fact, human sometimes tend to give noisy estimations, as they prefer to round an estimation of 0.8 meter to 1 meter.
-- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** Since the objects in the manipulation VQA datasets are within 1 meter range, we added the mean squared error (MSE) as a 10
-- **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive PDF cue:** A large language model, in this case GPT-4, when equipped with SpatialVLM as a spatial reasoning submodule, can perform complex spatial reasoning tasks, such as ...
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** 20 centimeters Figure 3 / Example data entries from the synthetic dataset.
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** 20 centimeters Figure 3 / Example data entries from the synthetic dataset.
+- **p. 9 / 4.1. Spatial VQA performance - extractive body cue:** We found that SpatialVLM does well on medium range scenes like those with objects 1-10 meters from the camera.
+- **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** In fact, human sometimes tend to give noisy estimations, as they prefer to round an estimation of 0.8 meter to 1 meter.
+- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** Since the objects in the manipulation VQA datasets are within 1 meter range, we added the mean squared error (MSE) as a 10
+- **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive body cue:** A large language model, in this case GPT-4, when equipped with SpatialVLM as a spatial reasoning submodule, can perform complex spatial reasoning tasks, such as ...
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** 20 centimeters Figure 3 / Example data entries from the synthetic dataset.
 
 ## Generalization and Failure Cases
 
@@ -158,14 +158,14 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 4.1. Spatial VQA performance - extractive PDF cue:** Additionally, we find that state-of-the-art VLM GPT-4V often refrain from generating answers about distance in SI units with a disclaimer text "I'm sorry, but I ...
-- **p. 7 / 4. Experiments - extractive PDF cue:** To verify whether VLM's limitation in spatial reasoning is a data problem, we choose the following state-of-the-art VLMs as baselines, all trained on mixtures in ...
-- **p. 9 / 4.1. Spatial VQA performance - extractive PDF cue:** VLM answers that fall into half to twice of the ground truth value to represent how accurate the VLM's estimates are.
-- **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive PDF cue:** We train both models for 70k steps, and evaluate percentages of answers from both models that fall into various ranges of the ground truth value ...
-- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** 5 compares how different Gaussian noise standard deviations affect the overall VLM performance on quantitative spatial VQA.
-- **p. 11 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive PDF cue:** It is shown that VLMs trained on datasets of different noise levels achieve similar spatial reasoning accuracy.
+- **p. 9 / 4.1. Spatial VQA performance - extractive body cue:** Additionally, we find that state-of-the-art VLM GPT-4V often refrain from generating answers about distance in SI units with a disclaimer text "I'm sorry, but I ...
+- **p. 7 / 4. Experiments - extractive body cue:** To verify whether VLM's limitation in spatial reasoning is a data problem, we choose the following state-of-the-art VLMs as baselines, all trained on mixtures in ...
+- **p. 9 / 4.1. Spatial VQA performance - extractive body cue:** VLM answers that fall into half to twice of the ground truth value to represent how accurate the VLM's estimates are.
+- **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** We train both models for 70k steps, and evaluate percentages of answers from both models that fall into various ranges of the ground truth value ...
+- **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** 5 compares how different Gaussian noise standard deviations affect the overall VLM performance on quantitative spatial VQA.
+- **p. 11 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** It is shown that VLMs trained on datasets of different noise levels achieve similar spatial reasoning accuracy.
 
-- **PDF anchors reviewed:** datasets p. 8 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), p. 7 (4. Experiments), metrics p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), baselines p. 7 (4. Experiments), p. 8 (4. Experiments), p. 8 (4.1. Spatial VQA performance), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.2. Effect of Spatial VQA Data to General VQA), p. 7 (4. Experiments), results p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 7 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.2. Effect of Spatial VQA Data to General VQA).
+- **Evidence anchors reviewed:** datasets p. 8 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), p. 7 (4. Experiments), metrics p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), baselines p. 7 (4. Experiments), p. 8 (4. Experiments), p. 8 (4.1. Spatial VQA performance), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.2. Effect of Spatial VQA Data to General VQA), p. 7 (4. Experiments), results p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 7 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.2. Effect of Spatial VQA Data to General VQA).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

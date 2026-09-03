@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p037.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p037.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our results show that \V-HOP consistently outperforms FoundationPose in both ADD and ADD-S metrics under different levels of occlusion. ‘These results underscore the importance ... | p. 7 (experiment) |
 | experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | V-HOP achieves 1 32% lower ADD-S error compared to NeuralFeels and has a similar ADD-S-0.1d score. | p. 7 (experiment) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Our synthesized dataset exemplifies this principle and supports our robust real-world performance. | embodiment, simulator version and control stack | p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset) |
 | Task/environment | However, aas demonstrated in recent work [70], leveraging a large-scale synthetic dataset enriched with domain randomization can yield superior real-world performance compared to smallSeale ... | reset, timeout, object/scene variation | p. 5 (A. Multi-embodied Dataset), p. 7 (experiment) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 - **p. 9 / VI. RELATED Works - extractive body cue:** While model-free approaches [65, 69, 54] exist, they fall outside the scope of this work.
 - **p. 5 / A. Multi-embodied Dataset - extractive body cue:** V) demonstrate robust performance and eliminate the need for costly real-world data collection,
 
-- **PDF anchors reviewed:** datasets p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset), p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), metrics p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment), p. 7 (experiment), p. 7 (experiment), p. 9 (C. Can-in-Mug Experiment), baselines p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset), results p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment), p. 5 (A. Multi-embodied Dataset).
+- **Evidence anchors reviewed:** datasets p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset), p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), metrics p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment), p. 7 (experiment), p. 7 (experiment), p. 9 (C. Can-in-Mug Experiment), baselines p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset), results p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment), p. 5 (A. Multi-embodied Dataset).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Our results show that \V-HOP consistently outperforms FoundationPose in both ADD and ADD-S metrics under different levels of occlusion. ‘These results underscore the importance of integrating visual and haptic information ... (p. 7, experiment).
+- **Metric evidence:** V-HOP achieves 1 32% lower ADD-S error compared to NeuralFeels and has a similar ADD-S-0.1d score. (p. 7, experiment).
+- **Baseline/ablation evidence:** V-HOP achieves 1 32% lower ADD-S error compared to NeuralFeels and has a similar ADD-S-0.1d score. (p. 7, experiment).
+- **Failure/negative evidence:** 1) If the grasp attempt fails, the robot must detect the failure based on the real-time object pose and reattempt the grasp. (p. 7, B. Bimanual Handover Experiment).

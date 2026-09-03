@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.13470; PDF retrieval source: https://arxiv.org/pdf/1912.13470. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.13470; PDF retrieval source: https://arxiv.org/pdf/1912.13470. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,14 +23,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Secondly, it is difficult to obtain large-scale high quality training data [3]. | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | The key of grasping is to detect the grasp pose given visual inputs (image or point cloud) and has drawn many attentions ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| Observation / input | The key of grasping is to detect the grasp pose given visual inputs (image or point cloud) and has drawn many attentions ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | grasping, detect, grasp, pose, given, visual, inputs, image, point, cloud | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | View, Kinect4A, RealSense, D-Pose, DoF, Grasp, Poses, Rectangle-based | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | standardized episode e and interface; body terms: grasping, detect, grasp, pose, given, visual, inputs, image, point, cloud | p. 1 (1. Introduction), p. 4 (2 Cams), p. 3 (3.2. Data Collection) |
 | Decision / output variable | method trajectory/action; body terms: methodology, building, dataset, Specifically, inspired, previous, literature, two-step | p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3.1. Overview) |
@@ -38,7 +38,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (2 Cams) |
 | Success / guarantee | comparable score and protocol validity | p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. Evaluation), p. 5 (3.4. Evaluation) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -47,7 +47,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3.1. Overview), p. 3 (3.3. Data Annotation)): Our methodology for building the dataset.
+PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3.1. Overview), p. 3 (3.3. Data Annotation)): Our methodology for building the dataset.
 
 - **p. 1 / 1. Introduction - extractive body cue:** Specifically, inspired by previous literature [24], we propose a two-step pipeline to generate tremendous grasp poses for a scene.
 - **p. 2 / 3.1. Overview - extractive body cue:** To overcome these issues, we propose a large-scale dataset in clustered scenario with dense and rich annotations for grasp pose prediction named GraspNet.
@@ -66,12 +66,21 @@ PDF contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (
 
 ## Position in the Robotics Loop
 
-benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 1 (1. Introduction), p. 4 (2 Cams), p. 3 (3.2. Data Collection), p. 2 (3.1. Overview). The downstream handoff is claimed only when the body describes it.
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction), p. 4 (2 Cams), p. 3 (3.2. Data Collection), p. 2 (3.1. Overview). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 1 (1. Introduction), p. 4 (2 Cams), p. 3 (3.2. Data Collection), p. 2 (3.1. Overview), objective no optimization/equation sentence selected.
+- **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 1 (1. Introduction), p. 4 (2 Cams), p. 3 (3.2. Data Collection), p. 2 (3.1. Overview), objective no optimization/equation sentence selected.
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.75). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** However, for clustered scene, current researches suffer from the problems of insufficient training data and the lacking of evaluation benchmarks. (p. 1, Abstract).
+- **Formulation-changing contribution:** Our methodology for building the dataset. (p. 1, 1. Introduction).
+- **Assumption/failure evidence:** Such evaluation method does not assume the representation of the grasp pose, thus is general in practice. (p. 5, 3.5. Discussion).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

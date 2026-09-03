@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 3.1. Robustness | EMPIRICAL / REAL-ROBOT OR HARDWARE | These results show that although expert-level success remains challenging, VIRAL achieves near-expert success performance while being faster than the expert, and it substantially outperforms ... | p. 6 (3.1. Robustness) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 8. Real-world generalization of VIRAL RGB-based policy under variations in tray and object position, robot start pose, table height and type, tablecloth color, ... | p. 6 (Figure/Table caption) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We assess real-world generalization by systematically varying the environment along multiple factors, including tray start position, robot start pose, table height, lighting, table cloth, ... | embodiment, simulator version and control stack | p. 6 (3.2. Generalization), p. 6 (3.1. Robustness) |
 | Task/environment | Real-world generalization of VIRAL RGB-based policy under variations in tray and object position, robot start pose, table height and type, tablecloth color, lighting, and ... | reset, timeout, object/scene variation | p. 6 (3.1. Robustness), p. 5 (3. Real-World Results of VIRAL) |
@@ -163,7 +163,16 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 - **p. 5 / 2.3. Key Elements of Sim-to-Real Transfer - extractive body cue:** To enhance robustness and improve sim-toreal transfer, we apply extensive visual and physical randomization during training (Figure 3).
 - **p. 5 / 2.3. Key Elements of Sim-to-Real Transfer - extractive body cue:** We randomize image quality (brightness, contrast, hue, saturation, Gaussian noise, and blur), camera extrinsics to account for small pose shifts, and camera latency to model ...
 
-- **PDF anchors reviewed:** datasets p. 6 (3.2. Generalization), p. 6 (3.1. Robustness), p. 5 (3. Real-World Results of VIRAL), p. 5 (3.1. Robustness), metrics p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (3.1. Robustness), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (3.1. Robustness), baselines p. 6 (3.1. Robustness), p. 5 (Figure/Table caption), p. 6 (3.2. Generalization), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (3.1. Robustness), p. 6 (Figure/Table caption), p. 5 (3. Real-World Results of VIRAL), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption).
+- **Evidence anchors reviewed:** datasets p. 6 (3.2. Generalization), p. 6 (3.1. Robustness), p. 5 (3. Real-World Results of VIRAL), p. 5 (3.1. Robustness), metrics p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (3.1. Robustness), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (3.1. Robustness), baselines p. 6 (3.1. Robustness), p. 5 (Figure/Table caption), p. 6 (3.2. Generalization), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (3.1. Robustness), p. 6 (Figure/Table caption), p. 5 (3. Real-World Results of VIRAL), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (12 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Figure 8. Real-world generalization of VIRAL RGB-based policy under variations in tray and object position, robot start pose, table height and type, tablecloth color, lighting, and object category. Videos are ... (p. 6, Figure/Table caption).
+- **Metric evidence:** As shown in Figure 7, the expert attains a 100% success rate with a 21.4 s cycle time, slightly higher than the 20.2 s cycle time of VIRAL. (p. 6, 3.1. Robustness).
+- **Baseline/ablation evidence:** Across these variations, VIRAL consistently completes the task without additional tuning, indicating strong robustness. (p. 6, 3.2. Generalization).
+- **Failure/negative evidence:** We find that compute scale is critical: scaling simulation to tens of GPUs (up to 64) makes both teacher and student training reliable, while low-compute regimes often fail. (p. 1, Abstract).

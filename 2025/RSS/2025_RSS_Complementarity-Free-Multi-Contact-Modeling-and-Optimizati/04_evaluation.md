@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p111.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p111.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p111.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p111.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 10 (B. MPC Setting and Results), p. 10 (B. MP
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | B. MPC Setting and Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | (1) The proposed complementarity-free MPC consistently outperforms Implicit MPC (ie., MPC with complementarity model) across various manipulation tasks in terms of success | p. 10 (B. MPC Setting and Results) |
 | B. MPC Setting and Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | to the very low success rate of Implicit MPC for this task type, | p. 10 (B. MPC Setting and Results) |
@@ -60,7 +60,7 @@ PDF body evaluation/result cue (p. 10 (B. MPC Setting and Results), p. 10 (B. MP
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | ABLE Il: The model setting for all objects and tasks. | embodiment, simulator version and control stack | p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results) |
 | Task/environment | The MPC path and final cost functions for all objects and tasks are defined as | reset, timeout, object/scene variation | p. 9 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 10 (B. MPC Setting and Results), p. 10 (B. MP
 - **p. 9 / A. Environment and Task Setup - extractive body cue:** The fingertips must coordinate to prevent the object from falling while moving it to the target.
 - **p. 10 / B. MPC Setting and Results - extractive body cue:** Fil postion Vial quaeiion MPC soe Succes ust prevent the object from falling while moving it to 8% Shor 8) ere 8) ng time te ...
 
-- **PDF anchors reviewed:** datasets p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), metrics p. 12 (Figure/Table caption), p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results), p. 13 (Figure/Table caption), baselines p. 10 (B. MPC Setting and Results), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 10 (B. MPC Setting and Results), results p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 12 (Figure/Table caption), p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results).
+- **Evidence anchors reviewed:** datasets p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), metrics p. 12 (Figure/Table caption), p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results), p. 13 (Figure/Table caption), baselines p. 10 (B. MPC Setting and Results), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 10 (B. MPC Setting and Results), results p. 10 (B. MPC Setting and Results), p. 10 (B. MPC Setting and Results), p. 12 (Figure/Table caption), p. 9 (B. MPC Setting and Results), p. 9 (B. MPC Setting and Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For each object, we conduct 20 trials with different random inital and target poses. ‘The results are in Table IV, where we quantify the manipulation accuracy by (p. 9, B. MPC Setting and Results).
+- **Metric evidence:** the manipulation accuracy is evaluated using (p. 9, B. MPC Setting and Results).
+- **Baseline/ablation evidence:** Without ground support, the three fingertips (p. 10, B. MPC Setting and Results).
+- **Failure/negative evidence:** [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).

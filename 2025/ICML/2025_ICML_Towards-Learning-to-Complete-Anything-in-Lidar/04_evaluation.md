@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=vWPzKn6usZ; PDF retrieval source: https://openreview.net/pdf/8fbe2a59d85d4f1be15c6351679cc46349d858df.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=vWPzKn6usZ; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/167907. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 
 ## Evaluation Body Digest
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We quantitatively assess CAL's zero-shot completion and recognition performance on Semantic Scene Completion (SSC) (Behley et al., 2019) and Panoptic Scene Completion (PSC) (Cao et ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** The hyperparameters used by our pseudo-labeling engine for each dataset are given in Appx.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our model's segmentation, completion, and recognition capabilities by specifying target classes (defined in each respective dataset) via prompts at test time (additional details ...
-- **p. 7 / 4.2. Experimental results - extractive PDF cue:** Results reported on the SemanticKITTI dataset.
-- **p. 7 / 4.2. Experimental results - extractive PDF cue:** 1 reports CAL results for SSC and PSC on the SemanticKITTI and SSCBench-KITTI360 datasets.
-- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive PDF cue:** CRF refinement greatly improves pseudo-label quality on SemanticKITTI and SSCBench-KITTI360 datasets (Tab.
-- **p. 8 / 4.2. Experimental results - extractive PDF cue:** Results show that CRF refinement significantly improves pseudo-label quality in both datasets and settings.
-- **p. 9 / 4.4. CAL model analysis - extractive PDF cue:** Specifying C = 18 clusters (close to the number of annotated semantic groups in common datasets) yields the highest overall PQ.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We quantitatively assess CAL's zero-shot completion and recognition performance on Semantic Scene Completion (SSC) (Behley et al., 2019) and Panoptic Scene Completion (PSC) (Cao et ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** The hyperparameters used by our pseudo-labeling engine for each dataset are given in Appx.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our model's segmentation, completion, and recognition capabilities by specifying target classes (defined in each respective dataset) via prompts at test time (additional details ...
+- **p. 7 / 4.2. Experimental results - extractive body cue:** Results reported on the SemanticKITTI dataset.
+- **p. 7 / 4.2. Experimental results - extractive body cue:** 1 reports CAL results for SSC and PSC on the SemanticKITTI and SSCBench-KITTI360 datasets.
+- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive body cue:** CRF refinement greatly improves pseudo-label quality on SemanticKITTI and SSCBench-KITTI360 datasets (Tab.
+- **p. 8 / 4.2. Experimental results - extractive body cue:** Results show that CRF refinement significantly improves pseudo-label quality in both datasets and settings.
+- **p. 9 / 4.4. CAL model analysis - extractive body cue:** Specifying C = 18 clusters (close to the number of annotated semantic groups in common datasets) yields the highest overall PQ.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Pseudo-labeling engine analysis | EMPIRICAL / SOURCE-REPORTED EVALUATION | While the best results are achieved with Tfw = 64, Tbw = 16, w = 1 (13.10 PQ†), we use the combination Tfw = ... | p. 8 (4.3. Pseudo-labeling engine analysis) |
 | 4.2. Experimental results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Specifically, we achieve 13.12 PQ† (49.51 % of PaSCo) and 13.09 mIoU (46.37 % of PaSCo) in the ZS setting on SemanticKITTI and further ... | p. 7 (4.2. Experimental results) |
@@ -40,31 +40,31 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 4.1. Experimental Setup - extractive PDF cue:** We quantitatively assess CAL's zero-shot completion and recognition performance on Semantic Scene Completion (SSC) (Behley et al., 2019) and Panoptic Scene Completion (PSC) (Cao et ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** The hyperparameters used by our pseudo-labeling engine for each dataset are given in Appx.
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our model's segmentation, completion, and recognition capabilities by specifying target classes (defined in each respective dataset) via prompts at test time (additional details ...
-- **p. 7 / 4.2. Experimental results - extractive PDF cue:** Results reported on the SemanticKITTI dataset.
-- **p. 7 / 4.2. Experimental results - extractive PDF cue:** 1 reports CAL results for SSC and PSC on the SemanticKITTI and SSCBench-KITTI360 datasets.
-- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive PDF cue:** CRF refinement greatly improves pseudo-label quality on SemanticKITTI and SSCBench-KITTI360 datasets (Tab.
-- **p. 8 / 4.2. Experimental results - extractive PDF cue:** Results show that CRF refinement significantly improves pseudo-label quality in both datasets and settings.
-- **p. 9 / 4.4. CAL model analysis - extractive PDF cue:** Specifying C = 18 clusters (close to the number of annotated semantic groups in common datasets) yields the highest overall PQ.
+- **p. 5 / 4.1. Experimental Setup - extractive body cue:** We quantitatively assess CAL's zero-shot completion and recognition performance on Semantic Scene Completion (SSC) (Behley et al., 2019) and Panoptic Scene Completion (PSC) (Cao et ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** The hyperparameters used by our pseudo-labeling engine for each dataset are given in Appx.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our model's segmentation, completion, and recognition capabilities by specifying target classes (defined in each respective dataset) via prompts at test time (additional details ...
+- **p. 7 / 4.2. Experimental results - extractive body cue:** Results reported on the SemanticKITTI dataset.
+- **p. 7 / 4.2. Experimental results - extractive body cue:** 1 reports CAL results for SSC and PSC on the SemanticKITTI and SSCBench-KITTI360 datasets.
+- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive body cue:** CRF refinement greatly improves pseudo-label quality on SemanticKITTI and SSCBench-KITTI360 datasets (Tab.
+- **p. 8 / 4.2. Experimental results - extractive body cue:** Results show that CRF refinement significantly improves pseudo-label quality in both datasets and settings.
+- **p. 9 / 4.4. CAL model analysis - extractive body cue:** Specifying C = 18 clusters (close to the number of annotated semantic groups in common datasets) yields the highest overall PQ.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Learning to Complete Anything in Lidar. Given a sparse Lidar point cloud, CAL (Complete Anything in Lidar) localizes, reconstructs, and, optionally, recognizes objects ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Pseudo-labeling engine. Given a calibrated RGB camera and Lidar sensor, 1⃝we use video-object segmentation models (Ravi et al., 2024) to localize object instances ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. CAL model architecture and training pipeline. The backbone consists of a sparse encoder and a dense 3D convolu- tional block. We estimate scene-level ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 4. Qualitative results on SemanticKITTI. Given a single Lidar scan (1st col.), CAL completes object-level observations as a set of masks over the voxel ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Panoptic Scene Completion. We compare CAL against LMSCNet (Roldao et al., 2020) + MaskPLS (Marcuzzi et al., 2023), JS3CNet (Yan et al., 2021) ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 5. Completion and amodal detection on KITTI-360. Given an input Lidar scan (left), CAL outputs a set of completed object shapes (middle). We visualize ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Panoptic scene completion results with zero-shot base- lines. We compare CAL against the zero-shot baselines we con- struct: LODE (Li et al., 2023b) ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Comparison to zero-shot baselines on SemanticKITTI. Given a single Lidar scan (1st col.), we compare CAL (4th col.) to zero-shot baselines (2nd and ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Learning to Complete Anything in Lidar. Given a sparse Lidar point cloud, CAL (Complete Anything in Lidar) localizes, reconstructs, and, optionally, recognizes objects ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Pseudo-labeling engine. Given a calibrated RGB camera and Lidar sensor, 1⃝we use video-object segmentation models (Ravi et al., 2024) to localize object instances ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. CAL model architecture and training pipeline. The backbone consists of a sparse encoder and a dense 3D convolu- tional block. We estimate scene-level ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on SemanticKITTI. Given a single Lidar scan (1st col.), CAL completes object-level observations as a set of masks over the voxel ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Panoptic Scene Completion. We compare CAL against LMSCNet (Roldao et al., 2020) + MaskPLS (Marcuzzi et al., 2023), JS3CNet (Yan et al., 2021) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Completion and amodal detection on KITTI-360. Given an input Lidar scan (left), CAL outputs a set of completed object shapes (middle). We visualize ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Panoptic scene completion results with zero-shot base- lines. We compare CAL against the zero-shot baselines we con- struct: LODE (Li et al., 2023b) ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Comparison to zero-shot baselines on SemanticKITTI. Given a single Lidar scan (1st col.), we compare CAL (4th col.) to zero-shot baselines (2nd and ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We quantitatively assess CAL's zero-shot completion and recognition performance on Semantic Scene Completion (SSC) (Behley et al., 2019) and Panoptic Scene Completion (PSC) (Cao ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | The hyperparameters used by our pseudo-labeling engine for each dataset are given in Appx. | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
@@ -123,8 +123,8 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 | Primary metric/result | Specifically, we achieve 13.12 PQ† (49.51 % of PaSCo) and 13.09 mIoU (46.37 % of PaSCo) in the ZS setting on SemanticKITTI and further ... | numeric claim only at cited anchor | p. 7 (4.2. Experimental results) |
 
 - Numeric sentences retained from the body:
-- **p. 8 / 4.2. Experimental results - extractive PDF cue:** Pseudo-labels benefit from forward and backward propagation, with notable improvements up to Tfw = 32 and Tbw = 8 frames.
-- **p. 3 / 3. Method - extractive PDF cue:** Semantic Scene Completion (SSC) (Behley et al., 2019) assumes input in the form of a single Lidar point cloud P = {pn}N n=1, pn ∈R4, ...
+- **p. 8 / 4.2. Experimental results - extractive body cue:** Pseudo-labels benefit from forward and backward propagation, with notable improvements up to Tfw = 32 and Tbw = 8 frames.
+- **p. 3 / 3. Method - extractive body cue:** Semantic Scene Completion (SSC) (Behley et al., 2019) assumes input in the form of a single Lidar point cloud P = {pn}N n=1, pn ∈R4, ...
 
 ## Generalization and Failure Cases
 
@@ -160,13 +160,13 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 
 ## Limitations and Verification Questions
 
-- **p. 9 / 5. Conclusion - extractive PDF cue:** We believe these are promising directions for future work.
-- **p. 9 / Figure/Table caption - extractive PDF cue:** Table 7. Number of CLIP prototypes. We evaluate SSC/PSC performance on SemanticKITTI when varying the number of CLIP prototypes C. We observe similar performance with ...
-- **p. 7 / 4.2. Experimental results - extractive PDF cue:** We employ the LODE variant that does not use any semantic labels.
-- **p. 7 / 4.2. Experimental results - extractive PDF cue:** Fully supervised baselines have a clear advantage over CAL as they train on closed-set, noise-free annotations with full scene coverage.
-- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive PDF cue:** We observe no significant improvements between w = {1, 2} and a degradation in performance when increasing to w = 4 (10.97 PQ†) due to ...
+- **p. 9 / 5. Conclusion - extractive body cue:** We believe these are promising directions for future work.
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 7. Number of CLIP prototypes. We evaluate SSC/PSC performance on SemanticKITTI when varying the number of CLIP prototypes C. We observe similar performance with ...
+- **p. 7 / 4.2. Experimental results - extractive body cue:** We employ the LODE variant that does not use any semantic labels.
+- **p. 7 / 4.2. Experimental results - extractive body cue:** Fully supervised baselines have a clear advantage over CAL as they train on closed-set, noise-free annotations with full scene coverage.
+- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive body cue:** We observe no significant improvements between w = {1, 2} and a degradation in performance when increasing to w = 4 (10.97 PQ†) due to ...
 
-- **PDF anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Experimental results), p. 7 (4.2. Experimental results), p. 8 (4.3. Pseudo-labeling engine analysis), metrics p. 23 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 9 (4.4. CAL model analysis), baselines p. 7 (4.2. Experimental results), p. 7 (4.2. Experimental results), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Experimental results), p. 8 (4.2. Experimental results), p. 9 (4.3. Pseudo-labeling engine analysis), results p. 8 (4.3. Pseudo-labeling engine analysis), p. 7 (4.2. Experimental results), p. 8 (4.2. Experimental results), p. 9 (4.3. Pseudo-labeling engine analysis), p. 9 (4.4. CAL model analysis), p. 7 (4.2. Experimental results).
+- **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Experimental results), p. 7 (4.2. Experimental results), p. 8 (4.3. Pseudo-labeling engine analysis), metrics p. 23 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 9 (4.4. CAL model analysis), baselines p. 7 (4.2. Experimental results), p. 7 (4.2. Experimental results), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Experimental results), p. 8 (4.2. Experimental results), p. 9 (4.3. Pseudo-labeling engine analysis), results p. 8 (4.3. Pseudo-labeling engine analysis), p. 7 (4.2. Experimental results), p. 8 (4.2. Experimental results), p. 9 (4.3. Pseudo-labeling engine analysis), p. 9 (4.4. CAL model analysis), p. 7 (4.2. Experimental results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

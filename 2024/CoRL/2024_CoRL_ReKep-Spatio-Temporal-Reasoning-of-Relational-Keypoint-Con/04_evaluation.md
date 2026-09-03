@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/huang25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v270/huang25g.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Folding 0/10 4/10 7/10 Total (%) 10.0% 44.3% 68.6% Table 1: Success rate on wheeled singlearm and stationary bimanual platforms. | p. 7 (4 Experiments) |
 | 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Folding 0/10 3/10 5/10 Total (%) 6.7% 26.7% 46.7% Table 2: Success rate under external disturbances across both robot platforms. | p. 7 (4 Experiments) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | 5 Conclusion & Limitations In this work, we presented Relational Keypoint Constraints (ReKep), a structural task representation using constraints that operates on semantic keypoints ... | embodiment, simulator version and control stack | p. 8 (4 Experiments), p. 8 (4 Experiments) |
 | Task/environment | Results are shown on two robot platforms and on a variety of tasks featuring multi-stage, in-the-wild, bimanual, and reactive behaviors, all without task-specific data, ... | reset, timeout, object/scene variation | p. 8 (4 Experiments), p. 7 (4 Experiments) |
@@ -172,7 +172,16 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 7 / 4 Experiments - extractive body cue:** (3) How do the individual components contribute to the failure cases of the system (Sec.
 - **p. 8 / 4 Experiments - extractive body cue:** In this section, we perform an empirical investigation by manually inspecting the failure cases of the experiments reported in Tab.
 
-- **PDF anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 25 (A.8 Implementation Details of Sub-Goal Solver), p. 26 (A.9 Implementation Details of Path Solver), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 8 (Figure/Table caption), p. 24 (A.8 Implementation Details of Sub-Goal Solver), baselines p. 7 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 26 (A.9 Implementation Details of Path Solver), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 8 (Figure/Table caption), p. 22 (A.5 Implementation Details of Keypoint Proposal).
+- **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 25 (A.8 Implementation Details of Sub-Goal Solver), p. 26 (A.9 Implementation Details of Path Solver), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 8 (Figure/Table caption), p. 24 (A.8 Implementation Details of Sub-Goal Solver), baselines p. 7 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 26 (A.9 Implementation Details of Path Solver), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 8 (Figure/Table caption), p. 22 (A.5 Implementation Details of Keypoint Proposal).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (30 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Folding 0/10 3/10 5/10 Total (%) 6.7% 26.7% 46.7% Table 2: Success rate under external disturbances across both robot platforms. (p. 7, 4 Experiments).
+- **Metric evidence:** Folding 0/10 4/10 7/10 Total (%) 10.0% 44.3% 68.6% Table 1: Success rate on wheeled singlearm and stationary bimanual platforms. (p. 7, 4 Experiments).
+- **Baseline/ablation evidence:** Compared to baselines, ReKep can effectively handle core challenges of each task. (p. 7, 4 Experiments).
+- **Failure/negative evidence:** The optimization module, on the other hand, does not contribute as much to the failures despite given limited time budget, since there often exist many possible solutions for each problem. (p. 8, 4 Experiments).

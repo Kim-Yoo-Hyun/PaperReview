@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2404.13696; PDF retrieval source: https://arxiv.org/pdf/2404.13696. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2404.13696; PDF retrieval source: https://arxiv.org/pdf/2404.13696. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCT
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | In this section, we first provide relevant background on the Agglomerative IB, then present an incremental version of the Agglomerative IB algorithm ... | p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCTION) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | These approaches use a class-agnostic segmentation network [10] (SegmentAnything or SAM) to generate fine-grained segments of the image and then apply a ... | p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION) |
@@ -84,7 +84,7 @@ PDF body method statement (p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCT
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Their performance difference is due to the fact that Clio-online is executed in real-time and might drop frames as required to keep ... | episode/sequence/action-chunk boundary |
 | Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | We include results for both Clio-batch, which takes in all primitives of a scene and is executed only once at the end ... | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
+| Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | We use CLIP model ViT-L/14 and generate results with an RTX 3090 GPU and Intel i9-12900K CPU. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -128,8 +128,17 @@ PDF body method statement (p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCT
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 3 (I. INTRODUCTION), objective p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 3 (I. INTRODUCTION), p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 5 (IV. TASK-DRIVEN CLUSTERING), temporal p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 2 (Abstract), p. 6 (VI. EXPERIMENTS).
+- **Evidence anchors reviewed:** method p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 3 (I. INTRODUCTION), objective p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 3 (I. INTRODUCTION), p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 5 (IV. TASK-DRIVEN CLUSTERING), temporal p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 2 (Abstract), p. 6 (VI. EXPERIMENTS).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** As suggested in [14], at each iteration k, we also compute δ(k) = I( ˜Xk; Y ) -I( ˜Xk-1; Y ) I(X; Y ) (3) as a measure of the ... (p. 4, IV. TASK-DRIVEN CLUSTERING).
+- **Objective/update evidence:** As suggested in [14], at each iteration k, we also compute δ(k) = I( ˜Xk; Y ) -I( ˜Xk-1; Y ) I(X; Y ) (3) as a measure of the ... (p. 4, IV. TASK-DRIVEN CLUSTERING).
+- **Temporal/runtime evidence:** Their performance difference is due to the fact that Clio-online is executed in real-time and might drop frames as required to keep up with the image stream. (p. 7, VI. EXPERIMENTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

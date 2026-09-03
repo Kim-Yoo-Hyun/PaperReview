@@ -14,10 +14,10 @@
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS.
 - **p. 2 / 1. INrRopucTION - extractive body cue:** Thanks t0 its explicit representation of the scene, 3DGS enables interpretable editing ofthe reconstructed scene, which paves the way for generating novel manipulation configurations, Furthermore, ...
 - **p. 2 / 1. INrRopucTION - extractive body cue:** Based on that, we propose RoboSplat, a novel and efficacious approach to demonstration generation with Gaussian ‘Splatting.
-- **p. 1 / Front matter - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
+- **p. 1 / body section boundary not confidently recovered - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
 - **p. 2 / A. Generalizable Policy in Robot Manipulation - extractive body cue:** Instead of adopting generalizable policy architecture, auxiliary learning objectives ‘and powerful foundation models, our work is concentrated on generating high-quality, diverse, and realistic data to ...
 - **p. 6 / C. Policy Training - extractive body cue:** The latent of images and robot state is fed into a transformer encoder.
-- **Contribution anchor:** p. 3 (C. Gaussian planting in Roboties), p. 3 (IV. METHODOLOGY), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 1 (Front matter), p. 2 (A. Generalizable Policy in Robot Manipulation)
+- **Contribution anchor:** p. 3 (C. Gaussian planting in Roboties), p. 3 (IV. METHODOLOGY), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 1 (body section boundary not confidently recovered), p. 2 (A. Generalizable Policy in Robot Manipulation)
 
 ### Strongest assumption and failure boundary
 
@@ -42,10 +42,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 The images. camera poses, and depth prior serve as inputs to 3DGS [25], which returns 3D. ‘Gaussians representing the entire scene Gucene, Which contains 3D Gaussians corresponding to the robot, dubbed Grope«.를 We denote 0, # (Ii, 4x) as the observation at the k-th frame of demonstrations D, and as our policy.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3].에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** Nonetheless, these studies mainly augment task demonstrations on 2D images, which lack spatial information, Hence, only limited augmentation can be achieved, and the ‘augmented demonstrations might be unrealistic compared 10 ... (p. 2, B. Data Augmentation for Policy Learning).
+- **Paper-specific mechanism:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS. (p. 3, IV. METHODOLOGY).
+- **Evidence boundary:** the reported outcome is Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup); the relevant task/metric cue is Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3]. (p. 6, A. Experimental Setup).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -57,19 +58,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We design five manipulation tasks for real-world evaluation: Pick Object, Close Drawer, Pick-PlaceClose, Dual Pick-Place and Sweep, whose details are elaborated in Sec..
-3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 3: Comparison of frame alignment results between ICP and fine-grained optimization with differentiable ren- dering. The semi-transparent orange overlay represents the ground truth rendered with URDE from the same camera view: ....
-4. Report the body metric and its denominator/aggregation: Success rate (SR) is chosen as the evaluation metric in all experiments..
-5. Re-run the body-reported ablation/failure condition: The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3]..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: Nonetheless, these studies mainly augment task demonstrations on 2D images, which lack spatial information, Hence, only limited augmentation can be achieved, and the ‘augmented demonstrations might be unrealistic compared 10 ... (p. 2, B. Data Augmentation for Policy Learning); preserve the objective/update rule: The camera extrinsies are optimized through gradient descent, with the optimization objective: (p. 5, A. Reconstruction and Preprocessing).
+2. Use the paper-reported task/data/environment cue: In Sweep task, the robot should first pick up a broom and then sweeps the chocolate beans into a dustpan. (p. 6, A. Experimental Setup).
+3. Compare against the reported or matched baseline: Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup).
+4. Report the body metric with its denominator and aggregation: Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup).
+5. Re-run the reported ablation or stress/failure condition: Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup); if none is reported, design one around: The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3]. (p. 6, A. Experimental Setup).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (A. Generalizable Policy in Robot Manipulation), p. 6 (C. Policy Training), p. 6 (C. Policy Training); the primary result is directionally consistent at p. 10 (Figure/Table caption), p. 7 (A. Experimental Setup), p. 8 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), match the reported outcome at p. 7 (A. Experimental Setup), p. 10 (Figure/Table caption), p. 7 (A. Experimental Setup), and measure the boundary at p. 6 (A. Experimental Setup), p. 10 (VI. LiMirarion).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 enables, autonomous, editing mechanism이 Fig. 3: Comparison of frame alignment results between ICP and fine-grained optimization with differentiable ren- dering. ... 대비 Success rate (SR) is chosen as the evaluation metric in all experiments.을 개선하고, The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is ... 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (Nonetheless, these studies mainly augment task demonstrations on 2D images, which lack spatial information, Hence, only limited augmentation can be achieved, and ...), does the paper-specific mechanism (To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS.) retain the reported evaluation outcome (Success rate (SR) is chosen as the evaluation metric in all experiments.) when tested against the paper's strongest explicit boundary (The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in ...)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (Success rate (SR) is chosen as the evaluation metric in all experiments.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (13 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS. (p. 3, IV. METHODOLOGY).
+- **Paper-supported outcome:** Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup).
+- **Strongest explicit boundary:** The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3]. (p. 6, A. Experimental Setup).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

@@ -1,8 +1,10 @@
 # Kinodynamic Trajectory Following with STELA: Simultaneous Trajectory Estimation & Local Adaptation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p008.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p008.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p008.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p008.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p008.pdf
 - Code/Project: https://go.rutgers.edu/46618xjt
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -83,3 +85,12 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 ## Why Read It
 
 Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 They can sinnultaneously solve trajectory estimation and control or planning challenges as a unified problem [22, 29]. ‘These solutions를 문제로 두고, The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history and forward horizon of the planned trajectory. ‘The ‘combination of ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (B. Trajectory Optimization as a Motion Planner) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (15 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** They can sinnultaneously solve trajectory estimation and control or planning challenges as a unified problem [22, 29]. ‘These solutions (p. 2, 1. INTRODUCTION).
+- **Actual contribution:** Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired goal region without collisions. (p. 3, 1. INTRODUCTION).
+- **Evaluation boundary:** Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption).
+- **Explicit failure boundary:** The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System Exception, i. the accumulation of numerical errors, which does not occur for ... (p. 12, A. Experimemal setup).

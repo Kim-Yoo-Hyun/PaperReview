@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Evaluation Body Digest
 
-- **p. 5 / 3.4. Benchmark - extractive PDF cue:** To establish a comprehensive evaluation system suitable for the reasoning reconstruction task, a benchmark ReasonRecon is constructed and the data collection pipeline is shown in ...
-- **p. 6 / 3.4. Benchmark - extractive PDF cue:** Dataset Scene-Instruction Implicit Instruction High-Quality M., M., Z.
-- **p. 6 / 3.4. Benchmark - extractive PDF cue:** The training set and test set are divided into 8: 2.
-- **p. 5 / 3.4. Benchmark - extractive PDF cue:** It uses RGB-D sequences and 3D instance segmentation annotations in the ScanNetV2 dataset [5].
-- **p. 6 / 4.2. Evaluation Metrics - extractive PDF cue:** We evaluate using standard Average Precision (AP) metrics at IoU thresholds of 50% and 25%, and also calculate mean score across IoU thresholds from 50% ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Runtime analysis of reasoning reconstruction. comparison. VLMaps is extended to a 3D map by can- celing top-down projection. LIRA* represents that LIRA uses ...
-- **p. 7 / 4.5. Runtime Analysis - extractive PDF cue:** Compared with other methods, our LIRA-Fast has advantages in both reasoning reconstruction speed and accuracy.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Figure 6. Visualization results of different reasoning reconstruction methods on the ReasonRecon test set. The reconstructed geometric results are augmented with image textures. Single-layered mesh ...
+- **p. 5 / 3.4. Benchmark - extractive body cue:** To establish a comprehensive evaluation system suitable for the reasoning reconstruction task, a benchmark ReasonRecon is constructed and the data collection pipeline is shown in ...
+- **p. 6 / 3.4. Benchmark - extractive body cue:** Dataset Scene-Instruction Implicit Instruction High-Quality M., M., Z.
+- **p. 6 / 3.4. Benchmark - extractive body cue:** The training set and test set are divided into 8: 2.
+- **p. 5 / 3.4. Benchmark - extractive body cue:** It uses RGB-D sequences and 3D instance segmentation annotations in the ScanNetV2 dataset [5].
+- **p. 6 / 4.2. Evaluation Metrics - extractive body cue:** We evaluate using standard Average Precision (AP) metrics at IoU thresholds of 50% and 25%, and also calculate mean score across IoU thresholds from 50% ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Runtime analysis of reasoning reconstruction. comparison. VLMaps is extended to a 3D map by can- celing top-down projection. LIRA* represents that LIRA uses ...
+- **p. 7 / 4.5. Runtime Analysis - extractive body cue:** Compared with other methods, our LIRA-Fast has advantages in both reasoning reconstruction speed and accuracy.
+- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Visualization results of different reasoning reconstruction methods on the ReasonRecon test set. The reconstructed geometric results are augmented with image textures. Single-layered mesh ...
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 5. Ablation studies of the three stages of LIRA. struction "Appliances or furniture used to store food" is replaced with "Cabinet, Refrigerator". The ... | p. 7 (Figure/Table caption) |
 | Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 6. Visualization results of different reasoning reconstruction methods on the ReasonRecon test set. The reconstructed geometric results are augmented with image textures. Single-layered ... | p. 8 (Figure/Table caption) |
@@ -40,27 +40,27 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Dataset / Benchmark Role
 
-- **p. 5 / 3.4. Benchmark - extractive PDF cue:** To establish a comprehensive evaluation system suitable for the reasoning reconstruction task, a benchmark ReasonRecon is constructed and the data collection pipeline is shown in ...
-- **p. 6 / 3.4. Benchmark - extractive PDF cue:** Dataset Scene-Instruction Implicit Instruction High-Quality M., M., Z.
-- **p. 6 / 3.4. Benchmark - extractive PDF cue:** The training set and test set are divided into 8: 2.
-- **p. 5 / 3.4. Benchmark - extractive PDF cue:** It uses RGB-D sequences and 3D instance segmentation annotations in the ScanNetV2 dataset [5].
+- **p. 5 / 3.4. Benchmark - extractive body cue:** To establish a comprehensive evaluation system suitable for the reasoning reconstruction task, a benchmark ReasonRecon is constructed and the data collection pipeline is shown in ...
+- **p. 6 / 3.4. Benchmark - extractive body cue:** Dataset Scene-Instruction Implicit Instruction High-Quality M., M., Z.
+- **p. 6 / 3.4. Benchmark - extractive body cue:** The training set and test set are divided into 8: 2.
+- **p. 5 / 3.4. Benchmark - extractive body cue:** It uses RGB-D sequences and 3D instance segmentation annotations in the ScanNetV2 dataset [5].
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Online reasoning reconstruction results of LIRA. It in- puts RGB-D sequences and reconstructs instruction-relevant in- stances and background environment. As the process is ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of LIRA. Stage I: LIRA uses depth maps for geometric reconstruction and applies a MLLM to infer instruction-relevant 2D candidate instance masks ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 3. Architecture of the proposed 2D reasoning segmentation module. Three examples are given (corresponding to the dashed boxes of different colors). Please zoom in ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Illustration of the proposed instance fusion module. Dif- ferent colors represent different instances, and different icons rep- resent instances at different frames. Please ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Illustration of the data collection process. Red dots are projected points. Extended attributes are indicated in orange font.
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 1. Comparison of ReasonRecon with related datasets. "M., M., Z." indicates multi-class, multi-target, and zero-target. from a certain viewpoint. Erroneous projected pixels caused by ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Table 2. Quantitative results of reasoning reconstruction. output types, including multi-class, multi-target, zero-target and single-target outputs. Also, we obtain high-quality 2D segmentation annotations. In addition, ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Results of explicit instruction-guided reconstruction.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Online reasoning reconstruction results of LIRA. It in- puts RGB-D sequences and reconstructs instruction-relevant in- stances and background environment. As the process is ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of LIRA. Stage I: LIRA uses depth maps for geometric reconstruction and applies a MLLM to infer instruction-relevant 2D candidate instance masks ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Architecture of the proposed 2D reasoning segmentation module. Three examples are given (corresponding to the dashed boxes of different colors). Please zoom in ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Illustration of the proposed instance fusion module. Dif- ferent colors represent different instances, and different icons rep- resent instances at different frames. Please ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Illustration of the data collection process. Red dots are projected points. Extended attributes are indicated in orange font.
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Comparison of ReasonRecon with related datasets. "M., M., Z." indicates multi-class, multi-target, and zero-target. from a certain viewpoint. Erroneous projected pixels caused by ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results of reasoning reconstruction. output types, including multi-class, multi-target, zero-target and single-target outputs. Also, we obtain high-quality 2D segmentation annotations. In addition, ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Results of explicit instruction-guided reconstruction.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | To establish a comprehensive evaluation system suitable for the reasoning reconstruction task, a benchmark ReasonRecon is constructed and the data collection pipeline is shown ... | embodiment, simulator version and control stack | p. 5 (3.4. Benchmark), p. 6 (3.4. Benchmark) |
 | Task/environment | Dataset Scene-Instruction Implicit Instruction High-Quality M., M., Z. | reset, timeout, object/scene variation | p. 6 (3.4. Benchmark), p. 6 (3.4. Benchmark) |
@@ -145,11 +145,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Conclusion - extractive PDF cue:** One limitation is that LIRA exhibits relatively low performance in high-precision reconstruction.
-- **p. 8 / 5. Conclusion - extractive PDF cue:** Future work will consider further optimization in 3D space.
-- **p. 6 / 3.4. Benchmark - extractive PDF cue:** Erroneous projected pixels caused by occlusion are filtered out.
+- **p. 8 / 5. Conclusion - extractive body cue:** One limitation is that LIRA exhibits relatively low performance in high-precision reconstruction.
+- **p. 8 / 5. Conclusion - extractive body cue:** Future work will consider further optimization in 3D space.
+- **p. 6 / 3.4. Benchmark - extractive body cue:** Erroneous projected pixels caused by occlusion are filtered out.
 
-- **PDF anchors reviewed:** datasets p. 5 (3.4. Benchmark), p. 6 (3.4. Benchmark), p. 6 (3.4. Benchmark), p. 5 (3.4. Benchmark), metrics p. 6 (4.2. Evaluation Metrics), p. 7 (Figure/Table caption), p. 7 (4.5. Runtime Analysis), p. 8 (Figure/Table caption), p. 6 (3.4. Benchmark), p. 3 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (4.5. Runtime Analysis), p. 8 (Figure/Table caption), p. 8 (4.7. Qualitative Results), p. 6 (3.4. Benchmark), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.3. Reasoning Reconstruction Results), p. 7 (Figure/Table caption), p. 6 (4.2. Evaluation Metrics), p. 8 (4.7. Qualitative Results).
+- **Evidence anchors reviewed:** datasets p. 5 (3.4. Benchmark), p. 6 (3.4. Benchmark), p. 6 (3.4. Benchmark), p. 5 (3.4. Benchmark), metrics p. 6 (4.2. Evaluation Metrics), p. 7 (Figure/Table caption), p. 7 (4.5. Runtime Analysis), p. 8 (Figure/Table caption), p. 6 (3.4. Benchmark), p. 3 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (4.5. Runtime Analysis), p. 8 (Figure/Table caption), p. 8 (4.7. Qualitative Results), p. 6 (3.4. Benchmark), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.3. Reasoning Reconstruction Results), p. 7 (Figure/Table caption), p. 6 (4.2. Evaluation Metrics), p. 8 (4.7. Qualitative Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

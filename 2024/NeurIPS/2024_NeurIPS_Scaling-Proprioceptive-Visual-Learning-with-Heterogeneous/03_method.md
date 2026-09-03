@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://papers.nips.cc/paper_files/paper/2024/hash/e0f393e7980a24fd12fa6f15adfa25fb-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2409.20537. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://papers.nips.cc/paper_files/paper/2024/hash/e0f393e7980a24fd12fa6f15adfa25fb-Abstract-Conference.html; PDF retrieval source: https://arxiv.org/pdf/2409.20537. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -33,7 +33,7 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | Different from previous work [55, 86], we use minimal amounts of processing and cleaning of the observation and actions in the raw ... | p. 17 (A Implementation Details), p. 17 (A.1 Dataset Details) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | Since the human datasets do not contain proprioception and action information, we use hand poses and 2D positions in the image space ... | p. 17 (A.1 Dataset Details) |
@@ -75,7 +75,7 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 |---|---|---|---|
 | Horizon | trajectory demonstration horizon; training sample window와 deployment task horizon을 분리한다. | The episode lengths of real-world teleoperation vary from 50 steps to 150 steps with 10 Hz control frequencies. | episode/sequence/action-chunk boundary |
 | Rate / latency | data recording/action sampling rate와 policy inference/control rate를 분리한다. | We use a total of 150 trajectories and each trajectory contains more than 500 steps. | Hz/fps, inference time and control rate |
-| Memory | trajectory, embodiment/task metadata와 dataset index. | not recovered | window and reset |
+| Memory | trajectory, embodiment/task metadata와 dataset index. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | data decoding, normalization/augmentation과 downstream training budget이 결정한다. | The episode lengths of real-world teleoperation vary from 50 steps to 150 steps with 10 Hz control frequencies. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -121,8 +121,17 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 17 (A Implementation Details), p. 17 (A.1 Dataset Details), objective p. 17 (A.1 Dataset Details), temporal p. 9 (1 Introduction), p. 17 (A.1 Dataset Details), p. 17 (A Implementation Details), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction).
+- **Evidence anchors reviewed:** method p. 17 (A Implementation Details), p. 17 (A.1 Dataset Details), objective p. 17 (A.1 Dataset Details), temporal p. 9 (1 Introduction), p. 17 (A.1 Dataset Details), p. 17 (A Implementation Details), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** MLP) that takes as input the pooled feature of the trunk and outputs a normalized action trajectory. (p. 5, 1 Introduction).
+- **Objective/update evidence:** Since the human datasets do not contain proprioception and action information, we use hand poses and 2D positions in the image space as surrogates for the supervised learning objectives. (p. 17, A.1 Dataset Details).
+- **Temporal/runtime evidence:** The episode lengths of real-world teleoperation vary from 50 steps to 150 steps with 10 Hz control frequencies. (p. 9, 1 Introduction).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

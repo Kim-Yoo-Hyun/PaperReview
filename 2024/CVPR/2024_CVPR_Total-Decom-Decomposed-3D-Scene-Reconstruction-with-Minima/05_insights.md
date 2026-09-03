@@ -1,53 +1,75 @@
 # Insights — Total-Decom: Decomposed 3D Scene Reconstruction with Minimal Interaction
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `CURATION_ONLY`.
-> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 
-> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
 ### What was actually new
 
-- **Method cue:** In this paper, we present Total-Decom, a novel method for decomposed 3D reconstruction with minimal human interaction.
-- **Problem cue:** Scene reconstruction from multi-view images is a fundamental problem in computer vision and graphics.
-- **Claim/result cue:** Recent neural implicit surface reconstruction methods have achieved high-quality results; however, editing and manipulating the 3D geometry of reconstructed scenes remains challenging due to the absence of naturally ...
+- **p. 2 / 1. Introduction - extractive body cue:** In sum, our main contributions are as follows: • We introduce a novel pipeline that seamlessly integrates the segment anything model with hybrid implicit-explicit neural ...
+- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce Total-Decom, a novel method designed for decomposed 3D reconstruction with minimal human interaction.
+- **p. 3 / 3. Empirical Study on General Visual Features - extractive body cue:** Consequently, we propose a novel approach that leverages SAM features and a mesh-based region-growing method to decompose a 3D scene with minimal human an20862
+- **p. 4 / 4. Overview - extractive body cue:** To achieve this, we propose a novel pipeline that integrates SAM into a hybrid implicit-explicit surface representation, combined with a mesh-based region-growing method to effectively ...
+- **p. 1 / Abstract - extractive body cue:** We extensively evaluate our method on benchmark datasets and demonstrate its potential for downstream applications, such as animation and scene editing.
+- **p. 4 / 5. Neural Implicit Feature Distillation and Sur - extractive body cue:** Then, we use the volume rendering formula [13] to obtain outputs E of the target pixel, ˆE(r) = M X i=1 T r i αiˆer ...
+- **p. 5 / 5. Neural Implicit Feature Distillation and Sur - extractive body cue:** Additionally, we use the L2 loss Lf to optimize the rendered generalized feature ˆF(r) for distilling the F(r) from the SAM encoder.
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Empirical Study on General Visual Features), p. 4 (4. Overview), p. 1 (Abstract), p. 4 (5. Neural Implicit Feature Distillation and Sur)
 
 ### Strongest assumption and failure boundary
 
-- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+- **p. 2 / 1. Introduction - extractive body cue:** Moreover, even with ground-truth instance labels, the existing state-of-the-art method [37] still fails to produce satisfactory results, with multiple objects missing, as shown by the ...
+- **p. 2 / 1. Introduction - extractive body cue:** 7, due to the inherent difficulties in separating all objects using implicit representations.
+- **p. 1 / 1. Introduction - extractive body cue:** Scene reconstruction from multi-view images is a fundamental problem in computer vision and graphics [11, 12, 22, 24, 26, 28, 29].
+- **p. 1 / 1. Introduction - extractive body cue:** Recently, neural implicit surface reconstruction methods such as VolSDF [39] and NeuS [35] have been proposed to address this problem and have achieved highThis CVPR ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates object ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Visualization for distilled generalized features. ever, these methods rely heavily on accurate multi-view consistent ground-truth instance-level labels and cannot ef- fectively preserve all ...
+- **p. 7 / 7.1. Experiment Setup - extractive body cue:** Since this type of method does not introduce geometric constraints, we mainly compare the way of decomposition.
+- **Boundary to test:** Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates object extraction with similarity matching in 3D space, ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In sum, our main contributions are as follows: • We introduce a novel pipeline that seamlessly integrates the segment anything model with hybrid implicit-explicit neural surface representations for 3D decomposed reconstruction from ... | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Our reconstructed results also outperform ObjSDF++ qualitatively. | p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup) |
+| Failure/limitation | Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates object extraction with similarity matching in 3D space, ... | p. 3 (Figure/Table caption), p. 3 (Figure/Table caption) |
 
 ## Researcher interpretation
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation → state/world model`.
-- **Registry interface:** `3D reconstruction, geometry, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
-- **Prior interpretation carried forward:**
-  - Language-conditioned perception을 바로 action/policy token으로 연결하는 방식을 3D object state, affordance, contact-aware manipulation으로 확장할 수 있다.
-  - 2D image 중심 VLA가 놓치는 pose, metric distance, occlusion을 3D representation이나 scene memory로 보강하는 연구 질문으로 이어진다.
-- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 In this paper, we present Total-Decom, a novel method for decomposed 3D reconstruction with minimal human interaction.를 At this stage, we also integrate object-aware information by distilling image features from the SAM model for follow-up efficient interaction and accurate decomposition.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates object extraction with similarity matching in 3D space, ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In sum, our main contributions are as follows: • We introduce a novel pipeline that seamlessly integrates the segment anything model with hybrid implicit-explicit neural surface representations for 3D decomposed reconstruction from ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- Registry position: `3D Geometry, Reconstruction, and SLAM`; tags: `3D reconstruction, geometry, 3D Vision`.
-- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
-- Recorded scope boundary/future cue:
-  - 논문이 도달한 지점: Recent neural implicit surface reconstruction methods have achieved high-quality results; however, editing and manipulating the 3D geometry of reconstructed scenes remains challenging due to the absence of naturally ...
-  - robot action까지 보인 경우에도 3D state grounding, closed-loop correction, force/tactile feedback, unseen embodiment generalization은 별도 검증이 필요하다.
+- **Registry position:** `ARCHIVE` in `Robotics-enabling 3D perception`; tags: `3D reconstruction, geometry, 3D Vision`.
+- **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates object extraction with similarity matching in 3D space, ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
 ### Minimal reproduction
 
-- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
-  - 논문 내 evaluation 단서: ScanNet, Replica / accuracy, mAP, Chamfer, F-score
-  - 내 연구 확장 benchmark 후보: CALVIN, LIBERO, RLBench, Open X-Embodiment
-  - 내 연구 확장 metric 후보: success rate, task completion, generalization gap, collision
-  - 검증 초점: language-conditioned manipulation success, unseen object/task generalization, closed-loop recovery를 확인한다.
-- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: To further demonstrate the robustness of our method, we also use the ScanNet [6] as the real-world dataset which provides 1513 scenes..
+3. Compare against the body-reported baseline or a matched simpler baseline: We mainly compared our approach with the ObjSDF++, the state-of-the-art method that decomposes the scene structure with pseudo geometry priors as far as we know..
+4. Report the body metric and its denominator/aggregation: The reconstruction results are mainly evaluated by Chamfer-L1 and F-Score..
+5. Re-run the body-reported ablation/failure condition: Figure 6. The effect of different constraint on Replica room 1. where ˆpf, ˆpw represent the probabilities of the pixel being floor and wall derived from the semantic MLP, F, W are ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 4 (5. Neural Implicit Feature Distillation and Sur), p. 5 (5. Neural Implicit Feature Distillation and Sur), p. 4 (4. Overview); the primary result is directionally consistent at p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup), p. 8 (7.2. Results); and the failure boundary is measured rather than omitted.
 
 ## Falsifiable research question
 
-3D geometry token을 VLA policy에 넣을 때 action success와 language following 중 어느 부분이 실제로 개선되는가?
+고정된 observation/action/data/compute budget에서 main, contributions, follows mechanism이 We mainly compared our approach with the ObjSDF++, the state-of-the-art method that decomposes the scene structure ... 대비 The reconstruction results are mainly evaluated by Chamfer-L1 and F-Score.을 개선하고, Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object ... 조건에서도 closed-loop failure를 늘리지 않는가?
 
-**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

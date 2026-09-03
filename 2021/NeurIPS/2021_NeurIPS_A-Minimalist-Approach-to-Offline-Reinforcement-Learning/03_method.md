@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.06860; PDF retrieval source: https://arxiv.org/pdf/2106.06860. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2106.06860; PDF retrieval source: https://arxiv.org/pdf/2106.06860. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Fixed-data support | 온라인 탐색 없이 transition/action 분포를 정의한다 | offline trajectories와 metadata | dataset support, behavior distribution과 task return을 정리 | training batch/support | Most offline RL algorithms are built explicitly on top of an existing off-policy deep RL algorithm, such as TD3 [Fujimoto et al., ... | p. 4 (3 Background), p. 4 (3 Background) |
 | Value / uncertainty update | dataset 밖 action의 과대추정을 억제한다 | batch transition과 value parameters | conservative, implicit, uncertainty 또는 behavior-regularized update를 수행 | Q/V/uncertainty estimate | CQL Fisher-BRC TD3+BC [Kumar et al., 2020] [Kostrikov et al., 2021] (Ours) Algorithmic Adjustments Add regularizer to critic† Train a generative model†‡ ... | p. 4 (3 Background), p. 1 (Abstract) |
@@ -85,7 +85,7 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 |---|---|---|---|
 | Horizon | offline trajectory/discounted return horizon; deployment horizon과 분리한다. | We train each algorithm for 1 million time steps and evaluate every 5000 time steps. | episode/sequence/action-chunk boundary |
 | Rate / latency | training은 batch update, inference는 environment control tick; exact values 확인 필요. | We evaluate run time of training each of the offline RL algorithms for 1 million time steps, using the author-provoided implementations. | Hz/fps, inference time and control rate |
-| Memory | fixed dataset, value/policy parameters와 optional context/history. | not recovered | window and reset |
+| Memory | fixed dataset, value/policy parameters와 optional context/history. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | dataset size, conservative/value update와 sequence/action decoding이 비용을 결정한다. | Each evaluation consists of 10 episodes. | hardware, batch and throughput |
 
 ## Training vs Inference
@@ -135,8 +135,17 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (3 Background), p. 3 (3 Background), objective p. 3 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 7 (3 Background), p. 3 (3 Background), p. 1 (1 Introduction), temporal p. 7 (6 Experiments), p. 8 (120 HalfCheetah-Medium-Expert), p. 7 (6 Experiments), p. 5 (3 Background), p. 5 (3 Background), p. 1 (Abstract).
+- **Evidence anchors reviewed:** method p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (3 Background), p. 3 (3 Background), objective p. 3 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 7 (3 Background), p. 3 (3 Background), p. 1 (1 Introduction), temporal p. 7 (6 Experiments), p. 8 (120 HalfCheetah-Medium-Expert), p. 7 (6 Experiments), p. 5 (3 Background), p. 5 (3 Background), p. 1 (Abstract).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Due to errors in value estimation from out-of-distribution actions, most offline RL algorithms take the approach of constraining or regularizing the policy with the actions contained in the dataset. (p. 1, Abstract).
+- **Objective/update evidence:** TD3's policy π is updated with the deterministic policy gradient [Silver et al., 2014]: π = argmax π E(s,a)∼D[Q(s, π(s))]. (p. 2, 1 Introduction).
+- **Temporal/runtime evidence:** Each evaluation consists of 10 episodes. (p. 7, 6 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

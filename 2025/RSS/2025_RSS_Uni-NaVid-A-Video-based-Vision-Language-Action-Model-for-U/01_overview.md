@@ -1,8 +1,10 @@
 # Uni-NaVid: A Video-based Vision-Language-Action Model for Unifying Embodied Navigation Tasks
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p013.html.
-> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p013.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p013.html.
+> PDF retrieval source: https://www.roboticsproceedings.org/rss21/p013.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p013.pdf
 - Code/Project: https://github.com/jzhzhang/Uni-NaVid
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -81,3 +83,12 @@ VLA and generalist robot policies의 navigation 문제를 이해하기 위해 �
 ## Why Read It
 
 VLA and generalist robot policies의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, due to the limited rendering quality and diversity of simulators, these approaches often encounter the "sim-to-teal" gap and suffer from poor generalization across diverse navigation tasks (27, 5, 38].를 문제로 두고, However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 7 (B. Training Strategy of Uni-NaVid) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** However, due t0 the low frequency of LLM inference, they simplify the problem to some extent by adopting discretized modeling approaches. (p. 2, 1. Ivrropuction).
+- **Actual contribution:** However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach. (p. 3, 1. Ivrropuction).
+- **Evaluation boundary:** The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method (DAgRL+0D [94]) on the VAL SEEN ... (p. 8, B. Individual Task Results).
+- **Explicit failure boundary:** Despite the promising results, Uni-NaVid has several limitations. (p. 11, C. Qualitative Results in Real-World).

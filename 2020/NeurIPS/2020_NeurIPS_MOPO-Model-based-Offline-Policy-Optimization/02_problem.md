@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2005.13239; PDF retrieval source: https://arxiv.org/pdf/2005.13239. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2005.13239; PDF retrieval source: https://arxiv.org/pdf/2005.13239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
@@ -23,22 +23,22 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline ... | offline robot transition/trajectory dataset과 deployment MDP | body wording is the source claim |
-| Observation / input | 4 MOPO: Model-Based Offline Policy Optimization Unlike model-free methods, our goal is to design an offline model-based reinforcement learning algorithm that can ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF |
+| Observation / input | 4 MOPO: Model-Based Offline Policy Optimization Unlike model-free methods, our goal is to design an offline model-based reinforcement learning algorithm that can ... | dataset state/observation, action, reward와 return-to-go | exact sensor/frame/preprocessing from PDF body |
 | State / latent | MOPO, Model-Based, Offline, Policy, Optimization, Unlike, model-free, methods, goal, design | Q/value 또는 sequence-policy state | notation and tensor shape require body check |
 | Output / action | Let, denote, probability, being, state, time, step, actions | dataset-supported action sequence | exact unit/frame/decoder require body check |
 | Target outcome | offline return and deployment safety | offline policy value, OOD safety와 closed-loop success | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
-| Formulation field | PDF-grounded record | Evidence anchor |
+| Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | dataset transition (s,a,r,s′); body terms: MOPO, Model-Based, Offline, Policy, Optimization, Unlike, model-free, methods, goal, design | p. 4 (3 Preliminaries), p. 2 (1 Introduction), p. 3 (3 Preliminaries) |
-| Decision / output variable | dataset-supported policy action; body terms: Specifically, methods, estimate, error, respect, out-of-distribution, actions, only | p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract) |
+| Decision / output variable | dataset-supported policy action; body terms: primary, contribution, offline, model-based, algorithm, optimizes, policy, uncertainty-penalized | p. 2 (1 Introduction), p. 1 (Abstract), p. 5 (3 Preliminaries) |
 | Objective / loss / cost | offline value with OOD control; cue terms: Moreover, equation, suggests, policy, obtains, high, reward, estimated | p. 2 (1 Introduction), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (3 Preliminaries), p. 1 (Abstract), p. 2 (1 Introduction) |
 | Success / guarantee | offline return and deployment safety | p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 8 (5 Experiments) |
 
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
 ## Bottleneck in Prior Work
 
@@ -49,12 +49,12 @@ PDF body framing (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 
 ## What the Paper Changes
 
-PDF contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 5 (3 Preliminaries), p. 2 (1 Introduction)): Specifically, these methods estimate error with respect to out-of-distribution actions, but only consider states that lie within the offline dataset and do not ∗equal contribution. † equal advising.
+PDF body contribution framing (p. 2 (1 Introduction), p. 1 (Abstract), p. 5 (3 Preliminaries), p. 2 (1 Introduction), p. 1 (Abstract)): The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of ...
 
-- **p. 2 / 1 Introduction - extractive body cue:** The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is ...
 - **p. 1 / Abstract - extractive body cue:** Instead, we propose to modify the existing model-based RL methods by applying them with rewards artificially penalized by the uncertainty of the dynamics.
 - **p. 5 / 3 Preliminaries - extractive body cue:** We will analyze our framework under the assumption that we have access to an oracle uncertainty quantification module that provides an upper bound on the ...
 - **p. 2 / 1 Introduction - extractive body cue:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains.
+- **p. 1 / Abstract - extractive body cue:** However, standard model-based RL methods, designed for the online setting, do not provide an explicit mechanism to avoid the offline setting's distributional shift issue.
 
 ## Assumptions and Failure Boundary
 
@@ -69,12 +69,21 @@ PDF contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Ab
 
 ## Position in the Robotics Loop
 
-offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (3 Preliminaries), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 3 (3 Preliminaries). The downstream handoff is claimed only when the body describes it.
+offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Preliminaries), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 3 (3 Preliminaries). The downstream handoff is claimed only when the body describes it.
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 7 (3 Preliminaries), interface p. 4 (3 Preliminaries), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), objective p. 2 (1 Introduction), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries).
+- **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 7 (3 Preliminaries), interface p. 4 (3 Preliminaries), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 3 (3 Preliminaries), objective p. 2 (1 Introduction), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries).
 - Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
 - What are the observation frame, state memory, output/action frame, horizon and termination rule?
 - Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
 - Does the evaluation measure the stated target, or only an upstream proxy?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (19 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Target problem:** In particular, because offline model-based algorithms cannot improve the dynamics model using additional experience, we expect that such algorithms require careful use of the model in regions outside of the ... (p. 2, 1 Introduction).
+- **Formulation-changing contribution:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains. (p. 2, 1 Introduction).
+- **Assumption/failure evidence:** These failures are generally caused by large extrapolation error when the Q-function is evaluated on out-of-distribution actions [19, 36], which can lead to unstable learning and divergence. (p. 1, 1 Introduction).
+- **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

@@ -1,8 +1,10 @@
 # Logic-Geometric Programming: An Optimization-Based Approach to Combined Task and Motion Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf.
-> PDF retrieval source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf.
+> PDF retrieval source: https://www.ijcai.org/Proceedings/15/Papers/274.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2015 / IJCAI
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://www.ijcai.org/Proceedings/15/Papers/274.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -66,7 +68,7 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 | Embodiment/environment | Instead we optimize the grasp pose (the relative object-hand pose), assuming that a compliant real-world gripper could perform the actual grasp. | hardware/simulator version and reset protocol | p. 5 (5 Experiments), p. 5 (5 Experiments) |
 | Dataset/benchmark | Further, the paths have 20 time steps per manipulation; for 25 objects this is a (15dimensional) trajectory with 1000 time steps across 50 manipulations. | role, split, size and leakage | p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments) |
 | Metric | When blocks are placed on a board, we reward more central positionings. | definition, denominator, direction and uncertainty | p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments) |
-| Baseline/ablation | not recovered | fair input/data/compute/action matching | 본문 anchor 없음 |
+| Baseline/ablation | not stated or recoverable in the selected PDF body | fair input/data/compute/action matching | 본문 anchor 없음 |
 
 ## Explicit Limitations and Failure Boundary
 
@@ -77,3 +79,12 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 ## Why Read It
 
 Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Most existing TAMP approaches, however, require a well-defined task planning problem including a symbolic goal description.를 문제로 두고, Besides the novel formulation of manipulation planning as an LGP, we think of the concept of the effective end space and its optimization as a search heuristic as the core contributions of ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Most existing TAMP approaches, however, require a well-defined task planning problem including a symbolic goal description. (p. 1, 1 Introduction).
+- **Actual contribution:** Besides the novel formulation of manipulation planning as an LGP, we think of the concept of the effective end space and its optimization as a search heuristic as the core ... (p. 2, 1 Introduction).
+- **Evaluation boundary:** For brevity, we provide a detailed definition of ψ(x(T)) and quantitative results on achieved scores in an appendix on the author webpage. (p. 5, 5 Experiments).
+- **Explicit failure boundary:** We did not consider articulated fingers and optimize over finger motions for grasping as this is unrealistic to transfer to real-world. (p. 5, 5 Experiments).

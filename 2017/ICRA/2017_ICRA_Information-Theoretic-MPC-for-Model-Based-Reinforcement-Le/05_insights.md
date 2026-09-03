@@ -40,10 +40,11 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `joint/task state, reference와 sensor feedback → state estimate, task-space error와 control decision → torque, force, velocity 또는 position command`.
-- 이 논문의 재사용 가능한 지점은 The types of reinforcement learning problems encountered in robotic tasks are frequently in the continuous state-action space and high dimensional [1].를 In the second paradigm, model-based RL approaches first learn a model of the system and then train a feedback control policy using the learned model [6]-[8].로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 state estimate, task-space error와 control decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Running the algorithm without a bootstrapped neural network results in repeated failures.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: This is a significant step forward because it enables a purely data-driven approach to model learning within the MPPI framework.
-- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+- **Paper-specific interface:** The types of reinforcement learning problems encountered in robotic tasks are frequently in the continuous state-action space and high dimensional [1]. (p. 1, I. INTRODUCTION).
+- **Paper-specific mechanism:** This limits the method's ability to discover novel optimal control behaviors. (p. 1, I. INTRODUCTION).
+- **Evidence boundary:** the reported outcome is The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS); the relevant task/metric cue is The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Failure implication:** Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).
+- Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
 ### Dependency and evolution
 
@@ -55,19 +56,28 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: The bootstrapping dataset for the cart-pole comes from 5 minutes of multiple MPPI demonstrations using known dynamics but a different cost function for the swing-up task..
-3. Compare against the body-reported baseline or a matched simpler baseline: In our prior work, MPPI was successfully applied to this task using a physics-inspired model..
-4. Report the body metric and its denominator/aggregation: Multi-Step Error We train the neural network dynamics on one-step prediction error, which does not necessarily result in accurate multistep prediction..
-5. Re-run the body-reported ablation/failure condition: Running the algorithm without a bootstrapped neural network results in repeated failures..
-6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+1. Reconstruct the PDF-described interface and mechanism: The types of reinforcement learning problems encountered in robotic tasks are frequently in the continuous state-action space and high dimensional [1]. (p. 1, I. INTRODUCTION); preserve the objective/update rule: The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur in real time. (p. 2, II. MODEL PREDICTIVE CONTROL).
+2. Use the paper-reported task/data/environment cue: In our prior work, MPPI was successfully applied to this task using a physics-inspired model. (p. 6, VI. EXPERIMENTAL RESULTS).
+3. Compare against the reported or matched baseline: Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).
+4. Report the body metric with its denominator and aggregation: The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS).
+5. Re-run the reported ablation or stress/failure condition: 5 11.11 10.84 7.49 22.62 training set and re-training the neural network model did not noticeably improve the performance of the algorithm. (p. 7, VI. EXPERIMENTAL RESULTS); if none is reported, design one around: Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).
+6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
 
 ### What would count as a successful reproduction
 
-- The reported mechanism is present at p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL); the primary result is directionally consistent at p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS); and the failure boundary is measured rather than omitted.
+- A faithful reproduction must recover the mechanism at p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), match the reported outcome at p. 6 (V. SIMULATED RESULTS), p. 5 (V. SIMULATED RESULTS), p. 5 (V. SIMULATED RESULTS), and measure the boundary at p. 5 (V. SIMULATED RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS).
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 significant, step, forward mechanism이 In our prior work, MPPI was successfully applied to this task using a physics-inspired model. 대비 Multi-Step Error We train the neural network dynamics on one-step prediction error, which does not necessarily result in ...을 개선하고, Running the algorithm without a bootstrapped neural network results in repeated failures. 조건에서도 closed-loop failure를 늘리지 않는가?
+Under the paper's stated interface (The types of reinforcement learning problems encountered in robotic tasks are frequently in the continuous state-action space and high dimensional [1].), does the paper-specific mechanism (This limits the method's ability to discover novel optimal control behaviors.) retain the reported evaluation outcome (The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved ...) when tested against the paper's strongest explicit boundary (Running the algorithm without a bootstrapped neural network results in repeated failures.)?
 
-**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.
+**Reject the hypothesis if** Reject the hypothesis if the body-reported metric (The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-supported mechanism:** This limits the method's ability to discover novel optimal control behaviors. (p. 1, I. INTRODUCTION).
+- **Paper-supported outcome:** The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS).
+- **Strongest explicit boundary:** Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).
+- **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

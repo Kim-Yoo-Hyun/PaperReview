@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1609.06408; PDF retrieval source: https://arxiv.org/pdf/1609.06408. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1609.06408; PDF retrieval source: https://arxiv.org/pdf/1609.06408. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -38,7 +38,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Risk / failure representation | unsafe state와 uncertainty를 계산한다 | observation, nominal command, history | barrier, risk model, failure classifier, uncertainty 또는 safe set을 추정 | risk/margin/failure state | While it is tempting to decompose the problem into the design of a controller for each individual objective and then integrate the ... | p. 1 (I. INTRODUCTION), p. 2 (B. Contributions) |
 | Filtering / recovery | nominal command를 안전 command로 바꾼다 | nominal action과 safety constraint | QP shield, backup policy, correction, stop 또는 recovery plan을 선택 | safe/recovery action | The relations established for barrier functions then extend to control barrier functions. perspective allows for the consideration of multiple control objectives (expressed ... | p. 2 (B. Contributions), p. 1 (Abstract) |
@@ -85,8 +85,8 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | As a means of creating a formal framework for controlling systems of this form, and with a view toward automotive applications, this ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | Index Terms-Control Lyapunov function, Barrier function, Nonlinear control, Quadratic program, Safety, Set invariance | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | not recovered | window and reset |
-| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not recovered | hardware, batch and throughput |
+| Memory | risk score, recent trajectory/history와 recovery state. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -125,8 +125,17 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1 (Abstract), p. 7 (III. CONTROL BARRIER FUNCTIONS), p. 2 (B. Contributions), p. 6 (III. CONTROL BARRIER FUNCTIONS), objective p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 1 (I. INTRODUCTION), p. 3 (B. Contributions), p. 7 (III. CONTROL BARRIER FUNCTIONS), temporal p. 1 (Abstract), p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 3 (II. RECIPROCAL AND ZEROING BARRIER FUNCTIONS), p. 3 (B. Contributions).
+- **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1 (Abstract), p. 7 (III. CONTROL BARRIER FUNCTIONS), p. 2 (B. Contributions), p. 6 (III. CONTROL BARRIER FUNCTIONS), objective p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 1 (I. INTRODUCTION), p. 3 (B. Contributions), p. 7 (III. CONTROL BARRIER FUNCTIONS), temporal p. 1 (Abstract), p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 3 (II. RECIPROCAL AND ZEROING BARRIER FUNCTIONS), p. 3 (B. Contributions).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
 - Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** As a means of creating a formal framework for controlling systems of this form, and with a view toward automotive applications, this paper develops a methodology that allows safety conditions-expressed ... (p. 1, Abstract).
+- **Objective/update evidence:** Safety critical systems involve the tight coupling between potentially conflicting control objectives and safety constraints. (p. 1, Abstract).
+- **Temporal/runtime evidence:** As a means of creating a formal framework for controlling systems of this form, and with a view toward automotive applications, this paper develops a methodology that allows safety conditions-expressed ... (p. 1, Abstract).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

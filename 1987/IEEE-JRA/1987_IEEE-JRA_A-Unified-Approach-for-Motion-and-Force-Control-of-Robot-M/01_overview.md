@@ -1,8 +1,10 @@
 # A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://cs.stanford.edu/group/manips/publications.html.
-> PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://cs.stanford.edu/group/manips/publications.html.
+> PDF retrieval source: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1987 / IEEE JRA
 - Authors: not duplicated here when not verified in the registry source
@@ -13,7 +15,7 @@
 - Full-text retrieval: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-02 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
@@ -82,3 +84,12 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 ## Why Read It
 
 Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 The magnitude of these dynamic forces cannot be ignored when large accelerations and fast motions are considered.를 문제로 두고, These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror Morton Controt) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (11 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** The magnitude of these dynamic forces cannot be ignored when large accelerations and fast motions are considered. (p. 1, I. Inrropucrion).
+- **Actual contribution:** These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn (p. 1, Abstract).
+- **Evaluation boundary:** In operational space control systeins, however, errors, performance, dynamics, simplifications, characteriza tions, and controlled variables are directly related to manipulator tasks. (p. 5, IV. Exp-Errecror Morton Controt).
+- **Explicit failure boundary:** This performance has been obtained despite the limitations in controlling the manipulator joint torques [27]. ‘Accurate identification of the PUMA. (p. 10, IX. Susmary ano Discussion).

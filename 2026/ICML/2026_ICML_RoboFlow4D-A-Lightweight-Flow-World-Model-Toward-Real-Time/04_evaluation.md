@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fh6XBnjFlv; PDF retrieval source: https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fh6XBnjFlv; PDF retrieval source: https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning 130 ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** For LIBERO, we follow the standard benchmark setup and use multi-view observations from a third-view camera and a wrist-mounted camera, training on the official demonstration ...
-- **p. 7 / 4.2. Main Results - extractive PDF cue:** Quantitative results of VLAs for fine-tuned robotic manipulation tasks on the LIBERO benchmark.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, including DP and DiT.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** This can be attributed to the benefits of goal-oriented flow plan guidance for the action policy, which provides more efficient and accurate trajectories that mitigate ...
-- **p. 7 / 4.4. Real-World Experiments - extractive PDF cue:** We validate the generalization of our approach on 4 representative real-world tasks.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** Real-world performance in terms of Success rate (%) and efficiency (completion time (seconds)).
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%).
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning 130 ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For LIBERO, we follow the standard benchmark setup and use multi-view observations from a third-view camera and a wrist-mounted camera, training on the official demonstration ...
+- **p. 7 / 4.2. Main Results - extractive body cue:** Quantitative results of VLAs for fine-tuned robotic manipulation tasks on the LIBERO benchmark.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, including DP and DiT.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** This can be attributed to the benefits of goal-oriented flow plan guidance for the action policy, which provides more efficient and accurate trajectories that mitigate ...
+- **p. 7 / 4.4. Real-World Experiments - extractive body cue:** We validate the generalization of our approach on 4 representative real-world tasks.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Real-world performance in terms of Success rate (%) and efficiency (completion time (seconds)).
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%).
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.2. Main Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | DP achieves substantial improvements in success rates of 8.2%, 8.0%, and 6.2% on Spatial, Long, and average, respectively. | p. 6 (4.2. Main Results) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4. Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, includ- ing DP ... | p. 8 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning 130 ...
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** For LIBERO, we follow the standard benchmark setup and use multi-view observations from a third-view camera and a wrist-mounted camera, training on the official demonstration ...
-- **p. 7 / 4.2. Main Results - extractive PDF cue:** Quantitative results of VLAs for fine-tuned robotic manipulation tasks on the LIBERO benchmark.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, including DP and DiT.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** This can be attributed to the benefits of goal-oriented flow plan guidance for the action policy, which provides more efficient and accurate trajectories that mitigate ...
-- **p. 7 / 4.4. Real-World Experiments - extractive PDF cue:** We validate the generalization of our approach on 4 representative real-world tasks.
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning 130 ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** For LIBERO, we follow the standard benchmark setup and use multi-view observations from a third-view camera and a wrist-mounted camera, training on the official demonstration ...
+- **p. 7 / 4.2. Main Results - extractive body cue:** Quantitative results of VLAs for fine-tuned robotic manipulation tasks on the LIBERO benchmark.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, including DP and DiT.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** This can be attributed to the benefits of goal-oriented flow plan guidance for the action policy, which provides more efficient and accurate trajectories that mitigate ...
+- **p. 7 / 4.4. Real-World Experiments - extractive body cue:** We validate the generalization of our approach on 4 representative real-world tasks.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Top left: System-level comparison of various flow-based planning. (a) 2D flow-based planning (Vecerik et al., 2024; Xu et al., 2024) predicts pixel-level flow ...
-- **p. 4 / Figure/Table caption - extractive PDF cue:** Figure 2. Overview of robotic manipulation. Top left (Sec. 3.2): Given an RGB image sequence, optional gripper query points, and a task instruction, the proposed ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 3. Data generation pipeline. Stage one: We track the flows of the grounded gripper from diverse real-world and simulated robot videos. (Khazatsky et al., ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Success rates (%). Quantitative results of VLAs for fine-tuned robotic manipulation tasks on the LIBERO benchmark. Best results are in bold and second-best ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Success rates (%). Each task is evaluated over 100 trials. Best results are in bold and second-best results are underlined.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 3. Ablation on Modular Design. Experiments are con- ducted in the same inference settings.
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation on Dual-System Frequency. We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%). The fast system ...
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. Real-world performance in terms of Success rate (%) and efficiency (completion time (seconds)). Each task is evaluated over an average of 20 trials. ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Top left: System-level comparison of various flow-based planning. (a) 2D flow-based planning (Vecerik et al., 2024; Xu et al., 2024) predicts pixel-level flow ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of robotic manipulation. Top left (Sec. 3.2): Given an RGB image sequence, optional gripper query points, and a task instruction, the proposed ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Data generation pipeline. Stage one: We track the flows of the grounded gripper from diverse real-world and simulated robot videos. (Khazatsky et al., ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Success rates (%). Quantitative results of VLAs for fine-tuned robotic manipulation tasks on the LIBERO benchmark. Best results are in bold and second-best ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Success rates (%). Each task is evaluated over 100 trials. Best results are in bold and second-best results are underlined.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Ablation on Modular Design. Experiments are con- ducted in the same inference settings.
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation on Dual-System Frequency. We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%). The fast system ...
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Real-world performance in terms of Success rate (%) and efficiency (completion time (seconds)). Each task is evaluated over an average of 20 trials. ...
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning ... | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | For LIBERO, we follow the standard benchmark setup and use multi-view observations from a third-view camera and a wrist-mounted camera, training on the official ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Main Results) |
@@ -114,16 +114,16 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| As an important cornerstone toward developing embodied generalist agents, recent learning-based manipulation ap- *Equal contribution †Corresponding authors. | DP achieves substantial improvements in success rates of 8.2%, 8.0%, and 6.2% on Spatial, Long, and average, respectively. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (4.2. Main Results), p. 8 (Figure/Table caption), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study) |
+| To enable real-time robotic deployment, we propose RoboFlow4D, an end-to-end lightweight world model that directly predicts a sequence of multi-frame 3D flows (i.e., flows ... | DP achieves substantial improvements in success rates of 8.2%, 8.0%, and 6.2% on Spatial, Long, and average, respectively. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (4.2. Main Results), p. 8 (Figure/Table caption), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study) |
 | Primary metric/result | Figure 4. Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, includ- ing DP ... | numeric claim only at cited anchor | p. 8 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
-- **p. 6 / 4.1. Experimental Setup - extractive PDF cue:** We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning 130 ...
-- **p. 7 / 4.2. Main Results - extractive PDF cue:** Each task is evaluated over 100 trials.
-- **p. 7 / 4.4. Real-World Experiments - extractive PDF cue:** A single NVIDIA RTX 6000 GPU is used for all experiments.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** Each task is evaluated over an average of 20 trials.
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** For example, DP achieves a 12.5% higher average success rate (SR) while reducing completion time (s) by an average of 1.4 s, as evidenced by ...
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** Similar results from DiT can also be observed, such as 43.8% SR, 38.3 s in Avg., notably surpassing the state-of-the-art approach π0's 41.3% and 40.7 ...
+- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We evaluate our method on two widely recognized robotic benchmarks: (1) LIBERO (Liu et al., 2023), a lifelong learning benchmark with 5 suites spanning 130 ...
+- **p. 7 / 4.2. Main Results - extractive body cue:** Each task is evaluated over 100 trials.
+- **p. 7 / 4.4. Real-World Experiments - extractive body cue:** A single NVIDIA RTX 6000 GPU is used for all experiments.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Each task is evaluated over an average of 20 trials.
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** For example, DP achieves a 12.5% higher average success rate (SR) while reducing completion time (s) by an average of 1.4 s, as evidenced by ...
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Similar results from DiT can also be observed, such as 43.8% SR, 38.3 s in Avg., notably surpassing the state-of-the-art approach π0's 41.3% and 40.7 ...
 
 ## Generalization and Failure Cases
 
@@ -158,11 +158,11 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 4.4. Real-World Experiments - extractive PDF cue:** Bottom: In the observation-planning-execution closed loop, when errors occur (e.g., grasp failure), RoboFlow4D correctively re-plans flows to re-align the policy (recovery), such that the robot ...
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%).
-- **p. 7 / 4.3. Ablation Study - extractive PDF cue:** As shown in the table, the success rate remains steady across different r ∈{4, 2, 1} for both DP and DiT controllers, indicating that our ...
+- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Bottom: In the observation-planning-execution closed loop, when errors occur (e.g., grasp failure), RoboFlow4D correctively re-plans flows to re-align the policy (recovery), such that the robot ...
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%).
+- **p. 7 / 4.3. Ablation Study - extractive body cue:** As shown in the table, the success rate remains steady across different r ∈{4, 2, 1} for both DP and DiT controllers, indicating that our ...
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Main Results), p. 8 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 7 (4.4. Real-World Experiments), metrics p. 8 (4.4. Real-World Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 7 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 7 (4.3. Ablation Study), results p. 6 (4.2. Main Results), p. 8 (Figure/Table caption), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Main Results), p. 8 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 7 (4.4. Real-World Experiments), metrics p. 8 (4.4. Real-World Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 7 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 7 (4.3. Ablation Study), results p. 6 (4.2. Main Results), p. 8 (Figure/Table caption), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

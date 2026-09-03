@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.13470; PDF retrieval source: https://arxiv.org/pdf/1912.13470. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.13470; PDF retrieval source: https://arxiv.org/pdf/1912.13470. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. 
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.1. Ground-Truth Evaluation | BENCHMARK / DATASET | Summary of real world success rate of grasping given different grasp score. grasp poses to the camera frame using objects' 6D poses, we paste ... | p. 5 (4.1. Ground-Truth Evaluation) |
 | 3.4. Evaluation | BENCHMARK / DATASET | Currently, the Cornell dataset [11] has achieved over 99% accuracy. | p. 4 (3.4. Evaluation) |
@@ -63,7 +63,7 @@ PDF body evaluation/result cue (p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. 
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | Dataset Split For our 170 scenes, we use 100 for training and 70 for testing. | embodiment, simulator version and control stack | p. 4 (3.4. Evaluation), p. 4 (3.4. Evaluation) |
 | Task/environment | Specifically, we further divide our test sets into 3 categories: 30 scenes with seen objects, 30 with unseen but similar objects and 10 for ... | reset, timeout, object/scene variation | p. 4 (3.4. Evaluation), p. 5 (4. Experiments) |
@@ -158,7 +158,16 @@ PDF body evaluation/result cue (p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. 
 - **p. 3 / 3.3. Data Annotation - extractive body cue:** The 6D poses will then be propagated to the remaining frames by: Pj i = cam-1 i cam0Pj 0, (1) Gripper Depth Sampling Grasp View ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our methodology for building the dataset. We collect data with real-world sensors and annotate grasp poses for every single object by analytic computation. ...
 
-- **PDF anchors reviewed:** datasets p. 4 (3.4. Evaluation), p. 4 (3.4. Evaluation), p. 5 (4. Experiments), p. 2 (3.2. Data Collection), p. 2 (3.1. Overview), p. 3 (3.2. Data Collection), metrics p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. Evaluation), p. 5 (3.4. Evaluation), p. 4 (3.4. Evaluation), p. 3 (Figure/Table caption), p. 2 (3.1. Overview), baselines 본문 anchor 없음, results p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. Evaluation), p. 3 (3.3. Data Annotation), p. 4 (3.4. Evaluation), p. 5 (4.1. Ground-Truth Evaluation), p. 3 (3.3. Data Annotation).
+- **Evidence anchors reviewed:** datasets p. 4 (3.4. Evaluation), p. 4 (3.4. Evaluation), p. 5 (4. Experiments), p. 2 (3.2. Data Collection), p. 2 (3.1. Overview), p. 3 (3.2. Data Collection), metrics p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. Evaluation), p. 5 (3.4. Evaluation), p. 4 (3.4. Evaluation), p. 3 (Figure/Table caption), p. 2 (3.1. Overview), baselines 본문 anchor 없음, results p. 5 (4.1. Ground-Truth Evaluation), p. 4 (3.4. Evaluation), p. 3 (3.3. Data Annotation), p. 4 (3.4. Evaluation), p. 5 (4.1. Ground-Truth Evaluation), p. 3 (3.3. Data Annotation).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 0.75). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** Currently, the Cornell dataset [11] has achieved over 99% accuracy. (p. 4, 3.4. Evaluation).
+- **Metric evidence:** New Metrics To evaluate the prediction performance of grasp pose, previous methods adopt the rectangle metric that consider a grasp as correct if: i) the rotation error is less than ... (p. 4, 3.4. Evaluation).
+- **Baseline/ablation evidence:** It might overestimate the performance of grasping algorithm. (p. 4, 3.4. Evaluation).
+- **Failure/negative evidence:** Such evaluation method does not assume the representation of the grasp pose, thus is general in practice. (p. 5, 3.5. Discussion).

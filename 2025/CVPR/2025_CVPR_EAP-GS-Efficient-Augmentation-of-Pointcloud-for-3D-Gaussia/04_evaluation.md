@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -10,14 +10,14 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 
 ## Evaluation Body Digest
 
-- **p. 6 / 4.1. Dataset and Implementation Details - extractive PDF cue:** We evaluated our method on all scenes of the LLFF [21] and Mip-NeRF360 dataset [1].
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** For fair comparison, all methods were trained with the same training data and hardware.
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Quantitative results on LLFF and Mip-NeRF360 datasets.
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Methods LLFF Dataset Mip-NeRF360 Dataset PSNR SSIM LPIPS Time (min) Number PSNR SSIM LPIPS Time (min) Number 3DGS 14.63 0.4374 0.3425 11.98 379k 16.06 0.3997 ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** We evalute the effect of each component of EAP-GS on the LLFF dataset.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** 4, each component of our method improves the reconstruction metrics for the LLFF dataset.
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Best score and second-best score are in red and orange respectively.
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Additionally, the sparse pointcloud might have a large error when scale matching the relative depth.
+- **p. 6 / 4.1. Dataset and Implementation Details - extractive body cue:** We evaluated our method on all scenes of the LLFF [21] and Mip-NeRF360 dataset [1].
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** For fair comparison, all methods were trained with the same training data and hardware.
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Quantitative results on LLFF and Mip-NeRF360 datasets.
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Methods LLFF Dataset Mip-NeRF360 Dataset PSNR SSIM LPIPS Time (min) Number PSNR SSIM LPIPS Time (min) Number 3DGS 14.63 0.4374 0.3425 11.98 379k 16.06 0.3997 ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** We evalute the effect of each component of EAP-GS on the LLFF dataset.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** 4, each component of our method improves the reconstruction metrics for the LLFF dataset.
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Best score and second-best score are in red and orange respectively.
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Additionally, the sparse pointcloud might have a large error when scale matching the relative depth.
 
 ## Evaluation Type and Scope
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | 4.3. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | APA significantly improves the overall number and distribution of initial points, resulting in more accurate and reasonable scene geometry. | p. 7 (4.3. Ablation Studies) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 2. Reconstruction results by original 3DGS with six training views. Left column: unsatisfying reconstruciton (c) from inadequate pointcloud (a). Right column: fine reconstruciton ... | p. 2 (Figure/Table caption) |
@@ -40,29 +40,29 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 
 ## Dataset / Benchmark Role
 
-- **p. 6 / 4.1. Dataset and Implementation Details - extractive PDF cue:** We evaluated our method on all scenes of the LLFF [21] and Mip-NeRF360 dataset [1].
-- **p. 6 / 4.2. Experimental Results - extractive PDF cue:** For fair comparison, all methods were trained with the same training data and hardware.
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Quantitative results on LLFF and Mip-NeRF360 datasets.
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Methods LLFF Dataset Mip-NeRF360 Dataset PSNR SSIM LPIPS Time (min) Number PSNR SSIM LPIPS Time (min) Number 3DGS 14.63 0.4374 0.3425 11.98 379k 16.06 0.3997 ...
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** We evalute the effect of each component of EAP-GS on the LLFF dataset.
-- **p. 8 / 4.3. Ablation Studies - extractive PDF cue:** 4, each component of our method improves the reconstruction metrics for the LLFF dataset.
+- **p. 6 / 4.1. Dataset and Implementation Details - extractive body cue:** We evaluated our method on all scenes of the LLFF [21] and Mip-NeRF360 dataset [1].
+- **p. 6 / 4.2. Experimental Results - extractive body cue:** For fair comparison, all methods were trained with the same training data and hardware.
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Quantitative results on LLFF and Mip-NeRF360 datasets.
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Methods LLFF Dataset Mip-NeRF360 Dataset PSNR SSIM LPIPS Time (min) Number PSNR SSIM LPIPS Time (min) Number 3DGS 14.63 0.4374 0.3425 11.98 379k 16.06 0.3997 ...
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** We evalute the effect of each component of EAP-GS on the LLFF dataset.
+- **p. 8 / 4.3. Ablation Studies - extractive body cue:** 4, each component of our method improves the reconstruction metrics for the LLFF dataset.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. Comparison of the FSGS [41] and our proposed EAP-GS with 12 training views. With Attentional Pointcloud Augmenta- tion technique, our method generates significantly ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Figure 2. Reconstruction results by original 3DGS with six training views. Left column: unsatisfying reconstruciton (c) from inadequate pointcloud (a). Right column: fine reconstruciton (d) ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 3. Pipeline of the EAP-GS. We utilize the original 3DGS in the reconstruction stage and it can be easily replaced by other optimization methods. ...
-- **p. 5 / Figure/Table caption - extractive PDF cue:** Figure 4. Relationship between scene complexity and density distribution. (a) zoom-in of a smooth region with its 2D spectrum on the right; (b) zoom-in of ...
-- **p. 6 / Figure/Table caption - extractive PDF cue:** Figure 5. Qualitative Comparison on LLFF and Mip-NeRF360 datasets. We demonstrate testing view reconstruction by 3DGS [14], DRGS [6], FSGS [41], CoR-GS [36] and our ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 1. Quantitative results on LLFF and Mip-NeRF360 datasets. Best score and second-best score are in red and orange respec- tively. The results of each ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Table 2. Advantage of incorporating APA into various meth- ods. Quantitative metric comparison of original version and the version incorporating APA for different methods. LLFF ...
-- **p. 7 / Figure/Table caption - extractive PDF cue:** Figure 6. Advantage of incorporating APA into various meth- ods. Visualization of testing view reconstructions from different 3DGS-based optimization methods after incorporating APA.
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of the FSGS [41] and our proposed EAP-GS with 12 training views. With Attentional Pointcloud Augmenta- tion technique, our method generates significantly ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Reconstruction results by original 3DGS with six training views. Left column: unsatisfying reconstruciton (c) from inadequate pointcloud (a). Right column: fine reconstruciton (d) ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Pipeline of the EAP-GS. We utilize the original 3DGS in the reconstruction stage and it can be easily replaced by other optimization methods. ...
+- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Relationship between scene complexity and density distribution. (a) zoom-in of a smooth region with its 2D spectrum on the right; (b) zoom-in of ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative Comparison on LLFF and Mip-NeRF360 datasets. We demonstrate testing view reconstruction by 3DGS [14], DRGS [6], FSGS [41], CoR-GS [36] and our ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative results on LLFF and Mip-NeRF360 datasets. Best score and second-best score are in red and orange respec- tively. The results of each ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Advantage of incorporating APA into various meth- ods. Quantitative metric comparison of original version and the version incorporating APA for different methods. LLFF ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. Advantage of incorporating APA into various meth- ods. Visualization of testing view reconstructions from different 3DGS-based optimization methods after incorporating APA.
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluated our method on all scenes of the LLFF [21] and Mip-NeRF360 dataset [1]. | embodiment, simulator version and control stack | p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.2. Experimental Results) |
 | Task/environment | For fair comparison, all methods were trained with the same training data and hardware. | reset, timeout, object/scene variation | p. 6 (4.2. Experimental Results), p. 7 (4.2. Experimental Results) |
@@ -152,11 +152,11 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 
 ## Limitations and Verification Questions
 
-- **p. 8 / 5. Discussion - extractive PDF cue:** Lacking a method to limit the error may be a limitation Figure 7.
-- **p. 8 / 5. Discussion - extractive PDF cue:** This issue is primarily due to data incompleteness, and a potential approach to further enhance performance would be to incorporate prior knowledge or generative models ...
-- **p. 7 / 4.2. Experimental Results - extractive PDF cue:** Similar results are obtained for unknown camera-poses though we did not report here because of space limitation.
+- **p. 8 / 5. Discussion - extractive body cue:** Lacking a method to limit the error may be a limitation Figure 7.
+- **p. 8 / 5. Discussion - extractive body cue:** This issue is primarily due to data incompleteness, and a potential approach to further enhance performance would be to incorporate prior knowledge or generative models ...
+- **p. 7 / 4.2. Experimental Results - extractive body cue:** Similar results are obtained for unknown camera-poses though we did not report here because of space limitation.
 
-- **PDF anchors reviewed:** datasets p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 6 (4.2. Experimental Results), baselines p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.1. Dataset and Implementation Details), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), results p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 7 (4.2. Experimental Results), p. 1 (Figure/Table caption), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
+- **Evidence anchors reviewed:** datasets p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 6 (4.2. Experimental Results), baselines p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.1. Dataset and Implementation Details), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), results p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 7 (4.2. Experimental Results), p. 1 (Figure/Table caption), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?

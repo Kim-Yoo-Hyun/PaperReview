@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p017.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p017.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p017.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p017.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
@@ -30,7 +30,7 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 
 ## Experimental Matrix
 
-| Body section | Type | PDF experiment/result cue | Anchor |
+| Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | C. ALOHA Task Performance Results | EMPIRICAL / SIMULATION | Finally, OpenVLA-OFT+ achieves the highest performance across both task execution and language following (see Figure 7 for examples of successful task rollouts). | p. 9 (C. ALOHA Task Performance Results) |
 | A. LIBERO Experimental Setup | EMPIRICAL / SIMULATION | For methods using action chunking, we set chunk size to A' = 8 to match the Diffusion Policy baseline [5], and execute full chunks ... | p. 5 (A. LIBERO Experimental Setup) |
@@ -64,7 +64,7 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 
 ## Embodiment / Environment
 
-| Dimension | PDF-grounded cue | Unresolved condition | Anchor |
+| Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate on the LIBERO simulation benchmark [26], which features a Franka Emika Panda arm in simulation with demonstrations containing camera images, robot state, ... | embodiment, simulator version and control stack | p. 5 (A. LIBERO Experimental Setup), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation) |
 | Task/environment | 1) ALOHA Task Suite Details: Below are detailed specitications for each task in our ALOHA experiments: 1. "fold shorts" «+ Task: Bimanual folding of ... | reset, timeout, object/scene variation | p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 9 (C. ALOHA Task Performance Results) |
@@ -173,7 +173,16 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 - **p. 15 / C. Feature-wise Linear Modulation (FILM) Implementation - extractive body cue:** We maintain the same convergence criterion as in the LIBERO experiments (training until mean normalized LI loss falls below 0.01) and similar learning rate decay ...
 - **p. 10 / VII. Discussion - extractive body cue:** While LI regression may help smoothen out noise in training demonstrations by encouraging the policy to learn the median mode in demonstrated actions, it may ...
 
-- **PDF anchors reviewed:** datasets p. 5 (A. LIBERO Experimental Setup), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 10 (C. ALOHA Task Performance Results), metrics p. 9 (C. ALOHA Task Performance Results), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), baselines p. 8 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), results p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (C. ALOHA Task Performance Results).
+- **Evidence anchors reviewed:** datasets p. 5 (A. LIBERO Experimental Setup), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 10 (C. ALOHA Task Performance Results), metrics p. 9 (C. ALOHA Task Performance Results), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), baselines p. 8 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), results p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (C. ALOHA Task Performance Results).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
 - Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
 - What negative result or untested regime does the paper leave open?
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (24 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Evaluation setup/result:** For methods using action chunking, we set chunk size to A' = 8 to match the Diffusion Policy baseline [5], and execute full chunks before replanning, which we find improves ... (p. 5, A. LIBERO Experimental Setup).
+- **Metric evidence:** To provide fine-grained assessment, we use a predetermined rubric that assigns scores for partial task completion (see Appendix FF for details). (p. 8, C. ALOHA Task Performance Results).
+- **Baseline/ablation evidence:** Fine-tuned VLA pol cies generally outperform the from-scratch baselines in both task execution and language following, consistent with prior findings (27, 3]. (p. 8, C. ALOHA Task Performance Results).
+- **Failure/negative evidence:** As visualized in Figure 6, it often fails to correct mistakes in the "scoop X into (p. 8, C. ALOHA Task Performance Results).

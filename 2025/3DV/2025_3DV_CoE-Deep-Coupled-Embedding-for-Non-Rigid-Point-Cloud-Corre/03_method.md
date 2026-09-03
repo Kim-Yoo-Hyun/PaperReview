@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=pIDl4wuZoG&name=pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=pIDl4wuZoG&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,33 +10,33 @@ PDF body method statement (p. 4 (4.1. Network Architecture), p. 5 (4.1. Network 
 
 ## Method Body Digest
 
-- **p. 4 / 4.1. Network Architecture - extractive PDF cue:** Our network architecture is simple, efficient and comprises two main building blocks: an embedding extractor fθ and a cross attention module hφ with learnable parameters ...
-- **p. 5 / 4.1. Network Architecture - extractive PDF cue:** It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The output ΨS and ...
-- **p. 5 / 4.2. Unsupervised Loss - extractive PDF cue:** Our unsupervised loss is inspired by the work of classical geometry processing [16, 22] and consists of three terms.
-- **p. 4 / 4.1. Network Architecture - extractive PDF cue:** Embedding Extractor Module computes per point intermediate embedding ˆΨ(·), which is a non-linear mapping:
-- **p. 6 / 4.2. Unsupervised Loss - extractive PDF cue:** Finally, our full unsupervised loss is written as: Ltotal = µoffLoff + µoLo + µcLc (7) where µoff = 1, µo = 5e1 and µc ...
-- **p. 5 / 4.2. Unsupervised Loss - extractive PDF cue:** Orthogonal Loss: The orthogonal constraint in Eq.
-- **p. 5 / 4.2. Unsupervised Loss - extractive PDF cue:** Off-diagonal Loss: Similar as in Eq.
-- **p. 6 / 4.2. Unsupervised Loss - extractive PDF cue:** All methods only take point clouds as input except the multimodal method SSMSM [7], which requires meshes.
+- **p. 4 / 4.1. Network Architecture - extractive body cue:** Our network architecture is simple, efficient and comprises two main building blocks: an embedding extractor fθ and a cross attention module hφ with learnable parameters ...
+- **p. 5 / 4.1. Network Architecture - extractive body cue:** It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The output ΨS and ...
+- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Our unsupervised loss is inspired by the work of classical geometry processing [16, 22] and consists of three terms.
+- **p. 4 / 4.1. Network Architecture - extractive body cue:** Embedding Extractor Module computes per point intermediate embedding ˆΨ(·), which is a non-linear mapping:
+- **p. 6 / 4.2. Unsupervised Loss - extractive body cue:** Finally, our full unsupervised loss is written as: Ltotal = µoffLoff + µoLo + µcLc (7) where µoff = 1, µo = 5e1 and µc ...
+- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Orthogonal Loss: The orthogonal constraint in Eq.
+- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Off-diagonal Loss: Similar as in Eq.
+- **p. 6 / 4.2. Unsupervised Loss - extractive body cue:** All methods only take point clouds as input except the multimodal method SSMSM [7], which requires meshes.
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our contributions are: • We propose a novel unsupervised way to learn per-point embeddings directly from raw point clouds under various non-rigid deformations.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Inspired by classical geometry processing technique, our method is effective and simple that only requires to train a single network. • In our learned embedding ...
-- **p. 4 / 3. Background and Notation - extractive PDF cue:** To overcome these issues, we propose to directly learn coupled embeddings without any ground truth correspondences and without any subspace parameterisation.
+- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • We propose a novel unsupervised way to learn per-point embeddings directly from raw point clouds under various non-rigid deformations.
+- **p. 2 / 1. Introduction - extractive body cue:** Inspired by classical geometry processing technique, our method is effective and simple that only requires to train a single network. • In our learned embedding ...
+- **p. 4 / 3. Background and Notation - extractive body cue:** To overcome these issues, we propose to directly learn coupled embeddings without any ground truth correspondences and without any subspace parameterisation.
 
 ## Source Evidence Cues
 
-- **p. 4 / 4.1. Network Architecture - extractive PDF cue:** Our network architecture is simple, efficient and comprises two main building blocks: an embedding extractor fθ and a cross attention module hφ with learnable parameters ...
-- **p. 5 / 4.1. Network Architecture - extractive PDF cue:** It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The output ΨS and ...
-- **p. 5 / 4.2. Unsupervised Loss - extractive PDF cue:** Our unsupervised loss is inspired by the work of classical geometry processing [16, 22] and consists of three terms.
-- **p. 4 / 4.1. Network Architecture - extractive PDF cue:** Embedding Extractor Module computes per point intermediate embedding ˆΨ(·), which is a non-linear mapping:
-- **p. 6 / 4.2. Unsupervised Loss - extractive PDF cue:** Finally, our full unsupervised loss is written as: Ltotal = µoffLoff + µoLo + µcLc (7) where µoff = 1, µo = 5e1 and µc ...
+- **p. 4 / 4.1. Network Architecture - extractive body cue:** Our network architecture is simple, efficient and comprises two main building blocks: an embedding extractor fθ and a cross attention module hφ with learnable parameters ...
+- **p. 5 / 4.1. Network Architecture - extractive body cue:** It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The output ΨS and ...
+- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Our unsupervised loss is inspired by the work of classical geometry processing [16, 22] and consists of three terms.
+- **p. 4 / 4.1. Network Architecture - extractive body cue:** Embedding Extractor Module computes per point intermediate embedding ˆΨ(·), which is a non-linear mapping:
+- **p. 6 / 4.2. Unsupervised Loss - extractive body cue:** Finally, our full unsupervised loss is written as: Ltotal = µoffLoff + µoLo + µcLc (7) where µoff = 1, µo = 5e1 and µc ...
 - **Detected method headings:** 4.1. Network Architecture (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | Our network architecture is simple, efficient and comprises two main building blocks: an embedding extractor fθ and a cross attention module hφ ... | p. 4 (4.1. Network Architecture), p. 5 (4.1. Network Architecture) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The ... | p. 5 (4.1. Network Architecture), p. 5 (4.2. Unsupervised Loss) |
@@ -46,9 +46,9 @@ PDF body method statement (p. 4 (4.1. Network Architecture), p. 5 (4.1. Network 
 
 ## Objective / Update Rule
 
-- **p. 5 / 4.2. Unsupervised Loss - extractive PDF cue:** Orthogonal Loss: The orthogonal constraint in Eq.
-- **p. 5 / 4.2. Unsupervised Loss - extractive PDF cue:** Off-diagonal Loss: Similar as in Eq.
-- **p. 6 / 4.2. Unsupervised Loss - extractive PDF cue:** Finally, our full unsupervised loss is written as: Ltotal = µoffLoff + µoLo + µcLc (7) where µoff = 1, µo = 5e1 and µc ...
+- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Orthogonal Loss: The orthogonal constraint in Eq.
+- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Off-diagonal Loss: Similar as in Eq.
+- **p. 6 / 4.2. Unsupervised Loss - extractive body cue:** Finally, our full unsupervised loss is written as: Ltotal = µoffLoff + µoLo + µcLc (7) where µoff = 1, µo = 5e1 and µc ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2. Unsupervised Loss), p. 5 (4.2. Unsupervised Loss), p. 6 (4.2. Unsupervised Loss).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -64,13 +64,13 @@ PDF body method statement (p. 4 (4.1. Network Architecture), p. 5 (4.1. Network 
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 4.2. Unsupervised Loss - extractive PDF cue:** All methods only take point clouds as input except the multimodal method SSMSM [7], which requires meshes.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Due to insights gained from the classical geometry processing, we can obtain high-quality dense correspondences directly via a simple proximity search in the embedding space ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** Inspired by classical geometry processing technique, our method is effective and simple that only requires to train a single network. • In our learned embedding ...
-- **p. 1 / 1. Introduction - extractive PDF cue:** However, with the proliferation of low-cost sensors, the interest in methods that can directly deal with raw point clouds is expanding rapidly.
-- **p. 3 / 3. Background and Notation - extractive PDF cue:** In this section, we briefly review coupled diagonalisation for a pair of input shapes and introduce our notations (Tab.
-- **p. 5 / 4.1. Network Architecture - extractive PDF cue:** It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The output ΨS and ...
-- **p. 5 / 4.1. Network Architecture - extractive PDF cue:** The core concept of cross attention is that it computes a similarity matrix between the key and query (transformed version of ˆΨS, ˆΨT ), and ...
+- **p. 6 / 4.2. Unsupervised Loss - extractive body cue:** All methods only take point clouds as input except the multimodal method SSMSM [7], which requires meshes.
+- **p. 2 / 1. Introduction - extractive body cue:** Due to insights gained from the classical geometry processing, we can obtain high-quality dense correspondences directly via a simple proximity search in the embedding space ...
+- **p. 2 / 1. Introduction - extractive body cue:** Inspired by classical geometry processing technique, our method is effective and simple that only requires to train a single network. • In our learned embedding ...
+- **p. 1 / 1. Introduction - extractive body cue:** However, with the proliferation of low-cost sensors, the interest in methods that can directly deal with raw point clouds is expanding rapidly.
+- **p. 3 / 3. Background and Notation - extractive body cue:** In this section, we briefly review coupled diagonalisation for a pair of input shapes and introduce our notations (Tab.
+- **p. 5 / 4.1. Network Architecture - extractive body cue:** It follows the Transformer architecture [51] and learns a non-linear mapping: hφ : { ˆΨS, ˆΨT } →{ΨS, ΨT } (3) The output ΨS and ...
+- **p. 5 / 4.1. Network Architecture - extractive body cue:** The core concept of cross attention is that it computes a similarity matrix between the key and query (transformed version of ˆΨS, ˆΨT ), and ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -85,7 +85,7 @@ PDF body method statement (p. 4 (4.1. Network Architecture), p. 5 (4.1. Network 
 
 ## Training vs Inference
 
-- **p. 5 / 4.1. Network Architecture - extractive PDF cue:** It captures the local geometric information of different scales on the manifold by modelling a heat diffusion process with different timesteps and constrains the learned ...
+- **p. 5 / 4.1. Network Architecture - extractive body cue:** It captures the local geometric information of different scales on the manifold by modelling a heat diffusion process with different timesteps and constrains the learned ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -105,13 +105,13 @@ PDF body method statement (p. 4 (4.1. Network Architecture), p. 5 (4.1. Network 
 
 ## Failure and Ablation Link
 
-- **p. 7 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** Please refer to the supplementary for qualitative results and additional ablation experiments.
-- **p. 8 / 5.7. Shape Segmentation - extractive PDF cue:** An interesting direction is to incorporate the advancement in SO(3)/SE(3) invariant architecture [12] to eliminate the necessity of pre-alignment.
-- **p. 11 / Figure/Table caption - extractive PDF cue:** Table 4. Ablation study of our loss and pipeline. Each loss term and network component contributes to reduce matching errors. Finally, the eigenvalues Λ and ...
-- **p. 7 / 5.2. Near-isometric Shape Matching - extractive PDF cue:** As an ablative study we disable the ASAP component hence employ the vanilla DiffusionNet as feature extractor and report its quantitative results in Tab.
-- **p. 15 / Figure/Table caption - extractive PDF cue:** Figure 16. Qualitative results on DT4D-M. More qualitative non-isometric matching results (top) . Failure cases mainly due to challenging topological noise (bottom) .
-- **p. 8 / 5.7. Shape Segmentation - extractive PDF cue:** Limitations, Future Work and Conclusion In this paper, we proposed an unsupervised method to learn high-quality, well-generalised embeddings directly from raw point clouds.
-- **p. 14 / Figure/Table caption - extractive PDF cue:** Figure 13. Failure cases on FAUST. All three failure examples relate to the touching hands, where the points of two hands are locally mixed and ...
+- **p. 7 / 5.2. Near-isometric Shape Matching - extractive body cue:** Please refer to the supplementary for qualitative results and additional ablation experiments.
+- **p. 8 / 5.7. Shape Segmentation - extractive body cue:** An interesting direction is to incorporate the advancement in SO(3)/SE(3) invariant architecture [12] to eliminate the necessity of pre-alignment.
+- **p. 11 / Figure/Table caption - extractive body cue:** Table 4. Ablation study of our loss and pipeline. Each loss term and network component contributes to reduce matching errors. Finally, the eigenvalues Λ and ...
+- **p. 7 / 5.2. Near-isometric Shape Matching - extractive body cue:** As an ablative study we disable the ASAP component hence employ the vanilla DiffusionNet as feature extractor and report its quantitative results in Tab.
+- **p. 15 / Figure/Table caption - extractive body cue:** Figure 16. Qualitative results on DT4D-M. More qualitative non-isometric matching results (top) . Failure cases mainly due to challenging topological noise (bottom) .
+- **p. 8 / 5.7. Shape Segmentation - extractive body cue:** Limitations, Future Work and Conclusion In this paper, we proposed an unsupervised method to learn high-quality, well-generalised embeddings directly from raw point clouds.
+- **p. 14 / Figure/Table caption - extractive body cue:** Figure 13. Failure cases on FAUST. All three failure examples relate to the touching hands, where the points of two hands are locally mixed and ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -125,7 +125,7 @@ PDF body method statement (p. 4 (4.1. Network Architecture), p. 5 (4.1. Network 
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (4.1. Network Architecture), p. 5 (4.1. Network Architecture), p. 5 (4.2. Unsupervised Loss), p. 4 (4.1. Network Architecture), p. 6 (4.2. Unsupervised Loss), objective p. 5 (4.2. Unsupervised Loss), p. 5 (4.2. Unsupervised Loss), p. 6 (4.2. Unsupervised Loss), temporal p. 5 (4.1. Network Architecture), p. 2 (2.1. Pose Invariant Shape Representation), p. 3 (3. Background and Notation), p. 5 (4.1. Network Architecture).
+- **Evidence anchors reviewed:** method p. 4 (4.1. Network Architecture), p. 5 (4.1. Network Architecture), p. 5 (4.2. Unsupervised Loss), p. 4 (4.1. Network Architecture), p. 6 (4.2. Unsupervised Loss), objective p. 5 (4.2. Unsupervised Loss), p. 5 (4.2. Unsupervised Loss), p. 6 (4.2. Unsupervised Loss), temporal p. 5 (4.1. Network Architecture), p. 2 (2.1. Pose Invariant Shape Representation), p. 3 (3. Background and Notation), p. 5 (4.1. Network Architecture).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?

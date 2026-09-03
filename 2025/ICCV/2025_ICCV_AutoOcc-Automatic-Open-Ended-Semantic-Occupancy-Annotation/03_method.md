@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
@@ -10,32 +10,32 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 
 ## Method Body Digest
 
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S = ...
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** We then rasterize the attention maps corresponding to these semantic categories into 2D feature maps, with each category represented by an aggregated attention map M.
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** We then implement a geometry-aware loss to enforce the alignment of Gaussian ellipsoid distributions with the geometric 3371
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** Thus, we introduce a self-estimated 3D flow module, which is used to capture and aggregate dynamic objects.
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** Our pipeline also supports the use of LiDAR to obtain geometric constraints and continuously optimize the distribution of Gaussians.
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** Human annotations are both costly and labor-intensive.
-- **p. 4 / 3. Method - extractive PDF cue:** Concurrently, our method supports LiDAR input, serving as a robust geometric prior constraint.
-- **p. 6 / 3.2. VL-GS - extractive PDF cue:** Finally, we cumulatively splat VL-GS onto the voxel grid at an arbitrary voxel size, with each voxel's semantic label determined by weighting the occupied range ...
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S = ...
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** We then rasterize the attention maps corresponding to these semantic categories into 2D feature maps, with each category represented by an aggregated attention map M.
+- **p. 5 / 3.2. VL-GS - extractive body cue:** We then implement a geometry-aware loss to enforce the alignment of Gaussian ellipsoid distributions with the geometric 3371
+- **p. 5 / 3.2. VL-GS - extractive body cue:** Thus, we introduce a self-estimated 3D flow module, which is used to capture and aggregate dynamic objects.
+- **p. 5 / 3.2. VL-GS - extractive body cue:** Our pipeline also supports the use of LiDAR to obtain geometric constraints and continuously optimize the distribution of Gaussians.
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** Human annotations are both costly and labor-intensive.
+- **p. 4 / 3. Method - extractive body cue:** Concurrently, our method supports LiDAR input, serving as a robust geometric prior constraint.
+- **p. 6 / 3.2. VL-GS - extractive body cue:** Finally, we cumulatively splat VL-GS onto the voxel grid at an arbitrary voxel size, with each voxel's semantic label determined by weighting the occupied range ...
 
 ## Design Rationale
 
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided ...
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** Unlike dense voxels or point clouds, our method allows for representing regions of interest with sparse Gaussians, aided by scalability and semantic attention maps.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Our method further exhibits excellent open-ended and zero-shot generalization capabilities, as evidenced by cross-dataset experiments.
+- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided ...
+- **p. 5 / 3.2. VL-GS - extractive body cue:** Unlike dense voxels or point clouds, our method allows for representing regions of interest with sparse Gaussians, aided by scalability and semantic attention maps.
+- **p. 2 / 1. Introduction - extractive body cue:** Our method further exhibits excellent open-ended and zero-shot generalization capabilities, as evidenced by cross-dataset experiments.
 
 ## Source Evidence Cues
 
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S = ...
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** We then rasterize the attention maps corresponding to these semantic categories into 2D feature maps, with each category represented by an aggregated attention map M.
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** We then implement a geometry-aware loss to enforce the alignment of Gaussian ellipsoid distributions with the geometric 3371
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** Thus, we introduce a self-estimated 3D flow module, which is used to capture and aggregate dynamic objects.
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S = ...
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** We then rasterize the attention maps corresponding to these semantic categories into 2D feature maps, with each category represented by an aggregated attention map M.
+- **p. 5 / 3.2. VL-GS - extractive body cue:** We then implement a geometry-aware loss to enforce the alignment of Gaussian ellipsoid distributions with the geometric 3371
+- **p. 5 / 3.2. VL-GS - extractive body cue:** Thus, we introduce a self-estimated 3D flow module, which is used to capture and aggregate dynamic objects.
 - **Detected method headings:** 3. Method (p. 4)
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output ... | p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Vision-Language Guidance) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | We then rasterize the attention maps corresponding to these semantic categories into 2D feature maps, with each category represented by an aggregated ... | p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS) |
@@ -45,11 +45,11 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** Our pipeline also supports the use of LiDAR to obtain geometric constraints and continuously optimize the distribution of Gaussians.
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** Human annotations are both costly and labor-intensive.
-- **p. 4 / 3. Method - extractive PDF cue:** Concurrently, our method supports LiDAR input, serving as a robust geometric prior constraint.
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** We then implement a geometry-aware loss to enforce the alignment of Gaussian ellipsoid distributions with the geometric 3371
-- **p. 6 / 3.2. VL-GS - extractive PDF cue:** Finally, we cumulatively splat VL-GS onto the voxel grid at an arbitrary voxel size, with each voxel's semantic label determined by weighting the occupied range ...
+- **p. 5 / 3.2. VL-GS - extractive body cue:** Our pipeline also supports the use of LiDAR to obtain geometric constraints and continuously optimize the distribution of Gaussians.
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** Human annotations are both costly and labor-intensive.
+- **p. 4 / 3. Method - extractive body cue:** Concurrently, our method supports LiDAR input, serving as a robust geometric prior constraint.
+- **p. 5 / 3.2. VL-GS - extractive body cue:** We then implement a geometry-aware loss to enforce the alignment of Gaussian ellipsoid distributions with the geometric 3371
+- **p. 6 / 3.2. VL-GS - extractive body cue:** Finally, we cumulatively splat VL-GS onto the voxel grid at an arbitrary voxel size, with each voxel's semantic label determined by weighting the occupied range ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (3. Method), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -65,13 +65,13 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3. Method - extractive PDF cue:** Given a multi-view image sequence as input, we employ a fixed text prompt to enumerate all possible objects within the scene.
-- **p. 4 / 3.1. Vision-Language Guidance - extractive PDF cue:** Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S = ...
-- **p. 6 / 3.2. VL-GS - extractive PDF cue:** AutoOcc-V uses only images as input, while AutoOcc-M integrates both camera and LiDAR data.
-- **p. 2 / 1. Introduction - extractive PDF cue:** Recent self-supervised occupancy models [4, 13, 14, 17, 59] have eliminated the need for extensive labeled training data by leveraging 2D features from image inputs ...
-- **p. 2 / 1. Introduction - extractive PDF cue:** These annotation methods heavily rely on LiDAR point clouds while overlooking semantic and geometric cues from multiview images.
-- **p. 5 / 3.2. VL-GS - extractive PDF cue:** Unlike dense voxels or point clouds, our method allows for representing regions of interest with sparse Gaussians, aided by scalability and semantic attention maps.
-- **p. 6 / 3.2. VL-GS - extractive PDF cue:** For fair comparisions, we replicate SurroundOcc* [51] and OpenOcc* [49] by replacing the manually annotated results with the semantic point clouds projected from VLMs.
+- **p. 4 / 3. Method - extractive body cue:** Given a multi-view image sequence as input, we employ a fixed text prompt to enumerate all possible objects within the scene.
+- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S = ...
+- **p. 6 / 3.2. VL-GS - extractive body cue:** AutoOcc-V uses only images as input, while AutoOcc-M integrates both camera and LiDAR data.
+- **p. 2 / 1. Introduction - extractive body cue:** Recent self-supervised occupancy models [4, 13, 14, 17, 59] have eliminated the need for extensive labeled training data by leveraging 2D features from image inputs ...
+- **p. 2 / 1. Introduction - extractive body cue:** These annotation methods heavily rely on LiDAR point clouds while overlooking semantic and geometric cues from multiview images.
+- **p. 5 / 3.2. VL-GS - extractive body cue:** Unlike dense voxels or point clouds, our method allows for representing regions of interest with sparse Gaussians, aided by scalability and semantic attention maps.
+- **p. 6 / 3.2. VL-GS - extractive body cue:** For fair comparisions, we replicate SurroundOcc* [51] and OpenOcc* [49] by replacing the manually annotated results with the semantic point clouds projected from VLMs.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
@@ -106,13 +106,13 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 
 ## Failure and Ablation Link
 
-- **p. 1 / Figure/Table caption - extractive PDF cue:** Figure 1. AutoOcc is a fully automatic, vision-centric pipeline for open-ended semantic 3D occupancy annotation. Our method achieves more efficient and effective semantic occupancy auto-labeling ...
-- **p. 6 / 4.1. Implementation Details - extractive PDF cue:** Similar to [59, 66], we evaluate without the "other" and "other flat" classes.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive PDF cue:** Selfsupervised methods enable occupancy estimation from image features without relying on manual annotations.
-- **p. 8 / 4.3. Zero-shot and Generalization Ability - extractive PDF cue:** Label-free means training without any human-labeled annotations. † indicates the use of VLMs to obtain 2D semantics instead of human labeling.
-- **p. 8 / Figure/Table caption - extractive PDF cue:** Table 5. The effect of each module in our method. SFM is short for the self-estimated flow module, and SSG denotes the employ- ment of ...
-- **p. 2 / Figure/Table caption - extractive PDF cue:** Table 1. Comparisons between AutoOcc and existing semantic occupancy annotation pipelines. The definitions of closed-set, open- set, and open-ended are introduced in Section 2. Our ...
-- **p. 3 / Figure/Table caption - extractive PDF cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. AutoOcc is a fully automatic, vision-centric pipeline for open-ended semantic 3D occupancy annotation. Our method achieves more efficient and effective semantic occupancy auto-labeling ...
+- **p. 6 / 4.1. Implementation Details - extractive body cue:** Similar to [59, 66], we evaluate without the "other" and "other flat" classes.
+- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Selfsupervised methods enable occupancy estimation from image features without relying on manual annotations.
+- **p. 8 / 4.3. Zero-shot and Generalization Ability - extractive body cue:** Label-free means training without any human-labeled annotations. † indicates the use of VLMs to obtain 2D semantics instead of human labeling.
+- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. The effect of each module in our method. SFM is short for the self-estimated flow module, and SSG denotes the employ- ment of ...
+- **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparisons between AutoOcc and existing semantic occupancy annotation pipelines. The definitions of closed-set, open- set, and open-ended are introduced in Section 2. Our ...
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
@@ -126,7 +126,7 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 
 ## Verification Questions
 
-- **PDF anchors reviewed:** method p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS), objective p. 5 (3.2. VL-GS), p. 4 (3.1. Vision-Language Guidance), p. 4 (3. Method), p. 5 (3.2. VL-GS), p. 6 (3.2. VL-GS), temporal p. 7 (4.2. Performance Evaluation and Analysis), p. 4 (3. Method), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS), p. 6 (4.1. Implementation Details).
+- **Evidence anchors reviewed:** method p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS), objective p. 5 (3.2. VL-GS), p. 4 (3.1. Vision-Language Guidance), p. 4 (3. Method), p. 5 (3.2. VL-GS), p. 6 (3.2. VL-GS), temporal p. 7 (4.2. Performance Evaluation and Analysis), p. 4 (3. Method), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS), p. 6 (4.1. Implementation Details).
 - Which module is genuinely new, and which is inherited infrastructure or a baseline?
 - What exact computation consumes each observation and emits each action/output?
 - Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
